@@ -72,14 +72,14 @@ function ProfileFramePreviewImage(arg0) {
     obj[1] = getCollectibleTypeName.PREVIEW_SIZE * closure_5;
     obj[2] = getCollectibleTypeName.PREVIEW_SIZE;
     obj[3] = tmp(709).colors.BACKGROUND_BASE_LOW;
-    obj[1] = jsx(tmp(10969), {
+    obj[1] = jsx(tmp(10973), {
       profileFrame: null,
       previewWidth: null,
       previewHeight: null,
       profileBackgroundColor: null,
     });
     tmp4 = <closure_3 profileFrame={null} previewWidth={null} previewHeight={null} profileBackgroundColor={null} />;
-    const tmpResult = tmp(10969);
+    const tmpResult = tmp(10973);
   }
   return tmp4;
 }
@@ -96,9 +96,9 @@ function SubscriptionPreview(arg0) {
     obj1 = { style: null, children: null };
     obj1[0] = styles.purchasePlaceholder;
     if (obj4.isGuildBoostSubscription(subscriptionPlanId)) {
-      let NitroWheelIcon = tmp5(8243).BoostGemIcon;
+      let NitroWheelIcon = tmp5(8247).BoostGemIcon;
     } else {
-      NitroWheelIcon = tmp5(8104).NitroWheelIcon;
+      NitroWheelIcon = tmp5(8107).NitroWheelIcon;
     }
     obj = { size: "custom", style: null };
     obj[1] = { width: 20, height: 20 };
@@ -147,7 +147,7 @@ function CollectiblePreview(arg0) {
       obj[0] = styles.purchasePlaceholder;
       const obj5 = { size: "custom", style: null };
       obj5[1] = { width: 20, height: 20 };
-      obj[1] = jsx(tmp17(11932).ShopIcon, { size: "custom", style: null });
+      obj[1] = jsx(tmp17(11938).ShopIcon, { size: "custom", style: null });
       return <closure_3 style={null}>{null}</closure_3>;
     }
   }

@@ -94,7 +94,7 @@ export const PremiumAnimatedGiftButton = function PremiumAnimatedGiftButton(arg0
     autoPlay: false,
     onAnimationFinish: onAnimationFinished,
   };
-  obj.children = jsx(stateFromStores(5952), {
+  obj.children = jsx(stateFromStores(5953), {
     ref: tmp9,
     style: tmp7.animationRefresh,
     source: { uri: animationDataUrl },

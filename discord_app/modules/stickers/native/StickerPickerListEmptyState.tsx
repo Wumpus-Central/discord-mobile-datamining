@@ -22,10 +22,10 @@ const memoResult = importAllResult.memo(function StickerPickerListEmptyState(ins
     () => ({ marginBottom: insetBottom + closure_1_5, marginTop: insetTop, flex: 1 }),
     items,
   );
-  let obj = insetTop(9173);
+  let obj = insetTop(9177);
   const modalDismissGuardRefreshControl = obj.useModalDismissGuardRefreshControl();
   if (inActionSheet) {
-    let BottomSheetScrollView = tmp3(5632).BottomSheetScrollView;
+    let BottomSheetScrollView = tmp3(5633).BottomSheetScrollView;
   } else {
     BottomSheetScrollView = ScrollView;
   }
@@ -39,7 +39,7 @@ const memoResult = importAllResult.memo(function StickerPickerListEmptyState(ins
   const intl = tmp3(1233).intl;
   obj[0] = intl.string(insetTop(1233).t.jyiGfc);
   ({ emptyStateBody: obj3[1], emptyStateContainer: obj3[2], emptyStateImage: obj3[3] } = callback());
-  obj[4] = insetBottom(10432);
+  obj[4] = insetBottom(10436);
   obj[5] = { marginBottom: 0 };
   obj[3] = jsx(insetTop(1296).RefreshEmptyState, {
     body: null,

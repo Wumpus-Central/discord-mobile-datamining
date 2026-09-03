@@ -79,7 +79,7 @@ export default function CustomTypingIndicatorAnnounceActionSheet(markAsDismissed
   const items1 = [markAsDismissed];
   const callback = React.useCallback(() => {
     let obj = markAsDismissed(closure_1_2[7]);
-    obj = { screen: closure_1_5.TYPING_INDICATOR };
+    obj = { screen: closure_1_5.TYPING_INDICATOR, params: { source: "announcement_sheet" } };
     obj.openUserSettings(obj, () => {
       callback(closure_1_6.TAKE_ACTION);
     });
@@ -95,7 +95,7 @@ export default function CustomTypingIndicatorAnnounceActionSheet(markAsDismissed
   obj = { bottom: true, children: null };
   obj = { style: tmp2.content, children: null };
   const items3 = [
-    callback(markAsDismissed(5945).ActionSheetHeaderBar, {
+    callback(markAsDismissed(5946).ActionSheetHeaderBar, {
       onPress() {
         const current = ref.current;
         if (current != null) {
@@ -124,10 +124,10 @@ export default function CustomTypingIndicatorAnnounceActionSheet(markAsDismissed
     emojiSource: null,
     style: null,
   };
-  const items5 = [ref(11767), ref(11768), ref(11767)];
+  const items5 = [ref(11773), ref(11774), ref(11773)];
   obj4[7] = items5;
   obj4[8] = tmp2.outerStack;
-  obj3[1] = callback(ref(11765), obj4);
+  obj3[1] = callback(ref(11771), obj4);
   const items6 = [callback(View, obj3), ,];
   const obj5 = { style: items7, children: null };
   items7 = [,];
@@ -152,12 +152,12 @@ export default function CustomTypingIndicatorAnnounceActionSheet(markAsDismissed
       markAsDismissed(closure_1_6.USER_DISMISS);
     },
   };
-  const tmp6 = ref(11765);
+  const tmp6 = ref(11771);
   obj6[1] = markAsDismissed(1929).TypingSuggestion.YAPPING;
   obj6[7] = tmp2.innerStack;
-  const items8 = [ref(11769), ref(11770), ref(11769)];
+  const items8 = [ref(11775), ref(11776), ref(11775)];
   obj6[8] = items8;
-  obj5[1] = callback(ref(11765), obj6);
+  obj5[1] = callback(ref(11771), obj6);
   items6[1] = callback(View, obj5);
   const obj7 = { style: items9, children: null };
   items9 = [,];
@@ -173,12 +173,12 @@ export default function CustomTypingIndicatorAnnounceActionSheet(markAsDismissed
     style: null,
     emojiSource: null,
   };
-  const tmp7 = ref(11765);
+  const tmp7 = ref(11771);
   obj8[1] = markAsDismissed(1929).TypingSuggestion.OVERSHARING;
   obj8[7] = tmp2.outerStack;
-  const items10 = [ref(11771), ref(11772), ref(11773)];
+  const items10 = [ref(11777), ref(11778), ref(11779)];
   obj8[8] = items10;
-  obj7[1] = callback(ref(11765), obj8);
+  obj7[1] = callback(ref(11771), obj8);
   items6[2] = callback(View, obj7);
   obj2[1] = items6;
   items3[1] = callback2(View, obj2);
@@ -201,16 +201,16 @@ export default function CustomTypingIndicatorAnnounceActionSheet(markAsDismissed
   const intl4 = markAsDismissed(1233).intl;
   obj13[0] = intl4.string(ref(3502).TswY68);
   obj13[3] = callback;
-  const items11 = [callback(markAsDismissed(4928).Button, obj13)];
+  const items11 = [callback(markAsDismissed(4929).Button, obj13)];
   const obj14 = { text: null, variant: "secondary", size: "lg", onPress: null };
   const intl5 = markAsDismissed(1233).intl;
   obj14[0] = intl5.string(markAsDismissed(1233).t.TulDPl);
   obj14[3] = callback1;
-  items11[1] = callback(markAsDismissed(4928).Button, obj14);
+  items11[1] = callback(markAsDismissed(4929).Button, obj14);
   obj12[1] = items11;
   items3[5] = callback2(View, obj12);
   obj[1] = items3;
   obj[1] = callback2(View, obj);
-  obj[4] = callback(markAsDismissed(5561).SafeAreaPaddingView, obj);
-  return callback(markAsDismissed(5630).BottomSheet, obj);
+  obj[4] = callback(markAsDismissed(5562).SafeAreaPaddingView, obj);
+  return callback(markAsDismissed(5631).BottomSheet, obj);
 }

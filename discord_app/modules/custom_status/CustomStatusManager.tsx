@@ -100,7 +100,7 @@ let prototype = function CustomStatusManager() {
             obj1[0] = constants.CUSTOM_STATUS_MANAGER;
             obj[0] = obj1;
             obj[1] = obj;
-            callback(10196)(obj);
+            callback(10200)(obj);
             closure_6.stop();
           }
         }
@@ -150,9 +150,9 @@ let prototype = function CustomStatusManager() {
             true,
           );
         } else {
-          applyArgumentsResult(10195).setFocusMode(false);
+          applyArgumentsResult(10199).setFocusMode(false);
           closure_7.stop();
-          const tmpResult = applyArgumentsResult(10195);
+          const tmpResult = applyArgumentsResult(10199);
         }
       }
     }

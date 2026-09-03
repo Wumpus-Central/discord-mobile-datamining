@@ -72,7 +72,7 @@ function UserExperimentDebugView(id) {
     str4 =
       'Warning: Server did not send any experiment config. You may need to check the "Send to Client" box in the admin UI.';
   }
-  obj1 = { title: "Overview", hasIcons: false, children: tmp17(tmp8(5607).TableRow, obj) };
+  obj1 = { title: "Overview", hasIcons: false, children: tmp17(tmp8(5608).TableRow, obj) };
   obj[1] = str4;
   const items = [closure_11(TableRowGroupTitle.TableRowGroup, obj1), closure_11(Button.Spacer, { size: 16 }), , , , ,];
   let str5 = "None";
@@ -81,7 +81,7 @@ function UserExperimentDebugView(id) {
     const _JSON = JSON;
     str6 = JSON.stringify(experimentServerAssignment, undefined, 2);
   }
-  obj2 = { title: "Server Descriptor", hasIcons: false, children: tmp17(tmp8(5607).TableRow, { label: str6 }) };
+  obj2 = { title: "Server Descriptor", hasIcons: false, children: tmp17(tmp8(5608).TableRow, { label: str6 }) };
   items[2] = closure_11(TableRowGroupTitle.TableRowGroup, obj2);
   items[3] = closure_11(Button.Spacer, { size: 16 });
   let json = str5;
@@ -89,7 +89,7 @@ function UserExperimentDebugView(id) {
     const _JSON2 = JSON;
     json = JSON.stringify(override.originalDescriptor, undefined, 2);
   }
-  obj3 = { title: "Override Descriptor", hasIcons: false, children: tmp17(tmp8(5607).TableRow, { label: json }) };
+  obj3 = { title: "Override Descriptor", hasIcons: false, children: tmp17(tmp8(5608).TableRow, { label: json }) };
   items[4] = closure_11(TableRowGroupTitle.TableRowGroup, obj3);
   items[5] = closure_11(Button.Spacer, { size: 16 });
   if (0 !== mapped.length) {
@@ -175,10 +175,10 @@ function GuildExperimentDebugView(arg0) {
   const tmp18 = View;
   obj1[1] = str;
   const items1 = [
-    closure_11(obj(6000).TableRowGroup, {
+    closure_11(obj(6001).TableRowGroup, {
       title: "Overview",
       hasIcons: false,
-      children: closure_11(obj(5607).TableRow, obj1),
+      children: closure_11(obj(5608).TableRow, obj1),
     }),
     closure_11(obj(1296).Spacer, { size: 16 }),
     ,
@@ -189,9 +189,9 @@ function GuildExperimentDebugView(arg0) {
     ,
   ];
   obj3 = { title: "Guild Assignments", hasIcons: false, children: null };
-  const obj2 = { title: "Overview", hasIcons: false, children: closure_11(obj(5607).TableRow, obj1) };
-  obj3[2] = closure_11(obj(5607).TableRow, { label: items.join("\n") });
-  items1[2] = closure_11(obj(6000).TableRowGroup, obj3);
+  const obj2 = { title: "Overview", hasIcons: false, children: closure_11(obj(5608).TableRow, obj1) };
+  obj3[2] = closure_11(obj(5608).TableRow, { label: items.join("\n") });
+  items1[2] = closure_11(obj(6001).TableRowGroup, obj3);
   items1[3] = closure_11(obj(1296).Spacer, { size: 16 });
   let str2 = "None";
   let str3 = "None";
@@ -200,10 +200,10 @@ function GuildExperimentDebugView(arg0) {
     str3 = JSON.stringify(loadedGuildExperiment, undefined, 2);
   }
   const obj4 = { label: items.join("\n") };
-  items1[4] = closure_11(obj(6000).TableRowGroup, {
+  items1[4] = closure_11(obj(6001).TableRowGroup, {
     title: "Server Descriptor",
     hasIcons: false,
-    children: closure_11(obj(5607).TableRow, { label: str3 }),
+    children: closure_11(obj(5608).TableRow, { label: str3 }),
   });
   items1[5] = closure_11(obj(1296).Spacer, { size: 16 });
   if (null != override) {
@@ -213,23 +213,23 @@ function GuildExperimentDebugView(arg0) {
   const obj5 = {
     title: "Server Descriptor",
     hasIcons: false,
-    children: closure_11(obj(5607).TableRow, { label: str3 }),
+    children: closure_11(obj(5608).TableRow, { label: str3 }),
   };
-  items1[6] = closure_11(obj(6000).TableRowGroup, {
+  items1[6] = closure_11(obj(6001).TableRowGroup, {
     title: "Override Descriptor",
     hasIcons: false,
-    children: closure_11(obj(5607).TableRow, { label: str2 }),
+    children: closure_11(obj(5608).TableRow, { label: str2 }),
   });
   items1[7] = closure_11(obj(1296).Spacer, { size: 16 });
   if (0 === mapped.length) {
-    mapped = tmp19(tmp20(5607).TableRow, { label: "none" });
+    mapped = tmp19(tmp20(5608).TableRow, { label: "none" });
   } else {
     mapped = mapped.map((label) => {
       obj = { label, labelLineClamp: 1 };
       return callback(obj(table[23]).TableRow, obj, label);
     });
   }
-  items1[8] = closure_11(obj(6000).TableRowGroup, { title: "Recent Exposures", hasIcons: false, children: mapped });
+  items1[8] = closure_11(obj(6001).TableRowGroup, { title: "Recent Exposures", hasIcons: false, children: mapped });
   obj[1] = items1;
   return tmp17(tmp18, obj);
 }

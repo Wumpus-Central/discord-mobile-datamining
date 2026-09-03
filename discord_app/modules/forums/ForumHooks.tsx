@@ -454,7 +454,7 @@ export const useForumPostMessageAuthor = function useForumPostMessageAuthor(mess
   let obj = id(586);
   const items = [closure_14];
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_14.getUser(id));
-  const nullableMessageAuthor = id(4746).useNullableMessageAuthor(message);
+  const nullableMessageAuthor = id(4747).useNullableMessageAuthor(message);
   const items1 = [guildId, id];
   const effect = React.useEffect(() => {
     let tmp2 = null != id;

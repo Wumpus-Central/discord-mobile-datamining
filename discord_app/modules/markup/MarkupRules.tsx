@@ -15,7 +15,7 @@ import TIMESTAMP_FORMATS from "TimestampUtils.tsx";
 import staticRouteToTranslation from "StaticRouteRendering.tsx";
 import matchDefault from "MarkupHeadingRule.tsx";
 import regExpDefault2 from "MarkupListRule.tsx";
-import _modDef4979 from "MarkupSubtextRule.tsx";
+import _modDef4980 from "MarkupSubtextRule.tsx";
 import matchDefault2 from "PlatformMarkupRules.native.tsx";
 import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
 import closure_4 from "../../../_runtime/00850__toArray.js";
@@ -964,7 +964,7 @@ obj[33] = {
 };
 obj[34] = matchDefault;
 obj[35] = regExpDefault2;
-obj[36] = _modDef4979;
+obj[36] = _modDef4980;
 let items = [obj];
 const obj20 = {
   order: textRegexpDefault.order,

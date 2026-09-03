@@ -95,7 +95,7 @@ export default function VibegrationsSettingsRequestCard(projectId) {
     obj3[2] = callback;
     const intl3 = tmp2(1233).intl;
     obj3[3] = intl3.string(tmp8(3500)["KO2xN+"]);
-    items2[3] = tmp7(tmp2(4928).Button, obj3);
+    items2[3] = tmp7(tmp2(4929).Button, obj3);
     obj[1] = items2;
     return closure_7(tmp6, obj);
   }

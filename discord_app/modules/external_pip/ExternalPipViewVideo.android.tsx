@@ -19,7 +19,7 @@ function ExternalPipViewVideoUnavailable(wasStream) {
   if (wasStream) {
     obj = { style: null };
     obj[0] = tmp.unavaiableImage;
-    let tmp4Result = tmp4(tmp5(9580).StreamEnded, obj);
+    let tmp4Result = tmp4(tmp5(9584).StreamEnded, obj);
     let tmp8 = tmp4;
     let tmp10 = tmp5;
   } else {
@@ -67,7 +67,7 @@ function ExternalPipViewVideoStream(streamId) {
   let first;
   dependencyMap = undefined;
   let callback;
-  let obj = streamId(9587);
+  let obj = streamId(9591);
   first = 300;
   dependencyMap = undefined;
   callback = undefined;
@@ -124,7 +124,7 @@ function ExternalPipViewVideoStream(streamId) {
     }
   }, items3);
   const children = [
-    callback2(first(9598), {
+    callback2(first(9602), {
       useSurfaceDirectRenderer: surfaceDirectRendererExperiment,
       style: memo,
       streamId,

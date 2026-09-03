@@ -13,13 +13,13 @@ import computeChannelName from "../../../../channel/useChannelName.tsx";
 import useNullableMessageAuthor from "../../../useMessageAuthor.tsx";
 import useRoleIcon from "../../../../guild_boosting/native/RoleIconUtils.tsx";
 import getDecisionOutcomeFromMessage from "../../../../guild_automod/AutomodMessageUtils.tsx";
-import registerAssetDefault from "../../../../../../_runtime/07719_registerAsset.js";
+import registerAssetDefault from "../../../../../../_runtime/07722_registerAsset.js";
 import processColorOrThrow from "../RowGeneratorStyleSheet.tsx";
 import createCommonMessageDefault from "createCommonMessage.tsx";
 import AutomodNotificationEmbedTypeKeys from "../../../../../../discord_common/js/shared/shared-constants/AutomodNotificationEmbedTypeKeys.tsx";
 import AutomodRaidAlertTypes from "../../../../../../discord_common/js/shared/shared-constants/AutomodRaidAlertTypes.tsx";
 import DATE_CONFIG from "../../../../guild_antiraid/GuildAntiRaidUtils.tsx";
-import registerAssetDefault2 from "../../../../../../_runtime/07937_registerAsset.js";
+import registerAssetDefault2 from "../../../../../../_runtime/07940_registerAsset.js";
 import get_ActivityIndicator from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
 import closure_5 from "../../../../../stores/ChannelStore.tsx";
 import closure_6 from "../../../../../stores/GuildMemberStore.tsx";
@@ -293,7 +293,7 @@ export const createAutoModerationActionSystemMessage = function createAutoModera
       let getRaidAlertResolveCTAText = closure_4.resolveAssetSource;
       let internal6 = getAvatarURL;
       let intl9 = internal6.makeSource;
-      obj5[6] = getRaidAlertResolveCTAText(intl9(importDefault(tmp42 ? 7936 : 7719))).uri;
+      obj5[6] = getRaidAlertResolveCTAText(intl9(importDefault(tmp42 ? 7939 : 7722))).uri;
       const tmpResult16 = processColorOrThrow;
       internal6 = tmp45(709).internal;
       obj5[7] = processColorOrThrow.processColorOrThrow(
@@ -447,7 +447,7 @@ export const createAutoModerationActionSystemMessage = function createAutoModera
       }
       obj9[6] = formatToPlainStringResult1;
       const tmpResult25 = resetCache;
-      obj9[7] = closure_4.resolveAssetSource(getAvatarURL.makeSource(tmp57(result1 ? 7938 : 7939))).uri;
+      obj9[7] = closure_4.resolveAssetSource(getAvatarURL.makeSource(tmp57(result1 ? 7941 : 7942))).uri;
       const intl16 = getSystemLocale.intl;
       const string2 = intl16.string;
       const t3 = getSystemLocale.t;

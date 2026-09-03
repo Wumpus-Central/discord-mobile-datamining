@@ -386,9 +386,9 @@ function NoResults() {
   const tmp6 = closure_7;
   const tmp8 = closure_6;
   if (obj3.isThemeDark(tmp4)) {
-    let tmp2Result = tmp2(11524);
+    let tmp2Result = tmp2(11529);
   } else {
-    tmp2Result = tmp2(11525);
+    tmp2Result = tmp2(11530);
   }
   obj[1] = tmp2Result;
   const items = [closure_14(tmp8, obj), ,];
@@ -501,7 +501,7 @@ let closure_18 = importAllResult.forwardRef((answer, ref) => {
   obj2[3] = items3;
   items2[2] = closure_15(answer(4474).Text, obj2);
   obj[6] = items2;
-  return closure_15(answer(5076).PressableHighlight, obj);
+  return closure_15(answer(5077).PressableHighlight, obj);
 });
 let closure_20 = {
   code: "function PollVotesActionSheetTsx1(){const{opacity}=this.__closure;return{flex:1,opacity:opacity.get(),marginBottom:32};}",

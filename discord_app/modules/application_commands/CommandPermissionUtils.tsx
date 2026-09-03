@@ -186,14 +186,14 @@ export const hasAccess = function hasAccess(type, arg1, applicationAllowedForCha
               if (null != tmp28) {
                 permission = tmp28.permission;
               } else {
-                let tmp27Result = tmp27(7276);
-                tmp27Result = tmp27(7275);
+                let tmp27Result = tmp27(7277);
+                tmp27Result = tmp27(7276);
                 const tmp30 =
                   permissions[
                     tmp27Result.toPermissionKey(
                       tmp27Result,
                       tmp27Result.allChannelsSentinel(contextGuildId),
-                      tmp27(undefined, 7277).ApplicationCommandPermissionType.CHANNEL,
+                      tmp27(undefined, 7278).ApplicationCommandPermissionType.CHANNEL,
                     )
                   ];
                 let permission1 = null;
@@ -265,14 +265,14 @@ export const computeAllowedForChannel = function computeAllowedForChannel(permis
     if (null != tmp3) {
       return tmp3.permission;
     } else {
-      let tmpResult = tmp(7276);
-      tmpResult = tmp(7275);
+      let tmpResult = tmp(7277);
+      tmpResult = tmp(7276);
       const tmp6 =
         permissions[
           tmpResult.toPermissionKey(
             tmpResult,
             tmpResult.allChannelsSentinel(guild_id),
-            tmp(undefined, 7277).ApplicationCommandPermissionType.CHANNEL,
+            tmp(undefined, 7278).ApplicationCommandPermissionType.CHANNEL,
           )
         ];
       let permission = null;

@@ -1,6 +1,6 @@
 // discord_app/modules/directory_channels/native/components/GuildDirectorySearch.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import registerAssetDefault from "../../../../../_runtime/12096_registerAsset.js";
+import registerAssetDefault from "../../../../../_runtime/12102_registerAsset.js";
 import closure_4 from "../../../../../_runtime/metro/00032__slicedToArray.js";
 import closure_5 from "../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
@@ -36,7 +36,7 @@ function EmptyState(channel) {
   let obj = channel(586);
   const items = [closure_9];
   importDefault = obj.useStateFromStores(items, () => closure_1_9.getGuild(channel.getGuildId()));
-  obj1 = channel(12097);
+  obj1 = channel(12103);
   const canCreateOrAddGuildInDirectory = obj1.useCanCreateOrAddGuildInDirectory(channel);
   const intl = channel(1233).intl;
   if (canCreateOrAddGuildInDirectory) {

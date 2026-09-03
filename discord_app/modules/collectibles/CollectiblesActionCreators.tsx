@@ -698,7 +698,7 @@ function _validateCollectiblesRecipient() {
           } else if (1 === tmp7) {
             c5 = 0;
             callback = closure_4;
-            obj2 = callback(6192);
+            obj2 = callback(6193);
             const aPIError = new callback(4376).APIError(callback);
             const result = obj2.captureOrIgnoreApiError(aPIError);
             c7 = 3;
@@ -794,7 +794,7 @@ function _validateCollectiblesRecipientsBatch() {
           } else if (1 === tmp7) {
             c5 = 0;
             callback = closure_4;
-            obj2 = callback(6192);
+            obj2 = callback(6193);
             const aPIError = new callback(4376).APIError(callback);
             const result = obj2.captureOrIgnoreApiError(aPIError);
             c7 = 3;

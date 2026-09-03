@@ -1,6 +1,6 @@
 // discord_app/modules/hub/native/components/HubEmailConnectionPinVerify.tsx
 import dispatcherDefault from "../../../toast/native/ToastActionCreators.tsx";
-import registerAssetDefault from "../../../../../_runtime/09996_registerAsset.js";
+import registerAssetDefault from "../../../../../_runtime/10000_registerAsset.js";
 import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
 import closure_4 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import closure_5 from "../../../../../_runtime/00019_noop.js";
@@ -81,7 +81,7 @@ export default function HubEmailConnectionPinVerify(email) {
       closure_1_1(closure_1_2[10])();
     });
     return () => {
-      callback(12501).terminate();
+      callback(12513).terminate();
     };
   }, items);
   let obj = importDefault(onClose[11]);

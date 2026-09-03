@@ -148,7 +148,7 @@ function _setAppIcon() {
         obj3[0] = callback;
         obj3[1] = callback2;
         let TIER_2 = null;
-        if (callback !== callback(8188).FreemiumAppIconIds.DEFAULT) {
+        if (callback !== callback(8192).FreemiumAppIconIds.DEFAULT) {
           TIER_2 = TIER_2.TIER_2;
         }
         obj3[2] = TIER_2;

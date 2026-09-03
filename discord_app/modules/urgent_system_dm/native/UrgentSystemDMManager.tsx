@@ -1,12 +1,12 @@
 // discord_app/modules/urgent_system_dm/native/UrgentSystemDMManager.tsx
 import getSystemLocale from "../../../intl/index.native.tsx";
-import _modDef4858 from "../../../actions/native/AlertActionCreators.tsx";
+import _modDef4859 from "../../../actions/native/AlertActionCreators.tsx";
 import maybeShowUrgentMessageModalDefault from "../UrgentSystemDMManagerBase.tsx";
 import navigateToSystemDMDefault from "../navigateToSystemDM.tsx";
 
 require = arg1;
 const tmp2 = new maybeShowUrgentMessageModalDefault(() => {
-  let obj = _modDef4858;
+  let obj = _modDef4859;
   obj = { title: null, body: null, isDismissable: false, onConfirm: null };
   const intl = getSystemLocale.intl;
   obj[0] = intl.string(getSystemLocale.t.bAhz9l);

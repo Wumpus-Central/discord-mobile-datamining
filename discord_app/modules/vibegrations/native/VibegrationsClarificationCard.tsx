@@ -204,7 +204,7 @@ export default function VibegrationsClarificationCard(clarification) {
       let intl2 = tmp20(1233).intl;
       obj4[2] = intl2.string(onSubmit(3500).yKdgqw);
       obj4[3] = callback1;
-      tmp19Result = tmp19(tmp20(4928).Button, obj4);
+      tmp19Result = tmp19(tmp20(4929).Button, obj4);
     }
   }
   const items5 = [tmp19Result];
@@ -231,7 +231,7 @@ export default function VibegrationsClarificationCard(clarification) {
     });
   };
   obj6[5] = callback2;
-  obj5[1] = callback(clarification(14036).GhostInput, obj6);
+  obj5[1] = callback(clarification(14052).GhostInput, obj6);
   items5[1] = callback(closure_5, obj5);
   obj3[1] = items5;
   items4[3] = closure_7(closure_5, obj3);

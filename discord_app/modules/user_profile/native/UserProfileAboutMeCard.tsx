@@ -127,10 +127,10 @@ function MemberJoinDates(userId) {
     }
     return member;
   });
-  let obj3 = userId(5359);
+  let obj3 = userId(5360);
   let obj4 = DISCORD_EPOCHDefault;
   const createdAtDate = obj3.getCreatedAtDate(obj4.extractTimestamp(userId), stateFromStores);
-  let obj5 = userId(5359);
+  let obj5 = userId(5360);
   let joinedAt;
   if (stateFromStores2 != null) {
     joinedAt = stateFromStores2.joinedAt;
@@ -142,7 +142,7 @@ function MemberJoinDates(userId) {
   const items3 = [callback(Heading, obj)];
   obj = { style: items4, children: null };
   items4 = [callback3().memberJoinDates, { columnGap }];
-  obj1 = { themeType, icon: callback(tmp4(9053).ClydeIcon, { size: "xs" }), accessibilityLabel: null, children: null };
+  obj1 = { themeType, icon: callback(tmp4(9057).ClydeIcon, { size: "xs" }), accessibilityLabel: null, children: null };
   const intl2 = tmp4(1233).intl;
   obj1[2] = intl2.formatToPlainString(userId(1233).t["9t7w53"], { date: createdAtDate });
   obj1[3] = createdAtDate;
@@ -164,7 +164,7 @@ function MemberJoinDates(userId) {
     obj4[0] = themeType;
     obj5 = { guild: null, size: null };
     obj5[0] = stateFromStores1;
-    obj5[1] = tmp4(6012).GuildIconSizes.XXSMALL;
+    obj5[1] = tmp4(6013).GuildIconSizes.XXSMALL;
     obj4[1] = tmp15(GuildIconSizesDefault, obj5);
     const intl3 = tmp4(1233).intl;
     const obj6 = { guildName: null, date: null };

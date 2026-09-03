@@ -61,9 +61,9 @@ function InfoButton() {
     size: "sm",
     icon: callback(CircleInformationIcon.CircleInformationIcon, { size: "sm" }),
     onPress() {
-      callback2(8637).itemInteracted("info_button", "info_button", "press_info_button");
-      const obj = callback2(8637);
-      callback2(8637).feedPageActioned({
+      callback2(8641).itemInteracted("info_button", "info_button", "press_info_button");
+      const obj = callback2(8641);
+      callback2(8641).feedPageActioned({
         actionParameters: {
           actionGestureType: "press",
           actionTargetElement: "info_button",
@@ -71,8 +71,8 @@ function InfoButton() {
           actionDestinationType: null,
         },
       });
-      const obj2 = callback2(8637);
-      callback(16284).pushICYMIInfoModal({ extendedOnboarding: true });
+      const obj2 = callback2(8641);
+      callback(16303).pushICYMIInfoModal({ extendedOnboarding: true });
     },
   });
 }
@@ -214,7 +214,7 @@ function ICYMI(inNestedNavigator) {
     } else {
       obj = { scrollToTop: null };
       obj[0] = function scrollToTop() {
-        callback(7613).showForLaterModal(callback(7614).SavedMessageSortTypes.BOOKMARK);
+        callback(7614).showForLaterModal(callback(7615).SavedMessageSortTypes.BOOKMARK);
       };
       ref1.current = obj;
     }

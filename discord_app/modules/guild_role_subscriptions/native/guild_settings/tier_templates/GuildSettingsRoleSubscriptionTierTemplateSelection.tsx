@@ -52,7 +52,7 @@ function TierTemplatesRenderer(groupListingId) {
           const style = { height: "100%", width: closure_16 };
           return callback(closure_8, { style });
         };
-        obj[6] = guildId(17603).CARD_WIDTH + c16;
+        obj[6] = guildId(17623).CARD_WIDTH + c16;
         obj[7] = function renderItem(item) {
           return closure_1_14(groupListingId(closure_1_3[10]), {
             template: item.item,

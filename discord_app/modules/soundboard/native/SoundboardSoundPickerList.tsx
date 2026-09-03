@@ -14,18 +14,18 @@ function getSectionLabel(category) {
   const type = category.category.categoryInfo.type;
   if (SoundButtonOverlay.SoundboardSoundGridSectionType.GUILD === type) {
     return category.category.categoryInfo.guild.name;
-  } else if (tmp(4973).SoundboardSoundGridSectionType.DEFAULTS === type) {
+  } else if (tmp(4974).SoundboardSoundGridSectionType.DEFAULTS === type) {
     const intl4 = tmp(1233).intl;
     return intl4.string(tmp(1233).t.Rtvk9X);
-  } else if (tmp(4973).SoundboardSoundGridSectionType.FAVORITES === type) {
+  } else if (tmp(4974).SoundboardSoundGridSectionType.FAVORITES === type) {
     const intl3 = tmp(1233).intl;
     return intl3.string(tmp(1233).t.y3LQCG);
-  } else if (tmp(4973).SoundboardSoundGridSectionType.FREQUENTLY_USED === type) {
+  } else if (tmp(4974).SoundboardSoundGridSectionType.FREQUENTLY_USED === type) {
     const intl2 = tmp(1233).intl;
     return intl2.string(tmp(1233).t["+cGVV6"]);
-  } else if (tmp(4973).SoundboardSoundGridSectionType.SEARCH === type) {
+  } else if (tmp(4974).SoundboardSoundGridSectionType.SEARCH === type) {
     return null;
-  } else if (tmp(4973).SoundboardSoundGridSectionType.TOP_SOUNDS === type) {
+  } else if (tmp(4974).SoundboardSoundGridSectionType.TOP_SOUNDS === type) {
     const intl = tmp(1233).intl;
     const obj = { guildName: null };
     obj[0] = category.category.categoryInfo.guild.name;
@@ -195,7 +195,7 @@ const memoResult = importAllResult.memo(function SoundboardSoundPickerListCompon
     START = END;
   }
   closure_5 = callback2();
-  let obj = channel(4935);
+  let obj = channel(4936);
   const fontScale = obj.useFontScale();
   let tmp3 = (function getFastListSectionsFromCategories(categories, closure_6, fontScale) {
     const items = [];
@@ -204,7 +204,7 @@ const memoResult = importAllResult.memo(function SoundboardSoundPickerListCompon
     while (iter !== undefined) {
       let tmp2 = callback;
       let tmp3 = dependencyMap;
-      let arr2 = callback(9203)(nextResult.items, closure_6);
+      let arr2 = callback(9207)(nextResult.items, closure_6);
       let tmp4 = closure_9;
       let obj = { category: null, height: null, soundsByRow: null };
       obj[0] = nextResult;

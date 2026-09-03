@@ -22,86 +22,98 @@ function EmojiItemLockedOverlay() {
   obj = { style: tmp.lock };
   return callback(closure_3, obj);
 }
-function EmojiItem(emoji) {
-  emoji = emoji.emoji;
-  ({
-    category: importDefault,
-    disabled,
-    onPressEmoji: dependencyMap,
-    onLongPressEmoji: closure_3,
-    animateEmoji,
-  } = emoji);
-  const tmp = callback2();
-  if (null == emoji.id) {
-    let str = emoji.url;
-    if (str == null) {
-      str = "";
-    }
-    let emojiURL = str;
-  } else {
-    let obj = getAvatarURLDefault;
-    obj = { id: null, animated: null, size: null };
-    obj[0] = emoji.id;
-    if (animateEmoji) {
-      animateEmoji = emoji.animated;
-    }
-    obj[1] = animateEmoji;
-    obj[2] = IMAGE_SIZE;
-    emojiURL = obj.getEmojiURL(obj);
-  }
-  if (disabled) {
-    disabled = !emoji.isSectionNitroLocked;
-  }
-  let tmp8 = dependencyMap;
-  obj = {
-    accessibilityRole: "button",
-    accessibilityLabel: emoji.name,
-    style: null,
-    onPress: null,
-    onLongPress: null,
-    children: null,
-  };
-  const items = [tmp.surrogatesFrame];
-  let disabledOverlay = disabled;
-  if (disabled) {
-    disabledOverlay = tmp.disabledOverlay;
-  }
-  items[1] = disabledOverlay;
-  obj[2] = items;
-  obj[3] = function onPress() {
-    return callback(emoji, closure_1);
-  };
-  obj[4] = function onLongPress() {
-    return callback2(emoji);
-  };
-  if (null != emoji.id) {
-    obj1 = { resizeMode: "contain", style: null, placeholder: null, source: null, usesSmallCache: true };
-    obj1[1] = tmp.image;
-    const tmp15 = preloadDefault;
-    if (tmp7Result.isThemeDark(theme.theme)) {
-      tmp8 = 5594;
-      let tmp14Result = tmp14(tmp8);
+class EmojiItem {
+  constructor(arg0) {
+    emoji = global.emoji;
+    ({ category, disabled, onPressEmoji, onLongPressEmoji, animateEmoji } = global);
+    tmp = closure_9();
+    if (null == emoji.id) {
+      str = emoji.url;
+      if (str == null) {
+        str = "";
+      }
+      emojiURL = str;
     } else {
-      tmp14Result = tmp14(5595);
+      tmp2 = category;
+      tmp3 = onPressEmoji;
+      obj = require("getAvatarURL");
+      obj = { id: null, animated: null, size: null };
+      obj[0] = emoji.id;
+      if (animateEmoji) {
+        animateEmoji = emoji.animated;
+      }
+      obj[1] = animateEmoji;
+      tmp4 = IMAGE_SIZE;
+      obj[2] = IMAGE_SIZE;
+      emojiURL = obj.getEmojiURL(obj);
     }
-    obj1[2] = tmp14Result;
-    const obj2 = { uri: null };
-    obj2[0] = emojiURL;
-    obj1[3] = obj2;
-    callback(tmp15, obj1);
-    tmp7Result = tmp7(1362);
-  } else {
-    const obj3 = { allowFontScaling: false, style: null, children: null };
-    obj3[1] = tmp.surrogates;
-    obj3[2] = emoji.surrogates;
-    const tmp10 = callback(tmp7(1296).LegacyText, obj3);
-    const items1 = [tmp10];
     if (disabled) {
-      disabled = callback(EmojiItemLockedOverlay, {});
+      disabled = !global.isSectionNitroLocked;
     }
-    items1[1] = disabled;
-    obj[5] = items1;
-    return closure_8(emoji(5076).PressableOpacity, obj);
+    tmp7 = emoji;
+    tmp8 = onPressEmoji;
+    tmp6 = jsxs;
+    obj1 = {
+      accessibilityRole: "button",
+      accessibilityLabel: emoji.name,
+      style: null,
+      onPress: null,
+      onLongPress: null,
+      children: null,
+    };
+    items = [,];
+    items[0] = tmp.surrogatesFrame;
+    disabledOverlay = disabled;
+    if (disabled) {
+      disabledOverlay = tmp.disabledOverlay;
+    }
+    items[1] = disabledOverlay;
+    obj1[2] = items;
+    obj1[3] = function onPress() {
+      return callback(emoji, closure_1);
+    };
+    obj1[4] = function onLongPress() {
+      return callback2(emoji);
+    };
+    if (null != emoji.id) {
+      tmp13 = jsx;
+      tmp14 = category;
+      obj2 = { resizeMode: "contain", style: null, placeholder: null, source: null, usesSmallCache: true };
+      obj2[1] = tmp.image;
+      tmp15 = require("preload");
+      tmp7Result = require("AccessibilityAnnouncer");
+      tmp16 = closure_4;
+      if (tmp7Result.isThemeDark(closure_4.theme)) {
+        tmp8 = tmp8[15];
+        tmp14Result = tmp14(tmp8);
+      } else {
+        tmp14Result = require("registerAsset");
+      }
+      obj2[2] = tmp14Result;
+      obj3 = { uri: null };
+      obj3[0] = emojiURL;
+      obj2[3] = obj3;
+      tmp13Result = tmp13(tmp15, obj2);
+      tmp19 = tmp13;
+    } else {
+      tmp9 = jsx;
+      obj4 = { allowFontScaling: false, style: null, children: null };
+      obj4[1] = tmp.surrogates;
+      obj4[2] = emoji.surrogates;
+      tmp10 = jsx(require("Button").LegacyText, obj4);
+      tmp11 = jsx;
+      tmp12 = tmp10;
+      items1 = [,];
+      items1[0] = tmp10;
+      if (disabled) {
+        tmp20 = EmojiItemLockedOverlay;
+        disabled = tmp9(EmojiItemLockedOverlay, {});
+      }
+      items1[1] = disabled;
+      obj1[5] = items1;
+      return tmp6(require("PressableBase").PressableOpacity, obj1);
+    }
+    return;
   }
 }
 ({ View: c3, StyleSheet } = get_ActivityIndicator);
@@ -272,6 +284,7 @@ let closure_13 = importAllResult.memo((arg0) => {
 const alphaResult = nDefault("#000000").alpha(0.2);
 let result = set.fileFinishedImporting("modules/emoji_picker/native/components/EmojiPickerListRow.tsx");
 
+export { EmojiItem };
 export const EmojiPickerListRow = importAllResult.memo((nativeRow) => {
   nativeRow = nativeRow.nativeRow;
   if (nativeRow === undefined) {

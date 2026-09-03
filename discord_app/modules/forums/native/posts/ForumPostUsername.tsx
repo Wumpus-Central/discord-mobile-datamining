@@ -18,7 +18,7 @@ function ForumPostUsername(arg0) {
   if (useForumChannelStore(thread.parent_id).layoutType === set.ForumLayout.GRID) {
     num = 72;
   }
-  const diff = useChatWidthDefault() - tmp2(11801).GRID_HORIZONTAL_PADDING - num;
+  const diff = useChatWidthDefault() - tmp2(11807).GRID_HORIZONTAL_PADDING - num;
   let tmp2Result = tmp2(586);
   const items = [closure_4];
   const stateFromStores = tmp2Result.useStateFromStores(items, () => roleStyle.roleStyle);
@@ -27,9 +27,9 @@ function ForumPostUsername(arg0) {
       let obj = { color: null };
       obj[0] = authorColor;
     }
-    tmp2Result = tmp2(7879);
+    tmp2Result = tmp2(7882);
     const processColorStringsArray = tmp2Result.useProcessColorStringsArray(authorColors);
-    const tmp2Result1 = tmp2(7879);
+    const tmp2Result1 = tmp2(7882);
     const useIsRoleStyleAndRoleColorsEligibleForERC = tmp2Result1.useIsRoleStyleAndRoleColorsEligibleForERC;
     const guild_id = thread.guild_id;
     let tmp19Result = null;

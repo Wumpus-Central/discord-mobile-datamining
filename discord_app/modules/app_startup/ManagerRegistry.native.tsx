@@ -31,6 +31,7 @@ import { updateSocialRpcNetworkConfig } from "../rpc/native/SocialRpcNetworkConf
 import { handleConnectionOpenSupplemental } from "../safety_flows/SafetyFlowsManager.tsx";
 import { fadeIn } from "../self_mod/inappropriate_conversation/InappropriateConversationsManager.tsx";
 import { isLikelyControl } from "../sentry/SentryExperimentFeatureFlagManager.tsx";
+import { handleChannelSelect } from "../tti_analytics/native/navigation/NavigationTTIDispatcherManager.tsx";
 import { handleUserApplicationIdentityGatewayEvent } from "../user_application_identity/UserApplicationIdentityManager.tsx";
 import { prototype } from "../user_settings/privacy_and_safety/native/UserSettingsNativeBridgeManager.tsx";
 import { prototype } from "../voice_panel/VoicePanelManager.native.tsx";
@@ -162,6 +163,7 @@ set = {
   ApplicationStreamingManager: set,
   LibdiscoreExperimentManager: set,
   NativeIntentsManager: set,
+  NavigationTTIDispatcherManager: set,
   SafetyFlowsManager: set,
   UserApplicationIdentityManager: set,
   LocalMessageCacheStatsManager: set,
@@ -504,6 +506,13 @@ set = {
   neverLoadBeforeConnectionOpen: true,
 };
 set = {
+  actions: ["CHANNEL_SELECT"],
+  inlineRequire() {
+    return handleChannelSelect /* handleChannelSelect */.default;
+  },
+  neverLoadBeforeConnectionOpen: true,
+};
+set = {
   actions: ["CONNECTION_OPEN_SUPPLEMENTAL", "SAFETY_FLOWS_MODAL_OPEN", "USER_REQUIRED_ACTION_UPDATE"],
   inlineRequire() {
     return handleConnectionOpenSupplemental /* handleConnectionOpenSupplemental */.default;
@@ -545,6 +554,8 @@ set = {
     "QUESTS_ENROLL_SUCCESS",
     "RUNNING_GAMES_CHANGE",
     "RUNNING_NON_GAMES_CHANGE",
+    "LOCAL_ACTIVITY_UPDATE",
+    "RPC_APP_DISCONNECTED",
     "QUESTS_FETCH_CURRENT_QUESTS_SUCCESS",
     "STREAM_START",
     "STREAM_CREATE",
@@ -557,6 +568,8 @@ set = {
     "EMBEDDED_ACTIVITY_UPDATE_V2",
     "QUESTS_PREVIEW_UPDATE_SUCCESS",
     "QUEST_APPLICATION_START_TIMER",
+    "GAME_FETCH_SUCCESS",
+    "APPLICATIONS_FETCH_SUCCESS",
   ],
   inlineRequire() {
     return isQuestProgressable /* isQuestProgressable */.default;

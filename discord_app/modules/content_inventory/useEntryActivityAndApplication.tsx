@@ -22,7 +22,7 @@ export default function useEntryActivityAndApplication(extra) {
     application_id1 = extra.extra.application_id;
   }
   items1[1] = application_id1;
-  const tmp7 = callback(first(5967)(items1), 2);
+  const tmp7 = callback(first(5968)(items1), 2);
   first = tmp7[0];
   obj = {
     activity: stateFromStores,
@@ -32,7 +32,7 @@ export default function useEntryActivityAndApplication(extra) {
     fallbackApplication: null,
   };
   const tmp = _require;
-  const tmp4 = first(5967);
+  const tmp4 = first(5968);
   const items2 = [closure_4];
   obj[1] = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items2, () => {
     let id;

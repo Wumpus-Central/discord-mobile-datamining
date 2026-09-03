@@ -40,7 +40,7 @@ export default function InstantInviteAgeText(style) {
     }
     obj = { variant: null, children: null };
     obj[0] = str2;
-    const items2 = [tmp2(9933).maxAgeString(stateFromStores.maxAge, stateFromStores.maxUses), " "];
+    const items2 = [tmp2(9937).maxAgeString(stateFromStores.maxAge, stateFromStores.maxUses), " "];
     obj[1] = items2;
     const items3 = [closure_4(tmp2(4474).Text, obj)];
     if (canEditInvite) {
@@ -62,12 +62,12 @@ export default function InstantInviteAgeText(style) {
       const intl2 = tmp2(1233).intl;
       obj2[2] = intl2.string(tmp2(1233).t["VNe8P/"]);
       obj1[4] = closure_5(tmp2(4474).Text, obj2);
-      canEditInvite = tmp9(tmp2(5076).PressableOpacity, obj1);
+      canEditInvite = tmp9(tmp2(5077).PressableOpacity, obj1);
     }
     items3[1] = canEditInvite;
     obj[1] = items3;
     tmp7Result = tmp7(View, obj);
-    const tmp2Result = tmp2(9933);
+    const tmp2Result = tmp2(9937);
     const tmp8 = View;
   }
   return tmp7Result;

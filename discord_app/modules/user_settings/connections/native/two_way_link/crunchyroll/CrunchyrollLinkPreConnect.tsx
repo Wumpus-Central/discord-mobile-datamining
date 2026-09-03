@@ -1,5 +1,5 @@
 // discord_app/modules/user_settings/connections/native/two_way_link/crunchyroll/CrunchyrollLinkPreConnect.tsx
-import registerAssetDefault from "../../../../../../../_runtime/09358_registerAsset.js";
+import registerAssetDefault from "../../../../../../../_runtime/09362_registerAsset.js";
 import closure_3 from "../../../../../../../_runtime/00019_noop.js";
 import { CrunchyrollLinkModalScenes as closure_4 } from "CrunchyrollLinkConstants.tsx";
 import { PlatformTypes } from "../../../../../../Constants.tsx";
@@ -39,7 +39,7 @@ export default function CrunchyrollLinkPreConnect() {
   const intl2 = navigation(1233).intl;
   obj[6] = intl2.string(navigation(1233).t.oS4NEH);
   obj[7] = closure_6;
-  return jsx(navigation(9323).TwoWayLinkPreConnect, {
+  return jsx(navigation(9327).TwoWayLinkPreConnect, {
     platformType: PlatformTypes.CRUNCHYROLL,
     onError: callback1,
     onNext: callback,

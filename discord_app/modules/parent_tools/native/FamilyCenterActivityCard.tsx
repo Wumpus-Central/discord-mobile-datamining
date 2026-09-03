@@ -9,7 +9,7 @@ import useUserIdsForLinkStatus from "../hooks/useUserLinks.tsx";
 import useIsInAdultAgeGroupDefault from "../hooks/useIsInAdultAgeGroup.tsx";
 import renderDefault from "../../../design/void/TouchableHitBox/native/TouchableHitBox.tsx";
 import useAgeSpecificText from "../hooks/useAgeSpecificText.tsx";
-import registerAssetDefault from "../../../../_runtime/12531_registerAsset.js";
+import registerAssetDefault from "../../../../_runtime/12543_registerAsset.js";
 import FamilyCenterUsernameHeaderDefault from "FamilyCenterUsernameHeader.tsx";
 import useSelectedTeenUser from "../hooks/useSelectedTeenUser.tsx";
 import FamilyCenterTopActivityDefault from "FamilyCenterTopActivity.tsx";
@@ -46,7 +46,7 @@ function FamilyCenterActivityCardPrefaceText() {
   if (!tmp4) {
     obj1 = { color: null, source: null, style: null };
     obj1[0] = tmp.icon.color;
-    obj1[1] = tmp2(14719);
+    obj1[1] = tmp2(14734);
     obj1[2] = tmp.icon;
     tmp12 = callback(tmp5(1296).Icon, obj1);
   }
@@ -292,7 +292,7 @@ const memoResult = importAllResult.memo((arg0) => {
     guildId: "HermesInternal",
     disablePlaceholder: null,
     avatarDecoration: user.avatarDecoration,
-    size: 649.369,
+    size: 391,
   };
   obj[5] = NORMAL;
   const items = [callback(View, obj)];
@@ -398,7 +398,7 @@ export default function FamilyCenterActivityCard() {
   if (undefined === selectedTeenUser) {
     return null;
   } else {
-    const sortedActivityTypeConfigs = tmp2(7347).getSortedActivityTypeConfigs();
+    const sortedActivityTypeConfigs = tmp2(7348).getSortedActivityTypeConfigs();
     obj = { style: null, children: null };
     obj[0] = tmp.card;
     obj = { style: null, children: null };

@@ -32,7 +32,7 @@ export const useYouBarAccessibilityLabel = function useYouBarAccessibilityLabel(
   if (setting != null) {
     text = setting.text;
   }
-  let tmp3Result = tmp3(9101);
+  let tmp3Result = tmp3(9105);
   let tmp7 = null;
   if ("" !== text) {
     tmp7 = text;
@@ -40,7 +40,7 @@ export const useYouBarAccessibilityLabel = function useYouBarAccessibilityLabel(
   closure_3 = tmp3Result.useGameMentionsAsPlainText(tmp7);
   let tmp8;
   if (isYouBarGuildTagEnabled) {
-    tmp3Result = tmp3(8083);
+    tmp3Result = tmp3(8086);
     let primaryGuild;
     if (stateFromStores != null) {
       primaryGuild = stateFromStores.primaryGuild;
@@ -58,10 +58,10 @@ export const useYouBarAccessibilityLabel = function useYouBarAccessibilityLabel(
   return require("../../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     if (null != callback) {
       const status = closure_1_8.getStatus();
-      let obj = callback(9255);
+      let obj = callback(9259);
       const items = [closure_3, closure_1_7];
       const discoverableApplicationStream = obj.getDiscoverableApplicationStream(id, items);
-      obj1 = callback(9256);
+      obj1 = callback(9260);
       obj = { userId: null };
       obj[0] = id;
       obj = { ChannelStore: null, PermissionStore: null, VoiceStateStore: null };
@@ -81,7 +81,7 @@ export const useYouBarAccessibilityLabel = function useYouBarAccessibilityLabel(
               if (null != discoverableApplicationStream) {
                 let name;
                 if (activities != null) {
-                  const found = activities.find(id(9262));
+                  const found = activities.find(id(9266));
                   if (found != null) {
                     name = found.name;
                   }
@@ -103,7 +103,7 @@ export const useYouBarAccessibilityLabel = function useYouBarAccessibilityLabel(
                   });
                 }
                 if (null != found1) {
-                  text = id(9266)(found1, true).text;
+                  text = id(9270)(found1, true).text;
                 } else {
                   text = null;
                   if (null != voiceChannel) {

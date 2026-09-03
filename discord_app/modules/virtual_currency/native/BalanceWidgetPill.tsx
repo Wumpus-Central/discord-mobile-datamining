@@ -41,7 +41,10 @@ class BalanceWidgetPill {
       prop = null;
     }
     balance = global.balance;
-    tmp2 = null === prop && null === balance;
+    tmp2 = null === prop;
+    if (tmp2) {
+      tmp2 = null === balance;
+    }
     tmp3 = closure_0;
     tmp4 = closure_1;
     obj = require("useVirtualCurrencyBalanceAnimationData");
@@ -53,13 +56,10 @@ class BalanceWidgetPill {
       virtualCurrencyBalanceAnimationData);
     tmp6 = closure_5();
     tmp8 = View;
-    obj = {
-      style: tmp6.container,
-      accessibilityLabel: null,
-      accessibilityState: null,
-      accessible: true,
-      children: null,
-    };
+    obj = { style: items, accessibilityLabel: null, accessibilityState: null, accessible: true, children: null };
+    items = [,];
+    items[0] = tmp6.container;
+    items[1] = global.style;
     tmp7 = jsxs;
     intl = require("getSystemLocale").intl;
     if (tmp2) {
@@ -76,8 +76,8 @@ class BalanceWidgetPill {
       style: tmp6.orbsLottieContainer,
       children: jsx(require("forwardRef").OrbLottieAnimation, { ref: lottieRef, animationType: currentAnimationType }),
     };
-    items = [,];
-    items[0] = jsx(tmp8, obj2);
+    items1 = [,];
+    items1[0] = jsx(tmp8, obj2);
     obj3 = { style: tmp6.balanceCounterContainer, children: null };
     if (showInitialRenderedBalance) {
       balance = prop;
@@ -91,8 +91,8 @@ class BalanceWidgetPill {
       style: tmp6.balanceText,
     };
     obj3[1] = tmp10(require("BalanceCounter").BalanceCounter, obj4);
-    items[1] = tmp10(tmp8, obj3);
-    obj[4] = items;
+    items1[1] = tmp10(tmp8, obj3);
+    obj[4] = items1;
     return tmp7(tmp8, obj);
   }
 }

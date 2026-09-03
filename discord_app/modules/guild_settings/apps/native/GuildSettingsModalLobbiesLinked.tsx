@@ -14,7 +14,7 @@ function SyncingToGamesItem(channels) {
   dependencyMap = undefined;
   let obj = channels(1498);
   dependencyMap = obj.useNavigation();
-  const getOrFetchApplication = channels(5967).useGetOrFetchApplication(channels.applicationId);
+  const getOrFetchApplication = channels(5968).useGetOrFetchApplication(channels.applicationId);
   let tmp5Result = null;
   if (0 !== channels.length) {
     let name;
@@ -33,8 +33,8 @@ function SyncingToGamesItem(channels) {
       };
       obj = { IconComponent: null };
       const obj2 = channels(4674);
-      obj[0] = channels(4981).getChannelIconComponent(id);
-      obj[1] = closure_1_6(channels(5607).TableRow.Icon, obj);
+      obj[0] = channels(4982).getChannelIconComponent(id);
+      obj[1] = closure_1_6(channels(5608).TableRow.Icon, obj);
       obj[3] = function onPress() {
         const obj = { channel: length, numScreensToPop: null };
         let num = 1;
@@ -47,9 +47,9 @@ function SyncingToGamesItem(channels) {
         obj[1] = num;
         closure_1_2.push(closure_2_5.EDIT_LINKED_LOBBY, obj);
       };
-      return closure_1_6(channels(5607).TableRow, obj, id.id);
+      return closure_1_6(channels(5608).TableRow, obj, id.id);
     });
-    tmp5Result = closure_6(channels(6000).TableRowGroup, obj);
+    tmp5Result = closure_6(channels(6001).TableRowGroup, obj);
     const tmp5 = closure_6;
   }
   return tmp5Result;

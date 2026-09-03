@@ -73,8 +73,8 @@ const memoResult = importAllResult.memo((arg0) => {
       return callback(closure_1_7.USER_DISMISS);
     };
     obj[2] = tmp.closeButton;
-    obj[3] = callback2(tmp2(5559).XSmallIcon, { size: "sm", color: "text-default" });
-    const items = [callback2(tmp2(5076).PressableOpacity, obj), , , ,];
+    obj[3] = callback2(tmp2(5560).XSmallIcon, { size: "sm", color: "text-default" });
+    const items = [callback2(tmp2(5077).PressableOpacity, obj), , , ,];
     obj1 = { imageSrc: null };
     obj1[0] = coverImageUrl;
     items[1] = callback2(importDefaultResult1Default, obj1);
@@ -96,7 +96,7 @@ const memoResult = importAllResult.memo((arg0) => {
     const obj6 = { variant: "primary", size: "sm", text: null, icon: null, iconPosition: "end", onPress: null };
     const intl3 = tmp2(1233).intl;
     obj6[2] = intl3.string(tmp2(1233).t["2u6ZlY"]);
-    obj6[3] = callback2(tmp2(8743).LinkExternalSmallIcon, { size: "xs", color: "white" });
+    obj6[3] = callback2(tmp2(8747).LinkExternalSmallIcon, { size: "xs", color: "white" });
     obj6[5] = callback(function* () {
       if (v0 === 2) {
         v0 = 3;
@@ -152,10 +152,10 @@ const memoResult = importAllResult.memo((arg0) => {
         }
       }
     });
-    obj5[1] = callback2(tmp2(4928).Button, obj6);
+    obj5[1] = callback2(tmp2(4929).Button, obj6);
     items[4] = callback2(View, obj5);
     obj[2] = items;
-    return callback3(tmp2(5609).Card, obj);
+    return callback3(tmp2(5610).Card, obj);
   }
   const tmp6Result = useGameNameAndCoverImageDefault(first, intl.string(getSystemLocale.t.VQq92a));
 });

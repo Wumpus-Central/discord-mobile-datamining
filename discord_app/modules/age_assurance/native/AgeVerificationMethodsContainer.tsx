@@ -23,7 +23,7 @@ export const AgeVerificationMethodsContainer = function AgeVerificationMethodsCo
   const prop = ageVerificationMethods.ageVerificationMethods;
   const modalSessionId = ageVerificationMethods.modalSessionId;
   const tmp = callback2();
-  let obj = prop(8704);
+  let obj = prop(8708);
   const isSuspendedUser = obj.useIsSuspendedUser();
   const items = [prop];
   const effect = React.useEffect(() => {
@@ -71,7 +71,7 @@ export const AgeVerificationMethodsContainer = function AgeVerificationMethodsCo
     obj1[1] = mapped;
     items1[1] = tmp7(tmp8, obj1);
     obj[2] = items1;
-    const items2 = [tmp6(prop(4926).Stack, obj)];
+    const items2 = [tmp6(prop(4927).Stack, obj)];
     let tmp7Result = isSuspendedUser;
     if (isSuspendedUser) {
       let obj2 = { variant: "text-xs/medium", children: null };
@@ -86,7 +86,7 @@ export const AgeVerificationMethodsContainer = function AgeVerificationMethodsCo
     const obj4 = { spacing: 8, align: "center", children: null };
     items2[1] = tmp7Result;
     obj4[2] = items2;
-    return tmp6(prop(4926).Stack, obj4);
+    return tmp6(prop(4927).Stack, obj4);
   }
   const obj5 = { direction: "vertical", align: "center", spacing: 16, style: tmp.errorContainer, children: null };
   const obj6 = { variant: "text-sm/medium", color: "text-subtle", style: tmp.noMethodsText, children: null };
@@ -97,9 +97,9 @@ export const AgeVerificationMethodsContainer = function AgeVerificationMethodsCo
   const obj8 = { variant: "primary", size: "lg", text: null, onPress: null };
   const intl3 = tmp2(1233).intl;
   obj8[2] = intl3.string(modalSessionId(2918).hDvmYP);
-  obj8[3] = prop(8703).getAgeVerificationMethods;
-  obj7[1] = callback(prop(4928).Button, obj8);
-  items3[1] = callback(prop(5384).ButtonGroup, obj7);
+  obj8[3] = prop(8707).getAgeVerificationMethods;
+  obj7[1] = callback(prop(4929).Button, obj8);
+  items3[1] = callback(prop(5385).ButtonGroup, obj7);
   obj5[4] = items3;
-  mapped = tmp6(tmp2(4926).Stack, obj5);
+  mapped = tmp6(tmp2(4927).Stack, obj5);
 };

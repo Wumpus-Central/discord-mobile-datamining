@@ -1,7 +1,7 @@
 // discord_app/modules/channel_list_v2/native/items/ThreadChannel.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import inlineStyles from "../../../../../_runtime/08250_inlineStyles.js";
-import inlineStylesDefault from "../../../../../_runtime/08250_inlineStyles.js";
+import inlineStyles from "../../../../../_runtime/08254_inlineStyles.js";
+import inlineStylesDefault from "../../../../../_runtime/08254_inlineStyles.js";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import closure_5 from "../../../threads/JoinedThreadsStore.tsx";

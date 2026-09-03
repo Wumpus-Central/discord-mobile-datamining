@@ -95,7 +95,7 @@ function _handlePurchaseUpdated() {
                   let dispatchResult = obj4.dispatch(obj);
                   let tmp24 = lib;
                   let tmp25 = dependencyMap;
-                  let obj7 = lib(4837);
+                  let obj7 = lib(4838);
                   c6 = 8;
                   let num4 = 1;
                   c7 = 1;
@@ -118,7 +118,7 @@ function _handlePurchaseUpdated() {
               } else {
                 let tmp15 = lib;
                 let tmp16 = dependencyMap;
-                obj1 = lib(4837);
+                obj1 = lib(4838);
                 c6 = 9;
                 let num2 = 1;
                 c7 = 1;
@@ -330,7 +330,7 @@ function _executePendingDowngrade() {
             lib = dependencyMap;
             let obj5 = pendingDowngrade(4154);
             const result = obj5.captureBillingException(lib);
-            let obj6 = lib(4858);
+            let obj6 = lib(4859);
             const obj2 = { title: null, body: null };
             const intl = pendingDowngrade(1233).intl;
             obj2[0] = intl.string(pendingDowngrade(1233).t["U+H+kd"]);
@@ -459,7 +459,7 @@ function _fetchAndAlertActiveSubscription() {
             closure_1 = tmp5;
             let callback = tmp2;
             callback = undefined;
-            obj1 = closure_1_0(4837);
+            obj1 = closure_1_0(4838);
             dependencyMap = 1;
             c3 = 1;
             obj1 = { value: null, done: false };

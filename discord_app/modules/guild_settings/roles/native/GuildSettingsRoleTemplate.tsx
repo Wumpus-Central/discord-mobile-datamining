@@ -3,8 +3,8 @@ import ThemesDefault from "../../../../../discord_common/js/packages/tokens/nati
 import useWindowDimensionsDefault from "../../../screen/useWindowDimensions.native.tsx";
 import SCREEN_READER_ENABLED_GETTER from "../../../a11y/native/useIsScreenReaderEnabled.native.tsx";
 import useIsWindowLargeDefault from "../../../screen/native/useIsWindowLarge.tsx";
-import _modDef8390 from "../../../../../_runtime/metro/08390__.js";
-import PaginationDefault from "../../../../../_runtime/10753_Pagination.js";
+import _modDef8394 from "../../../../../_runtime/metro/08394__.js";
+import PaginationDefault from "../../../../../_runtime/10757_Pagination.js";
 import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
 import closure_4 from "../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
@@ -202,14 +202,14 @@ export default function GuildSettingsRoleTemplate(arg0) {
       accessible: false,
       accessibilityElementsHidden: true,
       importantForAccessibility: "no-hide-descendants",
-      children: callback2(_modDef8390, obj3),
+      children: callback2(_modDef8394, obj3),
     }),
   ];
   let obj2 = {
     accessible: false,
     accessibilityElementsHidden: true,
     importantForAccessibility: "no-hide-descendants",
-    children: callback2(_modDef8390, obj3),
+    children: callback2(_modDef8394, obj3),
   };
   items2[1] = callback2(ref1, {
     style: tmp.sliderLabels,

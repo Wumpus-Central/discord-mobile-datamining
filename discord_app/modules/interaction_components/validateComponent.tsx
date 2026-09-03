@@ -136,7 +136,7 @@ export default function validateComponent(type, arg1, modal) {
           stringResult4 = intl10.string(tmp4(1233).t.eJEUvD);
         }
         const tmp18 = stringResult4;
-        tmp4Result = tmp4(4739);
+        tmp4Result = tmp4(4740);
       }
       return tmp18;
     } else if (values.type === tmp4(1954).ComponentType.STRING_SELECT) {

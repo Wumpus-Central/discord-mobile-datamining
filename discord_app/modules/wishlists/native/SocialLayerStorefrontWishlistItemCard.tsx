@@ -26,7 +26,7 @@ const obj1 = {
   shadowRadius: 0,
   elevation: "visible",
   overflow: null,
-  borderRadius: "\u{1FAC4}\u{1F3FF}",
+  borderRadius: "\u{1F9DA}\u{1F3FD}",
 };
 obj1[1] = { width: 0, height: 0 };
 obj1[6] = ThemesDefault.radii.none;

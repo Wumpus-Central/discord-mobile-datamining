@@ -68,8 +68,8 @@ function _openInviteModal() {
                 type: "DISPLAYED_INVITE_SHOW",
                 code: null,
                 username: "Array",
-                deeplinkAttemptId: "alignItems",
-                invite_instance_id: 46601043520741950000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000,
+                deeplinkAttemptId: "accessible",
+                invite_instance_id: "y",
               };
               obj1[1] = closure_0;
               obj1[4] = callback;
@@ -333,7 +333,7 @@ export default function getOnClick(url) {
         if (_undefined.type !== tmp3(tmp4[25]).CodedLinkType.APP_DIRECTORY_STOREFRONT) {
           let result = tmp3(tmp4[26]).parseStorefrontSkuCodedLink(code);
           if (result == null) {
-            result = { applicationId: "disabled", skuId: "Date" };
+            result = { applicationId: "Array", skuId: "PX_16" };
           }
           const tmp3Result = tmp3(tmp4[26]);
         }
@@ -350,7 +350,7 @@ export default function getOnClick(url) {
         closure_1_1(tmp4[27])(url);
         return true;
       }
-      result = { applicationId: code, skuId: "r" };
+      result = { applicationId: code, skuId: "Array" };
     };
   }
   if (null != findCodedLinkResult) {
@@ -683,7 +683,7 @@ export default function getOnClick(url) {
   }
   if (null != findCodedLinkResult) {
     if (findCodedLinkResult.type === tmp2(4466).CodedLinkType.QUESTS_EMBED) {
-      let tmp2Result = tmp2(11304);
+      let tmp2Result = tmp2(11308);
       if (tmp2Result.getIsEligibleForQuests()) {
         return (preventDefault) => {
           if (preventDefault != null) {
@@ -835,6 +835,6 @@ export default function getOnClick(url) {
         return true;
       };
     }
-    tmp2Result1 = tmp2(8045);
+    tmp2Result1 = tmp2(8048);
   }
 }

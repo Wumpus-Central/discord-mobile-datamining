@@ -1,7 +1,7 @@
 // discord_app/modules/nuf/native/NUFActionCreators.tsx
 import dispatcherDefault from "../../../Dispatcher.tsx";
-import _modDef4723 from "../../../actions/ModalActionCreators.tsx";
-import _modDef12505 from "../../hub/native/components/HubEmailConnectionModalActionCreators.tsx";
+import _modDef4724 from "../../../actions/ModalActionCreators.tsx";
+import _modDef12517 from "../../hub/native/components/HubEmailConnectionModalActionCreators.tsx";
 import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import ContactSyncModes from "../../contact_sync/native/ContactSyncModalStore.tsx";
 import closure_8 from "../../../stores/ConnectedAccountsStore.tsx";
@@ -51,14 +51,14 @@ function _startContactSyncForDiscoverability() {
                 phone = currentUser.phone;
               }
               const localAccount = closure_1_8.getLocalAccount(closure_1_11.CONTACTS);
-              callback(12442);
+              callback(12454);
               if (null == phone) {
                 const _Error = Error;
                 error = new Error("Cannot start contact sync without a phone number");
                 throw error;
               } else {
                 closure_1_6(tmp31);
-                let obj4 = closure_1_1(12446);
+                let obj4 = closure_1_1(12458);
                 obj1 = { enabled: null, name: null };
                 obj1[0] = tmp15;
                 obj1[1] = tmp31;
@@ -79,7 +79,7 @@ function _startContactSyncForDiscoverability() {
               obj3[0] = arg1;
               return obj3;
             } else {
-              obj1 = callback(12442);
+              obj1 = callback(12454);
               dependencyMap = 2;
               c3 = 1;
               obj4 = { value: null, done: false };
@@ -136,7 +136,7 @@ export const previousOnboardingStep = function previousOnboardingStep() {
 };
 export const transitionToNUFGuildTemplatesModal = function transitionToNUFGuildTemplatesModal(SLIDE_IN) {
   closure_0 = SLIDE_IN;
-  _modDef4723.pushLazy(
+  _modDef4724.pushLazy(
     callback(function* () {
       closure_1 = tmp5;
       closure_0 = tmp2;
@@ -156,12 +156,12 @@ export const transitionToHubEmailConnectionModal = function transitionToHubEmail
   if (arg1 === undefined) {
     flag = false;
   }
-  let obj = _modDef12505;
+  let obj = _modDef12517;
   obj = {
     onCloseExtra(arg0) {
       if (arg0) {
-        const result = callback(12508).setNewUserFlowCompleted();
-        const obj2 = callback(12508);
+        const result = callback(12520).setNewUserFlowCompleted();
+        const obj2 = callback(12520);
       } else {
         callback2(706).dispatch({ type: "ONBOARDING_STEP" });
         const obj = callback2(706);
@@ -172,7 +172,7 @@ export const transitionToHubEmailConnectionModal = function transitionToHubEmail
   obj.open(obj, SLIDE_IN);
 };
 export const openDiscoverabilityModal = function openDiscoverabilityModal() {
-  _modDef4723.pushLazy(
+  _modDef4724.pushLazy(
     callback(function* () {
       closure_1 = tmp5;
       let callback = tmp2;
@@ -188,7 +188,7 @@ export const openDiscoverabilityModal = function openDiscoverabilityModal() {
   );
 };
 export const closeDiscoverabilityModal = function closeDiscoverabilityModal(skip) {
-  let obj = _modDef4723;
+  let obj = _modDef4724;
   obj.popWithKey(closure_10);
   obj = { type: "ONBOARDING_STEP", skip };
   dispatcherDefault.dispatch(obj);

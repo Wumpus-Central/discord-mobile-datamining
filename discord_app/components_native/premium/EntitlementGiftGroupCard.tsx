@@ -8,17 +8,17 @@ import getPrice from "../../modules/slayer_storefront/SlayerStorefrontUtils.tsx"
 import getSubscriptionPlans from "../../utils/SubscriptionUtils.tsx";
 import SlayerStorefrontItemCardDefault from "../../modules/slayer_storefront/native/SlayerStorefrontItemCard.tsx";
 import metadataDefault from "../../../discord_assets/assets/premium/gifting/halloween-card-small.png.js";
-import registerAssetDefault from "../../../_runtime/13081_registerAsset.js";
-import registerAssetDefault2 from "../../../_runtime/13082_registerAsset.js";
-import registerAssetDefault3 from "../../../_runtime/13083_registerAsset.js";
-import registerAssetDefault4 from "../../../_runtime/13084_registerAsset.js";
-import registerAssetDefault5 from "../../../_runtime/13085_registerAsset.js";
-import registerAssetDefault6 from "../../../_runtime/13086_registerAsset.js";
-import registerAssetDefault7 from "../../../_runtime/13087_registerAsset.js";
-import registerAssetDefault8 from "../../../_runtime/13088_registerAsset.js";
-import registerAssetDefault9 from "../../../_runtime/13089_registerAsset.js";
-import registerAssetDefault10 from "../../../_runtime/13092_registerAsset.js";
-import registerAssetDefault11 from "../../../_runtime/13093_registerAsset.js";
+import registerAssetDefault from "../../../_runtime/13093_registerAsset.js";
+import registerAssetDefault2 from "../../../_runtime/13094_registerAsset.js";
+import registerAssetDefault3 from "../../../_runtime/13095_registerAsset.js";
+import registerAssetDefault4 from "../../../_runtime/13096_registerAsset.js";
+import registerAssetDefault5 from "../../../_runtime/13097_registerAsset.js";
+import registerAssetDefault6 from "../../../_runtime/13098_registerAsset.js";
+import registerAssetDefault7 from "../../../_runtime/13099_registerAsset.js";
+import registerAssetDefault8 from "../../../_runtime/13100_registerAsset.js";
+import registerAssetDefault9 from "../../../_runtime/13101_registerAsset.js";
+import registerAssetDefault10 from "../../../_runtime/13104_registerAsset.js";
+import registerAssetDefault11 from "../../../_runtime/13105_registerAsset.js";
 import importAllResult from "../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../_runtime/00017_get_ActivityIndicator.js";
 import importDefaultResult from "../../modules/applications/ApplicationStore.tsx";
@@ -245,9 +245,9 @@ prototype["renderHeader"] = function renderHeader(arg0, children) {
   obj3[1] = items2;
   items1[1] = closure_15(closure_4, obj3);
   if (isOpen) {
-    let ChevronSmallRightIcon = tmp2(8949).ChevronSmallDownIcon;
+    let ChevronSmallRightIcon = tmp2(8953).ChevronSmallDownIcon;
   } else {
-    ChevronSmallRightIcon = tmp2(6011).ChevronSmallRightIcon;
+    ChevronSmallRightIcon = tmp2(6012).ChevronSmallRightIcon;
   }
   items1[2] = closure_14(ChevronSmallRightIcon, {});
   obj[1] = items1;

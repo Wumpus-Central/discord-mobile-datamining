@@ -33,13 +33,13 @@ export default function MemberVerificationAlertCancelPending(guildId) {
     confirmText = intl3.string(tmp7(1233).t.OzHPde);
   }
   obj = { children: null };
-  const items1 = [closure_4(guildId(4928).Button, { variant: "destructive", text: confirmText, onPress: callback })];
+  const items1 = [closure_4(guildId(4929).Button, { variant: "destructive", text: confirmText, onPress: callback })];
   obj = { text: null, variant: "secondary", onPress: null };
   const intl4 = tmp7(1233).intl;
   obj[0] = intl4.string(guildId(1233).t.bANR0R);
   obj[2] = onClose;
-  items1[1] = closure_4(guildId(4928).Button, obj);
+  items1[1] = closure_4(guildId(4929).Button, obj);
   obj[0] = items1;
   obj.buttons = closure_6(closure_5, obj);
-  return closure_4(onClose(7666), obj);
+  return closure_4(onClose(7669), obj);
 }

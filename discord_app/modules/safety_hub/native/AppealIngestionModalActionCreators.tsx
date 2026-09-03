@@ -2,7 +2,7 @@
 import set from "../../../../_runtime/00002_set.js";
 import dispatcherDefault from "../../../Dispatcher.tsx";
 import asyncRequireImpl from "../../../../_runtime/02008_asyncRequireImpl.js";
-import _modDef4723 from "../../../actions/ModalActionCreators.tsx";
+import _modDef4724 from "../../../actions/ModalActionCreators.tsx";
 
 const APPEAL_INGESTION_MODAL_KEY = "APPEAL_INGESTION_MODAL_KEY";
 const result = set.fileFinishedImporting("modules/safety_hub/native/AppealIngestionModalActionCreators.tsx");
@@ -12,11 +12,11 @@ export default {
     let obj = dispatcherDefault;
     obj = { type: "SAFETY_HUB_APPEAL_OPEN", classificationId: classificationId.classificationId };
     obj.dispatch(obj);
-    _modDef4723.pushLazy(asyncRequireImpl(11692, dependencyMap.paths), classificationId, APPEAL_INGESTION_MODAL_KEY);
+    _modDef4724.pushLazy(asyncRequireImpl(11688, dependencyMap.paths), classificationId, APPEAL_INGESTION_MODAL_KEY);
   },
   close() {
-    _modDef4723.popWithKey(APPEAL_INGESTION_MODAL_KEY);
-    const obj = _modDef4723;
+    _modDef4724.popWithKey(APPEAL_INGESTION_MODAL_KEY);
+    const obj = _modDef4724;
     dispatcherDefault.dispatch({ type: "SAFETY_HUB_APPEAL_CLOSE" });
   },
 };

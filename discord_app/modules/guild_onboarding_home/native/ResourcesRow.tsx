@@ -65,7 +65,7 @@ export default function ResourcesRow(guildId) {
     obj1[0] = arr.length - 2;
     obj[2] = intl.format(guildId(1233).t.F6iMs4, obj1);
     obj[2] = callback(guildId(4474).Text, obj);
-    tmp6 = callback(guildId(5076).PressableOpacity, obj);
+    tmp6 = callback(guildId(5077).PressableOpacity, obj);
   }
   items[1] = tmp6;
   obj[2] = items;

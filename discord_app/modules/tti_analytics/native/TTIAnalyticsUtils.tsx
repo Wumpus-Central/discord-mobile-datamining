@@ -182,7 +182,7 @@ function _trackAppUIViewedAsync() {
             const obj7 = callback2(10);
             callback2(10).markAt("\u{1F3C3}", "app_opened", closure_4);
             const obj8 = callback2(10);
-            callback(7427).ttiRecorded(closure_5);
+            callback(7428).ttiRecorded(closure_5);
             let _setTimeout = setTimeout;
             let timerId = setTimeout(() => {
               let str = closure_0;
@@ -204,7 +204,7 @@ function _trackAppUIViewedAsync() {
               if (null == timeout) {
                 let _setTimeout = setTimeout;
                 timeout = setTimeout(() => {
-                  callback(9).setTTICallback(/* F124735 */ function() { ... });
+                  callback(9).setTTICallback(/* F124975 */ function() { ... });
                   callback3();
                   c25 = null;
                 }, 15 * callback(684).Millis.SECOND);

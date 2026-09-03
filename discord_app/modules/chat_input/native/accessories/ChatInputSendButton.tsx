@@ -61,12 +61,12 @@ let closure_12 = importAllResult.memo((type) => {
     num = closure_8;
   }
   obj = { cleanup, state, withBounce, bounceEnterDelayMs: num, children: null };
-  let tmp3Result = tmp3(12036);
+  let tmp3Result = tmp3(12042);
   if (type === constants.BUTTON_SEND_VOICE_MESSAGE || type === constants.BUTTON_SEND_VOICE_MESSAGE_DISABLED) {
     obj = { disabled: null, channelId: null };
     obj[0] = isOnCooldown;
     obj[1] = channelId;
-    let tmp7Result = tmp7(tmp3(12045), obj);
+    let tmp7Result = tmp7(tmp3(12051), obj);
   } else {
     obj1 = {
       active: true,
@@ -79,7 +79,7 @@ let closure_12 = importAllResult.memo((type) => {
       disabled: null,
     };
     ({ button: obj4[1], buttonActive: obj4[2], iconActive: obj4[3] } = tmp5);
-    tmp3Result = tmp3(12029);
+    tmp3Result = tmp3(12035);
     obj1[4] = tmp(4423).SendMessageIcon;
     const intl = tmp(1233).intl;
     obj1[5] = intl.string(tmp(1233).t.TXNS7S);
@@ -165,7 +165,7 @@ const forwardRefResult = importAllResult.forwardRef((channel, ref) => {
       obj1 = { disabled: null, channelId: null };
       obj1[0] = stateFromStores1;
       obj1[1] = channel.id;
-      let tmp15Result = tmp15(tmp3(12045), obj1);
+      let tmp15Result = tmp15(tmp3(12051), obj1);
     } else {
       obj2 = {
         active: true,
@@ -183,8 +183,8 @@ const forwardRefResult = importAllResult.forwardRef((channel, ref) => {
       obj2[5] = intl.string(tmp(1233).t.TXNS7S);
       obj2[6] = onSendMessage;
       obj2[7] = !tmp12;
-      tmp15Result = tmp15(tmp3(12029), obj2);
-      const tmp3Result = tmp3(12029);
+      tmp15Result = tmp15(tmp3(12035), obj2);
+      const tmp3Result = tmp3(12035);
     }
     obj[1] = tmp15Result;
     return tmp15(canSendVoiceMessage, obj);

@@ -1,7 +1,7 @@
 // discord_app/modules/auth/register.tsx
 import encodeProperties from "../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
-import _modDef4713 from "../../utils/TrackedHTTPUtils.tsx";
+import _modDef4714 from "../../utils/TrackedHTTPUtils.tsx";
 import closure_4 from "../../../_runtime/00005_asyncGeneratorStep.js";
 import initialize from "../parent_tools/ParentalConsentStore.tsx";
 import closure_5 from "../../stores/AuthenticationStore.tsx";
@@ -156,7 +156,7 @@ function _registerPhone() {
               return obj1;
             } else {
               c4 = 1;
-              let obj6 = callback(4713);
+              let obj6 = callback(4714);
               const obj2 = { url: null, body: null, trackedActionData: null, rejectWithError: false };
               obj2[0] = constants.REGISTER_PHONE;
               const obj3 = { phone: null };
@@ -174,7 +174,7 @@ function _registerPhone() {
           } else if (2 === tmp8) {
             c4 = 0;
             callback = dependencyMap;
-            if (callback instanceof phone(11134).CaptchaCancelError) {
+            if (callback instanceof phone(11138).CaptchaCancelError) {
               throw callback;
             } else {
               const tmp23 = new callback(4377)(callback);
@@ -240,7 +240,7 @@ function registerFull(giftCodeSKUId) {
   let obj = dispatcherDefault;
   obj.dispatch({ type: "REGISTER" });
   if (null != birthday) {
-    tmp4(15781)(birthday, constants2.REGISTER);
+    tmp4(15797)(birthday, constants2.REGISTER);
     let tmp4Result = tmp4(695);
     obj = { source: null, action: null };
     obj[0] = constants5.REGISTER;
@@ -316,8 +316,8 @@ function registerFull(giftCodeSKUId) {
   obj4[3] = preChecked;
   obj3[1] = obj4;
   obj1[2] = obj3;
-  const tmp4Result1 = _modDef4713;
-  return _modDef4713.post(obj1).then(
+  const tmp4Result1 = _modDef4714;
+  return _modDef4714.post(obj1).then(
     (body) => {
       let obj = callback2(706);
       obj = { type: "REGISTER_SUCCESS", token: body.body.token };
@@ -331,13 +331,13 @@ function registerFull(giftCodeSKUId) {
       });
     },
     (arg0) => {
-      if (arg0 instanceof callback(11134).CaptchaCancelError) {
+      if (arg0 instanceof callback(11138).CaptchaCancelError) {
         throw arg0;
       } else {
         let obj = new callback2(4377)(arg0);
         if (null != obj.getFieldErrors("date_of_birth")) {
-          const result = callback3(15782).preventUnderageRegistration(constants3.REGISTER);
-          const obj2 = callback3(15782);
+          const result = callback3(15798).preventUnderageRegistration(constants3.REGISTER);
+          const obj2 = callback3(15798);
         }
         obj = {
           is_unique_username_registration: true,

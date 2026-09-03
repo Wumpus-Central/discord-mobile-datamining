@@ -4,7 +4,7 @@ import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
 import closure_4 from "../../../../../_runtime/00019_noop.js";
 import { NativeModules } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createNativeStackNavigator from "../../../../../_runtime/07831_createNativeStackNavigator.js";
+import createNativeStackNavigator from "../../../../../_runtime/07834_createNativeStackNavigator.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 import { NavigationStack } from "../../../../design/components/Navigator/native/Navigator.native.tsx";
 import { useNavigatorBackPressHandler } from "../../../../design/components/Navigator/native/useNavigatorBackPressHandler.native.tsx";
@@ -47,7 +47,7 @@ export default function NewUserModal(arg0) {
     if (flag == null) {
       flag = false;
     }
-    const nextOnboardingStep = lib(17261).getNextOnboardingStep(flag, first1, first);
+    const nextOnboardingStep = lib(17281).getNextOnboardingStep(flag, first1, first);
     nextOnboardingStep.then((onboardingStepIndex) => {
       onboardingStepIndex = onboardingStepIndex.onboardingStepIndex;
       ({ lastShownStepIndex, continueNavigation } = onboardingStepIndex);
@@ -104,7 +104,7 @@ export default function NewUserModal(arg0) {
   obj = {
     name: "enable-notification",
     getComponent() {
-      return lib(15821).RedesignNotificationScreen;
+      return lib(15837).RedesignNotificationScreen;
     },
     initialParams: { onComplete: callback },
   };
@@ -112,7 +112,7 @@ export default function NewUserModal(arg0) {
   obj1 = {
     name: "choose-avatar",
     getComponent() {
-      return lib(17265).default;
+      return lib(17285).default;
     },
     options() {
       return {
@@ -146,7 +146,7 @@ export default function NewUserModal(arg0) {
     name: "contact-sync",
     options: { headerShown: false },
     getComponent() {
-      return lib(12447).ContactSyncOnboardingModal;
+      return lib(12459).ContactSyncOnboardingModal;
     },
     initialParams: { onComplete: callback },
   });
@@ -154,14 +154,14 @@ export default function NewUserModal(arg0) {
     name: "discoverability",
     options: { headerShown: false },
     getComponent() {
-      return lib(17266).default;
+      return lib(17286).default;
     },
     initialParams: { onComplete: callback },
   });
   items1[4] = callback(Navigator.Screen, {
     name: "connect-guardian",
     getComponent() {
-      return lib(17268).default;
+      return lib(17288).default;
     },
     initialParams: { onComplete: callback },
   });

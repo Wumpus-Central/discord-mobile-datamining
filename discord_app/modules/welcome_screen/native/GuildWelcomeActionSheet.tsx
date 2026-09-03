@@ -299,8 +299,8 @@ export default function GuildWelcomeActionSheet(guildId) {
       obj1 = { style: null, guild: null, size: null, textScale: 2 };
       obj1[0] = tmp.guildIcon;
       obj1[1] = stateFromStores;
-      obj1[2] = onHide(12421).Sizes.MEDIUM;
-      const items9 = [callback(onHide(12421), obj1), , , ,];
+      obj1[2] = onHide(12433).Sizes.MEDIUM;
+      const items9 = [callback(onHide(12433), obj1), , , ,];
       const obj2 = { style: null, variant: "heading-xl/extrabold", color: "text-default", children: null };
       obj2[0] = tmp.header;
       const intl = tmp2(1233).intl;
@@ -327,7 +327,7 @@ export default function GuildWelcomeActionSheet(guildId) {
       const obj5 = { style: null, variant: "eyebrow", color: "text-default", children: null };
       obj5[0] = tmp.channelsTitle;
       const intl2 = tmp2(1233).intl;
-      const tmp17 = onHide(12421);
+      const tmp17 = onHide(12433);
       obj5[3] = intl2.string(tmp2(1233).t["haj5+i"]).toUpperCase();
       items9[3] = callback(tmp2(4474).Text, obj5);
       let welcome_channels = welcomeScreen.welcome_channels;
@@ -346,7 +346,7 @@ export default function GuildWelcomeActionSheet(guildId) {
       });
       obj[1] = items9;
       obj[1] = callback2(hasError, obj);
-      tmp12 = callback(tmp2(5997).ActionSheet, obj);
+      tmp12 = callback(tmp2(5998).ActionSheet, obj);
       const str = intl2.string(tmp2(1233).t["haj5+i"]);
     }
   }

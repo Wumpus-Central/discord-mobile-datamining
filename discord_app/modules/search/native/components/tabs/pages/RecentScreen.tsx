@@ -32,7 +32,7 @@ function ClearAllHistory(searchContext) {
   const intl2 = searchContext(1233).intl;
   obj[2] = intl2.string(searchContext(1233).t.LFTAUp);
   obj[4] = jsx(searchContext(4474).Text, { variant: "text-sm/semibold", color: "text-brand", children: null });
-  return jsx(searchContext(5076).PressableHighlight, {
+  return jsx(searchContext(5077).PressableHighlight, {
     variant: "text-sm/semibold",
     color: "text-brand",
     children: null,

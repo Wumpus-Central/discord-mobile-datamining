@@ -1,7 +1,7 @@
 // discord_app/modules/premium/native/SubscriptionAccountHoldNotice.tsx
 import noopAll from "../../../../_runtime/00019_noop.js";
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import registerAssetDefault from "../../../../_runtime/12531_registerAsset.js";
+import registerAssetDefault from "../../../../_runtime/12543_registerAsset.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import { SubscriptionStatusTypes } from "../../../Constants.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
@@ -55,7 +55,7 @@ export default function SubscriptionAccountHoldNotice(subscription) {
         ),
       );
     };
-    items1[1] = callback(subscription(4928).Button, obj3);
+    items1[1] = callback(subscription(4929).Button, obj3);
     obj[1] = items1;
     tmp2 = callback2(closure_4, obj);
     const obj6 = subscription(4139);

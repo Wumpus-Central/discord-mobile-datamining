@@ -66,7 +66,7 @@ function LinkInner(target) {
   obj = target(644);
   const items = [closure_6];
   const stateFromStores = obj.useStateFromStores(items, () => locale.locale);
-  changelog = target(8009).useChangelog(changelogId, stateFromStores).changelog;
+  changelog = target(8012).useChangelog(changelogId, stateFromStores).changelog;
   obj = {
     accessibilityRole: "link",
     style: className,
@@ -216,7 +216,7 @@ const memoResult1 = importAllResult.memo((video) => {
     size: "sm",
     variant: "tertiary",
     accessibilityRole: "link",
-    icon: callback(id(8017).XNeutralIcon, { size: "sm", color: "interactive-icon-default" }),
+    icon: callback(id(8020).XNeutralIcon, { size: "sm", color: "interactive-icon-default" }),
     accessibilityLabel: null,
     onPress: null,
   };
@@ -225,12 +225,12 @@ const memoResult1 = importAllResult.memo((video) => {
   obj3[5] = function onPress() {
     callback(4190).openURL(callback(4104)(constants.TWITTER));
   };
-  const items3 = [callback(id(8015).IconButton, obj3), ,];
+  const items3 = [callback(id(8018).IconButton, obj3), ,];
   const obj4 = {
     size: "sm",
     variant: "tertiary",
     accessibilityRole: "link",
-    icon: callback(id(8019).FacebookNeutralIcon, { size: "sm", color: "interactive-icon-default" }),
+    icon: callback(id(8022).FacebookNeutralIcon, { size: "sm", color: "interactive-icon-default" }),
     accessibilityLabel: null,
     onPress: null,
   };
@@ -239,12 +239,12 @@ const memoResult1 = importAllResult.memo((video) => {
   obj4[5] = function onPress() {
     callback(4190).openURL(constants2.FACEBOOK_URL);
   };
-  items3[1] = callback(id(8015).IconButton, obj4);
+  items3[1] = callback(id(8018).IconButton, obj4);
   const obj5 = {
     size: "sm",
     variant: "tertiary",
     accessibilityRole: "link",
-    icon: callback(id(8021).InstagramNeutralIcon, { size: "sm", color: "interactive-icon-default" }),
+    icon: callback(id(8024).InstagramNeutralIcon, { size: "sm", color: "interactive-icon-default" }),
     accessibilityLabel: null,
     onPress: null,
   };
@@ -253,9 +253,9 @@ const memoResult1 = importAllResult.memo((video) => {
   obj5[5] = function onPress() {
     callback(4190).openURL(constants2.INSTAGRAM_URL);
   };
-  items3[2] = callback(id(8015).IconButton, obj5);
+  items3[2] = callback(id(8018).IconButton, obj5);
   obj2[2] = items3;
-  items2[1] = closure_11(id(5561).SafeAreaPaddingView, obj2);
+  items2[1] = closure_11(id(5562).SafeAreaPaddingView, obj2);
   obj[1] = items2;
   return closure_11(closure_4, obj);
 });

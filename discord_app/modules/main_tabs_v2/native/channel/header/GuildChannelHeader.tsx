@@ -76,8 +76,8 @@ function GuildChannelMemberCount(channel) {
     const count = closure_1_6.requestCount(channel.guild_id, channel.id);
   }, items1);
   if (null == total) {
-    const tmpResult = tmp(13155);
-    return tmpResult.renderMemberCountText(online, total, flag, tmp(6010).ICON_SIZE[token]);
+    const tmpResult = tmp(13167);
+    return tmpResult.renderMemberCountText(online, total, flag, tmp(6011).ICON_SIZE[token]);
   }
 }
 function computeVisibleChannelName(channel) {
@@ -111,7 +111,7 @@ function ChannelLinkedLobbyCoachmark(guild) {
   dependencyMap = undefined;
   let callback;
   const items = [guild(1372).DismissibleContent.CHANNEL_LINKED_LOBBY_EDUCATION_TOOLTIP];
-  const tmp = callback(guild(6260).useSelectedDismissibleContent(items, undefined, true), 2);
+  const tmp = callback(guild(6261).useSelectedDismissibleContent(items, undefined, true), 2);
   dependencyMap = tmp2;
   const tmp3 = tmp[0] === guild(1372).DismissibleContent.CHANNEL_LINKED_LOBBY_EDUCATION_TOOLTIP;
   callback = tmp3;
@@ -141,14 +141,14 @@ function ChannelLinkedLobbyCoachmark(guild) {
     };
     let channelIconWithGuild;
     if (null != channel) {
-      channelIconWithGuild = guild(4981).getChannelIconWithGuild(tmp3, guild);
-      const tmpResult = guild(4981);
+      channelIconWithGuild = guild(4982).getChannelIconWithGuild(tmp3, guild);
+      const tmpResult = guild(4982);
     }
     obj[6] = channelIconWithGuild;
     return obj;
   }, items1);
-  let obj = guild(6260);
-  const coachmark = guild(8987).useCoachmark(guild.iconRef, memo);
+  let obj = guild(6261);
+  const coachmark = guild(8991).useCoachmark(guild.iconRef, memo);
   return null;
 }
 let c4 = importAllResult;

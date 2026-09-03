@@ -1,12 +1,12 @@
 // discord_app/modules/user_settings/account/native/UserSettingsInputAlert.tsx
 import componentDidMountDefault from "../../../../components_native/common/Alert.tsx";
-import _modDef6057 from "../../../keyboard/native/KeyboardAwareView.tsx";
+import _modDef6058 from "../../../keyboard/native/KeyboardAwareView.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
 
 let require = arg1;
 ({ jsx: c3, jsxs: c4 } = jsxProd);
-let closure_5 = { input: "", error: "ti" };
+let closure_5 = { input: "", error: "add" };
 const PureComponent = importAllResult.PureComponent;
 class UserSettingsInputAlert extends PureComponent {
   constructor() {
@@ -111,9 +111,9 @@ prototype["renderContent"] = function renderContent() {
     obj[8] = function onChange(input) {
       return self.setState({ input });
     };
-    items[1] = callback(self(7714).TextInput, obj);
+    items[1] = callback(self(7717).TextInput, obj);
     obj[1] = items;
-    return closure_4(self(4926).Stack, obj);
+    return closure_4(self(4927).Stack, obj);
   }
   error = self.state.error;
 };
@@ -133,7 +133,7 @@ prototype["render"] = function render() {
   if (useKeyboardAwareWrapper) {
     obj = { children: null };
     obj[0] = tmp5;
-    tmpResult = callback(_modDef6057, obj);
+    tmpResult = callback(_modDef6058, obj);
   }
   return tmpResult;
 };

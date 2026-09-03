@@ -264,7 +264,7 @@ export default function ShareScreen(sharedContent) {
                                     c4 = 3;
                                     return { value: false, done: true };
                                   } else {
-                                    obj1 = callback(13864);
+                                    obj1 = callback(13880);
                                     obj1 = { attachments: null, channel: null, comment: null };
                                     obj1[0] = closure_1_1;
                                     obj1[1] = channel;

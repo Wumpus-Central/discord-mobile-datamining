@@ -15,13 +15,13 @@ export const getAppCrashSource = function getAppCrashSource(theme) {
   let obj = getIllustrationSource;
   obj = {
     dark() {
-      return callback(9963);
+      return callback(9967);
     },
     darker() {
-      return callback(9964);
+      return callback(9968);
     },
     light() {
-      return callback(9965);
+      return callback(9969);
     },
   };
   return obj.getIllustrationSource(theme, obj);
@@ -30,13 +30,13 @@ export const useAppCrashSource = function useAppCrashSource() {
   let obj = AccessibilityAnnouncer;
   obj = {
     dark() {
-      return callback(9963);
+      return callback(9967);
     },
     darker() {
-      return callback(9964);
+      return callback(9968);
     },
     light() {
-      return callback(9965);
+      return callback(9969);
     },
   };
   return getIllustrationSource.getIllustrationSource(obj.useThemeContext().theme, obj);
@@ -45,13 +45,13 @@ export const AppCrash = function AppCrash(arg0) {
   let obj = AccessibilityAnnouncer;
   obj = {
     dark() {
-      return callback(9963);
+      return callback(9967);
     },
     darker() {
-      return callback(9964);
+      return callback(9968);
     },
     light() {
-      return callback(9965);
+      return callback(9969);
     },
   };
   obj = {};

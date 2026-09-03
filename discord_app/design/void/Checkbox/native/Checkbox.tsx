@@ -9,10 +9,10 @@ const result = require("set").fileFinishedImporting("design/void/Checkbox/native
 export default function Checkbox(style) {
   const obj = { style: style.style, source: null };
   if (style.selected) {
-    obj[1] = tmp3(13953);
+    obj[1] = tmp3(13969);
     let tmp5 = obj;
   } else {
-    obj[1] = tmp3(13954);
+    obj[1] = tmp3(13970);
     tmp5 = obj;
   }
   return <Image {...tmp5} />;

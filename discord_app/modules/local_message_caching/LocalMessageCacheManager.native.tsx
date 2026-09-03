@@ -54,11 +54,11 @@ function createFailedMessage(channel_id) {
   channel_id = channel_id.channel_id;
   ({ content, tts, state } = channel_id);
   let obj = { channelId: channel_id, content, tts, state: MessageStates.SEND_FAILED };
-  const tmp3 = file(7507)(obj);
+  const tmp3 = file(7508)(obj);
   closure_0 = tmp3;
   ({ timestamp: tmp3.timestamp, file } = channel_id);
   obj = { isHydratingExpiredPendingMessage: state === MessageStates.SENDING };
-  file(7210).receiveMessage(channel_id, tmp3, true, obj);
+  file(7211).receiveMessage(channel_id, tmp3, true, obj);
   if (null != file) {
     file(706).wait(() => file(closure_1_2[16]).restoreFailedUpload(id.id, file));
     const tmpResult = file(706);

@@ -121,9 +121,9 @@ let c4 = importAllResult;
 ({ AnalyticsPages: error, MOBILE_GUILD_UPSELL_LIST: closure_8, TooltipNames: c9, UpsellTypes: c10 } = ME);
 let closure_13 = createCacheKey.createStyles({ stretch: { alignSelf: "stretch" } });
 const memoResult = importAllResult.memo(function GuildsBarCreateJoinButton() {
-  let obj = enabled(16116);
+  let obj = enabled(16132);
   const tmp = callback2();
-  const GameCommunityAddServerEntryExperiment = enabled(13590).GameCommunityAddServerEntryExperiment;
+  const GameCommunityAddServerEntryExperiment = enabled(13605).GameCommunityAddServerEntryExperiment;
   enabled = GameCommunityAddServerEntryExperiment.useConfig({ location: "GuildsBarCreateJoinButton" }).enabled;
   obj1 = enabled(586);
   const items = [closure_6];
@@ -161,20 +161,20 @@ const memoResult = importAllResult.memo(function GuildsBarCreateJoinButton() {
     unread: false,
     styles: obj.useGuildsBarAnimatedWrapperStyles(),
     overState: "y",
-    config: "heading-lg/semibold",
-    label: "mobile-text-heading-primary",
-    expandedChildren: 1,
-    children: null,
+    config: "e",
+    label: 70.532,
+    expandedChildren: 80.882,
+    children: 60.302,
   };
   obj[5] = memo;
   const guildsBarAnimatedWrapperStyles = obj.useGuildsBarAnimatedWrapperStyles();
   const tmp8 = View;
   const intl = tmp2(1233).intl;
   obj[6] = intl.string(enabled(1233).t.l5WIbf);
-  obj[7] = jsx(enabled(16175).HomeDrawerAddServerRowExpandedChildren, {});
+  obj[7] = jsx(enabled(16191).HomeDrawerAddServerRowExpandedChildren, {});
   const colors = ThemesDefault.colors;
   obj1 = { size: "md", color: stateFromStores ? colors.WHITE : colors.MOBILE_GUILDBAR_ICON_DEFAULT };
-  obj[8] = jsx(enabled(9238).CirclePlusIcon, {
+  obj[8] = jsx(enabled(9242).CirclePlusIcon, {
     size: "md",
     color: stateFromStores ? colors.WHITE : colors.MOBILE_GUILDBAR_ICON_DEFAULT,
   });
@@ -184,10 +184,10 @@ const memoResult = importAllResult.memo(function GuildsBarCreateJoinButton() {
     unread: false,
     styles: obj.useGuildsBarAnimatedWrapperStyles(),
     overState: "y",
-    config: "heading-lg/semibold",
-    label: "mobile-text-heading-primary",
-    expandedChildren: 1,
-    children: null,
+    config: "e",
+    label: 70.532,
+    expandedChildren: 80.882,
+    children: 60.302,
   });
   return (
     <tmp8
@@ -196,11 +196,11 @@ const memoResult = importAllResult.memo(function GuildsBarCreateJoinButton() {
       unread={false}
       styles={obj.useGuildsBarAnimatedWrapperStyles()}
       overState="y"
-      config="heading-lg/semibold"
-      label="mobile-text-heading-primary"
-      expandedChildren={1}
+      config="e"
+      label={70.532}
+      expandedChildren={80.882}
     >
-      {null}
+      {60.302}
     </tmp8>
   );
 });

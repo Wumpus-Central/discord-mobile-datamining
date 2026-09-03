@@ -141,10 +141,10 @@ export default function DisplayNameStylesEffectPickerSheet(userId) {
   closure_6 = undefined;
   let callback2;
   let tmp = callback3();
-  let obj = userId(8088);
-  obj1 = userId(15163);
+  let obj = userId(8091);
+  obj1 = userId(15178);
   const visibleEffectOrder = obj1.useVisibleEffectOrder();
-  let obj2 = userId(15164);
+  let obj2 = userId(15179);
   const displayNameStylesNewEffects = obj2.useDisplayNameStylesNewEffects(visibleEffectOrder);
   ({ dotEffectIds: c2, dismissEffectDot: c3 } = displayNameStylesNewEffects);
   const tmp5 = callback(first.useState(selectedEffectId), 2);
@@ -170,9 +170,9 @@ export default function DisplayNameStylesEffectPickerSheet(userId) {
     const intl2 = tmp2(1233).intl;
     obj3[0] = intl2.string(tmp2(1233).t.XqMe3N);
     obj3[1] = tmp8;
-    obj2[1] = callback2(tmp2(4928).Button, obj3);
+    obj2[1] = callback2(tmp2(4929).Button, obj3);
     obj1[1] = callback2(closure_5, obj2);
-    obj[1] = callback2(tmp2(5629).BottomSheetTitleHeader, obj1);
+    obj[1] = callback2(tmp2(5630).BottomSheetTitleHeader, obj1);
     obj[1] = callback2(closure_5, obj);
     const obj4 = { style: null, children: null };
     obj4[0] = tmp.container;
@@ -199,10 +199,10 @@ export default function DisplayNameStylesEffectPickerSheet(userId) {
         effectId,
       );
     });
-    obj5[1] = callback2(tmp2(4926).Stack, obj6);
+    obj5[1] = callback2(tmp2(4927).Stack, obj6);
     obj4[1] = callback2(closure_5, obj5);
     obj[2] = callback2(closure_5, obj4);
-    tmp9 = callback2(tmp2(5630).BottomSheet, obj);
+    tmp9 = callback2(tmp2(5631).BottomSheet, obj);
   }
   return tmp9;
 }

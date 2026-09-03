@@ -26,7 +26,7 @@ class FeatureCard$Type extends MessageType {
       name: "header_localized",
       kind: "message",
       T() {
-        return callback(8462).LocalizedString;
+        return callback(8466).LocalizedString;
       },
     };
     items[6] = {
@@ -34,7 +34,7 @@ class FeatureCard$Type extends MessageType {
       name: "pill_localized",
       kind: "message",
       T() {
-        return callback(8462).LocalizedString;
+        return callback(8466).LocalizedString;
       },
     };
     obj = { no: 8, name: "body_localized", kind: "message", T: null };
@@ -50,7 +50,7 @@ class FeatureCard$Type extends MessageType {
       name: "help_article",
       kind: "message",
       T() {
-        return callback(8463).HelpArticle;
+        return callback(8467).HelpArticle;
       },
     };
     tmp = new tmp("discord_protos.premium_marketing.v1.FeatureCard", items, T);
@@ -263,7 +263,7 @@ let items = [
     name: "header_localized",
     kind: "message",
     T() {
-      return callback(8462).LocalizedString;
+      return callback(8466).LocalizedString;
     },
   },
   {
@@ -271,7 +271,7 @@ let items = [
     name: "pill_localized",
     kind: "message",
     T() {
-      return callback(8462).LocalizedString;
+      return callback(8466).LocalizedString;
     },
   },
   {
@@ -279,7 +279,7 @@ let items = [
     name: "body_localized",
     kind: "message",
     T() {
-      return callback(8462).LocalizedString;
+      return callback(8466).LocalizedString;
     },
   },
   {
@@ -287,7 +287,7 @@ let items = [
     name: "help_article",
     kind: "message",
     T() {
-      return callback(8463).HelpArticle;
+      return callback(8467).HelpArticle;
     },
   },
 ];
@@ -718,7 +718,7 @@ class Disclaimer$Type extends MessageType4 {
       name: "disclaimer_text_localized",
       kind: "message",
       T() {
-        return callback(8462).LocalizedString;
+        return callback(8466).LocalizedString;
       },
     };
     tmp = new tmp("discord_protos.premium_marketing.v1.Disclaimer", items, T);
@@ -864,7 +864,7 @@ const items3 = [
     name: "disclaimer_help_article",
     kind: "message",
     T() {
-      return callback(8463).HelpArticle;
+      return callback(8467).HelpArticle;
     },
   },
   {
@@ -872,7 +872,7 @@ const items3 = [
     name: "disclaimer_text_localized",
     kind: "message",
     T() {
-      return callback(8462).LocalizedString;
+      return callback(8466).LocalizedString;
     },
   },
 ];
@@ -915,7 +915,7 @@ class AnnouncementModalVariant1Properties$Type extends MessageType5 {
       name: "button",
       kind: "message",
       T() {
-        return callback(8464).CTAButton;
+        return callback(8468).CTAButton;
       },
     };
     items[6] = { no: 8, name: "hero_art_video_link_light_theme", kind: "scalar", T: 9 };
@@ -952,7 +952,7 @@ class AnnouncementModalVariant1Properties$Type extends MessageType5 {
       name: "help_article",
       kind: "message",
       T() {
-        return callback(8463).HelpArticle;
+        return callback(8467).HelpArticle;
       },
     };
     items[14] = {
@@ -960,7 +960,7 @@ class AnnouncementModalVariant1Properties$Type extends MessageType5 {
       name: "header_localized",
       kind: "message",
       T() {
-        return callback(8462).LocalizedString;
+        return callback(8466).LocalizedString;
       },
     };
     obj = { no: 20, name: "subheader_localized", kind: "message", T: null };
@@ -976,7 +976,7 @@ class AnnouncementModalVariant1Properties$Type extends MessageType5 {
       name: "modal_top_pill_localized",
       kind: "message",
       T() {
-        return callback(8462).LocalizedString;
+        return callback(8466).LocalizedString;
       },
     };
     items[17] = { no: 7, name: "dismiss_key", kind: "scalar", T: 9 };

@@ -4,7 +4,7 @@ import ME from "../../Constants.tsx";
 import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
 import asyncRequireImpl from "../../../_runtime/02008_asyncRequireImpl.js";
-import _modDef4723 from "../ModalActionCreators.tsx";
+import _modDef4724 from "../ModalActionCreators.tsx";
 
 const AnalyticEvents = ME.AnalyticEvents;
 const EMAIL_VERIFICATION_MODAL_KEY = "EMAIL_VERIFICATION_MODAL_KEY";
@@ -20,8 +20,8 @@ export default {
       expandEventPropertiesDefault.track(AnalyticEvents.USER_ACCOUNT_EMAIL_CHANGE_ATTEMPTED);
       const obj = expandEventPropertiesDefault;
     }
-    _modDef4723.pushLazy(
-      asyncRequireImpl(7697, dependencyMap.paths),
+    _modDef4724.pushLazy(
+      asyncRequireImpl(7700, dependencyMap.paths),
       { isChangeEmail: flag },
       EMAIL_VERIFICATION_MODAL_KEY,
     );

@@ -51,7 +51,7 @@ function handleUpdateActivity() {
               }
               const mutableParticipants = store.getMutableParticipants(
                 channel.id,
-                tmp12(5376).StageChannelParticipantNamedIndex.SPEAKER,
+                tmp12(5377).StageChannelParticipantNamedIndex.SPEAKER,
               );
               const length = mutableParticipants.filter(
                 (type) => type.type === callback(table[12]).StageChannelParticipantTypes.STREAM,
@@ -80,7 +80,7 @@ function handleUpdateActivity() {
                 topic = tmp12Result.computeChannelName(channel, closure_9, closure_7);
               }
               obj[1] = topic;
-              tmp12Result = tmp12(5369);
+              tmp12Result = tmp12(5370);
               obj[2] = tmp12Result.getStageHasMedia(channel.id) ? closure_13.WATCHING : closure_13.LISTENING;
               let start;
               if (tmp15 != null) {

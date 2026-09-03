@@ -2,10 +2,10 @@
 import getSystemLocale from "../../../../intl/index.native.tsx";
 import AccessibilityAnnouncer from "../../../../design/shared.tsx";
 import Text from "../../../../design/components/Text/native/Text.tsx";
-import LegacyBaseButton from "../../../../../_runtime/05660_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/05661_LegacyBaseButton.js";
 import getNoiseCancellationDeferredToSystem from "../../../noise_cancellation/NoiseCancellationUtils.tsx";
 import handleKrispLinkPressed from "KrispLogo.tsx";
-import _modDef14563 from "../../../settings/native/renderer/SettingLayout.tsx";
+import _modDef14578 from "../../../settings/native/renderer/SettingLayout.tsx";
 import closure_3 from "../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import closure_6 from "../../../../stores/MediaEngineStore.tsx";
@@ -20,9 +20,9 @@ function KrispLogo() {
   const tmp = callback3();
   let obj = AccessibilityAnnouncer;
   if (obj.isThemeLight(tmp4)) {
-    let tmp2Result = tmp2(10103);
+    let tmp2Result = tmp2(10107);
   } else {
-    tmp2Result = tmp2(10104);
+    tmp2Result = tmp2(10108);
   }
   obj = { style: tmp.krisp, children: null };
   obj = { style: tmp.logo, source: tmp2Result, accessibilityLabel: null };
@@ -71,7 +71,7 @@ let result = require("set").fileFinishedImporting("modules/user_settings/voice/n
 
 export default function SettingsVoiceScreen() {
   const node = React.useMemo(() => {
-    let obj = callback(11288);
+    let obj = callback(11292);
     obj = { sections: null };
     obj = { label: null, settings: null };
     const intl = callback(1233).intl;
@@ -140,5 +140,5 @@ export default function SettingsVoiceScreen() {
     obj[0] = items1;
     return obj.createList(obj);
   }, []);
-  return callback(_modDef14563, { node });
+  return callback(_modDef14578, { node });
 }

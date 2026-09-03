@@ -117,7 +117,7 @@ export const getPlayInContext = function getPlayInContext(id, channel_id) {
       tmp11 = compositeInstanceId1 === compositeInstanceId;
     }
     obj[3] = tmp11;
-    obj[4] = NO_CHANNEL === tmp3(9499).EmbeddedActivityLaunchability.CAN_LAUNCH;
+    obj[4] = NO_CHANNEL === tmp3(9503).EmbeddedActivityLaunchability.CAN_LAUNCH;
     return obj;
   }
 };

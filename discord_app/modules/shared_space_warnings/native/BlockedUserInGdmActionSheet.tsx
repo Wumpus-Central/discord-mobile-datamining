@@ -86,13 +86,13 @@ function UserCalloutAvatars(userIds) {
       obj[2] = REFRESH_MEDIUM_32;
       let tmp6 = callback(tmp(1296).Avatar, obj);
     } else {
-      tmp6 = callback(tmp(11621).UserIcon, {});
+      tmp6 = callback(tmp(11626).UserIcon, {});
     }
   } else {
     obj = { users: null, size: null };
     obj[0] = found;
     obj[1] = tmp(1296).AvatarSizes.REFRESH_MEDIUM_32;
-    return callback(tmp(10869).FacepileGroupDMAvatar, obj);
+    return callback(tmp(10873).FacepileGroupDMAvatar, obj);
   }
 }
 function BlockedUserInGDMDescription(arg0) {

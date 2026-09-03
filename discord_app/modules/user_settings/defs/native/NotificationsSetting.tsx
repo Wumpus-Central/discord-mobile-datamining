@@ -3,6 +3,7 @@ import set from "../../../../../_runtime/00002_set.js";
 import ME from "../../../../Constants.tsx";
 import getSystemLocale from "../../../../intl/index.native.tsx";
 import BellIcon from "../../../../design/components/Icon/native/redesign/generated/BellIcon.tsx";
+import getNamedExperiment from "../../../notifications/NotificationSettingsUtils.tsx";
 import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 import { SystemNotificationsSubLabel } from "../../notifications/native/SettingsNotificationScreen.tsx";
 
@@ -13,6 +14,9 @@ obj = {
   },
   parent: null,
   IconComponent: BellIcon.BellIcon,
+  usePredicate() {
+    return !getNamedExperiment.useIsDeclarativeSettingsUIAvailable();
+  },
   screen: obj,
 };
 obj = {

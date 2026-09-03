@@ -103,10 +103,10 @@ function _startStage() {
               closure_1 = undefined;
               if ("" !== closure_1) {
                 if (closure_1_5.getVoiceChannelId() !== tmp28.id) {
-                  let obj2 = callback(8679);
+                  let obj2 = callback(8683);
                   obj2.connectToStage(tmp28);
                 }
-                const obj4 = callback(8692);
+                const obj4 = callback(8696);
                 c6 = 1;
                 c7 = 1;
                 obj1 = { value: null, done: false };

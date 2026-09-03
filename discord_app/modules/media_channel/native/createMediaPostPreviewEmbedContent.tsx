@@ -71,7 +71,7 @@ export default function createMediaPostPreviewEmbedContent(arg0, arg1, url) {
           if (null != mediaPostEmbedCommonData.authorName) {
             if (null != mediaPostEmbedCommonData.channelName) {
               if (null != user) {
-                const userAuthorWithProcessedColor = tmp(7878).getUserAuthorWithProcessedColor(
+                const userAuthorWithProcessedColor = tmp(7881).getUserAuthorWithProcessedColor(
                   user,
                   mediaPostEmbedCommonData.postThread,
                 );
@@ -87,7 +87,7 @@ export default function createMediaPostPreviewEmbedContent(arg0, arg1, url) {
                 obj[1] = formatUsernameOnClickDefault(obj1);
                 obj[2] = mediaPostEmbedCommonData.channelName;
                 let formatToPartsResult = intl6.formatToParts(tmp(1233).t.mCytFr, obj);
-                const tmpResult1 = tmp(7878);
+                const tmpResult1 = tmp(7881);
               }
               if (false === mediaPostEmbedCommonData.canAccess) {
                 let tmp11 = callback(ThemesDefault.unsafe_rawColors.TEAL_430);
@@ -108,7 +108,7 @@ export default function createMediaPostPreviewEmbedContent(arg0, arg1, url) {
               if (mediaPostEmbedCommonData.shouldShowBlurredThumbnailImage) {
                 const obj2 = {};
                 const merged = Object.assign(mediaPostEmbedCommonData);
-                obj2.blurredCoverImage = closure_3.resolveAssetSource(tmp10(13132)).uri;
+                obj2.blurredCoverImage = closure_3.resolveAssetSource(tmp10(13144)).uri;
                 obj2.footer = formatToPartsResult;
                 obj2.ctaButtonColor = tmp11;
                 return obj2;
@@ -120,18 +120,18 @@ export default function createMediaPostPreviewEmbedContent(arg0, arg1, url) {
                 if (!value) {
                   value = obj7.get("obscure_blur_effect_self_harm_content_enabled");
                 }
-                const isPendingScanVersionResult = tmp(7354).isPendingScanVersion(
+                const isPendingScanVersionResult = tmp(7355).isPendingScanVersion(
                   mediaPostEmbedCommonData.contentScanVersion,
                 );
                 let result = value;
                 if (value) {
-                  result = tmp(7354).shouldAgeVerifyForExplicitMedia();
-                  const tmpResult4 = tmp(7354);
+                  result = tmp(7355).shouldAgeVerifyForExplicitMedia();
+                  const tmpResult4 = tmp(7355);
                 }
                 let isVerifiedTeenResult = value;
                 if (value) {
-                  isVerifiedTeenResult = tmp(4733).isVerifiedTeen();
-                  const tmpResult5 = tmp(4733);
+                  isVerifiedTeenResult = tmp(4734).isVerifiedTeen();
+                  const tmpResult5 = tmp(4734);
                 }
                 if (mediaPostEmbedCommonData.shouldContainMediaWithBackground) {
                   if (null != mediaPostEmbedCommonData.coverImage) {
@@ -183,7 +183,7 @@ export default function createMediaPostPreviewEmbedContent(arg0, arg1, url) {
                 obj4.obscureHideControls = isVerifiedTeenResult;
                 obj4.obscureIsOpaque = value;
                 obj4.ctaButtonColor = tmp11;
-                const tmpResult3 = tmp(7354);
+                const tmpResult3 = tmp(7355);
               }
               tmp15 =
                 null != mediaPostEmbedCommonData.coverImage &&

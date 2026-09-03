@@ -2,7 +2,7 @@
 import set from "../../../_runtime/00002_set.js";
 import keys from "../../../_runtime/00641_keys.js";
 
-const obj = keys.create(() => ({ initialSectionId: "r" }));
+const obj = keys.create(() => ({ initialSectionId: "Array" }));
 const result = set.fileFinishedImporting("modules/application_commands/ApplicationCommandDiscoveryManager.tsx");
 
 export const useCommandDiscoveryManager = obj;

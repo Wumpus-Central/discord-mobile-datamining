@@ -32,13 +32,13 @@ function CollapsableButton(arg0) {
     }
   }
   obj = {
-    FAB_BUTTON_SIZE: collapseText(4933).FAB_BUTTON_SIZE,
-    withSpring: collapseText(4927).withSpring,
+    FAB_BUTTON_SIZE: collapseText(4934).FAB_BUTTON_SIZE,
+    withSpring: collapseText(4928).withSpring,
     interpolate: collapseText(4217).interpolate,
     collapseText,
     FAB_PADDING_HORIZONTAL: 20,
     FAB_PADDING_VERTICAL: buttonPadding,
-    SUBTLE_SPRING: collapseText(4931).SUBTLE_SPRING,
+    SUBTLE_SPRING: collapseText(4932).SUBTLE_SPRING,
   };
   B.__closure = obj;
   B.__workletHash = 5958377845220;
@@ -52,7 +52,7 @@ function CollapsableButton(arg0) {
   obj.collapseText = collapseText;
   obj.style = style;
   obj.pillStyle = animatedStyle;
-  return jsx(collapseText(4929).BaseTextButton, {});
+  return jsx(collapseText(4930).BaseTextButton, {});
 }
 const buttonPadding = MINIMUM_HIT_AREA.getButtonPadding(
   require("MINIMUM_HIT_AREA").FAB_BUTTON_SIZE,
@@ -82,11 +82,11 @@ export const CollapsibleFloatingActionButton = function CollapsibleFloatingActio
   }
   const items = [styles.button];
   if (positionRight == null) {
-    positionRight = tmp3(9005).DEFAULT_POSITION_OFFSET;
+    positionRight = tmp3(9009).DEFAULT_POSITION_OFFSET;
   }
   obj = { position: "absolute", right: positionRight, bottom: null };
   if (positionBottom == null) {
-    positionBottom = tmp3(9005).DEFAULT_POSITION_OFFSET;
+    positionBottom = tmp3(9009).DEFAULT_POSITION_OFFSET;
   }
   obj[2] = positionBottom;
   items[1] = obj;
@@ -108,7 +108,7 @@ export const CollapsibleFloatingActionButton = function CollapsibleFloatingActio
     obj2.icon = cloneElementResult;
     obj2.style = items;
     obj2.pillStyle = tmp2.textButtonPill;
-    tmp12 = jsx(tmp3(4929).BaseTextButton, {});
+    tmp12 = jsx(tmp3(4930).BaseTextButton, {});
   }
   return tmp12;
 };

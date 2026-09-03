@@ -1,7 +1,7 @@
 // discord_app/modules/search/native/components/layout/SearchScreenLayout.tsx
 import jsxDefault from "../../../../panels/morphable/native/AppFreezer.tsx";
 import NoSearchResultsScreenDefault from "../tabs/SearchTabsLayout.tsx";
-import _modDef16537 from "autocomplete/AutocompleteScreen.tsx";
+import _modDef16558 from "autocomplete/AutocompleteScreen.tsx";
 import { View } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
 import closure_4 from "../../stores/SearchQueryStore.tsx";
 import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
@@ -40,7 +40,7 @@ const memoResult = importAllResult.memo((width) => {
     callback(SearchFreezeContainer, {
       visible: stateFromStores,
       containerStyle,
-      children: callback(_modDef16537, { searchContext }),
+      children: callback(_modDef16558, { searchContext }),
     }),
   ];
   obj[0] = items2;

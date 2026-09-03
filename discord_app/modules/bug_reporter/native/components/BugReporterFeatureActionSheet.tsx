@@ -29,9 +29,9 @@ let closure_10 = importAllResult.memo((item) => {
   item = item.item;
   const setFeature = item.setFeature;
   ({ feature, start, end } = item);
-  let obj = item(10292);
+  let obj = item(10296);
   const featureId = obj.getFeatureId(item);
-  const featureId1 = item(10292).getFeatureId(feature);
+  const featureId1 = item(10296).getFeatureId(feature);
   obj = {
     start,
     end,
@@ -40,10 +40,10 @@ let closure_10 = importAllResult.memo((item) => {
       setFeature(item);
       setFeature(closure_1_2[9]).hideActionSheet();
     },
-    trailing: callback(item(7703).FormRadio, obj),
+    trailing: callback(item(7706).FormRadio, obj),
   };
   obj = { selected: featureId === featureId1 };
-  return callback(item(5607).TableRow, obj);
+  return callback(item(5608).TableRow, obj);
 });
 const obj2 = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, justifyContent: "center" };
 const result = require("set").fileFinishedImporting(

@@ -51,11 +51,11 @@ function handleEmbeddedActivityLaunchSuccess(applicationId) {
       if (features.includes(QuestVariants.QuestVariants.MOBILE_ACTIVITY_QUEST)) {
         let tmp9 = tmp5;
         let tmp10 = tmp7;
-        let tmp6Result = tmp6(11133);
+        let tmp6Result = tmp6(11137);
         obj = { questContent: null, questContentCTA: null, sourceQuestContent: null };
-        obj[0] = tmp6(5398).QuestContent.RUNNING_ACTIVITY;
-        obj[1] = tmp6(7483).QuestContentCTA.START_QUEST;
-        obj[2] = tmp6(5398).QuestContent.RUNNING_ACTIVITY;
+        obj[0] = tmp6(5399).QuestContent.RUNNING_ACTIVITY;
+        obj[1] = tmp6(7484).QuestContentCTA.START_QUEST;
+        obj[2] = tmp6(5399).QuestContent.RUNNING_ACTIVITY;
         let tmp12 = obj2;
         let enrollInQuestResult = tmp6Result.enrollInQuest(item10020.id, obj);
         obj2.return();
@@ -102,9 +102,9 @@ class QuestProgressManager extends tmp4 {
       if (null != value) {
         if (null != value.config) {
           if (null != value.userStatus) {
-            const questTaskDetails = lib(7479).getQuestTaskDetails(
+            const questTaskDetails = lib(7480).getQuestTaskDetails(
               value,
-              lib(5402).FirstPartyQuestTaskTypesSets.DESKTOP,
+              lib(5403).FirstPartyQuestTaskTypesSets.DESKTOP,
             );
             const _Math = Math;
             const diff = questTaskDetails.targetSeconds - questTaskDetails.progressSeconds;
@@ -310,6 +310,18 @@ class QuestProgressManager extends tmp4 {
         ];
         return lib.syncHeartbeats(items, "QUESTS_PREVIEW_UPDATE_SUCCESS");
       },
+      GAME_FETCH_SUCCESS() {
+        return applyArgumentsResult(closure_1_2[29]).wait(() => {
+          const items = [closure_1_0(closure_1_2[23]).FirstPartyQuestTaskTypes.PLAY_ON_DESKTOP];
+          closure_0.syncHeartbeats(items, "GAME_FETCH_SUCCESS");
+        });
+      },
+      APPLICATIONS_FETCH_SUCCESS() {
+        return applyArgumentsResult(closure_1_2[29]).wait(() => {
+          const items = [closure_1_0(closure_1_2[23]).FirstPartyQuestTaskTypes.PLAY_ON_DESKTOP];
+          closure_0.syncHeartbeats(items, "APPLICATIONS_FETCH_SUCCESS");
+        });
+      },
       RUNNING_GAMES_CHANGE() {
         const items = [lib(closure_1_2[23]).FirstPartyQuestTaskTypes.PLAY_ON_DESKTOP];
         return lib.syncHeartbeats(items, "RUNNING_GAMES_CHANGE");
@@ -317,6 +329,18 @@ class QuestProgressManager extends tmp4 {
       RUNNING_NON_GAMES_CHANGE() {
         const items = [lib(closure_1_2[23]).FirstPartyQuestTaskTypes.PLAY_ON_DESKTOP];
         return lib.syncHeartbeats(items, "RUNNING_NON_GAMES_CHANGE");
+      },
+      LOCAL_ACTIVITY_UPDATE() {
+        return applyArgumentsResult(closure_1_2[29]).wait(() => {
+          const items = [closure_1_0(closure_1_2[23]).FirstPartyQuestTaskTypes.PLAY_ON_DESKTOP];
+          closure_0.syncHeartbeats(items, "LOCAL_ACTIVITY_UPDATE");
+        });
+      },
+      RPC_APP_DISCONNECTED() {
+        return applyArgumentsResult(closure_1_2[29]).wait(() => {
+          const items = [closure_1_0(closure_1_2[23]).FirstPartyQuestTaskTypes.PLAY_ON_DESKTOP];
+          closure_0.syncHeartbeats(items, "RPC_APP_DISCONNECTED");
+        });
       },
       STREAM_START() {
         const items = [lib(closure_1_2[23]).FirstPartyQuestTaskTypes.STREAM_ON_DESKTOP];
@@ -433,7 +457,7 @@ class QuestProgressManager extends tmp4 {
       iter.next();
       return iter;
     });
-    obj[13] = function FRAME_LAUNCH(arg0) {
+    obj[17] = function FRAME_LAUNCH(arg0) {
       const self = this;
       const apply = closure_0.apply;
       if (typeof apply === "unknown") {
@@ -443,11 +467,11 @@ class QuestProgressManager extends tmp4 {
       }
       return applyArgumentsResult;
     };
-    obj[14] = function FRAME_STOP() {
+    obj[18] = function FRAME_STOP() {
       const items = [lib(closure_1_2[23]).FirstPartyQuestTaskTypes.PLAY_ACTIVITY];
       lib.syncHeartbeats(items, "FRAME_STOP");
     };
-    obj[15] = function EMBEDDED_ACTIVITY_UPDATE_V2() {
+    obj[19] = function EMBEDDED_ACTIVITY_UPDATE_V2() {
       const items = [lib(closure_1_2[23]).FirstPartyQuestTaskTypes.PLAY_ACTIVITY];
       lib.syncHeartbeats(items, "EMBEDDED_ACTIVITY_UPDATE_V2", (config) => {
         let hasItem = null != config;
@@ -458,7 +482,7 @@ class QuestProgressManager extends tmp4 {
         return !hasItem;
       });
     };
-    obj[16] = function QUEST_APPLICATION_START_TIMER(questId) {
+    obj[20] = function QUEST_APPLICATION_START_TIMER(questId) {
       questId = questId.questId;
       const items = [lib(closure_1_2[23]).FirstPartyQuestTaskTypes.PLAY_ACTIVITY];
       questId.syncHeartbeats(items, "QUEST_APPLICATION_START_TIMER", (id) => {
@@ -482,14 +506,14 @@ class QuestProgressManager extends tmp4 {
   }
 }
 const prototype = QuestProgressManager.prototype;
-prototype["syncHeartbeats"] = function syncHeartbeats(items, EMBEDDED_ACTIVITY_UPDATE_V2, arg2) {};
+prototype["syncHeartbeats"] = function syncHeartbeats(items, APPLICATIONS_FETCH_SUCCESS, arg2) {};
 prototype["getActivelyProgressingQuests"] = function getActivelyProgressingQuests(closure_1) {
   const self = this;
   if (set2.FirstPartyQuestTaskTypes.PLAY_ON_DESKTOP === closure_1) {
     return self.getActivelyProgressingPlayOnDesktopQuests();
-  } else if (tmp(5402).FirstPartyQuestTaskTypes.STREAM_ON_DESKTOP === closure_1) {
+  } else if (tmp(5403).FirstPartyQuestTaskTypes.STREAM_ON_DESKTOP === closure_1) {
     return self.getActivelyProgressingStreamOnDesktopQuests();
-  } else if (tmp(5402).FirstPartyQuestTaskTypes.PLAY_ACTIVITY === closure_1) {
+  } else if (tmp(5403).FirstPartyQuestTaskTypes.PLAY_ACTIVITY === closure_1) {
     return self.getActivelyProgressingActivityQuests();
   } else {
     tmp(1470).assertNever(closure_1);
@@ -513,39 +537,48 @@ prototype["getActivelyProgressingPlayOnDesktopQuests"] = function getActivelyPro
     let tmp5 = nextResult;
     if (!nextResult.isLauncher) {
       let tmp6 = nextResult;
-      if (null == tmp5.id) {
+      let id = tmp5.id;
+      let tmp7 = id;
+      if (null == id) {
         let tmp8 = store;
         let tmp9 = nextResult;
         let overrideForGame = store.getOverrideForGame(tmp5);
-        if (null != tmp5.distributor) {
-          let tmp12 = closure_8;
-          let tmp13 = nextResult;
-          let findGameResult = closure_8.findGame(tmp5);
-          let id;
-          let tmp15 = findGameResult;
-          if (findGameResult != null) {
-            id = findGameResult.id;
-          }
-          if (null != id) {
-            let tmp17 = findGameResult;
-            let tmp18 = nextResult;
-            obj[tmp15.id] = tmp5;
-          }
-        } else {
+        if (null == tmp5.distributor) {
           let tmp11 = overrideForGame;
         }
-      } else {
-        let tmp7 = nextResult;
-        obj[tmp5.id] = tmp5;
+        let tmp12 = closure_8;
+        let tmp13 = nextResult;
+        let findGameResult = closure_8.findGame(tmp5);
+        id = undefined;
+        if (findGameResult != null) {
+          id = findGameResult.id;
+        }
+        tmp7 = id;
+      }
+      let tmp16 = tmp7;
+      if (null != tmp7) {
+        let tmp17 = map;
+        let tmp18 = obj;
+        let obj3 = map(obj[15]);
+        let tmp19 = nextResult;
+        let tmp20 = tmp7;
+        let questApplicationIdsForRunningGame = obj3.getQuestApplicationIdsForRunningGame(tmp5, tmp7);
+        let tmp22 = questApplicationIdsForRunningGame;
+        let tmp23 = questApplicationIdsForRunningGame;
+        for (const item10062 of questApplicationIdsForRunningGame) {
+          let tmp24 = nextResult;
+          obj[item10062] = tmp5;
+          continue;
+        }
       }
     }
     continue;
   }
-  for (const item10059 of runningNonGames) {
-    let tmp19 = item10059;
-    if (null != item10059.id) {
-      let tmp20 = item10059;
-      obj[tmp19.id] = tmp19;
+  for (const item10070 of runningNonGames) {
+    let tmp25 = item10070;
+    if (null != item10070.id) {
+      let tmp26 = item10070;
+      obj[tmp25.id] = tmp25;
     }
     continue;
   }

@@ -101,7 +101,7 @@ export default function FamilyCenterParentalControlsSettings() {
         }
       }
     }
-    stackNavigation.setOptions({ title: "disabled", headerRight: "Date" });
+    stackNavigation.setOptions({ title: "Array", headerRight: "PX_16" });
   }, items1);
   if (isFamilyCenterV3Enabled) {
     isFamilyCenterV3Enabled = selectedSubPage === items2.SCREEN_TIME_CONTROLS;

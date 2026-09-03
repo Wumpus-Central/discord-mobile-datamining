@@ -13,13 +13,13 @@ import registerAssetDefault10 from "../../../../_runtime/01456_registerAsset.js"
 import registerAssetDefault11 from "../../../../_runtime/01457_registerAsset.js";
 import registerAssetDefault12 from "../../../../_runtime/01458_registerAsset.js";
 import registerAssetDefault13 from "../../../../_runtime/01459_registerAsset.js";
-import registerAssetDefault14 from "../../../../_runtime/17732_registerAsset.js";
-import registerAssetDefault15 from "../../../../_runtime/17733_registerAsset.js";
-import registerAssetDefault16 from "../../../../_runtime/17734_registerAsset.js";
-import registerAssetDefault17 from "../../../../_runtime/17735_registerAsset.js";
-import registerAssetDefault18 from "../../../../_runtime/17736_registerAsset.js";
-import registerAssetDefault19 from "../../../../_runtime/17737_registerAsset.js";
-import registerAssetDefault20 from "../../../../_runtime/17738_registerAsset.js";
+import registerAssetDefault14 from "../../../../_runtime/17756_registerAsset.js";
+import registerAssetDefault15 from "../../../../_runtime/17757_registerAsset.js";
+import registerAssetDefault16 from "../../../../_runtime/17758_registerAsset.js";
+import registerAssetDefault17 from "../../../../_runtime/17759_registerAsset.js";
+import registerAssetDefault18 from "../../../../_runtime/17760_registerAsset.js";
+import registerAssetDefault19 from "../../../../_runtime/17761_registerAsset.js";
+import registerAssetDefault20 from "../../../../_runtime/17762_registerAsset.js";
 
 const obj = {
   DefaultAvatar0: registerAssetDefault,

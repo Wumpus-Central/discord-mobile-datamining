@@ -8,7 +8,7 @@ const result = set.fileFinishedImporting("modules/premium/sounds/soundmoji/nativ
 export default function openSoundmojiActionSheet(arg0) {
   if (obj.getSoundmojiRenderingExperiment({ location: "openSoundmojiActionSheet" })) {
     ACTION_SHEET_HEIGHT_HALFDefault.openLazy(
-      asyncRequireImpl(11730, dependencyMap.paths),
+      asyncRequireImpl(11735, dependencyMap.paths),
       "soundmoji_actionsheet_key",
       arg0,
     );

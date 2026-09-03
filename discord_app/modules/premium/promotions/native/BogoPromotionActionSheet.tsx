@@ -55,7 +55,7 @@ export default function BogoPromotionActionSheet(markAsDismissed) {
   markAsDismissed = markAsDismissed.markAsDismissed;
   let analyticsLocations;
   const tmp = callback3();
-  analyticsLocations = analyticsLocations(5961)().analyticsLocations;
+  analyticsLocations = analyticsLocations(5962)().analyticsLocations;
   const items = [analyticsLocations, markAsDismissed];
   const items1 = [markAsDismissed];
   const callback = React.useCallback(() => {
@@ -81,7 +81,7 @@ export default function BogoPromotionActionSheet(markAsDismissed) {
     },
     style: tmp.image,
   };
-  const items3 = [callback(analyticsLocations(5501), obj), , ,];
+  const items3 = [callback(analyticsLocations(5502), obj), , ,];
   obj1 = { style: items4, color: "mobile-text-heading-primary", variant: "heading-xl/bold", children: null };
   items4 = [tmp.header];
   const intl = markAsDismissed(1233).intl;
@@ -100,9 +100,9 @@ export default function BogoPromotionActionSheet(markAsDismissed) {
   const intl3 = markAsDismissed(1233).intl;
   obj5[0] = intl3.string(markAsDismissed(1233).t.J61px0);
   obj5[1] = callback;
-  obj4[1] = callback(analyticsLocations(8984), obj5);
+  obj4[1] = callback(analyticsLocations(8988), obj5);
   items3[3] = callback(View, obj4);
   obj[1] = items3;
   obj[1] = callback2(View, obj);
-  return callback(markAsDismissed(5630).BottomSheet, obj);
+  return callback(markAsDismissed(5631).BottomSheet, obj);
 }

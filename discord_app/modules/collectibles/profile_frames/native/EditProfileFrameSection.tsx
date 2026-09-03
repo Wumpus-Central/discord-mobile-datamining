@@ -100,9 +100,9 @@ const memoResult1 = importAllResult.memo((isSelected) => {
   obj = { profileFrame, previewWidth: size * closure_6, previewHeight: size - 2 * PX_8, profileBackgroundColor: null };
   const tmp = callback3();
   obj[3] = setSelectedProfileFrame(709).colors.BACKGROUND_BASE_LOW;
-  obj[1] = callback(setSelectedProfileFrame(10969), obj);
+  obj[1] = callback(setSelectedProfileFrame(10973), obj);
   obj[5] = callback(View, obj);
-  return callback(profileFrame(8099).EditCollectiblesListItemProduct, obj);
+  return callback(profileFrame(8102).EditCollectiblesListItemProduct, obj);
 });
 memoResult1.displayName = "EditProfileFrameItem";
 const result = require("set").fileFinishedImporting(

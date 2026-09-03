@@ -92,7 +92,7 @@ function BurstReactionAnimationContainerInner() {
       obj = { style: items, children: null };
       items = [markAsDismissed.fill, closure_7];
       obj = {
-        activeOpacity: callback(7538).BACKDROP_OPACITY,
+        activeOpacity: callback(7539).BACKDROP_OPACITY,
         onPress() {
           closure_1_4(false);
           closure_1_5.current = false;
@@ -121,7 +121,7 @@ function BurstReactionAnimationContainerInner() {
             closure_5.current = false;
           }
         };
-        tmpResult = tmp(first(7580), obj3);
+        tmpResult = tmp(first(7581), obj3);
       }
       obj2[1] = tmpResult;
       items1[1] = closure_1_8(handleComponentFinish, obj2);
@@ -147,8 +147,8 @@ function BurstReactionAnimationContainerInner() {
       obj[1] = closure_1_8(first(4217).View, obj);
       return closure_1_8(callback(1296).OverlayView, obj);
     };
-    tmp8 = callback(first(10639), obj);
-    let tmp11 = first(10639);
+    tmp8 = callback(first(10643), obj);
+    let tmp11 = first(10643);
   }
   return tmp8;
 }

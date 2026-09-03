@@ -1,8 +1,8 @@
 // discord_app/modules/guild_boosting/native/marketing_redesign/GuildBoostingMarketingProgressBarMarker.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import registerAssetDefault from "../../../../../_runtime/13463_registerAsset.js";
-import registerAssetDefault2 from "../../../../../_runtime/13464_registerAsset.js";
-import registerAssetDefault3 from "../../../../../_runtime/13465_registerAsset.js";
+import registerAssetDefault from "../../../../../_runtime/13478_registerAsset.js";
+import registerAssetDefault2 from "../../../../../_runtime/13479_registerAsset.js";
+import registerAssetDefault3 from "../../../../../_runtime/13480_registerAsset.js";
 import closure_3 from "../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import { BoostedGuildTiers } from "../../../../Constants.tsx";
@@ -288,7 +288,7 @@ export default function ProgressBarMarker(arg0) {
     }
     if (tmp20Result) {
       const obj5 = { source: null, style: null };
-      obj5[0] = tmp2(11384);
+      obj5[0] = tmp2(11389);
       obj5[1] = tmp.progressBarMarkerUnlockedIcon;
       tmp20Result = tmp20(closure_5, obj5);
     }

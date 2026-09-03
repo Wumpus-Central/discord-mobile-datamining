@@ -34,7 +34,7 @@ function BountiesRecapOrbsBackground(arg0) {
     obj[0] = metadataDefault;
     obj[1] = closure_3.absoluteFillObject;
     obj[2] = !reducedMotion;
-    obj[4] = tmp3(tmp(8530).APNGPlayer, obj);
+    obj[4] = tmp3(tmp(8534).APNGPlayer, obj);
     let tmp3Result = tmp3(closure_4, obj);
   } else {
     obj1 = {
@@ -51,7 +51,7 @@ function BountiesRecapOrbsBackground(arg0) {
     obj1[0] = obj2;
     obj1[1] = style;
     obj1[3] = reducedMotion;
-    tmp3Result = tmp3(tmp(8617).VideoComponent, obj1);
+    tmp3Result = tmp3(tmp(8621).VideoComponent, obj1);
   }
   return tmp3Result;
 }

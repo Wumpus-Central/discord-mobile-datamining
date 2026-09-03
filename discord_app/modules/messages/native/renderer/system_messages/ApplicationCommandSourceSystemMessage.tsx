@@ -24,7 +24,7 @@ export const createApplicationCommandSourceSystemMessage = function createApplic
   }
   if (null != applicationCommand) {
     if (null != name) {
-      const messageAuthorWithProcessedColor = tmp(7878).getMessageAuthorWithProcessedColor(message);
+      const messageAuthorWithProcessedColor = tmp(7881).getMessageAuthorWithProcessedColor(message);
       const intl = tmp(1233).intl;
       obj = { username: null, usernameOnClick: null, commandName: null, applicationName: null };
       obj[0] = messageAuthorWithProcessedColor.nick;

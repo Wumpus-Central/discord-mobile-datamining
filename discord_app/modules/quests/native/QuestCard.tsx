@@ -643,12 +643,12 @@ const memoResult = importAllResult.memo((questContent) => {
               } else {
                 closure_0 = tmp2;
                 closure_1_5.log("Enrolling in quest");
-                closure_1_0(11133);
+                closure_1_0(11137);
                 obj1 = { questContent: null, questContentCTA: null, sourceQuestContent: null };
                 obj1[0] = dependencyMap;
                 if (!closure_1_20) {
                   if (!closure_1_14) {
-                    let START_QUEST = tmp31(7483).QuestContentCTA.ACCEPT_QUEST;
+                    let START_QUEST = tmp31(7484).QuestContentCTA.ACCEPT_QUEST;
                   }
                   obj1[1] = START_QUEST;
                   obj1[2] = closure_1_4;
@@ -656,7 +656,7 @@ const memoResult = importAllResult.memo((questContent) => {
                   v0 = 1;
                   dependencyMap = 1;
                 }
-                START_QUEST = tmp31(7483).QuestContentCTA.START_QUEST;
+                START_QUEST = tmp31(7484).QuestContentCTA.START_QUEST;
               }
             } else if (arg0 === 1) {
               dependencyMap = 3;
@@ -672,7 +672,7 @@ const memoResult = importAllResult.memo((questContent) => {
                   obj = { questId: null, sourceQuestContent: null };
                   obj[0] = v0.id;
                   obj[1] = closure_4;
-                  v0(14951)(obj);
+                  v0(14966)(obj);
                   dependencyMap = 3;
                 }
                 callback2();

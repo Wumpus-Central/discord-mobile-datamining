@@ -176,7 +176,7 @@ const memoResult = importAllResult.memo(function GIFPickerHeader(arg0) {
     obj[2] = tmp5;
     obj[3] = onQueryClear;
     obj[4] = searchInputRef;
-    let tmp13Result = tmp6(tmp2(6230).SearchField, obj);
+    let tmp13Result = tmp6(tmp2(6231).SearchField, obj);
   } else {
     obj = { style: null, children: null };
     obj[0] = tmp.headerContainer;
@@ -190,7 +190,7 @@ const memoResult = importAllResult.memo(function GIFPickerHeader(arg0) {
     obj1[3] = intl4.formatToPlainString(tmp2(1233).t.UTypEu, obj2);
     const obj3 = { color: null, size: "sm" };
     obj3[0] = ThemesDefault.colors.INTERACTIVE_TEXT_ACTIVE;
-    const items = [tmp6(tmp2(10389).ChevronLargeLeftIcon, obj3)];
+    const items = [tmp6(tmp2(10393).ChevronLargeLeftIcon, obj3)];
     if (categoryType === tmp8.TRENDING_GIFS) {
       const intl3 = tmp2(1233).intl;
       let stringResult = intl3.string(tmp2(1233).t.TsWCdW);
@@ -205,7 +205,7 @@ const memoResult = importAllResult.memo(function GIFPickerHeader(arg0) {
     obj4[3] = stringResult;
     items[1] = tmp6(tmp2(4474).Text, obj4);
     obj1[4] = items;
-    const items1 = [closure_9(tmp2(5076).PressableOpacity, obj1)];
+    const items1 = [closure_9(tmp2(5077).PressableOpacity, obj1)];
     let tmp6Result = categoryType === tmp8.FAVORITES;
     if (tmp6Result) {
       const obj5 = { columnWidth: null, onQueryChange: null };

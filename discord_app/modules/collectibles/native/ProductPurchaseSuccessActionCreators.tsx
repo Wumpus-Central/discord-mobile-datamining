@@ -1,5 +1,5 @@
 // discord_app/modules/collectibles/native/ProductPurchaseSuccessActionCreators.tsx
-import _modDef4723 from "../../../actions/ModalActionCreators.tsx";
+import _modDef4724 from "../../../actions/ModalActionCreators.tsx";
 import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
 
 const require = arg1;
@@ -10,7 +10,7 @@ const result = require("set").fileFinishedImporting(
 
 export default {
   open(closure_0) {
-    _modDef4723.pushLazy(
+    _modDef4724.pushLazy(
       callback(function* () {
         yield v0(closure_1_2[3])(closure_1_2[2], closure_1_2.paths);
         return arg1.default;
@@ -20,7 +20,7 @@ export default {
     );
   },
   close() {
-    _modDef4723.popWithKey(ShopProductPurchaseSuccessModal);
+    _modDef4724.popWithKey(ShopProductPurchaseSuccessModal);
   },
 };
 export const MODAL_KEY = "ShopProductPurchaseSuccessModal";

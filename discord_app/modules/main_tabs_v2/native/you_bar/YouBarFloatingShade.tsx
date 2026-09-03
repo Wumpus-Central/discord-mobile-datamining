@@ -69,7 +69,7 @@ const memoResult = importAllResult.memo(function YouBarFloatingShade() {
   obj = { bottom: sum / 2, height: sum / 2, width };
   items3[1] = obj;
   const items4 = [str2, str];
-  items2[1] = callback(width(4940), {
+  items2[1] = callback(width(4941), {
     style: items3,
     colors: items4,
     start: { x: 0, y: 0 },

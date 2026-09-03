@@ -70,13 +70,13 @@ function ChannelPermissionSettingsBasicView(channel) {
               closure_0 = tmp2;
               closure_0 = undefined;
               const accessPermissions = closure_1_0.accessPermissions;
-              const result = v0(9721).isPrivateGuildChannel(closure_1_0);
-              const obj9 = v0(9721);
+              const result = v0(9725).isPrivateGuildChannel(closure_1_0);
+              const obj9 = v0(9725);
               const tmp22 = v0;
-              closure_0 = v0(9721).flipEveryonePermission(closure_1_0, accessPermissions, result);
+              closure_0 = v0(9725).flipEveryonePermission(closure_1_0, accessPermissions, result);
               const currentUser = closure_1_16.getCurrentUser();
               let tmp7 = closure_1_9;
-              const obj10 = v0(9721);
+              const obj10 = v0(9725);
               if (!closure_1_9) {
                 tmp7 = null == currentUser;
               }
@@ -87,7 +87,7 @@ function ChannelPermissionSettingsBasicView(channel) {
                 v0 = 1;
                 dependencyMap = 1;
                 obj1 = { value: null, done: false };
-                obj1[0] = tmp22(9721).grantUserChannelAccess(closure_1_0, accessPermissions);
+                obj1[0] = tmp22(9725).grantUserChannelAccess(closure_1_0, accessPermissions);
                 return obj1;
               }
               canResult = closure_1_14.can(closure_1_19.ADMINISTRATOR, closure_1_4);
@@ -118,7 +118,7 @@ function ChannelPermissionSettingsBasicView(channel) {
           v0 = 2;
           dependencyMap = 1;
           const obj3 = { value: null, done: false };
-          obj3[0] = closure_1_0(9722).savePermissionUpdates(closure_1_0.id, items);
+          obj3[0] = closure_1_0(9726).savePermissionUpdates(closure_1_0.id, items);
           return obj3;
         } catch (tmp16) {
           dependencyMap = tmp;
@@ -171,7 +171,7 @@ function ChannelPermissionSettingsBasicView(channel) {
               v0 = undefined;
               if (null != stringResult.guild_id) {
                 if (!callback) {
-                  obj1 = stringResult(9723);
+                  obj1 = stringResult(9727);
                   v0 = 1;
                   dependencyMap = 1;
                   obj1 = { value: null, done: false };
@@ -219,7 +219,7 @@ function ChannelPermissionSettingsBasicView(channel) {
           }
           v0 = onCancelResult;
           v0(!c1);
-          show = callback(4857).show;
+          show = callback(4858).show;
           const obj4 = {
             title: null,
             body: null,
@@ -243,7 +243,7 @@ function ChannelPermissionSettingsBasicView(channel) {
           obj4[6] = onCancel;
           show(obj4);
           dependencyMap = 3;
-          const tmp42 = callback(4857);
+          const tmp42 = callback(4858);
         } catch (tmp54) {
           dependencyMap = tmp;
           throw tmp54;
@@ -280,7 +280,7 @@ function ChannelPermissionSettingsBasicView(channel) {
   sortedGuildRoles = stateFromStoresObject.sortedGuildRoles;
   const items1 = [navigation];
   const layoutEffect = togglePrivateChannel.useLayoutEffect(() => {
-    navigation.setOptions({ headerRight: "r" });
+    navigation.setOptions({ headerRight: "Array" });
   }, items1);
   const items2 = [guild, sortedGuildRoles, channel];
   const memo = togglePrivateChannel.useMemo(() => {

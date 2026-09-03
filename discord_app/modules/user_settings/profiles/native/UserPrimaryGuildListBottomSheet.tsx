@@ -141,7 +141,7 @@ export default function UserPrimaryGuildListBottomSheet(availableGuilds) {
   obj[3] = intl.string(availableGuilds(1233).t.Fo0g9x);
   obj[1] = callback(availableGuilds(4474).Text, obj);
   obj[2] = callback(memo, obj);
-  obj[3] = callback(availableGuilds(8113).BottomSheetFlashList, {
+  obj[3] = callback(availableGuilds(8116).BottomSheetFlashList, {
     ItemSeparatorComponent() {
       return closure_1_6(availableGuilds(closure_1_2[18]).FormDivider, { iconPush: true, style: divider.divider });
     },
@@ -173,5 +173,5 @@ export default function UserPrimaryGuildListBottomSheet(availableGuilds) {
       return closure_1_6(closure_1_9, obj);
     },
   });
-  return callback(availableGuilds(5630).BottomSheet, obj);
+  return callback(availableGuilds(5631).BottomSheet, obj);
 }

@@ -66,7 +66,7 @@ function _generateAnimationSource() {
                 closure_4 = "";
               }
               closure_2 = closure_4;
-              const obj12 = lib(7539);
+              const obj12 = lib(7540);
               c9 = 2;
               c10 = 1;
               let obj2 = { value: null, done: false };
@@ -159,7 +159,7 @@ function _generateAnimationSource() {
               obj9[0] = c9;
               obj9[1] = c10;
               obj9[2] = closure_11;
-              closure_6 = lib(7576).replaceAnimationColors(closure_6, obj9);
+              closure_6 = lib(7577).replaceAnimationColors(closure_6, obj9);
               const _JSON2 = JSON;
               dependencyMap2 = 0;
               c10 = 3;
@@ -322,7 +322,7 @@ function _generateAnimationSourceFromLocalImage() {
             obj6[0] = closure_8;
             obj6[1] = closure_9;
             obj6[2] = closure_10;
-            c5 = lib(7576).replaceAnimationColors(c5, obj6);
+            c5 = lib(7577).replaceAnimationColors(c5, obj6);
             const _JSON = JSON;
             c4 = 0;
             c6 = 3;

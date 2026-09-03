@@ -34,7 +34,7 @@ export default function ExpressionPickerActionSheet(arg0) {
     if (isIOSResult) {
       obj = { animatedSheetIndex: null, followSystemKeyboard: true };
       obj[0] = sharedValue;
-      isIOSResult = callback(tmp7(9138), obj);
+      isIOSResult = callback(tmp7(9142), obj);
     }
     obj = { children: null };
     const items1 = [isIOSResult];
@@ -91,8 +91,8 @@ export default function ExpressionPickerActionSheet(arg0) {
     obj2[9] = initialGifQuery;
     obj2[10] = STICKER_FORMATS;
     obj2[11] = diff;
-    obj1[5] = callback(tmp7(10374), obj2);
-    items1[1] = callback(tmp2(5630).BottomSheet, obj1);
+    obj1[5] = callback(tmp7(10378), obj2);
+    items1[1] = callback(tmp2(5631).BottomSheet, obj1);
     obj[0] = items1;
     tmp15Result = closure_9(closure_8, obj);
     const tmp15 = closure_9;

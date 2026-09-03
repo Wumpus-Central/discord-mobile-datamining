@@ -52,6 +52,7 @@ function FrameViewInner(frame) {
     discord_proxy_ticket: frame.data.proxyTicket,
   };
   ({ isResetting, isLandscape } = baseActivityView);
+  const merged = Object.assign(layoutMode(tmp2[11])(frame.data));
   obj = { wakeLockKey: "FrameActivities", showLoadingIndicator: first, isResetting, children: null };
   obj1 = {
     onActivityCrash() {
@@ -69,7 +70,7 @@ function FrameViewInner(frame) {
     webViewKey: null,
     safeAreasConfig: null,
   };
-  tmpResult = tmp(tmp2[12]);
+  tmpResult = tmp(tmp2[13]);
   obj1[6] = tmpResult.allowPopups(data);
   obj1[8] = layoutMode === constants.PIP;
   obj1[9] = frame(setIsResetting[8]).FRAME_WEB_VIEW_KEY;
@@ -77,7 +78,7 @@ function FrameViewInner(frame) {
     landscapeSafeAreasConfig = frame.landscapeSafeAreasConfig;
   }
   obj1[10] = landscapeSafeAreasConfig;
-  obj[3] = jsx(layoutMode(setIsResetting[11]), {
+  obj[3] = jsx(layoutMode(setIsResetting[12]), {
     onActivityCrash() {
       setIsResetting(true);
       const timerId = setTimeout(() => callback(false), 0);

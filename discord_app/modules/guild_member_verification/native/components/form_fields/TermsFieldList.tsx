@@ -1,5 +1,6 @@
 // discord_app/modules/guild_member_verification/native/components/form_fields/TermsFieldList.tsx
 import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../../../intl/index.native.tsx";
 import get_defaultRulesDefault from "../../../../markup/MarkupUtils.tsx";
 import Text from "../../../../../design/components/Text/native/Text.tsx";
 import closure_3 from "../../../../../../_runtime/00019_noop.js";
@@ -8,11 +9,21 @@ import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
-function TermsFieldListItem(arg0) {
-  ({ rowNumber, rule, rulesChannelId } = arg0);
+function TermsFieldListItem(rowNumber) {
+  rowNumber = rowNumber.rowNumber;
+  ({ rowCount, rule, rulesChannelId } = rowNumber);
   const tmp = callback3();
   let obj = { style: tmp.termsRow, children: null };
-  obj = { style: tmp.termsRowNumber, variant: "text-sm/medium", color: "text-muted", children: "" + rowNumber + "." };
+  obj = {
+    style: tmp.termsRowNumber,
+    variant: "text-sm/medium",
+    color: "text-muted",
+    accessibilityLabel: null,
+    children: null,
+  };
+  const intl = getSystemLocale.intl;
+  obj[3] = intl.formatToPlainString(getSystemLocale.t.XpgzeO, { number: rowNumber, total: rowCount });
+  obj[4] = "" + rowNumber + ".";
   const items = [callback(Text.Text, obj)];
   obj = {
     style: tmp.termsRowContent,
@@ -77,9 +88,10 @@ export default function TermsFieldList(rules) {
   };
   const intl = rules(1233).intl;
   obj[4] = intl.string(rules(1233).t.prJqwT);
-  let items = [
-    callback(rules(4474).Text, obj),
-    rules.map((rule) => {
+  let items = [callback(rules(4474).Text, obj)];
+  obj = {
+    accessibilityRole: "list",
+    children: rules.map((rule) => {
       const items = [termsContainer.termsContainer, ,];
       let firstItem = null;
       if (0 === arg1) {
@@ -92,7 +104,7 @@ export default function TermsFieldList(rules) {
       }
       obj = { style: items, children: tmp2(closure_1_9, obj) };
       items[2] = lastItem;
-      obj = { rule, rowNumber: arg1 + 1, rulesChannelId };
+      obj = { rule, rowNumber: arg1 + 1, rowCount: arr2.length, rulesChannelId };
       const children = [closure_1_5(closure_1_4, obj)];
       let tmp2Result = null;
       if (arg1 !== rules.length - 1) {
@@ -101,7 +113,8 @@ export default function TermsFieldList(rules) {
       children[1] = tmp2Result;
       return closure_1_6(closure_1_3.Fragment, { children }, "term-" + rule + "-" + arg1);
     }),
-  ];
+  };
+  items[1] = callback(View, obj);
   obj[0] = items;
   return callback2(closure_7, obj);
 }

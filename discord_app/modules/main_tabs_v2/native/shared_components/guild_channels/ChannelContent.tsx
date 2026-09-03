@@ -2,7 +2,7 @@
 import isRoleRequiredDefault from "../../../../channel/isRoleRequired.tsx";
 import getLayoutStyles from "layouts/ChannelListLayout.tsx";
 import SubscriptionGatedChannelIconDefault from "../../../../guild_role_subscriptions/native/premium_channel/GuildRoleSubscriptionGatedChannelIcon.tsx";
-import _modDef16477 from "ChannelTitle.tsx";
+import _modDef16498 from "ChannelTitle.tsx";
 import closure_3 from "../../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
 import { UnreadSetting } from "../../../../read_states/ReadStateConstants.tsx";
@@ -64,7 +64,7 @@ function ChannelContentComponent(arg0) {
   obj3[3] = resolvedUnreadSetting;
   obj3[4] = connected;
   obj3[5] = layout;
-  const items1 = [closure_6(_modDef16477, obj3)];
+  const items1 = [closure_6(_modDef16498, obj3)];
   let tmp12Result = tmp10Result;
   if (!tmp10Result) {
     tmp12Result = isNSFWResult;
@@ -86,13 +86,13 @@ function ChannelContentComponent(arg0) {
     if (tmp10Result) {
       const obj6 = { size: "xxs", color: "icon-muted", style: null };
       obj6[2] = tmp.channelTraitIcon;
-      tmp10Result = tmp10(tmp2(5048).LockIcon, obj6);
+      tmp10Result = tmp10(tmp2(5049).LockIcon, obj6);
     }
     const items3 = [tmp10Result, ,];
     if (isNSFWResult) {
       const obj7 = { size: "xxs", color: "icon-muted", style: null };
       obj7[2] = tmp.channelTraitIcon;
-      isNSFWResult = tmp10(tmp2(8751).WarningIcon, obj7);
+      isNSFWResult = tmp10(tmp2(8755).WarningIcon, obj7);
     }
     items3[1] = isNSFWResult;
     if (isSubscriptionGated) {

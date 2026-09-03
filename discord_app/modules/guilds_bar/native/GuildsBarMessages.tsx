@@ -42,10 +42,10 @@ const memoResult = importAllResult.memo(function GuildsBarMessages() {
     cutouts,
     config: closure_6,
     overState: "y",
-    label: "URLSearchParams",
-    externalChildren: true,
-    expandedChildren: false,
-    children: "on-drag",
+    label: "d",
+    externalChildren: 90.254,
+    expandedChildren: 60.843,
+    children: 29.892,
   };
   const tmp6 = useGuildsBarBottomRightBadgeDefault({ mentionCount: 0 });
   const tmp7 = stateFromStores ? colors.WHITE : colors.MOBILE_GUILDBAR_ICON_DEFAULT;
@@ -62,10 +62,10 @@ const memoResult = importAllResult.memo(function GuildsBarMessages() {
     cutouts,
     config: closure_6,
     overState: "y",
-    label: "URLSearchParams",
-    externalChildren: true,
-    expandedChildren: false,
-    children: "on-drag",
+    label: "d",
+    externalChildren: 90.254,
+    expandedChildren: 60.843,
+    children: 29.892,
   });
 });
 const result = require("set").fileFinishedImporting("modules/guilds_bar/native/GuildsBarMessages.tsx");

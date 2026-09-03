@@ -203,7 +203,7 @@ const re7 = /code:\s*(\d{7})(?!\d)/;
 const result = require("set").fileFinishedImporting("modules/billing/native/apple/acomRetry.tsx");
 
 export { parseACOMErrorCode };
-export const retryACOMRequest = function retryACOMRequest() {
+export const retryACOMRequest = function retryACOMRequest(arg0) {
   const self = this;
   const apply = _retryACOMRequest.apply;
   if (typeof apply === "unknown") {

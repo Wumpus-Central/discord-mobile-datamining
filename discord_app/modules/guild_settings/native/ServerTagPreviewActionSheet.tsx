@@ -21,7 +21,7 @@ const result = require("set").fileFinishedImporting("modules/guild_settings/nati
 
 export default function ServerTagPreviewActionSheet(guildId) {
   guildId = guildId.guildId;
-  let obj = guildId(9025);
+  let obj = guildId(9029);
   let guildProfile = obj.useGuildProfile(guildId);
   guildProfile = guildProfile.guildProfile;
   const items = [guildId];
@@ -59,19 +59,19 @@ export default function ServerTagPreviewActionSheet(guildId) {
     obj2[2] = function onPress() {
       return guildId(closure_1_2[7]).getGuildProfile(guildId, true);
     };
-    items1[1] = callback(tmp2(4928).Button, obj2);
+    items1[1] = callback(tmp2(4929).Button, obj2);
     obj[1] = items1;
     tmp7 = callback2(View, obj);
     tmp8 = callback;
   } else {
-    tmp7 = callback(tmp2(6055).SceneLoadingIndicator, {});
+    tmp7 = callback(tmp2(6056).SceneLoadingIndicator, {});
     tmp8 = callback;
   }
   const obj3 = { children: null };
   const obj4 = { title: null };
   const intl3 = tmp2(1233).intl;
   obj4[0] = intl3.string(guildId(1233).t["2QmKZ2"]);
-  const items2 = [tmp8(guildId(5629).BottomSheetTitleHeader, obj4), tmp7];
+  const items2 = [tmp8(guildId(5630).BottomSheetTitleHeader, obj4), tmp7];
   obj3[0] = items2;
-  return callback2(guildId(5997).ActionSheet, obj3);
+  return callback2(guildId(5998).ActionSheet, obj3);
 }

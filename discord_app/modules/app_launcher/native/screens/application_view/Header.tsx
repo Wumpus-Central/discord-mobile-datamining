@@ -120,7 +120,7 @@ export default function Header(application) {
   const tmp3 = callback3();
   let appLauncherIconSource = null;
   if (null != application) {
-    let tmpResult = tmp(11846);
+    let tmpResult = tmp(11852);
     appLauncherIconSource = tmpResult.getAppLauncherIconSource(application);
   }
   tmpResult = tmp(4197);
@@ -141,7 +141,7 @@ export default function Header(application) {
     obj = { iconSource: null, iconBorderRadius: null, iconSize: 72 };
     obj[0] = appLauncherIconSource;
     obj[1] = xl;
-    let tmp12 = callback(tmp5(11851), obj);
+    let tmp12 = callback(tmp5(11857), obj);
     let tmp13 = callback;
   } else {
     obj = { style: null };
@@ -208,16 +208,16 @@ export default function Header(application) {
   let str2 = "";
   const animatedStyle3 = tmpResult4.useAnimatedStyle(fn4);
   if (null != application) {
-    str2 = tmp(8153).getSectionName(application);
-    const tmpResult5 = tmp(8153);
+    str2 = tmp(8157).getSectionName(application);
+    const tmpResult5 = tmp(8157);
   }
   let hasApplicationFlagResult = null != application;
   if (hasApplicationFlagResult) {
     hasApplicationFlagResult = "flags" in application;
   }
   if (hasApplicationFlagResult) {
-    hasApplicationFlagResult = tmp(8445).hasApplicationFlag(application, constants.EMBEDDED);
-    const tmpResult6 = tmp(8445);
+    hasApplicationFlagResult = tmp(8449).hasApplicationFlag(application, constants.EMBEDDED);
+    const tmpResult6 = tmp(8449);
   }
   dependencyMap = hasApplicationFlagResult;
   currentUser2 = currentUser.getCurrentUser();
@@ -293,15 +293,15 @@ export default function Header(application) {
       };
       const intl = tmp(1233).intl;
       obj11[4] = intl.string(tmp(1233).t.XWDihq);
-      const items7 = [tmp13(tmp(8015).IconButton, obj11)];
+      const items7 = [tmp13(tmp(8018).IconButton, obj11)];
       const obj12 = { application: null, onAddAppMenuClick: null };
       obj12[0] = application;
       obj12[1] = onAddAppMenuClick;
-      items7[1] = tmp13(tmp5(11927), obj12);
+      items7[1] = tmp13(tmp5(11933), obj12);
       obj10[1] = items7;
       tmp22Result = tmp22(tmp23, obj10);
     }
-    tmpResult7 = tmp(8153);
+    tmpResult7 = tmp(8157);
   }
   items3[2] = tmp22Result;
   obj5[2] = items3;

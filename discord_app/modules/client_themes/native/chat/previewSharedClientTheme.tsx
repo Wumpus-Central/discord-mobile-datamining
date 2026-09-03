@@ -6,7 +6,7 @@ import ACTION_SHEET_HEIGHT_HALFDefault from "../../../action_sheet/native/Action
 const result = set.fileFinishedImporting("modules/client_themes/native/chat/previewSharedClientTheme.tsx");
 
 export const handleTapPreviewSharedClientTheme = function handleTapPreviewSharedClientTheme(message) {
-  ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(11743, dependencyMap.paths), "custom-theme-preview", {
+  ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(11748, dependencyMap.paths), "custom-theme-preview", {
     message: message.message,
     backdropKind: "none",
   });

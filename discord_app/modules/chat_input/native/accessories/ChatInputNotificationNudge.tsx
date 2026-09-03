@@ -142,11 +142,11 @@ export default function ChatInputNotificationNudge(channel) {
   if (!stateFromStores) {
     tmp5 = !useIsAppDMDefault(channel);
   }
-  let tmpResult = tmp(12204);
+  let tmpResult = tmp(12211);
   const shouldShowPushNotificationNudgeByPromptType = tmpResult.useShouldShowPushNotificationNudgeByPromptType(
     PermissionPromptType.CHANNEL_BANNER,
   );
-  tmpResult = tmp(12204);
+  tmpResult = tmp(12211);
   const shouldShowPushNotificationNudgeByPromptType1 = tmpResult.useShouldShowPushNotificationNudgeByPromptType(
     PermissionPromptType.POST_REACTION_BANNER,
   );
@@ -162,10 +162,10 @@ export default function ChatInputNotificationNudge(channel) {
   obj = { cooldownDurationMs: c20 };
   const tmp10 = c20;
   const tmp11 = callback;
-  const tmpResult1 = channel(6260);
-  [tmp13, tmp14] = callback(channel(6260).useSelectedTimeRecurringDismissibleContent(prop, obj, undefined, true), 2);
+  const tmpResult1 = channel(6261);
+  [tmp13, tmp14] = callback(channel(6261).useSelectedTimeRecurringDismissibleContent(prop, obj, undefined, true), 2);
   importDefault = tmp14;
-  const tmp12 = callback(channel(6260).useSelectedTimeRecurringDismissibleContent(prop, obj, undefined, true), 2);
+  const tmp12 = callback(channel(6261).useSelectedTimeRecurringDismissibleContent(prop, obj, undefined, true), 2);
   let prop1 = null;
   if (tmp5) {
     prop1 = null;
@@ -180,11 +180,11 @@ export default function ChatInputNotificationNudge(channel) {
     }
   }
   obj = { cooldownDurationMs: tmp10 };
-  const tmp11Result = tmp11(channel(6260).useSelectedTimeRecurringDismissibleContent(prop1, obj, undefined, true), 2);
+  const tmp11Result = tmp11(channel(6261).useSelectedTimeRecurringDismissibleContent(prop1, obj, undefined, true), 2);
   dependencyMap = tmp17;
   const items1 = [tmp14];
   const items2 = [tmp11Result[1]];
-  const tmpResult2 = channel(6260);
+  const tmpResult2 = channel(6261);
   const tmp18 = callback2(() => _undefined(closure_1_12.USER_DISMISS), items1);
   if (tmp13 === channel(1372).DismissibleContent.NOTIFICATION_NUDGE_CHAT_BOTTOM_BANNER) {
     obj1 = { promptType: null, location: null, surface: null, body: null, onDismiss: null };

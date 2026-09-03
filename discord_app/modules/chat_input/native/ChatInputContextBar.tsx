@@ -5,7 +5,7 @@ import Button from "../../../design/void/native.tsx";
 import map from "../../../design/tokens/native/useToken.tsx";
 import Text from "../../../design/components/Text/native/Text.tsx";
 import PressableBase from "../../../design/void/Pressables/native/Pressables.tsx";
-import registerAssetDefault from "../../../../_runtime/07722_registerAsset.js";
+import registerAssetDefault from "../../../../_runtime/07725_registerAsset.js";
 import importAllResult from "../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import closure_6 from "../../a11y/AccessibilityStore.tsx";

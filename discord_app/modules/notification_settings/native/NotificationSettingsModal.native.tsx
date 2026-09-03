@@ -76,10 +76,10 @@ function ConnectedNotificationSettings(guildId) {
     guildId,
     channels: memo,
     navigation,
-    shouldUseNewNotificationSystem: guildId(10252).useShouldUseNewNotificationSystem("NotificationSettingsModalNative"),
+    shouldUseNewNotificationSystem: guildId(10256).useShouldUseNewNotificationSystem("NotificationSettingsModalNative"),
   };
   const merged = Object.assign(tmp3);
-  const items2 = [callback2(NotificationSettings, obj), callback2(guildId(5947).NavScrim, {})];
+  const items2 = [callback2(NotificationSettings, obj), callback2(guildId(5948).NavScrim, {})];
   obj[0] = items2;
   return callback3(closure_28, obj);
 }
@@ -375,13 +375,13 @@ prototype["renderMuteSection"] = function renderMuteSection() {
     obj2[0] = formatResult;
     obj2[1] = self.handleMutePress;
     obj2[2] = !muted;
-    obj1[2] = callback2(tmp7(5607).TableRow, obj2);
-    const items = [callback2(tmp7(6000).TableRowGroup, obj1, "mute")];
+    obj1[2] = callback2(tmp7(5608).TableRow, obj2);
+    const items = [callback2(tmp7(6001).TableRowGroup, obj1, "mute")];
     let tmp10Result = null;
     if (muted) {
       const obj3 = { muteConfig: null, type: null };
       obj3[0] = muteConfig;
-      obj3[1] = tmp7(10251).MuteSettingType.SERVER;
+      obj3[1] = tmp7(10255).MuteSettingType.SERVER;
       tmp10Result = callback2(MutedUntilTextDefault, obj3, "muted-until");
       const tmp14 = MutedUntilTextDefault;
     }
@@ -395,17 +395,17 @@ prototype["renderChannels"] = function renderChannels() {
   const intl = self(1233).intl;
   obj[0] = intl.string(self(1233).t.O4TIvi);
   obj = { icon: null, label: null, onPress: null };
-  obj = { IconComponent: self(12515).PlusMediumIcon };
-  obj[0] = callback2(self(5613).TableRowIcon, obj);
+  obj = { IconComponent: self(12527).PlusMediumIcon };
+  obj[0] = callback2(self(5614).TableRowIcon, obj);
   const intl2 = self(1233).intl;
   obj[1] = intl2.string(self(1233).t.quib7R);
   obj[2] = this.handleAddOverride;
-  obj[2] = callback2(self(5607).TableRow, obj);
-  const items = [callback2(self(6000).TableRowGroup, obj, "override-header")];
+  obj[2] = callback2(self(5608).TableRow, obj);
+  const items = [callback2(self(6001).TableRowGroup, obj, "override-header")];
   obj1 = { hasIcons: true, children: null };
   const overriddenChannels = this.getOverriddenChannels();
   obj1[1] = overriddenChannels.map((parent_id) => self.renderChannel(parent_id));
-  items[1] = callback2(self(6000).TableRowGroup, obj1, "override-channels");
+  items[1] = callback2(self(6001).TableRowGroup, obj1, "override-channels");
   return items;
 };
 prototype["renderChannel"] = function renderChannel(parent_id) {
@@ -435,8 +435,8 @@ prototype["renderChannel"] = function renderChannel(parent_id) {
       }
     }
     if (self.props.shouldUseNewNotificationSystem) {
-      let tmp4Result = tmp4(4704);
-      tmp4Result = tmp4(4704);
+      let tmp4Result = tmp4(4705);
+      tmp4Result = tmp4(4705);
       const unreadSetting = closure_14.resolveUnreadSetting(parent_id);
       stringResult = tmp4Result.presetName(
         tmp4Result.presetFromSettings(unreadSetting, closure_14.resolvedMessageNotifications(parent_id)),
@@ -461,7 +461,7 @@ prototype["renderChannel"] = function renderChannel(parent_id) {
     if (null != stringResult) {
       obj1 = { text: null };
       obj1[0] = stringResult;
-      tmp10Result = tmp10(tmp4(5607).TableRow.TrailingText, obj1);
+      tmp10Result = tmp10(tmp4(5608).TableRow.TrailingText, obj1);
     }
     obj[4] = tmp10Result;
     return callback2(
@@ -487,7 +487,7 @@ prototype["render"] = function render() {
     obj[0] = ThemesDefault.space.PX_24;
     obj[1] = tmp.formStack;
     obj[2] = self.renderMuteSection();
-    obj[1] = tmp4(tmp5(4926).Stack, obj);
+    obj[1] = tmp4(tmp5(4927).Stack, obj);
     let tmp4Result = tmp4(Form, obj);
   } else {
     obj = { spacing: null, style: null, children: null };
@@ -500,7 +500,7 @@ prototype["render"] = function render() {
       self.renderChannels(),
     ];
     obj[2] = items;
-    obj[1] = callback3(tmp5(4926).Stack, obj);
+    obj[1] = callback3(tmp5(4927).Stack, obj);
     tmp4Result = tmp4(Form, obj);
   }
   return tmp4Result;
@@ -508,7 +508,7 @@ prototype["render"] = function render() {
 prototype["getOverriddenChannels"] = function getOverriddenChannels() {
   const props = this.props;
   const channels = props.channels;
-  let obj = set(10252);
+  let obj = set(10256);
   obj = {
     ignoreNotificationSetting: false,
     ignoreMute: this.props.shouldUseNewNotificationSystem,
@@ -537,7 +537,7 @@ export default function NotificationSettingsModal() {
   let stateFromStores = obj.useStateFromStores(items, () => props.getProps().guildId);
   const memo = importAllResult.useMemo(() => {
     let obj = {};
-    obj = { headerLeft: callback(5503).getHeaderCloseButton(callback2(5495).close), title: null, render: null };
+    obj = { headerLeft: callback(5504).getHeaderCloseButton(callback2(5496).close), title: null, render: null };
     const intl = callback(1233).intl;
     obj[1] = intl.string(callback(1233).t.h850Ss);
     obj[2] = function render(guildId) {
@@ -547,19 +547,19 @@ export default function NotificationSettingsModal() {
     obj = { title: null, headerLeft: null, render: null };
     const intl2 = callback(1233).intl;
     obj[0] = intl2.string(callback(1233).t.s7vIQT);
-    const obj3 = callback(5503);
-    obj[1] = callback(5503).getHeaderBackButton();
+    const obj3 = callback(5504);
+    obj[1] = callback(5504).getHeaderBackButton();
     obj[2] = function render(guildId, navigation) {
-      return callback2(callback(17612), { guildId: guildId.guildId, navigation });
+      return callback2(callback(17632), { guildId: guildId.guildId, navigation });
     };
     obj[constants.ADD_OVERRIDE] = obj;
     obj1 = { headerLeft: null, title: null, render: null };
-    const obj5 = callback(5503);
-    obj1[0] = callback(5503).getHeaderBackButton();
+    const obj5 = callback(5504);
+    obj1[0] = callback(5504).getHeaderBackButton();
     const intl3 = callback(1233).intl;
     obj1[1] = intl3.string(callback(1233).t.h850Ss);
     obj1[2] = function render(channelId) {
-      return callback2(callback(10246), { channelId: channelId.channelId, inGuildContext: true });
+      return callback2(callback(10250), { channelId: channelId.channelId, inGuildContext: true });
     };
     obj[constants.CHANNEL_OVERRIDE] = obj1;
     return obj;

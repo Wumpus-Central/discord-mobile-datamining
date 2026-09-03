@@ -53,7 +53,7 @@ function PreviewBody(event) {
     const obj2 = { channelName: null };
     const obj3 = { channel: null };
     obj3[0] = stateFromStores;
-    obj2[0] = channel_id(9438)(obj3);
+    obj2[0] = channel_id(9442)(obj3);
     formatToPlainStringResult = intl2.formatToPlainString(tmp2(1233).t.sxcQPE, obj2);
   }
   obj1[1] = formatToPlainStringResult;
@@ -77,8 +77,8 @@ function PreviewBody(event) {
       if (dependencyMap == null) {
         let result = null;
         if (null != locationFromEvent) {
-          result = lib(9762).guildEventLocationParser(tmp12, true);
-          const tmp9Result = lib(9762);
+          result = lib(9766).guildEventLocationParser(tmp12, true);
+          const tmp9Result = lib(9766);
         }
         tmp11 = result;
       }

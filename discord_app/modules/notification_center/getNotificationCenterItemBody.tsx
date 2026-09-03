@@ -34,7 +34,7 @@ export default function getNotificationCenterItemBody(arg0) {
   applicationId = item.applicationId;
   renderApplication = applicationId;
   const type = item.type;
-  if (applicationId(7394).NotificationCenterLocalItems.FRIEND_REQUESTS_GROUPED === type) {
+  if (applicationId(7395).NotificationCenterLocalItems.FRIEND_REQUESTS_GROUPED === type) {
     let tmp2Result = tmp2(4322);
     let other_users = item.other_users;
     let id2;
@@ -69,7 +69,7 @@ export default function getNotificationCenterItemBody(arg0) {
     obj[1] = name2;
     obj[2] = bound;
     return intl12.format(tmp6(1233).t.g5xyIC, obj);
-  } else if (tmp6(7394).NotificationCenterLocalItems.MOBILE_NATIVE_UPDATE_AVAILABLE === type) {
+  } else if (tmp6(7395).NotificationCenterLocalItems.MOBILE_NATIVE_UPDATE_AVAILABLE === type) {
     let str7;
     if (item.local_id != null) {
       const parts = str6.split("_");
@@ -80,7 +80,7 @@ export default function getNotificationCenterItemBody(arg0) {
     }
     const _HermesInternal3 = HermesInternal;
     return "Update to build " + str7 + " available!";
-  } else if (tmp6(7394).NotificationCenterItems.FRIEND_SUGGESTION_CREATED === type) {
+  } else if (tmp6(7395).NotificationCenterItems.FRIEND_SUGGESTION_CREATED === type) {
     if (relationshipType.getRelationshipType(id) === constants.PENDING_OUTGOING) {
       const intl11 = tmp6(1233).intl;
       obj = { user: null };
@@ -93,7 +93,7 @@ export default function getNotificationCenterItemBody(arg0) {
       }
     }
     return str5;
-  } else if (tmp6(7394).NotificationCenterItems.GUILD_SCHEDULED_EVENT_STARTED === type) {
+  } else if (tmp6(7395).NotificationCenterItems.GUILD_SCHEDULED_EVENT_STARTED === type) {
     const guild_scheduled_event_id = item.guild_scheduled_event_id;
     let guildScheduledEvent = null;
     if (null != guild_scheduled_event_id) {
@@ -132,7 +132,7 @@ export default function getNotificationCenterItemBody(arg0) {
     formatResult = str4;
     const tmp27 = isGuildEventEnded;
     tmp27Result = isGuildEventEnded(guildScheduledEvent);
-  } else if (tmp6(7394).NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS === type) {
+  } else if (tmp6(7395).NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS === type) {
     if (null != applicationId) {
       const intl9 = tmp6(1233).intl;
       const obj2 = { username: null, applicationName: null };
@@ -148,7 +148,7 @@ export default function getNotificationCenterItemBody(arg0) {
       formatResult1 = intl8.format(tmp19, obj3);
     }
     return formatResult1;
-  } else if (tmp6(7394).NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS_ACCEPTED === type) {
+  } else if (tmp6(7395).NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS_ACCEPTED === type) {
     if (null != applicationId) {
       const intl7 = tmp6(1233).intl;
       const obj4 = { username: null, applicationName: null };
@@ -164,7 +164,7 @@ export default function getNotificationCenterItemBody(arg0) {
       formatResult2 = intl6.format(tmp17, obj5);
     }
     return formatResult2;
-  } else if (tmp6(7394).NotificationCenterItems.FRIEND_REQUEST_ACCEPTED === type) {
+  } else if (tmp6(7395).NotificationCenterItems.FRIEND_REQUEST_ACCEPTED === type) {
     if (null != applicationId) {
       const intl5 = tmp6(1233).intl;
       const obj6 = { username: null, applicationName: null };
@@ -180,7 +180,7 @@ export default function getNotificationCenterItemBody(arg0) {
       formatResult3 = intl4.format(tmp15, obj7);
     }
     return formatResult3;
-  } else if (tmp6(7394).NotificationCenterLocalItems.INCOMING_GAME_FRIEND_REQUESTS_ACCEPTED === type) {
+  } else if (tmp6(7395).NotificationCenterLocalItems.INCOMING_GAME_FRIEND_REQUESTS_ACCEPTED === type) {
     const _HermesInternal2 = HermesInternal;
     tmp2(38)(null != applicationId, "Expected application id for " + item.type);
     const intl3 = tmp6(1233).intl;
@@ -190,7 +190,7 @@ export default function getNotificationCenterItemBody(arg0) {
       return applicationId(renderApplication);
     };
     return intl3.format(tmp6(1233).t["BB/0vn"], obj8);
-  } else if (tmp6(7394).NotificationCenterLocalItems.INCOMING_GAME_FRIEND_REQUESTS === type) {
+  } else if (tmp6(7395).NotificationCenterLocalItems.INCOMING_GAME_FRIEND_REQUESTS === type) {
     const _HermesInternal = HermesInternal;
     tmp2(38)(null != applicationId, "Expected application id for " + item.type);
     const intl2 = tmp6(1233).intl;
@@ -200,7 +200,7 @@ export default function getNotificationCenterItemBody(arg0) {
       return applicationId(renderApplication);
     };
     return intl2.format(tmp6(1233).t["7cqOLI"], obj9);
-  } else if (tmp6(7394).NotificationCenterItems.GAME_FRIEND_REQUEST_ACCEPTED === type) {
+  } else if (tmp6(7395).NotificationCenterItems.GAME_FRIEND_REQUEST_ACCEPTED === type) {
     if (null == applicationId) {
       let body = item.body;
     } else {

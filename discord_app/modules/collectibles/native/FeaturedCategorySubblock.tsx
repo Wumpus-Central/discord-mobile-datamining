@@ -28,7 +28,7 @@ export default function _default(subblock) {
   const tmp = callback();
   let obj = subblock(1498);
   importDefault = obj.useNavigation();
-  obj1 = subblock(8905);
+  obj1 = subblock(8909);
   dependencyMap = obj1.useCollectiblesAnalyticsContext();
   const assetUrl = subblock.assetUrl;
   let obj2 = subblock(586);
@@ -36,7 +36,7 @@ export default function _default(subblock) {
   stateFromStores = obj2.useStateFromStores(items, () =>
     closure_1_4.getCategoryByStoreListingId(subblock.categoryStoreListingId),
   );
-  let obj3 = subblock(15646);
+  let obj3 = subblock(15660);
   let unpublishedAt = subblock.unpublishedAt;
   if (unpublishedAt == null) {
     unpublishedAt = undefined;
@@ -134,14 +134,14 @@ export default function _default(subblock) {
   const items1 = [tmp11Result];
   const tmp12 = onChangeDefault;
   const tmp13 = closure_9;
-  let result = subblock(7308).shouldShowLimitedTimeBadge(date);
+  let result = subblock(7309).shouldShowLimitedTimeBadge(date);
   if (result) {
     const obj5 = { style: null };
     obj5[0] = tmp.limitedTimeBadge;
-    result = tmp11(tmp2(8102).LimitedTimeBadge, obj5);
+    result = tmp11(tmp2(8105).LimitedTimeBadge, obj5);
   }
   items1[1] = result;
   obj[8] = items1;
-  obj[1] = tmp13(subblock(5076).PressableOpacity, obj);
+  obj[1] = tmp13(subblock(5077).PressableOpacity, obj);
   return closure_8(tmp12, obj);
 }

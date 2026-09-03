@@ -31,7 +31,7 @@ export default function UserProfileWidgetReportButton(arg0) {
       const intl = callback(1233).intl;
       obj.accessibilityLabel = intl.string(callback(1233).t.xpSHSk);
       obj = { size: "sm", color: callback2(709).colors.TEXT_MUTED };
-      obj.children = callback3(callback(8813).MoreHorizontalIcon, obj);
+      obj.children = callback3(callback(8817).MoreHorizontalIcon, obj);
       return callback3(closure_3, obj);
     },
   };
@@ -45,7 +45,7 @@ export default function UserProfileWidgetReportButton(arg0) {
       const intl = callback(1233).intl;
       obj.accessibilityLabel = intl.string(callback(1233).t.xpSHSk);
       obj = { size: "sm", color: callback2(709).colors.TEXT_MUTED };
-      obj.children = callback3(callback(8813).MoreHorizontalIcon, obj);
+      obj.children = callback3(callback(8817).MoreHorizontalIcon, obj);
       return callback3(closure_3, obj);
     },
   });

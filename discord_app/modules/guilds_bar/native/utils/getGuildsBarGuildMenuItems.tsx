@@ -107,7 +107,7 @@ export default function getGuildsBarGuildMenuItems(arg0) {
     const splice = items.splice;
     const obj2 = { iconSource: null, label: null, action: null };
     if (isMutedResult) {
-      obj2[0] = tmp5(12170);
+      obj2[0] = tmp5(12176);
       const intl5 = tmp(1233).intl;
       obj2[1] = intl5.string(tmp(1233).t.De0BTC);
       obj2[2] = function action() {
@@ -122,7 +122,7 @@ export default function getGuildsBarGuildMenuItems(arg0) {
       };
       splice(1, 0, obj2);
     } else {
-      obj2[0] = tmp5(12169);
+      obj2[0] = tmp5(12175);
       const intl4 = tmp(1233).intl;
       obj2[1] = intl4.string(tmp(1233).t.vRzp7P);
       obj2[2] = function action() {

@@ -4,7 +4,7 @@ import set from "../../../utils/PlatformUtils.tsx";
 import closure_3 from "../../../../_runtime/00019_noop.js";
 import { AppState } from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import keys from "../../../../_runtime/00641_keys.js";
-import importDefaultResult from "../../../../_runtime/08619_get_ActivityIndicator.js";
+import importDefaultResult from "../../../../_runtime/08623_get_ActivityIndicator.js";
 
 require = arg1;
 function handleOrientationChange(initialOrientation) {
@@ -106,14 +106,14 @@ function lockOrientationForiOS(PORTRAIT) {
     importDefaultResult.ignoreAutoRotate(false);
     c8 = false;
     if ("LANDSCAPE" === PORTRAIT) {
-      let tmp6Result = tmp6(8619);
+      let tmp6Result = tmp6(8623);
       tmp6Result.lockToLandscapeLeft();
       tmpResult = tmp(702);
       tmpResult.batchUpdates(() => {
         store.setState({ orientationLock: "LANDSCAPE" });
       });
     } else {
-      tmp6Result = tmp6(8619);
+      tmp6Result = tmp6(8623);
       tmp6Result.lockToPortrait();
       tmp(702).batchUpdates(() => {
         store.setState({ orientationLock: "PORTRAIT" });
@@ -187,14 +187,14 @@ const listener = AppState.addEventListener("change", function applyLockStateOnAp
     obj.ignoreAutoRotate(true);
     c8 = false;
     if ("LANDSCAPE" === orientationLock) {
-      let tmp3Result = tmp3(8619);
+      let tmp3Result = tmp3(8623);
       tmp3Result.lockToLandscapeLeft();
       batchUpdates.batchUpdates(() => {
         store.setState({ orientationLock: "LANDSCAPE" });
       });
       const obj5 = batchUpdates;
     } else {
-      tmp3Result = tmp3(8619);
+      tmp3Result = tmp3(8623);
       tmp3Result.lockToPortrait();
       batchUpdates.batchUpdates(() => {
         store.setState({ orientationLock: "PORTRAIT" });
@@ -238,14 +238,14 @@ export const lockOrientation = function lockOrientation(PORTRAIT, flag) {
   importDefaultResult.ignoreAutoRotate(flag);
   c8 = false;
   if ("LANDSCAPE" === PORTRAIT) {
-    let tmpResult = tmp(8619);
+    let tmpResult = tmp(8623);
     tmpResult.lockToLandscapeLeft();
     batchUpdates.batchUpdates(() => {
       store.setState({ orientationLock: "LANDSCAPE" });
     });
     const obj5 = batchUpdates;
   } else {
-    tmpResult = tmp(8619);
+    tmpResult = tmp(8623);
     tmpResult.lockToPortrait();
     batchUpdates.batchUpdates(() => {
       store.setState({ orientationLock: "PORTRAIT" });

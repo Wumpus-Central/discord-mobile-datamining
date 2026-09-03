@@ -1,5 +1,5 @@
 // discord_app/modules/activities/panel/native/MinimizeActivityButton.tsx
-import registerAssetDefault from "../../../../../_runtime/08950_registerAsset.js";
+import registerAssetDefault from "../../../../../_runtime/08954_registerAsset.js";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import { ActivityPanelModes } from "../ActivityPanelConstants.tsx";
@@ -34,7 +34,7 @@ const memoResult = importAllResult.memo(function MinimizeActivityButton(arg0) {
       obj[1] = intl2.string(setMode(1233).t.brPQ5U);
       obj[2] = callback;
       obj[3] = activityName;
-      obj[1] = jsx(setMode(4928).Button, {
+      obj[1] = jsx(setMode(4929).Button, {
         icon: null,
         accessibilityLabel: null,
         onPress: null,
@@ -70,7 +70,7 @@ const memoResult = importAllResult.memo(function MinimizeActivityButton(arg0) {
   const intl = setMode(1233).intl;
   obj[1] = intl.string(setMode(1233).t.brPQ5U);
   obj[2] = callback;
-  tmp3 = jsx(setMode(8015).IconButton, {
+  tmp3 = jsx(setMode(8018).IconButton, {
     icon: registerAssetDefault,
     accessibilityLabel: null,
     onPress: null,

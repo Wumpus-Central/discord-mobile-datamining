@@ -111,7 +111,7 @@ export const openBurstReactionFirstSendActionSheet = function openBurstReactionF
     obj[0] = channelId;
     obj[1] = messageId;
     obj[2] = emoji;
-    tmpResult.openLazy(tmp4(2008)(7577, dependencyMap.paths), "BurstReactionFirstSendActionSheet", obj);
+    tmpResult.openLazy(tmp4(2008)(7578, dependencyMap.paths), "BurstReactionFirstSendActionSheet", obj);
     const tmp4Result = tmp4(4298);
   }
 };

@@ -256,7 +256,7 @@ let closure_17 = importAllResult.memo((game) => {
     obj3[0] = tmp.comment;
     const obj4 = { size: "xxs", color: null };
     obj4[1] = ThemesDefault.colors.TEXT_MUTED;
-    const items3 = [tmp10(tmp6(12885).QuoteIcon, obj4)];
+    const items3 = [tmp10(tmp6(12897).QuoteIcon, obj4)];
     const obj5 = { variant: "text-sm/normal", color: "text-muted", lineClamp: 3, style: null, children: null };
     obj5[3] = tmp.commentText;
     obj5[4] = game.comment;

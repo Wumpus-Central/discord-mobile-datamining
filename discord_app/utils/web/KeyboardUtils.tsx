@@ -1,7 +1,7 @@
 // discord_app/utils/web/KeyboardUtils.tsx
 import set2 from "../PlatformUtils.tsx";
 import isDiscordFrontendDevelopment from "../GlobalUtils.tsx";
-import keyCodeDefault from "../../../_runtime/13777_keyCode.js";
+import keyCodeDefault from "../../../_runtime/13793_keyCode.js";
 import normalizeKey from "KeyboardLayoutMapUtils.tsx";
 import closure_4 from "../../../_runtime/metro/00032__slicedToArray.js";
 import items from "../../../discord_common/js/shared/constants/KeyboardConstants.tsx";
@@ -17,7 +17,7 @@ function getCodeToKeyLanguageCorrection(keyCode, key, arg2) {
   }
   const BACKTICK_CODES = normalizeKey.BACKTICK_CODES;
   if (BACKTICK_CODES.has(keyCode)) {
-    let tmp2Result = tmp2(13778);
+    let tmp2Result = tmp2(13794);
     const layoutMap = tmp2Result.getLayoutMap();
     let value = layoutMap.get("Backquote");
     if (key === value) {
@@ -27,7 +27,7 @@ function getCodeToKeyLanguageCorrection(keyCode, key, arg2) {
       }
       return str7;
     } else {
-      tmp2Result = tmp2(13778);
+      tmp2Result = tmp2(13794);
       const obj = { key: null, code: "Backquote", keyCode: null };
       obj[0] = value;
       obj[2] = keyCode;
@@ -338,12 +338,12 @@ function toKeyNames(arr) {
       if (null != tmp17) {
         let combined = callback3(tmp15, tmp17, tmp16);
       } else {
-        const keyboardEventShapeFromKeycode = callback(13778).getKeyboardEventShapeFromKeycode(tmp15);
+        const keyboardEventShapeFromKeycode = callback(13794).getKeyboardEventShapeFromKeycode(tmp15);
         combined = null;
         if (null != keyboardEventShapeFromKeycode) {
           combined = callback3(keyboardEventShapeFromKeycode.keyCode, keyboardEventShapeFromKeycode.key, tmp16);
         }
-        const obj3 = callback(13778);
+        const obj3 = callback(13794);
       }
       if (combined == null) {
         const _HermesInternal4 = HermesInternal;
@@ -519,7 +519,7 @@ export const toCombo = function toCombo(shortcut) {
     const parts = shortcut
       .replace(/numpad plus/i, "")
       .replace(/NUMPAD \+/i, "numpad plus")
-      .replace(/mod/i, KEYBOARD_KEY(13779).modKey)
+      .replace(/mod/i, KEYBOARD_KEY(13795).modKey)
       .split("+");
     const mapped = parts.map((str) => str.trim().replace("plus", "+"));
     return mapped.reduce((arr) => {
@@ -621,12 +621,12 @@ export const toString = function toString(arr) {
       if (null != tmp17) {
         let combined = callback3(tmp15, tmp17, tmp16);
       } else {
-        const keyboardEventShapeFromKeycode = callback(13778).getKeyboardEventShapeFromKeycode(tmp15);
+        const keyboardEventShapeFromKeycode = callback(13794).getKeyboardEventShapeFromKeycode(tmp15);
         combined = null;
         if (null != keyboardEventShapeFromKeycode) {
           combined = callback3(keyboardEventShapeFromKeycode.keyCode, keyboardEventShapeFromKeycode.key, tmp16);
         }
-        const obj3 = callback(13778);
+        const obj3 = callback(13794);
       }
       if (combined == null) {
         const _HermesInternal4 = HermesInternal;

@@ -2,7 +2,7 @@
 import initialize from "../../../../../../discord_common/js/packages/flux/index.tsx";
 import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import set from "../../../../../utils/PlatformUtils.tsx";
-import LinearGradientDefault from "../../../../../../_runtime/04940_LinearGradient.js";
+import LinearGradientDefault from "../../../../../../_runtime/04941_LinearGradient.js";
 import preloadDefault from "../../../../../components_native/common/FastImage.tsx";
 import useAPNGPlayerControls from "../../../../image/native/APNGPlayer.android.tsx";
 import closure_3 from "../../../../../../_runtime/metro/00032__slicedToArray.js";
@@ -48,7 +48,7 @@ function AlwaysCompressImagesSwitch(isKestrelTreatment) {
       const intl2 = tmp2(1233).intl;
       obj1[2] = intl2.string(tmp2(1233).t["wC0+Ph"]);
       obj[5] = callback2(tmp2(4474).Text, obj1);
-      obj[1] = callback2(tmp2(6001).TableSwitchRow, obj);
+      obj[1] = callback2(tmp2(6002).TableSwitchRow, obj);
       tmp6 = callback2(View, obj);
     }
   }

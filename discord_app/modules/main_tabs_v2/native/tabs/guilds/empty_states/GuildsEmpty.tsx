@@ -4,8 +4,8 @@ import getSystemLocale from "../../../../../../intl/index.native.tsx";
 import Text from "../../../../../../design/components/Text/native/Text.tsx";
 import Stack from "../../../../../../design/components/Stack/native/Stack.native.tsx";
 import Button from "../../../../../../design/components/Button/native/Button.native.tsx";
-import _modDef12470 from "../../../../../create_guild/native/CreateGuildModalActionCreators.tsx";
-import registerAssetDefault from "../../../../../../../_runtime/16092_registerAsset.js";
+import _modDef12482 from "../../../../../create_guild/native/CreateGuildModalActionCreators.tsx";
+import registerAssetDefault from "../../../../../../../_runtime/16108_registerAsset.js";
 import closure_3 from "../../../../../../../_runtime/metro/00032__slicedToArray.js";
 import importAllResult from "../../../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../../../_runtime/00017_get_ActivityIndicator.js";
@@ -18,10 +18,10 @@ import createCacheKey from "../../../../../../design/components/Styles/native/cr
 
 require = arg1;
 function handleJoinGuild() {
-  const result = _modDef12470.openGuildJoinServerScreen();
+  const result = _modDef12482.openGuildJoinServerScreen();
 }
 function handleCreateGuild() {
-  _modDef12470.openCreateGuildModal();
+  _modDef12482.openCreateGuildModal();
 }
 class GuildsEmptyContent {
   constructor(arg0) {
@@ -150,7 +150,7 @@ const memoResult = importAllResult.memo(function GuildsEmpty(arg0) {
   }
   selectedGuildId = tmp6;
   obj = { type: navigation(500).ImpressionTypes.VIEW, name: navigation(500).ImpressionNames.GUILDS_EMPTY_NUX };
-  selectedGuildId(8907)(obj);
+  selectedGuildId(8911)(obj);
   const items1 = [tmp6, navigation];
   const effect = importAllResult.useEffect(() => {
     if (null != selectedGuildId) {
@@ -187,9 +187,9 @@ const memoResult = importAllResult.memo(function GuildsEmpty(arg0) {
       obj2 = closure_0;
     }
   }, items1);
-  let tmp2Result = tmp2(5079);
+  let tmp2Result = tmp2(5080);
   const isScreenLandscape = tmp2Result.useIsScreenLandscape();
-  tmp2Result = tmp2(14927);
+  tmp2Result = tmp2(14942);
   let tmp14Result = null;
   if (stateFromStores) {
     obj = { style: null, children: null };

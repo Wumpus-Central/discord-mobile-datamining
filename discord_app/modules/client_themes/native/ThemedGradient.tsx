@@ -7,7 +7,7 @@ import hslToRgbDefault from "../../../utils/Color.tsx";
 import set from "../../guild_themes/GuildThemePresets.tsx";
 import getGuildIdFromNavigationStateDefault from "../../guild_themes/native/useRoutedActiveGuildTheme.tsx";
 import useThemeDefault from "../../../hooks/useTheme.tsx";
-import LinearGradientDefault from "../../../../_runtime/04940_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/04941_LinearGradient.js";
 import closure_3 from "../../../../_runtime/00019_noop.js";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import closure_5 from "../ClientThemesBackgroundStore.tsx";

@@ -41,7 +41,7 @@ export default function MediaKeyboardLimitedPickerNotice(onHeightChange) {
   const intl2 = onHeightChange(1233).intl;
   obj1[2] = intl2.string(onHeightChange(1233).t.JuXTi6);
   obj1[3] = onHeightChange.onPress;
-  obj[1] = callback(onHeightChange(4928).Button, obj1);
+  obj[1] = callback(onHeightChange(4929).Button, obj1);
   items2[1] = callback(View, obj);
   obj[2] = items2;
   return closure_5(View, obj);

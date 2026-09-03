@@ -1,5 +1,5 @@
 // discord_app/modules/search/native/components/tabs/pages/messages/PinsScreen.tsx
-import _modDef16522 from "MessagesScreen.tsx";
+import _modDef16543 from "MessagesScreen.tsx";
 import importAllResult from "../../../../../../../../_runtime/00019_noop.js";
 import closure_4 from "../../../../../../../stores/ChannelPinsStore.tsx";
 import { FetchState } from "../../../../../../../stores/ChannelPinsStore.tsx";
@@ -165,7 +165,7 @@ const memoResult = importAllResult.memo(function PinsScreen(searchContext) {
     obj[0] = searchContext;
     obj[1] = tab;
     obj[2] = isFocused;
-    let tmp5 = jsx(_modDef16522, { searchContext: null, tab: null, isFocused: null });
+    let tmp5 = jsx(_modDef16543, { searchContext: null, tab: null, isFocused: null });
   } else {
     obj = { searchContext: null, tab: null, isFocused: null };
     obj[0] = searchContext;

@@ -4,8 +4,8 @@ import dispatcherDefault from "../../Dispatcher.tsx";
 
 const result = set.fileFinishedImporting("modules/guild_automod/GuildAutomodMessageActionCreators.tsx");
 
-export const removeAutomodMessageNotice = function removeAutomodMessageNotice(messageId) {
+export const removeAutomodMessageNotice = function removeAutomodMessageNotice(id1) {
   let obj = dispatcherDefault;
-  obj = { type: "REMOVE_AUTOMOD_MESSAGE_NOTICE", messageId };
+  obj = { type: "REMOVE_AUTOMOD_MESSAGE_NOTICE", messageId: id1 };
   obj.dispatch(obj);
 };

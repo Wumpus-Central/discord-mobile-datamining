@@ -153,7 +153,7 @@ function getReachedLimit(arg0, arg1) {
 function showLimitReachedAlert(limit) {
   limit = limit.limit;
   if (limit.canUpsell) {
-    tmp(10332)(limit);
+    tmp(10336)(limit);
   } else {
     let obj = { title: null, body: null };
     const intl = getSystemLocale.intl;
@@ -162,8 +162,8 @@ function showLimitReachedAlert(limit) {
     obj = { count: null };
     obj[0] = limit;
     obj[1] = intl2.formatToPlainString(getSystemLocale.t.JaIyFi, obj);
-    tmp(4857).show(obj);
-    const tmpResult = tmp(4857);
+    tmp(4858).show(obj);
+    const tmpResult = tmp(4858);
   }
 }
 function onSaveFailed(status) {
@@ -437,7 +437,7 @@ function _addFavoriteChannelsToParent() {
                         flag = true;
                         let tmp47 = callback;
                         let tmp48 = dependencyMap;
-                        let obj3 = callback(10336);
+                        let obj3 = callback(10340);
                         let tmp50 = channel;
                         let type;
                         let tmp49 = dependencyMap;
@@ -469,7 +469,7 @@ function _addFavoriteChannelsToParent() {
                         favoriteChannels.guildVisible = BoolValue.create({ value: true });
                         let tmp63 = callback;
                         let tmp64 = dependencyMap;
-                        let obj4 = callback(10336);
+                        let obj4 = callback(10340);
                         let str = "auto";
                         let result1 = obj4.trackFavoritesGuildVisibilitySettingToggled("auto", true);
                       }

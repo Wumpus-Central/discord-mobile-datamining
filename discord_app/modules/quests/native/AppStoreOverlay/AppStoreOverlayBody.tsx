@@ -199,13 +199,13 @@ export const AppStoreOverlayFooter = function AppStoreOverlayFooter(arg0) {
     start: VerticalGradient.START,
     end: VerticalGradient.END,
   };
-  const items2 = [callback(token(4940), obj)];
+  const items2 = [callback(token(4941), obj)];
   obj1 = { style: memo1, children: null };
   const obj2 = { size: "lg", text: null, onPress: null };
   const intl = bottom(1233).intl;
   obj2[1] = intl.string(bottom(1233).t.lwQdjB);
   obj2[2] = onInstallPress;
-  obj1[1] = callback(bottom(4928).Button, obj2);
+  obj1[1] = callback(bottom(4929).Button, obj2);
   items2[1] = callback(View, obj1);
   obj[2] = items2;
   return callback2(View, obj);

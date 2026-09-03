@@ -14,7 +14,7 @@ const memoResult = importAllResult.memo((children) => {
         closure_1_1(closure_1_2[4]).setCardHeight(itemId, nativeEvent.nativeEvent.layout.height);
       }, items)}
       pointerEvents="box-none"
-      style={{ width: importAllResult.useContext(itemId(16272).ICYMIContext).width, alignSelf: "center" }}
+      style={{ width: importAllResult.useContext(itemId(16291).ICYMIContext).width, alignSelf: "center" }}
     >
       {arg0.children}
     </View>

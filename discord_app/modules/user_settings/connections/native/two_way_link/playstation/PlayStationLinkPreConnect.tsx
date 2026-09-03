@@ -36,7 +36,7 @@ export const PlayStationLinkPreConnect = function PlayStationLinkPreConnect(plat
   obj[5] = intl.string(navigation(1233).t["6n+UPR"]);
   const intl2 = navigation(1233).intl;
   obj[6] = intl2.string(navigation(1233).t.JaaqIf);
-  return jsx(navigation(9323).TwoWayLinkPreConnect, {
+  return jsx(navigation(9327).TwoWayLinkPreConnect, {
     platformType: platformType.platformType,
     onError: callback1,
     onNext: callback,

@@ -80,7 +80,7 @@ function getChannel(id, arr) {
     obj[3] = tmpResult.computeChannelName(channel, closure_8, closure_7);
     obj[4] = channel.isPrivate();
     obj[5] = channel.isForumPost();
-    tmpResult = tmp(4961);
+    tmpResult = tmp(4962);
     obj[6] = tmpResult.isChannelTypeMentionable(channel.type);
     obj[7] = tmp(4675).canViewChannel(channel);
     obj[8] = isSubscriptionGated;

@@ -61,13 +61,13 @@ export default function ForYouSuggestedFriendRow(suggestedFriend) {
   let analyticsLocations;
   let sharedValue;
   let stateFromStores;
-  let obj = suggestedFriend(10224);
+  let obj = suggestedFriend(10228);
   const messagesTabLayout = obj.useMessagesTabLayout(panelVariant);
   const tmp4 = callback2(messagesTabLayout);
   analyticsLocations = contextDefault().analyticsLocations;
-  obj1 = suggestedFriend(10224);
+  obj1 = suggestedFriend(10228);
   const layoutStyles = obj1.getLayoutStyles(messagesTabLayout);
-  let obj2 = suggestedFriend(4935);
+  let obj2 = suggestedFriend(4936);
   const fontScale = obj2.useFontScale();
   let obj3 = suggestedFriend(644);
   const items = [stateFromStores];
@@ -78,7 +78,7 @@ export default function ForYouSuggestedFriendRow(suggestedFriend) {
     if (suggestedFriend.friendSuggestionName.length > 0) {
       let friendSuggestionName = suggestedFriend.friendSuggestionName;
     }
-    let tmpResult = tmp(15865);
+    let tmpResult = tmp(15881);
     const suggestedContactNameForSuggestion = tmpResult.getSuggestedContactNameForSuggestion(
       friendSuggestionName,
       suggestedFriend,
@@ -117,10 +117,10 @@ export default function ForYouSuggestedFriendRow(suggestedFriend) {
       obj1[0] = layoutStyles.container.borderRadius;
       items4[1] = obj1;
       obj[3] = items4;
-      const tmpResult2 = tmp(16259);
+      const tmpResult2 = tmp(16278);
       obj2 = { style: null, children: null };
       obj2[0] = tmp4.avatar;
-      obj3 = { user: null, guildId: "r", size: "getChannelIcon", animate: "landscape" };
+      obj3 = { user: null, guildId: "r", size: "PX_16", animate: null };
       obj3[0] = suggestedFriend.user;
       obj3[2] = layoutStyles.icon.avatarSize;
       obj3[3] = !stateFromStoresObject;
@@ -134,7 +134,7 @@ export default function ForYouSuggestedFriendRow(suggestedFriend) {
       obj5[4] = friendSuggestionName;
       const items6 = [callback(tmp(4474).Text, obj5)];
       const tmp20 = closure_11;
-      const tmpResult3 = tmp(16260);
+      const tmpResult3 = tmp(16279);
       let num3 = 0;
       if (tmpResult4.isAndroid()) {
         num3 = -2;
@@ -165,7 +165,7 @@ export default function ForYouSuggestedFriendRow(suggestedFriend) {
       const intl2 = tmp(1233).intl;
       obj8[5] = intl2.string(tmp(1233).t.Kzyxm9);
       obj8[6] = !stateFromStoresObject;
-      obj6[1] = callback(tmp(16261).ActionStatusSubLabel, obj8);
+      obj6[1] = callback(tmp(16280).ActionStatusSubLabel, obj8);
       items6[1] = callback(sharedValue, obj6);
       obj4[1] = items6;
       items5[1] = closure_10(sharedValue, obj4);
@@ -196,7 +196,7 @@ export default function ForYouSuggestedFriendRow(suggestedFriend) {
         callback2(suggestedFriend);
       };
       obj9[5] = !stateFromStoresObject;
-      items5[2] = callback(tmp(16262).ContactSuggestionActions, obj9);
+      items5[2] = callback(tmp(16281).ContactSuggestionActions, obj9);
       obj10[0] = items5;
       const obj11 = { layout: null, fontScale: null, panelVariant: null };
       obj11[0] = messagesTabLayout;
@@ -206,7 +206,7 @@ export default function ForYouSuggestedFriendRow(suggestedFriend) {
       const obj12 = { layout: null, panelVariant: null };
       obj12[0] = messagesTabLayout;
       obj12[1] = panelVariant;
-      return tmpResult2.renderChannelPressableWrapper(callback(tmp(5076).PressableHighlight, obj), obj12);
+      return tmpResult2.renderChannelPressableWrapper(callback(tmp(5077).PressableHighlight, obj), obj12);
     }
     let tmp5Result = tmp5(4322);
     formatToPlainStringResult = tmp5Result.getName(suggestedFriend.user);

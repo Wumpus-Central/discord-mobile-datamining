@@ -19,7 +19,7 @@ function getSampleOfVoterUsernamesForAnswer(message, id) {
     message.id,
     { id, name: "", animated: false },
     closure_9,
-    channel(7517).ReactionTypes.VOTE,
+    channel(7518).ReactionTypes.VOTE,
   );
   channel = channel.getChannel(channelId);
   let guildId = null;

@@ -95,11 +95,11 @@ prototype["findSummary"] = function findSummary(channelId, summaryId) {
   }
   return found;
 };
-prototype["selectedSummary"] = function selectedSummary(id) {
+prototype["selectedSummary"] = function selectedSummary(channel_id) {
   let findSummaryResult = null;
   if (null != closure_6) {
     findSummaryResult = null;
-    if (closure_6.channelId === id) {
+    if (closure_6.channelId === channel_id) {
       findSummaryResult = null;
       if (null != closure_6.summaryId) {
         let summaryId;
@@ -107,7 +107,7 @@ prototype["selectedSummary"] = function selectedSummary(id) {
         if (closure_6 != null) {
           summaryId = closure_6.summaryId;
         }
-        findSummaryResult = this.findSummary(id, summaryId);
+        findSummaryResult = this.findSummary(channel_id, summaryId);
       }
     }
   }
@@ -269,7 +269,7 @@ obj = {
     if (null != summary) {
       const _Object = Object;
       if (Object.keys(summary).length > 0) {
-        obj = summaryFromServer(11205);
+        obj = summaryFromServer(11209);
         summaryFromServer = obj.createSummaryFromServer(summary, channelId);
         let items = dependencyMap2[channelId];
         if (items == null) {

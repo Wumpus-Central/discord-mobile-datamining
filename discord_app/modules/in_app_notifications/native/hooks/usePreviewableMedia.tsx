@@ -2,8 +2,8 @@
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import map from "../../../../design/tokens/native/useToken.tsx";
 import urlMatchesFileExtension from "../../../messages/MediaFormatTesters.tsx";
-import inlineStyles from "../../../../../_runtime/08250_inlineStyles.js";
-import inlineStylesDefault from "../../../../../_runtime/08250_inlineStyles.js";
+import inlineStyles from "../../../../../_runtime/08254_inlineStyles.js";
+import inlineStylesDefault from "../../../../../_runtime/08254_inlineStyles.js";
 import CirclePlayIcon from "../../../../design/components/Icon/native/redesign/generated/CirclePlayIcon.tsx";
 import WaveformIcon from "../../../../design/components/Icon/native/redesign/generated/WaveformIcon.tsx";
 import closure_3 from "../../../../../_runtime/00019_noop.js";
@@ -111,7 +111,7 @@ function getBasePreviewableMedia(arg0) {
               obj2[1] = tmp13.AUDIO;
               obj2[2] = tmp6;
               let tmp17 = callback;
-              obj2[3] = callback(tmp8(10235).CirclePlayIcon, {
+              obj2[3] = callback(tmp8(10239).CirclePlayIcon, {
                 size: "lg",
                 color: "background-brand",
                 secondaryColor: "white",
@@ -131,7 +131,7 @@ function getBasePreviewableMedia(arg0) {
               let obj3 = { size: "lg", color: null };
               let tmp15 = importDefault;
               obj3[1] = ThemesDefault.colors.ICON_SUBTLE;
-              obj2[3] = callback(tmp8(10240).FileIcon, obj3);
+              obj2[3] = callback(tmp8(10244).FileIcon, obj3);
               let str4 = null;
               if (isForward) {
                 str4 = "forward";

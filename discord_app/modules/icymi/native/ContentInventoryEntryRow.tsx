@@ -22,9 +22,9 @@ export default function ContentInventoryEntryRow(content) {
     return null;
   } else {
     const content_type = content.content_type;
-    if (tmp(8048).ContentInventoryEntryType.TOP_GAME !== content_type) {
-      if (tmp(8048).ContentInventoryEntryType.PLAYED_GAME !== content_type) {
-        if (tmp(8048).ContentInventoryEntryType.CUSTOM_STATUS === content_type) {
+    if (tmp(8051).ContentInventoryEntryType.TOP_GAME !== content_type) {
+      if (tmp(8051).ContentInventoryEntryType.PLAYED_GAME !== content_type) {
+        if (tmp(8051).ContentInventoryEntryType.CUSTOM_STATUS === content_type) {
           obj = { content: null, renderForScreenshot: null, visible: null };
           obj[0] = content;
           obj[1] = flag;

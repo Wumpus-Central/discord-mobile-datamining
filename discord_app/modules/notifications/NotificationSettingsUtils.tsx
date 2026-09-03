@@ -67,6 +67,12 @@ export const getAssignedNotifSettingsAndMappings = function getAssignedNotifSett
   }
   return { settings, mappings };
 };
+export function useIsDeclarativeSettingsUIAvailable() {
+  return false;
+}
+export function useNotifCategoryVisibility() {
+  return false;
+}
 export const useNotifSettingVisibility = function useNotifSettingVisibility(GAMING_DEFAULT) {
   const _require = GAMING_DEFAULT;
   const items = [GAMING_DEFAULT];

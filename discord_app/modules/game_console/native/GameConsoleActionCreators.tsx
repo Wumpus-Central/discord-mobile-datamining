@@ -16,10 +16,10 @@ function _transferToPlaystationWithAlert() {
       closure_3 = tmp5;
       const lib = lib2;
       c6 = 1;
-      yield lib(9900).transferToPlayStation(lib, lib2.id, dependencyMap);
+      yield lib(9904).transferToPlayStation(lib, lib2.id, dependencyMap);
       if (1 === tmp8) {
         c6 = 0;
-        obj1 = lib2(4857);
+        obj1 = lib2(4858);
         const obj2 = { title: null, body: null };
         const intl = lib(1233).intl;
         obj2[0] = intl.string(lib(1233).t.QL1y93);

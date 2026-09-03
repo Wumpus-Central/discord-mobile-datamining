@@ -82,6 +82,8 @@ const items2 = [
   DismissibleContent.DismissibleContent.MONTHLY_TO_YEARLY_UPSELL_STICKY_BAR,
   DismissibleContent.DismissibleContent.MONTHLY_TO_YEARLY_UPSELL_NITRO_TAB_POPOVER,
   DismissibleContent.DismissibleContent.PREMIUM_SHOP_NAGBAR_NOTICE,
+  DismissibleContent.DismissibleContent.GUILD_HEADER_COACHMARK,
+  DismissibleContent.DismissibleContent.GUILD_BOOST_TAB_BANNER,
 ];
 const items3 = [
   DismissibleContent.DismissibleContent.GAME_SHOP_NEW_BADGE,

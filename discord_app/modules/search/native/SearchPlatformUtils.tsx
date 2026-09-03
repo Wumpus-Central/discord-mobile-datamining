@@ -4,9 +4,9 @@ import isDiscordProxiedAssetUrlDefault from "../../../utils/URLUtils.tsx";
 import LinkIcon from "../../../design/components/Icon/native/redesign/generated/LinkIcon.tsx";
 import ClydeIcon from "../../../design/components/Icon/native/redesign/generated/ClydeIcon.tsx";
 import SearchTokenTypes from "../SearchUtils.tsx";
-import _modDef12137 from "../SearchActionCreators.tsx";
-import _modDef12150 from "tracking/Tracking.tsx";
-import _modDef12153 from "SearchPlatformActionCreators.tsx";
+import _modDef12143 from "../SearchActionCreators.tsx";
+import _modDef12156 from "tracking/Tracking.tsx";
+import _modDef12159 from "SearchPlatformActionCreators.tsx";
 import closure_3 from "../SearchMessageStore.tsx";
 import closure_4 from "stores/SearchQueryStore.tsx";
 import MessageEmbedTypes from "../SearchConstants.tsx";
@@ -147,7 +147,7 @@ function onInitialFetchMessagesSuccess(tabEntries) {
       return tmp2;
     })
   ) {
-    let obj = _modDef12150;
+    let obj = _modDef12156;
     obj = { searchContext: null };
     obj[0] = tabEntries.searchContext;
     const result = obj.trackSearchEmptyMessageResult(obj);
@@ -155,7 +155,7 @@ function onInitialFetchMessagesSuccess(tabEntries) {
 }
 function onFetchMessagesStart(searchQueryString) {
   searchQueryString = searchQueryString.searchQueryString;
-  _modDef12153.updateSearchQuery(searchQueryString.searchContext, (setSearchResultsQuery) =>
+  _modDef12159.updateSearchQuery(searchQueryString.searchContext, (setSearchResultsQuery) =>
     setSearchResultsQuery.setSearchResultsQuery(searchQueryString),
   );
 }
@@ -175,12 +175,12 @@ function fetchInitialMessages(closure_0) {
     const searchTabFetchId = obj.getSearchTabFetchId(closure_0, tmp3[0], queryString);
     obj1 = store;
     if (!store.getIsFetching(searchTabFetchId)) {
-      const result = queryString(12137).clearAllSearchMesssages();
-      const obj3 = queryString(12137);
+      const result = queryString(12143).clearAllSearchMesssages();
+      const obj3 = queryString(12143);
       obj = { searchContext: null };
       obj[0] = closure_0;
-      queryString(12150).trackSearchStarted(obj);
-      const obj4 = queryString(12150);
+      queryString(12156).trackSearchStarted(obj);
+      const obj4 = queryString(12156);
       obj = {
         searchContext: null,
         searchTabs: null,
@@ -209,7 +209,7 @@ function fetchInitialMessages(closure_0) {
       obj1 = { cursor: null };
       obj1[0] = cursor;
       obj[7] = obj1;
-      const obj6 = queryString(12137);
+      const obj6 = queryString(12143);
       obj[8] = require("../../user_settings/UserSettings.tsx").SearchResultExactCountEnabled.getSetting();
       obj[9] = constants2.NEWEST;
       const tabMessages = obj6.fetchTabMessages(obj);
@@ -229,7 +229,7 @@ function syncAutocomplete(closure_0) {
   );
   const obj2 = SearchTokenTypes;
   obj = { searchContext: closure_0, tokens: tokenizeQueryResult, cursorScope: selectionScope, queryString };
-  const result = _modDef12137.updateAutocompleteQuery(obj);
+  const result = _modDef12143.updateAutocompleteQuery(obj);
 }
 ({
   CHANNEL_SEARCH_INITIAL_MESSAGE_TABS: c5,
@@ -298,7 +298,7 @@ let obj = {
         obj = { cursor: null };
         obj[0] = cursor;
         obj[7] = obj;
-        const obj4 = queryString(12137);
+        const obj4 = queryString(12143);
         obj[8] = tmp2(4166).SearchResultExactCountEnabled.getSetting();
         obj[9] = constants2.NEWEST;
         tabMessages = obj4.fetchTabMessages(obj);
@@ -330,9 +330,9 @@ let obj = {
 };
 obj[11] = importDefaultResult.debounce(syncAutocomplete, SEARCH_TEXT_INPUT_DEBOUNCE_TIME);
 obj[12] = function navigateToSearchWithPrefetch(closure_8, closure_9) {
-  let obj = _modDef12137;
+  let obj = _modDef12143;
   const result = obj.initializeAutocomplete(closure_9);
-  const result1 = _modDef12153.initializeSearchQuery(closure_9);
+  const result1 = _modDef12159.initializeSearchQuery(closure_9);
   fetchInitialMessages(closure_9);
   obj = { searchContext: closure_9 };
   closure_8.navigate("search", obj);
@@ -343,10 +343,10 @@ obj[13] = function subscribeSearchQueryState(searchContext, arg1, arg2, arg3) {
   closure_2 = arg2;
   let tmp = arg3;
   function callback() {
-    const tmp = f91893(callback.getManager(closure_0));
+    const tmp = f92064(callback.getManager(closure_0));
     if (null == closure_3) {
       closure_3 = tmp;
-      f91894(tmp, closure_3);
+      f92065(tmp, closure_3);
     }
   }
   const tmp2 = arg1(callback.getManager(searchContext));
@@ -363,11 +363,11 @@ obj[13] = function subscribeSearchQueryState(searchContext, arg1, arg2, arg3) {
 obj[14] = function subscribeTextInputValue(closure_0, debounceResult, arg2) {
   closure_0 = debounceResult;
   let flag = arg2;
-  const f91893 = (getTextInputValue) => ({
+  const f92064 = (getTextInputValue) => ({
     textInputValue: getTextInputValue.getTextInputValue(),
     textInputChangedFromInput: getTextInputValue.getTextValueChangedFromInput(),
   });
-  const f91894 = (textInputValue, textInputValue2) => {
+  const f92065 = (textInputValue, textInputValue2) => {
     textInputValue = undefined;
     if (textInputValue2 != null) {
       textInputValue = textInputValue2.textInputValue;
@@ -375,10 +375,10 @@ obj[14] = function subscribeTextInputValue(closure_0, debounceResult, arg2) {
     closure_0(textInputValue.textInputValue, textInputValue, textInputValue.textInputChangedFromInput);
   };
   function callback() {
-    const tmp = f91893(callback.getManager(closure_0));
+    const tmp = f92064(callback.getManager(closure_0));
     if (null == closure_3) {
       closure_3 = tmp;
-      f91894(tmp, closure_3);
+      f92065(tmp, closure_3);
     }
   }
   let obj = callback;
@@ -401,7 +401,7 @@ let result = require("set").fileFinishedImporting("modules/search/native/SearchP
 
 export default obj;
 export const getMedia = function getMedia(items, items1) {
-  guildIdFromSearchContext = guildIdFromSearchContext(12130).getGuildIdFromSearchContext(items);
+  guildIdFromSearchContext = guildIdFromSearchContext(12136).getGuildIdFromSearchContext(items);
   items = [];
   let item = items1.forEach((getContentMessage) => {
     closure_0 = getContentMessage;

@@ -3,7 +3,7 @@ import failsDefault from "../../../../discord_common/js/packages/backoff/Backoff
 import initializeDefault from "../../../../discord_common/js/packages/flux/index.tsx";
 import dispatcherDefault from "../../../Dispatcher.tsx";
 import snowflakeSequence from "../../messages/createNonce.tsx";
-import _modDef16407 from "../lib/VibegrationsPlatformUtils.native.tsx";
+import _modDef16426 from "../lib/VibegrationsPlatformUtils.native.tsx";
 import vibegrationLocation from "../lib/VibegrationsAnalytics.tsx";
 import map10 from "../lib/vibegrationsPreviewClaims.tsx";
 import open2 from "../lib/VibegrationsWebSocket.tsx";
@@ -159,9 +159,9 @@ function _relayCaptureRequest() {
       const _Date = Date;
       const timestamp = Date.now();
       c6 = 1;
-      obj1 = { probe: null, spec: null, onAccepted: null };
-      ({ probe: obj6[0], spec: obj6[1] } = user);
-      obj1[2] = function() {
+      obj1 = { probe: null, spec: null, build: null, onAccepted: null };
+      ({ probe: obj6[0], spec: obj6[1], build: obj6[2] } = user);
+      obj1[3] = function() {
         const self = this;
         const apply = c4.apply;
         if (typeof apply === "unknown") {
@@ -934,10 +934,10 @@ function handleEvent(projectId, pendingEvents, type) {
       if ("capture_claim" !== type.type) {
         if ("preview_operation" === type.type) {
           if ("begin" === type.phase) {
-            obj17 = attachment_id(16407);
+            obj17 = attachment_id(16426);
             const result3 = obj17.beginPreviewOperation(projectId);
           } else {
-            obj16 = attachment_id(16407);
+            obj16 = attachment_id(16426);
             obj16.endPreviewOperation(projectId);
           }
         } else if ("model_settings" === type.type) {
@@ -1067,9 +1067,9 @@ function handleEvent(projectId, pendingEvents, type) {
                     value.add(combined);
                     ({ location: obj3[0], code: obj3[1] } = tmp2);
                     ({ message: obj3[2], source: obj3[3] } = historical);
-                    const result1 = pendingEvents(16409).trackVibegrationErrored(project_id, { location: null, code: null, message: null, details: null });
+                    const result1 = pendingEvents(16428).trackVibegrationErrored(project_id, { location: null, code: null, message: null, details: null });
                     obj = { location: null, code: null, message: null, details: null };
-                    const obj2 = pendingEvents(16409);
+                    const obj2 = pendingEvents(16428);
                   }
                   obj4 = closure_28;
                   const str = historical.message;
@@ -1314,8 +1314,8 @@ function teardown(closure_0) {
     ws.close();
     obj.delete(closure_0);
     map7.delete(closure_0);
-    const result = _modDef16407.releasePreviewControl(closure_0);
-    const obj2 = _modDef16407;
+    const result = _modDef16426.releasePreviewControl(closure_0);
+    const obj2 = _modDef16426;
     const result1 = map10.clearVibegrationsPreviewClaims(closure_0);
     const obj3 = map10;
     obj = { type: "VIBEGRATIONS_CHAT_CONN_STATE", projectId: null, connState: "closed" };

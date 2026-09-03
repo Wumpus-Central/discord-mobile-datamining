@@ -185,13 +185,13 @@ function _validateSocketApplication() {
               callback2 = closure_1_4.getApplication(callback);
               if (typeof dependencyMap === "string") {
                 if (tmp67.transport === closure_1_16.POST_MESSAGE) {
-                  const tmp21 = callback(9480)(tmp68);
+                  const tmp21 = callback(9484)(tmp68);
                   if (null != tmp21) {
                     const items = [tmp21];
                   }
                   obj1 = { closeCode: null };
                   obj1[0] = closure_1_21.INVALID_ORIGIN;
-                  const tmp52 = new callback(9516)(obj1, "Invalid Origin");
+                  const tmp52 = new callback(9520)(obj1, "Invalid Origin");
                   throw tmp52;
                 } else {
                   name = 1;
@@ -245,7 +245,7 @@ function _validateSocketApplication() {
               if (!callback3(dependencyMap, rpc_origins.rpc_origins)) {
                 const obj6 = { closeCode: null };
                 obj6[0] = constants.INVALID_ORIGIN;
-                const tmp16 = new callback(9516)(obj6, "Invalid Origin");
+                const tmp16 = new callback(9520)(obj6, "Invalid Origin");
                 throw tmp16;
               }
             }
@@ -318,7 +318,7 @@ function _processSocketThrottlers() {
                 if (tmp36) {
                   num5 = 2;
                 }
-                const tmp24 = new callback(9523)(num5, closure_1_25);
+                const tmp24 = new callback(9527)(num5, closure_1_25);
                 tmp38[tmp35] = tmp24;
                 obj2 = tmp24;
               }
@@ -333,7 +333,7 @@ function _processSocketThrottlers() {
             c6 = 0;
             obj2 = { closeCode: null };
             obj2[0] = constants.CLOSE_ABNORMAL;
-            const tmp16 = new callback(9516)(obj2, "Socket closed during throttle");
+            const tmp16 = new callback(9520)(obj2, "Socket closed during throttle");
             throw tmp16;
           } else if (arg0 === 1) {
             c7 = 3;

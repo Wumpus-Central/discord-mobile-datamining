@@ -17,7 +17,7 @@ function openGuildEventDetails(arg0) {
     const tmp2Result = getRRule;
   }
   obj[3] = recurrenceId;
-  obj.openLazy(asyncRequireImpl(9782, dependencyMap.paths), closure_5, obj, "stack");
+  obj.openLazy(asyncRequireImpl(9786, dependencyMap.paths), closure_5, obj, "stack");
 }
 function _transitionToEventDetailsFromInvite() {
   const self = this;
@@ -116,5 +116,5 @@ export const transitionToEventDetailsFromInvite = function transitionToEventDeta
 export const openEndEventModal = function openEndEventModal(channel) {
   let obj = ACTION_SHEET_HEIGHT_HALFDefault;
   obj = { channel };
-  obj.openLazy(asyncRequireImpl(9795, dependencyMap.paths), closure_4, obj);
+  obj.openLazy(asyncRequireImpl(9799, dependencyMap.paths), closure_4, obj);
 };

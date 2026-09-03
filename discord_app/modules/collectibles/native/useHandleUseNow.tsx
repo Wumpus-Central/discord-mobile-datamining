@@ -34,7 +34,7 @@ export const useHandleUseNow = function useHandleUseNow(onSuccess) {
     obj[1] = intl.string(onSuccess(1233).t.CKsXk3);
     obj.open(obj);
   }, []);
-  let obj = onSuccess(11052);
+  let obj = onSuccess(11056);
   handleUseNow = obj.useHandleUseNow({ product, onSuccess: callback, onError: callback1 });
   ({ handleUseNow, isApplying, canUseNow } = handleUseNow);
   const tmp4 = useOpenProfileSettingsDefault({ analyticsLocations });

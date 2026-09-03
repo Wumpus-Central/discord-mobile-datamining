@@ -1,6 +1,6 @@
 // discord_app/modules/main_tabs_v2/native/friends/components/AddFriendsScreenUtils.tsx
 import handleRelationshipAddErrorDefault from "../../../../../actions/RelationshipActionCreators.tsx";
-import _modDef9089 from "../../../../people/PeopleUtils.tsx";
+import _modDef9093 from "../../../../people/PeopleUtils.tsx";
 import closure_3 from "../../../../../../_runtime/00005_asyncGeneratorStep.js";
 import closure_4 from "../../../../../stores/ChannelStore.tsx";
 import { AnalyticsSections } from "../../../../../Constants.tsx";
@@ -77,12 +77,12 @@ function _sendWave() {
                 } else {
                   constants = 2;
                   if (null != dMFromUserId2) {
-                    let obj7 = callback(12055);
+                    let obj7 = callback(12061);
                     const obj3 = { channelId: null, source: null };
                     obj3[0] = dMFromUserId2;
                     obj3[1] = dependencyMap;
                     obj7.trackWaveCtaClicked(obj3);
-                    let obj9 = flag(7210);
+                    let obj9 = flag(7211);
                     let obj4 = { location: null };
                     obj4[0] = constants.SEND_WAVE;
                     c7 = 5;
@@ -175,13 +175,13 @@ let result = require("set").fileFinishedImporting(
 
 export const dismissIncomingRequest = function dismissIncomingRequest(arg0) {
   ({ userId, applicationId } = arg0);
-  let obj = _modDef9089;
+  let obj = _modDef9093;
   obj = { userId, applicationId, location: AnalyticsSections.FRIENDS_ADD_FRIENDS_MODAL };
   obj.cancelFriendRequest(obj);
 };
 export const acceptIncomingRequest = function acceptIncomingRequest(arg0) {
   ({ userId, applicationId } = arg0);
-  let obj = _modDef9089;
+  let obj = _modDef9093;
   obj = { userId, applicationId, location: AnalyticsSections.FRIENDS_ADD_FRIENDS_MODAL };
   const result = obj.maybeConfirmFriendRequestAccept(obj);
 };

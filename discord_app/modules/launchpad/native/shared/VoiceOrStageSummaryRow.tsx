@@ -1,6 +1,6 @@
 // discord_app/modules/launchpad/native/shared/VoiceOrStageSummaryRow.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import registerAssetDefault from "../../../../../_runtime/16474_registerAsset.js";
+import registerAssetDefault from "../../../../../_runtime/16495_registerAsset.js";
 import getLayoutStyleDefault from "getLayoutStyles.tsx";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";

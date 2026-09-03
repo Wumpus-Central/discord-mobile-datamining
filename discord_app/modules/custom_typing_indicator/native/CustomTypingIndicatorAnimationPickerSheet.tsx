@@ -82,7 +82,7 @@ export default function CustomTypingIndicatorAnimationPickerSheet(onChange) {
   const obj4 = { config: null, size: 54 };
   const obj5 = { emojis, animation: first, typingSuggestion: onChange(1929).TypingSuggestion.UNSPECIFIED };
   obj4[0] = obj5;
-  obj3[1] = callback2(first(11776), obj4);
+  obj3[1] = callback2(first(11782), obj4);
   const items1 = [callback2(View, obj3)];
   const obj6 = { spacing: 8, children: null };
   const items2 = [items.slice(0, 2), items.slice(2, 4)];
@@ -112,7 +112,7 @@ export default function CustomTypingIndicatorAnimationPickerSheet(onChange) {
       arg1,
     ),
   );
-  items1[1] = callback2(onChange(4926).Stack, obj6);
+  items1[1] = callback2(onChange(4927).Stack, obj6);
   obj2[2] = items1;
-  return callback3(onChange(5997).ActionSheet, obj2);
+  return callback3(onChange(5998).ActionSheet, obj2);
 }

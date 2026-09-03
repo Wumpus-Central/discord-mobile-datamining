@@ -19,6 +19,7 @@ import trackInviteDefault from "../../../actions/MessageActionCreators.tsx";
 import checkReactionResponse from "../../reactions/ReactionActionCreators.tsx";
 import patchThreadDefault from "../../threads/ThreadActionCreators.tsx";
 import trackForumChannelSeenBatch from "../../forums/tracking/Tracking.tsx";
+import map2 from "../MediaPlaybackFacts.tsx";
 import computeScrollData from "../../chat/native/computeScrollData.tsx";
 import ChatScrollPositionDefault from "../../chat/native/NativeChatUtils.tsx";
 import _manuallyStartConsoleQuest from "../../quests/QuestActionCreators.tsx";
@@ -147,7 +148,7 @@ function _handleTapNavBar() {
                 if (!isNearTop) {
                   obj1 = closure_1_1(table[36]);
                   if (null == closure_1_23(messages, obj1.castChannelIdAsMessageId(channel.id))) {
-                    let tmp10Result = tmp10(tmp11[45]);
+                    let tmp10Result = tmp10(tmp11[46]);
                     obj1 = { channelId: null, jump: null, limit: null };
                     obj1[0] = channel.id;
                     const obj2 = { messageId: null, flash: false };
@@ -168,10 +169,10 @@ function _handleTapNavBar() {
                     } else {
                       const obj4 = { animated: null };
                       obj4[0] = !useReducedMotion;
-                      tmp10(tmp11[44]).scrollTo(chatRef.current, findMessageIndexResult, obj4);
+                      tmp10(tmp11[45]).scrollTo(chatRef.current, findMessageIndexResult, obj4);
                       const _setTimeout2 = setTimeout;
                       const timerId = setTimeout(() => _undefined(!useReducedMotion), 10 * findMessageIndexResult);
-                      const tmp10Result1 = tmp10(tmp11[44]);
+                      const tmp10Result1 = tmp10(tmp11[45]);
                     }
                   }
                 }
@@ -299,7 +300,7 @@ export const getLongPressSelectedMedia = function getLongPressSelectedMedia(
     } else {
       if (tmp8.type === constants4.IMAGE) {
         if (null != tmp8.url) {
-          obj = { sourceType: "embed", source: null, mediaType: "image", mediaUrl: null, contentType: "o" };
+          obj = { sourceType: "embed", source: null, mediaType: "image", mediaUrl: null, contentType: "r" };
           obj[1] = tmp8;
           obj[3] = tmp8.url;
           return obj;
@@ -456,7 +457,7 @@ export const handleAddOrRemoveReaction = function handleAddOrRemoveReaction(
     }
     obj = { key: "ARCHIVED_POST_REACTIONS_DISABLED_TOAST", content: null, icon: null };
     obj[1] = stringResult;
-    tmp36Result = tmp36(11111);
+    tmp36Result = tmp36(11115);
     obj[2] = tmp36Result;
     t = obj15.open(obj);
     isForumPostResult = channel.isForumPost();
@@ -465,12 +466,12 @@ export const handleAddOrRemoveReaction = function handleAddOrRemoveReaction(
       if (true === !reaction.me_burst) {
         let tmp12Result = tmp12(1945);
         if (!tmp12Result.isPremium(currentUser)) {
-          tmp12Result = tmp12(11112);
+          tmp12Result = tmp12(11116);
           return tmp12Result.handleOutOfSuperReactions();
         }
       }
     }
-    const ReactionTypes = tmp12(7517).ReactionTypes;
+    const ReactionTypes = tmp12(7518).ReactionTypes;
     if (tmp12Result1.isMeReaction(reaction.me, reaction.me_burst, tmp23)) {
       const result2 = tmp12(4446).triggerHapticFeedback(IMPACT_LIGHTDefault.IMPACT_LIGHT);
       const tmp12Result2 = tmp12(4446);
@@ -482,12 +483,12 @@ export const handleAddOrRemoveReaction = function handleAddOrRemoveReaction(
       obj1 = { burst: null };
       obj1[0] = flag;
       obj[4] = obj1;
-      tmp12(7518).removeReaction(obj);
+      tmp12(7519).removeReaction(obj);
     } else {
       if (!result) {
         if (channel.isPrivate()) {
           if (!result1) {
-            const tmp12Result4 = tmp12(7518);
+            const tmp12Result4 = tmp12(7519);
             const obj2 = { burst: null };
             obj2[0] = flag;
             tmp12Result4.addReaction(channel.id, messageId, reaction.emoji, MESSAGE, obj2);
@@ -501,14 +502,14 @@ export const handleAddOrRemoveReaction = function handleAddOrRemoveReaction(
       if (result) {
         const guildId1 = channel.getGuildId();
         if (null != guildId1) {
-          return tmp12(7655).openMemberVerificationModal(guildId1);
+          return tmp12(7658).openMemberVerificationModal(guildId1);
         }
       }
     }
     tmp12Result1 = tmp12(4132);
     tmp23 = flag ? ReactionTypes.BURST : ReactionTypes.NORMAL;
   } else {
-    const tmp12Result7 = tmp12(11112);
+    const tmp12Result7 = tmp12(11116);
     const obj3 = { burst: null };
     obj3[0] = flag;
     const result4 = tmp12Result7.handleAddNewReactions(channel, messageId, MESSAGE, obj3);
@@ -540,7 +541,7 @@ export const handleCopyLinkForumPost = function handleCopyLinkForumPost(guildId,
   let obj = { postId: id, location };
   const result = trackForumChannelSeenBatch.trackForumPostLinkCopied(obj);
   if (flag) {
-    let tmp4Result = tmp4(4700);
+    let tmp4Result = tmp4(4701);
     obj = { media_post_id: null };
     obj[0] = id;
     tmp4Result.trackWithMetadata(constants3.MEDIA_POST_SHARE_PROMPT_CLICKED, obj);
@@ -548,7 +549,7 @@ export const handleCopyLinkForumPost = function handleCopyLinkForumPost(guildId,
   tmp4Result = tmp4(4446);
   const result1 = tmp4Result.triggerHapticFeedback(IMPACT_LIGHTDefault.IMPACT_LIGHT);
   if (null == channel) {
-    const tmp4Result1 = tmp4(5989);
+    const tmp4Result1 = tmp4(5990);
     let result2;
     if (true === flag) {
       result2 = DISCORD_EPOCHDefault.castChannelIdAsMessageId(id);
@@ -557,7 +558,7 @@ export const handleCopyLinkForumPost = function handleCopyLinkForumPost(guildId,
     tmp4Result1.copy(tmp4(4666).getChannelPermalink(guildId, id, result2));
     const tmp4Result2 = tmp4(4666);
   } else {
-    const tmp4Result3 = tmp4(5989);
+    const tmp4Result3 = tmp4(5990);
     tmp4Result3.copy(tmp4(4666).getChannelLinkToCopy(channel, channel1));
     const tmp4Result4 = tmp4(4666);
   }
@@ -645,17 +646,19 @@ export const handleTapTableView = function handleTapTableView(current) {
     }
   }
 };
-export const handleMediaPlayFinishedAnalytics = function handleMediaPlayFinishedAnalytics(playWallTimeMs) {
-  let obj = expandEventPropertiesDefault;
+export const handleMediaPlayFinishedAnalytics = function handleMediaPlayFinishedAnalytics(mediaSource) {
+  let obj = map2;
+  const reportedMediaFacts = obj.resolveReportedMediaFacts(mediaSource.mediaSource, mediaSource.fileDurationSec);
+  ({ fileSize, fileDurationSec } = reportedMediaFacts);
   obj = {
-    play_time_sec: playWallTimeMs.playWallTimeMs / 1000,
-    play_wall_time_ms: playWallTimeMs.playWallTimeMs,
-    first_play_waiting_ms: Math.min(playWallTimeMs.firstPlayWaitingMs, 600000),
-    stall_count: playWallTimeMs.stallCount,
-    stall_ms: playWallTimeMs.stallMs,
-    seek_count: playWallTimeMs.seekCount,
+    play_time_sec: mediaSource.playWallTimeMs / 1000,
+    play_wall_time_ms: mediaSource.playWallTimeMs,
+    first_play_waiting_ms: Math.min(mediaSource.firstPlayWaitingMs, 600000),
+    stall_count: mediaSource.stallCount,
+    stall_ms: mediaSource.stallMs,
+    seek_count: mediaSource.seekCount,
     seek_waiting_ms: null,
-    media_source: playWallTimeMs.mediaSource,
+    media_source: mediaSource.mediaSource,
     mime_type: null,
     file_size: null,
     file_duration_sec: null,
@@ -666,30 +669,32 @@ export const handleMediaPlayFinishedAnalytics = function handleMediaPlayFinished
     service_provider: null,
   };
   let mimeType = null;
-  if (null != playWallTimeMs.mimeType) {
+  if (null != mediaSource.mimeType) {
     mimeType = null;
-    if ("" !== playWallTimeMs.mimeType) {
-      mimeType = playWallTimeMs.mimeType;
+    if ("" !== mediaSource.mimeType) {
+      mimeType = mediaSource.mimeType;
     }
   }
   obj[8] = mimeType;
-  ({ fileDurationSec: obj2[10], errorCode } = playWallTimeMs);
+  obj[9] = fileSize;
+  obj[10] = fileDurationSec;
+  let errorCode = mediaSource.errorCode;
   if (errorCode == null) {
     errorCode = null;
   }
   obj[11] = errorCode;
   let errorMessage = null;
-  if (null != playWallTimeMs.errorMessage) {
+  if (null != mediaSource.errorMessage) {
     errorMessage = null;
-    if ("" !== playWallTimeMs.errorMessage) {
-      errorMessage = playWallTimeMs.errorMessage;
+    if ("" !== mediaSource.errorMessage) {
+      errorMessage = mediaSource.errorMessage;
     }
   }
   obj[12] = errorMessage;
   obj[13] = store2.getType();
   obj[14] = store2.getEffectiveConnectionSpeed();
   obj[15] = store2.getServiceProvider();
-  obj.track(constants3.MEDIA_PLAY_FINISHED, obj);
+  expandEventPropertiesDefault.track(constants3.MEDIA_PLAY_FINISHED, obj);
 };
 export const scrollToBottom = function scrollToBottom(current) {
   let flag = arg3;
@@ -883,13 +888,13 @@ export const syncMessageDisplay = function syncMessageDisplay(messages) {
   if (messages.isMessagesReady) {
     let obj = { scrollToMessageId: null, jumpTargetId: null, jumpType: null, focusTargetId: null };
     ({ jumpTargetId: obj[0], jumpTargetId: obj[1] } = messages);
-    obj[2] = messages(scrollToMessageId[47]).JumpType.INSTANT;
+    obj[2] = messages(scrollToMessageId[48]).JumpType.INSTANT;
     obj[3] = messages.focusTargetId;
     updateRows(obj);
     if (null != messages.jumpTargetId) {
       obj = { scrollToMessageId: null, jumpTargetId: null, jumpType: null };
       ({ jumpTargetId: obj2[0], jumpTargetId: obj2[1] } = messages);
-      obj[2] = tmp2(tmp3[47]).JumpType.INSTANT;
+      obj[2] = tmp2(tmp3[48]).JumpType.INSTANT;
       scrollToMessageId(obj);
     } else if (null != oldestUnreadMessageId) {
       const _setTimeout = setTimeout;
@@ -898,7 +903,7 @@ export const syncMessageDisplay = function syncMessageDisplay(messages) {
           scrollToMessageId({
             scrollToMessageId: oldestUnreadMessageId,
             jumpTargetId: messages.jumpTargetId,
-            jumpType: messages(scrollToMessageId[47]).JumpType.INSTANT,
+            jumpType: messages(scrollToMessageId[48]).JumpType.INSTANT,
           }),
         50,
       );
@@ -952,15 +957,15 @@ export const maybeRescrollToMessageId = function maybeRescrollToMessageId(arg0, 
             obj[1] = tmp;
             obj[2] = INSTANT;
             obj[3] = tmp;
-            obj[4] = scrollToMessageId(findMessageIndex[47]).JumpType.INSTANT;
+            obj[4] = scrollToMessageId(findMessageIndex[48]).JumpType.INSTANT;
             updateRows(obj);
             flag = true;
           }
           if (!flag) {
             obj = { animated: null };
-            obj[0] = INSTANT === scrollToMessageId(findMessageIndex[47]).JumpType.ANIMATED;
-            chatRef(findMessageIndex[44]).scrollTo(tmp14.current, tmp2, obj);
-            const obj2 = chatRef(findMessageIndex[44]);
+            obj[0] = INSTANT === scrollToMessageId(findMessageIndex[48]).JumpType.ANIMATED;
+            chatRef(findMessageIndex[45]).scrollTo(tmp14.current, tmp2, obj);
+            const obj2 = chatRef(findMessageIndex[45]);
           }
         }
       }
@@ -977,11 +982,11 @@ export const scrollToMessageIdWithRescroll = function scrollToMessageIdWithRescr
   chatRef = tmp;
   let ANIMATED = scrollToMessageId.jumpType;
   if (undefined === ANIMATED) {
-    ANIMATED = scrollToMessageId(findMessageIndex[47]).JumpType.ANIMATED;
+    ANIMATED = scrollToMessageId(findMessageIndex[48]).JumpType.ANIMATED;
   }
   let TOP = scrollToMessageId.scrollPosition;
   if (undefined === TOP) {
-    TOP = scrollToMessageId(findMessageIndex[44]).ChatScrollPosition.TOP;
+    TOP = scrollToMessageId(findMessageIndex[45]).ChatScrollPosition.TOP;
   }
   const minimizeScrolling = scrollToMessageId.minimizeScrolling;
   const isRescrolling = scrollToMessageId.isRescrolling;
@@ -989,17 +994,17 @@ export const scrollToMessageIdWithRescroll = function scrollToMessageIdWithRescr
   findMessageIndex = chatRef;
   ({ findMessageIndex, updateRows } = scrollToMessageId);
   if (!useReducedMotion) {
-    useReducedMotion = ANIMATED === scrollToMessageId(findMessageIndex[47]).JumpType.INSTANT;
+    useReducedMotion = ANIMATED === scrollToMessageId(findMessageIndex[48]).JumpType.INSTANT;
   }
   updateRows = tmp10;
   let obj = scrollToMessageId(findMessageIndex[41]);
   if (obj.isIOS()) {
     if (!tmp7) {
-      const JumpType = tmp11(tmp12[47]).JumpType;
+      const JumpType = tmp11(tmp12[48]).JumpType;
       let INSTANT = useReducedMotion ? JumpType.INSTANT : JumpType.ANIMATED;
       c4 = true;
       if (undefined === INSTANT) {
-        INSTANT = tmp11(tmp12[47]).JumpType.INSTANT;
+        INSTANT = tmp11(tmp12[48]).JumpType.INSTANT;
       }
       if (null != scrollToMessageId) {
         const _setTimeout2 = setTimeout;
@@ -1021,15 +1026,15 @@ export const scrollToMessageIdWithRescroll = function scrollToMessageIdWithRescr
                 obj[1] = tmp;
                 obj[2] = INSTANT;
                 obj[3] = tmp;
-                obj[4] = scrollToMessageId(findMessageIndex[47]).JumpType.INSTANT;
+                obj[4] = scrollToMessageId(findMessageIndex[48]).JumpType.INSTANT;
                 updateRows(obj);
                 flag = true;
               }
               if (!flag) {
                 obj = { animated: null };
-                obj[0] = INSTANT === scrollToMessageId(findMessageIndex[47]).JumpType.ANIMATED;
-                chatRef(findMessageIndex[44]).scrollTo(tmp14.current, tmp2, obj);
-                const obj2 = chatRef(findMessageIndex[44]);
+                obj[0] = INSTANT === scrollToMessageId(findMessageIndex[48]).JumpType.ANIMATED;
+                chatRef(findMessageIndex[45]).scrollTo(tmp14.current, tmp2, obj);
+                const obj2 = chatRef(findMessageIndex[45]);
               }
             }
           }
@@ -1043,7 +1048,7 @@ export const scrollToMessageIdWithRescroll = function scrollToMessageIdWithRescr
     if (tmp6) {
       const _setTimeout = setTimeout;
       const timerId1 = setTimeout(() => {
-        let obj = chatRef(findMessageIndex[44]);
+        let obj = chatRef(findMessageIndex[45]);
         obj = { animated: updateRows, highlight: chatRef === scrollToMessageId };
         obj.scrollIntoView(findMessageIndex.current, c4, obj);
       }, 5);
@@ -1052,8 +1057,8 @@ export const scrollToMessageIdWithRescroll = function scrollToMessageIdWithRescr
       obj[0] = tmp10;
       obj[1] = tmp === scrollToMessageId;
       obj[2] = TOP;
-      chatRef(tmp12[44]).scrollTo(chatRef.current, findMessageIndexResult, obj);
-      let obj2 = chatRef(tmp12[44]);
+      chatRef(tmp12[45]).scrollTo(chatRef.current, findMessageIndexResult, obj);
+      let obj2 = chatRef(tmp12[45]);
     }
   }
 };

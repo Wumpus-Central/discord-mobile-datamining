@@ -23,7 +23,7 @@ function useGoreContentNonFriendsDmSettingValue() {
 function onGoreContentNonFriendsDmOnPress() {
   selectedTeenId = selectedTeenId.getSelectedTeenId();
   if (null != selectedTeenId) {
-    let obj = selectedTeenId(14657);
+    let obj = selectedTeenId(14672);
     obj = { title: null, subtitle: null, handlePress: null, currentValue: null, excluded: null };
     const intl = selectedTeenId(1233).intl;
     obj[0] = intl.string(selectedTeenId(1233).t["16/3Bi"]);
@@ -37,8 +37,8 @@ function onGoreContentNonFriendsDmOnPress() {
     obj[3] = obj.getGoreContentSettingOrDefault(selectedTeenId).goreContentNonFriendDm;
     const items = [selectedTeenId(1305).ExplicitContentRedaction.SHOW];
     obj[4] = items;
-    const result = selectedTeenId(14650).handleSensitiveMediaFilterPress(obj);
-    const obj2 = selectedTeenId(14650);
+    const result = selectedTeenId(14665).handleSensitiveMediaFilterPress(obj);
+    const obj2 = selectedTeenId(14665);
   }
 }
 createToggle = {

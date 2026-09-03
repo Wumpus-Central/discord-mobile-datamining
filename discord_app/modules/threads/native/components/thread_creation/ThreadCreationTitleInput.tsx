@@ -13,7 +13,7 @@ const memoResult = importAllResult.memo(
     const optional = chatInputRef.optional;
     let ref;
     dependencyMap = arg1;
-    let obj = chatInputRef(16437);
+    let obj = chatInputRef(16458);
     obj = { content: threadSettingsDraft.name };
     ref = ref.useRef(threadSettingsDraft.name);
     const items = [threadSettingsDraft.parentChannelId];
@@ -76,8 +76,8 @@ const memoResult = importAllResult.memo(
     );
     let str = "";
     if (null != stateFromStores) {
-      str = tmp(8169).getDefaultThreadName(stateFromStores, threadSettingsDraft.parentMessageId);
-      const tmpResult = tmp(8169);
+      str = tmp(8173).getDefaultThreadName(stateFromStores, threadSettingsDraft.parentMessageId);
+      const tmpResult = tmp(8173);
     }
     const intl = tmp(1233).intl;
     const string = intl.string;
@@ -88,7 +88,7 @@ const memoResult = importAllResult.memo(
       stringResult = string(t.j3XWjD);
     }
     obj = {
-      defaultValue: threadSettingsDraft(5562)(ref),
+      defaultValue: threadSettingsDraft(5563)(ref),
       errorMessage: renderErrorResult,
       label: stringResult,
       accessibilityLabel: stringResult,
@@ -124,8 +124,8 @@ const memoResult = importAllResult.memo(
     }
     obj[13] = str;
     obj[14] = arg1;
-    return jsx(chatInputRef(7714).TextInput, {
-      defaultValue: threadSettingsDraft(5562)(ref),
+    return jsx(chatInputRef(7717).TextInput, {
+      defaultValue: threadSettingsDraft(5563)(ref),
       errorMessage: renderErrorResult,
       label: stringResult,
       accessibilityLabel: stringResult,

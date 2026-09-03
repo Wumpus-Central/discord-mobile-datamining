@@ -40,7 +40,7 @@ function GroupDmMemberCount(channel) {
     }, 0);
   });
   const obj = channel(586);
-  return channel(13155).renderMemberCountText(stateFromStores, channel.recipients.length);
+  return channel(13167).renderMemberCountText(stateFromStores, channel.recipients.length);
 }
 let c3 = importAllResult;
 ({ ChannelTypes: closure_8, StatusTypes: c9 } = ME);

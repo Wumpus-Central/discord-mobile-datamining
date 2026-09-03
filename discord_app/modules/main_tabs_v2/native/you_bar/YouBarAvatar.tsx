@@ -210,7 +210,7 @@ function YouBarAvatarLarge(transitionState) {
       status: null,
       statusSizeOverride: null,
       cutout: null,
-      statusStyle: 0,
+      statusStyle: "done",
     };
     obj6[0] = stateFromStores;
     obj6[2] = closure_11;

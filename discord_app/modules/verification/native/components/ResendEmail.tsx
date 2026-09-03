@@ -34,7 +34,7 @@ export default function ResendEmail() {
   let obj2 = navigation(586);
   const items1 = [closure_6];
   const stateFromStores1 = obj2.useStateFromStores(items1, () => action.getAction());
-  let obj3 = verified(7707);
+  let obj3 = verified(7710);
   const result = obj3.isEmailReverification(stateFromStores1);
   let tmp16Result = !result;
   [tmp10, dependencyMap] = callback(React.useState(false), 2);
@@ -58,7 +58,7 @@ export default function ResendEmail() {
   callback = React.useCallback(() => {
     navigation.push(closure_1_8.ENTER_EMAIL);
   }, items3);
-  const items4 = [callback2(navigation(6265).EnvelopeOpenSpotIllustration, { scale: 0.75 }), , , ,];
+  const items4 = [callback2(navigation(6266).EnvelopeOpenSpotIllustration, { scale: 0.75 }), , , ,];
   obj = {
     style: tmp.title,
     accessibilityRole: "header",
@@ -93,7 +93,7 @@ export default function ResendEmail() {
     obj[1] = intl.string(navigation(closure_1_2[15]).t["84yeoz"]);
     verified(closure_1_2[18]).open(obj);
   };
-  obj3[1] = callback2(navigation(4928).Button, obj4);
+  obj3[1] = callback2(navigation(4929).Button, obj4);
   items4[3] = callback2(View, obj3);
   if (!result) {
     const obj5 = { style: null, children: null };
@@ -102,7 +102,7 @@ export default function ResendEmail() {
     const intl4 = tmp2(1233).intl;
     obj6[0] = intl4.string(tmp2(1233).t.Vm8akB);
     obj6[2] = callback;
-    obj5[1] = tmp16(tmp2(4928).Button, obj6);
+    obj5[1] = tmp16(tmp2(4929).Button, obj6);
     tmp16Result = tmp16(tmp15, obj5);
   }
   items4[4] = tmp16Result;

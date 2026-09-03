@@ -3,8 +3,8 @@ import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.
 import SoundButtonOverlay from "../SoundboardTypes.tsx";
 import PressableBase from "../../../design/void/Pressables/native/Pressables.tsx";
 import GuildIconSizesDefault from "../../guild/native/GuildIcon.tsx";
-import registerAssetDefault from "../../../../_runtime/10405_registerAsset.js";
-import registerAssetDefault2 from "../../../../_runtime/16893_registerAsset.js";
+import registerAssetDefault from "../../../../_runtime/10409_registerAsset.js";
+import registerAssetDefault2 from "../../../../_runtime/16913_registerAsset.js";
 import importAllResult from "../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import { setSearchQuery } from "../../expression_picker/ExpressionPickerStore.tsx";
@@ -30,13 +30,13 @@ function SoundCategoryItem(style) {
     let tmp14Result = callback(GuildIconSizesDefault, obj);
     let tmp6 = null;
     let tmp7 = null;
-  } else if (tmp2(4973).SoundboardSoundGridSectionType.FAVORITES === type) {
+  } else if (tmp2(4974).SoundboardSoundGridSectionType.FAVORITES === type) {
     const intl4 = tmp2(1233).intl;
     name = intl4.string(tmp2(1233).t.y3LQCG);
     tmp6 = registerAssetDefault;
     tmp7 = null;
     tmp14Result = null;
-  } else if (tmp2(4973).SoundboardSoundGridSectionType.FREQUENTLY_USED === type) {
+  } else if (tmp2(4974).SoundboardSoundGridSectionType.FREQUENTLY_USED === type) {
     const intl3 = tmp2(1233).intl;
     name = intl3.string(tmp2(1233).t["+cGVV6"]);
     obj = { style: null };
@@ -44,13 +44,13 @@ function SoundCategoryItem(style) {
     tmp7 = callback(tmp2(4441).ClockIcon, obj);
     tmp6 = null;
     tmp14Result = null;
-  } else if (tmp2(4973).SoundboardSoundGridSectionType.DEFAULTS === type) {
+  } else if (tmp2(4974).SoundboardSoundGridSectionType.DEFAULTS === type) {
     const intl2 = tmp2(1233).intl;
     name = intl2.string(tmp2(1233).t.Rtvk9X);
     tmp6 = registerAssetDefault2;
     tmp7 = null;
     tmp14Result = null;
-  } else if (tmp2(4973).SoundboardSoundGridSectionType.SEARCH === type) {
+  } else if (tmp2(4974).SoundboardSoundGridSectionType.SEARCH === type) {
     const intl = tmp2(1233).intl;
     name = intl.string(tmp2(1233).t.sKt3xS);
     tmp6 = registerAssetDefault2;
@@ -61,14 +61,14 @@ function SoundCategoryItem(style) {
     tmp7 = null;
     tmp14Result = null;
     name = null;
-    if (tmp2(4973).SoundboardSoundGridSectionType.TOP_SOUNDS === type) {
+    if (tmp2(4974).SoundboardSoundGridSectionType.TOP_SOUNDS === type) {
       const intl5 = tmp2(1233).intl;
       obj = { guildName: null };
       obj[0] = category.categoryInfo.guild.name;
       name = intl5.formatToPlainString(tmp2(1233).t.GXs41w, obj);
       obj1 = { style: null };
       obj1[0] = tmp.keyboardItem;
-      tmp7 = callback(tmp2(8858).TrophyIcon, obj1);
+      tmp7 = callback(tmp2(8862).TrophyIcon, obj1);
       tmp6 = null;
       tmp14Result = null;
     }
@@ -98,7 +98,7 @@ function SoundCategoryItem(style) {
     obj5[0] = tmp.lockContainer;
     const obj6 = { style: null };
     obj6[0] = tmp.lock;
-    obj5[1] = tmp14(tmp2(5048).LockIcon, obj6);
+    obj5[1] = tmp14(tmp2(5049).LockIcon, obj6);
     locked = tmp14(tmp16, obj5);
   }
   items1[1] = locked;

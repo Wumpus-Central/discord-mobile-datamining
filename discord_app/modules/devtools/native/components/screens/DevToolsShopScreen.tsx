@@ -66,7 +66,7 @@ export default function DevToolsShopScreen() {
   obj4 = {
     value: stateFromStores,
     onValueChange(arg0) {
-      return callback(15518).toggle("shop_disable_cache", arg0);
+      return callback(15532).toggle("shop_disable_cache", arg0);
     },
   };
   const tmp6Result = useToggleDismissibleContentDismissStateDefault(

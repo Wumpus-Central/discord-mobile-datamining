@@ -64,7 +64,7 @@ export default function useCanShowAppLauncherOnboarding(channelId) {
   }
   const tmp14 = closure_7;
   const tmp2Result1 = guild_id(586);
-  const tmp2Result2 = guild_id(6260);
+  const tmp2Result2 = guild_id(6261);
   const items5 = [closure_8];
   const stateFromStoresObject = guild_id(586).useStateFromStoresObject(items5, () => ({
     recentMessageMetadata: store2.getRecentMessageMetadata(),

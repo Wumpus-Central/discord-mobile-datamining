@@ -2,7 +2,7 @@
 import getSystemLocale from "../../../../intl/index.native.tsx";
 import setDefault from "../../../../actions/AlertActionCreators.tsx";
 import useIs2FAEnabled from "../../account/native/SettingsAccountUtils.tsx";
-import _modDef14610 from "../../account/native/mfa_modal_flow/TwoFASetupModalActionCreators.tsx";
+import _modDef14625 from "../../account/native/mfa_modal_flow/TwoFASetupModalActionCreators.tsx";
 import closure_3 from "../../../../stores/UserStore.tsx";
 import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 
@@ -21,7 +21,7 @@ createToggle = {
     }
     if (verified != null) {
       if (verified) {
-        let obj = _modDef14610;
+        let obj = _modDef14625;
         obj.open();
       }
     }

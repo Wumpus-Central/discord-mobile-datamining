@@ -27,7 +27,7 @@ const memoResult = importAllResult.memo(function QuestDockBlurredContentBackgrou
     return str;
   }, items1);
   const style = [StyleSheet.absoluteFillObject, animatedStyle];
-  return jsx(str(4917), {
+  return jsx(str(4918), {
     nativeID: "quest-dock-blurred-background",
     tintColor,
     blurAmount: 0.5,

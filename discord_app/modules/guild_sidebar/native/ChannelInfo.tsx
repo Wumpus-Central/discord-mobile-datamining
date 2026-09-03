@@ -48,7 +48,7 @@ function LimitAndDurationInfo(channel) {
     }
     obj[1] = hasVideo;
     obj[2] = channel;
-    let tmp6Result = tmp6(channel(15939).ConnectedUserLimit, obj);
+    let tmp6Result = tmp6(channel(15955).ConnectedUserLimit, obj);
   } else {
     obj1 = { channel: null };
     obj1[0] = channel;
@@ -97,7 +97,7 @@ export default function ChannelInfo(channel) {
   }));
   ({ guild, mentionsCount, isNewChannel } = stateFromStoresObject);
   const tmp5 = useEmbeddedAppsDefault(channel);
-  obj1 = channel(7638);
+  obj1 = channel(7639);
   const postsWithUnreadsCount = obj1.useUnreadThreadsCountForParent(channel.guild_id, channel.id);
   if (showChannelBadgeDefault({ mentionsCount, isNewChannel, postsWithUnreadsCount, muted })) {
     obj = {
@@ -116,7 +116,7 @@ export default function ChannelInfo(channel) {
     }
     obj[3] = tmp18;
     obj[4] = muted;
-    let tmp11Result = jsx(tmp4(16049), {
+    let tmp11Result = jsx(tmp4(16065), {
       mentionCount: null,
       isMentionLowImportance: null,
       isNewChannel: null,
@@ -124,7 +124,7 @@ export default function ChannelInfo(channel) {
       muted: null,
     });
     const tmp16 = jsx;
-    const tmp4Result = tmp4(16049);
+    const tmp4Result = tmp4(16065);
   } else {
     if (null != isChannelCollapsed) {
       if (isChannelCollapsed) {
@@ -143,12 +143,12 @@ export default function ChannelInfo(channel) {
     }
     if (null != enableActivities) {
       if (enableActivities) {
-        tmpResult = tmp(16051);
+        tmpResult = tmp(16067);
         if (tmpResult.showChannelItemEmbeddedActivities(tmp5)) {
           obj = { embeddedApps: null, muted: null };
           obj[0] = tmp5;
           obj[1] = muted;
-          tmp11Result = jsx(tmp4(16052), { embeddedApps: null, muted: null });
+          tmp11Result = jsx(tmp4(16068), { embeddedApps: null, muted: null });
         }
       }
     }
@@ -157,7 +157,7 @@ export default function ChannelInfo(channel) {
         if (isSubscriptionGated) {
           obj1 = { locked: null };
           obj1[0] = needSubscriptionToAccess;
-          tmp11Result = jsx(tmp4(15938), { locked: null });
+          tmp11Result = jsx(tmp4(15954), { locked: null });
         }
       }
     }

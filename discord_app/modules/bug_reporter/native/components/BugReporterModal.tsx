@@ -1,7 +1,7 @@
 // discord_app/modules/bug_reporter/native/components/BugReporterModal.tsx
 import setDefault from "../../../../utils/Durations.tsx";
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef4723 from "../../../../actions/ModalActionCreators.tsx";
+import _modDef4724 from "../../../../actions/ModalActionCreators.tsx";
 import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import closure_4 from "../../../../../_runtime/metro/00032__slicedToArray.js";
 import closure_5 from "../../../../../_runtime/00019_noop.js";
@@ -15,7 +15,7 @@ import importDefaultResult from "../../../../../_runtime/00686_n.js";
 const require = arg1;
 function handleClose() {
   state.setState({ isReportOpen: false });
-  let arr = _modDef4723;
+  let arr = _modDef4724;
   arr = arr.pop();
 }
 class BugCreateScreen {
@@ -80,7 +80,7 @@ class BugCreateScreen {
                 closure_1 = undefined;
                 obj2 = undefined;
                 c3 = undefined;
-                obj1 = closure_1_1(5102);
+                obj1 = closure_1_1(5103);
                 obj2 = 1;
                 c3 = 1;
                 obj1 = { value: null, done: false };
@@ -104,9 +104,9 @@ class BugCreateScreen {
                 const merged = Object.assign(closure_1);
                 obj2.uri = closure_1.uri;
                 obj2.originalUri = closure_1.uri;
-                obj2.platform = closure_1_0(5081).UploadPlatform.REACT_NATIVE;
+                obj2.platform = closure_1_0(5082).UploadPlatform.REACT_NATIVE;
                 obj2.filename = closure_1.fileName;
-                const tmp35 = new closure_1_1(5081)(obj2);
+                const tmp35 = new closure_1_1(5082)(obj2);
                 c3 = tmp35;
                 closure_23.current = closure_7.length;
                 callback((arg0) => {
@@ -297,7 +297,7 @@ class BugCreateScreen {
                       closure_2 = arg2;
                       c5 = 0;
                       c6 = 0;
-                      return (/* F125084 */ function*() { ... })();
+                      return (/* F125324 */ function*() { ... })();
                     });
                     closure_3 = tmp;
                     const apply = tmp.apply;
@@ -778,6 +778,6 @@ export default function BugReportModal(screenshotUri) {
     obj[0] = obj;
     return obj;
   }, items);
-  return callback(screenshotUri(6016).Navigator, { screens, initialRouteName: "BUG_REPORT_CREATE" });
+  return callback(screenshotUri(6017).Navigator, { screens, initialRouteName: "BUG_REPORT_CREATE" });
 };
 export { BugCreateScreen };

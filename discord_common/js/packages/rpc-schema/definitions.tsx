@@ -170,13 +170,13 @@ obj9[1] = function response(boolean) {
   obj[1] = boolean.string().valid("rgba", "none").required();
   return obj;
 };
-const obj17 = { request: "Array", response: 0 };
-obj17[1] = function response(boolean) {
+const obj18 = { request: "Array", response: 0 };
+obj18[1] = function response(boolean) {
   const obj = { hidden: boolean.boolean().required() };
   return obj;
 };
-const obj20 = { request: "Array", response: 0 };
-obj20[1] = function response(array) {
+const obj21 = { request: "Array", response: 0 };
+obj21[1] = function response(array) {
   let arrayResult = array.array();
   let obj = { type: null, user: null, presence: null };
   const requiredResult = arrayResult.required();
@@ -315,8 +315,8 @@ obj20[1] = function response(array) {
   obj1[0] = requiredResult.items(array.object(obj));
   return obj1;
 };
-const obj25 = { request: "Array", response: 0 };
-obj25[1] = function response(string) {
+const obj26 = { request: "Array", response: 0 };
+obj26[1] = function response(string) {
   const obj = { quest_id: string.string().required(), enrolled_at: null, completed_at: null, external_cta_url: null };
   const stringResult = string.string();
   const stringResult1 = string.string();
@@ -328,8 +328,8 @@ obj25[1] = function response(string) {
   obj[3] = string.string().required();
   return obj;
 };
-const obj26 = { request: "Array", response: 0 };
-obj26[1] = function response(string) {
+const obj27 = { request: "Array", response: 0 };
+obj27[1] = function response(string) {
   const obj = { ticket: string.string().required() };
   return obj;
 };
@@ -764,29 +764,53 @@ export const RPCCommandSchemas = {
   },
   [RPCCommands.RPCCommand.OPEN_CONTEXT_MENU]: {
     request(string) {
-      const obj = { type: null, id: null, items: null, x: null, y: null };
+      const obj = { type: null, id: null, channel_id: null, url: null, items: null, x: null, y: null };
       const stringResult = string.string();
-      obj[0] = string.string().valid("user", "channel", "custom").required();
-      const validResult = string.string().valid("user", "channel", "custom");
+      obj[0] = string.string().valid("user", "channel", "message", "image", "custom").required();
+      const validResult = string.string().valid("user", "channel", "message", "image", "custom");
       obj[1] = string.string().max(64);
       const stringResult1 = string.string();
+      obj[2] = string.string().max(64);
+      const stringResult2 = string.string();
+      obj[3] = string.string().max(1024);
+      const stringResult3 = string.string();
       const arrayResult = string.array();
       const minResult = string.array().min(1);
-      obj[2] = string.array().min(1).max(30).items(ContextMenuItem(string, true));
+      obj[4] = string.array().min(1).max(30).items(ContextMenuItem(string, true));
       const maxResult = string.array().min(1).max(30);
       const numberResult = string.number();
       const minResult1 = string.number().min(0);
-      obj[3] = string.number().min(0).max(65535).required();
+      obj[5] = string.number().min(0).max(65535).required();
       const maxResult1 = string.number().min(0).max(65535);
       const numberResult1 = string.number();
       const minResult2 = string.number().min(0);
-      obj[4] = string.number().min(0).max(65535).required();
+      obj[6] = string.number().min(0).max(65535).required();
       return obj;
     },
     response(boolean) {
       const obj = { opened: boolean.boolean().required(), selected_id: null };
       const booleanResult = boolean.boolean();
       obj[1] = boolean.string().allow(null);
+      return obj;
+    },
+  },
+  [RPCCommands.RPCCommand.OPEN_USER_POPOUT]: {
+    request(string) {
+      const obj = { user_id: null, x: null, y: null };
+      const stringResult = string.string();
+      obj[0] = string.string().max(64).required();
+      const maxResult = string.string().max(64);
+      const numberResult = string.number();
+      const minResult = string.number().min(0);
+      obj[1] = string.number().min(0).max(65535).required();
+      const maxResult1 = string.number().min(0).max(65535);
+      const numberResult1 = string.number();
+      const minResult1 = string.number().min(0);
+      obj[2] = string.number().min(0).max(65535).required();
+      return obj;
+    },
+    response(boolean) {
+      const obj = { opened: boolean.boolean().required() };
       return obj;
     },
   },
@@ -859,7 +883,7 @@ export const RPCCommandSchemas = {
       return obj;
     },
   },
-  [RPCCommands.RPCCommand.HIDE_TOOLTIP]: obj17,
+  [RPCCommands.RPCCommand.HIDE_TOOLTIP]: obj18,
   [RPCCommands.RPCCommand.SHOW_TOAST]: {
     request(string) {
       const obj = { message: null, type: null };
@@ -896,7 +920,7 @@ export const RPCCommandSchemas = {
       return { confirmed: boolean.boolean(), acknowledged: boolean.boolean() };
     },
   },
-  [RPCCommands.RPCCommand.GET_RELATIONSHIPS]: obj20,
+  [RPCCommands.RPCCommand.GET_RELATIONSHIPS]: obj21,
   [RPCCommands.RPCCommand.INVITE_USER_EMBEDDED]: {
     request(string) {
       const obj = { user_id: string.string().required(), content: null };
@@ -905,7 +929,7 @@ export const RPCCommandSchemas = {
       obj[1] = string.string().min(0).max(1024);
       return obj;
     },
-    response: "r",
+    response: "Array",
   },
   [RPCCommands.RPCCommand.GET_USER]: {
     request(string) {
@@ -943,8 +967,8 @@ export const RPCCommandSchemas = {
       return obj;
     },
   },
-  [RPCCommands.RPCCommand.GET_QUEST]: obj25,
-  [RPCCommands.RPCCommand.REQUEST_PROXY_TICKET_REFRESH]: obj26,
+  [RPCCommands.RPCCommand.GET_QUEST]: obj26,
+  [RPCCommands.RPCCommand.REQUEST_PROXY_TICKET_REFRESH]: obj27,
   [RPCCommands.RPCCommand.SET_PREFERS_PICTURE_IN_PICTURE_ON_NAVIGATE_AWAY]: {
     request(boolean) {
       const obj = { enabled: boolean.boolean().required() };

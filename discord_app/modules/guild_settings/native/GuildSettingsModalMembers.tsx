@@ -100,7 +100,7 @@ let closure_20 = importAllResult.memo((guild) => {
     obj[5] = function onPress() {};
     obj[7] = start;
     obj[8] = end;
-    return closure_15(guildMember(10900), obj);
+    return closure_15(guildMember(10904), obj);
   }
   tmp = callback();
 });
@@ -311,12 +311,12 @@ const memoResult = importAllResult.memo(function GuildSettingsModalMembers(guild
           items: membersManagementActions,
           children(ref) {
             const merged = Object.assign(ref, Object.create(null));
-            const obj = { source: callback2(9790), accessibilityLabel: null, ref: null };
+            const obj = { source: callback2(9794), accessibilityLabel: null, ref: null };
             const intl = callback(1233).intl;
             obj[1] = intl.string(callback(1233).t.ogxXGq);
             obj[2] = ref.ref;
             const merged1 = Object.assign(merged);
-            return callback3(callback(6246).HeaderActionButton, obj);
+            return callback3(callback(6247).HeaderActionButton, obj);
           },
         };
         return closure_1_15(closure_1_0(closure_1_2[26]).ContextMenu, obj);

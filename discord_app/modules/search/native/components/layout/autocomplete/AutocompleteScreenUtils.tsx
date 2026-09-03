@@ -42,31 +42,31 @@ export const getSearchFilterHasIcon = function getSearchFilterHasIcon(text) {
     } else {
       const intl4 = tmp(1233).intl;
       if (intl4.string(tmp(1233).t["20uQR3"]) === text) {
-        return tmp(9384).EmbedIcon;
+        return tmp(9388).EmbedIcon;
       } else {
         const intl5 = tmp(1233).intl;
         if (intl5.string(tmp(1233).t.L4lxyE) === text) {
-          return tmp(10652).PollsIcon;
+          return tmp(10656).PollsIcon;
         } else {
           const intl6 = tmp(1233).intl;
           if (intl6.string(tmp(1233).t["AV/v6i"]) === text) {
-            return tmp(10217).AttachmentIcon;
+            return tmp(10221).AttachmentIcon;
           } else {
             const intl7 = tmp(1233).intl;
             if (intl7.string(tmp(1233).t.XM9XGP) === text) {
-              return tmp(10215).VideoIcon;
+              return tmp(10219).VideoIcon;
             } else {
               const intl8 = tmp(1233).intl;
               if (intl8.string(tmp(1233).t.TNLcpx) === text) {
-                return tmp(5040).ImageIcon;
+                return tmp(5041).ImageIcon;
               } else {
                 const intl9 = tmp(1233).intl;
                 if (intl9.string(tmp(1233).t.F8Wf0e) === text) {
-                  return tmp(12316).SoundboardIcon;
+                  return tmp(12328).SoundboardIcon;
                 } else {
                   const intl2 = tmp(1233).intl;
                   if (intl2.string(tmp(1233).t.PJgX2h) === text) {
-                    return tmp(10219).StickerIcon;
+                    return tmp(10223).StickerIcon;
                   }
                 }
               }
@@ -80,15 +80,15 @@ export const getSearchFilterHasIcon = function getSearchFilterHasIcon(text) {
 export const getSearchFilterAuthorTypeIcon = function getSearchFilterAuthorTypeIcon(text) {
   const intl = getSystemLocale.intl;
   if (intl.string(getSystemLocale.t.tPZo4p) === text) {
-    return tmp(11621).UserIcon;
+    return tmp(11626).UserIcon;
   } else {
     const intl3 = tmp(1233).intl;
     if (intl3.string(tmp(1233).t.JL7sRS) === text) {
-      return tmp(9388).RobotIcon;
+      return tmp(9392).RobotIcon;
     } else {
       const intl2 = tmp(1233).intl;
       if (intl2.string(tmp(1233).t.WjkIKU) === text) {
-        return tmp(16539).WebhookIcon;
+        return tmp(16560).WebhookIcon;
       }
     }
   }

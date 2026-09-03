@@ -7,8 +7,8 @@ import hasFlag from "../../../../discord_common/js/shared/utils/FlagUtils.tsx";
 import combinedDefault from "../../../utils/HelpdeskUtils.tsx";
 import explicitContentFromProto from "../../user_settings/UserSettings.tsx";
 import _modDef4190 from "../../../lib/native/Linking.tsx";
-import _modDef4713 from "../../../utils/TrackedHTTPUtils.tsx";
-import _modDef4723 from "../../../actions/ModalActionCreators.tsx";
+import _modDef4714 from "../../../utils/TrackedHTTPUtils.tsx";
+import _modDef4724 from "../../../actions/ModalActionCreators.tsx";
 import _requestAndSyncContacts from "ContactSyncManager.tsx";
 import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import { NativeModules } from "../../../../_runtime/00017_get_ActivityIndicator.js";
@@ -76,7 +76,7 @@ function _uploadContacts() {
             } else {
               const _JSON = JSON;
               dependencyMap = JSON.parse(callback);
-              let obj7 = flag(4713);
+              let obj7 = flag(4714);
               const obj2 = { url: null, body: null, trackedActionData: null, rejectWithError: false };
               obj2[0] = constants2.CONNECTION_SYNC_CONTACTS;
               const obj3 = {
@@ -199,7 +199,7 @@ export const uploadContacts = function uploadContacts(c3, arg1) {
   return applyArgumentsResult;
 };
 export const bulkAddFriends = function bulkAddFriends(user_ids, bulkAddToken) {
-  let obj = _modDef4713;
+  let obj = _modDef4714;
   obj = { url: closure_12.USER_BULK_RELATIONSHIPS, body: obj, trackedActionData: null, rejectWithError: false };
   obj = { user_ids, token: bulkAddToken };
   obj[2] = { event: encodeProperties.NetworkActionNames.USER_BULK_RELATIONSHIPS_UPDATE };
@@ -221,7 +221,7 @@ export const adminDeleteContactSync = function adminDeleteContactSync() {
   };
   obj = { event: encodeProperties.NetworkActionNames.USER_CONNECTIONS_UPDATE };
   obj[2] = obj;
-  return _modDef4713.delete(obj);
+  return _modDef4714.delete(obj);
 };
 export const getImageForContactId = function getImageForContactId(closure_0, arg1) {
   let DCDContactSyncManager = NativeModules.DCDContactSyncManager;
@@ -323,5 +323,5 @@ export const handleOpenLearnMoreLink = function handleOpenLearnMoreLink() {
   obj.openURL(combinedDefault.getArticleURL(constants4.CONTACT_SYNC));
 };
 export const transitionToAddFriendsLandingPage = function transitionToAddFriendsLandingPage() {
-  _modDef4723.popWithKey(closure_9);
+  _modDef4724.popWithKey(closure_9);
 };

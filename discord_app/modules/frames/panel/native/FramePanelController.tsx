@@ -60,7 +60,7 @@ export default function FramePanelController(children) {
     updateActivityPanelMode: callback,
     children: children.children,
   };
-  return jsx(mainFrameId(16823).BaseActivityPanelController, {
+  return jsx(mainFrameId(16843).BaseActivityPanelController, {
     context: contextDefault,
     orientationLockStateForApp,
     mode,

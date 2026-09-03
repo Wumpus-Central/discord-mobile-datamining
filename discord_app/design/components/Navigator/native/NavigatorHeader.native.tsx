@@ -6,7 +6,7 @@ import Text from "../../Text/native/Text.tsx";
 import NAV_BAR_HEIGHT from "NavigatorConstants.native.tsx";
 import useHeaderDebugOverlayDefault from "../../../../modules/devtools/design_toggles/HeaderDebugOverlay.native.tsx";
 import ArrowLargeLeftIcon from "../../Icon/native/redesign/generated/ArrowLargeLeftIcon.tsx";
-import Background from "../../../../../_runtime/05510_Background.js";
+import Background from "../../../../../_runtime/05511_Background.js";
 import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
@@ -53,7 +53,7 @@ function CloseButton(onPress) {
 function CustomHeaderBackButton(onPress) {
   onPress = onPress.onPress;
   const merged = Object.assign(onPress, Object.create(null));
-  let obj = onPress(5509);
+  let obj = onPress(5510);
   obj.useNavigatorBackPressHandler(() => {
     if (null != onPress) {
       tmp();
@@ -67,7 +67,7 @@ function CustomHeaderBackButton(onPress) {
   obj.backImage = function backImage() {
     return callback(closure_9, {});
   };
-  return callback(onPress(5510).HeaderBackButton, obj);
+  return callback(onPress(5511).HeaderBackButton, obj);
 }
 function HeaderTextButton(text) {
   text = text.text;

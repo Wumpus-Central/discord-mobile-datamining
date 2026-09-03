@@ -33,7 +33,7 @@ export default function CrunchyrollLinkDiscordConsent(arg0) {
     onNext: callback,
     onError: callback1,
   };
-  return jsx(navigation(9327).TwoWayLinkDiscordConsent, {
+  return jsx(navigation(9331).TwoWayLinkDiscordConsent, {
     platformType: PlatformTypes.CRUNCHYROLL,
     callbackCode,
     callbackState,

@@ -18,7 +18,7 @@ function VoiceBadges(arg0) {
   if (null != muteDeafenIconState) {
     obj = { style: null, children: null };
     obj[0] = tmp.iconWrapper;
-    let tmp3Result = tmp3(6014);
+    let tmp3Result = tmp3(6015);
     obj = { state: null, size: null, style: null };
     obj[0] = muteDeafenIconState;
     obj[1] = Button.IconSizes.SMALL;
@@ -31,7 +31,7 @@ function VoiceBadges(arg0) {
   if (null != videoIconState) {
     obj1 = { style: null, children: null };
     obj1[0] = tmp.iconWrapper;
-    tmp3Result = tmp3(6014);
+    tmp3Result = tmp3(6015);
     const obj2 = { state: null, size: null, style: null };
     obj2[0] = videoIconState;
     obj2[1] = Button.IconSizes.SMALL;

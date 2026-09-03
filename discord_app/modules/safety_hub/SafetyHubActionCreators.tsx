@@ -1,4 +1,5 @@
 // discord_app/modules/safety_hub/SafetyHubActionCreators.tsx
+import dispatcherDefault from "../../Dispatcher.tsx";
 import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
 import closure_4 from "../../stores/AuthenticationStore.tsx";
 import closure_5 from "SafetyHubStore.tsx";
@@ -6,6 +7,16 @@ import SafetyHubView from "SafetyHubConstants.tsx";
 import { Endpoints } from "../../Constants.tsx";
 
 const require = arg1;
+function getSafetyHubData() {
+  const self = this;
+  const apply = _getSafetyHubData.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
+}
 function _getSafetyHubData() {
   const self = this;
   const tmp = callback(function* () {
@@ -39,9 +50,9 @@ function _getSafetyHubData() {
             v02(closure_1_2[5]).dispatch({ type: "SAFETY_HUB_FETCH_START" });
             const suspendedUserToken = closure_1_4.getSuspendedUserToken();
             if (null != suspendedUserToken) {
-              let SAFETY_HUB_SUSPENDED = closure_1_8.SAFETY_HUB_SUSPENDED;
+              let SAFETY_HUB_SUSPENDED = closure_1_9.SAFETY_HUB_SUSPENDED;
             } else {
-              SAFETY_HUB_SUSPENDED = closure_1_8.SAFETY_HUB;
+              SAFETY_HUB_SUSPENDED = closure_1_9.SAFETY_HUB;
             }
             if (null != suspendedUserToken) {
               const HTTP2 = v0(result[6]).HTTP;
@@ -216,7 +227,7 @@ function _getSafetyHubData() {
       }
     }
   });
-  closure_9 = tmp;
+  closure_11 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -264,9 +275,9 @@ function _getSafetyHubDataForClassification() {
               v0(table[5]).dispatch(obj1);
               const suspendedUserToken = closure_1_4.getSuspendedUserToken();
               if (null != suspendedUserToken) {
-                let SAFETY_HUB_SUSPENDED = closure_1_8.SAFETY_HUB_SUSPENDED;
+                let SAFETY_HUB_SUSPENDED = closure_1_9.SAFETY_HUB_SUSPENDED;
               } else {
-                SAFETY_HUB_SUSPENDED = closure_1_8.SAFETY_HUB;
+                SAFETY_HUB_SUSPENDED = closure_1_9.SAFETY_HUB;
               }
               if (null != suspendedUserToken) {
                 const HTTP2 = callback(result[6]).HTTP;
@@ -312,7 +323,7 @@ function _getSafetyHubDataForClassification() {
                           items = [first];
                         }
                         found.flagged_content = items;
-                        obj3 = callback(8704);
+                        obj3 = callback(8708);
                       }
                     }
                     let obj = {
@@ -381,7 +392,7 @@ function _getSafetyHubDataForClassification() {
                         items = [first];
                       }
                       found.flagged_content = items;
-                      obj3 = callback(8704);
+                      obj3 = callback(8708);
                     }
                   }
                   let obj = {
@@ -430,7 +441,7 @@ function _getSafetyHubDataForClassification() {
       }
     })();
   });
-  closure_10 = tmp;
+  closure_12 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -476,9 +487,9 @@ function _requestReview() {
             } else {
               suspendedUserToken = suspendedUserToken.getSuspendedUserToken();
               if (null != suspendedUserToken) {
-                let result = closure_1_8.SAFETY_HUB_REQUEST_SUSPENDED_USER_REVIEW(tmp21);
+                let result = closure_1_9.SAFETY_HUB_REQUEST_SUSPENDED_USER_REVIEW(tmp21);
               } else {
-                result = closure_1_8.SAFETY_HUB_REQUEST_REVIEW(tmp21);
+                result = closure_1_9.SAFETY_HUB_REQUEST_REVIEW(tmp21);
               }
               if (null != suspendedUserToken) {
                 const HTTP2 = callback(527).HTTP;
@@ -554,7 +565,7 @@ function _requestReview() {
       }
     })();
   });
-  closure_11 = tmp;
+  closure_13 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -600,7 +611,7 @@ function _requestSuspendedUserAgeVerification() {
               const suspendedUserToken = closure_1_4.getSuspendedUserToken();
               const HTTP = callback(527).HTTP;
               obj1 = { url: null, body: null, rejectWithError: null };
-              obj1[0] = closure_1_8.SAFETY_HUB_REQUEST_SUSPENDED_AGE_VERIFICATION;
+              obj1[0] = closure_1_9.SAFETY_HUB_REQUEST_SUSPENDED_AGE_VERIFICATION;
               const obj2 = { token: null, from_classification_id: null };
               obj2[0] = suspendedUserToken;
               obj2[1] = callback;
@@ -655,7 +666,7 @@ function _requestSuspendedUserAgeVerification() {
       }
     })();
   });
-  closure_12 = tmp;
+  closure_14 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -708,7 +719,7 @@ function _checkSuspendedUserAgeVerification() {
             v0 = closure_1_5.getAgeCheckAttempts();
             const HTTP = v0(closure_1_2[6]).HTTP;
             obj1 = { url: null, body: null, rejectWithError: null };
-            obj1[0] = closure_1_8.SAFETY_HUB_CHECK_SUSPENDED_AGE_VERIFICATION;
+            obj1[0] = closure_1_9.SAFETY_HUB_CHECK_SUSPENDED_AGE_VERIFICATION;
             const obj2 = { token: null };
             obj2[0] = suspendedUserToken;
             obj1[1] = obj2;
@@ -765,7 +776,7 @@ function _checkSuspendedUserAgeVerification() {
       }
     }
   });
-  closure_14 = tmp;
+  closure_16 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -774,19 +785,137 @@ function _checkSuspendedUserAgeVerification() {
   }
   return applyArgumentsResult;
 }
-({ AGE_CHECK_POLL_INTERVAL_MS: closure_6, AGE_CHECK_MAX_POLL_ATTEMPTS: error } = SafetyHubView);
-let result = require("set").fileFinishedImporting("modules/safety_hub/SafetyHubActionCreators.tsx");
-
-export const getSafetyHubData = function getSafetyHubData() {
+function checkSuspendedUserAgeVerificationV2(closure_0) {
   const self = this;
-  const apply = _getSafetyHubData.apply;
+  const apply = _checkSuspendedUserAgeVerificationV.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}
+function _checkSuspendedUserAgeVerificationV() {
+  const self = this;
+  const tmp = callback((arg0) => {
+    closure_0 = arg0;
+    c2 = 0;
+    c1 = 0;
+    return (function* (arg0) {
+      if (v0 === 2) {
+        v0 = 3;
+        HermesBuiltin.throwTypeError();
+      } else if (tmp3 === 3) {
+        if (arg0 === 1) {
+          throw arg1;
+        } else if (arg0 === 2) {
+          let obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
+        } else {
+          return { value: "HermesInternal", done: null };
+        }
+      } else {
+        try {
+          v0 = 2;
+          if (0 === dependencyMap) {
+            if (arg0 === 1) {
+              v0 = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              v0 = 3;
+              obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            } else {
+              v0(706).dispatch({ type: "SAFETY_HUB_CHECK_AUTOMATED_UNDERAGE_APPEAL_START" });
+              const suspendedUserToken = closure_1_4.getSuspendedUserToken();
+              v0 = closure_1_5.getAgeCheckAttempts();
+              const HTTP = callback(527).HTTP;
+              obj1 = { url: null, body: null, rejectWithError: null };
+              obj1[0] = closure_1_9.SAFETY_HUB_CHECK_SUSPENDED_AGE_VERIFICATION_V2;
+              let obj2 = { token: null, requested_at: null };
+              obj2[0] = suspendedUserToken;
+              obj2[1] = callback;
+              obj1[1] = obj2;
+              const obj5 = v0(706);
+              obj1[2] = callback(527).rejectWithMigratedError();
+              const obj8 = callback(527);
+              const postResult = HTTP.post(obj1);
+              dependencyMap = 1;
+              v0 = 1;
+              const obj3 = { value: null, done: false };
+              obj3[0] = HTTP.post(obj1)
+                .then((body) => {
+                  const status = body.body.status;
+                  if (status !== closure_1_8.PENDING) {
+                    if (!tmp10) {
+                      closure_1_10();
+                    }
+                    let obj = { type: "SAFETY_HUB_CHECK_AUTOMATED_UNDERAGE_APPEAL_SUCCESS_V2", status: null };
+                    obj[1] = status;
+                    v3(706).dispatch(obj);
+                    const obj2 = v3(706);
+                    tmp10 = status !== tmp.UNBANNED && status !== tmp.VERIFIED_OTHER_VIOLATIONS_REMAIN;
+                  } else if (v3 < closure_1_7) {
+                    const _setTimeout = setTimeout;
+                    const timerId = setTimeout(() => closure_1_17(closure_0), closure_1_6);
+                  } else {
+                    obj = v3(706);
+                    obj.dispatch({ type: "SAFETY_HUB_RESET_AGE_CHECK_STATUS" });
+                  }
+                })
+                .catch((body) => {
+                  let str;
+                  if (body != null) {
+                    body = body.body;
+                    if (body != null) {
+                      str = body.message;
+                    }
+                  }
+                  if (str == null) {
+                    str = "Unknown error";
+                  }
+                  v3(706).dispatch({ type: "SAFETY_HUB_CHECK_AUTOMATED_UNDERAGE_APPEAL_FAILURE", error: str });
+                });
+              return obj3;
+            }
+          } else if (arg0 === 1) {
+            v0 = 3;
+            throw arg1;
+          } else if (arg0 === 2) {
+            v0 = 3;
+            obj = { value: null, done: true };
+            obj[0] = arg1;
+            return obj;
+          } else {
+            v0 = 3;
+            return { value: "HermesInternal", done: null };
+          }
+        } catch (tmp5) {
+          v0 = tmp;
+          throw tmp5;
+        }
+      }
+    })();
+  });
+  closure_18 = tmp;
+  const apply = tmp.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
+}
+({
+  AGE_CHECK_POLL_INTERVAL_MS: closure_6,
+  AGE_CHECK_MAX_POLL_ATTEMPTS: error,
+  SuspendedAgeCheckStatus: closure_8,
+} = SafetyHubView);
+let result = require("set").fileFinishedImporting("modules/safety_hub/SafetyHubActionCreators.tsx");
+
+export { getSafetyHubData };
 export const getSafetyHubDataForClassification = function getSafetyHubDataForClassification(closure_0) {
   const self = this;
   const apply = _getSafetyHubDataForClassification.apply;
@@ -818,3 +947,7 @@ export const requestSuspendedUserAgeVerification = function requestSuspendedUser
   return applyArgumentsResult;
 };
 export { checkSuspendedUserAgeVerification };
+export { checkSuspendedUserAgeVerificationV2 };
+export const resetAgeCheckStatus = function resetAgeCheckStatus() {
+  dispatcherDefault.dispatch({ type: "SAFETY_HUB_RESET_AGE_CHECK_STATUS" });
+};

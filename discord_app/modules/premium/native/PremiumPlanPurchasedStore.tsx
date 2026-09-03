@@ -102,7 +102,7 @@ export const reset = function reset() {
       isPaymentSuccess: false,
       mobileWebRedirectCheckoutStatus: str,
       onPaymentSuccess: "r",
-      onPaymentDismiss: "channelId",
+      onPaymentDismiss: "channel",
     });
   });
 };

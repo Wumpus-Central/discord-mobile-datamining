@@ -126,7 +126,7 @@ export default function MobileSurvey() {
         source: stateFromStores(closure_1_2[14]),
       });
     };
-    tmp5 = jsx(stateFromStores(4947), {
+    tmp5 = jsx(stateFromStores(4948), {
       body: null,
       confirmText: null,
       cancelText: null,
@@ -134,7 +134,7 @@ export default function MobileSurvey() {
       onCancel: null,
       renderConfirmRightIcon: null,
     });
-    const tmp8 = stateFromStores(4947);
+    const tmp8 = stateFromStores(4948);
   }
   return tmp5;
 }

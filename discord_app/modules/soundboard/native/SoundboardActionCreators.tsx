@@ -13,7 +13,7 @@ let result = set.fileFinishedImporting("modules/soundboard/native/SoundboardActi
 export const openSoundboardSoundPickerActionSheet = function openSoundboardSoundPickerActionSheet(arg0) {
   ({ channel, analyticsSource, initialScrollLocation } = arg0);
   ACTION_SHEET_HEIGHT_HALFDefault.openLazy(
-    asyncRequireImpl(16876, dependencyMap.paths),
+    asyncRequireImpl(16896, dependencyMap.paths),
     "SoundboardSoundPickerActionSheet",
     { channel, analyticsSource, initialScrollLocation },
   );
@@ -29,7 +29,7 @@ export const showSoundboardSoundPickerActionSheet = function showSoundboardSound
   obj = { channel, analyticsSource };
   ({ channel: channel2, analyticsSource: analyticsSource2, initialScrollLocation } = obj);
   ACTION_SHEET_HEIGHT_HALFDefault.openLazy(
-    asyncRequireImpl(16876, dependencyMap.paths),
+    asyncRequireImpl(16896, dependencyMap.paths),
     "SoundboardSoundPickerActionSheet",
     { channel: channel2, analyticsSource: analyticsSource2, initialScrollLocation },
   );

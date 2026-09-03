@@ -56,7 +56,7 @@ export const EmojiGrid = function EmojiGrid(numberToShow) {
   }
   let obj;
   obj = {};
-  const merged = Object.assign(doNotDisplayEmojiIds(9187).useSharedMessageEmojiStyles());
+  const merged = Object.assign(doNotDisplayEmojiIds(9191).useSharedMessageEmojiStyles());
   const merged1 = Object.assign(callback());
   let emojis;
   if (expressionSourceGuild != null) {
@@ -68,21 +68,21 @@ export const EmojiGrid = function EmojiGrid(numberToShow) {
   const substr = emojis.slice(0, num + 1);
   const found = substr.filter((id) => !doNotDisplayEmojiIds.includes(id.id));
   const substr1 = found.slice(0, num);
-  const obj2 = doNotDisplayEmojiIds(9187);
+  const obj2 = doNotDisplayEmojiIds(9191);
   const tmp = doNotDisplayEmojiIds;
   obj = { style: obj.emojiGridContainer, children: null };
   obj = {
     gap: 8,
-    children: obj(9203)(substr1, num2).map((arr) => {
+    children: obj(9207)(substr1, num2).map((arr) => {
       obj = { style: obj.emojiGridRowContainer, children: null };
       obj = { gap: 32, children: arr.map((guildEmoji) => callback(closure_6, { guildEmoji }, guildEmoji.id)) };
       obj[1] = closure_1_4(doNotDisplayEmojiIds(closure_1_2[10]).GappedList, obj);
       return closure_1_4(closure_1_3, obj, arg1);
     }),
   };
-  obj[1] = jsx(tmp(9205).GappedList, {
+  obj[1] = jsx(tmp(9209).GappedList, {
     gap: 8,
-    children: obj(9203)(substr1, num2).map((arr) => {
+    children: obj(9207)(substr1, num2).map((arr) => {
       obj = { style: obj.emojiGridRowContainer, children: null };
       obj = { gap: 32, children: arr.map((guildEmoji) => callback(closure_6, { guildEmoji }, guildEmoji.id)) };
       obj[1] = closure_1_4(doNotDisplayEmojiIds(closure_1_2[10]).GappedList, obj);
@@ -91,7 +91,7 @@ export const EmojiGrid = function EmojiGrid(numberToShow) {
   });
   return (
     <View gap={8}>
-      {obj(9203)(substr1, num2).map((arr) => {
+      {obj(9207)(substr1, num2).map((arr) => {
         obj = { style: obj.emojiGridRowContainer, children: null };
         obj = { gap: 32, children: arr.map((guildEmoji) => callback(closure_6, { guildEmoji }, guildEmoji.id)) };
         obj[1] = closure_1_4(doNotDisplayEmojiIds(closure_1_2[10]).GappedList, obj);

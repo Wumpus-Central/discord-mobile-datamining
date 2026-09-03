@@ -71,10 +71,10 @@ export default function GuildSelector(disabled) {
     const intl2 = tmp7(1233).intl;
     name = intl2.string(tmp7(1233).t.oM4E1A);
   }
-  items1[2] = callback(selectedGuildId(8372).FormRow, {
+  items1[2] = callback(selectedGuildId(8376).FormRow, {
     label: name,
     disabled: disabled.disabled,
-    trailing: callback(selectedGuildId(8372).FormRow.Arrow, {}),
+    trailing: callback(selectedGuildId(8376).FormRow.Arrow, {}),
     DEPRECATED_style: tmp.select,
     onPress: callback,
   });

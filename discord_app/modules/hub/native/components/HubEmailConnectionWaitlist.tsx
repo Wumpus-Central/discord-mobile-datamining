@@ -47,7 +47,7 @@ export default function HubEmailConnectionWaitlist(school) {
     });
   }, items);
   obj = { style: tmp.container, children: null };
-  obj = { source: navigation(12497), style: tmp.header };
+  obj = { source: navigation(12509), style: tmp.header };
   const items1 = [callback(closure_5, obj), , ,];
   obj1 = { style: tmp.title, accessibilityRole: "header", children: null };
   let intl = onClose(1233).intl;
@@ -62,7 +62,7 @@ export default function HubEmailConnectionWaitlist(school) {
   const intl3 = onClose(1233).intl;
   obj4[1] = intl3.string(onClose(1233).t.i4jeWR);
   obj4[2] = onClose;
-  obj3[1] = callback(onClose(4928).Button, obj4);
+  obj3[1] = callback(onClose(4929).Button, obj4);
   items1[3] = callback(closure_4, obj3);
   obj[1] = items1;
   return callback2(closure_4, obj);

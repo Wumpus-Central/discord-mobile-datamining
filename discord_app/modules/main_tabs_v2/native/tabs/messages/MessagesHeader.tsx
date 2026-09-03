@@ -72,12 +72,12 @@ const memoResult = importAllResult.memo(function MessagesHeader(height) {
     obj = { opacity: obj.withSpring(num) };
     return obj;
   };
-  obj = { withSpring: height(4927).withSpring, scrollPosition };
+  obj = { withSpring: height(4928).withSpring, scrollPosition };
   fn.__closure = obj;
   fn.__workletHash = 17233409273245;
   fn.__initData = closure_11;
   const animatedStyle = obj.useAnimatedStyle(fn);
-  let obj2 = height(15845);
+  let obj2 = height(15861);
   const isHomeDrawerEnabled = obj2.useIsHomeDrawerEnabled();
   const callback = importAllResult.useCallback(() => {
     const rootNavigationRef = height(headerPanel[12]).getRootNavigationRef();
@@ -117,8 +117,8 @@ const memoResult = importAllResult.memo(function MessagesHeader(height) {
     }
   }, []);
   obj = { variant: "primary", icon: null, size: "sm", accessibilityLabel: null, onPress: null };
-  const tmp12 = scrollPosition(5504)("bespoke");
-  obj[1] = callback(height(10909).PlusLargeIcon, { size: "sm", color: scrollPosition(709).colors.WHITE });
+  const tmp12 = scrollPosition(5505)("bespoke");
+  obj[1] = callback(height(10913).PlusLargeIcon, { size: "sm", color: scrollPosition(709).colors.WHITE });
   const intl = height(1233).intl;
   obj[3] = intl.string(height(1233).t.jD1qzM);
   obj[4] = callback3;
@@ -146,14 +146,14 @@ const memoResult = importAllResult.memo(function MessagesHeader(height) {
     onPress: callback2,
     variant: "secondary",
     size: "sm",
-    icon: scrollPosition(6245),
+    icon: scrollPosition(6246),
     accessibilityLabel: null,
   };
   const intl3 = tmp3(1233).intl;
   obj5[4] = intl3.string(height(1233).t["5h0QOP"]);
   const items2 = [
-    callback(height(8015).IconButton, obj5),
-    callback(scrollPosition(15850), { noMargin: true, onPress: callback, alternateVariant: true }),
+    callback(height(8018).IconButton, obj5),
+    callback(scrollPosition(15866), { noMargin: true, onPress: callback, alternateVariant: true }),
     ,
   ];
   const obj6 = {
@@ -168,8 +168,8 @@ const memoResult = importAllResult.memo(function MessagesHeader(height) {
   };
   const intl4 = tmp3(1233).intl;
   obj6[7] = intl4.string(height(1233).t.zIJnA6);
-  items2[2] = callback(height(4928).Button, obj6);
-  items2[3] = callback(height(8015).IconButton, obj);
+  items2[2] = callback(height(4929).Button, obj6);
+  items2[3] = callback(height(8018).IconButton, obj);
   obj4[1] = items2;
   items1[1] = closure_7(closure_4, obj4);
   const items3 = [tmp.headerBorder, animatedStyle];

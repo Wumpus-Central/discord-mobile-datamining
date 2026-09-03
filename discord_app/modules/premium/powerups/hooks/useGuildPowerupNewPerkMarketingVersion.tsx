@@ -75,7 +75,7 @@ export default function useGuildPowerupNewPerkMarketingVersion(guildId) {
           if (obj.canUseMobileServerTagSettings(guildId)) {
             return stateFromStores1.GUILD_TAG;
           }
-          obj = guildId(9753);
+          obj = guildId(9757);
         }
       }
     }

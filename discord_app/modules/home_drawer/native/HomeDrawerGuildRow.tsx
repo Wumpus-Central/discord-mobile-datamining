@@ -173,7 +173,7 @@ function GuildRowWrapper(guild) {
       const tmp = unreadChannel.getMutableGuildStates()[guild.id];
       guild = tmp;
       if (null == tmp) {
-        return { mentionChannel: "ip", mentionChannelName: "isArray", mentionChannelCount: true };
+        return { mentionChannel: "ip", mentionChannelName: "isArray", mentionChannelCount: null };
       } else {
         const keys = disableSubtitle(onActiveHookChange[25]).keys(tmp.mentionCounts);
         const found = keys.filter((id) => {

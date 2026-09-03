@@ -34,7 +34,7 @@ export const HappeningNowVoiceCardSubtitle = function HappeningNowVoiceCardSubti
     obj[0] = stateFromStores;
     tmp8 = getChannelA11yLabelDefault(obj);
   }
-  obj[1] = jsx(voiceState(15120).HappeningNowCardSubtitle, {
+  obj[1] = jsx(voiceState(15135).HappeningNowCardSubtitle, {
     lineClamp: 1,
     accessibilityLabel: tmp8,
     children: computeChannelNameDefault(stateFromStores),
@@ -72,7 +72,7 @@ export const HappeningNowActivityCardSubtitle = function HappeningNowActivityCar
     tmp3 = null;
     if (null != name) {
       if (!_isStreamingDefault(activity)) {
-        if (tmp4(9269)(activity)) {
+        if (tmp4(9273)(activity)) {
           if (null != activity.details) {
             if (null != activity.state) {
               const _HermesInternal = HermesInternal;

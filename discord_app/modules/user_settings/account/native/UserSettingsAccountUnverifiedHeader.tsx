@@ -3,14 +3,14 @@ import noopAll from "../../../../../_runtime/00019_noop.js";
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import getSystemLocale from "../../../../intl/index.native.tsx";
-import _modDef7696 from "../../../../actions/native/EmailVerificationModalActionCreators.tsx";
+import _modDef7699 from "../../../../actions/native/EmailVerificationModalActionCreators.tsx";
 import closure_3 from "../../../../stores/UserStore.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
 function handleOpenEmailVerification() {
-  _modDef7696.open();
+  _modDef7699.open();
 }
 function getBannerText(currentUser) {
   if (null == currentUser) {
@@ -85,7 +85,7 @@ export default function UserSettingsAccountUnverifiedHeader() {
     obj1[3] = tmp4.button;
     items1[1] = callback(tmp2(4474).Text, obj1);
     obj[3] = items1;
-    tmp5 = callback2(tmp2(5076).PressableOpacity, obj);
+    tmp5 = callback2(tmp2(5077).PressableOpacity, obj);
   }
   return tmp5;
 }

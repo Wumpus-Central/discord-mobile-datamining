@@ -76,7 +76,7 @@ export default function calculatePIPState(
   }
   let SquarePIPReferenceDimensions = getTargetDimensions.getTargetDimensions(id1);
   if (SquarePIPReferenceDimensions == null) {
-    SquarePIPReferenceDimensions = tmp13(16903).SquarePIPReferenceDimensions;
+    SquarePIPReferenceDimensions = tmp13(16923).SquarePIPReferenceDimensions;
   }
   if (tmp10) {
     tmp10 = tmp;

@@ -12,14 +12,14 @@ const result = require("set").fileFinishedImporting(
 
 export default function HubSidebarProgressOverview(guild) {
   guild = guild.guild;
-  let obj = guild(12431);
+  let obj = guild(12443);
   const hubProgressBarCompletedSteps = obj.useHubProgressBarCompletedSteps(guild);
-  const nextHubProgressStep = guild(12431).getNextHubProgressStep(hubProgressBarCompletedSteps);
+  const nextHubProgressStep = guild(12443).getNextHubProgressStep(hubProgressBarCompletedSteps);
   if (null == nextHubProgressStep) {
     return null;
   } else {
     const size = hubProgressBarCompletedSteps.size;
-    const hubProgressTitleForStep = tmp(12431).getHubProgressTitleForStep(nextHubProgressStep);
+    const hubProgressTitleForStep = tmp(12443).getHubProgressTitleForStep(nextHubProgressStep);
     if (size < closure_4) {
       const intl2 = tmp(1233).intl;
       obj = { number: null, total: null };
@@ -32,7 +32,7 @@ export default function HubSidebarProgressOverview(guild) {
       formatToPlainStringResult = intl.string(tmp(1233).t["+Gyklt"]);
     }
     const _Math = Math;
-    const bound = Math.max(tmp(12262).MIN_PROGRESS_PERCENT, (100 * size) / tmp11);
+    const bound = Math.max(tmp(12274).MIN_PROGRESS_PERCENT, (100 * size) / tmp11);
     obj = { onPress: null, title: null, subtitle: null, percentComplete: null };
     obj[0] = function onPress() {
       let obj = closure_1_1(closure_1_2[7]);
@@ -42,12 +42,12 @@ export default function HubSidebarProgressOverview(guild) {
     obj[1] = hubProgressTitleForStep;
     obj[2] = formatToPlainStringResult;
     obj[3] = bound;
-    return jsx(tmp(13937).GuildProgressOverviewView, {
+    return jsx(tmp(13953).GuildProgressOverviewView, {
       onPress: null,
       title: null,
       subtitle: null,
       percentComplete: null,
     });
   }
-  const obj2 = guild(12431);
+  const obj2 = guild(12443);
 }

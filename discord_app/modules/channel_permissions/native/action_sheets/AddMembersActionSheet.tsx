@@ -431,7 +431,7 @@ export default function AddMembersActionSheet(channel) {
         }
       });
       dependencyMap = 1;
-      yield closure_1_0(9722).savePermissionUpdates(closure_1_0.id, items);
+      yield closure_1_0(9726).savePermissionUpdates(closure_1_0.id, items);
       if (1 === tmp7) {
         dependencyMap = 0;
         c5 = 3;
@@ -493,7 +493,7 @@ export default function AddMembersActionSheet(channel) {
       }
       obj1 = { scrollable: true, header: null, startExpanded: true, children: null };
       obj[2] = tmp11(tmp12, obj4);
-      obj1[1] = tmp11(tmp4(5629).BottomSheetTitleHeader, obj);
+      obj1[1] = tmp11(tmp4(5630).BottomSheetTitleHeader, obj);
       let obj2 = { style: null, children: null };
       obj2[0] = tmp.container;
       const obj3 = {
@@ -511,7 +511,7 @@ export default function AddMembersActionSheet(channel) {
       obj3[4] = tmp2[1];
       obj2[1] = tmp11(AddMembersBody, obj3);
       obj1[3] = tmp11(closure_8, obj2);
-      return tmp11(tmp4(5630).BottomSheet, obj1);
+      return tmp11(tmp4(5631).BottomSheet, obj1);
     }
     obj4 = { size: "sm", text: null, onPress: null, variant: null, disabled: null };
     const intl = tmp4(1233).intl;

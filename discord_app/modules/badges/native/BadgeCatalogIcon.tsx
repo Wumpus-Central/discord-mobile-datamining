@@ -69,7 +69,7 @@ export default function BadgeCatalogIcon(style) {
     if (url === complex_icon_animated_url) {
       let xml = tmp4.xml;
     } else {
-      let obj5 = complex_icon_animated_url(9011);
+      let obj5 = complex_icon_animated_url(9015);
       xml = obj5.getCachedSvgXml(complex_icon_animated_url);
     }
     obj = { style: null, "aria-hidden": true, children: null };
@@ -80,7 +80,7 @@ export default function BadgeCatalogIcon(style) {
       obj1[0] = xml;
       obj1[1] = size;
       obj1[2] = size;
-      tmp15Result = tmp15(complex_icon_animated_url(8250).SvgXml, obj1);
+      tmp15Result = tmp15(complex_icon_animated_url(8254).SvgXml, obj1);
     }
     obj[2] = tmp15Result;
     return (
@@ -105,7 +105,7 @@ export default function BadgeCatalogIcon(style) {
       obj5[1] = size;
       obj3[1] = obj5;
       obj3[2] = tmp7;
-      obj[2] = tmp8(isMatch(5501), obj3);
+      obj[2] = tmp8(isMatch(5502), obj3);
     }
     return <View {...obj} />;
   }

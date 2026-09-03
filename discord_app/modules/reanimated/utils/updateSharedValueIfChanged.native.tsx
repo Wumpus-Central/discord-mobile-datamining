@@ -24,7 +24,7 @@ const fn = function u(get) {
     obj.runOnUI(fn)(get, arg1);
   }
 };
-let obj = { runOnUI: _mod4217.runOnUI, updateSharedValueIfChanged: "r" };
+let obj = { runOnUI: _mod4217.runOnUI, updateSharedValueIfChanged: "Array" };
 fn.__closure = obj;
 fn.__workletHash = 6367316923455;
 fn.__initData = {
@@ -54,7 +54,7 @@ fn2 = function u(get) {
     const obj = fn2(4217);
   }
 };
-obj = { runOnUI: _mod4217.runOnUI, updateSharedValueArrayIfChanged: "r" };
+obj = { runOnUI: _mod4217.runOnUI, updateSharedValueArrayIfChanged: "Array" };
 fn2.__closure = obj;
 fn2.__workletHash = 10682766507787;
 fn2.__initData = {

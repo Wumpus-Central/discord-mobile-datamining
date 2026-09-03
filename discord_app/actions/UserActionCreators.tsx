@@ -4,7 +4,7 @@ import _modDef38 from "../../_runtime/metro/00038__.js";
 import sendRequest from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import ImpressionNames from "../../discord_common/js/packages/analytics-utils/AnalyticsSchema.tsx";
 import dispatcherDefault from "../Dispatcher.tsx";
-import _modDef4713 from "../utils/TrackedHTTPUtils.tsx";
+import _modDef4714 from "../utils/TrackedHTTPUtils.tsx";
 import closure_3 from "../../_runtime/00005_asyncGeneratorStep.js";
 import closure_4 from "../records/UserRecord.tsx";
 import closure_5 from "../stores/UserStore.tsx";
@@ -405,7 +405,7 @@ export const acceptAgreements = function acceptAgreements() {
   if (arg1 === undefined) {
     flag2 = true;
   }
-  let obj = _modDef4713;
+  let obj = _modDef4714;
   obj = {
     url: Endpoints.USER_AGREEMENTS,
     trackedActionData: null,

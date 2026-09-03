@@ -19,7 +19,7 @@ prototype["isEnabled"] = function isEnabled() {
     const tmpResult = tmp(1234);
   }
   if (isDesktopResult) {
-    const ProcessArgs = tmp(5093).ProcessArgs;
+    const ProcessArgs = tmp(5094).ProcessArgs;
     isDesktopResult = !ProcessArgs.isDiscordTestSet();
   }
   return isDesktopResult;

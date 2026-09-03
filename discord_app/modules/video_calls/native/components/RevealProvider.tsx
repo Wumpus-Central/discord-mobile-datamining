@@ -90,13 +90,13 @@ export default function RevealProvider(showStatus) {
   }
   const obj = { value: tmp2, children: null };
   let tmp10 = !reveal;
-  let tmp4Result = tmp4(9543);
+  let tmp4Result = tmp4(9547);
   if (!reveal) {
     tmp10 = !flag;
   }
   const items1 = [closure_10(tmp4Result, { hidden: tmp10, animated: true, barStyle: str }), children];
   let tmp12 = !reveal;
-  tmp4Result = tmp4(9545);
+  tmp4Result = tmp4(9549);
   if (!reveal) {
     tmp12 = !prefersDeferringSystemGestures;
   }

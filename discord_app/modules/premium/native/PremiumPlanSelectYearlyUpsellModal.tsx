@@ -1,7 +1,7 @@
 // discord_app/modules/premium/native/PremiumPlanSelectYearlyUpsellModal.tsx
 import componentDidMountDefault from "../../../components_native/common/Alert.tsx";
 import createTextStyleDefault from "../../rebrand/native/TextStyles.tsx";
-import registerAssetDefault from "../../../../_runtime/13432_registerAsset.js";
+import registerAssetDefault from "../../../../_runtime/13447_registerAsset.js";
 import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
 import closure_4 from "../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
@@ -58,7 +58,7 @@ export default function PremiumPlanSelectYearlyUpsellModal(arg0) {
   const tmp2 = usePremiumPlanSelectStore((isPurchasing) => isPurchasing.isPurchasing);
   let obj = React;
   [tmp4, c3] = callback(React.useState(null), 2);
-  obj1 = productId(7161);
+  obj1 = productId(7162);
   const premiumBundledItemsFromProductId = obj1.getPremiumBundledItemsFromProductId(productId);
   let obj2 = productId(586);
   let items = [closure_7];
@@ -133,7 +133,7 @@ export default function PremiumPlanSelectYearlyUpsellModal(arg0) {
     };
     obj7[3] = tmp11;
     obj7[4] = "upsell" === tmp4 && tmp2;
-    obj6[1] = callback2(tmp5(4928).Button, obj7);
+    obj6[1] = callback2(tmp5(4929).Button, obj7);
     items2[3] = callback2(closure_6, obj6);
     const obj9 = { style: null, children: null };
     obj9[0] = tmp.continueButton;
@@ -146,7 +146,7 @@ export default function PremiumPlanSelectYearlyUpsellModal(arg0) {
     };
     obj10[3] = tmp11;
     obj10[4] = "default" === tmp4 && tmp2;
-    obj9[1] = callback2(tmp5(4928).Button, obj10);
+    obj9[1] = callback2(tmp5(4929).Button, obj10);
     items2[4] = callback2(closure_6, obj9);
     const obj11 = { style: null, children: null };
     obj11[0] = tmp.cancelButton;
@@ -154,7 +154,7 @@ export default function PremiumPlanSelectYearlyUpsellModal(arg0) {
     const intl5 = tmp5(1233).intl;
     obj12[1] = intl5.string(tmp5(1233).t.cpT0Cq);
     obj12[2] = onClose;
-    obj11[1] = callback2(tmp5(4928).Button, obj12);
+    obj11[1] = callback2(tmp5(4929).Button, obj12);
     items2[5] = callback2(closure_6, obj11);
     obj[1] = items2;
     obj[2] = closure_12(closure_6, obj);

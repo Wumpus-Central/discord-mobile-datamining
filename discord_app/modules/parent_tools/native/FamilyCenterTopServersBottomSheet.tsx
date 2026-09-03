@@ -19,7 +19,7 @@ function GuildRow(guildActivity) {
   if (null == stateFromStores) {
     return null;
   } else {
-    const topUserOrGuildDescription = tmp2(7347).getTopUserOrGuildDescription(
+    const topUserOrGuildDescription = tmp2(7348).getTopUserOrGuildDescription(
       guildActivity.messages_sent,
       guildActivity.call_count,
     );
@@ -30,7 +30,7 @@ function GuildRow(guildActivity) {
     obj[0] = stateFromStores;
     obj[1] = tmp.guildIcon;
     obj[2] = callback(GuildIconSizesDefault, obj);
-    return callback(tmp2(5607).TableRow, obj);
+    return callback(tmp2(5608).TableRow, obj);
   }
   tmp = callback3();
 }

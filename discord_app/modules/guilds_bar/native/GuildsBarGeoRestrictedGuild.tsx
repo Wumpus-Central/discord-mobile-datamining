@@ -4,7 +4,7 @@ import getAvatarURLDefault from "../../../utils/AvatarUtils.tsx";
 import UnreadIndicatorDefault from "GuildsBarAnimatedItemWrapper.tsx";
 import computeGuildsBarCutoutDefault from "utils/computeGuildsBarCutout.tsx";
 import GuildRowWrapperDefault from "../../home_drawer/native/HomeDrawerGuildRow.tsx";
-import _modDef16169 from "GuildsBarGeoRestrictedBadge.tsx";
+import _modDef16185 from "GuildsBarGeoRestrictedBadge.tsx";
 import importAllResult from "../../../../_runtime/00019_noop.js";
 import { GUILD_ITEM_BADGE_SIZE } from "GuildsBarConstants.tsx";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
@@ -30,7 +30,7 @@ let items = [computeGuildsBarCutoutDefault({ position: "bottom-right" })];
 const memoResult = importAllResult.memo(function GuildsBarGeoRestrictedGuild(restrictedGuild) {
   restrictedGuild = restrictedGuild.restrictedGuild;
   const tmp = callback();
-  let obj = restrictedGuild(16116);
+  let obj = restrictedGuild(16132);
   let animatableSourceWithFallback = null;
   if (null != restrictedGuild.icon) {
     obj1 = getAvatarURLDefault;
@@ -89,20 +89,20 @@ const memoResult = importAllResult.memo(function GuildsBarGeoRestrictedGuild(res
   });
   const tmp2 = restrictedGuild;
   obj = { style: tmp.geoRestrictedBadge };
-  obj[9] = jsx(_modDef16169, { style: tmp.geoRestrictedBadge });
+  obj[9] = jsx(_modDef16185, { style: tmp.geoRestrictedBadge });
   obj1 = { guildId: restrictedGuild.id };
   obj[10] = jsx(GuildRowWrapperDefault, { guildId: restrictedGuild.id });
   if (null != animatableSourceWithFallback) {
     const obj2 = { source: null, style: null, fadeDuration: 0 };
     obj2[0] = animatableSourceWithFallback;
     obj2[1] = tmp.guildIcon;
-    let tmp8Result = tmp8(tmp9(5501), obj2);
+    let tmp8Result = tmp8(tmp9(5502), obj2);
   } else {
     const obj3 = { value: null, selected: false, animate: false, size: null };
     obj3[0] = restrictedGuild.name;
-    obj3[3] = tmp2(6012).GuildIconSizes.LARGE;
-    tmp8Result = tmp8(tmp9(6012), obj3);
-    const tmp9Result = tmp9(6012);
+    obj3[3] = tmp2(6013).GuildIconSizes.LARGE;
+    tmp8Result = tmp8(tmp9(6013), obj3);
+    const tmp9Result = tmp9(6013);
   }
   obj[11] = tmp8Result;
   return jsx(UnreadIndicatorDefault, { style: tmp.geoRestrictedBadge });

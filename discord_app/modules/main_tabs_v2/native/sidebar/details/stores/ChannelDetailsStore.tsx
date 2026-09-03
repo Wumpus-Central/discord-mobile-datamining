@@ -19,7 +19,7 @@ export const deleteChannelStates = function deleteChannelStates() {
 };
 export const useIsChannelDetailsSearchActive = function useIsChannelDetailsSearchActive(arg0) {
   closure_0 = arg0;
-  const f82073 = (isSearchActive) => isSearchActive.isSearchActive;
+  const f82218 = (isSearchActive) => isSearchActive.isSearchActive;
   return obj((states) => {
     states = states.states;
     let value = states.get(closure_0);
@@ -28,12 +28,12 @@ export const useIsChannelDetailsSearchActive = function useIsChannelDetailsSearc
       const merged = Object.assign(closure_1_2);
       value = obj;
     }
-    return f82074(value);
+    return f82219(value);
   });
 };
 export const useChannelDetailsSearchActiveSource = function useChannelDetailsSearchActiveSource(arg0) {
   closure_0 = arg0;
-  const f82074 = (searchActiveSource) => searchActiveSource.searchActiveSource;
+  const f82219 = (searchActiveSource) => searchActiveSource.searchActiveSource;
   return obj((states) => {
     states = states.states;
     let value = states.get(closure_0);
@@ -42,7 +42,7 @@ export const useChannelDetailsSearchActiveSource = function useChannelDetailsSea
       const merged = Object.assign(closure_1_2);
       value = obj;
     }
-    return f82074(value);
+    return f82219(value);
   });
 };
 export const setIsChannelDetailsSearchActive = function setIsChannelDetailsSearchActive(

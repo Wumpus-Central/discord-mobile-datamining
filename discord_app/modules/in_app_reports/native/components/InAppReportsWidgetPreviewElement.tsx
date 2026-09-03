@@ -44,10 +44,10 @@ export default function WidgetPreview(arg0) {
         obj[1] = widget;
         const items1 = [tmp4.card, tmp.card];
         obj[3] = items1;
-        tmp6 = callback(tmp5(8815).WidgetSection, obj);
+        tmp6 = callback(tmp5(8819).WidgetSection, obj);
       }
     }
-    tmp5Result = tmp5(7377);
+    tmp5Result = tmp5(7378);
   }
   let tmp9 = null;
   if (null !== tmp6) {

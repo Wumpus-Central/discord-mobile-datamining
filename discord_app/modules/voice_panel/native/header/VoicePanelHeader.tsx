@@ -46,13 +46,13 @@ function MusicMuteButton(channelId) {
       }
       obj = { accessibilityLabel: null, icon: null, onPress: null };
       obj[0] = stringResult;
-      obj[1] = tmp(stateFromStores ? 10023 : 9265);
+      obj[1] = tmp(stateFromStores ? 10027 : 9269);
       obj[2] = function onPress() {
         return stateFromStores(closure_1_2[33]).updateStageMusicMuted(!stateFromStores);
       };
-      closure_23(tmp(16851), obj);
+      closure_23(tmp(16871), obj);
       const tmp7 = closure_23;
-      const tmpResult = tmp(16851);
+      const tmpResult = tmp(16871);
     }
   }
   return tmp6;

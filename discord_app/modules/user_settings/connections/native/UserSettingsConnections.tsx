@@ -106,8 +106,8 @@ export const UserSettingsConnections = function UserSettingsConnections(selected
         ),
       ];
       obj[1] = items5;
-      obj[1] = callback2(tmp4(4926).Stack, obj);
-      tmp14 = callback(tmp4(8372).Form, obj);
+      obj[1] = callback2(tmp4(4927).Stack, obj);
+      tmp14 = callback(tmp4(8376).Form, obj);
     }
     return tmp14;
   }

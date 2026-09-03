@@ -27,9 +27,9 @@ class VoiceNotificationManager {
       connectionState: "content",
       selfMute: false,
       deafened: null,
-      isPushToTalk: "SEPA_INVALID_MANDATE_TYPE",
-      embeddedActivity: "SEPA mandate type is invalid",
-      isStreaming: "aC",
+      isPushToTalk: "PAYPAL_START_VAULT_INITIATED_CHECKOUT_SETUP_FAILED",
+      embeddedActivity: "Something went wrong when setting up the checkout workflow.",
+      isStreaming: "Djibouti",
     };
     obj.handleVoiceStateChange = function handleVoiceStateChange() {
       const channelId = closure_1_9.getChannelId();
@@ -247,9 +247,9 @@ set.state = {
   connectionState: "content",
   selfMute: false,
   deafened: null,
-  isPushToTalk: "SEPA_INVALID_MANDATE_TYPE",
-  embeddedActivity: "SEPA mandate type is invalid",
-  isStreaming: "aC",
+  isPushToTalk: "PAYPAL_START_VAULT_INITIATED_CHECKOUT_SETUP_FAILED",
+  embeddedActivity: "Something went wrong when setting up the checkout workflow.",
+  isStreaming: "Djibouti",
 };
 set.handleVoiceStateChange = function handleVoiceStateChange() {
   const channelId = closure_1_9.getChannelId();

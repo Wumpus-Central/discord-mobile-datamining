@@ -121,7 +121,7 @@ const maskedLinkStore = new MaskedLinkStore(dispatcherDefault, {
     if (flag) {
       return false;
     } else {
-      set.add(tmp(8659).getHostname(url));
+      set.add(tmp(8663).getHostname(url));
       const Storage = tmp(592).Storage;
       obj = { trustedDomains: null, trustedProtocols: null };
       obj[0] = set;
@@ -135,7 +135,7 @@ const maskedLinkStore = new MaskedLinkStore(dispatcherDefault, {
     if (set1.has(obj.getProtocol(url))) {
       return false;
     } else {
-      set1.add(tmp(8659).getProtocol(url));
+      set1.add(tmp(8663).getProtocol(url));
       const Storage = tmp(592).Storage;
       obj = { trustedDomains: null, trustedProtocols: null };
       obj[0] = set;

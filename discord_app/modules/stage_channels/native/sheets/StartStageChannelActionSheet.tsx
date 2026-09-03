@@ -89,14 +89,14 @@ export default function StartStageChannelEventActionSheet(channel) {
                 const result = obj3.dismissGlobalKeyboard();
                 dependencyMap = 1;
                 if (null != closure_1_1) {
-                  let tmp33Result = tmp33(8684);
+                  let tmp33Result = tmp33(8688);
                   v0 = 3;
                   c5 = 1;
                   obj1 = { value: null, done: false };
                   obj1[0] = tmp33Result.editStage(closure_1_0, tmp54, closure_1_12.GUILD_ONLY);
                   return obj1;
                 } else {
-                  tmp33Result = tmp33(8684);
+                  tmp33Result = tmp33(8688);
                   v0 = 2;
                   c5 = 1;
                   const obj2 = { value: null, done: false };
@@ -177,8 +177,8 @@ export default function StartStageChannelEventActionSheet(channel) {
   const tmp7 = _handleSave(obj1.useState(false), 2);
   [obj3, c4] = _handleSave(obj1.useState(null), 2);
   const tmp9 = _handleSave(obj1.useState(null), 2);
-  const shouldAgeVerifyToSpeakForCurrentUser = channel(5374).useShouldAgeVerifyToSpeakForCurrentUser(channel.id);
-  stateFromStores(4945)(() => {
+  const shouldAgeVerifyToSpeakForCurrentUser = channel(5375).useShouldAgeVerifyToSpeakForCurrentUser(channel.id);
+  stateFromStores(4946)(() => {
     let obj = stateFromStores(_undefined[14]);
     let id;
     if (stateFromStores != null) {
@@ -188,7 +188,7 @@ export default function StartStageChannelEventActionSheet(channel) {
     obj.track(closure_1_11.START_STAGE_OPENED, obj);
   });
   obj = { style: tmp.header, children: null };
-  const items1 = [callback(stateFromStores(8693), {}), ,];
+  const items1 = [callback(stateFromStores(8697), {}), ,];
   obj = {
     style: tmp.headerTitle,
     accessibilityRole: "header",
@@ -218,7 +218,7 @@ export default function StartStageChannelEventActionSheet(channel) {
   obj[1] = items1;
   let stringResult2;
   const tmp11 = stateFromStores;
-  const tmp2Result = channel(5374);
+  const tmp2Result = channel(5375);
   if (null == stateFromStores) {
     const intl5 = tmp2(1233).intl;
     stringResult2 = intl5.string(tmp2(1233).t.gR66jX);
@@ -257,8 +257,8 @@ export default function StartStageChannelEventActionSheet(channel) {
   const intl8 = tmp2(1233).intl;
   obj3[8] = intl8.string(channel(1233).t["5FPBOB"]);
   obj3[9] = handleSave;
-  items2[1] = callback(channel(7714).TextInput, obj3);
-  items2[2] = callback(tmp11(8696), {
+  items2[1] = callback(channel(7717).TextInput, obj3);
+  items2[2] = callback(tmp11(8700), {
     onConfirmPress() {
       return stateFromStores(_undefined[17]).hideActionSheet(closure_10);
     },
@@ -281,7 +281,7 @@ export default function StartStageChannelEventActionSheet(channel) {
     const intl9 = tmp2(1233).intl;
     stringResult3 = intl9.string(tmp2(1233).t.K344S7);
   }
-  obj6[1] = callback(channel(4928).Button, {
+  obj6[1] = callback(channel(4929).Button, {
     text: stringResult3,
     onPress: handleSave,
     disabled: "" === first,
@@ -314,8 +314,8 @@ export default function StartStageChannelEventActionSheet(channel) {
   const tmp13Result = closure_14(View, obj);
   items2[5] = tmp15Result;
   obj2[2] = items2;
-  return callback(channel(5630).BottomSheet, {
+  return callback(channel(5631).BottomSheet, {
     keyboardShouldPersistTaps: "always",
-    children: closure_14(channel(5561).SafeAreaPaddingView, obj2),
+    children: closure_14(channel(5562).SafeAreaPaddingView, obj2),
   });
 }

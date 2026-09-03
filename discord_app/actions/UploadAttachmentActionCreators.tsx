@@ -13,14 +13,14 @@ export default {
   addFiles(draftType) {
     ({ files, channelId } = draftType);
     draftType = draftType.draftType;
-    if (files.some(channelId(8172).itemNeedsHeicPreConversion)) {
+    if (files.some(channelId(8176).itemNeedsHeicPreConversion)) {
       function dispatch(files) {
         let obj = draftType(closure_1_2[0]);
         obj = { type: "UPLOAD_ATTACHMENT_ADD_FILES", channelId, files, draftType };
         obj.dispatch(obj);
       }
-      Promise.all(files.map(channelId(8172).maybePreConvertHeicItem)).then(dispatch);
-      const allPromises = Promise.all(files.map(channelId(8172).maybePreConvertHeicItem));
+      Promise.all(files.map(channelId(8176).maybePreConvertHeicItem)).then(dispatch);
+      const allPromises = Promise.all(files.map(channelId(8176).maybePreConvertHeicItem));
     } else {
       let obj = draftType(706);
       obj = { type: "UPLOAD_ATTACHMENT_ADD_FILES", channelId: null, files: null, draftType: null };

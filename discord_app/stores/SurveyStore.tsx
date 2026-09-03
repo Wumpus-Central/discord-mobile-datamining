@@ -710,12 +710,16 @@ obj = {
     id = id.id;
     if (id.isActionTriggered) {
       c19 = id;
+      if (null != id) {
+        const hiddenSurveys2 = obj.hiddenSurveys;
+        delete tmp[tmp2];
+      }
     } else {
       c19 = null;
       obj.surveyOverride = id;
       if (null != id) {
         const hiddenSurveys = obj.hiddenSurveys;
-        delete tmp2[tmp];
+        delete tmp3[tmp2];
       }
       obj = overrideSurvey;
       obj.surveyFetch(obj.surveyOverride, true);

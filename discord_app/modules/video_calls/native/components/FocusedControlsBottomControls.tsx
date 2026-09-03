@@ -61,7 +61,7 @@ function FocusedControlsExpanded(children) {
 function FocusedControlsBottomDrawerTooltip(positionY) {
   positionY = positionY.positionY;
   const tmp = callback3();
-  let obj = positionY(9675);
+  let obj = positionY(9679);
   const canShowTooltip = obj.useCanShowTooltip(positionY(688).TooltipNames.SCREENSHARE_SWIPE_UP_CONTROLS, true);
   positionY(4217);
   const fn = function o() {
@@ -123,7 +123,7 @@ function FocusedControlsAboveActionBarView(positionY) {
   const animatedStyle = obj.useAnimatedStyle(fn);
   const items = [
     callback2(FocusedControlsBottomDrawerTooltip, { positionY }),
-    callback2(positionY(5945).ActionSheetHeaderBar, {}),
+    callback2(positionY(5946).ActionSheetHeaderBar, {}),
   ];
   let tmp4Result = null != aboveActionBar;
   if (tmp4Result) {

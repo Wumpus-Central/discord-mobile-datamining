@@ -82,7 +82,7 @@ function ArchivedLockedThreadChatBanner(channel) {
     obj.banner_type = "thread";
     obj.track(closure_1_10.CHANNEL_BANNER_VIEWED, obj);
   }, items);
-  let obj = channel(6124);
+  let obj = channel(6125);
   let canUnarchiveThread = obj.useCanUnarchiveThread(channel);
   obj = { style: tmp.threadBannerContainer, children: null };
   obj = {
@@ -120,7 +120,7 @@ function ArchivedLockedThreadChatBanner(channel) {
       const obj4 = channel(closure_1_2[14]);
       closure_1_1(closure_1_2[20]).unarchiveThread(channel, false);
     };
-    obj1[1] = tmp8(tmp3(4928).Button, obj2);
+    obj1[1] = tmp8(tmp3(4929).Button, obj2);
     canUnarchiveThread = tmp8(tmp7, obj1);
   }
   items1[1] = canUnarchiveThread;
@@ -140,7 +140,7 @@ function LockedThreadChatBanner(channel) {
     obj.banner_type = "thread";
     obj.track(closure_1_10.CHANNEL_BANNER_VIEWED, obj);
   }, items);
-  let obj = channel(6124);
+  let obj = channel(6125);
   let isThreadModerator = obj.useIsThreadModerator(channel);
   obj = { style: tmp.threadBannerContainer, children: null };
   obj = {
@@ -178,7 +178,7 @@ function LockedThreadChatBanner(channel) {
       const obj4 = channel(closure_1_2[14]);
       closure_1_1(closure_1_2[20]).unlockThread(channel);
     };
-    obj1[1] = tmp8(tmp3(4928).Button, obj2);
+    obj1[1] = tmp8(tmp3(4929).Button, obj2);
     isThreadModerator = tmp8(tmp7, obj1);
   }
   items1[1] = isThreadModerator;
@@ -212,8 +212,8 @@ function NewMessagesChatBar(channel) {
       obj1[1] = channel.oldestUnreadTimestamp;
       obj[2] = intl.format(estimated.isEstimated(channel.id) ? t.wvtbbG : t["BctFH/"], obj1);
       obj[3] = callback(XSmallBoldIcon(4474).Text, obj);
-      const items1 = [callback(XSmallBoldIcon(5076).PressableOpacity, obj)];
-      handleScrollToNewMessages = XSmallBoldIcon(5076).PressableOpacity;
+      const items1 = [callback(XSmallBoldIcon(5077).PressableOpacity, obj)];
+      handleScrollToNewMessages = XSmallBoldIcon(5077).PressableOpacity;
       const obj2 = {
         style: null,
         accessibilityRole: "button",
@@ -234,7 +234,7 @@ function NewMessagesChatBar(channel) {
         };
         return obj.ack(channel.id, obj);
       };
-      XSmallBoldIcon = XSmallBoldIcon(7891).XSmallBoldIcon;
+      XSmallBoldIcon = XSmallBoldIcon(7894).XSmallBoldIcon;
       const obj3 = { size: "sm", color: null };
       WHITE = ThemesDefault.colors.WHITE;
       obj3[1] = WHITE;

@@ -140,12 +140,28 @@ export const ViolationType = {
   GUILD_MEMBER: 3,
   [3]: "GUILD_MEMBER",
 };
+export const SuspendedAgeCheckStatus = {
+  PENDING: 1,
+  [1]: "PENDING",
+  UNBANNED: 2,
+  [2]: "UNBANNED",
+  VERIFIED_OTHER_VIOLATIONS_REMAIN: 3,
+  [3]: "VERIFIED_OTHER_VIOLATIONS_REMAIN",
+  UNDERAGE: 4,
+  [4]: "UNDERAGE",
+  UNDERAGE_MANUAL_REVIEW: 5,
+  [5]: "UNDERAGE_MANUAL_REVIEW",
+};
 export const AgeCheckStatus = {
   LOADING: "loading",
   ERROR: "error",
   SUCCESS: "success",
   FAILURE: "failure",
   NONE: "none",
+  VERIFIED: "verified",
+  VERIFIED_OTHER_VIOLATIONS_REMAIN: "verified_other_violations_remain",
+  UNDERAGE: "underage",
+  UNDERAGE_MANUAL_REVIEW: "underage_manual_review",
 };
 export const AGE_CHECK_POLL_DELAY_MS = 2000;
 export const AGE_CHECK_POLL_INTERVAL_MS = 15000;

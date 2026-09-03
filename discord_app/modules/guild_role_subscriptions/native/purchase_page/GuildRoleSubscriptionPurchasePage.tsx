@@ -4,7 +4,7 @@ import ThemesDefault from "../../../../../discord_common/js/packages/tokens/nati
 import getSystemLocale from "../../../../intl/index.native.tsx";
 import Button from "../../../../design/void/native.tsx";
 import Text from "../../../../design/components/Text/native/Text.tsx";
-import registerAssetDefault from "../../../../../_runtime/10052_registerAsset.js";
+import registerAssetDefault from "../../../../../_runtime/10056_registerAsset.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import closure_8 from "../../../user_settings/ThemeStore.tsx";
 import closure_9 from "../../../../stores/ChannelStore.tsx";

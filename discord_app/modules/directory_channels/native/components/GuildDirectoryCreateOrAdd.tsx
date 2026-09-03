@@ -116,13 +116,13 @@ let closure_13 = importAllResult.memo((guild) => {
   );
   obj = {
     label: guild.name,
-    icon: callback(directoryChannelId(6012), obj),
-    trailing: callback(directoryChannelId(12103), { entry: stateFromStores }),
+    icon: callback(directoryChannelId(6013), obj),
+    trailing: callback(directoryChannelId(12109), { entry: stateFromStores }),
     start,
     end,
   };
   obj = { style: callback3().guildIcon, guild };
-  return callback(guild(5607).TableRow, obj);
+  return callback(guild(5608).TableRow, obj);
 });
 let closure_14 = importAllResult.memo((guild) => {
   guild = guild.guild;
@@ -139,11 +139,11 @@ let closure_14 = importAllResult.memo((guild) => {
     end: null,
   };
   obj = { style: callback3().guildIcon, guild };
-  obj[2] = callback(handleItemPress(6012), obj);
-  obj[3] = callback(guild(5607).TableRow.Arrow, {});
+  obj[2] = callback(handleItemPress(6013), obj);
+  obj[3] = callback(guild(5608).TableRow.Arrow, {});
   obj[4] = start;
   obj[5] = end;
-  return callback(guild(5607).TableRow, obj);
+  return callback(guild(5608).TableRow, obj);
 });
 let obj2 = { paddingHorizontal: ThemesDefault.space.PX_12, width: "100%", marginTop: 18 };
 const result = require("set").fileFinishedImporting(

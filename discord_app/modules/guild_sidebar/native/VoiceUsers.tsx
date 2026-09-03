@@ -133,7 +133,7 @@ let closure_12 = importAllResult.memo((voiceState) => {
     isGuest: null,
   };
   const tmp = channel;
-  tmp3 = callback2(channel(7627)());
+  tmp3 = callback2(channel(7628)());
   const tmp6 = View;
   if (member == null) {
     member = storeMember;
@@ -151,7 +151,7 @@ let closure_12 = importAllResult.memo((voiceState) => {
   obj[9] = voiceState2.sessionId;
   obj[10] = channel;
   obj[11] = isGuest;
-  obj[1] = closure_6(channel(15942), obj, user.id);
+  obj[1] = closure_6(channel(15958), obj, user.id);
   return closure_6(tmp6, obj);
 });
 const result = require("set").fileFinishedImporting("modules/guild_sidebar/native/VoiceUsers.tsx");

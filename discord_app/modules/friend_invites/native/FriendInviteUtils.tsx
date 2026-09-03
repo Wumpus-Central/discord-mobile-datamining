@@ -16,7 +16,7 @@ export const revokeAllFriendInvites = function revokeAllFriendInvites() {
     obj = { key: "TOAST_FRIEND_INVITES_REVOKED", content: null, icon: null };
     const intl = callback(1233).intl;
     obj[1] = intl.string(callback(1233).t.jSHEOQ);
-    obj[2] = callback2(9531);
+    obj[2] = callback2(9535);
     obj.open(obj);
   });
 };

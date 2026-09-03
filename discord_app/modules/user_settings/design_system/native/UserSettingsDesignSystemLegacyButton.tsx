@@ -72,7 +72,7 @@ function ComparisonRow(entry) {
     obj5[0] = redesignVariant;
     obj5[2] = redesignVariant;
     obj5[3] = function onPress() {};
-    items5[1] = tmp9(tmp4(4928).Button, obj5);
+    items5[1] = tmp9(tmp4(4929).Button, obj5);
     obj4[1] = items5;
     let tmp9Result = tmp7(tmp8, obj4);
   } else {
@@ -811,7 +811,7 @@ export default function UserSettingsDesignSystemLegacyButton() {
   items1[1] = entries.map((arg0) => {
     [tmp, arr] = arg0;
     return callback2(
-      callback(8372).FormSection,
+      callback(8376).FormSection,
       { title: tmp, children: arr.map((entry) => callback(closure_8, { entry }, arg1)) },
       "cmp-" + tmp,
     );
@@ -831,7 +831,7 @@ export default function UserSettingsDesignSystemLegacyButton() {
   items1[3] = entries1.map((arg0) => {
     [tmp, arr] = arg0;
     return callback2(
-      callback(8372).FormSection,
+      callback(8376).FormSection,
       {
         title: "" + tmp + " (" + arr.reduce((arg0, count) => arg0 + count.count, 0) + " usages)",
         children: arr.map((combo) => callback(closure_9, { combo }, arg1)),

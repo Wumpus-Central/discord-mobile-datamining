@@ -3,7 +3,7 @@ import set from "../../../_runtime/00002_set.js";
 import CHANGELOG_MODAL_KEY2 from "ChangelogConstants.tsx";
 import asyncRequireImpl from "../../../_runtime/02008_asyncRequireImpl.js";
 import coerceMainRoute from "../main_tabs_v2/helpers/NavigationRouteUtils.native.tsx";
-import _modDef4723 from "../../actions/ModalActionCreators.tsx";
+import _modDef4724 from "../../actions/ModalActionCreators.tsx";
 
 const CHANGELOG_MODAL_KEY = CHANGELOG_MODAL_KEY2.CHANGELOG_MODAL_KEY;
 const result = set.fileFinishedImporting("modules/changelog/openChangelog.native.tsx");
@@ -19,7 +19,7 @@ export const openChangelog = function openChangelog() {
     const obj = coerceMainRoute;
   }
   if (!isModalOpenResult) {
-    _modDef4723.pushLazy(asyncRequireImpl(15370, dependencyMap.paths), {}, CHANGELOG_MODAL_KEY);
-    const obj2 = _modDef4723;
+    _modDef4724.pushLazy(asyncRequireImpl(15384, dependencyMap.paths), {}, CHANGELOG_MODAL_KEY);
+    const obj2 = _modDef4724;
   }
 };

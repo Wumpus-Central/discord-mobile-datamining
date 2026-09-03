@@ -158,7 +158,7 @@ function _guildRoomConnect() {
                 let tmp67 = items;
                 let tmp68 = callback;
                 let tmp69 = dependencyMap;
-                let obj16 = callback(4699);
+                let obj16 = callback(4700);
                 let obj7 = { guildId: null, channelId: null };
                 let tmp70 = callback;
                 obj7[0] = callback;
@@ -167,10 +167,10 @@ function _guildRoomConnect() {
                 let result = obj16.trackGuildRoomUserConnected(obj7);
                 let tmp73 = callback;
                 let tmp74 = dependencyMap;
-                let obj18 = callback(4710);
+                let obj18 = callback(4711);
                 let tmp75 = callback;
                 let tmp76 = dependencyMap;
-                let fireSurveyActionResult = obj18.fireSurveyAction(callback(4718).SurveyActionTypes.GUILD_ROOM_JOINED);
+                let fireSurveyActionResult = obj18.fireSurveyAction(callback(4719).SurveyActionTypes.GUILD_ROOM_JOINED);
                 let tmp78 = users;
                 users = users.users;
                 let tmp79 = id;
@@ -208,7 +208,7 @@ function _guildRoomConnect() {
                     c10 = tmp10;
                     let tmp13 = callback;
                     let tmp14 = dependencyMap;
-                    obj = callback(4699);
+                    obj = callback(4700);
                     obj12 = { channelId: null, update: null };
                     let tmp15 = callback2;
                     obj12[0] = callback2;
@@ -222,7 +222,7 @@ function _guildRoomConnect() {
                   let tmp19 = items;
                   let tmp20 = callback;
                   let tmp21 = dependencyMap;
-                  obj2 = callback(4699);
+                  obj2 = callback(4700);
                   obj13 = {
                     guildId: null,
                     channelId: null,
@@ -274,7 +274,7 @@ function _guildRoomConnect() {
 }
 function _guildRoomUpdate() {
   const self = this;
-  const tmp = callback((arg0, arg1, arg2) => {
+  let tmp = callback((arg0, arg1, arg2) => {
     closure_0 = arg0;
     closure_1 = arg1;
     closure_2 = arg2;
@@ -310,12 +310,16 @@ function _guildRoomUpdate() {
             } else {
               let id = tmp3;
               let room = tmp5;
+              let tmp = closure_2;
               room = undefined;
               id = undefined;
               let roomObjects;
               c6 = undefined;
               users = undefined;
               c8 = undefined;
+              tmp = closure_1_5;
+              tmp = callback;
+              tmp = callback2;
               room = closure_1_5.getRoom(callback2);
               id = closure_1_5.getRoomUsers(callback2);
               roomObjects = closure_1_5.getRoomObjects(callback2);
@@ -324,44 +328,44 @@ function _guildRoomUpdate() {
               obj1[1] = callback2;
               let background;
               if (closure_2 != null) {
-                background = tmp95.background;
+                background = tmp.background;
               }
               if (null != background) {
-                obj1.background = tmp95.background;
+                obj1.background = tmp.background;
               }
               let user_position;
-              if (closure_2 != null) {
-                user_position = tmp95.user_position;
+              if (tmp != null) {
+                user_position = tmp.user_position;
               }
               if (null != user_position) {
-                obj1.position = tmp95.user_position;
+                obj1.position = tmp.user_position;
               }
               let user_seat;
-              if (closure_2 != null) {
-                user_seat = tmp95.user_seat;
+              if (tmp != null) {
+                user_seat = tmp.user_seat;
               }
               if (null != user_seat) {
-                obj1.seat = tmp95.user_seat;
+                obj1.seat = tmp.user_seat;
               }
               let user_status_id;
-              if (closure_2 != null) {
-                user_status_id = tmp95.user_status_id;
+              if (tmp != null) {
+                user_status_id = tmp.user_status_id;
               }
               if (null != user_status_id) {
-                obj1.statusId = tmp95.user_status_id;
+                obj1.statusId = tmp.user_status_id;
               }
               let user_status_text;
-              if (closure_2 != null) {
-                user_status_text = tmp95.user_status_text;
+              if (tmp != null) {
+                user_status_text = tmp.user_status_text;
               }
               if (null != user_status_text) {
-                obj1.statusText = tmp95.user_status_text;
+                obj1.statusText = tmp.user_status_text;
               }
               callback2(closure_2[7]).dispatch(obj1);
               const HTTP = callback(closure_2[5]).HTTP;
               const obj2 = { url: null, body: null, rejectWithError: true };
-              obj2[0] = c6.GUILD_ROOM_UPDATE(callback, callback2);
-              obj2[1] = closure_2;
+              obj2[0] = c6.GUILD_ROOM_UPDATE(tmp, tmp);
+              obj2[1] = tmp;
               users = 2;
               c8 = 1;
               let obj3 = { value: null, done: false };
@@ -371,7 +375,6 @@ function _guildRoomUpdate() {
           } else if (1 === tmp8) {
             c6 = 0;
             closure_9 = roomObjects;
-            let obj12 = callback2(closure_2[7]);
             const obj4 = {
               type: "GUILD_ROOM_UPDATE_FAILURE",
               originalRoom: null,
@@ -383,7 +386,7 @@ function _guildRoomUpdate() {
             obj4[2] = id;
             obj4[3] = roomObjects;
             obj4[4] = callback;
-            obj12.dispatch(obj4);
+            callback2(closure_2[7]).dispatch(obj4);
             throw closure_9;
           } else if (arg0 === 1) {
             c8 = 3;
@@ -432,7 +435,7 @@ function _guildRoomUpdate() {
                 obj6 = callback(closure_2[8]);
                 const obj10 = { channelId: null, update: null };
                 obj10[0] = callback2;
-                const obj11 = { updateType: "status_text", updateReason: "user_selected", statusText: null };
+                let obj11 = { updateType: "status_text", updateReason: "user_selected", statusText: null };
                 obj11[2] = closure_2.user_status_text;
                 obj10[1] = obj11;
                 const result2 = obj6.trackGuildRoomUserUpdated(obj10);
@@ -442,11 +445,14 @@ function _guildRoomUpdate() {
                 user_position2 = closure_2.user_position;
               }
               if (null != user_position2) {
+                tmp = users;
                 users = users.users;
+                tmp = id;
                 c8 = users.get(id.getId());
+                tmp = c8;
                 if (null != c8) {
                   obj9 = callback(closure_2[8]);
-                  obj12 = {
+                  const obj12 = {
                     guildId: null,
                     channelId: null,
                     actualSeatPosition: null,
@@ -463,16 +469,30 @@ function _guildRoomUpdate() {
                   const result3 = obj9.trackGuildRoomSeatSelected(obj12);
                 }
               }
+              let background1;
+              if (closure_2 != null) {
+                background1 = closure_2.background;
+              }
+              if (null != background1) {
+                obj11 = callback(closure_2[8]);
+                const obj13 = { guildId: null, channelId: null, update: null };
+                obj13[0] = callback;
+                obj13[1] = callback2;
+                const obj14 = { updateType: "background", background: null };
+                obj14[1] = closure_2.background;
+                obj13[2] = obj14;
+                const result4 = obj11.trackGuildRoomUpdated(obj13);
+              }
             }
             c6 = 0;
             c8 = 3;
             return { value: "HermesInternal", done: null };
           }
-        } catch (tmp71) {
-          roomObjects = tmp71;
+        } catch (tmp81) {
+          roomObjects = tmp81;
           if (tmp4 === c6) {
             c8 = tmp2;
-            throw tmp71;
+            throw tmp81;
           } else {
             users = tmp;
           }
@@ -675,7 +695,7 @@ function _createGuildRoomNote() {
             return obj5;
           } else {
             if (callback2 !== callback) {
-              obj = callback(4699);
+              obj = callback(4700);
               const obj6 = { interactionType: "note_created", guildId: null, channelId: null };
               obj6[1] = callback;
               obj6[2] = callback2;
@@ -761,7 +781,7 @@ function _deleteGuildRoomNote() {
             return obj3;
           } else {
             if (closure_1 !== callback) {
-              obj = callback(4699);
+              obj = callback(4700);
               const obj4 = { interactionType: "note_deleted", guildId: null, channelId: null };
               obj4[1] = callback;
               obj4[2] = closure_1;
@@ -803,7 +823,7 @@ function _fetchGuildRoom() {
       yield HTTP.get(obj1);
       if (1 === tmp7) {
         c5 = 0;
-        const obj4 = callback(4719);
+        const obj4 = callback(4720);
         obj4.handleGuildRoomError({ silent: true });
         c7 = 3;
       } else if (arg0 === 1) {

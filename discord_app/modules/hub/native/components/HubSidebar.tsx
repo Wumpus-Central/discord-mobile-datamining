@@ -34,8 +34,8 @@ function HubItem(arg0) {
     channelInfo: null,
   };
   const tmp = callback2();
-  obj[6] = callback(tmp5(12171).BaseChannelName, { name: label, mode: DEFAULT });
-  obj[7] = callback(tmp5(12171).BaseChannelIcon, { mode: DEFAULT, IconComponent });
+  obj[6] = callback(tmp5(12177).BaseChannelName, { name: label, mode: DEFAULT });
+  obj[7] = callback(tmp5(12177).BaseChannelIcon, { mode: DEFAULT, IconComponent });
   let tmp6Result = null;
   if (null != unreadCount) {
     obj = { value: null };
@@ -78,7 +78,7 @@ export default function HubSidebar(guild) {
     }
     return tmp2;
   });
-  guild(16032);
+  guild(16048);
   let tmp9Result = null;
   if (null != stateFromStores) {
     let row = null;
@@ -89,10 +89,10 @@ export default function HubSidebar(guild) {
     obj[0] = row;
     obj = { guild: null };
     obj[0] = guild;
-    const items4 = [callback(stateFromStores(16033), obj), , ,];
+    const items4 = [callback(stateFromStores(16049), obj), , ,];
     obj1 = { active: null, IconComponent: null, label: null, handleItemClick: null, unreadCount: null };
     obj1[0] = stateFromStores1;
-    obj1[1] = tmp(15421).CompassIcon;
+    obj1[1] = tmp(15435).CompassIcon;
     const intl = tmp(1233).intl;
     obj1[2] = intl.string(tmp(1233).t.K50GHd);
     obj1[3] = function handleItemClick() {
@@ -101,11 +101,11 @@ export default function HubSidebar(guild) {
     obj1[4] = tmp7;
     items4[1] = callback(HubItem, obj1);
     obj2 = { IconComponent: null, label: null, handleItemClick: null };
-    obj2[0] = tmp(12515).PlusMediumIcon;
+    obj2[0] = tmp(12527).PlusMediumIcon;
     const intl2 = tmp(1233).intl;
     obj2[1] = intl2.string(tmp(1233).t.emRpdS);
     obj2[2] = function handleItemClick() {
-      let obj = stateFromStores(12098);
+      let obj = stateFromStores(12104);
       obj = { directoryGuildName: guild.name, directoryGuildId: guild.id, directoryChannelId: stateFromStores.id };
       return obj.open(obj);
     };
@@ -115,7 +115,7 @@ export default function HubSidebar(guild) {
     const intl3 = tmp(1233).intl;
     obj3[1] = intl3.string(tmp(1233).t.MJQOuJ);
     obj3[2] = function handleItemClick() {
-      const result = guild(9931).handleOpenInviteActionsheet(
+      const result = guild(9935).handleOpenInviteActionsheet(
         guild,
         stateFromStores.id,
         dependencyMap,

@@ -101,8 +101,4 @@ export const formatVibegrationsAttachmentLimit = function formatVibegrationsAtta
   return "" + Math.round(arg0 / 1048576) + " MB";
 };
 export const VIBEGRATIONS_FALLBACK_MODEL_CHOICES = obj;
-export const VIBEGRATIONS_FALLBACK_MODEL_SETTINGS = {
-  main: { model: "gpt-5.6-sol", thinking: "high" },
-  subagent: { model: "gpt-5.6-luna", thinking: "high" },
-};
 export const VIBEGRATIONS_DEV_FALLBACK_MODEL_CHOICES = obj;

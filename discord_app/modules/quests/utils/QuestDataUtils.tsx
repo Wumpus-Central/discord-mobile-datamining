@@ -25,9 +25,9 @@ function getQuestDeliveryDataForPlacement(arg0, adContentId) {
           trafficMetadataSealed: null,
           provenanceMetadataSealed: null,
         };
-        let tmpResult = tmp(7455);
+        let tmpResult = tmp(7456);
         obj[0] = tmpResult.getDeliveredQuestId(adDecisionByPlacementAndAdCreativeId.creative);
-        tmpResult = tmp(7455);
+        tmpResult = tmp(7456);
         obj[1] = tmpResult.getDeliveredAdCreativeId(adDecisionByPlacementAndAdCreativeId.creative);
         ({
           adDecisionData: obj[2],
@@ -48,7 +48,7 @@ function getQuestDeliveryDataForPlacement(arg0, adContentId) {
   } else {
     const deliveryAdDecisionByPlacement = obj.deliveryAdDecisionByPlacement;
     const value = deliveryAdDecisionByPlacement.get(arg0);
-    if (arg0 === tmp(5398).AdPlacement.QUEST_HOME_BANNER_DESKTOP) {
+    if (arg0 === tmp(5399).AdPlacement.QUEST_HOME_BANNER_DESKTOP) {
       if (null != value) {
         obj = {
           questId: null,
@@ -59,9 +59,9 @@ function getQuestDeliveryDataForPlacement(arg0, adContentId) {
           trafficMetadataSealed: null,
           provenanceMetadataSealed: null,
         };
-        obj[0] = tmp(7455).getDeliveredQuestId(value.creative);
-        const tmpResult1 = tmp(7455);
-        obj[1] = tmp(7455).getDeliveredAdCreativeId(value.creative);
+        obj[0] = tmp(7456).getDeliveredQuestId(value.creative);
+        const tmpResult1 = tmp(7456);
+        obj[1] = tmp(7456).getDeliveredAdCreativeId(value.creative);
         ({
           adDecisionData: obj7[2],
           adContext: obj7[3],
@@ -70,7 +70,7 @@ function getQuestDeliveryDataForPlacement(arg0, adContentId) {
           provenanceMetadataSealed: obj7[6],
         } = value);
         let tmp9 = obj;
-        const tmpResult2 = tmp(7455);
+        const tmpResult2 = tmp(7456);
       }
       return tmp9;
     }
@@ -85,9 +85,9 @@ function getQuestDeliveryDataForPlacement(arg0, adContentId) {
         trafficMetadataSealed: null,
         provenanceMetadataSealed: null,
       };
-      obj[0] = tmp(7455).getDeliveredQuestId(value.creative);
-      const tmpResult3 = tmp(7455);
-      obj[1] = tmp(7455).getDeliveredAdCreativeId(value.creative);
+      obj[0] = tmp(7456).getDeliveredQuestId(value.creative);
+      const tmpResult3 = tmp(7456);
+      obj[1] = tmp(7456).getDeliveredAdCreativeId(value.creative);
       ({
         adDecisionData: obj4[2],
         adContext: obj4[3],
@@ -96,7 +96,7 @@ function getQuestDeliveryDataForPlacement(arg0, adContentId) {
         provenanceMetadataSealed: obj4[6],
       } = value);
       tmp9 = obj;
-      const tmpResult4 = tmp(7455);
+      const tmpResult4 = tmp(7456);
     }
   }
 }
@@ -179,7 +179,7 @@ export const isDismissed = function isDismissed(dismissedQuestContent) {
   if (keys.includes(QuestsVisibleMessagesChangedSource.QuestContent[arg1])) {
     return tmp2(1398).hasFlag(
       dismissedQuestContent.dismissedQuestContent,
-      tmp[tmp2(undefined, 5398).QuestContent[arg1]],
+      tmp[tmp2(undefined, 5399).QuestContent[arg1]],
     );
   } else {
     return false;

@@ -127,8 +127,13 @@ function ClassificationActionsTakenRows(action) {
     }),
   });
 }
-function ClassificationGuidance(arg0) {
-  ({ tosLink, communityGuidelinesLink, classificationTypeText, policyExplainerLink, appealComponent } = arg0);
+function ClassificationGuidance(hidePolicyCard) {
+  hidePolicyCard = hidePolicyCard.hidePolicyCard;
+  let tmp = undefined !== hidePolicyCard;
+  ({ tosLink, communityGuidelinesLink, classificationTypeText, policyExplainerLink, appealComponent } = hidePolicyCard);
+  if (tmp) {
+    tmp = hidePolicyCard;
+  }
   let obj = { style: callback3().sectionContainer, children: null };
   obj = { variant: "eyebrow", color: "text-muted", children: null };
   const intl = getSystemLocale.intl;
@@ -138,10 +143,17 @@ function ClassificationGuidance(arg0) {
   const intl2 = getSystemLocale.intl;
   obj[1] = intl2.format(getSystemLocale.t["1Z/+aA"], { tosLink, communityGuidelinesLink });
   items[1] = callback(Text.Text, obj);
-  items[2] = callback(ClassificationPolicyCard, { classificationTypeText, policyExplainerLink });
+  let tmp4Result = !tmp;
+  if (!tmp) {
+    obj1 = { classificationTypeText: null, policyExplainerLink: null };
+    obj1[0] = classificationTypeText;
+    obj1[1] = policyExplainerLink;
+    tmp4Result = callback(ClassificationPolicyCard, obj1);
+  }
+  items[2] = tmp4Result;
   items[3] = appealComponent;
   obj[1] = items;
-  return callback2(closure_4, obj);
+  return closure_14(closure_4, obj);
 }
 function ClassificationPolicyCard(classificationDescription) {
   const policyExplainerLink = classificationDescription.policyExplainerLink;
@@ -157,7 +169,7 @@ function ClassificationPolicyCard(classificationDescription) {
   items = [tmp.classificationPolicyCard];
   obj = { style: tmp.classificationPolicyCardIcon, children: null };
   const tmp2 = renderDefault;
-  obj[1] = callback(policyExplainerLink(8436).ShieldIcon, { size: "sm", color: ThemesDefault.colors.TEXT_LINK });
+  obj[1] = callback(policyExplainerLink(8440).ShieldIcon, { size: "sm", color: ThemesDefault.colors.TEXT_LINK });
   const items1 = [callback(closure_4, obj)];
   const obj2 = { style: tmp.classificationPolicyCardContent, children: null };
   const obj3 = { variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: null };
@@ -205,6 +217,25 @@ function AppealFooter(hasBeenAppealed) {
   obj[1] = tmpResult;
   return closure_13(closure_4, obj);
 }
+function ExpressiveModalV2AppealFooter(arg0) {
+  const _require = arg0;
+  const tmp = callback3();
+  let obj = { style: tmp.expressiveModalV2LetUsKnowContainer, children: null };
+  obj = { variant: "text-sm/normal", color: "text-muted", style: tmp.expressiveModalV2LetUsKnowText, children: null };
+  const intl = require("../../../intl/index.native.tsx").intl;
+  obj = {
+    letUsKnowHook(children) {
+      return closure_1_13(
+        lib(closure_1_2[9]).Text,
+        { onPress: lib.onPressLetUsKnow, variant: "text-sm/normal", color: "text-link", children },
+        arg1,
+      );
+    },
+  };
+  obj[3] = intl.format(require("../../../intl/index.native.tsx").t.LeAhOQ, obj);
+  obj[1] = callback(require("../../../design/components/Text/native/Text.tsx").Text, obj);
+  return callback(closure_4, obj);
+}
 function ClassificationDetailFooter(onClose) {
   let obj = { style: callback3().redirectButtonWrapper, children: null };
   obj = { size: "md", text: null, onPress: null, grow: true };
@@ -230,6 +261,8 @@ createCacheKey = {
   actionsTaken: null,
   classificationDetailContainer: null,
   letUsKnowContainer: null,
+  expressiveModalV2LetUsKnowContainer: null,
+  expressiveModalV2LetUsKnowText: null,
   classificationPolicyCard: null,
   classificationPolicyCardIcon: null,
   classificationPolicyCardContent: null,
@@ -288,7 +321,10 @@ let obj4 = {
 createCacheKey[6] = { display: "flex", flexDirection: "column", gap: ThemesDefault.space.PX_32 };
 createCacheKey[7] = { display: "flex", alignItems: "center" };
 let obj5 = { display: "flex", flexDirection: "column", gap: ThemesDefault.space.PX_32 };
-createCacheKey[8] = {
+createCacheKey[8] = { display: "flex", alignItems: "center", marginTop: ThemesDefault.space.PX_16 };
+createCacheKey[9] = { textAlign: "center" };
+let obj6 = { display: "flex", alignItems: "center", marginTop: ThemesDefault.space.PX_16 };
+createCacheKey[10] = {
   display: "flex",
   flexDirection: "row",
   alignItems: "center",
@@ -299,29 +335,19 @@ createCacheKey[8] = {
   flexShrink: 1,
   backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST,
 };
-let obj6 = {
-  display: "flex",
-  flexDirection: "row",
-  alignItems: "center",
-  justifyContent: "space-between",
-  gap: ThemesDefault.space.PX_12,
-  padding: ThemesDefault.space.PX_12,
-  marginTop: ThemesDefault.space.PX_4,
-  flexShrink: 1,
-  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST,
-};
-createCacheKey[9] = {
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
-  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG,
-  width: 32,
-  height: 32,
-  borderRadius: ThemesDefault.radii.xxl,
-};
-createCacheKey[10] = { flex: 1 };
 let obj7 = {
   display: "flex",
+  flexDirection: "row",
+  alignItems: "center",
+  justifyContent: "space-between",
+  gap: ThemesDefault.space.PX_12,
+  padding: ThemesDefault.space.PX_12,
+  marginTop: ThemesDefault.space.PX_4,
+  flexShrink: 1,
+  backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST,
+};
+createCacheKey[11] = {
+  display: "flex",
   alignItems: "center",
   justifyContent: "center",
   backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG,
@@ -329,11 +355,21 @@ let obj7 = {
   height: 32,
   borderRadius: ThemesDefault.radii.xxl,
 };
-createCacheKey[11] = { display: "flex", flexDirection: "row", gap: ThemesDefault.space.PX_8 };
-let obj8 = { display: "flex", flexDirection: "row", gap: ThemesDefault.space.PX_8 };
-createCacheKey[12] = { width: 300, alignSelf: "center", marginTop: ThemesDefault.space.PX_32 };
+createCacheKey[12] = { flex: 1 };
+let obj8 = {
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG,
+  width: 32,
+  height: 32,
+  borderRadius: ThemesDefault.radii.xxl,
+};
+createCacheKey[13] = { display: "flex", flexDirection: "row", gap: ThemesDefault.space.PX_8 };
+let obj9 = { display: "flex", flexDirection: "row", gap: ThemesDefault.space.PX_8 };
+createCacheKey[14] = { width: 300, alignSelf: "center", marginTop: ThemesDefault.space.PX_32 };
 let closure_16 = createCacheKey.createStyles(createCacheKey);
-const obj9 = { width: 300, alignSelf: "center", marginTop: ThemesDefault.space.PX_32 };
+const obj10 = { width: 300, alignSelf: "center", marginTop: ThemesDefault.space.PX_32 };
 const result = require("set").fileFinishedImporting("modules/safety_hub/native/ClassificationDetail.tsx");
 
 export default function ConnectedClassificationDetail(classificationId) {
@@ -379,6 +415,12 @@ export default function ConnectedClassificationDetail(classificationId) {
   if (hasItem1) {
     hasItem1 = stateFromStores.includes(tmp(tmp2[10]).AppealEligibility.AGE_VERIFY_GLOBAL_ELIGIBLE);
   }
+  tmpResult = tmp(tmp2[19]);
+  if (hasItem1) {
+    hasItem1 = tmpResult.useIsExpressiveModalV2Enabled(
+      tmp(tmp2[20]).AgeVerificationModalEntryPoint.AUTOMATED_UNDERAGE_APPEALS,
+    );
+  }
   obj = {
     accountStanding: safetyHubAccountStanding,
     classificationId,
@@ -396,7 +438,7 @@ export default function ConnectedClassificationDetail(classificationId) {
       const current = ref.current;
       ({ classificationState, source } = current);
       ({ accountStanding, classificationId, hasFlaggedContent } = current);
-      obj = source(onClose[19]);
+      obj = source(onClose[21]);
       obj = {
         action: null,
         account_standing: null,
@@ -423,46 +465,26 @@ export default function ConnectedClassificationDetail(classificationId) {
   if (null == classification) {
     if (safetyHubClassification.classificationRequestState === tmp(tmp2[10]).ClassificationRequestState.FAILED) {
       classificationId.onError();
-      let tmp15Result = null;
+      let tmp15Result2 = null;
     }
-    return tmp15Result;
+    return tmp15Result2;
   }
   obj = { style: tmp4.root, children: null };
   obj1 = { style: tmp4.container, bottom: true, children: null };
   if (null == classification) {
-    let tmp26Result = tmp15(isAppealEligible, { size: "large" });
+    let tmp29Result = tmp15(isAppealEligible, { size: "large" });
   } else {
     const obj2 = { style: null, children: null };
     const items2 = [tmp4.classificationDetailContainer];
     obj2[0] = items2;
-    ({ description: obj15[0], guild_metadata: obj15[1] } = classification);
+    ({ description: obj17[0], guild_metadata: obj17[1] } = classification);
     const items3 = [tmp15(ClassificationHeader, { classificationTypeText: null, guildMetadata: null }), , , ,];
     let flagged_content1 = classification.flagged_content;
     if (flagged_content1 == null) {
       flagged_content1 = [];
     }
-    const obj4 = { flaggedContent: null };
-    obj4[0] = flagged_content1;
-    items3[1] = tmp15(source(tmp2[21]), obj4);
-    const obj5 = { actions: null, classificationExpiration: null };
-    obj5[0] = classification.actions;
-    tmpResult = tmp(tmp2[22]);
-    obj5[1] = tmpResult.getClassificationExpiration(classification);
-    items3[2] = tmp15(ClassificationActionsTaken, obj5);
-    const obj6 = {
-      appealLink: null,
-      communityGuidelinesLink: null,
-      tosLink: null,
-      classificationTypeText: null,
-      policyExplainerLink: null,
-      appealComponent: null,
-    };
-    ({ APPEALS_LINK: obj11[0], COMMUNITY_GUIDELINES: obj11[1], TOS_LINK: obj11[2] } = closure_11);
-    ({ description: obj11[3], explainer_link: obj11[4] } = classification);
-    const obj7 = { hasBeenAppealed: null, onPressLetUsKnow: null };
-    obj7[0] = null != classification.appeal_status;
-    obj7[1] = function onPressLetUsKnow() {
-      obj = source(onClose[19]);
+    function onPressLetUsKnow() {
+      obj = source(onClose[21]);
       obj = {
         action: obj.ClickLetUsKnow,
         account_standing: safetyHubAccountStanding.state,
@@ -483,38 +505,73 @@ export default function ConnectedClassificationDetail(classificationId) {
       ({ isDsaEligible: obj2[5], violationType: obj2[6] } = safetyHubClassification);
       obj.track(closure_1_12.SAFETY_HUB_ACTION, obj);
       if (hasItem1) {
-        let tmpResult = tmp(tmp2[23]);
+        let tmpResult = tmp(tmp2[22]);
         tmpResult.openV2(tmp3, onClose);
       } else if (hasItem) {
-        tmpResult = tmp(tmp2[23]);
+        tmpResult = tmp(tmp2[22]);
         tmpResult.open(tmp3, onClose);
       } else if (isAppealEligible) {
         obj = { name: null };
-        obj[0] = classificationId(tmp2[25]).MetricEvents.APPEAL_INGESTION_VIEW;
-        tmp(tmp2[24]).increment(obj);
-        const tmpResult1 = tmp(tmp2[24]);
+        obj[0] = classificationId(tmp2[24]).MetricEvents.APPEAL_INGESTION_VIEW;
+        tmp(tmp2[23]).increment(obj);
+        const tmpResult1 = tmp(tmp2[23]);
         obj1 = { classificationId: null };
         obj1[0] = tmp3;
-        tmp(tmp2[26]).open(obj1);
-        const tmpResult2 = tmp(tmp2[26]);
+        tmp(tmp2[25]).open(obj1);
+        const tmpResult2 = tmp(tmp2[25]);
       } else {
         tmp(tmp2[14]).openURL(ref.APPEALS_LINK);
         const tmpResult3 = tmp(tmp2[14]);
       }
-    };
-    obj6[5] = tmp15(AppealFooter, obj7);
-    items3[3] = tmp15(ClassificationGuidance, obj6);
-    const obj8 = { onClose: null };
-    obj8[0] = onClose;
-    items3[4] = tmp15(ClassificationDetailFooter, obj8);
-    obj2[1] = items3;
-    tmp26Result = closure_14(classification, obj2);
+    }
+    const obj4 = { flaggedContent: null };
+    obj4[0] = flagged_content1;
+    items3[1] = tmp15(source(tmp2[27]), obj4);
+    const obj5 = { actions: null, classificationExpiration: null };
+    obj5[0] = classification.actions;
     const obj3 = { classificationTypeText: null, guildMetadata: null };
-    const tmp26 = closure_14;
-    const tmp27 = classification;
-    const tmp30 = source(tmp2[21]);
+    const tmp29 = closure_14;
+    const tmp30 = classification;
+    const tmp33 = source(tmp2[27]);
+    obj5[1] = tmp(tmp2[28]).getClassificationExpiration(classification);
+    items3[2] = tmp15(ClassificationActionsTaken, obj5);
+    const obj6 = {
+      appealLink: null,
+      communityGuidelinesLink: null,
+      tosLink: null,
+      classificationTypeText: null,
+      policyExplainerLink: null,
+      hidePolicyCard: null,
+      appealComponent: null,
+    };
+    ({ APPEALS_LINK: obj12[0], COMMUNITY_GUIDELINES: obj12[1], TOS_LINK: obj12[2] } = closure_11);
+    ({ description: obj12[3], explainer_link: obj12[4] } = classification);
+    obj6[5] = hasItem1;
+    if (hasItem1) {
+      const obj7 = { onPressLetUsKnow: null };
+      obj7[0] = onPressLetUsKnow;
+      let tmp15Result = tmp15(ExpressiveModalV2AppealFooter, obj7);
+    } else {
+      const obj8 = { hasBeenAppealed: null, onPressLetUsKnow: null };
+      obj8[0] = null != classification.appeal_status;
+      obj8[1] = onPressLetUsKnow;
+      tmp15Result = tmp15(AppealFooter, obj8);
+    }
+    obj6[6] = tmp15Result;
+    items3[3] = tmp15(ClassificationGuidance, obj6);
+    let tmp15Result1 = !hasItem1;
+    if (!hasItem1) {
+      const obj9 = { onClose: null };
+      obj9[0] = onClose;
+      tmp15Result1 = tmp15(ClassificationDetailFooter, obj9);
+    }
+    items3[4] = tmp15Result1;
+    obj2[1] = items3;
+    tmp29Result = tmp29(tmp30, obj2);
+    const tmp18 = ClassificationGuidance;
+    let tmpResult1 = tmp(tmp2[28]);
   }
-  obj1[2] = tmp26Result;
-  obj[1] = closure_13(classificationId(onClose[20]).SafeAreaPaddingView, obj1);
-  tmp15Result = tmp15(closure_6, obj);
+  obj1[2] = tmp29Result;
+  obj[1] = closure_13(classificationId(onClose[26]).SafeAreaPaddingView, obj1);
+  tmp15Result2 = tmp15(closure_6, obj);
 }

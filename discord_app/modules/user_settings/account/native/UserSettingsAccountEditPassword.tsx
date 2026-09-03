@@ -7,7 +7,7 @@ import Button from "../../../../design/components/Button/native/Button.native.ts
 import TextInput from "../../../../design/components/TextInput/native/TextInput.native.tsx";
 import saveProfileAndAccountRequestAll from "../../../../actions/UserSettingsAccountActionCreators.tsx";
 import handleOpenEmailVerificationDefault from "UserSettingsAccountUnverifiedHeader.tsx";
-import registerAssetDefault from "../../../../../_runtime/14607_registerAsset.js";
+import registerAssetDefault from "../../../../../_runtime/14622_registerAsset.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import closure_7 from "../../../auth/LoginRequiredActionStore.tsx";
 import closure_8 from "../../../../stores/UserSettingsAccountStore.tsx";
@@ -21,7 +21,7 @@ require = arg1;
 ({ Image: c4, View: c5, ScrollView: closure_6 } = get_ActivityIndicator);
 ({ AnalyticEvents: c10, LoginRequiredActions: unpackModuleId } = ME);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-let closure_14 = { newPassword: "call", password: 17078081 };
+let closure_14 = { newPassword: "call", password: 17078337 };
 createCacheKey = {
   onePass: { width: 20, height: 20 },
   unverifiedWrapper: null,
@@ -259,7 +259,7 @@ let result = require("set").fileFinishedImporting(
 );
 
 export default function EditPasswordWrapper() {
-  let obj = flag(7168);
+  let obj = flag(7169);
   const params = obj.useSettingNavigationRoute().params;
   flag = undefined;
   if (params != null) {

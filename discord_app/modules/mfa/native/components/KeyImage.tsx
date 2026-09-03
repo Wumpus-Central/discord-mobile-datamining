@@ -2,15 +2,22 @@
 import set from "../../../../../_runtime/00002_set.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import registerAssetDefault from "../../../../../_runtime/14554_registerAsset.js";
+import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import AccountAgeTier10LargeBadge from "../../../../design/assets/native.tsx";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
-const Image = get_ActivityIndicator.Image;
+const View = get_ActivityIndicator.View;
 const jsx = jsxProd.jsx;
-let closure_4 = createCacheKey.createStyles({ icon: { width: 128, height: 128, marginBottom: 8 } });
+let obj = { container: null };
+obj = { marginBottom: ThemesDefault.space.PX_8 };
+obj[0] = obj;
+let closure_4 = createCacheKey.createStyles(obj);
 const result = set.fileFinishedImporting("modules/mfa/native/components/KeyImage.tsx");
 
 export const KeyImage = function KeyImage() {
-  const obj = { source: registerAssetDefault, style: callback().icon };
-  return <Image source={registerAssetDefault} style={callback().icon} />;
+  return (
+    <View style={callback().container}>
+      {jsx(AccountAgeTier10LargeBadge.SecurityKeySpotIllustration, { scale: 0.6 })}
+    </View>
+  );
 };

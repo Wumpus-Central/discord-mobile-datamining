@@ -110,7 +110,7 @@ export default function ConfirmEmailChangeCode(isChangeEmail) {
   obj[3] = intl.string(require("../../../../intl/index.native.tsx").t["2x/2Uo"]);
   const intl2 = require("../../../../intl/index.native.tsx").intl;
   obj[4] = intl2.string(require("../../../../intl/index.native.tsx").t.PDTjLN);
-  return jsx(navigation(7712), {
+  return jsx(navigation(7715), {
     onFormSubmit: null,
     onSuccess: null,
     onResend: null,

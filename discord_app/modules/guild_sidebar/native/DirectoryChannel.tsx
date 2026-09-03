@@ -62,15 +62,15 @@ const memoResult = importAllResult.memo((guildId) => {
     obj[2] = tmp.container;
     obj = { channel: null };
     obj[0] = stateFromStores;
-    obj[5] = id(9438)(obj);
+    obj[5] = id(9442)(obj);
     obj1 = { selected: null };
     obj1[0] = selected;
     obj[6] = obj1;
     obj[7] = stateFromStores;
     obj[8] = selected;
     obj[9] = UnreadSetting.ONLY_MENTIONS;
-    tmp7 = jsx(id(15936), { channel: null });
-    const tmp10 = id(15936);
+    tmp7 = jsx(id(15952), { channel: null });
+    const tmp10 = id(15952);
   }
   return tmp7;
 });

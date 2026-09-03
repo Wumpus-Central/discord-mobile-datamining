@@ -43,12 +43,12 @@ function PrivacyPolicyCheckbox(onToggleConsent) {
   if (asCheckbox) {
     obj = { checked: null };
     obj[0] = consent;
-    let tmp7Result = tmp7(tmp2(7693).FormCheckbox, obj);
+    let tmp7Result = tmp7(tmp2(7696).FormCheckbox, obj);
     let tmp9 = tmp7;
   } else {
     obj1 = { selected: null };
     obj1[0] = consent;
-    tmp7Result = tmp7(tmp2(8372).FormRow.Radio, obj1);
+    tmp7Result = tmp7(tmp2(8376).FormRow.Radio, obj1);
     tmp9 = tmp7;
   }
   const items = [tmp7Result];

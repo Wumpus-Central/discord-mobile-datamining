@@ -61,7 +61,7 @@ function formatSetting(item10022, arg1) {
   }
 }
 function buildChannelsAndMapping() {
-  let obj = map(14328);
+  let obj = map(14344);
   const assignedNotifSettingsAndMappings = obj.getAssignedNotifSettingsAndMappings();
   ({ settings, mappings } = assignedNotifSettingsAndMappings);
   const obj2 = (function computeInheritedImportances(mappings) {

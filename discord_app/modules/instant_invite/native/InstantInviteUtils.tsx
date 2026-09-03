@@ -8,7 +8,7 @@ import _copy from "../../../utils/ClipboardUtils.native.tsx";
 import _findPlayingActivity from "../../go_live/utils/StreamerApplicationSelectors.tsx";
 import getInviteURLDefault from "../getInviteURL.tsx";
 import get_label from "../../../utils/native/InstantInviteUtils.tsx";
-import _modDef9937 from "../../../actions/CreateInviteModalActionCreators.tsx";
+import _modDef9941 from "../../../actions/CreateInviteModalActionCreators.tsx";
 import openInstantInviteActionSheetDefault from "components/openInstantInviteActionSheet.tsx";
 import closure_3 from "../../guild_templates/GuildTemplateStore.tsx";
 import { ChannelRecordBase } from "../../../records/ChannelRecord.tsx";
@@ -92,7 +92,7 @@ function showInstantInviteActionSheet(channel, source) {
     tmp17 = null == code;
   }
   if (tmp17) {
-    tmpResult = tmp(9937);
+    tmpResult = tmp(9941);
     tmpResult.init(channel.getGuildId(), channel.id, obj);
   }
   obj1 = {
@@ -206,7 +206,7 @@ export const showVanityUrlInviteActionSheet = function showVanityUrlInviteAction
   let obj = expandEventPropertiesDefault;
   obj = { type: "Vanity URL Invite", source: GUILD_SCHEDULED_EVENT };
   obj.track(constants.OPEN_POPOUT, obj);
-  _modDef9937.init(guild.id, channel.id, { skipCreateInvite: true });
+  _modDef9941.init(guild.id, channel.id, { skipCreateInvite: true });
   obj = {
     vanityURLCode: guild.vanityURLCode,
     channel,
@@ -215,7 +215,7 @@ export const showVanityUrlInviteActionSheet = function showVanityUrlInviteAction
     stackingBehavior: null,
   };
   let prop;
-  const obj3 = _modDef9937;
+  const obj3 = _modDef9941;
   if (guildScheduledEventId != null) {
     prop = guildScheduledEventId.guildScheduledEventId;
   }
@@ -314,8 +314,8 @@ export const handleOpenShareSheet = function handleOpenShareSheet(code, channel,
         const obj = callback(table[19]);
       }
     };
-    tmp21(8647).showShareActionSheet(obj, ADD_FRIENDS_WIDGET);
-    const tmp21Result = tmp21(8647);
+    tmp21(8651).showShareActionSheet(obj, ADD_FRIENDS_WIDGET);
+    const tmp21Result = tmp21(8651);
   }
 };
 export const handleCopy = function handleCopy(code, channel, GROUP_DM, arg3) {
@@ -393,7 +393,7 @@ export const handlePressSettings = function handlePressSettings(channel, closure
   if (closure_3 == null) {
     str = "Instant Invite Action Sheet";
   }
-  _modDef9937.openSettings(guild_id, id, str, () => {
+  _modDef9941.openSettings(guild_id, id, str, () => {
     if (null != closure_1) {
       tmp();
     } else {
@@ -425,7 +425,7 @@ export const handleOpenInviteActionsheet = function handleOpenInviteActionsheet(
       obj = { type: "Vanity URL Invite", source: null };
       obj[1] = GUILD_HEADER;
       tmp4Result.track(constants.OPEN_POPOUT, obj);
-      tmp4Result = tmp4(9937);
+      tmp4Result = tmp4(9941);
       tmp4Result.init(guild.id, channel.id, { skipCreateInvite: true });
       obj = { vanityURLCode: null, channel: null, source: null, guildScheduledEventId: null, stackingBehavior: null };
       obj[0] = guild.vanityURLCode;
@@ -433,7 +433,7 @@ export const handleOpenInviteActionsheet = function handleOpenInviteActionsheet(
       obj[2] = GUILD_HEADER;
       obj[3] = undefined;
       obj[4] = undefined;
-      tmp4(9938)(obj);
+      tmp4(9942)(obj);
     }
   }
   obj1 = get_label;

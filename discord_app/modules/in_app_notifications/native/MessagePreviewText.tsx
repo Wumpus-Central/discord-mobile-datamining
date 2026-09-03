@@ -199,18 +199,18 @@ export default function MessagePreviewText(message) {
   if (showMessageAuthor === undefined) {
     showMessageAuthor = false;
   }
-  let obj = message(10234);
+  let obj = message(10238);
   const previewableMedia = obj.usePreviewableMedia(message);
-  obj1 = message(4746);
+  obj1 = message(4747);
   let tmp3 = null;
   if (showMessageAuthor) {
     tmp3 = message;
   }
   const nullableMessageAuthor = obj1.useNullableMessageAuthor(tmp3);
-  let tmpResult = tmp(10242);
+  let tmpResult = tmp(10246);
   const previewableMediaText = tmpResult.usePreviewableMediaText({ previewableMedia, author: nullableMessageAuthor });
   ({ text, secondaryText } = previewableMediaText);
-  tmpResult = tmp(10243);
+  tmpResult = tmp(10247);
   const getInitialMessagePreview = tmpResult.useGetInitialMessagePreview({ message });
   const items = [message.embeds];
   const memo = React.useMemo(() => {
@@ -241,7 +241,7 @@ export default function MessagePreviewText(message) {
   } else if (isForwardMessageDefault(message)) {
     let tmp29 = previewableMedia.length > 0;
     if (tmp29) {
-      tmp29 = previewableMedia[0].type === tmp(10234).PreviewableMediaTypes.GIF;
+      tmp29 = previewableMedia[0].type === tmp(10238).PreviewableMediaTypes.GIF;
     }
     if (previewableMedia.length > 0) {
       if (null != nullableMessageAuthor) {
@@ -265,7 +265,7 @@ export default function MessagePreviewText(message) {
   } else if (message.content.length > 0) {
     if (null != nullableMessageAuthor) {
       channel = channel.getChannel(message.channel_id);
-      tmp(10199);
+      tmp(10203);
       if (null != channel) {
         const obj6 = {
           channel: null,
@@ -281,7 +281,7 @@ export default function MessagePreviewText(message) {
         obj6[3] = tmp(4171).ChannelListLayoutTypes.COZY;
         obj6[4] = tmp24;
         obj6[6] = lineClamp;
-        return callback(tmp(10214).ChannelRowPreview, obj6);
+        return callback(tmp(10218).ChannelRowPreview, obj6);
       }
     }
     const obj7 = { message: null, lineClamp: null, maxHeight: null };

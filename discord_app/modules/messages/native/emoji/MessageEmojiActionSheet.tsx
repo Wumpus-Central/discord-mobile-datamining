@@ -82,7 +82,7 @@ function MessageCustomEmojiActionSheet(emojiNode) {
       nonce: null,
     });
     obj[2] = <View style={null}>{null}</View>;
-    return jsx(tmp2(5630).BottomSheet, { startExpanded: true, onDismiss: null, children: null });
+    return jsx(tmp2(5631).BottomSheet, { startExpanded: true, onDismiss: null, children: null });
   }
   tmp = callback();
 }

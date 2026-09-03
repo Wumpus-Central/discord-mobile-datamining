@@ -105,7 +105,7 @@ function ProfileEffectSectionPreview(arg0) {
   let purchase;
   ({ previewSkuId, user, guildId } = arg0);
   const tmp = callback3();
-  const tmp2 = purchase(8090)(previewSkuId);
+  const tmp2 = purchase(8093)(previewSkuId);
   const product = tmp2.product;
   c0 = product;
   purchase = tmp2.purchase;
@@ -129,11 +129,11 @@ function ProfileEffectSectionPreview(arg0) {
     }
     return tmp3;
   }, items);
-  const items1 = [callback(purchase(8539), { user, guildId, profileEffect: memo, maxWidth: 250 })];
+  const items1 = [callback(purchase(8543), { user, guildId, profileEffect: memo, maxWidth: 250 })];
   obj = { style: tmp.previewGradient, start: { x: 0, y: 0.6 }, end: { x: 0, y: 1 }, colors: null };
   const items2 = ["" + tmp.previewGradient.color + "00", tmp.previewGradient.color];
   obj[3] = items2;
-  items1[1] = callback(purchase(4940), obj);
+  items1[1] = callback(purchase(4941), obj);
   obj[1] = items1;
   return callback2(closure_5, obj);
 }
@@ -165,17 +165,17 @@ export default function EditProfileEffectActionSheet(isTryItOut) {
   if (str == null) {
     str = "";
   }
-  const tmp4Result = isTryItOut(8122)(str);
+  const tmp4Result = isTryItOut(8125)(str);
   dependencyMap = tmp4Result;
   const tmp6 = first(memo.useState(currentProfileEffect), 2);
   first = tmp6[0];
-  let obj = guildId(8088);
-  let tmp2Result = tmp2(5961);
-  const analyticsLocations = tmp2Result(tmp2(5981).EDIT_PROFILE_EFFECT_SHEET).analyticsLocations;
+  let obj = guildId(8091);
+  let tmp2Result = tmp2(5962);
+  const analyticsLocations = tmp2Result(tmp2(5982).EDIT_PROFILE_EFFECT_SHEET).analyticsLocations;
   const items = [guildId, tmp4Result];
   memo = memo.useMemo(() => {
     const obj = {
-      type: isTryItOut(5981).EDIT_PROFILE_EFFECT_SHEET,
+      type: isTryItOut(5982).EDIT_PROFILE_EFFECT_SHEET,
       guild_id: guildId,
       profile_has_nitro_customization: null,
     };
@@ -252,7 +252,7 @@ export default function EditProfileEffectActionSheet(isTryItOut) {
     analyticsSource: null,
   };
   let skuId;
-  tmp2Result = tmp2(8089);
+  tmp2Result = tmp2(8092);
   if (currentProfileEffect != null) {
     skuId = currentProfileEffect.skuId;
   }
@@ -265,9 +265,9 @@ export default function EditProfileEffectActionSheet(isTryItOut) {
   obj4[3] = isTryItOut;
   obj4[4] = callback1;
   obj4[5] = analyticsLocations;
-  obj4[6] = isTryItOut(5981).EDIT_PROFILE_EFFECT_SHEET;
+  obj4[6] = isTryItOut(5982).EDIT_PROFILE_EFFECT_SHEET;
   items4[1] = callback(tmp2Result, obj4);
   obj[4] = items4;
-  obj[1] = callback2(guildId(5630).BottomSheet, obj);
-  return callback(guildId(5961).AnalyticsLocationProvider, obj);
+  obj[1] = callback2(guildId(5631).BottomSheet, obj);
+  return callback(guildId(5962).AnalyticsLocationProvider, obj);
 }

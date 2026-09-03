@@ -7,7 +7,7 @@ const require = arg1;
 function BlockedUserRow(userRecord) {
   userRecord = userRecord.userRecord;
   let analyticsLocations;
-  analyticsLocations = analyticsLocations(5961)().analyticsLocations;
+  analyticsLocations = analyticsLocations(5962)().analyticsLocations;
   let obj = {
     icon: null,
     label: null,
@@ -20,9 +20,9 @@ function BlockedUserRow(userRecord) {
     onPress: null,
     trailing: null,
   };
-  obj = { user: userRecord, guildId: "Array", size: true };
+  obj = { user: userRecord, guildId: "Array", size: 102039555 };
   obj[2] = userRecord(1296).AvatarSizes.REFRESH_MEDIUM_32;
-  obj[0] = jsx(userRecord(1296).Avatar, { user: userRecord, guildId: "Array", size: true });
+  obj[0] = jsx(userRecord(1296).Avatar, { user: userRecord, guildId: "Array", size: 102039555 });
   let tmp4 = null != userRecord;
   if (tmp4) {
     let username = userRecord.globalName;
@@ -64,8 +64,8 @@ function BlockedUserRow(userRecord) {
   obj1[3] = function onPress() {
     analyticsLocations(closure_1_2[3]).unblockUser(userRecord.id, { location: "blocked-users-list-mobile-v2" });
   };
-  obj[9] = jsx(userRecord(4928).Button, { size: "sm", variant: "secondary", text: null, onPress: null });
-  return jsx(userRecord(5607).TableRow, { name: "unblock", label: null });
+  obj[9] = jsx(userRecord(4929).Button, { size: "sm", variant: "secondary", text: null, onPress: null });
+  return jsx(userRecord(5608).TableRow, { name: "unblock", label: null });
 }
 noopAll;
 const result = require("set").fileFinishedImporting(

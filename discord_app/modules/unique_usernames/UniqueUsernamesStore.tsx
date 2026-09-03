@@ -10,8 +10,8 @@ let obj = {
   currentUsernameInvalid: false,
   retryAfterTime: null,
   suggestions: {
-    migration: { suggestion: { username: "r" }, fetched: false, usernameSuggestionLoading: false },
-    registration: { suggestion: { username: "r" }, source: "PX_16", fetched: "circle" },
+    migration: { suggestion: { username: "Array" }, fetched: false, usernameSuggestionLoading: false },
+    registration: { suggestion: { username: "Array" }, source: "PX_16", fetched: "Bolivia, Plurinational State of" },
   },
 };
 const Store = initializeDefault.Store;
@@ -88,8 +88,12 @@ obj = {
     }
   },
   UNIQUE_USERNAME_SUGGESTIONS_RESET: function handleUniqueUsernameSuggestionsReset() {
-    obj.suggestions.migration = { suggestion: { username: "r" }, fetched: false, usernameSuggestionLoading: false };
-    obj.suggestions.registration = { suggestion: { username: "r" }, source: "PX_16", fetched: "circle" };
+    obj.suggestions.migration = { suggestion: { username: "Array" }, fetched: false, usernameSuggestionLoading: false };
+    obj.suggestions.registration = {
+      suggestion: { username: "Array" },
+      source: "PX_16",
+      fetched: "Bolivia, Plurinational State of",
+    };
   },
   UNIQUE_USERNAME_SUGGESTIONS_SUCCESS: function handleUniqueUsernameSuggestionsSuccess(suggestion) {
     suggestion = suggestion.suggestion;

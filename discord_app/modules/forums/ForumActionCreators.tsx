@@ -210,7 +210,7 @@ export default {
     closure_1 = arg1;
     return callback(function* () {
       closure_0 = tmp4;
-      const obj2 = v0(7519);
+      const obj2 = v0(7520);
       yield obj2.unarchiveThreadIfNecessary(closure_1_0);
       const HTTP = closure_1_0(527).HTTP;
       const obj3 = { url: null, body: null, rejectWithError: null };
@@ -262,7 +262,7 @@ export default {
       obj1[1] = closure_1_1;
       closure_1_1(706).dispatch(obj1);
       dependencyMap = 1;
-      const obj13 = closure_1_1(7519);
+      const obj13 = closure_1_1(7520);
       yield obj13.searchThreads(closure_1_0, closure_1_1, dependencyMap, c3, c4);
       if (1 === tmp7) {
         dependencyMap = 0;
@@ -280,8 +280,8 @@ export default {
         obj4[0] = length;
         obj4[1] = closure_1;
         obj4[2] = length.length;
-        closure_1_0(7521).trackForumSearched(obj4);
-        const obj7 = closure_1_0(7521);
+        closure_1_0(7522).trackForumSearched(obj4);
+        const obj7 = closure_1_0(7522);
         const obj5 = { type: "FORUM_SEARCH_SUCCESS", channelId: null, threadIds: null };
         obj5[1] = closure_1;
         obj5[2] = length;

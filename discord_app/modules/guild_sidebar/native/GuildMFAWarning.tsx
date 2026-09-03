@@ -6,7 +6,7 @@ import Button from "../../../design/void/native.tsx";
 import Text from "../../../design/components/Text/native/Text.tsx";
 import PressableBase from "../../../design/void/Pressables/native/Pressables.tsx";
 import map from "../../screen/native/useScaledTextLineHeight.android.tsx";
-import registerAssetDefault from "../../../../_runtime/16020_registerAsset.js";
+import registerAssetDefault from "../../../../_runtime/16036_registerAsset.js";
 import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import { Image } from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import ME from "../../../Constants.tsx";

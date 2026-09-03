@@ -2,7 +2,7 @@
 import noopAll from "../../../../_runtime/00019_noop.js";
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import useSafeAreaInsetsDefault from "../../safe_area/useSafeAreaInsets.native.tsx";
-import _modDef4723 from "../../../actions/ModalActionCreators.tsx";
+import _modDef4724 from "../../../actions/ModalActionCreators.tsx";
 import keyExtractorDefault from "ForLaterScreen.tsx";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
@@ -54,11 +54,11 @@ export default function ForLaterModal(type) {
     num = useSafeAreaInsetsDefault().top;
   }
   obj[3] = num + ThemesDefault.space.PX_8;
-  tmp4Result = tmp4(5503);
-  obj[4] = tmp4Result.getHeaderCloseButton(_modDef4723.pop);
+  tmp4Result = tmp4(5504);
+  obj[4] = tmp4Result.getHeaderCloseButton(_modDef4724.pop);
   ({ headerLeftContainer: obj2[5], headerRightContainer: obj2[6] } = tmp);
-  const items = [closure_4(require("../../../../_runtime/05510_Background.js").Header, obj)];
-  obj = { type, onClose: _modDef4723.pop };
+  const items = [closure_4(require("../../../../_runtime/05511_Background.js").Header, obj)];
+  obj = { type, onClose: _modDef4724.pop };
   items[1] = closure_4(keyExtractorDefault, obj, type);
   obj[1] = items;
   return closure_5(View, obj);

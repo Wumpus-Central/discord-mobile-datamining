@@ -7,7 +7,7 @@ import collectGuildAnalyticsMetadata from "../app_analytics/AppAnalyticsUtils.ts
 import updateImpersonating from "../impersonate/ImpersonateActionCreators.tsx";
 import UserNotificationSettings from "../../utils/NotificationSettingsUtils.tsx";
 import handleConnectionOpenDefault from "../user_settings/UserGuildSettingsManager.tsx";
-import _modDef5495 from "../../actions/NotificationSettingsModalActionCreators.tsx";
+import _modDef5496 from "../../actions/NotificationSettingsModalActionCreators.tsx";
 import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
 import closure_4 from "../impersonate/ImpersonateStore.tsx";
 import closure_5 from "../../stores/ChannelStore.tsx";
@@ -272,13 +272,13 @@ export const updateOptInChannelsImmediate = function updateOptInChannelsImmediat
       obj3[2] = id;
       obj3[3] = obj;
       dispatcherDefault.dispatch(obj3);
-      tmp6Result = tmp6(5490);
+      tmp6Result = tmp6(5491);
       obj4 = { guildId: null, channelId: null, change: null, previous: null, label: null, location: null };
       obj4[0] = closure_0;
       obj4[1] = id;
       obj4[2] = obj;
       obj4[3] = currentChannelSettings;
-      const NotificationLabel = tmp6(5490).NotificationLabel;
+      const NotificationLabel = tmp6(5491).NotificationLabel;
       obj4[4] = NotificationLabel.optedIn(arg2);
       obj4[5] = location;
       const result3 = tmp6Result.trackChannelNotificationSettingsUpdate(obj4);
@@ -370,12 +370,12 @@ export const bulkOptInChannels = function bulkOptInChannels(id, arr, arg2, locat
         obj = { flags: null, channel_overrides: null };
         obj[0] = setFlagResult;
         obj[1] = obj;
-        const result2 = obj(5495).updateGuildAndChannelNotificationSettings(
+        const result2 = obj(5496).updateGuildAndChannelNotificationSettings(
           id,
           obj,
           require("../../utils/NotificationSettingsUtils.tsx").NotificationLabels.OptedIn,
         );
-        const obj7 = obj(5495);
+        const obj7 = obj(5496);
         obj = {};
         const obj9 = obj(695);
         const merged = Object.assign(
@@ -386,7 +386,7 @@ export const bulkOptInChannels = function bulkOptInChannels(id, arr, arg2, locat
         obj9.track(AnalyticEvents.CHANNEL_LIST_UPDATED, obj);
         const obj11 = collectGuildAnalyticsMetadata;
       } else {
-        obj1 = obj(5495);
+        obj1 = obj(5496);
         const result3 = obj1.updateChannelOverrideSettingsBulk(
           id,
           obj,
@@ -423,12 +423,12 @@ export const bulkOptOutChannels = function bulkOptOutChannels(closure_0, arr, lo
         obj[0] = callback(closure_1_2[7]).setFlag(channelIdFlags, closure_1_8.OPT_IN_ENABLED, false);
         obj[id] = obj;
       });
-      const result1 = obj(5495).updateChannelOverrideSettingsBulk(
+      const result1 = obj(5496).updateChannelOverrideSettingsBulk(
         closure_0,
         obj,
         require("../../utils/NotificationSettingsUtils.tsx").NotificationLabels.OptedOut,
       );
-      const obj2 = obj(5495);
+      const obj2 = obj(5496);
       obj = {};
       const obj3 = obj(695);
       const merged = Object.assign(
@@ -449,7 +449,7 @@ export const setGuildOptIn = function setGuildOptIn(id, arg1) {
     const obj7 = updateImpersonating;
   } else {
     const guildFlags = store2.getGuildFlags(id);
-    obj = _modDef5495;
+    obj = _modDef5496;
     obj = { flags: null };
     obj[0] = hasFlag.setFlag(guildFlags, constants2.OPT_IN_CHANNELS_ON, arg1);
     const NotificationLabel = UserNotificationSettings.NotificationLabel;
@@ -483,11 +483,11 @@ export const setIsFavorite = function setIsFavorite(guildId1, id, arg2, location
         let tmp5Result = tmp5(1398);
         setFlagResult = tmp5Result.setFlag(channelIdFlags, tmp7.OPT_IN_ENABLED, true);
       }
-      const obj3 = _modDef5495;
+      const obj3 = _modDef5496;
       obj = { flags: null };
       tmp5Result = tmp5(1398);
       obj[0] = tmp5Result.setFlag(setFlagResult, constants.FAVORITED, arg2);
-      const NotificationLabel = tmp5(5490).NotificationLabel;
+      const NotificationLabel = tmp5(5491).NotificationLabel;
       const result = obj3.updateChannelOverrideSettings(guildId1, id, obj, NotificationLabel.favorited(arg2));
       obj = {};
       const obj6 = expandEventPropertiesDefault;
@@ -505,7 +505,7 @@ export const setIsFavorite = function setIsFavorite(guildId1, id, arg2, location
 };
 export const setMessagesFavorite = function setMessagesFavorite(id, arg1) {
   const channelIdFlags = store2.getChannelIdFlags(null, id);
-  let obj = _modDef5495;
+  let obj = _modDef5496;
   obj = { flags: hasFlag.setFlag(channelIdFlags, constants.FAVORITED, arg1) };
   const NotificationLabel = UserNotificationSettings.NotificationLabel;
   const result = obj.updateChannelOverrideSettings(null, id, obj, NotificationLabel.favorited(arg1));
@@ -587,12 +587,12 @@ export const clearGuildNotice = function clearGuildNotice(closure_0) {
         obj[0] = callback(closure_1_2[7]).setFlag(channelIdFlags, closure_1_8.OPT_IN_ENABLED, false);
         obj[id] = obj;
       });
-      const result1 = obj(5495).updateChannelOverrideSettingsBulk(
+      const result1 = obj(5496).updateChannelOverrideSettingsBulk(
         closure_0,
         obj,
         require("../../utils/NotificationSettingsUtils.tsx").NotificationLabels.OptedOut,
       );
-      const obj2 = obj(5495);
+      const obj2 = obj(5496);
       obj = {};
       const obj3 = obj(695);
       const merged = Object.assign(

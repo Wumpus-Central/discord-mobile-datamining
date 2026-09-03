@@ -79,7 +79,7 @@ export default function GuildPowerupsNotificationContainer(guildId) {
       const obj2 = { guildId: null, powerupNames: null, warnings: null };
       obj2[0] = guildId;
       ({ expiringPowerupNames: obj5[1], warnings: obj5[2] } = tmp5);
-      shouldShow2 = tmp11(tmp2(12348), obj2);
+      shouldShow2 = tmp11(tmp2(12360), obj2);
     }
     items[2] = shouldShow2;
     obj[1] = items;

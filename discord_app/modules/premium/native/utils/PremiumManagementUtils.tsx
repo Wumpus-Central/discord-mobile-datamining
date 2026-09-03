@@ -5,7 +5,7 @@ import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import sum from "../../../../../discord_common/js/shared/Constants.tsx";
 import ME from "../../../../Constants.tsx";
 import getSystemLocale from "../../../../intl/index.native.tsx";
-import _modDef4858 from "../../../../actions/native/AlertActionCreators.tsx";
+import _modDef4859 from "../../../../actions/native/AlertActionCreators.tsx";
 import { set } from "../../../../utils/PlatformUtils.tsx";
 
 function defaultMobileWebNitroManagementSuccessCallback() {
@@ -13,7 +13,7 @@ function defaultMobileWebNitroManagementSuccessCallback() {
 }
 function defaultMobileWebNitroManagementFailureCallback(arg0) {
   logger.error("Failed to open mobile web Nitro Management page, error response: ", arg0);
-  obj = _modDef4858;
+  obj = _modDef4859;
   obj = { title: null, body: null, hideActionSheet: true };
   const intl = getSystemLocale.intl;
   obj[0] = intl.string(getSystemLocale.t.NrBVjw);
@@ -111,7 +111,7 @@ export const getExternalManagementMessage = function getExternalManagementMessag
                 const intl3 = tmp13(1233).intl;
                 const t = tmp13(1233).t;
                 obj[2] = intl3.string(tmp8 ? t.tqSSSA : t["olSp/D"]);
-                jsx(tmp13(7160).LinkButton, {
+                jsx(tmp13(7161).LinkButton, {
                   containerStyle: null,
                   onPress: null,
                   text: null,

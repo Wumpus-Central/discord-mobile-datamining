@@ -87,8 +87,8 @@ export default function ExistingUserAgeGateConfirm(age) {
     }
     return applyArgumentsResult;
   };
-  obj3[1] = callback2(onConfirm(4928).Button, obj4);
+  obj3[1] = callback2(onConfirm(4929).Button, obj4);
   items[2] = callback2(View, obj3);
   obj[2] = items;
-  return callback3(onConfirm(5561).SafeAreaPaddingView, obj);
+  return callback3(onConfirm(5562).SafeAreaPaddingView, obj);
 }

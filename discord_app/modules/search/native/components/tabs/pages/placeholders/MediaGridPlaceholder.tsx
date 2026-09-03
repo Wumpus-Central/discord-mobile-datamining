@@ -4,7 +4,7 @@ import getSystemLocale from "../../../../../../../intl/index.native.tsx";
 import _modDef4217 from "../../../../../../reanimated/ReanimatedRexport.tsx";
 import Text from "../../../../../../../design/components/Text/native/Text.tsx";
 import useFullscreenPlaceholderCount from "../../../../hooks/usePlaceholderStyles.tsx";
-import _modDef16464 from "GridItemPlaceholder.tsx";
+import _modDef16485 from "GridItemPlaceholder.tsx";
 import closure_3 from "../../../../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../../../../_runtime/00017_get_ActivityIndicator.js";
 import MessageEmbedTypes from "../../../../../SearchConstants.tsx";
@@ -51,7 +51,7 @@ export default function MediaGridPlaceholderItem(arg0) {
   obj = {
     style: items,
     pointerEvents: "none",
-    children: callback(_modDef16464, { height: size, width: size, style: containerStyle }),
+    children: callback(_modDef16485, { height: size, width: size, style: containerStyle }),
   };
   items = [containerStyle, placeholderAnimatedStyle];
   return callback(_modDef4217.View, obj);
@@ -103,14 +103,14 @@ export const RecentsMediaGridPlaceholder = function RecentsMediaGridPlaceholder(
           style: row.row,
           children: arr.map((arg0, arg1) => {
             let obj = { height: closure_0, width: closure_0, style: null };
-            const tmp = numRows(16464);
+            const tmp = numRows(16485);
             obj = {
               itemIndex: closure_0 * closure_2_5 + arg1,
               numItems: closure_1_3.length,
               numColumns: closure_2_5,
               spacing: closure_2_6,
             };
-            obj[2] = closure_2_0(12128).getMediaGridItemStyles(obj);
+            obj[2] = closure_2_0(12134).getMediaGridItemStyles(obj);
             return closure_2_7(tmp, obj, arg1);
           }),
         }),

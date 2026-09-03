@@ -16,23 +16,23 @@ export const isSoundboardSectionNitroLocked = function isSoundboardSectionNitroL
 export const getUpsellType = function getUpsellType(featureName) {
   if (EntitlementFeatureNames.EntitlementFeatureNames.ANIMATED_EMOJIS === featureName) {
     return tmp(688).UpsellTypes.ANIMATED_EMOJI;
-  } else if (tmp(7607).EntitlementFeatureNames.EMOJIS_EVERYWHERE === featureName) {
+  } else if (tmp(7608).EntitlementFeatureNames.EMOJIS_EVERYWHERE === featureName) {
     return tmp(688).UpsellTypes.GLOBAL_EMOJI;
-  } else if (tmp(7607).EntitlementFeatureNames.STICKERS_EVERYWHERE === featureName) {
+  } else if (tmp(7608).EntitlementFeatureNames.STICKERS_EVERYWHERE === featureName) {
     return tmp(688).UpsellTypes.GLOBAL_STICKER;
-  } else if (tmp(7607).EntitlementFeatureNames.INCREASED_FILE_UPLOAD_SIZE === featureName) {
+  } else if (tmp(7608).EntitlementFeatureNames.INCREASED_FILE_UPLOAD_SIZE === featureName) {
     return tmp(688).UpsellTypes.UPLOAD;
-  } else if (tmp(7607).EntitlementFeatureNames.SOUNDBOARD_EVERYWHERE === featureName) {
+  } else if (tmp(7608).EntitlementFeatureNames.SOUNDBOARD_EVERYWHERE === featureName) {
     return tmp(688).UpsellTypes.SOUNDBOARD;
-  } else if (tmp(7607).EntitlementFeatureNames.CLIENT_THEMES === featureName) {
+  } else if (tmp(7608).EntitlementFeatureNames.CLIENT_THEMES === featureName) {
     return tmp(688).UpsellTypes.CLIENT_THEMES;
-  } else if (tmp(7607).EntitlementFeatureNames.APP_ICONS === featureName) {
+  } else if (tmp(7608).EntitlementFeatureNames.APP_ICONS === featureName) {
     return tmp(688).UpsellTypes.APP_ICONS;
-  } else if (tmp(7607).EntitlementFeatureNames.SAVED_MESSAGES === featureName) {
+  } else if (tmp(7608).EntitlementFeatureNames.SAVED_MESSAGES === featureName) {
     return tmp(688).UpsellTypes.FOR_LATER;
-  } else if (tmp(7607).EntitlementFeatureNames.SCHEDULED_MESSAGES === featureName) {
+  } else if (tmp(7608).EntitlementFeatureNames.SCHEDULED_MESSAGES === featureName) {
     return tmp(688).UpsellTypes.SCHEDULED_MESSAGES;
-  } else if (tmp(7607).EntitlementFeatureNames.STREAM_HIGH_QUALITY === featureName) {
+  } else if (tmp(7608).EntitlementFeatureNames.STREAM_HIGH_QUALITY === featureName) {
     return tmp(688).UpsellTypes.STREAM_HIGH_QUALITY;
   } else {
     const _HermesInternal = HermesInternal;

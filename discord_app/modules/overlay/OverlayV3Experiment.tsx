@@ -7,7 +7,7 @@ obj[3] = { keybindOverride: "ctrl+l" };
 const apexExperiment = ApexExperiment.createApexExperiment({
   name: "2026-03-overlay-default-keybind",
   kind: "user",
-  defaultConfig: { keybindOverride: "r" },
+  defaultConfig: { keybindOverride: "Array" },
   variations: obj,
 });
 obj = {

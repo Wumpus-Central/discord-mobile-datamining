@@ -21,7 +21,7 @@ function MessageContent(arg0) {
   c3 = undefined;
   c4 = undefined;
   closure_5 = undefined;
-  let obj = message(6164);
+  let obj = message(6165);
   items = [message.author.id];
   const subscribeGuildMembers = obj.useSubscribeGuildMembers({ [thread.guild_id]: items }, "ThreadBrowserRowSubtext");
   obj1 = message(586);
@@ -41,9 +41,9 @@ function MessageContent(arg0) {
   let tmp4 = useNullableMessageAuthorDefault(message);
   const extractTimestampResult = DISCORD_EPOCHDefault.extractTimestamp(message.id);
   const obj4 = DISCORD_EPOCHDefault;
-  const timestampString = message(7535).getTimestampString(extractTimestampResult);
-  const obj5 = message(7535);
-  const timestampAccessibilityLabel = message(7535).getTimestampAccessibilityLabel(extractTimestampResult);
+  const timestampString = message(7536).getTimestampString(extractTimestampResult);
+  const obj5 = message(7536);
+  const timestampAccessibilityLabel = message(7536).getTimestampAccessibilityLabel(extractTimestampResult);
   closure_5 = useHasEnhancedRoleColorsDefault(thread.guild_id, stateFromStores.id);
   obj = {
     user: stateFromStores,
@@ -151,7 +151,7 @@ function Username(usernameColor) {
     }
     return username;
   }, items);
-  let obj = usernameColor(7879);
+  let obj = usernameColor(7882);
   const processColorStringsArray = obj.useProcessColorStringsArray(roleColors);
   let tmp5 = !shouldShowRoleDot;
   if (!shouldShowRoleDot) {
@@ -314,7 +314,7 @@ export const ThreadSubtext = function ThreadSubtext(thread) {
   items = [closure_8];
   const items1 = [id];
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_8.getMostRecentMessage(id), items1);
-  const lastMessageTimestamp = id(7535).useLastMessageTimestamp(thread);
+  const lastMessageTimestamp = id(7536).useLastMessageTimestamp(thread);
   if (null != stateFromStores) {
     if (!items.includes(stateFromStores.type)) {
       if (!thread.isArchivedThread()) {
@@ -325,9 +325,9 @@ export const ThreadSubtext = function ThreadSubtext(thread) {
       }
     }
   }
-  let tmpResult = tmp(7535);
+  let tmpResult = tmp(7536);
   const timestampString = tmpResult.getTimestampString(lastMessageTimestamp);
-  tmpResult = tmp(7535);
+  tmpResult = tmp(7536);
   obj = {
     thread,
     timestamp: timestampString,

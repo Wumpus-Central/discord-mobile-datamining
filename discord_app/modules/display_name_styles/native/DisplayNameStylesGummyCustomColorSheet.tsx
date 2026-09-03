@@ -57,17 +57,17 @@ export default function DisplayNameStylesGummyCustomColorSheet(onSelect) {
   const intl2 = onSelect(1233).intl;
   obj1[2] = intl2.string(onSelect(1233).t.XqMe3N);
   obj1[3] = callback1;
-  obj[1] = callback(onSelect(4928).Button, obj1);
-  obj[0] = callback(onSelect(5629).BottomSheetTitleHeader, obj);
+  obj[1] = callback(onSelect(4929).Button, obj1);
+  obj[0] = callback(onSelect(5630).BottomSheetTitleHeader, obj);
   obj2 = { style: tmp.body, children: null };
   const obj3 = {
     style: tmp.previewWrapper,
-    children: callback(View, { style: tmp.preview, children: callback(sharedValue(15173), { hue: sharedValue }) }),
+    children: callback(View, { style: tmp.preview, children: callback(sharedValue(15188), { hue: sharedValue }) }),
   };
   const items1 = [callback(View, obj3)];
-  const obj4 = { style: tmp.preview, children: callback(sharedValue(15173), { hue: sharedValue }) };
-  items1[1] = callback(View, { style: tmp.huePickerInset, children: callback(sharedValue(14478), obj6) });
+  const obj4 = { style: tmp.preview, children: callback(sharedValue(15188), { hue: sharedValue }) };
+  items1[1] = callback(View, { style: tmp.huePickerInset, children: callback(sharedValue(14494), obj6) });
   obj2[1] = items1;
   obj[1] = callback2(View, obj2);
-  return callback(onSelect(5630).BottomSheet, obj);
+  return callback(onSelect(5631).BottomSheet, obj);
 }

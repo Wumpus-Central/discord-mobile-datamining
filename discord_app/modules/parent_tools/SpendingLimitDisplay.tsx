@@ -26,7 +26,7 @@ function getSpendingLimitDisplayState(amount) {
       obj[1] = formatRateResult;
       return obj;
     } else {
-      let num = tmp5(6090).CurrencyExponents[amount.currency];
+      let num = tmp5(6091).CurrencyExponents[amount.currency];
       if (num == null) {
         num = 2;
       }
@@ -36,9 +36,9 @@ function getSpendingLimitDisplayState(amount) {
         obj[1] = formatRateResult;
         const intl = tmp5(1233).intl;
         obj1 = { amount: null };
-        obj1[0] = tmp5(6089).formatPrice(diff, currency);
+        obj1[0] = tmp5(6090).formatPrice(diff, currency);
         obj[2] = intl.formatToPlainString(messagesProxyDefault["+Q+bU1"], obj1);
-        const tmp5Result = tmp5(6089);
+        const tmp5Result = tmp5(6090);
       } else {
         obj = { kind: "on", monthlyText: null };
         obj[1] = formatRateResult;

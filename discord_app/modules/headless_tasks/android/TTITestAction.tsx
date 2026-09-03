@@ -192,7 +192,7 @@ function _apiLogin() {
                 }
               }
               if (null != closure_1_8.getId()) {
-                let obj16 = callback(6060);
+                let obj16 = callback(6061);
                 c6 = 3;
                 c7 = 1;
                 const obj3 = { value: null, done: false };
@@ -239,7 +239,7 @@ function _apiLogin() {
               obj9[0] = ok;
               return obj9;
             } else if (ok.ok) {
-              obj7 = callback(6060);
+              obj7 = callback(6061);
               c6 = 4;
               c7 = 1;
               const obj10 = { value: null, done: false };
@@ -318,7 +318,7 @@ function _apiLogin() {
               obj = iter;
               obj = callback2(table[11]);
               callback2 = iter;
-              const f124970 = () => { ... };
+              const f125209 = () => { ... };
               function handler() { ... }
               const subscription = obj.subscribe(iter, handler);
             }
@@ -328,7 +328,7 @@ function _apiLogin() {
               continue;
             }
             closure_1_20(callback(706), "LOGIN_SUCCESS", (token) => callback(token.token));
-            obj = callback(6060);
+            obj = callback(6061);
             obj = { login: closure_0, password: callback };
             obj.login(obj);
           });
@@ -359,7 +359,7 @@ function subscribeOnce(subscribe) {
   closure_2 = arg2;
   function handler(arg0) {
     obj.unsubscribe(closure_1, handler);
-    return f124970(arg0);
+    return f125209(arg0);
   }
   return subscribe.subscribe("LOGIN_SUCCESS", handler);
 }
@@ -373,7 +373,7 @@ let obj = {
     enforcingDefault.logToDevice(json);
   },
   () => {
-    obj = callback(10299);
+    obj = callback(10303);
     const result = obj.resetComponentProfiler();
     obj = { type: "response", status: "success", message: "reset-component-profiler" };
     const merged = Object.assign(undefined);
@@ -381,7 +381,7 @@ let obj = {
     enforcingDefault.logToDevice(json);
   },
   () => {
-    obj = callback(10299);
+    obj = callback(10303);
     const result = obj.pauseComponentProfiler();
     obj = { type: "response", status: "success", message: "pause-component-profiler" };
     const merged = Object.assign(undefined);
@@ -389,7 +389,7 @@ let obj = {
     enforcingDefault.logToDevice(json);
   },
   () => {
-    obj = callback(10299);
+    obj = callback(10303);
     const result = obj.resumeComponentProfiler();
     obj = { type: "response", status: "success", message: "resume-component-profiler" };
     const merged = Object.assign(undefined);
@@ -397,11 +397,11 @@ let obj = {
     enforcingDefault.logToDevice(json);
   },
   () => {
-    obj = { stats: callback(10299).dumpStats() };
+    obj = { stats: callback(10303).dumpStats() };
     obj = { type: "response", status: "success", message: "dump-component-profiler-stats" };
     const merged = Object.assign(obj);
     const json = JSON.stringify(obj);
-    const obj2 = callback(10299);
+    const obj2 = callback(10303);
     enforcingDefault.logToDevice(json);
   },
   () => {

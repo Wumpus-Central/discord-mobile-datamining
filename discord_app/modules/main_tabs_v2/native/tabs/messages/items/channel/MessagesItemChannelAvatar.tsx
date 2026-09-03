@@ -128,10 +128,10 @@ const memoResult = importAllResult.memo(function MessagesItemChannelAvatar(chann
         isVROnline: false,
         status: true,
         streaming: true,
-        style: "any",
+        style: null,
         size: null,
-        animate: true,
-        typing: "/assets/.cache/intl/bW9kdWxlcy9nb19saXZl",
+        animate: null,
+        typing: null,
         autoStatusCutout: null,
       };
       obj[0] = stateFromStores2;
@@ -156,10 +156,10 @@ const memoResult = importAllResult.memo(function MessagesItemChannelAvatar(chann
         isVROnline: false,
         status: true,
         streaming: true,
-        style: "any",
+        style: null,
         size: null,
-        animate: true,
-        typing: "/assets/.cache/intl/bW9kdWxlcy9nb19saXZl",
+        animate: null,
+        typing: null,
         autoStatusCutout: null,
       });
       const tmp11 = jsx;

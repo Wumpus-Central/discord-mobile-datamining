@@ -81,7 +81,7 @@ let prototype = function GlobalDiscoveryServersFeaturedSearchManager() {
                 obj1 = { categoryId: null };
                 obj1[0] = c6;
                 if (!total) {
-                  let obj6 = lib(17648);
+                  let obj6 = lib(17668);
                 }
                 let obj7 = closure_1_1(706);
                 const obj2 = { type: "GLOBAL_DISCOVERY_SERVERS_SEARCH_START", categoryId: null, reset: true };
@@ -92,7 +92,7 @@ let prototype = function GlobalDiscoveryServersFeaturedSearchManager() {
                 let obj3 = { url: null, query: null, oldFormErrors: true, rejectWithError: null };
                 obj3[0] = constants.GUILD_DISCOVERY;
                 const obj4 = { offset: 0, limit: null };
-                obj4[1] = lib(17649).GlobalDiscoveryServersLimits.FEATURED_DEFAULT_LIMIT;
+                obj4[1] = lib(17669).GlobalDiscoveryServersLimits.FEATURED_DEFAULT_LIMIT;
                 obj3[1] = closure_1_1(1482).stringify(obj4);
                 const obj11 = closure_1_1(1482);
                 obj3[3] = lib(527).rejectWithMigratedError();
@@ -115,7 +115,7 @@ let prototype = function GlobalDiscoveryServersFeaturedSearchManager() {
               obj6[1] = c6;
               obj6[2] = dependencyMap;
               obj1.dispatch(obj6);
-              obj3 = closure_1_2(6194);
+              obj3 = closure_1_2(6195);
               obj7 = { categoryId: null };
               obj7[0] = c6;
               const result = obj3.trackGuildDiscoveryGetFeaturedGuildsFailed(obj7);
@@ -126,7 +126,7 @@ let prototype = function GlobalDiscoveryServersFeaturedSearchManager() {
               lib = arg1;
               total = lib.body.total;
               const guilds = lib.body.guilds;
-              closure_2 = guilds.map(lib(17648).fromDiscoverableGuildServer);
+              closure_2 = guilds.map(lib(17668).fromDiscoverableGuildServer);
               const obj8 = {
                 type: "GLOBAL_DISCOVERY_SERVERS_SEARCH_SUCCESS",
                 categoryId: null,

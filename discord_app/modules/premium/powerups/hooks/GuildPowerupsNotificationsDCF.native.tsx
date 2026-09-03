@@ -31,7 +31,7 @@ export const useGuildPowerupNotificationDCF = function useGuildPowerupNotificati
   if (arg0) {
     prop = tmp(1372).DismissibleContent.GUILD_POWERUP_NOTIFICATION;
   }
-  obj = { cooldownDurationMs: tmp(12283).GUILD_POWERUP_NOTIFICATION_COOLDOWN };
+  obj = { cooldownDurationMs: tmp(12295).GUILD_POWERUP_NOTIFICATION_COOLDOWN };
   return obj.useSelectedTimeRecurringDismissibleContent(prop, obj);
 };
 export function useNewGamesCoachmarkDC(arg0) {
@@ -52,8 +52,8 @@ export const useBoostToUnlockCoachmarkDCF = function useBoostToUnlockCoachmarkDC
     }
   }
   obj = {
-    cooldownDurationMs: tmp2(12283).BOOST_TO_UNLOCK_COACHMARK_COOLDOWN,
-    numTimesToRecur: tmp2(12283).BOOST_TO_UNLOCK_COACHMARK_MAX_TIMES_TO_RECUR,
+    cooldownDurationMs: tmp2(12295).BOOST_TO_UNLOCK_COACHMARK_COOLDOWN,
+    numTimesToRecur: tmp2(12295).BOOST_TO_UNLOCK_COACHMARK_MAX_TIMES_TO_RECUR,
   };
   return useSelectedDismissibleContent.useSelectedTimeRecurringGuildDismissibleContent(
     prop,

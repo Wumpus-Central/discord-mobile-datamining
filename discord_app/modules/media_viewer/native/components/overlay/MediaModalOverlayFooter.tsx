@@ -9,7 +9,7 @@ import createCacheKey from "../../../../../design/components/Styles/native/creat
 const require = arg1;
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 createCacheKey = {
-  drawerContainer: { overflow: "hidden", backgroundColor: "WireType" },
+  drawerContainer: { overflow: "hidden", backgroundColor: "sa" },
   drawerHeaderTab: null,
   drawerHeader: null,
   messagePreviewContainer: null,
@@ -17,7 +17,7 @@ createCacheKey = {
 };
 createCacheKey = { width: 40, backgroundColor: ThemesDefault.unsafe_rawColors.PRIMARY_600 };
 createCacheKey[1] = createCacheKey;
-createCacheKey[2] = { backgroundColor: "r" };
+createCacheKey[2] = { backgroundColor: "Array" };
 createCacheKey[3] = { marginLeft: 6 };
 createCacheKey[4] = { paddingTop: 8 };
 let closure_8 = createCacheKey.createStyles(createCacheKey);

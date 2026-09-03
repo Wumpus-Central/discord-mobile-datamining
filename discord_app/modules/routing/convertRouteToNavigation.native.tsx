@@ -112,7 +112,7 @@ export const convertRouteToNavigation = function convertRouteToNavigation(pathna
                 const tmpResult8 = tmp(4332);
               }
               if (tmp15) {
-                const obj6 = { channelId: null, guildId: null, messageId: null, replaceChannelAndFixRoot: "Array" };
+                const obj6 = { channelId: null, guildId: null, messageId: null, replaceChannelAndFixRoot: "PX_16" };
                 obj6[0] = channelId;
                 obj6[1] = guildId;
                 obj6[2] = messageId;

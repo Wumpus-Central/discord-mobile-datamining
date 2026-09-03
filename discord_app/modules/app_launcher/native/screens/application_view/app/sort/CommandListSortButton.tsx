@@ -68,8 +68,8 @@ export default function CommandListSortButton(sortOrder) {
     callback(sortOrder(4474).Text, { variant: "text-sm/medium", color: "text-default", children: stringResult }),
   ];
   obj = { size: "xs", color: onSortOptionPress(709).colors.TEXT_DEFAULT };
-  items[1] = callback(sortOrder(8949).ChevronSmallDownIcon, obj);
+  items[1] = callback(sortOrder(8953).ChevronSmallDownIcon, obj);
   obj[1] = items;
   obj[5] = callback2(View, obj);
-  return callback(sortOrder(5076).PressableOpacity, obj);
+  return callback(sortOrder(5077).PressableOpacity, obj);
 }

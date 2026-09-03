@@ -59,7 +59,7 @@ export default function UserPreview(user) {
   obj1 = { style: items1, children: null };
   items1 = [tmp.userContainer, { borderColor: hexWithOpacityResult }];
   const str = intl.string(getSystemLocale.t.Rsth7z);
-  const items2 = [callback(Button.Avatar, { size: Button.AvatarSizes.LARGE_48, user, guildId: "r" })];
+  const items2 = [callback(Button.Avatar, { size: Button.AvatarSizes.LARGE_48, user, guildId: "accessible" })];
   const obj3 = { style: tmp.userProfileInfo, children: null };
   let tmp7Result = null != user.globalName;
   if (tmp7Result) {

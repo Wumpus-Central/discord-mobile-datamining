@@ -1,6 +1,6 @@
 // discord_app/modules/contact_sync/native/components/ContactSyncUpsellCTA.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import registerAssetDefault from "../../../../../_runtime/13820_registerAsset.js";
+import registerAssetDefault from "../../../../../_runtime/13836_registerAsset.js";
 import { dismissUpsellCTA } from "../ContactSyncPersistedStore.tsx";
 import ME from "../../../../Constants.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
@@ -36,7 +36,7 @@ const memoResult = importAllResult.memo(function ContactSyncUpsellCTA(location) 
       location(closure_1_2[8]).openContactSyncModal({}, { page: str });
     },
     onLongPress() {
-      let obj = location(5994);
+      let obj = location(5995);
       obj = { key: "ContactSyncUpsellLongPress", options: null, hasIcons: false };
       obj = { label: null, onPress: null };
       const intl = location(1233).intl;
@@ -58,7 +58,7 @@ const memoResult = importAllResult.memo(function ContactSyncUpsellCTA(location) 
   obj[4] = intl.string(location(1233).t.T6Rfd9);
   const intl2 = location(1233).intl;
   obj[5] = intl2.string(location(1233).t.c6KIpg);
-  return jsx(location(8372).FormCTA, {
+  return jsx(location(8376).FormCTA, {
     onPress() {
       let obj = closure_1_1(closure_1_2[7]);
       obj = { type: closure_1_5.CONTACT_SYNC_MODAL, location: null };
@@ -75,7 +75,7 @@ const memoResult = importAllResult.memo(function ContactSyncUpsellCTA(location) 
       location(closure_1_2[8]).openContactSyncModal({}, { page: str });
     },
     onLongPress() {
-      let obj = location(5994);
+      let obj = location(5995);
       obj = { key: "ContactSyncUpsellLongPress", options: null, hasIcons: false };
       obj = { label: null, onPress: null };
       const intl = location(1233).intl;

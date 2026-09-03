@@ -1,7 +1,7 @@
 // discord_app/modules/channel/SelectedChannelManager.tsx
 import dispatcherDefault from "../../Dispatcher.tsx";
 import transitionTo from "../routing/router_utils.tsx";
-import _modDef5363 from "../../actions/SelectedChannelActionCreators.tsx";
+import _modDef5364 from "../../actions/SelectedChannelActionCreators.tsx";
 import initializeDefault from "../../lib/AutomaticLifecycleManager.tsx";
 import transitionToGuild from "../routing/transitionToGuild.native.tsx";
 import closure_3 from "../../stores/MediaEngineStore.tsx";
@@ -41,8 +41,8 @@ prototype["handleGuildCreate"] = function handleGuildCreate(guild) {
     tmp6 = null == voiceChannelId;
   }
   if (tmp6) {
-    const voiceChannel = _modDef5363.selectVoiceChannel(findFirstVoiceChannelId(guild.id));
-    const obj2 = _modDef5363;
+    const voiceChannel = _modDef5364.selectVoiceChannel(findFirstVoiceChannelId(guild.id));
+    const obj2 = _modDef5364;
   }
 };
 prototype["handleChannelCreate"] = function handleChannelCreate(channel) {
@@ -57,8 +57,8 @@ prototype["handleChannelCreate"] = function handleChannelCreate(channel) {
     const obj3 = store;
     tmp = null == guildId.getGuildId() && null != originChannelId && originChannelId === channelId;
     if (tmp7) {
-      const voiceChannel = _modDef5363.selectVoiceChannel(channel.id, videoEnabled.isVideoEnabled());
-      const obj2 = _modDef5363;
+      const voiceChannel = _modDef5364.selectVoiceChannel(channel.id, videoEnabled.isVideoEnabled());
+      const obj2 = _modDef5364;
     }
     tmp7 = null != originChannelId && originChannelId === store.getVoiceChannelId();
   }

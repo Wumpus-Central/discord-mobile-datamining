@@ -9,7 +9,7 @@ import DividerDefault from "components/Divider.tsx";
 import CategoryChannel from "items/index.tsx";
 import VOICE_USER_SUMMARY_HEIGHT from "../../guild_sidebar/native/VoiceUserSummary.tsx";
 import isFavoritesSection from "ChannelListUtils.tsx";
-import _modDef16015 from "items/ShowAllVoiceChannelsButton.tsx";
+import _modDef16031 from "items/ShowAllVoiceChannelsButton.tsx";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import closure_4 from "../../stage_channels/StageChannelParticipantStore.tsx";
 import createChannelRecord from "../../../records/ChannelRecord.tsx";
@@ -72,10 +72,10 @@ let result = require("set").fileFinishedImporting("modules/channel_list_v2/nativ
 export const getFastListRecyclerKey = function getFastListRecyclerKey(guildChannels, arg1, arg2, arg3) {
   if (arg1 === renderDefaultEmpty.FastListItemTypes.ITEM) {
     if (null != arg3) {
-      if (tmp(7282).SECTION_INDEX_CHANNEL_NOTICES === arg2) {
+      if (tmp(7283).SECTION_INDEX_CHANNEL_NOTICES === arg2) {
         const channelNoticeSection = guildChannels.getChannelNoticeSection();
         let id = channelNoticeSection.getRow(arg3);
-      } else if (tmp(7282).SECTION_INDEX_GUILD_ACTIONS === arg2) {
+      } else if (tmp(7283).SECTION_INDEX_GUILD_ACTIONS === arg2) {
         const guildActionSection = guildChannels.getGuildActionSection();
         id = guildActionSection.getRow(arg3);
       } else {
@@ -92,7 +92,7 @@ export const getFastListRecyclerKey = function getFastListRecyclerKey(guildChann
         return "" + guildChannels.id + ":SECTION:" + arg2 + ":ITEM:" + id;
       }
     }
-  } else if (arg1 === tmp(7804).FastListItemTypes.SECTION) {
+  } else if (arg1 === tmp(7807).FastListItemTypes.SECTION) {
     const _HermesInternal = HermesInternal;
     return "" + guildChannels.id + ":SECTION:" + arg2;
   }
@@ -173,7 +173,7 @@ export const renderChannelListSectionHeader = function renderChannelListSectionH
         const obj4 = { channel: null, withMarginTop: null };
         obj4[0] = namedCategoryFromSection.record;
         obj4[1] = arg3;
-        tmp5 = callback4(tmp(15925).CategoryChannel, obj4);
+        tmp5 = callback4(tmp(15941).CategoryChannel, obj4);
       }
       return tmp5;
     } else {
@@ -246,7 +246,7 @@ export const renderChannelListSectionFooter = function renderChannelListSectionF
   }
   if (computeSubtitle.SECTION_INDEX_CHANNEL_NOTICES === section) {
     return null;
-  } else if (tmp5(7282).SECTION_INDEX_GUILD_ACTIONS === section) {
+  } else if (tmp5(7283).SECTION_INDEX_GUILD_ACTIONS === section) {
     const guildActionSection = guildChannels.getGuildActionSection();
     let flag = false;
     if (!guildActionSection.isEmpty()) {
@@ -289,7 +289,7 @@ export const renderChannelListSectionFooter = function renderChannelListSectionF
             obj3[0] = guildChannels.id;
             obj3[1] = section;
             obj3[2] = ref;
-            obj2[1] = callback4(_modDef16015, obj3);
+            obj2[1] = callback4(_modDef16031, obj3);
             items[1] = callback4(View, obj2);
             obj1[0] = items;
             return closure_19(View, obj1);
@@ -345,7 +345,7 @@ export const getChannelListSectionFooterSize = function getChannelListSectionFoo
   }
   if (computeSubtitle.SECTION_INDEX_CHANNEL_NOTICES === section) {
     return 0;
-  } else if (tmp3(7282).SECTION_INDEX_GUILD_ACTIONS === section) {
+  } else if (tmp3(7283).SECTION_INDEX_GUILD_ACTIONS === section) {
     const guildActionSection = guildChannels.getGuildActionSection();
     let flag = false;
     if (!guildActionSection.isEmpty()) {
@@ -358,7 +358,7 @@ export const getChannelListSectionFooterSize = function getChannelListSectionFoo
     }
     let num5 = 0;
     if (flag) {
-      num5 = tmp3(12085).DIVIDER_HEIGHT;
+      num5 = tmp3(12091).DIVIDER_HEIGHT;
     }
     return num5;
   } else {
@@ -381,7 +381,7 @@ export const getChannelListSectionFooterSize = function getChannelListSectionFoo
             return num;
           } else {
             showAllVoiceChannelsButtonLastShownChannelActive = obj;
-            const sum = num + tmp3(4933).SMALL_BUTTON_HEIGHT;
+            const sum = num + tmp3(4934).SMALL_BUTTON_HEIGHT;
             if (tmp6) {
               ({ showAllVoiceChannelsButtonLastShownChannelActive, marginTop } =
                 showAllVoiceChannelsButtonLastShownChannelActive);
@@ -401,7 +401,7 @@ export const getChannelListSectionFooterSize = function getChannelListSectionFoo
         }
       }
     }
-    return tmp3(12085).DIVIDER_HEIGHT;
+    return tmp3(12091).DIVIDER_HEIGHT;
   }
 };
 export const renderChannelListItem = function renderChannelListItem(arg0) {
@@ -416,7 +416,7 @@ export const renderChannelListItem = function renderChannelListItem(arg0) {
     startApplicationAccountLinkAuthorization,
     accountLinkApplication,
   } = arg0);
-  if (channel(7282).SECTION_INDEX_CHANNEL_NOTICES === section) {
+  if (channel(7283).SECTION_INDEX_CHANNEL_NOTICES === section) {
     const channelNoticeSection = guildChannels.getChannelNoticeSection();
     row = channelNoticeSection.getRow(row);
     let tmp65 = null;
@@ -432,18 +432,18 @@ export const renderChannelListItem = function renderChannelListItem(arg0) {
         obj1[0] = obj.nonChannelContainer;
         const obj2 = { guild: null };
         obj2[0] = guild;
-        obj1[1] = callback4(selectedChannelId(16017), obj2);
+        obj1[1] = callback4(selectedChannelId(16033), obj2);
         tmp65 = callback4(View, obj1);
       } else if (tmp66.MFA_WARNING === row) {
         const obj3 = { style: null, children: null };
         obj3[0] = obj.nonChannelContainer;
-        obj3[1] = callback4(selectedChannelId(16019), {});
+        obj3[1] = callback4(selectedChannelId(16035), {});
         tmp65 = callback4(View, obj3);
       } else if (tmp66.LIVE_CHANNEL_NOTICE === row) {
         const obj4 = { style: null, guild: null };
         obj4[0] = obj.liveChannelNotice;
         obj4[1] = guild;
-        tmp65 = callback4(selectedChannelId(16008), obj4);
+        tmp65 = callback4(selectedChannelId(16024), obj4);
       } else if (tmp66.GAME_CLAIM === row) {
         let tmp72 = null;
         if (null != gameClaimMarkAsDismissed) {
@@ -452,7 +452,7 @@ export const renderChannelListItem = function renderChannelListItem(arg0) {
           const obj6 = { guild: null, markAsDismissed: null };
           obj6[0] = guild;
           obj6[1] = gameClaimMarkAsDismissed;
-          obj5[1] = callback4(selectedChannelId(16010), obj6);
+          obj5[1] = callback4(selectedChannelId(16026), obj6);
           tmp72 = callback4(View, obj5);
         }
         tmp65 = tmp72;
@@ -469,7 +469,7 @@ export const renderChannelListItem = function renderChannelListItem(arg0) {
               obj8[0] = applicationAccountLinkMarkAsDismissed;
               obj8[1] = startApplicationAccountLinkAuthorization;
               obj8[2] = accountLinkApplication;
-              obj7[1] = callback4(selectedChannelId(16014), obj8);
+              obj7[1] = callback4(selectedChannelId(16030), obj8);
               tmp67 = callback4(View, obj7);
             }
           }
@@ -478,12 +478,12 @@ export const renderChannelListItem = function renderChannelListItem(arg0) {
       } else {
         tmp65 = null;
         if (tmp66.FAVORITES_SUGGESTIONS === row) {
-          tmp65 = callback4(selectedChannelId(16021), {});
+          tmp65 = callback4(selectedChannelId(16037), {});
         }
       }
     }
     return tmp65;
-  } else if (tmp(7282).SECTION_INDEX_GUILD_ACTIONS === section) {
+  } else if (tmp(7283).SECTION_INDEX_GUILD_ACTIONS === section) {
     const guildActionSection = guildChannels.getGuildActionSection();
     const row1 = guildActionSection.getRow(row);
     let tmp55Result = null;
@@ -492,12 +492,12 @@ export const renderChannelListItem = function renderChannelListItem(arg0) {
         const obj9 = { guild: null, selected: null };
         obj9[0] = guild;
         obj9[1] = selectedChannelId === StaticChannelRoute.ROLE_SUBSCRIPTIONS;
-        tmp55Result = callback4(selectedChannelId(16025), obj9);
+        tmp55Result = callback4(selectedChannelId(16041), obj9);
       } else if (tmp32.GUILD_HOME === row1) {
         const obj10 = { guild: null, selected: null };
         obj10[0] = guild;
         obj10[1] = selectedChannelId === StaticChannelRoute.GUILD_HOME;
-        tmp55Result = callback4(selectedChannelId(16027), obj10);
+        tmp55Result = callback4(selectedChannelId(16043), obj10);
       } else if (tmp32.CHANNELS_AND_ROLES === row1) {
         const obj11 = { guild: null, selected: null };
         obj11[0] = guild;
@@ -506,46 +506,46 @@ export const renderChannelListItem = function renderChannelListItem(arg0) {
           tmp56 = selectedChannelId === StaticChannelRoute.CUSTOMIZE_COMMUNITY;
         }
         obj11[1] = tmp56;
-        tmp55Result = callback4(tmp(16028).GuildRolesAndChannelsRow, obj11);
+        tmp55Result = callback4(tmp(16044).GuildRolesAndChannelsRow, obj11);
         const tmp55 = callback4;
       } else if (tmp32.GUILD_DIRECTORY === row1) {
         const obj12 = { guildId: null, selected: null };
         obj12[0] = guild.id;
         obj12[1] = selectedChannelId === directoryChannelIds.getDirectoryChannelIds(guild.id)[0];
-        tmp55Result = callback4(selectedChannelId(16029), obj12);
+        tmp55Result = callback4(selectedChannelId(16045), obj12);
       } else if (tmp32.GUILD_NEW_MEMBER_ACTIONS_PROGRESS_BAR === row1) {
         const obj13 = { children: null };
         const obj14 = { style: null, children: null };
         obj14[0] = obj.nonChannelContainer;
         const obj15 = { guildId: null };
         obj15[0] = guild.id;
-        obj14[1] = callback4(tmp(16030).NewMemberActionsProgress, obj15);
-        const items = [callback4(View, obj14), callback4(selectedChannelId(12085), {})];
+        obj14[1] = callback4(tmp(16046).NewMemberActionsProgress, obj15);
+        const items = [callback4(View, obj14), callback4(selectedChannelId(12091), {})];
         obj13[0] = items;
         tmp55Result = callback5(View, obj13);
       } else if (tmp32.GUILD_HUB_HEADER_OPTIONS === row1) {
         const obj16 = { guild: null };
         obj16[0] = guild;
-        tmp55Result = callback4(selectedChannelId(16031), obj16);
+        tmp55Result = callback4(selectedChannelId(16047), obj16);
       } else if (tmp32.GUILD_MOD_DASH_MEMBER_SAFETY === row1) {
         const obj17 = { guild: null, selected: null };
         obj17[0] = guild;
         obj17[1] = selectedChannelId === StaticChannelRoute.MEMBER_SAFETY;
-        tmp55Result = callback4(selectedChannelId(16034), obj17);
+        tmp55Result = callback4(selectedChannelId(16050), obj17);
       } else if (tmp32.GUILD_VIBEGRATIONS === row1) {
         const obj18 = { guild: null, selected: null };
         obj18[0] = guild;
         obj18[1] = selectedChannelId === StaticChannelRoute.VIBEGRATIONS;
-        tmp55Result = callback4(selectedChannelId(16036), obj18);
+        tmp55Result = callback4(selectedChannelId(16052), obj18);
       } else if (tmp32.GUILD_BOOSTS === row1) {
         const obj19 = { guildId: null };
         obj19[0] = guild.id;
-        tmp55Result = callback4(selectedChannelId(16037), obj19);
+        tmp55Result = callback4(selectedChannelId(16053), obj19);
       } else if (tmp32.GUILD_PREMIUM_PROGRESS_BAR === row1) {
         const obj20 = { children: null };
         const obj21 = { guildId: null };
         obj21[0] = guild.id;
-        const items1 = [callback4(selectedChannelId(16040), obj21), callback4(selectedChannelId(12085), {})];
+        const items1 = [callback4(selectedChannelId(16056), obj21), callback4(selectedChannelId(12091), {})];
         obj20[0] = items1;
         tmp55Result = callback5(View, obj20);
       } else {
@@ -582,7 +582,7 @@ export const renderChannelListItem = function renderChannelListItem(arg0) {
         const obj23 = { channel: null, selected: null };
         obj23[0] = record;
         obj23[1] = tmp5;
-        const items2 = [callback4(selectedChannelId(16044), obj23)];
+        const items2 = [callback4(selectedChannelId(16060), obj23)];
         const threadIds = channel.threadIds;
         items2[1] = threadIds.map((arg0, arg1) => {
           let tmp = null;
@@ -615,7 +615,7 @@ export const renderChannelListItem = function renderChannelListItem(arg0) {
         obj24[4] = guild.rulesChannelId === record.id;
         obj24[5] = section === guildChannels.recentsSectionNumber;
         const obj25 = { children: null };
-        const items3 = [callback4(selectedChannelId(16045), obj24)];
+        const items3 = [callback4(selectedChannelId(16061), obj24)];
         const threadIds1 = channel.threadIds;
         items3[1] = threadIds1.map((arg0, arg1) => {
           let tmp = null;
@@ -639,12 +639,12 @@ export const renderChannelListItem = function renderChannelListItem(arg0) {
         obj26[0] = record;
         obj26[1] = tmp5;
         obj26[2] = channel.subtitle;
-        tmp13 = callback4(selectedChannelId(16055), obj26);
+        tmp13 = callback4(selectedChannelId(16071), obj26);
       } else if (tmp(689).ChannelTypes.GUILD_STAGE_VOICE === type) {
         const obj27 = { channel: null, selected: null };
         obj27[0] = record;
         obj27[1] = tmp5;
-        tmp13 = callback4(selectedChannelId(16057), obj27);
+        tmp13 = callback4(selectedChannelId(16073), obj27);
       } else {
         if (tmp(689).ChannelTypes.DM !== type) {
           if (tmp(689).ChannelTypes.GROUP_DM !== type) {
@@ -652,7 +652,7 @@ export const renderChannelListItem = function renderChannelListItem(arg0) {
               if (record.isCategory()) {
                 const obj28 = { channel: null, withMarginTop: true };
                 obj28[0] = record;
-                let tmp9 = callback4(tmp(15925).CategoryChannel, obj28);
+                let tmp9 = callback4(tmp(15941).CategoryChannel, obj28);
               }
               tmp13 = tmp9;
             }
@@ -662,20 +662,20 @@ export const renderChannelListItem = function renderChannelListItem(arg0) {
                 obj29[0] = record;
                 obj29[1] = tmp5;
                 ({ isMuted: obj3[2], subtitle: obj3[3] } = channel);
-                tmp9 = callback4(selectedChannelId(16045), obj29);
+                tmp9 = callback4(selectedChannelId(16061), obj29);
               }
             }
             const obj30 = { channel: null, selected: null };
             obj30[0] = record;
             obj30[1] = tmp5;
-            tmp9 = callback4(selectedChannelId(16044), obj30);
+            tmp9 = callback4(selectedChannelId(16060), obj30);
             tmpResult = tmp(1911);
           }
         }
         const obj31 = { channel: null, selected: null };
         obj31[0] = record;
         obj31[1] = tmp5;
-        tmp13 = callback4(selectedChannelId(16059), obj31);
+        tmp13 = callback4(selectedChannelId(16075), obj31);
       }
     }
     return tmp13;
@@ -692,23 +692,23 @@ export const getChannelListItemSize = function getChannelListItemSize(liveChanne
     if (constants.SPACER === row) {
       return closure_14;
     } else if (tmp28.GUILD_PROGRESS === row) {
-      let tmpResult = tmp(16017);
+      let tmpResult = tmp(16033);
       return tmpResult.getScaledGuildProgressButtonHeight(fontScale);
     } else if (tmp28.MFA_WARNING === row) {
-      tmpResult = tmp(16019);
+      tmpResult = tmp(16035);
       return tmpResult.getScaledGuildMFAWarningHeight(fontScale);
     } else if (tmp28.LIVE_CHANNEL_NOTICE === row) {
       return liveChannelNoticeHeight.liveChannelNoticeHeight;
     } else if (tmp28.GAME_CLAIM === row) {
-      return tmp(16010).getScaledGameClaimNoticeHeight(fontScale);
+      return tmp(16026).getScaledGameClaimNoticeHeight(fontScale);
     } else if (tmp28.APPLICATION_ACCOUNT_LINK === row) {
-      return tmp(16014).getScaledAccountLinkBannerHeight(fontScale);
+      return tmp(16030).getScaledAccountLinkBannerHeight(fontScale);
     } else if (tmp28.FAVORITES_SUGGESTIONS === row) {
       return favoritesSuggestionsNoticeHeight;
     } else {
       return 0;
     }
-  } else if (tmp(7282).SECTION_INDEX_GUILD_ACTIONS === section) {
+  } else if (tmp(7283).SECTION_INDEX_GUILD_ACTIONS === section) {
     const guildActionSection = guildChannels.getGuildActionSection();
     const row1 = guildActionSection.getRow(row);
     let num4 = 0;
@@ -729,14 +729,14 @@ export const getChannelListItemSize = function getChannelListItemSize(liveChanne
                   num4 = tmp25;
                   if (tmp26.GUILD_VIBEGRATIONS !== row1) {
                     if (tmp26.GUILD_NEW_MEMBER_ACTIONS_PROGRESS_BAR === row1) {
-                      num4 = 48 + tmp(12085).DIVIDER_HEIGHT;
+                      num4 = 48 + tmp(12091).DIVIDER_HEIGHT;
                     } else {
                       num4 = liveChannelNoticeHeight.listViewportHeight;
                       if (tmp26.GUILD_HUB_HEADER_OPTIONS !== row1) {
                         num4 = 0;
                         if (tmp26.GUILD_SCHEDULED_EVENTS !== row1) {
                           if (tmp26.GUILD_PREMIUM_PROGRESS_BAR === row1) {
-                            num4 = tmp(16040).BOOST_PROGRESS_BAR_HEIGHT + tmp(12085).DIVIDER_HEIGHT;
+                            num4 = tmp(16056).BOOST_PROGRESS_BAR_HEIGHT + tmp(12091).DIVIDER_HEIGHT;
                           } else {
                             num4 = 0;
                             if (tmp26.GUILD_FAVORITES !== row1) {
@@ -802,8 +802,8 @@ export const getChannelListItemSize = function getChannelListItemSize(liveChanne
                 const result = closure_9.countVoiceStatesForChannel(record.id);
                 let sum1 = tmp31;
                 if (result > 0) {
-                  sum1 = tmp31 + result * tmp(15943).getVoiceUserHeight(fontScale);
-                  const tmpResult4 = tmp(15943);
+                  sum1 = tmp31 + result * tmp(15959).getVoiceUserHeight(fontScale);
+                  const tmpResult4 = tmp(15959);
                 }
                 num = sum1;
               }
@@ -814,11 +814,11 @@ export const getChannelListItemSize = function getChannelListItemSize(liveChanne
         if (null != channel.subtitle) {
           num2 = callback3(fontScale);
         }
-        const voiceUserHeight = tmp(15943).getVoiceUserHeight(fontScale);
+        const voiceUserHeight = tmp(15959).getVoiceUserHeight(fontScale);
         if (record.type === tmp(689).ChannelTypes.GUILD_STAGE_VOICE) {
           let participantCount = store.getParticipantCount(
             record.id,
-            tmp(5376).StageChannelParticipantNamedIndex.SPEAKER,
+            tmp(5377).StageChannelParticipantNamedIndex.SPEAKER,
           );
         } else {
           participantCount = closure_9.countVoiceStatesForChannel(record.id);
@@ -826,19 +826,19 @@ export const getChannelListItemSize = function getChannelListItemSize(liveChanne
         let num3 = 0;
         if (record.type === tmp(689).ChannelTypes.GUILD_STAGE_VOICE) {
           num3 = 0;
-          if (store.getParticipantCount(record.id, tmp(5376).StageChannelParticipantNamedIndex.AUDIENCE) > 0) {
-            num3 = tmp(15941).getAudienceItemHeight(fontScale);
-            const tmpResult6 = tmp(15941);
+          if (store.getParticipantCount(record.id, tmp(5377).StageChannelParticipantNamedIndex.AUDIENCE) > 0) {
+            num3 = tmp(15957).getAudienceItemHeight(fontScale);
+            const tmpResult6 = tmp(15957);
           }
         }
         let sum4 = tmp31;
         if (participantCount > 0) {
           const sum2 = tmp31 + num2;
-          const sum3 = sum2 + tmp(16055).VOICE_USERS_MARGIN_TOP + voiceUserHeight * participantCount;
-          sum4 = sum3 + tmp(16055).VOICE_USERS_MARGIN_BOTTOM + num3;
+          const sum3 = sum2 + tmp(16071).VOICE_USERS_MARGIN_TOP + voiceUserHeight * participantCount;
+          sum4 = sum3 + tmp(16071).VOICE_USERS_MARGIN_BOTTOM + num3;
         }
         num = sum4;
-        const tmpResult5 = tmp(15943);
+        const tmpResult5 = tmp(15959);
       }
     }
     return num;
@@ -849,17 +849,17 @@ export const calculateVoiceSummary = function calculateVoiceSummary(arg0) {
   ({ optInChannelsEnabled, voiceStates, selectedChannelId, selectedVoiceChannelId } = arg0);
   obj = isFavoritesSection;
   if (!obj.isVoiceChannelsSection(section, guildChannels)) {
-    if (section < tmp(7282).SECTION_INDEX_FIRST_NAMED_CATEGORY) {
+    if (section < tmp(7283).SECTION_INDEX_FIRST_NAMED_CATEGORY) {
       return null;
     }
   }
-  let tmpResult = tmp(16060);
+  let tmpResult = tmp(16076);
   if (tmpResult.getSectionFooterConfig(guildChannels, optInChannelsEnabled, section).canHaveVoiceSummary) {
     const namedCategoryFromSection = guildChannels.getNamedCategoryFromSection(section);
     if (null == namedCategoryFromSection) {
       return null;
     } else {
-      tmpResult = tmp(16060);
+      tmpResult = tmp(16076);
       obj = { category: null, selectedChannelId: null, selectedVoiceChannelId: null, voiceStates: null };
       obj[0] = namedCategoryFromSection;
       obj[1] = selectedChannelId;

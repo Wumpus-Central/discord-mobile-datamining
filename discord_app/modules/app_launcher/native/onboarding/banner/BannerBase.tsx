@@ -6,7 +6,7 @@ import { View } from "../../../../../../_runtime/00017_get_ActivityIndicator.js"
 import closure_6 from "../../../../a11y/AccessibilityStore.tsx";
 import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
-import { 11857__ } from "../../../../../../_runtime/metro/11857__.js";
+import { 11863__ } from "../../../../../../_runtime/metro/11863__.js";
 import { initialize } from "../../../../../../discord_common/js/packages/flux/index.tsx";
 import { hexToRgba } from "../../../../../utils/ColorUtils.tsx";
 import { ReanimatedRexport } from "../../../../reanimated/ReanimatedRexport.tsx";
@@ -95,13 +95,13 @@ export default function BannerBase(arg0) {
   items2[1] = { opacity: num, width: diff };
   items2[2] = animatedStyle;
   const items3 = [tmp.bannerBackgroundGradient, { height: tmp3, width: diff }];
-  const items4 = [callback2(sharedValue(4940), { start: { x: 0, y: 0 }, end: { x: 0, y: 1 }, colors: items, style: items3 }), , ];
+  const items4 = [callback2(sharedValue(4941), { start: { x: 0, y: 0 }, end: { x: 0, y: 1 }, colors: items, style: items3 }), , ];
   obj1 = { style: tmp.imageContainer, children: null };
   obj2 = { style: tmp.trinketsLottie, source: null, autoPlay: null };
   const tmp2 = callback(React.useState(0), 2);
-  obj2[1] = 11857__;
+  obj2[1] = 11863__;
   obj2[2] = !stateFromStores;
-  const items5 = [callback2(sharedValue(5952), obj2), image];
+  const items5 = [callback2(sharedValue(5953), obj2), image];
   obj1[1] = items5;
   items4[1] = closure_8(View, obj1);
   obj3 = { style: tmp.bannerTextContainer, children: callback2(tmp4(4474).Text, obj4) };

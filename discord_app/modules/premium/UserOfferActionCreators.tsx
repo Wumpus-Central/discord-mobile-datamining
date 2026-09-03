@@ -78,7 +78,7 @@ function _fetchUserOffer() {
                   flag = true;
                 }
                 if (obj1 === undefined) {
-                  obj1 = { offerId: "disabled", paymentGatewayOverride: "Date" };
+                  obj1 = { offerId: "Array", paymentGatewayOverride: "PX_16" };
                 }
                 throwTypeErrorResult = retries;
                 throwTypeErrorResult = closure_4;

@@ -16,14 +16,14 @@ export const createPollResultSystemMessage = function createPollResultSystemMess
     return null;
   } else {
     message = message.message;
-    const messageAuthorWithProcessedColor = obj6(7878).getMessageAuthorWithProcessedColor(message);
+    const messageAuthorWithProcessedColor = obj6(7881).getMessageAuthorWithProcessedColor(message);
     let obj = { username: null, usernameOnClick: null, title: null, titleOnClick: null };
     obj[0] = messageAuthorWithProcessedColor.nick;
     obj = { message: null, author: null, roleStyle: null };
     obj[0] = message;
     obj[1] = messageAuthorWithProcessedColor;
     obj[2] = message.roleStyle;
-    obj[1] = tmp(7880)(obj);
+    obj[1] = tmp(7883)(obj);
     obj[2] = tmp3.questionText;
     obj1 = { action: "bindJumpToMessage", targetChannelId: null, targetMessageId: null, medium: true };
     obj1[1] = message.messageReference.channel_id;
@@ -89,7 +89,7 @@ export const createPollResultSystemMessage = function createPollResultSystemMess
       }
     }
     const obj10 = {};
-    const merged3 = Object.assign(tmp(7882)(message));
+    const merged3 = Object.assign(tmp(7885)(message));
     obj10.content = formatToPartsResult;
     return obj10;
   }

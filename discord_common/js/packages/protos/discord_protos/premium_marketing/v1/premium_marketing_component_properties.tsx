@@ -37,7 +37,7 @@ class PremiumMarketingComponentProperties$Type extends MessageType {
       kind: "message",
       oneof: "properties",
       T() {
-        return callback(8461).AnnouncementModalVariant1Properties;
+        return callback(8465).AnnouncementModalVariant1Properties;
       },
     };
     items[2] = {
@@ -46,7 +46,7 @@ class PremiumMarketingComponentProperties$Type extends MessageType {
       kind: "message",
       oneof: "properties",
       T() {
-        return callback(8465).PremiumTab;
+        return callback(8469).PremiumTab;
       },
     };
     items[3] = {
@@ -55,7 +55,7 @@ class PremiumMarketingComponentProperties$Type extends MessageType {
       kind: "message",
       oneof: "properties",
       T() {
-        return callback(8466).MarketingPageBanner;
+        return callback(8470).MarketingPageBanner;
       },
     };
     items[4] = {
@@ -64,7 +64,7 @@ class PremiumMarketingComponentProperties$Type extends MessageType {
       kind: "message",
       oneof: "properties",
       T() {
-        return callback(8467).PaymentModalBanner;
+        return callback(8471).PaymentModalBanner;
       },
     };
     items[5] = {
@@ -73,7 +73,7 @@ class PremiumMarketingComponentProperties$Type extends MessageType {
       kind: "message",
       oneof: "properties",
       T() {
-        return callback(8468).MobileBottomSheet;
+        return callback(8472).MobileBottomSheet;
       },
     };
     items[6] = {
@@ -82,7 +82,7 @@ class PremiumMarketingComponentProperties$Type extends MessageType {
       kind: "message",
       oneof: "properties",
       T() {
-        return callback(8469).GiftIcon;
+        return callback(8473).GiftIcon;
       },
     };
     items[7] = {
@@ -91,7 +91,7 @@ class PremiumMarketingComponentProperties$Type extends MessageType {
       kind: "message",
       oneof: "properties",
       T() {
-        return callback(8471).GiftIconCoachmark;
+        return callback(8475).GiftIconCoachmark;
       },
     };
     items[8] = {
@@ -100,7 +100,7 @@ class PremiumMarketingComponentProperties$Type extends MessageType {
       kind: "message",
       oneof: "properties",
       T() {
-        return callback(8473).GiftPlanSelectionCardBanner;
+        return callback(8477).GiftPlanSelectionCardBanner;
       },
     };
     items[9] = {
@@ -109,7 +109,7 @@ class PremiumMarketingComponentProperties$Type extends MessageType {
       kind: "message",
       oneof: "properties",
       T() {
-        return callback(8474).GiftCustomizationBanner;
+        return callback(8478).GiftCustomizationBanner;
       },
     };
     items[10] = {
@@ -118,7 +118,7 @@ class PremiumMarketingComponentProperties$Type extends MessageType {
       kind: "message",
       oneof: "properties",
       T() {
-        return callback(8475).BillingSettingsNitroGiftBanner;
+        return callback(8479).BillingSettingsNitroGiftBanner;
       },
     };
     items[11] = {
@@ -127,7 +127,7 @@ class PremiumMarketingComponentProperties$Type extends MessageType {
       kind: "message",
       oneof: "properties",
       T() {
-        return callback(8476).GiftReminderNagbar;
+        return callback(8480).GiftReminderNagbar;
       },
     };
     items[12] = {
@@ -136,7 +136,7 @@ class PremiumMarketingComponentProperties$Type extends MessageType {
       kind: "message",
       oneof: "properties",
       T() {
-        return callback(8477).GiftReminderCoachmark;
+        return callback(8481).GiftReminderCoachmark;
       },
     };
     items[13] = {
@@ -145,7 +145,7 @@ class PremiumMarketingComponentProperties$Type extends MessageType {
       kind: "message",
       oneof: "properties",
       T() {
-        return callback(8478).PremiumTabTooltip;
+        return callback(8482).PremiumTabTooltip;
       },
     };
     items[14] = {
@@ -154,7 +154,7 @@ class PremiumMarketingComponentProperties$Type extends MessageType {
       kind: "message",
       oneof: "properties",
       T() {
-        return callback(8479).PremiumTabPopover;
+        return callback(8483).PremiumTabPopover;
       },
     };
     items[15] = {
@@ -163,7 +163,7 @@ class PremiumMarketingComponentProperties$Type extends MessageType {
       kind: "message",
       oneof: "properties",
       T() {
-        return callback(8480).Nagbar;
+        return callback(8484).Nagbar;
       },
     };
     items[16] = {
@@ -172,7 +172,7 @@ class PremiumMarketingComponentProperties$Type extends MessageType {
       kind: "message",
       oneof: "properties",
       T() {
-        return callback(8481).PlanSelectCardBanner;
+        return callback(8485).PlanSelectCardBanner;
       },
     };
     items[17] = {
@@ -181,7 +181,7 @@ class PremiumMarketingComponentProperties$Type extends MessageType {
       kind: "message",
       oneof: "properties",
       T() {
-        return callback(8482).BillingSettingsBanner;
+        return callback(8486).BillingSettingsBanner;
       },
     };
     items[18] = {
@@ -190,7 +190,7 @@ class PremiumMarketingComponentProperties$Type extends MessageType {
       kind: "message",
       oneof: "properties",
       T() {
-        return callback(8483).ShopNagbar;
+        return callback(8487).ShopNagbar;
       },
     };
     items[19] = {
@@ -199,7 +199,7 @@ class PremiumMarketingComponentProperties$Type extends MessageType {
       kind: "message",
       oneof: "properties",
       T() {
-        return callback(8484).AdminEditorTestComponent;
+        return callback(8488).AdminEditorTestComponent;
       },
     };
     items[20] = {
@@ -208,7 +208,7 @@ class PremiumMarketingComponentProperties$Type extends MessageType {
       kind: "message",
       oneof: "properties",
       T() {
-        return callback(8485).GuildHeaderCoachmark;
+        return callback(8489).GuildHeaderCoachmark;
       },
     };
     items[21] = {
@@ -217,7 +217,7 @@ class PremiumMarketingComponentProperties$Type extends MessageType {
       kind: "message",
       oneof: "properties",
       T() {
-        return callback(8486).GuildBoostCheckoutBanner;
+        return callback(8490).GuildBoostCheckoutBanner;
       },
     };
     obj = { no: 25, name: "guild_boost_marketing_page_banner", kind: "message", oneof: "properties", T: null };
@@ -234,7 +234,7 @@ class PremiumMarketingComponentProperties$Type extends MessageType {
       kind: "message",
       oneof: "properties",
       T() {
-        return callback(8488).GuildBoostTabBanner;
+        return callback(8492).GuildBoostTabBanner;
       },
     };
     items[24] = { no: 3, name: "content_identifier", kind: "scalar", T: 9 };
@@ -246,7 +246,7 @@ class PremiumMarketingComponentProperties$Type extends MessageType {
 }
 const prototype = PremiumMarketingComponentProperties$Type.prototype;
 prototype["create"] = function create(arr) {
-  let obj = { properties: { oneofKind: "r" }, contentIdentifier: "", isDefaultBase: false };
+  let obj = { properties: { oneofKind: "Array" }, contentIdentifier: "", isDefaultBase: false };
   const _Object = Object;
   obj = { enumerable: false, value: this };
   _Object.defineProperty(obj, _mod1306.MESSAGE_TYPE, obj);
@@ -262,9 +262,9 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos) {
   if (arg3 == null) {
     obj = self.create();
   }
-  const sum = pos.pos + arg1;
-  if (pos.pos < sum) {
-    obj.isDefaultBase = pos.bool();
+  if (pos.pos < pos.pos + arg1) {
+    [r10019, r10020] = callback(pos.tag(), 2);
+    const tmp3 = callback(pos.tag(), 2);
   }
   return obj;
 };

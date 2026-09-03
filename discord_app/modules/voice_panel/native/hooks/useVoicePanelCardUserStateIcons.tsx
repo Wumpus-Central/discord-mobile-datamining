@@ -43,7 +43,7 @@ export default function useVoicePanelCardUserStateIcons(arg0, id, guildId) {
     tmp6 = id;
   }
   muteDeafenIconState = require("../utils/VoiceStateIconUtils.tsx").useMuteDeafenIconState(tmp6, guildId);
-  let tmp4Result = tmp4(9831);
+  let tmp4Result = tmp4(9835);
   let tmp8;
   if (arg0 === stateFromStores.USER) {
     tmp8 = id;
@@ -71,11 +71,11 @@ export default function useVoicePanelCardUserStateIcons(arg0, id, guildId) {
       items2,
     );
   let tmp13;
-  let tmp2Result = tmp2(10122);
+  let tmp2Result = tmp2(10126);
   if (arg0 === stateFromStores.STREAM) {
     tmp13 = id;
   }
-  tmp2Result = tmp2(10087);
+  tmp2Result = tmp2(10091);
   showTileVolumeIndicator = tmp2Result.useConfig({
     location: "useVoicePanelCardUserStateIcons",
   }).showTileVolumeIndicator;
@@ -97,7 +97,7 @@ export default function useVoicePanelCardUserStateIcons(arg0, id, guildId) {
     obj = {
       key: "user-disconnected-indicator",
       icon() {
-        return callback3(callback(7717).CircleErrorIcon, { size: "xs", color: callback2(709).colors.STATUS_WARNING });
+        return callback3(callback(7720).CircleErrorIcon, { size: "xs", color: callback2(709).colors.STATUS_WARNING });
       },
       content: null,
     };

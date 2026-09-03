@@ -41,7 +41,7 @@ createToggle = {
         let obj = shouldAgeVerifyForDMDefaultOff;
         if (obj.shouldAgeVerifyForDMDefaultOff()) {
           obj = { entryPoint: null };
-          obj[0] = tmp2(8699).AgeVerificationModalEntryPoint.MESSAGE_REQUESTS_SETTINGS;
+          obj[0] = tmp2(8703).AgeVerificationModalEntryPoint.MESSAGE_REQUESTS_SETTINGS;
           const result = openIncodeAgeVerificationModalDefault.showAgeVerificationGetStartedModal(obj);
           const obj2 = openIncodeAgeVerificationModalDefault;
         }

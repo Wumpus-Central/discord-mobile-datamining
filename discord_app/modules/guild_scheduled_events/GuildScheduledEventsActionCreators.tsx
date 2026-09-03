@@ -2,7 +2,7 @@
 import DISCORD_EPOCHDefault from "../../utils/SnowflakeUtils.tsx";
 import sendRequest from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import transitionTo from "../routing/router_utils.tsx";
-import _modDef5363 from "../../actions/SelectedChannelActionCreators.tsx";
+import _modDef5364 from "../../actions/SelectedChannelActionCreators.tsx";
 import EditGuildEventScreens from "utils/EditGuildEventUtils.tsx";
 import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
 import closure_4 from "../../stores/AuthenticationStore.tsx";
@@ -38,8 +38,8 @@ export default {
     return HTTP.patch(obj);
   },
   joinVoiceEvent(arg0, id) {
-    const voiceChannel = _modDef5363.selectVoiceChannel(id);
-    const obj = _modDef5363;
+    const voiceChannel = _modDef5364.selectVoiceChannel(id);
+    const obj = _modDef5364;
     transitionTo.transitionTo(closure_11.CHANNEL(arg0, id));
   },
   saveEvent(arg0, entityType) {
@@ -101,7 +101,7 @@ export default {
       let body = tmp5;
       obj1 = { url: null, rejectWithError: null };
       obj1[0] = closure_1_10.GUILD_EVENT(closure_1_0, closure_1_1);
-      const obj8 = closure_1_0(4755);
+      const obj8 = closure_1_0(4756);
       obj1[1] = closure_1_0(527).rejectWithMigratedError();
       yield obj8.httpGetWithCountryCodeQuery(obj1);
       body = arg1.body;
@@ -121,7 +121,7 @@ export default {
       obj1[0] = closure_1_10.GUILD_EVENTS_FOR_GUILD(closure_1_0);
       obj1[1] = closure_1_0(527).rejectWithMigratedError();
       const obj9 = closure_1_0(527);
-      yield closure_1_0(4755).httpGetWithCountryCodeQuery(obj1);
+      yield closure_1_0(4756).httpGetWithCountryCodeQuery(obj1);
       body = arg1.body;
       const obj = closure_1_1(706);
       const obj4 = { type: "FETCH_GUILD_EVENTS_FOR_GUILD", guildId: null, guildScheduledEvents: null };

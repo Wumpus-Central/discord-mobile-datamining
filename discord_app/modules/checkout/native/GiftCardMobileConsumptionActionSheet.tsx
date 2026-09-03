@@ -72,7 +72,7 @@ export default function GiftCardMobileConsumptionActionSheet(markAsDismissed) {
   const items3 = [
     callback(View, {
       style: tmp.illustration,
-      children: callback(markAsDismissed(6265).LaptopSpotIllustration, { scale: 1, width: 150, height: 123 }),
+      children: callback(markAsDismissed(6266).LaptopSpotIllustration, { scale: 1, width: 150, height: 123 }),
     }),
     ,
   ];
@@ -86,9 +86,9 @@ export default function GiftCardMobileConsumptionActionSheet(markAsDismissed) {
   obj3[4] = function onPress() {
     return callback(closure_1_5.USER_DISMISS);
   };
-  items3[2] = callback(markAsDismissed(4928).Button, obj3);
+  items3[2] = callback(markAsDismissed(4929).Button, obj3);
   obj[1] = items3;
-  obj[1] = callback2(markAsDismissed(4926).Stack, obj);
+  obj[1] = callback2(markAsDismissed(4927).Stack, obj);
   obj[3] = callback(View, obj);
-  return callback(markAsDismissed(5630).BottomSheet, obj);
+  return callback(markAsDismissed(5631).BottomSheet, obj);
 }

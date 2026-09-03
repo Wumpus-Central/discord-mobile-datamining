@@ -19,7 +19,7 @@ export const usePremiumDiscountOffer = function usePremiumDiscountOffer() {
   const obj = offerIds(644);
   const tmp = offerIds;
   const tmp3 = importDefault;
-  let values = Object.values(offerIds(6095).DiscountIdToProductOfferId[closure_4]);
+  let values = Object.values(offerIds(6096).DiscountIdToProductOfferId[closure_4]);
   let tmp5 = null;
   if (0 !== values.length) {
     let tmp6 = null;
@@ -29,7 +29,7 @@ export const usePremiumDiscountOffer = function usePremiumDiscountOffer() {
     tmp5 = tmp6;
   }
   tmp4 = useDiscountOfferDefault(closure_4);
-  values = Object.values(tmp(6095).DiscountIdToProductOfferId[closure_5]);
+  values = Object.values(tmp(6096).DiscountIdToProductOfferId[closure_5]);
   let tmp8 = null;
   if (0 !== values.length) {
     let tmp9 = null;

@@ -1,8 +1,8 @@
 // discord_app/modules/app_icons/native/AppIconsCoachmark.tsx
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import getPremiumPlanItemDefault from "../../../utils/PremiumUtils.tsx";
-import registerAssetDefault from "../../../../_runtime/09182_registerAsset.js";
-import registerAssetDefault2 from "../../../../_runtime/16741_registerAsset.js";
+import registerAssetDefault from "../../../../_runtime/09186_registerAsset.js";
+import registerAssetDefault2 from "../../../../_runtime/16761_registerAsset.js";
 import closure_3 from "../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import closure_6 from "../../../stores/UserStore.tsx";
@@ -100,14 +100,14 @@ export default function AppIconsCoachmarkActionSheet(markAsDismissed) {
     const tmp = closure_1_2;
     const result = markAsDismissed(closure_1_2[17]).navigateToAppIconSettings();
   };
-  const items5 = [callback(markAsDismissed(4928).Button, obj7)];
+  const items5 = [callback(markAsDismissed(4929).Button, obj7)];
   const obj8 = { variant: "secondary", text: null, onPress: null };
   const intl4 = tmp2(1233).intl;
   obj8[1] = intl4.string(markAsDismissed(1233).t.iSrIIZ);
   obj8[2] = callback;
-  items5[1] = callback(markAsDismissed(4928).Button, obj8);
+  items5[1] = callback(markAsDismissed(4929).Button, obj8);
   obj6[1] = items5;
   items4[1] = callback2(closure_5, obj6);
   obj[2] = items4;
-  return callback2(markAsDismissed(5630).BottomSheet, obj);
+  return callback2(markAsDismissed(5631).BottomSheet, obj);
 }

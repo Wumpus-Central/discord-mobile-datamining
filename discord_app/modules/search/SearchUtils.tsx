@@ -8,7 +8,7 @@ import computeChannelName from "../channel/useChannelName.tsx";
 import getShortcuts from "tokens/SearchTokens.tsx";
 import getShortcutsDefault from "tokens/SearchTokens.tsx";
 import getMatchDefault from "../../lib/QueryTokenizer.tsx";
-import _modDef12137 from "SearchActionCreators.tsx";
+import _modDef12143 from "SearchActionCreators.tsx";
 import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
 import closure_4 from "../../stores/ChannelStore.tsx";
 import closure_5 from "../../stores/GuildChannelStore.tsx";
@@ -514,7 +514,7 @@ export const getAutocompleteMode = function getAutocompleteMode(cursorScope, tok
       }
     }
     let tmp4;
-    if (currentToken.type === tmp3(12136).NON_TOKEN_TYPE) {
+    if (currentToken.type === tmp3(12142).NON_TOKEN_TYPE) {
       tmp4 = currentToken;
     }
     obj4 = { type: null, filter: null, token: null };
@@ -639,7 +639,7 @@ export const refreshSearchTokens = function refreshSearchTokens() {
     return closure_20.addRule({ type });
   });
   const obj4 = applyDefault(crossDMSearchTokensConfig);
-  const result1 = _modDef12137.markSearchTokensRefreshed();
+  const result1 = _modDef12143.markSearchTokensRefreshed();
 };
 export const getChannelDisplayName = function getChannelDisplayName(isDM) {
   const channelName = computeChannelName.computeChannelName(isDM, closure_8, closure_7);

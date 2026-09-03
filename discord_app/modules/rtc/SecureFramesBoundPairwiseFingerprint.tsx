@@ -67,7 +67,7 @@ function _computeBoundPairwiseFingerprint() {
                     if (null != value) {
                       return value;
                     } else {
-                      const obj4 = joined(9846);
+                      const obj4 = joined(9850);
                       const _Uint8Array = Uint8Array;
                       const uint8Array2 = new Uint8Array(secureFramesRosterMapEntry1);
                       const _Uint8Array2 = Uint8Array;

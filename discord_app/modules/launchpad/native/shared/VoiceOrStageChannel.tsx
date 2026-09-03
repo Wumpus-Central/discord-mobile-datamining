@@ -144,8 +144,8 @@ let closure_20 = importAllResult.memo(function UnmemoedVoiceOrStageChannelBase(c
   ({ id, guild_id } = channel);
   const tmp3 = callback(4413)();
   let obj = AccessibilityAnnouncer;
-  const tmp6 = callback3(callback(7627)(), obj.isThemeLight(tmp3));
-  const tmp7 = callback(16793)();
+  const tmp6 = callback3(callback(7628)(), obj.isThemeLight(tmp3));
+  const tmp7 = callback(16813)();
   obj1 = useIsConnectedToVoiceChannel;
   const isConnectedToVoiceChannel = obj1.useIsConnectedToVoiceChannel(channel);
   let obj2 = useChannelUnreadBadgeState;
@@ -268,7 +268,7 @@ let closure_20 = importAllResult.memo(function UnmemoedVoiceOrStageChannelBase(c
   };
   items1 = [channel, callback];
   items2 = [channel.id];
-  const arr5 = callback(11854)(channel);
+  const arr5 = callback(11860)(channel);
   let obj7 = LaunchpadChannelIcon;
   obj = { channel, unread, mentionCount, voiceStates, embeddedActivitiesCount: arr5.length };
   const channelAccessibilityProps = obj7.getChannelAccessibilityProps(obj);
@@ -285,15 +285,15 @@ let closure_20 = importAllResult.memo(function UnmemoedVoiceOrStageChannelBase(c
     arr8 = speakerVoiceStates;
   }
   const mapped = arr8.map((user) => user.user);
-  const tmp17 = callback(16802)();
-  let tmp5Result = tmp5(4935);
+  const tmp17 = callback(16822)();
+  let tmp5Result = tmp5(4936);
   const fontScale = tmp5Result.useFontScale();
   tmp5Result = tmp5(586);
   const items5 = [closure_8];
   const stateFromStores2 = tmp5Result.useStateFromStores(items5, () => locale.locale);
-  const tmp4 = callback(7627)();
+  const tmp4 = callback(7628)();
   const items6 = [isConnectedToVoiceChannel, subtitle];
-  ({ isSubscriptionGated, needSubscriptionToAccess } = callback(4960)(channel.id));
+  ({ isSubscriptionGated, needSubscriptionToAccess } = callback(4961)(channel.id));
   const effect = obj5.useEffect(() => {
     let tmp2 = null != callback && typeof tmp !== "string";
     if (tmp2) {
@@ -304,7 +304,7 @@ let closure_20 = importAllResult.memo(function UnmemoedVoiceOrStageChannelBase(c
       messagePreviewASTCache.del(tmp.text);
     }
   }, items6);
-  let tmpResult = tmp(16794);
+  let tmpResult = tmp(16814);
   const items7 = [tmp6.pressable];
   let num = 0;
   if (voiceStates.length > 0) {
@@ -331,7 +331,7 @@ let closure_20 = importAllResult.memo(function UnmemoedVoiceOrStageChannelBase(c
       showGuildBadgeIcon: true,
     };
     obj2[0] = channel;
-    tmpResult = tmp(16806);
+    tmpResult = tmp(16826);
     if (topic == null) {
       topic = subtitle;
     }
@@ -340,7 +340,7 @@ let closure_20 = importAllResult.memo(function UnmemoedVoiceOrStageChannelBase(c
     obj3[1] = id;
     obj3[2] = guild_id;
     obj3[3] = isConnectedToVoiceChannel;
-    obj2[1] = tmp5(16804).renderChannelSubtitle(obj3);
+    obj2[1] = tmp5(16824).renderChannelSubtitle(obj3);
     if (!unread) {
       unread = mentionCount > 0;
     }
@@ -350,20 +350,20 @@ let closure_20 = importAllResult.memo(function UnmemoedVoiceOrStageChannelBase(c
     obj4 = { mentionCount: null, locale: null };
     obj4[0] = mentionCount;
     obj4[1] = stateFromStores2;
-    obj2[5] = tmp(16800)(obj4);
+    obj2[5] = tmp(16820)(obj4);
     obj2[6] = null != stateFromStores1;
     if (arr5.length > 0) {
       obj5 = { embeddedApps: null, size: null };
       obj5[0] = arr5;
       obj5[1] = tmp7.joinVoiceButton.icon.gameSize;
-      let tmp32 = callback2(tmp(16052), obj5);
+      let tmp32 = callback2(tmp(16068), obj5);
       let tmp31 = callback2;
     } else {
       tmp31 = callback2;
       const obj6 = { channel: null, voiceStates: null };
       obj6[0] = channel;
       obj6[1] = voiceStates;
-      tmp32 = callback2(tmp5(12081).VocalChannelJoinButton, obj6);
+      tmp32 = callback2(tmp5(12087).VocalChannelJoinButton, obj6);
     }
     obj2[7] = tmp32;
     obj2[8] = isConnectedToVoiceChannel;
@@ -380,12 +380,12 @@ let closure_20 = importAllResult.memo(function UnmemoedVoiceOrStageChannelBase(c
       obj8[0] = mapped;
       obj8[2] = channel.guild_id;
       obj8[3] = stageParticipantsCount;
-      obj7[1] = tmp31(tmp(16809), obj8);
+      obj7[1] = tmp31(tmp(16829), obj8);
       tmp31Result = tmp31(View, obj7);
     }
     items8[1] = tmp31Result;
     obj1.children = items8;
-    return tmpResult(closure_15(tmp5(5076).PressableHighlight, obj1));
+    return tmpResult(closure_15(tmp5(5077).PressableHighlight, obj1));
   } else {
     const intl = tmp5(1233).intl;
     obj9 = { channelName: null };

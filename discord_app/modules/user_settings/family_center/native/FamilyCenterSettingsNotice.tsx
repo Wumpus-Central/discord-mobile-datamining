@@ -12,7 +12,7 @@ const result = require("set").fileFinishedImporting(
 );
 
 export default function FamilyCenterSettingsParentalControlsNotice() {
-  let obj = activeLinkUserIds(8787);
+  let obj = activeLinkUserIds(8791);
   activeLinkUserIds = obj.useActiveLinkUserIds();
   obj = {
     label: messagesProxyDefault.i284fU,

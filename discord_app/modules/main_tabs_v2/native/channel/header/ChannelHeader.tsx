@@ -1,8 +1,8 @@
 // discord_app/modules/main_tabs_v2/native/channel/header/ChannelHeader.tsx
 import noopAll from "../../../../../../_runtime/00019_noop.js";
 import set from "../../../../../utils/PlatformUtils.tsx";
-import _modDef13150 from "../../../../guild_role_subscriptions/native/overview_tab/GuildRoleSubscriptionsChannelHeader.tsx";
-import _modDef13151 from "HomeChannelHeader.tsx";
+import _modDef13162 from "../../../../guild_role_subscriptions/native/overview_tab/GuildRoleSubscriptionsChannelHeader.tsx";
+import _modDef13163 from "HomeChannelHeader.tsx";
 import GroupDmMemberCountDefault from "PrivateChannelHeader.tsx";
 import closure_3 from "../../../../../stores/ChannelStore.tsx";
 import { ComponentActions } from "../../../../../Constants.tsx";
@@ -30,15 +30,15 @@ export default function ChannelHeader(channelId) {
   let obj = channelId(644);
   const items = [closure_3];
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_3.getChannel(channelId));
-  const isChannelContentGated = channelId(4731).useIsChannelContentGated(stateFromStores);
+  const isChannelContentGated = channelId(4732).useIsChannelContentGated(stateFromStores);
   let tmp4 = !isChannelContentGated;
   if (!isChannelContentGated) {
     tmp4 = pressable;
   }
   if (channelId === StaticChannelRoute.ROLE_SUBSCRIPTIONS) {
-    let tmp8Result = jsx(_modDef13150, {});
+    let tmp8Result = jsx(_modDef13162, {});
   } else if (channelId === tmp5.GUILD_HOME) {
-    tmp8Result = jsx(_modDef13151, {});
+    tmp8Result = jsx(_modDef13163, {});
   } else {
     let isPrivateResult;
     if (stateFromStores != null) {
@@ -67,7 +67,7 @@ export default function ChannelHeader(channelId) {
         };
         obj[0] = channelId;
         let guild_id;
-        let tmp9Result = tmp9(13158);
+        let tmp9Result = tmp9(13170);
         if (stateFromStores != null) {
           guild_id = stateFromStores.guild_id;
         }
@@ -95,7 +95,7 @@ export default function ChannelHeader(channelId) {
         };
         obj1[0] = channelId;
         let guild_id1;
-        tmp9Result = tmp9(13160);
+        tmp9Result = tmp9(13172);
         if (stateFromStores != null) {
           guild_id1 = stateFromStores.guild_id;
         }
@@ -120,7 +120,7 @@ export const navigateToChannelDetails = function navigateToChannelDetails(channe
       chatInputRef.blur();
     }
   }
-  tmpResult = tmp(11286);
+  tmpResult = tmp(11290);
   if (tmpResult.isSwipeToMemberListEnabled()) {
     const ComponentDispatch = tmp(1228).ComponentDispatch;
     obj = { source: null, channelId: null, screenIndex: null };

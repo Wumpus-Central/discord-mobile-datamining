@@ -2,7 +2,7 @@
 import noopAll from "../../../../_runtime/00019_noop.js";
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import dispatcherDefault from "../../toast/native/ToastActionCreators.tsx";
-import registerAssetDefault from "../../../../_runtime/12531_registerAsset.js";
+import registerAssetDefault from "../../../../_runtime/12543_registerAsset.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";

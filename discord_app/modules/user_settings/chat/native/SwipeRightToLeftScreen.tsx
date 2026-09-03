@@ -1,5 +1,5 @@
 // discord_app/modules/user_settings/chat/native/SwipeRightToLeftScreen.tsx
-import _modDef14563 from "../../../settings/native/renderer/SettingLayout.tsx";
+import _modDef14578 from "../../../settings/native/renderer/SettingLayout.tsx";
 import closure_3 from "../../../../../_runtime/00019_noop.js";
 import { MobileUserSettings } from "../../core/native/SettingsConstants.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
@@ -13,5 +13,5 @@ export default function UserSettingsSwipeRightToLeft() {
     const sections = [{ settings: items }];
     return callback(table[3]).createList({ sections });
   }, []);
-  return jsx(_modDef14563, { node });
+  return jsx(_modDef14578, { node });
 }

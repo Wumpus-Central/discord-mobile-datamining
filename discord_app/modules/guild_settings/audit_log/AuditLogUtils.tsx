@@ -939,7 +939,7 @@ export const getChangeStrings = function getChangeStrings(targetType) {
           __3TkD = __3TkD(1233).t.MWp6H7;
           obj17[AuditLogChangeKeys.TEMPORARY] = (newValue) => (newValue.newValue ? __3TkD : _5kDYS3);
           const obj20 = {};
-          obj20[__3TkD(8678).GuildInviteFlags.IS_GUEST_INVITE] = __3TkD(1233).t.XYZMbL;
+          obj20[__3TkD(8682).GuildInviteFlags.IS_GUEST_INVITE] = __3TkD(1233).t.XYZMbL;
           __3TkD = obj20;
           obj17[AuditLogChangeKeys.FLAGS] = (arg0) => __3TkD[arg0.newValue];
           obj17[AuditLogChangeKeys.ROLE_IDS] = () => __3TkD(1233).t.gb1Owj;
@@ -1829,7 +1829,7 @@ export const getChangeTitle = function getChangeTitle(log) {
             found = dependencyMap;
             if (set2.GuildFeedItemTypes.MESSAGE === newValue) {
               return found(1233).t["PyEa+J"];
-            } else if (found(17359).GuildFeedItemTypes.FORUM_POST === newValue) {
+            } else if (found(17379).GuildFeedItemTypes.FORUM_POST === newValue) {
               return found(1233).t.hCuAb1;
             } else {
               return found(1233).t["UZ+U3A"];

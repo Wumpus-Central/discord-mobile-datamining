@@ -22,7 +22,7 @@ export default function useFrameMonitor(stateFromStores) {
     if (current != null) {
       current.stop();
     }
-    ref.current = stateFromStores(15558).startFrameMonitor();
+    ref.current = stateFromStores(15572).startFrameMonitor();
     dependencyMap(true);
   }, []);
   const stop = React.useCallback(() => {

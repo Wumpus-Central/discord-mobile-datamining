@@ -45,7 +45,7 @@ const memoResult = importAllResult.memo(function FavoritesGuildIntroPopover() {
             items3 = [];
           }
           const tmp12 =
-            callback(tmp(6260).useSelectedDismissibleContent(items3, undefined, true), 1)[0] ===
+            callback(tmp(6261).useSelectedDismissibleContent(items3, undefined, true), 1)[0] ===
             tmp(1372).DismissibleContent.FAVORITES_SERVER_ONBOARDING_MENU_ITEM;
           importDefault = tmp12;
           const items4 = [tmp12];

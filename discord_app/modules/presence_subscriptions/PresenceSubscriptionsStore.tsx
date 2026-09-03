@@ -1,7 +1,7 @@
 // discord_app/modules/presence_subscriptions/PresenceSubscriptionsStore.tsx
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
-import _modDef11292 from "../../actions/ActivitiesActionCreators.tsx";
+import _modDef11296 from "../../actions/ActivitiesActionCreators.tsx";
 import closure_2 from "../../../_runtime/metro/00032__slicedToArray.js";
 import closure_3 from "../../stores/PresenceStore.tsx";
 import { INVITE_EXPIRATION_MS } from "../activities/Constants.tsx";
@@ -27,8 +27,8 @@ const delayedCall = new require("start").DelayedCall(3000, function flush() {
     continue;
   }
   if (0 !== items.length) {
-    _modDef11292.subscribeActivities(items);
-    const obj = _modDef11292;
+    _modDef11296.subscribeActivities(items);
+    const obj = _modDef11296;
   }
 });
 const Store = initializeDefault.Store;

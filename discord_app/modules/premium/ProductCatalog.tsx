@@ -2580,14 +2580,14 @@ export const canUserUse = function canUserUse(COLLECTIBLES, isPremiumWithFractio
     }
     if (null != perks) {
       const config = apexExperimentDefault.getConfig({ location: "product_catalog_can_user_use" });
-      if (config !== callback(13945).DenormalizedPerksReadConfig.CONTROL) {
+      if (config !== callback(13961).DenormalizedPerksReadConfig.CONTROL) {
         let featureValue = COLLECTIBLES.getFeatureValue(isPremiumWithFractionalPremiumOnly);
         let perks1;
         if (isPremiumWithFractionalPremiumOnly != null) {
           perks1 = isPremiumWithFractionalPremiumOnly.perks;
         }
         const tmp9Result = tmp9(1927);
-        if (config === tmp9(13945).DenormalizedPerksReadConfig.DUAL_READ_RETURN_NEW) {
+        if (config === tmp9(13961).DenormalizedPerksReadConfig.DUAL_READ_RETURN_NEW) {
           featureValue = hasPerkResult;
         }
         return featureValue;

@@ -6,10 +6,10 @@ import Button from "../../../../design/components/Button/native/Button.native.ts
 import MagnifyingGlassIcon from "../../../../design/components/Icon/native/redesign/generated/MagnifyingGlassIcon.tsx";
 import TTIFirstContentfulPaint from "../../../tti_analytics/native/TTIFirstContentfulPaint.tsx";
 import useCanManageGuildDirectoryEntry from "../../useCanManageGuildDirectoryEntry.tsx";
-import _modDef12125 from "GuildDirectoryRow.tsx";
-import _modDef12126 from "GuildDirectoryPlaceholderRow.tsx";
+import _modDef12131 from "GuildDirectoryRow.tsx";
+import _modDef12132 from "GuildDirectoryPlaceholderRow.tsx";
 import RowType from "../GuildDirectoryRowGenerator.tsx";
-import registerAsset from "../../../../../_runtime/12433_registerAsset.js";
+import registerAsset from "../../../../../_runtime/12445_registerAsset.js";
 import HubProgressHeaderDefault from "../../../hub/native/components/progress_bar/HubProgressHeader.tsx";
 import closure_4 from "../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
@@ -54,9 +54,9 @@ function renderItem(item) {
   } else if (RowType.RowType.ENTRY === type) {
     obj = { entry: null };
     obj[0] = item.entry;
-    return callback(_modDef12125, obj);
+    return callback(_modDef12131, obj);
   } else {
-    return callback(_modDef12126, {});
+    return callback(_modDef12132, {});
   }
   const tmp2 = require;
 }
@@ -133,7 +133,7 @@ function GuildDirectoryFooter(hideFooter) {
       obj[0] = tmp.footer;
       obj1 = { style: null, children: null };
       obj1[0] = tmp.addIcon;
-      obj1[1] = callback(tmp2(12515).PlusMediumIcon, {});
+      obj1[1] = callback(tmp2(12527).PlusMediumIcon, {});
       const items = [callback(closure_5, obj1)];
       const obj2 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
       const intl2 = tmp2(1233).intl;
@@ -141,7 +141,7 @@ function GuildDirectoryFooter(hideFooter) {
       items[1] = callback(tmp2(4474).Text, obj2);
       obj[1] = items;
       obj[3] = callback2(closure_5, obj);
-      tmp4 = callback(tmp2(5076).PressableOpacity, obj);
+      tmp4 = callback(tmp2(5077).PressableOpacity, obj);
     }
   }
   return tmp4;
@@ -228,9 +228,9 @@ export default function GuildDirectory(channel) {
   obj1 = React;
   dependencyMap = React.useRef(null);
   let bottom = guildId(1627)().bottom;
-  let obj2 = channel(12431);
+  let obj2 = channel(12443);
   const hubProgressBarCompletedSteps = obj2.useHubProgressBarCompletedSteps(onPressSearch);
-  let obj3 = channel(12431);
+  let obj3 = channel(12443);
   if (null == obj3.getNextHubProgressStep(hubProgressBarCompletedSteps)) {
     let sum = _location;
   } else {
@@ -377,8 +377,8 @@ export default function GuildDirectory(channel) {
         obj2 = { guild: null, channel: null };
         obj2[0] = onPressSearch;
         obj2[1] = channel;
-        items9[1] = callback(guildId(12516), obj2);
-        items9[2] = callback(tmp2(11686).TTIFirstContentfulPaint, { label: "guild_directory_empty" });
+        items9[1] = callback(guildId(12528), obj2);
+        items9[2] = callback(tmp2(11698).TTIFirstContentfulPaint, { label: "guild_directory_empty" });
         obj[1] = items9;
         let tmp23 = callback2(currentCategoryId, obj);
       }

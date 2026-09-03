@@ -562,7 +562,7 @@ export const useTileEntranceAnimatedStyle = function useTileEntranceAnimatedStyl
     withTiming: sharedValue(4479).withTiming,
     animatedStylePropValue: sharedValue,
     STANDARD_EASING: sharedValue(1296).STANDARD_EASING,
-    withSpring: sharedValue(4927).withSpring,
+    withSpring: sharedValue(4928).withSpring,
   };
   fn.__closure = obj;
   fn.__workletHash = 14458898683767;

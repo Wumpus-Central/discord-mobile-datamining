@@ -190,10 +190,10 @@ export const useQuestDockExternalOffset = function useQuestDockExternalOffset() 
 };
 export const useQuestDockDismissalReset = function useQuestDockDismissalReset() {
   setRestingQuestDockMode = React.useContext(
-    setRestingQuestDockMode(14926).QuestDockExternalCoordinationContext,
+    setRestingQuestDockMode(14941).QuestDockExternalCoordinationContext,
   ).setRestingQuestDockMode;
   const activeQuestDockMode = React.useContext(
-    setRestingQuestDockMode(14923).QuestDockGestureContext,
+    setRestingQuestDockMode(14938).QuestDockGestureContext,
   ).activeQuestDockMode;
   const items = [setRestingQuestDockMode, activeQuestDockMode];
   const effect = React.useEffect(() => {
@@ -283,5 +283,21 @@ export const useActionSheetPressHandler = function useActionSheetPressHandler(qu
       "QuestDockContextMenuActionSheet",
       { creative: questCreative, impressionId: tmp7 },
     );
+  }, items);
+};
+export const useQuestDockExpandHandler = function useQuestDockExpandHandler(questDockCreative) {
+  const _require = questDockCreative;
+  const getQuestImpressionId =
+    require("../../lib/analytics/ContentImpressionTrackerHooks.tsx").useGetQuestImpressionId();
+  const items = [questDockCreative, getQuestImpressionId];
+  return React.useCallback(() => {
+    let obj = questDockCreative(closure_1_2[18]);
+    obj = { type: questDockCreative(closure_1_2[19]).AdUserActionType.CLICK_INTERNAL };
+    const merged = Object.assign(questDockCreative(closure_1_2[16]).getCreativeAnalyticsParams(questDockCreative));
+    obj.questContentCTA = questDockCreative(closure_1_2[20]).QuestContentCTA.EXPAND;
+    obj.surfaceId = questDockCreative(closure_1_2[21]).QuestContent.QUEST_BAR_MOBILE;
+    obj.sourceQuestContent = questDockCreative(closure_1_2[21]).QuestContent.QUEST_BAR_MOBILE;
+    obj.impressionId = getQuestImpressionId();
+    obj.captureAdUserAction(obj);
   }, items);
 };

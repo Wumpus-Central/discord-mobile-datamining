@@ -50,7 +50,7 @@ export default function _default(parents) {
     }
     obj[3] = username3;
     obj[1] = intl.formatToPlainString(parents(1233).t.BlAMme, obj);
-    obj[2] = jsx(parents(13000).ShareIcon, {});
+    obj[2] = jsx(parents(13012).ShareIcon, {});
     const intl2 = tmp15(1233).intl;
     obj[3] = intl2.string(parents(1233).t["5l/hlt"]);
     obj[4] = tmp[0];

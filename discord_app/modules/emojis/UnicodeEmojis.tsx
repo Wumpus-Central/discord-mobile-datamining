@@ -1,7 +1,7 @@
 // discord_app/modules/emojis/UnicodeEmojis.tsx
 import applyDefault from "../../../_runtime/00012_apply.js";
 import EmojiTypes from "EmojiTypes.tsx";
-import _mod13946 from "../../../_runtime/metro/13946__.js";
+import _mod13962 from "../../../_runtime/metro/13962__.js";
 import closure_3 from "../../../node_modules/.pnpm/@discordapp+twemoji@16.0.1/node_modules/@discordapp/twemoji/dist/twemoji.npm.js";
 import closure_13 from "module_917631" /* 917631 */;
 import closure_14 from "module_127988" /* 127988 */;
@@ -488,7 +488,7 @@ let obj = {
     }
     const call = hasOwnProperty.call;
     if (typeof call === "unknown" ? hasOwnProperty(key10009) : call(tmp3, key10009)) {
-      str = _mod13946[key10009];
+      str = _mod13962[key10009];
     }
     let combined = str;
     if (flag) {

@@ -1,7 +1,7 @@
 // discord_app/modules/user_settings/design_system/native/UserSettingsDesignSystemModal.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import Text from "../../../../design/components/Text/native/Text.tsx";
-import _modDef4723 from "../../../../actions/ModalActionCreators.tsx";
+import _modDef4724 from "../../../../actions/ModalActionCreators.tsx";
 import Button from "../../../../design/components/Button/native/Button.native.tsx";
 import NavigationStack from "../../../../design/components/Navigator/native/Navigator.native.tsx";
 import ModalScreen from "../../../../design/components/Modal/native/ModalScreen.native.tsx";
@@ -20,17 +20,17 @@ function DemoModal() {
   const navigatorScreens = obj.useNavigatorScreens(() => {
     let obj = {};
     obj = { headerLeft: null, headerRight: null, headerTitle: null, render: null };
-    let obj2 = callback(5503);
-    obj[0] = obj2.getHeaderCloseButton(callback2(4723).pop);
+    let obj2 = callback(5504);
+    obj[0] = obj2.getHeaderCloseButton(callback2(4724).pop);
     obj[1] = function headerRight() {
       const obj = { text: null, onPress: null };
       const intl = callback(1233).intl;
       obj[0] = intl.string(callback(1233).t["5Wxrcd"]);
-      obj[1] = callback2(4723).pop;
-      return callback3(callback(6246).HeaderActionButton, obj);
+      obj[1] = callback2(4724).pop;
+      return callback3(callback(6247).HeaderActionButton, obj);
     };
     obj[2] = function headerTitle() {
-      return callback3(callback(5503).NavigatorHeader, {
+      return callback3(callback(5504).NavigatorHeader, {
         title: constants.START,
         subtitle: "I said come on fhqwhgads",
       });
@@ -45,16 +45,16 @@ function DemoModal() {
           return arr.push(closure_1_10.WHO_DAT);
         },
         secondaryAction: "Maybe later",
-        onSecondaryAction: callback2(4723).pop,
+        onSecondaryAction: callback2(4724).pop,
         disclaimer: "I said come on fhqwhgads.",
       });
     };
     obj[constants.START] = obj;
-    obj = { headerLeft: callback(5503).getHeaderBackButton(), headerRight: null, headerTitle: null, render: null };
-    const obj5 = callback(5503);
-    obj[1] = callback(5503).getHeaderCloseButton(callback2(4723).pop);
+    obj = { headerLeft: callback(5504).getHeaderBackButton(), headerRight: null, headerTitle: null, render: null };
+    const obj5 = callback(5504);
+    obj[1] = callback(5504).getHeaderCloseButton(callback2(4724).pop);
     obj[2] = function headerTitle() {
-      return callback3(callback(5503).NavigatorHeader, { title: constants.WHO_DAT });
+      return callback3(callback(5504).NavigatorHeader, { title: constants.WHO_DAT });
     };
     obj[3] = function render(arg0, arg1) {
       const callback = arg1;
@@ -65,17 +65,17 @@ function DemoModal() {
         onAction() {
           return arr.push(closure_1_10.EVERYBODY);
         },
-        children: callback3(callback(7714).TextInput, { placeholder: "My friend Jake" }),
+        children: callback3(callback(7717).TextInput, { placeholder: "My friend Jake" }),
       });
     };
     obj[constants.WHO_DAT] = obj;
     obj1 = { headerLeft: null, headerRight: null, headerTitle: null, render: null };
-    const obj6 = callback(5503);
-    obj1[0] = callback(5503).getHeaderBackButton();
-    const obj8 = callback(5503);
-    obj1[1] = callback(5503).getHeaderCloseButton(callback2(4723).pop);
+    const obj6 = callback(5504);
+    obj1[0] = callback(5504).getHeaderBackButton();
+    const obj8 = callback(5504);
+    obj1[1] = callback(5504).getHeaderCloseButton(callback2(4724).pop);
     obj1[2] = function headerTitle() {
-      return callback3(callback(5503).NavigatorHeader, { title: constants.EVERYBODY });
+      return callback3(callback(5504).NavigatorHeader, { title: constants.EVERYBODY });
     };
     obj1[3] = function render(arg0, arg1) {
       closure_0 = arg1;
@@ -87,12 +87,12 @@ function DemoModal() {
     };
     obj[constants.EVERYBODY] = obj1;
     obj2 = { headerLeft: null, headerRight: null, headerTitle: null, render: null };
-    const obj9 = callback(5503);
-    obj2[0] = callback(5503).getHeaderBackButton();
-    const obj11 = callback(5503);
-    obj2[1] = callback(5503).getHeaderCloseButton(callback2(4723).pop);
+    const obj9 = callback(5504);
+    obj2[0] = callback(5504).getHeaderBackButton();
+    const obj11 = callback(5504);
+    obj2[1] = callback(5504).getHeaderCloseButton(callback2(4724).pop);
     obj2[2] = function headerTitle() {
-      return callback3(callback(5503).NavigatorHeader, {
+      return callback3(callback(5504).NavigatorHeader, {
         title: constants.JOCKIN,
         subtitle: "Tryin' to play like, you know me",
       });
@@ -111,20 +111,20 @@ function DemoModal() {
     };
     obj[constants.JOCKIN] = obj2;
     const obj3 = { headerLeft: null, headerRight: null, headerTitle: null, render: null };
-    const obj12 = callback(5503);
-    obj3[0] = callback(5503).getHeaderBackButton();
+    const obj12 = callback(5504);
+    obj3[0] = callback(5504).getHeaderBackButton();
     obj3[1] = function headerRight() {
-      return callback3(callback(5503).HeaderSubmittingIndicator, {});
+      return callback3(callback(5504).HeaderSubmittingIndicator, {});
     };
     obj3[2] = function headerTitle() {
-      return callback3(callback(5503).NavigatorHeader, { title: constants.LIMIT });
+      return callback3(callback(5504).NavigatorHeader, { title: constants.LIMIT });
     };
     obj3[3] = function render() {
       return callback3(closure_13, {
         title: "Everybody to the limit.",
         emoji: "\u{1F44F}",
         action: "Everybody come on fhqwhgads!",
-        onAction: callback2(4723).pop,
+        onAction: callback2(4724).pop,
         secondaryAction: "Push that fh-h-h-h-wqhgad",
         onSecondaryAction() {
           return callback(table[12]).openURL("https://www.youtube.com/watch?v=votBDwhTu1E");
@@ -143,17 +143,17 @@ function DemoStepModal() {
   const navigatorScreens = obj.useNavigatorScreens(() => {
     let obj = {};
     obj = { headerLeft: null, headerRight: null, headerTitle: null, render: null };
-    let obj2 = callback(5503);
-    obj[0] = obj2.getHeaderCloseButton(callback2(4723).pop);
+    let obj2 = callback(5504);
+    obj[0] = obj2.getHeaderCloseButton(callback2(4724).pop);
     obj[1] = function headerRight() {
       const obj = { text: null, onPress: null };
       const intl = callback(1233).intl;
       obj[0] = intl.string(callback(1233).t["5Wxrcd"]);
-      obj[1] = callback2(4723).pop;
-      return callback3(callback(6246).HeaderActionButton, obj);
+      obj[1] = callback2(4724).pop;
+      return callback3(callback(6247).HeaderActionButton, obj);
     };
     obj[2] = function headerTitle() {
-      return callback3(callback(5503).NavigatorHeader, {
+      return callback3(callback(5504).NavigatorHeader, {
         title: constants.START,
         subtitle: "I said come on fhqwhgads",
       });
@@ -168,16 +168,16 @@ function DemoStepModal() {
           return arr.push(closure_1_10.WHO_DAT);
         },
         secondaryAction: "Maybe later",
-        onSecondaryAction: callback2(4723).pop,
+        onSecondaryAction: callback2(4724).pop,
         disclaimer: "I said come on fhqwhgads.",
       });
     };
     obj[constants.START] = obj;
-    obj = { headerLeft: callback(5503).getHeaderBackButton(), headerRight: null, headerTitle: null, render: null };
-    const obj5 = callback(5503);
-    obj[1] = callback(5503).getHeaderCloseButton(callback2(4723).pop);
+    obj = { headerLeft: callback(5504).getHeaderBackButton(), headerRight: null, headerTitle: null, render: null };
+    const obj5 = callback(5504);
+    obj[1] = callback(5504).getHeaderCloseButton(callback2(4724).pop);
     obj[2] = function headerTitle() {
-      return callback3(callback(5503).NavigatorHeader, { title: constants.WHO_DAT });
+      return callback3(callback(5504).NavigatorHeader, { title: constants.WHO_DAT });
     };
     obj[3] = function render(arg0, arg1) {
       const callback = arg1;
@@ -188,17 +188,17 @@ function DemoStepModal() {
         onAction() {
           return arr.push(closure_1_10.EVERYBODY);
         },
-        children: callback3(callback(7714).TextInput, { placeholder: "My friend Jake" }),
+        children: callback3(callback(7717).TextInput, { placeholder: "My friend Jake" }),
       });
     };
     obj[constants.WHO_DAT] = obj;
     obj1 = { headerLeft: null, headerRight: null, headerTitle: null, render: null };
-    const obj6 = callback(5503);
-    obj1[0] = callback(5503).getHeaderBackButton();
-    const obj8 = callback(5503);
-    obj1[1] = callback(5503).getHeaderCloseButton(callback2(4723).pop);
+    const obj6 = callback(5504);
+    obj1[0] = callback(5504).getHeaderBackButton();
+    const obj8 = callback(5504);
+    obj1[1] = callback(5504).getHeaderCloseButton(callback2(4724).pop);
     obj1[2] = function headerTitle() {
-      return callback3(callback(5503).NavigatorHeader, { title: constants.EVERYBODY });
+      return callback3(callback(5504).NavigatorHeader, { title: constants.EVERYBODY });
     };
     obj1[3] = function render(arg0, arg1) {
       closure_0 = arg1;
@@ -210,12 +210,12 @@ function DemoStepModal() {
     };
     obj[constants.EVERYBODY] = obj1;
     obj2 = { headerLeft: null, headerRight: null, headerTitle: null, render: null };
-    const obj9 = callback(5503);
-    obj2[0] = callback(5503).getHeaderBackButton();
-    const obj11 = callback(5503);
-    obj2[1] = callback(5503).getHeaderCloseButton(callback2(4723).pop);
+    const obj9 = callback(5504);
+    obj2[0] = callback(5504).getHeaderBackButton();
+    const obj11 = callback(5504);
+    obj2[1] = callback(5504).getHeaderCloseButton(callback2(4724).pop);
     obj2[2] = function headerTitle() {
-      return callback3(callback(5503).NavigatorHeader, {
+      return callback3(callback(5504).NavigatorHeader, {
         title: constants.JOCKIN,
         subtitle: "Tryin' to play like, you know me",
       });
@@ -234,20 +234,20 @@ function DemoStepModal() {
     };
     obj[constants.JOCKIN] = obj2;
     const obj3 = { headerLeft: null, headerRight: null, headerTitle: null, render: null };
-    const obj12 = callback(5503);
-    obj3[0] = callback(5503).getHeaderBackButton();
+    const obj12 = callback(5504);
+    obj3[0] = callback(5504).getHeaderBackButton();
     obj3[1] = function headerRight() {
-      return callback3(callback(5503).HeaderSubmittingIndicator, {});
+      return callback3(callback(5504).HeaderSubmittingIndicator, {});
     };
     obj3[2] = function headerTitle() {
-      return callback3(callback(5503).NavigatorHeader, { title: constants.LIMIT });
+      return callback3(callback(5504).NavigatorHeader, { title: constants.LIMIT });
     };
     obj3[3] = function render() {
       return callback3(closure_13, {
         title: "Everybody to the limit.",
         emoji: "\u{1F44F}",
         action: "Everybody come on fhqwhgads!",
-        onAction: callback2(4723).pop,
+        onAction: callback2(4724).pop,
         secondaryAction: "Push that fh-h-h-h-wqhgad",
         onSecondaryAction() {
           return callback(table[12]).openURL("https://www.youtube.com/watch?v=votBDwhTu1E");
@@ -299,7 +299,7 @@ function DemoScreen(arg0) {
     if (tmp8Result) {
       const obj2 = { children: null };
       obj2[0] = disclaimer;
-      tmp8Result = tmp8(tmp3(14042).ModalDisclaimer, obj2);
+      tmp8Result = tmp8(tmp3(14058).ModalDisclaimer, obj2);
     }
     const items2 = [tmp8Result, ,];
     tmp8Result = null != action;
@@ -307,7 +307,7 @@ function DemoScreen(arg0) {
       const obj3 = { variant: "primary", text: null, onPress: null };
       obj3[1] = action;
       obj3[2] = onAction;
-      tmp8Result = tmp8(tmp3(10954).ModalActionButton, obj3);
+      tmp8Result = tmp8(tmp3(10958).ModalActionButton, obj3);
     }
     items2[1] = tmp8Result;
     let tmp8Result1 = null != secondaryAction;
@@ -315,12 +315,12 @@ function DemoScreen(arg0) {
       const obj4 = { variant: "secondary", text: null, onPress: null };
       obj4[1] = secondaryAction;
       obj4[2] = onSecondaryAction;
-      tmp8Result1 = tmp8(tmp3(10954).ModalActionButton, obj4);
+      tmp8Result1 = tmp8(tmp3(10958).ModalActionButton, obj4);
     }
     const obj5 = { children: null };
     items2[2] = tmp8Result1;
     obj5[0] = items2;
-    footer = tmp2(tmp3(11722).ModalFooter, obj5);
+    footer = tmp2(tmp3(11727).ModalFooter, obj5);
   }
   children[1] = footer;
   return closure_8(ModalScreen.ModalScreen, { children });
@@ -338,10 +338,10 @@ function SwitchesScreen(onAction) {
     text: "Come on fhqwhgads",
     onPress: onAction.onAction,
   };
-  obj[2] = callback2(parts(10953).ModalFloatingAction, obj);
+  obj[2] = callback2(parts(10957).ModalFloatingAction, obj);
   obj = { style: tmp.tableRows, children: null };
   const tmp2 = callback(React.useState(parts.map(() => false)), 2);
-  obj[1] = callback2(parts(6000).TableRowGroup, {
+  obj[1] = callback2(parts(6001).TableRowGroup, {
     hasIcons: false,
     children: arr2.map((value) => {
       parts = arg1;
@@ -367,16 +367,16 @@ function SwitchesScreen(onAction) {
       );
     }),
   });
-  const items = [callback2(closure_5, obj), callback2(parts(10953).ModalFloatingActionSpacer, {})];
+  const items = [callback2(closure_5, obj), callback2(parts(10957).ModalFloatingActionSpacer, {})];
   obj[3] = items;
   return callback3(DemoScreen, obj);
 }
 function openDemoModal() {
-  let arr = _modDef4723;
+  let arr = _modDef4724;
   arr = arr.push(DemoModal);
 }
 function openDemoStepModal() {
-  let arr = _modDef4723;
+  let arr = _modDef4724;
   arr = arr.push(DemoStepModal);
 }
 ({ View: c5, ScrollView: closure_6 } = get_ActivityIndicator);

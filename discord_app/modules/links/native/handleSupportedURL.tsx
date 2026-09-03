@@ -208,7 +208,12 @@ export default function handleSupportedURL(payload) {
       result = inviteCode;
       result = payload(inviteCode[29]).startDiceRoll(channelId2, diceCount, diceSides);
       result = rootNavigationRef1;
-      let obj3 = { guildId: null, channelId: null, messageId: "Array", navigationSettings: true };
+      let obj3 = {
+        guildId: null,
+        channelId: null,
+        messageId: "Array",
+        navigationSettings: 409390404914198900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000,
+      };
       obj3[0] = guildId2;
       obj3[1] = channelId2;
       let obj4 = { safe: null, navigationReplace: null, waitForConnection: null, skipMessageFetch: null };

@@ -109,11 +109,11 @@ export default function ChatInputGuard(type) {
         if (actionIcon == null) {
           const obj2 = { color: null };
           obj2[0] = tmp(709).colors.WHITE;
-          actionIcon = tmp7(tmp9(10893).ArrowSmallRightIcon, obj2);
+          actionIcon = tmp7(tmp9(10897).ArrowSmallRightIcon, obj2);
         }
         obj1[1] = actionIcon;
         obj1[3] = actionOnPress;
-        let tmp7Result = tmp7(tmp9(8015).IconButton, obj1);
+        let tmp7Result = tmp7(tmp9(8018).IconButton, obj1);
       }
       obj[6] = tmp7Result;
       const obj3 = { variant: "text-sm/semibold", children: null };
@@ -130,7 +130,7 @@ export default function ChatInputGuard(type) {
       ({ text: arr3[0], spacing: arr3[1] } = tmp3);
       obj4[0] = items;
       obj4[1] = countdown;
-      tmp7Result = tmp7(tmp(10888), obj4);
+      tmp7Result = tmp7(tmp(10892), obj4);
     }
     tmp8 = closure_5;
   } else {
@@ -183,9 +183,9 @@ export default function ChatInputGuard(type) {
         obj9[1] = buttonSecondaryLoading;
         obj9[2] = buttonSecondaryText;
         obj9[3] = buttonSecondaryOnPress;
-        items2[1] = tmp13(tmp14(4928).Button, obj9);
+        items2[1] = tmp13(tmp14(4929).Button, obj9);
         obj8[0] = items2;
-        tmp16Result = tmp16(tmp14(8998).TwinButtons, obj8);
+        tmp16Result = tmp16(tmp14(9002).TwinButtons, obj8);
       }
     }
     const obj10 = { children: null };
@@ -198,7 +198,7 @@ export default function ChatInputGuard(type) {
       ({ text: arr2[0], spacing: arr2[1] } = tmp3);
       obj11[0] = items3;
       obj11[1] = countdown2;
-      tmp13Result = tmp13(tmp(10888), obj11);
+      tmp13Result = tmp13(tmp(10892), obj11);
     }
     items1[3] = tmp13Result;
     obj6[1] = items1;
@@ -210,7 +210,7 @@ export const ChatInputGuardContainer = function ChatInputGuardContainer(screenIn
   const channelId = screenIndex.channelId;
   ({ onJumpToPresent, children } = screenIndex);
   const tmp3 = useIsUsingClientThemeDefault();
-  let obj = screenIndex(12051);
+  let obj = screenIndex(12057);
   const chatInputFloatingOverlayStyle = obj.useChatInputFloatingOverlayStyle();
   const tmp6 = callback2(tmp3);
   const items = [screenIndex];
@@ -221,7 +221,7 @@ export const ChatInputGuardContainer = function ChatInputGuardContainer(screenIn
   const items1 = [getChatInputPositionStyleDefault({ isCreatingThread: false }), chatInputFloatingOverlayStyle];
   obj[0] = items1;
   obj[1] = callback;
-  const items2 = [callback(screenIndex(12051).ChatInputScrimGradient, {})];
+  const items2 = [callback(screenIndex(12057).ChatInputScrimGradient, {})];
   obj = { style: tmp6.container, children: null };
   let tmp10Result = null;
   if (!tmp3) {
@@ -233,7 +233,7 @@ export const ChatInputGuardContainer = function ChatInputGuardContainer(screenIn
   const obj2 = { style: tmp6.content, children: null };
   tmp10Result = null;
   if (tmp3) {
-    tmp10Result = tmp10(tmp(5078), { absolute: true, wide: true, tall: true, mix: true });
+    tmp10Result = tmp10(tmp(5079), { absolute: true, wide: true, tall: true, mix: true });
   }
   const items4 = [tmp10Result, children];
   obj2[1] = items4;
@@ -246,7 +246,7 @@ export const ChatInputGuardContainer = function ChatInputGuardContainer(screenIn
       obj3[0] = channelId;
       obj3[1] = screenIndex;
       obj3[2] = onJumpToPresent;
-      tmp10Result1 = tmp10(tmp(12057), obj3);
+      tmp10Result1 = tmp10(tmp(12063), obj3);
     }
   }
   items3[2] = tmp10Result1;

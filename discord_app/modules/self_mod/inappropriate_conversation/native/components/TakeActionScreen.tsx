@@ -107,7 +107,7 @@ export default function TakeActionButtons(senderId) {
               closure_0 = tmp4;
               if (null != closure_1_9.getUser(closure_1_0)) {
                 closure_1_6(true);
-                let obj2 = closure_1_0(8771);
+                let obj2 = closure_1_0(8775);
                 v0 = 1;
                 dependencyMap = 1;
                 obj1 = { value: null, done: false };
@@ -145,9 +145,9 @@ export default function TakeActionButtons(senderId) {
             throw arg1;
           } else if (arg0 !== 2) {
             callback2(false);
-            obj = v0(8690);
+            obj = v0(8694);
             const result = obj.showReportSuccessToast(closure_0, v0);
-            callback(closure_1_0(11227).CtaEventTypes.USER_TAKEOVER_MODAL_REPORT);
+            callback(closure_1_0(11231).CtaEventTypes.USER_TAKEOVER_MODAL_REPORT);
           }
           dependencyMap = 3;
           obj2 = { value: null, done: true };

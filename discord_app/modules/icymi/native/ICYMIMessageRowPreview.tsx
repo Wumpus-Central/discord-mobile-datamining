@@ -70,7 +70,7 @@ function ICYMIMessageRowPreview(pointerEvents) {
     messageSizeCacheRef,
     maxHeight,
   };
-  return setting2(messageOptions(8794), obj);
+  return setting2(messageOptions(8798), obj);
 }
 let c3 = importAllResult;
 const memoResult = importAllResult.memo((message) => {
@@ -193,11 +193,11 @@ const memoResult2 = importAllResult.memo((message) => {
     obj[4] = merged.pointerEvents;
     return obj;
   }, items);
-  const tmp3 = merged(6155)(message);
+  const tmp3 = merged(6156)(message);
   let obj = {};
   const merged1 = Object.assign(memo);
   obj = {};
-  const merged2 = Object.assign(message(7852).DEFAULT_OPTIONS);
+  const merged2 = Object.assign(message(7855).DEFAULT_OPTIONS);
   obj.ignoreMentioned = true;
   obj.renderReplies = false;
   obj.renderThreadEmbeds = false;

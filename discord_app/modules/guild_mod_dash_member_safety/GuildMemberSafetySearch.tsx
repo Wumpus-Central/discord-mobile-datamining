@@ -25,8 +25,8 @@ let obj = {
   selectedJoinDateOption: null,
   selectedAccountAgeOption: null,
   selectedJoinSourceType: "call",
-  selectedSourceInviteCode: "style",
-  selectedSort: "fill",
+  selectedSourceInviteCode: "user",
+  selectedSort: "isArray",
 };
 let set = new Set();
 obj[5] = set;
@@ -48,8 +48,8 @@ class GuildMemberSafetySearch {
       selectedJoinDateOption: null,
       selectedAccountAgeOption: null,
       selectedJoinSourceType: "call",
-      selectedSourceInviteCode: "style",
-      selectedSort: "fill",
+      selectedSourceInviteCode: "user",
+      selectedSort: "isArray",
     };
     set = new Set();
     obj[5] = set;
@@ -78,8 +78,8 @@ prototype["reset"] = function reset() {
     selectedJoinDateOption: { optionId: 0, afterDate: null, beforeDate: null },
     selectedAccountAgeOption: { optionId: 0, afterDate: null, beforeDate: null },
     selectedJoinSourceType: "call",
-    selectedSourceInviteCode: "style",
-    selectedSort: "fill",
+    selectedSourceInviteCode: "user",
+    selectedSort: "isArray",
   };
   this._searchState = obj;
   this.hasDefaultQuery = true;
@@ -106,8 +106,8 @@ prototype["resetSearchState"] = function resetSearchState() {
       selectedJoinDateOption: null,
       selectedAccountAgeOption: null,
       selectedJoinSourceType: "call",
-      selectedSourceInviteCode: "style",
-      selectedSort: "fill",
+      selectedSourceInviteCode: "user",
+      selectedSort: "isArray",
     };
     const _Set = Set;
     const set = new Set();
@@ -322,8 +322,8 @@ export const getDefaultSearchState = function getDefaultSearchState() {
     selectedJoinDateOption: { optionId: 0, afterDate: null, beforeDate: null },
     selectedAccountAgeOption: { optionId: 0, afterDate: null, beforeDate: null },
     selectedJoinSourceType: "call",
-    selectedSourceInviteCode: "style",
-    selectedSort: "fill",
+    selectedSourceInviteCode: "user",
+    selectedSort: "isArray",
   };
   return obj;
 };

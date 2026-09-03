@@ -27,7 +27,7 @@ export default function EditProfileThemeActionSheet(onResetTheme) {
   obj = { style: tmp.nitroWheel };
   obj[1] = callback(onResetTheme(1296).NitroWheel, obj);
   ({ titleWrapper: obj2[2], titleContainer: obj2[3] } = tmp);
-  const items = [callback(onResetTheme(5629).BottomSheetTitleHeader, obj)];
+  const items = [callback(onResetTheme(5630).BottomSheetTitleHeader, obj)];
   obj1 = { hasIcons: false, children: null };
   const obj2 = { label: null, subLabel: null, onPress: null };
   const intl2 = onResetTheme(1233).intl;
@@ -38,8 +38,8 @@ export default function EditProfileThemeActionSheet(onResetTheme) {
     onResetTheme();
     closure_1_1(closure_1_2[10]).hideActionSheet();
   };
-  obj1[1] = callback(onResetTheme(5607).TableRow, obj2);
-  items[1] = callback(onResetTheme(6000).TableRowGroup, obj1);
+  obj1[1] = callback(onResetTheme(5608).TableRow, obj2);
+  items[1] = callback(onResetTheme(6001).TableRowGroup, obj1);
   obj[0] = items;
-  return callback2(onResetTheme(5997).ActionSheet, obj);
+  return callback2(onResetTheme(5998).ActionSheet, obj);
 }

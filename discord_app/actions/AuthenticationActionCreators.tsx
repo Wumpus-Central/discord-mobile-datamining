@@ -6,8 +6,8 @@ import setSecondaryTokenAll from "../../discord_common/js/shared/lib/TokenManage
 import dispatcherDefault from "../Dispatcher.tsx";
 import getRootNavigationRef from "../modules/main_tabs_v2/RootNavigationRef.native.tsx";
 import setDefault from "../utils/CrossPlatformNativeUtils.native.tsx";
-import _modDef4713 from "../utils/TrackedHTTPUtils.tsx";
-import _modDef4723 from "ModalActionCreators.tsx";
+import _modDef4714 from "../utils/TrackedHTTPUtils.tsx";
+import _modDef4724 from "ModalActionCreators.tsx";
 import closure_5 from "../../_runtime/00005_asyncGeneratorStep.js";
 import { setPromoEmailConsentState } from "../modules/auth/PromoEmailConsentStore.tsx";
 import closure_7 from "../stores/AuthenticationStore.tsx";
@@ -38,12 +38,12 @@ function handleLogout(arg0, ME) {
   if (null != DEFAULT_LOGGED_OUT) {
     const rootNavigationRef = getRootNavigationRef.getRootNavigationRef();
     if (null != rootNavigationRef) {
-      _modDef4723.popAll();
+      _modDef4724.popAll();
       obj = { index: 0, routes: null };
       const items = [{ name: "auth" }];
       obj[1] = items;
       rootNavigationRef.reset(obj);
-      const tmp2Result = _modDef4723;
+      const tmp2Result = _modDef4724;
     } else {
       obj1 = { source: null };
       obj1[0] = arg0;
@@ -210,7 +210,7 @@ obj = {
     const self = this;
     ({ isMultiAccount: require, loginInstanceId } = arg0);
     ({ code, ticket, source, giftCodeSKUId, mfaType } = arg0);
-    obj = self(4713);
+    obj = self(4714);
     obj = {
       url: closure_9.LOGIN_MFA(mfaType),
       body: null,
@@ -315,7 +315,7 @@ obj = {
               c4 = 2;
               c5 = 1;
               obj1 = { value: null, done: false };
-              obj1[0] = lib(6064).fetchWebAuthnPasswordlessChallenge();
+              obj1[0] = lib(6065).fetchWebAuthnPasswordlessChallenge();
               return obj1;
             }
           } else if (1 === tmp8) {
@@ -386,7 +386,7 @@ obj = {
                 tmp16 = c4.status < 500;
               }
               if (tmp16) {
-                obj2 = challenge(6065);
+                obj2 = challenge(6066);
                 c4 = 6;
                 c5 = 1;
                 const obj8 = { value: null, done: false };
@@ -438,7 +438,7 @@ obj = {
     const self = this;
     isMultiAccount = isMultiAccount.isMultiAccount;
     ({ ticket, credential, source, giftCodeSKUId } = isMultiAccount);
-    obj = self(4713);
+    obj = self(4714);
     obj = {
       url: closure_9.WEBAUTHN_CONDITIONAL_UI_LOGIN,
       body: { credential, ticket, source, giftCodeSKUId },
@@ -550,7 +550,7 @@ obj = {
               c4 = 2;
               c5 = 1;
               let obj4 = { value: null, done: false };
-              obj4[0] = closure_1_1(4713).post(obj1);
+              obj4[0] = closure_1_1(4714).post(obj1);
               return obj4;
             }
           } else if (1 === tmp7) {
@@ -643,7 +643,7 @@ obj = {
       DEFAULT_LOGGED_OUT = constants.DEFAULT_LOGGED_OUT;
     }
     importAll = arg2;
-    obj = DEFAULT_LOGGED_OUT(4713);
+    obj = DEFAULT_LOGGED_OUT(4714);
     obj = { url: closure_9.LOGOUT, body: null, oldFormErrors: true, trackedActionData: null };
     obj = { provider: callback2(), token: null, voip_provider: null, voip_token: null };
     const Storage = require("../../discord_common/js/packages/storage/Storage.tsx").Storage;
@@ -736,7 +736,7 @@ obj = {
     return callback(function* () {
       closure_1 = tmp2;
       closure_0 = tmp5;
-      const obj7 = closure_1_1(4713);
+      const obj7 = closure_1_1(4714);
       obj1 = { url: null, body: null, trackedActionData: null, rejectWithError: null };
       obj1[0] = closure_1_9.VERIFY;
       const obj2 = { token: null };
@@ -755,21 +755,21 @@ obj = {
     })();
   },
   authorizePayment(token) {
-    obj = _modDef4713;
+    obj = _modDef4714;
     obj = { url: closure_9.AUTHORIZE_PAYMENT, body: obj, trackedActionData: null, rejectWithError: true };
     obj = { token };
     obj[2] = { event: encodeProperties.NetworkActionNames.AUTHORIZE_PAYMENT };
     return obj.post(obj);
   },
   authorizeIPAddress(closure_0) {
-    obj = _modDef4713;
+    obj = _modDef4714;
     obj = { url: closure_9.AUTHORIZE_IP, body: obj, trackedActionData: null, rejectWithError: true };
     obj = { token: closure_0 };
     obj[2] = { event: encodeProperties.NetworkActionNames.AUTHORIZE_IP };
     return obj.post(obj);
   },
   verifyResend() {
-    obj = _modDef4713;
+    obj = _modDef4714;
     obj = { url: closure_9.VERIFY_RESEND, oldFormErrors: true, trackedActionData: null, rejectWithError: null };
     obj = { event: encodeProperties.NetworkActionNames.USER_VERIFY_RESEND };
     obj[2] = obj;
@@ -845,7 +845,7 @@ obj = {
                 obj1.push_voip_token = value;
               }
               dependencyMap = 1;
-              let obj4 = closure_1_1(4713);
+              let obj4 = closure_1_1(4714);
               let obj2 = { url: null, body: null, oldFormErrors: true, trackedActionData: null, rejectWithError: null };
               obj2[0] = constants.RESET_PASSWORD;
               obj2[1] = obj1;
@@ -992,7 +992,7 @@ obj = {
               let obj3 = { event: null };
               obj3[0] = closure_1_0(500).NetworkActionNames.FORGOT_PASSWORD;
               obj1[3] = obj3;
-              const obj13 = v6OrEarlierAPIError(4713);
+              const obj13 = v6OrEarlierAPIError(4714);
               obj1[4] = closure_1_0(527).rejectWithMigratedError();
               c4 = 2;
               c5 = 1;

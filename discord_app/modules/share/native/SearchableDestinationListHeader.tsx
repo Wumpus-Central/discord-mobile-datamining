@@ -3,7 +3,7 @@ import noopAll from "../../../../_runtime/00019_noop.js";
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import useSafeAreaInsetsDefault from "../../safe_area/useSafeAreaInsets.native.tsx";
 import HeaderBackImage from "../../../design/components/Navigator/native/NavigatorHeader.native.tsx";
-import Background from "../../../../_runtime/05510_Background.js";
+import Background from "../../../../_runtime/05511_Background.js";
 import useIsWindowLarge from "../../screen/native/useIsWindowLarge.tsx";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";

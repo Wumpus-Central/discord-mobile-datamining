@@ -23,12 +23,12 @@ function EditCollectiblesPreviewDescription(arg0) {
   let obj2 = getItemRecordsFromPurchases;
   let result = obj2.isPremiumCollectiblesProduct(product);
   if (!result) {
-    let tmpResult = tmp(7308);
+    let tmpResult = tmp(7309);
     result = tmpResult.isPremiumCollectiblesPurchase(purchase);
   }
   let result1 = !canUseCollectiblesResult;
   if (!canUseCollectiblesResult) {
-    tmpResult = tmp(7308);
+    tmpResult = tmp(7309);
     result1 = tmpResult.isPremiumCollectiblesPurchase(purchase);
   }
   if (null != purchase) {

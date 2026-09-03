@@ -124,14 +124,14 @@ export default function GuildRoleConnectionsScreen(guildId) {
       let obj = onCloseModal(695);
       obj = { role_ids: null };
       obj[0] = first.map((role_id) => role_id.role_id);
-      const merged = Object.assign(guildId(4700).collectGuildAnalyticsMetadata(guildId));
+      const merged = Object.assign(guildId(4701).collectGuildAnalyticsMetadata(guildId));
       obj.track(closure_1_12.PASSPORT_ENTRY_VIEWED, obj);
-      const obj3 = guildId(4700);
+      const obj3 = guildId(4701);
     }
   }, items3);
   const items4 = [guildId];
   const effect1 = React.useEffect(() => {
-    const guildRoleConnectionsConfigurations = onCloseModal(5465).getGuildRoleConnectionsConfigurations(guildId);
+    const guildRoleConnectionsConfigurations = onCloseModal(5466).getGuildRoleConnectionsConfigurations(guildId);
     guildRoleConnectionsConfigurations.then((arg0) => callback(arg0));
   }, items4);
   if (null == stateFromStores1) {
@@ -279,14 +279,14 @@ export default function GuildRoleConnectionsScreen(guildId) {
         obj[0] = found.roleCheckmark;
         obj = { size: null, source: null, color: null };
         obj[0] = guildId(1296).Icon.Sizes.SMALL_20;
-        obj[1] = onCloseModal(11388);
+        obj[1] = onCloseModal(11393);
         obj[2] = onCloseModal(709).unsafe_rawColors.WHITE;
         obj[1] = closure_1_14(guildId(1296).Icon, obj);
         tmp12 = closure_1_14(stateFromStores1, obj);
       }
       const items1 = [
         tmp12,
-        closure_1_14(onCloseModal(6005), { style: found.verifiedRoleIcon, guildId: id, role: children, size: 24 }),
+        closure_1_14(onCloseModal(6006), { style: found.verifiedRoleIcon, guildId: id, role: children, size: 24 }),
         closure_1_14(guildId(4474).Text, {
           variant: "text-md/medium",
           color: "mobile-text-heading-primary",
@@ -304,7 +304,7 @@ export default function GuildRoleConnectionsScreen(guildId) {
         avatarSize: guildId(1296).AvatarSizes.XSMALL,
         withPlusCount: true,
       };
-      items1[3] = closure_1_14(onCloseModal(10159), obj3);
+      items1[3] = closure_1_14(onCloseModal(10163), obj3);
       obj[3] = items1;
       return closure_1_15(first, obj, children.id);
     });

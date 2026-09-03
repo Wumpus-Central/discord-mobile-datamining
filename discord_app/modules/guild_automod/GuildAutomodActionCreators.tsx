@@ -450,8 +450,8 @@ export const removeMentionRaidRestrictionWithFeedback = function removeMentionRa
   }
   if (canResult) {
     const result = require("GuildAutomodActionActionCreators.native.tsx").openConfirmRemoveMentionRaid(() => {
-      let obj = callback(4700);
-      obj = { feedback_type: callback(7272).Feedback.MENTION_RAID_REMOVE_RESTRICTION, decision_id: closure_1 };
+      let obj = callback(4701);
+      obj = { feedback_type: callback(7273).Feedback.MENTION_RAID_REMOVE_RESTRICTION, decision_id: closure_1 };
       obj.trackWithMetadata(closure_1_7.GUILD_AUTOMOD_FEEDBACK, obj);
       const HTTP = callback(527).HTTP;
       obj = { url: closure_1_8.GUILD_AUTOMOD_CLEAR_MENTION_RAID(callback), rejectWithError: true };

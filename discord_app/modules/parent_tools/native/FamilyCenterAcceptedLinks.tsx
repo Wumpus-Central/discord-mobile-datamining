@@ -7,7 +7,7 @@ import useUserIdsForLinkStatus from "../hooks/useUserLinks.tsx";
 import useIsInAdultAgeGroupDefault from "../hooks/useIsInAdultAgeGroup.tsx";
 import useAgeSpecificText from "../hooks/useAgeSpecificText.tsx";
 import FamilyCenterLinkRowDefault from "FamilyCenterLinkRow.tsx";
-import registerAssetDefault from "../../../../_runtime/14752_registerAsset.js";
+import registerAssetDefault from "../../../../_runtime/14767_registerAsset.js";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import items from "../FamilyCenterConstants.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
@@ -39,7 +39,7 @@ function FamilyCenterAcceptedLinkRow(otherUser) {
     obj1[0] = str(1296).Icon.Sizes.SMALL;
     obj1[2] = registerAssetDefault;
     obj[4] = closure_6(str(1296).Icon, obj1);
-    obj[1] = closure_6(str(5076).PressableOpacity, obj);
+    obj[1] = closure_6(str(5077).PressableOpacity, obj);
     tmp4Result = tmp4(FamilyCenterLinkRowDefault, obj);
     const tmp5 = importDefault;
     const tmp7 = FamilyCenterLinkRowDefault;
@@ -107,9 +107,9 @@ export default function FamilyCenterAcceptedLinks() {
     const obj4 = { text: null };
     const intl3 = tmp5(1233).intl;
     obj4[0] = intl3.string(tmp2(2368).C4ScLD);
-    obj3[1] = tmp10(tmp2(14745), obj4);
+    obj3[1] = tmp10(tmp2(14760), obj4);
     let mapped = tmp10(tmp9, obj3);
-    const tmp2Result = tmp2(14745);
+    const tmp2Result = tmp2(14760);
   } else {
     mapped = activeLinkUsers.map((id) => callback(closure_10, { otherUser: id }, "accepted-" + id.id));
   }

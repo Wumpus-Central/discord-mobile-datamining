@@ -79,19 +79,19 @@ export const QuestEmbedPreview = function QuestEmbedPreview(questId) {
     obj = { rowGenerator: null, message: null, horizontalOffset: 0, pointerEvents: "none" };
     obj[0] = memo;
     obj[1] = memo1;
-    obj[1] = jsx(stateFromStores(8794), {
+    obj[1] = jsx(stateFromStores(8798), {
       rowGenerator: null,
       message: null,
       horizontalOffset: 0,
       pointerEvents: "none",
     });
-    tmp6 = jsx(stateFromStores(15000), {
+    tmp6 = jsx(stateFromStores(15015), {
       rowGenerator: null,
       message: null,
       horizontalOffset: 0,
       pointerEvents: "none",
     });
-    const tmp9 = stateFromStores(15000);
+    const tmp9 = stateFromStores(15015);
   }
   return tmp6;
 };

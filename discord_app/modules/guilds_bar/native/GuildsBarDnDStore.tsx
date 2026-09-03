@@ -17,12 +17,12 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
     dragRegion: require("../../reanimated/ReanimatedRexport.tsx").makeMutable({ min: 0, max: 0 }),
     gestureState: null,
     dragDropInProgress: null,
-    listInsets: 2312,
-    scrollPosition: 2313,
-    windowSize: 2314,
-    setStateShallow: 2315,
-    dropStart: 2316,
-    dropComplete: "man_wearing_turban_tone4",
+    listInsets: "animal",
+    scrollPosition: "rat",
+    windowSize: "center",
+    setStateShallow: "hidden",
+    dropStart: null,
+    dropComplete: "\u{1F478}\u{1F3FF}",
   };
   const obj2 = ReanimatedRexport;
   obj[4] = require("../../reanimated/ReanimatedRexport.tsx").makeMutable(obj);
@@ -67,7 +67,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
       throw error;
     } else {
       callback(tmp2[3]).batchUpdates(() =>
-        newDropSpec({ dropSpecs: newDropSpec, dragSpecs: "Array", overSpecs: "alignItems" }),
+        newDropSpec({ dropSpecs: newDropSpec, dragSpecs: "Array", overSpecs: "isArray" }),
       );
       const _clearTimeout = clearTimeout;
       clearTimeout(timeout);
@@ -94,7 +94,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
     obj[2] = obj;
     obj.addBreadcrumb(obj);
     if (null != dropSpecs) {
-      callback(closure_1_2[3]).batchUpdates(() => callback({ dropSpecs: "r" }));
+      callback(closure_1_2[3]).batchUpdates(() => callback({ dropSpecs: "Array" }));
       const _clearTimeout = clearTimeout;
       clearTimeout(closure_5);
       if (null == dragSpecs) {

@@ -319,9 +319,9 @@ export const isSocialLayerUmbrellaScope = function isSocialLayerUmbrellaScope(ar
 };
 export const getSecurityMessage = function getSecurityMessage(scopes) {
   if (!scopes.includes(set2.OAuth2Scopes.DM_CHANNELS_MESSAGES_WRITE)) {
-    if (!scopes.includes(tmp(8625).OAuth2Scopes.SDK_SOCIAL_LAYER)) {
-      if (!scopes.includes(tmp(8625).OAuth2Scopes.MESSAGES_READ)) {
-        if (!scopes.includes(tmp(8625).OAuth2Scopes.DM_CHANNELS_MESSAGES_READ)) {
+    if (!scopes.includes(tmp(8629).OAuth2Scopes.SDK_SOCIAL_LAYER)) {
+      if (!scopes.includes(tmp(8629).OAuth2Scopes.MESSAGES_READ)) {
+        if (!scopes.includes(tmp(8629).OAuth2Scopes.DM_CHANNELS_MESSAGES_READ)) {
           const intl = tmp(1233).intl;
           let formatResult = intl.format(tmp(1233).t["TeL+Ct"], {});
         }

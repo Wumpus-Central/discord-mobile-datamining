@@ -3,7 +3,7 @@ import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import _modDef4217 from "../../reanimated/ReanimatedRexport.tsx";
 import Text from "../../../design/components/Text/native/Text.tsx";
-import _modDef4858 from "../../../actions/native/AlertActionCreators.tsx";
+import _modDef4859 from "../../../actions/native/AlertActionCreators.tsx";
 import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
 import importAllResult from "../../../../_runtime/00019_noop.js";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
@@ -45,8 +45,8 @@ function openLoadingIndicatorDebugBody() {
         };
       });
     };
-    _modDef4858.openLazy(obj);
-    const obj2 = _modDef4858;
+    _modDef4859.openLazy(obj);
+    const obj2 = _modDef4859;
   }
 }
 let c4 = importAllResult;
@@ -295,7 +295,7 @@ export const ChannelHeaderLoadingIndicator = function ChannelHeaderLoadingIndica
     obj2 = { onPress: null, children: null };
     obj2[0] = openLoadingIndicatorDebugBody;
     obj2[1] = tmp8;
-    tmp7Result = callback2(stateFromStores(5076).PressableOpacity, obj2);
+    tmp7Result = callback2(stateFromStores(5077).PressableOpacity, obj2);
   }
   return tmp7Result;
 };

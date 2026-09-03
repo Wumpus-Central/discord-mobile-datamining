@@ -1,26 +1,6 @@
 // discord_common/js/packages/i18n/i18n.tsx
-import _modDef17046 from "../../../../_runtime/metro/17046__.js";
+import _modDef17066 from "../../../../_runtime/metro/17066__.js";
 import format from "parse.tsx";
-import 17055__ from "../../../../_runtime/metro/17055__.js";
-import 17056__ from "../../../../_runtime/metro/17056__.js";
-import 17057__ from "../../../../_runtime/metro/17057__.js";
-import 17058__ from "../../../../_runtime/metro/17058__.js";
-import 17059__ from "../../../../_runtime/metro/17059__.js";
-import 17060__ from "../../../../_runtime/metro/17060__.js";
-import 17061__ from "../../../../_runtime/metro/17061__.js";
-import 17062__ from "../../../../_runtime/metro/17062__.js";
-import 17063__ from "../../../../_runtime/metro/17063__.js";
-import 17064__ from "../../../../_runtime/metro/17064__.js";
-import 17065__ from "../../../../_runtime/metro/17065__.js";
-import 17066__ from "../../../../_runtime/metro/17066__.js";
-import 17067__ from "../../../../_runtime/metro/17067__.js";
-import 17068__ from "../../../../_runtime/metro/17068__.js";
-import 17069__ from "../../../../_runtime/metro/17069__.js";
-import 17070__ from "../../../../_runtime/metro/17070__.js";
-import 17071__ from "../../../../_runtime/metro/17071__.js";
-import 17072__ from "../../../../_runtime/metro/17072__.js";
-import 17073__ from "../../../../_runtime/metro/17073__.js";
-import 17074__ from "../../../../_runtime/metro/17074__.js";
 import 17075__ from "../../../../_runtime/metro/17075__.js";
 import 17076__ from "../../../../_runtime/metro/17076__.js";
 import 17077__ from "../../../../_runtime/metro/17077__.js";
@@ -29,10 +9,30 @@ import 17079__ from "../../../../_runtime/metro/17079__.js";
 import 17080__ from "../../../../_runtime/metro/17080__.js";
 import 17081__ from "../../../../_runtime/metro/17081__.js";
 import 17082__ from "../../../../_runtime/metro/17082__.js";
+import 17083__ from "../../../../_runtime/metro/17083__.js";
+import 17084__ from "../../../../_runtime/metro/17084__.js";
+import 17085__ from "../../../../_runtime/metro/17085__.js";
+import 17086__ from "../../../../_runtime/metro/17086__.js";
+import 17087__ from "../../../../_runtime/metro/17087__.js";
+import 17088__ from "../../../../_runtime/metro/17088__.js";
+import 17089__ from "../../../../_runtime/metro/17089__.js";
+import 17090__ from "../../../../_runtime/metro/17090__.js";
+import 17091__ from "../../../../_runtime/metro/17091__.js";
+import 17092__ from "../../../../_runtime/metro/17092__.js";
+import 17093__ from "../../../../_runtime/metro/17093__.js";
+import 17094__ from "../../../../_runtime/metro/17094__.js";
+import 17095__ from "../../../../_runtime/metro/17095__.js";
+import 17096__ from "../../../../_runtime/metro/17096__.js";
+import 17097__ from "../../../../_runtime/metro/17097__.js";
+import 17098__ from "../../../../_runtime/metro/17098__.js";
+import 17099__ from "../../../../_runtime/metro/17099__.js";
+import 17100__ from "../../../../_runtime/metro/17100__.js";
+import 17101__ from "../../../../_runtime/metro/17101__.js";
+import 17102__ from "../../../../_runtime/metro/17102__.js";
 import { EventEmitter } from "../../../../_runtime/00649_EventEmitter.js";
 
 require = arg1;
-global.IntlMessageFormat = _modDef17046;
+global.IntlMessageFormat = _modDef17066;
 delete tmp2[tmp];
 if (typeof Intl === "undefined") {
   require("_default2");
@@ -136,11 +136,11 @@ _instance_members_initializer_I18N_ = function() {
       return _createProxy(obj);
     } else {
       try {
-        obj = self(17088);
+        obj = self(17108);
         return obj.getMessage(tmp4, locale);
       } catch (err) {
         if (typeof tmp3[tmp2] === "string") {
-          return self(17088).getMessage(tmp7, tmp);
+          return self(17108).getMessage(tmp7, tmp);
         } else {
           return "";
         }
@@ -169,7 +169,7 @@ class I18N extends EventEmitter {
       _Intl = Intl;
       tmp9 = closure_0;
       tmp10 = closure_1;
-      __addLocaleDataResult = Intl.__addLocaleData(require("../../../../_runtime/metro/17087__.js"));
+      __addLocaleDataResult = Intl.__addLocaleData(require("../../../../_runtime/metro/17107__.js"));
     }
     tmp6._languages = getLanguages();
     if (null != window.Proxy) {

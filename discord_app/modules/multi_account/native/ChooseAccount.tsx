@@ -111,10 +111,10 @@ export default function ChooseAccount() {
                 intl2 = tmp31(1233).intl;
                 string = intl2.string;
                 obj1[4] = string(lib(1233).t["ETE/oC"]);
-                obj1 = closure_1_1(4858).confirm(obj1);
+                obj1 = closure_1_1(4859).confirm(obj1);
                 dependencyMap = 1;
                 c4 = 1;
-                const obj8 = closure_1_1(4858);
+                const obj8 = closure_1_1(4859);
               }
             } else if (arg0 === 1) {
               c4 = 3;
@@ -128,7 +128,7 @@ export default function ChooseAccount() {
               if (arg1) {
                 obj = closure_1_1(4445);
                 obj.hideActionSheet();
-                obj1 = closure_1_2(12210);
+                obj1 = closure_1_2(12217);
                 obj1.removeAccount(lib.id);
               }
               c4 = 3;
@@ -169,7 +169,7 @@ export default function ChooseAccount() {
   let intl2 = require("../../../intl/index.native.tsx").intl;
   obj[2] = intl2.string(require("../../../intl/index.native.tsx").t["0M5fN7"]);
   obj[1] = callback(require("../../../design/components/Text/native/Text.tsx").Text, obj);
-  obj[2] = multiAccountUsers(13826);
+  obj[2] = multiAccountUsers(13842);
   obj[4] = tmp.container;
   obj1 = { style: tmp.mainCard, children: null };
   let items = [
@@ -243,11 +243,11 @@ export default function ChooseAccount() {
     }),
   ];
   let obj2 = { leading: null, label: null, labelStyle: null, onPress: null };
-  const tmp2 = multiAccountUsers(7754);
+  const tmp2 = multiAccountUsers(7757);
   obj2[0] = callback(require("../../../design/void/Form/native/index.tsx").FormRow.Icon, {
     themedColor: multiAccountUsers(709).colors.TEXT_LINK,
     size: require("../../../design/void/native.tsx").Icon.Sizes.SMALL_20,
-    source: multiAccountUsers(15775),
+    source: multiAccountUsers(15791),
   });
   let intl3 = require("../../../intl/index.native.tsx").intl;
   obj2[1] = intl3.string(require("../../../intl/index.native.tsx").t.bPP34Q);

@@ -27,7 +27,7 @@ export const createGuildReportRaidSystemMessage = function createGuildReportRaid
   let automodUsernameColor = nativeStyleProperties.resolveAlertModeColors(theme).automodUsernameColor;
   obj = {
     username: messageAuthorWithProcessedColor.nick,
-    usernameOnClick: tmp(7880)({ message, author: messageAuthorWithProcessedColor, roleStyle: roleStyle.roleStyle }),
+    usernameOnClick: tmp(7883)({ message, author: messageAuthorWithProcessedColor, roleStyle: roleStyle.roleStyle }),
     guildName: null,
   };
   let str;
@@ -40,7 +40,7 @@ export const createGuildReportRaidSystemMessage = function createGuildReportRaid
   obj[2] = str;
   const obj2 = nativeStyleProperties;
   obj = {};
-  const merged = Object.assign(tmp(7882)(roleStyle));
+  const merged = Object.assign(tmp(7885)(roleStyle));
   const intl = tmp8(1233).intl;
   obj.content = intl.formatToParts(getSystemLocale.t["MTmH+u"], obj);
   const intl2 = tmp8(1233).intl;

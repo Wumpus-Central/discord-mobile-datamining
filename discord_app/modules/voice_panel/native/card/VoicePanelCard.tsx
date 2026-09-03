@@ -1,7 +1,7 @@
 // discord_app/modules/voice_panel/native/card/VoicePanelCard.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import CONFIG_NEVER_ANIMATE from "../../../../design/animation/reanimated/spring/spring.tsx";
-import LinearGradientDefault from "../../../../../_runtime/04940_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/04941_LinearGradient.js";
 import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
 import { StyleSheet } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
@@ -1375,7 +1375,7 @@ let closure_45 = {
 let closure_46 = {
   code: "function VoicePanelCardTsx12(props,previous){const{cheapWorkletShallowEqual,VoicePanelModes,TransitionStates,sharedVisible,isScrollVisible,runOnJS,cleanUp,id}=this.__closure;if(cheapWorkletShallowEqual(props,previous!==null&&previous!==void 0?previous:undefined))return;const{mode:mode,focused:focused,transitionState:transitionState}=props;const isPIPMode=mode===VoicePanelModes.PIP;const manuallyFocusedId=focused===null||focused===void 0?void 0:focused.id;if(previous==null&&transitionState!==TransitionStates.YEETED){sharedVisible.set(1);}else if(transitionState===TransitionStates.YEETED){if(sharedVisible.get()===1&&isScrollVisible.get()){sharedVisible.set(0);}else{runOnJS(cleanUp)();}}else if((previous===null||previous===void 0?void 0:previous.transitionState)===TransitionStates.YEETED){sharedVisible.set(1);}else if(!isPIPMode){if(manuallyFocusedId==null){sharedVisible.set(1);}else{if(manuallyFocusedId!==id){sharedVisible.set(0);}else{sharedVisible.set(1);}}}}",
 };
-let closure_47 = { isSelf: false, hasVideo: false, user: { id: "r" } };
+let closure_47 = { isSelf: false, hasVideo: false, user: { id: "Array" } };
 function layoutTransitionFunction(originX, SUBTLE_SPRING) {
   let flag = arg2;
   if (arg2 === undefined) {
@@ -1393,13 +1393,13 @@ function layoutTransitionFunction(originX, SUBTLE_SPRING) {
     width: null,
     height: null,
   };
-  let tmpResult = tmp(4927);
+  let tmpResult = tmp(4928);
   let str3 = str;
   if (flag) {
     str3 = "animate-never";
   }
   obj[1] = tmpResult.withSpring(originX.targetOriginY, SUBTLE_SPRING, str3);
-  tmpResult = tmp(4927);
+  tmpResult = tmp(4928);
   let str4 = str;
   if (flag) {
     str4 = "animate-never";
@@ -1730,7 +1730,14 @@ const memoResult = importAllResult.memo(function VoicePanelCard(cleanUp) {
       tmp25 = callback;
     }
   }
-  const obj8 = { isRinging: tmp8, avatarURI: "r", avatarDecoration: "channelId", layout: true, layoutPhysics: true };
+  const obj8 = {
+    isRinging: tmp8,
+    avatarURI: "r",
+    avatarDecoration: "channel",
+    layout: 0.000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001141953147857043,
+    layoutPhysics:
+      -0.000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000013458295484790203,
+  };
   obj8[3] = layoutTransition;
   obj8[4] = physics;
   tmp26Result = callback(closure_37, obj8);

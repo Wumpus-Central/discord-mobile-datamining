@@ -58,10 +58,10 @@ function PlaceholderEmojiGlyph(pressed) {
   };
   obj = {
     pressed,
-    withSpring: pressed(4927).withSpring,
+    withSpring: pressed(4928).withSpring,
     interpolate: pressed(4217).interpolate,
     PLACEHOLDER_EMOJI_RESTING_OPACITY: 0.4,
-    ON_PRESS_SPRING: pressed(4931).ON_PRESS_SPRING,
+    ON_PRESS_SPRING: pressed(4932).ON_PRESS_SPRING,
     PLACEHOLDER_EMOJI_ACTIVE_SCALE: 1.14,
   };
   fn.__closure = obj;

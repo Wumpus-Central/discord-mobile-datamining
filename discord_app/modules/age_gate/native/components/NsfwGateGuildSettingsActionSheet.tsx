@@ -11,9 +11,9 @@ const result = require("set").fileFinishedImporting(
 
 export default function NsfwGateGuildSettingsActionSheet(guild) {
   guild = guild.guild;
-  let obj = guild(13871);
+  let obj = guild(13887);
   const messageRequestPrivacyOption = obj.useMessageRequestPrivacyOption({ guild });
-  obj = { header: callback(guild(5629).BottomSheetTitleHeader, obj), children: null };
+  obj = { header: callback(guild(5630).BottomSheetTitleHeader, obj), children: null };
   obj = { title: guild.name };
   obj1 = { hasIcons: false, children: null };
   const obj2 = { label: null, onPress: null };
@@ -25,8 +25,8 @@ export default function NsfwGateGuildSettingsActionSheet(guild) {
     closure_1_1(closure_1_2[8]).open(guild.id);
   };
   const items = [
-    callback(guild(5999).ActionSheetRow, obj2),
-    callback(guild(13872).RestrictedGuildPrivacyOption, { guild }),
+    callback(guild(6000).ActionSheetRow, obj2),
+    callback(guild(13888).RestrictedGuildPrivacyOption, { guild }),
     messageRequestPrivacyOption,
   ];
   const obj3 = { variant: "danger", label: null, onPress: null };
@@ -35,8 +35,8 @@ export default function NsfwGateGuildSettingsActionSheet(guild) {
   obj3[2] = function onPress() {
     return guild(closure_1_2[9]).handleLeaveServer(guild);
   };
-  items[3] = callback(guild(5999).ActionSheetRow, obj3);
+  items[3] = callback(guild(6000).ActionSheetRow, obj3);
   obj1[1] = items;
-  obj[1] = callback2(guild(5999).ActionSheetRow.Group, obj1);
-  return callback(guild(5997).ActionSheet, obj);
+  obj[1] = callback2(guild(6000).ActionSheetRow.Group, obj1);
+  return callback(guild(5998).ActionSheet, obj);
 }

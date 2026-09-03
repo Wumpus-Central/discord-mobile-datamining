@@ -84,7 +84,7 @@ export const NameplateDummyUserPreview = function NameplateDummyUserPreview(hide
   obj1 = {
     style: tmp3.avatarContainer,
     children: callback(Button.Avatar, {
-      source: importDefault(stateFromStores ? 8537 : 8538),
+      source: importDefault(stateFromStores ? 8541 : 8542),
       size: NORMAL,
       "aria-hidden": true,
       style: tmp3.avatar,

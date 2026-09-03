@@ -1,7 +1,7 @@
 // discord_app/modules/directory_channels/native/components/GuildDirectorySearchModalActionCreators.tsx
 import set from "../../../../../_runtime/00002_set.js";
 import asyncRequireImpl from "../../../../../_runtime/02008_asyncRequireImpl.js";
-import _modDef4723 from "../../../../actions/ModalActionCreators.tsx";
+import _modDef4724 from "../../../../actions/ModalActionCreators.tsx";
 
 const GUILD_DIRECTORY_SEARCH_MODAL_KEY = "GUILD_DIRECTORY_SEARCH_MODAL_KEY";
 const result = set.fileFinishedImporting(
@@ -10,13 +10,13 @@ const result = set.fileFinishedImporting(
 
 export default {
   open(channel) {
-    _modDef4723.pushLazy(
-      asyncRequireImpl(12091, dependencyMap.paths),
+    _modDef4724.pushLazy(
+      asyncRequireImpl(12097, dependencyMap.paths),
       { channel: channel.channel },
       GUILD_DIRECTORY_SEARCH_MODAL_KEY,
     );
   },
   close() {
-    _modDef4723.popWithKey(GUILD_DIRECTORY_SEARCH_MODAL_KEY);
+    _modDef4724.popWithKey(GUILD_DIRECTORY_SEARCH_MODAL_KEY);
   },
 };

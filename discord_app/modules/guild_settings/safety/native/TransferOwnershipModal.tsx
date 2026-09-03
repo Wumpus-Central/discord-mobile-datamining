@@ -1,5 +1,5 @@
 // discord_app/modules/guild_settings/safety/native/TransferOwnershipModal.tsx
-import _modDef11640 from "TransferOwnershipModalActionCreators.tsx";
+import _modDef11645 from "TransferOwnershipModalActionCreators.tsx";
 import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import closure_4 from "../../../../../_runtime/00019_noop.js";
 import TransferOwnershipModalScenes from "../TransferOwnershipConstants.tsx";
@@ -7,7 +7,7 @@ import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 function closeModal() {
-  _modDef11640.close();
+  _modDef11645.close();
 }
 ({ TransferOwnershipModalScenes: c5, TransferOwnershipVerificationTypes: closure_6 } = TransferOwnershipModalScenes);
 let result = require("set").fileFinishedImporting("modules/guild_settings/safety/native/TransferOwnershipModal.tsx");
@@ -60,10 +60,10 @@ export default function TransferOwnershipModal(guild) {
         return applyArgumentsResult;
       };
       obj[1] = function onSuccess() {
-        callback2(11640).close();
-        const obj = callback2(11640);
-        callback2(9750).close();
-        const obj2 = callback2(9750);
+        callback2(11645).close();
+        const obj = callback2(11645);
+        callback2(9754).close();
+        const obj2 = callback2(9754);
         const result = callback(4193).showTransferOwnershipSuccess();
       };
       obj[2] = closure_1_3(function* () {
@@ -130,7 +130,7 @@ export default function TransferOwnershipModal(guild) {
   let obj = { screens: memo, initialRouteName: constants.TRANFSER_OWNERSHIP, headerBackTitle: null };
   let intl = guild(1233).intl;
   obj[2] = intl.string(guild(1233).t["13/7kX"]);
-  return jsx(guild(6016).Navigator, {
+  return jsx(guild(6017).Navigator, {
     screens: memo,
     initialRouteName: constants.TRANFSER_OWNERSHIP,
     headerBackTitle: null,

@@ -181,11 +181,11 @@ export const isSafeToTransitionToReportForCurrentUser = function isSafeToTransit
           tmp9 = null == firstMessage;
         }
         if (!tmp9) {
-          tmp9 = !tmp10(6146).messageHasObscurableMediaForBitmask(
+          tmp9 = !tmp10(6147).messageHasObscurableMediaForBitmask(
             firstMessage,
-            tmp10(6149).ContentHarmTypeBitMask.EXPLICIT,
+            tmp10(6150).ContentHarmTypeBitMask.EXPLICIT,
           );
-          const tmp10Result = tmp10(6146);
+          const tmp10Result = tmp10(6147);
         }
         return tmp9;
       } else {

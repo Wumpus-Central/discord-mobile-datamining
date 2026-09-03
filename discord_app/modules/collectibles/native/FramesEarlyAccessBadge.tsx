@@ -54,7 +54,7 @@ function BadgeWithTooltip(tooltipPosition) {
     () => ({ position: tooltipPosition, label: c3, visible: first, onPress: callback }),
     items,
   );
-  let obj = tooltipPosition(8988);
+  let obj = tooltipPosition(8992);
   const tooltip = obj.useTooltip(ref, memo);
   const items1 = [first];
   const effect = callback.useEffect(() => {
@@ -88,7 +88,7 @@ function BadgeWithTooltip(tooltipPosition) {
     children: null,
   };
   items2 = [tmp3.pillBase, isThemeDarkResult ? tmp3.pillDark : tmp3.pillLight];
-  const items3 = [callback2(tooltipPosition(8104).NitroWheelIcon, { size: "xs", color: str })];
+  const items3 = [callback2(tooltipPosition(8107).NitroWheelIcon, { size: "xs", color: str })];
   obj = { variant: "text-sm/bold", color: str, style: tmp3.text, children: stringResult1 };
   items3[1] = callback2(tooltipPosition(4474).Text, obj);
   obj[7] = items3;

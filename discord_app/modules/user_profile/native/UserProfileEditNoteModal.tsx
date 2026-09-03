@@ -36,7 +36,7 @@ export default function UserProfileEditNoteModal(arg0) {
     obj[2] = intl.string(callback(1233).t.sHHsOM);
     return handleClose(callback(4474).Text, obj);
   };
-  tmp2Result = tmp2(5503);
+  tmp2Result = tmp2(5504);
   obj2[2] = tmp2Result.getHeaderCloseButton(handleClose);
   obj2[3] = function render() {
     return handleClose(closure_1_0(closure_1_2[8]).default, {

@@ -6,7 +6,7 @@ import set from "../../../utils/PlatformUtils.tsx";
 import getPremiumPlanItem from "../../../utils/PremiumUtils.tsx";
 import _mod4217 from "../../reanimated/ReanimatedRexport.tsx";
 import HeaderBackImage from "../../../design/components/Navigator/native/NavigatorHeader.native.tsx";
-import Background from "../../../../_runtime/05510_Background.js";
+import Background from "../../../../_runtime/05511_Background.js";
 import contextDefault from "../../app_analytics/useAnalyticsLocations.tsx";
 import QUICK_SWITCHERDefault from "../../app_analytics/AnalyticsLocation.tsx";
 import usePremiumUpsellConfig from "../../../utils/native/PremiumUpsellUtils.tsx";
@@ -232,7 +232,7 @@ export default function ScheduledMessagesModal() {
   }
   obj[3] = num + sharedValue(709).space.PX_8;
   obj5 = set;
-  obj[4] = HeaderBackImage.getHeaderCloseButton(sharedValue(4723).pop);
+  obj[4] = HeaderBackImage.getHeaderCloseButton(sharedValue(4724).pop);
   ({ headerLeftContainer: obj4[5], headerRightContainer: obj4[6] } = tmp);
   const items1 = [closure_10(Background.Header, obj), ,];
   const items2 = [tmp.headerBorder, animatedStyle];

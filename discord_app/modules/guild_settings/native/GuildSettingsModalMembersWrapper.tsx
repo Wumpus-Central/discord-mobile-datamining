@@ -7,7 +7,7 @@ require = arg1;
 const memoResult = importAllResult.memo((guildId) => {
   guildId = guildId.guildId;
   return jsx(
-    importDefault(canReviewGuildMemberApplications.useCanReviewGuildMemberApplications(guildId) ? 16388 : 16390),
+    importDefault(canReviewGuildMemberApplications.useCanReviewGuildMemberApplications(guildId) ? 16407 : 16409),
     { guildId },
   );
 });

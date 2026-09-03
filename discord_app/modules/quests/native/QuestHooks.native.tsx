@@ -89,9 +89,9 @@ function useDeliveredDockCreative() {
   }, items3);
 }
 function useIsMobileQuestDockRenderedBase(mobileQuestDock) {
-  const deliveredQuest = deliveredAdCreativeId(14929).getDeliveredQuest(mobileQuestDock);
+  const deliveredQuest = deliveredAdCreativeId(14944).getDeliveredQuest(mobileQuestDock);
   const tmp4 = useIsWindowLargeDefault();
-  const obj = deliveredAdCreativeId(14929);
+  const obj = deliveredAdCreativeId(14944);
   const items = [closure_7];
   let userStatus;
   const stateFromStores = deliveredAdCreativeId(586).useStateFromStores(
@@ -106,8 +106,8 @@ function useIsMobileQuestDockRenderedBase(mobileQuestDock) {
   }
   let isDismissedResult = null != userStatus;
   if (isDismissedResult) {
-    let tmpResult = tmp(7453);
-    isDismissedResult = tmpResult.isDismissed(deliveredQuest.userStatus, tmp(5398).QuestContent.QUEST_BAR_MOBILE);
+    let tmpResult = tmp(7454);
+    isDismissedResult = tmpResult.isDismissed(deliveredQuest.userStatus, tmp(5399).QuestContent.QUEST_BAR_MOBILE);
   }
   let claimedAt;
   if (deliveredQuest != null) {
@@ -116,14 +116,14 @@ function useIsMobileQuestDockRenderedBase(mobileQuestDock) {
       claimedAt = userStatus.claimedAt;
     }
   }
-  tmpResult = tmp(11303);
+  tmpResult = tmp(11307);
   const isQuestExpired = tmpResult.useIsQuestExpired(deliveredQuest);
   const obj2 = deliveredAdCreativeId(586);
   const tmp5 = closure_7;
-  let isEligibleForQuests = deliveredAdCreativeId(11304).getIsEligibleForQuests();
-  const tmpResult1 = deliveredAdCreativeId(11304);
-  deliveredAdCreativeId = deliveredAdCreativeId(14929).getDeliveredAdCreativeId(mobileQuestDock);
-  const tmpResult2 = deliveredAdCreativeId(14929);
+  let isEligibleForQuests = deliveredAdCreativeId(11308).getIsEligibleForQuests();
+  const tmpResult1 = deliveredAdCreativeId(11308);
+  deliveredAdCreativeId = deliveredAdCreativeId(14944).getDeliveredAdCreativeId(mobileQuestDock);
+  const tmpResult2 = deliveredAdCreativeId(14944);
   const items1 = [tmp5];
   const items2 = [deliveredAdCreativeId];
   const type = mobileQuestDock.type;
@@ -138,9 +138,9 @@ function useIsMobileQuestDockRenderedBase(mobileQuestDock) {
     },
     items2,
   );
-  if (deliveredAdCreativeId(7456).AdCreativeType.NO_FILL === type) {
+  if (deliveredAdCreativeId(7457).AdCreativeType.NO_FILL === type) {
     return false;
-  } else if (tmp(7456).AdCreativeType.BOUNTY === type) {
+  } else if (tmp(7457).AdCreativeType.BOUNTY === type) {
     if (isEligibleForQuests) {
       isEligibleForQuests = !stateFromStores1;
     }
@@ -148,7 +148,7 @@ function useIsMobileQuestDockRenderedBase(mobileQuestDock) {
       isEligibleForQuests = !tmp4;
     }
     return isEligibleForQuests;
-  } else if (tmp(7456).AdCreativeType.QUEST === type) {
+  } else if (tmp(7457).AdCreativeType.QUEST === type) {
     if (stateFromStores) {
       if (!tmp10) {
         let tmp15 = null != deliveredQuest && !tmp4;

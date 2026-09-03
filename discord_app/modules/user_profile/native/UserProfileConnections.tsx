@@ -36,12 +36,12 @@ function VerifiedIcon(arg0) {
     obj = { style: null, children: null };
     obj[0] = tmp.verifiedIconContainer;
     obj = { source: null, color: null };
-    obj[0] = tmp4(11400);
+    obj[0] = tmp4(11405);
     obj[1] = PLATFORM_TWITTER;
     const merged = Object.assign(obj);
     const items = [callback(tmp2(1296).Icon, obj)];
     obj1 = { source: null, color: null };
-    obj1[0] = tmp4(11401);
+    obj1[0] = tmp4(11406);
     obj1[1] = WHITE;
     const merged1 = Object.assign(obj);
     items[1] = callback(tmp2(1296).Icon, obj1);
@@ -386,7 +386,7 @@ let closure_19 = importAllResult.memo((application) => {
 const memoResult = importAllResult.memo((applicationRoleConnection) => {
   applicationRoleConnection = applicationRoleConnection.applicationRoleConnection;
   const tmp = callback3();
-  let obj = applicationRoleConnection(11395);
+  let obj = applicationRoleConnection(11400);
   const roleConnectionMetadataItems = obj.generateRoleConnectionMetadataItems(applicationRoleConnection);
   obj1 = getAvatarURLDefault;
   obj = { id: applicationRoleConnection.application.id, icon: applicationRoleConnection.application.icon };
@@ -445,7 +445,7 @@ const memoResult = importAllResult.memo((applicationRoleConnection) => {
     source: applicationIconSource,
     disableColor: true,
   });
-  return callback(applicationRoleConnection(5607).TableRow, obj6);
+  return callback(applicationRoleConnection(5608).TableRow, obj6);
 });
 let result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfileConnections.tsx");
 
@@ -464,7 +464,7 @@ export const UserProfileAccountConnectionsCard = function UserProfileAccountConn
   const stateFromStores = userId(586).useStateFromStores(items1, () => obj.hidePersonalInformation);
   const obj3 = userId(586);
   const tmp5 = theme;
-  ({ connections, appIdentities } = theme(12738)(userId));
+  ({ connections, appIdentities } = theme(12750)(userId));
   if (!stateFromStores) {
     const items2 = [];
     let arraySpreadResult = HermesBuiltin.arraySpread(
@@ -492,8 +492,8 @@ export const UserProfileAccountConnectionsCard = function UserProfileAccountConn
     obj[2] = tmp.refreshCardTitle;
     obj = { hasIcons: true, children: null };
     obj[1] = items2;
-    obj[3] = callback(tmp2(6000).TableRowGroup, obj);
-    return callback(tmp5(6008), obj);
+    obj[3] = callback(tmp2(6001).TableRowGroup, obj);
+    return callback(tmp5(6009), obj);
   }
   return null;
 };
@@ -516,7 +516,7 @@ export const UserProfileApplicationRoleConnectionsCard = function UserProfileApp
       obj[2] = tmp.refreshCardTitle;
       obj = { hasIcons: true, children: null };
       obj[1] = mapped;
-      obj[3] = callback(tmp4(6000).TableRowGroup, obj);
+      obj[3] = callback(tmp4(6001).TableRowGroup, obj);
       return callback(UserProfileCardDefault, obj);
     }
   }

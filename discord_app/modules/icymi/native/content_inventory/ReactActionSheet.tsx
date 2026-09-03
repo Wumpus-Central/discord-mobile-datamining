@@ -133,8 +133,8 @@ function ReactActionSheetBase(content) {
               } else {
                 closure_0 = tmp4;
                 closure_1_5(true);
-                v0(8637).itemInteracted(closure_1_0.id, closure_1_6, "press_reply_send");
-                const obj5 = v0(8637);
+                v0(8641).itemInteracted(closure_1_0.id, closure_1_6, "press_reply_send");
+                const obj5 = v0(8641);
                 obj1 = { itemId: null, itemType: null, actionParameters: null };
                 obj1[0] = closure_1_0.id;
                 obj1[1] = closure_1_6;
@@ -144,7 +144,7 @@ function ReactActionSheetBase(content) {
                   actionIntentType: "reply",
                   actionDestinationType: null,
                 };
-                v0(8637).feedItemActioned(obj1);
+                v0(8641).feedItemActioned(obj1);
                 v0 = 1;
                 dependencyMap = 1;
                 const obj2 = { value: null, done: false };

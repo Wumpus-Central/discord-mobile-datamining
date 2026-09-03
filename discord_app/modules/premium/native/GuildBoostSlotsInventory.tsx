@@ -8,7 +8,7 @@ import Text from "../../../design/components/Text/native/Text.tsx";
 import GuildIconSizes from "../../guild/native/GuildIcon.tsx";
 import GuildIconSizesDefault from "../../guild/native/GuildIcon.tsx";
 import useCountdownDefault from "../../../hooks/useCountdown.tsx";
-import registerAssetDefault from "../../../../_runtime/13381_registerAsset.js";
+import registerAssetDefault from "../../../../_runtime/13396_registerAsset.js";
 import getSubscriptionPlaceholderPatternSource from "../../../design/components/Illustration/native/redesign/generated/SubscriptionPlaceholderPattern.tsx";
 import closure_4 from "../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
@@ -115,7 +115,7 @@ function GuildBoostSlot(guildBoostSlot) {
       const intl2 = guildBoostSlot(1233).intl;
       obj3[2] = intl2.string(guildBoostSlot(1233).t.jqqLb6);
       obj2[2] = tmp6(guildBoostSlot(4474).Text, obj3);
-      tmp6Result = tmp6(guildBoostSlot(5076).PressableOpacity, obj2);
+      tmp6Result = tmp6(guildBoostSlot(5077).PressableOpacity, obj2);
     }
     obj[2] = tmp6Result;
     obj[3] = tmp;
@@ -165,7 +165,7 @@ function UnusedGuildBoostSlots(unusedSlots) {
     const intl2 = found(1233).intl;
     obj2[2] = intl2.string(found(1233).t["7KyPor"]);
     obj1[2] = callback(found(4474).Text, obj2);
-    obj[1] = callback(found(5076).PressableOpacity, obj1);
+    obj[1] = callback(found(5077).PressableOpacity, obj1);
     obj[2] = 0 === found.length;
     tmp4 = callback(GuildBoostSlotsInventoryRow, obj);
   }
@@ -273,7 +273,7 @@ function BoostedGuild(arg0) {
     tmp11Result = tmp11(tmp10, obj3);
   }
   items3[1] = tmp11Result;
-  items3[2] = closure_11(guildBoostSlots(13386), { guild: stateFromStores, theme: stateFromStores1 });
+  items3[2] = closure_11(guildBoostSlots(13401), { guild: stateFromStores, theme: stateFromStores1 });
   obj1[1] = items3;
   const items4 = [
     closure_12(closure_5, obj1),
@@ -384,8 +384,8 @@ const result = require("set").fileFinishedImporting("modules/premium/native/Guil
 export default function GuildBoostSlotsInventory() {
   const tmp = callback3();
   const effect = React.useEffect(() => {
-    const subscriptions = callback(4837).fetchSubscriptions();
-    const obj = callback(4837);
+    const subscriptions = callback(4838).fetchSubscriptions();
+    const obj = callback(4838);
     const guildBoostSlots = valueResult(4373).fetchGuildBoostSlots();
   }, []);
   let obj = initialize;

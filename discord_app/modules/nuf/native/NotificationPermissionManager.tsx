@@ -183,8 +183,8 @@ function _logNotificationPermissionStatus2() {
           return obj;
         } else {
           callback = arg1;
-          callback2 = callback(10190).allowInAppNotifications();
-          const obj5 = callback(10190);
+          callback2 = callback(10194).allowInAppNotifications();
+          const obj5 = callback(10194);
           const obj2 = {
             os_enabled: null,
             foreground_app_enabled: null,

@@ -108,7 +108,7 @@ export default function CustomTypingIndicatorProfileCoachmark(visible) {
     obj[7] = intl.string(markAsDismissed(str[8])["6NP6ic"]);
     obj[9] = function onButtonPress() {
       let obj = closure_1_0(closure_1_2[9]);
-      obj = { screen: closure_1_5.TYPING_INDICATOR };
+      obj = { screen: closure_1_5.TYPING_INDICATOR, params: { source: "profile_coachmark" } };
       obj.openUserSettings(obj, () => {
         callback(closure_1_6.TAKE_ACTION);
       });

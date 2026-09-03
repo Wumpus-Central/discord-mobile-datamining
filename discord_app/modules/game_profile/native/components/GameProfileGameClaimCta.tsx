@@ -80,7 +80,7 @@ export default function GameProfileGameClaimCta(trackAction) {
     const intl = trackAction(1233).intl;
     obj[2] = intl.string(trackAction(1233).t["mqg+to"]);
     obj[3] = callback;
-    let tmp3 = jsx(trackAction(4928).Button, { variant: "secondary", size: "md", text: null, onPress: null });
+    let tmp3 = jsx(trackAction(4929).Button, { variant: "secondary", size: "md", text: null, onPress: null });
   } else {
     tmp3 = null;
   }

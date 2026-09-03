@@ -643,7 +643,7 @@ let closure_34 = importAllResult.memo((blockedUserIds) => {
     }
     obj = { style: null, children: null };
     obj[0] = tmp.blockedMemberWarning;
-    const items = [callback(tmp5(7717).CircleErrorIcon, { color: "text-feedback-warning" })];
+    const items = [callback(tmp5(7720).CircleErrorIcon, { color: "text-feedback-warning" })];
     obj1 = { variant: "text-sm/bold", color: "interactive-text-active", style: null, children: null };
     obj1[2] = { flexShrink: 1 };
     const items1 = [stringResult1, " "];
@@ -812,10 +812,10 @@ let obj4 = {
   marginHorizontal: ThemesDefault.space.PX_16,
 };
 const memoResult = importAllResult.memo(function VoicePanelPreJoinWrapper() {
-  const context = importAllResult.useContext(guildId(12062));
+  const context = importAllResult.useContext(guildId(12068));
   const channelId = context.channelId;
   guildId = context.guildId;
-  const tmp2 = guildId(16853)(channelId);
+  const tmp2 = guildId(16873)(channelId);
   dependencyMap = tmp2;
   let obj = channelId(586);
   let items = [closure_17, closure_8, closure_6, closure_12, closure_9];
@@ -870,7 +870,7 @@ const memoResult = importAllResult.memo(function VoicePanelPreJoinWrapper() {
       }
     },
     items1,
-    channelId(16979).areVoicePanelPreJoinContentPropsEqual,
+    channelId(16999).areVoicePanelPreJoinContentPropsEqual,
   );
   obj = { item: stateFromStores, renderItem };
   return callback(channelId(4204).TransitionItem, obj);

@@ -104,10 +104,10 @@ function ChangeLogStrong(arg0) {
     }
     obj = { variant: "experimental/body-sm/semibold", color: null, children: null };
     obj[1] = str;
-    obj[2] = tmp(8014).smartOutput(node, output, state);
+    obj[2] = tmp(8017).smartOutput(node, output, state);
     let reactResult = jsx(tmp(4474).Text, { variant: "experimental/body-sm/semibold", color: null, children: null });
     const tmp5 = jsx;
-    const tmpResult = tmp(8014);
+    const tmpResult = tmp(8017);
   } else {
     const strong = rules.strong;
     reactResult = strong.react(node, output, state);

@@ -3,6 +3,7 @@ import routeAll from "../../../../notifications/settings/native/MobileNotifSetti
 import toggleAll from "../../../../notifications/settings/native/MobileNotifSettingsNodes.tsx";
 
 const obj = {};
+obj[require("MobileNotifSettings").MobileNotifSettings.NOTIFICATIONS_REDESIGN] = routeAll.RootRoute;
 obj[require("MobileNotifSettings").MobileNotifSettings.NOTIF_REALTIME] = routeAll.RealtimeRoute;
 obj[require("MobileNotifSettings").MobileNotifSettings.NOTIF_CATEGORY_SOCIAL] = routeAll.CategorySocialRoute;
 obj[require("MobileNotifSettings").MobileNotifSettings.NOTIF_CATEGORY_SERVER] = routeAll.CategoryServerRoute;

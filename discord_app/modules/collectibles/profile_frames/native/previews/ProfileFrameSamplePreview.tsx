@@ -166,7 +166,7 @@ export default function ProfileFrameSamplePreview(previewWidth) {
   items3[1] = tmp16;
   const obj10 = { source: null, style: null, resizeMode: "cover" };
   const obj11 = { uri: null };
-  let tmp3Result = tmp3(5501);
+  let tmp3Result = tmp3(5502);
   obj11[0] = metadataDefault;
   obj10[0] = obj11;
   obj10[1] = tmp.sampleProfile;
@@ -180,7 +180,7 @@ export default function ProfileFrameSamplePreview(previewWidth) {
     containerWidth: null,
     containerHeight: null,
   };
-  tmp3Result = tmp3(8561);
+  tmp3Result = tmp3(8565);
   obj12[3] = ProfileFrameLayerOrder.ProfileFrameLayerOrder.FRONT;
   obj12[4] = result;
   obj12[5] = previewHeight - overflowTop - overflowBottom;

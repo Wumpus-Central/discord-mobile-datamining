@@ -6,11 +6,11 @@ import Button from "../../../../design/void/native.tsx";
 import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
 import combinedDefault from "../../../../utils/HelpdeskUtils.tsx";
 import Text from "../../../../design/components/Text/native/Text.tsx";
-import LinearGradientDefault from "../../../../../_runtime/04940_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/04941_LinearGradient.js";
 import useMountLayoutEffectDefault from "../../../../hooks/useMountEffect.tsx";
 import PressableCard from "../../../../design/components/Card/native/Card.native.tsx";
 import calculateFractionalPremiumInfoDefault from "../../../billing/hooks/useFractionalPremiumInfo.tsx";
-import registerAssetDefault from "../../../../../_runtime/07969_registerAsset.js";
+import registerAssetDefault from "../../../../../_runtime/07972_registerAsset.js";
 import PremiumTypesDefault from "PremiumFeaturesCard.tsx";
 import roundFPCountdownUnitsDefault from "../../../billing/hooks/useFPDurationLeft.tsx";
 import CheckIconDefault from "PremiumFeaturesTable.tsx";
@@ -848,7 +848,7 @@ export default function PremiumManagePlan() {
   const tmp = callback5();
   const rect = useSafeAreaInsetsDefault();
   const top = rect.top;
-  let obj = navigation(13233);
+  let obj = navigation(13245);
   const youBarSettingsOutsideSafeAreaTop = obj.useYouBarSettingsOutsideSafeAreaTop();
   obj1 = navigation(1498);
   navigation = obj1.useNavigation();
@@ -879,15 +879,15 @@ export default function PremiumManagePlan() {
       isSubscriptionFetching = obj.isSubscriptionFetching;
     }
     if (!isSubscriptionFetching) {
-      obj = navigation(4837);
+      obj = navigation(4838);
       const subscriptions = obj.fetchSubscriptions();
     }
     if (!tmp5) {
-      const premiumSubscriptionPlans = navigation(6112).fetchPremiumSubscriptionPlans();
-      const obj3 = navigation(6112);
+      const premiumSubscriptionPlans = navigation(6113).fetchPremiumSubscriptionPlans();
+      const obj3 = navigation(6113);
     }
   });
-  let obj7 = navigation(7983);
+  let obj7 = navigation(7986);
   let isInReverseTrial = obj7.useIsInReverseTrial();
   const tmp9 = callback2(
     obj4.useStateFromStoresArray(items2, () => {
@@ -963,7 +963,7 @@ export default function PremiumManagePlan() {
   obj = { style: tmp.background, children: null };
   const items5 = [tmp.topBlur];
   let num = 0;
-  let tmp2Result = tmp2(4917);
+  let tmp2Result = tmp2(4918);
   if (!youBarSettingsOutsideSafeAreaTop) {
     num = top;
   }
@@ -999,7 +999,7 @@ export default function PremiumManagePlan() {
   if (isInReverseTrial) {
     obj3 = { premiumType: null, forFractionalPremium: true, hideButton: true };
     obj3[0] = closure_27.TIER_2;
-    isInReverseTrial = tmp29(tmp2(8227), obj3);
+    isInReverseTrial = tmp29(tmp2(8231), obj3);
   }
   items9[1] = isInReverseTrial;
   tmp29Result = result;
@@ -1010,7 +1010,7 @@ export default function PremiumManagePlan() {
     obj4 = { premiumType: null, hideButton: true, hidePrice: true, isPremiumGroup: true, premiumGroupRole: null };
     obj4[0] = closure_27.TIER_2;
     obj4[4] = premiumGroupRole;
-    tmp29Result = tmp29(tmp2(8227), obj4);
+    tmp29Result = tmp29(tmp2(8231), obj4);
   }
   items9[2] = tmp29Result;
   if (tmp29Result1) {
@@ -1050,11 +1050,11 @@ export default function PremiumManagePlan() {
       }
     };
     obj7[2] = tmp10;
-    const items10 = [tmp29(tmp2(13192), obj7)];
+    const items10 = [tmp29(tmp2(13204), obj7)];
     obj8 = { style: null, subscription: null };
     obj8[0] = tmp.billingInfo;
     obj8[1] = tmp10;
-    items10[1] = tmp29(tmp2(13229), obj8);
+    items10[1] = tmp29(tmp2(13241), obj8);
     obj6[0] = items10;
     tmp27Result = tmp27(tmp28, obj6);
   }
@@ -1067,7 +1067,7 @@ export default function PremiumManagePlan() {
     hasPremiumGroup: null,
   };
   let flag = result;
-  tmp2Result = tmp2(13231);
+  tmp2Result = tmp2(13243);
   if (result == null) {
     flag = false;
   }
@@ -1081,7 +1081,7 @@ export default function PremiumManagePlan() {
     isPremiumGroup: null,
     premiumGroupRole: null,
   };
-  tmp15Result = roundFPCountdownUnitsDefault(tmp12.endsAt, navigation(13340).CountDownMessageTypes.SHORT_TIME);
+  tmp15Result = roundFPCountdownUnitsDefault(tmp12.endsAt, navigation(13355).CountDownMessageTypes.SHORT_TIME);
   const tmp31 = closure_9;
   const intl = tmp4(1233).intl;
   obj10[2] = intl.string(navigation(1233).t.QXx2gs);

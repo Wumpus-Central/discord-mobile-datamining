@@ -35,10 +35,10 @@ let obj = keys.create((arg0) => {
     wasPipClosedByUser: null,
     progress: null,
     rate: "PX_16",
-    showPip: "cowboy",
-    closePip: "face_with_cowboy_hat",
-    displayedMediaItemIdsPerChannel: "smiling_imp",
-    currentlyDisplayedChannelId: "angry",
+    showPip: "sticker_pack_199",
+    closePip: 1.99,
+    displayedMediaItemIdsPerChannel: "$",
+    currentlyDisplayedChannelId: "usd",
   };
   obj[8] = function closePip() {
     callback(closure_1_2[13]).batchUpdates(() => callback({ showPip: false }));
@@ -354,13 +354,13 @@ prototype["getOrFetchMediaSourceMessage"] = function getOrFetchMediaSourceMessag
         obj = { channelId: null, messageId: null };
         obj[0] = channelId;
         obj[1] = messageId;
-        const message1 = self(7210).fetchMessage(obj);
+        const message1 = self(7211).fetchMessage(obj);
         message1.then((arg0) => {
           if (null != arg0) {
             const result = self.handleMediaSourceMessageUpdated(arg0);
           }
         });
-        const obj2 = self(7210);
+        const obj2 = self(7211);
       }
       obj4 = message;
     }

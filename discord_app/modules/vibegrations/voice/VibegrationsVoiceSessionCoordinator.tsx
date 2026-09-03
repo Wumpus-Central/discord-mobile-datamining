@@ -253,13 +253,13 @@ prototype["update"] = function update(id, id, arg2, arr) {
               obj.add(user_id);
               obj = { userId: null, position: null };
               obj[0] = user_id;
-              obj[1] = callback(14338).toListenerRelativePosition(callback, user_id.position);
+              obj[1] = callback(14354).toListenerRelativePosition(callback, user_id.position);
               return obj;
             }
           }
         }
         obj = { errorCode: closure_1_10.INVALID_PAYLOAD };
-        let tmp6 = set(9516);
+        let tmp6 = set(9520);
         tmp6 = new tmp6(obj, "Invalid spatial voice source " + user_id.user_id);
         throw tmp6;
       });

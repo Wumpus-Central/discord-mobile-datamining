@@ -249,7 +249,7 @@ export default {
       obj5[0] = upload_url;
       obj5[1] = body;
       const obj6 = { "Content-Type": null };
-      obj6[0] = closure_1_0(7383).WIDGET_CLIP_CONTENT_TYPE;
+      obj6[0] = closure_1_0(7384).WIDGET_CLIP_CONTENT_TYPE;
       obj5[2] = obj6;
       obj5[3] = function onRequestProgress(direction) {
         let tmp = "upload" === direction.direction;

@@ -4,16 +4,11 @@ import asyncGeneratorStepDefault from "../../../_runtime/00005_asyncGeneratorSte
 let closure_0 = arg1;
 let obj = {
   load() {
-    return callback(7540);
+    return callback(7541);
   },
 };
 const items = [
   obj,
-  {
-    load() {
-      return callback(7541);
-    },
-  },
   {
     load() {
       return callback(7542);
@@ -94,19 +89,19 @@ const items = [
       return callback(7557);
     },
   },
+  {
+    load() {
+      return callback(7558);
+    },
+  },
 ];
 obj = {
   load() {
-    return callback(7558);
+    return callback(7559);
   },
 };
 const items1 = [
   obj,
-  {
-    load() {
-      return callback(7559);
-    },
-  },
   {
     load() {
       return callback(7560);
@@ -185,6 +180,11 @@ const items1 = [
   {
     load() {
       return callback(7575);
+    },
+  },
+  {
+    load() {
+      return callback(7576);
     },
   },
 ];

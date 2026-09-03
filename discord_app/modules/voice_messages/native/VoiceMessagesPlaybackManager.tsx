@@ -15,14 +15,14 @@ class VoiceMessagesPlaybackManager extends tmp3 {
     closure_0 = applyArgumentsResult;
     applyArgumentsResult.appState = AppState.currentState;
     applyArgumentsResult.handleSetPrefersReducedMotion = function handleSetPrefersReducedMotion(prefersReducedMotion) {
-      const result = callback(4861).handleSetPrefersReducedMotion(prefersReducedMotion.prefersReducedMotion);
+      const result = callback(4862).handleSetPrefersReducedMotion(prefersReducedMotion.prefersReducedMotion);
     };
     applyArgumentsResult.handleMessageDelete = function handleMessageDelete(id) {
       id = id.id;
       if (id.channelId === currentlySelectedChannelId.getCurrentlySelectedChannelId()) {
         if (obj.isAndroid()) {
-          const result = callback(14420).handleVoiceMessageDeleted(id);
-          const obj2 = callback(14420);
+          const result = callback(14436).handleVoiceMessageDeleted(id);
+          const obj2 = callback(14436);
         } else {
           const DCDAudioPlayerManager = closure_4.DCDAudioPlayerManager;
           if (DCDAudioPlayerManager != null) {
@@ -34,8 +34,8 @@ class VoiceMessagesPlaybackManager extends tmp3 {
     };
     applyArgumentsResult.handleLogout = function handleLogout() {
       if (obj.isAndroid()) {
-        callback(14420).pauseCurrentPlayer(false);
-        const obj2 = callback(14420);
+        callback(14436).pauseCurrentPlayer(false);
+        const obj2 = callback(14436);
       } else {
         const DCDAudioPlayerManager = closure_4.DCDAudioPlayerManager;
         if (DCDAudioPlayerManager != null) {

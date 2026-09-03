@@ -8,7 +8,7 @@ const result = set.fileFinishedImporting("modules/display_name_styles/native/sho
 
 export default function showGummyCustomColorSheet(arg0) {
   ACTION_SHEET_HEIGHT_HALFDefault.openLazy(
-    asyncRequireImpl(15172, dependencyMap.paths),
+    asyncRequireImpl(15187, dependencyMap.paths),
     DisplayNameStylesGummyCustomColorSheet,
     arg0,
     "stack",

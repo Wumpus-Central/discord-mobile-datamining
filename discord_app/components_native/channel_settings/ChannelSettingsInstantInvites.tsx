@@ -1,10 +1,10 @@
 // discord_app/components_native/channel_settings/ChannelSettingsInstantInvites.tsx
 import ThemesDefault from "../../../discord_common/js/packages/tokens/native.tsx";
 import useSafeAreaInsetsDefault from "../../modules/safe_area/useSafeAreaInsets.native.tsx";
-import _modDef7787 from "../../modules/fastest_list/FastestList.android.tsx";
-import registerAssetDefault from "../../../_runtime/10907_registerAsset.js";
-import registerAssetDefault2 from "../../../_runtime/10908_registerAsset.js";
-import _modDef16635 from "../../modules/guild_instant_invites/native/InstantInviteSelfMeasurer.tsx";
+import _modDef7790 from "../../modules/fastest_list/FastestList.android.tsx";
+import registerAssetDefault from "../../../_runtime/10911_registerAsset.js";
+import registerAssetDefault2 from "../../../_runtime/10912_registerAsset.js";
+import _modDef16655 from "../../modules/guild_instant_invites/native/InstantInviteSelfMeasurer.tsx";
 import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
 import closure_4 from "../../../_runtime/00019_noop.js";
 import { View } from "../../../_runtime/00017_get_ActivityIndicator.js";
@@ -98,18 +98,18 @@ export default function ConnectedChannelSettingsInstantInvites() {
   }, items5);
   const items6 = [memo1.length];
   const effect = memo.useEffect(() => {
-    callback(8767).setSection(constants.INSTANT_INVITES);
+    callback(8771).setSection(constants.INSTANT_INVITES);
   }, []);
   const items7 = [memo1];
   const callback1 = memo.useCallback((arg0, arg1) => {
     if ("invite" === memo1[arg1].type) {
       let obj = { invite: null };
       obj[0] = tmp.data;
-      let tmp5 = closure_1_9(closure_1_1(10890), obj);
+      let tmp5 = closure_1_9(closure_1_1(10894), obj);
     } else {
       obj = { channel: null };
       obj[0] = tmp.data;
-      tmp5 = closure_1_9(lib(10890).LinkedChannelInvite, obj);
+      tmp5 = closure_1_9(lib(10894).LinkedChannelInvite, obj);
     }
     return tmp5;
   }, items7);
@@ -142,16 +142,16 @@ export default function ConnectedChannelSettingsInstantInvites() {
       obj1[3] = callback1;
       obj1[4] = tmp.gap.height;
       obj1[5] = useSafeAreaInsetsDefault().bottom;
-      obj[1] = callback(_modDef7787, obj1);
+      obj[1] = callback(_modDef7790, obj1);
       let tmp16Result = callback(stateFromStoresArray, obj);
     }
   }
   obj2 = { style: tmp.content, children: null };
   tmp = callback;
-  const items8 = [callback(tmpResult(6055).SceneLoadingIndicator, {})];
+  const items8 = [callback(tmpResult(6056).SceneLoadingIndicator, {})];
   tmpResult = null;
   if (memo1.length > 0) {
-    tmp2 = _modDef16635;
+    tmp2 = _modDef16655;
     obj = { item: null, onMeasured: null };
     memo1 = memo1[0];
     obj[0] = memo1;

@@ -34,4 +34,5 @@ export const MediaEngineEvent = {
   VoiceQueueMetrics: "voice-queue-metrics",
   SystemMicrophoneModeChange: "system-microphone-mode-change",
   SelectedDeviceChange: "selected-device-change",
+  SpatialAudioStatus: "spatial-audio-status",
 };

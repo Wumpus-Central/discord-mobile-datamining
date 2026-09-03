@@ -3,10 +3,10 @@ import set from "../../../../_runtime/00002_set.js";
 import timestampDefault from "../../debug/Logger.tsx";
 import setDefault from "../../../utils/Durations.tsx";
 import dispatcherDefault from "../../toast/native/ToastActionCreators.tsx";
-import _modDef4723 from "../../../actions/ModalActionCreators.tsx";
+import _modDef4724 from "../../../actions/ModalActionCreators.tsx";
 import MAX_ACCOUNTS from "../Constants.tsx";
 import _initializeDefault from "../MultiAccountManager.tsx";
-import registerAssetDefault from "../../../../_runtime/17243_registerAsset.js";
+import registerAssetDefault from "../../../../_runtime/17263_registerAsset.js";
 import ME from "../../../Constants.tsx";
 
 let obj = require;
@@ -90,7 +90,7 @@ _initializeDefault;
 class MultiAccountManagerNative extends tmp5 {}
 const prototype = MultiAccountManagerNative.prototype;
 prototype["onSwitchStart"] = function onSwitchStart() {
-  obj = _modDef4723;
+  obj = _modDef4724;
   obj.popWithKey(SWITCH_ACCOUNTS_MODAL_KEY);
   logger.info("Closing fast-connect socket because of account switch logout");
   let result = obj(15).closeFastConnectSocket();
@@ -135,7 +135,7 @@ prototype["onSwitchError"] = function onSwitchError(currentUser) {
   obj.open(obj);
 };
 prototype["onSwitchComplete"] = function onSwitchComplete() {
-  obj = _modDef4723;
+  obj = _modDef4724;
   obj.popWithKey(SWITCH_ACCOUNTS_MODAL_KEY);
   obj.pop();
   if (null !== c9) {

@@ -1,6 +1,6 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/MessageRequestsButton.tsx
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
-import registerAssetDefault from "../../../../../_runtime/09996_registerAsset.js";
+import registerAssetDefault from "../../../../../_runtime/10000_registerAsset.js";
 import ButtonBadgeDefault from "IconActionButton.tsx";
 import closure_3 from "../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
@@ -30,7 +30,7 @@ function MessageRequestAnimation(color) {
       }
     }
   }, items2);
-  return callback(ref(15851).MessageRequestLottie, { ref, color: color.color, size: "sm", autoPlay: true });
+  return callback(ref(15867).MessageRequestLottie, { ref, color: color.color, size: "sm", autoPlay: true });
 }
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
 let closure_9 = createCacheKey.createStyles({ buttonContainer: { position: "relative" } });
@@ -68,7 +68,7 @@ export default function MessageRequestsButton(alternateVariant) {
       const intl3 = tmp3(1233).intl;
       obj[4] = intl3.string(tmp3(1233).t.e7GWjQ);
       const merged1 = Object.assign(merged);
-      let tmp21 = callback(tmp3(4928).Button, obj);
+      let tmp21 = callback(tmp3(4929).Button, obj);
       let tmp16 = callback;
     } else {
       tmp16 = callback;
@@ -77,9 +77,9 @@ export default function MessageRequestsButton(alternateVariant) {
       const intl2 = tmp3(1233).intl;
       obj1[3] = intl2.string(tmp3(1233).t.e7GWjQ);
       const merged2 = Object.assign(merged);
-      tmp21 = callback(tmp3(8015).IconButton, obj1);
+      tmp21 = callback(tmp3(8018).IconButton, obj1);
     }
-    const items2 = [tmp21, str > 0 && tmp16(tmp3(13141).ButtonBadge, { badgePosition: "right" })];
+    const items2 = [tmp21, str > 0 && tmp16(tmp3(13153).ButtonBadge, { badgePosition: "right" })];
     obj[2] = items2;
     return closure_8(View, obj);
   } else {

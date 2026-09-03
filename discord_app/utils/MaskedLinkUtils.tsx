@@ -52,7 +52,7 @@ export const handleClick = function handleClick(href, preventDefault) {
     if (null != preventDefault) {
       preventDefault.preventDefault();
     }
-    let tmp3Result = tmp3(4857);
+    let tmp3Result = tmp3(4858);
     obj = { title: null, body: null, isDismissable: true, contextKey: null };
     const intl = require("../intl/index.native.tsx").intl;
     obj[0] = intl.string(require("../intl/index.native.tsx").t.x87gan);
@@ -198,21 +198,16 @@ export const handleClick = function handleClick(href, preventDefault) {
           obj1[2] = channel.id;
           tmp3Result.track(constants2.URL_CLICKED, obj1);
         }
-        if (tmp3(8660)(channelId)) {
+        if (tmp3(8664)(channelId)) {
           const obj2 = { cta_type: "inline_link", target: null };
           obj2[1] = tmp8;
           tmp3(695).track(constants2.CHANGE_LOG_CTA_CLICKED, obj2);
           const tmp3Result1 = tmp3(695);
         }
       }
-      tmp3(8661).trackLinkClicked(tmp8);
+      tmp3(8665).trackLinkClicked(tmp8);
       if (null == onClick) {
-        const obj3 = {
-          skipExtensionCheck: "a",
-          analyticsLocations: "<string:2466251611>",
-          messageId: "<string:1207960145>",
-          channelId: "dechov\u00FD",
-        };
+        const obj3 = { skipExtensionCheck: "a", analyticsLocations: null, messageId: null, channelId: null };
         obj3[1] = items;
         obj3[2] = messageId;
         obj3[3] = channelId;
@@ -225,7 +220,7 @@ export const handleClick = function handleClick(href, preventDefault) {
         if (preventDefault != null) {
           preventDefault.preventDefault();
         }
-        tmp3(13033).show(tmp8);
+        tmp3(13045).show(tmp8);
       } else {
         let trustedResult = trusted;
         if (typeof trusted === "function") {
@@ -264,19 +259,19 @@ export const handleClick = function handleClick(href, preventDefault) {
           if (tmp56) {
             obj4 = { url: null, trustUrl: null, onConfirm: null, onCancel: null, isProtocol: true, contextKey: null };
             obj4[0] = tmp8;
-            obj4[1] = tmp53(13040).trustProtocol;
+            obj4[1] = tmp53(13052).trustProtocol;
             obj4[2] = handleConfirm;
             obj4[3] = onCancel;
             obj4[5] = arg3;
-            tmp3(13038).show(obj4);
-            const tmp3Result4 = tmp3(13038);
+            tmp3(13050).show(obj4);
+            const tmp3Result4 = tmp3(13050);
           } else {
-            const punycodeLinkResult = tmp53(4954).punycodeLink(tmp8);
+            const punycodeLinkResult = tmp53(4955).punycodeLink(tmp8);
             let displayTarget = tmp8;
             if (null != punycodeLinkResult) {
               displayTarget = punycodeLinkResult.displayTarget;
             }
-            const tmp53Result = tmp53(4954);
+            const tmp53Result = tmp53(4955);
             const obj5 = {
               url: null,
               trustUrl: null,
@@ -286,12 +281,12 @@ export const handleClick = function handleClick(href, preventDefault) {
               contextKey: null,
             };
             obj5[0] = displayTarget;
-            obj5[1] = tmp53(13040).trustDomain;
+            obj5[1] = tmp53(13052).trustDomain;
             obj5[2] = handleConfirm;
             obj5[3] = onCancel;
             obj5[5] = arg3;
-            tmp3(13038).show(obj5);
-            const tmp3Result5 = tmp3(13038);
+            tmp3(13050).show(obj5);
+            const tmp3Result5 = tmp3(13050);
           }
         }
         if (null == preventDefault) {
@@ -303,12 +298,12 @@ export const handleClick = function handleClick(href, preventDefault) {
           obj6[2] = tmp14;
           obj6[3] = tmp12;
           obj6[4] = tmp11;
-          let result = tmp3(8661).trackAnnouncementMessageLinkClicked(obj6);
-          const tmp3Result6 = tmp3(8661);
+          let result = tmp3(8665).trackAnnouncementMessageLinkClicked(obj6);
+          const tmp3Result6 = tmp3(8665);
         }
         const obj10 = getHostname;
       }
-      const tmp3Result2 = tmp3(8661);
+      const tmp3Result2 = tmp3(8665);
     } catch (err) {
       const _encodeURI = encodeURI;
       const encodeURIResult = encodeURI(tmp2);

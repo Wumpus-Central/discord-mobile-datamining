@@ -2,7 +2,7 @@
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import Button from "../../../../design/void/native.tsx";
 import getNameplateData from "../utils.tsx";
-import LinearGradientDefault from "../../../../../_runtime/04940_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/04941_LinearGradient.js";
 import TableRowInner from "../../../../design/components/TableRow/native/TableRow.native.tsx";
 import firstAvatarDecoration from "../../hooks/useShopProductItems.tsx";
 import closure_3 from "../../../../../_runtime/00019_noop.js";
@@ -50,9 +50,9 @@ function NameplateUser(arg0) {
       guildId: "a",
       size: true,
       avatarDecoration: true,
-      animate: "year",
-      autoStatusCutout: "week",
-      "aria-hidden": "hour",
+      animate: "onAnimationFailureCapture",
+      autoStatusCutout: "onAnimationFailure",
+      "aria-hidden": "onAnimationLoadedCapture",
     };
     obj[2] = currentUser(stateFromStores[19]).AvatarSizes.NORMAL;
     obj[3] = closure_1;

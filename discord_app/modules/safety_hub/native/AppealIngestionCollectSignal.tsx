@@ -21,15 +21,15 @@ function AppealSignalRadioRow(signal) {
     accessibilityRole: null,
     accessibilityState: null,
   };
-  obj = { text: signal(8704).getAppealSignalDisplayText(signal) };
-  obj[1] = callback(signal(8372).FormRow.Label, obj);
+  obj = { text: signal(8708).getAppealSignalDisplayText(signal) };
+  obj[1] = callback(signal(8376).FormRow.Label, obj);
   obj[2] = function onPress() {
     return callback(signal);
   };
-  obj[3] = callback(signal(8372).FormRow.Radio, { selected });
+  obj[3] = callback(signal(8376).FormRow.Radio, { selected });
   obj[4] = accessibilityRole;
   obj[5] = accessibilityState;
-  return callback(signal(8372).FormRow, obj);
+  return callback(signal(8376).FormRow, obj);
 }
 noopAll;
 ({ AppealIngestionSignal: c4, AppealIngestionSignalOrder: c5 } = SafetyHubView);
@@ -83,14 +83,14 @@ export default function AppealIngestionCollectSignal(isDsaEligible) {
   }
   const tmp = callback3();
   closure_1 = tmp;
-  let obj = isDsaEligible(11677);
+  let obj = isDsaEligible(11682);
   dependencyMap = obj.useSafetyHubAppealSignal();
   const intl = isDsaEligible(1233).intl;
   const intl2 = isDsaEligible(1233).intl;
   const stringResult = intl.string(isDsaEligible(1233).t["C5q+pW"]);
   obj = { children: null };
   const items = [
-    callback(isDsaEligible(11692).AppealIngestionModalHeader, {
+    callback(isDsaEligible(11688).AppealIngestionModalHeader, {
       headerText: stringResult,
       subHeaderText: intl2.string(isDsaEligible(1233).t.VEcRhw),
     }),
@@ -99,7 +99,7 @@ export default function AppealIngestionCollectSignal(isDsaEligible) {
   obj1 = { style: tmp.form, children: null };
   const stringResult1 = intl2.string(isDsaEligible(1233).t.VEcRhw);
   const items1 = [
-    callback(isDsaEligible(8372).FormSection, {
+    callback(isDsaEligible(8376).FormSection, {
       sectionBodyStyle: tmp.formSection,
       accessibilityRole: "radiogroup",
       children: closure_5.map((signal) =>
@@ -118,8 +118,8 @@ export default function AppealIngestionCollectSignal(isDsaEligible) {
   obj3[1] = callback(isDsaEligible(4474).Text, obj4);
   items1[1] = callback(handleAppealSignalSelect, obj3);
   obj1[1] = items1;
-  obj[1] = callback2(isDsaEligible(8372).Form, obj1);
+  obj[1] = callback2(isDsaEligible(8376).Form, obj1);
   items[1] = callback(handleAppealSignalSelect, obj);
   obj[0] = items;
-  return callback2(isDsaEligible(11692).AppealIngestionModalScreen, obj);
+  return callback2(isDsaEligible(11688).AppealIngestionModalScreen, obj);
 }

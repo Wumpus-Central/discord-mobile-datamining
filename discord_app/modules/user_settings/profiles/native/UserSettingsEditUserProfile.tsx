@@ -29,7 +29,7 @@ export default function UserSettingsEditUserProfile(arg0) {
     obj[0] = stateFromStores;
     const merged = Object.assign(arg0);
     obj[1] = jsx(EditUserProfileBannerDefault, { currentUser: null });
-    tmp7 = jsx(stateFromStores(5961).AnalyticsLocationProvider, { currentUser: null });
+    tmp7 = jsx(stateFromStores(5962).AnalyticsLocationProvider, { currentUser: null });
     const tmpResult = EditUserProfileBannerDefault;
   }
   return tmp7;

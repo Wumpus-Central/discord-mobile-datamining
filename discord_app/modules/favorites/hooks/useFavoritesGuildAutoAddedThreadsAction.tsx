@@ -9,7 +9,7 @@ let result = require("set").fileFinishedImporting(
 );
 
 export default function useFavoritesGuildAutoAddedThreadsAction() {
-  let obj = hasAccess(10329);
+  let obj = hasAccess(10333);
   hasAccess = obj.useFavoritesAccess("useFavoritesGuildAutoAddedThreadsAction").hasAccess;
   const items = [closure_4];
   if (hasAccess) {

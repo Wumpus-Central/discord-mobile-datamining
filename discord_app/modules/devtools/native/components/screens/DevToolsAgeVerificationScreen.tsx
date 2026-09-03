@@ -57,10 +57,10 @@ function _showAgeVerificationTestModal() {
           key: "age-verification-test-success",
         });
       };
-      obj2[5] = lib(8699).AgeVerificationModalEntryPoint.DEV_TOOLS_QUICK_ACTIONS;
-      callback(8697).showAgeVerification(obj2);
+      obj2[5] = lib(8703).AgeVerificationModalEntryPoint.DEV_TOOLS_QUICK_ACTIONS;
+      callback(8701).showAgeVerification(obj2);
       c3 = 0;
-      const obj7 = callback(8697);
+      const obj7 = callback(8701);
     }
     c3 = 0;
     return arg1;
@@ -111,8 +111,8 @@ export default function DevToolsAgeVerificationScreen() {
   items1[1] = callback2(TableRowInner.TableRow, {
     label: "Launch Age Verification Modal",
     onPress() {
-      let obj = callback2(8697);
-      obj = { entryPoint: callback(8699).AgeVerificationModalEntryPoint.DEV_TOOLS_QUICK_ACTIONS };
+      let obj = callback2(8701);
+      obj = { entryPoint: callback(8703).AgeVerificationModalEntryPoint.DEV_TOOLS_QUICK_ACTIONS };
       return obj.showAgeVerificationGetStartedModal(obj);
     },
     icon: callback2(KeyIcon.KeyIcon, {}),

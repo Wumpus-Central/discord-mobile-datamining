@@ -1,6 +1,6 @@
 // discord_app/modules/visual_effect_view/native/overrides/VEVOOSlider.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef8390 from "../../../../../_runtime/metro/08390__.js";
+import _modDef8394 from "../../../../../_runtime/metro/08394__.js";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 import set from "../../../../utils/PlatformUtils.tsx";
@@ -40,7 +40,7 @@ export default importAllResult.memo(function VEVOOSlider(disabled) {
   };
   items[1] = { opacity: num };
   current = initialValue.current;
-  const tmp5 = _modDef8390;
+  const tmp5 = _modDef8394;
   let fn;
   if (obj2.isAndroid()) {
     fn = () => true;

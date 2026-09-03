@@ -105,7 +105,7 @@ export default function NotificationSettingsMockMessage(notificationSetting) {
   const obj5 = { style: tmp.cardContent, children: null };
   const obj6 = {
     children: tmp12(require("../../../../design/void/native.tsx").Avatar, {
-      source: sharedValue(10266),
+      source: sharedValue(10270),
       size: require("../../../../design/void/native.tsx").AvatarSizes.LARGE_48,
     }),
   };

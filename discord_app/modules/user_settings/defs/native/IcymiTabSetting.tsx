@@ -2,7 +2,7 @@
 import set from "../../../../../_runtime/00002_set.js";
 import getSystemLocale from "../../../../intl/index.native.tsx";
 import MobileUserSettings from "../../core/native/SettingsConstants.tsx";
-import _modDef8637 from "../../../icymi/ICYMIActionCreators.tsx";
+import _modDef8641 from "../../../icymi/ICYMIActionCreators.tsx";
 import apexExperiment from "../../../icymi/ICYMIExperiment.tsx";
 import useLabFeatureDefault from "../../../labs/useLabFeature.tsx";
 import toggleLabFeature from "../../../labs/LabFeatureActions.tsx";
@@ -18,13 +18,13 @@ const toggle = createToggle.createToggle({
     return useLabFeatureDefault(apexExperiment.ICYMI_LAB_FEATURE);
   },
   onValueChange: function onICYMISettingValueChange(enabled) {
-    let obj = _modDef8637;
+    let obj = _modDef8641;
     let str = "show";
     if (enabled) {
       str = "hide";
     }
     obj.itemInteracted(str, "icymi_tab_toggle", "press");
-    _modDef8637.feedPageActioned({
+    _modDef8641.feedPageActioned({
       actionParameters: {
         actionGestureType: "press",
         actionTargetElement: "icymi_tab_toggle",
@@ -33,7 +33,7 @@ const toggle = createToggle.createToggle({
       },
     });
     const tmp = importDefault;
-    const tmpResult = _modDef8637;
+    const tmpResult = _modDef8641;
     obj = { enabled };
     toggleLabFeature.toggleLabFeature(apexExperiment.ICYMI_LAB_FEATURE, obj);
   },
@@ -52,13 +52,13 @@ let obj = {
     return useLabFeatureDefault(apexExperiment.ICYMI_LAB_FEATURE);
   },
   onValueChange: function onICYMISettingValueChange(enabled) {
-    let obj = _modDef8637;
+    let obj = _modDef8641;
     let str = "show";
     if (enabled) {
       str = "hide";
     }
     obj.itemInteracted(str, "icymi_tab_toggle", "press");
-    _modDef8637.feedPageActioned({
+    _modDef8641.feedPageActioned({
       actionParameters: {
         actionGestureType: "press",
         actionTargetElement: "icymi_tab_toggle",
@@ -67,7 +67,7 @@ let obj = {
       },
     });
     const tmp = importDefault;
-    const tmpResult = _modDef8637;
+    const tmpResult = _modDef8641;
     obj = { enabled };
     toggleLabFeature.toggleLabFeature(apexExperiment.ICYMI_LAB_FEATURE, obj);
   },

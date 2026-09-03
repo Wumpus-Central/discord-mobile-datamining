@@ -2,7 +2,6 @@
 import getAvatarURLDefault from "../../utils/AvatarUtils.tsx";
 import parseRawEmojiObjectDefault from "../emojis/UnicodeEmojis.tsx";
 import getEmojiUnavailableReasonDefault from "../../utils/EmojiUtils.tsx";
-import _modDef6203 from "../../../_runtime/metro/06203__.js";
 import _modDef6204 from "../../../_runtime/metro/06204__.js";
 import _modDef6205 from "../../../_runtime/metro/06205__.js";
 import _modDef6206 from "../../../_runtime/metro/06206__.js";
@@ -24,15 +23,15 @@ import _modDef6221 from "../../../_runtime/metro/06221__.js";
 import _modDef6222 from "../../../_runtime/metro/06222__.js";
 import _modDef6223 from "../../../_runtime/metro/06223__.js";
 import _modDef6224 from "../../../_runtime/metro/06224__.js";
+import _modDef6225 from "../../../_runtime/metro/06225__.js";
 import closure_3 from "../../stores/UserStore.tsx";
 import VoiceChannelEffectAnimationType from "VoiceChannelEffectsConstants.tsx";
 import importDefaultResult from "../../../_runtime/00012_apply.js";
 
 const require = arg1;
 ({ EMOJI_SIZE: c4, VoiceChannelEffectAnimationType } = VoiceChannelEffectAnimationType);
-const items = [_modDef6203];
+const items = [_modDef6204];
 const items1 = [
-  _modDef6204,
   _modDef6205,
   _modDef6206,
   _modDef6207,
@@ -53,6 +52,7 @@ const items1 = [
   _modDef6222,
   _modDef6223,
   _modDef6224,
+  _modDef6225,
 ];
 let obj = { [VoiceChannelEffectAnimationType.BASIC]: items, [VoiceChannelEffectAnimationType.PREMIUM]: items1 };
 const memoizeResult = importDefaultResult.memoize((arg0) => {

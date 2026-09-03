@@ -21,10 +21,10 @@ const memoResult = importAllResult.memo(function DMChannel(navigationReplace) {
     flag = false;
   }
   const tmp = callback();
-  let obj = channel(16165);
+  let obj = channel(16181);
   const baseChannelUnreadBadgeState = obj.useBaseChannelUnreadBadgeState(channel, muted);
   ({ unread, mentionCount } = baseChannelUnreadBadgeState);
-  const tmp7 = flag(15142)(channel, { unread });
+  const tmp7 = flag(15157)(channel, { unread });
   let extractTimestampResult;
   if (null != tmp7) {
     let tmp2Result = tmp2(11);
@@ -37,9 +37,9 @@ const memoResult = importAllResult.memo(function DMChannel(navigationReplace) {
       str = "text-default";
     }
   }
-  const tmp4 = flag(16793)();
-  const fontScale = channel(4935).useFontScale();
-  tmp2Result = tmp2(16794);
+  const tmp4 = flag(16813)();
+  const fontScale = channel(4936).useFontScale();
+  tmp2Result = tmp2(16814);
   obj = { style: items, underlayColor: tmp.pressableUnderlayColor.backgroundColor };
   items = [tmp.pressable, { borderRadius: tmp4.container.borderRadius }];
   obj = {
@@ -68,8 +68,8 @@ const memoResult = importAllResult.memo(function DMChannel(navigationReplace) {
     channelName: null,
     fontScale: null,
   };
-  const tmp5Result = channel(4935);
-  obj1[5] = jsx(flag(16797), { unread, resolvedUnreadSetting: UnreadSetting.ALL_MESSAGES, muted });
+  const tmp5Result = channel(4936);
+  obj1[5] = jsx(flag(16817), { unread, resolvedUnreadSetting: UnreadSetting.ALL_MESSAGES, muted });
   let tmp11Result = null != tmp7;
   if (tmp11Result) {
     const obj3 = { channel: null, message: null, color: null, muted: null, layout: null };
@@ -78,15 +78,15 @@ const memoResult = importAllResult.memo(function DMChannel(navigationReplace) {
     obj3[2] = str;
     obj3[3] = muted;
     obj3[4] = tmp5(4171).ChannelListLayoutTypes.COMPACT;
-    tmp11Result = tmp11(tmp5(10214).ChannelRowPreview, obj3);
+    tmp11Result = tmp11(tmp5(10218).ChannelRowPreview, obj3);
   }
   obj1[6] = tmp11Result;
   obj1[7] = extractTimestampResult;
   obj1[8] = flag(4674)(channel);
   obj1[9] = fontScale;
-  obj.children = flag(16806)(obj1);
+  obj.children = flag(16826)(obj1);
   return tmp2Result(
-    jsx(channel(5076).PressableHighlight, {
+    jsx(channel(5077).PressableHighlight, {
       onPress: importAllResult.useCallback(() => {
         let obj = channel(closure_1_2[3]);
         obj = { navigationReplace: flag };

@@ -1,7 +1,7 @@
 // discord_app/modules/icymi/native/navigator/ICYMINavigator.tsx
 import set from "../../../../../_runtime/00002_set.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createNativeStackNavigator from "../../../../../_runtime/07831_createNativeStackNavigator.js";
+import createNativeStackNavigator from "../../../../../_runtime/07834_createNativeStackNavigator.js";
 import { NavigationStack } from "../../../../design/components/Navigator/native/Navigator.native.tsx";
 
 ({ jsx: obj1, jsxs: c3 } = jsxProd);
@@ -22,7 +22,7 @@ export default function ICYMINavigator() {
   obj = {
     name: "icymi-screen",
     getComponent() {
-      return callback(16269).ICYMITab;
+      return callback(16288).ICYMITab;
     },
   };
   const items = [
@@ -30,7 +30,7 @@ export default function ICYMINavigator() {
     callback(closure_4.Screen, {
       name: "notifications-screen",
       getComponent() {
-        return callback(16220).ThemedNotificationsModal;
+        return callback(16239).ThemedNotificationsModal;
       },
     }),
   ];

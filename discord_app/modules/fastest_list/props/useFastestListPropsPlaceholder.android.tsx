@@ -16,40 +16,40 @@ function createNativePlaceholderConfig(type) {
   obj = {
     borderRadius: "Array",
     borderTopLeftRadius: "count",
-    borderTopRightRadius: "call",
-    borderBottomLeftRadius: "Set",
-    borderBottomRightRadius: "displayName",
-    divider: "y",
-    dividerColor: "e",
-    dividerPaddingLeft: "isArray",
-    dividerPaddingRight: "isArray",
-    placeholderShape: "Boolean",
-    placeholderShapeColor: "e",
+    borderTopRightRadius: "accessible",
+    borderBottomLeftRadius: "ref",
+    borderBottomRightRadius: "ip",
+    divider: "r",
+    dividerColor: "isArray",
+    dividerPaddingLeft: "Array",
+    dividerPaddingRight: "dispatch",
+    placeholderShape: "isArray",
+    placeholderShapeColor: "isArray",
     placeholderShapeCount: "isArray",
     placeholderShapeGap: "isArray",
-    placeholderShapePaddingHorizontal: "o",
-    placeholderShapePaddingVertical: "e",
+    placeholderShapePaddingHorizontal: "isArray",
+    placeholderShapePaddingVertical: "isArray",
     placeholderFeedBackgroundColor: "isArray",
     placeholderFeedColor: "isArray",
-    placeholderFeedLabelPadding: "l",
-    placeholderFeedLabelPaddingInnerRatio: "e",
+    placeholderFeedLabelPadding: "isArray",
+    placeholderFeedLabelPaddingInnerRatio: "isArray",
     placeholderFeedLabelSize: "isArray",
     placeholderFeedLabelSecondarySize: "isArray",
-    placeholderFeedPadding: "e",
-    placeholderFeedShape: "e",
-    placeholderFeedShapeSize: "isArray",
-    placeholderType: "pinching_hand",
-    width: 2057,
-    height: 2058,
-    verticalAlignment: 2059,
-    horizontalAlignment: 2060,
+    placeholderFeedPadding: "",
+    placeholderFeedShape: "",
+    placeholderFeedShapeSize: "",
+    placeholderType: 1090666716,
+    width: 72403,
+    height: 2224129,
+    verticalAlignment: 0,
+    horizontalAlignment: 0,
   };
   obj[24] = NONE;
   if (null == type) {
     return obj;
   } else {
     if (FastestListPropsPlaceholderType.FastestListPropsPlaceholderType.NONE !== type) {
-      if (tmp15(7794).FastestListPropsPlaceholderType.SHAPE === type) {
+      if (tmp15(7797).FastestListPropsPlaceholderType.SHAPE === type) {
         let num9 = type.borderRadius;
         if (num9 == null) {
           num9 = 0;
@@ -88,7 +88,7 @@ function createNativePlaceholderConfig(type) {
         }
         obj.horizontalAlignment = str2;
         const tmp15Result = tmp15(4326);
-      } else if (tmp15(7794).FastestListPropsPlaceholderType.FEED_ITEM === type) {
+      } else if (tmp15(7797).FastestListPropsPlaceholderType.FEED_ITEM === type) {
         let num = type.borderRadius;
         if (num == null) {
           num = 0;

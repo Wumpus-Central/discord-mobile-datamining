@@ -38,9 +38,9 @@ class VoiceProcessingOptions {
       obj1 = { value: null, onChange: null, title: null, hasIcons: false, children: null };
       obj1[0] = selectedNoiseSuppressionOption;
       obj1[1] = function noiseCancellationChanged(arg0) {
-        callback2(9803).setNoiseCancellation(arg0 === callback(10098).NoiseSuppressionOpt.KRISP);
-        const obj = callback2(9803);
-        callback2(9803).setNoiseSuppression(arg0 === callback(10098).NoiseSuppressionOpt.STANDARD);
+        callback2(9807).setNoiseCancellation(arg0 === callback(10102).NoiseSuppressionOpt.KRISP);
+        const obj = callback2(9807);
+        callback2(9807).setNoiseSuppression(arg0 === callback(10102).NoiseSuppressionOpt.STANDARD);
       };
       intl3 = require("getSystemLocale").intl;
       obj1[2] = intl3.string(require("getSystemLocale").t.t8Qhib);
@@ -110,8 +110,8 @@ class VoiceProcessingOptions {
       obj10[2] =
         selectedNoiseSuppressionOption === require("handleAutomaticGainControlChange").NoiseSuppressionOpt.STANDARD;
       obj10[3] = function onValueChange(arg0) {
-        const NoiseSuppressionOpt = callback(10098).NoiseSuppressionOpt;
-        return callback(10098).handleNoiseSuppressionChange(
+        const NoiseSuppressionOpt = callback(10102).NoiseSuppressionOpt;
+        return callback(10102).handleNoiseSuppressionChange(
           arg0 ? NoiseSuppressionOpt.STANDARD : NoiseSuppressionOpt.NONE,
         );
       };
@@ -172,7 +172,7 @@ export default function UserSettingsVoiceProcessing() {
       obj = { vadUseKrisp };
       return obj.setMode(closure_0, obj);
     };
-    advancedVoiceActivitySupported = callback(tmp(6001).TableSwitchRow, obj2);
+    advancedVoiceActivitySupported = callback(tmp(6002).TableSwitchRow, obj2);
   }
   const obj3 = { children: null };
   items2[1] = advancedVoiceActivitySupported;

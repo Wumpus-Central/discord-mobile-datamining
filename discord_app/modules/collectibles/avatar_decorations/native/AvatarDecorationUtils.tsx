@@ -47,7 +47,7 @@ export const openAvatarDecorationActionSheet = function openAvatarDecorationActi
   ({ user, guildId, currentAvatarDecoration, isTryItOut, analyticsLocations } = arg0);
   ACTION_SHEET_HEIGHT_HALFDefault.hideActionSheet();
   const obj = ACTION_SHEET_HEIGHT_HALFDefault;
-  ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(8076, dependencyMap.paths), "Edit Avatar Decoration", {
+  ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(8079, dependencyMap.paths), "Edit Avatar Decoration", {
     user,
     guildId,
     currentAvatarDecoration,

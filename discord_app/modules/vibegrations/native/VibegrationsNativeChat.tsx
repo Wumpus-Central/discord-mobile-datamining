@@ -64,7 +64,7 @@ function ProposalCard(proposal) {
       ),
     );
     obj[2] = items2;
-    tmp5Result = tmp5(tmp6(4926).Stack, obj);
+    tmp5Result = tmp5(tmp6(4927).Stack, obj);
   }
   items1[2] = tmp5Result;
   tmp5Result = null;
@@ -78,7 +78,7 @@ function ProposalCard(proposal) {
     obj4[2] = bot_permissions.join(", ");
     items3[1] = tmp3(tmp6(4474).Text, obj4);
     obj2[2] = items3;
-    tmp5Result = tmp5(tmp6(4926).Stack, obj2);
+    tmp5Result = tmp5(tmp6(4927).Stack, obj2);
   }
   items1[3] = tmp5Result;
   let tmp5Result1 = null;
@@ -92,7 +92,7 @@ function ProposalCard(proposal) {
     obj7[2] = privileged_intents.join(", ");
     items4[1] = tmp3(tmp6(4474).Text, obj7);
     obj5[2] = items4;
-    tmp5Result1 = tmp5(tmp6(4926).Stack, obj5);
+    tmp5Result1 = tmp5(tmp6(4927).Stack, obj5);
   }
   items1[4] = tmp5Result1;
   let tmp3Result = null;
@@ -101,7 +101,7 @@ function ProposalCard(proposal) {
     const intl6 = tmp6(1233).intl;
     obj8[0] = intl6.string(tmp8(3500).GYoWRk);
     obj8[2] = onApprove;
-    tmp3Result = tmp3(tmp6(4928).Button, obj8);
+    tmp3Result = tmp3(tmp6(4929).Button, obj8);
   }
   items1[5] = tmp3Result;
   obj[1] = closure_15(Stack.Stack, { direction: "vertical", spacing: 8, children: items1 });
@@ -174,7 +174,7 @@ function AttachmentPills(projectId) {
         obj = { variant: "text-xs/medium", color: "text-default", children: null };
         obj[2] = id.name;
         obj[3] = closure_1_14(projectId(4474).Text, obj);
-        let tmp12 = closure_1_14(projectId(5609).Card, obj, id.id);
+        let tmp12 = closure_1_14(projectId(5610).Card, obj, id.id);
       } else {
         obj1 = { style: null, children: null };
         obj1[0] = lib.attachmentPill;
@@ -218,7 +218,7 @@ function ActivityBox(tree) {
     const steps = tree.steps;
     const items1 = [
       steps.map((id) => {
-        const obj = { variant: "text-sm/normal", color: "text-muted", children: callback(16420).describeNode(id) };
+        const obj = { variant: "text-sm/normal", color: "text-muted", children: callback(16440).describeNode(id) };
         return callback3(callback(4474).Text, obj, id.id);
       }),
     ];

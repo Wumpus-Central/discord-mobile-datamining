@@ -33,9 +33,9 @@ const forwardRefResult = forwardRef((animationType, ref) => {
     },
   }));
   if (isThemeLightResult) {
-    let SpendEarnOrbsLottie = tmp(11063).SpendEarnOrbsLightThemeLottie;
+    let SpendEarnOrbsLottie = tmp(11067).SpendEarnOrbsLightThemeLottie;
   } else {
-    SpendEarnOrbsLottie = tmp(11065).SpendEarnOrbsLottie;
+    SpendEarnOrbsLottie = tmp(11069).SpendEarnOrbsLottie;
   }
   obj = {
     ref: tmp5,

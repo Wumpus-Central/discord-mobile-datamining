@@ -87,24 +87,24 @@ obj[obj.EXPLICIT] = {
     }
     let tmp9;
     if (tmp != null) {
-      tmp9 = tmp[tmp7(undefined, 6151).ContentHarmTypeChannel.GUILD];
+      tmp9 = tmp[tmp7(undefined, 6152).ContentHarmTypeChannel.GUILD];
     }
     obj = {
       [closure_0(closure_1[3]).ContentHarmTypeChannel.GUILD]:
         resolveExplicitContentSettingWithDefaults.resolveExplicitContentSettingWithDefaults({ setting: tmp9 }),
     };
-    let tmp7Result = tmp7(6152);
+    let tmp7Result = tmp7(6153);
     let tmp10;
     if (tmp != null) {
-      tmp10 = tmp[tmp7(undefined, 6151).ContentHarmTypeChannel.FRIEND_DM];
+      tmp10 = tmp[tmp7(undefined, 6152).ContentHarmTypeChannel.FRIEND_DM];
     }
     obj[ContentHarmTypeChannel.ContentHarmTypeChannel.FRIEND_DM] = tmp7Result.resolveExplicitContentSettingWithDefaults(
       { setting: tmp10, isDm: true, isFriend: true },
     );
-    tmp7Result = tmp7(6152);
+    tmp7Result = tmp7(6153);
     let tmp11;
     if (tmp != null) {
-      tmp11 = tmp[tmp7(undefined, 6151).ContentHarmTypeChannel.NON_FRIEND_DM];
+      tmp11 = tmp[tmp7(undefined, 6152).ContentHarmTypeChannel.NON_FRIEND_DM];
     }
     obj[ContentHarmTypeChannel.ContentHarmTypeChannel.NON_FRIEND_DM] =
       tmp7Result.resolveExplicitContentSettingWithDefaults({ setting: tmp11, isDm: true });
@@ -174,24 +174,24 @@ const obj1 = {
     }
     let tmp9;
     if (tmp != null) {
-      tmp9 = tmp[tmp7(undefined, 6151).ContentHarmTypeChannel.GUILD];
+      tmp9 = tmp[tmp7(undefined, 6152).ContentHarmTypeChannel.GUILD];
     }
     obj = {
       [closure_0(closure_1[3]).ContentHarmTypeChannel.GUILD]:
         resolveExplicitContentSettingWithDefaults.resolveExplicitContentSettingWithDefaults({ setting: tmp9 }),
     };
-    let tmp7Result = tmp7(6152);
+    let tmp7Result = tmp7(6153);
     let tmp10;
     if (tmp != null) {
-      tmp10 = tmp[tmp7(undefined, 6151).ContentHarmTypeChannel.FRIEND_DM];
+      tmp10 = tmp[tmp7(undefined, 6152).ContentHarmTypeChannel.FRIEND_DM];
     }
     obj[ContentHarmTypeChannel.ContentHarmTypeChannel.FRIEND_DM] = tmp7Result.resolveExplicitContentSettingWithDefaults(
       { setting: tmp10, isDm: true, isFriend: true },
     );
-    tmp7Result = tmp7(6152);
+    tmp7Result = tmp7(6153);
     let tmp11;
     if (tmp != null) {
-      tmp11 = tmp[tmp7(undefined, 6151).ContentHarmTypeChannel.NON_FRIEND_DM];
+      tmp11 = tmp[tmp7(undefined, 6152).ContentHarmTypeChannel.NON_FRIEND_DM];
     }
     obj[ContentHarmTypeChannel.ContentHarmTypeChannel.NON_FRIEND_DM] =
       tmp7Result.resolveExplicitContentSettingWithDefaults({ setting: tmp11, isDm: true });
@@ -261,26 +261,26 @@ obj[obj.GORE] = {
     }
     let tmp9;
     if (tmp != null) {
-      tmp9 = tmp[tmp7(undefined, 6151).ContentHarmTypeChannel.GUILD];
+      tmp9 = tmp[tmp7(undefined, 6152).ContentHarmTypeChannel.GUILD];
     }
     obj = {
       [closure_0(closure_1[3]).ContentHarmTypeChannel.GUILD]:
         resolveGoreSettingWithDefaults.resolveGoreSettingWithDefaults({ setting: tmp9 }),
     };
-    let tmp7Result = tmp7(6154);
+    let tmp7Result = tmp7(6155);
     let tmp10;
     if (tmp != null) {
-      tmp10 = tmp[tmp7(undefined, 6151).ContentHarmTypeChannel.FRIEND_DM];
+      tmp10 = tmp[tmp7(undefined, 6152).ContentHarmTypeChannel.FRIEND_DM];
     }
     obj[ContentHarmTypeChannel.ContentHarmTypeChannel.FRIEND_DM] = tmp7Result.resolveGoreSettingWithDefaults({
       setting: tmp10,
       isDm: true,
       isFriend: true,
     });
-    tmp7Result = tmp7(6154);
+    tmp7Result = tmp7(6155);
     let tmp11;
     if (tmp != null) {
-      tmp11 = tmp[tmp7(undefined, 6151).ContentHarmTypeChannel.NON_FRIEND_DM];
+      tmp11 = tmp[tmp7(undefined, 6152).ContentHarmTypeChannel.NON_FRIEND_DM];
     }
     obj[ContentHarmTypeChannel.ContentHarmTypeChannel.NON_FRIEND_DM] = tmp7Result.resolveGoreSettingWithDefaults({
       setting: tmp11,
@@ -352,26 +352,26 @@ const obj2 = {
     }
     let tmp9;
     if (tmp != null) {
-      tmp9 = tmp[tmp7(undefined, 6151).ContentHarmTypeChannel.GUILD];
+      tmp9 = tmp[tmp7(undefined, 6152).ContentHarmTypeChannel.GUILD];
     }
     obj = {
       [closure_0(closure_1[3]).ContentHarmTypeChannel.GUILD]:
         resolveGoreSettingWithDefaults.resolveGoreSettingWithDefaults({ setting: tmp9 }),
     };
-    let tmp7Result = tmp7(6154);
+    let tmp7Result = tmp7(6155);
     let tmp10;
     if (tmp != null) {
-      tmp10 = tmp[tmp7(undefined, 6151).ContentHarmTypeChannel.FRIEND_DM];
+      tmp10 = tmp[tmp7(undefined, 6152).ContentHarmTypeChannel.FRIEND_DM];
     }
     obj[ContentHarmTypeChannel.ContentHarmTypeChannel.FRIEND_DM] = tmp7Result.resolveGoreSettingWithDefaults({
       setting: tmp10,
       isDm: true,
       isFriend: true,
     });
-    tmp7Result = tmp7(6154);
+    tmp7Result = tmp7(6155);
     let tmp11;
     if (tmp != null) {
-      tmp11 = tmp[tmp7(undefined, 6151).ContentHarmTypeChannel.NON_FRIEND_DM];
+      tmp11 = tmp[tmp7(undefined, 6152).ContentHarmTypeChannel.NON_FRIEND_DM];
     }
     obj[ContentHarmTypeChannel.ContentHarmTypeChannel.NON_FRIEND_DM] = tmp7Result.resolveGoreSettingWithDefaults({
       setting: tmp11,

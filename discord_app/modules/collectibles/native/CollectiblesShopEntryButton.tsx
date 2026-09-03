@@ -13,7 +13,7 @@ function CoachmarkVariant(shopButtonRef) {
   shopButtonRef = shopButtonRef.shopButtonRef;
   importDefault = undefined;
   dependencyMap = undefined;
-  let obj = navigateToShop(6260);
+  let obj = navigateToShop(6261);
   const tmp = callback(
     obj.useSelectedVersionedDismissibleContent(
       navigateToShop(1372).DismissibleContent.COLLECTIBLES_SHOP_ENTRY_MARKETING,
@@ -29,7 +29,7 @@ function CoachmarkVariant(shopButtonRef) {
   obj = { children: null };
   obj = {
     ref: shopButtonRef,
-    IconComponent: navigateToShop(11932).ShopIcon,
+    IconComponent: navigateToShop(11938).ShopIcon,
     accessibilityLabel: null,
     onPress: null,
     showRedDot: null,
@@ -79,7 +79,7 @@ export default function CollectiblesShopEntryButton(navigateToShop) {
   if (stateFromStores != null) {
     type = stateFromStores.type;
   }
-  if (type === navigateToShop(7320).CollectiblesMarketingType.COACHMARK) {
+  if (type === navigateToShop(7321).CollectiblesMarketingType.COACHMARK) {
     obj = { marketing: null, navigateToShop: null, shopButtonRef: null };
     obj[0] = stateFromStores;
     obj[1] = navigateToShop;
@@ -113,7 +113,7 @@ export default function CollectiblesShopEntryButton(navigateToShop) {
         type1 = stateFromStores.type;
       }
       let prop = null;
-      if (type1 === tmp(7320).CollectiblesMarketingType.BADGE) {
+      if (type1 === tmp(7321).CollectiblesMarketingType.BADGE) {
         prop = tmp(1372).DismissibleContent.COLLECTIBLES_SHOP_ENTRY_MARKETING;
       }
       obj = { contentType: null, latestVersion: null, children: null };
@@ -127,13 +127,13 @@ export default function CollectiblesShopEntryButton(navigateToShop) {
       }
       obj[1] = num;
       obj[2] = content;
-      let tmp15Result = tmp15(tmp(10639).SelectedVersionedDismissibleContent, obj);
+      let tmp15Result = tmp15(tmp(10643).SelectedVersionedDismissibleContent, obj);
     } else {
       let type2;
       if (stateFromStores != null) {
         type2 = stateFromStores.type;
       }
-      if (type2 === tmp(7320).CollectiblesMarketingType.BADGE) {
+      if (type2 === tmp(7321).CollectiblesMarketingType.BADGE) {
         let dismissibleContent;
         if (stateFromStores != null) {
           dismissibleContent = stateFromStores.dismissibleContent;
@@ -148,7 +148,7 @@ export default function CollectiblesShopEntryButton(navigateToShop) {
         tmp15Result = tmp15(tmp7, obj1);
       }
       items2 = [];
-      tmp7 = shopButtonRef(10639);
+      tmp7 = shopButtonRef(10643);
     }
     return tmp15Result;
   }

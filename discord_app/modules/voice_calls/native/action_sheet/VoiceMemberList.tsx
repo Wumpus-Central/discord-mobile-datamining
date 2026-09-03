@@ -1,8 +1,8 @@
 // discord_app/modules/voice_calls/native/action_sheet/VoiceMemberList.tsx
 import Text from "../../../../design/components/Text/native/Text.tsx";
 import Form from "../../../../design/void/Form/native/index.tsx";
-import registerAssetDefault from "../../../../../_runtime/10136_registerAsset.js";
-import _modDef13657 from "../../../guild_scheduled_events/native/components/GuildEventVoiceBanner.tsx";
+import registerAssetDefault from "../../../../../_runtime/10140_registerAsset.js";
+import _modDef13672 from "../../../guild_scheduled_events/native/components/GuildEventVoiceBanner.tsx";
 import closure_4 from "../../../../../_runtime/metro/00032__slicedToArray.js";
 import closure_5 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
@@ -201,7 +201,7 @@ let closure_24 = createCacheKey.createStyles({
   headerFormDivider: { marginLeft: 0 },
   rowFormDivider: { marginHorizontal: 16 },
 });
-let closure_25 = importAllResult.memo((channel) => callback2(_modDef13657, { channel: channel.channel }));
+let closure_25 = importAllResult.memo((channel) => callback2(_modDef13672, { channel: channel.channel }));
 let closure_26 = importAllResult.memo((channel) => {
   channel = channel.channel;
   channel(586);
@@ -217,8 +217,8 @@ let closure_26 = importAllResult.memo((channel) => {
       const intl = tmp4(1233).intl;
       obj[0] = intl.string(tmp4(1233).t["6Qgrev"]);
       obj[2] = registerAssetDefault;
-      obj[3] = tmp4(13345).CircularIconButton.Sizes.MEDIUM_32;
-      obj[0] = callback2(tmp4(13345).CircularIconButton, obj);
+      obj[3] = tmp4(13360).CircularIconButton.Sizes.MEDIUM_32;
+      obj[0] = callback2(tmp4(13360).CircularIconButton, obj);
       const intl2 = tmp4(1233).intl;
       obj[1] = intl2.string(tmp4(1233).t["6Qgrev"]);
       obj[2] = function onPress() {
@@ -232,7 +232,7 @@ let closure_26 = importAllResult.memo((channel) => {
           const result = tmp2Result.showInstantInviteActionSheet(tmp, obj);
         }
       };
-      items[1] = callback2(tmp4(8372).FormRow, obj);
+      items[1] = callback2(tmp4(8376).FormRow, obj);
       obj[0] = items;
       tmp7 = callback3(importAllResult.Fragment, obj);
     }

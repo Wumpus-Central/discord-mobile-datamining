@@ -34,7 +34,7 @@ function ChannelSubtitle(arg0) {
     obj[3] = guildId;
     obj[4] = layout;
     obj[6] = !("voice" === channelSubtitleData.type && connected);
-    obj.children = tmp(10221).renderMessagePreviewMarkup(obj);
+    obj.children = tmp(10225).renderMessagePreviewMarkup(obj);
     return jsx(tmp(4474).Text, {
       content: null,
       muted: null,

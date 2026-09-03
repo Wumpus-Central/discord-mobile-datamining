@@ -76,6 +76,7 @@ const framesStoreClass = new FramesStoreClass(dispatcherDefault, {
   FRAME_LAUNCH: function handleFrameLaunch(frameId) {
     frameId = frameId.frameId;
     let obj = map;
+    ({ proxyTicket, customId, referrerId } = frameId);
     const value = map.get(frameId);
     if (null != value) {
       const tmp14 = getURLForApplicationDefault(value.applicationId);
@@ -99,13 +100,17 @@ const framesStoreClass = new FramesStoreClass(dispatcherDefault, {
           pipOrientationLock: null,
           prefersPictureInPictureOnNavigateAway: false,
           iframeId: null,
+          customId: null,
+          referrerId: null,
         };
         obj[0] = tmp14;
         const _Date = Date;
         obj[1] = Date.now();
         obj[2] = constants2.FOCUSED;
         obj[3] = ActivityPanelModes.PANEL;
-        obj[4] = frameId.proxyTicket;
+        obj[4] = proxyTicket;
+        obj[10] = customId;
+        obj[11] = referrerId;
         obj.data = obj;
         const result = obj.set(frameId, obj);
       }

@@ -162,9 +162,9 @@ let items = [
       const Storage = Storage4.Storage;
       let hasHiddenHotspotResult = true === Storage.get("HAS_SEEN_HUB_UPSELL");
       if (!hasHiddenHotspotResult) {
-        const HotspotStore = tmp(6068).HotspotStore;
+        const HotspotStore = tmp(6069).HotspotStore;
         hasHiddenHotspotResult = HotspotStore.hasHiddenHotspot(
-          tmp(6068).HotspotLocations.HUB_SECOND_EMAIL_CONNECTION_UPSELL,
+          tmp(6069).HotspotLocations.HUB_SECOND_EMAIL_CONNECTION_UPSELL,
         );
       }
       let flag = false;
@@ -889,7 +889,7 @@ let items = [
           Storage2.remove("lastChangeLogId");
           return false;
         }
-        tmpResult = tmp(7275);
+        tmpResult = tmp(7276);
       }
     },
     cleanup() {

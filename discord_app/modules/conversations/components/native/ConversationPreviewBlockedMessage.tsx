@@ -15,9 +15,9 @@ const result = require("set").fileFinishedImporting(
 export default function ConversationPreviewBlockedMessage(reason) {
   let obj = { direction: "horizontal", spacing: ThemesDefault.space.PX_8, align: "center", children: null };
   if ("blocked" === reason.reason) {
-    let EyeSlashIcon = tmp2(7847).DenyIcon;
+    let EyeSlashIcon = tmp2(7850).DenyIcon;
   } else {
-    EyeSlashIcon = tmp2(7750).EyeSlashIcon;
+    EyeSlashIcon = tmp2(7753).EyeSlashIcon;
   }
   obj = { size: "sm", color: ThemesDefault.colors.TEXT_MUTED };
   const items = [closure_3(EyeSlashIcon, obj)];

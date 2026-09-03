@@ -253,7 +253,7 @@ export default function _default(categories) {
   );
   let obj = { portalHostName: "expression-footer", style: categories.style, children: null };
   const tmp17 = categoryIndex;
-  const tmp19 = categoryIndex(9220)();
+  const tmp19 = categoryIndex(9224)();
   const tmp20 = closure_15;
   obj = {
     estimatedListSize: "windowSize",
@@ -271,7 +271,7 @@ export default function _default(categories) {
     showsHorizontalScrollIndicator: false,
     style: tmp.list,
   };
-  const items9 = [callback(categoryIndex(7787), obj)];
+  const items9 = [callback(categoryIndex(7790), obj)];
   let tmp22Result = null != first && first1;
   if (tmp22Result) {
     obj = { onPress: null, accessibilityRole: "button", accessibilityLabel: null, children: null };
@@ -284,12 +284,12 @@ export default function _default(categories) {
     obj1[0] = items10;
     const obj2 = { style: null, source: null };
     obj2[0] = tmp.guildIcon;
-    obj2[1] = tmp17(10434);
+    obj2[1] = tmp17(10438);
     obj1[1] = tmp22(categories(1296).Icon, obj2);
     obj[3] = tmp22(closure_5, obj1);
-    tmp22Result = tmp22(categories(5076).PressableOpacity, obj);
+    tmp22Result = tmp22(categories(5077).PressableOpacity, obj);
   }
   items9[1] = tmp22Result;
   obj[2] = items9;
-  return tmp20(categoryIndex(9221), obj);
+  return tmp20(categoryIndex(9225), obj);
 }

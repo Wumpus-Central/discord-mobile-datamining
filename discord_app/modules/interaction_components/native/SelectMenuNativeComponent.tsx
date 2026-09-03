@@ -8,9 +8,11 @@ const result = require("set").fileFinishedImporting(
   "modules/interaction_components/native/SelectMenuNativeComponent.tsx",
 );
 
-export default function SelectMenuNativeComponent(arg0) {
+export default function SelectMenuNativeComponent(model) {
+  const merged = Object.assign(model, Object.create(null));
   const obj = {};
-  const merged = Object.assign(arg0);
+  const merged1 = Object.assign(merged);
+  obj.model = JSON.stringify(model.model);
   obj.style = { width: "100%" };
   return jsx(__INTERNAL_VIEW_CONFIGDefault, {});
 }

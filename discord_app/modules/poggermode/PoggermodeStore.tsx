@@ -218,12 +218,12 @@ const poggermodeStore = new PoggermodeStore(dispatcherDefault, {
             if (null != mentions) {
               if (null != mentions.find((id) => id.id === id)) {
                 if (null != value) {
-                  let num2 = id(7586).getComboShakeIntensity(value, LEVEL_4.LEVEL_4);
+                  let num2 = id(7587).getComboShakeIntensity(value, LEVEL_4.LEVEL_4);
                   if (num2 == null) {
                     num2 = 0.001;
                   }
                   let result = num2;
-                  const obj2 = id(7586);
+                  const obj2 = id(7587);
                 } else {
                   const _Math = Math;
                   result = 4 * Math.random();

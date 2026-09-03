@@ -5,7 +5,7 @@ import isDiscordProxiedAssetUrlDefault from "../../../utils/URLUtils.tsx";
 import asyncRequireImpl from "../../../../_runtime/02008_asyncRequireImpl.js";
 import _modDef4190 from "../../../lib/native/Linking.tsx";
 import NativeModules from "../../links/native/BrowserManager.tsx";
-import _modDef4723 from "../../../actions/ModalActionCreators.tsx";
+import _modDef4724 from "../../../actions/ModalActionCreators.tsx";
 import OAUTH2_AUTHORIZE_MODAL_KEY from "Constants.tsx";
 
 ({ OAUTH2_SUCCESS_RESULT_MODAL_KEY: c3, OAUTH2_ERROR_RESULT_MODAL_KEY: c4 } = OAUTH2_AUTHORIZE_MODAL_KEY);
@@ -26,15 +26,15 @@ export default function authorizeCallback(arg0) {
       if (tmp8Result.isDiscordHostname(host)) {
         if (null != pathname) {
           if (null != pathname.match(closure_5)) {
-            tmp8Result = tmp8(4723);
+            tmp8Result = tmp8(4724);
             let obj = { application: null, guild: null };
             obj[0] = tmp;
             obj[1] = tmp2;
-            tmp8Result.pushLazy(asyncRequireImpl(9295, tmp9.paths), obj, closure_3);
+            tmp8Result.pushLazy(asyncRequireImpl(9299, tmp9.paths), obj, closure_3);
           } else if (null != pathname.match(closure_6)) {
             if (!canceled) {
               let str;
-              const tmp8Result1 = tmp8(4723);
+              const tmp8Result1 = tmp8(4724);
               if (searchParams != null) {
                 str = "error_description";
                 const str2 = searchParams.get("error_description");
@@ -54,8 +54,8 @@ export default function authorizeCallback(arg0) {
               }
               obj = { error: null };
               obj[0] = str;
-              tmp8Result1.pushLazy(asyncRequireImpl(9293, tmp9.paths), obj, closure_4);
-              const tmp17 = asyncRequireImpl(9293, tmp9.paths);
+              tmp8Result1.pushLazy(asyncRequireImpl(9297, tmp9.paths), obj, closure_4);
+              const tmp17 = asyncRequireImpl(9297, tmp9.paths);
             }
           }
         }
@@ -74,7 +74,7 @@ export default function authorizeCallback(arg0) {
     _modDef4190.openURL(_location, SAFARI);
     const tmp8Result2 = _modDef4190;
   } else if (!canceled) {
-    obj = _modDef4723;
-    obj.pushLazy(asyncRequireImpl(9293, dependencyMap.paths), undefined, closure_4);
+    obj = _modDef4724;
+    obj.pushLazy(asyncRequireImpl(9297, dependencyMap.paths), undefined, closure_4);
   }
 }

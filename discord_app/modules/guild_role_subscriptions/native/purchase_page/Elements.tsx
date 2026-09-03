@@ -6,7 +6,7 @@ import PressableBase from "../../../../design/void/Pressables/native/Pressables.
 import notSupportedDefault from "../../../payments/native/hooks/NativePaymentHooks.android.tsx";
 import useStoreFrontPriceDefault from "../../../billing/native/subscription/useStoreFrontPrice.tsx";
 import getRoleEmojisAll from "../../edit_state/GuildRoleSubscriptionListingEditStateUtils.tsx";
-import registerAssetDefault from "../../../../../_runtime/16361_registerAsset.js";
+import registerAssetDefault from "../../../../../_runtime/16380_registerAsset.js";
 import closure_4 from "../../../../../_runtime/metro/00032__slicedToArray.js";
 import closure_5 from "../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
@@ -141,8 +141,8 @@ export const useFormattedSubscriptionPlan = function useFormattedSubscriptionPla
   let str = "No Price Available";
   if (null != price) {
     const _HermesInternal = HermesInternal;
-    str = "" + tmp2(6089).formatPrice(price.amount, price.currency) + "/mo.";
-    const tmp2Result = tmp2(6089);
+    str = "" + tmp2(6090).formatPrice(price.amount, price.currency) + "/mo.";
+    const tmp2Result = tmp2(6090);
   }
   return str;
 };

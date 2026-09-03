@@ -275,17 +275,17 @@ export default function SpamMessageList(goToMessageRequestPreview) {
   const tmp = callback2();
   importDefault = tmp;
   const bottom = useSafeAreaInsetsDefault().bottom;
-  let obj = goToMessageRequestPreview(16700);
+  let obj = goToMessageRequestPreview(16720);
   dependencyMap = obj.useSpamMessageRequestCount();
   arr = useSortedSpamMessageRequestsDefault();
-  obj1 = goToMessageRequestPreview(16698);
+  obj1 = goToMessageRequestPreview(16718);
   closure_4 = obj1.useListHasSingleSpamMessageRequest();
   useMountLayoutEffectDefault(() => {
     let obj = lib(695);
     obj = { num_spam_message_requests: dependencyMap };
     obj.track(closure_1_7.SPAM_MESSAGE_REQUESTS_VIEWED, obj);
-    obj = { name: goToMessageRequestPreview(7361).MetricEvents.SPAM_MESSAGE_REQUEST_VIEW };
-    lib(7356).increment(obj);
+    obj = { name: goToMessageRequestPreview(7362).MetricEvents.SPAM_MESSAGE_REQUEST_VIEW };
+    lib(7357).increment(obj);
   });
   if (0 === arr.length) {
     obj = { bodyText: null };

@@ -117,7 +117,7 @@ export default function useScreenshareUtils(arg0) {
             }
           }
         } else {
-          fn = callback(9796).showScreenshareDisabledAlert;
+          fn = callback(9800).showScreenshareDisabledAlert;
         }
       } else {
         fn = function l() {
@@ -129,12 +129,12 @@ export default function useScreenshareUtils(arg0) {
       }
       obj[3] = fn;
       if (obj2.isMetaQuest()) {
-        tmp19(tmp ? 10076 : 10077);
+        tmp19(tmp ? 10080 : 10081);
       } else {
         if (tmp4) {
-          let tmp20 = 10078;
+          let tmp20 = 10082;
         } else {
-          tmp20 = tmp ? 10079 : 10078;
+          tmp20 = tmp ? 10083 : 10082;
         }
         obj[4] = tmp19(tmp20);
         return obj;

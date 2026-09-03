@@ -127,7 +127,7 @@ export const generateAvatarDescription = function generateAvatarDescription(maxS
     const _Date = Date;
     const date = new Date();
     const intl2 = tmp3(1233).intl;
-    if (assetOrigin === tmp3(7770).AssetOriginTypes.EDITED_ARCHIVED_ASSET) {
+    if (assetOrigin === tmp3(7773).AssetOriginTypes.EDITED_ARCHIVED_ASSET) {
       let DYil93 = tmp3(1233).t.eC2sZi;
     } else {
       DYil93 = tmp3(1233).t.DYil93;

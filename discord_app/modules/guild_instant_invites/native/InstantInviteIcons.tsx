@@ -1,10 +1,10 @@
 // discord_app/modules/guild_instant_invites/native/InstantInviteIcons.tsx
 import set from "../../../../_runtime/00002_set.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import { registerAsset } from "../../../../_runtime/09973_registerAsset.js";
-import { registerAsset } from "../../../../_runtime/10896_registerAsset.js";
-import { registerAsset } from "../../../../_runtime/10897_registerAsset.js";
-import { registerAsset } from "../../../../_runtime/10898_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/09977_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/10900_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/10901_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/10902_registerAsset.js";
 
 const Platform = get_ActivityIndicator.Platform;
 const obj = {};

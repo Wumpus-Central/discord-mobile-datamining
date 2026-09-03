@@ -166,7 +166,7 @@ export const useQuestOrbsMultiplierMarketing = function useQuestOrbsMultiplierMa
       questOrbMultiplierEligibility !== items.QuestOrbMultiplierEligibilityType.INELIGIBLE &&
       questOrbMultiplierEligibility !== items.QuestOrbMultiplierEligibilityType.CREPE &&
       closure_2.useConfig(obj).enabled,
-    multiplier: tmp(11310).QuestOrbsMultiplier.PREMIUM_TIER_2_MULTIPLIER_PERCENTAGE_POINTS / 100,
+    multiplier: tmp(11314).QuestOrbsMultiplier.PREMIUM_TIER_2_MULTIPLIER_PERCENTAGE_POINTS / 100,
   };
   return obj;
 };

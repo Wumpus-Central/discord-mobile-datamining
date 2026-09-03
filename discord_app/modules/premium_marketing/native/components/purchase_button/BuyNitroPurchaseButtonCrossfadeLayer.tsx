@@ -44,7 +44,7 @@ export default function BuyNitroPurchaseButtonCrossfadeLayer(arg0) {
       obj.withTiming(0, onDone(closure_1_2[6]).timingStandard, "respect-motion-settings", fn),
     );
   }, items);
-  obj = { style: items1, pointerEvents: "none", children: jsx(onDone(4928).Button, obj) };
+  obj = { style: items1, pointerEvents: "none", children: jsx(onDone(4929).Button, obj) };
   items1 = [StyleSheet.absoluteFill, animatedStyle];
   obj = { text: snapshot.ctaText, variant: snapshot.variant, size: "lg", grow: true, onPress: "Boolean" };
   return jsx(sharedValue(4217).View, {

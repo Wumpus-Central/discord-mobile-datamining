@@ -1,11 +1,11 @@
 // discord_app/modules/devtools/native/components/DevToolsNavigator.tsx
 import ACTION_SHEET_HEIGHT_HALFDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
-import _modDef4723 from "../../../../actions/ModalActionCreators.tsx";
+import _modDef4724 from "../../../../actions/ModalActionCreators.tsx";
 import mapDefault from "../../../settings/native/renderer/SettingHookHarness.tsx";
 import DevToolsContentSortButtonsDefault from "DevToolsContent.tsx";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createNativeStackNavigator from "../../../../../_runtime/07831_createNativeStackNavigator.js";
+import createNativeStackNavigator from "../../../../../_runtime/07834_createNativeStackNavigator.js";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
 import { NavigationStack } from "../../../../design/components/Navigator/native/Navigator.native.tsx";
 
@@ -47,7 +47,7 @@ let closure_8 = importAllResult.memo((screenKey) => {
         return {
           headerTitle() {
             let obj = { style: { flexDirection: "row" }, children: null };
-            const items = [callback3(callback(9386).HammerIcon, { size: "sm" })];
+            const items = [callback3(callback(9390).HammerIcon, { size: "sm" })];
             obj = {
               style: null,
               variant: "heading-md/semibold",
@@ -66,8 +66,8 @@ let closure_8 = importAllResult.memo((screenKey) => {
     }),
     ,
   ];
-  let merged = Object.assign(tmp(15406).DevToolsScreens);
-  let merged1 = Object.assign(tmp(15406).PerformanceTestingScreens);
+  let merged = Object.assign(tmp(15420).DevToolsScreens);
+  let merged1 = Object.assign(tmp(15420).PerformanceTestingScreens);
   const entries = Object.entries({});
   items1[1] = entries.map((arg0) => {
     [tmp] = arg0;
@@ -90,7 +90,7 @@ let closure_8 = importAllResult.memo((screenKey) => {
       return {
         headerTitle() {
           let obj = { style: { flexDirection: "row" }, children: null };
-          const items = [callback3(callback(9386).HammerIcon, { size: "sm" })];
+          const items = [callback3(callback(9390).HammerIcon, { size: "sm" })];
           obj = {
             style: null,
             variant: "heading-md/semibold",
@@ -148,5 +148,5 @@ export const navigateToDevTools = function navigateToDevTools(arg0) {
   }
   ACTION_SHEET_HEIGHT_HALFDefault.hideActionSheet();
   const obj2 = ACTION_SHEET_HEIGHT_HALFDefault;
-  _modDef4723.pushLazy(() => Promise.resolve(closure_8), { screenKey: obj.screenKey }, "DevToolsNavigator");
+  _modDef4724.pushLazy(() => Promise.resolve(closure_8), { screenKey: obj.screenKey }, "DevToolsNavigator");
 };

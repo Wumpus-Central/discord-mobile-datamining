@@ -109,10 +109,10 @@ export const ackChannel = function ackChannel(channel, arg1) {
         type: "CHANNEL_ACK",
         channelId: null,
         messageId: "y",
-        immediate: "column",
-        force: "hidden",
-        context: "BULK_ACK",
-        location: null,
+        immediate: "has",
+        force: null,
+        context: "\u{1F60B}",
+        location: 6,
       };
       obj[1] = id;
       obj[3] = true;

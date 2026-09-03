@@ -245,5 +245,5 @@ export const openForumGuidelinesActionSheet = function openForumGuidelinesAction
   let obj = ACTION_SHEET_HEIGHT_HALFDefault;
   obj = {};
   const merged = Object.assign(arg0);
-  obj.openLazy(asyncRequireImpl(10366, dependencyMap.paths), closure_6, obj);
+  obj.openLazy(asyncRequireImpl(10370, dependencyMap.paths), closure_6, obj);
 };

@@ -100,7 +100,7 @@ export const QuestOrbMultiplierPerkPill = function QuestOrbMultiplierPerkPill(qu
     let tmp21Result = !tmp13;
     let tmp19 = tmp21Result;
     if (!tmp13) {
-      tmp19 = questOrbRewardMultiplier(tmp2(8104).NitroWheelIcon, { size: "xs", color: "white" });
+      tmp19 = questOrbRewardMultiplier(tmp2(8107).NitroWheelIcon, { size: "xs", color: "white" });
     }
     obj1 = { children: null };
     const items2 = [tmp19];
@@ -130,7 +130,7 @@ export const QuestOrbMultiplierPerkPill = function QuestOrbMultiplierPerkPill(qu
       obj6[1] = items;
       obj6[2] = closure_8;
       obj6[3] = closure_9;
-      tmp21Result = tmp21(tmp6(4940), obj6);
+      tmp21Result = tmp21(tmp6(4941), obj6);
     }
     const items4 = [tmp21Result];
     obj7 = { style: null, children: null };
@@ -139,7 +139,7 @@ export const QuestOrbMultiplierPerkPill = function QuestOrbMultiplierPerkPill(qu
     items4[1] = questOrbRewardMultiplier(token3, obj7);
     obj4[1] = items4;
     obj3[4] = closure_7(token3, obj4);
-    return questOrbRewardMultiplier(tmp2(5076).PressableOpacity, obj3);
+    return questOrbRewardMultiplier(tmp2(5077).PressableOpacity, obj3);
   }
   const obj10 = items5;
 };

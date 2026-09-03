@@ -9,7 +9,7 @@ import Text from "../../../../../design/components/Text/native/Text.tsx";
 import useMountLayoutEffectDefault from "../../../../../hooks/useMountEffect.tsx";
 import preloadDefault from "../../../../../components_native/common/FastImage.tsx";
 import RoleIconDefault from "../../../../roles/native/RoleIcon.tsx";
-import registerAssetDefault from "../../../../../../_runtime/08042_registerAsset.js";
+import registerAssetDefault from "../../../../../../_runtime/08045_registerAsset.js";
 import get_ActivityIndicator from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
 import closure_5 from "../../../../a11y/AccessibilityStore.tsx";
 import closure_6 from "../../../../../stores/GuildRoleStore.tsx";
@@ -127,8 +127,8 @@ let obj3 = {
     const stateFromStores = obj.useStateFromStores(items, () => closure_1_6.getRole(closure_0, closure_1));
     let roleIconData = null;
     if (null != stateFromStores) {
-      roleIconData = tmp2(5986).getRoleIconData(stateFromStores, 30);
-      const tmp2Result = tmp2(5986);
+      roleIconData = tmp2(5987).getRoleIconData(stateFromStores, 30);
+      const tmp2Result = tmp2(5987);
     }
     obj = { onPress: onPress.onPress, children: null };
     let tmp9Result = null;
@@ -170,7 +170,7 @@ let obj3 = {
     if (channel.type === constants.GUILD_CATEGORY) {
       let channelIconWithGuild = registerAssetDefault;
     } else {
-      let tmp2Result = tmp2(4981);
+      let tmp2Result = tmp2(4982);
       channelIconWithGuild = tmp2Result.getChannelIconWithGuild(channel, tmp5);
     }
     const tmp = callback3();

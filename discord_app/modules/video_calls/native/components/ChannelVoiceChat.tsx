@@ -70,7 +70,7 @@ const memoResult = importAllResult.memo((channel) => {
   const tmp6 = guild_id(1627)();
   const top = tmp6.top;
   ({ left, right } = tmp6);
-  obj1 = id(9570);
+  obj1 = id(9574);
   const voiceChatNavigationContext = obj1.useVoiceChatNavigationContext();
   let openVoice;
   if (voiceChatNavigationContext != null) {
@@ -79,8 +79,8 @@ const memoResult = importAllResult.memo((channel) => {
   if (openVoice == null) {
     openVoice = tmp4(12).noop;
   }
-  const isConnectedToVoiceChannel = id(9537).useIsConnectedToVoiceChannel(channel.channel);
-  const tmp7Result = id(9537);
+  const isConnectedToVoiceChannel = id(9541).useIsConnectedToVoiceChannel(channel.channel);
+  const tmp7Result = id(9541);
   let str = "no-hide-descendants";
   const ref = obj.useRef(null);
   if (tmp2) {
@@ -97,7 +97,7 @@ const memoResult = importAllResult.memo((channel) => {
   }
   items1[1] = tmp15;
   obj[2] = items1;
-  const items2 = [callback(guild_id(5078), { absolute: true, tall: true })];
+  const items2 = [callback(guild_id(5079), { absolute: true, tall: true })];
   obj1 = { guildId: guild_id, channelId: id, children: null };
   let tmp16Result = null;
   if (!flag) {
@@ -109,9 +109,9 @@ const memoResult = importAllResult.memo((channel) => {
       str2 = "dark-content";
     }
     obj2[2] = str2;
-    tmp16Result = tmp16(tmp4(9543), obj2);
+    tmp16Result = tmp16(tmp4(9547), obj2);
     const tmp19 = !tmp2;
-    const tmp4Result = tmp4(9543);
+    const tmp4Result = tmp4(9547);
   }
   const items3 = [tmp16Result, , , ,];
   const items4 = [tmp.safeAreaTop];
@@ -130,7 +130,7 @@ const memoResult = importAllResult.memo((channel) => {
   }
   items5[1] = { display: str5 };
   items3[2] = callback(View, { style: items5 });
-  items3[3] = callback(guild_id(11197), {
+  items3[3] = callback(guild_id(11201), {
     guildId: guild_id,
     channelId: id,
     chatInputRef: ref,
@@ -156,17 +156,17 @@ const memoResult = importAllResult.memo((channel) => {
   obj6[2] = intl.string(id(1233).t["13/7kX"]);
   obj6[3] = tmp.chatHeaderBackIconContainer;
   const tmp12 = guild_id(4413)();
-  obj6[4] = callback(id(1296).Icon, { source: guild_id(11399), size: id(1296).Icon.Sizes.MEDIUM });
-  const items7 = [callback(id(5076).PressableOpacity, obj6)];
-  const obj7 = { source: guild_id(11399), size: id(1296).Icon.Sizes.MEDIUM };
+  obj6[4] = callback(id(1296).Icon, { source: guild_id(11404), size: id(1296).Icon.Sizes.MEDIUM });
+  const items7 = [callback(id(5077).PressableOpacity, obj6)];
+  const obj7 = { source: guild_id(11404), size: id(1296).Icon.Sizes.MEDIUM };
   items7[1] = callback(View, {
     style: tmp.chatHeaderTitleContainer,
-    children: callback(id(12536).ChannelTitle, { guildId: guild_id, channelId: id }),
+    children: callback(id(12548).ChannelTitle, { guildId: guild_id, channelId: id }),
   });
   obj5[1] = items7;
   items3[4] = closure_7(View, obj5);
   obj1[2] = items3;
-  items2[1] = closure_7(id(10182).ChannelContainer, obj1);
+  items2[1] = closure_7(id(10186).ChannelContainer, obj1);
   obj[3] = items2;
   return closure_7(View, obj);
 });

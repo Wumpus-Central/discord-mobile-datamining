@@ -4,7 +4,7 @@ import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
 import dispatcherDefault from "../Dispatcher.tsx";
 import sleep from "../../discord_common/js/packages/time-utils/TimeUtils.tsx";
 import updateVoiceStatesDefault from "../lib/VoiceStateAnalytics.tsx";
-import useIsSpatialAudioAvailable from "../modules/spatial_audio/useIsSpatialAudioAvailable.tsx";
+import useSpatialAudioControlState from "../modules/spatial_audio/useSpatialAudioControlState.tsx";
 import trackVideoToggle from "../modules/media_engine/trackVideoToggle.tsx";
 import closure_5 from "../modules/game_console/GameConsoleStore.tsx";
 import closure_6 from "AuthenticationStore.tsx";
@@ -662,8 +662,8 @@ const rTCConnectionStore = new RTCConnectionStore(dispatcherDefault, {
         flag = false;
       }
       if (flag) {
-        flag = useIsSpatialAudioAvailable.isSpatialAudioAvailable("RTCConnectionStore");
-        const obj = useIsSpatialAudioAvailable;
+        flag = useSpatialAudioControlState.isSpatialAudioEligible("RTCConnectionStore");
+        const obj = useSpatialAudioControlState;
       }
       if (closure_3 != null) {
         const result = closure_3.setSpatialAudioEnabled(flag);
@@ -962,8 +962,8 @@ let obj = {
         flag = false;
       }
       if (flag) {
-        flag = useIsSpatialAudioAvailable.isSpatialAudioAvailable("RTCConnectionStore");
-        const obj = useIsSpatialAudioAvailable;
+        flag = useSpatialAudioControlState.isSpatialAudioEligible("RTCConnectionStore");
+        const obj = useSpatialAudioControlState;
       }
       if (closure_3 != null) {
         const result = closure_3.setSpatialAudioEnabled(flag);

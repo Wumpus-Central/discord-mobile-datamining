@@ -25,29 +25,29 @@ export default function XboxLinkLanding() {
     let obj = { label: null, icon: null };
     const intl = navigation(1233).intl;
     obj[0] = intl.string(navigation(1233).t.ihQXsb);
-    obj[1] = navigation(5054).VoiceNormalIcon;
+    obj[1] = navigation(5055).VoiceNormalIcon;
     const items = [obj, , ,];
     obj = { label: null, icon: null };
     const intl2 = navigation(1233).intl;
     obj[0] = intl2.string(navigation(1233).t.Xt1n4P);
-    obj[1] = navigation(8241).ScreenStreamIcon;
+    obj[1] = navigation(8245).ScreenStreamIcon;
     items[1] = obj;
     obj = { label: null, icon: null };
     const intl3 = navigation(1233).intl;
     obj[0] = intl3.string(navigation(1233).t.xqVY3p);
-    obj[1] = navigation(5042).GroupIcon;
+    obj[1] = navigation(5043).GroupIcon;
     items[2] = obj;
     obj1 = { label: null, icon: null };
     const intl4 = navigation(1233).intl;
     obj1[0] = intl4.string(navigation(1233).t.iQsKVW);
-    obj1[1] = navigation(9213).GameControllerIcon;
+    obj1[1] = navigation(9217).GameControllerIcon;
     items[3] = obj1;
     return items;
   }, []);
   callback = React.useCallback(() => {
     navigation.push(closure_1_4.PRE_CONNECT);
   }, items);
-  const memo1 = React.useMemo(() => ({ uri: callback(9317) }), []);
+  const memo1 = React.useMemo(() => ({ uri: callback(9321) }), []);
   obj = {
     platformType: constants2.XBOX,
     img: memo1,
@@ -65,7 +65,7 @@ export default function XboxLinkLanding() {
   obj[5] = intl.format(navigation(1233).t.CIc3IN, { helpdeskArticleUrl: articleURL });
   obj[6] = callback;
   obj[7] = memo;
-  return jsx(navigation(9318).TwoWayLinkLanding, {
+  return jsx(navigation(9322).TwoWayLinkLanding, {
     platformType: constants2.XBOX,
     img: memo1,
     imgStyle: tmp.image,

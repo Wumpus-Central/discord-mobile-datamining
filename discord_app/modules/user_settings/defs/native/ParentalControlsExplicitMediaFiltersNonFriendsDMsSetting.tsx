@@ -23,7 +23,7 @@ function useObscuredContentNonFriendsDmSettingValue() {
 function onObscuredContentNonFriendsDmOnPress() {
   selectedTeenId = selectedTeenId.getSelectedTeenId();
   if (null != selectedTeenId) {
-    let obj = selectedTeenId(14657);
+    let obj = selectedTeenId(14672);
     const intl = selectedTeenId(1233).intl;
     const stringResult = intl.string(selectedTeenId(1233).t.GYpoAq);
     obj = { title: null, subtitle: null, excluded: null, handlePress: null, currentValue: null };
@@ -38,8 +38,8 @@ function onObscuredContentNonFriendsDmOnPress() {
       const result = obj.updateExplicitContentSetting(selectedTeenId, obj);
     };
     obj[4] = obj.getExplicitContentSettingOrDefault(selectedTeenId).explicitContentNonFriendDm;
-    let result = selectedTeenId(14650).handleSensitiveMediaFilterPress(obj);
-    const obj2 = selectedTeenId(14650);
+    let result = selectedTeenId(14665).handleSensitiveMediaFilterPress(obj);
+    const obj2 = selectedTeenId(14665);
   }
 }
 createToggle = {

@@ -15,12 +15,12 @@ const memoResult = importAllResult.memo(function ChatInputGuardSpamMessageReques
   const items = [c4];
   const stateFromStores = channel(586).useStateFromStores(items, () => _undefined2.getUser(channel.getRecipientId()));
   const obj2 = channel(586);
-  dependencyMap = channel(12238).useLongestChannelMessageBeforeReply(channel.id, channel.getRecipientId());
+  dependencyMap = channel(12250).useLongestChannelMessageBeforeReply(channel.id, channel.getRecipientId());
   const items1 = [navigation];
   const callback = importAllResult.useCallback(() => {
     navigation.pop();
   }, items1);
-  const obj3 = channel(12238);
+  const obj3 = channel(12250);
   obj = {
     user: stateFromStores,
     onError() {
@@ -28,12 +28,12 @@ const memoResult = importAllResult.memo(function ChatInputGuardSpamMessageReques
       obj = { key: "MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE", content: null, icon: null };
       const intl = channel(1233).intl;
       obj[1] = intl.string(channel(1233).t["EDYbS+"]);
-      obj[2] = navigation(7689);
+      obj[2] = navigation(7692);
       obj.open(obj);
     },
     onRejectSuccess: callback,
   };
-  const messageRequestActions = channel(12230).useMessageRequestActions(obj);
+  const messageRequestActions = channel(12242).useMessageRequestActions(obj);
   ({
     rejectMessageRequest: c3,
     isRejectLoading,
@@ -62,7 +62,7 @@ const memoResult = importAllResult.memo(function ChatInputGuardSpamMessageReques
     buttonSecondaryDisabled: null,
     buttonSecondaryLoading: null,
   };
-  const obj4 = channel(12230);
+  const obj4 = channel(12242);
   const tmp8 = jsx;
   let intl = tmp(1233).intl;
   obj[1] = intl.string(channel(1233).t.fS08qB);
@@ -89,7 +89,7 @@ const memoResult = importAllResult.memo(function ChatInputGuardSpamMessageReques
   };
   obj[10] = tmp7;
   obj[11] = isUserProfileLoading;
-  return tmp8(navigation(12236), obj);
+  return tmp8(navigation(12248), obj);
 });
 const result = require("set").fileFinishedImporting(
   "modules/chat_input/native/guard/ChatInputGuardSpamMessageRequest.tsx",

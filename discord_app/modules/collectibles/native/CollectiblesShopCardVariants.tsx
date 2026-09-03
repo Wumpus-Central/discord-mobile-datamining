@@ -89,7 +89,7 @@ let closure_7 = createCacheKey.createStyles((arg0) => {
 const memoResult = importAllResult.memo(function CardProductVariants(product) {
   product = product.product;
   let defaultVariantIndex;
-  let obj = defaultVariantIndex(8903);
+  let obj = defaultVariantIndex(8907);
   defaultVariantIndex = obj.useDefaultVariantIndex(product);
   const tmp = callback2();
   if (obj2.getIsVariantProduct(product)) {
@@ -129,7 +129,7 @@ const memoResult = importAllResult.memo(function CardProductVariants(product) {
   } else {
     return null;
   }
-  obj2 = defaultVariantIndex(7307);
+  obj2 = defaultVariantIndex(7308);
 });
 const result = require("set").fileFinishedImporting("modules/collectibles/native/CollectiblesShopCardVariants.tsx");
 

@@ -30,7 +30,7 @@ const memoResult = importAllResult.memo((navigation) => {
   const callback1 = importAllResult.useCallback((nativeEvent) => {
     callback(nativeEvent.nativeEvent.layout.width);
   }, []);
-  let obj = navigation(9273);
+  let obj = navigation(9277);
   obj = { items: null, pageWidth: null, defaultIndex: 0 };
   obj = { label: null, id: null, page: null };
   const intl = navigation(1233).intl;
@@ -52,20 +52,20 @@ const memoResult = importAllResult.memo((navigation) => {
     callback2(View, {
       style: tmp.tabContainer,
       onLayout: callback1,
-      children: callback2(navigation(9784).SegmentedControl, { state: segmentedControlState }),
+      children: callback2(navigation(9788).SegmentedControl, { state: segmentedControlState }),
     }),
     ,
   ];
   const obj3 = {
     style: tmp.tabContainer,
     onLayout: callback1,
-    children: callback2(navigation(9784).SegmentedControl, { state: segmentedControlState }),
+    children: callback2(navigation(9788).SegmentedControl, { state: segmentedControlState }),
   };
   items2[1] = callback2(View, {
     style: tmp.messageRequestContent,
-    children: callback2(navigation(9281).SegmentedControlPages, { state: segmentedControlState }),
+    children: callback2(navigation(9285).SegmentedControlPages, { state: segmentedControlState }),
   });
-  items2[2] = callback2(navigation(11686).TTIFirstContentfulPaint, { label: "message_requests" });
+  items2[2] = callback2(navigation(11698).TTIFirstContentfulPaint, { label: "message_requests" });
   obj2[1] = items2;
   return callback3(View, obj2);
 });

@@ -32,9 +32,9 @@ prototype = function RewardHeroBlockRecord(unpublished_at) {
     mobile_hero_url: tmp.mobileHeroUrl,
     mobile_hero_animated_url: tmp.mobileHeroAnimatedUrl,
   } = unpublished_at);
-  let tmp2Result = tmp2(7308);
+  let tmp2Result = tmp2(7309);
   obj.logoDisplayConfig = tmp2Result.getAssetDisplayConfig(unpublished_at.logo_display_config);
-  tmp2Result = tmp2(7308);
+  tmp2Result = tmp2(7309);
   obj.bannerDisplayConfig = tmp2Result.getAssetDisplayConfig(unpublished_at.banner_display_config);
   return obj;
 }.prototype;

@@ -24,7 +24,7 @@ class PaymentModalBanner$Type extends MessageType {
       name: "body_localized",
       kind: "message",
       T() {
-        return callback(8462).LocalizedString;
+        return callback(8466).LocalizedString;
       },
     };
     tmp = new tmp("discord_protos.premium_marketing.v1.PaymentModalBanner", items, T);
@@ -189,7 +189,7 @@ items[4] = {
   name: "body_localized",
   kind: "message",
   T() {
-    return callback(8462).LocalizedString;
+    return callback(8466).LocalizedString;
   },
 };
 prototype = new prototype(

@@ -39,9 +39,9 @@ export const createGuildTemplateEmbed = function createGuildTemplateEmbed(code, 
     obj.titleText = intl2.string(getSystemLocale.t.A6MwXE);
     const str = intl.string(getSystemLocale.t.C7ZRNw);
     if (obj3.isThemeDark(closure_2)) {
-      let tmpResult = tmp(11604);
+      let tmpResult = tmp(11609);
     } else {
-      tmpResult = tmp(11605);
+      tmpResult = tmp(11610);
     }
     obj.thumbnailUrl = Image.resolveAssetSource(tmpResult).uri;
     obj.thumbnailBackgroundColor = colors.thumbnailBackgroundColor;
@@ -62,7 +62,7 @@ export const createGuildTemplateEmbed = function createGuildTemplateEmbed(code, 
     obj1.titleColor = colors.titleColor;
     obj1.subtitle = formatToPlainStringResult;
     obj1.subtitleColor = colors.subtitleColor;
-    obj1.thumbnailUrl = Image.resolveAssetSource(tmp(13107)).uri;
+    obj1.thumbnailUrl = Image.resolveAssetSource(tmp(13119)).uri;
     ({
       acceptLabelGreenColor: obj6.acceptLabelColor,
       acceptLabelGreenBackgroundColor: obj6.acceptLabelBackgroundColor,

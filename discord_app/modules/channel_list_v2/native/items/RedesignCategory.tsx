@@ -65,7 +65,7 @@ function renderCategoryItem(muted) {
     Icon = trailingAction.Icon;
   }
   if (Icon == null) {
-    Icon = trailingAction(12515).PlusMediumIcon;
+    Icon = trailingAction(12527).PlusMediumIcon;
   }
   if (null == trailingAction) {
     const items1 = [tmp34Result, , ,];
@@ -128,7 +128,7 @@ function renderCategoryItem(muted) {
         obj4[5] = onLongPress;
         obj4[6] = items;
         obj4[7] = tmp18Result;
-        let tmp28Result = tmp28(trailingAction(5076).PressableHighlight, obj4);
+        let tmp28Result = tmp28(trailingAction(5077).PressableHighlight, obj4);
       } else {
         const obj5 = { accessibilityRole: "header", style: null, children: null };
         obj5[1] = items;
@@ -170,7 +170,7 @@ function renderCategoryItem(muted) {
     obj8[1] = flag ? colors.ICON_MUTED : colors.TEXT_SUBTLE;
     colors = tmp9(Icon, obj8);
     obj7[6] = colors;
-    obj7 = tmp9(trailingAction(5076).PressableOpacity, obj7);
+    obj7 = tmp9(trailingAction(5077).PressableOpacity, obj7);
     obj6[1] = obj7;
     callback(View, obj6);
     const tmp10 = View;
@@ -255,8 +255,8 @@ export const CategoryChannel = function CategoryChannel(channel) {
   const tmp8 = collapsed(4674)(channel);
   const tmp = styles();
   const tmp7 = collapsed;
-  const tmp10 = collapsed(15927)(channel, tmp8);
-  const tmp11 = collapsed(15928)(channel);
+  const tmp10 = collapsed(15943)(channel, tmp8);
+  const tmp11 = collapsed(15944)(channel);
   obj = {
     name: tmp8,
     muted: stateFromStoresObject.muted,
@@ -286,14 +286,14 @@ export const CategoryChannel = function CategoryChannel(channel) {
     tmp13 = callback(tmp2(4474).Text, obj);
   }
   obj[7] = tmp13;
-  obj[8] = collapsed(10933)(channel);
+  obj[8] = collapsed(10937)(channel);
   obj[9] = tmp11;
   const collapsed2 = obj.collapsed;
   const merged = Object.assign(obj, Object.create(null));
   const colors = tmp7(709).colors;
   obj1 = {};
   const merged1 = Object.assign(merged);
-  obj1.icon = callback(id(8949).ChevronSmallDownIcon, {
+  obj1.icon = callback(id(8953).ChevronSmallDownIcon, {
     size: "xxs",
     color: merged.muted ? colors.ICON_MUTED : colors.TEXT_SUBTLE,
     style: collapsed2 ? createCacheKey : obj1,
@@ -324,7 +324,7 @@ export const RecentlyActiveCategory = function RecentlyActiveCategory(guildId) {
   const colors = stateFromStores(709).colors;
   obj = {};
   const merged1 = Object.assign(merged);
-  obj.icon = callback(guildId(8949).ChevronSmallDownIcon, {
+  obj.icon = callback(guildId(8953).ChevronSmallDownIcon, {
     size: "xxs",
     color: merged.muted ? colors.ICON_MUTED : colors.TEXT_SUBTLE,
     style: collapsed ? createCacheKey : obj1,

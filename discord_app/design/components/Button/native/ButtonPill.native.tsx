@@ -5,7 +5,7 @@ import ManaContext from "../../../../../discord_common/js/packages/design/native
 import _modDef4217 from "../../../../modules/reanimated/ReanimatedRexport.tsx";
 import MINIMUM_HIT_AREA2 from "ButtonConstants.native.tsx";
 import styleProperties from "ButtonHooks.native.tsx";
-import LinearGradientDefault from "../../../../../_runtime/04940_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/04941_LinearGradient.js";
 import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
 import closure_4 from "../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
@@ -42,7 +42,7 @@ function PillWrapper(expressivePressState) {
   if (shiny) {
     obj = { variant: null };
     obj[0] = variant;
-    tmp7 = callback2(tmp(4939).ButtonShine, obj);
+    tmp7 = callback2(tmp(4940).ButtonShine, obj);
   }
   if ("experimental_premium-primary" !== variant) {
     if ("experimental_premium-basic" !== variant) {

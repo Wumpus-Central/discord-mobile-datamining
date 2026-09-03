@@ -70,7 +70,7 @@ export const useGameProfileStoreWebsites = function useGameProfileStoreWebsites(
         }
         if (!someResult) {
           someResult = found.some(
-            (category) => category.category === callback(8830).ThirdPartyGameApplicationWebsiteCategory.STEAM,
+            (category) => category.category === callback(8834).ThirdPartyGameApplicationWebsiteCategory.STEAM,
           );
         }
         if (!someResult) {
@@ -81,9 +81,9 @@ export const useGameProfileStoreWebsites = function useGameProfileStoreWebsites(
         }
         const sorted = found.sort((category, category2) => {
           let num = -1;
-          if (category.category !== callback(8830).ThirdPartyGameApplicationWebsiteCategory.STEAM) {
+          if (category.category !== callback(8834).ThirdPartyGameApplicationWebsiteCategory.STEAM) {
             let num2 = 0;
-            if (category2.category === callback(8830).ThirdPartyGameApplicationWebsiteCategory.STEAM) {
+            if (category2.category === callback(8834).ThirdPartyGameApplicationWebsiteCategory.STEAM) {
               num2 = 1;
             }
             num = num2;

@@ -32,7 +32,7 @@ function CollectionItem(arg0) {
   } else {
     const obj2 = { style: null };
     obj2[0] = tmp.itemImage;
-    tmp11 = callback(tmp3(12978).ImageSkeleton, obj2);
+    tmp11 = callback(tmp3(12990).ImageSkeleton, obj2);
     tmp12 = callback;
   }
   const items1 = [tmp11];
@@ -42,7 +42,7 @@ function CollectionItem(arg0) {
     obj4[2] = singleStringOrSkeleton.text;
     let tmp12Result = tmp12(tmp3(4474).Text, obj4);
   } else {
-    tmp12Result = tmp12(tmp3(12978).TextSkeleton, { variant: "text-xs/medium", widthChars: 6 });
+    tmp12Result = tmp12(tmp3(12990).TextSkeleton, { variant: "text-xs/medium", widthChars: 6 });
   }
   const items2 = [tmp12Result];
   if ("value" === singleStringOrSkeleton1.status) {
@@ -50,7 +50,7 @@ function CollectionItem(arg0) {
     obj5[3] = singleStringOrSkeleton1.text;
     tmp12Result = tmp12(tmp3(4474).Text, obj5);
   } else {
-    tmp12Result = tmp12(tmp3(12978).TextSkeleton, { variant: "text-xxs/medium", widthChars: 10 });
+    tmp12Result = tmp12(tmp3(12990).TextSkeleton, { variant: "text-xxs/medium", widthChars: 10 });
   }
   items2[1] = tmp12Result;
   obj3[1] = items2;

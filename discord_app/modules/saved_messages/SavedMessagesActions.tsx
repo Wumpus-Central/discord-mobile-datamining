@@ -163,10 +163,10 @@ function _fetchAndUpdateSavedMessages() {
           callback = results.map((message) => {
             let messageRecord = null;
             if (null != message.message) {
-              let obj = callback(4737);
+              let obj = callback(4738);
               messageRecord = obj.createMessageRecord(message.message);
             }
-            obj = { message: messageRecord, saveData: callback(7614).savedMessageDataToClient(message.save_data) };
+            obj = { message: messageRecord, saveData: callback(7615).savedMessageDataToClient(message.save_data) };
             return obj;
           });
           obj10 = { type: "SAVED_MESSAGES_UPDATE", savedMessages: null };

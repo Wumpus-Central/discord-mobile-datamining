@@ -57,7 +57,7 @@ export default function UserProfileUpsellCard(headerText) {
     obj[0] = tmp.titleContainer;
     obj1 = { color: null, size: "xs" };
     obj1[0] = ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY;
-    const items3 = [tmp2(tmp3(8104).NitroWheelIcon, obj1)];
+    const items3 = [tmp2(tmp3(8107).NitroWheelIcon, obj1)];
     const obj2 = { variant: "heading-sm/bold", children: null };
     obj2[1] = headerText;
     items3[1] = tmp2(tmp3(4474).Text, obj2);

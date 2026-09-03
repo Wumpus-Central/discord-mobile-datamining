@@ -156,7 +156,7 @@ export default function ChannelSettingsPermissionsOverrides(fromCreate) {
                         c4 = 1;
                         c5 = 1;
                         const obj2 = { value: null, done: false };
-                        obj2[0] = callback(9723).checkChattableChannelThresholdMetAfterChannelPermissionDeny(
+                        obj2[0] = callback(9727).checkChattableChannelThresholdMetAfterChannelPermissionDeny(
                           c5,
                           throwTypeErrorResult,
                         );
@@ -241,8 +241,8 @@ export default function ChannelSettingsPermissionsOverrides(fromCreate) {
                   const obj = _undefined(obj1[28]);
                   obj.openURL(_undefined(obj1[29]).getArticleURL(constants.PERMISSIONS_LOCKOUT));
                 };
-                throwTypeErrorResult = id(4857).show(obj4);
-                const obj14 = id(4857);
+                throwTypeErrorResult = id(4858).show(obj4);
+                const obj14 = id(4858);
               }
             } else if (guildId1 === 1) {
               c5 = 3;
@@ -385,7 +385,7 @@ export default function ChannelSettingsPermissionsOverrides(fromCreate) {
     obj[0] = id;
     obj[1] = stateFromStores.guild_id;
     obj[4] = tmp13;
-    let tmp12Result = tmp12(tmp5(10900), obj);
+    let tmp12Result = tmp12(tmp5(10904), obj);
   } else {
     role = role.getRole(stateFromStores.guild_id, id);
     let str;
@@ -398,7 +398,7 @@ export default function ChannelSettingsPermissionsOverrides(fromCreate) {
     obj1 = { end: true, label: null, start: true, trailing: null };
     obj1[1] = str;
     obj1[3] = tmp13;
-    tmp12Result = tmp12(tmp2(5607).TableRow, obj1);
+    tmp12Result = tmp12(tmp2(5608).TableRow, obj1);
   }
   obj2 = { style: tmp.container, contentContainerStyle: items5, children: null };
   items5 = [tmp.containerContent, { paddingBottom: tmp.containerContent.paddingBottom + id(1627)().bottom }];

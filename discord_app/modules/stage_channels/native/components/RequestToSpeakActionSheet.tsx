@@ -1,7 +1,7 @@
 // discord_app/modules/stage_channels/native/components/RequestToSpeakActionSheet.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import useAudienceRequestToSpeakStateDefault from "../../useAudienceRequestToSpeakState.tsx";
-import registerAssetDefault from "../../../../../_runtime/10034_registerAsset.js";
+import registerAssetDefault from "../../../../../_runtime/10038_registerAsset.js";
 import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
 import closure_4 from "../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
@@ -62,9 +62,9 @@ function ManageSelfSpeakerRow(channel) {
     stringResult = string(t["8Joh+p"]);
   }
   if (tmp8) {
-    let MicrophoneArrowRightIcon = tmp(10030).GroupArrowDownIcon;
+    let MicrophoneArrowRightIcon = tmp(10034).GroupArrowDownIcon;
   } else {
-    MicrophoneArrowRightIcon = tmp(10032).MicrophoneArrowRightIcon;
+    MicrophoneArrowRightIcon = tmp(10036).MicrophoneArrowRightIcon;
   }
   obj = {
     onPress() {
@@ -89,7 +89,7 @@ function ManageSelfSpeakerRow(channel) {
   };
   obj = { source: registerAssetDefault };
   obj[3] = callback2(channel(1296).Icon, obj);
-  return callback2(channel(5607).TableRow, obj);
+  return callback2(channel(5608).TableRow, obj);
 }
 ({ jsx: c9, jsxs: c10 } = jsxProd);
 createCacheKey = { container: null };
@@ -111,15 +111,15 @@ export default function RequestToSpeakActionSheet(channelId) {
   const items = [];
   const tmp3 = first;
   const tmp5 = callback4();
-  const tmp6 = first(5961);
-  items[HermesBuiltin.arraySpread(channelId.analyticsLocations, 0)] = first(5981).REQUEST_TO_SPEAK;
+  const tmp6 = first(5962);
+  items[HermesBuiltin.arraySpread(channelId.analyticsLocations, 0)] = first(5982).REQUEST_TO_SPEAK;
   obj1 = channelId(586);
   const items1 = [closure_7];
   const stateFromStores = obj1.useStateFromStores(items1, () => closure_1_7.getChannel(channelId));
-  let obj2 = channelId(5382);
+  let obj2 = channelId(5383);
   const stageParticipantsCount = obj2.useStageParticipantsCount(
     channelId,
-    channelId(5376).StageChannelParticipantNamedIndex.ALL_REQUESTED_TO_SPEAK,
+    channelId(5377).StageChannelParticipantNamedIndex.ALL_REQUESTED_TO_SPEAK,
   );
   const tmp10 = first1(React.useState(0), 2);
   first = tmp10[0];
@@ -165,7 +165,7 @@ export default function RequestToSpeakActionSheet(channelId) {
     obj6[0] = stateFromStores;
     items2[1] = callback2(ManageSelfSpeakerRow, obj6);
     obj4[1] = items2;
-    const items3 = [callback3(tmp(6000).TableRowGroup, obj4)];
+    const items3 = [callback3(tmp(6001).TableRowGroup, obj4)];
     const obj7 = { style: null, children: null };
     const obj8 = { paddingHorizontal: null };
     obj8[0] = token;
@@ -179,18 +179,18 @@ export default function RequestToSpeakActionSheet(channelId) {
     obj7[1] = callback2(tmp(4474).Text, obj9);
     items3[1] = callback2(View, obj7);
     obj3[2] = items3;
-    const items4 = [callback3(tmp(4926).Stack, obj3)];
+    const items4 = [callback3(tmp(4927).Stack, obj3)];
     const obj11 = { channel: null, height: null };
     obj11[0] = stateFromStores;
     const _Math = Math;
     obj11[1] = Math.max(first1 - first - 8, 0);
-    items4[1] = callback2(tmp3(10035), obj11);
+    items4[1] = callback2(tmp3(10039), obj11);
     obj2[1] = items4;
-    obj1[2] = callback3(tmp(4926).Stack, obj2);
-    obj[2] = callback2(tmp(5632).BottomSheetScrollView, obj1);
-    obj[1] = callback2(tmp(5630).BottomSheet, obj);
-    tmp14 = callback2(tmp(5961).AnalyticsLocationProvider, obj);
-    const tmp3Result = tmp3(10035);
+    obj1[2] = callback3(tmp(4927).Stack, obj2);
+    obj[2] = callback2(tmp(5633).BottomSheetScrollView, obj1);
+    obj[1] = callback2(tmp(5631).BottomSheet, obj);
+    tmp14 = callback2(tmp(5962).AnalyticsLocationProvider, obj);
+    const tmp3Result = tmp3(10039);
   }
   return tmp14;
 }

@@ -34,7 +34,7 @@ export const createSafetySystemNotificationEmbed = function createSafetySystemNo
             if (null != parseMessageForPropsResult.ctas) {
               let mapCtaToNativeDataResult;
               if (null != parseMessageForPropsResult.ctas[0]) {
-                let tmp6Result = tmp6(8704);
+                let tmp6Result = tmp6(8708);
                 mapCtaToNativeDataResult = tmp6Result.mapCtaToNativeData(
                   parseMessageForPropsResult.ctas[0],
                   parseMessageForPropsResult.learn_more_link,
@@ -43,7 +43,7 @@ export const createSafetySystemNotificationEmbed = function createSafetySystemNo
               }
               let mapCtaToNativeDataResult1;
               if (null != parseMessageForPropsResult.ctas[1]) {
-                tmp6Result = tmp6(8704);
+                tmp6Result = tmp6(8708);
                 mapCtaToNativeDataResult1 = tmp6Result.mapCtaToNativeData(
                   parseMessageForPropsResult.ctas[1],
                   parseMessageForPropsResult.learn_more_link,
@@ -71,8 +71,8 @@ export const createSafetySystemNotificationEmbed = function createSafetySystemNo
               footerTheme: null,
             };
             obj[0] = str;
-            obj[1] = tmp6(7864).getAssetUriForEmbed(
-              Image.resolveAssetSource(importDefault("danger" === parseMessageForPropsResult.icon ? 8752 : 4989)),
+            obj[1] = tmp6(7867).getAssetUriForEmbed(
+              Image.resolveAssetSource(importDefault("danger" === parseMessageForPropsResult.icon ? 8756 : 4990)),
             );
             const intl = tmp6(1233).intl;
             let num = parseMessageForPropsResult.timestamp;
@@ -80,7 +80,7 @@ export const createSafetySystemNotificationEmbed = function createSafetySystemNo
               num = 0;
             }
             obj = { daysAgo: null };
-            const tmp6Result1 = tmp6(7864);
+            const tmp6Result1 = tmp6(7867);
             const obj7 = hooksDefault();
             obj[0] = obj7.diff(hooksDefault.unix(num), "days");
             obj[2] = intl.formatToPlainString(tmp6(1233).t.eevFb6, obj);

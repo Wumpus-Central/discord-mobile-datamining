@@ -17,7 +17,7 @@ export default function MessageRequestMutualServers(textVariant) {
   ({ onPress, iconSize } = textVariant);
   ({ userId, style } = textVariant);
   if (iconSize === undefined) {
-    iconSize = iconSize(6012).GuildIconSizes.XXSMALL_12;
+    iconSize = iconSize(6013).GuildIconSizes.XXSMALL_12;
   }
   let str = textVariant.textVariant;
   if (str === undefined) {
@@ -25,7 +25,7 @@ export default function MessageRequestMutualServers(textVariant) {
   }
   const suffix = textVariant.suffix;
   const tmp3 = callback2();
-  let obj = iconSize(16695);
+  let obj = iconSize(16715);
   const mutualGuildsForMessageRequests = obj.useMutualGuildsForMessageRequests(userId);
   const substr = mutualGuildsForMessageRequests.slice(0, 3);
   if (mutualGuildsForMessageRequests.length > 0) {
@@ -45,7 +45,7 @@ export default function MessageRequestMutualServers(textVariant) {
     obj1[0] = iconSize;
     obj1[1] = substr.map((name) => name.name);
     obj1[2] = substr.map((guild) => closure_1_4(closure_1_1(closure_1_2[4]), { guild, size: iconSize }, guild.id));
-    tmp9 = callback(tmp4(9283).GuildIconPile, obj1);
+    tmp9 = callback(tmp4(9287).GuildIconPile, obj1);
   }
   const items1 = [tmp9];
   const obj2 = { variant: str, color: "text-muted", lineClamp: 1, style: tmp3.label, children: null };
@@ -65,7 +65,7 @@ export default function MessageRequestMutualServers(textVariant) {
       const obj3 = { accessibilityRole: "button", onPress: null, children: null };
       obj3[1] = onPress;
       obj3[2] = tmp7Result;
-      tmp11Result = tmp11(tmp4(5076).PressableOpacity, obj3);
+      tmp11Result = tmp11(tmp4(5077).PressableOpacity, obj3);
     }
   }
   return tmp11Result;

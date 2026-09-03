@@ -12,7 +12,7 @@ function UserRow(user) {
   user = user.user;
   const channel = user.channel;
   ({ onPress, start, end } = user);
-  let obj = user(8919);
+  let obj = user(8923);
   const avatarDecoration = obj.useAvatarDecoration(user, channel.guild_id);
   const items = [closure_3];
   const stateFromStoresObject = user(586).useStateFromStoresObject(items, () => ({
@@ -46,7 +46,7 @@ function UserRow(user) {
   });
   obj[3] = start;
   obj[4] = end;
-  return jsx(user(5607).TableRow, {
+  return jsx(user(5608).TableRow, {
     user,
     avatarDecoration,
     size: user(1296).AvatarSizes.REFRESH_MEDIUM_32,

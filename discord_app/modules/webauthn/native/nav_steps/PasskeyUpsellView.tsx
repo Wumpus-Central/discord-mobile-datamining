@@ -1,7 +1,7 @@
 // discord_app/modules/webauthn/native/nav_steps/PasskeyUpsellView.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import combinedDefault from "../../../../utils/HelpdeskUtils.tsx";
-import registerAssetDefault from "../../../../../_runtime/14543_registerAsset.js";
+import registerAssetDefault from "../../../../../_runtime/14559_registerAsset.js";
 import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
 import closure_4 from "../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
@@ -73,9 +73,9 @@ export default function PasskeyUpsellView() {
     navigation.push(closure_1_8.NAME, obj);
   }
   function onCancel() {
-    callback(14539).markDismissed(constants.USER_DISMISS);
-    const obj = callback(14539);
-    const result = callback(14540).closePasskeyUpsellModal();
+    callback(14555).markDismissed(constants.USER_DISMISS);
+    const obj = callback(14555);
+    const result = callback(14556).closePasskeyUpsellModal();
   }
   let obj = navigation(1498);
   navigation = obj.useNavigation();
@@ -164,7 +164,7 @@ export default function PasskeyUpsellView() {
   } else {
     string3Result = string3(t3.NIFmCJ);
   }
-  items6[1] = callback(navigation(4928).Button, {
+  items6[1] = callback(navigation(4929).Button, {
     text: string3Result,
     onPress() {
       let obj = closure_1_1(closure_1_2[11]);
@@ -185,7 +185,7 @@ export default function PasskeyUpsellView() {
   } else {
     string4Result = string4(t4["7J6/nG"]);
   }
-  items6[2] = callback(navigation(4928).Button, {
+  items6[2] = callback(navigation(4929).Button, {
     text: string4Result,
     onPress: onCancel,
     size: "lg",
@@ -196,5 +196,5 @@ export default function PasskeyUpsellView() {
   items2[2] = closure_12(closure_5, obj12);
   obj[1] = items2;
   obj[2] = closure_12(tmp12, obj);
-  return callback(navigation(5561).SafeAreaPaddingView, obj);
+  return callback(navigation(5562).SafeAreaPaddingView, obj);
 }

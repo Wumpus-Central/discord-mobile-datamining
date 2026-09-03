@@ -28,7 +28,7 @@ export default function UserProfileGameFriendsCard(arg0) {
       let obj = { applicationName: null };
       obj[0] = function applicationName() {
         return lib(
-          textmdnormal(12390),
+          textmdnormal(12402),
           { application: found[0], textVariant: textmdnormal, iconSize: 16 },
           found[0].id,
         );
@@ -40,14 +40,14 @@ export default function UserProfileGameFriendsCard(arg0) {
       obj = { applicationName: null, applicationName2: null };
       obj[0] = function applicationName() {
         return lib(
-          textmdnormal(12390),
+          textmdnormal(12402),
           { application: found[0], textVariant: textmdnormal, iconSize: 16 },
           found[0].id,
         );
       };
       obj[1] = function applicationName2() {
         return lib(
-          textmdnormal(12390),
+          textmdnormal(12402),
           { application: found[1], textVariant: textmdnormal, iconSize: 16 },
           found[1].id,
         );
@@ -69,7 +69,7 @@ export default function UserProfileGameFriendsCard(arg0) {
         );
       };
       obj[1] = function applicationNameLast() {
-        return lib(textmdnormal(12390), { application: dependencyMap, textVariant: textmdnormal, iconSize: 16 });
+        return lib(textmdnormal(12402), { application: dependencyMap, textVariant: textmdnormal, iconSize: 16 });
       };
       formatResult = intl4.format(found(1233).t.UxpwAh, obj);
       tmp6 = found;

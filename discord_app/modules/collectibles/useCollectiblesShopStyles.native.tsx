@@ -1,7 +1,7 @@
 // discord_app/modules/collectibles/useCollectiblesShopStyles.native.tsx
 import ThemesDefault from "../../../discord_common/js/packages/tokens/native.tsx";
 import createUseCollectiblesShopStylesDefault from "createUseCollectiblesShopStyles.tsx";
-import importDefaultResult from "../../../_runtime/07306_tinycolor.js";
+import importDefaultResult from "../../../_runtime/07307_tinycolor.js";
 import saturateResult from "../debug/logAppStart.tsx";
 import saturateResult1 from "../debug/logAppStart.tsx";
 

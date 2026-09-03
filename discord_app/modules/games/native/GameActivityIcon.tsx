@@ -37,7 +37,7 @@ const memoResult = importAllResult.memo(function GameActivityIcon(style) {
       let tmp2Result = tmp2(1362);
       const colors = iconURL(709).colors;
       obj[2] = tmp2Result.isThemeDark(obj.useThemeContext().theme) ? colors.WHITE : colors.BLACK;
-      jsx(tmp2(8736).UnknownGameIcon, { size: "custom", style: null, color: null });
+      jsx(tmp2(8740).UnknownGameIcon, { size: "custom", style: null, color: null });
       const isThemeDarkResult = tmp2Result.isThemeDark(obj.useThemeContext().theme);
     }
   } else {
@@ -46,7 +46,7 @@ const memoResult = importAllResult.memo(function GameActivityIcon(style) {
     obj1[0] = tmp2Result.makeSource(iconURL);
     const items2 = [tmp.icon, obj];
     obj1[1] = items2;
-    const tmp9 = jsx(iconURL(5501), { source: null, style: null });
+    const tmp9 = jsx(iconURL(5502), { source: null, style: null });
     let tmp6Result = tmp9;
     if (null != style) {
       const obj2 = { style: null, children: null };

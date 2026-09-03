@@ -40,7 +40,7 @@ export default function GuildDirectoryAddModal(arg0) {
     };
     obj2[4] = function render(arg0) {
       const merged = Object.assign(arg0);
-      return callback2(callback(12101), {});
+      return callback2(callback(12107), {});
     };
     obj1[closure_1_3.CREATE_OR_ADD] = obj2;
     obj1[closure_1_3.DESCRIPTION] = {
@@ -51,7 +51,7 @@ export default function GuildDirectoryAddModal(arg0) {
       },
       render(arg0) {
         const merged = Object.assign(arg0);
-        return callback2(callback(12109), {});
+        return callback2(callback(12115), {});
       },
     };
     const obj3 = {
@@ -62,7 +62,7 @@ export default function GuildDirectoryAddModal(arg0) {
       },
       render(arg0) {
         const merged = Object.assign(arg0);
-        return callback2(callback(12109), {});
+        return callback2(callback(12115), {});
       },
     };
     obj1[closure_1_3.TEMPLATES] = {
@@ -73,7 +73,7 @@ export default function GuildDirectoryAddModal(arg0) {
       },
       render(arg0) {
         const merged = Object.assign(arg0);
-        return callback2(callback(12113), {});
+        return callback2(callback(12119), {});
       },
     };
     obj5 = {
@@ -84,7 +84,7 @@ export default function GuildDirectoryAddModal(arg0) {
       impressionName: callback(closure_1_2[5]).ImpressionNames.HUB_CREATE_GUILD_CUSTOMIZE,
       render(arg0) {
         const merged = Object.assign(arg0);
-        return callback2(callback(12123), {});
+        return callback2(callback(12129), {});
       },
     };
     obj1[closure_1_3.CREATE] = obj5;

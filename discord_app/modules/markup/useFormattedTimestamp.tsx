@@ -17,7 +17,7 @@ let result = require("set").fileFinishedImporting("modules/markup/useFormattedTi
 
 export default function useFormattedTimestamp(format) {
   const _require = format;
-  const forceUpdate = require("../../../_runtime/07194_useForceUpdate.js").useForceUpdate();
+  const forceUpdate = require("../../../_runtime/07195_useForceUpdate.js").useForceUpdate();
   const items = [forceUpdate, ,];
   ({ format: arr[1], parsed: arr[2] } = format);
   const effect = React.useEffect(() => {

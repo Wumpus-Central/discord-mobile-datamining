@@ -128,13 +128,13 @@ export default function SelectEmojiRolesActionSheet(arg0) {
   const intl4 = tmp5(1233).intl;
   obj1[1] = intl4.string(getSystemLocale.t.MZusPv);
   obj1[2] = tmp7Result;
-  tmp7Result = tmp7(tmp5(5629).BottomSheetTitleHeader, obj1);
+  tmp7Result = tmp7(tmp5(5630).BottomSheetTitleHeader, obj1);
   const items1 = [subscriptionListingsForGuild.length];
   return closure_6(ActionSheet.ActionSheet, {
     scrollable: true,
     header: tmp7Result,
     startExpanded: true,
     onDismiss: onCancel,
-    children: closure_6(emoji(7804), obj3),
+    children: closure_6(emoji(7807), obj3),
   });
 }

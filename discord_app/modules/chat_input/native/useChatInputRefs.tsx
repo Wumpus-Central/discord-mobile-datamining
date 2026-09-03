@@ -33,6 +33,7 @@ export default function useChatInputRefs(chatInputProps) {
   closure_14 = undefined;
   closure_15 = undefined;
   closure_16 = undefined;
+  closure_17 = undefined;
   dependencyMap = React.useRef(null);
   React = React.useRef(null);
   closure_4 = React.useRef(null);
@@ -41,13 +42,14 @@ export default function useChatInputRefs(chatInputProps) {
   closure_7 = React.useRef(null);
   closure_8 = React.useRef(null);
   closure_9 = React.useRef(null);
-  closure_10 = React.useRef(new Map());
-  const tmp2 = chatInputTextFieldHeight(5949)(() =>
+  closure_10 = React.useRef(null);
+  closure_11 = React.useRef(new Map());
+  const tmp2 = chatInputTextFieldHeight(5950)(() =>
     chatInputProps(4340).createInputRefTracker(chatInputProps.channel.id, chatInputProps.screenIndex),
   );
-  closure_11 = tmp2;
-  closure_12 = React.useRef(chatInputProps);
+  closure_12 = tmp2;
   closure_13 = React.useRef(chatInputProps);
+  closure_14 = React.useRef(chatInputProps);
   let items = [chatInputProps];
   const effect = React.useEffect(() => {
     if (ref.current.channel.id !== chatInputProps.channel.id) {
@@ -56,7 +58,7 @@ export default function useChatInputRefs(chatInputProps) {
         const result = current.flushPendingDraftSave();
       }
     }
-    closure_12.current = ref.current;
+    closure_13.current = ref.current;
     ref.current = chatInputProps;
   }, items);
   let items1 = [chatInputProps.channel.id];
@@ -65,13 +67,13 @@ export default function useChatInputRefs(chatInputProps) {
   }, items1);
   const items2 = [tmp2, chatInputProps.channel.id];
   const effect2 = React.useEffect(() => {
-    closure_11.handleRef(ref3.current, chatInputProps.channel.id);
+    closure_12.handleRef(ref3.current, chatInputProps.channel.id);
     return () => {
-      closure_11.handleRef(null, channel.channel.id);
+      closure_12.handleRef(null, channel.channel.id);
     };
   }, items2);
-  closure_14 = React.useRef(
-    chatInputTextFieldHeight(5949)(() => ({
+  closure_15 = React.useRef(
+    chatInputTextFieldHeight(5950)(() => ({
       editId: null,
       focused: false,
       selectionStart: 0,
@@ -82,15 +84,15 @@ export default function useChatInputRefs(chatInputProps) {
       textFieldHeight: chatInputTextFieldHeight,
     })),
   );
-  closure_15 = React.useRef({ handledHereMention: false, sending: false });
+  closure_16 = React.useRef({ handledHereMention: false, sending: false });
   const items3 = [tmp2];
   const memo = React.useMemo(() => {
     let obj = chatInputTextFieldHeight(12);
     closure_0 = obj.throttle((arg0, arg1) => {
-      lib(ref[14]).updateTextBlocks(editingMessage.current, arg0, arg1);
+      lib(ref[14]).updateTextBlocks(channelOnCooldown.current, arg0, arg1);
     }, 200);
     closure_1 = chatInputTextFieldHeight(12).throttle((content) => {
-      const current = closure_13.current;
+      const current = closure_14.current;
       const channel = current.channel;
       if (null == current.pendingEdit) {
         if (content.length > 0) {
@@ -158,23 +160,23 @@ export default function useChatInputRefs(chatInputProps) {
     }, 500);
     let obj2 = chatInputTextFieldHeight(12);
     dependencyMap = chatInputTextFieldHeight(12).debounce((arg0) => {
-      closure_1_11(closure_13.current.screenIndex, arg0);
+      closure_1_11(closure_14.current.screenIndex, arg0);
     }, 32);
     obj = {
       backspace() {
-        lib(ref[14]).backspace(editingMessage.current);
+        lib(ref[14]).backspace(channelOnCooldown.current);
       },
       blur() {
-        lib(ref[14]).blur(editingMessage.current);
+        lib(ref[14]).blur(channelOnCooldown.current);
       },
       chatInputTrackerRegister() {
-        closure_11.register();
+        closure_12.register();
       },
       chatInputTrackerUnregister() {
-        closure_11.unregister();
+        closure_12.unregister();
       },
       clearText() {
-        const current = closure_16.current;
+        const current = closure_17.current;
         if (current != null) {
           current.setText("");
         }
@@ -190,14 +192,14 @@ export default function useChatInputRefs(chatInputProps) {
         }
         tmpResult = tmp(tmp2[24]);
         if (!tmpResult.isAndroid()) {
-          lib(tmp2[14]).closeCustomKeyboard(editingMessage.current);
+          lib(tmp2[14]).closeCustomKeyboard(channelOnCooldown.current);
           const obj5 = lib(tmp2[14]);
         }
         const result = callback(ref[25]).closePortalKeyboardRequest();
       },
       dismissKeyboard() {
         const result = callback(ref[26]).dismissGlobalKeyboard();
-        const current = closure_16.current;
+        const current = closure_17.current;
         if (current != null) {
           current.closeCustomKeyboard();
         }
@@ -206,7 +208,7 @@ export default function useChatInputRefs(chatInputProps) {
         lib.flush();
       },
       focus() {
-        lib(ref[14]).focus(editingMessage.current);
+        lib(ref[14]).focus(channelOnCooldown.current);
       },
       focusPhotosButton() {
         const current = ref.current;
@@ -223,10 +225,10 @@ export default function useChatInputRefs(chatInputProps) {
         return applicationCommandManager;
       },
       getText() {
-        return closure_14.current.text;
+        return closure_15.current.text;
       },
       handleCancelEditing() {
-        const channel = closure_1_13.current.channel;
+        const channel = closure_1_14.current.channel;
         lib.cancel();
         editingMessage = editingMessage.getEditingMessage(channel.id);
         if (null != editingMessage) {
@@ -250,17 +252,17 @@ export default function useChatInputRefs(chatInputProps) {
             id = currentUser.id;
           }
           obj[5] = id === editingMessage.author.id;
-          obj2.track(constants.CHAT_CONTEXT_BAR_ACTION_CANCELED, obj);
+          obj2.track(closure_12.CHAT_CONTEXT_BAR_ACTION_CANCELED, obj);
           const obj4 = chatInputProps(ref[28]);
           tmp6(tmp7[29]).endEditMessage(channel.id);
           const tmp6Result = tmp6(tmp7[29]);
         }
       },
       handlePressKey(arg0) {
-        const current = closure_13.current;
+        const current = closure_14.current;
         ({ pendingEdit, channel } = current);
         if ("\r" === arg0) {
-          const current3 = closure_16.current;
+          const current3 = closure_17.current;
           let str2;
           if (current3 != null) {
             str2 = current3.getText();
@@ -284,7 +286,7 @@ export default function useChatInputRefs(chatInputProps) {
           }
         } else if ("UIKeyInputEscape" === arg0) {
           if (null != pendingEdit) {
-            const current2 = closure_16.current;
+            const current2 = closure_17.current;
             if (current2 != null) {
               current2.handleCancelEditing();
             }
@@ -296,7 +298,7 @@ export default function useChatInputRefs(chatInputProps) {
       },
       handleSaveEditing(content) {
         function handleSaveEditing(content) {
-          const channel = closure_1_13.current.channel;
+          const channel = closure_1_14.current.channel;
           lib.cancel();
           obj = closure_2_8;
           const editingMessage = closure_2_8.getEditingMessage(channel.id);
@@ -312,7 +314,7 @@ export default function useChatInputRefs(chatInputProps) {
               content = handleLegacyCommandsResult.content;
             }
             if (content !== obj.getEditingTextValue(channel.id)) {
-              const current2 = closure_1_16.current;
+              const current2 = closure_1_17.current;
               let applicationCommandManager;
               if (current2 != null) {
                 applicationCommandManager = current2.getApplicationCommandManager();
@@ -347,7 +349,7 @@ export default function useChatInputRefs(chatInputProps) {
             const obj6 = callback(table[31]);
             tmp21 = callback;
             lib(table[29]).endEditMessage(channel.id);
-            const current = closure_1_16.current;
+            const current = closure_1_17.current;
             if (current != null) {
               current.showSideActions();
             }
@@ -356,8 +358,8 @@ export default function useChatInputRefs(chatInputProps) {
         }
         if (null == content) {
           const text = chatInputTextFieldHeight(ref[14]).getText(
-            closure_1_8.current,
-            closure_1_10.current,
+            closure_1_9.current,
+            closure_1_11.current,
             handleSaveEditing,
           );
           obj = chatInputTextFieldHeight(ref[14]);
@@ -366,46 +368,46 @@ export default function useChatInputRefs(chatInputProps) {
         }
       },
       handleSend() {
-        if (!closure_1_15.current.sending) {
+        if (!closure_1_16.current.sending) {
           tmp.current.sending = true;
           threadCreationCallback.cancel();
-          threadCreationCallback = closure_1_13.current.threadCreationCallback;
+          threadCreationCallback = closure_1_14.current.threadCreationCallback;
           if (null != threadCreationCallback) {
             const text = chatInputTextFieldHeight(ref[14]).getText(
-              closure_1_8.current,
-              closure_1_10.current,
+              closure_1_9.current,
+              closure_1_11.current,
               (text) => {
-                obj = chatInputProps(11792);
+                obj = chatInputProps(11798);
                 obj = { text, params: null };
                 obj = {};
-                const merged = Object.assign(closure_2_13.current);
-                obj.chatInputRef = closure_2_16;
+                const merged = Object.assign(closure_2_14.current);
+                obj.chatInputRef = closure_2_17;
                 obj[1] = obj;
                 const result = obj.chatInputValidateContentLength(obj);
                 if (null != result) {
                   obj1 = { text: null, threadCreationCallback: null };
                   obj1[0] = result.content;
                   obj1[1] = threadCreationCallback;
-                  const result1 = chatInputProps(11792).chatInputCreateThread(obj1);
-                  const current = closure_2_16.current;
+                  const result1 = chatInputProps(11798).chatInputCreateThread(obj1);
+                  const current = closure_2_17.current;
                   if (current != null) {
                     const applicationCommandManager = current.getApplicationCommandManager();
                     if (applicationCommandManager != null) {
                       const result2 = applicationCommandManager.clearTimestampMentions();
                     }
                   }
-                  const tmpResult = chatInputProps(11792);
+                  const tmpResult = chatInputProps(11798);
                 }
               },
             );
             tmp.current.sending = false;
           } else {
-            let current = closure_1_16.current;
+            let current = closure_1_17.current;
             let applicationCommandManager = current.getApplicationCommandManager();
             let sendCommandResult;
             if (applicationCommandManager != null) {
               sendCommandResult = applicationCommandManager.sendCommand(
-                closure_1_14.current.text,
+                closure_1_15.current.text,
                 tmp4.current.channel,
                 (command, optionValues) => {
                   obj = threadCreationCallback(closure_1_2[33]);
@@ -413,7 +415,7 @@ export default function useChatInputRefs(chatInputProps) {
                   obj = { command, optionValues };
                   obj1 = {};
                   const merged = Object.assign(ref.current);
-                  obj1.chatInputRef = closure_16;
+                  obj1.chatInputRef = closure_17;
                   obj[1] = obj1;
                   const result = obj.chatInputSendApplicationCommand(obj);
                 },
@@ -421,26 +423,26 @@ export default function useChatInputRefs(chatInputProps) {
             }
             if (!sendCommandResult) {
               const text1 = chatInputTextFieldHeight(ref[14]).getText(
-                closure_1_8.current,
-                closure_1_10.current,
+                closure_1_9.current,
+                closure_1_11.current,
                 (arg0) => {
-                  if (null != closure_1_13.current.pendingEdit) {
+                  if (null != closure_1_14.current.pendingEdit) {
                     closure_1.cancel();
-                    const current = closure_1_16.current;
-                    let tmp8 = closure_1_16;
+                    const current = closure_1_17.current;
+                    let tmp8 = closure_1_17;
                     if (current != null) {
                       current.handleSaveEditing(arg0);
                       tmp8 = tmp12;
                     }
                   } else {
                     closure_1.cancel();
-                    obj = threadCreationCallback(11792);
+                    obj = threadCreationCallback(11798);
                     obj = { text: null, params: null };
                     obj[0] = arg0;
                     obj = {};
                     const merged = Object.assign(tmp.current);
-                    tmp8 = closure_1_16;
-                    obj.chatInputRef = closure_1_16;
+                    tmp8 = closure_1_17;
+                    obj.chatInputRef = closure_1_17;
                     obj[1] = obj;
                     const result = obj.chatInputHandleSendText(obj);
                   }
@@ -459,7 +461,7 @@ export default function useChatInputRefs(chatInputProps) {
       },
       handleSelectGIF(url) {
         url = url.url;
-        const current = closure_13.current;
+        const current = closure_14.current;
         ({ channel, threadCreationCallback } = current);
         let isChannelOnCooldownResult = closure_1_9.isChannelOnCooldown(channel);
         if (!isChannelOnCooldownResult) {
@@ -488,17 +490,17 @@ export default function useChatInputRefs(chatInputProps) {
             obj.deletePendingReply(channel.id);
             const obj5 = lib(ref[29]);
           }
-          closure_16.current.dismissKeyboard();
+          closure_17.current.dismissKeyboard();
         }
       },
       handleSelectSticker(sticker, tokenStart) {
-        const current = closure_1_13.current;
+        const current = closure_1_14.current;
         ({ channel, threadCreationCallback } = current);
         if (!channelOnCooldown.isChannelOnCooldown(channel)) {
           let current2 = sticker;
           if (null != sticker) {
             if (!obj7.isStandardSticker(current2)) {
-              const text = closure_1_14.current.text;
+              const text = closure_1_15.current.text;
               let sum = text;
               if (null != tokenStart) {
                 const substr = text.slice(0, tokenStart);
@@ -508,9 +510,9 @@ export default function useChatInputRefs(chatInputProps) {
               obj = { text: null, params: null };
               obj[0] = sum;
               obj = {};
-              const merged = Object.assign(closure_1_13.current);
-              let dismissKeyboardResult = closure_1_16;
-              obj.chatInputRef = closure_1_16;
+              const merged = Object.assign(closure_1_14.current);
+              let dismissKeyboardResult = closure_1_17;
+              obj.chatInputRef = closure_1_17;
               obj[1] = obj;
               const result = tmp27Result.chatInputValidateContentLength(obj);
               if (null != result) {
@@ -567,11 +569,11 @@ export default function useChatInputRefs(chatInputProps) {
       hideSideActions() {
         const current = ref.current;
         if (current != null) {
-          current.onDismissActions(closure_14.current.focused);
+          current.onDismissActions(closure_15.current.focused);
         }
         const current2 = obj.current;
         if (current2 != null) {
-          current2.onDismissActions(closure_14.current.focused);
+          current2.onDismissActions(closure_15.current.focused);
         }
       },
       handleTextChanged(text) {
@@ -580,13 +582,13 @@ export default function useChatInputRefs(chatInputProps) {
       insertText(c22, tokenStart, flag, arg3, arg4) {
         let selectionStart = tokenStart;
         if (null == tokenStart) {
-          selectionStart = closure_14.current.selectionStart;
+          selectionStart = closure_15.current.selectionStart;
         }
         let selectionEnd = arg4;
         if (arg4 == null) {
-          selectionEnd = closure_14.current.selectionEnd;
+          selectionEnd = closure_15.current.selectionEnd;
         }
-        const current = closure_16.current;
+        const current = closure_17.current;
         obj = {
           location: selectionStart,
           length: Math.max(0, selectionEnd - selectionStart),
@@ -600,19 +602,19 @@ export default function useChatInputRefs(chatInputProps) {
         }
         obj[2] = text;
         obj[3] = arg3;
-        const editId = closure_14.current.editId;
+        const editId = closure_15.current.editId;
         obj[4] = editId;
         current.replaceRange(obj);
       },
       isFocused() {
-        return closure_14.current.focused;
+        return closure_15.current.focused;
       },
       openCustomKeyboard(keyboardParams) {
-        ({ channel, secondaryTextFieldRef } = closure_13.current);
+        ({ channel, secondaryTextFieldRef } = closure_14.current);
         lib(ref[35])({
           channelId: channel.id,
-          chatInputRef: closure_16,
-          chatInputNativeRef: closure_8,
+          chatInputRef: closure_17,
+          chatInputNativeRef: closure_9,
           keyboardParams,
           secondaryTextFieldRef,
         });
@@ -631,27 +633,27 @@ export default function useChatInputRefs(chatInputProps) {
           obj[0] = tmp(tmp2[22]).KeyboardTypes.SYSTEM;
           obj[1] = { keyboardWillOpen: true };
           tmpResult.setKeyboardType(obj);
-          lib(tmp2[14]).openSystemKeyboard(editingMessage.current);
+          lib(tmp2[14]).openSystemKeyboard(channelOnCooldown.current);
           const obj5 = lib(tmp2[14]);
         }
       },
       replaceRange(arg0) {
-        lib(ref[14]).replaceRange(editingMessage.current, arg0);
+        lib(ref[14]).replaceRange(channelOnCooldown.current, arg0);
       },
       setSelectedRange(arg0, arg1) {
-        lib(ref[14]).setSelectedRange(editingMessage.current, arg0, arg1);
+        lib(ref[14]).setSelectedRange(channelOnCooldown.current, arg0, arg1);
       },
       setText(arg0) {
-        lib(ref[14]).setText(editingMessage.current, arg0);
+        lib(ref[14]).setText(channelOnCooldown.current, arg0);
       },
       showSideActions() {
         const current = ref.current;
         if (current != null) {
-          current.onShowActions(closure_14.current.focused);
+          current.onShowActions(closure_15.current.focused);
         }
         const current2 = obj.current;
         if (current2 != null) {
-          current2.onShowActions(closure_14.current.focused);
+          current2.onShowActions(closure_15.current.focused);
         }
       },
       updateNativeTextBlocksThrottled(chatInputNodes, editId) {
@@ -669,23 +671,24 @@ export default function useChatInputRefs(chatInputProps) {
     };
     return obj;
   }, items3);
-  closure_16 = React.useRef(memo.chatInputRefObject);
+  closure_17 = React.useRef(memo.chatInputRefObject);
   const imperativeHandle = React.useImperativeHandle(chatInputProps.ref, memo.chatInputRefObjectCallback);
   return React.useMemo(
     () => ({
-      chatInput: closure_16,
+      chatInput: closure_17,
       chatInputCharCounter: closure_6,
       chatInputCover: closure_7,
       chatInputActions: closure_2,
       chatInputRightActions: closure_3,
       chatInputAutocomplete: closure_5,
+      chatInputEmojiSuggestions: closure_8,
       chatInputAppCommandManager: closure_4,
-      chatInputNative: closure_8,
-      chatInputSendButton: closure_9,
-      chatInputTextFlushedResponses: closure_10,
-      props: closure_13,
-      propsPrev: closure_12,
-      state: closure_14,
+      chatInputNative: closure_9,
+      chatInputSendButton: closure_10,
+      chatInputTextFlushedResponses: closure_11,
+      props: closure_14,
+      propsPrev: closure_13,
+      state: closure_15,
     }),
     [],
   );

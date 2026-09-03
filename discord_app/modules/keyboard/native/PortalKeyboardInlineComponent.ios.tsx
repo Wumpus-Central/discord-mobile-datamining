@@ -18,11 +18,11 @@ const memoResult = importAllResult.memo(function InlinePortalKeyboard(messagesRe
   id = importAllResult.useId();
   const tmp2 = id(4342)();
   dependencyMap = tmp2;
-  let tmp4 = id(6242)({ includeCustomKeyboard: false });
+  let tmp4 = id(6243)({ includeCustomKeyboard: false });
   importAllResult = tmp4;
   let tmp3 = id(1893)();
   keyboardContextForType = messagesRef(4342).useKeyboardContextForType(messagesRef(1625).KeyboardTypes.SYSTEM);
-  id(4945)(() => () => {
+  id(4946)(() => () => {
     const PortalKeyboardUIStore = closure_1_0(closure_1_2[8]).PortalKeyboardUIStore;
     field = PortalKeyboardUIStore.getField("keyboard");
     let tmp4 = null != field;
@@ -62,11 +62,11 @@ const memoResult = importAllResult.memo(function InlinePortalKeyboard(messagesRe
                 const DCDChatManager3 = keyboardContextForType.DCDChatManager;
                 const result1 = DCDChatManager3.customKeyboardWillShow(
                   tmp38,
-                  messagesRef(11213).getKeyboardActionSheetHeight().minimum,
+                  messagesRef(11217).getKeyboardActionSheetHeight().minimum,
                   0.25,
                   7,
                 );
-                const obj3 = messagesRef(11213);
+                const obj3 = messagesRef(11217);
               }
             }
           }

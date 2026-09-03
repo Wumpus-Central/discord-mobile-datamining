@@ -1,6 +1,6 @@
 // discord_app/modules/contact_sync/native/components/ContactSyncNameUpdateModal.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef4723 from "../../../../actions/ModalActionCreators.tsx";
+import _modDef4724 from "../../../../actions/ModalActionCreators.tsx";
 import NavigationStack from "../../../../design/components/Navigator/native/Navigator.native.tsx";
 import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import closure_4 from "../../../../../_runtime/metro/00032__slicedToArray.js";
@@ -13,7 +13,7 @@ import HeaderBackImage from "../../../../design/components/Navigator/native/Navi
 
 require = arg1;
 function onClose() {
-  let arr = _modDef4723;
+  let arr = _modDef4724;
   arr = arr.pop();
 }
 function ContactSyncNameInputScreen() {
@@ -38,14 +38,14 @@ function ContactSyncNameInputScreen() {
         closure_1 = tmp3;
         callback(true);
         c3 = 1;
-        yield closure_1_1(12446).updateName(callback);
+        yield closure_1_1(12458).updateName(callback);
         if (1 === tmp7) {
           c3 = 0;
           obj1 = closure_1_1(4194);
           const obj2 = { key: "ERROR_GENERIC_TITLE", content: null, icon: null };
           const intl = callback(1233).intl;
           obj2[1] = intl.string(callback(1233).t.R0RpRX);
-          obj2[2] = closure_1_1(7689);
+          obj2[2] = closure_1_1(7692);
           obj1.open(obj2);
           callback(false);
           c4 = 3;

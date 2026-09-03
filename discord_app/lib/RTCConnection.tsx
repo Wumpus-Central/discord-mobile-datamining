@@ -23,7 +23,7 @@ import openAll from "../actions/RTCDebugActionCreators.tsx";
 import noop from "RTCControlSocket.tsx";
 import noopDefault from "RTCControlSocket.tsx";
 import getUnitIdDefault2 from "../modules/calls/VideoStabilizationExperiment.tsx";
-import _modDef13702 from "../modules/media_engine/BandwidthEstimationExperiment.tsx";
+import _modDef13717 from "../modules/media_engine/BandwidthEstimationExperiment.tsx";
 import closure_4 from "../../_runtime/00005_asyncGeneratorStep.js";
 import closure_5 from "../modules/media_engine/DeviceFrecencyStore.tsx";
 import closure_6 from "../modules/media_engine/MediaEngineStatsStore.tsx";
@@ -723,12 +723,12 @@ prototype["destroy"] = function destroy() {
   }
   obj = { c: constants9.CONNECTION_DESTROY };
   self.recordEvent(obj);
-  const WindowVisibilityVideoManager = tmp5(9591).WindowVisibilityVideoManager;
+  const WindowVisibilityVideoManager = tmp5(9595).WindowVisibilityVideoManager;
   WindowVisibilityVideoManager.off(
     isIncomingVideoEnabled.WindowVisibilityEvent.IncomingVideoEnabledChanged,
     self.incomingVideoEnabledChanged,
   );
-  const WindowVisibilityVideoManager2 = tmp5(9591).WindowVisibilityVideoManager;
+  const WindowVisibilityVideoManager2 = tmp5(9595).WindowVisibilityVideoManager;
   WindowVisibilityVideoManager2.off(
     isIncomingVideoEnabled.WindowVisibilityEvent.WindowVisibilityChanged,
     self.windowVisibilityChanged,
@@ -810,7 +810,7 @@ prototype["sendSpeaking"] = function sendSpeaking(_lastSentSpeakingStatus, _last
   const _socket = this._socket;
   if (null != _socket) {
     if (self.shouldSendSpeaking(_lastSentSpeakingStatus, _lastSentSSRC)) {
-      _socket.speaking(_lastSentSpeakingStatus, store2.getPacketDelay(), _lastSentSSRC);
+      _socket.speaking(_lastSentSpeakingStatus, store2.getPacketDelay(self.context), _lastSentSSRC);
     }
   }
 };
@@ -1176,7 +1176,7 @@ prototype["_chooseExperiments"] = function _chooseExperiments(items) {
   const tmp3 = importDefault;
   let enabled = set2.isWeb();
   if (enabled) {
-    const BrowserTransceiverPaddingRemovalExperiment = tmp8(13687).BrowserTransceiverPaddingRemovalExperiment;
+    const BrowserTransceiverPaddingRemovalExperiment = tmp8(13702).BrowserTransceiverPaddingRemovalExperiment;
     enabled = BrowserTransceiverPaddingRemovalExperiment.getConfig({ location: "RTCConnection" }).enabled;
   }
   if (enabled) {
@@ -1195,11 +1195,11 @@ prototype["_chooseExperiments"] = function _chooseExperiments(items) {
   tmp8Result = tmp8(1234);
   let isAndroidResult = tmp8Result.isAndroid();
   if (isAndroidResult) {
-    isAndroidResult = tmp8(9587).isSurfaceDirectRendererExperimentEnabled();
-    const tmp8Result1 = tmp8(9587);
+    isAndroidResult = tmp8(9591).isSurfaceDirectRendererExperimentEnabled();
+    const tmp8Result1 = tmp8(9591);
   }
   if (isAndroidResult) {
-    items.push(tmp8(9587).ANDROID_SURFACE_DIRECT_RENDERER_EXPERIMENT);
+    items.push(tmp8(9591).ANDROID_SURFACE_DIRECT_RENDERER_EXPERIMENT);
   }
   this._selectedExperiments = items;
 };
@@ -2435,16 +2435,16 @@ prototype["getOrCreateVideoQuality"] = function getOrCreateVideoQuality() {
   self = this;
   if (null != this._connection) {
     if (null == self._videoQuality) {
-      const videoQuality = new self(13699).VideoQuality(self._connection);
+      const videoQuality = new self(13714).VideoQuality(self._connection);
       self._videoQuality = videoQuality;
       const _videoQuality2 = self._videoQuality;
       let result = _videoQuality2.updateCallUserIdsCount(self._userIds.size);
       const _videoQuality3 = self._videoQuality;
       _videoQuality3.start();
-      const defaultConfig = self(13700).VideoHealthManager.defaultConfig;
+      const defaultConfig = self(13715).VideoHealthManager.defaultConfig;
       ({ windowLength, allowedPoorFpsRatio, fpsThreshold, backoffTimeSec } = defaultConfig);
       if (defaultConfig.featureEnabled) {
-        const videoHealthManager = new tmp10(13700).VideoHealthManager(
+        const videoHealthManager = new tmp10(13715).VideoHealthManager(
           windowLength,
           allowedPoorFpsRatio,
           fpsThreshold,
@@ -2455,7 +2455,7 @@ prototype["getOrCreateVideoQuality"] = function getOrCreateVideoQuality() {
           self._localMediaSinkWantsManager.videoHealthManager = self._videoHealthManager;
         }
         const _videoQuality = self._videoQuality;
-        _videoQuality.on(tmp10(13699).VideoQualityEvent.FpsUpdate, (arg0, arg1, arg2) => {
+        _videoQuality.on(tmp10(13714).VideoQualityEvent.FpsUpdate, (arg0, arg1, arg2) => {
           const _localMediaSinkWantsManager = self._localMediaSinkWantsManager;
           let result;
           if (_localMediaSinkWantsManager != null) {
@@ -3023,7 +3023,7 @@ prototype["_handleBandwidthEstimationExperiment"] = function _handleBandwidthEst
   _bandwidthEstimationExperiment,
 ) {
   this._bandwidthEstimationExperiment = _bandwidthEstimationExperiment;
-  const mediaEngineExperiments = _modDef13702.getMediaEngineExperiments(_bandwidthEstimationExperiment);
+  const mediaEngineExperiments = _modDef13717.getMediaEngineExperiments(_bandwidthEstimationExperiment);
   let tmp = null !== mediaEngineExperiments;
   if (tmp) {
     tmp = 0 !== mediaEngineExperiments.length;

@@ -4,9 +4,9 @@ import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.
 import Button from "../../../design/void/native.tsx";
 import ChatIcon from "../../../design/components/Icon/native/redesign/generated/ChatIcon.tsx";
 import RobotIcon2 from "../../../design/components/Icon/native/redesign/generated/RobotIcon.tsx";
-import registerAssetDefault from "../../../../_runtime/17372_registerAsset.js";
-import registerAssetDefault2 from "../../../../_runtime/17373_registerAsset.js";
-import registerAssetDefault3 from "../../../../_runtime/17374_registerAsset.js";
+import registerAssetDefault from "../../../../_runtime/17392_registerAsset.js";
+import registerAssetDefault2 from "../../../../_runtime/17393_registerAsset.js";
+import registerAssetDefault3 from "../../../../_runtime/17394_registerAsset.js";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import getTargetType from "../../../records/AuditLogRecord.tsx";
 import ME from "../../../Constants.tsx";

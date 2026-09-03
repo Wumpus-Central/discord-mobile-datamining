@@ -6,7 +6,7 @@ import useNavigation from "../../../../design/components/Navigator/native/useNav
 import Text from "../../../../design/components/Text/native/Text.tsx";
 import Button2 from "../../../../design/components/Button/native/Button.native.tsx";
 import useSafeAreaInsetsKeyboardAwareDefault from "../../../safe_area/useSafeAreaInsetsKeyboardAware.native.tsx";
-import _modDef7713 from "../../../../design/void/Form/native/FreeFormInputGroup.tsx";
+import _modDef7716 from "../../../../design/void/Form/native/FreeFormInputGroup.tsx";
 import HubEmailConnectionModal from "HubEmailConnectionModal.tsx";
 import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import closure_4 from "../../../../../_runtime/metro/00032__slicedToArray.js";
@@ -216,7 +216,7 @@ export default function HubEmailConnectionSubmitSchool(arg0) {
       }
     }, 100);
   };
-  items1[2] = callback2(_modDef7713, obj4);
+  items1[2] = callback2(_modDef7716, obj4);
   obj1[1] = items1;
   const items2 = [closure_10(first, obj1), callback2(first, { style: tmp.redesignGrowSpacing })];
   const obj7 = { style: tmp.redesignSubmit, children: null };

@@ -32,7 +32,7 @@ export const getButtonActionHandler = function getButtonActionHandler(arg0) {
         closure_1_1(closure_1_2[4])(obj);
       }
     };
-  } else if (tmp(8464).ButtonAction.OPEN_TIER_1_PAYMENT_MODAL === buttonAction) {
+  } else if (tmp(8468).ButtonAction.OPEN_TIER_1_PAYMENT_MODAL === buttonAction) {
     return () => {
       obj = {
         analyticsLocation: obj,
@@ -50,9 +50,9 @@ export const getButtonActionHandler = function getButtonActionHandler(arg0) {
       return closure_1_1(closure_1_2[5])(obj);
     };
   } else {
-    if (tmp(8464).ButtonAction.OPEN_TIER_2_PAYMENT_MODAL !== buttonAction) {
-      if (tmp(8464).ButtonAction.OPEN_TIER_2_PAYMENT_MODAL_CUSTOM_CONFIRMATION_FOOTER !== buttonAction) {
-        if (tmp(8464).ButtonAction.OPEN_PLAN_SELECTION_MODAL === buttonAction) {
+    if (tmp(8468).ButtonAction.OPEN_TIER_2_PAYMENT_MODAL !== buttonAction) {
+      if (tmp(8468).ButtonAction.OPEN_TIER_2_PAYMENT_MODAL_CUSTOM_CONFIRMATION_FOOTER !== buttonAction) {
+        if (tmp(8468).ButtonAction.OPEN_PLAN_SELECTION_MODAL === buttonAction) {
           return () => {
             obj = {
               analyticsLocation: obj,
@@ -69,7 +69,7 @@ export const getButtonActionHandler = function getButtonActionHandler(arg0) {
             return closure_1_1(closure_1_2[5])(obj);
           };
         } else {
-          const OPEN_MARKETING_PAGE = tmp(8464).ButtonAction.OPEN_MARKETING_PAGE;
+          const OPEN_MARKETING_PAGE = tmp(8468).ButtonAction.OPEN_MARKETING_PAGE;
           return () => {
             let obj = callback(table[8]);
             obj = { screen: constants.PREMIUM };

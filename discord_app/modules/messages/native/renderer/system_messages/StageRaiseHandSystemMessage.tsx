@@ -47,7 +47,7 @@ export const createStageRaiseHandSystemMessage = function createStageRaiseHandSy
   const intl = tmp(1233).intl;
   obj = {
     username: messageAuthorWithProcessedColor.nick,
-    usernameOnClick: tmp6(7880)({ message, author: messageAuthorWithProcessedColor, roleStyle: roleStyle.roleStyle }),
+    usernameOnClick: tmp6(7883)({ message, author: messageAuthorWithProcessedColor, roleStyle: roleStyle.roleStyle }),
   };
   obj[0] = intl.formatToParts(getSystemLocale.t.M87x7Y, obj);
   obj[1] = canResult;
@@ -71,6 +71,6 @@ export const createStageRaiseHandSystemMessage = function createStageRaiseHandSy
     }
   }
   obj[3] = tmp10;
-  const merged = Object.assign(tmp6(7882)(roleStyle));
+  const merged = Object.assign(tmp6(7885)(roleStyle));
   return obj;
 };

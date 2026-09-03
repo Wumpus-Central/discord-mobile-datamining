@@ -23,9 +23,9 @@ export default function getEffectiveNoiseCancellation(arg0, arg1) {
           tmp5 = arg1 !== deep_noise_suppression;
         }
         if (!tmp5) {
-          tmp5 = !tmp(10101).getWindowsAudioEffectsExperimentConfig({ location: "setNoiseCancellation" })
+          tmp5 = !tmp(10105).getWindowsAudioEffectsExperimentConfig({ location: "setNoiseCancellation" })
             .preferSystemEffects;
-          const tmpResult1 = tmp(10101);
+          const tmpResult1 = tmp(10105);
         }
         if (tmp5) {
           tmp5 = arg0;

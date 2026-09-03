@@ -2,7 +2,7 @@
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import useSettingNavigationRoute from "../../core/native/useSettingNavigationRoute.tsx";
-import _modDef7713 from "../../../../design/void/Form/native/FreeFormInputGroup.tsx";
+import _modDef7716 from "../../../../design/void/Form/native/FreeFormInputGroup.tsx";
 import handleOpenEmailVerificationDefault from "UserSettingsAccountUnverifiedHeader.tsx";
 import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import closure_4 from "../../../../../_runtime/metro/00032__slicedToArray.js";
@@ -252,7 +252,7 @@ const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
       fieldMessage = obj1.getFieldMessage("password");
     }
     obj3[9] = fieldMessage;
-    items3[2] = callback(_modDef7713, obj3);
+    items3[2] = callback(_modDef7716, obj3);
     let tmp19Result = null;
     if (null != obj1) {
       tmp19Result = null;
@@ -260,7 +260,7 @@ const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
         const obj4 = { style: null, children: null };
         obj4[0] = tmp.hint;
         obj4[1] = obj1.message;
-        tmp19Result = tmp19(tmp20(7723), obj4);
+        tmp19Result = tmp19(tmp20(7726), obj4);
       }
     }
     items3[3] = tmp19Result;
@@ -271,7 +271,7 @@ const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
     obj6[2] = intl4.string(tmp3(1233).t.i4jeWR);
     obj6[3] = handleSubmit;
     obj6[4] = tmp7;
-    obj5[1] = callback(tmp3(4928).Button, obj6);
+    obj5[1] = callback(tmp3(4929).Button, obj6);
     items3[4] = callback(_handleSubmit, obj5);
     obj[1] = items3;
     items2[1] = closure_11(_handleSubmit, obj);
@@ -279,7 +279,7 @@ const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
     tmp13Result = tmp13(closure_7, obj);
     const tmp14 = closure_7;
     tmp20 = importDefault;
-    const tmp21 = _modDef7713;
+    const tmp21 = _modDef7716;
   }
   return tmp13Result;
 });

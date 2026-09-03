@@ -36,9 +36,9 @@ export default function EmptyState() {
   const tmp = callback3();
   let obj = AccessibilityAnnouncer;
   const tmp4 = importDefault;
-  const tmp4Result = importDefault(obj.isThemeLight(useThemeDefault()) ? 11909 : 11910);
+  const tmp4Result = importDefault(obj.isThemeLight(useThemeDefault()) ? 11915 : 11916);
   const logAppLauncherEmptyStateView = handleApplicationSelected.useLogAppLauncherEmptyStateView(
-    tmp2(8444).AppLauncherEmptyStateType.HOME_NO_PERMISSIONS,
+    tmp2(8448).AppLauncherEmptyStateType.HOME_NO_PERMISSIONS,
   );
   obj = { style: tmp.container, children: null };
   obj = { style: tmp.image, resizeMode: "contain", source: tmp4Result };

@@ -25,7 +25,8 @@ require = arg1;
   PREMIUM_TIER_2_LIKELIHOOD_DISCOUNT_ID: closure_14,
   PREMIUM_TIER_2_REACTIVATION_DISCOUNT_ID: closure_15,
   PREMIUM_TIER_2_REENGAGEMENT_1_MONTH_40_PERCENT_DISCOUNT_ID: closure_16,
-  PREMIUM_GROUP_30_PERCENT_3_MONTH_DISCOUNT_ID: closure_17,
+  PREMIUM_TIER_2_REFERRAL_INCENTIVE_DISCOUNT_ID: closure_17,
+  PREMIUM_GROUP_30_PERCENT_3_MONTH_DISCOUNT_ID: closure_18,
 } = GuildFeatures);
 function useHasDiscountApplied() {
   const items = [closure_5];
@@ -126,17 +127,21 @@ export const useActiveDiscountInfo = function useActiveDiscountInfo() {
               const obj4 = { duration: 1, percentage: 40, discountId: null };
               obj4[2] = discountId;
               return obj4;
-            } else if (closure_17 === discountId) {
+            } else if (closure_18 === discountId) {
               const obj5 = { duration: 3, percentage: 30, discountId: null };
               obj5[2] = discountId;
               return obj5;
+            } else if (closure_17 === discountId) {
+              const obj6 = { duration: 1, percentage: 30, discountId: null };
+              obj6[2] = discountId;
+              return obj6;
             }
           }
         }
       }
-      const obj6 = { duration: 3, percentage: 30, discountId: null };
-      obj6[2] = discountId;
-      return obj6;
+      const obj7 = { duration: 3, percentage: 30, discountId: null };
+      obj7[2] = discountId;
+      return obj7;
     }
   }
   return { duration: 1, percentage: 30, discountId };

@@ -23,7 +23,7 @@ export const getPriceString = function getPriceString(hasAnyPremiumGroup) {
           const formatPriceResult = formatSingleCurrencyPrice.formatPrice(price.amount, price.currency);
           if (tmp) {
             ({ interval, intervalCount } = value);
-            return tmp2(6089).formatRate(formatPriceResult, interval, intervalCount);
+            return tmp2(6090).formatRate(formatPriceResult, interval, intervalCount);
           } else {
             return formatPriceResult;
           }

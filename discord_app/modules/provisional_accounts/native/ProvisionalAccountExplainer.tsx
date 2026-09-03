@@ -35,7 +35,7 @@ export const ChatProvisionalAccountExplainerCard = function ChatProvisionalAccou
       ),
     items,
   );
-  let obj = iconSize(12391);
+  let obj = iconSize(12403);
   const provisionalAccountExplanationText = obj.useProvisionalAccountExplanationText({
     userId,
     renderApplicationName: callback,
@@ -48,7 +48,7 @@ export const ChatProvisionalAccountExplainerCard = function ChatProvisionalAccou
   obj1[2] = intl.string(iconSize(1233).t.Iyka0U);
   const items2 = [
     callback(iconSize(4474).Text, obj1),
-    callback(iconSize(7717).CircleErrorIcon, { size: "xs", color: "text-default" }),
+    callback(iconSize(7720).CircleErrorIcon, { size: "xs", color: "text-default" }),
   ];
   obj[1] = items2;
   const items3 = [
@@ -60,7 +60,7 @@ export const ChatProvisionalAccountExplainerCard = function ChatProvisionalAccou
     }),
   ];
   obj[1] = items3;
-  return callback2(iconSize(5609).Card, obj);
+  return callback2(iconSize(5610).Card, obj);
 };
 export const UserProfileProvisionalAccountExplainerCard = function UserProfileProvisionalAccountExplainerCard(
   iconSize,
@@ -78,7 +78,7 @@ export const UserProfileProvisionalAccountExplainerCard = function UserProfilePr
       ),
     items,
   );
-  let obj = iconSize(12391);
+  let obj = iconSize(12403);
   const provisionalAccountExplanationText = obj.useProvisionalAccountExplanationText({
     userId,
     renderApplicationName: callback,
@@ -86,7 +86,7 @@ export const UserProfileProvisionalAccountExplainerCard = function UserProfilePr
   obj = { style, title: null, titleIcon: null, children: null };
   const intl = iconSize(1233).intl;
   obj[1] = intl.string(iconSize(1233).t.Iyka0U);
-  obj[2] = callback(iconSize(7717).CircleErrorIcon, { size: "xs", color: "text-default" });
+  obj[2] = callback(iconSize(7720).CircleErrorIcon, { size: "xs", color: "text-default" });
   obj[3] = callback(iconSize(4474).Text, {
     variant: "text-md/normal",
     color: "text-default",

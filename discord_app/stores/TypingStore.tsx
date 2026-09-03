@@ -157,7 +157,7 @@ const typingStore = new TypingStore(dispatcherDefault, {
     id = store.getId();
     if (null == id) {
       return false;
-    } else if (channelId === channelId(6076).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID) {
+    } else if (channelId === channelId(6077).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID) {
       return false;
     } else {
       let tmp3 = null != obj;

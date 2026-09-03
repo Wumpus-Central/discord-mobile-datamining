@@ -518,7 +518,9 @@ const styleProperties = createCacheKey.createStyleProperties((arg0) => {
       break;
     case "ay":
       break;
-    case "guildRoomLocalDisconnect":
+    case "guildScheduledEvent":
+      break;
+    case "guildScheduledEventId":
       break;
     case "extraBottomHeight":
       break;
@@ -560,11 +562,11 @@ const styleProperties = createCacheKey.createStyleProperties((arg0) => {
       break;
     case "Setter":
       break;
-    case "useDefaultSendStartStageNotificationToggle":
+    case "useDetectorAttachmentGuard":
       break;
-    case "NotificationToggle":
+    case "entitlementBranchId":
       break;
-    case "onToggleReplyMention":
+    case "NitroGem24Lottie":
       break;
     case "MarkupParserNodeTypeError":
       break;
@@ -598,8 +600,6 @@ const styleProperties = createCacheKey.createStyleProperties((arg0) => {
       break;
     case "CALL_ACCEPT":
       break;
-    case "ForumSpoilerIcon":
-      break;
     case "rm":
       break;
     case "m":
@@ -622,15 +622,7 @@ const styleProperties = createCacheKey.createStyleProperties((arg0) => {
       break;
     case "perGuildMaxCount":
       break;
-    case "parseUrl":
-      break;
-    case "parseUrlencoded":
-      break;
-    case "encodedBodySize":
-      break;
-    case "platformProfilers":
-      break;
-    case "isFetchingSounds":
+    case "flag_sm":
       break;
     case "getChannelIcon":
       break;
@@ -686,6 +678,8 @@ const styleProperties = createCacheKey.createStyleProperties((arg0) => {
       break;
     case "TouchEventBoundary":
       break;
+    case "createGuildReportFalseAlarmSystemMessage":
+      break;
     case "$ZodMap":
       break;
     case "ZodMap":
@@ -694,7 +688,23 @@ const styleProperties = createCacheKey.createStyleProperties((arg0) => {
       break;
     case "ap":
       break;
-    case "AbortCodes":
+    case "compose":
+      break;
+    case "composed":
+      break;
+    case "composedPath":
+      break;
+    case "rules_version":
+      break;
+    case "onVideoEnd":
+      break;
+    case "AppStorePremiumProductIdsToPremiumBundledItems":
+      break;
+    case "ProductIds":
+      break;
+    case "rod":
+      break;
+    case "ItemsSortingHat":
       break;
     case "ToIntlMathematicalValue":
       break;
@@ -728,9 +738,9 @@ const styleProperties = createCacheKey.createStyleProperties((arg0) => {
       break;
     case "IT":
       break;
-    case "toolCallSpanMap":
+    case "FadeInRight":
       break;
-    case "getPendingChanges":
+    case "PLUM_5":
       break;
     case "MEDIA_PICKER_SEND_BUTTON_SPRING":
       break;
@@ -740,21 +750,15 @@ const styleProperties = createCacheKey.createStyleProperties((arg0) => {
       break;
     case "rect":
       break;
-    case "QUEST_HOME_SEARCH_CLOSED":
+    case "DURATION_SECONDS":
       break;
-    case "SEARCH_CLOSED":
-      break;
-    case "CHANNEL_NOTICE_SHOW_DELAY":
-      break;
-    case "DELAYED":
+    case "SECONDS":
       break;
     case "PX_80":
       break;
     case "_":
       break;
-    case "createForumPostActions":
-      break;
-    case "suppressRowAnimationSequenceId":
+    case "system_channel_id":
       break;
     case "AUTO_MODERATION_REMOVE_REGEX_PATTERNS":
       break;
@@ -778,23 +782,19 @@ const styleProperties = createCacheKey.createStyleProperties((arg0) => {
       break;
     case "woman_and_man_holding_hands_tone1_tone4":
       break;
-    case "CHANNEL_CALL":
+    case "guildEmojis":
       break;
-    case "CHANNEL_CALL_ACTION_BAR":
+    case "isAVI":
       break;
-    case "CALL_ACTION_BAR_HEIGHT":
+    case "isAVIF":
       break;
-    case "fgClip":
+    case "IFD_TYPE_GPS":
       break;
-    case "ClipViewAnimated":
+    case "GPSAltitude":
       break;
-    case "AnimatedFlashList":
+    case "GPSAltitudeRef":
       break;
-    case "FlashList":
-      break;
-    case "FlashListRef":
-      break;
-    case "las":
+    case "Altitude":
       break;
     case "R":
       break;
@@ -805,6 +805,26 @@ const styleProperties = createCacheKey.createStyleProperties((arg0) => {
     case "f":
       break;
     case "BinaryReader":
+      break;
+    case "Touchable":
+      break;
+    case "TouchableHaptic":
+      break;
+    case "lastWarningFetchDayStart":
+      break;
+    case "artWrapper":
+      break;
+    case "performKeyboardAwareNavigation":
+      break;
+    case "selectorOuterContainer":
+      break;
+    case "ethernet":
+      break;
+    case "Google":
+      break;
+    case "Google TV":
+      break;
+    case "TV":
       break;
     case "$ZodSet":
       break;
@@ -854,15 +874,17 @@ const styleProperties = createCacheKey.createStyleProperties((arg0) => {
       break;
     case "bol":
       break;
-    case "QUEST_BAR_RENDERED":
+    case "QUEST_BAR_MOBILE":
       break;
-    case "RED_NEW_45":
+    case "QUEST_BAR_MOBILE_TIME_TO_FIRST_PAINT":
       break;
-    case "hasConnection":
+    case "INTERACTIVE_MUTED":
       break;
-    case "hasConnectionEntrypointUrl":
+    case "woman_kneeling_facing_right_tone4":
       break;
-    case "gameClaimMarkAsDismissed":
+    case "man_kneeling_facing_right_tone4":
+      break;
+    case "fuseboxNetworkInspectionEnabled":
       break;
     case "ActionSheetHeaderPressableText":
       break;
@@ -872,7 +894,7 @@ const styleProperties = createCacheKey.createStyleProperties((arg0) => {
       break;
     case "ext":
       break;
-    case "isProfileFrameRecord":
+    case "isProfileEffectRecord":
       break;
     case "AccessibilityFocusView":
       break;
@@ -956,7 +978,7 @@ const styleProperties = createCacheKey.createStyleProperties((arg0) => {
       break;
     case "du":
       break;
-    case "GuidelinesIllocon":
+    case "GroupGamingSpotIllustration":
       break;
     case "__i":
       break;
@@ -1084,19 +1106,21 @@ const styleProperties = createCacheKey.createStyleProperties((arg0) => {
       break;
     case "bel":
       break;
-    case "PREMIUM_TIER_2_PINK":
-      break;
-    case "PREMIUM_TIER_2_PINK_FOR_GRADIENTS":
-      break;
-    case "PREMIUM_TIER_2_PINK_FOR_GRADIENTS_2":
+    case "PREMIUM_TIER_0_HEADER_GRADIENT_2":
       break;
     case "Role":
       break;
     case "RoleFlags":
       break;
-    case "scrollToItem":
+    case "scrollToEnd":
       break;
-    case "embedUrl":
+    case "addInpInstrumentationHandler":
+      break;
+    case "r_mark_suffix_with_optional_n_consonant$esjava$0":
+      break;
+    case "rBIGBL":
+      break;
+    case "Q8gkVL":
       break;
     case "accessibleDismiss":
       break;
@@ -1132,31 +1156,11 @@ const styleProperties = createCacheKey.createStyleProperties((arg0) => {
       break;
     case "paddingVertical":
       break;
-    case "initializeRouterUtils":
+    case "getVideoQoEMetricsConfig":
       break;
-    case "GUILD_MEMBER_REQUEST_TO_JOIN":
+    case "UNKNOWN_PAYMENT_SOURCE":
       break;
-    case "REQUEST_TO_JOIN_USER_INELIGIBLE":
-      break;
-    case "INELIGIBLE":
-      break;
-    case "INELIGIBLE_FOR_FAMILY_CENTER":
-      break;
-    case "FAMILY_CENTER":
-      break;
-    case "FAMILY_CENTER_ACTION":
-      break;
-    case "CENTER":
-      break;
-    case "ENTER":
-      break;
-    case "TWITTER_LEGACY":
-      break;
-    case "LEGACY_AUDIO_SUBSYSTEM":
-      break;
-    case "SYSTEM_CHANNEL_FLAG_JOIN_NOTIFICATION_REPLIES":
-      break;
-    case "PAYPAL_FLOW_OPTION_REQUIRED":
+    case "PAYMENT_SOURCE_REQUIRED":
       break;
     case "RED_NEW_34":
       break;
@@ -1174,15 +1178,7 @@ const styleProperties = createCacheKey.createStyleProperties((arg0) => {
       break;
     case "ms":
       break;
-    case "flag_sk":
-      break;
-    case "spade_suit":
-      break;
-    case "DARK_BRAND_260_LIGHT_BRAND_200":
-      break;
-    case "BRAND_260":
-      break;
-    case "BRAND_200":
+    case "loadTimeCollector":
       break;
     case "GuildEntityDao":
       break;
@@ -1190,15 +1186,7 @@ const styleProperties = createCacheKey.createStyleProperties((arg0) => {
       break;
     case "Dao":
       break;
-    case "kiss_woman_woman_dark_skin_tone_medium_skin_tone":
-      break;
-    case "isTrustedProtocol":
-      break;
-    case "collapsable":
-      break;
-    case "collapsableChildren":
-      break;
-    case "renderCodedLinks":
+    case "renderLatestMessages":
       break;
     case "app":
       break;
@@ -1216,11 +1204,21 @@ const styleProperties = createCacheKey.createStyleProperties((arg0) => {
       break;
     case "io":
       break;
-    case "showHidden":
+    case "showHelp":
+      break;
+    case "HelpMessage":
+      break;
+    case "HelpMessageTypes":
+      break;
+    case "MessageTypesWithLazyLoadedReferences":
       break;
     case "_applyCombination":
       break;
     case "ly":
+      break;
+    case "trequest":
+      break;
+    case "requestActivityItems":
       break;
     case "backoffTimeSec":
       break;
@@ -1244,11 +1242,11 @@ const styleProperties = createCacheKey.createStyleProperties((arg0) => {
       break;
     case "gn":
       break;
-    case "mapViewabilityValues":
+    case "map_of_japan":
       break;
-    case "stickySectionHeadersEnabled":
+    case "japan":
       break;
-    case "huit":
+    case "japanese_castle":
       break;
     case "foi":
       break;
@@ -1280,19 +1278,19 @@ const styleProperties = createCacheKey.createStyleProperties((arg0) => {
       break;
     case "SPECTATOR_MODE":
       break;
-    case "FormSubmitErrorType":
+    case "_listRef":
       break;
-    case "person_walking_facing_right_tone3":
+    case "listRef":
       break;
-    case "numHours":
+    case "listRefHappeningNow":
       break;
-    case "giftReminderCoachmark":
+    case "HappeningNowCardHeader":
       break;
-    case "view_seek_duration":
+    case "HeaderSubmittingIndicator":
       break;
-    case "durationV":
+    case "_sessionValue":
       break;
-    case "onVerified":
+    case "onValueReached":
       break;
     case "_bodyArrayBuffer":
       break;
@@ -1311,6 +1309,10 @@ const styleProperties = createCacheKey.createStyleProperties((arg0) => {
     case "Radius":
       break;
     case "iu":
+      break;
+    case "isCurrentUserTeen":
+      break;
+    case "Teen Screen Time Illo":
       break;
     case "overflow_bottom":
       break;
@@ -1374,8 +1376,6 @@ const styleProperties = createCacheKey.createStyleProperties((arg0) => {
       break;
     case "ren":
       break;
-    case "reversed_hand_with_middle_finger_extended_tone4":
-      break;
     case "_longestInteractionMap":
       break;
     case "applicationTopWrapperScrollView":
@@ -1383,6 +1383,8 @@ const styleProperties = createCacheKey.createStyleProperties((arg0) => {
     case "onTop":
       break;
     case "wMWyci":
+      break;
+    case "ci":
       break;
     case "ix8XIj":
       break;
@@ -1404,6 +1406,14 @@ const styleProperties = createCacheKey.createStyleProperties((arg0) => {
       break;
     case "rs":
       break;
+    case "isAutomatedPageLoadSpan":
+      break;
+    case "kiss_tone2":
+      break;
+    case "timeoutTimer":
+      break;
+    case "merman_medium_light_skin_tone":
+      break;
     case "addUserId":
       break;
     case "disableGuildSelect":
@@ -1412,9 +1422,11 @@ const styleProperties = createCacheKey.createStyleProperties((arg0) => {
       break;
     case "concatSettings":
       break;
-    case "subtitleTrailing":
+    case "substreams":
       break;
-    case "getLicense":
+    case "streams":
+      break;
+    case "jfif":
       break;
     case "$constructor":
       break;
@@ -1429,8 +1441,24 @@ const styleProperties = createCacheKey.createStyleProperties((arg0) => {
     case "ru":
       break;
     case "tor":
+      obj[0] = ThemesDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT;
+      obj[1] = ThemesDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_ACTIVE;
+      obj[2] = c4;
+      obj[3] = c4;
       break;
     case "windowLength":
+      break;
+    case "LaunchApplication15":
+      break;
+    case "minutes":
+      break;
+    case "minutesAgo":
+      break;
+    case "goLiveUpsellVariant":
+      break;
+    case "trackUserProfileAction":
+      break;
+    case "useGetOrFetchSubscriptionPlan":
       break;
     case "_container":
       break;
@@ -1439,10 +1467,6 @@ const styleProperties = createCacheKey.createStyleProperties((arg0) => {
     case "containerBorderColor":
       break;
     case "ai":
-      obj[0] = ThemesDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT;
-      obj[1] = ThemesDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_ACTIVE;
-      obj[2] = c4;
-      obj[3] = c4;
       break;
     case "ner":
       break;
@@ -1464,11 +1488,27 @@ const styleProperties = createCacheKey.createStyleProperties((arg0) => {
       break;
     case "withAlphabeticalSections":
       break;
-    case "d+0vwo":
+    case "man_with_turban":
       break;
-    case "wol":
+    case "man_with_turban_tone1":
       break;
-    case "wolf":
+    case "_installSetStateHooks":
+      break;
+    case "install":
+      break;
+    case "SafetyBookletSpotIllustration":
+      break;
+    case "flag_ug":
+      break;
+    case "USER_FLOW_TRANSITION":
+      break;
+    case "getConstants":
+      break;
+    case "getConstantsForViewManager":
+      break;
+    case "parseUnicodeLocaleId":
+      break;
+    case "enablePanDownToClose":
       break;
     case "AccountAgeTier10LargeBadge":
       break;
@@ -1476,19 +1516,17 @@ const styleProperties = createCacheKey.createStyleProperties((arg0) => {
       break;
     case "Badge":
       break;
-    case "disableBackgroundOverlay":
+    case "getActiveTab":
       break;
-    case "refreshImpressions":
-      break;
-    case "topic":
-      break;
-    case "topicContainer":
-      break;
-    case "getAdDecisionByPlacementAndAdCreativeId":
+    case "getActiveTabId":
       break;
     case "cr":
       break;
     case "les":
+      break;
+    case "connectionMetadata":
+      break;
+    case "connectionMetadataField":
       break;
     case "message_type":
       break;
@@ -1500,17 +1538,23 @@ const styleProperties = createCacheKey.createStyleProperties((arg0) => {
       break;
     case "currentAppIcon":
       break;
-    case "containerId":
+    case "containerForFiveButtonLayout":
       break;
-    case "dispatchLazyCache":
+    case "onLayoutChange":
       break;
-    case "useGuildMemberOrUserPendingDisplayNameStyles":
+    case "getAssetDisplayConfig":
       break;
-    case "parallel":
+    case "AssetDisplayConfigRecord":
       break;
-    case "preparedTextCacheSize":
+    case "destination":
       break;
-    case "setGlobalHandler":
+    case "destinationKey":
+      break;
+    case "onKeyCommand":
+      break;
+    case "unread_count":
+      break;
+    case "setHasInvalidUrlError":
       break;
     case "_$esjava$cursor":
       break;
@@ -1518,11 +1562,13 @@ const styleProperties = createCacheKey.createStyleProperties((arg0) => {
       break;
     case "so":
       break;
-    case "MOBILE_UNREADBAR_TEXT_DEFAULT":
+    case "THROUGHLINE_URL":
       break;
-    case "DEFAULT_MEDIA_MAX_WIDTH":
+    case "propList":
       break;
-    case "NitroPlatinumBadgeSmallBadge":
+    case "strm":
+      break;
+    case "NitroRubyBadgeLargeBadge":
       break;
     case "_clientSdkMetadata":
       break;
@@ -1533,6 +1579,8 @@ const styleProperties = createCacheKey.createStyleProperties((arg0) => {
     case "da":
       break;
     case "dddd":
+      break;
+    case "RELATIONSHIP_INVALUD_USER_BOT":
       break;
     case "__defaultLocale":
       break;
@@ -1556,7 +1604,17 @@ const styleProperties = createCacheKey.createStyleProperties((arg0) => {
       break;
     case "fin":
       break;
-    case "heroArtVideoLinkLightTheme":
+    case "NitroWumpusFlightUpwards3dIllustration":
+      break;
+    case "prepareStackTrace":
+      break;
+    case "nand":
+      break;
+    case "doUpload":
+      break;
+    case "UploadErrorUpload":
+      break;
+    case "UploadErrorProgress":
       break;
     case "undelete":
       break;
@@ -1572,23 +1630,11 @@ const styleProperties = createCacheKey.createStyleProperties((arg0) => {
       break;
     case "startMs":
       break;
-    case "shouldUseCache":
+    case "shouldUseAnimatedObjectForTransform":
       break;
-    case "checkViewableIndicesChanges":
+    case "formText":
       break;
-    case "neutral_face":
-      break;
-    case "inputValue":
-      break;
-    case "inputValues":
-      break;
-    case "openid_params":
-      break;
-    case "leftSlot":
-      break;
-    case "two_hearts":
-      break;
-    case "renderChannelTitle":
+    case "extractFeMerge":
       break;
     case "avatar_description":
       break;
@@ -1612,13 +1658,7 @@ const styleProperties = createCacheKey.createStyleProperties((arg0) => {
       break;
     case "pt":
       break;
-    case "INCIDENT_TIMESTAMP":
-      break;
-    case "TIMESTAMPS":
-      break;
-    case "maxBitrate":
-      break;
-    case "isOnReverseTrial":
+    case "isParentModal":
       break;
     case "aria-disabled":
       break;
@@ -1632,13 +1672,23 @@ const styleProperties = createCacheKey.createStyleProperties((arg0) => {
       break;
     case "led":
       break;
-    case "internalBinaryRead":
+    case "interestedIcon":
       break;
-    case "proxy_icon_url":
+    case "contentRow":
       break;
-    case "icon_url":
+    case "withAffinitySuggestions":
       break;
-    case "party_id":
+    case "AffinitySuggestions":
+      break;
+    case "ffi":
+      break;
+    case "ug":
+      break;
+    case "lady_beetle":
+      break;
+    case "beetle":
+      break;
+    case "paymentGatewaySubscriptionId":
       break;
     case "_dispatch":
       break;
@@ -1653,6 +1703,8 @@ const styleProperties = createCacheKey.createStyleProperties((arg0) => {
     case "patch":
       break;
     case "tc":
+      break;
+    case "briefs":
       break;
     case "renderActivityInviteEmbed":
       break;
@@ -1672,7 +1724,7 @@ const styleProperties = createCacheKey.createStyleProperties((arg0) => {
       break;
     case "am":
       break;
-    case "internalBinaryWrite":
+    case "internalBinaryRead":
       break;
     case "div":
       break;
@@ -1682,9 +1734,7 @@ const styleProperties = createCacheKey.createStyleProperties((arg0) => {
       break;
     case "ver":
       break;
-    case "renderCommunicationDisabled":
-      break;
-    case "SpendingLimitSettings":
+    case "renderConfirmButton":
       break;
     case "LhlgY9":
       break;
@@ -1722,15 +1772,9 @@ const styleProperties = createCacheKey.createStyleProperties((arg0) => {
       break;
     case "enable":
       break;
-    case "shouldShowBlurredThumbnailImage":
+    case "shouldShowAgeGateForVoiceChannel":
       break;
-    case "getAwaitingRemoteSessionInfo":
-      break;
-    case "forFractionalPremium":
-      break;
-    case "FractionalPremiumSKUs":
-      break;
-    case "FractionalPremiumSKUsSets":
+    case "SYSTEM_PANEL":
       break;
     case "@braintree/extended-promise":
       break;
@@ -1760,7 +1804,7 @@ const styleProperties = createCacheKey.createStyleProperties((arg0) => {
       break;
     case "referrerPolicy":
       break;
-    case "getGuildDefaults":
+    case "safetyTips":
       break;
     case "../../../lib/braintree-error":
       break;
@@ -1799,8 +1843,17 @@ const styleProperties = createCacheKey.createStyleProperties((arg0) => {
     case "rtsState":
       break;
     case "ts":
+      obj = { backgroundInactive: null, backgroundPressed: null, borderInactive: null, borderPressed: null };
+      obj[0] = ThemesDefault.colors.CONTROL_OVERLAY_PRIMARY_BACKGROUND_DEFAULT;
+      obj[1] = ThemesDefault.colors.CONTROL_OVERLAY_PRIMARY_BACKGROUND_ACTIVE;
+      obj[2] = c4;
+      obj[3] = c4;
+      return obj;
+    case "UnauthenticatedReportNames":
       break;
-    case "_clearOutcomes":
+    case "auth":
+      break;
+    case "authenticated":
       break;
     case "fil":
       break;
@@ -1812,15 +1865,11 @@ const styleProperties = createCacheKey.createStyleProperties((arg0) => {
       break;
     case "he":
       break;
-    case "ServerIconShieldzordExample":
+    case "ServerIconLilQuackSPondverseExample":
       break;
-    case "dz":
+    case "_cleanupSocket":
       break;
-    case "storeToken":
-      break;
-    case "enableIntegrityCheck":
-      break;
-    case "SceneView":
+    case "SocketEvent":
       break;
     case "EntitlementTenantFulfillmentStatus":
       break;
@@ -1828,34 +1877,7 @@ const styleProperties = createCacheKey.createStyleProperties((arg0) => {
       break;
     case "__findAnimatedPropsNodes":
       break;
-    case "USE_NOW":
-      break;
-    case "NOW_PLAYING_CONSENT_CARD":
-      break;
-    case "CARD_MUTED_PRESSED_BG":
-      break;
-    case "BGR":
-      break;
-    case "GRABPAY_MY":
-      break;
-    case "MYR":
-      break;
-    case "ROLE_SUBSCRIPTION_SETTING":
-      obj = { backgroundInactive: null, backgroundPressed: null, borderInactive: null, borderPressed: null };
-      obj[0] = ThemesDefault.colors.CONTROL_OVERLAY_PRIMARY_BACKGROUND_DEFAULT;
-      obj[1] = ThemesDefault.colors.CONTROL_OVERLAY_PRIMARY_BACKGROUND_ACTIVE;
-      obj[2] = c4;
-      obj[3] = c4;
-      return obj;
-    case "SETTINGS_WINDOWS":
-      break;
-    case "WINDOWS":
-      break;
-    case "WINDOWS_GRAPHICS_CAPTURE_BUILD":
-      break;
-    case "BUILD_OVERRIDE_COOKIE_NAME":
-      break;
-    case "MEDIA_NUM_COLUMNS":
+    case "MAX_VISIBLE_PAGES":
       break;
     case "system_channel_flags":
       break;
@@ -1864,8 +1886,6 @@ const styleProperties = createCacheKey.createStyleProperties((arg0) => {
     case "_flags":
       break;
     case "flag":
-      break;
-    case "flags_":
       break;
     case "lag":
       break;
@@ -1877,23 +1897,15 @@ const styleProperties = createCacheKey.createStyleProperties((arg0) => {
       break;
     case "oldestUnreadMessageIdStale":
       break;
-    case "addPendingAuthorizedState":
+    case "addPerformanceInstrumentationHandler":
       break;
-    case "logotype_dark":
-      break;
-    case "darkAppearance":
-      break;
-    case "woman_juggling_medium_skin_tone":
-      break;
-    case "man_juggling_medium_skin_tone":
+    case "handleTapGuildEventInvite":
       break;
     case "fo":
       break;
     case "for":
       break;
     case "forEachChannel":
-      break;
-    case "TranscriptOutlineIcon":
       break;
     case "DiscountsMegaphoneSpotIllustration":
       break;
@@ -1905,17 +1917,29 @@ const styleProperties = createCacheKey.createStyleProperties((arg0) => {
       break;
     case "phone":
       break;
-    case "QUICKSWITCHER_RESULT_SELECTED":
+    case "pointerType":
       break;
-    case "createScheduledMessage":
+    case "MOP":
+      break;
+    case "OPACITY_BLACK_1":
+      break;
+    case "OPACITY_BLACK_12":
+      break;
+    case "parentElement":
+      break;
+    case "fakeScopeIcon":
+      break;
+    case "containerSearchBar":
+      break;
+    case "touchableHandleResponderTerminationRequest":
+      break;
+    case "onRequestSend":
       break;
     case "getChannelA11yHint":
       break;
     case "Channel":
       break;
-    case "interrobang":
-      break;
-    case "bangbang":
+    case "interpretNumericEntities":
       break;
     case "getCurrent":
       break;
@@ -1937,13 +1961,11 @@ const styleProperties = createCacheKey.createStyleProperties((arg0) => {
       break;
     case "current_guild_id":
       break;
-    case "getContent":
+    case "getContacts":
       break;
-    case "getContentAvailable":
+    case "FAMILY_CENTER_CONNECTION":
       break;
-    case "getPrice":
-      break;
-    case "getPriceForCollectiblesProduct":
+    case "FAMILY_CENTER_CONNECTION_PREREQUISITES":
       break;
     case "hasDiversity":
       break;
@@ -1957,7 +1979,9 @@ const styleProperties = createCacheKey.createStyleProperties((arg0) => {
       break;
     case "DefaultGuildsRestrictedV2":
       break;
-    case "currentSubscription":
+    case "getMentionChannelIds":
+      break;
+    case "isWishlistOwner":
       break;
     case "avatar_hash":
       break;
@@ -1965,15 +1989,11 @@ const styleProperties = createCacheKey.createStyleProperties((arg0) => {
       break;
     case "hashKey":
       break;
-    case "gek":
-      break;
     case "bhd":
       break;
     case "INVITE_RESOLVE_SUCCESS":
       break;
-    case "guild_monetization":
-      break;
-    case "monetizationDisclosureContainerStyle":
+    case "mother_christmas_tone4":
       break;
     case "_header":
       break;
@@ -1988,16 +2008,14 @@ const styleProperties = createCacheKey.createStyleProperties((arg0) => {
     case "FAMILY_CENTER_ERROR_CODE_TO_FAILURE":
       break;
     case "REACTIVATION_OFFER_REDEEM":
-      break;
+      obj[0] = c4;
+      obj[1] = c4;
+      obj[2] = c4;
+      obj[3] = c4;
+      return obj;
     case "REDEEM_REWARD":
       break;
     case "IMAGE_VIDEO_DATA_SETTINGS_UPDATED":
-      break;
-    case "onOptionValueChange":
-      break;
-    case "onValueChange":
-      break;
-    case "onValueChanged":
       break;
     case "player_height":
       break;
@@ -2006,18 +2024,20 @@ const styleProperties = createCacheKey.createStyleProperties((arg0) => {
     case "heightAverageWindow":
       break;
     case "eight":
-      obj[0] = c4;
-      obj[1] = c4;
-      obj[2] = c4;
-      obj[3] = c4;
-      return obj;
+      break;
     case "ht":
       break;
     case "withMutualFriends":
       break;
     case "withMutualFriendsCount":
       break;
-    case "num_words":
+    case "FacebookNeutralIcon":
+      break;
+    case "advancedMode":
+      break;
+    case "debugLogCs2GsiPayload":
+      break;
+    case "loadAllGuildAndPrivateChannelsFromDisk":
       break;
     case "FadeOutRight":
       break;
@@ -2037,6 +2057,34 @@ const styleProperties = createCacheKey.createStyleProperties((arg0) => {
       break;
     case "icons":
       break;
+    case "accessPermissions":
+      break;
+    case "shovel":
+      break;
+    case "handleCallback":
+      break;
+    case "handleCallbackErrors":
+      break;
+    case "CallbackError":
+      break;
+    case "USER_SETTINGS_MODAL_OPEN":
+      break;
+    case "OPEN_APP_LAUNCHER":
+      break;
+    case "APP_LAUNCHER":
+      break;
+    case "APP_LAUNCHER_ACTIVITY_ITEM_SELECTED":
+      break;
+    case "DCDNotificationManager":
+      break;
+    case "videoProgress":
+      break;
+    case "handleAnnouncementMessageViewTracking":
+      break;
+    case "MessageViewTrackingType":
+      break;
+    case "person_with_ball_tone5":
+      break;
     case "_include":
       break;
     case "inc":
@@ -2053,13 +2101,7 @@ const styleProperties = createCacheKey.createStyleProperties((arg0) => {
       break;
     case "origin_pane":
       break;
-    case "relationsSnapshot":
-      break;
-    case "activityCustomId":
-      break;
-    case "disableFalsePositiveButton":
-      break;
-    case "onRecurrencePress":
+    case "related_user_id":
       break;
     case "__internalInstanceHandle":
       break;
@@ -2077,17 +2119,13 @@ const styleProperties = createCacheKey.createStyleProperties((arg0) => {
       break;
     case "TouchPad":
       break;
-    case "deleteManySyncUnsafe":
+    case "deleteKeyFromRecyclePool":
       break;
-    case "safeArea":
+    case "getGuildFlags":
       break;
-    case "safeAreaBottom":
+    case "pronouns":
       break;
-    case "safeAreaBottomKeyboardAware":
-      break;
-    case "KeyboardAwareScrollView":
-      break;
-    case "noTint":
+    case "pronounsAccessibilityHint":
       break;
     case "int":
       break;
@@ -2105,10 +2143,6 @@ const styleProperties = createCacheKey.createStyleProperties((arg0) => {
       break;
     case "item":
       break;
-    case "open_hands":
-      break;
-    case "open_hands_tone1":
-      break;
     case "activeUnjoinedThreads":
       break;
     case "jo":
@@ -2116,40 +2150,6 @@ const styleProperties = createCacheKey.createStyleProperties((arg0) => {
     case "js":
       break;
     case "xs":
-      break;
-    case "isRendered":
-      break;
-    case "gradientOverlay":
-      break;
-    case "yOffset":
-      break;
-    case "hasInputText":
-      break;
-    case "targetHeight":
-      break;
-    case "getHeight":
-      break;
-    case "jus":
-      break;
-    case "justify":
-      break;
-    case "if":
-      break;
-    case "Content":
-      break;
-    case "getCommonClickEventProperties":
-      break;
-    case "PasskeysSpotIllustration":
-      break;
-    case "ke":
-      break;
-    case "getSizableOrigin":
-      break;
-    case "inExperiment":
-      break;
-    case "trailingItem":
-      break;
-    case "embedded_activity_location_kind":
       break;
     default:
   }
@@ -2207,7 +2207,7 @@ export const useProfileThemedButtonStyles = function useProfileThemedButtonStyle
       } else {
         setColorOpacity3Result = setColorOpacity3("white", 0.34);
       }
-      obj1 = { backgroundColor: null, borderColor: null, color: "r" };
+      obj1 = { backgroundColor: null, borderColor: null, color: "accessible" };
       items2[1] = setColorOpacity3Result;
       obj1[0] = items2;
       const items3 = [closure_1_4, closure_1_4];
@@ -2232,7 +2232,7 @@ export const useProfileThemedButtonStyles = function useProfileThemedButtonStyle
       } else {
         darkenColorResult1 = obj2.setColorOpacity("white", 0.2);
       }
-      obj2 = { backgroundColor: null, borderColor: null, color: "r" };
+      obj2 = { backgroundColor: null, borderColor: null, color: "accessible" };
       items4[1] = darkenColorResult1;
       obj2[0] = items4;
       const items5 = [closure_1_4, closure_1_4];
@@ -2291,7 +2291,7 @@ export const useButtonTextColorStyles = function useButtonTextColorStyles(style)
       } else {
         setColorOpacity3Result = setColorOpacity3("white", 0.34);
       }
-      obj1 = { backgroundColor: null, borderColor: null, color: "r" };
+      obj1 = { backgroundColor: null, borderColor: null, color: "accessible" };
       items2[1] = setColorOpacity3Result;
       obj1[0] = items2;
       const items3 = [closure_1_4, closure_1_4];
@@ -2316,7 +2316,7 @@ export const useButtonTextColorStyles = function useButtonTextColorStyles(style)
       } else {
         darkenColorResult1 = obj2.setColorOpacity("white", 0.2);
       }
-      obj2 = { backgroundColor: null, borderColor: null, color: "r" };
+      obj2 = { backgroundColor: null, borderColor: null, color: "accessible" };
       items4[1] = darkenColorResult1;
       obj2[0] = items4;
       const items5 = [closure_1_4, closure_1_4];
@@ -2381,7 +2381,7 @@ export const useIconTintStyles = function useIconTintStyles(arg0) {
       } else {
         setColorOpacity3Result = setColorOpacity3("white", 0.34);
       }
-      obj1 = { backgroundColor: null, borderColor: null, color: "r" };
+      obj1 = { backgroundColor: null, borderColor: null, color: "accessible" };
       items2[1] = setColorOpacity3Result;
       obj1[0] = items2;
       const items3 = [closure_1_4, closure_1_4];
@@ -2406,7 +2406,7 @@ export const useIconTintStyles = function useIconTintStyles(arg0) {
       } else {
         darkenColorResult1 = obj2.setColorOpacity("white", 0.2);
       }
-      obj2 = { backgroundColor: null, borderColor: null, color: "r" };
+      obj2 = { backgroundColor: null, borderColor: null, color: "accessible" };
       items4[1] = darkenColorResult1;
       obj2[0] = items4;
       const items5 = [closure_1_4, closure_1_4];
@@ -2477,7 +2477,7 @@ export const useButtonPillStyles = function useButtonPillStyles(variant, pressed
       } else {
         setColorOpacity3Result = setColorOpacity3("white", 0.34);
       }
-      obj1 = { backgroundColor: null, borderColor: null, color: "r" };
+      obj1 = { backgroundColor: null, borderColor: null, color: "accessible" };
       items2[1] = setColorOpacity3Result;
       obj1[0] = items2;
       const items3 = [closure_1_4, closure_1_4];
@@ -2502,7 +2502,7 @@ export const useButtonPillStyles = function useButtonPillStyles(variant, pressed
       } else {
         darkenColorResult1 = obj2.setColorOpacity("white", 0.2);
       }
-      obj2 = { backgroundColor: null, borderColor: null, color: "r" };
+      obj2 = { backgroundColor: null, borderColor: null, color: "accessible" };
       items4[1] = darkenColorResult1;
       obj2[0] = items4;
       const items5 = [closure_1_4, closure_1_4];
@@ -2660,10 +2660,10 @@ export const useButtonPressAnimationProps = function useButtonPressAnimationProp
   obj = {
     width: sharedValue1,
     scaleAmountInPx: num,
-    withSpring: tmp(4927).withSpring,
+    withSpring: tmp(4928).withSpring,
     interpolate: tmp(4217).interpolate,
     pressed: sharedValue,
-    ON_PRESS_SPRING: tmp(4931).ON_PRESS_SPRING,
+    ON_PRESS_SPRING: tmp(4932).ON_PRESS_SPRING,
   };
   fn.__closure = obj;
   fn.__workletHash = 17256006845494;

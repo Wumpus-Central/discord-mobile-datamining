@@ -40,7 +40,7 @@ function NotificationBody(channel) {
   obj1 = channel(586);
   const items1 = [closure_5];
   const stateFromStores1 = obj1.useStateFromStores(items1, () => closure_1_5.getChannel(channel.parent_id));
-  let obj2 = channel(10199);
+  let obj2 = channel(10203);
   const hasPreviewableMedia = obj2.useHasPreviewableMedia(message);
   const tmp6 = channel.type === channel(689).ChannelTypes.DM;
   let num = 1;
@@ -48,7 +48,7 @@ function NotificationBody(channel) {
     num = closure_8;
   }
   let tmp10 = null;
-  const messagePreviewTextVariant = channel(10199).getMessagePreviewTextVariant();
+  const messagePreviewTextVariant = channel(10203).getMessagePreviewTextVariant();
   if (!tmp6) {
     obj = { channel: null, parentChannel: null, guild: null, author: null };
     obj[0] = channel;
@@ -73,7 +73,7 @@ function NotificationBody(channel) {
       obj[3] = tmp(4171).ChannelListLayoutTypes.COZY;
       obj[4] = messagePreviewTextVariant;
       obj[6] = num;
-      let tmp14 = callback(tmp(10214).ChannelRowPreview, obj);
+      let tmp14 = callback(tmp(10218).ChannelRowPreview, obj);
     }
     obj1 = { children: null };
     items2[1] = tmp14;
@@ -142,5 +142,5 @@ export default importAllResult.memo(function ReminderNotification(notification) 
     rightAccessory: callback(closure_16, { message }),
     children: callback(NotificationBody, { channel, message }),
   };
-  return callback(notification(10277).NotificationPressable, obj);
+  return callback(notification(10281).NotificationPressable, obj);
 });

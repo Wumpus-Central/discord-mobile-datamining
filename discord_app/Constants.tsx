@@ -723,6 +723,8 @@ obj = {
   AGE_VERIFICATION_SUSPENDED_METHODS_V2: "/age-verification/suspended/methods/v2",
   GOOGLE_WALLET_REQUEST: "/age-verification/google-wallet/request",
   GOOGLE_WALLET_VERIFY: "/age-verification/google-wallet/verify",
+  GOOGLE_WALLET_REQUEST_SUSPENDED_USER: "/age-verification/google-wallet/suspended/request",
+  GOOGLE_WALLET_VERIFY_SUSPENDED_USER: "/age-verification/google-wallet/suspended/verify",
   AGE_SIGNAL: "/users/@me/age-signal",
   AGE_SIGNAL_CHALLENGE: "/users/@me/age-signal/challenge",
   AGE_VERIFICATION_REACTIVE_CHECK: "/users/@me/age-verification/check",
@@ -1853,6 +1855,7 @@ obj = {
   SAFETY_HUB_REQUEST_SUSPENDED_AGE_VERIFICATION: "/safety-hub/suspended/request-verification",
   SAFETY_HUB_REQUEST_SUSPENDED_AGE_VERIFICATION_V2: "/safety-hub/suspended/request-verification/v2",
   SAFETY_HUB_CHECK_SUSPENDED_AGE_VERIFICATION: "/safety-hub/suspended/check-verification",
+  SAFETY_HUB_CHECK_SUSPENDED_AGE_VERIFICATION_V2: "/safety-hub/suspended/check-verification/v2",
   SAFETY_HUB_GET_SUSPENDED_AGE_VERIFICATION_METHODS: "/age-verification/suspended/methods",
   INITIATE_CHANNEL_PROMPTS: "/initiate-prompts",
   FORCE_SEND_PROMPT(arg0) {
@@ -1988,7 +1991,7 @@ obj = {
     return "/users/@me/achievements/" + arg0 + "/claim";
   },
   ORB_USER_CHALLENGES_UNREAD_STATE: "/users/@me/achievements/unread-state",
-  ORB_USER_CHALLENGES_UNREAD_STATE_ACK: "/users/@me/achievements/unread-state/ack",
+  ORB_USER_CHALLENGES_UNREAD_STATE_ACK: "/users/@me/achievements/unread-ack",
   IGNORE_USER(id) {
     return "/users/@me/relationships/" + id + "/ignore";
   },
@@ -2030,6 +2033,9 @@ obj = {
   QUESTS_CREATIVE_PREVIEW: "/quests/preview",
   QUESTS_CREATIVES_CLAIM_REWARD(closure_0) {
     return "/quests/creatives/" + closure_0 + "/claim-reward";
+  },
+  QUESTS_CREATIVES_DISMISS(adCreativeId) {
+    return "/quests/creatives/" + adCreativeId + "/dismiss";
   },
   QUESTS_APP_STORE_METADATA: "/quests/appstore-metadata",
   GAME_ANNOUNCEMENTS(arg0) {
@@ -6889,6 +6895,8 @@ export const AnalyticEvents = {
   TYPING_INDICATOR_STYLE_APPLIED: "typing_indicator_style_applied",
   TYPING_INDICATOR_STYLE_REMOVED: "typing_indicator_style_removed",
   TYPING_INDICATOR_STYLE_SURPRISE_ME: "typing_indicator_style_surprise_me",
+  TYPING_INDICATOR_STYLE_SEEN: "typing_indicator_style_seen",
+  TYPING_INDICATOR_EDIT_SCREEN_OPENED: "typing_indicator_edit_screen_opened",
   RING_TO_GUILD_VC_BANNER_SHOWN: "impression_ring_to_guild_vc_banner_shown",
   RING_TO_GUILD_VC_MENU_ITEM_SHOWN: "impression_ring_to_guild_vc_menu_item_shown",
   RING_CALL_DECLINED: "ring_call_declined",
@@ -6984,6 +6992,7 @@ export const AnalyticEvents = {
   GUILD_ROOM_USER_DISCONNECTED: "guild_room_user_disconnected",
   GUILD_ROOM_USER_UPDATED: "guild_room_user_updated",
   GUILD_ROOM_SETTINGS_UPDATE: "guild_room_settings_update",
+  GUILD_ROOM_UPDATED: "guild_room_updated",
   APP_TRANSACTION_ID_SYNCED: "app_transaction_id_synced",
   PARENTAL_CONSENT_CHECKED: "parental_consent_checked",
   PARENTAL_CONSENT_WARNING_BANNER_TAPPED: "parental_consent_warning_banner_tapped",

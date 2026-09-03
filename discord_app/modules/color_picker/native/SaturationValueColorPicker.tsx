@@ -1,6 +1,6 @@
 // discord_app/modules/color_picker/native/SaturationValueColorPicker.tsx
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import LinearGradientDefault from "../../../../_runtime/04940_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/04941_LinearGradient.js";
 import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
 import closure_4 from "../../../../_runtime/00019_noop.js";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
@@ -23,7 +23,7 @@ function ColorBox(hue) {
       return obj.hslToRgbWorklet(obj);
     }
   }
-  obj = { hslToRgbWorklet: hue(14475).hslToRgbWorklet, hue };
+  obj = { hslToRgbWorklet: hue(14491).hslToRgbWorklet, hue };
   S.__closure = obj;
   S.__workletHash = 8814597686728;
   S.__initData = closure_9;

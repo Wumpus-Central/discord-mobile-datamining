@@ -7,7 +7,7 @@ const result = set.fileFinishedImporting("modules/media_uploads/native/showUploa
 
 export default function showUploadPreviewActionSheet(arg0) {
   ACTION_SHEET_HEIGHT_HALFDefault.openLazy(
-    asyncRequireImpl(10648, dependencyMap.paths),
+    asyncRequireImpl(10652, dependencyMap.paths),
     "UploadPreviewActionSheet",
     arg0,
   );

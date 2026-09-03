@@ -23,7 +23,7 @@ export const queryMentionables = function queryMentionables(type, arg1, channelI
     const tmp2 =
       type === require("../../flow/Server.tsx").ComponentType.USER_SELECT ||
       type === require("../../flow/Server.tsx").ComponentType.MENTIONABLE_SELECT;
-    let obj = channel(5393);
+    let obj = channel(5394);
     obj = {
       query: null,
       channel: null,
@@ -83,7 +83,7 @@ export const queryChannels = function queryChannels(arg0, arg1, arg2) {
     const channels = obj.queryApplicationCommandChannelResults(obj).channels;
     items = channels.map((id) => {
       const obj = {
-        type: callback(4745).SelectOptionType.CHANNEL,
+        type: callback(4746).SelectOptionType.CHANNEL,
         value: id.id,
         label: callback(4674).computeChannelName(id, closure_8, closure_7),
       };

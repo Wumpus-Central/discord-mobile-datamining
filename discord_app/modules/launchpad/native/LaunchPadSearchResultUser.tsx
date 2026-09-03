@@ -5,7 +5,7 @@ import _isStreamingDefault from "../../activities/utils/isStreaming.tsx";
 import useChannelUnreadBadgeState from "shared/useChannelUnreadBadgeState.tsx";
 import getLayoutStyleDefault from "shared/getLayoutStyles.tsx";
 import renderChannelWrapperDefault from "shared/renderChannelWrapper.tsx";
-import _modDef16797 from "shared/UnreadBadge.tsx";
+import _modDef16817 from "shared/UnreadBadge.tsx";
 import ChannelContentDefault from "shared/renderChannelContent.tsx";
 import renderChannelBadgeDefault from "shared/renderChannelBadge.tsx";
 import importAllResult from "../../../../_runtime/00019_noop.js";
@@ -46,7 +46,7 @@ function UserResult(user) {
     const items = [user.id];
     closure_1_1(closure_1_2[13]).openPrivateChannel({ recipientIds: items });
   }, items);
-  let obj = user(4935);
+  let obj = user(4936);
   const fontScale = obj.useFontScale();
   obj1 = user(586);
   const items1 = [closure_5];
@@ -71,8 +71,8 @@ function UserResult(user) {
   }
   let relativeTimestamp = null;
   if (null != extractTimestampResult) {
-    relativeTimestamp = tmp6(7395).getRelativeTimestamp(extractTimestampResult);
-    const tmp6Result = tmp6(7395);
+    relativeTimestamp = tmp6(7396).getRelativeTimestamp(extractTimestampResult);
+    const tmp6Result = tmp6(7396);
   }
   let str = "text-muted";
   if (unread) {
@@ -81,11 +81,11 @@ function UserResult(user) {
       str = "text-default";
     }
   }
-  tmp2Result = tmp2(16794);
+  tmp2Result = tmp2(16814);
   obj = { onPress: callback, underlayColor: tmp.pressableUnderlayColor.backgroundColor, style: items4, children: null };
   items4 = [tmp.pressable, { borderRadius: tmp4.container.borderRadius }];
   obj = { unread, resolvedUnreadSetting: UnreadSetting.ALL_MESSAGES };
-  const items5 = [callback(_modDef16797, obj), ,];
+  const items5 = [callback(_modDef16817, obj), ,];
   obj1 = {
     user,
     guildId: "e",
@@ -150,7 +150,7 @@ function UserResult(user) {
       obj3[2] = str;
       obj3[3] = flag;
       obj3[4] = tmp6(4171).ChannelListLayoutTypes.COMPACT;
-      tmp14Result = tmp14(tmp6(10214).ChannelRowPreview, obj3);
+      tmp14Result = tmp14(tmp6(10218).ChannelRowPreview, obj3);
     }
   }
   const obj4 = { children: null };
@@ -164,7 +164,7 @@ function UserResult(user) {
   items5[2] = ChannelContentDefault(obj2);
   obj4[0] = items5;
   obj[3] = tmp2Result1(tmp16(tmp17, obj4), { fontScale });
-  return tmp2Result(callback(user(5076).PressableHighlight, obj));
+  return tmp2Result(callback(user(5077).PressableHighlight, obj));
 }
 function UserResultWithChannel(arg0) {
   ({ user: require, channel } = arg0);
@@ -183,7 +183,7 @@ function UserResultWithChannel(arg0) {
   const obj3 = initialize;
   const merged = Object.assign(arg0);
   obj.channel = channel;
-  obj.lastMessage = channel(15142)(channel, { unread });
+  obj.lastMessage = channel(15157)(channel, { unread });
   obj.unread = unread;
   obj.mentionCount = mentionCount;
   obj.muted = stateFromStores;

@@ -579,17 +579,17 @@ function trackCrash(event, hint, arg2) {
     tmp25(1205).markCrashHandled(event_id2);
     const tmp25Result = tmp25(1205);
   }
-  const AppCrashedReasons = tmp11(14069).AppCrashedReasons;
+  const AppCrashedReasons = tmp11(14085).AppCrashedReasons;
   const tmp19 = expandEventPropertiesDefault;
   const tmp41 = tmp4 ? AppCrashedReasons.UNHANDLED_NATIVE_ERROR : AppCrashedReasons.UNHANDLED_JS_ERROR;
-  obj1 = { name: tmp11(7361).MetricEvents.APP_CRASHED, tags: null };
+  obj1 = { name: tmp11(7362).MetricEvents.APP_CRASHED, tags: null };
   items = ["reason:" + tmp41];
   if (level == null) {
     level = "unknown";
   }
   items[1] = "level:" + level;
   obj1[1] = items;
-  tmp26(7356).increment(obj1, true);
+  tmp26(7357).increment(obj1, true);
 }
 ({ AnalyticEvents: closure_6, Endpoints } = ME);
 addBreadcrumb = addBreadcrumb.reactNavigationIntegration();
@@ -680,13 +680,13 @@ export const initSentry = function initSentry() {
             tunnel: null,
             autoInitializeNativeSdk: false,
             beforeSend: null,
-            dist: "6336",
+            dist: "6342",
             dsn: null,
             environment: null,
             tracesSampleRate: 0,
             sampleRate: 1,
             ignoreErrors: null,
-            release: "discord_android@345.2.0-2+345202",
+            release: "discord_android@345.3.0-2+345203",
             tracePropagationTargets: null,
             integrations: null,
             beforeBreadcrumb: null,
@@ -728,7 +728,7 @@ export const initSentry = function initSentry() {
           };
           tmp14Result1.init(obj);
           const tmp14Result4 = callback(tmp[4]);
-          callback(tmp[4]).setTag("buildNumber", "6336");
+          callback(tmp[4]).setTag("buildNumber", "6342");
           const tmp14Result5 = callback(tmp[4]);
           callback(tmp[4]).setTag("appVersion", constants.Version);
           const tmp14Result6 = callback(tmp[4]);

@@ -19,13 +19,13 @@ function PremiumFeatureUpsellPill(featureName) {
   dependencyMap = undefined;
   let mobileEmojiPickerUpsellRestyleEnabledForFeature;
   let loading;
-  let obj = featureName(8177);
-  obj1 = featureName(9148);
+  let obj = featureName(8181);
+  obj1 = featureName(9152);
   const premiumUpsellConfig = obj.usePremiumUpsellConfig(obj1.getUpsellType(featureName));
   useTier0UpsellContent = premiumUpsellConfig.useTier0UpsellContent;
   const tmp4 = callback2(useTier0UpsellContent);
   dependencyMap = tmp4;
-  let obj2 = featureName(9165);
+  let obj2 = featureName(9169);
   mobileEmojiPickerUpsellRestyleEnabledForFeature = obj2.getMobileEmojiPickerUpsellRestyleEnabledForFeature(
     featureName,
     "native.PremiumFeatureUpsell",
@@ -34,19 +34,19 @@ function PremiumFeatureUpsellPill(featureName) {
   const fn = () => useTier0UpsellContent(closure_2[14])(featureName);
   let tmpResult = tmp(4139);
   const premiumTypeDisplayName = tmpResult.getPremiumTypeDisplayName(tmp7);
-  if (featureName(7607).EntitlementFeatureNames.SOUNDBOARD_EVERYWHERE === featureName) {
+  if (featureName(7608).EntitlementFeatureNames.SOUNDBOARD_EVERYWHERE === featureName) {
     const intl4 = tmp(1233).intl;
     obj = { nitroTierName: null, onClick: null };
     obj[0] = premiumTypeDisplayName;
     obj[1] = fn;
     let formatResult = intl4.format(tmp(1233).t["tw/SSq"], obj);
-  } else if (tmp(7607).EntitlementFeatureNames.EMOJIS_EVERYWHERE === featureName) {
+  } else if (tmp(7608).EntitlementFeatureNames.EMOJIS_EVERYWHERE === featureName) {
     const intl3 = tmp(1233).intl;
     obj = { nitroTierName: null, onClick: null };
     obj[0] = premiumTypeDisplayName;
     obj[1] = fn;
     formatResult = intl3.format(tmp(1233).t.gMVjeS, obj);
-  } else if (tmp(7607).EntitlementFeatureNames.INCREASED_FILE_UPLOAD_SIZE === featureName) {
+  } else if (tmp(7608).EntitlementFeatureNames.INCREASED_FILE_UPLOAD_SIZE === featureName) {
     const intl2 = tmp(1233).intl;
     obj1 = { maxFileSize: null, nitroTierName: null, onClick: null };
     tmpResult = tmp(4139);
@@ -54,19 +54,19 @@ function PremiumFeatureUpsellPill(featureName) {
     obj1[1] = premiumTypeDisplayName;
     obj1[2] = fn;
     formatResult = intl2.format(tmp(1233).t.zzyLEK, obj1);
-  } else if (tmp(7607).EntitlementFeatureNames.STREAM_HIGH_QUALITY === featureName) {
+  } else if (tmp(7608).EntitlementFeatureNames.STREAM_HIGH_QUALITY === featureName) {
     const intl = tmp(1233).intl;
     obj2 = { nitroTierName: null, onClick: null };
     obj2[0] = premiumTypeDisplayName;
     obj2[1] = fn;
     formatResult = intl.format(tmp(1233).t.lyxfbj, obj2);
-  } else if (tmp(7607).EntitlementFeatureNames.APP_ICONS === featureName) {
+  } else if (tmp(7608).EntitlementFeatureNames.APP_ICONS === featureName) {
     const intl6 = tmp(1233).intl;
     const obj3 = { onClick: null };
     obj3[0] = fn;
     formatResult = intl6.format(tmp(1233).t.x2dQxN, obj3);
   }
-  const tmp11 = useTier0UpsellContent(8983)(
+  const tmp11 = useTier0UpsellContent(8987)(
     useTier0UpsellContent,
     premiumUpsellConfig.onViewAllPerks,
     constants.PREMIUM_UPSELL_FILE_UPLOAD,
@@ -152,7 +152,7 @@ function PremiumFeatureUpsellPill(featureName) {
     return tmp12(tmp13, obj4);
   } else {
     const obj8 = { source: null, style: null, disableColor: true };
-    obj8[0] = useTier0UpsellContent(useTier0UpsellContent ? 9181 : 9182);
+    obj8[0] = useTier0UpsellContent(useTier0UpsellContent ? 9185 : 9186);
     obj8[1] = tmp4.nitroWheel;
     callback(tmp(1296).Icon, obj8);
     const tmp15 = callback;

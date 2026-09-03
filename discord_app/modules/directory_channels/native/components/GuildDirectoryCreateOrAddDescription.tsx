@@ -177,5 +177,5 @@ export default function GuildDirectoryCreateOrAddDescription(directoryChannelId)
   items1[1] = callback(GuildDirectoryEditDescriptionTemplateDefault, obj3);
   obj[2] = items1;
   obj[0] = callback2(closure_5, obj);
-  return callback(directoryChannelId(12099).GuildDirectoryAddModalScreen, obj);
+  return callback(directoryChannelId(12105).GuildDirectoryAddModalScreen, obj);
 }

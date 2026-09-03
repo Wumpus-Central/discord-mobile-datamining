@@ -4,9 +4,9 @@ import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.
 import getSystemLocale from "../../../intl/index.native.tsx";
 import Text from "../../../design/components/Text/native/Text.tsx";
 import SafeAreaPaddingView from "../../../components_native/common/SafeAreaView.tsx";
-import registerAssetDefault from "../../../../_runtime/07773_registerAsset.js";
+import registerAssetDefault from "../../../../_runtime/07776_registerAsset.js";
 import IconButton from "../../../design/components/Button/native/IconButton.native.tsx";
-import AutomatedUnderageAppealStatusDefault from "SafetyHubPage.tsx";
+import handleLogInClickDefault from "SafetyHubPage.tsx";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import { SafetyHubLinks } from "../SafetyHubConstants.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
@@ -50,7 +50,7 @@ export default function SuspendedUserSafetyHubPage() {
   const intl = getSystemLocale.intl;
   obj1[1] = intl.string(getSystemLocale.t.cpT0Cq);
   obj1[2] = function onPress() {
-    callback(6060).closeSuspendedUser();
+    callback(6061).closeSuspendedUser();
   };
   obj1[3] = registerAssetDefault;
   const items = [callback(IconButton.IconButton, obj1)];
@@ -77,7 +77,7 @@ export default function SuspendedUserSafetyHubPage() {
   obj2[4] = items1;
   items[1] = callback2(Text.Text, obj2);
   obj[1] = items;
-  const items2 = [callback2(View, obj), callback(AutomatedUnderageAppealStatusDefault, { visible: true })];
+  const items2 = [callback2(View, obj), callback(handleLogInClickDefault, { visible: true })];
   obj[1] = items2;
   obj[3] = callback2(View, obj);
   return callback(SafeAreaPaddingView.SafeAreaPaddingView, obj);

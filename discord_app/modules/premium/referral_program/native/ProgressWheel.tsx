@@ -1,16 +1,16 @@
 // discord_app/modules/premium/referral_program/native/ProgressWheel.tsx
-import set from "../../../../../_runtime/00002_set.js";
-import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import noopAll from "../../../../../_runtime/00019_noop.js";
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import map from "../../../../design/tokens/native/useToken.tsx";
 import preloadDefault from "../../../../components_native/common/FastImage.tsx";
-import inlineStyles from "../../../../../_runtime/08250_inlineStyles.js";
+import inlineStyles from "../../../../../_runtime/08254_inlineStyles.js";
 import MAX_REFERRALS_SENT from "../hooks/useReferralProgramBannerDetails.tsx";
-import metadataDefault from "../../../../../discord_assets/assets/premium/referral_program/referralTrial.png.js";
+import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
-const View = get_ActivityIndicator.View;
+require = arg1;
+noopAll;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 let c6 = 160;
 let closure_7 = 2 * Math.PI * 77;
@@ -19,10 +19,10 @@ let closure_8 = createCacheKey.createStyles({
   progressCircleImage: { position: "absolute", width: 93, height: 93, borderRadius: 46.5 },
   glowImage: { position: "absolute", width: 180, height: 180 },
 });
-const result = set.fileFinishedImporting("modules/premium/referral_program/native/ProgressWheel.tsx");
+const result = require("set").fileFinishedImporting("modules/premium/referral_program/native/ProgressWheel.tsx");
 
-export default function ProgressWheel(nReferralsSent) {
-  nReferralsSent = nReferralsSent.nReferralsSent;
+export default function ProgressWheel(arg0) {
+  ({ nReferralsSent, altImage } = arg0);
   const tmp = callback2();
   let obj = map;
   const token = obj.useToken(ThemesDefault.colors.BACKGROUND_MOD_STRONG);
@@ -32,14 +32,14 @@ export default function ProgressWheel(nReferralsSent) {
   let tmp9 = nReferralsSent === MAX_REFERRALS_SENT.MAX_REFERRALS_SENT;
   if (tmp9) {
     obj = { source: null, style: null };
-    let tmp4Result = tmp4(5501);
-    obj[0] = tmp4(13336);
+    let tmp4Result = tmp4(5502);
+    obj[0] = tmp4(13351);
     obj[1] = tmp.glowImage;
     tmp9 = callback(tmp4Result, obj);
   }
   const items = [tmp9, ,];
   obj1 = { width: c6, height: c6, children: null };
-  tmp4Result = tmp4(8250);
+  tmp4Result = tmp4(8254);
   const items1 = [
     callback(inlineStyles.Circle, { cx: 80, cy: 80, r: 77, stroke: token, strokeWidth: 6, fill: token1 }),
     callback(inlineStyles.Circle, {
@@ -58,11 +58,10 @@ export default function ProgressWheel(nReferralsSent) {
   ];
   obj1[2] = items1;
   items[1] = closure_5(tmp4Result, obj1);
-  const obj3 = { source: null, style: null };
-  const obj4 = { uri: metadataDefault };
-  obj3[0] = obj4;
-  obj3[1] = tmp.progressCircleImage;
-  items[2] = callback(preloadDefault, obj3);
+  if (altImage == null) {
+    altImage = tmp4(13352);
+  }
+  items[2] = callback(preloadDefault, { source: { uri: altImage }, style: tmp.progressCircleImage });
   obj[1] = items;
   return closure_5(View, obj);
 }

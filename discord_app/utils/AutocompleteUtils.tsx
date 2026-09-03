@@ -9,7 +9,7 @@ import nameFromUserDefault from "UserUtils.tsx";
 import setDefault from "RegexUtils.tsx";
 import computeChannelName from "../modules/channel/useChannelName.tsx";
 import StickerFormat from "../modules/stickers/StickersTypes.tsx";
-import fuzzysearchDefault from "../../_runtime/05462_fuzzysearch.js";
+import fuzzysearchDefault from "../../_runtime/05463_fuzzysearch.js";
 import sortByMatchScoreDefault from "../modules/autocompleter/sortByMatchScore.tsx";
 import getGuildNameSuggestionDefault from "GuildUtils.tsx";
 import useCanSeeOnboardingHome from "../modules/guild_onboarding_home/OnboardingHomeUtils.tsx";
@@ -217,21 +217,21 @@ function queryMemberList(arg0) {
                               let tmp33 = num < 50;
                               if (num < 50) {
                                 let tmp28 =
-                                  tmp12(5462)(toLocaleLowerCaseResult, str4) || tmp12(5462)(normalizeResult, str5);
+                                  tmp12(5463)(toLocaleLowerCaseResult, str4) || tmp12(5463)(normalizeResult, str5);
                                 if (!tmp28) {
-                                  let tmp29 = null != str6 && tmp12(5462)(toLocaleLowerCaseResult, str6);
+                                  let tmp29 = null != str6 && tmp12(5463)(toLocaleLowerCaseResult, str6);
                                   tmp28 = tmp29;
                                 }
                                 if (!tmp28) {
-                                  let tmp30 = null != str7 && tmp12(5462)(normalizeResult, str7);
+                                  let tmp30 = null != str7 && tmp12(5463)(normalizeResult, str7);
                                   tmp28 = tmp30;
                                 }
                                 if (!tmp28) {
-                                  let tmp31 = null != str8 && tmp12(5462)(toLocaleLowerCaseResult, str8);
+                                  let tmp31 = null != str8 && tmp12(5463)(toLocaleLowerCaseResult, str8);
                                   tmp28 = tmp31;
                                 }
                                 if (!tmp28) {
-                                  let tmp32 = null != str9 && tmp12(5462)(normalizeResult, str9);
+                                  let tmp32 = null != str9 && tmp12(5463)(normalizeResult, str9);
                                   tmp28 = tmp32;
                                 }
                                 tmp33 = tmp28;
@@ -365,13 +365,13 @@ function queryMemberList(arg0) {
 function getPriorityForStickerMetadataType(arg0) {
   if (StickerFormat.StickerMetadataTypes.STICKER_NAME === arg0) {
     return 11;
-  } else if (tmp(5220).StickerMetadataTypes.CORRELATED_EMOJI === arg0) {
+  } else if (tmp(5221).StickerMetadataTypes.CORRELATED_EMOJI === arg0) {
     return 6;
-  } else if (tmp(5220).StickerMetadataTypes.TAG === arg0) {
+  } else if (tmp(5221).StickerMetadataTypes.TAG === arg0) {
     return 1;
   } else {
-    if (tmp(5220).StickerMetadataTypes.GUILD_NAME !== arg0) {
-      if (tmp(5220).StickerMetadataTypes.PACK_NAME !== arg0) {
+    if (tmp(5221).StickerMetadataTypes.GUILD_NAME !== arg0) {
+      if (tmp(5221).StickerMetadataTypes.PACK_NAME !== arg0) {
         return 1;
       }
     }

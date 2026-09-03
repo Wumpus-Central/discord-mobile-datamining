@@ -3,7 +3,7 @@ import ThemesDefault from "../../../../../discord_common/js/packages/tokens/nati
 import getSystemLocale from "../../../../intl/index.native.tsx";
 import ManaContext from "../../../../../discord_common/js/packages/design/native.tsx";
 import Button from "../../../../design/components/Button/native/Button.native.tsx";
-import LinearGradientDefault from "../../../../../_runtime/04940_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/04941_LinearGradient.js";
 import createTextStyleDefault from "../../../rebrand/native/TextStyles.tsx";
 import usePremiumFeaturesDefault from "../../../user_settings/premium/native/utils/usePremiumFeatures.tsx";
 import useThemeAndReducedMotionAwareAssetUrl from "../../promotions/MarketingComponentHooks.tsx";
@@ -195,7 +195,7 @@ const memoResult = importAllResult.memo(function PremiumGiftFeaturesCard(variant
   if (enabled) {
     enabled = claimableRewards.length > 0;
   }
-  let tmp11Result = tmp11(10734);
+  let tmp11Result = tmp11(10738);
   const config = tmp11Result.useConfig({ location: "PremiumGiftFeaturesCard" });
   let promotionalButton = enabled;
   if (enabled) {
@@ -227,12 +227,12 @@ const memoResult = importAllResult.memo(function PremiumGiftFeaturesCard(variant
     obj1 = { uri: null };
     obj1[0] = themeAndReducedMotionAwareAssetUrl;
     obj[2] = obj1;
-    tmp22 = callback2(tmp11(5501), obj);
+    tmp22 = callback2(tmp11(5502), obj);
   }
   const items2 = [tmp22];
   obj2 = { premiumType, opacity: null, style: null };
   let num3 = 1;
-  tmp11Result = tmp11(8103);
+  tmp11Result = tmp11(8106);
   if (tmp16) {
     num3 = 0.82;
   }
@@ -258,7 +258,7 @@ const memoResult = importAllResult.memo(function PremiumGiftFeaturesCard(variant
       obj3[1] = claimableRewards;
       obj3[2] = isSelected;
       obj3[3] = callback;
-      tmp29 = callback2(tmp11(10748), obj3);
+      tmp29 = callback2(tmp11(10752), obj3);
     }
     const items4 = [tmp29];
     let tmp31 = null != themeAndReducedMotionAwareAssetUrl1;
@@ -272,7 +272,7 @@ const memoResult = importAllResult.memo(function PremiumGiftFeaturesCard(variant
       obj6 = { uri: null };
       obj6[0] = themeAndReducedMotionAwareAssetUrl1;
       obj4[2] = obj6;
-      tmp31 = callback2(tmp11(5501), obj4);
+      tmp31 = callback2(tmp11(5502), obj4);
     }
     const obj7 = { children: null };
     items4[1] = tmp31;
@@ -282,7 +282,7 @@ const memoResult = importAllResult.memo(function PremiumGiftFeaturesCard(variant
   } else {
     const obj8 = { premiumType: null };
     obj8[0] = premiumType;
-    tmp20Result = callback2(tmp11(8364), obj8);
+    tmp20Result = callback2(tmp11(8368), obj8);
   }
   const items6 = [tmp20Result, , , , , ,];
   const items7 = [tmp10.logo, ,];
@@ -320,7 +320,7 @@ const memoResult = importAllResult.memo(function PremiumGiftFeaturesCard(variant
     obj13[1] = tmp12;
     ({ featureIcon: obj19[2], featureText: obj19[3] } = tmp10);
     obj13[4] = obj[str];
-    items6[4] = tmp33(tmp11(8371), obj13);
+    items6[4] = tmp33(tmp11(8375), obj13);
     const obj14 = { style: null };
     obj14[0] = { flexGrow: 1 };
     items6[5] = tmp33(tmp21, obj14);
@@ -358,7 +358,7 @@ const memoResult = importAllResult.memo(function PremiumGiftFeaturesCard(variant
     const obj17 = { variant: "primary-overlay", text: null, onPress: null };
     obj17[1] = stringResult;
     obj17[2] = onPress;
-    obj16[1] = tmp33(tmp2(4928).Button, obj17);
+    obj16[1] = tmp33(tmp2(4929).Button, obj17);
     tmp33Result = tmp33(tmp21, obj16);
   }
 });

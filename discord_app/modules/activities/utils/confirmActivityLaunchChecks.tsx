@@ -74,16 +74,16 @@ function _getOrFetchApplicationForLaunch() {
               c7 = 3;
               c8 = 1;
               let obj2 = { value: null, done: false };
-              obj2[0] = callback2(9492)(callback, callback2);
+              obj2[0] = callback2(9496)(callback, callback2);
               return obj2;
             }
           } else if (2 === tmp7) {
             c6 = 0;
             closure_4 = closure_5;
             if (null != dependencyMap) {
-              PRIVATE_CHANNEL = callback(9486).EmbeddedActivityLocationKind.GUILD_CHANNEL;
+              PRIVATE_CHANNEL = callback(9490).EmbeddedActivityLocationKind.GUILD_CHANNEL;
             } else {
-              PRIVATE_CHANNEL = callback(9486).EmbeddedActivityLocationKind.PRIVATE_CHANNEL;
+              PRIVATE_CHANNEL = callback(9490).EmbeddedActivityLocationKind.PRIVATE_CHANNEL;
             }
             obj2 = callback2(706);
             const obj3 = {
@@ -223,7 +223,7 @@ function _confirmActivityChange() {
                       if (dependencyMap != null) {
                         dependencyMap();
                       }
-                      _undefined2(9494)(
+                      _undefined2(9498)(
                         tmp,
                         channel,
                         () => {

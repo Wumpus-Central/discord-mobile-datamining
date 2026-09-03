@@ -163,7 +163,7 @@ export default function RegisterAccountInformation() {
   const tmp3 = useWideAuthViewDefault();
   const tmp4 = callback4(tmp3);
   let obj = React;
-  context = React.useContext(context(15765).TrackRegistrationContext);
+  context = React.useContext(context(15781).TrackRegistrationContext);
   let tmp8 = callback2((submitting) => submitting.submitting);
   const tmp7 = callback2((registrationOptions) => registrationOptions.registrationOptions);
   [tmp10, importDefault] = callback(React.useState(false), 2);
@@ -181,7 +181,7 @@ export default function RegisterAccountInformation() {
     return invite;
   });
   const ref = React.useRef(null);
-  let obj3 = context(15791);
+  let obj3 = context(15807);
   const passwordRegistrationStep = obj3.usePasswordRegistrationStep();
   ({
     password,
@@ -190,7 +190,7 @@ export default function RegisterAccountInformation() {
     passwordScore,
     preventSubmitPassword,
   } = passwordRegistrationStep);
-  let obj4 = context(15793);
+  let obj4 = context(15809);
   const usernameRegistrationStep = obj4.useUsernameRegistrationStep(AuthStates.REGISTER_ACCOUNT_INFORMATION);
   ({
     transitionToNextStepOrSubmit: closure_5,
@@ -213,7 +213,7 @@ export default function RegisterAccountInformation() {
   const stateFromStores1 = tmp5Result.useStateFromStores(items2, () =>
     authenticationConsentRequired.getAuthenticationConsentRequired(),
   );
-  tmp5Result = tmp5(15776);
+  tmp5Result = tmp5(15792);
   obj = { isConsentRequired: true === stateFromStores1 };
   result = tmp5Result.hasAllRegistrationFieldsCompleted(obj, obj);
   const intl = tmp5(1233).intl;
@@ -234,9 +234,9 @@ export default function RegisterAccountInformation() {
     }
     return applyArgumentsResult;
   }
-  let tmpResult = tmp(15784);
+  let tmpResult = tmp(15800);
   const tmp9 = callback(React.useState(false), 2);
-  tmpResult(context(15767).getPreviousRegistrationTransitionStep(AuthStates.REGISTER_ACCOUNT_INFORMATION));
+  tmpResult(context(15783).getPreviousRegistrationTransitionStep(AuthStates.REGISTER_ACCOUNT_INFORMATION));
   useInitialRegistrationStepDefault(AuthStates.REGISTER_ACCOUNT_INFORMATION);
   const items3 = [context];
   const effect = obj.useEffect(() => {
@@ -249,13 +249,13 @@ export default function RegisterAccountInformation() {
     }
   }, []);
   obj1 = { headerText: null, children: null };
-  tmpResult = tmp(7754);
+  tmpResult = tmp(7757);
   const intl2 = tmp5(1233).intl;
   obj1[0] = intl2.string(context(1233).t.jec90v);
   obj2 = { contentContainerStyle: { flexGrow: 1 }, keyboardShouldPersistTaps: "handled", children: null };
   obj3 = {
     style: tmp4.container,
-    children: callback3(tmp5(15794).RegisterUsernameInput, {
+    children: callback3(tmp5(15810).RegisterUsernameInput, {
       username,
       setUsername,
       onSubmitEditing: callback,
@@ -280,7 +280,7 @@ export default function RegisterAccountInformation() {
     str = "done";
   }
   obj5[5] = str;
-  obj4.children = callback3(context(15795).RegisterPasswordInput, obj5);
+  obj4.children = callback3(context(15811).RegisterPasswordInput, obj5);
   items4[1] = callback3(_modDef4217.View, obj4);
   const obj6 = { style: tmp4.button };
   const merged2 = Object.assign(createCacheKey);
@@ -292,7 +292,7 @@ export default function RegisterAccountInformation() {
     preventSubmitUsername = preventSubmitPassword;
   }
   obj7[4] = preventSubmitUsername;
-  const items5 = [callback3(context(4928).Button, obj7)];
+  const items5 = [callback3(context(4929).Button, obj7)];
   let tmp27Result = null;
   if (null != tmp11.message) {
     tmp27Result = null;
@@ -300,7 +300,7 @@ export default function RegisterAccountInformation() {
       const obj8 = { style: null, children: null };
       obj8[0] = tmp4.errors;
       obj8[1] = tmp11.message;
-      tmp27Result = tmp27(tmp(7723), obj8);
+      tmp27Result = tmp27(tmp(7726), obj8);
     }
   }
   items5[1] = tmp27Result;
@@ -314,7 +314,7 @@ export default function RegisterAccountInformation() {
     const obj9 = { style: null, children: null };
     obj9[0] = tmp4.page;
     obj9[1] = tmp27Result;
-    tmp27Result1 = tmp27(tmp(6057), obj9);
+    tmp27Result1 = tmp27(tmp(6058), obj9);
   }
   return tmp27Result1;
 }

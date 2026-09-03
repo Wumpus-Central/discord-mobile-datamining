@@ -112,7 +112,7 @@ const memoResult = importAllResult.memo((disabled) => {
   currentState = importAllResult.useRef(true);
   closure_8 = importAllResult.useRef(currentState.currentState);
   closure_9 = importAllResult.useRef(null);
-  const tmp9 = sharedValue1(11346)();
+  const tmp9 = sharedValue1(11351)();
   _require = undefined;
   _require = sharedValue((arg0) => {
     closure_0 = arg0;
@@ -684,7 +684,7 @@ const memoResult = importAllResult.memo((disabled) => {
     }
   }, items9);
   let obj3 = coerceMainRoute;
-  const tmp21 = sharedValue1(9742);
+  const tmp21 = sharedValue1(9746);
   let intl = require("../../../../intl/index.native.tsx").intl;
   const tmp22 = sharedValue(function* () {
     if (c2 === 2) {
@@ -871,7 +871,7 @@ const memoResult = importAllResult.memo((disabled) => {
   }, items10);
   obj = { gesture: memo, children: null };
   obj1 = {
-    ref: sharedValue1(12048)().tooltipTargetRef,
+    ref: sharedValue1(12054)().tooltipTargetRef,
     IconComponent: null,
     active: false,
     accessibilityLabel: null,
@@ -944,8 +944,8 @@ const memoResult = importAllResult.memo((disabled) => {
   obj1[4] = accessibilityActions;
   obj1[5] = onAccessibilityAction;
   obj1[6] = disabled;
-  obj[1] = jsx(sharedValue1(12029), {
-    ref: sharedValue1(12048)().tooltipTargetRef,
+  obj[1] = jsx(sharedValue1(12035), {
+    ref: sharedValue1(12054)().tooltipTargetRef,
     IconComponent: null,
     active: false,
     accessibilityLabel: null,
@@ -953,7 +953,7 @@ const memoResult = importAllResult.memo((disabled) => {
     onAccessibilityAction: null,
     disabled: null,
   });
-  return jsx(require("../../../../../_runtime/05660_LegacyBaseButton.js").GestureDetector, {
+  return jsx(require("../../../../../_runtime/05661_LegacyBaseButton.js").GestureDetector, {
     gesture: memo,
     children: null,
   });

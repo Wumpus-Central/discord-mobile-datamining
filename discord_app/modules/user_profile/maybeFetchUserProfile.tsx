@@ -173,7 +173,7 @@ export default function maybeFetchUserProfile(id, closure_0, guildMember) {
       });
       return Promise.resolve();
     } else {
-      const profile = require("../../actions/UserActionCreators.tsx").fetchProfile(id, obj, obj(8125));
+      const profile = require("../../actions/UserActionCreators.tsx").fetchProfile(id, obj, obj(8128));
       let resolved = profile;
       if (tmp18) {
         resolved = profile;

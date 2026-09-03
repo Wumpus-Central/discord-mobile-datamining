@@ -18,24 +18,24 @@ export const fetchCustomAppStoreOverlayContent = function fetchCustomAppStoreOve
   const CustomAppStoreOverlayExperiment = apexExperiment.CustomAppStoreOverlayExperiment;
   let enabled = CustomAppStoreOverlayExperiment.getConfig({ location: "quest_open_game_link" }).enabled;
   if (enabled) {
-    let tmpResult = tmp(11316);
+    let tmpResult = tmp(11320);
     enabled = null != tmpResult.getInlineStoreParamsFromCta(cta);
   }
   let inlineStoreParamsFromCta = null;
   if (enabled) {
-    tmpResult = tmp(11316);
+    tmpResult = tmp(11320);
     inlineStoreParamsFromCta = tmpResult.getInlineStoreParamsFromCta(cta);
   }
   if (null == inlineStoreParamsFromCta) {
     let resolved = Promise.resolve(null);
   } else {
-    const tmpResult1 = tmp(11318);
-    let url = tmp(11316).getDirectAppStoreLinkFromCta(cta);
+    const tmpResult1 = tmp(11322);
+    let url = tmp(11320).getDirectAppStoreLinkFromCta(cta);
     if (url == null) {
       url = cta.url;
     }
     resolved = tmpResult1.getAppStoreOverlayContent(inlineStoreParamsFromCta, url);
-    const tmpResult2 = tmp(11316);
+    const tmpResult2 = tmp(11320);
   }
   return resolved;
 };

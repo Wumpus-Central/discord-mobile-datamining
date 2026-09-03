@@ -7,7 +7,7 @@ const result = require("set").fileFinishedImporting(
 );
 
 export const useTrackAppLauncherItemImpressionOnFirstView = function useTrackAppLauncherItemImpressionOnFirstView() {
-  let obj = entrypoint(9063);
+  let obj = entrypoint(9067);
   entrypoint = obj.useAppLauncherContext().entrypoint;
   dependencyMap = React.useRef(new Set());
   const set = new Set();

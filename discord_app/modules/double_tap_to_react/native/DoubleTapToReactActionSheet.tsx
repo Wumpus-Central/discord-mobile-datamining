@@ -29,7 +29,7 @@ function EmojiConfetti(children) {
   let obj3 = top(4217);
   sharedValue3 = top(4217).useSharedValue(0);
   let obj4 = top(4217);
-  const mountLayoutEffect = top(4945).useMountLayoutEffect(() => {
+  const mountLayoutEffect = top(4946).useMountLayoutEffect(() => {
     let obj = sharedValue;
     let num = 0;
     if (!closure_2) {
@@ -74,7 +74,7 @@ function EmojiConfetti(children) {
       obj17.withSequence(withTimingResult4, withTimingResult5, top(closure_1_2[13]).withTiming(0, { duration: 240 })),
     );
   });
-  let obj5 = top(4945);
+  let obj5 = top(4946);
   const fn = function f() {
     let obj = { scale: sharedValue2.get() };
     const items = [obj];

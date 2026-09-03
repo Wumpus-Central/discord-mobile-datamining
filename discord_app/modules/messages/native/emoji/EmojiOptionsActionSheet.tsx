@@ -21,7 +21,7 @@ export default function EmojiOptionsActionSheet(emojiSrc) {
   const intl = emojiSrc(1233).intl;
   obj[1] = intl.string(emojiSrc(1233).t.cIoudn);
   obj[2] = callback;
-  obj[1] = jsx(emojiSrc(5607).TableRow, { icon: jsx(emojiSrc(4421).LinkIcon, {}), label: null, onPress: null });
-  obj[0] = jsx(emojiSrc(6000).TableRowGroup, { icon: jsx(emojiSrc(4421).LinkIcon, {}), label: null, onPress: null });
-  return jsx(emojiSrc(5997).ActionSheet, { icon: jsx(emojiSrc(4421).LinkIcon, {}), label: null, onPress: null });
+  obj[1] = jsx(emojiSrc(5608).TableRow, { icon: jsx(emojiSrc(4421).LinkIcon, {}), label: null, onPress: null });
+  obj[0] = jsx(emojiSrc(6001).TableRowGroup, { icon: jsx(emojiSrc(4421).LinkIcon, {}), label: null, onPress: null });
+  return jsx(emojiSrc(5998).ActionSheet, { icon: jsx(emojiSrc(4421).LinkIcon, {}), label: null, onPress: null });
 }

@@ -112,16 +112,16 @@ class AuthManager extends tmp3 {
     };
     applyArgumentsResult.handleRegisterComplete = function handleRegisterComplete() {
       if (!obj.hasDeferredInvite()) {
-        let tmpResult = tmp(12508);
+        let tmpResult = tmp(12520);
         tmpResult.setNewUser(constants.ORGANIC_REGISTERED);
       }
-      tmpResult = tmp(12466);
+      tmpResult = tmp(12478);
       tmpResult.startOnboarding();
     };
     applyArgumentsResult.handleLoginWithConnection = function handleLoginWithConnection() {
       const result = lib.handlePushNotificationOptIn(() => {
-        callback(6195).transitionToGuild(closure_7);
-        const obj = callback(6195);
+        callback(6196).transitionToGuild(closure_7);
+        const obj = callback(6196);
         callback2(706).dispatch({ type: "DEFERRED_INVITE_SHOW" });
       });
     };
@@ -145,7 +145,7 @@ class AuthManager extends tmp3 {
       c11 = null;
     };
     applyArgumentsResult.handleLogout = function handleLogout() {
-      const result = callback(7514).deleteAllInteractions();
+      const result = callback(7515).deleteAllInteractions();
       DCDShortcutManager = DCDShortcutManager.DCDShortcutManager;
       if (DCDShortcutManager != null) {
         DCDShortcutManager.handleLogout();

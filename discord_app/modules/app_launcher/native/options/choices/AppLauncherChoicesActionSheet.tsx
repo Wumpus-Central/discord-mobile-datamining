@@ -143,11 +143,11 @@ export default function AppLauncherChoicesActionSheet(option) {
   if (tmp13) {
     obj = { onChange: null };
     obj[0] = callback;
-    tmp16 = callback(tmp3(11960).AppLauncherListSearchBar, obj);
+    tmp16 = callback(tmp3(11966).AppLauncherListSearchBar, obj);
   }
   const items3 = [tmp16];
   if (0 === first.length) {
-    let tmp20 = callback(tmp3(11960).AppLauncherListEmptyState, {});
+    let tmp20 = callback(tmp3(11966).AppLauncherListEmptyState, {});
   } else {
     obj1 = {
       scrollable: null,
@@ -176,5 +176,5 @@ export default function AppLauncherChoicesActionSheet(option) {
   }
   items3[1] = tmp20;
   obj[4] = items3;
-  return closure_8(option(11959).AppLauncherCommandOptionActionSheet, obj);
+  return closure_8(option(11965).AppLauncherCommandOptionActionSheet, obj);
 }

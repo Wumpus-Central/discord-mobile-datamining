@@ -93,7 +93,7 @@ export default function AccountSwitcherListItem(arg0) {
     if (null == onPressUser) {
       let PressableOpacity = closure_3;
     } else {
-      PressableOpacity = tmp2(5076).PressableOpacity;
+      PressableOpacity = tmp2(5077).PressableOpacity;
     }
     obj = { selected: null };
     obj[0] = tmp7;
@@ -120,7 +120,7 @@ export default function AccountSwitcherListItem(arg0) {
     const items2 = [leading, ,];
     obj2 = { style: null, children: null };
     obj2[0] = tmp.accountInfo;
-    const obj3 = { user: null, guildId: "r" };
+    const obj3 = { user: null, guildId: "Array" };
     obj3[0] = obj2;
     const items3 = [callback(tmp2(1296).Avatar, obj3)];
     const obj4 = { style: null, children: null };

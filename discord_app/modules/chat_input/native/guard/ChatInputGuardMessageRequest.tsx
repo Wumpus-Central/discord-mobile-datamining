@@ -153,8 +153,8 @@ const memoResult = importAllResult.memo(function ChatInputGuardMessageRequest(ch
   let obj = channel(1498);
   importDefault = obj.useNavigation();
   const isMessageRequestRestrictedViewer =
-    channel(12228).useIsMessageRequestRestrictedViewer("ChatInputGuardMessageRequest");
-  let obj2 = channel(12228);
+    channel(12240).useIsMessageRequestRestrictedViewer("ChatInputGuardMessageRequest");
+  let obj2 = channel(12240);
   const items = [_onAcceptClick];
   const stateFromStores = channel(586).useStateFromStores(items, () =>
     _onAcceptClick.getUser(channel.getRecipientId()),
@@ -172,7 +172,7 @@ const memoResult = importAllResult.memo(function ChatInputGuardMessageRequest(ch
     },
     onRejectSuccess: function handleRejectSuccess() {},
   };
-  const messageRequestActions = channel(12230).useMessageRequestActions(obj);
+  const messageRequestActions = channel(12242).useMessageRequestActions(obj);
   ({
     acceptMessageRequest: c2,
     rejectMessageRequest: c3,
@@ -208,7 +208,7 @@ const memoResult = importAllResult.memo(function ChatInputGuardMessageRequest(ch
     buttonSecondaryDisabled: null,
     buttonSecondaryLoading: null,
   };
-  const obj4 = channel(12230);
+  const obj4 = channel(12242);
   const tmp7 = _onRejectClick;
   let intl = tmp(1233).intl;
   obj[1] = intl.string(channel(1233).t["e/eQVB"]);

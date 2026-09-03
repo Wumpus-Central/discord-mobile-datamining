@@ -74,7 +74,7 @@ createCacheKey = {
             guild_id = channel.guild_id;
           }
           guild = guild.getGuild(guild_id);
-          let tmp3Result = tmp3(6122);
+          let tmp3Result = tmp3(6123);
           if (tmp3Result.isGuildOfficialMessagesEnabled(guild, "RowGeneratorUtils")) {
             let officialMessageColor;
             if (guild != null) {
@@ -86,7 +86,7 @@ createCacheKey = {
             if (message.mentioned) {
               let ephemeralGutterColor = tmp.mentionedGutterColor;
             } else {
-              tmp3Result = tmp3(4737);
+              tmp3Result = tmp3(4738);
               if (tmp3Result.hasEphemeralAppearance(message)) {
                 ephemeralGutterColor = tmp.ephemeralGutterColor;
               }

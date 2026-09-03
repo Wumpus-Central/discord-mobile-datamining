@@ -43,7 +43,7 @@ export const tryCreateInjectedMessage = function tryCreateInjectedMessage(id, cl
               }
               tmp4 = null;
               if (
-                !tmpResult.hasFlag(num, tmp(11750).ChannelRecipientPrivateUserDataFlags.DISMISSED_IN_GAME_MESSAGE_NUX)
+                !tmpResult.hasFlag(num, tmp(11755).ChannelRecipientPrivateUserDataFlags.DISMISSED_IN_GAME_MESSAGE_NUX)
               ) {
                 tmp4 = null;
                 if (!obj.has(closure_0.id)) {
@@ -53,7 +53,7 @@ export const tryCreateInjectedMessage = function tryCreateInjectedMessage(id, cl
                   obj[3] = id.author;
                   obj[4] = tmp3.EPHEMERAL;
                   obj[5] = constants2.SENT;
-                  tmpResult = tmp(4737);
+                  tmpResult = tmp(4738);
                   const messageRecord1 = tmpResult.createMessageRecord(createMessageDefault(obj));
                   ({ applicationId: tmp10.applicationId, timestamp: tmp10.timestamp } = id);
                   const result = obj.set(closure_0.id, id.id);
@@ -66,12 +66,12 @@ export const tryCreateInjectedMessage = function tryCreateInjectedMessage(id, cl
                   const tmpResult1 = tmp(1398);
                   const setFlagResult = tmp(1398).setFlag(
                     num2,
-                    tmp(11750).ChannelRecipientPrivateUserDataFlags.DISMISSED_IN_GAME_MESSAGE_NUX,
+                    tmp(11755).ChannelRecipientPrivateUserDataFlags.DISMISSED_IN_GAME_MESSAGE_NUX,
                     true,
                   );
-                  const result1 = tmp6(11751).updatePrivateChannelRecipientFlags(closure_0.id, setFlagResult);
+                  const result1 = tmp6(11756).updatePrivateChannelRecipientFlags(closure_0.id, setFlagResult);
                   tmp4 = messageRecord1;
-                  const tmp6Result = tmp6(11751);
+                  const tmp6Result = tmp6(11756);
                 }
               }
             }

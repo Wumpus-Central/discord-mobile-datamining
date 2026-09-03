@@ -90,11 +90,11 @@ function applyPendingBadgeSettingsToProfileBadges(arr2, arg1) {
       let tmp11 = item10027;
       let tmp12 = set;
       let tmp13 = dependencyMap;
-      let obj = set(8574);
+      let obj = set(8578);
       let profileBadgeId = obj.resolveProfileBadgeId(item10027.id);
       let tmp15 = profileBadgeId;
       if (null != profileBadgeId) {
-        let tmp12Result = tmp12(9019);
+        let tmp12Result = tmp12(9023);
         let tmp16 = profileBadgeId;
         if (!tmp12Result.isPinnedBadge(tmp15)) {
           let tmp17 = profileBadgeId;
@@ -237,7 +237,7 @@ export const resetPendingBadgeSettings = function resetPendingBadgeSettings() {
   dispatcherDefault.dispatch({
     type: "USER_PROFILE_SETTINGS_SET_PENDING_CHANGES",
     pendingBadgeDisplayOrder: "call",
-    pendingBadgeHiddenBadges: "Map",
+    pendingBadgeHiddenBadges: "String",
   });
 };
 export const hasPendingBadgeSettings = function hasPendingBadgeSettings(pendingBadgeDisplayOrder) {
@@ -281,7 +281,7 @@ export const applyPendingBadgeSettings = function applyPendingBadgeSettings(stat
       let tmp11 = item10026;
       let tmp12 = set;
       let tmp13 = dependencyMap;
-      let obj = set(9019);
+      let obj = set(9023);
       if (obj.isPinnedBadge(item10026.badge_id)) {
         let tmp16 = item10026;
         let arr = items1.push(tmp11);

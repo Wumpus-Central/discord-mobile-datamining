@@ -67,7 +67,7 @@ export default function ShareChatInput(onFocus) {
   dependencyMap = undefined;
   const tmp = callback3();
   const tmp2 = onBlur;
-  const tmp4 = onBlur(8168)();
+  const tmp4 = onBlur(8172)();
   [focused, c2] = callback(React.useState(false), 2);
   const items = [onFocus];
   const items1 = [onBlur];
@@ -122,7 +122,7 @@ export default function ShareChatInput(onFocus) {
   obj[11] = callback1;
   obj[16] = tmp.chatText;
   obj[17] = !flag;
-  const items3 = [callback2(tmp2(8380), obj)];
+  const items3 = [callback2(tmp2(8384), obj)];
   obj = {
     accessibilityLabel: null,
     accessibilityRole: "button",
@@ -136,8 +136,8 @@ export default function ShareChatInput(onFocus) {
   obj[2] = onPressEmoji;
   obj[3] = tmp.emojiButton;
   obj[4] = flag;
-  obj[5] = callback2(onFocus(8237).ReactionIcon, { size: "md" });
-  items3[1] = callback2(onFocus(5076).PressableOpacity, obj);
+  obj[5] = callback2(onFocus(8241).ReactionIcon, { size: "md" });
+  items3[1] = callback2(onFocus(5077).PressableOpacity, obj);
   obj[1] = items3;
   return tmp8(tmp9, obj);
 }

@@ -7,7 +7,7 @@ let obj = keys.create(() => ({
   errors: {},
   registrationOptions: {},
   submitting: false,
-  registrationVariant: "padding",
+  registrationVariant: "accessible",
 }));
 const result = set.fileFinishedImporting("modules/auth/native/RegistrationUIStore.tsx");
 

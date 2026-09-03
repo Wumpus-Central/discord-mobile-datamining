@@ -26,7 +26,7 @@ const memoResult = importAllResult.memo(() => {
     return guild_id;
   });
   const obj2 = channelId(586);
-  const channelDetailsSearchContext = channelId(12089).useChannelDetailsSearchContext(channelId, stateFromStores);
+  const channelDetailsSearchContext = channelId(12095).useChannelDetailsSearchContext(channelId, stateFromStores);
   obj = { style: callback().container, children: jsx(InitialPinsScreenDefault, obj) };
   obj = { searchContext: channelDetailsSearchContext, isFocused: true, tab: SearchTabs.PINS };
   return <View searchContext={channelDetailsSearchContext} isFocused tab={SearchTabs.PINS} />;

@@ -8,7 +8,7 @@ import routeDefault3 from "../../defs/native/AccountUsernameSetting.tsx";
 import routeDefault4 from "../../defs/native/AccountDisplayNameSetting.tsx";
 import pressableDefault from "../../defs/native/AccountEmailSetting.tsx";
 import pressableDefault2 from "../../defs/native/AccountPhoneSetting.tsx";
-import _modDef14597 from "../../defs/native/AccountAgeGroupAdultSetting.tsx";
+import _modDef14612 from "../../defs/native/AccountAgeGroupAdultSetting.tsx";
 import routeDefault5 from "../../defs/native/AccountAgeGroupAssignedAdultSetting.tsx";
 import pressableDefault3 from "../../defs/native/AccountAgeGroupNonAdultSetting.tsx";
 import pressableDefault4 from "../../defs/native/AgeGroupConfirmSetting.tsx";
@@ -72,7 +72,7 @@ import pressableDefault16 from "../../defs/native/PremiumRestoreSubscriptionSett
 import routeDefault32 from "../../defs/native/VoiceSetting.tsx";
 import pressableDefault17 from "../../defs/native/InputModeSetting.tsx";
 import toggleDefault13 from "../../defs/native/AutoVoiceSensitivitySetting.tsx";
-import _modDef15075 from "../../defs/native/VoiceSensitivitySetting.tsx";
+import _modDef15090 from "../../defs/native/VoiceSensitivitySetting.tsx";
 import volumeSliderDefault from "../../defs/native/OutputVolumeSetting.tsx";
 import volumeSliderDefault2 from "../../defs/native/StreamOutputVolumeSetting.tsx";
 import volumeSliderDefault3 from "../../defs/native/SoundboardVolumeSetting.tsx";
@@ -168,15 +168,15 @@ import _serializeIntlDataDefault from "../../defs/native/UploadIntlDataSetting.t
 import pressableDefault19 from "../../defs/native/AcknowledgementsSetting.tsx";
 import routeDefault44 from "../../defs/native/ChangeLogSetting.tsx";
 import handleLogoutDefault from "../../defs/native/LogoutSetting.tsx";
-import _modDef15384 from "../../defs/native/AppVersionSetting.tsx";
+import _modDef15398 from "../../defs/native/AppVersionSetting.tsx";
 import getClientInfoDefault from "../../defs/native/CopyClientInfoSetting.tsx";
-import _modDef15386 from "../../defs/native/DeviceInfoSetting.tsx";
+import _modDef15400 from "../../defs/native/DeviceInfoSetting.tsx";
 import ViewDebugLogsActionSheetRowDefault from "../../defs/native/ViewDebugLogsSetting.tsx";
 import handleCacheActionPressDefault from "../../defs/native/CacheActionsSetting.tsx";
 import toggleDefault62 from "../../defs/native/ShowDevWidgetSetting.tsx";
 import pressableDefault20 from "../../defs/native/ShowDevToolsSetting.tsx";
 import useBugReporterExperimentSettingPredicateDefault from "../../defs/native/BugReporterSetting.tsx";
-import _modDef15568 from "../../defs/native/InternalBuildActiveSetting.tsx";
+import _modDef15582 from "../../defs/native/InternalBuildActiveSetting.tsx";
 import pressableDefault21 from "../../defs/native/InternalBuildUpdateSetting.tsx";
 import pressableDefault22 from "../../defs/native/ExperimentOverrideActiveSetting.tsx";
 import pressableDefault23 from "../../defs/native/BuildOverrideActiveSetting.tsx";
@@ -228,7 +228,7 @@ import toggleDefault66 from "../../defs/native/SafetyGuildSettingDirectMessages.
 import showMessageRequestRestrictionModalDefault from "../../defs/native/SafetyGuildSettingMessageRequests.tsx";
 import toggleDefault67 from "../../defs/native/GuildSettingActivityStatus.tsx";
 import toggleDefault68 from "../../defs/native/GuildSettingActivityJoining.tsx";
-import _modDef15710 from "../../defs/native/ReactCompilerSetting.tsx";
+import _modDef15724 from "../../defs/native/ReactCompilerSetting.tsx";
 import routeDefault79 from "../../defs/native/ContentAndSocialDiscordRouteSetting.tsx";
 import routeDefault80 from "../../defs/native/ConnectedGamesRouteSetting.tsx";
 import toggleDefault69 from "../../defs/native/AllowGameFriendDMsSetting.tsx";
@@ -520,7 +520,7 @@ const frozen = Object.freeze({
   [ACCOUNT_DISPLAY_NAME]: routeDefault4,
   [ACCOUNT_EMAIL]: pressableDefault,
   [ACCOUNT_PHONE]: pressableDefault2,
-  [ACCOUNT_AGE_GROUP_ADULT]: _modDef14597,
+  [ACCOUNT_AGE_GROUP_ADULT]: _modDef14612,
   [ACCOUNT_AGE_GROUP_ASSIGNED_ADULT]: routeDefault5,
   [ACCOUNT_AGE_GROUP_NON_ADULT]: pressableDefault3,
   [AGE_GROUP_CONFIRM]: pressableDefault4,
@@ -585,7 +585,7 @@ const frozen = Object.freeze({
   [VOICE]: routeDefault32,
   [INPUT_MODE]: pressableDefault17,
   [AUTO_VOICE_SENSITIVITY]: toggleDefault13,
-  [VOICE_SENSITIVITY]: _modDef15075,
+  [VOICE_SENSITIVITY]: _modDef15090,
   [OUTPUT_VOLUME]: volumeSliderDefault,
   [STREAM_OUTPUT_VOLUME]: volumeSliderDefault2,
   [SOUNDBOARD_VOLUME]: volumeSliderDefault3,
@@ -682,15 +682,15 @@ const frozen = Object.freeze({
   [ACKNOWLEDGEMENTS]: pressableDefault19,
   [CHANGE_LOG]: routeDefault44,
   [LOGOUT]: handleLogoutDefault,
-  [APP_VERSION]: _modDef15384,
-  [DEVICE_INFO]: _modDef15386,
+  [APP_VERSION]: _modDef15398,
+  [DEVICE_INFO]: _modDef15400,
   [VIEW_DEBUG_LOGS]: ViewDebugLogsActionSheetRowDefault,
   [COPY_CLIENT_INFO]: getClientInfoDefault,
   [CACHE_ACTIONS]: handleCacheActionPressDefault,
   [SHOW_DEV_WIDGET]: toggleDefault62,
   [SHOW_DEV_TOOLS]: pressableDefault20,
   [BUG_REPORTER]: useBugReporterExperimentSettingPredicateDefault,
-  [INTERNAL_BUILD_ACTIVE]: _modDef15568,
+  [INTERNAL_BUILD_ACTIVE]: _modDef15582,
   [INTERNAL_BUILD_UPDATE]: pressableDefault21,
   [EXPERIMENT_OVERRIDE_ACTIVE]: pressableDefault22,
   [BUILD_OVERRIDE_ACTIVE]: pressableDefault23,
@@ -743,7 +743,7 @@ const frozen = Object.freeze({
   [SAFETY_GUILD_SETTING_MESSAGE_REQUESTS]: showMessageRequestRestrictionModalDefault,
   [GUILD_SETTING_ACTIVITY_STATUS]: toggleDefault67,
   [GUILD_SETTING_ACTIVITY_JOINING]: toggleDefault68,
-  [REACT_COMPILER]: _modDef15710,
+  [REACT_COMPILER]: _modDef15724,
   [CONTENT_AND_SOCIAL_DISCORD]: routeDefault79,
   [CONNECTED_GAMES]: routeDefault80,
   [ALLOW_GAME_FRIEND_DMS]: toggleDefault69,
@@ -777,7 +777,7 @@ const obj = {
   [ACCOUNT_DISPLAY_NAME]: routeDefault4,
   [ACCOUNT_EMAIL]: pressableDefault,
   [ACCOUNT_PHONE]: pressableDefault2,
-  [ACCOUNT_AGE_GROUP_ADULT]: _modDef14597,
+  [ACCOUNT_AGE_GROUP_ADULT]: _modDef14612,
   [ACCOUNT_AGE_GROUP_ASSIGNED_ADULT]: routeDefault5,
   [ACCOUNT_AGE_GROUP_NON_ADULT]: pressableDefault3,
   [AGE_GROUP_CONFIRM]: pressableDefault4,
@@ -842,7 +842,7 @@ const obj = {
   [VOICE]: routeDefault32,
   [INPUT_MODE]: pressableDefault17,
   [AUTO_VOICE_SENSITIVITY]: toggleDefault13,
-  [VOICE_SENSITIVITY]: _modDef15075,
+  [VOICE_SENSITIVITY]: _modDef15090,
   [OUTPUT_VOLUME]: volumeSliderDefault,
   [STREAM_OUTPUT_VOLUME]: volumeSliderDefault2,
   [SOUNDBOARD_VOLUME]: volumeSliderDefault3,
@@ -939,15 +939,15 @@ const obj = {
   [ACKNOWLEDGEMENTS]: pressableDefault19,
   [CHANGE_LOG]: routeDefault44,
   [LOGOUT]: handleLogoutDefault,
-  [APP_VERSION]: _modDef15384,
-  [DEVICE_INFO]: _modDef15386,
+  [APP_VERSION]: _modDef15398,
+  [DEVICE_INFO]: _modDef15400,
   [VIEW_DEBUG_LOGS]: ViewDebugLogsActionSheetRowDefault,
   [COPY_CLIENT_INFO]: getClientInfoDefault,
   [CACHE_ACTIONS]: handleCacheActionPressDefault,
   [SHOW_DEV_WIDGET]: toggleDefault62,
   [SHOW_DEV_TOOLS]: pressableDefault20,
   [BUG_REPORTER]: useBugReporterExperimentSettingPredicateDefault,
-  [INTERNAL_BUILD_ACTIVE]: _modDef15568,
+  [INTERNAL_BUILD_ACTIVE]: _modDef15582,
   [INTERNAL_BUILD_UPDATE]: pressableDefault21,
   [EXPERIMENT_OVERRIDE_ACTIVE]: pressableDefault22,
   [BUILD_OVERRIDE_ACTIVE]: pressableDefault23,
@@ -1000,7 +1000,7 @@ const obj = {
   [SAFETY_GUILD_SETTING_MESSAGE_REQUESTS]: showMessageRequestRestrictionModalDefault,
   [GUILD_SETTING_ACTIVITY_STATUS]: toggleDefault67,
   [GUILD_SETTING_ACTIVITY_JOINING]: toggleDefault68,
-  [REACT_COMPILER]: _modDef15710,
+  [REACT_COMPILER]: _modDef15724,
   [CONTENT_AND_SOCIAL_DISCORD]: routeDefault79,
   [CONNECTED_GAMES]: routeDefault80,
   [ALLOW_GAME_FRIEND_DMS]: toggleDefault69,

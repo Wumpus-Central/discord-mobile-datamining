@@ -18,12 +18,12 @@ function canFetchNitroProgramReward(canUseMonthlyOrbs) {
     str = "ProgramRewardsUtils";
   }
   if (RewardProgram.RewardProgram.NITRO === NITRO) {
-    let tmpResult = tmp(13607);
+    let tmpResult = tmp(13622);
     let flag = tmpResult.getPremiumRewardsOrbsExperiment(str).isInTreatment;
   } else {
     flag = false;
-    if (tmp(13604).RewardProgram.XBOX === NITRO) {
-      tmpResult = tmp(7310);
+    if (tmp(13619).RewardProgram.XBOX === NITRO) {
+      tmpResult = tmp(7311);
       flag = tmpResult.getIsXboxGamePassPerksEnabled(str);
     }
   }
@@ -44,24 +44,24 @@ function canFetchXboxProgramReward(canUseMonthlyOrbs) {
     str = "ProgramRewardsUtils";
   }
   if (RewardProgram.RewardProgram.NITRO === XBOX) {
-    let tmpResult = tmp(13607);
+    let tmpResult = tmp(13622);
     let flag = tmpResult.getPremiumRewardsOrbsExperiment(str).isInTreatment;
   } else {
     flag = false;
-    if (tmp(13604).RewardProgram.XBOX === XBOX) {
-      tmpResult = tmp(7310);
+    if (tmp(13619).RewardProgram.XBOX === XBOX) {
+      tmpResult = tmp(7311);
       flag = tmpResult.getIsXboxGamePassPerksEnabled(str);
     }
   }
   if (flag) {
-    flag = tmp(13608).hasCrepeMonthlyOrbsPerk(authStore.getCurrentUser());
-    const tmpResult1 = tmp(13608);
+    flag = tmp(13623).hasCrepeMonthlyOrbsPerk(authStore.getCurrentUser());
+    const tmpResult1 = tmp(13623);
   }
   return flag;
 }
 let closure_5 = {
-  [arg1(13604).RewardProgram.NITRO]: canFetchNitroProgramReward,
-  [arg1(13604).RewardProgram.XBOX]: canFetchXboxProgramReward,
+  [arg1(13619).RewardProgram.NITRO]: canFetchNitroProgramReward,
+  [arg1(13619).RewardProgram.XBOX]: canFetchXboxProgramReward,
 };
 const result = require("set").fileFinishedImporting("modules/rewards/ProgramRewardsUtils.tsx");
 
@@ -89,10 +89,10 @@ export const isEligibleForProgramReward = function isEligibleForProgramReward(ar
     str = "ProgramRewardsUtils";
   }
   if (RewardProgram.RewardProgram.NITRO === arg0) {
-    let tmpResult = tmp(13607);
+    let tmpResult = tmp(13622);
     return tmpResult.getPremiumRewardsOrbsExperiment(str).isInTreatment;
-  } else if (tmp(13604).RewardProgram.XBOX === arg0) {
-    tmpResult = tmp(7310);
+  } else if (tmp(13619).RewardProgram.XBOX === arg0) {
+    tmpResult = tmp(7311);
     return tmpResult.getIsXboxGamePassPerksEnabled(str);
   } else {
     return false;

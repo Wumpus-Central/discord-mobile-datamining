@@ -123,7 +123,7 @@ function getAutocompleteList(searchContext, autocompleteMode, tokens) {
       if (str == null) {
         str = "";
       }
-      let obj = currentUser(12130);
+      let obj = currentUser(12136);
       if (obj.isGuildLikeSearchContext(searchContext)) {
         let tmp8 = null != filter;
         if (tmp8) {
@@ -132,7 +132,7 @@ function getAutocompleteList(searchContext, autocompleteMode, tokens) {
         }
         if (tmp8) {
           if (0 !== str.length) {
-            let tmp6Result = tmp6(12130);
+            let tmp6Result = tmp6(12136);
             const searchContextId = tmp6Result.getSearchContextId(searchContext);
             let value = map1.get(searchContextId);
             if (value == null) {
@@ -153,7 +153,7 @@ function getAutocompleteList(searchContext, autocompleteMode, tokens) {
               }
               arr3 = results;
               if (tmp20) {
-                tmp6Result = tmp6(12131);
+                tmp6Result = tmp6(12137);
                 arr3 = results;
                 if (tmp6Result.isMeAutcompleteAnswer(str)) {
                   currentUser = currentUser.getCurrentUser();
@@ -316,13 +316,13 @@ const searchAutocompleteStoreClass = new SearchAutocompleteStoreClass(dispatcher
         let autocompletes = value.autocompletes;
         let flag = false;
       }
-      let tmp5Result = tmp5(12130);
+      let tmp5Result = tmp5(12136);
       const searchContextId1 = tmp5Result.getSearchContextId(searchContext);
       value = map1.get(searchContextId1);
       if (value == null) {
         obj = { results: null, context: null };
         obj[0] = [];
-        let tmpResult = tmp(9950);
+        let tmpResult = tmp(9954);
         obj[1] = tmpResult.getUserSearchContext(handleUserSearchResults.bind(null, searchContext));
         value = obj;
       }
@@ -348,13 +348,13 @@ const searchAutocompleteStoreClass = new SearchAutocompleteStoreClass(dispatcher
       tmp9 = tmp10;
     }
     if (tmp9) {
-      tmp5Result = tmp5(12130);
+      tmp5Result = tmp5(12136);
       const searchContextId2 = tmp5Result.getSearchContextId(searchContext);
       let value1 = map1.get(searchContextId2);
       if (value1 == null) {
         obj1 = { results: null, context: null };
         obj1[0] = [];
-        tmpResult = tmp(9950);
+        tmpResult = tmp(9954);
         obj1[1] = tmpResult.getUserSearchContext(handleUserSearchResults.bind(null, searchContext));
         value1 = obj1;
       }
@@ -369,10 +369,10 @@ const searchAutocompleteStoreClass = new SearchAutocompleteStoreClass(dispatcher
       }
       if (null != trimmed) {
         if (trimmed.length > 0) {
-          const guildIdFromSearchContext = tmp5(12130).getGuildIdFromSearchContext(searchContext);
+          const guildIdFromSearchContext = tmp5(12136).getGuildIdFromSearchContext(searchContext);
           if (null != guildIdFromSearchContext) {
-            const members = tmp(5464).requestMembers(guildIdFromSearchContext, trimmed, c17);
-            const tmpResult1 = tmp(5464);
+            const members = tmp(5465).requestMembers(guildIdFromSearchContext, trimmed, c17);
+            const tmpResult1 = tmp(5465);
           }
           const context3 = value1.context;
           obj2 = { query: null, filters: null, boosters: null };
@@ -381,8 +381,8 @@ const searchAutocompleteStoreClass = new SearchAutocompleteStoreClass(dispatcher
           obj3[0] = guildIdFromSearchContext;
           obj2[1] = obj3;
           const tmp26 = guildIdFromSearchContext;
-          const tmp5Result1 = tmp5(12130);
-          obj2[2] = tmp5(5393).getBoosterMap(AutocompleterResultTypes.USER);
+          const tmp5Result1 = tmp5(12136);
+          obj2[2] = tmp5(5394).getBoosterMap(AutocompleterResultTypes.USER);
           context3.setQuery(obj2);
           autocompletes = undefined;
           if (value != null) {
@@ -392,7 +392,7 @@ const searchAutocompleteStoreClass = new SearchAutocompleteStoreClass(dispatcher
             autocompletes = [];
           }
           flag = false;
-          const tmp5Result2 = tmp5(5393);
+          const tmp5Result2 = tmp5(5394);
         }
       }
       const context2 = value1.context;

@@ -40,7 +40,7 @@ const memoResult = importAllResult.memo(function ChatInputImageCarousel(canUploa
     obj = { attachments: null, channelId: null };
     obj[0] = stateFromStores;
     obj[1] = channelId;
-    tmp4 = jsx(channelId(10645), { attachments: null, channelId: null });
+    tmp4 = jsx(channelId(10649), { attachments: null, channelId: null });
   }
   return tmp4;
 });

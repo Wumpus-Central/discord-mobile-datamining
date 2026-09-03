@@ -5,7 +5,7 @@ import getNavigationModalPresentationDefault from "../utils/getNavigationModalPr
 import closure_3 from "../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createNativeStackNavigator from "../../../../../_runtime/07831_createNativeStackNavigator.js";
+import createNativeStackNavigator from "../../../../../_runtime/07834_createNativeStackNavigator.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 import { NavigationStack } from "../../../../design/components/Navigator/native/Navigator.native.tsx";
 
@@ -31,7 +31,7 @@ export default function MessageRequestsNavigator() {
   const _require = tmp;
   let obj = NavigationStack;
   importDefault = obj.useAccessibilityNativeStackOptions();
-  const layoutEffect = React.useLayoutEffect(() => lib(7229).trackAppUIViewed(), []);
+  const layoutEffect = React.useLayoutEffect(() => lib(7230).trackAppUIViewed(), []);
   const rect = useSafeAreaInsetsDefault();
   obj = { style: items, children: null };
   items = [tmp.container, { paddingLeft: rect.left, paddingRight: rect.right }];
@@ -61,7 +61,7 @@ export default function MessageRequestsNavigator() {
   let merged = Object.assign(getNavigationModalPresentationDefault());
   obj1[1] = obj2;
   obj1[2] = function getComponent() {
-    return lib(16689).default;
+    return lib(16709).default;
   };
   const items1 = [callback(Screen, obj1), ,];
   const obj3 = { name: "spam", options: null, getComponent: null };
@@ -71,7 +71,7 @@ export default function MessageRequestsNavigator() {
   let merged1 = Object.assign(getNavigationModalPresentationDefault());
   obj3[1] = obj4;
   obj3[2] = function getComponent() {
-    return lib(16708).default;
+    return lib(16728).default;
   };
   items1[1] = callback(closure_7.Screen, obj3);
   const obj5 = { name: "preview", options: null, getComponent: null };
@@ -81,7 +81,7 @@ export default function MessageRequestsNavigator() {
   const merged2 = Object.assign(getNavigationModalPresentationDefault());
   obj5[1] = obj6;
   obj5[2] = function getComponent() {
-    return lib(16709).default;
+    return lib(16729).default;
   };
   items1[2] = callback(closure_7.Screen, obj5);
   obj[1] = items1;

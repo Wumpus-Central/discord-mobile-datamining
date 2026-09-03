@@ -8,7 +8,7 @@ const result = set.fileFinishedImporting("modules/premium/powerups/native/utils/
 
 export default function openGuildPowerupsBottomSheet(arg0) {
   ACTION_SHEET_HEIGHT_HALFDefault.openLazy(
-    asyncRequireImpl(12306, dependencyMap.paths),
+    asyncRequireImpl(12318, dependencyMap.paths),
     GUILD_POWERUPS_BOTTOM_SHEET_KEY,
     arg0,
   );

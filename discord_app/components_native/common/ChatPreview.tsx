@@ -103,7 +103,7 @@ class ChatPreviewBase extends PureComponent {
           let arr = items;
           const first = items[0];
           if (null != first) {
-            if (messages(11748)(c0, first[first.length - 1], props)) {
+            if (messages(11753)(c0, first[first.length - 1], props)) {
               items = [props];
               arr = arr.unshift(items);
             } else {
@@ -261,9 +261,9 @@ class ChatPreviewBase extends PureComponent {
             jumpTargetId: null,
             jumpType: "flex",
             shouldInitialScroll: "Array",
-            animated: 0,
-            scrollPosition: 3,
-            focusTargetId: 2,
+            animated: "agente",
+            scrollPosition: "b\u00FAsqueda",
+            focusTargetId: "cara",
           };
           obj[0] = tmp22;
           obj[1] = jumpTargetId;
@@ -607,7 +607,7 @@ prototype["render"] = function render() {
     onPress: self.handleJumpToChat,
     children: callback(Text.Text, obj4),
   });
-  tmp6Result = tmp6(tmp9(5561).SafeAreaPaddingView, obj2);
+  tmp6Result = tmp6(tmp9(5562).SafeAreaPaddingView, obj2);
   tmp14 = tmp6Result;
 };
 ChatPreviewBase.contextType = require("ManaContext").ThemeContext;
@@ -629,10 +629,10 @@ export const ChatPreview = function ChatPreview(channelId) {
   const items1 = [closure_8];
   const stateFromStores1 = channelId(586).useStateFromStores(items1, () => closure_1_8.getChannel(channelId));
   const obj2 = channelId(586);
-  const isChannelSpoilerGated = channelId(6182).useIsChannelSpoilerGated(stateFromStores1);
-  const obj3 = channelId(6182);
-  const isChannelContentGated = channelId(4731).useIsChannelContentGated(stateFromStores1);
-  const obj4 = channelId(4731);
+  const isChannelSpoilerGated = channelId(6183).useIsChannelSpoilerGated(stateFromStores1);
+  const obj3 = channelId(6183);
+  const isChannelContentGated = channelId(4732).useIsChannelContentGated(stateFromStores1);
+  const obj4 = channelId(4732);
   const items2 = [closure_7];
   obj = {};
   const stateFromStores2 = channelId(586).useStateFromStores(items2, () => null != content.getContent());

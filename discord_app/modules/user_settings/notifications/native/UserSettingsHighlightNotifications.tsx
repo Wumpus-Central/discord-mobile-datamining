@@ -57,7 +57,7 @@ function Row(guildId) {
     obj[3] = callback;
     obj[4] = isStart;
     obj[5] = isEnd;
-    return jsx(tmp2(6001).TableSwitchRow, {
+    return jsx(tmp2(6002).TableSwitchRow, {
       label: null,
       icon: null,
       value: null,
@@ -81,7 +81,7 @@ export default function UserSettingsHighlightNotifications() {
   if (0 !== stateFromStoresArray.length) {
     obj = { children: null };
     obj[0] = tmp3;
-    tmp4 = jsx(stateFromStoresArray(8372).Form, { children: null });
+    tmp4 = jsx(stateFromStoresArray(8376).Form, { children: null });
   }
   return tmp4;
 }

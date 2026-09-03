@@ -55,7 +55,7 @@ let closure_5 = keys.create((arg0) => {
         }),
       );
     });
-    return { rawThermalState: "r" };
+    return { rawThermalState: "Array" };
   }
 });
 const result = set.fileFinishedImporting("modules/device/ThermalUtils.native.tsx");

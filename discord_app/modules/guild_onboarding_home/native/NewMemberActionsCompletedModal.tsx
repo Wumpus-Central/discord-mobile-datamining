@@ -75,7 +75,7 @@ export default function NewMemberActionsCompleted(arg0) {
   const animatedStyle = obj1.useAnimatedStyle(fn);
   const effect1 = React.useEffect(() => {
     const timerId = setTimeout(
-      () => callback2(4723).popWithKey(callback(12075).NEW_MEMBER_ACTION_COMPLETE_MODAL_KEY),
+      () => callback2(4724).popWithKey(callback(12081).NEW_MEMBER_ACTION_COMPLETE_MODAL_KEY),
       2500,
     );
   }, []);

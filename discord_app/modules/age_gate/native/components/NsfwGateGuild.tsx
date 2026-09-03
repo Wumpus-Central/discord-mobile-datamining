@@ -74,8 +74,8 @@ export default function NsfwGateGuild(guildId) {
     obj.track(closure_1_9.GUILD_NSFW_GATE_VIEWED, obj);
   }, items);
   obj = { style: tmp.container, children: null };
-  const items1 = [callback(currentUser(7757), {}), , , , ,];
-  obj = { source: currentUser(9147), style: tmp.image };
+  const items1 = [callback(currentUser(7760), {}), , , , ,];
+  obj = { source: currentUser(9151), style: tmp.image };
   items1[1] = callback(closure_5, obj);
   obj1 = {
     style: tmp.header,
@@ -101,7 +101,7 @@ export default function NsfwGateGuild(guildId) {
   const obj4 = { onPress: guildId.onClose, size: "md", text: null };
   const intl4 = guildId(1233).intl;
   obj4[2] = intl4.string(guildId(1233).t.gRqiWV);
-  items1[5] = callback(guildId(4928).Button, obj4);
+  items1[5] = callback(guildId(4929).Button, obj4);
   obj[1] = items1;
   return callback2(closure_4, obj);
 }

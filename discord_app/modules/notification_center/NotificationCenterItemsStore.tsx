@@ -18,7 +18,7 @@ function _validate(id) {
 function toNotificationCenterItem(item_enum) {
   let tmp3 = item_enum.item_enum === NotificationCenterScenes.ItemEnum.FIRST_MESSAGE;
   if (tmp3) {
-    tmp3 = item_enum.type === tmp(7394).NotificationCenterItems.LIFECYCLE_ITEM;
+    tmp3 = item_enum.type === tmp(7395).NotificationCenterItems.LIFECYCLE_ITEM;
   }
   if (tmp3) {
     item_enum.deeplink = "https://discord.com/feature/composeMessage";
@@ -28,8 +28,8 @@ function toNotificationCenterItem(item_enum) {
   obj.kind = "notification-center-item";
   let messageRecord;
   if (null != item_enum.message) {
-    messageRecord = tmp(4737).createMessageRecord(item_enum.message);
-    const tmpResult = tmp(4737);
+    messageRecord = tmp(4738).createMessageRecord(item_enum.message);
+    const tmpResult = tmp(4738);
   }
   obj.message = messageRecord;
   let id;
@@ -44,7 +44,7 @@ function handleAddItem(type) {
     const item2 = type.item;
     let tmp3 = item2.item_enum === NotificationCenterScenes.ItemEnum.FIRST_MESSAGE;
     if (tmp3) {
-      tmp3 = item2.type === tmp(7394).NotificationCenterItems.LIFECYCLE_ITEM;
+      tmp3 = item2.type === tmp(7395).NotificationCenterItems.LIFECYCLE_ITEM;
     }
     if (tmp3) {
       item2.deeplink = "https://discord.com/feature/composeMessage";
@@ -54,8 +54,8 @@ function handleAddItem(type) {
     obj.kind = "notification-center-item";
     let messageRecord;
     if (null != item2.message) {
-      messageRecord = tmp(4737).createMessageRecord(item2.message);
-      const tmpResult = tmp(4737);
+      messageRecord = tmp(4738).createMessageRecord(item2.message);
+      const tmpResult = tmp(4738);
     }
     obj.message = messageRecord;
     let id;
@@ -208,8 +208,8 @@ let obj = {
   notifCenterLocalItems: null,
   paginationHasMore: true,
   paginationCursor: "flex",
-  notifCenterActive: "screens",
-  notifCenterTabFocused: "groups",
+  notifCenterActive: 2087,
+  notifCenterTabFocused: 2088,
 };
 let set = new Set();
 obj[6] = set;
@@ -397,8 +397,8 @@ obj = {
       notifCenterLocalItems: null,
       paginationHasMore: true,
       paginationCursor: "flex",
-      notifCenterActive: "screens",
-      notifCenterTabFocused: "groups",
+      notifCenterActive: 2087,
+      notifCenterTabFocused: 2088,
     };
     if (flag) {
       let prop = obj.notifCenterLocalItems;
@@ -541,8 +541,8 @@ obj = {
       notifCenterLocalItems: null,
       paginationHasMore: true,
       paginationCursor: "flex",
-      notifCenterActive: "screens",
-      notifCenterTabFocused: "groups",
+      notifCenterActive: 2087,
+      notifCenterTabFocused: 2088,
     };
     if (flag) {
       let prop = obj.notifCenterLocalItems;
@@ -601,7 +601,7 @@ obj = {
       const user = authStore.getUser(id);
       if (tmp6) {
         const items = [];
-        obj = id(7395);
+        obj = id(7396);
         items[HermesBuiltin.arraySpread(obj.notifCenterLocalItems, 0)] = obj.incomingGameFriendRequestLocalItem(
           user,
           since,
@@ -711,8 +711,8 @@ obj = {
       notifCenterLocalItems: null,
       paginationHasMore: true,
       paginationCursor: "flex",
-      notifCenterActive: "screens",
-      notifCenterTabFocused: "groups",
+      notifCenterActive: 2087,
+      notifCenterTabFocused: 2088,
     };
     if (flag) {
       let prop = obj.notifCenterLocalItems;

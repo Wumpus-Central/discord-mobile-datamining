@@ -65,7 +65,7 @@ function MediaInfo(message) {
           if (contentMessage.attachments.length > 0) {
             str2 = "";
             if (null != activeMediaPlayerSource.attachmentIndex) {
-              str2 = tmp4(8134)(contentMessage.attachments[activeMediaPlayerSource.attachmentIndex]);
+              str2 = tmp4(8138)(contentMessage.attachments[activeMediaPlayerSource.attachmentIndex]);
             }
           }
         }
@@ -89,7 +89,7 @@ function MediaInfo(message) {
           obj2[0] = { flex: 1 };
           const obj3 = { spacing: 20, speed: 0.2, children: null };
           obj3[2] = tmp14;
-          const items3 = [tmp13(tmp2(17040).Marquee, obj3)];
+          const items3 = [tmp13(tmp2(17060).Marquee, obj3)];
           const obj4 = { start: null, end: null, locations: null, colors: null, style: null };
           obj4[0] = { x: 0, y: 0 };
           obj4[1] = { x: 1, y: 0 };
@@ -97,7 +97,7 @@ function MediaInfo(message) {
           const items4 = [token, `${tmp5}CC`, `${tmp5}00`, `${tmp5}00`, `${tmp5}CC`, token];
           obj4[3] = items4;
           obj4[4] = tmp.infoContainerGradient;
-          items3[1] = tmp13(tmp4(4940), obj4);
+          items3[1] = tmp13(tmp4(4941), obj4);
           obj2[1] = items3;
           tmp16Result = tmp16(tmp15, obj2);
         }
@@ -178,7 +178,7 @@ function PiPControls(message) {
   }
   obj = { style: items1, children: null };
   items1 = [tmp.pipControls, animatedStyle];
-  const items2 = [callback2(message(8998).BackgroundBlurFill, { blurAmount: 0.05 }), ,];
+  const items2 = [callback2(message(9002).BackgroundBlurFill, { blurAmount: 0.05 }), ,];
   const items3 = [,];
   ({ pipButton: arr4[0], backButton: arr4[1] } = tmp);
   items2[1] = callback2(closure_6, {
@@ -188,7 +188,7 @@ function PiPControls(message) {
     accessible: true,
     accessibilityRole: "button",
     accessibilityLabel: stringResult,
-    children: callback2(message(5507).ArrowLargeLeftIcon, { size: "sm" }),
+    children: callback2(message(5508).ArrowLargeLeftIcon, { size: "sm" }),
   });
   obj1 = {
     disabled: !visible,
@@ -197,7 +197,7 @@ function PiPControls(message) {
     accessible: true,
     accessibilityRole: "button",
     accessibilityLabel: stringResult,
-    children: callback2(message(5507).ArrowLargeLeftIcon, { size: "sm" }),
+    children: callback2(message(5508).ArrowLargeLeftIcon, { size: "sm" }),
   };
   const items4 = [,];
   ({ pipButton: arr5[0], dismissButton: arr5[1] } = tmp);

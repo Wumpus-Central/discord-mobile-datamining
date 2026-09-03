@@ -62,7 +62,7 @@ export const resolveOrbCheckoutErrorMessage = function resolveOrbCheckoutErrorMe
     let keFvXM = dependencyMap;
     let OrderSigningFailedWithConstraintsError = _signOrder.OrderSigningFailedWithConstraintsError;
     if (!(code instanceof OrderSigningFailedWithConstraintsError)) {
-      if (code instanceof tmp(6098).OrderProcessingPendingError) {
+      if (code instanceof tmp(6099).OrderProcessingPendingError) {
         const intl5 = tmp(1233).intl;
         let stringResult = intl5.string(tmp(1233).t["2BmwgV"]);
       } else if (code.code === tmp(4161).ErrorCodes.VIRTUAL_CURRENCY_INSUFFICIENT_BALANCE) {

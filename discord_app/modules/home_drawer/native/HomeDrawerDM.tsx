@@ -41,10 +41,10 @@ function HomeDrawerDMExpandedChildren(channel) {
   });
   const obj2 = channel(586);
   const tmp3 = useMessagePreviewDefault(channel, {
-    unread: channel(16165).useBaseChannelUnreadBadgeState(channel, false).unread,
+    unread: channel(16181).useBaseChannelUnreadBadgeState(channel, false).unread,
   });
   closure_4 = tmp3;
-  const obj3 = channel(16165);
+  const obj3 = channel(16181);
   const items2 = [closure_7];
   stateFromStores1 = channel(586).useStateFromStores(items2, () =>
     closure_1_7.getChannelMuteConfig(channel.guild_id, channel.id),
@@ -83,10 +83,10 @@ function HomeDrawerDMExpandedChildren(channel) {
       }
       let tmp5Result = dependencyMap;
       if (isTemporary) {
-        tmp5Result = tmp5(13170);
+        tmp5Result = tmp5(13182);
         let BellSlashIcon = tmp5Result.BellZIcon;
       } else {
-        BellSlashIcon = tmp5(10260).BellSlashIcon;
+        BellSlashIcon = tmp5(10264).BellSlashIcon;
       }
     } else {
       let obj = { style: null, children: null };
@@ -114,11 +114,11 @@ function HomeDrawerDMExpandedChildren(channel) {
       obj[1] = tmp;
       obj[4] = channel(4171).ChannelListLayoutTypes.COZY;
       obj[5] = memo.isMuted;
-      tmp2 = closure_1_10(channel(10214).ChannelRowPreview, obj);
+      tmp2 = closure_1_10(channel(10218).ChannelRowPreview, obj);
     }
     return tmp2;
   }, items5);
-  return callback(channel(16127).HomeDrawerSharedItem, { title, subtitle });
+  return callback(channel(16143).HomeDrawerSharedItem, { title, subtitle });
 }
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
 let closure_12 = createCacheKey.createStyles({

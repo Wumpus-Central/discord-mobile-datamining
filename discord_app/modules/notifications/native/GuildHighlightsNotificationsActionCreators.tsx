@@ -10,19 +10,19 @@ const AnalyticEvents = ME.AnalyticEvents;
 const result = set.fileFinishedImporting("modules/notifications/native/GuildHighlightsNotificationsActionCreators.tsx");
 
 export const openGuildHighlightNotificationForPush = function openGuildHighlightNotificationForPush(
-  guildId,
-  arg1,
-  TRENDING_CONTENT_PUSH,
-  NOTIFICATION_CENTER,
-  arg4,
+  guild_id1,
+  message,
+  notificationType,
+  MESSAGE_EMBED,
+  action,
 ) {
-  const _require = guildId;
-  importDefault = arg1;
-  dependencyMap = TRENDING_CONTENT_PUSH;
-  const constants = NOTIFICATION_CENTER;
-  closure_4 = arg4;
+  const _require = guild_id1;
+  importDefault = message;
+  dependencyMap = notificationType;
+  const constants = MESSAGE_EMBED;
+  closure_4 = action;
   let obj = ACTION_SHEET_HEIGHT_HALFDefault;
-  obj = { guildId, feedbackSettings: null };
+  obj = { guildId: guild_id1, feedbackSettings: null };
   obj = { reasons: null, onFeedbackShown: null, onFeedbackCompleted: null };
   obj1 = { value: constants.TOO_MANY, label: null };
   const intl = require("../../../intl/index.native.tsx").intl;
@@ -46,21 +46,21 @@ export const openGuildHighlightNotificationForPush = function openGuildHighlight
   items[4] = obj5;
   obj[0] = items;
   obj[1] = function onFeedbackShown() {
-    let obj = lib(TRENDING_CONTENT_PUSH[6]);
+    let obj = message(notificationType[6]);
     obj = {
-      type: TRENDING_CONTENT_PUSH,
+      type: notificationType,
       location: closure_3,
       guild_id: closure_0,
-      channel_id: lib.channel_id,
-      message_id: lib.id,
+      channel_id: message.channel_id,
+      message_id: message.id,
     };
-    const merged = Object.assign(constants);
-    obj.track(constants.FEEDBACK_FORM_VIEWED, obj);
+    const merged = Object.assign(action);
+    obj.track(action.FEEDBACK_FORM_VIEWED, obj);
   };
   obj[2] = function onFeedbackCompleted(rating) {
-    let obj = lib(TRENDING_CONTENT_PUSH[6]);
+    let obj = message(notificationType[6]);
     obj = {
-      type: TRENDING_CONTENT_PUSH,
+      type: notificationType,
       location: closure_3,
       rating: rating.rating,
       reason: null,
@@ -74,10 +74,10 @@ export const openGuildHighlightNotificationForPush = function openGuildHighlight
     }
     obj[3] = value;
     obj[4] = closure_0;
-    ({ channel_id: obj2[5], id: obj2[6] } = lib);
-    const merged = Object.assign(constants);
-    obj.track(constants.FEEDBACK_FORM_SUBMITTED, obj);
+    ({ channel_id: obj2[5], id: obj2[6] } = message);
+    const merged = Object.assign(action);
+    obj.track(action.FEEDBACK_FORM_SUBMITTED, obj);
   };
   obj[1] = obj;
-  obj.openLazy(asyncRequireImpl(11433, dependencyMap.paths), "GuildHighlightsNotifications", obj);
+  obj.openLazy(asyncRequireImpl(11438, dependencyMap.paths), "GuildHighlightsNotifications", obj);
 };

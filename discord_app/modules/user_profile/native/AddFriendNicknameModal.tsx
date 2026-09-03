@@ -152,7 +152,7 @@ export default function AddFriendNicknameModal(arg0) {
   let tmp = callback4();
   let obj = React;
   [c2, c3] = callback(React.useState(false), 2);
-  callback = showUserProfile(10885)();
+  callback = showUserProfile(10889)();
   obj1 = initialize;
   const items = [_handleSubmit];
   const stateFromStores = obj1.useStateFromStores(items, () => _handleSubmit.getNickname(closure_0));
@@ -184,9 +184,9 @@ export default function AddFriendNicknameModal(arg0) {
   }, items2);
   obj = { style: tmp.container, children: null };
   obj = { children: null };
-  let tmp3Result = tmp3(6057);
+  let tmp3Result = tmp3(6058);
   obj1 = { confirmText: null, onConfirm: null, cancelText: null, onCancel: null, children: null };
-  tmp3Result = tmp3(4947);
+  tmp3Result = tmp3(4948);
   const intl3 = tmp5(1233).intl;
   obj1[0] = intl3.string(getSystemLocale.t["R3BPH+"]);
   obj1[1] = function handleSubmit() {

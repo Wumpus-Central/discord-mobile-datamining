@@ -31,9 +31,9 @@ function GuildPowerupsRecentActivityRow(row) {
       obj = { color: null };
       obj[0] = roleColor;
     }
-    let tmpResult = tmp(7879);
+    let tmpResult = tmp(7882);
     const processColorStringsArray = tmpResult.useProcessColorStringsArray(roleColorStrings);
-    tmpResult = tmp(7879);
+    tmpResult = tmp(7882);
     const isRoleStyleAndRoleColorsEligibleForERC = tmpResult.useIsRoleStyleAndRoleColorsEligibleForERC(
       boost.guildId,
       boost.userId,
@@ -41,11 +41,11 @@ function GuildPowerupsRecentActivityRow(row) {
       processColorStringsArray,
     );
     if ("gave" === phase) {
-      let BoostGemSlashIcon = tmp(8243).BoostGemIcon;
+      let BoostGemSlashIcon = tmp(8247).BoostGemIcon;
     } else if ("expiring" === phase) {
-      BoostGemSlashIcon = tmp(12370).BoostTier1Icon;
+      BoostGemSlashIcon = tmp(12382).BoostTier1Icon;
     } else {
-      BoostGemSlashIcon = tmp(12372).BoostGemSlashIcon;
+      BoostGemSlashIcon = tmp(12384).BoostGemSlashIcon;
     }
     obj = { style: null, children: null };
     obj[0] = tmp4.boostRowContainer;

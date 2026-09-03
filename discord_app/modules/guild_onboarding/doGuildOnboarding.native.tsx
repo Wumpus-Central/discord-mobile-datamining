@@ -1,5 +1,5 @@
 // discord_app/modules/guild_onboarding/doGuildOnboarding.native.tsx
-import _mod5473 from "../../../_runtime/metro/05473__.js";
+import _mod5474 from "../../../_runtime/metro/05474__.js";
 import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
 import { NativeModules } from "../../../_runtime/00017_get_ActivityIndicator.js";
 import closure_5 from "../../stores/SelectedGuildStore.tsx";
@@ -10,7 +10,7 @@ import { waitForOnboardingCompletion } from "doGuildOnboardingHelpers.tsx";
 
 require = arg1;
 function getBaseAnimationData() {
-  return JSON.parse(JSON.stringify(_mod5473));
+  return JSON.parse(JSON.stringify(_mod5474));
 }
 function _doGuildOnboarding() {
   let self = this;
@@ -66,12 +66,12 @@ function _doGuildOnboarding() {
             } else {
               let obj8 = lib(4445);
               obj8.hideActionSheet();
-              lib(4723).popAll();
-              const obj10 = lib(4723);
+              lib(4724).popAll();
+              const obj10 = lib(4724);
               c5 = 2;
               c6 = 1;
               const obj2 = { value: null, done: false };
-              obj2[0] = guildId(5465).waitForGuild(closure_0);
+              obj2[0] = guildId(5466).waitForGuild(closure_0);
               return obj2;
             }
           } else {
@@ -93,7 +93,7 @@ function _doGuildOnboarding() {
                   hasItem = features.has(constants.COMMUNITY);
                 }
                 if (hasItem) {
-                  let obj5 = guildId(5474);
+                  let obj5 = guildId(5475);
                   c5 = 3;
                   c6 = 1;
                   const obj4 = { value: null, done: false };
@@ -263,7 +263,7 @@ function _fetchLandingAsset() {
           } else {
             dependencyMap = arg1;
             const _HermesInternal = HermesInternal;
-            const tmp12 = callback(5478);
+            const tmp12 = callback(5479);
             c3 = 0;
             c5 = 3;
             obj = { value: null, done: true };

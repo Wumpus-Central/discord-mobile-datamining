@@ -1,7 +1,7 @@
 // discord_app/modules/user_settings/UserSettingsURLUtils.tsx
 import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
 import WebUserSettings from "UserSettingsKeys.tsx";
-import keysSorter from "../../../_runtime/05406_keysSorter.js";
+import keysSorter from "../../../_runtime/05407_keysSorter.js";
 import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
 import { UserSettingsPath } from "UserSettingsConstants.tsx";
 import ME from "../../Constants.tsx";

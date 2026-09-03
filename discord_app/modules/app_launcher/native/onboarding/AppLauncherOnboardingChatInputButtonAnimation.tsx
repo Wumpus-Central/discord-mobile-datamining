@@ -9,8 +9,8 @@ import MINIMUM_HIT_AREA from "../../../../design/components/Button/native/Button
 import playDefault from "../../../../components_native/common/LottieAnimationView.tsx";
 import useGradientBottom from "../../../client_themes/native/ClientThemesOverrides.tsx";
 import useAppLauncherOnboardingContentDefault from "hooks/useAppLauncherOnboardingContent.tsx";
-import _mod11857 from "../../../../../_runtime/metro/11857__.js";
-import _mod12033 from "../../../../../_runtime/metro/12033__.js";
+import _mod11863 from "../../../../../_runtime/metro/11863__.js";
+import _mod12039 from "../../../../../_runtime/metro/12039__.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import closure_5 from "../../../a11y/AccessibilityStore.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
@@ -116,7 +116,7 @@ export const AppLauncherOnboardingChatInputButtonAnimation = function AppLaunche
   obj = { children: null };
   obj = { entering: EnteringAnimation, exiting: ExitingAnimation, style: items1, collapsable: false, children: null };
   items1 = [absoluteFill.absoluteFill, tmp.glowAnimation];
-  obj1 = { collapsable: false, style: tmp.glowLottie, source: _mod12033, autoPlay: !stateFromStores };
+  obj1 = { collapsable: false, style: tmp.glowLottie, source: _mod12039, autoPlay: !stateFromStores };
   const items2 = [callback(playDefault, obj1), ,];
   const items3 = [tmp.glowMask, gradientBottom];
   items2[1] = callback(closure_3, { collapsable: false, style: items3 });
@@ -126,7 +126,7 @@ export const AppLauncherOnboardingChatInputButtonAnimation = function AppLaunche
   const obj3 = { collapsable: false, style: tmp.trinketsLottie, source: null, autoPlay: null };
   const obj2 = { collapsable: false, style: tmp.fakeButton };
   const tmp5 = playDefault;
-  obj3[2] = _mod11857;
+  obj3[2] = _mod11863;
   obj3[3] = !stateFromStores;
   items4[1] = callback(playDefault, obj3);
   obj[0] = items4;

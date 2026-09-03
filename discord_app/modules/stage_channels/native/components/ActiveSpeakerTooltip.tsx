@@ -59,7 +59,7 @@ const memoResult = importAllResult.memo((channel) => {
         return items;
       },
       items1,
-      channel(5383).isVersionEqual,
+      channel(5384).isVersionEqual,
     ),
     1,
   )[0];
@@ -93,7 +93,7 @@ const memoResult = importAllResult.memo((channel) => {
       items2[1] = callback3(View, obj3);
       obj[1] = items2;
       obj[3] = callback4(View, obj);
-      tmp5 = callback3(tmp2(5076).PressableOpacity, obj);
+      tmp5 = callback3(tmp2(5077).PressableOpacity, obj);
       const tmp10 = UserSummaryItemDefault;
     }
   }

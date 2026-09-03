@@ -412,7 +412,7 @@ function _fetchTopArtistContentParts() {
             } else if ("media" in lib.extra) {
               const image_url = lib.extra.media.image_url;
               v0(38)(null != image_url, "missing image url for top artist");
-              obj1 = lib(8050);
+              obj1 = lib(8053);
               dependencyMap = 1;
               v0 = 1;
               obj1 = { value: null, done: false };
@@ -512,7 +512,7 @@ function _loadContentEntryParts() {
                       if (closure_1_2.type === arr(closure_1_2[11]).ComponentType.CONTENT_INVENTORY_ENTRY) {
                         function _fetchEntryParts() {
                           const self = this;
-                          const tmp = closure_1_4(/* F125032 */ function() { ... });
+                          const tmp = closure_1_4(/* F125271 */ function() { ... });
                           closure_1 = tmp;
                           const apply = tmp.apply;
                           if (typeof apply === "unknown") {
@@ -732,7 +732,7 @@ function isMessageRenderable(arg0) {
     let tmp3 = require;
     let tmp4 = dependencyMap;
     if (nextResult.type === PermissionOverwriteType.ComponentType.CONTENT_INVENTORY_ENTRY) {
-      let tmp3Result = tmp3(8047);
+      let tmp3Result = tmp3(8050);
       let obj = { component: null, message: null };
       obj = { contentInventoryEntry: null };
       let tmp5 = nextResult;

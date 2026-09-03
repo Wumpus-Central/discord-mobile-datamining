@@ -57,13 +57,13 @@ export default function useEventsButtonProps(id) {
     const intl = tmp(1233).intl;
     name = intl.string(tmp(1233).t.tlopTM);
   }
-  let mode = tmp(12171).ChannelModes.DEFAULT;
+  let mode = tmp(12177).ChannelModes.DEFAULT;
   let tmp8 = hasUnread;
   if (hasUnread) {
     tmp8 = !eventsMuted;
   }
   if (tmp8) {
-    mode = tmp(12171).ChannelModes.UNREAD_IMPORTANT;
+    mode = tmp(12177).ChannelModes.UNREAD_IMPORTANT;
   }
   return { hasUnread, mentionCount, mode, name, eventsMuted, handlePress, handleLongPress };
 }

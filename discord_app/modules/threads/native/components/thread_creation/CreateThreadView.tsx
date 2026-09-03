@@ -56,16 +56,16 @@ function CreateThreadViewInner(screenIndex) {
       }
       obj[1] = guild_id;
       obj[2] = tmp.parentMessageId;
-      obj = lib(4700);
+      obj = lib(4701);
       let guild_id1;
       if (lib != null) {
         guild_id1 = tmp23.guild_id;
       }
       const merged = Object.assign(obj.collectGuildAnalyticsMetadata(guild_id1));
       const obj6 = threadSettingsDraft(695);
-      const merged1 = Object.assign(lib(4700).collectChannelAnalyticsMetadata(tmp23));
+      const merged1 = Object.assign(lib(4701).collectChannelAnalyticsMetadata(tmp23));
       obj6.track(closure_1_11.MESSAGE_SHORTCUT_ACTION_SENT, obj);
-      const obj2 = lib(4700);
+      const obj2 = lib(4701);
     }
     if (null != navigation) {
       obj = { guildId: null, channelId: null, showCreateThread: false, screenKey: null };
@@ -92,7 +92,7 @@ function CreateThreadViewInner(screenIndex) {
   }
   obj[4] = str;
   obj[5] = callback;
-  const tmp12Result = threadSettingsDraft(10354)(obj);
+  const tmp12Result = threadSettingsDraft(10358)(obj);
   closure_6 = tmp12Result;
   _require = undefined;
   _require = navigation((arg0, arg1) => {
@@ -139,8 +139,8 @@ function CreateThreadViewInner(screenIndex) {
                   if (null != tmp50.name) {
                     const str = tmp50.name;
                   }
-                  closure_1_2(lib(16437).makeEmptyTitleError());
-                  const obj8 = lib(16437);
+                  closure_1_2(lib(16458).makeEmptyTitleError());
+                  const obj8 = lib(16458);
                   lib(4340).dismissKeyboard();
                   closure_1_4.current = false;
                   c5 = 0;
@@ -164,8 +164,8 @@ function CreateThreadViewInner(screenIndex) {
                 code = body.code;
               }
               if (code === closure_2_10.AUTOMOD_TITLE_BLOCKED) {
-                closure_1_2(lib(16437).makeAutomodViolationError(lib.body, lib));
-                const obj5 = lib(16437);
+                closure_1_2(lib(16458).makeAutomodViolationError(lib.body, lib));
+                const obj5 = lib(16458);
                 lib(4340).dismissKeyboard();
                 const obj6 = lib(4340);
               } else {
@@ -187,7 +187,7 @@ function CreateThreadViewInner(screenIndex) {
                   tmp23 = null != name;
                 }
                 if (tmp23) {
-                  let obj2 = lib(16437);
+                  let obj2 = lib(16458);
                   closure_1_2(obj2.makeApiNameRequiredError());
                   lib(4340).dismissKeyboard();
                   const obj4 = lib(4340);
@@ -203,7 +203,7 @@ function CreateThreadViewInner(screenIndex) {
               obj2[0] = arg1;
               return obj2;
             } else {
-              obj = threadSettingsDraft(7531);
+              obj = threadSettingsDraft(7532);
               obj.saveDraft(lib.id, "", closure_2_8.FirstThreadMessage);
               c5 = 0;
             }
@@ -237,19 +237,19 @@ function CreateThreadViewInner(screenIndex) {
     }
     return applyArgumentsResult;
   }, items2);
-  const tmp12 = threadSettingsDraft(10354);
-  const tmp11Result = threadSettingsDraft(5961);
+  const tmp12 = threadSettingsDraft(10358);
+  const tmp11Result = threadSettingsDraft(5962);
   const tmp16 = threadSettingsDraft(1627)();
   const ref = obj1.useRef(null);
   const ref1 = obj1.useRef(null);
-  obj = { value: tmp11Result(tmp11(5981).CREATE_THREAD).analyticsLocations, children: null };
-  const items3 = [callback2(threadSettingsDraft(5078), { absolute: true })];
+  obj = { value: tmp11Result(tmp11(5982).CREATE_THREAD).analyticsLocations, children: null };
+  const items3 = [callback2(threadSettingsDraft(5079), { absolute: true })];
   obj1 = { style: items4, children: null };
   items4 = [
     tmp.container,
     {
       marginBottom:
-        threadSettingsDraft(5602)({ isKeyboardAwareOnAndroid: false, includeKeyboardHeight: true }).insets.bottom -
+        threadSettingsDraft(5603)({ isKeyboardAwareOnAndroid: false, includeKeyboardHeight: true }).insets.bottom -
         tmp16.bottom,
     },
   ];
@@ -268,7 +268,7 @@ function CreateThreadViewInner(screenIndex) {
         { size: "lg" },
       ),
     }),
-    callback2(threadSettingsDraft(16436), {
+    callback2(threadSettingsDraft(16457), {
       ref: ref1,
       chatInputRef: ref,
       threadSettingsDraft,
@@ -281,7 +281,7 @@ function CreateThreadViewInner(screenIndex) {
     tmp22Result = null;
     if (null == threadSettingsDraft.parentMessageId) {
       tmp22Result = null;
-      if (privateThreadMode !== tmp2(8169).PrivateThreadMode.Disabled) {
+      if (privateThreadMode !== tmp2(8173).PrivateThreadMode.Disabled) {
         const obj7 = { style: null, children: null };
         obj7[0] = tmp.optionPrivateThread;
         let obj8 = {
@@ -293,24 +293,24 @@ function CreateThreadViewInner(screenIndex) {
           value: null,
           onValueChange: null,
         };
-        obj8[2] = privateThreadMode !== tmp2(8169).PrivateThreadMode.Enabled;
+        obj8[2] = privateThreadMode !== tmp2(8173).PrivateThreadMode.Enabled;
         const intl = tmp2(1233).intl;
         obj8[3] = intl.string(tmp2(1233).t.F1zyvU);
         const intl2 = tmp2(1233).intl;
         obj8[4] = intl2.string(tmp2(1233).t.Wy5RIQ);
-        obj8[5] = tmp2(8169).getIsPrivate(threadSettingsDraft, privateThreadMode);
+        obj8[5] = tmp2(8173).getIsPrivate(threadSettingsDraft, privateThreadMode);
         obj8[6] = function onValueChange(arg0) {
           const parentChannelId = lib.parentChannelId;
           if (null != parentChannelId) {
-            let obj = threadSettingsDraft(7531);
+            let obj = threadSettingsDraft(7532);
             obj = { isPrivate: null };
             obj[0] = arg0;
             obj.changeThreadSettings(parentChannelId, obj);
           }
         };
-        obj7[1] = tmp22(tmp2(6001).TableSwitchRow, obj8);
+        obj7[1] = tmp22(tmp2(6002).TableSwitchRow, obj8);
         tmp22Result = tmp22(tmp23, obj7);
-        const tmp2Result = tmp2(8169);
+        const tmp2Result = tmp2(8173);
       }
     }
   }
@@ -327,7 +327,7 @@ function CreateThreadViewInner(screenIndex) {
     const obj11 = { channelId: null, messageId: null };
     obj11[0] = parentChannel.id;
     obj11[1] = threadSettingsDraft.parentMessageId;
-    items8[1] = tmp22(tmp2(16438).ThreadCreationStarterMessage, obj11);
+    items8[1] = tmp22(tmp2(16459).ThreadCreationStarterMessage, obj11);
     obj9[1] = items8;
     tmp21Result = tmp21(tmp23, obj9);
   }
@@ -342,11 +342,11 @@ function CreateThreadViewInner(screenIndex) {
     const obj13 = { channel: null, hasTypingText: false, slowmodeType: null };
     obj13[0] = parentChannel;
     obj13[2] = SlowmodeType.CreateThread;
-    obj12[1] = tmp22(tmp11(11778), obj13);
+    obj12[1] = tmp22(tmp11(11784), obj13);
     tmp22Result = tmp22(tmp23, obj12);
   }
   items5[2] = tmp22Result;
-  items5[3] = callback2(threadSettingsDraft(11754), {
+  items5[3] = callback2(threadSettingsDraft(11759), {
     ref,
     channel: parentChannel,
     onJumpToPresent: closure_12,
@@ -354,7 +354,7 @@ function CreateThreadViewInner(screenIndex) {
     secondaryTextFieldRef: ref1,
     threadCreationCallback: callback1,
   });
-  items5[4] = callback2(threadSettingsDraft(12404), { channelId: parentChannel.id });
+  items5[4] = callback2(threadSettingsDraft(12416), { channelId: parentChannel.id });
   obj1[1] = items5;
   items3[1] = closure_14(closure_6, obj1);
   obj[1] = items3;

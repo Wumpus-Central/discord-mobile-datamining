@@ -3,8 +3,8 @@ import ThemesDefault from "../../../../../discord_common/js/packages/tokens/nati
 import getSystemLocale from "../../../../intl/index.native.tsx";
 import Text from "../../../../design/components/Text/native/Text.tsx";
 import Button from "../../../../design/components/Button/native/Button.native.tsx";
-import _modDef10658 from "../../../device/native/DeviceMedia.tsx";
-import registerAssetDefault from "../../../../../_runtime/10670_registerAsset.js";
+import _modDef10662 from "../../../device/native/DeviceMedia.tsx";
+import registerAssetDefault from "../../../../../_runtime/10674_registerAsset.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
@@ -25,7 +25,7 @@ let obj2 = { color: ThemesDefault.colors.BACKGROUND_SURFACE_HIGHEST, margin: The
 const memoResult = importAllResult.memo(function MediaKeyboardFooter(arg0) {
   ({ disabled, onViewAll } = arg0);
   const tmp = callback3();
-  let obj = _modDef10658;
+  let obj = _modDef10662;
   if (obj.useHasReachedEnd()) {
     obj = { style: null, children: null };
     obj[0] = tmp.container;

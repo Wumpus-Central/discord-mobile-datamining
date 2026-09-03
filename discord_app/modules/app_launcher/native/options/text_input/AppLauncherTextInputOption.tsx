@@ -59,7 +59,7 @@ export default function AppLauncherTextInputOption(guildId) {
   );
   first = tmp2[0];
   React = tmp2[1];
-  let obj = onChangeText(9063);
+  let obj = onChangeText(9067);
   closure_5 = React.useRef({ start: 0, end: 0 });
   ref = React.useRef(null);
   let tmp14Result = option.type === onChangeText(1954).ApplicationCommandOptionType.STRING;
@@ -115,17 +115,17 @@ export default function AppLauncherTextInputOption(guildId) {
       const obj = onChangeText(closure_1_2[9]);
     }
   }, items2);
-  obj1 = onChangeText(11962);
+  obj1 = onChangeText(11968);
   const animationDelayedAutoFocus = obj1.useAnimationDelayedAutoFocus(autoFocus, () => {
     const current = ref.current;
     if (current != null) {
       current.focus();
     }
   });
-  if (obj.useAppLauncherContext().entrypoint === onChangeText(8444).AppLauncherEntrypoint.VOICE) {
+  if (obj.useAppLauncherContext().entrypoint === onChangeText(8448).AppLauncherEntrypoint.VOICE) {
     let TextInput = tmp4(1296).TextInput;
   } else {
-    TextInput = guildId(11966);
+    TextInput = guildId(11972);
   }
   const items3 = [tmp.container, ,];
   if (hasError) {
@@ -191,7 +191,7 @@ export default function AppLauncherTextInputOption(guildId) {
       };
       const result1 = onChangeText(closure_1_2[17]).openEmojiPickerActionSheet(obj);
     };
-    tmp14Result = tmp14(guildId(11967), obj1);
+    tmp14Result = tmp14(guildId(11973), obj1);
   }
   items4[1] = tmp14Result;
   obj[1] = items4;

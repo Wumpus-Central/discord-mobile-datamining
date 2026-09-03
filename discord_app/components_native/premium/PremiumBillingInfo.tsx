@@ -72,7 +72,7 @@ export default function PremiumBillingInfo(subscription) {
   if (null == first) {
     return null;
   } else {
-    let tmp2Result = tmp2(7156);
+    let tmp2Result = tmp2(7157);
     const externalManagementMessage = tmp2Result.getExternalManagementMessage(subscription, {
       shouldAllowExternalManagement: true,
     });
@@ -91,7 +91,7 @@ export default function PremiumBillingInfo(subscription) {
     const items1 = [callback2(tmp2(4474).Text, obj3), ,];
     const obj4 = { style: null, variant: "text-sm/medium", children: null };
     obj4[0] = tmp.billingRenewalInfo;
-    tmp2Result = tmp2(13230);
+    tmp2Result = tmp2(13242);
     obj4[2] = tmp2Result.getBillingInformationStringNative(subscription, first, tmp6);
     items1[1] = callback2(tmp2(4474).Text, obj4);
     const obj5 = { style: null, subscription: null };

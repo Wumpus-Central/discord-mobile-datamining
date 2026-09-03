@@ -87,7 +87,7 @@ function _executeMessageComponentInteraction() {
                 closure_9 = callback2(11).fromTimestamp(Date.now());
                 if (c5.canQueueInteraction(callback2, closure_9)) {
                   c3 = 1;
-                  let obj8 = callback2(7519);
+                  let obj8 = callback2(7520);
                   sessionId = 3;
                   c5 = 1;
                   const obj2 = { value: null, done: false };
@@ -130,9 +130,9 @@ function _executeMessageComponentInteraction() {
                     obj = _undefined(_undefined2[9]);
                   }
                 };
-                callback(8035).addQueued(closure_9, obj4);
+                callback(8038).addQueued(closure_9, obj4);
                 if (null != c8) {
-                  obj1 = callback(8035);
+                  obj1 = callback(8038);
                   const result = obj1.queueInteractionComponentState(callback2, closure_9, c8, sessionId);
                 }
                 obj6 = {

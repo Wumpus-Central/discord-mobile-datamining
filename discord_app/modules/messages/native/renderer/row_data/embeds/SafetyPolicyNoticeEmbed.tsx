@@ -6,7 +6,7 @@ import getSystemLocale from "../../../../../../intl/index.native.tsx";
 import hooksDefault from "../../../../../../../_runtime/04074_hooks.js";
 import frozen from "../../EmbedUtils.tsx";
 import SafetyHubView from "../../../../../safety_hub/SafetyHubConstants.tsx";
-import registerAssetDefault from "../../../../../../../_runtime/08752_registerAsset.js";
+import registerAssetDefault from "../../../../../../../_runtime/08756_registerAsset.js";
 
 const Image = get_ActivityIndicator.Image;
 const MessageEmbedTypes = ME.MessageEmbedTypes;

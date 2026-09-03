@@ -159,6 +159,10 @@ export const sendAVErrorAnalyticsEvent = function sendAVErrorAnalyticsEvent(erro
   if ("userId" in context) {
     userId = context.userId;
   }
+  let prop2;
+  if ("voiceProcessingErrorDetails" in context) {
+    prop2 = context.voiceProcessingErrorDetails;
+  }
   let decodeStreamKeyResult = null;
   if (tmp6 != streamKey) {
     let tmpResult = tmp(tmp2[13]);
@@ -172,7 +176,7 @@ export const sendAVErrorAnalyticsEvent = function sendAVErrorAnalyticsEvent(erro
   if (tmp6 == streamKey) {
     rTCConnection1 = rtcConnectionId.getRTCConnection();
   }
-  let tmp25 = null;
+  let tmp26 = null;
   if (tmp6 != streamKey) {
     let streamApplication;
     if (rTCConnection != tmp6) {
@@ -181,13 +185,13 @@ export const sendAVErrorAnalyticsEvent = function sendAVErrorAnalyticsEvent(erro
         streamApplication = analyticsContext.streamApplication;
       }
     }
-    tmp25 = streamApplication;
+    tmp26 = streamApplication;
   }
   const state = underlyingError.getState();
-  ({ resolution: closure_20, fps: closure_21 } = state);
+  ({ resolution: closure_21, fps: closure_22 } = state);
   tmpResult = tmp(tmp2[14]);
-  const runningGameAnalytics = tmpResult.getRunningGameAnalytics(tmp25);
-  ({ gameName: closure_22, gameId: closure_23, exe: closure_24, distributor: closure_25 } = runningGameAnalytics);
+  const runningGameAnalytics = tmpResult.getRunningGameAnalytics(tmp26);
+  ({ gameName: closure_23, gameId: closure_24, exe: closure_25, distributor: closure_26 } = runningGameAnalytics);
   const isErrorOutbound = errorInfo.isErrorOutbound;
   if (mediaContext == tmp6) {
     mediaContext = audioInputDeviceName.DEFAULT;
@@ -218,7 +222,7 @@ export const sendAVErrorAnalyticsEvent = function sendAVErrorAnalyticsEvent(erro
     if (tmp6 != decodeStreamKeyResult) {
       if (isErrorOutbound) {
         let found;
-        if (!tmp36) {
+        if (!tmp37) {
           const outboundStats = rTCConnection1.getOutboundStats();
           tmp6 = outboundStats == tmp6;
           if (!tmp6) {
@@ -226,7 +230,7 @@ export const sendAVErrorAnalyticsEvent = function sendAVErrorAnalyticsEvent(erro
           }
         }
         let inboundStats = found;
-      } else if (!tmp36) {
+      } else if (!tmp37) {
         inboundStats = rTCConnection1.getInboundStats(decodeStreamKeyResult.ownerId);
       }
     }
@@ -243,19 +247,19 @@ export const sendAVErrorAnalyticsEvent = function sendAVErrorAnalyticsEvent(erro
     if (maxByResult == tmp6) {
       maxByResult = null;
     }
-    let tmp32 = maxByResult;
+    let tmp33 = maxByResult;
     let obj5 = inboundStats1(tmp2[15]);
   } else {
-    tmp32 = null;
+    tmp33 = null;
     if (tmp6 != userId) {
       inboundStats1 = undefined;
       if (rTCConnection1 != tmp6) {
         inboundStats1 = rTCConnection1.getInboundStats(userId);
       }
-      tmp32 = inboundStats1;
+      tmp33 = inboundStats1;
     }
   }
-  inboundStats1 = tmp32;
+  inboundStats1 = tmp33;
   let obj = _require(errorInfo[12]);
   mediaContext().then((cpu_brand) => {
     const obj = {
@@ -287,6 +291,10 @@ export const sendAVErrorAnalyticsEvent = function sendAVErrorAnalyticsEvent(erro
       video_decoder: null,
       audio_capture_sample_rate_mismatch_percent: null,
       audio_capture_processing_sample_rate: null,
+      voice_processing_process_time_us: null,
+      voice_processing_frame_count: null,
+      voice_processing_sample_rate: null,
+      voice_processing_setup_count: null,
       incoming_video_stopped_for_occlusion: null,
       bitrate: null,
       target_bitrate: null,
@@ -341,11 +349,11 @@ export const sendAVErrorAnalyticsEvent = function sendAVErrorAnalyticsEvent(erro
       input_device_os_muted: null,
       input_device_os_volume: null,
     };
-    let cpu_vendor = underlyingError;
+    cpu_brand = underlyingError;
     if (underlyingError == null) {
-      cpu_vendor = null;
+      cpu_brand = null;
     }
-    obj[4] = cpu_vendor;
+    obj[4] = cpu_brand;
     let tmp2 = errorMessage;
     if (errorMessage == null) {
       tmp2 = null;
@@ -502,8 +510,8 @@ export const sendAVErrorAnalyticsEvent = function sendAVErrorAnalyticsEvent(erro
     obj[22] = num4;
     let parseCodecTypeResult = videoCodec;
     if (videoCodec == null) {
-      cpu_vendor = error;
-      cpu_vendor = errorInfo;
+      cpu_brand = error;
+      cpu_brand = errorInfo;
       if (tmp19) {
         const connectionStats2 = store.getConnectionStats(tmp20);
         let tmp39 = null;
@@ -570,8 +578,8 @@ export const sendAVErrorAnalyticsEvent = function sendAVErrorAnalyticsEvent(erro
     obj[24] = parseEncoderResult;
     let parseDecoderResult = videoDecoder;
     if (videoDecoder == null) {
-      cpu_vendor = error;
-      cpu_vendor = errorInfo;
+      cpu_brand = error;
+      cpu_brand = errorInfo;
       let tmp53 = null;
       if (null != tmp21) {
         const connectionStats5 = store.getConnectionStats(tmp20);
@@ -617,107 +625,139 @@ export const sendAVErrorAnalyticsEvent = function sendAVErrorAnalyticsEvent(erro
       currentSampleRate = null;
     }
     obj[27] = currentSampleRate;
+    let processTimeUs;
+    if (prop2 != null) {
+      processTimeUs = tmp61.processTimeUs;
+    }
+    if (processTimeUs == null) {
+      processTimeUs = null;
+    }
+    obj[28] = processTimeUs;
+    let frameCount;
+    if (prop2 != null) {
+      frameCount = tmp61.frameCount;
+    }
+    if (frameCount == null) {
+      frameCount = null;
+    }
+    obj[29] = frameCount;
+    let sampleRate;
+    if (prop2 != null) {
+      sampleRate = tmp61.sampleRate;
+    }
+    if (sampleRate == null) {
+      sampleRate = null;
+    }
+    obj[30] = sampleRate;
+    let setupCount;
+    if (prop2 != null) {
+      setupCount = tmp61.setupCount;
+    }
+    if (setupCount == null) {
+      setupCount = null;
+    }
+    obj[31] = setupCount;
     const WindowVisibilityVideoManager = error(errorInfo[17]).WindowVisibilityVideoManager;
-    obj[28] = !WindowVisibilityVideoManager.isIncomingVideoEnabled();
+    obj[32] = !WindowVisibilityVideoManager.isIncomingVideoEnabled();
     if (isErrorOutbound) {
       const connectionStats7 = obj7.getConnectionStats(tmp20);
-      let tmp67 = null;
+      let tmp72 = null;
       if (null != connectionStats7) {
         const outbound4 = connectionStats7.stats.rtp.outbound;
         let found7 = outbound4.find((type) => "video" === type.type);
         if (found7 == null) {
           found7 = null;
         }
-        tmp67 = found7;
+        tmp72 = found7;
       }
-      let tmp62 = tmp67;
+      let tmp67 = tmp72;
     } else {
-      tmp62 = null;
+      tmp67 = null;
       if (null != tmp21) {
         const connectionStats8 = obj7.getConnectionStats(tmp20);
-        tmp62 = null;
+        tmp67 = null;
         if (null != connectionStats8) {
-          let tmp64 = null;
+          let tmp69 = null;
           if (null != connectionStats8.stats.rtp.inbound[tmp21]) {
             let found8 = arr8.find((type) => "video" === type.type);
             if (found8 == null) {
               found8 = null;
             }
-            tmp64 = found8;
+            tmp69 = found8;
           }
-          tmp62 = tmp64;
+          tmp67 = tmp69;
         }
       }
     }
     let bitrate;
-    if (tmp62 != null) {
-      bitrate = tmp62.bitrate;
+    if (tmp67 != null) {
+      bitrate = tmp67.bitrate;
     }
     if (bitrate == null) {
       bitrate = null;
     }
-    obj[29] = bitrate;
-    let tmp70 = null;
+    obj[33] = bitrate;
+    let tmp75 = null;
     if (isErrorOutbound) {
       const connectionStats9 = obj7.getConnectionStats(tmp20);
-      let tmp72 = null;
+      let tmp77 = null;
       if (null != connectionStats9) {
         const outbound5 = connectionStats9.stats.rtp.outbound;
         let found9 = outbound5.find((type) => "video" === type.type);
         if (found9 == null) {
           found9 = null;
         }
-        tmp72 = found9;
+        tmp77 = found9;
       }
       let bitrateTarget;
-      if (tmp72 != null) {
-        bitrateTarget = tmp72.bitrateTarget;
+      if (tmp77 != null) {
+        bitrateTarget = tmp77.bitrateTarget;
       }
       if (bitrateTarget == null) {
         bitrateTarget = null;
       }
-      tmp70 = bitrateTarget;
+      tmp75 = bitrateTarget;
     }
-    obj[30] = tmp70;
+    obj[34] = tmp75;
     if (isErrorOutbound) {
-      const connectionStats10 = obj7.getConnectionStats(tmp75);
-      let tmp82 = null;
+      const connectionStats10 = obj7.getConnectionStats(tmp80);
+      let tmp87 = null;
       if (null != connectionStats10) {
         const outbound6 = connectionStats10.stats.rtp.outbound;
         let found10 = outbound6.find((type) => "video" === type.type);
         if (found10 == null) {
           found10 = null;
         }
-        tmp82 = found10;
+        tmp87 = found10;
       }
       let frameRateEncode;
-      if (tmp82 != null) {
-        frameRateEncode = tmp82.frameRateEncode;
+      if (tmp87 != null) {
+        frameRateEncode = tmp87.frameRateEncode;
       }
       if (frameRateEncode == null) {
         frameRateEncode = null;
       }
       let frameRateDecode = frameRateEncode;
     } else {
-      let tmp76 = null;
+      let tmp81 = null;
       if (null != tmp21) {
-        const connectionStats11 = obj7.getConnectionStats(tmp75);
-        tmp76 = null;
+        const connectionStats11 = obj7.getConnectionStats(tmp80);
+        tmp81 = null;
         if (null != connectionStats11) {
-          let tmp78 = null;
+          let tmp83 = null;
           if (null != connectionStats11.stats.rtp.inbound[tmp21]) {
             let found11 = arr11.find((type) => "video" === type.type);
             if (found11 == null) {
               found11 = null;
             }
-            tmp78 = found11;
+            tmp83 = found11;
           }
-          tmp76 = tmp78;
+          tmp81 = tmp83;
         }
       }
       frameRateDecode = undefined;
-      if (tmp76 != null) {
-        frameRateDecode = tmp76.frameRateDecode;
+      if (tmp81 != null) {
+        frameRateDecode = tmp81.frameRateDecode;
       }
       if (frameRateDecode == null) {
         frameRateDecode = null;
@@ -726,15 +766,15 @@ export const sendAVErrorAnalyticsEvent = function sendAVErrorAnalyticsEvent(erro
     if (frameRateDecode == null) {
       frameRateDecode = null;
     }
-    obj[31] = frameRateDecode;
-    let tmp85 = null;
+    obj[35] = frameRateDecode;
+    let tmp90 = null;
     if (mediaContext === audioInputDeviceName.STREAM) {
-      tmp85 = null;
+      tmp90 = null;
       if (tmp19) {
-        tmp85 = closure_21;
+        tmp90 = closure_22;
       }
     }
-    obj[32] = tmp85;
+    obj[36] = tmp90;
     let ownerId;
     if (decodeStreamKeyResult != null) {
       ownerId = decodeStreamKeyResult.ownerId;
@@ -742,7 +782,7 @@ export const sendAVErrorAnalyticsEvent = function sendAVErrorAnalyticsEvent(erro
     if (ownerId == null) {
       ownerId = null;
     }
-    obj[33] = ownerId;
+    obj[37] = ownerId;
     let region1;
     if (rTCConnection != null) {
       region1 = obj2.getRegion();
@@ -750,8 +790,8 @@ export const sendAVErrorAnalyticsEvent = function sendAVErrorAnalyticsEvent(erro
     if (region1 == null) {
       region1 = null;
     }
-    obj[34] = region1;
-    let tmp88 = null;
+    obj[38] = region1;
+    let tmp93 = null;
     if (isErrorOutbound) {
       let streamSourceType;
       if (obj2 != null) {
@@ -763,9 +803,9 @@ export const sendAVErrorAnalyticsEvent = function sendAVErrorAnalyticsEvent(erro
       if (streamSourceType == null) {
         streamSourceType = null;
       }
-      tmp88 = streamSourceType;
+      tmp93 = streamSourceType;
     }
-    obj[35] = tmp88;
+    obj[39] = tmp93;
     let numViewers;
     if (rTCConnection != null) {
       const analyticsContext2 = obj2.analyticsContext;
@@ -776,46 +816,46 @@ export const sendAVErrorAnalyticsEvent = function sendAVErrorAnalyticsEvent(erro
     if (numViewers == null) {
       numViewers = null;
     }
-    obj[36] = numViewers;
-    let tmp91 = null;
+    obj[40] = numViewers;
+    let tmp96 = null;
     if (isErrorOutbound) {
-      let tmp92 = closure_20;
-      if (closure_20 == null) {
-        tmp92 = null;
-      }
-      tmp91 = tmp92;
-    }
-    obj[37] = tmp91;
-    let tmp93 = null;
-    if (isErrorOutbound) {
-      let tmp94 = closure_21;
+      let tmp97 = closure_21;
       if (closure_21 == null) {
-        tmp94 = null;
+        tmp97 = null;
       }
-      tmp93 = tmp94;
-    }
-    obj[38] = tmp93;
-    obj[39] = videoDeviceName(mediaEngineConnectionId);
-    let tmp95 = closure_22;
-    if (closure_22 == null) {
-      tmp95 = null;
-    }
-    obj[40] = tmp95;
-    let tmp96 = closure_23;
-    if (closure_23 == null) {
-      tmp96 = null;
+      tmp96 = tmp97;
     }
     obj[41] = tmp96;
-    let tmp97 = closure_24;
+    let tmp98 = null;
+    if (isErrorOutbound) {
+      let tmp99 = closure_22;
+      if (closure_22 == null) {
+        tmp99 = null;
+      }
+      tmp98 = tmp99;
+    }
+    obj[42] = tmp98;
+    obj[43] = videoDeviceName(mediaEngineConnectionId);
+    cpu_brand = closure_23;
+    if (closure_23 == null) {
+      cpu_brand = null;
+    }
+    obj[44] = cpu_brand;
+    cpu_brand = closure_24;
     if (closure_24 == null) {
-      tmp97 = null;
+      cpu_brand = null;
     }
-    obj[42] = tmp97;
-    let tmp98 = closure_25;
+    obj[45] = cpu_brand;
+    cpu_brand = closure_25;
     if (closure_25 == null) {
-      tmp98 = null;
+      cpu_brand = null;
     }
-    obj[43] = tmp98;
+    obj[46] = cpu_brand;
+    cpu_brand = closure_26;
+    if (closure_26 == null) {
+      cpu_brand = null;
+    }
+    obj[47] = cpu_brand;
     cpu_brand = undefined;
     if (cpu_brand != null) {
       cpu_brand = cpu_brand.cpu_brand;
@@ -823,179 +863,179 @@ export const sendAVErrorAnalyticsEvent = function sendAVErrorAnalyticsEvent(erro
     if (cpu_brand == null) {
       cpu_brand = null;
     }
-    obj[44] = cpu_brand;
-    cpu_vendor = undefined;
+    obj[48] = cpu_brand;
+    cpu_brand = undefined;
     if (cpu_brand != null) {
-      cpu_vendor = cpu_brand.cpu_vendor;
+      cpu_brand = cpu_brand.cpu_vendor;
     }
-    if (cpu_vendor == null) {
-      cpu_vendor = null;
+    if (cpu_brand == null) {
+      cpu_brand = null;
     }
-    obj[45] = cpu_vendor;
-    cpu_vendor = undefined;
+    obj[49] = cpu_brand;
+    cpu_brand = undefined;
     if (cpu_brand != null) {
-      cpu_vendor = cpu_brand.cpu_memory;
+      cpu_brand = cpu_brand.cpu_memory;
     }
-    if (cpu_vendor == null) {
-      cpu_vendor = null;
+    if (cpu_brand == null) {
+      cpu_brand = null;
     }
-    obj[46] = cpu_vendor;
-    cpu_vendor = undefined;
+    obj[50] = cpu_brand;
+    cpu_brand = undefined;
     if (cpu_brand != null) {
-      cpu_vendor = cpu_brand.gpu_brand;
+      cpu_brand = cpu_brand.gpu_brand;
     }
-    if (cpu_vendor == null) {
-      cpu_vendor = null;
+    if (cpu_brand == null) {
+      cpu_brand = null;
     }
-    obj[47] = cpu_vendor;
-    cpu_vendor = undefined;
+    obj[51] = cpu_brand;
+    cpu_brand = undefined;
     if (cpu_brand != null) {
-      cpu_vendor = cpu_brand.gpu_count;
+      cpu_brand = cpu_brand.gpu_count;
     }
-    if (cpu_vendor == null) {
-      cpu_vendor = null;
+    if (cpu_brand == null) {
+      cpu_brand = null;
     }
-    obj[48] = cpu_vendor;
-    cpu_vendor = undefined;
+    obj[52] = cpu_brand;
+    cpu_brand = undefined;
     if (cpu_brand != null) {
-      cpu_vendor = cpu_brand.gpu_memory;
+      cpu_brand = cpu_brand.gpu_memory;
     }
-    if (cpu_vendor == null) {
-      cpu_vendor = null;
+    if (cpu_brand == null) {
+      cpu_brand = null;
     }
-    obj[49] = cpu_vendor;
-    cpu_vendor = undefined;
+    obj[53] = cpu_brand;
+    cpu_brand = undefined;
     if (cpu_brand != null) {
-      cpu_vendor = cpu_brand.gpu_device_vendor_id;
+      cpu_brand = cpu_brand.gpu_device_vendor_id;
     }
-    if (cpu_vendor == null) {
-      cpu_vendor = null;
+    if (cpu_brand == null) {
+      cpu_brand = null;
     }
-    obj[50] = cpu_vendor;
-    cpu_vendor = undefined;
+    obj[54] = cpu_brand;
+    cpu_brand = undefined;
     if (cpu_brand != null) {
-      cpu_vendor = cpu_brand.gpu_device_device_id;
+      cpu_brand = cpu_brand.gpu_device_device_id;
     }
-    if (cpu_vendor == null) {
-      cpu_vendor = null;
+    if (cpu_brand == null) {
+      cpu_brand = null;
     }
-    obj[51] = cpu_vendor;
-    cpu_vendor = undefined;
+    obj[55] = cpu_brand;
+    cpu_brand = undefined;
     if (cpu_brand != null) {
-      cpu_vendor = cpu_brand.gpu_device_sub_sys_id;
+      cpu_brand = cpu_brand.gpu_device_sub_sys_id;
     }
-    if (cpu_vendor == null) {
-      cpu_vendor = null;
+    if (cpu_brand == null) {
+      cpu_brand = null;
     }
-    obj[52] = cpu_vendor;
-    cpu_vendor = undefined;
+    obj[56] = cpu_brand;
+    cpu_brand = undefined;
     if (cpu_brand != null) {
-      cpu_vendor = cpu_brand.gpu_device_revision;
+      cpu_brand = cpu_brand.gpu_device_revision;
     }
-    if (cpu_vendor == null) {
-      cpu_vendor = null;
+    if (cpu_brand == null) {
+      cpu_brand = null;
     }
-    obj[53] = cpu_vendor;
-    cpu_vendor = undefined;
+    obj[57] = cpu_brand;
+    cpu_brand = undefined;
     if (cpu_brand != null) {
-      cpu_vendor = cpu_brand.gpu_driver_version;
+      cpu_brand = cpu_brand.gpu_driver_version;
     }
-    if (cpu_vendor == null) {
-      cpu_vendor = null;
+    if (cpu_brand == null) {
+      cpu_brand = null;
     }
-    obj[54] = cpu_vendor;
-    cpu_vendor = inboundStats1;
-    cpu_vendor = inboundStats1(errorInfo[18]).getCurrentCPUUsagePercent();
-    if (cpu_vendor == null) {
-      cpu_vendor = null;
+    obj[58] = cpu_brand;
+    cpu_brand = inboundStats1;
+    cpu_brand = inboundStats1(errorInfo[18]).getCurrentCPUUsagePercent();
+    if (cpu_brand == null) {
+      cpu_brand = null;
     }
-    obj[55] = cpu_vendor;
+    obj[59] = cpu_brand;
     obj5 = rTCConnection1;
     const obj8 = inboundStats1(errorInfo[18]);
-    cpu_vendor = cpu_vendor(errorInfo[18]).getCurrentMemoryUsageKB();
-    if (cpu_vendor == null) {
-      cpu_vendor = null;
+    cpu_brand = cpu_brand(errorInfo[18]).getCurrentMemoryUsageKB();
+    if (cpu_brand == null) {
+      cpu_brand = null;
     }
-    obj[56] = cpu_vendor;
-    cpu_vendor = obj7.getConnectionStats(tmp20);
-    cpu_vendor = undefined;
-    if (cpu_vendor != null) {
-      cpu_vendor = cpu_vendor.stats.transport.outboundBitrateEstimate;
+    obj[60] = cpu_brand;
+    cpu_brand = obj7.getConnectionStats(tmp20);
+    cpu_brand = undefined;
+    if (cpu_brand != null) {
+      cpu_brand = cpu_brand.stats.transport.outboundBitrateEstimate;
     }
-    if (cpu_vendor == null) {
-      cpu_vendor = null;
+    if (cpu_brand == null) {
+      cpu_brand = null;
     }
-    obj[57] = cpu_vendor;
-    cpu_vendor = obj7.getConnectionStats(tmp20);
-    cpu_vendor = undefined;
-    if (cpu_vendor != null) {
-      cpu_vendor = cpu_vendor.stats.transport.inboundBitrateEstimate;
+    obj[61] = cpu_brand;
+    cpu_brand = obj7.getConnectionStats(tmp20);
+    cpu_brand = undefined;
+    if (cpu_brand != null) {
+      cpu_brand = cpu_brand.stats.transport.inboundBitrateEstimate;
     }
-    if (cpu_vendor == null) {
-      cpu_vendor = null;
+    if (cpu_brand == null) {
+      cpu_brand = null;
     }
-    obj[58] = cpu_vendor;
-    obj[59] = mediaSessionId.getHardwareEncoding();
-    cpu_vendor = audioInputDeviceName;
+    obj[62] = cpu_brand;
+    obj[63] = mediaSessionId.getHardwareEncoding();
+    cpu_brand = audioInputDeviceName;
     if (audioInputDeviceName == null) {
-      cpu_vendor = obj10.getInputDevices();
-      cpu_vendor = cpu_vendor[obj10.getInputDeviceId(obj10)];
-      cpu_vendor = undefined;
-      if (cpu_vendor != null) {
-        cpu_vendor = cpu_vendor.name;
+      cpu_brand = obj10.getInputDevices();
+      cpu_brand = cpu_brand[obj10.getInputDeviceId(obj10)];
+      cpu_brand = undefined;
+      if (cpu_brand != null) {
+        cpu_brand = cpu_brand.name;
       }
     }
-    obj[60] = cpu_vendor;
-    cpu_vendor = prop1;
+    obj[64] = cpu_brand;
+    cpu_brand = prop1;
     if (prop1 == null) {
-      cpu_vendor = obj10.getOutputDevices();
-      cpu_vendor = cpu_vendor[obj10.getOutputDeviceId(obj10)];
-      cpu_vendor = undefined;
-      if (cpu_vendor != null) {
-        cpu_vendor = cpu_vendor.name;
+      cpu_brand = obj10.getOutputDevices();
+      cpu_brand = cpu_brand[obj10.getOutputDeviceId(obj10)];
+      cpu_brand = undefined;
+      if (cpu_brand != null) {
+        cpu_brand = cpu_brand.name;
       }
     }
-    obj[61] = cpu_vendor;
-    cpu_vendor = videoDeviceName;
+    obj[65] = cpu_brand;
+    cpu_brand = videoDeviceName;
     if (videoDeviceName == null) {
-      cpu_vendor = obj10.getVideoDevices();
-      cpu_vendor = cpu_vendor[obj10.getVideoDeviceId(obj10)];
-      cpu_vendor = undefined;
-      if (cpu_vendor != null) {
-        cpu_vendor = cpu_vendor.name;
+      cpu_brand = obj10.getVideoDevices();
+      cpu_brand = cpu_brand[obj10.getVideoDeviceId(obj10)];
+      cpu_brand = undefined;
+      if (cpu_brand != null) {
+        cpu_brand = cpu_brand.name;
       }
     }
-    obj[62] = cpu_vendor;
+    obj[66] = cpu_brand;
     const mediaEngine = obj10.getMediaEngine();
-    obj[63] = mediaEngine.getAudioSubsystem();
-    obj[64] = mediaSessionId.getSettings().automaticAudioSubsystem;
+    obj[67] = mediaEngine.getAudioSubsystem();
+    obj[68] = mediaSessionId.getSettings().automaticAudioSubsystem;
     const mediaEngine1 = obj10.getMediaEngine();
-    obj[65] = mediaEngine1.getAudioLayer();
-    obj[66] = mediaSessionId.getSettings().mode;
-    obj[67] = mediaSessionId.getSettings().modeOptions.autoThreshold;
-    obj[68] = mediaSessionId.getSettings().modeOptions.threshold;
-    obj[69] = mediaSessionId.getEchoCancellation();
-    obj[70] = mediaSessionId.getNoiseSuppression();
-    obj[71] = mediaSessionId.getNoiseCancellation();
-    obj[72] = mediaSessionId.getAutomaticGainControl();
-    obj[73] = mediaSessionId.getSidechainCompression();
-    obj[74] = mediaSessionId.getInputVolume();
-    obj[75] = mediaSessionId.getOutputVolume();
-    obj[76] = Object.keys(mediaSessionId.getInputDevices()).length;
-    obj[77] = Object.keys(mediaSessionId.getOutputDevices()).length;
-    const cpu_vendorResult = cpu_vendor(errorInfo[18]);
-    obj[78] = cpu_vendor(errorInfo[19]).getAppHardwareAccelerationEnabled();
-    cpu_vendor = obj10.getInputDeviceOSMuted();
-    if (cpu_vendor == null) {
-      cpu_vendor = null;
+    obj[69] = mediaEngine1.getAudioLayer();
+    obj[70] = mediaSessionId.getSettings().mode;
+    obj[71] = mediaSessionId.getSettings().modeOptions.autoThreshold;
+    obj[72] = mediaSessionId.getSettings().modeOptions.threshold;
+    obj[73] = mediaSessionId.getEchoCancellation();
+    obj[74] = mediaSessionId.getNoiseSuppression();
+    obj[75] = mediaSessionId.getNoiseCancellation();
+    obj[76] = mediaSessionId.getAutomaticGainControl();
+    obj[77] = mediaSessionId.getSidechainCompression();
+    obj[78] = mediaSessionId.getInputVolume();
+    obj[79] = mediaSessionId.getOutputVolume();
+    obj[80] = Object.keys(mediaSessionId.getInputDevices()).length;
+    obj[81] = Object.keys(mediaSessionId.getOutputDevices()).length;
+    const cpu_brandResult = cpu_brand(errorInfo[18]);
+    obj[82] = cpu_brand(errorInfo[19]).getAppHardwareAccelerationEnabled();
+    cpu_brand = obj10.getInputDeviceOSMuted();
+    if (cpu_brand == null) {
+      cpu_brand = null;
     }
-    obj[79] = cpu_vendor;
-    cpu_vendor = obj10.getInputDeviceOSVolume();
-    if (cpu_vendor == null) {
-      cpu_vendor = null;
+    obj[83] = cpu_brand;
+    cpu_brand = obj10.getInputDeviceOSVolume();
+    if (cpu_brand == null) {
+      cpu_brand = null;
     }
-    obj[80] = cpu_vendor;
-    const cpu_vendorResult1 = cpu_vendor(errorInfo[19]);
-    cpu_vendor = cpu_vendor(errorInfo[20]).track(prop.AV_ERROR_REPORTED, obj);
+    obj[84] = cpu_brand;
+    const cpu_brandResult1 = cpu_brand(errorInfo[19]);
+    cpu_brand = cpu_brand(errorInfo[20]).track(prop.AV_ERROR_REPORTED, obj);
   });
 };

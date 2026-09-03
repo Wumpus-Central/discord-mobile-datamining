@@ -33,7 +33,7 @@ export const useUpdateIsOnStartStageScreenEffect = function useUpdateIsOnStartSt
   );
   let tmp3 = stateFromStores1;
   if (stateFromStores1) {
-    tmp3 = !stateFromStores(8682)(id.id);
+    tmp3 = !stateFromStores(8686)(id.id);
   }
   dependencyMap = tmp3;
   const items3 = [stateFromStores, tmp3];

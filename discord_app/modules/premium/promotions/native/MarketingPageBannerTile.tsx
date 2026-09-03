@@ -53,7 +53,7 @@ export default function MarketingPageBannerTile(bannerFields) {
   let helpArticleLinkProps;
   ({ style, cardStyle, componentId, promotionId, analyticsPage, onPaymentSuccess, onPaymentDismiss } = bannerFields);
   const tmp = callback();
-  let obj = helpArticleLinkProps(13282);
+  let obj = helpArticleLinkProps(13294);
   const button = bannerFields.button;
   let buttonAction;
   if (button != null) {
@@ -85,14 +85,14 @@ export default function MarketingPageBannerTile(bannerFields) {
   obj[1] = helpArticleLinkProps(500).ImpressionNames.PREMIUM_MARKETING_COMPONENT;
   const tmp2Result = trackImpressionDefault;
   obj[2] = {
-    component_type: helpArticleLinkProps(10736).MarketingComponentType.MARKETING_PAGE_BANNER,
+    component_type: helpArticleLinkProps(10740).MarketingComponentType.MARKETING_PAGE_BANNER,
     component_id: componentId,
     promotion_id: promotionId,
   };
   tmp2Result(obj);
-  let tmp4Result = tmp4(13285);
+  let tmp4Result = tmp4(13297);
   const formatStringWithCommonPremiumParams = tmp4Result.useFormatStringWithCommonPremiumParams(bannerFields.body);
-  tmp4Result = tmp4(13285);
+  tmp4Result = tmp4(13297);
   helpArticleLinkProps = tmp4Result.getHelpArticleLinkProps(bannerFields.helpArticle, bannerFields.helpArticleId);
   const obj2 = { style: items, children: null };
   items = [tmp.container, style];
@@ -143,7 +143,7 @@ export default function MarketingPageBannerTile(bannerFields) {
     const obj10 = { text: null, onPress: null };
     obj10[0] = bannerFields.button.copy;
     obj10[1] = buttonActionHandler;
-    obj9[1] = tmp12(tmp2(8984), obj10);
+    obj9[1] = tmp12(tmp2(8988), obj10);
     tmp12Result1 = tmp12(tmp13, obj9);
   }
   items2[3] = tmp12Result1;

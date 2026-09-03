@@ -158,7 +158,7 @@ export default function GameProfileDetails(game) {
               if (obj != null) {
                 const websites = obj.websites;
                 if (websites != null) {
-                  const mapped3 = websites.map((arg0) => callback2(12865)(arg0, callback2(709).colors.ICON_SUBTLE));
+                  const mapped3 = websites.map((arg0) => callback2(12877)(arg0, callback2(709).colors.ICON_SUBTLE));
                   found = mapped3.filter((arg0) => null != arg0);
                 }
               }
@@ -211,7 +211,7 @@ export default function GameProfileDetails(game) {
               obj5[0] = lib.platformsContainer;
               obj5[1] = platforms.map((platform) =>
                 callback3(
-                  callback(12856).GameUpdatePlatformIcon,
+                  callback(12868).GameUpdatePlatformIcon,
                   { platform, size: "md", color: callback2(709).colors.ICON_SUBTLE },
                   platform,
                 ),

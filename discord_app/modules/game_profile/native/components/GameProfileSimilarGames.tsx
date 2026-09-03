@@ -161,7 +161,7 @@ export default function GameProfileSimilarGames(trackAction) {
       ListHeaderComponent: null,
       ListFooterComponent: null,
     };
-    obj1[1] = tmp2(8861);
+    obj1[1] = tmp2(8865);
     obj1[2] = closure_12;
     obj1[3] = function renderItem() {
       return closure_1_7(closure_1_17, { cardWidth: c1 });
@@ -169,7 +169,7 @@ export default function GameProfileSimilarGames(trackAction) {
     obj1[5] = Spacer;
     obj1[6] = ListPadding;
     obj1[7] = ListPadding;
-    items[1] = callback(trackAction(8113).FlashList, obj1);
+    items[1] = callback(trackAction(8116).FlashList, obj1);
     obj[1] = items;
     let tmp7 = callback2(closure_6, obj);
   } else {
@@ -196,7 +196,7 @@ export default function GameProfileSimilarGames(trackAction) {
         decelerationRate: "fast",
         snapToInterval: null,
       };
-      obj5[1] = tmp2(8861);
+      obj5[1] = tmp2(8865);
       obj5[2] = similarGames;
       obj5[3] = function renderItem(game) {
         return closure_1_7(closure_1_16, { game: game.item, trackAction, cardWidth: c1 });
@@ -205,7 +205,7 @@ export default function GameProfileSimilarGames(trackAction) {
       obj5[6] = ListPadding;
       obj5[7] = ListPadding;
       obj5[9] = result + tmp5;
-      items1[1] = callback(trackAction(8113).FlashList, obj5);
+      items1[1] = callback(trackAction(8116).FlashList, obj5);
       obj2[1] = items1;
       tmp7 = callback2(closure_6, obj2);
     }

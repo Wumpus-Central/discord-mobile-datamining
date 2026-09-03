@@ -47,12 +47,12 @@ export default function EditGuildEventChannelSelection(guild) {
   closure_8 = undefined;
   let constants;
   const tmp = callback2();
-  let obj = guild(6238);
+  let obj = guild(6239);
   const inputStyles = obj.useInputStyles({ hasLeadingIcon: true });
   closure_5 = tmp5;
-  obj1 = guild(9709);
+  obj1 = guild(9713);
   closure_6 = obj1.useGetEventChannelsByType(guild.id, channelType);
-  let obj2 = guild(9695);
+  let obj2 = guild(9699);
   closure_7 = obj2.useChannelsUserCanStartStageIn(guild);
   const tmp7 = channel(4674)(channel);
   let obj3 = guild(586);
@@ -63,16 +63,16 @@ export default function EditGuildEventChannelSelection(guild) {
   const items2 = [guildEventId];
   constants = obj4.useStateFromStores(items1, () => guildScheduledEvent.getGuildScheduledEvent(guildEventId), items2);
   if (null != channel) {
-    let tmp2Result = tmp2(4981);
+    let tmp2Result = tmp2(4982);
     let channelIcon = tmp2Result.getChannelIcon(channel);
   } else {
-    channelIcon = tmp6(9697);
+    channelIcon = tmp6(9701);
   }
   if (null != channel) {
-    tmp2Result = tmp2(4981);
+    tmp2Result = tmp2(4982);
     let LocationIcon = tmp2Result.getChannelIconComponent(channel);
   } else {
-    LocationIcon = tmp2(9698).LocationIcon;
+    LocationIcon = tmp2(9702).LocationIcon;
   }
   let intl = tmp2(1233).intl;
   let string = intl.string;
@@ -167,9 +167,9 @@ export default function EditGuildEventChannelSelection(guild) {
   const items6 = [tmp12Result, ,];
   obj4 = { style: tmp.channelNameText, variant: "text-md/medium", color: "interactive-text-active", children: tmp7 };
   items6[1] = callback(guild(4474).Text, obj4);
-  items6[2] = callback(guild(1296).Icon, { source: channel(9694) });
+  items6[2] = callback(guild(1296).Icon, { source: channel(9698) });
   obj1[6] = items6;
-  items4[1] = closure_12(guild(5076).PressableOpacity, obj1);
+  items4[1] = closure_12(guild(5077).PressableOpacity, obj1);
   obj[1] = items4;
   return closure_12(View, obj);
 }

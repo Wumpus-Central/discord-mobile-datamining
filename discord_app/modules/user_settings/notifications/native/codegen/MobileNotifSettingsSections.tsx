@@ -2,6 +2,7 @@
 import set from "../../../../../../_runtime/00002_set.js";
 
 const frozen = Object.freeze({
+  NOTIFICATIONS_REDESIGN: "Notifications (Redesign)",
   NOTIF_REALTIME: "Realtime",
   NOTIF_CATEGORY_SOCIAL: "Category social",
   NOTIF_CATEGORY_SERVER: "Category server",

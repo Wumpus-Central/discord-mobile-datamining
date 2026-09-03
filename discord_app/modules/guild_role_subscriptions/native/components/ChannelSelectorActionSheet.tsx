@@ -1,6 +1,6 @@
 // discord_app/modules/guild_role_subscriptions/native/components/ChannelSelectorActionSheet.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import registerAssetDefault from "../../../../../_runtime/13484_registerAsset.js";
+import registerAssetDefault from "../../../../../_runtime/13499_registerAsset.js";
 import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
 import closure_4 from "../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
@@ -35,13 +35,13 @@ function ChannelRow(channel) {
     disableHighlightOnPress: true,
     resolvedUnreadSetting: UnreadSetting.ONLY_MENTIONS,
   };
-  const children = [closure_11(onChannelSelected(15936), obj)];
+  const children = [closure_11(onChannelSelected(15952), obj)];
   if (selected) {
     obj = { style: null, source: null };
     obj[0] = tmp.selectedIcon;
-    obj[1] = tmp2(17512);
-    selected = tmp8(tmp2(5501), obj);
-    const tmp2Result = tmp2(5501);
+    obj[1] = tmp2(17532);
+    selected = tmp8(tmp2(5502), obj);
+    const tmp2Result = tmp2(5502);
   }
   children[1] = selected;
   return closure_13(closure_12, { children });
@@ -163,7 +163,7 @@ export default function ChannelSelectorActionSheet(guildId) {
     }
     return expandActionSheetResult;
   };
-  obj1[1] = closure_11(guildId(6230).SearchField, obj2);
+  obj1[1] = closure_11(guildId(6231).SearchField, obj2);
   items2[1] = closure_11(View, obj1);
   let tmp9Result = !hideCreateChannel;
   if (!hideCreateChannel) {
@@ -203,11 +203,11 @@ export default function ChannelSelectorActionSheet(guildId) {
     obj5[3] = intl3.string(tmp5(1233).t.d7AN7W);
     items3[1] = tmp8(tmp5(4474).Text, obj5);
     obj3[3] = items3;
-    tmp9Result = tmp9(tmp5(5076).PressableOpacity, obj3);
+    tmp9Result = tmp9(tmp5(5077).PressableOpacity, obj3);
   }
   items2[2] = tmp9Result;
   obj[2] = closure_13(closure_12, { children: items2 });
-  obj[3] = closure_11(guildId(5632).BottomSheetFlatList, {
+  obj[3] = closure_11(guildId(5633).BottomSheetFlatList, {
     style: tmp.bodyContainer,
     data: stateFromStoresArray,
     keyExtractor(id) {
@@ -222,5 +222,5 @@ export default function ChannelSelectorActionSheet(guildId) {
       });
     },
   });
-  return closure_11(guildId(5997).ActionSheet, obj);
+  return closure_11(guildId(5998).ActionSheet, obj);
 }

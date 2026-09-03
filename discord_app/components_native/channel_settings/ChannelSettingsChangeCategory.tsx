@@ -288,16 +288,16 @@ prototype["render"] = function render() {
         obj2[1] = function onPress() {
           return self.handleSetCategory(first.id);
         };
-        obj1[1] = tmp3(tmp4(5607).TableRow, obj2, first.id);
-        tmp3Result = tmp3(tmp4(6000).TableRowGroup, obj1);
+        obj1[1] = tmp3(tmp4(5608).TableRow, obj2, first.id);
+        tmp3Result = tmp3(tmp4(6001).TableRowGroup, obj1);
       }
     }
   }
   items[1] = tmp3Result;
   items[2] = self.renderCategories();
   obj[2] = items;
-  obj[1] = closure_14(first(4926).Stack, obj);
-  return closure_13(first(8372).Form, obj);
+  obj[1] = closure_14(first(4927).Stack, obj);
+  return closure_13(first(8376).Form, obj);
 };
 ChannelSettingsChangeCategory.contextType = require("ManaContext").ThemeContext;
 let obj1 = { paddingHorizontal: ThemesDefault.modules.mobile.TABLE_ROW_PADDING };
@@ -312,7 +312,7 @@ export default function ConnectedChannelSettingsChangeCategory(channelId) {
   const obj = channelId(586);
   const navigation = channelId(1498).useNavigation();
   const obj2 = channelId(1498);
-  const appChannelBotUserId = channelId(11419).useAppChannelBotUserId(channel);
+  const appChannelBotUserId = channelId(11424).useAppChannelBotUserId(channel);
   _modDef38(null != channel, "ConnectedChannelSettingsChangeCategory: channel cannot be undefined");
   return callback3(ChannelSettingsChangeCategory, { channel, navigation, appChannelBotUserId });
 }

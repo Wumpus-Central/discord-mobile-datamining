@@ -2,8 +2,8 @@
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import getSystemLocale from "../../../intl/index.native.tsx";
 import PressableBase from "../../../design/void/Pressables/native/Pressables.tsx";
-import registerAssetDefault from "../../../../_runtime/17352_registerAsset.js";
-import registerAssetDefault2 from "../../../../_runtime/17353_registerAsset.js";
+import registerAssetDefault from "../../../../_runtime/17372_registerAsset.js";
+import registerAssetDefault2 from "../../../../_runtime/17373_registerAsset.js";
 import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import { UPLOAD_MEDIUM_SIZE } from "../../../Constants.tsx";

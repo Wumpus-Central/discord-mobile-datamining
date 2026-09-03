@@ -179,7 +179,7 @@ export default function UserSettingsPushNotificationLogs() {
   let obj = { style: tmp9.wrap, children: null };
   obj = { style: tmp9.searchWrap, children: null };
   let items1 = [
-    callback3(first(6230).SearchField, {
+    callback3(first(6231).SearchField, {
       size: "md",
       placeholder: "Filter (regex)",
       onChange: tmp[1],
@@ -222,7 +222,7 @@ export default function UserSettingsPushNotificationLogs() {
             dependencyMap = 1;
             c3 = 1;
             obj1 = { value: null, done: false };
-            obj1[0] = closure_1_1(10296)();
+            obj1[0] = closure_1_1(10300)();
             return obj1;
           }
         } else if (arg0 === 1) {
@@ -235,9 +235,9 @@ export default function UserSettingsPushNotificationLogs() {
           return obj2;
         } else {
           closure_0 = arg1;
-          obj = closure_1_0(8647);
+          obj = closure_1_0(8651);
           const obj3 = { message: null };
-          obj3[0] = closure_1_1(10297)(closure_0, false);
+          obj3[0] = closure_1_1(10301)(closure_0, false);
           obj.showShareActionSheet(obj3, "push-notification-logs");
           c3 = 3;
           return { value: "HermesInternal", done: null };
@@ -248,8 +248,8 @@ export default function UserSettingsPushNotificationLogs() {
       }
     }
   });
-  obj[3] = callback3(first(13000).ShareIcon, {});
-  items1[1] = callback3(first(5076).PressableOpacity, obj);
+  obj[3] = callback3(first(13012).ShareIcon, {});
+  items1[1] = callback3(first(5077).PressableOpacity, obj);
   obj[1] = items1;
   let items2 = [callback4(View, obj)];
   obj1 = { contentContainerStyle: null, data: null, renderItem: null };
@@ -289,7 +289,7 @@ export default function UserSettingsPushNotificationLogs() {
     obj[1] = items;
     return closure_1_8(closure_1_6, obj, item.index);
   };
-  items2[1] = callback3(first(8113).FlashList, obj1);
+  items2[1] = callback3(first(8116).FlashList, obj1);
   obj[1] = items2;
   return callback4(View, obj);
 }

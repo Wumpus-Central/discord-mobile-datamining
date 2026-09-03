@@ -25,10 +25,10 @@ function CodeRow(code) {
   if (showCheckMark) {
     obj = { color: null };
     obj[0] = ThemesDefault.colors.TEXT_BRAND;
-    tmp2Result = tmp2(code(5596).CheckmarkSmallIcon, obj);
+    tmp2Result = tmp2(code(5597).CheckmarkSmallIcon, obj);
   }
   obj[2] = tmp2Result;
-  return closure_6(code(5607).TableRow, obj);
+  return closure_6(code(5608).TableRow, obj);
 }
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 createCacheKey = { generateCode: null };
@@ -86,7 +86,7 @@ export default function UserSettingsAccountBackupCodes(headerLabel) {
     const intl2 = tmp3(1233).intl;
     obj1[0] = intl2.string(tmp3(1233).t.zdzyFo);
     obj1[2] = unusedCodes.map((code) => callback2(closure_9, { code: code.code, showCheckMark: false }, arg1));
-    tmp10Result = tmp10(tmp3(6000).TableRowGroup, obj1);
+    tmp10Result = tmp10(tmp3(6001).TableRowGroup, obj1);
   }
   items2[1] = tmp10Result;
   tmp10Result = usedCodes.length > 0;
@@ -95,7 +95,7 @@ export default function UserSettingsAccountBackupCodes(headerLabel) {
     const intl3 = tmp3(1233).intl;
     obj2[0] = intl3.string(tmp3(1233).t.FkFLDN);
     obj2[2] = usedCodes.map((code) => callback2(closure_9, { code: code.code, showCheckMark: true }, arg1));
-    tmp10Result = tmp10(tmp3(6000).TableRowGroup, obj2);
+    tmp10Result = tmp10(tmp3(6001).TableRowGroup, obj2);
   }
   items2[2] = tmp10Result;
   let tmp10Result1 = null !== headerLabel.onGenerate;
@@ -109,15 +109,15 @@ export default function UserSettingsAccountBackupCodes(headerLabel) {
     obj4[0] = tmp10(tmp3(4474).Text, obj5);
     obj4[1] = function onPress() {
       const verificationKey = store.getVerificationKey();
-      const result = callback(14558).confirmViewBackupCodes(verificationKey, true);
+      const result = callback(14573).confirmViewBackupCodes(verificationKey, true);
     };
-    obj3[1] = tmp10(tmp3(5607).TableRow, obj4);
-    tmp10Result1 = tmp10(tmp3(6000).TableRowGroup, obj3);
+    obj3[1] = tmp10(tmp3(5608).TableRow, obj4);
+    tmp10Result1 = tmp10(tmp3(6001).TableRowGroup, obj3);
   }
   const tmp11 = ScrollView;
   const tmp12 = closure_7;
   tmp6 = callback();
   items2[3] = tmp10Result1;
   obj[2] = items2;
-  return closure_6(tmp11, { children: closure_7(stateFromStores(4926).Stack, obj) });
+  return closure_6(tmp11, { children: closure_7(stateFromStores(4927).Stack, obj) });
 }

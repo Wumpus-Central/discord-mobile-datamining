@@ -7,7 +7,7 @@ const result = set.fileFinishedImporting("modules/group_dm/native/showChatGDMUps
 
 export default function showChatGDMUpsellActionSheet(arg0) {
   ACTION_SHEET_HEIGHT_HALFDefault.openLazy(
-    asyncRequireImpl(11414, dependencyMap.paths),
+    asyncRequireImpl(11419, dependencyMap.paths),
     "ChatGDMUpsellActionSheet",
     arg0,
   );

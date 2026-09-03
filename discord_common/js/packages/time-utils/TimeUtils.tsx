@@ -576,7 +576,7 @@ export const getTimeUnit = function getTimeUnit(arg0, arg1) {
   importDefault = arg1;
   const tmp2 = findLastIndexDefault(
     items,
-    (unit) => f77781(unit.unit),
+    (unit) => f77924(unit.unit),
     items.findIndex((max) => {
       max = max.max;
       let tmp = max.unit === closure_1_10.NONE;
@@ -592,7 +592,7 @@ export const getTimeUnit = function getTimeUnit(arg0, arg1) {
   if (null != tmp2) {
     return tmp2.unit;
   } else {
-    const found = arr.find((unit) => f77781(unit.unit));
+    const found = arr.find((unit) => f77924(unit.unit));
     let unit = null;
     if (null != found) {
       unit = found.unit;
@@ -620,10 +620,10 @@ export const getTimeAndUnit = function getTimeAndUnit(rounded, items) {
     return obj;
   } else {
     closure_0 = rounded;
-    const f77781 = (arg0) => closure_0.includes(arg0);
-    const tmp12 = f77781(4560)(
+    const f77924 = (arg0) => closure_0.includes(arg0);
+    const tmp12 = f77924(4560)(
       items,
-      (unit) => f77781(unit.unit),
+      (unit) => f77924(unit.unit),
       items.findIndex((max) => {
         max = max.max;
         let tmp = max.unit === closure_1_10.NONE;
@@ -639,7 +639,7 @@ export const getTimeAndUnit = function getTimeAndUnit(rounded, items) {
     if (null != tmp12) {
       let unit = tmp12.unit;
     } else {
-      const found = arr.find((unit) => f77781(unit.unit));
+      const found = arr.find((unit) => f77924(unit.unit));
       unit = null;
       if (null != found) {
         unit = found.unit;

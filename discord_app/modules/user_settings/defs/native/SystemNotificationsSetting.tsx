@@ -58,7 +58,7 @@ function _handleEnableSystemNotification() {
         } else {
           closure_0 = arg1;
           if (closure_0 === constants2.UNDETERMINED) {
-            let obj3 = callback(12211);
+            let obj3 = callback(12218);
             const permission = obj3.requestPermission((permission_granted) => {
               let obj = tmp2(table[7]);
               obj = {
@@ -81,7 +81,7 @@ function _handleEnableSystemNotification() {
             obj3 = { setting_type: "os", current_status: null };
             obj3[1] = num3;
             obj.track(constants.NOTIFICATION_SETTINGS_CLICKED, obj3);
-            obj2 = callback(9670);
+            obj2 = callback(9674);
             let result = obj2.openNotificationSettings();
           }
           c3 = 3;

@@ -1,7 +1,7 @@
 // discord_app/modules/user_settings/chat/native/SettingsChatScreen.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import registerAssetDefault from "../../../../../_runtime/10412_registerAsset.js";
-import _modDef14563 from "../../../settings/native/renderer/SettingLayout.tsx";
+import registerAssetDefault from "../../../../../_runtime/10416_registerAsset.js";
+import _modDef14578 from "../../../settings/native/renderer/SettingLayout.tsx";
 import closure_3 from "../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import closure_5 from "../../../../stores/UserStore.tsx";
@@ -55,7 +55,7 @@ function VideoUploadQualityNitroUpsell() {
     items2[1] = tmp7(tmp(4474).Text, obj4);
     obj2[1] = items2;
     obj1[2] = tmp5(tmp6, obj2);
-    obj[1] = tmp7(tmp(5609).Card, obj1);
+    obj[1] = tmp7(tmp(5610).Card, obj1);
     tmp7Result = tmp7(tmp6, obj);
   }
   children[1] = tmp7Result;
@@ -168,5 +168,5 @@ export default function SettingsChatScreen(route) {
     obj[1] = initialSetting;
     return obj.createList(obj);
   }, items);
-  return callback(_modDef14563, { node });
+  return callback(_modDef14578, { node });
 }

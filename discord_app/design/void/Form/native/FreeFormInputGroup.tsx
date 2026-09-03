@@ -69,7 +69,7 @@ const forwardRefResult = importAllResult.forwardRef((accessibilityLabel, ref) =>
     obj[8] = str;
     obj[9] = isAndroidResult;
     obj[10] = merged.autoCapitalize;
-    return callback(tmp8(7714).TextInput, obj);
+    return callback(tmp8(7717).TextInput, obj);
   } else {
     obj = { style: null, children: null };
     obj[0] = style;

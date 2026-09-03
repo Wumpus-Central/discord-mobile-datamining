@@ -18,7 +18,7 @@ createToggle = {
     if (obj.useStateFromStores(items, () => null !== closure_4.latestFetchedBuild().newBuild)) {
       let RefreshIcon = tmp(4427).DownloadIcon;
     } else {
-      RefreshIcon = tmp(14985).RefreshIcon;
+      RefreshIcon = tmp(15000).RefreshIcon;
     }
     return <RefreshIcon />;
   },

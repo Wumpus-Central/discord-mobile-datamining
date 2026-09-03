@@ -58,7 +58,7 @@ function SuggestionRow(suggestion) {
   obj[6] = function onPress() {
     return onSelect(suggestion.suggested_user.id);
   };
-  return callback(suggestion(7692).TableCheckboxRow, obj);
+  return callback(suggestion(7695).TableCheckboxRow, obj);
 }
 ({ jsx: closure_8, Fragment: c9, jsxs: c10 } = jsxProd);
 createCacheKey = {
@@ -145,7 +145,7 @@ export default function ContactSyncSuggestions(friendSuggestions) {
   const tmp4 = first(React.useState(reduced), 2);
   first = tmp4[0];
   React = tmp4[1];
-  let obj3 = friendSuggestions(4935);
+  let obj3 = friendSuggestions(4936);
   const fontScale = obj3.useFontScale();
   const sum = onSubmit(709).space.PX_16 + onSubmit(709).space.PX_32 + 40;
   let items1 = [first];
@@ -232,13 +232,13 @@ export default function ContactSyncSuggestions(friendSuggestions) {
   obj[0] = obj1;
   obj[1] = memo;
   obj[2] = callback1;
-  const items5 = [callback(friendSuggestions(8113).FlashList, obj), ,];
+  const items5 = [callback(friendSuggestions(8116).FlashList, obj), ,];
   obj2 = { style: tmp.linearGradient, start: null, end: null, pointerEvents: "none", colors: null };
   const someResult = keys.some((arg0) => first[arg0]);
   obj2[1] = friendSuggestions(688).VerticalGradient.START;
   obj2[2] = friendSuggestions(688).VerticalGradient.END;
   obj2[4] = items;
-  items5[1] = callback(onSubmit(4940), obj2);
+  items5[1] = callback(onSubmit(4941), obj2);
   obj3 = { style: tmp.redesignButton, children: null };
   obj4 = { variant: "primary", size: "lg", text: null, onPress: null, disabled: null };
   let intl = friendSuggestions(1233).intl;
@@ -254,7 +254,7 @@ export default function ContactSyncSuggestions(friendSuggestions) {
     });
   };
   obj4[4] = !someResult;
-  obj3[1] = callback(friendSuggestions(4928).Button, obj4);
+  obj3[1] = callback(friendSuggestions(4929).Button, obj4);
   items5[2] = callback(callback, obj3);
   obj[1] = items5;
   return callback2(callback, obj);

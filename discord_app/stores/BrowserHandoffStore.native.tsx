@@ -10,7 +10,7 @@ prototype["isHandoffAvailable"] = function isHandoffAvailable() {
   return false;
 };
 Object.defineProperty(prototype, "user", {
-  get: function user(xuio0C) {
+  get: function user(author1, id, EMBED) {
     return null;
   },
   set: undefined,

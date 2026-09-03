@@ -68,14 +68,14 @@ const memoResult = importAllResult.memo(function YouBarUser(isQuestRendered) {
       obj = { isLargeAvatar: null, onPress: null };
       obj[0] = tmp5;
       obj[1] = isQuestRendered.onAvatarPress;
-      const items2 = [callback(tmp9(16206), obj)];
+      const items2 = [callback(tmp9(16225), obj)];
       obj1 = { style: null, children: null };
       const items3 = [tmp.userText, animatedStyle, { flexShrink: 1 }];
       obj1[0] = items3;
       const obj2 = { userId: null, username: null };
       obj2[0] = stateFromStores.id;
       obj2[1] = name;
-      obj1[1] = callback(tmp9(16207), obj2);
+      obj1[1] = callback(tmp9(16226), obj2);
       items2[1] = callback(tmp9(4217).View, obj1);
       obj[1] = items2;
     }
@@ -83,7 +83,7 @@ const memoResult = importAllResult.memo(function YouBarUser(isQuestRendered) {
   }
   obj3 = { style: items4, children: null };
   items4 = [tmp.youButton];
-  const items5 = [callback(sharedValue(16205), { isLarge: !isQuestRendered })];
+  const items5 = [callback(sharedValue(16224), { isLarge: !isQuestRendered })];
   const tmp2 = _require;
   const tmp2Result = ReanimatedRexport;
   const items6 = [tmp.userText, animatedStyle, { flexShrink: 1 }];

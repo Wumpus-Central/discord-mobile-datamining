@@ -34,7 +34,7 @@ let obj = {
   setFocused: null,
   setIsFocusedVideoZoomed: null,
   setMode: null,
-  setShowFloatingCTA: "M2 2H1v2h1V2ZM5 1H2v1h3V1ZM7 2H6v1h1V2ZM9 1H7v1h2V1ZM12 1h-1v2h1V2h2V1h-2Z",
+  setShowFloatingCTA: "M13 8v1h-1v1h-1V3h-1V2H9V1H8v14h6v-1h-2v-1h1v-1h1v-1h1V8h-2Z",
   showControls: null,
   showFloatingCTA: "",
   streamOutputSinkStack: "",
@@ -52,7 +52,7 @@ obj[5] = function dismissPanel() {
   error = new Error("VoicePanelContextType.Provider.dismissDrawer: not called within a context provider");
   throw error;
 };
-obj[6] = { current: "r" };
+obj[6] = { current: "Array" };
 obj[7] = createFakeSharedValue.createFakeSharedValue(false);
 obj[8] = createFakeSharedValue.createFakeSharedValue(null);
 obj[9] = function generateStateLocker(closure_0) {

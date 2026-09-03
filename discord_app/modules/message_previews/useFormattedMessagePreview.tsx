@@ -372,9 +372,9 @@ function formatMessagePreview(type, isBlocked) {
                 tmp21 = obj50;
               } else if (type.type === tmp4(683).MessageTypes.VOICE_SESSION) {
                 const obj52 = { type: "text", text: null };
-                obj52[1] = tmp4(7989).getVoiceSessionMessageContent(type);
+                obj52[1] = tmp4(7992).getVoiceSessionMessageContent(type);
                 tmp21 = obj52;
-                const tmp4Result = tmp4(7989);
+                const tmp4Result = tmp4(7992);
               }
             }
           }
@@ -445,7 +445,7 @@ export const useFormattedMessagePreview = function useFormattedMessagePreview(me
     }
     return user;
   });
-  tmpResult = tmp(4746);
+  tmpResult = tmp(4747);
   obj = {
     message,
     channel,

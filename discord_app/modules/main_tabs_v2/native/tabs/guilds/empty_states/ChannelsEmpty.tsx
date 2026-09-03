@@ -1,7 +1,7 @@
 // discord_app/modules/main_tabs_v2/native/tabs/guilds/empty_states/ChannelsEmpty.tsx
 import ThemesDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
-import registerAssetDefault from "../../../../../../../_runtime/16077_registerAsset.js";
-import registerAssetDefault2 from "../../../../../../../_runtime/16078_registerAsset.js";
+import registerAssetDefault from "../../../../../../../_runtime/16093_registerAsset.js";
+import registerAssetDefault2 from "../../../../../../../_runtime/16094_registerAsset.js";
 import importAllResult from "../../../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../../../_runtime/00017_get_ActivityIndicator.js";
 import closure_6 from "../../../../../../stores/PermissionStore.tsx";
@@ -57,7 +57,7 @@ const memoResult = importAllResult.memo(function ChannelsEmpty(guild) {
   const callback1 = importAllResult.useCallback(() => {
     closure_1_1(closure_1_2[10]).open(null, guild.id, null, null);
   }, items3);
-  obj1 = guild(14927);
+  obj1 = guild(14942);
   obj = { style: null, children: null };
   const items4 = [tmp.wrapper];
   obj = { paddingBottom: obj1.useYouBarTotalHeight(16) };
@@ -73,7 +73,7 @@ const memoResult = importAllResult.memo(function ChannelsEmpty(guild) {
     const intl = tmp2(1233).intl;
     obj2[1] = intl.string(tmp2(1233).t["Yhi9/N"]);
     obj2[2] = callback;
-    obj1[1] = callback(tmp2(8374).RowButton, obj2);
+    obj1[1] = callback(tmp2(8378).RowButton, obj2);
     canCustomizeGuild = callback(tmp8, obj1);
   }
   const items5 = [canCustomizeGuild];
@@ -97,7 +97,7 @@ const memoResult = importAllResult.memo(function ChannelsEmpty(guild) {
     const intl4 = tmp2(1233).intl;
     obj9[3] = intl4.string(tmp2(1233).t["63PyJQ"]);
     obj9[4] = callback1;
-    obj8[1] = tmp11(tmp2(4929).BaseTextButton, obj9);
+    obj8[1] = tmp11(tmp2(4930).BaseTextButton, obj9);
     canCreateChannel = tmp11(tmp8, obj8);
   }
   items6[3] = canCreateChannel;

@@ -284,7 +284,7 @@ export default function FormImagePicker(children) {
   };
   const items = [
     callback2(tmp6(4474).Text, obj),
-    callback2(tmp6(4928).Button, {
+    callback2(tmp6(4929).Button, {
       text: stringResult,
       variant: "secondary",
       onPress() {

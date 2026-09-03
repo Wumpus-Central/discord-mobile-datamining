@@ -4,7 +4,7 @@ import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.
 import getSystemLocale from "../../../intl/index.native.tsx";
 import useMountLayoutEffectDefault from "../../../hooks/useMountEffect.tsx";
 import RedesignBottomSheetTitleHeaderBase from "../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
-import BottomSheetModal from "../../../../_runtime/05632_BottomSheetModal.js";
+import BottomSheetModal from "../../../../_runtime/05633_BottomSheetModal.js";
 import ActionSheet from "../../../design/components/Sheet/native/ActionSheet.native.tsx";
 import ActionSheetRowIcon from "../../../design/components/Sheet/native/ActionSheetRow.native.tsx";
 import getStreamIssueReportOptionsDefault from "../../../modules/go_live/utils/getStreamIssueReportOptions.tsx";

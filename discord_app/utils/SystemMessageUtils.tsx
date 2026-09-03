@@ -282,13 +282,13 @@ export default {
                         AutomodNotificationEmbedTypeKeys.AutomodNotificationEmbedTypeKeys.ACTIVITY_ALERTS_ENABLED ===
                         value
                       ) {
-                        let tmp34Result = tmp34(7905);
+                        let tmp34Result = tmp34(7908);
                         const intl5 = tmp34(1233).intl;
                         const obj14 = { guildName: null };
                         obj14[0] = guild.name;
                         astToStringResult6 = tmp34Result.astToString(intl5.formatToParts(tmp34(1233).t.wt3ZUM, obj14));
-                      } else if (tmp34(7909).AutomodNotificationEmbedTypeKeys.INTERACTION_BLOCKED === value) {
-                        tmp34Result = tmp34(7905);
+                      } else if (tmp34(7912).AutomodNotificationEmbedTypeKeys.INTERACTION_BLOCKED === value) {
+                        tmp34Result = tmp34(7908);
                         const intl4 = tmp34(1233).intl;
                         obj15 = { guildName: null };
                         obj15[0] = guild.name;
@@ -297,10 +297,10 @@ export default {
                         const intl3 = tmp34(1233).intl;
                         obj16 = { guildName: null };
                         obj16[0] = guild.name;
-                        astToStringResult6 = tmp34(7905).astToString(
+                        astToStringResult6 = tmp34(7908).astToString(
                           intl3.formatToParts(tmp34(1233).t["a+lJKl"], obj16),
                         );
-                        const tmp34Result1 = tmp34(7905);
+                        const tmp34Result1 = tmp34(7908);
                       }
                     }
                   }

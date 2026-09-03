@@ -51,7 +51,7 @@ export default function UsernameSearchScreen(navigation) {
     obj = { friend_add_type: constants2.FRIENDS_ADD_BY_USERNAME_MODAL };
     obj.track(constants.FRIEND_ADD_VIEWED, obj);
   }, []);
-  const insets = ref(5602)().insets;
+  const insets = ref(5603)().insets;
   ref = React.useRef(null);
   const items = [navigation];
   const effect1 = React.useEffect(
@@ -71,7 +71,7 @@ export default function UsernameSearchScreen(navigation) {
       }),
     items,
   );
-  let obj = navigation(7626);
+  let obj = navigation(7627);
   const clientThemesOverride = obj.useClientThemesOverride();
   obj1 = navigation(1234);
   let prop = null;
@@ -87,8 +87,8 @@ export default function UsernameSearchScreen(navigation) {
   obj = { style: tmp.background, children: null };
   obj = { style: items1, children: null };
   items1 = [tmp.content, clientThemesOverride];
-  let tmp3Result = tmp3(6057);
-  const items2 = [callback(ref(5078), { absolute: true })];
+  let tmp3Result = tmp3(6058);
+  const items2 = [callback(ref(5079), { absolute: true })];
   obj1 = {
     alwaysBounceVertical: false,
     keyboardShouldPersistTaps: "handled",
@@ -98,7 +98,7 @@ export default function UsernameSearchScreen(navigation) {
   const items3 = [tmp.container, prop, { paddingBottom: insets.bottom + ref(709).space.PX_16 }];
   obj1[2] = items3;
   const obj3 = { style: tmp.inputContainer, autoFocusInput: false, headerText: null, headerTextStyle: null, ref: null };
-  tmp3Result = tmp3(13817);
+  tmp3Result = tmp3(13833);
   const intl = tmp7(1233).intl;
   obj3[2] = intl.string(navigation(1233).t.YEOwDM);
   obj3[3] = tmp.headerText;

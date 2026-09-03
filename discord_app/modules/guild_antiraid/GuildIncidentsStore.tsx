@@ -35,8 +35,8 @@ function updateGuildIncident(id) {
   if (null != incidentsData) {
     let hasDetectedActivityResult = DATE_CONFIG.hasDetectedActivity(incidentsData);
     if (!hasDetectedActivityResult) {
-      hasDetectedActivityResult = tmp6(7933).isUnderLockdown(incidentsData);
-      const tmp6Result = tmp6(7933);
+      hasDetectedActivityResult = tmp6(7936).isUnderLockdown(incidentsData);
+      const tmp6Result = tmp6(7936);
     }
     if (hasDetectedActivityResult) {
       tmp5 = incidentsData;
@@ -96,8 +96,8 @@ const guildIncidentsStore = new GuildIncidentsStore(dispatcherDefault, {
     if (null != incidentsData) {
       let hasDetectedActivityResult = DATE_CONFIG.hasDetectedActivity(incidentsData);
       if (!hasDetectedActivityResult) {
-        hasDetectedActivityResult = tmp6(7933).isUnderLockdown(incidentsData);
-        const tmp6Result = tmp6(7933);
+        hasDetectedActivityResult = tmp6(7936).isUnderLockdown(incidentsData);
+        const tmp6Result = tmp6(7936);
       }
       if (hasDetectedActivityResult) {
         tmp5 = incidentsData;
@@ -128,8 +128,8 @@ const guildIncidentsStore = new GuildIncidentsStore(dispatcherDefault, {
     if (null != incidentsData) {
       let hasDetectedActivityResult = DATE_CONFIG.hasDetectedActivity(incidentsData);
       if (!hasDetectedActivityResult) {
-        hasDetectedActivityResult = tmp6(7933).isUnderLockdown(incidentsData);
-        const tmp6Result = tmp6(7933);
+        hasDetectedActivityResult = tmp6(7936).isUnderLockdown(incidentsData);
+        const tmp6Result = tmp6(7936);
       }
       if (hasDetectedActivityResult) {
         tmp5 = incidentsData;

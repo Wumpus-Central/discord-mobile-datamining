@@ -81,7 +81,7 @@ export default function GiftingPromotionCoachmarkActionSheet(arg0) {
   let obj = markAsDismissed(586);
   const items = [analyticsLocations];
   const stateFromStores = obj.useStateFromStores(items, () => analyticsLocations.useReducedMotion);
-  obj1 = markAsDismissed(10745);
+  obj1 = markAsDismissed(10749);
   let asset;
   if (coachmarkComponent != null) {
     asset = coachmarkComponent.asset;
@@ -90,7 +90,7 @@ export default function GiftingPromotionCoachmarkActionSheet(arg0) {
   let tmp2Result = tmp2(586);
   const items1 = [closure_6];
   const stateFromStores1 = tmp2Result.useStateFromStores(items1, () => giftPromotion.getGiftPromotion());
-  tmp2Result = tmp2(16743);
+  tmp2Result = tmp2(16763);
   let endDate;
   if (stateFromStores1 != null) {
     endDate = stateFromStores1.endDate;
@@ -163,11 +163,11 @@ export default function GiftingPromotionCoachmarkActionSheet(arg0) {
       const obj6 = { grow: true, icon: null, text: null, onPress: null };
       const obj7 = { size: "sm", color: null };
       obj7[1] = tmp10(709).colors.WHITE;
-      obj6[1] = tmp18(tmp2(10994).GiftIcon, obj7);
+      obj6[1] = tmp18(tmp2(10998).GiftIcon, obj7);
       const intl = tmp2(1233).intl;
       obj6[2] = intl.string(tmp2(1233).t.Ve9Ge6);
       obj6[3] = tmp16;
-      items4[3] = tmp18(tmp2(4928).Button, obj6);
+      items4[3] = tmp18(tmp2(4929).Button, obj6);
       obj[1] = items4;
       obj[2] = tmp20(tmp21, obj);
       tmp18Result = tmp18(tmp19, obj);
@@ -181,7 +181,7 @@ export default function GiftingPromotionCoachmarkActionSheet(arg0) {
           const obj9 = { url: null, style: null, autoplay: true };
           obj9[0] = themeAndReducedMotionAwareAssetUrl;
           obj9[1] = tmp.imageShared;
-          obj8[1] = tmp18(tmp2(8530).APNGPlayer, obj9);
+          obj8[1] = tmp18(tmp2(8534).APNGPlayer, obj9);
           let tmp18Result1 = tmp18(tmp21, obj8);
         }
       }
@@ -190,7 +190,7 @@ export default function GiftingPromotionCoachmarkActionSheet(arg0) {
       obj11[0] = themeAndReducedMotionAwareAssetUrl;
       obj10[0] = obj11;
       obj10[1] = tmp.imageShared;
-      tmp18Result1 = tmp18(tmp10(5501), obj10);
+      tmp18Result1 = tmp18(tmp10(5502), obj10);
       tmp2Result1 = tmp2(1234);
     }
   }

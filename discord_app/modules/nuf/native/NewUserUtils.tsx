@@ -1,6 +1,6 @@
 // discord_app/modules/nuf/native/NewUserUtils.tsx
 import dispatcherDefault from "../../../Dispatcher.tsx";
-import _modDef4723 from "../../../actions/ModalActionCreators.tsx";
+import _modDef4724 from "../../../actions/ModalActionCreators.tsx";
 import trackNUFStep from "NewUserAnalyticsUtils.tsx";
 import NEW_USER_MODAL_KEY from "components/NewUserModalTypes.tsx";
 import importDefaultResult from "../../../../_runtime/00005_asyncGeneratorStep.js";
@@ -43,13 +43,13 @@ function _shouldSkipContactSyncStep() {
             return obj;
           } else {
             const callback = tmp4;
-            let obj2 = closure_1_0(12442);
+            let obj2 = closure_1_0(12454);
             const result = obj2.isContactSyncAvailable();
             if (result) {
               c1 = 1;
               dependencyMap = 1;
               obj1 = { value: null, done: false };
-              obj1[0] = closure_1_0(12442).checkContactPermissions();
+              obj1[0] = closure_1_0(12454).checkContactPermissions();
               return obj1;
             } else {
               dependencyMap = 3;
@@ -87,12 +87,12 @@ function lastStepComplete(STEP_GUILD_TEMPLATE) {
   trackNUFStep.trackNUFStep(STEP_GUILD_TEMPLATE, "NUF Complete");
   const obj = trackNUFStep;
   if (obj2.isModalOpen(NEW_USER_MODAL_KEY.NEW_USER_MODAL_KEY)) {
-    _modDef4723.popWithKey(tmp(17262).NEW_USER_MODAL_KEY);
-    const obj3 = _modDef4723;
+    _modDef4724.popWithKey(tmp(17282).NEW_USER_MODAL_KEY);
+    const obj3 = _modDef4724;
   }
   let tmpResult = tmp(1219);
   tmpResult.transitionTo(constants.ME, { navigationReplace: true });
-  tmpResult = tmp(12508);
+  tmpResult = tmp(12520);
   const result = tmpResult.setNewUserFlowCompleted();
 }
 function getNextOnboardingStep(flag, first1, first) {
@@ -209,7 +209,7 @@ function _getNextOnboardingStep() {
               return obj5;
             } else if (arg1) {
               callback = dependencyMap;
-              obj3 = flag(12445);
+              obj3 = flag(12457);
               const obj6 = { skip: null };
               obj6[0] = flag;
               obj3.trackNUFStep(closure_3, key, obj6);

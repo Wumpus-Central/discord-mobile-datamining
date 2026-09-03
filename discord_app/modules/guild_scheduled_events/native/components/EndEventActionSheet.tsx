@@ -35,7 +35,7 @@ export default function EndEventActionSheet(channel) {
   channel = channel.channel;
   let activeEvent;
   const tmp = callback3();
-  let obj = channel(9644);
+  let obj = channel(9648);
   activeEvent = obj.useActiveEvent(channel.id);
   if (null == activeEvent) {
     return null;
@@ -64,7 +64,7 @@ export default function EndEventActionSheet(channel) {
     const intl3 = tmp2(1233).intl;
     obj4[0] = intl3.string(tmp2(1233).t.P60OAX);
     obj4[2] = handleClose;
-    obj3[1] = callback(tmp2(4928).Button, obj4);
+    obj3[1] = callback(tmp2(4929).Button, obj4);
     items[2] = callback(View, obj3);
     const obj5 = { style: null, children: null };
     obj5[0] = tmp.confirmButtonContainer;
@@ -81,10 +81,10 @@ export default function EndEventActionSheet(channel) {
         const obj3 = channel(closure_1_2[9]);
       }
     };
-    obj5[1] = callback(tmp2(4928).Button, obj6);
+    obj5[1] = callback(tmp2(4929).Button, obj6);
     items[3] = callback(View, obj5);
     obj[1] = items;
     obj[0] = callback2(View, obj);
-    return callback(activeEvent(8754), obj);
+    return callback(activeEvent(8758), obj);
   }
 }

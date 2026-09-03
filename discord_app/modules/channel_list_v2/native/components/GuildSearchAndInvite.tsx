@@ -203,8 +203,8 @@ const memoResult = importAllResult.memo(function ConnectedGuildSearchAndInviteIn
       closure_1_11.GUILD_HEADER,
     );
   });
-  const shouldShowInvitesDisabledNotif = guild(12163).useShouldShowInvitesDisabledNotif(guild);
-  const obj2 = guild(12163);
+  const shouldShowInvitesDisabledNotif = guild(12169).useShouldShowInvitesDisabledNotif(guild);
+  const obj2 = guild(12169);
   const tmp5 = useEventsButtonPropsDefault(guild);
   obj = {
     guildId: guild.id,

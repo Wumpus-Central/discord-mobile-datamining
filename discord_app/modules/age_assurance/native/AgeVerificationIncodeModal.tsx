@@ -27,7 +27,7 @@ export default function AgeVerificationIncodeModal(webviewUrl) {
   const memo = React.useMemo(() => {
     function handleClose() {
       dependencyMap();
-      let arr = callback2(4723);
+      let arr = callback2(4724);
       arr = arr.pop();
     }
     const uRL = new URL(closure_0);
@@ -41,11 +41,11 @@ export default function AgeVerificationIncodeModal(webviewUrl) {
         const obj = { onPress: handleClose, text: null };
         const intl = callback(1233).intl;
         obj[1] = intl.string(callback(1233).t.cpT0Cq);
-        return handleClose(callback(6246).HeaderActionButton, obj);
+        return handleClose(callback(6247).HeaderActionButton, obj);
       },
       render(arg0, arg1) {
         closure_0 = arg1;
-        return handleClose(callback2(8702), {
+        return handleClose(callback2(8706), {
           onClose: handleClose,
           trustedOrigin: origin,
           onMethodSelected(injectedJavaScriptBeforeContentLoaded) {
@@ -61,10 +61,10 @@ export default function AgeVerificationIncodeModal(webviewUrl) {
         const obj = { onPress: handleClose, text: null };
         const intl = callback(1233).intl;
         obj[1] = intl.string(callback(1233).t.cpT0Cq);
-        return handleClose(callback(6246).HeaderActionButton, obj);
+        return handleClose(callback(6247).HeaderActionButton, obj);
       },
       render(injectedJavaScriptBeforeContentLoaded) {
-        return handleClose(callback2(8709), {
+        return handleClose(callback2(8713), {
           webviewUrl: closure_0,
           onComplete: callback2,
           onClose: handleClose,

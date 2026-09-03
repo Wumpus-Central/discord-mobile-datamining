@@ -6,7 +6,7 @@ import Button from "../../../design/components/Button/native/Button.native.tsx";
 import VideoComponent from "../../../components_native/common/Video.tsx";
 import metadataDefault from "../../../../discord_assets/assets/quests/bounties/starfield_bg.mp4.js";
 import openBountiesNuxPromoSheetDefault from "openBountiesNuxPromoSheet.tsx";
-import _modDef14910 from "BountiesBannerBackground.tsx";
+import _modDef14925 from "BountiesBannerBackground.tsx";
 import metadataDefault2 from "../../../../discord_assets/assets/quests/bounties/bounty_banner.mp4.js";
 import importAllResult from "../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
@@ -95,7 +95,7 @@ function BountiesCtaHeaderInner(bounties) {
   const tmp = callback3();
   let tmp10Result = null != footer;
   let tmp12Result3 = !flag;
-  let obj = bounties(14909);
+  let obj = bounties(14924);
   const bountiesEntryPointButtonVariant = obj.getBountiesEntryPointButtonVariant(shopCarouselButtonVariant);
   obj1 = bounties(586);
   const items = [closure_7];
@@ -105,8 +105,8 @@ function BountiesCtaHeaderInner(bounties) {
     () => bounties.some((id) => !closure_7.hasSeen(callback(table[16]).AdCreativeType.BOUNTY, id.id)),
     items1,
   );
-  let obj2 = bounties(11339);
-  const QuestContent = bounties(5398).QuestContent;
+  let obj2 = bounties(11344);
+  const QuestContent = bounties(5399).QuestContent;
   const tmp8 = obj2.useBountiesExperience(constants2.QUEST_HOME_MOBILE).verticalScrollEnabled
     ? QuestContent.VIDEO_MODAL_MOBILE
     : QuestContent.QUEST_HOME_MOBILE_CAROUSEL;
@@ -229,8 +229,8 @@ function BountiesCtaHeaderInner(bounties) {
     obj11[1] = items11;
     items9[1] = tmp10(tmp11, obj11);
     obj9[2] = items9;
-    tmp10Result = tmp10(_modDef14910, obj9);
-    const tmp27 = _modDef14910;
+    tmp10Result = tmp10(_modDef14925, obj9);
+    const tmp27 = _modDef14925;
   }
   obj[1] = tmp10Result;
   const items12 = [closure_11(closure_5, obj)];
@@ -394,7 +394,7 @@ let closure_13 = createCacheKey.createStyles(() => {
 });
 const memoResult = importAllResult.memo(function BountiesCtaHeader(isEmptyOrCompleted) {
   const _require = isEmptyOrCompleted;
-  const tmp2 = containerRef(14906)();
+  const tmp2 = containerRef(14921)();
   containerRef = tmp2.containerRef;
   isEmptyOrCompleted = isEmptyOrCompleted.isEmptyOrCompleted;
   let tmp3 = undefined !== isEmptyOrCompleted;
@@ -422,17 +422,17 @@ const memoResult = importAllResult.memo(function BountiesCtaHeader(isEmptyOrComp
         children: null,
       };
       obj1[0] = closure_9;
-      obj1[1] = tmp7(7456).AdCreativeType.BOUNTY;
-      obj1[2] = tmp7(5398).QuestContent.QUEST_HOME_ENTRYPOINT_MOBILE;
+      obj1[1] = tmp7(7457).AdCreativeType.BOUNTY;
+      obj1[2] = tmp7(5399).QuestContent.QUEST_HOME_ENTRYPOINT_MOBILE;
       obj1[4] = tmp2.isInView;
-      obj1[5] = tmp7(5398).QuestContent.QUEST_HOME_ENTRYPOINT_MOBILE;
+      obj1[5] = tmp7(5399).QuestContent.QUEST_HOME_ENTRYPOINT_MOBILE;
       obj1[6] = function children() {
         const obj = {};
         const merged = Object.assign(closure_0);
         obj.containerRef = containerRef;
         return closure_1_11(closure_1_17, obj);
       };
-      tmp9Result = tmp9(tmp7(11568).QuestContentImpressionTrackerNative, obj1);
+      tmp9Result = tmp9(tmp7(11573).QuestContentImpressionTrackerNative, obj1);
     }
     obj[1] = tmp9Result;
     return closure_11(require("../../../../discord_common/js/packages/design/native.tsx").ThemeContextProvider, obj);

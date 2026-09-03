@@ -1,5 +1,5 @@
 // discord_app/modules/stage_channels/StageChannelModalActionCreators.tsx
-import _modDef5363 from "../../actions/SelectedChannelActionCreators.tsx";
+import _modDef5364 from "../../actions/SelectedChannelActionCreators.tsx";
 import openStageChannelSettingsAll from "StageChannelActionCreatorExtras.native.tsx";
 import _initializeDefault from "StageChannelNewUserManager.tsx";
 import closure_4 from "../../../_runtime/00005_asyncGeneratorStep.js";
@@ -23,11 +23,11 @@ function connectToStage(channel, flag) {
     if (canResult) {
       let num = openStageChannelSettingsAll.shouldShowBlockedUsers(channel.id) && tmp !== channel.id;
       if (num) {
-        const result = tmp7(8680).openStageBlockedUsersSheet(channel, () => {
+        const result = tmp7(8684).openStageBlockedUsersSheet(channel, () => {
           closure_1_11(closure_0, true);
         });
         num = 1;
-        const tmp7Result = tmp7(8680);
+        const tmp7Result = tmp7(8684);
       }
       tmp6 = num;
       const obj2 = openStageChannelSettingsAll;
@@ -40,7 +40,7 @@ function connectToStage(channel, flag) {
   _initializeDefault.initialize();
   const obj = closure_9;
   const obj4 = _initializeDefault;
-  const voiceChannel = _modDef5363.selectVoiceChannel(channel.id);
+  const voiceChannel = _modDef5364.selectVoiceChannel(channel.id);
   if (obj.getVoiceChannelId() !== channel.id) {
     return false;
   } else {
@@ -55,7 +55,7 @@ function connectToStage(channel, flag) {
     }
     return true;
   }
-  const obj5 = _modDef5363;
+  const obj5 = _modDef5364;
 }
 function connectAndOpen(channel, flag) {
   const _require = channel;
@@ -83,15 +83,15 @@ function connectAndOpen(channel, flag) {
     const obj = shouldShowVoiceChannelChangeConfirmation;
   }
   if (result) {
-    result = flag2(8680).showChannelChangeConfirmationAlert(channel, () => {
+    result = flag2(8684).showChannelChangeConfirmationAlert(channel, () => {
       closure_1_11(closure_0, flag, flag2, true);
     });
-    const obj2 = flag2(8680);
+    const obj2 = flag2(8684);
   }
   if (!result) {
     if (connectToStage(channel, flag)) {
-      flag2(8680).navigateToStage(channel, voiceChannelId);
-      const obj3 = flag2(8680);
+      flag2(8684).navigateToStage(channel, voiceChannelId);
+      const obj3 = flag2(8684);
     }
   }
 }

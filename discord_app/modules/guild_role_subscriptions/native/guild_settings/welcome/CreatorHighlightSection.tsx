@@ -3,7 +3,7 @@ import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/n
 import getSystemLocale from "../../../../../intl/index.native.tsx";
 import Button from "../../../../../design/void/native.tsx";
 import Text from "../../../../../design/components/Text/native/Text.tsx";
-import registerAssetDefault from "../../../../../../_runtime/09153_registerAsset.js";
+import registerAssetDefault from "../../../../../../_runtime/09157_registerAsset.js";
 import closure_3 from "../../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
@@ -49,14 +49,14 @@ function CreatorGuildCard(highlightedCreatorGuild) {
   guild_id = highlightedCreatorGuild.guild_id;
   let quote_attribution_title = highlightedCreatorGuild.quote_attribution_title;
   ({ quote, quote_attribution } = highlightedCreatorGuild);
-  const tmp4 = guild_id(17528)(guild_id, 3, 60);
+  const tmp4 = guild_id(17548)(guild_id, 3, 60);
   dependencyMap = tmp4;
   hasAllImperativeDetails = tmp4.hasAllImperativeDetails;
   let items = [hasAllImperativeDetails, tmp4];
   if (tmp4.isLoading) {
     let obj = { style: null, children: null };
     obj[0] = tmp.cardContainer;
-    obj[1] = callback(tmp2(17500), {});
+    obj[1] = callback(tmp2(17520), {});
     return callback(closure_4, obj);
   } else if (hasAllImperativeDetails) {
     const details = tmp4.details;
@@ -71,7 +71,7 @@ function CreatorGuildCard(highlightedCreatorGuild) {
     const obj2 = { uri: null };
     obj2[0] = guildAvatarUrl;
     obj1[1] = obj2;
-    const items1 = [callback(tmp2(5501), obj1)];
+    const items1 = [callback(tmp2(5502), obj1)];
     const obj3 = { style: null, children: null };
     obj3[0] = tmp.cardHeaderContainer;
     const obj4 = {

@@ -49,47 +49,47 @@ function AdvancedInstantInviteScreen() {
       const guildId = closure_1_6.getGuildId();
       let invitableChannelForGuild = null;
       if (null != guildId) {
-        let obj = navigation(17614);
+        let obj = navigation(17634);
         invitableChannelForGuild = obj.getInvitableChannelForGuild(guildId);
       }
       if (null != invitableChannelForGuild) {
         obj = { channelId: null };
         obj[0] = invitableChannelForGuild.channel.id;
-        channel(9937).updateSettings(obj);
-        const obj2 = channel(9937);
+        channel(9941).updateSettings(obj);
+        const obj2 = channel(9941);
       } else {
         obj = { title: null, body: null, onConfirm: null };
         const intl = navigation(1233).intl;
         obj[0] = intl.string(navigation(1233).t.VINpSK);
         const intl2 = navigation(1233).intl;
         obj[1] = intl2.string(navigation(1233).t.kQ6fit);
-        obj[2] = channel(9937).close;
-        channel(4857).show(obj);
-        const obj4 = channel(4857);
+        obj[2] = channel(9941).close;
+        channel(4858).show(obj);
+        const obj4 = channel(4858);
       }
     }
   }, items1);
-  tmp2Result = tmp2(4945);
+  tmp2Result = tmp2(4946);
   const unmountEffect = tmp2Result.useUnmountEffect(() => {
-    channel(706).wait(channel(9937).resetSettings);
+    channel(706).wait(channel(9941).resetSettings);
   });
   const items2 = [channel];
   callback = obj3.useCallback(() => {
     if (null != channel) {
       if (closure_1_8.can(closure_1_10.CREATE_INSTANT_INVITE, tmp)) {
-        const invite = channel(9937).createInvite("IOS Regenerate");
-        const obj3 = channel(9937);
-        channel(9937).close();
-        const obj4 = channel(9937);
+        const invite = channel(9941).createInvite("IOS Regenerate");
+        const obj3 = channel(9941);
+        channel(9941).close();
+        const obj4 = channel(9941);
       }
     }
-    let obj = channel(4857);
+    let obj = channel(4858);
     obj = { title: null, body: null, onConfirm: null };
     const intl = navigation(1233).intl;
     obj[0] = intl.string(navigation(1233).t.VINpSK);
     const intl2 = navigation(1233).intl;
     obj[1] = intl2.string(navigation(1233).t.RiiKV0);
-    obj[2] = channel(9937).close;
+    obj[2] = channel(9941).close;
     obj.show(obj);
   }, items2);
   const items3 = [navigation, tmp10, callback];
@@ -109,27 +109,27 @@ function AdvancedInstantInviteScreen() {
     });
   }, items3);
   const callback1 = obj3.useCallback((maxUses) => {
-    let obj = channel(9937);
+    let obj = channel(9941);
     obj = { maxUses };
     obj.updateSettings(obj);
   }, []);
   const callback2 = obj3.useCallback((maxAge) => {
-    let obj = channel(9937);
+    let obj = channel(9941);
     obj = { maxAge };
     obj.updateSettings(obj);
   }, []);
   const callback3 = obj3.useCallback((temporary) => {
-    let obj = channel(9937);
+    let obj = channel(9941);
     obj = { temporary };
     obj.updateSettings(obj);
   }, []);
   const callback4 = obj3.useCallback((flags) => {
-    let obj = channel(9937);
+    let obj = channel(9941);
     obj = { flags };
     obj.updateSettings(obj);
   }, []);
   const callback5 = obj3.useCallback((roleIds) => {
-    let obj = channel(9937);
+    let obj = channel(9941);
     obj = { roleIds };
     obj.updateSettings(obj);
   }, []);
@@ -151,14 +151,14 @@ function AdvancedInstantInviteScreen() {
     onChangeRoleIds: null,
   };
   let obj2 = navigation(586);
-  obj[5] = channel(9933).getMaxUsesOptions;
+  obj[5] = channel(9937).getMaxUsesOptions;
   ({ temporary: obj7[6], flags: obj7[7], roleIds: obj7[8] } = settings);
   obj[9] = callback2;
   obj[10] = callback1;
   obj[11] = callback3;
   obj[12] = callback4;
   obj[13] = callback5;
-  obj[1] = jsx(channel(17615), {
+  obj[1] = jsx(channel(17635), {
     style: tmp.formContent,
     channel: first,
     guild,
@@ -174,7 +174,7 @@ function AdvancedInstantInviteScreen() {
     onChangeFlags: null,
     onChangeRoleIds: null,
   });
-  return jsx(navigation(8372).Form, {
+  return jsx(navigation(8376).Form, {
     style: tmp.formContent,
     channel: first,
     guild,
@@ -211,7 +211,7 @@ export default function InviteSettingsModal() {
     };
     const intl = callback(1233).intl;
     obj[1] = intl.string(callback(1233).t.Yx4IiC);
-    obj[2] = callback(5503).getHeaderCloseButton(callback2(9937).close);
+    obj[2] = callback(5504).getHeaderCloseButton(callback2(9941).close);
     obj[3] = function render() {
       return callback(closure_13, {});
     };

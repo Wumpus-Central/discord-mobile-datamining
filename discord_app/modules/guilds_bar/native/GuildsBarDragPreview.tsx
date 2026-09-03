@@ -149,9 +149,9 @@ function PreviewItem(dragRegion) {
           id: -1,
           parentId: "PX_16",
           name: "Array",
-          color: "paddingHorizontal",
-          expanded: true,
-          children: true,
+          color: "call",
+          expanded: 0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000018511064740781746,
+          children: 16661473071873657000000000000000000000000000000000000000000000000000000000000000000,
         };
         obj[0] = listInsets.FOLDER;
         const items = [tmp2];
@@ -419,12 +419,12 @@ const memoResult = importAllResult.memo(function GuildsBarDragPreview() {
             overState: null,
             overNode: null,
             dropPosition: "o",
-            gestureState: true,
-            scrollPosition: "light-content",
-            dragRegion: null,
-            windowSize: "PAYPAL_POPUP_OPEN_FAILED",
-            dropComplete: "PayPal popup failed to open, make sure to tokenize in response to a user action.",
-            listInsets: "text-md/semibold",
+            gestureState: "VOICE_STATE_UPDATE",
+            scrollPosition: null,
+            dragRegion: "text-sm/medium",
+            windowSize: "text-muted",
+            dropComplete: false,
+            listInsets: null,
           };
           ({ node: obj[0], itemSize: obj[1] } = dragSpecs);
           obj[2] = state;

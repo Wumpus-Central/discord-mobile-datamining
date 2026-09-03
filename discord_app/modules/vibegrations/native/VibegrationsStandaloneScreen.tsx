@@ -698,7 +698,7 @@ function ChatScene(guildId) {
             ({ ref, onPress, accessibilityActions, onAccessibilityAction } = arg0);
             const obj = {
               ref,
-              IconComponent: callback(8813).MoreHorizontalIcon,
+              IconComponent: callback(8817).MoreHorizontalIcon,
               onPress,
               accessibilityLabel: null,
               accessibilityActions: null,
@@ -708,7 +708,7 @@ function ChatScene(guildId) {
             obj[3] = intl.string(callback(1233).t["UKOtz+"]);
             obj[4] = accessibilityActions;
             obj[5] = onAccessibilityAction;
-            return callback2(callback(6246).HeaderActionButton, obj);
+            return callback2(callback(6247).HeaderActionButton, obj);
           },
         };
         items[1] = closure_1_22(stringResult(closure_1_2[43]).ContextMenu, obj);

@@ -15,7 +15,7 @@ export const useTenureBadgeRequirementString = function useTenureBadgeRequiremen
   if (null == tieredTenureBadge) {
     return null;
   } else {
-    const tieredTenureBadgeData = tmp(7388).getTieredTenureBadgeData(tieredTenureBadge);
+    const tieredTenureBadgeData = tmp(7389).getTieredTenureBadgeData(tieredTenureBadge);
     ({ id, tenureReqNumMonths } = tieredTenureBadgeData);
     if (TieredTenureBadge.PREMIUM_TENURE_1_MONTH !== id) {
       if (tmp6.PREMIUM_TENURE_3_MONTH !== id) {
@@ -41,7 +41,7 @@ export const useTenureBadgeRequirementString = function useTenureBadgeRequiremen
     obj = { months: null };
     obj[0] = tenureReqNumMonths;
     formatToPlainStringResult = intl2.formatToPlainString(tmp(1233).t.erUSmA, obj);
-    const tmpResult = tmp(7388);
+    const tmpResult = tmp(7389);
   }
 };
 export const getTenureBadgeRequirementString = function getTenureBadgeRequirementString(id, tenureReqNumMonths) {

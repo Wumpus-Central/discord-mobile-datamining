@@ -133,7 +133,7 @@ function _handleInviteUsers() {
                 if (null != lib) {
                   if (store.getChannelId() === lib.id) {
                     if (lib.isDM()) {
-                      let obj10 = lib(4727);
+                      let obj10 = lib(4728);
                       obj10.showGuardCallAlert(
                         callback(function* () {
                           if (dependencyMap === 2) {
@@ -208,19 +208,19 @@ function _handleInviteUsers() {
                                   obj[0] = arg1;
                                   return obj;
                                 } else {
-                                  const tmp8 = v0(9893);
+                                  const tmp8 = v0(9897);
                                   const call = tmp8.call;
                                   if (typeof call === "unknown") {
                                     tmp8(false, true);
                                   } else {
                                     call(tmp9, false, true);
                                   }
-                                  v0(12689)(closure_3);
+                                  v0(12701)(closure_3);
                                   dependencyMap = 3;
                                   tmp9 = closure_3;
                                 }
                                 closure_3 = arg1;
-                                obj2 = closure_1_0(4727);
+                                obj2 = closure_1_0(4728);
                                 v0 = 3;
                                 dependencyMap = 1;
                                 obj5 = { value: null, done: false };
@@ -293,7 +293,7 @@ function _handleInviteUsers() {
                   throw arg1;
                 } else if (arg0 !== 2) {
                   closure_3 = arg1;
-                  obj = arr(9893);
+                  obj = arr(9897);
                   obj.ring(closure_3, arr, "gdm_invite");
                 }
                 c6 = 3;

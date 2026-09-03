@@ -47,7 +47,7 @@ prototype["search"] = function search(str) {
     } else {
       const obj2 = applyDefault;
       const values = applyDefault.chain(mutablePrivateChannels.getMutablePrivateChannels()).values();
-      const found = values.filter(trimmed1(12158).filterGroupDMs);
+      const found = values.filter(trimmed1(12164).filterGroupDMs);
       const mapped = found.map((id) => {
         const items = [
           id,
@@ -184,7 +184,7 @@ const searchPeopleTabStoreImpl = new SearchPeopleTabStoreImpl(dispatcherDefault,
       obj.groupDMs = [];
       obj.userIndexes = {};
       obj.results = [];
-      let userSearch = new obj(10855).UserSearch(() => obj.processResults());
+      let userSearch = new obj(10859).UserSearch(() => obj.processResults());
       obj.userSearch = userSearch;
       userSearch = obj.userSearch;
       const subscription = userSearch.subscribe(() => obj.processResults(), true);

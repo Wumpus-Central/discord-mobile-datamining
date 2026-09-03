@@ -65,7 +65,7 @@ function SoundButtonEmoji(arg0) {
   obj = {
     animationConfig: obj,
     withDelay: obj(4217).withDelay,
-    withSpring: obj(4927).withSpring,
+    withSpring: obj(4928).withSpring,
     interpolate: obj(4217).interpolate,
     SPRING_CONFIG: closure_8,
   };
@@ -130,7 +130,7 @@ function SoundButtonEmoji(arg0) {
   obj1 = {
     animationConfig: obj,
     withDelay: obj(4217).withDelay,
-    withSpring: obj(4927).withSpring,
+    withSpring: obj(4928).withSpring,
     interpolate: obj(4217).interpolate,
     SPRING_CONFIG: closure_8,
   };

@@ -8,7 +8,7 @@ const result = require("set").fileFinishedImporting(
 );
 
 export default function AuthorizedAppScreen() {
-  let obj = settingNavigationRoute(7168);
+  let obj = settingNavigationRoute(7169);
   settingNavigationRoute = obj.useSettingNavigationRoute();
   const stackNavigation = settingNavigationRoute(1498).useStackNavigation();
   const items = [stackNavigation, settingNavigationRoute.params.oauth2Token.application.name];
@@ -19,5 +19,5 @@ export default function AuthorizedAppScreen() {
     });
   }, items);
   obj = { oauth2Token: settingNavigationRoute.params.oauth2Token };
-  return jsx(stackNavigation(14770), { oauth2Token: settingNavigationRoute.params.oauth2Token });
+  return jsx(stackNavigation(14785), { oauth2Token: settingNavigationRoute.params.oauth2Token });
 }

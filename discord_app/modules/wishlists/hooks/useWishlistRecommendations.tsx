@@ -266,7 +266,7 @@ const result = require("set").fileFinishedImporting("modules/wishlists/hooks/use
 export const useWishlistRecommendationsForSingleUser = function useWishlistRecommendationsForSingleUser(arg0) {
   ({ userId, numItems, source } = arg0);
   if (source === undefined) {
-    source = userId(10678).WishlistFetchSource.USER_PROFILE;
+    source = userId(10682).WishlistFetchSource.USER_PROFILE;
   }
   const items = [userId];
   const effect = React.useEffect(() => {
@@ -283,14 +283,14 @@ export const useWishlistRecommendationsForSingleUser = function useWishlistRecom
       const items = [{ userId, wishlistId: recommendations }];
       return items;
     }, items2),
-    applicationIds: userId(10790).useWishlistApplicationIds(userId),
+    applicationIds: userId(10794).useWishlistApplicationIds(userId),
     numItems,
     source,
   };
-  const obj3 = userId(10790);
+  const obj3 = userId(10794);
   ({ skusToUserAndReason, wishlistAndRecommendations, status } = useWishlistRecommendationsWithWishlists(obj));
   const tmp4 = useWishlistRecommendationsWithWishlists(obj);
-  const wishlistSkuFilter = userId(10791).useWishlistSkuFilter({
+  const wishlistSkuFilter = userId(10795).useWishlistSkuFilter({
     wishlistAndRecommendations,
     skusToUserAndReason,
     userId,
@@ -368,7 +368,7 @@ export const useRecommendationsForSingleUser = function useRecommendationsForSin
   userId = numItems;
   let USER_PROFILE = source.source;
   if (USER_PROFILE === undefined) {
-    USER_PROFILE = userId(10678).WishlistFetchSource.USER_PROFILE;
+    USER_PROFILE = userId(10682).WishlistFetchSource.USER_PROFILE;
   }
   let recommendations;
   obj = { userIdsAndWishlistIds: null, applicationIds: null, numItems: null, source: null };
@@ -388,7 +388,7 @@ export const useRecommendationsForSingleUser = function useRecommendationsForSin
     return items;
   }, items2);
   const obj2 = userId(586);
-  obj[1] = userId(10790).useWishlistApplicationIds(userId);
+  obj[1] = userId(10794).useWishlistApplicationIds(userId);
   obj[2] = numItems;
   obj[3] = USER_PROFILE;
   const tmp4 = useWishlistRecommendationsWithWishlists(obj);

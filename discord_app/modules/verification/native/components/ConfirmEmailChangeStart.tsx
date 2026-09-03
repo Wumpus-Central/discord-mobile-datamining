@@ -45,7 +45,7 @@ export default function ConfirmEmailChangeStart() {
     obj1[0] = tmp.container;
     let obj2 = { style: null, source: null };
     obj2[0] = tmp.image;
-    obj2[1] = navigation(7710);
+    obj2[1] = navigation(7713);
     const items1 = [callback2(closure_7, obj2), , ,];
     const obj3 = {
       style: null,
@@ -74,7 +74,7 @@ export default function ConfirmEmailChangeStart() {
     obj5[0] = intl3.string(tmp2(1233).t.rXV81H);
     obj5[1] = tmp7;
     obj5[2] = tmp6[0];
-    obj4[1] = callback2(tmp2(4928).Button, obj5);
+    obj4[1] = callback2(tmp2(4929).Button, obj5);
     items1[3] = callback2(closure_6, obj4);
     obj1[1] = items1;
     obj[2] = callback3(closure_6, obj1);

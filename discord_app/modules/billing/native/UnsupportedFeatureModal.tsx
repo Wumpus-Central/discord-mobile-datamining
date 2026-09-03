@@ -13,7 +13,7 @@ export default function UnsupportedFeatureModal(onDismiss) {
   obj = { Unsupported: null };
   obj = {
     title: onDismiss.title,
-    headerLeft: onDismiss(5503).getHeaderCloseButton(() => {
+    headerLeft: onDismiss(5504).getHeaderCloseButton(() => {
       let arr = closure_1_1(closure_1_2[5]);
       arr = arr.pop();
       if (onDismiss != null) {
@@ -31,9 +31,9 @@ export default function UnsupportedFeatureModal(onDismiss) {
   };
   obj[0] = obj;
   obj[1] = obj;
-  return jsx(onDismiss(6016).Navigator, {
+  return jsx(onDismiss(6017).Navigator, {
     title: onDismiss.title,
-    headerLeft: onDismiss(5503).getHeaderCloseButton(() => {
+    headerLeft: onDismiss(5504).getHeaderCloseButton(() => {
       let arr = closure_1_1(closure_1_2[5]);
       arr = arr.pop();
       if (onDismiss != null) {

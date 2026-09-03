@@ -4,8 +4,8 @@ import ThemesDefault from "../../../../../../../discord_common/js/packages/token
 import map from "../../../../../screen/native/useScaledTextLineHeight.android.tsx";
 import MESSAGES_ITEM_CHANNEL_PRESSABLE_PADDING from "channel/MessagesItemChannelBase.tsx";
 import MESSAGES_ITEM_CHANNEL_PRESSABLE_PADDINGDefault from "channel/MessagesItemChannelBase.tsx";
-import _modDef15862 from "MessagesItemPlaceholder.tsx";
-import toNativeHorizontalOffset from "../../../../../../../_runtime/15863_toNativeHorizontalOffset.js";
+import _modDef15878 from "MessagesItemPlaceholder.tsx";
+import toNativeHorizontalOffset from "../../../../../../../_runtime/15879_toNativeHorizontalOffset.js";
 import closure_3 from "../../../../../../../_runtime/metro/00032__slicedToArray.js";
 import importAllResult from "../../../../../../../_runtime/00019_noop.js";
 import closure_5 from "../../../../../../stores/ChannelStore.tsx";
@@ -40,7 +40,7 @@ let closure_7 = importAllResult.memo(function MessagesItemChannel(arg0) {
     obj = { height: null, row: null };
     obj[0] = placeholderHeight;
     obj[1] = row;
-    tmp5 = jsx(_modDef15862, { height: null, row: null });
+    tmp5 = jsx(_modDef15878, { height: null, row: null });
   }
   return tmp5;
 });

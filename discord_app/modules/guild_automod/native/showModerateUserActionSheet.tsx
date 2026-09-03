@@ -7,7 +7,7 @@ const result = set.fileFinishedImporting("modules/guild_automod/native/showModer
 
 export default function showModerateUserActionSheet(arg0) {
   ACTION_SHEET_HEIGHT_HALFDefault.openLazy(
-    asyncRequireImpl(11630, dependencyMap.paths),
+    asyncRequireImpl(11635, dependencyMap.paths),
     "ModerateUserActionSheet",
     arg0,
   );

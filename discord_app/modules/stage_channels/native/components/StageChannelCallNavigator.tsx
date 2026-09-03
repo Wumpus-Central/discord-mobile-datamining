@@ -85,7 +85,7 @@ function JoinStageOverlay(channel) {
     obj = { opacity: obj.withSpring(num, closure_1_11) };
     return obj;
   };
-  obj = { withSpring: first(4927).withSpring, showOverlay: first, viewAnimationConfig: closure_11 };
+  obj = { withSpring: first(4928).withSpring, showOverlay: first, viewAnimationConfig: closure_11 };
   fn.__closure = obj;
   fn.__workletHash = 1929951426580;
   fn.__initData = closure_15;

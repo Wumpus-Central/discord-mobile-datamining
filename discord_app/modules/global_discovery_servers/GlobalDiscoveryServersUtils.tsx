@@ -70,7 +70,7 @@ function _navigateToGuild() {
               obj2 = {};
               const merged = Object.assign(c5);
               obj2.loadId = c0;
-              let obj4 = callback2(6194);
+              let obj4 = callback2(6195);
               dependencyMap = 2;
               c4 = 1;
               const obj3 = { value: null, done: false };
@@ -298,11 +298,12 @@ export const fromDiscoverableGuildSearchResult = function fromDiscoverableGuildS
     presenceCount: null,
     memberCount: null,
     premiumSubscriptionCount: "r",
-    preferredLocale: "accessible",
-    discoverySplash: null,
-    emojis: [],
+    preferredLocale: "padding",
+    discoverySplash: -979697662,
+    emojis: 343212033,
   };
   ({ approximate_presence_count: obj[7], approximate_member_count: obj[8], discovery_splash: obj[11] } = id);
+  obj[12] = [];
   return obj;
 };
 export const getLanguageCodeFallback = function getLanguageCodeFallback() {

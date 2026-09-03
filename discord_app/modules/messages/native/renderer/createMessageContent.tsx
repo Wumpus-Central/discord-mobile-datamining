@@ -51,7 +51,7 @@ function createThreadEmbed(message, roleStyle, isInlineReplyPreview, channel1, o
         let string2 = _formatMessageCountLabel.formatMessageCountLabel(count, channel1.id);
         if (null != count) {
           if (count > 0) {
-            let tmp15Result = tmp15(6182);
+            let tmp15Result = tmp15(6183);
             if (tmp15Result.isChannelSpoilerGated(channel1)) {
               let obj = {
                 title: null,
@@ -91,8 +91,8 @@ function createThreadEmbed(message, roleStyle, isInlineReplyPreview, channel1, o
                 obj[2] = string2;
                 const intl4 = tmp15(1233).intl;
                 obj[3] = intl4.string(tmp15(1233).t.ZTo4HS);
-                tmp15Result = tmp15(7864);
-                obj[5] = tmp15Result.getAssetUriForEmbed(tmp19(7865));
+                tmp15Result = tmp15(7867);
+                obj[5] = tmp15Result.getAssetUriForEmbed(tmp19(7868));
                 obj[6] = backgroundColor;
                 obj1 = obj;
               } else {
@@ -1507,7 +1507,7 @@ function createMessageContent(message) {
       applicationIconSource = author.getAvatarSource(undefined);
       tmp13Result7 = tmp13(tmp3[53]);
     }
-    parseMessageMarkupResult = { content: "flex", hasSpoilerEmbeds: "screens", hasBailedAst: "groups" };
+    parseMessageMarkupResult = { content: "flex", hasSpoilerEmbeds: 2087, hasBailedAst: 2088 };
     const tmp13Result1 = tmp13(tmp3[42]);
   }
 }

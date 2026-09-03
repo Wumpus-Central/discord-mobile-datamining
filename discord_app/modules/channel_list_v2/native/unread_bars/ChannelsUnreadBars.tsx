@@ -143,7 +143,7 @@ function findNearestUnreadItem(containerSize, id) {
             let tmp18 = item10031;
             let tmp19 = tmp70;
             let tmp20 = tmp72;
-            if (tmp12.type !== tmp71(7804).FastListItemTypes.ITEM) {
+            if (tmp12.type !== tmp71(7807).FastListItemTypes.ITEM) {
               tmp9 = item10031;
             } else {
               let tmp21 = shouldSkipSection;

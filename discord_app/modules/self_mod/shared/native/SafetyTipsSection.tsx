@@ -23,7 +23,7 @@ export default function SafetyTipsContainer(children) {
   const safetyTips = children.safetyTips;
   let showHeader = children.showHeader;
   const tmp = callback2();
-  let obj = { style: tmp.image, children: callback(safetyTips(6265).SafetyBookletSpotIllustration, {}) };
+  let obj = { style: tmp.image, children: callback(safetyTips(6266).SafetyBookletSpotIllustration, {}) };
   const items = [callback(View, obj), ,];
   if (showHeader) {
     obj = { style: null, variant: "heading-xl/semibold", children: null };
@@ -45,7 +45,7 @@ export default function SafetyTipsContainer(children) {
     }),
   ];
   obj1[3] = items1;
-  items[1] = closure_5(safetyTips(4926).Stack, obj1);
+  items[1] = closure_5(safetyTips(4927).Stack, obj1);
   items[2] = callback(View, {
     style: tmp.tips,
     children: safetyTips.map((tip) =>
@@ -53,5 +53,5 @@ export default function SafetyTipsContainer(children) {
     ),
   });
   obj[1] = items;
-  return closure_5(safetyTips(4926).Stack, obj);
+  return closure_5(safetyTips(4927).Stack, obj);
 }

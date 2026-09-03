@@ -111,11 +111,11 @@ export default function FamilyCenterActivitySection(displayType) {
   let loadMore;
   dependencyMap = undefined;
   let loadMoreButton = callback4();
-  let obj = displayType(14723);
+  let obj = displayType(14738);
   const actionsForDisplayType = obj.useActionsForDisplayType(displayType);
-  obj1 = displayType(14723);
+  obj1 = displayType(14738);
   const actionTotalsForDisplayType = obj1.useActionTotalsForDisplayType(displayType);
-  let obj2 = displayType(11712);
+  let obj2 = displayType(11717);
   const familyCenterActions = obj2.useFamilyCenterActions({});
   loadMore = familyCenterActions.loadMore;
   const tmp6 = callback(React.useState(closure_7), 2);
@@ -136,7 +136,7 @@ export default function FamilyCenterActivitySection(displayType) {
     obj1[0] = displayType;
     const items1 = [
       callback2(FamilyCenterActivitySectionHeader, obj1),
-      substr.map((action) => callback(loadMore(14729), { action }, action.event_id)),
+      substr.map((action) => callback(loadMore(14744), { action }, action.event_id)),
     ];
     if (substr.length >= actionTotalsForDisplayType) {
       items1[2] = null;
@@ -168,7 +168,7 @@ export default function FamilyCenterActivitySection(displayType) {
         obj6[0] = loadMoreButton.loadMoreButton;
         obj6[3] = formatToPlainStringResult;
         obj5[4] = tmp17(tmp(4474).Text, obj6);
-        tmp17Result = tmp17(tmp(5076).PressableOpacity, obj5);
+        tmp17Result = tmp17(tmp(5077).PressableOpacity, obj5);
       }
       obj2[1] = tmp17Result;
       tmp17Result = tmp17(tmp16, obj2);

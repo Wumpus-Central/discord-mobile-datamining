@@ -161,7 +161,7 @@ function createMessageRecord(message, message) {
   obj.mentionRoles = mention_roles;
   obj.mentionChannels = mention_channels;
   obj.messageReference = message.message_reference;
-  let tmp9Result = tmp9(4751);
+  let tmp9Result = tmp9(4752);
   obj1 = {
     userId: store.getId(),
     channelId: message.channel_id,
@@ -177,7 +177,7 @@ function createMessageRecord(message, message) {
   obj1[3] = mapped;
   obj1[4] = mention_roles;
   obj.mentioned = tmp9Result.isMentioned(obj1);
-  tmp9Result = tmp9(4752);
+  tmp9Result = tmp9(4753);
   const isGiftCodeEmbedResult = tmp9Result.isGiftCodeEmbed(message);
   const findGiftCodes = _resolveGiftCode.findGiftCodes;
   if (isGiftCodeEmbedResult) {

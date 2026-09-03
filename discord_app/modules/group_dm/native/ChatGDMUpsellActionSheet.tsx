@@ -2,7 +2,7 @@
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import useSafeAreaInsetsDefault from "../../safe_area/useSafeAreaInsets.native.tsx";
 import preloadDefault from "../../../components_native/common/FastImage.tsx";
-import registerAssetDefault from "../../../../_runtime/11415_registerAsset.js";
+import registerAssetDefault from "../../../../_runtime/11420_registerAsset.js";
 import closure_3 from "../../../../_runtime/00019_noop.js";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
@@ -89,7 +89,7 @@ export default function ChatGDMUpsellActionSheet(onClick) {
   const intl = onClick(1233).intl;
   obj3[0] = intl.string(onClick(1233).t["3PatSz"]);
   obj3[1] = callback;
-  const items2 = [callback(onClick(4928).Button, obj3)];
+  const items2 = [callback(onClick(4929).Button, obj3)];
   const obj4 = { style: tmp.button, children: null };
   const obj5 = { text: null, onPress: null, variant: "tertiary" };
   const intl2 = onClick(1233).intl;
@@ -97,7 +97,7 @@ export default function ChatGDMUpsellActionSheet(onClick) {
   obj5[1] = function onPress() {
     callback(table[8]).hideActionSheet();
   };
-  obj4[1] = callback(onClick(4928).Button, obj5);
+  obj4[1] = callback(onClick(4929).Button, obj5);
   items2[1] = callback(View, obj4);
   obj1[1] = items2;
   obj[4] = callback2(View, obj1);
@@ -113,7 +113,7 @@ export default function ChatGDMUpsellActionSheet(onClick) {
   const obj9 = { style: tmp.noticeContainer, children: null };
   const obj10 = { style: tmp.innerContainer, children: null };
   const obj2 = { padding: 16, paddingBottom: useSafeAreaInsetsDefault().bottom + 16 };
-  const items4 = [callback(View, { style: tmp.item, children: callback(onClick(9414).TimerIcon, { size: "sm" }) })];
+  const items4 = [callback(View, { style: tmp.item, children: callback(onClick(9418).TimerIcon, { size: "sm" }) })];
   const obj12 = { style: tmp.text, variant: "text-sm/medium", color: "text-default", children: null };
   const intl5 = onClick(1233).intl;
   obj12[3] = intl5.string(onClick(1233).t.Fq3DJb);
@@ -121,7 +121,7 @@ export default function ChatGDMUpsellActionSheet(onClick) {
   obj10[1] = items4;
   const items5 = [callback2(View, obj10)];
   const obj13 = { style: tmp.secondInnerContainer, children: null };
-  const obj11 = { style: tmp.item, children: callback(onClick(9414).TimerIcon, { size: "sm" }) };
+  const obj11 = { style: tmp.item, children: callback(onClick(9418).TimerIcon, { size: "sm" }) };
   const items6 = [callback(View, { style: tmp.item, children: callback(onClick(4421).LinkIcon, { size: "sm" }) })];
   const obj15 = { style: tmp.text, variant: "text-sm/medium", color: "text-default", children: null };
   const intl6 = onClick(1233).intl;
@@ -132,6 +132,6 @@ export default function ChatGDMUpsellActionSheet(onClick) {
   obj9[1] = items5;
   items3[2] = callback2(View, obj9);
   obj6[0] = items3;
-  obj[5] = callback2(onClick(5632).BottomSheetScrollView, obj6);
-  return callback(onClick(5630).BottomSheet, obj);
+  obj[5] = callback2(onClick(5633).BottomSheetScrollView, obj6);
+  return callback(onClick(5631).BottomSheet, obj);
 }

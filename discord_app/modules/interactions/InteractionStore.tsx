@@ -154,7 +154,7 @@ const interactionStore = new InteractionStore(dispatcherDefault, {
     } else {
       if (null != dependencyMap[nonce]) {
         if (tmp3.state === InteractionState.InteractionState.QUEUED) {
-          tmp3.state = tmp4(4743).InteractionState.CREATED;
+          tmp3.state = tmp4(4744).InteractionState.CREATED;
           const onCreate = tmp3.onCreate;
           if (onCreate != null) {
             onCreate(tmp);

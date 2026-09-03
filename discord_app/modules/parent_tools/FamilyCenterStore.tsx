@@ -560,7 +560,7 @@ prototype["loadCache"] = function loadCache() {
     obj[TeenActionDisplayType.GIFTS] = 0;
     snapshot = teenActivityTotals.reduce((arg0, str) => {
       [tmp2, tmp3] = callback(str.split(":"), 2);
-      let obj = lib(7347);
+      let obj = lib(7348);
       const result = obj.displayTypeFromString(tmp2);
       let tmp5 = arg0;
       if (undefined !== result) {
@@ -747,7 +747,7 @@ prototype["isCurrentUserInRestrictedHours"] = function isCurrentUserInRestricted
   } else {
     return false;
   }
-  obj = prototype(7348);
+  obj = prototype(7349);
 };
 FamilyCenterStore.displayName = "FamilyCenterStore";
 FamilyCenterStore.LATEST_SNAPSHOT_VERSION = 3;

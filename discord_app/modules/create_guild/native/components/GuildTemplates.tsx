@@ -66,7 +66,7 @@ function GuildTemplatesJoinFooter(trigger) {
   obj1[3] = intl3.string(trigger(1233).t["N+Mi/U"]);
   const items2 = [
     callback3(trigger(4474).Text, obj1),
-    callback3(trigger(4928).Button, {
+    callback3(trigger(4929).Button, {
       variant: "primary",
       grow: true,
       text: stringResult,
@@ -94,13 +94,13 @@ function GuildTemplatesItem(guildTemplate) {
   guildTemplate = guildTemplate.guildTemplate;
   const onGuildTemplatePress = guildTemplate.onGuildTemplatePress;
   const obj = {
-    Icon: guildTemplate(12473).GUILD_TEMPLATE_ICON_COMPONENTS[guildTemplate.id],
+    Icon: guildTemplate(12485).GUILD_TEMPLATE_ICON_COMPONENTS[guildTemplate.id],
     message: guildTemplate.label,
     onPress() {
       return onGuildTemplatePress(guildTemplate);
     },
   };
-  return callback3(onGuildTemplatePress(12114), obj);
+  return callback3(onGuildTemplatePress(12120), obj);
 }
 ({ View: c5, ScrollView: closure_6 } = get_ActivityIndicator);
 ({ getGuildTemplatesMap: error, GuildTemplateId: closure_8 } = GuildTemplateId);

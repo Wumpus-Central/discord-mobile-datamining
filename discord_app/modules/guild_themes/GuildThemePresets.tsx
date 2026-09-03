@@ -187,7 +187,7 @@ export const getGuildThemePreset = function getGuildThemePreset(presetId) {
   return tmp;
 };
 export const getDefaultGuildThemePresetSettings = function getDefaultGuildThemePresetSettings() {
-  return { presetId: mapped[0].id, customUserThemeSettings: "r" };
+  return { presetId: mapped[0].id, customUserThemeSettings: "Array" };
 };
 export const getGuildThemePresetAppearance = function getGuildThemePresetAppearance(preset, arg1) {
   return arg1 === ThemeTypes.LIGHT ? preset.lightAppearance : preset.darkAppearance;

@@ -41,13 +41,13 @@ function FriendRequestButton(user) {
   let stateFromStores;
   closure_4 = undefined;
   ({ hasCustomProfileTheme, ButtonComponent } = user);
-  let obj = user(8571);
+  let obj = user(8575);
   trackUserProfileAction = obj.useUserProfileAnalyticsContext().trackUserProfileAction;
   if (newestAnalyticsLocation == null) {
-    newestAnalyticsLocation = trackUserProfileAction(5961)().newestAnalyticsLocation;
+    newestAnalyticsLocation = trackUserProfileAction(5962)().newestAnalyticsLocation;
   }
   dependencyMap = { location: newestAnalyticsLocation };
-  let tmp3Result = tmp3(12718);
+  let tmp3Result = tmp3(12730);
   const gameFriendsForUser = tmp3Result.useGameFriendsForUser(user.id);
   tmp3Result = tmp3(586);
   const items = [closure_4];
@@ -61,7 +61,7 @@ function FriendRequestButton(user) {
         return null;
       } else {
         if (stateFromStores === tmp5.PENDING_OUTGOING) {
-          let UserPlusIcon = tmp3(12837).UserClockIcon;
+          let UserPlusIcon = tmp3(12849).UserClockIcon;
         } else {
           UserPlusIcon = tmp3(4415).UserPlusIcon;
         }
@@ -100,11 +100,11 @@ function FriendRequestButton(user) {
               callback({ action: "CANCEL_FRIEND_REQUEST" });
               closure_1_1(closure_1_2[17]).cancelFriendRequest(id.id, closure_2);
             };
-            const result = user(9085).confirmCancelFriendRequest(obj);
-            const obj3 = user(9085);
+            const result = user(9089).confirmCancelFriendRequest(obj);
+            const obj3 = user(9089);
           } else {
             trackUserProfileAction({ action: "SEND_FRIEND_REQUEST" });
-            obj = trackUserProfileAction(9073);
+            obj = trackUserProfileAction(9077);
             obj = { userId: null, context: null };
             obj[0] = user.id;
             obj[1] = dependencyMap;

@@ -14,7 +14,7 @@ class GuildBoostMarketingPageBanner$Type extends MessageType {
       name: "asset",
       kind: "message",
       T() {
-        return callback(8472).ThemeAwareAsset;
+        return callback(8476).ThemeAwareAsset;
       },
     };
     items = [, , , , ,];
@@ -24,7 +24,7 @@ class GuildBoostMarketingPageBanner$Type extends MessageType {
       name: "header_localized",
       kind: "message",
       T() {
-        return callback(8462).LocalizedString;
+        return callback(8466).LocalizedString;
       },
     };
     obj = { no: 3, name: "body_localized", kind: "message", T: null };
@@ -40,7 +40,7 @@ class GuildBoostMarketingPageBanner$Type extends MessageType {
       name: "help_article",
       kind: "message",
       T() {
-        return callback(8463).HelpArticle;
+        return callback(8467).HelpArticle;
       },
     };
     items[4] = { no: 5, name: "header", kind: "scalar", T: 9 };
@@ -231,7 +231,7 @@ let obj = {
   name: "asset",
   kind: "message",
   T() {
-    return callback(8472).ThemeAwareAsset;
+    return callback(8476).ThemeAwareAsset;
   },
 };
 let items = [
@@ -241,7 +241,7 @@ let items = [
     name: "header_localized",
     kind: "message",
     T() {
-      return callback(8462).LocalizedString;
+      return callback(8466).LocalizedString;
     },
   },
   ,
@@ -261,7 +261,7 @@ items[3] = {
   name: "help_article",
   kind: "message",
   T() {
-    return callback(8463).HelpArticle;
+    return callback(8467).HelpArticle;
   },
 };
 items[4] = { no: 5, name: "header", kind: "scalar", T: 9 };

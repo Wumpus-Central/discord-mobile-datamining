@@ -19,7 +19,7 @@ class GiftCustomizationBanner$Type extends MessageType {
       name: "gradient",
       kind: "message",
       T() {
-        return callback(8470).Gradient;
+        return callback(8474).Gradient;
       },
     };
     items[4] = { no: 5, name: "background_asset_url", kind: "scalar", T: 9 };
@@ -28,7 +28,7 @@ class GiftCustomizationBanner$Type extends MessageType {
       name: "asset",
       kind: "message",
       T() {
-        return callback(8472).ThemeAwareAsset;
+        return callback(8476).ThemeAwareAsset;
       },
     };
     items[6] = {
@@ -36,7 +36,7 @@ class GiftCustomizationBanner$Type extends MessageType {
       name: "background_asset",
       kind: "message",
       T() {
-        return callback(8472).ThemeAwareAsset;
+        return callback(8476).ThemeAwareAsset;
       },
     };
     items[7] = {
@@ -44,7 +44,7 @@ class GiftCustomizationBanner$Type extends MessageType {
       name: "mobile_background_asset",
       kind: "message",
       T() {
-        return callback(8472).ThemeAwareAsset;
+        return callback(8476).ThemeAwareAsset;
       },
     };
     items[8] = {
@@ -73,7 +73,7 @@ class GiftCustomizationBanner$Type extends MessageType {
       name: "mobile_body_localized",
       kind: "message",
       T() {
-        return callback(8462).LocalizedString;
+        return callback(8466).LocalizedString;
       },
     };
     tmp = new tmp("discord_protos.premium_marketing.v1.GiftCustomizationBanner", items, T);
@@ -230,7 +230,7 @@ let items = [
     name: "gradient",
     kind: "message",
     T() {
-      return callback(8470).Gradient;
+      return callback(8474).Gradient;
     },
   },
   { no: 5, name: "background_asset_url", kind: "scalar", T: 9 },
@@ -239,7 +239,7 @@ let items = [
     name: "asset",
     kind: "message",
     T() {
-      return callback(8472).ThemeAwareAsset;
+      return callback(8476).ThemeAwareAsset;
     },
   },
   {
@@ -247,7 +247,7 @@ let items = [
     name: "background_asset",
     kind: "message",
     T() {
-      return callback(8472).ThemeAwareAsset;
+      return callback(8476).ThemeAwareAsset;
     },
   },
   {
@@ -255,7 +255,7 @@ let items = [
     name: "mobile_background_asset",
     kind: "message",
     T() {
-      return callback(8472).ThemeAwareAsset;
+      return callback(8476).ThemeAwareAsset;
     },
   },
   {
@@ -286,7 +286,7 @@ items[10] = {
   name: "mobile_body_localized",
   kind: "message",
   T() {
-    return callback(8462).LocalizedString;
+    return callback(8466).LocalizedString;
   },
 };
 prototype = new prototype(

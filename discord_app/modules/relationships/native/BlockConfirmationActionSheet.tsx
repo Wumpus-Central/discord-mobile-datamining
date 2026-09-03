@@ -3,7 +3,7 @@ import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.
 import getSystemLocale from "../../../intl/index.native.tsx";
 import registerAssetDefault from "../../../../_runtime/04435_registerAsset.js";
 import TableRowGroupTitle from "../../../design/components/TableRow/native/TableRowGroup.native.tsx";
-import registerAssetDefault2 from "../../../../_runtime/08913_registerAsset.js";
+import registerAssetDefault2 from "../../../../_runtime/08917_registerAsset.js";
 import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
 import importAllResult from "../../../../_runtime/00019_noop.js";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
@@ -35,7 +35,7 @@ function BlockedInformationTable() {
       obj[3] = icon.text();
       obj[4] = icon.subtext();
       obj[6] = icon.a11yLabel();
-      return callback2(callback(5607).TableRow, obj, arg1);
+      return callback2(callback(5608).TableRow, obj, arg1);
     }),
   });
 }
@@ -188,8 +188,8 @@ const memoResult = importAllResult.memo(function BlockConfirmationActionSheet(us
   let stateFromStores;
   let tmp = callback4();
   const bottom = channelId(1627)().bottom;
-  items = [channelId(5981).IGNORE_CONFIRMATION_ACTION_SHEET];
-  const tmp4 = channelId(5961);
+  items = [channelId(5982).IGNORE_CONFIRMATION_ACTION_SHEET];
+  const tmp4 = channelId(5962);
   [tmp6, c5] = callback(importAllResult.useState(false), 2);
   let obj = userId(586);
   const items1 = [closure_8];
@@ -255,7 +255,7 @@ const memoResult = importAllResult.memo(function BlockConfirmationActionSheet(us
     obj5[0] = tmp.avatarIconContainer;
     const obj6 = { size: null, source: null };
     obj6[0] = tmp7(1296).Icon.Sizes.MEDIUM;
-    obj6[1] = tmp2(7848);
+    obj6[1] = tmp2(7851);
     obj5[1] = closure_14(tmp7(1296).Icon, obj6);
     items8[1] = closure_14(c5, obj5);
     obj3[1] = items8;
@@ -300,7 +300,7 @@ const memoResult = importAllResult.memo(function BlockConfirmationActionSheet(us
       const obj13 = { icon: null, label: null, subLabel: null, accessibilityLabel: null, onPress: null, arrow: true };
       const obj14 = { size: null, source: null };
       obj14[0] = tmp7(1296).Icon.Sizes.MEDIUM;
-      obj14[1] = tmp2(7751);
+      obj14[1] = tmp2(7754);
       obj13[0] = tmp13(tmp7(1296).Icon, obj14);
       const intl4 = tmp7(1233).intl;
       obj13[1] = intl4.string(tmp7(1233).t.hC8tcc);
@@ -327,8 +327,8 @@ const memoResult = importAllResult.memo(function BlockConfirmationActionSheet(us
           "replaceTopSheet",
         );
       };
-      obj12[2] = tmp13(tmp7(5607).TableRow, obj13);
-      obj11[1] = tmp13(tmp7(6000).TableRowGroup, obj12);
+      obj12[2] = tmp13(tmp7(5608).TableRow, obj13);
+      obj11[1] = tmp13(tmp7(6001).TableRowGroup, obj12);
       tmp13Result = tmp13(tmp19, obj11);
     }
     const obj15 = { children: null };
@@ -362,7 +362,7 @@ const memoResult = importAllResult.memo(function BlockConfirmationActionSheet(us
     };
     obj17[4] = tmp6;
     obj17[5] = tmp6;
-    const items11 = [closure_14(tmp7(4928).Button, obj17)];
+    const items11 = [closure_14(tmp7(4929).Button, obj17)];
     const obj18 = { style: null, variant: "text-sm/normal", color: "text-default", children: null };
     obj18[0] = tmp.footerText;
     const intl8 = tmp7(1233).intl;
@@ -379,9 +379,9 @@ const memoResult = importAllResult.memo(function BlockConfirmationActionSheet(us
     obj16[1] = items11;
     items10[3] = callback3(c5, obj16);
     obj15[0] = items10;
-    obj[4] = callback3(tmp7(5632).BottomSheetScrollView, obj15);
-    obj[1] = closure_14(tmp7(5630).BottomSheet, obj);
-    tmp13Result = tmp13(tmp7(5961).AnalyticsLocationProvider, obj);
+    obj[4] = callback3(tmp7(5633).BottomSheetScrollView, obj15);
+    obj[1] = closure_14(tmp7(5631).BottomSheet, obj);
+    tmp13Result = tmp13(tmp7(5962).AnalyticsLocationProvider, obj);
     const tmp2Result = tmp2(4673);
   }
   return tmp13Result;

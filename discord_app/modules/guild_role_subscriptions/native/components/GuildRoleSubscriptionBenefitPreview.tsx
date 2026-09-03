@@ -3,7 +3,7 @@ import noopAll from "../../../../../_runtime/00019_noop.js";
 import Button from "../../../../design/void/native.tsx";
 import parseRawEmojiObjectDefault from "../../../emojis/UnicodeEmojis.tsx";
 import Text from "../../../../design/components/Text/native/Text.tsx";
-import registerAssetDefault from "../../../../../_runtime/10052_registerAsset.js";
+import registerAssetDefault from "../../../../../_runtime/10056_registerAsset.js";
 import getUsedTemplateChannelsForGuild from "../../tier_templates/GuildRoleSubscriptionTierTemplatesUtils.tsx";
 import EmojiIconDefault from "EmojiIcon.tsx";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
@@ -66,8 +66,8 @@ function ChannelBenefitRow(benefit) {
   const channelWithTemplateFallback = obj.useChannelWithTemplateFallback(benefit.ref_id);
   let channelIcon = null;
   if (null != channelWithTemplateFallback) {
-    channelIcon = tmp2(4981).getChannelIcon(channelWithTemplateFallback);
-    const tmp2Result = tmp2(4981);
+    channelIcon = tmp2(4982).getChannelIcon(channelWithTemplateFallback);
+    const tmp2Result = tmp2(4982);
   }
   if (null == channelWithTemplateFallback) {
     obj = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };

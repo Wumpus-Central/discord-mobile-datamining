@@ -4,7 +4,7 @@ import importAllResult from "../../../../../../_runtime/00019_noop.js";
 import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
-let closure_4 = importAllResult.lazy(() => asyncRequireImpl(12328, dependencyMap.paths));
+let closure_4 = importAllResult.lazy(() => asyncRequireImpl(12340, dependencyMap.paths));
 const result = require("set").fileFinishedImporting(
   "modules/premium/powerups/native/hooks/useGuildPowerupOnShowDeactivate.tsx",
 );

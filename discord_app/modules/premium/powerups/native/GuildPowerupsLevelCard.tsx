@@ -1,6 +1,6 @@
 // discord_app/modules/premium/powerups/native/GuildPowerupsLevelCard.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import LinearGradientDefault from "../../../../../_runtime/04940_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/04941_LinearGradient.js";
 import BoostGemIcon from "../../../../design/components/Icon/native/redesign/generated/BoostGemIcon.tsx";
 import usePowerupActiveStatusDefault from "../hooks/usePowerupActiveStatus.tsx";
 import useGuildPowerupOnShowMoreDefault from "hooks/useGuildPowerupOnShowMore.tsx";
@@ -237,10 +237,10 @@ export default function GuildPowerupsLevelCard(arg0) {
   ({ guildId, powerup, nextPowerup, index, isScrollingRef } = arg0);
   importDefault = undefined;
   const tmp = callback();
-  let obj = isScrollingRef(8013);
+  let obj = isScrollingRef(8016);
   const manaTypeConsolidationExperiment = obj.useManaTypeConsolidationExperiment("GuildPowerupsLevelCard");
   const tmp6 = usePowerupActiveStatusDefault(guildId, powerup);
-  obj1 = isScrollingRef(12307);
+  obj1 = isScrollingRef(12319);
   const calculatePowerupCardStatus = obj1.useCalculatePowerupCardStatus(powerup, tmp6, false);
   const tmp9 = useGuildPowerupOnShowMoreDefault(guildId, powerup);
   importDefault = tmp9;
@@ -293,7 +293,7 @@ export default function GuildPowerupsLevelCard(arg0) {
   const tmp5Result = importDefaultResult1Default;
   items2[2] = closure_10(View, {
     style: tmp.footerContainer,
-    children: closure_10(isScrollingRef(12312).GuildPowerupsCardFooter, obj4),
+    children: closure_10(isScrollingRef(12324).GuildPowerupsCardFooter, obj4),
   });
   obj1[1] = items2;
   items1[1] = closure_11(View, obj1);

@@ -15,13 +15,13 @@ export const getVerifyPhoneSource = function getVerifyPhoneSource(theme) {
   let obj = getIllustrationSource;
   obj = {
     dark() {
-      return callback(17331);
+      return callback(17351);
     },
     darker() {
-      return callback(17332);
+      return callback(17352);
     },
     light() {
-      return callback(17333);
+      return callback(17353);
     },
   };
   return obj.getIllustrationSource(theme, obj);
@@ -30,13 +30,13 @@ export const useVerifyPhoneSource = function useVerifyPhoneSource() {
   let obj = AccessibilityAnnouncer;
   obj = {
     dark() {
-      return callback(17331);
+      return callback(17351);
     },
     darker() {
-      return callback(17332);
+      return callback(17352);
     },
     light() {
-      return callback(17333);
+      return callback(17353);
     },
   };
   return getIllustrationSource.getIllustrationSource(obj.useThemeContext().theme, obj);
@@ -45,13 +45,13 @@ export const VerifyPhone = function VerifyPhone(arg0) {
   let obj = AccessibilityAnnouncer;
   obj = {
     dark() {
-      return callback(17331);
+      return callback(17351);
     },
     darker() {
-      return callback(17332);
+      return callback(17352);
     },
     light() {
-      return callback(17333);
+      return callback(17353);
     },
   };
   obj = {};

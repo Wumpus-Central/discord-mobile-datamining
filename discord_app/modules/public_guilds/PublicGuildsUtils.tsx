@@ -5,7 +5,7 @@ import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
 import collectGuildAnalyticsMetadata from "../app_analytics/AppAnalyticsUtils.tsx";
 import isCrosspostDefault from "../messages/isCrosspost.tsx";
 import PUBLIC_SUCCESS_MODAL_SEEN_KEY from "PublicGuildsConstants.tsx";
-import { registerAsset } from "../../../_runtime/07955_registerAsset.js";
+import { registerAsset } from "../../../_runtime/07958_registerAsset.js";
 
 ({
   PUBLIC_GUILD_ANNOUNCEMENTS_GUILD_ID: c3,

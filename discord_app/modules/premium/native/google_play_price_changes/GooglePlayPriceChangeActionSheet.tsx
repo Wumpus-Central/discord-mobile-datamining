@@ -47,9 +47,9 @@ export default function GooglePlayPriceChangeActionSheet(markAsDismissed) {
   tmp2Result = tmp2(4139);
   const intervalStringAsNoun = markAsDismissed(4139).getIntervalStringAsNoun(tmp2Result.getInterval(str).intervalType);
   const tmp2Result1 = markAsDismissed(4139);
-  const tmp2Result2 = markAsDismissed(6089);
-  const formatPriceResult = markAsDismissed(6089).formatPrice(stateFromStores.oldPrice, stateFromStores.oldCurrency);
-  const tmp2Result3 = markAsDismissed(6089);
+  const tmp2Result2 = markAsDismissed(6090);
+  const formatPriceResult = markAsDismissed(6090).formatPrice(stateFromStores.oldPrice, stateFromStores.oldCurrency);
+  const tmp2Result3 = markAsDismissed(6090);
   obj = { children: null };
   obj = { style: tmp.container, children: null };
   obj1 = { style: tmp.textContainer, children: null };
@@ -67,7 +67,7 @@ export default function GooglePlayPriceChangeActionSheet(markAsDismissed) {
     oldPrice: null,
     hc_article_url: null,
   };
-  const formatPriceResult1 = markAsDismissed(6089).formatPrice(stateFromStores.newPrice, stateFromStores.newCurrency);
+  const formatPriceResult1 = markAsDismissed(6090).formatPrice(stateFromStores.newPrice, stateFromStores.newCurrency);
   obj4[1] = new Date(stateFromStores.expectedChargeTime);
   obj4[2] = intervalStringAsNoun;
   obj4[3] = formatPriceResult1;
@@ -84,8 +84,8 @@ export default function GooglePlayPriceChangeActionSheet(markAsDismissed) {
   obj5[2] = function onPress() {
     markAsDismissed(closure_1_7.USER_DISMISS);
   };
-  items3[1] = callback(markAsDismissed(4928).Button, obj5);
+  items3[1] = callback(markAsDismissed(4929).Button, obj5);
   obj[1] = items3;
   obj[0] = callback2(View, obj);
-  return callback(markAsDismissed(5630).BottomSheet, obj);
+  return callback(markAsDismissed(5631).BottomSheet, obj);
 }

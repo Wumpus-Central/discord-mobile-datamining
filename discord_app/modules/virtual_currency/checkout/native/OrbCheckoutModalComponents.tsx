@@ -115,7 +115,7 @@ export const OrbCheckoutPaymentSourceDetails = function OrbCheckoutPaymentSource
   return callback2(closure_4, obj);
 };
 export const OrbCheckoutLegalFinePrint = function OrbCheckoutLegalFinePrint() {
-  let obj = skuId(12786);
+  let obj = skuId(12798);
   skuId = obj.useOrbCheckoutModalContext().skuId;
   const items = [skuId];
   const memo = React.useMemo(() => skuId(closure_1_2[12]).getOrbCheckoutDisclaimerMessage(skuId), items);

@@ -8,12 +8,12 @@ import getPremiumPlanItem from "../../../utils/PremiumUtils.tsx";
 import UNSAFE_isDismissibleContentDismissed from "../../dismissible_content/DismissibleContentUnsafeUtils.tsx";
 import useThemeDefault from "../../../hooks/useTheme.tsx";
 import Text from "../../../design/components/Text/native/Text.tsx";
-import LinearGradientDefault from "../../../../_runtime/04940_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/04941_LinearGradient.js";
 import usePremiumTrialOffer from "../hooks/usePremiumTrialOffer.android.tsx";
 import usePremiumDiscountOffer from "../hooks/usePremiumDiscountOffer.android.tsx";
 import trackImpressionDefault from "../../app_analytics/useTrackImpression.tsx";
 import MarketingComponentType from "../../../../discord_common/js/shared/shared-constants/MarketingComponentType.tsx";
-import registerAssetDefault from "../../../../_runtime/14811_registerAsset.js";
+import registerAssetDefault from "../../../../_runtime/14826_registerAsset.js";
 import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import closure_5 from "../../../stores/billing/SubscriptionStore.tsx";
@@ -192,27 +192,27 @@ export default function PremiumTabBadge() {
   if (stateFromStores != null) {
     trialId = stateFromStores.trialId;
   }
-  tmp2Result = tmp2(6260);
+  tmp2Result = tmp2(6261);
   if (trialId === closure_6) {
     if (!tmp7) {
       let items1 = [tmp2(1372).DismissibleContent.REFERRAL_TRIAL_MOBILE_NITRO_HOME_BADGE];
     }
     [tmp14, r10051] = callback(tmp11(items1, undefined, true), 2);
-    tmp2(6260);
+    tmp2(6261);
     if (!tmp7) {
       if (hasTier2Premium) {
         let items2 = [tmp2(1372).DismissibleContent.WHATS_NEW_TENURE_BADGE_REWARD];
       }
       let tmp12Result = tmp12(tmp16(items2, undefined, true), 2);
       [tmp18, r10063] = tmp12Result;
-      const isEligibleSenderForReferralProgram = tmp2(7974).useIsEligibleSenderForReferralProgram();
-      const tmp2Result2 = tmp2(7974);
-      const isReferralProgramEntrypointBadgeAcknowledged = tmp2(7973).useIsReferralProgramEntrypointBadgeAcknowledged();
-      const tmp2Result3 = tmp2(7973);
-      const promotionMarketingComponent = tmp2(13235).usePromotionMarketingComponent(
-        tmp2(10736).MarketingComponentType.PREMIUM_TAB,
+      const isEligibleSenderForReferralProgram = tmp2(7977).useIsEligibleSenderForReferralProgram();
+      const tmp2Result2 = tmp2(7977);
+      const isReferralProgramEntrypointBadgeAcknowledged = tmp2(7976).useIsReferralProgramEntrypointBadgeAcknowledged();
+      const tmp2Result3 = tmp2(7976);
+      const promotionMarketingComponent = tmp2(13247).usePromotionMarketingComponent(
+        tmp2(10740).MarketingComponentType.PREMIUM_TAB,
       );
-      const tmp2Result5 = tmp2(6260);
+      const tmp2Result5 = tmp2(6261);
       let prop = null;
       if (null != promotionMarketingComponent) {
         prop = null;
@@ -351,7 +351,7 @@ export default function PremiumTabBadge() {
           tmp2Result7 = tmp2(1234);
         }
       }
-      const tmp2Result4 = tmp2(13235);
+      const tmp2Result4 = tmp2(13247);
     }
     items2 = [];
     const tmp13 = callback(tmp11(items1, undefined, true), 2);

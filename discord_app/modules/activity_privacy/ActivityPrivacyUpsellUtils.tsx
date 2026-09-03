@@ -41,7 +41,7 @@ function computeAffectedGuilds(setting, ACTIVITY_STATUS_OFF) {
         } else {
           EXPANDING = obj.EXPANDING;
         }
-        dependencyMap = tmp8(6251).getSanitizedActivityRestrictedGuilds();
+        dependencyMap = tmp8(6252).getSanitizedActivityRestrictedGuilds();
         flattenedGuildIds = flattenedGuildIds.getFlattenedGuildIds();
         if (setting !== tmp8(1305).GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_OFF) {
           if (setting !== tmp8(1305).GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_ON_FOR_LARGE_GUILDS) {
@@ -326,7 +326,7 @@ export const sortGuildIdsByFrecency = function sortGuildIdsByFrecency(guildIds) 
   });
 };
 export const applyBulkGuildRestrictionChange = function applyBulkGuildRestrictionChange(direction, affectedGuildIds) {
-  obj = set(6251);
+  obj = set(6252);
   const sanitizedActivityRestrictedGuilds = obj.getSanitizedActivityRestrictedGuilds();
   set = new Set(affectedGuildIds);
   if (direction === obj.RESTRICTING) {

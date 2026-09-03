@@ -1,5 +1,5 @@
 // discord_app/modules/in_app_reports/showReportModal.native.tsx
-import _modDef4723 from "../../actions/ModalActionCreators.tsx";
+import _modDef4724 from "../../actions/ModalActionCreators.tsx";
 import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
 
 const require = arg1;
@@ -152,5 +152,5 @@ export const showReportModal = function showReportModal(arg0, arg1, arg2) {
   return applyArgumentsResult;
 };
 export const hideReportModal = function hideReportModal() {
-  _modDef4723.popWithKey(IN_APP_REPORT_MODAL_KEY);
+  _modDef4724.popWithKey(IN_APP_REPORT_MODAL_KEY);
 };

@@ -24,7 +24,7 @@ export const useBountySwipeUpNux = function useBountySwipeUpNux(location) {
         prop = tmp(1372).DismissibleContent.BOUNTIES_RECURRING_SWIPE_UP_NUX;
       }
     }
-    let tmpResult = tmp(6260);
+    let tmpResult = tmp(6261);
     let tmp4Result = tmp4(tmpResult.useSelectedDismissibleContent([]), 2);
     if (first) {
       let tmp11 = isEligible;
@@ -35,7 +35,7 @@ export const useBountySwipeUpNux = function useBountySwipeUpNux(location) {
     } else {
       tmp10 = tmp9 === tmp(1372).DismissibleContent.BOUNTIES_SWIPE_UP_NUX;
     }
-    tmpResult = tmp(6260);
+    tmpResult = tmp(6261);
     tmp4Result = tmp4(tmpResult.useSelectedTimeRecurringDismissibleContent(prop, { cooldownDurationMs: 86400000 }), 2);
     obj = {
       hasSingleUseSwipeUpNux: null,

@@ -171,7 +171,7 @@ export default function PremiumUpsellTooltipActionSheet(arg0) {
         dismissAction: DISMISS,
       });
     };
-    tmp2Result = tmp2(tmp3(4928).Button, obj6);
+    tmp2Result = tmp2(tmp3(4929).Button, obj6);
   }
   items4[1] = tmp2Result;
   obj4[1] = items4;

@@ -40,12 +40,12 @@ function AnimatedWrapper(children) {
   let pIPState;
   let animatedStyle;
   let animatedStyle1;
-  obj = wrapperOffset(9661);
+  obj = wrapperOffset(9665);
   height = obj.useGlobalStatusIndicatorState().height;
   const tmp3 = callback3();
   dependencyMap = tmp3;
   obj1 = connected;
-  const context = connected.useContext(height(12062));
+  const context = connected.useContext(height(12068));
   wrapperDimensions = context.wrapperDimensions;
   connected = context.connected;
   controlsSpecs = context.controlsSpecs;
@@ -63,7 +63,7 @@ function AnimatedWrapper(children) {
   fn.__workletHash = 6243014585347;
   fn.__initData = closure_55;
   derivedValue = obj2.useDerivedValue(fn);
-  let obj3 = wrapperOffset(16908);
+  let obj3 = wrapperOffset(16928);
   pIPState = obj3.usePIPState();
   let obj4 = wrapperOffset(4217);
   const fn2 = function l() {
@@ -165,14 +165,14 @@ function AnimatedWrapper(children) {
     }
   };
   obj = {
-    cheapWorkletShallowEqual: wrapperOffset(9223).cheapWorkletShallowEqual,
+    cheapWorkletShallowEqual: wrapperOffset(9227).cheapWorkletShallowEqual,
     VoicePanelModes: animatedStyle1,
     wrapperDimensions,
-    updateSharedValueIfChanged: height(11211),
+    updateSharedValueIfChanged: height(11215),
     wrapperOffset,
-    getMaxPanelWidth: wrapperOffset(16896).getMaxPanelWidth,
-    getPanelX: wrapperOffset(16896).getPanelX,
-    roundToNearestPixel: height(10951),
+    getMaxPanelWidth: wrapperOffset(16916).getMaxPanelWidth,
+    getPanelX: wrapperOffset(16916).getPanelX,
+    roundToNearestPixel: height(10955),
     windowDimensions,
   };
   fn3.__closure = obj;
@@ -268,8 +268,8 @@ function AnimatedWrapper(children) {
     mode,
     VoicePanelModes: animatedStyle1,
     runOnJS: wrapperOffset(4217).runOnJS,
-    updateSourceTrackingView: height(9592).updateSourceTrackingView,
-    withSpring: wrapperOffset(4927).withSpring,
+    updateSourceTrackingView: height(9596).updateSourceTrackingView,
+    withSpring: wrapperOffset(4928).withSpring,
     DRAWER_SPRING_PHYSICS_GESTURE_ACTIVE: closure_17,
     DRAWER_SIZE_PHYSICS: obj2,
   };
@@ -325,7 +325,7 @@ function AnimatedWrapper(children) {
     mode,
     connected,
     wrapperDimensions,
-    withSpring: wrapperOffset(4927).withSpring,
+    withSpring: wrapperOffset(4928).withSpring,
     BORDER_RADIUS_PHYSICS: windowDimensions,
     VoicePanelModes: animatedStyle1,
     styles: tmp3,
@@ -334,7 +334,7 @@ function AnimatedWrapper(children) {
   M.__workletHash = 1768699814221;
   M.__initData = closure_60;
   animatedStyle1 = obj8.useAnimatedStyle(M);
-  if (!wrapperOffset(7357).isStable) {
+  if (!wrapperOffset(7358).isStable) {
     let tmpResult = tmp(4217);
     class Y {
       constructor() {
@@ -395,11 +395,11 @@ function AnimatedWrapper(children) {
   );
   ({ wrapperRootStyles, wrapperTransformStyles, wrapperSurfaceStyles } = memo);
   obj6 = { style: wrapperRootStyles, pointerEvents: "box-none", children: null };
-  let tmp4Result = tmp4(7805);
+  let tmp4Result = tmp4(7808);
   const obj7 = { style: wrapperTransformStyles, pointerEvents: "box-none", children: null };
-  tmp4Result = tmp4(7805);
+  tmp4Result = tmp4(7808);
   obj8 = { style: wrapperSurfaceStyles, layout: layoutTransition, children: children.children };
-  obj7[2] = callback2(height(7805), obj8);
+  obj7[2] = callback2(height(7808), obj8);
   obj6[2] = callback2(tmp4Result, obj7);
   return callback2(tmp4Result, obj6);
 }
@@ -660,7 +660,7 @@ let closure_68 = importAllResult.memo((onPress) => {
     obj[1] = str;
     return obj;
   };
-  obj = { withSpring: opacity(4927).withSpring, opacity, DrawerShadeOpacityPhysics: closure_66 };
+  obj = { withSpring: opacity(4928).withSpring, opacity, DrawerShadeOpacityPhysics: closure_66 };
   fn.__closure = obj;
   fn.__workletHash = 3656047169284;
   fn.__initData = closure_67;

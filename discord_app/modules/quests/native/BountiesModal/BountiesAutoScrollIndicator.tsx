@@ -93,7 +93,7 @@ export default function BountiesAutoScrollIndicator(showProgressRing) {
     obj3[8] = function children() {
       return closure_0;
     };
-    let tmp5Result = tmp5(require("../../../../../_runtime/14886_CircularProgress.js").AnimatedCircularProgress, obj3);
+    let tmp5Result = tmp5(require("../../../../../_runtime/14901_CircularProgress.js").AnimatedCircularProgress, obj3);
   } else {
     const obj4 = { children: null };
     obj4[0] = tmp6;

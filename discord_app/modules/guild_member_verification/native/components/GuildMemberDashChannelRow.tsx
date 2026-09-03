@@ -30,7 +30,7 @@ export default function GuildMemberDashChannelRow(arg0) {
   let hasItem;
   const tmp = callback();
   id = guild.id;
-  let obj = id(16035);
+  let obj = id(16051);
   let num = obj.useSubmittedGuildJoinRequestTotal({ guildId: id });
   if (num == null) {
     num = 0;
@@ -51,7 +51,7 @@ export default function GuildMemberDashChannelRow(arg0) {
   callback = React.useCallback(() => {
     id(closure_1_2[10]).transitionTo(closure_1_5.CHANNEL(id, closure_1_6.MEMBER_SAFETY));
   }, items1);
-  const ChannelModes = tmp2(12171).ChannelModes;
+  const ChannelModes = tmp2(12177).ChannelModes;
   const tmp7 = selected ? ChannelModes.SELECTED : ChannelModes.DEFAULT;
   obj = {
     onPress: callback,
@@ -72,9 +72,9 @@ export default function GuildMemberDashChannelRow(arg0) {
   const intl2 = tmp2(1233).intl;
   obj[0] = intl2.string(id(1233).t["9Oq93m"]);
   obj[1] = tmp7;
-  obj[6] = jsx(id(12171).BaseChannelName, { name: null, mode: null });
-  const tmp9 = hasItem(12171);
-  obj[7] = jsx(id(12171).BaseChannelIcon, { mode: tmp7, IconComponent: id(5042).GroupIcon });
+  obj[6] = jsx(id(12177).BaseChannelName, { name: null, mode: null });
+  const tmp9 = hasItem(12177);
+  obj[7] = jsx(id(12177).BaseChannelIcon, { mode: tmp7, IconComponent: id(5043).GroupIcon });
   let tmp8Result = null;
   if (num > 0) {
     const obj2 = { style: null, textStyle: null, value: null };

@@ -27,16 +27,16 @@ export default function XboxLinkDiscordConsent(arg0) {
     platformType: PlatformTypes.XBOX,
     callbackCode,
     callbackState,
-    clientId: navigation(9328).ConsoleOAuthApplications.XBOX_APPLICATION_ID,
+    clientId: navigation(9332).ConsoleOAuthApplications.XBOX_APPLICATION_ID,
     scopes: XBOX_CLIENT_SCOPES,
     onNext: callback,
     onError: callback1,
   };
-  return jsx(navigation(9327).TwoWayLinkDiscordConsent, {
+  return jsx(navigation(9331).TwoWayLinkDiscordConsent, {
     platformType: PlatformTypes.XBOX,
     callbackCode,
     callbackState,
-    clientId: navigation(9328).ConsoleOAuthApplications.XBOX_APPLICATION_ID,
+    clientId: navigation(9332).ConsoleOAuthApplications.XBOX_APPLICATION_ID,
     scopes: XBOX_CLIENT_SCOPES,
     onNext: callback,
     onError: callback1,

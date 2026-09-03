@@ -27,7 +27,7 @@ const memoResult = importAllResult.memo(function RestrictedHoursWarningNotificat
   type = notification.type;
   let obj = { style: callback().iconContainer, children: null };
   obj = { size: "sm", color: type(709).colors.WHITE };
-  obj[1] = jsx(notification(11177).ThemeDarkIcon, { size: "sm", color: type(709).colors.WHITE });
+  obj[1] = jsx(notification(11181).ThemeDarkIcon, { size: "sm", color: type(709).colors.WHITE });
   const items = [notification.title];
   const items1 = [type];
   const memo = importAllResult.useMemo(() => ({ type: "simple", text: notification.title }), items);
@@ -48,7 +48,7 @@ const memoResult = importAllResult.memo(function RestrictedHoursWarningNotificat
     onPress: callback,
     notification,
   };
-  return jsx(notification(10277).NotificationPressable, {
+  return jsx(notification(10281).NotificationPressable, {
     icon: <View size="sm" color={type(709).colors.WHITE} />,
     header: memo,
     children: jsx(notification(4474).Text, obj1),

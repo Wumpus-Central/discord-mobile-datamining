@@ -127,7 +127,7 @@ export const validateKeywordsOrThrow = function validateKeywordsOrThrow(arr) {
   } else {
     const item = arr.forEach((keyword) => {
       const intl = callback(1233).intl;
-      const invalidKeywordError = new callback(7857).InvalidKeywordError(
+      const invalidKeywordError = new callback(7860).InvalidKeywordError(
         intl.formatToPlainString(callback(1233).t.rbRvGe, { keyword, max: closure_7, min: closure_8 }),
       );
       throw invalidKeywordError;
@@ -145,7 +145,7 @@ export const validateRegexPatternsOrThrow = function validateRegexPatternsOrThro
   } else {
     const item = arr.forEach((regex) => {
       const intl = callback(1233).intl;
-      const invalidRegexPatternError = new callback(7857).InvalidRegexPatternError(
+      const invalidRegexPatternError = new callback(7860).InvalidRegexPatternError(
         intl.formatToPlainString(callback(1233).t.WR0m9w, { regex, max: closure_10, min: closure_9 }),
       );
       throw invalidRegexPatternError;
@@ -184,7 +184,7 @@ export const validateRuleBeforeSaveOrThrow = function validateRuleBeforeSaveOrTh
     } else {
       const item = keywordFilter.forEach((keyword) => {
         const intl = callback(1233).intl;
-        const invalidKeywordError = new callback(7857).InvalidKeywordError(
+        const invalidKeywordError = new callback(7860).InvalidKeywordError(
           intl.formatToPlainString(callback(1233).t.rbRvGe, { keyword, max: closure_7, min: closure_8 }),
         );
         throw invalidKeywordError;
@@ -199,7 +199,7 @@ export const validateRuleBeforeSaveOrThrow = function validateRuleBeforeSaveOrTh
       } else {
         const item1 = regexPatterns.forEach((regex) => {
           const intl = callback(1233).intl;
-          const invalidRegexPatternError = new callback(7857).InvalidRegexPatternError(
+          const invalidRegexPatternError = new callback(7860).InvalidRegexPatternError(
             intl.formatToPlainString(callback(1233).t.WR0m9w, { regex, max: closure_10, min: closure_9 }),
           );
           throw invalidRegexPatternError;

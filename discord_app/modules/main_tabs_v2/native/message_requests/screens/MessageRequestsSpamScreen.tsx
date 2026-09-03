@@ -10,5 +10,5 @@ export default function MessageRequestsScreen(navigation) {
   navigation = navigation.navigation;
   const items = [navigation];
   const goToMessageRequestPreview = React.useCallback((channelId) => navigation.push("preview", { channelId }), items);
-  return jsx(navigation(16706), { goToMessageRequestPreview });
+  return jsx(navigation(16726), { goToMessageRequestPreview });
 }

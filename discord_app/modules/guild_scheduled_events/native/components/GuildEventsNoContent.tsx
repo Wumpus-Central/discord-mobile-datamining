@@ -48,8 +48,8 @@ export default function GuildEventsNoContent(guild) {
   const items1 = [guild];
   let stateFromStores = obj.useStateFromStores(items, () => closure_1_4.can(closure_1_6.MANAGE_ROLES, guild), items1);
   obj = { style: tmp.container, children: null };
-  obj = { icon: onClose(9775), IconComponent: guild(9777).CalendarIcon };
-  const items2 = [callback(onClose(8693), obj), , ,];
+  obj = { icon: onClose(9779), IconComponent: guild(9781).CalendarIcon };
+  const items2 = [callback(onClose(8697), obj), , ,];
   obj1 = {
     style: tmp.title,
     accessibilityRole: "header",

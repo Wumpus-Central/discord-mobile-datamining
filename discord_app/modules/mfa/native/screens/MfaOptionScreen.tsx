@@ -5,7 +5,7 @@ import Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
 import SafeAreaPaddingView from "../../../../components_native/common/SafeAreaView.tsx";
 import useWideAuthViewDefault from "../../../auth/native/useWideAuthView.tsx";
 import BackgroundImageDefault from "../../../auth/native/components/atoms/BackgroundImage.tsx";
-import _modDef15499 from "../MfaScreenUtils.tsx";
+import _modDef15513 from "../MfaScreenUtils.tsx";
 import { ScrollView } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 
@@ -18,7 +18,7 @@ export default function MFAOptionScreen(arg0) {
   ({ headerImage, subtitle, screenProps, error } = arg0);
   ({ headerText, input, submit, mfaMethod, content } = arg0);
   const tmp3 = useWideAuthViewDefault();
-  let obj = _modDef15499;
+  let obj = _modDef15513;
   const screenStyles = obj.useScreenStyles(tmp3);
   const first = screenProps.mfaChallenge.methods[0];
   let type;
@@ -65,7 +65,7 @@ export default function MFAOptionScreen(arg0) {
   if (tmp10Result1) {
     const obj6 = { props: null };
     obj6[0] = screenProps;
-    tmp10Result1 = tmp10(tmp(15500), obj6);
+    tmp10Result1 = tmp10(tmp(15514), obj6);
   }
   items3[1] = tmp10Result1;
   obj5[1] = items3;

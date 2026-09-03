@@ -23,10 +23,10 @@ export default function useIsPrimaryEntryPointDisabled(arg0) {
   if (channel != null) {
     id = channel.id;
   }
-  const embeddedActivityLaunchability = channel(9499).useEmbeddedActivityLaunchability(id);
+  const embeddedActivityLaunchability = channel(9503).useEmbeddedActivityLaunchability(id);
   let flag = false;
-  if (channel(11852).ActivityAction.LEAVE !== activityAction) {
-    if (tmp2(11852).ActivityAction.START === activityAction) {
+  if (channel(11858).ActivityAction.LEAVE !== activityAction) {
+    if (tmp2(11858).ActivityAction.START === activityAction) {
       flag = false;
       if (null != channel) {
         let isGuildVoiceResult;
@@ -35,11 +35,11 @@ export default function useIsPrimaryEntryPointDisabled(arg0) {
         }
         if (isGuildVoiceResult) {
           flag = false;
-          if (embeddedActivityLaunchability !== tmp2(9499).EmbeddedActivityLaunchability.CAN_LAUNCH) {
+          if (embeddedActivityLaunchability !== tmp2(9503).EmbeddedActivityLaunchability.CAN_LAUNCH) {
             flag = true;
           }
         } else {
-          let tmp2Result = tmp2(8152);
+          let tmp2Result = tmp2(8156);
           flag = false;
           if (!tmp2Result.isActivitiesInTextEnabled(channel)) {
             flag = true;
@@ -48,7 +48,7 @@ export default function useIsPrimaryEntryPointDisabled(arg0) {
       }
     } else {
       flag = false;
-      if (tmp2(11852).ActivityAction.JOIN === activityAction) {
+      if (tmp2(11858).ActivityAction.JOIN === activityAction) {
         let isGuildVoiceResult1;
         if (channel != null) {
           isGuildVoiceResult1 = channel.isGuildVoice();
@@ -56,7 +56,7 @@ export default function useIsPrimaryEntryPointDisabled(arg0) {
         if (isGuildVoiceResult1) {
           flag = !stateFromStores;
         } else {
-          tmp2Result = tmp2(8152);
+          tmp2Result = tmp2(8156);
           flag = false;
           if (!tmp2Result.isActivitiesInTextEnabled(channel)) {
             flag = true;
@@ -67,7 +67,7 @@ export default function useIsPrimaryEntryPointDisabled(arg0) {
   }
   let disabled = flag;
   let reason;
-  if (activityAction !== channel(11852).ActivityAction.LEAVE) {
+  if (activityAction !== channel(11858).ActivityAction.LEAVE) {
     const tmp10 =
       application instanceof closure_3 ? application.embeddedActivityConfig : application.embedded_activity_config;
     getPlatformDefault;

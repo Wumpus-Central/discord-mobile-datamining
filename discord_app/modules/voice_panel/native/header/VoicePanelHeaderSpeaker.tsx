@@ -217,7 +217,7 @@ const memoResult = importAllResult.memo(function VoicePanelHeaderSpeaker(isConne
     function renderButton(arg0) {
       let tmp = arg0;
       if (arg0 == null) {
-        let obj = { onPress: null, ref: "r" };
+        let obj = { onPress: null, ref: "Array" };
         obj[0] = closure_15;
         tmp = obj;
       }

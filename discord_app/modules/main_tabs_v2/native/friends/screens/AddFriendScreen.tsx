@@ -35,9 +35,9 @@ export default function AddFriendScreen(navigation) {
   dependencyMap = undefined;
   let callback;
   let tmp = callback2();
-  let obj = navigation(12442);
+  let obj = navigation(12454);
   contactSyncAccount = obj.useContactSyncAccount();
-  obj1 = navigation(12442);
+  obj1 = navigation(12454);
   [tmp5, c2] = callback(React.useState(!obj1.isContactSyncEnabled(contactSyncAccount)), 2);
   callback = React.useCallback(() => {
     currentUser = currentUser.getCurrentUser();
@@ -87,7 +87,7 @@ export default function AddFriendScreen(navigation) {
       callback(tmp5);
     });
   }, items);
-  const items1 = [callback(contactSyncAccount(5078), { absolute: true })];
+  const items1 = [callback(contactSyncAccount(5079), { absolute: true })];
   obj = { keyboardShouldPersistTaps: "handled", style: tmp.background, children: null };
   obj = {
     style: tmp.headerText,
@@ -103,7 +103,7 @@ export default function AddFriendScreen(navigation) {
   const intl2 = navigation(1233).intl;
   obj1[3] = intl2.string(navigation(1233).t["Rn/sLl"]);
   items2[1] = callback(navigation(4474).Text, obj1);
-  items2[2] = callback(contactSyncAccount(13817), {
+  items2[2] = callback(contactSyncAccount(13833), {
     style: tmp.input,
     autoFocusInput: false,
     sourcePage: navigation.route.params.sourcePage,
@@ -117,7 +117,7 @@ export default function AddFriendScreen(navigation) {
   if (tmp5) {
     const obj5 = { style: null, location: "Add Friend Modal" };
     obj5[0] = tmp.rowContainer;
-    tmp10Result = callback(contactSyncAccount(13819), obj5);
+    tmp10Result = callback(contactSyncAccount(13835), obj5);
   }
   const obj6 = { children: null };
   items3[1] = tmp10Result;

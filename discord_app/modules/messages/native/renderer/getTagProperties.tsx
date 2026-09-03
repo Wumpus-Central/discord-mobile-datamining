@@ -32,7 +32,7 @@ export default function getTagProperties(arg0) {
           const intl = tmp2(1233).intl;
           let uri;
           if (isVerifiedBotResult) {
-            uri = Image.resolveAssetSource(tmp4(7956)).uri;
+            uri = Image.resolveAssetSource(tmp4(7959)).uri;
           }
           flag = isVerifiedBotResult;
           stringResult = intl.string(tmp2(1233).t["9RNkeF"]);
@@ -65,7 +65,7 @@ export default function getTagProperties(arg0) {
         tagAccessibilityLabel: null,
         tagVerified: null,
         tagTextColor: "Boolean",
-        tagBackgroundColor: "call",
+        tagBackgroundColor: "add",
         tagType: true,
         tagIconUrl: true,
         opTagText: true,
@@ -98,7 +98,7 @@ export default function getTagProperties(arg0) {
       }
       const intl5 = tmp2(1233).intl;
       stringResult3 = intl5.string(tmp2(1233).t["7s687k"]);
-      tmp2Result = tmp2(7952);
+      tmp2Result = tmp2(7955);
     }
   }
   const intl3 = tmp2(1233).intl;

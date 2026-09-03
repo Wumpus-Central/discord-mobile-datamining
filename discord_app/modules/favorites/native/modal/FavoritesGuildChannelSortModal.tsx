@@ -17,9 +17,9 @@ export default function FavoritesGuildChannelSortModal() {
     const items = [...closure_5];
     callback(table[5]).startReordering.apply(items);
     return () => {
-      callback(15964).stopReordering();
-      const obj = callback(15964);
-      callback(15964).terminate();
+      callback(15980).stopReordering();
+      const obj = callback(15980);
+      callback(15980).terminate();
     };
   }, []);
   const bottom = useSafeAreaInsetsDefault().bottom;
@@ -38,5 +38,5 @@ export default function FavoritesGuildChannelSortModal() {
     obj[0] = obj;
     return obj;
   }, items);
-  return jsx(bottom(6016).Navigator, { screens, initialRouteName: "FAVORITES_GUILD_CHANNEL_SORT" });
+  return jsx(bottom(6017).Navigator, { screens, initialRouteName: "FAVORITES_GUILD_CHANNEL_SORT" });
 }

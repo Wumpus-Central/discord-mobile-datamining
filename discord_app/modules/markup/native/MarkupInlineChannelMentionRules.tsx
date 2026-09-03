@@ -9,14 +9,14 @@ const result = require("set").fileFinishedImporting("modules/markup/native/Marku
 
 export const inlineChannelMentionReact = function inlineChannelMentionReact(inContent, output, key) {
   if (null == inContent.inContent) {
-    let smartOutputResult = u1F4AC(8014).smartOutput(inContent, output, key);
-    const obj3 = u1F4AC(8014);
+    let smartOutputResult = u1F4AC(8017).smartOutput(inContent, output, key);
+    const obj3 = u1F4AC(8017);
   } else {
     const obj = { children: null };
-    const items = [output(inContent.inContent, key), " \u203A ", u1F4AC(8014).smartOutput(inContent, output, key)];
+    const items = [output(inContent.inContent, key), " \u203A ", u1F4AC(8017).smartOutput(inContent, output, key)];
     obj[0] = items;
     smartOutputResult = jsxs(u1F4AC(1296).LegacyText, { children: null }, key.key);
-    const obj2 = u1F4AC(8014);
+    const obj2 = u1F4AC(8017);
   }
   return smartOutputResult;
 };

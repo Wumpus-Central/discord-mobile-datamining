@@ -1,7 +1,7 @@
 // discord_app/modules/quests/native/BountiesModal/BountiesModalEndCard.tsx
 import set from "../../../../../_runtime/00002_set.js";
 import _modDef4217 from "../../../reanimated/ReanimatedRexport.tsx";
-import LinearGradientDefault from "../../../../../_runtime/04940_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/04941_LinearGradient.js";
 import BountiesEndCardPressableCtaDefault from "BountiesEndCardPressableCta.tsx";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";

@@ -2,8 +2,8 @@
 import getSystemLocale from "../../intl/index.native.tsx";
 import asyncRequireImpl from "../../../_runtime/02008_asyncRequireImpl.js";
 import ACTION_SHEET_HEIGHT_HALFDefault from "../action_sheet/native/ActionSheetActionCreators.tsx";
-import _modDef4723 from "../../actions/ModalActionCreators.tsx";
-import _modDef4858 from "../../actions/native/AlertActionCreators.tsx";
+import _modDef4724 from "../../actions/ModalActionCreators.tsx";
+import _modDef4859 from "../../actions/native/AlertActionCreators.tsx";
 import _safeTransitionToDefault from "../links/safeTransitionTo.native.tsx";
 import closure_3 from "../../stores/ChannelStore.tsx";
 import closure_4 from "../../stores/RTCConnectionStore.tsx";
@@ -23,15 +23,15 @@ export default {
   openSecureFramesStreamVerification(streamKey, channelId) {
     let obj = ACTION_SHEET_HEIGHT_HALFDefault;
     obj = { streamKey, channelId };
-    obj.openLazy(asyncRequireImpl(9877, dependencyMap.paths), closure_6, obj);
+    obj.openLazy(asyncRequireImpl(9881, dependencyMap.paths), closure_6, obj);
   },
   openSecureFramesUserVerificationModal(id, id2, arg2) {
     if (arg2()) {
-      let obj = _modDef4723;
+      let obj = _modDef4724;
       obj = { userId: null, channelId: null };
       obj[0] = id;
       obj[1] = id2;
-      obj.pushLazy(asyncRequireImpl(9866, dependencyMap.paths), obj, closure_7);
+      obj.pushLazy(asyncRequireImpl(9870, dependencyMap.paths), obj, closure_7);
     }
   },
   openSecureFramesUpdateConfirmation(confirmText) {
@@ -42,7 +42,7 @@ export default {
       confirmText = intl.string(onConfirm(1233).t["cY+Oob"]);
     }
     onConfirm = confirmText.onConfirm;
-    let obj = _modDef4858;
+    let obj = _modDef4859;
     obj = { title, body: subtitle, confirmText, cancelText: null, confirmColor: null };
     const intl2 = onConfirm(1233).intl;
     obj[3] = intl2.string(onConfirm(1233).t["ETE/oC"]);
@@ -73,7 +73,7 @@ export default {
         obj[1] = channelId;
         obj[2] = guildId;
         obj[3] = fingerprint;
-        ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(9880, dependencyMap.paths), closure_5, obj);
+        ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(9884, dependencyMap.paths), closure_5, obj);
         const obj4 = ACTION_SHEET_HEIGHT_HALFDefault;
       }
     }
@@ -82,6 +82,6 @@ export default {
     obj[0] = intl.string(getSystemLocale.t["5ICxE6"]);
     const intl2 = getSystemLocale.intl;
     obj[1] = intl2.string(getSystemLocale.t["v1eXp/"]);
-    _modDef4858.show(obj);
+    _modDef4859.show(obj);
   },
 };

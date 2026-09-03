@@ -399,7 +399,7 @@ export default function _default(command) {
     obj1 = { style: null, source: null };
     obj1[0] = tmp.applicationIcon;
     obj1[1] = memo;
-    tmp22 = callback2(section(5501), obj1);
+    tmp22 = callback2(section(5502), obj1);
   }
   const items5 = [
     tmp22,
@@ -485,9 +485,9 @@ export default function _default(command) {
   obj[5] = items5;
   const items8 = [
     c10(closure_6, obj),
-    callback2(command(8372).FormDivider, { style: tmp.applicationDescriptionDivider }),
+    callback2(command(8376).FormDivider, { style: tmp.applicationDescriptionDivider }),
     callback2(stateFromStores, { command, option: currentOption, optionState: tmp17 }),
-    callback2(command(8372).FormDivider, { style: tmp.applicationDescriptionDivider }),
+    callback2(command(8376).FormDivider, { style: tmp.applicationDescriptionDivider }),
   ];
   obj[1] = items8;
   return c10(onPressOption, obj);

@@ -49,7 +49,7 @@ const memoResult = importAllResult.memo(function ChatInputGuardAutomodUserProfil
   obj = { type: "simple-action", actionOnPress: callback, actionLabel: stringResult, icon: null, message: null };
   const obj2 = guildId(4126);
   tmp6 = GuildMemberFlags;
-  obj[3] = jsx(guildId(12253).ChatXIcon, {});
+  obj[3] = jsx(guildId(12265).ChatXIcon, {});
   obj[4] = stringResult1;
   return jsx(ChatInputGuardDefault, {
     type: "simple-action",

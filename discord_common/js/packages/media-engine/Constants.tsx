@@ -240,6 +240,18 @@ export const NoiseCancellerError = {
 };
 export const VideoFilterError = { INIT_FAILED: 1, [1]: "INIT_FAILED", UNSUPPORTED: 2, [2]: "UNSUPPORTED" };
 export const VideoFilterTarget = { LIVE: 0, [0]: "LIVE", PREVIEW: 1, [1]: "PREVIEW" };
+export const SpatialAudioStatus = {
+  UNKNOWN: 0,
+  [0]: "UNKNOWN",
+  ACTIVE: 1,
+  [1]: "ACTIVE",
+  MONO_OUTPUT: 2,
+  [2]: "MONO_OUTPUT",
+  INIT_FAILED: 3,
+  [3]: "INIT_FAILED",
+  HRTF_FAILED: 4,
+  [4]: "HRTF_FAILED",
+};
 export const ProcessPriority = {
   LOW: 2,
   [2]: "LOW",

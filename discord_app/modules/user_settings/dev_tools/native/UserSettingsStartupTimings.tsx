@@ -43,7 +43,7 @@ export default function UserSettingsStartupTimings() {
   const useResult = React.use(num);
   React = useResult;
   let items = [useResult, first, first1];
-  const memo = React.useMemo(() => first(10298)(closure_5, !first, first1).split("\n"), items);
+  const memo = React.useMemo(() => first(10302)(closure_5, !first, first1).split("\n"), items);
   obj1 = initialize;
   let items1 = [closure_7];
   closure_6 = obj1.useStateFromStores(items1, () => alertStartupMetrics.alertStartupMetrics);
@@ -111,8 +111,8 @@ export default function UserSettingsStartupTimings() {
             return obj2;
           } else {
             closure_0 = arg1;
-            closure_1 = closure_1_1(10298)(closure_0);
-            obj = closure_1_0(8647);
+            closure_1 = closure_1_1(10302)(closure_0);
+            obj = closure_1_0(8651);
             obj3 = { message: null };
             obj3[0] = closure_1;
             obj.showShareActionSheet(obj3, "Startup Timing");
@@ -133,7 +133,7 @@ export default function UserSettingsStartupTimings() {
   obj[0] = obj1;
   obj[1] = function ListHeaderComponent() {
     let obj = { spacing: 16, style: { padding: 16 }, children: null };
-    obj = { title: "Performance testing", hasIcons: false, children: callback(lib(7692).TableCheckboxRow, obj) };
+    obj = { title: "Performance testing", hasIcons: false, children: callback(lib(7695).TableCheckboxRow, obj) };
     obj = {
       label: "Show start times at launch",
       onPress() {
@@ -143,7 +143,7 @@ export default function UserSettingsStartupTimings() {
       },
       checked: closure_6,
     };
-    const items = [callback(lib(6000).TableRowGroup, obj), , , ,];
+    const items = [callback(lib(6001).TableRowGroup, obj), , , ,];
     obj1 = { children: null };
     const result = closure_7 / 1000;
     const items1 = [
@@ -259,8 +259,8 @@ export default function UserSettingsStartupTimings() {
     items2[7] = callback2(lastTrackedAppUiViewed2Properties, obj17);
     obj16[0] = items2;
     obj15[0] = callback2(closure_10, obj16);
-    obj14[2] = callback(lib(5607).TableRow, obj15);
-    items[1] = callback(lib(6000).TableRowGroup, obj14);
+    obj14[2] = callback(lib(5608).TableRow, obj15);
+    items[1] = callback(lib(6001).TableRowGroup, obj14);
     const obj18 = { title: "Legend", hasIcons: false, children: null };
     const obj19 = { label: null };
     const obj20 = { children: null };
@@ -274,18 +274,18 @@ export default function UserSettingsStartupTimings() {
     ];
     obj20[0] = items10;
     obj19[0] = callback2(closure_10, obj20);
-    obj18[2] = callback(lib(5607).TableRow, obj19);
-    items[2] = callback(lib(6000).TableRowGroup, obj18);
+    obj18[2] = callback(lib(5608).TableRow, obj19);
+    items[2] = callback(lib(6001).TableRowGroup, obj18);
     const obj21 = { title: "Detailed Times", hasIcons: false, children: null };
     const items11 = [
-      callback(lib(7692).TableCheckboxRow, {
+      callback(lib(7695).TableCheckboxRow, {
         label: "Hide the Noise",
         onPress() {
           return callback((arg0) => !arg0);
         },
         checked: first,
       }),
-      callback(lib(7692).TableCheckboxRow, {
+      callback(lib(7695).TableCheckboxRow, {
         label: "Hide paints",
         onPress() {
           return callback2((arg0) => !arg0);
@@ -294,7 +294,7 @@ export default function UserSettingsStartupTimings() {
       }),
     ];
     obj21[2] = items11;
-    items[3] = callback2(lib(6000).TableRowGroup, obj21);
+    items[3] = callback2(lib(6001).TableRowGroup, obj21);
     const obj24 = { title: "Share Timings", hasIcons: true, children: null };
     const obj10 = { color: "text-brand", children: "" + result4 + "s (" + Math.round((closure_10 / num) * 100) + "%)" };
     const obj22 = {
@@ -311,15 +311,15 @@ export default function UserSettingsStartupTimings() {
       },
       checked: !first1,
     };
-    obj24[2] = callback(lib(5607).TableRow, {
-      icon: callback(lib(13000).ShareIcon, {}),
+    obj24[2] = callback(lib(5608).TableRow, {
+      icon: callback(lib(13012).ShareIcon, {}),
       label: "Copy timings to clipboard.",
       arrow: true,
       onPress: closure_14,
     });
-    items[4] = callback(lib(6000).TableRowGroup, obj24);
+    items[4] = callback(lib(6001).TableRowGroup, obj24);
     obj[2] = items;
-    const items12 = [callback2(lib(4926).Stack, obj), callback(closure_6, { style: lib.border })];
+    const items12 = [callback2(lib(4927).Stack, obj), callback(closure_6, { style: lib.border })];
     obj13[0] = items12;
     return callback2(closure_10, obj13);
   };

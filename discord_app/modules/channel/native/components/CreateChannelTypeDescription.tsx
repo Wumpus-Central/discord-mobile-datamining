@@ -13,12 +13,12 @@ const result = require("set").fileFinishedImporting(
 export default function CreateChannelTypeDescription(guildId) {
   guildId = guildId.guildId;
   fetchGuildProfile = undefined;
-  let obj = fetchGuildProfile(9025);
+  let obj = fetchGuildProfile(9029);
   guildProfile = obj.useGuildProfile(guildId);
   ({ guildProfile, fetchGuildProfile } = guildProfile);
   let hasItem = null != guildProfile;
   if (hasItem) {
-    const VISIBLE = tmp(5571).GuildProfileVisibilitySets.VISIBLE;
+    const VISIBLE = tmp(5572).GuildProfileVisibilitySets.VISIBLE;
     hasItem = VISIBLE.has(guildProfile.visibility);
   }
   let tmp6 = !tmp5;

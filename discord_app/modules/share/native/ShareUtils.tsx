@@ -1,6 +1,6 @@
 // discord_app/modules/share/native/ShareUtils.tsx
 import dispatcherDefault from "../../toast/native/ToastActionCreators.tsx";
-import registerAssetDefault from "../../../../_runtime/11111_registerAsset.js";
+import registerAssetDefault from "../../../../_runtime/11115_registerAsset.js";
 import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import { DraftType } from "../../../stores/DraftStore.tsx";
 import { MessageSendLocation } from "../../messages/MessageConstants.tsx";
@@ -83,13 +83,13 @@ function _sendShareMessage() {
               if (dependencyMap == null) {
                 lib2 = "";
               }
-              constants = lib2(7436).parse(lib2, lib2);
+              constants = lib2(7437).parse(lib2, lib2);
               if (c4.length > 0) {
-                let obj2 = lib2(8171);
+                let obj2 = lib2(8175);
                 obj2.clearAll(id, c4.ChannelMessage);
               }
-              future = new lib(8157).Future();
-              let obj3 = lib2(7210);
+              future = new lib(8161).Future();
+              let obj3 = lib2(7211);
               obj2 = {
                 location: null,
                 doNotNotifyOnError: true,

@@ -372,11 +372,11 @@ export default function MediaMessagePreview(channelId) {
         obj = {
           allowWithinModal: true,
           chatInputRef: "Boolean",
-          handleTransitionToThread: "abiti",
-          message: "camice",
-          messageChannel: "camice bianco",
-          selectedChannelId: "camice da laboratorio",
-          tapLinkData: "dottore",
+          handleTransitionToThread: "BuyNitroPurchaseFlow",
+          message: "absolute",
+          messageChannel: null,
+          selectedChannelId: "call",
+          tapLinkData: "diversity",
         };
         obj[2] = function handleTransitionToThread(arg0, arg1, arg2) {
           channel = channel.getChannel(arg1);

@@ -14,7 +14,7 @@ export const openEmojiPickerActionSheet = function openEmojiPickerActionSheet(ar
   const result = toggleGuildExpandedState.initiateEmojiInteraction(EmojiInteractionPoint.EmojiPickerActionSheetOpened);
   const obj = toggleGuildExpandedState;
   ACTION_SHEET_HEIGHT_HALFDefault.openLazy(
-    asyncRequireImpl(9114, dependencyMap.paths),
+    asyncRequireImpl(9118, dependencyMap.paths),
     EmojiPickerActionSheet,
     arg0,
     stack,

@@ -31,51 +31,63 @@ let closure_7 = { [POKER_NIGHT_APPLICATION_ID]: 7, [END_GAME_APPLICATION_ID]: 12
 let BasicApplicationRecord;
 class BasicApplicationRecord extends tmp2 {
   constructor(arg0) {
-    tmp = new BasicApplicationRecord(new.target, global, new.target);
+    tmp3 = new BasicApplicationRecord(tmp2, new.target, new.target, tmp, global, BasicApplicationRecord);
     // ThrowIfThisInitialized (0x7c)
     ({
-      id: tmp.id,
-      name: tmp.name,
-      icon: tmp.icon,
-      splash: tmp.splash,
-      primarySkuId: tmp.primarySkuId,
+      id: tmp3.id,
+      name: tmp3.name,
+      icon: tmp3.icon,
+      splash: tmp3.splash,
+      primarySkuId: tmp3.primarySkuId,
       thirdPartySkus,
     } = global);
     if (thirdPartySkus == null) {
       thirdPartySkus = [];
     }
-    tmp.thirdPartySkus = thirdPartySkus;
-    ({ description: tmp.description, bot: tmp.bot, coverImage: tmp.coverImage, type: tmp.type, is_monetized } = global);
+    tmp3.thirdPartySkus = thirdPartySkus;
+    ({
+      description: tmp3.description,
+      bot: tmp3.bot,
+      coverImage: tmp3.coverImage,
+      type: tmp3.type,
+      is_monetized,
+    } = global);
     if (is_monetized == null) {
       is_monetized = global.isMonetized;
     }
-    tmp.isMonetized = is_monetized;
+    tmp3.isMonetized = is_monetized;
     isVerified = global.is_verified;
     if (isVerified == null) {
       isVerified = global.isVerified;
     }
-    tmp.isVerified = isVerified;
+    tmp3.isVerified = isVerified;
     roleConnectionsVerificationUrl = global.role_connections_verification_url;
     if (roleConnectionsVerificationUrl == null) {
       roleConnectionsVerificationUrl = global.roleConnectionsVerificationUrl;
     }
-    tmp.roleConnectionsVerificationUrl = roleConnectionsVerificationUrl;
+    tmp3.roleConnectionsVerificationUrl = roleConnectionsVerificationUrl;
     parentId = global.parent_id;
     if (parentId == null) {
       parentId = global.parentId;
     }
-    tmp.parentId = parentId;
+    tmp3.parentId = parentId;
     _connectionEntrypointUrl = global.connection_entrypoint_url;
     if (_connectionEntrypointUrl == null) {
       _connectionEntrypointUrl = global._connectionEntrypointUrl;
     }
-    tmp._connectionEntrypointUrl = _connectionEntrypointUrl;
+    tmp3._connectionEntrypointUrl = _connectionEntrypointUrl;
     contentClassification = global.content_classification;
     if (contentClassification == null) {
       contentClassification = global.contentClassification;
     }
-    tmp.contentClassification = contentClassification;
-    return tmp;
+    tmp3.contentClassification = contentClassification;
+    obj = require("fromString");
+    num = global.flags;
+    if (num == null) {
+      num = 0;
+    }
+    tmp3.flags = obj.deserialize(num);
+    return tmp3;
   }
 }
 const prototype = BasicApplicationRecord.prototype;
@@ -95,6 +107,14 @@ BasicApplicationRecord["createFromServer"] = function createFromServer(bot) {
     connection_entrypoint_url: obj._connectionEntrypointUrl,
     content_classification: obj.contentClassification,
   } = bot);
+  let num = bot.flags_new;
+  if (num == null) {
+    num = bot.flags;
+  }
+  if (num == null) {
+    num = 0;
+  }
+  obj.flags = fromStringAll.deserialize(num);
   return new BasicApplicationRecord(obj);
 };
 Object.defineProperty(prototype, "connectionEntrypointUrl", {
@@ -164,105 +184,98 @@ prototype["getCoverImageURL"] = function getCoverImageURL(arg0) {
 let ApplicationRecord;
 class ApplicationRecord extends BasicApplicationRecord {
   constructor(arg0) {
-    tmp3 = new ApplicationRecord(global, tmp2, new.target, tmp);
+    tmp2 = new ApplicationRecord(global, tmp);
     // ThrowIfThisInitialized (0x7c)
     flag = global.overlay;
     if (flag == null) {
       flag = false;
     }
-    tmp3.overlay = flag;
+    tmp2.overlay = flag;
     flag2 = global.overlayWarn;
     if (flag2 == null) {
       flag2 = false;
     }
-    tmp3.overlayWarn = flag2;
+    tmp2.overlayWarn = flag2;
     flag3 = global.overlayCompatibilityHook;
     if (flag3 == null) {
       flag3 = false;
     }
-    tmp3.overlayCompatibilityHook = flag3;
+    tmp2.overlayCompatibilityHook = flag3;
     DEFAULT = global.overlayMethods;
     if (DEFAULT == null) {
-      tmp4 = closure_0;
-      tmp5 = closure_3;
+      tmp3 = closure_0;
+      tmp4 = closure_3;
       DEFAULT = require("ApplicationOverlayMethodFlags").ApplicationOverlayMethodFlags.DEFAULT;
     }
-    tmp3.overlayMethods = DEFAULT;
+    tmp2.overlayMethods = DEFAULT;
     flag4 = global.hook;
     if (flag4 == null) {
       flag4 = true;
     }
-    tmp3.hook = flag4;
+    tmp2.hook = flag4;
     aliases = global.aliases;
     if (aliases == null) {
       aliases = [];
     }
-    tmp3.aliases = aliases;
+    tmp2.aliases = aliases;
     publishers = global.publishers;
     if (publishers == null) {
       publishers = [];
     }
-    tmp3.publishers = publishers;
+    tmp2.publishers = publishers;
     developers = global.developers;
     if (developers == null) {
       developers = [];
     }
-    tmp3.developers = developers;
-    ({ storeListingSkuId: tmp3.storeListingSkuId, guildId: tmp3.guildId, guild: tmp3.guild, executables } = global);
+    tmp2.developers = developers;
+    ({ storeListingSkuId: tmp2.storeListingSkuId, guildId: tmp2.guildId, guild: tmp2.guild, executables } = global);
     if (executables == null) {
       executables = [];
     }
-    tmp3.executables = executables.map(createExecutable);
+    tmp2.executables = executables.map(createExecutable);
     hashes = global.hashes;
     if (hashes == null) {
       hashes = [];
     }
-    tmp3.hashes = hashes;
-    ({ eulaId: tmp3.eulaId, slug: tmp3.slug } = global);
-    obj = require("fromString");
-    num = global.flags;
-    if (num == null) {
-      num = 0;
-    }
-    tmp3.flags = obj.deserialize(num);
-    tags = global.tags;
+    tmp2.hashes = hashes;
+    ({ eulaId: tmp2.eulaId, slug: tmp2.slug, tags } = global);
     if (tags == null) {
       tags = [];
     }
-    tmp3.tags = tags;
-    ({ maxParticipants: tmp3.maxParticipants, embedded_activity_config } = global);
+    tmp2.tags = tags;
+    ({ maxParticipants: tmp2.maxParticipants, embedded_activity_config } = global);
     if (embedded_activity_config == null) {
       embedded_activity_config = global.embeddedActivityConfig;
     }
-    tmp3.embeddedActivityConfig = embedded_activity_config;
+    tmp2.embeddedActivityConfig = embedded_activity_config;
     ({
-      team: tmp3.team,
-      integrationTypesConfig: tmp3.integrationTypesConfig,
-      storefront_available: tmp3.storefront_available,
-      termsOfServiceUrl: tmp3.termsOfServiceUrl,
-      privacyPolicyUrl: tmp3.privacyPolicyUrl,
+      team: tmp2.team,
+      integrationTypesConfig: tmp2.integrationTypesConfig,
+      storefront_available: tmp2.storefront_available,
+      termsOfServiceUrl: tmp2.termsOfServiceUrl,
+      privacyPolicyUrl: tmp2.privacyPolicyUrl,
       is_discoverable,
     } = global);
     if (is_discoverable == null) {
       is_discoverable = global.isDiscoverable;
     }
-    tmp3.isDiscoverable = is_discoverable;
+    tmp2.isDiscoverable = is_discoverable;
     customInstallUrl = global.custom_install_url;
     if (customInstallUrl == null) {
       customInstallUrl = global.customInstallUrl;
     }
-    tmp3.customInstallUrl = customInstallUrl;
+    tmp2.customInstallUrl = customInstallUrl;
     installParams = global.install_params;
     if (installParams == null) {
       installParams = global.installParams;
     }
-    tmp3.installParams = installParams;
+    tmp2.installParams = installParams;
     directoryEntry = global.directory_entry;
     if (directoryEntry == null) {
       directoryEntry = global.directoryEntry;
     }
-    tmp3.directoryEntry = directoryEntry;
-    ({ categories: tmp3.categories, linked_games } = global);
+    tmp2.directoryEntry = directoryEntry;
+    ({ categories: tmp2.categories, linked_games } = global);
     mapped = undefined;
     if (linked_games != null) {
       mapped = linked_games.map((application) => {
@@ -279,23 +292,23 @@ class ApplicationRecord extends BasicApplicationRecord {
     if (mapped == null) {
       mapped = global.linkedGames;
     }
-    tmp3.linkedGames = mapped;
+    tmp2.linkedGames = mapped;
     deeplink_uri = global.deepLinkUri;
     if (deeplink_uri == null) {
       deeplink_uri = global.deeplink_uri;
     }
-    tmp3.deepLinkUri = deeplink_uri;
+    tmp2.deepLinkUri = deeplink_uri;
     application_account_link_benefit_config = global.applicationAccountLinkBenefitConfig;
     if (application_account_link_benefit_config == null) {
       application_account_link_benefit_config = global.application_account_link_benefit_config;
     }
-    tmp3.applicationAccountLinkBenefitConfig = application_account_link_benefit_config;
+    tmp2.applicationAccountLinkBenefitConfig = application_account_link_benefit_config;
     parent_id = global.parentId;
     if (parent_id == null) {
       parent_id = global.parent_id;
     }
-    tmp3.parentId = parent_id;
-    return tmp3;
+    tmp2.parentId = parent_id;
+    return tmp2;
   }
 }
 const prototype2 = ApplicationRecord.prototype;

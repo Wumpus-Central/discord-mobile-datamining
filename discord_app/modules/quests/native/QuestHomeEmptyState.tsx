@@ -94,14 +94,14 @@ export default function QuestHomeEmptyState(subtitle) {
     const obj6 = { children: null };
     const obj7 = { style: null, source: null, resizeMode: "cover" };
     obj7[0] = tmp5.emptyImage;
-    obj7[1] = tmp7(14892);
+    obj7[1] = tmp7(14907);
     const items2 = [tmp9(closure_4, obj7)];
     const obj8 = { style: null, end: null, start: null, colors: null };
     obj8[0] = tmp5.gradient;
     ({ END: obj12[1], START: obj12[2] } = VerticalGradient);
     const items3 = ["rgba(0, 0, 0, 0)", token];
     obj8[3] = items3;
-    items2[1] = tmp9(tmp7(4940), obj8);
+    items2[1] = tmp9(tmp7(4941), obj8);
     obj6[0] = items2;
     tmp11Result = tmp11(closure_8, obj6);
   }

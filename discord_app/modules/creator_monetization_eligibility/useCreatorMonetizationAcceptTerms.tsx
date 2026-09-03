@@ -81,10 +81,10 @@ export default function useCreateCreatorMonetizationAcceptTermsRequest(arg0, arg
                   v0 = 4;
                   c5 = 1;
                   obj1 = { value: null, done: false };
-                  obj1[0] = closure_1_2(17505).acceptCreatorMonetizationTerms(tmp56, tmp42);
+                  obj1[0] = closure_1_2(17525).acceptCreatorMonetizationTerms(tmp56, tmp42);
                   return obj1;
                 } else {
-                  let obj2 = closure_1_2(17505);
+                  let obj2 = closure_1_2(17525);
                   v0 = 3;
                   c5 = 1;
                   obj2 = { value: null, done: false };

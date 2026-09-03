@@ -14,9 +14,9 @@ export const showOverdueRemindersToast = function showOverdueRemindersToast() {
     overdueMessageReminderCount = overdueMessageReminderCount.getOverdueMessageReminderCount();
     if (0 !== overdueMessageReminderCount) {
       const mostRecentOverdueDueAt = obj2.getMostRecentOverdueDueAt();
-      let tmpResult = tmp(7615);
+      let tmpResult = tmp(7616);
       if (mostRecentOverdueDueAt > tmpResult.getRemindersLastSeenAt()) {
-        tmpResult = tmp(7615);
+        tmpResult = tmp(7616);
         tmpResult.markRemindersSeen();
         obj = {
           key: "overdue-message-reminders",

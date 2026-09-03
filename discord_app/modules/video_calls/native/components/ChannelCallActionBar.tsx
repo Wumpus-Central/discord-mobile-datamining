@@ -7,9 +7,9 @@ import useIsConnectedToVoiceChannel from "../../../voice_chat/VoiceChatHooks.tsx
 import ActionButtonAll from "CallBarAction.tsx";
 import useIsFiveButtonLayout from "../useIsFiveButtonLayout.tsx";
 import stopScreenshareDefault from "../useScreenshareUtils.tsx";
-import registerAssetDefault from "../../../../../_runtime/10080_registerAsset.js";
-import registerAssetDefault2 from "../../../../../_runtime/10081_registerAsset.js";
-import registerAssetDefault3 from "../../../../../_runtime/10082_registerAsset.js";
+import registerAssetDefault from "../../../../../_runtime/10084_registerAsset.js";
+import registerAssetDefault2 from "../../../../../_runtime/10085_registerAsset.js";
+import registerAssetDefault3 from "../../../../../_runtime/10086_registerAsset.js";
 import closure_4 from "../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import closure_6 from "../../../activities/EmbeddedActivitiesStore.tsx";
@@ -307,7 +307,7 @@ function useActionBarSecondButton(channel) {
 function useActionBarPrimaryButtons(channel) {
   channel = channel.channel;
   closure_1 = undefined;
-  let obj = channel(9537);
+  let obj = channel(9541);
   const isConnectedToVoiceChannel = obj.useIsConnectedToVoiceChannel(channel);
   const items = [closure_7, closure_10];
   closure_1 = channel(586).useStateFromStores(items, () => {
@@ -420,7 +420,7 @@ export default function ChannelCallActionBar(arg0) {
   const tmp4 = useIsRemoteDefault();
   let obj = useIsFiveButtonLayout;
   const isFiveButtonLayout = obj.useIsFiveButtonLayout(channel.id);
-  obj = { value: contextDefault(tmp2(5981).CHANNEL_CALL_ACTION_BAR).analyticsLocations, children: null };
+  obj = { value: contextDefault(tmp2(5982).CHANNEL_CALL_ACTION_BAR).analyticsLocations, children: null };
   obj = {
     pointerEvents: "box-none",
     style: isFiveButtonLayout ? tmp.containerForFiveButtonLayout : tmp.container,
@@ -429,7 +429,7 @@ export default function ChannelCallActionBar(arg0) {
   if (shouldShowConnectingScreen) {
     obj1 = { channel: null };
     obj1[0] = channel;
-    let tmp13Result = tmp11(tmp9(10083).CallConnectingActionBar, obj1);
+    let tmp13Result = tmp11(tmp9(10087).CallConnectingActionBar, obj1);
   } else {
     let tmp11Result = null;
     if (!tmp4) {
@@ -460,12 +460,12 @@ export default function ChannelCallActionBar(arg0) {
     const obj5 = { channel: null, isSmallSize: null };
     obj5[0] = channel;
     obj5[1] = isFiveButtonLayout;
-    items[2] = tmp11(tmp9(10107).ChannelCallMicButton, obj5);
+    items[2] = tmp11(tmp9(10111).ChannelCallMicButton, obj5);
     if (tmp7.END_REMOTE === END_REMOTE) {
       const obj6 = { channel: null, isSmallSize: null };
       obj6[0] = channel;
       obj6[1] = isFiveButtonLayout;
-      let tmp11Result2 = tmp11(tmp9(10117).DisconnectRemoteButton, obj6);
+      let tmp11Result2 = tmp11(tmp9(10121).DisconnectRemoteButton, obj6);
     } else if (tmp7.END_STREAM === END_REMOTE) {
       const obj7 = { channel: null, isSmallSize: null };
       obj7[0] = channel;

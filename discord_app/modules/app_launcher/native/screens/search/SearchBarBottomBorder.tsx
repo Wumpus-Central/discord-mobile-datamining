@@ -43,10 +43,10 @@ export const usePinnedSearchBarBottomBorder = function usePinnedSearchBarBottomB
     return obj;
   };
   obj = {
-    withSpring: triggerScrollHeight(4927).withSpring,
+    withSpring: triggerScrollHeight(4928).withSpring,
     scrollPosition: sharedValue,
     triggerScrollHeight,
-    springStandard: triggerScrollHeight(4931).springStandard,
+    springStandard: triggerScrollHeight(4932).springStandard,
   };
   fn.__closure = obj;
   fn.__workletHash = 5466161440826;

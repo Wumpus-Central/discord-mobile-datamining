@@ -79,7 +79,7 @@ function _savePersistentCodesEnabled() {
               aPIError = new callback(4376).APIError(dependencyMap);
               obj1 = aPIError(706);
               obj1.dispatch({ type: "SECURE_FRAMES_SETTINGS_UPDATE", persistentCodesEnabled: false });
-              obj2 = aPIError(4857);
+              obj2 = aPIError(4858);
               const obj3 = { title: null, body: null };
               const intl = callback(1233).intl;
               obj3[0] = intl.string(callback(1233).t.R0RpRX);
@@ -187,7 +187,7 @@ function _updatePersistentCodesEnabled() {
               })();
               dependencyMap = tmp19;
               if (null != tmp19) {
-                let obj2 = v0(9865);
+                let obj2 = v0(9869);
                 const intl = callback(1233).intl;
                 const string = intl.string;
                 const t = callback(1233).t;

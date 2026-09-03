@@ -17,5 +17,5 @@ export default function useMediaModalFooterBackground() {
     4,
   );
   mediaModalFooterBackgroundColorRgba = { r: tmp2[0], g: tmp2[1], b: tmp2[2], a: tmp2[3] };
-  return { mediaModalFooterBackgroundColorRgba, MediaModalFooterUnderlay: "r" };
+  return { mediaModalFooterBackgroundColorRgba, MediaModalFooterUnderlay: "Array" };
 }

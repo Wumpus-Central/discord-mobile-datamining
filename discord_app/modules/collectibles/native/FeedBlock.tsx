@@ -88,7 +88,7 @@ export default function _default(feedBlock) {
   obj1 = feedBlock(586);
   let items1 = [closure_8];
   stateFromStores1 = obj1.useStateFromStores(items1, () => closure_8.hasConsented(constants2.PERSONALIZATION));
-  let tmp6 = stateFromStores1(14900)();
+  let tmp6 = stateFromStores1(14915)();
   dependencyMap = tmp6;
   const items2 = [feedBlock.sortedSkuIds, tmp6, stateFromStores1];
   const memo = React.useMemo(() => {
@@ -118,7 +118,7 @@ export default function _default(feedBlock) {
     return { feedProducts: paths(items1), isPersonalized: tmp6 };
   }, items2);
   ({ isPersonalized, feedProducts } = memo);
-  let obj2 = feedBlock(14902);
+  let obj2 = feedBlock(14917);
   const filteredAndSortedProducts = obj2.useFilteredAndSortedProducts({
     products: feedProducts,
     maxProducts: 36,
@@ -136,7 +136,7 @@ export default function _default(feedBlock) {
     stringResult = string(t.ivaAA7);
   }
   obj = {
-    value: stateFromStores1(5961)(stateFromStores1(5981).COLLECTIBLES_SHOP_POPULAR_PICKS).analyticsLocations,
+    value: stateFromStores1(5962)(stateFromStores1(5982).COLLECTIBLES_SHOP_POPULAR_PICKS).analyticsLocations,
     children: null,
   };
   obj = { style: feedFooterOrbImage.feedContainer, children: null };
@@ -155,7 +155,7 @@ export default function _default(feedBlock) {
     const intl2 = tmp(1233).intl;
     obj3[2] = intl2.string(tmp(1233).t.hvVgAZ);
     obj3[3] = tmp12(tmp(4433).CircleInformationIcon, { size: "xs" });
-    isPersonalized = tmp12(tmp(5076).PressableOpacity, obj3);
+    isPersonalized = tmp12(tmp(5077).PressableOpacity, obj3);
   }
   function goToShopAll() {
     let obj = feedBlock(paths[15]);
@@ -175,13 +175,13 @@ export default function _default(feedBlock) {
     obj4[0] = goToShopAll;
     const intl3 = tmp(1233).intl;
     obj4[1] = intl3.string(tmp(1233).t.xFcotU);
-    tmp12Result = tmp12(tmp(4928).Button, obj4);
+    tmp12Result = tmp12(tmp(4929).Button, obj4);
   }
   items5[1] = tmp12Result;
   obj1[1] = items5;
   const items6 = [
     closure_12(closure_5, obj1),
-    callback(stateFromStores1(15652), {
+    callback(stateFromStores1(15666), {
       products: filteredAndSortedProducts,
       loadingCardsNum: 36,
       preferVCPrice,
@@ -197,7 +197,7 @@ export default function _default(feedBlock) {
   const obj7 = { onPress: goToShopAll, text: null, variant: "primary", size: "md" };
   const intl5 = tmp(1233).intl;
   obj7[1] = intl5.string(feedBlock(1233).t.AfrvRD);
-  items7[1] = callback(feedBlock(4928).Button, obj7);
+  items7[1] = callback(feedBlock(4929).Button, obj7);
   if (screen === constants.ORBS) {
     if (stateFromStores2) {
       const obj8 = {
@@ -207,7 +207,7 @@ export default function _default(feedBlock) {
         importantForAccessibility: "no-hide-descendants",
       };
       const obj9 = { uri: null };
-      tmp5Result = tmp5(15660);
+      tmp5Result = tmp5(15674);
       obj9[0] = tmp5Result;
       obj8[0] = obj9;
       feedFooterOrbImage = feedFooterOrbImage.feedFooterOrbImage;
@@ -222,8 +222,8 @@ export default function _default(feedBlock) {
           accessibilityElementsHidden: true,
           importantForAccessibility: "no-hide-descendants",
         };
-        tmp5Result = tmp5(8110);
-        obj10[0] = tmp5(15661);
+        tmp5Result = tmp5(8113);
+        obj10[0] = tmp5(15675);
         obj10[2] = feedFooterOrbImage.feedFooterOrbImage;
         tmp12Result = tmp12(tmp5Result, obj10);
       } else {
@@ -236,11 +236,11 @@ export default function _default(feedBlock) {
           importantForAccessibility: "no-hide-descendants",
         };
         const obj12 = { uri: null };
-        obj12[0] = tmp5(15661);
+        obj12[0] = tmp5(15675);
         obj11[0] = obj12;
         obj11[3] = feedFooterOrbImage.feedFooterOrbImage;
-        tmp12Result = tmp12(tmp5(5501), obj11);
-        const tmp5Result1 = tmp5(5501);
+        tmp12Result = tmp12(tmp5(5502), obj11);
+        const tmp5Result1 = tmp5(5502);
       }
       tmpResult = tmp(1234);
     }
@@ -252,11 +252,11 @@ export default function _default(feedBlock) {
       importantForAccessibility: "no-hide-descendants",
     };
     if (stateFromStores) {
-      obj13[0] = tmp(15662);
+      obj13[0] = tmp(15676);
       obj13[1] = feedFooterOrbImage.feedFooterImage;
       let tmp18 = obj13;
     } else {
-      obj13[0] = tmp(15663);
+      obj13[0] = tmp(15677);
       obj13[1] = feedFooterOrbImage.feedFooterImage;
       tmp18 = obj13;
     }
@@ -265,6 +265,6 @@ export default function _default(feedBlock) {
     items6[2] = tmp13(tmp14, obj5);
     obj[1] = items6;
     obj[1] = tmp13(tmp14, obj);
-    return tmp12(tmp(5961).AnalyticsLocationProvider, obj);
+    return tmp12(tmp(5962).AnalyticsLocationProvider, obj);
   }
 }

@@ -10,7 +10,7 @@ require = arg1;
 function GuildsBarHomeDrawerSeparator(guildItemSize) {
   guildItemSize = guildItemSize.guildItemSize;
   let panelX;
-  let obj = guildItemSize(15845);
+  let obj = guildItemSize(15861);
   panelX = obj.useHomeDrawerState().panelX;
   const tmp = callback(guildItemSize);
   const fn = function n() {
@@ -20,17 +20,17 @@ function GuildsBarHomeDrawerSeparator(guildItemSize) {
     return obj;
   };
   obj = {
-    withSpring: guildItemSize(4927).withSpring,
+    withSpring: guildItemSize(4928).withSpring,
     guildItemSize,
     panelX,
-    HOME_DRAWER_FLING_PHYSICS: guildItemSize(15845).HOME_DRAWER_FLING_PHYSICS,
+    HOME_DRAWER_FLING_PHYSICS: guildItemSize(15861).HOME_DRAWER_FLING_PHYSICS,
   };
   fn.__closure = obj;
   fn.__workletHash = 1425261651828;
   fn.__initData = closure_5;
   const animatedStyle = guildItemSize(4217).useAnimatedStyle(fn);
   const style = [tmp.separator, animatedStyle];
-  return jsx(panelX(7805), { style });
+  return jsx(panelX(7808), { style });
 }
 let closure_4 = createCacheKey.createStyles((maxWidth) => {
   let obj = { separator: null };

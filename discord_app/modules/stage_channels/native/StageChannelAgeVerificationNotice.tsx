@@ -17,7 +17,7 @@ function StageChannelAgeVerificationNoticeContent(onConfirmPress) {
   onConfirmPress = onConfirmPress.onConfirmPress;
   closure_1 = undefined;
   closure_1 = callback2();
-  let obj = onConfirmPress(4733);
+  let obj = onConfirmPress(4734);
   const isVerifiedTeen = obj.useIsVerifiedTeen();
   const intl = onConfirmPress(1233).intl;
   const format = intl.format;

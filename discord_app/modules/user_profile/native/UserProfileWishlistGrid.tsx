@@ -417,7 +417,7 @@ export default function UserProfileWishlistGrid(wishlistId) {
                                   throwTypeErrorResult = closure_2_18;
                                   obj2[2] = closure_2_18.FEATURED_PAGE;
                                   obj2[3] = function onNavigateAway(arg0) {
-                                    callback(8911)({ userId: user.id, initialSection: closure_1_15.WISHLIST });
+                                    callback(8915)({ userId: user.id, initialSection: closure_1_15.WISHLIST });
                                   };
                                   throwTypeErrorResult = lib(context[24]).openCollectiblesShopMobile(obj2);
                                   throwTypeErrorResult = lib;
@@ -594,7 +594,7 @@ export default function UserProfileWishlistGrid(wishlistId) {
                               throwTypeErrorResult = closure_2_19;
                               obj11[3] = closure_2_19.USER_PROFILE_WISHLIST;
                               obj11[4] = function onGiftModalDismiss(arg0) {
-                                callback(8911)({ userId: user.id, initialSection: closure_1_15.WISHLIST });
+                                callback(8915)({ userId: user.id, initialSection: closure_1_15.WISHLIST });
                               };
                               throwTypeErrorResult = lib(context[49]).openSocialLayerStorefrontGiftModal(obj11);
                               const obj55 = lib(context[49]);

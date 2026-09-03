@@ -2,7 +2,7 @@
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import getSystemLocale from "../../../../intl/index.native.tsx";
 import Text from "../../../../design/components/Text/native/Text.tsx";
-import LinearGradientDefault from "../../../../../_runtime/04940_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/04941_LinearGradient.js";
 import create from "../../../../../discord_common/js/packages/protos/discord_protos/premium_marketing/v1/gift_plan_selection_card_banner.tsx";
 import useThemeAndReducedMotionAwareAssetUrl from "../../promotions/MarketingComponentHooks.tsx";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
@@ -92,7 +92,7 @@ const memoResult = importAllResult.memo(
       obj1 = { uri: null };
       obj1[0] = themeAndReducedMotionAwareAssetUrl;
       obj[2] = obj1;
-      tmp9 = callback(tmp7(5501), obj);
+      tmp9 = callback(tmp7(5502), obj);
     }
     const items = [tmp9, ,];
     const obj2 = { style: tmp.content, children: null };
@@ -128,9 +128,9 @@ const memoResult = importAllResult.memo(
       items3[1] = logoLargeTilted;
       obj7[1] = items3;
       obj7[2] = themeAndReducedMotionAwareAssetUrl1;
-      obj6[1] = tmp12(tmp7(10749), obj7);
+      obj6[1] = tmp12(tmp7(10753), obj7);
       tmp12Result = tmp12(View, obj6);
-      const tmp7Result = tmp7(10749);
+      const tmp7Result = tmp7(10753);
     }
     items[2] = tmp12Result;
     obj[6] = items;

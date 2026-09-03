@@ -17,10 +17,10 @@ let obj = keys.create(() => {
     startTimeMillis: 0,
     waveform: false,
     waveformVersion: "flex",
-    showVoiceMessagesTooltip: "M5 2H4v1h1V2Z",
-    savedVoiceMessageUploadData: null,
-    isVoiceMessageButtonMounted: 0.75,
-    isUsingHoldGesture: null,
+    showVoiceMessagesTooltip: "exercise",
+    savedVoiceMessageUploadData: "gesture",
+    isVoiceMessageButtonMounted: "gesturing",
+    isUsingHoldGesture: "hand",
   };
   items = [,];
   ({ SENDING: arr[0], SENDING: arr[1] } = closure_2);
@@ -67,7 +67,7 @@ export const addVoiceMessageWave = function addVoiceMessageWave(arg0) {
   const waveformVersion = obj.getState().waveformVersion;
   const currWaveHeight = obj.getState().currWaveHeight;
   if (null != currWaveHeight) {
-    obj = waveformVersion(4927);
+    obj = waveformVersion(4928);
     const result = currWaveHeight.set(obj.withSpring(arg0 / closure_3));
   }
   const items = [arg0, waveformVersion];

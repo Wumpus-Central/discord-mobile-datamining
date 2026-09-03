@@ -41,7 +41,7 @@ function BaseIdentityVerificationField(icon) {
     const intl = tmp7(1233).intl;
     obj2[3] = intl.string(tmp7(1233).t["13ofGu"]);
     obj2[4] = onPress;
-    obj1[1] = tmp6(tmp7(4928).Button, obj2);
+    obj1[1] = tmp6(tmp7(4929).Button, obj2);
   }
   items[2] = callback(View, obj1);
   obj[1] = items;
@@ -98,11 +98,11 @@ export default function IdentityVerificationField(arg0) {
       stringResult1 = intl.string(tmp(1233).t.mhv8BM);
     }
     if (tmp(4302).UserVerificationFieldPlatforms.EMAIL === platform) {
-      let EnvelopeIcon = tmp(7813).EnvelopeIcon;
+      let EnvelopeIcon = tmp(7816).EnvelopeIcon;
     } else if (tmp(4302).UserVerificationFieldPlatforms.PHONE === platform) {
-      EnvelopeIcon = tmp(7742).MobilePhoneIcon;
+      EnvelopeIcon = tmp(7745).MobilePhoneIcon;
     } else {
-      EnvelopeIcon = tmp(7813).EnvelopeIcon;
+      EnvelopeIcon = tmp(7816).EnvelopeIcon;
     }
     if (tmp(4302).UserVerificationFieldPlatforms.EMAIL === platform) {
       let fn = () => {

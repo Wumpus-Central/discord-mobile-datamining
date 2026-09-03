@@ -1,10 +1,12 @@
 // discord_app/modules/quests/utils/QuestMatchingUtils.tsx
 import getQuestDeliveryDataForPlacement from "QuestDataUtils.tsx";
-import closure_2 from "../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_3 from "../../applications/ApplicationStore.tsx";
+import getApplicationIdsForGameDefault from "../../games/utils/getApplicationIdsForGame.tsx";
+import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../applications/ApplicationStore.tsx";
+import closure_5 from "../../../stores/LocalActivityStore.tsx";
 import QuestsExperimentLocations from "../QuestConstants.tsx";
 import { ActivityGamePlatforms } from "../../../Constants.tsx";
-import { XBOX_ACTIVITY_APPLICATION_ID as closure_8 } from "../../activities/Constants.tsx";
+import { XBOX_ACTIVITY_APPLICATION_ID as closure_10 } from "../../activities/Constants.tsx";
 import { getApplicationIdsByTaskTypes } from "QuestTaskUtils.tsx";
 
 require = arg1;
@@ -14,7 +16,7 @@ function questMatchesActivity(arg0, id) {
   if (null == arg0) {
     return tmp3;
   } else {
-    let tmp5 = formatted.application_id === closure_8;
+    let tmp5 = formatted.application_id === closure_10;
     if (!tmp5) {
       tmp5 = formatted.platform === ActivityGamePlatforms.XBOX;
     }
@@ -22,17 +24,17 @@ function questMatchesActivity(arg0, id) {
       if (!tmp9) {
         let tmp10 = tmp2 != id;
         if (tmp10) {
-          tmp10 = id.id === closure_5;
+          tmp10 = id.id === closure_7;
         }
         if (tmp10) {
-          tmp10 = formatted.application_id === closure_6;
+          tmp10 = formatted.application_id === closure_8;
         }
         if (!tmp10) {
           let tmp13 = tmp2 != formatted.application_id;
           if (tmp13) {
             const application_id = formatted.application_id;
-            const allApplicationIds = application_id(7479).getAllApplicationIds(id);
-            const obj = application_id(7479);
+            const allApplicationIds = application_id(7480).getAllApplicationIds(id);
+            const obj = application_id(7480);
             tmp13 = tmp2 != allApplicationIds && allApplicationIds.some((arg0) => arg0 === closure_0);
             const tmp16 = tmp2 != allApplicationIds && allApplicationIds.some((arg0) => arg0 === closure_0);
           }
@@ -42,7 +44,7 @@ function questMatchesActivity(arg0, id) {
       tmp9 = formatted.platform === ActivityGamePlatforms.PS4 || formatted.platform === tmp8.PS5;
     }
     formatted = formatted.name.toLowerCase();
-    const consoleApplicationId = application_id(7479).getConsoleApplicationId(id);
+    const consoleApplicationId = application_id(7480).getConsoleApplicationId(id);
     let flag = false;
     if (tmp2 != consoleApplicationId) {
       application = application.getApplication(consoleApplicationId);
@@ -54,7 +56,7 @@ function questMatchesActivity(arg0, id) {
       flag = tmp2;
     }
     tmp10 = flag;
-    const obj3 = application_id(7479);
+    const obj3 = application_id(7480);
     const str = formatted.name;
   }
 }
@@ -88,9 +90,9 @@ function questMatchesApplicationId(arg0, quest) {
   return null != allApplicationIds && allApplicationIds.some((arg0) => arg0 === closure_0);
 }
 ({
-  DISCORD_APPLICATION_ID: c4,
-  PLAY_ACTIVITY_CLOUD_GAMING_QUEST_ID: c5,
-  PLAY_ACTIVITY_SOCIAL_ENTRY_APPLICATION_ID: closure_6,
+  DISCORD_APPLICATION_ID: closure_6,
+  PLAY_ACTIVITY_CLOUD_GAMING_QUEST_ID: error,
+  PLAY_ACTIVITY_SOCIAL_ENTRY_APPLICATION_ID: closure_8,
 } = QuestsExperimentLocations);
 const result = require("set").fileFinishedImporting("modules/quests/utils/QuestMatchingUtils.tsx");
 
@@ -123,15 +125,15 @@ export const getQuestByApplicationId = function getQuestByApplicationId(arg0, ar
 export const allPlayOnDesktopQuestsByApplicationId = function allPlayOnDesktopQuestsByApplicationId(arr) {
   closure_0 = arg1;
   return Array.from(arr.values()).filter((quest) => {
-    let obj = callback(closure_1_1[5]);
+    let obj = callback(closure_1_2[6]);
     const allApplicationIds = obj.getAllApplicationIds(quest);
     let hasPlayOnDesktopTaskResult = null != allApplicationIds && allApplicationIds.some((arg0) => arg0 === closure_0);
     if (hasPlayOnDesktopTaskResult) {
-      let tmpResult = tmp(tmp2[6]);
+      let tmpResult = tmp(tmp2[7]);
       hasPlayOnDesktopTaskResult = !tmpResult.isQuestExpired(quest);
     }
     if (hasPlayOnDesktopTaskResult) {
-      tmpResult = tmp(tmp2[5]);
+      tmpResult = tmp(tmp2[6]);
       obj = { quest: null };
       obj[0] = quest;
       hasPlayOnDesktopTaskResult = tmpResult.hasPlayOnDesktopTask(obj);
@@ -173,21 +175,21 @@ export const getEligibleQuestsForApplicationId = function getEligibleQuestsForAp
   } else {
     const _Array = Array;
     items = Array.from(quests.values()).filter((userStatus) => {
-      const activityApplicationId = applicationId(flag[5]).getActivityApplicationId(userStatus);
+      const activityApplicationId = applicationId(closure_1_2[6]).getActivityApplicationId(userStatus);
       let canLaunchActivityResult = null != userStatus;
       if (canLaunchActivityResult) {
-        let tmpResult = tmp(tmp2[7]);
+        let tmpResult = tmp(tmp2[8]);
         canLaunchActivityResult = tmpResult.canLaunchActivity(userStatus);
       }
       if (canLaunchActivityResult) {
-        tmpResult = tmp(tmp2[6]);
+        tmpResult = tmp(tmp2[7]);
         canLaunchActivityResult = !tmpResult.isQuestExpired(userStatus);
       }
       if (canLaunchActivityResult) {
         canLaunchActivityResult = activityApplicationId === applicationId;
       }
       if (canLaunchActivityResult) {
-        canLaunchActivityResult = activityApplicationId !== closure_1_4;
+        canLaunchActivityResult = activityApplicationId !== closure_1_6;
       }
       if (canLaunchActivityResult) {
         userStatus = userStatus.userStatus;
@@ -212,4 +214,16 @@ export const getEligibleQuestsForApplicationId = function getEligibleQuestsForAp
     const arr = Array.from(quests.values());
   }
   return items;
+};
+export const getQuestApplicationIdsForRunningGame = function getQuestApplicationIdsForRunningGame(pid, arg1) {
+  const obj = getApplicationIdsForGameDefault(arg1);
+  applicationIdForPID = applicationIdForPID.getApplicationIdForPID(pid.pid);
+  if (null != applicationIdForPID) {
+    const tmp4 = getApplicationIdsForGameDefault(applicationIdForPID);
+    for (const item10019 of tmp4) {
+      let addResult = obj.add(item10019);
+      continue;
+    }
+  }
+  return obj;
 };

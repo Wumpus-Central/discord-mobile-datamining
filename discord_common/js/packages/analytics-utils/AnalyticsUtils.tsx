@@ -18,6 +18,7 @@ export const ImpressionTypes = ImpressionGroups.ImpressionTypes;
 export const ImpressionGroups = ImpressionGroups.ImpressionGroups;
 export const ImpressionNames = ImpressionNames.ImpressionNames;
 export const NetworkActionNames = ImpressionNames.NetworkActionNames;
+export const SpanTtiNames = ImpressionNames.SpanTtiNames;
 export const getSuperProperties = getOS.getSuperProperties;
 export const getSuperPropertiesBase64 = getOS.getSuperPropertiesBase64;
 export const extendSuperProperties = getOS.extendSuperProperties;

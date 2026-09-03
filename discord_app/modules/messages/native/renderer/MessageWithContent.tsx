@@ -65,7 +65,7 @@ export const generateMessageRowData = function generateMessageRowData(canShowIma
   obj[9] = truncation;
   obj[10] = tmp3;
   if (overrideBackgroundHighlight == null) {
-    let tmp4Result = tmp4(8026);
+    let tmp4Result = tmp4(8029);
     obj = { message: null, theme: null, isEditing: null, isAutomodBlockedMessage: null };
     obj[0] = message;
     obj[1] = theme;
@@ -74,7 +74,7 @@ export const generateMessageRowData = function generateMessageRowData(canShowIma
     overrideBackgroundHighlight = tmp4Result.createBackgroundHighlight(obj);
   }
   obj[11] = overrideBackgroundHighlight;
-  tmp4Result = tmp4(8026);
+  tmp4Result = tmp4(8029);
   let canReply = options.enableSwipeActions;
   if (canReply) {
     canReply = canShowImages.canReply;

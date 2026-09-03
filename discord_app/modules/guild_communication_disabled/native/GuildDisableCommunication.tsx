@@ -117,7 +117,7 @@ const memoResult = importAllResult.memo(function GuildDisableCommunication(arg0)
               return obj;
             } else {
               closure_1 = tmp4;
-              let obj3 = closure_1_1(11638);
+              let obj3 = closure_1_1(11643);
               dependencyMap = 1;
               c3 = 1;
               obj1 = { value: null, done: false };
@@ -149,7 +149,7 @@ const memoResult = importAllResult.memo(function GuildDisableCommunication(arg0)
             obj3 = { user: null };
             obj3[0] = c0;
             obj[1] = intl.formatToPlainString(closure_1_0(1233).t.O9C3Nt, obj3);
-            obj[2] = closure_1_1(9531);
+            obj[2] = closure_1_1(9535);
             obj8.open(obj);
             dependencyMap();
             c3 = 3;

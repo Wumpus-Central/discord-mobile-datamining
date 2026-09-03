@@ -26,7 +26,7 @@ Object.defineProperty(prototype, "loading", {
   set: undefined,
 });
 Object.defineProperty(prototype, "methods", {
-  get: function methods(arg0) {
+  get: function methods(first, arg1) {
     return c4;
   },
   set: undefined,

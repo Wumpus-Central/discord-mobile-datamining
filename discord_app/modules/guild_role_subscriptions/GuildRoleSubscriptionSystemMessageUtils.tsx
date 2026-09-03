@@ -194,19 +194,22 @@ export const isEligibleForRoleSubscriptionPurchaseSystemMessageSettings =
     return useIsCreatorMonetizationEnabledGuild.isCreatorMonetizationEnabledGuild(guild);
   };
 export const trackRoleSubscriptionPurchaseMessageTierClick = function trackRoleSubscriptionPurchaseMessageTierClick(
-  guild_id,
+  guildId,
+  channelId,
+  messageId,
+  roleSubscriptionListingId,
 ) {
   let obj = collectGuildAnalyticsMetadataDefault;
-  obj = { guild_id, user_id: null, channel_id: null, message_id: null, role_subscription_listing_id: null };
+  obj = { guild_id: guildId, user_id: null, channel_id: null, message_id: null, role_subscription_listing_id: null };
   const currentUser = authStore.getCurrentUser();
   let id;
   if (currentUser != null) {
     id = currentUser.id;
   }
   obj[1] = id;
-  obj[2] = arg1;
-  obj[3] = arg2;
-  obj[4] = arg3;
+  obj[2] = channelId;
+  obj[3] = messageId;
+  obj[4] = roleSubscriptionListingId;
   obj.trackWithMetadata(constants.ROLE_SUBSCRIPTION_PURCHASE_SYSTEM_MESSAGE_CLICKED, obj);
 };
 export const getRoleSubscriptionPurchaseSystemMessageEventProperties =

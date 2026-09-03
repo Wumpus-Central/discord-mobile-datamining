@@ -14,7 +14,7 @@ let result = require("set").fileFinishedImporting("modules/media_viewer/native/u
 export const useOverlayLayoutDriver = function useOverlayLayoutDriver() {
   sharedValue = sharedValue(4217).useSharedValue(0);
   let obj = sharedValue(4217);
-  const mediaViewerDimensions = sharedValue(8603).useMediaViewerDimensions();
+  const mediaViewerDimensions = sharedValue(8607).useMediaViewerDimensions();
   const items = [sharedValue, ,];
   ({ height: arr[1], width: arr[2] } = mediaViewerDimensions);
   const effect = React.useEffect(() => {

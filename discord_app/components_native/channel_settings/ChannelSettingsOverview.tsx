@@ -23,7 +23,7 @@ import getAutoArchiveOptions from "../../modules/threads/ThreadAutoArchive.tsx";
 import Form from "../../design/void/Form/native/index.tsx";
 import AppChannelApplicationSelectorDefault from "../../modules/app_channels/native/AppChannelApplicationSelector.tsx";
 import Slider from "../../design/components/Slider/native/Slider.native.tsx";
-import _modDef16627 from "../../actions/RegionActionCreators.tsx";
+import _modDef16647 from "../../actions/RegionActionCreators.tsx";
 import getSecondsSliderLabel from "../../utils/SecondsSliderUtils.tsx";
 import getIsChannelNameSettingEditable from "ChannelSettingsUtils.tsx";
 import AutoArchiveDurationOptions from "../../modules/threads/native/components/ThreadAutoArchiveBottomSheet.tsx";
@@ -727,7 +727,7 @@ prototype["componentDidMount"] = function componentDidMount() {
   const self = this;
   this.updateNavigation(undefined, this.state);
   if (tmp2) {
-    let obj = _modDef16627;
+    let obj = _modDef16647;
     const regions = obj.fetchRegions(self.props.guild.id);
   }
   obj = { settings_type: "channel", destination_pane: constants6.CHANNEL_SETTINGS };
@@ -767,7 +767,7 @@ prototype["updateNavigation"] = function updateNavigation(submitting, hasChanges
       stringResult1 = intl.string(hasChanges(1233).t.XPDhcc);
     }
     if (submitting) {
-      let fn = tmp3(5503).HeaderSubmittingIndicator;
+      let fn = tmp3(5504).HeaderSubmittingIndicator;
     } else {
       fn = (arg0) => {
         const obj = {};
@@ -829,7 +829,7 @@ prototype["renderChannelInfo"] = function renderChannelInfo() {
     errorMessage: null,
     enableAndroidSanitizedInputWorkaround: true,
   };
-  const TextInput = tmp3(7714).TextInput;
+  const TextInput = tmp3(7717).TextInput;
   obj[3] = computeChannelName.computeChannelName(channel, closure_24, closure_23);
   ({ handleChangeName: obj2[4], handleBlurName: obj2[5] } = self);
   obj[6] = !isChannelNameSettingEditable;
@@ -867,7 +867,7 @@ prototype["renderChannelInfo"] = function renderChannelInfo() {
     obj1[4] = !canManageChannels;
     obj1[6] = channel.isForumLikeChannel() ? closure_44 : closure_43;
     obj1[7] = self.getError("topic");
-    closure_47(tmp3(7817).TextArea, obj1);
+    closure_47(tmp3(7820).TextArea, obj1);
     const obj5 = parseRawEmojiObjectDefault;
   }
 };
@@ -888,7 +888,7 @@ prototype["renderNsfwConfig"] = function renderNsfwConfig() {
         obj = { label: null, value: null, onValueChange: null, disabled: null, subLabel: null };
         const intl2 = tmp2(1233).intl;
         obj[0] = intl2.string(tmp2(1233).t.Es25Yf);
-        obj[1] = tmp2(4731).isChannelOrGuildNSFW(channel);
+        obj[1] = tmp2(4732).isChannelOrGuildNSFW(channel);
         obj[2] = this.handleNsfwChange;
         obj[3] = isNSFWDisabled;
         let stringResult;
@@ -897,9 +897,9 @@ prototype["renderNsfwConfig"] = function renderNsfwConfig() {
           stringResult = intl3.string(tmp2(1233).t.l6uSVa);
         }
         obj[4] = stringResult;
-        obj[2] = closure_47(tmp2(6001).TableSwitchRow, obj);
-        tmp = tmp4(tmp2(6000).TableRowGroup, obj, "nsfw-section");
-        const tmp2Result = tmp2(4731);
+        obj[2] = closure_47(tmp2(6002).TableSwitchRow, obj);
+        tmp = tmp4(tmp2(6001).TableRowGroup, obj, "nsfw-section");
+        const tmp2Result = tmp2(4732);
       }
     }
   }
@@ -1033,7 +1033,7 @@ prototype["renderAutoArchiveDuration"] = function renderAutoArchiveDuration() {
       obj[2] = autoArchiveDuration;
       obj[3] = channel;
       obj[4] = this.handleAutoArchiveDurationChange;
-      return closure_47(tmp5(16630).AutoArchiveDurationOptions, obj);
+      return closure_47(tmp5(16650).AutoArchiveDurationOptions, obj);
     }
   }
   return null;
@@ -1350,10 +1350,10 @@ prototype["renderUserLimitSettings"] = function renderUserLimitSettings() {
       obj4[1] = Math.min(channel.userLimit, tmp10);
       obj4[3] = tmp10;
       obj4[4] = this.handleUserLimitChange;
-      items2[1] = closure_47(tmp7(14044).Slider, obj4);
+      items2[1] = closure_47(tmp7(14060).Slider, obj4);
       obj[0] = items2;
-      obj[2] = callback4(tmp7(5609).Card, obj);
-      items.push(closure_47(tmp7(6000).TableRowGroup, obj, "channel-user-limit"));
+      obj[2] = callback4(tmp7(5610).Card, obj);
+      items.push(closure_47(tmp7(6001).TableRowGroup, obj, "channel-user-limit"));
       return items;
     }
   }
@@ -1395,13 +1395,13 @@ prototype["renderRegionOverride"] = function renderRegionOverride() {
           obj[0] = intl4.string(channel(1233).t["Ms8bX+"]);
           obj = { text: null };
           obj[0] = name;
-          obj[1] = callback3(channel(5607).TableRow.TrailingText, obj);
+          obj[1] = callback3(channel(5608).TableRow.TrailingText, obj);
           obj[3] = tmp2;
           obj[4] = function onPress() {
             return self.pushScreen(closure_1_29.CHANGE_RTC_REGION);
           };
-          obj[3] = callback3(channel(5607).TableRow, obj);
-          items.push(callback3(channel(6000).TableRowGroup, obj, "channel-region-override"));
+          obj[3] = callback3(channel(5608).TableRow, obj);
+          items.push(callback3(channel(6001).TableRowGroup, obj, "channel-region-override"));
           return items;
         }
       }
@@ -1446,14 +1446,14 @@ prototype["renderPermissions"] = function renderPermissions() {
     }
     obj = { label: null, arrow: true, icon: null, onPress: null };
     obj[0] = stringResult;
-    ShieldUserIcon = ShieldUserIcon(9735).ShieldUserIcon;
+    ShieldUserIcon = ShieldUserIcon(9739).ShieldUserIcon;
     tmp2Result = tmp2(ShieldUserIcon, {});
     obj[2] = tmp2Result;
     obj[3] = function onPress() {
       return self.pushScreen(closure_1_29.PERMISSIONS, { origin: closure_1_29.OVERVIEW });
     };
-    obj[2] = closure_47(self(5607).TableRow, obj);
-    tmp2Result = tmp2(self(6000).TableRowGroup, obj);
+    obj[2] = closure_47(self(5608).TableRow, obj);
+    tmp2Result = tmp2(self(6001).TableRowGroup, obj);
   }
 };
 prototype["renderSettingsSection"] = function renderSettingsSection(items) {
@@ -1476,7 +1476,7 @@ prototype["renderCommonSettingsSection"] = function renderCommonSettingsSection(
     let obj = { label: null, arrow: true, icon: null, onPress: null };
     const intl = channel(1233).intl;
     obj[0] = intl.string(channel(1233).t.h850Ss);
-    obj[2] = callback3(channel(9768).BellIcon, {});
+    obj[2] = callback3(channel(9772).BellIcon, {});
     obj[3] = function onPress() {
       if (channel.isThread()) {
         let result = channel(closure_1_2[74]).showThreadNotificationsBottomSheet(channel);
@@ -1486,7 +1486,7 @@ prototype["renderCommonSettingsSection"] = function renderCommonSettingsSection(
       }
       return result;
     };
-    items.push(callback3(channel(5607).TableRow, obj, "rowNotifications"));
+    items.push(callback3(channel(5608).TableRow, obj, "rowNotifications"));
   }
   if (callback2(channel.type)) {
     obj = { label: null, arrow: true, icon: null, onPress: null, disabled: null };
@@ -1499,7 +1499,7 @@ prototype["renderCommonSettingsSection"] = function renderCommonSettingsSection(
       return self.pushScreen(closure_1_29.PINNED_MESSAGES);
     };
     obj[4] = self.props.pinDisabled;
-    items.push(callback3(channel(5607).TableRow, obj, "rowPinnedMessages"));
+    items.push(callback3(channel(5608).TableRow, obj, "rowPinnedMessages"));
   }
   if (canManageChannels) {
     canManageChannels = channel.type !== constants2.GUILD_CATEGORY;
@@ -1515,7 +1515,7 @@ prototype["renderCommonSettingsSection"] = function renderCommonSettingsSection(
     obj1[3] = function onPress() {
       return self.pushScreen(closure_1_29.INSTANT_INVITES);
     };
-    items.push(callback3(channel(5607).TableRow, obj1, "rowInstantInvites"));
+    items.push(callback3(channel(5608).TableRow, obj1, "rowInstantInvites"));
   }
   return self.renderSettingsSection(items);
 };
@@ -1542,20 +1542,20 @@ prototype["renderDefaultForumLayout"] = function renderDefaultForumLayout() {
     }
     obj1 = { text: null };
     obj1[0] = stringResult;
-    obj[1] = closure_47(self(5607).TableRow.TrailingText, obj1);
+    obj[1] = closure_47(self(5608).TableRow.TrailingText, obj1);
     if (channel.defaultForumLayout === GridSquareIcon(1396).ForumLayout.GRID) {
-      GridSquareIcon = GridSquareIcon(16632).GridSquareIcon;
+      GridSquareIcon = GridSquareIcon(16652).GridSquareIcon;
       obj = {};
       let tmpResult = tmp(GridSquareIcon, obj);
     } else {
-      tmpResult = tmp(GridSquareIcon(7678).ListViewIcon, {});
+      tmpResult = tmp(GridSquareIcon(7681).ListViewIcon, {});
     }
     obj[3] = tmpResult;
     obj[4] = function onPress() {
       return self.pushScreen(closure_1_29.DEFAULT_FORUM_LAYOUT);
     };
-    obj[2] = closure_47(self(5607).TableRow, obj, "forumDefaultLayout");
-    tmpResult = tmp(self(6000).TableRowGroup, obj, "default-forum-layout");
+    obj[2] = closure_47(self(5608).TableRow, obj, "forumDefaultLayout");
+    tmpResult = tmp(self(6001).TableRowGroup, obj, "default-forum-layout");
   }
 };
 prototype["renderUncommonSettingsSection"] = function renderUncommonSettingsSection() {
@@ -1609,7 +1609,7 @@ prototype["renderThreadManagementActions"] = function renderThreadManagementActi
         obj[2] = function onPress() {
           return closure_1_1(closure_1_2[82]).unarchiveThread(closure_0, false);
         };
-        callback3(tmp2(5607).TableRow, obj);
+        callback3(tmp2(5608).TableRow, obj);
         const tmp9 = callback3;
       }
     }
@@ -1633,7 +1633,7 @@ prototype["renderThreadManagementActions"] = function renderThreadManagementActi
         obj[2] = function onPress() {
           return closure_1_1(closure_1_2[82]).archiveThread(closure_0, false);
         };
-        callback3(tmp2(5607).TableRow, obj);
+        callback3(tmp2(5608).TableRow, obj);
         const tmp13 = callback3;
       }
     }
@@ -1643,7 +1643,7 @@ prototype["renderThreadManagementActions"] = function renderThreadManagementActi
       tmp16 = null;
       if (isLockedThread) {
         obj1 = { icon: null, label: null, onPress: null };
-        obj1[0] = callback3(tmp2(5048).LockIcon, {});
+        obj1[0] = callback3(tmp2(5049).LockIcon, {});
         const intl4 = tmp2(1233).intl;
         const string4 = intl4.string;
         _OKSxp = tmp2(1233).t;
@@ -1657,7 +1657,7 @@ prototype["renderThreadManagementActions"] = function renderThreadManagementActi
         obj1[2] = function onPress() {
           return closure_1_1(closure_1_2[82]).unlockThread(closure_0);
         };
-        callback3(tmp2(5607).TableRow, obj1);
+        callback3(tmp2(5608).TableRow, obj1);
         const tmp17 = callback3;
       }
     }
@@ -1667,7 +1667,7 @@ prototype["renderThreadManagementActions"] = function renderThreadManagementActi
       tmp20 = null;
       if (!isLockedThread) {
         const obj2 = { icon: null, label: null, onPress: null };
-        obj2[0] = callback3(tmp2(5048).LockIcon, {});
+        obj2[0] = callback3(tmp2(5049).LockIcon, {});
         const intl5 = tmp2(1233).intl;
         const string5 = intl5.string;
         Ur_0Na = tmp2(1233).t;
@@ -1681,7 +1681,7 @@ prototype["renderThreadManagementActions"] = function renderThreadManagementActi
         obj2[2] = function onPress() {
           return closure_1_1(closure_1_2[82]).lockThread(closure_0);
         };
-        callback3(tmp2(5607).TableRow, obj2);
+        callback3(tmp2(5608).TableRow, obj2);
         const tmp21 = callback3;
       }
     }
@@ -1694,12 +1694,12 @@ prototype["renderThreadManagementActions"] = function renderThreadManagementActi
     obj4[2] = function onPress() {
       return closure_1_0(closure_1_2[86]).copyGuildChannelOrThreadLink(closure_0.guild_id, closure_0.id);
     };
-    items[5] = callback3(tmp2(5607).TableRow, obj4);
+    items[5] = callback3(tmp2(5608).TableRow, obj4);
     obj3[1] = items;
     return closure_48(tmp4, obj3);
   } else {
     obj = { icon: null, label: null, onPress: null };
-    obj[0] = callback3(tmp2(10137).GroupPlusIcon, {});
+    obj[0] = callback3(tmp2(10141).GroupPlusIcon, {});
     const intl = tmp2(1233).intl;
     const string = intl.string;
     let ihLPiO = tmp2(1233).t;
@@ -1713,7 +1713,7 @@ prototype["renderThreadManagementActions"] = function renderThreadManagementActi
     obj[2] = function onPress() {
       return closure_1_1(closure_1_2[82]).joinThread(closure_0, "Context Menu");
     };
-    callback3(tmp2(5607).TableRow, obj);
+    callback3(tmp2(5608).TableRow, obj);
     const tmp5 = callback3;
   }
 };
@@ -1755,7 +1755,7 @@ prototype["renderDeleteButton"] = function renderDeleteButton() {
       obj[1] = callback3(tmp8(4436).TrashIcon, { color: "text-feedback-critical" });
       obj[2] = stringResult;
       obj[3] = this.handleDeleteChannel;
-      items[1] = callback3(tmp8(5607).TableRow, obj);
+      items[1] = callback3(tmp8(5608).TableRow, obj);
       obj[1] = items;
       tmp = tmp13(tmp14, obj);
     } else {
@@ -1772,7 +1772,7 @@ prototype["renderDeleteButton"] = function renderDeleteButton() {
       obj[3] = function onPress() {
         return closure_1_1(closure_1_2[82]).leaveThread(channel, "Context Menu");
       };
-      callback3(tmp8(5607).TableRow, obj);
+      callback3(tmp8(5608).TableRow, obj);
       const tmp17 = callback3;
     }
     tmp13 = closure_48;
@@ -1826,13 +1826,13 @@ prototype["renderForumTags"] = function renderForumTags() {
         const obj2 = { icon: null, size: "sm", onPress: null, accessibilityLabel: null };
         const obj3 = { size: "sm", color: null };
         obj3[1] = self(709).colors.WHITE;
-        obj2[0] = tmp10(tmp7(9394).PlusSmallIcon, obj3);
+        obj2[0] = tmp10(tmp7(9398).PlusSmallIcon, obj3);
         obj2[2] = function onPress() {
           return self.handlePressTag();
         };
         const intl3 = tmp7(1233).intl;
         obj2[3] = intl3.string(tmp7(1233).t["/jubeD"]);
-        obj1[1] = tmp10(tmp7(8015).IconButton, obj2);
+        obj1[1] = tmp10(tmp7(8018).IconButton, obj2);
         tmp10Result = tmp10(tmp12, obj1);
       }
       const obj4 = { children: null };
@@ -1843,7 +1843,7 @@ prototype["renderForumTags"] = function renderForumTags() {
     }
     obj[1] = tmp6Result;
     obj[3] = closure_47(View, obj);
-    const items1 = [closure_47(canManageChannels(6000).TableRowGroup, obj), , ,];
+    const items1 = [closure_47(canManageChannels(6001).TableRowGroup, obj), , ,];
     tmp10Result = null;
     if (channel.availableTags.length <= 0) {
       const obj5 = { disabled: null, onPress: null, style: null, accessibilityRole: "button", children: null };
@@ -1857,7 +1857,7 @@ prototype["renderForumTags"] = function renderForumTags() {
       const intl4 = tmp7(1233).intl;
       obj6[3] = intl4.string(tmp7(1233).t.F4is7L);
       obj5[4] = tmp10(tmp7(4474).Text, obj6);
-      tmp10Result = tmp10(tmp7(5076).PressableOpacity, obj5);
+      tmp10Result = tmp10(tmp7(5077).PressableOpacity, obj5);
     }
     items1[1] = tmp10Result;
     let tmp10Result1 = null != error && error.length > 0;
@@ -1878,10 +1878,10 @@ prototype["renderForumTags"] = function renderForumTags() {
     obj9[1] = intl5.string(canManageChannels(1233).t.yX24uI);
     obj9[2] = channel.hasFlag(constants8.REQUIRE_TAG);
     obj9[3] = self.handleToggleRequireTag;
-    obj8[1] = closure_47(canManageChannels(6001).TableSwitchRow, obj9);
-    items1[3] = closure_47(canManageChannels(6000).TableRowGroup, obj8);
+    obj8[1] = closure_47(canManageChannels(6002).TableSwitchRow, obj9);
+    items1[3] = closure_47(canManageChannels(6001).TableRowGroup, obj8);
     obj[1] = items1;
-    return closure_48(canManageChannels(4926).Stack, obj);
+    return closure_48(canManageChannels(4927).Stack, obj);
   } else {
     return null;
   }
@@ -1921,12 +1921,12 @@ prototype["renderCategory"] = function renderCategory() {
         tmp7 = self;
       }
       obj = { icon: null, label: null, trailing: null, arrow: null, onPress: null };
-      obj[0] = callback3(tmp7(15974).FolderPlusIcon, {});
+      obj[0] = callback3(tmp7(15990).FolderPlusIcon, {});
       const intl2 = tmp7(1233).intl;
       obj[1] = intl2.string(tmp7(1233).t.vHCZwr);
       obj = { text: null };
       obj[0] = stringResult;
-      obj[2] = callback3(tmp7(5607).TableRow.TrailingText, obj);
+      obj[2] = callback3(tmp7(5608).TableRow.TrailingText, obj);
       obj[3] = canManageParent;
       let fn;
       if (canManageParent) {
@@ -1934,8 +1934,8 @@ prototype["renderCategory"] = function renderCategory() {
       }
       obj1 = { hasIcons: true, children: null };
       obj[4] = fn;
-      obj1[1] = callback3(tmp7(5607).TableRow, obj);
-      return callback3(tmp7(6000).TableRowGroup, obj1);
+      obj1[1] = callback3(tmp7(5608).TableRow, obj);
+      return callback3(tmp7(6001).TableRowGroup, obj1);
     }
   }
   return null;

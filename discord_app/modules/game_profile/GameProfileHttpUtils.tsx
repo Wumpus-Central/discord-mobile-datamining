@@ -200,7 +200,7 @@ function _getGameAnnouncements() {
         };
         obj6[1] = callback;
         const obj9 = body(706);
-        obj6[2] = callback(8893).toAnnouncementMessages(body.messages);
+        obj6[2] = callback(8897).toAnnouncementMessages(body.messages);
         const channel_id = body.channel_id;
         dependencyMap = channel_id;
         if (channel_id == null) {
@@ -215,7 +215,7 @@ function _getGameAnnouncements() {
         obj6[4] = c3;
         obj9.dispatch(obj6);
         c7 = 0;
-        const obj11 = callback(8893);
+        const obj11 = callback(8897);
       }
       c7 = 0;
       return body;

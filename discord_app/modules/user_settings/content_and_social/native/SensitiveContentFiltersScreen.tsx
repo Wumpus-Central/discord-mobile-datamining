@@ -1,5 +1,5 @@
 // discord_app/modules/user_settings/content_and_social/native/SensitiveContentFiltersScreen.tsx
-import _modDef14563 from "../../../settings/native/renderer/SettingLayout.tsx";
+import _modDef14578 from "../../../settings/native/renderer/SettingLayout.tsx";
 import items3 from "../../privacy_and_safety/native/SettingsScreenNotices.tsx";
 import itemsDefault from "../../privacy_and_safety/native/SettingsScreenNotices.tsx";
 import closure_3 from "../../../../../_runtime/00019_noop.js";
@@ -15,7 +15,7 @@ const result = require("set").fileFinishedImporting(
 export default function UserSettingsSensitiveContentFilters() {
   let obj = { children: null };
   const memo = React.useMemo(() => {
-    let obj = callback(11288);
+    let obj = callback(11292);
     obj = { sections: null };
     obj = { label: null, settings: null, subLabel: null };
     const intl = callback(1233).intl;
@@ -47,7 +47,7 @@ export default function UserSettingsSensitiveContentFilters() {
     return obj.createList(obj);
   }, []);
   obj = { screen: items3.SettingsScreen.SENSITIVE_CONTENT_FILTERS };
-  let items = [callback(itemsDefault, obj), callback(_modDef14563, { node: memo })];
+  let items = [callback(itemsDefault, obj), callback(_modDef14578, { node: memo })];
   obj[0] = items;
   return callback2(closure_6, obj);
 }

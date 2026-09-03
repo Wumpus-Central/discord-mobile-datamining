@@ -41,7 +41,7 @@ export default function ForumPostListFooter(parentChannel) {
   if (isGameInvitesPost) {
     obj = { channel: null };
     obj[0] = thread;
-    isGameInvitesPost = tmp8(tmp9(11821), obj);
+    isGameInvitesPost = tmp8(tmp9(11827), obj);
   }
   items[1] = isGameInvitesPost;
   if (tmp6Result) {
@@ -53,7 +53,7 @@ export default function ForumPostListFooter(parentChannel) {
     obj3[0] = thread;
     obj3[1] = typingUserIds;
     obj3[2] = hasUnreads;
-    items1[1] = tmp8(tmp9(11814), obj3);
+    items1[1] = tmp8(tmp9(11820), obj3);
     obj1[0] = items1;
     tmp6Result = tmp6(closure_6, obj1);
   }

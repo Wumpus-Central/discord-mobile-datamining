@@ -1,7 +1,8 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/happening_now/HappeningNow.tsx
 import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import LegacyBaseButton from "../../../../../../_runtime/05660_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../../_runtime/05661_LegacyBaseButton.js";
 import HappeningNowCardPlaceholder from "HappeningNowCardPlaceholder.tsx";
+import HappeningNowCardUnifiedVCDefault from "HappeningNowCardUnifiedVC.tsx";
 import closure_3 from "../../../../../../_runtime/metro/00032__slicedToArray.js";
 import importAllResult from "../../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
@@ -10,15 +11,21 @@ import { AnalyticEvents } from "../../../../../Constants.tsx";
 import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
 import createFakeSharedValue from "../../../../reanimated/ReanimatedHelperTypes.tsx";
 import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
-import { Gesture } from "../../../../../../_runtime/05660_LegacyBaseButton.js";
+import { Gesture } from "../../../../../../_runtime/05661_LegacyBaseButton.js";
 
 require = arg1;
 function renderCard(kind, fullWidth) {
   if ("placeholder" !== kind.kind) {
     if (!fullWidth.loading) {
       kind = kind.kind;
+      let obj = {};
+      const merged = Object.assign(kind);
+      const merged1 = Object.assign(fullWidth);
+      obj.cardKey = keyExtractor(kind);
+      return jsx(HappeningNowCardUnifiedVCDefault, {});
     }
   }
+  obj = { fullWidth: fullWidth.fullwidth, panelVariant: fullWidth.panelVariant };
   return jsx(HappeningNowCardPlaceholder.HappeningNowCardPlaceholder, {
     fullWidth: fullWidth.fullwidth,
     panelVariant: fullWidth.panelVariant,
@@ -82,9 +89,8 @@ const memoResult = importAllResult.memo((listRef) => {
   obj = {
     withoutUserCards: "HermesInternal",
     guildId: "Array",
-    showMultipleActivitiesPerChannel:
-      -0.000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010188422522278108,
-    isFocused: 203589422130592430000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000,
+    showMultipleActivitiesPerChannel: 1224737317,
+    isFocused: 111864,
   };
   obj[3] = isFocused;
   const tmp7 = callback(ref(isFocused[15])(listRef.cards, obj), 2);

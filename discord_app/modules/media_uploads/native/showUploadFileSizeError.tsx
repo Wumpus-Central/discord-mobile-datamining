@@ -20,7 +20,7 @@ export default function showUploadFileSizeError(arg0) {
   let obj = items(1945);
   const isPremiumExactlyResult = obj.isPremiumExactly(currentUser, TIER_2.TIER_2);
   if (null != file.items) {
-    let tmp2Result = tmp2(7597);
+    let tmp2Result = tmp2(7598);
     let attachmentMimeTypes = tmp2Result.getAttachmentMimeTypes(file.items);
   } else {
     attachmentMimeTypes = [];
@@ -38,9 +38,9 @@ export default function showUploadFileSizeError(arg0) {
       items1.push(postCompressionSize.preCompressionSize);
     });
   }
-  tmp2Result = tmp2(5131);
+  tmp2Result = tmp2(5132);
   const kestrelConfig = tmp2Result.getKestrelConfig({ location: "native.showUploadFileSizeError" });
-  const tmp2Result1 = items(4700);
+  const tmp2Result1 = items(4701);
   const tmp4 = TIER_2;
   const tmp8 = constants;
   obj = {
@@ -56,8 +56,8 @@ export default function showUploadFileSizeError(arg0) {
     errorType: null,
     kestrelVariant: null,
   };
-  const tmp2Result2 = items(8175);
-  obj[1] = items(8176).getUploaderChannelId(file);
+  const tmp2Result2 = items(8179);
+  obj[1] = items(8180).getUploaderChannelId(file);
   obj[2] = baseMaxSize;
   obj[3] = file.attachmentsCount;
   obj[4] = items1;
@@ -70,8 +70,8 @@ export default function showUploadFileSizeError(arg0) {
     ERROR_SOURCE_UNKNOWN = FileUploadErrorTypes.ERROR_SOURCE_UNKNOWN;
   }
   obj[9] = ERROR_SOURCE_UNKNOWN;
-  const tmp2Result3 = items(8176);
-  obj[10] = items(5131).getKestrelVariantName(kestrelConfig);
+  const tmp2Result3 = items(8180);
+  obj[10] = items(5132).getKestrelVariantName(kestrelConfig);
   tmp2Result1.trackWithMetadata(constants.FILE_SIZE_LIMIT_EXCEEDED, tmp2Result2.buildFileSizeLimitEventProperties(obj));
   let num = 0;
   if (!isPremiumExactlyResult) {
@@ -95,7 +95,7 @@ export default function showUploadFileSizeError(arg0) {
     tmp22 = num > table[tmp4.TIER_2].fileSize;
   }
   if (!tmp22) {
-    tmp22 = num > tmp2(5082).MAX_TOTAL_ATTACHMENT_SIZE;
+    tmp22 = num > tmp2(5083).MAX_TOTAL_ATTACHMENT_SIZE;
   }
   if (!tmp22) {
     tmp22 = tmp21;
@@ -103,7 +103,7 @@ export default function showUploadFileSizeError(arg0) {
   if (!tmp22) {
     tmp22 = errorReason === tmp20.ERROR_SOURCE_UNKNOWN;
   }
-  const tmp2Result4 = items(5131);
+  const tmp2Result4 = items(5132);
   obj = {
     alert_type: tmp22 ? tmp24.OVER_MAX_SIZE : tmp24.NITRO_UPSELL,
     num_attachments: file.attachmentsCount,
@@ -114,8 +114,8 @@ export default function showUploadFileSizeError(arg0) {
     image_compression_quality: null,
     image_compression_setting_enabled: null,
   };
-  const tmp2Result5 = items(4700);
-  obj[6] = items(5090).getImageCompressionQuality();
+  const tmp2Result5 = items(4701);
+  obj[6] = items(5091).getImageCompressionQuality();
   obj[7] = dataSavingMode.dataSavingMode;
   tmp2Result5.trackWithMetadata(tmp8.FILE_UPLOAD_ALERT_VIEWED, obj);
   if (tmp22) {
@@ -135,7 +135,7 @@ export default function showUploadFileSizeError(arg0) {
         const t = tmp2(1233).t;
         if (tmp21) {
           obj1 = { maxSize: null };
-          obj1[0] = tmp2(4372).formatSize(tmp2(5082).MAX_TOTAL_ATTACHMENT_SIZE / tmp2(4372).BYTE_IN_KB, {
+          obj1[0] = tmp2(4372).formatSize(tmp2(5083).MAX_TOTAL_ATTACHMENT_SIZE / tmp2(4372).BYTE_IN_KB, {
             useKibibytes: true,
           });
           stringResult1 = formatToPlainString(t.tUOJdH, obj1);
@@ -153,8 +153,8 @@ export default function showUploadFileSizeError(arg0) {
     const obj3 = { title: null, body: null };
     obj3[0] = stringResult;
     obj3[1] = stringResult1;
-    items1(4857).show(obj3);
-    const obj20 = items1(4857);
+    items1(4858).show(obj3);
+    const obj20 = items1(4858);
   } else {
     const obj4 = {
       initialUpsellKey: null,
@@ -169,12 +169,12 @@ export default function showUploadFileSizeError(arg0) {
     obj4[1] = obj5;
     const items4 = [];
     arraySpreadResult = HermesBuiltin.arraySpread(analyticsLocations, 0);
-    items4[arraySpreadResult] = items1(5981).FILE_UPLOAD_POPOUT;
+    items4[arraySpreadResult] = items1(5982).FILE_UPLOAD_POPOUT;
     obj4[2] = items4;
     const obj6 = { type: null };
     obj6[0] = constants3.UPLOAD_ERROR_UPSELL;
     obj4[3] = obj6;
     obj4[4] = num;
-    const result = items1(8177).handleShowUpsellAlert(obj4);
+    const result = items1(8181).handleShowUpsellAlert(obj4);
   }
 }

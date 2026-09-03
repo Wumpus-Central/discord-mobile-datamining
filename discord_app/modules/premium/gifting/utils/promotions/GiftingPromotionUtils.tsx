@@ -18,7 +18,7 @@ export const useFetchClaimableGiftingPromotionRewardSkuIds = function useFetchCl
     hasPreviouslyFetched.getGiftPromotionRewardSkuIds(),
   );
   const obj = first(586);
-  const fetchPurchases = first(8092).useFetchPurchases();
+  const fetchPurchases = first(8095).useFetchPurchases();
   purchases = fetchPurchases.purchases;
   hasPreviouslyFetched = fetchPurchases.hasPreviouslyFetched;
   const fetchPurchasesError = fetchPurchases.fetchPurchasesError;
@@ -41,11 +41,11 @@ export const useFetchClaimableGiftingPromotionRewardSkuIds = function useFetchCl
     }
   }, items1);
   const someResult = stateFromStoresArray.some(
-    (arg0) => arg0 === first(10732).GiftingPromotionRewardSKUIds.SUMMER_2026_GOGO_FAKE_SKU_ID,
+    (arg0) => arg0 === first(10736).GiftingPromotionRewardSKUIds.SUMMER_2026_GOGO_FAKE_SKU_ID,
   );
   closure_7 = someResult;
-  const obj3 = first(8092);
-  const fetchSummer2026GogoPromoEligibility = first(10733).useFetchSummer2026GogoPromoEligibility(someResult);
+  const obj3 = first(8095);
+  const fetchSummer2026GogoPromoEligibility = first(10737).useFetchSummer2026GogoPromoEligibility(someResult);
   const isEligible = fetchSummer2026GogoPromoEligibility.isEligible;
   const hasFetched = fetchSummer2026GogoPromoEligibility.hasFetched;
   const items2 = [first, isEligible, hasFetched, someResult];
@@ -203,7 +203,7 @@ export const shouldShowGiftPromotionReminderNotice = function shouldShowGiftProm
   if (GiftPromotionReminderExperiment.getConfig({ location: "shouldShowGiftPromotionReminderNotice" }).enabled) {
     if (
       null ==
-      marketingComponentByType.getMarketingComponentByType(tmp(10736).MarketingComponentType.GIFT_REMINDER_NAGBAR)
+      marketingComponentByType.getMarketingComponentByType(tmp(10740).MarketingComponentType.GIFT_REMINDER_NAGBAR)
     ) {
       return false;
     } else {

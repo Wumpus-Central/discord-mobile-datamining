@@ -174,7 +174,7 @@ export const copyShareLink = function copyShareLink(id, ctaContent) {
       "copy_share_link",
     )
   ) {
-    let tmpResult = tmp(9013);
+    let tmpResult = tmp(9017);
     obj = {
       type: null,
       adCreativeType: null,
@@ -185,14 +185,14 @@ export const copyShareLink = function copyShareLink(id, ctaContent) {
       questContentPosition: null,
       impressionId: null,
     };
-    obj[0] = tmp(9017).AdUserActionType.CLICK_INTERNAL;
-    obj[1] = tmp(7456).AdCreativeType.QUEST;
+    obj[0] = tmp(9021).AdUserActionType.CLICK_INTERNAL;
+    obj[1] = tmp(7457).AdCreativeType.QUEST;
     obj[2] = id;
     obj[3] = ctaContent;
     ({ content: obj5[4], sourceQuestContent: obj5[5], position: obj5[6], impressionId: obj5[7] } = ctaContent);
     tmpResult.captureAdUserAction(obj);
   } else {
-    tmpResult = tmp(7473);
+    tmpResult = tmp(7474);
     obj = {
       questId: null,
       questContent: null,

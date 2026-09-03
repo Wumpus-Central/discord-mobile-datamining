@@ -117,7 +117,7 @@ export default function WebAuthnScreen(arg0) {
   obj[0] = intl.string(finish(1233).t.saHocI);
   const intl2 = tmp5(1233).intl;
   obj[1] = intl2.string(finish(1233).t.YpMrqM);
-  obj[2] = challenge(finish(14553).KeyImage, {});
+  obj[2] = challenge(finish(14569).KeyImage, {});
   let shouldDisplayAndroidFidoSelector = _promptForRegisterCredentialDefault.shouldDisplayAndroidFidoSelector;
   if (shouldDisplayAndroidFidoSelector) {
     obj = { authenticatorSelection: null, setAuthenticator: null, inProgress: null };

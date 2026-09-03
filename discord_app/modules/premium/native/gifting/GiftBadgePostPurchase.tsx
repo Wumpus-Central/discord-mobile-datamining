@@ -26,7 +26,7 @@ function PostPurchaseFooter(onSendGift) {
   }, items);
   let obj = { style: callback6(useSafeAreaInsetsDefault().bottom).footer, children: null };
   const callback1 = React.useCallback(() => {
-    let arr = callback(4723);
+    let arr = callback(4724);
     arr = arr.pop();
     const rootNavigationRef = onSendGift(4333).getRootNavigationRef();
     if (rootNavigationRef != null) {
@@ -35,16 +35,16 @@ function PostPurchaseFooter(onSendGift) {
   }, []);
   obj = { grow: true, variant: "primary", icon: null, text: null, onPress: null };
   obj = { size: "sm", color: ThemesDefault.colors.CONTROL_PRIMARY_TEXT_DEFAULT };
-  obj[2] = callback4(onSendGift(10994).GiftIcon, obj);
+  obj[2] = callback4(onSendGift(10998).GiftIcon, obj);
   const intl = onSendGift(1233).intl;
   obj[3] = intl.string(messagesProxyDefault.g86YiI);
   obj[4] = callback;
-  const items1 = [callback4(onSendGift(4928).Button, obj)];
+  const items1 = [callback4(onSendGift(4929).Button, obj)];
   obj1 = { grow: true, variant: "secondary", text: null, onPress: null };
   const intl2 = onSendGift(1233).intl;
   obj1[2] = intl2.string(messagesProxyDefault["sa/cfM"]);
   obj1[3] = callback1;
-  items1[1] = callback4(onSendGift(4928).Button, obj1);
+  items1[1] = callback4(onSendGift(4929).Button, obj1);
   obj[1] = items1;
   return callback5(View, obj);
 }
@@ -95,7 +95,7 @@ function LevelUpScreen(arg0) {
   if (tmp7Result) {
     obj1 = { icon: null, size: 140 };
     obj1[0] = newTier.simple_icon_url;
-    tmp7Result = tmp7(tmp(10743), obj1);
+    tmp7Result = tmp7(tmp(10747), obj1);
   }
   obj[1] = tmp7Result;
   const items = [closure_10(View, obj)];
@@ -208,7 +208,7 @@ export default function GiftBadgePostPurchase(arg0) {
   let obj = initialize;
   const items = [closure_5];
   const stateFromStores = obj.useStateFromStores(items, () => {
-    badgeById = badgeById.getBadgeById(callback(8570).BadgeId.GIFTING);
+    badgeById = badgeById.getBadgeById(callback(8574).BadgeId.GIFTING);
     let tiers;
     if (badgeById != null) {
       tiers = badgeById.tiers;

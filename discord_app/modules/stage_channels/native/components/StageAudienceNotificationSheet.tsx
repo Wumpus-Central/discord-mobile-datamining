@@ -5,11 +5,11 @@ import Button from "../../../../design/void/native.tsx";
 import ACTION_SHEET_HEIGHT_HALFDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import preloadDefault from "../../../../components_native/common/FastImage.tsx";
 import ScrollHandlingActionSheetDefault from "ScrollHandlingActionSheet.tsx";
-import registerAssetDefault from "../../../../../_runtime/08755_registerAsset.js";
-import registerAssetDefault2 from "../../../../../_runtime/08756_registerAsset.js";
-import registerAssetDefault3 from "../../../../../_runtime/08757_registerAsset.js";
-import registerAssetDefault4 from "../../../../../_runtime/08758_registerAsset.js";
-import registerAssetDefault5 from "../../../../../_runtime/08759_registerAsset.js";
+import registerAssetDefault from "../../../../../_runtime/08759_registerAsset.js";
+import registerAssetDefault2 from "../../../../../_runtime/08760_registerAsset.js";
+import registerAssetDefault3 from "../../../../../_runtime/08761_registerAsset.js";
+import registerAssetDefault4 from "../../../../../_runtime/08762_registerAsset.js";
+import registerAssetDefault5 from "../../../../../_runtime/08763_registerAsset.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import closure_4 from "../../StageInstanceStore.tsx";
 import { STAGE_AUDIENCE_NOTICE_SHEET_KEY as closure_5 } from "../../StageChannelsConstants.tsx";
@@ -96,7 +96,7 @@ export default function StageAudienceNotificationSheet(channelId) {
   const intl2 = tmp2(1233).intl;
   obj6[3] = intl2.string(channelId(1233).t.sBDfo6);
   obj4[1] = callback(channelId(4474).Text, obj6);
-  const items2 = [callback(channelId(8372).FormRow, obj4), , ,];
+  const items2 = [callback(channelId(8376).FormRow, obj4), , ,];
   const obj7 = { leading: null, label: null };
   const obj5 = { source: registerAssetDefault2 };
   const tmp12 = BulletIcon;
@@ -105,7 +105,7 @@ export default function StageAudienceNotificationSheet(channelId) {
   const intl3 = tmp2(1233).intl;
   obj9[3] = intl3.string(channelId(1233).t.x58YtH);
   obj7[1] = callback(channelId(4474).Text, obj9);
-  items2[1] = callback(channelId(8372).FormRow, obj7);
+  items2[1] = callback(channelId(8376).FormRow, obj7);
   const obj10 = { leading: null, label: null };
   const obj8 = { source: registerAssetDefault3 };
   obj10[0] = callback(BulletIcon, { source: registerAssetDefault4 });
@@ -113,7 +113,7 @@ export default function StageAudienceNotificationSheet(channelId) {
   const intl4 = tmp2(1233).intl;
   obj12[3] = intl4.string(channelId(1233).t.XtVqla);
   obj10[1] = callback(channelId(4474).Text, obj12);
-  items2[2] = callback(channelId(8372).FormRow, obj10);
+  items2[2] = callback(channelId(8376).FormRow, obj10);
   let tmp6Result = null;
   if (privacy_level === constants.PUBLIC) {
     const obj13 = { leading: null, label: null };
@@ -125,7 +125,7 @@ export default function StageAudienceNotificationSheet(channelId) {
     const intl6 = tmp2(1233).intl;
     obj15[3] = intl6.string(tmp2(1233).t.nDsbJg);
     obj13[1] = tmp6(tmp2(4474).Text, obj15);
-    tmp6Result = tmp6(tmp2(8372).FormRow, obj13);
+    tmp6Result = tmp6(tmp2(8376).FormRow, obj13);
   }
   const obj16 = { children: null };
   items2[3] = tmp6Result;
@@ -138,7 +138,7 @@ export default function StageAudienceNotificationSheet(channelId) {
   const intl5 = tmp2(1233).intl;
   obj18[0] = intl5.string(channelId(1233).t.obLqZ8);
   obj18[1] = handleDismiss;
-  obj17[1] = callback(channelId(4928).Button, obj18);
+  obj17[1] = callback(channelId(4929).Button, obj18);
   items3[1] = callback(View, obj17);
   obj[1] = items3;
   obj16[0] = closure_8(View, obj);

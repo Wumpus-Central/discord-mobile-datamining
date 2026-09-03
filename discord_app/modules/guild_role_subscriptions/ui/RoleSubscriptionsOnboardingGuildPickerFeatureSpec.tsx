@@ -26,7 +26,7 @@ export default {
       () => (id) => {
         let result = callback2(id, arg1);
         if (result) {
-          let obj = callback(6115);
+          let obj = callback(6116);
           obj = {
             guild: null,
             isOwner: true,
@@ -35,8 +35,8 @@ export default {
             shouldRestrictUpdatingRoleSubscriptionSettings: null,
           };
           obj[0] = id;
-          obj[3] = callback(6116).isUserInCreatorMonetizationEligibleCountry();
-          const obj3 = callback(6116);
+          obj[3] = callback(6117).isUserInCreatorMonetizationEligibleCountry();
+          const obj3 = callback(6117);
           obj[4] = callback(4113).shouldRestrictUpdatingCreatorMonetizationSettings(id.id);
           result = obj.canSeeGuildRoleSubscriptionSettings(obj);
           const obj4 = callback(4113);

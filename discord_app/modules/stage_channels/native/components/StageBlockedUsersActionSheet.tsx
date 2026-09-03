@@ -48,7 +48,7 @@ function RestrictedUser(guildId) {
     obj2[0] = items3;
     const obj3 = { style: null, source: null, color: null };
     obj3[0] = tmp.icon;
-    obj3[1] = user(8761);
+    obj3[1] = user(8765);
     obj3[2] = user(709).unsafe_rawColors.WHITE;
     obj2[1] = tmp11(tmp2(1296).Icon, obj3);
     speaker = tmp11(tmp10, obj2);
@@ -251,9 +251,9 @@ export default function StageBlockedUsersActionSheet(channel) {
   const tmp = callback3();
   const tmp2 = items1(React.useState(0), 2);
   dependencyMap = tmp2[1];
-  let obj = channel(8762);
+  let obj = channel(8766);
   const stageBlockedUsers = obj.useStageBlockedUsers(channel.id);
-  obj1 = channel(8762);
+  obj1 = channel(8766);
   const stageIgnoredUsers = obj1.useStageIgnoredUsers(channel.id);
   const callback = React.useCallback((nativeEvent) => {
     dependencyMap(nativeEvent.nativeEvent.layout.height);
@@ -266,14 +266,14 @@ export default function StageBlockedUsersActionSheet(channel) {
     onAccept(channel);
     onAccept(4445).hideActionSheet(closure_1_8);
   };
-  const items = [callback(channel(4928).Button, obj)];
+  const items = [callback(channel(4929).Button, obj)];
   obj1 = { variant: "secondary", text: null, onPress: null };
   const intl2 = channel(1233).intl;
   obj1[1] = intl2.string(channel(1233).t.CZGqeT);
   obj1[2] = function handleDismiss() {
     onAccept(4445).hideActionSheet(closure_8);
   };
-  items[1] = callback(channel(4928).Button, obj1);
+  items[1] = callback(channel(4929).Button, obj1);
   obj[3] = items;
   items1 = [];
   HermesBuiltin.arraySpread(stageIgnoredUsers, HermesBuiltin.arraySpread(stageBlockedUsers, 0));
@@ -283,7 +283,7 @@ export default function StageBlockedUsersActionSheet(channel) {
       blockedUserCount: stageBlockedUsers.length,
       ignoredUserCount: stageIgnoredUsers.length,
     }),
-    footer: callback2(channel(5561).SafeAreaPaddingView, obj),
+    footer: callback2(channel(5562).SafeAreaPaddingView, obj),
     children: null,
   };
   const obj3 = {
@@ -294,7 +294,7 @@ export default function StageBlockedUsersActionSheet(channel) {
     renderItem: null,
     itemSize: null,
   };
-  const tmp4 = callback2(channel(5561).SafeAreaPaddingView, obj);
+  const tmp4 = callback2(channel(5562).SafeAreaPaddingView, obj);
   const intl3 = channel(1233).intl;
   obj3[2] = intl3.string(channel(1233).t["3VoRLH"]);
   const items2 = [items1.length];
@@ -309,7 +309,7 @@ export default function StageBlockedUsersActionSheet(channel) {
   obj3[5] = function itemSize() {
     return 48;
   };
-  const items3 = [callback(onAccept(7804), obj3), callback(View, { style: { height: tmp2[0] } })];
+  const items3 = [callback(onAccept(7807), obj3), callback(View, { style: { height: tmp2[0] } })];
   obj2[3] = items3;
-  return callback2(channel(5630).BottomSheet, obj2);
+  return callback2(channel(5631).BottomSheet, obj2);
 }

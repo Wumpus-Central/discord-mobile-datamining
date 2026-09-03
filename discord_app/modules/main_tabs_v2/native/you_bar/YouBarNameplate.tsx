@@ -16,7 +16,7 @@ const memoResult = importAllResult.memo(function YouBarNameplate(isQuestRendered
   ({ nameplate, barWidth } = isQuestRendered);
   let obj = isQuestRendered(4197);
   token = obj.useToken(token(709).modules.mobile.YOU_BAR_BORDER_RADIUS);
-  const tmp4 = token(15011)(token);
+  const tmp4 = token(15026)(token);
   dependencyMap = tmp4;
   obj1 = isQuestRendered(586);
   const items = [closure_3];
@@ -33,7 +33,7 @@ const memoResult = importAllResult.memo(function YouBarNameplate(isQuestRendered
     return obj;
   };
   obj = {
-    withSpring: isQuestRendered(4927).withSpring,
+    withSpring: isQuestRendered(4928).withSpring,
     isQuestRendered,
     questDockAnimatedBorderRadius: tmp4,
     borderRadius: token,
@@ -71,7 +71,7 @@ const memoResult = importAllResult.memo(function YouBarNameplate(isQuestRendered
     str = "always";
   }
   obj2[2] = str;
-  obj1[2] = jsx(token(8535), { nameplate, isFocused: true, animate: null });
+  obj1[2] = jsx(token(8539), { nameplate, isFocused: true, animate: null });
   return jsx(token(4217).View, { style: items1, pointerEvents: "none", children: null });
 });
 const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/you_bar/YouBarNameplate.tsx");

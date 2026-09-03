@@ -32,7 +32,7 @@ function LeftSlot(state) {
     channel,
     onPress,
     styleButton: "PX_16",
-    shouldShowThread: "cowboy",
+    shouldShowThread: "sticker_pack_199",
   });
   return callback2(_modDef4217.View, obj);
 }
@@ -94,7 +94,7 @@ const forwardRefResult = importAllResult.forwardRef((channel, ref) => {
     showKeyboardIcon,
     onPress: onPressExpression,
   };
-  items1[1] = callback2(onPressAction(11967), obj1);
+  items1[1] = callback2(onPressAction(11973), obj1);
   obj[1] = items1;
   return closure_8(View, obj);
 });

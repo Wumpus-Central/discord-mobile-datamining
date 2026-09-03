@@ -1,7 +1,7 @@
 // discord_app/actions/SelectedChannelActionCreators.tsx
 import dispatcherDefault from "../Dispatcher.tsx";
 import transitionTo from "../modules/routing/router_utils.tsx";
-import selectVoiceChannelAdditional from "SelectedChannelActionCreatorsAdditional.native.tsx";
+import getChannelSelectionOrigin from "SelectedChannelActionCreatorsAdditional.native.tsx";
 import disconnectRemoteAll from "../modules/game_console/GameConsoleActionCreators.tsx";
 import closure_4 from "../modules/game_console/GameConsoleStore.tsx";
 import closure_5 from "../stores/ChannelStore.tsx";
@@ -15,19 +15,25 @@ const result = require("set").fileFinishedImporting("actions/SelectedChannelActi
 export default {
   selectChannel(guildId) {
     guildId = guildId.guildId;
-    ({ channelId, messageId, jumpType, source, skipMessageFetch } = guildId);
-    let tmp = null;
+    ({ channelId, messageId, jumpType, source, skipMessageFetch, opensChannel } = guildId);
+    const channelSelectionOrigin = getChannelSelectionOrigin.getChannelSelectionOrigin();
+    ({ fromGuildId, fromChannelId } = channelSelectionOrigin);
+    const obj = getChannelSelectionOrigin;
+    let tmp2 = null;
     if (guildId !== closure_7) {
-      tmp = guildId;
+      tmp2 = guildId;
     }
     dispatcherDefault.dispatch({
       type: "CHANNEL_SELECT",
-      guildId: tmp,
+      guildId: tmp2,
       channelId,
+      fromGuildId,
+      fromChannelId,
       messageId,
       jumpType,
       source,
       skipMessageFetch,
+      opensChannel,
     });
   },
   selectPrivateChannel(id) {
@@ -54,7 +60,7 @@ export default {
         const mediaEngine = supported.getMediaEngine();
         mediaEngine.interact();
       }
-      const obj5 = selectVoiceChannelAdditional;
+      const obj5 = getChannelSelectionOrigin;
       const voiceChannelAdditional = obj5.selectVoiceChannelAdditional(id, guildId, flag, flag2, obj);
     }
   },

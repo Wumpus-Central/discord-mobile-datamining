@@ -3,7 +3,7 @@ import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.
 import getSystemLocale from "../../../intl/index.native.tsx";
 import Button from "../../../design/void/native.tsx";
 import PressableBase from "../../../design/void/Pressables/native/Pressables.tsx";
-import registerAssetDefault from "../../../../_runtime/07722_registerAsset.js";
+import registerAssetDefault from "../../../../_runtime/07725_registerAsset.js";
 import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
 import closure_4 from "../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
@@ -448,7 +448,7 @@ export default function EditCustomStatusWithPreviewModal(analyticsLocations) {
       const obj = { title: null };
       const intl = callback(1233).intl;
       obj[0] = intl.string(callback(1233).t.Iuzg8R);
-      return callback3(callback(7617).GenericHeaderTitle, obj);
+      return callback3(callback(7618).GenericHeaderTitle, obj);
     };
     obj[2] = analyticsLocations(closure_1_2[30]).getHeaderCloseButton(_prompt(closure_1_2[43]).pop);
     obj[4] = function render(arg0, navigation) {
@@ -471,5 +471,5 @@ export default function EditCustomStatusWithPreviewModal(analyticsLocations) {
     obj = { height: 56 };
   }
   obj[3] = obj;
-  return tmp2(analyticsLocations(6016).Navigator, obj);
+  return tmp2(analyticsLocations(6017).Navigator, obj);
 }

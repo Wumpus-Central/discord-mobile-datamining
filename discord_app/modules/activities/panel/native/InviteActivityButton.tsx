@@ -37,12 +37,12 @@ const memoResult = importAllResult.memo(function InviteActivityButton(applicatio
         obj,
       );
     };
-    obj[1] = stateFromStores(10136);
+    obj[1] = stateFromStores(10140);
     const intl = tmp(1233).intl;
     obj[2] = intl.string(tmp(1233).t["OzOM/q"]);
     const intl2 = tmp(1233).intl;
     obj[3] = intl2.string(tmp(1233).t["OzOM/q"]);
-    tmp4 = jsx(tmp(4928).Button, {
+    tmp4 = jsx(tmp(4929).Button, {
       onPress: null,
       icon: null,
       text: null,

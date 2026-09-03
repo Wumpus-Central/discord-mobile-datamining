@@ -59,7 +59,7 @@ export const getVideoQuestProgressRemainingAccessibilityLabel =
       const intl5 = tmp(1233).intl;
       return intl5.string(tmp(1233).t["ij5E/5"]);
     } else {
-      const remainingTaskTime = tmp(7479).getRemainingTaskTime(questTaskDetails);
+      const remainingTaskTime = tmp(7480).getRemainingTaskTime(questTaskDetails);
       ({ minutes, seconds } = remainingTaskTime);
       if (minutes > 0) {
         if (seconds > 0) {
@@ -85,7 +85,7 @@ export const getVideoQuestProgressRemainingAccessibilityLabel =
         obj2[0] = seconds;
         formatToPlainStringResult = intl.formatToPlainString(tmp(1233).t["0BZpdi"], obj2);
       }
-      const tmpResult = tmp(7479);
+      const tmpResult = tmp(7480);
     }
   };
 export const formatVideoProgressRatio = function formatVideoProgressRatio(bound, current) {
@@ -157,8 +157,8 @@ export const handleVideoQuestModalClose = function handleVideoQuestModalClose(ar
         isQuestExpiredResult = null != completedAt1;
       }
       if (!isQuestExpiredResult) {
-        tmp6(11133).updateVideoProgress(quest.id, videoProgress.maxTimestampSec);
-        const tmp6Result = tmp6(11133);
+        tmp6(11137).updateVideoProgress(quest.id, videoProgress.maxTimestampSec);
+        const tmp6Result = tmp6(11137);
       }
       tmp6 = require;
     }

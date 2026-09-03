@@ -2,9 +2,9 @@
 import noopAll from "../../../../_runtime/00019_noop.js";
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import getNicknameDefault from "../../../utils/NicknameUtils.tsx";
-import _modDef8114 from "../../profile_customization/native/HeaderAvatar.tsx";
+import _modDef8117 from "../../profile_customization/native/HeaderAvatar.tsx";
 import useCustomStatusActivityForUserDefault from "../../custom_status/utils/useCustomStatusActivityForUser.tsx";
-import EmojiImageDefault from "UserProfileCustomStatusBubble.tsx";
+import StatusBubbleConnectorDefault from "UserProfileCustomStatusBubble.tsx";
 import UserProfileStackedActionSheetDefault from "UserProfileStackedActionSheet.tsx";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import closure_4 from "../../../stores/UserStore.tsx";
@@ -71,10 +71,10 @@ export default function UserProfileCustomStatusActionSheet(user) {
   obj1 = { style: tmp.statusPreviewContainer, children: null };
   const obj2 = { style: tmp.avatarContainer, children: null };
   const tmp6 = useCustomStatusActivityForUserDefault(user.id);
-  obj2[1] = callback(_modDef8114, { user, statusStyle: tmp.avatarStatus });
+  obj2[1] = callback(_modDef8117, { user, statusStyle: tmp.avatarStatus });
   const items2 = [
     callback(View, obj2),
-    callback(EmojiImageDefault, {
+    callback(StatusBubbleConnectorDefault, {
       customStatusActivity: tmp6,
       hasCustomProfileTheme: false,
       showFullStatus: true,

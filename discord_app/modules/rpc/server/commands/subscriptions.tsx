@@ -46,10 +46,10 @@ let obj = {
                 obj1 = { errorCode: null };
                 obj1[0] = closure_1_5.INVALID_EVENT;
                 const _HermesInternal = HermesInternal;
-                let tmp35 = closure_1_1(9516);
+                let tmp35 = closure_1_1(9520);
                 tmp35 = new tmp35(obj1, "Invalid event: " + dependencyMap);
                 throw tmp35;
-              } else if (closure_1_1(14379)(closure_1_1.authorization.scopes, tmp67.scope)) {
+              } else if (closure_1_1(14395)(closure_1_1.authorization.scopes, tmp67.scope)) {
                 const obj2 = { event: null, scope: null, application_id: null, socket_scope: null };
                 obj2[0] = dependencyMap;
                 if (typeof tmp67.scope === "object") {
@@ -74,7 +74,7 @@ let obj = {
               } else {
                 const obj4 = { errorCode: null };
                 obj4[0] = closure_1_5.INVALID_PERMISSIONS;
-                const tmp10 = new tmp72(9516)(obj4, "Not authenticated or invalid scope");
+                const tmp10 = new tmp72(9520)(obj4, "Not authenticated or invalid scope");
                 throw tmp10;
               }
               obj13 = closure_1_0;
@@ -95,7 +95,7 @@ let obj = {
             ) {
               let obj5 = { errorCode: null };
               obj5[0] = closure_1_5.INVALID_PAYLOAD;
-              const tmp64 = new closure_1_1(9516)(obj5, "Invalid subscription parameters provided");
+              const tmp64 = new closure_1_1(9520)(obj5, "Invalid subscription parameters provided");
               throw tmp64;
             }
           }
@@ -103,7 +103,7 @@ let obj = {
           obj6[0] = initialSubscriptionPayload;
           obj6[1] = closure_1;
           closure_2 = closure_0.handler(obj6);
-          obj5 = closure_1_0(14380);
+          obj5 = closure_1_0(14396);
           initialSubscriptionPayload = obj5.getInitialSubscriptionPayload(
             closure_1,
             closure_2,

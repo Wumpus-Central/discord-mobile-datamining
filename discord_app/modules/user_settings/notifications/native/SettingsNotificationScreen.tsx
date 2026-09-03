@@ -2,7 +2,7 @@
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import apexExperiment from "../../../design/ManaTypeConsolidationExperiment.tsx";
 import _requestPushNotificationPermission from "../../../nuf/native/NotificationPermissionUtil.tsx";
-import _modDef14563 from "../../../settings/native/renderer/SettingLayout.tsx";
+import _modDef14578 from "../../../settings/native/renderer/SettingLayout.tsx";
 import apexExperimentDefault from "../../../nuf/native/ContextualOptInNudgeHoldoutExperiment.tsx";
 import hasAndroidNotificationChannels from "SettingsNotificationUtils.tsx";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
@@ -46,7 +46,7 @@ function SystemNotificationsSubLabel() {
     obj2[0] = tmp.cardContent;
     obj3 = { color: null };
     obj3[0] = ThemesDefault.unsafe_rawColors.YELLOW_300;
-    const items1 = [callback(tmp2(7717).CircleErrorIcon, obj3)];
+    const items1 = [callback(tmp2(7720).CircleErrorIcon, obj3)];
     const obj4 = { style: null, children: null };
     obj4[0] = tmp.text;
     const obj5 = { color: "text-default", variant: "text-sm/medium", children: null };
@@ -56,7 +56,7 @@ function SystemNotificationsSubLabel() {
     items1[1] = callback(View, obj4);
     obj2[1] = items1;
     obj1[2] = tmp8(View, obj2);
-    obj[1] = callback(tmp2(5609).Card, obj1);
+    obj[1] = callback(tmp2(5610).Card, obj1);
     showReactivationPrompt = callback(View, obj);
   }
   children[1] = showReactivationPrompt;
@@ -76,10 +76,10 @@ obj[1] = { flexDirection: "row", alignItems: "center", gap: 8 };
 obj[2] = { flex: 1 };
 let closure_10 = createCacheKey.createStyles(obj);
 const memoResult = importAllResult.memo(() => {
-  isFamilyCenterV3Enabled = isFamilyCenterV3Enabled(7348).useIsFamilyCenterV3Enabled({
+  isFamilyCenterV3Enabled = isFamilyCenterV3Enabled(7349).useIsFamilyCenterV3Enabled({
     location: "SettingsNotificationsScreen",
   });
-  let obj = isFamilyCenterV3Enabled(7348);
+  let obj = isFamilyCenterV3Enabled(7349);
   let tmp2 = !apexExperimentDefault.useConfig({ location: "SettingsNotificationsScreen" }).inHoldout;
   importDefault = tmp2;
   let items = [tmp2];
@@ -171,7 +171,7 @@ const memoResult = importAllResult.memo(() => {
   const effect1 = importAllResult.useEffect(() => {
     const result = isFamilyCenterV3Enabled(closure_1_2[18]).prefetchFamilyCenterAgeGroupWhen(isFamilyCenterV3Enabled);
   }, items1);
-  return callback(_modDef14563, { node });
+  return callback(_modDef14578, { node });
 });
 let result = require("set").fileFinishedImporting(
   "modules/user_settings/notifications/native/SettingsNotificationScreen.tsx",

@@ -1,7 +1,7 @@
 // discord_app/modules/contact_sync/native/components/ContactSyncLandingOnboardingRedesign.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import RedesignContactSyncDiscoverabilityFooterDefault from "RedesignContactSyncDiscoverabilityFooter.tsx";
-import registerAssetDefault from "../../../../../_runtime/12455_registerAsset.js";
+import registerAssetDefault from "../../../../../_runtime/12467_registerAsset.js";
 import ContactSyncErrorDefault from "ContactSyncError.tsx";
 import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import closure_4 from "../../../../../_runtime/00019_noop.js";
@@ -136,7 +136,7 @@ export default function ContactSyncLandingOnboardingRedesign(onNext) {
   obj4[2] = intl3.string(onNext(1233).t.LhlgY9);
   obj4[3] = callback;
   obj4[4] = loading;
-  obj3[1] = callback2(onNext(4928).Button, obj4);
+  obj3[1] = callback2(onNext(4929).Button, obj4);
   items1[3] = callback2(closure_5, obj3);
   items1[4] = callback2(ContactSyncErrorDefault, { error });
   obj[1] = items1;

@@ -295,7 +295,7 @@ const forwardRefResult = importAllResult.forwardRef((messages, ref) => {
     ref(messages.channelId, messages.screenIndex, false);
   }
   let first = first1(
-    importAllResult.useState(() => new first(11358)()),
+    importAllResult.useState(() => new first(11363)()),
     1,
   )[0];
   [dependencyMap, closure_3] = first1(importAllResult.useState(false), 2);
@@ -363,7 +363,7 @@ const forwardRefResult = importAllResult.forwardRef((messages, ref) => {
     shouldJumpToOriginalPost: callback3,
   };
   let tmp2 = first1(importAllResult.useState(false), 2);
-  ({ startOrCancelLatestMessagesLoad: closure_15, channelLatestMessageLoadingStatsManager } = first(11360)(obj));
+  ({ startOrCancelLatestMessagesLoad: closure_15, channelLatestMessageLoadingStatsManager } = first(11365)(obj));
   obj = {
     chatRef: ref5,
     chatManager: first,
@@ -421,7 +421,7 @@ const forwardRefResult = importAllResult.forwardRef((messages, ref) => {
     isStaff: messages.isStaff,
     visibleMessagesWindowHandler: messages.visibleMessagesWindowHandler,
   };
-  let tmp16 = first(11360)(obj);
+  let tmp16 = first(11365)(obj);
   ({
     hasHandledScrollRef: closure_18,
     isAtBottomRef: closure_19,
@@ -437,7 +437,7 @@ const forwardRefResult = importAllResult.forwardRef((messages, ref) => {
     scrollToTopMessage,
     updateNativeRows,
     handleScrollPosition,
-  } = first(11362)(obj));
+  } = first(11367)(obj));
   const ref6 = importAllResult.useRef(null);
   ref6.current = {
     getMessage: callback2,
@@ -459,11 +459,11 @@ const forwardRefResult = importAllResult.forwardRef((messages, ref) => {
     scrollToNewMessages,
     getChatRef,
   }));
-  let tmp17 = first(11362)(obj);
+  let tmp17 = first(11367)(obj);
   obj1 = {
     chatManager: first,
     rowGenerator: first1(
-      tmp3[1].useState(() => new first(7850)()),
+      tmp3[1].useState(() => new first(7853)()),
       1,
     )[0],
     animatingStickerMessageIdRef: ref3,
@@ -506,10 +506,10 @@ const forwardRefResult = importAllResult.forwardRef((messages, ref) => {
     scrollToTopMessage,
     useReducedMotion: messages.useReducedMotion,
   };
-  ({ updateRows: closure_33, scrollToMessageId: closure_34 } = first(11746)({
+  ({ updateRows: closure_33, scrollToMessageId: closure_34 } = first(11751)({
     chatManager: first,
     rowGenerator: first1(
-      tmp3[1].useState(() => new first(7850)()),
+      tmp3[1].useState(() => new first(7853)()),
       1,
     )[0],
     animatingStickerMessageIdRef: ref3,
@@ -1495,7 +1495,7 @@ const forwardRefResult = importAllResult.forwardRef((messages, ref) => {
   });
   let obj3 = { children: null };
   const items4 = [
-    findMessageIndex(first(11684), {
+    findMessageIndex(first(11696), {
       ref: ref5,
       style: messages.style,
       inverted: true,

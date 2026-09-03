@@ -21,11 +21,11 @@ export default function StickerOptionsActionSheet(stickerUrl) {
   const intl = stickerUrl(1233).intl;
   obj[1] = intl.string(stickerUrl(1233).t.B1ubHx);
   obj[2] = callback;
-  obj[1] = jsx(stickerUrl(5607).TableRow, { icon: jsx(stickerUrl(4421).LinkIcon, {}), label: null, onPress: null });
-  obj[0] = jsx(stickerUrl(6000).TableRowGroup, {
+  obj[1] = jsx(stickerUrl(5608).TableRow, { icon: jsx(stickerUrl(4421).LinkIcon, {}), label: null, onPress: null });
+  obj[0] = jsx(stickerUrl(6001).TableRowGroup, {
     icon: jsx(stickerUrl(4421).LinkIcon, {}),
     label: null,
     onPress: null,
   });
-  return jsx(stickerUrl(5997).ActionSheet, { icon: jsx(stickerUrl(4421).LinkIcon, {}), label: null, onPress: null });
+  return jsx(stickerUrl(5998).ActionSheet, { icon: jsx(stickerUrl(4421).LinkIcon, {}), label: null, onPress: null });
 }

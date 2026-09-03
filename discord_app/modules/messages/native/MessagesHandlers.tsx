@@ -2588,25 +2588,25 @@ class MessagesHandlers {
                 closure_1 = tmp2;
                 isReveal = undefined;
                 closure_1 = undefined;
-                const nativeSyntheticEventData = callback(11367).getNativeSyntheticEventData(isReveal);
+                const nativeSyntheticEventData = callback(11372).getNativeSyntheticEventData(isReveal);
                 ({ messageId, channelId, isReveal } = nativeSyntheticEventData);
                 ({ attachmentId, embedId } = nativeSyntheticEventData);
-                const obj10 = callback(11367);
+                const obj10 = callback(11372);
                 if (isReveal) {
                   if (obj11.shouldAgeVerifyForExplicitMedia()) {
                     dependencyMap = 1;
                     c4 = 1;
                     obj1 = { value: null, done: false };
-                    obj1[0] = callback(4733).maybePerformReactiveCheck();
+                    obj1[0] = callback(4734).maybePerformReactiveCheck();
                     return obj1;
                   }
                 }
-                let obj3 = callback(7354);
+                let obj3 = callback(7355);
                 const obj2 = { obscure: null };
                 obj2[0] = isReveal;
                 const result = obj3.trackToggleMediaObscurityV2(obj2);
                 c4 = 3;
-                obj11 = callback(7354);
+                obj11 = callback(7355);
               }
             } else if (arg0 === 1) {
               c4 = 3;
@@ -2619,9 +2619,9 @@ class MessagesHandlers {
                 reactiveCheckPassed = closure_1_9.getReactiveCheckPassed();
               }
               if (!reactiveCheckPassed) {
-                obj = closure_1_1(8697);
+                obj = closure_1_1(8701);
                 obj3 = { entryPoint: null };
-                obj3[0] = callback(8699).AgeVerificationModalEntryPoint.OBSCURED_MEDIA;
+                obj3[0] = callback(8703).AgeVerificationModalEntryPoint.OBSCURED_MEDIA;
                 const result1 = obj.showAgeVerificationGetStartedModal(obj3);
               }
             }

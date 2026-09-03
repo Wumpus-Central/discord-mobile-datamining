@@ -62,7 +62,7 @@ export default function RoleMembersActionSheet(guildId) {
   const tmp3 = guildId;
   const tmp9 = roleId;
   const result = roleId(11).castGuildIdAsEveryoneGuildRoleId(guildId);
-  const tmp11 = roleId(5590)(guildId);
+  const tmp11 = roleId(5591)(guildId);
   let tmp12 = null;
   if (roleId !== result) {
     let tmp13;
@@ -95,9 +95,9 @@ export default function RoleMembersActionSheet(guildId) {
     }
     obj[1] = channelId;
     obj[2] = roleId;
-    obj[2] = closure_8(tmp9(11408), obj);
-    tmp16Result = tmp16(tmp3(5630).BottomSheet, obj);
-    let tmp9Result = tmp9(11408);
+    obj[2] = closure_8(tmp9(11413), obj);
+    tmp16Result = tmp16(tmp3(5631).BottomSheet, obj);
+    let tmp9Result = tmp9(11413);
   }
   return tmp16Result;
 }

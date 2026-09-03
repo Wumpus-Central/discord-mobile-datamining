@@ -32,10 +32,10 @@ export default function UserProfileBadgesEditButton(arg0) {
   _require = tmp;
   let obj = apexExperiment;
   const isBadgeManagementEnabled = obj.useIsBadgeManagementEnabled({ location: "UserProfileBadgesEditButton" });
-  analyticsLocations = analyticsLocations(5961)().analyticsLocations;
+  analyticsLocations = analyticsLocations(5962)().analyticsLocations;
   [][0] = analyticsLocations;
   if (isBadgeManagementEnabled) {
-    dependencyMap = tmp2(9019).getLegacyIconUrlByBadgeId(badges);
+    dependencyMap = tmp2(9023).getLegacyIconUrlByBadgeId(badges);
     let length;
     if (catalogBadges != null) {
       length = catalogBadges.length;
@@ -43,16 +43,16 @@ export default function UserProfileBadgesEditButton(arg0) {
     if (length == null) {
       length = badges.length;
     }
-    const substr = badges.slice(0, tmp2(9019).MAX_DISPLAYED_PROFILE_BADGES);
+    const substr = badges.slice(0, tmp2(9023).MAX_DISPLAYED_PROFILE_BADGES);
     let substr1;
     if (catalogBadges != null) {
-      substr1 = catalogBadges.slice(0, tmp2(9019).MAX_DISPLAYED_PROFILE_BADGES);
+      substr1 = catalogBadges.slice(0, tmp2(9023).MAX_DISPLAYED_PROFILE_BADGES);
     }
     if (substr1 == null) {
       substr1 = null;
     }
     const _Math = Math;
-    const diff = length - Math.min(length, tmp2(9019).MAX_DISPLAYED_PROFILE_BADGES);
+    const diff = length - Math.min(length, tmp2(9023).MAX_DISPLAYED_PROFILE_BADGES);
     let mapped;
     if (substr1 != null) {
       mapped = substr1.map((name) => name.name);
@@ -64,7 +64,7 @@ export default function UserProfileBadgesEditButton(arg0) {
     obj = { badge_names: null, overflow_count: null };
     obj[0] = mapped.join(", ");
     obj[1] = diff;
-    const tmp2Result = tmp2(9019);
+    const tmp2Result = tmp2(9023);
     obj = { label: null, content: null, accessibilityValue: null, onPress: null };
     const intl2 = tmp2(1233).intl;
     obj[0] = intl2.string(tmp2(1233).t.l6w3Vj);
@@ -116,7 +116,7 @@ export default function UserProfileBadgesEditButton(arg0) {
     }
     obj[2] = tmp19;
     obj[3] = tmp5;
-    return closure_6(tmp2(14495).UserProfileEditFormButton, obj);
+    return closure_6(tmp2(14511).UserProfileEditFormButton, obj);
   } else {
     return null;
   }

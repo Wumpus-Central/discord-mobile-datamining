@@ -42,7 +42,7 @@ export const createGuildAlertModeEnabledSystemMessage = function createGuildAler
   obj[2] = str;
   const tmp3 = resultDefault(theme);
   obj = {};
-  const merged = Object.assign(tmp(7882)(roleStyle));
+  const merged = Object.assign(tmp(7885)(roleStyle));
   const intl = tmp5(1233).intl;
   obj.content = intl.formatToParts(getSystemLocale.t.ig55n6, obj);
   const intl2 = tmp5(1233).intl;
@@ -71,7 +71,7 @@ export const createGuildAlertModeDisabledSystemMessage = function createGuildAle
       roleStyle: roleStyle.roleStyle,
     }),
   };
-  obj = { message, channel: "HermesInternal", isSystemDM: null, colors: -1 };
+  obj = { message, channel: "HermesInternal", isSystemDM: null, colors: "button" };
   obj[3] = resultDefault(theme);
   const tmp2 = resultDefault(theme);
   obj1 = {};

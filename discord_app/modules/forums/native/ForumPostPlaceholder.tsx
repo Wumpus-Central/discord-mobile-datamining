@@ -70,12 +70,12 @@ const memoResult = importAllResult.memo(() => {
   fn.__workletHash = 9488742940898;
   fn.__initData = closure_9;
   const animatedStyle = obj1.useAnimatedStyle(fn);
-  obj = { style: animatedStyle, pointerEvents: "none", children: jsx(stateFromStores(5609).Card, obj1) };
+  obj = { style: animatedStyle, pointerEvents: "none", children: jsx(stateFromStores(5610).Card, obj1) };
   obj1 = { variant: "secondary", style: callback2().postPlaceholder };
   return jsx(timingConfig(4217).View, {
     style: animatedStyle,
     pointerEvents: "none",
-    children: jsx(stateFromStores(5609).Card, { variant: "secondary", style: callback2().postPlaceholder }),
+    children: jsx(stateFromStores(5610).Card, { variant: "secondary", style: callback2().postPlaceholder }),
   });
 });
 const result = require("set").fileFinishedImporting("modules/forums/native/ForumPostPlaceholder.tsx");

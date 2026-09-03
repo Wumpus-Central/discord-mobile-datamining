@@ -21,7 +21,7 @@ export default {
     );
     let obj = ACTION_SHEET_HEIGHT_HALFDefault;
     obj = { gameId, source, sourceUserId };
-    obj.openLazy(asyncRequireImpl(8822, dependencyMap.paths), "game-profile-" + gameId, obj, stackingBehavior);
+    obj.openLazy(asyncRequireImpl(8826, dependencyMap.paths), "game-profile-" + gameId, obj, stackingBehavior);
   },
   returnToGameProfile(gameId) {
     gameId = gameId.gameId;
@@ -29,7 +29,7 @@ export default {
     dispatcherDefault.dispatch({ type: "GAME_PROFILE_CLEAR_PENDING_RETURN", gameId });
     const obj = dispatcherDefault;
     const obj2 = ACTION_SHEET_HEIGHT_HALFDefault;
-    obj2.openLazy(asyncRequireImpl(8822, dependencyMap.paths), "game-profile-" + gameId, {
+    obj2.openLazy(asyncRequireImpl(8826, dependencyMap.paths), "game-profile-" + gameId, {
       gameId,
       source,
       initialScrollOffset,

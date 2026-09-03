@@ -135,12 +135,12 @@ QuestFetchManager.prototype["_fetch"] = function _fetch(arg0) {
     obj[4] = closure_3.isFetchingCurrentQuests;
     obj[2] = obj;
     _modDef1205.addBreadcrumb(obj);
-    let tmpResult = tmp(11133);
+    let tmpResult = tmp(11137);
     const currentQuests = tmpResult.fetchCurrentQuests();
     tmpResult = tmp(1234);
     if (tmpResult.isMac()) {
-      const state = tmp6(11157).getState();
-      const tmp6Result = tmp6(11157);
+      const state = tmp6(11161).getState();
+      const tmp6Result = tmp6(11161);
     }
     const obj2 = _modDef1205;
     tmp6 = importDefault;

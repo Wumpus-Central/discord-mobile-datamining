@@ -16,7 +16,7 @@ export const useGlobalStatusIndicatorState = function useGlobalStatusIndicatorSt
   }
   let stateFromStores;
   importDefault = undefined;
-  let obj = stateFromStores(9552);
+  let obj = stateFromStores(9556);
   let hasPipParticipant = obj.useHasPipParticipant({ isActivityViewFocused: false });
   const tmp5 = useVoiceStateForRemoteSessionDefault();
   const items = [closure_4];
@@ -43,18 +43,18 @@ export const useGlobalStatusIndicatorState = function useGlobalStatusIndicatorSt
     items2,
   );
   const obj3 = stateFromStores(586);
-  let num = stateFromStores(9658).useGetStageRTCPanelHeight(stateFromStores);
+  let num = stateFromStores(9662).useGetStageRTCPanelHeight(stateFromStores);
   stateFromStores(4332);
   let tmp12 = null != tmp5;
   if (tmp12) {
-    let tmpResult = tmp(4727);
+    let tmpResult = tmp(4728);
     let channelId = tmp5.channelId;
     if (channelId == null) {
       channelId = EMPTY_STRING_SNOWFLAKE_ID;
     }
     tmp12 = tmpResult.getVoiceChannelKey(channelId) !== tmp11;
   }
-  tmpResult = tmp(9664);
+  tmpResult = tmp(9668);
   let isVoicePanelShowing = tmpResult.useIsVoicePanelShowing();
   const tmp14 = null != useMyCurrentStageChannelDefault();
   if (!isVoicePanelShowing) {

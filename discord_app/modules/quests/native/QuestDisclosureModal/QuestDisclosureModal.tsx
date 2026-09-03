@@ -4,7 +4,7 @@ import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import getSystemLocale from "../../../../intl/index.native.tsx";
 import NavigationStack from "../../../../design/components/Navigator/native/Navigator.native.tsx";
 import HeaderActionButton from "../../../../design/components/Navigator/native/HeaderActionButton.native.tsx";
-import registerAssetDefault from "../../../../../_runtime/07773_registerAsset.js";
+import registerAssetDefault from "../../../../../_runtime/07776_registerAsset.js";
 
 function CloseButton() {
   const obj = {
@@ -38,7 +38,7 @@ export default function QuestDisclosureModal(arg0) {
     isVideoQuest: CloseButton,
   } = arg0);
   function onClose() {
-    return callback2(14940).hideModal();
+    return callback2(14955).hideModal();
   }
   let obj = {
     headerLeft: CloseButton,
@@ -49,7 +49,7 @@ export default function QuestDisclosureModal(arg0) {
       const obj = { title: null };
       const intl = callback(1233).intl;
       obj[0] = intl.string(callback(1233).t.GcsZKJ);
-      return callback3(callback(5503).NavigatorHeader, obj);
+      return callback3(callback(5504).NavigatorHeader, obj);
     },
     render() {
       return closure_1_3(closure_1_1(closure_1_2[6]), {

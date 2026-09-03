@@ -44,7 +44,7 @@ const memoResult = importAllResult.memo(function MediaModalOverlayAltTextButton(
       const intl = tmp3(1233).intl;
       obj[2] = intl.string(tmp3(1233).t.Q5VqrN);
       obj[3] = jsx(tmp3(4474).Text, { variant: "text-xs/semibold", color: "text-overlay-light", children: null });
-      tmp4 = jsx(tmp3(5076).PressableOpacity, {
+      tmp4 = jsx(tmp3(5077).PressableOpacity, {
         variant: "text-xs/semibold",
         color: "text-overlay-light",
         children: null,

@@ -18,10 +18,10 @@ function DevToolsPersistedStoresActionSheet(store) {
   const close = store.close;
   let obj = { header: null, children: null };
   obj = { title: store.getName() };
-  obj[0] = jsx(store(5629).BottomSheetTitleHeader, { title: store.getName() });
-  obj = { hasIcons: false, children: jsx(store(5999).ActionSheetRow, obj1) };
-  obj[1] = jsx(store(5999).ActionSheetRow.Group, { hasIcons: false, children: jsx(store(5999).ActionSheetRow, obj1) });
-  return jsx(store(5997).ActionSheet, { hasIcons: false, children: jsx(store(5999).ActionSheetRow, obj1) });
+  obj[0] = jsx(store(5630).BottomSheetTitleHeader, { title: store.getName() });
+  obj = { hasIcons: false, children: jsx(store(6000).ActionSheetRow, obj1) };
+  obj[1] = jsx(store(6000).ActionSheetRow.Group, { hasIcons: false, children: jsx(store(6000).ActionSheetRow, obj1) });
+  return jsx(store(5998).ActionSheet, { hasIcons: false, children: jsx(store(6000).ActionSheetRow, obj1) });
 }
 let c4 = importAllResult;
 let obj = { container: null, sectionHeader: null };

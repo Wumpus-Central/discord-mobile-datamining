@@ -41,7 +41,7 @@ export default function ConversationNavigatorHeader(channelId) {
   const tmp3 = computeChannelNameDefault(stateFromStores, true);
   obj = { style: callback(flag).container, children: null };
   obj = { title: channelId.title, subtitle: tmp3, variant: "heading-lg/semibold", subtitleColor: "text-muted" };
-  obj[1] = jsx(channelId(7617).GenericHeaderTitle, {
+  obj[1] = jsx(channelId(7618).GenericHeaderTitle, {
     title: channelId.title,
     subtitle: tmp3,
     variant: "heading-lg/semibold",

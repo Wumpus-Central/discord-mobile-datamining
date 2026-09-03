@@ -159,15 +159,15 @@ export default function AgeVerificationIncodeMethodSelectScreen(onMethodSelected
   if (tmp2) {
     obj = { align: "center", justify: "center", spacing: 16, style: null, children: null };
     obj[3] = tmp5.loadingContainer;
-    obj[4] = tmp6(tmp7(6056).ActivityIndicator, { size: "large" });
-    obj[0] = tmp6(tmp7(4926).Stack, obj);
+    obj[4] = tmp6(tmp7(6057).ActivityIndicator, { size: "large" });
+    obj[0] = tmp6(tmp7(4927).Stack, obj);
     obj[0] = tmp6(ModalContent, obj);
     let tmp11 = obj;
   } else {
     obj1 = { align: "stretch", spacing: 24, style: null, children: null };
     obj1[2] = tmp5.container;
     let obj2 = { align: "center", justify: "center", spacing: 16, children: null };
-    const items1 = [tmp6(tmp7(6265).ShieldSpotIllustration, { height: 100, width: 177 })];
+    const items1 = [tmp6(tmp7(6266).ShieldSpotIllustration, { height: 100, width: 177 })];
     let obj3 = { align: "center", justify: "center", spacing: 8, children: null };
     const obj4 = {
       accessibilityRole: "header",
@@ -186,9 +186,9 @@ export default function AgeVerificationIncodeMethodSelectScreen(onMethodSelected
     obj5[3] = intl2.string(trustedOrigin(2918)["5yWXmT"]);
     items2[1] = tmp6(tmp7(4474).Text, obj5);
     obj3[3] = items2;
-    items1[1] = callback3(tmp7(4926).Stack, obj3);
+    items1[1] = callback3(tmp7(4927).Stack, obj3);
     obj2[3] = items1;
-    const items3 = [callback3(tmp7(4926).Stack, obj2), ,];
+    const items3 = [callback3(tmp7(4927).Stack, obj2), ,];
     if (tmp6Result) {
       const obj6 = { variant: "text-sm/medium", color: "text-feedback-critical", style: null, children: null };
       obj6[2] = tmp5.header;
@@ -206,7 +206,7 @@ export default function AgeVerificationIncodeMethodSelectScreen(onMethodSelected
     obj8[3] = function onPress() {
       callback(closure_1_7.FACIAL_AGE_ESTIMATION);
     };
-    const items4 = [tmp6(tmp7(5607).TableRow, obj8)];
+    const items4 = [tmp6(tmp7(5608).TableRow, obj8)];
     const obj9 = { arrow: true, label: null, subLabel: null, onPress: null };
     const intl6 = tmp7(1233).intl;
     obj9[1] = intl6.string(trustedOrigin(2918)["NeVlw/"]);
@@ -215,11 +215,11 @@ export default function AgeVerificationIncodeMethodSelectScreen(onMethodSelected
     obj9[3] = function onPress() {
       callback(closure_1_7.ID_VERIFICATION);
     };
-    items4[1] = tmp6(tmp7(5607).TableRow, obj9);
+    items4[1] = tmp6(tmp7(5608).TableRow, obj9);
     obj7[1] = items4;
-    items3[2] = callback3(tmp7(6000).TableRowGroup, obj7);
+    items3[2] = callback3(tmp7(6001).TableRowGroup, obj7);
     obj1[3] = items3;
-    obj[0] = callback3(tmp7(4926).Stack, obj1);
+    obj[0] = callback3(tmp7(4927).Stack, obj1);
     obj[0] = tmp6(ModalContent, obj);
     tmp11 = obj;
   }

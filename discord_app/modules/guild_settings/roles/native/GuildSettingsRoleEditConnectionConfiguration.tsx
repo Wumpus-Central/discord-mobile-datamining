@@ -33,7 +33,7 @@ function Header(arg0) {
     application1 = integration.application;
   }
   if (null != application1) {
-    obj = { size: null, user: null, guildId: "r" };
+    obj = { size: null, user: null, guildId: "accessible" };
     obj[0] = tmp3(1296).AvatarSizes.XSMALL;
     let bot;
     if (integration != null) {
@@ -56,7 +56,7 @@ function Header(arg0) {
       }
       let tmp11;
       if (null != bot1) {
-        obj = { size: null, user: null, guildId: "r" };
+        obj = { size: null, user: null, guildId: "accessible" };
         obj[0] = tmp3(1296).AvatarSizes.XSMALL;
         obj[1] = getOrFetchApplicationBatched.bot;
         tmp11 = callback2(tmp3(1296).Avatar, obj);
@@ -143,7 +143,7 @@ function BooleanConfigRule(metadataField) {
     }
     closure_3(tmp, num);
   };
-  return closure_12(metadataField(6001).TableSwitchRow, obj, metadataField);
+  return closure_12(metadataField(6002).TableSwitchRow, obj, metadataField);
 }
 function NumericalConfigRule(existingPendingConfiguration) {
   ({ fieldText, fieldTextHook, metadataField } = existingPendingConfiguration);
@@ -206,7 +206,7 @@ function NumericalConfigRule(existingPendingConfiguration) {
   if (num == null) {
     num = -1;
   }
-  let obj = metadataField(17457);
+  let obj = metadataField(17477);
   const realizedOperatorForResult = obj.realizedOperatorFor(existingPendingConfiguration.operator);
   c7 = realizedOperatorForResult;
   let value;
@@ -215,7 +215,7 @@ function NumericalConfigRule(existingPendingConfiguration) {
       value = iter.value;
     }
   }
-  let tmpResult = tmp(17457);
+  let tmpResult = tmp(17477);
   str = tmpResult.displayedValueFor(value, realizedOperatorForResult);
   str = str.toString();
   let mapped = React;
@@ -354,7 +354,7 @@ function NumericalConfigRule(existingPendingConfiguration) {
       }
       closure_3(tmp3, num);
     };
-    return onInputValueChange(tmp(6001).TableSwitchRow, obj5, metadataField);
+    return onInputValueChange(tmp(6002).TableSwitchRow, obj5, metadataField);
   }
 }
 function BlueskyMetadataRules(arg0) {
@@ -953,7 +953,7 @@ export default function GuildSettingsRoleEditConnectionConfiguration(configurati
     }
     if (configurationItems[0].configuration.connectionType === closure_11) {
       let obj = { hasIcons: true, children: null };
-      obj = { platform: null, integration: "a", applicationId: true, onRemove: true, locked: "year" };
+      obj = { platform: null, integration: "a", applicationId: "a", onRemove: "isArray", locked: "icon" };
       obj[2] = applicationId;
       obj[3] = function onRemove() {
         return onConfigurationChange(null, configurationItems[0].index);

@@ -1,7 +1,7 @@
 // discord_app/modules/payments/records/CheckoutContextRecord.tsx
 import toJSDefault from "../../../lib/Record.tsx";
 import formatSingleCurrencyPrice from "../../../utils/PriceUtils.tsx";
-import addDefault from "../../../../_runtime/06091_add.js";
+import addDefault from "../../../../_runtime/06092_add.js";
 import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
 
 require = arg1;
@@ -126,6 +126,29 @@ prototype["getPriceString"] = function getPriceString() {
   return obj.formatPrice(new addDefault(total.amount).dividedBy(10 ** total.exponent).toNumber(), total.currency, {
     convertToMajorUnits: false,
   });
+};
+prototype["getRegularPriceString"] = function getRegularPriceString() {
+  const price = this.price;
+  const obj = formatSingleCurrencyPrice;
+  const obj2 = new addDefault(price.amount);
+  return obj.formatPrice(new addDefault(price.amount).dividedBy(10 ** price.exponent).toNumber(), price.currency, {
+    convertToMajorUnits: false,
+  });
+};
+prototype["getDiscountedPriceString"] = function getDiscountedPriceString() {
+  let formatPriceResult = null;
+  if (null != this.discount) {
+    const discounted_price = this.discount.discounted_price;
+    const obj2 = new addDefault(discounted_price.amount);
+    const obj = formatSingleCurrencyPrice;
+    formatPriceResult = obj.formatPrice(
+      obj2.dividedBy(10 ** discounted_price.exponent).toNumber(),
+      discounted_price.currency,
+      { convertToMajorUnits: false },
+    );
+    const dividedByResult = obj2.dividedBy(10 ** discounted_price.exponent);
+  }
+  return formatPriceResult;
 };
 prototype["getAddOnPrice"] = function getAddOnPrice() {
   const self = this;

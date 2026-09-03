@@ -1,8 +1,8 @@
 // discord_app/modules/chat_input/native/guard/ChatInputGuardGuildMemberVerification.tsx
 import playDefault from "../../../../components_native/common/LottieAnimationView.tsx";
 import ChatInputGuardDefault from "ChatInputGuard.tsx";
-import registerAssetDefault from "../../../../../_runtime/12245_registerAsset.js";
-import registerAssetDefault2 from "../../../../../_runtime/12246_registerAsset.js";
+import registerAssetDefault from "../../../../../_runtime/12257_registerAsset.js";
+import registerAssetDefault2 from "../../../../../_runtime/12258_registerAsset.js";
 import { Image } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import closure_4 from "../../../a11y/AccessibilityStore.tsx";
 import { TextAreaCta } from "../ChatInputConstants.tsx";
@@ -19,7 +19,7 @@ let closure_8 = createCacheKey.createStyles({
 const memoResult = importAllResult.memo(function ChatInputGuardGuildMemberVerification(guildId) {
   guildId = guildId.guildId;
   const tmp = callback();
-  let obj = guildId(7673);
+  let obj = guildId(7676);
   const currentUserGuildJoinRequest = obj.useCurrentUserGuildJoinRequest(guildId);
   let applicationStatus;
   if (currentUserGuildJoinRequest != null) {
@@ -49,7 +49,7 @@ const memoResult = importAllResult.memo(function ChatInputGuardGuildMemberVerifi
       obj[1] = intl.string(guildId(closure_1_2[10]).t["13tjTU"]);
       const result = guildId(closure_1_2[12]).openMemberVerificationCancelPendingAlert(obj);
     };
-    const tmp7 = jsx(tmp2(5559).XSmallIcon, {});
+    const tmp7 = jsx(tmp2(5560).XSmallIcon, {});
   } else {
     let intl = tmp2(1233).intl;
     stringResult = intl.string(tmp2(1233).t.rEBKvg);
@@ -72,7 +72,7 @@ const memoResult = importAllResult.memo(function ChatInputGuardGuildMemberVerifi
   } else {
     obj = { style: null, source: null, autoPlay: null };
     obj[0] = tmp.lottieAnimation;
-    obj[1] = tmp2(12247);
+    obj[1] = tmp2(12259);
     obj[2] = !stateFromStores;
     tmp13Result = tmp13(playDefault, obj);
     const tmp14Result = playDefault;

@@ -6,7 +6,7 @@ import getSystemLocale from "../../../intl/index.native.tsx";
 import Button from "../../../design/void/native.tsx";
 import useSafeAreaInsetsDefault from "../../safe_area/useSafeAreaInsets.native.tsx";
 import ActivityIndicator from "../../../design/components/ActivityIndicator/native/ActivityIndicator.native.tsx";
-import _modDef7713 from "../../../design/void/Form/native/FreeFormInputGroup.tsx";
+import _modDef7716 from "../../../design/void/Form/native/FreeFormInputGroup.tsx";
 import DividerDefault from "../../../design/void/Form/native/FormDivider.tsx";
 import getInvalidLinkSource from "../../../design/components/Illustration/native/redesign/generated/InvalidLink.tsx";
 import renderIconDefault from "../../guild/native/GuildIconUploader.tsx";
@@ -74,7 +74,7 @@ function GuildTemplateResolved(guildTemplate) {
   obj2[2] = intl3.format(guildTemplate(1233).t["2bprXx"], { guidelinesURL: constants.GUIDELINES });
   obj2[3] = name;
   obj2[4] = setName;
-  items1[3] = callback(_modDef7713, obj2);
+  items1[3] = callback(_modDef7716, obj2);
   const obj4 = { style: tmp.createButtonWrapper, children: null };
   const obj5 = { size: "md", text: null, onPress: null, loading: null, disabled: null, grow: true };
   const intl4 = tmp10(1233).intl;
@@ -82,7 +82,7 @@ function GuildTemplateResolved(guildTemplate) {
   obj5[2] = createServer;
   obj5[3] = guildTemplate.state === GuildTemplateStates.ACCEPTING;
   obj5[4] = guildTemplate.state === GuildTemplateStates.ACCEPTING;
-  obj4[1] = callback(guildTemplate(4928).Button, obj5);
+  obj4[1] = callback(guildTemplate(4929).Button, obj5);
   items1[4] = callback(closure_4, obj4);
   items1[5] = callback(DividerDefault, { style: tmp.divider, outer: true });
   const obj7 = {

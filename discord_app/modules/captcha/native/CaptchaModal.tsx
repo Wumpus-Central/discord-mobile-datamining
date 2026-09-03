@@ -43,7 +43,7 @@ export default function CaptchaModal(arg0) {
   } = arg0);
   let navigation;
   let callback;
-  const tmp2 = callback2(onReject(7726)());
+  const tmp2 = callback2(onReject(7729)());
   let obj = createStandardNavigationFactories;
   navigation = obj.useNavigation();
   const items = [navigation];
@@ -65,7 +65,7 @@ export default function CaptchaModal(arg0) {
     }
     return str;
   }, items);
-  callback = onReject(17102)({ onReject, analyticsType: memo });
+  callback = onReject(17122)({ onReject, analyticsType: memo });
   const effect = React.useEffect(() => {
     closure_4.dismiss();
   }, []);

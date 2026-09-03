@@ -9,6 +9,6 @@ export default {
   show(url) {
     let obj = ACTION_SHEET_HEIGHT_HALFDefault;
     obj = { url };
-    obj.openLazy(asyncRequireImpl(13034, dependencyMap.paths), "blocked-domain", obj);
+    obj.openLazy(asyncRequireImpl(13046, dependencyMap.paths), "blocked-domain", obj);
   },
 };

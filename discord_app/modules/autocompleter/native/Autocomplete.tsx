@@ -11,7 +11,7 @@ import PressableBase from "../../../design/void/Pressables/native/Pressables.tsx
 import preloadDefault from "../../../components_native/common/FastImage.tsx";
 import TableRowInner from "../../../design/components/TableRow/native/TableRow.native.tsx";
 import TableRowTrailingText from "../../../design/components/TableRow/native/TableRowTrailingText.native.tsx";
-import registerAssetDefault from "../../../../_runtime/08042_registerAsset.js";
+import registerAssetDefault from "../../../../_runtime/08045_registerAsset.js";
 import Form from "../../../design/void/Form/native/index.tsx";
 import StickerDefault from "../../stickers/native/Sticker.tsx";
 import useStickerPackCategories from "../../stickers/StickersHooks.tsx";
@@ -139,8 +139,8 @@ const obj9 = {
     obj[4] = closure_9(user(1296).Avatar, obj);
     const items1 = [,];
     ({ trailing: arr2[0], username: arr2[1] } = tmp);
-    obj[5] = closure_9(guildId(9793), { user, usernameStyle: items1, discriminatorStyle: tmp.trailing });
-    return closure_9(user(8372).FormRow, obj);
+    obj[5] = closure_9(guildId(9797), { user, usernameStyle: items1, discriminatorStyle: tmp.trailing });
+    return closure_9(user(8376).FormRow, obj);
   },
   Global(arg0) {
     ({ text, badge } = arg0);
@@ -293,7 +293,7 @@ const obj9 = {
     if (obj.isNullOrEmpty(tmp4)) {
       obj = { size: "sm", style: null };
       obj[1] = tmp.gameIcon;
-      let tmp6Result = tmp6(tmp5(8736).UnknownGameIcon, obj);
+      let tmp6Result = tmp6(tmp5(8740).UnknownGameIcon, obj);
       let tmp8 = tmp6;
     } else {
       obj = { style: null, source: null };
@@ -328,8 +328,8 @@ const obj9 = {
       }
       obj1 = { text: null };
       obj1[0] = str;
-      obj[3] = callback(tmp(5616).TableRowTrailingText, obj1);
-      tmp5Result = tmp5(tmp(5607).TableRow, obj);
+      obj[3] = callback(tmp(5617).TableRowTrailingText, obj1);
+      tmp5Result = tmp5(tmp(5608).TableRow, obj);
     }
     return tmp5Result;
   },

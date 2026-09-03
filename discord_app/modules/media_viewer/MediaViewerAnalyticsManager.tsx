@@ -27,8 +27,8 @@ obj = {
   channelType: "isArray",
   numMediaItems: "Array",
   hasMediaOptions: "call",
-  source: 225509649,
-  incrementableActions: 1409286144,
+  source: "HermesInternal",
+  incrementableActions: "Array",
 };
 const values = Object.values(obj);
 obj[6] = Object.fromEntries(

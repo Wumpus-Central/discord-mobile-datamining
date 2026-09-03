@@ -178,12 +178,12 @@ export const AppLauncherCommandViewHeader = function AppLauncherCommandViewHeade
   if (str == null) {
     str = "";
   }
-  const tmp9 = section(8050);
+  const tmp9 = section(8053);
   if (null != memo) {
     obj2 = { style: null, source: null };
     obj2[0] = tmp.appIcon;
     obj2[1] = memo;
-    let tmp15 = callback(tmp8(5501), obj2);
+    let tmp15 = callback(tmp8(5502), obj2);
     let tmp16 = callback;
   } else {
     const obj3 = { style: null };
@@ -205,7 +205,7 @@ export const AppLauncherCommandViewHeader = function AppLauncherCommandViewHeade
   let items3 = [tmp.headerBannerOverlay, animatedStyle2];
   const items4 = [
     tmp16(section(4217).View, { style: items3 }),
-    tmp16(section(11926), { onPress: onPress.onPressBack }),
+    tmp16(section(11932), { onPress: onPress.onPressBack }),
     ,
     ,
   ];

@@ -95,7 +95,7 @@ export default function GuildBoostingMarketingPersistentCta(arg0) {
   obj = {
     useReducedMotion: stateFromStores,
     VISIBILITY_OFFSET: 120,
-    withSpring: isVisible(4927).withSpring,
+    withSpring: isVisible(4928).withSpring,
     isVisible,
     SPRING_CONFIG: closure_8,
   };
@@ -124,10 +124,10 @@ export default function GuildBoostingMarketingPersistentCta(arg0) {
   const obj2 = { style: tmp.innerWraper, children: null };
   const obj3 = { style: tmp.guildInfoContainer, children: null };
   const obj4 = { style: tmp.guildIcon, textStyle: tmp.guildIconText, guild, size: null };
-  const tmp4 = stateFromStores(4940);
-  obj4[3] = isVisible(6012).GuildIconSizes.LARGE;
+  const tmp4 = stateFromStores(4941);
+  obj4[3] = isVisible(6013).GuildIconSizes.LARGE;
   const items3 = [
-    callback(stateFromStores(6012), obj4),
+    callback(stateFromStores(6013), obj4),
     callback(isVisible(4474).Text, {
       style: tmp.guildName,
       variant: "text-md/bold",
@@ -138,8 +138,8 @@ export default function GuildBoostingMarketingPersistentCta(arg0) {
   obj3[1] = items3;
   const items4 = [callback2(View, obj3)];
   const obj5 = { style: tmp.guildName, variant: "text-md/bold", lineClamp: 1, children: guild.name };
-  const tmp5 = stateFromStores(6012);
-  items4[1] = callback(View, { style: tmp.buttonContainer, children: callback(stateFromStores(7154), obj7) });
+  const tmp5 = stateFromStores(6013);
+  items4[1] = callback(View, { style: tmp.buttonContainer, children: callback(stateFromStores(7155), obj7) });
   obj2[1] = items4;
   obj1[6] = callback2(View, obj2);
   obj[1] = callback(tmp4, obj1);

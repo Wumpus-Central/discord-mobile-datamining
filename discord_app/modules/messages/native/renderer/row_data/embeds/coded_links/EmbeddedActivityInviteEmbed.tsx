@@ -38,7 +38,7 @@ export const createEmbeddedActivityInviteEmbed = function createEmbeddedActivity
         }
         id = target_application.id;
         if (applicationAssetFetchState.getApplicationAssetFetchState(id) === FetchState.NOT_FETCHED) {
-          let obj2 = id(8057);
+          let obj2 = id(8060);
           const assetIds = obj2.fetchAssetIds(id, closure_16);
         }
         const tmp13 = getEmbedThemeColorsDefault(inviteCode.theme);
@@ -63,7 +63,7 @@ export const createEmbeddedActivityInviteEmbed = function createEmbeddedActivity
         }
         let simpleChannelIcon = null;
         if (null != channel) {
-          let obj3 = id(4981);
+          let obj3 = id(4982);
           simpleChannelIcon = obj3.getSimpleChannelIcon(channel);
         }
         if (null != simpleChannelIcon) {
@@ -106,7 +106,7 @@ export const createEmbeddedActivityInviteEmbed = function createEmbeddedActivity
           }
           if (null != id) {
             if (null != id2) {
-              tmp25Result = tmp25(13104);
+              tmp25Result = tmp25(13116);
               obj1 = { channelId: null, guildId: null, applicationId: null };
               obj1[0] = id;
               obj1[1] = id2;
@@ -124,15 +124,15 @@ export const createEmbeddedActivityInviteEmbed = function createEmbeddedActivity
                 stringResult = intl3.string(tmp25(1233).t.KC26NR);
               }
             }
-            let assetIds1 = tmp25(8057).getAssetIds(id, closure_16);
+            let assetIds1 = tmp25(8060).getAssetIds(id, closure_16);
             if (assetIds1 == null) {
               assetIds1 = [];
             }
             const first = callback(assetIds1, 1)[0];
             let assetImage;
             if (null != first) {
-              assetImage = tmp25(8057).getAssetImage(id, first, 1024);
-              const tmp25Result2 = tmp25(8057);
+              assetImage = tmp25(8060).getAssetImage(id, first, 1024);
+              const tmp25Result2 = tmp25(8060);
             }
             obj2 = {};
             const merged = Object.assign(baseColors);

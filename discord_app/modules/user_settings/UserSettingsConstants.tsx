@@ -64,8 +64,8 @@ export const createEmptyEditInfo = function createEmptyEditInfo() {
     errorCallbacks: false,
     loaded: false,
     loading: "call",
-    triggeredMigrations: "tag",
-    offlineEditDataVersion: "Array",
+    triggeredMigrations: "c",
+    offlineEditDataVersion: "to",
   };
   obj[4] = [];
   obj[5] = [];

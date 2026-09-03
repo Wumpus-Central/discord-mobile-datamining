@@ -3,7 +3,7 @@ import nDefault from "../../../../../_runtime/00686_n.js";
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import set from "../../../../utils/PlatformUtils.tsx";
 import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
-import LinearGradientDefault from "../../../../../_runtime/04940_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/04941_LinearGradient.js";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
@@ -157,7 +157,7 @@ const memoResult = importAllResult.memo(function MediaKeyboardBottomSheetActions
       obj[3] = accessibilityLabel.text;
       items[1] = closure_1_6(onHeightChange(4474).Text, obj);
       obj[6] = items;
-      return closure_1_7(onHeightChange(5076).PressableOpacity, obj, arg1);
+      return closure_1_7(onHeightChange(5077).PressableOpacity, obj, arg1);
     }),
   });
   items2[1] = callback(closure_5, obj1);

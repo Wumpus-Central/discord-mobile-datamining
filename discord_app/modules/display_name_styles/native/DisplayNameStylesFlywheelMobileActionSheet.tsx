@@ -113,11 +113,11 @@ export default function DisplayNameStylesFlywheelMobileActionSheet(markAsDismiss
       markAsDismissed(closure_1_8.USER_DISMISS);
     },
   };
-  const items4 = [callback(markAsDismissed(5945).ActionSheetHeaderBar, obj1), , , ,];
+  const items4 = [callback(markAsDismissed(5946).ActionSheetHeaderBar, obj1), , , ,];
   obj2 = { style: tmp6.imageContainer, children: null };
   let tmp14Result = enabled;
   if (enabled) {
-    tmp14Result = tmp14(tmp2(6265).DisplayNameStylesV2AbstractUI, { resizeMode: "contain" });
+    tmp14Result = tmp14(tmp2(6266).DisplayNameStylesV2AbstractUI, { resizeMode: "contain" });
   }
   const items5 = [tmp14Result];
   if (enabled) {
@@ -150,33 +150,33 @@ export default function DisplayNameStylesFlywheelMobileActionSheet(markAsDismiss
     const intl3 = tmp2(1233).intl;
     obj7[0] = intl3.string(tmp2(1233).t["4P5I8V"]);
     obj7[3] = callback;
-    const items6 = [tmp14(tmp2(4928).Button, obj7)];
+    const items6 = [tmp14(tmp2(4929).Button, obj7)];
     const obj8 = { text: null, variant: "secondary", size: "lg", onPress: null };
     const intl4 = tmp2(1233).intl;
     obj8[0] = intl4.string(tmp2(1233).t.TulDPl);
     obj8[3] = callback1;
-    items6[1] = tmp14(tmp2(4928).Button, obj8);
+    items6[1] = tmp14(tmp2(4929).Button, obj8);
     obj6[1] = items6;
     items4[4] = tmp15(tmp16, obj6);
     obj[1] = items4;
     obj5[1] = tmp15(tmp16, obj);
-    obj[4] = tmp14(tmp2(5561).SafeAreaPaddingView, obj5);
-    return tmp14(tmp2(5630).BottomSheet, obj);
+    obj[4] = tmp14(tmp2(5562).SafeAreaPaddingView, obj5);
+    return tmp14(tmp2(5631).BottomSheet, obj);
   } else {
     if (tmp2Result.isIOS()) {
       const obj9 = { source: null, style: null, resizeMode: "contain", enableAnimation: null };
       const obj10 = { uri: null };
-      obj10[0] = tmp4(16752);
+      obj10[0] = tmp4(16772);
       obj9[0] = obj10;
       obj9[1] = tmp6.image;
       obj9[3] = !enabled;
-      tmp14Result = tmp14(tmp4(5501), obj9);
-      const tmp4Result = tmp4(5501);
+      tmp14Result = tmp14(tmp4(5502), obj9);
+      const tmp4Result = tmp4(5502);
     } else {
       const obj11 = { url: null, style: null, autoplay: true };
-      obj11[0] = tmp4(16752);
+      obj11[0] = tmp4(16772);
       obj11[1] = tmp6.image;
-      tmp14Result = tmp14(tmp2(8530).APNGPlayer, obj11);
+      tmp14Result = tmp14(tmp2(8534).APNGPlayer, obj11);
     }
     tmp2Result = tmp2(1234);
   }

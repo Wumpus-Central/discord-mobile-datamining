@@ -10,9 +10,11 @@ let result = require("set").fileFinishedImporting(
 export const useDiscountedPremiumProductInfo = function useDiscountedPremiumProductInfo(premiumDiscountOffer, items3) {
   const _require = premiumDiscountOffer;
   let obj = _require(discountedProduct[2]);
-  discountedProduct = obj.useDiscountedPremiumPlan(premiumDiscountOffer, items3).discountedProduct;
+  const discountedPremiumPlan = obj.useDiscountedPremiumPlan(premiumDiscountOffer, items3);
+  discountedProduct = discountedPremiumPlan.discountedProduct;
   const items = [premiumDiscountOffer, discountedProduct];
   obj = {
+    discountedPlan: discountedPremiumPlan.discountedPlan,
     discountedProduct,
     discountedPriceString: React.useMemo(() => {
       if (null != premiumDiscountOffer) {

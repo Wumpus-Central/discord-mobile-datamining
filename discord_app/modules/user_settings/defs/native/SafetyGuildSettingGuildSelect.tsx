@@ -40,7 +40,7 @@ createToggle = {
   parent: MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   onPress: function onGuildSelectPress() {
     ACTION_SHEET_HEIGHT_HALFDefault.openLazy(
-      asyncRequireImpl(15698, dependencyMap.paths),
+      asyncRequireImpl(15712, dependencyMap.paths),
       "SettingsPrivacyAndSafetyGuildSelectActionSheet",
     );
   },

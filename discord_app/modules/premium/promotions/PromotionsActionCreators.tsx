@@ -257,7 +257,7 @@ function _fetchClaimedOutboundPromotionCodes() {
       throw arg1;
     } else if (arg0 !== 2) {
       const body = arg1.body;
-      callback = body.map(callback(13238).claimedOutboundPromotionCodeFromServer);
+      callback = body.map(callback(13250).claimedOutboundPromotionCodeFromServer);
       const obj = callback2(706);
       const obj4 = { type: "CLAIMED_OUTBOUND_PROMOTION_CODES_FETCH_SUCCESS", claimedOutboundPromotionCodes: null };
       obj4[1] = callback;

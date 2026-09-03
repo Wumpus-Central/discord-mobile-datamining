@@ -77,7 +77,7 @@ export default function VideoQuestTranscriptActionSheet(quest) {
   obj = { title: null };
   const intl = quest(1233).intl;
   obj[0] = intl.string(quest(1233).t["1YS80z"]);
-  obj[1] = callback2(quest(5629).BottomSheetTitleHeader, obj);
+  obj[1] = callback2(quest(5630).BottomSheetTitleHeader, obj);
   obj = { contentContainerStyle: { paddingBottom: useSafeAreaInsetsDefault().bottom }, children: null };
   obj1 = { spacing: 16, style: tmp.content, children: null };
   let fetchStatus;
@@ -98,7 +98,7 @@ export default function VideoQuestTranscriptActionSheet(quest) {
       ),
   ];
   obj1[2] = items2;
-  obj[1] = closure_8(quest(4926).Stack, obj1);
-  obj[2] = callback2(quest(5632).BottomSheetScrollView, obj);
-  return callback2(quest(5997).ActionSheet, obj);
+  obj[1] = closure_8(quest(4927).Stack, obj1);
+  obj[2] = callback2(quest(5633).BottomSheetScrollView, obj);
+  return callback2(quest(5998).ActionSheet, obj);
 }

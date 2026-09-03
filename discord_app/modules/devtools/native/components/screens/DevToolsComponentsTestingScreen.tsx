@@ -82,7 +82,7 @@ function Select(children) {
     obj2[1] = function onPress() {
       return _undefined((arg0) => !arg0);
     };
-    items[3] = tmp7(tmp4(4928).Button, obj2);
+    items[3] = tmp7(tmp4(4929).Button, obj2);
     obj[1] = items;
     return tmp6(require("../../../../../design/components/Card/native/Card.native.tsx").Card, obj);
   }

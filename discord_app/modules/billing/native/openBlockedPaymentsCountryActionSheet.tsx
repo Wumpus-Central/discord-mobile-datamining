@@ -9,7 +9,7 @@ export default function openBlockedPaymentsCountryActionSheet() {
   ACTION_SHEET_HEIGHT_HALFDefault.hideActionSheet();
   const obj = ACTION_SHEET_HEIGHT_HALFDefault;
   ACTION_SHEET_HEIGHT_HALFDefault.openLazy(
-    asyncRequireImpl(8494, dependencyMap.paths),
+    asyncRequireImpl(8498, dependencyMap.paths),
     "BlockedPaymentsCountryActionSheet",
   );
 }

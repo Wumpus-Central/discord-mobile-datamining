@@ -3,7 +3,7 @@ import timestampDefault from "../debug/Logger.tsx";
 import encodeProperties from "../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
 import sendRequest from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
-import _modDef4713 from "../../utils/TrackedHTTPUtils.tsx";
+import _modDef4714 from "../../utils/TrackedHTTPUtils.tsx";
 import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
 import closure_4 from "../impersonate/ImpersonateStore.tsx";
 import closure_5 from "../lurker_mode/LurkingStore.tsx";
@@ -309,7 +309,7 @@ let obj = {
     obj(706).dispatch({ type: "GUILD_SETTINGS_SUBMIT" });
     const pendingOriginalMd5s = store.getPendingOriginalMd5s();
     const obj5 = obj(706);
-    const obj6 = obj(5121);
+    const obj6 = obj(5122);
     const headersForMd5 = obj6.buildHeadersForMd5({
       [closure_0(closure_2[14]).SafetyScannedUploadSurface.GUILD_ICON]: pendingOriginalMd5s.icon,
       [closure_0(closure_2[14]).SafetyScannedUploadSurface.GUILD_BANNER]: pendingOriginalMd5s.banner,
@@ -377,7 +377,7 @@ let obj = {
     if (closure_0 === undefined) {
       tmp2 = null;
     }
-    obj = _modDef4713;
+    obj = _modDef4714;
     obj = { url: closure_10.GUILD(id), body: obj, oldFormErrors: true, trackedActionData: null, rejectWithError: null };
     obj = { owner_id: id2, code: tmp2 };
     obj[3] = { event: encodeProperties.NetworkActionNames.GUILD_TRANSFER_OWNERSHIP, properties: obj2 };
@@ -390,7 +390,7 @@ let obj = {
     if (arg1 === undefined) {
       flag = false;
     }
-    obj = _modDef4713;
+    obj = _modDef4714;
     obj = { url: closure_10.GUILD_PINCODE(id), oldFormErrors: true, trackedActionData: null, rejectWithError: null };
     obj = { event: encodeProperties.NetworkActionNames.GUILD_TRANSFER_OWNERSHIP_SEND_CODE, properties: obj1 };
     obj[2] = obj;
@@ -534,9 +534,9 @@ let obj = {
               c0 = 0;
               if (closure_1_4.isFullServerPreview(closure_1_0)) {
                 if (closure_1_1 === closure_1_6.getId()) {
-                  const result = closure_1_0(5481).updateImpersonatedRoles(tmp29, dependencyMap);
+                  const result = closure_1_0(5482).updateImpersonatedRoles(tmp29, dependencyMap);
                   c3 = 3;
-                  const obj6 = closure_1_0(5481);
+                  const obj6 = closure_1_0(5482);
                 }
               }
               const HTTP = closure_1_0(527).HTTP;

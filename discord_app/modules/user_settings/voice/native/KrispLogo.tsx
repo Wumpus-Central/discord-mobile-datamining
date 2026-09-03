@@ -48,9 +48,9 @@ export default function KrispLogo() {
   const stateFromStores = obj.useStateFromStores(items, () => theme.theme);
   obj1 = AccessibilityAnnouncer;
   if (obj1.isThemeLight(stateFromStores)) {
-    let tmp4Result = tmp4(10103);
+    let tmp4Result = tmp4(10107);
   } else {
-    tmp4Result = tmp4(10104);
+    tmp4Result = tmp4(10108);
   }
   obj = { style: closure_13.detailsView, children: null };
   obj = { style: closure_13.logo, source: tmp4Result, accessibilityLabel: null };

@@ -41,7 +41,7 @@ const forwardRefResult = importAllResult.forwardRef((onClose, ref) => {
   if (obj1.isAndroid()) {
     obj = { style: null };
     obj[0] = tmp2.cancelIcon;
-    let tmp3Result = tmp3(tmp4(5507).ArrowLargeLeftIcon, obj);
+    let tmp3Result = tmp3(tmp4(5508).ArrowLargeLeftIcon, obj);
   } else {
     obj = {
       style: null,

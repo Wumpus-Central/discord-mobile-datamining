@@ -433,7 +433,7 @@ prototype2["getMatch"] = function getMatch() {
   }
   return this.match[num];
 };
-prototype2["setData"] = function setData(arg0, arg1) {
+prototype2["setData"] = function setData(pinned, combined) {
   const self = this;
   if (null == this._data) {
     const _Map = Map;
@@ -441,7 +441,7 @@ prototype2["setData"] = function setData(arg0, arg1) {
     self._data = map;
   }
   const _data = self._data;
-  const result = _data.set(arg0, arg1);
+  const result = _data.set(pinned, combined);
 };
 prototype2["getData"] = function getData(arg0) {
   if (null != this._data) {

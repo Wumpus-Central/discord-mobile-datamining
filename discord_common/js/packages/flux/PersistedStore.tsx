@@ -8,7 +8,7 @@ import set from "../../../../_runtime/00002_set.js";
 
 require = arg1;
 let closure_3 = ["_state", "_version"];
-let closure_6 = { _state: "disabled", _version: "Date" };
+let closure_6 = { _state: "Array", _version: "PX_16" };
 let c7 = null;
 let PersistedStore;
 class PersistedStore extends r10016 {

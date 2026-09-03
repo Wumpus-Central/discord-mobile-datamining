@@ -12,7 +12,7 @@ import createCacheKey from "../../../../../design/components/Styles/native/creat
 
 const require = arg1;
 ({ Permissions: c10, AnalyticsSections: unpackModuleId, InstantInviteSources: closure_12 } = ME);
-let closure_14 = { listActionRenderer: "disabled", listActionHeight: "Date" };
+let closure_14 = { listActionRenderer: "Array", listActionHeight: "PX_16" };
 let closure_15 = createCacheKey.createStyles({
   wrapper: { paddingTop: require("PX_24").USERS_LIST_PADDING_BETWEEN_SECTIONS },
 });

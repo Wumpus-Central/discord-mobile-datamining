@@ -34,9 +34,9 @@ export const handleApplicationSelected = function handleApplicationSelected(entr
     source: null,
   };
   if (application.id === BuiltInSectionId.BUILT_IN) {
-    let APP = tmp(7277).ApplicationCommandTriggerSections.BUILT_IN;
+    let APP = tmp(7278).ApplicationCommandTriggerSections.BUILT_IN;
   } else {
-    APP = tmp(7277).ApplicationCommandTriggerSections.APP;
+    APP = tmp(7278).ApplicationCommandTriggerSections.APP;
   }
   obj[1] = APP;
   let id = application.id;
@@ -85,11 +85,11 @@ export const handleApplicationCommandSelected = function handleApplicationComman
   ({ location: _location, context, command } = arg0);
   ({ section, sectionDescriptors, query, navigation, installOnDemand, sectionName, entrypoint } = arg0);
   ({ searchResultsPosition, onCommandExecuted } = arg0);
-  let obj = command(7275);
+  let obj = command(7276);
   obj = {
     command,
     location: _location,
-    triggerSection: command(7275).getCommandTriggerSection(section),
+    triggerSection: command(7276).getCommandTriggerSection(section),
     queryLength: query.length,
     sectionName,
     query,

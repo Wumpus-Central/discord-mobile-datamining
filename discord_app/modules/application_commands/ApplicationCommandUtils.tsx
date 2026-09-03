@@ -48,7 +48,7 @@ function buildCommand(arg0) {
       CHAT = obj(1954).ApplicationCommandType.CHAT;
     }
     obj[6] = CHAT;
-    obj[7] = obj(7277).ApplicationCommandInputType.BOT;
+    obj[7] = obj(7278).ApplicationCommandInputType.BOT;
     ({ description: obj3[8], options } = command);
     let mapped2;
     if (options != null) {
@@ -323,10 +323,10 @@ function buildCommand(arg0) {
     ({ nsfw: obj3[17], contexts: obj3[18], integration_types: obj3[19], global_popularity_rank: obj3[20], handler: obj3[21] } = rootCommand);
     return obj;
   } else if (useKeyedPermissions) {
-    const keyPermissionsResult = obj(7276).keyPermissions(rootCommand.permissions);
+    const keyPermissionsResult = obj(7277).keyPermissions(rootCommand.permissions);
     obj = keyPermissionsResult;
     obj = keyPermissionsResult;
-    const obj2 = obj(7276);
+    const obj2 = obj(7277);
   } else {
     obj = {};
     const permissions = rootCommand.permissions;

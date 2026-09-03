@@ -142,7 +142,7 @@ export const getFormattedPriceForCollectiblesProduct = function getFormattedPric
         result = null;
       }
     } else {
-      let tmp7Result = tmp7(7308);
+      let tmp7Result = tmp7(7309);
       result = tmp7Result.extractPriceByPurchaseTypes(googleSkuIds, DEFAULT);
     }
     if (null == result) {
@@ -150,7 +150,7 @@ export const getFormattedPriceForCollectiblesProduct = function getFormattedPric
     } else if (null != result.priceString) {
       let priceString = result.priceString;
     } else {
-      tmp7Result = tmp7(6089);
+      tmp7Result = tmp7(6090);
       priceString = tmp7Result.formatPrice(result.amount, result.currency);
     }
   }

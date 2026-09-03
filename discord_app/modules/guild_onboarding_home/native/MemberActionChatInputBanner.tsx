@@ -1,6 +1,6 @@
 // discord_app/modules/guild_onboarding_home/native/MemberActionChatInputBanner.tsx
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import registerAssetDefault from "../../../../_runtime/11600_registerAsset.js";
+import registerAssetDefault from "../../../../_runtime/11605_registerAsset.js";
 import newMemberActionFromServer from "../GuildOnboardingHomeTypes.tsx";
 import useMemberActionsForChannel from "../MemberActionUtils.tsx";
 import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
@@ -70,7 +70,7 @@ function ChannelActionEmoji(emoji) {
     obj = { style: null, source: null, resizeMode: "contain" };
     obj[0] = tmp.emoji;
     obj1 = { uri: null };
-    let tmp5Result = tmp5(5501);
+    let tmp5Result = tmp5(5502);
     tmp5Result = tmp5(1430);
     const obj2 = { id: null, animated: null, size: null };
     ({ id: obj10[0], animated: obj10[1] } = stateFromStores);
@@ -445,7 +445,7 @@ let closure_19 = {
 };
 const memoResult = importAllResult.memo((channel) => {
   channel = channel.channel;
-  let obj = channel(6077);
+  let obj = channel(6078);
   const canSeeOnboardingHome = obj.useCanSeeOnboardingHome(channel.guild_id);
   const items = [closure_9];
   const stateFromStores = channel(644).useStateFromStores(items, () => {

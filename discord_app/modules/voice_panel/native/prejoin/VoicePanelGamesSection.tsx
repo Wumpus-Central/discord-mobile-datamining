@@ -3,7 +3,7 @@ import getSystemLocale from "../../../../intl/index.native.tsx";
 import useOpenGameProfileModalDefault from "../../../game_profile/hooks/useOpenGameProfileModal.tsx";
 import VoiceBadges from "../shared/FormComponents.tsx";
 import useIsVoiceChannelGamesExperimentEnabledDefault from "../../experiments/VoiceChannelGamesExperiment.tsx";
-import _modDef9894 from "../../../games/native/GameActivityIcon.tsx";
+import _modDef9898 from "../../../games/native/GameActivityIcon.tsx";
 import useVoiceChannelGamesDefault from "../hooks/useVoiceChannelGames.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
@@ -32,7 +32,7 @@ function GameRow(gameId) {
     }
     obj = { game: null, size: 32, fallback: "placeholder" };
     obj[0] = data;
-    const tmp7 = jsx(_modDef9894, { game: null, size: 32, fallback: "placeholder" });
+    const tmp7 = jsx(_modDef9898, { game: null, size: 32, fallback: "placeholder" });
     if (null == tmp4Result) {
       obj1 = { icon: null, label: null, disabled: true };
       obj1[0] = tmp7;
@@ -57,7 +57,7 @@ function GameRow(gameId) {
       obj3[0] = name;
       obj2[5] = intl2.formatToPlainString(tmp(1233).t["9sZWVp"], obj3);
     }
-    return jsx(tmp(5607).TableRow, obj2);
+    return jsx(tmp(5608).TableRow, obj2);
   }
   const tmp3 = importDefault;
   const tmp4 = useOpenGameProfileModalDefault;

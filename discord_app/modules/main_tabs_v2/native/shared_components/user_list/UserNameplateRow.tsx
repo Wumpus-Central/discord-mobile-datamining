@@ -34,7 +34,7 @@ export const UserNameplateRow = function UserNameplateRow(onPressOut) {
   const merged = Object.assign(onPressOut, Object.create(null));
   dependencyMap = undefined;
   let obj = React;
-  const context = React.useContext(onPressIn(5608).TableRowGroupContext);
+  const context = React.useContext(onPressIn(5609).TableRowGroupContext);
   let tmp6 = !context;
   if (!context) {
     tmp6 = true === end;
@@ -82,14 +82,14 @@ export const UserNameplateRow = function UserNameplateRow(onPressOut) {
   obj[9] = tmp2.card;
   const merged1 = Object.assign(merged);
   const items2 = [
-    callback2(onPressOut(8535), {
+    callback2(onPressOut(8539), {
       nameplate,
       isPressed: tmp7[0],
       invertPressOpacity: true,
       fullOpacity: isPreviewRow,
       animate: isPreviewRow,
     }),
-    callback2(onPressIn(5607).TableRowInner, {
+    callback2(onPressIn(5608).TableRowInner, {
       height: "100%",
       label,
       subLabel,
@@ -105,14 +105,14 @@ export const UserNameplateRow = function UserNameplateRow(onPressOut) {
     }),
   ];
   obj.children = items2;
-  let tmp12Result = tmp12(tmp3(5609).Card, obj);
+  let tmp12Result = tmp12(tmp3(5610).Card, obj);
   if (!context) {
     if (!tmp6) {
       obj = { children: null };
       const items3 = [tmp12Result];
       obj1 = { adjustSpacingForIcon: null };
       obj1[0] = null != icon;
-      items3[1] = tmp15(tmp3(5565).TableRowDivider, obj1);
+      items3[1] = tmp15(tmp3(5566).TableRowDivider, obj1);
       obj[0] = items3;
       tmp12Result = tmp12(closure_7, obj);
     }
