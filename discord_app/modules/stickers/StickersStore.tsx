@@ -1,13 +1,13 @@
-// === Module 5452: loadSavedGuildStickers ===
+// === Module 5453: loadSavedGuildStickers ===
 
-// Module 5452 (loadSavedGuildStickers)
+// Module 5453 (loadSavedGuildStickers)
 import initializeDefault from "initialize" /* 586 */;
 import dispatcherDefault from "dispatcher" /* 706 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "allGuildIds" /* 1388 */;
 import closure_5 from "createGuildRecordFromRust" /* 1908 */;
-import closure_6 from "parseServerGuildSticker" /* 5453 */;
-import closure_7 from "parseServerPackSticker" /* 5454 */;
+import closure_6 from "parseServerGuildSticker" /* 5454 */;
+import closure_7 from "parseServerPackSticker" /* 5455 */;
 
 const require = arg1;
 function loadSavedGuildStickers() {

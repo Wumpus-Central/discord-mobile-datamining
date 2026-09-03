@@ -1,6 +1,6 @@
-// === Module 12278: storeListingToGuildPowerup ===
+// === Module 12290: storeListingToGuildPowerup ===
 
-// Module 12278 (storeListingToGuildPowerup)
+// Module 12290 (storeListingToGuildPowerup)
 import set from "set" /* 2 */;
 import set2 from "set" /* 1924 */;
 import BoostedGuildTiers from "BoostedGuildTiers" /* 4365 */;

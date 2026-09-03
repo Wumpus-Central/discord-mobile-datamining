@@ -1,9 +1,9 @@
-// === Module 15304: ? ===
+// === Module 15319: ? ===
 
-// Module 15304
-import _modDef14563 from "module_14563" /* 14563 */;
+// Module 15319
+import _modDef14578 from "module_14578" /* 14578 */;
 import importAllResult from "noop" /* 19 */;
-import { MobileUserSettings } from "MobileUserSettings" /* 7893 */;
+import { MobileUserSettings } from "MobileUserSettings" /* 7896 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
@@ -14,7 +14,7 @@ const memoResult = importAllResult.memo(function SettingsWebBrowserScreen() {
     const sections = [{ settings: items }];
     return callback(table[3]).createList({ sections });
   }, []);
-  return jsx(_modDef14563, { node });
+  return jsx(_modDef14578, { node });
 });
 const result = require("set").fileFinishedImporting("modules/user_settings/web_browser/native/SettingsWebBrowserScreen.tsx");
 

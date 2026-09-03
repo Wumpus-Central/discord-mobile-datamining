@@ -1,17 +1,17 @@
-// === Module 13631: performQuery ===
+// === Module 13646: performQuery ===
 
-// Module 13631 (performQuery)
+// Module 13646 (performQuery)
 import initializeDefault from "initialize" /* 586 */;
 import dispatcherDefault from "dispatcher" /* 706 */;
 import isNullOrEmpty from "isNullOrEmpty" /* 1901 */;
 import nameFromUserDefault from "nameFromUser" /* 4322 */;
-import getTransformedUserDefault from "getTransformedUser" /* 9950 */;
+import getTransformedUserDefault from "getTransformedUser" /* 9954 */;
 import closure_4 from "getHash" /* 4391 */;
-import closure_5 from "recomputeAffinities" /* 7413 */;
+import closure_5 from "recomputeAffinities" /* 7414 */;
 import { PrivateChannelRecord } from "createChannelRecord" /* 1390 */;
 import closure_7 from "ensureGuildLoaded" /* 1386 */;
-import closure_8 from "hasConsented" /* 6062 */;
-import closure_9 from "handleChannelSelect" /* 5459 */;
+import closure_8 from "hasConsented" /* 6063 */;
+import closure_9 from "handleChannelSelect" /* 5460 */;
 import closure_10 from "trackCommunicationDisabled" /* 1991 */;
 import closure_11 from "createGuildRecordFromRust" /* 1908 */;
 import closure_12 from "markAllUserIdListsStale" /* 4130 */;

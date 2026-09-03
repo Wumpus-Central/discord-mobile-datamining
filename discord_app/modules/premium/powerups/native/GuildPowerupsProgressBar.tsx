@@ -1,11 +1,11 @@
-// === Module 16040: GuildPowerupsProgressBar ===
+// === Module 16056: GuildPowerupsProgressBar ===
 
-// Module 16040 (GuildPowerupsProgressBar)
+// Module 16056 (GuildPowerupsProgressBar)
 import ThemesDefault from "Themes" /* 709 */;
-import LinearGradientDefault from "LinearGradient" /* 4940 */;
+import LinearGradientDefault from "LinearGradient" /* 4941 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_5 from "initialize" /* 16041 */;
+import closure_5 from "initialize" /* 16057 */;
 import closure_6 from "createGuildRecordFromRust" /* 1908 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
@@ -17,7 +17,7 @@ const require = arg1;
 let closure_9 = ["rgba(255, 115, 250, 0.4)", "rgba(255, 115, 250, 0.1)"];
 let result = 2 * ThemesDefault.space.PX_4;
 let closure_10 = importDefaultResult.createAnimatedComponent(LinearGradientDefault);
-let obj = { container: null, track: null, fillContainer: null, fill: null, fillShadow: null, textContainer: null, rightContent: null };
+let obj = { container: null, track: null, fillContainer: null, fill: null, fillShadow: null, textContainer: null, headerText: null, rightContent: null, descriptionText: null };
 obj = { paddingVertical: ThemesDefault.space.PX_4, paddingHorizontal: ThemesDefault.space.PX_16 };
 obj[0] = obj;
 createCacheKey = { height: 30, borderRadius: ThemesDefault.radii.round, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_NORMAL, justifyContent: "center" };
@@ -29,11 +29,13 @@ obj[2] = obj2;
 obj[3] = { height: "100%", minWidth: 26, borderRadius: ThemesDefault.radii.round, borderWidth: 1, borderColor: "rgba(255, 115, 250, 0.2)", overflow: "hidden" };
 obj[4] = { shadowColor: "rgba(0, 0, 0, 0.14)", shadowOffset: { width: 0, height: 1 }, shadowOpacity: 1, shadowRadius: 4, elevation: 2 };
 let obj3 = { height: "100%", minWidth: 26, borderRadius: ThemesDefault.radii.round, borderWidth: 1, borderColor: "rgba(255, 115, 250, 0.2)", overflow: "hidden" };
-obj[5] = { flexDirection: "row", justifyContent: "space-between", alignItems: "center", paddingHorizontal: ThemesDefault.space.PX_12 };
-obj[6] = { flexDirection: "row", alignItems: "center" };
+obj[5] = { flexDirection: "row", justifyContent: "space-between", alignItems: "center", paddingHorizontal: ThemesDefault.space.PX_12, gap: ThemesDefault.space.PX_8 };
+obj[6] = { flexShrink: 1 };
+obj[7] = { flexDirection: "row", alignItems: "center", flexShrink: 1 };
+obj[8] = { flexShrink: 1, opacity: 0.7 };
 let closure_11 = createCacheKey.createStyles(obj);
 let closure_12 = { code: "function GuildPowerupsProgressBarTsx1(){const{animatedFillPercent,animatedFillOpacity}=this.__closure;return{width:animatedFillPercent.get()+\"%\",opacity:animatedFillOpacity.get()};}" };
-const obj4 = { flexDirection: "row", justifyContent: "space-between", alignItems: "center", paddingHorizontal: ThemesDefault.space.PX_12 };
+const obj4 = { flexDirection: "row", justifyContent: "space-between", alignItems: "center", paddingHorizontal: ThemesDefault.space.PX_12, gap: ThemesDefault.space.PX_8 };
 let result1 = require("set").fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsProgressBar.tsx");
 
 export default function GuildPowerupsProgressBar(guildId) {
@@ -102,17 +104,17 @@ export default function GuildPowerupsProgressBar(guildId) {
       closure_1_0(closure_1_2[6]).cancelAnimation(closure_5);
     };
   }, items5);
-  class O {
+  class T {
     constructor() {
       obj = { width: "" + closure_4.get() + "%", opacity: closure_5.get() };
       return obj;
     }
   }
-  O.__closure = { animatedFillPercent: sharedValue, animatedFillOpacity: sharedValue1 };
-  O.__workletHash = 6718232104000;
-  O.__initData = closure_12;
+  T.__closure = { animatedFillPercent: sharedValue, animatedFillOpacity: sharedValue1 };
+  T.__workletHash = 6718232104000;
+  T.__initData = closure_12;
   const items6 = [guildId];
-  const animatedStyle = guildId(num[6]).useAnimatedStyle(O);
+  const animatedStyle = guildId(num[6]).useAnimatedStyle(T);
   const callback = obj2.useCallback(() => {
     const obj = { guildId, analyticsLocation: stateFromStores1(num[14]).GUILD_BOOSTING_SIDEBAR_DISPLAY };
     stateFromStores1(num[13])(obj);
@@ -142,6 +144,7 @@ export default function GuildPowerupsProgressBar(guildId) {
   items7[2] = animatedStyle;
   const items8 = [callback(sharedValue, { style: tmp.fillContainer, children: callback(closure_10, obj4) }), ];
   const obj5 = { style: tmp.textContainer, children: null };
+  const obj6 = { variant: "text-xs/semibold", color: "text-default", lineClamp: 1, style: tmp.headerText, children: null };
   if (num >= tmp6) {
     const intl5 = tmp2(tmp3[15]).intl;
     const _HermesInternal = HermesInternal;
@@ -150,13 +153,15 @@ export default function GuildPowerupsProgressBar(guildId) {
     const intl4 = tmp2(tmp3[15]).intl;
     combined = intl4.string(tmp5(tmp3[16]).NI6Ihe);
   }
-  const items9 = [callback(guildId(num[18]).Text, { variant: "text-xs/semibold", color: "text-default", children: combined }), ];
-  const obj6 = { style: tmp.rightContent, children: null };
-  const items10 = [callback(guildId(num[18]).Text, { variant: "text-xs/semibold", color: "text-default", style: { opacity: 0.7 }, children: formatToPlainStringResult }), ];
+  obj6[4] = combined;
+  const items9 = [callback(guildId(num[18]).Text, obj6), ];
+  const obj7 = { style: tmp.rightContent, children: null };
+  const items10 = [callback(guildId(num[18]).Text, { variant: "text-xs/semibold", color: "text-default", lineClamp: 1, style: tmp.descriptionText, children: formatToPlainStringResult }), ];
   const obj3 = { style: tmp.fillContainer, children: callback(closure_10, obj4) };
+  const obj8 = { variant: "text-xs/semibold", color: "text-default", lineClamp: 1, style: tmp.descriptionText, children: formatToPlainStringResult };
   items10[1] = callback(guildId(num[19]).ChevronSmallRightIcon, { size: "sm", color: stateFromStores1(num[5]).colors.TEXT_DEFAULT });
-  obj6[1] = items10;
-  items9[1] = closure_8(sharedValue, obj6);
+  obj7[1] = items10;
+  items9[1] = closure_8(sharedValue, obj7);
   obj5[1] = items9;
   items8[1] = closure_8(sharedValue, obj5);
   obj2[1] = items8;

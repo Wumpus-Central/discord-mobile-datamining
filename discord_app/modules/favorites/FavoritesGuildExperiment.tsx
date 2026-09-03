@@ -1,6 +1,6 @@
-// === Module 10331: useFavoritesGuildConfig ===
+// === Module 10335: useFavoritesGuildConfig ===
 
-// Module 10331 (useFavoritesGuildConfig)
+// Module 10335 (useFavoritesGuildConfig)
 import set from "set" /* 2 */;
 import ApexExperiment from "ApexExperiment" /* 1467 */;
 

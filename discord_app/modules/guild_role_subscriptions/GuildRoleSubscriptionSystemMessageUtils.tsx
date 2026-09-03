@@ -1,13 +1,13 @@
-// === Module 7910: identityHook ===
+// === Module 7913: identityHook ===
 
-// Module 7910 (identityHook)
+// Module 7913 (identityHook)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import getSystemLocale from "getSystemLocale" /* 1233 */;
-import collectGuildAnalyticsMetadataDefault from "collectGuildAnalyticsMetadata" /* 4700 */;
-import useIsCreatorMonetizationEnabledGuild from "useIsCreatorMonetizationEnabledGuild" /* 6106 */;
+import collectGuildAnalyticsMetadataDefault from "collectGuildAnalyticsMetadata" /* 4701 */;
+import useIsCreatorMonetizationEnabledGuild from "useIsCreatorMonetizationEnabledGuild" /* 6107 */;
 import closure_3 from "createGuildRecordFromRust" /* 1908 */;
 import closure_4 from "mergeGuildAvatar" /* 1921 */;
-import getJoinButtonLabels from "getJoinButtonLabels" /* 7911 */;
+import getJoinButtonLabels from "getJoinButtonLabels" /* 7914 */;
 import ME from "ME" /* 673 */;
 
 require = arg1;
@@ -163,18 +163,18 @@ export const getRoleSubscriptionPurchaseSystemMessageContentMobile = function ge
 export const isEligibleForRoleSubscriptionPurchaseSystemMessageSettings = function isEligibleForRoleSubscriptionPurchaseSystemMessageSettings(guild) {
   return useIsCreatorMonetizationEnabledGuild.isCreatorMonetizationEnabledGuild(guild);
 };
-export const trackRoleSubscriptionPurchaseMessageTierClick = function trackRoleSubscriptionPurchaseMessageTierClick(guild_id) {
+export const trackRoleSubscriptionPurchaseMessageTierClick = function trackRoleSubscriptionPurchaseMessageTierClick(guildId, channelId, messageId, roleSubscriptionListingId) {
   let obj = collectGuildAnalyticsMetadataDefault;
-  obj = { guild_id, user_id: null, channel_id: null, message_id: null, role_subscription_listing_id: null };
+  obj = { guild_id: guildId, user_id: null, channel_id: null, message_id: null, role_subscription_listing_id: null };
   const currentUser = authStore.getCurrentUser();
   let id;
   if (currentUser != null) {
     id = currentUser.id;
   }
   obj[1] = id;
-  obj[2] = arg1;
-  obj[3] = arg2;
-  obj[4] = arg3;
+  obj[2] = channelId;
+  obj[3] = messageId;
+  obj[4] = roleSubscriptionListingId;
   obj.trackWithMetadata(constants.ROLE_SUBSCRIPTION_PURCHASE_SYSTEM_MESSAGE_CLICKED, obj);
 };
 export const getRoleSubscriptionPurchaseSystemMessageEventProperties = function getRoleSubscriptionPurchaseSystemMessageEventProperties(guild_id, author) {

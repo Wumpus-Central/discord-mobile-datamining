@@ -1,6 +1,6 @@
-// === Module 6058: useNavigationTheme ===
+// === Module 6059: useNavigationTheme ===
 
-// Module 6058 (useNavigationTheme)
+// Module 6059 (useNavigationTheme)
 import closure_3 from "noop" /* 19 */;
 
 const require = arg1;

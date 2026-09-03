@@ -1,6 +1,6 @@
-// === Module 11057: fetchVirtualCurrencyBalance ===
+// === Module 11061: fetchVirtualCurrencyBalance ===
 
-// Module 11057 (fetchVirtualCurrencyBalance)
+// Module 11061 (fetchVirtualCurrencyBalance)
 import timestampDefault from "timestamp" /* 3 */;
 import dispatcherDefault from "dispatcher" /* 706 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
@@ -216,7 +216,7 @@ function _redeemVirtualCurrencyForSKU() {
                 }
                 let result = null != applicationId;
                 if (result) {
-                  let obj8 = callback(8510);
+                  let obj8 = callback(8514);
                   result = obj8.isTestModeForApplication(applicationId);
                 }
                 c8 = result;

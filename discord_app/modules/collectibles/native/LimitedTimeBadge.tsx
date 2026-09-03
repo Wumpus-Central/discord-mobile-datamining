@@ -1,10 +1,10 @@
-// === Module 12758: LimitedTimeBadge ===
+// === Module 12770: LimitedTimeBadge ===
 
-// Module 12758 (LimitedTimeBadge)
+// Module 12770 (LimitedTimeBadge)
 import noopAll from "noop" /* 19 */;
 import initialize from "initialize" /* 586 */;
 import ThemesDefault from "Themes" /* 709 */;
-import useCountdownDefault from "useCountdown" /* 7193 */;
+import useCountdownDefault from "useCountdown" /* 7194 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_4 from "_getSystemLocale" /* 1995 */;
 import closure_5 from "handleThemeChange" /* 1301 */;

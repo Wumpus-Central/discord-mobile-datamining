@@ -1,6 +1,6 @@
-// === Module 12745: useIsMobileWishlistSuggestionsEnabled ===
+// === Module 12757: useIsMobileWishlistSuggestionsEnabled ===
 
-// Module 12745 (useIsMobileWishlistSuggestionsEnabled)
+// Module 12757 (useIsMobileWishlistSuggestionsEnabled)
 import set from "set" /* 2 */;
 import ApexExperiment from "ApexExperiment" /* 1467 */;
 

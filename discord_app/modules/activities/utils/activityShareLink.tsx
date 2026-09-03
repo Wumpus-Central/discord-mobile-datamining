@@ -1,6 +1,6 @@
-// === Module 14364: items ===
+// === Module 14380: items ===
 
-// Module 14364 (items)
+// Module 14380 (items)
 import set from "set" /* 2 */;
 import isDiscordProxiedAssetUrlDefault from "isDiscordProxiedAssetUrl" /* 1485 */;
 import getPathsFromURL from "getPathsFromURL" /* 4461 */;

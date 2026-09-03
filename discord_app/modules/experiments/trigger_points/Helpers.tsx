@@ -1,6 +1,6 @@
-// === Module 10804: registeredExperimentIds ===
+// === Module 10808: registeredExperimentIds ===
 
-// Module 10804 (registeredExperimentIds)
+// Module 10808 (registeredExperimentIds)
 import closure_0 from "initialize" /* 1209 */;
 import { CommonTriggerPoints } from "ExperimentBuckets" /* 4392 */;
 

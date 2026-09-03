@@ -1,14 +1,14 @@
-// === Module 15856: ? ===
+// === Module 15872: ? ===
 
-// Module 15856
+// Module 15872
 import ThemesDefault from "Themes" /* 709 */;
-import FacepileGroupDMAvatarDefault from "FacepileGroupDMAvatar" /* 10869 */;
+import FacepileGroupDMAvatarDefault from "FacepileGroupDMAvatar" /* 10873 */;
 import closure_3 from "maybeApplyNoTextColorForLightCustomTheme" /* 4470 */;
 import closure_4 from "fetchFingerprint" /* 1215 */;
 import closure_5 from "sortActivity" /* 4569 */;
-import closure_6 from "handleTypingStart" /* 11760 */;
+import closure_6 from "handleTypingStart" /* 11766 */;
 import closure_7 from "mergeGuildAvatar" /* 1921 */;
-import { MUTED_OPACITY_CONTENT } from "hairlineWidth" /* 10223 */;
+import { MUTED_OPACITY_CONTENT } from "hairlineWidth" /* 10227 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 import importAllResult from "noop" /* 19 */;
@@ -110,7 +110,7 @@ const memoResult = importAllResult.memo(function MessagesItemChannelAvatar(chann
   } else {
     tmp11Result = null;
     if (null != stateFromStores2) {
-      obj = { user: null, avatarDecoration: null, guildId: "e", isMobileOnline: true, isVROnline: false, status: true, streaming: true, style: "any", size: null, animate: true, typing: "/assets/.cache/intl/bW9kdWxlcy9nb19saXZl", autoStatusCutout: null };
+      obj = { user: null, avatarDecoration: null, guildId: "e", isMobileOnline: true, isVROnline: false, status: true, streaming: true, style: null, size: null, animate: null, typing: null, autoStatusCutout: null };
       obj[0] = stateFromStores2;
       obj[1] = stateFromStores2.avatarDecoration;
       obj[3] = stateFromStores3;
@@ -125,7 +125,7 @@ const memoResult = importAllResult.memo(function MessagesItemChannelAvatar(chann
       obj[8] = REFRESH_MEDIUM_32;
       obj[9] = stateFromStores1;
       obj[10] = stateFromStores;
-      tmp11Result = jsx(tmp3(1296).Avatar, { user: null, avatarDecoration: null, guildId: "e", isMobileOnline: true, isVROnline: false, status: true, streaming: true, style: "any", size: null, animate: true, typing: "/assets/.cache/intl/bW9kdWxlcy9nb19saXZl", autoStatusCutout: null });
+      tmp11Result = jsx(tmp3(1296).Avatar, { user: null, avatarDecoration: null, guildId: "e", isMobileOnline: true, isVROnline: false, status: true, streaming: true, style: null, size: null, animate: null, typing: null, autoStatusCutout: null });
       const tmp11 = jsx;
     }
   }

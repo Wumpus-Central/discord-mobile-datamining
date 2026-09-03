@@ -1,11 +1,11 @@
-// === Module 16052: ChannelItemEmbeddedActivities ===
+// === Module 16068: ChannelItemEmbeddedActivities ===
 
-// Module 16052 (ChannelItemEmbeddedActivities)
+// Module 16068 (ChannelItemEmbeddedActivities)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 709 */;
 import Text from "Text" /* 4474 */;
-import GameIcon from "GameIcon" /* 5971 */;
-import GameIconDefault from "GameIcon" /* 5971 */;
+import GameIcon from "GameIcon" /* 5972 */;
+import GameIconDefault from "GameIcon" /* 5972 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;

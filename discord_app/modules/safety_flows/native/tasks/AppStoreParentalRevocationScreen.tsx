@@ -1,17 +1,17 @@
-// === Module 17703: AppStoreParentalRevocationScreen ===
+// === Module 17727: AppStoreParentalRevocationScreen ===
 
-// Module 17703 (AppStoreParentalRevocationScreen)
+// Module 17727 (AppStoreParentalRevocationScreen)
 import ThemesDefault from "Themes" /* 709 */;
 import getSystemLocale from "getSystemLocale" /* 1233 */;
 import messagesProxyDefault from "messagesProxy" /* 2662 */;
 import Text from "Text" /* 4474 */;
-import Stack from "Stack" /* 4926 */;
-import ModalScreen from "ModalScreen" /* 8707 */;
-import ModalContent from "ModalContent" /* 8708 */;
-import LinkExternalSmallIcon from "LinkExternalSmallIcon" /* 8743 */;
-import ModalActionButton from "ModalActionButton" /* 10954 */;
-import ModalFooter from "ModalFooter" /* 11722 */;
-import LogOutDisclaimerDefault from "LogOutDisclaimer" /* 17690 */;
+import Stack from "Stack" /* 4927 */;
+import ModalScreen from "ModalScreen" /* 8711 */;
+import ModalContent from "ModalContent" /* 8712 */;
+import LinkExternalSmallIcon from "LinkExternalSmallIcon" /* 8747 */;
+import ModalActionButton from "ModalActionButton" /* 10958 */;
+import ModalFooter from "ModalFooter" /* 11727 */;
+import LogOutDisclaimerDefault from "LogOutDisclaimer" /* 17714 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;

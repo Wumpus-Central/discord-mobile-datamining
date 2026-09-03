@@ -1,6 +1,6 @@
-// === Module 15870: useMessagesScrollToTop ===
+// === Module 15886: useMessagesScrollToTop ===
 
-// Module 15870 (useMessagesScrollToTop)
+// Module 15886 (useMessagesScrollToTop)
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4470 */;
 

@@ -1,10 +1,10 @@
-// === Module 6806: MissionScrollSpotIllustration ===
+// === Module 6807: MissionScrollSpotIllustration ===
 
-// Module 6806 (MissionScrollSpotIllustration)
+// Module 6807 (MissionScrollSpotIllustration)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5501 */;
-import metadataDefault from "metadata" /* 6807 */;
+import preloadDefault from "preload" /* 5502 */;
+import metadataDefault from "metadata" /* 6808 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/MissionScrollSpotIllustration.native.tsx");

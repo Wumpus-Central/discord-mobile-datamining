@@ -1,6 +1,6 @@
-// === Module 10792: getSubtitle ===
+// === Module 10796: getSubtitle ===
 
-// Module 10792 (getSubtitle)
+// Module 10796 (getSubtitle)
 import set from "set" /* 2 */;
 import noop from "noop" /* 19 */;
 import getSystemLocale from "getSystemLocale" /* 1233 */;

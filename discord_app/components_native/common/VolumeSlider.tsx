@@ -1,12 +1,12 @@
-// === Module 10091: VolumeSlider ===
+// === Module 10095: VolumeSlider ===
 
-// Module 10091 (VolumeSlider)
+// Module 10095 (VolumeSlider)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 709 */;
 import map from "map" /* 4197 */;
-import VoiceNormalIcon from "VoiceNormalIcon" /* 5054 */;
-import _modDef8390 from "module_8390" /* 8390 */;
-import VoiceXIcon from "VoiceXIcon" /* 10092 */;
+import VoiceNormalIcon from "VoiceNormalIcon" /* 5055 */;
+import _modDef8394 from "module_8394" /* 8394 */;
+import VoiceXIcon from "VoiceXIcon" /* 10096 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { MAX_EMBEDDED_VOLUME_PERCEPTUAL as closure_4 } from "DesktopSources" /* 4542 */;
 import jsxProd from "jsxProd" /* 21 */;
@@ -45,7 +45,7 @@ export default function VolumeSlider(maxTrackTintColor) {
   obj = { style: tmp4.leftIcon };
   const items1 = [callback(VoiceXIcon.VoiceXIcon, obj), , ];
   obj1 = { style: tmp4.volumerSliderNative, value: null, minimumValue: 0, maximumValue: null, minimumTrackTintColor: null, maximumTrackTintColor: null, accessibilityLabel: null, onValueChange: null, onResponderGrant: null };
-  let tmp5Result = tmp5(4968);
+  let tmp5Result = tmp5(4969);
   obj1[1] = tmp5Result.amplitudeToPerceptual(value);
   obj1[3] = maxVolume;
   obj1[4] = minTrackColor;
@@ -67,7 +67,7 @@ export default function VolumeSlider(maxTrackTintColor) {
     onResponderGrant = fn;
   }
   obj1[8] = onResponderGrant;
-  items1[1] = callback(_modDef8390, obj1);
+  items1[1] = callback(_modDef8394, obj1);
   items1[2] = callback(VoiceNormalIcon.VoiceNormalIcon, { style: tmp4.rightIcon });
   obj[1] = items1;
   return closure_6(View, obj);

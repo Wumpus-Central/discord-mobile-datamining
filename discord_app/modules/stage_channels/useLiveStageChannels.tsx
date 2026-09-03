@@ -1,6 +1,6 @@
-// === Module 16006: useLiveStageChannels ===
+// === Module 16022: useLiveStageChannels ===
 
-// Module 16006 (useLiveStageChannels)
+// Module 16022 (useLiveStageChannels)
 import closure_3 from "ensureGuildLoaded" /* 1386 */;
 import closure_4 from "getUncachedChannelPermissions" /* 4120 */;
 import closure_5 from "handleStageInstanceCreateOrUpdate" /* 1391 */;

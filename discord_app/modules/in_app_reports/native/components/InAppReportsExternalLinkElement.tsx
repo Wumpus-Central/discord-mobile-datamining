@@ -1,6 +1,6 @@
-// === Module 13007: ExternalLinkItem ===
+// === Module 13019: ExternalLinkItem ===
 
-// Module 13007 (ExternalLinkItem)
+// Module 13019 (ExternalLinkItem)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import getSystemLocale from "getSystemLocale" /* 1233 */;
@@ -17,12 +17,12 @@ function ExternalLinkItem(data) {
     obj[0] = tmp;
     obj[1] = tmp2;
     obj = { IconComponent: null };
-    obj[0] = url(13008).LinkExternalMediumIcon;
-    obj[2] = callback(url(5613).TableRowIcon, obj);
+    obj[0] = url(13020).LinkExternalMediumIcon;
+    obj[2] = callback(url(5614).TableRowIcon, obj);
     obj[3] = function onPress() {
       closure_1_1(closure_1_2[8]).openURL(url);
     };
-    tmp3 = callback(url(8374).RowButton, obj);
+    tmp3 = callback(url(8378).RowButton, obj);
   }
   return tmp3;
 }

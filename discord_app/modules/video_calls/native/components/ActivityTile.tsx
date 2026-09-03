@@ -1,6 +1,6 @@
-// === Module 9613: ActivityTileInner ===
+// === Module 9617: ActivityTileInner ===
 
-// Module 9613 (ActivityTileInner)
+// Module 9617 (ActivityTileInner)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 709 */;
 import ManaContext from "ManaContext" /* 4204 */;
@@ -77,7 +77,7 @@ function ActivityTileInner(participant) {
                 v0 = 1;
                 dependencyMap = 1;
                 const obj2 = { value: null, done: false };
-                obj2[0] = v0(9463)(obj1);
+                obj2[0] = v0(9467)(obj1);
                 return obj2;
               } else {
                 dependencyMap = 3;
@@ -88,7 +88,7 @@ function ActivityTileInner(participant) {
             dependencyMap = 3;
             throw arg1;
           } else if (arg0 !== 2) {
-            obj = closure_1_0(9616);
+            obj = closure_1_0(9620);
             const result = obj.setOrientationLockState(closure_3);
           }
           dependencyMap = 3;

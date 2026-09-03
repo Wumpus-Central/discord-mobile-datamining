@@ -1,24 +1,24 @@
-// === Module 16310: Separator ===
+// === Module 16329: Separator ===
 
-// Module 16310 (Separator)
+// Module 16329 (Separator)
 import ThemesDefault from "Themes" /* 709 */;
 import set from "set" /* 1234 */;
 import Button from "Button" /* 1296 */;
-import GuildIconSizes from "GuildIconSizes" /* 6012 */;
-import GuildIconSizesDefault from "GuildIconSizes" /* 6012 */;
-import _safeTransitionToDefault from "_safeTransitionTo" /* 6099 */;
-import SolidCutout from "SolidCutout" /* 8106 */;
-import SolidCutoutDefault from "SolidCutout" /* 8106 */;
+import GuildIconSizes from "GuildIconSizes" /* 6013 */;
+import GuildIconSizesDefault from "GuildIconSizes" /* 6013 */;
+import _safeTransitionToDefault from "_safeTransitionTo" /* 6100 */;
+import SolidCutout from "SolidCutout" /* 8109 */;
+import SolidCutoutDefault from "SolidCutout" /* 8109 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "updateState" /* 6159 */;
+import closure_5 from "updateState" /* 6160 */;
 import closure_6 from "ensureGuildLoaded" /* 1386 */;
 import closure_7 from "trackCommunicationDisabled" /* 1991 */;
 import closure_8 from "getUncachedChannelPermissions" /* 4120 */;
 import closure_9 from "mergeGuildAvatar" /* 1921 */;
 import ME from "ME" /* 673 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createICYMIStyles from "createICYMIStyles" /* 16271 */;
+import createICYMIStyles from "createICYMIStyles" /* 16290 */;
 
 require = arg1;
 class Separator {
@@ -195,14 +195,14 @@ export const navigateToPost = function navigateToPost(id, id2, id3) {
   }, 1500);
   _safeTransitionToDefault(closure_17.CHANNEL(id2, id, id3), { openChannel: true, navigationReplace: false });
   if (null != id3) {
-    _require(6054).runAfterInteractions(() => {
+    _require(6055).runAfterInteractions(() => {
       let obj = id3(closure_1_2[17]);
       obj = { channelId: id, limit: closure_1_14, jump: null };
       obj = { messageId: id3, flash: true, jumpType: id(closure_1_2[18]).JumpType.ANIMATED };
       obj[2] = obj;
       const messages = obj.fetchMessages(obj);
     }, 150);
-    let obj = _require(6054);
+    let obj = _require(6055);
   }
 };
 export { Separator };

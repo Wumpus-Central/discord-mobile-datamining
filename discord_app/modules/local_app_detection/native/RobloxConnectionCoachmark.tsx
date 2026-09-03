@@ -1,21 +1,21 @@
-// === Module 16744: RobloxIcon ===
+// === Module 16764: RobloxIcon ===
 
-// Module 16744 (RobloxIcon)
+// Module 16764 (RobloxIcon)
 import initialize from "initialize" /* 586 */;
 import ThemesDefault from "Themes" /* 709 */;
 import Button from "Button" /* 1296 */;
 import isThemeLight from "isThemeLight" /* 1363 */;
 import getAvatarURL from "getAvatarURL" /* 1430 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
-import getPlatformUserUrlDefault from "getPlatformUserUrl" /* 5235 */;
-import inlineStyles from "inlineStyles" /* 8250 */;
-import inlineStylesDefault from "inlineStyles" /* 8250 */;
+import getPlatformUserUrlDefault from "getPlatformUserUrl" /* 5236 */;
+import inlineStyles from "inlineStyles" /* 8254 */;
+import inlineStylesDefault from "inlineStyles" /* 8254 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "set" /* 5233 */;
+import closure_6 from "set" /* 5234 */;
 import closure_7 from "mergeGuildAvatar" /* 1921 */;
-import closure_8 from "initialize" /* 13587 */;
+import closure_8 from "initialize" /* 13602 */;
 import ME from "ME" /* 673 */;
 import { ContentDismissActionType } from "ContentDismissActionType" /* 1383 */;
 import jsxProd from "jsxProd" /* 21 */;
@@ -73,7 +73,7 @@ function UserIcon() {
   obj = { style: tmp.avatarContainer, children: null };
   obj = { style: tmp.avatarInnerBorder };
   const stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
-  const items1 = [callback(View, obj), callback(Button.Avatar, { size: Button.AvatarSizes.NORMAL, user: stateFromStores, guildId: "r" })];
+  const items1 = [callback(View, obj), callback(Button.Avatar, { size: Button.AvatarSizes.NORMAL, user: stateFromStores, guildId: "accessible" })];
   obj[1] = items1;
   return callback2(View, obj);
 }
@@ -103,8 +103,8 @@ export default function RobloxConnectionActionSheet(markAsDismissed) {
   let obj = markAsDismissed(4204);
   const theme = obj.useThemeContext().theme;
   obj = { startExpanded: true, contentStyles: tmp.content, header: null, onDismiss: null, children: null };
-  obj = { title: null, leading: callback(markAsDismissed(5998).ActionSheetCloseButton, { onPress: handleCancel }) };
-  obj[2] = callback(markAsDismissed(5629).BottomSheetTitleHeader, obj);
+  obj = { title: null, leading: callback(markAsDismissed(5999).ActionSheetCloseButton, { onPress: handleCancel }) };
+  obj[2] = callback(markAsDismissed(5630).BottomSheetTitleHeader, obj);
   obj[3] = function onDismiss() {
     return markAsDismissed(closure_1_12.DISMISS);
   };
@@ -112,7 +112,7 @@ export default function RobloxConnectionActionSheet(markAsDismissed) {
   const obj2 = { justify: "center", align: "center", direction: "horizontal", children: null };
   const items = [callback(RobloxIcon, { theme }), callback(UnionIcon, { theme }), callback(UserIcon, {})];
   obj2[3] = items;
-  const items1 = [callback2(markAsDismissed(4926).Stack, obj2), , ];
+  const items1 = [callback2(markAsDismissed(4927).Stack, obj2), , ];
   const obj3 = { justify: "center", children: null };
   const obj4 = { variant: "heading-xl/bold", style: tmp.text, children: null };
   const intl = markAsDismissed(1233).intl;
@@ -123,12 +123,12 @@ export default function RobloxConnectionActionSheet(markAsDismissed) {
   obj5[2] = intl2.string(markAsDismissed(1233).t.no96NU);
   items2[1] = callback(markAsDismissed(4474).Text, obj5);
   obj3[1] = items2;
-  items1[1] = callback2(markAsDismissed(4926).Stack, obj3);
+  items1[1] = callback2(markAsDismissed(4927).Stack, obj3);
   const obj6 = { children: null };
   const obj7 = { text: null, icon: null, iconPosition: "end", size: "lg", onPress: null };
   const intl3 = markAsDismissed(1233).intl;
   obj7[0] = intl3.string(markAsDismissed(1233).t.ItuabN);
-  obj7[1] = callback(markAsDismissed(13041).WindowLaunchIcon, { size: "sm", color: ThemesDefault.colors.WHITE });
+  obj7[1] = callback(markAsDismissed(13053).WindowLaunchIcon, { size: "sm", color: ThemesDefault.colors.WHITE });
   obj7[4] = function onPress() {
     let obj = closure_1_1(closure_1_2[13]);
     obj.hideActionSheet();
@@ -140,22 +140,22 @@ export default function RobloxConnectionActionSheet(markAsDismissed) {
     obj = { screen: closure_1_11.CONNECTIONS };
     markAsDismissed(closure_1_2[23]).openUserSettings(obj);
   };
-  const items3 = [callback(markAsDismissed(4928).Button, obj7), ];
+  const items3 = [callback(markAsDismissed(4929).Button, obj7), ];
   const obj9 = { text: null, variant: "secondary", size: "lg", onPress: null };
   const intl4 = markAsDismissed(1233).intl;
   obj9[0] = intl4.string(markAsDismissed(1233).t.DiGJy3);
   obj9[3] = handleCancel;
-  items3[1] = callback(markAsDismissed(4928).Button, obj9);
+  items3[1] = callback(markAsDismissed(4929).Button, obj9);
   obj6[0] = items3;
-  items1[2] = callback2(markAsDismissed(4926).Stack, obj6);
+  items1[2] = callback2(markAsDismissed(4927).Stack, obj6);
   obj1[2] = items1;
-  obj[4] = callback2(markAsDismissed(4926).Stack, obj1);
-  return callback(markAsDismissed(5630).BottomSheet, obj);
+  obj[4] = callback2(markAsDismissed(4927).Stack, obj1);
+  return callback(markAsDismissed(5631).BottomSheet, obj);
 };
 export { UnionIcon };
 export const useShouldShowRobloxConnectionCoachmark = function useShouldShowRobloxConnectionCoachmark() {
   const items = [closure_8];
-  stateFromStores = stateFromStores(586).useStateFromStores(items, () => appInstalled.isAppInstalled(stateFromStores(13588).DetectableAppNames.ROBLOX));
+  stateFromStores = stateFromStores(586).useStateFromStores(items, () => appInstalled.isAppInstalled(stateFromStores(13603).DetectableAppNames.ROBLOX));
   const tmp2 = hasRoloxAccount(React.useState(false), 2);
   const first = tmp2[0];
   dependencyMap = tmp2[1];
@@ -176,8 +176,8 @@ export const useShouldShowRobloxConnectionCoachmark = function useShouldShowRobl
     }
     if (tmp) {
       dependencyMap(true);
-      const response = first(5358).fetch();
-      const obj = first(5358);
+      const response = first(5359).fetch();
+      const obj = first(5359);
     }
   }, items2);
   const items3 = [hasRoloxAccount];

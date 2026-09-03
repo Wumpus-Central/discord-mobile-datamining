@@ -1,10 +1,10 @@
-// === Module 15643: block ===
+// === Module 15657: block ===
 
-// Module 15643 (block)
+// Module 15657 (block)
 import ThemesDefault from "Themes" /* 709 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "updateCategoriesAndProducts" /* 7296 */;
+import closure_5 from "updateCategoriesAndProducts" /* 7297 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 

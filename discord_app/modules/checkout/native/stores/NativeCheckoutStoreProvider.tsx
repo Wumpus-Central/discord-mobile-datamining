@@ -1,11 +1,11 @@
-// === Module 10799: NativeCheckoutStoreProvider ===
+// === Module 10803: NativeCheckoutStoreProvider ===
 
-// Module 10799 (NativeCheckoutStoreProvider)
+// Module 10803 (NativeCheckoutStoreProvider)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import context from "context" /* 7178 */;
+import context from "context" /* 7179 */;
 import { AnalyticEvents } from "ME" /* 673 */;
 import { ItemPurchaseType } from "CustomCheckoutFlow" /* 4460 */;
 import { jsx } from "jsxProd" /* 21 */;
@@ -19,7 +19,7 @@ function NativeCheckoutStoreProvider(children) {
   let redux;
   let first;
   closure_11 = undefined;
-  closure_8 = order(5949)(() => {
+  closure_8 = order(5950)(() => {
     let id;
     if (order != null) {
       id = order.id;
@@ -33,7 +33,7 @@ function NativeCheckoutStoreProvider(children) {
     obj = { loadId: id, startTime: Date.now() };
     return obj;
   });
-  redux = order(5949)(() => {
+  redux = order(5950)(() => {
     const obj = {};
     const merged = Object.assign(closure_6);
     obj.load_id = loadId.loadId;
@@ -41,7 +41,7 @@ function NativeCheckoutStoreProvider(children) {
     return obj;
   });
   first = callback(React.useState(() => closure_1_7({ order, checkoutInitParameters: closure_0, contextMetadata: closure_8, analyticsFields: closure_9, paymentGateway: closure_2, orderRequired: closure_3, onOrderRetryCancellation: closure_4, initialSubscriptionFacet: closure_5 })), 1)[0];
-  order(4945)(() => {
+  order(4946)(() => {
     if (null != closure_6) {
       let obj = closure_1_0(closure_1_2[17]);
       const result = obj.trackPaymentFlowStartedAnalyticsAndCTP(closure_9);

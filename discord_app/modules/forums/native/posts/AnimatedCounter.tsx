@@ -1,8 +1,8 @@
-// === Module 11173: AnimatedCount ===
+// === Module 11177: AnimatedCount ===
 
-// Module 11173 (AnimatedCount)
+// Module 11177 (AnimatedCount)
 import Text from "Text" /* 4474 */;
-import defaultFormatter2 from "defaultFormatter" /* 11174 */;
+import defaultFormatter2 from "defaultFormatter" /* 11178 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;

@@ -1,6 +1,6 @@
-// === Module 16946: useChatBadge ===
+// === Module 16966: useChatBadge ===
 
-// Module 16946 (useChatBadge)
+// Module 16966 (useChatBadge)
 import closure_2 from "generateOldThreadCutoff" /* 4493 */;
 
 const require = arg1;

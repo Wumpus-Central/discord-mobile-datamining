@@ -1,6 +1,6 @@
-// === Module 11465: handleSelectedGuildChange ===
+// === Module 11470: handleSelectedGuildChange ===
 
-// Module 11465 (handleSelectedGuildChange)
+// Module 11470 (handleSelectedGuildChange)
 import initializeDefault from "initialize" /* 586 */;
 import dispatcherDefault from "dispatcher" /* 706 */;
 import closure_0 from "handleConnectionOpen" /* 4299 */;

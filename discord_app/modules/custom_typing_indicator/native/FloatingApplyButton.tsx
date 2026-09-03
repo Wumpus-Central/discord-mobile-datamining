@@ -1,6 +1,6 @@
-// === Module 15232: FloatingApplyButton ===
+// === Module 15247: FloatingApplyButton ===
 
-// Module 15232 (FloatingApplyButton)
+// Module 15247 (FloatingApplyButton)
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4470 */;
 import { MEDIA_PICKER_SEND_BUTTON_SPRING as closure_5 } from "DRAG_HANDLE" /* 1622 */;

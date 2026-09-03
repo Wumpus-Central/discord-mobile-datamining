@@ -1,13 +1,13 @@
-// === Module 11801: GIFIcon ===
+// === Module 11807: GIFIcon ===
 
-// Module 11801 (GIFIcon)
+// Module 11807 (GIFIcon)
 import ThemesDefault from "Themes" /* 709 */;
 import Button from "Button" /* 1296 */;
 import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1470 */;
 import Text from "Text" /* 4474 */;
-import registerAssetDefault from "registerAsset" /* 11103 */;
-import registerAssetDefault2 from "registerAsset" /* 11802 */;
-import registerAssetDefault3 from "registerAsset" /* 11803 */;
+import registerAssetDefault from "registerAsset" /* 11107 */;
+import registerAssetDefault2 from "registerAsset" /* 11808 */;
+import registerAssetDefault3 from "registerAsset" /* 11809 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;

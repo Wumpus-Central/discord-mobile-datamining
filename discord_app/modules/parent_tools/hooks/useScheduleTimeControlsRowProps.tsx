@@ -1,6 +1,6 @@
-// === Module 14739: useScheduleTimeControlsRowProps ===
+// === Module 14754: useScheduleTimeControlsRowProps ===
 
-// Module 14739 (useScheduleTimeControlsRowProps)
+// Module 14754 (useScheduleTimeControlsRowProps)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
 import getSystemLocale from "getSystemLocale" /* 1233 */;
@@ -12,7 +12,7 @@ const result = set.fileFinishedImporting("modules/parent_tools/hooks/useSchedule
 
 export default function useScheduleTimeControlsRowProps(arr) {
   if (0 === arr.length) {
-    let obj = { subLabel: null, trailing: "r" };
+    let obj = { subLabel: null, trailing: "Array" };
     obj = { variant: "text-xs/medium", color: "text-muted", children: null };
     const intl = getSystemLocale.intl;
     obj[2] = intl.string(messagesProxyDefault.fOBIZH);

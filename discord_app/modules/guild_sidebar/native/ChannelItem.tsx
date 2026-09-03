@@ -1,12 +1,12 @@
-// === Module 15936: getChannelMode ===
+// === Module 15952: getChannelMode ===
 
-// Module 15936 (getChannelMode)
+// Module 15952 (getChannelMode)
 import ThemesDefault from "Themes" /* 709 */;
 import getAvatarURLDefault from "getAvatarURL" /* 1430 */;
-import getChannelIcon from "getChannelIcon" /* 4981 */;
-import BookCheckIcon2 from "BookCheckIcon" /* 5028 */;
-import BaseChannelSubtitle from "BaseChannelSubtitle" /* 12171 */;
-import registerAssetDefault from "registerAsset" /* 15937 */;
+import getChannelIcon from "getChannelIcon" /* 4982 */;
+import BookCheckIcon2 from "BookCheckIcon" /* 5029 */;
+import BaseChannelSubtitle from "BaseChannelSubtitle" /* 12177 */;
+import registerAssetDefault from "registerAsset" /* 15953 */;
 import closure_4 from "_objectWithoutProperties" /* 109 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_6 from "sortActivity" /* 4569 */;
@@ -14,7 +14,7 @@ import closure_7 from "markAllUserIdListsStale" /* 4130 */;
 import closure_8 from "mergeGuildAvatar" /* 1921 */;
 import ME from "ME" /* 673 */;
 import { StaticChannelRoute } from "set" /* 1393 */;
-import { UnreadSetting } from "ReadStateTypes" /* 4702 */;
+import { UnreadSetting } from "ReadStateTypes" /* 4703 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 import importAllResult from "noop" /* 19 */;
@@ -68,7 +68,7 @@ function ChannelIcon(arg0) {
         obj1 = { style: null, source: null };
         obj1[0] = tmp.groupDmAvatar;
         obj1[1] = channelIconSource;
-        return callback2(tmp5(5501), obj1);
+        return callback2(tmp5(5502), obj1);
       }
       tmp5 = importDefault;
     }
@@ -105,7 +105,7 @@ function ChannelIcon(arg0) {
       obj6 = {};
     }
     const merged = Object.assign(obj6);
-    return callback2(tmp9(12171).BaseChannelIcon, obj4);
+    return callback2(tmp9(12177).BaseChannelIcon, obj4);
   }
 }
 function DMChannelIcon(userId) {
@@ -120,7 +120,7 @@ function DMChannelIcon(userId) {
   const items3 = [userId];
   const stateFromStoresObject = userId(586).useStateFromStoresObject(items2, () => ({ status: closure_1_6.getStatus(userId), isMobileOnline: closure_1_6.isMobileOnline(userId), isVROnline: closure_1_6.isVROnline(userId) }), items3);
   ({ status, isMobileOnline, isVROnline } = stateFromStoresObject);
-  obj = { user: stateFromStores, guildId: "o", size: "BLACK", style: 0.1, status: 1, isMobileOnline: "PREMIUM_TIER_2_PURPLE_FOR_GRADIENTS", isVROnline: 1, statusStyle: "Enable official messages" };
+  obj = { user: stateFromStores, guildId: "o", size: "URLSearchParams", style: true, status: false, isMobileOnline: "on-drag", isVROnline: "always", statusStyle: false };
   obj[2] = userId(1296).AvatarSizes.XSMALL_20;
   obj[3] = tmp.dmAvatar;
   obj[4] = status;

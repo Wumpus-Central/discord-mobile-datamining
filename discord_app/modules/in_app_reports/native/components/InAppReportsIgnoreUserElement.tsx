@@ -1,6 +1,6 @@
-// === Module 12997: IgnoreUserElement ===
+// === Module 13009: IgnoreUserElement ===
 
-// Module 12997 (IgnoreUserElement)
+// Module 13009 (IgnoreUserElement)
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "ensureGuildLoaded" /* 1386 */;
 import closure_5 from "markAllUserIdListsStale" /* 4130 */;

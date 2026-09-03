@@ -1,7 +1,7 @@
-// === Module 11493: ? ===
+// === Module 11498: ? ===
 
-// Module 11493
-import allSettledDefault from "allSettled" /* 4756 */;
+// Module 11498
+import allSettledDefault from "allSettled" /* 4757 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import closure_5 from "ensureGuildLoaded" /* 1386 */;
@@ -53,7 +53,7 @@ let obj = {
                 prop = tmp74.isICYMIGameContentForwarding;
               }
               if (prop) {
-                let guild_id = closure_1_0(8634).GAME_CONTENT_GUILD_ID;
+                let guild_id = closure_1_0(8638).GAME_CONTENT_GUILD_ID;
               } else if (channel1 != null) {
                 guild_id = channel1.guild_id;
               }
@@ -69,7 +69,7 @@ let obj = {
                 const error1 = new Error("Unable to find destination channel for message");
                 throw error1;
               } else {
-                const parsed = closure_1_1(7436).parse(channel, "");
+                const parsed = closure_1_1(7437).parse(channel, "");
                 obj1 = { guild_id: null, channel_id: null, message_id: null, type: null, forward_only: null };
                 obj1[0] = guild_id;
                 ({ channel_id: obj16[1], id: obj16[2] } = tmp72);
@@ -97,7 +97,7 @@ let obj = {
                 dependencyMap = withMessage;
                 let num9 = 0;
                 if (null != withMessage) {
-                  const tmp39 = v0(closure_1_1(7438)(withMessage), 2);
+                  const tmp39 = v0(closure_1_1(7439)(withMessage), 2);
                   num9 = 0;
                   if (tmp39[0]) {
                     dependencyMap = tmp39[1];
@@ -107,7 +107,7 @@ let obj = {
                     const obj9 = closure_1_0(1398);
                   }
                 }
-                const obj10 = closure_1_1(7210);
+                const obj10 = closure_1_1(7211);
                 let obj3 = { messageReference: null, location: null, eagerDispatch: false, flags: null };
                 obj3[0] = obj1;
                 obj3[1] = closure_1_8.FORWARDING;
@@ -136,13 +136,13 @@ let obj = {
                   result = "" === dependencyMap;
                 }
                 if (!result) {
-                  obj1 = closure_1_0(11490);
+                  obj1 = closure_1_0(11495);
                   result = obj1.isRatelimitedInChannel(channel, closure_1_6);
                 }
                 if (!result) {
-                  obj2 = closure_1_1(7210);
+                  obj2 = closure_1_1(7211);
                   const id = channel.id;
-                  obj3 = closure_1_1(7436);
+                  obj3 = closure_1_1(7437);
                   const obj6 = { location: null, flags: null };
                   obj6[0] = closure_1_8.FORWARDING;
                   obj6[1] = c1;

@@ -1,11 +1,11 @@
-// === Module 17336: handleTouch ===
+// === Module 17356: handleTouch ===
 
-// Module 17336 (handleTouch)
+// Module 17356 (handleTouch)
 import ThemesDefault from "Themes" /* 709 */;
 import getSystemLocale from "getSystemLocale" /* 1233 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
-import showSimpleActionSheet from "showSimpleActionSheet" /* 5994 */;
-import trackImpressionDefault from "trackImpression" /* 8907 */;
+import showSimpleActionSheet from "showSimpleActionSheet" /* 5995 */;
+import trackImpressionDefault from "trackImpression" /* 8911 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
@@ -59,8 +59,8 @@ export default function NewTermsModal() {
   const memo = React.useMemo(() => action.getAction(), []);
   const tmp5 = callback2(React.useState(false), 2);
   importDefault = tmp5[1];
-  let obj = memo(5509);
-  obj.useNavigatorBackPressHandler(memo(4925).BackPressHandler.minimize);
+  let obj = memo(5510);
+  obj.useNavigatorBackPressHandler(memo(4926).BackPressHandler.minimize);
   dependencyMap = React.useCallback(callback(function*() {
     if (c3 === 2) {
       c3 = 3;
@@ -188,7 +188,7 @@ export default function NewTermsModal() {
     };
     const intl8 = tmp6(1233).intl;
     obj16[2] = intl8.string(tmp6(1233).t["+TBKL1"]);
-    obj15[1] = callback3(tmp6(4928).Button, obj16);
+    obj15[1] = callback3(tmp6(4929).Button, obj16);
     items3[1] = callback3(closure_6, obj15);
     const obj17 = { style: null, source: null, color: null, onPress: null, accessibilityRole: "button", accessibilityLabel: null };
     const items4 = [tmp.navbarRight, ];
@@ -196,15 +196,15 @@ export default function NewTermsModal() {
     obj18[0] = top;
     items4[1] = obj18;
     obj17[0] = items4;
-    obj17[1] = tmp2(9790);
+    obj17[1] = tmp2(9794);
     obj17[2] = tmp.navbarRight.tintColor;
     obj17[3] = handleMoreActions;
     const intl9 = tmp6(1233).intl;
     obj17[5] = intl9.string(tmp6(1233).t["UKOtz+"]);
-    items3[2] = callback3(tmp2(9081), obj17);
+    items3[2] = callback3(tmp2(9085), obj17);
     obj[1] = items3;
     tmp10 = callback4(closure_6, obj);
-    const tmp2Result = tmp2(9081);
+    const tmp2Result = tmp2(9085);
   }
   return tmp10;
 };

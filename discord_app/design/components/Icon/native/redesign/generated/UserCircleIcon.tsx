@@ -1,10 +1,10 @@
-// === Module 10876: UserCircleIcon ===
+// === Module 10880: UserCircleIcon ===
 
-// Module 10876 (UserCircleIcon)
+// Module 10880 (UserCircleIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 709 */;
 import BaseIconImage from "BaseIconImage" /* 4196 */;
-import registerAsset from "registerAsset" /* 10877 */;
+import registerAsset from "registerAsset" /* 10881 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

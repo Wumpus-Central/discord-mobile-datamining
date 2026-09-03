@@ -1,7 +1,7 @@
-// === Module 11780: RefreshChatInputCoachmark ===
+// === Module 11786: RefreshChatInputCoachmark ===
 
-// Module 11780 (RefreshChatInputCoachmark)
-import useCoachmark from "useCoachmark" /* 8987 */;
+// Module 11786 (RefreshChatInputCoachmark)
+import useCoachmark from "useCoachmark" /* 8991 */;
 import closure_2 from "_slicedToArray" /* 32 */;
 import closure_3 from "noop" /* 19 */;
 import { ContentDismissActionType } from "ContentDismissActionType" /* 1383 */;
@@ -22,7 +22,7 @@ export const useRefreshChatInputCoachmark = function useRefreshChatInputCoachmar
   } else {
     items = [tmp(1372).DismissibleContent.MOBILE_REFRESH_CHAT_INPUT_PLUS_BUTTON_COACHMARK];
   }
-  const tmp3 = callback(_require(6260).useSelectedDismissibleContent(items), 2);
+  const tmp3 = callback(_require(6261).useSelectedDismissibleContent(items), 2);
   _require = tmp4;
   const tmp5 = tmp3[0] === _require(1372).DismissibleContent.MOBILE_REFRESH_CHAT_INPUT_PLUS_BUTTON_COACHMARK;
   dependencyMap = tmp5;

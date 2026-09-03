@@ -1,6 +1,6 @@
-// === Module 11331: AppStoreOverlayAboutSection ===
+// === Module 11335: AppStoreOverlayAboutSection ===
 
-// Module 11331 (AppStoreOverlayAboutSection)
+// Module 11335 (AppStoreOverlayAboutSection)
 import ThemesDefault from "Themes" /* 709 */;
 import closure_2 from "_slicedToArray" /* 32 */;
 import closure_3 from "noop" /* 19 */;

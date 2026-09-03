@@ -1,10 +1,10 @@
-// === Module 5959: ConnectionCard ===
+// === Module 5960: ConnectionCard ===
 
-// Module 5959 (ConnectionCard)
+// Module 5960 (ConnectionCard)
 import noopAll from "noop" /* 19 */;
-import ApplicationConnectionCardDefault from "ApplicationConnectionCard" /* 5960 */;
-import ProviderConnectionCardDefault from "ProviderConnectionCard" /* 5977 */;
-import { OnboardingConnectionType } from "serverPromptToClientPrompt" /* 5476 */;
+import ApplicationConnectionCardDefault from "ApplicationConnectionCard" /* 5961 */;
+import ProviderConnectionCardDefault from "ProviderConnectionCard" /* 5978 */;
+import { OnboardingConnectionType } from "serverPromptToClientPrompt" /* 5477 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 noopAll;

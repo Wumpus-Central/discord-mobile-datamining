@@ -1,6 +1,6 @@
-// === Module 9042: GuildProfileCTA ===
+// === Module 9046: GuildProfileCTA ===
 
-// Module 9042 (GuildProfileCTA)
+// Module 9046 (GuildProfileCTA)
 import closure_3 from "noop" /* 19 */;
 import { AnalyticsObjects } from "ME" /* 673 */;
 import { ProfileCustomizationScrollPositions as closure_5 } from "MAX_FAVORITES" /* 682 */;

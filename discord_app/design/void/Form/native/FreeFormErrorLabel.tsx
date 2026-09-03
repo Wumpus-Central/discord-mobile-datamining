@@ -1,6 +1,6 @@
-// === Module 7723: Label ===
+// === Module 7726: Label ===
 
-// Module 7723 (Label)
+// Module 7726 (Label)
 import closure_2 from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 

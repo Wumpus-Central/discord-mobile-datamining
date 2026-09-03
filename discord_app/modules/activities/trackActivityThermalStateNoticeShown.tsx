@@ -1,6 +1,6 @@
-// === Module 16869: trackActivityThermalStateNoticeShown ===
+// === Module 16889: trackActivityThermalStateNoticeShown ===
 
-// Module 16869 (trackActivityThermalStateNoticeShown)
+// Module 16889 (trackActivityThermalStateNoticeShown)
 import expandEventPropertiesDefault from "expandEventProperties" /* 695 */;
 import getEmbeddedActivityLocationChannelId from "getEmbeddedActivityLocationChannelId" /* 4110 */;
 import closure_3 from "ensureGuildLoaded" /* 1386 */;

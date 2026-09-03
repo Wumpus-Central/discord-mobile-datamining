@@ -1,6 +1,6 @@
-// === Module 11229: SafetyWarningBanner ===
+// === Module 11233: SafetyWarningBanner ===
 
-// Module 11229 (SafetyWarningBanner)
+// Module 11233 (SafetyWarningBanner)
 import ThemesDefault from "Themes" /* 709 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;

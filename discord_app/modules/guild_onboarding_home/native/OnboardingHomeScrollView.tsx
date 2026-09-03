@@ -1,6 +1,6 @@
-// === Module 16370: OnboardingHomeScrollView ===
+// === Module 16389: OnboardingHomeScrollView ===
 
-// Module 16370 (OnboardingHomeScrollView)
+// Module 16389 (OnboardingHomeScrollView)
 import ThemesDefault from "Themes" /* 709 */;
 import closure_2 from "noop" /* 19 */;
 import { ScrollView } from "get ActivityIndicator" /* 17 */;

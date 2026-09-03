@@ -1,6 +1,6 @@
-// === Module 5982: GuildOnboardingCompleted ===
+// === Module 5983: GuildOnboardingCompleted ===
 
-// Module 5982 (GuildOnboardingCompleted)
+// Module 5983 (GuildOnboardingCompleted)
 import ThemesDefault from "Themes" /* 709 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
@@ -8,7 +8,7 @@ import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4470 */;
 import closure_6 from "createGuildRoleRecordFromRust" /* 1984 */;
 import closure_7 from "createGuildRecordFromRust" /* 1908 */;
 import closure_8 from "mergeGuildAvatar" /* 1921 */;
-import closure_9 from "handleUpdate" /* 5475 */;
+import closure_9 from "handleUpdate" /* 5476 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 

@@ -1,12 +1,12 @@
-// === Module 7605: AlwaysCompressImagesSwitch ===
+// === Module 7606: AlwaysCompressImagesSwitch ===
 
-// Module 7605 (AlwaysCompressImagesSwitch)
+// Module 7606 (AlwaysCompressImagesSwitch)
 import initialize from "initialize" /* 586 */;
 import ThemesDefault from "Themes" /* 709 */;
 import set from "set" /* 1234 */;
-import LinearGradientDefault from "LinearGradient" /* 4940 */;
-import preloadDefault from "preload" /* 5501 */;
-import useAPNGPlayerControls from "useAPNGPlayerControls" /* 8530 */;
+import LinearGradientDefault from "LinearGradient" /* 4941 */;
+import preloadDefault from "preload" /* 5502 */;
+import useAPNGPlayerControls from "useAPNGPlayerControls" /* 8534 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
@@ -18,8 +18,8 @@ import closure_10 from "mergeGuildAvatar" /* 1921 */;
 import GuildFeatures from "GuildFeatures" /* 1923 */;
 import ME from "ME" /* 673 */;
 import { ApplicationStreamFPS } from "RESOLUTION_720" /* 4537 */;
-import SAVED_BOOKMARKS_MAX from "SAVED_BOOKMARKS_MAX" /* 7606 */;
-import { MAX_SCHEDULED_MESSAGES_PER_USER as closure_21 } from "MIN_SCHEDULE_TIME_INTO_FUTURE_SECONDS" /* 7600 */;
+import SAVED_BOOKMARKS_MAX from "SAVED_BOOKMARKS_MAX" /* 7607 */;
+import { MAX_SCHEDULED_MESSAGES_PER_USER as closure_21 } from "MIN_SCHEDULE_TIME_INTO_FUTURE_SECONDS" /* 7601 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -50,7 +50,7 @@ function AlwaysCompressImagesSwitch(isKestrelTreatment) {
       const intl2 = tmp2(1233).intl;
       obj1[2] = intl2.string(tmp2(1233).t["wC0+Ph"]);
       obj[5] = callback2(tmp2(4474).Text, obj1);
-      obj[1] = callback2(tmp2(6001).TableSwitchRow, obj);
+      obj[1] = callback2(tmp2(6002).TableSwitchRow, obj);
       tmp6 = callback2(View, obj);
     }
   }

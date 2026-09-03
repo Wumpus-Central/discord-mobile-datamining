@@ -1,6 +1,6 @@
-// === Module 17614: getInvitableChannelForGuild ===
+// === Module 17634: getInvitableChannelForGuild ===
 
-// Module 17614 (getInvitableChannelForGuild)
+// Module 17634 (getInvitableChannelForGuild)
 import set from "set" /* 2 */;
 import ME from "ME" /* 673 */;
 import comparator from "comparator" /* 1981 */;

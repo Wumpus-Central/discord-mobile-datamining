@@ -1,6 +1,6 @@
-// === Module 6264: GiftCardMobileConsumptionActionSheet ===
+// === Module 6265: GiftCardMobileConsumptionActionSheet ===
 
-// Module 6264 (GiftCardMobileConsumptionActionSheet)
+// Module 6265 (GiftCardMobileConsumptionActionSheet)
 import ThemesDefault from "Themes" /* 709 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
 import messagesProxyDefault from "messagesProxy" /* 2140 */;
@@ -60,7 +60,7 @@ export default function GiftCardMobileConsumptionActionSheet(markAsDismissed) {
   obj = { style: items2, children: null };
   items2 = [tmp.container, { paddingBottom: useSafeAreaInsetsDefault().bottom }];
   obj = { spacing: ThemesDefault.space.PX_16, children: null };
-  const items3 = [callback(View, { style: tmp.illustration, children: callback(markAsDismissed(6265).LaptopSpotIllustration, { scale: 1, width: 150, height: 123 }) }), , ];
+  const items3 = [callback(View, { style: tmp.illustration, children: callback(markAsDismissed(6266).LaptopSpotIllustration, { scale: 1, width: 150, height: 123 }) }), , ];
   const obj2 = { variant: "text-md/medium", color: "text-default", style: tmp.body, children: null };
   const intl = markAsDismissed(1233).intl;
   obj2[3] = intl.string(messagesProxyDefault.V3DI1E);
@@ -71,9 +71,9 @@ export default function GiftCardMobileConsumptionActionSheet(markAsDismissed) {
   obj3[4] = function onPress() {
     return callback(closure_1_5.USER_DISMISS);
   };
-  items3[2] = callback(markAsDismissed(4928).Button, obj3);
+  items3[2] = callback(markAsDismissed(4929).Button, obj3);
   obj[1] = items3;
-  obj[1] = callback2(markAsDismissed(4926).Stack, obj);
+  obj[1] = callback2(markAsDismissed(4927).Stack, obj);
   obj[3] = callback(View, obj);
-  return callback(markAsDismissed(5630).BottomSheet, obj);
+  return callback(markAsDismissed(5631).BottomSheet, obj);
 };

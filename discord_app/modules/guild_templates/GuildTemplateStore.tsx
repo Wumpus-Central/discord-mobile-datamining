@@ -1,11 +1,11 @@
-// === Module 7212: handleGuildTemplateResolveSuccess ===
+// === Module 7213: handleGuildTemplateResolveSuccess ===
 
-// Module 7212 (handleGuildTemplateResolveSuccess)
+// Module 7213 (handleGuildTemplateResolveSuccess)
 import set from "set" /* 2 */;
 import initializeDefault from "initialize" /* 586 */;
 import dispatcherDefault from "dispatcher" /* 706 */;
-import createResolvedGuildTemplateDefault from "createResolvedGuildTemplate" /* 6178 */;
-import GUILD_TEMPLATES_MEMBER_COUNT_PROMOTION_THRESHOLD from "GUILD_TEMPLATES_MEMBER_COUNT_PROMOTION_THRESHOLD" /* 6179 */;
+import createResolvedGuildTemplateDefault from "createResolvedGuildTemplate" /* 6179 */;
+import GUILD_TEMPLATES_MEMBER_COUNT_PROMOTION_THRESHOLD from "GUILD_TEMPLATES_MEMBER_COUNT_PROMOTION_THRESHOLD" /* 6180 */;
 
 function handleGuildTemplateResolveSuccess(guildTemplate) {
   guildTemplate = guildTemplate.guildTemplate;

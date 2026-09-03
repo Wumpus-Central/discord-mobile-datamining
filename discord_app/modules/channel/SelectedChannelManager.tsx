@@ -1,11 +1,11 @@
-// === Module 17302: handleGuildCreate ===
+// === Module 17322: handleGuildCreate ===
 
-// Module 17302 (handleGuildCreate)
+// Module 17322 (handleGuildCreate)
 import dispatcherDefault from "dispatcher" /* 706 */;
 import transitionTo from "transitionTo" /* 1219 */;
-import _modDef5363 from "module_5363" /* 5363 */;
-import initializeDefault from "initialize" /* 5494 */;
-import transitionToGuild from "transitionToGuild" /* 6195 */;
+import _modDef5364 from "module_5364" /* 5364 */;
+import initializeDefault from "initialize" /* 5495 */;
+import transitionToGuild from "transitionToGuild" /* 6196 */;
 import closure_3 from "_detectH265HardwareDecode" /* 4529 */;
 import closure_4 from "handleConnectionOpen" /* 1980 */;
 import { findFirstVoiceChannelId } from "handleConnectionOpen" /* 1980 */;
@@ -39,8 +39,8 @@ prototype["handleGuildCreate"] = function handleGuildCreate(guild) {
     tmp6 = null == voiceChannelId;
   }
   if (tmp6) {
-    const voiceChannel = _modDef5363.selectVoiceChannel(findFirstVoiceChannelId(guild.id));
-    const obj2 = _modDef5363;
+    const voiceChannel = _modDef5364.selectVoiceChannel(findFirstVoiceChannelId(guild.id));
+    const obj2 = _modDef5364;
   }
 };
 prototype["handleChannelCreate"] = function handleChannelCreate(channel) {
@@ -55,8 +55,8 @@ prototype["handleChannelCreate"] = function handleChannelCreate(channel) {
     const obj3 = store;
     tmp = null == guildId.getGuildId() && null != originChannelId && originChannelId === channelId;
     if (tmp7) {
-      const voiceChannel = _modDef5363.selectVoiceChannel(channel.id, videoEnabled.isVideoEnabled());
-      const obj2 = _modDef5363;
+      const voiceChannel = _modDef5364.selectVoiceChannel(channel.id, videoEnabled.isVideoEnabled());
+      const obj2 = _modDef5364;
     }
     tmp7 = null != originChannelId && originChannelId === store.getVoiceChannelId();
   }

@@ -1,11 +1,11 @@
-// === Module 17633: _fetch ===
+// === Module 17653: _fetch ===
 
-// Module 17633 (_fetch)
+// Module 17653 (_fetch)
 import setDefault from "set" /* 684 */;
 import _modDef1205 from "module_1205" /* 1205 */;
-import initializeDefault from "initialize" /* 5494 */;
-import getIsEligibleForQuests from "getIsEligibleForQuests" /* 11304 */;
-import closure_3 from "initializeState" /* 7458 */;
+import initializeDefault from "initialize" /* 5495 */;
+import getIsEligibleForQuests from "getIsEligibleForQuests" /* 11308 */;
+import closure_3 from "initializeState" /* 7459 */;
 
 require = arg1;
 const DAY = setDefault.Millis.DAY;
@@ -121,12 +121,12 @@ QuestFetchManager.prototype["_fetch"] = function _fetch(arg0) {
     obj[4] = closure_3.isFetchingCurrentQuests;
     obj[2] = obj;
     _modDef1205.addBreadcrumb(obj);
-    let tmpResult = tmp(11133);
+    let tmpResult = tmp(11137);
     const currentQuests = tmpResult.fetchCurrentQuests();
     tmpResult = tmp(1234);
     if (tmpResult.isMac()) {
-      const state = tmp6(11157).getState();
-      const tmp6Result = tmp6(11157);
+      const state = tmp6(11161).getState();
+      const tmp6Result = tmp6(11161);
     }
     const obj2 = _modDef1205;
     tmp6 = importDefault;

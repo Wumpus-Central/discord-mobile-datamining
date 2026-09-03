@@ -7,7 +7,7 @@ import initializeDefault from "initialize" /* 586 */;
 import isStreamKey from "isStreamKey" /* 4544 */;
 import isOwnerDefault from "isOwner" /* 4571 */;
 import BaseConnectionEvent from "BaseConnectionEvent" /* 4579 */;
-import canSpectateDefault from "canSpectate" /* 13678 */;
+import canSpectateDefault from "canSpectate" /* 13693 */;
 import closure_4 from "initialize" /* 4501 */;
 import closure_5 from "fetchFingerprint" /* 1215 */;
 import importDefaultResult from "_detectH265HardwareDecode" /* 4529 */;
@@ -289,7 +289,7 @@ if (importDefaultResult.isSupported()) {
   obj[9] = function handleStreamStop(appContext) {
     appContext = appContext.appContext;
     const streamKey = appContext.streamKey;
-    closure_11[streamKey] = { appContext, analyticsLocations: "r" };
+    closure_11[streamKey] = { appContext, analyticsLocations: "Array" };
     const item = applyDefault.forEach(closure_18, (analyticsContext) => {
       analyticsContext = analyticsContext.analyticsContext;
       analyticsContext.setActionContext(appContext);
@@ -319,8 +319,8 @@ if (importDefaultResult.isSupported()) {
         tmp11 = null == dependencyMap2[streamKey];
       }
       if (tmp11) {
-        tmp10[streamKey] = tmp4(7493).getStreamerApplication(decodeStreamKeyResult, closure_7);
-        const tmp4Result = tmp4(7493);
+        tmp10[streamKey] = tmp4(7494).getStreamerApplication(decodeStreamKeyResult, closure_7);
+        const tmp4Result = tmp4(7494);
       }
       obj = { streamRegion: null, streamApplication: null, streamSourceType: null, actionContext: null, numViewers: null, goLiveModalDurationMs: null, analyticsLocations: null };
       obj[0] = region;

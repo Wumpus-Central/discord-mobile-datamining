@@ -1,12 +1,12 @@
-// === Module 13141: ButtonBadge ===
+// === Module 13153: ButtonBadge ===
 
-// Module 13141 (ButtonBadge)
+// Module 13153 (ButtonBadge)
 import ThemesDefault from "Themes" /* 709 */;
 import set from "set" /* 1234 */;
-import getFontScale from "getFontScale" /* 4935 */;
-import PressableBase from "PressableBase" /* 5076 */;
-import DEFAULT_BADGE_SIZE from "DEFAULT_BADGE_SIZE" /* 7623 */;
-import DEFAULT_BADGE_SIZEDefault from "DEFAULT_BADGE_SIZE" /* 7623 */;
+import getFontScale from "getFontScale" /* 4936 */;
+import PressableBase from "PressableBase" /* 5077 */;
+import DEFAULT_BADGE_SIZE from "DEFAULT_BADGE_SIZE" /* 7624 */;
+import DEFAULT_BADGE_SIZEDefault from "DEFAULT_BADGE_SIZE" /* 7624 */;
 import importAllResult from "noop" /* 19 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;

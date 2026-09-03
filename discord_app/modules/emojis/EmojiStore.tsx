@@ -1,31 +1,31 @@
-// === Module 5409: getEmojiToGroupId ===
+// === Module 5410: getEmojiToGroupId ===
 
-// Module 5409 (getEmojiToGroupId)
+// Module 5410 (getEmojiToGroupId)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 586 */;
 import setDefault from "set" /* 684 */;
 import dispatcherDefault from "dispatcher" /* 706 */;
 import hooksDefault from "hooks" /* 4074 */;
-import dedupeEmojisByNameOrIdDefault from "dedupeEmojisByNameOrId" /* 5416 */;
-import _modDef5417 from "module_5417" /* 5417 */;
+import dedupeEmojisByNameOrIdDefault from "dedupeEmojisByNameOrId" /* 5417 */;
+import _modDef5418 from "module_5418" /* 5418 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import closure_5 from "getHash" /* 4391 */;
-import closure_6 from "computeRolesForGuild" /* 5410 */;
+import closure_6 from "computeRolesForGuild" /* 5411 */;
 import closure_7 from "_getSystemLocale" /* 1995 */;
 import closure_8 from "handleConnectionClosedOrResumed" /* 1339 */;
 import closure_9 from "trackCommunicationDisabled" /* 1991 */;
 import closure_10 from "allGuildIds" /* 1388 */;
 import closure_11 from "createGuildRoleRecordFromRust" /* 1984 */;
 import closure_12 from "createGuildRecordFromRust" /* 1908 */;
-import closure_13 from "insertUnsortedGuilds" /* 5389 */;
+import closure_13 from "insertUnsortedGuilds" /* 5390 */;
 import closure_14 from "mergeGuildAvatar" /* 1921 */;
-import closure_15 from "fromServer" /* 5411 */;
-import closure_16 from "initialize" /* 5412 */;
+import closure_15 from "fromServer" /* 5412 */;
+import closure_16 from "initialize" /* 5413 */;
 import set from "set" /* 1924 */;
 import { NULL_STRING_GUILD_ID } from "ME" /* 673 */;
-import { EmojiCategories } from "EmojiCategoryTypes" /* 5413 */;
+import { EmojiCategories } from "EmojiCategoryTypes" /* 5414 */;
 import { UserSettingsTypes } from "MAX_FAVORITES" /* 682 */;
 import importDefaultResult from "parseRawEmojiObject" /* 4134 */;
 import importDefaultResult2 from "DEFAULT_FRECENCY" /* 4566 */;
@@ -166,7 +166,7 @@ function updateGuildEmoji(guildId) {
   if (null != guildEmojis) {
     const currentUser = authStore.getCurrentUser();
     if (null != currentUser) {
-      obj = callback(5449);
+      obj = callback(5450);
       let flag = obj.canUseRoleSubscriptionIAP(guildId);
       if (typeof GuildEmojis !== "function") {
         HermesBuiltin.throwTypeError();
@@ -374,7 +374,7 @@ prototype["isUsable"] = function isUsable(emoji) {
         return roles.includes(arg0);
       });
       if (!someResult) {
-        let result = callback(5414).isPurchasableRoleSubscriptionEmoji(emoji);
+        let result = callback(5415).isPurchasableRoleSubscriptionEmoji(emoji);
         if (result) {
           let _canSeeServerSubIAP = self._canSeeServerSubIAP;
           if (!_canSeeServerSubIAP) {
@@ -383,7 +383,7 @@ prototype["isUsable"] = function isUsable(emoji) {
           result = _canSeeServerSubIAP;
         }
         someResult = result;
-        obj = callback(5414);
+        obj = callback(5415);
       }
       tmp6 = someResult;
     }
@@ -1525,7 +1525,7 @@ const emojiStore = new EmojiStore(dispatcherDefault, {
     trackUsage(emojiUsed.emojiUsed);
   },
   USER_SETTINGS_PROTO_UPDATE: function handleUserSettingsProtoUpdate(settings) {
-    obj = _modDef5417;
+    obj = _modDef5418;
     obj.setEmojiLocale(locale.locale);
     if (settings.settings.type === UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS) {
       if (settings.wasSaved) {

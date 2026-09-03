@@ -1,6 +1,6 @@
-// === Module 7983: useIsInReverseTrial ===
+// === Module 7986: useIsInReverseTrial ===
 
-// Module 7983 (useIsInReverseTrial)
+// Module 7986 (useIsInReverseTrial)
 import initialize from "initialize" /* 586 */;
 import closure_2 from "mergeGuildAvatar" /* 1921 */;
 

@@ -1,6 +1,6 @@
-// === Module 15040: LoadingIndicator ===
+// === Module 15055: LoadingIndicator ===
 
-// Module 15040 (LoadingIndicator)
+// Module 15055 (LoadingIndicator)
 import noopAll from "noop" /* 19 */;
 import { ActivityIndicator } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;

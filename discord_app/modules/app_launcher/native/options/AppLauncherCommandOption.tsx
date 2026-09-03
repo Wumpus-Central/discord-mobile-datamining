@@ -1,15 +1,15 @@
-// === Module 11956: AppLauncherCommandOption ===
+// === Module 11962: AppLauncherCommandOption ===
 
-// Module 11956 (AppLauncherCommandOption)
+// Module 11962 (AppLauncherCommandOption)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 709 */;
-import AppLauncherChoicesOptionDefault from "AppLauncherChoicesOption" /* 11957 */;
-import AttachmentPreviewAppLauncherDefault from "AttachmentPreviewAppLauncher" /* 11968 */;
-import AppLauncherBooleanOptionDefault from "AppLauncherBooleanOption" /* 11970 */;
-import MentionableIconDefault from "MentionableIcon" /* 11971 */;
-import AppLauncherRoleOptionDefault from "AppLauncherRoleOption" /* 11976 */;
-import AppLauncherUserOptionDefault from "AppLauncherUserOption" /* 11977 */;
-import AppLauncherChannelOptionDefault from "AppLauncherChannelOption" /* 11980 */;
+import AppLauncherChoicesOptionDefault from "AppLauncherChoicesOption" /* 11963 */;
+import AttachmentPreviewAppLauncherDefault from "AttachmentPreviewAppLauncher" /* 11974 */;
+import AppLauncherBooleanOptionDefault from "AppLauncherBooleanOption" /* 11976 */;
+import MentionableIconDefault from "MentionableIcon" /* 11977 */;
+import AppLauncherRoleOptionDefault from "AppLauncherRoleOption" /* 11982 */;
+import AppLauncherUserOptionDefault from "AppLauncherUserOption" /* 11983 */;
+import AppLauncherChannelOptionDefault from "AppLauncherChannelOption" /* 11986 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { AppLauncherOptionAutoFocusType as closure_4 } from "APP_LAUNCHER_BUILT_IN_SECTION_ICON" /* 1497 */;
 import jsxProd from "jsxProd" /* 21 */;
@@ -237,8 +237,8 @@ export default function AppLauncherCommandOption(option) {
           obj6[1] = function onPress() {
             return onDismiss(name);
           };
-          obj6[2] = tmp13(tmp2(6234).CircleXIcon, { size: "md" });
-          items[1] = tmp13(tmp2(5076).PressableOpacity, obj6);
+          obj6[2] = tmp13(tmp2(6235).CircleXIcon, { size: "md" });
+          items[1] = tmp13(tmp2(5077).PressableOpacity, obj6);
           obj4[1] = items;
           tmp62 = callback(View, obj4);
         }
@@ -290,7 +290,7 @@ export default function AppLauncherCommandOption(option) {
     obj8[3] = command;
     obj8[4] = optionValues;
     let first6;
-    let tmp64Result = tmp64(11963);
+    let tmp64Result = tmp64(11969);
     if (optionValues.current[name.name] != tmp44) {
       first6 = tmp52[0];
     }
@@ -323,7 +323,7 @@ export default function AppLauncherCommandOption(option) {
     obj9[1] = name;
     obj9[2] = channel.guild_id;
     let first7;
-    tmp64Result = tmp64(11965);
+    tmp64Result = tmp64(11971);
     if (optionValues.current[name.name] != tmp44) {
       first7 = tmp46[0];
     }

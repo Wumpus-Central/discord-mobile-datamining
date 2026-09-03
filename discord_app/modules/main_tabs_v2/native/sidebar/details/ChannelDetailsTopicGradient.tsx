@@ -1,6 +1,6 @@
-// === Module 16546: useChannelTopicGradientBackground ===
+// === Module 16567: useChannelTopicGradientBackground ===
 
-// Module 16546 (useChannelTopicGradientBackground)
+// Module 16567 (useChannelTopicGradientBackground)
 import ThemesDefault from "Themes" /* 709 */;
 import closure_3 from "noop" /* 19 */;
 

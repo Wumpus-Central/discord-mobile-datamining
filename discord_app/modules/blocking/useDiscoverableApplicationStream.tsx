@@ -1,6 +1,6 @@
-// === Module 9255: getDiscoverableApplicationStream ===
+// === Module 9259: getDiscoverableApplicationStream ===
 
-// Module 9255 (getDiscoverableApplicationStream)
+// Module 9259 (getDiscoverableApplicationStream)
 import closure_2 from "reset" /* 4500 */;
 import closure_3 from "markAllUserIdListsStale" /* 4130 */;
 import { RelationshipTypes } from "ME" /* 673 */;

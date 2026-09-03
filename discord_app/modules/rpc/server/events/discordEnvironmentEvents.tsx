@@ -1,6 +1,6 @@
-// === Module 14399: RPC_AUTHENTICATED_SCOPE ===
+// === Module 14415: RPC_AUTHENTICATED_SCOPE ===
 
-// Module 14399 (RPC_AUTHENTICATED_SCOPE)
+// Module 14415 (RPC_AUTHENTICATED_SCOPE)
 import closure_4 from "_objectWithoutProperties" /* 109 */;
 import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4470 */;
 import RPC_SCOPE_CONFIG from "RPC_SCOPE_CONFIG" /* 4380 */;

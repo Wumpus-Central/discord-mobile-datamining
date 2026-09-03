@@ -1,12 +1,12 @@
-// === Module 16684: ContextMenuCommandItem ===
+// === Module 16704: ContextMenuCommandItem ===
 
-// Module 16684 (ContextMenuCommandItem)
+// Module 16704 (ContextMenuCommandItem)
 import applyDefault from "apply" /* 12 */;
 import ThemesDefault from "Themes" /* 709 */;
 import getSystemLocale from "getSystemLocale" /* 1233 */;
-import preloadDefault from "preload" /* 5501 */;
-import TableRowInner from "TableRowInner" /* 5607 */;
-import getApplicationCommandsIconSource from "getApplicationCommandsIconSource" /* 12021 */;
+import preloadDefault from "preload" /* 5502 */;
+import TableRowInner from "TableRowInner" /* 5608 */;
+import getApplicationCommandsIconSource from "getApplicationCommandsIconSource" /* 12027 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
@@ -42,7 +42,7 @@ export default function ContextMenuCommandItem(item) {
     }
     return intl.formatToPlainString(item(closure_1_2[7]).t.Pk4Mz3, { applicationName: name, commandName: item.displayName });
   }, items);
-  let obj = item(12021);
+  let obj = item(12027);
   const applicationCommandsIconSource = obj.getApplicationCommandsIconSource(section);
   obj = { accessibilityLabel: memo, onPress, label: item.displayName, icon: null, trailing: null, start: null, end: null };
   let tmp8Result = null != applicationCommandsIconSource;
@@ -50,13 +50,13 @@ export default function ContextMenuCommandItem(item) {
     obj = { style: null, source: null };
     obj[0] = tmp.commandIcon;
     obj[1] = applicationCommandsIconSource;
-    tmp8Result = tmp8(section(5501), obj);
+    tmp8Result = tmp8(section(5502), obj);
   }
   obj[3] = tmp8Result;
   obj[4] = jsx(item(4423).SendMessageIcon, {});
   obj[5] = start;
   obj[6] = end;
-  return jsx(item(5607).TableRow, { accessibilityLabel: memo, onPress, label: item.displayName, icon: null, trailing: null, start: null, end: null });
+  return jsx(item(5608).TableRow, { accessibilityLabel: memo, onPress, label: item.displayName, icon: null, trailing: null, start: null, end: null });
 };
 export const ContextMenuCommandLoadingItem = function ContextMenuCommandLoadingItem(arg0) {
   ({ start, end } = arg0);

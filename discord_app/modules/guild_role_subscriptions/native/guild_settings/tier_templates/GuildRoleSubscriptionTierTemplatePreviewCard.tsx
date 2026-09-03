@@ -1,12 +1,12 @@
-// === Module 17603: ContentHeader ===
+// === Module 17623: ContentHeader ===
 
-// Module 17603 (ContentHeader)
+// Module 17623 (ContentHeader)
 import ThemesDefault from "Themes" /* 709 */;
 import getSystemLocale from "getSystemLocale" /* 1233 */;
 import Button from "Button" /* 1296 */;
 import Text from "Text" /* 4474 */;
-import registerAssetDefault from "registerAsset" /* 5951 */;
-import getPrivateChannelIconComponent from "getPrivateChannelIconComponent" /* 17607 */;
+import registerAssetDefault from "registerAsset" /* 5952 */;
+import getPrivateChannelIconComponent from "getPrivateChannelIconComponent" /* 17627 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import ME from "ME" /* 673 */;

@@ -1,9 +1,9 @@
-// === Module 8995: renderTooltipItem ===
+// === Module 8999: renderTooltipItem ===
 
-// Module 8995 (renderTooltipItem)
+// Module 8999 (renderTooltipItem)
 import _modDef4217 from "module_4217" /* 4217 */;
-import AnimatedRenderItemDefault from "AnimatedRenderItem" /* 8993 */;
-import Coachmark from "Coachmark" /* 8996 */;
+import AnimatedRenderItemDefault from "AnimatedRenderItem" /* 8997 */;
+import Coachmark from "Coachmark" /* 9000 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { StyleSheet } from "get ActivityIndicator" /* 17 */;
@@ -30,7 +30,7 @@ export const AnimatedCoachmark = function AnimatedCoachmark(visible) {
   const merged = Object.assign(visible, Object.create(null));
   importDefault = undefined;
   [tmp3, c1] = callback(React.useState(visible), 2);
-  let obj = visible(8992);
+  let obj = visible(8996);
   const result = obj.tooltipEnterExitAnimation(merged.position);
   const items = [visible];
   const effect = React.useEffect(() => {

@@ -1,6 +1,6 @@
-// === Module 6188: useGuildOnboardingAvailable ===
+// === Module 6189: useGuildOnboardingAvailable ===
 
-// Module 6188 (useGuildOnboardingAvailable)
+// Module 6189 (useGuildOnboardingAvailable)
 import closure_2 from "initialize" /* 1983 */;
 import { GuildFeatures } from "ME" /* 673 */;
 

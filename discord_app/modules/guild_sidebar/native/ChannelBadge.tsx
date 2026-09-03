@@ -1,10 +1,10 @@
-// === Module 16049: ChannelBadge ===
+// === Module 16065: ChannelBadge ===
 
-// Module 16049 (ChannelBadge)
+// Module 16065 (ChannelBadge)
 import noopAll from "noop" /* 19 */;
 import defaultAreStatesEqual from "defaultAreStatesEqual" /* 644 */;
-import NewBadgeDefault from "NewBadge" /* 12086 */;
-import MentionsBadgeDefault from "MentionsBadge" /* 16050 */;
+import NewBadgeDefault from "NewBadge" /* 12092 */;
+import MentionsBadgeDefault from "MentionsBadge" /* 16066 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_4 from "_getSystemLocale" /* 1995 */;
 import { jsx } from "jsxProd" /* 21 */;

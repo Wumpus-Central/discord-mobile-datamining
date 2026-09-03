@@ -1,10 +1,10 @@
-// === Module 11499: ShareFooterLayout ===
+// === Module 11504: ShareFooterLayout ===
 
-// Module 11499 (ShareFooterLayout)
+// Module 11504 (ShareFooterLayout)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 709 */;
 import _modDef4217 from "module_4217" /* 4217 */;
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5602 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5603 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
@@ -36,7 +36,7 @@ export default function ShareFooterLayout(arg0) {
     const obj = { paddingBottom: _undefined(closure_1_2[7]).withSpring(_undefined, _undefined(closure_1_2[8]).ON_PRESS_SPRING, "respect-motion-settings") };
     return obj;
   };
-  obj = { withSpring: _require(4927).withSpring, footerPaddingBottom: sum, ON_PRESS_SPRING: _require(4931).ON_PRESS_SPRING };
+  obj = { withSpring: _require(4928).withSpring, footerPaddingBottom: sum, ON_PRESS_SPRING: _require(4932).ON_PRESS_SPRING };
   fn.__closure = obj;
   fn.__workletHash = 2871405301293;
   fn.__initData = closure_8;

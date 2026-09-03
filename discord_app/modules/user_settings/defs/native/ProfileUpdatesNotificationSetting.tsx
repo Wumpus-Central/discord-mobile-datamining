@@ -1,13 +1,12 @@
-// === Module 15332: toggle ===
+// === Module 15347: toggle ===
 
-// Module 15332 (toggle)
+// Module 15347 (toggle)
 import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1233 */;
 import explicitContentFromProto from "explicitContentFromProto" /* 4166 */;
-import MobileUserSettings from "MobileUserSettings" /* 7893 */;
-import apexExperiment from "apexExperiment" /* 15333 */;
-import onProfileUpdatesNotificationSettingsChanged from "onProfileUpdatesNotificationSettingsChanged" /* 15334 */;
-import createToggle from "createToggle" /* 11288 */;
+import MobileUserSettings from "MobileUserSettings" /* 7896 */;
+import onProfileUpdatesNotificationSettingsChanged from "onProfileUpdatesNotificationSettingsChanged" /* 15348 */;
+import createToggle from "createToggle" /* 11292 */;
 
 const toggle = createToggle.createToggle({
   useTitle() {
@@ -20,10 +19,7 @@ const toggle = createToggle.createToggle({
   },
   parent: MobileUserSettings.MobileUserSettings.NOTIFICATIONS,
   useValue: explicitContentFromProto.EnableProfileUpdatesNotifications.useSetting,
-  onValueChange: onProfileUpdatesNotificationSettingsChanged.onProfileUpdatesNotificationSettingsChanged,
-  usePredicate: function useExperiment() {
-    return apexExperiment.useProfileUpdatesNotificationExperiment("tabsV2Settings").showSettingsToggle;
-  }
+  onValueChange: onProfileUpdatesNotificationSettingsChanged.onProfileUpdatesNotificationSettingsChanged
 });
 const obj = {
   useTitle() {
@@ -36,10 +32,7 @@ const obj = {
   },
   parent: MobileUserSettings.MobileUserSettings.NOTIFICATIONS,
   useValue: explicitContentFromProto.EnableProfileUpdatesNotifications.useSetting,
-  onValueChange: onProfileUpdatesNotificationSettingsChanged.onProfileUpdatesNotificationSettingsChanged,
-  usePredicate: function useExperiment() {
-    return apexExperiment.useProfileUpdatesNotificationExperiment("tabsV2Settings").showSettingsToggle;
-  }
+  onValueChange: onProfileUpdatesNotificationSettingsChanged.onProfileUpdatesNotificationSettingsChanged
 };
 const result = set.fileFinishedImporting("modules/user_settings/defs/native/ProfileUpdatesNotificationSetting.tsx");
 

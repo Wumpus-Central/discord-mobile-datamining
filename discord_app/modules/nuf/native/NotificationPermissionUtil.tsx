@@ -1,16 +1,16 @@
-// === Module 12204: _requestPushNotificationPermission ===
+// === Module 12211: _requestPushNotificationPermission ===
 
-// Module 12204 (_requestPushNotificationPermission)
+// Module 12211 (_requestPushNotificationPermission)
 import initialize from "initialize" /* 586 */;
-import set from "set" /* 12212 */;
+import set from "set" /* 12219 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import closure_5 from "noop" /* 19 */;
 import { NativeModules } from "get ActivityIndicator" /* 17 */;
-import closure_7 from "set" /* 12202 */;
-import { EventActionType } from "EventActionType" /* 12203 */;
+import closure_7 from "set" /* 12209 */;
+import { EventActionType } from "EventActionType" /* 12210 */;
 import { AnalyticEvents } from "ME" /* 673 */;
-import { NotificationAuthorizationStatus as closure_10 } from "NativePermissionStatus" /* 4730 */;
+import { NotificationAuthorizationStatus as closure_10 } from "NativePermissionStatus" /* 4731 */;
 
 require = arg1;
 function _requestPushNotificationPermission() {
@@ -69,7 +69,7 @@ function _requestPushNotificationPermission() {
           } else {
             closure_3 = arg1;
             if (closure_3 === constants3.DENIED) {
-              callback2(9673)();
+              callback2(9677)();
               obj2 = callback2(695);
               const obj3 = { action_type: null, action_location: null };
               obj3[0] = constants.TO_SETTINGS;
@@ -78,7 +78,7 @@ function _requestPushNotificationPermission() {
               dependencyMap();
               obj = 3;
             } else if (closure_3 !== constants3.AUTHORIZED) {
-              obj = callback2(12211);
+              obj = callback2(12218);
               const permission = obj.requestPermission((permission_granted) => {
                 let obj = callback(695);
                 obj = { action_type: closure_0, action_location: callback, permission_granted };
@@ -86,7 +86,7 @@ function _requestPushNotificationPermission() {
                 dependencyMap();
               });
             }
-            obj1 = callback(12205);
+            obj1 = callback(12212);
             const result = obj1.updateNotificationAuthorizationStatus(closure_3);
             dependencyMap();
           }

@@ -1,9 +1,9 @@
-// === Module 16014: AccountLinkLargeBanner ===
+// === Module 16030: AccountLinkLargeBanner ===
 
-// Module 16014 (AccountLinkLargeBanner)
+// Module 16030 (AccountLinkLargeBanner)
 import ThemesDefault from "Themes" /* 709 */;
-import MINIMUM_HIT_AREA from "MINIMUM_HIT_AREA" /* 4933 */;
-import map from "map" /* 9102 */;
+import MINIMUM_HIT_AREA from "MINIMUM_HIT_AREA" /* 4934 */;
+import map from "map" /* 9106 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_4 from "mergeGuildAvatar" /* 1921 */;
 import { ContentDismissActionType } from "ContentDismissActionType" /* 1383 */;
@@ -55,7 +55,7 @@ function AccountLinkLargeBanner(arg0) {
     items3[2] = callback(View, obj6);
     obj3[1] = items3;
     items2[1] = callback2(View, obj3);
-    const obj7 = { user: null, size: null, guildId: "r" };
+    const obj7 = { user: null, size: null, guildId: "accessible" };
     obj7[0] = stateFromStores;
     obj7[1] = tmp2(tmp3[16]).AvatarSizes.LARGE_48;
     items2[2] = callback(tmp2(tmp3[16]).Avatar, obj7);

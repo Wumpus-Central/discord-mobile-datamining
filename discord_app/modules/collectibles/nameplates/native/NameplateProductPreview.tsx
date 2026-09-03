@@ -1,12 +1,12 @@
-// === Module 12770: NameplateUser ===
+// === Module 12782: NameplateUser ===
 
-// Module 12770 (NameplateUser)
+// Module 12782 (NameplateUser)
 import ThemesDefault from "Themes" /* 709 */;
 import Button from "Button" /* 1296 */;
 import getNameplateData from "getNameplateData" /* 1946 */;
-import LinearGradientDefault from "LinearGradient" /* 4940 */;
-import TableRowInner from "TableRowInner" /* 5607 */;
-import firstAvatarDecoration from "firstAvatarDecoration" /* 8506 */;
+import LinearGradientDefault from "LinearGradient" /* 4941 */;
+import TableRowInner from "TableRowInner" /* 5608 */;
+import firstAvatarDecoration from "firstAvatarDecoration" /* 8510 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4470 */;
@@ -47,7 +47,7 @@ function NameplateUser(arg0) {
   }
   const items1 = [currentUser, tmp5Result, stateFromStores];
   const icon = React.useMemo(() => {
-    const obj = { user: currentUser, guildId: "a", size: true, avatarDecoration: true, animate: "year", autoStatusCutout: "week", "aria-hidden": "hour" };
+    const obj = { user: currentUser, guildId: "a", size: true, avatarDecoration: true, animate: "onAnimationFailureCapture", autoStatusCutout: "onAnimationFailure", "aria-hidden": "onAnimationLoadedCapture" };
     obj[2] = currentUser(stateFromStores[19]).AvatarSizes.NORMAL;
     obj[3] = closure_1;
     obj[4] = !stateFromStores;

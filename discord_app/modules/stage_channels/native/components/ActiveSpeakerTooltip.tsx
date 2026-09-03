@@ -1,15 +1,15 @@
-// === Module 10179: ? ===
+// === Module 10183: ? ===
 
-// Module 10179
+// Module 10183
 import ThemesDefault from "Themes" /* 709 */;
-import UserSummaryItemDefault from "UserSummaryItem" /* 10159 */;
+import UserSummaryItemDefault from "UserSummaryItem" /* 10163 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_5 from "getParticipants" /* 4494 */;
 import importAllResult from "noop" /* 19 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
-import useActiveSpeakerPillScrollHandler from "useActiveSpeakerPillScrollHandler" /* 10150 */;
+import useActiveSpeakerPillScrollHandler from "useActiveSpeakerPillScrollHandler" /* 10154 */;
 
 const require = arg1;
 ({ useActiveSpeakerPillScrollHandler: closure_6, useActiveSpeakerPillState: error } = require("useActiveSpeakerPillScrollHandler"));
@@ -34,7 +34,7 @@ const memoResult = importAllResult.memo((channel) => {
     const speakingParticipants = closure_1_5.getSpeakingParticipants(channel.id);
     const items = [speakingParticipants.map((user) => user.user), closure_1_5.getParticipantsVersion(channel.id)];
     return items;
-  }, items1, channel(5383).isVersionEqual), 1)[0];
+  }, items1, channel(5384).isVersionEqual), 1)[0];
   let tmp5 = null;
   if (0 !== first.length) {
     tmp5 = null;
@@ -65,7 +65,7 @@ const memoResult = importAllResult.memo((channel) => {
       items2[1] = callback3(View, obj3);
       obj[1] = items2;
       obj[3] = callback4(View, obj);
-      tmp5 = callback3(tmp2(5076).PressableOpacity, obj);
+      tmp5 = callback3(tmp2(5077).PressableOpacity, obj);
       const tmp10 = UserSummaryItemDefault;
     }
   }

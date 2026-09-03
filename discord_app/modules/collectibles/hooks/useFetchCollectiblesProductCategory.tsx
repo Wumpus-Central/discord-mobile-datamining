@@ -1,9 +1,9 @@
-// === Module 11049: useFetchCollectiblesProductCategory ===
+// === Module 11053: useFetchCollectiblesProductCategory ===
 
-// Module 11049 (useFetchCollectiblesProductCategory)
-import setDefault from "set" /* 8093 */;
+// Module 11053 (useFetchCollectiblesProductCategory)
+import setDefault from "set" /* 8096 */;
 import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "updateCategoriesAndProducts" /* 7296 */;
+import closure_4 from "updateCategoriesAndProducts" /* 7297 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/collectibles/hooks/useFetchCollectiblesProductCategory.tsx");

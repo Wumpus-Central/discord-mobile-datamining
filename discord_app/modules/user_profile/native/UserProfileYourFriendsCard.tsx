@@ -1,11 +1,11 @@
-// === Module 16621: UserProfileYourFriendsCard ===
+// === Module 16641: UserProfileYourFriendsCard ===
 
-// Module 16621 (UserProfileYourFriendsCard)
+// Module 16641 (UserProfileYourFriendsCard)
 import ThemesDefault from "Themes" /* 709 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "recomputeAffinities" /* 7413 */;
+import closure_6 from "recomputeAffinities" /* 7414 */;
 import closure_7 from "markAllUserIdListsStale" /* 4130 */;
 import closure_8 from "mergeGuildAvatar" /* 1921 */;
 import { RelationshipTypes } from "ME" /* 673 */;
@@ -47,9 +47,9 @@ export default function UserProfileYourFriendsCard(arg0) {
   const items1 = [closure_7];
   stateFromStoresArray1 = _require(586).useStateFromStoresArray(items1, () => friendIDs.getFriendIDs());
   const obj2 = _require(586);
-  gameRelationshipsByType = _require(12718).useGameRelationshipsByType(RelationshipTypes.FRIEND);
+  gameRelationshipsByType = _require(12730).useGameRelationshipsByType(RelationshipTypes.FRIEND);
   const effect = stateFromStoresArray1.useEffect(() => {
-    const userAffinitiesV2 = lib(9961).fetchUserAffinitiesV2();
+    const userAffinitiesV2 = lib(9965).fetchUserAffinitiesV2();
   }, []);
   const items2 = [stateFromStoresArray, stateFromStoresArray1, gameRelationshipsByType];
   const effect1 = stateFromStoresArray1.useEffect(() => {
@@ -88,7 +88,7 @@ export default function UserProfileYourFriendsCard(arg0) {
         let obj = { style: { transform: items }, children: null };
         obj = { translateX: 4 * (closure_1.length - 1 - arg1) };
         items = [obj];
-        obj = { user: id, guildId: "r", size: "getChannelIcon", cutout: "landscape" };
+        obj = { user: id, guildId: "r", size: "PX_16", cutout: null };
         obj[2] = closure_1_0(closure_1_2[8]).AvatarSizes.XSMALL;
         let tmp3;
         if (arg1 < closure_1.length - 1) {
@@ -111,7 +111,7 @@ export default function UserProfileYourFriendsCard(arg0) {
   obj = { accessibilityRole: "header", variant: "text-sm/semibold", color: "text-default", style: tmp.label, children: null };
   const intl2 = _require(1233).intl;
   obj[4] = intl2.string(_require(1233).t.TdEu5X);
-  const items5 = [callback(_require(4474).Text, obj), memo, callback(_require(6011).ChevronSmallRightIcon, { size: "sm" })];
+  const items5 = [callback(_require(4474).Text, obj), memo, callback(_require(6012).ChevronSmallRightIcon, { size: "sm" })];
   obj[5] = items5;
-  return callback2(_require(5076).PressableOpacity, obj);
+  return callback2(_require(5077).PressableOpacity, obj);
 };

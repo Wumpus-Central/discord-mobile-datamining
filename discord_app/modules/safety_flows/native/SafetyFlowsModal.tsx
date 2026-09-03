@@ -1,6 +1,6 @@
-// === Module 17686: SafetyFlowsModal ===
+// === Module 17710: SafetyFlowsModal ===
 
-// Module 17686 (SafetyFlowsModal)
+// Module 17710 (SafetyFlowsModal)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
@@ -14,7 +14,7 @@ export default function SafetyFlowsModal(initialRouteName) {
   const tmp = callback(React.useState(initialRouteName.task), 2);
   first = tmp[0];
   closure_1 = tmp[1];
-  let obj = first(6016);
+  let obj = first(6017);
   const items = [first];
   const navigatorScreens = obj.useNavigatorScreens(() => {
     obj = { [closure_0(closure_2[4]).SafetyFlowScreens.OVERVIEW]: obj, [closure_0(closure_2[4]).SafetyFlowScreens.ENTER_EMAIL]: obj };
@@ -24,7 +24,7 @@ export default function SafetyFlowsModal(initialRouteName) {
       },
       headerShown: false,
       render() {
-        return callback3(callback2(17687), {});
+        return callback3(callback2(17711), {});
       }
     };
     obj = {
@@ -35,20 +35,20 @@ export default function SafetyFlowsModal(initialRouteName) {
         return null;
       },
       render() {
-        return callback3(callback2(17691), {});
+        return callback3(callback2(17715), {});
       }
     };
     obj1 = {
-      headerLeft: first(5503).getHeaderBackButton(),
+      headerLeft: first(5504).getHeaderBackButton(),
       headerTitle() {
         return null;
       },
       render() {
-        return callback3(callback2(17693), {});
+        return callback3(callback2(17717), {});
       }
     };
-    obj[first(17683).SafetyFlowScreens.VERIFY_EMAIL] = obj1;
-    obj[first(17683).SafetyFlowScreens.UPDATE_APP] = {
+    obj[first(17707).SafetyFlowScreens.VERIFY_EMAIL] = obj1;
+    obj[first(17707).SafetyFlowScreens.UPDATE_APP] = {
       headerLeft() {
         return null;
       },
@@ -56,10 +56,10 @@ export default function SafetyFlowsModal(initialRouteName) {
         return null;
       },
       render() {
-        return callback3(callback2(17695), {});
+        return callback3(callback2(17719), {});
       }
     };
-    obj[first(17683).SafetyFlowScreens.AGE_VERIFICATION] = {
+    obj[first(17707).SafetyFlowScreens.AGE_VERIFICATION] = {
       headerLeft() {
         return null;
       },
@@ -67,25 +67,25 @@ export default function SafetyFlowsModal(initialRouteName) {
         return null;
       },
       render() {
-        return callback3(callback2(17696), {});
+        return callback3(callback2(17720), {});
       }
     };
-    obj[first(17683).SafetyFlowScreens.PARENTAL_CONSENT_CONNECTION] = {
+    obj[first(17707).SafetyFlowScreens.PARENTAL_CONSENT_CONNECTION] = {
       headerShown: false,
       customNavbar() {
-        return callback3(callback(17697).ParentalConsentConnectionNavbar, {});
+        return callback3(callback(17721).ParentalConsentConnectionNavbar, {});
       },
       render() {
-        return callback3(callback2(17698), {});
+        return callback3(callback2(17722), {});
       }
     };
-    obj[first(17683).SafetyFlowScreens.APP_STORE_PARENTAL_REVOCATION] = {
+    obj[first(17707).SafetyFlowScreens.APP_STORE_PARENTAL_REVOCATION] = {
       headerShown: false,
       render() {
-        return callback3(callback2(17703), {});
+        return callback3(callback2(17727), {});
       }
     };
-    obj[first(17683).SafetyFlowScreens.ERROR] = {
+    obj[first(17707).SafetyFlowScreens.ERROR] = {
       headerLeft() {
         return null;
       },
@@ -93,7 +93,7 @@ export default function SafetyFlowsModal(initialRouteName) {
         return null;
       },
       render() {
-        return callback3(callback2(17704), {});
+        return callback3(callback2(17728), {});
       }
     };
     return obj;
@@ -122,6 +122,6 @@ export default function SafetyFlowsModal(initialRouteName) {
     }
   }, items);
   const memo1 = React.useMemo(() => ({ task: first, setTask: closure_1 }), items1);
-  obj = { value: memo1, children: jsx(first(14040).StepModal, { initialRouteName: initialRouteName.initialScreen, screens: navigatorScreens, steps: memo }) };
-  return jsx(first(17688).SafetyFlowTaskContext.Provider, { value: memo1, children: jsx(first(14040).StepModal, { initialRouteName: initialRouteName.initialScreen, screens: navigatorScreens, steps: memo }) });
+  obj = { value: memo1, children: jsx(first(14056).StepModal, { initialRouteName: initialRouteName.initialScreen, screens: navigatorScreens, steps: memo }) };
+  return jsx(first(17712).SafetyFlowTaskContext.Provider, { value: memo1, children: jsx(first(14056).StepModal, { initialRouteName: initialRouteName.initialScreen, screens: navigatorScreens, steps: memo }) });
 };

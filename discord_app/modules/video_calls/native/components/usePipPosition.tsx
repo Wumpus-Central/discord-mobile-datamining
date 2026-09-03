@@ -1,6 +1,6 @@
-// === Module 9549: usePipPosition ===
+// === Module 9553: usePipPosition ===
 
-// Module 9549 (usePipPosition)
+// Module 9553 (usePipPosition)
 import closure_2 from "_slicedToArray" /* 32 */;
 import closure_3 from "noop" /* 19 */;
 
@@ -11,7 +11,7 @@ let result = require("set").fileFinishedImporting("modules/video_calls/native/co
 export default function usePipPosition() {
   const tmp = callback(React.useState(() => {
     const Storage = callback(592).Storage;
-    return Storage.get(closure_4, callback(9550).DEFAULT_PIP_POSITION);
+    return Storage.get(closure_4, callback(9554).DEFAULT_PIP_POSITION);
   }), 2);
   closure_0 = tmp[1];
   const items = [

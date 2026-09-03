@@ -1,6 +1,6 @@
-// === Module 9925: useCanSendStageStartNotification ===
+// === Module 9929: useCanSendStageStartNotification ===
 
-// Module 9925 (useCanSendStageStartNotification)
+// Module 9929 (useCanSendStageStartNotification)
 import closure_2 from "handleInviteData" /* 4398 */;
 import closure_3 from "getUncachedChannelPermissions" /* 4120 */;
 import { Permissions } from "sum" /* 502 */;

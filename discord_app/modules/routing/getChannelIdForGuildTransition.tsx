@@ -1,16 +1,16 @@
-// === Module 6072: getChannelIdForGuildTransition ===
+// === Module 6073: getChannelIdForGuildTransition ===
 
-// Module 6072 (getChannelIdForGuildTransition)
+// Module 6073 (getChannelIdForGuildTransition)
 import getFavoritesAwareGuildName from "getFavoritesAwareGuildName" /* 1911 */;
-import useCanSeeOnboardingHome from "useCanSeeOnboardingHome" /* 6077 */;
-import getPrice from "getPrice" /* 6081 */;
+import useCanSeeOnboardingHome from "useCanSeeOnboardingHome" /* 6078 */;
+import getPrice from "getPrice" /* 6082 */;
 import closure_2 from "initializeFromUserSettings" /* 1389 */;
-import closure_3 from "shouldShowOnboarding" /* 5471 */;
+import closure_3 from "shouldShowOnboarding" /* 5472 */;
 import closure_4 from "ensureGuildLoaded" /* 1386 */;
 import closure_5 from "comparator" /* 1981 */;
 import closure_6 from "createGuildRecordFromRust" /* 1908 */;
 import closure_7 from "handleConnectionOpen" /* 1980 */;
-import closure_8 from "makeSortedChannel" /* 6073 */;
+import closure_8 from "makeSortedChannel" /* 6074 */;
 import { ME } from "ME" /* 673 */;
 import { StaticChannelRoute } from "set" /* 1393 */;
 

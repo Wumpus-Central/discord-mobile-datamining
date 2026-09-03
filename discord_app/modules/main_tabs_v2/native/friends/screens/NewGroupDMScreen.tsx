@@ -1,16 +1,16 @@
-// === Module 16580: handleOneRecipientInDM ===
+// === Module 16600: handleOneRecipientInDM ===
 
-// Module 16580 (handleOneRecipientInDM)
+// Module 16600 (handleOneRecipientInDM)
 import ThemesDefault from "Themes" /* 709 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import closure_5 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_8 from "ensureGuildLoaded" /* 1386 */;
-import closure_9 from "performQuery" /* 13631 */;
+import closure_9 from "performQuery" /* 13646 */;
 import closure_10 from "createRTCConnection" /* 4554 */;
 import closure_11 from "mergeGuildAvatar" /* 1921 */;
-import { UserRowModes } from "UserRowModes" /* 10853 */;
+import { UserRowModes } from "UserRowModes" /* 10857 */;
 import ME from "ME" /* 673 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
@@ -135,7 +135,7 @@ function _handleInviteUsers() {
                 if (null != lib) {
                   if (store.getChannelId() === lib.id) {
                     if (lib.isDM()) {
-                      let obj10 = lib(4727);
+                      let obj10 = lib(4728);
                       obj10.showGuardCallAlert(callback(function*() {
                         if (dependencyMap === 2) {
                           dependencyMap = 3;
@@ -209,19 +209,19 @@ function _handleInviteUsers() {
                                 obj[0] = arg1;
                                 return obj;
                               } else {
-                                const tmp8 = v0(9893);
+                                const tmp8 = v0(9897);
                                 const call = tmp8.call;
                                 if (typeof call === "unknown") {
                                   tmp8(false, true);
                                 } else {
                                   call(tmp9, false, true);
                                 }
-                                v0(12689)(closure_3);
+                                v0(12701)(closure_3);
                                 dependencyMap = 3;
                                 tmp9 = closure_3;
                               }
                               closure_3 = arg1;
-                              obj2 = closure_1_0(4727);
+                              obj2 = closure_1_0(4728);
                               v0 = 3;
                               dependencyMap = 1;
                               obj5 = { value: null, done: false };
@@ -293,7 +293,7 @@ function _handleInviteUsers() {
                   throw arg1;
                 } else if (arg0 !== 2) {
                   closure_3 = arg1;
-                  obj = arr(9893);
+                  obj = arr(9897);
                   obj.ring(closure_3, arr, "gdm_invite");
                 }
                 c6 = 3;

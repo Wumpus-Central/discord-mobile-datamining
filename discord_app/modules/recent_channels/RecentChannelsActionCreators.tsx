@@ -1,6 +1,6 @@
-// === Module 11380: _bulkClearRecents ===
+// === Module 11385: _bulkClearRecents ===
 
-// Module 11380 (_bulkClearRecents)
+// Module 11385 (_bulkClearRecents)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import { AnalyticEvents } from "ME" /* 673 */;
 

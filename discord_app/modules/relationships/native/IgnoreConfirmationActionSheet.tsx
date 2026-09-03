@@ -1,18 +1,18 @@
-// === Module 9082: IgnoredInformationTable ===
+// === Module 9086: IgnoredInformationTable ===
 
-// Module 9082 (IgnoredInformationTable)
+// Module 9086 (IgnoredInformationTable)
 import ThemesDefault from "Themes" /* 709 */;
 import getSystemLocale from "getSystemLocale" /* 1233 */;
 import registerAssetDefault from "registerAsset" /* 4435 */;
-import TableRowGroupTitle from "TableRowGroupTitle" /* 6000 */;
-import registerAssetDefault2 from "registerAsset" /* 8913 */;
+import TableRowGroupTitle from "TableRowGroupTitle" /* 6001 */;
+import registerAssetDefault2 from "registerAsset" /* 8917 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_6 from "ensureGuildLoaded" /* 1386 */;
 import closure_7 from "mergeGuildAvatar" /* 1921 */;
-import { UserRemediationAction } from "ClearFriendRequestFilters" /* 9074 */;
-import IGNORE_CONFIRMATION_ACTION_SHEET_KEY from "IGNORE_CONFIRMATION_ACTION_SHEET_KEY" /* 9070 */;
+import { UserRemediationAction } from "ClearFriendRequestFilters" /* 9078 */;
+import IGNORE_CONFIRMATION_ACTION_SHEET_KEY from "IGNORE_CONFIRMATION_ACTION_SHEET_KEY" /* 9074 */;
 import ME from "ME" /* 673 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
@@ -28,7 +28,7 @@ function IgnoredInformationTable() {
       obj[3] = icon.text();
       obj[4] = icon.subtext();
       obj[6] = icon.a11yLabel();
-      return callback2(callback(5607).TableRow, obj, arg1);
+      return callback2(callback(5608).TableRow, obj, arg1);
     })
   });
 }
@@ -159,7 +159,7 @@ const memoResult = importAllResult.memo(function IgnoreConfirmationActionSheet(u
   [tmp3, c4] = callback(undefined.useState(false), 2);
   const bottom = channelId(1627)().bottom;
   let tmp2 = callback(undefined.useState(false), 2);
-  items = [channelId(5981).IGNORE_CONFIRMATION_ACTION_SHEET];
+  items = [channelId(5982).IGNORE_CONFIRMATION_ACTION_SHEET];
   let obj = userId(586);
   const items1 = [closure_7];
   const items2 = [userId];
@@ -215,7 +215,7 @@ const memoResult = importAllResult.memo(function IgnoreConfirmationActionSheet(u
     obj6[0] = tmp.avatarIconContainer;
     const obj7 = { size: null, source: null };
     obj7[0] = tmp7(1296).Icon.Sizes.MEDIUM;
-    obj7[1] = tmp4(7751);
+    obj7[1] = tmp4(7754);
     obj6[1] = closure_13(tmp7(1296).Icon, obj7);
     items6[1] = closure_13(stateFromStores, obj6);
     obj3[1] = items6;
@@ -246,7 +246,7 @@ const memoResult = importAllResult.memo(function IgnoreConfirmationActionSheet(u
     const obj14 = { icon: null, label: null, variant: "danger", subLabel: null, accessibilityLabel: null, onPress: null, arrow: true };
     const obj15 = { size: null, source: null, color: null };
     obj15[0] = tmp7(1296).Icon.Sizes.MEDIUM;
-    obj15[1] = tmp4(7848);
+    obj15[1] = tmp4(7851);
     obj15[2] = tmp.destructiveIcon.color;
     obj14[0] = closure_13(tmp7(1296).Icon, obj15);
     const intl4 = tmp7(1233).intl;
@@ -265,8 +265,8 @@ const memoResult = importAllResult.memo(function IgnoreConfirmationActionSheet(u
       obj = { userId, channelId, onSuccess: closure_3, impressionName: userId(closure_1_2[32]).ImpressionNames.BLOCK_USER_CONFIRMATION };
       obj3.openLazy(userId(closure_1_2[31])(closure_1_2[30], closure_1_2.paths), closure_1_9, obj, "replaceTopSheet");
     };
-    obj13[2] = closure_13(tmp7(5607).TableRow, obj14);
-    obj12[1] = closure_13(tmp7(6000).TableRowGroup, obj13);
+    obj13[2] = closure_13(tmp7(5608).TableRow, obj14);
+    obj12[1] = closure_13(tmp7(6001).TableRowGroup, obj13);
     items8[2] = closure_13(stateFromStores, obj12);
     const obj17 = { style: null, children: null };
     obj17[0] = tmp.button;
@@ -292,7 +292,7 @@ const memoResult = importAllResult.memo(function IgnoreConfirmationActionSheet(u
     };
     obj18[3] = tmp3;
     obj18[4] = tmp3;
-    const items9 = [closure_13(tmp7(4928).Button, obj18), ];
+    const items9 = [closure_13(tmp7(4929).Button, obj18), ];
     const obj19 = { onPress: null, style: null, variant: "text-sm/normal", color: "text-default", children: null };
     obj19[0] = handleClose;
     const obj20 = { textAlign: "center", marginTop: null, paddingBottom: null };
@@ -313,9 +313,9 @@ const memoResult = importAllResult.memo(function IgnoreConfirmationActionSheet(u
     obj17[1] = items9;
     items8[3] = closure_14(stateFromStores, obj17);
     obj4[0] = items8;
-    obj[4] = closure_14(tmp7(5632).BottomSheetScrollView, obj4);
-    obj[1] = closure_13(tmp7(5630).BottomSheet, obj);
-    tmp12Result = tmp12(tmp7(5961).AnalyticsLocationProvider, obj);
+    obj[4] = closure_14(tmp7(5633).BottomSheetScrollView, obj4);
+    obj[1] = closure_13(tmp7(5631).BottomSheet, obj);
+    tmp12Result = tmp12(tmp7(5962).AnalyticsLocationProvider, obj);
     const tmp20 = stateFromStores1;
     const tmp4Result = tmp4(4673);
   }

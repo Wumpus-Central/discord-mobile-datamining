@@ -1,13 +1,13 @@
-// === Module 16164: HomeDrawerDMExpandedChildren ===
+// === Module 16180: HomeDrawerDMExpandedChildren ===
 
-// Module 16164 (HomeDrawerDMExpandedChildren)
+// Module 16180 (HomeDrawerDMExpandedChildren)
 import MobileHomeDrawerExperiment2 from "MobileHomeDrawerExperiment" /* 4338 */;
-import useMessagePreviewDefault from "useMessagePreview" /* 15142 */;
+import useMessagePreviewDefault from "useMessagePreview" /* 15157 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { isMultiUserDM } from "createChannelRecord" /* 1390 */;
 import closure_6 from "markAllUserIdListsStale" /* 4130 */;
-import closure_7 from "updateUserGuildSettingsInternal" /* 4701 */;
+import closure_7 from "updateUserGuildSettingsInternal" /* 4702 */;
 import closure_8 from "mergeGuildAvatar" /* 1921 */;
 import { NOOP } from "sum" /* 502 */;
 import jsxProd from "jsxProd" /* 21 */;
@@ -42,9 +42,9 @@ function HomeDrawerDMExpandedChildren(channel) {
     return tmp2;
   });
   const obj2 = channel(586);
-  const tmp3 = useMessagePreviewDefault(channel, { unread: channel(16165).useBaseChannelUnreadBadgeState(channel, false).unread });
+  const tmp3 = useMessagePreviewDefault(channel, { unread: channel(16181).useBaseChannelUnreadBadgeState(channel, false).unread });
   closure_4 = tmp3;
-  const obj3 = channel(16165);
+  const obj3 = channel(16181);
   const items2 = [closure_7];
   stateFromStores1 = channel(586).useStateFromStores(items2, () => closure_1_7.getChannelMuteConfig(channel.guild_id, channel.id));
   const items3 = [stateFromStores1];
@@ -81,10 +81,10 @@ function HomeDrawerDMExpandedChildren(channel) {
       }
       let tmp5Result = dependencyMap;
       if (isTemporary) {
-        tmp5Result = tmp5(13170);
+        tmp5Result = tmp5(13182);
         let BellSlashIcon = tmp5Result.BellZIcon;
       } else {
-        BellSlashIcon = tmp5(10260).BellSlashIcon;
+        BellSlashIcon = tmp5(10264).BellSlashIcon;
       }
     } else {
       let obj = { style: null, children: null };
@@ -105,11 +105,11 @@ function HomeDrawerDMExpandedChildren(channel) {
       obj[1] = tmp;
       obj[4] = channel(4171).ChannelListLayoutTypes.COZY;
       obj[5] = memo.isMuted;
-      tmp2 = closure_1_10(channel(10214).ChannelRowPreview, obj);
+      tmp2 = closure_1_10(channel(10218).ChannelRowPreview, obj);
     }
     return tmp2;
   }, items5);
-  return callback(channel(16127).HomeDrawerSharedItem, { title, subtitle });
+  return callback(channel(16143).HomeDrawerSharedItem, { title, subtitle });
 }
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
 let closure_12 = createCacheKey.createStyles({ title: { flexDirection: "row", alignItems: "center", gap: 4 }, titleText: { flexShrink: 1 } });

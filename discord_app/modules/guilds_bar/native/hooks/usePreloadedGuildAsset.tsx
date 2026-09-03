@@ -1,7 +1,7 @@
-// === Module 16159: usePreloadedGuildAsset ===
+// === Module 16175: usePreloadedGuildAsset ===
 
-// Module 16159 (usePreloadedGuildAsset)
-import useRefValueDefault from "useRefValue" /* 5562 */;
+// Module 16175 (usePreloadedGuildAsset)
+import useRefValueDefault from "useRefValue" /* 5563 */;
 import closure_2 from "_slicedToArray" /* 32 */;
 import closure_3 from "noop" /* 19 */;
 

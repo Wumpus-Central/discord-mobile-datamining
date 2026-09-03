@@ -1,10 +1,10 @@
-// === Module 9884: XLargeBoldIcon ===
+// === Module 9888: XLargeBoldIcon ===
 
-// Module 9884 (XLargeBoldIcon)
+// Module 9888 (XLargeBoldIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 709 */;
 import BaseIconImage from "BaseIconImage" /* 4196 */;
-import registerAsset from "registerAsset" /* 9885 */;
+import registerAsset from "registerAsset" /* 9889 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

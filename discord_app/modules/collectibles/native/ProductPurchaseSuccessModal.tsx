@@ -1,11 +1,11 @@
-// === Module 11045: CancelButton ===
+// === Module 11049: CancelButton ===
 
-// Module 11045 (CancelButton)
+// Module 11049 (CancelButton)
 import ThemesDefault from "Themes" /* 709 */;
 import getSystemLocale from "getSystemLocale" /* 1233 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 1949 */;
-import Background from "Background" /* 5510 */;
-import tinycolorDefault from "tinycolor" /* 7306 */;
+import Background from "Background" /* 5511 */;
+import tinycolorDefault from "tinycolor" /* 7307 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "_toArray" /* 850 */;
 import closure_5 from "noop" /* 19 */;

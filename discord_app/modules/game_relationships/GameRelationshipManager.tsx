@@ -1,9 +1,9 @@
-// === Module 14422: _initialize ===
+// === Module 14438: _initialize ===
 
-// Module 14422 (_initialize)
+// Module 14438 (_initialize)
 import dispatcherDefault from "dispatcher" /* 706 */;
 import initializeDefault from "initialize" /* 4662 */;
-import closure_2 from "recountRelationshipTypes" /* 7412 */;
+import closure_2 from "recountRelationshipTypes" /* 7413 */;
 import { RelationshipTypes } from "ME" /* 673 */;
 
 initializeDefault;

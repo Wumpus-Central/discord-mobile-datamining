@@ -1,36 +1,36 @@
-// === Module 13421: BoostPurchaseNitroBanner ===
+// === Module 13436: BoostPurchaseNitroBanner ===
 
-// Module 13421 (BoostPurchaseNitroBanner)
+// Module 13436 (BoostPurchaseNitroBanner)
 import ThemesDefault from "Themes" /* 709 */;
 import getSystemLocale from "getSystemLocale" /* 1233 */;
 import Button from "Button" /* 1296 */;
 import getPremiumPlanItem from "getPremiumPlanItem" /* 4139 */;
 import Text from "Text" /* 4474 */;
-import Stack from "Stack" /* 4926 */;
-import LinearGradientDefault from "LinearGradient" /* 4940 */;
-import createTextStyleDefault from "createTextStyle" /* 5469 */;
-import AccountAgeTier10LargeBadge from "AccountAgeTier10LargeBadge" /* 6265 */;
-import getPremiumBundledItemsFromProductId from "getPremiumBundledItemsFromProductId" /* 7161 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 8104 */;
-import registerAssetDefault from "registerAsset" /* 13423 */;
-import registerAssetDefault2 from "registerAsset" /* 13424 */;
-import registerAssetDefault3 from "registerAsset" /* 13425 */;
-import registerAssetDefault4 from "registerAsset" /* 13426 */;
-import registerAssetDefault5 from "registerAsset" /* 13427 */;
-import registerAssetDefault6 from "registerAsset" /* 13428 */;
+import Stack from "Stack" /* 4927 */;
+import LinearGradientDefault from "LinearGradient" /* 4941 */;
+import createTextStyleDefault from "createTextStyle" /* 5470 */;
+import AccountAgeTier10LargeBadge from "AccountAgeTier10LargeBadge" /* 6266 */;
+import getPremiumBundledItemsFromProductId from "getPremiumBundledItemsFromProductId" /* 7162 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 8107 */;
+import registerAssetDefault from "registerAsset" /* 13438 */;
+import registerAssetDefault2 from "registerAsset" /* 13439 */;
+import registerAssetDefault3 from "registerAsset" /* 13440 */;
+import registerAssetDefault4 from "registerAsset" /* 13441 */;
+import registerAssetDefault5 from "registerAsset" /* 13442 */;
+import registerAssetDefault6 from "registerAsset" /* 13443 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { useNativeCheckoutStore } from "context" /* 7178 */;
+import { useNativeCheckoutStore } from "context" /* 7179 */;
 import closure_10 from "createGuildRecordFromRust" /* 1908 */;
 import closure_11 from "addSubscriptionPlan" /* 4144 */;
 import closure_12 from "reset" /* 4145 */;
-import closure_13 from "updateProduct" /* 6092 */;
-import usePremiumPlanSelectStore from "usePremiumPlanSelectStore" /* 13422 */;
+import closure_13 from "updateProduct" /* 6093 */;
+import usePremiumPlanSelectStore from "usePremiumPlanSelectStore" /* 13437 */;
 import GuildFeatures from "GuildFeatures" /* 1923 */;
 import ME from "ME" /* 673 */;
-import items from "items" /* 7186 */;
+import items from "items" /* 7187 */;
 import { ItemPurchaseType } from "CustomCheckoutFlow" /* 4460 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
@@ -468,7 +468,7 @@ function PlanSection(showBoostOnlyLabels) {
     obj = { title: null, hasIcons: true, children: null };
     obj[0] = showBoostOnlyLabels.label;
     obj[2] = mapped;
-    let tmp7Result = tmp7(shouldShowModernBoostFlow(6000).TableRowGroup, obj);
+    let tmp7Result = tmp7(shouldShowModernBoostFlow(6001).TableRowGroup, obj);
   } else {
     obj = { children: null };
     obj[0] = mapped;

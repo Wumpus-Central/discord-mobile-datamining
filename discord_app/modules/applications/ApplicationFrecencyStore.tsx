@@ -1,6 +1,6 @@
-// === Module 8155: handleUserSettingsProtoStoreChange ===
+// === Module 8159: handleUserSettingsProtoStoreChange ===
 
-// Module 8155 (handleUserSettingsProtoStoreChange)
+// Module 8159 (handleUserSettingsProtoStoreChange)
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 586 */;
 import dispatcherDefault from "dispatcher" /* 706 */;

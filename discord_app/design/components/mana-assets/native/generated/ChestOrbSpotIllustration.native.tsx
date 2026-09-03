@@ -1,10 +1,10 @@
-// === Module 6412: ChestOrbSpotIllustration ===
+// === Module 6413: ChestOrbSpotIllustration ===
 
-// Module 6412 (ChestOrbSpotIllustration)
+// Module 6413 (ChestOrbSpotIllustration)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5501 */;
-import metadataDefault from "metadata" /* 6413 */;
+import preloadDefault from "preload" /* 5502 */;
+import metadataDefault from "metadata" /* 6414 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/ChestOrbSpotIllustration.native.tsx");

@@ -1,6 +1,6 @@
-// === Module 11630: ? ===
+// === Module 11635: ? ===
 
-// Module 11630
+// Module 11635
 import importAllResult from "noop" /* 19 */;
 import closure_4 from "trackCommunicationDisabled" /* 1991 */;
 import closure_5 from "createGuildRecordFromRust" /* 1908 */;

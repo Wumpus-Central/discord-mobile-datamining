@@ -1,6 +1,6 @@
-// === Module 13298: PremiumReferralTrialPill ===
+// === Module 13310: PremiumReferralTrialPill ===
 
-// Module 13298 (PremiumReferralTrialPill)
+// Module 13310 (PremiumReferralTrialPill)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;

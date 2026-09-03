@@ -1,14 +1,14 @@
-// === Module 11500: MessagePreview ===
+// === Module 11505: MessagePreview ===
 
-// Module 11500 (MessagePreview)
+// Module 11505 (MessagePreview)
 import ThemesDefault from "Themes" /* 709 */;
 import getSrcWithWidthAndHeightDefault from "getSrcWithWidthAndHeight" /* 1491 */;
 import messagesProxyDefault from "messagesProxy" /* 2886 */;
 import useThemeDefault from "useTheme" /* 4413 */;
-import preloadDefault from "preload" /* 5501 */;
-import SolidCutoutDefault from "SolidCutout" /* 8106 */;
-import DCDChatItemDefault from "DCDChatItem" /* 8794 */;
-import useForwardPreviewContent from "useForwardPreviewContent" /* 11501 */;
+import preloadDefault from "preload" /* 5502 */;
+import SolidCutoutDefault from "SolidCutout" /* 8109 */;
+import DCDChatItemDefault from "DCDChatItem" /* 8798 */;
+import useForwardPreviewContent from "useForwardPreviewContent" /* 11506 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
@@ -90,7 +90,7 @@ export const ForwardPreview = function ForwardPreview(message) {
     if (num == null) {
       num = 0;
     }
-    tmp6 = tmp2(11502).CHECKPOINT_PERSONA_COLORS[num];
+    tmp6 = tmp2(11507).CHECKPOINT_PERSONA_COLORS[num];
   }
   if (tmp6 != null) {
     const primaryColor = tmp6.primaryColor;
@@ -113,7 +113,7 @@ export const ForwardPreview = function ForwardPreview(message) {
         obj[0] = num2;
         obj[1] = num3;
         let formatToPlainStringResult = intl4.formatToPlainString(tmp2(1233).t.Lr0Top, obj);
-        let AttachmentIcon = tmp2(11505).ImagesIcon;
+        let AttachmentIcon = tmp2(11510).ImagesIcon;
       }
       if (num3 > 0) {
         if (length === num3) {
@@ -132,7 +132,7 @@ export const ForwardPreview = function ForwardPreview(message) {
           const items1 = [callback(preloadDefault, obj1), ];
           const obj3 = { style: null, size: "md", color: "white" };
           obj3[0] = tmp.playIcon;
-          items1[1] = callback(tmp2(10235).CirclePlayIcon, obj3);
+          items1[1] = callback(tmp2(10239).CirclePlayIcon, obj3);
           obj[1] = items1;
           let tmp7 = callback2(View, obj);
           let tmp8 = AttachmentIcon;
@@ -190,15 +190,15 @@ export const ForwardPreview = function ForwardPreview(message) {
       const obj10 = { count: null };
       obj10[0] = num3;
       formatToPlainStringResult = intl3.formatToPlainString(tmp2(1233).t.SJ6pPX, obj10);
-      AttachmentIcon = tmp2(10235).CirclePlayIcon;
+      AttachmentIcon = tmp2(10239).CirclePlayIcon;
     } else if (num2 > 0) {
       const intl2 = tmp2(1233).intl;
       const obj11 = { count: null };
       obj11[0] = num2;
       if (1 === num2) {
-        let ImagesIcon = tmp2(5040).ImageIcon;
+        let ImagesIcon = tmp2(5041).ImageIcon;
       } else {
-        ImagesIcon = tmp2(11505).ImagesIcon;
+        ImagesIcon = tmp2(11510).ImagesIcon;
       }
       AttachmentIcon = ImagesIcon;
       formatToPlainStringResult = intl2.formatToPlainString(tmp2(1233).t.h4pFfU, obj11);
@@ -208,7 +208,7 @@ export const ForwardPreview = function ForwardPreview(message) {
       const obj12 = { count: null };
       obj12[0] = length;
       formatToPlainStringResult = intl.formatToPlainString(tmp2(1233).t["89ihS8"], obj12);
-      AttachmentIcon = tmp2(10217).AttachmentIcon;
+      AttachmentIcon = tmp2(10221).AttachmentIcon;
     }
   } else {
     tmp7 = null;
@@ -220,7 +220,7 @@ export const ForwardPreview = function ForwardPreview(message) {
     tmp33 = tmp7;
     if (null != tmp7) {
       obj13 = { shape: null, x: 28, y: 28, width: 32, height: 32, cornerRadius: 12 };
-      obj13[0] = tmp2(8106).CutoutShape.RoundedRect;
+      obj13[0] = tmp2(8109).CutoutShape.RoundedRect;
       const obj14 = { style: null, children: null };
       obj14[0] = tmp.attachmentPreviewOverflow;
       const obj15 = { cutouts: null, children: null };
@@ -306,7 +306,7 @@ export const ForwardPreview = function ForwardPreview(message) {
     obj26[0] = obj27;
     obj26[1] = c7;
     obj26[2] = c7;
-    tmp2Result = tmp2(8061);
+    tmp2Result = tmp2(8064);
     let num5 = checkpointData.cardId;
     if (num5 == null) {
       num5 = 0;

@@ -1,14 +1,14 @@
-// === Module 16021: PX_8 ===
+// === Module 16037: PX_8 ===
 
-// Module 16021 (PX_8)
+// Module 16037 (PX_8)
 import ThemesDefault from "Themes" /* 709 */;
 import messagesProxyDefault from "messagesProxy" /* 3178 */;
-import useScaledRowHeightDefault from "useScaledRowHeight" /* 7784 */;
+import useScaledRowHeightDefault from "useScaledRowHeight" /* 7787 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import items from "items" /* 16022 */;
+import items from "items" /* 16038 */;
 import { NOOP } from "ME" /* 673 */;
-import { getScaledCategoryRowHeight as closure_8 } from "hairlineWidth" /* 10223 */;
+import { getScaledCategoryRowHeight as closure_8 } from "hairlineWidth" /* 10227 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -22,7 +22,7 @@ const result = require("set").fileFinishedImporting("modules/favorites/native/Fa
 
 export default function FavoritesGuildSuggestedChannels() {
   let tmp = callback6();
-  let obj = arr(15926);
+  let obj = arr(15942);
   const categoryStyles = obj.useCategoryStyles();
   arr = callback();
   const tmp5 = callback2();
@@ -33,7 +33,7 @@ export default function FavoritesGuildSuggestedChannels() {
     const intl = arr(1233).intl;
     obj[0] = intl.string(callback(3178).F3dWTe);
     obj[1] = callback;
-    obj[2] = arr(5559).XSmallIcon;
+    obj[2] = arr(5560).XSmallIcon;
     return obj;
   }, items);
   const tmp8 = useScaledRowHeightDefault();
@@ -49,12 +49,12 @@ export default function FavoritesGuildSuggestedChannels() {
     obj[0] = intl.string(messagesProxyDefault.oHWnLy);
     obj[2] = categoryStyles;
     obj[3] = memo;
-    const items2 = [tmp2(15926).renderCategoryItem(obj), ];
+    const items2 = [tmp2(15942).renderCategoryItem(obj), ];
     obj1 = { style: null, children: null };
     obj1[0] = tmp.rows;
     obj1[1] = arr.map((result) => {
       let obj = { style: closure_3, children: null };
-      obj = { result, onPressDestination: callback(16024), onLongPress: closure_1_7, start: 0 === arg1, end: arg1 === result.length - 1, trailing: null };
+      obj = { result, onPressDestination: callback(16040), onLongPress: closure_1_7, start: 0 === arg1, end: arg1 === result.length - 1, trailing: null };
       obj = { variant: "secondary", size: "sm", grow: false, text: null, onPress: null };
       const intl = arr(1233).intl;
       obj[3] = intl.string(result(1233).t.OYkgVk);
@@ -62,14 +62,14 @@ export default function FavoritesGuildSuggestedChannels() {
         const tmp = closure_1_1(closure_1_2[14]);
         return tmp(callback(closure_1_2[16]).getDestinationIdFromResult(callback));
       };
-      obj[5] = closure_1_9(result(4928).Button, obj);
-      obj[1] = closure_1_9(callback(16023), obj);
+      obj[5] = closure_1_9(result(4929).Button, obj);
+      obj[1] = closure_1_9(callback(16039), obj);
       return closure_1_9(closure_1_4, obj, "" + result.type + "-" + result.record.id);
     });
     items2[1] = callback4(View, obj1);
     obj[1] = items2;
     tmp9 = callback5(View, obj);
-    const tmp2Result = tmp2(15926);
+    const tmp2Result = tmp2(15942);
   }
   return tmp9;
 };

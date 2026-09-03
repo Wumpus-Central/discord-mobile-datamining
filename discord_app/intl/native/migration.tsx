@@ -1,6 +1,6 @@
-// === Module 14050: IntlLink ===
+// === Module 14066: IntlLink ===
 
-// Module 14050 (IntlLink)
+// Module 14066 (IntlLink)
 import ThemesDefault from "Themes" /* 709 */;
 import closure_3 from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;

@@ -1,9 +1,9 @@
-// === Module 17620: prototype ===
+// === Module 17640: prototype ===
 
-// Module 17620 (prototype)
-import initializeDefault from "initialize" /* 5494 */;
+// Module 17640 (prototype)
+import initializeDefault from "initialize" /* 5495 */;
 import closure_0 from "createRTCConnection" /* 4554 */;
-import closure_1 from "withEqualityFn" /* 4728 */;
+import closure_1 from "withEqualityFn" /* 4729 */;
 
 initializeDefault;
 let prototype = function VoicePanelManager() {

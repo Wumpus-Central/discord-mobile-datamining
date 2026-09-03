@@ -1,10 +1,10 @@
-// === Module 4736: dropChannelIfEmpty ===
+// === Module 4737: dropChannelIfEmpty ===
 
-// Module 4736 (dropChannelIfEmpty)
+// Module 4737 (dropChannelIfEmpty)
 import initializeDefault from "initialize" /* 586 */;
 import dispatcherDefault from "dispatcher" /* 706 */;
 import hasFlag from "hasFlag" /* 1398 */;
-import createMinimalMessageRecord from "createMinimalMessageRecord" /* 4737 */;
+import createMinimalMessageRecord from "createMinimalMessageRecord" /* 4738 */;
 import closure_2 from "ensureGuildLoaded" /* 1386 */;
 import { MessageFlags } from "ME" /* 673 */;
 

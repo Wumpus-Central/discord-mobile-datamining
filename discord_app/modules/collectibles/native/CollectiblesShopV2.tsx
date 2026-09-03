@@ -1,15 +1,15 @@
-// === Module 15635: CollectiblesShopInternal ===
+// === Module 15649: CollectiblesShopInternal ===
 
-// Module 15635 (CollectiblesShopInternal)
+// Module 15649 (CollectiblesShopInternal)
 import _modDef1205 from "module_1205" /* 1205 */;
-import notSupportedDefault from "notSupported" /* 8230 */;
+import notSupportedDefault from "notSupported" /* 8234 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_7 from "getUserAgnosticState" /* 4477 */;
 import closure_8 from "handleThemeChange" /* 1301 */;
 import closure_9 from "mergeGuildAvatar" /* 1921 */;
-import closure_10 from "updateCategoriesAndProducts" /* 7296 */;
+import closure_10 from "updateCategoriesAndProducts" /* 7297 */;
 import items from "items" /* 675 */;
 import ME from "ME" /* 673 */;
 import jsxProd from "jsxProd" /* 21 */;

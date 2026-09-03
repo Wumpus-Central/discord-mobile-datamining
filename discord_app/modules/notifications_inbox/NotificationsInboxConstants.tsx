@@ -1,6 +1,6 @@
-// === Module 8079: ANALYTICS_NAME ===
+// === Module 8082: ANALYTICS_NAME ===
 
-// Module 8079 (ANALYTICS_NAME)
+// Module 8082 (ANALYTICS_NAME)
 import set from "set" /* 2 */;
 import ME from "ME" /* 673 */;
 import setDefault from "set" /* 684 */;
@@ -37,7 +37,7 @@ export const getNotificationsInboxGuild = function getNotificationsInboxGuild(ar
     const intl = getSystemLocale.intl;
     stringResult = intl.string(getSystemLocale.t.HcoRu0);
   }
-  obj = { id: NOTIFICATIONS_INBOX, name: stringResult, description: "", icon: "Array", features: "polite" };
+  obj = { id: NOTIFICATIONS_INBOX, name: stringResult, description: "", icon: "Array", features: "patch" };
   obj[4] = [];
   return tmp2(1425).fromGuildBasic(obj);
 };

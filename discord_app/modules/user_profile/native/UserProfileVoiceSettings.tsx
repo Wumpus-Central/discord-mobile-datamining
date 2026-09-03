@@ -1,9 +1,9 @@
-// === Module 12698: UserVoiceSettings ===
+// === Module 12710: UserVoiceSettings ===
 
-// Module 12698 (UserVoiceSettings)
+// Module 12710 (UserVoiceSettings)
 import noopAll from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "handleSoundCreateOrUpdate" /* 4965 */;
+import closure_4 from "handleSoundCreateOrUpdate" /* 4966 */;
 import closure_5 from "_detectH265HardwareDecode" /* 4529 */;
 import closure_6 from "getUncachedChannelPermissions" /* 4120 */;
 import { VideoToggleState } from "ME" /* 673 */;
@@ -182,7 +182,7 @@ function CurrentUserVoiceSettings(channel) {
   ({ user, style } = channel);
   const tmp = callback3();
   let tmp9Result = dependencyMap;
-  let obj = channel(8571);
+  let obj = channel(8575);
   trackUserProfileAction = obj.useUserProfileAnalyticsContext().trackUserProfileAction;
   obj1 = channel(586);
   const items = [closure_5];
@@ -217,9 +217,9 @@ function CurrentUserVoiceSettings(channel) {
     obj = { label: null, icon: null, onPress: null };
     obj[0] = stringResult;
     if (stateFromStores) {
-      let MicrophoneIcon = tmp2(9838).MicrophoneSlashIcon;
+      let MicrophoneIcon = tmp2(9842).MicrophoneSlashIcon;
     } else {
-      MicrophoneIcon = tmp2(10110).MicrophoneIcon;
+      MicrophoneIcon = tmp2(10114).MicrophoneIcon;
     }
     obj1 = { children: null };
     obj[1] = MicrophoneIcon;
@@ -227,11 +227,11 @@ function CurrentUserVoiceSettings(channel) {
       trackUserProfileAction({ action: "MUTE" });
       trackUserProfileAction(closure_1_2[14]).toggleSelfMute();
     };
-    obj1[0] = closure_9(tmp2(6008).UserProfileFormRow, obj, "mute");
-    tmp9Result = tmp9(tmp2(6008).UserProfileCardRows, obj1);
+    obj1[0] = closure_9(tmp2(6009).UserProfileFormRow, obj, "mute");
+    tmp9Result = tmp9(tmp2(6009).UserProfileCardRows, obj1);
     obj[3] = tmp9Result;
-    tmp9Result = tmp9(trackUserProfileAction(6008), obj);
-    const tmp6Result = trackUserProfileAction(6008);
+    tmp9Result = tmp9(trackUserProfileAction(6009), obj);
+    const tmp6Result = trackUserProfileAction(6009);
   }
   return tmp8;
 }

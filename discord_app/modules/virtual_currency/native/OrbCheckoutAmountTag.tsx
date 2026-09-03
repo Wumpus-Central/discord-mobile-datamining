@@ -1,11 +1,11 @@
-// === Module 10973: OrbCheckoutAmountTag ===
+// === Module 10977: OrbCheckoutAmountTag ===
 
-// Module 10973 (OrbCheckoutAmountTag)
+// Module 10977 (OrbCheckoutAmountTag)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import ThemesDefault from "Themes" /* 709 */;
 import Text from "Text" /* 4474 */;
-import OrbsIcon from "OrbsIcon" /* 10974 */;
+import OrbsIcon from "OrbsIcon" /* 10978 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 

@@ -1,16 +1,16 @@
-// === Module 11580: QuestCollectibleRewardModalMessages ===
+// === Module 11585: QuestCollectibleRewardModalMessages ===
 
-// Module 11580 (QuestCollectibleRewardModalMessages)
+// Module 11585 (QuestCollectibleRewardModalMessages)
 import initialize from "initialize" /* 586 */;
 import ThemesDefault from "Themes" /* 709 */;
 import getSystemLocale from "getSystemLocale" /* 1233 */;
 import Text from "Text" /* 4474 */;
-import getQuestLogger from "getQuestLogger" /* 7464 */;
-import MODAL_KEYDefault from "MODAL_KEY" /* 11044 */;
-import _getDefaultRewardName from "_getDefaultRewardName" /* 11147 */;
-import useQuests from "useQuests" /* 11303 */;
+import getQuestLogger from "getQuestLogger" /* 7465 */;
+import MODAL_KEYDefault from "MODAL_KEY" /* 11048 */;
+import _getDefaultRewardName from "_getDefaultRewardName" /* 11151 */;
+import useQuests from "useQuests" /* 11307 */;
 import closure_3 from "mergeGuildAvatar" /* 1921 */;
-import { QuestsExperimentLocations } from "QuestsExperimentLocations" /* 5395 */;
+import { QuestsExperimentLocations } from "QuestsExperimentLocations" /* 5396 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 

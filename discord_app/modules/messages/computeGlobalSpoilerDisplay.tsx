@@ -1,6 +1,6 @@
-// === Module 11345: computeGlobalSpoilerDisplay ===
+// === Module 11350: computeGlobalSpoilerDisplay ===
 
-// Module 11345 (computeGlobalSpoilerDisplay)
+// Module 11350 (computeGlobalSpoilerDisplay)
 import closure_2 from "getUncachedChannelPermissions" /* 4120 */;
 import ME from "ME" /* 673 */;
 

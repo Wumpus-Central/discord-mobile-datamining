@@ -1,6 +1,6 @@
-// === Module 8401: useLegacyTextMigrationHighlight ===
+// === Module 8405: useLegacyTextMigrationHighlight ===
 
-// Module 8401 (useLegacyTextMigrationHighlight)
+// Module 8405 (useLegacyTextMigrationHighlight)
 import ThemesDefault from "Themes" /* 709 */;
 import closure_2 from "getUserAgnosticState" /* 4477 */;
 import createCacheKey from "createCacheKey" /* 4478 */;

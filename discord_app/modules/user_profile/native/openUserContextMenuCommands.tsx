@@ -1,6 +1,6 @@
-// === Module 9099: openUserContextMenuCommands ===
+// === Module 9103: openUserContextMenuCommands ===
 
-// Module 9099 (openUserContextMenuCommands)
+// Module 9103 (openUserContextMenuCommands)
 import set from "set" /* 2 */;
 import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4445 */;
 
@@ -9,7 +9,7 @@ let result = set.fileFinishedImporting("modules/user_profile/native/openUserCont
 export default function openUserContextMenuCommands(analyticsLocations) {
   analyticsLocations = analyticsLocations.analyticsLocations;
   ({ userId, selectedChannel, showUserProfile } = analyticsLocations);
-  let obj = analyticsLocations(8572);
+  let obj = analyticsLocations(8576);
   const result = obj.trackUserProfileAction({ action: "PRESS_VIEW_APP_COMMANDS", analyticsLocations });
   ACTION_SHEET_HEIGHT_HALFDefault.hideAllActionSheets();
   const obj2 = ACTION_SHEET_HEIGHT_HALFDefault;

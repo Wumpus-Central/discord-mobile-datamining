@@ -1,8 +1,8 @@
-// === Module 17707: isLikelyControl ===
+// === Module 17731: isLikelyControl ===
 
-// Module 17707 (isLikelyControl)
+// Module 17731 (isLikelyControl)
 import _modDef1205 from "module_1205" /* 1205 */;
-import initializeDefault from "initialize" /* 5494 */;
+import initializeDefault from "initialize" /* 5495 */;
 import closure_2 from "getHash" /* 4391 */;
 import closure_3 from "initialize" /* 1209 */;
 import closure_4 from "handleConnectionOpen" /* 4299 */;

@@ -1,6 +1,6 @@
-// === Module 13436: useOutboundPromotionRedemptionEndDate ===
+// === Module 13451: useOutboundPromotionRedemptionEndDate ===
 
-// Module 13436 (useOutboundPromotionRedemptionEndDate)
+// Module 13451 (useOutboundPromotionRedemptionEndDate)
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "module_30" /* 30 */;
 import importDefaultResult from "hooks" /* 4074 */;

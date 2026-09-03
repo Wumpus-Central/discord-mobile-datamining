@@ -1,10 +1,10 @@
-// === Module 7639: set ===
+// === Module 7640: set ===
 
-// Module 7639 (set)
+// Module 7640 (set)
 import _modDef38 from "module_38" /* 38 */;
 import initializeDefault from "initialize" /* 586 */;
 import dispatcherDefault from "dispatcher" /* 706 */;
-import closure_2 from "handleThreadCreateOrUpdate" /* 5457 */;
+import closure_2 from "handleThreadCreateOrUpdate" /* 5458 */;
 import closure_3 from "ensureGuildLoaded" /* 1386 */;
 import closure_4 from "generateOldThreadCutoff" /* 4493 */;
 import set from "set" /* 2 */;

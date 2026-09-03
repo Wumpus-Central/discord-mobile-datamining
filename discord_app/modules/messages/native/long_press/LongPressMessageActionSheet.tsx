@@ -1,11 +1,11 @@
-// === Module 11464: LongPressMessageActionSheet ===
+// === Module 11469: LongPressMessageActionSheet ===
 
-// Module 11464 (LongPressMessageActionSheet)
+// Module 11469 (LongPressMessageActionSheet)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
-import closure_5 from "handleMessageSendFailedAutomod" /* 7856 */;
-import closure_6 from "handleSelectedGuildChange" /* 11465 */;
-import closure_7 from "getTimeSafe" /* 11466 */;
+import closure_5 from "handleMessageSendFailedAutomod" /* 7859 */;
+import closure_6 from "handleSelectedGuildChange" /* 11470 */;
+import closure_7 from "getTimeSafe" /* 11471 */;
 import { isMessageComponentsV2 } from "hasFlag" /* 4131 */;
 import closure_9 from "fetchFingerprint" /* 1215 */;
 import closure_10 from "createGuildRecordFromRust" /* 1908 */;

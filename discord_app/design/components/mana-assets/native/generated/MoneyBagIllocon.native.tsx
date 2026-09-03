@@ -1,10 +1,10 @@
-// === Module 6808: MoneyBagIllocon ===
+// === Module 6809: MoneyBagIllocon ===
 
-// Module 6808 (MoneyBagIllocon)
+// Module 6809 (MoneyBagIllocon)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5501 */;
-import metadataDefault from "metadata" /* 6809 */;
+import preloadDefault from "preload" /* 5502 */;
+import metadataDefault from "metadata" /* 6810 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/MoneyBagIllocon.native.tsx");

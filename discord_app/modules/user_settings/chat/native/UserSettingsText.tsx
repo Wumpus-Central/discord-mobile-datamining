@@ -1,11 +1,11 @@
-// === Module 15290: UserSettingsText ===
+// === Module 15305: UserSettingsText ===
 
-// Module 15290 (UserSettingsText)
+// Module 15305 (UserSettingsText)
 import noopAll from "noop" /* 19 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 695 */;
 import ThemesDefault from "Themes" /* 709 */;
 import explicitContentFromProto from "explicitContentFromProto" /* 4166 */;
-import saveGuildFoldersDefault from "saveGuildFolders" /* 8222 */;
+import saveGuildFoldersDefault from "saveGuildFolders" /* 8226 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_4 from "mergeGuildAvatar" /* 1921 */;
 import closure_5 from "reset" /* 4145 */;

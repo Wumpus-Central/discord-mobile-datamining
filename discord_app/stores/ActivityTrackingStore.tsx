@@ -1,12 +1,12 @@
-// === Module 13620: stopActivity ===
+// === Module 13635: stopActivity ===
 
-// Module 13620 (stopActivity)
+// Module 13635 (stopActivity)
 import initializeDefault from "initialize" /* 586 */;
 import Storage2 from "Storage" /* 592 */;
 import setDefault from "set" /* 684 */;
 import dispatcherDefault from "dispatcher" /* 706 */;
 import removeExecutablePathPrefix from "removeExecutablePathPrefix" /* 4653 */;
-import _modDef11292 from "module_11292" /* 11292 */;
+import _modDef11296 from "module_11296" /* 11296 */;
 import closure_3 from "initialize" /* 4501 */;
 import closure_4 from "handleConnectionClosedOrResumed" /* 1339 */;
 import closure_5 from "fetchFingerprint" /* 1215 */;
@@ -68,7 +68,7 @@ function updateActivity(applicationId) {
   obj[7] = voiceChannelId;
   obj[8] = sessionId;
   obj[9] = mediaSessionId;
-  _modDef11292.updateActivity(obj);
+  _modDef11296.updateActivity(obj);
   applicationId.updatedAt = timestamp;
   if (null == dependencyMap[applicationId.applicationId]) {
     const interval = new tmp3(4362).Interval();

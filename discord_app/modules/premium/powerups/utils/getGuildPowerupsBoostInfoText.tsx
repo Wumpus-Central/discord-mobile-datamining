@@ -1,6 +1,6 @@
-// === Module 12342: getGuildPowerupsBoostInfoText ===
+// === Module 12354: getGuildPowerupsBoostInfoText ===
 
-// Module 12342 (getGuildPowerupsBoostInfoText)
+// Module 12354 (getGuildPowerupsBoostInfoText)
 import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1233 */;
 import messagesProxyDefault from "messagesProxy" /* 2400 */;

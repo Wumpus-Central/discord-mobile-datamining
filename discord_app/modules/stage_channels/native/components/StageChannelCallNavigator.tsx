@@ -1,11 +1,11 @@
-// === Module 9641: ModeratorViewOverlay ===
+// === Module 9645: ModeratorViewOverlay ===
 
-// Module 9641 (ModeratorViewOverlay)
+// Module 9645 (ModeratorViewOverlay)
 import ThemesDefault from "Themes" /* 709 */;
 import _modDef4217 from "module_4217" /* 4217 */;
-import AgeVerificationSpeakerActionSheet from "AgeVerificationSpeakerActionSheet" /* 10011 */;
-import JoinStageViewDefault from "JoinStageView" /* 10053 */;
-import RootThemeContextProvider from "RootThemeContextProvider" /* 10180 */;
+import AgeVerificationSpeakerActionSheet from "AgeVerificationSpeakerActionSheet" /* 10015 */;
+import JoinStageViewDefault from "JoinStageView" /* 10057 */;
+import RootThemeContextProvider from "RootThemeContextProvider" /* 10184 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
@@ -87,7 +87,7 @@ function JoinStageOverlay(channel) {
     obj = { opacity: obj.withSpring(num, closure_1_11) };
     return obj;
   };
-  obj = { withSpring: first(4927).withSpring, showOverlay: first, viewAnimationConfig: closure_11 };
+  obj = { withSpring: first(4928).withSpring, showOverlay: first, viewAnimationConfig: closure_11 };
   fn.__closure = obj;
   fn.__workletHash = 1929951426580;
   fn.__initData = closure_15;

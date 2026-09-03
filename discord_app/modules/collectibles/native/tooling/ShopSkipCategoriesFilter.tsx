@@ -1,10 +1,10 @@
-// === Module 15547: ShopSkipCategoriesFilter ===
+// === Module 15561: ShopSkipCategoriesFilter ===
 
-// Module 15547 (ShopSkipCategoriesFilter)
+// Module 15561 (ShopSkipCategoriesFilter)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 709 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_4 from "updateCategoriesAndProducts" /* 7296 */;
+import closure_4 from "updateCategoriesAndProducts" /* 7297 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -89,6 +89,6 @@ export const ShopSkipCategoriesFilter = function ShopSkipCategoriesFilter() {
   obj1[1] = items3;
   items1[1] = closure_6(closure_2, obj1);
   obj4[1] = items1;
-  obj[1] = closure_6(stateFromStores(4926).Stack, obj4);
+  obj[1] = closure_6(stateFromStores(4927).Stack, obj4);
   return callback(closure_2, obj);
 };

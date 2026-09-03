@@ -1,10 +1,10 @@
-// === Module 13552: guildId ===
+// === Module 13567: guildId ===
 
-// Module 13552 (guildId)
+// Module 13567 (guildId)
 import hasFlag from "hasFlag" /* 1398 */;
 import explicitContentFromProto from "explicitContentFromProto" /* 4166 */;
 import isClipsEnabled from "isClipsEnabled" /* 4539 */;
-import shouldCommitDefault from "shouldCommit" /* 13550 */;
+import shouldCommitDefault from "shouldCommit" /* 13565 */;
 import closure_2 from "ensureGuildLoaded" /* 1386 */;
 import closure_3 from "_detectH265HardwareDecode" /* 4529 */;
 import closure_4 from "initialize" /* 4575 */;

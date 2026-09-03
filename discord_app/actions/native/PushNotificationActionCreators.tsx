@@ -1,16 +1,16 @@
-// === Module 12205: getOrRefreshPushSyncToken ===
+// === Module 12212: getOrRefreshPushSyncToken ===
 
-// Module 12205 (getOrRefreshPushSyncToken)
+// Module 12212 (getOrRefreshPushSyncToken)
 import timestampDefault from "timestamp" /* 3 */;
 import encodeProperties from "encodeProperties" /* 500 */;
 import Storage2 from "Storage" /* 592 */;
 import dispatcherDefault from "dispatcher" /* 706 */;
-import _modDef4713 from "module_4713" /* 4713 */;
+import _modDef4714 from "module_4714" /* 4714 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
-import closure_5 from "initialize" /* 12206 */;
+import closure_5 from "initialize" /* 12213 */;
 import closure_6 from "fetchFingerprint" /* 1215 */;
 import ME from "ME" /* 673 */;
-import str2 from "str2" /* 6063 */;
+import str2 from "str2" /* 6064 */;
 
 require = arg1;
 function getOrRefreshPushSyncToken() {
@@ -106,7 +106,7 @@ function _getOrRefreshPushSyncToken() {
           } else {
             token = body.body.token;
             c4 = 0;
-            obj = callback(12210);
+            obj = callback(12217);
             obj.updatePushSyncToken(lib.id, token);
             c6 = 3;
             const obj6 = { value: null, done: true };
@@ -150,7 +150,7 @@ let obj = {
       const self = this;
       let syncDeviceResult = this.syncDevice(token, flag);
     } else {
-      obj = _modDef4713;
+      obj = _modDef4714;
       obj = { url: null, body: null, oldFormErrors: true, trackedActionData: null, rejectWithError: false };
       obj[0] = constants.DEVICES;
       if (flag) {
@@ -245,8 +245,8 @@ let obj = {
       } else if (arg0 !== 2) {
         v0 = arg1;
         if (v0.body.invalid_push_sync_tokens.length > 0) {
-          const result = v0(12210).invalidatePushSyncTokens(v0.body.invalid_push_sync_tokens);
-          const obj9 = v0(12210);
+          const result = v0(12217).invalidatePushSyncTokens(v0.body.invalid_push_sync_tokens);
+          const obj9 = v0(12217);
         }
       }
       return arg1;
@@ -254,7 +254,7 @@ let obj = {
   },
   unregisterDevice(token) {
     logger.log("Unregistering push notification token: " + token);
-    let obj = _modDef4713;
+    let obj = _modDef4714;
     obj = { url: constants.DEVICES, body: null, trackedActionData: null, rejectWithError: false };
     obj = { provider: callback2(), token };
     obj[1] = obj;

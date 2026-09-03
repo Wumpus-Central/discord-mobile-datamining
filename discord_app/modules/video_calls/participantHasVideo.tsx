@@ -1,6 +1,6 @@
-// === Module 9604: canRenderParticipantVideo ===
+// === Module 9608: canRenderParticipantVideo ===
 
-// Module 9604 (canRenderParticipantVideo)
+// Module 9608 (canRenderParticipantVideo)
 import closure_2 from "fetchFingerprint" /* 1215 */;
 import closure_3 from "_detectH265HardwareDecode" /* 4529 */;
 import ParticipantTypes from "ParticipantTypes" /* 4499 */;

@@ -1,6 +1,6 @@
-// === Module 15638: useHasExpiredShopBlocks ===
+// === Module 15652: useHasExpiredShopBlocks ===
 
-// Module 15638 (useHasExpiredShopBlocks)
+// Module 15652 (useHasExpiredShopBlocks)
 import closure_2 from "_slicedToArray" /* 32 */;
 import noop from "noop" /* 19 */;
 import { MAX_TIMEOUT_MS } from "ME" /* 673 */;

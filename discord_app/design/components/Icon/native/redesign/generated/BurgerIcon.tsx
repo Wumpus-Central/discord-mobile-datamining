@@ -1,10 +1,10 @@
-// === Module 15431: BurgerIcon ===
+// === Module 15445: BurgerIcon ===
 
-// Module 15431 (BurgerIcon)
+// Module 15445 (BurgerIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 709 */;
 import BaseIconImage from "BaseIconImage" /* 4196 */;
-import registerAsset from "registerAsset" /* 15432 */;
+import registerAsset from "registerAsset" /* 15446 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

@@ -1,10 +1,10 @@
-// === Module 8003: createEphemeralIndication ===
+// === Module 8006: createEphemeralIndication ===
 
-// Module 8003 (createEphemeralIndication)
+// Module 8006 (createEphemeralIndication)
 import getSystemLocale from "getSystemLocale" /* 1233 */;
 import combinedDefault from "combined" /* 1994 */;
-import getEphemeralReasonMessage from "getEphemeralReasonMessage" /* 8004 */;
-import closure_3 from "handleMessageSendFailedAutomod" /* 7856 */;
+import getEphemeralReasonMessage from "getEphemeralReasonMessage" /* 8007 */;
+import closure_3 from "handleMessageSendFailedAutomod" /* 7859 */;
 import ME from "ME" /* 673 */;
 
 require = arg1;

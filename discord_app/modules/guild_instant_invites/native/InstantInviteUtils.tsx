@@ -1,6 +1,6 @@
-// === Module 10901: useInviteActions ===
+// === Module 10905: useInviteActions ===
 
-// Module 10901 (useInviteActions)
+// Module 10905 (useInviteActions)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "ensureGuildLoaded" /* 1386 */;
 import closure_5 from "mergeGuildAvatar" /* 1921 */;
@@ -23,9 +23,9 @@ export const useInviteActions = function useInviteActions(invite) {
   let obj = { label: null, iconSource: null, action: null };
   let intl = invite(1233).intl;
   obj[0] = intl.string(invite(1233).t.RDE0Sc);
-  obj[1] = onInviteRevoked(10895).share;
+  obj[1] = onInviteRevoked(10899).share;
   obj[2] = function action() {
-    onInviteRevoked(10902)(() => {
+    onInviteRevoked(10906)(() => {
       let obj = closure_1_0(closure_1_2[7]);
       let tmp4;
       if (!closure_3) {
@@ -60,14 +60,14 @@ export const useInviteActions = function useInviteActions(invite) {
   obj = { label: null, iconSource: null, action: null };
   const intl2 = invite(1233).intl;
   obj[0] = intl2.string(invite(1233).t.OpuAlK);
-  obj[1] = onInviteRevoked(10895).copy;
+  obj[1] = onInviteRevoked(10899).copy;
   obj[2] = function action() {
     if (c3) {
-      let tmpResult = tmp(9931);
+      let tmpResult = tmp(9935);
       tmpResult.handleCopy(invite.code, invite.channel, closure_1_6.GROUP_DM, false);
     } else {
-      tmpResult = tmp(5989);
-      tmpResult.copy(onInviteRevoked(7513)(invite.code));
+      tmpResult = tmp(5990);
+      tmpResult.copy(onInviteRevoked(7514)(invite.code));
       const result = invite(4193).presentCopiedToClipboard();
       const obj2 = invite(4193);
     }
@@ -76,7 +76,7 @@ export const useInviteActions = function useInviteActions(invite) {
   obj1 = { label: null, iconSource: null, variant: "destructive", action: null };
   const intl3 = invite(1233).intl;
   obj1[0] = intl3.string(invite(1233).t.v6Yazx);
-  obj1[1] = onInviteRevoked(10895).revoke;
+  obj1[1] = onInviteRevoked(10899).revoke;
   dependencyMap = callback(function*() {
     closure_0 = tmp3;
     c3 = 1;

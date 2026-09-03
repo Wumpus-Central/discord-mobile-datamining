@@ -1,6 +1,6 @@
-// === Module 10230: render ===
+// === Module 10234: render ===
 
-// Module 10230 (render)
+// Module 10234 (render)
 import ThemesDefault from "Themes" /* 709 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
@@ -89,7 +89,7 @@ Spoiler.prototype["render"] = function render() {
                 if (Array.isArray(style)) {
                   flattenResult = closure_1_4.flatten(style);
                 }
-                const obj = { children: null, style: null, onPress: "r" };
+                const obj = { children: null, style: null, onPress: "accessible" };
                 ({ Children, cloneElement } = tmp);
                 obj[0] = Children.map(props.props.children, (props) => {
                   if (closure_1_2.isValidElement(props)) {
@@ -99,7 +99,7 @@ Spoiler.prototype["render"] = function render() {
                     if (Array.isArray(style)) {
                       flattenResult = closure_1_4.flatten(style);
                     }
-                    const obj = { children: null, style: null, onPress: "r" };
+                    const obj = { children: null, style: null, onPress: "accessible" };
                     ({ Children, cloneElement } = tmp);
                     obj[0] = Children.map(props.props.children, (props) => {
                       if (closure_1_2.isValidElement(props)) {
@@ -109,7 +109,7 @@ Spoiler.prototype["render"] = function render() {
                         if (Array.isArray(style)) {
                           flattenResult = closure_1_4.flatten(style);
                         }
-                        const obj = { children: null, style: null, onPress: "r" };
+                        const obj = { children: null, style: null, onPress: "accessible" };
                         ({ Children, cloneElement } = tmp);
                         obj[0] = Children.map(props.props.children, () => { ... });
                         const items = [flattenResult, spoiler.spoiler];

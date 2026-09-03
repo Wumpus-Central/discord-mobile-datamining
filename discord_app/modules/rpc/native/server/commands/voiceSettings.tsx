@@ -1,11 +1,11 @@
-// === Module 14393: items ===
+// === Module 14409: items ===
 
-// Module 14393 (items)
+// Module 14409 (items)
 import set from "set" /* 2 */;
 import ME from "ME" /* 673 */;
 import RPC_SCOPE_CONFIG from "RPC_SCOPE_CONFIG" /* 4380 */;
-import set2 from "set" /* 8625 */;
-import validateSocketClient from "validateSocketClient" /* 9520 */;
+import set2 from "set" /* 8629 */;
+import validateSocketClient from "validateSocketClient" /* 9524 */;
 
 let obj = {};
 obj = { scope: null, handler: null };

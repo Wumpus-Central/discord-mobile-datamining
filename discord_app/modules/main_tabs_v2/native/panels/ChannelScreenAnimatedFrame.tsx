@@ -1,6 +1,6 @@
-// === Module 15831: ChannelScreenAnimatedFrame ===
+// === Module 15847: ChannelScreenAnimatedFrame ===
 
-// Module 15831 (ChannelScreenAnimatedFrame)
+// Module 15847 (ChannelScreenAnimatedFrame)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 709 */;
 import { View } from "get ActivityIndicator" /* 17 */;

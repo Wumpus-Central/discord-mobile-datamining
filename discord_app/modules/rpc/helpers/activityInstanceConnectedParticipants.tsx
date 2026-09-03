@@ -1,6 +1,6 @@
-// === Module 14341: activityInstanceConnectedParticipants ===
+// === Module 14357: activityInstanceConnectedParticipants ===
 
-// Module 14341 (activityInstanceConnectedParticipants)
+// Module 14357 (activityInstanceConnectedParticipants)
 import closure_3 from "participantFromServer" /* 1385 */;
 import closure_4 from "mergeGuildAvatar" /* 1921 */;
 import RPC_SCOPE_CONFIG from "RPC_SCOPE_CONFIG" /* 4380 */;

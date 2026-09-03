@@ -1,13 +1,13 @@
-// === Module 15178: ChatPreview ===
+// === Module 15193: ChatPreview ===
 
-// Module 15178 (ChatPreview)
+// Module 15193 (ChatPreview)
 import ThemesDefault from "Themes" /* 709 */;
 import getSystemLocale from "getSystemLocale" /* 1233 */;
 import Button from "Button" /* 1296 */;
 import messagesProxyDefault from "messagesProxy" /* 2758 */;
 import Text from "Text" /* 4474 */;
-import AVERAGE_FONT_WIDTH_RATIODefault from "AVERAGE_FONT_WIDTH_RATIO" /* 8937 */;
-import DisplayNameStyleColorPreset from "DisplayNameStyleColorPreset" /* 8938 */;
+import AVERAGE_FONT_WIDTH_RATIODefault from "AVERAGE_FONT_WIDTH_RATIO" /* 8941 */;
+import DisplayNameStyleColorPreset from "DisplayNameStyleColorPreset" /* 8942 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;

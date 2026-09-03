@@ -1,8 +1,8 @@
-// === Module 12446: _updateDiscoverability ===
+// === Module 12458: _updateDiscoverability ===
 
-// Module 12446 (_updateDiscoverability)
+// Module 12458 (_updateDiscoverability)
 import importDefaultResult from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "set" /* 5233 */;
+import closure_4 from "set" /* 5234 */;
 import ME from "ME" /* 673 */;
 
 let closure_0 = arg1;
@@ -96,7 +96,7 @@ function _updateDiscoverability() {
               dependencyMap = obj1.hasFlag(dependencyMap, constants2.FIND_BY_EMAIL);
             }
             obj3[2] = dependencyMap;
-            obj2 = phone(12442);
+            obj2 = phone(12454);
             obj3[3] = obj2.isContactSyncEnabled(localAccount.getLocalAccount(constants3.CONTACTS));
             callback2(695).track(constants.USER_DISCOVERY_UPDATED, obj3);
             constants2 = 3;

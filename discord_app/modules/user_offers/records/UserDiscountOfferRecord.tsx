@@ -1,8 +1,8 @@
-// === Module 7981: createFromServer ===
+// === Module 7984: createFromServer ===
 
-// Module 7981 (createFromServer)
+// Module 7984 (createFromServer)
 import toJSDefault from "toJS" /* 1935 */;
-import closure_0 from "createFromServer" /* 7205 */;
+import closure_0 from "createFromServer" /* 7206 */;
 
 toJSDefault;
 let UserDiscountOfferRecord;

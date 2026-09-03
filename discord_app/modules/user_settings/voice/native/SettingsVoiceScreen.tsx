@@ -1,17 +1,17 @@
-// === Module 15072: KrispLogo ===
+// === Module 15087: KrispLogo ===
 
-// Module 15072 (KrispLogo)
+// Module 15087 (KrispLogo)
 import getSystemLocale from "getSystemLocale" /* 1233 */;
 import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 1362 */;
 import Text from "Text" /* 4474 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5660 */;
-import getNoiseCancellationDeferredToSystem from "getNoiseCancellationDeferredToSystem" /* 10099 */;
-import handleKrispLinkPressed from "handleKrispLinkPressed" /* 10102 */;
-import _modDef14563 from "module_14563" /* 14563 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5661 */;
+import getNoiseCancellationDeferredToSystem from "getNoiseCancellationDeferredToSystem" /* 10103 */;
+import handleKrispLinkPressed from "handleKrispLinkPressed" /* 10106 */;
+import _modDef14578 from "module_14578" /* 14578 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_6 from "_detectH265HardwareDecode" /* 4529 */;
-import { MobileUserSettings } from "MobileUserSettings" /* 7893 */;
+import { MobileUserSettings } from "MobileUserSettings" /* 7896 */;
 import { HelpdeskArticles } from "ME" /* 673 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
@@ -22,9 +22,9 @@ function KrispLogo() {
   const tmp = callback3();
   let obj = AccessibilityAnnouncer;
   if (obj.isThemeLight(tmp4)) {
-    let tmp2Result = tmp2(10103);
+    let tmp2Result = tmp2(10107);
   } else {
-    tmp2Result = tmp2(10104);
+    tmp2Result = tmp2(10108);
   }
   obj = { style: tmp.krisp, children: null };
   obj = { style: tmp.logo, source: tmp2Result, accessibilityLabel: null };
@@ -67,7 +67,7 @@ let result = require("set").fileFinishedImporting("modules/user_settings/voice/n
 
 export default function SettingsVoiceScreen() {
   const node = React.useMemo(() => {
-    let obj = callback(11288);
+    let obj = callback(11292);
     obj = { sections: null };
     obj = { label: null, settings: null };
     const intl = callback(1233).intl;
@@ -131,5 +131,5 @@ export default function SettingsVoiceScreen() {
     obj[0] = items1;
     return obj.createList(obj);
   }, []);
-  return callback(_modDef14563, { node });
+  return callback(_modDef14578, { node });
 };

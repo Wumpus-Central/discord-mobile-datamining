@@ -1,6 +1,6 @@
-// === Module 10194: getFocusedChannelId ===
+// === Module 10198: getFocusedChannelId ===
 
-// Module 10194 (getFocusedChannelId)
+// Module 10198 (getFocusedChannelId)
 import coerceMainRoute from "coerceMainRoute" /* 4332 */;
 import getRootNavigationRef from "getRootNavigationRef" /* 4333 */;
 import getInitialGuildStateDefault from "getInitialGuildState" /* 4334 */;
@@ -9,9 +9,9 @@ import useChatLayoutDefault from "useChatLayout" /* 4335 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import closure_5 from "getParticipants" /* 4494 */;
-import closure_6 from "getIdFromHistoryItem" /* 6181 */;
-import { CHANNEL_PREFIX } from "getIdFromHistoryItem" /* 6181 */;
-import closure_8 from "withEqualityFn" /* 4728 */;
+import closure_6 from "getIdFromHistoryItem" /* 6182 */;
+import { CHANNEL_PREFIX } from "getIdFromHistoryItem" /* 6182 */;
+import closure_8 from "withEqualityFn" /* 4729 */;
 
 require = arg1;
 function getFocusedChannelId() {

@@ -1,6 +1,6 @@
-// === Module 12469: GuildTemplateId ===
+// === Module 12481: GuildTemplateId ===
 
-// Module 12469 (GuildTemplateId)
+// Module 12481 (GuildTemplateId)
 import set from "set" /* 2 */;
 import fromStringAll from "fromString" /* 503 */;
 import getSystemLocale from "getSystemLocale" /* 1233 */;

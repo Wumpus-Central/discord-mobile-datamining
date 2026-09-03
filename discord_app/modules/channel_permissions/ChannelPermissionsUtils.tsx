@@ -1,6 +1,6 @@
-// === Module 9721: getRoleRowData ===
+// === Module 9725: getRoleRowData ===
 
-// Module 9721 (getRoleRowData)
+// Module 9725 (getRoleRowData)
 import set from "set" /* 2 */;
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import fromStringAll from "fromString" /* 503 */;
@@ -11,8 +11,8 @@ import PermissionOverwriteType from "PermissionOverwriteType" /* 1954 */;
 import compareGuildRoles from "compareGuildRoles" /* 1988 */;
 import applyOverwritesAll from "applyOverwrites" /* 4125 */;
 import nameFromUserDefault from "nameFromUser" /* 4322 */;
-import RowType2 from "RowType" /* 8687 */;
-import _updatePermission from "_updatePermission" /* 9722 */;
+import RowType2 from "RowType" /* 8691 */;
+import _updatePermission from "_updatePermission" /* 9726 */;
 import GuildRoleRecordTypeTag from "GuildRoleRecordTypeTag" /* 1985 */;
 import closure_8 from "trackCommunicationDisabled" /* 1991 */;
 import closure_9 from "mergeGuildAvatar" /* 1921 */;

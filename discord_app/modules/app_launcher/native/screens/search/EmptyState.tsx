@@ -1,6 +1,6 @@
-// === Module 11904: EmptyState ===
+// === Module 11910: EmptyState ===
 
-// Module 11904 (EmptyState)
+// Module 11910 (EmptyState)
 import closure_2 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
@@ -16,8 +16,8 @@ export default function EmptyState(showsGenericMessage) {
     flag = false;
   }
   const tmp = callback();
-  let obj = flag(11846);
-  const logAppLauncherEmptyStateView = obj.useLogAppLauncherEmptyStateView(flag(8444).AppLauncherEmptyStateType.SEARCH_EMPTY, showsGenericMessage.query);
+  let obj = flag(11852);
+  const logAppLauncherEmptyStateView = obj.useLogAppLauncherEmptyStateView(flag(8448).AppLauncherEmptyStateType.SEARCH_EMPTY, showsGenericMessage.query);
   const items = [flag];
   const effect = React.useEffect(() => {
     const intl = flag(closure_1_1[6]).intl;

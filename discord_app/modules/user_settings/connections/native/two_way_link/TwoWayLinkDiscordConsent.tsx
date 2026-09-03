@@ -1,6 +1,6 @@
-// === Module 9327: TwoWayLinkDiscordConsent ===
+// === Module 9331: TwoWayLinkDiscordConsent ===
 
-// Module 9327 (TwoWayLinkDiscordConsent)
+// Module 9331 (TwoWayLinkDiscordConsent)
 import timestampDefault from "timestamp" /* 3 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;

@@ -1,9 +1,9 @@
-// === Module 15927: useFavoritesGuildCategoryFullNotice ===
+// === Module 15943: useFavoritesGuildCategoryFullNotice ===
 
-// Module 15927 (useFavoritesGuildCategoryFullNotice)
+// Module 15943 (useFavoritesGuildCategoryFullNotice)
 import initialize from "initialize" /* 586 */;
 import messagesProxyDefault from "messagesProxy" /* 3178 */;
-import useFavoritesAccess from "useFavoritesAccess" /* 10329 */;
+import useFavoritesAccess from "useFavoritesAccess" /* 10333 */;
 import closure_3 from "initializeFromUserSettings" /* 1389 */;
 import { FAVORITES_AUTO_ADDED_THREADS_CATEGORY_NAME as closure_4 } from "date" /* 1424 */;
 import { ChannelTypes } from "ME" /* 673 */;

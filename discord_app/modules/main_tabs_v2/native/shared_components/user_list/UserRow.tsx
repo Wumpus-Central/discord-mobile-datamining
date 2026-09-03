@@ -1,18 +1,18 @@
-// === Module 10861: UserRowSubLabel ===
+// === Module 10865: UserRowSubLabel ===
 
-// Module 10861 (UserRowSubLabel)
+// Module 10865 (UserRowSubLabel)
 import initialize from "initialize" /* 586 */;
 import ThemesDefault from "Themes" /* 709 */;
-import ActivityStatusDefault from "ActivityStatus" /* 9253 */;
+import ActivityStatusDefault from "ActivityStatus" /* 9257 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4470 */;
 import closure_6 from "addApplication" /* 4519 */;
-import closure_7 from "initialize" /* 7416 */;
+import closure_7 from "initialize" /* 7417 */;
 import closure_8 from "ensureGuildLoaded" /* 1386 */;
 import closure_9 from "sortActivity" /* 4569 */;
 import closure_10 from "markAllUserIdListsStale" /* 4130 */;
-import { UserRowModes } from "UserRowModes" /* 10853 */;
+import { UserRowModes } from "UserRowModes" /* 10857 */;
 import ME from "ME" /* 673 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
@@ -188,7 +188,7 @@ const memoResult = importAllResult.memo(function UserRow(type) {
   const memo = flag2.useMemo(() => {
     const items = [];
     if (NONE !== guildId.ACTIONS) {
-      let obj = { accessibilityActions: null, actions: "r" };
+      let obj = { accessibilityActions: null, actions: "Array" };
       obj[0] = items;
       return obj;
     } else {

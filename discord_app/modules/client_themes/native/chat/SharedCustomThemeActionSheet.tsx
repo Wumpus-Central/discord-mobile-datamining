@@ -1,6 +1,6 @@
-// === Module 11743: PrimaryActionButton ===
+// === Module 11748: PrimaryActionButton ===
 
-// Module 11743 (PrimaryActionButton)
+// Module 11748 (PrimaryActionButton)
 import ThemesDefault from "Themes" /* 709 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
@@ -25,10 +25,10 @@ function PrimaryActionButton(onPressApply) {
     obj[0] = intl2.string(tmp2(1233).t.pj0XBN);
     obj[1] = function onPressSubscribe() {
       const obj = { premiumType: TIER_2.TIER_2, analyticsLocations: null, analyticsLocation: null };
-      const items = [callback(5981).SHARE_CUSTOM_CLIENT_THEME_EMBED];
+      const items = [callback(5982).SHARE_CUSTOM_CLIENT_THEME_EMBED];
       obj[1] = items;
       obj[2] = {};
-      callback(7176)(obj);
+      callback(7177)(obj);
     };
     obj[2] = function renderIcon() {
       const style = [lib.nitroWheelButton];
@@ -41,7 +41,7 @@ function PrimaryActionButton(onPressApply) {
     const intl = tmp2(1233).intl;
     obj[0] = intl.string(tmp2(1233).t["1Qm822"]);
     obj[1] = onPressApply.onPressApply;
-    tmp6 = callback4(tmp2(4928).Button, obj);
+    tmp6 = callback4(tmp2(4929).Button, obj);
   }
   return tmp6;
 }

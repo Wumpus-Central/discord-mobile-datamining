@@ -1,6 +1,6 @@
-// === Module 15334: onProfileUpdatesNotificationSettingsChanged ===
+// === Module 15348: onProfileUpdatesNotificationSettingsChanged ===
 
-// Module 15334 (onProfileUpdatesNotificationSettingsChanged)
+// Module 15348 (onProfileUpdatesNotificationSettingsChanged)
 import set from "set" /* 2 */;
 import ME from "ME" /* 673 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 695 */;

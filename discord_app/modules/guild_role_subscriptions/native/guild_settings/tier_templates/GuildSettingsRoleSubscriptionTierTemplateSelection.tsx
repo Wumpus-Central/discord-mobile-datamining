@@ -1,13 +1,13 @@
-// === Module 17602: TierTemplatesRenderer ===
+// === Module 17622: TierTemplatesRenderer ===
 
-// Module 17602 (TierTemplatesRenderer)
+// Module 17622 (TierTemplatesRenderer)
 import ThemesDefault from "Themes" /* 709 */;
-import useGroupListingsFetchContext from "useGroupListingsFetchContext" /* 15038 */;
+import useGroupListingsFetchContext from "useGroupListingsFetchContext" /* 15053 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_10 from "initialize" /* 15059 */;
-import { usePriceTiers } from "usePriceTiers" /* 17549 */;
+import closure_10 from "initialize" /* 15074 */;
+import { usePriceTiers } from "usePriceTiers" /* 17569 */;
 import ME from "ME" /* 673 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
@@ -45,7 +45,7 @@ function TierTemplatesRenderer(groupListingId) {
           const style = { height: "100%", width: closure_16 };
           return callback(closure_8, { style });
         };
-        obj[6] = guildId(17603).CARD_WIDTH + c16;
+        obj[6] = guildId(17623).CARD_WIDTH + c16;
         obj[7] = function renderItem(item) {
           return closure_1_14(groupListingId(closure_1_3[10]), { template: item.item, priceTiers: tiers, guildId, groupListingId, editGroupId: guildId });
         };

@@ -1,6 +1,6 @@
-// === Module 6080: experiment ===
+// === Module 6081: experiment ===
 
-// Module 6080 (experiment)
+// Module 6081 (experiment)
 import set from "set" /* 2 */;
 import createExperiment from "createExperiment" /* 4389 */;
 

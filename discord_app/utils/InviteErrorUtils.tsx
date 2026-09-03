@@ -1,6 +1,6 @@
-// === Module 12486: getDescriptiveInviteError ===
+// === Module 12498: getDescriptiveInviteError ===
 
-// Module 12486 (getDescriptiveInviteError)
+// Module 12498 (getDescriptiveInviteError)
 import getSystemLocale from "getSystemLocale" /* 1233 */;
 import combinedDefault from "combined" /* 1994 */;
 import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4139 */;

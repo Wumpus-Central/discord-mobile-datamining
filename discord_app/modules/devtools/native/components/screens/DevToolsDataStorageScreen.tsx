@@ -1,10 +1,10 @@
-// === Module 15441: DevToolsPersistedStoresActionSheet ===
+// === Module 15455: DevToolsPersistedStoresActionSheet ===
 
-// Module 15441 (DevToolsPersistedStoresActionSheet)
+// Module 15455 (DevToolsPersistedStoresActionSheet)
 import initialize from "initialize" /* 586 */;
 import ThemesDefault from "Themes" /* 709 */;
 import databaseNameDefault from "databaseName" /* 1972 */;
-import TableRowInner from "TableRowInner" /* 5607 */;
+import TableRowInner from "TableRowInner" /* 5608 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
@@ -19,10 +19,10 @@ function DevToolsPersistedStoresActionSheet(store) {
   const close = store.close;
   let obj = { header: null, children: null };
   obj = { title: store.getName() };
-  obj[0] = jsx(store(5629).BottomSheetTitleHeader, { title: store.getName() });
-  obj = { hasIcons: false, children: jsx(store(5999).ActionSheetRow, obj1) };
-  obj[1] = jsx(store(5999).ActionSheetRow.Group, { hasIcons: false, children: jsx(store(5999).ActionSheetRow, obj1) });
-  return jsx(store(5997).ActionSheet, { hasIcons: false, children: jsx(store(5999).ActionSheetRow, obj1) });
+  obj[0] = jsx(store(5630).BottomSheetTitleHeader, { title: store.getName() });
+  obj = { hasIcons: false, children: jsx(store(6000).ActionSheetRow, obj1) };
+  obj[1] = jsx(store(6000).ActionSheetRow.Group, { hasIcons: false, children: jsx(store(6000).ActionSheetRow, obj1) });
+  return jsx(store(5998).ActionSheet, { hasIcons: false, children: jsx(store(6000).ActionSheetRow, obj1) });
 }
 let c4 = importAllResult;
 let obj = { container: null, sectionHeader: null };
@@ -78,7 +78,7 @@ let closure_13 = importAllResult.memo(() => {
       navigation.navigate("cacheStats");
     }
   };
-  return jsx(_require(5607).TableRow, {
+  return jsx(_require(5608).TableRow, {
     label: "View Cache Stats",
     end: true,
     onPress() {

@@ -1,6 +1,6 @@
-// === Module 7931: createAutoModerationActionSystemMessage ===
+// === Module 7934: createAutoModerationActionSystemMessage ===
 
-// Module 7931 (createAutoModerationActionSystemMessage)
+// Module 7934 (createAutoModerationActionSystemMessage)
 import set from "set" /* 2 */;
 import ME from "ME" /* 673 */;
 import ThemesDefault from "Themes" /* 709 */;
@@ -12,16 +12,16 @@ import hooksDefault from "hooks" /* 4074 */;
 import isCommunicationDisabled from "isCommunicationDisabled" /* 4109 */;
 import resetCache from "resetCache" /* 4163 */;
 import computeChannelName from "computeChannelName" /* 4674 */;
-import useNullableMessageAuthor from "useNullableMessageAuthor" /* 4746 */;
-import useRoleIcon from "useRoleIcon" /* 5985 */;
-import getDecisionOutcomeFromMessage from "getDecisionOutcomeFromMessage" /* 7262 */;
-import registerAssetDefault from "registerAsset" /* 7719 */;
-import processColorOrThrow from "processColorOrThrow" /* 7854 */;
-import createCommonMessageDefault from "createCommonMessage" /* 7882 */;
-import AutomodNotificationEmbedTypeKeys from "AutomodNotificationEmbedTypeKeys" /* 7909 */;
-import AutomodRaidAlertTypes from "AutomodRaidAlertTypes" /* 7932 */;
-import DATE_CONFIG from "DATE_CONFIG" /* 7933 */;
-import registerAssetDefault2 from "registerAsset" /* 7937 */;
+import useNullableMessageAuthor from "useNullableMessageAuthor" /* 4747 */;
+import useRoleIcon from "useRoleIcon" /* 5986 */;
+import getDecisionOutcomeFromMessage from "getDecisionOutcomeFromMessage" /* 7263 */;
+import registerAssetDefault from "registerAsset" /* 7722 */;
+import processColorOrThrow from "processColorOrThrow" /* 7857 */;
+import createCommonMessageDefault from "createCommonMessage" /* 7885 */;
+import AutomodNotificationEmbedTypeKeys from "AutomodNotificationEmbedTypeKeys" /* 7912 */;
+import AutomodRaidAlertTypes from "AutomodRaidAlertTypes" /* 7935 */;
+import DATE_CONFIG from "DATE_CONFIG" /* 7936 */;
+import registerAssetDefault2 from "registerAsset" /* 7940 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_5 from "ensureGuildLoaded" /* 1386 */;
 import closure_6 from "trackCommunicationDisabled" /* 1991 */;
@@ -238,7 +238,7 @@ export const createAutoModerationActionSystemMessage = function createAutoModera
       let getRaidAlertResolveCTAText = closure_4.resolveAssetSource;
       let internal6 = getAvatarURL;
       let intl9 = internal6.makeSource;
-      obj5[6] = getRaidAlertResolveCTAText(intl9(importDefault(tmp42 ? 7936 : 7719))).uri;
+      obj5[6] = getRaidAlertResolveCTAText(intl9(importDefault(tmp42 ? 7939 : 7722))).uri;
       const tmpResult16 = processColorOrThrow;
       internal6 = tmp45(709).internal;
       obj5[7] = processColorOrThrow.processColorOrThrow(internal6.resolveSemanticColor(theme, ThemesDefault.colors.TEXT_FEEDBACK_CRITICAL));
@@ -362,7 +362,7 @@ export const createAutoModerationActionSystemMessage = function createAutoModera
       }
       obj9[6] = formatToPlainStringResult1;
       const tmpResult25 = resetCache;
-      obj9[7] = closure_4.resolveAssetSource(getAvatarURL.makeSource(tmp57(result1 ? 7938 : 7939))).uri;
+      obj9[7] = closure_4.resolveAssetSource(getAvatarURL.makeSource(tmp57(result1 ? 7941 : 7942))).uri;
       const intl16 = getSystemLocale.intl;
       const string2 = intl16.string;
       const t3 = getSystemLocale.t;

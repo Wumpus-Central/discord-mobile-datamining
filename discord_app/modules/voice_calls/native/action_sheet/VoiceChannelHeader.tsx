@@ -1,19 +1,19 @@
-// === Module 13671: PrivateChannelSubtitle ===
+// === Module 13686: PrivateChannelSubtitle ===
 
-// Module 13671 (PrivateChannelSubtitle)
+// Module 13686 (PrivateChannelSubtitle)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 709 */;
 import getSystemLocale from "getSystemLocale" /* 1233 */;
 import Button from "Button" /* 1296 */;
 import computeChannelNameDefault from "computeChannelName" /* 4674 */;
-import isRoleRequiredDefault from "isRoleRequired" /* 5015 */;
-import PressableBase from "PressableBase" /* 5076 */;
-import useIsVoiceChannelFullDefault from "useIsVoiceChannelFull" /* 10050 */;
-import registerAssetDefault from "registerAsset" /* 10136 */;
-import id from "id" /* 13672 */;
-import idDefault from "id" /* 13672 */;
-import OngoingCallStatusLabelDefault from "OngoingCallStatusLabel" /* 13673 */;
-import OnGoingCallTimerDefault from "OnGoingCallTimer" /* 13674 */;
+import isRoleRequiredDefault from "isRoleRequired" /* 5016 */;
+import PressableBase from "PressableBase" /* 5077 */;
+import useIsVoiceChannelFullDefault from "useIsVoiceChannelFull" /* 10054 */;
+import registerAssetDefault from "registerAsset" /* 10140 */;
+import id from "id" /* 13687 */;
+import idDefault from "id" /* 13687 */;
+import OngoingCallStatusLabelDefault from "OngoingCallStatusLabel" /* 13688 */;
+import OnGoingCallTimerDefault from "OnGoingCallTimer" /* 13689 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_4 from "participantFromServer" /* 1385 */;
 import closure_5 from "createGuildRecordFromRust" /* 1908 */;
@@ -37,7 +37,7 @@ function PrivateChannelSubtitle(channel) {
     tmp6Result = tmp6(tmp7(4474).Text, obj);
   }
   items[1] = tmp6Result;
-  tmp6Result = state === tmp7(13672).CallStates.CONNECTED;
+  tmp6Result = state === tmp7(13687).CallStates.CONNECTED;
   if (tmp6Result) {
     obj1 = { channelId: null, style: null };
     obj1[0] = channel.id;

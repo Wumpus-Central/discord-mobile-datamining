@@ -1,12 +1,12 @@
-// === Module 14331: handleConnectionOpen ===
+// === Module 14347: handleConnectionOpen ===
 
-// Module 14331 (handleConnectionOpen)
+// Module 14347 (handleConnectionOpen)
 import applyDefault from "apply" /* 12 */;
 import dispatcherDefault from "dispatcher" /* 706 */;
 import MAX_FAVORITESDefault from "MAX_FAVORITES" /* 1342 */;
 import updateUserGuildSettings from "updateUserGuildSettings" /* 1369 */;
-import migrateHotspotLocationDefault from "migrateHotspotLocation" /* 14332 */;
-import readFavoriteGIFsDefault from "readFavoriteGIFs" /* 14333 */;
+import migrateHotspotLocationDefault from "migrateHotspotLocation" /* 14348 */;
+import readFavoriteGIFsDefault from "readFavoriteGIFs" /* 14349 */;
 import closure_3 from "handleConnectionClosedOrResumed" /* 1339 */;
 import { UserSettingsTypes } from "MAX_FAVORITES" /* 682 */;
 

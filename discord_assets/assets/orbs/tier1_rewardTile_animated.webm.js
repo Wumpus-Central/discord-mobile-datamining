@@ -1,6 +1,6 @@
-// === Module 11143: metadata ===
+// === Module 11147: metadata ===
 
-// Module 11143 (metadata)
+// Module 11147 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/orbs/tier1_rewardTile_animated.webm.js");

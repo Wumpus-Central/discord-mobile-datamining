@@ -1,9 +1,9 @@
-// === Module 11374: useBatchUpdateSelectOption ===
+// === Module 11379: useBatchUpdateSelectOption ===
 
-// Module 11374 (useBatchUpdateSelectOption)
+// Module 11379 (useBatchUpdateSelectOption)
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "updateUserGuildSettingsInternal" /* 4701 */;
-import closure_5 from "handleUpdate" /* 5475 */;
+import closure_4 from "updateUserGuildSettingsInternal" /* 4702 */;
+import closure_5 from "handleUpdate" /* 5476 */;
 import { ChannelNotificationSettingsFlags as closure_6 } from "MAX_FAVORITES" /* 682 */;
 
 const require = arg1;

@@ -1,12 +1,12 @@
-// === Module 11981: ChannelIcon ===
+// === Module 11987: ChannelIcon ===
 
-// Module 11981 (ChannelIcon)
+// Module 11987 (ChannelIcon)
 import ThemesDefault from "Themes" /* 709 */;
 import Text from "Text" /* 4474 */;
 import computeChannelNameDefault from "computeChannelName" /* 4674 */;
-import TextIcon3 from "TextIcon" /* 5033 */;
-import TableRowInner from "TableRowInner" /* 5607 */;
-import stylesDefault from "styles" /* 11972 */;
+import TextIcon3 from "TextIcon" /* 5034 */;
+import TableRowInner from "TableRowInner" /* 5608 */;
+import stylesDefault from "styles" /* 11978 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import closure_5 from "createGuildRecordFromRust" /* 1908 */;

@@ -1,26 +1,26 @@
-// === Module 12002: keyExtractor ===
+// === Module 12008: keyExtractor ===
 
-// Module 12002 (keyExtractor)
+// Module 12008 (keyExtractor)
 import keys from "keys" /* 688 */;
 import ThemesDefault from "Themes" /* 709 */;
 import getSystemLocale from "getSystemLocale" /* 1233 */;
 import set from "set" /* 1234 */;
 import getPremiumPlanItem from "getPremiumPlanItem" /* 4139 */;
 import _mod4217 from "module_4217" /* 4217 */;
-import HeaderBackImage from "HeaderBackImage" /* 5503 */;
-import Background from "Background" /* 5510 */;
-import contextDefault from "context" /* 5961 */;
-import QUICK_SWITCHERDefault from "QUICK_SWITCHER" /* 5981 */;
-import usePremiumUpsellConfig from "usePremiumUpsellConfig" /* 8177 */;
-import usePremiumFeatureUpsellGetNitroDefault from "usePremiumFeatureUpsellGetNitro" /* 8983 */;
-import NitroLimitUpsellBarDefault from "NitroLimitUpsellBar" /* 12011 */;
+import HeaderBackImage from "HeaderBackImage" /* 5504 */;
+import Background from "Background" /* 5511 */;
+import contextDefault from "context" /* 5962 */;
+import QUICK_SWITCHERDefault from "QUICK_SWITCHER" /* 5982 */;
+import usePremiumUpsellConfig from "usePremiumUpsellConfig" /* 8181 */;
+import usePremiumFeatureUpsellGetNitroDefault from "usePremiumFeatureUpsellGetNitro" /* 8987 */;
+import NitroLimitUpsellBarDefault from "NitroLimitUpsellBar" /* 12017 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "handleScheduledMessageRemovalStart" /* 12003 */;
+import closure_6 from "handleScheduledMessageRemovalStart" /* 12009 */;
 import { AnalyticsPages } from "ME" /* 673 */;
 import { PremiumTypes } from "GuildFeatures" /* 1923 */;
-import { MAX_SCHEDULED_MESSAGES_PER_USER as closure_9 } from "MIN_SCHEDULE_TIME_INTO_FUTURE_SECONDS" /* 7600 */;
+import { MAX_SCHEDULED_MESSAGES_PER_USER as closure_9 } from "MIN_SCHEDULE_TIME_INTO_FUTURE_SECONDS" /* 7601 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -202,7 +202,7 @@ export default function ScheduledMessagesModal() {
   }
   obj[3] = num + sharedValue(709).space.PX_8;
   obj5 = set;
-  obj[4] = HeaderBackImage.getHeaderCloseButton(sharedValue(4723).pop);
+  obj[4] = HeaderBackImage.getHeaderCloseButton(sharedValue(4724).pop);
   ({ headerLeftContainer: obj4[5], headerRightContainer: obj4[6] } = tmp);
   const items1 = [closure_10(Background.Header, obj), , ];
   const items2 = [tmp.headerBorder, animatedStyle];

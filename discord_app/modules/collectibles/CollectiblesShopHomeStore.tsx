@@ -1,6 +1,6 @@
-// === Module 7340: map ===
+// === Module 7341: map ===
 
-// Module 7340 (map)
+// Module 7341 (map)
 import initializeDefault from "initialize" /* 586 */;
 import dispatcherDefault from "dispatcher" /* 706 */;
 

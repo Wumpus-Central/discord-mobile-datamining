@@ -1,11 +1,11 @@
-// === Module 15065: EmojiIcon ===
+// === Module 15080: EmojiIcon ===
 
-// Module 15065 (EmojiIcon)
+// Module 15080 (EmojiIcon)
 import noopAll from "noop" /* 19 */;
-import preloadDefault from "preload" /* 5501 */;
-import EmojiDefault from "Emoji" /* 5593 */;
-import registerAssetDefault from "registerAsset" /* 9153 */;
-import useEmojiByIdOrName from "useEmojiByIdOrName" /* 15066 */;
+import preloadDefault from "preload" /* 5502 */;
+import EmojiDefault from "Emoji" /* 5594 */;
+import registerAssetDefault from "registerAsset" /* 9157 */;
+import useEmojiByIdOrName from "useEmojiByIdOrName" /* 15081 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

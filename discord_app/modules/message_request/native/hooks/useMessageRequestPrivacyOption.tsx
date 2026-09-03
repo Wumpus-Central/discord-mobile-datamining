@@ -1,7 +1,7 @@
-// === Module 13871: MessageRequestRestrictedGuildPrivacyOption ===
+// === Module 13887: MessageRequestRestrictedGuildPrivacyOption ===
 
-// Module 13871 (MessageRequestRestrictedGuildPrivacyOption)
-import setDefault from "set" /* 12233 */;
+// Module 13887 (MessageRequestRestrictedGuildPrivacyOption)
+import setDefault from "set" /* 12245 */;
 import closure_3 from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 
@@ -39,7 +39,7 @@ function MessageRequestRestrictedGuildPrivacyOption(guild) {
   obj[2] = tmp5;
   obj[3] = callback;
   obj[4] = hasItem1;
-  return jsx(id(5999).ActionSheetSwitchRow, { label: null, subLabel: null, value: null, onValueChange: null, disabled: null });
+  return jsx(id(6000).ActionSheetSwitchRow, { label: null, subLabel: null, value: null, onValueChange: null, disabled: null });
 }
 const result = require("set").fileFinishedImporting("modules/message_request/native/hooks/useMessageRequestPrivacyOption.tsx");
 

@@ -1,10 +1,10 @@
-// === Module 14328: getNamedExperiment ===
+// === Module 14344: getNamedExperiment ===
 
-// Module 14328 (getNamedExperiment)
-import knownExperimentConfigs from "knownExperimentConfigs" /* 14329 */;
+// Module 14344 (getNamedExperiment)
+import knownExperimentConfigs from "knownExperimentConfigs" /* 14345 */;
 import closure_2 from "_slicedToArray" /* 32 */;
 import closure_3 from "noop" /* 19 */;
-import items2 from "items2" /* 14322 */;
+import items2 from "items2" /* 14338 */;
 
 require = arg1;
 function getNamedExperiment(experiment) {
@@ -69,6 +69,12 @@ export const getAssignedNotifSettingsAndMappings = function getAssignedNotifSett
   }
   return { settings, mappings };
 };
+export function useIsDeclarativeSettingsUIAvailable() {
+  return false;
+}
+export function useNotifCategoryVisibility() {
+  return false;
+}
 export const useNotifSettingVisibility = function useNotifSettingVisibility(GAMING_DEFAULT) {
   const _require = GAMING_DEFAULT;
   const items = [GAMING_DEFAULT];

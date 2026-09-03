@@ -1,11 +1,11 @@
-// === Module 15310: NotificationPermissionSettingsHeader ===
+// === Module 15325: NotificationPermissionSettingsHeader ===
 
-// Module 15310 (NotificationPermissionSettingsHeader)
+// Module 15325 (NotificationPermissionSettingsHeader)
 import ThemesDefault from "Themes" /* 709 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import ME from "ME" /* 673 */;
-import EventActionType from "EventActionType" /* 12203 */;
+import EventActionType from "EventActionType" /* 12210 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -26,7 +26,7 @@ const result = require("set").fileFinishedImporting("modules/user_settings/notif
 
 export default function NotificationPermissionSettingsHeader() {
   const tmp = callback3();
-  let obj = canSeePushNotificationNudge(12204);
+  let obj = canSeePushNotificationNudge(12211);
   canSeePushNotificationNudge = obj.useCanSeePushNotificationNudge();
   const items = [canSeePushNotificationNudge];
   const effect = React.useEffect(() => {
@@ -49,7 +49,7 @@ export default function NotificationPermissionSettingsHeader() {
     obj2[0] = tmp.iconCircle;
     const obj3 = { size: "md", color: null };
     obj3[1] = ThemesDefault.colors.ICON_STRONG;
-    obj2[1] = callback(tmp2(10260).BellSlashIcon, obj3);
+    obj2[1] = callback(tmp2(10264).BellSlashIcon, obj3);
     const items1 = [callback(View, obj2), , , ];
     const obj4 = { variant: "heading-lg/bold", color: "text-default", children: null };
     const intl = tmp2(1233).intl;
@@ -66,11 +66,11 @@ export default function NotificationPermissionSettingsHeader() {
     const intl3 = tmp2(1233).intl;
     obj7[1] = intl3.string(tmp2(1233).t["5xWOXv"]);
     obj7[2] = tmp6;
-    obj6[1] = callback(tmp2(4928).Button, obj7);
+    obj6[1] = callback(tmp2(4929).Button, obj7);
     items1[3] = callback(View, obj6);
     obj1[1] = items1;
     obj[2] = callback2(View, obj1);
-    obj[1] = callback(tmp2(5609).Card, obj);
+    obj[1] = callback(tmp2(5610).Card, obj);
     tmp7 = callback(View, obj);
   }
   return tmp7;

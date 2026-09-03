@@ -1,16 +1,16 @@
-// === Module 12784: GiftButton ===
+// === Module 12796: GiftButton ===
 
-// Module 12784 (GiftButton)
+// Module 12796 (GiftButton)
 import ThemesDefault from "Themes" /* 709 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 1949 */;
 import Text from "Text" /* 4474 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "map" /* 7312 */;
+import closure_6 from "map" /* 7313 */;
 import items from "items" /* 675 */;
 import ME from "ME" /* 673 */;
-import { RootNavigatorScreen } from "MODE_CHANGE_PHYSICS" /* 11051 */;
+import { RootNavigatorScreen } from "MODE_CHANGE_PHYSICS" /* 11055 */;
 import GuildFeatures from "GuildFeatures" /* 1923 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;

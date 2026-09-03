@@ -1,10 +1,10 @@
-// === Module 6089: formatSingleCurrencyPrice ===
+// === Module 6090: formatSingleCurrencyPrice ===
 
-// Module 6089 (formatSingleCurrencyPrice)
+// Module 6090 (formatSingleCurrencyPrice)
 import getSystemLocale from "getSystemLocale" /* 1233 */;
 import set from "set" /* 1234 */;
 import getPremiumPlanItem from "getPremiumPlanItem" /* 4139 */;
-import CurrencyCodes2 from "CurrencyCodes" /* 6090 */;
+import CurrencyCodes2 from "CurrencyCodes" /* 6091 */;
 import closure_2 from "_getSystemLocale" /* 1995 */;
 import closure_3 from "handlePaymentSourceCreateEnd" /* 4141 */;
 import { SubscriptionIntervalTypes } from "GuildFeatures" /* 1923 */;
@@ -54,16 +54,16 @@ function formatPrice(amount, currency, localeOverride, localeOverride) {
   if (timestamp < date.getTime()) {
     const platformName = set.getPlatformName();
     if ("android" === platformName) {
-      let ipCountryCode = tmp2(6092).default.getUserCountry();
-      const _default2 = tmp2(6092).default;
+      let ipCountryCode = tmp2(6093).default.getUserCountry();
+      const _default2 = tmp2(6093).default;
     } else if ("ios" === platformName) {
-      const storeFront = tmp2(6094).default.getStoreFront();
+      const storeFront = tmp2(6095).default.getStoreFront();
       let country;
       if (storeFront != null) {
         country = storeFront.country;
       }
       ipCountryCode = country;
-      const _default = tmp2(6094).default;
+      const _default = tmp2(6095).default;
     } else {
       ipCountryCode = ipCountryCode.ipCountryCode;
     }

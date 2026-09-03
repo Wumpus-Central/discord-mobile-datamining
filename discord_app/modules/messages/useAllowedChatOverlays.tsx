@@ -1,13 +1,13 @@
-// === Module 11277: ChatOverlays ===
+// === Module 11281: ChatOverlays ===
 
-// Module 11277 (ChatOverlays)
+// Module 11281 (ChatOverlays)
 import defaultAreStatesEqual from "defaultAreStatesEqual" /* 644 */;
 import getEmbeddedActivityLocationChannelId from "getEmbeddedActivityLocationChannelId" /* 4110 */;
-import isVoiceEmbeddedActivityDefault from "isVoiceEmbeddedActivity" /* 9501 */;
+import isVoiceEmbeddedActivityDefault from "isVoiceEmbeddedActivity" /* 9505 */;
 import closure_3 from "participantFromServer" /* 1385 */;
 import closure_4 from "ensureGuildLoaded" /* 1386 */;
-import { ChatOverlays } from "ChatOverlays" /* 11275 */;
-import { ActivityPanelModes } from "ActivityPanelModes" /* 9479 */;
+import { ChatOverlays } from "ChatOverlays" /* 11279 */;
+import { ActivityPanelModes } from "ActivityPanelModes" /* 9483 */;
 
 require = arg1;
 const no_text_activity = "no_text_activity";

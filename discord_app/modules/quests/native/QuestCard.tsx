@@ -1,6 +1,6 @@
-// === Module 14917: ESTIMATED_CARD_HEIGHT ===
+// === Module 14932: ESTIMATED_CARD_HEIGHT ===
 
-// Module 14917 (ESTIMATED_CARD_HEIGHT)
+// Module 14932 (ESTIMATED_CARD_HEIGHT)
 import ThemesDefault from "Themes" /* 709 */;
 import _mod1349 from "module_1349" /* 1349 */;
 import hexToRgba from "hexToRgba" /* 4326 */;
@@ -9,8 +9,8 @@ import closure_4 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_8 from "mergeGuildAvatar" /* 1921 */;
-import closure_9 from "initializeState" /* 7458 */;
-import { QuestsExperimentLocations } from "QuestsExperimentLocations" /* 5395 */;
+import closure_9 from "initializeState" /* 7459 */;
+import { QuestsExperimentLocations } from "QuestsExperimentLocations" /* 5396 */;
 import { NOOP } from "sum" /* 502 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
@@ -503,12 +503,12 @@ const memoResult = importAllResult.memo((questContent) => {
               } else {
                 closure_0 = tmp2;
                 closure_1_5.log("Enrolling in quest");
-                closure_1_0(11133);
+                closure_1_0(11137);
                 obj1 = { questContent: null, questContentCTA: null, sourceQuestContent: null };
                 obj1[0] = dependencyMap;
                 if (!closure_1_20) {
                   if (!closure_1_14) {
-                    let START_QUEST = tmp31(7483).QuestContentCTA.ACCEPT_QUEST;
+                    let START_QUEST = tmp31(7484).QuestContentCTA.ACCEPT_QUEST;
                   }
                   obj1[1] = START_QUEST;
                   obj1[2] = closure_1_4;
@@ -516,7 +516,7 @@ const memoResult = importAllResult.memo((questContent) => {
                   v0 = 1;
                   dependencyMap = 1;
                 }
-                START_QUEST = tmp31(7483).QuestContentCTA.START_QUEST;
+                START_QUEST = tmp31(7484).QuestContentCTA.START_QUEST;
               }
             } else if (arg0 === 1) {
               dependencyMap = 3;
@@ -532,7 +532,7 @@ const memoResult = importAllResult.memo((questContent) => {
                   obj = { questId: null, sourceQuestContent: null };
                   obj[0] = v0.id;
                   obj[1] = closure_4;
-                  v0(14951)(obj);
+                  v0(14966)(obj);
                   dependencyMap = 3;
                 }
                 callback2();

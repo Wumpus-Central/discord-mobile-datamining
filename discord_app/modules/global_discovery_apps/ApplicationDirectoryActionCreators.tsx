@@ -1,21 +1,21 @@
-// === Module 11866: _getEmbedApplication ===
+// === Module 11872: _getEmbedApplication ===
 
-// Module 11866 (_getEmbedApplication)
+// Module 11872 (_getEmbedApplication)
 import refreshSourceMapCookieDefault from "refreshSourceMapCookie" /* 703 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "getUserAgnosticState" /* 4477 */;
 import closure_5 from "_getSystemLocale" /* 1995 */;
-import closure_6 from "set" /* 5963 */;
-import { FetchState } from "set" /* 5963 */;
-import closure_8 from "getLastFetchTimeMs" /* 11867 */;
-import closure_9 from "getLastFetchTimeMs" /* 11868 */;
-import { FetchState } from "getLastFetchTimeMs" /* 11868 */;
-import closure_11 from "getSearchResults" /* 11863 */;
-import { FetchState } from "getSearchResults" /* 11863 */;
-import closure_13 from "getSimilarApplications" /* 11869 */;
-import { FetchState } from "getSimilarApplications" /* 11869 */;
-import closure_15 from "addToApplicationIdToGuildIds" /* 11870 */;
-import { FetchState } from "addToApplicationIdToGuildIds" /* 11870 */;
+import closure_6 from "set" /* 5964 */;
+import { FetchState } from "set" /* 5964 */;
+import closure_8 from "getLastFetchTimeMs" /* 11873 */;
+import closure_9 from "getLastFetchTimeMs" /* 11874 */;
+import { FetchState } from "getLastFetchTimeMs" /* 11874 */;
+import closure_11 from "getSearchResults" /* 11869 */;
+import { FetchState } from "getSearchResults" /* 11869 */;
+import closure_13 from "getSimilarApplications" /* 11875 */;
+import { FetchState } from "getSimilarApplications" /* 11875 */;
+import closure_15 from "addToApplicationIdToGuildIds" /* 11876 */;
+import { FetchState } from "addToApplicationIdToGuildIds" /* 11876 */;
 import { Endpoints } from "ME" /* 673 */;
 
 const require = arg1;
@@ -896,7 +896,7 @@ function _fetchCollections() {
                 if (fetchState !== constants.FETCHING) {
                   let tmp29 = !dependencyMap;
                   if (!dependencyMap) {
-                    tmp29 = ACTIVE === APPLICATION_DIRECTORY(11873).ApplicationCollectionActiveState.ACTIVE;
+                    tmp29 = ACTIVE === APPLICATION_DIRECTORY(11879).ApplicationCollectionActiveState.ACTIVE;
                   }
                   c6 = tmp29;
                   let obj5 = ACTIVE(706);
@@ -915,10 +915,10 @@ function _fetchCollections() {
                   let obj9 = APPLICATION_DIRECTORY(1234);
                   locale = APPLICATION_DIRECTORY;
                   if (obj9.isAndroid()) {
-                    let WEB = locale(11871).ApplicationCollectionPlatforms.ANDROID;
+                    let WEB = locale(11877).ApplicationCollectionPlatforms.ANDROID;
                   } else {
                     const localeResult = locale(1234);
-                    const ApplicationCollectionPlatforms = APPLICATION_DIRECTORY(11871).ApplicationCollectionPlatforms;
+                    const ApplicationCollectionPlatforms = APPLICATION_DIRECTORY(11877).ApplicationCollectionPlatforms;
                     if (isIOSResult) {
                       WEB = ApplicationCollectionPlatforms.IOS;
                     } else {

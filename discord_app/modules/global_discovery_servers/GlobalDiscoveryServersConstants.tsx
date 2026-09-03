@@ -1,6 +1,6 @@
-// === Module 9752: DEFAULT_DISCOVERY_CATEGORY_ID ===
+// === Module 9756: DEFAULT_DISCOVERY_CATEGORY_ID ===
 
-// Module 9752 (DEFAULT_DISCOVERY_CATEGORY_ID)
+// Module 9756 (DEFAULT_DISCOVERY_CATEGORY_ID)
 import setDefault from "set" /* 684 */;
 import getSystemLocale from "getSystemLocale" /* 1233 */;
 import set from "set" /* 2 */;

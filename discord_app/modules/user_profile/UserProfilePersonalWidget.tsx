@@ -1,13 +1,13 @@
-// === Module 7384: createDefaultFieldsSection ===
+// === Module 7385: createDefaultFieldsSection ===
 
-// Module 7384 (createDefaultFieldsSection)
+// Module 7385 (createDefaultFieldsSection)
 import isUndefinedOrNullDefault from "isUndefinedOrNull" /* 656 */;
 import DismissibleContent from "DismissibleContent" /* 1372 */;
 import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1470 */;
 import isPremiumAtLeast from "isPremiumAtLeast" /* 1945 */;
 import UNSAFE_isDismissibleContentDismissed from "UNSAFE_isDismissibleContentDismissed" /* 4298 */;
-import WidgetType from "WidgetType" /* 7376 */;
-import PersonalWidgetSectionType from "PersonalWidgetSectionType" /* 7385 */;
+import WidgetType from "WidgetType" /* 7377 */;
+import PersonalWidgetSectionType from "PersonalWidgetSectionType" /* 7386 */;
 import closure_3 from "mergeGuildAvatar" /* 1921 */;
 import { PremiumTypes } from "GuildFeatures" /* 1923 */;
 
@@ -249,7 +249,7 @@ prototype["isEqual"] = function isEqual(header) {
             sum = sum + 1;
             num2 = sum;
             flag = true;
-          } else if (tmp16(7385).PersonalWidgetSectionType.FIELDS !== type) {
+          } else if (tmp16(7386).PersonalWidgetSectionType.FIELDS !== type) {
             flag = false;
           }
           tmp16 = require;
@@ -339,7 +339,7 @@ export const parsePersonalWidgetSections = function parsePersonalWidgetSections(
   } else {
     const mapped = sections.map((type) => {
       type = type.type;
-      if (callback(7385).PersonalWidgetSectionType.COVER === type) {
+      if (callback(7386).PersonalWidgetSectionType.COVER === type) {
         let obj = { type: null, title: null, subtitle: null, image: null };
         ({ type: obj2[0], title } = type);
         if (title == null) {
@@ -366,7 +366,7 @@ export const parsePersonalWidgetSections = function parsePersonalWidgetSections(
         }
         obj[3] = tmp5;
         return obj;
-      } else if (tmp(7385).PersonalWidgetSectionType.FIELDS === type) {
+      } else if (tmp(7386).PersonalWidgetSectionType.FIELDS === type) {
         obj = { type: null, fields: null };
         ({ type: obj[0], fields } = type);
         obj[1] = fields.map(closure_9);
@@ -376,7 +376,7 @@ export const parsePersonalWidgetSections = function parsePersonalWidgetSections(
     });
     items = mapped.filter(isDiscordFrontendDevelopment.isNotNullish);
   }
-  if (!items.some((type) => type.type === callback(7385).PersonalWidgetSectionType.FIELDS)) {
+  if (!items.some((type) => type.type === callback(7386).PersonalWidgetSectionType.FIELDS)) {
     let obj = { type: null, fields: null };
     obj[0] = PersonalWidgetSectionType.PersonalWidgetSectionType.FIELDS;
     obj[1] = [];

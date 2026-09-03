@@ -1,8 +1,8 @@
-// === Module 9514: map ===
+// === Module 9518: map ===
 
-// Module 9514 (map)
+// Module 9518 (map)
 import setDefault from "set" /* 684 */;
-import HANDSHAKEDefault from "HANDSHAKE" /* 9515 */;
+import HANDSHAKEDefault from "HANDSHAKE" /* 9519 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "participantFromServer" /* 1385 */;
@@ -523,25 +523,25 @@ PostMessageTransport.prototype["routeEvent"] = function routeEvent(value, iframe
       if (null != value) {
         let obj = { closeCode: null };
         obj[0] = constants2.CLOSE_UNSUPPORTED;
-        const tmp35 = new tmp7(9516)(obj, "Already connected");
+        const tmp35 = new tmp7(9520)(obj, "Already connected");
         throw tmp35;
       } else {
         return self.handleHandshake(iframeId, tmp6, arg3);
       }
-    } else if (tmp7(9515).FRAME === tmp5) {
+    } else if (tmp7(9519).FRAME === tmp5) {
       if (null == value) {
         obj = { closeCode: null };
         obj[0] = constants2.CLOSE_UNSUPPORTED;
-        const tmp27 = new tmp7(9516)(obj, "Not connected");
+        const tmp27 = new tmp7(9520)(obj, "Not connected");
         throw tmp27;
       } else {
         return self.handleFrame(iframeId, value, tmp6);
       }
-    } else if (tmp7(9515).CLOSE === tmp5) {
+    } else if (tmp7(9519).CLOSE === tmp5) {
       if (null == value) {
         obj1 = { closeCode: null };
         obj1[0] = constants2.CLOSE_UNSUPPORTED;
-        const tmp20 = new tmp7(9516)(obj1, "Not connected");
+        const tmp20 = new tmp7(9520)(obj1, "Not connected");
         throw tmp20;
       } else {
         return self.handleClose(value, tmp6);
@@ -549,7 +549,7 @@ PostMessageTransport.prototype["routeEvent"] = function routeEvent(value, iframe
     } else {
       obj = { closeCode: null };
       obj[0] = constants2.CLOSE_UNSUPPORTED;
-      const tmp13 = new tmp7(9516)(obj, "Invalid opcode");
+      const tmp13 = new tmp7(9520)(obj, "Invalid opcode");
       throw tmp13;
     }
     const tmp4 = callback2(arg2, 2);

@@ -1,10 +1,10 @@
-// === Module 10994: GiftIcon ===
+// === Module 10998: GiftIcon ===
 
-// Module 10994 (GiftIcon)
+// Module 10998 (GiftIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 709 */;
 import BaseIconImage from "BaseIconImage" /* 4196 */;
-import registerAsset from "registerAsset" /* 8001 */;
+import registerAsset from "registerAsset" /* 8004 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

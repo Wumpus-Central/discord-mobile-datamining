@@ -1,10 +1,10 @@
-// === Module 13008: LinkExternalMediumIcon ===
+// === Module 13020: LinkExternalMediumIcon ===
 
-// Module 13008 (LinkExternalMediumIcon)
+// Module 13020 (LinkExternalMediumIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 709 */;
 import BaseIconImage from "BaseIconImage" /* 4196 */;
-import registerAsset from "registerAsset" /* 13009 */;
+import registerAsset from "registerAsset" /* 13021 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

@@ -1,12 +1,12 @@
-// === Module 16275: ICYMICustomScoresOverviewScreen ===
+// === Module 16294: ICYMICustomScoresOverviewScreen ===
 
-// Module 16275 (ICYMICustomScoresOverviewScreen)
+// Module 16294 (ICYMICustomScoresOverviewScreen)
 import ThemesDefault from "Themes" /* 709 */;
 import closure_3 from "noop" /* 19 */;
 import { ScrollView } from "get ActivityIndicator" /* 17 */;
 import closure_5 from "createGuildRecordFromRust" /* 1908 */;
-import closure_6 from "insertUnsortedGuilds" /* 5389 */;
-import closure_7 from "filterStaffGuild" /* 8621 */;
+import closure_6 from "insertUnsortedGuilds" /* 5390 */;
+import closure_7 from "filterStaffGuild" /* 8625 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 

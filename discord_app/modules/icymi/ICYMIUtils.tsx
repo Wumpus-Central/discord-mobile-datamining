@@ -1,22 +1,22 @@
-// === Module 8636: generateHydrationId ===
+// === Module 8640: generateHydrationId ===
 
-// Module 8636 (generateHydrationId)
+// Module 8640 (generateHydrationId)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import createMinimalMessageRecord from "createMinimalMessageRecord" /* 4737 */;
-import isMediaAttachment from "isMediaAttachment" /* 7648 */;
-import ContentInventoryEntryType from "ContentInventoryEntryType" /* 8048 */;
-import MessageEmbedTypes from "MessageEmbedTypes" /* 8634 */;
-import apexExperiment from "apexExperiment" /* 8638 */;
-import ContentInventoryAuthorType from "ContentInventoryAuthorType" /* 8642 */;
+import createMinimalMessageRecord from "createMinimalMessageRecord" /* 4738 */;
+import isMediaAttachment from "isMediaAttachment" /* 7651 */;
+import ContentInventoryEntryType from "ContentInventoryEntryType" /* 8051 */;
+import MessageEmbedTypes from "MessageEmbedTypes" /* 8638 */;
+import apexExperiment from "apexExperiment" /* 8642 */;
+import ContentInventoryAuthorType from "ContentInventoryAuthorType" /* 8646 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "scheduledEventSort" /* 7280 */;
+import closure_4 from "scheduledEventSort" /* 7281 */;
 import { ThreadChannelRecord } from "createChannelRecord" /* 1390 */;
 import closure_6 from "ensureGuildLoaded" /* 1386 */;
 import closure_7 from "createGuildRecordFromRust" /* 1908 */;
-import closure_8 from "reinjectEphemerals" /* 4735 */;
+import closure_8 from "reinjectEphemerals" /* 4736 */;
 import closure_9 from "generateOldThreadCutoff" /* 4493 */;
-import closure_10 from "filterStaffGuild" /* 8621 */;
-import closure_11 from "initialize" /* 8635 */;
+import closure_10 from "filterStaffGuild" /* 8625 */;
+import closure_11 from "initialize" /* 8639 */;
 import ME from "ME" /* 673 */;
 
 require = arg1;
@@ -71,13 +71,13 @@ function _hydrateItems() {
               const arr = closure_1_10.getHydratedItems();
               const substr = arr.slice(callback, dependencyMap);
               if (0 !== substr.length) {
-                obj1 = callback(8637);
+                obj1 = callback(8641);
                 const hydratedAttempt = obj1.loadHydratedAttempt(closure_1_14(tmp24, tmp25));
                 const found = substr.filter((arg0) => null == dependencyMap[arg0.id]);
-                const found1 = found.filter((type) => type.type === dependencyMap(8634).ICYMIItemTypes.MESSAGE);
+                const found1 = found.filter((type) => type.type === dependencyMap(8638).ICYMIItemTypes.MESSAGE);
                 const mapped = found1.map((channel_id) => ({ channel_id: channel_id.data.channel_id, message_id: channel_id.data.message_id }));
                 const mapped1 = found.map((type) => {
-                  if (type.type === dependencyMap(8634).ICYMIItemTypes.MESSAGE) {
+                  if (type.type === dependencyMap(8638).ICYMIItemTypes.MESSAGE) {
                     const message_context = type.data.message_context;
                     let reply_message_id;
                     if (message_context != null) {
@@ -119,7 +119,7 @@ function _hydrateItems() {
                 });
                 const _Boolean = Boolean;
                 const found2 = mapped1.flat().filter(Boolean);
-                const found3 = found.filter((type) => type.type === dependencyMap(8634).ICYMIItemTypes.ACTIVITY);
+                const found3 = found.filter((type) => type.type === dependencyMap(8638).ICYMIItemTypes.ACTIVITY);
                 const mapped2 = found3.map((data) => ({ user_id: data.data.user_id, content_id: data.data.content_id }));
                 const flatResult = mapped1.flat();
                 obj1 = { messageItems: null, activityItems: null };
@@ -130,7 +130,7 @@ function _hydrateItems() {
                 c4 = 1;
                 c3 = 1;
                 const obj2 = { value: null, done: false };
-                obj2[0] = callback(8637).fetchHydrated(tmp24, tmp25, obj1);
+                obj2[0] = callback(8641).fetchHydrated(tmp24, tmp25, obj1);
                 return obj2;
               }
             }
@@ -591,7 +591,7 @@ export const getViewableFeedItemsArray = function getViewableFeedItemsArray(view
       if (null != tmp3) {
         let tmp5 = id;
         let tmp6 = dependencyMap;
-        let NON_ELIGIBLE_SCROLL_ITEMS = id(8643).NON_ELIGIBLE_SCROLL_ITEMS;
+        let NON_ELIGIBLE_SCROLL_ITEMS = id(8647).NON_ELIGIBLE_SCROLL_ITEMS;
         if (!NON_ELIGIBLE_SCROLL_ITEMS.has(tmp3.item.data.kind)) {
           break;
         }
@@ -734,13 +734,13 @@ export const determineContentType = function determineContentType(channel, messa
     if (message.attachments.length > 0) {
       let ContentType = dependencyMap;
       if (obj.isValidImageAttachment(message.attachments[0])) {
-        ContentType = tmp6(8634).ContentType;
+        ContentType = tmp6(8638).ContentType;
         let IMAGE = ContentType.IMAGE;
       } else {
-        const result = tmp6(7648).isValidVideoAttachment(message.attachments[0]);
-        const ContentType2 = tmp6(8634).ContentType;
+        const result = tmp6(7651).isValidVideoAttachment(message.attachments[0]);
+        const ContentType2 = tmp6(8638).ContentType;
         IMAGE = result ? ContentType2.VIDEO : ContentType2.FILE;
-        const tmp6Result = tmp6(7648);
+        const tmp6Result = tmp6(7651);
       }
       obj = isMediaAttachment;
     } else {
@@ -761,28 +761,28 @@ export const contentTypeToText = function contentTypeToText(arg0) {
   if (MessageEmbedTypes.ContentType.POPULAR_MESSAGE === arg0) {
     const intl10 = tmp(1233).intl;
     return intl10.string(tmp(1233).t["H/2+cl"]);
-  } else if (tmp(8634).ContentType.IMAGE === arg0) {
+  } else if (tmp(8638).ContentType.IMAGE === arg0) {
     const intl9 = tmp(1233).intl;
     return intl9.string(tmp(1233).t.gmOWAo);
-  } else if (tmp(8634).ContentType.VIDEO === arg0) {
+  } else if (tmp(8638).ContentType.VIDEO === arg0) {
     const intl8 = tmp(1233).intl;
     return intl8.string(tmp(1233).t.swhcPM);
-  } else if (tmp(8634).ContentType.LINK === arg0) {
+  } else if (tmp(8638).ContentType.LINK === arg0) {
     const intl7 = tmp(1233).intl;
     return intl7.string(tmp(1233).t.oj5yvD);
-  } else if (tmp(8634).ContentType.THREAD === arg0) {
+  } else if (tmp(8638).ContentType.THREAD === arg0) {
     const intl6 = tmp(1233).intl;
     return intl6.string(tmp(1233).t.DwLrLK);
-  } else if (tmp(8634).ContentType.FORUM_POST === arg0) {
+  } else if (tmp(8638).ContentType.FORUM_POST === arg0) {
     const intl5 = tmp(1233).intl;
     return intl5.string(tmp(1233).t["Q9/6BS"]);
-  } else if (tmp(8634).ContentType.CHANGED_STATUS === arg0) {
+  } else if (tmp(8638).ContentType.CHANGED_STATUS === arg0) {
     const intl4 = tmp(1233).intl;
     return intl4.string(tmp(1233).t.TGrUmi);
-  } else if (tmp(8634).ContentType.INTERESTING === arg0) {
+  } else if (tmp(8638).ContentType.INTERESTING === arg0) {
     const intl3 = tmp(1233).intl;
     return intl3.string(tmp(1233).t["TahE/i"]);
-  } else if (tmp(8634).ContentType.ANNOUNCEMENT === arg0) {
+  } else if (tmp(8638).ContentType.ANNOUNCEMENT === arg0) {
     const intl2 = tmp(1233).intl;
     const string = intl2.string;
     const t = tmp(1233).t;
@@ -792,7 +792,7 @@ export const contentTypeToText = function contentTypeToText(arg0) {
       stringResult = string(t["2ih63V"]);
     }
     return stringResult;
-  } else if (tmp(8634).ContentType.FILE === arg0) {
+  } else if (tmp(8638).ContentType.FILE === arg0) {
     const intl = tmp(1233).intl;
     return intl.string(tmp(1233).t.pYrnTY);
   }

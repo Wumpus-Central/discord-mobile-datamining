@@ -1,6 +1,6 @@
-// === Module 17027: useHideSelfVideo ===
+// === Module 17047: useHideSelfVideo ===
 
-// Module 17027 (useHideSelfVideo)
+// Module 17047 (useHideSelfVideo)
 import closure_3 from "fetchFingerprint" /* 1215 */;
 import closure_4 from "_detectH265HardwareDecode" /* 4529 */;
 import { VideoToggleState } from "ME" /* 673 */;

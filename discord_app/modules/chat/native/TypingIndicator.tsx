@@ -1,15 +1,16 @@
-// === Module 11759: TypingIndicatorInner ===
+// === Module 11765: TypingIndicatorInner ===
 
-// Module 11759 (TypingIndicatorInner)
+// Module 11765 (TypingIndicatorInner)
 import ThemesDefault from "Themes" /* 709 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import { useChatShowingAutoComplete as closure_5 } from "updateChatInputContainerHeight" /* 9547 */;
+import { useChatShowingAutoComplete as closure_5 } from "updateChatInputContainerHeight" /* 9551 */;
 import closure_6 from "getUserAgnosticState" /* 4477 */;
-import closure_7 from "fromServer" /* 5411 */;
-import { SlowmodeType } from "setCooldown" /* 7441 */;
-import closure_9 from "handleTypingStart" /* 11760 */;
+import closure_7 from "fromServer" /* 5412 */;
+import { SlowmodeType } from "setCooldown" /* 7442 */;
+import closure_9 from "handleTypingStart" /* 11766 */;
 import closure_10 from "mergeGuildAvatar" /* 1921 */;
+import { AnalyticEvents } from "ME" /* 673 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -21,26 +22,27 @@ function TypingIndicatorInner(channel) {
   let canView;
   let stateFromStores;
   let first;
+  closure_6 = undefined;
   let sharedValue;
   let sharedValue1;
-  let obj = channel(cleanUp[13]);
+  let obj = channel(cleanUp[14]);
   let customTypingIndicatorConfig = obj.useCustomTypingIndicatorConfig("TypingIndicatorInner");
   canView = customTypingIndicatorConfig.canView;
-  obj1 = channel(cleanUp[10]);
-  let items = [sharedValue];
-  stateFromStores = obj1.useStateFromStores(items, () => sharedValue.get("preview_own_typing_indicator"));
+  obj1 = channel(cleanUp[11]);
+  let items = [closure_6];
+  stateFromStores = obj1.useStateFromStores(items, () => closure_6.get("preview_own_typing_indicator"));
   let obj2 = canView;
   const callback = canView.useCallback(() => {
-    const result = channel(cleanUp[14]).openCustomTypingIndicatorAnnounceActionSheet();
+    const result = channel(cleanUp[15]).openCustomTypingIndicatorAnnounceActionSheet();
   }, []);
   obj = { channelId: channel.id, guildId: channel.getGuildId(), typingUserIds };
-  const tmp7Result = transitionState(cleanUp[15])(obj);
+  const tmp7Result = transitionState(cleanUp[16])(obj);
   first = null;
   if (1 === typingUserIds.length) {
     first = typingUserIds[0];
   }
-  let tmpResult = tmp(tmp2[10]);
-  const items1 = [closure_9, closure_10, sharedValue1];
+  let tmpResult = tmp(tmp2[11]);
+  const items1 = [closure_9, closure_10, sharedValue];
   const items2 = [first, canView, stateFromStores, channel];
   const stateFromStoresObject = tmpResult.useStateFromStoresObject(items1, () => {
     if (null != first) {
@@ -63,12 +65,12 @@ function TypingIndicatorInner(channel) {
             const guildId = channel.getGuildId();
             let guildEmojis = null;
             if (null != guildId) {
-              guildEmojis = sharedValue1.getGuildEmojis(guildId);
+              guildEmojis = sharedValue.getGuildEmojis(guildId);
             }
             const obj = { config: null, name: null };
-            const obj2 = channel(cleanUp[16]);
+            const obj2 = channel(cleanUp[17]);
             obj[0] = obj2.getViewableCustomTypingIndicatorConfig(customTypingIndicatorConfig, channel, tmp, guildEmojis);
-            obj[1] = transitionState(cleanUp[17]).getName(guildId, channel.id, user);
+            obj[1] = transitionState(cleanUp[18]).getName(guildId, channel.id, user);
             return obj;
           }
         }
@@ -77,56 +79,76 @@ function TypingIndicatorInner(channel) {
     }
     return { config: null, name: null };
   }, items2);
-  tmpResult = tmp(tmp2[18]);
+  closure_6 = tmp11;
+  const items3 = [null != stateFromStoresObject.config, , ];
+  ({ id: arr4[1], type: arr4[2] } = channel);
+  const effect = obj2.useEffect(() => {
+    if (closure_6) {
+      let obj = transitionState(cleanUp[19]);
+      obj = { channel_id: null, channel_type: null };
+      ({ id: obj2[0], type: obj2[1] } = channel);
+      obj.track(closure_1_11.TYPING_INDICATOR_STYLE_SEEN, obj);
+    }
+  }, items3);
+  tmpResult = tmp(tmp2[20]);
   sharedValue = tmpResult.useSharedValue(undefined);
-  const items3 = [sharedValue];
+  const items4 = [sharedValue];
   const callback1 = obj2.useCallback((nativeEvent) => {
     const result = sharedValue.set(nativeEvent.nativeEvent.layout);
-  }, items3);
-  let tmp7 = transitionState(cleanUp[15]);
-  const tmp13 = callback3(channel(cleanUp[19]).useToken(transitionState(cleanUp[12]).modules.mobile.CHAT_INPUT_CONTAINER_HORIZONTAL_PADDING));
-  const tmpResult1 = channel(cleanUp[19]);
-  sharedValue1 = channel(cleanUp[18]).useSharedValue(0);
-  const items4 = [cleanUp, transitionState, sharedValue1];
-  const effect = obj2.useEffect(() => {
-    if (transitionState === channel(cleanUp[20]).TransitionStates.YEETED) {
+  }, items4);
+  let tmp7 = transitionState(cleanUp[16]);
+  const tmp15 = callback3(channel(cleanUp[21]).useToken(transitionState(cleanUp[13]).modules.mobile.CHAT_INPUT_CONTAINER_HORIZONTAL_PADDING));
+  const tmpResult1 = channel(cleanUp[21]);
+  sharedValue1 = channel(cleanUp[20]).useSharedValue(0);
+  const items5 = [cleanUp, transitionState, sharedValue1];
+  const effect1 = obj2.useEffect(() => {
+    if (transitionState === channel(cleanUp[22]).TransitionStates.YEETED) {
       const result = sharedValue1.set(0);
       cleanUp();
     }
-  }, items4);
-  const tmpResult2 = channel(cleanUp[18]);
-  class D {
+  }, items5);
+  const tmpResult2 = channel(cleanUp[20]);
+  class O {
     constructor() {
-      return closure_6.get();
+      return closure_7.get();
     }
   }
-  D.__closure = { typingIndicatorLayout: sharedValue };
-  D.__workletHash = 10758673194436;
-  D.__initData = closure_15;
-  const fn = function w(arg0) {
-    let tmp = arg0 !== arg1;
-    if (tmp) {
-      tmp = null != arg0;
+  O.__closure = { typingIndicatorLayout: sharedValue };
+  O.__workletHash = 10758673194436;
+  O.__initData = closure_16;
+  class V {
+    constructor(arg0, arg1) {
+      tmp = channel !== arg1;
+      if (tmp) {
+        tmp2 = null;
+        tmp = null != channel;
+      }
+      if (tmp) {
+        y = channel.y;
+        num = 2;
+        height = channel.height;
+        toFixedResult = y.toFixed(2);
+        tmp = toFixedResult === height.toFixed(2);
+      }
+      if (tmp) {
+        tmp4 = closure_8;
+        tmp5 = channel;
+        tmp6 = cleanUp;
+        obj = channel(cleanUp[23]);
+        tmp7 = -channel.height;
+        str = "respect-motion-settings";
+        result = closure_8.set(obj.withSpring(tmp7, channel(cleanUp[24]).springStandard, "respect-motion-settings"));
+      }
+      return;
     }
-    if (tmp) {
-      const y = arg0.y;
-      const height = arg0.height;
-      tmp = y.toFixed(2) === height.toFixed(2);
-      const toFixedResult = y.toFixed(2);
-    }
-    if (tmp) {
-      const result = sharedValue1.set(channel(cleanUp[21]).withSpring(-arg0.height, channel(cleanUp[22]).springStandard, "respect-motion-settings"));
-      const obj = channel(cleanUp[21]);
-      const tmp7 = -arg0.height;
-    }
-  };
-  obj = { translateYValue: sharedValue1, withSpring: tmp(tmp2[21]).withSpring, springStandard: tmp(tmp2[22]).springStandard };
-  fn.__closure = obj;
-  fn.__workletHash = 14874351700395;
-  fn.__initData = closure_16;
-  const animatedReaction = channel(cleanUp[18]).useAnimatedReaction(D, fn);
-  const tmpResult3 = channel(cleanUp[18]);
-  const fn2 = function k() {
+  }
+  obj = { translateYValue: sharedValue1, withSpring: tmp(tmp2[23]).withSpring, springStandard: tmp(tmp2[24]).springStandard };
+  V.__closure = obj;
+  V.__workletHash = 14874351700395;
+  V.__initData = closure_17;
+  const animatedReaction = channel(cleanUp[20]).useAnimatedReaction(O, V);
+  const tmpResult3 = channel(cleanUp[20]);
+  const fn = function z() {
     const value = sharedValue.get();
     let obj = sharedValue1;
     if (0 === sharedValue1.get()) {
@@ -145,54 +167,54 @@ function TypingIndicatorInner(channel) {
     obj[2] = items;
     return obj;
   };
-  obj1 = { typingIndicatorLayout: sharedValue, translateYValue: sharedValue1, transitionState, TransitionStates: tmp(tmp2[20]).TransitionStates };
-  fn2.__closure = obj1;
-  fn2.__workletHash = 15240163018691;
-  fn2.__initData = closure_17;
-  const animatedStyle = channel(cleanUp[18]).useAnimatedStyle(fn2);
-  obj2 = { style: items5, onLayout: callback1, children: null };
-  items5 = [tmp13.typingWrapper, animatedStyle];
-  const obj3 = { style: tmp13.wrapperHoriz, children: null };
-  const obj4 = { style: tmp13.horiz, children: null };
+  obj1 = { typingIndicatorLayout: sharedValue, translateYValue: sharedValue1, transitionState, TransitionStates: tmp(tmp2[22]).TransitionStates };
+  fn.__closure = obj1;
+  fn.__workletHash = 15240163018691;
+  fn.__initData = closure_18;
+  const animatedStyle = channel(cleanUp[20]).useAnimatedStyle(fn);
+  obj2 = { style: items6, onLayout: callback1, children: null };
+  items6 = [tmp15.typingWrapper, animatedStyle];
+  const obj3 = { style: tmp15.wrapperHoriz, children: null };
+  const obj4 = { style: tmp15.horiz, children: null };
   if (null != stateFromStoresObject.config) {
     const obj5 = { config: null, username: null, onPress: null };
     ({ config: obj18[0], name: obj18[1] } = stateFromStoresObject);
-    let tmp25;
+    let tmp27;
     if (customTypingIndicatorConfig.canSet) {
-      tmp25 = callback;
+      tmp27 = callback;
     }
-    obj5[2] = tmp25;
-    let tmp19Result = tmp18(tmp6(tmp2[23]), obj5);
-    const tmp6Result = tmp6(tmp2[23]);
+    obj5[2] = tmp27;
+    let tmp21Result = tmp20(tmp6(tmp2[25]), obj5);
+    const tmp6Result = tmp6(tmp2[25]);
   } else {
-    let tmp18Result = null;
+    let tmp20Result = null;
     if (null != tmp7Result) {
-      tmp18Result = tmp18(tmp(tmp2[24]).Ellipsis, {});
+      tmp20Result = tmp20(tmp(tmp2[26]).Ellipsis, {});
     }
     const obj6 = { children: null };
-    const items6 = [tmp18Result, ];
+    const items7 = [tmp20Result, ];
     const obj7 = { style: null, lineClamp: 1, maxFontSizeMultiplier: 2, variant: "text-xs/medium", color: "interactive-text-default", includeFontPadding: true, ellipsizeMode: "tail", children: null };
-    obj7[0] = tmp13.text;
+    obj7[0] = tmp15.text;
     obj7[7] = tmp7Result;
-    items6[1] = tmp18(tmp(tmp2[25]).Text, obj7);
-    obj6[0] = items6;
-    tmp19Result = tmp19(closure_12, obj6);
-    const tmp21 = closure_12;
+    items7[1] = tmp20(tmp(tmp2[27]).Text, obj7);
+    obj6[0] = items7;
+    tmp21Result = tmp21(closure_13, obj6);
+    const tmp23 = closure_13;
   }
-  obj4[1] = tmp19Result;
-  const items7 = [closure_11(stateFromStores, obj4), ];
-  let tmp18Result1 = null;
+  obj4[1] = tmp21Result;
+  const items8 = [closure_12(stateFromStores, obj4), ];
+  let tmp20Result1 = null;
   if (channel.rateLimitPerUser > 0) {
     const obj8 = { channel: null, hasTypingText: null, slowmodeType: null };
     obj8[0] = channel;
     obj8[1] = null != tmp7Result;
-    obj8[2] = SlowmodeType.SendMessage;
-    tmp18Result1 = tmp18(tmp6(tmp2[26]), obj8);
+    obj8[2] = sharedValue1.SendMessage;
+    tmp20Result1 = tmp20(tmp6(tmp2[28]), obj8);
   }
-  items7[1] = tmp18Result1;
-  obj3[1] = items7;
-  obj2[2] = closure_13(stateFromStores, obj3);
-  return closure_11(transitionState(cleanUp[18]).View, obj2);
+  items8[1] = tmp20Result1;
+  obj3[1] = items8;
+  obj2[2] = closure_14(stateFromStores, obj3);
+  return closure_12(transitionState(cleanUp[20]).View, obj2);
 }
 function renderTypingIndicator(arg0, arg1, transitionState, cleanUp) {
   const obj = {};
@@ -202,8 +224,8 @@ function renderTypingIndicator(arg0, arg1, transitionState, cleanUp) {
   return callback2(TypingIndicatorInner, obj, arg0);
 }
 let c3 = importAllResult;
-({ jsx: unpackModuleId, Fragment: closure_12, jsxs: map1 } = jsxProd);
-let closure_14 = createCacheKey.createStyles((arg0) => {
+({ jsx: closure_12, Fragment: map1, jsxs: closure_14 } = jsxProd);
+let closure_15 = createCacheKey.createStyles((arg0) => {
   let obj = { typingWrapper: null, wrapperHoriz: null, horiz: null, text: null };
   obj = { paddingTop: ThemesDefault.modules.mobile.CHAT_INPUT_FLOATING_ACCESSORY_PADDING_TOP, paddingBottom: 4, paddingHorizontal: 16, alignSelf: "stretch", backgroundColor: "transparent", paddingRight: ThemesDefault.modules.mobile.CHAT_INPUT_CONTAINER_HORIZONTAL_PADDING, paddingLeft: 2 * arg0 };
   obj[0] = obj;
@@ -213,9 +235,9 @@ let closure_14 = createCacheKey.createStyles((arg0) => {
   obj[3] = { flex: 1 };
   return obj;
 });
-let closure_15 = { code: "function TypingIndicatorTsx1(){const{typingIndicatorLayout}=this.__closure;return typingIndicatorLayout.get();}" };
-let closure_16 = { code: "function TypingIndicatorTsx2(current,prev){const{translateYValue,withSpring,springStandard}=this.__closure;if(current===prev)return;if(current==null)return;if(current.y.toFixed(2)!==current.height.toFixed(2))return;translateYValue.set(withSpring(-current.height,springStandard,'respect-motion-settings'));}" };
-let closure_17 = { code: "function TypingIndicatorTsx3(){const{typingIndicatorLayout,translateYValue,transitionState,TransitionStates}=this.__closure;const layout=typingIndicatorLayout.get();return{opacity:translateYValue.get()===0||transitionState===TransitionStates.YEETED?0:1,top:layout===null||layout===void 0?void 0:layout.height,transform:[{translateY:translateYValue.get()}]};}" };
+let closure_16 = { code: "function TypingIndicatorTsx1(){const{typingIndicatorLayout}=this.__closure;return typingIndicatorLayout.get();}" };
+let closure_17 = { code: "function TypingIndicatorTsx2(current,prev){const{translateYValue,withSpring,springStandard}=this.__closure;if(current===prev)return;if(current==null)return;if(current.y.toFixed(2)!==current.height.toFixed(2))return;translateYValue.set(withSpring(-current.height,springStandard,'respect-motion-settings'));}" };
+let closure_18 = { code: "function TypingIndicatorTsx3(){const{typingIndicatorLayout,translateYValue,transitionState,TransitionStates}=this.__closure;const layout=typingIndicatorLayout.get();return{opacity:translateYValue.get()===0||transitionState===TransitionStates.YEETED?0:1,top:layout===null||layout===void 0?void 0:layout.height,transform:[{translateY:translateYValue.get()}]};}" };
 const memoResult = importAllResult.memo((channel) => {
   channel = channel.channel;
   let typingUserIds = channel;
@@ -226,13 +248,13 @@ const memoResult = importAllResult.memo((channel) => {
   typingUserIds = undefined;
   stateFromStores = undefined;
   memo = undefined;
-  let obj = typingUserIds(memo[9]);
+  let obj = typingUserIds(memo[10]);
   typingUserIds = obj.useTypingUserIds(channel.id, 4);
   let items = [closure_6];
-  stateFromStores = typingUserIds(memo[10]).useStateFromStores(items, () => closure_6.get("preview_own_typing_indicator"));
-  const obj2 = typingUserIds(memo[10]);
+  stateFromStores = typingUserIds(memo[11]).useStateFromStores(items, () => closure_6.get("preview_own_typing_indicator"));
+  const obj2 = typingUserIds(memo[11]);
   const items1 = [closure_10];
-  const stateFromStores1 = typingUserIds(memo[10]).useStateFromStores(items1, () => {
+  const stateFromStores1 = typingUserIds(memo[11]).useStateFromStores(items1, () => {
     currentUser = currentUser.getCurrentUser();
     let id;
     if (currentUser != null) {
@@ -271,7 +293,7 @@ const memoResult = importAllResult.memo((channel) => {
     return tmp4;
   }, items3);
   obj = { item: memo1, renderItem: renderTypingIndicator };
-  return callback2(typingUserIds(memo[20]).TransitionItem, obj);
+  return callback2(typingUserIds(memo[22]).TransitionItem, obj);
 });
 let result = require("set").fileFinishedImporting("modules/chat/native/TypingIndicator.tsx");
 
@@ -287,13 +309,13 @@ export const hasTypingIndicatorContent = function hasTypingIndicatorContent(chan
   return tmp;
 };
 export const useTypingUserIdsForDisplay = function useTypingUserIdsForDisplay(id, arg1) {
-  typingUserIds = typingUserIds(stateFromStores1[9]).useTypingUserIds(id, arg1);
-  const obj = typingUserIds(stateFromStores1[9]);
+  typingUserIds = typingUserIds(stateFromStores1[10]).useTypingUserIds(id, arg1);
+  const obj = typingUserIds(stateFromStores1[10]);
   const items = [closure_6];
-  const stateFromStores = typingUserIds(stateFromStores1[10]).useStateFromStores(items, () => closure_6.get("preview_own_typing_indicator"));
-  const obj2 = typingUserIds(stateFromStores1[10]);
+  const stateFromStores = typingUserIds(stateFromStores1[11]).useStateFromStores(items, () => closure_6.get("preview_own_typing_indicator"));
+  const obj2 = typingUserIds(stateFromStores1[11]);
   const items1 = [closure_10];
-  stateFromStores1 = typingUserIds(stateFromStores1[10]).useStateFromStores(items1, () => {
+  stateFromStores1 = typingUserIds(stateFromStores1[11]).useStateFromStores(items1, () => {
     currentUser = currentUser.getCurrentUser();
     let id;
     if (currentUser != null) {

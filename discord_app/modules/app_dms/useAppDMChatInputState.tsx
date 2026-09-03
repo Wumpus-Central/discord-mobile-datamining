@@ -1,10 +1,10 @@
-// === Module 13148: items ===
+// === Module 13160: items ===
 
-// Module 13148 (items)
+// Module 13160 (items)
 import closure_3 from "noop" /* 19 */;
-import { useQueryState } from "getIndexKey" /* 8154 */;
+import { useQueryState } from "getIndexKey" /* 8158 */;
 import closure_5 from "addApplication" /* 4519 */;
-import closure_6 from "createUserWidgetFromServer" /* 7375 */;
+import closure_6 from "createUserWidgetFromServer" /* 7376 */;
 import closure_7 from "createExecutable" /* 4504 */;
 import closure_8 from "mergeGuildAvatar" /* 1921 */;
 import { EMPTY_STRING_SNOWFLAKE_ID } from "ME" /* 673 */;

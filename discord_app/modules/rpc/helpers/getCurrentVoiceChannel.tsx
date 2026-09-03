@@ -1,6 +1,6 @@
-// === Module 6226: getCurrentVoiceChannel ===
+// === Module 6227: getCurrentVoiceChannel ===
 
-// Module 6226 (getCurrentVoiceChannel)
+// Module 6227 (getCurrentVoiceChannel)
 import closure_0 from "fetchFingerprint" /* 1215 */;
 import closure_1 from "ensureGuildLoaded" /* 1386 */;
 import closure_2 from "updateVoiceState" /* 4497 */;

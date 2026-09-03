@@ -1,11 +1,11 @@
-// === Module 11041: PremiumGiftDMSuccessBody ===
+// === Module 11045: PremiumGiftDMSuccessBody ===
 
-// Module 11041 (PremiumGiftDMSuccessBody)
+// Module 11045 (PremiumGiftDMSuccessBody)
 import ThemesDefault from "Themes" /* 709 */;
 import getSystemLocale from "getSystemLocale" /* 1233 */;
 import Text from "Text" /* 4474 */;
-import NativeGiftContextProvider from "NativeGiftContextProvider" /* 10698 */;
-import PremiumGiftBackgroundAnimationDefault from "PremiumGiftBackgroundAnimation" /* 10823 */;
+import NativeGiftContextProvider from "NativeGiftContextProvider" /* 10702 */;
+import PremiumGiftBackgroundAnimationDefault from "PremiumGiftBackgroundAnimation" /* 10827 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;

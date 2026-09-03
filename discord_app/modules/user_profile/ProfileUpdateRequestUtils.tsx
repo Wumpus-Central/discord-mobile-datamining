@@ -1,10 +1,10 @@
-// === Module 11053: getProfileChangesForUpdateRequest ===
+// === Module 11057: getProfileChangesForUpdateRequest ===
 
-// Module 11053 (getProfileChangesForUpdateRequest)
+// Module 11057 (getProfileChangesForUpdateRequest)
 import set from "set" /* 2 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 1949 */;
-import AssetOriginTypes from "AssetOriginTypes" /* 7770 */;
-import getCurrentUserProfileDefault from "getCurrentUserProfile" /* 11054 */;
+import AssetOriginTypes from "AssetOriginTypes" /* 7773 */;
+import getCurrentUserProfileDefault from "getCurrentUserProfile" /* 11058 */;
 
 const result = set.fileFinishedImporting("modules/user_profile/ProfileUpdateRequestUtils.tsx");
 

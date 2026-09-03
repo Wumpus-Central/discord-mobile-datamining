@@ -1,8 +1,8 @@
-// === Module 9456: getEmbeddedActivityJoinability ===
+// === Module 9460: getEmbeddedActivityJoinability ===
 
-// Module 9456 (getEmbeddedActivityJoinability)
+// Module 9460 (getEmbeddedActivityJoinability)
 import allowChannelAccess from "allowChannelAccess" /* 4666 */;
-import isActivitySupportedOnClientPlatformDefault from "isActivitySupportedOnClientPlatform" /* 9457 */;
+import isActivitySupportedOnClientPlatformDefault from "isActivitySupportedOnClientPlatform" /* 9461 */;
 import closure_3 from "ensureGuildLoaded" /* 1386 */;
 import closure_4 from "createGuildRecordFromRust" /* 1908 */;
 import closure_5 from "getUncachedChannelPermissions" /* 4120 */;

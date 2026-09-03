@@ -1,10 +1,10 @@
-// === Module 10915: InboxIcon ===
+// === Module 10919: InboxIcon ===
 
-// Module 10915 (InboxIcon)
+// Module 10919 (InboxIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 709 */;
 import BaseIconImage from "BaseIconImage" /* 4196 */;
-import registerAsset from "registerAsset" /* 10916 */;
+import registerAsset from "registerAsset" /* 10920 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

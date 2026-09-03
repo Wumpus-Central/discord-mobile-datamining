@@ -1,10 +1,10 @@
-// === Module 11503: isVisualMedia ===
+// === Module 11508: isVisualMedia ===
 
-// Module 11503 (isVisualMedia)
+// Module 11508 (isVisualMedia)
 import set from "set" /* 2 */;
 import ME from "ME" /* 673 */;
 import urlMatchesFileExtension from "urlMatchesFileExtension" /* 4671 */;
-import set2 from "set" /* 11504 */;
+import set2 from "set" /* 11509 */;
 
 const MessageAttachmentFlags = ME.MessageAttachmentFlags;
 const re3 = /\.(mp3|m4a|ogg|opus|wav|flac)$/i;

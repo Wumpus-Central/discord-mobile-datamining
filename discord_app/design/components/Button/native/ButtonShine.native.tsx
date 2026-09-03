@@ -1,6 +1,6 @@
-// === Module 4939: useShineEffectStyles ===
+// === Module 4940: useShineEffectStyles ===
 
-// Module 4939 (useShineEffectStyles)
+// Module 4940 (useShineEffectStyles)
 import _modDef4217 from "module_4217" /* 4217 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
@@ -9,7 +9,7 @@ import { jsx } from "jsxProd" /* 21 */;
 const require = arg1;
 function useShineEffectStyles(width, variant) {
   const _require = width;
-  let obj = _require(4934);
+  let obj = _require(4935);
   const buttonTextColorStyles = obj.useButtonTextColorStyles(variant);
   const obj2 = enabled(686)(buttonTextColorStyles.color);
   const hexResult = enabled(686)(buttonTextColorStyles.color).alpha(0.1).hex();

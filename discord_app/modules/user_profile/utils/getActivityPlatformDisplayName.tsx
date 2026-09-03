@@ -1,6 +1,6 @@
-// === Module 9430: getActivityPlatformDisplayName ===
+// === Module 9434: getActivityPlatformDisplayName ===
 
-// Module 9430 (getActivityPlatformDisplayName)
+// Module 9434 (getActivityPlatformDisplayName)
 import set from "set" /* 2 */;
 import ME from "ME" /* 673 */;
 import getSystemLocale from "getSystemLocale" /* 1233 */;

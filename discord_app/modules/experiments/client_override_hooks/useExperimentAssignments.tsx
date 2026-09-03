@@ -1,6 +1,6 @@
-// === Module 11606: useExperimentAssignment ===
+// === Module 11611: useExperimentAssignment ===
 
-// Module 11606 (useExperimentAssignment)
+// Module 11611 (useExperimentAssignment)
 import trackExposureToExperiment from "trackExposureToExperiment" /* 4399 */;
 import closure_2 from "_slicedToArray" /* 32 */;
 import closure_3 from "getHash" /* 4391 */;

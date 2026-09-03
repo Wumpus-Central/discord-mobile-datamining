@@ -1,6 +1,6 @@
-// === Module 9535: areParticipantStatesEqual ===
+// === Module 9539: areParticipantStatesEqual ===
 
-// Module 9535 (areParticipantStatesEqual)
+// Module 9539 (areParticipantStatesEqual)
 import closure_2 from "_slicedToArray" /* 32 */;
 import closure_3 from "participantFromServer" /* 1385 */;
 import closure_4 from "getParticipants" /* 4494 */;

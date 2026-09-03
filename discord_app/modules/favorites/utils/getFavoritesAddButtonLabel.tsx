@@ -1,6 +1,6 @@
-// === Module 10955: getFavoritesAddButtonLabel ===
+// === Module 10959: getFavoritesAddButtonLabel ===
 
-// Module 10955 (getFavoritesAddButtonLabel)
+// Module 10959 (getFavoritesAddButtonLabel)
 import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1233 */;
 import messagesProxyDefault from "messagesProxy" /* 3178 */;

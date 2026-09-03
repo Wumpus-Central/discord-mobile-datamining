@@ -1,10 +1,10 @@
-// === Module 12703: ModeratorActionRow ===
+// === Module 12715: ModeratorActionRow ===
 
-// Module 12703 (ModeratorActionRow)
+// Module 12715 (ModeratorActionRow)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 709 */;
-import TableRowInner from "TableRowInner" /* 5607 */;
-import closure_4 from "buildStageChannelUserRoles" /* 5373 */;
+import TableRowInner from "TableRowInner" /* 5608 */;
+import closure_4 from "buildStageChannelUserRoles" /* 5374 */;
 import closure_5 from "ensureGuildLoaded" /* 1386 */;
 import closure_6 from "comparator" /* 1981 */;
 import { GUILD_VOCAL_CHANNELS_KEY } from "comparator" /* 1981 */;
@@ -348,7 +348,7 @@ export default function UserProfileModeratorActions(user) {
               dependencyMap();
             },
             onRemove() {
-              let arr = callback(4723);
+              let arr = callback(4724);
               arr = arr.pop();
             }
           };

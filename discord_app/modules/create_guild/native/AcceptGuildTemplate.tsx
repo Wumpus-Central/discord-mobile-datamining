@@ -1,26 +1,26 @@
-// === Module 11589: GuildTemplateResolving ===
+// === Module 11594: GuildTemplateResolving ===
 
-// Module 11589 (GuildTemplateResolving)
+// Module 11594 (GuildTemplateResolving)
 import applyDefault from "apply" /* 12 */;
 import _modDef38 from "module_38" /* 38 */;
 import ThemesDefault from "Themes" /* 709 */;
 import getSystemLocale from "getSystemLocale" /* 1233 */;
 import Button from "Button" /* 1296 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
-import ActivityIndicator from "ActivityIndicator" /* 6056 */;
-import _modDef7713 from "module_7713" /* 7713 */;
-import DividerDefault from "Divider" /* 8378 */;
-import getInvalidLinkSource from "getInvalidLinkSource" /* 11590 */;
-import renderIconDefault from "renderIcon" /* 11594 */;
+import ActivityIndicator from "ActivityIndicator" /* 6057 */;
+import _modDef7716 from "module_7716" /* 7716 */;
+import DividerDefault from "Divider" /* 8382 */;
+import getInvalidLinkSource from "getInvalidLinkSource" /* 11595 */;
+import renderIconDefault from "renderIcon" /* 11599 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { isGuildVocalChannelType } from "createChannelRecord" /* 1390 */;
 import { isEveryoneRole } from "GuildRoleRecordTypeTag" /* 1985 */;
 import ME from "ME" /* 673 */;
-import { GuildTemplateStates } from "GUILD_TEMPLATES_MEMBER_COUNT_PROMOTION_THRESHOLD" /* 6179 */;
+import { GuildTemplateStates } from "GUILD_TEMPLATES_MEMBER_COUNT_PROMOTION_THRESHOLD" /* 6180 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 import importAllResult from "noop" /* 19 */;
-import importDefaultResult from "createTextStyle" /* 5469 */;
+import importDefaultResult from "createTextStyle" /* 5470 */;
 
 require = arg1;
 function GuildTemplateResolving() {
@@ -57,7 +57,7 @@ function GuildTemplateResolved(guildTemplate) {
   obj2[2] = intl3.format(guildTemplate(1233).t["2bprXx"], { guidelinesURL: constants.GUIDELINES });
   obj2[3] = name;
   obj2[4] = setName;
-  items1[3] = callback(_modDef7713, obj2);
+  items1[3] = callback(_modDef7716, obj2);
   const obj4 = { style: tmp.createButtonWrapper, children: null };
   const obj5 = { size: "md", text: null, onPress: null, loading: null, disabled: null, grow: true };
   const intl4 = tmp10(1233).intl;
@@ -65,7 +65,7 @@ function GuildTemplateResolved(guildTemplate) {
   obj5[2] = createServer;
   obj5[3] = guildTemplate.state === GuildTemplateStates.ACCEPTING;
   obj5[4] = guildTemplate.state === GuildTemplateStates.ACCEPTING;
-  obj4[1] = callback(guildTemplate(4928).Button, obj5);
+  obj4[1] = callback(guildTemplate(4929).Button, obj5);
   items1[4] = callback(closure_4, obj4);
   items1[5] = callback(DividerDefault, { style: tmp.divider, outer: true });
   const obj7 = { style: tmp.sectionHeader, variant: "heading-md/extrabold", color: "mobile-text-heading-primary", children: null };

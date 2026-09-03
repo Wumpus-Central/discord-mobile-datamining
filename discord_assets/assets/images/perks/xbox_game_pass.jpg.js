@@ -1,6 +1,6 @@
-// === Module 13317: metadata ===
+// === Module 13329: metadata ===
 
-// Module 13317 (metadata)
+// Module 13329 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/images/perks/xbox_game_pass.jpg.js");

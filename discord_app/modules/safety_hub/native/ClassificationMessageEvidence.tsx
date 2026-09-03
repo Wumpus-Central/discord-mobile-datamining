@@ -1,14 +1,14 @@
-// === Module 11681: ClassificationEvidence ===
+// === Module 11693: ClassificationEvidence ===
 
-// Module 11681 (ClassificationEvidence)
-import setOptionsDefault from "setOptions" /* 7850 */;
+// Module 11693 (ClassificationEvidence)
+import setOptionsDefault from "setOptions" /* 7853 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_9 from "handleThemeChange" /* 1301 */;
 import closure_10 from "mergeGuildAvatar" /* 1921 */;
-import closure_11 from "handleSafetyHubRequestAgeVerificationResetModalAction" /* 8716 */;
-import SafetyHubView from "SafetyHubView" /* 8705 */;
+import closure_11 from "handleSafetyHubRequestAgeVerificationResetModalAction" /* 8720 */;
+import SafetyHubView from "SafetyHubView" /* 8709 */;
 import { MessageTypes } from "ME" /* 673 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
@@ -39,10 +39,10 @@ export default function ClassificationEvidence(arg0) {
   const items1 = [id];
   const resolveAssetSource = first3.resolveAssetSource;
   if (obj2.useStateFromStores(items1, () => ref(1362).isThemeLight(id.theme))) {
-    let assetSource = resolveAssetSource(tmp11(11682));
+    let assetSource = resolveAssetSource(tmp11(11694));
     let tmp13 = tmp11;
   } else {
-    assetSource = resolveAssetSource(tmp11(11683));
+    assetSource = resolveAssetSource(tmp11(11695));
     tmp13 = tmp11;
   }
   let first2 = arg0.flaggedContent[0];
@@ -152,7 +152,7 @@ export default function ClassificationEvidence(arg0) {
       obj[9] = uri.id;
       return obj;
     });
-    ref(8581).openMediaModal({ initialIndex: index, initialSources: mapped, disableDownload: true, disableMediaOverlayButton: true, shareable: false, originViewOrOriginLayout: layout });
+    ref(8585).openMediaModal({ initialIndex: index, initialSources: mapped, disableDownload: true, disableMediaOverlayButton: true, shareable: false, originViewOrOriginLayout: layout });
   }, items4);
   const items6 = [first2.attachments];
   const callback1 = obj1.useCallback((arg0) => {
@@ -219,7 +219,7 @@ export default function ClassificationEvidence(arg0) {
         }
       };
       obj = { uri: uri.url };
-      return closure_1_18(first(8411), obj, arg1);
+      return closure_1_18(first(8415), obj, arg1);
     });
     items8[1] = callback(tmp24, obj);
     obj[0] = items8;
@@ -228,11 +228,11 @@ export default function ClassificationEvidence(arg0) {
     obj1 = { ref: null, onTapImage: null, inverted: false };
     obj1[0] = ref;
     obj1[1] = callback;
-    const items9 = [callback(tmp13(11684), obj1), ];
+    const items9 = [callback(tmp13(11696), obj1), ];
     obj2 = { rowGenerator: null, message: null, modifyRow: null, pointerEvents: "none" };
     obj2[0] = closure_20;
-    let tmp13Result = tmp13(8794);
-    tmpResult = tmp(4737);
+    let tmp13Result = tmp13(8798);
+    tmpResult = tmp(4738);
     const obj3 = { id: null, timestamp: null, channel_id: "1", type: null, author: null, content: null, attachments: null };
     obj3[0] = first2.id;
     const _Date = Date;

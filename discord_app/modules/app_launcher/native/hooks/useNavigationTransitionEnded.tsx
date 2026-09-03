@@ -1,6 +1,6 @@
-// === Module 11923: useNavigationTransitionEnded ===
+// === Module 11929: useNavigationTransitionEnded ===
 
-// Module 11923 (useNavigationTransitionEnded)
+// Module 11929 (useNavigationTransitionEnded)
 import closure_2 from "_slicedToArray" /* 32 */;
 import closure_3 from "noop" /* 19 */;
 import { useAppLauncherNavigation } from "APP_LAUNCHER_BUILT_IN_SECTION_ICON" /* 1497 */;

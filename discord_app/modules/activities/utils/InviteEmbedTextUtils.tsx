@@ -1,6 +1,6 @@
-// === Module 13120: getAskToJoinText ===
+// === Module 13132: getAskToJoinText ===
 
-// Module 13120 (getAskToJoinText)
+// Module 13132 (getAskToJoinText)
 import getSystemLocale from "getSystemLocale" /* 1233 */;
 import messagesProxyDefault from "messagesProxy" /* 2854 */;
 import getNickname from "getNickname" /* 4673 */;

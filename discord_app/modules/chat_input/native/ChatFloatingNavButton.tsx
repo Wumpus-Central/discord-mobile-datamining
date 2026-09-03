@@ -1,6 +1,6 @@
-// === Module 12058: ChatFloatingNavButton ===
+// === Module 12064: ChatFloatingNavButton ===
 
-// Module 12058 (ChatFloatingNavButton)
+// Module 12064 (ChatFloatingNavButton)
 import ThemesDefault from "Themes" /* 709 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;

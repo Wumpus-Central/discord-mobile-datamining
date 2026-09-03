@@ -1,6 +1,6 @@
-// === Module 17656: AVErrorStreamViewLowFPSDefinition ===
+// === Module 17676: AVErrorStreamViewLowFPSDefinition ===
 
-// Module 17656 (AVErrorStreamViewLowFPSDefinition)
+// Module 17676 (AVErrorStreamViewLowFPSDefinition)
 import closure_2 from "getParticipants" /* 4494 */;
 import closure_3 from "reset" /* 4500 */;
 import closure_4 from "fetchFingerprint" /* 1215 */;

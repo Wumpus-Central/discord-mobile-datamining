@@ -1,14 +1,14 @@
-// === Module 16411: reloadVibegrationsAppFrames ===
+// === Module 16430: reloadVibegrationsAppFrames ===
 
-// Module 16411 (reloadVibegrationsAppFrames)
+// Module 16430 (reloadVibegrationsAppFrames)
 import dispatcherDefault from "dispatcher" /* 706 */;
-import _launchFrameOnNativeDefault from "_launchFrameOnNative" /* 9474 */;
-import vibegrationLocation from "vibegrationLocation" /* 16409 */;
+import _launchFrameOnNativeDefault from "_launchFrameOnNative" /* 9478 */;
+import vibegrationLocation from "vibegrationLocation" /* 16428 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "map" /* 9477 */;
-import closure_5 from "isProjectOwner" /* 16406 */;
+import closure_4 from "map" /* 9481 */;
+import closure_5 from "isProjectOwner" /* 16425 */;
 import { Endpoints } from "ME" /* 673 */;
-import { isLaunched } from "FrameLayoutModes" /* 9478 */;
+import { isLaunched } from "FrameLayoutModes" /* 9482 */;
 
 require = arg1;
 function reloadVibegrationsAppFrames(application_id) {

@@ -1,11 +1,11 @@
-// === Module 14954: items ===
+// === Module 14969: items ===
 
-// Module 14954 (items)
+// Module 14969 (items)
 import noopAll from "noop" /* 19 */;
 import isThemeLight from "isThemeLight" /* 1363 */;
 import useTheme from "useTheme" /* 4413 */;
-import LinearGradientDefault from "LinearGradient" /* 4940 */;
-import preloadDefault from "preload" /* 5501 */;
+import LinearGradientDefault from "LinearGradient" /* 4941 */;
+import preloadDefault from "preload" /* 5502 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
@@ -18,13 +18,13 @@ let closure_7 = createCacheKey.createStyles((arg0) => {
   let obj = {};
   const merged = Object.assign(absoluteFillObject.absoluteFillObject);
   obj = { wrapper: null, cloudsImage: null, cloudsImageLight: null, gradient: null, solidBackground: null };
-  const merged1 = Object.assign(arg0 ? { top: "r" } : { bottom: "r" });
+  const merged1 = Object.assign(arg0 ? { top: "Array" } : { bottom: "Array" });
   obj.height = 380;
   obj.zIndex = 1;
   obj[0] = obj;
   obj = {};
   const merged2 = Object.assign(tmp.absoluteFillObject);
-  const merged3 = Object.assign(arg0 ? { top: "r" } : { bottom: "r" });
+  const merged3 = Object.assign(arg0 ? { top: "Array" } : { bottom: "Array" });
   if (arg0) {
     obj1 = {};
   } else {
@@ -83,7 +83,7 @@ export default function QuestModalContentCloudBackground(align) {
     const obj2 = { style: null, source: null, resizeMode: null };
     const items2 = [isThemeDarkResult ? tmp.cloudsImage : tmp.cloudsImageLight, imgStyle];
     obj2[0] = items2;
-    obj2[1] = importDefault(isThemeDarkResult ? 14955 : 14956);
+    obj2[1] = importDefault(isThemeDarkResult ? 14970 : 14971);
     obj2[2] = str2;
     items1[1] = tmp6(preloadDefault, obj2);
     obj[1] = items1;

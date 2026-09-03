@@ -1,6 +1,6 @@
-// === Module 11631: getGuildMemberAgeInRange ===
+// === Module 11636: getGuildMemberAgeInRange ===
 
-// Module 11631 (getGuildMemberAgeInRange)
+// Module 11636 (getGuildMemberAgeInRange)
 import closure_3 from "trackCommunicationDisabled" /* 1991 */;
 import closure_4 from "createGuildRecordFromRust" /* 1908 */;
 import closure_5 from "getUncachedChannelPermissions" /* 4120 */;

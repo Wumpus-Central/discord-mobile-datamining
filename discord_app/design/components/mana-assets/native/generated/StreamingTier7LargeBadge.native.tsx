@@ -1,10 +1,10 @@
-// === Module 7078: StreamingTier7LargeBadge ===
+// === Module 7079: StreamingTier7LargeBadge ===
 
-// Module 7078 (StreamingTier7LargeBadge)
+// Module 7079 (StreamingTier7LargeBadge)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5501 */;
-import vanityUrlDefault from "vanityUrl" /* 7079 */;
+import preloadDefault from "preload" /* 5502 */;
+import vanityUrlDefault from "vanityUrl" /* 7080 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/StreamingTier7LargeBadge.native.tsx");

@@ -1,6 +1,6 @@
-// === Module 12778: useOpenNitroSubscribeActionSheet ===
+// === Module 12790: useOpenNitroSubscribeActionSheet ===
 
-// Module 12778 (useOpenNitroSubscribeActionSheet)
+// Module 12790 (useOpenNitroSubscribeActionSheet)
 import closure_2 from "noop" /* 19 */;
 import ME from "ME" /* 673 */;
 import { PremiumTypes } from "GuildFeatures" /* 1923 */;

@@ -1,11 +1,11 @@
-// === Module 16983: VoicePanelPIPPushToTalkOverlay ===
+// === Module 17003: VoicePanelPIPPushToTalkOverlay ===
 
-// Module 16983 (VoicePanelPIPPushToTalkOverlay)
+// Module 17003 (VoicePanelPIPPushToTalkOverlay)
 import ThemesDefault from "Themes" /* 709 */;
-import setDefault from "set" /* 6014 */;
+import setDefault from "set" /* 6015 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
-import { PUSH_TO_TALK_PIP_PHYSICS } from "VoicePanelModes" /* 12063 */;
+import { PUSH_TO_TALK_PIP_PHYSICS } from "VoicePanelModes" /* 12069 */;
 import jsxProd from "jsxProd" /* 21 */;
 import importDefaultResult from "module_4217" /* 4217 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
@@ -33,7 +33,7 @@ const importDefaultResult1 = importDefaultResult;
 let result = require("set").fileFinishedImporting("modules/voice_panel/native/pip/VoicePanelPIPPushToTalkOverlay.tsx");
 
 export default function VoicePanelPIPPushToTalkOverlay() {
-  let obj = sharedValue(16908);
+  let obj = sharedValue(16928);
   const pIPState = obj.usePIPState();
   sharedValue = pIPState;
   const tmp2 = callback3();
@@ -48,9 +48,9 @@ export default function VoicePanelPIPPushToTalkOverlay() {
     BLACK.useCallback((current) => {
       if (current !== first.current) {
         first.current = current;
-        sharedValue(9679).setPushToTalkState(current);
+        sharedValue(9683).setPushToTalkState(current);
         const result = sharedValue.set(current);
-        const obj = sharedValue(9679);
+        const obj = sharedValue(9683);
       }
     }, items)
   ];
@@ -66,27 +66,27 @@ export default function VoicePanelPIPPushToTalkOverlay() {
     if (first.get()) {
       num = 20;
     }
-    obj = { right: sharedValue(4927).withSpring(num, closure_1_5), bottom: null, transform: null, backgroundColor: null };
-    const obj3 = sharedValue(4927);
+    obj = { right: sharedValue(4928).withSpring(num, closure_1_5), bottom: null, transform: null, backgroundColor: null };
+    const obj3 = sharedValue(4928);
     const tmp = sharedValue;
-    obj[1] = sharedValue(4927).withSpring(num, closure_1_5);
-    const obj4 = sharedValue(4927);
+    obj[1] = sharedValue(4928).withSpring(num, closure_1_5);
+    const obj4 = sharedValue(4928);
     let num2 = 1;
     if (obj.get()) {
       num2 = 1.5;
     }
-    obj = { scale: sharedValue(4927).withSpring(num2, tmp3) };
+    obj = { scale: sharedValue(4928).withSpring(num2, tmp3) };
     const items = [obj];
     obj[2] = items;
-    const obj5 = sharedValue(4927);
+    const obj5 = sharedValue(4928);
     let str = "rgba(0, 0, 0, 0.54)";
     if (obj.get()) {
       str = WHITE;
     }
-    obj[3] = tmp(4927).withSpring(str, closure_1_5);
+    obj[3] = tmp(4928).withSpring(str, closure_1_5);
     return obj;
   };
-  obj = { isPushingToTalk: first, EXPANDED_ICON_SIZE: 48, BASE_ICON_SIZE: 32, withSpring: sharedValue(4927).withSpring, PUSH_TO_TALK_PIP_PHYSICS, white: WHITE };
+  obj = { isPushingToTalk: first, EXPANDED_ICON_SIZE: 48, BASE_ICON_SIZE: 32, withSpring: sharedValue(4928).withSpring, PUSH_TO_TALK_PIP_PHYSICS, white: WHITE };
   fn.__closure = obj;
   fn.__workletHash = 3936373516983;
   fn.__initData = closure_13;
@@ -99,7 +99,7 @@ export default function VoicePanelPIPPushToTalkOverlay() {
       return obj;
     }
   }
-  obj = { withSpring: sharedValue(4927).withSpring, isPushingToTalk: first, black: BLACK, white: WHITE, PUSH_TO_TALK_PIP_PHYSICS };
+  obj = { withSpring: sharedValue(4928).withSpring, isPushingToTalk: first, black: BLACK, white: WHITE, PUSH_TO_TALK_PIP_PHYSICS };
   P.__closure = obj;
   P.__workletHash = 11469896791985;
   P.__initData = closure_14;
@@ -119,7 +119,7 @@ export default function VoicePanelPIPPushToTalkOverlay() {
       return obj;
     }
   }
-  obj1 = { withSpring: sharedValue(4927).withSpring, isPushingToTalk: first, PUSH_TO_TALK_PIP_PHYSICS, getVoicePanelPIPBorderRadius: sharedValue(16903).getVoicePanelPIPBorderRadius, pipState: pIPState };
+  obj1 = { withSpring: sharedValue(4928).withSpring, isPushingToTalk: first, PUSH_TO_TALK_PIP_PHYSICS, getVoicePanelPIPBorderRadius: sharedValue(16923).getVoicePanelPIPBorderRadius, pipState: pIPState };
   H.__closure = obj1;
   H.__workletHash = 450590017248;
   H.__initData = closure_15;
@@ -128,8 +128,8 @@ export default function VoicePanelPIPPushToTalkOverlay() {
   obj2 = { children: null };
   const items3 = [tmp2.overlay, animatedStyle2];
   const memo = BLACK.useMemo(() => {
-    const Gesture = sharedValue(5660).Gesture;
-    const Gesture2 = sharedValue(5660).Gesture;
+    const Gesture = sharedValue(5661).Gesture;
+    const Gesture2 = sharedValue(5661).Gesture;
     const TapResult = Gesture2.Tap();
     const fn = function o(arg0, arg1) {
       if (arg1) {
@@ -142,7 +142,7 @@ export default function VoicePanelPIPPushToTalkOverlay() {
     fn.__workletHash = 13736796804739;
     fn.__initData = closure_1_16;
     const maxDistanceResult = Gesture2.Tap().maxDistance(30);
-    const Gesture3 = sharedValue(5660).Gesture;
+    const Gesture3 = sharedValue(5661).Gesture;
     const onEndResult = Gesture2.Tap().maxDistance(30).onEnd(fn);
     const PanResult = Gesture3.Pan();
     const result = Gesture3.Pan().maxPointers(1).shouldCancelWhenOutside(false);
@@ -168,9 +168,9 @@ export default function VoicePanelPIPPushToTalkOverlay() {
   obj4 = { style: items5, hitSlop: closure_11, children: null };
   items5 = [tmp2.iconContainer, animatedStyle];
   const obj7 = sharedValue(4217);
-  obj4[2] = callback(closure_10, { style: animatedStyle1, size: sharedValue(1296).Icon.Sizes.SMALL_20, source: first(16984), disableColor: true });
+  obj4[2] = callback(closure_10, { style: animatedStyle1, size: sharedValue(1296).Icon.Sizes.SMALL_20, source: first(17004), disableColor: true });
   obj3[1] = callback(closure_9, obj4);
-  items4[1] = callback(sharedValue(5660).GestureDetector, obj3);
+  items4[1] = callback(sharedValue(5661).GestureDetector, obj3);
   obj2[0] = items4;
   return callback2(closure_7, obj2);
 };

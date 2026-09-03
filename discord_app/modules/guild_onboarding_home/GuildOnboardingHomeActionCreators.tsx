@@ -1,14 +1,14 @@
-// === Module 12074: _fetchGuildHomeSettings ===
+// === Module 12080: _fetchGuildHomeSettings ===
 
-// Module 12074 (_fetchGuildHomeSettings)
+// Module 12080 (_fetchGuildHomeSettings)
 import expandEventPropertiesDefault from "expandEventProperties" /* 695 */;
 import dispatcherDefault from "dispatcher" /* 706 */;
 import transitionToChannel from "transitionToChannel" /* 4489 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "initialize" /* 1983 */;
 import closure_5 from "ensureGuildLoaded" /* 1386 */;
-import closure_6 from "handleSettingsLoadSuccess" /* 4707 */;
-import closure_7 from "set" /* 4708 */;
+import closure_6 from "handleSettingsLoadSuccess" /* 4708 */;
+import closure_7 from "set" /* 4709 */;
 import ME from "ME" /* 673 */;
 
 require = arg1;
@@ -35,8 +35,8 @@ function _fetchGuildHomeSettings() {
       obj4[1] = callback;
       obj2.dispatch(obj4);
       lib = yield "HermesInternal";
-      dependencyMap = callback(12075).settingsFromServer(lib.body);
-      const obj8 = callback(12075);
+      dependencyMap = callback(12081).settingsFromServer(lib.body);
+      const obj8 = callback(12081);
       const obj6 = { type: "GUILD_HOME_SETTINGS_FETCH_SUCCESS", guildId: null, homeSettings: null };
       obj6[1] = callback;
       obj6[2] = dependencyMap;
@@ -127,8 +127,8 @@ function _fetchNewMemberActions() {
             return obj5;
           } else {
             lib = arg1;
-            dependencyMap = callback(12075).actionsFromServer(lib.body);
-            const obj11 = callback(12075);
+            dependencyMap = callback(12081).actionsFromServer(lib.body);
+            const obj11 = callback(12081);
             const obj6 = { type: "GUILD_NEW_MEMBER_ACTIONS_FETCH_SUCCESS", guildId: null, memberActions: null };
             obj6[1] = callback;
             obj6[2] = dependencyMap;

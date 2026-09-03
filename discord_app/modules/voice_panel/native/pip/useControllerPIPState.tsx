@@ -1,16 +1,16 @@
-// === Module 16900: useControllerPIPState ===
+// === Module 16920: useControllerPIPState ===
 
-// Module 16900 (useControllerPIPState)
+// Module 16920 (useControllerPIPState)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import closure_5 from "participantFromServer" /* 1385 */;
 import closure_6 from "getParticipants" /* 4494 */;
-import closure_7 from "map" /* 9477 */;
+import closure_7 from "map" /* 9481 */;
 import closure_8 from "ensureGuildLoaded" /* 1386 */;
-import closure_9 from "anyoneHasFlagInContext" /* 5371 */;
-import { VoicePanelModes } from "VoicePanelModes" /* 12063 */;
-import { ActivityPanelModes } from "ActivityPanelModes" /* 9479 */;
-import { asLaunched } from "FrameLayoutModes" /* 9478 */;
+import closure_9 from "anyoneHasFlagInContext" /* 5372 */;
+import { VoicePanelModes } from "VoicePanelModes" /* 12069 */;
+import { ActivityPanelModes } from "ActivityPanelModes" /* 9483 */;
+import { asLaunched } from "FrameLayoutModes" /* 9482 */;
 
 const require = arg1;
 let result = require("set").fileFinishedImporting("modules/voice_panel/native/pip/useControllerPIPState.tsx");
@@ -29,7 +29,7 @@ export const useControllerPIPState = function useControllerPIPState(channelId) {
   let first1;
   c7 = undefined;
   obj = React;
-  ref = React.useRef({ id: "sa", mode: "isArray", width: false, height: "face_with_spiral_eyes", containerHeight: "Array", showSecondaryPIP: "isArray" });
+  ref = React.useRef({ id: "sa", mode: "isArray", width: false, height: "IMPERSONATE_STOP", containerHeight: null, showSecondaryPIP: "flex" });
   const tmp2 = first(React.useState(undefined), 2);
   first = tmp2[0];
   React = tmp2[1];
@@ -40,7 +40,7 @@ export const useControllerPIPState = function useControllerPIPState(channelId) {
   obj = channelId;
   ref = mode;
   dependencyMap = undefined;
-  const tmp7 = ref(16853)(channelId);
+  const tmp7 = ref(16873)(channelId);
   dependencyMap = tmp7;
   let items = [closure_5, c7, closure_8];
   const items1 = [channelId, tmp7, mode];
@@ -88,7 +88,7 @@ export const useControllerPIPState = function useControllerPIPState(channelId) {
     }
     obj3 = connectedActivityLocation;
   }, items1);
-  let tmp10 = ref(16901)(channelId);
+  let tmp10 = ref(16921)(channelId);
   first1 = first(React.useState(() => ref(closure_2[16])((arg0) => arg0(), 1000, { leading: true })), 1)[0];
   const items2 = [first1];
   const layoutEffect = React.useLayoutEffect(() => () => closure_6.cancel(), items2);
@@ -97,7 +97,7 @@ export const useControllerPIPState = function useControllerPIPState(channelId) {
   [tmp14, c7] = first(React.useState(() => closure_2.getTargetDimensions(ref)), 2);
   obj = { connected, mode, focusedId, participantTargetDimensions: tmp14, selfHasVideo: tmp10, showSecondaryPIP: stateFromStores };
   let tmp13 = first(React.useState(() => closure_2.getTargetDimensions(ref)), 2);
-  ({ participant, dimensions } = ref(16902)(channelId, layoutManager, focusedId, first, obj));
+  ({ participant, dimensions } = ref(16922)(channelId, layoutManager, focusedId, first, obj));
   obj = {};
   const merged = Object.assign(ref.current);
   const merged1 = Object.assign(dimensions);
@@ -107,10 +107,10 @@ export const useControllerPIPState = function useControllerPIPState(channelId) {
   }
   obj.id = id;
   obj.showSecondaryPIP = stateFromStores;
-  let tmp8Result = tmp8(16903);
+  let tmp8Result = tmp8(16923);
   obj.mode = tmp8Result.getPIPMode({ channelId, connected, manuallyFocusedId: focusedId, mode, selfHasVideo: tmp10 });
   dependencyMap = undefined;
-  tmp8Result = tmp8(9223);
+  tmp8Result = tmp8(9227);
   let result = tmp8Result.cheapWorkletShallowEqual(obj, ref.current);
   dependencyMap = !result;
   const effect = obj.useEffect(() => {
@@ -175,6 +175,6 @@ export const useControllerPIPState = function useControllerPIPState(channelId) {
       });
     });
   }, items4);
-  tmp5(16905)(channelId, layoutManager, focusedId);
+  tmp5(16925)(channelId, layoutManager, focusedId);
   return obj;
 };

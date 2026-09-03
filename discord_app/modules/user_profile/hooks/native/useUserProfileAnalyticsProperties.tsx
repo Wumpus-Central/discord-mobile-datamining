@@ -1,8 +1,8 @@
-// === Module 8914: useUserProfileAnalyticsProperties ===
+// === Module 8918: useUserProfileAnalyticsProperties ===
 
-// Module 8914 (useUserProfileAnalyticsProperties)
+// Module 8918 (useUserProfileAnalyticsProperties)
 import closure_0 from "noop" /* 19 */;
-import { UserProfileAnalyticsTypes } from "USER_PROFILE_TOOLTIP_DELAY" /* 8569 */;
+import { UserProfileAnalyticsTypes } from "USER_PROFILE_TOOLTIP_DELAY" /* 8573 */;
 
 let result = require("set").fileFinishedImporting("modules/user_profile/hooks/native/useUserProfileAnalyticsProperties.tsx");
 

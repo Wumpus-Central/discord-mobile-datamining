@@ -1,8 +1,8 @@
-// === Module 12321: useGuildPowerupCardFooterConfig ===
+// === Module 12333: useGuildPowerupCardFooterConfig ===
 
-// Module 12321 (useGuildPowerupCardFooterConfig)
-import useGuildPowerupRollbackEnabledDefault from "useGuildPowerupRollbackEnabled" /* 12284 */;
-import usePowerupActiveStatusDefault from "usePowerupActiveStatus" /* 12287 */;
+// Module 12333 (useGuildPowerupCardFooterConfig)
+import useGuildPowerupRollbackEnabledDefault from "useGuildPowerupRollbackEnabled" /* 12296 */;
+import usePowerupActiveStatusDefault from "usePowerupActiveStatus" /* 12299 */;
 import closure_3 from "createGuildRecordFromRust" /* 1908 */;
 import BoostedGuildTiers from "BoostedGuildTiers" /* 4365 */;
 import { GuildFeatures } from "ME" /* 673 */;

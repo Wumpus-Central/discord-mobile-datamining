@@ -1,6 +1,6 @@
-// === Module 15324: onGoLiveNotificationSettingsChanged ===
+// === Module 15339: onGoLiveNotificationSettingsChanged ===
 
-// Module 15324 (onGoLiveNotificationSettingsChanged)
+// Module 15339 (onGoLiveNotificationSettingsChanged)
 import set from "set" /* 2 */;
 import ME from "ME" /* 673 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 695 */;

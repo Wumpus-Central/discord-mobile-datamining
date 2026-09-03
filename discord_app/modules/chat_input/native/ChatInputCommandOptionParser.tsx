@@ -1,18 +1,18 @@
-// === Module 11786: findTokenLocations ===
+// === Module 11792: findTokenLocations ===
 
-// Module 11786 (findTokenLocations)
+// Module 11792 (findTokenLocations)
 import getEmojiUnavailableReasonDefault from "getEmojiUnavailableReason" /* 4138 */;
 import getGameMediaRefURLDefault from "getGameMediaRefURL" /* 4511 */;
-import registerAssetDefault from "registerAsset" /* 8049 */;
-import addRule from "addRule" /* 11787 */;
+import registerAssetDefault from "registerAsset" /* 8052 */;
+import addRule from "addRule" /* 11793 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import { Image } from "get ActivityIndicator" /* 17 */;
 import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4470 */;
-import closure_6 from "getEmojiToGroupId" /* 5409 */;
+import closure_6 from "getEmojiToGroupId" /* 5410 */;
 import closure_7 from "createGuildRoleRecordFromRust" /* 1984 */;
 import closure_8 from "getUncachedChannelPermissions" /* 4120 */;
 import { Permissions } from "ME" /* 673 */;
-import regExp from "regExp" /* 4953 */;
+import regExp from "regExp" /* 4954 */;
 import { EmojiIntention } from "set" /* 1924 */;
 
 require = arg1;
@@ -344,7 +344,7 @@ export const getEmojiHighlightNodes = function getEmojiHighlightNodes(channel, a
 };
 export const getUsernameHighlightNodes = function getUsernameHighlightNodes(channel, arg1) {
   const items = [];
-  let obj = _require(11788);
+  let obj = _require(11794);
   const users = obj.getUsers(channel);
   _require = (arg0) => arg0;
   let match = regex3.exec(arg1);
@@ -524,7 +524,7 @@ export const getTimestampHighlightNodes = function getTimestampHighlightNodes(me
   return findAllTimestampPillMatches(mentionTimestamps, content).map((location) => ({ location: location.location, length: location.pillText.length }));
 };
 export const getTimestampMentionInputNodes = function getTimestampMentionInputNodes(arr) {
-  const TimestampAutocompleteMobileExperiment = _require(6187).TimestampAutocompleteMobileExperiment;
+  const TimestampAutocompleteMobileExperiment = _require(6188).TimestampAutocompleteMobileExperiment;
   const items = [];
   if (TimestampAutocompleteMobileExperiment.getConfig({ location: "timestamp mention input highlight" }).enabled) {
     _require = closure_11;
@@ -533,7 +533,7 @@ export const getTimestampMentionInputNodes = function getTimestampMentionInputNo
       do {
         let tmp3 = _require;
         let tmp4 = dependencyMap;
-        let obj = _require(10361);
+        let obj = _require(10365);
         let tmp5 = index;
         if (obj.isWhitespaceSeparatingBoundary(arr, index)) {
           arr = items.push(index);
@@ -556,7 +556,7 @@ export const getGameMentionInputNodes = function getGameMentionInputNodes(arr) {
       do {
         let tmp3 = _require;
         let tmp4 = dependencyMap;
-        let obj = _require(10361);
+        let obj = _require(10365);
         let tmp5 = index;
         if (obj.isWhitespaceSeparatingBoundary(arr, index)) {
           arr = items.push(index);
@@ -599,7 +599,7 @@ export const getChannelHighlightNodes = function getChannelHighlightNodes(channe
   let _loop5Result;
   const _require = arg1;
   let items = [];
-  dependencyMap = _require(11788).getChannels(channel);
+  dependencyMap = _require(11794).getChannels(channel);
   c3 = 0;
   function _loop5() {
     let arr = lib;

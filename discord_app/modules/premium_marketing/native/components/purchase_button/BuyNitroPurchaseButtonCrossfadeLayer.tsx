@@ -1,6 +1,6 @@
-// === Module 13271: BuyNitroPurchaseButtonCrossfadeLayer ===
+// === Module 13283: BuyNitroPurchaseButtonCrossfadeLayer ===
 
-// Module 13271 (BuyNitroPurchaseButtonCrossfadeLayer)
+// Module 13283 (BuyNitroPurchaseButtonCrossfadeLayer)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { StyleSheet } from "get ActivityIndicator" /* 17 */;
@@ -38,7 +38,7 @@ export default function BuyNitroPurchaseButtonCrossfadeLayer(arg0) {
     fn.__initData = closure_1_8;
     const result = sharedValue.set(obj.withTiming(0, onDone(closure_1_2[6]).timingStandard, "respect-motion-settings", fn));
   }, items);
-  obj = { style: items1, pointerEvents: "none", children: jsx(onDone(4928).Button, obj) };
+  obj = { style: items1, pointerEvents: "none", children: jsx(onDone(4929).Button, obj) };
   items1 = [StyleSheet.absoluteFill, animatedStyle];
   obj = { text: snapshot.ctaText, variant: snapshot.variant, size: "lg", grow: true, onPress: "Boolean" };
   return jsx(sharedValue(4217).View, { text: snapshot.ctaText, variant: snapshot.variant, size: "lg", grow: true, onPress: "Boolean" });

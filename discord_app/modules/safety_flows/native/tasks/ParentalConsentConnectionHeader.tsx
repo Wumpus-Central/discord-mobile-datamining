@@ -1,6 +1,6 @@
-// === Module 17697: ParentalConsentConnectionNavbar ===
+// === Module 17721: ParentalConsentConnectionNavbar ===
 
-// Module 17697 (ParentalConsentConnectionNavbar)
+// Module 17721 (ParentalConsentConnectionNavbar)
 import noopAll from "noop" /* 19 */;
 import initialize from "initialize" /* 586 */;
 import ThemesDefault from "Themes" /* 709 */;

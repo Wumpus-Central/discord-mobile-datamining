@@ -1,6 +1,6 @@
-// === Module 16398: JoinRequestActionSheet ===
+// === Module 16417: JoinRequestActionSheet ===
 
-// Module 16398 (JoinRequestActionSheet)
+// Module 16417 (JoinRequestActionSheet)
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4470 */;

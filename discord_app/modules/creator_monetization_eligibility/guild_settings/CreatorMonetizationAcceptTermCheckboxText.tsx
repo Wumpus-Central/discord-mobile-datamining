@@ -1,6 +1,6 @@
-// === Module 17534: getCreatorMonetizationAcceptTermsCheckboxText ===
+// === Module 17554: getCreatorMonetizationAcceptTermsCheckboxText ===
 
-// Module 17534 (getCreatorMonetizationAcceptTermsCheckboxText)
+// Module 17554 (getCreatorMonetizationAcceptTermsCheckboxText)
 import set from "set" /* 2 */;
 import ME from "ME" /* 673 */;
 import getSystemLocale from "getSystemLocale" /* 1233 */;

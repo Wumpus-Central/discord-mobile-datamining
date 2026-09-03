@@ -1,10 +1,10 @@
-// === Module 13554: hydrateGuild ===
+// === Module 13569: hydrateGuild ===
 
-// Module 13554 (hydrateGuild)
+// Module 13569 (hydrateGuild)
 import set2 from "set" /* 2 */;
 import createChannelRecord from "createChannelRecord" /* 1390 */;
 import itemsDefault from "items" /* 1955 */;
-import isCacheEnabled from "isCacheEnabled" /* 7403 */;
+import isCacheEnabled from "isCacheEnabled" /* 7404 */;
 
 function hydrateGuild(guild) {
   closure_0 = guild;
@@ -359,7 +359,7 @@ export const preloadReadyPayloadData = function preloadReadyPayloadData() {
   const obj = itemsDefault;
   const tmp4 = require;
   if (obj2.isCacheEnabled()) {
-    let tmpResult = tmp(7407);
+    let tmpResult = tmp(7408);
     let committedVersions = tmpResult.getCommittedVersions();
   } else {
     committedVersions = Promise.resolve({});
@@ -374,8 +374,8 @@ export const preloadReadyPayloadData = function preloadReadyPayloadData() {
     guildIds = Promise.resolve(set);
   }
   if (null != databaseResult) {
-    let okAsyncResult = tmp(7408).okAsync(databaseResult);
-    const tmpResult1 = tmp(7408);
+    let okAsyncResult = tmp(7409).okAsync(databaseResult);
+    const tmpResult1 = tmp(7409);
   } else {
     okAsyncResult = Promise.resolve(false);
   }

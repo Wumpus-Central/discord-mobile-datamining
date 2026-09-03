@@ -1,6 +1,6 @@
-// === Module 7121: metadata ===
+// === Module 7122: metadata ===
 
-// Module 7121 (metadata)
+// Module 7122 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/VoiceFiltersSpotIllustration-2x.png.js");

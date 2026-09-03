@@ -1,12 +1,12 @@
-// === Module 16126: Wrapper ===
+// === Module 16142: Wrapper ===
 
-// Module 16126 (Wrapper)
+// Module 16142 (Wrapper)
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "updateGuildUnreadSentinel" /* 7390 */;
+import closure_5 from "updateGuildUnreadSentinel" /* 7391 */;
 import closure_6 from "createGuildRecordFromRust" /* 1908 */;
-import closure_7 from "insertUnsortedGuilds" /* 5389 */;
-import closure_8 from "updateUserGuildSettingsInternal" /* 4701 */;
+import closure_7 from "insertUnsortedGuilds" /* 5390 */;
+import closure_8 from "updateUserGuildSettingsInternal" /* 4702 */;
 import closure_9 from "updateVoiceState" /* 4497 */;
 import { NOOP } from "ME" /* 673 */;
 import jsxProd from "jsxProd" /* 21 */;

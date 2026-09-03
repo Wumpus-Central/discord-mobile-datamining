@@ -1,9 +1,9 @@
-// === Module 7849: modifyRow ===
+// === Module 7852: modifyRow ===
 
-// Module 7849 (modifyRow)
+// Module 7852 (modifyRow)
 import ThemesDefault from "Themes" /* 709 */;
-import setOptionsDefault from "setOptions" /* 7850 */;
-import MediaGalleryItemType from "MediaGalleryItemType" /* 8044 */;
+import setOptionsDefault from "setOptions" /* 7853 */;
+import MediaGalleryItemType from "MediaGalleryItemType" /* 8047 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4470 */;

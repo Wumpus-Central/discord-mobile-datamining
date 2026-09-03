@@ -1,8 +1,8 @@
-// === Module 11916: useSortApplicationsViaFrecency ===
+// === Module 11922: useSortApplicationsViaFrecency ===
 
-// Module 11916 (useSortApplicationsViaFrecency)
+// Module 11922 (useSortApplicationsViaFrecency)
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "handleUserSettingsProtoStoreChange" /* 8155 */;
+import closure_4 from "handleUserSettingsProtoStoreChange" /* 8159 */;
 import { UserSettingsTypes } from "MAX_FAVORITES" /* 682 */;
 
 const require = arg1;

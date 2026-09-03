@@ -1,6 +1,6 @@
-// === Module 11741: _joinOrStartActivityInChannel ===
+// === Module 11746: _joinOrStartActivityInChannel ===
 
-// Module 11741 (_joinOrStartActivityInChannel)
+// Module 11746 (_joinOrStartActivityInChannel)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "participantFromServer" /* 1385 */;
 import closure_5 from "ensureGuildLoaded" /* 1386 */;
@@ -86,7 +86,7 @@ function _joinOrStartActivityInChannel() {
                     callback2 = null;
                   }
                   closure_8 = callback2;
-                  callback2(9532)(closure_8, channel.location);
+                  callback2(9536)(closure_8, channel.location);
                   channel = 3;
                   return { value: true, done: true };
                 }
@@ -97,12 +97,12 @@ function _joinOrStartActivityInChannel() {
               if (length.length > 0) {
                 compositeInstanceId = length[0].compositeInstanceId;
               }
-              let obj2 = callback(9482);
+              let obj2 = callback(9486);
               obj2 = { channelId: null, applicationId: null, isStart: null, embeddedActivitiesManager: null, analyticsLocations: null, customId: null, referrerId: null };
               obj2[0] = callback2;
               obj2[1] = callback;
               obj2[2] = null == compositeInstanceId;
-              obj2[3] = callback2(9465)();
+              obj2[3] = callback2(9469)();
               obj2[4] = dependencyMap;
               obj2[5] = c3;
               obj2[6] = store;

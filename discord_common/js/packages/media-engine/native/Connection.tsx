@@ -1713,7 +1713,7 @@ prototype["setStreamParameters"] = function setStreamParameters(arg0) {
         const _Error = Error;
         error = new Error("Invalid rid");
         lib(error);
-        return { v: "r" };
+        return { v: "Array" };
       } else {
         const items = [];
         if (!callback(self[11])(lib.videoStreamParameters[findIndexResult], tmp[findIndexResult])) {

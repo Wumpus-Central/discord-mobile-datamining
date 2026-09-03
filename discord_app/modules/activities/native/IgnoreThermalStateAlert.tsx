@@ -1,8 +1,8 @@
-// === Module 9567: IgnoreThermalStateAlert ===
+// === Module 9571: IgnoreThermalStateAlert ===
 
-// Module 9567 (IgnoreThermalStateAlert)
+// Module 9571 (IgnoreThermalStateAlert)
 import noopAll from "noop" /* 19 */;
-import componentDidMountDefault from "componentDidMount" /* 4947 */;
+import componentDidMountDefault from "componentDidMount" /* 4948 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 

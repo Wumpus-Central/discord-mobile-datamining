@@ -1,10 +1,10 @@
-// === Module 15115: ChannelRowItem ===
+// === Module 15130: ChannelRowItem ===
 
-// Module 15115 (ChannelRowItem)
+// Module 15130 (ChannelRowItem)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 709 */;
 import Button2 from "Button" /* 1296 */;
-import FacepileGroupDMAvatar from "FacepileGroupDMAvatar" /* 10869 */;
+import FacepileGroupDMAvatar from "FacepileGroupDMAvatar" /* 10873 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { StatusTypes } from "ME" /* 673 */;
 import jsxProd from "jsxProd" /* 21 */;

@@ -1,6 +1,6 @@
-// === Module 13923: useGuildActionSheetPermissions ===
+// === Module 13939: useGuildActionSheetPermissions ===
 
-// Module 13923 (useGuildActionSheetPermissions)
+// Module 13939 (useGuildActionSheetPermissions)
 import closure_2 from "getUncachedChannelPermissions" /* 4120 */;
 import { Permissions } from "ME" /* 673 */;
 

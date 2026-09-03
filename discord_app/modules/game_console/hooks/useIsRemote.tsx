@@ -1,6 +1,6 @@
-// === Module 6126: useIsRemote ===
+// === Module 6127: useIsRemote ===
 
-// Module 6126 (useIsRemote)
+// Module 6127 (useIsRemote)
 import initialize from "initialize" /* 586 */;
 import closure_2 from "set" /* 4495 */;
 

@@ -1,12 +1,12 @@
-// === Module 7779: AddPhone ===
+// === Module 7782: AddPhone ===
 
-// Module 7779 (AddPhone)
+// Module 7782 (AddPhone)
 import ThemesDefault from "Themes" /* 709 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_8 from "handleSetLocationMetadata" /* 7725 */;
+import closure_8 from "handleSetLocationMetadata" /* 7728 */;
 import closure_9 from "handleRequiredAction" /* 1380 */;
 import closure_10 from "mergeGuildAvatar" /* 1921 */;
 import { UserFlags } from "ME" /* 673 */;

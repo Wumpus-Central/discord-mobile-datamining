@@ -1,7 +1,7 @@
-// === Module 16616: CoachmarkImage ===
+// === Module 16636: CoachmarkImage ===
 
-// Module 16616 (CoachmarkImage)
-import AccountAgeTier10LargeBadge from "AccountAgeTier10LargeBadge" /* 6265 */;
+// Module 16636 (CoachmarkImage)
+import AccountAgeTier10LargeBadge from "AccountAgeTier10LargeBadge" /* 6266 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_5 from "mergeGuildAvatar" /* 1921 */;
@@ -61,6 +61,6 @@ export default function DisplayNameStylesFlywheelProfileCoachmark(visible) {
     }
   }), items2);
   const obj2 = markAsDismissed(4139);
-  const coachmark = visible(8987).useCoachmark(visible.targetRef, memo);
+  const coachmark = visible(8991).useCoachmark(visible.targetRef, memo);
   return null;
 };

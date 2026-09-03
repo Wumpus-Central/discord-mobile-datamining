@@ -1,6 +1,6 @@
-// === Module 15177: DisplayNameStylesColorPickerSheet ===
+// === Module 15192: DisplayNameStylesColorPickerSheet ===
 
-// Module 15177 (DisplayNameStylesColorPickerSheet)
+// Module 15192 (DisplayNameStylesColorPickerSheet)
 import ThemesDefault from "Themes" /* 709 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;

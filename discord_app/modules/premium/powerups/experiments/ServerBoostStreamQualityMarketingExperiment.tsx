@@ -1,6 +1,6 @@
-// === Module 13467: CONTROL_RESOLUTION ===
+// === Module 13482: CONTROL_RESOLUTION ===
 
-// Module 13467 (CONTROL_RESOLUTION)
+// Module 13482 (CONTROL_RESOLUTION)
 import getUnitIdDefault from "getUnitId" /* 1468 */;
 
 const obj = { 1: null };

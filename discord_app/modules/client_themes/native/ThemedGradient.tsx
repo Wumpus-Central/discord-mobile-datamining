@@ -1,6 +1,6 @@
-// === Module 5078: getMixedGradientColor ===
+// === Module 5079: getMixedGradientColor ===
 
-// Module 5078 (getMixedGradientColor)
+// Module 5079 (getMixedGradientColor)
 import ThemesDefault from "Themes" /* 709 */;
 import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 1362 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1492 */;
@@ -9,7 +9,7 @@ import hslToRgbDefault from "hslToRgb" /* 4327 */;
 import set from "set" /* 4329 */;
 import getGuildIdFromNavigationStateDefault from "getGuildIdFromNavigationState" /* 4331 */;
 import useThemeDefault from "useTheme" /* 4413 */;
-import LinearGradientDefault from "LinearGradient" /* 4940 */;
+import LinearGradientDefault from "LinearGradient" /* 4941 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_5 from "reset" /* 4297 */;

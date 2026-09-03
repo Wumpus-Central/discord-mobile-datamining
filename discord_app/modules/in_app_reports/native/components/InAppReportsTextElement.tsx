@@ -1,8 +1,8 @@
-// === Module 8792: TextElement ===
+// === Module 8796: TextElement ===
 
-// Module 8792 (TextElement)
+// Module 8796 (TextElement)
 import Text from "Text" /* 4474 */;
-import createRulesAll from "createRules" /* 4948 */;
+import createRulesAll from "createRules" /* 4949 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;

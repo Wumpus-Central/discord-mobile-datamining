@@ -1,6 +1,6 @@
-// === Module 4926: Stack ===
+// === Module 4927: Stack ===
 
-// Module 4926 (Stack)
+// Module 4927 (Stack)
 import noopAll from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;

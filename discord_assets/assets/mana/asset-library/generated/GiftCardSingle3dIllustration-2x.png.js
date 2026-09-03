@@ -1,6 +1,6 @@
-// === Module 6705: metadata ===
+// === Module 6706: metadata ===
 
-// Module 6705 (metadata)
+// Module 6706 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/GiftCardSingle3dIllustration-2x.png.js");

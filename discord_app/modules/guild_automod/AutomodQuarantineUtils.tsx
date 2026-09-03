@@ -1,8 +1,8 @@
-// === Module 11667: useCurrentUserHasAutomodQuarantinedProfile ===
+// === Module 11672: useCurrentUserHasAutomodQuarantinedProfile ===
 
-// Module 11667 (useCurrentUserHasAutomodQuarantinedProfile)
+// Module 11672 (useCurrentUserHasAutomodQuarantinedProfile)
 import closure_2 from "noop" /* 19 */;
-import closure_3 from "zustandStore" /* 9046 */;
+import closure_3 from "zustandStore" /* 9050 */;
 import closure_4 from "fetchFingerprint" /* 1215 */;
 import closure_5 from "trackCommunicationDisabled" /* 1991 */;
 import closure_6 from "createGuildRecordFromRust" /* 1908 */;
@@ -38,7 +38,7 @@ export const useGuildAutomodProfileQuarantineErrors = function useGuildAutomodPr
     if (id == null) {
       guildId = closure_1_8.getGuildId();
     }
-    let obj = { nick: "disabled", bio: "Date" };
+    let obj = { nick: "Array", bio: "PX_16" };
     let guild = closure_1_6.getGuild(guildId);
     if (null != guild) {
       if (null != guildId) {

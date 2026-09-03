@@ -1,12 +1,12 @@
-// === Module 7402: hasBasicChannelChanged ===
+// === Module 7403: hasBasicChannelChanged ===
 
-// Module 7402 (hasBasicChannelChanged)
+// Module 7403 (hasBasicChannelChanged)
 import timestampDefault from "timestamp" /* 3 */;
 import fromStringAll from "fromString" /* 503 */;
 import itemsDefault from "items" /* 1955 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "asyncGeneratorStep" /* 5 */;
-import closure_6 from "_handleConnectionOpen" /* 5229 */;
+import closure_6 from "_handleConnectionOpen" /* 5230 */;
 import { createChannelRecordFromServer as closure_7 } from "createChannelRecord" /* 1390 */;
 import closure_8 from "fetchFingerprint" /* 1215 */;
 import closure_9 from "ensureGuildLoaded" /* 1386 */;
@@ -309,7 +309,7 @@ prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
                             closure_2_15.warn("couldn't optimstically write basic_channel:", closure_1);
                             c6 = 3;
                             const obj2 = { value: null, done: true };
-                            obj2[0] = { v: "r" };
+                            obj2[0] = { v: "Array" };
                             return obj2;
                           } else if (2 === tmp7) {
                             if (arg0 === 1) {

@@ -1,6 +1,6 @@
-// === Module 13152: GroupDmMemberCount ===
+// === Module 13164: GroupDmMemberCount ===
 
-// Module 13152 (GroupDmMemberCount)
+// Module 13164 (GroupDmMemberCount)
 import ThemesDefault from "Themes" /* 709 */;
 import importAllResult from "noop" /* 19 */;
 import closure_4 from "ensureGuildLoaded" /* 1386 */;
@@ -42,7 +42,7 @@ function GroupDmMemberCount(channel) {
     }, 0);
   });
   const obj = channel(586);
-  return channel(13155).renderMemberCountText(stateFromStores, channel.recipients.length);
+  return channel(13167).renderMemberCountText(stateFromStores, channel.recipients.length);
 }
 let c3 = importAllResult;
 ({ ChannelTypes: closure_8, StatusTypes: c9 } = ME);

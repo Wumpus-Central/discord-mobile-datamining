@@ -1,10 +1,10 @@
-// === Module 16852: BaseLeaveActivityButton ===
+// === Module 16872: BaseLeaveActivityButton ===
 
-// Module 16852 (BaseLeaveActivityButton)
+// Module 16872 (BaseLeaveActivityButton)
 import getSystemLocale from "getSystemLocale" /* 1233 */;
-import Button from "Button" /* 4928 */;
-import registerAssetDefault from "registerAsset" /* 10026 */;
-import { ActivityPanelModes } from "ActivityPanelModes" /* 9479 */;
+import Button from "Button" /* 4929 */;
+import registerAssetDefault from "registerAsset" /* 10030 */;
+import { ActivityPanelModes } from "ActivityPanelModes" /* 9483 */;
 import { jsx } from "jsxProd" /* 21 */;
 import importAllResult from "noop" /* 19 */;
 

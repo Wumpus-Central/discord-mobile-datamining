@@ -1,6 +1,6 @@
-// === Module 12030: MediaKeyboardButtonIcon ===
+// === Module 12036: MediaKeyboardButtonIcon ===
 
-// Module 12030 (MediaKeyboardButtonIcon)
+// Module 12036 (MediaKeyboardButtonIcon)
 import noopAll from "noop" /* 19 */;
 import _modDef4217 from "module_4217" /* 4217 */;
 import useKeyboardTypeDefault from "useKeyboardType" /* 4342 */;
@@ -46,7 +46,7 @@ export const MediaKeyboardButtonIcon = function MediaKeyboardButtonIcon(arg0) {
     obj[0] = animatedStyle;
     obj1 = {};
     const merged1 = Object.assign(merged);
-    obj[1] = jsx(_require(10909).PlusLargeIcon, {});
+    obj[1] = jsx(_require(10913).PlusLargeIcon, {});
     return jsx(_modDef4217.View, { style: null, children: null });
   }
 };

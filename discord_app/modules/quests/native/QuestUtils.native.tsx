@@ -1,6 +1,6 @@
-// === Module 11557: openRewardClaimBottomSheet ===
+// === Module 11562: openRewardClaimBottomSheet ===
 
-// Module 11557 (openRewardClaimBottomSheet)
+// Module 11562 (openRewardClaimBottomSheet)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 709 */;
 import getSystemLocale from "getSystemLocale" /* 1233 */;
@@ -9,21 +9,21 @@ import asyncRequireImpl from "asyncRequireImpl" /* 2008 */;
 import _modDef4190 from "module_4190" /* 4190 */;
 import getRootNavigationRef from "getRootNavigationRef" /* 4333 */;
 import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4445 */;
-import useAlertStore from "useAlertStore" /* 4859 */;
-import getAlertModalItemKey from "getAlertModalItemKey" /* 4863 */;
-import isSponsoredPlayQuest from "isSponsoredPlayQuest" /* 7477 */;
-import _manuallyStartConsoleQuest from "_manuallyStartConsoleQuest" /* 11133 */;
-import _getDefaultRewardName from "_getDefaultRewardName" /* 11147 */;
+import useAlertStore from "useAlertStore" /* 4860 */;
+import getAlertModalItemKey from "getAlertModalItemKey" /* 4864 */;
+import isSponsoredPlayQuest from "isSponsoredPlayQuest" /* 7478 */;
+import _manuallyStartConsoleQuest from "_manuallyStartConsoleQuest" /* 11137 */;
+import _getDefaultRewardName from "_getDefaultRewardName" /* 11151 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "zustandStore" /* 11558 */;
-import QuestsExperimentLocations from "QuestsExperimentLocations" /* 5395 */;
+import closure_4 from "zustandStore" /* 11563 */;
+import QuestsExperimentLocations from "QuestsExperimentLocations" /* 5396 */;
 import { UserSettingsSections } from "ME" /* 673 */;
 import jsxProd from "jsxProd" /* 21 */;
 
 require = arg1;
 function openRewardClaimBottomSheet(arg0) {
   ({ questId, questContent, questContentPosition, sourceQuestContent } = arg0);
-  return ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(11562, dependencyMap.paths), closure_6, { questId, questContent, questContentPosition, sourceQuestContent });
+  return ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(11567, dependencyMap.paths), closure_6, { questId, questContent, questContentPosition, sourceQuestContent });
 }
 function viewReward(quest) {
   quest = quest.quest;
@@ -35,12 +35,12 @@ function viewReward(quest) {
     obj[1] = questContent;
     obj[2] = questContentPosition;
     obj[3] = sourceQuestContent;
-    ACTION_SHEET_HEIGHT_HALFDefault.openLazy(tmp(2008)(11562, dependencyMap.paths), closure_6, obj);
+    ACTION_SHEET_HEIGHT_HALFDefault.openLazy(tmp(2008)(11567, dependencyMap.paths), closure_6, obj);
     const obj7 = ACTION_SHEET_HEIGHT_HALFDefault;
   } else {
-    let tmpResult = tmp(11147);
+    let tmpResult = tmp(11151);
     if (tmpResult.hasVirtualCurrencyReward(quest.config)) {
-      tmpResult = tmp(11569);
+      tmpResult = tmp(11574);
       obj = { quest: null };
       obj[0] = quest;
       const result = tmpResult.openQuestOrbsRewardModal(obj);
@@ -49,8 +49,8 @@ function viewReward(quest) {
       obj1[0] = quest;
       obj1[1] = product;
       obj1[2] = onSuccess;
-      const result1 = tmp(11580).openQuestCollectibleRewardModal(obj1);
-      const tmpResult1 = tmp(11580);
+      const result1 = tmp(11585).openQuestCollectibleRewardModal(obj1);
+      const tmpResult1 = tmp(11585);
     }
   }
 }
@@ -112,7 +112,7 @@ function _handleRewardClaim() {
             const obj3 = { key: "CLAIM_QUEST_REWARD_ERROR", content: null, icon: null };
             const intl = logger(1233).intl;
             obj3[1] = intl.string(logger(1233).t.CKsXk3);
-            obj3[2] = callback(7689);
+            obj3[2] = callback(7692);
             obj1.open(obj3);
             c6 = 3;
             return { value: false, done: true };
@@ -217,7 +217,7 @@ function _handleRewardClaimThenView() {
               }
               if (c5) {
                 if (!c6) {
-                  let obj4 = lib(11147);
+                  let obj4 = lib(11151);
                 }
                 if (obj9.hasQuestRewardCode(lib.config)) {
                   const obj2 = { questId: null, questContent: null, questContentPosition: null, sourceQuestContent: null };
@@ -244,17 +244,17 @@ function _handleRewardClaimThenView() {
                   })(lib);
                   return obj3;
                 }
-                obj9 = lib(11147);
+                obj9 = lib(11151);
               }
               if (!c6) {
-                let obj5 = callback(7696);
+                let obj5 = callback(7699);
                 obj5.open();
               }
               let obj6 = callback(4194);
               obj4 = { key: "CLAIM_QUEST_REWARD_ERROR", content: null, icon: null };
               const intl = lib(1233).intl;
               obj4[1] = intl.string(lib(1233).t["HZlu0+"]);
-              obj4[2] = callback(7689);
+              obj4[2] = callback(7692);
               obj6.open(obj4);
               c4 = 3;
               return { value: false, done: true };
@@ -308,7 +308,7 @@ noopAll;
 let result = require("set").fileFinishedImporting("modules/quests/native/QuestUtils.native.tsx");
 
 export const openRewardDetailsBottomSheet = function openRewardDetailsBottomSheet(questId) {
-  return ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(11559, dependencyMap.paths), closure_7, { questId: questId.questId });
+  return ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(11564, dependencyMap.paths), closure_7, { questId: questId.questId });
 };
 export { viewReward };
 export const handleRewardClaimThenView = function handleRewardClaimThenView(arg0) {
@@ -408,12 +408,12 @@ export const getPrimaryCtaIcon = function getPrimaryCtaIcon(quest, arg1) {
         obj = { size: "sm", style: null, color: null };
         obj[1] = obj;
         obj[2] = ThemesDefault.colors.WHITE;
-        let tmp5Result = tmp5(tmp(11581).CloudIcon, obj);
+        let tmp5Result = tmp5(tmp(11586).CloudIcon, obj);
       } else {
         obj1 = { size: "sm", style: null, color: null };
         obj1[1] = obj;
         obj1[2] = ThemesDefault.colors.WHITE;
-        tmp5Result = tmp5(tmp(9213).GameControllerIcon, obj1);
+        tmp5Result = tmp5(tmp(9217).GameControllerIcon, obj1);
       }
       return tmp5Result;
     }

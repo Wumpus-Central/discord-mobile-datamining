@@ -1,10 +1,10 @@
-// === Module 10252: getMuteTimeOptions ===
+// === Module 10256: getMuteTimeOptions ===
 
-// Module 10252 (getMuteTimeOptions)
+// Module 10256 (getMuteTimeOptions)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import initialize from "initialize" /* 586 */;
 import getSystemLocale from "getSystemLocale" /* 1233 */;
-import closure_4 from "updateUserGuildSettingsInternal" /* 4701 */;
+import closure_4 from "updateUserGuildSettingsInternal" /* 4702 */;
 import { UserNotificationSettings } from "ME" /* 673 */;
 import MAX_FAVORITES from "MAX_FAVORITES" /* 682 */;
 

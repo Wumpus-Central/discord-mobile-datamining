@@ -1,12 +1,12 @@
-// === Module 11343: fetchBountiesAndDispatch ===
+// === Module 11348: fetchBountiesAndDispatch ===
 
-// Module 11343 (fetchBountiesAndDispatch)
+// Module 11348 (fetchBountiesAndDispatch)
 import dispatcherDefault from "dispatcher" /* 706 */;
-import getQuestDeliveryDataForPlacement from "getQuestDeliveryDataForPlacement" /* 7453 */;
-import getOrRefreshAdSession from "getOrRefreshAdSession" /* 7476 */;
+import getOrRefreshAdSession from "getOrRefreshAdSession" /* 7477 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "handleConnectionInfoChange" /* 4574 */;
-import closure_5 from "set" /* 7457 */;
+import closure_5 from "set" /* 7458 */;
+import closure_6 from "initializeState" /* 7459 */;
 import { Endpoints } from "ME" /* 673 */;
 
 require = arg1;
@@ -31,7 +31,7 @@ function _fetchBountiesAndDispatch() {
     return (function*(arg0, arg1) {
       let map = tmp3;
       let decisions = tmp5;
-      callback(closure_1_2[4]).dispatch({ type: "BOUNTIES_FETCH_QUEST_HOME_BOUNTIES_BEGIN" });
+      callback(closure_1_2[5]).dispatch({ type: "BOUNTIES_FETCH_QUEST_HOME_BOUNTIES_BEGIN" });
       c5 = 1;
       const _Date = Date;
       callback = Date.now();
@@ -39,10 +39,10 @@ function _fetchBountiesAndDispatch() {
       if (1 === tmp8) {
         c5 = 0;
         c5 = closure_4;
-        obj1 = callback(decisions[4]);
+        obj1 = callback(decisions[5]);
         const obj2 = { type: "BOUNTIES_FETCH_QUEST_HOME_BOUNTIES_FAILURE", placement: null, error: null };
         obj2[1] = closure_0;
-        const tmp21 = new callback(decisions[8])(c5);
+        const tmp21 = new callback(decisions[9])(c5);
         obj2[2] = tmp21;
         obj1.dispatch(obj2);
         c7 = 3;
@@ -56,15 +56,15 @@ function _fetchBountiesAndDispatch() {
         decisions = decisions.decisions;
         closure_4 = decisions.flatMap((creative) => {
           if (null != creative.creative) {
-            if (creative.creative.creative_type === callback(request_id[5]).AdCreativeType.BOUNTY) {
-              let tmpResult = tmp(tmp2[6]);
+            if (creative.creative.creative_type === callback(request_id[6]).AdCreativeType.BOUNTY) {
+              let tmpResult = tmp(tmp2[7]);
               const bountyFromServerResult = tmpResult.bountyFromServer(creative.creative.creative_content);
-              tmpResult = tmp(tmp2[7]);
+              tmpResult = tmp(tmp2[8]);
               let obj = { fetchedAt: null, requestId: null, creative: null };
               obj[0] = closure_1;
               obj[1] = request_id.request_id;
               obj = { type: null, bounty: null };
-              obj[0] = tmp(tmp2[5]).AdCreativeType.BOUNTY;
+              obj[0] = tmp(tmp2[6]).AdCreativeType.BOUNTY;
               obj[1] = bountyFromServerResult;
               obj[2] = obj;
               const result = map.set(bountyFromServerResult.id, tmpResult.questAdDecisionFromAdDecision(creative, obj));
@@ -79,15 +79,15 @@ function _fetchBountiesAndDispatch() {
         obj3[2] = closure_0;
         obj3[3] = map;
         obj3[4] = callback;
-        callback(decisions[4]).dispatch(obj3);
+        callback(decisions[5]).dispatch(obj3);
         c5 = 0;
-        const obj7 = callback(decisions[4]);
+        const obj7 = callback(decisions[5]);
       }
       c5 = 0;
       return arg1;
     })();
   });
-  closure_8 = tmp;
+  closure_9 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -132,14 +132,14 @@ function _fetchQuestHomeBounties() {
               c2 = 1;
               c1 = 1;
               obj1 = { value: null, done: false };
-              obj1[0] = closure_1_7(tmp5, closure_1_3(function*() {
+              obj1[0] = closure_1_8(tmp5, closure_1_3(function*() {
                 let uuid = tmp2;
-                let obj5 = closure_1_0(7216);
+                let obj5 = closure_1_0(7217);
                 uuid = yield obj5.getSession();
-                const uuid2 = closure_1_0(7476).getOrRefreshAdSession();
+                const uuid2 = closure_1_0(7477).getOrRefreshAdSession();
                 const HTTP = closure_1_0(527).HTTP;
                 const obj3 = { url: null, query: null, rejectWithError: false, context: null };
-                obj3[0] = closure_1_6.QUESTS_GET_DECISIONS;
+                obj3[0] = closure_1_7.QUESTS_GET_DECISIONS;
                 const obj4 = { placement: null, client_ad_session_id: null, client_heartbeat_session_id: null, num_decisions_requested: 5 };
                 obj4[0] = uuid;
                 obj4[1] = uuid2.uuid;
@@ -174,7 +174,7 @@ function _fetchQuestHomeBounties() {
       }
     })();
   });
-  closure_9 = tmp;
+  closure_10 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -220,7 +220,7 @@ function _fetchBountyPreview() {
               v0 = 1;
               c2 = 1;
               obj1 = { value: null, done: false };
-              obj1[0] = closure_1_7(tmp6, v0(function*() {
+              obj1[0] = closure_1_8(tmp6, v0(function*() {
                 const _URLSearchParams = URLSearchParams;
                 closure_0 = 0;
                 let items = [];
@@ -233,10 +233,10 @@ function _fetchBountyPreview() {
                 items[closure_0] = items1;
                 closure_0 = closure_0 + 1;
                 const str2 = new URLSearchParams(items);
-                const HTTP = closure_1_0(table[11]).HTTP;
+                const HTTP = closure_1_0(table[12]).HTTP;
                 obj1 = { url: null, rejectWithError: false };
                 const _HermesInternal = HermesInternal;
-                obj1[0] = "" + closure_1_6.QUESTS_CREATIVE_PREVIEW + "?" + str2.toString();
+                obj1[0] = "" + closure_1_7.QUESTS_CREATIVE_PREVIEW + "?" + str2.toString();
                 yield HTTP.get(obj1);
                 return arg1.body;
               }));
@@ -260,7 +260,7 @@ function _fetchBountyPreview() {
       }
     })();
   });
-  closure_10 = tmp;
+  closure_11 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -314,7 +314,7 @@ function _claimBountyReward() {
               if (claimingBountyReward.isClaimingBountyReward(callback)) {
                 c7 = 3;
               } else {
-                let obj8 = callback2(closure_1_2[4]);
+                let obj8 = callback2(closure_1_2[5]);
                 obj1 = { type: "BOUNTIES_CLAIM_REWARD_BEGIN", bountyId: null };
                 obj1[1] = tmp71;
                 obj8.dispatch(obj1);
@@ -322,7 +322,7 @@ function _claimBountyReward() {
                 c6 = 2;
                 c7 = 1;
                 const obj2 = { value: null, done: false };
-                obj2[0] = callback(closure_1_2[9]).getSession();
+                obj2[0] = callback(closure_1_2[10]).getSession();
                 return obj2;
               }
               tmp71 = callback;
@@ -330,9 +330,9 @@ function _claimBountyReward() {
           } else if (1 === tmp7) {
             claimingBountyReward = 0;
             c7 = adMetadataSealed;
-            const tmp32 = new callback2(uuid[8])(c7);
+            const tmp32 = new callback2(uuid[9])(c7);
             c6 = tmp32;
-            let obj6 = callback2(uuid[4]);
+            let obj6 = callback2(uuid[5]);
             const obj3 = { type: "BOUNTIES_CLAIM_REWARD_FAILURE", bountyId: null, error: null };
             obj3[1] = callback;
             obj3[2] = c6;
@@ -350,14 +350,14 @@ function _claimBountyReward() {
               return obj4;
             } else {
               uuid = arg1;
-              uuid2 = callback(uuid[10]).getOrRefreshAdSession();
-              const obj15 = callback(uuid[10]);
-              adMetadataSealed = callback(uuid[12]).getAdMetadataSealed(callback2, callback);
-              const obj16 = callback(uuid[12]);
-              claimingBountyReward = callback(uuid[12]).getAdTrafficMetadataSealed(callback2, undefined, callback);
-              const HTTP = callback(uuid[11]).HTTP;
+              uuid2 = callback(uuid[11]).getOrRefreshAdSession();
+              const obj15 = callback(uuid[11]);
+              adMetadataSealed = callback(uuid[13]).getAdMetadataSealed(callback2, callback);
+              const obj16 = callback(uuid[13]);
+              claimingBountyReward = callback(uuid[13]).getAdTrafficMetadataSealed(callback2, undefined, callback);
+              const HTTP = callback(uuid[12]).HTTP;
               const obj5 = { url: null, body: null, rejectWithError: false };
-              obj5[0] = c6.QUESTS_CREATIVES_CLAIM_REWARD(callback);
+              obj5[0] = c7.QUESTS_CREATIVES_CLAIM_REWARD(callback);
               let tmp15 = null;
               if (null != adMetadataSealed) {
                 tmp15 = adMetadataSealed;
@@ -386,7 +386,7 @@ function _claimBountyReward() {
             c7 = 3;
             throw arg1;
           } else if (arg0 !== 2) {
-            obj = callback2(uuid[4]);
+            obj = callback2(uuid[5]);
             obj8 = { type: "BOUNTIES_CLAIM_REWARD_SUCCESS", bountyId: null };
             obj8[1] = callback;
             obj.dispatch(obj8);
@@ -409,7 +409,132 @@ function _claimBountyReward() {
       }
     })();
   });
-  closure_11 = tmp;
+  closure_12 = tmp;
+  const apply = tmp.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
+}
+function _dismissAdContent() {
+  const self = this;
+  const tmp = callback((arg0, arg1) => {
+    closure_0 = arg0;
+    closure_1 = arg1;
+    c6 = 0;
+    c7 = 0;
+    c5 = 0;
+    return (function*(arg0, arg1) {
+      if (c7 === 2) {
+        c7 = 3;
+        HermesBuiltin.throwTypeError();
+      } else if (tmp7 === 3) {
+        if (arg0 === 1) {
+          throw arg1;
+        } else if (arg0 === 2) {
+          let obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
+        } else {
+          return { value: "HermesInternal", done: null };
+        }
+      } else {
+        try {
+          c7 = 2;
+          if (0 === dismissingContent) {
+            if (arg0 === 1) {
+              c7 = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              c7 = 3;
+              obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            } else {
+              closure_3 = tmp3;
+              dependencyMap = tmp5;
+              let adCreativeId;
+              adCreativeId = adCreativeId.adCreativeId;
+              const adCreativeType = adCreativeId.adCreativeType;
+              if (obj15.isDismissible(callback2)) {
+                if (!dismissingContent.isDismissingContent(adCreativeId)) {
+                  let obj5 = callback2(closure_1_2[5]);
+                  obj1 = { type: "AD_CONTENT_DISMISS_BEGIN", adCreativeType: null, adCreativeId: null };
+                  obj1[1] = adCreativeType;
+                  obj1[2] = adCreativeId;
+                  obj5.dispatch(obj1);
+                  c5 = 1;
+                  let tmp53Result = tmp53(closure_1_2[13]);
+                  const adMetadataSealed = tmp53Result.getAdMetadataSealed(tmp52, adCreativeId);
+                  tmp53Result = tmp53(closure_1_2[13]);
+                  const questPlacementFromQuestContent = tmp53Result.getQuestPlacementFromQuestContent(tmp52);
+                  const HTTP = tmp53(closure_1_2[12]).HTTP;
+                  const obj2 = { url: null, body: null, rejectWithError: false };
+                  obj2[0] = c7.QUESTS_CREATIVES_DISMISS(adCreativeId);
+                  let tmp40 = null;
+                  if (null != adMetadataSealed) {
+                    tmp40 = adMetadataSealed;
+                  }
+                  let obj3 = { decision_metadata_sealed: null, placement: null, ad_creative_type: null };
+                  obj3[0] = tmp40;
+                  let tmp41 = null;
+                  if (null != questPlacementFromQuestContent) {
+                    tmp41 = questPlacementFromQuestContent;
+                  }
+                  obj3[1] = tmp41;
+                  obj3[2] = adCreativeType;
+                  obj2[1] = obj3;
+                  dismissingContent = 2;
+                  c7 = 1;
+                  const obj4 = { value: null, done: false };
+                  obj4[0] = HTTP.post(obj2);
+                  return obj4;
+                }
+              }
+              obj15 = callback(closure_1_2[13]);
+            }
+          } else {
+            if (1 === tmp8) {
+              c5 = 0;
+              callback2 = closure_4;
+              obj3 = callback2(706);
+              obj5 = { type: "AD_CONTENT_DISMISS_FAILURE", adCreativeId: null, error: null };
+              obj5[1] = adCreativeId;
+              const tmp27 = new callback2(4377)(callback2);
+              obj5[2] = tmp27;
+              obj3.dispatch(obj5);
+            } else if (arg0 === 1) {
+              c7 = 3;
+              throw arg1;
+            } else if (arg0 !== 2) {
+              obj = callback2(706);
+              const obj6 = { type: "AD_CONTENT_DISMISS_SUCCESS", adCreativeId: null };
+              obj6[1] = adCreativeId;
+              obj.dispatch(obj6);
+              c5 = 0;
+            }
+            c5 = 0;
+            c7 = 3;
+            const obj7 = { value: null, done: true };
+            obj7[0] = arg1;
+            return obj7;
+          }
+          c7 = 3;
+        } catch (tmp42) {
+          closure_4 = tmp42;
+          if (tmp4 === c5) {
+            c7 = tmp2;
+            throw tmp42;
+          } else {
+            dismissingContent = tmp;
+          }
+        }
+      }
+    })();
+  });
+  closure_13 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -463,11 +588,12 @@ export const claimBountyReward = function claimBountyReward(id, closure_1_1) {
   return applyArgumentsResult;
 };
 export const dismissAdContent = function dismissAdContent(c1, QUEST_BAR_MOBILE) {
-  let obj = getQuestDeliveryDataForPlacement;
-  if (obj.isDismissible(QUEST_BAR_MOBILE)) {
-    obj = { type: "AD_CONTENT_DISMISS", adCreativeType: null, adCreativeId: null };
-    ({ adCreativeType: obj3[1], adCreativeId: obj3[2] } = c1);
-    dispatcherDefault.dispatch(obj);
-    const obj2 = dispatcherDefault;
+  const self = this;
+  const apply = _dismissAdContent.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
   }
+  return applyArgumentsResult;
 };

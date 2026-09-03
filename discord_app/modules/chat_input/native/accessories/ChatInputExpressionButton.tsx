@@ -1,6 +1,6 @@
-// === Module 11967: ? ===
+// === Module 11973: ? ===
 
-// Module 11967
+// Module 11973
 import ThemesDefault from "Themes" /* 709 */;
 import importAllResult from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
@@ -50,9 +50,9 @@ const memoResult = importAllResult.memo((active) => {
   obj[4] = intl.string(onPress(1233).t.iZ7Mz9);
   obj[5] = { expanded: flag };
   obj[6] = callback;
-  obj = { size: token1, style: tmp7.expressionButtonIconTint, source: tmp3(showKeyboardIcon ? 11105 : 8238) };
-  obj[7] = jsx(onPress(1296).Icon, { size: token1, style: tmp7.expressionButtonIconTint, source: tmp3(showKeyboardIcon ? 11105 : 8238) });
-  return jsx(onPress(5076).PressableOpacity, { size: token1, style: tmp7.expressionButtonIconTint, source: tmp3(showKeyboardIcon ? 11105 : 8238) });
+  obj = { size: token1, style: tmp7.expressionButtonIconTint, source: tmp3(showKeyboardIcon ? 11109 : 8242) };
+  obj[7] = jsx(onPress(1296).Icon, { size: token1, style: tmp7.expressionButtonIconTint, source: tmp3(showKeyboardIcon ? 11109 : 8242) });
+  return jsx(onPress(5077).PressableOpacity, { size: token1, style: tmp7.expressionButtonIconTint, source: tmp3(showKeyboardIcon ? 11109 : 8242) });
 });
 const result = require("set").fileFinishedImporting("modules/chat_input/native/accessories/ChatInputExpressionButton.tsx");
 

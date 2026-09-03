@@ -1,14 +1,14 @@
-// === Module 16214: ? ===
+// === Module 16233: ? ===
 
-// Module 16214
+// Module 16233
 import initialize from "initialize" /* 586 */;
 import int2hslRaw from "int2hslRaw" /* 685 */;
 import map from "map" /* 4197 */;
-import useYouBarTotalHeight from "useYouBarTotalHeight" /* 14927 */;
+import useYouBarTotalHeight from "useYouBarTotalHeight" /* 14942 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_4 from "reset" /* 4297 */;
-import { YOU_BAR_GRADIENT_EXTRA_HEIGHT as closure_5 } from "CONNECTION_BANNER_HEIGHT" /* 14925 */;
-import { GUILD_LIST_WIDTH } from "GUILD_ITEM_SIZE" /* 16107 */;
+import { YOU_BAR_GRADIENT_EXTRA_HEIGHT as closure_5 } from "CONNECTION_BANNER_HEIGHT" /* 14940 */;
+import { GUILD_LIST_WIDTH } from "GUILD_ITEM_SIZE" /* 16123 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 import importAllResult from "noop" /* 19 */;
@@ -69,7 +69,7 @@ const memoResult = importAllResult.memo(function YouBarFloatingShade() {
   obj = { bottom: sum / 2, height: sum / 2, width };
   items3[1] = obj;
   const items4 = [str2, str];
-  items2[1] = callback(width(4940), { style: items3, colors: items4, start: { x: 0, y: 0 }, end: { x: 0, y: 1 }, locations: [0, 1], pointerEvents: "none" });
+  items2[1] = callback(width(4941), { style: items3, colors: items4, start: { x: 0, y: 0 }, end: { x: 0, y: 1 }, locations: [0, 1], pointerEvents: "none" });
   const items5 = [tmp.container, { width, height: sum / 2, backgroundColor: str }];
   items2[2] = callback(View, { style: items5 });
   obj[0] = items2;

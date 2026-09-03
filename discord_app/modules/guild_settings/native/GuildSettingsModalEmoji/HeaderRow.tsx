@@ -1,13 +1,13 @@
-// === Module 17388: HeaderRow ===
+// === Module 17408: HeaderRow ===
 
-// Module 17388 (HeaderRow)
+// Module 17408 (HeaderRow)
 import initialize from "initialize" /* 586 */;
 import ThemesDefault from "Themes" /* 709 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_8 from "initialize" /* 17382 */;
+import closure_8 from "initialize" /* 17402 */;
 import ME from "ME" /* 673 */;
 import { EMOJI_MAX_FILESIZE_KB } from "set" /* 1924 */;
 import jsxProd from "jsxProd" /* 21 */;
@@ -192,7 +192,7 @@ function HeaderRow(guild) {
   [tmp5, c5] = callback(React.useState(null), 2);
   const tmp4 = callback(React.useState(null), 2);
   [c6, c7] = callback(React.useState(""), 2);
-  let obj = guild(9653);
+  let obj = guild(9657);
   let canCreateExpressions = obj.useManageResourcePermissions(guild).canCreateExpressions;
   let intl = guild(1233).intl;
   obj = { id: null, text: null };
@@ -236,7 +236,7 @@ function HeaderRow(guild) {
     const intl5 = tmp7(1233).intl;
     obj5[3] = intl5.string(tmp7(1233).t["DU0dy/"]);
     obj5[4] = uploadDisabled;
-    canCreateExpressions = tmp13(tmp7(4928).Button, obj5);
+    canCreateExpressions = tmp13(tmp7(4929).Button, obj5);
   }
   const items1 = [canCreateExpressions, , ];
   let tmp13Result = null != tmp5;

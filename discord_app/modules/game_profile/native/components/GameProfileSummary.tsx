@@ -1,6 +1,6 @@
-// === Module 8873: GameProfileSummary ===
+// === Module 8877: GameProfileSummary ===
 
-// Module 8873 (GameProfileSummary)
+// Module 8877 (GameProfileSummary)
 import closure_2 from "_slicedToArray" /* 32 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;

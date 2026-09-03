@@ -1,15 +1,15 @@
-// === Module 16640: ChannelPermissionSyncModule ===
+// === Module 16660: ChannelPermissionSyncModule ===
 
-// Module 16640 (ChannelPermissionSyncModule)
+// Module 16660 (ChannelPermissionSyncModule)
 import applyDefault from "apply" /* 12 */;
 import ThemesDefault from "Themes" /* 709 */;
 import getSystemLocale from "getSystemLocale" /* 1233 */;
 import applyOverwritesAll from "applyOverwrites" /* 4125 */;
-import TableRowInner from "TableRowInner" /* 5607 */;
-import RoleLabel from "RoleLabel" /* 10369 */;
-import memoResult1Default from "memoResult1" /* 10900 */;
-import CircleMinusIcon from "CircleMinusIcon" /* 15137 */;
-import useGetOrFetchChannelOverwriteUsersDefault from "useGetOrFetchChannelOverwriteUsers" /* 16641 */;
+import TableRowInner from "TableRowInner" /* 5608 */;
+import RoleLabel from "RoleLabel" /* 10373 */;
+import memoResult1Default from "memoResult1" /* 10904 */;
+import CircleMinusIcon from "CircleMinusIcon" /* 15152 */;
+import useGetOrFetchChannelOverwriteUsersDefault from "useGetOrFetchChannelOverwriteUsers" /* 16661 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "asyncGeneratorStep" /* 5 */;
 import closure_6 from "noop" /* 19 */;
@@ -136,12 +136,12 @@ function ChannelPermissionSyncModule(channel) {
     formatToPlainStringResult = formatToPlainString(t.OIhm0M, obj1);
   }
   let obj2 = { title: formatToPlainStringResult, hasIcons: true, children: null };
-  let obj3 = { icon: closure_16(channel(14985).RefreshIcon, {}), label: null, onPress: null };
+  let obj3 = { icon: closure_16(channel(15000).RefreshIcon, {}), label: null, onPress: null };
   let intl2 = tmp3(1233).intl;
   obj3[1] = intl2.string(channel(1233).t.NVwuHq);
   obj3[2] = callback;
-  obj2[2] = closure_16(channel(5607).TableRow, obj3);
-  obj[1] = closure_16(channel(6000).TableRowGroup, obj2);
+  obj2[2] = closure_16(channel(5608).TableRow, obj3);
+  obj[1] = closure_16(channel(6001).TableRowGroup, obj2);
   return closure_16(View, obj);
 }
 function CategorySync(category) {
@@ -172,23 +172,23 @@ function AddPermission(isEditing) {
     const intl = tmp2(1233).intl;
     obj[0] = intl.string(tmp2(1233).t.vPHdP5);
     obj1 = { icon: null, label: null, onPress: null };
-    obj1[0] = callback2(tmp2(12515).PlusMediumIcon, {});
+    obj1[0] = callback2(tmp2(12527).PlusMediumIcon, {});
     const intl2 = tmp2(1233).intl;
     obj1[1] = intl2.string(tmp2(1233).t.fVWxvT);
     obj1[2] = function onPress() {
 
     };
-    const items = [callback2(tmp2(5607).TableRow, obj1), ];
+    const items = [callback2(tmp2(5608).TableRow, obj1), ];
     const obj2 = { icon: null, label: null, onPress: null };
-    obj2[0] = callback2(tmp2(12515).PlusMediumIcon, {});
+    obj2[0] = callback2(tmp2(12527).PlusMediumIcon, {});
     const intl3 = tmp2(1233).intl;
     obj2[1] = intl3.string(tmp2(1233).t.riesLt);
     obj2[2] = function onPress() {
 
     };
-    items[1] = callback2(tmp2(5607).TableRow, obj2);
+    items[1] = callback2(tmp2(5608).TableRow, obj2);
     obj[2] = items;
-    obj[1] = callback3(tmp2(6000).TableRowGroup, obj);
+    obj[1] = callback3(tmp2(6001).TableRowGroup, obj);
     return callback2(View, obj);
   }
   tmp = callback4();
@@ -206,7 +206,7 @@ function RoleRow(onDelete) {
       obj[0] = ThemesDefault.colors.ICON_FEEDBACK_CRITICAL;
       const intl = tmp3(1233).intl;
       obj[1] = intl.string(tmp3(1233).t.N86XcP);
-      tmp2Result = tmp2(tmp3(15137).CircleMinusIcon, obj);
+      tmp2Result = tmp2(tmp3(15152).CircleMinusIcon, obj);
     }
   }
   obj[2] = tmp2Result;
@@ -257,7 +257,7 @@ function RoleOverwrites(guild) {
       }
     }, id.id);
   });
-  obj[1] = callback2(guild(6000).TableRowGroup, obj1);
+  obj[1] = callback2(guild(6001).TableRowGroup, obj1);
   return callback2(View, obj);
 }
 function MemberRow(arg0) {
@@ -309,7 +309,7 @@ function MemberOverwrites(channel) {
         }
       }, id.id);
     });
-    obj[1] = callback2(guild_id(6000).TableRowGroup, obj);
+    obj[1] = callback2(guild_id(6001).TableRowGroup, obj);
     tmp4 = callback2(View, obj);
   }
   return tmp4;

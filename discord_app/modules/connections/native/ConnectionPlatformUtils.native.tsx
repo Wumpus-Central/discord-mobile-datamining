@@ -1,6 +1,6 @@
-// === Module 14790: getConnectionBackgroundColor ===
+// === Module 14805: getConnectionBackgroundColor ===
 
-// Module 14790 (getConnectionBackgroundColor)
+// Module 14805 (getConnectionBackgroundColor)
 import set from "set" /* 2 */;
 import ME from "ME" /* 673 */;
 import ThemesDefault from "Themes" /* 709 */;

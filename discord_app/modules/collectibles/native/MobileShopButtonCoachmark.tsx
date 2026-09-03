@@ -1,6 +1,6 @@
-// === Module 16611: MobileShopButtonCoachmark ===
+// === Module 16631: MobileShopButtonCoachmark ===
 
-// Module 16611 (MobileShopButtonCoachmark)
+// Module 16631 (MobileShopButtonCoachmark)
 import ThemesDefault from "Themes" /* 709 */;
 import closure_2 from "noop" /* 19 */;
 import { Image } from "get ActivityIndicator" /* 17 */;

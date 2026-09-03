@@ -1,9 +1,9 @@
-// === Module 11297: fetchChannelInfo ===
+// === Module 11301: fetchChannelInfo ===
 
-// Module 11297 (fetchChannelInfo)
+// Module 11301 (fetchChannelInfo)
 import dispatcherDefault from "dispatcher" /* 706 */;
-import closure_2 from "_handleConnectionOpen" /* 5229 */;
-import closure_3 from "handleConnectionReset" /* 7283 */;
+import closure_2 from "_handleConnectionOpen" /* 5230 */;
+import closure_3 from "handleConnectionReset" /* 7284 */;
 
 const result = require("set").fileFinishedImporting("modules/channel/ChannelInfoActionCreators.tsx");
 

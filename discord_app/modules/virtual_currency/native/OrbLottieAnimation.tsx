@@ -1,6 +1,6 @@
-// === Module 11062: forwardRef ===
+// === Module 11066: forwardRef ===
 
-// Module 11062 (forwardRef)
+// Module 11066 (forwardRef)
 import closure_2 from "noop" /* 19 */;
 import noop from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
@@ -35,9 +35,9 @@ const forwardRefResult = forwardRef((animationType, ref) => {
     }
   }));
   if (isThemeLightResult) {
-    let SpendEarnOrbsLottie = tmp(11063).SpendEarnOrbsLightThemeLottie;
+    let SpendEarnOrbsLottie = tmp(11067).SpendEarnOrbsLightThemeLottie;
   } else {
-    SpendEarnOrbsLottie = tmp(11065).SpendEarnOrbsLottie;
+    SpendEarnOrbsLottie = tmp(11069).SpendEarnOrbsLottie;
   }
   obj = { ref: tmp5, size: "custom", width: 60, height: 60, opacity: 0.8, animation: null, useLottieDefaultColors: true };
   let str = "spend";

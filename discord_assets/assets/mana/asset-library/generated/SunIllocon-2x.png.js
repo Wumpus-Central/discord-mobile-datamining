@@ -1,6 +1,6 @@
-// === Module 7091: metadata ===
+// === Module 7092: metadata ===
 
-// Module 7091 (metadata)
+// Module 7092 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/SunIllocon-2x.png.js");

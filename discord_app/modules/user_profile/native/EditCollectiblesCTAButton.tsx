@@ -1,6 +1,6 @@
-// === Module 8089: ? ===
+// === Module 8092: ? ===
 
-// Module 8089
+// Module 8092
 import importAllResult from "noop" /* 19 */;
 import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4470 */;
 import { CollectiblesMobileShopScreen as closure_5 } from "items" /* 675 */;

@@ -1,10 +1,10 @@
-// === Module 6694: GiftCardAvatar3dIllustration ===
+// === Module 6695: GiftCardAvatar3dIllustration ===
 
-// Module 6694 (GiftCardAvatar3dIllustration)
+// Module 6695 (GiftCardAvatar3dIllustration)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5501 */;
-import metadataDefault from "metadata" /* 6695 */;
+import preloadDefault from "preload" /* 5502 */;
+import metadataDefault from "metadata" /* 6696 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/GiftCardAvatar3dIllustration.native.tsx");

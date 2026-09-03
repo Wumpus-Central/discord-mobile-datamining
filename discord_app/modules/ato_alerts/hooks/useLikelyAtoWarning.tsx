@@ -1,12 +1,12 @@
-// === Module 11224: useLikelyAtoWarning ===
+// === Module 11228: useLikelyAtoWarning ===
 
-// Module 11224 (useLikelyAtoWarning)
+// Module 11228 (useLikelyAtoWarning)
 import set from "set" /* 2 */;
-import handleConnectionOpen from "handleConnectionOpen" /* 10874 */;
-import useInappropriateConversationWarningsForChannel from "useInappropriateConversationWarningsForChannel" /* 10930 */;
-import useChannelSafetyWarning from "useChannelSafetyWarning" /* 10931 */;
-import useIsSpamMessageRequest from "useIsSpamMessageRequest" /* 11222 */;
-import useIsMessageRequest from "useIsMessageRequest" /* 11223 */;
+import handleConnectionOpen from "handleConnectionOpen" /* 10878 */;
+import useInappropriateConversationWarningsForChannel from "useInappropriateConversationWarningsForChannel" /* 10934 */;
+import useChannelSafetyWarning from "useChannelSafetyWarning" /* 10935 */;
+import useIsSpamMessageRequest from "useIsSpamMessageRequest" /* 11226 */;
+import useIsMessageRequest from "useIsMessageRequest" /* 11227 */;
 
 const SafetyWarningTypes = handleConnectionOpen.SafetyWarningTypes;
 const result = set.fileFinishedImporting("modules/ato_alerts/hooks/useLikelyAtoWarning.tsx");

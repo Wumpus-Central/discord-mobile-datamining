@@ -1,6 +1,6 @@
-// === Module 17486: safetyCheck ===
+// === Module 17506: safetyCheck ===
 
-// Module 17486 (safetyCheck)
+// Module 17506 (safetyCheck)
 import useThemeDefault from "useTheme" /* 4413 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
@@ -19,9 +19,9 @@ const prototype = EnableCommunityModalIcons.prototype;
 Object.defineProperty(prototype, "safetyCheck", {
   get: function safetyCheck() {
     if (obj.isThemeDark(this.theme)) {
-      let tmpResult = tmp(17487);
+      let tmpResult = tmp(17507);
     } else {
-      tmpResult = tmp(17488);
+      tmpResult = tmp(17508);
     }
     return tmpResult;
   },
@@ -29,16 +29,16 @@ Object.defineProperty(prototype, "safetyCheck", {
 });
 Object.defineProperty(prototype, "channelSetup", {
   get: function channelSetup() {
-    return require(17489) /* getChannelSetupSource */.getChannelSetupSource(this.theme);
+    return require(17509) /* getChannelSetupSource */.getChannelSetupSource(this.theme);
   },
   set: undefined
 });
 Object.defineProperty(prototype, "finishingTouches", {
   get: function finishingTouches() {
     if (obj.isThemeDark(this.theme)) {
-      let tmpResult = tmp(17493);
+      let tmpResult = tmp(17513);
     } else {
-      tmpResult = tmp(17494);
+      tmpResult = tmp(17514);
     }
     return tmpResult;
   },
@@ -46,7 +46,7 @@ Object.defineProperty(prototype, "finishingTouches", {
 });
 Object.defineProperty(prototype, "close", {
   get: function close() {
-    return require(7773) /* registerAsset */;
+    return require(7776) /* registerAsset */;
   },
   set: undefined
 });

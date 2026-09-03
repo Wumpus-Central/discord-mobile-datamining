@@ -1,6 +1,6 @@
-// === Module 11137: get1PShopApplicationIdForSKU ===
+// === Module 11141: get1PShopApplicationIdForSKU ===
 
-// Module 11137 (get1PShopApplicationIdForSKU)
+// Module 11141 (get1PShopApplicationIdForSKU)
 import set from "set" /* 2 */;
 import ME from "ME" /* 673 */;
 import items from "items" /* 675 */;

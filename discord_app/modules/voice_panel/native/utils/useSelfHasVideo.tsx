@@ -1,6 +1,6 @@
-// === Module 16901: useSelfHasVideo ===
+// === Module 16921: useSelfHasVideo ===
 
-// Module 16901 (useSelfHasVideo)
+// Module 16921 (useSelfHasVideo)
 import closure_2 from "getParticipants" /* 4494 */;
 import closure_3 from "fetchFingerprint" /* 1215 */;
 import closure_4 from "_detectH265HardwareDecode" /* 4529 */;

@@ -1,6 +1,6 @@
-// === Module 11671: _fetchMediaPostEmbed ===
+// === Module 11676: _fetchMediaPostEmbed ===
 
-// Module 11671 (_fetchMediaPostEmbed)
+// Module 11676 (_fetchMediaPostEmbed)
 import dispatcherDefault from "dispatcher" /* 706 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import { Endpoints } from "ME" /* 673 */;

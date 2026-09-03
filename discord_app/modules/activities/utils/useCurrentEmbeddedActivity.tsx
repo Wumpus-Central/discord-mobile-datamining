@@ -1,6 +1,6 @@
-// === Module 9615: useCurrentEmbeddedActivity ===
+// === Module 9619: useCurrentEmbeddedActivity ===
 
-// Module 9615 (useCurrentEmbeddedActivity)
+// Module 9619 (useCurrentEmbeddedActivity)
 import initialize from "initialize" /* 586 */;
 import closure_2 from "participantFromServer" /* 1385 */;
 

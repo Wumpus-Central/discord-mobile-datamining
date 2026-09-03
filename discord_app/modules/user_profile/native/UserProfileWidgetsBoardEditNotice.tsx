@@ -1,10 +1,10 @@
-// === Module 12719: UserProfileWidgetsBoardEditNotice ===
+// === Module 12731: UserProfileWidgetsBoardEditNotice ===
 
-// Module 12719 (UserProfileWidgetsBoardEditNotice)
+// Module 12731 (UserProfileWidgetsBoardEditNotice)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 709 */;
-import useSharedStylesDefault from "useSharedStyles" /* 8543 */;
-import SelectedDismissibleContentDefault from "SelectedDismissibleContent" /* 10639 */;
+import useSharedStylesDefault from "useSharedStyles" /* 8547 */;
+import SelectedDismissibleContentDefault from "SelectedDismissibleContent" /* 10643 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { ContentDismissActionType } from "ContentDismissActionType" /* 1383 */;
 import jsxProd from "jsxProd" /* 21 */;

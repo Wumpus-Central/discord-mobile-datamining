@@ -1,13 +1,13 @@
-// === Module 16668: shouldComponentUpdate ===
+// === Module 16688: shouldComponentUpdate ===
 
-// Module 16668 (shouldComponentUpdate)
+// Module 16688 (shouldComponentUpdate)
 import _modDef38 from "module_38" /* 38 */;
 import ThemesDefault from "Themes" /* 709 */;
-import TableRowGroupTitle from "TableRowGroupTitle" /* 6000 */;
+import TableRowGroupTitle from "TableRowGroupTitle" /* 6001 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "_toArray" /* 850 */;
 import closure_6 from "ensureGuildLoaded" /* 1386 */;
-import closure_7 from "setIndex" /* 5487 */;
+import closure_7 from "setIndex" /* 5488 */;
 import closure_8 from "createGuildRecordFromRust" /* 1908 */;
 import closure_9 from "getUncachedChannelPermissions" /* 4120 */;
 import closure_10 from "markAllUserIdListsStale" /* 4130 */;
@@ -204,7 +204,7 @@ prototype["handleSetCategory"] = function handleSetCategory(id) {
 prototype["renderCategory"] = function renderCategory(label) {
   const self = this;
   const _require = label;
-  return callback3(_require(5607).TableRow, {
+  return callback3(_require(5608).TableRow, {
     label: label.name,
     onPress() {
       return self.handleSetCategory(label.id);
@@ -264,16 +264,16 @@ prototype["render"] = function render() {
         obj2[1] = function onPress() {
           return self.handleSetCategory(first.id);
         };
-        obj1[1] = tmp3(tmp4(5607).TableRow, obj2, first.id);
-        tmp3Result = tmp3(tmp4(6000).TableRowGroup, obj1);
+        obj1[1] = tmp3(tmp4(5608).TableRow, obj2, first.id);
+        tmp3Result = tmp3(tmp4(6001).TableRowGroup, obj1);
       }
     }
   }
   items[1] = tmp3Result;
   items[2] = self.renderCategories();
   obj[2] = items;
-  obj[1] = closure_14(first(4926).Stack, obj);
-  return closure_13(first(8372).Form, obj);
+  obj[1] = closure_14(first(4927).Stack, obj);
+  return closure_13(first(8376).Form, obj);
 };
 ChannelSettingsChangeCategory.contextType = require("ManaContext").ThemeContext;
 let obj1 = { paddingHorizontal: ThemesDefault.modules.mobile.TABLE_ROW_PADDING };
@@ -286,7 +286,7 @@ export default function ConnectedChannelSettingsChangeCategory(channelId) {
   const obj = channelId(586);
   const navigation = channelId(1498).useNavigation();
   const obj2 = channelId(1498);
-  const appChannelBotUserId = channelId(11419).useAppChannelBotUserId(channel);
+  const appChannelBotUserId = channelId(11424).useAppChannelBotUserId(channel);
   _modDef38(null != channel, "ConnectedChannelSettingsChangeCategory: channel cannot be undefined");
   return callback3(ChannelSettingsChangeCategory, { channel, navigation, appChannelBotUserId });
 };

@@ -1,17 +1,17 @@
-// === Module 14895: EmptyState ===
+// === Module 14910: EmptyState ===
 
-// Module 14895 (EmptyState)
+// Module 14910 (EmptyState)
 import ThemesDefault from "Themes" /* 709 */;
 import Text from "Text" /* 4474 */;
-import AccountAgeTier10LargeBadge from "AccountAgeTier10LargeBadge" /* 6265 */;
-import useTrackQuestEventWithImpression from "useTrackQuestEventWithImpression" /* 11564 */;
-import StarfieldBackgroundDefault from "StarfieldBackground" /* 14907 */;
-import ListEdgeSpacerDefault from "ListEdgeSpacer" /* 14912 */;
+import AccountAgeTier10LargeBadge from "AccountAgeTier10LargeBadge" /* 6266 */;
+import useTrackQuestEventWithImpression from "useTrackQuestEventWithImpression" /* 11569 */;
+import StarfieldBackgroundDefault from "StarfieldBackground" /* 14922 */;
+import ListEdgeSpacerDefault from "ListEdgeSpacer" /* 14927 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "set" /* 7457 */;
-import { BountyCarouselEmptyStateReason as closure_7 } from "QuestsExperimentLocations" /* 5395 */;
+import closure_6 from "set" /* 7458 */;
+import { BountyCarouselEmptyStateReason as closure_7 } from "QuestsExperimentLocations" /* 5396 */;
 import { ContentDismissActionType } from "ContentDismissActionType" /* 1383 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
@@ -361,7 +361,7 @@ const memoResult = importAllResult.memo(function QuestHomeBounties(shopCarouselC
   if (showOrbShopPlaceholderCarousel === undefined) {
     showOrbShopPlaceholderCarousel = false;
   }
-  let obj = first(11303);
+  let obj = first(11307);
   const questHomeBounties = obj.useQuestHomeBounties().questHomeBounties;
   const tmp3 = callback4();
   first = undefined;
@@ -373,7 +373,7 @@ const memoResult = importAllResult.memo(function QuestHomeBounties(shopCarouselC
   } else {
     items1 = [];
   }
-  let tmpResult = tmp(6260);
+  let tmpResult = tmp(6261);
   const tmp4 = callback(tmpResult.useSelectedDismissibleContent(items1), 2);
   first = tmp4[0];
   importDefault = tmp6;
@@ -412,8 +412,8 @@ const memoResult = importAllResult.memo(function QuestHomeBounties(shopCarouselC
       if (verticalScrollEnabled) {
         let tmp12 = "none" !== placement && obtainableOrbRewards > 0;
         if (tmp12) {
-          tmp12 = orbShopProducts.length >= tmp(14897).MIN_PRODUCTS_FOR_ORB_SHOP_CAROUSEL || showOrbShopPlaceholderCarousel;
-          const tmp13 = orbShopProducts.length >= tmp(14897).MIN_PRODUCTS_FOR_ORB_SHOP_CAROUSEL || showOrbShopPlaceholderCarousel;
+          tmp12 = orbShopProducts.length >= tmp(14912).MIN_PRODUCTS_FOR_ORB_SHOP_CAROUSEL || showOrbShopPlaceholderCarousel;
+          const tmp13 = orbShopProducts.length >= tmp(14912).MIN_PRODUCTS_FOR_ORB_SHOP_CAROUSEL || showOrbShopPlaceholderCarousel;
         }
         if (!tmp12) {
           obj = { style: null, children: null };

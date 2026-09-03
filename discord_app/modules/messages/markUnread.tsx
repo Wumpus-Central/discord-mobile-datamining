@@ -1,11 +1,11 @@
-// === Module 10346: _markUnread ===
+// === Module 10350: _markUnread ===
 
-// Module 10346 (_markUnread)
+// Module 10350 (_markUnread)
 import timestampDefault from "timestamp" /* 3 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "storeThread" /* 4122 */;
 import closure_5 from "ensureGuildLoaded" /* 1386 */;
-import closure_6 from "reinjectEphemerals" /* 4735 */;
+import closure_6 from "reinjectEphemerals" /* 4736 */;
 import { shouldBadgeMessage } from "generateOldThreadCutoff" /* 4493 */;
 import closure_8 from "mergeGuildAvatar" /* 1921 */;
 import { Endpoints } from "ME" /* 673 */;

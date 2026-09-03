@@ -1,6 +1,6 @@
-// === Module 13373: useOpenPremiumMarketingPayment ===
+// === Module 13388: useOpenPremiumMarketingPayment ===
 
-// Module 13373 (useOpenPremiumMarketingPayment)
+// Module 13388 (useOpenPremiumMarketingPayment)
 import closure_3 from "noop" /* 19 */;
 import ME from "ME" /* 673 */;
 import GuildFeatures from "GuildFeatures" /* 1923 */;

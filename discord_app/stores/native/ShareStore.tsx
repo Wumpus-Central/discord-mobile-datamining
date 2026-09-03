@@ -1,12 +1,12 @@
-// === Module 14273: handleTokenUpdated ===
+// === Module 14289: handleTokenUpdated ===
 
-// Module 14273 (handleTokenUpdated)
+// Module 14289 (handleTokenUpdated)
 import encodeProperties from "encodeProperties" /* 500 */;
 import initializeDefault from "initialize" /* 586 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 695 */;
 import dispatcherDefault from "dispatcher" /* 706 */;
 import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1470 */;
-import enforcingDefault from "enforcing" /* 8648 */;
+import enforcingDefault from "enforcing" /* 8652 */;
 import closure_6 from "fetchFingerprint" /* 1215 */;
 import closure_7 from "ensureGuildLoaded" /* 1386 */;
 import closure_8 from "createGuildRecordFromRust" /* 1908 */;

@@ -1,6 +1,6 @@
-// === Module 13345: SquareIconButton ===
+// === Module 13360: SquareIconButton ===
 
-// Module 13345 (SquareIconButton)
+// Module 13360 (SquareIconButton)
 import ThemesDefault from "Themes" /* 709 */;
 import closure_2 from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;

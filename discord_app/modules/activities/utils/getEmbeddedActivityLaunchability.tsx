@@ -1,8 +1,8 @@
-// === Module 9499: getEmbeddedActivityLaunchability ===
+// === Module 9503: getEmbeddedActivityLaunchability ===
 
-// Module 9499 (getEmbeddedActivityLaunchability)
+// Module 9503 (getEmbeddedActivityLaunchability)
 import getSystemLocale from "getSystemLocale" /* 1233 */;
-import useIsActivitiesEnabledForCurrentPlatform from "useIsActivitiesEnabledForCurrentPlatform" /* 9458 */;
+import useIsActivitiesEnabledForCurrentPlatform from "useIsActivitiesEnabledForCurrentPlatform" /* 9462 */;
 import closure_2 from "ensureGuildLoaded" /* 1386 */;
 import closure_3 from "createGuildRecordFromRust" /* 1908 */;
 import closure_4 from "getUncachedChannelPermissions" /* 4120 */;

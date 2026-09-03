@@ -1,6 +1,6 @@
-// === Module 16061: ChannelListPanelBackdrop ===
+// === Module 16077: ChannelListPanelBackdrop ===
 
-// Module 16061 (ChannelListPanelBackdrop)
+// Module 16077 (ChannelListPanelBackdrop)
 import ThemesDefault from "Themes" /* 709 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
@@ -27,9 +27,9 @@ export default function ChannelListPanelBackdrop(children) {
   let mobileQuestDockHeight;
   const tmp = callback();
   dependencyMap = tmp;
-  let obj = style(15845);
+  let obj = style(15861);
   const isHomeDrawerEnabled = obj.useIsHomeDrawerEnabled();
-  obj1 = style(14918);
+  obj1 = style(14933);
   mobileQuestDockHeight = obj1.useMobileQuestDockHeight();
   let items = [tmp, contentInset, mobileQuestDockHeight, style];
   obj = {

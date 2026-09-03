@@ -1,8 +1,8 @@
-// === Module 7709: _confirmEmailChange ===
+// === Module 7712: _confirmEmailChange ===
 
-// Module 7709 (_confirmEmailChange)
+// Module 7712 (_confirmEmailChange)
 import encodeProperties from "encodeProperties" /* 500 */;
-import _modDef4713 from "module_4713" /* 4713 */;
+import _modDef4714 from "module_4714" /* 4714 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import { Endpoints } from "ME" /* 673 */;
 
@@ -14,7 +14,7 @@ function _confirmEmailChange() {
     c2 = 0;
     c1 = 0;
     return (function*(arg0, body) {
-      const obj5 = v0(4713);
+      const obj5 = v0(4714);
       obj1 = { url: null, body: null, trackedActionData: null, rejectWithError: false };
       obj1[0] = closure_1_4.USER_EMAIL_VERIFY_CODE;
       const obj2 = { code: null };
@@ -43,7 +43,7 @@ export const sendConfirmationCode = function sendConfirmationCode() {
   if (arg0 === undefined) {
     flag = false;
   }
-  let obj = _modDef4713;
+  let obj = _modDef4714;
   obj = { url: Endpoints.USER_EMAIL, trackedActionData: null, rejectWithError: false };
   obj = { event: encodeProperties.NetworkActionNames.USER_ACCOUNT_EMAIL_CHANGE_SEND_CODE, properties: { is_resend: flag } };
   obj[1] = obj;

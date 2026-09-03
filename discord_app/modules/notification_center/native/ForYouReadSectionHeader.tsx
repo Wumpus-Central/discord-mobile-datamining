@@ -1,6 +1,6 @@
-// === Module 16254: ForYouReadSectionHeader ===
+// === Module 16273: ForYouReadSectionHeader ===
 
-// Module 16254 (ForYouReadSectionHeader)
+// Module 16273 (ForYouReadSectionHeader)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 709 */;
 import getSystemLocale from "getSystemLocale" /* 1233 */;

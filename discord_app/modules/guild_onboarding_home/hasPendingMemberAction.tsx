@@ -1,13 +1,13 @@
-// === Module 4706: hasPendingMemberAction ===
+// === Module 4707: hasPendingMemberAction ===
 
-// Module 4706 (hasPendingMemberAction)
+// Module 4707 (hasPendingMemberAction)
 import hasFlagAll from "hasFlag" /* 1398 */;
-import guildHasOnboardingHomeDefault from "guildHasOnboardingHome" /* 4709 */;
+import guildHasOnboardingHomeDefault from "guildHasOnboardingHome" /* 4710 */;
 import closure_3 from "ensureGuildLoaded" /* 1386 */;
 import closure_4 from "trackCommunicationDisabled" /* 1991 */;
 import closure_5 from "createGuildRecordFromRust" /* 1908 */;
-import closure_6 from "handleSettingsLoadSuccess" /* 4707 */;
-import closure_7 from "set" /* 4708 */;
+import closure_6 from "handleSettingsLoadSuccess" /* 4708 */;
+import closure_7 from "set" /* 4709 */;
 import { GuildFeatures } from "ME" /* 673 */;
 import { GuildMemberFlags } from "GuildMemberFlags" /* 4108 */;
 

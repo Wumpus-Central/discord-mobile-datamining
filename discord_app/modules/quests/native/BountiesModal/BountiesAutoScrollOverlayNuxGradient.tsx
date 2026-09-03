@@ -1,6 +1,6 @@
-// === Module 14876: BountiesAutoScrollOverlayNuxGradient ===
+// === Module 14891: BountiesAutoScrollOverlayNuxGradient ===
 
-// Module 14876 (BountiesAutoScrollOverlayNuxGradient)
+// Module 14891 (BountiesAutoScrollOverlayNuxGradient)
 import ThemesDefault from "Themes" /* 709 */;
 import closure_3 from "noop" /* 19 */;
 import { StyleSheet } from "get ActivityIndicator" /* 17 */;
@@ -41,9 +41,9 @@ export default function BountiesAutoScrollOverlayNuxGradient(active) {
   obj[2] = [0, 1];
   obj[3] = { x: 0.5, y: 1 };
   obj[4] = { x: 0.5, y: 0 };
-  const items3 = [callback(sharedValue(4940), obj), ];
+  const items3 = [callback(sharedValue(4941), obj), ];
   obj1 = { style: StyleSheet.absoluteFillObject, colors: ["rgba(0,0,0,0.4)", "rgba(0,0,0,0)"], locations: [0, 0.5], start: { x: 0.5, y: 1 }, end: { x: 0.5, y: 0 } };
-  items3[1] = callback(sharedValue(4940), obj1);
+  items3[1] = callback(sharedValue(4941), obj1);
   obj[2] = items3;
   return callback2(sharedValue(4217).View, obj);
 };

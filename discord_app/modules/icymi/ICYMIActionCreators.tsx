@@ -1,8 +1,8 @@
-// === Module 8637: ? ===
+// === Module 8641: ? ===
 
-// Module 8637
+// Module 8641
 import dispatcherDefault from "dispatcher" /* 706 */;
-import generateHydrationId from "generateHydrationId" /* 8636 */;
+import generateHydrationId from "generateHydrationId" /* 8640 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import { Endpoints } from "ME" /* 673 */;
 
@@ -154,7 +154,7 @@ export default {
                 obj3[0] = HTTP.get(obj1);
                 return obj3;
               }
-              obj13 = closure_1_0(8636);
+              obj13 = closure_1_0(8640);
               tmp42 = closure_1_0;
             }
           } else {

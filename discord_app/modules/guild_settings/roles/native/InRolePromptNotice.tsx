@@ -1,10 +1,10 @@
-// === Module 17450: InRolePromptNotice ===
+// === Module 17470: InRolePromptNotice ===
 
-// Module 17450 (InRolePromptNotice)
+// Module 17470 (InRolePromptNotice)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 709 */;
 import hasFlag from "hasFlag" /* 1398 */;
-import registerAssetDefault from "registerAsset" /* 9607 */;
+import registerAssetDefault from "registerAsset" /* 9611 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { RoleFlags } from "ME" /* 673 */;
 import jsxProd from "jsxProd" /* 21 */;
@@ -32,7 +32,7 @@ export default function InRolePromptNotice(role) {
   } else {
     obj = { style: null, children: null };
     obj[0] = string.promptRow;
-    const tmpResult = tmp(17451);
+    const tmpResult = tmp(17471);
     let Icon = tmp(1296).Icon;
     if (isRolePowerfulResult) {
       obj = { style: null, source: null, color: null };
@@ -63,6 +63,6 @@ export default function InRolePromptNotice(role) {
       obj[1] = items1;
       tmp4Result = tmp4(tmp5, obj);
     }
-    isRolePowerfulResult = tmp(17451).isRolePowerful(role);
+    isRolePowerfulResult = tmp(17471).isRolePowerful(role);
   }
 };

@@ -3,8 +3,8 @@
 // Module 4131 (hasFlag)
 import hasFlag from "hasFlag" /* 1398 */;
 import toJSDefault from "toJS" /* 1935 */;
-import isForwardMessageDefault from "isForwardMessage" /* 6155 */;
-import ApplicationIntegrationType from "ApplicationIntegrationType" /* 8442 */;
+import isForwardMessageDefault from "isForwardMessage" /* 6156 */;
+import ApplicationIntegrationType from "ApplicationIntegrationType" /* 8446 */;
 import ME from "ME" /* 673 */;
 
 require = arg1;

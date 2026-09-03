@@ -1,9 +1,9 @@
-// === Module 10270: NotificationSettingsMessageUnread ===
+// === Module 10274: NotificationSettingsMessageUnread ===
 
-// Module 10270 (NotificationSettingsMessageUnread)
+// Module 10274 (NotificationSettingsMessageUnread)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 709 */;
-import NotificationSettingsMockChannelsDefault from "NotificationSettingsMockChannels" /* 10271 */;
+import NotificationSettingsMockChannelsDefault from "NotificationSettingsMockChannels" /* 10275 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
@@ -12,7 +12,7 @@ const require = arg1;
 function NotificationSettingsMessageUnread(onPress) {
   const _require = onPress;
   const tmp = callback3();
-  let obj = _require(10264);
+  let obj = _require(10268);
   const unreadSelectOptions = obj.getUnreadSelectOptions();
   const found = unreadSelectOptions.find((value) => value.value === onPress.setting);
   obj = { style: onPress.style, children: null };
@@ -46,10 +46,10 @@ function NotificationSettingsMessageUnread(onPress) {
   const items3 = [intl3.string(_require(1233).t.yxiV9W), " "];
   obj8[3] = items3;
   obj7[1] = callback2(_require(4474).Text, obj8);
-  items2[2] = callback(_require(5076).PressableOpacity, obj7);
+  items2[2] = callback(_require(5077).PressableOpacity, obj7);
   obj4[1] = items2;
   obj3[2] = callback2(View, obj4);
-  items1[1] = callback(_require(5076).PressableOpacity, obj3);
+  items1[1] = callback(_require(5077).PressableOpacity, obj3);
   obj[1] = items1;
   return callback2(View, obj);
 }
@@ -69,7 +69,7 @@ export const NotificationSettingsGuildMessageUnread = function NotificationSetti
   const _require = style;
   let obj = {
     style: style.style,
-    setting: _require(10262).useGuildPresetSettings(style.guildId).unread,
+    setting: _require(10266).useGuildPresetSettings(style.guildId).unread,
     onCustomize() {
       let obj = closure_1_1(closure_1_2[11]);
       obj = { guildId: style.guildId };
@@ -82,7 +82,7 @@ export const NotificationSettingsChannelMessageUnread = function NotificationSet
   const _require = style;
   let obj = {
     style: style.style,
-    setting: _require(10254).useChannelPresetSettings(style.channel).unread,
+    setting: _require(10258).useChannelPresetSettings(style.channel).unread,
     onCustomize() {
       let obj = closure_1_1(closure_1_2[11]);
       obj = { channel: style.channel };

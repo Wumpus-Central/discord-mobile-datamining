@@ -1,20 +1,20 @@
-// === Module 15397: handleCacheActionPress ===
+// === Module 15411: handleCacheActionPress ===
 
-// Module 15397 (handleCacheActionPress)
+// Module 15411 (handleCacheActionPress)
 import initialize from "initialize" /* 586 */;
 import getSystemLocale from "getSystemLocale" /* 1233 */;
 import explicitContentFromProto from "explicitContentFromProto" /* 4166 */;
 import dispatcherDefault from "dispatcher" /* 4194 */;
 import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4445 */;
-import RedesignBottomSheetTitleHeaderBase from "RedesignBottomSheetTitleHeaderBase" /* 5629 */;
-import ActionSheet from "ActionSheet" /* 5997 */;
-import ActionSheetRowIcon from "ActionSheetRowIcon" /* 5999 */;
-import FileUpIcon from "FileUpIcon" /* 15366 */;
-import FileWarningIcon from "FileWarningIcon" /* 15399 */;
+import RedesignBottomSheetTitleHeaderBase from "RedesignBottomSheetTitleHeaderBase" /* 5630 */;
+import ActionSheet from "ActionSheet" /* 5998 */;
+import ActionSheetRowIcon from "ActionSheetRowIcon" /* 6000 */;
+import FileUpIcon from "FileUpIcon" /* 15380 */;
+import FileWarningIcon from "FileWarningIcon" /* 15413 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "_handleConnectionOpen" /* 5229 */;
+import closure_4 from "_handleConnectionOpen" /* 5230 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createToggle from "createToggle" /* 11288 */;
+import createToggle from "createToggle" /* 11292 */;
 
 require = arg1;
 function handleCacheActionPress(key) {
@@ -67,7 +67,7 @@ function CacheActionsActionSheet() {
             return obj;
           } else {
             const callback = tmp2;
-            obj1 = closure_1_0(15398);
+            obj1 = closure_1_0(15412);
             c1 = 1;
             dependencyMap = 1;
             obj1 = { value: null, done: false };
@@ -99,7 +99,7 @@ function CacheActionsActionSheet() {
   const intl3 = getSystemLocale.intl;
   obj2[2] = intl3.string(getSystemLocale.t.tgwiMO);
   obj2[3] = function onPress() {
-    let obj = callback(15398);
+    let obj = callback(15412);
     obj.clearCaches();
     const intl = callback(1233).intl;
     const stringResult = intl.string(callback(1233).t["23xR5w"]);

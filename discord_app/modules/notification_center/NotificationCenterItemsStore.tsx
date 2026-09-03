@@ -1,11 +1,11 @@
-// === Module 7393: _validate ===
+// === Module 7394: _validate ===
 
-// Module 7393 (_validate)
+// Module 7394 (_validate)
 import initializeDefault from "initialize" /* 586 */;
 import dispatcherDefault from "dispatcher" /* 706 */;
-import NotificationCenterScenes from "NotificationCenterScenes" /* 7394 */;
+import NotificationCenterScenes from "NotificationCenterScenes" /* 7395 */;
 import closure_3 from "getHash" /* 4391 */;
-import { isGuildEventEnded } from "scheduledEventSort" /* 7280 */;
+import { isGuildEventEnded } from "scheduledEventSort" /* 7281 */;
 import closure_5 from "hasFlag" /* 4131 */;
 import closure_6 from "markAllUserIdListsStale" /* 4130 */;
 import closure_7 from "mergeGuildAvatar" /* 1921 */;
@@ -19,7 +19,7 @@ function _validate(id) {
 function toNotificationCenterItem(item_enum) {
   let tmp3 = item_enum.item_enum === NotificationCenterScenes.ItemEnum.FIRST_MESSAGE;
   if (tmp3) {
-    tmp3 = item_enum.type === tmp(7394).NotificationCenterItems.LIFECYCLE_ITEM;
+    tmp3 = item_enum.type === tmp(7395).NotificationCenterItems.LIFECYCLE_ITEM;
   }
   if (tmp3) {
     item_enum.deeplink = "https://discord.com/feature/composeMessage";
@@ -29,8 +29,8 @@ function toNotificationCenterItem(item_enum) {
   obj.kind = "notification-center-item";
   let messageRecord;
   if (null != item_enum.message) {
-    messageRecord = tmp(4737).createMessageRecord(item_enum.message);
-    const tmpResult = tmp(4737);
+    messageRecord = tmp(4738).createMessageRecord(item_enum.message);
+    const tmpResult = tmp(4738);
   }
   obj.message = messageRecord;
   let id;
@@ -45,7 +45,7 @@ function handleAddItem(type) {
     const item2 = type.item;
     let tmp3 = item2.item_enum === NotificationCenterScenes.ItemEnum.FIRST_MESSAGE;
     if (tmp3) {
-      tmp3 = item2.type === tmp(7394).NotificationCenterItems.LIFECYCLE_ITEM;
+      tmp3 = item2.type === tmp(7395).NotificationCenterItems.LIFECYCLE_ITEM;
     }
     if (tmp3) {
       item2.deeplink = "https://discord.com/feature/composeMessage";
@@ -55,8 +55,8 @@ function handleAddItem(type) {
     obj.kind = "notification-center-item";
     let messageRecord;
     if (null != item2.message) {
-      messageRecord = tmp(4737).createMessageRecord(item2.message);
-      const tmpResult = tmp(4737);
+      messageRecord = tmp(4738).createMessageRecord(item2.message);
+      const tmpResult = tmp(4738);
     }
     obj.message = messageRecord;
     let id;
@@ -194,7 +194,7 @@ function handleRelationshipAddOrUpdate(relationship) {
     });
   }
 }
-let obj = { loading: false, initialized: false, errored: false, isDataStale: false, notifCenterItems: [], staleNotifCenterItems: [], notifCenterIds: null, notifCenterLocalItems: null, paginationHasMore: true, paginationCursor: "flex", notifCenterActive: "screens", notifCenterTabFocused: "groups" };
+let obj = { loading: false, initialized: false, errored: false, isDataStale: false, notifCenterItems: [], staleNotifCenterItems: [], notifCenterIds: null, notifCenterLocalItems: null, paginationHasMore: true, paginationCursor: "flex", notifCenterActive: 2087, notifCenterTabFocused: 2088 };
 let set = new Set();
 obj[6] = set;
 obj[7] = [];
@@ -371,7 +371,7 @@ obj = {
     if (flag === undefined) {
       flag = false;
     }
-    obj = { loading: false, initialized: false, errored: false, isDataStale: false, notifCenterItems: [], staleNotifCenterItems: [], notifCenterIds: new Set(), notifCenterLocalItems: null, paginationHasMore: true, paginationCursor: "flex", notifCenterActive: "screens", notifCenterTabFocused: "groups" };
+    obj = { loading: false, initialized: false, errored: false, isDataStale: false, notifCenterItems: [], staleNotifCenterItems: [], notifCenterIds: new Set(), notifCenterLocalItems: null, paginationHasMore: true, paginationCursor: "flex", notifCenterActive: 2087, notifCenterTabFocused: 2088 };
     if (flag) {
       let prop = obj.notifCenterLocalItems;
     } else {
@@ -499,7 +499,7 @@ obj = {
     if (flag === undefined) {
       flag = false;
     }
-    obj = { loading: false, initialized: false, errored: false, isDataStale: false, notifCenterItems: [], staleNotifCenterItems: [], notifCenterIds: new Set(), notifCenterLocalItems: null, paginationHasMore: true, paginationCursor: "flex", notifCenterActive: "screens", notifCenterTabFocused: "groups" };
+    obj = { loading: false, initialized: false, errored: false, isDataStale: false, notifCenterItems: [], staleNotifCenterItems: [], notifCenterIds: new Set(), notifCenterLocalItems: null, paginationHasMore: true, paginationCursor: "flex", notifCenterActive: 2087, notifCenterTabFocused: 2088 };
     if (flag) {
       let prop = obj.notifCenterLocalItems;
     } else {
@@ -556,7 +556,7 @@ obj = {
       const user = authStore.getUser(id);
       if (tmp6) {
         const items = [];
-        obj = id(7395);
+        obj = id(7396);
         items[HermesBuiltin.arraySpread(obj.notifCenterLocalItems, 0)] = obj.incomingGameFriendRequestLocalItem(user, since, applicationId);
         obj.notifCenterLocalItems = items;
         const arraySpreadResult = HermesBuiltin.arraySpread(obj.notifCenterLocalItems, 0);
@@ -650,7 +650,7 @@ obj = {
     if (flag === undefined) {
       flag = false;
     }
-    obj = { loading: false, initialized: false, errored: false, isDataStale: false, notifCenterItems: [], staleNotifCenterItems: [], notifCenterIds: new Set(), notifCenterLocalItems: null, paginationHasMore: true, paginationCursor: "flex", notifCenterActive: "screens", notifCenterTabFocused: "groups" };
+    obj = { loading: false, initialized: false, errored: false, isDataStale: false, notifCenterItems: [], staleNotifCenterItems: [], notifCenterIds: new Set(), notifCenterLocalItems: null, paginationHasMore: true, paginationCursor: "flex", notifCenterActive: 2087, notifCenterTabFocused: 2088 };
     if (flag) {
       let prop = obj.notifCenterLocalItems;
     } else {
@@ -662,7 +662,7 @@ obj = {
     newBuild = newBuild.newBuild;
     let _require;
     if (null !== newBuild) {
-      obj = _require(7395);
+      obj = _require(7396);
       const result = obj.mobileNativeUpdateAvailableLocalItem(newBuild);
       _require = result;
       const prop = obj.notifCenterLocalItems;

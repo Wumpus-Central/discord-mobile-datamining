@@ -1,6 +1,6 @@
-// === Module 10904: InviteRolesDisplay ===
+// === Module 10908: InviteRolesDisplay ===
 
-// Module 10904 (InviteRolesDisplay)
+// Module 10908 (InviteRolesDisplay)
 import noopAll from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_4 from "createGuildRoleRecordFromRust" /* 1984 */;

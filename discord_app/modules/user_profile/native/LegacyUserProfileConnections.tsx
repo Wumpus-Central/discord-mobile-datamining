@@ -1,15 +1,15 @@
-// === Module 11394: LegacyUserProfileConnections ===
+// === Module 11399: LegacyUserProfileConnections ===
 
-// Module 11394 (LegacyUserProfileConnections)
+// Module 11399 (LegacyUserProfileConnections)
 import ThemesDefault from "Themes" /* 709 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_6 from "_getSystemLocale" /* 1995 */;
 import closure_7 from "createdAt" /* 1934 */;
 import closure_8 from "initialize" /* 4323 */;
-import closure_9 from "createUserWidgetFromServer" /* 7375 */;
+import closure_9 from "createUserWidgetFromServer" /* 7376 */;
 import ME from "ME" /* 673 */;
-import { MetadataFields } from "OperatorTypes" /* 5360 */;
+import { MetadataFields } from "OperatorTypes" /* 5361 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -354,7 +354,7 @@ class ConnectedApplicationUserRoleAccount {
             obj = { style: obj.connectedAccountPoweredByText, children: null };
             let tmp5 = null;
             if (null != applicationRoleConnection.application.bot) {
-              obj = { style: null, user: null, size: null, guildId: "Array" };
+              obj = { style: null, user: null, size: null, guildId: "PX_16" };
               obj[0] = tmp3.connectedAccountPoweredByAvatar;
               const tmp12 = new closure_1_7(tmp4.application.bot);
               obj[1] = tmp12;

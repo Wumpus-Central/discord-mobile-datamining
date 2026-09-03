@@ -1,6 +1,6 @@
-// === Module 15827: getActiveTabsRoute ===
+// === Module 15843: getActiveTabsRoute ===
 
-// Module 15827 (getActiveTabsRoute)
+// Module 15843 (getActiveTabsRoute)
 import coerceMainRoute from "coerceMainRoute" /* 4332 */;
 import getRootNavigationRef from "getRootNavigationRef" /* 4333 */;
 import useChatLayoutDefault from "useChatLayout" /* 4335 */;

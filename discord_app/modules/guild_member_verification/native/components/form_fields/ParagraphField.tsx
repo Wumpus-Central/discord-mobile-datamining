@@ -1,16 +1,16 @@
-// === Module 7816: ParagraphField ===
+// === Module 7819: ParagraphField ===
 
-// Module 7816 (ParagraphField)
+// Module 7819 (ParagraphField)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 709 */;
 import getSystemLocale from "getSystemLocale" /* 1233 */;
 import Text from "Text" /* 4474 */;
-import TextArea from "TextArea" /* 7817 */;
+import TextArea from "TextArea" /* 7820 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import { MAX_PARAGRAPH_RESPONSE_LENGTH as closure_3 } from "items" /* 5012 */;
+import { MAX_PARAGRAPH_RESPONSE_LENGTH as closure_3 } from "items" /* 5013 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
-import importDefaultResult from "createTextStyle" /* 5469 */;
+import importDefaultResult from "createTextStyle" /* 5470 */;
 
 require = arg1;
 noopAll;

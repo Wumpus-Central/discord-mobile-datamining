@@ -1,10 +1,10 @@
-// === Module 15504: ClipboardCopyInput ===
+// === Module 15518: ClipboardCopyInput ===
 
-// Module 15504 (ClipboardCopyInput)
+// Module 15518 (ClipboardCopyInput)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "getState" /* 7166 */;
+import closure_6 from "getState" /* 7167 */;
 import { AppStates } from "ME" /* 673 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;

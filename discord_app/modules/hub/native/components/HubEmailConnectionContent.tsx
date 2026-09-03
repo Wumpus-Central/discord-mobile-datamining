@@ -1,20 +1,20 @@
-// === Module 12493: HubEmailConnectionContent ===
+// === Module 12505: HubEmailConnectionContent ===
 
-// Module 12493 (HubEmailConnectionContent)
+// Module 12505 (HubEmailConnectionContent)
 import ThemesDefault from "Themes" /* 709 */;
 import getSystemLocale from "getSystemLocale" /* 1233 */;
 import Button from "Button" /* 1296 */;
 import useNavigation from "useNavigation" /* 1498 */;
 import Text from "Text" /* 4474 */;
-import Button2 from "Button" /* 4928 */;
-import AccountAgeTier10LargeBadge from "AccountAgeTier10LargeBadge" /* 6265 */;
-import HubEmailConnectionModal from "HubEmailConnectionModal" /* 12489 */;
+import Button2 from "Button" /* 4929 */;
+import AccountAgeTier10LargeBadge from "AccountAgeTier10LargeBadge" /* 6266 */;
+import HubEmailConnectionModal from "HubEmailConnectionModal" /* 12501 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_8 from "ensureGuildLoaded" /* 1386 */;
-import HubEmailConnectionSteps from "HubEmailConnectionSteps" /* 12481 */;
+import HubEmailConnectionSteps from "HubEmailConnectionSteps" /* 12493 */;
 import { MarketingURLs } from "ME" /* 673 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
@@ -251,7 +251,7 @@ export default function HubEmailConnectionContent(arg0) {
   }
   obj = { ref, contentContainerStyle: null, children: null };
   const items = [tmp.scrollViewContainer, ];
-  obj1 = { paddingBottom: invite(5602)().insets.bottom + invite(709).space.PX_16 };
+  obj1 = { paddingBottom: invite(5603)().insets.bottom + invite(709).space.PX_16 };
   items[1] = obj1;
   obj[1] = items;
   obj2 = { style: tmp.container, children: null };
@@ -307,7 +307,7 @@ export default function HubEmailConnectionContent(arg0) {
       }
     }, 100);
   };
-  items1[3] = callback2(invite(7713), obj7);
+  items1[3] = callback2(invite(7716), obj7);
   obj2[1] = items1;
   const items2 = [closure_13(ref, obj2), callback2(ref, { style: tmp.growSpacing }), ];
   const obj11 = { style: tmp.buttonContainer, children: null };

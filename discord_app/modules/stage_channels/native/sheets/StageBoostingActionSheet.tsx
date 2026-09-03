@@ -1,11 +1,11 @@
-// === Module 5381: StageBoostingActionSheet ===
+// === Module 5382: StageBoostingActionSheet ===
 
-// Module 5381 (StageBoostingActionSheet)
+// Module 5382 (StageBoostingActionSheet)
 import noopAll from "noop" /* 19 */;
 import closure_3 from "maybeApplyNoTextColorForLightCustomTheme" /* 4470 */;
 import closure_4 from "createGuildRecordFromRust" /* 1908 */;
 import closure_5 from "getUncachedChannelPermissions" /* 4120 */;
-import { STAGE_BOOSTING_SHEET_KEY } from "MAX_STAGE_TOPIC_LENGTH" /* 5366 */;
+import { STAGE_BOOSTING_SHEET_KEY } from "MAX_STAGE_TOPIC_LENGTH" /* 5367 */;
 import ME from "ME" /* 673 */;
 import GuildFeatures from "GuildFeatures" /* 1923 */;
 import jsxProd from "jsxProd" /* 21 */;
@@ -99,11 +99,11 @@ export default function StageBoostingActionSheet(channel) {
       obj = { guild_id: channel.guild_id, type: closure_1_13.VIDEO_STAGE_LIMIT, is_moderator: stateFromStores2, action: closure_1_12.DISMISS };
       stateFromStores2(695).track(closure_1_7.BOOSTING_UPSELL_CLICKED, obj);
     }
-    tmpResult = tmp(5382);
+    tmpResult = tmp(5383);
     dependencyMap = tmpResult.useActualStageSpeakerCount(channel.id);
     const string3Result1 = string3(T_zF9M.pqPQL0);
-    closure_3 = tmp(5382).useStageParticipantsCount(channel.id, tmp(5376).StageChannelParticipantNamedIndex.AUDIENCE);
-    stateFromStores2(4945)(() => {
+    closure_3 = tmp(5383).useStageParticipantsCount(channel.id, tmp(5377).StageChannelParticipantNamedIndex.AUDIENCE);
+    stateFromStores2(4946)(() => {
       let obj = stateFromStores2(695);
       obj = { guild_id: channel.guild_id, type: closure_1_13.VIDEO_STAGE_LIMIT, is_moderator: stateFromStores2, listener_count: dependencyMap + closure_3 };
       obj.track(closure_1_7.BOOSTING_UPSELL_VIEWED, obj);
@@ -120,19 +120,19 @@ export default function StageBoostingActionSheet(channel) {
         obj = { guild_id: channel.guild_id, type: closure_1_13.VIDEO_STAGE_LIMIT, is_moderator: stateFromStores2, action: closure_1_12.DISMISS };
         stateFromStores2(695).track(closure_1_7.BOOSTING_UPSELL_CLICKED, obj);
         const obj2 = stateFromStores2(695);
-        channel(5385).openApplyBoostModal(channel.guild_id);
-        const obj4 = channel(5385);
+        channel(5386).openApplyBoostModal(channel.guild_id);
+        const obj4 = channel(5386);
         obj = { guild_id: channel.guild_id, type: closure_1_13.VIDEO_STAGE_LIMIT, is_moderator: stateFromStores2, action: closure_1_12.BOOST };
         stateFromStores2(695).track(closure_1_7.BOOSTING_UPSELL_CLICKED, obj);
       };
-      const items5 = [callback(tmp(4928).Button, obj), ];
+      const items5 = [callback(tmp(4929).Button, obj), ];
       obj1 = { variant: "secondary", size: "lg", text: null, onPress: null };
       const intl7 = tmp(1233).intl;
       obj1[2] = intl7.string(tmp(1233).t.f3Pet9);
       obj1[3] = handleClose;
-      items5[1] = callback(tmp(4928).Button, obj1);
+      items5[1] = callback(tmp(4929).Button, obj1);
       obj[1] = items5;
-      let tmp23Result = callback2(tmp(5384).ButtonGroup, obj);
+      let tmp23Result = callback2(tmp(5385).ButtonGroup, obj);
       let tmp23 = callback;
     } else {
       tmp23 = callback;
@@ -148,21 +148,21 @@ export default function StageBoostingActionSheet(channel) {
         obj3[2] = intl4.string(tmp(1233).t["NX+WJN"]);
         obj3[3] = handleClose;
       }
-      tmp23Result = tmp23(tmp(4928).Button, obj3);
+      tmp23Result = tmp23(tmp(4929).Button, obj3);
     }
     let obj4 = { title: null, description: null, illustration: null, actions: null };
     obj4[0] = string3Result1;
     obj4[1] = stringResult;
     if (tmp9) {
-      tmp23Result = tmp23(tmp(6265).HoldingGemSpotIllustration, { accessible: false });
+      tmp23Result = tmp23(tmp(6266).HoldingGemSpotIllustration, { accessible: false });
     } else {
       const obj5 = { source: null };
-      obj5[0] = tmp21(8755);
-      tmp23Result = tmp23(tmp21(5501), obj5);
-      const tmp21Result = tmp21(5501);
+      obj5[0] = tmp21(8759);
+      tmp23Result = tmp23(tmp21(5502), obj5);
+      const tmp21Result = tmp21(5502);
     }
     obj4[2] = tmp23Result;
     obj4[3] = tmp23Result;
-    return tmp23(tmp(10335).PromoSheet, obj4);
+    return tmp23(tmp(10339).PromoSheet, obj4);
   }
 };

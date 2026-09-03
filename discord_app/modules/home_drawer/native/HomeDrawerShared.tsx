@@ -1,6 +1,6 @@
-// === Module 16127: HomeDrawerSharedItem ===
+// === Module 16143: HomeDrawerSharedItem ===
 
-// Module 16127 (HomeDrawerSharedItem)
+// Module 16143 (HomeDrawerSharedItem)
 import noopAll from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;

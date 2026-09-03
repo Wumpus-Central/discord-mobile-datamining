@@ -1,13 +1,13 @@
-// === Module 13479: items ===
+// === Module 13494: items ===
 
-// Module 13479 (items)
+// Module 13494 (items)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 709 */;
 import getSystemLocale from "getSystemLocale" /* 1233 */;
-import playDefault from "play" /* 5952 */;
-import registerAssetDefault from "registerAsset" /* 13480 */;
-import _mod13481 from "module_13481" /* 13481 */;
-import registerAssetDefault2 from "registerAsset" /* 13482 */;
+import playDefault from "play" /* 5953 */;
+import registerAssetDefault from "registerAsset" /* 13495 */;
+import _mod13496 from "module_13496" /* 13496 */;
+import registerAssetDefault2 from "registerAsset" /* 13497 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4470 */;
 import jsxProd from "jsxProd" /* 21 */;
@@ -49,7 +49,7 @@ let items = [
       return intl.string(getSystemLocale.t.wOYbTv);
     },
     getGraphic(arg0) {
-      const obj = { source: _mod13481, autoPlay: !useReducedMotion.useReducedMotion, style: arg0 };
+      const obj = { source: _mod13496, autoPlay: !useReducedMotion.useReducedMotion, style: arg0 };
       return callback(playDefault, obj);
     }
   },
@@ -113,7 +113,7 @@ export default function GuildBoostingMarketingTopPerksCards() {
       return closure_1_7(closure_1_4, obj, arg1);
     })
   };
-  items[1] = callback(_require(12352).MarketingCardsScroller, obj);
+  items[1] = callback(_require(12364).MarketingCardsScroller, obj);
   obj[1] = items;
   return callback2(closure_4, obj);
 };

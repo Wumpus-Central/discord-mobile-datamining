@@ -1,6 +1,6 @@
-// === Module 8919: useAvatarDecoration ===
+// === Module 8923: useAvatarDecoration ===
 
-// Module 8919 (useAvatarDecoration)
+// Module 8923 (useAvatarDecoration)
 import closure_2 from "_slicedToArray" /* 32 */;
 import closure_3 from "trackCommunicationDisabled" /* 1991 */;
 

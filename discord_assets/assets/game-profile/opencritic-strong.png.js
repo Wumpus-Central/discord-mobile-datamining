@@ -1,6 +1,6 @@
-// === Module 8869: metadata ===
+// === Module 8873: metadata ===
 
-// Module 8869 (metadata)
+// Module 8873 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/game-profile/opencritic-strong.png.js");

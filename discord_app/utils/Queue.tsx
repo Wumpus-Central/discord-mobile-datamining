@@ -1,6 +1,6 @@
-// === Module 7589: enqueue ===
+// === Module 7590: enqueue ===
 
-// Module 7589 (enqueue)
+// Module 7590 (enqueue)
 import timestampDefault from "timestamp" /* 3 */;
 import DequeDefault from "Deque" /* 8 */;
 

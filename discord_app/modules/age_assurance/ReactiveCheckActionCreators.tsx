@@ -1,6 +1,6 @@
-// === Module 13641: _resetAgeVerification ===
+// === Module 13656: _resetAgeVerification ===
 
-// Module 13641 (_resetAgeVerification)
+// Module 13656 (_resetAgeVerification)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import { Endpoints } from "ME" /* 673 */;
 

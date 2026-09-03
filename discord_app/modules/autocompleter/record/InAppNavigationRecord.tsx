@@ -1,10 +1,10 @@
-// === Module 5394: fromType ===
+// === Module 5395: fromType ===
 
-// Module 5394 (fromType)
+// Module 5395 (fromType)
 import toJSDefault from "toJS" /* 1935 */;
-import settingsPathToRoute from "settingsPathToRoute" /* 5404 */;
+import settingsPathToRoute from "settingsPathToRoute" /* 5405 */;
 import { Routes } from "ME" /* 673 */;
-import { RewardFilterTypes } from "QuestsExperimentLocations" /* 5395 */;
+import { RewardFilterTypes } from "QuestsExperimentLocations" /* 5396 */;
 import { UserSettingsPath } from "MAX_FAVORITES" /* 682 */;
 
 require = arg1;

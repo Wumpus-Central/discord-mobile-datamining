@@ -1,6 +1,6 @@
-// === Module 11814: ForumPostTypingUsers ===
+// === Module 11820: ForumPostTypingUsers ===
 
-// Module 11814 (ForumPostTypingUsers)
+// Module 11820 (ForumPostTypingUsers)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 709 */;
 import { View } from "get ActivityIndicator" /* 17 */;

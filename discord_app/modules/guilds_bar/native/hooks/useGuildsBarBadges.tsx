@@ -1,9 +1,9 @@
-// === Module 16150: useGuildsBarBadges ===
+// === Module 16166: useGuildsBarBadges ===
 
-// Module 16150 (useGuildsBarBadges)
+// Module 16166 (useGuildsBarBadges)
 import closure_4 from "_objectWithoutProperties" /* 109 */;
 import closure_5 from "noop" /* 19 */;
-import closure_6 from "computeAlertSettings" /* 10185 */;
+import closure_6 from "computeAlertSettings" /* 10189 */;
 import closure_7 from "handleGatewayJoinRequestUpdate" /* 4300 */;
 import closure_8 from "trackCommunicationDisabled" /* 1991 */;
 import closure_9 from "createGuildRecordFromRust" /* 1908 */;

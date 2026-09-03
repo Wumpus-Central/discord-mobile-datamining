@@ -1,11 +1,11 @@
-// === Module 14777: UserSettingsSessions ===
+// === Module 14792: UserSettingsSessions ===
 
-// Module 14777 (UserSettingsSessions)
+// Module 14792 (UserSettingsSessions)
 import ThemesDefault from "Themes" /* 709 */;
-import registerAssetDefault from "registerAsset" /* 7773 */;
-import registerAssetDefault2 from "registerAsset" /* 10169 */;
-import registerAssetDefault3 from "registerAsset" /* 12054 */;
-import registerAssetDefault4 from "registerAsset" /* 14779 */;
+import registerAssetDefault from "registerAsset" /* 7776 */;
+import registerAssetDefault2 from "registerAsset" /* 10173 */;
+import registerAssetDefault3 from "registerAsset" /* 12060 */;
+import registerAssetDefault4 from "registerAsset" /* 14794 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
@@ -13,12 +13,12 @@ import closure_8 from "mergeGuildAvatar" /* 1921 */;
 import ME from "ME" /* 673 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
-import importDefaultResult from "createTextStyle" /* 5469 */;
+import importDefaultResult from "createTextStyle" /* 5470 */;
 
 const require = arg1;
 function UserSettingsSessions() {
   const tmp = callback4();
-  let obj = otherSessions(14548);
+  let obj = otherSessions(14564);
   let authSessions = obj.useAuthSessions();
   ({ currentSession, otherSessions } = authSessions);
   obj1 = otherSessions(586);
@@ -55,14 +55,14 @@ function UserSettingsSessions() {
       tmp21Result = tmp21(SessionInfo, obj2);
     }
     obj1[2] = tmp21Result;
-    const items1 = [callback2(tmp2(6000).TableRowGroup, obj1), , ];
+    const items1 = [callback2(tmp2(6001).TableRowGroup, obj1), , ];
     if (otherSessions.length > 0) {
       const obj3 = { title: null, hasIcons: true, children: null };
       const intl = tmp2(1233).intl;
       obj3[0] = intl.string(tmp2(1233).t.xx1MWc);
       const items2 = [otherSessions.map((id_hash) => callback(closure_15, { session: id_hash }, id_hash.id_hash)), tmp21(UnknownLegacySessionsInfo, {})];
       obj3[2] = items2;
-      tmp20Result = tmp20(tmp2(6000).TableRowGroup, obj3);
+      tmp20Result = tmp20(tmp2(6001).TableRowGroup, obj3);
     } else {
       let mfaEnabled;
       if (stateFromStores != null) {
@@ -81,11 +81,11 @@ function UserSettingsSessions() {
       obj4[5] = function onPress() {
         return otherSessions(closure_1_2[11]).logOutSessions(otherSessions.map((id_hash) => id_hash.id_hash));
       };
-      tmp21Result = tmp21(tmp2(5607).TableRow, obj4);
+      tmp21Result = tmp21(tmp2(5608).TableRow, obj4);
     }
     items1[2] = tmp21Result;
     obj[2] = items1;
-    tmp20Result = tmp20(tmp2(4926).Stack, obj);
+    tmp20Result = tmp20(tmp2(4927).Stack, obj);
   }
   const obj5 = { style: tmp.container, children: null };
   const obj6 = { bottom: true, children: null };
@@ -94,7 +94,7 @@ function UserSettingsSessions() {
   obj7[2] = intl4.string(otherSessions(1233).t.zZp618);
   const items3 = [callback2(otherSessions(4474).Text, obj7), tmp20Result];
   obj6[1] = items3;
-  obj5[1] = callback3(otherSessions(5561).SafeAreaPaddingView, obj6);
+  obj5[1] = callback3(otherSessions(5562).SafeAreaPaddingView, obj6);
   return callback2(closure_7, obj5);
 }
 function SessionInfo(session) {
@@ -137,14 +137,14 @@ function SessionInfo(session) {
               let obj = { text: null, iconSource: null, IconComponent: null };
               obj[0] = os;
               obj[1] = registerAssetDefault2;
-              obj[2] = session(14780).VrHeadsetIcon;
+              obj[2] = session(14795).VrHeadsetIcon;
               let tmp9 = session;
               let tmp10 = importDefault;
             } else {
               obj = { text: null, iconSource: null, IconComponent: null };
               obj[0] = os;
               obj[1] = registerAssetDefault4;
-              obj[2] = session(12857).ScreenIcon;
+              obj[2] = session(12869).ScreenIcon;
               tmp9 = session;
               tmp10 = importDefault;
             }
@@ -153,15 +153,15 @@ function SessionInfo(session) {
         obj = { text: null, iconSource: null, IconComponent: null };
         obj[0] = os;
         obj[1] = registerAssetDefault2;
-        obj[2] = session(7742).MobilePhoneIcon;
+        obj[2] = session(7745).MobilePhoneIcon;
         tmp9 = session;
         tmp10 = importDefault;
       }
       let formatDateResult = null;
       ({ text, iconSource, IconComponent } = obj);
       if (!current) {
-        formatDateResult = tmp9(14548).formatDate(session.approx_last_used_time);
-        const tmp9Result = tmp9(14548);
+        formatDateResult = tmp9(14564).formatDate(session.approx_last_used_time);
+        const tmp9Result = tmp9(14564);
       }
       const items = [text, platform];
       const found = items.filter(tmp9(1470).isNotNullish);
@@ -178,7 +178,7 @@ function SessionInfo(session) {
         obj2[0] = tmp.logoutButton;
         obj2[1] = registerAssetDefault;
         obj1[4] = callback2(tmp9(1296).Icon, obj2);
-        tmp18 = callback2(tmp9(5076).PressableOpacity, obj1);
+        tmp18 = callback2(tmp9(5077).PressableOpacity, obj1);
       }
       const obj3 = { style: null, accessible: true, children: null };
       obj3[0] = tmp.sessionInfo;
@@ -207,7 +207,7 @@ function SessionInfo(session) {
       const obj10 = { source: null, IconComponent: null };
       obj10[0] = iconSource;
       obj10[1] = IconComponent;
-      obj9[0] = callback2(tmp9(5607).TableRow.Icon, obj10);
+      obj9[0] = callback2(tmp9(5608).TableRow.Icon, obj10);
       obj9[1] = tmp20Result;
       tmp20Result = null != _location;
       if (tmp20Result) {
@@ -235,14 +235,14 @@ function SessionInfo(session) {
       obj15[1] = items3;
       obj9[2] = closure_11(closure_6, obj15);
       obj9[3] = tmp18;
-      return callback2(tmp9(5607).TableRow, obj9);
+      return callback2(tmp9(5608).TableRow, obj9);
     }
   }
   const obj16 = { text: null, iconSource: null, IconComponent: null };
   const intl = session(1233).intl;
   obj16[0] = intl.string(session(1233).t.cDHCNY);
   obj16[1] = registerAssetDefault4;
-  obj16[2] = session(12857).ScreenIcon;
+  obj16[2] = session(12869).ScreenIcon;
   tmp9 = session;
   tmp10 = importDefault;
   obj = obj16;
@@ -252,7 +252,7 @@ function UnknownLegacySessionsInfo() {
   _require = obj.useNavigation();
   obj = { icon: null, label: null, subLabel: null };
   obj = { variant: "translucent", source: registerAssetDefault3 };
-  obj[0] = callback2(_require(5607).TableRow.Icon, obj);
+  obj[0] = callback2(_require(5608).TableRow.Icon, obj);
   const intl = _require(1233).intl;
   obj[1] = intl.string(_require(1233).t.iUa0sn);
   const intl2 = _require(1233).intl;
@@ -262,7 +262,7 @@ function UnknownLegacySessionsInfo() {
       const obj = closure_1_1(closure_1_2[24]);
     }
   });
-  return callback2(_require(5607).TableRow, obj);
+  return callback2(_require(5608).TableRow, obj);
 }
 ({ ActivityIndicator: c5, View: closure_6, ScrollView: error } = get_ActivityIndicator);
 ({ UserSettingsSections: c9, Fonts } = ME);

@@ -1,16 +1,16 @@
-// === Module 9231: UserProfileCustomStatusActionSheet ===
+// === Module 9235: UserProfileCustomStatusActionSheet ===
 
-// Module 9231 (UserProfileCustomStatusActionSheet)
+// Module 9235 (UserProfileCustomStatusActionSheet)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 709 */;
 import getNicknameDefault from "getNickname" /* 4673 */;
-import _modDef8114 from "module_8114" /* 8114 */;
-import useCustomStatusActivityForUserDefault from "useCustomStatusActivityForUser" /* 9068 */;
-import EmojiImageDefault from "EmojiImage" /* 9100 */;
-import UserProfileStackedActionSheetDefault from "UserProfileStackedActionSheet" /* 9232 */;
+import _modDef8117 from "module_8117" /* 8117 */;
+import useCustomStatusActivityForUserDefault from "useCustomStatusActivityForUser" /* 9072 */;
+import StatusBubbleConnectorDefault from "StatusBubbleConnector" /* 9104 */;
+import UserProfileStackedActionSheetDefault from "UserProfileStackedActionSheet" /* 9236 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_4 from "mergeGuildAvatar" /* 1921 */;
-import ARBITRARY_LARGE_OFFSET from "ARBITRARY_LARGE_OFFSET" /* 6009 */;
+import ARBITRARY_LARGE_OFFSET from "ARBITRARY_LARGE_OFFSET" /* 6010 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -58,8 +58,8 @@ export default function UserProfileCustomStatusActionSheet(user) {
   obj1 = { style: tmp.statusPreviewContainer, children: null };
   const obj2 = { style: tmp.avatarContainer, children: null };
   const tmp6 = useCustomStatusActivityForUserDefault(user.id);
-  obj2[1] = callback(_modDef8114, { user, statusStyle: tmp.avatarStatus });
-  const items2 = [callback(View, obj2), callback(EmojiImageDefault, { customStatusActivity: tmp6, hasCustomProfileTheme: false, showFullStatus: true, style: tmp.customStatusBubble, previewEmoji, previewText })];
+  obj2[1] = callback(_modDef8117, { user, statusStyle: tmp.avatarStatus });
+  const items2 = [callback(View, obj2), callback(StatusBubbleConnectorDefault, { customStatusActivity: tmp6, hasCustomProfileTheme: false, showFullStatus: true, style: tmp.customStatusBubble, previewEmoji, previewText })];
   obj1[1] = items2;
   obj[1] = callback2(View, obj1);
   return callback(UserProfileStackedActionSheetDefault, obj);

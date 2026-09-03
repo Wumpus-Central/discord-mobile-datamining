@@ -1,6 +1,6 @@
-// === Module 10638: HorizontalAutocompleteOption ===
+// === Module 10642: HorizontalAutocompleteOption ===
 
-// Module 10638 (HorizontalAutocompleteOption)
+// Module 10642 (HorizontalAutocompleteOption)
 import noopAll from "noop" /* 19 */;
 import initialize from "initialize" /* 586 */;
 import ThemesDefault from "Themes" /* 709 */;
@@ -8,10 +8,10 @@ import Button from "Button" /* 1296 */;
 import _modDef4217 from "module_4217" /* 4217 */;
 import nameFromUserDefault from "nameFromUser" /* 4322 */;
 import Text from "Text" /* 4474 */;
-import useMountLayoutEffectDefault from "useMountLayoutEffect" /* 4945 */;
-import preloadDefault from "preload" /* 5501 */;
-import RoleIconDefault from "RoleIcon" /* 5987 */;
-import registerAssetDefault from "registerAsset" /* 8042 */;
+import useMountLayoutEffectDefault from "useMountLayoutEffect" /* 4946 */;
+import preloadDefault from "preload" /* 5502 */;
+import RoleIconDefault from "RoleIcon" /* 5988 */;
+import registerAssetDefault from "registerAsset" /* 8045 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4470 */;
 import closure_6 from "createGuildRoleRecordFromRust" /* 1984 */;
@@ -21,7 +21,7 @@ import closure_9 from "mergeGuildAvatar" /* 1921 */;
 import ME from "ME" /* 673 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
-import importDefaultResult from "createTextStyle" /* 5469 */;
+import importDefaultResult from "createTextStyle" /* 5470 */;
 
 require = arg1;
 function HorizontalAutocompleteOption(arg0) {
@@ -98,8 +98,8 @@ let obj3 = {
     const stateFromStores = obj.useStateFromStores(items, () => closure_1_6.getRole(closure_0, closure_1));
     let roleIconData = null;
     if (null != stateFromStores) {
-      roleIconData = tmp2(5986).getRoleIconData(stateFromStores, 30);
-      const tmp2Result = tmp2(5986);
+      roleIconData = tmp2(5987).getRoleIconData(stateFromStores, 30);
+      const tmp2Result = tmp2(5987);
     }
     obj = { onPress: onPress.onPress, children: null };
     let tmp9Result = null;
@@ -141,7 +141,7 @@ let obj3 = {
     if (channel.type === constants.GUILD_CATEGORY) {
       let channelIconWithGuild = registerAssetDefault;
     } else {
-      let tmp2Result = tmp2(4981);
+      let tmp2Result = tmp2(4982);
       channelIconWithGuild = tmp2Result.getChannelIconWithGuild(channel, tmp5);
     }
     const tmp = callback3();

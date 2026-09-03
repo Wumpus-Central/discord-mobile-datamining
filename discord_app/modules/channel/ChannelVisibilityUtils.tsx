@@ -1,7 +1,7 @@
-// === Module 10192: isChannelCurrentlyVisible ===
+// === Module 10196: isChannelCurrentlyVisible ===
 
-// Module 10192 (isChannelCurrentlyVisible)
-import closure_0 from "handlePermissionsChange" /* 6135 */;
+// Module 10196 (isChannelCurrentlyVisible)
+import closure_0 from "handlePermissionsChange" /* 6136 */;
 import closure_1 from "handleConnectionOpen" /* 1980 */;
 import closure_2 from "handleConnectionOpen" /* 4299 */;
 

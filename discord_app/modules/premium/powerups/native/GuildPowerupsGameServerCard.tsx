@@ -1,10 +1,10 @@
-// === Module 12362: GuildPowerupsGameServerCard ===
+// === Module 12374: GuildPowerupsGameServerCard ===
 
-// Module 12362 (GuildPowerupsGameServerCard)
+// Module 12374 (GuildPowerupsGameServerCard)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 709 */;
-import GuildPowerupsPerkCardDefault from "GuildPowerupsPerkCard" /* 12359 */;
-import useGameServerPerkDefault from "useGameServerPerk" /* 12364 */;
+import GuildPowerupsPerkCardDefault from "GuildPowerupsPerkCard" /* 12371 */;
+import useGameServerPerkDefault from "useGameServerPerk" /* 12376 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4470 */;
 import closure_5 from "handleGameServerInstanceCreated" /* 4385 */;

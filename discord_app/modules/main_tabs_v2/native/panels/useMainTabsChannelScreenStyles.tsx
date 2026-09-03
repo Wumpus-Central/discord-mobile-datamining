@@ -1,6 +1,6 @@
-// === Module 16350: useMainTabsChannelScreenStyles ===
+// === Module 16369: useMainTabsChannelScreenStyles ===
 
-// Module 16350 (useMainTabsChannelScreenStyles)
+// Module 16369 (useMainTabsChannelScreenStyles)
 import ThemesDefault from "Themes" /* 709 */;
 import closure_2 from "noop" /* 19 */;
 import createCacheKey from "createCacheKey" /* 4478 */;

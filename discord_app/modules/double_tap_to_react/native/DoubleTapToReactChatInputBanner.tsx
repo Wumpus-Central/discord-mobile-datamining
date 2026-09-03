@@ -1,15 +1,15 @@
-// === Module 12080: DoubleTapToReactChatInputBannerInner ===
+// === Module 12086: DoubleTapToReactChatInputBannerInner ===
 
-// Module 12080 (DoubleTapToReactChatInputBannerInner)
+// Module 12086 (DoubleTapToReactChatInputBannerInner)
 import defaultAreStatesEqual from "defaultAreStatesEqual" /* 644 */;
 import ThemesDefault from "Themes" /* 709 */;
 import getSystemLocale from "getSystemLocale" /* 1233 */;
 import getAvatarURLDefault from "getAvatarURL" /* 1430 */;
 import Text from "Text" /* 4474 */;
-import PressableBase from "PressableBase" /* 5076 */;
-import XSmallIcon from "XSmallIcon" /* 5559 */;
-import EmojiDefault from "Emoji" /* 5593 */;
-import renderChannelBadge from "renderChannelBadge" /* 12081 */;
+import PressableBase from "PressableBase" /* 5077 */;
+import XSmallIcon from "XSmallIcon" /* 5560 */;
+import EmojiDefault from "Emoji" /* 5594 */;
+import renderChannelBadge from "renderChannelBadge" /* 12087 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;

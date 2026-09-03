@@ -1,14 +1,14 @@
-// === Module 15450: TestLocaleSelector ===
+// === Module 15464: TestLocaleSelector ===
 
-// Module 15450 (TestLocaleSelector)
+// Module 15464 (TestLocaleSelector)
 import initialize from "initialize" /* 586 */;
 import ThemesDefault from "Themes" /* 709 */;
 import getSystemLocale from "getSystemLocale" /* 1233 */;
 import hooksDefault from "hooks" /* 4074 */;
-import TableRowInner from "TableRowInner" /* 5607 */;
-import TableRowGroupTitle from "TableRowGroupTitle" /* 6000 */;
-import messagesProxyDefault from "messagesProxy" /* 15451 */;
-import messagesProxyDefault2 from "messagesProxy" /* 15483 */;
+import TableRowInner from "TableRowInner" /* 5608 */;
+import TableRowGroupTitle from "TableRowGroupTitle" /* 6001 */;
+import messagesProxyDefault from "messagesProxy" /* 15465 */;
+import messagesProxyDefault2 from "messagesProxy" /* 15497 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import closure_5 from "noop" /* 19 */;
@@ -92,9 +92,9 @@ function TestLocaleSelector() {
     }
     return applyArgumentsResult;
   };
-  const items = [callback3(_require(7702).TableRadioRow, { label: "English", value: "en-US" }), callback3(_require(7702).TableRadioRow, { label: "French", value: "fr" })];
+  const items = [callback3(_require(7705).TableRadioRow, { label: "English", value: "en-US" }), callback3(_require(7705).TableRadioRow, { label: "French", value: "fr" })];
   obj[4] = items;
-  return callback4(_require(7701).TableRadioGroup, obj);
+  return callback4(_require(7704).TableRadioGroup, obj);
 }
 function LocaleInfo() {
   let obj = initialize;
@@ -194,6 +194,6 @@ export default function IntlTestingSettingsPage() {
   });
   items[7] = callback3(_require(4474).Text, obj6);
   obj[2] = items;
-  obj[1] = callback4(_require(4926).Stack, obj);
+  obj[1] = callback4(_require(4927).Stack, obj);
   return callback3(closure_7, obj);
 };

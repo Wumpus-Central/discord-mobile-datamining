@@ -1,15 +1,15 @@
-// === Module 16026: GuildRoleSubscriptionsChannelLongPressActionSheet ===
+// === Module 16042: GuildRoleSubscriptionsChannelLongPressActionSheet ===
 
-// Module 16026 (GuildRoleSubscriptionsChannelLongPressActionSheet)
+// Module 16042 (GuildRoleSubscriptionsChannelLongPressActionSheet)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 709 */;
 import getSystemLocale from "getSystemLocale" /* 1233 */;
 import Button from "Button" /* 1296 */;
-import RedesignBottomSheetTitleHeaderBase from "RedesignBottomSheetTitleHeaderBase" /* 5629 */;
-import ActionSheet from "ActionSheet" /* 5997 */;
-import Form from "Form" /* 8372 */;
-import registerAssetDefault from "registerAsset" /* 12541 */;
-import registerAssetDefault2 from "registerAsset" /* 15919 */;
+import RedesignBottomSheetTitleHeaderBase from "RedesignBottomSheetTitleHeaderBase" /* 5630 */;
+import ActionSheet from "ActionSheet" /* 5998 */;
+import Form from "Form" /* 8376 */;
+import registerAssetDefault from "registerAsset" /* 12553 */;
+import registerAssetDefault2 from "registerAsset" /* 15935 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { StaticChannelRoute } from "set" /* 1393 */;
 import jsxProd from "jsxProd" /* 21 */;

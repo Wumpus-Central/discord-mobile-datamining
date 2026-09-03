@@ -1,6 +1,6 @@
-// === Module 7641: getInitialParserState ===
+// === Module 7642: getInitialParserState ===
 
-// Module 7641 (getInitialParserState)
+// Module 7642 (getInitialParserState)
 import set from "set" /* 2 */;
 import get_defaultRulesDefault from "get defaultRules" /* 4468 */;
 

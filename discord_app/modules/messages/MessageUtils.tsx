@@ -1,7 +1,7 @@
-// === Module 10189: canViewPotentiallyNSFWChannel ===
+// === Module 10193: canViewPotentiallyNSFWChannel ===
 
-// Module 10189 (canViewPotentiallyNSFWChannel)
-import shouldShowAgeGateForVoiceChannel from "shouldShowAgeGateForVoiceChannel" /* 4731 */;
+// Module 10193 (canViewPotentiallyNSFWChannel)
+import shouldShowAgeGateForVoiceChannel from "shouldShowAgeGateForVoiceChannel" /* 4732 */;
 import closure_2 from "ensureGuildLoaded" /* 1386 */;
 import closure_3 from "mergeGuildAvatar" /* 1921 */;
 

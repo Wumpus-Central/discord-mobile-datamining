@@ -1,6 +1,6 @@
-// === Module 17002: ConnectButton ===
+// === Module 17022: ConnectButton ===
 
-// Module 17002 (ConnectButton)
+// Module 17022 (ConnectButton)
 import ThemesDefault from "Themes" /* 709 */;
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "ensureGuildLoaded" /* 1386 */;

@@ -1,6 +1,6 @@
-// === Module 5130: _getDetectedFileSize ===
+// === Module 5131: _getDetectedFileSize ===
 
-// Module 5130 (_getDetectedFileSize)
+// Module 5131 (_getDetectedFileSize)
 import closure_0 from "asyncGeneratorStep" /* 5 */;
 
 function _getDetectedFileSize() {

@@ -1,6 +1,6 @@
-// === Module 8699: AgeVerificationModalEntryPoint ===
+// === Module 8703: AgeVerificationModalEntryPoint ===
 
-// Module 8699 (AgeVerificationModalEntryPoint)
+// Module 8703 (AgeVerificationModalEntryPoint)
 import expandEventPropertiesDefault from "expandEventProperties" /* 695 */;
 import closure_2 from "ensureGuildLoaded" /* 1386 */;
 import { AnalyticEvents } from "ME" /* 673 */;

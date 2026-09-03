@@ -1,17 +1,17 @@
-// === Module 7996: getCurrentTime ===
+// === Module 7999: getCurrentTime ===
 
-// Module 7996 (getCurrentTime)
+// Module 7999 (getCurrentTime)
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 586 */;
 import dispatcherDefault from "dispatcher" /* 706 */;
 import explicitContentFromProto from "explicitContentFromProto" /* 4166 */;
-import FRIEND_ANNIVERSARY_ELIGIBILITY_WINDOW_DAYS from "FRIEND_ANNIVERSARY_ELIGIBILITY_WINDOW_DAYS" /* 7997 */;
-import getFriendAnniversaryGateConfig from "getFriendAnniversaryGateConfig" /* 7998 */;
+import FRIEND_ANNIVERSARY_ELIGIBILITY_WINDOW_DAYS from "FRIEND_ANNIVERSARY_ELIGIBILITY_WINDOW_DAYS" /* 8000 */;
+import getFriendAnniversaryGateConfig from "getFriendAnniversaryGateConfig" /* 8001 */;
 import closure_3 from "getHash" /* 4391 */;
 import closure_4 from "initialize" /* 1209 */;
-import closure_5 from "recomputeAffinities" /* 7413 */;
+import closure_5 from "recomputeAffinities" /* 7414 */;
 import closure_6 from "handleConnectionClosedOrResumed" /* 1339 */;
-import closure_7 from "hasConsented" /* 6062 */;
+import closure_7 from "hasConsented" /* 6063 */;
 import closure_8 from "markAllUserIdListsStale" /* 4130 */;
 import { Consents } from "ME" /* 673 */;
 import set from "set" /* 2 */;
@@ -142,7 +142,7 @@ function generateFriendAnniversaries(c15) {
             }
           });
           const sorted = obj.sort((arg0, arg1) => closure_5.compareByDmProbability(arg0, arg1));
-          const result = highestAffinity(7997).categorizeFriendAnniversariesByAffinity(obj, (userId) => {
+          const result = highestAffinity(8000).categorizeFriendAnniversariesByAffinity(obj, (userId) => {
             const userAffinity = closure_5.getUserAffinity(userId);
             let dmProbability;
             if (userAffinity != null) {
@@ -151,7 +151,7 @@ function generateFriendAnniversaries(c15) {
             return dmProbability;
           }, true);
           ({ highestAffinity, highAffinity } = result);
-          const highestAffinityResult = highestAffinity(7997);
+          const highestAffinityResult = highestAffinity(8000);
         }
         sampleSizeResult = _null;
       }

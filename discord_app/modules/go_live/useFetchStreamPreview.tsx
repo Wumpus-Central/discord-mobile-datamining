@@ -1,6 +1,6 @@
-// === Module 10167: useFetchStreamPreview ===
+// === Module 10171: useFetchStreamPreview ===
 
-// Module 10167 (useFetchStreamPreview)
+// Module 10171 (useFetchStreamPreview)
 import closure_2 from "noop" /* 19 */;
 import closure_3 from "reset" /* 4665 */;
 import closure_4 from "ensureGuildLoaded" /* 1386 */;

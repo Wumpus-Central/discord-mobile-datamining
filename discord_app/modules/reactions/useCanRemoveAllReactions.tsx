@@ -1,6 +1,6 @@
-// === Module 11118: useCanRemoveAllReactions ===
+// === Module 11122: useCanRemoveAllReactions ===
 
-// Module 11118 (useCanRemoveAllReactions)
+// Module 11122 (useCanRemoveAllReactions)
 import closure_2 from "getUncachedChannelPermissions" /* 4120 */;
 import { Permissions } from "ME" /* 673 */;
 

@@ -1,6 +1,6 @@
-// === Module 12835: RemediatedUserNotice ===
+// === Module 12847: RemediatedUserNotice ===
 
-// Module 12835 (RemediatedUserNotice)
+// Module 12847 (RemediatedUserNotice)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 709 */;
 import { View } from "get ActivityIndicator" /* 17 */;

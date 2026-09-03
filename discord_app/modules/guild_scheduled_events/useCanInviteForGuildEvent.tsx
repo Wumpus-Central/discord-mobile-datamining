@@ -1,14 +1,14 @@
-// === Module 9764: canEveryoneRoleViewEvent ===
+// === Module 9768: canEveryoneRoleViewEvent ===
 
-// Module 9764 (canEveryoneRoleViewEvent)
+// Module 9768 (canEveryoneRoleViewEvent)
 import applyOverwritesAll from "applyOverwrites" /* 4125 */;
-import canViewInviteModal from "canViewInviteModal" /* 9765 */;
+import canViewInviteModal from "canViewInviteModal" /* 9769 */;
 import closure_3 from "handleStageInstanceCreateOrUpdate" /* 1391 */;
 import closure_4 from "ensureGuildLoaded" /* 1386 */;
 import closure_5 from "comparator" /* 1981 */;
 import closure_6 from "createGuildRecordFromRust" /* 1908 */;
 import closure_7 from "getUncachedChannelPermissions" /* 4120 */;
-import { isGuildEventEnded } from "scheduledEventSort" /* 7280 */;
+import { isGuildEventEnded } from "scheduledEventSort" /* 7281 */;
 import { GuildScheduledEventEntityTypes as closure_9 } from "GUILD_EVENT_MAX_NAME_LENGTH" /* 1392 */;
 import { Permissions } from "ME" /* 673 */;
 

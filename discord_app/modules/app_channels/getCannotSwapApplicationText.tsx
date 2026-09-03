@@ -1,6 +1,6 @@
-// === Module 16631: getCannotSwapApplicationText ===
+// === Module 16651: getCannotSwapApplicationText ===
 
-// Module 16631 (getCannotSwapApplicationText)
+// Module 16651 (getCannotSwapApplicationText)
 import closure_2 from "_getSystemLocale" /* 1995 */;
 import closure_3 from "getUncachedChannelPermissions" /* 4120 */;
 
@@ -16,7 +16,7 @@ export default function getCannotSwapApplicationText(arg0) {
     const listFormat = new Intl.ListFormat(locale.locale);
     const intl = tmp(1233).intl;
     const obj = { permissions: null, count: null };
-    obj[0] = listFormat.format(found.map(tmp(9310).getPermissionName));
+    obj[0] = listFormat.format(found.map(tmp(9314).getPermissionName));
     obj[1] = found.length;
     return intl.formatToPlainString(tmp(1233).t.na1rJc, obj);
   }

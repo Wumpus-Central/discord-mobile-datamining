@@ -1,10 +1,10 @@
-// === Module 13832: BuildOverrideModal ===
+// === Module 13848: BuildOverrideModal ===
 
-// Module 13832 (BuildOverrideModal)
+// Module 13848 (BuildOverrideModal)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 709 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_5 from "getCurrentBuildOverride" /* 11279 */;
+import closure_5 from "getCurrentBuildOverride" /* 11283 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -36,9 +36,9 @@ export default function BuildOverrideModal(overrideUrl) {
   const tmp = callback2();
   let obj = str(1362);
   if (obj.isThemeDark(tmp4)) {
-    let tmp2Result = tmp2(13833);
+    let tmp2Result = tmp2(13849);
   } else {
-    tmp2Result = tmp2(13834);
+    tmp2Result = tmp2(13850);
   }
   tmp4 = stateFromStores(4413)();
   const items = [closure_5];
@@ -49,7 +49,7 @@ export default function BuildOverrideModal(overrideUrl) {
   if (override != null) {
     const targetBuildOverride = override.targetBuildOverride;
     if (targetBuildOverride != null) {
-      const tmp9 = targetBuildOverride[tmp5(undefined, 11583).DEVICE_FIELD];
+      const tmp9 = targetBuildOverride[tmp5(undefined, 11588).DEVICE_FIELD];
       if (tmp9 != null) {
         id = tmp9.id;
       }
@@ -111,15 +111,15 @@ export default function BuildOverrideModal(overrideUrl) {
       }
       const result = str(closure_1_2[11]).setBuildOverrideFromLink(str);
     };
-    obj10[1] = tmp14(tmp5(4928).Button, obj11);
+    obj10[1] = tmp14(tmp5(4929).Button, obj11);
     const items5 = [tmp14(tmp13, obj10), ];
     const obj12 = { text: null, variant: "secondary", grow: true, onPress: null };
     const intl6 = tmp5(1233).intl;
     obj12[0] = intl6.string(tmp5(1233).t.b5KKph);
     obj12[3] = function onPress() {
-      return stateFromStores(4723).pop();
+      return stateFromStores(4724).pop();
     };
-    items5[1] = tmp14(tmp5(4928).Button, obj12);
+    items5[1] = tmp14(tmp5(4929).Button, obj12);
     obj9[0] = items5;
     let tmp12Result = tmp12(closure_7, obj9);
   } else {
@@ -127,12 +127,12 @@ export default function BuildOverrideModal(overrideUrl) {
     const intl4 = tmp5(1233).intl;
     obj13[0] = intl4.string(tmp5(1233).t.WRkdCQ);
     obj13[2] = function onPress() {
-      return stateFromStores(4723).pop();
+      return stateFromStores(4724).pop();
     };
-    tmp12Result = tmp14(tmp5(4928).Button, obj13);
+    tmp12Result = tmp14(tmp5(4929).Button, obj13);
   }
   obj8[1] = tmp12Result;
   items4[1] = callback(closure_4, obj8);
   obj[3] = items4;
-  return closure_8(str(5561).SafeAreaPaddingView, obj);
+  return closure_8(str(5562).SafeAreaPaddingView, obj);
 };

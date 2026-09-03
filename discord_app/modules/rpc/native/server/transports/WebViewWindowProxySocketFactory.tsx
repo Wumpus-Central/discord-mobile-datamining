@@ -1,6 +1,6 @@
-// === Module 9524: logger ===
+// === Module 9528: logger ===
 
-// Module 9524 (logger)
+// Module 9528 (logger)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/rpc/native/server/transports/WebViewWindowProxySocketFactory.tsx");
@@ -8,7 +8,7 @@ const result = set.fileFinishedImporting("modules/rpc/native/server/transports/W
 export default function _default(logger) {
   logger = logger.logger;
   ({ source, postMessageToRPCClient, version, encoding, postClose } = logger);
-  return new logger(9525)({
+  return new logger(9529)({
     source,
     postMessageToRPCClient,
     version,

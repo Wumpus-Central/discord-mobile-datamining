@@ -1,11 +1,11 @@
-// === Module 6096: getOrbPriceFromPrices ===
+// === Module 6097: getOrbPriceFromPrices ===
 
-// Module 6096 (getOrbPriceFromPrices)
+// Module 6097 (getOrbPriceFromPrices)
 import set from "set" /* 2 */;
 import items2 from "items" /* 675 */;
 import getSystemLocale from "getSystemLocale" /* 1233 */;
-import ConstraintReasonCode2 from "ConstraintReasonCode" /* 6097 */;
-import _signOrder from "_signOrder" /* 6098 */;
+import ConstraintReasonCode2 from "ConstraintReasonCode" /* 6098 */;
+import _signOrder from "_signOrder" /* 6099 */;
 import ME from "ME" /* 673 */;
 
 ({ CurrencyCodes: obj1, MarketingURLs: c3, PriceSetAssignmentPurchaseTypes: c4 } = ME);
@@ -64,7 +64,7 @@ export const resolveOrbCheckoutErrorMessage = function resolveOrbCheckoutErrorMe
     let keFvXM = dependencyMap;
     let OrderSigningFailedWithConstraintsError = _signOrder.OrderSigningFailedWithConstraintsError;
     if (!(code instanceof OrderSigningFailedWithConstraintsError)) {
-      if (code instanceof tmp(6098).OrderProcessingPendingError) {
+      if (code instanceof tmp(6099).OrderProcessingPendingError) {
         const intl5 = tmp(1233).intl;
         let stringResult = intl5.string(tmp(1233).t["2BmwgV"]);
       } else if (code.code === tmp(4161).ErrorCodes.VIRTUAL_CURRENCY_INSUFFICIENT_BALANCE) {

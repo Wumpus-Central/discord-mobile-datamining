@@ -1,8 +1,8 @@
-// === Module 7493: _findPlayingActivity ===
+// === Module 7494: _findPlayingActivity ===
 
-// Module 7493 (_findPlayingActivity)
+// Module 7494 (_findPlayingActivity)
 import shallowEqualDefault from "shallowEqual" /* 640 */;
-import isEmbeddedActivityDefault from "isEmbeddedActivity" /* 7494 */;
+import isEmbeddedActivityDefault from "isEmbeddedActivity" /* 7495 */;
 import closure_3 from "sortActivity" /* 4569 */;
 import { ActivityTypes } from "ME" /* 673 */;
 

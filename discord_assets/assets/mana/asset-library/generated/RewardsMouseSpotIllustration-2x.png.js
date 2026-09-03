@@ -1,6 +1,6 @@
-// === Module 6949: metadata ===
+// === Module 6950: metadata ===
 
-// Module 6949 (metadata)
+// Module 6950 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/RewardsMouseSpotIllustration-2x.png.js");

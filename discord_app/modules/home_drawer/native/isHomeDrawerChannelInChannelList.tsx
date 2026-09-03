@@ -1,8 +1,8 @@
-// === Module 16140: useIsHomeDrawerChannelInChannelList ===
+// === Module 16156: useIsHomeDrawerChannelInChannelList ===
 
-// Module 16140 (useIsHomeDrawerChannelInChannelList)
+// Module 16156 (useIsHomeDrawerChannelInChannelList)
 import initialize from "initialize" /* 586 */;
-import closure_2 from "updateUserGuildSettingsInternal" /* 4701 */;
+import closure_2 from "updateUserGuildSettingsInternal" /* 4702 */;
 
 require = arg1;
 let result = require("set").fileFinishedImporting("modules/home_drawer/native/isHomeDrawerChannelInChannelList.tsx");

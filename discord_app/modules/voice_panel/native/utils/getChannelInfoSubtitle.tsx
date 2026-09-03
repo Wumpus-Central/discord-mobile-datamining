@@ -1,6 +1,6 @@
-// === Module 16928: getChannelInfoSubtitle ===
+// === Module 16948: getChannelInfoSubtitle ===
 
-// Module 16928 (getChannelInfoSubtitle)
+// Module 16948 (getChannelInfoSubtitle)
 import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1233 */;
 import getNicknameDefault from "getNickname" /* 4673 */;

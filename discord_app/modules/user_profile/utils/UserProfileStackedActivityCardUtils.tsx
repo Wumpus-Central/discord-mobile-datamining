@@ -1,6 +1,6 @@
-// === Module 12696: getUserProfileLiveActivities ===
+// === Module 12708: getUserProfileLiveActivities ===
 
-// Module 12696 (getUserProfileLiveActivities)
+// Module 12708 (getUserProfileLiveActivities)
 import set from "set" /* 2 */;
 import apply from "apply" /* 12 */;
 import ME from "ME" /* 673 */;

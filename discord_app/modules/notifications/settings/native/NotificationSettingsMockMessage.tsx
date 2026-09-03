@@ -1,6 +1,6 @@
-// === Module 10265: NotificationSettingsMockMessage ===
+// === Module 10269: NotificationSettingsMockMessage ===
 
-// Module 10265 (NotificationSettingsMockMessage)
+// Module 10269 (NotificationSettingsMockMessage)
 import ThemesDefault from "Themes" /* 709 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
@@ -81,7 +81,7 @@ export default function NotificationSettingsMockMessage(notificationSetting) {
   }, items3);
   const obj4 = { style: tmp.card, children: null };
   const obj5 = { style: tmp.cardContent, children: null };
-  const obj6 = { children: tmp12(_require(1296).Avatar, { source: sharedValue(10266), size: _require(1296).AvatarSizes.LARGE_48 }) };
+  const obj6 = { children: tmp12(_require(1296).Avatar, { source: sharedValue(10270), size: _require(1296).AvatarSizes.LARGE_48 }) };
   const items4 = [tmp12(View, obj6), ];
   const obj8 = { style: tmp.cardMessage, children: null };
   const obj9 = { variant: "text-sm/semibold", children: null };

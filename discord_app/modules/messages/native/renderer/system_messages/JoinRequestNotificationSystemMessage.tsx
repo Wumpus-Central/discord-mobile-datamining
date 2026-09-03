@@ -1,10 +1,10 @@
-// === Module 7963: createJoinRequestNotificationSystemMessage ===
+// === Module 7966: createJoinRequestNotificationSystemMessage ===
 
-// Module 7963 (createJoinRequestNotificationSystemMessage)
+// Module 7966 (createJoinRequestNotificationSystemMessage)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import getSystemLocale from "getSystemLocale" /* 1233 */;
-import createCommonMessageDefault from "createCommonMessage" /* 7882 */;
-import closure_3 from "updateSubmittedGuildJoinRequestTotal" /* 7211 */;
+import createCommonMessageDefault from "createCommonMessage" /* 7885 */;
+import closure_3 from "updateSubmittedGuildJoinRequestTotal" /* 7212 */;
 import closure_4 from "handleGatewayJoinRequestUpdate" /* 4300 */;
 import closure_5 from "createGuildRecordFromRust" /* 1908 */;
 import closure_6 from "mergeGuildAvatar" /* 1921 */;

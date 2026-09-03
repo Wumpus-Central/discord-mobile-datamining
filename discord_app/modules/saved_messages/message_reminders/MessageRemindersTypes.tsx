@@ -1,6 +1,6 @@
-// === Module 11518: items ===
+// === Module 11523: items ===
 
-// Module 11518 (items)
+// Module 11523 (items)
 import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1233 */;
 import hooksDefault from "hooks" /* 4074 */;

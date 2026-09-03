@@ -1,9 +1,9 @@
-// === Module 9459: isActivityJoinableOnCurrentPlatform ===
+// === Module 9463: isActivityJoinableOnCurrentPlatform ===
 
-// Module 9459 (isActivityJoinableOnCurrentPlatform)
+// Module 9463 (isActivityJoinableOnCurrentPlatform)
 import set from "set" /* 2 */;
 import PlatformTypes from "PlatformTypes" /* 1235 */;
-import hasFlagDefault from "hasFlag" /* 6166 */;
+import hasFlagDefault from "hasFlag" /* 6167 */;
 import ME from "ME" /* 673 */;
 
 ({ ActivityFlags: c3, ActivityGamePlatforms: c4, ActivityTypes: c5 } = ME);

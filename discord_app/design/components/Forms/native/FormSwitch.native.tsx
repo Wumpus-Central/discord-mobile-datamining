@@ -1,10 +1,10 @@
-// === Module 6002: FormSwitch ===
+// === Module 6003: FormSwitch ===
 
-// Module 6002 (FormSwitch)
+// Module 6003 (FormSwitch)
 import ThemesDefault from "Themes" /* 709 */;
-import CONFIG_NEVER_ANIMATE from "CONFIG_NEVER_ANIMATE" /* 4927 */;
-import IconSizesDefault from "IconSizes" /* 4930 */;
-import SUBTLE_SPRING from "SUBTLE_SPRING" /* 4931 */;
+import CONFIG_NEVER_ANIMATE from "CONFIG_NEVER_ANIMATE" /* 4928 */;
+import IconSizesDefault from "IconSizes" /* 4931 */;
+import SUBTLE_SPRING from "SUBTLE_SPRING" /* 4932 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;

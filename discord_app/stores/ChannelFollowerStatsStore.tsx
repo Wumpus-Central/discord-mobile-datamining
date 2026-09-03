@@ -1,6 +1,6 @@
-// === Module 11478: getFollowerStatsForChannel ===
+// === Module 11483: getFollowerStatsForChannel ===
 
-// Module 11478 (getFollowerStatsForChannel)
+// Module 11483 (getFollowerStatsForChannel)
 import initializeDefault from "initialize" /* 586 */;
 import dispatcherDefault from "dispatcher" /* 706 */;
 

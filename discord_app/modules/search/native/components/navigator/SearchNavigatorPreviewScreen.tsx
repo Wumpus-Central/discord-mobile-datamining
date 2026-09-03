@@ -1,6 +1,6 @@
-// === Module 16676: SearchNavigatorPreviewScreen ===
+// === Module 16696: SearchNavigatorPreviewScreen ===
 
-// Module 16676 (SearchNavigatorPreviewScreen)
+// Module 16696 (SearchNavigatorPreviewScreen)
 import closure_3 from "noop" /* 19 */;
 import { ScrollView } from "get ActivityIndicator" /* 17 */;
 import { SearchTypes } from "ME" /* 673 */;

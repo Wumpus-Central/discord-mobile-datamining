@@ -1,6 +1,6 @@
-// === Module 11951: fileTypesFormattedStringHelper ===
+// === Module 11957: fileTypesFormattedStringHelper ===
 
-// Module 11951 (fileTypesFormattedStringHelper)
+// Module 11957 (fileTypesFormattedStringHelper)
 import getSystemLocale from "getSystemLocale" /* 1233 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;

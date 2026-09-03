@@ -1,15 +1,15 @@
-// === Module 4929: CollapsingText ===
+// === Module 4930: CollapsingText ===
 
-// Module 4929 (CollapsingText)
+// Module 4930 (CollapsingText)
 import ThemesDefault from "Themes" /* 709 */;
-import IconSizesDefault from "IconSizes" /* 4930 */;
-import styleProperties from "styleProperties" /* 4934 */;
+import IconSizesDefault from "IconSizes" /* 4931 */;
+import styleProperties from "styleProperties" /* 4935 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
-import { LARGE_BUTTON_HEIGHT, LARGE_BUTTON_HEIGHT as LARGE_BUTTON_HEIGHT2 } from "MINIMUM_HIT_AREA" /* 4933 */;
+import { LARGE_BUTTON_HEIGHT, LARGE_BUTTON_HEIGHT as LARGE_BUTTON_HEIGHT2 } from "MINIMUM_HIT_AREA" /* 4934 */;
 import importDefaultResult from "module_4217" /* 4217 */;
 
 require = arg1;
@@ -148,15 +148,15 @@ let closure_18 = createCacheKey.createStyles((arg0, arg1) => {
 });
 createCacheKey = { sm: null, md: null, lg: null };
 const bound = Math.max((require("MINIMUM_HIT_AREA").MINIMUM_HIT_AREA - require("MINIMUM_HIT_AREA").SMALL_BUTTON_HEIGHT) / 2, 0);
-createCacheKey = { top: bound, left: "Array", right: "alignItems", bottom: 46601043520741950000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 };
+createCacheKey = { top: bound, left: "Array", right: "isArray", bottom: "B_is_defined" };
 createCacheKey[3] = bound;
 createCacheKey[0] = createCacheKey;
 const bound1 = Math.max((require("MINIMUM_HIT_AREA").MINIMUM_HIT_AREA - require("MINIMUM_HIT_AREA").MEDIUM_BUTTON_HEIGHT) / 2, 0);
-createCacheKey = { top: bound1, left: "Array", right: "alignItems", bottom: 46601043520741950000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 };
+createCacheKey = { top: bound1, left: "Array", right: "isArray", bottom: "B_is_defined" };
 createCacheKey[3] = bound1;
 createCacheKey[1] = createCacheKey;
 const bound2 = Math.max((require("MINIMUM_HIT_AREA").MINIMUM_HIT_AREA - require("MINIMUM_HIT_AREA").LARGE_BUTTON_HEIGHT) / 2, 0);
-let obj4 = { top: bound2, left: "Array", right: "alignItems", bottom: 46601043520741950000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 };
+let obj4 = { top: bound2, left: "Array", right: "isArray", bottom: "B_is_defined" };
 obj4[3] = bound2;
 createCacheKey[2] = obj4;
 function getTextPlatformLineHeight(arg0, arg1) {

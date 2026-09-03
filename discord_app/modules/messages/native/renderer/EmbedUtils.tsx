@@ -1,6 +1,6 @@
-// === Module 7864: frozen ===
+// === Module 7867: frozen ===
 
-// Module 7864 (frozen)
+// Module 7867 (frozen)
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import set from "set" /* 2 */;
 

@@ -1,10 +1,10 @@
-// === Module 9809: handleSyncedStoresUpdate ===
+// === Module 9813: handleSyncedStoresUpdate ===
 
-// Module 9809 (handleSyncedStoresUpdate)
+// Module 9813 (handleSyncedStoresUpdate)
 import initializeDefault from "initialize" /* 586 */;
 import dispatcherDefault from "dispatcher" /* 706 */;
 import BaseConnectionEvent from "BaseConnectionEvent" /* 4579 */;
-import isAnimatedBackgroundOption from "isAnimatedBackgroundOption" /* 9810 */;
+import isAnimatedBackgroundOption from "isAnimatedBackgroundOption" /* 9814 */;
 import closure_2 from "handleConnectionClosedOrResumed" /* 1339 */;
 import closure_3 from "_detectH265HardwareDecode" /* 4529 */;
 import closure_4 from "handleConnectionOpen" /* 1980 */;

@@ -1,6 +1,6 @@
-// === Module 5966: getAuthorizationApp ===
+// === Module 5967: getAuthorizationApp ===
 
-// Module 5966 (getAuthorizationApp)
+// Module 5967 (getAuthorizationApp)
 import closure_2 from "noop" /* 19 */;
 import closure_3 from "addApplication" /* 4519 */;
 import closure_4 from "createExecutable" /* 4504 */;

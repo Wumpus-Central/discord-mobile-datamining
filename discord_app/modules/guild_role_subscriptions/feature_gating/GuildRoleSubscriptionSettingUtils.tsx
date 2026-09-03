@@ -1,9 +1,9 @@
-// === Module 6115: computeGuildRoleSubscriptionSettingsVisibility ===
+// === Module 6116: computeGuildRoleSubscriptionSettingsVisibility ===
 
-// Module 6115 (computeGuildRoleSubscriptionSettingsVisibility)
+// Module 6116 (computeGuildRoleSubscriptionSettingsVisibility)
 import set from "set" /* 2 */;
 import GuildNSFWContentLevel from "GuildNSFWContentLevel" /* 1429 */;
-import set2 from "set" /* 6116 */;
+import set2 from "set" /* 6117 */;
 import closure_3 from "getUncachedChannelPermissions" /* 4120 */;
 import closure_4 from "mergeGuildAvatar" /* 1921 */;
 import ME from "ME" /* 673 */;
@@ -69,8 +69,8 @@ function useGuildRoleSubscriptionSettingsVisibility(stateFromStores) {
     return tmp3;
   });
   const obj2 = _require(586);
-  const isUserInCreatorMonetizationEligibleCountry = _require(6116).useIsUserInCreatorMonetizationEligibleCountry();
-  _require(6108);
+  const isUserInCreatorMonetizationEligibleCountry = _require(6117).useIsUserInCreatorMonetizationEligibleCountry();
+  _require(6109);
   if (stateFromStores != null) {
     const id = stateFromStores.id;
   }

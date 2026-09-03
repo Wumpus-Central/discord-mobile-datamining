@@ -1,12 +1,12 @@
-// === Module 9334: XboxLinkEducation ===
+// === Module 9338: XboxLinkEducation ===
 
-// Module 9334 (XboxLinkEducation)
+// Module 9338 (XboxLinkEducation)
 import getSystemLocale from "getSystemLocale" /* 1233 */;
 import combinedDefault from "combined" /* 1994 */;
 import Text from "Text" /* 4474 */;
-import Button from "Button" /* 4928 */;
-import SafeAreaPaddingView from "SafeAreaPaddingView" /* 5561 */;
-import styles from "styles" /* 9319 */;
+import Button from "Button" /* 4929 */;
+import SafeAreaPaddingView from "SafeAreaPaddingView" /* 5562 */;
+import styles from "styles" /* 9323 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { HelpdeskArticles } from "ME" /* 673 */;

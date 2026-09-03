@@ -1,18 +1,18 @@
-// === Module 12787: OrbCheckoutErrorCard ===
+// === Module 12799: OrbCheckoutErrorCard ===
 
-// Module 12787 (OrbCheckoutErrorCard)
+// Module 12799 (OrbCheckoutErrorCard)
 import ThemesDefault from "Themes" /* 709 */;
 import getSystemLocale from "getSystemLocale" /* 1233 */;
 import useThemeDefault from "useTheme" /* 4413 */;
 import Text from "Text" /* 4474 */;
-import Stack from "Stack" /* 4926 */;
-import Button from "Button" /* 4928 */;
-import CircleErrorIcon from "CircleErrorIcon" /* 7717 */;
-import ProfileEffectAssetPreviewDefault from "ProfileEffectAssetPreview" /* 10967 */;
-import OrbCheckoutAmountTagDefault from "OrbCheckoutAmountTag" /* 10973 */;
-import OrbsIcon from "OrbsIcon" /* 10974 */;
-import useOrbCheckoutModalContextProvider from "useOrbCheckoutModalContextProvider" /* 12786 */;
-import useVirtualCurrencyBalance from "useVirtualCurrencyBalance" /* 12788 */;
+import Stack from "Stack" /* 4927 */;
+import Button from "Button" /* 4929 */;
+import CircleErrorIcon from "CircleErrorIcon" /* 7720 */;
+import ProfileEffectAssetPreviewDefault from "ProfileEffectAssetPreview" /* 10971 */;
+import OrbCheckoutAmountTagDefault from "OrbCheckoutAmountTag" /* 10977 */;
+import OrbsIcon from "OrbsIcon" /* 10978 */;
+import useOrbCheckoutModalContextProvider from "useOrbCheckoutModalContextProvider" /* 12798 */;
+import useVirtualCurrencyBalance from "useVirtualCurrencyBalance" /* 12800 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
@@ -88,7 +88,7 @@ export const OrbCheckoutPaymentSourceDetails = function OrbCheckoutPaymentSource
   return callback2(closure_4, obj);
 };
 export const OrbCheckoutLegalFinePrint = function OrbCheckoutLegalFinePrint() {
-  let obj = skuId(12786);
+  let obj = skuId(12798);
   skuId = obj.useOrbCheckoutModalContext().skuId;
   const items = [skuId];
   const memo = React.useMemo(() => skuId(closure_1_2[12]).getOrbCheckoutDisclaimerMessage(skuId), items);

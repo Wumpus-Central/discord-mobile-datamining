@@ -1,6 +1,6 @@
-// === Module 12354: BoostedGuildTiers ===
+// === Module 12366: BoostedGuildTiers ===
 
-// Module 12354 (BoostedGuildTiers)
+// Module 12366 (BoostedGuildTiers)
 import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1233 */;
 import GuildFeatures from "GuildFeatures" /* 1923 */;

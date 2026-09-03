@@ -1,6 +1,6 @@
-// === Module 12891: toAsciiDigits ===
+// === Module 12903: toAsciiDigits ===
 
-// Module 12891 (toAsciiDigits)
+// Module 12903 (toAsciiDigits)
 import set from "set" /* 2 */;
 
 function toAsciiDigits(arg0, get) {

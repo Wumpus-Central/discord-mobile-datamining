@@ -1,13 +1,13 @@
-// === Module 10977: CollectiblesShopGiftPurchaseSection ===
+// === Module 10981: CollectiblesShopGiftPurchaseSection ===
 
-// Module 10977 (CollectiblesShopGiftPurchaseSection)
+// Module 10981 (CollectiblesShopGiftPurchaseSection)
 import ThemesDefault from "Themes" /* 709 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_7 from "initialize" /* 8573 */;
-import { useNativeCheckoutStore } from "context" /* 7178 */;
+import closure_7 from "initialize" /* 8577 */;
+import { useNativeCheckoutStore } from "context" /* 7179 */;
 import ME from "ME" /* 673 */;
 import GuildFeatures from "GuildFeatures" /* 1923 */;
 import jsxProd from "jsxProd" /* 21 */;

@@ -1,12 +1,12 @@
-// === Module 11804: ForumPostMediaAndroid ===
+// === Module 11810: ForumPostMediaAndroid ===
 
-// Module 11804 (ForumPostMediaAndroid)
+// Module 11810 (ForumPostMediaAndroid)
 import ThemesDefault from "Themes" /* 709 */;
 import explicitContentFromProto from "explicitContentFromProto" /* 4166 */;
-import isBlurDisabledDefault from "isBlurDisabled" /* 4918 */;
-import preloadDefault from "preload" /* 5501 */;
-import SpoilerDefault from "Spoiler" /* 11805 */;
-import getForumPostShouldObscure from "getForumPostShouldObscure" /* 11807 */;
+import isBlurDisabledDefault from "isBlurDisabled" /* 4919 */;
+import preloadDefault from "preload" /* 5502 */;
+import SpoilerDefault from "Spoiler" /* 11811 */;
+import getForumPostShouldObscure from "getForumPostShouldObscure" /* 11813 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
@@ -69,14 +69,14 @@ function ForumPostMedia(obscureReason) {
   const _require = obscureReason;
   const tmp = callback4();
   const ref = React.useRef(null);
-  let obj = _require(7354);
+  let obj = _require(7355);
   const shouldAgeVerifyForReason = obj.useShouldAgeVerifyForReason(obscureReason.obscureReason);
   if (obscureReason.isMediaPost) {
     obj = {};
     const merged = Object.assign(obscureReason);
-    let tmp6Result = callback2(ref(11806), obj);
+    let tmp6Result = callback2(ref(11812), obj);
     let tmp12 = callback2;
-    const tmp19 = ref(11806);
+    const tmp19 = ref(11812);
   } else {
     if (tmp3Result.isAndroid()) {
       obj = {};
@@ -92,7 +92,7 @@ function ForumPostMedia(obscureReason) {
     tmp3Result = tmp3(1234);
   }
   if (null != obscureReason.obscureReason) {
-    const AGE_VERIFICATION_OBSCURABLE_REASONS = tmp3(6150).AGE_VERIFICATION_OBSCURABLE_REASONS;
+    const AGE_VERIFICATION_OBSCURABLE_REASONS = tmp3(6151).AGE_VERIFICATION_OBSCURABLE_REASONS;
     if (AGE_VERIFICATION_OBSCURABLE_REASONS.has(obscureReason.obscureReason)) {
       if (shouldAgeVerifyForReason) {
         const obj2 = { style: null, ref: null, children: null };
@@ -102,12 +102,12 @@ function ForumPostMedia(obscureReason) {
         const obj3 = { androidRippleConfig: null, activeOpacity: 0, onPress: null, children: null };
         obj3[0] = ANDROID_FOREGROUND_RIPPLE;
         obj3[2] = function onPress() {
-          let obj = ref(8697);
-          obj = { entryPoint: obscureReason(8699).AgeVerificationModalEntryPoint.FORUM_POST_MEDIA_PREVIEW };
+          let obj = ref(8701);
+          obj = { entryPoint: obscureReason(8703).AgeVerificationModalEntryPoint.FORUM_POST_MEDIA_PREVIEW };
           const result = obj.showAgeVerificationGetStartedModal(obj);
         };
         obj3[3] = tmp6Result;
-        obj2[2] = tmp12(tmp3(5076).PressableOpacity, obj3);
+        obj2[2] = tmp12(tmp3(5077).PressableOpacity, obj3);
         let tmp12Result = tmp12(closure_5, obj2);
       }
       return tmp12Result;
@@ -129,7 +129,7 @@ function ForumPostMedia(obscureReason) {
       return onPressResult;
     };
     obj5[3] = tmp6Result;
-    obj4[2] = tmp12(tmp3(5076).PressableOpacity, obj5);
+    obj4[2] = tmp12(tmp3(5077).PressableOpacity, obj5);
     tmp12Result = tmp12(closure_5, obj4);
   } else {
     const obj6 = { style: null, ref: null, children: null };

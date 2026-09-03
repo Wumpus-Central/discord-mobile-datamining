@@ -1,6 +1,6 @@
-// === Module 15329: onFriendOnlineNotificationSettingsChanged ===
+// === Module 15344: onFriendOnlineNotificationSettingsChanged ===
 
-// Module 15329 (onFriendOnlineNotificationSettingsChanged)
+// Module 15344 (onFriendOnlineNotificationSettingsChanged)
 import set from "set" /* 2 */;
 import ME from "ME" /* 673 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 695 */;

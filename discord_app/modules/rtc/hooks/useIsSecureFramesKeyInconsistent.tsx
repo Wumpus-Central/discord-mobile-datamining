@@ -1,6 +1,6 @@
-// === Module 9873: useIsSecureFramesKeyInconsistent ===
+// === Module 9877: useIsSecureFramesKeyInconsistent ===
 
-// Module 9873 (useIsSecureFramesKeyInconsistent)
+// Module 9877 (useIsSecureFramesKeyInconsistent)
 import closure_2 from "noop" /* 19 */;
 import closure_3 from "createRTCConnection" /* 4554 */;
 import closure_4 from "initialize" /* 4568 */;

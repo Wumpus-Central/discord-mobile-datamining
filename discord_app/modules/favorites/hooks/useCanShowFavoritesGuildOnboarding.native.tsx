@@ -1,6 +1,6 @@
-// === Module 10340: useCanShowFavoritesGuildOnboarding ===
+// === Module 10344: useCanShowFavoritesGuildOnboarding ===
 
-// Module 10340 (useCanShowFavoritesGuildOnboarding)
+// Module 10344 (useCanShowFavoritesGuildOnboarding)
 import initialize from "initialize" /* 586 */;
 import coerceMainRoute from "coerceMainRoute" /* 4332 */;
 import closure_2 from "setContent" /* 4186 */;

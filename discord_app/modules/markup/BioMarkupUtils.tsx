@@ -1,13 +1,13 @@
-// === Module 9052: parseBioReact ===
+// === Module 9056: parseBioReact ===
 
-// Module 9052 (parseBioReact)
+// Module 9056 (parseBioReact)
 import privDefault from "priv" /* 1400 */;
 import tDefault from "t" /* 4192 */;
 import MarkupTextDefault from "MarkupText" /* 4469 */;
-import parseLinkDefault from "parseLink" /* 4951 */;
+import parseLinkDefault from "parseLink" /* 4952 */;
 import MarkupText from "MarkupText" /* 4469 */;
-import importDefaultResult from "combineMarkupRules" /* 4950 */;
-import importAllResult from "reactParserFor" /* 7905 */;
+import importDefaultResult from "combineMarkupRules" /* 4951 */;
+import importAllResult from "reactParserFor" /* 7908 */;
 import importDefaultResult1 from "get defaultRules" /* 4468 */;
 import importDefaultResult3 from "apply" /* 12 */;
 

@@ -1,6 +1,6 @@
-// === Module 10201: dispatcher ===
+// === Module 10205: dispatcher ===
 
-// Module 10201 (dispatcher)
+// Module 10205 (dispatcher)
 import set from "set" /* 2 */;
 import dispatcherDefault from "dispatcher" /* 706 */;
 

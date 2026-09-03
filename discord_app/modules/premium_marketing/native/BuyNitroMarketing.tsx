@@ -1,6 +1,6 @@
-// === Module 13232: BuyNitroMarketing ===
+// === Module 13244: BuyNitroMarketing ===
 
-// Module 13232 (BuyNitroMarketing)
+// Module 13244 (BuyNitroMarketing)
 import ThemesDefault from "Themes" /* 709 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
@@ -46,7 +46,7 @@ export default function BuyNitroMarketing(onPaymentDismiss) {
   let obj3 = applicationId(onPaymentDismiss[9]);
   let tmp7;
   if (null != initialTier) {
-    obj = { tier: null, productId: "r" };
+    obj = { tier: null, productId: "Array" };
     obj[0] = initialTier;
     tmp7 = obj;
   }

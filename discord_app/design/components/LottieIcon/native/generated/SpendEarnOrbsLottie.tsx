@@ -1,8 +1,8 @@
-// === Module 11065: items ===
+// === Module 11069: items ===
 
-// Module 11065 (items)
-import LottieIcon from "LottieIcon" /* 10061 */;
-import registerAsset from "registerAsset" /* 11066 */;
+// Module 11069 (items)
+import LottieIcon from "LottieIcon" /* 10065 */;
+import registerAsset from "registerAsset" /* 11070 */;
 import { jsx } from "jsxProd" /* 21 */;
 import importAllResult from "noop" /* 19 */;
 

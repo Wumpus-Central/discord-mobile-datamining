@@ -1,10 +1,10 @@
-// === Module 7872: getForwardInfo ===
+// === Module 7875: getForwardInfo ===
 
-// Module 7872 (getForwardInfo)
+// Module 7875 (getForwardInfo)
 import getAvatarURLDefault from "getAvatarURL" /* 1430 */;
 import resetCache from "resetCache" /* 4163 */;
-import isForwardMessageDefault from "isForwardMessage" /* 6155 */;
-import closure_3 from "getGuild" /* 7873 */;
+import isForwardMessageDefault from "isForwardMessage" /* 6156 */;
+import closure_3 from "getGuild" /* 7876 */;
 import closure_4 from "ensureGuildLoaded" /* 1386 */;
 import closure_5 from "createGuildRecordFromRust" /* 1908 */;
 import closure_6 from "getUncachedChannelPermissions" /* 4120 */;

@@ -1,6 +1,6 @@
-// === Module 7439: FSI ===
+// === Module 7440: FSI ===
 
-// Module 7439 (FSI)
+// Module 7440 (FSI)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/bidi/IsolateString.tsx");

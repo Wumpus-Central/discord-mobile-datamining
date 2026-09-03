@@ -1,6 +1,6 @@
-// === Module 12478: AcceptInviteContainer ===
+// === Module 12490: AcceptInviteContainer ===
 
-// Module 12478 (AcceptInviteContainer)
+// Module 12490 (AcceptInviteContainer)
 import ThemesDefault from "Themes" /* 709 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "noop" /* 19 */;

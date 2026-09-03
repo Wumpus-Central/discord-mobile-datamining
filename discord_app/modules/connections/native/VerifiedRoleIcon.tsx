@@ -1,11 +1,11 @@
-// === Module 6005: VerifiedRoleIcon ===
+// === Module 6006: VerifiedRoleIcon ===
 
-// Module 6005 (VerifiedRoleIcon)
+// Module 6006 (VerifiedRoleIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 709 */;
 import LinkIcon from "LinkIcon" /* 4421 */;
-import useRoleIcon from "useRoleIcon" /* 5985 */;
-import getHigherContrastColor from "getHigherContrastColor" /* 6006 */;
+import useRoleIcon from "useRoleIcon" /* 5986 */;
+import getHigherContrastColor from "getHigherContrastColor" /* 6007 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import ME from "ME" /* 673 */;
 import { jsx } from "jsxProd" /* 21 */;

@@ -1,10 +1,10 @@
-// === Module 16085: useShouldRenderChannelList ===
+// === Module 16101: useShouldRenderChannelList ===
 
-// Module 16085 (useShouldRenderChannelList)
+// Module 16101 (useShouldRenderChannelList)
 import closure_2 from "_slicedToArray" /* 32 */;
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "handleClearCaches" /* 7230 */;
-import closure_5 from "_handleConnectionOpen" /* 5229 */;
+import closure_4 from "handleClearCaches" /* 7231 */;
+import closure_5 from "_handleConnectionOpen" /* 5230 */;
 import { ComponentActions } from "ME" /* 673 */;
 
 const require = arg1;

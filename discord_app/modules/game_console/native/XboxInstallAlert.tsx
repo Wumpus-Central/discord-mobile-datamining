@@ -1,10 +1,10 @@
-// === Module 9913: XboxInstallAlert ===
+// === Module 9917: XboxInstallAlert ===
 
-// Module 9913 (XboxInstallAlert)
+// Module 9917 (XboxInstallAlert)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 709 */;
-import componentDidMountDefault from "componentDidMount" /* 4947 */;
-import XBOX_URL_BASE from "XBOX_URL_BASE" /* 9326 */;
+import componentDidMountDefault from "componentDidMount" /* 4948 */;
+import XBOX_URL_BASE from "XBOX_URL_BASE" /* 9330 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 

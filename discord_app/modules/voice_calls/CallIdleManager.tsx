@@ -1,11 +1,11 @@
-// === Module 17137: disconnect ===
+// === Module 17157: disconnect ===
 
-// Module 17137 (disconnect)
+// Module 17157 (disconnect)
 import getSystemLocale from "getSystemLocale" /* 1233 */;
 import start from "start" /* 4362 */;
-import _modDef5363 from "module_5363" /* 5363 */;
-import initializeDefault from "initialize" /* 5494 */;
-import trackInviteDefault from "trackInvite" /* 7210 */;
+import _modDef5364 from "module_5364" /* 5364 */;
+import initializeDefault from "initialize" /* 5495 */;
+import trackInviteDefault from "trackInvite" /* 7211 */;
 import closure_3 from "participantFromServer" /* 1385 */;
 import closure_4 from "ensureGuildLoaded" /* 1386 */;
 import closure_5 from "updateVoiceState" /* 4497 */;
@@ -38,8 +38,8 @@ function disconnect() {
       const intl = getSystemLocale.intl;
       trackInviteDefault.sendBotMessage(currentClientVoiceChannelId1, intl.formatToPlainString(getSystemLocale.t.XYof5G, { number: 3 }));
       const obj3 = trackInviteDefault;
-      const voiceChannel = _modDef5363.selectVoiceChannel(null);
-      const obj4 = _modDef5363;
+      const voiceChannel = _modDef5364.selectVoiceChannel(null);
+      const obj4 = _modDef5364;
     }
   }
 }

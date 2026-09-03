@@ -1,12 +1,12 @@
-// === Module 11296: useMessageAuthorActivities ===
+// === Module 11300: useMessageAuthorActivities ===
 
-// Module 11296 (useMessageAuthorActivities)
+// Module 11300 (useMessageAuthorActivities)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { findNodeHandle } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "_toTimestampMs" /* 11165 */;
-import { updateShouldShowJumpToPresentButton as closure_7 } from "updateChatInputContainerHeight" /* 9547 */;
-import closure_8 from "handleConnectionOpen" /* 4855 */;
+import closure_6 from "_toTimestampMs" /* 11169 */;
+import { updateShouldShowJumpToPresentButton as closure_7 } from "updateChatInputContainerHeight" /* 9551 */;
+import closure_8 from "handleConnectionOpen" /* 4856 */;
 import closure_9 from "createGuildRecordFromRust" /* 1908 */;
 import closure_10 from "sortActivity" /* 4569 */;
 

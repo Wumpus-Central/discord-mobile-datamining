@@ -1,6 +1,6 @@
-// === Module 10029: useRequestToSpeakPermission ===
+// === Module 10033: useRequestToSpeakPermission ===
 
-// Module 10029 (useRequestToSpeakPermission)
+// Module 10033 (useRequestToSpeakPermission)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import closure_5 from "ensureGuildLoaded" /* 1386 */;

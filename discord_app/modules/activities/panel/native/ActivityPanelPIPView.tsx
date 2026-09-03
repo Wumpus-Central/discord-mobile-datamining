@@ -1,19 +1,19 @@
-// === Module 16833: BaseActivityPanelPIPView ===
+// === Module 16853: BaseActivityPanelPIPView ===
 
-// Module 16833 (BaseActivityPanelPIPView)
+// Module 16853 (BaseActivityPanelPIPView)
 import ThemesDefault from "Themes" /* 709 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4470 */;
-import closure_6 from "module_9640" /* 9640 */;
+import closure_6 from "module_9644" /* 9644 */;
 import closure_7 from "ensureGuildLoaded" /* 1386 */;
 import closure_8 from "participantFromServer" /* 1385 */;
 import { ActivityLayoutMode } from "items3" /* 4506 */;
-import ActivityPanelModes from "ActivityPanelModes" /* 9479 */;
-import { DEFAULT_PORTRAIT_LETTERBOX_CONFIG as closure_15 } from "DEFAULT_PORTRAIT_SAFE_AREAS_CONFIG" /* 16834 */;
+import ActivityPanelModes from "ActivityPanelModes" /* 9483 */;
+import { DEFAULT_PORTRAIT_LETTERBOX_CONFIG as closure_15 } from "DEFAULT_PORTRAIT_SAFE_AREAS_CONFIG" /* 16854 */;
 import { ThemeTypes } from "ME" /* 673 */;
-import { PIP_WINDOW_OFFSET } from "MIN_PAN_GESTURE_MOVE" /* 12064 */;
+import { PIP_WINDOW_OFFSET } from "MIN_PAN_GESTURE_MOVE" /* 12070 */;
 import { jsx } from "jsxProd" /* 21 */;
 import Button from "Button" /* 1296 */;
 import createCacheKey from "createCacheKey" /* 4478 */;

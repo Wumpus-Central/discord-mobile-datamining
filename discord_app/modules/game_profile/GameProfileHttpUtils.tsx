@@ -1,13 +1,13 @@
-// === Module 8898: _getShopCollection ===
+// === Module 8902: _getShopCollection ===
 
-// Module 8898 (_getShopCollection)
+// Module 8902 (_getShopCollection)
 import failsDefault from "fails" /* 581 */;
 import setDefault from "set" /* 684 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_getSystemLocale" /* 1995 */;
-import importDefaultResult from "getSimilarGames" /* 8823 */;
+import importDefaultResult from "getSimilarGames" /* 8827 */;
 import { Endpoints } from "ME" /* 673 */;
-import { SIMILAR_GAMES_BLOCKED_GAME_IDS as closure_7 } from "set" /* 8899 */;
+import { SIMILAR_GAMES_BLOCKED_GAME_IDS as closure_7 } from "set" /* 8903 */;
 import initialize from "initialize" /* 586 */;
 
 const require = arg1;
@@ -196,7 +196,7 @@ function _getGameAnnouncements() {
         const obj6 = { type: "GAME_PROFILE_GET_ANNOUNCEMENTS_SUCCESS", gameId: null, messages: null, channelId: null, guildId: null };
         obj6[1] = callback;
         const obj9 = body(706);
-        obj6[2] = callback(8893).toAnnouncementMessages(body.messages);
+        obj6[2] = callback(8897).toAnnouncementMessages(body.messages);
         const channel_id = body.channel_id;
         dependencyMap = channel_id;
         if (channel_id == null) {
@@ -211,7 +211,7 @@ function _getGameAnnouncements() {
         obj6[4] = c3;
         obj9.dispatch(obj6);
         c7 = 0;
-        const obj11 = callback(8893);
+        const obj11 = callback(8897);
       }
       c7 = 0;
       return body;

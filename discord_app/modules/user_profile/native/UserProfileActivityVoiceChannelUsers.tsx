@@ -1,11 +1,11 @@
-// === Module 9439: UserRow ===
+// === Module 9443: UserRow ===
 
-// Module 9439 (UserRow)
+// Module 9443 (UserRow)
 import noopAll from "noop" /* 19 */;
 import getSystemLocale from "getSystemLocale" /* 1233 */;
 import getNicknameDefault from "getNickname" /* 4673 */;
-import UserProfileStackedActionSheet from "UserProfileStackedActionSheet" /* 9232 */;
-import UserProfileStackedActionSheetDefault from "UserProfileStackedActionSheet" /* 9232 */;
+import UserProfileStackedActionSheet from "UserProfileStackedActionSheet" /* 9236 */;
+import UserProfileStackedActionSheetDefault from "UserProfileStackedActionSheet" /* 9236 */;
 import closure_3 from "sortActivity" /* 4569 */;
 import { jsx } from "jsxProd" /* 21 */;
 
@@ -14,7 +14,7 @@ function UserRow(user) {
   user = user.user;
   const channel = user.channel;
   ({ onPress, start, end } = user);
-  let obj = user(8919);
+  let obj = user(8923);
   const avatarDecoration = obj.useAvatarDecoration(user, channel.guild_id);
   const items = [closure_3];
   const stateFromStoresObject = user(586).useStateFromStoresObject(items, () => ({ status: closure_1_3.getStatus(user.id), isMobileOnline: closure_1_3.isMobileOnline(user.id), isVROnline: closure_1_3.isVROnline(user.id) }));
@@ -26,7 +26,7 @@ function UserRow(user) {
   obj[2] = jsx(user(1296).Avatar, { user, avatarDecoration, size: user(1296).AvatarSizes.REFRESH_MEDIUM_32, guildId: channel.guild_id, status, isMobileOnline, isVROnline, autoStatusCutout: true });
   obj[3] = start;
   obj[4] = end;
-  return jsx(user(5607).TableRow, { user, avatarDecoration, size: user(1296).AvatarSizes.REFRESH_MEDIUM_32, guildId: channel.guild_id, status, isMobileOnline, isVROnline, autoStatusCutout: true });
+  return jsx(user(5608).TableRow, { user, avatarDecoration, size: user(1296).AvatarSizes.REFRESH_MEDIUM_32, guildId: channel.guild_id, status, isMobileOnline, isVROnline, autoStatusCutout: true });
 }
 noopAll;
 const result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfileActivityVoiceChannelUsers.tsx");

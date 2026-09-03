@@ -1,11 +1,11 @@
-// === Module 11251: getSafetyAlertsSettingOrDefault ===
+// === Module 11255: getSafetyAlertsSettingOrDefault ===
 
-// Module 11251 (getSafetyAlertsSettingOrDefault)
-import trackViewedEvent from "trackViewedEvent" /* 11227 */;
+// Module 11255 (getSafetyAlertsSettingOrDefault)
+import trackViewedEvent from "trackViewedEvent" /* 11231 */;
 import closure_2 from "handleConnectionClosedOrResumed" /* 1339 */;
 import closure_3 from "mergeGuildAvatar" /* 1921 */;
-import closure_4 from "handleConnectionOpen" /* 10874 */;
-import { SafetyWarningTypes } from "handleConnectionOpen" /* 10874 */;
+import closure_4 from "handleConnectionOpen" /* 10878 */;
+import { SafetyWarningTypes } from "handleConnectionOpen" /* 10878 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/self_mod/inappropriate_conversation/InappropriateConversationUtils.tsx");

@@ -1,6 +1,6 @@
-// === Module 9376: styles ===
+// === Module 9380: styles ===
 
-// Module 9376 (styles)
+// Module 9380 (styles)
 import ThemesDefault from "Themes" /* 709 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
@@ -66,7 +66,7 @@ export default function GuildSelector(disabled) {
     const intl2 = tmp7(1233).intl;
     name = intl2.string(tmp7(1233).t.oM4E1A);
   }
-  items1[2] = callback(selectedGuildId(8372).FormRow, { label: name, disabled: disabled.disabled, trailing: callback(selectedGuildId(8372).FormRow.Arrow, {}), DEPRECATED_style: tmp.select, onPress: callback });
+  items1[2] = callback(selectedGuildId(8376).FormRow, { label: name, disabled: disabled.disabled, trailing: callback(selectedGuildId(8376).FormRow.Arrow, {}), DEPRECATED_style: tmp.select, onPress: callback });
   const obj2 = { style: tmp.label, children: null };
   const intl3 = tmp7(1233).intl;
   obj2[1] = intl3.format(selectedGuildId(1233).t.t9Jm9o, {});

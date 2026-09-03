@@ -1,12 +1,12 @@
-// === Module 9569: areParticipantsEqual ===
+// === Module 9573: areParticipantsEqual ===
 
-// Module 9569 (areParticipantsEqual)
+// Module 9573 (areParticipantsEqual)
 import ThemesDefault from "Themes" /* 709 */;
 import set from "set" /* 1234 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1492 */;
-import useShouldForcePipOrientation from "useShouldForcePipOrientation" /* 9551 */;
-import usePipDimensionsDefault from "usePipDimensions" /* 9554 */;
-import useIsViewingActivity from "useIsViewingActivity" /* 9555 */;
+import useShouldForcePipOrientation from "useShouldForcePipOrientation" /* 9555 */;
+import usePipDimensionsDefault from "usePipDimensions" /* 9558 */;
+import useIsViewingActivity from "useIsViewingActivity" /* 9559 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
@@ -15,9 +15,9 @@ import closure_7 from "getParticipants" /* 4494 */;
 import closure_8 from "fetchFingerprint" /* 1215 */;
 import closure_9 from "_detectH265HardwareDecode" /* 4529 */;
 import closure_10 from "handleConnectionOpen" /* 1980 */;
-import closure_11 from "anyoneHasFlagInContext" /* 5371 */;
-import closure_12 from "initialize" /* 9548 */;
-import VoiceChatDrawerState from "VoiceChatDrawerState" /* 9533 */;
+import closure_11 from "anyoneHasFlagInContext" /* 5372 */;
+import closure_12 from "initialize" /* 9552 */;
+import VoiceChatDrawerState from "VoiceChatDrawerState" /* 9537 */;
 import { ParticipantTypes } from "ParticipantTypes" /* 4499 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;

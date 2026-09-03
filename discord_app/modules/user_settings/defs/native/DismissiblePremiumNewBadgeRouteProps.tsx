@@ -1,6 +1,6 @@
-// === Module 15180: createDismissiblePremiumNewBadgeRouteProps ===
+// === Module 15195: createDismissiblePremiumNewBadgeRouteProps ===
 
-// Module 15180 (createDismissiblePremiumNewBadgeRouteProps)
+// Module 15195 (createDismissiblePremiumNewBadgeRouteProps)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { ContentDismissActionType } from "ContentDismissActionType" /* 1383 */;

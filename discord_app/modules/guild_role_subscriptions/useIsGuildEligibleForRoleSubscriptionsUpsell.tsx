@@ -1,6 +1,6 @@
-// === Module 16074: useIsGuildEligibleForRoleSubscriptionsUpsell ===
+// === Module 16090: useIsGuildEligibleForRoleSubscriptionsUpsell ===
 
-// Module 16074 (useIsGuildEligibleForRoleSubscriptionsUpsell)
+// Module 16090 (useIsGuildEligibleForRoleSubscriptionsUpsell)
 import set from "set" /* 2 */;
 import ME from "ME" /* 673 */;
 import GuildNSFWContentLevel from "GuildNSFWContentLevel" /* 1429 */;
@@ -23,7 +23,7 @@ export default function useIsGuildEligibleForRoleSubscriptionsUpsell(arg0) {
   }
   const obj = _require(586);
   const tmp = _require;
-  const isUserInCreatorMonetizationEligibleCountry = _require(6116).useIsUserInCreatorMonetizationEligibleCountry();
+  const isUserInCreatorMonetizationEligibleCountry = _require(6117).useIsUserInCreatorMonetizationEligibleCountry();
   if (tmp6) {
     let flag;
     if (stateFromStores != null) {

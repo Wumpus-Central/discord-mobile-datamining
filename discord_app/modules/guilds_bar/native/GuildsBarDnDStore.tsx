@@ -1,8 +1,8 @@
-// === Module 16106: withEqualityFn ===
+// === Module 16122: withEqualityFn ===
 
-// Module 16106 (withEqualityFn)
+// Module 16122 (withEqualityFn)
 import set from "set" /* 2 */;
-import insertUnsortedGuilds from "insertUnsortedGuilds" /* 5389 */;
+import insertUnsortedGuilds from "insertUnsortedGuilds" /* 5390 */;
 import identity from "identity" /* 697 */;
 
 const GuildsNodeType = insertUnsortedGuilds.GuildsNodeType;
@@ -11,7 +11,7 @@ let c5 = -1;
 const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
   const _require = arg0;
   closure_1 = arg1;
-  obj = { dragSpecs: "Boolean", overSpecs: "ip", dropSpecs: "isArray", dragRegion: _require(4217).makeMutable({ min: 0, max: 0 }), gestureState: null, dragDropInProgress: null, listInsets: 2312, scrollPosition: 2313, windowSize: 2314, setStateShallow: 2315, dropStart: 2316, dropComplete: "man_wearing_turban_tone4" };
+  obj = { dragSpecs: "Boolean", overSpecs: "ip", dropSpecs: "isArray", dragRegion: _require(4217).makeMutable({ min: 0, max: 0 }), gestureState: null, dragDropInProgress: null, listInsets: "animal", scrollPosition: "rat", windowSize: "center", setStateShallow: "hidden", dropStart: null, dropComplete: "\u{1F478}\u{1F3FF}" };
   const obj2 = _require(4217);
   obj[4] = _require(4217).makeMutable(obj);
   const obj3 = _require(4217);
@@ -54,7 +54,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
       error = new Error("GuildsBarDnDStore.dropStart: you cannot start a drop while an existing drop is in progress");
       throw error;
     } else {
-      callback(tmp2[3]).batchUpdates(() => newDropSpec({ dropSpecs: newDropSpec, dragSpecs: "Array", overSpecs: "alignItems" }));
+      callback(tmp2[3]).batchUpdates(() => newDropSpec({ dropSpecs: newDropSpec, dragSpecs: "Array", overSpecs: "isArray" }));
       const _clearTimeout = clearTimeout;
       clearTimeout(timeout);
       const _setTimeout = setTimeout;
@@ -80,7 +80,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
     obj[2] = obj;
     obj.addBreadcrumb(obj);
     if (null != dropSpecs) {
-      callback(closure_1_2[3]).batchUpdates(() => callback({ dropSpecs: "r" }));
+      callback(closure_1_2[3]).batchUpdates(() => callback({ dropSpecs: "Array" }));
       const _clearTimeout = clearTimeout;
       clearTimeout(closure_5);
       if (null == dragSpecs) {

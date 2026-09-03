@@ -1,7 +1,7 @@
-// === Module 16187: PrivateProfileCoachmarkImage ===
+// === Module 16203: PrivateProfileCoachmarkImage ===
 
-// Module 16187 (PrivateProfileCoachmarkImage)
-import PrivateProfileAbstractUI from "PrivateProfileAbstractUI" /* 6928 */;
+// Module 16203 (PrivateProfileCoachmarkImage)
+import PrivateProfileAbstractUI from "PrivateProfileAbstractUI" /* 6929 */;
 import closure_2 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { UserSettingsSections } from "ME" /* 673 */;

@@ -1,8 +1,8 @@
-// === Module 15891: useLiveStageData ===
+// === Module 15907: useLiveStageData ===
 
-// Module 15891 (useLiveStageData)
+// Module 15907 (useLiveStageData)
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "getActiveStageChannelIds" /* 5370 */;
+import closure_4 from "getActiveStageChannelIds" /* 5371 */;
 import closure_5 from "ensureGuildLoaded" /* 1386 */;
 
 const require = arg1;

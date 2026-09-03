@@ -1,10 +1,10 @@
-// === Module 9728: AppChannelApplicationIcon ===
+// === Module 9732: AppChannelApplicationIcon ===
 
-// Module 9728 (AppChannelApplicationIcon)
+// Module 9732 (AppChannelApplicationIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 709 */;
 import getAvatarURLDefault from "getAvatarURL" /* 1430 */;
-import preloadDefault from "preload" /* 5501 */;
+import preloadDefault from "preload" /* 5502 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 

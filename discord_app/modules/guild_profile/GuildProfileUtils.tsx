@@ -1,6 +1,6 @@
-// === Module 7492: getEstablishedDate ===
+// === Module 7493: getEstablishedDate ===
 
-// Module 7492 (getEstablishedDate)
+// Module 7493 (getEstablishedDate)
 import set from "set" /* 2 */;
 import ME from "ME" /* 673 */;
 import createChannelRecord from "createChannelRecord" /* 1390 */;

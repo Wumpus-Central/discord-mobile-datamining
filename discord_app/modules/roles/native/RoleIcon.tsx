@@ -1,6 +1,6 @@
-// === Module 5987: RoleIcon ===
+// === Module 5988: RoleIcon ===
 
-// Module 5987 (RoleIcon)
+// Module 5988 (RoleIcon)
 import noopAll from "noop" /* 19 */;
 import Button from "Button" /* 1296 */;
 import { Image } from "get ActivityIndicator" /* 17 */;

@@ -1,12 +1,12 @@
-// === Module 7296: updateCategoriesAndProducts ===
+// === Module 7297: updateCategoriesAndProducts ===
 
-// Module 7296 (updateCategoriesAndProducts)
+// Module 7297 (updateCategoriesAndProducts)
 import failsDefault from "fails" /* 581 */;
 import initializeDefault from "initialize" /* 586 */;
 import setDefault from "set" /* 684 */;
 import dispatcherDefault from "dispatcher" /* 706 */;
 import closure_3 from "_getSystemLocale" /* 1995 */;
-import closure_4 from "fromServer" /* 7297 */;
+import closure_4 from "fromServer" /* 7298 */;
 
 const require = arg1;
 function updateCategoriesAndProducts(map) {
@@ -15,7 +15,7 @@ function updateCategoriesAndProducts(map) {
     const items = [storeListingId.storeListingId, storeListingId];
     return items;
   }));
-  const productsFromCategories = map1(7308).getProductsFromCategories(map, true);
+  const productsFromCategories = map1(7309).getProductsFromCategories(map, true);
   map1 = new Map(productsFromCategories.map((skuId) => {
     const items = [skuId.skuId, skuId];
     return items;
@@ -25,8 +25,8 @@ function updateCategoriesAndProducts(map) {
       const result = map1.set(skuId.skuId, skuId);
     }
   });
-  const obj = map1(7308);
-  const productsFromCategories1 = map1(7308).getProductsFromCategories(map, false);
+  const obj = map1(7309);
+  const productsFromCategories1 = map1(7309).getProductsFromCategories(map, false);
   map2 = new Map(productsFromCategories1.map((storeListingId) => {
     const items = [storeListingId.storeListingId, storeListingId];
     return items;

@@ -1,6 +1,6 @@
-// === Module 15826: convertPortraitToLandscapeScreens ===
+// === Module 15842: convertPortraitToLandscapeScreens ===
 
-// Module 15826 (convertPortraitToLandscapeScreens)
+// Module 15842 (convertPortraitToLandscapeScreens)
 import set from "set" /* 2 */;
 import getRootNavigationRef from "getRootNavigationRef" /* 4333 */;
 

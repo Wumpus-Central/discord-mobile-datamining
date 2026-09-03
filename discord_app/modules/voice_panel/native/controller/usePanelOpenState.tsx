@@ -1,10 +1,10 @@
-// === Module 16907: usePanelOpenState ===
+// === Module 16927: usePanelOpenState ===
 
-// Module 16907 (usePanelOpenState)
+// Module 16927 (usePanelOpenState)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
-import closure_5 from "withEqualityFn" /* 4728 */;
-import { VoicePanelModes } from "VoicePanelModes" /* 12063 */;
+import closure_5 from "withEqualityFn" /* 4729 */;
+import { VoicePanelModes } from "VoicePanelModes" /* 12069 */;
 import ME from "ME" /* 673 */;
 
 const require = arg1;
@@ -83,12 +83,12 @@ export default function usePanelOpenState(arg0, arg1, arg2, connected) {
       ComponentDispatch2.unsubscribe(closure_2_7.VOICE_PANEL_CLOSE, componentActionClose);
     };
   }, items);
-  const tmp3 = callback(doCloseChannel.useState(() => callback2(12551).getHistory().location.pathname), 2);
+  const tmp3 = callback(doCloseChannel.useState(() => callback2(12563).getHistory().location.pathname), 2);
   const first = tmp3[0];
   closure_6 = tmp3[1];
   const items1 = [arg0, first];
   const effect1 = doCloseChannel.useEffect(() => {
-    closure_0 = callback2(12551).addRouteChangeListener((pathname) => {
+    closure_0 = callback2(12563).addRouteChangeListener((pathname) => {
       if (closure_5 !== pathname.pathname) {
         callback2(tmp);
         let obj = callback(closure_1_2[8]);

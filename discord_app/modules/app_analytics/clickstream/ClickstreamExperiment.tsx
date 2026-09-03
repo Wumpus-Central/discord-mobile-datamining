@@ -1,6 +1,6 @@
-// === Module 7221: clickstreamExperimentEnabled ===
+// === Module 7222: clickstreamExperimentEnabled ===
 
-// Module 7221 (clickstreamExperimentEnabled)
+// Module 7222 (clickstreamExperimentEnabled)
 import set from "set" /* 2 */;
 import ApexExperiment from "ApexExperiment" /* 1467 */;
 

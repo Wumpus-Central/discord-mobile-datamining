@@ -1,8 +1,8 @@
-// === Module 9005: styles ===
+// === Module 9009: styles ===
 
-// Module 9005 (styles)
+// Module 9009 (styles)
 import ThemesDefault from "Themes" /* 709 */;
-import MINIMUM_HIT_AREA from "MINIMUM_HIT_AREA" /* 4933 */;
+import MINIMUM_HIT_AREA from "MINIMUM_HIT_AREA" /* 4934 */;
 import closure_3 from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
@@ -48,7 +48,7 @@ export const FloatingActionButton = function FloatingActionButton(positionRight)
       return obj;
     }
   }
-  obj = { withSpring: positionBottom(4927).withSpring, positionBottom, DEFAULT_POSITION_OFFSET: 16, SPRING_CONFIG: closure_6, positionRight };
+  obj = { withSpring: positionBottom(4928).withSpring, positionBottom, DEFAULT_POSITION_OFFSET: 16, SPRING_CONFIG: closure_6, positionRight };
   F.__closure = obj;
   F.__workletHash = 10762818944671;
   F.__initData = closure_7;
@@ -67,6 +67,6 @@ export const FloatingActionButton = function FloatingActionButton(positionRight)
   }
   obj1.icon = cloneElementResult;
   ({ button: obj4.style, iconButtonPill: obj4.pillStyle } = styles());
-  obj[1] = jsx(positionBottom(8016).BaseIconButton, {});
+  obj[1] = jsx(positionBottom(8019).BaseIconButton, {});
   return jsx(positionRight(4217).View, { style: animatedStyle, children: null });
 };

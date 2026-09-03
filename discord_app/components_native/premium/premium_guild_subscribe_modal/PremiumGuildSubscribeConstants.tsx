@@ -1,6 +1,6 @@
-// === Module 5387: PremiumGuildSubscribeModalScenes ===
+// === Module 5388: PremiumGuildSubscribeModalScenes ===
 
-// Module 5387 (PremiumGuildSubscribeModalScenes)
+// Module 5388 (PremiumGuildSubscribeModalScenes)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("components_native/premium/premium_guild_subscribe_modal/PremiumGuildSubscribeConstants.tsx");

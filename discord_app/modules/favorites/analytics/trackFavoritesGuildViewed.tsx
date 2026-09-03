@@ -1,10 +1,10 @@
-// === Module 16551: trackFavoritesGuildViewed ===
+// === Module 16572: trackFavoritesGuildViewed ===
 
-// Module 16551 (trackFavoritesGuildViewed)
+// Module 16572 (trackFavoritesGuildViewed)
 import expandEventPropertiesDefault from "expandEventProperties" /* 695 */;
 import isPremiumAtLeastDefault from "isPremiumAtLeast" /* 1945 */;
-import useFavoritesAccess from "useFavoritesAccess" /* 10329 */;
-import setNextFavoritesGuildViewSource from "setNextFavoritesGuildViewSource" /* 10336 */;
+import useFavoritesAccess from "useFavoritesAccess" /* 10333 */;
+import setNextFavoritesGuildViewSource from "setNextFavoritesGuildViewSource" /* 10340 */;
 import closure_3 from "mergeGuildAvatar" /* 1921 */;
 import closure_4 from "initializeFromUserSettings" /* 1389 */;
 import { AnalyticEvents } from "ME" /* 673 */;

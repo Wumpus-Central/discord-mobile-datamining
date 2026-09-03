@@ -1,6 +1,6 @@
-// === Module 7628: useActiveThemeType ===
+// === Module 7629: useActiveThemeType ===
 
-// Module 7628 (useActiveThemeType)
+// Module 7629 (useActiveThemeType)
 import initialize from "initialize" /* 586 */;
 import getGuildIdFromNavigationStateDefault from "getGuildIdFromNavigationState" /* 4331 */;
 import closure_3 from "CHANNEL_SIDEBAR_WIDTH" /* 1303 */;

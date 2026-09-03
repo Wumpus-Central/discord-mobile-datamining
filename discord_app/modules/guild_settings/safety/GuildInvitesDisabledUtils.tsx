@@ -1,7 +1,7 @@
-// === Module 12163: useInvitesDisabledPermission ===
+// === Module 12169: useInvitesDisabledPermission ===
 
-// Module 12163 (useInvitesDisabledPermission)
-import closure_2 from "computeAlertSettings" /* 10185 */;
+// Module 12169 (useInvitesDisabledPermission)
+import closure_2 from "computeAlertSettings" /* 10189 */;
 import closure_3 from "getUncachedChannelPermissions" /* 4120 */;
 import ME from "ME" /* 673 */;
 

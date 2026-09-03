@@ -1,8 +1,8 @@
-// === Module 11761: useTypingUserIds ===
+// === Module 11767: useTypingUserIds ===
 
-// Module 11761 (useTypingUserIds)
+// Module 11767 (useTypingUserIds)
 import closure_2 from "markAllUserIdListsStale" /* 4130 */;
-import closure_3 from "handleTypingStart" /* 11760 */;
+import closure_3 from "handleTypingStart" /* 11766 */;
 import closure_4 from "mergeGuildAvatar" /* 1921 */;
 
 const require = arg1;

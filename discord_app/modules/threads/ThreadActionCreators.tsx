@@ -1,20 +1,20 @@
-// === Module 7519: patchThread ===
+// === Module 7520: patchThread ===
 
-// Module 7519 (patchThread)
+// Module 7520 (patchThread)
 import sendRequest from "sendRequest" /* 527 */;
 import dispatcherDefault from "dispatcher" /* 706 */;
-import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata" /* 4700 */;
-import dispatcherDefault2 from "dispatcher" /* 7531 */;
-import setActiveCommand from "setActiveCommand" /* 7532 */;
+import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata" /* 4701 */;
+import dispatcherDefault2 from "dispatcher" /* 7532 */;
+import setActiveCommand from "setActiveCommand" /* 7533 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import { createChannelRecordFromServer as closure_4 } from "createChannelRecord" /* 1390 */;
 import closure_5 from "fetchFingerprint" /* 1215 */;
 import closure_6 from "ensureGuildLoaded" /* 1386 */;
 import closure_7 from "getUncachedChannelPermissions" /* 4120 */;
-import closure_8 from "listKey" /* 7520 */;
-import { PAGE_SIZE } from "listKey" /* 7520 */;
+import closure_8 from "listKey" /* 7521 */;
+import { PAGE_SIZE } from "listKey" /* 7521 */;
 import closure_10 from "storeThread" /* 4122 */;
-import closure_11 from "handleSummarizeThreadFinish" /* 7530 */;
+import closure_11 from "handleSummarizeThreadFinish" /* 7531 */;
 import ME from "ME" /* 673 */;
 import { ChannelFlags } from "set" /* 1393 */;
 

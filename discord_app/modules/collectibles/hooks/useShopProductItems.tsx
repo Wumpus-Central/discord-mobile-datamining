@@ -1,6 +1,6 @@
-// === Module 8506: firstAvatarDecoration ===
+// === Module 8510: firstAvatarDecoration ===
 
-// Module 8506 (firstAvatarDecoration)
+// Module 8510 (firstAvatarDecoration)
 import getSystemLocale from "getSystemLocale" /* 1233 */;
 import closure_2 from "noop" /* 19 */;
 

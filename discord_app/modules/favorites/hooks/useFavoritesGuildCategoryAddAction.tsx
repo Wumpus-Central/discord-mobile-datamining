@@ -1,6 +1,6 @@
-// === Module 10933: useFavoritesGuildCategoryAddAction ===
+// === Module 10937: useFavoritesGuildCategoryAddAction ===
 
-// Module 10933 (useFavoritesGuildCategoryAddAction)
+// Module 10937 (useFavoritesGuildCategoryAddAction)
 import messagesProxyDefault from "messagesProxy" /* 3178 */;
 import closure_3 from "noop" /* 19 */;
 import { ChannelTypes } from "ME" /* 673 */;

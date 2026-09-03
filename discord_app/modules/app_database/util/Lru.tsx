@@ -1,6 +1,6 @@
-// === Module 7235: length ===
+// === Module 7236: length ===
 
-// Module 7235 (length)
+// Module 7236 (length)
 import set from "set" /* 2 */;
 
 class Lru {

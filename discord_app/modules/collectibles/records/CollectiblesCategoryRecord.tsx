@@ -1,9 +1,9 @@
-// === Module 7297: fromServer ===
+// === Module 7298: fromServer ===
 
-// Module 7297 (fromServer)
-import fromServerDefault from "fromServer" /* 7305 */;
-import getItemRecordsFromPurchases from "getItemRecordsFromPurchases" /* 7308 */;
-import closure_2 from "fromServer" /* 7298 */;
+// Module 7298 (fromServer)
+import fromServerDefault from "fromServer" /* 7306 */;
+import getItemRecordsFromPurchases from "getItemRecordsFromPurchases" /* 7309 */;
+import closure_2 from "fromServer" /* 7299 */;
 
 require = arg1;
 fromServerDefault;

@@ -1,13 +1,13 @@
-// === Module 12005: HeaderIcon ===
+// === Module 12011: HeaderIcon ===
 
-// Module 12005 (HeaderIcon)
+// Module 12011 (HeaderIcon)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import ThemesDefault from "Themes" /* 709 */;
 import computeChannelNameDefault from "computeChannelName" /* 4674 */;
-import ChevronSmallRightIcon from "ChevronSmallRightIcon" /* 6011 */;
-import GuildIconSizesDefault from "GuildIconSizes" /* 6012 */;
-import FacepileGroupDMAvatarDefault from "FacepileGroupDMAvatar" /* 10869 */;
+import ChevronSmallRightIcon from "ChevronSmallRightIcon" /* 6012 */;
+import GuildIconSizesDefault from "GuildIconSizes" /* 6013 */;
+import FacepileGroupDMAvatarDefault from "FacepileGroupDMAvatar" /* 10873 */;
 import closure_4 from "createGuildRecordFromRust" /* 1908 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
@@ -20,7 +20,7 @@ function HeaderIcon(channel) {
   if (null != stateFromStores) {
     obj = { guild: null, size: null };
     obj[0] = stateFromStores;
-    obj[1] = tmp2(6012).GuildIconSizes.XSMALL;
+    obj[1] = tmp2(6013).GuildIconSizes.XSMALL;
     let tmp6Result = callback(GuildIconSizesDefault, obj);
     const tmp13 = GuildIconSizesDefault;
   } else {
@@ -37,7 +37,7 @@ function HeaderIcon(channel) {
     } else {
       obj1 = { style: null, children: null };
       obj1[0] = tmp.dmIcon;
-      obj1[1] = tmp6(tmp2(5024).ChatIcon, { size: "xxs" });
+      obj1[1] = tmp6(tmp2(5025).ChatIcon, { size: "xxs" });
       tmp6Result = tmp6(View, obj1);
     }
   }
@@ -50,7 +50,7 @@ function ChannelName(channel) {
   const items = [closure_4];
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_4.getGuild(channel.guild_id));
   const tmp5 = computeChannelNameDefault(channel, false);
-  obj1 = channel(4981);
+  obj1 = channel(4982);
   const channelIconComponentWithGuild = obj1.getChannelIconComponentWithGuild(channel, stateFromStores);
   let isPrivateResult = channel.isPrivate();
   if (!isPrivateResult) {

@@ -1,6 +1,6 @@
-// === Module 14761: ScheduleRuleRow ===
+// === Module 14776: ScheduleRuleRow ===
 
-// Module 14761 (ScheduleRuleRow)
+// Module 14776 (ScheduleRuleRow)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import ME from "ME" /* 673 */;
@@ -15,10 +15,10 @@ function ScheduleRuleRow(rule) {
   if (readOnly === undefined) {
     readOnly = false;
   }
-  let obj = rule(10188);
+  let obj = rule(10192);
   const scheduleRuleDateRange = obj.getScheduleRuleDateRange(rule);
-  const obj2 = rule(10188);
-  obj = { label: scheduleRuleDateRange, subLabel: rule(10188).formatDays(rule.days), trailing: null, arrow: null, onPress: null };
+  const obj2 = rule(10192);
+  obj = { label: scheduleRuleDateRange, subLabel: rule(10192).formatDays(rule.days), trailing: null, arrow: null, onPress: null };
   const intl = rule(1233).intl;
   const string = intl.string;
   const tmp4 = messagesProxyDefault;
@@ -40,7 +40,7 @@ function ScheduleRuleRow(rule) {
     };
   }
   obj[4] = fn;
-  return closure_5(rule(5607).TableRow, obj);
+  return closure_5(rule(5608).TableRow, obj);
 }
 const View = get_ActivityIndicator.View;
 const UserSettingsSections = ME.UserSettingsSections;

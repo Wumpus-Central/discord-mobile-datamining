@@ -1,6 +1,6 @@
-// === Module 17141: getAppMajorVersion ===
+// === Module 17161: getAppMajorVersion ===
 
-// Module 17141 (getAppMajorVersion)
+// Module 17161 (getAppMajorVersion)
 import set from "set" /* 2 */;
 import getConstants from "getConstants" /* 1624 */;
 

@@ -1,10 +1,10 @@
-// === Module 5088: doesImageMatchUpload ===
+// === Module 5089: doesImageMatchUpload ===
 
-// Module 5088 (doesImageMatchUpload)
+// Module 5089 (doesImageMatchUpload)
 import set from "set" /* 2 */;
 import sendRequest from "sendRequest" /* 527 */;
 import isBlockedDomain from "isBlockedDomain" /* 1915 */;
-import cancel from "cancel" /* 5081 */;
+import cancel from "cancel" /* 5082 */;
 
 const result = set.fileFinishedImporting("lib/uploader/UploadUtils.tsx");
 class DefaultHttpClient {
@@ -118,7 +118,7 @@ export const canUploadNatively = function canUploadNatively(item) {
     fileIsInAppDirResult = null != item.uri;
   }
   if (fileIsInAppDirResult) {
-    let tmpResult = tmp(5089);
+    let tmpResult = tmp(5090);
     fileIsInAppDirResult = tmpResult.fileIsInAppDir(item.uri);
   }
   if (fileIsInAppDirResult) {

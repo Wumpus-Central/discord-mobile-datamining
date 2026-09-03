@@ -1,6 +1,6 @@
-// === Module 7673: useCurrentUserGuildJoinRequest ===
+// === Module 7676: useCurrentUserGuildJoinRequest ===
 
-// Module 7673 (useCurrentUserGuildJoinRequest)
+// Module 7676 (useCurrentUserGuildJoinRequest)
 import closure_2 from "handleGatewayJoinRequestUpdate" /* 4300 */;
 
 const require = arg1;

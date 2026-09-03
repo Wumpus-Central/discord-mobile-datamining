@@ -1,10 +1,10 @@
-// === Module 9723: _isDefaultChannelThresholdMetAfterDelete ===
+// === Module 9727: _isDefaultChannelThresholdMetAfterDelete ===
 
-// Module 9723 (_isDefaultChannelThresholdMetAfterDelete)
+// Module 9727 (_isDefaultChannelThresholdMetAfterDelete)
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import closure_5 from "createGuildRecordFromRust" /* 1908 */;
-import closure_6 from "handleUpdate" /* 5475 */;
-import { NUM_DEFAULT_CHATTABLE_CHANNELS_MIN as closure_7 } from "serverPromptToClientPrompt" /* 5476 */;
+import closure_6 from "handleUpdate" /* 5476 */;
+import { NUM_DEFAULT_CHATTABLE_CHANNELS_MIN as closure_7 } from "serverPromptToClientPrompt" /* 5477 */;
 import ME from "ME" /* 673 */;
 
 const require = arg1;
@@ -366,7 +366,7 @@ function _checkChattableChannelThresholdMetAfterChannelPermissionDeny() {
             obj4[0] = tmp54;
             return obj4;
           } else {
-            obj = callback(4857);
+            obj = callback(4858);
             obj5 = { title: null, body: null };
             const intl = guildId(1233).intl;
             obj5[0] = intl.string(guildId(1233).t.ut7sq0);

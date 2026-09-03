@@ -1,18 +1,18 @@
-// === Module 11014: serializePurchaseResponse ===
+// === Module 11018: serializePurchaseResponse ===
 
-// Module 11014 (serializePurchaseResponse)
+// Module 11018 (serializePurchaseResponse)
 import timestampDefault from "timestamp" /* 3 */;
 import _modDef38 from "module_38" /* 38 */;
 import v1 from "v1" /* 511 */;
 import set2 from "set" /* 1234 */;
 import getConstantsAll from "getConstants" /* 1624 */;
 import DCDDeviceManager from "DCDDeviceManager" /* 4457 */;
-import productSK2ToIAPProductDefault from "productSK2ToIAPProduct" /* 11034 */;
-import GeneratedPaymentCurrencies from "GeneratedPaymentCurrencies" /* 11035 */;
+import productSK2ToIAPProductDefault from "productSK2ToIAPProduct" /* 11038 */;
+import GeneratedPaymentCurrencies from "GeneratedPaymentCurrencies" /* 11039 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import { convertToAlpha2 } from "DEFAULT_COUNTRY_CODE_NAME" /* 4174 */;
 import closure_6 from "mergeGuildAvatar" /* 1921 */;
-import closure_7 from "updateProduct" /* 6092 */;
+import closure_7 from "updateProduct" /* 6093 */;
 import ME from "ME" /* 673 */;
 import { NAMESPACE_SNOWFLAKE_UUID } from "GuildFeatures" /* 1923 */;
 import set from "set" /* 1234 */;
@@ -299,7 +299,7 @@ function _fetchStoreFront() {
               c4 = 2;
               c5 = 1;
               obj1 = { value: null, done: false };
-              obj1[0] = closure_1_0(11015).getStorefront();
+              obj1[0] = closure_1_0(11019).getStorefront();
               return obj1;
             } else {
               c5 = 3;
@@ -352,17 +352,17 @@ function _fetchStoreFront() {
 }
 ({ CurrencyCodes: closure_8, IOS_BUNDLE_ID } = ME);
 ({ InAppUtils: unpackModuleId, RNIapIosSk2: closure_12 } = require("get ActivityIndicator").NativeModules);
-let items = [require("module_11015").ErrorCode.E_USER_CANCELLED, ME.StoreKitErrors.PAYMENT_CANCELED];
+let items = [require("module_11019").ErrorCode.E_USER_CANCELLED, ME.StoreKitErrors.PAYMENT_CANCELED];
 let set = new Set(items);
 new timestampDefault("IAPUtils.tsx");
 let _default = {
   loadProducts() {
     if (obj.isIOS()) {
       const _Object = Object;
-      let items = [productSK2ToIAPProductDefault.fetchSubscriptions(Object.values(tmp(6095).ProductIds)), ];
+      let items = [productSK2ToIAPProductDefault.fetchSubscriptions(Object.values(tmp(6096).ProductIds)), ];
       const obj2 = productSK2ToIAPProductDefault;
       const _Object2 = Object;
-      items[1] = productSK2ToIAPProductDefault.fetchProducts(Object.values(tmp(6095).ProductIds));
+      items[1] = productSK2ToIAPProductDefault.fetchProducts(Object.values(tmp(6096).ProductIds));
       const obj3 = productSK2ToIAPProductDefault;
       let nextPromise = _Promise.all(items).then((arg0) => {
         [r10007, tmp] = arg0;

@@ -1,6 +1,6 @@
-// === Module 17755: promise ===
+// === Module 17779: promise ===
 
-// Module 17755 (promise)
+// Module 17779 (promise)
 import closure_3 from "ensureGuildLoaded" /* 1386 */;
 import closure_4 from "createRTCConnection" /* 4554 */;
 

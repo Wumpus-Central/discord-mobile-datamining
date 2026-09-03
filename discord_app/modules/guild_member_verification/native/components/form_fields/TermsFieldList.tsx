@@ -1,7 +1,8 @@
-// === Module 5564: TermsFieldListItem ===
+// === Module 5565: TermsFieldListItem ===
 
-// Module 5564 (TermsFieldListItem)
+// Module 5565 (TermsFieldListItem)
 import ThemesDefault from "Themes" /* 709 */;
+import getSystemLocale from "getSystemLocale" /* 1233 */;
 import get_defaultRulesDefault from "get defaultRules" /* 4468 */;
 import Text from "Text" /* 4474 */;
 import closure_3 from "noop" /* 19 */;
@@ -10,11 +11,15 @@ import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
 require = arg1;
-function TermsFieldListItem(arg0) {
-  ({ rowNumber, rule, rulesChannelId } = arg0);
+function TermsFieldListItem(rowNumber) {
+  rowNumber = rowNumber.rowNumber;
+  ({ rowCount, rule, rulesChannelId } = rowNumber);
   const tmp = callback3();
   let obj = { style: tmp.termsRow, children: null };
-  obj = { style: tmp.termsRowNumber, variant: "text-sm/medium", color: "text-muted", children: "" + rowNumber + "." };
+  obj = { style: tmp.termsRowNumber, variant: "text-sm/medium", color: "text-muted", accessibilityLabel: null, children: null };
+  const intl = getSystemLocale.intl;
+  obj[3] = intl.formatToPlainString(getSystemLocale.t.XpgzeO, { number: rowNumber, total: rowCount });
+  obj[4] = "" + rowNumber + ".";
   const items = [callback(Text.Text, obj), ];
   obj = { style: tmp.termsRowContent, variant: "text-md/medium", children: get_defaultRulesDefault.parseGuildVerificationFormRule(rule, true, { channelId: rulesChannelId }) };
   items[1] = callback(Text.Text, obj);
@@ -46,9 +51,10 @@ export default function TermsFieldList(rules) {
   obj = { style: tmp.title, accessibilityRole: "header", variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: null };
   const intl = rules(1233).intl;
   obj[4] = intl.string(rules(1233).t.prJqwT);
-  let items = [
-    callback(rules(4474).Text, obj),
-    rules.map((rule) => {
+  let items = [callback(rules(4474).Text, obj), ];
+  obj = {
+    accessibilityRole: "list",
+    children: rules.map((rule) => {
       const items = [termsContainer.termsContainer, , ];
       let firstItem = null;
       if (0 === arg1) {
@@ -61,7 +67,7 @@ export default function TermsFieldList(rules) {
       }
       obj = { style: items, children: tmp2(closure_1_9, obj) };
       items[2] = lastItem;
-      obj = { rule, rowNumber: arg1 + 1, rulesChannelId };
+      obj = { rule, rowNumber: arg1 + 1, rowCount: arr2.length, rulesChannelId };
       const children = [closure_1_5(closure_1_4, obj), ];
       let tmp2Result = null;
       if (arg1 !== rules.length - 1) {
@@ -70,7 +76,8 @@ export default function TermsFieldList(rules) {
       children[1] = tmp2Result;
       return closure_1_6(closure_1_3.Fragment, { children }, "term-" + rule + "-" + arg1);
     })
-  ];
+  };
+  items[1] = callback(View, obj);
   obj[0] = items;
   return callback2(closure_7, obj);
 };

@@ -1,10 +1,10 @@
-// === Module 9788: useGuildEventRecurrences ===
+// === Module 9792: useGuildEventRecurrences ===
 
-// Module 9788 (useGuildEventRecurrences)
-import usePrevValueDefault from "usePrevValue" /* 9243 */;
+// Module 9792 (useGuildEventRecurrences)
+import usePrevValueDefault from "usePrevValue" /* 9247 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
-import closure_5 from "scheduledEventSort" /* 7280 */;
+import closure_5 from "scheduledEventSort" /* 7281 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/guild_scheduled_events/useGuildEventRecurrences.tsx");
@@ -20,8 +20,8 @@ export default function useGuildEventRecurrences(arg0, arg1, byWeekday) {
   closure_4 = tmp4;
   if (null != byWeekday) {
     if (null != stateFromStores) {
-      let tmpResult = tmp(9647);
-      tmpResult = tmp(9647);
+      let tmpResult = tmp(9651);
+      tmpResult = tmp(9651);
       let _Date = Date;
       let rRule = tmpResult.getRRule(byWeekday);
       let date = new Date(stateFromStores.scheduled_start_time);

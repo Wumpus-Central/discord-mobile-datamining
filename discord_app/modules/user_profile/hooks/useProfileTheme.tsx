@@ -1,11 +1,11 @@
-// === Module 8541: useProfileTheme ===
+// === Module 8545: useProfileTheme ===
 
-// Module 8541 (useProfileTheme)
+// Module 8545 (useProfileTheme)
 import initialize from "initialize" /* 586 */;
 import useThemeDefault from "useTheme" /* 4413 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4470 */;
-import { useEffectiveThemeOverride } from "useProfileThemeOverrideStore" /* 8542 */;
+import { useEffectiveThemeOverride } from "useProfileThemeOverrideStore" /* 8546 */;
 import { ThemeTypes } from "ME" /* 673 */;
 
 require = arg1;
@@ -32,7 +32,7 @@ export default function useProfileTheme(arg0) {
   }
   let tmp4Result = tmp4(708);
   const result = tmp4Result.unsafe_getResolvedRawColor("PRIMARY_530", { saturation: 1 });
-  tmp4Result = tmp4(8050);
+  tmp4Result = tmp4(8053);
   callback(tmp4Result.useAvatarColors(pendingAvatarSrc, result, false), 2);
   if (null != tmp3) {
     return tmp3;
@@ -72,12 +72,12 @@ export default function useProfileTheme(arg0) {
     if (!stateFromStores) {
       tmp16 = tmp2;
       if (!forceUserTheme) {
-        let profileTheme = tmp4(8128).getProfileTheme(first);
+        let profileTheme = tmp4(8131).getProfileTheme(first);
         if (profileTheme == null) {
           profileTheme = tmp2;
         }
         tmp16 = profileTheme;
-        const tmp4Result3 = tmp4(8128);
+        const tmp4Result3 = tmp4(8131);
       }
     }
     if (tmp16 !== ThemeTypes.DARK) {

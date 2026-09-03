@@ -1,17 +1,17 @@
-// === Module 7350: removePendingListFetch ===
+// === Module 7351: removePendingListFetch ===
 
-// Module 7350 (removePendingListFetch)
+// Module 7351 (removePendingListFetch)
 import initializeDefault from "initialize" /* 586 */;
 import dispatcherDefault from "dispatcher" /* 706 */;
 import privDefault from "priv" /* 1400 */;
-import createMinimalMessageRecord from "createMinimalMessageRecord" /* 4737 */;
+import createMinimalMessageRecord from "createMinimalMessageRecord" /* 4738 */;
 import closure_3 from "fetchFingerprint" /* 1215 */;
 import closure_4 from "ensureGuildLoaded" /* 1386 */;
 import closure_5 from "markAllUserIdListsStale" /* 4130 */;
 import closure_6 from "handleConnectionOpen" /* 1980 */;
 import closure_7 from "mergeGuildAvatar" /* 1921 */;
-import closure_8 from "initialize" /* 7351 */;
-import CONVERSATION_COLORS from "CONVERSATION_COLORS" /* 7352 */;
+import closure_8 from "initialize" /* 7352 */;
+import CONVERSATION_COLORS from "CONVERSATION_COLORS" /* 7353 */;
 
 require = arg1;
 function removePendingListFetch(channelId, requestKey) {
@@ -546,7 +546,7 @@ obj = {
     ({ channelId, rawConversations, direction, anchor, isJump, fullyHydrated } = requestKey);
     let set;
     if (removePendingListFetch(channelId, requestKey.requestKey)) {
-      const mapped = rawConversations.map(set(7353).mapConversation);
+      const mapped = rawConversations.map(set(7354).mapConversation);
       const found = mapped.filter(set(1470).isNotNullish);
       const peekResult = navigation.peek(channelId);
       if (isJump) {
@@ -1107,7 +1107,7 @@ obj = {
           }
           let flag = null != message;
           if (flag) {
-            const updateMessageRecordResult = id(4737).updateMessageRecord(value.message, message);
+            const updateMessageRecordResult = id(4738).updateMessageRecord(value.message, message);
             value.message = updateMessageRecordResult;
             value = null;
             if (null != value.conversationId) {
@@ -1131,7 +1131,7 @@ obj = {
                 flag = true;
               }
             }
-            const obj = id(4737);
+            const obj = id(4738);
           }
           return flag;
         }

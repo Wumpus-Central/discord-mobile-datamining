@@ -5,7 +5,7 @@ import getAvatarURLDefault from "getAvatarURL" /* 1430 */;
 import fit from "fit" /* 1489 */;
 import EmojiTypes from "EmojiTypes" /* 4137 */;
 import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4139 */;
-import getURLDefault from "getURL" /* 7537 */;
+import getURLDefault from "getURL" /* 7538 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import createChannelRecord from "createChannelRecord" /* 1390 */;
 import closure_6 from "getUncachedChannelPermissions" /* 4120 */;
@@ -97,7 +97,7 @@ function getEmojiUnavailableReason(forceIncludeExternalGuilds) {
             }
             obj = getPremiumPlanItemDefault;
           }
-          let tmp3Result = tmp3(5414);
+          let tmp3Result = tmp3(5415);
           if (tmp3Result.isUnusableRoleSubscriptionEmoji(emoji, guildId)) {
             tmp3Result = tmp3(4113);
             tmp3Result.shouldHideGuildPurchaseEntryPoints(emoji.guildId) ? EmojiDisabledReasons.ROLE_SUBSCRIPTION_UNAVAILABLE : EmojiDisabledReasons.ROLE_SUBSCRIPTION_LOCKED;
@@ -112,7 +112,7 @@ function getEmojiUnavailableReason(forceIncludeExternalGuilds) {
                   if (!tmp3Result1.isPurchasableRoleSubscriptionEmoji(emoji)) {
                     PREMIUM_LOCKED = EmojiDisabledReasons.PREMIUM_LOCKED;
                   }
-                  tmp3Result1 = tmp3(5414);
+                  tmp3Result1 = tmp3(5415);
                 }
                 obj3 = getPremiumPlanItemDefault;
               }

@@ -1,6 +1,6 @@
-// === Module 8710: withTimeout ===
+// === Module 8714: withTimeout ===
 
-// Module 8710 (withTimeout)
+// Module 8714 (withTimeout)
 import timestampDefault from "timestamp" /* 3 */;
 import enforcingDefault from "enforcing" /* 4444 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;

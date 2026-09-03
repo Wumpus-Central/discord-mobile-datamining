@@ -1,10 +1,10 @@
-// === Module 10008: sum ===
+// === Module 10012: sum ===
 
-// Module 10008 (sum)
+// Module 10012 (sum)
 import timestampDefault from "timestamp" /* 3 */;
 import setDefault from "set" /* 684 */;
-import trackInviteDefault from "trackInvite" /* 7210 */;
-import enqueueDefault from "enqueue" /* 7589 */;
+import trackInviteDefault from "trackInvite" /* 7211 */;
+import enqueueDefault from "enqueue" /* 7590 */;
 import closure_2 from "ensureGuildLoaded" /* 1386 */;
 
 const sum = setDefault.Millis.SECOND + 10;

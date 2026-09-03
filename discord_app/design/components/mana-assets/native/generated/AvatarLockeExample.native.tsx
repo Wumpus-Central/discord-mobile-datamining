@@ -1,10 +1,10 @@
-// === Module 6336: AvatarLockeExample ===
+// === Module 6337: AvatarLockeExample ===
 
-// Module 6336 (AvatarLockeExample)
+// Module 6337 (AvatarLockeExample)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5501 */;
-import metadataDefault from "metadata" /* 6337 */;
+import preloadDefault from "preload" /* 5502 */;
+import metadataDefault from "metadata" /* 6338 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/AvatarLockeExample.native.tsx");

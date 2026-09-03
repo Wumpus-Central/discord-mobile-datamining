@@ -1,6 +1,6 @@
-// === Module 11002: NameplateCardPreview ===
+// === Module 11006: NameplateCardPreview ===
 
-// Module 11002 (NameplateCardPreview)
+// Module 11006 (NameplateCardPreview)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import _modDef38 from "module_38" /* 38 */;
@@ -8,7 +8,7 @@ import ThemesDefault from "Themes" /* 709 */;
 import Button from "Button" /* 1296 */;
 import getNameplateData from "getNameplateData" /* 1946 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 1949 */;
-import NAMEPLATE_DUMMY_USER_PREVIEW_CONFIG from "NAMEPLATE_DUMMY_USER_PREVIEW_CONFIG" /* 8534 */;
+import NAMEPLATE_DUMMY_USER_PREVIEW_CONFIG from "NAMEPLATE_DUMMY_USER_PREVIEW_CONFIG" /* 8538 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 

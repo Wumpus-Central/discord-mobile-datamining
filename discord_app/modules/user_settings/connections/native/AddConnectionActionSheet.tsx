@@ -1,6 +1,6 @@
-// === Module 14786: AddApplicationIdentityTableRow ===
+// === Module 14801: AddApplicationIdentityTableRow ===
 
-// Module 14786 (AddApplicationIdentityTableRow)
+// Module 14801 (AddApplicationIdentityTableRow)
 import set from "set" /* 2 */;
 import ME from "ME" /* 673 */;
 import items2 from "items" /* 4508 */;
@@ -13,10 +13,10 @@ function AddApplicationIdentityTableRow(application) {
   let _require;
   let analyticsLocations;
   ({ start, end } = application);
-  ({ startAuthorization: c0, canStartAuthorization } = analyticsLocations(5964)(application));
-  const tmp2 = analyticsLocations(5964)(application);
-  analyticsLocations = analyticsLocations(5961)(analyticsLocations(5981).ACTION_SHEET).analyticsLocations;
-  const tmp3 = analyticsLocations(5961);
+  ({ startAuthorization: c0, canStartAuthorization } = analyticsLocations(5965)(application));
+  const tmp2 = analyticsLocations(5965)(application);
+  analyticsLocations = analyticsLocations(5962)(analyticsLocations(5982).ACTION_SHEET).analyticsLocations;
+  const tmp3 = analyticsLocations(5962);
   let obj = _require(1296);
   const iconSource = application.getIconSource(obj.getIconSize(_require(1296).IconSizes.LARGE));
   obj = {
@@ -41,9 +41,9 @@ function AddApplicationIdentityTableRow(application) {
     tmp7Result = tmp7(tmp5(1296).Icon, obj);
   }
   obj[4] = tmp7Result;
-  obj[5] = closure_5(_require(5607).TableRow.Arrow, {});
+  obj[5] = closure_5(_require(5608).TableRow.Arrow, {});
   obj[6] = !canStartAuthorization;
-  return closure_5(_require(5607).TableRow, obj, application.id);
+  return closure_5(_require(5608).TableRow, obj, application.id);
 }
 const AnalyticsLocations = ME.AnalyticsLocations;
 let closure_4 = items2.getMigratedApplicationIdentityConnectionsScreenApplications;

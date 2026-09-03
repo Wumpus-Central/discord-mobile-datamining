@@ -1,6 +1,6 @@
-// === Module 17505: _createCreatorMonetizationEnableRequest ===
+// === Module 17525: _createCreatorMonetizationEnableRequest ===
 
-// Module 17505 (_createCreatorMonetizationEnableRequest)
+// Module 17525 (_createCreatorMonetizationEnableRequest)
 import sendRequest from "sendRequest" /* 527 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import { Endpoints } from "ME" /* 673 */;

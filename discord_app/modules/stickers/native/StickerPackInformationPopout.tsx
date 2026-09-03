@@ -1,9 +1,9 @@
-// === Module 10414: StickerPackInformationPopout ===
+// === Module 10418: StickerPackInformationPopout ===
 
-// Module 10414 (StickerPackInformationPopout)
+// Module 10418 (StickerPackInformationPopout)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 709 */;
-import getStickerExtensionFromFormatType from "getStickerExtensionFromFormatType" /* 4852 */;
+import getStickerExtensionFromFormatType from "getStickerExtensionFromFormatType" /* 4853 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
@@ -30,7 +30,7 @@ export default function StickerPackInformationPopout(stickerPack) {
   const tmp = callback3();
   _require = tmp;
   let items = [];
-  let obj = _require(4852);
+  let obj = _require(4853);
   if (obj.isStickerPackAnimated(stickerPack)) {
     obj = { key: "animated", description: null };
     const intl = tmp2(1233).intl;
@@ -51,7 +51,7 @@ export default function StickerPackInformationPopout(stickerPack) {
   const intl4 = tmp2(1233).intl;
   obj5[2] = intl4.string(_require(1233).t.cpT0Cq);
   obj4[3] = callback(_require(4474).Text, obj5);
-  items2[1] = callback(_require(5076).PressableOpacity, obj4);
+  items2[1] = callback(_require(5077).PressableOpacity, obj4);
   obj1[1] = items2;
   const items3 = [
     callback2(closure_2, obj1),

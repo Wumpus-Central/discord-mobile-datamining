@@ -1,6 +1,6 @@
-// === Module 10300: getLogMetadata ===
+// === Module 10304: getLogMetadata ===
 
-// Module 10300 (getLogMetadata)
+// Module 10304 (getLogMetadata)
 import set from "set" /* 2 */;
 import getConstantsAll from "getConstants" /* 1624 */;
 import DCDDeviceManager from "DCDDeviceManager" /* 4457 */;

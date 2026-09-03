@@ -1,7 +1,7 @@
-// === Module 12322: useCanGuildPowerupBeToggled ===
+// === Module 12334: useCanGuildPowerupBeToggled ===
 
-// Module 12322 (useCanGuildPowerupBeToggled)
-import usePowerupActiveStatusDefault from "usePowerupActiveStatus" /* 12287 */;
+// Module 12334 (useCanGuildPowerupBeToggled)
+import usePowerupActiveStatusDefault from "usePowerupActiveStatus" /* 12299 */;
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "calculateAppliedBoosts" /* 4364 */;
 import { PowerupActiveStatusType } from "BoostedGuildTiers" /* 4365 */;

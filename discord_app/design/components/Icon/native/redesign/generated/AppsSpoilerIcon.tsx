@@ -1,10 +1,10 @@
-// === Module 5057: AppsSpoilerIcon ===
+// === Module 5058: AppsSpoilerIcon ===
 
-// Module 5057 (AppsSpoilerIcon)
+// Module 5058 (AppsSpoilerIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 709 */;
 import BaseIconImage from "BaseIconImage" /* 4196 */;
-import registerAsset from "registerAsset" /* 5009 */;
+import registerAsset from "registerAsset" /* 5010 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

@@ -1,6 +1,6 @@
-// === Module 11856: BannerBase ===
+// === Module 11862: BannerBase ===
 
-// Module 11856 (BannerBase)
+// Module 11862 (BannerBase)
 import ThemesDefault from "Themes" /* 709 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
@@ -66,7 +66,7 @@ export default function BannerBase(arg0) {
     obj[1] = items;
     return obj;
   };
-  obj = { bannerMeasured: sharedValue, withDelay: _require(4217).withDelay, withSpring: _require(4927).withSpring, SPRING_CONFIG: closure_9 };
+  obj = { bannerMeasured: sharedValue, withDelay: _require(4217).withDelay, withSpring: _require(4928).withSpring, SPRING_CONFIG: closure_9 };
   fn.__closure = obj;
   fn.__workletHash = 5314641176204;
   fn.__initData = closure_11;
@@ -93,13 +93,13 @@ export default function BannerBase(arg0) {
   items2[1] = { opacity: num, width: diff };
   items2[2] = animatedStyle;
   const items3 = [tmp.bannerBackgroundGradient, { height: tmp3, width: diff }];
-  const items4 = [callback2(sharedValue(4940), { start: { x: 0, y: 0 }, end: { x: 0, y: 1 }, colors: items, style: items3 }), , ];
+  const items4 = [callback2(sharedValue(4941), { start: { x: 0, y: 0 }, end: { x: 0, y: 1 }, colors: items, style: items3 }), , ];
   obj1 = { style: tmp.imageContainer, children: null };
   obj2 = { style: tmp.trinketsLottie, source: null, autoPlay: null };
   const tmp2 = callback(React.useState(0), 2);
-  obj2[1] = _require(11857);
+  obj2[1] = _require(11863);
   obj2[2] = !stateFromStores;
-  const items5 = [callback2(sharedValue(5952), obj2), image];
+  const items5 = [callback2(sharedValue(5953), obj2), image];
   obj1[1] = items5;
   items4[1] = closure_8(View, obj1);
   obj3 = { style: tmp.bannerTextContainer, children: callback2(tmp4(4474).Text, obj4) };

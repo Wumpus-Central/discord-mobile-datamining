@@ -1,15 +1,15 @@
-// === Module 6124: useCanStartPrivateThread ===
+// === Module 6125: useCanStartPrivateThread ===
 
-// Module 6124 (useCanStartPrivateThread)
+// Module 6125 (useCanStartPrivateThread)
 import fromStringAll from "fromString" /* 503 */;
-import isSystemMessageDefault from "isSystemMessage" /* 6125 */;
-import useIsRemoteDefault from "useIsRemote" /* 6126 */;
+import isSystemMessageDefault from "isSystemMessage" /* 6126 */;
+import useIsRemoteDefault from "useIsRemote" /* 6127 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import { THREADED_CHANNEL_TYPES } from "createChannelRecord" /* 1390 */;
 import closure_6 from "fetchFingerprint" /* 1215 */;
 import closure_7 from "ensureGuildLoaded" /* 1386 */;
 import closure_8 from "getUncachedChannelPermissions" /* 4120 */;
-import closure_9 from "rebuild" /* 5456 */;
+import closure_9 from "rebuild" /* 5457 */;
 import ME from "ME" /* 673 */;
 import importDefaultResult from "createExperiment" /* 4390 */;
 
@@ -511,13 +511,13 @@ export const useCanJoinThreadVoice = function useCanJoinThreadVoice(channel) {
   }
   obj = { guildId: channel.guild_id, location: "e791ea_1" };
   let enabled = importDefaultResultResult.useExperiment(obj, { autoTrackExposure: false }).enabled;
-  let tmp3Result = tmp3(6127);
+  let tmp3Result = tmp3(6128);
   const isGameInvitesPost = tmp3Result.useIsGameInvitesPost(channel);
-  tmp3Result = tmp3(4731);
+  tmp3Result = tmp3(4732);
   let shouldAgeVerifyForAgeGate = tmp3Result.useShouldAgeVerifyForAgeGate();
   if (shouldAgeVerifyForAgeGate) {
-    shouldAgeVerifyForAgeGate = tmp3(4731).shouldShowAgeGateForChannelId(channel.id);
-    const tmp3Result1 = tmp3(4731);
+    shouldAgeVerifyForAgeGate = tmp3(4732).shouldShowAgeGateForChannelId(channel.id);
+    const tmp3Result1 = tmp3(4732);
   }
   let isVocalThreadResult = !tmp2;
   if (!tmp2) {

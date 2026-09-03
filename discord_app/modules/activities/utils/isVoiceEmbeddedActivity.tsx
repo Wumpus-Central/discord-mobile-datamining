@@ -1,6 +1,6 @@
-// === Module 9501: isVoiceEmbeddedActivity ===
+// === Module 9505: isVoiceEmbeddedActivity ===
 
-// Module 9501 (isVoiceEmbeddedActivity)
+// Module 9505 (isVoiceEmbeddedActivity)
 import set from "set" /* 689 */;
 import closure_2 from "fetchFingerprint" /* 1215 */;
 import closure_3 from "ensureGuildLoaded" /* 1386 */;

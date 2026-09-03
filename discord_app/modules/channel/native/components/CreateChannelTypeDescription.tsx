@@ -1,9 +1,9 @@
-// === Module 9732: CreateChannelTypeDescription ===
+// === Module 9736: CreateChannelTypeDescription ===
 
-// Module 9732 (CreateChannelTypeDescription)
+// Module 9736 (CreateChannelTypeDescription)
 import closure_2 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import { GuildProfileFetchStatus } from "handleUpdateStart" /* 9023 */;
+import { GuildProfileFetchStatus } from "handleUpdateStart" /* 9027 */;
 import { ChannelTypes } from "ME" /* 673 */;
 import { jsx } from "jsxProd" /* 21 */;
 
@@ -13,12 +13,12 @@ const result = require("set").fileFinishedImporting("modules/channel/native/comp
 export default function CreateChannelTypeDescription(guildId) {
   guildId = guildId.guildId;
   fetchGuildProfile = undefined;
-  let obj = fetchGuildProfile(9025);
+  let obj = fetchGuildProfile(9029);
   guildProfile = obj.useGuildProfile(guildId);
   ({ guildProfile, fetchGuildProfile } = guildProfile);
   let hasItem = null != guildProfile;
   if (hasItem) {
-    const VISIBLE = tmp(5571).GuildProfileVisibilitySets.VISIBLE;
+    const VISIBLE = tmp(5572).GuildProfileVisibilitySets.VISIBLE;
     hasItem = VISIBLE.has(guildProfile.visibility);
   }
   let tmp6 = !tmp5;

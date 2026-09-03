@@ -1,6 +1,6 @@
-// === Module 11181: AnnouncementChannelLurkerBar ===
+// === Module 11185: AnnouncementChannelLurkerBar ===
 
-// Module 11181 (AnnouncementChannelLurkerBar)
+// Module 11185 (AnnouncementChannelLurkerBar)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 709 */;
 import { View } from "get ActivityIndicator" /* 17 */;

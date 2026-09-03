@@ -1,6 +1,6 @@
-// === Module 5410: computeRolesForGuild ===
+// === Module 5411: computeRolesForGuild ===
 
-// Module 5410 (computeRolesForGuild)
+// Module 5411 (computeRolesForGuild)
 import initializeDefault from "initialize" /* 586 */;
 import dispatcherDefault from "dispatcher" /* 706 */;
 import GuildNSFWContentLevel from "GuildNSFWContentLevel" /* 1429 */;

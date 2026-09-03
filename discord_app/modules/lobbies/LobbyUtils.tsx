@@ -1,6 +1,6 @@
-// === Module 10891: canUnlinkLobbyChannel ===
+// === Module 10895: canUnlinkLobbyChannel ===
 
-// Module 10891 (canUnlinkLobbyChannel)
+// Module 10895 (canUnlinkLobbyChannel)
 import closure_2 from "getUncachedChannelPermissions" /* 4120 */;
 import { Permissions } from "ME" /* 673 */;
 

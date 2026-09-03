@@ -1,10 +1,10 @@
-// === Module 8488: create ===
+// === Module 8492: create ===
 
-// Module 8488 (create)
+// Module 8492 (create)
 import _mod1306 from "module_1306" /* 1306 */;
-import create from "create" /* 8462 */;
-import create2 from "create" /* 8463 */;
-import create3 from "create" /* 8472 */;
+import create from "create" /* 8466 */;
+import create2 from "create" /* 8467 */;
+import create3 from "create" /* 8476 */;
 import closure_2 from "_slicedToArray" /* 32 */;
 import { MessageType } from "module_1306" /* 1306 */;
 
@@ -16,7 +16,7 @@ class GuildBoostTabBanner$Type extends MessageType {
       name: "asset",
       kind: "message",
       T() {
-            return callback(8472).ThemeAwareAsset;
+            return callback(8476).ThemeAwareAsset;
           }
     };
     items = [, , , , , ];
@@ -26,7 +26,7 @@ class GuildBoostTabBanner$Type extends MessageType {
       name: "header_localized",
       kind: "message",
       T() {
-            return callback(8462).LocalizedString;
+            return callback(8466).LocalizedString;
           }
     };
     obj = { no: 3, name: "body_localized", kind: "message", T: null };
@@ -42,7 +42,7 @@ class GuildBoostTabBanner$Type extends MessageType {
       name: "help_article",
       kind: "message",
       T() {
-            return callback(8463).HelpArticle;
+            return callback(8467).HelpArticle;
           }
     };
     items[4] = { no: 5, name: "header", kind: "scalar", T: 9 };
@@ -196,7 +196,7 @@ let obj = {
   name: "asset",
   kind: "message",
   T() {
-    return callback(8472).ThemeAwareAsset;
+    return callback(8476).ThemeAwareAsset;
   }
 };
 let items = [
@@ -206,7 +206,7 @@ let items = [
     name: "header_localized",
     kind: "message",
     T() {
-      return callback(8462).LocalizedString;
+      return callback(8466).LocalizedString;
     }
   },
 ,
@@ -227,7 +227,7 @@ items[3] = {
   name: "help_article",
   kind: "message",
   T() {
-    return callback(8463).HelpArticle;
+    return callback(8467).HelpArticle;
   }
 };
 items[4] = { no: 5, name: "header", kind: "scalar", T: 9 };

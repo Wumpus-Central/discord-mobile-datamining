@@ -1,9 +1,9 @@
-// === Module 12766: memo ===
+// === Module 12778: memo ===
 
-// Module 12766 (memo)
+// Module 12778 (memo)
 import ThemesDefault from "Themes" /* 709 */;
 import getSystemLocale from "getSystemLocale" /* 1233 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5660 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5661 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import noop from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
@@ -130,14 +130,14 @@ export default function BundleProductDetailsActionSheetPreview(arg0) {
   if (name == null) {
     name = tmp8.skuId;
   }
-  let obj = onActiveItemChange(7308);
+  let obj = onActiveItemChange(7309);
   const collectibleTypeLabel = obj.getCollectibleTypeLabel(tmp8.type);
   const items1 = [items[num]];
   obj = { style: tmp.previewContainer, children: null };
   const tmp12 = onActiveItemChange;
   tmp4 = callback(callback5(product.skuId), 2);
   const items2 = [
-    callback6(onActiveItemChange(12768).IndividualProductPreview, {
+    callback6(onActiveItemChange(12780).IndividualProductPreview, {
       product: callback4(() => {
         const items = [closure_1];
         return { skuId: closure_1.skuId, type: closure_1.type, items };

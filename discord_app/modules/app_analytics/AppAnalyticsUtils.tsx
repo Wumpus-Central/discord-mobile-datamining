@@ -1,6 +1,6 @@
-// === Module 4700: collectGuildAnalyticsMetadata ===
+// === Module 4701: collectGuildAnalyticsMetadata ===
 
-// Module 4700 (collectGuildAnalyticsMetadata)
+// Module 4701 (collectGuildAnalyticsMetadata)
 import set from "set" /* 2 */;
 import fromStringAll from "fromString" /* 503 */;
 import setDefault from "set" /* 684 */;
@@ -8,8 +8,8 @@ import expandEventPropertiesDefault from "expandEventProperties" /* 695 */;
 import createChannelRecord from "createChannelRecord" /* 1390 */;
 import set2 from "set" /* 1393 */;
 import applyOverwritesAll from "applyOverwrites" /* 4125 */;
-import Presets from "Presets" /* 4704 */;
-import hasPendingMemberAction from "hasPendingMemberAction" /* 4706 */;
+import Presets from "Presets" /* 4705 */;
+import hasPendingMemberAction from "hasPendingMemberAction" /* 4707 */;
 import closure_5 from "fetchFingerprint" /* 1215 */;
 import closure_6 from "ensureGuildLoaded" /* 1386 */;
 import comparator from "comparator" /* 1981 */;
@@ -26,7 +26,7 @@ import closure_18 from "generateOldThreadCutoff" /* 4493 */;
 import closure_19 from "markAllUserIdListsStale" /* 4130 */;
 import closure_20 from "handleConnectionOpen" /* 1980 */;
 import closure_21 from "handleConnectionOpen" /* 4299 */;
-import closure_22 from "updateUserGuildSettingsInternal" /* 4701 */;
+import closure_22 from "updateUserGuildSettingsInternal" /* 4702 */;
 import closure_23 from "mergeGuildAvatar" /* 1921 */;
 import closure_24 from "updateVoiceState" /* 4497 */;
 import ME from "ME" /* 673 */;
@@ -285,7 +285,7 @@ export const collectVoiceAnalyticsMetadata = function collectVoiceAnalyticsMetad
       });
       const merged = Object.assign(obj);
       const tmp9Result = obj(12)(store4.getVoiceStates(guildId));
-      const merged1 = Object.assign(id(4703).getVoiceAnalyticsMetadataAdditional());
+      const merged1 = Object.assign(id(4704).getVoiceAnalyticsMetadataAdditional());
       return obj;
     }
   }

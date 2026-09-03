@@ -1,6 +1,6 @@
-// === Module 13001: BlockUserElement ===
+// === Module 13013: BlockUserElement ===
 
-// Module 13001 (BlockUserElement)
+// Module 13013 (BlockUserElement)
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "ensureGuildLoaded" /* 1386 */;
 import closure_5 from "markAllUserIdListsStale" /* 4130 */;

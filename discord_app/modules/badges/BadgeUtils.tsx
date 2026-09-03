@@ -1,10 +1,10 @@
-// === Module 9019: isPinnedBadge ===
+// === Module 9023: isPinnedBadge ===
 
-// Module 9019 (isPinnedBadge)
+// Module 9023 (isPinnedBadge)
 import set from "set" /* 2 */;
-import USER_PROFILE_TOOLTIP_DELAY from "USER_PROFILE_TOOLTIP_DELAY" /* 8569 */;
-import BadgeId from "BadgeId" /* 8570 */;
-import items2 from "items" /* 8574 */;
+import USER_PROFILE_TOOLTIP_DELAY from "USER_PROFILE_TOOLTIP_DELAY" /* 8573 */;
+import BadgeId from "BadgeId" /* 8574 */;
+import items2 from "items" /* 8578 */;
 
 function isPinnedBadge(badge_id) {
   return badge_id === BadgeId.BadgeId.STAFF;

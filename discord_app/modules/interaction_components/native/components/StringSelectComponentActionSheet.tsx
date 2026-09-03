@@ -1,6 +1,6 @@
-// === Module 11617: StringSelectComponentActionSheet ===
+// === Module 11622: StringSelectComponentActionSheet ===
 
-// Module 11617 (StringSelectComponentActionSheet)
+// Module 11622 (StringSelectComponentActionSheet)
 import ThemesDefault from "Themes" /* 709 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
@@ -27,7 +27,7 @@ export default function StringSelectComponentActionSheet(selectionActionComponen
   ({ labelComponent, channelId, containerId, allowEmpty } = selectionActionComponent);
   let tmp = callback();
   dependencyMap = tmp;
-  let obj = selectionActionComponent(8037);
+  let obj = selectionActionComponent(8040);
   let tmp3 = first(React.useState(new Set(obj.getInitialStringSelectOptions(selectionActionComponent, containerId))), 2);
   first = tmp3[0];
   React = tmp3[1];
@@ -145,5 +145,5 @@ export default function StringSelectComponentActionSheet(selectionActionComponen
   };
   obj[12] = channelId;
   obj[13] = allowEmpty;
-  return tmp9(onSubmit(11618), obj);
+  return tmp9(onSubmit(11623), obj);
 };

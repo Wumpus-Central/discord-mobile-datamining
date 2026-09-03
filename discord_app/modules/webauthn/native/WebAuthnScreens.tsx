@@ -1,11 +1,11 @@
-// === Module 14537: getScreens ===
+// === Module 14553: getScreens ===
 
-// Module 14537 (getScreens)
+// Module 14553 (getScreens)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
 import getSystemLocale from "getSystemLocale" /* 1233 */;
-import WebAuthnScreens2 from "WebAuthnScreens" /* 14534 */;
-import _modDef14540 from "module_14540" /* 14540 */;
+import WebAuthnScreens2 from "WebAuthnScreens" /* 14550 */;
+import _modDef14556 from "module_14556" /* 14556 */;
 
 const WebAuthnScreens = WebAuthnScreens2.WebAuthnScreens;
 const jsx = jsxProd.jsx;
@@ -17,26 +17,26 @@ export const getScreens = function getScreens(isModal) {
   obj = {
     title: "",
     render() {
-      return callback2(callback(14538), {});
+      return callback2(callback(14554), {});
     }
   };
   obj = { title: null, render: null, headerLeft: null };
   const intl = getSystemLocale.intl;
   obj[0] = intl.string(getSystemLocale.t["0N1s81"]);
   obj[1] = function render() {
-    return callback2(callback(14545), {});
+    return callback2(callback(14561), {});
   };
   let headerCloseButton;
   if (isModal) {
-    let tmp2Result = tmp2(5503);
-    headerCloseButton = tmp2Result.getHeaderCloseButton(_modDef14540.closePasskeyUpsellModal);
+    let tmp2Result = tmp2(5504);
+    headerCloseButton = tmp2Result.getHeaderCloseButton(_modDef14556.closePasskeyUpsellModal);
   }
   obj[2] = headerCloseButton;
   obj[WebAuthnScreens.INIT] = obj;
   obj1 = {
     render(arg0) {
       const merged = Object.assign(arg0);
-      return callback2(callback(14550), {});
+      return callback2(callback(14566), {});
     },
     title: null
   };
@@ -45,7 +45,7 @@ export const getScreens = function getScreens(isModal) {
   obj[WebAuthnScreens.EDIT] = obj1;
   const obj2 = {
     render() {
-      return callback2(callback(14551), {});
+      return callback2(callback(14567), {});
     },
     title: null
   };
@@ -55,7 +55,7 @@ export const getScreens = function getScreens(isModal) {
   const obj3 = {
     render(arg0) {
       const merged = Object.assign(arg0);
-      return callback2(callback(14555), {});
+      return callback2(callback(14570), {});
     },
     title: null,
     headerLeft: null
@@ -64,14 +64,14 @@ export const getScreens = function getScreens(isModal) {
   obj3[1] = intl4.string(getSystemLocale.t["cY/IOu"]);
   let headerCloseButton1;
   if (isModal) {
-    tmp2Result = tmp2(5503);
-    headerCloseButton1 = tmp2Result.getHeaderCloseButton(_modDef14540.closePasskeyUpsellModal);
+    tmp2Result = tmp2(5504);
+    headerCloseButton1 = tmp2Result.getHeaderCloseButton(_modDef14556.closePasskeyUpsellModal);
   }
   obj3[2] = headerCloseButton1;
   obj[WebAuthnScreens.NAME] = obj3;
   const obj4 = {
     render() {
-      return callback2(callback(14556), {});
+      return callback2(callback(14571), {});
     },
     title: null
   };

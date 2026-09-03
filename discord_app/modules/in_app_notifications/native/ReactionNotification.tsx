@@ -1,18 +1,18 @@
-// === Module 10322: ReactionNotificationBody ===
+// === Module 10326: ReactionNotificationBody ===
 
-// Module 10322 (ReactionNotificationBody)
+// Module 10326 (ReactionNotificationBody)
 import ThemesDefault from "Themes" /* 709 */;
 import Button from "Button" /* 1296 */;
 import Text from "Text" /* 4474 */;
-import GuildIconSizes from "GuildIconSizes" /* 6012 */;
-import GuildIconSizesDefault from "GuildIconSizes" /* 6012 */;
-import isReactionMilestoneNotification from "isReactionMilestoneNotification" /* 10199 */;
-import useTruncatedGradientColorsDefault from "useTruncatedGradientColors" /* 10213 */;
-import FacepileGroupDMAvatarDefault from "FacepileGroupDMAvatar" /* 10869 */;
+import GuildIconSizes from "GuildIconSizes" /* 6013 */;
+import GuildIconSizesDefault from "GuildIconSizes" /* 6013 */;
+import isReactionMilestoneNotification from "isReactionMilestoneNotification" /* 10203 */;
+import useTruncatedGradientColorsDefault from "useTruncatedGradientColors" /* 10217 */;
+import FacepileGroupDMAvatarDefault from "FacepileGroupDMAvatar" /* 10873 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4470 */;
-import set from "set" /* 10200 */;
+import set from "set" /* 10204 */;
 import ME from "ME" /* 673 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
@@ -45,7 +45,7 @@ function ReactionNotificationBody(arg0) {
       obj1[2] = closure_6;
       obj1[4] = gradientStyles;
       obj1[5] = gradientColors;
-      tmp8Result = tmp8(tmp2(10214).NativeChannelRowPreview, obj1);
+      tmp8Result = tmp8(tmp2(10218).NativeChannelRowPreview, obj1);
     }
   }
   children[2] = tmp8Result;
@@ -71,7 +71,7 @@ function ReactionNotificationBodyWrapper(arg0) {
   const React = tmp4;
   const AnimateEmoji = message(4166).AnimateEmoji;
   const setting = AnimateEmoji.useSetting();
-  let obj = message(10234);
+  let obj = message(10238);
   const previewableMedia = obj.usePreviewableMedia(message);
   const items = [setting, reaction, , , ];
   ({ imageEmoji: arr[2], textEmoji: arr[3], italic: arr[4] } = tmp4);
@@ -113,14 +113,14 @@ function ReactionNotificationBodyWrapper(arg0) {
           animated = tmp.emoji.animated;
         }
         obj[1] = animated;
-        obj[2] = message(10323).DEFAULT_EMOJI_SIZE;
+        obj[2] = message(10327).DEFAULT_EMOJI_SIZE;
         emojiURL = obj.getEmojiURL(obj);
       }
       obj1 = { textEmojiStyle: null, fastImageStyle: null, src: null, name: null };
       ({ textEmoji: obj3[0], imageEmoji: obj3[1] } = italic);
       obj1[2] = emojiURL;
       obj1[3] = tmp.emoji.name;
-      return closure_1_10(reaction(5593), obj1);
+      return closure_1_10(reaction(5594), obj1);
     }
   }, items);
   const items1 = [callback, tmp3, message, previewableMedia];
@@ -130,21 +130,21 @@ function ReactionNotificationBodyWrapper(arg0) {
         if (1 === arr.length) {
           const first = arr[0];
           const type = first.type;
-          if (message(10234).PreviewableMediaTypes.IMAGE === type) {
+          if (message(10238).PreviewableMediaTypes.IMAGE === type) {
             let obj = { text: null, secondaryText: null };
             const intl11 = message(1233).intl;
             obj = { emojiHook: null };
             obj[0] = callback;
             obj[0] = intl11.format(message(1233).t.I7mNcA, obj);
             return obj;
-          } else if (message(10234).PreviewableMediaTypes.VIDEO === type) {
+          } else if (message(10238).PreviewableMediaTypes.VIDEO === type) {
             obj1 = { text: null, secondaryText: null };
             const intl10 = message(1233).intl;
             const obj2 = { emojiHook: null };
             obj2[0] = callback;
             obj1[0] = intl10.format(message(1233).t["Umew/z"], obj2);
             return obj1;
-          } else if (message(10234).PreviewableMediaTypes.AUDIO === type) {
+          } else if (message(10238).PreviewableMediaTypes.AUDIO === type) {
             const obj3 = { text: null, secondaryText: null };
             const intl9 = message(1233).intl;
             const obj4 = { emojiHook: null };
@@ -152,7 +152,7 @@ function ReactionNotificationBodyWrapper(arg0) {
             obj3[0] = intl9.format(message(1233).t["P/bwx9"], obj4);
             obj3[1] = first.media.filename;
             return obj3;
-          } else if (message(10234).PreviewableMediaTypes.FILE === type) {
+          } else if (message(10238).PreviewableMediaTypes.FILE === type) {
             const obj5 = { text: null, secondaryText: null };
             const intl8 = message(1233).intl;
             const obj6 = { emojiHook: null };
@@ -160,21 +160,21 @@ function ReactionNotificationBodyWrapper(arg0) {
             obj5[0] = intl8.format(message(1233).t.TXNjGW, obj6);
             obj5[1] = first.media.filename;
             return obj5;
-          } else if (message(10234).PreviewableMediaTypes.STICKER === type) {
+          } else if (message(10238).PreviewableMediaTypes.STICKER === type) {
             const obj7 = { text: null, secondaryText: null };
             const intl7 = message(1233).intl;
             const obj8 = { emojiHook: null };
             obj8[0] = callback;
             obj7[0] = intl7.format(message(1233).t.pnm8NC, obj8);
             return obj7;
-          } else if (message(10234).PreviewableMediaTypes.VOICE_MESSAGE === type) {
+          } else if (message(10238).PreviewableMediaTypes.VOICE_MESSAGE === type) {
             const obj9 = { text: null, secondaryText: null };
             const intl6 = message(1233).intl;
             const obj10 = { emojiHook: null };
             obj10[0] = callback;
             obj9[0] = intl6.format(message(1233).t.k6YnQO, obj10);
             return obj9;
-          } else if (message(10234).PreviewableMediaTypes.GIF === type) {
+          } else if (message(10238).PreviewableMediaTypes.GIF === type) {
             const obj11 = { text: null, secondaryText: null };
             const intl5 = message(1233).intl;
             const obj12 = { emojiHook: null };
@@ -189,7 +189,7 @@ function ReactionNotificationBodyWrapper(arg0) {
             obj13[0] = intl4.format(message(1233).t.sHV43G, obj14);
             return obj13;
           }
-        } else if (reaction(6155)(message)) {
+        } else if (reaction(6156)(message)) {
           const obj15 = { text: null, secondaryText: null };
           const intl3 = message(1233).intl;
           const obj16 = { emojiHook: null };
@@ -231,9 +231,9 @@ function ReactionNotificationBodyWrapper(arg0) {
     return { text, secondaryText: null };
   }, items1);
   ({ secondaryText, text } = memo);
-  obj1 = message(10199);
+  obj1 = message(10203);
   const hasPreviewableMedia = obj1.useHasPreviewableMedia(message);
-  let obj2 = message(10243);
+  let obj2 = message(10247);
   if (hasPreviewableMedia) {
     message = obj2.useGetInitialMessagePreview({ message });
   }

@@ -1,10 +1,10 @@
-// === Module 6520: EmojiSparkleEyesExample ===
+// === Module 6521: EmojiSparkleEyesExample ===
 
-// Module 6520 (EmojiSparkleEyesExample)
+// Module 6521 (EmojiSparkleEyesExample)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5501 */;
-import metadataDefault from "metadata" /* 6521 */;
+import preloadDefault from "preload" /* 5502 */;
+import metadataDefault from "metadata" /* 6522 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/EmojiSparkleEyesExample.native.tsx");

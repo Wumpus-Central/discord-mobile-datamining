@@ -1,6 +1,6 @@
-// === Module 6111: _updateGuildRoleSubscriptionGroupListing ===
+// === Module 6112: _updateGuildRoleSubscriptionGroupListing ===
 
-// Module 6111 (_updateGuildRoleSubscriptionGroupListing)
+// Module 6112 (_updateGuildRoleSubscriptionGroupListing)
 import closure_2 from "asyncGeneratorStep" /* 5 */;
 import { Endpoints } from "ME" /* 673 */;
 import { PriceTierTypes } from "sum" /* 502 */;

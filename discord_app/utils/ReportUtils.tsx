@@ -1,6 +1,6 @@
-// === Module 6143: canReportUser ===
+// === Module 6144: canReportUser ===
 
-// Module 6143 (canReportUser)
+// Module 6144 (canReportUser)
 import closure_0 from "ensureGuildLoaded" /* 1386 */;
 import closure_1 from "handleInviteData" /* 4398 */;
 import closure_2 from "getUncachedChannelPermissions" /* 4120 */;

@@ -1,11 +1,11 @@
-// === Module 8799: WidgetPreview ===
+// === Module 8803: WidgetPreview ===
 
-// Module 8799 (WidgetPreview)
+// Module 8803 (WidgetPreview)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 709 */;
-import createDefaultFieldsSection from "createDefaultFieldsSection" /* 7384 */;
-import useSharedStylesDefault from "useSharedStyles" /* 8543 */;
-import PersonalWidgetTextDefault from "PersonalWidgetText" /* 8800 */;
+import createDefaultFieldsSection from "createDefaultFieldsSection" /* 7385 */;
+import useSharedStylesDefault from "useSharedStyles" /* 8547 */;
+import PersonalWidgetTextDefault from "PersonalWidgetText" /* 8804 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
@@ -40,10 +40,10 @@ export default function WidgetPreview(arg0) {
         obj[1] = widget;
         const items1 = [tmp4.card, tmp.card];
         obj[3] = items1;
-        tmp6 = callback(tmp5(8815).WidgetSection, obj);
+        tmp6 = callback(tmp5(8819).WidgetSection, obj);
       }
     }
-    tmp5Result = tmp5(7377);
+    tmp5Result = tmp5(7378);
   }
   let tmp9 = null;
   if (null !== tmp6) {

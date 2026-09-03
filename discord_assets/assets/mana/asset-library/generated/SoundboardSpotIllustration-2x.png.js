@@ -1,6 +1,6 @@
-// === Module 7039: metadata ===
+// === Module 7040: metadata ===
 
-// Module 7039 (metadata)
+// Module 7040 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/SoundboardSpotIllustration-2x.png.js");

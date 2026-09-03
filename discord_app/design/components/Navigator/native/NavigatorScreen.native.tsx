@@ -1,8 +1,8 @@
-// === Module 6051: NavigatorScreen ===
+// === Module 6052: NavigatorScreen ===
 
-// Module 6051 (NavigatorScreen)
-import designConfig2 from "designConfig" /* 6052 */;
-import PostponeRender from "PostponeRender" /* 6053 */;
+// Module 6052 (NavigatorScreen)
+import designConfig2 from "designConfig" /* 6053 */;
+import PostponeRender from "PostponeRender" /* 6054 */;
 import { jsxs } from "jsxProd" /* 21 */;
 import importAllResult from "noop" /* 19 */;
 

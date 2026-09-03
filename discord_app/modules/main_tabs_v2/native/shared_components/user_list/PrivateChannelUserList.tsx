@@ -1,6 +1,6 @@
-// === Module 11979: ? ===
+// === Module 11985: ? ===
 
-// Module 11979
+// Module 11985
 import importAllResult from "noop" /* 19 */;
 import closure_4 from "ensureGuildLoaded" /* 1386 */;
 import closure_5 from "markAllUserIdListsStale" /* 4130 */;

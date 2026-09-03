@@ -1,10 +1,10 @@
-// === Module 10137: GroupPlusIcon ===
+// === Module 10141: GroupPlusIcon ===
 
-// Module 10137 (GroupPlusIcon)
+// Module 10141 (GroupPlusIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 709 */;
 import BaseIconImage from "BaseIconImage" /* 4196 */;
-import registerAsset from "registerAsset" /* 10136 */;
+import registerAsset from "registerAsset" /* 10140 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

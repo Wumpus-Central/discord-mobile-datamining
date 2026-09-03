@@ -1,9 +1,9 @@
-// === Module 11214: useChannelSafeAreaBottomStyles ===
+// === Module 11218: useChannelSafeAreaBottomStyles ===
 
-// Module 11214 (useChannelSafeAreaBottomStyles)
+// Module 11218 (useChannelSafeAreaBottomStyles)
 import ThemesDefault from "Themes" /* 709 */;
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "_handleConnectionOpen" /* 5229 */;
+import closure_4 from "_handleConnectionOpen" /* 5230 */;
 import closure_5 from "initialize" /* 4121 */;
 import closure_6 from "ensureGuildLoaded" /* 1386 */;
 import closure_7 from "_detectH265HardwareDecode" /* 4529 */;

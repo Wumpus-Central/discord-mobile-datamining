@@ -5,14 +5,14 @@ import reportAll from "report" /* 7 */;
 import v1 from "v1" /* 511 */;
 import dispatcherDefault from "dispatcher" /* 706 */;
 import _modDef1205 from "module_1205" /* 1205 */;
-import getHermesInstrumentedStatsSummaryDefault from "getHermesInstrumentedStatsSummary" /* 7428 */;
-import IGNORE_ANALYTICS_BREADCRUMB_EVENTS2 from "IGNORE_ANALYTICS_BREADCRUMB_EVENTS" /* 14070 */;
-import MEAll from "ME" /* 14073 */;
+import getHermesInstrumentedStatsSummaryDefault from "getHermesInstrumentedStatsSummary" /* 7429 */;
+import IGNORE_ANALYTICS_BREADCRUMB_EVENTS2 from "IGNORE_ANALYTICS_BREADCRUMB_EVENTS" /* 14086 */;
+import MEAll from "ME" /* 14089 */;
 import closure_6 from "_objectWithoutProperties" /* 109 */;
 import withEqualityFn from "withEqualityFn" /* 696 */;
 import closure_9 from "refreshSourceMapCookie" /* 703 */;
 import ME from "ME" /* 673 */;
-import { AccessibilityFeatureFlags } from "AccessibilityFeatureFlags" /* 14072 */;
+import { AccessibilityFeatureFlags } from "AccessibilityFeatureFlags" /* 14088 */;
 import { ApplicationTypes } from "ApplicationTypes" /* 4507 */;
 import isBlockedDomain from "isBlockedDomain" /* 1915 */;
 import importAllResult from "noop" /* 19 */;
@@ -231,7 +231,8 @@ obj = {
   [AnalyticEvents.ACTIVITY_PANEL_SDK_LINK_VIEWED]: obj53,
   [AnalyticEvents.LIBDISCORE_SLOW_TIMERS]: obj54,
   [AnalyticEvents.VIDEO_STREAM_ZOOM_CHANGED]: obj55,
-  [AnalyticEvents.CACHE_STATS_RECORDED]: obj56
+  [AnalyticEvents.CACHE_STATS_RECORDED]: obj56,
+  [AnalyticEvents.TYPING_INDICATOR_STYLE_SEEN]: obj57
 };
 obj = {
   throttlePeriod: 300000,
@@ -615,6 +616,12 @@ obj56 = {
     return [];
   }
 };
+obj57 = {
+  throttlePeriod: 86400000,
+  throttleKeys() {
+    return [];
+  }
+};
 obj6 = {
   throttlePeriod: 900000,
   throttleKeys(server) {
@@ -654,16 +661,16 @@ obj9 = {
 let closure_22 = encodeProperties.trackMaker({ addBreadcrumb, analyticEventConfigs: obj, dispatcher: dispatcherDefault, TRACK_ACTION_NAME: "TRACK" });
 let c24 = false;
 let closure_25 = {};
-const obj57 = { addBreadcrumb, analyticEventConfigs: obj, dispatcher: dispatcherDefault, TRACK_ACTION_NAME: "TRACK" };
+const obj58 = { addBreadcrumb, analyticEventConfigs: obj, dispatcher: dispatcherDefault, TRACK_ACTION_NAME: "TRACK" };
 let closure_26 = encodeProperties.trackMaker({ addBreadcrumb, analyticEventConfigs: obj, dispatcher: dispatcherDefault, TRACK_ACTION_NAME: "TRACK" });
-const obj59 = {};
+const obj60 = {};
 let merged = Object.assign(importAllResult1);
-obj59.getCampaignParams = require("encodeProperties").getCampaignParams;
-obj59.setSystemAccessibilityFeatures = function setSystemAccessibilityFeatures(getActiveFeatures) {
+obj60.getCampaignParams = require("encodeProperties").getCampaignParams;
+obj60.setSystemAccessibilityFeatures = function setSystemAccessibilityFeatures(getActiveFeatures) {
   closure_21 = getActiveFeatures;
 };
-obj59.expandEventProperties = expandEventProperties;
-obj59.track = function track(arg0, arg1) {
+obj60.expandEventProperties = expandEventProperties;
+obj60.track = function track(arg0, arg1) {
   let obj = arg2;
   if (arg2 === undefined) {
     obj = {};
@@ -701,10 +708,10 @@ obj59.track = function track(arg0, arg1) {
   obj = { flush: obj.flush, fingerprint: obj.fingerprint };
   return callback4(arg0, tmp5, obj);
 };
-const obj58 = { addBreadcrumb, analyticEventConfigs: obj, dispatcher: dispatcherDefault, TRACK_ACTION_NAME: "TRACK" };
+const obj59 = { addBreadcrumb, analyticEventConfigs: obj, dispatcher: dispatcherDefault, TRACK_ACTION_NAME: "TRACK" };
 const result1 = require("set").fileFinishedImporting("utils/AnalyticsUtils.tsx");
 
-export default obj59;
+export default obj60;
 export const AnalyticsContext = context;
 export { launchSignature };
 export const addExtraAnalyticsDecorator = function addExtraAnalyticsDecorator(arg0) {

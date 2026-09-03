@@ -1,10 +1,10 @@
-// === Module 17012: VideoButtonRive ===
+// === Module 17032: VideoButtonRive ===
 
-// Module 17012 (VideoButtonRive)
+// Module 17032 (VideoButtonRive)
 import ManaContext from "ManaContext" /* 4204 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "initialize" /* 9548 */;
+import closure_5 from "initialize" /* 9552 */;
 import closure_6 from "ensureGuildLoaded" /* 1386 */;
 import closure_7 from "createGuildRecordFromRust" /* 1908 */;
 import closure_8 from "_detectH265HardwareDecode" /* 4529 */;
@@ -23,9 +23,9 @@ function VideoButtonRive(arg0) {
   }
   obj[1] = str;
   if (isVideoEnabled) {
-    let VideoSlashIcon = tmp3(10215).VideoIcon;
+    let VideoSlashIcon = tmp3(10219).VideoIcon;
   } else {
-    VideoSlashIcon = tmp3(12701).VideoSlashIcon;
+    VideoSlashIcon = tmp3(12713).VideoSlashIcon;
   }
   obj[2] = <VideoSlashIcon color={color} />;
   obj[1] = jsx(ManaContext.CameraRive, { dataBinding: { fill: color, on: isVideoEnabled }, defaultViewModelInstance: null, fallback: null });

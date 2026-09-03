@@ -1,6 +1,6 @@
-// === Module 8446: getPlatform ===
+// === Module 8450: getPlatform ===
 
-// Module 8446 (getPlatform)
+// Module 8450 (getPlatform)
 import set from "set" /* 2 */;
 import PermissionOverwriteType from "PermissionOverwriteType" /* 1954 */;
 

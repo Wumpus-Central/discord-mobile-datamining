@@ -1,6 +1,6 @@
-// === Module 4725: getDeprecatedModalData ===
+// === Module 4726: getDeprecatedModalData ===
 
-// Module 4725 (getDeprecatedModalData)
+// Module 4726 (getDeprecatedModalData)
 import closure_0 from "maybeApplyNoTextColorForLightCustomTheme" /* 4470 */;
 import { ModalAnimation } from "ME" /* 673 */;
 

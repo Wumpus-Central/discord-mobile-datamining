@@ -1,6 +1,6 @@
-// === Module 11668: ForumOriginalPoster ===
+// === Module 11673: ForumOriginalPoster ===
 
-// Module 11668 (ForumOriginalPoster)
+// Module 11673 (ForumOriginalPoster)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 709 */;
 import getSystemLocale from "getSystemLocale" /* 1233 */;

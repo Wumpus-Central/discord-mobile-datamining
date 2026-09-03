@@ -1,6 +1,6 @@
-// === Module 10862: getPrivateChannelCall ===
+// === Module 10866: getPrivateChannelCall ===
 
-// Module 10862 (getPrivateChannelCall)
+// Module 10866 (getPrivateChannelCall)
 import closure_2 from "updateVoiceState" /* 4497 */;
 import { NOOP_NULL } from "ME" /* 673 */;
 

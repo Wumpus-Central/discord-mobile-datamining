@@ -1,6 +1,6 @@
-// === Module 13002: MuteUserElement ===
+// === Module 13014: MuteUserElement ===
 
-// Module 13002 (MuteUserElement)
+// Module 13014 (MuteUserElement)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import closure_5 from "ensureGuildLoaded" /* 1386 */;

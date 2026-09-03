@@ -1,8 +1,8 @@
-// === Module 13068: getMediaViewerStateForScreen ===
+// === Module 13080: getMediaViewerStateForScreen ===
 
-// Module 13068 (getMediaViewerStateForScreen)
+// Module 13080 (getMediaViewerStateForScreen)
 import set from "set" /* 2 */;
-import isValidImageAttachment from "isValidImageAttachment" /* 8583 */;
+import isValidImageAttachment from "isValidImageAttachment" /* 8587 */;
 
 let result = set.fileFinishedImporting("modules/media_viewer/native/getMediaViewerStateForScreen.tsx");
 

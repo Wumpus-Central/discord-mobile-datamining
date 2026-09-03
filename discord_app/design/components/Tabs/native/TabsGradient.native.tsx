@@ -1,7 +1,7 @@
-// === Module 12521: TabsGradient ===
+// === Module 12533: TabsGradient ===
 
-// Module 12521 (TabsGradient)
-import LinearGradientDefault from "LinearGradient" /* 4940 */;
+// Module 12533 (TabsGradient)
+import LinearGradientDefault from "LinearGradient" /* 4941 */;
 import closure_2 from "noop" /* 19 */;
 import { HorizontalGradient } from "ME" /* 673 */;
 import jsxProd from "jsxProd" /* 21 */;

@@ -1,11 +1,11 @@
-// === Module 7520: listKey ===
+// === Module 7521: listKey ===
 
-// Module 7520 (listKey)
+// Module 7521 (listKey)
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 586 */;
 import dispatcherDefault from "dispatcher" /* 706 */;
 import set from "set" /* 1395 */;
-import trackForumChannelSeenBatch from "trackForumChannelSeenBatch" /* 7521 */;
+import trackForumChannelSeenBatch from "trackForumChannelSeenBatch" /* 7522 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import { ALL_CHANNEL_TYPES } from "createChannelRecord" /* 1390 */;
 import closure_5 from "ensureGuildLoaded" /* 1386 */;
@@ -293,7 +293,7 @@ const archivedThreadsStore = new ArchivedThreadsStore(dispatcherDefault, {
     } else {
       return false;
     }
-    obj = channel(6160);
+    obj = channel(6161);
   },
   CHANNEL_DELETE: function handleChannelDelete(channel) {
     let flag = false;

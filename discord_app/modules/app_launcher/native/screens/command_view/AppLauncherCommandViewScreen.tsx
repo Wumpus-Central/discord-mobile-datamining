@@ -1,23 +1,23 @@
-// === Module 11946: AppLauncherCommandViewFooter ===
+// === Module 11952: AppLauncherCommandViewFooter ===
 
-// Module 11946 (AppLauncherCommandViewFooter)
+// Module 11952 (AppLauncherCommandViewFooter)
 import ThemesDefault from "Themes" /* 709 */;
 import getSystemLocale from "getSystemLocale" /* 1233 */;
 import Button from "Button" /* 1296 */;
 import Text from "Text" /* 4474 */;
-import CollapsingText from "CollapsingText" /* 4929 */;
-import AppLauncherEntrypoint from "AppLauncherEntrypoint" /* 8444 */;
-import handleApplicationSelected from "handleApplicationSelected" /* 11846 */;
-import registerAssetDefault from "registerAsset" /* 11909 */;
-import registerAssetDefault2 from "registerAsset" /* 11910 */;
-import registerAssetDefault3 from "registerAsset" /* 11983 */;
-import registerAssetDefault4 from "registerAsset" /* 11984 */;
+import CollapsingText from "CollapsingText" /* 4930 */;
+import AppLauncherEntrypoint from "AppLauncherEntrypoint" /* 8448 */;
+import handleApplicationSelected from "handleApplicationSelected" /* 11852 */;
+import registerAssetDefault from "registerAsset" /* 11915 */;
+import registerAssetDefault2 from "registerAsset" /* 11916 */;
+import registerAssetDefault3 from "registerAsset" /* 11989 */;
+import registerAssetDefault4 from "registerAsset" /* 11990 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import closure_5 from "_slicedToArray" /* 32 */;
 import closure_6 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_10 from "maybeApplyNoTextColorForLightCustomTheme" /* 4470 */;
-import getIndexKey from "getIndexKey" /* 8154 */;
+import getIndexKey from "getIndexKey" /* 8158 */;
 import closure_13 from "createGuildRoleRecordFromRust" /* 1984 */;
 import APP_LAUNCHER_BUILT_IN_SECTION_ICON from "APP_LAUNCHER_BUILT_IN_SECTION_ICON" /* 1497 */;
 import ME from "ME" /* 673 */;

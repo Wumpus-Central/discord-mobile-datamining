@@ -1,6 +1,6 @@
-// === Module 9642: useModeratorOverlayChannelState ===
+// === Module 9646: useModeratorOverlayChannelState ===
 
-// Module 9642 (useModeratorOverlayChannelState)
+// Module 9646 (useModeratorOverlayChannelState)
 import set from "set" /* 2 */;
 import identity from "identity" /* 697 */;
 

@@ -1,10 +1,9 @@
-// === Module 6202: VoiceChannelEffectAnimationType ===
+// === Module 6203: VoiceChannelEffectAnimationType ===
 
-// Module 6202 (VoiceChannelEffectAnimationType)
+// Module 6203 (VoiceChannelEffectAnimationType)
 import getAvatarURLDefault from "getAvatarURL" /* 1430 */;
 import parseRawEmojiObjectDefault from "parseRawEmojiObject" /* 4134 */;
 import getEmojiUnavailableReasonDefault from "getEmojiUnavailableReason" /* 4138 */;
-import _modDef6203 from "module_6203" /* 6203 */;
 import _modDef6204 from "module_6204" /* 6204 */;
 import _modDef6205 from "module_6205" /* 6205 */;
 import _modDef6206 from "module_6206" /* 6206 */;
@@ -26,14 +25,15 @@ import _modDef6221 from "module_6221" /* 6221 */;
 import _modDef6222 from "module_6222" /* 6222 */;
 import _modDef6223 from "module_6223" /* 6223 */;
 import _modDef6224 from "module_6224" /* 6224 */;
+import _modDef6225 from "module_6225" /* 6225 */;
 import closure_3 from "mergeGuildAvatar" /* 1921 */;
-import VoiceChannelEffectAnimationType from "VoiceChannelEffectAnimationType" /* 6201 */;
+import VoiceChannelEffectAnimationType from "VoiceChannelEffectAnimationType" /* 6202 */;
 import importDefaultResult from "apply" /* 12 */;
 
 const require = arg1;
 ({ EMOJI_SIZE: c4, VoiceChannelEffectAnimationType } = VoiceChannelEffectAnimationType);
-const items = [_modDef6203];
-const items1 = [_modDef6204, _modDef6205, _modDef6206, _modDef6207, _modDef6208, _modDef6209, _modDef6210, _modDef6211, _modDef6212, _modDef6213, _modDef6214, _modDef6215, _modDef6216, _modDef6217, _modDef6218, _modDef6219, _modDef6220, _modDef6221, _modDef6222, _modDef6223, _modDef6224];
+const items = [_modDef6204];
+const items1 = [_modDef6205, _modDef6206, _modDef6207, _modDef6208, _modDef6209, _modDef6210, _modDef6211, _modDef6212, _modDef6213, _modDef6214, _modDef6215, _modDef6216, _modDef6217, _modDef6218, _modDef6219, _modDef6220, _modDef6221, _modDef6222, _modDef6223, _modDef6224, _modDef6225];
 let obj = { [VoiceChannelEffectAnimationType.BASIC]: items, [VoiceChannelEffectAnimationType.PREMIUM]: items1 };
 const memoizeResult = importDefaultResult.memoize((arg0) => {
   closure_0 = arg0;

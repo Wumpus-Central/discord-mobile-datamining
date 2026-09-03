@@ -1,6 +1,6 @@
-// === Module 8855: GameProfileHeader ===
+// === Module 8859: GameProfileHeader ===
 
-// Module 8855 (GameProfileHeader)
+// Module 8859 (GameProfileHeader)
 import ThemesDefault from "Themes" /* 709 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;

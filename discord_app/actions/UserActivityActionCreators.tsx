@@ -1,6 +1,6 @@
-// === Module 9406: _getMetadata ===
+// === Module 9410: _getMetadata ===
 
-// Module 9406 (_getMetadata)
+// Module 9410 (_getMetadata)
 import dispatcherDefault from "dispatcher" /* 706 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "sortActivity" /* 4569 */;
@@ -68,8 +68,8 @@ export const sync = function sync(activity, userId) {
 };
 export const play = function play(closure_0, closure_1) {
   const _require = closure_0;
-  const spotifyMetadataFromActivity = _require(9403).getSpotifyMetadataFromActivity(closure_0, closure_1);
-  let obj = _require(9403);
+  const spotifyMetadataFromActivity = _require(9407).getSpotifyMetadataFromActivity(closure_0, closure_1);
+  let obj = _require(9407);
   spotifyMetadataFromActivity.then((metadata) => {
     let obj = callback(closure_1_2[3]);
     obj = { type: "ACTIVITY_PLAY", activity: closure_0, userId: callback, metadata };

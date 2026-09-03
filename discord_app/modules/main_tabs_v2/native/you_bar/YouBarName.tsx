@@ -1,18 +1,18 @@
-// === Module 16207: Username ===
+// === Module 16226: Username ===
 
-// Module 16207 (Username)
+// Module 16226 (Username)
 import ThemesDefault from "Themes" /* 709 */;
-import AVERAGE_FONT_WIDTH_RATIODefault from "AVERAGE_FONT_WIDTH_RATIO" /* 8937 */;
-import ChevronSmallDownIcon from "ChevronSmallDownIcon" /* 8949 */;
-import memoResult1Default from "memoResult1" /* 9021 */;
-import apexExperiment from "apexExperiment" /* 16190 */;
+import AVERAGE_FONT_WIDTH_RATIODefault from "AVERAGE_FONT_WIDTH_RATIO" /* 8941 */;
+import ChevronSmallDownIcon from "ChevronSmallDownIcon" /* 8953 */;
+import memoResult1Default from "memoResult1" /* 9025 */;
+import apexExperiment from "apexExperiment" /* 16206 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_4 from "reset" /* 4500 */;
 import closure_5 from "ensureGuildLoaded" /* 1386 */;
 import closure_6 from "getUncachedChannelPermissions" /* 4120 */;
 import closure_7 from "sortActivity" /* 4569 */;
 import closure_8 from "markAllUserIdListsStale" /* 4130 */;
-import closure_9 from "filterPlayingActivities" /* 5231 */;
+import closure_9 from "filterPlayingActivities" /* 5232 */;
 import closure_10 from "updateVoiceState" /* 4497 */;
 import { ActivityTypes } from "ME" /* 673 */;
 import jsxProd from "jsxProd" /* 21 */;

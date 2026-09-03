@@ -1,10 +1,10 @@
-// === Module 11218: ChatViewWrapperBase ===
+// === Module 11222: ChatViewWrapperBase ===
 
-// Module 11218 (ChatViewWrapperBase)
+// Module 11222 (ChatViewWrapperBase)
 import noopAll from "noop" /* 19 */;
-import Layer from "Layer" /* 5948 */;
-import useChatViewPointerEventsAndroidDefault from "useChatViewPointerEventsAndroid" /* 11216 */;
-import StickyWrapper from "StickyWrapper" /* 11217 */;
+import Layer from "Layer" /* 5949 */;
+import useChatViewPointerEventsAndroidDefault from "useChatViewPointerEventsAndroid" /* 11220 */;
+import StickyWrapper from "StickyWrapper" /* 11221 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

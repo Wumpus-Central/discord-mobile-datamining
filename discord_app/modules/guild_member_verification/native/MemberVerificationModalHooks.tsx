@@ -1,11 +1,11 @@
-// === Module 7659: useSetInitialVerificationEffect ===
+// === Module 7662: useSetInitialVerificationEffect ===
 
-// Module 7659 (useSetInitialVerificationEffect)
+// Module 7662 (useSetInitialVerificationEffect)
 import initialize from "initialize" /* 586 */;
 import closure_2 from "noop" /* 19 */;
 import closure_3 from "mergeGuildAvatar" /* 1921 */;
-import closure_4 from "map" /* 7660 */;
-import { setInitialVerification } from "map" /* 7660 */;
+import closure_4 from "map" /* 7663 */;
+import { setInitialVerification } from "map" /* 7663 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/guild_member_verification/native/MemberVerificationModalHooks.tsx");

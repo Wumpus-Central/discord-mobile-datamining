@@ -1,6 +1,6 @@
-// === Module 10914: playVibingWumpusMusic ===
+// === Module 10918: playVibingWumpusMusic ===
 
-// Module 10914 (playVibingWumpusMusic)
+// Module 10918 (playVibingWumpusMusic)
 import set from "set" /* 2 */;
 import sendRequest from "sendRequest" /* 527 */;
 import ME from "ME" /* 673 */;

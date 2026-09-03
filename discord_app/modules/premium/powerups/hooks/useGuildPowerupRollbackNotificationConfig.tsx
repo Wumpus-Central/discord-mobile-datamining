@@ -1,8 +1,8 @@
-// === Module 12285: useGuildPowerupRollbackNotificationConfig ===
+// === Module 12297: useGuildPowerupRollbackNotificationConfig ===
 
-// Module 12285 (useGuildPowerupRollbackNotificationConfig)
+// Module 12297 (useGuildPowerupRollbackNotificationConfig)
 import messagesProxyDefault from "messagesProxy" /* 2400 */;
-import getGuildPowerupFormattedDateStringDefault from "getGuildPowerupFormattedDateString" /* 12288 */;
+import getGuildPowerupFormattedDateStringDefault from "getGuildPowerupFormattedDateString" /* 12300 */;
 import closure_3 from "calculateAppliedBoosts" /* 4364 */;
 
 const require = arg1;

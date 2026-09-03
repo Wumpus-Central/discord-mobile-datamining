@@ -1,6 +1,6 @@
-// === Module 7107: metadata ===
+// === Module 7108: metadata ===
 
-// Module 7107 (metadata)
+// Module 7108 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/TrafficConeSpotIllustration-2x.png.js");

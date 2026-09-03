@@ -1,6 +1,6 @@
-// === Module 7133: metadata ===
+// === Module 7134: metadata ===
 
-// Module 7133 (metadata)
+// Module 7134 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/WiltedFlowerIllocon-2x.png.js");

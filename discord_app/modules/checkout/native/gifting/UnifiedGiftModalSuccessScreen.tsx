@@ -1,6 +1,6 @@
-// === Module 10979: UnifiedGiftModalSuccessScreen ===
+// === Module 10983: UnifiedGiftModalSuccessScreen ===
 
-// Module 10979 (UnifiedGiftModalSuccessScreen)
+// Module 10983 (UnifiedGiftModalSuccessScreen)
 import ThemesDefault from "Themes" /* 709 */;
 import closure_3 from "noop" /* 19 */;
 import { Image } from "get ActivityIndicator" /* 17 */;

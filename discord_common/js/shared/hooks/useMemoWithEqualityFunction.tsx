@@ -1,9 +1,9 @@
-// === Module 15947: useMemoWithEqualityFunction ===
+// === Module 15963: useMemoWithEqualityFunction ===
 
-// Module 15947 (useMemoWithEqualityFunction)
+// Module 15963 (useMemoWithEqualityFunction)
 import set from "set" /* 2 */;
 import noop from "noop" /* 19 */;
-import useInitRefDefault from "useInitRef" /* 15948 */;
+import useInitRefDefault from "useInitRef" /* 15964 */;
 
 const useRef = noop.useRef;
 let closure_3 = Symbol();

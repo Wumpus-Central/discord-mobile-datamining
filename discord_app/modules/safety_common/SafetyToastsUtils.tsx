@@ -1,11 +1,11 @@
-// === Module 8691: getSafetyToastTypeContent ===
+// === Module 8695: getSafetyToastTypeContent ===
 
-// Module 8691 (getSafetyToastTypeContent)
+// Module 8695 (getSafetyToastTypeContent)
 import getSystemLocale from "getSystemLocale" /* 1233 */;
 import getNicknameDefault from "getNickname" /* 4673 */;
 import closure_3 from "ensureGuildLoaded" /* 1386 */;
 import closure_4 from "mergeGuildAvatar" /* 1921 */;
-import { SafetyToastType } from "SafetyToastType" /* 8685 */;
+import { SafetyToastType } from "SafetyToastType" /* 8689 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/safety_common/SafetyToastsUtils.tsx");

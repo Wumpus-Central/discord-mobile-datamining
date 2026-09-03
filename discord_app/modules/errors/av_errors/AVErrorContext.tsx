@@ -1,6 +1,6 @@
-// === Module 17654: getVoiceChannelErrorContext ===
+// === Module 17674: getVoiceChannelErrorContext ===
 
-// Module 17654 (getVoiceChannelErrorContext)
+// Module 17674 (getVoiceChannelErrorContext)
 import isStreamKey from "isStreamKey" /* 4544 */;
 import BaseConnectionEvent from "BaseConnectionEvent" /* 4579 */;
 import closure_2 from "_detectH265HardwareDecode" /* 4529 */;

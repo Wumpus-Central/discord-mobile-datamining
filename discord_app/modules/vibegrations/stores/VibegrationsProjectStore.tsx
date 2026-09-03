@@ -1,9 +1,9 @@
-// === Module 16406: isProjectOwner ===
+// === Module 16425: isProjectOwner ===
 
-// Module 16406 (isProjectOwner)
+// Module 16425 (isProjectOwner)
 import initializeDefault from "initialize" /* 586 */;
 import dispatcherDefault from "dispatcher" /* 706 */;
-import frozen from "frozen" /* 6103 */;
+import frozen from "frozen" /* 6104 */;
 import closure_2 from "_slicedToArray" /* 32 */;
 import closure_3 from "mergeGuildAvatar" /* 1921 */;
 import set from "set" /* 2 */;

@@ -1,9 +1,9 @@
-// === Module 13980: getStatusSize ===
+// === Module 13996: getStatusSize ===
 
-// Module 13980 (getStatusSize)
+// Module 13996 (getStatusSize)
 import ThemesDefault from "Themes" /* 709 */;
-import getDecorationSizeForAvatarSize from "getDecorationSizeForAvatarSize" /* 8075 */;
-import StaticNativeCutoutAvatarImage from "StaticNativeCutoutAvatarImage" /* 9441 */;
+import getDecorationSizeForAvatarSize from "getDecorationSizeForAvatarSize" /* 8078 */;
+import StaticNativeCutoutAvatarImage from "StaticNativeCutoutAvatarImage" /* 9445 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { StatusTypes } from "ME" /* 673 */;
@@ -14,21 +14,21 @@ import createCacheKey from "createCacheKey" /* 4478 */;
 require = arg1;
 function getStatusSize(arg0) {
   if (StaticNativeCutoutAvatarImage.AvatarSizes.XXSMALL !== arg0) {
-    if (tmp(9441).AvatarSizes.XSMALL !== arg0) {
-      if (tmp(9441).AvatarSizes.XSMALL_20 !== arg0) {
-        if (tmp(9441).AvatarSizes.SMALL !== arg0) {
-          if (tmp(9441).AvatarSizes.REFRESH_MEDIUM_32 === arg0) {
+    if (tmp(9445).AvatarSizes.XSMALL !== arg0) {
+      if (tmp(9445).AvatarSizes.XSMALL_20 !== arg0) {
+        if (tmp(9445).AvatarSizes.SMALL !== arg0) {
+          if (tmp(9445).AvatarSizes.REFRESH_MEDIUM_32 === arg0) {
             return closure_7.REFRESH_MEDIUM_10;
           } else {
-            if (tmp(9441).AvatarSizes.NORMAL !== arg0) {
-              if (tmp(9441).AvatarSizes.TABS_22 !== arg0) {
-                if (tmp(9441).AvatarSizes.LARGE !== arg0) {
-                  if (tmp(9441).AvatarSizes.LARGE_48 !== arg0) {
-                    if (tmp(9441).AvatarSizes.XLARGE !== arg0) {
-                      if (tmp(9441).AvatarSizes.XLARGE_72 !== arg0) {
-                        if (tmp(9441).AvatarSizes.XXLARGE !== arg0) {
-                          if (tmp(9441).AvatarSizes.PROFILE !== arg0) {
-                            if (tmp(9441).AvatarSizes.YOUBAR_60 !== arg0) {
+            if (tmp(9445).AvatarSizes.NORMAL !== arg0) {
+              if (tmp(9445).AvatarSizes.TABS_22 !== arg0) {
+                if (tmp(9445).AvatarSizes.LARGE !== arg0) {
+                  if (tmp(9445).AvatarSizes.LARGE_48 !== arg0) {
+                    if (tmp(9445).AvatarSizes.XLARGE !== arg0) {
+                      if (tmp(9445).AvatarSizes.XLARGE_72 !== arg0) {
+                        if (tmp(9445).AvatarSizes.XXLARGE !== arg0) {
+                          if (tmp(9445).AvatarSizes.PROFILE !== arg0) {
+                            if (tmp(9445).AvatarSizes.YOUBAR_60 !== arg0) {
                               return null;
                             }
                           }

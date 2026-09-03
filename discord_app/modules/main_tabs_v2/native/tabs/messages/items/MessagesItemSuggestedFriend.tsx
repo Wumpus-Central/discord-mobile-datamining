@@ -1,10 +1,10 @@
-// === Module 15864: getMessagesItemSuggestedFriendHeight ===
+// === Module 15880: getMessagesItemSuggestedFriendHeight ===
 
-// Module 15864 (getMessagesItemSuggestedFriendHeight)
+// Module 15880 (getMessagesItemSuggestedFriendHeight)
 import ThemesDefault from "Themes" /* 709 */;
-import noop from "noop" /* 8113 */;
-import map from "map" /* 9102 */;
-import toNativeHorizontalOffset from "toNativeHorizontalOffset" /* 15863 */;
+import noop from "noop" /* 8116 */;
+import map from "map" /* 9106 */;
+import toNativeHorizontalOffset from "toNativeHorizontalOffset" /* 15879 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
@@ -99,7 +99,7 @@ let closure_12 = importAllResult.memo(function MessagesItemSuggestedFriendView(h
     setAddedPressed(true);
   }, items4);
   obj = { accessibilityRole: "button", style: memo, onPress: callback, collapsable: false, children: null };
-  obj = { style: tmp.avatar, user: suggestedFriend.user, guildId: "Array", size: true };
+  obj = { style: tmp.avatar, user: suggestedFriend.user, guildId: "Array", size: 409390404914198900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 };
   obj[3] = height(suggestedFriend[18]).AvatarSizes.REFRESH_MEDIUM_32;
   const items5 = [callback2(height(suggestedFriend[18]).Avatar, obj), , ];
   obj1 = { style: tmp.textContainer, children: null };

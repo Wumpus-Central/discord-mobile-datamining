@@ -1,6 +1,6 @@
-// === Module 10056: getMessageLimit ===
+// === Module 10060: getMessageLimit ===
 
-// Module 10056 (getMessageLimit)
+// Module 10060 (getMessageLimit)
 import set from "set" /* 2 */;
 import ME from "ME" /* 673 */;
 

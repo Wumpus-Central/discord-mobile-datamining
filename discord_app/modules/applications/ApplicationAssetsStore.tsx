@@ -1,6 +1,6 @@
-// === Module 8058: handleFetchEmbeddedActivityShelfSuccess ===
+// === Module 8061: handleFetchEmbeddedActivityShelfSuccess ===
 
-// Module 8058 (handleFetchEmbeddedActivityShelfSuccess)
+// Module 8061 (handleFetchEmbeddedActivityShelfSuccess)
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 586 */;
 import dispatcherDefault from "dispatcher" /* 706 */;

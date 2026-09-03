@@ -1,6 +1,6 @@
-// === Module 7653: getIsWindowSmall ===
+// === Module 7656: getIsWindowSmall ===
 
-// Module 7653 (getIsWindowSmall)
+// Module 7656 (getIsWindowSmall)
 import set from "set" /* 2 */;
 import useWindowSizeClassifier from "useWindowSizeClassifier" /* 4336 */;
 import useWindowSizeClassifierDefault from "useWindowSizeClassifier" /* 4336 */;

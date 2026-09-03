@@ -1,6 +1,6 @@
-// === Module 9646: getNextShownUpcomingEventNoticeType ===
+// === Module 9650: getNextShownUpcomingEventNoticeType ===
 
-// Module 9646 (getNextShownUpcomingEventNoticeType)
+// Module 9650 (getNextShownUpcomingEventNoticeType)
 import set from "set" /* 2 */;
 import hooksDefault from "hooks" /* 4074 */;
 import GUILD_EVENT_MAX_NAME_LENGTH from "GUILD_EVENT_MAX_NAME_LENGTH" /* 1392 */;

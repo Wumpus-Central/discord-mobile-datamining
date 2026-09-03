@@ -1,8 +1,8 @@
-// === Module 6167: initialize ===
+// === Module 6168: initialize ===
 
-// Module 6167 (initialize)
+// Module 6168 (initialize)
 import dispatcherDefault from "dispatcher" /* 706 */;
-import closure_3 from "_handleConnectionOpen" /* 5229 */;
+import closure_3 from "_handleConnectionOpen" /* 5230 */;
 import createChannelRecord from "createChannelRecord" /* 1390 */;
 import closure_6 from "ensureGuildLoaded" /* 1386 */;
 import closure_7 from "handleConnectionOpen" /* 1980 */;
@@ -31,7 +31,7 @@ function loadThread(channelId) {
   const _require = channelId;
   if (null == channelId) {
     return Promise.resolve();
-  } else if (channelId === _require(6076).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID) {
+  } else if (channelId === _require(6077).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID) {
     return Promise.resolve();
   } else if (isStaticChannelRoute(channelId)) {
     return Promise.resolve();
@@ -93,7 +93,7 @@ function loadThread(channelId) {
         }).catch(() => {
           closure_1_11[closure_0] = { type: "NOT_FOUND" };
           let obj = lib(closure_1_2[6]);
-          obj = { id: closure_0, guild_id: null, parent_id: "r" };
+          obj = { id: closure_0, guild_id: null, parent_id: "accessible" };
           let guildId;
           if (lib != null) {
             const params = lib.params;
@@ -140,7 +140,7 @@ export default {
         let tmp9 = nextResult;
         let tmp10 = items1;
         let tmp11 = dependencyMap;
-        if (nextResult !== items1(6076).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID) {
+        if (nextResult !== items1(6077).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID) {
           let tmp12 = isStaticChannelRoute;
           let tmp13 = nextResult;
           if (!isStaticChannelRoute(tmp9)) {

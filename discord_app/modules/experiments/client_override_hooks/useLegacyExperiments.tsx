@@ -1,6 +1,6 @@
-// === Module 11300: parseRegisteredExperiments ===
+// === Module 11304: parseRegisteredExperiments ===
 
-// Module 11300 (parseRegisteredExperiments)
+// Module 11304 (parseRegisteredExperiments)
 import closure_3 from "_slicedToArray" /* 32 */;
 import { useMemo } from "noop" /* 19 */;
 import closure_5 from "getHash" /* 4391 */;

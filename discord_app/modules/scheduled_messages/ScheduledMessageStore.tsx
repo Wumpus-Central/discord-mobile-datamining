@@ -1,6 +1,6 @@
-// === Module 12003: handleScheduledMessageRemovalStart ===
+// === Module 12009: handleScheduledMessageRemovalStart ===
 
-// Module 12003 (handleScheduledMessageRemovalStart)
+// Module 12009 (handleScheduledMessageRemovalStart)
 import initializeDefault from "initialize" /* 586 */;
 import dispatcherDefault from "dispatcher" /* 706 */;
 import set from "set" /* 2 */;

@@ -1,6 +1,6 @@
-// === Module 15658: ShopHomeSortType ===
+// === Module 15672: ShopHomeSortType ===
 
-// Module 15658 (ShopHomeSortType)
+// Module 15672 (ShopHomeSortType)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/ShopHomeSortType.tsx");

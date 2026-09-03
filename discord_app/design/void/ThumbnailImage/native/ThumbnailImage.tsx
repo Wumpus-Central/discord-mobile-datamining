@@ -1,6 +1,6 @@
-// === Module 13965: LocalImageThumbnail ===
+// === Module 13981: LocalImageThumbnail ===
 
-// Module 13965 (LocalImageThumbnail)
+// Module 13981 (LocalImageThumbnail)
 import noopAll from "noop" /* 19 */;
 import { Image as _default } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;

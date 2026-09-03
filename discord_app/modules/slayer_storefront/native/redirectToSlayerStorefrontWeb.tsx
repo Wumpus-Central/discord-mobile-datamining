@@ -1,6 +1,6 @@
-// === Module 10798: _redirectToSlayerStorefrontWeb ===
+// === Module 10802: _redirectToSlayerStorefrontWeb ===
 
-// Module 10798 (_redirectToSlayerStorefrontWeb)
+// Module 10802 (_redirectToSlayerStorefrontWeb)
 import timestampDefault from "timestamp" /* 3 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import { Routes } from "ME" /* 673 */;
@@ -70,7 +70,7 @@ function _redirectToSlayerStorefrontWeb() {
             } else {
               c4 = 1;
               closure_3 = c4.COLLECTIBLES_SHOP_GAME_SHOP(callback, undefined, callback2);
-              let obj6 = callback2(6169);
+              let obj6 = callback2(6170);
               logger = 3;
               c6 = 1;
               const obj3 = { value: null, done: false };

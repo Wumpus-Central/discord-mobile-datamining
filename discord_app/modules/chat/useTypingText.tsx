@@ -1,6 +1,6 @@
-// === Module 11774: useTypingText ===
+// === Module 11780: useTypingText ===
 
-// Module 11774 (useTypingText)
+// Module 11780 (useTypingText)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "mergeGuildAvatar" /* 1921 */;
 

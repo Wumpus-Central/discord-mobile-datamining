@@ -1,6 +1,6 @@
-// === Module 15903: TypingIndicator ===
+// === Module 15919: TypingIndicator ===
 
-// Module 15903 (TypingIndicator)
+// Module 15919 (TypingIndicator)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 709 */;
 import Button from "Button" /* 1296 */;

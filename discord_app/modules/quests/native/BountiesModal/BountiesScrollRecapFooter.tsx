@@ -1,13 +1,13 @@
-// === Module 14875: BountiesScrollRecapFooter ===
+// === Module 14890: BountiesScrollRecapFooter ===
 
-// Module 14875 (BountiesScrollRecapFooter)
+// Module 14890 (BountiesScrollRecapFooter)
 import noopAll from "noop" /* 19 */;
 import initialize from "initialize" /* 586 */;
 import ThemesDefault from "Themes" /* 709 */;
 import getSystemLocale from "getSystemLocale" /* 1233 */;
 import ManaContext from "ManaContext" /* 4204 */;
 import Text from "Text" /* 4474 */;
-import OrbsIcon from "OrbsIcon" /* 10974 */;
+import OrbsIcon from "OrbsIcon" /* 10978 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4470 */;
 import jsxProd from "jsxProd" /* 21 */;

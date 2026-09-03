@@ -1,8 +1,8 @@
-// === Module 7509: maybeConvertPrivateChannel ===
+// === Module 7510: maybeConvertPrivateChannel ===
 
-// Module 7509 (maybeConvertPrivateChannel)
+// Module 7510 (maybeConvertPrivateChannel)
 import _modDef4491 from "module_4491" /* 4491 */;
-import FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID from "FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID" /* 6076 */;
+import FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID from "FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID" /* 6077 */;
 import closure_3 from "ensureGuildLoaded" /* 1386 */;
 
 require = arg1;

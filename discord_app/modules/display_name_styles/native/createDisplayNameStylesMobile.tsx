@@ -1,6 +1,6 @@
-// === Module 7881: createDisplayNameStylesMobile ===
+// === Module 7884: createDisplayNameStylesMobile ===
 
-// Module 7881 (createDisplayNameStylesMobile)
+// Module 7884 (createDisplayNameStylesMobile)
 import DisplayNameFont from "DisplayNameFont" /* 1940 */;
 import closure_2 from "maybeApplyNoTextColorForLightCustomTheme" /* 4470 */;
 import closure_3 from "trackCommunicationDisabled" /* 1991 */;

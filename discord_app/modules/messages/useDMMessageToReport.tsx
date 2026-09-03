@@ -1,6 +1,6 @@
-// === Module 12380: useDMMessageToReport ===
+// === Module 12392: useDMMessageToReport ===
 
-// Module 12380 (useDMMessageToReport)
+// Module 12392 (useDMMessageToReport)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/messages/useDMMessageToReport.tsx");
@@ -10,9 +10,9 @@ export const useDMMessageToReport = function useDMMessageToReport(channel, id, a
   if (!arg2) {
     isReportable = obj.useIsRelationshipTypeSpamReportable(id);
   }
-  let tmp2Result = tmp2(12238);
+  let tmp2Result = tmp2(12250);
   const longestChannelMessageBeforeReply = tmp2Result.useLongestChannelMessageBeforeReply(channel.id, id);
-  tmp2Result = tmp2(12382);
+  tmp2Result = tmp2(12394);
   const messageRequestPreview = tmp2Result.useMessageRequestPreview(channel, { enabled: isReportable });
   let message = messageRequestPreview.message;
   message = longestChannelMessageBeforeReply;

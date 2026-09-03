@@ -1,8 +1,8 @@
-// === Module 13792: openGuildLimitedAccessInfoModal ===
+// === Module 13808: openGuildLimitedAccessInfoModal ===
 
-// Module 13792 (openGuildLimitedAccessInfoModal)
+// Module 13808 (openGuildLimitedAccessInfoModal)
 import noopAll from "noop" /* 19 */;
-import _modDef4858 from "module_4858" /* 4858 */;
+import _modDef4859 from "module_4859" /* 4859 */;
 import { Keyboard } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
 
@@ -31,5 +31,5 @@ export default function openGuildLimitedAccessInfoModal(arg0) {
       });
     }
   };
-  _modDef4858.openLazy(obj);
+  _modDef4859.openLazy(obj);
 };

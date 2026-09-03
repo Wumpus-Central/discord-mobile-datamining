@@ -1,6 +1,6 @@
-// === Module 9620: RESPONSIVE_DENSITY_MEDIA_QUERY ===
+// === Module 9624: RESPONSIVE_DENSITY_MEDIA_QUERY ===
 
-// Module 9620 (RESPONSIVE_DENSITY_MEDIA_QUERY)
+// Module 9624 (RESPONSIVE_DENSITY_MEDIA_QUERY)
 import set from "set" /* 2 */;
 import create from "create" /* 1305 */;
 

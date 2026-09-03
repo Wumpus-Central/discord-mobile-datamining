@@ -1,9 +1,9 @@
-// === Module 9733: _toPropertyKey ===
+// === Module 9737: _toPropertyKey ===
 
-// Module 9733 (_toPropertyKey)
+// Module 9737 (_toPropertyKey)
 import ThemesDefault from "Themes" /* 709 */;
 import applyOverwritesAll from "applyOverwrites" /* 4125 */;
-import getRoleRowDataAll from "getRoleRowData" /* 9721 */;
+import getRoleRowDataAll from "getRoleRowData" /* 9725 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import closure_5 from "_objectWithoutProperties" /* 109 */;
 import closure_6 from "_slicedToArray" /* 32 */;
@@ -13,7 +13,7 @@ import closure_10 from "trackCommunicationDisabled" /* 1991 */;
 import closure_11 from "createGuildRoleRecordFromRust" /* 1984 */;
 import closure_12 from "createGuildRecordFromRust" /* 1908 */;
 import closure_13 from "mergeGuildAvatar" /* 1921 */;
-import RowType from "RowType" /* 8687 */;
+import RowType from "RowType" /* 8691 */;
 import { Permissions } from "sum" /* 502 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
@@ -209,7 +209,7 @@ class AddMembersBody {
     tmp33 = Fragment;
     tmp35 = closure_8;
     obj5 = { accessibilityLabel: null, placeholder: null, tags: null, onChangeText: null, onRemove: null };
-    tmp8Result = require("module_9738");
+    tmp8Result = require("module_9742");
     intl5 = require("getSystemLocale").intl;
     obj5[0] = intl5.string(require("getSystemLocale").t["5h0QOP"]);
     intl6 = require("getSystemLocale").intl;
@@ -408,7 +408,7 @@ export default function AddMembersActionSheet(channel) {
         }
       });
       dependencyMap = 1;
-      yield closure_1_0(9722).savePermissionUpdates(closure_1_0.id, items);
+      yield closure_1_0(9726).savePermissionUpdates(closure_1_0.id, items);
       if (1 === tmp7) {
         dependencyMap = 0;
         c5 = 3;
@@ -470,7 +470,7 @@ export default function AddMembersActionSheet(channel) {
       }
       obj1 = { scrollable: true, header: null, startExpanded: true, children: null };
       obj[2] = tmp11(tmp12, obj4);
-      obj1[1] = tmp11(tmp4(5629).BottomSheetTitleHeader, obj);
+      obj1[1] = tmp11(tmp4(5630).BottomSheetTitleHeader, obj);
       let obj2 = { style: null, children: null };
       obj2[0] = tmp.container;
       const obj3 = { channel: null, guild: null, permission: null, pendingAdditions: null, setPendingAdditions: null, inActionSheet: true };
@@ -481,7 +481,7 @@ export default function AddMembersActionSheet(channel) {
       obj3[4] = tmp2[1];
       obj2[1] = tmp11(AddMembersBody, obj3);
       obj1[3] = tmp11(closure_8, obj2);
-      return tmp11(tmp4(5630).BottomSheet, obj1);
+      return tmp11(tmp4(5631).BottomSheet, obj1);
     }
     obj4 = { size: "sm", text: null, onPress: null, variant: null, disabled: null };
     const intl = tmp4(1233).intl;

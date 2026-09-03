@@ -1,6 +1,6 @@
-// === Module 14874: BountiesScrollPromptFooter ===
+// === Module 14889: BountiesScrollPromptFooter ===
 
-// Module 14874 (BountiesScrollPromptFooter)
+// Module 14889 (BountiesScrollPromptFooter)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import getSystemLocale from "getSystemLocale" /* 1233 */;

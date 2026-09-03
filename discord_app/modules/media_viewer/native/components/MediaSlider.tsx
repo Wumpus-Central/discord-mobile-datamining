@@ -1,6 +1,6 @@
-// === Module 8592: MediaSlider ===
+// === Module 8596: MediaSlider ===
 
-// Module 8592 (MediaSlider)
+// Module 8596 (MediaSlider)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
@@ -50,11 +50,11 @@ export default function MediaSlider(controls) {
   ref = React.useRef(0);
   const tmp8 = callback(React.useState(0), 2);
   closure_9 = tmp8[1];
-  const tmp11 = paused(5949)(() => paused(closure_1_2[7]).throttle((arg0) => {
+  const tmp11 = paused(5950)(() => paused(closure_1_2[7]).throttle((arg0) => {
     callback(arg0);
   }, 100));
   closure_10 = tmp11;
-  closure_11 = paused(5949)(() => paused(closure_1_2[7]).throttle((arg0) => {
+  closure_11 = paused(5950)(() => paused(closure_1_2[7]).throttle((arg0) => {
     callback(arg0);
     let str = "transparent";
     if (1 === arg0) {
@@ -91,7 +91,7 @@ export default function MediaSlider(controls) {
       tmp2.current = false;
     }
   }, items2);
-  let obj = controls(5120);
+  let obj = controls(5121);
   obj = { style: items3, children: null };
   items3 = [tmp.container, controls.style];
   const timeFormat = obj.getTimeFormat(tmp3);
@@ -113,18 +113,18 @@ export default function MediaSlider(controls) {
   };
   obj[4] = { top: 8, right: 8, bottom: 8, left: 8 };
   if (paused) {
-    let PauseIcon = tmp16(8593).PlayIcon;
+    let PauseIcon = tmp16(8597).PlayIcon;
   } else {
-    PauseIcon = tmp16(8595).PauseIcon;
+    PauseIcon = tmp16(8599).PauseIcon;
   }
   obj[5] = closure_6(PauseIcon, { size: "md", color: "white" });
-  const items4 = [closure_6(controls(5076).PressableOpacity, obj), , , ];
+  const items4 = [closure_6(controls(5077).PressableOpacity, obj), , , ];
   const items5 = [tmp.centerText, { width: tmp8[0] }];
   items4[1] = closure_6(controls(4474).Text, { style: items5, tabularNumbers: true, lineClamp: 1, color: "text-overlay-light", variant: "text-xs/medium", children: timeFormat });
   obj1 = { style: tmp.sliderContainer, children: null };
   const obj2 = { pointerEvents: "none", style: tmp.progressSliderContainer, children: null };
   const obj3 = { style: tmp.timelineBackgroundSlider, value: 1, minimumValue: 0, maximumValue: 1, thumbTintColor: null, minimumTrackTintColor: null, maximumTrackTintColor: null };
-  let tmp9Result = tmp9(8390);
+  let tmp9Result = tmp9(8394);
   let obj6 = tmp9(686)("#FFFFFF");
   const tmp5 = callback(React.useState("transparent"), 2);
   obj3[4] = obj6.alpha(0).hex();
@@ -136,7 +136,7 @@ export default function MediaSlider(controls) {
   obj3[6] = paused(686)("#FFFFFF").alpha(0.1).hex();
   const items6 = [closure_6(tmp9Result, obj3), ];
   const obj4 = { style: tmp.downloadProgressSlider, value: tmp4[0], minimumValue: 0, maximumValue: 1, thumbTintColor: null, minimumTrackTintColor: null, maximumTrackTintColor: null };
-  tmp9Result = tmp9(8390);
+  tmp9Result = tmp9(8394);
   const alphaResult2 = paused(686)("#FFFFFF").alpha(0.1);
   const obj14 = paused(686)("#FFFFFF");
   obj4[4] = paused(686)("#FFFFFF").alpha(0).hex();
@@ -149,13 +149,13 @@ export default function MediaSlider(controls) {
   const items7 = [c7(c5, obj2), ];
   const obj5 = { style: tmp.playbackSlider, value: tmp3, thumbImage: null, minimumValue: 0, maximumValue: null, minimumTrackTintColor: null, maximumTrackTintColor: "transparent", onValueChange: null, onSlidingStart: null, onSlidingComplete: null };
   const alphaResult4 = paused(686)("#FFFFFF").alpha(0.2);
-  obj5[2] = paused(8597);
+  obj5[2] = paused(8601);
   obj5[4] = ref.current;
   obj5[5] = paused(709).unsafe_rawColors.WHITE;
   obj5[7] = tmp11;
   obj5[8] = callback;
   obj5[9] = callback1;
-  items7[1] = closure_6(paused(8390), obj5);
+  items7[1] = closure_6(paused(8394), obj5);
   obj1[1] = items7;
   items4[2] = c7(c5, obj1);
   obj6 = {
@@ -169,8 +169,8 @@ export default function MediaSlider(controls) {
     },
     children: null
   };
-  const tmp9Result1 = paused(8390);
-  obj6[6] = controls(5120).getTimeFormat(ref.current);
+  const tmp9Result1 = paused(8394);
+  obj6[6] = controls(5121).getTimeFormat(ref.current);
   items4[3] = closure_6(controls(4474).Text, obj6);
   obj[1] = items4;
   return c7(c5, obj);

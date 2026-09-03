@@ -1,6 +1,6 @@
-// === Module 12401: useChatPlaceholderAnimatedStyles ===
+// === Module 12413: useChatPlaceholderAnimatedStyles ===
 
-// Module 12401 (useChatPlaceholderAnimatedStyles)
+// Module 12413 (useChatPlaceholderAnimatedStyles)
 import closure_2 from "maybeApplyNoTextColorForLightCustomTheme" /* 4470 */;
 
 const require = arg1;

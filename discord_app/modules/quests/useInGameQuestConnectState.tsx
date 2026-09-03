@@ -1,6 +1,6 @@
-// === Module 11567: useInGameQuestConnectState ===
+// === Module 11572: useInGameQuestConnectState ===
 
-// Module 11567 (useInGameQuestConnectState)
+// Module 11572 (useInGameQuestConnectState)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/quests/useInGameQuestConnectState.tsx");

@@ -1,11 +1,11 @@
-// === Module 14924: useYouBarHorizontalMargin ===
+// === Module 14939: useYouBarHorizontalMargin ===
 
-// Module 14924 (useYouBarHorizontalMargin)
+// Module 14939 (useYouBarHorizontalMargin)
 import set from "set" /* 2 */;
 import ThemesDefault from "Themes" /* 709 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
 import map from "map" /* 4197 */;
-import CONNECTION_BANNER_HEIGHT from "CONNECTION_BANNER_HEIGHT" /* 14925 */;
+import CONNECTION_BANNER_HEIGHT from "CONNECTION_BANNER_HEIGHT" /* 14940 */;
 
 ({ YOU_BAR_MARGIN_IOS: c3, YOU_BAR_MARGIN: c4 } = CONNECTION_BANNER_HEIGHT);
 const result = set.fileFinishedImporting("modules/main_tabs_v2/native/you_bar/hooks/useYouBarMargins.tsx");

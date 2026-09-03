@@ -1,11 +1,11 @@
-// === Module 17409: GuildSettingsServerTagBadgeGrid ===
+// === Module 17429: GuildSettingsServerTagBadgeGrid ===
 
-// Module 17409 (GuildSettingsServerTagBadgeGrid)
+// Module 17429 (GuildSettingsServerTagBadgeGrid)
 import ThemesDefault from "Themes" /* 709 */;
-import useGuildTagBadgeCollectionDefault from "useGuildTagBadgeCollection" /* 17410 */;
+import useGuildTagBadgeCollectionDefault from "useGuildTagBadgeCollection" /* 17430 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { GuildTagBadgeSize } from "items" /* 7862 */;
+import { GuildTagBadgeSize } from "items" /* 7865 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -74,11 +74,11 @@ export default function GuildSettingsServerTagBadgeGrid(guildId) {
     items2[1] = tmp8(tmp7(4474).Text, obj3);
     const obj4 = { size: "md", color: null };
     obj4[1] = ThemesDefault.colors.ICON_SUBTLE;
-    items2[2] = tmp8(tmp7(6011).ChevronSmallRightIcon, obj4);
+    items2[2] = tmp8(tmp7(6012).ChevronSmallRightIcon, obj4);
     obj1[4] = items2;
     tmp6Result = tmp6(closure_4, obj1);
   }
   items1[2] = tmp6Result;
   obj[1] = items1;
-  return closure_8(guildId(4926).Stack, obj);
+  return closure_8(guildId(4927).Stack, obj);
 };

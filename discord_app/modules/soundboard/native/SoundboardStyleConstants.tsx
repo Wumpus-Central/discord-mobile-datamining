@@ -1,6 +1,6 @@
-// === Module 16878: SOUND_BUTTON_HEIGHT ===
+// === Module 16898: SOUND_BUTTON_HEIGHT ===
 
-// Module 16878 (SOUND_BUTTON_HEIGHT)
+// Module 16898 (SOUND_BUTTON_HEIGHT)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/soundboard/native/SoundboardStyleConstants.tsx");

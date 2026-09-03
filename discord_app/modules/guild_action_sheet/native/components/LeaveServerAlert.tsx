@@ -1,6 +1,6 @@
-// === Module 13924: LeaveServerAlert ===
+// === Module 13940: LeaveServerAlert ===
 
-// Module 13924 (LeaveServerAlert)
+// Module 13940 (LeaveServerAlert)
 import set from "set" /* 2 */;
 import ME from "ME" /* 673 */;
 import jsxProd from "jsxProd" /* 21 */;
@@ -35,12 +35,12 @@ export default function LeaveServerAlert(guild) {
   };
   const intl3 = tmp2(1233).intl;
   obj1[2] = intl3.string(guild(1233).t.p89ACt);
-  const items = [closure_4(guild(4863).AlertActionButton, obj1, "confirm"), ];
+  const items = [closure_4(guild(4864).AlertActionButton, obj1, "confirm"), ];
   const obj2 = { variant: "secondary", text: null };
   const intl4 = tmp2(1233).intl;
   obj2[1] = intl4.string(guild(1233).t.gm1Vej);
-  items[1] = closure_4(guild(4863).AlertActionButton, obj2, "cancel");
+  items[1] = closure_4(guild(4864).AlertActionButton, obj2, "cancel");
   obj[0] = items;
-  obj[2] = callback(guild(4863).AlertActions, obj);
-  return closure_4(guild(4863).AlertModal, obj);
+  obj[2] = callback(guild(4864).AlertActions, obj);
+  return closure_4(guild(4864).AlertModal, obj);
 };

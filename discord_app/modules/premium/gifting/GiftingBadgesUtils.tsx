@@ -1,10 +1,10 @@
-// === Module 13450: getGiftingBadgeProgressPercent ===
+// === Module 13465: getGiftingBadgeProgressPercent ===
 
-// Module 13450 (getGiftingBadgeProgressPercent)
+// Module 13465 (getGiftingBadgeProgressPercent)
 import set from "set" /* 2 */;
-import initialize from "initialize" /* 8573 */;
-import apexExperiment from "apexExperiment" /* 10737 */;
-import apexExperiment2 from "apexExperiment" /* 13451 */;
+import initialize from "initialize" /* 8577 */;
+import apexExperiment from "apexExperiment" /* 10741 */;
+import apexExperiment2 from "apexExperiment" /* 13466 */;
 import closure_3 from "mergeGuildAvatar" /* 1921 */;
 
 let closure_2 = initialize.getSingleRequirementThreshold;

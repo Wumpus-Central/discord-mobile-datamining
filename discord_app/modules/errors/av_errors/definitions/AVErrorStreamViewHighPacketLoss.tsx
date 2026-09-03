@@ -1,6 +1,6 @@
-// === Module 17658: AVErrorStreamViewHighPacketLossDefinition ===
+// === Module 17678: AVErrorStreamViewHighPacketLossDefinition ===
 
-// Module 17658 (AVErrorStreamViewHighPacketLossDefinition)
+// Module 17678 (AVErrorStreamViewHighPacketLossDefinition)
 import closure_2 from "reset" /* 4500 */;
 import closure_3 from "fetchFingerprint" /* 1215 */;
 import closure_4 from "initialize" /* 4568 */;

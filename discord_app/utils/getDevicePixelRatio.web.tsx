@@ -1,6 +1,6 @@
-// === Module 9029: getDevicePixelRatio ===
+// === Module 9033: getDevicePixelRatio ===
 
-// Module 9029 (getDevicePixelRatio)
+// Module 9033 (getDevicePixelRatio)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("utils/getDevicePixelRatio.web.tsx");

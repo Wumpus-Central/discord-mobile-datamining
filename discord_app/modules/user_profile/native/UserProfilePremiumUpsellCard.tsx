@@ -1,6 +1,6 @@
-// === Module 14521: UserProfilePremiumUpsellCard ===
+// === Module 14537: UserProfilePremiumUpsellCard ===
 
-// Module 14521 (UserProfilePremiumUpsellCard)
+// Module 14537 (UserProfilePremiumUpsellCard)
 import closure_3 from "noop" /* 19 */;
 import ME from "ME" /* 673 */;
 import { jsx } from "jsxProd" /* 21 */;
@@ -22,11 +22,11 @@ export const UserProfilePremiumUpsellCard = function UserProfilePremiumUpsellCar
   navigation = obj.useNavigation();
   const tmp = analyticsLocations;
   const tmp3 = callback(analyticsLocations(1627)().bottom);
-  let nitroTrialCtaOverride = navigation(7200).useNitroTrialCtaOverride("user_profile_premium_upsell_card");
-  const obj2 = navigation(7200);
-  const tmp8 = analyticsLocations(5981);
+  let nitroTrialCtaOverride = navigation(7201).useNitroTrialCtaOverride("user_profile_premium_upsell_card");
+  const obj2 = navigation(7201);
+  const tmp8 = analyticsLocations(5982);
   const items = [isTryItOut ? tmp8.USER_SETTINGS_TRY_OUT_PREMIUM : tmp8.USER_SETTINGS_USER_PROFILE];
-  analyticsLocations = analyticsLocations(5961)(items).analyticsLocations;
+  analyticsLocations = analyticsLocations(5962)(items).analyticsLocations;
   const items1 = [navigation];
   callback = React.useCallback(() => {
     analyticsLocations(closure_1_2[9]).setSection(closure_1_7.PROFILE_CUSTOMIZATION_TRY_IT_OUT);
@@ -40,7 +40,7 @@ export const UserProfilePremiumUpsellCard = function UserProfilePremiumUpsellCar
     analyticsLocations(closure_1_2[10])(obj);
   }, items2);
   obj = { style: tmp3.container, ctaText: null, showLinearGradient: true, onPress: null, children: null };
-  const tmp7 = analyticsLocations(5961);
+  const tmp7 = analyticsLocations(5962);
   if (isTryItOut) {
     if (nitroTrialCtaOverride == null) {
       const intl2 = tmp4(1233).intl;
@@ -65,5 +65,5 @@ export const UserProfilePremiumUpsellCard = function UserProfilePremiumUpsellCar
     stringResult1 = string(t.Tii53U);
   }
   obj[4] = jsx(navigation(4474).Text, { variant: "text-sm/normal", maxFontSizeMultiplier: 2.5, children: stringResult1 });
-  return jsx(tmp(14499), { style: tmp3.container, ctaText: null, showLinearGradient: true, onPress: null, children: null });
+  return jsx(tmp(14515), { style: tmp3.container, ctaText: null, showLinearGradient: true, onPress: null, children: null });
 };

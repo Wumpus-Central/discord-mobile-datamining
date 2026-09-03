@@ -1,9 +1,9 @@
-// === Module 12013: ErrorBlock ===
+// === Module 12019: ErrorBlock ===
 
-// Module 12013 (ErrorBlock)
+// Module 12019 (ErrorBlock)
 import noopAll from "noop" /* 19 */;
-import MessageBlock from "MessageBlock" /* 12014 */;
-import MessageBlockDefault from "MessageBlock" /* 12014 */;
+import MessageBlock from "MessageBlock" /* 12020 */;
+import MessageBlockDefault from "MessageBlock" /* 12020 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

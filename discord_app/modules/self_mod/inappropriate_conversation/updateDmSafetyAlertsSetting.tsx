@@ -1,6 +1,6 @@
-// === Module 14664: updateDmSafetyAlertsSetting ===
+// === Module 14679: updateDmSafetyAlertsSetting ===
 
-// Module 14664 (updateDmSafetyAlertsSetting)
+// Module 14679 (updateDmSafetyAlertsSetting)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/self_mod/inappropriate_conversation/updateDmSafetyAlertsSetting.tsx");

@@ -1,6 +1,6 @@
-// === Module 7129: metadata ===
+// === Module 7130: metadata ===
 
-// Module 7129 (metadata)
+// Module 7130 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/WaypostSpotIllustration-2x.png.js");

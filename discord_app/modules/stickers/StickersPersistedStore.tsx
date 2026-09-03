@@ -1,13 +1,13 @@
-// === Module 5451: handleStickersStoreUpdate ===
+// === Module 5452: handleStickersStoreUpdate ===
 
-// Module 5451 (handleStickersStoreUpdate)
+// Module 5452 (handleStickersStoreUpdate)
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 586 */;
 import setDefault from "set" /* 684 */;
 import dispatcherDefault from "dispatcher" /* 706 */;
 import DEFAULT_FRECENCYDefault from "DEFAULT_FRECENCY" /* 4566 */;
 import closure_2 from "handleConnectionClosedOrResumed" /* 1339 */;
-import closure_3 from "loadSavedGuildStickers" /* 5452 */;
+import closure_3 from "loadSavedGuildStickers" /* 5453 */;
 import { UserSettingsTypes } from "MAX_FAVORITES" /* 682 */;
 
 function handleStickersStoreUpdate() {

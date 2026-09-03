@@ -1,6 +1,6 @@
-// === Module 6116: set ===
+// === Module 6117: set ===
 
-// Module 6116 (set)
+// Module 6117 (set)
 import initialize from "initialize" /* 586 */;
 import closure_2 from "mergeGuildAvatar" /* 1921 */;
 import closure_3 from "handlePaymentSourceCreateEnd" /* 4141 */;

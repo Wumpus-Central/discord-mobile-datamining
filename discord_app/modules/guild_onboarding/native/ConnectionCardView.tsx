@@ -1,6 +1,6 @@
-// === Module 5976: ConnectionCardView ===
+// === Module 5977: ConnectionCardView ===
 
-// Module 5976 (ConnectionCardView)
+// Module 5977 (ConnectionCardView)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 709 */;
 import Text from "Text" /* 4474 */;
@@ -66,7 +66,7 @@ export default function ConnectionCardView(description) {
     const intl = tmp5(1233).intl;
     obj5[3] = intl.string(tmp5(1233).t.S0W8Z5);
     obj5[4] = !canConnect;
-    tmp4Result = tmp4(tmp5(4928).Button, obj5);
+    tmp4Result = tmp4(tmp5(4929).Button, obj5);
   }
   items2[1] = tmp4Result;
   obj[1] = items2;

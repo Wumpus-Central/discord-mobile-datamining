@@ -1,11 +1,11 @@
-// === Module 16237: ForYouFooter ===
+// === Module 16256: ForYouFooter ===
 
-// Module 16237 (ForYouFooter)
+// Module 16256 (ForYouFooter)
 import ThemesDefault from "Themes" /* 709 */;
 import Text from "Text" /* 4474 */;
-import createRulesAll from "createRules" /* 4948 */;
-import ApplicationIconAndNameDefault from "ApplicationIconAndName" /* 12390 */;
-import ForYouMentionPlaceholder from "ForYouMentionPlaceholder" /* 16236 */;
+import createRulesAll from "createRules" /* 4949 */;
+import ApplicationIconAndNameDefault from "ApplicationIconAndName" /* 12402 */;
+import ForYouMentionPlaceholder from "ForYouMentionPlaceholder" /* 16255 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import closure_5 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
@@ -15,9 +15,9 @@ import closure_10 from "addApplication" /* 4519 */;
 import closure_11 from "ensureGuildLoaded" /* 1386 */;
 import closure_12 from "createGuildRecordFromRust" /* 1908 */;
 import closure_13 from "mergeGuildAvatar" /* 1921 */;
-import closure_14 from "handleLoadFinished" /* 16231 */;
+import closure_14 from "handleLoadFinished" /* 16250 */;
 import ME from "ME" /* 673 */;
-import { NotificationTypes } from "str2" /* 6063 */;
+import { NotificationTypes } from "str2" /* 6064 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -57,7 +57,7 @@ function ForYouMessagePreviewV2(item) {
   ({ compactMode, roleStyle } = item);
   let messagePreviewIconV2 = callback6();
   let SMALL = dependencyMap;
-  let obj = message_channel_id(4948);
+  let obj = message_channel_id(4949);
   const notifCenterV2MessagePreviewParser = obj.getNotifCenterV2MessagePreviewParser(callback5(), closure_28, roleStyle);
   const intl = item(1233).intl;
   const stringResult = intl.string(item(1233).t.BOi07B);
@@ -112,10 +112,10 @@ function ForYouMessagePreviewV2(item) {
         first = embeds[0];
       }
     }
-    const tmp15 = guild_id(7960)(first);
+    const tmp15 = guild_id(7963)(first);
     let result = stringResult;
     if (null != tmp15) {
-      let tmp2Result = tmp2(7515);
+      let tmp2Result = tmp2(7516);
       result = tmp2Result.formatPollResultNotificationCenterText(tmp15);
     }
   } else if (stickers.length > 0) {
@@ -223,7 +223,7 @@ function ForYouMessagePreviewV2(item) {
   if (acked) {
     str2 = "text-muted";
   }
-  const items5 = [item(7641).renderMessageContentMarkup(notifCenterV2MessagePreviewParser, obj2, { textColor: str2 }), ];
+  const items5 = [item(7642).renderMessageContentMarkup(notifCenterV2MessagePreviewParser, obj2, { textColor: str2 }), ];
   if (null == ATTACHMENT) {
     items5[1] = tmp26;
     obj1[3] = items5;
@@ -234,7 +234,7 @@ function ForYouMessagePreviewV2(item) {
     const obj3 = { style: null, children: null };
     obj3[0] = messagePreviewIconV2.messagePreviewIconV2Container;
     if (constants3.ATTACHMENT === ATTACHMENT) {
-      let tmp29 = guild_id(11103);
+      let tmp29 = guild_id(11107);
       const obj4 = { source: null, size: null, style: null };
       obj4[0] = tmp29;
       SMALL = tmp2(1296).IconSizes.SMALL;
@@ -246,10 +246,10 @@ function ForYouMessagePreviewV2(item) {
     } else if (tmp28.STICKER !== ATTACHMENT) {
       tmp29 = null;
       if (tmp28.VOICE_MESSAGE === ATTACHMENT) {
-        tmp29 = guild_id(8761);
+        tmp29 = guild_id(8765);
       }
     }
-    tmp29 = guild_id(10434);
+    tmp29 = guild_id(10438);
   }
 }
 function ApplicationName(applicationId) {

@@ -1,9 +1,9 @@
-// === Module 11107: AvailableForumTag ===
+// === Module 11111: AvailableForumTag ===
 
-// Module 11107 (AvailableForumTag)
+// Module 11111 (AvailableForumTag)
 import ThemesDefault from "Themes" /* 709 */;
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "getEmojiToGroupId" /* 5409 */;
+import closure_4 from "getEmojiToGroupId" /* 5410 */;
 import { EMOJI_URL_BASE_SIZE } from "set" /* 1924 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;

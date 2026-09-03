@@ -1,60 +1,70 @@
-// === Module 15543: TextDisplayComponent ===
+// === Module 15557: TextDisplayComponent ===
 
-// Module 15543 (TextDisplayComponent)
-import noopAll from "noop" /* 19 */;
-import _modDef38 from "module_38" /* 38 */;
-import get_defaultRulesDefault from "get defaultRules" /* 4468 */;
-import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 15544 */;
+// Module 15557 (TextDisplayComponent)
 import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4470 */;
-import closure_5 from "handleConnectionOpen" /* 1980 */;
-import { TEXT_DISPLAY_COMPONENT_MARKDOWN_RENDER_OPTIONS as closure_6 } from "TEXT_DISPLAY_COMPONENT_MARKDOWN_RENDER_OPTIONS" /* 8029 */;
+import closure_4 from "noop" /* 19 */;
+import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4470 */;
+import closure_6 from "handleConnectionOpen" /* 1980 */;
+import { TEXT_DISPLAY_COMPONENT_MARKDOWN_RENDER_OPTIONS as closure_7 } from "TEXT_DISPLAY_COMPONENT_MARKDOWN_RENDER_OPTIONS" /* 8032 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
-noopAll;
 let result = require("set").fileFinishedImporting("modules/interaction_components/native/display/TextDisplayComponent.tsx");
 
-export default function TextDisplayComponent(content) {
-  let obj = channelId(8030);
+export default function TextDisplayComponent(type) {
+  type = type.type;
+  const id = type.id;
+  const content = type.content;
+  let channelId;
+  let obj = type(content[6]);
   const componentContainerId = obj.useComponentContainerId();
   channelId = channelId.getChannelId();
-  _modDef38(null != channelId, "channelId not available in TextDisplayComponent");
-  obj1 = get_defaultRulesDefault;
-  let obj2 = channelId(7641);
-  obj = { channelId, renderOptions: closure_6 };
-  const parseToASTResult = obj1.parseToAST(content.content, true, obj2.getInitialParserState(obj));
-  let items = [closure_4];
-  const obj5 = channelId(586);
-  [tmp6, tmp7] = callback(channelId(586).useStateFromStoresArray(items, () => {
+  id(content[7])(null != channelId, "channelId not available in TextDisplayComponent");
+  let items = [type, id, content, channelId];
+  const memo = React.useMemo(() => {
+    let obj = { type, id, content: null };
+    const obj2 = id(content[8]);
+    obj = { channelId, renderOptions: closure_1_7 };
+    obj[2] = obj2.parseToAST(content, true, type(content[9]).getInitialParserState(obj));
+    return JSON.stringify(obj);
+  }, items);
+  const items1 = [closure_5];
+  let obj2 = type(content[10]);
+  [tmp6, tmp7] = channelId(type(content[10]).useStateFromStoresArray(items1, () => {
     const items = [, ];
-    ({ roleStyle: arr[0], alwaysShowLinkDecorations: arr[1] } = closure_4);
+    ({ roleStyle: arr[0], alwaysShowLinkDecorations: arr[1] } = closure_5);
     return items;
   }), 2);
-  const AnimateEmoji = channelId(4166).AnimateEmoji;
+  const AnimateEmoji = type(content[11]).AnimateEmoji;
   const setting = AnimateEmoji.useSetting();
-  obj = { model: null, markdownTextRenderOptions: null, onTapLink: null, onLongPressLink: null, onTapAttachmentLink: null, onLongPressAttachmentLink: null, onTapMention: null, onTapTimestamp: null, onTapInlineCode: null, onTapEmoji: null, style: null };
-  obj1 = {};
-  const tmp5 = callback(channelId(586).useStateFromStoresArray(items, () => {
+  obj = {
+    model: memo,
+    markdownTextRenderOptions: obj,
+    onTapLink(nativeEvent) {
+      const result = type(content[13]).handleMessagesTapURLLink(nativeEvent.nativeEvent.data, channelId);
+    },
+    onLongPressLink: null,
+    onTapAttachmentLink: null,
+    onLongPressAttachmentLink: null,
+    onTapMention: null,
+    onTapTimestamp: null,
+    onTapInlineCode: null,
+    onTapEmoji: null,
+    style: null
+  };
+  obj = { containerId: componentContainerId, shouldAnimateEmoji: setting, shouldShowLinkDecorations: tmp7, shouldShowRoleDot: "dot" === tmp6, shouldShowRoleOnName: "username" === tmp6 };
+  const tmp5 = channelId(type(content[10]).useStateFromStoresArray(items1, () => {
     const items = [, ];
-    ({ roleStyle: arr[0], alwaysShowLinkDecorations: arr[1] } = closure_4);
+    ({ roleStyle: arr[0], alwaysShowLinkDecorations: arr[1] } = closure_5);
     return items;
   }), 2);
-  const merged = Object.assign(content);
-  obj1.content = parseToASTResult;
-  obj[0] = obj1;
-  obj2 = { containerId: componentContainerId, shouldAnimateEmoji: setting, shouldShowLinkDecorations: tmp7, shouldShowRoleDot: "dot" === tmp6, shouldShowRoleOnName: "username" === tmp6 };
-  obj[1] = obj2;
-  obj[2] = function onTapLink(nativeEvent) {
-    const result = channelId(closure_1_2[13]).handleMessagesTapURLLink(nativeEvent.nativeEvent.data, channelId);
-  };
-  obj[3] = channelId(11406).contentHandlers.onLongPressLink;
-  obj[4] = channelId(11406).contentHandlers.onTapAttachmentLink;
-  obj[5] = channelId(11406).contentHandlers.onLongPressAttachmentLink;
-  obj[6] = channelId(11406).contentHandlers.onTapMention;
-  obj[7] = channelId(11406).contentHandlers.onTapTimestamp;
-  obj[8] = channelId(11406).contentHandlers.onTapInlineCode;
-  obj[9] = channelId(11406).contentHandlers.onTapEmoji;
+  obj[3] = type(content[14]).contentHandlers.onLongPressLink;
+  obj[4] = type(content[14]).contentHandlers.onTapAttachmentLink;
+  obj[5] = type(content[14]).contentHandlers.onLongPressAttachmentLink;
+  obj[6] = type(content[14]).contentHandlers.onTapMention;
+  obj[7] = type(content[14]).contentHandlers.onTapTimestamp;
+  obj[8] = type(content[14]).contentHandlers.onTapInlineCode;
+  obj[9] = type(content[14]).contentHandlers.onTapEmoji;
   obj[10] = { width: "100%" };
-  return jsx(__INTERNAL_VIEW_CONFIGDefault, { model: null, markdownTextRenderOptions: null, onTapLink: null, onLongPressLink: null, onTapAttachmentLink: null, onLongPressAttachmentLink: null, onTapMention: null, onTapTimestamp: null, onTapInlineCode: null, onTapEmoji: null, style: null });
+  return jsx(id(content[12]), { containerId: componentContainerId, shouldAnimateEmoji: setting, shouldShowLinkDecorations: tmp7, shouldShowRoleDot: "dot" === tmp6, shouldShowRoleOnName: "username" === tmp6 });
 };

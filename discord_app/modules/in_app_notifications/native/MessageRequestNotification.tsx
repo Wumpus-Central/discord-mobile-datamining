@@ -1,6 +1,6 @@
-// === Module 11179: MessageRequestInAppNotification ===
+// === Module 11183: MessageRequestInAppNotification ===
 
-// Module 11179 (MessageRequestInAppNotification)
+// Module 11183 (MessageRequestInAppNotification)
 import closure_3 from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 
@@ -22,22 +22,22 @@ export default function MessageRequestInAppNotification(notification) {
     return obj;
   }, items);
   const callback = React.useCallback(() => {
-    numMutualGuilds(10201).clearNotification();
-    const obj = numMutualGuilds(10201);
+    numMutualGuilds(10205).clearNotification();
+    const obj = numMutualGuilds(10205);
     const rootNavigationRef = author(4333).getRootNavigationRef();
     if (rootNavigationRef != null) {
       rootNavigationRef.navigate("message-requests");
     }
   }, []);
   let obj = { icon: null, header: null, children: null, onPress: null, notification: null };
-  obj = { user: author, size: author(1296).AvatarSizes.NORMAL, guildId: "r" };
-  obj[0] = jsx(author(1296).Avatar, { user: author, size: author(1296).AvatarSizes.NORMAL, guildId: "r" });
+  obj = { user: author, size: author(1296).AvatarSizes.NORMAL, guildId: "accessible" };
+  obj[0] = jsx(author(1296).Avatar, { user: author, size: author(1296).AvatarSizes.NORMAL, guildId: "accessible" });
   obj[1] = memo;
   obj = { text: null };
   let intl = author(1233).intl;
   obj[0] = intl.string(author(1233).t["Bx4/Lf"]);
-  obj[2] = jsx(author(10212).SystemMessageText, { text: null });
+  obj[2] = jsx(author(10216).SystemMessageText, { text: null });
   obj[3] = callback;
   obj[4] = notification;
-  return jsx(author(10277).NotificationPressable, { text: null });
+  return jsx(author(10281).NotificationPressable, { text: null });
 };

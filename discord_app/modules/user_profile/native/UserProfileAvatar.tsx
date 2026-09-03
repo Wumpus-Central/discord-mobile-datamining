@@ -1,12 +1,12 @@
-// === Module 8568: OpenableUserProfileAvatar ===
+// === Module 8572: OpenableUserProfileAvatar ===
 
-// Module 8568 (OpenableUserProfileAvatar)
-import _modDef8114 from "module_8114" /* 8114 */;
-import useSharedStylesDefault from "useSharedStyles" /* 8543 */;
+// Module 8572 (OpenableUserProfileAvatar)
+import _modDef8117 from "module_8117" /* 8117 */;
+import useSharedStylesDefault from "useSharedStyles" /* 8547 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import { TrackUserProfileActions } from "USER_PROFILE_TOOLTIP_DELAY" /* 8569 */;
-import { AVATAR_SIZE_VARIANT } from "ARBITRARY_LARGE_OFFSET" /* 6009 */;
+import { TrackUserProfileActions } from "USER_PROFILE_TOOLTIP_DELAY" /* 8573 */;
+import { AVATAR_SIZE_VARIANT } from "ARBITRARY_LARGE_OFFSET" /* 6010 */;
 import jsxProd from "jsxProd" /* 21 */;
 
 const require = arg1;
@@ -28,7 +28,7 @@ const forwardRefResult = importAllResult.forwardRef((backgroundColor, ref) => {
   items2 = [, ];
   ({ avatar: arr3[0], avatarPosition: arr3[1] } = tmp2);
   const merged1 = Object.assign(merged);
-  items1[1] = callback(_modDef8114, obj);
+  items1[1] = callback(_modDef8117, obj);
   obj[0] = items1;
   return callback2(closure_8, obj);
 });

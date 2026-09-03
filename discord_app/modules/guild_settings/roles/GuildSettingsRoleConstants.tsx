@@ -1,12 +1,12 @@
-// === Module 17429: title ===
+// === Module 17449: title ===
 
-// Module 17429 (title)
+// Module 17449 (title)
 import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1233 */;
 import applyOverwritesAll from "applyOverwrites" /* 4125 */;
-import handleSetSection from "handleSetSection" /* 17430 */;
+import handleSetSection from "handleSetSection" /* 17450 */;
 import ME from "ME" /* 673 */;
-import HOLOGRAPHIC_ROLE_COLORS from "HOLOGRAPHIC_ROLE_COLORS" /* 17432 */;
+import HOLOGRAPHIC_ROLE_COLORS from "HOLOGRAPHIC_ROLE_COLORS" /* 17452 */;
 import importAllResult from "fromString" /* 503 */;
 import unsafe_getRawColor from "unsafe_getRawColor" /* 708 */;
 

@@ -5,9 +5,9 @@ import timestampDefault from "timestamp" /* 3 */;
 import initializeDefault from "initialize" /* 586 */;
 import dispatcherDefault from "dispatcher" /* 706 */;
 import sleep from "sleep" /* 4558 */;
-import updateVoiceStatesDefault from "updateVoiceStates" /* 13703 */;
-import useIsSpatialAudioAvailable from "useIsSpatialAudioAvailable" /* 13704 */;
-import trackVideoToggle from "trackVideoToggle" /* 13706 */;
+import updateVoiceStatesDefault from "updateVoiceStates" /* 13718 */;
+import useSpatialAudioControlState from "useSpatialAudioControlState" /* 13719 */;
+import trackVideoToggle from "trackVideoToggle" /* 13721 */;
 import closure_5 from "set" /* 4495 */;
 import closure_6 from "fetchFingerprint" /* 1215 */;
 import closure_7 from "getVoiceStatesForGuild" /* 4555 */;
@@ -625,8 +625,8 @@ const rTCConnectionStore = new RTCConnectionStore(dispatcherDefault, {
         flag = false;
       }
       if (flag) {
-        flag = useIsSpatialAudioAvailable.isSpatialAudioAvailable("RTCConnectionStore");
-        const obj = useIsSpatialAudioAvailable;
+        flag = useSpatialAudioControlState.isSpatialAudioEligible("RTCConnectionStore");
+        const obj = useSpatialAudioControlState;
       }
       if (closure_3 != null) {
         const result = closure_3.setSpatialAudioEnabled(flag);
@@ -921,8 +921,8 @@ let obj = {
         flag = false;
       }
       if (flag) {
-        flag = useIsSpatialAudioAvailable.isSpatialAudioAvailable("RTCConnectionStore");
-        const obj = useIsSpatialAudioAvailable;
+        flag = useSpatialAudioControlState.isSpatialAudioEligible("RTCConnectionStore");
+        const obj = useSpatialAudioControlState;
       }
       if (closure_3 != null) {
         const result = closure_3.setSpatialAudioEnabled(flag);

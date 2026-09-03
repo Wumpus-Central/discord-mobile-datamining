@@ -1,6 +1,6 @@
-// === Module 14550: EditCredentialModal ===
+// === Module 14566: EditCredentialModal ===
 
-// Module 14550 (EditCredentialModal)
+// Module 14566 (EditCredentialModal)
 import ThemesDefault from "Themes" /* 709 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
@@ -47,7 +47,7 @@ export default function EditCredentialModal(credential) {
   obj[6] = credential.name;
   obj[7] = tmp6;
   obj[8] = credential(1296).ClearButtonVisibility.WITH_CONTENT;
-  const items1 = [callback(credential(8372).FormInput, obj), callback(credential(8372).FormDivider, {}), ];
+  const items1 = [callback(credential(8376).FormInput, obj), callback(credential(8376).FormDivider, {}), ];
   obj1 = {
     onPress() {
       _undefined(true);
@@ -93,7 +93,7 @@ export default function EditCredentialModal(credential) {
   obj1[2] = tmp6;
   const intl2 = tmp2(1233).intl;
   obj1[4] = intl2.string(credential(1233).t["7asiR3"]);
-  items1[2] = callback(credential(4928).Button, obj1);
+  items1[2] = callback(credential(4929).Button, obj1);
   obj[1] = items1;
-  return closure_6(credential(8372).Form, obj);
+  return closure_6(credential(8376).Form, obj);
 };

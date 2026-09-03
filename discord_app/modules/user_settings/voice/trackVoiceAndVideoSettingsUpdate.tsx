@@ -1,6 +1,6 @@
-// === Module 9807: trackVoiceAndVideoDebuggingSettingsUpdated ===
+// === Module 9811: trackVoiceAndVideoDebuggingSettingsUpdated ===
 
-// Module 9807 (trackVoiceAndVideoDebuggingSettingsUpdated)
+// Module 9811 (trackVoiceAndVideoDebuggingSettingsUpdated)
 import set from "set" /* 2 */;
 import ME from "ME" /* 673 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 695 */;

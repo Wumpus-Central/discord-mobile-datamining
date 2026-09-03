@@ -1,6 +1,6 @@
-// === Module 9335: metadata ===
+// === Module 9339: metadata ===
 
-// Module 9335 (metadata)
+// Module 9339 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/connections/console_setup_confirmation.png.js");

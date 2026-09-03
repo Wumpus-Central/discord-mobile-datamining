@@ -1,10 +1,10 @@
-// === Module 14914: QuestHomeOrbShopRewardCard ===
+// === Module 14929: QuestHomeOrbShopRewardCard ===
 
-// Module 14914 (QuestHomeOrbShopRewardCard)
+// Module 14929 (QuestHomeOrbShopRewardCard)
 import initialize from "initialize" /* 586 */;
 import ThemesDefault from "Themes" /* 709 */;
-import CollectiblesShopCardInternalV2 from "CollectiblesShopCardInternalV2" /* 8902 */;
-import getCardProductName from "getCardProductName" /* 10976 */;
+import CollectiblesShopCardInternalV2 from "CollectiblesShopCardInternalV2" /* 8906 */;
+import getCardProductName from "getCardProductName" /* 10980 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_5 from "mergeGuildAvatar" /* 1921 */;
@@ -58,12 +58,12 @@ export default function QuestHomeOrbShopRewardCard(product) {
     obj1 = { product: null, isPurchased: false, solidBackground: true, cardWidth: null };
     obj1[0] = product;
     obj1[3] = COLLECTIBLES_SHOP_CARD_WIDTH;
-    const items3 = [callback(stateFromStores(12846), obj1), ];
+    const items3 = [callback(stateFromStores(12858), obj1), ];
     let tmp14Result = !flag;
     if (!flag) {
       const obj2 = { product: null, collectibleProductState: null, hidePrice: true };
       obj2[0] = product;
-      tmp14Result = tmp14(tmp15(12847), obj2);
+      tmp14Result = tmp14(tmp15(12859), obj2);
     }
     items3[1] = tmp14Result;
     obj[4] = items3;

@@ -1,6 +1,6 @@
-// === Module 10161: ? ===
+// === Module 10165: ? ===
 
-// Module 10161
+// Module 10165
 import ThemesDefault from "Themes" /* 709 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_4 from "getParticipants" /* 4494 */;
@@ -19,10 +19,10 @@ const memoResult = importAllResult.memo((channel) => {
   const participant = channel.participant;
   const size = channel.size;
   const tmp = callback();
-  let obj = channel(10151);
+  let obj = channel(10155);
   const speakerTileStyles = obj.useSpeakerTileStyles();
-  const isScreenLandscape = channel(5079).useIsScreenLandscape();
-  const obj2 = channel(5079);
+  const isScreenLandscape = channel(5080).useIsScreenLandscape();
+  const obj2 = channel(5080);
   const tmp5 = participant;
   const items = [closure_4];
   const items1 = [channel.id, participant.id];
@@ -33,9 +33,9 @@ const memoResult = importAllResult.memo((channel) => {
     if (stateFromStores.type !== ParticipantTypes.ACTIVITY) {
       obj = { style: null, children: null };
       const items2 = [tmp.container, , ];
-      let tmp2Result = tmp2(10151);
+      let tmp2Result = tmp2(10155);
       items2[1] = tmp2Result.getSizeStyle(size, speakerTileStyles);
-      tmp2Result = tmp2(10151);
+      tmp2Result = tmp2(10155);
       items2[2] = tmp2Result.getTileWidthStyle(size, participant(1492)().width, isScreenLandscape);
       obj[0] = items2;
       obj = { hasBottomSafeArea: false, hasLeftSafeArea: false, hasRightSafeArea: false, hasTopSafeArea: false, participant: null, avatarSize: null, channel: null, shrinkStreamEmptyState: false, contentStyle: null };
@@ -43,9 +43,9 @@ const memoResult = importAllResult.memo((channel) => {
       obj[5] = tmp2(1296).AvatarSizes.XLARGE;
       obj[6] = channel;
       obj[8] = tmp.media;
-      obj[1] = jsx(tmp5(10162), { hasBottomSafeArea: false, hasLeftSafeArea: false, hasRightSafeArea: false, hasTopSafeArea: false, participant: null, avatarSize: null, channel: null, shrinkStreamEmptyState: false, contentStyle: null });
+      obj[1] = jsx(tmp5(10166), { hasBottomSafeArea: false, hasLeftSafeArea: false, hasRightSafeArea: false, hasTopSafeArea: false, participant: null, avatarSize: null, channel: null, shrinkStreamEmptyState: false, contentStyle: null });
       tmp8 = <View hasBottomSafeArea={false} hasLeftSafeArea={false} hasRightSafeArea={false} hasTopSafeArea={false} participant={null} avatarSize={null} channel={null} shrinkStreamEmptyState={false} contentStyle={null} />;
-      const tmp5Result = tmp5(10162);
+      const tmp5Result = tmp5(10166);
     }
   }
   return tmp8;

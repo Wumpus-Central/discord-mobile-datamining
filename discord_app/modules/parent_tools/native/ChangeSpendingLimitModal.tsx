@@ -1,6 +1,6 @@
-// === Module 14736: ChangeSpendingLimitScreen ===
+// === Module 14751: ChangeSpendingLimitScreen ===
 
-// Module 14736 (ChangeSpendingLimitScreen)
+// Module 14751 (ChangeSpendingLimitScreen)
 import ThemesDefault from "Themes" /* 709 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "noop" /* 19 */;
@@ -32,7 +32,7 @@ function ChangeSpendingLimitScreen(teenId) {
         obj2[1] = intl2.string(v0(2368)["2WKfG1"]);
         obj2[2] = closure_1_0(4438).CircleCheckIcon;
         v0(4194).open(obj2);
-        let arr = v0(4723);
+        let arr = v0(4724);
         arr = arr.pop();
         dependencyMap = 0;
         const obj6 = v0(4194);
@@ -50,7 +50,7 @@ function ChangeSpendingLimitScreen(teenId) {
     return applyArgumentsResult;
   }
   let formatToPlainStringResult = callback2();
-  let obj = _require(14737);
+  let obj = _require(14752);
   const changeSpendingLimitFormState = obj.useChangeSpendingLimitFormState(teenId.teenId);
   ({ amountInput, isOverspending, canSave, isSubmitting, monthlySpend, save: c0 } = changeSpendingLimitFormState);
   let formatPriceResult = null;
@@ -58,8 +58,8 @@ function ChangeSpendingLimitScreen(teenId) {
   if (null != monthlySpend) {
     formatPriceResult = null;
     if (monthlySpend > 0) {
-      formatPriceResult = tmp2(6089).formatPrice(monthlySpend, tmp5);
-      const tmp2Result = tmp2(6089);
+      formatPriceResult = tmp2(6090).formatPrice(monthlySpend, tmp5);
+      const tmp2Result = tmp2(6090);
     }
   }
   obj = { spacing: _handleSave(709).space.PX_16, children: null };
@@ -89,7 +89,7 @@ function ChangeSpendingLimitScreen(teenId) {
     str = "decimal-pad";
   }
   obj3[5] = str;
-  const items2 = [callback(_require(7714).TextInput, obj3), ];
+  const items2 = [callback(_require(7717).TextInput, obj3), ];
   let tmp9Result = null;
   if (isOverspending) {
     const obj4 = { style: null, pointerEvents: "none" };
@@ -112,10 +112,10 @@ function ChangeSpendingLimitScreen(teenId) {
     const obj5 = { children: null };
     items1[2] = null;
     obj1[1] = items1;
-    items[1] = tmp8(tmp2(4926).Stack, obj1);
+    items[1] = tmp8(tmp2(4927).Stack, obj1);
     obj[1] = items;
-    obj5[0] = tmp8(tmp2(4926).Stack, obj);
-    const items3 = [tmp9(tmp2(8708).ModalContent, obj5), ];
+    obj5[0] = tmp8(tmp2(4927).Stack, obj);
+    const items3 = [tmp9(tmp2(8712).ModalContent, obj5), ];
     if (isClearingCap) {
       let obj6 = { variant: "destructive", text: null, onPress: null, disabled: null, loading: null };
       const intl8 = tmp2(1233).intl;
@@ -139,23 +139,23 @@ function ChangeSpendingLimitScreen(teenId) {
     const obj8 = { children: null };
     const obj9 = { children: null };
     const obj10 = { children: null };
-    const items4 = [tmp9(tmp2(4928).Button, obj7), ];
+    const items4 = [tmp9(tmp2(4929).Button, obj7), ];
     const obj11 = { variant: "tertiary", text: null, onPress: null };
     const intl9 = tmp2(1233).intl;
     obj11[1] = intl9.string(tmp2(1233).t["ETE/oC"]);
-    obj11[2] = tmp10(4723).pop;
-    items4[1] = tmp9(tmp2(4928).Button, obj11);
+    obj11[2] = tmp10(4724).pop;
+    items4[1] = tmp9(tmp2(4929).Button, obj11);
     obj10[0] = items4;
-    obj9[0] = tmp8(tmp2(5384).ButtonGroup, obj10);
-    items3[1] = tmp9(tmp2(11722).ModalFooter, obj9);
+    obj9[0] = tmp8(tmp2(5385).ButtonGroup, obj10);
+    items3[1] = tmp9(tmp2(11727).ModalFooter, obj9);
     obj8[0] = items3;
-    return tmp8(tmp2(8707).ModalScreen, obj8);
+    return tmp8(tmp2(8711).ModalScreen, obj8);
   } else if (isOverspending) {
     const obj12 = { style: null, children: null };
     obj12[0] = formatToPlainStringResult.warningRow;
     const obj13 = { size: "xs", color: null };
     obj13[1] = tmp10(709).colors.ICON_FEEDBACK_WARNING;
-    const items5 = [tmp9(tmp2(8751).WarningIcon, obj13), ];
+    const items5 = [tmp9(tmp2(8755).WarningIcon, obj13), ];
     const obj14 = { variant: "text-sm/normal", style: null, children: null };
     obj14[1] = formatToPlainStringResult.warningText;
     const intl6 = tmp2(1233).intl;
@@ -217,5 +217,5 @@ export default function ChangeSpendingLimitModal(teenId) {
   let obj = { initialRouteName: "CHANGE_SPENDING_LIMIT", screens: memo, headerBackTitle: null };
   let intl = teenId(1233).intl;
   obj[2] = intl.string(teenId(1233).t["13/7kX"]);
-  return callback(teenId(11724).Modal, obj);
+  return callback(teenId(11729).Modal, obj);
 };

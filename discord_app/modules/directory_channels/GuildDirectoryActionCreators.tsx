@@ -1,11 +1,11 @@
-// === Module 12106: _addDirectoryGuildEntry ===
+// === Module 12112: _addDirectoryGuildEntry ===
 
-// Module 12106 (_addDirectoryGuildEntry)
+// Module 12112 (_addDirectoryGuildEntry)
 import dispatcherDefault from "dispatcher" /* 706 */;
-import _modDef4713 from "module_4713" /* 4713 */;
+import _modDef4714 from "module_4714" /* 4714 */;
 import importDefaultResult from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "getSearchState" /* 12093 */;
-import { DirectoryEntryCategories } from "DirectoryEntryTypes" /* 12095 */;
+import closure_4 from "getSearchState" /* 12099 */;
+import { DirectoryEntryCategories } from "DirectoryEntryTypes" /* 12101 */;
 import { Endpoints } from "ME" /* 673 */;
 import importDefaultResult1 from "debounce" /* 633 */;
 
@@ -67,7 +67,7 @@ function _addDirectoryGuildEntry() {
               obj1[0] = arg1;
               return obj1;
             } else {
-              let obj7 = callback2(4713);
+              let obj7 = callback2(4714);
               const obj2 = { url: null, body: null, trackedActionData: null, rejectWithError: null };
               obj2[0] = c6.DIRECTORY_CHANNEL_ENTRY(callback, callback2);
               const obj3 = { description: null, primary_category_id: null };
@@ -497,7 +497,7 @@ export const addDirectoryGuildEntry = function addDirectoryGuildEntry(c0, id, c3
   return applyArgumentsResult;
 };
 export const removeDirectoryGuildEntry = function removeDirectoryGuildEntry(channelId, guildId) {
-  let obj = _modDef4713;
+  let obj = _modDef4714;
   obj = { url: Endpoints.DIRECTORY_CHANNEL_ENTRY(channelId, guildId), trackedActionData: null, rejectWithError: true };
   obj = { event: callback(500).NetworkActionNames.DIRECTORY_GUILD_ENTRY_DELETE, properties: obj1 };
   obj[1] = obj;

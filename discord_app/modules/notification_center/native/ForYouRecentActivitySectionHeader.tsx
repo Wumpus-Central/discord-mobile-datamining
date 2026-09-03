@@ -1,6 +1,6 @@
-// === Module 16255: ForYouRecentActivitySectionHeader ===
+// === Module 16274: ForYouRecentActivitySectionHeader ===
 
-// Module 16255 (ForYouRecentActivitySectionHeader)
+// Module 16274 (ForYouRecentActivitySectionHeader)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 709 */;
 import getSystemLocale from "getSystemLocale" /* 1233 */;

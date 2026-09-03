@@ -1,14 +1,14 @@
-// === Module 17716: handleAppStateChanged ===
+// === Module 17740: handleAppStateChanged ===
 
-// Module 17716 (handleAppStateChanged)
+// Module 17740 (handleAppStateChanged)
 import timestampDefault from "timestamp" /* 3 */;
 import isTracingDefault from "isTracing" /* 10 */;
 import dispatcherDefault from "dispatcher" /* 706 */;
 import setSystemTheme from "setSystemTheme" /* 4325 */;
 import createRTCConnection from "createRTCConnection" /* 4554 */;
-import getDeviceMetadata from "getDeviceMetadata" /* 7229 */;
+import getDeviceMetadata from "getDeviceMetadata" /* 7230 */;
 import closure_3 from "fetchFingerprint" /* 1215 */;
-import closure_4 from "getState" /* 7166 */;
+import closure_4 from "getState" /* 7167 */;
 import ME from "ME" /* 673 */;
 
 require = arg1;
@@ -32,7 +32,7 @@ export default function handleAppStateChanged(state) {
     const _default = createRTCConnection.default;
   }
   if (isAuthenticatedResult) {
-    let tmp2Result = tmp2(17715);
+    let tmp2Result = tmp2(17739);
     tmp2Result.deferUpdate();
   }
   if (state === constants2.ACTIVE) {

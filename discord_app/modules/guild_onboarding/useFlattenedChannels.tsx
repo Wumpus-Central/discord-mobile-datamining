@@ -1,6 +1,6 @@
-// === Module 5485: getFlattenedChannels ===
+// === Module 5486: getFlattenedChannels ===
 
-// Module 5485 (getFlattenedChannels)
+// Module 5486 (getFlattenedChannels)
 import closure_3 from "ensureGuildLoaded" /* 1386 */;
 
 const require = arg1;

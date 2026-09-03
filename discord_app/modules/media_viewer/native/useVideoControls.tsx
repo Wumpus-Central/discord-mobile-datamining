@@ -1,6 +1,6 @@
-// === Module 8589: useVideoControls ===
+// === Module 8593: useVideoControls ===
 
-// Module 8589 (useVideoControls)
+// Module 8593 (useVideoControls)
 import batchUpdates from "batchUpdates" /* 702 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;

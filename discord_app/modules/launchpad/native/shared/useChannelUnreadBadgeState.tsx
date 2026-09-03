@@ -1,9 +1,9 @@
-// === Module 16165: useChannelUnreadBadgeState ===
+// === Module 16181: useChannelUnreadBadgeState ===
 
-// Module 16165 (useChannelUnreadBadgeState)
-import closure_2 from "guildHasCommunity" /* 7286 */;
+// Module 16181 (useChannelUnreadBadgeState)
+import closure_2 from "guildHasCommunity" /* 7287 */;
 import closure_3 from "generateOldThreadCutoff" /* 4493 */;
-import closure_4 from "updateUserGuildSettingsInternal" /* 4701 */;
+import closure_4 from "updateUserGuildSettingsInternal" /* 4702 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/launchpad/native/shared/useChannelUnreadBadgeState.tsx");
@@ -31,8 +31,8 @@ export const useChannelUnreadBadgeState = function useChannelUnreadBadgeState(ch
   const stateFromStores = _require(586).useStateFromStores(items1, () => closure_1_2.shouldIndicateNewChannel(user.guild_id, user.id), items2);
   const obj2 = _require(586);
   obj = { unread, resolvedUnreadSetting: null, newChannel: null, optInEnabled: null, mentionCount: null, isMentionLowImportance: null };
-  const optInEnabledForGuild = _require(7289).useOptInEnabledForGuild(channel.guild_id);
-  const obj3 = _require(7289);
+  const optInEnabledForGuild = _require(7290).useOptInEnabledForGuild(channel.guild_id);
+  const obj3 = _require(7290);
   const items3 = [closure_4];
   obj[1] = _require(586).useStateFromStores(items3, () => closure_1_4.resolveUnreadSetting(closure_0));
   obj[2] = stateFromStores;

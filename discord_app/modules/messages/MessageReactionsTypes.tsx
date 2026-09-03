@@ -1,6 +1,6 @@
-// === Module 7517: ReactionTypes ===
+// === Module 7518: ReactionTypes ===
 
-// Module 7517 (ReactionTypes)
+// Module 7518 (ReactionTypes)
 import set from "set" /* 2 */;
 
 const obj = { NORMAL: 0, [0]: "NORMAL", BURST: 1, [1]: "BURST", VOTE: 2, [2]: "VOTE" };

@@ -1,6 +1,6 @@
-// === Module 15535: useManaTextMigrationHighlightRestartNotice ===
+// === Module 15549: useManaTextMigrationHighlightRestartNotice ===
 
-// Module 15535 (useManaTextMigrationHighlightRestartNotice)
+// Module 15549 (useManaTextMigrationHighlightRestartNotice)
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "getUserAgnosticState" /* 4477 */;
 

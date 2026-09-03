@@ -1,14 +1,14 @@
-// === Module 16384: ResourceChannelRow ===
+// === Module 16403: ResourceChannelRow ===
 
-// Module 16384 (ResourceChannelRow)
+// Module 16403 (ResourceChannelRow)
 import ThemesDefault from "Themes" /* 709 */;
-import useResourceChannelsDefault from "useResourceChannels" /* 16378 */;
-import registerAssetDefault from "registerAsset" /* 16386 */;
+import useResourceChannelsDefault from "useResourceChannels" /* 16397 */;
+import registerAssetDefault from "registerAsset" /* 16405 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_6 from "ensureGuildLoaded" /* 1386 */;
 import closure_7 from "comparator" /* 1981 */;
-import closure_8 from "reinjectEphemerals" /* 4735 */;
+import closure_8 from "reinjectEphemerals" /* 4736 */;
 import closure_9 from "getUncachedChannelPermissions" /* 4120 */;
 import ME from "ME" /* 673 */;
 import jsxProd from "jsxProd" /* 21 */;
@@ -31,9 +31,9 @@ function ResourceChannelRow(channelId) {
   const items2 = [closure_8];
   const stateFromStores2 = obj2.useStateFromStores(items2, () => closure_1_8.getMessages(channelId));
   const firstResult = stateFromStores2.first();
-  let obj4 = channelId(7648);
+  let obj4 = channelId(7651);
   const forumPostMediaProperties = obj4.useForumPostMediaProperties(firstResult, false);
-  let obj5 = channelId(7648);
+  let obj5 = channelId(7651);
   let length;
   const firstMediaIsEmbed = obj5.useFirstMediaIsEmbed(firstResult, false);
   if (forumPostMediaProperties != null) {
@@ -43,15 +43,15 @@ function ResourceChannelRow(channelId) {
   if (length > 0) {
     first = forumPostMediaProperties[0];
   }
-  let tmp2Result = tmp2(11804);
+  let tmp2Result = tmp2(11810);
   let flag = tmp2Result.useSharedMediaProps({ channel: stateFromStores, media: first }).shouldObscure;
-  const tmp11 = stateFromStores(16385)(firstResult);
+  const tmp11 = stateFromStores(16404)(firstResult);
   const tmp12 = null != stateFromStores && null == stateFromStores2.first() && !stateFromStores2.loadingMore && !stateFromStores2.ready && !stateFromStores2.hasFetched;
   dependencyMap = tmp12;
   const items3 = [channelId, tmp12];
   const effect = React.useEffect(() => {
     if (dependencyMap) {
-      let obj = stateFromStores(7210);
+      let obj = stateFromStores(7211);
       obj = { channelId: null, after: null, limit: 5 };
       obj[0] = channelId;
       obj[1] = channelId;
@@ -130,7 +130,7 @@ function ResourceChannelRow(channelId) {
               obj9[0] = stateFromStores;
               obj9[1] = first;
               obj9[2] = firstMediaIsEmbed;
-              tmp2Result = tmp2(7648);
+              tmp2Result = tmp2(7651);
               if (flag == null) {
                 flag = false;
               }
@@ -141,14 +141,14 @@ function ResourceChannelRow(channelId) {
               }
               obj9[4] = id;
               obj9[5] = tmp.thumbnail;
-              tmp19Result2 = tmp19(tmp2(11804).ForumPostMediaThumbnail, obj9);
+              tmp19Result2 = tmp19(tmp2(11810).ForumPostMediaThumbnail, obj9);
             }
           }
         }
       }
       items5[2] = tmp19Result2;
       obj[2] = items5;
-      return closure_13(tmp2(5076).PressableOpacity, obj);
+      return closure_13(tmp2(5077).PressableOpacity, obj);
     }
   }
   return null;
@@ -192,7 +192,7 @@ export default function GuildHomeResources(guildId) {
     };
     const intl2 = guildId(1233).intl;
     obj2[1] = intl2.string(guildId(1233).t["3iCBUn"]);
-    items[2] = callback(guildId(4928).Button, obj2);
+    items[2] = callback(guildId(4929).Button, obj2);
     obj[1] = items;
     let tmp6 = callback2(closure_4, obj);
   } else {

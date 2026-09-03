@@ -1,6 +1,6 @@
-// === Module 4751: isMentioned ===
+// === Module 4752: isMentioned ===
 
-// Module 4751 (isMentioned)
+// Module 4752 (isMentioned)
 import closure_0 from "ensureGuildLoaded" /* 1386 */;
 import closure_1 from "trackCommunicationDisabled" /* 1991 */;
 import closure_2 from "createGuildRecordFromRust" /* 1908 */;

@@ -1,25 +1,25 @@
-// === Module 10873: handleVoiceOrStageChannelConnectPress ===
+// === Module 10877: handleVoiceOrStageChannelConnectPress ===
 
-// Module 10873 (handleVoiceOrStageChannelConnectPress)
+// Module 10877 (handleVoiceOrStageChannelConnectPress)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "noop" /* 19 */;
-import { SafetyWarningTypes } from "handleConnectionOpen" /* 10874 */;
-import closure_6 from "initialize" /* 6183 */;
+import { SafetyWarningTypes } from "handleConnectionOpen" /* 10878 */;
+import closure_6 from "initialize" /* 6184 */;
 import closure_7 from "handleStageInstanceCreateOrUpdate" /* 1391 */;
-import closure_8 from "handleThreadCreateOrUpdate" /* 5457 */;
+import closure_8 from "handleThreadCreateOrUpdate" /* 5458 */;
 import createChannelRecord from "createChannelRecord" /* 1390 */;
-import closure_13 from "incrementVersion" /* 5493 */;
+import closure_13 from "incrementVersion" /* 5494 */;
 import closure_14 from "ensureGuildLoaded" /* 1386 */;
-import closure_15 from "handleConnectionOpen" /* 7281 */;
+import closure_15 from "handleConnectionOpen" /* 7282 */;
 import closure_16 from "createGuildRecordFromRust" /* 1908 */;
 import closure_17 from "getUncachedChannelPermissions" /* 4120 */;
 import closure_18 from "generateOldThreadCutoff" /* 4493 */;
 import closure_19 from "markAllUserIdListsStale" /* 4130 */;
 import closure_20 from "handleConnectionOpen" /* 1980 */;
-import closure_21 from "updateUserGuildSettingsInternal" /* 4701 */;
+import closure_21 from "updateUserGuildSettingsInternal" /* 4702 */;
 import closure_22 from "mergeGuildAvatar" /* 1921 */;
 import ME from "ME" /* 673 */;
-import { ChannelDetailsNavigatorScreens as closure_32 } from "ChannelDetailsNavigatorScreens" /* 10875 */;
+import { ChannelDetailsNavigatorScreens as closure_32 } from "ChannelDetailsNavigatorScreens" /* 10879 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;

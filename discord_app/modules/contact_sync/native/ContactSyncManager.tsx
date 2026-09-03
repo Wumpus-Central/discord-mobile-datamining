@@ -1,13 +1,13 @@
-// === Module 12443: _requestAndSyncContacts ===
+// === Module 12455: _requestAndSyncContacts ===
 
-// Module 12443 (_requestAndSyncContacts)
+// Module 12455 (_requestAndSyncContacts)
 import Storage3 from "Storage" /* 592 */;
-import initializeDefault from "initialize" /* 5494 */;
+import initializeDefault from "initialize" /* 5495 */;
 import closure_2 from "asyncGeneratorStep" /* 5 */;
-import closure_3 from "set" /* 5233 */;
+import closure_3 from "set" /* 5234 */;
 import closure_4 from "mergeGuildAvatar" /* 1921 */;
-import setStoredContacts from "setStoredContacts" /* 12441 */;
-import { ContactPermissions } from "ContactSyncLandingPage" /* 12440 */;
+import setStoredContacts from "setStoredContacts" /* 12453 */;
+import { ContactPermissions } from "ContactSyncLandingPage" /* 12452 */;
 import { PlatformTypes } from "ME" /* 673 */;
 
 require = arg1;

@@ -1,6 +1,6 @@
-// === Module 15063: GuildRoleSubscriptionMemberPreview ===
+// === Module 15078: GuildRoleSubscriptionMemberPreview ===
 
-// Module 15063 (GuildRoleSubscriptionMemberPreview)
+// Module 15078 (GuildRoleSubscriptionMemberPreview)
 import noopAll from "noop" /* 19 */;
 import initialize from "initialize" /* 586 */;
 import int2hslRawAll from "int2hslRaw" /* 685 */;
@@ -50,21 +50,21 @@ export const GuildRoleSubscriptionMemberPreview = function GuildRoleSubscription
       avatarURL = tmp6Result.getDefaultAvatarURL(undefined, undefined);
     }
     const source = tmp6Result.makeSource(avatarURL);
-    const roleIconData = tmp4(5986).getRoleIconData(role, 16);
+    const roleIconData = tmp4(5987).getRoleIconData(role, 16);
     obj = { style: null, children: null };
     const items1 = [tmp3.container, style];
     obj[0] = items1;
     obj = { style: null, source: null };
     obj[0] = tmp3.avatar;
     obj[1] = source;
-    const items2 = [callback(tmp6(5501), obj), ];
+    const items2 = [callback(tmp6(5502), obj), ];
     obj1 = { style: null, children: null };
     obj1[0] = tmp3.content;
     const obj2 = { style: null, children: null };
     obj2[0] = tmp3.contextRow;
     const obj3 = { variant: "text-md/semibold", color: "interactive-text-active", style: null, children: null };
     const obj4 = { color: null };
-    const tmp4Result = tmp4(5986);
+    const tmp4Result = tmp4(5987);
     obj4[0] = int2hslRawAll.int2hex(role.color);
     obj3[2] = obj4;
     obj3[3] = tmp8;
@@ -83,11 +83,11 @@ export const GuildRoleSubscriptionMemberPreview = function GuildRoleSubscription
       const obj7 = { children: null };
       obj5[1] = tmp19;
       obj5[2] = roleIconData.unicodeEmoji;
-      items4[1] = tmp14(tmp6(5987), obj5);
+      items4[1] = tmp14(tmp6(5988), obj5);
       obj7[0] = items4;
       tmp12Result = tmp12(closure_7, obj7);
       const tmp17 = closure_7;
-      const tmp6Result1 = tmp6(5987);
+      const tmp6Result1 = tmp6(5988);
     }
     items3[1] = tmp12Result;
     items3[2] = callback(tmp4(1296).Spacer, { size: 8 });

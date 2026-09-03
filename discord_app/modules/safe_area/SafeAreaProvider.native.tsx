@@ -1,6 +1,6 @@
-// === Module 14455: SafeAreaReporter ===
+// === Module 14471: SafeAreaReporter ===
 
-// Module 14455 (SafeAreaReporter)
+// Module 14471 (SafeAreaReporter)
 import EMPTY_SAFE_AREA_INSETS from "EMPTY_SAFE_AREA_INSETS" /* 1629 */;
 import _mod1630 from "module_1630" /* 1630 */;
 import closure_3 from "noop" /* 19 */;

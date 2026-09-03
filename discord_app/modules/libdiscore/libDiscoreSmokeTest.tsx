@@ -1,6 +1,6 @@
-// === Module 17740: libDiscoreSmokeTest ===
+// === Module 17764: libDiscoreSmokeTest ===
 
-// Module 17740 (libDiscoreSmokeTest)
+// Module 17764 (libDiscoreSmokeTest)
 import timestampDefault from "timestamp" /* 3 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 695 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;

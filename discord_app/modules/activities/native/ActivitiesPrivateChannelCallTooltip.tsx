@@ -1,6 +1,6 @@
-// === Module 12542: ActivitiesPrivateChannelCallTooltip ===
+// === Module 12554: ActivitiesPrivateChannelCallTooltip ===
 
-// Module 12542 (ActivitiesPrivateChannelCallTooltip)
+// Module 12554 (ActivitiesPrivateChannelCallTooltip)
 import noopAll from "noop" /* 19 */;
 import _modDef4217 from "module_4217" /* 4217 */;
 import { View } from "get ActivityIndicator" /* 17 */;
@@ -62,7 +62,7 @@ export default function ActivitiesPrivateChannelCallTooltip(onClosePress) {
   const intl3 = tmp2(1233).intl;
   obj4[0] = intl3.string(num(1233).t["NX+WJN"]);
   obj4[1] = onClosePress.onClosePress;
-  obj3[1] = jsx(num(4928).Button, { text: null, onPress: null, variant: "secondary", size: "sm", grow: true });
+  obj3[1] = jsx(num(4929).Button, { text: null, onPress: null, variant: "secondary", size: "sm", grow: true });
   obj1[5] = <View style={tmp.closeButtonWrapper}>{null}</View>;
   obj[1] = jsx(num(1296).Tooltip, { containerStyle: tmp.tooltip, labelStyle: tmp.tooltipText, arrowStyle: items2, label: null, title: null, children: null });
   return jsx(_modDef4217.View, { style: items1, children: null });

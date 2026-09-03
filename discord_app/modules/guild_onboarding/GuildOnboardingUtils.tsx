@@ -1,18 +1,18 @@
-// === Module 5482: isChattableChannel ===
+// === Module 5483: isChattableChannel ===
 
-// Module 5482 (isChattableChannel)
+// Module 5483 (isChattableChannel)
 import shallowEqualDefault from "shallowEqual" /* 640 */;
 import hasFlagAll from "hasFlag" /* 1398 */;
 import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1470 */;
 import applyOverwritesAll from "applyOverwrites" /* 4125 */;
-import useCanChannelBeDefault from "useCanChannelBeDefault" /* 5477 */;
+import useCanChannelBeDefault from "useCanChannelBeDefault" /* 5478 */;
 import closure_4 from "ensureGuildLoaded" /* 1386 */;
-import closure_5 from "set" /* 5233 */;
+import closure_5 from "set" /* 5234 */;
 import closure_6 from "comparator" /* 1981 */;
 import { GUILD_SELECTABLE_CHANNELS_KEY as closure_7 } from "comparator" /* 1981 */;
 import closure_8 from "createGuildRecordFromRust" /* 1908 */;
 import closure_9 from "getUncachedChannelPermissions" /* 4120 */;
-import { OnboardingConnectionType } from "serverPromptToClientPrompt" /* 5476 */;
+import { OnboardingConnectionType } from "serverPromptToClientPrompt" /* 5477 */;
 import ME from "ME" /* 673 */;
 import { GuildMemberFlags } from "GuildMemberFlags" /* 4108 */;
 

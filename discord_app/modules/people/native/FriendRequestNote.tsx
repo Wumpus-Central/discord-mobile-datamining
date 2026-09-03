@@ -1,6 +1,6 @@
-// === Module 12832: FriendRequestNote ===
+// === Module 12844: FriendRequestNote ===
 
-// Module 12832 (FriendRequestNote)
+// Module 12844 (FriendRequestNote)
 import ThemesDefault from "Themes" /* 709 */;
 import closure_2 from "_slicedToArray" /* 32 */;
 import closure_3 from "noop" /* 19 */;

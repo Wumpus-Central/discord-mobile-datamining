@@ -1,6 +1,6 @@
-// === Module 14883: BouncingArrow ===
+// === Module 14898: BouncingArrow ===
 
-// Module 14883 (BouncingArrow)
+// Module 14898 (BouncingArrow)
 import ThemesDefault from "Themes" /* 709 */;
 import _modDef4217 from "module_4217" /* 4217 */;
 import closure_3 from "noop" /* 19 */;
@@ -60,7 +60,7 @@ export default function BountiesAutoScrollIndicator(showProgressRing) {
   let obj = _require(4197);
   const token = obj.useToken(ThemesDefault.colors.WHITE);
   obj = { size: "md", color: ThemesDefault.colors.WHITE };
-  const tmp6 = callback(_require(14884).ArrowSmallUpIcon, obj);
+  const tmp6 = callback(_require(14899).ArrowSmallUpIcon, obj);
   _require = tmp6;
   obj = { style: tmp.root, children: null };
   obj1 = { variant: "text-md/semibold", color: "text-default", children: null };
@@ -75,7 +75,7 @@ export default function BountiesAutoScrollIndicator(showProgressRing) {
     obj3[8] = function children() {
       return closure_0;
     };
-    let tmp5Result = tmp5(_require(14886).AnimatedCircularProgress, obj3);
+    let tmp5Result = tmp5(_require(14901).AnimatedCircularProgress, obj3);
   } else {
     const obj4 = { children: null };
     obj4[0] = tmp6;

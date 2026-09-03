@@ -1,24 +1,24 @@
-// === Module 16220: goBack ===
+// === Module 16239: goBack ===
 
-// Module 16220 (goBack)
+// Module 16239 (goBack)
 import ThemesDefault from "Themes" /* 709 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
 import getGuildThemeNameDefault from "getGuildThemeName" /* 4328 */;
 import getRootNavigationRef from "getRootNavigationRef" /* 4333 */;
-import getMixedGradientColorDefault from "getMixedGradientColor" /* 5078 */;
-import useNavigatorBackPressHandler from "useNavigatorBackPressHandler" /* 5509 */;
-import Layer from "Layer" /* 5948 */;
-import context from "context" /* 5961 */;
-import contextDefault from "context" /* 5961 */;
-import QUICK_SWITCHERDefault from "QUICK_SWITCHER" /* 5981 */;
-import useIsWindowLargeDefault from "useIsWindowLarge" /* 7727 */;
-import TTIFirstContentfulPaint from "TTIFirstContentfulPaint" /* 11686 */;
-import CoachmarkImgDefault from "CoachmarkImg" /* 16221 */;
-import NotificationCenterBannerImplDefault from "NotificationCenterBannerImpl" /* 16229 */;
-import YouBarNavigatorScreens2 from "YouBarNavigatorScreens" /* 16230 */;
+import getMixedGradientColorDefault from "getMixedGradientColor" /* 5079 */;
+import useNavigatorBackPressHandler from "useNavigatorBackPressHandler" /* 5510 */;
+import Layer from "Layer" /* 5949 */;
+import context from "context" /* 5962 */;
+import contextDefault from "context" /* 5962 */;
+import QUICK_SWITCHERDefault from "QUICK_SWITCHER" /* 5982 */;
+import useIsWindowLargeDefault from "useIsWindowLarge" /* 7730 */;
+import TTIFirstContentfulPaint from "TTIFirstContentfulPaint" /* 11698 */;
+import CoachmarkImgDefault from "CoachmarkImg" /* 16240 */;
+import NotificationCenterBannerImplDefault from "NotificationCenterBannerImpl" /* 16248 */;
+import YouBarNavigatorScreens2 from "YouBarNavigatorScreens" /* 16249 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import { YouBarNavigatorScreens } from "MODE_CHANGE_PHYSICS" /* 11051 */;
+import { YouBarNavigatorScreens } from "MODE_CHANGE_PHYSICS" /* 11055 */;
 import { ContentDismissActionType } from "ContentDismissActionType" /* 1383 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
@@ -46,7 +46,7 @@ class Notifications {
     }
     tmp = closure_10();
     tmp2 = require("context");
-    layoutEffect = closure_3.useLayoutEffect(() => callback(7229).trackAppUIViewed(), []);
+    layoutEffect = closure_3.useLayoutEffect(() => callback(7230).trackAppUIViewed(), []);
     callback = closure_3.useCallback(() => {
       const navigation = callback(4333).getRootNavigationRef();
       if (null != navigation) {
@@ -146,7 +146,7 @@ let closure_12 = importAllResult.memo(function HeaderInner(nestedInLaunchPad) {
   nestedInLaunchPad = nestedInLaunchPad.nestedInLaunchPad;
   let _require;
   const tmp = callback3();
-  let obj = _require(7609);
+  let obj = _require(7610);
   const isForLaterExperimentOn = obj.useIsForLaterExperimentOn("NativeNotifications");
   const ref = importAllResult.useRef(null);
   const tmp8 = CoachmarkImgDefault(ref);
@@ -167,8 +167,8 @@ let closure_12 = importAllResult.memo(function HeaderInner(nestedInLaunchPad) {
     const intl = tmp5(1233).intl;
     obj1[1] = intl.string(tmp5(1233).t["13/7kX"]);
     obj1[2] = goBack;
-    obj1[3] = tmp12(tmp5(16222).LeftBackIconWithBadge, {});
-    const items1 = [tmp12(tmp5(5076).PressableOpacity, obj1), , ];
+    obj1[3] = tmp12(tmp5(16241).LeftBackIconWithBadge, {});
+    const items1 = [tmp12(tmp5(5077).PressableOpacity, obj1), , ];
     const obj2 = { color: "mobile-text-heading-primary", variant: "heading-lg/bold", style: null, maxFontSizeMultiplier: 1.75, accessibilityRole: "header", children: null };
     obj2[2] = tmp.headerText;
     const intl2 = tmp5(1233).intl;
@@ -181,19 +181,19 @@ let closure_12 = importAllResult.memo(function HeaderInner(nestedInLaunchPad) {
       const obj4 = { children: null };
       const obj5 = { ref: null, type: null, onOpen: null };
       obj5[0] = ref;
-      let tmp2Result = tmp2(16223);
-      obj5[1] = tmp5(7614).SavedMessageSortTypes.BOOKMARK;
+      let tmp2Result = tmp2(16242);
+      obj5[1] = tmp5(7615).SavedMessageSortTypes.BOOKMARK;
       obj5[2] = callback;
       const items2 = [tmp12(tmp2Result, obj5), ];
       const obj6 = { type: null, onOpen: null };
-      tmp2Result = tmp2(16223);
-      obj6[0] = tmp5(7614).SavedMessageSortTypes.REMINDER;
+      tmp2Result = tmp2(16242);
+      obj6[0] = tmp5(7615).SavedMessageSortTypes.REMINDER;
       obj6[1] = callback;
       items2[1] = tmp12(tmp2Result, obj6);
       obj4[0] = items2;
       tmp10Result = tmp10(closure_8, obj4);
     }
-    const items3 = [tmp10Result, tmp12(tmp2(16225), {})];
+    const items3 = [tmp10Result, tmp12(tmp2(16244), {})];
     obj3[1] = items3;
     items1[2] = tmp10(tmp11, obj3);
     obj[1] = items1;
@@ -201,7 +201,7 @@ let closure_12 = importAllResult.memo(function HeaderInner(nestedInLaunchPad) {
   }
   const obj7 = { children: null };
   obj[1] = tmp10Result;
-  const items4 = [closure_7(_require(5561).SafeAreaPaddingView, obj), ];
+  const items4 = [closure_7(_require(5562).SafeAreaPaddingView, obj), ];
   const items5 = [tmp.headerBorder];
   items4[1] = closure_7(View, { style: items5 });
   obj7[0] = items4;

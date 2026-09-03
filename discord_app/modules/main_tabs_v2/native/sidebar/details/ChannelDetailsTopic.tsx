@@ -1,11 +1,11 @@
-// === Module 16545: GuildChannelDetailsTopic ===
+// === Module 16566: GuildChannelDetailsTopic ===
 
-// Module 16545 (GuildChannelDetailsTopic)
+// Module 16566 (GuildChannelDetailsTopic)
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_7 from "mergeGuildAvatar" /* 1921 */;
-import ChannelDetailsNavigatorScreens from "ChannelDetailsNavigatorScreens" /* 10875 */;
+import ChannelDetailsNavigatorScreens from "ChannelDetailsNavigatorScreens" /* 10879 */;
 import { VerticalGradient } from "ME" /* 673 */;
 import jsxProd from "jsxProd" /* 21 */;
 import set from "set" /* 1234 */;

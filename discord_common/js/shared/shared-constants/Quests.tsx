@@ -1,6 +1,6 @@
-// === Module 5397: Quests ===
+// === Module 5398: Quests ===
 
-// Module 5397 (Quests)
+// Module 5398 (Quests)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/Quests.tsx");

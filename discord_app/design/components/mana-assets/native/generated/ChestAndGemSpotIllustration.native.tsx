@@ -1,10 +1,10 @@
-// === Module 6408: ChestAndGemSpotIllustration ===
+// === Module 6409: ChestAndGemSpotIllustration ===
 
-// Module 6408 (ChestAndGemSpotIllustration)
+// Module 6409 (ChestAndGemSpotIllustration)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5501 */;
-import metadataDefault from "metadata" /* 6409 */;
+import preloadDefault from "preload" /* 5502 */;
+import metadataDefault from "metadata" /* 6410 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/ChestAndGemSpotIllustration.native.tsx");

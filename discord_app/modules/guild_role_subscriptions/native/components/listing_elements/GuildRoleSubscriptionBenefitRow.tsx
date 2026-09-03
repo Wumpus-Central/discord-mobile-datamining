@@ -1,11 +1,11 @@
-// === Module 15067: BenefitRow ===
+// === Module 15082: BenefitRow ===
 
-// Module 15067 (BenefitRow)
+// Module 15082 (BenefitRow)
 import noopAll from "noop" /* 19 */;
 import Button from "Button" /* 1296 */;
 import parseRawEmojiObjectDefault from "parseRawEmojiObject" /* 4134 */;
 import Text from "Text" /* 4474 */;
-import EmojiIconDefault from "EmojiIcon" /* 15065 */;
+import EmojiIconDefault from "EmojiIcon" /* 15080 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_4 from "ensureGuildLoaded" /* 1386 */;
 import jsxProd from "jsxProd" /* 21 */;
@@ -55,14 +55,14 @@ export const ChannelBenefitRow = function ChannelBenefitRow(benefit) {
     obj1 = { style: null, size: null, source: null };
     obj1[0] = tmp.channelIcon;
     obj1[1] = tmp2(1296).Icon.Sizes.CUSTOM;
-    obj1[2] = tmp2(4981).getChannelIcon(stateFromStores);
+    obj1[2] = tmp2(4982).getChannelIcon(stateFromStores);
     const items2 = [tmp7(tmp2(1296).Icon, obj1), ];
     const obj2 = { variant: "text-md/medium", color: "mobile-text-heading-primary", children: null };
     obj2[2] = tmp6;
     items2[1] = tmp7(tmp2(4474).Text, obj2);
     obj[1] = items2;
     tmp8 = callback2(View, obj);
-    const tmp2Result = tmp2(4981);
+    const tmp2Result = tmp2(4982);
   }
   if (null != benefit.emoji_id) {
     let str = benefit.emoji_id;

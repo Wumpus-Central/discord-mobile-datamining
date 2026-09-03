@@ -1,20 +1,20 @@
-// === Module 16278: ContentSettingsControl ===
+// === Module 16297: ContentSettingsControl ===
 
-// Module 16278 (ContentSettingsControl)
+// Module 16297 (ContentSettingsControl)
 import ThemesDefault from "Themes" /* 709 */;
 import getSystemLocale from "getSystemLocale" /* 1233 */;
 import Button from "Button" /* 1296 */;
-import generateHydrationId from "generateHydrationId" /* 8636 */;
-import useSegmentedControlState from "useSegmentedControlState" /* 9273 */;
-import SegmentedControl from "SegmentedControl" /* 9784 */;
-import registerAssetDefault from "registerAsset" /* 16279 */;
-import registerAssetDefault2 from "registerAsset" /* 16280 */;
-import registerAssetDefault3 from "registerAsset" /* 16281 */;
+import generateHydrationId from "generateHydrationId" /* 8640 */;
+import useSegmentedControlState from "useSegmentedControlState" /* 9277 */;
+import SegmentedControl from "SegmentedControl" /* 9788 */;
+import registerAssetDefault from "registerAsset" /* 16298 */;
+import registerAssetDefault2 from "registerAsset" /* 16299 */;
+import registerAssetDefault3 from "registerAsset" /* 16300 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "updateUserGuildSettingsInternal" /* 4701 */;
-import closure_7 from "filterStaffGuild" /* 8621 */;
+import closure_6 from "updateUserGuildSettingsInternal" /* 4702 */;
+import closure_7 from "filterStaffGuild" /* 8625 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -82,7 +82,7 @@ function ContentSettingsControl(initialValue) {
   let num = 0;
   if (generateHydrationId.ICYMICustomScore.LESS !== tmp3) {
     num = 1;
-    if (tmp4(8636).ICYMICustomScore.MORE === tmp3) {
+    if (tmp4(8640).ICYMICustomScore.MORE === tmp3) {
       num = 2;
     }
   }
@@ -124,10 +124,10 @@ export const GuildScoreSettings = function GuildScoreSettings(guild) {
   let obj = id(586);
   const items = [closure_7];
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_7.getCustomGuildScore(id));
-  obj1 = id(8636);
+  obj1 = id(8640);
   const numberToCustomScoreResult = obj1.numberToCustomScore(stateFromStores);
   c1 = numberToCustomScoreResult;
-  const tmp5 = numberToCustomScoreResult === id(8636).ICYMICustomScore.MUTED;
+  const tmp5 = numberToCustomScoreResult === id(8640).ICYMICustomScore.MUTED;
   const items1 = [id];
   const items2 = [numberToCustomScoreResult, id];
   const callback = React.useCallback((arg0) => {
@@ -183,7 +183,7 @@ export const GuildScoreSettings = function GuildScoreSettings(guild) {
   const obj6 = { value: !tmp5, onValueChange: callback, label: null, start: true, end: true };
   const intl3 = tmp(1233).intl;
   obj6[2] = intl3.string(id(1233).t.oujX73);
-  obj5[1] = callback2(id(6001).TableSwitchRow, obj6);
+  obj5[1] = callback2(id(6002).TableSwitchRow, obj6);
   items3[3] = callback2(View, obj5);
   const obj7 = { variant: "text-xs/normal", color: "text-muted", style: tmp8.warningText, children: null };
   const intl4 = tmp(1233).intl;

@@ -1,13 +1,13 @@
-// === Module 16476: ChannelContentComponent ===
+// === Module 16497: ChannelContentComponent ===
 
-// Module 16476 (ChannelContentComponent)
-import isRoleRequiredDefault from "isRoleRequired" /* 5015 */;
-import getLayoutStyles from "getLayoutStyles" /* 10224 */;
-import SubscriptionGatedChannelIconDefault from "SubscriptionGatedChannelIcon" /* 15938 */;
-import _modDef16477 from "module_16477" /* 16477 */;
+// Module 16497 (ChannelContentComponent)
+import isRoleRequiredDefault from "isRoleRequired" /* 5016 */;
+import getLayoutStyles from "getLayoutStyles" /* 10228 */;
+import SubscriptionGatedChannelIconDefault from "SubscriptionGatedChannelIcon" /* 15954 */;
+import _modDef16498 from "module_16498" /* 16498 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import { UnreadSetting } from "ReadStateTypes" /* 4702 */;
+import { UnreadSetting } from "ReadStateTypes" /* 4703 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 import set from "set" /* 1234 */;
@@ -56,7 +56,7 @@ function ChannelContentComponent(arg0) {
   obj3[3] = resolvedUnreadSetting;
   obj3[4] = connected;
   obj3[5] = layout;
-  const items1 = [closure_6(_modDef16477, obj3), ];
+  const items1 = [closure_6(_modDef16498, obj3), ];
   let tmp12Result = tmp10Result;
   if (!tmp10Result) {
     tmp12Result = isNSFWResult;
@@ -78,13 +78,13 @@ function ChannelContentComponent(arg0) {
     if (tmp10Result) {
       const obj6 = { size: "xxs", color: "icon-muted", style: null };
       obj6[2] = tmp.channelTraitIcon;
-      tmp10Result = tmp10(tmp2(5048).LockIcon, obj6);
+      tmp10Result = tmp10(tmp2(5049).LockIcon, obj6);
     }
     const items3 = [tmp10Result, , ];
     if (isNSFWResult) {
       const obj7 = { size: "xxs", color: "icon-muted", style: null };
       obj7[2] = tmp.channelTraitIcon;
-      isNSFWResult = tmp10(tmp2(8751).WarningIcon, obj7);
+      isNSFWResult = tmp10(tmp2(8755).WarningIcon, obj7);
     }
     items3[1] = isNSFWResult;
     if (isSubscriptionGated) {

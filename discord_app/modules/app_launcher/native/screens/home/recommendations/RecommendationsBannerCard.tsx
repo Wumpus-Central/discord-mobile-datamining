@@ -1,6 +1,6 @@
-// === Module 11886: RecommendationsBannerCard ===
+// === Module 11892: RecommendationsBannerCard ===
 
-// Module 11886 (RecommendationsBannerCard)
+// Module 11892 (RecommendationsBannerCard)
 import ThemesDefault from "Themes" /* 709 */;
 import getAvatarURLDefault from "getAvatarURL" /* 1430 */;
 import closure_3 from "noop" /* 19 */;
@@ -37,10 +37,10 @@ export default function RecommendationsBannerCard(application) {
   }
   const tmp = callback2();
   if (!showsPromoted) {
-    let obj = application(8153);
+    let obj = application(8157);
     showsPromoted = obj.isPromotedApplication(application);
   }
-  obj1 = application(8153);
+  obj1 = application(8157);
   const shelfBadgeTypeIfActive = obj1.getShelfBadgeTypeIfActive(application);
   let bot = application.bot;
   let id;
@@ -69,7 +69,7 @@ export default function RecommendationsBannerCard(application) {
     obj[2] = onPress;
     obj[3] = isFirst;
     obj[4] = isLast;
-    let tmp12Result = callback(tmp4(11878).BaseAppRow, obj);
+    let tmp12Result = callback(tmp4(11884).BaseAppRow, obj);
   } else {
     const items1 = [tmp.container, , ];
     let num = 8;
@@ -92,8 +92,8 @@ export default function RecommendationsBannerCard(application) {
     obj3[0] = tmp.banner;
     const obj4 = { applicationBot: null, applicationEmbedded: null, applicationId: null, applicationIcon: null, overrideImageUrl: null };
     obj4[0] = application.bot;
-    const tmp10Result = tmp10(11887);
-    obj4[1] = tmp4(8153).isEmbeddedApp(application);
+    const tmp10Result = tmp10(11893);
+    obj4[1] = tmp4(8157).isEmbeddedApp(application);
     ({ id: obj8[2], icon } = application);
     obj4[3] = icon;
     obj4[4] = application.overrideImageUrl;
@@ -104,7 +104,7 @@ export default function RecommendationsBannerCard(application) {
       const obj6 = { labelType: null, replacementStyles: null };
       obj6[0] = shelfBadgeTypeIfActive;
       obj6[1] = tmp.badge;
-      const items3 = [tmp14(tmp10(11881), obj6), ];
+      const items3 = [tmp14(tmp10(11887), obj6), ];
       if (showsPromoted) {
         const obj7 = { style: null, children: null };
         obj7[0] = tmp.promotedLabelWrapper;
@@ -130,7 +130,7 @@ export default function RecommendationsBannerCard(application) {
       const obj10 = { iconSource: null, iconSize: 36, wrapperStyle: null };
       obj10[0] = applicationIconSource;
       obj10[2] = tmp.appIconContainer;
-      tmp14Result = tmp14(tmp10(11851), obj10);
+      tmp14Result = tmp14(tmp10(11857), obj10);
     }
     const items5 = [tmp14Result, , ];
     const obj11 = { style: null, children: null };
@@ -143,12 +143,12 @@ export default function RecommendationsBannerCard(application) {
     items6[1] = callback(tmp4(4474).Text, obj13);
     obj11[1] = items6;
     items5[1] = closure_7(View, obj11);
-    items5[2] = callback(tmp4(5614).TableRowArrow, {});
+    items5[2] = callback(tmp4(5615).TableRowArrow, {});
     obj9[1] = items5;
     items4[1] = closure_7(View, obj9);
     obj2[2] = items4;
-    tmp12Result = tmp12(tmp4(5076).PressableOpacity, obj2);
-    const tmp4Result = tmp4(8153);
+    tmp12Result = tmp12(tmp4(5077).PressableOpacity, obj2);
+    const tmp4Result = tmp4(8157);
   }
   return tmp12Result;
 };

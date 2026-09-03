@@ -1,9 +1,9 @@
-// === Module 13110: createVoiceChannelLinkEmbed ===
+// === Module 13122: createVoiceChannelLinkEmbed ===
 
-// Module 13110 (createVoiceChannelLinkEmbed)
+// Module 13122 (createVoiceChannelLinkEmbed)
 import getSystemLocale from "getSystemLocale" /* 1233 */;
 import set from "set" /* 1234 */;
-import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 7863 */;
+import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 7866 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import { Image } from "get ActivityIndicator" /* 17 */;
 import { getGuildAcronym } from "GuildNSFWContentLevel" /* 1429 */;
@@ -13,7 +13,7 @@ import closure_8 from "getUncachedChannelPermissions" /* 4120 */;
 import closure_9 from "markAllUserIdListsStale" /* 4130 */;
 import closure_10 from "mergeGuildAvatar" /* 1921 */;
 import { Permissions } from "ME" /* 673 */;
-import { InviteTypes } from "InviteSendStates" /* 7491 */;
+import { InviteTypes } from "InviteSendStates" /* 7492 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/coded_links/VoiceChannelLinkEmbed.tsx");
@@ -71,7 +71,7 @@ export const createVoiceChannelLinkEmbed = function createVoiceChannelLinkEmbed(
             obj.acceptLabelText = stringResult;
             obj.onlineText = undefined;
             obj.memberText = undefined;
-            let tmp16Result = tmp16(4981);
+            let tmp16Result = tmp16(4982);
             const assetSource = Image.resolveAssetSource(tmp16Result.getChannelIcon(channel));
             let uri;
             if (assetSource != null) {

@@ -1,10 +1,10 @@
-// === Module 17674: updateRegion ===
+// === Module 17694: updateRegion ===
 
-// Module 17674 (updateRegion)
+// Module 17694 (updateRegion)
 import setDefault from "set" /* 684 */;
 import mergeGuildAvatarDefault from "mergeGuildAvatar" /* 1921 */;
 import watchStream from "watchStream" /* 4663 */;
-import initializeDefault from "initialize" /* 5494 */;
+import initializeDefault from "initialize" /* 5495 */;
 import closure_3 from "reset" /* 4500 */;
 import closure_4 from "fetchFingerprint" /* 1215 */;
 import closure_5 from "ensureGuildLoaded" /* 1386 */;

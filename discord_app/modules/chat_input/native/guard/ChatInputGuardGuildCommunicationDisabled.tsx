@@ -1,10 +1,10 @@
-// === Module 12249: ? ===
+// === Module 12261: ? ===
 
-// Module 12249
+// Module 12261
 import getSystemLocale from "getSystemLocale" /* 1233 */;
-import ClockWarningIcon from "ClockWarningIcon" /* 11649 */;
-import ChatInputGuardDefault from "ChatInputGuard" /* 12236 */;
-import useCommunicationDisabledCountdownCleanup from "useCommunicationDisabledCountdownCleanup" /* 12250 */;
+import ClockWarningIcon from "ClockWarningIcon" /* 11654 */;
+import ChatInputGuardDefault from "ChatInputGuard" /* 12248 */;
+import useCommunicationDisabledCountdownCleanup from "useCommunicationDisabledCountdownCleanup" /* 12262 */;
 import { GUILD_COMMUNICATION_DISABLED_RESOURCE_LINK as closure_3 } from "getFriendlyDurationString" /* 1993 */;
 import { jsx } from "jsxProd" /* 21 */;
 import importAllResult from "noop" /* 19 */;

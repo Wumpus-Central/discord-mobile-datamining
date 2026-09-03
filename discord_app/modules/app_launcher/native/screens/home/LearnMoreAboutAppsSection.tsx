@@ -1,12 +1,12 @@
-// === Module 11890: LearnMoreAboutAppsSection ===
+// === Module 11896: LearnMoreAboutAppsSection ===
 
-// Module 11890 (LearnMoreAboutAppsSection)
+// Module 11896 (LearnMoreAboutAppsSection)
 import ThemesDefault from "Themes" /* 709 */;
 import getSystemLocale from "getSystemLocale" /* 1233 */;
 import Text from "Text" /* 4474 */;
-import PressableBase from "PressableBase" /* 5076 */;
-import AppLauncherEntrypoint from "AppLauncherEntrypoint" /* 8444 */;
-import TrackSectionHeaderDefault from "TrackSectionHeader" /* 11891 */;
+import PressableBase from "PressableBase" /* 5077 */;
+import AppLauncherEntrypoint from "AppLauncherEntrypoint" /* 8448 */;
+import TrackSectionHeaderDefault from "TrackSectionHeader" /* 11897 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { HelpdeskArticles } from "ME" /* 673 */;

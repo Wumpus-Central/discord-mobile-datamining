@@ -1,6 +1,6 @@
-// === Module 6083: handleUserSettingsStoreUpdate ===
+// === Module 6084: handleUserSettingsStoreUpdate ===
 
-// Module 6083 (handleUserSettingsStoreUpdate)
+// Module 6084 (handleUserSettingsStoreUpdate)
 import initializeDefault from "initialize" /* 586 */;
 import dispatcherDefault from "dispatcher" /* 706 */;
 import closure_1 from "_getSystemLocale" /* 1995 */;
@@ -392,7 +392,7 @@ const socialLayerStorefrontStore = new SocialLayerStorefrontStore(dispatcherDefa
       const merged7 = Object.assign(obj9);
       obj9 = obj5;
     } else {
-      obj = { state: "error", fetchedAt: null, storefront: "r" };
+      obj = { state: "error", fetchedAt: null, storefront: "Boolean" };
       const _Date = Date;
       obj[1] = Date.now();
       if (null != guildId) {

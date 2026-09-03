@@ -1,13 +1,13 @@
-// === Module 11060: BalanceWidgetPill ===
+// === Module 11064: BalanceWidgetPill ===
 
-// Module 11060 (BalanceWidgetPill)
+// Module 11064 (BalanceWidgetPill)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 709 */;
 import getSystemLocale from "getSystemLocale" /* 1233 */;
-import useVirtualCurrencyBalanceAnimationData from "useVirtualCurrencyBalanceAnimationData" /* 11061 */;
-import forwardRef from "forwardRef" /* 11062 */;
-import BalanceCounter from "BalanceCounter" /* 11067 */;
-import EXPECTED_ORB_LOTTIE_ANIMATION_DURATION_MS from "EXPECTED_ORB_LOTTIE_ANIMATION_DURATION_MS" /* 11068 */;
+import useVirtualCurrencyBalanceAnimationData from "useVirtualCurrencyBalanceAnimationData" /* 11065 */;
+import forwardRef from "forwardRef" /* 11066 */;
+import BalanceCounter from "BalanceCounter" /* 11071 */;
+import EXPECTED_ORB_LOTTIE_ANIMATION_DURATION_MS from "EXPECTED_ORB_LOTTIE_ANIMATION_DURATION_MS" /* 11072 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
@@ -33,7 +33,10 @@ class BalanceWidgetPill {
       prop = null;
     }
     balance = global.balance;
-    tmp2 = null === prop && null === balance;
+    tmp2 = null === prop;
+    if (tmp2) {
+      tmp2 = null === balance;
+    }
     tmp3 = closure_0;
     tmp4 = closure_1;
     obj = require("useVirtualCurrencyBalanceAnimationData");
@@ -41,7 +44,10 @@ class BalanceWidgetPill {
     ({ onValueChange, onValueReached, showInitialRenderedBalance, currentAnimationType, lottieRef } = virtualCurrencyBalanceAnimationData);
     tmp6 = closure_5();
     tmp8 = View;
-    obj = { style: tmp6.container, accessibilityLabel: null, accessibilityState: null, accessible: true, children: null };
+    obj = { style: items, accessibilityLabel: null, accessibilityState: null, accessible: true, children: null };
+    items = [, ];
+    items[0] = tmp6.container;
+    items[1] = global.style;
     tmp7 = jsxs;
     intl = require("getSystemLocale").intl;
     if (tmp2) {
@@ -55,16 +61,16 @@ class BalanceWidgetPill {
     obj[2] = { busy: tmp2 };
     tmp10 = jsx;
     obj2 = { style: tmp6.orbsLottieContainer, children: jsx(require("forwardRef").OrbLottieAnimation, { ref: lottieRef, animationType: currentAnimationType }) };
-    items = [, ];
-    items[0] = jsx(tmp8, obj2);
+    items1 = [, ];
+    items1[0] = jsx(tmp8, obj2);
     obj3 = { style: tmp6.balanceCounterContainer, children: null };
     if (showInitialRenderedBalance) {
       balance = prop;
     }
     obj4 = { value: balance, onValueChange, onValueReached, targetTotalCounterTime: require("EXPECTED_ORB_LOTTIE_ANIMATION_DURATION_MS").EXPECTED_ORB_LOTTIE_ANIMATION_DURATION_MS, style: tmp6.balanceText };
     obj3[1] = tmp10(require("BalanceCounter").BalanceCounter, obj4);
-    items[1] = tmp10(tmp8, obj3);
-    obj[4] = items;
+    items1[1] = tmp10(tmp8, obj3);
+    obj[4] = items1;
     return tmp7(tmp8, obj);
   }
 }

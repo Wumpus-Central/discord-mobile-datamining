@@ -1,6 +1,6 @@
-// === Module 16678: UnmuteOptions ===
+// === Module 16698: UnmuteOptions ===
 
-// Module 16678 (UnmuteOptions)
+// Module 16698 (UnmuteOptions)
 import ThemesDefault from "Themes" /* 709 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
@@ -25,7 +25,7 @@ function UnmuteOptions(channel) {
     channel(closure_1_2[13]).handleUnmutePress(channel.id, channel.guild_id);
   }, items);
   obj = { icon: null, label: null, onPress: null, start: true, end: true };
-  obj = { disableColor: true, source: navigation(10250) };
+  obj = { disableColor: true, source: navigation(10254) };
   obj[0] = callback(channel(1296).Icon, obj);
   obj1 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
   const intl = channel(1233).intl;
@@ -38,11 +38,11 @@ function UnmuteOptions(channel) {
   obj1[2] = intl.format(channel(1233).t["eC+9rj"], obj2);
   obj[1] = callback(channel(4474).Text, obj1);
   obj[2] = callback;
-  const items1 = [callback(channel(5607).TableRow, obj), ];
+  const items1 = [callback(channel(5608).TableRow, obj), ];
   const obj3 = { muteConfig: channel.muteConfig, type: null };
   const obj6 = channel(4674);
-  const tmp6 = navigation(10251);
-  const MuteSettingType = channel(10251).MuteSettingType;
+  const tmp6 = navigation(10255);
+  const MuteSettingType = channel(10255).MuteSettingType;
   obj3[1] = channel.isPrivate() ? MuteSettingType.DM : MuteSettingType.CHANNEL;
   items1[1] = tmp5(tmp6, obj3);
   obj[1] = items1;

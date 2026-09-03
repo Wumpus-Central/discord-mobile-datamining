@@ -1,15 +1,15 @@
-// === Module 12077: ActionChannelInfo ===
+// === Module 12083: ActionChannelInfo ===
 
-// Module 12077 (ActionChannelInfo)
+// Module 12083 (ActionChannelInfo)
 import ThemesDefault from "Themes" /* 709 */;
-import registerAssetDefault from "registerAsset" /* 11600 */;
-import newMemberActionFromServer from "newMemberActionFromServer" /* 12075 */;
-import useMemberActionsForChannel from "useMemberActionsForChannel" /* 12078 */;
+import registerAssetDefault from "registerAsset" /* 11605 */;
+import newMemberActionFromServer from "newMemberActionFromServer" /* 12081 */;
+import useMemberActionsForChannel from "useMemberActionsForChannel" /* 12084 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_6 from "maybeApplyNoTextColorForLightCustomTheme" /* 4470 */;
-import closure_7 from "getEmojiToGroupId" /* 5409 */;
+import closure_7 from "getEmojiToGroupId" /* 5410 */;
 import closure_8 from "ensureGuildLoaded" /* 1386 */;
 import closure_9 from "trackCommunicationDisabled" /* 1991 */;
 import { Routes } from "ME" /* 673 */;
@@ -68,7 +68,7 @@ function ChannelActionEmoji(emoji) {
     obj = { style: null, source: null, resizeMode: "contain" };
     obj[0] = tmp.emoji;
     obj1 = { uri: null };
-    let tmp5Result = tmp5(5501);
+    let tmp5Result = tmp5(5502);
     tmp5Result = tmp5(1430);
     const obj2 = { id: null, animated: null, size: null };
     ({ id: obj10[0], animated: obj10[1] } = stateFromStores);
@@ -372,7 +372,7 @@ let closure_18 = { code: "function MemberActionChatInputBannerTsx1(){const{useRe
 let closure_19 = { code: "function MemberActionChatInputBannerTsx2(){const{useReducedMotion,nextHeight,withDelay,isViewAction,completed,withTiming,DECELERATED_EASING}=this.__closure;if(useReducedMotion){return{height:nextHeight.get()};}return{height:withDelay(!isViewAction&&completed?1200:0,withTiming(nextHeight.get(),{duration:400,easing:DECELERATED_EASING}))};}" };
 const memoResult = importAllResult.memo((channel) => {
   channel = channel.channel;
-  let obj = channel(6077);
+  let obj = channel(6078);
   const canSeeOnboardingHome = obj.useCanSeeOnboardingHome(channel.guild_id);
   const items = [closure_9];
   const stateFromStores = channel(644).useStateFromStores(items, () => {

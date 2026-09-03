@@ -1,6 +1,6 @@
-// === Module 6155: isForwardMessage ===
+// === Module 6156: isForwardMessage ===
 
-// Module 6155 (isForwardMessage)
+// Module 6156 (isForwardMessage)
 import set from "set" /* 2 */;
 import ME from "ME" /* 673 */;
 

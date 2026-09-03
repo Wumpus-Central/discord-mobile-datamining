@@ -1,6 +1,6 @@
-// === Module 5365: recomputeGuild ===
+// === Module 5366: recomputeGuild ===
 
-// Module 5365 (recomputeGuild)
+// Module 5366 (recomputeGuild)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import initializeDefault from "initialize" /* 586 */;
 import dispatcherDefault from "dispatcher" /* 706 */;

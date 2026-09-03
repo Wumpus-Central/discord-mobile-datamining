@@ -1,6 +1,6 @@
-// === Module 16425: VibegrationsSecretRequestCard ===
+// === Module 16445: VibegrationsSecretRequestCard ===
 
-// Module 16425 (VibegrationsSecretRequestCard)
+// Module 16445 (VibegrationsSecretRequestCard)
 import ThemesDefault from "Themes" /* 709 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
@@ -57,7 +57,7 @@ export default function VibegrationsSecretRequestCard(projectId) {
     obj2[2] = callback;
     const intl3 = tmp6(1233).intl;
     obj2[3] = intl3.string(tmp8(3500)["gVV+HX"]);
-    items1[3] = tmp5(tmp6(4928).Button, obj2);
+    items1[3] = tmp5(tmp6(4929).Button, obj2);
     obj[1] = items1;
     return closure_6(tmp4, obj);
   }

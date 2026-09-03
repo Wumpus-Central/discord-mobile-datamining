@@ -1,6 +1,6 @@
-// === Module 15674: CollectiblesProgressiveImage ===
+// === Module 15688: CollectiblesProgressiveImage ===
 
-// Module 15674 (CollectiblesProgressiveImage)
+// Module 15688 (CollectiblesProgressiveImage)
 import noopAll from "noop" /* 19 */;
 import _modDef4217 from "module_4217" /* 4217 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;

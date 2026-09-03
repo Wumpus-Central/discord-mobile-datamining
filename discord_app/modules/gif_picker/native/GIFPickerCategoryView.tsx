@@ -1,6 +1,6 @@
-// === Module 10397: GIFPickerCategoryView ===
+// === Module 10401: GIFPickerCategoryView ===
 
-// Module 10397 (GIFPickerCategoryView)
+// Module 10401 (GIFPickerCategoryView)
 import ThemesDefault from "Themes" /* 709 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
@@ -46,22 +46,22 @@ export default function GIFPickerCategoryView(onSelectCategory) {
   let obj = { categoryName: item.name };
   const formatToPlainStringResult = intl.formatToPlainString(onSelectCategory(1233).t["j+63pw"], obj);
   obj = { style: tmp.container, onPress: callback, accessible: true, accessibilityRole: "button", accessibilityLabel: formatToPlainStringResult };
-  const merged = Object.assign(item(9742)(callback, formatToPlainStringResult));
+  const merged = Object.assign(item(9746)(callback, formatToPlainStringResult));
   obj = { style: tmp.gifImage, source: obj1 };
-  const items1 = [callback(item(5501), obj), callback(closure_4, { style: tmp.gifOverlay }), ];
+  const items1 = [callback(item(5502), obj), callback(closure_4, { style: tmp.gifOverlay }), ];
   const obj3 = { style: tmp.categoryName, accessible: false, children: null };
   if (item.type === GIFPickerResultTypes.TRENDING_GIFS) {
     const obj4 = { size: "sm", style: null, color: null };
     obj4[1] = tmp.categoryNameIcon;
     obj4[2] = tmp6(709).colors.WHITE;
-    let tmp10Result = tmp10(tmp3(10398).AnalyticsIcon, obj4);
+    let tmp10Result = tmp10(tmp3(10402).AnalyticsIcon, obj4);
   } else {
     tmp10Result = null;
     if (item.type === tmp12.FAVORITES) {
       const obj5 = { size: "sm", style: null, color: null };
       obj5[1] = tmp.categoryNameIcon;
       obj5[2] = tmp6(709).colors.WHITE;
-      tmp10Result = tmp10(tmp3(9195).StarIcon, obj5);
+      tmp10Result = tmp10(tmp3(9199).StarIcon, obj5);
     }
   }
   const items2 = [tmp10Result, callback(onSelectCategory(4474).Text, { variant: "text-sm/semibold", color: "text-overlay-light", maxFontSizeMultiplier: 2, accessible: false, children: item.name })];

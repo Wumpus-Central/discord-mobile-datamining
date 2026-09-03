@@ -1,6 +1,6 @@
-// === Module 13721: getAudioFidelityExperimentConfig ===
+// === Module 13737: getAudioFidelityExperimentConfig ===
 
-// Module 13721 (getAudioFidelityExperimentConfig)
+// Module 13737 (getAudioFidelityExperimentConfig)
 import set from "set" /* 2 */;
 import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1470 */;
 import ApexExperiment from "ApexExperiment" /* 1467 */;

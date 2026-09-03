@@ -1,11 +1,11 @@
-// === Module 12722: getSavedBadgeSettings ===
+// === Module 12734: getSavedBadgeSettings ===
 
-// Module 12722 (getSavedBadgeSettings)
+// Module 12734 (getSavedBadgeSettings)
 import dispatcherDefault from "dispatcher" /* 706 */;
-import isPinnedBadge from "isPinnedBadge" /* 9019 */;
+import isPinnedBadge from "isPinnedBadge" /* 9023 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "mergeGuildAvatar" /* 1921 */;
-import closure_5 from "initialize" /* 8573 */;
+import closure_5 from "initialize" /* 8577 */;
 
 require = arg1;
 function getSavedBadgeSettings() {
@@ -92,11 +92,11 @@ function applyPendingBadgeSettingsToProfileBadges(arr2, arg1) {
       let tmp11 = item10027;
       let tmp12 = set;
       let tmp13 = dependencyMap;
-      let obj = set(8574);
+      let obj = set(8578);
       let profileBadgeId = obj.resolveProfileBadgeId(item10027.id);
       let tmp15 = profileBadgeId;
       if (null != profileBadgeId) {
-        let tmp12Result = tmp12(9019);
+        let tmp12Result = tmp12(9023);
         let tmp16 = profileBadgeId;
         if (!tmp12Result.isPinnedBadge(tmp15)) {
           let tmp17 = profileBadgeId;
@@ -234,7 +234,7 @@ export const setPendingBadgeVisibility = function setPendingBadgeVisibility(badg
   dispatcherDefault.dispatch({ type: "USER_PROFILE_SETTINGS_SET_PENDING_CHANGES", pendingBadgeHiddenBadges: tmp20 });
 };
 export const resetPendingBadgeSettings = function resetPendingBadgeSettings() {
-  dispatcherDefault.dispatch({ type: "USER_PROFILE_SETTINGS_SET_PENDING_CHANGES", pendingBadgeDisplayOrder: "call", pendingBadgeHiddenBadges: "Map" });
+  dispatcherDefault.dispatch({ type: "USER_PROFILE_SETTINGS_SET_PENDING_CHANGES", pendingBadgeDisplayOrder: "call", pendingBadgeHiddenBadges: "String" });
 };
 export const hasPendingBadgeSettings = function hasPendingBadgeSettings(pendingBadgeDisplayOrder) {
   return undefined !== pendingBadgeDisplayOrder.pendingBadgeDisplayOrder || undefined !== pendingBadgeDisplayOrder.pendingBadgeHiddenBadges;
@@ -274,7 +274,7 @@ export const applyPendingBadgeSettings = function applyPendingBadgeSettings(stat
       let tmp11 = item10026;
       let tmp12 = set;
       let tmp13 = dependencyMap;
-      let obj = set(9019);
+      let obj = set(9023);
       if (obj.isPinnedBadge(item10026.badge_id)) {
         let tmp16 = item10026;
         let arr = items1.push(tmp11);

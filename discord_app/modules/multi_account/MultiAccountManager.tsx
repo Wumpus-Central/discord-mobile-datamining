@@ -1,11 +1,11 @@
-// === Module 17242: _initialize ===
+// === Module 17262: _initialize ===
 
-// Module 17242 (_initialize)
+// Module 17262 (_initialize)
 import dispatcherDefault from "dispatcher" /* 706 */;
-import initializeDefault from "initialize" /* 5494 */;
-import noop from "noop" /* 13508 */;
+import initializeDefault from "initialize" /* 5495 */;
+import noop from "noop" /* 13523 */;
 import closure_3 from "mergeGuildAvatar" /* 1921 */;
-import closure_4 from "initialize" /* 13597 */;
+import closure_4 from "initialize" /* 13612 */;
 
 require = arg1;
 initializeDefault;

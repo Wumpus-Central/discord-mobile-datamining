@@ -1,20 +1,20 @@
-// === Module 15051: WhatYouLose ===
+// === Module 15066: WhatYouLose ===
 
-// Module 15051 (WhatYouLose)
+// Module 15066 (WhatYouLose)
 import ThemesDefault from "Themes" /* 709 */;
 import getSystemLocale from "getSystemLocale" /* 1233 */;
 import Button from "Button" /* 1296 */;
 import hooksDefault from "hooks" /* 4074 */;
 import Text from "Text" /* 4474 */;
-import preloadDefault from "preload" /* 5501 */;
-import GuildIconSizesDefault from "GuildIconSizes" /* 6012 */;
-import useFetchListingsForGuild from "useFetchListingsForGuild" /* 15037 */;
-import FormSeparatorDefault from "FormSeparator" /* 15042 */;
-import useManageSubscriptionCardDataDefault from "useManageSubscriptionCardData" /* 15048 */;
-import getRoleEmojisAll from "getRoleEmojis" /* 15052 */;
-import registerAssetDefault from "registerAsset" /* 15060 */;
-import FastAssetImageDefault from "FastAssetImage" /* 15061 */;
-import SectionTitleAll from "SectionTitle" /* 15062 */;
+import preloadDefault from "preload" /* 5502 */;
+import GuildIconSizesDefault from "GuildIconSizes" /* 6013 */;
+import useFetchListingsForGuild from "useFetchListingsForGuild" /* 15052 */;
+import FormSeparatorDefault from "FormSeparator" /* 15057 */;
+import useManageSubscriptionCardDataDefault from "useManageSubscriptionCardData" /* 15063 */;
+import getRoleEmojisAll from "getRoleEmojis" /* 15067 */;
+import registerAssetDefault from "registerAsset" /* 15075 */;
+import FastAssetImageDefault from "FastAssetImage" /* 15076 */;
+import SectionTitleAll from "SectionTitle" /* 15077 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import closure_5 from "_slicedToArray" /* 32 */;
 import closure_6 from "noop" /* 19 */;
@@ -75,8 +75,8 @@ function CancelSubscriptionButtonFooter(guild) {
   const tmp = callback4();
   [tmp3, c3] = cancelSubscription(isPurchasedViaAppleGeneric.useState(false), 2);
   const tmp2 = cancelSubscription(isPurchasedViaAppleGeneric.useState(false), 2);
-  analyticsLocations = subscription(5961)(subscription(5981).GUILD_ROLE_SUBSCRIPTION_CANCELLATION_MODAL).analyticsLocations;
-  let obj = subscription(8230);
+  analyticsLocations = subscription(5962)(subscription(5982).GUILD_ROLE_SUBSCRIPTION_CANCELLATION_MODAL).analyticsLocations;
+  let obj = subscription(8234);
   cancelSubscription = obj.useCancelSubscription(subscription.id, subscription.isACOM);
   cancelSubscription = cancelSubscription.cancelSubscription;
   isPurchasedViaAppleGeneric = subscription.isPurchasedViaAppleGeneric;
@@ -122,7 +122,7 @@ function CancelSubscriptionButtonFooter(guild) {
             const obj2 = { guildName: null };
             obj2[0] = lib.name;
             obj1[0] = intl2.formatToPlainString(lib(1233).t.sBs7sh, obj2);
-            const obj15 = lib2(4858);
+            const obj15 = lib2(4859);
             const _HermesInternal = HermesInternal;
             obj1[1] = "You can resubscribe any time before " + lib2(4074)(lib2.currentPeriodEnd).format(closure_1_12) + ".";
             const intl3 = lib(1233).intl;
@@ -155,7 +155,7 @@ function CancelSubscriptionButtonFooter(guild) {
                 obj5[0] = v0();
                 return obj5;
               } else if (lib2.isPurchasedViaDesktop) {
-                let obj7 = closure_1_2(4837);
+                let obj7 = closure_1_2(4838);
                 c4 = 4;
                 v0 = 1;
                 let obj6 = { value: null, done: false };
@@ -202,7 +202,7 @@ function CancelSubscriptionButtonFooter(guild) {
                   obj7[0] = arg1;
                   return obj7;
                 } else {
-                  obj1 = closure_1_2(4837);
+                  obj1 = closure_1_2(4838);
                   c4 = 5;
                   v0 = 1;
                   const obj8 = { value: null, done: false };
@@ -261,7 +261,7 @@ function CancelSubscriptionButtonFooter(guild) {
   let intl = tmp10(1233).intl;
   obj[2] = intl.string(guild(1233).t.cM1H0K);
   obj[3] = callback;
-  obj[1] = closure_10(guild(4928).Button, obj);
+  obj[1] = closure_10(guild(4929).Button, obj);
   return closure_10(closure_7, obj);
 }
 function Content(subscription) {

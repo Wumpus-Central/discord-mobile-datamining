@@ -1,10 +1,10 @@
-// === Module 7624: PressableNavigatorModalIcon ===
+// === Module 7625: PressableNavigatorModalIcon ===
 
-// Module 7624 (PressableNavigatorModalIcon)
+// Module 7625 (PressableNavigatorModalIcon)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import GenericHeaderTitle from "GenericHeaderTitle" /* 7617 */;
-import PressableNavigatorButtonWrapperDefault from "PressableNavigatorButtonWrapper" /* 7620 */;
+import GenericHeaderTitle from "GenericHeaderTitle" /* 7618 */;
+import PressableNavigatorButtonWrapperDefault from "PressableNavigatorButtonWrapper" /* 7621 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/navigator/PressableNavigatorModalIcon.tsx");
@@ -18,7 +18,7 @@ export default function PressableNavigatorModalIcon(onPress) {
   if (str === undefined) {
     str = "back";
   }
-  let obj = { source: importDefault(tmp6 ? 7621 : 7625), onPress: goBack, accessibilityLabel: null };
+  let obj = { source: importDefault(tmp6 ? 7622 : 7626), onPress: goBack, accessibilityLabel: null };
   const intl = tmp5(1233).intl;
   const string = intl.string;
   const t = tmp5(1233).t;

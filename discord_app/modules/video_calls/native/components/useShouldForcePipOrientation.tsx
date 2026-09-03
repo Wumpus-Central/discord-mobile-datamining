@@ -1,7 +1,7 @@
-// === Module 9551: useShouldForcePipOrientation ===
+// === Module 9555: useShouldForcePipOrientation ===
 
-// Module 9551 (useShouldForcePipOrientation)
-import usePipVideoOrStreamDefault from "usePipVideoOrStream" /* 9552 */;
+// Module 9555 (useShouldForcePipOrientation)
+import usePipVideoOrStreamDefault from "usePipVideoOrStream" /* 9556 */;
 import closure_3 from "participantFromServer" /* 1385 */;
 import closure_4 from "getParticipants" /* 4494 */;
 import closure_5 from "fetchFingerprint" /* 1215 */;
@@ -78,17 +78,17 @@ export const useShouldForcePipOrientation = function useShouldForcePipOrientatio
   if (null != focusedEmbeddedActivityParticipant) {
     if (callback(focusedEmbeddedActivityParticipant)) {
       if (null == stateFromStores) {
-        return tmp2(8618).OrientationType.LANDSCAPE;
+        return tmp2(8622).OrientationType.LANDSCAPE;
       }
     }
   }
   if (activityLockOrientation === OrientationLockState.LANDSCAPE) {
-    OrientationType = tmp2(8618).OrientationType;
+    OrientationType = tmp2(8622).OrientationType;
     let LANDSCAPE = OrientationType.LANDSCAPE;
   } else {
     LANDSCAPE = null;
     if (activityLockOrientation === tmp8.PORTRAIT) {
-      LANDSCAPE = tmp2(8618).OrientationType.PORTRAIT;
+      LANDSCAPE = tmp2(8622).OrientationType.PORTRAIT;
     }
   }
 };

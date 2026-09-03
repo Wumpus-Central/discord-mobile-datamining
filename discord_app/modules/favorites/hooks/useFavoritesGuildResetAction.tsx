@@ -1,9 +1,9 @@
-// === Module 15959: useFavoritesGuildResetAction ===
+// === Module 15975: useFavoritesGuildResetAction ===
 
-// Module 15959 (useFavoritesGuildResetAction)
+// Module 15975 (useFavoritesGuildResetAction)
 import messagesProxyDefault from "messagesProxy" /* 3178 */;
 import explicitContentFromProto from "explicitContentFromProto" /* 4166 */;
-import useFavoritesAccess from "useFavoritesAccess" /* 10329 */;
+import useFavoritesAccess from "useFavoritesAccess" /* 10333 */;
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "handleConnectionOpen" /* 4299 */;
 import { Routes } from "ME" /* 673 */;

@@ -1,6 +1,6 @@
-// === Module 5396: QuestVariants ===
+// === Module 5397: QuestVariants ===
 
-// Module 5396 (QuestVariants)
+// Module 5397 (QuestVariants)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/QuestVariants.tsx");

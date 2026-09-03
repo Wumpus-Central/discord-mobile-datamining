@@ -1,11 +1,11 @@
-// === Module 7705: ChangeEmailWarning ===
+// === Module 7708: ChangeEmailWarning ===
 
-// Module 7705 (ChangeEmailWarning)
+// Module 7708 (ChangeEmailWarning)
 import ThemesDefault from "Themes" /* 709 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_6 from "mergeGuildAvatar" /* 1921 */;
-import { COMMON_SCAMS_EDUCATION_HC_ARTICLE as closure_7 } from "ChangeEmailReasons" /* 7700 */;
+import { COMMON_SCAMS_EDUCATION_HC_ARTICLE as closure_7 } from "ChangeEmailReasons" /* 7703 */;
 import { AnalyticEvents } from "ME" /* 673 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
@@ -40,7 +40,7 @@ export default function ChangeEmailWarning(changeEmailReason) {
     obj = { keyboardShouldPersistTaps: "handled", alwaysBounceVertical: false, children: null };
     obj = { style: null, children: null };
     obj[0] = tmp.container;
-    const items2 = [callback(tmp2(6265).TrafficConeSpotIllustration, {}), , , ];
+    const items2 = [callback(tmp2(6266).TrafficConeSpotIllustration, {}), , , ];
     obj1 = { style: null, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
     obj1[0] = tmp.title;
     const intl = tmp2(1233).intl;
@@ -62,14 +62,14 @@ export default function ChangeEmailWarning(changeEmailReason) {
     const intl4 = tmp2(1233).intl;
     obj5[2] = intl4.string(tmp2(1233).t.rwTBFs);
     obj5[3] = tmp6;
-    const items4 = [callback(tmp2(4928).Button, obj5), ];
+    const items4 = [callback(tmp2(4929).Button, obj5), ];
     const obj6 = { size: "md", variant: "primary", text: null, onPress: null, shrink: true };
     const intl5 = tmp2(1233).intl;
     obj6[2] = intl5.string(tmp2(1233).t["ETE/oC"]);
     obj6[3] = function onPress() {
       return navigation(table[16]).close();
     };
-    items4[1] = callback(tmp2(4928).Button, obj6);
+    items4[1] = callback(tmp2(4929).Button, obj6);
     obj4[1] = items4;
     items2[3] = callback2(closure_4, obj4);
     obj[1] = items2;

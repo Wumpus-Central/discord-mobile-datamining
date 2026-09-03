@@ -1,6 +1,6 @@
-// === Module 7211: updateSubmittedGuildJoinRequestTotal ===
+// === Module 7212: updateSubmittedGuildJoinRequestTotal ===
 
-// Module 7211 (updateSubmittedGuildJoinRequestTotal)
+// Module 7212 (updateSubmittedGuildJoinRequestTotal)
 import initializeDefault from "initialize" /* 586 */;
 import setDefault from "set" /* 684 */;
 import dispatcherDefault from "dispatcher" /* 706 */;

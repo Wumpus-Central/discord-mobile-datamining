@@ -1,10 +1,10 @@
-// === Module 7846: ConversationPreviewBlockedMessage ===
+// === Module 7849: ConversationPreviewBlockedMessage ===
 
-// Module 7846 (ConversationPreviewBlockedMessage)
+// Module 7849 (ConversationPreviewBlockedMessage)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 709 */;
 import Text from "Text" /* 4474 */;
-import Stack from "Stack" /* 4926 */;
+import Stack from "Stack" /* 4927 */;
 import jsxProd from "jsxProd" /* 21 */;
 
 require = arg1;
@@ -15,9 +15,9 @@ const result = require("set").fileFinishedImporting("modules/conversations/compo
 export default function ConversationPreviewBlockedMessage(reason) {
   let obj = { direction: "horizontal", spacing: ThemesDefault.space.PX_8, align: "center", children: null };
   if ("blocked" === reason.reason) {
-    let EyeSlashIcon = tmp2(7847).DenyIcon;
+    let EyeSlashIcon = tmp2(7850).DenyIcon;
   } else {
-    EyeSlashIcon = tmp2(7750).EyeSlashIcon;
+    EyeSlashIcon = tmp2(7753).EyeSlashIcon;
   }
   obj = { size: "sm", color: ThemesDefault.colors.TEXT_MUTED };
   const items = [closure_3(EyeSlashIcon, obj), ];

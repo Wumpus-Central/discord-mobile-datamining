@@ -1,6 +1,6 @@
-// === Module 10255: resetGuildUnreadFlags ===
+// === Module 10259: resetGuildUnreadFlags ===
 
-// Module 10255 (resetGuildUnreadFlags)
+// Module 10259 (resetGuildUnreadFlags)
 import set from "set" /* 2 */;
 import hasFlagAll from "hasFlag" /* 1398 */;
 import MAX_FAVORITES from "MAX_FAVORITES" /* 682 */;

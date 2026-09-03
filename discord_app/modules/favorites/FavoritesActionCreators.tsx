@@ -1,15 +1,15 @@
-// === Module 10328: getNextPositionFromChannels ===
+// === Module 10332: getNextPositionFromChannels ===
 
-// Module 10328 (getNextPositionFromChannels)
+// Module 10332 (getNextPositionFromChannels)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import applyDefault from "apply" /* 12 */;
 import getSystemLocale from "getSystemLocale" /* 1233 */;
 import create from "create" /* 1305 */;
 import updateUserGuildSettings from "updateUserGuildSettings" /* 1369 */;
-import setDefault from "set" /* 4857 */;
-import useFavoritesAccess from "useFavoritesAccess" /* 10329 */;
-import handleDCShownToUser from "handleDCShownToUser" /* 10338 */;
-import hasOfferedFavoritesGuildOnboarding from "hasOfferedFavoritesGuildOnboarding" /* 10339 */;
+import setDefault from "set" /* 4858 */;
+import useFavoritesAccess from "useFavoritesAccess" /* 10333 */;
+import handleDCShownToUser from "handleDCShownToUser" /* 10342 */;
+import hasOfferedFavoritesGuildOnboarding from "hasOfferedFavoritesGuildOnboarding" /* 10343 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import { resetFatigueCooldown } from "withContent" /* 1378 */;
 import { THREAD_CHANNEL_TYPES } from "createChannelRecord" /* 1390 */;
@@ -152,7 +152,7 @@ function getReachedLimit(arg0, arg1) {
 function showLimitReachedAlert(limit) {
   limit = limit.limit;
   if (limit.canUpsell) {
-    tmp(10332)(limit);
+    tmp(10336)(limit);
   } else {
     let obj = { title: null, body: null };
     const intl = getSystemLocale.intl;
@@ -161,8 +161,8 @@ function showLimitReachedAlert(limit) {
     obj = { count: null };
     obj[0] = limit;
     obj[1] = intl2.formatToPlainString(getSystemLocale.t.JaIyFi, obj);
-    tmp(4857).show(obj);
-    const tmpResult = tmp(4857);
+    tmp(4858).show(obj);
+    const tmpResult = tmp(4858);
   }
 }
 function onSaveFailed(status) {
@@ -425,7 +425,7 @@ function _addFavoriteChannelsToParent() {
                         flag = true;
                         let tmp47 = callback;
                         let tmp48 = dependencyMap;
-                        let obj3 = callback(10336);
+                        let obj3 = callback(10340);
                         let tmp50 = channel;
                         let type;
                         let tmp49 = dependencyMap;
@@ -453,7 +453,7 @@ function _addFavoriteChannelsToParent() {
                         favoriteChannels.guildVisible = BoolValue.create({ value: true });
                         let tmp63 = callback;
                         let tmp64 = dependencyMap;
-                        let obj4 = callback(10336);
+                        let obj4 = callback(10340);
                         let str = "auto";
                         let result1 = obj4.trackFavoritesGuildVisibilitySettingToggled("auto", true);
                       }

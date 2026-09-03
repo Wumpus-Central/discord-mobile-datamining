@@ -1,6 +1,6 @@
-// === Module 13418: PremiumSubscriptionUpsell ===
+// === Module 13433: PremiumSubscriptionUpsell ===
 
-// Module 13418 (PremiumSubscriptionUpsell)
+// Module 13433 (PremiumSubscriptionUpsell)
 import noopAll from "noop" /* 19 */;
 import initialize from "initialize" /* 586 */;
 import ThemesDefault from "Themes" /* 709 */;
@@ -8,7 +8,7 @@ import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4139 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_5 from "_getSystemLocale" /* 1995 */;
 import closure_6 from "mergeGuildAvatar" /* 1921 */;
-import { Gradients } from "items" /* 7186 */;
+import { Gradients } from "items" /* 7187 */;
 import GuildFeatures from "GuildFeatures" /* 1923 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
@@ -52,7 +52,7 @@ export default function PremiumSubscriptionUpsell(arg0) {
     obj[0] = items1;
     obj = { style: null, start: null, end: null, colors: null, children: null };
     obj[0] = tmp.upsellCard;
-    let tmp5Result = tmp5(4940);
+    let tmp5Result = tmp5(4941);
     obj[1] = tmp2(688).HorizontalGradient.START;
     obj[2] = tmp2(688).HorizontalGradient.END;
     obj[3] = Gradients.PREMIUM_GUILD;
@@ -85,11 +85,11 @@ export default function PremiumSubscriptionUpsell(arg0) {
     obj6[0] = tmp.upsellFeatures;
     const obj7 = { style: null, source: null };
     obj7[0] = tmp.upsellFeatureSubLogo;
-    obj7[1] = tmp5(13419);
+    obj7[1] = tmp5(13434);
     const items4 = [closure_10(closure_4, obj7), , ];
     const obj8 = { style: null, source: null };
     obj8[0] = tmp.upsellFeatureLogoTier2;
-    obj8[1] = tmp5(13420);
+    obj8[1] = tmp5(13435);
     items4[1] = closure_10(closure_4, obj8);
     const obj9 = { style: null, features: null, labelStyle: null, rowStyle: null };
     obj9[0] = tmp.upsellFeatureList;
@@ -97,7 +97,7 @@ export default function PremiumSubscriptionUpsell(arg0) {
     obj10[0] = tmp2(4429).CheckmarkLargeIcon;
     const intl4 = tmp2(1233).intl;
     const obj11 = { discountPercentage: null };
-    const tmp5Result1 = tmp5(8371);
+    const tmp5Result1 = tmp5(8375);
     obj11[0] = tmp2(1896).formatPercent(locale.locale, closure_9 / 100);
     obj10[1] = intl4.formatToPlainString(tmp2(1233).t.P3aEj6, obj11);
     obj10[2] = tmp5(709).unsafe_rawColors.WHITE;
@@ -122,7 +122,7 @@ export default function PremiumSubscriptionUpsell(arg0) {
     stringResult = intl6.string(tmp2(1233).t.fJOECn);
     obj15[1] = stringResult;
     obj15[2] = onLearnMorePremium;
-    tmp = tmp6(tmp2(4928).Button, obj15);
+    tmp = tmp6(tmp2(4929).Button, obj15);
     obj14[1] = tmp;
     items3[2] = closure_10(closure_3, obj14);
     obj[4] = items3;

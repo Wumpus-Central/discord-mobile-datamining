@@ -1,10 +1,10 @@
-// === Module 7018: ShopIllocon ===
+// === Module 7019: ShopIllocon ===
 
-// Module 7018 (ShopIllocon)
+// Module 7019 (ShopIllocon)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5501 */;
-import metadataDefault from "metadata" /* 7019 */;
+import preloadDefault from "preload" /* 5502 */;
+import metadataDefault from "metadata" /* 7020 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/ShopIllocon.native.tsx");

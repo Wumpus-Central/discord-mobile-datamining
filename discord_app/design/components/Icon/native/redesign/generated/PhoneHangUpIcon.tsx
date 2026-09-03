@@ -1,10 +1,10 @@
-// === Module 7635: PhoneHangUpIcon ===
+// === Module 7636: PhoneHangUpIcon ===
 
-// Module 7635 (PhoneHangUpIcon)
+// Module 7636 (PhoneHangUpIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 709 */;
 import BaseIconImage from "BaseIconImage" /* 4196 */;
-import registerAsset from "registerAsset" /* 7636 */;
+import registerAsset from "registerAsset" /* 7637 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

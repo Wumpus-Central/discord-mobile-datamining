@@ -1,6 +1,6 @@
-// === Module 14427: _getKeyForFileId ===
+// === Module 14443: _getKeyForFileId ===
 
-// Module 14427 (_getKeyForFileId)
+// Module 14443 (_getKeyForFileId)
 import timestampDefault from "timestamp" /* 3 */;
 import Storage3 from "Storage" /* 592 */;
 import setDefault from "set" /* 684 */;
@@ -13,9 +13,9 @@ import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "hasFlag" /* 4131 */;
 import closure_6 from "fetchFingerprint" /* 1215 */;
 import closure_7 from "ensureGuildLoaded" /* 1386 */;
-import closure_8 from "reinjectEphemerals" /* 4735 */;
+import closure_8 from "reinjectEphemerals" /* 4736 */;
 import { MessageStates } from "ME" /* 673 */;
-import createLock from "createLock" /* 14428 */;
+import createLock from "createLock" /* 14444 */;
 
 require = arg1;
 function _getKeyForFileId(arg0) {
@@ -56,11 +56,11 @@ function createFailedMessage(channel_id) {
   channel_id = channel_id.channel_id;
   ({ content, tts, state } = channel_id);
   let obj = { channelId: channel_id, content, tts, state: MessageStates.SEND_FAILED };
-  const tmp3 = file(7507)(obj);
+  const tmp3 = file(7508)(obj);
   closure_0 = tmp3;
   ({ timestamp: tmp3.timestamp, file } = channel_id);
   obj = { isHydratingExpiredPendingMessage: state === MessageStates.SENDING };
-  file(7210).receiveMessage(channel_id, tmp3, true, obj);
+  file(7211).receiveMessage(channel_id, tmp3, true, obj);
   if (null != file) {
     file(706).wait(() => file(closure_1_2[16]).restoreFailedUpload(id.id, file));
     const tmpResult = file(706);

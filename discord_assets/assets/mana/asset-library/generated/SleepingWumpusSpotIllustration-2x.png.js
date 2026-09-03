@@ -1,6 +1,6 @@
-// === Module 7025: metadata ===
+// === Module 7026: metadata ===
 
-// Module 7025 (metadata)
+// Module 7026 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/SleepingWumpusSpotIllustration-2x.png.js");

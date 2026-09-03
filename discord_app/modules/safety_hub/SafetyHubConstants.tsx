@@ -1,6 +1,6 @@
-// === Module 8705: SafetyHubView ===
+// === Module 8709: SafetyHubView ===
 
-// Module 8705 (SafetyHubView)
+// Module 8709 (SafetyHubView)
 import set from "set" /* 2 */;
 import encodeProperties from "encodeProperties" /* 500 */;
 import ME from "ME" /* 673 */;
@@ -67,7 +67,8 @@ export const APPEAL_INGESTION_IMPRESSION_PROPERTIES = obj1;
 export const AppealIngestionSlideTypes = obj2;
 export const AppealIngestionSlidesOrder = { [obj2.SPEED_BUMP]: { next: obj2.COLLECT_SIGNAL, prev: null }, [obj2.COLLECT_SIGNAL]: { next: obj2.CONFIRM_SUBMISSION, prev: obj2.SPEED_BUMP }, [obj2.CONFIRM_SUBMISSION]: { next: obj2.REQUEST_SENT, prev: obj2.COLLECT_SIGNAL }, [obj2.REQUEST_SENT]: { next: null, prev: null } };
 export const ViolationType = { USER: 1, [1]: "USER", GUILD_OWNER: 2, [2]: "GUILD_OWNER", GUILD_MEMBER: 3, [3]: "GUILD_MEMBER" };
-export const AgeCheckStatus = { LOADING: "loading", ERROR: "error", SUCCESS: "success", FAILURE: "failure", NONE: "none" };
+export const SuspendedAgeCheckStatus = { PENDING: 1, [1]: "PENDING", UNBANNED: 2, [2]: "UNBANNED", VERIFIED_OTHER_VIOLATIONS_REMAIN: 3, [3]: "VERIFIED_OTHER_VIOLATIONS_REMAIN", UNDERAGE: 4, [4]: "UNDERAGE", UNDERAGE_MANUAL_REVIEW: 5, [5]: "UNDERAGE_MANUAL_REVIEW" };
+export const AgeCheckStatus = { LOADING: "loading", ERROR: "error", SUCCESS: "success", FAILURE: "failure", NONE: "none", VERIFIED: "verified", VERIFIED_OTHER_VIOLATIONS_REMAIN: "verified_other_violations_remain", UNDERAGE: "underage", UNDERAGE_MANUAL_REVIEW: "underage_manual_review" };
 export const AGE_CHECK_POLL_DELAY_MS = 2000;
 export const AGE_CHECK_POLL_INTERVAL_MS = 15000;
 export const AGE_CHECK_MAX_POLL_ATTEMPTS = 5;

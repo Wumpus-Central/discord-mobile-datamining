@@ -1,12 +1,12 @@
-// === Module 15157: useOfficialMessageStyleSettingValue ===
+// === Module 15172: useOfficialMessageStyleSettingValue ===
 
-// Module 15157 (useOfficialMessageStyleSettingValue)
+// Module 15172 (useOfficialMessageStyleSettingValue)
 import initialize from "initialize" /* 586 */;
 import getSystemLocale from "getSystemLocale" /* 1233 */;
-import setFontSize from "setFontSize" /* 14315 */;
+import setFontSize from "setFontSize" /* 14331 */;
 import closure_2 from "noop" /* 19 */;
 import closure_3 from "maybeApplyNoTextColorForLightCustomTheme" /* 4470 */;
-import createToggle from "createToggle" /* 11288 */;
+import createToggle from "createToggle" /* 11292 */;
 
 require = arg1;
 function useOfficialMessageStyleSettingValue() {

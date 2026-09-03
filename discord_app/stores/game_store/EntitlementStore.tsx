@@ -1,6 +1,6 @@
-// === Module 7151: addEntitlement ===
+// === Module 7152: addEntitlement ===
 
-// Module 7151 (addEntitlement)
+// Module 7152 (addEntitlement)
 import applyDefault from "apply" /* 12 */;
 import initializeAll from "initialize" /* 586 */;
 import dispatcherDefault from "dispatcher" /* 706 */;

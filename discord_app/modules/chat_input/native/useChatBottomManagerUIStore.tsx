@@ -1,18 +1,20 @@
-// === Module 9547: updateChatInputContainerHeight ===
+// === Module 9551: updateChatInputContainerHeight ===
 
-// Module 9547 (updateChatInputContainerHeight)
+// Module 9551 (updateChatInputContainerHeight)
 import set from "set" /* 2 */;
 import keys from "keys" /* 641 */;
 
 let chatInputContainerHeight = "chatInputContainerHeight";
 let obj = keys.create(() => {
-  obj = { chatInputContainerHeight: new Map(), showingAutoComplete: null, showJumpToPresentButtonChannelId: null, isAtBottom: null };
+  obj = { chatInputContainerHeight: new Map(), showingAutoComplete: null, showJumpToPresentButtonChannelId: null, isAtBottom: null, smallSuggestionBarHeight: null };
   const map = new Map();
   obj[1] = new Map();
   map1 = new Map();
   obj[2] = new Map();
   const map2 = new Map();
   obj[3] = new Map();
+  const map3 = new Map();
+  obj[4] = new Map();
   return obj;
 });
 let result = set.fileFinishedImporting("modules/chat_input/native/useChatBottomManagerUIStore.tsx");
@@ -68,6 +70,35 @@ export const useChatInputContainerHeight = function useChatInputContainerHeight(
       value = num2;
     }
     return value;
+  });
+};
+export const updateSmallSuggestionBarHeight = function updateSmallSuggestionBarHeight(arg0, arg1) {
+  closure_0 = arg0;
+  closure_1 = arg1;
+  obj.setState((smallSuggestionBarHeight) => {
+    smallSuggestionBarHeight = smallSuggestionBarHeight.smallSuggestionBarHeight;
+    if (smallSuggestionBarHeight.get(closure_0) === closure_1) {
+      return smallSuggestionBarHeight;
+    } else {
+      const _Map = Map;
+      const map = new Map(smallSuggestionBarHeight.smallSuggestionBarHeight);
+      const result = map.set(tmp, tmp2);
+      obj = { smallSuggestionBarHeight: null };
+      obj[0] = map;
+      return obj;
+    }
+    tmp = closure_0;
+  });
+};
+export const useSmallSuggestionBarHeight = function useSmallSuggestionBarHeight(arg0) {
+  closure_0 = arg0;
+  return obj((smallSuggestionBarHeight) => {
+    smallSuggestionBarHeight = smallSuggestionBarHeight.smallSuggestionBarHeight;
+    let num = smallSuggestionBarHeight.get(closure_0);
+    if (num == null) {
+      num = 0;
+    }
+    return num;
   });
 };
 export const useChatShowingAutoComplete = function useChatShowingAutoComplete(arg0) {

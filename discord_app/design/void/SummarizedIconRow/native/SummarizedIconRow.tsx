@@ -1,6 +1,6 @@
-// === Module 13963: OverflowSquircle ===
+// === Module 13979: OverflowSquircle ===
 
-// Module 13963 (OverflowSquircle)
+// Module 13979 (OverflowSquircle)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 709 */;
 import Text from "Text" /* 4474 */;

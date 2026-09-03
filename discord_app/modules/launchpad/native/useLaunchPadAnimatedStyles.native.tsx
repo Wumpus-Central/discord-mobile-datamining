@@ -1,7 +1,7 @@
-// === Module 16780: useLaunchpadAnimatedStyles ===
+// === Module 16800: useLaunchpadAnimatedStyles ===
 
-// Module 16780 (useLaunchpadAnimatedStyles)
-import LAUNCH_PAD_SPRING_CONFIG2 from "LAUNCH_PAD_SPRING_CONFIG" /* 11284 */;
+// Module 16800 (useLaunchpadAnimatedStyles)
+import LAUNCH_PAD_SPRING_CONFIG2 from "LAUNCH_PAD_SPRING_CONFIG" /* 11288 */;
 import set from "set" /* 1234 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 

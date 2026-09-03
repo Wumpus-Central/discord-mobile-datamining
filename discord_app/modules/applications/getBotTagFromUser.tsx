@@ -1,6 +1,6 @@
-// === Module 10866: getBotTagTypeFromUser ===
+// === Module 10870: getBotTagTypeFromUser ===
 
-// Module 10866 (getBotTagTypeFromUser)
+// Module 10870 (getBotTagTypeFromUser)
 import set from "set" /* 2 */;
 import ApplicationTypes from "ApplicationTypes" /* 4507 */;
 

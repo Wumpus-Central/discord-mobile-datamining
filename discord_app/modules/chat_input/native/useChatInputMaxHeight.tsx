@@ -1,17 +1,17 @@
-// === Module 11826: getChatInputMaxHeight ===
+// === Module 11832: getChatInputMaxHeight ===
 
-// Module 11826 (getChatInputMaxHeight)
+// Module 11832 (getChatInputMaxHeight)
 import useWindowDimensions from "useWindowDimensions" /* 1492 */;
 import KeyboardTypes from "KeyboardTypes" /* 1625 */;
 import useSystemKeyboardHeight from "useSystemKeyboardHeight" /* 1893 */;
 import useKeyboardType from "useKeyboardType" /* 4342 */;
-import useCustomKeyboardHeight from "useCustomKeyboardHeight" /* 5605 */;
-import mutable from "mutable" /* 11827 */;
-import mutable2 from "mutable" /* 11828 */;
+import useCustomKeyboardHeight from "useCustomKeyboardHeight" /* 5606 */;
+import mutable from "mutable" /* 11833 */;
+import mutable2 from "mutable" /* 11834 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import closure_5 from "subscribeToKeyboardUIStore" /* 1494 */;
-import { CHAT_INPUT_PILL_CONTENT_SIZE } from "TextAreaCta" /* 11758 */;
+import { CHAT_INPUT_PILL_CONTENT_SIZE } from "TextAreaCta" /* 11763 */;
 
 require = arg1;
 function getChatInputMaxHeight() {
@@ -53,7 +53,7 @@ function getChatInputHeightAnimationTimingWorklet(height, textFieldMinHeight) {
   if (keyboardType !== KeyboardTypes.KeyboardTypes.SYSTEM) {
     keyboardHeight = customKeyboardHeight;
   }
-  let tmp2Result = tmp2(11828);
+  let tmp2Result = tmp2(11834);
   const bound1 = Math.min(bound, Math.min(c6, Math.max(2 * CHAT_INPUT_PILL_CONTENT_SIZE, tmp2Result.getWindowDimensionsWorklet({ ignoreKeyboard: true }).height - keyboardHeight - c6)));
   tmp2Result = tmp2(4479);
   obj = { duration: tmp2(4482).timingFastDuration, easing: tmp2(4217).Easing.linear };
@@ -110,8 +110,8 @@ export function getChatInputMinHeight() {
 }
 export { getChatInputMaxHeight };
 export { getChatInputMaxHeightWorklet };
-export const getChatInputHeightAnimationTiming = function getChatInputHeightAnimationTiming(height, closure_7) {
-  const bound = Math.max(height, closure_7);
+export const getChatInputHeightAnimationTiming = function getChatInputHeightAnimationTiming(height, closure_9) {
+  const bound = Math.max(height, closure_9);
   let obj = useSystemKeyboardHeight;
   let systemKeyboardHeight = obj.getSystemKeyboardHeight();
   const customKeyboardHeight = useCustomKeyboardHeight.getCustomKeyboardHeight();

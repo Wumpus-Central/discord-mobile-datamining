@@ -1,7 +1,7 @@
-// === Module 9935: getDefaultInviteExpiration ===
+// === Module 9939: getDefaultInviteExpiration ===
 
-// Module 9935 (getDefaultInviteExpiration)
-import isGuildMemberDefault from "isGuildMember" /* 9933 */;
+// Module 9939 (getDefaultInviteExpiration)
+import isGuildMemberDefault from "isGuildMember" /* 9937 */;
 import closure_3 from "createGuildRecordFromRust" /* 1908 */;
 import ME from "ME" /* 673 */;
 import createExperiment from "createExperiment" /* 4389 */;

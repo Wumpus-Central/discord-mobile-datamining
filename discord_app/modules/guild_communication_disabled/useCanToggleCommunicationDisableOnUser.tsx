@@ -1,6 +1,6 @@
-// === Module 8437: canToggleCommunicationDisableOnUser ===
+// === Module 8441: canToggleCommunicationDisableOnUser ===
 
-// Module 8437 (canToggleCommunicationDisableOnUser)
+// Module 8441 (canToggleCommunicationDisableOnUser)
 import set from "set" /* 2 */;
 import ME from "ME" /* 673 */;
 import GuildNSFWContentLevel from "GuildNSFWContentLevel" /* 1429 */;

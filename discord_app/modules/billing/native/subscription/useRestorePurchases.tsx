@@ -1,6 +1,6 @@
-// === Module 15035: useRestorePurchases ===
+// === Module 15050: useRestorePurchases ===
 
-// Module 15035 (useRestorePurchases)
+// Module 15050 (useRestorePurchases)
 import timestampDefault from "timestamp" /* 3 */;
 import closure_2 from "asyncGeneratorStep" /* 5 */;
 import closure_3 from "_slicedToArray" /* 32 */;

@@ -1,10 +1,10 @@
-// === Module 6874: NitroWumpusFlightLeft3dIllustration ===
+// === Module 6875: NitroWumpusFlightLeft3dIllustration ===
 
-// Module 6874 (NitroWumpusFlightLeft3dIllustration)
+// Module 6875 (NitroWumpusFlightLeft3dIllustration)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5501 */;
-import metadataDefault from "metadata" /* 6875 */;
+import preloadDefault from "preload" /* 5502 */;
+import metadataDefault from "metadata" /* 6876 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/NitroWumpusFlightLeft3dIllustration.native.tsx");

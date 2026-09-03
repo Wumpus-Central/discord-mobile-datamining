@@ -1,9 +1,9 @@
-// === Module 17605: GuildRoleSubscriptionTierTemplateBasicInfo ===
+// === Module 17625: GuildRoleSubscriptionTierTemplateBasicInfo ===
 
-// Module 17605 (GuildRoleSubscriptionTierTemplateBasicInfo)
+// Module 17625 (GuildRoleSubscriptionTierTemplateBasicInfo)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 709 */;
-import preloadDefault from "preload" /* 5501 */;
+import preloadDefault from "preload" /* 5502 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { SubscriptionIntervalTypes } from "GuildFeatures" /* 1923 */;
 import { CurrencyCodes } from "sum" /* 502 */;
@@ -36,9 +36,9 @@ export const GuildRoleSubscriptionTierTemplateBasicInfo = function GuildRoleSubs
   const obj2 = { variant: "heading-md/medium", style: subscriptionPlanTextStyle, children: null };
   const intl = template(1233).intl;
   const obj3 = { price: null, interval: null };
-  let obj6 = template(6089);
+  let obj6 = template(6090);
   obj3[0] = obj6.formatPrice(price_tier, CurrencyCodes.USD);
-  obj3[1] = template(15056).formatPlanInterval({ interval: SubscriptionIntervalTypes.MONTH, interval_count: 1 });
+  obj3[1] = template(15071).formatPlanInterval({ interval: SubscriptionIntervalTypes.MONTH, interval_count: 1 });
   obj2[2] = intl.format(template(1233).t.CgmBaG, obj3);
   items1[2] = callback(template(4474).Text, obj2);
   obj1[1] = items1;
@@ -56,7 +56,7 @@ export const GuildRoleSubscriptionTierTemplateBasicInfo = function GuildRoleSubs
   obj6[2] = function onPress() {
     return callback(template, closure_2);
   };
-  items2[2] = callback(template(4929).BaseTextButton, obj6);
+  items2[2] = callback(template(4930).BaseTextButton, obj6);
   obj[1] = items2;
   return callback2(View, obj);
 };

@@ -1,8 +1,8 @@
-// === Module 14989: QuestBottomSheetTaskSelect ===
+// === Module 15004: QuestBottomSheetTaskSelect ===
 
-// Module 14989 (QuestBottomSheetTaskSelect)
+// Module 15004 (QuestBottomSheetTaskSelect)
 import noopAll from "noop" /* 19 */;
-import { QuestTaskPlatform } from "QuestsExperimentLocations" /* 5395 */;
+import { QuestTaskPlatform } from "QuestsExperimentLocations" /* 5396 */;
 import jsxProd from "jsxProd" /* 21 */;
 
 const require = arg1;
@@ -13,7 +13,7 @@ const result = require("set").fileFinishedImporting("modules/quests/native/Quest
 export default function QuestBottomSheetTaskSelect(onTaskSelect) {
   onTaskSelect = onTaskSelect.onTaskSelect;
   let obj = { hasIcons: true, children: null };
-  obj = { arrow: true, icon: callback(onTaskSelect(12857).ScreenIcon, {}), label: null, onPress: null };
+  obj = { arrow: true, icon: callback(onTaskSelect(12869).ScreenIcon, {}), label: null, onPress: null };
   const intl = onTaskSelect(1233).intl;
   obj[2] = intl.string(onTaskSelect(1233).t["QXc01+"]);
   obj[3] = function onPress() {
@@ -23,8 +23,8 @@ export default function QuestBottomSheetTaskSelect(onTaskSelect) {
     }
     return tmpResult;
   };
-  const items = [callback(onTaskSelect(5607).TableRow, obj), ];
-  obj = { arrow: true, icon: callback(onTaskSelect(9213).GameControllerIcon, {}), label: null, onPress: null };
+  const items = [callback(onTaskSelect(5608).TableRow, obj), ];
+  obj = { arrow: true, icon: callback(onTaskSelect(9217).GameControllerIcon, {}), label: null, onPress: null };
   const intl2 = onTaskSelect(1233).intl;
   obj[2] = intl2.string(onTaskSelect(1233).t["8lAfuB"]);
   obj[3] = function onPress() {
@@ -34,7 +34,7 @@ export default function QuestBottomSheetTaskSelect(onTaskSelect) {
     }
     return tmpResult;
   };
-  items[1] = callback(onTaskSelect(5607).TableRow, obj);
+  items[1] = callback(onTaskSelect(5608).TableRow, obj);
   obj[1] = items;
-  return callback2(onTaskSelect(6000).TableRowGroup, obj);
+  return callback2(onTaskSelect(6001).TableRowGroup, obj);
 };

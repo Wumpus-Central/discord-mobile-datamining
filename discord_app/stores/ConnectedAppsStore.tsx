@@ -1,6 +1,6 @@
-// === Module 5484: isConnected ===
+// === Module 5485: isConnected ===
 
-// Module 5484 (isConnected)
+// Module 5485 (isConnected)
 import initializeDefault from "initialize" /* 586 */;
 import dispatcherDefault from "dispatcher" /* 706 */;
 

@@ -1,6 +1,6 @@
-// === Module 11881: ActivityShelfBadge ===
+// === Module 11887: ActivityShelfBadge ===
 
-// Module 11881 (ActivityShelfBadge)
+// Module 11887 (ActivityShelfBadge)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 709 */;
 import PermissionOverwriteType from "PermissionOverwriteType" /* 1954 */;

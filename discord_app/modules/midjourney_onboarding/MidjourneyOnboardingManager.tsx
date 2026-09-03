@@ -1,9 +1,9 @@
-// === Module 17624: handleChannelCreate ===
+// === Module 17644: handleChannelCreate ===
 
-// Module 17624 (handleChannelCreate)
-import initializeDefault from "initialize" /* 5494 */;
+// Module 17644 (handleChannelCreate)
+import initializeDefault from "initialize" /* 5495 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import { MIDJOURNEY_GUILD_ID } from "MIDJOURNEY_GUILD_ID" /* 13822 */;
+import { MIDJOURNEY_GUILD_ID } from "MIDJOURNEY_GUILD_ID" /* 13838 */;
 import { Routes } from "ME" /* 673 */;
 
 const require = arg1;
@@ -49,20 +49,20 @@ MidjourneyOnboardingManager.prototype["handleChannelCreate"] = function handleCh
               v0 = 1;
               dependencyMap = 1;
               obj1 = { value: null, done: false };
-              obj1[0] = tmp22(13821).hasRedirectedToGuild(closure_1_4);
+              obj1[0] = tmp22(13837).hasRedirectedToGuild(closure_1_4);
               return obj1;
             } else {
               dependencyMap = 3;
             }
-            obj6 = closure_1_0(13821);
+            obj6 = closure_1_0(13837);
             tmp22 = closure_1_0;
           }
         } else if (arg0 === 1) {
           dependencyMap = 3;
           throw arg1;
         } else if (arg0 !== 2) {
-          v0(6099)(closure_1_5.CHANNEL(null, id.id));
-          const tmp9 = v0(6099);
+          v0(6100)(closure_1_5.CHANNEL(null, id.id));
+          const tmp9 = v0(6100);
         }
         dependencyMap = 3;
         obj = { value: null, done: true };

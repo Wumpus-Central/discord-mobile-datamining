@@ -1,6 +1,6 @@
-// === Module 11772: metadata ===
+// === Module 11778: metadata ===
 
-// Module 11772 (metadata)
+// Module 11778 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/EmojiCatStarsExample-1x.png.js");

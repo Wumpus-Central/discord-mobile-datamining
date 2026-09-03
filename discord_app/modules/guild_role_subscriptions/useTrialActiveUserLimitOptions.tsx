@@ -1,6 +1,6 @@
-// === Module 17569: useTrialActiveUserLimitOptions ===
+// === Module 17589: useTrialActiveUserLimitOptions ===
 
-// Module 17569 (useTrialActiveUserLimitOptions)
+// Module 17589 (useTrialActiveUserLimitOptions)
 import closure_2 from "noop" /* 19 */;
 
 const require = arg1;

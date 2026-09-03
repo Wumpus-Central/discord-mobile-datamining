@@ -1,13 +1,13 @@
-// === Module 14538: PasskeyUpsellView ===
+// === Module 14554: PasskeyUpsellView ===
 
-// Module 14538 (PasskeyUpsellView)
+// Module 14554 (PasskeyUpsellView)
 import ThemesDefault from "Themes" /* 709 */;
 import combinedDefault from "combined" /* 1994 */;
-import registerAssetDefault from "registerAsset" /* 14543 */;
+import registerAssetDefault from "registerAsset" /* 14559 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { WebAuthnScreens } from "WebAuthnScreens" /* 14534 */;
+import { WebAuthnScreens } from "WebAuthnScreens" /* 14550 */;
 import { HelpdeskArticles } from "ME" /* 673 */;
 import { ContentDismissActionType } from "ContentDismissActionType" /* 1383 */;
 import jsxProd from "jsxProd" /* 21 */;
@@ -46,9 +46,9 @@ export default function PasskeyUpsellView() {
     navigation.push(closure_1_8.NAME, obj);
   }
   function onCancel() {
-    callback(14539).markDismissed(constants.USER_DISMISS);
-    const obj = callback(14539);
-    const result = callback(14540).closePasskeyUpsellModal();
+    callback(14555).markDismissed(constants.USER_DISMISS);
+    const obj = callback(14555);
+    const result = callback(14556).closePasskeyUpsellModal();
   }
   let obj = navigation(1498);
   navigation = obj.useNavigation();
@@ -131,7 +131,7 @@ export default function PasskeyUpsellView() {
   } else {
     string3Result = string3(t3.NIFmCJ);
   }
-  items6[1] = callback(navigation(4928).Button, {
+  items6[1] = callback(navigation(4929).Button, {
     text: string3Result,
     onPress() {
       let obj = closure_1_1(closure_1_2[11]);
@@ -152,10 +152,10 @@ export default function PasskeyUpsellView() {
   } else {
     string4Result = string4(t4["7J6/nG"]);
   }
-  items6[2] = callback(navigation(4928).Button, { text: string4Result, onPress: onCancel, size: "lg", variant: "secondary", grow: true });
+  items6[2] = callback(navigation(4929).Button, { text: string4Result, onPress: onCancel, size: "lg", variant: "secondary", grow: true });
   obj12[1] = items6;
   items2[2] = closure_12(closure_5, obj12);
   obj[1] = items2;
   obj[2] = closure_12(tmp12, obj);
-  return callback(navigation(5561).SafeAreaPaddingView, obj);
+  return callback(navigation(5562).SafeAreaPaddingView, obj);
 };

@@ -1,7 +1,7 @@
-// === Module 10090: UserSettingsVoiceOutputOptions ===
+// === Module 10094: UserSettingsVoiceOutputOptions ===
 
-// Module 10090 (UserSettingsVoiceOutputOptions)
-import VolumeSliderDefault from "VolumeSlider" /* 10091 */;
+// Module 10094 (UserSettingsVoiceOutputOptions)
+import VolumeSliderDefault from "VolumeSlider" /* 10095 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_5 from "reset" /* 4500 */;
@@ -67,7 +67,7 @@ export default function UserSettingsVoiceOutputOptions() {
   obj2[3] = intl3.string(stateFromStores1(1233).t.xPHVBs);
   obj1[1] = callback(VolumeSliderDefault, obj2);
   obj[1] = callback(View, obj1);
-  const items4 = [callback(stateFromStores1(5607).TableRow, obj), ];
+  const items4 = [callback(stateFromStores1(5608).TableRow, obj), ];
   let tmp9Result = null != stateFromStores1;
   if (tmp9Result) {
     const obj3 = { label: null, subLabel: null };
@@ -82,10 +82,10 @@ export default function UserSettingsVoiceOutputOptions() {
     obj5[2] = intl5.string(tmp2(1233).t.pEAl4b);
     obj4[1] = tmp9(VolumeSliderDefault, obj5);
     obj3[1] = tmp9(View, obj4);
-    tmp9Result = tmp9(tmp2(5607).TableRow, obj3);
+    tmp9Result = tmp9(tmp2(5608).TableRow, obj3);
     const tmp11Result = VolumeSliderDefault;
   }
   items4[1] = tmp9Result;
   obj[2] = items4;
-  return closure_10(stateFromStores1(10084).UserSettingsTableRowGroup, obj);
+  return closure_10(stateFromStores1(10088).UserSettingsTableRowGroup, obj);
 };

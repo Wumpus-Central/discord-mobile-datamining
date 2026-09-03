@@ -1,6 +1,6 @@
-// === Module 10905: RolePill ===
+// === Module 10909: RolePill ===
 
-// Module 10905 (RolePill)
+// Module 10909 (RolePill)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 709 */;
 import { View } from "get ActivityIndicator" /* 17 */;
@@ -31,7 +31,7 @@ export default function RolePill(role) {
   let combined;
   const DeveloperMode = role(4166).DeveloperMode;
   const setting = DeveloperMode.useSetting();
-  let obj = role(5985);
+  let obj = role(5986);
   obj = { guildId, roleId: role.id, size: 12 };
   const roleIcon = obj.useRoleIcon(obj);
   let name = role.name;
@@ -76,8 +76,8 @@ export default function RolePill(role) {
     }
     obj2[2] = guildId;
     obj2[3] = color;
-    let tmp10Result = tmp10(combined(6005), obj2);
-    const tmp15 = combined(6005);
+    let tmp10Result = tmp10(combined(6006), obj2);
+    const tmp15 = combined(6006);
   } else {
     const items = [tmp9.bubble, ];
     if (null != color) {
@@ -104,5 +104,5 @@ export default function RolePill(role) {
   items1[2] = closure_6(role(4474).Text, { variant: "text-xs/semibold", color: "interactive-text-active", children: name });
   obj1[1] = items1;
   obj[4] = closure_7(View, obj1);
-  return closure_6(role(5076).PressableHighlight, obj);
+  return closure_6(role(5077).PressableHighlight, obj);
 };

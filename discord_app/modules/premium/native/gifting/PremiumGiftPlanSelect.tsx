@@ -1,13 +1,13 @@
-// === Module 10695: items ===
+// === Module 10699: items ===
 
-// Module 10695 (items)
+// Module 10699 (items)
 import nDefault from "n" /* 686 */;
 import ThemesDefault from "Themes" /* 709 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_9 from "initialize" /* 8573 */;
-import closure_10 from "createEmptyPromotionsByType" /* 10696 */;
+import closure_9 from "initialize" /* 8577 */;
+import closure_10 from "createEmptyPromotionsByType" /* 10700 */;
 import { VerticalGradient } from "ME" /* 673 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
@@ -532,7 +532,7 @@ export default function PremiumGiftPlanSelect(shouldUseDMWishlistGiftingDesign) 
         const tmp4Result3 = tmp4(tmp2[30]);
       }
     } else {
-      const obj34 = { style: null, guildId: "r", size: "getChannelIcon", user: "landscape" };
+      const obj34 = { style: null, guildId: "r", size: "PX_16", user: null };
       obj34[0] = tmp13.avatar;
       const AvatarSizes = tmp(tmp2[26]).AvatarSizes;
       obj34[2] = tmp65Result ? AvatarSizes.LARGE_48 : AvatarSizes.XLARGE;

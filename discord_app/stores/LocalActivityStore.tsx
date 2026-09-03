@@ -1,6 +1,6 @@
-// === Module 9446: updateActivities ===
+// === Module 9450: updateActivities ===
 
-// Module 9446 (updateActivities)
+// Module 9450 (updateActivities)
 import initializeDefault from "initialize" /* 586 */;
 import isUndefinedOrNullDefault from "isUndefinedOrNull" /* 656 */;
 import dispatcherDefault from "dispatcher" /* 706 */;
@@ -8,13 +8,13 @@ import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "participantFromServer" /* 1385 */;
 import closure_5 from "addApplication" /* 4519 */;
 import closure_6 from "initialize" /* 4501 */;
-import closure_7 from "updateActivities" /* 9447 */;
-import closure_8 from "upsertAccount" /* 5232 */;
+import closure_7 from "updateActivities" /* 9451 */;
+import closure_8 from "upsertAccount" /* 5233 */;
 import closure_9 from "handleConnectionClosedOrResumed" /* 1339 */;
 import closure_10 from "reset" /* 4500 */;
 import closure_11 from "ensureGuildLoaded" /* 1386 */;
 import closure_12 from "gameFromServer" /* 4514 */;
-import closure_13 from "makeTwitchRequest" /* 9449 */;
+import closure_13 from "makeTwitchRequest" /* 9453 */;
 import closure_14 from "handleConnectionOpen" /* 1980 */;
 import closure_15 from "handleUpdate" /* 4496 */;
 import ME from "ME" /* 673 */;
@@ -94,21 +94,21 @@ function updateActivities() {
     }
     if (null != tmp29) {
       let tmp26 = tmp29;
-      if (null == c21) {
+      if (null == c25) {
         let start = tmp29.start;
         if (start == null) {
           const _Date3 = Date;
           start = Date.now();
         }
-        c21 = start;
+        c25 = start;
         tmp26 = tmp29;
       }
     } else {
-      c21 = null;
+      c25 = null;
       tmp26 = visibleGame;
     }
   } else {
-    c21 = null;
+    c25 = null;
     tmp26 = visibleGame;
   }
   let tmp35 = null != tmp26 && null != tmp26.name;
@@ -139,8 +139,8 @@ function updateActivities() {
             id = id1;
           }
           obj[2] = id;
-          let start2 = c21;
-          if (c21 == null) {
+          let start2 = c25;
+          if (c25 == null) {
             start2 = tmp26.start;
           }
           obj1 = { start: null };
@@ -164,7 +164,11 @@ function updateActivities() {
 ({ ActivityFlags: closure_16, ActivityGamePlatforms: closure_17, ActivityTypes: closure_18 } = ME);
 let closure_19 = [];
 let closure_20 = {};
-let c21 = null;
+let closure_21 = {};
+let c22 = 0;
+let closure_23 = {};
+let closure_24 = {};
+let c25 = null;
 const Store = initializeDefault.Store;
 class LocalActivityStore extends Store {
 }
@@ -209,6 +213,28 @@ prototype["getActivityForPID"] = function getActivityForPID(arg0) {
   }
   return null;
 };
+prototype["getApplicationIdForPID"] = function getApplicationIdForPID(pid) {
+  const entries = Object.entries(closure_21);
+  const obj = entries[Symbol.iterator]();
+  while (obj !== undefined) {
+    let tmp4 = callback;
+    let tmp5 = callback(tmp3, 2);
+    let first = tmp5[0];
+    let tmp7 = callback(tmp5[1], 2);
+    if (tmp7[0] === pid) {
+      let tmp9 = dependencyMap2;
+      let tmp10 = first;
+      let tmp11 = dependencyMap2[first];
+      if (null != tmp) {
+        let tmp12 = tmp11;
+      }
+      let tmp13 = obj;
+      obj.return();
+      return tmp8;
+    }
+    continue;
+  }
+};
 LocalActivityStore.displayName = "LocalActivityStore";
 const localActivityStore = new LocalActivityStore(dispatcherDefault, {
   ROBLOX_SUBGAME_UPDATE: updateActivities,
@@ -220,24 +246,75 @@ const localActivityStore = new LocalActivityStore(dispatcherDefault, {
   },
   START_SESSION: function handleStartSession() {
     closure_20 = {};
+    closure_21 = {};
+    c22 = 0;
+    closure_23 = {};
+    closure_24 = {};
     updateActivities();
   },
   LOCAL_ACTIVITY_UPDATE: function handleLocalActivityUpdate(arg0) {
-    ({ socketId, pid, activity, partyPrivacy } = arg0);
-    const items = [pid, activity, partyPrivacy];
-    if (isUndefinedOrNullDefault(table[socketId], items)) {
-      return false;
-    } else {
-      if (null != activity) {
-        const items1 = [pid, activity, partyPrivacy];
-        table[socketId] = items1;
-      } else {
-        delete tmp[tmp2];
-      }
-      updateActivities();
+    ({ socketId, pid, applicationId, activity, partyPrivacy } = arg0);
+    closure_0 = undefined;
+    let tmp3 = dependencyMap2[socketId];
+    if (null == tmp3) {
+      const sum = c22 + 1;
+      c22 = sum;
+      dependencyMap2[socketId] = sum;
+      tmp3 = sum;
     }
+    let flag = false;
+    if (null != pid) {
+      closure_0 = tmp8;
+      let someResult = null != tmp8;
+      if (someResult) {
+        const _Object = Object;
+        const keys = Object.keys(table);
+        someResult = keys.some((arg0) => closure_1_23[arg0] === closure_0);
+      }
+      flag = false;
+      if (tmp12) {
+        flag = tmp3 !== tmp8;
+        dependencyMap3[pid] = tmp3;
+      }
+      tmp12 = null == dependencyMap3[pid] || tmp3 >= dependencyMap3[pid] || !someResult;
+    }
+    if (null == activity) {
+      let tmp17 = null == dependencyMap[socketId];
+    } else {
+      const items = [pid, activity, partyPrivacy];
+      tmp17 = isUndefinedOrNullDefault(dependencyMap[socketId], items);
+    }
+    let tmp19 = null == applicationId;
+    if (!tmp19) {
+      const items1 = [pid, applicationId];
+      tmp19 = isUndefinedOrNullDefault(table[socketId], items1);
+    }
+    if (tmp17) {
+      if (tmp19) {
+        if (!flag) {
+          return false;
+        }
+      }
+    }
+    if (null != applicationId) {
+      const items2 = [pid, applicationId];
+      table[socketId] = items2;
+    }
+    if (null != activity) {
+      const items3 = [pid, activity, partyPrivacy];
+      dependencyMap[socketId] = items3;
+    } else {
+      delete tmp[tmp2];
+    }
+    updateActivities();
+  },
+  RPC_APP_CONNECTED: function handleRPCAppConnected(socketId) {
+    const sum = c22 + 1;
+    c22 = sum;
+    closure_23[socketId.socketId] = sum;
   },
   RPC_APP_DISCONNECTED: function handleRPCAppDisconnected(arg0) {
+    delete tmp[tmp2];
     delete tmp[tmp2];
     updateActivities();
   },
@@ -269,7 +346,7 @@ const localActivityStore = new LocalActivityStore(dispatcherDefault, {
         let tmp12 = num;
         let tmp13 = callback;
         let tmp14 = dependencyMap;
-        let obj2 = callback(9451);
+        let obj2 = callback(9455);
         let tmp15 = tmp9;
         let obj3 = callback(1398);
         let num2;
@@ -283,7 +360,7 @@ const localActivityStore = new LocalActivityStore(dispatcherDefault, {
         let tmp18 = tmp9;
         let tmp19 = constants2;
         let hasFlagResult = obj3.hasFlag(num2, constants.INSTANCE);
-        let tmp13Result = tmp13(9451);
+        let tmp13Result = tmp13(9455);
         let tmp20 = tmp11;
         let tmp21 = obj2;
         let tmp22 = tmp10;

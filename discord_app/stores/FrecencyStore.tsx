@@ -1,6 +1,6 @@
-// === Module 5459: handleChannelSelect ===
+// === Module 5460: handleChannelSelect ===
 
-// Module 5459 (handleChannelSelect)
+// Module 5460 (handleChannelSelect)
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 586 */;
 import dispatcherDefault from "dispatcher" /* 706 */;

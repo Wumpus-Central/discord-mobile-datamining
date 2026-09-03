@@ -1,9 +1,9 @@
-// === Module 15356: ? ===
+// === Module 15370: ? ===
 
-// Module 15356
-import _modDef14563 from "module_14563" /* 14563 */;
+// Module 15370
+import _modDef14578 from "module_14578" /* 14578 */;
 import importAllResult from "noop" /* 19 */;
-import { MobileUserSettings } from "MobileUserSettings" /* 7893 */;
+import { MobileUserSettings } from "MobileUserSettings" /* 7896 */;
 import { MarketingURLs } from "ME" /* 673 */;
 import { jsx } from "jsxProd" /* 21 */;
 
@@ -11,7 +11,7 @@ const require = arg1;
 let c3 = importAllResult;
 const memoResult = importAllResult.memo(() => {
   const node = importAllResult.useMemo(() => {
-    let obj = callback(11288);
+    let obj = callback(11292);
     obj = { sections: null };
     obj = { label: null, settings: null, subLabel: null };
     const intl = callback(1233).intl;
@@ -37,7 +37,7 @@ const memoResult = importAllResult.memo(() => {
     obj[0] = items1;
     return obj.createList(obj);
   }, []);
-  return jsx(_modDef14563, { node });
+  return jsx(_modDef14578, { node });
 });
 const result = require("set").fileFinishedImporting("modules/user_settings/advanced/native/SettingsAdvancedScreen.tsx");
 

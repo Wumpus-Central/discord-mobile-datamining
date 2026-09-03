@@ -1,15 +1,15 @@
-// === Module 8734: AgeVerificationOtherWindowScreen ===
+// === Module 8738: AgeVerificationOtherWindowScreen ===
 
-// Module 8734 (AgeVerificationOtherWindowScreen)
+// Module 8738 (AgeVerificationOtherWindowScreen)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 709 */;
 import getSystemLocale from "getSystemLocale" /* 1233 */;
 import messagesProxyDefault from "messagesProxy" /* 2918 */;
 import Text from "Text" /* 4474 */;
-import Stack from "Stack" /* 4926 */;
-import MobilePhoneIcon from "MobilePhoneIcon" /* 7742 */;
-import ModalScreen from "ModalScreen" /* 8707 */;
-import ModalContent from "ModalContent" /* 8708 */;
+import Stack from "Stack" /* 4927 */;
+import MobilePhoneIcon from "MobilePhoneIcon" /* 7745 */;
+import ModalScreen from "ModalScreen" /* 8711 */;
+import ModalContent from "ModalContent" /* 8712 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 

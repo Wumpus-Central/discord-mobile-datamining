@@ -1,13 +1,13 @@
-// === Module 11532: EmojiPickerRowButton ===
+// === Module 11537: EmojiPickerRowButton ===
 
-// Module 11532 (EmojiPickerRowButton)
+// Module 11537 (EmojiPickerRowButton)
 import ThemesDefault from "Themes" /* 709 */;
 import getSystemLocale from "getSystemLocale" /* 1233 */;
 import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 1362 */;
 import EmojiTypes from "EmojiTypes" /* 4137 */;
-import PressableBase from "PressableBase" /* 5076 */;
-import EmojiDefault from "Emoji" /* 5593 */;
-import ReactionIcon from "ReactionIcon" /* 8237 */;
+import PressableBase from "PressableBase" /* 5077 */;
+import EmojiDefault from "Emoji" /* 5594 */;
+import ReactionIcon from "ReactionIcon" /* 8241 */;
 import closure_3 from "noop" /* 19 */;
 import { Platform } from "get ActivityIndicator" /* 17 */;
 import { EMOJI_URL_BASE_SIZE } from "set" /* 1924 */;

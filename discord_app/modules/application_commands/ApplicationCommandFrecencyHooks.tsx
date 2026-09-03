@@ -1,9 +1,9 @@
-// === Module 8163: useTopCommands ===
+// === Module 8167: useTopCommands ===
 
-// Module 8163 (useTopCommands)
+// Module 8167 (useTopCommands)
 import closure_2 from "noop" /* 19 */;
-import handleUserSettingsProtoStoreChange from "handleUserSettingsProtoStoreChange" /* 8156 */;
-import closure_5 from "handleUserSettingsProtoStoreChange" /* 8156 */;
+import handleUserSettingsProtoStoreChange from "handleUserSettingsProtoStoreChange" /* 8160 */;
+import closure_5 from "handleUserSettingsProtoStoreChange" /* 8160 */;
 import { UserSettingsTypes } from "MAX_FAVORITES" /* 682 */;
 
 const require = arg1;

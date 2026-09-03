@@ -1,6 +1,6 @@
-// === Module 12308: useGetGuildPowerupBannerImage ===
+// === Module 12320: useGetGuildPowerupBannerImage ===
 
-// Module 12308 (useGetGuildPowerupBannerImage)
+// Module 12320 (useGetGuildPowerupBannerImage)
 import initialize from "initialize" /* 586 */;
 import closure_2 from "maybeApplyNoTextColorForLightCustomTheme" /* 4470 */;
 

@@ -1,6 +1,6 @@
-// === Module 10745: useThemeAndReducedMotionAwareAssetUrl ===
+// === Module 10749: useThemeAndReducedMotionAwareAssetUrl ===
 
-// Module 10745 (useThemeAndReducedMotionAwareAssetUrl)
+// Module 10749 (useThemeAndReducedMotionAwareAssetUrl)
 import initialize from "initialize" /* 586 */;
 import isThemeLight from "isThemeLight" /* 1363 */;
 import useThemeDefault from "useTheme" /* 4413 */;

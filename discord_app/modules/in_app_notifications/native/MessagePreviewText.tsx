@@ -1,17 +1,17 @@
-// === Module 10212: NativeMessagePreviewContent ===
+// === Module 10216: NativeMessagePreviewContent ===
 
-// Module 10212 (NativeMessagePreviewContent)
+// Module 10216 (NativeMessagePreviewContent)
 import ThemesDefault from "Themes" /* 709 */;
 import Text from "Text" /* 4474 */;
-import preloadDefault from "preload" /* 5501 */;
-import isForwardMessageDefault from "isForwardMessage" /* 6155 */;
-import isReactionMilestoneNotification from "isReactionMilestoneNotification" /* 10199 */;
-import useTruncatedGradientColorsDefault from "useTruncatedGradientColors" /* 10213 */;
-import PreviewIcon from "PreviewIcon" /* 10214 */;
+import preloadDefault from "preload" /* 5502 */;
+import isForwardMessageDefault from "isForwardMessage" /* 6156 */;
+import isReactionMilestoneNotification from "isReactionMilestoneNotification" /* 10203 */;
+import useTruncatedGradientColorsDefault from "useTruncatedGradientColors" /* 10217 */;
+import PreviewIcon from "PreviewIcon" /* 10218 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_5 from "ensureGuildLoaded" /* 1386 */;
-import set from "set" /* 10200 */;
+import set from "set" /* 10204 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 import PlatformTypes from "PlatformTypes" /* 1235 */;
@@ -163,18 +163,18 @@ export default function MessagePreviewText(message) {
   if (showMessageAuthor === undefined) {
     showMessageAuthor = false;
   }
-  let obj = message(10234);
+  let obj = message(10238);
   const previewableMedia = obj.usePreviewableMedia(message);
-  obj1 = message(4746);
+  obj1 = message(4747);
   let tmp3 = null;
   if (showMessageAuthor) {
     tmp3 = message;
   }
   const nullableMessageAuthor = obj1.useNullableMessageAuthor(tmp3);
-  let tmpResult = tmp(10242);
+  let tmpResult = tmp(10246);
   const previewableMediaText = tmpResult.usePreviewableMediaText({ previewableMedia, author: nullableMessageAuthor });
   ({ text, secondaryText } = previewableMediaText);
-  tmpResult = tmp(10243);
+  tmpResult = tmp(10247);
   const getInitialMessagePreview = tmpResult.useGetInitialMessagePreview({ message });
   const items = [message.embeds];
   const memo = React.useMemo(() => {
@@ -205,7 +205,7 @@ export default function MessagePreviewText(message) {
   } else if (isForwardMessageDefault(message)) {
     let tmp29 = previewableMedia.length > 0;
     if (tmp29) {
-      tmp29 = previewableMedia[0].type === tmp(10234).PreviewableMediaTypes.GIF;
+      tmp29 = previewableMedia[0].type === tmp(10238).PreviewableMediaTypes.GIF;
     }
     if (previewableMedia.length > 0) {
       if (null != nullableMessageAuthor) {
@@ -229,7 +229,7 @@ export default function MessagePreviewText(message) {
   } else if (message.content.length > 0) {
     if (null != nullableMessageAuthor) {
       channel = channel.getChannel(message.channel_id);
-      tmp(10199);
+      tmp(10203);
       if (null != channel) {
         const obj6 = { channel: null, message: null, color: "text-default", layout: null, variant: null, muted: false, lineClamp: null };
         obj6[0] = channel;
@@ -237,7 +237,7 @@ export default function MessagePreviewText(message) {
         obj6[3] = tmp(4171).ChannelListLayoutTypes.COZY;
         obj6[4] = tmp24;
         obj6[6] = lineClamp;
-        return callback(tmp(10214).ChannelRowPreview, obj6);
+        return callback(tmp(10218).ChannelRowPreview, obj6);
       }
     }
     const obj7 = { message: null, lineClamp: null, maxHeight: null };

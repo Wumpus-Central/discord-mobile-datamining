@@ -1,10 +1,10 @@
-// === Module 6958: SafetyBookletSpotIllustration ===
+// === Module 6959: SafetyBookletSpotIllustration ===
 
-// Module 6958 (SafetyBookletSpotIllustration)
+// Module 6959 (SafetyBookletSpotIllustration)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5501 */;
-import metadataDefault from "metadata" /* 6959 */;
+import preloadDefault from "preload" /* 5502 */;
+import metadataDefault from "metadata" /* 6960 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/SafetyBookletSpotIllustration.native.tsx");

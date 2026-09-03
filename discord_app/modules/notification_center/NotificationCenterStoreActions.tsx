@@ -1,6 +1,6 @@
-// === Module 16235: setTab ===
+// === Module 16254: setTab ===
 
-// Module 16235 (setTab)
+// Module 16254 (setTab)
 import set from "set" /* 2 */;
 import dispatcherDefault from "dispatcher" /* 706 */;
 

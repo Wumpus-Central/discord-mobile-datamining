@@ -1,8 +1,8 @@
-// === Module 7693: FormCheckbox ===
+// === Module 7696: FormCheckbox ===
 
-// Module 7693 (FormCheckbox)
+// Module 7696 (FormCheckbox)
 import ThemesDefault from "Themes" /* 709 */;
-import IconSizesDefault from "IconSizes" /* 4930 */;
+import IconSizesDefault from "IconSizes" /* 4931 */;
 import closure_3 from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;

@@ -1,6 +1,6 @@
-// === Module 16635: ? ===
+// === Module 16655: ? ===
 
-// Module 16635
+// Module 16655
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
@@ -32,11 +32,11 @@ const memoResult = importAllResult.memo(function InstantInviteSelfMeasurer(type)
   if ("invite" === item.type) {
     obj = { invite: null };
     obj[0] = item.data;
-    let tmp2Result = tmp2(str(10890), obj);
+    let tmp2Result = tmp2(str(10894), obj);
   } else {
     obj = { channel: null };
     obj[0] = item.data;
-    tmp2Result = tmp2(onMeasured(10890).LinkedChannelInvite, obj);
+    tmp2Result = tmp2(onMeasured(10894).LinkedChannelInvite, obj);
   }
   obj[6] = tmp2Result;
   return <View style={items1} onLayout={importAllResult.useCallback((nativeEvent) => {

@@ -1,13 +1,13 @@
-// === Module 14680: computeAffectedGuilds ===
+// === Module 14695: computeAffectedGuilds ===
 
-// Module 14680 (computeAffectedGuilds)
+// Module 14695 (computeAffectedGuilds)
 import getSystemLocale from "getSystemLocale" /* 1233 */;
 import create from "create" /* 1305 */;
 import explicitContentFromProto from "explicitContentFromProto" /* 4166 */;
-import closure_2 from "handleChannelSelect" /* 5459 */;
+import closure_2 from "handleChannelSelect" /* 5460 */;
 import closure_3 from "handleInviteData" /* 4398 */;
 import closure_4 from "createGuildRecordFromRust" /* 1908 */;
-import closure_5 from "insertUnsortedGuilds" /* 5389 */;
+import closure_5 from "insertUnsortedGuilds" /* 5390 */;
 
 require = arg1;
 function computeAffectedGuilds(setting, ACTIVITY_STATUS_OFF) {
@@ -41,7 +41,7 @@ function computeAffectedGuilds(setting, ACTIVITY_STATUS_OFF) {
         } else {
           EXPANDING = obj.EXPANDING;
         }
-        dependencyMap = tmp8(6251).getSanitizedActivityRestrictedGuilds();
+        dependencyMap = tmp8(6252).getSanitizedActivityRestrictedGuilds();
         flattenedGuildIds = flattenedGuildIds.getFlattenedGuildIds();
         if (setting !== tmp8(1305).GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_OFF) {
           if (setting !== tmp8(1305).GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_ON_FOR_LARGE_GUILDS) {
@@ -311,7 +311,7 @@ export const sortGuildIdsByFrecency = function sortGuildIdsByFrecency(guildIds) 
   });
 };
 export const applyBulkGuildRestrictionChange = function applyBulkGuildRestrictionChange(direction, affectedGuildIds) {
-  obj = set(6251);
+  obj = set(6252);
   const sanitizedActivityRestrictedGuilds = obj.getSanitizedActivityRestrictedGuilds();
   set = new Set(affectedGuildIds);
   if (direction === obj.RESTRICTING) {

@@ -1,13 +1,13 @@
-// === Module 15918: getFriendInviteCode ===
+// === Module 15934: getFriendInviteCode ===
 
-// Module 15918 (getFriendInviteCode)
+// Module 15934 (getFriendInviteCode)
 import ThemesDefault from "Themes" /* 709 */;
 import getSystemLocale from "getSystemLocale" /* 1233 */;
 import Text from "Text" /* 4474 */;
-import PressableBase from "PressableBase" /* 5076 */;
-import ButtonBadgeDefault from "ButtonBadge" /* 13141 */;
-import registerAssetDefault from "registerAsset" /* 13816 */;
-import registerAssetDefault2 from "registerAsset" /* 15919 */;
+import PressableBase from "PressableBase" /* 5077 */;
+import ButtonBadgeDefault from "ButtonBadge" /* 13153 */;
+import registerAssetDefault from "registerAsset" /* 13832 */;
+import registerAssetDefault2 from "registerAsset" /* 15935 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
@@ -169,10 +169,10 @@ function _handleShare() {
           return obj;
         } else {
           callback = arg1;
-          const obj5 = callback(9931);
+          const obj5 = callback(9935);
           const intl = callback(1233).intl;
           const obj2 = { link: null };
-          obj2[0] = callback2(7513)(callback);
+          obj2[0] = callback2(7514)(callback);
           obj5.handleOpenShareSheet(callback, null, intl.formatToPlainString(callback(1233).t.PJf9P9, obj2), constants.ADD_FRIENDS_WIDGET);
           c3 = 3;
           return { value: "HermesInternal", done: null };

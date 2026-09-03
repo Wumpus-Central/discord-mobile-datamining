@@ -1,6 +1,6 @@
-// === Module 8035: _fetchMessageInteractionData ===
+// === Module 8038: _fetchMessageInteractionData ===
 
-// Module 8035 (_fetchMessageInteractionData)
+// Module 8038 (_fetchMessageInteractionData)
 import dispatcherDefault from "dispatcher" /* 706 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import { Endpoints } from "ME" /* 673 */;

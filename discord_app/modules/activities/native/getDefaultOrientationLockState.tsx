@@ -1,6 +1,6 @@
-// === Module 9616: getIsTabletActivitySurface ===
+// === Module 9620: getIsTabletActivitySurface ===
 
-// Module 9616 (getIsTabletActivitySurface)
+// Module 9620 (getIsTabletActivitySurface)
 import set from "set" /* 2 */;
 import dispatcherDefault from "dispatcher" /* 706 */;
 import DCDDeviceManager from "DCDDeviceManager" /* 4457 */;

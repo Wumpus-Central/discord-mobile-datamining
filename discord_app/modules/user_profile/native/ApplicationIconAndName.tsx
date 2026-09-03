@@ -1,6 +1,6 @@
-// === Module 12390: ApplicationIconAndName ===
+// === Module 12402: ApplicationIconAndName ===
 
-// Module 12390 (ApplicationIconAndName)
+// Module 12402 (ApplicationIconAndName)
 import set from "set" /* 2 */;
 import ThemesDefault from "Themes" /* 709 */;
 import Button from "Button" /* 1296 */;

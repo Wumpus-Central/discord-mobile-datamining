@@ -1,6 +1,6 @@
-// === Module 9284: Pile ===
+// === Module 9288: Pile ===
 
-// Module 9284 (Pile)
+// Module 9288 (Pile)
 import apply from "apply" /* 12 */;
 import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1470 */;
 import closure_3 from "noop" /* 19 */;

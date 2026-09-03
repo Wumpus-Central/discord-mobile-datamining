@@ -1,8 +1,8 @@
-// === Module 11805: Spoiler ===
+// === Module 11811: Spoiler ===
 
-// Module 11805 (Spoiler)
+// Module 11811 (Spoiler)
 import noopAll from "noop" /* 19 */;
-import inlineStyles from "inlineStyles" /* 8250 */;
+import inlineStyles from "inlineStyles" /* 8254 */;
 import jsxProd from "jsxProd" /* 21 */;
 
 require = arg1;

@@ -1,9 +1,9 @@
-// === Module 8558: useProfileFrame ===
+// === Module 8562: useProfileFrame ===
 
-// Module 8558 (useProfileFrame)
-import closure_2 from "updateCategoriesAndProducts" /* 7296 */;
-import closure_3 from "map" /* 7312 */;
-import { isProfileFrameRecord } from "fromServer" /* 7303 */;
+// Module 8562 (useProfileFrame)
+import closure_2 from "updateCategoriesAndProducts" /* 7297 */;
+import closure_3 from "map" /* 7313 */;
+import { isProfileFrameRecord } from "fromServer" /* 7304 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/collectibles/profile_frames/hooks/useProfileFrame.tsx");

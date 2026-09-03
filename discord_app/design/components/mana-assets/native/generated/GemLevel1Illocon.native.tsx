@@ -1,10 +1,10 @@
-// === Module 6670: GemLevel1Illocon ===
+// === Module 6671: GemLevel1Illocon ===
 
-// Module 6670 (GemLevel1Illocon)
+// Module 6671 (GemLevel1Illocon)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5501 */;
-import metadataDefault from "metadata" /* 6671 */;
+import preloadDefault from "preload" /* 5502 */;
+import metadataDefault from "metadata" /* 6672 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/GemLevel1Illocon.native.tsx");

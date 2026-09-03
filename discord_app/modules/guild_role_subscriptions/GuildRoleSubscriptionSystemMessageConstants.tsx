@@ -1,9 +1,9 @@
-// === Module 7911: getJoinButtonLabels ===
+// === Module 7914: getJoinButtonLabels ===
 
-// Module 7911 (getJoinButtonLabels)
+// Module 7914 (getJoinButtonLabels)
 import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1233 */;
-import StickerFormat from "StickerFormat" /* 5220 */;
+import StickerFormat from "StickerFormat" /* 5221 */;
 
 let obj = { id: "781323471249604648", format_type: StickerFormat.StickerFormat.APNG, description: "Cheerful Choco jumps out of gift box", name: "Surprise" };
 let items = [obj, , , , ];

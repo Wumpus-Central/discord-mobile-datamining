@@ -1,9 +1,9 @@
-// === Module 14403: registerTransport ===
+// === Module 14419: registerTransport ===
 
-// Module 14403 (registerTransport)
+// Module 14419 (registerTransport)
 import applyDefault from "apply" /* 12 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 695 */;
-import transformUserDefault from "transformUser" /* 9522 */;
+import transformUserDefault from "transformUser" /* 9526 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import { TransportTypes } from "RPC_SCOPE_CONFIG" /* 4380 */;
 import ME from "ME" /* 673 */;

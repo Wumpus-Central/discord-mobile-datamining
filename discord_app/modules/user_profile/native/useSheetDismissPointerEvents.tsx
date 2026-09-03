@@ -1,6 +1,6 @@
-// === Module 9072: useSheetDismissPointerEvents ===
+// === Module 9076: useSheetDismissPointerEvents ===
 
-// Module 9072 (useSheetDismissPointerEvents)
+// Module 9076 (useSheetDismissPointerEvents)
 import set from "set" /* 2 */;
 
 let closure_2 = { code: "function useSheetDismissPointerEventsTsx1(){const{contentGestureState,State,handleGestureState}=this.__closure;var _contentGestureState,_handleGestureState;const isDragging=((_contentGestureState=contentGestureState)===null||_contentGestureState===void 0?void 0:_contentGestureState.get())===State.ACTIVE||((_handleGestureState=handleGestureState)===null||_handleGestureState===void 0?void 0:_handleGestureState.get())===State.ACTIVE;return{pointerEvents:isDragging?'none':'box-none'};}" };

@@ -1,6 +1,6 @@
-// === Module 9590: useVideoReadyTimeout ===
+// === Module 9594: useVideoReadyTimeout ===
 
-// Module 9590 (useVideoReadyTimeout)
+// Module 9594 (useVideoReadyTimeout)
 import setDefault from "set" /* 684 */;
 import closure_2 from "noop" /* 19 */;
 

@@ -1,9 +1,9 @@
-// === Module 17244: prototype ===
+// === Module 17264: prototype ===
 
-// Module 17244 (prototype)
-import initializeDefault from "initialize" /* 5494 */;
+// Module 17264 (prototype)
+import initializeDefault from "initialize" /* 5495 */;
 import closure_2 from "_detectH265HardwareDecode" /* 4529 */;
-import closure_3 from "getState" /* 7166 */;
+import closure_3 from "getState" /* 7167 */;
 import { AppStates } from "ME" /* 673 */;
 
 initializeDefault;

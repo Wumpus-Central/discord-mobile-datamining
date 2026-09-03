@@ -1,11 +1,11 @@
-// === Module 14774: route ===
+// === Module 14789: route ===
 
-// Module 14774 (route)
+// Module 14789 (route)
 import set from "set" /* 2 */;
 import ME from "ME" /* 673 */;
 import getSystemLocale from "getSystemLocale" /* 1233 */;
-import LaptopPhoneIcon from "LaptopPhoneIcon" /* 14775 */;
-import createToggle from "createToggle" /* 11288 */;
+import LaptopPhoneIcon from "LaptopPhoneIcon" /* 14790 */;
+import createToggle from "createToggle" /* 11292 */;
 
 obj = {
   useTitle() {
@@ -19,7 +19,7 @@ obj = {
 obj = {
   route: ME.UserSettingsSections.SESSIONS,
   getComponent() {
-    return require(14777) /* UserSettingsSessions */.default;
+    return require(14792) /* UserSettingsSessions */.default;
   }
 };
 const route = createToggle.createRoute(obj);

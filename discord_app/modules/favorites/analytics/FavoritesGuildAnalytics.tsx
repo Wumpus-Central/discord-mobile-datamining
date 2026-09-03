@@ -1,6 +1,6 @@
-// === Module 10336: setNextFavoritesGuildViewSource ===
+// === Module 10340: setNextFavoritesGuildViewSource ===
 
-// Module 10336 (setNextFavoritesGuildViewSource)
+// Module 10340 (setNextFavoritesGuildViewSource)
 import expandEventPropertiesDefault from "expandEventProperties" /* 695 */;
 import closure_3 from "handleConnectionOpen" /* 4299 */;
 import { AnalyticEvents } from "ME" /* 673 */;

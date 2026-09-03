@@ -1,14 +1,14 @@
-// === Module 14339: validateEmbeddedAppFrame ===
+// === Module 14355: validateEmbeddedAppFrame ===
 
-// Module 14339 (validateEmbeddedAppFrame)
-import getApplicationFlags from "getApplicationFlags" /* 8445 */;
-import prototypeDefault from "prototype" /* 9516 */;
-import recurseReplaceContentTree from "recurseReplaceContentTree" /* 9521 */;
-import closure_3 from "map" /* 9477 */;
-import closure_4 from "getBuilderPreviewApplicationId" /* 14340 */;
+// Module 14355 (validateEmbeddedAppFrame)
+import getApplicationFlags from "getApplicationFlags" /* 8449 */;
+import prototypeDefault from "prototype" /* 9520 */;
+import recurseReplaceContentTree from "recurseReplaceContentTree" /* 9525 */;
+import closure_3 from "map" /* 9481 */;
+import closure_4 from "getBuilderPreviewApplicationId" /* 14356 */;
 import { TransportTypes } from "RPC_SCOPE_CONFIG" /* 4380 */;
 import ME from "ME" /* 673 */;
-import FrameLayoutModes from "FrameLayoutModes" /* 9478 */;
+import FrameLayoutModes from "FrameLayoutModes" /* 9482 */;
 
 require = arg1;
 function validateEmbeddedAppFrame(transport) {
@@ -36,7 +36,7 @@ function validateEmbeddedAppFrame(transport) {
           tmp13 = null;
           if (tmp12.MAIN === type) {
             if (tmp35.applicationId === builderPreviewApplicationId.getBuilderPreviewApplicationId()) {
-              obj1 = { channelId: "disabled", guildId: "Date" };
+              obj1 = { channelId: "Array", guildId: "PX_16" };
             } else {
               obj1 = null;
             }

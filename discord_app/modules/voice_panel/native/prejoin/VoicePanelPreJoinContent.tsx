@@ -1,20 +1,20 @@
-// === Module 16976: StreamPreview ===
+// === Module 16996: StreamPreview ===
 
-// Module 16976 (StreamPreview)
+// Module 16996 (StreamPreview)
 import encodeProperties from "encodeProperties" /* 500 */;
 import ThemesDefault from "Themes" /* 709 */;
 import getSystemLocale from "getSystemLocale" /* 1233 */;
 import Text from "Text" /* 4474 */;
-import setDefault from "set" /* 6014 */;
-import trackImpressionDefault from "trackImpression" /* 8907 */;
-import VoiceBadges from "VoiceBadges" /* 9829 */;
+import setDefault from "set" /* 6015 */;
+import trackImpressionDefault from "trackImpression" /* 8911 */;
+import VoiceBadges from "VoiceBadges" /* 9833 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import { StyleSheet } from "get ActivityIndicator" /* 17 */;
 import closure_6 from "participantFromServer" /* 1385 */;
 import closure_7 from "set" /* 4495 */;
-import closure_8 from "init" /* 13609 */;
+import closure_8 from "init" /* 13624 */;
 import closure_9 from "reset" /* 4500 */;
 import closure_10 from "fetchFingerprint" /* 1215 */;
 import closure_11 from "ensureGuildLoaded" /* 1386 */;
@@ -24,10 +24,10 @@ import closure_14 from "handleUpdate" /* 4496 */;
 import closure_15 from "mergeGuildAvatar" /* 1921 */;
 import closure_16 from "updateVoiceState" /* 4497 */;
 import closure_17 from "getVoiceStatesForGuild" /* 4555 */;
-import { MODE_CHANGE_PHYSICS } from "VoicePanelModes" /* 12063 */;
-import { EDGE_GUTTER } from "CARD_SIZE" /* 12066 */;
+import { MODE_CHANGE_PHYSICS } from "VoicePanelModes" /* 12069 */;
+import { EDGE_GUTTER } from "CARD_SIZE" /* 12072 */;
 import ME from "ME" /* 673 */;
-import { VoiceChannelWarningSurfaces as closure_23 } from "GdmWarningMedium" /* 13614 */;
+import { VoiceChannelWarningSurfaces as closure_23 } from "GdmWarningMedium" /* 13629 */;
 import { Features } from "DesktopSources" /* 4542 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
@@ -558,7 +558,7 @@ let closure_34 = importAllResult.memo((blockedUserIds) => {
     }
     obj = { style: null, children: null };
     obj[0] = tmp.blockedMemberWarning;
-    const items = [callback(tmp5(7717).CircleErrorIcon, { color: "text-feedback-warning" }), ];
+    const items = [callback(tmp5(7720).CircleErrorIcon, { color: "text-feedback-warning" }), ];
     obj1 = { variant: "text-sm/bold", color: "interactive-text-active", style: null, children: null };
     obj1[2] = { flexShrink: 1 };
     const items1 = [stringResult1, " ", ];
@@ -698,10 +698,10 @@ let closure_39 = { code: "function VoicePanelPreJoinContentTsx3(){const{windowDi
 let closure_40 = { code: "function VoicePanelPreJoinContentTsx4(finished=false){const{transitionState,TransitionStates,runOnJS,transitionCleanUp}=this.__closure;finished&&transitionState===TransitionStates.YEETED&&runOnJS(transitionCleanUp)();}" };
 let obj4 = { display: "flex", flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_8, padding: ThemesDefault.space.PX_8, borderRadius: ThemesDefault.radii.xs, borderColor: ThemesDefault.colors.ICON_FEEDBACK_WARNING, borderWidth: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_FEEDBACK_WARNING, marginHorizontal: ThemesDefault.space.PX_16 };
 const memoResult = importAllResult.memo(function VoicePanelPreJoinWrapper() {
-  const context = importAllResult.useContext(guildId(12062));
+  const context = importAllResult.useContext(guildId(12068));
   const channelId = context.channelId;
   guildId = context.guildId;
-  const tmp2 = guildId(16853)(channelId);
+  const tmp2 = guildId(16873)(channelId);
   dependencyMap = tmp2;
   let obj = channelId(586);
   let items = [closure_17, closure_8, closure_6, closure_12, closure_9];
@@ -746,7 +746,7 @@ const memoResult = importAllResult.memo(function VoicePanelPreJoinWrapper() {
       obj[4] = ignoredUsersForVoiceChannel;
       return obj;
     }
-  }, items1, channelId(16979).areVoicePanelPreJoinContentPropsEqual);
+  }, items1, channelId(16999).areVoicePanelPreJoinContentPropsEqual);
   obj = { item: stateFromStores, renderItem };
   return callback(channelId(4204).TransitionItem, obj);
 });

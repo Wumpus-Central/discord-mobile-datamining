@@ -1,18 +1,18 @@
-// === Module 6081: getPrice ===
+// === Module 6082: getPrice ===
 
-// Module 6081 (getPrice)
+// Module 6082 (getPrice)
 import applyDefault from "apply" /* 12 */;
 import isDiscordProxiedAssetUrlDefault from "isDiscordProxiedAssetUrl" /* 1485 */;
-import _httpGetWithCountryCodeQuery from "_httpGetWithCountryCodeQuery" /* 4755 */;
-import keysSorter from "keysSorter" /* 5406 */;
-import RewardRequirementType from "RewardRequirementType" /* 6085 */;
-import useSKUPrice from "useSKUPrice" /* 6086 */;
+import _httpGetWithCountryCodeQuery from "_httpGetWithCountryCodeQuery" /* 4756 */;
+import keysSorter from "keysSorter" /* 5407 */;
+import RewardRequirementType from "RewardRequirementType" /* 6086 */;
+import useSKUPrice from "useSKUPrice" /* 6087 */;
 import closure_3 from "addApplication" /* 4519 */;
-import { WishlistRecommendationReason as closure_4 } from "fromServer" /* 6082 */;
+import { WishlistRecommendationReason as closure_4 } from "fromServer" /* 6083 */;
 import closure_5 from "createExecutable" /* 4504 */;
 import closure_6 from "createGuildRecordFromRust" /* 1908 */;
-import closure_7 from "handleUserSettingsStoreUpdate" /* 6083 */;
-import STOREFRONT_MARKETING_GUILD_ID from "STOREFRONT_MARKETING_GUILD_ID" /* 6084 */;
+import closure_7 from "handleUserSettingsStoreUpdate" /* 6084 */;
+import STOREFRONT_MARKETING_GUILD_ID from "STOREFRONT_MARKETING_GUILD_ID" /* 6085 */;
 import ME from "ME" /* 673 */;
 import { CollectibleShopTab } from "items" /* 675 */;
 import { CurrencyCodes } from "sum" /* 502 */;
@@ -450,7 +450,7 @@ export const getPrimaryCarouselItemInfo = function getPrimaryCarouselItemInfo(te
       if (0 !== tenantMetadata.tenantMetadata.socialLayer.carouselItems.length) {
         const first = tenantMetadata.tenantMetadata.socialLayer.carouselItems[0];
         if (null == first.labelIconAssetId) {
-          obj = { primaryIconAsset: "disabled", primaryIconLabel: "Date" };
+          obj = { primaryIconAsset: "Array", primaryIconLabel: "PX_16" };
         } else {
           const obj3 = _httpGetWithCountryCodeQuery;
           const toURLSafeResult = isDiscordProxiedAssetUrlDefault.toURLSafe(obj3.getAssetURL(arg1, first.labelIconAssetId, num, "webp"));
@@ -463,7 +463,7 @@ export const getPrimaryCarouselItemInfo = function getPrimaryCarouselItemInfo(te
       }
     }
   }
-  return { primaryIconAsset: "disabled", primaryIconLabel: "Date" };
+  return { primaryIconAsset: "Array", primaryIconLabel: "PX_16" };
 };
 export const getGameItemThumbnailUrl = function getGameItemThumbnailUrl(error) {
   let obj = arg1;
@@ -661,7 +661,7 @@ export const useGetSocialLayerStorefrontGuildIdAndApplication = function useGetS
   const items = [closure_7];
   const stateFromStores = _require(586).useStateFromStores(items, () => closure_1_7.getGuildIdFromApplicationId(closure_0));
   const obj = _require(586);
-  const application = _require(5967).useGetOrFetchApplication(applicationId);
+  const application = _require(5968).useGetOrFetchApplication(applicationId);
   let guildId = stateFromStores;
   if (stateFromStores == null) {
     guildId = undefined;

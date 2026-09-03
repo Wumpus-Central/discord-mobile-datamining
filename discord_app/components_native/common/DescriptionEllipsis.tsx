@@ -1,6 +1,6 @@
-// === Module 12197: DescriptionEllipsis ===
+// === Module 12204: DescriptionEllipsis ===
 
-// Module 12197 (DescriptionEllipsis)
+// Module 12204 (DescriptionEllipsis)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 709 */;
 import { View } from "get ActivityIndicator" /* 17 */;

@@ -1,9 +1,9 @@
-// === Module 11419: getAppChannelBotUserIdFromApplication ===
+// === Module 11424: getAppChannelBotUserIdFromApplication ===
 
-// Module 11419 (getAppChannelBotUserIdFromApplication)
+// Module 11424 (getAppChannelBotUserIdFromApplication)
 import fromStringAll from "fromString" /* 503 */;
 import Permissions from "Permissions" /* 4127 */;
-import useAppChannelApplication from "useAppChannelApplication" /* 11420 */;
+import useAppChannelApplication from "useAppChannelApplication" /* 11425 */;
 import closure_3 from "addApplication" /* 4519 */;
 import { ChannelTypes } from "ME" /* 673 */;
 

@@ -1,6 +1,6 @@
-// === Module 8742: SafetyTipsRow ===
+// === Module 8746: SafetyTipsRow ===
 
-// Module 8742 (SafetyTipsRow)
+// Module 8746 (SafetyTipsRow)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 709 */;
 import { View } from "get ActivityIndicator" /* 17 */;
@@ -19,5 +19,5 @@ export default function SafetyTipsRow(arg0) {
   let _require;
   ({ index, tip, description, end } = arg0);
   _require = callback();
-  return jsx(_require(5607).TableRow, { icon: jsx((children) => closure_1_3(closure_1_2, { style: lib.indexContainer, children: closure_1_3(lib(closure_1_1[6]).Text, { variant: "heading-md/semibold", color: "text-brand", children: children.index }) }), { index }), label: tip, subLabel: description, end });
+  return jsx(_require(5608).TableRow, { icon: jsx((children) => closure_1_3(closure_1_2, { style: lib.indexContainer, children: closure_1_3(lib(closure_1_1[6]).Text, { variant: "heading-md/semibold", color: "text-brand", children: children.index }) }), { index }), label: tip, subLabel: description, end });
 };

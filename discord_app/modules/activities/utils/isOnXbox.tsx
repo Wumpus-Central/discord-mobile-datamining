@@ -1,6 +1,6 @@
-// === Module 9400: isOnXbox ===
+// === Module 9404: isOnXbox ===
 
-// Module 9400 (isOnXbox)
+// Module 9404 (isOnXbox)
 import set from "set" /* 2 */;
 import ME from "ME" /* 673 */;
 import items3 from "items3" /* 4506 */;

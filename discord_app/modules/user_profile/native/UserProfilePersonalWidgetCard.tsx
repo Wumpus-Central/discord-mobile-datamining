@@ -1,12 +1,12 @@
-// === Module 8800: PersonalWidgetText ===
+// === Module 8804: PersonalWidgetText ===
 
-// Module 8800 (PersonalWidgetText)
+// Module 8804 (PersonalWidgetText)
 import ThemesDefault from "Themes" /* 709 */;
 import getSystemLocale from "getSystemLocale" /* 1233 */;
 import ManaContext from "ManaContext" /* 4204 */;
-import preloadDefault from "preload" /* 5501 */;
-import GifTagDefault from "GifTag" /* 8567 */;
-import PersonalWidgetExpandCollapseProvider from "PersonalWidgetExpandCollapseProvider" /* 8801 */;
+import preloadDefault from "preload" /* 5502 */;
+import GifTagDefault from "GifTag" /* 8571 */;
+import PersonalWidgetExpandCollapseProvider from "PersonalWidgetExpandCollapseProvider" /* 8805 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
@@ -174,7 +174,7 @@ function CoverSection(section) {
         obj6[0] = closure_12;
         obj6[1] = closure_13;
         obj6[2] = tmp15.absoluteFill;
-        tmp24Result = tmp24(tmp14(4940), obj6);
+        tmp24Result = tmp24(tmp14(4941), obj6);
       } else {
         tmp24Result = null;
       }
@@ -185,7 +185,7 @@ function CoverSection(section) {
     if (showGifTag) {
       const obj7 = { style: null };
       obj7[0] = tmp.gifTag;
-      tmp24Result1 = tmp24(tmp14(8567), obj7);
+      tmp24Result1 = tmp24(tmp14(8571), obj7);
     }
     items2[3] = tmp24Result1;
     obj2[1] = items2;
@@ -275,7 +275,7 @@ function UserProfilePersonalWidgetCardContent(style) {
   obj = { style: style.cardStyle, titleLeadingIcon: null, title: null, trailingAction: null, children: null };
   const tmp = callback3();
   const tmp5 = disableInteraction;
-  obj[1] = callback2(userId(8104).NitroWheelIcon, { size: "xs", color: "icon-subtle" });
+  obj[1] = callback2(userId(8107).NitroWheelIcon, { size: "xs", color: "icon-subtle" });
   obj[2] = widget.header;
   let tmp4Result = !stateFromStores;
   if (!stateFromStores) {
@@ -285,7 +285,7 @@ function UserProfilePersonalWidgetCardContent(style) {
     obj = { userId: null, widget: null };
     obj[0] = userId;
     obj[1] = widget;
-    tmp4Result = tmp4(tmp5(8804), obj);
+    tmp4Result = tmp4(tmp5(8808), obj);
   }
   obj[3] = tmp4Result;
   obj1 = { style: tmp.sectionsContainer, children: null };
@@ -318,7 +318,7 @@ function UserProfilePersonalWidgetCardContent(style) {
   items1[1] = tmp4Result;
   obj1[1] = items1;
   obj[4] = closure_11(closure_7, obj1);
-  return callback2(disableInteraction(6008), obj);
+  return callback2(disableInteraction(6009), obj);
 }
 ({ Pressable: c5, StyleSheet: closure_6, View: error } = get_ActivityIndicator);
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);

@@ -1,14 +1,14 @@
-// === Module 11847: Placeholder ===
+// === Module 11853: Placeholder ===
 
-// Module 11847 (Placeholder)
+// Module 11853 (Placeholder)
 import ThemesDefault from "Themes" /* 709 */;
-import usePlaceholderWidth from "usePlaceholderWidth" /* 11849 */;
+import usePlaceholderWidth from "usePlaceholderWidth" /* 11855 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_7 from "participantFromServer" /* 1385 */;
-import closure_8 from "initialize" /* 11848 */;
-import { FrecencySectionSelection } from "initialize" /* 11848 */;
+import closure_8 from "initialize" /* 11854 */;
+import { FrecencySectionSelection } from "initialize" /* 11854 */;
 import { AnalyticEvents } from "ME" /* 673 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
@@ -98,7 +98,7 @@ function FrecentApp(app) {
   if (null == app.section) {
     return null;
   } else {
-    const appLauncherIconSource = app(11846).getAppLauncherIconSource(app.section.application);
+    const appLauncherIconSource = app(11852).getAppLauncherIconSource(app.section.application);
     let obj = { style: null, disabled: null, accessible: true, accessibilityLabel: null, accessibilityRole: "button", onPress: null, children: null };
     obj[0] = disabled ? tmp.appContainerDisabled : tmp.appContainer;
     obj[1] = disabled;
@@ -125,15 +125,15 @@ function FrecentApp(app) {
       obj = { style: null, source: null };
       obj[0] = tmp.appIcon;
       obj[1] = appLauncherIconSource;
-      tmp3 = callback2(onAppSelected(5501), obj);
+      tmp3 = callback2(onAppSelected(5502), obj);
     }
     const items = [tmp3, ];
     obj = { submitting: null, style: null };
     obj[0] = submitting;
     obj[1] = tmp.submittingOverlay;
-    items[1] = callback2(app(11855).SubmittingOverlay, obj);
+    items[1] = callback2(app(11861).SubmittingOverlay, obj);
     obj[6] = items;
-    return closure_12(app(5076).PressableOpacity, obj, app.applicationId);
+    return closure_12(app(5077).PressableOpacity, obj, app.applicationId);
   }
 }
 ({ View: c5, ScrollView: closure_6 } = get_ActivityIndicator);

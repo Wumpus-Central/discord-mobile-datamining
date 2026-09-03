@@ -1,21 +1,21 @@
-// === Module 14674: onClose ===
+// === Module 14689: onClose ===
 
-// Module 14674 (onClose)
+// Module 14689 (onClose)
 import ThemesDefault from "Themes" /* 709 */;
-import _modDef4723 from "module_4723" /* 4723 */;
-import NavigationStack from "NavigationStack" /* 6016 */;
+import _modDef4724 from "module_4724" /* 4724 */;
+import NavigationStack from "NavigationStack" /* 6017 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import { ContactSyncScenes } from "ContactSyncLandingPage" /* 12440 */;
+import { ContactSyncScenes } from "ContactSyncLandingPage" /* 12452 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
-import HeaderBackImage from "HeaderBackImage" /* 5503 */;
+import HeaderBackImage from "HeaderBackImage" /* 5504 */;
 
 require = arg1;
 function onClose() {
-  let arr = _modDef4723;
+  let arr = _modDef4724;
   arr = arr.pop();
 }
 function ContactSyncNameInputScreen() {
@@ -40,14 +40,14 @@ function ContactSyncNameInputScreen() {
         closure_1 = tmp3;
         callback(true);
         c3 = 1;
-        yield closure_1_1(12446).updateName(callback);
+        yield closure_1_1(12458).updateName(callback);
         if (1 === tmp7) {
           c3 = 0;
           obj1 = closure_1_1(4194);
           const obj2 = { key: "ERROR_GENERIC_TITLE", content: null, icon: null };
           const intl = callback(1233).intl;
           obj2[1] = intl.string(callback(1233).t.R0RpRX);
-          obj2[2] = closure_1_1(7689);
+          obj2[2] = closure_1_1(7692);
           obj1.open(obj2);
           callback(false);
           c4 = 3;

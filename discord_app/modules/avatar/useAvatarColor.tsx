@@ -1,6 +1,6 @@
-// === Module 8050: hasFetchedColors ===
+// === Module 8053: hasFetchedColors ===
 
-// Module 8050 (hasFetchedColors)
+// Module 8053 (hasFetchedColors)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import closure_5 from "noop" /* 19 */;

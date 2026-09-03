@@ -1,11 +1,11 @@
-// === Module 7951: getTagProperties ===
+// === Module 7954: getTagProperties ===
 
-// Module 7951 (getTagProperties)
+// Module 7954 (getTagProperties)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import MESSAGE_GROUP_SPACING from "MESSAGE_GROUP_SPACING" /* 4471 */;
-import isPublicSystemMessage from "isPublicSystemMessage" /* 7952 */;
-import isCrosspostDefault from "isCrosspost" /* 7954 */;
+import isPublicSystemMessage from "isPublicSystemMessage" /* 7955 */;
+import isCrosspostDefault from "isCrosspost" /* 7957 */;
 
 const Image = get_ActivityIndicator.Image;
 const MessageTagTypes = MESSAGE_GROUP_SPACING.MessageTagTypes;
@@ -34,7 +34,7 @@ export default function getTagProperties(arg0) {
           const intl = tmp2(1233).intl;
           let uri;
           if (isVerifiedBotResult) {
-            uri = Image.resolveAssetSource(tmp4(7956)).uri;
+            uri = Image.resolveAssetSource(tmp4(7959)).uri;
           }
           flag = isVerifiedBotResult;
           stringResult = intl.string(tmp2(1233).t["9RNkeF"]);
@@ -62,7 +62,7 @@ export default function getTagProperties(arg0) {
         const intl6 = tmp2(1233).intl;
         stringResult2 = intl6.string(tmp2(1233).t.fyE8sH);
       }
-      obj = { tagText: null, tagAccessibilityLabel: null, tagVerified: null, tagTextColor: "Boolean", tagBackgroundColor: "call", tagType: true, tagIconUrl: true, opTagText: true, opTagTextColor: true, opTagBackgroundColor: true };
+      obj = { tagText: null, tagAccessibilityLabel: null, tagVerified: null, tagTextColor: "Boolean", tagBackgroundColor: "add", tagType: true, tagIconUrl: true, opTagText: true, opTagTextColor: true, opTagBackgroundColor: true };
       obj[0] = stringResult;
       obj[1] = null;
       obj[2] = flag;
@@ -89,7 +89,7 @@ export default function getTagProperties(arg0) {
       }
       const intl5 = tmp2(1233).intl;
       stringResult3 = intl5.string(tmp2(1233).t["7s687k"]);
-      tmp2Result = tmp2(7952);
+      tmp2Result = tmp2(7955);
     }
   }
   const intl3 = tmp2(1233).intl;

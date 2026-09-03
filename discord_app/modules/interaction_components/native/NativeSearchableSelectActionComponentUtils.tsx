@@ -1,8 +1,8 @@
-// === Module 8040: transformSearchableSelectOptions ===
+// === Module 8043: transformSearchableSelectOptions ===
 
-// Module 8040 (transformSearchableSelectOptions)
-import getChannelIcon from "getChannelIcon" /* 4981 */;
-import registerAssetDefault from "registerAsset" /* 8042 */;
+// Module 8043 (transformSearchableSelectOptions)
+import getChannelIcon from "getChannelIcon" /* 4982 */;
+import registerAssetDefault from "registerAsset" /* 8045 */;
 import closure_3 from "ensureGuildLoaded" /* 1386 */;
 import closure_4 from "createGuildRoleRecordFromRust" /* 1984 */;
 import closure_5 from "createGuildRecordFromRust" /* 1908 */;

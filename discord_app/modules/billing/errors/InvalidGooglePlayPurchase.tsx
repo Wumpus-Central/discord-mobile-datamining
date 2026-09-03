@@ -1,6 +1,6 @@
-// === Module 10702: prototype ===
+// === Module 10706: prototype ===
 
-// Module 10702 (prototype)
+// Module 10706 (prototype)
 import setDefault from "set" /* 4161 */;
 
 setDefault;

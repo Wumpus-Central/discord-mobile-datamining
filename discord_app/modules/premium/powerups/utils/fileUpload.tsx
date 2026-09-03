@@ -1,7 +1,7 @@
-// === Module 12286: useShouldShowFileUploadRollback ===
+// === Module 12298: useShouldShowFileUploadRollback ===
 
-// Module 12286 (useShouldShowFileUploadRollback)
-import usePowerupActiveStatusDefault from "usePowerupActiveStatus" /* 12287 */;
+// Module 12298 (useShouldShowFileUploadRollback)
+import usePowerupActiveStatusDefault from "usePowerupActiveStatus" /* 12299 */;
 import closure_3 from "calculateAppliedBoosts" /* 4364 */;
 import { PowerupActiveStatusType } from "BoostedGuildTiers" /* 4365 */;
 

@@ -1,6 +1,6 @@
-// === Module 15859: usePrivateChannelWave ===
+// === Module 15875: usePrivateChannelWave ===
 
-// Module 15859 (usePrivateChannelWave)
+// Module 15875 (usePrivateChannelWave)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
@@ -109,7 +109,7 @@ export default function usePrivateChannelWave(id) {
       }
     }
   }), items);
-  obj[0] = _require(15860).usePrivateChannelWaveEligible(id, arg1);
+  obj[0] = _require(15876).usePrivateChannelWaveEligible(id, arg1);
   obj[1] = callback;
   return obj;
 };

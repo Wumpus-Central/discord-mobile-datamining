@@ -1,6 +1,6 @@
-// === Module 8924: shouldDisableUserPresenceInChannel ===
+// === Module 8928: shouldDisableUserPresenceInChannel ===
 
-// Module 8924 (shouldDisableUserPresenceInChannel)
+// Module 8928 (shouldDisableUserPresenceInChannel)
 import closure_0 from "ensureGuildLoaded" /* 1386 */;
 
 const result = require("set").fileFinishedImporting("modules/applications/ApplicationPresenceUtils.tsx");

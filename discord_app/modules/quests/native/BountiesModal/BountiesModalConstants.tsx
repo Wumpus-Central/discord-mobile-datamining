@@ -1,8 +1,8 @@
-// === Module 14834: BOUNTY_REWARD_CLAIM_FAILED_TOAST_DURATION_MS ===
+// === Module 14849: BOUNTY_REWARD_CLAIM_FAILED_TOAST_DURATION_MS ===
 
-// Module 14834 (BOUNTY_REWARD_CLAIM_FAILED_TOAST_DURATION_MS)
+// Module 14849 (BOUNTY_REWARD_CLAIM_FAILED_TOAST_DURATION_MS)
 import set from "set" /* 2 */;
-import APP_STORE_OVERLAY_HEIGHT_RATIO from "APP_STORE_OVERLAY_HEIGHT_RATIO" /* 11322 */;
+import APP_STORE_OVERLAY_HEIGHT_RATIO from "APP_STORE_OVERLAY_HEIGHT_RATIO" /* 11326 */;
 
 const result = set.fileFinishedImporting("modules/quests/native/BountiesModal/BountiesModalConstants.tsx");
 

@@ -1,21 +1,21 @@
-// === Module 17518: EarningPreview ===
+// === Module 17538: EarningPreview ===
 
-// Module 17518 (EarningPreview)
+// Module 17538 (EarningPreview)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 709 */;
 import getSystemLocale from "getSystemLocale" /* 1233 */;
 import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 1362 */;
 import useThemeDefault from "useTheme" /* 4413 */;
 import Text from "Text" /* 4474 */;
-import preloadDefault from "preload" /* 5501 */;
-import registerAssetDefault from "registerAsset" /* 17519 */;
-import registerAssetDefault2 from "registerAsset" /* 17522 */;
-import registerAssetDefault3 from "registerAsset" /* 17523 */;
-import registerAssetDefault4 from "registerAsset" /* 17524 */;
-import registerAssetDefault5 from "registerAsset" /* 17525 */;
-import registerAssetDefault6 from "registerAsset" /* 17526 */;
+import preloadDefault from "preload" /* 5502 */;
+import registerAssetDefault from "registerAsset" /* 17539 */;
+import registerAssetDefault2 from "registerAsset" /* 17542 */;
+import registerAssetDefault3 from "registerAsset" /* 17543 */;
+import registerAssetDefault4 from "registerAsset" /* 17544 */;
+import registerAssetDefault5 from "registerAsset" /* 17545 */;
+import registerAssetDefault6 from "registerAsset" /* 17546 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import { CREATOR_REVENUE_SHARE_PERCENTAGE as closure_4 } from "MAX_SUBSCRIPTION_TIERS" /* 15030 */;
+import { CREATOR_REVENUE_SHARE_PERCENTAGE as closure_4 } from "MAX_SUBSCRIPTION_TIERS" /* 15045 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -65,9 +65,9 @@ function ConsistentEarningBenefit() {
   ({ horizontalContainer: arr2[0], benefitAvatars: arr2[1] } = tmp4);
   const tmp3 = useThemeDefault();
   if (obj4.isThemeDark(tmp3)) {
-    let tmpResult = tmp(17520);
+    let tmpResult = tmp(17540);
   } else {
-    tmpResult = tmp(17521);
+    tmpResult = tmp(17541);
   }
   const items2 = [callback(BenefitAvatar, { avatarSource: tmpResult }), , ];
   obj4 = AccessibilityAnnouncer;

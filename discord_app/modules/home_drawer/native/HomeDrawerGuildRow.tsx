@@ -1,20 +1,20 @@
-// === Module 16138: GuildRowWrapper ===
+// === Module 16154: GuildRowWrapper ===
 
-// Module 16138 (GuildRowWrapper)
+// Module 16154 (GuildRowWrapper)
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_5 from "storeThread" /* 4122 */;
 import { isThread } from "createChannelRecord" /* 1390 */;
 import closure_7 from "ensureGuildLoaded" /* 1386 */;
 import closure_8 from "comparator" /* 1981 */;
-import closure_9 from "updateGuildUnreadSentinel" /* 7390 */;
+import closure_9 from "updateGuildUnreadSentinel" /* 7391 */;
 import closure_10 from "createGuildRecordFromRust" /* 1908 */;
 import closure_11 from "generateOldThreadCutoff" /* 4493 */;
 import closure_12 from "markAllUserIdListsStale" /* 4130 */;
-import closure_13 from "updateUserGuildSettingsInternal" /* 4701 */;
+import closure_13 from "updateUserGuildSettingsInternal" /* 4702 */;
 import closure_14 from "mergeGuildAvatar" /* 1921 */;
 import ME from "ME" /* 673 */;
-import { UnreadSetting } from "ReadStateTypes" /* 4702 */;
+import { UnreadSetting } from "ReadStateTypes" /* 4703 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -158,7 +158,7 @@ function GuildRowWrapper(guild) {
     const tmp = unreadChannel.getMutableGuildStates()[guild.id];
     guild = tmp;
     if (null == tmp) {
-      return { mentionChannel: "ip", mentionChannelName: "isArray", mentionChannelCount: true };
+      return { mentionChannel: "ip", mentionChannelName: "isArray", mentionChannelCount: null };
     } else {
       const keys = disableSubtitle(onActiveHookChange[25]).keys(tmp.mentionCounts);
       const found = keys.filter((id) => {

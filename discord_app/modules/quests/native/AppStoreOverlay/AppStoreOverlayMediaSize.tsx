@@ -1,6 +1,6 @@
-// === Module 11327: map ===
+// === Module 11331: map ===
 
-// Module 11327 (map)
+// Module 11331 (map)
 import getAvatarURL from "getAvatarURL" /* 1430 */;
 import getSizedImageProxyURL from "getSizedImageProxyURL" /* 4512 */;
 import closure_2 from "_slicedToArray" /* 32 */;

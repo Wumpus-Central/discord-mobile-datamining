@@ -1,8 +1,8 @@
-// === Module 8131: createInteractionStatus ===
+// === Module 8134: createInteractionStatus ===
 
-// Module 8131 (createInteractionStatus)
+// Module 8134 (createInteractionStatus)
 import set from "set" /* 2 */;
-import _executeMessageComponentInteraction from "_executeMessageComponentInteraction" /* 8034 */;
+import _executeMessageComponentInteraction from "_executeMessageComponentInteraction" /* 8037 */;
 
 let closure_2 = { LOADING: 0, [0]: "LOADING", FAILED: 1, [1]: "FAILED", EPHEMERAL_SUCCESS: 999, [999]: "EPHEMERAL_SUCCESS" };
 const result = set.fileFinishedImporting("modules/messages/native/renderer/row_data/interaction/InteractionStatus.tsx");
@@ -16,7 +16,7 @@ export const createInteractionStatus = function createInteractionStatus(message,
     obj[0] = intl4.string(tmp(1233).t.RiLfBY);
     obj[1] = constants.LOADING;
     return obj;
-  } else if (tmp(8034).InteractionStatusViewState.CREATED === interactionStatusViewState) {
+  } else if (tmp(8037).InteractionStatusViewState.CREATED === interactionStatusViewState) {
     obj = { text: null, state: null };
     const intl3 = tmp(1233).intl;
     obj1 = { applicationName: null };
@@ -24,13 +24,13 @@ export const createInteractionStatus = function createInteractionStatus(message,
     obj[0] = intl3.formatToPlainString(tmp(1233).t["7ePV4t"], obj1);
     obj[1] = constants.LOADING;
     return obj;
-  } else if (tmp(8034).InteractionStatusViewState.TIMED_OUT === interactionStatusViewState) {
+  } else if (tmp(8037).InteractionStatusViewState.TIMED_OUT === interactionStatusViewState) {
     const obj2 = { text: null, state: null };
     const intl2 = tmp(1233).intl;
     obj2[0] = intl2.string(tmp(1233).t.h8hzPd);
     obj2[1] = constants.FAILED;
     return obj2;
-  } else if (tmp(8034).InteractionStatusViewState.FAILED === interactionStatusViewState) {
+  } else if (tmp(8037).InteractionStatusViewState.FAILED === interactionStatusViewState) {
     let interactionError = message.interactionError;
     if (interactionError == null) {
       const intl = tmp(1233).intl;
@@ -40,7 +40,7 @@ export const createInteractionStatus = function createInteractionStatus(message,
     obj3[0] = interactionError;
     obj3[1] = constants.FAILED;
     return obj3;
-  } else if (tmp(8034).InteractionStatusViewState.EPHEMERAL_SUCCESS === interactionStatusViewState) {
+  } else if (tmp(8037).InteractionStatusViewState.EPHEMERAL_SUCCESS === interactionStatusViewState) {
     const obj4 = { text: "", state: null };
     obj4[1] = constants.EPHEMERAL_SUCCESS;
     return obj4;

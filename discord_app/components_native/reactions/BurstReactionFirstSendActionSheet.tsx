@@ -1,6 +1,6 @@
-// === Module 7577: onDismiss ===
+// === Module 7578: onDismiss ===
 
-// Module 7577 (onDismiss)
+// Module 7578 (onDismiss)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 709 */;
 import getSystemLocale from "getSystemLocale" /* 1233 */;
@@ -8,12 +8,12 @@ import Button from "Button" /* 1296 */;
 import DismissibleContent from "DismissibleContent" /* 1372 */;
 import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4445 */;
 import Text from "Text" /* 4474 */;
-import Button2 from "Button" /* 4928 */;
-import Background from "Background" /* 5630 */;
-import ReactionTypes from "ReactionTypes" /* 7517 */;
-import _generateAnimationSource from "_generateAnimationSource" /* 7538 */;
-import getDeviceSpecificString from "getDeviceSpecificString" /* 7578 */;
-import BurstReactionAnimationPreviewDefault from "BurstReactionAnimationPreview" /* 7579 */;
+import Button2 from "Button" /* 4929 */;
+import Background from "Background" /* 5631 */;
+import ReactionTypes from "ReactionTypes" /* 7518 */;
+import _generateAnimationSource from "_generateAnimationSource" /* 7539 */;
+import getDeviceSpecificString from "getDeviceSpecificString" /* 7579 */;
+import BurstReactionAnimationPreviewDefault from "BurstReactionAnimationPreview" /* 7580 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
@@ -92,7 +92,7 @@ export const openBurstReactionFirstSendActionSheet = function openBurstReactionF
     obj[0] = channelId;
     obj[1] = messageId;
     obj[2] = emoji;
-    tmpResult.openLazy(tmp4(2008)(7577, dependencyMap.paths), "BurstReactionFirstSendActionSheet", obj);
+    tmpResult.openLazy(tmp4(2008)(7578, dependencyMap.paths), "BurstReactionFirstSendActionSheet", obj);
     const tmp4Result = tmp4(4298);
   }
 };

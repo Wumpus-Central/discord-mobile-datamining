@@ -5,9 +5,9 @@ import initializeDefault from "initialize" /* 586 */;
 import setDefault from "set" /* 684 */;
 import dispatcherDefault from "dispatcher" /* 706 */;
 import isStreamKey from "isStreamKey" /* 4544 */;
-import canStreamInChannel from "canStreamInChannel" /* 7481 */;
-import canSpectateDefault from "canSpectate" /* 13678 */;
-import getTitleFromPickedStreamContentDefault from "getTitleFromPickedStreamContent" /* 13791 */;
+import canStreamInChannel from "canStreamInChannel" /* 7482 */;
+import canSpectateDefault from "canSpectate" /* 13693 */;
+import getTitleFromPickedStreamContentDefault from "getTitleFromPickedStreamContent" /* 13807 */;
 import closure_8 from "set" /* 4495 */;
 import closure_9 from "initialize" /* 4501 */;
 import closure_10 from "fetchFingerprint" /* 1215 */;
@@ -807,11 +807,11 @@ const applicationStreamingStore = new ApplicationStreamingStore(dispatcherDefaul
       } else if (reason === tmp3.SAFETY_GUILD_RATE_LIMITED) {
         let obj = guildId(4544);
         guildId = obj.decodeStreamKey(streamKey).guildId;
-        guildId(2008)(13792, dependencyMap.paths).then((arg0) => {
+        guildId(2008)(13808, dependencyMap.paths).then((arg0) => {
           arg0.default(guildId);
         });
         FAILED = tmp22.ENDED;
-        const promise = guildId(2008)(13792, dependencyMap.paths);
+        const promise = guildId(2008)(13808, dependencyMap.paths);
       } else {
         if (tmp9) {
           FAILED = tmp22.FAILED;

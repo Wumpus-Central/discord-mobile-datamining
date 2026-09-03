@@ -1,14 +1,14 @@
-// === Module 12171: BaseChannelSubtitle ===
+// === Module 12177: BaseChannelSubtitle ===
 
-// Module 12171 (BaseChannelSubtitle)
+// Module 12177 (BaseChannelSubtitle)
 import ThemesDefault from "Themes" /* 709 */;
 import PlatformTypes from "PlatformTypes" /* 1235 */;
 import Button from "Button" /* 1296 */;
 import Text from "Text" /* 4474 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import hairlineWidth from "hairlineWidth" /* 10223 */;
-import { UnreadSetting } from "ReadStateTypes" /* 4702 */;
+import hairlineWidth from "hairlineWidth" /* 10227 */;
+import { UnreadSetting } from "ReadStateTypes" /* 4703 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -130,9 +130,9 @@ export default function BaseChannelItem(mode) {
     items1[3] = channelInfo;
     obj[1] = items1;
     if (flag) {
-      let AnimatedPressableHighlight = hideIcon(12172);
+      let AnimatedPressableHighlight = hideIcon(12178);
     } else {
-      AnimatedPressableHighlight = mode(8998).AnimatedPressableHighlight;
+      AnimatedPressableHighlight = mode(9002).AnimatedPressableHighlight;
     }
     obj = {};
     const merged1 = Object.assign(merged);
@@ -149,9 +149,9 @@ export default function BaseChannelItem(mode) {
       ALL_MESSAGES = UnreadSetting.ALL_MESSAGES;
     }
     obj[2] = ALL_MESSAGES;
-    closure_8(hideIcon(10272), obj);
+    closure_8(hideIcon(10276), obj);
     const tmp6 = closure_8;
-    const tmp9 = hideIcon(10272);
+    const tmp9 = hideIcon(10276);
   }
 };
 export const ChannelModes = createCacheKey;

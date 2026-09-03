@@ -1,6 +1,6 @@
-// === Module 12075: newMemberActionFromServer ===
+// === Module 12081: newMemberActionFromServer ===
 
-// Module 12075 (newMemberActionFromServer)
+// Module 12081 (newMemberActionFromServer)
 import applyOverwritesAll from "applyOverwrites" /* 4125 */;
 import closure_3 from "ensureGuildLoaded" /* 1386 */;
 import ME from "ME" /* 673 */;

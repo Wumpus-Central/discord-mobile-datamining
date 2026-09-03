@@ -1,10 +1,10 @@
-// === Module 11325: FractionalStar ===
+// === Module 11329: FractionalStar ===
 
-// Module 11325 (FractionalStar)
+// Module 11329 (FractionalStar)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 709 */;
-import StarIcon from "StarIcon" /* 9195 */;
-import StarOutlineIcon from "StarOutlineIcon" /* 9197 */;
+import StarIcon from "StarIcon" /* 9199 */;
+import StarOutlineIcon from "StarOutlineIcon" /* 9201 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;

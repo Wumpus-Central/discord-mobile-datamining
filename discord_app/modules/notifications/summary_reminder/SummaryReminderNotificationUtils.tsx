@@ -1,6 +1,6 @@
-// === Module 15341: onSummaryReminderNotificationSettingsChanged ===
+// === Module 15355: onSummaryReminderNotificationSettingsChanged ===
 
-// Module 15341 (onSummaryReminderNotificationSettingsChanged)
+// Module 15355 (onSummaryReminderNotificationSettingsChanged)
 import set from "set" /* 2 */;
 import ME from "ME" /* 673 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 695 */;

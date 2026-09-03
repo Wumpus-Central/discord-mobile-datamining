@@ -1,11 +1,11 @@
-// === Module 13989: RoleDot ===
+// === Module 14005: RoleDot ===
 
-// Module 13989 (RoleDot)
+// Module 14005 (RoleDot)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 709 */;
-import getFontScale from "getFontScale" /* 4935 */;
-import LinearGradientDefault from "LinearGradient" /* 4940 */;
-import useHasEnhancedRoleColorsDefault from "useHasEnhancedRoleColors" /* 4957 */;
+import getFontScale from "getFontScale" /* 4936 */;
+import LinearGradientDefault from "LinearGradient" /* 4941 */;
+import useHasEnhancedRoleColorsDefault from "useHasEnhancedRoleColors" /* 4958 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;

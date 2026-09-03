@@ -1,10 +1,10 @@
-// === Module 11411: ChatPlusIcon ===
+// === Module 11416: ChatPlusIcon ===
 
-// Module 11411 (ChatPlusIcon)
+// Module 11416 (ChatPlusIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 709 */;
 import BaseIconImage from "BaseIconImage" /* 4196 */;
-import registerAsset from "registerAsset" /* 11412 */;
+import registerAsset from "registerAsset" /* 11417 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

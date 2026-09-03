@@ -1,17 +1,17 @@
-// === Module 16100: EmptyBody ===
+// === Module 16116: EmptyBody ===
 
-// Module 16100 (EmptyBody)
+// Module 16116 (EmptyBody)
 import ThemesDefault from "Themes" /* 709 */;
 import getSystemLocale from "getSystemLocale" /* 1233 */;
 import messagesProxyDefault from "messagesProxy" /* 3178 */;
 import Text from "Text" /* 4474 */;
-import Stack from "Stack" /* 4926 */;
-import ChatIcon from "ChatIcon" /* 5024 */;
-import TextIcon from "TextIcon" /* 5033 */;
-import VoiceNormalIcon from "VoiceNormalIcon" /* 5054 */;
+import Stack from "Stack" /* 4927 */;
+import ChatIcon from "ChatIcon" /* 5025 */;
+import TextIcon from "TextIcon" /* 5034 */;
+import VoiceNormalIcon from "VoiceNormalIcon" /* 5055 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import { useHasFavoritesGuildSuggestions as closure_5 } from "items" /* 16022 */;
+import { useHasFavoritesGuildSuggestions as closure_5 } from "items" /* 16038 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 

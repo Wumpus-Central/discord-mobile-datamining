@@ -1,8 +1,8 @@
-// === Module 10963: CollectiblesShopGiftModalContent ===
+// === Module 10967: CollectiblesShopGiftModalContent ===
 
-// Module 10963 (CollectiblesShopGiftModalContent)
+// Module 10967 (CollectiblesShopGiftModalContent)
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "updateCategoriesAndProducts" /* 7296 */;
+import closure_4 from "updateCategoriesAndProducts" /* 7297 */;
 import { COLLECTIBLES_APPLICATION_ID as closure_5 } from "ME" /* 673 */;
 import { PaymentGateways } from "sum" /* 502 */;
 import { jsx } from "jsxProd" /* 21 */;

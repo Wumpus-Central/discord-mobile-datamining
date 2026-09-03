@@ -1,9 +1,9 @@
-// === Module 11421: getChannelDetailsButtons ===
+// === Module 11426: getChannelDetailsButtons ===
 
-// Module 11421 (getChannelDetailsButtons)
+// Module 11426 (getChannelDetailsButtons)
 import set from "set" /* 2 */;
 import set2 from "set" /* 689 */;
-import ChannelDetailsNavigatorScreens from "ChannelDetailsNavigatorScreens" /* 10875 */;
+import ChannelDetailsNavigatorScreens from "ChannelDetailsNavigatorScreens" /* 10879 */;
 
 const ChannelDetailsButtonTypes = ChannelDetailsNavigatorScreens.ChannelDetailsButtonTypes;
 const result = set.fileFinishedImporting("modules/main_tabs_v2/native/sidebar/details/ChannelDetailsUtils.tsx");

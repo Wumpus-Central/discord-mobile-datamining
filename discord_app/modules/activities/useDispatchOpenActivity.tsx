@@ -1,6 +1,6 @@
-// === Module 9623: useDispatchOpenActivity ===
+// === Module 9627: useDispatchOpenActivity ===
 
-// Module 9623 (useDispatchOpenActivity)
+// Module 9627 (useDispatchOpenActivity)
 import closure_2 from "noop" /* 19 */;
 
 const result = require("set").fileFinishedImporting("modules/activities/useDispatchOpenActivity.tsx");

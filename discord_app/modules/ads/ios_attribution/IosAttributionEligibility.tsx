@@ -1,10 +1,10 @@
-// === Module 11308: isIosAttributionEligible ===
+// === Module 11312: isIosAttributionEligible ===
 
-// Module 11308 (isIosAttributionEligible)
+// Module 11312 (isIosAttributionEligible)
 import set from "set" /* 2 */;
 import set2 from "set" /* 1234 */;
-import getQuestDeliveryDataForPlacement from "getQuestDeliveryDataForPlacement" /* 7453 */;
-import apexExperiment from "apexExperiment" /* 11309 */;
+import getQuestDeliveryDataForPlacement from "getQuestDeliveryDataForPlacement" /* 7454 */;
+import apexExperiment from "apexExperiment" /* 11313 */;
 
 const result = set.fileFinishedImporting("modules/ads/ios_attribution/IosAttributionEligibility.tsx");
 
@@ -36,7 +36,7 @@ export const getIosAttributionClickFramework = function getIosAttributionClickFr
   if (enabled) {
     activeIosAttributionFramework = null;
     if (arg0) {
-      tmpResult = tmp(7453);
+      tmpResult = tmp(7454);
       const adContext = tmpResult.getAdContext(sourceQuestContent, adContentId);
       let prop;
       if (adContext != null) {
@@ -44,8 +44,8 @@ export const getIosAttributionClickFramework = function getIosAttributionClickFr
       }
       activeIosAttributionFramework = null;
       if (true === prop) {
-        activeIosAttributionFramework = tmp(11311).getActiveIosAttributionFramework();
-        const tmpResult1 = tmp(11311);
+        activeIosAttributionFramework = tmp(11315).getActiveIosAttributionFramework();
+        const tmpResult1 = tmp(11315);
       }
     }
   }

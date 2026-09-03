@@ -1,9 +1,9 @@
-// === Module 10824: LottieType ===
+// === Module 10828: LottieType ===
 
-// Module 10824 (LottieType)
+// Module 10828 (LottieType)
 import set from "set" /* 2 */;
 import GuildFeatures from "GuildFeatures" /* 1923 */;
-import _sendGiftMessage from "_sendGiftMessage" /* 8000 */;
+import _sendGiftMessage from "_sendGiftMessage" /* 8003 */;
 
 const PremiumGiftStyles = GuildFeatures.PremiumGiftStyles;
 const obj = { JSON: 0, [0]: "JSON", LOTTIE: 1, [1]: "LOTTIE" };
@@ -21,67 +21,67 @@ export const getLottieType = function getLottieType(giftStyle) {
 export const getGiftAnimationData = function getGiftAnimationData(giftStyle, ACTION) {
   if (PremiumGiftStyles.STANDARD_BOX === giftStyle) {
     if (_sendGiftMessage.AnimationState.IDLE === ACTION) {
-      return tmp17(10825);
-    } else if (tmp17(8000).AnimationState.LOOP === ACTION) {
-      return tmp17(10826);
+      return tmp17(10829);
+    } else if (tmp17(8003).AnimationState.LOOP === ACTION) {
+      return tmp17(10830);
     } else {
-      return tmp17(10827);
+      return tmp17(10831);
     }
   } else if (tmp.CAKE === giftStyle) {
     if (_sendGiftMessage.AnimationState.IDLE === ACTION) {
-      return tmp15(10828);
-    } else if (tmp15(8000).AnimationState.LOOP === ACTION) {
-      return tmp15(10829);
+      return tmp15(10832);
+    } else if (tmp15(8003).AnimationState.LOOP === ACTION) {
+      return tmp15(10833);
     } else {
-      return tmp15(10830);
+      return tmp15(10834);
     }
   } else if (tmp.CHEST === giftStyle) {
     if (_sendGiftMessage.AnimationState.IDLE === ACTION) {
-      return tmp13(10831);
-    } else if (tmp13(8000).AnimationState.LOOP === ACTION) {
-      return tmp13(10832);
+      return tmp13(10835);
+    } else if (tmp13(8003).AnimationState.LOOP === ACTION) {
+      return tmp13(10836);
     } else {
-      return tmp13(10833);
+      return tmp13(10837);
     }
   } else if (tmp.COFFEE === giftStyle) {
     if (_sendGiftMessage.AnimationState.IDLE === ACTION) {
-      return tmp11(10834);
-    } else if (tmp11(8000).AnimationState.LOOP === ACTION) {
-      return tmp11(10835);
+      return tmp11(10838);
+    } else if (tmp11(8003).AnimationState.LOOP === ACTION) {
+      return tmp11(10839);
     } else {
-      return tmp11(10836);
+      return tmp11(10840);
     }
   } else if (tmp.SEASONAL_STANDARD_BOX === giftStyle) {
     if (_sendGiftMessage.AnimationState.IDLE === ACTION) {
-      return tmp9(10837);
-    } else if (tmp9(8000).AnimationState.LOOP === ACTION) {
-      return tmp9(10838);
+      return tmp9(10841);
+    } else if (tmp9(8003).AnimationState.LOOP === ACTION) {
+      return tmp9(10842);
     } else {
-      return tmp9(10839);
+      return tmp9(10843);
     }
   } else if (tmp.SEASONAL_CAKE === giftStyle) {
     if (_sendGiftMessage.AnimationState.IDLE === ACTION) {
-      return tmp7(10840);
-    } else if (tmp7(8000).AnimationState.LOOP === ACTION) {
-      return tmp7(10841);
+      return tmp7(10844);
+    } else if (tmp7(8003).AnimationState.LOOP === ACTION) {
+      return tmp7(10845);
     } else {
-      return tmp7(10842);
+      return tmp7(10846);
     }
   } else if (tmp.SEASONAL_CHEST === giftStyle) {
     if (_sendGiftMessage.AnimationState.IDLE === ACTION) {
-      return tmp5(10843);
-    } else if (tmp5(8000).AnimationState.LOOP === ACTION) {
-      return tmp5(10844);
+      return tmp5(10847);
+    } else if (tmp5(8003).AnimationState.LOOP === ACTION) {
+      return tmp5(10848);
     } else {
-      return tmp5(10845);
+      return tmp5(10849);
     }
   } else if (tmp.SEASONAL_COFFEE === giftStyle) {
     if (_sendGiftMessage.AnimationState.IDLE === ACTION) {
-      return tmp3(10846);
-    } else if (tmp3(8000).AnimationState.LOOP === ACTION) {
-      return tmp3(10847);
+      return tmp3(10850);
+    } else if (tmp3(8003).AnimationState.LOOP === ACTION) {
+      return tmp3(10851);
     } else {
-      return tmp3(10848);
+      return tmp3(10852);
     }
   } else {
     if (tmp.SNOWGLOBE !== giftStyle) {

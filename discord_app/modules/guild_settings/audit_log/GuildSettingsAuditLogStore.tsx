@@ -1,10 +1,10 @@
-// === Module 17356: AuditLogActions ===
+// === Module 17376: AuditLogActions ===
 
-// Module 17356 (AuditLogActions)
+// Module 17376 (AuditLogActions)
 import initializeDefault from "initialize" /* 586 */;
 import dispatcherDefault from "dispatcher" /* 706 */;
-import closure_2 from "getTargetType" /* 17357 */;
-import { AuditLogChange } from "getTargetType" /* 17357 */;
+import closure_2 from "getTargetType" /* 17377 */;
+import { AuditLogChange } from "getTargetType" /* 17377 */;
 import { isGuildSelectableChannelType as closure_4 } from "createChannelRecord" /* 1390 */;
 import { hasAnyPermission } from "GuildRoleRecordTypeTag" /* 1985 */;
 import closure_6 from "trackCommunicationDisabled" /* 1991 */;

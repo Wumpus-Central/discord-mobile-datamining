@@ -1,9 +1,9 @@
-// === Module 8953: TieredTenureBadgeItem ===
+// === Module 8957: TieredTenureBadgeItem ===
 
-// Module 8953 (TieredTenureBadgeItem)
+// Module 8957 (TieredTenureBadgeItem)
 import ThemesDefault from "Themes" /* 709 */;
-import preloadDefault from "preload" /* 5501 */;
-import useMobileTenureBadgeImages from "useMobileTenureBadgeImages" /* 8954 */;
+import preloadDefault from "preload" /* 5502 */;
+import useMobileTenureBadgeImages from "useMobileTenureBadgeImages" /* 8958 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_5 from "mergeGuildAvatar" /* 1921 */;
@@ -21,9 +21,9 @@ function TieredTenureBadgeItem(arg0) {
   if (mobileTenureBadgeImages != null) {
     const small = mobileTenureBadgeImages.small;
   }
-  let tmp2Result = tmp2(7388);
+  let tmp2Result = tmp2(7389);
   const tieredTenureBadgeData = tmp2Result.getTieredTenureBadgeData(badge);
-  tmp2Result = tmp2(8979);
+  tmp2Result = tmp2(8983);
   if (tieredTenureBadgeData != null) {
     const tenureReqNumMonths = tieredTenureBadgeData.tenureReqNumMonths;
   }

@@ -1,10 +1,10 @@
-// === Module 16941: getConsoleInfo ===
+// === Module 16961: getConsoleInfo ===
 
-// Module 16941 (getConsoleInfo)
+// Module 16961 (getConsoleInfo)
 import ThemesDefault from "Themes" /* 709 */;
 import getSystemLocale from "getSystemLocale" /* 1233 */;
-import useGameConsoleAccountsDefault from "useGameConsoleAccounts" /* 9897 */;
-import getConsoleIconDefault from "getConsoleIcon" /* 9914 */;
+import useGameConsoleAccountsDefault from "useGameConsoleAccounts" /* 9901 */;
+import getConsoleIconDefault from "getConsoleIcon" /* 9918 */;
 import closure_3 from "noop" /* 19 */;
 import { PlatformTypes } from "ME" /* 673 */;
 import { jsx } from "jsxProd" /* 21 */;

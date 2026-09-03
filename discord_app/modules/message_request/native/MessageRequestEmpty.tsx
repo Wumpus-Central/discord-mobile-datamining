@@ -1,9 +1,9 @@
-// === Module 16701: MessageRequestEmpty ===
+// === Module 16721: MessageRequestEmpty ===
 
-// Module 16701 (MessageRequestEmpty)
+// Module 16721 (MessageRequestEmpty)
 import noopAll from "noop" /* 19 */;
 import Button from "Button" /* 1296 */;
-import getPendingSource from "getPendingSource" /* 16702 */;
+import getPendingSource from "getPendingSource" /* 16722 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

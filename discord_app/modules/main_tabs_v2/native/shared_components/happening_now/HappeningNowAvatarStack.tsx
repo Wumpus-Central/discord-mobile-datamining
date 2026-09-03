@@ -1,13 +1,13 @@
-// === Module 15902: HappeningNowAvatarStack ===
+// === Module 15918: HappeningNowAvatarStack ===
 
-// Module 15902 (HappeningNowAvatarStack)
+// Module 15918 (HappeningNowAvatarStack)
 import ThemesDefault from "Themes" /* 709 */;
 import Button from "Button" /* 1296 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_6 from "_getSystemLocale" /* 1995 */;
-import { CHANNEL_SPRING_CONFIG } from "n" /* 9442 */;
+import { CHANNEL_SPRING_CONFIG } from "n" /* 9446 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 

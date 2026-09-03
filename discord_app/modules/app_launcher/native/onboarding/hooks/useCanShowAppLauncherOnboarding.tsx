@@ -1,15 +1,15 @@
-// === Module 11838: result ===
+// === Module 11844: result ===
 
-// Module 11838 (result)
+// Module 11844 (result)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import setDefault from "set" /* 684 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "ensureGuildLoaded" /* 1386 */;
 import closure_5 from "handleInviteData" /* 4398 */;
 import closure_6 from "mergeGuildAvatar" /* 1921 */;
-import closure_7 from "initialize" /* 11839 */;
-import closure_8 from "initialize" /* 11840 */;
-import { BuiltInSectionId } from "TRUE_OPTION_NAME" /* 4952 */;
+import closure_7 from "initialize" /* 11845 */;
+import closure_8 from "initialize" /* 11846 */;
+import { BuiltInSectionId } from "TRUE_OPTION_NAME" /* 4953 */;
 
 const require = arg1;
 let result = 5 * setDefault.Millis.SECOND;
@@ -64,7 +64,7 @@ export default function useCanShowAppLauncherOnboarding(channelId) {
   }
   const tmp14 = closure_7;
   const tmp2Result1 = guild_id(586);
-  const tmp2Result2 = guild_id(6260);
+  const tmp2Result2 = guild_id(6261);
   const items5 = [closure_8];
   const stateFromStoresObject = guild_id(586).useStateFromStoresObject(items5, () => ({ recentMessageMetadata: store2.getRecentMessageMetadata(), recentApplicationCommandMetadata: store2.getRecentApplicationCommandMetadata() }));
   ({ recentMessageMetadata, recentApplicationCommandMetadata } = stateFromStoresObject);

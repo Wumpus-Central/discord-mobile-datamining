@@ -1,6 +1,6 @@
-// === Module 12124: CreateGuild ===
+// === Module 12130: CreateGuild ===
 
-// Module 12124 (CreateGuild)
+// Module 12130 (CreateGuild)
 import ThemesDefault from "Themes" /* 709 */;
 import closure_3 from "noop" /* 19 */;
 import { ScrollView } from "get ActivityIndicator" /* 17 */;
@@ -35,7 +35,7 @@ export default function CreateGuild(arg0) {
   if (currentUser != null) {
     isStaffResult = currentUser.isStaff();
   }
-  obj1 = isScreenReaderEnabled(4915);
+  obj1 = isScreenReaderEnabled(4916);
   isScreenReaderEnabled = obj1.useIsScreenReaderEnabled();
   ref = React.useRef(null);
   const items = [isScreenReaderEnabled];
@@ -66,7 +66,7 @@ export default function CreateGuild(arg0) {
   }
   obj1[3] = customDescription;
   items1[1] = closure_7(isScreenReaderEnabled(4474).Text, obj1);
-  items1[2] = closure_7(ref(11594), { iconBackgroundColor: tmp.contentContainer.backgroundColor, style: tmp.iconUploader, onPress: onIconPress, icon: guild.icon });
+  items1[2] = closure_7(ref(11599), { iconBackgroundColor: tmp.contentContainer.backgroundColor, style: tmp.iconUploader, onPress: onIconPress, icon: guild.icon });
   const obj3 = { isClearable: true, label: null, errorMessage: null, value: null, onChange: null, autoFocus: null, autoCorrect: false, returnKeyType: "done" };
   const intl3 = tmp4(1233).intl;
   obj3[1] = intl3.string(isScreenReaderEnabled(1233).t.dBih7e);
@@ -82,14 +82,14 @@ export default function CreateGuild(arg0) {
   }
   let tmp9Result = !!isStaffResult;
   obj3[5] = autoFocus;
-  items1[3] = closure_7(isScreenReaderEnabled(7714).TextInput, obj3);
+  items1[3] = closure_7(isScreenReaderEnabled(7717).TextInput, obj3);
   if (tmp9Result) {
     const obj4 = { onValueChange: null, value: null, start: true, end: true, label: "Staff Only", subLabel: null };
     obj4[0] = onStaffOnlyChange;
     obj4[1] = guild.staffOnly;
     const intl4 = tmp4(1233).intl;
     obj4[5] = intl4.string(tmp4(1233).t.edQ5va);
-    tmp9Result = tmp9(tmp4(6001).TableSwitchRow, obj4);
+    tmp9Result = tmp9(tmp4(6002).TableSwitchRow, obj4);
   }
   items1[4] = tmp9Result;
   const obj5 = { style: tmp.hint, variant: "text-xs/medium", color: "text-muted", children: null };
@@ -104,7 +104,7 @@ export default function CreateGuild(arg0) {
   obj7[3] = customButtonLabel;
   obj7[4] = onCreate;
   obj7[5] = submitting;
-  items1[6] = closure_7(isScreenReaderEnabled(4928).Button, obj7);
+  items1[6] = closure_7(isScreenReaderEnabled(4929).Button, obj7);
   let firstFieldErrorMessage1;
   if (error != null) {
     firstFieldErrorMessage1 = error.getFirstFieldErrorMessage("name");
@@ -129,12 +129,12 @@ export default function CreateGuild(arg0) {
         }
         const obj8 = { children: null };
         obj8[0] = message2;
-        tmp9Result = tmp9(ref(7723), obj8);
-        const tmp12Result = ref(7723);
+        tmp9Result = tmp9(ref(7726), obj8);
+        const tmp12Result = ref(7726);
       }
     }
   }
   items1[7] = tmp9Result;
-  obj[6] = closure_8(isScreenReaderEnabled(4926).Stack, { children: items1 });
+  obj[6] = closure_8(isScreenReaderEnabled(4927).Stack, { children: items1 });
   return closure_7(ScrollView, obj);
 };

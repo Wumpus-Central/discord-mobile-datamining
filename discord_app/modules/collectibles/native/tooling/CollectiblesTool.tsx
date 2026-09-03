@@ -1,14 +1,14 @@
-// === Module 15546: FramePreviewOverrideSection ===
+// === Module 15560: FramePreviewOverrideSection ===
 
-// Module 15546 (FramePreviewOverrideSection)
+// Module 15560 (FramePreviewOverrideSection)
 import ThemesDefault from "Themes" /* 709 */;
-import CollectiblesShopCardInternalV2Default from "CollectiblesShopCardInternalV2" /* 8902 */;
+import CollectiblesShopCardInternalV2Default from "CollectiblesShopCardInternalV2" /* 8906 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_7 from "updateCategoriesAndProducts" /* 7296 */;
-import closure_8 from "map" /* 7312 */;
-import { useFramePreviewOverrideStore as closure_9 } from "measure" /* 8548 */;
+import closure_7 from "updateCategoriesAndProducts" /* 7297 */;
+import closure_8 from "map" /* 7313 */;
+import { useFramePreviewOverrideStore as closure_9 } from "measure" /* 8552 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -46,13 +46,13 @@ function FramePreviewOverrideSection() {
     obj3[2] = function onPress() {
       callback();
     };
-    items[3] = callback3(_require(4929).BaseTextButton, obj3);
+    items[3] = callback3(_require(4930).BaseTextButton, obj3);
     let tmp13Result = null != tmp2;
     if (tmp13Result) {
       const obj4 = { pillStyle: null, text: "Clear override", onPress: null };
       obj4[0] = tmp.secondaryButton;
       obj4[2] = tmp4;
-      tmp13Result = callback3(_require(4929).BaseTextButton, obj4);
+      tmp13Result = callback3(_require(4930).BaseTextButton, obj4);
     }
     items[4] = tmp13Result;
     obj[1] = items;

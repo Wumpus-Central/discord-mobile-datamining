@@ -1,10 +1,10 @@
-// === Module 16595: SpamRequestsScreen ===
+// === Module 16615: SpamRequestsScreen ===
 
-// Module 16595 (SpamRequestsScreen)
+// Module 16615 (SpamRequestsScreen)
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "markAllUserIdListsStale" /* 4130 */;
 import closure_5 from "mergeGuildAvatar" /* 1921 */;
-import { UserRowModes } from "UserRowModes" /* 10853 */;
+import { UserRowModes } from "UserRowModes" /* 10857 */;
 import { RelationshipTypes } from "ME" /* 673 */;
 import { jsx } from "jsxProd" /* 21 */;
 

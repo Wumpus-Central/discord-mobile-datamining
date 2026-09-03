@@ -1,6 +1,6 @@
-// === Module 15493: get webauthn ===
+// === Module 15507: get webauthn ===
 
-// Module 15493 (get webauthn)
+// Module 15507 (get webauthn)
 import set from "set" /* 2 */;
 
 const obj = {};

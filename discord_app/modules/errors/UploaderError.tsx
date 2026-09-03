@@ -1,6 +1,6 @@
-// === Module 11794: prototype ===
+// === Module 11800: prototype ===
 
-// Module 11794 (prototype)
+// Module 11800 (prototype)
 import prototypeDefault from "prototype" /* 4377 */;
 
 prototypeDefault;

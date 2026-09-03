@@ -1,6 +1,6 @@
-// === Module 13660: JoinVoiceChannelButton ===
+// === Module 13675: JoinVoiceChannelButton ===
 
-// Module 13660 (JoinVoiceChannelButton)
+// Module 13675 (JoinVoiceChannelButton)
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_6 from "getUncachedChannelPermissions" /* 4120 */;
@@ -40,6 +40,6 @@ export default function JoinVoiceChannelButton(channel) {
     const obj = closure_1_2(closure_1_3[9]);
     const voiceChannel = closure_1_1(closure_1_3[10]).selectVoiceChannel(channel.id);
   }, items1);
-  obj[1] = jsx(channel(4928).Button, { disabled: flag, text: stringResult, onPress: callback });
+  obj[1] = jsx(channel(4929).Button, { disabled: flag, text: stringResult, onPress: callback });
   return <View style={items2}>{null}</View>;
 };

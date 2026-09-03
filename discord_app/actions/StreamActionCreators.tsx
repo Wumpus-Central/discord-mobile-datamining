@@ -7,9 +7,9 @@ import dispatcherDefault from "dispatcher" /* 706 */;
 import _modDef4491 from "module_4491" /* 4491 */;
 import isStreamKey from "isStreamKey" /* 4544 */;
 import allowChannelAccess from "allowChannelAccess" /* 4666 */;
-import transitionToStreamDefault from "transitionToStream" /* 4722 */;
-import _modDef5363 from "module_5363" /* 5363 */;
-import isPremiumResolution from "isPremiumResolution" /* 9601 */;
+import transitionToStreamDefault from "transitionToStream" /* 4723 */;
+import _modDef5364 from "module_5364" /* 5364 */;
+import isPremiumResolution from "isPremiumResolution" /* 9605 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "set" /* 4495 */;
 import closure_5 from "initialize" /* 4664 */;
@@ -64,8 +64,8 @@ function watchStream(stream, forceMultiple) {
         tmp22 = forceMultiple;
       }
       if (!tmp22) {
-        const participant = tmp18(4721).selectParticipant(stream.channelId, encodeStreamKeyResult);
-        const tmp18Result = tmp18(4721);
+        const participant = tmp18(4722).selectParticipant(stream.channelId, encodeStreamKeyResult);
+        const tmp18Result = tmp18(4722);
       }
       const obj3 = dispatcherDefault;
     } else {
@@ -225,7 +225,7 @@ function _notifyStreamStart() {
       const obj2 = { event: null };
       obj2[0] = callback(500).NetworkActionNames.STREAM_NOTIFY;
       obj1[2] = obj2;
-      yield v0(4713).post(obj1);
+      yield v0(4714).post(obj1);
       if (1 === tmp6) {
         c4 = 0;
         v0 = 3;
@@ -401,8 +401,8 @@ export const joinPrivateChannelAndWatchStream = function joinPrivateChannelAndWa
   importDefault = _require(4544).decodeStreamKey(streamKey);
   const voiceChannelId = store2.getVoiceChannelId();
   if (tmp4) {
-    _modDef5363.disconnect();
-    const obj2 = _modDef5363;
+    _modDef5364.disconnect();
+    const obj2 = _modDef5364;
   }
   let obj = _require(4544);
   tmp4 = null != voiceChannelId && voiceChannelId !== arg0;

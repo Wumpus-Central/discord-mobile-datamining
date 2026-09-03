@@ -1,20 +1,20 @@
-// === Module 10083: VoiceSettingsActionSheet ===
+// === Module 10087: VoiceSettingsActionSheet ===
 
-// Module 10083 (VoiceSettingsActionSheet)
+// Module 10087 (VoiceSettingsActionSheet)
 import isMetaQuest from "isMetaQuest" /* 1623 */;
 import useThemeDefault from "useTheme" /* 4413 */;
 import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4445 */;
-import Background from "Background" /* 5630 */;
-import BottomSheetModal from "BottomSheetModal" /* 5632 */;
-import UserSettingsVoiceDefault from "UserSettingsVoice" /* 10084 */;
-import ChannelCallMicButton from "ChannelCallMicButton" /* 10107 */;
+import Background from "Background" /* 5631 */;
+import BottomSheetModal from "BottomSheetModal" /* 5633 */;
+import UserSettingsVoiceDefault from "UserSettingsVoice" /* 10088 */;
+import ChannelCallMicButton from "ChannelCallMicButton" /* 10111 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_5 from "set" /* 4495 */;
 import closure_6 from "_detectH265HardwareDecode" /* 4529 */;
 import closure_7 from "getUncachedChannelPermissions" /* 4120 */;
 import closure_8 from "handleUpdate" /* 4496 */;
-import { resetFocus } from "VoiceChatDrawerState" /* 9533 */;
+import { resetFocus } from "VoiceChatDrawerState" /* 9537 */;
 import { InstantInviteSources } from "ME" /* 673 */;
 import { Permissions } from "sum" /* 502 */;
 import jsxProd from "jsxProd" /* 21 */;
@@ -140,7 +140,7 @@ export const showVoiceSettingsActionSheet = function showVoiceSettingsActionShee
 export const ChannelCallConnectingHeader = function ChannelCallConnectingHeader(channel) {
   channel = channel.channel;
   const tmp = callback3();
-  let obj = channel(10050);
+  let obj = channel(10054);
   const isVoiceChannelLocked = obj.useIsVoiceChannelLocked(channel);
   let fn = null;
   if (closure_7.can(Permissions.CREATE_INSTANT_INVITE, channel)) {
@@ -157,14 +157,14 @@ export const ChannelCallConnectingHeader = function ChannelCallConnectingHeader(
   let tmp9Result = null;
   if (null != fn) {
     obj = { source: null, onPress: null, accessibilityLabel: null };
-    obj[0] = tmp2(10106);
+    obj[0] = tmp2(10110);
     obj[1] = fn;
     const intl = tmp5(1233).intl;
     obj = { channelName: null };
     obj[0] = tmp4;
     obj[2] = intl.formatToPlainString(tmp5(1233).t["dHHb/2"], obj);
-    tmp9Result = tmp9(tmp2(10105), obj);
-    const tmp2Result = tmp2(10105);
+    tmp9Result = tmp9(tmp2(10109), obj);
+    const tmp2Result = tmp2(10109);
   }
   obj1 = { children: null };
   items[1] = tmp9Result;

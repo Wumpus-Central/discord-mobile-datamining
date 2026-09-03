@@ -1,10 +1,10 @@
-// === Module 7028: SnailIllocon ===
+// === Module 7029: SnailIllocon ===
 
-// Module 7028 (SnailIllocon)
+// Module 7029 (SnailIllocon)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5501 */;
-import metadataDefault from "metadata" /* 7029 */;
+import preloadDefault from "preload" /* 5502 */;
+import metadataDefault from "metadata" /* 7030 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/SnailIllocon.native.tsx");

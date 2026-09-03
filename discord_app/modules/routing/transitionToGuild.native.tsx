@@ -1,11 +1,11 @@
-// === Module 6195: transitionToGuild ===
+// === Module 6196: transitionToGuild ===
 
-// Module 6195 (transitionToGuild)
+// Module 6196 (transitionToGuild)
 import set from "set" /* 2 */;
 import ME from "ME" /* 673 */;
 import transitionTo from "transitionTo" /* 1219 */;
-import LayoutAnimation from "LayoutAnimation" /* 5604 */;
-import getChannelIdForGuildTransition from "getChannelIdForGuildTransition" /* 6072 */;
+import LayoutAnimation from "LayoutAnimation" /* 5605 */;
+import getChannelIdForGuildTransition from "getChannelIdForGuildTransition" /* 6073 */;
 
 const Routes = ME.Routes;
 let result = set.fileFinishedImporting("modules/routing/transitionToGuild.native.tsx");

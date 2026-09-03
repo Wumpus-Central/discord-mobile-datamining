@@ -1,14 +1,14 @@
-// === Module 15909: ? ===
+// === Module 15925: ? ===
 
-// Module 15909
+// Module 15925
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "truncateOldMessageData" /* 13581 */;
-import { MAX_STORED_MESSAGES } from "truncateOldMessageData" /* 13581 */;
+import closure_5 from "truncateOldMessageData" /* 13596 */;
+import { MAX_STORED_MESSAGES } from "truncateOldMessageData" /* 13596 */;
 import closure_7 from "ensureGuildLoaded" /* 1386 */;
-import closure_8 from "handleTypingStart" /* 11760 */;
+import closure_8 from "handleTypingStart" /* 11766 */;
 import closure_9 from "mergeGuildAvatar" /* 1921 */;
-import { HappeningNowCardTrackingType as closure_10 } from "HAPPENING_NOW_PANELS_CONTAINER_PADDING" /* 15119 */;
+import { HappeningNowCardTrackingType as closure_10 } from "HAPPENING_NOW_PANELS_CONTAINER_PADDING" /* 15134 */;
 import ME from "ME" /* 673 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;

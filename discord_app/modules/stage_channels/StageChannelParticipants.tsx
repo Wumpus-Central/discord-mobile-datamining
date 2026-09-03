@@ -1,20 +1,20 @@
-// === Module 5376: sortKey ===
+// === Module 5377: sortKey ===
 
-// Module 5376 (sortKey)
+// Module 5377 (sortKey)
 import version from "version" /* 4116 */;
 import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 4668 */;
 import getNicknameDefault from "getNickname" /* 4673 */;
-import getParticipantUserKeyDefault from "getParticipantUserKey" /* 5379 */;
-import getHighestHoistedRole from "getHighestHoistedRole" /* 5380 */;
+import getParticipantUserKeyDefault from "getParticipantUserKey" /* 5380 */;
+import getHighestHoistedRole from "getHighestHoistedRole" /* 5381 */;
 import closure_3 from "reset" /* 4500 */;
 import closure_4 from "ensureGuildLoaded" /* 1386 */;
-import closure_5 from "handleConnectionReset" /* 5377 */;
+import closure_5 from "handleConnectionReset" /* 5378 */;
 import closure_6 from "trackCommunicationDisabled" /* 1991 */;
 import closure_7 from "markAllUserIdListsStale" /* 4130 */;
 import closure_8 from "mergeGuildAvatar" /* 1921 */;
 import closure_9 from "updateVoiceState" /* 4497 */;
 import { getComparator } from "getVoiceStatesForGuild" /* 4555 */;
-import closure_11 from "buildStageChannelUserRoles" /* 5373 */;
+import closure_11 from "buildStageChannelUserRoles" /* 5374 */;
 import closure_12 from "handleStageInstanceCreateOrUpdate" /* 1391 */;
 
 require = arg1;

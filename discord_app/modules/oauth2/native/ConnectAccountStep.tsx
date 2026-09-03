@@ -1,13 +1,13 @@
-// === Module 9311: ConnectAccountStep ===
+// === Module 9315: ConnectAccountStep ===
 
-// Module 9311 (ConnectAccountStep)
+// Module 9315 (ConnectAccountStep)
 import ThemesDefault from "Themes" /* 709 */;
 import getSystemLocale from "getSystemLocale" /* 1233 */;
 import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 1362 */;
 import getAvatarURL from "getAvatarURL" /* 1430 */;
 import CheckmarkLargeIcon from "CheckmarkLargeIcon" /* 4429 */;
 import Text from "Text" /* 4474 */;
-import getPlatformUserUrlDefault from "getPlatformUserUrl" /* 5235 */;
+import getPlatformUserUrlDefault from "getPlatformUserUrl" /* 5236 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_5 from "addApplication" /* 4519 */;
@@ -53,7 +53,7 @@ export default function ConnectAccountStep(clientId) {
     }
     return currentUser;
   });
-  let obj2 = platformType(5235);
+  let obj2 = platformType(5236);
   const value = obj2.get(platformType);
   if (null == value) {
     let applicationIconSource;
@@ -91,7 +91,7 @@ export default function ConnectAccountStep(clientId) {
     const items4 = [callback(tmp5(1296).Avatar, obj3), , ];
     const obj4 = { color: null, size: "md" };
     obj4[0] = tmp2(709).colors.INTERACTIVE_TEXT_DEFAULT;
-    items4[1] = callback(tmp5(8813).MoreHorizontalIcon, obj4);
+    items4[1] = callback(tmp5(8817).MoreHorizontalIcon, obj4);
     const obj5 = { source: null, size: null };
     obj5[0] = userAvatarSource;
     obj5[1] = tmp5(1296).AvatarSizes.XLARGE;
@@ -134,7 +134,7 @@ export default function ConnectAccountStep(clientId) {
     };
     const intl3 = tmp5(1233).intl;
     obj13[3] = intl3.string(tmp5(1233).t.S0W8Z5);
-    items7[2] = callback(tmp5(4928).Button, obj13);
+    items7[2] = callback(tmp5(4929).Button, obj13);
     obj10[1] = items7;
     items6[2] = callback2(View, obj10);
     const obj14 = { style: null, children: null };

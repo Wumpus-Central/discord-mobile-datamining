@@ -1,19 +1,19 @@
-// === Module 10281: VideoBadge ===
+// === Module 10285: VideoBadge ===
 
-// Module 10281 (VideoBadge)
+// Module 10285 (VideoBadge)
 import defaultAreStatesEqual from "defaultAreStatesEqual" /* 644 */;
 import ThemesDefault from "Themes" /* 709 */;
 import map from "map" /* 4197 */;
 import Text from "Text" /* 4474 */;
-import isBlurDisabledDefault from "isBlurDisabled" /* 4918 */;
-import preloadDefault from "preload" /* 5501 */;
-import redactionSettingToRenderedString from "redactionSettingToRenderedString" /* 7354 */;
-import SolidCutoutDefault from "SolidCutout" /* 8106 */;
-import PlayIcon from "PlayIcon" /* 8593 */;
-import VideoComponentDefault from "VideoComponent" /* 8617 */;
-import VoiceMessageIcon from "VoiceMessageIcon" /* 10234 */;
-import useEnabledHarmTypesBitmaskForChannelAndAuthorId from "useEnabledHarmTypesBitmaskForChannelAndAuthorId" /* 10282 */;
-import StickerDefault from "Sticker" /* 10283 */;
+import isBlurDisabledDefault from "isBlurDisabled" /* 4919 */;
+import preloadDefault from "preload" /* 5502 */;
+import redactionSettingToRenderedString from "redactionSettingToRenderedString" /* 7355 */;
+import SolidCutoutDefault from "SolidCutout" /* 8109 */;
+import PlayIcon from "PlayIcon" /* 8597 */;
+import VideoComponentDefault from "VideoComponent" /* 8621 */;
+import VoiceMessageIcon from "VoiceMessageIcon" /* 10238 */;
+import useEnabledHarmTypesBitmaskForChannelAndAuthorId from "useEnabledHarmTypesBitmaskForChannelAndAuthorId" /* 10286 */;
+import StickerDefault from "Sticker" /* 10287 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_7 from "maybeApplyNoTextColorForLightCustomTheme" /* 4470 */;
@@ -63,11 +63,11 @@ function ObscuredMediaOverlay(isSpoiler) {
   items[2] = tmp11;
   obj1 = { style: tmp.spoilerIconContainer, children: null };
   if (isObscured) {
-    let tmp14Result = tmp14(tmp2(5034).ImageWarningIcon, { size: "sm", color: "white" });
+    let tmp14Result = tmp14(tmp2(5035).ImageWarningIcon, { size: "sm", color: "white" });
   } else {
     const obj2 = { style: null, children: null };
     obj2[0] = tmp.spoilerPill;
-    obj2[1] = tmp14(tmp2(7752).EyeIcon, { size: "sm", color: "white" });
+    obj2[1] = tmp14(tmp2(7755).EyeIcon, { size: "sm", color: "white" });
     tmp14Result = tmp14(tmp15, obj2);
   }
   const obj3 = { children: null };
@@ -96,11 +96,11 @@ function SinglePreviewableMedia(arg0) {
     obj[1] = icon;
     return callback(View, obj);
   } else {
-    if (tmp2(10234).PreviewableMediaTypes.AUDIO !== type) {
-      if (tmp2(10234).PreviewableMediaTypes.FILE !== type) {
-        if (tmp2(10234).PreviewableMediaTypes.IMAGE !== type) {
-          if (tmp2(10234).PreviewableMediaTypes.VIDEO !== type) {
-            if (tmp2(10234).PreviewableMediaTypes.GIF === type) {
+    if (tmp2(10238).PreviewableMediaTypes.AUDIO !== type) {
+      if (tmp2(10238).PreviewableMediaTypes.FILE !== type) {
+        if (tmp2(10238).PreviewableMediaTypes.IMAGE !== type) {
+          if (tmp2(10238).PreviewableMediaTypes.VIDEO !== type) {
+            if (tmp2(10238).PreviewableMediaTypes.GIF === type) {
               const video = media.video;
               if (video != null) {
                 const url = video.url;
@@ -109,17 +109,17 @@ function SinglePreviewableMedia(arg0) {
               if (null == thumbnail) {
                 return null;
               } else {
-                let tmp2Result = tmp2(6146);
+                let tmp2Result = tmp2(6147);
                 const author = message.author;
                 let id;
                 if (author != null) {
                   id = author.id;
                 }
                 const enabledHarmTypesForChannelAndAuthorId = tmp2Result.getEnabledHarmTypesForChannelAndAuthorId(message.channel_id, id);
-                tmp2Result = tmp2(6146);
+                tmp2Result = tmp2(6147);
                 obj1 = { type: null, media: null };
                 const getMediaObscuredReasonFromBitmask = tmp2Result.getMediaObscuredReasonFromBitmask;
-                obj1[0] = tmp2(6151).ObscuredMediaTypes.Embed;
+                obj1[0] = tmp2(6152).ObscuredMediaTypes.Embed;
                 obj1[1] = media;
                 if (null != thumbnail.proxyURL) {
                   if ("" !== thumbnail.proxyURL) {
@@ -160,7 +160,7 @@ function SinglePreviewableMedia(arg0) {
                 }
                 url2 = thumbnail.url;
               }
-            } else if (tmp2(10234).PreviewableMediaTypes.STICKER === type) {
+            } else if (tmp2(10238).PreviewableMediaTypes.STICKER === type) {
               const obj9 = { style: null, children: null };
               const items2 = [tmp.mediaThumbnailContainer, ];
               const obj10 = { width: null, height: null };
@@ -188,10 +188,10 @@ function SinglePreviewableMedia(arg0) {
                 obj12[0] = media;
                 obj12[2] = enabledHarmTypesBitmaskForMessage;
                 obj12[3] = shouldAgeVerifyForExplicitMedia;
-                const attachmentObscurityProps = tmp2(8043).getAttachmentObscurityProps(obj12);
-                const tmp2Result1 = tmp2(8043);
-                const attachmentUrl = tmp2(8583).getAttachmentUrl(media);
-                const tmp2Result2 = tmp2(8583);
+                const attachmentObscurityProps = tmp2(8046).getAttachmentObscurityProps(obj12);
+                const tmp2Result1 = tmp2(8046);
+                const attachmentUrl = tmp2(8587).getAttachmentUrl(media);
+                const tmp2Result2 = tmp2(8587);
                 const obj13 = { src: null, sourceWidth: null, sourceHeight: null, targetWidth: null, targetHeight: null, animated: false, format: null };
                 obj13[0] = attachmentUrl;
                 obj13[1] = width;
@@ -199,7 +199,7 @@ function SinglePreviewableMedia(arg0) {
                 obj13[3] = 2 * size;
                 obj13[4] = 2 * size;
                 let str3;
-                if (type === tmp2(10234).PreviewableMediaTypes.VIDEO) {
+                if (type === tmp2(10238).PreviewableMediaTypes.VIDEO) {
                   str3 = "png";
                 }
                 obj13[6] = str3;
@@ -220,7 +220,7 @@ function SinglePreviewableMedia(arg0) {
                 obj17[1] = tmp.mediaThumbnail;
                 const items4 = [callback(preloadDefault, obj17), ];
                 let tmp24Result = null;
-                if (type === tmp2(10234).PreviewableMediaTypes.VIDEO) {
+                if (type === tmp2(10238).PreviewableMediaTypes.VIDEO) {
                   tmp24Result = tmp24(VideoBadge, {});
                 }
                 items4[1] = tmp24Result;
@@ -252,7 +252,7 @@ function MultiplePreviewableMedia(arg0) {
     const BADGE_PADDING = callback(1296).BADGE_PADDING;
     const sum = BADGE_PADDING + 5;
     const roundToNearestPixelResult = closure_4.roundToNearestPixel(20 + 2 * BADGE_PADDING);
-    const obj = { shape: callback(8106).CutoutShape.RoundedRect, x: 56 - roundToNearestPixelResult + sum, y: -sum, width: roundToNearestPixelResult, height: roundToNearestPixelResult, cornerRadius: closure_4.roundToNearestPixel(roundToNearestPixelResult / 2) };
+    const obj = { shape: callback(8109).CutoutShape.RoundedRect, x: 56 - roundToNearestPixelResult + sum, y: -sum, width: roundToNearestPixelResult, height: roundToNearestPixelResult, cornerRadius: closure_4.roundToNearestPixel(roundToNearestPixelResult / 2) };
     return obj;
   }, []);
   obj = { cutouts: items, children: null };

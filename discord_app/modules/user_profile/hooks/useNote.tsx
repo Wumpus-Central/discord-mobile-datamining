@@ -1,9 +1,9 @@
-// === Module 12707: _fetchNote ===
+// === Module 12719: _fetchNote ===
 
-// Module 12707 (_fetchNote)
+// Module 12719 (_fetchNote)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "noop" /* 19 */;
-import closure_5 from "getNote" /* 12708 */;
+import closure_5 from "getNote" /* 12720 */;
 import { Endpoints } from "ME" /* 673 */;
 
 const require = arg1;

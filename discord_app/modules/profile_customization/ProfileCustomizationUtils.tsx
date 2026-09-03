@@ -1,12 +1,12 @@
-// === Module 8084: useAvatarsWithGuilds ===
+// === Module 8087: useAvatarsWithGuilds ===
 
-// Module 8084 (useAvatarsWithGuilds)
+// Module 8087 (useAvatarsWithGuilds)
 import initialize from "initialize" /* 586 */;
 import getSystemLocale from "getSystemLocale" /* 1233 */;
 import AccessibilityAnnouncer4 from "AccessibilityAnnouncer" /* 1362 */;
 import closure_2 from "noop" /* 19 */;
-import closure_3 from "handleFormOpen" /* 8078 */;
-import closure_4 from "createUserWidgetFromServer" /* 7375 */;
+import closure_3 from "handleFormOpen" /* 8081 */;
+import closure_4 from "createUserWidgetFromServer" /* 7376 */;
 import closure_5 from "trackCommunicationDisabled" /* 1991 */;
 
 require = arg1;

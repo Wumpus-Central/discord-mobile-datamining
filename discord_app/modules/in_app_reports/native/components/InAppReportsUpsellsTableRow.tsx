@@ -1,8 +1,8 @@
-// === Module 12998: InAppReportsUpsellsTableRow ===
+// === Module 13010: InAppReportsUpsellsTableRow ===
 
-// Module 12998 (InAppReportsUpsellsTableRow)
+// Module 13010 (InAppReportsUpsellsTableRow)
 import noopAll from "noop" /* 19 */;
-import TableRowInner from "TableRowInner" /* 5607 */;
+import TableRowInner from "TableRowInner" /* 5608 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

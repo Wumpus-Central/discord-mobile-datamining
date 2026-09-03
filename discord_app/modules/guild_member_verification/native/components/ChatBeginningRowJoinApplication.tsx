@@ -1,6 +1,6 @@
-// === Module 12393: ChatBeginningRowJoinRequest ===
+// === Module 12405: ChatBeginningRowJoinRequest ===
 
-// Module 12393 (ChatBeginningRowJoinRequest)
+// Module 12405 (ChatBeginningRowJoinRequest)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 709 */;
 import { View } from "get ActivityIndicator" /* 17 */;

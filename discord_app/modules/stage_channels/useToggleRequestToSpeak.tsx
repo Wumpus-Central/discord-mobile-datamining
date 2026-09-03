@@ -1,6 +1,6 @@
-// === Module 10043: useToggleRequestToSpeak ===
+// === Module 10047: useToggleRequestToSpeak ===
 
-// Module 10043 (useToggleRequestToSpeak)
+// Module 10047 (useToggleRequestToSpeak)
 import useAudienceRequestToSpeakStateDefault from "useAudienceRequestToSpeakState" /* 4668 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;

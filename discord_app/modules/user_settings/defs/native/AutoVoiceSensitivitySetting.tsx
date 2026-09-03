@@ -1,11 +1,11 @@
-// === Module 15074: toggle ===
+// === Module 15089: toggle ===
 
-// Module 15074 (toggle)
+// Module 15089 (toggle)
 import initialize from "initialize" /* 586 */;
 import getSystemLocale from "getSystemLocale" /* 1233 */;
-import trackDeviceChangedDefault from "trackDeviceChanged" /* 9803 */;
+import trackDeviceChangedDefault from "trackDeviceChanged" /* 9807 */;
 import closure_3 from "_detectH265HardwareDecode" /* 4529 */;
-import createToggle from "createToggle" /* 11288 */;
+import createToggle from "createToggle" /* 11292 */;
 
 require = arg1;
 createToggle = {

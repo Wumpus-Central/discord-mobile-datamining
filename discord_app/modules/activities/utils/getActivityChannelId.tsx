@@ -1,6 +1,6 @@
-// === Module 9452: getActivityChannelId ===
+// === Module 9456: getActivityChannelId ===
 
-// Module 9452 (getActivityChannelId)
+// Module 9456 (getActivityChannelId)
 import set from "set" /* 2 */;
 import createChannelRecord from "createChannelRecord" /* 1390 */;
 import closure_1 from "ensureGuildLoaded" /* 1386 */;

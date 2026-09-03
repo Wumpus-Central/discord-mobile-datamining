@@ -1,14 +1,14 @@
-// === Module 15034: GuildRoleSubscriptionsSectionHeader ===
+// === Module 15049: GuildRoleSubscriptionsSectionHeader ===
 
-// Module 15034 (GuildRoleSubscriptionsSectionHeader)
+// Module 15049 (GuildRoleSubscriptionsSectionHeader)
 import noopAll from "noop" /* 19 */;
 import getSystemLocale from "getSystemLocale" /* 1233 */;
 import Button from "Button" /* 1296 */;
 import Text from "Text" /* 4474 */;
-import useRestorePurchasesDefault from "useRestorePurchases" /* 15035 */;
-import useActiveGuildSubscriptionsDefault from "useActiveGuildSubscriptions" /* 15036 */;
-import useFetchListingsForGuild from "useFetchListingsForGuild" /* 15037 */;
-import LoadingIndicatorDefault from "LoadingIndicator" /* 15040 */;
+import useRestorePurchasesDefault from "useRestorePurchases" /* 15050 */;
+import useActiveGuildSubscriptionsDefault from "useActiveGuildSubscriptions" /* 15051 */;
+import useFetchListingsForGuild from "useFetchListingsForGuild" /* 15052 */;
+import LoadingIndicatorDefault from "LoadingIndicator" /* 15055 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;

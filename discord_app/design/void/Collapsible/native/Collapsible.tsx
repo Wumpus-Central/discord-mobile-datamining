@@ -1,6 +1,6 @@
-// === Module 13962: Collapsible ===
+// === Module 13978: Collapsible ===
 
-// Module 13962 (Collapsible)
+// Module 13978 (Collapsible)
 import ThemesDefault from "Themes" /* 709 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;

@@ -1,6 +1,6 @@
-// === Module 5979: useStartProviderConnection ===
+// === Module 5980: useStartProviderConnection ===
 
-// Module 5979 (useStartProviderConnection)
+// Module 5980 (useStartProviderConnection)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "noop" /* 19 */;
 
@@ -8,7 +8,7 @@ const require = arg1;
 const result = require("set").fileFinishedImporting("modules/application_account_linking/native/useStartProviderConnection.tsx");
 
 export const useStartProviderConnection = function useStartProviderConnection(provider_id) {
-  let obj = _require(5980);
+  let obj = _require(5981);
   const providerConnection = obj.useProviderConnection(provider_id);
   const startConnection = providerConnection.startConnection;
   _require = startConnection;

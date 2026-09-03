@@ -1,8 +1,8 @@
-// === Module 10940: ALLOWED_TYPES ===
+// === Module 10944: ALLOWED_TYPES ===
 
-// Module 10940 (ALLOWED_TYPES)
+// Module 10944 (ALLOWED_TYPES)
 import set from "set" /* 2 */;
-import sortByMatchScore from "sortByMatchScore" /* 9946 */;
+import sortByMatchScore from "sortByMatchScore" /* 9950 */;
 
 const items = [sortByMatchScore.AutocompleterResultTypes.USER, sortByMatchScore.AutocompleterResultTypes.TEXT_CHANNEL, sortByMatchScore.AutocompleterResultTypes.VOICE_CHANNEL, sortByMatchScore.AutocompleterResultTypes.GROUP_DM];
 const arr = Array.from(items);

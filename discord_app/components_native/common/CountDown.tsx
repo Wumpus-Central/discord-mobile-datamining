@@ -1,6 +1,6 @@
-// === Module 10888: componentDidMount ===
+// === Module 10892: componentDidMount ===
 
-// Module 10888 (componentDidMount)
+// Module 10892 (componentDidMount)
 import setDefault from "set" /* 684 */;
 import getSystemLocale from "getSystemLocale" /* 1233 */;
 import Text from "Text" /* 4474 */;

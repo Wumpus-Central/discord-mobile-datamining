@@ -1,9 +1,9 @@
-// === Module 11272: UnreadSettingNoticeImpressionTracking ===
+// === Module 11276: UnreadSettingNoticeImpressionTracking ===
 
-// Module 11272 (UnreadSettingNoticeImpressionTracking)
+// Module 11276 (UnreadSettingNoticeImpressionTracking)
 import set from "set" /* 2 */;
 import encodeProperties from "encodeProperties" /* 500 */;
-import trackImpressionDefault from "trackImpression" /* 8907 */;
+import trackImpressionDefault from "trackImpression" /* 8911 */;
 
 const result = set.fileFinishedImporting("modules/notifications/settings_unread_notice/UnreadSettingNoticeImpressionTracking.tsx");
 

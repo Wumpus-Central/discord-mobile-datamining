@@ -1,6 +1,6 @@
-// === Module 17185: NewMemberActionsCompleted ===
+// === Module 17205: NewMemberActionsCompleted ===
 
-// Module 17185 (NewMemberActionsCompleted)
+// Module 17205 (NewMemberActionsCompleted)
 import ThemesDefault from "Themes" /* 709 */;
 import _modDef4217 from "module_4217" /* 4217 */;
 import closure_3 from "noop" /* 19 */;
@@ -42,7 +42,7 @@ export default function NewMemberActionsCompleted(arg0) {
   fn.__initData = closure_8;
   const animatedStyle = obj1.useAnimatedStyle(fn);
   const effect1 = React.useEffect(() => {
-    const timerId = setTimeout(() => callback2(4723).popWithKey(callback(12075).NEW_MEMBER_ACTION_COMPLETE_MODAL_KEY), 2500);
+    const timerId = setTimeout(() => callback2(4724).popWithKey(callback(12081).NEW_MEMBER_ACTION_COMPLETE_MODAL_KEY), 2500);
   }, []);
   obj = { style: tmp.screen, children: null };
   obj1 = { style: tmp.text, variant: "heading-xl/semibold", color: "text-overlay-light", children: null };

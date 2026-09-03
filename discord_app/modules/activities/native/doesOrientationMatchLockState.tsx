@@ -1,6 +1,6 @@
-// === Module 9618: doesOrientationMatchLockState ===
+// === Module 9622: doesOrientationMatchLockState ===
 
-// Module 9618 (doesOrientationMatchLockState)
+// Module 9622 (doesOrientationMatchLockState)
 import set from "set" /* 2 */;
 import items3 from "items3" /* 4506 */;
 

@@ -1,12 +1,12 @@
-// === Module 8515: WarningBox ===
+// === Module 8519: WarningBox ===
 
-// Module 8515 (WarningBox)
+// Module 8519 (WarningBox)
 import noopAll from "noop" /* 19 */;
 import getSystemLocale from "getSystemLocale" /* 1233 */;
 import Text from "Text" /* 4474 */;
-import SlayerStorefrontItemCardDefault from "SlayerStorefrontItemCard" /* 8516 */;
-import InfoBox from "InfoBox" /* 8518 */;
-import InfoBoxDefault from "InfoBox" /* 8518 */;
+import SlayerStorefrontItemCardDefault from "SlayerStorefrontItemCard" /* 8520 */;
+import InfoBox from "InfoBox" /* 8522 */;
+import InfoBoxDefault from "InfoBox" /* 8522 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;

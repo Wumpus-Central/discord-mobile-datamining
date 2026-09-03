@@ -1,12 +1,12 @@
-// === Module 15322: toggle ===
+// === Module 15337: toggle ===
 
-// Module 15322 (toggle)
+// Module 15337 (toggle)
 import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1233 */;
 import isMetaQuest from "isMetaQuest" /* 1623 */;
-import MobileUserSettings from "MobileUserSettings" /* 7893 */;
-import isInAppMessageSoundsEnabled from "isInAppMessageSoundsEnabled" /* 10209 */;
-import createToggle from "createToggle" /* 11288 */;
+import MobileUserSettings from "MobileUserSettings" /* 7896 */;
+import isInAppMessageSoundsEnabled from "isInAppMessageSoundsEnabled" /* 10213 */;
+import createToggle from "createToggle" /* 11292 */;
 
 ({ setInAppMessageSoundsEnabled, useInAppMessageSoundsEnabled } = isInAppMessageSoundsEnabled);
 const toggle = createToggle.createToggle({

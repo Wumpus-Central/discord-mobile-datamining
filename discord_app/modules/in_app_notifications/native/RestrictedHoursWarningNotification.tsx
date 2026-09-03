@@ -1,10 +1,10 @@
-// === Module 11176: ? ===
+// === Module 11180: ? ===
 
-// Module 11176
+// Module 11180
 import ThemesDefault from "Themes" /* 709 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import { NOTIFICATION_PREVIEW_LINE_CLAMP as closure_5 } from "set" /* 10200 */;
+import { NOTIFICATION_PREVIEW_LINE_CLAMP as closure_5 } from "set" /* 10204 */;
 import ME from "ME" /* 673 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
@@ -22,7 +22,7 @@ const memoResult = importAllResult.memo(function RestrictedHoursWarningNotificat
   type = notification.type;
   let obj = { style: callback().iconContainer, children: null };
   obj = { size: "sm", color: type(709).colors.WHITE };
-  obj[1] = jsx(notification(11177).ThemeDarkIcon, { size: "sm", color: type(709).colors.WHITE });
+  obj[1] = jsx(notification(11181).ThemeDarkIcon, { size: "sm", color: type(709).colors.WHITE });
   const items = [notification.title];
   const items1 = [type];
   const memo = importAllResult.useMemo(() => ({ type: "simple", text: notification.title }), items);
@@ -37,7 +37,7 @@ const memoResult = importAllResult.memo(function RestrictedHoursWarningNotificat
     notification(closure_1_2[10]).openUserSettings(obj);
   }, items1);
   obj = { icon: <View size="sm" color={type(709).colors.WHITE} />, header: memo, children: jsx(notification(4474).Text, obj1), onPress: callback, notification };
-  return jsx(notification(10277).NotificationPressable, { icon: <View size="sm" color={type(709).colors.WHITE} />, header: memo, children: jsx(notification(4474).Text, obj1), onPress: callback, notification });
+  return jsx(notification(10281).NotificationPressable, { icon: <View size="sm" color={type(709).colors.WHITE} />, header: memo, children: jsx(notification(4474).Text, obj1), onPress: callback, notification });
 });
 const result = require("set").fileFinishedImporting("modules/in_app_notifications/native/RestrictedHoursWarningNotification.tsx");
 

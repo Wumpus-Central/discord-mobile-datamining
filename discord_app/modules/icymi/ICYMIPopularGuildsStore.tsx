@@ -1,6 +1,6 @@
-// === Module 16302: initialize ===
+// === Module 16321: initialize ===
 
-// Module 16302 (initialize)
+// Module 16321 (initialize)
 import initializeDefault from "initialize" /* 586 */;
 import dispatcherDefault from "dispatcher" /* 706 */;
 import closure_2 from "createGuildRecordFromRust" /* 1908 */;

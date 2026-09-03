@@ -1,13 +1,13 @@
-// === Module 5483: recomputeFromAppTokens ===
+// === Module 5484: recomputeFromAppTokens ===
 
-// Module 5483 (recomputeFromAppTokens)
+// Module 5484 (recomputeFromAppTokens)
 import initializeDefault from "initialize" /* 586 */;
 import dispatcherDefault from "dispatcher" /* 706 */;
 import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1470 */;
 import closure_2 from "_slicedToArray" /* 32 */;
 import closure_3 from "ensureGuildLoaded" /* 1386 */;
-import closure_4 from "isConnected" /* 5484 */;
-import closure_5 from "reinjectEphemerals" /* 4735 */;
+import closure_4 from "isConnected" /* 5485 */;
+import closure_5 from "reinjectEphemerals" /* 4736 */;
 
 require = arg1;
 function recomputeFromAppTokens() {

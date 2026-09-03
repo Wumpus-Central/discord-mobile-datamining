@@ -1,10 +1,10 @@
-// === Module 9386: HammerIcon ===
+// === Module 9390: HammerIcon ===
 
-// Module 9386 (HammerIcon)
+// Module 9390 (HammerIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 709 */;
 import BaseIconImage from "BaseIconImage" /* 4196 */;
-import registerAsset from "registerAsset" /* 9387 */;
+import registerAsset from "registerAsset" /* 9391 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

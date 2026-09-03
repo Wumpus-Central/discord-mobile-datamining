@@ -1,14 +1,14 @@
-// === Module 11775: CustomTypingIndicatorDisplay ===
+// === Module 11781: CustomTypingIndicatorDisplay ===
 
-// Module 11775 (CustomTypingIndicatorDisplay)
+// Module 11781 (CustomTypingIndicatorDisplay)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 709 */;
 import getSystemLocale from "getSystemLocale" /* 1233 */;
 import Text from "Text" /* 4474 */;
-import Stack from "Stack" /* 4926 */;
-import PressableBase from "PressableBase" /* 5076 */;
-import items2 from "items" /* 11766 */;
-import CustomTypingIndicatorGlyphDefault from "CustomTypingIndicatorGlyph" /* 11776 */;
+import Stack from "Stack" /* 4927 */;
+import PressableBase from "PressableBase" /* 5077 */;
+import items2 from "items" /* 11772 */;
+import CustomTypingIndicatorGlyphDefault from "CustomTypingIndicatorGlyph" /* 11782 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 

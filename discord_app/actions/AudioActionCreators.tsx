@@ -1,14 +1,14 @@
-// === Module 9803: trackDeviceChanged ===
+// === Module 9807: trackDeviceChanged ===
 
-// Module 9803 (trackDeviceChanged)
+// Module 9807 (trackDeviceChanged)
 import timestampDefault from "timestamp" /* 3 */;
 import debounceDefault from "debounce" /* 633 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 695 */;
 import dispatcherDefault from "dispatcher" /* 706 */;
-import isPremiumResolution from "isPremiumResolution" /* 9601 */;
-import snapVolumeToDefault from "snapVolumeToDefault" /* 9805 */;
-import trackVoiceAndVideoDebuggingSettingsUpdatedDefault from "trackVoiceAndVideoDebuggingSettingsUpdated" /* 9807 */;
-import _getFilterBlob from "_getFilterBlob" /* 9808 */;
+import isPremiumResolution from "isPremiumResolution" /* 9605 */;
+import snapVolumeToDefault from "snapVolumeToDefault" /* 9809 */;
+import trackVoiceAndVideoDebuggingSettingsUpdatedDefault from "trackVoiceAndVideoDebuggingSettingsUpdated" /* 9811 */;
+import _getFilterBlob from "_getFilterBlob" /* 9812 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "initialize" /* 4553 */;
 import closure_5 from "ensureGuildLoaded" /* 1386 */;
@@ -17,7 +17,7 @@ import closure_7 from "createRTCConnection" /* 4554 */;
 import closure_8 from "handleConnectionOpen" /* 1980 */;
 import closure_9 from "mergeGuildAvatar" /* 1921 */;
 import ME from "ME" /* 673 */;
-import { SoundOutputChannel } from "SoundOutputChannel" /* 9804 */;
+import { SoundOutputChannel } from "SoundOutputChannel" /* 9808 */;
 import { MediaEngineContextTypes } from "DesktopSources" /* 4542 */;
 
 require = arg1;
@@ -639,7 +639,7 @@ obj = {
               v0 = 1;
               dependencyMap = 1;
               obj1 = { value: null, done: false };
-              obj1[0] = v0(9807)("debug_logging_enabled", closure_1_0, closure_1_6.getDebugLogging());
+              obj1[0] = v0(9811)("debug_logging_enabled", closure_1_0, closure_1_6.getDebugLogging());
               return obj1;
             }
           } else if (arg0 === 1) {
@@ -726,7 +726,7 @@ obj = {
               v0 = 1;
               dependencyMap = 1;
               obj1 = { value: null, done: false };
-              obj1[0] = v0(9807)("audio_subsystem", closure_1_0, closure_1_6.getAudioSubsystem());
+              obj1[0] = v0(9811)("audio_subsystem", closure_1_0, closure_1_6.getAudioSubsystem());
               return obj1;
             }
           } else if (arg0 === 1) {

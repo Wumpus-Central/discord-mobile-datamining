@@ -1,6 +1,6 @@
-// === Module 4927: CONFIG_NEVER_ANIMATE ===
+// === Module 4928: CONFIG_NEVER_ANIMATE ===
 
-// Module 4927 (CONFIG_NEVER_ANIMATE)
+// Module 4928 (CONFIG_NEVER_ANIMATE)
 import set from "set" /* 2 */;
 import _mod4217 from "module_4217" /* 4217 */;
 import CONFIG_NEVER_ANIMATE2 from "CONFIG_NEVER_ANIMATE" /* 4480 */;

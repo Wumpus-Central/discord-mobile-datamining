@@ -1,6 +1,6 @@
-// === Module 17393: BoostedGuildTiers ===
+// === Module 17413: BoostedGuildTiers ===
 
-// Module 17393 (BoostedGuildTiers)
+// Module 17413 (BoostedGuildTiers)
 import ThemesDefault from "Themes" /* 709 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_5 from "createGuildRecordFromRust" /* 1908 */;
@@ -18,7 +18,7 @@ const require = arg1;
 ({ AppliedGuildBoostsRequiredForBoostedGuildTier: closure_8, BoostedGuildTiers } = ME);
 const GuildFeatures = ME.GuildFeatures;
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-let obj = { tier: BoostedGuildTiers.NONE, title: null, IconComponent: "r" };
+let obj = { tier: BoostedGuildTiers.NONE, title: null, IconComponent: "accessible" };
 obj[1] = intl.string(require("getSystemLocale").t.tfVXhP);
 let items = [obj, , , ];
 obj = { tier: BoostedGuildTiers.TIER_1, title: null, IconComponent: null };

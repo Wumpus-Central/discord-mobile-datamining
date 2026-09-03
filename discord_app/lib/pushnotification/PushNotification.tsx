@@ -1,10 +1,10 @@
-// === Module 9670: NativeModules ===
+// === Module 9674: NativeModules ===
 
-// Module 9670 (NativeModules)
+// Module 9674 (NativeModules)
 import set from "set" /* 2 */;
-import RNCPushNotificationIOSDefault from "RNCPushNotificationIOS" /* 9671 */;
-import enforcing from "enforcing" /* 9672 */;
-import openNotificationSettingsDefault from "openNotificationSettings" /* 9673 */;
+import RNCPushNotificationIOSDefault from "RNCPushNotificationIOS" /* 9675 */;
+import enforcing from "enforcing" /* 9676 */;
+import openNotificationSettingsDefault from "openNotificationSettings" /* 9677 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 
 const NativeModules = get_ActivityIndicator.NativeModules;

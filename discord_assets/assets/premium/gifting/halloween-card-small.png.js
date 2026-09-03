@@ -1,6 +1,6 @@
-// === Module 10986: metadata ===
+// === Module 10990: metadata ===
 
-// Module 10986 (metadata)
+// Module 10990 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/premium/gifting/halloween-card-small.png.js");

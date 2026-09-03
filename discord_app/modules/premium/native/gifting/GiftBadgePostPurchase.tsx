@@ -1,18 +1,18 @@
-// === Module 10992: PostPurchaseFooter ===
+// === Module 10996: PostPurchaseFooter ===
 
-// Module 10992 (PostPurchaseFooter)
+// Module 10996 (PostPurchaseFooter)
 import initialize from "initialize" /* 586 */;
 import ThemesDefault from "Themes" /* 709 */;
 import getSystemLocale from "getSystemLocale" /* 1233 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
 import messagesProxyDefault from "messagesProxy" /* 2464 */;
 import Text from "Text" /* 4474 */;
-import GiftingBadgeProgressBarDefault from "GiftingBadgeProgressBar" /* 10995 */;
-import GiftingBadgeLevelUpProgressDefault from "GiftingBadgeLevelUpProgress" /* 10996 */;
+import GiftingBadgeProgressBarDefault from "GiftingBadgeProgressBar" /* 10999 */;
+import GiftingBadgeLevelUpProgressDefault from "GiftingBadgeLevelUpProgress" /* 11000 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "initialize" /* 8573 */;
-import getTierForProgress from "getTierForProgress" /* 10993 */;
+import closure_5 from "initialize" /* 8577 */;
+import getTierForProgress from "getTierForProgress" /* 10997 */;
 import { ContentDismissActionType } from "ContentDismissActionType" /* 1383 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
@@ -28,7 +28,7 @@ function PostPurchaseFooter(onSendGift) {
   }, items);
   let obj = { style: callback6(useSafeAreaInsetsDefault().bottom).footer, children: null };
   const callback1 = React.useCallback(() => {
-    let arr = callback(4723);
+    let arr = callback(4724);
     arr = arr.pop();
     const rootNavigationRef = onSendGift(4333).getRootNavigationRef();
     if (rootNavigationRef != null) {
@@ -37,16 +37,16 @@ function PostPurchaseFooter(onSendGift) {
   }, []);
   obj = { grow: true, variant: "primary", icon: null, text: null, onPress: null };
   obj = { size: "sm", color: ThemesDefault.colors.CONTROL_PRIMARY_TEXT_DEFAULT };
-  obj[2] = callback4(onSendGift(10994).GiftIcon, obj);
+  obj[2] = callback4(onSendGift(10998).GiftIcon, obj);
   const intl = onSendGift(1233).intl;
   obj[3] = intl.string(messagesProxyDefault.g86YiI);
   obj[4] = callback;
-  const items1 = [callback4(onSendGift(4928).Button, obj), ];
+  const items1 = [callback4(onSendGift(4929).Button, obj), ];
   obj1 = { grow: true, variant: "secondary", text: null, onPress: null };
   const intl2 = onSendGift(1233).intl;
   obj1[2] = intl2.string(messagesProxyDefault["sa/cfM"]);
   obj1[3] = callback1;
-  items1[1] = callback4(onSendGift(4928).Button, obj1);
+  items1[1] = callback4(onSendGift(4929).Button, obj1);
   obj[1] = items1;
   return callback5(View, obj);
 }
@@ -80,7 +80,7 @@ function LevelUpScreen(arg0) {
   if (tmp7Result) {
     obj1 = { icon: null, size: 140 };
     obj1[0] = newTier.simple_icon_url;
-    tmp7Result = tmp7(tmp(10743), obj1);
+    tmp7Result = tmp7(tmp(10747), obj1);
   }
   obj[1] = tmp7Result;
   const items = [closure_10(View, obj), ];
@@ -154,7 +154,7 @@ export default function GiftBadgePostPurchase(arg0) {
   let obj = initialize;
   const items = [closure_5];
   const stateFromStores = obj.useStateFromStores(items, () => {
-    badgeById = badgeById.getBadgeById(callback(8570).BadgeId.GIFTING);
+    badgeById = badgeById.getBadgeById(callback(8574).BadgeId.GIFTING);
     let tiers;
     if (badgeById != null) {
       tiers = badgeById.tiers;

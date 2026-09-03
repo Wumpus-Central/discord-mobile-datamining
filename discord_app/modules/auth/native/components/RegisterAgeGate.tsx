@@ -1,13 +1,13 @@
-// === Module 15804: RegisterAgeGate ===
+// === Module 15820: RegisterAgeGate ===
 
-// Module 15804 (RegisterAgeGate)
+// Module 15820 (RegisterAgeGate)
 import ThemesDefault from "Themes" /* 709 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "hasConsented" /* 6062 */;
-import useRegistrationUIStore from "useRegistrationUIStore" /* 15768 */;
-import RegistrationTransitionActionTypes from "RegistrationTransitionActionTypes" /* 15769 */;
+import closure_6 from "hasConsented" /* 6063 */;
+import useRegistrationUIStore from "useRegistrationUIStore" /* 15784 */;
+import RegistrationTransitionActionTypes from "RegistrationTransitionActionTypes" /* 15785 */;
 import { AuthStates } from "ME" /* 673 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;

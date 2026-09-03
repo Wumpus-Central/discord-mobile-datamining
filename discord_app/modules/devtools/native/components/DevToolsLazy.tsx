@@ -1,12 +1,12 @@
-// === Module 14456: NativeModules ===
+// === Module 14472: NativeModules ===
 
-// Module 14456 (NativeModules)
-import enforcingDefault from "enforcing" /* 14457 */;
+// Module 14472 (NativeModules)
+import enforcingDefault from "enforcing" /* 14473 */;
 import closure_2 from "asyncGeneratorStep" /* 5 */;
 import closure_3 from "noop" /* 19 */;
 import { NativeModules } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "init" /* 7475 */;
-import closure_6 from "initialize" /* 7474 */;
+import closure_5 from "init" /* 7476 */;
+import closure_6 from "initialize" /* 7475 */;
 import { jsx } from "jsxProd" /* 21 */;
 import set from "set" /* 1234 */;
 
@@ -98,10 +98,10 @@ export default function DevToolsLazy() {
     }
   });
   const obj2 = stateFromStores(586);
-  const keyCommands = stateFromStores(14452).useKeyCommands(stateFromStores ? items : []);
+  const keyCommands = stateFromStores(14468).useKeyCommands(stateFromStores ? items : []);
   if (stateFromStores) {
     if (stateFromStores1) {
-      return jsx(tmp(15747).default, {});
+      return jsx(tmp(15763).default, {});
     }
   }
   return null;

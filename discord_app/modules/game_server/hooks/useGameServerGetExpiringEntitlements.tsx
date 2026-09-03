@@ -1,6 +1,6 @@
-// === Module 12347: useGameServerGetExpiringEntitlements ===
+// === Module 12359: useGameServerGetExpiringEntitlements ===
 
-// Module 12347 (useGameServerGetExpiringEntitlements)
+// Module 12359 (useGameServerGetExpiringEntitlements)
 import closure_2 from "noop" /* 19 */;
 import closure_3 from "handleGameServerInstanceCreated" /* 4385 */;
 

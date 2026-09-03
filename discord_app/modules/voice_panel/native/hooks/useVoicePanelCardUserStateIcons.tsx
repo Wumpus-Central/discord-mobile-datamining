@@ -1,7 +1,7 @@
-// === Module 16922: useVoicePanelCardUserStateIcons ===
+// === Module 16942: useVoicePanelCardUserStateIcons ===
 
-// Module 16922 (useVoicePanelCardUserStateIcons)
-import dismissPanelDefault from "dismissPanel" /* 12062 */;
+// Module 16942 (useVoicePanelCardUserStateIcons)
+import dismissPanelDefault from "dismissPanel" /* 12068 */;
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "createRTCConnection" /* 4554 */;
 import closure_5 from "updateVoiceState" /* 4497 */;
@@ -34,8 +34,8 @@ export default function useVoicePanelCardUserStateIcons(arg0, id, guildId) {
   if (arg0 === stateFromStores.USER) {
     tmp6 = id;
   }
-  muteDeafenIconState = _require(9831).useMuteDeafenIconState(tmp6, guildId);
-  let tmp4Result = tmp4(9831);
+  muteDeafenIconState = _require(9835).useMuteDeafenIconState(tmp6, guildId);
+  let tmp4Result = tmp4(9835);
   let tmp8;
   if (arg0 === stateFromStores.USER) {
     tmp8 = id;
@@ -44,7 +44,7 @@ export default function useVoicePanelCardUserStateIcons(arg0, id, guildId) {
   tmp4Result = tmp4(644);
   let items = [muteDeafenIconState];
   stateFromStores = tmp4Result.useStateFromStores(items, () => muteDeafenIconState.isConnected());
-  let obj2 = _require(9831);
+  let obj2 = _require(9835);
   let items1 = [videoIconState];
   const items2 = [tmp, id];
   stateFromStores1 = _require(644).useStateFromStores(items1, () => {
@@ -58,11 +58,11 @@ export default function useVoicePanelCardUserStateIcons(arg0, id, guildId) {
     return voicePlatformForChannel;
   }, items2);
   let tmp13;
-  let tmp2Result = tmp2(10122);
+  let tmp2Result = tmp2(10126);
   if (arg0 === stateFromStores.STREAM) {
     tmp13 = id;
   }
-  tmp2Result = tmp2(10087);
+  tmp2Result = tmp2(10091);
   showTileVolumeIndicator = tmp2Result.useConfig({ location: "useVoicePanelCardUserStateIcons" }).showTileVolumeIndicator;
   if (showTileVolumeIndicator) {
     showTileVolumeIndicator = 0 === tmp2Result(tmp13, tmp4(4579).MediaEngineContextTypes.STREAM).effectiveVolume;
@@ -71,7 +71,7 @@ export default function useVoicePanelCardUserStateIcons(arg0, id, guildId) {
     showTileVolumeIndicator = arg0 === tmp5.STREAM;
   }
   const tmp4Result1 = _require(644);
-  isRTCDisconnectedUIVisible = _require(16056).useIsRTCDisconnectedUIVisible(tmp, id);
+  isRTCDisconnectedUIVisible = _require(16072).useIsRTCDisconnectedUIVisible(tmp, id);
   const items3 = [setShowFloatingCTA];
   callback = obj.useCallback(() => {
     setShowFloatingCTA(callback(_null[12]).OverrideFloatingCTA.BAD_CONNECTION);
@@ -81,7 +81,7 @@ export default function useVoicePanelCardUserStateIcons(arg0, id, guildId) {
     obj = {
       key: "user-disconnected-indicator",
       icon() {
-        return callback3(callback(7717).CircleErrorIcon, { size: "xs", color: callback2(709).colors.STATUS_WARNING });
+        return callback3(callback(7720).CircleErrorIcon, { size: "xs", color: callback2(709).colors.STATUS_WARNING });
       },
       content: null
     };

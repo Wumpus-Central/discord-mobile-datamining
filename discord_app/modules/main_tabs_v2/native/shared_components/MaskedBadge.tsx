@@ -1,8 +1,8 @@
-// === Module 7622: MaskedBadge ===
+// === Module 7623: MaskedBadge ===
 
-// Module 7622 (MaskedBadge)
+// Module 7623 (MaskedBadge)
 import ThemesDefault from "Themes" /* 709 */;
-import DEFAULT_BADGE_SIZEDefault from "DEFAULT_BADGE_SIZE" /* 7623 */;
+import DEFAULT_BADGE_SIZEDefault from "DEFAULT_BADGE_SIZE" /* 7624 */;
 import closure_3 from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;

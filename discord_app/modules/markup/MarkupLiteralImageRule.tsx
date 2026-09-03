@@ -1,8 +1,8 @@
-// === Module 12980: parse ===
+// === Module 12992: parse ===
 
-// Module 12980 (parse)
+// Module 12992 (parse)
 import tDefault from "t" /* 4192 */;
-import AST_KEY from "AST_KEY" /* 4949 */;
+import AST_KEY from "AST_KEY" /* 4950 */;
 
 require = arg1;
 const obj = {};

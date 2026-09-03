@@ -1,11 +1,11 @@
-// === Module 12828: ShopThisLookMarketingCoachmarkImage ===
+// === Module 12840: ShopThisLookMarketingCoachmarkImage ===
 
-// Module 12828 (ShopThisLookMarketingCoachmarkImage)
-import BumpingFistsSpotIllustration from "BumpingFistsSpotIllustration" /* 6388 */;
+// Module 12840 (ShopThisLookMarketingCoachmarkImage)
+import BumpingFistsSpotIllustration from "BumpingFistsSpotIllustration" /* 6389 */;
 import closure_2 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { ContentDismissActionType } from "ContentDismissActionType" /* 1383 */;
-import { UserProfileThemeTypes } from "ARBITRARY_LARGE_OFFSET" /* 6009 */;
+import { UserProfileThemeTypes } from "ARBITRARY_LARGE_OFFSET" /* 6010 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 

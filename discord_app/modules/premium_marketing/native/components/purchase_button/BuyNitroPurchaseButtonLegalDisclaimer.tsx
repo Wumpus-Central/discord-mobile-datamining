@@ -1,6 +1,6 @@
-// === Module 13272: BuyNitroPurchaseButtonLegalDisclaimer ===
+// === Module 13284: BuyNitroPurchaseButtonLegalDisclaimer ===
 
-// Module 13272 (BuyNitroPurchaseButtonLegalDisclaimer)
+// Module 13284 (BuyNitroPurchaseButtonLegalDisclaimer)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 709 */;
 import getSystemLocale from "getSystemLocale" /* 1233 */;

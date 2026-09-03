@@ -1,12 +1,12 @@
-// === Module 15046: NavigateForwardButton ===
+// === Module 15061: NavigateForwardButton ===
 
-// Module 15046 (NavigateForwardButton)
+// Module 15061 (NavigateForwardButton)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 709 */;
 import Button from "Button" /* 1296 */;
 import Text from "Text" /* 4474 */;
-import PressableBase from "PressableBase" /* 5076 */;
-import registerAssetDefault from "registerAsset" /* 15047 */;
+import PressableBase from "PressableBase" /* 5077 */;
+import registerAssetDefault from "registerAsset" /* 15062 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 

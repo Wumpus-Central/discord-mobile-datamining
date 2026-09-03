@@ -1,6 +1,6 @@
-// === Module 4746: useNullableMessageAuthor ===
+// === Module 4747: useNullableMessageAuthor ===
 
-// Module 4746 (useNullableMessageAuthor)
+// Module 4747 (useNullableMessageAuthor)
 import _modDef38 from "module_38" /* 38 */;
 import nameFromUserDefault from "nameFromUser" /* 4322 */;
 import closure_3 from "ensureGuildLoaded" /* 1386 */;

@@ -1,6 +1,6 @@
-// === Module 5380: getHighestHoistedRole ===
+// === Module 5381: getHighestHoistedRole ===
 
-// Module 5380 (getHighestHoistedRole)
+// Module 5381 (getHighestHoistedRole)
 import applyOverwritesAll from "applyOverwrites" /* 4125 */;
 import closure_3 from "trackCommunicationDisabled" /* 1991 */;
 import closure_4 from "createGuildRecordFromRust" /* 1908 */;

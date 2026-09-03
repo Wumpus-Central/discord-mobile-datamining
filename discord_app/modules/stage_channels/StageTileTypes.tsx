@@ -1,6 +1,6 @@
-// === Module 10152: StageTileSize ===
+// === Module 10156: StageTileSize ===
 
-// Module 10152 (StageTileSize)
+// Module 10156 (StageTileSize)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/stage_channels/StageTileTypes.tsx");

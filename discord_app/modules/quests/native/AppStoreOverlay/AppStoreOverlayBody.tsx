@@ -1,16 +1,16 @@
-// === Module 11322: APP_STORE_OVERLAY_HEIGHT_RATIO ===
+// === Module 11326: APP_STORE_OVERLAY_HEIGHT_RATIO ===
 
-// Module 11322 (APP_STORE_OVERLAY_HEIGHT_RATIO)
+// Module 11326 (APP_STORE_OVERLAY_HEIGHT_RATIO)
 import ThemesDefault from "Themes" /* 709 */;
 import Text from "Text" /* 4474 */;
-import preloadDefault from "preload" /* 5501 */;
-import AppStoreOverlayStatCardItemDefault from "AppStoreOverlayStatCardItem" /* 11323 */;
-import getMeasurableUrlDefault from "getMeasurableUrl" /* 11326 */;
-import AppStoreOverlayAboutSectionDefault from "AppStoreOverlayAboutSection" /* 11331 */;
+import preloadDefault from "preload" /* 5502 */;
+import AppStoreOverlayStatCardItemDefault from "AppStoreOverlayStatCardItem" /* 11327 */;
+import getMeasurableUrlDefault from "getMeasurableUrl" /* 11330 */;
+import AppStoreOverlayAboutSectionDefault from "AppStoreOverlayAboutSection" /* 11335 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { VerticalGradient } from "ME" /* 673 */;
-import { ACTION_SHEET_MINIMUM_BOTTOM_PADDING as closure_6 } from "ACTION_SHEET_START_HEIGHT_RATIO" /* 5631 */;
+import { ACTION_SHEET_MINIMUM_BOTTOM_PADDING as closure_6 } from "ACTION_SHEET_START_HEIGHT_RATIO" /* 5632 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -154,13 +154,13 @@ export const AppStoreOverlayFooter = function AppStoreOverlayFooter(arg0) {
   obj = { style: tmp.footer, onLayout, children: null };
   const memo1 = React.useMemo(() => ({ paddingBottom: Math.max(bottom, closure_1_6) }), items1);
   obj = { pointerEvents: "none", style: tmp.footerGradient, colors: memo, start: VerticalGradient.START, end: VerticalGradient.END };
-  const items2 = [callback(token(4940), obj), ];
+  const items2 = [callback(token(4941), obj), ];
   obj1 = { style: memo1, children: null };
   const obj2 = { size: "lg", text: null, onPress: null };
   const intl = bottom(1233).intl;
   obj2[1] = intl.string(bottom(1233).t.lwQdjB);
   obj2[2] = onInstallPress;
-  obj1[1] = callback(bottom(4928).Button, obj2);
+  obj1[1] = callback(bottom(4929).Button, obj2);
   items2[1] = callback(View, obj1);
   obj[2] = items2;
   return callback2(View, obj);

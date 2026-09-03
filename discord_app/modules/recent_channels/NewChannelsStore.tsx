@@ -1,11 +1,11 @@
-// === Module 7286: guildHasCommunity ===
+// === Module 7287: guildHasCommunity ===
 
-// Module 7286 (guildHasCommunity)
+// Module 7287 (guildHasCommunity)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import initializeDefault from "initialize" /* 586 */;
 import setDefault from "set" /* 684 */;
 import dispatcherDefault from "dispatcher" /* 706 */;
-import SidebarType from "SidebarType" /* 6137 */;
+import SidebarType from "SidebarType" /* 6138 */;
 import closure_3 from "handleConnectionClosedOrResumed" /* 1339 */;
 import closure_4 from "fetchFingerprint" /* 1215 */;
 import closure_5 from "ensureGuildLoaded" /* 1386 */;
@@ -14,7 +14,7 @@ import { GUILD_SELECTABLE_CHANNELS_KEY as closure_7 } from "comparator" /* 1981 
 import closure_8 from "trackCommunicationDisabled" /* 1991 */;
 import closure_9 from "createGuildRecordFromRust" /* 1908 */;
 import closure_10 from "generateOldThreadCutoff" /* 4493 */;
-import closure_11 from "updateUserGuildSettingsInternal" /* 4701 */;
+import closure_11 from "updateUserGuildSettingsInternal" /* 4702 */;
 import ME from "ME" /* 673 */;
 import set from "set" /* 2 */;
 

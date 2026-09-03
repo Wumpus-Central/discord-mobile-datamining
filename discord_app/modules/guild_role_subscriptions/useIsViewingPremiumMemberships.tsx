@@ -1,6 +1,6 @@
-// === Module 12538: useIsViewingPremiumMemberships ===
+// === Module 12550: useIsViewingPremiumMemberships ===
 
-// Module 12538 (useIsViewingPremiumMemberships)
+// Module 12550 (useIsViewingPremiumMemberships)
 import set from "set" /* 2 */;
 import ME from "ME" /* 673 */;
 import set2 from "set" /* 1393 */;

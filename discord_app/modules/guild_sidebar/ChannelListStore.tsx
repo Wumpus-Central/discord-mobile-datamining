@@ -1,26 +1,26 @@
-// === Module 7279: handleReset ===
+// === Module 7280: handleReset ===
 
-// Module 7279 (handleReset)
+// Module 7280 (handleReset)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 586 */;
 import dispatcherDefault from "dispatcher" /* 706 */;
 import getEmbeddedActivityLocationChannelId from "getEmbeddedActivityLocationChannelId" /* 4110 */;
-import computeSubtitleDefault from "computeSubtitle" /* 7282 */;
+import computeSubtitleDefault from "computeSubtitle" /* 7283 */;
 import closure_3 from "participantFromServer" /* 1385 */;
 import closure_4 from "isSubscriptionGated" /* 1982 */;
-import closure_5 from "scheduledEventSort" /* 7280 */;
-import closure_6 from "rebuild" /* 5456 */;
+import closure_5 from "scheduledEventSort" /* 7281 */;
+import closure_6 from "rebuild" /* 5457 */;
 import closure_7 from "storeThread" /* 4122 */;
 import closure_8 from "handleConnectionClosedOrResumed" /* 1339 */;
 import closure_9 from "fetchFingerprint" /* 1215 */;
-import closure_10 from "incrementVersion" /* 5493 */;
+import closure_10 from "incrementVersion" /* 5494 */;
 import closure_11 from "ensureGuildLoaded" /* 1386 */;
-import closure_12 from "handleConnectionOpen" /* 7281 */;
+import closure_12 from "handleConnectionOpen" /* 7282 */;
 import closure_13 from "getUncachedChannelPermissions" /* 4120 */;
 import closure_14 from "generateOldThreadCutoff" /* 4493 */;
 import closure_15 from "handleConnectionOpen" /* 1980 */;
-import closure_16 from "updateUserGuildSettingsInternal" /* 4701 */;
+import closure_16 from "updateUserGuildSettingsInternal" /* 4702 */;
 import { UserSettingsTypes } from "MAX_FAVORITES" /* 682 */;
 
 require = arg1;

@@ -1,6 +1,6 @@
-// === Module 9280: TabItemCount ===
+// === Module 9284: TabItemCount ===
 
-// Module 9280 (TabItemCount)
+// Module 9284 (TabItemCount)
 import ThemesDefault from "Themes" /* 709 */;
 import closure_3 from "noop" /* 19 */;
 import jsxProd from "jsxProd" /* 21 */;

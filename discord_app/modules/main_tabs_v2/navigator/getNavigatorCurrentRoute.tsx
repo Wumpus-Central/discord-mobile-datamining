@@ -1,6 +1,6 @@
-// === Module 9066: getNavigatorCurrentRoute ===
+// === Module 9070: getNavigatorCurrentRoute ===
 
-// Module 9066 (getNavigatorCurrentRoute)
+// Module 9070 (getNavigatorCurrentRoute)
 import set from "set" /* 2 */;
 import getRootNavigationRef from "getRootNavigationRef" /* 4333 */;
 

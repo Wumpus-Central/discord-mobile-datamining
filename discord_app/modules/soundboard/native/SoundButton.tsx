@@ -1,9 +1,9 @@
-// === Module 16885: SoundButtonEmoji ===
+// === Module 16905: SoundButtonEmoji ===
 
-// Module 16885 (SoundButtonEmoji)
+// Module 16905 (SoundButtonEmoji)
 import ThemesDefault from "Themes" /* 709 */;
-import EmojiDefault from "Emoji" /* 5593 */;
-import getSoundboardEmojiUrlDefault from "getSoundboardEmojiUrl" /* 11731 */;
+import EmojiDefault from "Emoji" /* 5594 */;
+import getSoundboardEmojiUrlDefault from "getSoundboardEmojiUrl" /* 11736 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
@@ -58,7 +58,7 @@ function SoundButtonEmoji(arg0) {
     obj[0] = items2;
     return obj;
   };
-  obj = { animationConfig: obj, withDelay: obj(4217).withDelay, withSpring: obj(4927).withSpring, interpolate: obj(4217).interpolate, SPRING_CONFIG: closure_8 };
+  obj = { animationConfig: obj, withDelay: obj(4217).withDelay, withSpring: obj(4928).withSpring, interpolate: obj(4217).interpolate, SPRING_CONFIG: closure_8 };
   fn.__closure = obj;
   fn.__workletHash = 13932429225740;
   fn.__initData = closure_11;
@@ -106,7 +106,7 @@ function SoundButtonEmoji(arg0) {
     obj[0] = items2;
     return obj;
   };
-  obj1 = { animationConfig: obj, withDelay: obj(4217).withDelay, withSpring: obj(4927).withSpring, interpolate: obj(4217).interpolate, SPRING_CONFIG: closure_8 };
+  obj1 = { animationConfig: obj, withDelay: obj(4217).withDelay, withSpring: obj(4928).withSpring, interpolate: obj(4217).interpolate, SPRING_CONFIG: closure_8 };
   fn2.__closure = obj1;
   fn2.__workletHash = 13932429225740;
   fn2.__initData = closure_11;

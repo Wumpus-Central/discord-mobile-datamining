@@ -1,10 +1,10 @@
-// === Module 12981: UserProfileApplicationWidgetTopContainedLayout ===
+// === Module 12993: UserProfileApplicationWidgetTopContainedLayout ===
 
-// Module 12981 (UserProfileApplicationWidgetTopContainedLayout)
+// Module 12993 (UserProfileApplicationWidgetTopContainedLayout)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 709 */;
-import resolvedValuesFromUserApplicationIdentityProfile from "resolvedValuesFromUserApplicationIdentityProfile" /* 12890 */;
-import formatDurationNarrow from "formatDurationNarrow" /* 12977 */;
+import resolvedValuesFromUserApplicationIdentityProfile from "resolvedValuesFromUserApplicationIdentityProfile" /* 12902 */;
+import formatDurationNarrow from "formatDurationNarrow" /* 12989 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
@@ -63,7 +63,7 @@ export default function UserProfileApplicationWidgetTopContainedLayout(header) {
   } else {
     const obj4 = { style: null };
     obj4[0] = tmp.imageSkeleton;
-    tmp12Result = tmp12(tmp2(12978).ImageSkeleton, obj4);
+    tmp12Result = tmp12(tmp2(12990).ImageSkeleton, obj4);
   }
   const obj5 = { children: null };
   items3[1] = tmp12Result;

@@ -1,9 +1,9 @@
-// === Module 13569: handleConnectionOpen ===
+// === Module 13584: handleConnectionOpen ===
 
-// Module 13569 (handleConnectionOpen)
+// Module 13584 (handleConnectionOpen)
 import initializeDefault from "initialize" /* 586 */;
 import dispatcher from "dispatcher" /* 706 */;
-import commonTriggerPointConfiguration from "commonTriggerPointConfiguration" /* 13570 */;
+import commonTriggerPointConfiguration from "commonTriggerPointConfiguration" /* 13585 */;
 import closure_3 from "getHash" /* 4391 */;
 import closure_4 from "initialize" /* 1209 */;
 import importDefaultResult from "dispatcher" /* 706 */;

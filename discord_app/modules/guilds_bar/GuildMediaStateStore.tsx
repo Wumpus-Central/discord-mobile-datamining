@@ -1,6 +1,6 @@
-// === Module 13583: markAllStale ===
+// === Module 13598: markAllStale ===
 
-// Module 13583 (markAllStale)
+// Module 13598 (markAllStale)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import initializeDefault from "initialize" /* 586 */;
 import shallowEqualDefault from "shallowEqual" /* 640 */;
@@ -8,7 +8,7 @@ import set from "set" /* 689 */;
 import dispatcherDefault from "dispatcher" /* 706 */;
 import closure_3 from "participantFromServer" /* 1385 */;
 import closure_4 from "initialize" /* 1209 */;
-import closure_5 from "scheduledEventSort" /* 7280 */;
+import closure_5 from "scheduledEventSort" /* 7281 */;
 import closure_6 from "handleStageInstanceCreateOrUpdate" /* 1391 */;
 import { isVoiceChannel } from "createChannelRecord" /* 1390 */;
 import closure_8 from "reset" /* 4500 */;
@@ -18,7 +18,7 @@ import closure_11 from "createGuildRecordFromRust" /* 1908 */;
 import closure_12 from "getUncachedChannelPermissions" /* 4120 */;
 import closure_13 from "markAllUserIdListsStale" /* 4130 */;
 import closure_14 from "handleConnectionOpen" /* 1980 */;
-import closure_15 from "updateUserGuildSettingsInternal" /* 4701 */;
+import closure_15 from "updateUserGuildSettingsInternal" /* 4702 */;
 import closure_16 from "updateVoiceState" /* 4497 */;
 import ME from "ME" /* 673 */;
 
@@ -120,7 +120,7 @@ function computeGuildMediaState(closure_0) {
       }
       continue;
     }
-    obj = { skipMutedVcs: callback(13584).getIsDontBadgeMutedVcsEnabled("GuildMediaStateStore"), currentUserId: id.getId(), selectedVoiceChannelId: voiceChannelId, selectedVoiceGuildId: null, selectedVoiceChannelHasVideo: null, isSelectedVoiceChannelStage: null, blockedOrIgnoredUserIds: null, streamChannelIdsByGuild: null };
+    obj = { skipMutedVcs: callback(13599).getIsDontBadgeMutedVcsEnabled("GuildMediaStateStore"), currentUserId: id.getId(), selectedVoiceChannelId: voiceChannelId, selectedVoiceGuildId: null, selectedVoiceChannelHasVideo: null, isSelectedVoiceChannelStage: null, blockedOrIgnoredUserIds: null, streamChannelIdsByGuild: null };
     let guild_id;
     if (channel != null) {
       guild_id = channel.guild_id;
@@ -156,7 +156,7 @@ function computeGuildMediaState(closure_0) {
     obj[1] = tmp2.selectedVoiceChannelHasVideo;
     obj[2] = null != activeStreamForUser.getActiveStreamForUser(tmp2.currentUserId, closure_0);
     obj[3] = tmp2.isSelectedVoiceChannelStage;
-    const guildActiveEvent = _require(9644).getGuildActiveEvent(closure_0);
+    const guildActiveEvent = _require(9648).getGuildActiveEvent(closure_0);
     let channel_id;
     if (guildActiveEvent != null) {
       channel_id = guildActiveEvent.channel_id;
@@ -245,7 +245,7 @@ function computeGuildMediaState(closure_0) {
           const basicChannel = store.getBasicChannel(arg0);
           let tmp2 = null != basicChannel;
           if (tmp2) {
-            tmp2 = lib(5368)(basicChannel, closure_12);
+            tmp2 = lib(5369)(basicChannel, closure_12);
           }
           return tmp2;
         });
@@ -256,7 +256,7 @@ function computeGuildMediaState(closure_0) {
           _location = first.location;
         }
         let embeddedActivityLocationChannelId = obj5.getEmbeddedActivityLocationChannelId(_location);
-        let tmp34Result = tmp34(8152);
+        let tmp34Result = tmp34(8156);
         let tmp38 = store;
         if (tmp34Result.isActivitiesInTextEnabled(store.getChannel(embeddedActivityLocationChannelId))) {
           let someResult2 = found.length > 0;
@@ -275,7 +275,7 @@ function computeGuildMediaState(closure_0) {
         obj[1] = flag;
         obj[2] = someResult;
         obj[3] = someResult1;
-        tmp34Result = tmp34(9644);
+        tmp34Result = tmp34(9648);
         obj[4] = null != tmp34Result.getGuildActiveEvent(arg0);
         obj[5] = someResult2;
         return obj;

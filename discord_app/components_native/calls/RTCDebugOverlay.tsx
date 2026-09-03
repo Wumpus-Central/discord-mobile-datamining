@@ -1,18 +1,18 @@
-// === Module 10142: Text ===
+// === Module 10146: Text ===
 
-// Module 10142 (Text)
+// Module 10146 (Text)
 import initialize from "initialize" /* 586 */;
 import ThemesDefault from "Themes" /* 709 */;
 import getSystemLocale from "getSystemLocale" /* 1233 */;
 import Button from "Button" /* 1296 */;
-import Button2 from "Button" /* 4928 */;
-import SafeAreaPaddingView from "SafeAreaPaddingView" /* 5561 */;
+import Button2 from "Button" /* 4929 */;
+import SafeAreaPaddingView from "SafeAreaPaddingView" /* 5562 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_7 from "ensureGuildLoaded" /* 1386 */;
 import closure_8 from "createGuildRecordFromRust" /* 1908 */;
 import closure_9 from "createRTCConnection" /* 4554 */;
-import closure_10 from "updateStats" /* 10143 */;
+import closure_10 from "updateStats" /* 10147 */;
 import closure_11 from "initialize" /* 4568 */;
 import closure_12 from "mergeGuildAvatar" /* 1921 */;
 import { MediaEngineContextTypes } from "DesktopSources" /* 4542 */;
@@ -210,7 +210,7 @@ export default function RTCDebugOverlay(arg0) {
   const tmp = callback3();
   const effect = importAllResult.useEffect(() => {
     callback(table[17]).open();
-    return () => callback(706).wait(callback2(10144).close);
+    return () => callback(706).wait(callback2(10148).close);
   }, []);
   let obj = { top: true, left: true, right: true, bottom: true, style: items, children: null };
   items = [tmp.container, style];

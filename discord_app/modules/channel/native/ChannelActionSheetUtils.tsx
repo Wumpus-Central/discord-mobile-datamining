@@ -1,10 +1,10 @@
-// === Module 10913: copyGuildChannelOrThreadLink ===
+// === Module 10917: copyGuildChannelOrThreadLink ===
 
-// Module 10913 (copyGuildChannelOrThreadLink)
+// Module 10917 (copyGuildChannelOrThreadLink)
 import set from "set" /* 2 */;
 import presentAddedFriendToast from "presentAddedFriendToast" /* 4193 */;
 import allowChannelAccess from "allowChannelAccess" /* 4666 */;
-import _copy from "_copy" /* 5989 */;
+import _copy from "_copy" /* 5990 */;
 
 const result = set.fileFinishedImporting("modules/channel/native/ChannelActionSheetUtils.tsx");
 

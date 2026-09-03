@@ -1,11 +1,11 @@
-// === Module 14272: checkForNewerBuild ===
+// === Module 14288: checkForNewerBuild ===
 
-// Module 14272 (checkForNewerBuild)
+// Module 14288 (checkForNewerBuild)
 import set from "set" /* 2 */;
 import timestampDefault from "timestamp" /* 3 */;
 import initializeDefault from "initialize" /* 586 */;
 import dispatcherDefault from "dispatcher" /* 706 */;
-import _checkForNewerBuild from "_checkForNewerBuild" /* 13868 */;
+import _checkForNewerBuild from "_checkForNewerBuild" /* 13884 */;
 import UPDATE_CHECK_INTERVAL from "UPDATE_CHECK_INTERVAL" /* 4459 */;
 
 ({ UPDATE_CONFIG: c3, UPDATE_CHECK_INTERVAL: c4 } = UPDATE_CHECK_INTERVAL);

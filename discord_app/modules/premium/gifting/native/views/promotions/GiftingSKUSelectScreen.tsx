@@ -1,6 +1,6 @@
-// === Module 11007: GiftingSKUSelectScreen ===
+// === Module 11011: GiftingSKUSelectScreen ===
 
-// Module 11007 (GiftingSKUSelectScreen)
+// Module 11011 (GiftingSKUSelectScreen)
 import ThemesDefault from "Themes" /* 709 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;

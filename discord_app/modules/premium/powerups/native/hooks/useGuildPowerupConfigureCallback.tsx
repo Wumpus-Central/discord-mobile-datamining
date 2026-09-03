@@ -1,6 +1,6 @@
-// === Module 12332: useGuildPowerupConfigureCallback ===
+// === Module 12344: useGuildPowerupConfigureCallback ===
 
-// Module 12332 (useGuildPowerupConfigureCallback)
+// Module 12344 (useGuildPowerupConfigureCallback)
 import closure_3 from "noop" /* 19 */;
 import ME from "ME" /* 673 */;
 

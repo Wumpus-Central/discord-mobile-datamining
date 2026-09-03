@@ -1,12 +1,12 @@
-// === Module 9661: useGlobalStatusIndicatorState ===
+// === Module 9665: useGlobalStatusIndicatorState ===
 
-// Module 9661 (useGlobalStatusIndicatorState)
-import useIsInvitedToSpeakDefault from "useIsInvitedToSpeak" /* 9660 */;
-import useVoiceStateForRemoteSessionDefault from "useVoiceStateForRemoteSession" /* 9663 */;
-import useMyCurrentStageChannelDefault from "useMyCurrentStageChannel" /* 9665 */;
+// Module 9665 (useGlobalStatusIndicatorState)
+import useIsInvitedToSpeakDefault from "useIsInvitedToSpeak" /* 9664 */;
+import useVoiceStateForRemoteSessionDefault from "useVoiceStateForRemoteSession" /* 9667 */;
+import useMyCurrentStageChannelDefault from "useMyCurrentStageChannel" /* 9669 */;
 import closure_3 from "ensureGuildLoaded" /* 1386 */;
 import closure_4 from "createRTCConnection" /* 4554 */;
-import { RTC_PANEL_HEIGHT } from "RTC_PANEL_HEIGHT" /* 9662 */;
+import { RTC_PANEL_HEIGHT } from "RTC_PANEL_HEIGHT" /* 9666 */;
 import { EMPTY_STRING_SNOWFLAKE_ID } from "ME" /* 673 */;
 
 const require = arg1;
@@ -18,7 +18,7 @@ export const useGlobalStatusIndicatorState = function useGlobalStatusIndicatorSt
   }
   let stateFromStores;
   importDefault = undefined;
-  let obj = stateFromStores(9552);
+  let obj = stateFromStores(9556);
   let hasPipParticipant = obj.useHasPipParticipant({ isActivityViewFocused: false });
   const tmp5 = useVoiceStateForRemoteSessionDefault();
   const items = [closure_4];
@@ -41,18 +41,18 @@ export const useGlobalStatusIndicatorState = function useGlobalStatusIndicatorSt
     return isGuildStageVoiceResult;
   }, items2);
   const obj3 = stateFromStores(586);
-  let num = stateFromStores(9658).useGetStageRTCPanelHeight(stateFromStores);
+  let num = stateFromStores(9662).useGetStageRTCPanelHeight(stateFromStores);
   stateFromStores(4332);
   let tmp12 = null != tmp5;
   if (tmp12) {
-    let tmpResult = tmp(4727);
+    let tmpResult = tmp(4728);
     let channelId = tmp5.channelId;
     if (channelId == null) {
       channelId = EMPTY_STRING_SNOWFLAKE_ID;
     }
     tmp12 = tmpResult.getVoiceChannelKey(channelId) !== tmp11;
   }
-  tmpResult = tmp(9664);
+  tmpResult = tmp(9668);
   let isVoicePanelShowing = tmpResult.useIsVoicePanelShowing();
   const tmp14 = null != useMyCurrentStageChannelDefault();
   if (!isVoicePanelShowing) {

@@ -1,6 +1,6 @@
-// === Module 13873: useIsServerThemeAvailableForGuild ===
+// === Module 13889: useIsServerThemeAvailableForGuild ===
 
-// Module 13873 (useIsServerThemeAvailableForGuild)
+// Module 13889 (useIsServerThemeAvailableForGuild)
 import set from "set" /* 2 */;
 import resolveSavedActiveGuildTheme from "resolveSavedActiveGuildTheme" /* 4359 */;
 import experiment from "experiment" /* 4407 */;

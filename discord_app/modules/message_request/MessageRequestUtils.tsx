@@ -1,8 +1,8 @@
-// === Module 13799: filterOutMessageRequestsAndSpam ===
+// === Module 13815: filterOutMessageRequestsAndSpam ===
 
-// Module 13799 (filterOutMessageRequestsAndSpam)
-import closure_2 from "processChannel" /* 6074 */;
-import closure_3 from "processChannel" /* 6075 */;
+// Module 13815 (filterOutMessageRequestsAndSpam)
+import closure_2 from "processChannel" /* 6075 */;
+import closure_3 from "processChannel" /* 6076 */;
 
 const result = require("set").fileFinishedImporting("modules/message_request/MessageRequestUtils.tsx");
 

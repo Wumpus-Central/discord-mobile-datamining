@@ -1,7 +1,7 @@
-// === Module 17273: onPostConnectionOpen ===
+// === Module 17293: onPostConnectionOpen ===
 
-// Module 17273 (onPostConnectionOpen)
-import initializeDefault from "initialize" /* 5494 */;
+// Module 17293 (onPostConnectionOpen)
+import initializeDefault from "initialize" /* 5495 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "mergeGuildAvatar" /* 1921 */;
 import { AnalyticEvents } from "ME" /* 673 */;

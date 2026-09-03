@@ -1,13 +1,13 @@
-// === Module 6086: useSKUPrice ===
+// === Module 6087: useSKUPrice ===
 
-// Module 6086 (useSKUPrice)
+// Module 6087 (useSKUPrice)
 import applyDefault from "apply" /* 12 */;
-import StorefrontPromotionRewardType from "StorefrontPromotionRewardType" /* 6088 */;
-import formatSingleCurrencyPrice from "formatSingleCurrencyPrice" /* 6089 */;
+import StorefrontPromotionRewardType from "StorefrontPromotionRewardType" /* 6089 */;
+import formatSingleCurrencyPrice from "formatSingleCurrencyPrice" /* 6090 */;
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "_getSystemLocale" /* 1995 */;
 import closure_5 from "mergeGuildAvatar" /* 1921 */;
-import closure_6 from "resetStoreState" /* 6087 */;
+import closure_6 from "resetStoreState" /* 6088 */;
 import ME from "ME" /* 673 */;
 import { PremiumTypes } from "GuildFeatures" /* 1923 */;
 
@@ -81,7 +81,9 @@ function useSKUPrice(sku) {
         return obj;
       }
     }
-    obj = { userPrice: "r", pricesForPurchaseType: "ip", purchaseType: SELF_PURCHASE, storeHasPrice: null != stateFromStores1 };
+    obj = { userPrice: "r", pricesForPurchaseType: "channel", purchaseType: 0.000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001141953147857043, storeHasPrice: -0.000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000013458295484790203 };
+    obj[2] = SELF_PURCHASE;
+    obj[3] = null != stateFromStores1;
     return obj;
   }, items1);
   userPrice = memo.userPrice;
@@ -375,7 +377,9 @@ export const useSKUOrbPrice = function useSKUOrbPrice(sku) {
         return obj;
       }
     }
-    obj = { userPrice: "r", pricesForPurchaseType: "ip", purchaseType: SELF_PURCHASE, storeHasPrice: null != stateFromStores1 };
+    obj = { userPrice: "r", pricesForPurchaseType: "channel", purchaseType: 0.000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001141953147857043, storeHasPrice: -0.000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000013458295484790203 };
+    obj[2] = SELF_PURCHASE;
+    obj[3] = null != stateFromStores1;
     return obj;
   }, items1);
   userPrice = memo.userPrice;

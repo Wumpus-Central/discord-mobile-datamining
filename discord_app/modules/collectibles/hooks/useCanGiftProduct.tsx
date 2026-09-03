@@ -1,11 +1,11 @@
-// === Module 12795: useCanGiftProduct ===
+// === Module 12807: useCanGiftProduct ===
 
-// Module 12795 (useCanGiftProduct)
+// Module 12807 (useCanGiftProduct)
 import set from "set" /* 2 */;
 import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4139 */;
-import getProductOrbPrice from "getProductOrbPrice" /* 7307 */;
-import getItemRecordsFromPurchases from "getItemRecordsFromPurchases" /* 7308 */;
-import useCurrentUser from "useCurrentUser" /* 8906 */;
+import getProductOrbPrice from "getProductOrbPrice" /* 7308 */;
+import getItemRecordsFromPurchases from "getItemRecordsFromPurchases" /* 7309 */;
+import useCurrentUser from "useCurrentUser" /* 8910 */;
 
 let result = set.fileFinishedImporting("modules/collectibles/hooks/useCanGiftProduct.tsx");
 
@@ -33,7 +33,7 @@ export const useCanGiftProduct = function useCanGiftProduct(product) {
     result = product.type === tmp(1949).CollectiblesItemType.EXTERNAL_SKU;
   }
   if (!result) {
-    let tmpResult = tmp(7308);
+    let tmpResult = tmp(7309);
     let currency;
     if (result3 != null) {
       currency = result3.currency;

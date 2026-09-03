@@ -1,6 +1,6 @@
-// === Module 13947: isActivityParticipantCurrentUserCurrentSession ===
+// === Module 13963: isActivityParticipantCurrentUserCurrentSession ===
 
-// Module 13947 (isActivityParticipantCurrentUserCurrentSession)
+// Module 13963 (isActivityParticipantCurrentUserCurrentSession)
 import closure_0 from "fetchFingerprint" /* 1215 */;
 
 const result = require("set").fileFinishedImporting("modules/activities/isActivityParticipantCurrentUserCurrentSession.tsx");

@@ -1,6 +1,6 @@
-// === Module 13546: getClientCapabilities ===
+// === Module 13561: getClientCapabilities ===
 
-// Module 13546 (getClientCapabilities)
+// Module 13561 (getClientCapabilities)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/gateway/GatewayCapabilities.tsx");

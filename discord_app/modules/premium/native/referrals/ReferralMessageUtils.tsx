@@ -1,8 +1,8 @@
-// === Module 11610: canOpenPremiumPlanDirectlyForReferralTrial ===
+// === Module 11615: canOpenPremiumPlanDirectlyForReferralTrial ===
 
-// Module 11610 (canOpenPremiumPlanDirectlyForReferralTrial)
+// Module 11615 (canOpenPremiumPlanDirectlyForReferralTrial)
 import closure_0 from "reset" /* 4145 */;
-import closure_1 from "emitChanges" /* 7204 */;
+import closure_1 from "emitChanges" /* 7205 */;
 
 let result = require("set").fileFinishedImporting("modules/premium/native/referrals/ReferralMessageUtils.tsx");
 

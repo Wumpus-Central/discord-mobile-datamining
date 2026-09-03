@@ -1,14 +1,14 @@
-// === Module 16120: GuildsBarGuildJoinRequestBadge ===
+// === Module 16136: GuildsBarGuildJoinRequestBadge ===
 
-// Module 16120 (GuildsBarGuildJoinRequestBadge)
+// Module 16136 (GuildsBarGuildJoinRequestBadge)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 709 */;
 import MAX_RESULTS_PER_PAGE from "MAX_RESULTS_PER_PAGE" /* 4302 */;
-import preloadDefault from "preload" /* 5501 */;
-import registerAssetDefault from "registerAsset" /* 12079 */;
-import registerAssetDefault2 from "registerAsset" /* 16121 */;
-import registerAssetDefault3 from "registerAsset" /* 16122 */;
-import registerAssetDefault4 from "registerAsset" /* 16123 */;
+import preloadDefault from "preload" /* 5502 */;
+import registerAssetDefault from "registerAsset" /* 12085 */;
+import registerAssetDefault2 from "registerAsset" /* 16137 */;
+import registerAssetDefault3 from "registerAsset" /* 16138 */;
+import registerAssetDefault4 from "registerAsset" /* 16139 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;

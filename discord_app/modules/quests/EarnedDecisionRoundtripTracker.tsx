@@ -1,10 +1,10 @@
-// === Module 11158: trackRoundtrip ===
+// === Module 11162: trackRoundtrip ===
 
-// Module 11158 (trackRoundtrip)
+// Module 11162 (trackRoundtrip)
 import expandEventPropertiesDefault from "expandEventProperties" /* 695 */;
-import receiveNetworkInfoformation from "receiveNetworkInfoformation" /* 7214 */;
-import isForegrounded from "isForegrounded" /* 7217 */;
-import getDeviceMetadataDefault from "getDeviceMetadata" /* 7431 */;
+import receiveNetworkInfoformation from "receiveNetworkInfoformation" /* 7215 */;
+import isForegrounded from "isForegrounded" /* 7218 */;
+import getDeviceMetadataDefault from "getDeviceMetadata" /* 7432 */;
 import closure_3 from "handleConnectionInfoChange" /* 4574 */;
 import { AnalyticEvents } from "ME" /* 673 */;
 import set from "set" /* 2 */;

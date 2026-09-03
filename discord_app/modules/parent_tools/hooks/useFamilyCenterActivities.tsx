@@ -1,9 +1,9 @@
-// === Module 14723: useActionsForDisplayType ===
+// === Module 14738: useActionsForDisplayType ===
 
-// Module 14723 (useActionsForDisplayType)
+// Module 14738 (useActionsForDisplayType)
 import defaultAreStatesEqual from "defaultAreStatesEqual" /* 644 */;
-import closure_2 from "freshTeenActivityWithMap" /* 7291 */;
-import { TeenActionDisplayType } from "items" /* 7292 */;
+import closure_2 from "freshTeenActivityWithMap" /* 7292 */;
+import { TeenActionDisplayType } from "items" /* 7293 */;
 
 require = arg1;
 let result = require("set").fileFinishedImporting("modules/parent_tools/hooks/useFamilyCenterActivities.tsx");
@@ -33,7 +33,7 @@ export const useFormattedTotalForDisplayType = function useFormattedTotalForDisp
     num = 0;
   }
   if (displayType === TeenActionDisplayType.TOTAL_VOICE_MINUTES) {
-    let tmpResult = tmp(7347);
+    let tmpResult = tmp(7348);
     return tmpResult.formatTotalTime(num);
   } else if (displayType === tmp3.PURCHASES) {
     const totalSpendAmount = obj2.getTotalSpendAmount();
@@ -42,7 +42,7 @@ export const useFormattedTotalForDisplayType = function useFormattedTotalForDisp
     if (null != totalSpendAmount) {
       result = num;
       if (null != totalSpendCurrency) {
-        tmpResult = tmp(6089);
+        tmpResult = tmp(6090);
         result = tmpResult.shortenAndFormatPrice(totalSpendAmount, totalSpendCurrency);
       }
     }
@@ -51,8 +51,8 @@ export const useFormattedTotalForDisplayType = function useFormattedTotalForDisp
     const totalGiftValue = obj2.getTotalGiftValue();
     let result1 = num;
     if (null != totalGiftValue) {
-      result1 = tmp(6089).shortenAndFormatPrice(totalGiftValue.amount, totalGiftValue.currency);
-      const tmpResult1 = tmp(6089);
+      result1 = tmp(6090).shortenAndFormatPrice(totalGiftValue.amount, totalGiftValue.currency);
+      const tmpResult1 = tmp(6090);
     }
     return result1;
   } else {

@@ -1,6 +1,6 @@
-// === Module 9879: SecureFramesCopyIcon ===
+// === Module 9883: SecureFramesCopyIcon ===
 
-// Module 9879 (SecureFramesCopyIcon)
+// Module 9883 (SecureFramesCopyIcon)
 import closure_2 from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 

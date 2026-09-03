@@ -1,17 +1,17 @@
-// === Module 9028: GuildProfileBackground ===
+// === Module 9032: GuildProfileBackground ===
 
-// Module 9028 (GuildProfileBackground)
+// Module 9032 (GuildProfileBackground)
 import ThemesDefault from "Themes" /* 709 */;
 import isThemeLight from "isThemeLight" /* 1363 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1492 */;
 import map from "map" /* 4197 */;
 import ManaContext from "ManaContext" /* 4204 */;
 import useThemeDefault from "useTheme" /* 4413 */;
-import LinearGradientDefault from "LinearGradient" /* 4940 */;
-import useProfilePrimaryColor from "useProfilePrimaryColor" /* 9030 */;
-import stylesDefault from "styles" /* 9031 */;
-import ClickableGameIconDefault from "ClickableGameIcon" /* 9033 */;
-import TraitEmojiDefault from "TraitEmoji" /* 9040 */;
+import LinearGradientDefault from "LinearGradient" /* 4941 */;
+import useProfilePrimaryColor from "useProfilePrimaryColor" /* 9034 */;
+import stylesDefault from "styles" /* 9035 */;
+import ClickableGameIconDefault from "ClickableGameIcon" /* 9037 */;
+import TraitEmojiDefault from "TraitEmoji" /* 9044 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_6 from "createGuildRecordFromRust" /* 1908 */;
@@ -37,7 +37,7 @@ function GuildProfileBackground(guildProfile) {
     if (null != guildProfile.customBanner) {
       obj = { id: null, splash: null, size: null };
       ({ id: obj3[0], customBanner: obj3[1] } = guildProfile);
-      obj[2] = tmp3(9029)() * useWindowDimensionsDefault().width;
+      obj[2] = tmp3(9033)() * useWindowDimensionsDefault().width;
       obj = { style: null, source: null };
       obj[0] = tmp4.imageBanner;
       obj[1] = tmp3(1430).getGuildDiscoverySplashSource(obj);

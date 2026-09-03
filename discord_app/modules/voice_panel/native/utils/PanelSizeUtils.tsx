@@ -1,8 +1,8 @@
-// === Module 16896: VOICE_PANEL_DRAWER_MAX_WIDTH ===
+// === Module 16916: VOICE_PANEL_DRAWER_MAX_WIDTH ===
 
-// Module 16896 (VOICE_PANEL_DRAWER_MAX_WIDTH)
+// Module 16916 (VOICE_PANEL_DRAWER_MAX_WIDTH)
 import set from "set" /* 2 */;
-import VoicePanelModes from "VoicePanelModes" /* 12063 */;
+import VoicePanelModes from "VoicePanelModes" /* 12069 */;
 
 const VOICE_PANEL_DRAWER_MAX_WIDTH = VoicePanelModes.VOICE_PANEL_DRAWER_MAX_WIDTH;
 function getMaxPanelWidth(windowWidth) {

@@ -1,6 +1,6 @@
-// === Module 6010: ICON_SIZE ===
+// === Module 6011: ICON_SIZE ===
 
-// Module 6010 (ICON_SIZE)
+// Module 6011 (ICON_SIZE)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("design/components/Icon/IconSize.tsx");

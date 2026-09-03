@@ -1,10 +1,10 @@
-// === Module 13462: ProgressBarMarkerInnerContent ===
+// === Module 13477: ProgressBarMarkerInnerContent ===
 
-// Module 13462 (ProgressBarMarkerInnerContent)
+// Module 13477 (ProgressBarMarkerInnerContent)
 import ThemesDefault from "Themes" /* 709 */;
-import registerAssetDefault from "registerAsset" /* 13463 */;
-import registerAssetDefault2 from "registerAsset" /* 13464 */;
-import registerAssetDefault3 from "registerAsset" /* 13465 */;
+import registerAssetDefault from "registerAsset" /* 13478 */;
+import registerAssetDefault2 from "registerAsset" /* 13479 */;
+import registerAssetDefault3 from "registerAsset" /* 13480 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { BoostedGuildTiers } from "ME" /* 673 */;
@@ -209,7 +209,7 @@ export default function ProgressBarMarker(arg0) {
     }
     if (tmp20Result) {
       const obj5 = { source: null, style: null };
-      obj5[0] = tmp2(11384);
+      obj5[0] = tmp2(11389);
       obj5[1] = tmp.progressBarMarkerUnlockedIcon;
       tmp20Result = tmp20(closure_5, obj5);
     }

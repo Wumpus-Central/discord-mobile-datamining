@@ -1,8 +1,8 @@
-// === Module 9715: ChannelTypeRow ===
+// === Module 9719: ChannelTypeRow ===
 
-// Module 9715 (ChannelTypeRow)
+// Module 9719 (ChannelTypeRow)
 import ThemesDefault from "Themes" /* 709 */;
-import useInitialValueDefault from "useInitialValue" /* 5949 */;
+import useInitialValueDefault from "useInitialValue" /* 5950 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
@@ -14,7 +14,7 @@ import closure_11 from "getUncachedChannelPermissions" /* 4120 */;
 import closure_12 from "markAllUserIdListsStale" /* 4130 */;
 import closure_13 from "mergeGuildAvatar" /* 1921 */;
 import ME from "ME" /* 673 */;
-import { RowType } from "RowType" /* 8687 */;
+import { RowType } from "RowType" /* 8691 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -778,6 +778,6 @@ export default function CreateChannelModal(arg0) {
     obj[1] = items;
     return obj;
   }));
-  return callback(_require(6016).Navigator, { screens, initialRouteStack });
+  return callback(_require(6017).Navigator, { screens, initialRouteStack });
 };
 export { CreateChannel };

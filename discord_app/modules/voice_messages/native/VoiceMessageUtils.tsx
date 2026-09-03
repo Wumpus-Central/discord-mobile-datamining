@@ -1,17 +1,17 @@
-// === Module 12046: _startAudioRecording ===
+// === Module 12052: _startAudioRecording ===
 
-// Module 12046 (_startAudioRecording)
+// Module 12052 (_startAudioRecording)
 import timestampDefault from "timestamp" /* 3 */;
 import byteLengthDefault from "byteLength" /* 206 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 695 */;
 import set from "set" /* 1234 */;
 import HapticFeedbackTypes2 from "HapticFeedbackTypes" /* 4446 */;
 import BaseConnectionEvent from "BaseConnectionEvent" /* 4579 */;
-import downsampleWaveformDefault from "downsampleWaveform" /* 12047 */;
+import downsampleWaveformDefault from "downsampleWaveform" /* 12053 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_detectH265HardwareDecode" /* 4529 */;
-import VoiceMessageRecordingStatus from "VoiceMessageRecordingStatus" /* 11756 */;
-import VoiceMessageAnimationState from "VoiceMessageAnimationState" /* 11757 */;
+import VoiceMessageRecordingStatus from "VoiceMessageRecordingStatus" /* 11761 */;
+import VoiceMessageAnimationState from "VoiceMessageAnimationState" /* 11762 */;
 import { AnalyticEvents } from "ME" /* 673 */;
 import importDefaultResult from "apply" /* 12 */;
 

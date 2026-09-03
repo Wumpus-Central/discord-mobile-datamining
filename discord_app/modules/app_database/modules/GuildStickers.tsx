@@ -1,6 +1,6 @@
-// === Module 5455: getAsync ===
+// === Module 5456: getAsync ===
 
-// Module 5455 (getAsync)
+// Module 5456 (getAsync)
 import timestampDefault from "timestamp" /* 3 */;
 import closure_2 from "asyncGeneratorStep" /* 5 */;
 import set from "set" /* 2 */;

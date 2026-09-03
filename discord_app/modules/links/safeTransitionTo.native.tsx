@@ -1,6 +1,6 @@
-// === Module 6099: _safeTransitionTo ===
+// === Module 6100: _safeTransitionTo ===
 
-// Module 6099 (_safeTransitionTo)
+// Module 6100 (_safeTransitionTo)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "createGuildRecordFromRust" /* 1908 */;
 import { Routes } from "ME" /* 673 */;
@@ -133,7 +133,7 @@ function _safeTransitionTo() {
           }
           obj7 = callback2(closure_2[11]);
           if (closure_2 == null) {
-            closure_2 = { guildId: "r" };
+            closure_2 = { guildId: "Array" };
           }
           c5 = 2;
           c6 = 1;

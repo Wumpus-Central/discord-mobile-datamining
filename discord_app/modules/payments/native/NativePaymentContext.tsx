@@ -1,7 +1,7 @@
-// === Module 10815: NativePaymentContextProvider ===
+// === Module 10819: NativePaymentContextProvider ===
 
-// Module 10815 (NativePaymentContextProvider)
-import createDefinedContextDefault from "createDefinedContext" /* 7182 */;
+// Module 10819 (NativePaymentContextProvider)
+import createDefinedContextDefault from "createDefinedContext" /* 7183 */;
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "addSubscriptionPlan" /* 4144 */;
 import { PaymentGateways } from "sum" /* 502 */;

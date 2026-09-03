@@ -1,8 +1,8 @@
-// === Module 15993: useGuildPowerupsBoostAction ===
+// === Module 16009: useGuildPowerupsBoostAction ===
 
-// Module 15993 (useGuildPowerupsBoostAction)
-import contextDefault from "context" /* 5961 */;
-import useGuildBoostPurchaseHandlerDefault from "useGuildBoostPurchaseHandler" /* 12326 */;
+// Module 16009 (useGuildPowerupsBoostAction)
+import contextDefault from "context" /* 5962 */;
+import useGuildBoostPurchaseHandlerDefault from "useGuildBoostPurchaseHandler" /* 12338 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "noop" /* 19 */;
 import closure_5 from "handleGuildBoostsUpdate" /* 4370 */;
@@ -60,7 +60,7 @@ export default function useGuildPowerupsBoostAction(arg0, arg1, arg2, arg3, arg4
               tmp15 = dependencyMap;
               if (dependencyMap > 0) {
                 if (!closure_1_5.hasFetched) {
-                  obj1 = arr(7173);
+                  obj1 = arr(7174);
                   const items = [obj1.init(), ];
                   let obj2 = PERK(4373);
                   items[1] = obj2.fetchGuildBoostSlots();
@@ -92,7 +92,7 @@ export default function useGuildPowerupsBoostAction(arg0, arg1, arg2, arg3, arg4
         let obj4 = PERK(4369);
         arr = obj4.getAvailableGuildBoostSlots(closure_1_5.boostSlots);
         if (arr.length >= dependencyMap) {
-          tmp15 = PERK(5385);
+          tmp15 = PERK(5386);
           obj2 = { guildBoostSlots: null, guildId: null, intent: null };
           obj2[0] = arr.slice(0, dependencyMap);
           obj2[1] = PERK;
@@ -119,8 +119,8 @@ export default function useGuildPowerupsBoostAction(arg0, arg1, arg2, arg3, arg4
               const tmpResult = PERK(table[10]);
             }
           };
-          const result = PERK(7155).launchGuildBoostFlowOrAlert(obj3);
-          const obj6 = PERK(7155);
+          const result = PERK(7156).launchGuildBoostFlowOrAlert(obj3);
+          const obj6 = PERK(7156);
         }
       } catch (tmp50) {
         c3 = tmp;

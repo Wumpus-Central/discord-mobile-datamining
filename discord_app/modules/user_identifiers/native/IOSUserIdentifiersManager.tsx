@@ -1,9 +1,9 @@
-// === Module 17218: onPostConnectionOpen ===
+// === Module 17238: onPostConnectionOpen ===
 
-// Module 17218 (onPostConnectionOpen)
+// Module 17238 (onPostConnectionOpen)
 import expandEventPropertiesDefault from "expandEventProperties" /* 695 */;
 import _modDef1205 from "module_1205" /* 1205 */;
-import initializeDefault from "initialize" /* 5494 */;
+import initializeDefault from "initialize" /* 5495 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import { NativeModules } from "get ActivityIndicator" /* 17 */;
 import closure_5 from "mergeGuildAvatar" /* 1921 */;

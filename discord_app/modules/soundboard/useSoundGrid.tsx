@@ -1,7 +1,7 @@
-// === Module 16879: createSoundItems ===
+// === Module 16899: createSoundItems ===
 
-// Module 16879 (createSoundItems)
-import SoundButtonOverlay from "SoundButtonOverlay" /* 4973 */;
+// Module 16899 (createSoundItems)
+import SoundButtonOverlay from "SoundButtonOverlay" /* 4974 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import closure_5 from "ensureGuildLoaded" /* 1386 */;
@@ -9,8 +9,8 @@ import closure_6 from "createGuildRecordFromRust" /* 1908 */;
 import closure_7 from "getUncachedChannelPermissions" /* 4120 */;
 import closure_8 from "handleConnectionOpen" /* 1980 */;
 import closure_9 from "mergeGuildAvatar" /* 1921 */;
-import closure_10 from "handleSoundCreateOrUpdate" /* 4965 */;
-import MAX_LENGTH_SOUND_NAME from "MAX_LENGTH_SOUND_NAME" /* 4967 */;
+import closure_10 from "handleSoundCreateOrUpdate" /* 4966 */;
+import MAX_LENGTH_SOUND_NAME from "MAX_LENGTH_SOUND_NAME" /* 4968 */;
 import { PremiumTypes } from "GuildFeatures" /* 1923 */;
 
 require = arg1;

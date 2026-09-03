@@ -1,6 +1,6 @@
-// === Module 8233: useStoreFrontPrice ===
+// === Module 8237: useStoreFrontPrice ===
 
-// Module 8233 (useStoreFrontPrice)
+// Module 8237 (useStoreFrontPrice)
 import closure_2 from "noop" /* 19 */;
 import { PriceSetAssignmentPurchaseTypes as closure_3 } from "ME" /* 673 */;
 

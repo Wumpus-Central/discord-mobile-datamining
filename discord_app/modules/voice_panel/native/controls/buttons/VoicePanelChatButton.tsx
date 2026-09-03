@@ -1,6 +1,6 @@
-// === Module 17008: ChatButton ===
+// === Module 17028: ChatButton ===
 
-// Module 17008 (ChatButton)
+// Module 17028 (ChatButton)
 import ThemesDefault from "Themes" /* 709 */;
 import closure_3 from "noop" /* 19 */;
 import jsxProd from "jsxProd" /* 21 */;

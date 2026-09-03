@@ -1,14 +1,14 @@
-// === Module 14437: useRequestGatewaySocket ===
+// === Module 14453: useRequestGatewaySocket ===
 
-// Module 14437 (useRequestGatewaySocket)
-import _modDef11157 from "module_11157" /* 11157 */;
+// Module 14453 (useRequestGatewaySocket)
+import _modDef11161 from "module_11161" /* 11161 */;
 import closure_3 from "noop" /* 19 */;
 
 const result = require("set").fileFinishedImporting("modules/gateway/useRequestGatewaySocket.tsx");
 
 export const useRequestGatewaySocket = function useRequestGatewaySocket(arg0) {
   importDefault = arg0;
-  const canUIRequestGatewaySocket = _modDef11157.useCanUIRequestGatewaySocket();
+  const canUIRequestGatewaySocket = _modDef11161.useCanUIRequestGatewaySocket();
   const items = [arg0, canUIRequestGatewaySocket];
   const effect = React.useEffect(() => {
     if (canUIRequestGatewaySocket) {

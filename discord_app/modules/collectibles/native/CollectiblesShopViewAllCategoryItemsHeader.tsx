@@ -1,8 +1,8 @@
-// === Module 15675: CollectiblesShopViewAllCategoryItemsHeader ===
+// === Module 15689: CollectiblesShopViewAllCategoryItemsHeader ===
 
-// Module 15675 (CollectiblesShopViewAllCategoryItemsHeader)
+// Module 15689 (CollectiblesShopViewAllCategoryItemsHeader)
 import noopAll from "noop" /* 19 */;
-import registerAssetDefault from "registerAsset" /* 7621 */;
+import registerAssetDefault from "registerAsset" /* 7622 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
@@ -20,7 +20,7 @@ export default function CollectiblesShopViewAllCategoryItemsHeader(arg0) {
   let obj = _require(1498);
   _require = obj.useStackNavigation();
   const tmp = callback3();
-  obj1 = _require(13233);
+  obj1 = _require(13245);
   obj = { style: null, children: null };
   obj = {};
   const youBarSettingsCustomHeaderPaddingTop = obj1.useYouBarSettingsCustomHeaderPaddingTop();
@@ -34,7 +34,7 @@ export default function CollectiblesShopViewAllCategoryItemsHeader(arg0) {
   obj2[3] = function onPress() {
     navigation.goBack();
   };
-  obj1[1] = callback(_require(7617).HeaderIconButton, obj2);
+  obj1[1] = callback(_require(7618).HeaderIconButton, obj2);
   const items = [callback(closure_4, obj1), , ];
   const obj3 = { resizeMode: "contain", style: tmp.logo, source: { uri: logoUrl }, accessibilityLabel: null, accessibilityRole: "header" };
   const intl2 = _require(1233).intl;

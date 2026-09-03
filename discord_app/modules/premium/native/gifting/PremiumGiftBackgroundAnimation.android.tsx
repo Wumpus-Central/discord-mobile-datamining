@@ -1,6 +1,6 @@
-// === Module 10823: PremiumGiftBackgroundAnimation ===
+// === Module 10827: PremiumGiftBackgroundAnimation ===
 
-// Module 10823 (PremiumGiftBackgroundAnimation)
+// Module 10827 (PremiumGiftBackgroundAnimation)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;

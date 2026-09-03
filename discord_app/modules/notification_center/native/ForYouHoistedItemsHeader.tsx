@@ -1,6 +1,6 @@
-// === Module 16256: ForYouHoistedItemsHeader ===
+// === Module 16275: ForYouHoistedItemsHeader ===
 
-// Module 16256 (ForYouHoistedItemsHeader)
+// Module 16275 (ForYouHoistedItemsHeader)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 709 */;
 import { View } from "get ActivityIndicator" /* 17 */;

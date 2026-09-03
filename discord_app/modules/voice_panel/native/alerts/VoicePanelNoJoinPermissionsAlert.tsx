@@ -1,10 +1,10 @@
-// === Module 17003: VoicePanelNoJoinPermissionsAlert ===
+// === Module 17023: VoicePanelNoJoinPermissionsAlert ===
 
-// Module 17003 (VoicePanelNoJoinPermissionsAlert)
+// Module 17023 (VoicePanelNoJoinPermissionsAlert)
 import noopAll from "noop" /* 19 */;
 import getSystemLocale from "getSystemLocale" /* 1233 */;
-import getAlertModalItemKey from "getAlertModalItemKey" /* 4863 */;
-import VoicePanelLockedIconDefault from "VoicePanelLockedIcon" /* 17004 */;
+import getAlertModalItemKey from "getAlertModalItemKey" /* 4864 */;
+import VoicePanelLockedIconDefault from "VoicePanelLockedIcon" /* 17024 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

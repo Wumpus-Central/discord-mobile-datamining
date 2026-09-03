@@ -1,11 +1,11 @@
-// === Module 16604: CoachmarkPreview ===
+// === Module 16624: CoachmarkPreview ===
 
-// Module 16604 (CoachmarkPreview)
+// Module 16624 (CoachmarkPreview)
 import ThemesDefault from "Themes" /* 709 */;
 import create from "create" /* 1929 */;
-import CustomTypingIndicatorDynamicAssetDefault from "CustomTypingIndicatorDynamicAsset" /* 11765 */;
-import metadataDefault from "metadata" /* 11769 */;
-import metadataDefault2 from "metadata" /* 11770 */;
+import CustomTypingIndicatorDynamicAssetDefault from "CustomTypingIndicatorDynamicAsset" /* 11771 */;
+import metadataDefault from "metadata" /* 11775 */;
+import metadataDefault2 from "metadata" /* 11776 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { UserSettingsSections } from "ME" /* 673 */;
@@ -65,7 +65,7 @@ export default function CustomTypingIndicatorProfileCoachmark(visible) {
     obj[7] = intl.string(markAsDismissed(str[8])["6NP6ic"]);
     obj[9] = function onButtonPress() {
       let obj = closure_1_0(closure_1_2[9]);
-      obj = { screen: closure_1_5.TYPING_INDICATOR };
+      obj = { screen: closure_1_5.TYPING_INDICATOR, params: { source: "profile_coachmark" } };
       obj.openUserSettings(obj, () => {
         callback(closure_1_6.TAKE_ACTION);
       });

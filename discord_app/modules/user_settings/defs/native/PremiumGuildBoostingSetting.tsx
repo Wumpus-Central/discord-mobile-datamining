@@ -1,11 +1,11 @@
-// === Module 14820: route ===
+// === Module 14835: route ===
 
-// Module 14820 (route)
+// Module 14835 (route)
 import set from "set" /* 2 */;
 import ME from "ME" /* 673 */;
 import getSystemLocale from "getSystemLocale" /* 1233 */;
-import BoostGemIcon from "BoostGemIcon" /* 8243 */;
-import createToggle from "createToggle" /* 11288 */;
+import BoostGemIcon from "BoostGemIcon" /* 8247 */;
+import createToggle from "createToggle" /* 11292 */;
 
 obj = {
   useTitle() {
@@ -19,7 +19,7 @@ obj = {
 obj = {
   route: ME.UserSettingsSections.GUILD_BOOSTING,
   getComponent() {
-    return require(13379) /* componentDidMount */.default;
+    return require(13394) /* componentDidMount */.default;
   }
 };
 const route = createToggle.createRoute(obj);

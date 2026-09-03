@@ -1,7 +1,7 @@
-// === Module 7899: useIsCallActive ===
+// === Module 7902: useIsCallActive ===
 
-// Module 7899 (useIsCallActive)
-import closure_2 from "callConnect" /* 5230 */;
+// Module 7902 (useIsCallActive)
+import closure_2 from "callConnect" /* 5231 */;
 import closure_3 from "getParticipants" /* 4494 */;
 import { ParticipantTypes } from "ParticipantTypes" /* 4499 */;
 

@@ -1,6 +1,6 @@
-// === Module 9033: ClickableGameIcon ===
+// === Module 9037: ClickableGameIcon ===
 
-// Module 9033 (ClickableGameIcon)
+// Module 9037 (ClickableGameIcon)
 import ThemesDefault from "Themes" /* 709 */;
 import Text from "Text" /* 4474 */;
 import closure_3 from "noop" /* 19 */;
@@ -15,8 +15,8 @@ function ClickableGameIcon(game) {
   dependencyMap = undefined;
   let React;
   ({ style, activityLevel } = game);
-  const obj = { gameId: game.id, source: game(8827).GameProfileSources.GuildProfileGames, trackEntryPointImpression: true };
-  const tmp3Result = onPressFallback(8816)(obj);
+  const obj = { gameId: game.id, source: game(8831).GameProfileSources.GuildProfileGames, trackEntryPointImpression: true };
+  const tmp3Result = onPressFallback(8820)(obj);
   dependencyMap = tmp3Result;
   React = tmp5;
   const items = [null != tmp3Result, tmp3Result, onPressFallback, game];
@@ -29,7 +29,7 @@ function ClickableGameIcon(game) {
       }
     }, items);
   }
-  return callback(onPressFallback(9034), { style, game, activityLevel, onPress });
+  return callback(onPressFallback(9038), { style, game, activityLevel, onPress });
 }
 function FavoriteGame(activityLevel) {
   const game = activityLevel.game;

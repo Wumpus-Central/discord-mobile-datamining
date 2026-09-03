@@ -1,11 +1,11 @@
-// === Module 14335: loadServer ===
+// === Module 14351: loadServer ===
 
-// Module 14335 (loadServer)
+// Module 14351 (loadServer)
 import dispatcherDefault from "dispatcher" /* 706 */;
 import set2 from "set" /* 1234 */;
 import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "map" /* 9477 */;
-import closure_5 from "initializeState" /* 7458 */;
+import closure_4 from "map" /* 9481 */;
+import closure_5 from "initializeState" /* 7459 */;
 import closure_6 from "ensureGuildLoaded" /* 1386 */;
 import closure_7 from "trackCommunicationDisabled" /* 1991 */;
 import closure_8 from "createGuildRecordFromRust" /* 1908 */;
@@ -19,7 +19,7 @@ import closure_15 from "updateVoiceState" /* 4497 */;
 import { TransportTypes } from "RPC_SCOPE_CONFIG" /* 4380 */;
 import ME from "ME" /* 673 */;
 import { ActivityLayoutMode } from "items3" /* 4506 */;
-import { FrameLayoutModes } from "FrameLayoutModes" /* 9478 */;
+import { FrameLayoutModes } from "FrameLayoutModes" /* 9482 */;
 import { MediaEngineContextTypes } from "DesktopSources" /* 4542 */;
 
 require = arg1;
@@ -555,7 +555,7 @@ prototype["init"] = function init() {
     callback(695).track(constants.AUTHORIZED_APP_CONNECTED, obj);
   };
   this.rpcServer.onDisconnect = (id, reason) => {
-    let obj = callback(14336);
+    let obj = callback(14352);
     obj.releaseSocket(id.id);
     obj = { type: "RPC_APP_DISCONNECTED", socketId: id.id, application: id.application, source: id.source, reason };
     callback(706).dispatch(obj);

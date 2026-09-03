@@ -1,6 +1,6 @@
-// === Module 10174: RaisedHandIcon ===
+// === Module 10178: RaisedHandIcon ===
 
-// Module 10174 (RaisedHandIcon)
+// Module 10178 (RaisedHandIcon)
 import ThemesDefault from "Themes" /* 709 */;
 import Button from "Button" /* 1296 */;
 import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 4668 */;
@@ -28,7 +28,7 @@ function RaisedHandIcon(rtsState) {
   }
   let obj = { style: items, children: null };
   items[1] = activeBackground;
-  obj = { style: tmp.raisedHand, source: tmp5(8758), color: PRIMARY_800 };
+  obj = { style: tmp.raisedHand, source: tmp5(8762), color: PRIMARY_800 };
   obj[1] = closure_5(Button.Icon, obj);
   return closure_5(View, obj);
 }

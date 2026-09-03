@@ -1,6 +1,6 @@
-// === Module 4720: GUILD_ROOMS_EXPERIMENT_ID ===
+// === Module 4721: GUILD_ROOMS_EXPERIMENT_ID ===
 
-// Module 4720 (GUILD_ROOMS_EXPERIMENT_ID)
+// Module 4721 (GUILD_ROOMS_EXPERIMENT_ID)
 import closure_2 from "trackCommunicationDisabled" /* 1991 */;
 import createExperiment from "createExperiment" /* 4389 */;
 

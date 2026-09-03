@@ -1,10 +1,10 @@
-// === Module 6624: GameDiversityTier3LargeBadge ===
+// === Module 6625: GameDiversityTier3LargeBadge ===
 
-// Module 6624 (GameDiversityTier3LargeBadge)
+// Module 6625 (GameDiversityTier3LargeBadge)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5501 */;
-import vanityUrlDefault from "vanityUrl" /* 6625 */;
+import preloadDefault from "preload" /* 5502 */;
+import vanityUrlDefault from "vanityUrl" /* 6626 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/GameDiversityTier3LargeBadge.native.tsx");

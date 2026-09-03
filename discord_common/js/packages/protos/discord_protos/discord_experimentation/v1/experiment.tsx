@@ -1,10 +1,11 @@
-// === Module 7646: create ===
+// === Module 7647: create ===
 
-// Module 7646 (create)
+// Module 7647 (create)
 import _mod1306 from "module_1306" /* 1306 */;
 import now from "now" /* 1335 */;
 import defineProperty from "defineProperty" /* 1336 */;
-import defineProperty2 from "defineProperty" /* 7647 */;
+import defineProperty2 from "defineProperty" /* 7648 */;
+import create2 from "create" /* 7649 */;
 import closure_2 from "_slicedToArray" /* 32 */;
 import { MessageType, MessageType as MessageType2, MessageType as MessageType3, MessageType as MessageType4, MessageType as MessageType5 } from "module_1306" /* 1306 */;
 
@@ -23,7 +24,7 @@ const obj8 = { UNSPECIFIED: 0, [0]: "UNSPECIFIED", ACTIVE: 1, [1]: "ACTIVE", UNU
 const obj9 = { UNSPECIFIED: 0, [0]: "UNSPECIFIED", DRAFT: 1, [1]: "DRAFT", MEASUREMENT: 2, [2]: "MEASUREMENT", ROLLING_OUT: 4, [4]: "ROLLING_OUT", ARCHIVED: 6, [6]: "ARCHIVED", AA_MODE: 7, [7]: "AA_MODE", PAUSED: 8, [8]: "PAUSED" };
 class Experiment$Type extends MessageType {
   constructor() {
-    items = [, , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , ];
+    items = [, , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , ];
     items[0] = { no: 1, name: "id", kind: "scalar", T: 6 };
     items[1] = { no: 2, name: "name", kind: "scalar", T: 9 };
     items[2] = {
@@ -89,7 +90,7 @@ class Experiment$Type extends MessageType {
       kind: "message",
       repeat: 1,
       T() {
-            return callback(7647).Rule;
+            return callback(7648).Rule;
           }
     };
     items[16] = {
@@ -211,21 +212,31 @@ class Experiment$Type extends MessageType {
     items[39] = { no: 37, name: "growthbook_tags", kind: "scalar", repeat: 2, T: 9 };
     items[40] = { no: 38, name: "allocate_right_to_left", kind: "scalar", T: 8 };
     items[41] = { no: 39, name: "is_managed", kind: "scalar", T: 8 };
-    obj = { no: 43, name: "number_line_settings", kind: "message", T: null };
+    items[42] = {
+      no: 43,
+      name: "number_line_settings",
+      kind: "message",
+      T() {
+            return closure_15;
+          }
+    };
+    obj = { no: 42, name: "eligibility_persistence", kind: "enum", T: null };
     class T {
       constructor() {
-        return closure_15;
+        items = ["discord_protos.discord_experimentation.v1.Experiment.EligibilityPersistence"];
+        items[1] = closure_11;
+        items[2] = "ELIGIBILITY_PERSISTENCE_";
+        return items;
       }
     }
     obj[3] = T;
-    items[42] = obj;
-    items[43] = {
-      no: 42,
-      name: "eligibility_persistence",
-      kind: "enum",
+    items[43] = obj;
+    items[44] = {
+      no: 48,
+      name: "lifecycle_plan",
+      kind: "message",
       T() {
-            const items = ["discord_protos.discord_experimentation.v1.Experiment.EligibilityPersistence", closure_11, "ELIGIBILITY_PERSISTENCE_"];
-            return items;
+            return callback(7649).LifecyclePlan;
           }
     };
     tmp = new tmp("discord_protos.discord_experimentation.v1.Experiment", items, T);
@@ -251,9 +262,10 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos) {
   if (arg3 == null) {
     obj = self.create();
   }
-  if (pos.pos < pos.pos + arg1) {
-    [r10019, r10020] = callback(pos.tag(), 2);
-    const tmp3 = callback(pos.tag(), 2);
+  const sum = pos.pos + arg1;
+  if (pos.pos < sum) {
+    const LifecyclePlan = create2.LifecyclePlan;
+    obj.lifecyclePlan = LifecyclePlan.internalBinaryRead(pos, pos.uint32(), arg2, obj.lifecyclePlan);
   }
   return obj;
 };
@@ -543,6 +555,14 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(id, tag, writeUn
     joined10 = dependencyMap;
     joined10 = tag.tag(42, _mod1306.WireType.Varint).int32(id.eligibilityPersistence);
     const tagResult43 = tag.tag(42, _mod1306.WireType.Varint);
+  }
+  if (id.lifecyclePlan) {
+    joined10 = require;
+    joined10 = dependencyMap;
+    const LifecyclePlan = create2.LifecyclePlan;
+    const tagResult44 = tag.tag(48, _mod1306.WireType.LengthDelimited);
+    joined10 = LifecyclePlan.internalBinaryWrite(id.lifecyclePlan, tag.tag(48, _mod1306.WireType.LengthDelimited).fork(), writeUnknownFields).join();
+    const internalBinaryWriteResult12 = LifecyclePlan.internalBinaryWrite(id.lifecyclePlan, tag.tag(48, _mod1306.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {

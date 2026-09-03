@@ -1,10 +1,10 @@
-// === Module 15366: FileUpIcon ===
+// === Module 15380: FileUpIcon ===
 
-// Module 15366 (FileUpIcon)
+// Module 15380 (FileUpIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 709 */;
 import BaseIconImage from "BaseIconImage" /* 4196 */;
-import registerAsset from "registerAsset" /* 15367 */;
+import registerAsset from "registerAsset" /* 15381 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

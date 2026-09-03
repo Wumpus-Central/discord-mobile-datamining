@@ -1,8 +1,8 @@
-// === Module 9321: XboxLinkPreConnect ===
+// === Module 9325: XboxLinkPreConnect ===
 
-// Module 9321 (XboxLinkPreConnect)
+// Module 9325 (XboxLinkPreConnect)
 import closure_3 from "noop" /* 19 */;
-import { XboxLinkModalScenes } from "XboxLinkModalScenes" /* 9315 */;
+import { XboxLinkModalScenes } from "XboxLinkModalScenes" /* 9319 */;
 import { PlatformTypes } from "ME" /* 673 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
@@ -28,5 +28,5 @@ export default function XboxLinkPreConnect() {
   obj[5] = intl.string(navigation(1233).t["e/z3na"]);
   const intl2 = navigation(1233).intl;
   obj[6] = intl2.string(navigation(1233).t["7tXu0i"]);
-  return jsx(navigation(9323).TwoWayLinkPreConnect, { platformType: PlatformTypes.XBOX, onError: callback1, onNext: callback, img: memo, imgStyle: callback().image, title: null, body: null });
+  return jsx(navigation(9327).TwoWayLinkPreConnect, { platformType: PlatformTypes.XBOX, onError: callback1, onNext: callback, img: memo, imgStyle: callback().image, title: null, body: null });
 };

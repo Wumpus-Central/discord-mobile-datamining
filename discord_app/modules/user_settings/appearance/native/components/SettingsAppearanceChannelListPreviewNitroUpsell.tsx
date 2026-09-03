@@ -1,12 +1,12 @@
-// === Module 15126: SettingsAppearanceChannelListPreviewNitroUpsellComponent ===
+// === Module 15141: SettingsAppearanceChannelListPreviewNitroUpsellComponent ===
 
-// Module 15126 (SettingsAppearanceChannelListPreviewNitroUpsellComponent)
+// Module 15141 (SettingsAppearanceChannelListPreviewNitroUpsellComponent)
 import initialize from "initialize" /* 586 */;
 import ThemesDefault from "Themes" /* 709 */;
-import CONFIG_NEVER_ANIMATE from "CONFIG_NEVER_ANIMATE" /* 4927 */;
-import SUBTLE_SPRING from "SUBTLE_SPRING" /* 4931 */;
-import LinearGradientDefault from "LinearGradient" /* 4940 */;
-import AnimatedRenderItemDefault from "AnimatedRenderItem" /* 8993 */;
+import CONFIG_NEVER_ANIMATE from "CONFIG_NEVER_ANIMATE" /* 4928 */;
+import SUBTLE_SPRING from "SUBTLE_SPRING" /* 4932 */;
+import LinearGradientDefault from "LinearGradient" /* 4941 */;
+import AnimatedRenderItemDefault from "AnimatedRenderItem" /* 8997 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_6 from "maybeApplyNoTextColorForLightCustomTheme" /* 4470 */;
@@ -31,12 +31,12 @@ function SettingsAppearanceChannelListPreviewNitroUpsellComponent(theme) {
     obj.opacity = theme(closure_1_2[7]).withSpring(num, theme(closure_1_2[8]).springStandard);
     return obj;
   };
-  obj = { theme, ThemeTypes: closure_9, StyleSheet, withSpring: theme(4927).withSpring, springStandard: theme(4931).springStandard };
+  obj = { theme, ThemeTypes: closure_9, StyleSheet, withSpring: theme(4928).withSpring, springStandard: theme(4932).springStandard };
   fn.__closure = obj;
   fn.__workletHash = 16911565077998;
   fn.__initData = closure_18;
   const animatedStyle = obj.useAnimatedStyle(fn);
-  analyticsLocations = analyticsLocations(5961)(analyticsLocations(5981).CLIENT_THEMES_EDITOR).analyticsLocations;
+  analyticsLocations = analyticsLocations(5962)(analyticsLocations(5982).CLIENT_THEMES_EDITOR).analyticsLocations;
   const items = [analyticsLocations];
   obj = { style: tmp.nitroUpsell, children: null };
   const callback = importAllResult.useCallback(() => {
@@ -52,7 +52,7 @@ function SettingsAppearanceChannelListPreviewNitroUpsellComponent(theme) {
   obj2[0] = intl.string(theme(1233).t.pj0XBN);
   obj2[1] = callback(theme(1296).NitroWheel, { style: tmp.nitroWheelIcon });
   obj2[3] = callback;
-  items1[1] = callback(theme(4928).Button, obj2);
+  items1[1] = callback(theme(4929).Button, obj2);
   obj[1] = items1;
   return callback2(View, obj);
 }
@@ -74,7 +74,7 @@ animationEntering.__initData = { code: "function animationEntering_SettingsAppea
 let closure_15 = { code: "function SettingsAppearanceChannelListPreviewNitroUpsellTsx3(finished){const{cleanUp}=this.__closure;var _cleanUp;(_cleanUp=cleanUp)===null||_cleanUp===void 0||_cleanUp(finished);}" };
 function animationExiting(value, cleanUp) {
   const _require = cleanUp;
-  const obj = { opacity: _require(4927).withSpring(value, _require(4931).springStandard, "respect-motion-settings", fn) };
+  const obj = { opacity: _require(4928).withSpring(value, _require(4932).springStandard, "respect-motion-settings", fn) };
   fn = function s(arg0) {
     if (closure_0 != null) {
       tmp(arg0);

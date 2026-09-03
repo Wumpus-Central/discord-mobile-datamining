@@ -1,8 +1,8 @@
-// === Module 7167: useStoreConnectionErrorAlert ===
+// === Module 7168: useStoreConnectionErrorAlert ===
 
-// Module 7167 (useStoreConnectionErrorAlert)
+// Module 7168 (useStoreConnectionErrorAlert)
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "updateProduct" /* 6092 */;
+import closure_4 from "updateProduct" /* 6093 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/premium/native/useStoreConnectionErrorAlert.tsx");

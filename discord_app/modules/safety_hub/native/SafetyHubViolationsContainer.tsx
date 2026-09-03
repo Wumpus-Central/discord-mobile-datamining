@@ -1,18 +1,18 @@
-// === Module 14584: SafetyHubViolationsHeader ===
+// === Module 14599: SafetyHubViolationsHeader ===
 
-// Module 14584 (SafetyHubViolationsHeader)
+// Module 14599 (SafetyHubViolationsHeader)
 import ThemesDefault from "Themes" /* 709 */;
 import getSystemLocale from "getSystemLocale" /* 1233 */;
 import Text from "Text" /* 4474 */;
-import parseMessageEmbedForProps from "parseMessageEmbedForProps" /* 8704 */;
-import WarningIcon from "WarningIcon" /* 8751 */;
-import renderDefault from "render" /* 9081 */;
-import useSafetyHubClassifications from "useSafetyHubClassifications" /* 11677 */;
+import parseMessageEmbedForProps from "parseMessageEmbedForProps" /* 8708 */;
+import WarningIcon from "WarningIcon" /* 8755 */;
+import renderDefault from "render" /* 9085 */;
+import useSafetyHubClassifications from "useSafetyHubClassifications" /* 11682 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_7 from "handleSafetyHubRequestAgeVerificationResetModalAction" /* 8716 */;
-import SafetyHubView from "SafetyHubView" /* 8705 */;
+import closure_7 from "handleSafetyHubRequestAgeVerificationResetModalAction" /* 8720 */;
+import SafetyHubView from "SafetyHubView" /* 8709 */;
 import { AnalyticEvents } from "ME" /* 673 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
@@ -56,9 +56,9 @@ function SafetyHubViolationsHeader(count) {
   obj1[1] = items4;
   items2[1] = closure_12(closure_6, obj1);
   if (opened) {
-    let ChevronSmallDownIcon = tmp7(13452).ChevronSmallUpIcon;
+    let ChevronSmallDownIcon = tmp7(13467).ChevronSmallUpIcon;
   } else {
-    ChevronSmallDownIcon = tmp7(8949).ChevronSmallDownIcon;
+    ChevronSmallDownIcon = tmp7(8953).ChevronSmallDownIcon;
   }
   const items5 = [tmp.chevron];
   items2[2] = closure_11(ChevronSmallDownIcon, { size: "md", style: items5 });

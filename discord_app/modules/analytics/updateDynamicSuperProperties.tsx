@@ -1,10 +1,10 @@
-// === Module 17095: updateDynamicSuperProperties ===
+// === Module 17115: updateDynamicSuperProperties ===
 
-// Module 17095 (updateDynamicSuperProperties)
+// Module 17115 (updateDynamicSuperProperties)
 import set from "set" /* 2 */;
 import encodeProperties from "encodeProperties" /* 500 */;
-import trackHeartbeat from "trackHeartbeat" /* 7216 */;
-import _modDef11157 from "module_11157" /* 11157 */;
+import trackHeartbeat from "trackHeartbeat" /* 7217 */;
+import _modDef11161 from "module_11161" /* 11161 */;
 
 let result = set.fileFinishedImporting("modules/analytics/updateDynamicSuperProperties.tsx");
 
@@ -26,7 +26,7 @@ export const updateDynamicSuperProperties = function updateDynamicSuperPropertie
   }
   const obj2 = encodeProperties;
   const tmp = require;
-  const state = _modDef11157.getState();
+  const state = _modDef11161.getState();
   let client_app_state;
   if (superProperties != null) {
     client_app_state = superProperties.client_app_state;

@@ -1,6 +1,6 @@
-// === Module 13585: filterOutBlockedOrIgnoredUsers ===
+// === Module 13600: filterOutBlockedOrIgnoredUsers ===
 
-// Module 13585 (filterOutBlockedOrIgnoredUsers)
+// Module 13600 (filterOutBlockedOrIgnoredUsers)
 import applyDefault from "apply" /* 12 */;
 import closure_3 from "markAllUserIdListsStale" /* 4130 */;
 

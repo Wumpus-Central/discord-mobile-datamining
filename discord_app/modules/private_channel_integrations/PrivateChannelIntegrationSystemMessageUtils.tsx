@@ -1,6 +1,6 @@
-// === Module 7914: getPrivateChannelIntegrationAddedSystemMessageContent ===
+// === Module 7917: getPrivateChannelIntegrationAddedSystemMessageContent ===
 
-// Module 7914 (getPrivateChannelIntegrationAddedSystemMessageContent)
+// Module 7917 (getPrivateChannelIntegrationAddedSystemMessageContent)
 import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1233 */;
 import combinedDefault from "combined" /* 1994 */;

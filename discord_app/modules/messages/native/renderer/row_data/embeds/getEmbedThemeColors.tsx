@@ -1,6 +1,6 @@
-// === Module 7863: getEmbedThemeColors ===
+// === Module 7866: getEmbedThemeColors ===
 
-// Module 7863 (getEmbedThemeColors)
+// Module 7866 (getEmbedThemeColors)
 import ThemesDefault from "Themes" /* 709 */;
 import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 1362 */;
 import hexToRgba from "hexToRgba" /* 4326 */;

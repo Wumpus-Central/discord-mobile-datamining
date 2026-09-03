@@ -1,6 +1,6 @@
-// === Module 14048: BadgeColors ===
+// === Module 14064: BadgeColors ===
 
-// Module 14048 (BadgeColors)
+// Module 14064 (BadgeColors)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 709 */;
 import Text from "Text" /* 4474 */;

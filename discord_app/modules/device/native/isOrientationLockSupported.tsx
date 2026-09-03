@@ -1,6 +1,6 @@
-// === Module 9538: isOrientationLockSupported ===
+// === Module 9542: isOrientationLockSupported ===
 
-// Module 9538 (isOrientationLockSupported)
+// Module 9542 (isOrientationLockSupported)
 import set from "set" /* 2 */;
 import DCDDeviceManager from "DCDDeviceManager" /* 4457 */;
 

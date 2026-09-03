@@ -1,9 +1,9 @@
-// === Module 13228: SubscriptionAccountHoldNotice ===
+// === Module 13240: SubscriptionAccountHoldNotice ===
 
-// Module 13228 (SubscriptionAccountHoldNotice)
+// Module 13240 (SubscriptionAccountHoldNotice)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 709 */;
-import registerAssetDefault from "registerAsset" /* 12531 */;
+import registerAssetDefault from "registerAsset" /* 12543 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { SubscriptionStatusTypes } from "ME" /* 673 */;
 import jsxProd from "jsxProd" /* 21 */;
@@ -52,7 +52,7 @@ export default function SubscriptionAccountHoldNotice(subscription) {
     obj3[2] = function onPress() {
       return closure_1_3.openURL(subscription(closure_1_2[10]).getExternalSubscriptionMethodUrl(subscription.paymentGateway, "PAYMENT_SOURCE_MANAGEMENT"));
     };
-    items1[1] = callback(subscription(4928).Button, obj3);
+    items1[1] = callback(subscription(4929).Button, obj3);
     obj[1] = items1;
     tmp2 = callback2(closure_4, obj);
     const obj6 = subscription(4139);

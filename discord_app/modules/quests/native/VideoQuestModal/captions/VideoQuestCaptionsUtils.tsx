@@ -1,6 +1,6 @@
-// === Module 14974: findActiveCaption ===
+// === Module 14989: findActiveCaption ===
 
-// Module 14974 (findActiveCaption)
+// Module 14989 (findActiveCaption)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/quests/native/VideoQuestModal/captions/VideoQuestCaptionsUtils.tsx");

@@ -1,6 +1,6 @@
-// === Module 8511: initialize ===
+// === Module 8515: initialize ===
 
-// Module 8511 (initialize)
+// Module 8515 (initialize)
 import set from "set" /* 2 */;
 import initializeDefault from "initialize" /* 586 */;
 import ME from "ME" /* 673 */;

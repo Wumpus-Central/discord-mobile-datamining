@@ -1,9 +1,9 @@
-// === Module 10439: items ===
+// === Module 10443: items ===
 
-// Module 10439 (items)
+// Module 10443 (items)
 import getSystemLocale from "getSystemLocale" /* 1233 */;
 import hooksDefault from "hooks" /* 4074 */;
-import _mod10440 from "module_10440" /* 10440 */;
+import _mod10444 from "module_10444" /* 10444 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "_getSystemLocale" /* 1995 */;
 import set from "set" /* 2 */;
@@ -17,7 +17,7 @@ HermesBuiltin.arraySpread(set, 1);
 let result = set.fileFinishedImporting("modules/timestamp_autocomplete/TimestampSuggestionUtils.tsx");
 
 export const preloadTimestampParser = function preloadTimestampParser() {
-  _mod10440;
+  _mod10444;
 };
 export const queryTimestampSuggestions = function queryTimestampSuggestions(arg0, cloneResult1) {
   let obj = cloneResult1;
@@ -241,7 +241,7 @@ export const queryTimestampSuggestions = function queryTimestampSuggestions(arg0
     }
     return items1;
   } else {
-    const tmp6 = _mod10440;
+    const tmp6 = _mod10444;
     locale = locale.locale;
     str = "en-US";
     if ("en-US" === locale) {

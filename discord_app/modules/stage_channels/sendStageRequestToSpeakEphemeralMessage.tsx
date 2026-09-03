@@ -1,6 +1,6 @@
-// === Module 17307: sendStageRequestToSpeakEphemeralMessage ===
+// === Module 17327: sendStageRequestToSpeakEphemeralMessage ===
 
-// Module 17307 (sendStageRequestToSpeakEphemeralMessage)
+// Module 17327 (sendStageRequestToSpeakEphemeralMessage)
 import set from "set" /* 2 */;
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import dispatcherDefault from "dispatcher" /* 706 */;

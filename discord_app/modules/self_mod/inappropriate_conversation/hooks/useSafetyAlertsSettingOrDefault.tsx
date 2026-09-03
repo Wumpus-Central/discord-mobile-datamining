@@ -1,8 +1,8 @@
-// === Module 10928: useSafetyAlertsSettingOrDefault ===
+// === Module 10932: useSafetyAlertsSettingOrDefault ===
 
-// Module 10928 (useSafetyAlertsSettingOrDefault)
+// Module 10932 (useSafetyAlertsSettingOrDefault)
 import initialize from "initialize" /* 586 */;
-import useUserIsTeen from "useUserIsTeen" /* 8786 */;
+import useUserIsTeen from "useUserIsTeen" /* 8790 */;
 import closure_2 from "handleConnectionClosedOrResumed" /* 1339 */;
 import closure_3 from "mergeGuildAvatar" /* 1921 */;
 

@@ -1,11 +1,11 @@
-// === Module 16136: FavoritesGuildCoachmarkGraphic ===
+// === Module 16152: FavoritesGuildCoachmarkGraphic ===
 
-// Module 16136 (FavoritesGuildCoachmarkGraphic)
+// Module 16152 (FavoritesGuildCoachmarkGraphic)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import ThemesDefault from "Themes" /* 709 */;
 import Button from "Button" /* 1296 */;
-import AccountAgeTier10LargeBadge from "AccountAgeTier10LargeBadge" /* 6265 */;
+import AccountAgeTier10LargeBadge from "AccountAgeTier10LargeBadge" /* 6266 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 

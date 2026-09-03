@@ -1,8 +1,8 @@
-// === Module 8894: maybeCreateMessageRecordFromSnapshot ===
+// === Module 8898: maybeCreateMessageRecordFromSnapshot ===
 
-// Module 8894 (maybeCreateMessageRecordFromSnapshot)
+// Module 8898 (maybeCreateMessageRecordFromSnapshot)
 import set from "set" /* 2 */;
-import isForwardMessageDefault from "isForwardMessage" /* 6155 */;
+import isForwardMessageDefault from "isForwardMessage" /* 6156 */;
 
 const result = set.fileFinishedImporting("modules/forwarding/maybeCreateMessageRecordFromSnapshot.tsx");
 

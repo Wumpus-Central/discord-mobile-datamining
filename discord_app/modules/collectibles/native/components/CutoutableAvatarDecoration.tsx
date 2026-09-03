@@ -1,6 +1,6 @@
-// === Module 8105: CutoutableAvatarDecoration ===
+// === Module 8108: CutoutableAvatarDecoration ===
 
-// Module 8105 (CutoutableAvatarDecoration)
+// Module 8108 (CutoutableAvatarDecoration)
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4470 */;

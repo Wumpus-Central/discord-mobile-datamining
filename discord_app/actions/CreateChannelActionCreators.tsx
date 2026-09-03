@@ -1,10 +1,10 @@
-// === Module 9719: ? ===
+// === Module 9723: ? ===
 
-// Module 9719
+// Module 9723
 import encodeProperties from "encodeProperties" /* 500 */;
 import sendRequest from "sendRequest" /* 527 */;
-import _modDef4713 from "module_4713" /* 4713 */;
-import closure_3 from "updateUserGuildSettingsInternal" /* 4701 */;
+import _modDef4714 from "module_4714" /* 4714 */;
+import closure_3 from "updateUserGuildSettingsInternal" /* 4702 */;
 import ME from "ME" /* 673 */;
 import { ChannelNotificationSettingsFlags as closure_7 } from "MAX_FAVORITES" /* 682 */;
 
@@ -75,7 +75,7 @@ export default {
     obj = { url: closure_6.GUILD_CHANNELS(guildId), body: obj, oldFormErrors: true, trackedActionData: null, rejectWithError: null };
     const tmp = permissionOverwrites;
     tmp8 = constants;
-    const tmpResult = permissionOverwrites(4713);
+    const tmpResult = permissionOverwrites(4714);
     obj[3] = {
       event: guildId(500).NetworkActionNames.CHANNEL_CREATE,
       properties(body) {
@@ -143,7 +143,7 @@ export default {
     });
   },
   createRoleSubscriptionTemplateChannel(closure_0, name, type, topic) {
-    let obj = _modDef4713;
+    let obj = _modDef4714;
     obj = { url: closure_6.GUILD_CHANNELS(closure_0), body: obj, oldFormErrors: true, trackedActionData: null, rejectWithError: null };
     obj = { name, type, topic };
     obj[3] = {

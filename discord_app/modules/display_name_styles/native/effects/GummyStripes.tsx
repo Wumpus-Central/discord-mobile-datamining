@@ -1,6 +1,6 @@
-// === Module 14494: GummyStripes ===
+// === Module 14510: GummyStripes ===
 
-// Module 14494 (GummyStripes)
+// Module 14510 (GummyStripes)
 import noopAll from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;

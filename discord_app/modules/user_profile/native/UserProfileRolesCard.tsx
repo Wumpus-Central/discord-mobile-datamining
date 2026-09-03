@@ -1,6 +1,6 @@
-// === Module 5984: RoleDot ===
+// === Module 5985: RoleDot ===
 
-// Module 5984 (RoleDot)
+// Module 5985 (RoleDot)
 import ThemesDefault from "Themes" /* 709 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
@@ -180,8 +180,8 @@ export default function UserProfileRolesCard(userId) {
     obj[0] = guildId;
     obj[1] = roles;
     obj[2] = callback(RolesList, obj);
-    tmp4 = callback(guildId(6008), obj);
-    const tmp7 = guildId(6008);
+    tmp4 = callback(guildId(6009), obj);
+    const tmp7 = guildId(6009);
   }
   return tmp4;
 };

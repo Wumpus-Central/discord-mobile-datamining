@@ -1,13 +1,13 @@
-// === Module 9363: DomainScreen ===
+// === Module 9367: DomainScreen ===
 
-// Module 9363 (DomainScreen)
+// Module 9367 (DomainScreen)
 import ThemesDefault from "Themes" /* 709 */;
 import getSystemLocale from "getSystemLocale" /* 1233 */;
 import useNavigation from "useNavigation" /* 1498 */;
 import Text from "Text" /* 4474 */;
-import Button from "Button" /* 4928 */;
-import SafeAreaPaddingView from "SafeAreaPaddingView" /* 5561 */;
-import EXAMPLE_DOMAIN from "EXAMPLE_DOMAIN" /* 9364 */;
+import Button from "Button" /* 4929 */;
+import SafeAreaPaddingView from "SafeAreaPaddingView" /* 5562 */;
+import EXAMPLE_DOMAIN from "EXAMPLE_DOMAIN" /* 9368 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
@@ -345,7 +345,7 @@ export default function DomainVerifyModal(arg0) {
     obj = { headerTitle: null, headerLeft: null, render: null };
     const intl = onClose(1233).intl;
     obj[0] = intl.string(onClose(1233).t["7lo8+e"]);
-    let obj2 = onClose(5503);
+    let obj2 = onClose(5504);
     obj[1] = obj2.getHeaderBackButton(onClose);
     obj[2] = function render() {
       return closure_1_8(closure_1_12, { onClose });
@@ -354,7 +354,7 @@ export default function DomainVerifyModal(arg0) {
     obj = { headerTitle: null, headerLeft: null, render: null };
     const intl2 = onClose(1233).intl;
     obj[0] = intl2.string(onClose(1233).t["7lo8+e"]);
-    obj[1] = onClose(5503).getHeaderBackButton(onClose);
+    obj[1] = onClose(5504).getHeaderBackButton(onClose);
     obj[2] = function render(domain) {
       return closure_1_8(closure_1_13, { domain: domain.domain, proof: domain.proof, onClose });
     };
@@ -362,8 +362,8 @@ export default function DomainVerifyModal(arg0) {
     obj1 = { headerTitle: null, headerLeft: null, render: null };
     const intl3 = onClose(1233).intl;
     obj1[0] = intl3.string(onClose(1233).t["7lo8+e"]);
-    const obj5 = onClose(5503);
-    obj1[1] = onClose(5503).getHeaderBackButton(onClose);
+    const obj5 = onClose(5504);
+    obj1[1] = onClose(5504).getHeaderBackButton(onClose);
     obj1[2] = function render(domain) {
       return closure_1_8(closure_1_14, { domain: domain.domain, proof: domain.proof, onClose });
     };
@@ -373,6 +373,6 @@ export default function DomainVerifyModal(arg0) {
     obj2[1] = constants.DOMAIN;
     const intl4 = onClose(1233).intl;
     obj2[2] = intl4.string(onClose(1233).t["13/7kX"]);
-    return callback2(onClose(6016).Navigator, obj2);
+    return callback2(onClose(6017).Navigator, obj2);
   }
 };

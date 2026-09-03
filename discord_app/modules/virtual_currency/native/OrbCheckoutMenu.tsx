@@ -1,6 +1,6 @@
-// === Module 15525: OrbCheckoutMenu ===
+// === Module 15539: OrbCheckoutMenu ===
 
-// Module 15525 (OrbCheckoutMenu)
+// Module 15539 (OrbCheckoutMenu)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import jsxProd from "jsxProd" /* 21 */;
@@ -41,9 +41,9 @@ export default function OrbCheckoutMenu() {
     },
     isClearable: true
   };
-  items1[1] = callback2(first(7714).TextInput, obj);
+  items1[1] = callback2(first(7717).TextInput, obj);
   items1[2] = callback2(first(4474).Text, { style: tmp.title, variant: "text-md/bold", children: "Checkout will open with the orb price of the product, if it exists" });
-  items1[3] = callback2(first(4928).Button, { text: "Open Orbs Checkout", variant: "primary", onPress: callback, disabled: null == first });
+  items1[3] = callback2(first(4929).Button, { text: "Open Orbs Checkout", variant: "primary", onPress: callback, disabled: null == first });
   obj[0] = items1;
-  return callback3(first(5609).Card, obj);
+  return callback3(first(5610).Card, obj);
 };

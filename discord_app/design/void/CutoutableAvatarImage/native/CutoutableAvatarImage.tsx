@@ -1,19 +1,19 @@
-// === Module 9441: StaticNativeCutoutAvatarImage ===
+// === Module 9445: StaticNativeCutoutAvatarImage ===
 
-// Module 9441 (StaticNativeCutoutAvatarImage)
+// Module 9445 (StaticNativeCutoutAvatarImage)
 import timestampDefault from "timestamp" /* 3 */;
 import v1 from "v1" /* 511 */;
 import shallowEqualDefault from "shallowEqual" /* 640 */;
 import getAvatarURLDefault from "getAvatarURL" /* 1430 */;
-import preloadDefault from "preload" /* 5501 */;
-import SolidCutoutDefault from "SolidCutout" /* 8106 */;
-import inlineStyles from "inlineStyles" /* 8250 */;
-import inlineStylesDefault from "inlineStyles" /* 8250 */;
-import getChannelIconURL from "getChannelIconURL" /* 9443 */;
-import getReactNativeSVGImageSourceDefault from "getReactNativeSVGImageSource" /* 9444 */;
+import preloadDefault from "preload" /* 5502 */;
+import SolidCutoutDefault from "SolidCutout" /* 8109 */;
+import inlineStyles from "inlineStyles" /* 8254 */;
+import inlineStylesDefault from "inlineStyles" /* 8254 */;
+import getChannelIconURL from "getChannelIconURL" /* 9447 */;
+import getReactNativeSVGImageSourceDefault from "getReactNativeSVGImageSource" /* 9448 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { CHANNEL_SPRING_CONFIG } from "n" /* 9442 */;
+import { CHANNEL_SPRING_CONFIG } from "n" /* 9446 */;
 import jsxProd from "jsxProd" /* 21 */;
 
 require = arg1;
@@ -63,14 +63,14 @@ function AnimatedNativeCutoutAvatarImage(cutout) {
     const cutouts = [obj];
     return { cutouts };
   };
-  obj = { cutout, CutoutShape: cutout(8106).CutoutShape, withSpring: cutout(4927).withSpring, CHANNEL_SPRING_CONFIG };
+  obj = { cutout, CutoutShape: cutout(8109).CutoutShape, withSpring: cutout(4928).withSpring, CHANNEL_SPRING_CONFIG };
   fn.__closure = obj;
   fn.__workletHash = 12529564164821;
   fn.__initData = closure_15;
   const animatedProps = obj.useAnimatedProps(fn);
   obj = { style, animatedProps, children: callback(preloadDefault, { style: items, source: getReactNativeSVGImageSourceDefault(source), usesSmallCache: true }) };
   items = [obj.image, imageStyle];
-  return callback(cutout(8106).ClipViewAnimated, obj);
+  return callback(cutout(8109).ClipViewAnimated, obj);
 }
 function NativeCutoutAvatarImage(animate) {
   if (true === animate.animate) {

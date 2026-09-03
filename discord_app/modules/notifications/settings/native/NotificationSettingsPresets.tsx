@@ -1,6 +1,6 @@
-// === Module 10257: NotificationSettingsPresets ===
+// === Module 10261: NotificationSettingsPresets ===
 
-// Module 10257 (NotificationSettingsPresets)
+// Module 10261 (NotificationSettingsPresets)
 import ThemesDefault from "Themes" /* 709 */;
 import closure_2 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
@@ -123,7 +123,7 @@ const result = require("set").fileFinishedImporting("modules/notifications/setti
 export const NotificationSettingsGuildPresets = function NotificationSettingsGuildPresets(guildId) {
   const _require = guildId;
   const obj = {
-    preset: _require(10262).useGuildPresetSettings(guildId.guildId).preset,
+    preset: _require(10266).useGuildPresetSettings(guildId.guildId).preset,
     updatePreset(arg0) {
       return guildId(closure_1_1[14]).updateGuildPreset(guildId.guildId, arg0);
     }
@@ -133,7 +133,7 @@ export const NotificationSettingsGuildPresets = function NotificationSettingsGui
 export const NotificationSettingsChannelPresets = function NotificationSettingsChannelPresets(channel) {
   const _require = channel;
   const obj = {
-    preset: _require(10254).useChannelPresetSettings(channel.channel).preset,
+    preset: _require(10258).useChannelPresetSettings(channel.channel).preset,
     updatePreset(arg0) {
       return channel(closure_1_1[15]).updateChannelPreset(channel.channel.guild_id, channel.channel.id, arg0);
     }

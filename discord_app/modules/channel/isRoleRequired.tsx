@@ -1,6 +1,6 @@
-// === Module 5015: isRoleRequired ===
+// === Module 5016: isRoleRequired ===
 
-// Module 5015 (isRoleRequired)
+// Module 5016 (isRoleRequired)
 import set from "set" /* 2 */;
 import sum from "sum" /* 502 */;
 import fromStringAll from "fromString" /* 503 */;

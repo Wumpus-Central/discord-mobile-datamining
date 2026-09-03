@@ -1,6 +1,6 @@
-// === Module 16296: GuildPrimaryCategory ===
+// === Module 16315: GuildPrimaryCategory ===
 
-// Module 16296 (GuildPrimaryCategory)
+// Module 16315 (GuildPrimaryCategory)
 import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1233 */;
 
@@ -619,13 +619,13 @@ export const calculateLocaleOptions = function calculateLocaleOptions() {
   const mapped = availableLocales.map((value) => {
     value = value.value;
     if ("en-US" === value) {
-      let obj = { id: null, value: null, label: null, image: "Array" };
+      let obj = { id: null, value: null, label: null, image: "PX_16" };
       obj[0] = value;
       obj[1] = value;
       const intl = callback(1233).intl;
       obj[2] = intl.string(callback(1233).t.WKEPHR);
     } else {
-      obj = { id: null, value: null, label: null, image: "Array" };
+      obj = { id: null, value: null, label: null, image: "PX_16" };
       obj[0] = value;
       obj[1] = value;
       obj[2] = tmp;

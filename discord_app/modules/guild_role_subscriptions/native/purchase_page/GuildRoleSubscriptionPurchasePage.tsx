@@ -1,12 +1,12 @@
-// === Module 16354: Separator ===
+// === Module 16373: Separator ===
 
-// Module 16354 (Separator)
+// Module 16373 (Separator)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 709 */;
 import getSystemLocale from "getSystemLocale" /* 1233 */;
 import Button from "Button" /* 1296 */;
 import Text from "Text" /* 4474 */;
-import registerAssetDefault from "registerAsset" /* 10052 */;
+import registerAssetDefault from "registerAsset" /* 10056 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_8 from "handleThemeChange" /* 1301 */;
 import closure_9 from "ensureGuildLoaded" /* 1386 */;

@@ -1,6 +1,6 @@
-// === Module 12834: FriendsListItemActionType ===
+// === Module 12846: FriendsListItemActionType ===
 
-// Module 12834 (FriendsListItemActionType)
+// Module 12846 (FriendsListItemActionType)
 import set from "set" /* 2 */;
 import ME from "ME" /* 673 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 695 */;

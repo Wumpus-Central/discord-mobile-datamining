@@ -1,13 +1,13 @@
-// === Module 16028: GuildRolesAndChannelsRow ===
+// === Module 16044: GuildRolesAndChannelsRow ===
 
-// Module 16028 (GuildRolesAndChannelsRow)
+// Module 16044 (GuildRolesAndChannelsRow)
 import ThemesDefault from "Themes" /* 709 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "guildHasCommunity" /* 7286 */;
+import closure_5 from "guildHasCommunity" /* 7287 */;
 import closure_6 from "generateOldThreadCutoff" /* 4493 */;
-import { CHANNELS_AND_ROLES_MODAL_KEY as closure_7 } from "GUILD_ONBOARDING_MODAL_KEY" /* 5472 */;
-import { ReadStateTypes } from "ReadStateTypes" /* 4702 */;
+import { CHANNELS_AND_ROLES_MODAL_KEY as closure_7 } from "GUILD_ONBOARDING_MODAL_KEY" /* 5473 */;
+import { ReadStateTypes } from "ReadStateTypes" /* 4703 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -24,7 +24,7 @@ export const GuildRolesAndChannelsRow = function GuildRolesAndChannelsRow(guild)
   const selected = guild.selected;
   let id;
   const tmp = callback();
-  const tmp4 = id(6188)(guild);
+  const tmp4 = id(6189)(guild);
   id = guild.id;
   let obj = guild(4298);
   const result = obj.useIsDismissibleContentDismissed_UNSAFE(guild(1372).DismissibleContent.CHANNEL_BROWSER_NEW_BADGE_NUX);
@@ -39,9 +39,9 @@ export const GuildRolesAndChannelsRow = function GuildRolesAndChannelsRow(guild)
     obj = { guildId: id };
     obj.pushLazy(guild(closure_1_2[17])(closure_1_2[16], closure_1_2.paths), obj, closure_1_7);
   }, items2);
-  let SELECTED = guild(12171).ChannelModes.DEFAULT;
+  let SELECTED = guild(12177).ChannelModes.DEFAULT;
   if (selected) {
-    SELECTED = tmp5(12171).ChannelModes.SELECTED;
+    SELECTED = tmp5(12177).ChannelModes.SELECTED;
   }
   let tmp10 = !result;
   if (result) {
@@ -54,7 +54,7 @@ export const GuildRolesAndChannelsRow = function GuildRolesAndChannelsRow(guild)
   if (tmp10) {
     obj = { style: null, children: null };
     obj[0] = tmp.channelInfoContainer;
-    obj[1] = jsx(tmp5(12081).NewBadge, {});
+    obj[1] = jsx(tmp5(12087).NewBadge, {});
     tmp11 = <View style={null}>{null}</View>;
   }
   obj = { onPress: callback, style: tmp.container, accessible: true, accessibilityLabel: null, accessibilityState: null, mode: null, name: null, icon: null, channelInfo: null };
@@ -79,9 +79,9 @@ export const GuildRolesAndChannelsRow = function GuildRolesAndChannelsRow(guild)
   } else {
     string2Result = string2(t2.et6wav);
   }
-  obj[6] = jsx(guild(12171).BaseChannelName, { name: string2Result, mode: SELECTED });
-  obj1 = { mode: SELECTED, IconComponent: tmp5(13805).ChannelListMagnifyingGlassIcon };
-  obj[7] = jsx(guild(12171).BaseChannelIcon, { mode: SELECTED, IconComponent: tmp5(13805).ChannelListMagnifyingGlassIcon });
+  obj[6] = jsx(guild(12177).BaseChannelName, { name: string2Result, mode: SELECTED });
+  obj1 = { mode: SELECTED, IconComponent: tmp5(13821).ChannelListMagnifyingGlassIcon };
+  obj[7] = jsx(guild(12177).BaseChannelIcon, { mode: SELECTED, IconComponent: tmp5(13821).ChannelListMagnifyingGlassIcon });
   obj[8] = tmp11;
-  return jsx(id(12171), { onPress: callback, style: tmp.container, accessible: true, accessibilityLabel: null, accessibilityState: null, mode: null, name: null, icon: null, channelInfo: null });
+  return jsx(id(12177), { onPress: callback, style: tmp.container, accessible: true, accessibilityLabel: null, accessibilityState: null, mode: null, name: null, icon: null, channelInfo: null });
 };

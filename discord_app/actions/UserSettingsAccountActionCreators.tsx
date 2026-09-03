@@ -1,11 +1,11 @@
-// === Module 7765: saveProfileAndAccountRequest ===
+// === Module 7768: saveProfileAndAccountRequest ===
 
-// Module 7765 (saveProfileAndAccountRequest)
+// Module 7768 (saveProfileAndAccountRequest)
 import sendRequest from "sendRequest" /* 527 */;
 import dispatcherDefault from "dispatcher" /* 706 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import ME from "ME" /* 673 */;
-import str2 from "str2" /* 6063 */;
+import str2 from "str2" /* 6064 */;
 
 require = arg1;
 function saveProfileAndAccountRequest(arg0, arg1) {
@@ -170,8 +170,8 @@ export const disableAccount = function disableAccount(password, arg1) {
   const obj3 = sendRequest;
   const tmp2 = arg1 ? closure_4.DELETE_ACCOUNT : closure_4.DISABLE_ACCOUNT;
   return HTTP.post(obj).then(() => {
-    callback2(6060).logoutInternal();
-    const obj = callback2(6060);
+    callback2(6061).logoutInternal();
+    const obj = callback2(6061);
     callback(1219).transitionTo(constants.DEFAULT_LOGGED_OUT);
   });
 };
@@ -239,11 +239,11 @@ export const saveProfileAndAccountChanges = function saveProfileAndAccountChange
     obj.push_voip_provider = tmp15;
     obj.push_voip_token = value;
   }
-  obj = { headers: avatarId(5121).buildHeadersForMd5({ [avatar(7766).SafetyScannedUploadSurface.USER_DEFAULT_PROFILE_AVATAR]: avatarOriginalMd5 }) };
+  obj = { headers: avatarId(5122).buildHeadersForMd5({ [avatar(7769).SafetyScannedUploadSurface.USER_DEFAULT_PROFILE_AVATAR]: avatarOriginalMd5 }) };
   const tmp = avatarId;
   tmp13 = null != tmp12 && null != value;
   tmp15 = closure_8;
-  let tmpResult = avatarId(5121);
+  let tmpResult = avatarId(5122);
   return saveProfileAndAccountRequest(obj, obj).then((arg0) => {
     avatarId(closure_1_2[3]).dispatch({ type: "USER_PROFILE_SETTINGS_SUBMIT_SUCCESS" });
     let tmp4 = null == avatar;

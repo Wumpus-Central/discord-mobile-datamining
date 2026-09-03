@@ -1,6 +1,6 @@
-// === Module 11150: items ===
+// === Module 11154: items ===
 
-// Module 11150 (items)
+// Module 11154 (items)
 import set from "set" /* 2 */;
 import parseServerPerkConfigKind from "parseServerPerkConfigKind" /* 1927 */;
 import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4139 */;
@@ -45,7 +45,7 @@ export const getQuestOrbMultiplierSource = function getQuestOrbMultiplierSource(
             NITRO = obj.CREPE;
           }
         }
-        tmp4Result = tmp4(7310);
+        tmp4Result = tmp4(7311);
       }
       return NITRO;
     }

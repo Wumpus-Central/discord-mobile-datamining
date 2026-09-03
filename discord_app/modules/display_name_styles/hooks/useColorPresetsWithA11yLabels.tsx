@@ -1,6 +1,6 @@
-// === Module 15170: useColorPresetsWithA11yLabels ===
+// === Module 15185: useColorPresetsWithA11yLabels ===
 
-// Module 15170 (useColorPresetsWithA11yLabels)
+// Module 15185 (useColorPresetsWithA11yLabels)
 import closure_3 from "noop" /* 19 */;
 import { getColorPresetsForEffect } from "items3" /* 1938 */;
 

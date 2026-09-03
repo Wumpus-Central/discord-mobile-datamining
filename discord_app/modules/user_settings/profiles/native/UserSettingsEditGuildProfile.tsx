@@ -1,10 +1,10 @@
-// === Module 14522: UserSettingsEditGuildProfile ===
+// === Module 14538: UserSettingsEditGuildProfile ===
 
-// Module 14522 (UserSettingsEditGuildProfile)
+// Module 14538 (UserSettingsEditGuildProfile)
 import ThemesDefault from "Themes" /* 709 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_5 from "handleFormOpen" /* 8078 */;
+import closure_5 from "handleFormOpen" /* 8081 */;
 import closure_6 from "mergeGuildAvatar" /* 1921 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;

@@ -1,6 +1,6 @@
-// === Module 12811: AddToWishlistItemCard ===
+// === Module 12823: AddToWishlistItemCard ===
 
-// Module 12811 (AddToWishlistItemCard)
+// Module 12823 (AddToWishlistItemCard)
 import ThemesDefault from "Themes" /* 709 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;

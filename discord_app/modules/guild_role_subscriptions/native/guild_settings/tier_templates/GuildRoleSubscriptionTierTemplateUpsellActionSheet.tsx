@@ -1,13 +1,13 @@
-// === Module 16071: GuildRoleSubscriptionTierTemplateUpsellActionSheet ===
+// === Module 16087: GuildRoleSubscriptionTierTemplateUpsellActionSheet ===
 
-// Module 16071 (GuildRoleSubscriptionTierTemplateUpsellActionSheet)
+// Module 16087 (GuildRoleSubscriptionTierTemplateUpsellActionSheet)
 import defaultAreStatesEqual from "defaultAreStatesEqual" /* 644 */;
 import ThemesDefault from "Themes" /* 709 */;
 import getSystemLocale from "getSystemLocale" /* 1233 */;
 import Text from "Text" /* 4474 */;
-import Button from "Button" /* 4928 */;
-import getIsScreenLandscape from "getIsScreenLandscape" /* 5079 */;
-import Background from "Background" /* 5630 */;
+import Button from "Button" /* 4929 */;
+import getIsScreenLandscape from "getIsScreenLandscape" /* 5080 */;
+import Background from "Background" /* 5631 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
@@ -63,7 +63,7 @@ export default function GuildRoleSubscriptionTierTemplateUpsellActionSheet(arg0)
   obj1 = { accessibilityRole: "image", accessibilityLabel: null, children: null };
   const intl = getSystemLocale.intl;
   obj1[1] = intl.string(getSystemLocale.t.gCgirr);
-  obj1[2] = callback2(markAsDismissed(8617), { style: tmp.videoContainer, src: closure_12, width: tmp3, height: tmp3 / 1.7289156626506024, muted: true, paused: stateFromStores, ariaHidden: true });
+  obj1[2] = callback2(markAsDismissed(8621), { style: tmp.videoContainer, src: closure_12, width: tmp3, height: tmp3 / 1.7289156626506024, muted: true, paused: stateFromStores, ariaHidden: true });
   const items2 = [callback2(View, obj1), , ];
   const obj3 = { style: tmp.info, children: null };
   const obj4 = { variant: "heading-lg/semibold", style: tmp.title, color: "mobile-text-heading-primary", children: null };

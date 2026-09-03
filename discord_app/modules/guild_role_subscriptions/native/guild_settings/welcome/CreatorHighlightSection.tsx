@@ -1,11 +1,11 @@
-// === Module 17527: GuildServerSubscriberCount ===
+// === Module 17547: GuildServerSubscriberCount ===
 
-// Module 17527 (GuildServerSubscriberCount)
+// Module 17547 (GuildServerSubscriberCount)
 import ThemesDefault from "Themes" /* 709 */;
 import getSystemLocale from "getSystemLocale" /* 1233 */;
 import Button from "Button" /* 1296 */;
 import Text from "Text" /* 4474 */;
-import registerAssetDefault from "registerAsset" /* 9153 */;
+import registerAssetDefault from "registerAsset" /* 9157 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
@@ -41,14 +41,14 @@ function CreatorGuildCard(highlightedCreatorGuild) {
   guild_id = highlightedCreatorGuild.guild_id;
   let quote_attribution_title = highlightedCreatorGuild.quote_attribution_title;
   ({ quote, quote_attribution } = highlightedCreatorGuild);
-  const tmp4 = guild_id(17528)(guild_id, 3, 60);
+  const tmp4 = guild_id(17548)(guild_id, 3, 60);
   dependencyMap = tmp4;
   hasAllImperativeDetails = tmp4.hasAllImperativeDetails;
   let items = [hasAllImperativeDetails, tmp4];
   if (tmp4.isLoading) {
     let obj = { style: null, children: null };
     obj[0] = tmp.cardContainer;
-    obj[1] = callback(tmp2(17500), {});
+    obj[1] = callback(tmp2(17520), {});
     return callback(closure_4, obj);
   } else if (hasAllImperativeDetails) {
     const details = tmp4.details;
@@ -63,7 +63,7 @@ function CreatorGuildCard(highlightedCreatorGuild) {
     const obj2 = { uri: null };
     obj2[0] = guildAvatarUrl;
     obj1[1] = obj2;
-    const items1 = [callback(tmp2(5501), obj1), ];
+    const items1 = [callback(tmp2(5502), obj1), ];
     const obj3 = { style: null, children: null };
     obj3[0] = tmp.cardHeaderContainer;
     const obj4 = { variant: "heading-md/extrabold", color: "mobile-text-heading-primary", lineClamp: 1, lineBreakMode: "tail", children: null };
@@ -143,7 +143,7 @@ function CreatorGuildCard(highlightedCreatorGuild) {
     const intl4 = tmp10(1233).intl;
     obj14[1] = intl4.string(_require(1233).t.mQ2IGa);
     obj14[2] = tmp5;
-    obj13[1] = callback(_require(4929).BaseTextButton, obj14);
+    obj13[1] = callback(_require(4930).BaseTextButton, obj14);
     items3[4] = callback(closure_4, obj13);
     obj[1] = items3;
     return closure_7(closure_4, obj);

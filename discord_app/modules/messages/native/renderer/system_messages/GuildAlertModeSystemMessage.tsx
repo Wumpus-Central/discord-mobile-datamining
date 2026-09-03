@@ -1,14 +1,14 @@
-// === Module 7950: nativeStyleProperties ===
+// === Module 7953: nativeStyleProperties ===
 
-// Module 7950 (nativeStyleProperties)
+// Module 7953 (nativeStyleProperties)
 import ThemesDefault from "Themes" /* 709 */;
 import getSystemLocale from "getSystemLocale" /* 1233 */;
 import ensureAvatarSource from "ensureAvatarSource" /* 1433 */;
-import resultDefault from "result" /* 7871 */;
-import getMessageAuthorWithProcessedColor from "getMessageAuthorWithProcessedColor" /* 7878 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 7880 */;
-import createCommonMessageDefault from "createCommonMessage" /* 7882 */;
-import getTagPropertiesDefault from "getTagProperties" /* 7951 */;
+import resultDefault from "result" /* 7874 */;
+import getMessageAuthorWithProcessedColor from "getMessageAuthorWithProcessedColor" /* 7881 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 7883 */;
+import createCommonMessageDefault from "createCommonMessage" /* 7885 */;
+import getTagPropertiesDefault from "getTagProperties" /* 7954 */;
 import closure_3 from "ensureGuildLoaded" /* 1386 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -34,7 +34,7 @@ export const createGuildAlertModeEnabledSystemMessage = function createGuildAler
   obj[2] = str;
   const tmp3 = resultDefault(theme);
   obj = {};
-  const merged = Object.assign(tmp(7882)(roleStyle));
+  const merged = Object.assign(tmp(7885)(roleStyle));
   const intl = tmp5(1233).intl;
   obj.content = intl.formatToParts(getSystemLocale.t.ig55n6, obj);
   const intl2 = tmp5(1233).intl;
@@ -56,7 +56,7 @@ export const createGuildAlertModeDisabledSystemMessage = function createGuildAle
   let obj = getMessageAuthorWithProcessedColor;
   const messageAuthorWithProcessedColor = obj.getMessageAuthorWithProcessedColor(message);
   obj = { username: messageAuthorWithProcessedColor.nick, usernameOnClick: formatUsernameOnClickDefault({ message, author: messageAuthorWithProcessedColor, roleStyle: roleStyle.roleStyle }) };
-  obj = { message, channel: "HermesInternal", isSystemDM: null, colors: -1 };
+  obj = { message, channel: "HermesInternal", isSystemDM: null, colors: "button" };
   obj[3] = resultDefault(theme);
   const tmp2 = resultDefault(theme);
   obj1 = {};

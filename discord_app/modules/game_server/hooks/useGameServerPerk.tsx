@@ -1,6 +1,6 @@
-// === Module 12364: useGameServerPerk ===
+// === Module 12376: useGameServerPerk ===
 
-// Module 12364 (useGameServerPerk)
+// Module 12376 (useGameServerPerk)
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "handleGameServerInstanceCreated" /* 4385 */;
 import { GAME_SERVER_POWERUP_SKU_ID as closure_5 } from "str11" /* 4366 */;

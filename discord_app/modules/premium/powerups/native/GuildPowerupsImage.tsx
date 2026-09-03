@@ -1,9 +1,9 @@
-// === Module 12311: GuildPowerupsImage ===
+// === Module 12323: GuildPowerupsImage ===
 
-// Module 12311 (GuildPowerupsImage)
+// Module 12323 (GuildPowerupsImage)
 import initialize from "initialize" /* 586 */;
-import preloadDefault from "preload" /* 5501 */;
-import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 8110 */;
+import preloadDefault from "preload" /* 5502 */;
+import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 8113 */;
 import closure_3 from "maybeApplyNoTextColorForLightCustomTheme" /* 4470 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;

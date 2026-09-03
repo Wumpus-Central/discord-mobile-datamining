@@ -1,13 +1,13 @@
-// === Module 11766: items ===
+// === Module 11772: items ===
 
-// Module 11766 (items)
+// Module 11772 (items)
 import fromStringAll from "fromString" /* 503 */;
 import messagesProxyDefault from "messagesProxy" /* 3502 */;
 import parseRawEmojiObjectDefault from "parseRawEmojiObject" /* 4134 */;
-import closure_4 from "getEmojiToGroupId" /* 5409 */;
-import closure_5 from "handleFormOpen" /* 8078 */;
+import closure_4 from "getEmojiToGroupId" /* 5410 */;
+import closure_5 from "handleFormOpen" /* 8081 */;
 import closure_6 from "ensureGuildLoaded" /* 1386 */;
-import closure_7 from "insertUnsortedGuilds" /* 5389 */;
+import closure_7 from "insertUnsortedGuilds" /* 5390 */;
 import closure_8 from "mergeGuildAvatar" /* 1921 */;
 import { Permissions } from "ME" /* 673 */;
 import { EmojiIntention } from "set" /* 1924 */;

@@ -1,13 +1,13 @@
-// === Module 9476: _launchFrame ===
+// === Module 9480: _launchFrame ===
 
-// Module 9476 (_launchFrame)
+// Module 9480 (_launchFrame)
 import dispatcherDefault from "dispatcher" /* 706 */;
-import leaveCurrentEmbeddedActivity from "leaveCurrentEmbeddedActivity" /* 9481 */;
-import getFramesManagerDefault from "getFramesManager" /* 9509 */;
+import leaveCurrentEmbeddedActivity from "leaveCurrentEmbeddedActivity" /* 9485 */;
+import getFramesManagerDefault from "getFramesManager" /* 9513 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "map" /* 9477 */;
-import FrameLayoutModes from "FrameLayoutModes" /* 9478 */;
-import { ActivityPanelModes } from "ActivityPanelModes" /* 9479 */;
+import closure_4 from "map" /* 9481 */;
+import FrameLayoutModes from "FrameLayoutModes" /* 9482 */;
+import { ActivityPanelModes } from "ActivityPanelModes" /* 9483 */;
 
 require = arg1;
 function _launchFrame() {
@@ -18,8 +18,8 @@ function _launchFrame() {
     c6 = 0;
     c4 = 0;
     const iter = (function*(arg0) {
-      if (c6 === 2) {
-        c6 = 3;
+      if (constants === 2) {
+        constants = 3;
         HermesBuiltin.throwTypeError();
       } else if (tmp6 === 3) {
         if (arg0 === 1) {
@@ -33,13 +33,13 @@ function _launchFrame() {
         }
       } else {
         try {
-          c6 = 2;
-          if (0 === c5) {
+          constants = 2;
+          if (0 === frame2) {
             if (arg0 === 1) {
-              c6 = 3;
+              constants = 3;
               throw arg1;
             } else if (arg0 === 2) {
-              c6 = 3;
+              constants = 3;
               obj = { value: null, done: true };
               obj[0] = arg1;
               return obj;
@@ -48,121 +48,125 @@ function _launchFrame() {
               let callback2 = tmp7;
               let callback;
               callback2 = undefined;
-              ({ applicationId: c0, surface: c1 } = callback);
               dependencyMap = undefined;
-              let intent;
+              c3 = undefined;
+              ({ applicationId: c0, surface: c1, customId: c2, referrerId: c3 } = callback);
               let frame;
-              c5 = undefined;
-              c6 = undefined;
-              c5 = 1;
-              c6 = 1;
+              frame2 = undefined;
+              constants = undefined;
+              let lib;
+              let lib2;
+              frame2 = 1;
+              constants = 1;
               return { value: "PX_16", done: true };
             }
           } else if (1 === tmp7) {
             if (arg0 === 1) {
-              c6 = 3;
+              constants = 3;
               throw arg1;
             } else if (arg0 === 2) {
-              c6 = 3;
+              constants = 3;
               obj1 = { value: null, done: true };
               obj1[0] = arg1;
               return obj1;
             } else {
-              dependencyMap = callback5(callback, callback2);
-              intent = frame.getFrame(dependencyMap);
-              if (null != intent) {
-                if (intent.intent === c5.MAIN) {
-                  callback7(dependencyMap);
-                  const obj2 = { frameId: null, layoutMode: null };
-                  obj2[0] = dependencyMap;
-                  obj2[1] = c6.FOCUSED;
-                  callback8(obj2);
+              frame = callback3(callback, callback2);
+              frame2 = frame.getFrame(frame);
+              if (null != frame2) {
+                if (frame2.intent === frame2.MAIN) {
+                  callback5(frame);
+                  let obj2 = { frameId: null, layoutMode: null };
+                  obj2[0] = frame;
+                  obj2[1] = constants.FOCUSED;
+                  callback6(obj2);
                 }
-                c6 = 3;
+                constants = 3;
                 const obj3 = { value: null, done: true };
-                obj3[0] = dependencyMap;
+                obj3[0] = frame;
                 return obj3;
               } else {
-                if (callback4(callback2) === c5.MAIN) {
-                  let obj9 = callback(9481);
-                  const result = obj9.leaveCurrentEmbeddedActivity();
-                  callback6();
+                if (lib2(callback2) === frame2.MAIN) {
+                  let obj7 = callback(9485);
+                  const result = obj7.leaveCurrentEmbeddedActivity();
+                  callback4();
                 }
-                let obj10 = callback2(706);
-                let obj4 = { type: "FRAME_LAUNCH_START", applicationId: null, frameId: null, surface: null };
+                let obj8 = callback2(706);
+                const obj4 = { type: "FRAME_LAUNCH_START", applicationId: null, frameId: null, surface: null };
                 obj4[1] = callback;
-                obj4[2] = dependencyMap;
+                obj4[2] = frame;
                 obj4[3] = callback2;
-                obj10.dispatch(obj4);
+                obj8.dispatch(obj4);
                 frame = 1;
-                c5 = 4;
-                c6 = 1;
-                const obj5 = { value: null, done: false };
-                obj5[0] = callback(9482).createProxyTicket(callback, callback3(callback2));
+                let obj10 = callback(9486);
+                frame2 = 4;
+                constants = 1;
+                let obj5 = { value: null, done: false };
+                obj5[0] = obj10.createProxyTicket(callback, lib(callback2));
                 return obj5;
               }
             }
           } else if (2 === tmp7) {
             frame = 0;
-            callback3 = intent;
-            c5 = callback2(9465)();
-            let obj7 = callback(9508);
-            c5 = 3;
-            c6 = 1;
+            callback3 = c3;
+            lib = callback2(9469)();
+            obj5 = callback(9512);
+            frame2 = 3;
+            constants = 1;
             const obj6 = { value: null, done: false };
-            obj6[0] = obj7.getActivityLaunchErrorInfo(callback3, callback);
+            obj6[0] = obj5.getActivityLaunchErrorInfo(callback3, callback);
             return obj6;
           } else if (3 === tmp7) {
             if (arg0 === 1) {
-              c6 = 3;
+              constants = 3;
               throw arg1;
             } else if (arg0 === 2) {
-              c6 = 3;
+              constants = 3;
               obj7 = { value: null, done: true };
               obj7[0] = arg1;
               return obj7;
             } else {
-              c6 = arg1;
-              c5.showLaunchErrorModal(c6.message);
-              obj4 = callback2(706);
-              const obj8 = { type: "FRAME_LAUNCH_FAIL", applicationId: null, frameId: null, error: null };
+              lib2 = arg1;
+              lib.showLaunchErrorModal(lib2.message);
+              obj2 = callback2(706);
+              obj8 = { type: "FRAME_LAUNCH_FAIL", applicationId: null, frameId: null, error: null };
               obj8[1] = callback;
-              obj8[2] = dependencyMap;
+              obj8[2] = frame;
               obj8[3] = callback3;
-              obj4.dispatch(obj8);
+              obj2.dispatch(obj8);
               throw callback3;
             }
           } else if (arg0 === 1) {
-            c6 = 3;
+            constants = 3;
             throw arg1;
           } else if (arg0 === 2) {
             frame = 0;
-            c6 = 3;
-            obj9 = { value: null, done: true };
+            constants = 3;
+            const obj9 = { value: null, done: true };
             obj9[0] = arg1;
             return obj9;
           } else {
-            frame = arg1;
-            obj = callback2(706);
-            obj10 = { type: "FRAME_LAUNCH", applicationId: null, frameId: null, surface: null, proxyTicket: null };
+            constants = arg1;
+            obj10 = { type: "FRAME_LAUNCH", applicationId: null, frameId: null, surface: null, proxyTicket: null, customId: null, referrerId: null };
             obj10[1] = callback;
-            obj10[2] = dependencyMap;
+            obj10[2] = frame;
             obj10[3] = callback2;
-            obj10[4] = frame;
-            obj.dispatch(obj10);
+            obj10[4] = constants;
+            obj10[5] = dependencyMap;
+            obj10[6] = c3;
+            callback2(706).dispatch(obj10);
             frame = 0;
-            c6 = 3;
-            const obj11 = { value: null, done: true };
-            obj11[0] = dependencyMap;
-            return obj11;
+            constants = 3;
+            obj = { value: null, done: true };
+            obj[0] = frame;
+            return obj;
           }
-        } catch (tmp75) {
-          intent = tmp75;
+        } catch (tmp66) {
+          c3 = tmp66;
           if (tmp4 === frame) {
-            c6 = tmp2;
-            throw tmp75;
+            constants = tmp2;
+            throw tmp66;
           } else {
-            c5 = tmp;
+            frame2 = tmp;
           }
         }
       }
@@ -328,8 +332,8 @@ function _refreshProxyTicket() {
           } else if (2 === tmp9) {
             frame = 1;
             c5 = closure_3;
-            closure_3 = applicationId(9465)();
-            let obj8 = callback(9508);
+            closure_3 = applicationId(9469)();
+            let obj8 = callback(9512);
             c5 = 3;
             c6 = 1;
             const obj4 = { value: null, done: false };

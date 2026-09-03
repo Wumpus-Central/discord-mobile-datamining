@@ -1,8 +1,8 @@
-// === Module 9437: usePersonalizedVoiceChannelUsers ===
+// === Module 9441: usePersonalizedVoiceChannelUsers ===
 
-// Module 9437 (usePersonalizedVoiceChannelUsers)
-import closure_2 from "recomputeAffinities" /* 7413 */;
-import closure_3 from "hasConsented" /* 6062 */;
+// Module 9441 (usePersonalizedVoiceChannelUsers)
+import closure_2 from "recomputeAffinities" /* 7414 */;
+import closure_3 from "hasConsented" /* 6063 */;
 import closure_4 from "mergeGuildAvatar" /* 1921 */;
 import closure_5 from "getVoiceStatesForGuild" /* 4555 */;
 import { Consents } from "ME" /* 673 */;

@@ -1,10 +1,10 @@
-// === Module 11200: isSelectedFromHomeChannel ===
+// === Module 11204: isSelectedFromHomeChannel ===
 
-// Module 11200 (isSelectedFromHomeChannel)
+// Module 11204 (isSelectedFromHomeChannel)
 import handleConnectionOpenDefault from "handleConnectionOpen" /* 1980 */;
 import coerceMainRoute from "coerceMainRoute" /* 4332 */;
 import getRootNavigationRef from "getRootNavigationRef" /* 4333 */;
-import handlePermissionsChangeDefault from "handlePermissionsChange" /* 6135 */;
+import handlePermissionsChangeDefault from "handlePermissionsChange" /* 6136 */;
 import { isGuildHomeChannel } from "set" /* 1393 */;
 
 require = arg1;

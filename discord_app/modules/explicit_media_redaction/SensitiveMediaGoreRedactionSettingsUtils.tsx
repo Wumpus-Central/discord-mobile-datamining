@@ -1,6 +1,6 @@
-// === Module 6154: resolveGoreSettingWithDefaults ===
+// === Module 6155: resolveGoreSettingWithDefaults ===
 
-// Module 6154 (resolveGoreSettingWithDefaults)
+// Module 6155 (resolveGoreSettingWithDefaults)
 import create from "create" /* 1305 */;
 import explicitContentFromProto from "explicitContentFromProto" /* 4166 */;
 import SettingsDefaultFeature from "SettingsDefaultFeature" /* 4179 */;

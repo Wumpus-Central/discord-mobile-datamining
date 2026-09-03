@@ -12,8 +12,8 @@ function createFastConnectSocket() {
   if (null != window.WebSocket) {
     obj = _require(1234);
     if (obj.isAndroid()) {
-      let supportsZstd = obj(13528).getConstants().supportsZstd;
-      const obj2 = obj(13528);
+      let supportsZstd = obj(13543).getConstants().supportsZstd;
+      const obj2 = obj(13543);
     } else {
       supportsZstd = closure_4.DCDCompressionManager.supportsZstd;
     }
@@ -23,7 +23,7 @@ function createFastConnectSocket() {
     }
     const _window = window;
     let GATEWAY_ENDPOINT = window.GLOBAL_ENV.GATEWAY_ALT_ENDPOINT;
-    if (!obj(13515)()) {
+    if (!obj(13530)()) {
       const _window2 = window;
       GATEWAY_ENDPOINT = window.GLOBAL_ENV.GATEWAY_ENDPOINT;
     }
@@ -33,7 +33,7 @@ function createFastConnectSocket() {
     obj.log(`[FAST CONNECT] ${tmp10}`);
     const _Date = Date;
     _require = Date.now();
-    const tmp12 = obj(13511)(combined);
+    const tmp12 = obj(13526)(combined);
     const _parseFloat = parseFloat;
     const parsed = parseFloat(tmp12._socketId);
     const _isNaN = isNaN;
@@ -43,14 +43,14 @@ function createFastConnectSocket() {
       const isAndroidResult = tmp3(1234).isAndroid();
       if (supportsZstd) {
         if (isAndroidResult) {
-          let tmp7Result = tmp7(13528);
+          let tmp7Result = tmp7(13543);
           const result = tmp7Result.enableZstdStreamSupport(parsed);
         } else {
           const DCDCompressionManager2 = closure_4.DCDCompressionManager;
           const result1 = DCDCompressionManager2.enableZstdStreamSupport(parsed, 0);
         }
       } else if (isAndroidResult) {
-        tmp7Result = tmp7(13528);
+        tmp7Result = tmp7(13543);
         const result2 = tmp7Result.enableZlibStreamSupport(parsed);
       } else {
         const DCDCompressionManager = closure_4.DCDCompressionManager;

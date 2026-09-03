@@ -1,12 +1,12 @@
-// === Module 11816: ForumPostList ===
+// === Module 11822: ForumPostList ===
 
-// Module 11816 (ForumPostList)
+// Module 11822 (ForumPostList)
 import noopAll from "noop" /* 19 */;
-import useAvailableTags from "useAvailableTags" /* 6130 */;
-import ForumPostPinIconDefault from "ForumPostPinIcon" /* 11798 */;
-import ForumPostAppliedTagPills from "ForumPostAppliedTagPills" /* 11808 */;
-import ForumPostListBodyDefault from "ForumPostListBody" /* 11817 */;
-import ForumPostListFooterDefault from "ForumPostListFooter" /* 11820 */;
+import useAvailableTags from "useAvailableTags" /* 6131 */;
+import ForumPostPinIconDefault from "ForumPostPinIcon" /* 11804 */;
+import ForumPostAppliedTagPills from "ForumPostAppliedTagPills" /* 11814 */;
+import ForumPostListBodyDefault from "ForumPostListBody" /* 11823 */;
+import ForumPostListFooterDefault from "ForumPostListFooter" /* 11826 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { ChannelFlags } from "set" /* 1393 */;

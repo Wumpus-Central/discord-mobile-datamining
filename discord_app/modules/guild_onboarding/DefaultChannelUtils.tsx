@@ -1,6 +1,6 @@
-// === Module 5477: useCanChannelBeDefault ===
+// === Module 5478: useCanChannelBeDefault ===
 
-// Module 5477 (useCanChannelBeDefault)
+// Module 5478 (useCanChannelBeDefault)
 import fromStringAll from "fromString" /* 503 */;
 import applyOverwritesAll from "applyOverwrites" /* 4125 */;
 import closure_3 from "isSubscriptionGated" /* 1982 */;

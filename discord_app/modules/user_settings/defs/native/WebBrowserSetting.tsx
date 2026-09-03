@@ -1,12 +1,12 @@
-// === Module 15302: route ===
+// === Module 15317: route ===
 
-// Module 15302 (route)
+// Module 15317 (route)
 import set from "set" /* 2 */;
 import ME from "ME" /* 673 */;
 import getSystemLocale from "getSystemLocale" /* 1233 */;
-import GlobeEarthIcon from "GlobeEarthIcon" /* 9382 */;
-import useWebBrowserSettingOptions from "useWebBrowserSettingOptions" /* 15303 */;
-import createToggle from "createToggle" /* 11288 */;
+import GlobeEarthIcon from "GlobeEarthIcon" /* 9386 */;
+import useWebBrowserSettingOptions from "useWebBrowserSettingOptions" /* 15318 */;
+import createToggle from "createToggle" /* 11292 */;
 
 obj = {
   useTitle() {
@@ -23,7 +23,7 @@ obj = {
 obj = {
   route: ME.UserSettingsSections.BROWSER,
   getComponent() {
-    return require(15304).default;
+    return require(15319).default;
   }
 };
 const route = createToggle.createRoute(obj);

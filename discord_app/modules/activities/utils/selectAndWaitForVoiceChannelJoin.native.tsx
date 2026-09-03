@@ -1,6 +1,6 @@
-// === Module 9502: _selectAndWaitForVoiceChannelJoin ===
+// === Module 9506: _selectAndWaitForVoiceChannelJoin ===
 
-// Module 9502 (_selectAndWaitForVoiceChannelJoin)
+// Module 9506 (_selectAndWaitForVoiceChannelJoin)
 import closure_2 from "asyncGeneratorStep" /* 5 */;
 import closure_3 from "handleConnectionOpen" /* 1980 */;
 

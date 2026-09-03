@@ -1,10 +1,10 @@
-// === Module 5126: getCreateAttachmentURL ===
+// === Module 5127: getCreateAttachmentURL ===
 
-// Module 5126 (getCreateAttachmentURL)
-import items from "items" /* 5082 */;
-import getUploadFileSizeSumAll from "getUploadFileSizeSum" /* 5086 */;
-import getCreateAttachmentURLDefault from "getCreateAttachmentURL" /* 5127 */;
-import getCreateAttachmentURLDefault2 from "getCreateAttachmentURL" /* 5129 */;
+// Module 5127 (getCreateAttachmentURL)
+import items from "items" /* 5083 */;
+import getUploadFileSizeSumAll from "getUploadFileSizeSum" /* 5087 */;
+import getCreateAttachmentURLDefault from "getCreateAttachmentURL" /* 5128 */;
+import getCreateAttachmentURLDefault2 from "getCreateAttachmentURL" /* 5130 */;
 import closure_4 from "ensureGuildLoaded" /* 1386 */;
 import ME from "ME" /* 673 */;
 

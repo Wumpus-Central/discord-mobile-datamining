@@ -1,6 +1,6 @@
-// === Module 15842: useMessagesSpecs ===
+// === Module 15858: useMessagesSpecs ===
 
-// Module 15842 (useMessagesSpecs)
+// Module 15858 (useMessagesSpecs)
 import closure_4 from "_objectWithoutProperties" /* 109 */;
 import closure_5 from "noop" /* 19 */;
 import { DM_WIDTH } from "ME" /* 673 */;
@@ -10,7 +10,7 @@ let closure_3 = ["height"];
 const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/useMessagesSpecs.tsx");
 
 export default function useMessagesSpecs() {
-  fontScale = fontScale(4935).useFontScale();
+  fontScale = fontScale(4936).useFontScale();
   top = top(1627)().top;
   const items = [fontScale, top];
   return React.useMemo(() => {

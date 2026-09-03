@@ -1,20 +1,21 @@
-// === Module 8228: usePremiumPlanPrice ===
+// === Module 8232: usePremiumPlanPrice ===
 
-// Module 8228 (usePremiumPlanPrice)
+// Module 8232 (usePremiumPlanPrice)
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "addSubscriptionPlan" /* 4144 */;
 import closure_5 from "reset" /* 4145 */;
-import closure_6 from "updateProduct" /* 6092 */;
+import closure_6 from "updateProduct" /* 6093 */;
 import { PaymentGateways } from "sum" /* 502 */;
 
 const require = arg1;
+let obj = { IAP: "IAP", API: "API" };
 const result = require("set").fileFinishedImporting("modules/premium/native/hooks/usePremiumPlanPrice.tsx");
 
 export default function usePremiumPlanPrice(arg0) {
   const _require = arg0;
   let formatPrice = _require;
   let amount = priceState;
-  let obj = _require(priceState[5]);
+  obj = _require(priceState[5]);
   const items = [closure_5];
   const stateFromStores = obj.useStateFromStores(items, () => closure_5.getPremiumTypeSubscription());
   const NitroACOMSubscriptionExperiment = _require(priceState[6]).NitroACOMSubscriptionExperiment;
@@ -80,7 +81,7 @@ export default function usePremiumPlanPrice(arg0) {
                   country = tmp6.country;
                   obj.fail(() => {
                     if (!isIOSResult.isFetchingForPremiumSKUs()) {
-                      const obj = country(priceState[13]);
+                      obj = country(priceState[13]);
                       const premiumSubscriptionPlans = obj.fetchPremiumSubscriptionPlans(country, undefined, undefined, closure_2_7.APPLE_ADVANCED_COMMERCE);
                       premiumSubscriptionPlans.catch(() => {
 
@@ -103,11 +104,11 @@ export default function usePremiumPlanPrice(arg0) {
   if (tmp5 == arg0) {
     return null;
   } else if (isIOSResult) {
-    let tmp14 = null;
+    let tmp15 = null;
     if (priceState === formatPrice(amount[8]).PriceStates.PRICE_AVAILABLE) {
-      tmp14 = null;
+      tmp15 = null;
       if (tmp5 != price) {
-        obj = { price: null, currency: null, countryCode: null, priceString: null, source: "API" };
+        obj = { price: null, currency: null, countryCode: null, priceString: null, source: null };
         ({ amount: obj7[0], currency: obj7[1] } = price);
         tmp5 = storeFront == tmp5;
         let country;
@@ -120,14 +121,15 @@ export default function usePremiumPlanPrice(arg0) {
         amount = price.amount;
         price = formatPrice(amount, price.currency);
         obj[3] = price;
-        tmp14 = obj;
+        obj[4] = obj.API;
+        tmp15 = obj;
       }
     }
-    let tmp12 = tmp14;
+    let tmp12 = tmp15;
   } else {
     tmp12 = null;
     if (tmp5 != stateFromStores2) {
-      obj = { price: null, currency: null, countryCode: null, priceString: null, source: "IAP" };
+      obj = { price: null, currency: null, countryCode: null, priceString: null, source: null };
       ({ price: obj6[0], currencyCode: obj6[1] } = stateFromStores2);
       let country1;
       if (storeFront != tmp5) {
@@ -138,7 +140,9 @@ export default function usePremiumPlanPrice(arg0) {
       }
       obj[2] = country1;
       obj[3] = stateFromStores2.priceString;
+      obj[4] = obj.IAP;
       tmp12 = obj;
     }
   }
 };
+export const PremiumPlanPriceSource = obj;

@@ -1,10 +1,11 @@
-// === Module 15741: MOBILE_NOTIF_SETTINGS_RENDERER_CONFIG ===
+// === Module 15755: MOBILE_NOTIF_SETTINGS_RENDERER_CONFIG ===
 
-// Module 15741 (MOBILE_NOTIF_SETTINGS_RENDERER_CONFIG)
-import routeAll from "route" /* 15743 */;
-import toggleAll from "toggle" /* 15745 */;
+// Module 15755 (MOBILE_NOTIF_SETTINGS_RENDERER_CONFIG)
+import routeAll from "route" /* 15757 */;
+import toggleAll from "toggle" /* 15761 */;
 
 const obj = {};
+obj[require("MobileNotifSettings").MobileNotifSettings.NOTIFICATIONS_REDESIGN] = routeAll.RootRoute;
 obj[require("MobileNotifSettings").MobileNotifSettings.NOTIF_REALTIME] = routeAll.RealtimeRoute;
 obj[require("MobileNotifSettings").MobileNotifSettings.NOTIF_CATEGORY_SOCIAL] = routeAll.CategorySocialRoute;
 obj[require("MobileNotifSettings").MobileNotifSettings.NOTIF_CATEGORY_SERVER] = routeAll.CategoryServerRoute;

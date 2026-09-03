@@ -1,19 +1,19 @@
-// === Module 15025: EnrolledBodyWatchTask ===
+// === Module 15040: EnrolledBodyWatchTask ===
 
-// Module 15025 (EnrolledBodyWatchTask)
+// Module 15040 (EnrolledBodyWatchTask)
 import ThemesDefault from "Themes" /* 709 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
-import QuestsVisibleMessagesChangedSource from "QuestsVisibleMessagesChangedSource" /* 5398 */;
-import QuestBottomSheet from "QuestBottomSheet" /* 14947 */;
-import QuestBottomSheetHeaderDefault from "QuestBottomSheetHeader" /* 14948 */;
-import useQuestRewardClaimHandlerDefault from "useQuestRewardClaimHandler" /* 14949 */;
+import QuestsVisibleMessagesChangedSource from "QuestsVisibleMessagesChangedSource" /* 5399 */;
+import QuestBottomSheet from "QuestBottomSheet" /* 14962 */;
+import QuestBottomSheetHeaderDefault from "QuestBottomSheetHeader" /* 14963 */;
+import useQuestRewardClaimHandlerDefault from "useQuestRewardClaimHandler" /* 14964 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "initializeState" /* 7458 */;
-import closure_7 from "QuestDockMode" /* 14920 */;
-import QuestsExperimentLocations from "QuestsExperimentLocations" /* 5395 */;
-import QUEST_DOCK_COLLAPSED_HEIGHT from "QUEST_DOCK_COLLAPSED_HEIGHT" /* 14922 */;
+import closure_6 from "initializeState" /* 7459 */;
+import closure_7 from "QuestDockMode" /* 14935 */;
+import QuestsExperimentLocations from "QuestsExperimentLocations" /* 5396 */;
+import QUEST_DOCK_COLLAPSED_HEIGHT from "QUEST_DOCK_COLLAPSED_HEIGHT" /* 14937 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -197,9 +197,9 @@ let closure_15 = createCacheKey.createStyles(obj);
 let obj2 = { marginTop: ThemesDefault.space.PX_16 };
 let obj3 = { marginLeft: -1 * QUEST_DOCK_EXPANDED_PADDING_HORIZONTAL, marginRight: -1 * QUEST_DOCK_EXPANDED_PADDING_HORIZONTAL };
 const memoResult = importAllResult.memo(function QuestDockEnrolledBody() {
-  let obj = minExpandedContentHeight(14929);
+  let obj = minExpandedContentHeight(14944);
   const questDockQuest = obj.useQuestDockQuest();
-  minExpandedContentHeight = importAllResult.useContext(minExpandedContentHeight(14923).QuestDockGestureContext).minExpandedContentHeight;
+  minExpandedContentHeight = importAllResult.useContext(minExpandedContentHeight(14938).QuestDockGestureContext).minExpandedContentHeight;
   const items = [minExpandedContentHeight];
   const items1 = [minExpandedContentHeight];
   const callback = importAllResult.useCallback((nativeEvent) => {

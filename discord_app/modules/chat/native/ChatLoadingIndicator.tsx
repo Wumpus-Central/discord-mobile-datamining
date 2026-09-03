@@ -1,20 +1,20 @@
-// === Module 13153: openLoadingIndicatorDebugBody ===
+// === Module 13165: openLoadingIndicatorDebugBody ===
 
-// Module 13153 (openLoadingIndicatorDebugBody)
+// Module 13165 (openLoadingIndicatorDebugBody)
 import initialize from "initialize" /* 586 */;
 import ThemesDefault from "Themes" /* 709 */;
 import _modDef4217 from "module_4217" /* 4217 */;
 import Text from "Text" /* 4474 */;
-import _modDef4858 from "module_4858" /* 4858 */;
+import _modDef4859 from "module_4859" /* 4859 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_6 from "maybeApplyNoTextColorForLightCustomTheme" /* 4470 */;
-import closure_7 from "_handleConnectionOpen" /* 5229 */;
-import closure_8 from "reinjectEphemerals" /* 4735 */;
+import closure_7 from "_handleConnectionOpen" /* 5230 */;
+import closure_8 from "reinjectEphemerals" /* 4736 */;
 import closure_9 from "handleConnectionOpen" /* 1980 */;
 import closure_10 from "mergeGuildAvatar" /* 1921 */;
-import closure_11 from "getState" /* 7166 */;
+import closure_11 from "getState" /* 7167 */;
 import { AppStates } from "ME" /* 673 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
@@ -47,8 +47,8 @@ function openLoadingIndicatorDebugBody() {
         };
       });
     };
-    _modDef4858.openLazy(obj);
-    const obj2 = _modDef4858;
+    _modDef4859.openLazy(obj);
+    const obj2 = _modDef4859;
   }
 }
 let c4 = importAllResult;
@@ -281,7 +281,7 @@ export const ChannelHeaderLoadingIndicator = function ChannelHeaderLoadingIndica
     obj2 = { onPress: null, children: null };
     obj2[0] = openLoadingIndicatorDebugBody;
     obj2[1] = tmp8;
-    tmp7Result = callback2(stateFromStores(5076).PressableOpacity, obj2);
+    tmp7Result = callback2(stateFromStores(5077).PressableOpacity, obj2);
   }
   return tmp7Result;
 };

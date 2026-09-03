@@ -1,7 +1,7 @@
-// === Module 12298: useGuildPowerupsNewBadge ===
+// === Module 12310: useGuildPowerupsNewBadge ===
 
-// Module 12298 (useGuildPowerupsNewBadge)
-import useGuildPowerupNewPerkMarketingVersionDefault from "useGuildPowerupNewPerkMarketingVersion" /* 12291 */;
+// Module 12310 (useGuildPowerupsNewBadge)
+import useGuildPowerupNewPerkMarketingVersionDefault from "useGuildPowerupNewPerkMarketingVersion" /* 12303 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import closure_5 from "calculateAppliedBoosts" /* 4364 */;
@@ -37,7 +37,7 @@ export default function useGuildPowerupsNewBadge(arg0) {
       tmp6 = closure_8;
     }
   }
-  const tmp7 = callback(_require(6260).useSelectedVersionedDismissibleContent(tmp6, num), 2);
+  const tmp7 = callback(_require(6261).useSelectedVersionedDismissibleContent(tmp6, num), 2);
   _require = tmp8;
   importDefault = tmp9;
   const items1 = [tmp7[0] === closure_8, tmp7[1]];
@@ -60,7 +60,7 @@ export const useAutoDismissGuildPowerupsNewBadge = function useAutoDismissGuildP
   const items = [closure_5];
   const stateFromStores = _require(586).useStateFromStores(items, () => closure_1_5.getStateForGuild(closure_0));
   let obj = _require(586);
-  const tmp2Result = num(12291)(guildId, stateFromStores);
+  const tmp2Result = num(12303)(guildId, stateFromStores);
   num = 0;
   if (tmp2Result >= constants.GUILD_THEME) {
     num = tmp2Result;

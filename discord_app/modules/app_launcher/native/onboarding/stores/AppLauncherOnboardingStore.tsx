@@ -1,11 +1,11 @@
-// === Module 11840: initialize ===
+// === Module 11846: initialize ===
 
-// Module 11840 (initialize)
+// Module 11846 (initialize)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import initializeDefault from "initialize" /* 586 */;
 import dispatcherDefault from "dispatcher" /* 706 */;
-import ApplicationCommandSectionType from "ApplicationCommandSectionType" /* 7277 */;
-import result2 from "result" /* 11838 */;
+import ApplicationCommandSectionType from "ApplicationCommandSectionType" /* 7278 */;
+import result2 from "result" /* 11844 */;
 import closure_5 from "mergeGuildAvatar" /* 1921 */;
 
 require = arg1;

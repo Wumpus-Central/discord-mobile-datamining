@@ -1,11 +1,11 @@
-// === Module 12803: _maybeFetchCollectionsWithProducts ===
+// === Module 12815: _maybeFetchCollectionsWithProducts ===
 
-// Module 12803 (_maybeFetchCollectionsWithProducts)
+// Module 12815 (_maybeFetchCollectionsWithProducts)
 import setDefault from "set" /* 684 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_getSystemLocale" /* 1995 */;
-import closure_5 from "getFetchState" /* 12801 */;
-import closure_6 from "fromServer" /* 7315 */;
+import closure_5 from "getFetchState" /* 12813 */;
+import closure_6 from "fromServer" /* 7316 */;
 import { Endpoints } from "ME" /* 673 */;
 
 const require = arg1;

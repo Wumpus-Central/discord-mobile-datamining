@@ -1,8 +1,8 @@
-// === Module 12533: CreateGameInvitePostContent ===
+// === Module 12545: CreateGameInvitePostContent ===
 
-// Module 12533 (CreateGameInvitePostContent)
+// Module 12545 (CreateGameInvitePostContent)
 import ThemesDefault from "Themes" /* 709 */;
-import contextDefault from "context" /* 5961 */;
+import contextDefault from "context" /* 5962 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
@@ -17,7 +17,7 @@ function CreateGameInvitePostContent(parentChannel) {
   dependencyMap = undefined;
   let noMicTag;
   const tmp = callback3();
-  const insets = first(5602)({ includeKeyboardHeight: true }).insets;
+  const insets = first(5603)({ includeKeyboardHeight: true }).insets;
   let availableTags = parentChannel.availableTags;
   if (availableTags == null) {
     availableTags = [];
@@ -28,7 +28,7 @@ function CreateGameInvitePostContent(parentChannel) {
   dependencyMap = tmp7[1];
   let items = [first];
   const memo = React.useMemo(() => new Set(first.map((id) => id.id)), items);
-  let obj = parentChannel(12534);
+  let obj = parentChannel(12546);
   obj = {
     parentChannel,
     description: tmp5,
@@ -77,8 +77,8 @@ function CreateGameInvitePostContent(parentChannel) {
   obj2[3] = function onPress() {
     return parentChannel(lib[10]).closeCreateGameInvitePostModal();
   };
-  obj2[4] = callback(parentChannel(5559).XSmallIcon, {});
-  const items4 = [callback(parentChannel(5076).PressableOpacity, obj2), ];
+  obj2[4] = callback(parentChannel(5560).XSmallIcon, {});
+  const items4 = [callback(parentChannel(5077).PressableOpacity, obj2), ];
   const obj3 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
   const intl2 = parentChannel(1233).intl;
   obj3[2] = intl2.string(first(3436).tOsHsu);
@@ -93,8 +93,8 @@ function CreateGameInvitePostContent(parentChannel) {
   obj5[1] = intl4.string(first(3436)["SU/IAE"]);
   obj5[2] = tmp5;
   obj5[3] = tmp6;
-  obj5[4] = parentChannel(6127).GAME_INVITE_POST_MESSAGE_MAX_LENGTH;
-  const items6 = [callback(parentChannel(7817).TextArea, obj5), ];
+  obj5[4] = parentChannel(6128).GAME_INVITE_POST_MESSAGE_MAX_LENGTH;
+  const items6 = [callback(parentChannel(7820).TextArea, obj5), ];
   let tmp15Result = availableTags.length > 0;
   if (tmp15Result) {
     const obj6 = { label: null, subLabel: null, arrow: true, trailing: null, onPress: null };
@@ -113,7 +113,7 @@ function CreateGameInvitePostContent(parentChannel) {
     obj7[1] = tmp15(tmp9(4474).Text, obj8);
     obj6[3] = tmp15(tmp14, obj7);
     obj6[4] = callback1;
-    tmp15Result = tmp15(tmp9(5607).TableRow, obj6);
+    tmp15Result = tmp15(tmp9(5608).TableRow, obj6);
   }
   const obj9 = { hasIcons: false, children: null };
   const items7 = [tmp15Result, ];
@@ -125,9 +125,9 @@ function CreateGameInvitePostContent(parentChannel) {
   obj10[2] = voiceChatEnabled;
   obj10[3] = callback;
   obj10[4] = voiceToggleDisabled;
-  items7[1] = callback(parentChannel(6001).TableSwitchRow, obj10);
+  items7[1] = callback(parentChannel(6002).TableSwitchRow, obj10);
   obj9[1] = items7;
-  items6[1] = callback2(parentChannel(6000).TableRowGroup, obj9);
+  items6[1] = callback2(parentChannel(6001).TableRowGroup, obj9);
   obj4[1] = items6;
   items5[1] = callback2(View, obj4);
   const obj11 = { style: items8, children: null };
@@ -138,7 +138,7 @@ function CreateGameInvitePostContent(parentChannel) {
   obj12[4] = submitting;
   obj12[5] = !canSubmit;
   obj12[6] = submit;
-  obj11[1] = callback(parentChannel(4928).Button, obj12);
+  obj11[1] = callback(parentChannel(4929).Button, obj12);
   items5[2] = callback(View, obj11);
   obj[1] = items5;
   return callback2(View, obj);
@@ -169,7 +169,7 @@ export default function CreateGameInvitePostModal(parentChannelId) {
   const items = [closure_6];
   const items1 = [parentChannelId];
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_6.getChannel(parentChannelId), items1);
-  parentChannelId(5509).useNavigatorBackPressHandler(() => {
+  parentChannelId(5510).useNavigatorBackPressHandler(() => {
     const result = parentChannelId(table[10]).closeCreateGameInvitePostModal();
     return true;
   });
@@ -182,7 +182,7 @@ export default function CreateGameInvitePostModal(parentChannelId) {
       obj = { parentChannel: null };
       obj[0] = stateFromStores;
       obj[1] = callback(CreateGameInvitePostContent, obj);
-      tmp4 = callback(parentChannelId(5961).AnalyticsLocationProvider, obj);
+      tmp4 = callback(parentChannelId(5962).AnalyticsLocationProvider, obj);
     }
   }
   return tmp4;

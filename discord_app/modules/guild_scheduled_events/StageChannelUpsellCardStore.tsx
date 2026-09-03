@@ -1,6 +1,6 @@
-// === Module 9713: useStageChannelUpsellCardStore ===
+// === Module 9717: useStageChannelUpsellCardStore ===
 
-// Module 9713 (useStageChannelUpsellCardStore)
+// Module 9717 (useStageChannelUpsellCardStore)
 import set from "set" /* 2 */;
 import GUILD_EVENT_MAX_NAME_LENGTH from "GUILD_EVENT_MAX_NAME_LENGTH" /* 1392 */;
 import isIterable from "isIterable" /* 4105 */;

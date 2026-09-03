@@ -1,6 +1,6 @@
-// === Module 11556: canFulfillStreamRequest ===
+// === Module 11561: canFulfillStreamRequest ===
 
-// Module 11556 (canFulfillStreamRequest)
+// Module 11561 (canFulfillStreamRequest)
 import closure_2 from "initialize" /* 4501 */;
 import closure_3 from "reset" /* 4500 */;
 import closure_4 from "fetchFingerprint" /* 1215 */;

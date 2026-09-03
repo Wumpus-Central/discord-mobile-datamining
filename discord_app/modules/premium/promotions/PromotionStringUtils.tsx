@@ -1,11 +1,11 @@
-// === Module 13285: useFormatStringWithCommonPremiumParams ===
+// === Module 13297: useFormatStringWithCommonPremiumParams ===
 
-// Module 13285 (useFormatStringWithCommonPremiumParams)
+// Module 13297 (useFormatStringWithCommonPremiumParams)
 import initialize from "initialize" /* 586 */;
 import getSystemLocale from "getSystemLocale" /* 1233 */;
 import combinedDefault from "combined" /* 1994 */;
 import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4139 */;
-import formatSingleCurrencyPrice from "formatSingleCurrencyPrice" /* 6089 */;
+import formatSingleCurrencyPrice from "formatSingleCurrencyPrice" /* 6090 */;
 import closure_3 from "addSubscriptionPlan" /* 4144 */;
 import GuildFeatures from "GuildFeatures" /* 1923 */;
 

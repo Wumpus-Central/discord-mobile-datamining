@@ -1,6 +1,6 @@
-// === Module 13457: orderMarketablePerksForDisplay ===
+// === Module 13472: orderMarketablePerksForDisplay ===
 
-// Module 13457 (orderMarketablePerksForDisplay)
+// Module 13472 (orderMarketablePerksForDisplay)
 import closure_2 from "_slicedToArray" /* 32 */;
 import { GAME_SERVER_POWERUP_SKU_ID as closure_3 } from "str11" /* 4366 */;
 

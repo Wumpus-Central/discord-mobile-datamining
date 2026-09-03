@@ -1,9 +1,9 @@
-// === Module 7180: createFromServer ===
+// === Module 7181: createFromServer ===
 
-// Module 7180 (createFromServer)
+// Module 7181 (createFromServer)
 import toJSDefault from "toJS" /* 1935 */;
-import formatSingleCurrencyPrice from "formatSingleCurrencyPrice" /* 6089 */;
-import addDefault from "add" /* 6091 */;
+import formatSingleCurrencyPrice from "formatSingleCurrencyPrice" /* 6090 */;
+import addDefault from "add" /* 6092 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 
 require = arg1;
@@ -114,6 +114,23 @@ prototype["getPriceString"] = function getPriceString() {
   const obj = formatSingleCurrencyPrice;
   const obj2 = new addDefault(total.amount);
   return obj.formatPrice(new addDefault(total.amount).dividedBy(10 ** total.exponent).toNumber(), total.currency, { convertToMajorUnits: false });
+};
+prototype["getRegularPriceString"] = function getRegularPriceString() {
+  const price = this.price;
+  const obj = formatSingleCurrencyPrice;
+  const obj2 = new addDefault(price.amount);
+  return obj.formatPrice(new addDefault(price.amount).dividedBy(10 ** price.exponent).toNumber(), price.currency, { convertToMajorUnits: false });
+};
+prototype["getDiscountedPriceString"] = function getDiscountedPriceString() {
+  let formatPriceResult = null;
+  if (null != this.discount) {
+    const discounted_price = this.discount.discounted_price;
+    const obj2 = new addDefault(discounted_price.amount);
+    const obj = formatSingleCurrencyPrice;
+    formatPriceResult = obj.formatPrice(obj2.dividedBy(10 ** discounted_price.exponent).toNumber(), discounted_price.currency, { convertToMajorUnits: false });
+    const dividedByResult = obj2.dividedBy(10 ** discounted_price.exponent);
+  }
+  return formatPriceResult;
 };
 prototype["getAddOnPrice"] = function getAddOnPrice() {
   const self = this;

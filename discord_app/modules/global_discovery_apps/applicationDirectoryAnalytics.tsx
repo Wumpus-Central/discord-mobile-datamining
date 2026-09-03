@@ -1,6 +1,6 @@
-// === Module 7447: trackAppDirectoryProfileEmbed ===
+// === Module 7448: trackAppDirectoryProfileEmbed ===
 
-// Module 7447 (trackAppDirectoryProfileEmbed)
+// Module 7448 (trackAppDirectoryProfileEmbed)
 import expandEventPropertiesDefault from "expandEventProperties" /* 695 */;
 import closure_2 from "handleConnectionOpen" /* 1980 */;
 import closure_3 from "handleConnectionOpen" /* 4299 */;

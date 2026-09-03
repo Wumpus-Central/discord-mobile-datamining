@@ -1,9 +1,9 @@
-// === Module 6196: trackSearchStart ===
+// === Module 6197: trackSearchStart ===
 
-// Module 6196 (trackSearchStart)
+// Module 6197 (trackSearchStart)
 import debounceDefault from "debounce" /* 633 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 695 */;
-import closure_3 from "getEmojiToGroupId" /* 5409 */;
+import closure_3 from "getEmojiToGroupId" /* 5410 */;
 import ME from "ME" /* 673 */;
 
 const require = arg1;
@@ -100,8 +100,8 @@ export const searchSounds = function searchSounds(arg0, availableSounds, stateFr
     }
     let result1 = sum6 > 0;
     if (0 < sum6) {
-      result1 = lib(6197).canUseSoundboardSound(stateFromStores, name, tmp3);
-      const obj4 = lib(6197);
+      result1 = lib(6198).canUseSoundboardSound(stateFromStores, name, tmp3);
+      const obj4 = lib(6198);
     }
     let sum7 = sum6;
     if (result1) {

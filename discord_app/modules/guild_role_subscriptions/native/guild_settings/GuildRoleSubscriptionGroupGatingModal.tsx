@@ -1,13 +1,13 @@
-// === Module 17563: GuildRoleSubscriptionGroupGatingModal ===
+// === Module 17583: GuildRoleSubscriptionGroupGatingModal ===
 
-// Module 17563 (GuildRoleSubscriptionGroupGatingModal)
+// Module 17583 (GuildRoleSubscriptionGroupGatingModal)
 import noopAll from "noop" /* 19 */;
 import getSystemLocale from "getSystemLocale" /* 1233 */;
-import FormGuildGatingModeSelectorDefault from "FormGuildGatingModeSelector" /* 17543 */;
-import HeaderDefault from "Header" /* 17553 */;
+import FormGuildGatingModeSelectorDefault from "FormGuildGatingModeSelector" /* 17563 */;
+import HeaderDefault from "Header" /* 17573 */;
 import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "usePriceTiers" /* 17549 */;
-import { GuildRoleSubscriptionsTierScenes as closure_5 } from "MAX_SUBSCRIPTION_TIERS" /* 15030 */;
+import closure_4 from "usePriceTiers" /* 17569 */;
+import { GuildRoleSubscriptionsTierScenes as closure_5 } from "MAX_SUBSCRIPTION_TIERS" /* 15045 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

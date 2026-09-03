@@ -1,15 +1,15 @@
-// === Module 11791: action ===
+// === Module 11797: action ===
 
-// Module 11791 (action)
+// Module 11797 (action)
 import MAX_REACTIONS from "MAX_REACTIONS" /* 4132 */;
 import explicitContentFromProto from "explicitContentFromProto" /* 4166 */;
-import collectGuildAnalyticsMetadataDefault from "collectGuildAnalyticsMetadata" /* 4700 */;
-import trackInviteDefault from "trackInvite" /* 7210 */;
-import checkReactionResponse from "checkReactionResponse" /* 7518 */;
-import _modDef8167 from "module_8167" /* 8167 */;
+import collectGuildAnalyticsMetadataDefault from "collectGuildAnalyticsMetadata" /* 4701 */;
+import trackInviteDefault from "trackInvite" /* 7211 */;
+import checkReactionResponse from "checkReactionResponse" /* 7519 */;
+import _modDef8171 from "module_8171" /* 8171 */;
 import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "getEmojiToGroupId" /* 5409 */;
-import closure_5 from "reinjectEphemerals" /* 4735 */;
+import closure_4 from "getEmojiToGroupId" /* 5410 */;
+import closure_5 from "reinjectEphemerals" /* 4736 */;
 import ME from "ME" /* 673 */;
 import importDefaultResult from "t" /* 4192 */;
 
@@ -79,7 +79,7 @@ obj4 = {
   action(arg0, channel) {
     channel = channel.channel;
     if (null != channel.guild_id) {
-      obj = _modDef8167;
+      obj = _modDef8171;
       obj.changeNickname(channel.guild_id, channel.id, closure_8, arg0);
       return { content: "" };
     }

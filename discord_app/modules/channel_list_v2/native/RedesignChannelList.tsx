@@ -1,16 +1,16 @@
-// === Module 15923: GuildChannels ===
+// === Module 15939: GuildChannels ===
 
-// Module 15923 (GuildChannels)
-import TTIFirstContentfulPaint from "TTIFirstContentfulPaint" /* 11686 */;
-import itemsDefault from "items" /* 16086 */;
-import handleJoinGuildDefault from "handleJoinGuild" /* 16091 */;
-import NsfwGateGuildSidebarDefault from "NsfwGateGuildSidebar" /* 16101 */;
+// Module 15939 (GuildChannels)
+import TTIFirstContentfulPaint from "TTIFirstContentfulPaint" /* 11698 */;
+import itemsDefault from "items" /* 16102 */;
+import handleJoinGuildDefault from "handleJoinGuild" /* 16107 */;
+import NsfwGateGuildSidebarDefault from "NsfwGateGuildSidebar" /* 16117 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_6 from "maybeApplyNoTextColorForLightCustomTheme" /* 4470 */;
-import closure_7 from "handleReset" /* 7279 */;
-import closure_8 from "withEqualityFn" /* 15846 */;
+import closure_7 from "handleReset" /* 7280 */;
+import closure_8 from "withEqualityFn" /* 15862 */;
 import closure_9 from "createGuildRecordFromRust" /* 1908 */;
 import closure_10 from "handleConnectionOpen" /* 1980 */;
 import closure_11 from "getVoiceStatesForGuild" /* 4555 */;
@@ -66,9 +66,9 @@ function ChannelsWrapper(selectedGuildId) {
           obj.guild = stateFromStores;
           obj.selectedChannelId = selectedChannelId;
           obj.selectedVoiceChannelId = stateFromStores1;
-          return callback(tmp2(16093).default, obj);
+          return callback(tmp2(16109).default, obj);
         } else {
-          tmp2Result = tmp2(9144);
+          tmp2Result = tmp2(9148);
           if (tmp2Result.shouldNSFWGateGuild(selectedGuildId)) {
             obj1 = { style: null, guildId: null };
             obj1[0] = merged.style;

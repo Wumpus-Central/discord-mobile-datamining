@@ -1,10 +1,10 @@
-// === Module 7132: WiltedFlowerIllocon ===
+// === Module 7133: WiltedFlowerIllocon ===
 
-// Module 7132 (WiltedFlowerIllocon)
+// Module 7133 (WiltedFlowerIllocon)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5501 */;
-import metadataDefault from "metadata" /* 7133 */;
+import preloadDefault from "preload" /* 5502 */;
+import metadataDefault from "metadata" /* 7134 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/WiltedFlowerIllocon.native.tsx");

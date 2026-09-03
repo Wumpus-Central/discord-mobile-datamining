@@ -1,6 +1,6 @@
-// === Module 16772: useNativeThemeUpdater ===
+// === Module 16792: useNativeThemeUpdater ===
 
-// Module 16772 (useNativeThemeUpdater)
+// Module 16792 (useNativeThemeUpdater)
 import closure_2 from "noop" /* 19 */;
 import closure_3 from "handleThemeChange" /* 1301 */;
 

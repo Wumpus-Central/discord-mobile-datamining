@@ -1,20 +1,20 @@
-// === Module 10210: NotificationWrapper ===
+// === Module 10214: NotificationWrapper ===
 
-// Module 10210 (NotificationWrapper)
-import _modDef10211 from "module_10211" /* 10211 */;
-import _modDef10286 from "module_10286" /* 10286 */;
-import ForumThreadCreatedNotificationDefault from "ForumThreadCreatedNotification" /* 10287 */;
-import BugReporterNotification from "BugReporterNotification" /* 10288 */;
-import AlertNotificationDefault from "AlertNotification" /* 10321 */;
-import ReactionNotificationBodyDefault from "ReactionNotificationBody" /* 10322 */;
-import NotificationAvatarDefault from "NotificationAvatar" /* 11175 */;
-import _modDef11176 from "module_11176" /* 11176 */;
-import MessageRequestInAppNotificationDefault from "MessageRequestInAppNotification" /* 11179 */;
+// Module 10214 (NotificationWrapper)
+import _modDef10215 from "module_10215" /* 10215 */;
+import _modDef10290 from "module_10290" /* 10290 */;
+import ForumThreadCreatedNotificationDefault from "ForumThreadCreatedNotification" /* 10291 */;
+import BugReporterNotification from "BugReporterNotification" /* 10292 */;
+import AlertNotificationDefault from "AlertNotification" /* 10325 */;
+import ReactionNotificationBodyDefault from "ReactionNotificationBody" /* 10326 */;
+import NotificationAvatarDefault from "NotificationAvatar" /* 11179 */;
+import _modDef11180 from "module_11180" /* 11180 */;
+import MessageRequestInAppNotificationDefault from "MessageRequestInAppNotification" /* 11183 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { StyleSheet } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "initialize" /* 9667 */;
-import set from "set" /* 10200 */;
+import closure_6 from "initialize" /* 9671 */;
+import set from "set" /* 10204 */;
 import ME from "ME" /* 673 */;
 import { jsx } from "jsxProd" /* 21 */;
 import { Easing } from "module_4217" /* 4217 */;
@@ -27,11 +27,11 @@ function NotificationWrapper(notification) {
   if (constants.MESSAGE === type) {
     obj = { notification: null };
     obj[0] = notification;
-    return jsx(_modDef10211, { notification: null });
+    return jsx(_modDef10215, { notification: null });
   } else if (tmp.MESSAGE_FAILED_TO_SEND === type) {
     obj = { notification: null };
     obj[0] = notification;
-    return jsx(_modDef10286, { notification: null });
+    return jsx(_modDef10290, { notification: null });
   } else if (tmp.FORUM_THREAD_CREATED === type) {
     obj1 = { notification: null };
     obj1[0] = notification;
@@ -66,7 +66,7 @@ function NotificationWrapper(notification) {
     }
     const obj6 = { notification: null };
     obj6[0] = notification;
-    return jsx(_modDef11176, { notification: null });
+    return jsx(_modDef11180, { notification: null });
   }
 }
 ({ DEFAULT_ANIMATION_TIMING: error, extrapolateConfig: closure_8, MIN_SWIPE_DISTANCE: c9, MIN_SWIPE_VELOCITY: c10, PAN_INPUT_RANGE: unpackModuleId, NOTIFICATION_CONTAINER_MARGIN } = set);

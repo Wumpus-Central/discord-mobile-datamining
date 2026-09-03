@@ -1,6 +1,6 @@
-// === Module 9457: isActivitySupportedOnClientPlatform ===
+// === Module 9461: isActivitySupportedOnClientPlatform ===
 
-// Module 9457 (isActivitySupportedOnClientPlatform)
+// Module 9461 (isActivitySupportedOnClientPlatform)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/activities/utils/isActivitySupportedOnClientPlatform.tsx");

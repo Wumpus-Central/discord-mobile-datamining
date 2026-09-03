@@ -1,9 +1,9 @@
-// === Module 13604: RewardProgram ===
+// === Module 13619: RewardProgram ===
 
-// Module 13604 (RewardProgram)
+// Module 13619 (RewardProgram)
 import set from "set" /* 2 */;
-import RewardProgram from "RewardProgram" /* 13605 */;
-import ProgramCurrentState from "ProgramCurrentState" /* 13606 */;
+import RewardProgram from "RewardProgram" /* 13620 */;
+import ProgramCurrentState from "ProgramCurrentState" /* 13621 */;
 
 const result = set.fileFinishedImporting("modules/rewards/ProgramRewardsTypes.tsx");
 

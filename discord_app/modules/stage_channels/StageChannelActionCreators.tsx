@@ -1,6 +1,6 @@
-// === Module 8684: audienceAckRequestToSpeak ===
+// === Module 8688: audienceAckRequestToSpeak ===
 
-// Module 8684 (audienceAckRequestToSpeak)
+// Module 8688 (audienceAckRequestToSpeak)
 import _modDef38 from "module_38" /* 38 */;
 import fromStringAll from "fromString" /* 503 */;
 import sendRequest from "sendRequest" /* 527 */;
@@ -8,15 +8,15 @@ import PermissionOverwriteType from "PermissionOverwriteType" /* 1954 */;
 import applyOverwritesAll from "applyOverwrites" /* 4125 */;
 import _modDef4491 from "module_4491" /* 4491 */;
 import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 4668 */;
-import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata" /* 4700 */;
-import useIsStageSpeakingDisabledForCurrentUser from "useIsStageSpeakingDisabledForCurrentUser" /* 5374 */;
-import showTooManyUserGuildsAlertDefault from "showTooManyUserGuildsAlert" /* 5465 */;
-import fillChunk from "fillChunk" /* 8686 */;
+import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata" /* 4701 */;
+import useIsStageSpeakingDisabledForCurrentUser from "useIsStageSpeakingDisabledForCurrentUser" /* 5375 */;
+import showTooManyUserGuildsAlertDefault from "showTooManyUserGuildsAlert" /* 5466 */;
+import fillChunk from "fillChunk" /* 8690 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import closure_5 from "handleConnectionOpen" /* 1980 */;
 import closure_6 from "updateVoiceState" /* 4497 */;
 import ME from "ME" /* 673 */;
-import { SafetyToastType } from "SafetyToastType" /* 8685 */;
+import { SafetyToastType } from "SafetyToastType" /* 8689 */;
 
 require = arg1;
 function audienceAckRequestToSpeak(channel, suppress) {
@@ -105,10 +105,10 @@ function _startStage() {
               closure_1 = undefined;
               if ("" !== closure_1) {
                 if (closure_1_5.getVoiceChannelId() !== tmp28.id) {
-                  let obj2 = callback(8679);
+                  let obj2 = callback(8683);
                   obj2.connectToStage(tmp28);
                 }
-                const obj4 = callback(8692);
+                const obj4 = callback(8696);
                 c6 = 1;
                 c7 = 1;
                 obj1 = { value: null, done: false };

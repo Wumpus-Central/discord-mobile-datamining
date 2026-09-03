@@ -1,6 +1,6 @@
-// === Module 6541: metadata ===
+// === Module 6542: metadata ===
 
-// Module 6541 (metadata)
+// Module 6542 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/ExperimentalDuckTypingBubbleAbstractUI-2x.png.js");

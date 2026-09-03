@@ -1,17 +1,17 @@
-// === Module 12536: ChannelTitleContent ===
+// === Module 12548: ChannelTitleContent ===
 
-// Module 12536 (ChannelTitleContent)
+// Module 12548 (ChannelTitleContent)
 import initialize from "initialize" /* 586 */;
 import ThemesDefault from "Themes" /* 709 */;
 import getSystemLocale from "getSystemLocale" /* 1233 */;
 import Button from "Button" /* 1296 */;
 import Text from "Text" /* 4474 */;
 import computeChannelName from "computeChannelName" /* 4674 */;
-import PressableBase from "PressableBase" /* 5076 */;
-import ActivityStatusDefault from "ActivityStatus" /* 9253 */;
+import PressableBase from "PressableBase" /* 5077 */;
+import ActivityStatusDefault from "ActivityStatus" /* 9257 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "_handleConnectionOpen" /* 5229 */;
+import closure_5 from "_handleConnectionOpen" /* 5230 */;
 import { THREAD_CHANNEL_TYPES } from "createChannelRecord" /* 1390 */;
 import closure_7 from "ensureGuildLoaded" /* 1386 */;
 import closure_8 from "createGuildRecordFromRust" /* 1908 */;
@@ -23,7 +23,7 @@ import { StaticChannelRoute } from "set" /* 1393 */;
 import ContentDismissActionType from "ContentDismissActionType" /* 1383 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
-import importDefaultResult from "createTextStyle" /* 5469 */;
+import importDefaultResult from "createTextStyle" /* 5470 */;
 
 require = arg1;
 function ChannelTitleContent(arg0) {
@@ -416,7 +416,7 @@ export const ChannelTitleWithoutRoute = function ChannelTitleWithoutRoute(arg0) 
   }
   let channelIcon = null;
   if (null != stateFromStores) {
-    let tmp2Result = tmp2(4981);
+    let tmp2Result = tmp2(4982);
     channelIcon = tmp2Result.getChannelIcon(stateFromStores);
   }
   let channelName = null;

@@ -1,16 +1,16 @@
-// === Module 10064: stopScreenshare ===
+// === Module 10068: stopScreenshare ===
 
-// Module 10064 (stopScreenshare)
+// Module 10068 (stopScreenshare)
 import inject from "inject" /* 4531 */;
 import isStreamKey from "isStreamKey" /* 4544 */;
 import watchStream from "watchStream" /* 4663 */;
-import contextDefault from "context" /* 5961 */;
-import initializeDefault from "initialize" /* 7511 */;
-import _handleToggleVideo from "_handleToggleVideo" /* 9796 */;
-import trackDeviceChangedDefault from "trackDeviceChanged" /* 9803 */;
-import useHasVideoPermission from "useHasVideoPermission" /* 10059 */;
-import useHasVideoPermissionDefault from "useHasVideoPermission" /* 10059 */;
-import apexExperimentDefault from "apexExperiment" /* 10071 */;
+import contextDefault from "context" /* 5962 */;
+import initializeDefault from "initialize" /* 7512 */;
+import _handleToggleVideo from "_handleToggleVideo" /* 9800 */;
+import trackDeviceChangedDefault from "trackDeviceChanged" /* 9807 */;
+import useHasVideoPermission from "useHasVideoPermission" /* 10063 */;
+import useHasVideoPermissionDefault from "useHasVideoPermission" /* 10063 */;
+import apexExperimentDefault from "apexExperiment" /* 10075 */;
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "reset" /* 4500 */;
 import closure_5 from "_detectH265HardwareDecode" /* 4529 */;
@@ -103,7 +103,7 @@ export default function useScreenshareUtils(arg0) {
             }
           }
         } else {
-          fn = callback(9796).showScreenshareDisabledAlert;
+          fn = callback(9800).showScreenshareDisabledAlert;
         }
       } else {
         fn = function l() {
@@ -115,12 +115,12 @@ export default function useScreenshareUtils(arg0) {
       }
       obj[3] = fn;
       if (obj2.isMetaQuest()) {
-        tmp19(tmp ? 10076 : 10077);
+        tmp19(tmp ? 10080 : 10081);
       } else {
         if (tmp4) {
-          let tmp20 = 10078;
+          let tmp20 = 10082;
         } else {
-          tmp20 = tmp ? 10079 : 10078;
+          tmp20 = tmp ? 10083 : 10082;
         }
         obj[4] = tmp19(tmp20);
         return obj;

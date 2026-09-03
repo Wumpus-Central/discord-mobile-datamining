@@ -1,9 +1,9 @@
-// === Module 17000: useVoicePanelButtonStyles ===
+// === Module 17020: useVoicePanelButtonStyles ===
 
-// Module 17000 (useVoicePanelButtonStyles)
+// Module 17020 (useVoicePanelButtonStyles)
 import set from "set" /* 2 */;
 import ThemesDefault from "Themes" /* 709 */;
-import map from "map" /* 8584 */;
+import map from "map" /* 8588 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
 let closure_3 = createCacheKey.createStyles((arg0) => {

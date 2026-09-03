@@ -1,14 +1,14 @@
-// === Module 17739: importDefaultResult2 ===
+// === Module 17763: importDefaultResult2 ===
 
-// Module 17739 (importDefaultResult2)
+// Module 17763 (importDefaultResult2)
 import timestampDefault from "timestamp" /* 3 */;
 import _modDef1205 from "module_1205" /* 1205 */;
 import items6 from "items" /* 1912 */;
 import closure_3 from "getUserAgnosticState" /* 4477 */;
-import importDefaultResult from "fromServer" /* 5411 */;
-import importDefaultResult1 from "parseServerGuildSticker" /* 5453 */;
+import importDefaultResult from "fromServer" /* 5412 */;
+import importDefaultResult1 from "parseServerGuildSticker" /* 5454 */;
 import closure_4 from "fetchFingerprint" /* 1215 */;
-import importDefaultResult2 from "getNote" /* 12708 */;
+import importDefaultResult2 from "getNote" /* 12720 */;
 import importDefaultResult3 from "createGuildRoleRecordFromRust" /* 1984 */;
 import { AnalyticEvents } from "ME" /* 673 */;
 import importDefaultResult4 from "createGuildRecordFromRust" /* 1908 */;

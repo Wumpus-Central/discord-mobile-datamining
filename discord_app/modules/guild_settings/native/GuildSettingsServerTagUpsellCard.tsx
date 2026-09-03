@@ -1,9 +1,9 @@
-// === Module 17406: GuildSettingsServerTagUpsellCard ===
+// === Module 17426: GuildSettingsServerTagUpsellCard ===
 
-// Module 17406 (GuildSettingsServerTagUpsellCard)
+// Module 17426 (GuildSettingsServerTagUpsellCard)
 import ThemesDefault from "Themes" /* 709 */;
-import LinearGradientDefault from "LinearGradient" /* 4940 */;
-import useGetGuildPowerupBannerImageDefault from "useGetGuildPowerupBannerImage" /* 12308 */;
+import LinearGradientDefault from "LinearGradient" /* 4941 */;
+import useGetGuildPowerupBannerImageDefault from "useGetGuildPowerupBannerImage" /* 12320 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_5 from "calculateAppliedBoosts" /* 4364 */;
@@ -63,7 +63,7 @@ export default function GuildSettingsServerTagUpsellCard(guildId) {
     const obj5 = { imageUrl: null, style: null };
     obj5[0] = tmp6;
     obj5[1] = tmp.powerupImage;
-    tmp10Result = tmp10(tmp5(12311), obj5);
+    tmp10Result = tmp10(tmp5(12323), obj5);
   }
   obj4[3] = tmp10Result;
   const items5 = [callback(closure_4, obj4), , ];
@@ -79,15 +79,15 @@ export default function GuildSettingsServerTagUpsellCard(guildId) {
   obj8[3] = intl2.string(guildId(1233).t.Tg0fDm);
   items6[1] = callback(guildId(4474).Text, obj8);
   obj6[2] = items6;
-  items5[1] = closure_7(guildId(4926).Stack, obj6);
+  items5[1] = closure_7(guildId(4927).Stack, obj6);
   const obj9 = { variant: "primary", size: "lg", text: null, icon: null, iconPosition: "start", onPress: null };
   const intl3 = tmp2(1233).intl;
   obj9[2] = intl3.string(guildId(1233).t.kMRDWs);
-  obj9[3] = callback(guildId(16038).BoostTier2Icon, { color: "white" });
+  obj9[3] = callback(guildId(16054).BoostTier2Icon, { color: "white" });
   obj9[5] = guildId.onUnlockPress;
-  items5[2] = callback(guildId(4928).Button, obj9);
+  items5[2] = callback(guildId(4929).Button, obj9);
   obj3[1] = items5;
-  items4[3] = closure_7(guildId(4926).Stack, obj3);
+  items4[3] = closure_7(guildId(4927).Stack, obj3);
   obj[1] = items4;
   return closure_7(closure_4, obj);
 };

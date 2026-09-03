@@ -1,10 +1,10 @@
-// === Module 7022: SkullIllocon ===
+// === Module 7023: SkullIllocon ===
 
-// Module 7022 (SkullIllocon)
+// Module 7023 (SkullIllocon)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5501 */;
-import metadataDefault from "metadata" /* 7023 */;
+import preloadDefault from "preload" /* 5502 */;
+import metadataDefault from "metadata" /* 7024 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/SkullIllocon.native.tsx");

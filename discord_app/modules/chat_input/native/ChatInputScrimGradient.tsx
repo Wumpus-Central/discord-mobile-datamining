@@ -1,11 +1,11 @@
-// === Module 12051: ChatInputScrimGradient ===
+// === Module 12057: ChatInputScrimGradient ===
 
-// Module 12051 (ChatInputScrimGradient)
+// Module 12057 (ChatInputScrimGradient)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 709 */;
 import map from "map" /* 4197 */;
 import getGradientColorByPercentage from "getGradientColorByPercentage" /* 4296 */;
-import LinearGradientDefault from "LinearGradient" /* 4940 */;
+import LinearGradientDefault from "LinearGradient" /* 4941 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 

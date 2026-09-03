@@ -1,15 +1,15 @@
-// === Module 17153: finishRoll ===
+// === Module 17173: finishRoll ===
 
-// Module 17153 (finishRoll)
+// Module 17173 (finishRoll)
 import getSystemLocale from "getSystemLocale" /* 1233 */;
-import initializeDefault from "initialize" /* 5494 */;
-import trackInviteDefault from "trackInvite" /* 7210 */;
-import rebuildDefault from "rebuild" /* 7436 */;
+import initializeDefault from "initialize" /* 5495 */;
+import trackInviteDefault from "trackInvite" /* 7211 */;
+import rebuildDefault from "rebuild" /* 7437 */;
 import closure_3 from "ensureGuildLoaded" /* 1386 */;
 import closure_4 from "handleConnectionOpen" /* 1980 */;
-import closure_5 from "INITIAL_STATE" /* 11755 */;
-import { INITIAL_STATE } from "INITIAL_STATE" /* 11755 */;
-import ROLL_DURATION_MS from "ROLL_DURATION_MS" /* 8165 */;
+import closure_5 from "INITIAL_STATE" /* 11760 */;
+import { INITIAL_STATE } from "INITIAL_STATE" /* 11760 */;
+import ROLL_DURATION_MS from "ROLL_DURATION_MS" /* 8169 */;
 import { MessageSendLocation } from "MESSAGE_GROUP_SPACING" /* 4471 */;
 
 require = arg1;

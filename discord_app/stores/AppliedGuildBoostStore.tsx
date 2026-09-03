@@ -1,6 +1,6 @@
-// === Module 12350: handleModifyingAppliedBoostStart ===
+// === Module 12362: handleModifyingAppliedBoostStart ===
 
-// Module 12350 (handleModifyingAppliedBoostStart)
+// Module 12362 (handleModifyingAppliedBoostStart)
 import initializeDefault from "initialize" /* 586 */;
 import dispatcherDefault from "dispatcher" /* 706 */;
 

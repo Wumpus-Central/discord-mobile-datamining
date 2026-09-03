@@ -1,12 +1,12 @@
-// === Module 11696: AppealIngestionPolicySummary ===
+// === Module 11701: AppealIngestionPolicySummary ===
 
-// Module 11696 (AppealIngestionPolicySummary)
+// Module 11701 (AppealIngestionPolicySummary)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 709 */;
 import getSystemLocale from "getSystemLocale" /* 1233 */;
 import hexToRgba from "hexToRgba" /* 4326 */;
 import Text from "Text" /* 4474 */;
-import parseMessageEmbedForProps from "parseMessageEmbedForProps" /* 8704 */;
+import parseMessageEmbedForProps from "parseMessageEmbedForProps" /* 8708 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;

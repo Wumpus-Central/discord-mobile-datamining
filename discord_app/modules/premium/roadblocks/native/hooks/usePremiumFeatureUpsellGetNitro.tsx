@@ -1,11 +1,11 @@
-// === Module 8983: usePremiumFeatureUpsellGetNitro ===
+// === Module 8987: usePremiumFeatureUpsellGetNitro ===
 
-// Module 8983 (usePremiumFeatureUpsellGetNitro)
-import contextDefault from "context" /* 5961 */;
+// Module 8987 (usePremiumFeatureUpsellGetNitro)
+import contextDefault from "context" /* 5962 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
 import closure_6 from "reset" /* 4145 */;
-import closure_7 from "emitChanges" /* 7204 */;
+import closure_7 from "emitChanges" /* 7205 */;
 import { PremiumTypes } from "GuildFeatures" /* 1923 */;
 import { AnalyticsObjectTypes } from "ME" /* 673 */;
 
@@ -50,7 +50,7 @@ export default function usePremiumFeatureUpsellGetNitro(arg0, arg1, arg2, arg3) 
           obj[0] = obj;
           obj[1] = analyticsLocations;
           obj[2] = callback ? closure_1_8.TIER_0 : closure_1_8.TIER_2;
-          callback2(7176)(obj, dependencyMap);
+          callback2(7177)(obj, dependencyMap);
         }
       }
     }
@@ -60,15 +60,15 @@ export default function usePremiumFeatureUpsellGetNitro(arg0, arg1, arg2, arg3) 
         if (result) {
           let resolved = Promise.resolve();
         } else {
-          resolved = callback(4837).fetchSubscriptions();
-          const obj2 = callback(4837);
+          resolved = callback(4838).fetchSubscriptions();
+          const obj2 = callback(4838);
         }
         const items = [resolved, ];
         if (isFetchingOfferResult) {
           let resolved1 = Promise.resolve();
         } else {
-          resolved1 = callback(7980).fetchUserOffer("usePremiumFeatureUpsellGetNitro");
-          const obj3 = callback(7980);
+          resolved1 = callback(7983).fetchUserOffer("usePremiumFeatureUpsellGetNitro");
+          const obj3 = callback(7983);
         }
         items[1] = resolved1;
         const allPromises = Promise.all(items);

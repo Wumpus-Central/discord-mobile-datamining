@@ -1,10 +1,10 @@
-// === Module 13823: OneTimeLoginModal ===
+// === Module 13839: OneTimeLoginModal ===
 
-// Module 13823 (OneTimeLoginModal)
+// Module 13839 (OneTimeLoginModal)
 import ThemesDefault from "Themes" /* 709 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1492 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
-import getMixedGradientColorDefault from "getMixedGradientColor" /* 5078 */;
+import getMixedGradientColorDefault from "getMixedGradientColor" /* 5079 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
@@ -181,7 +181,7 @@ export default function OneTimeLoginModal(token) {
   obj1 = { style: tmp.container, children: null };
   let obj2 = { style: tmp.centerContent, children: null };
   const tmp11 = getMixedGradientColorDefault;
-  const items7 = [callback(callback3, { source: token(13824), style: tmp.logo }), ];
+  const items7 = [callback(callback3, { source: token(13840), style: tmp.logo }), ];
   let obj4 = { style: tmp.loadingContainer, children: null };
   const items8 = [callback(callback2, {}), ];
   let obj5 = { variant: "text-lg/semibold", children: null };
@@ -202,7 +202,7 @@ export default function OneTimeLoginModal(token) {
   obj8[1] = intl3.string(token(1233).t.FIEwfG);
   obj8[3] = callback;
   obj8[4] = tmp.link;
-  items10[1] = callback(token(7724).LinkButton, obj8);
+  items10[1] = callback(token(7727).LinkButton, obj8);
   obj6[1] = items10;
   items9[1] = callback2(callback1, obj6);
   obj1[1] = items9;

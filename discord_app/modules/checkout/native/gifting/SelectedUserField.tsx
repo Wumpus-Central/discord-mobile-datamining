@@ -1,11 +1,11 @@
-// === Module 10850: SelectedUserField ===
+// === Module 10854: SelectedUserField ===
 
-// Module 10850 (SelectedUserField)
+// Module 10854 (SelectedUserField)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 709 */;
 import nameFromUserDefault from "nameFromUser" /* 4322 */;
-import useInputStyles from "useInputStyles" /* 6238 */;
-import MagnifyingGlassIcon from "MagnifyingGlassIcon" /* 6244 */;
+import useInputStyles from "useInputStyles" /* 6239 */;
+import MagnifyingGlassIcon from "MagnifyingGlassIcon" /* 6245 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
@@ -61,7 +61,7 @@ export default function SelectedUserField(onPress) {
   if (null != selectedUser) {
     const obj2 = { style: null, children: null };
     obj2[0] = tmp.userPill;
-    obj3 = { user: null, guildId: "Array", size: true };
+    obj3 = { user: null, guildId: "Array", size: 102039555 };
     obj3[0] = selectedUser;
     obj3[2] = tmp4(1296).AvatarSizes.XSMALL_20;
     const items2 = [tmp2(tmp4(1296).Avatar, obj3), ];
@@ -93,7 +93,7 @@ export default function SelectedUserField(onPress) {
     const obj7 = { text: null };
     obj7[0] = nameFromUserDefault.getName(selectedUser);
     obj6[3] = intl5.formatToPlainString(tmp4(1233).t["0Vb9FQ"], obj7);
-    obj6[4] = tmp2(tmp4(6234).CircleXIcon, { size: "xs" });
+    obj6[4] = tmp2(tmp4(6235).CircleXIcon, { size: "xs" });
     tmp2Result = tmp2(tmp7, obj6);
     const obj13 = nameFromUserDefault;
   }

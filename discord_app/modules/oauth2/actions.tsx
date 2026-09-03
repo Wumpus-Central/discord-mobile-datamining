@@ -1,9 +1,9 @@
-// === Module 9307: getLocationContextServer ===
+// === Module 9311: getLocationContextServer ===
 
-// Module 9307 (getLocationContextServer)
+// Module 9311 (getLocationContextServer)
 import getAuthenticationPath from "getAuthenticationPath" /* 504 */;
 import sendRequest from "sendRequest" /* 527 */;
-import handleLogoutDefault from "handleLogout" /* 6060 */;
+import handleLogoutDefault from "handleLogout" /* 6061 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "ensureGuildLoaded" /* 1386 */;
 import closure_5 from "handleConnectionOpen" /* 1980 */;

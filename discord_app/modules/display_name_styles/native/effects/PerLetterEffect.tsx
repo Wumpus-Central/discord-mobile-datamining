@@ -1,6 +1,6 @@
-// === Module 8944: PerLetterEffect ===
+// === Module 8948: PerLetterEffect ===
 
-// Module 8944 (PerLetterEffect)
+// Module 8948 (PerLetterEffect)
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
@@ -54,7 +54,7 @@ export default function PerLetterEffect(name) {
     accessibilityLabel = name;
   }
   obj.accessibilityLabel = accessibilityLabel;
-  const items2 = [textStyle, { lineHeight: "r" }];
+  const items2 = [textStyle, { lineHeight: "Array" }];
   obj.style = items2;
   obj.children = memo;
   obj[1] = jsx(name(4474).Text, {});

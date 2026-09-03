@@ -1,11 +1,11 @@
-// === Module 11333: formatWatchRemainingDurationShort ===
+// === Module 11337: formatWatchRemainingDurationShort ===
 
-// Module 11333 (formatWatchRemainingDurationShort)
+// Module 11337 (formatWatchRemainingDurationShort)
 import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1233 */;
-import QuestsExperimentLocations2 from "QuestsExperimentLocations" /* 5395 */;
-import getApplicationIdsByTaskTypes from "getApplicationIdsByTaskTypes" /* 7479 */;
-import apexExperimentDefault from "apexExperiment" /* 11334 */;
+import QuestsExperimentLocations2 from "QuestsExperimentLocations" /* 5396 */;
+import getApplicationIdsByTaskTypes from "getApplicationIdsByTaskTypes" /* 7480 */;
+import apexExperimentDefault from "apexExperiment" /* 11338 */;
 
 function formatWatchRemainingDurationShort(questTaskDetails, truncate) {
   let obj = getApplicationIdsByTaskTypes;

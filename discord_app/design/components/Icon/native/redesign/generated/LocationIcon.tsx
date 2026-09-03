@@ -1,10 +1,10 @@
-// === Module 9698: LocationIcon ===
+// === Module 9702: LocationIcon ===
 
-// Module 9698 (LocationIcon)
+// Module 9702 (LocationIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 709 */;
 import BaseIconImage from "BaseIconImage" /* 4196 */;
-import registerAsset from "registerAsset" /* 9699 */;
+import registerAsset from "registerAsset" /* 9703 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

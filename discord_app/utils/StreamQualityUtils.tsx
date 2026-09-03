@@ -1,6 +1,6 @@
-// === Module 9601: isPremiumResolution ===
+// === Module 9605: isPremiumResolution ===
 
-// Module 9601 (isPremiumResolution)
+// Module 9605 (isPremiumResolution)
 import expandEventPropertiesDefault from "expandEventProperties" /* 695 */;
 import getSystemLocale from "getSystemLocale" /* 1233 */;
 import closure_3 from "noop" /* 19 */;

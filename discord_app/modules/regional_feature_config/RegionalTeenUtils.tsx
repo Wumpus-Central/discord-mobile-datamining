@@ -1,6 +1,6 @@
-// === Module 12212: set ===
+// === Module 12219: set ===
 
-// Module 12212 (set)
+// Module 12219 (set)
 import closure_2 from "noop" /* 19 */;
 import closure_3 from "getRegionalFeatureConfig" /* 4173 */;
 import set from "set" /* 2 */;
@@ -34,7 +34,7 @@ export const useIsTeenInCountrySet = function useIsTeenInCountrySet(set) {
     }
   }, items1);
   const obj = stateFromStores(586);
-  let userIsTeen = stateFromStores(8786).useUserIsTeen();
+  let userIsTeen = stateFromStores(8790).useUserIsTeen();
   if (userIsTeen) {
     userIsTeen = null != stateFromStores;
   }
@@ -55,7 +55,7 @@ export const useIsTeenInStrictCountry = function useIsTeenInStrictCountry() {
   }, items1);
   let obj = set;
   const obj2 = stateFromStores(586);
-  let userIsTeen = stateFromStores(8786).useUserIsTeen();
+  let userIsTeen = stateFromStores(8790).useUserIsTeen();
   if (userIsTeen) {
     userIsTeen = null != stateFromStores;
   }

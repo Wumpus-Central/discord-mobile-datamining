@@ -1,6 +1,6 @@
-// === Module 9000: TwinButtons ===
+// === Module 9004: TwinButtons ===
 
-// Module 9000 (TwinButtons)
+// Module 9004 (TwinButtons)
 import ThemesDefault from "Themes" /* 709 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
@@ -22,7 +22,7 @@ const result = require("set").fileFinishedImporting("design/components/experimen
 
 export const TwinButtons = function TwinButtons(children) {
   let _require;
-  let obj = _require(4935);
+  let obj = _require(4936);
   let tmp = callback(obj.useFontScale() > 1.2);
   _require = tmp;
   obj = {

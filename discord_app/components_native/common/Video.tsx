@@ -1,6 +1,6 @@
-// === Module 8617: VideoComponent ===
+// === Module 8621: VideoComponent ===
 
-// Module 8617 (VideoComponent)
+// Module 8621 (VideoComponent)
 import ThemesDefault from "Themes" /* 709 */;
 import getSystemLocale from "getSystemLocale" /* 1233 */;
 import closure_2 from "_slicedToArray" /* 32 */;
@@ -138,7 +138,7 @@ class Video extends PureComponent {
 const prototype = Video.prototype;
 prototype["componentDidMount"] = function componentDidMount() {
   const self = this;
-  this._renderTask = self(6054).runAfterInteractions(() => {
+  this._renderTask = self(6055).runAfterInteractions(() => {
     self.setState({ postponeRender: false });
   });
 };

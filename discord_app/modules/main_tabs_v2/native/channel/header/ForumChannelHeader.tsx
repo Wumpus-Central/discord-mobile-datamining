@@ -1,9 +1,9 @@
-// === Module 13158: ? ===
+// === Module 13170: ? ===
 
-// Module 13158
-import ForumChannelCloseSearchButton from "ForumChannelCloseSearchButton" /* 13145 */;
-import useIsForumChannelSearchActive from "useIsForumChannelSearchActive" /* 13159 */;
-import GuildChannelMemberCountDefault from "GuildChannelMemberCount" /* 13160 */;
+// Module 13170
+import ForumChannelCloseSearchButton from "ForumChannelCloseSearchButton" /* 13157 */;
+import useIsForumChannelSearchActive from "useIsForumChannelSearchActive" /* 13171 */;
+import GuildChannelMemberCountDefault from "GuildChannelMemberCount" /* 13172 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;

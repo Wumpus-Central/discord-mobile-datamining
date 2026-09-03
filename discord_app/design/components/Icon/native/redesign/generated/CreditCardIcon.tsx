@@ -1,10 +1,10 @@
-// === Module 11718: CreditCardIcon ===
+// === Module 11723: CreditCardIcon ===
 
-// Module 11718 (CreditCardIcon)
+// Module 11723 (CreditCardIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 709 */;
 import BaseIconImage from "BaseIconImage" /* 4196 */;
-import registerAsset from "registerAsset" /* 11719 */;
+import registerAsset from "registerAsset" /* 11724 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

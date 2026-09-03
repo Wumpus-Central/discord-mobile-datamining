@@ -1,6 +1,6 @@
-// === Module 15942: VoiceUserConnected ===
+// === Module 15958: VoiceUserConnected ===
 
-// Module 15942 (VoiceUserConnected)
+// Module 15958 (VoiceUserConnected)
 import noopAll from "noop" /* 19 */;
 import closure_3 from "participantFromServer" /* 1385 */;
 import closure_4 from "getParticipants" /* 4494 */;

@@ -1,6 +1,6 @@
-// === Module 12732: UserProfilePrivacyNotice ===
+// === Module 12744: UserProfilePrivacyNotice ===
 
-// Module 12732 (UserProfilePrivacyNotice)
+// Module 12744 (UserProfilePrivacyNotice)
 import ThemesDefault from "Themes" /* 709 */;
 import closure_2 from "_slicedToArray" /* 32 */;
 import closure_3 from "noop" /* 19 */;

@@ -1,6 +1,6 @@
-// === Module 13941: _openActivityDMLauncher ===
+// === Module 13957: _openActivityDMLauncher ===
 
-// Module 13941 (_openActivityDMLauncher)
+// Module 13957 (_openActivityDMLauncher)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import { AppLauncherRouteName } from "APP_LAUNCHER_BUILT_IN_SECTION_ICON" /* 1497 */;
 
@@ -69,7 +69,7 @@ function _openActivityDMLauncher() {
               c7 = 2;
               customId = 1;
               const obj2 = { value: null, done: false };
-              obj2[0] = callback2(5962).fetchApplication(callback);
+              obj2[0] = callback2(5963).fetchApplication(callback);
               return obj2;
             }
           } else {
@@ -114,7 +114,7 @@ function _openActivityDMLauncher() {
                 return obj6;
               } else {
                 c7 = customId;
-                obj6 = callback(13025);
+                obj6 = callback(13037);
                 c7 = 4;
                 customId = 1;
                 const obj7 = { value: null, done: false };
@@ -146,15 +146,15 @@ function _openActivityDMLauncher() {
                   obj10[0] = callback;
                   obj10[1] = {};
                   obj10[2] = c7;
-                  const items = [callback2(5981).ACTIVITY_BOOKMARK];
+                  const items = [callback2(5982).ACTIVITY_BOOKMARK];
                   obj10[3] = items;
-                  obj10[4] = callback(7277).CommandOrigin.ACTIVITY_BOOKMARK_EMBED;
+                  obj10[4] = callback(7278).CommandOrigin.ACTIVITY_BOOKMARK_EMBED;
                   obj10[5] = callback2;
                   obj10[6] = customId;
                   c7 = 5;
                   customId = 1;
                   const obj11 = { value: null, done: false };
-                  obj11[0] = callback2(9528)(obj10);
+                  obj11[0] = callback2(9532)(obj10);
                   return obj11;
                 }
               }

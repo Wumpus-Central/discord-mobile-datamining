@@ -1,6 +1,6 @@
-// === Module 7862: items ===
+// === Module 7865: items ===
 
-// Module 7862 (items)
+// Module 7865 (items)
 import set from "set" /* 2 */;
 import ME from "ME" /* 673 */;
 import VANITY_URL_POWERUP_SKU_ID from "VANITY_URL_POWERUP_SKU_ID" /* 4368 */;

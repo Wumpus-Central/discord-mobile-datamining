@@ -1,6 +1,6 @@
-// === Module 11875: useCustomKeyboardBottomSheetConfig ===
+// === Module 11881: useCustomKeyboardBottomSheetConfig ===
 
-// Module 11875 (useCustomKeyboardBottomSheetConfig)
+// Module 11881 (useCustomKeyboardBottomSheetConfig)
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4470 */;
 

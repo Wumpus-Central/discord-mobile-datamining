@@ -1,10 +1,10 @@
-// === Module 12866: BlueskyNeutralIcon ===
+// === Module 12878: BlueskyNeutralIcon ===
 
-// Module 12866 (BlueskyNeutralIcon)
+// Module 12878 (BlueskyNeutralIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 709 */;
 import BaseIconImage from "BaseIconImage" /* 4196 */;
-import registerAsset from "registerAsset" /* 12867 */;
+import registerAsset from "registerAsset" /* 12879 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

@@ -1,6 +1,6 @@
-// === Module 8075: getDecorationSizeForAvatarSize ===
+// === Module 8078: getDecorationSizeForAvatarSize ===
 
-// Module 8075 (getDecorationSizeForAvatarSize)
+// Module 8078 (getDecorationSizeForAvatarSize)
 import set from "set" /* 2 */;
 import Button from "Button" /* 1296 */;
 import DECORATION_TO_AVATAR_RATIO from "DECORATION_TO_AVATAR_RATIO" /* 1431 */;
@@ -49,5 +49,5 @@ export const openAvatarDecorationActionSheet = function openAvatarDecorationActi
   ({ user, guildId, currentAvatarDecoration, isTryItOut, analyticsLocations } = arg0);
   ACTION_SHEET_HEIGHT_HALFDefault.hideActionSheet();
   const obj = ACTION_SHEET_HEIGHT_HALFDefault;
-  ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(8076, dependencyMap.paths), "Edit Avatar Decoration", { user, guildId, currentAvatarDecoration, isTryItOut, analyticsLocations });
+  ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(8079, dependencyMap.paths), "Edit Avatar Decoration", { user, guildId, currentAvatarDecoration, isTryItOut, analyticsLocations });
 };

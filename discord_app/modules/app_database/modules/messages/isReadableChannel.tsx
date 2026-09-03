@@ -1,6 +1,6 @@
-// === Module 7238: isReadableChannel ===
+// === Module 7239: isReadableChannel ===
 
-// Module 7238 (isReadableChannel)
+// Module 7239 (isReadableChannel)
 import set from "set" /* 2 */;
 import createChannelRecord from "createChannelRecord" /* 1390 */;
 import closure_1 from "ensureGuildLoaded" /* 1386 */;

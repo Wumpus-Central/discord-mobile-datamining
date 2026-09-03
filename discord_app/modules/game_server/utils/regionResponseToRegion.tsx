@@ -1,6 +1,6 @@
-// === Module 12275: regionResponseToRegion ===
+// === Module 12287: regionResponseToRegion ===
 
-// Module 12275 (regionResponseToRegion)
+// Module 12287 (regionResponseToRegion)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/game_server/utils/regionResponseToRegion.tsx");

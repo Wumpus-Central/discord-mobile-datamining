@@ -1,12 +1,12 @@
-// === Module 12479: getInviteState ===
+// === Module 12491: getInviteState ===
 
-// Module 12479 (getInviteState)
+// Module 12491 (getInviteState)
 import ThemesDefault from "Themes" /* 709 */;
 import handleImageLoad from "handleImageLoad" /* 1464 */;
 import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1470 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1492 */;
 import map from "map" /* 4197 */;
-import PressableCard from "PressableCard" /* 5609 */;
+import PressableCard from "PressableCard" /* 5610 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
@@ -77,9 +77,9 @@ function AcceptInviteCardComponent(invite) {
   const effect = React.useEffect(() => {
     const tmp = closure_1_13(invite);
     if (tmp !== first) {
-      const result = invite(5604).DeprecatedLayoutAnimation();
+      const result = invite(5605).DeprecatedLayoutAnimation();
       dependencyMap(tmp);
-      const obj = invite(5604);
+      const obj = invite(5605);
     }
   }, items);
   if (null == invite) {
@@ -88,12 +88,12 @@ function AcceptInviteCardComponent(invite) {
     let obj = {};
     const merged = Object.assign(invite);
     obj.invite = invite;
-    return callback2(first(12480), obj);
+    return callback2(first(12492), obj);
   } else if (tmp22.ERROR === first) {
     obj = {};
     const merged1 = Object.assign(invite);
     obj.invite = invite;
-    return callback2(first(12483), obj);
+    return callback2(first(12495), obj);
   } else {
     return callback2(InviteResolving, {});
   }
@@ -127,7 +127,7 @@ export default function AcceptInvite(invite) {
     splash = guild.splash;
   }
   if (null == splash) {
-    let guildSplashSource = tmp3(12488);
+    let guildSplashSource = tmp3(12500);
   } else {
     obj = { id: null, splash: null, size: null };
     ({ id: obj3[0], splash: obj3[1] } = guild);

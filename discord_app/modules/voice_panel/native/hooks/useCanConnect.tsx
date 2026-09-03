@@ -1,6 +1,6 @@
-// === Module 16942: useCanConnect ===
+// === Module 16962: useCanConnect ===
 
-// Module 16942 (useCanConnect)
+// Module 16962 (useCanConnect)
 import closure_2 from "ensureGuildLoaded" /* 1386 */;
 import closure_3 from "createGuildRecordFromRust" /* 1908 */;
 import closure_4 from "getUncachedChannelPermissions" /* 4120 */;

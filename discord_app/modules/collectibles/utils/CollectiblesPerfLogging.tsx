@@ -1,6 +1,6 @@
-// === Module 7344: CollectiblesShopPerfCheckpoint ===
+// === Module 7345: CollectiblesShopPerfCheckpoint ===
 
-// Module 7344 (CollectiblesShopPerfCheckpoint)
+// Module 7345 (CollectiblesShopPerfCheckpoint)
 import set from "set" /* 2 */;
 import ME from "ME" /* 673 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 695 */;

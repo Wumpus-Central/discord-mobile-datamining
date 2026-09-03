@@ -1,17 +1,17 @@
-// === Module 4980: match ===
+// === Module 4981: match ===
 
-// Module 4980 (match)
+// Module 4981 (match)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import getAvatarURLDefault from "getAvatarURL" /* 1430 */;
 import parseRawEmojiObjectDefault from "parseRawEmojiObject" /* 4134 */;
 import tDefault from "t" /* 4192 */;
 import getGameMediaRefURLDefault from "getGameMediaRefURL" /* 4511 */;
-import textRegexpDefault from "textRegexp" /* 4958 */;
-import getChannelDefault from "getChannel" /* 4959 */;
-import regExpDefault from "regExp" /* 4962 */;
-import getGameMentionData from "getGameMentionData" /* 5060 */;
-import INVISIBLE_CHAR_REGEX2 from "INVISIBLE_CHAR_REGEX" /* 5075 */;
+import textRegexpDefault from "textRegexp" /* 4959 */;
+import getChannelDefault from "getChannel" /* 4960 */;
+import regExpDefault from "regExp" /* 4963 */;
+import getGameMentionData from "getGameMentionData" /* 5061 */;
+import INVISIBLE_CHAR_REGEX2 from "INVISIBLE_CHAR_REGEX" /* 5076 */;
 
 const Image = get_ActivityIndicator.Image;
 obj = { escape: obj, invisibleUnicode: null, text: null, emoji: null, customEmoji: null, channelMention: null, gameMention: null, channelOrMessageUrl: null, mediaPostLink: null, attachmentLink: null, silentPrefix: null };

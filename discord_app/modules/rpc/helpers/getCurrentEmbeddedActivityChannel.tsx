@@ -1,6 +1,6 @@
-// === Module 14345: getCurrentEmbeddedActivityChannel ===
+// === Module 14361: getCurrentEmbeddedActivityChannel ===
 
-// Module 14345 (getCurrentEmbeddedActivityChannel)
+// Module 14361 (getCurrentEmbeddedActivityChannel)
 import closure_0 from "participantFromServer" /* 1385 */;
 import closure_1 from "ensureGuildLoaded" /* 1386 */;
 

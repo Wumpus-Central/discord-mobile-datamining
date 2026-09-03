@@ -1,6 +1,6 @@
-// === Module 7632: MessageEmbedTypes ===
+// === Module 7633: MessageEmbedTypes ===
 
-// Module 7632 (MessageEmbedTypes)
+// Module 7633 (MessageEmbedTypes)
 import ChannelListLayoutTypes from "ChannelListLayoutTypes" /* 4171 */;
 import ME from "ME" /* 673 */;
 import set from "set" /* 2 */;

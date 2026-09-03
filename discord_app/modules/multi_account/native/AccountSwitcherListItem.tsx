@@ -1,6 +1,6 @@
-// === Module 15774: AccountStatusIcon ===
+// === Module 15790: AccountStatusIcon ===
 
-// Module 15774 (AccountStatusIcon)
+// Module 15790 (AccountStatusIcon)
 import noopAll from "noop" /* 19 */;
 import initialize from "initialize" /* 586 */;
 import ThemesDefault from "Themes" /* 709 */;
@@ -9,7 +9,7 @@ import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_5 from "createdAt" /* 1934 */;
 import closure_6 from "initialize" /* 4323 */;
 import closure_7 from "mergeGuildAvatar" /* 1921 */;
-import { MultiAccountTokenStatus } from "initialize" /* 12206 */;
+import { MultiAccountTokenStatus } from "initialize" /* 12213 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -82,7 +82,7 @@ export default function AccountSwitcherListItem(arg0) {
     if (null == onPressUser) {
       let PressableOpacity = closure_3;
     } else {
-      PressableOpacity = tmp2(5076).PressableOpacity;
+      PressableOpacity = tmp2(5077).PressableOpacity;
     }
     obj = { selected: null };
     obj[0] = tmp7;
@@ -102,7 +102,7 @@ export default function AccountSwitcherListItem(arg0) {
     const items2 = [leading, , ];
     obj2 = { style: null, children: null };
     obj2[0] = tmp.accountInfo;
-    const obj3 = { user: null, guildId: "r" };
+    const obj3 = { user: null, guildId: "Array" };
     obj3[0] = obj2;
     const items3 = [callback(tmp2(1296).Avatar, obj3), ];
     const obj4 = { style: null, children: null };

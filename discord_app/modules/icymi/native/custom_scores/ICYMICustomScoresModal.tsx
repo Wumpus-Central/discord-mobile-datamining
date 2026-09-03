@@ -1,10 +1,10 @@
-// === Module 16274: ICYMICustomScoresModal ===
+// === Module 16293: ICYMICustomScoresModal ===
 
-// Module 16274 (ICYMICustomScoresModal)
+// Module 16293 (ICYMICustomScoresModal)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 709 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createNativeStackNavigator from "createNativeStackNavigator" /* 7831 */;
+import createNativeStackNavigator from "createNativeStackNavigator" /* 7834 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
 const require = arg1;
@@ -19,7 +19,7 @@ const result = require("set").fileFinishedImporting("modules/icymi/native/custom
 
 export default function ICYMICustomScoresModal() {
   const _require = callback3();
-  let obj = _require(6016);
+  let obj = _require(6017);
   closure_1 = obj.useAccessibilityNativeStackOptions();
   obj = {
     screenOptions() {
@@ -43,12 +43,12 @@ export default function ICYMICustomScoresModal() {
       const obj = { title: null, headerLeft: null };
       const intl = lib(1233).intl;
       obj[0] = intl.string(lib(1233).t.jVshKt);
-      obj[1] = lib(7617).getRenderModalCloseImage(navigation.navigation);
-      const merged = Object.assign(callback(10883)());
+      obj[1] = lib(7618).getRenderModalCloseImage(navigation.navigation);
+      const merged = Object.assign(callback(10887)());
       return obj;
     },
     getComponent() {
-      return lib(16275).default;
+      return lib(16294).default;
     }
   };
   const items = [
@@ -56,11 +56,11 @@ export default function ICYMICustomScoresModal() {
     callback(closure_5.Screen, {
       name: "guild",
       options(navigation) {
-        const obj = { headerLeft: lib(7617).getRenderModalBackImage(navigation.navigation) };
+        const obj = { headerLeft: lib(7618).getRenderModalBackImage(navigation.navigation) };
         return obj;
       },
       getComponent() {
-        return lib(16276).default;
+        return lib(16295).default;
       }
     })
   ];

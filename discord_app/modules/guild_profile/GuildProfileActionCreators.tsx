@@ -1,13 +1,13 @@
-// === Module 9026: _fetchGuildTopGames ===
+// === Module 9030: _fetchGuildTopGames ===
 
-// Module 9026 (_fetchGuildTopGames)
+// Module 9030 (_fetchGuildTopGames)
 import expandEventPropertiesDefault from "expandEventProperties" /* 695 */;
 import dispatcherDefault from "dispatcher" /* 706 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "handleGatewayJoinRequestUpdate" /* 4300 */;
 import closure_5 from "trackCommunicationDisabled" /* 1991 */;
-import closure_6 from "handleUpdateStart" /* 9023 */;
-import { GuildProfileFetchStatus } from "handleUpdateStart" /* 9023 */;
+import closure_6 from "handleUpdateStart" /* 9027 */;
+import { GuildProfileFetchStatus } from "handleUpdateStart" /* 9027 */;
 import ME from "ME" /* 673 */;
 
 const require = arg1;
@@ -131,8 +131,8 @@ export const saveGuildProfile = function saveGuildProfile(closure_1_0, name) {
     const HTTP = _require(527).HTTP;
     obj = { url: null, body: null, rejectWithError: null };
     obj[0] = closure_9.GUILD_PROFILE(closure_1_0);
-    obj[1] = _require(5568).buildGuildProfileUpdateForServer(name);
-    const obj4 = _require(5568);
+    obj[1] = _require(5569).buildGuildProfileUpdateForServer(name);
+    const obj4 = _require(5569);
     obj[2] = _require(527).rejectWithMigratedError();
     const obj5 = _require(527);
     const patchResult = HTTP.patch(obj);

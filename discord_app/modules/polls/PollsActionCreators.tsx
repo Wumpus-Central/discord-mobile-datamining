@@ -1,18 +1,18 @@
-// === Module 11520: getPollVoteEventProperties ===
+// === Module 11525: getPollVoteEventProperties ===
 
-// Module 11520 (getPollVoteEventProperties)
-import setDefault from "set" /* 4857 */;
-import showVotesForAnswerAll from "showVotesForAnswer" /* 11521 */;
+// Module 11525 (getPollVoteEventProperties)
+import setDefault from "set" /* 4858 */;
+import showVotesForAnswerAll from "showVotesForAnswer" /* 11526 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import closure_5 from "initialize" /* 4121 */;
-import closure_6 from "processMessage" /* 7349 */;
+import closure_6 from "processMessage" /* 7350 */;
 import closure_7 from "fetchFingerprint" /* 1215 */;
 import closure_8 from "ensureGuildLoaded" /* 1386 */;
-import { DraftType } from "handleChanged" /* 4854 */;
-import closure_10 from "recomputeGuild" /* 5365 */;
-import closure_11 from "reinjectEphemerals" /* 4735 */;
-import closure_12 from "map" /* 4853 */;
-import useMessagePollInteractions from "useMessagePollInteractions" /* 8136 */;
+import { DraftType } from "handleChanged" /* 4855 */;
+import closure_10 from "recomputeGuild" /* 5366 */;
+import closure_11 from "reinjectEphemerals" /* 4736 */;
+import closure_12 from "map" /* 4854 */;
+import useMessagePollInteractions from "useMessagePollInteractions" /* 8140 */;
 import ME from "ME" /* 673 */;
 
 const require = arg1;
@@ -246,7 +246,7 @@ function _optimisticallySetAnswers() {
                     let tmp6 = closure_6;
                     obj[4] = closure_6;
                     let tmp7 = _undefined;
-                    obj[6] = _undefined(7517).ReactionTypes.VOTE;
+                    obj[6] = _undefined(7518).ReactionTypes.VOTE;
                     dispatchResult = obj.dispatch(obj);
                     continue;
                   }
@@ -981,7 +981,7 @@ function _createPoll() {
               c5 = 3;
               c6 = 1;
               const obj5 = { value: null, done: false };
-              obj5[0] = lib2(7210).sendPollMessage(lib.id, obj2, obj4);
+              obj5[0] = lib2(7211).sendPollMessage(lib.id, obj2, obj4);
               return obj5;
             }
           } else {
@@ -1105,7 +1105,7 @@ function _endPollEarly() {
               dependencyMap = 2;
               c4 = 1;
               const obj3 = { value: null, done: false };
-              obj3[0] = callback2(4857).confirm(obj2);
+              obj3[0] = callback2(4858).confirm(obj2);
               return obj3;
             }
           } else {
@@ -1119,7 +1119,7 @@ function _endPollEarly() {
                 obj4[0] = arg1;
                 return obj4;
               } else if (arg1) {
-                obj1 = callback3(11526);
+                obj1 = callback3(11531);
                 const obj5 = { channelId: null, messageId: null };
                 obj5[0] = callback;
                 obj5[1] = callback2;

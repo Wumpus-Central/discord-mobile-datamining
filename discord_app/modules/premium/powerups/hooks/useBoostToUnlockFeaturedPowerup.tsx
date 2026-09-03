@@ -1,6 +1,6 @@
-// === Module 12292: items ===
+// === Module 12304: items ===
 
-// Module 12292 (items)
+// Module 12304 (items)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import closure_5 from "createGuildRecordFromRust" /* 1908 */;

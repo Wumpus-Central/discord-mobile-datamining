@@ -1,9 +1,9 @@
-// === Module 6009: ARBITRARY_LARGE_OFFSET ===
+// === Module 6010: ARBITRARY_LARGE_OFFSET ===
 
-// Module 6009 (ARBITRARY_LARGE_OFFSET)
+// Module 6010 (ARBITRARY_LARGE_OFFSET)
 import set from "set" /* 2 */;
 import Button from "Button" /* 1296 */;
-import ICON_SIZE from "ICON_SIZE" /* 6010 */;
+import ICON_SIZE from "ICON_SIZE" /* 6011 */;
 
 const XXLARGE = Button.AvatarSizes.XXLARGE;
 const tmp2 = Button.AVATAR_SIZE_MAP[XXLARGE];

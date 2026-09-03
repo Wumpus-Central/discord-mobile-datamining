@@ -1,9 +1,9 @@
-// === Module 16822: ? ===
+// === Module 16842: ? ===
 
-// Module 16822
+// Module 16842
 import initialize from "initialize" /* 586 */;
-import BaseActivityPanelControllerDefault from "BaseActivityPanelController" /* 16823 */;
-import renderActivityOrPIPDefault from "renderActivityOrPIP" /* 16832 */;
+import BaseActivityPanelControllerDefault from "BaseActivityPanelController" /* 16843 */;
+import renderActivityOrPIPDefault from "renderActivityOrPIP" /* 16852 */;
 import closure_3 from "ensureGuildLoaded" /* 1386 */;
 import closure_4 from "handleConnectionOpen" /* 1980 */;
 import closure_5 from "participantFromServer" /* 1385 */;

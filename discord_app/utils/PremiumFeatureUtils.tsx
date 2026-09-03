@@ -1,6 +1,6 @@
-// === Module 8223: getUserMaxFileSize ===
+// === Module 8227: getUserMaxFileSize ===
 
-// Module 8223 (getUserMaxFileSize)
+// Module 8227 (getUserMaxFileSize)
 import isPremiumAtLeast from "isPremiumAtLeast" /* 1945 */;
 import closure_2 from "setActualFromUser" /* 1922 */;
 import ME from "ME" /* 673 */;

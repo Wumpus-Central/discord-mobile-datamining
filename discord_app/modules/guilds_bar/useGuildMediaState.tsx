@@ -1,6 +1,6 @@
-// === Module 16152: canConnectToChannel ===
+// === Module 16168: canConnectToChannel ===
 
-// Module 16152 (canConnectToChannel)
+// Module 16168 (canConnectToChannel)
 import set from "set" /* 689 */;
 import closure_3 from "participantFromServer" /* 1385 */;
 import closure_4 from "handleStageInstanceCreateOrUpdate" /* 1391 */;
@@ -12,7 +12,7 @@ import closure_9 from "createGuildRecordFromRust" /* 1908 */;
 import closure_10 from "getUncachedChannelPermissions" /* 4120 */;
 import closure_11 from "markAllUserIdListsStale" /* 4130 */;
 import closure_12 from "handleConnectionOpen" /* 1980 */;
-import closure_13 from "updateUserGuildSettingsInternal" /* 4701 */;
+import closure_13 from "updateUserGuildSettingsInternal" /* 4702 */;
 import closure_14 from "updateVoiceState" /* 4497 */;
 import { BasicPermissions } from "ME" /* 673 */;
 

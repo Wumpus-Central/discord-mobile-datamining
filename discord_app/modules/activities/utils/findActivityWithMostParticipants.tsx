@@ -1,6 +1,6 @@
-// === Module 15883: findActivityWithMostParticipants ===
+// === Module 15899: findActivityWithMostParticipants ===
 
-// Module 15883 (findActivityWithMostParticipants)
+// Module 15899 (findActivityWithMostParticipants)
 import closure_0 from "markAllUserIdListsStale" /* 4130 */;
 
 const result = require("set").fileFinishedImporting("modules/activities/utils/findActivityWithMostParticipants.tsx");

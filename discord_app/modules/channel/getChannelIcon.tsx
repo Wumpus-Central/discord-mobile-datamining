@@ -1,6 +1,6 @@
-// === Module 9443: getChannelIconURL ===
+// === Module 9447: getChannelIconURL ===
 
-// Module 9443 (getChannelIconURL)
+// Module 9447 (getChannelIconURL)
 import getAvatarURLDefault from "getAvatarURL" /* 1430 */;
 import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1470 */;
 import closure_3 from "_slicedToArray" /* 32 */;

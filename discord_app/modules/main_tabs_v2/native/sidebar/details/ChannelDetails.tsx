@@ -1,13 +1,13 @@
-// === Module 16440: PX_8 ===
+// === Module 16461: PX_8 ===
 
-// Module 16440 (PX_8)
+// Module 16461 (PX_8)
 import ThemesDefault from "Themes" /* 709 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_5 from "prototype" /* 12129 */;
+import closure_5 from "prototype" /* 12135 */;
 import closure_6 from "ensureGuildLoaded" /* 1386 */;
-import useChannelDetailsStore from "useChannelDetailsStore" /* 7630 */;
-import ChannelDetailsNavigatorScreens from "ChannelDetailsNavigatorScreens" /* 10875 */;
+import useChannelDetailsStore from "useChannelDetailsStore" /* 7631 */;
+import ChannelDetailsNavigatorScreens from "ChannelDetailsNavigatorScreens" /* 10879 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 

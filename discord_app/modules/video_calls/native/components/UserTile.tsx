@@ -1,16 +1,16 @@
-// === Module 9605: UserTile ===
+// === Module 9609: UserTile ===
 
-// Module 9605 (UserTile)
+// Module 9609 (UserTile)
 import ThemesDefault from "Themes" /* 709 */;
-import registerAssetDefault from "registerAsset" /* 8756 */;
-import registerAssetDefault2 from "registerAsset" /* 9608 */;
-import registerAssetDefault3 from "registerAsset" /* 9609 */;
-import registerAssetDefault4 from "registerAsset" /* 9610 */;
+import registerAssetDefault from "registerAsset" /* 8760 */;
+import registerAssetDefault2 from "registerAsset" /* 9612 */;
+import registerAssetDefault3 from "registerAsset" /* 9613 */;
+import registerAssetDefault4 from "registerAsset" /* 9614 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "recentlyUsedEmojis" /* 9606 */;
-import { clearVoiceChannelEffectForUser as closure_7 } from "recentlyUsedEmojis" /* 9606 */;
+import closure_6 from "recentlyUsedEmojis" /* 9610 */;
+import { clearVoiceChannelEffectForUser as closure_7 } from "recentlyUsedEmojis" /* 9610 */;
 import closure_8 from "fetchFingerprint" /* 1215 */;
 import closure_9 from "ensureGuildLoaded" /* 1386 */;
 import closure_10 from "_detectH265HardwareDecode" /* 4529 */;

@@ -1,6 +1,6 @@
-// === Module 13319: usePremiumPrimaryGradientColors ===
+// === Module 13331: usePremiumPrimaryGradientColors ===
 
-// Module 13319 (usePremiumPrimaryGradientColors)
+// Module 13331 (usePremiumPrimaryGradientColors)
 import set from "set" /* 2 */;
 import ThemesDefault from "Themes" /* 709 */;
 import map from "map" /* 4197 */;

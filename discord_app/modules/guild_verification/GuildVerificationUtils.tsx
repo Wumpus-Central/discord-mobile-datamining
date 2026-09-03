@@ -1,9 +1,9 @@
-// === Module 13020: inviteGuildHasPendingMemberDisabledVerification ===
+// === Module 13032: inviteGuildHasPendingMemberDisabledVerification ===
 
-// Module 13020 (inviteGuildHasPendingMemberDisabledVerification)
+// Module 13032 (inviteGuildHasPendingMemberDisabledVerification)
 import transitionTo from "transitionTo" /* 1219 */;
 import MAX_RESULTS_PER_PAGE from "MAX_RESULTS_PER_PAGE" /* 4302 */;
-import openMemberVerificationModal from "openMemberVerificationModal" /* 7655 */;
+import openMemberVerificationModal from "openMemberVerificationModal" /* 7658 */;
 import closure_2 from "handleGatewayJoinRequestUpdate" /* 4300 */;
 import ME from "ME" /* 673 */;
 

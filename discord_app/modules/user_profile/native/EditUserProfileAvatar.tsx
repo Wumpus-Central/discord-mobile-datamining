@@ -1,6 +1,6 @@
-// === Module 14485: EditUserProfileAvatar ===
+// === Module 14501: EditUserProfileAvatar ===
 
-// Module 14485 (EditUserProfileAvatar)
+// Module 14501 (EditUserProfileAvatar)
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4470 */;
 import jsxProd from "jsxProd" /* 21 */;

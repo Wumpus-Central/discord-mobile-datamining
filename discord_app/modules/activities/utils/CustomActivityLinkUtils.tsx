@@ -1,8 +1,8 @@
-// === Module 13025: fetchCustomActivityLink ===
+// === Module 13037: fetchCustomActivityLink ===
 
-// Module 13025 (fetchCustomActivityLink)
+// Module 13037 (fetchCustomActivityLink)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "getOne" /* 13026 */;
+import closure_4 from "getOne" /* 13038 */;
 import { Endpoints } from "ME" /* 673 */;
 import set from "set" /* 2 */;
 
@@ -204,7 +204,7 @@ function _getCustomActivityLinkParams() {
             v0 = 0;
             c7 = 3;
             const obj6 = { value: null, done: true };
-            obj6[0] = { customId: "r" };
+            obj6[0] = { customId: "Array" };
             return obj6;
           } else if (arg0 === 1) {
             c7 = 3;
@@ -218,7 +218,7 @@ function _getCustomActivityLinkParams() {
           } else {
             custom_id = arg1;
             if (null == custom_id) {
-              obj = { customId: "r" };
+              obj = { customId: "Array" };
             } else {
               { customId: null }[0] = custom_id.custom_id;
             }

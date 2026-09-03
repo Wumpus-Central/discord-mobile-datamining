@@ -1,9 +1,9 @@
-// === Module 7481: canStreamInChannel ===
+// === Module 7482: canStreamInChannel ===
 
-// Module 7481 (canStreamInChannel)
+// Module 7482 (canStreamInChannel)
 import allowChannelAccess from "allowChannelAccess" /* 4666 */;
-import shouldShowAgeGateForVoiceChannel from "shouldShowAgeGateForVoiceChannel" /* 4731 */;
-import canJoinVoiceChannelDefault from "canJoinVoiceChannel" /* 5368 */;
+import shouldShowAgeGateForVoiceChannel from "shouldShowAgeGateForVoiceChannel" /* 4732 */;
+import canJoinVoiceChannelDefault from "canJoinVoiceChannel" /* 5369 */;
 import closure_3 from "set" /* 4495 */;
 import { ChannelRecordBase } from "createChannelRecord" /* 1390 */;
 import { GUILD_VOCAL_CHANNELS_KEY } from "comparator" /* 1981 */;

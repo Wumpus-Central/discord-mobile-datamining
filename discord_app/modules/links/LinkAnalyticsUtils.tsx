@@ -1,6 +1,6 @@
-// === Module 8661: SERVER_INVITE ===
+// === Module 8665: SERVER_INVITE ===
 
-// Module 8661 (SERVER_INVITE)
+// Module 8665 (SERVER_INVITE)
 import set from "set" /* 2 */;
 import ME from "ME" /* 673 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 695 */;

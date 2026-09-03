@@ -1,13 +1,13 @@
-// === Module 6135: handlePermissionsChange ===
+// === Module 6136: handlePermissionsChange ===
 
-// Module 6135 (handlePermissionsChange)
+// Module 6136 (handlePermissionsChange)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import initializeDefault from "initialize" /* 586 */;
 import dispatcherDefault from "dispatcher" /* 706 */;
 import ComponentDispatcher from "ComponentDispatcher" /* 1228 */;
-import SidebarType from "SidebarType" /* 6137 */;
+import SidebarType from "SidebarType" /* 6138 */;
 import closure_3 from "getHash" /* 4391 */;
-import closure_4 from "handleReaction" /* 6136 */;
+import closure_4 from "handleReaction" /* 6137 */;
 import closure_5 from "ensureGuildLoaded" /* 1386 */;
 import closure_6 from "createGuildRecordFromRust" /* 1908 */;
 import closure_7 from "getUncachedChannelPermissions" /* 4120 */;
@@ -195,7 +195,7 @@ prototype["getCurrentSidebarChannelId"] = function getCurrentSidebarChannelId(ch
     let tmp9 = null;
     if (null != dependencyMap[tmp]) {
       if (tmp8.type !== SidebarType.SidebarType.VIEW_THREAD) {
-        if (tmp8.type !== tmp10(6137).SidebarType.VIEW_CHANNEL) {
+        if (tmp8.type !== tmp10(6138).SidebarType.VIEW_CHANNEL) {
           channelId = null;
         }
         tmp9 = channelId;
@@ -226,7 +226,7 @@ prototype["getCurrentSidebarMessageId"] = function getCurrentSidebarMessageId(ch
     let tmp9 = null;
     if (null != dependencyMap[tmp]) {
       if (tmp8.type !== SidebarType.SidebarType.VIEW_THREAD) {
-        if (tmp8.type !== tmp10(6137).SidebarType.VIEW_CHANNEL) {
+        if (tmp8.type !== tmp10(6138).SidebarType.VIEW_CHANNEL) {
           let tmp12 = null;
         }
         tmp9 = tmp12;

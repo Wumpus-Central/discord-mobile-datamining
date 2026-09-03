@@ -1,12 +1,12 @@
-// === Module 10198: formatMessagePreview ===
+// === Module 10202: formatMessagePreview ===
 
-// Module 10198 (formatMessagePreview)
+// Module 10202 (formatMessagePreview)
 import set from "set" /* 683 */;
 import getSystemLocale from "getSystemLocale" /* 1233 */;
-import useNullableMessageAuthorDefault from "useNullableMessageAuthor" /* 4746 */;
-import isForwardMessageDefault from "isForwardMessage" /* 6155 */;
-import useIsCallActiveDefault from "useIsCallActive" /* 7899 */;
-import getSystemMessageUserJoinMobileDefault from "getSystemMessageUserJoinMobile" /* 7904 */;
+import useNullableMessageAuthorDefault from "useNullableMessageAuthor" /* 4747 */;
+import isForwardMessageDefault from "isForwardMessage" /* 6156 */;
+import useIsCallActiveDefault from "useIsCallActive" /* 7902 */;
+import getSystemMessageUserJoinMobileDefault from "getSystemMessageUserJoinMobile" /* 7907 */;
 import closure_3 from "fetchFingerprint" /* 1215 */;
 import closure_4 from "markAllUserIdListsStale" /* 4130 */;
 import closure_5 from "mergeGuildAvatar" /* 1921 */;
@@ -373,9 +373,9 @@ function formatMessagePreview(type, isBlocked) {
                 tmp21 = obj50;
               } else if (type.type === tmp4(683).MessageTypes.VOICE_SESSION) {
                 const obj52 = { type: "text", text: null };
-                obj52[1] = tmp4(7989).getVoiceSessionMessageContent(type);
+                obj52[1] = tmp4(7992).getVoiceSessionMessageContent(type);
                 tmp21 = obj52;
-                const tmp4Result = tmp4(7989);
+                const tmp4Result = tmp4(7992);
               }
             }
           }
@@ -434,7 +434,7 @@ export const useFormattedMessagePreview = function useFormattedMessagePreview(me
     }
     return user;
   });
-  tmpResult = tmp(4746);
+  tmpResult = tmp(4747);
   obj = { message, channel, currentUserId: stateFromStores, authorNick: stringResult, otherUser: stateFromStores1, otherUserNick: tmpResult.useNullableUserAuthor(stateFromStores1, channel).nick, isBlocked, isIgnored, isCallActive: tmp4 };
   return formatMessagePreview(message, obj);
 };

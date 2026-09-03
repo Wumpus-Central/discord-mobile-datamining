@@ -1,15 +1,15 @@
-// === Module 17496: ChannelSetupScreen ===
+// === Module 17516: ChannelSetupScreen ===
 
-// Module 17496 (ChannelSetupScreen)
+// Module 17516 (ChannelSetupScreen)
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_6 from "handleFormInit" /* 9751 */;
+import closure_6 from "handleFormInit" /* 9755 */;
 import closure_7 from "ensureGuildLoaded" /* 1386 */;
 import closure_8 from "comparator" /* 1981 */;
 import { GUILD_SELECTABLE_CHANNELS_KEY as closure_9 } from "comparator" /* 1981 */;
 import closure_10 from "markAllUserIdListsStale" /* 4130 */;
 import closure_11 from "mergeGuildAvatar" /* 1921 */;
-import { CREATE_NEW_CHANNEL_VALUE } from "PUBLIC_SUCCESS_MODAL_SEEN_KEY" /* 7953 */;
+import { CREATE_NEW_CHANNEL_VALUE } from "PUBLIC_SUCCESS_MODAL_SEEN_KEY" /* 7956 */;
 import { ChannelTypes } from "ME" /* 673 */;
 import jsxProd from "jsxProd" /* 21 */;
 
@@ -92,7 +92,7 @@ export default function ChannelSetupScreen() {
     obj[0] = intl.string(guild(publicUpdatesChannel[15]).t.Yr6nGx);
     obj[1] = callback();
     obj[2] = function onItemSelect(rulesChannelId) {
-      let obj = callback(9750);
+      let obj = callback(9754);
       obj = { rulesChannelId };
       obj.updateGuild(obj);
       callback(4445).hideActionSheet();
@@ -114,7 +114,7 @@ export default function ChannelSetupScreen() {
     obj[0] = intl.string(guild(publicUpdatesChannel[15]).t.VqhxxN);
     obj[1] = callback();
     obj[2] = function onItemSelect(publicUpdatesChannelId) {
-      let obj = callback(9750);
+      let obj = callback(9754);
       obj = { publicUpdatesChannelId };
       obj.updateGuild(obj);
       callback(4445).hideActionSheet();

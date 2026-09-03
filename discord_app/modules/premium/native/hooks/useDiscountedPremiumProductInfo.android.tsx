@@ -1,6 +1,6 @@
-// === Module 8247: useDiscountedPremiumProductInfo ===
+// === Module 8251: useDiscountedPremiumProductInfo ===
 
-// Module 8247 (useDiscountedPremiumProductInfo)
+// Module 8251 (useDiscountedPremiumProductInfo)
 import closure_2 from "noop" /* 19 */;
 import { CurrencyCodes } from "sum" /* 502 */;
 
@@ -10,9 +10,11 @@ let result = require("set").fileFinishedImporting("modules/premium/native/hooks/
 export const useDiscountedPremiumProductInfo = function useDiscountedPremiumProductInfo(premiumDiscountOffer, items3) {
   const _require = premiumDiscountOffer;
   let obj = _require(discountedProduct[2]);
-  discountedProduct = obj.useDiscountedPremiumPlan(premiumDiscountOffer, items3).discountedProduct;
+  const discountedPremiumPlan = obj.useDiscountedPremiumPlan(premiumDiscountOffer, items3);
+  discountedProduct = discountedPremiumPlan.discountedProduct;
   const items = [premiumDiscountOffer, discountedProduct];
   obj = {
+    discountedPlan: discountedPremiumPlan.discountedPlan,
     discountedProduct,
     discountedPriceString: React.useMemo(() => {
       if (null != premiumDiscountOffer) {

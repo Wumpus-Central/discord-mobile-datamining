@@ -1,10 +1,10 @@
-// === Module 7377: items ===
+// === Module 7378: items ===
 
-// Module 7377 (items)
+// Module 7378 (items)
 import set from "set" /* 2 */;
-import GAME_WIDGET_LIMITS_BY_TYPE from "GAME_WIDGET_LIMITS_BY_TYPE" /* 5063 */;
-import WidgetType from "WidgetType" /* 7376 */;
-import findGameWidget from "findGameWidget" /* 7378 */;
+import GAME_WIDGET_LIMITS_BY_TYPE from "GAME_WIDGET_LIMITS_BY_TYPE" /* 5064 */;
+import WidgetType from "WidgetType" /* 7377 */;
+import findGameWidget from "findGameWidget" /* 7379 */;
 
 const items = [WidgetType.WidgetType.CURRENT_GAMES, WidgetType.WidgetType.FAVORITE_GAMES, WidgetType.WidgetType.WANT_TO_PLAY_GAMES, WidgetType.WidgetType.PLAYED_GAMES];
 let BaseGameWidget;

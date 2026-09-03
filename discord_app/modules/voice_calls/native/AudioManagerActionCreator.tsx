@@ -1,6 +1,6 @@
-// === Module 9828: setAudioOutputDevice ===
+// === Module 9832: setAudioOutputDevice ===
 
-// Module 9828 (setAudioOutputDevice)
+// Module 9832 (setAudioOutputDevice)
 import set from "set" /* 2 */;
 import dispatcherDefault from "dispatcher" /* 706 */;
 

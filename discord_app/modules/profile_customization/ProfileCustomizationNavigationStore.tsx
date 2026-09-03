@@ -1,6 +1,6 @@
-// === Module 9046: zustandStore ===
+// === Module 9050: zustandStore ===
 
-// Module 9046 (zustandStore)
+// Module 9050 (zustandStore)
 import set from "set" /* 2 */;
 import MAX_FAVORITES from "MAX_FAVORITES" /* 682 */;
 import defaultStatesAreEqual from "defaultStatesAreEqual" /* 4344 */;

@@ -1,8 +1,8 @@
-// === Module 10851: GiftCustomMessage ===
+// === Module 10855: GiftCustomMessage ===
 
-// Module 10851 (GiftCustomMessage)
+// Module 10855 (GiftCustomMessage)
 import ThemesDefault from "Themes" /* 709 */;
-import NativeGiftContextProvider from "NativeGiftContextProvider" /* 10698 */;
+import NativeGiftContextProvider from "NativeGiftContextProvider" /* 10702 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { CUSTOM_GIFT_MESSAGE_MAX_LENGTH as closure_4 } from "GuildFeatures" /* 1923 */;

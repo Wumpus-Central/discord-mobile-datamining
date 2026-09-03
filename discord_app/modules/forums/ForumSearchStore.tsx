@@ -1,6 +1,6 @@
-// === Module 7522: initialize ===
+// === Module 7523: initialize ===
 
-// Module 7522 (initialize)
+// Module 7523 (initialize)
 import initializeDefault from "initialize" /* 586 */;
 import dispatcherDefault from "dispatcher" /* 706 */;
 import closure_0 from "ensureGuildLoaded" /* 1386 */;

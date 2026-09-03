@@ -1,18 +1,18 @@
-// === Module 13379: componentDidMount ===
+// === Module 13394: componentDidMount ===
 
-// Module 13379 (componentDidMount)
+// Module 13394 (componentDidMount)
 import getSystemLocale from "getSystemLocale" /* 1233 */;
 import create from "create" /* 1929 */;
 import combinedDefault from "combined" /* 1994 */;
 import _fetchAppliedGuildBoostsForGuild from "_fetchAppliedGuildBoostsForGuild" /* 4373 */;
 import Text from "Text" /* 4474 */;
-import _deletePaymentSource from "_deletePaymentSource" /* 4837 */;
-import fetchSubscriptionPlansForSKU from "fetchSubscriptionPlansForSKU" /* 6112 */;
-import GuildBoostSlotCooldownDefault from "GuildBoostSlotCooldown" /* 13380 */;
-import handlePressDefault from "handlePress" /* 13394 */;
-import handlePressDefault2 from "handlePress" /* 13396 */;
-import getTopPatternSource from "getTopPatternSource" /* 13398 */;
-import FEATURES_PREMIUM_GUILD_USERDefault from "FEATURES_PREMIUM_GUILD_USER" /* 13402 */;
+import _deletePaymentSource from "_deletePaymentSource" /* 4838 */;
+import fetchSubscriptionPlansForSKU from "fetchSubscriptionPlansForSKU" /* 6113 */;
+import GuildBoostSlotCooldownDefault from "GuildBoostSlotCooldown" /* 13395 */;
+import handlePressDefault from "handlePress" /* 13409 */;
+import handlePressDefault2 from "handlePress" /* 13411 */;
+import getTopPatternSource from "getTopPatternSource" /* 13413 */;
+import FEATURES_PREMIUM_GUILD_USERDefault from "FEATURES_PREMIUM_GUILD_USER" /* 13417 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_6 from "mergeGuildAvatar" /* 1921 */;
@@ -169,7 +169,7 @@ export default function ConnectedUserSettingsPremiumGuildSubscriptions(route) {
   dependencyMap = undefined;
   closure_3 = undefined;
   closure_4 = undefined;
-  let obj = _require(13300);
+  let obj = _require(13312);
   _require = obj.useSubscriptionPlansLoaded();
   flag = undefined;
   if (route != null) {
@@ -181,11 +181,11 @@ export default function ConnectedUserSettingsPremiumGuildSubscriptions(route) {
   if (flag == null) {
     flag = true;
   }
-  ({ fractionalState: c2, endsAt } = flag(7150)({ forceFetch: true }));
-  let tmpResult = tmp(7983);
+  ({ fractionalState: c2, endsAt } = flag(7151)({ forceFetch: true }));
+  let tmpResult = tmp(7986);
   closure_3 = tmpResult.useIsInReverseTrial();
-  const tmp3 = flag(7150)({ forceFetch: true });
-  closure_4 = flag(13340)(endsAt, tmp(13340).CountDownMessageTypes.LONG_TIME_LEFT);
+  const tmp3 = flag(7151)({ forceFetch: true });
+  closure_4 = flag(13355)(endsAt, tmp(13355).CountDownMessageTypes.LONG_TIME_LEFT);
   tmpResult = tmp(586);
   const items = [closure_8, closure_7, closure_9, closure_6];
   const stateFromStoresObject = tmpResult.useStateFromStoresObject(items, () => {
@@ -207,17 +207,17 @@ export default function ConnectedUserSettingsPremiumGuildSubscriptions(route) {
     obj[10] = premiumGroupRole;
     return obj;
   });
-  const tmp4 = flag(13340);
+  const tmp4 = flag(13355);
   const items1 = [closure_10];
   const stateFromStores = _require(586).useStateFromStores(items1, () => premiumTypeSubscription.getPremiumTypeSubscription());
   const tmpResult1 = _require(586);
   const navigation = _require(1498).useNavigation();
   const tmpResult2 = _require(1498);
   obj = { navigation, externalManagementMessage: null };
-  const externalManagementMessage = _require(7156).getExternalManagementMessage(stateFromStores, { shouldAllowExternalManagement: true });
+  const externalManagementMessage = _require(7157).getExternalManagementMessage(stateFromStores, { shouldAllowExternalManagement: true });
   const tmp10 = UserSettingsPremiumGuildSubscriptions;
   const tmp9 = closure_14;
-  const tmpResult3 = _require(7156);
+  const tmpResult3 = _require(7157);
   let tmp11 = null;
   if (tmpResult4.isMetaQuest()) {
     tmp11 = externalManagementMessage;

@@ -1,6 +1,6 @@
-// === Module 12014: MessageBlock ===
+// === Module 12020: MessageBlock ===
 
-// Module 12014 (MessageBlock)
+// Module 12020 (MessageBlock)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 709 */;
 import Button from "Button" /* 1296 */;

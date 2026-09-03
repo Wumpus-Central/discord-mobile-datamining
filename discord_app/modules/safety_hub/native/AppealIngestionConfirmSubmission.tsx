@@ -1,15 +1,15 @@
-// === Module 11700: AppealIngestionConfirmSubmission ===
+// === Module 11705: AppealIngestionConfirmSubmission ===
 
-// Module 11700 (AppealIngestionConfirmSubmission)
+// Module 11705 (AppealIngestionConfirmSubmission)
 import noopAll from "noop" /* 19 */;
 import initialize from "initialize" /* 586 */;
 import getSystemLocale from "getSystemLocale" /* 1233 */;
-import parseMessageEmbedForProps from "parseMessageEmbedForProps" /* 8704 */;
-import useSafetyHubClassifications from "useSafetyHubClassifications" /* 11677 */;
-import AppealIngestionModal from "AppealIngestionModal" /* 11692 */;
-import AppealIngestionBreadcrumbsDefault from "AppealIngestionBreadcrumbs" /* 11701 */;
+import parseMessageEmbedForProps from "parseMessageEmbedForProps" /* 8708 */;
+import useSafetyHubClassifications from "useSafetyHubClassifications" /* 11682 */;
+import AppealIngestionModal from "AppealIngestionModal" /* 11688 */;
+import AppealIngestionBreadcrumbsDefault from "AppealIngestionBreadcrumbs" /* 11706 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "handleSafetyHubRequestAgeVerificationResetModalAction" /* 8716 */;
+import closure_4 from "handleSafetyHubRequestAgeVerificationResetModalAction" /* 8720 */;
 import { EMPTY_STRING_SNOWFLAKE_ID } from "ME" /* 673 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
@@ -63,17 +63,17 @@ export default function AppealIngestionConfirmSubmission(isDsaEligible) {
     if (tmp11Result) {
       obj1 = { flaggedContent: null };
       obj1[0] = flagged_content;
-      tmp11Result = tmp11(tmp13(11695), obj1);
+      tmp11Result = tmp11(tmp13(11691), obj1);
     }
     const obj2 = { children: null };
     items5[2] = tmp11Result;
     const obj3 = { classification: null };
     obj3[0] = safetyHubClassification.classification;
-    items5[3] = tmp11(tmp13(11696), obj3);
+    items5[3] = tmp11(tmp13(11701), obj3);
     obj[1] = items5;
     items3[1] = tmp10(tmp12, obj);
     obj2[0] = items3;
-    return tmp10(tmp2(11692).AppealIngestionModalScreen, obj2);
+    return tmp10(tmp2(11688).AppealIngestionModalScreen, obj2);
   } else {
     const obj4 = { variant: "heading-md/normal", color: "text-link", style: null, onPress: null, children: null };
     obj4[2] = tmp.detailsAction;

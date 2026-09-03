@@ -1,6 +1,6 @@
-// === Module 13670: useSelectedActiveStream ===
+// === Module 13685: useSelectedActiveStream ===
 
-// Module 13670 (useSelectedActiveStream)
+// Module 13685 (useSelectedActiveStream)
 import closure_2 from "getParticipants" /* 4494 */;
 import closure_3 from "reset" /* 4500 */;
 

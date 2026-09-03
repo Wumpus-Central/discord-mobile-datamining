@@ -1,6 +1,6 @@
-// === Module 9537: useIsConnectedToVoiceChannel ===
+// === Module 9541: useIsConnectedToVoiceChannel ===
 
-// Module 9537 (useIsConnectedToVoiceChannel)
+// Module 9541 (useIsConnectedToVoiceChannel)
 import closure_2 from "fetchFingerprint" /* 1215 */;
 import closure_3 from "updateVoiceState" /* 4497 */;
 

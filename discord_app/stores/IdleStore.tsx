@@ -1,6 +1,6 @@
-// === Module 5362: checkIdleAFK ===
+// === Module 5363: checkIdleAFK ===
 
-// Module 5362 (checkIdleAFK)
+// Module 5363 (checkIdleAFK)
 import initializeDefault from "initialize" /* 586 */;
 import debounceDefault from "debounce" /* 633 */;
 import setDefault from "set" /* 684 */;
@@ -8,7 +8,7 @@ import dispatcherDefault from "dispatcher" /* 706 */;
 import set from "set" /* 1234 */;
 import setDefault2 from "set" /* 4103 */;
 import explicitContentFromProto from "explicitContentFromProto" /* 4166 */;
-import _modDef5363 from "module_5363" /* 5363 */;
+import _modDef5364 from "module_5364" /* 5364 */;
 import closure_4 from "fetchFingerprint" /* 1215 */;
 import ME from "ME" /* 673 */;
 import { SpeakingFlags } from "DesktopSources" /* 4542 */;
@@ -141,7 +141,7 @@ if (require("set").isPlatformEmbedded) {
       c11 = true;
       closure_3 = Date.now();
       checkIdleAFK();
-      _modDef5363.disconnect();
+      _modDef5364.disconnect();
     });
     const powerMonitor3 = setDefault2.powerMonitor;
     class IdleStore extends r10079 {

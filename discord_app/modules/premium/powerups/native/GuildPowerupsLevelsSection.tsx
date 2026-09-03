@@ -1,9 +1,9 @@
-// === Module 12351: PX_16 ===
+// === Module 12363: PX_16 ===
 
-// Module 12351 (PX_16)
+// Module 12363 (PX_16)
 import ThemesDefault from "Themes" /* 709 */;
 import getSystemLocale from "getSystemLocale" /* 1233 */;
-import items2 from "items" /* 12352 */;
+import items2 from "items" /* 12364 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
@@ -47,7 +47,7 @@ export default function GuildPowerupsLevelsSection(arg0) {
   obj[0] = intl.string(listings(2400)["TXY/b0"]);
   const intl2 = getSystemLocale.intl;
   obj[1] = intl2.string(listings(2400).aJv4PB);
-  const items1 = [callback(listings(12340), obj), ];
+  const items1 = [callback(listings(12352), obj), ];
   obj = {
     cardMarginRight: PX_16,
     cardWidth: 250,

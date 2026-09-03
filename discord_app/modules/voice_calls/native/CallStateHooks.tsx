@@ -1,9 +1,9 @@
-// === Module 13672: id ===
+// === Module 13687: id ===
 
-// Module 13672 (id)
+// Module 13687 (id)
 import closure_3 from "getParticipants" /* 4494 */;
 import closure_4 from "fetchFingerprint" /* 1215 */;
-import closure_5 from "callConnect" /* 5230 */;
+import closure_5 from "callConnect" /* 5231 */;
 import closure_6 from "createRTCConnection" /* 4554 */;
 import ME from "ME" /* 673 */;
 import { ParticipantTypes } from "ParticipantTypes" /* 4499 */;
@@ -59,7 +59,7 @@ export default function _default() {
     }
     return tmp;
   });
-  const tmp3 = id(9663)();
+  const tmp3 = id(9667)();
   dependencyMap = tmp3;
   const items2 = [getRTCConnectionId];
   stateFromStores = _require(586).useStateFromStores(items2, getRTCConnectionId.getRTCConnectionId, []);

@@ -1,9 +1,9 @@
-// === Module 8017: XNeutralIcon ===
+// === Module 8020: XNeutralIcon ===
 
-// Module 8017 (XNeutralIcon)
+// Module 8020 (XNeutralIcon)
 import noopAll from "noop" /* 19 */;
 import BaseIconImage from "BaseIconImage" /* 4196 */;
-import registerAsset from "registerAsset" /* 8018 */;
+import registerAsset from "registerAsset" /* 8021 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

@@ -1,6 +1,6 @@
-// === Module 11320: openAppStoreOverlayBottomSheet ===
+// === Module 11324: openAppStoreOverlayBottomSheet ===
 
-// Module 11320 (openAppStoreOverlayBottomSheet)
+// Module 11324 (openAppStoreOverlayBottomSheet)
 import set from "set" /* 2 */;
 import ME from "ME" /* 673 */;
 
@@ -31,5 +31,5 @@ export const openAppStoreOverlayBottomSheet = function openAppStoreOverlayBottom
       });
     }
   };
-  obj.openLazy(_require(2008)(11321, dependencyMap.paths), "QuestAppStoreOverlayBottomSheet", obj);
+  obj.openLazy(_require(2008)(11325, dependencyMap.paths), "QuestAppStoreOverlayBottomSheet", obj);
 };

@@ -1,10 +1,10 @@
-// === Module 15092: ThemeLightIcon ===
+// === Module 15107: ThemeLightIcon ===
 
-// Module 15092 (ThemeLightIcon)
+// Module 15107 (ThemeLightIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 709 */;
 import BaseIconImage from "BaseIconImage" /* 4196 */;
-import registerAsset from "registerAsset" /* 15093 */;
+import registerAsset from "registerAsset" /* 15108 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

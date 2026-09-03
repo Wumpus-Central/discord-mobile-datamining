@@ -1,6 +1,6 @@
-// === Module 17504: useCreateCreatorMonetizationAcceptTermsRequest ===
+// === Module 17524: useCreateCreatorMonetizationAcceptTermsRequest ===
 
-// Module 17504 (useCreateCreatorMonetizationAcceptTermsRequest)
+// Module 17524 (useCreateCreatorMonetizationAcceptTermsRequest)
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import closure_5 from "_slicedToArray" /* 32 */;
 import closure_6 from "noop" /* 19 */;
@@ -21,9 +21,9 @@ export default function useCreateCreatorMonetizationAcceptTermsRequest(arg0, arg
   dependencyMap = tmp2[1];
   [tmp4, closure_4] = isExpeditedOnboardingGuild(React.useState(false), 2);
   let tmp3 = isExpeditedOnboardingGuild(React.useState(false), 2);
-  isExpeditedOnboardingGuild = _require(6116).useIsExpeditedOnboardingGuild(stateFromStores);
+  isExpeditedOnboardingGuild = _require(6117).useIsExpeditedOnboardingGuild(stateFromStores);
   obj = { canSubmitAcceptance: null, error: null, loading: null, submitAcceptTermsRequest: null };
-  let obj2 = _require(6116);
+  let obj2 = _require(6117);
   const items1 = [closure_9];
   const items2 = [stateFromStores];
   obj[0] = _require(586).useStateFromStores(items1, () => {
@@ -73,10 +73,10 @@ export default function useCreateCreatorMonetizationAcceptTermsRequest(arg0, arg
                 v0 = 4;
                 c5 = 1;
                 obj1 = { value: null, done: false };
-                obj1[0] = closure_1_2(17505).acceptCreatorMonetizationTerms(tmp56, tmp42);
+                obj1[0] = closure_1_2(17525).acceptCreatorMonetizationTerms(tmp56, tmp42);
                 return obj1;
               } else {
-                let obj2 = closure_1_2(17505);
+                let obj2 = closure_1_2(17525);
                 v0 = 3;
                 c5 = 1;
                 obj2 = { value: null, done: false };

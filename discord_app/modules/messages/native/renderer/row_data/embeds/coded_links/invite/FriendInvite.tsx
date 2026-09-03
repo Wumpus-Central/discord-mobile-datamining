@@ -1,11 +1,11 @@
-// === Module 13100: createFriendInvite ===
+// === Module 13112: createFriendInvite ===
 
-// Module 13100 (createFriendInvite)
+// Module 13112 (createFriendInvite)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import getSystemLocale from "getSystemLocale" /* 1233 */;
-import InviteSendStates from "InviteSendStates" /* 7491 */;
-import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 7863 */;
+import InviteSendStates from "InviteSendStates" /* 7492 */;
+import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 7866 */;
 import closure_4 from "markAllUserIdListsStale" /* 4130 */;
 
 const Image = get_ActivityIndicator.Image;

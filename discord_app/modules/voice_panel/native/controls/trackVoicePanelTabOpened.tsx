@@ -1,6 +1,6 @@
-// === Module 16987: trackVoicePanelTabOpened ===
+// === Module 17007: trackVoicePanelTabOpened ===
 
-// Module 16987 (trackVoicePanelTabOpened)
+// Module 17007 (trackVoicePanelTabOpened)
 import expandEventPropertiesDefault from "expandEventProperties" /* 695 */;
 import closure_2 from "generateOldThreadCutoff" /* 4493 */;
 import { AnalyticEvents } from "ME" /* 673 */;

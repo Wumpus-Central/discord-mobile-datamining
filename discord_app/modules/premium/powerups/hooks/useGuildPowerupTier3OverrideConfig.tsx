@@ -1,6 +1,6 @@
-// === Module 12344: useGuildPowerupTier3OverrideConfig ===
+// === Module 12356: useGuildPowerupTier3OverrideConfig ===
 
-// Module 12344 (useGuildPowerupTier3OverrideConfig)
+// Module 12356 (useGuildPowerupTier3OverrideConfig)
 import messagesProxyDefault from "messagesProxy" /* 2400 */;
 import closure_3 from "createGuildRecordFromRust" /* 1908 */;
 import { GuildFeatures } from "ME" /* 673 */;

@@ -1,6 +1,6 @@
-// === Module 8605: resolveSelectedIndex ===
+// === Module 8609: resolveSelectedIndex ===
 
-// Module 8605 (resolveSelectedIndex)
+// Module 8609 (resolveSelectedIndex)
 import set from "set" /* 2 */;
 
 function resolveSelectedIndex(arg0) {

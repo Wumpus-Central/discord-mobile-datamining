@@ -1,12 +1,12 @@
-// === Module 17692: SafetyFlowTaskScreen ===
+// === Module 17716: SafetyFlowTaskScreen ===
 
-// Module 17692 (SafetyFlowTaskScreen)
+// Module 17716 (SafetyFlowTaskScreen)
 import noopAll from "noop" /* 19 */;
 import Text from "Text" /* 4474 */;
-import Stack from "Stack" /* 4926 */;
-import ModalScreen from "ModalScreen" /* 8707 */;
-import ModalContent from "ModalContent" /* 8708 */;
-import LogOutDisclaimerDefault from "LogOutDisclaimer" /* 17690 */;
+import Stack from "Stack" /* 4927 */;
+import ModalScreen from "ModalScreen" /* 8711 */;
+import ModalContent from "ModalContent" /* 8712 */;
+import LogOutDisclaimerDefault from "LogOutDisclaimer" /* 17714 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -61,12 +61,12 @@ export default function SafetyFlowTaskScreen(action) {
       obj1[1] = action;
       obj1[2] = onAction;
       obj1[3] = submitting;
-      tmp7Result = tmp7(tmp4(10954).ModalActionButton, obj1);
+      tmp7Result = tmp7(tmp4(10958).ModalActionButton, obj1);
     }
     const obj2 = { children: null };
     items3[1] = tmp7Result;
     obj2[0] = items3;
-    footer = tmp3(tmp4(11722).ModalFooter, obj2);
+    footer = tmp3(tmp4(11727).ModalFooter, obj2);
   }
   children[1] = footer;
   return closure_4(ModalScreen.ModalScreen, { children });

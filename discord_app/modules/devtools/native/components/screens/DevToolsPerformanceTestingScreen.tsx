@@ -1,6 +1,6 @@
-// === Module 15553: ? ===
+// === Module 15567: ? ===
 
-// Module 15553
+// Module 15567
 import ThemesDefault from "Themes" /* 709 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
 import { ScrollView } from "get ActivityIndicator" /* 17 */;
@@ -20,7 +20,7 @@ const memoResult = importAllResult.memo(function DevToolsPerformanceTestingScree
   obj = { paddingBottom: useSafeAreaInsetsDefault().bottom + ThemesDefault.space.PX_16 };
   obj[1] = obj;
   obj1 = { hasIcons: true, children: null };
-  const entries = Object.entries(_require(15406).PerformanceTestingScreens);
+  const entries = Object.entries(_require(15420).PerformanceTestingScreens);
   obj1[1] = entries.map((arg0) => {
     [tmp, ] = arg0;
     return closure_1_4(callback(closure_1_2[9]).TableRow, {
@@ -40,7 +40,7 @@ const memoResult = importAllResult.memo(function DevToolsPerformanceTestingScree
       }
     }, tmp);
   });
-  obj[2] = jsx(_require(6000).TableRowGroup, { hasIcons: true, children: null });
+  obj[2] = jsx(_require(6001).TableRowGroup, { hasIcons: true, children: null });
   return <ScrollView paddingBottom={useSafeAreaInsetsDefault().bottom + ThemesDefault.space.PX_16} />;
 });
 const result = require("set").fileFinishedImporting("modules/devtools/native/components/screens/DevToolsPerformanceTestingScreen.tsx");

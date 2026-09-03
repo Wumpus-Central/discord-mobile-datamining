@@ -1,13 +1,13 @@
-// === Module 5080: set ===
+// === Module 5081: set ===
 
-// Module 5080 (set)
+// Module 5081 (set)
 import timestampDefault from "timestamp" /* 3 */;
 import failsDefault from "fails" /* 581 */;
 import setDefault from "set" /* 684 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 695 */;
-import cancel from "cancel" /* 5081 */;
-import cancelDefault from "cancel" /* 5081 */;
-import fromBlobDefault from "fromBlob" /* 5121 */;
+import cancel from "cancel" /* 5082 */;
+import cancelDefault from "cancel" /* 5082 */;
+import fromBlobDefault from "fromBlob" /* 5122 */;
 import closure_4 from "_objectWithoutProperties" /* 109 */;
 import closure_5 from "asyncGeneratorStep" /* 5 */;
 import closure_6 from "_slicedToArray" /* 32 */;
@@ -2250,7 +2250,7 @@ prototype["delete"] = function delete() {
             obj[0] = arg1;
             return obj;
           } else if (null != v0.uploadedFilename) {
-            obj1 = v0(5126);
+            obj1 = v0(5127);
             const uploadTarget = obj1.getUploadTarget(tmp18.item.target);
             dependencyMap = 1;
             const deleteUploadURL = uploadTarget.getDeleteUploadURL(tmp18.uploadedFilename);

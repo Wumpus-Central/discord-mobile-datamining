@@ -1,6 +1,6 @@
-// === Module 10036: participantMemberInfo ===
+// === Module 10040: participantMemberInfo ===
 
-// Module 10036 (participantMemberInfo)
+// Module 10040 (participantMemberInfo)
 import setDefault from "set" /* 684 */;
 import nameFromUser from "nameFromUser" /* 4322 */;
 

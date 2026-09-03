@@ -1,11 +1,11 @@
-// === Module 4971: isSoundValid ===
+// === Module 4972: isSoundValid ===
 
-// Module 4971 (isSoundValid)
+// Module 4972 (isSoundValid)
 import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4139 */;
 import closure_2 from "ensureGuildLoaded" /* 1386 */;
 import closure_3 from "getUncachedChannelPermissions" /* 4120 */;
 import closure_4 from "mergeGuildAvatar" /* 1921 */;
-import { DEFAULT_SOUND_GUILD_ID } from "MAX_LENGTH_SOUND_NAME" /* 4967 */;
+import { DEFAULT_SOUND_GUILD_ID } from "MAX_LENGTH_SOUND_NAME" /* 4968 */;
 import { Permissions } from "sum" /* 502 */;
 
 let result = require("set").fileFinishedImporting("modules/premium/sounds/soundmoji/utils/isSoundValid.tsx");

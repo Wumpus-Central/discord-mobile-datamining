@@ -1,13 +1,13 @@
-// === Module 12086: NewBadge ===
+// === Module 12092: NewBadge ===
 
-// Module 12086 (NewBadge)
+// Module 12092 (NewBadge)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 709 */;
 import getSystemLocale from "getSystemLocale" /* 1233 */;
 import set from "set" /* 1234 */;
 import useThemeDefault from "useTheme" /* 4413 */;
 import Text from "Text" /* 4474 */;
-import useIsUsingClientThemeDefault from "useIsUsingClientTheme" /* 7627 */;
+import useIsUsingClientThemeDefault from "useIsUsingClientTheme" /* 7628 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;

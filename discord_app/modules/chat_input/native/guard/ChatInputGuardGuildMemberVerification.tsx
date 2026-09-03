@@ -1,13 +1,13 @@
-// === Module 12244: ? ===
+// === Module 12256: ? ===
 
-// Module 12244
-import playDefault from "play" /* 5952 */;
-import ChatInputGuardDefault from "ChatInputGuard" /* 12236 */;
-import registerAssetDefault from "registerAsset" /* 12245 */;
-import registerAssetDefault2 from "registerAsset" /* 12246 */;
+// Module 12256
+import playDefault from "play" /* 5953 */;
+import ChatInputGuardDefault from "ChatInputGuard" /* 12248 */;
+import registerAssetDefault from "registerAsset" /* 12257 */;
+import registerAssetDefault2 from "registerAsset" /* 12258 */;
 import { Image } from "get ActivityIndicator" /* 17 */;
 import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4470 */;
-import { TextAreaCta } from "TextAreaCta" /* 11758 */;
+import { TextAreaCta } from "TextAreaCta" /* 11763 */;
 import { AnalyticEvents } from "ME" /* 673 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
@@ -18,7 +18,7 @@ let closure_8 = createCacheKey.createStyles({ noticeIcon: { height: 36, width: 3
 const memoResult = importAllResult.memo(function ChatInputGuardGuildMemberVerification(guildId) {
   guildId = guildId.guildId;
   const tmp = callback();
-  let obj = guildId(7673);
+  let obj = guildId(7676);
   const currentUserGuildJoinRequest = obj.useCurrentUserGuildJoinRequest(guildId);
   let applicationStatus;
   if (currentUserGuildJoinRequest != null) {
@@ -48,7 +48,7 @@ const memoResult = importAllResult.memo(function ChatInputGuardGuildMemberVerifi
       obj[1] = intl.string(guildId(closure_1_2[10]).t["13tjTU"]);
       const result = guildId(closure_1_2[12]).openMemberVerificationCancelPendingAlert(obj);
     };
-    const tmp7 = jsx(tmp2(5559).XSmallIcon, {});
+    const tmp7 = jsx(tmp2(5560).XSmallIcon, {});
   } else {
     let intl = tmp2(1233).intl;
     stringResult = intl.string(tmp2(1233).t.rEBKvg);
@@ -71,7 +71,7 @@ const memoResult = importAllResult.memo(function ChatInputGuardGuildMemberVerifi
   } else {
     obj = { style: null, source: null, autoPlay: null };
     obj[0] = tmp.lottieAnimation;
-    obj[1] = tmp2(12247);
+    obj[1] = tmp2(12259);
     obj[2] = !stateFromStores;
     tmp13Result = tmp13(playDefault, obj);
     const tmp14Result = playDefault;

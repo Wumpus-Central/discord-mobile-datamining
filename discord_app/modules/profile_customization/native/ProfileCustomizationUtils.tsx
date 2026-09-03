@@ -1,10 +1,10 @@
-// === Module 8117: useUserProfileBannerBackgroundColor ===
+// === Module 8120: useUserProfileBannerBackgroundColor ===
 
-// Module 8117 (useUserProfileBannerBackgroundColor)
+// Module 8120 (useUserProfileBannerBackgroundColor)
 import set from "set" /* 2 */;
 import int2hslRaw from "int2hslRaw" /* 685 */;
 import getAvatarURL2 from "getAvatarURL" /* 1430 */;
-import useDominantRGBFromImage from "useDominantRGBFromImage" /* 8118 */;
+import useDominantRGBFromImage from "useDominantRGBFromImage" /* 8121 */;
 
 const result = set.fileFinishedImporting("modules/profile_customization/native/ProfileCustomizationUtils.tsx");
 

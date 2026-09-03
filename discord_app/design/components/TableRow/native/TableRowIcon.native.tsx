@@ -1,10 +1,10 @@
-// === Module 5613: TableRowIcon ===
+// === Module 5614: TableRowIcon ===
 
-// Module 5613 (TableRowIcon)
+// Module 5614 (TableRowIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 709 */;
-import IconSizes from "IconSizes" /* 4930 */;
-import IconSizesDefault from "IconSizes" /* 4930 */;
+import IconSizes from "IconSizes" /* 4931 */;
+import IconSizesDefault from "IconSizes" /* 4931 */;
 import closure_4 from "_objectWithoutProperties" /* 109 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;

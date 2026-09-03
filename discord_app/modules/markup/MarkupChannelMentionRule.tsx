@@ -1,12 +1,12 @@
-// === Module 4959: getChannel ===
+// === Module 4960: getChannel ===
 
-// Module 4959 (getChannel)
+// Module 4960 (getChannel)
 import getSystemLocale from "getSystemLocale" /* 1233 */;
 import getAvatarURLDefault from "getAvatarURL" /* 1430 */;
 import isNullOrEmpty from "isNullOrEmpty" /* 1901 */;
 import tDefault from "t" /* 4192 */;
 import ME2 from "ME" /* 4675 */;
-import textRegexpDefault from "textRegexp" /* 4958 */;
+import textRegexpDefault from "textRegexp" /* 4959 */;
 import closure_3 from "isSubscriptionGated" /* 1982 */;
 import closure_4 from "ensureGuildLoaded" /* 1386 */;
 import closure_5 from "createGuildRecordFromRust" /* 1908 */;
@@ -19,8 +19,8 @@ require = arg1;
 function getChannel(id, arr) {
   const _require = id;
   const channel = store.getChannel(id);
-  const isSubscriptionGated = _require(4960).getChannelRoleSubscriptionStatus(id, store, closure_3, closure_6).isSubscriptionGated;
-  const obj2 = _require(4960);
+  const isSubscriptionGated = _require(4961).getChannelRoleSubscriptionStatus(id, store, closure_3, closure_6).isSubscriptionGated;
+  const obj2 = _require(4961);
   let str = _require(4666).getMentionIconType(channel);
   if (str == null) {
     str = "text";
@@ -51,7 +51,7 @@ function getChannel(id, arr) {
     obj[3] = tmpResult.computeChannelName(channel, closure_8, closure_7);
     obj[4] = channel.isPrivate();
     obj[5] = channel.isForumPost();
-    tmpResult = tmp(4961);
+    tmpResult = tmp(4962);
     obj[6] = tmpResult.isChannelTypeMentionable(channel.type);
     obj[7] = tmp(4675).canViewChannel(channel);
     obj[8] = isSubscriptionGated;

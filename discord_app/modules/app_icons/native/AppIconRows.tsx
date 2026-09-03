@@ -1,9 +1,9 @@
-// === Module 15353: BackwardsCompatibleAppIconRows ===
+// === Module 15367: BackwardsCompatibleAppIconRows ===
 
-// Module 15353 (BackwardsCompatibleAppIconRows)
+// Module 15367 (BackwardsCompatibleAppIconRows)
 import initialize from "initialize" /* 586 */;
 import isPremiumAtLeast from "isPremiumAtLeast" /* 1945 */;
-import fetchCurrentAppIcon from "fetchCurrentAppIcon" /* 13246 */;
+import fetchCurrentAppIcon from "fetchCurrentAppIcon" /* 13258 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
@@ -45,7 +45,7 @@ function BackwardsCompatibleAppIconRows(arg0) {
       obj.onLongPress = onLongPress;
       return closure_1_7(_undefined(_undefined2[9]), obj);
     });
-    obj[1] = callback(merged(6000).TableRowGroup, obj);
+    obj[1] = callback(merged(6001).TableRowGroup, obj);
     return callback(View, obj);
   }
 }

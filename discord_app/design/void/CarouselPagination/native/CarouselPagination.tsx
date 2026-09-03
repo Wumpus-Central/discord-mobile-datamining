@@ -1,6 +1,6 @@
-// === Module 14046: CarouselPagination ===
+// === Module 14062: CarouselPagination ===
 
-// Module 14046 (CarouselPagination)
+// Module 14062 (CarouselPagination)
 import ThemesDefault from "Themes" /* 709 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;

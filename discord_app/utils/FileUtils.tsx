@@ -1,8 +1,8 @@
-// === Module 5086: getUploadFileSizeSum ===
+// === Module 5087: getUploadFileSizeSum ===
 
-// Module 5086 (getUploadFileSizeSum)
+// Module 5087 (getUploadFileSizeSum)
 import applyDefault from "apply" /* 12 */;
-import noConflictDefault from "noConflict" /* 5087 */;
+import noConflictDefault from "noConflict" /* 5088 */;
 import closure_3 from "createGuildRecordFromRust" /* 1908 */;
 import closure_4 from "mergeGuildAvatar" /* 1921 */;
 import ME from "ME" /* 673 */;

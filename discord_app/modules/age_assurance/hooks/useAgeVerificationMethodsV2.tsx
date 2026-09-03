@@ -1,10 +1,10 @@
-// === Module 8729: useAgeVerificationMethodsV2 ===
+// === Module 8733: useAgeVerificationMethodsV2 ===
 
-// Module 8729 (useAgeVerificationMethodsV2)
+// Module 8733 (useAgeVerificationMethodsV2)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
-import closure_6 from "initialize" /* 8730 */;
+import closure_6 from "initialize" /* 8734 */;
 
 const require = arg1;
 let result = require("set").fileFinishedImporting("modules/age_assurance/hooks/useAgeVerificationMethodsV2.tsx");

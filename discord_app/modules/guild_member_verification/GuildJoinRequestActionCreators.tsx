@@ -1,11 +1,11 @@
-// === Module 7670: _fetchGuildJoinRequests ===
+// === Module 7673: _fetchGuildJoinRequests ===
 
-// Module 7670 (_fetchGuildJoinRequests)
+// Module 7673 (_fetchGuildJoinRequests)
 import dispatcherDefault from "dispatcher" /* 706 */;
-import trackMemberApplicationViewed from "trackMemberApplicationViewed" /* 7671 */;
+import trackMemberApplicationViewed from "trackMemberApplicationViewed" /* 7674 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import { createChannelRecordFromServer as closure_4 } from "createChannelRecord" /* 1390 */;
-import closure_5 from "updateSubmittedGuildJoinRequestTotal" /* 7211 */;
+import closure_5 from "updateSubmittedGuildJoinRequestTotal" /* 7212 */;
 import { joinRequestFromServer } from "handleGatewayJoinRequestUpdate" /* 4300 */;
 import ME from "ME" /* 673 */;
 
@@ -480,7 +480,7 @@ function _updateGuildJoinRequest() {
               obj1[0] = arg1;
               return obj1;
             } else {
-              let obj7 = callback(7671);
+              let obj7 = callback(7674);
               const obj2 = { guildId: null, actionType: null, applicationUserId: null };
               obj2[0] = callback;
               obj2[1] = APPROVED;
@@ -506,7 +506,7 @@ function _updateGuildJoinRequest() {
                   body = body.body.code === constants.REQUEST_TO_JOIN_USER_INELIGIBLE;
                 }
                 if (body) {
-                  let obj = callback2(4857);
+                  let obj = callback2(4858);
                   obj = { title: null, body: null };
                   const intl = callback(1233).intl;
                   obj[0] = intl.string(callback(1233).t.DxJj4e);

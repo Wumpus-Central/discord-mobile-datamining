@@ -1,6 +1,6 @@
-// === Module 7887: NITRO_UPSELL_ALERT_KEY ===
+// === Module 7890: NITRO_UPSELL_ALERT_KEY ===
 
-// Module 7887 (NITRO_UPSELL_ALERT_KEY)
+// Module 7890 (NITRO_UPSELL_ALERT_KEY)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/double_tap_to_react/DoubleTapToRaectConstants.tsx");

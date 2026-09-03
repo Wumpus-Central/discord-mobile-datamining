@@ -1,8 +1,8 @@
-// === Module 15987: useIsCurrentUserEligibleForPowerupUpsells ===
+// === Module 16003: useIsCurrentUserEligibleForPowerupUpsells ===
 
-// Module 15987 (useIsCurrentUserEligibleForPowerupUpsells)
+// Module 16003 (useIsCurrentUserEligibleForPowerupUpsells)
 import closure_2 from "trackCommunicationDisabled" /* 1991 */;
-import closure_3 from "insertUnsortedGuilds" /* 5389 */;
+import closure_3 from "insertUnsortedGuilds" /* 5390 */;
 import closure_4 from "mergeGuildAvatar" /* 1921 */;
 import closure_5 from "handleGuildBoostsUpdate" /* 4370 */;
 import { PremiumTypes } from "GuildFeatures" /* 1923 */;

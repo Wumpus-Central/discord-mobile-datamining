@@ -1,18 +1,18 @@
-// === Module 16321: Screenshot ===
+// === Module 16340: Screenshot ===
 
-// Module 16321 (Screenshot)
+// Module 16340 (Screenshot)
 import ThemesDefault from "Themes" /* 709 */;
 import getSystemLocale from "getSystemLocale" /* 1233 */;
-import SHARE_EVENT_DETAILS_LINK from "SHARE_EVENT_DETAILS_LINK" /* 9766 */;
+import SHARE_EVENT_DETAILS_LINK from "SHARE_EVENT_DETAILS_LINK" /* 9770 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import closure_5 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_7 from "ensureGuildLoaded" /* 1386 */;
-import { DraftType } from "handleChanged" /* 4854 */;
-import closure_9 from "map" /* 4853 */;
+import { DraftType } from "handleChanged" /* 4855 */;
+import closure_9 from "map" /* 4854 */;
 import { AbortCodes } from "ME" /* 673 */;
-import { UserRowModes } from "UserRowModes" /* 10853 */;
+import { UserRowModes } from "UserRowModes" /* 10857 */;
 import { MessageSendLocation } from "MESSAGE_GROUP_SPACING" /* 4471 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
@@ -40,7 +40,7 @@ function Screenshot(setUri) {
       return nextPromise;
     }, 500);
   }, items);
-  let obj = setUri(7626);
+  let obj = setUri(7627);
   obj = { style: { position: "absolute", top: -1000, overflow: "hidden" }, children: null };
   obj = { style: items1, children: null };
   items1 = [tmp.preview, { width: ref(1492)().width }];
@@ -50,13 +50,13 @@ function Screenshot(setUri) {
   const tmp4 = ref(4328)();
   const obj3 = { absolute: true, wide: true, tall: true, mix: true, mixAmount: null };
   const obj4 = { dark: null, light: null };
-  const tmp6 = ref(16323);
+  const tmp6 = ref(16342);
   obj4[0] = setUri(4296).OverlayOpacity.LEVEL_7;
   obj4[1] = setUri(4296).OverlayOpacity.LEVEL_8;
   obj3[4] = obj4;
-  const items2 = [callback3(ref(5078), obj3), ];
+  const items2 = [callback3(ref(5079), obj3), ];
   const obj5 = { gradient: tmp4, children: null };
-  const tmp7 = ref(5078);
+  const tmp7 = ref(5079);
   const items3 = [tmp.contentContainer, clientThemesOverride];
   obj5[1] = callback3(View, { style: items3, children: setUri.render() });
   items2[1] = callback3(setUri(4204).ThemeContextProvider, obj5);
@@ -197,7 +197,7 @@ class ICYMIShareModal {
                     closure_0 = arg0;
                     c2 = 0;
                     c1 = 0;
-                    return (/* F125051 */ function*() { ... })();
+                    return (/* F125291 */ function*() { ... })();
                   });
                   return function(arg0) {
                     const self = this;

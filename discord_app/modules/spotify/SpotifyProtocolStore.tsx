@@ -1,6 +1,6 @@
-// === Module 9404: isProtocolRegistered ===
+// === Module 9408: isProtocolRegistered ===
 
-// Module 9404 (isProtocolRegistered)
+// Module 9408 (isProtocolRegistered)
 import initializeDefault from "initialize" /* 586 */;
 import dispatcherDefault from "dispatcher" /* 706 */;
 

@@ -1,20 +1,20 @@
-// === Module 12498: HubEmailConnectionSubmitSchool ===
+// === Module 12510: HubEmailConnectionSubmitSchool ===
 
-// Module 12498 (HubEmailConnectionSubmitSchool)
+// Module 12510 (HubEmailConnectionSubmitSchool)
 import ThemesDefault from "Themes" /* 709 */;
 import getSystemLocale from "getSystemLocale" /* 1233 */;
 import Button from "Button" /* 1296 */;
 import useNavigation from "useNavigation" /* 1498 */;
 import Text from "Text" /* 4474 */;
-import Button2 from "Button" /* 4928 */;
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5602 */;
-import _modDef7713 from "module_7713" /* 7713 */;
-import HubEmailConnectionModal from "HubEmailConnectionModal" /* 12489 */;
+import Button2 from "Button" /* 4929 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5603 */;
+import _modDef7716 from "module_7716" /* 7716 */;
+import HubEmailConnectionModal from "HubEmailConnectionModal" /* 12501 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { HubEmailConnectionSteps } from "HubEmailConnectionSteps" /* 12481 */;
+import { HubEmailConnectionSteps } from "HubEmailConnectionSteps" /* 12493 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -192,7 +192,7 @@ export default function HubEmailConnectionSubmitSchool(arg0) {
       }
     }, 100);
   };
-  items1[2] = callback2(_modDef7713, obj4);
+  items1[2] = callback2(_modDef7716, obj4);
   obj1[1] = items1;
   const items2 = [closure_10(first, obj1), callback2(first, { style: tmp.redesignGrowSpacing }), ];
   const obj7 = { style: tmp.redesignSubmit, children: null };

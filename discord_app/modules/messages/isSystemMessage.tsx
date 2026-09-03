@@ -1,6 +1,6 @@
-// === Module 6125: isSystemMessage ===
+// === Module 6126: isSystemMessage ===
 
-// Module 6125 (isSystemMessage)
+// Module 6126 (isSystemMessage)
 import set from "set" /* 2 */;
 import set2 from "set" /* 683 */;
 

@@ -1,9 +1,9 @@
-// === Module 11777: CustomTypingIndicatorAnimatedEmoji ===
+// === Module 11783: CustomTypingIndicatorAnimatedEmoji ===
 
-// Module 11777 (CustomTypingIndicatorAnimatedEmoji)
+// Module 11783 (CustomTypingIndicatorAnimatedEmoji)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
-import closure_5 from "getState" /* 7166 */;
+import closure_5 from "getState" /* 7167 */;
 import { AppStates } from "ME" /* 673 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;

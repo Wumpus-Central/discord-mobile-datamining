@@ -1,10 +1,10 @@
-// === Module 9834: HeadphonesSlashIcon ===
+// === Module 9838: HeadphonesSlashIcon ===
 
-// Module 9834 (HeadphonesSlashIcon)
+// Module 9838 (HeadphonesSlashIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 709 */;
 import BaseIconImage from "BaseIconImage" /* 4196 */;
-import registerAsset from "registerAsset" /* 9835 */;
+import registerAsset from "registerAsset" /* 9839 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

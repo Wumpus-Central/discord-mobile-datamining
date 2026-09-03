@@ -1,9 +1,9 @@
-// === Module 9526: checkRpcVersion ===
+// === Module 9530: checkRpcVersion ===
 
-// Module 9526 (checkRpcVersion)
+// Module 9530 (checkRpcVersion)
 import set from "set" /* 2 */;
 import applyDefault from "apply" /* 12 */;
-import prototypeDefault from "prototype" /* 9516 */;
+import prototypeDefault from "prototype" /* 9520 */;
 import ME from "ME" /* 673 */;
 
 ({ RPC_VERSION: obj1, RPCCloseCodes: c3 } = ME);

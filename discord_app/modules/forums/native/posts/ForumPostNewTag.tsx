@@ -1,6 +1,6 @@
-// === Module 11810: ForumPostNewTag ===
+// === Module 11816: ForumPostNewTag ===
 
-// Module 11810 (ForumPostNewTag)
+// Module 11816 (ForumPostNewTag)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 709 */;
 import Button from "Button" /* 1296 */;

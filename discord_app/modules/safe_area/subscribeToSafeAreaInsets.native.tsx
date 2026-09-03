@@ -1,6 +1,6 @@
-// === Module 9628: subscribeToSafeAreaInsets ===
+// === Module 9632: subscribeToSafeAreaInsets ===
 
-// Module 9628 (subscribeToSafeAreaInsets)
+// Module 9632 (subscribeToSafeAreaInsets)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/safe_area/subscribeToSafeAreaInsets.native.tsx");

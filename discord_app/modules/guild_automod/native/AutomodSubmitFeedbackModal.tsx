@@ -1,15 +1,15 @@
-// === Module 11662: Navbar ===
+// === Module 11667: Navbar ===
 
-// Module 11662 (Navbar)
+// Module 11667 (Navbar)
 import ThemesDefault from "Themes" /* 709 */;
 import getSystemLocale from "getSystemLocale" /* 1233 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
 import Text from "Text" /* 4474 */;
-import Button from "Button" /* 4928 */;
-import SafeAreaPaddingView from "SafeAreaPaddingView" /* 5561 */;
-import HeaderActionButton from "HeaderActionButton" /* 6246 */;
-import Feedback from "Feedback" /* 7272 */;
-import registerAssetDefault from "registerAsset" /* 7773 */;
+import Button from "Button" /* 4929 */;
+import SafeAreaPaddingView from "SafeAreaPaddingView" /* 5562 */;
+import HeaderActionButton from "HeaderActionButton" /* 6247 */;
+import Feedback from "Feedback" /* 7273 */;
+import registerAssetDefault from "registerAsset" /* 7776 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;

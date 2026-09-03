@@ -1,22 +1,22 @@
-// === Module 8572: getProfileProperties ===
+// === Module 8576: getProfileProperties ===
 
-// Module 8572 (getProfileProperties)
+// Module 8576 (getProfileProperties)
 import expandEventPropertiesDefault from "expandEventProperties" /* 695 */;
 import getAvatarURL from "getAvatarURL" /* 1430 */;
-import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata" /* 4700 */;
-import useDisplayProfile from "useDisplayProfile" /* 8122 */;
-import isUserProfilePerformanceAnalyticsEnabled from "isUserProfilePerformanceAnalyticsEnabled" /* 8579 */;
-import closure_3 from "initialize" /* 8573 */;
-import closure_4 from "recomputeFromAppTokens" /* 5483 */;
-import { FetchState } from "recomputeFromAppTokens" /* 5483 */;
-import closure_6 from "recomputeAffinities" /* 7413 */;
+import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata" /* 4701 */;
+import useDisplayProfile from "useDisplayProfile" /* 8125 */;
+import isUserProfilePerformanceAnalyticsEnabled from "isUserProfilePerformanceAnalyticsEnabled" /* 8583 */;
+import closure_3 from "initialize" /* 8577 */;
+import closure_4 from "recomputeFromAppTokens" /* 5484 */;
+import { FetchState } from "recomputeFromAppTokens" /* 5484 */;
+import closure_6 from "recomputeAffinities" /* 7414 */;
 import closure_7 from "reset" /* 4500 */;
 import closure_8 from "trackCommunicationDisabled" /* 1991 */;
 import closure_9 from "sortActivity" /* 4569 */;
 import closure_10 from "markAllUserIdListsStale" /* 4130 */;
 import closure_11 from "mergeGuildAvatar" /* 1921 */;
-import closure_12 from "createUserWidgetFromServer" /* 7375 */;
-import { TrackUserProfileProperties as closure_13 } from "USER_PROFILE_TOOLTIP_DELAY" /* 8569 */;
+import closure_12 from "createUserWidgetFromServer" /* 7376 */;
+import { TrackUserProfileProperties as closure_13 } from "USER_PROFILE_TOOLTIP_DELAY" /* 8573 */;
 import ME from "ME" /* 673 */;
 import { StatusTypes } from "sum" /* 502 */;
 
@@ -369,9 +369,9 @@ export const maybeTrackUserProfileUiViewed = function maybeTrackUserProfileUiVie
     }
     if (!tmp5) {
       trackResult = {};
-      let tmpResult = tmp(4700);
+      let tmpResult = tmp(4701);
       const merged = Object.assign(tmpResult.collectGuildAnalyticsMetadata(guildId));
-      tmpResult = tmp(4700);
+      tmpResult = tmp(4701);
       const merged1 = Object.assign(tmpResult.collectChannelAnalyticsMetadataFromId(channelId));
       const merged2 = Object.assign(getTrackUserProfileProperties(userId));
       userId = userId.userId;

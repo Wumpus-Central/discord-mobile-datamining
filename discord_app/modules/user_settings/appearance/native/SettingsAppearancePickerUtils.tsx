@@ -1,6 +1,6 @@
-// === Module 15124: getMaxColors ===
+// === Module 15139: getMaxColors ===
 
-// Module 15124 (getMaxColors)
+// Module 15139 (getMaxColors)
 import ThemesDefault from "Themes" /* 709 */;
 import getSystemThemeDefault from "getSystemTheme" /* 1338 */;
 import ClientThemeType from "ClientThemeType" /* 1348 */;

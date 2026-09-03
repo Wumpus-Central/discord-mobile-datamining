@@ -1,9 +1,9 @@
-// === Module 9759: EditGuildEventDetails ===
+// === Module 9763: EditGuildEventDetails ===
 
-// Module 9759 (EditGuildEventDetails)
+// Module 9763 (EditGuildEventDetails)
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
-import { isGuildScheduledEventActive as closure_6 } from "scheduledEventSort" /* 7280 */;
+import { isGuildScheduledEventActive as closure_6 } from "scheduledEventSort" /* 7281 */;
 import { GuildScheduledEventEntityTypes as closure_7 } from "GUILD_EVENT_MAX_NAME_LENGTH" /* 1392 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;

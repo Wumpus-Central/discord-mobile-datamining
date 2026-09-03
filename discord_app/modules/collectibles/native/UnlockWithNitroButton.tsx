@@ -1,13 +1,13 @@
-// === Module 12796: UnlockWithNitroButton ===
+// === Module 12808: UnlockWithNitroButton ===
 
-// Module 12796 (UnlockWithNitroButton)
+// Module 12808 (UnlockWithNitroButton)
 import noopAll from "noop" /* 19 */;
 import initialize from "initialize" /* 586 */;
-import CollapsingText from "CollapsingText" /* 4929 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 8104 */;
-import useOpenNitroSubscribeActionSheetDefault from "useOpenNitroSubscribeActionSheet" /* 12778 */;
-import closure_3 from "updateProduct" /* 6092 */;
-import closure_4 from "map" /* 7312 */;
+import CollapsingText from "CollapsingText" /* 4930 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 8107 */;
+import useOpenNitroSubscribeActionSheetDefault from "useOpenNitroSubscribeActionSheet" /* 12790 */;
+import closure_3 from "updateProduct" /* 6093 */;
+import closure_4 from "map" /* 7313 */;
 import { ShopCtaEnum } from "items" /* 675 */;
 import { jsx } from "jsxProd" /* 21 */;
 

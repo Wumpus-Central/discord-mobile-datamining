@@ -1,13 +1,13 @@
-// === Module 17381: computeEmojiItem ===
+// === Module 17401: computeEmojiItem ===
 
-// Module 17381 (computeEmojiItem)
+// Module 17401 (computeEmojiItem)
 import ThemesDefault from "Themes" /* 709 */;
 import getSystemLocale from "getSystemLocale" /* 1233 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_7 from "createGuildRecordFromRust" /* 1908 */;
-import closure_8 from "initialize" /* 17382 */;
+import closure_8 from "initialize" /* 17402 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 import importDefaultResult from "apply" /* 12 */;

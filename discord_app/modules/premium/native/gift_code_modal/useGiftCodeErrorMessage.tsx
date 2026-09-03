@@ -1,9 +1,9 @@
-// === Module 8500: useGiftCodeErrorMessage ===
+// === Module 8504: useGiftCodeErrorMessage ===
 
-// Module 8500 (useGiftCodeErrorMessage)
+// Module 8504 (useGiftCodeErrorMessage)
 import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "map" /* 7312 */;
-import closure_4 from "updateGiftCode" /* 8456 */;
+import closure_3 from "map" /* 7313 */;
+import closure_4 from "updateGiftCode" /* 8460 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/premium/native/gift_code_modal/useGiftCodeErrorMessage.tsx");

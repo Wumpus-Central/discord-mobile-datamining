@@ -1,9 +1,9 @@
-// === Module 6016: NavigationStack ===
+// === Module 6017: NavigationStack ===
 
-// Module 6016 (NavigationStack)
+// Module 6017 (NavigationStack)
 import ThemesDefault from "Themes" /* 709 */;
 import createStandardNavigationFactories from "createStandardNavigationFactories" /* 1499 */;
-import useNavigationTheme from "useNavigationTheme" /* 6058 */;
+import useNavigationTheme from "useNavigationTheme" /* 6059 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
@@ -260,7 +260,7 @@ export const useNavigatorScreens = function useNavigatorScreens(getNextRenewalDa
   return React.useMemo(getNextRenewalDateLabel, items);
 };
 export const useAccessibilityNativeStackOptions = function useAccessibilityNativeStackOptions() {
-  navigatorShouldCrossfade = navigatorShouldCrossfade(6017).useNavigatorShouldCrossfade();
+  navigatorShouldCrossfade = navigatorShouldCrossfade(6018).useNavigatorShouldCrossfade();
   const items = [navigatorShouldCrossfade];
   return React.useMemo(() => {
     let obj;

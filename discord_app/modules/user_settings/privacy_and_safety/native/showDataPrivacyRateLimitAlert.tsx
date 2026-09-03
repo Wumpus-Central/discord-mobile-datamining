@@ -1,9 +1,9 @@
-// === Module 14685: showDataPrivacyRateLimitAlert ===
+// === Module 14700: showDataPrivacyRateLimitAlert ===
 
-// Module 14685 (showDataPrivacyRateLimitAlert)
+// Module 14700 (showDataPrivacyRateLimitAlert)
 import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1233 */;
-import setDefault from "set" /* 4857 */;
+import setDefault from "set" /* 4858 */;
 
 const result = set.fileFinishedImporting("modules/user_settings/privacy_and_safety/native/showDataPrivacyRateLimitAlert.tsx");
 

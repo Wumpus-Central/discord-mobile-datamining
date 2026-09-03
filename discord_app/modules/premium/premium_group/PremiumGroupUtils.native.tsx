@@ -1,6 +1,6 @@
-// === Module 7967: getPremiumGroupInviteEmbedText ===
+// === Module 7970: getPremiumGroupInviteEmbedText ===
 
-// Module 7967 (getPremiumGroupInviteEmbedText)
+// Module 7970 (getPremiumGroupInviteEmbedText)
 import messagesProxyDefault from "messagesProxy" /* 3016 */;
 import closure_3 from "mergeGuildAvatar" /* 1921 */;
 import SubscriptionStatusTypes from "SubscriptionStatusTypes" /* 4153 */;

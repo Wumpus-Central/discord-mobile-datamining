@@ -1,13 +1,13 @@
-// === Module 13417: GuildBoostingGuildListItem ===
+// === Module 13432: GuildBoostingGuildListItem ===
 
-// Module 13417 (GuildBoostingGuildListItem)
+// Module 13432 (GuildBoostingGuildListItem)
 import noopAll from "noop" /* 19 */;
 import initialize from "initialize" /* 586 */;
 import ThemesDefault from "Themes" /* 709 */;
 import useGuildAppliedBoostCountDefault from "useGuildAppliedBoostCount" /* 4384 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_5 from "createGuildRecordFromRust" /* 1908 */;
-import closure_6 from "insertUnsortedGuilds" /* 5389 */;
+import closure_6 from "insertUnsortedGuilds" /* 5390 */;
 import { NUMBER_OF_GUILDS_TO_RECOMMEND_BOOSTING as closure_7 } from "ME" /* 673 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
@@ -32,11 +32,11 @@ function GuildBoostingGuildListItem(guildId) {
       const obj = guildId(closure_1_2[12]);
       closure_1_1(closure_1_2[13]).close();
     };
-    let tmp2Result = tmp2(9081);
+    let tmp2Result = tmp2(9085);
     obj = { guild: null, size: null, style: null, selected: false };
     obj[0] = stateFromStores;
-    tmp2Result = tmp2(6012);
-    obj[1] = tmp5(6012).GuildIconSizes.LARGE;
+    tmp2Result = tmp2(6013);
+    obj[1] = tmp5(6013).GuildIconSizes.LARGE;
     obj[2] = tmp.guildIcon;
     const items1 = [callback(tmp2Result, obj), , ];
     obj1 = { style: null, children: null };
@@ -47,7 +47,7 @@ function GuildBoostingGuildListItem(guildId) {
     const obj3 = { style: null, children: null };
     obj3[0] = tmp.subscriptionInfo;
     const obj4 = { source: null, style: null, resizeMode: "contain", resizeMethod: "resize" };
-    obj4[0] = tmp2(10424);
+    obj4[0] = tmp2(10428);
     obj4[1] = tmp.premiumGuildImage;
     const items3 = [callback(closure_4, obj4), ];
     const obj5 = { variant: "text-xs/medium", children: null };
@@ -63,7 +63,7 @@ function GuildBoostingGuildListItem(guildId) {
     const obj7 = { guild: null, theme: null };
     obj7[0] = stateFromStores;
     obj7[1] = tmp4;
-    items1[2] = callback(tmp2(13386), obj7);
+    items1[2] = callback(tmp2(13401), obj7);
     obj[4] = items1;
     tmp9 = callback2(tmp2Result, obj);
   }

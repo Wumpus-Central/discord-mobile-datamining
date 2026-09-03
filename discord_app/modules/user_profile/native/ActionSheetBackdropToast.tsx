@@ -1,13 +1,13 @@
-// === Module 12843: ActionSheetBackdropToast ===
+// === Module 12855: ActionSheetBackdropToast ===
 
-// Module 12843 (ActionSheetBackdropToast)
+// Module 12855 (ActionSheetBackdropToast)
 import ThemesDefault from "Themes" /* 709 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1492 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
 import _modDef4217 from "module_4217" /* 4217 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { ACTION_SHEET_START_HEIGHT_RATIO as closure_5 } from "ACTION_SHEET_START_HEIGHT_RATIO" /* 5631 */;
+import { ACTION_SHEET_START_HEIGHT_RATIO as closure_5 } from "ACTION_SHEET_START_HEIGHT_RATIO" /* 5632 */;
 import { jsx } from "jsxProd" /* 21 */;
 import set from "set" /* 1234 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
@@ -38,7 +38,7 @@ export const ActionSheetBackdropToast = function ActionSheetBackdropToast(childr
   const height = useWindowDimensionsDefault().height;
   let result = height * closure_5;
   importDefault = result;
-  const diff = height - isExpanded(5500).NAV_BAR_HEIGHT_MULTILINE - useSafeAreaInsetsDefault().top;
+  const diff = height - isExpanded(5501).NAV_BAR_HEIGHT_MULTILINE - useSafeAreaInsetsDefault().top;
   dependencyMap = diff;
   let obj = isExpanded(4217);
   sharedValue = obj.useSharedValue(0);

@@ -1,13 +1,13 @@
-// === Module 16758: IncentivizedAccountLinkConfirmationBottomSheet ===
+// === Module 16778: IncentivizedAccountLinkConfirmationBottomSheet ===
 
-// Module 16758 (IncentivizedAccountLinkConfirmationBottomSheet)
+// Module 16778 (IncentivizedAccountLinkConfirmationBottomSheet)
 import noopAll from "noop" /* 19 */;
 import initialize from "initialize" /* 586 */;
 import getSystemLocale from "getSystemLocale" /* 1233 */;
-import Button from "Button" /* 4928 */;
-import PromoSheet from "PromoSheet" /* 10335 */;
-import WindowLaunchIcon from "WindowLaunchIcon" /* 13041 */;
-import metadataDefault from "metadata" /* 15660 */;
+import Button from "Button" /* 4929 */;
+import PromoSheet from "PromoSheet" /* 10339 */;
+import WindowLaunchIcon from "WindowLaunchIcon" /* 13053 */;
+import metadataDefault from "metadata" /* 15674 */;
 import { Image } from "get ActivityIndicator" /* 17 */;
 import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4470 */;
 import { HelpdeskArticles } from "ME" /* 673 */;
@@ -36,8 +36,8 @@ export default function IncentivizedAccountLinkConfirmationBottomSheet() {
   } else {
     if (tmpResult.isAndroid()) {
       let obj2 = { url: null, style: null };
-      let tmp4Result = tmp4(8110);
-      obj2[0] = tmp4(15661);
+      let tmp4Result = tmp4(8113);
+      obj2[0] = tmp4(15675);
       const obj3 = { width: null, height: null };
       obj3[0] = c7;
       obj3[1] = c7;
@@ -48,8 +48,8 @@ export default function IncentivizedAccountLinkConfirmationBottomSheet() {
     } else {
       const obj4 = { source: null, resizeMode: "contain", style: null };
       const obj5 = { uri: null };
-      tmp4Result = tmp4(5501);
-      obj5[0] = tmp4(15661);
+      tmp4Result = tmp4(5502);
+      obj5[0] = tmp4(15675);
       obj4[0] = obj5;
       const obj6 = { width: null, height: null };
       obj6[0] = c7;

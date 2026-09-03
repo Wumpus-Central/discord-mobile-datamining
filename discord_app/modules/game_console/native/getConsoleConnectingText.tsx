@@ -1,6 +1,6 @@
-// === Module 16991: getConsoleConnectingText ===
+// === Module 17011: getConsoleConnectingText ===
 
-// Module 16991 (getConsoleConnectingText)
+// Module 17011 (getConsoleConnectingText)
 import set from "set" /* 2 */;
 import ME from "ME" /* 673 */;
 import getSystemLocale from "getSystemLocale" /* 1233 */;

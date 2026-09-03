@@ -1,6 +1,6 @@
-// === Module 15981: GuildThemeNuxActionSheet ===
+// === Module 15997: GuildThemeNuxActionSheet ===
 
-// Module 15981 (GuildThemeNuxActionSheet)
+// Module 15997 (GuildThemeNuxActionSheet)
 import timestampDefault from "timestamp" /* 3 */;
 import ThemesDefault from "Themes" /* 709 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
@@ -45,8 +45,8 @@ export default function GuildThemeNuxActionSheet(guildId) {
   let stateFromStores;
   let callback1;
   const tmp = callback5();
-  [tmp5, c2] = callback2(React.useState(guildId(15982).getInitialGuildThemeNuxSelection), 2);
-  const tmp4 = callback2(React.useState(guildId(15982).getInitialGuildThemeNuxSelection), 2);
+  [tmp5, c2] = callback2(React.useState(guildId(15998).getInitialGuildThemeNuxSelection), 2);
+  const tmp4 = callback2(React.useState(guildId(15998).getInitialGuildThemeNuxSelection), 2);
   [tmp7, c3] = callback2(React.useState(null), 2);
   const tmp6 = callback2(React.useState(null), 2);
   [tmp9, c4] = callback2(React.useState(false), 2);
@@ -190,7 +190,7 @@ export default function GuildThemeNuxActionSheet(guildId) {
   obj[1] = intl2.string(guildId(1233).t.cpT0Cq);
   obj[2] = callback3;
   obj[3] = tmp.container;
-  const items7 = [callback3(markAsDismissed(15983), { themeSettings: stateFromStores1, isPersonal: tmp10 }), , , , , , ];
+  const items7 = [callback3(markAsDismissed(15999), { themeSettings: stateFromStores1, isPersonal: tmp10 }), , , , , , ];
   obj = { accessibilityRole: "header", variant: "heading-xl/semibold", color: "mobile-text-heading-primary", style: tmp.title, children: null };
   const intl3 = tmp2(1233).intl;
   obj[4] = intl3.string(guildId(1233).t.Q9zFy9);
@@ -205,14 +205,14 @@ export default function GuildThemeNuxActionSheet(guildId) {
   const intl5 = tmp2(1233).intl;
   obj4[0] = intl5.string(guildId(1233).t.aN3RNQ);
   obj4[1] = guildId(4409).GuildThemeSourcePreference.GUILD;
-  const items8 = [callback3(guildId(7702).TableRadioRow, obj4), ];
+  const items8 = [callback3(guildId(7705).TableRadioRow, obj4), ];
   const obj5 = { label: null, value: null };
   const intl6 = tmp2(1233).intl;
   obj5[0] = intl6.string(guildId(1233).t.js8y7t);
   obj5[1] = guildId(4409).GuildThemeSourcePreference.PERSONAL;
-  items8[1] = callback3(guildId(7702).TableRadioRow, obj5);
+  items8[1] = callback3(guildId(7705).TableRadioRow, obj5);
   obj3[3] = items8;
-  obj2[1] = callback4(guildId(7701).TableRadioGroup, obj3);
+  obj2[1] = callback4(guildId(7704).TableRadioGroup, obj3);
   items7[3] = callback3(closure_6, obj2);
   let tmp20Result = null;
   if (tmp10) {
@@ -249,9 +249,9 @@ export default function GuildThemeNuxActionSheet(guildId) {
   obj11[2] = tmp9;
   obj11[3] = tmp9;
   obj11[4] = callback2;
-  obj10[1] = callback3(guildId(4928).Button, obj11);
+  obj10[1] = callback3(guildId(4929).Button, obj11);
   items7[6] = callback3(closure_6, obj10);
   obj[4] = items7;
-  return callback4(guildId(5630).BottomSheet, obj);
+  return callback4(guildId(5631).BottomSheet, obj);
 };
 export const GUILD_THEME_NUX_ACTION_SHEET_KEY = "GuildThemeNuxActionSheet";

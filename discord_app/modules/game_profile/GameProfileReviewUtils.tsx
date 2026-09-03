@@ -1,6 +1,6 @@
-// === Module 8865: getSteamReviewScoreDescriptionColor ===
+// === Module 8869: getSteamReviewScoreDescriptionColor ===
 
-// Module 8865 (getSteamReviewScoreDescriptionColor)
+// Module 8869 (getSteamReviewScoreDescriptionColor)
 import set from "set" /* 2 */;
 import GameTheme from "GameTheme" /* 4516 */;
 

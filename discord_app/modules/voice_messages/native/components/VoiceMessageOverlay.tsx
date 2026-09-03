@@ -1,18 +1,18 @@
-// === Module 12407: LockPill ===
+// === Module 12419: LockPill ===
 
-// Module 12407 (LockPill)
+// Module 12419 (LockPill)
 import ThemesDefault from "Themes" /* 709 */;
-import result2 from "result" /* 5392 */;
-import inlineStyles from "inlineStyles" /* 8250 */;
+import result2 from "result" /* 5393 */;
+import inlineStyles from "inlineStyles" /* 8254 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_7 from "maybeApplyNoTextColorForLightCustomTheme" /* 4470 */;
 import closure_8 from "ensureGuildLoaded" /* 1386 */;
-import { useVoiceMessagesUIStore } from "VoiceMessageRecordingStatus" /* 11756 */;
-import { VoiceMessageAnimationState } from "VoiceMessageAnimationState" /* 11757 */;
+import { useVoiceMessagesUIStore } from "VoiceMessageRecordingStatus" /* 11761 */;
+import { VoiceMessageAnimationState } from "VoiceMessageAnimationState" /* 11762 */;
 import { ComponentActionsKeyed } from "ME" /* 673 */;
-import { CHAT_INPUT_HEIGHT } from "TextAreaCta" /* 11758 */;
+import { CHAT_INPUT_HEIGHT } from "TextAreaCta" /* 11763 */;
 import jsxProd from "jsxProd" /* 21 */;
 import importDefaultResult from "module_4217" /* 4217 */;
 import createCacheKey from "createCacheKey" /* 4478 */;

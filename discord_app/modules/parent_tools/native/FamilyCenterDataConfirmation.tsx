@@ -1,24 +1,24 @@
-// === Module 11714: RowGroup ===
+// === Module 11719: RowGroup ===
 
-// Module 11714 (RowGroup)
+// Module 11719 (RowGroup)
 import noopAll from "noop" /* 19 */;
 import getSystemLocale from "getSystemLocale" /* 1233 */;
 import messagesProxyDefault from "messagesProxy" /* 2368 */;
 import UserPlusIcon from "UserPlusIcon" /* 4415 */;
 import ClockIcon from "ClockIcon" /* 4441 */;
 import Text from "Text" /* 4474 */;
-import Stack from "Stack" /* 4926 */;
-import ForumIcon from "ForumIcon" /* 5041 */;
-import XSmallIcon from "XSmallIcon" /* 5559 */;
-import TableRowGroupTitle from "TableRowGroupTitle" /* 6000 */;
-import SettingsIcon from "SettingsIcon" /* 6249 */;
-import FlagIcon from "FlagIcon" /* 8805 */;
-import ServerIcon from "ServerIcon" /* 9368 */;
-import GiftIcon from "GiftIcon" /* 10994 */;
-import useAgeSpecificText from "useAgeSpecificText" /* 11715 */;
-import PhoneIcon from "PhoneIcon" /* 11716 */;
-import CreditCardIcon from "CreditCardIcon" /* 11718 */;
-import PiggyBankIcon from "PiggyBankIcon" /* 11720 */;
+import Stack from "Stack" /* 4927 */;
+import ForumIcon from "ForumIcon" /* 5042 */;
+import XSmallIcon from "XSmallIcon" /* 5560 */;
+import TableRowGroupTitle from "TableRowGroupTitle" /* 6001 */;
+import SettingsIcon from "SettingsIcon" /* 6250 */;
+import FlagIcon from "FlagIcon" /* 8809 */;
+import ServerIcon from "ServerIcon" /* 9372 */;
+import GiftIcon from "GiftIcon" /* 10998 */;
+import useAgeSpecificText from "useAgeSpecificText" /* 11720 */;
+import PhoneIcon from "PhoneIcon" /* 11721 */;
+import CreditCardIcon from "CreditCardIcon" /* 11723 */;
+import PiggyBankIcon from "PiggyBankIcon" /* 11725 */;
 import jsxProd from "jsxProd" /* 21 */;
 
 require = arg1;
@@ -36,8 +36,8 @@ function RowGroup(children) {
       if (true === negative) {
         str = "text-status-dnd";
       }
-      obj[2] = closure_3(callback(5607).TableRow.Icon, { variant: str, IconComponent });
-      return closure_3(callback(5607).TableRow, obj, header);
+      obj[2] = closure_3(callback(5608).TableRow.Icon, { variant: str, IconComponent });
+      return closure_3(callback(5608).TableRow, obj, header);
     })
   };
   items[1] = callback(TableRowGroupTitle.TableRowGroup, obj);

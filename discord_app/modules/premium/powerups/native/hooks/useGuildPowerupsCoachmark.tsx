@@ -1,6 +1,6 @@
-// === Module 15992: useGuildPowerupsCoachmark ===
+// === Module 16008: useGuildPowerupsCoachmark ===
 
-// Module 15992 (useGuildPowerupsCoachmark)
+// Module 16008 (useGuildPowerupsCoachmark)
 import ThemesDefault from "Themes" /* 709 */;
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4470 */;

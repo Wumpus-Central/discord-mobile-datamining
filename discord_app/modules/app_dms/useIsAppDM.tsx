@@ -1,6 +1,6 @@
-// === Module 9289: useIsAppDM ===
+// === Module 9293: useIsAppDM ===
 
-// Module 9289 (useIsAppDM)
+// Module 9293 (useIsAppDM)
 import closure_2 from "mergeGuildAvatar" /* 1921 */;
 
 const require = arg1;

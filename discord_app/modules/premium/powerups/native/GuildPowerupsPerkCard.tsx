@@ -1,14 +1,14 @@
-// === Module 12359: GuildPowerupsPerkCard ===
+// === Module 12371: GuildPowerupsPerkCard ===
 
-// Module 12359 (GuildPowerupsPerkCard)
+// Module 12371 (GuildPowerupsPerkCard)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 709 */;
 import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 1362 */;
 import useThemeDefault from "useTheme" /* 4413 */;
 import Text from "Text" /* 4474 */;
-import LinearGradientDefault from "LinearGradient" /* 4940 */;
-import apexExperiment from "apexExperiment" /* 8013 */;
-import GuildPowerupCardFooterActive from "GuildPowerupCardFooterActive" /* 12312 */;
+import LinearGradientDefault from "LinearGradient" /* 4941 */;
+import apexExperiment from "apexExperiment" /* 8016 */;
+import GuildPowerupCardFooterActive from "GuildPowerupCardFooterActive" /* 12324 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
@@ -49,9 +49,9 @@ export default function GuildPowerupsPerkCard(arg0) {
   obj = { containerStyle: items, style: tmp2.card, status, onPress, children: null };
   items = [tmp2.container, style];
   obj = { style: tmp2.imageContainer, children: null };
-  let tmp3Result = tmp3(12356);
+  let tmp3Result = tmp3(12368);
   if (riveComponent == null) {
-    tmp3Result = tmp3(12311);
+    tmp3Result = tmp3(12323);
     if (imageUrl == null) {
       imageUrl = "";
     }

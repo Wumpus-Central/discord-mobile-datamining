@@ -1,6 +1,6 @@
-// === Module 15354: items ===
+// === Module 15368: items ===
 
-// Module 15354 (items)
+// Module 15368 (items)
 import ThemesDefault from "Themes" /* 709 */;
 import getSystemLocale from "getSystemLocale" /* 1233 */;
 import closure_3 from "_slicedToArray" /* 32 */;

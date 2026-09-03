@@ -1,8 +1,8 @@
-// === Module 12349: useGuildPowerupsWarningConfig ===
+// === Module 12361: useGuildPowerupsWarningConfig ===
 
-// Module 12349 (useGuildPowerupsWarningConfig)
+// Module 12361 (useGuildPowerupsWarningConfig)
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "handleModifyingAppliedBoostStart" /* 12350 */;
+import closure_4 from "handleModifyingAppliedBoostStart" /* 12362 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/premium/powerups/hooks/useGuildPowerupsWarningConfig.tsx");

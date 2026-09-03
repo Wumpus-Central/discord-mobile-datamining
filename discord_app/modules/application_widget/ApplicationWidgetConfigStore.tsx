@@ -1,6 +1,6 @@
-// === Module 12988: updateApplicationConfigs ===
+// === Module 13000: updateApplicationConfigs ===
 
-// Module 12988 (updateApplicationConfigs)
+// Module 13000 (updateApplicationConfigs)
 import initializeDefault from "initialize" /* 586 */;
 import dispatcherDefault from "dispatcher" /* 706 */;
 import closure_0 from "_slicedToArray" /* 32 */;

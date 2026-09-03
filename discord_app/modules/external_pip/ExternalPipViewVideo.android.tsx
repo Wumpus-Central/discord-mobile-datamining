@@ -1,9 +1,9 @@
-// === Module 16819: ExternalPipViewVideoUnavailable ===
+// === Module 16839: ExternalPipViewVideoUnavailable ===
 
-// Module 16819 (ExternalPipViewVideoUnavailable)
+// Module 16839 (ExternalPipViewVideoUnavailable)
 import initialize from "initialize" /* 586 */;
 import ThemesDefault from "Themes" /* 709 */;
-import useExternalPipParticipantDefault from "useExternalPipParticipant" /* 16821 */;
+import useExternalPipParticipantDefault from "useExternalPipParticipant" /* 16841 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
@@ -21,7 +21,7 @@ function ExternalPipViewVideoUnavailable(wasStream) {
   if (wasStream) {
     obj = { style: null };
     obj[0] = tmp.unavaiableImage;
-    let tmp4Result = tmp4(tmp5(9580).StreamEnded, obj);
+    let tmp4Result = tmp4(tmp5(9584).StreamEnded, obj);
     let tmp8 = tmp4;
     let tmp10 = tmp5;
   } else {
@@ -69,7 +69,7 @@ function ExternalPipViewVideoStream(streamId) {
   let first;
   dependencyMap = undefined;
   let callback;
-  let obj = streamId(9587);
+  let obj = streamId(9591);
   first = 300;
   dependencyMap = undefined;
   callback = undefined;
@@ -123,7 +123,7 @@ function ExternalPipViewVideoStream(streamId) {
       obj.updateVideoSize(tmp, obj, 1);
     }
   }, items3);
-  const children = [callback2(first(9598), { useSurfaceDirectRenderer: surfaceDirectRendererExperiment, style: memo, streamId, onReady: callback, onLayout: callback1 }), ];
+  const children = [callback2(first(9602), { useSurfaceDirectRenderer: surfaceDirectRendererExperiment, style: memo, streamId, onReady: callback, onLayout: callback1 }), ];
   let tmp14Result = null;
   if (null == first) {
     tmp14Result = null;

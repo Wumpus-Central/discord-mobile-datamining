@@ -1,10 +1,10 @@
-// === Module 9266: getActivityStatusText ===
+// === Module 9270: getActivityStatusText ===
 
-// Module 9266 (getActivityStatusText)
+// Module 9270 (getActivityStatusText)
 import set from "set" /* 2 */;
 import ME from "ME" /* 673 */;
-import isEmbeddedActivityDefault from "isEmbeddedActivity" /* 7494 */;
-import StatusDisplayTypes from "StatusDisplayTypes" /* 9267 */;
+import isEmbeddedActivityDefault from "isEmbeddedActivity" /* 7495 */;
+import StatusDisplayTypes from "StatusDisplayTypes" /* 9271 */;
 
 const ActivityTypes = ME.ActivityTypes;
 const result = set.fileFinishedImporting("modules/activity_status/getActivityStatusText.tsx");
@@ -71,7 +71,7 @@ export default function getActivityStatusText(name) {
     if (name != null) {
       status_display_type1 = name.status_display_type;
     }
-    if (status_display_type1 !== tmp15(9267).StatusDisplayTypes.STATE) {
+    if (status_display_type1 !== tmp15(9271).StatusDisplayTypes.STATE) {
       let status_display_type2;
       if (name != null) {
         status_display_type2 = name.status_display_type;
@@ -80,7 +80,7 @@ export default function getActivityStatusText(name) {
       if (tmp20) {
         tmp17 = tmp5;
       }
-      tmp20 = status_display_type2 === tmp15(9267).StatusDisplayTypes.DETAILS && null != tmp5;
+      tmp20 = status_display_type2 === tmp15(9271).StatusDisplayTypes.DETAILS && null != tmp5;
     } else {
       tmp17 = tmp8;
     }
@@ -88,7 +88,7 @@ export default function getActivityStatusText(name) {
     tmp17 = tmp2;
   }
   if (isEmbeddedActivityDefault(name)) {
-    const tmp28 = tmp21(9268)(tmp2);
+    const tmp28 = tmp21(9272)(tmp2);
     let obj = { text: null, tooltip: null };
     obj[0] = tmp28;
     obj[1] = tmp28;
@@ -109,7 +109,7 @@ export default function getActivityStatusText(name) {
         return obj;
       }
     }
-    if (tmp21(9269)(name)) {
+    if (tmp21(9273)(name)) {
       if (flag) {
         if (null != tmp8) {
           const parts = tmp8.split("; ");
@@ -154,7 +154,7 @@ export default function getActivityStatusText(name) {
         obj16 = obj6;
       }
     }
-    if (tmp21(8630)(name)) {
+    if (tmp21(8634)(name)) {
       if (flag) {
         if (null != tmp5) {
           const obj8 = { text: null, tooltip: null };
@@ -213,6 +213,6 @@ export default function getActivityStatusText(name) {
       }
     }
     obj16 = {};
-    tmp15Result = tmp15(9270);
+    tmp15Result = tmp15(9274);
   }
 };

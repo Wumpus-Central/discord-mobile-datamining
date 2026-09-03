@@ -1,6 +1,6 @@
-// === Module 11120: Tab ===
+// === Module 11124: Tab ===
 
-// Module 11120 (Tab)
+// Module 11124 (Tab)
 import ThemesDefault from "Themes" /* 709 */;
 import closure_2 from "_slicedToArray" /* 32 */;
 import closure_3 from "noop" /* 19 */;

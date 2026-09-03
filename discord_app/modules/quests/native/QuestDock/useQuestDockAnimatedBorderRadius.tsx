@@ -1,6 +1,6 @@
-// === Module 15011: useQuestDockAnimatedBorderRadius ===
+// === Module 15026: useQuestDockAnimatedBorderRadius ===
 
-// Module 15011 (useQuestDockAnimatedBorderRadius)
+// Module 15026 (useQuestDockAnimatedBorderRadius)
 import closure_2 from "noop" /* 19 */;
 
 const require = arg1;

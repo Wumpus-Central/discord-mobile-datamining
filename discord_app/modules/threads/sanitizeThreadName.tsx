@@ -1,6 +1,6 @@
-// === Module 6129: sanitizeThreadName ===
+// === Module 6130: sanitizeThreadName ===
 
-// Module 6129 (sanitizeThreadName)
+// Module 6130 (sanitizeThreadName)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/threads/sanitizeThreadName.tsx");

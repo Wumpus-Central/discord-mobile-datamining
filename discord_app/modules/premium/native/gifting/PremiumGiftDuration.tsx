@@ -1,6 +1,6 @@
-// === Module 11011: PremiumGiftDurationButton ===
+// === Module 11015: PremiumGiftDurationButton ===
 
-// Module 11011 (PremiumGiftDurationButton)
+// Module 11015 (PremiumGiftDurationButton)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 709 */;
 import { View } from "get ActivityIndicator" /* 17 */;
@@ -12,14 +12,14 @@ const require = arg1;
 function PremiumGiftDurationButton(arg0) {
   ({ selected, planInterval } = arg0);
   let setPlanInterval;
-  let obj = planInterval(10698);
+  let obj = planInterval(10702);
   const nativeGiftContext = obj.useNativeGiftContext();
   setPlanInterval = nativeGiftContext.setPlanInterval;
   const tmp4 = callback3();
   if (selected) {
-    let RowButton = tmp(5607).TableRow;
+    let RowButton = tmp(5608).TableRow;
   } else {
-    RowButton = tmp(8374).RowButton;
+    RowButton = tmp(8378).RowButton;
   }
   let combined = null;
   if (planInterval === SubscriptionIntervalTypes.YEAR) {
@@ -27,7 +27,7 @@ function PremiumGiftDurationButton(arg0) {
     combined = "" + closure_4 + "%";
   }
   const tmp5 = SubscriptionIntervalTypes;
-  const tmp9 = setPlanInterval(10746)(nativeGiftContext.premiumType, planInterval);
+  const tmp9 = setPlanInterval(10750)(nativeGiftContext.premiumType, planInterval);
   const radioA11yNative = planInterval(4205).useRadioA11yNative({ selected });
   items = [tmp4.container, ];
   ({ accessibilityRole, accessibilityState } = radioA11yNative);
@@ -100,7 +100,7 @@ const result = require("set").fileFinishedImporting("modules/premium/native/gift
 
 export default function PremiumGiftDuration() {
   const tmp = callback4();
-  let obj = planInterval(10698);
+  let obj = planInterval(10702);
   planInterval = obj.useNativeGiftContext().planInterval;
   obj = { style: tmp.durationContainer, children: null };
   obj = { style: tmp.durationTitle, variant: "text-sm/semibold", children: null };

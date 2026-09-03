@@ -1,12 +1,12 @@
-// === Module 8573: initialize ===
+// === Module 8577: initialize ===
 
-// Module 8573 (initialize)
+// Module 8577 (initialize)
 import failsDefault from "fails" /* 581 */;
 import initializeDefault from "initialize" /* 586 */;
 import setDefault from "set" /* 684 */;
 import dispatcherDefault from "dispatcher" /* 706 */;
 import privDefault from "priv" /* 1400 */;
-import urlUserId from "urlUserId" /* 8578 */;
+import urlUserId from "urlUserId" /* 8582 */;
 import closure_3 from "mergeGuildAvatar" /* 1921 */;
 
 require = arg1;

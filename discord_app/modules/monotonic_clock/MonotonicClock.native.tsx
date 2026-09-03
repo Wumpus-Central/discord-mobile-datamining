@@ -1,6 +1,6 @@
-// === Module 7219: monotonicNowMs ===
+// === Module 7220: monotonicNowMs ===
 
-// Module 7219 (monotonicNowMs)
+// Module 7220 (monotonicNowMs)
 import set from "set" /* 2 */;
 import monotonicNowMs from "monotonicNowMs" /* 1918 */;
 

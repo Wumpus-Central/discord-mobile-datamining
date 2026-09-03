@@ -1,16 +1,16 @@
-// === Module 8915: UseAnimatedPosition ===
+// === Module 8919: UseAnimatedPosition ===
 
-// Module 8915 (UseAnimatedPosition)
+// Module 8919 (UseAnimatedPosition)
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_7 from "ensureGuildLoaded" /* 1386 */;
 import closure_8 from "trackCommunicationDisabled" /* 1991 */;
 import closure_9 from "mergeGuildAvatar" /* 1921 */;
-import closure_10 from "handleFormOpen" /* 8078 */;
-import { UserProfileThemeTypes } from "ARBITRARY_LARGE_OFFSET" /* 6009 */;
+import closure_10 from "handleFormOpen" /* 8081 */;
+import { UserProfileThemeTypes } from "ARBITRARY_LARGE_OFFSET" /* 6010 */;
 import ME from "ME" /* 673 */;
-import { ACTION_SHEET_MAX_WIDTH } from "ACTION_SHEET_START_HEIGHT_RATIO" /* 5631 */;
+import { ACTION_SHEET_MAX_WIDTH } from "ACTION_SHEET_START_HEIGHT_RATIO" /* 5632 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -18,8 +18,8 @@ const require = arg1;
 function UseAnimatedPosition(animatedPosition) {
   animatedPosition = animatedPosition.animatedPosition;
   let animatedPosition2;
-  animatedPosition2 = animatedPosition(5632).useBottomSheet().animatedPosition;
-  const obj = animatedPosition(5632);
+  animatedPosition2 = animatedPosition(5633).useBottomSheet().animatedPosition;
+  const obj = animatedPosition(5633);
   const fn = function n() {
     return animatedPosition2.get();
   };

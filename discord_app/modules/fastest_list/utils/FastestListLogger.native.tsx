@@ -1,6 +1,6 @@
-// === Module 7791: logFastestListError ===
+// === Module 7794: logFastestListError ===
 
-// Module 7791 (logFastestListError)
+// Module 7794 (logFastestListError)
 import timestampDefault from "timestamp" /* 3 */;
 import _modDef1205 from "module_1205" /* 1205 */;
 

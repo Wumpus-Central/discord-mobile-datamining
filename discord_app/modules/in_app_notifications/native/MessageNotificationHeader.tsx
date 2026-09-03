@@ -1,6 +1,6 @@
-// === Module 10279: LocationText ===
+// === Module 10283: LocationText ===
 
-// Module 10279 (LocationText)
+// Module 10283 (LocationText)
 import initialize from "initialize" /* 586 */;
 import set from "set" /* 689 */;
 import ThemesDefault from "Themes" /* 709 */;

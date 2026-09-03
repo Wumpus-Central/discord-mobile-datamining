@@ -1,6 +1,6 @@
-// === Module 13956: AnimatedEllipsisDot ===
+// === Module 13972: AnimatedEllipsisDot ===
 
-// Module 13956 (AnimatedEllipsisDot)
+// Module 13972 (AnimatedEllipsisDot)
 import initialize from "initialize" /* 586 */;
 import ThemesDefault from "Themes" /* 709 */;
 import importAllResult from "noop" /* 19 */;

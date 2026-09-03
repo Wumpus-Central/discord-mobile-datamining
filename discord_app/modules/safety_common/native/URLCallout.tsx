@@ -1,10 +1,10 @@
-// === Module 13035: URLCallout ===
+// === Module 13047: URLCallout ===
 
-// Module 13035 (URLCallout)
+// Module 13047 (URLCallout)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 709 */;
 import Text from "Text" /* 4474 */;
-import useUrlParts from "useUrlParts" /* 13036 */;
+import useUrlParts from "useUrlParts" /* 13048 */;
 import { ScrollView } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;

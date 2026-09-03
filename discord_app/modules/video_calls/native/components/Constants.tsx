@@ -1,6 +1,6 @@
-// === Module 9540: PIP_GESTURE_ACTIVE_OFFSET ===
+// === Module 9544: PIP_GESTURE_ACTIVE_OFFSET ===
 
-// Module 9540 (PIP_GESTURE_ACTIVE_OFFSET)
+// Module 9544 (PIP_GESTURE_ACTIVE_OFFSET)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/video_calls/native/components/Constants.tsx");

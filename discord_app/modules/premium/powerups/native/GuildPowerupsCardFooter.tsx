@@ -1,6 +1,6 @@
-// === Module 12312: GuildPowerupCardFooterActive ===
+// === Module 12324: GuildPowerupCardFooterActive ===
 
-// Module 12312 (GuildPowerupCardFooterActive)
+// Module 12324 (GuildPowerupCardFooterActive)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import ThemesDefault from "Themes" /* 709 */;
@@ -8,10 +8,10 @@ import getSystemLocale from "getSystemLocale" /* 1233 */;
 import messagesProxyDefault from "messagesProxy" /* 2400 */;
 import CircleCheckIcon from "CircleCheckIcon" /* 4438 */;
 import Text from "Text" /* 4474 */;
-import CircleErrorIcon from "CircleErrorIcon" /* 7717 */;
-import apexExperiment from "apexExperiment" /* 8013 */;
-import getGuildPowerupFormattedDateStringDefault from "getGuildPowerupFormattedDateString" /* 12288 */;
-import entitlementExpirationDateToStringDefault from "entitlementExpirationDateToString" /* 12313 */;
+import CircleErrorIcon from "CircleErrorIcon" /* 7720 */;
+import apexExperiment from "apexExperiment" /* 8016 */;
+import getGuildPowerupFormattedDateStringDefault from "getGuildPowerupFormattedDateString" /* 12300 */;
+import entitlementExpirationDateToStringDefault from "entitlementExpirationDateToString" /* 12325 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 

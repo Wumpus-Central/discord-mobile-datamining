@@ -1,19 +1,19 @@
-// === Module 10662: NewCaption ===
+// === Module 10666: NewCaption ===
 
-// Module 10662 (NewCaption)
+// Module 10666 (NewCaption)
 import ThemesDefault from "Themes" /* 709 */;
 import getSystemLocale from "getSystemLocale" /* 1233 */;
 import Button from "Button" /* 1296 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1492 */;
 import Text from "Text" /* 4474 */;
-import ImageIcon from "ImageIcon" /* 5040 */;
-import AttachmentIcon from "AttachmentIcon" /* 10217 */;
-import registerAssetDefault from "registerAsset" /* 10411 */;
-import CameraIcon from "CameraIcon" /* 10667 */;
+import ImageIcon from "ImageIcon" /* 5041 */;
+import AttachmentIcon from "AttachmentIcon" /* 10221 */;
+import registerAssetDefault from "registerAsset" /* 10415 */;
+import CameraIcon from "CameraIcon" /* 10671 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_6 from "map" /* 4853 */;
-import frozen from "frozen" /* 10663 */;
+import closure_6 from "map" /* 4854 */;
+import frozen from "frozen" /* 10667 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 import importDefaultResult from "module_4217" /* 4217 */;

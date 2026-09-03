@@ -1,10 +1,10 @@
-// === Module 6380: BrushAndSwordIllocon ===
+// === Module 6381: BrushAndSwordIllocon ===
 
-// Module 6380 (BrushAndSwordIllocon)
+// Module 6381 (BrushAndSwordIllocon)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5501 */;
-import metadataDefault from "metadata" /* 6381 */;
+import preloadDefault from "preload" /* 5502 */;
+import metadataDefault from "metadata" /* 6382 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/BrushAndSwordIllocon.native.tsx");

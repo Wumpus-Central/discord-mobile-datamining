@@ -1,8 +1,8 @@
-// === Module 8440: isApplicationAgeRestricted ===
+// === Module 8444: isApplicationAgeRestricted ===
 
-// Module 8440 (isApplicationAgeRestricted)
-import isAgeRestrictedContentClassification from "isAgeRestrictedContentClassification" /* 5065 */;
-import getUnitIdDefault from "getUnitId" /* 8441 */;
+// Module 8444 (isApplicationAgeRestricted)
+import isAgeRestrictedContentClassification from "isAgeRestrictedContentClassification" /* 5066 */;
+import getUnitIdDefault from "getUnitId" /* 8445 */;
 import closure_3 from "addApplication" /* 4519 */;
 
 require = arg1;

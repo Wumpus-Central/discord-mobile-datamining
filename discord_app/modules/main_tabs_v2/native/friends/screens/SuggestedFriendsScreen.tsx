@@ -1,6 +1,6 @@
-// === Module 16589: SuggestedFriendsScreen ===
+// === Module 16609: SuggestedFriendsScreen ===
 
-// Module 16589 (SuggestedFriendsScreen)
+// Module 16609 (SuggestedFriendsScreen)
 import ThemesDefault from "Themes" /* 709 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;

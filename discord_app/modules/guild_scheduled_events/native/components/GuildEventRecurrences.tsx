@@ -1,8 +1,8 @@
-// === Module 9787: GuildEventRecurrences ===
+// === Module 9791: GuildEventRecurrences ===
 
-// Module 9787 (GuildEventRecurrences)
+// Module 9791 (GuildEventRecurrences)
 import ThemesDefault from "Themes" /* 709 */;
-import useGuildEventRecurrencesDefault from "useGuildEventRecurrences" /* 9788 */;
+import useGuildEventRecurrencesDefault from "useGuildEventRecurrences" /* 9792 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
@@ -57,7 +57,7 @@ export default function GuildEventRecurrences(guildEventId) {
         current.scrollToEnd();
       }
     };
-    canViewMoreRecurrences = callback(tmp8(4928).Button, obj1);
+    canViewMoreRecurrences = callback(tmp8(4929).Button, obj1);
   }
   items[2] = canViewMoreRecurrences;
   obj[1] = items;

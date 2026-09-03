@@ -154,6 +154,9 @@ class MediaEngineNative extends tmp4 {
     obj.handleVideoFilterErrorCallback = function handleVideoFilterErrorCallback(arg0, arg1) {
       obj.emit(obj(pollMetrics[9]).MediaEngineEvent.VideoFilterError, arg0, arg1);
     };
+    obj.handleSpatialAudioStatusCallback = function handleSpatialAudioStatusCallback(arg0) {
+      obj.emit(obj(pollMetrics[9]).MediaEngineEvent.SpatialAudioStatus, arg0);
+    };
     obj.handleSystemMicrophoneModeChangeCallback = function handleSystemMicrophoneModeChangeCallback(arg0) {
       obj.emit(obj(pollMetrics[9]).MediaEngineEvent.SystemMicrophoneModeChange, arg0);
     };
@@ -193,9 +196,13 @@ class MediaEngineNative extends tmp4 {
     if (setVideoFilterErrorCallback != null) {
       result8 = setVideoFilterErrorCallback(obj.handleVideoFilterErrorCallback);
     }
+    setSpatialAudioStatusCallback = voiceEngine.setSpatialAudioStatusCallback;
+    if (setSpatialAudioStatusCallback != null) {
+      result9 = setSpatialAudioStatusCallback(obj.handleSpatialAudioStatusCallback);
+    }
     setSystemMicrophoneModeChangeCallback = voiceEngine.setSystemMicrophoneModeChangeCallback;
     if (setSystemMicrophoneModeChangeCallback != null) {
-      result9 = setSystemMicrophoneModeChangeCallback(obj.handleSystemMicrophoneModeChangeCallback);
+      result10 = setSystemMicrophoneModeChangeCallback(obj.handleSystemMicrophoneModeChangeCallback);
     }
     onResult = obj.on("removeListener", obj.handleRemoveListener);
     onResult1 = obj.on("newListener", obj.handleNewListener);
@@ -212,26 +219,26 @@ class MediaEngineNative extends tmp4 {
       if (null != tmp13Result2.getVoiceEngine().getUseLegacyAudioDevice) {
         tmp13Result3 = require("inject");
         voiceEngine2 = tmp13Result3.getVoiceEngine();
-        tmp30 = AudioSubsystems;
-        obj.audioSubsystem = voiceEngine2.getUseLegacyAudioDevice() ? tmp30.LEGACY : tmp30.STANDARD;
+        tmp31 = AudioSubsystems;
+        obj.audioSubsystem = voiceEngine2.getUseLegacyAudioDevice() ? tmp31.LEGACY : tmp31.STANDARD;
       }
     }
     if (null != voiceEngine.pingVoiceThread) {
       watchdogTickResult = obj.watchdogTick();
     }
     if (null != voiceEngine.setActiveSinksChangeCallback) {
-      result10 = voiceEngine.setActiveSinksChangeCallback(obj.handleActiveSinksChange);
+      result11 = voiceEngine.setActiveSinksChangeCallback(obj.handleActiveSinksChange);
     }
     setOnClipsMlDetection = voiceEngine.setOnClipsMlDetection;
     if (setOnClipsMlDetection != null) {
-      result11 = setOnClipsMlDetection((arg0) => {
+      result12 = setOnClipsMlDetection((arg0) => {
         if (arg0.length > 0) {
           obj.emit(obj(pollMetrics[9]).MediaEngineEvent.ClipsMlDetection, arg0);
           throw obj;
         }
       });
     }
-    tmp35 = require("pollConnectionStats")(obj);
+    tmp36 = require("pollConnectionStats")(obj);
     closure_0 = obj;
     pollMetrics = function pollMetrics() {
       const self = this;

@@ -12,9 +12,9 @@ import transitionTo from "transitionTo" /* 1219 */;
 import getToken from "getToken" /* 1366 */;
 import PermissionOverwriteType from "PermissionOverwriteType" /* 1954 */;
 import prototypeDefault from "prototype" /* 4377 */;
-import getAuthenticationErrorsFromAPIError from "getAuthenticationErrorsFromAPIError" /* 7730 */;
-import isStaffDefault from "isStaff" /* 12208 */;
-import fetchExperiments from "fetchExperiments" /* 14056 */;
+import getAuthenticationErrorsFromAPIError from "getAuthenticationErrorsFromAPIError" /* 7733 */;
+import isStaffDefault from "isStaff" /* 12215 */;
+import fetchExperiments from "fetchExperiments" /* 14072 */;
 import closure_6 from "initialize" /* 1216 */;
 import closure_7 from "clearAll" /* 1217 */;
 import ME from "ME" /* 673 */;
@@ -70,7 +70,7 @@ function fetchFingerprint(arg0) {
           if (null != c23) {
             obj["X-Installation-ID"] = c23;
           }
-          tmpResult = tmp(14056);
+          tmpResult = tmp(14072);
           obj = { withGuildExperiments: null, headers: null, context: null };
           obj[0] = true;
           obj[1] = obj;
@@ -102,7 +102,7 @@ function fetchFingerprint(arg0) {
             callback2(706).dispatch({ type: "EXPERIMENTS_FETCH_SUCCESS", fingerprint, experiments: assignments, guildExperiments: guild_experiments });
             c33 = null;
             const obj5 = callback2(706);
-            callback(14057).onExperimentsLoaded();
+            callback(14073).onExperimentsLoaded();
           }, () => {
             c33 = null;
             callback2(706).dispatch({ type: "EXPERIMENTS_FETCH_FAILURE" });
@@ -246,13 +246,13 @@ prototype["initialize"] = function initialize() {
     }
     if (tmp7) {
       function fireApex() {
-        const installationExperiments = callback(11302).fetchInstallationExperiments(null);
+        const installationExperiments = callback(11306).fetchInstallationExperiments(null);
       }
       promise.then(fireApex, fireApex);
     }
     promise = fetchFingerprint();
   }
-  this.addChangeListener(() => callback(14059).setClientState(closure_17));
+  this.addChangeListener(() => callback(14075).setClientState(closure_17));
 };
 prototype["getLoginStatus"] = function getLoginStatus() {
   return NONE;
@@ -355,7 +355,7 @@ const authenticationStore = new AuthenticationStore(importDefaultResult, {
     if (null != installation) {
       installation = apexExperiments.installation;
       if (null == installation) {
-        let tmp6Result = tmp6(14058);
+        let tmp6Result = tmp6(14074);
         if (tmp6Result.canUseInstallationId()) {
           const Storage3 = tmp4(592).Storage;
           const result1 = Storage3.set(analytics_installation, installation);
@@ -719,7 +719,7 @@ const authenticationStore = new AuthenticationStore(importDefaultResult, {
       callback2(706).dispatch({ type: "EXPERIMENTS_FETCH_SUCCESS", fingerprint, experiments: assignments, guildExperiments: guild_experiments });
       c33 = null;
       const obj5 = callback2(706);
-      callback(14057).onExperimentsLoaded();
+      callback(14073).onExperimentsLoaded();
     }, () => {
       c33 = null;
       callback2(706).dispatch({ type: "EXPERIMENTS_FETCH_FAILURE" });
@@ -796,7 +796,7 @@ let obj = {
     if (null != installation) {
       installation = apexExperiments.installation;
       if (null == installation) {
-        let tmp6Result = tmp6(14058);
+        let tmp6Result = tmp6(14074);
         if (tmp6Result.canUseInstallationId()) {
           const Storage3 = tmp4(592).Storage;
           const result1 = Storage3.set(analytics_installation, installation);
@@ -1160,7 +1160,7 @@ let obj = {
       callback2(706).dispatch({ type: "EXPERIMENTS_FETCH_SUCCESS", fingerprint, experiments: assignments, guildExperiments: guild_experiments });
       c33 = null;
       const obj5 = callback2(706);
-      callback(14057).onExperimentsLoaded();
+      callback(14073).onExperimentsLoaded();
     }, () => {
       c33 = null;
       callback2(706).dispatch({ type: "EXPERIMENTS_FETCH_FAILURE" });

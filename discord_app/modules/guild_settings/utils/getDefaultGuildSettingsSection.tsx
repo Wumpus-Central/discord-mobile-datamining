@@ -1,6 +1,6 @@
-// === Module 9756: getDefaultGuildSettingsSection ===
+// === Module 9760: getDefaultGuildSettingsSection ===
 
-// Module 9756 (getDefaultGuildSettingsSection)
+// Module 9760 (getDefaultGuildSettingsSection)
 import set from "set" /* 2 */;
 import ME from "ME" /* 673 */;
 

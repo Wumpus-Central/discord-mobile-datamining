@@ -1,11 +1,11 @@
-// === Module 16376: ResourcesRow ===
+// === Module 16395: ResourcesRow ===
 
-// Module 16376 (ResourcesRow)
+// Module 16395 (ResourcesRow)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 709 */;
-import useResourceChannelsDefault from "useResourceChannels" /* 16378 */;
+import useResourceChannelsDefault from "useResourceChannels" /* 16397 */;
 import { ScrollView } from "get ActivityIndicator" /* 17 */;
-import { ONBOARDING_HOME_RESOURCES_SHEET_KEY as closure_4 } from "ONBOARDING_HOME_RESOURCES_SHEET_KEY" /* 16377 */;
+import { ONBOARDING_HOME_RESOURCES_SHEET_KEY as closure_4 } from "ONBOARDING_HOME_RESOURCES_SHEET_KEY" /* 16396 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -57,7 +57,7 @@ export default function ResourcesRow(guildId) {
     obj1[0] = arr.length - 2;
     obj[2] = intl.format(guildId(1233).t.F6iMs4, obj1);
     obj[2] = callback(guildId(4474).Text, obj);
-    tmp6 = callback(guildId(5076).PressableOpacity, obj);
+    tmp6 = callback(guildId(5077).PressableOpacity, obj);
   }
   items[1] = tmp6;
   obj[2] = items;

@@ -1,6 +1,6 @@
-// === Module 7511: initialize ===
+// === Module 7512: initialize ===
 
-// Module 7511 (initialize)
+// Module 7512 (initialize)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import setRequestedByAll from "setRequestedBy" /* 672 */;

@@ -1,8 +1,8 @@
-// === Module 8638: apexExperiment ===
+// === Module 8642: apexExperiment ===
 
-// Module 8638 (apexExperiment)
-import useLabFeatureDefault from "useLabFeature" /* 8641 */;
-import closure_2 from "getUserAgnosticState" /* 8639 */;
+// Module 8642 (apexExperiment)
+import useLabFeatureDefault from "useLabFeature" /* 8645 */;
+import closure_2 from "getUserAgnosticState" /* 8643 */;
 import ApexExperiment from "ApexExperiment" /* 1467 */;
 
 const hide_icymi_tab = "hide_icymi_tab";

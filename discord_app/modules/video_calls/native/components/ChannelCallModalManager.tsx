@@ -1,6 +1,6 @@
-// === Module 9638: _initialize ===
+// === Module 9642: _initialize ===
 
-// Module 9638 (_initialize)
+// Module 9642 (_initialize)
 import initializeDefault from "initialize" /* 4662 */;
 import closure_3 from "mergeGuildAvatar" /* 1921 */;
 import closure_4 from "updateVoiceState" /* 4497 */;

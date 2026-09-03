@@ -1,11 +1,11 @@
-// === Module 6229: ? ===
+// === Module 6230: ? ===
 
-// Module 6229
+// Module 6230
 import ThemesDefault from "Themes" /* 709 */;
 import getSystemLocale from "getSystemLocale" /* 1233 */;
 import set from "set" /* 1234 */;
-import PressableBase from "PressableBase" /* 5076 */;
-import SearchField from "SearchField" /* 6230 */;
+import PressableBase from "PressableBase" /* 5077 */;
+import SearchField from "SearchField" /* 6231 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
@@ -35,7 +35,7 @@ const forwardRefResult = importAllResult.forwardRef((onClose, ref) => {
   if (obj1.isAndroid()) {
     obj = { style: null };
     obj[0] = tmp2.cancelIcon;
-    let tmp3Result = tmp3(tmp4(5507).ArrowLargeLeftIcon, obj);
+    let tmp3Result = tmp3(tmp4(5508).ArrowLargeLeftIcon, obj);
   } else {
     obj = { style: null, maxFontSizeMultiplier: 2, variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
     obj[0] = tmp2.cancelText;

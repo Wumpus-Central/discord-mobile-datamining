@@ -1,9 +1,9 @@
-// === Module 13644: _initialize ===
+// === Module 13659: _initialize ===
 
-// Module 13644 (_initialize)
+// Module 13659 (_initialize)
 import Storage3 from "Storage" /* 592 */;
 import getRootNavigationRef from "getRootNavigationRef" /* 4333 */;
-import initializeDefault from "initialize" /* 5494 */;
+import initializeDefault from "initialize" /* 5495 */;
 import closure_3 from "trackCommunicationDisabled" /* 1991 */;
 import closure_4 from "createGuildRecordFromRust" /* 1908 */;
 import closure_5 from "handleConnectionOpen" /* 4299 */;

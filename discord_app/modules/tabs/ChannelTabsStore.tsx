@@ -1,10 +1,10 @@
-// === Module 10948: handleChannelDelete ===
+// === Module 10952: handleChannelDelete ===
 
-// Module 10948 (handleChannelDelete)
+// Module 10952 (handleChannelDelete)
 import initializeDefault from "initialize" /* 586 */;
 import dispatcherDefault from "dispatcher" /* 706 */;
 import PlatformTypes from "PlatformTypes" /* 1235 */;
-import apexExperimentDefault from "apexExperiment" /* 10949 */;
+import apexExperimentDefault from "apexExperiment" /* 10953 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "handleConnectionOpen" /* 1980 */;
 import closure_5 from "handleConnectionOpen" /* 4299 */;

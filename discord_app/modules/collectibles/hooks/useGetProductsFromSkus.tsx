@@ -1,9 +1,9 @@
-// === Module 14900: useGetProductsFromSkus ===
+// === Module 14915: useGetProductsFromSkus ===
 
-// Module 14900 (useGetProductsFromSkus)
+// Module 14915 (useGetProductsFromSkus)
 import set from "set" /* 2 */;
 import noop from "noop" /* 19 */;
-import closure_4 from "updateCategoriesAndProducts" /* 7296 */;
+import closure_4 from "updateCategoriesAndProducts" /* 7297 */;
 
 noop.useCallback;
 const result = set.fileFinishedImporting("modules/collectibles/hooks/useGetProductsFromSkus.tsx");

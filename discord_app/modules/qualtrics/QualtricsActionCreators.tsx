@@ -1,12 +1,12 @@
-// === Module 4710: fetchSurveyDetails ===
+// === Module 4711: fetchSurveyDetails ===
 
-// Module 4710 (fetchSurveyDetails)
+// Module 4711 (fetchSurveyDetails)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
-import closure_5 from "fetchSurveyIfNeeded" /* 4711 */;
-import { useQualtricsResponseStore } from "useQualtricsResponseStore" /* 4714 */;
-import closure_7 from "map" /* 4715 */;
-import QuestionTypeEnum from "QuestionTypeEnum" /* 4716 */;
+import closure_5 from "fetchSurveyIfNeeded" /* 4712 */;
+import { useQualtricsResponseStore } from "useQualtricsResponseStore" /* 4715 */;
+import closure_7 from "map" /* 4716 */;
+import QuestionTypeEnum from "QuestionTypeEnum" /* 4717 */;
 import { Endpoints } from "ME" /* 673 */;
 
 const require = arg1;
@@ -366,106 +366,49 @@ function _fireSurveyAction() {
     c7 = 0;
     c5 = 0;
     return (function*(arg0, arg1) {
-      if (c7 === 2) {
-        c7 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp7 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c7 = 2;
-          if (0 === c6) {
-            if (arg0 === 1) {
-              c7 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c7 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              closure_4 = tmp3;
-              closure_3 = tmp5;
-              let lib;
-              if ((function shouldFireSurveyAction(closure_0) {
-                let result = c5.shouldAllowSurveyAction();
-                if (result) {
-                  const _Math = Math;
-                  result = callback(_undefined[10]).SURVEY_ACTION_SAMPLE_PERCENTS[closure_0] >= 100 * Math.random();
-                }
-                return result;
-              })(lib)) {
-                obj1 = { action_type: null };
-                obj1[0] = tmp29;
-                if (null != tmp30) {
-                  obj1.metadata = tmp30;
-                }
-                let actionTriggeredSurveyOverride = 1;
-                const HTTP = lib(closure_1_2[7]).HTTP;
-                const obj2 = { url: null, query: null, body: null, rejectWithError: true };
-                obj2[0] = closure_1_10.EMBEDDED_SURVEY_ACTION;
-                actionTriggeredSurveyOverride = actionTriggeredSurveyOverride.getActionTriggeredSurveyOverride();
-                let table = actionTriggeredSurveyOverride;
-                if (actionTriggeredSurveyOverride == null) {
-                  table = undefined;
-                }
-                const obj3 = { force_survey_id: null };
-                obj3[0] = table;
-                obj2[1] = obj3;
-                obj2[2] = obj1;
-                c6 = 2;
-                c7 = 1;
-                const obj4 = { value: null, done: false };
-                obj4[0] = HTTP.post(obj2);
-                return obj4;
-              }
-              tmp29 = lib;
-            }
-          } else {
-            if (1 === tmp8) {
-              actionTriggeredSurveyOverride = 0;
-            } else if (arg0 === 1) {
-              c7 = 3;
-              throw arg1;
-            } else if (arg0 !== 2) {
-              lib = arg1;
-              obj = callback(table[8]);
-              let survey;
-              if (lib != null) {
-                const body = lib.body;
-                if (body != null) {
-                  survey = body.survey;
-                }
-              }
-              const obj5 = { type: "SURVEY_FETCHED", survey: null, isActionTriggered: true };
-              obj5[1] = survey;
-              obj.dispatch(obj5);
-              actionTriggeredSurveyOverride = 0;
-            }
-            actionTriggeredSurveyOverride = 0;
-            c7 = 3;
-            const obj6 = { value: null, done: true };
-            obj6[0] = arg1;
-            return obj6;
-          }
-          c7 = 3;
-        } catch (tmp21) {
-          if (tmp4 === actionTriggeredSurveyOverride) {
-            c7 = tmp2;
-            throw tmp21;
-          } else {
-            c6 = tmp;
-          }
-        }
+      closure_4 = tmp3;
+      closure_3 = tmp5;
+      actionTriggeredSurveyOverride = actionTriggeredSurveyOverride.getActionTriggeredSurveyOverride();
+      let table = actionTriggeredSurveyOverride;
+      if (actionTriggeredSurveyOverride == null) {
+        table = undefined;
       }
+      obj1 = { action_type: null };
+      obj1[0] = lib;
+      if (null != callback) {
+        obj1.metadata = tmp28;
+      }
+      actionTriggeredSurveyOverride = 1;
+      const HTTP = lib(closure_1_2[7]).HTTP;
+      const obj2 = { url: null, query: null, body: null, rejectWithError: true };
+      obj2[0] = closure_1_10.EMBEDDED_SURVEY_ACTION;
+      const obj3 = { force_survey_id: null };
+      obj3[0] = table;
+      obj2[1] = obj3;
+      obj2[2] = obj1;
+      yield HTTP.post(obj2);
+      if (1 === tmp8) {
+        actionTriggeredSurveyOverride = 0;
+      } else if (arg0 === 1) {
+        c7 = 3;
+        throw arg1;
+      } else if (arg0 !== 2) {
+        lib = arg1;
+        const obj = callback(table[8]);
+        let survey;
+        if (lib != null) {
+          const body = lib.body;
+          if (body != null) {
+            survey = body.survey;
+          }
+        }
+        const obj5 = { type: "SURVEY_FETCHED", survey: null, isActionTriggered: true };
+        obj5[1] = survey;
+        obj.dispatch(obj5);
+        actionTriggeredSurveyOverride = 0;
+      }
+      actionTriggeredSurveyOverride = 0;
+      return arg1;
     })();
   });
   closure_13 = tmp;

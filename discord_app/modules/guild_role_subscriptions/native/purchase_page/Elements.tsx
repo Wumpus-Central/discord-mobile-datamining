@@ -1,14 +1,14 @@
-// === Module 16360: TruncatedText ===
+// === Module 16379: TruncatedText ===
 
-// Module 16360 (TruncatedText)
+// Module 16379 (TruncatedText)
 import ThemesDefault from "Themes" /* 709 */;
 import Button from "Button" /* 1296 */;
 import Text from "Text" /* 4474 */;
-import PressableBase from "PressableBase" /* 5076 */;
-import notSupportedDefault from "notSupported" /* 8230 */;
-import useStoreFrontPriceDefault from "useStoreFrontPrice" /* 8233 */;
-import getRoleEmojisAll from "getRoleEmojis" /* 15052 */;
-import registerAssetDefault from "registerAsset" /* 16361 */;
+import PressableBase from "PressableBase" /* 5077 */;
+import notSupportedDefault from "notSupported" /* 8234 */;
+import useStoreFrontPriceDefault from "useStoreFrontPrice" /* 8237 */;
+import getRoleEmojisAll from "getRoleEmojis" /* 15067 */;
+import registerAssetDefault from "registerAsset" /* 16380 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
@@ -119,8 +119,8 @@ export const useFormattedSubscriptionPlan = function useFormattedSubscriptionPla
   let str = "No Price Available";
   if (null != price) {
     const _HermesInternal = HermesInternal;
-    str = "" + tmp2(6089).formatPrice(price.amount, price.currency) + "/mo.";
-    const tmp2Result = tmp2(6089);
+    str = "" + tmp2(6090).formatPrice(price.amount, price.currency) + "/mo.";
+    const tmp2Result = tmp2(6090);
   }
   return str;
 };

@@ -1,6 +1,6 @@
-// === Module 8115: useAvatarDecorationIfNotExpired ===
+// === Module 8118: useAvatarDecorationIfNotExpired ===
 
-// Module 8115 (useAvatarDecorationIfNotExpired)
+// Module 8118 (useAvatarDecorationIfNotExpired)
 import closure_2 from "_slicedToArray" /* 32 */;
 import closure_3 from "noop" /* 19 */;
 import { MAX_TIMEOUT_MS } from "ME" /* 673 */;

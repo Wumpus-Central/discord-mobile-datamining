@@ -1,9 +1,9 @@
-// === Module 16036: VibegrationsChannelRow ===
+// === Module 16052: VibegrationsChannelRow ===
 
-// Module 16036 (VibegrationsChannelRow)
+// Module 16052 (VibegrationsChannelRow)
 import ThemesDefault from "Themes" /* 709 */;
 import messagesProxyDefault from "messagesProxy" /* 3500 */;
-import BaseChannelSubtitleDefault from "BaseChannelSubtitle" /* 12171 */;
+import BaseChannelSubtitleDefault from "BaseChannelSubtitle" /* 12177 */;
 import closure_3 from "noop" /* 19 */;
 import { Routes } from "ME" /* 673 */;
 import { StaticChannelRoute } from "set" /* 1393 */;
@@ -26,10 +26,10 @@ export default function VibegrationsChannelRow(selected) {
     id(closure_1_2[7]).transitionTo(closure_1_4.CHANNEL(id, closure_1_5.VIBEGRATIONS));
   }, items);
   if (true === selected) {
-    let DEFAULT = id(12171).ChannelModes.SELECTED;
+    let DEFAULT = id(12177).ChannelModes.SELECTED;
     let tmp5 = id;
   } else {
-    DEFAULT = id(12171).ChannelModes.DEFAULT;
+    DEFAULT = id(12177).ChannelModes.DEFAULT;
     tmp5 = id;
   }
   let obj = { onPress: callback, style: callback().container, accessible: true, accessibilityLabel: null, accessibilityState: null, mode: null, name: null, icon: null };
@@ -42,8 +42,8 @@ export default function VibegrationsChannelRow(selected) {
   const intl2 = tmp5(1233).intl;
   obj[0] = intl2.string(messagesProxyDefault.Xmvb23);
   obj[1] = DEFAULT;
-  obj[6] = jsx(tmp5(12171).BaseChannelName, { name: null, mode: null });
-  obj = { mode: DEFAULT, IconComponent: tmp5(10258).MagicWandIcon };
-  obj[7] = jsx(tmp5(12171).BaseChannelIcon, { mode: DEFAULT, IconComponent: tmp5(10258).MagicWandIcon });
-  return jsx(BaseChannelSubtitleDefault, { mode: DEFAULT, IconComponent: tmp5(10258).MagicWandIcon });
+  obj[6] = jsx(tmp5(12177).BaseChannelName, { name: null, mode: null });
+  obj = { mode: DEFAULT, IconComponent: tmp5(10262).MagicWandIcon };
+  obj[7] = jsx(tmp5(12177).BaseChannelIcon, { mode: DEFAULT, IconComponent: tmp5(10262).MagicWandIcon });
+  return jsx(BaseChannelSubtitleDefault, { mode: DEFAULT, IconComponent: tmp5(10262).MagicWandIcon });
 };

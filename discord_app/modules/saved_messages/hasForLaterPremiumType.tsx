@@ -1,6 +1,6 @@
-// === Module 7610: hasForLaterPremiumType ===
+// === Module 7611: hasForLaterPremiumType ===
 
-// Module 7610 (hasForLaterPremiumType)
+// Module 7611 (hasForLaterPremiumType)
 import initialize from "initialize" /* 586 */;
 import isPremiumAtLeast from "isPremiumAtLeast" /* 1945 */;
 import closure_2 from "mergeGuildAvatar" /* 1921 */;

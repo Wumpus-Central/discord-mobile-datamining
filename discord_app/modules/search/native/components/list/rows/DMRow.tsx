@@ -1,10 +1,10 @@
-// === Module 16467: FriendPresence ===
+// === Module 16488: FriendPresence ===
 
-// Module 16467 (FriendPresence)
+// Module 16488 (FriendPresence)
 import ThemesDefault from "Themes" /* 709 */;
 import nameFromUser from "nameFromUser" /* 4322 */;
 import Text from "Text" /* 4474 */;
-import ActivityStatusDefault from "ActivityStatus" /* 9253 */;
+import ActivityStatusDefault from "ActivityStatus" /* 9257 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;

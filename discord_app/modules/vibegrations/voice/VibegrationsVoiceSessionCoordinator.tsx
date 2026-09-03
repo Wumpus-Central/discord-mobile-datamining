@@ -1,12 +1,12 @@
-// === Module 14336: getCapabilitiesForSocket ===
+// === Module 14352: getCapabilitiesForSocket ===
 
-// Module 14336 (getCapabilitiesForSocket)
-import prototypeDefault from "prototype" /* 9516 */;
-import trackDeviceChangedDefault from "trackDeviceChanged" /* 9803 */;
-import apexExperimentDefault from "apexExperiment" /* 13705 */;
-import validateEmbeddedAppFrameDefault from "validateEmbeddedAppFrame" /* 14339 */;
-import closure_3 from "isFramePooled" /* 14337 */;
-import closure_4 from "map" /* 9477 */;
+// Module 14352 (getCapabilitiesForSocket)
+import prototypeDefault from "prototype" /* 9520 */;
+import trackDeviceChangedDefault from "trackDeviceChanged" /* 9807 */;
+import apexExperimentDefault from "apexExperiment" /* 13720 */;
+import validateEmbeddedAppFrameDefault from "validateEmbeddedAppFrame" /* 14355 */;
+import closure_3 from "isFramePooled" /* 14353 */;
+import closure_4 from "map" /* 9481 */;
 import closure_5 from "fetchFingerprint" /* 1215 */;
 import closure_6 from "_detectH265HardwareDecode" /* 4529 */;
 import closure_7 from "createRTCConnection" /* 4554 */;
@@ -223,13 +223,13 @@ prototype["update"] = function update(id, id, arg2, arr) {
               obj.add(user_id);
               obj = { userId: null, position: null };
               obj[0] = user_id;
-              obj[1] = callback(14338).toListenerRelativePosition(callback, user_id.position);
+              obj[1] = callback(14354).toListenerRelativePosition(callback, user_id.position);
               return obj;
             }
           }
         }
         obj = { errorCode: closure_1_10.INVALID_PAYLOAD };
-        let tmp6 = set(9516);
+        let tmp6 = set(9520);
         tmp6 = new tmp6(obj, "Invalid spatial voice source " + user_id.user_id);
         throw tmp6;
       });

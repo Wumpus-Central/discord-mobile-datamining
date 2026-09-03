@@ -1,6 +1,6 @@
-// === Module 5612: SPRING_CONFIG ===
+// === Module 5613: SPRING_CONFIG ===
 
-// Module 5612 (SPRING_CONFIG)
+// Module 5613 (SPRING_CONFIG)
 import closure_3 from "noop" /* 19 */;
 
 const require = arg1;

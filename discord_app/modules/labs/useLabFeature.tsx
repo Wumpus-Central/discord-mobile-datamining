@@ -1,7 +1,7 @@
-// === Module 8641: useLabFeature ===
+// === Module 8645: useLabFeature ===
 
-// Module 8641 (useLabFeature)
-import closure_2 from "getUserAgnosticState" /* 8639 */;
+// Module 8645 (useLabFeature)
+import closure_2 from "getUserAgnosticState" /* 8643 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/labs/useLabFeature.tsx");

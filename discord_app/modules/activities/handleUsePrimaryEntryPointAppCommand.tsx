@@ -1,6 +1,6 @@
-// === Module 9528: _handleUsePrimaryEntryPointAppCommand ===
+// === Module 9532: _handleUsePrimaryEntryPointAppCommand ===
 
-// Module 9528 (_handleUsePrimaryEntryPointAppCommand)
+// Module 9532 (_handleUsePrimaryEntryPointAppCommand)
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import closure_5 from "ensureGuildLoaded" /* 1386 */;
 import closure_6 from "mergeGuildAvatar" /* 1921 */;
@@ -53,7 +53,7 @@ function _handleUsePrimaryEntryPointAppCommand() {
                 c4 = 2;
                 c5 = 1;
                 obj1 = { value: null, done: false };
-                obj1[0] = closure_1_1(9492)(tmp27.targetApplicationId, tmp27.channelId);
+                obj1[0] = closure_1_1(9496)(tmp27.targetApplicationId, tmp27.channelId);
                 return obj1;
               }
             }
@@ -72,10 +72,10 @@ function _handleUsePrimaryEntryPointAppCommand() {
             return obj2;
           } else {
             closure_1 = arg1;
-            obj = lib(9464);
+            obj = lib(9468);
             closure_2 = obj.shouldOpenActivityInPopoutWindow();
             dependencyMap = 0;
-            obj1 = lib(9464);
+            obj1 = lib(9468);
             c5 = 3;
             const obj3 = { value: null, done: true };
             obj3[0] = obj1.wrapPreemptiveActivityPopout(closure_2, () => {
@@ -182,7 +182,7 @@ function _handleUsePrimaryEntryPointAppCommandInternal() {
                 obj1[0] = arg1;
                 return obj1;
               } else {
-                closure_13 = callback(9465)();
+                closure_13 = callback(9469)();
                 currentUser2 = currentUser.getCurrentUser();
                 let tmp17 = null != callback2;
                 if (tmp17) {
@@ -194,9 +194,9 @@ function _handleUsePrimaryEntryPointAppCommandInternal() {
                     }
                     let tmp6 = tmp14;
                     if (tmp14) {
-                      let obj2 = callback2(9529);
+                      let obj2 = callback2(9533);
                       obj2.markActivityUsed(lib.id);
-                      let obj3 = lib(9482);
+                      let obj3 = lib(9486);
                       obj2 = { channelId: null, applicationId: null, isStart: true, embeddedActivitiesManager: null, componentId: null, commandOrigin: null, sectionName: null, locationObject: null, analyticsLocations: null, source: null, onExecutedCallback: null, referrerId: null, customId: null, inviterUserId: null, onConfirmActivityLaunchChecksAlertOpen: null };
                       obj2[0] = callback2;
                       obj2[1] = lib.id;

@@ -1,6 +1,6 @@
-// === Module 10972: metadata ===
+// === Module 10976: metadata ===
 
-// Module 10972 (metadata)
+// Module 10976 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/orbs/orb_profile_badge_icon-2x.png.js");

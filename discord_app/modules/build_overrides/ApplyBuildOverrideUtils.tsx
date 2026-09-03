@@ -1,6 +1,6 @@
-// === Module 11584: _applyStaffBuildOverride ===
+// === Module 11589: _applyStaffBuildOverride ===
 
-// Module 11584 (_applyStaffBuildOverride)
+// Module 11589 (_applyStaffBuildOverride)
 import importDefaultResult from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "fetchFingerprint" /* 1215 */;
 
@@ -316,7 +316,7 @@ closure_0 = importDefaultResult((arg0) => {
     }
   })();
 });
-const f90528 = function() {
+const f90691 = function() {
   const self = this;
   const apply = closure_0.apply;
   if (typeof apply === "unknown") {

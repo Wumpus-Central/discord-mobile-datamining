@@ -1,10 +1,10 @@
-// === Module 8239: SuperReactionIcon ===
+// === Module 8243: SuperReactionIcon ===
 
-// Module 8239 (SuperReactionIcon)
+// Module 8243 (SuperReactionIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 709 */;
 import BaseIconImage from "BaseIconImage" /* 4196 */;
-import registerAsset from "registerAsset" /* 8240 */;
+import registerAsset from "registerAsset" /* 8244 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

@@ -1,8 +1,8 @@
-// === Module 9346: PlayStationLinkPreConnect ===
+// === Module 9350: PlayStationLinkPreConnect ===
 
-// Module 9346 (PlayStationLinkPreConnect)
+// Module 9350 (PlayStationLinkPreConnect)
 import closure_3 from "noop" /* 19 */;
-import { PlayStationLinkModalScenes as closure_4 } from "PlayStationLinkModalScenes" /* 9343 */;
+import { PlayStationLinkModalScenes as closure_4 } from "PlayStationLinkModalScenes" /* 9347 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -28,5 +28,5 @@ export const PlayStationLinkPreConnect = function PlayStationLinkPreConnect(plat
   obj[5] = intl.string(navigation(1233).t["6n+UPR"]);
   const intl2 = navigation(1233).intl;
   obj[6] = intl2.string(navigation(1233).t.JaaqIf);
-  return jsx(navigation(9323).TwoWayLinkPreConnect, { platformType: platformType.platformType, onError: callback1, onNext: callback, img: memo, imgStyle: callback().image, title: null, body: null });
+  return jsx(navigation(9327).TwoWayLinkPreConnect, { platformType: platformType.platformType, onError: callback1, onNext: callback, img: memo, imgStyle: callback().image, title: null, body: null });
 };

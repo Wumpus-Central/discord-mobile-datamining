@@ -1,10 +1,10 @@
-// === Module 15390: WrenchIcon ===
+// === Module 15404: WrenchIcon ===
 
-// Module 15390 (WrenchIcon)
+// Module 15404 (WrenchIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 709 */;
 import BaseIconImage from "BaseIconImage" /* 4196 */;
-import registerAsset from "registerAsset" /* 15391 */;
+import registerAsset from "registerAsset" /* 15405 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

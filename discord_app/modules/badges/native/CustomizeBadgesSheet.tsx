@@ -1,20 +1,20 @@
-// === Module 14497: BadgeTileContent ===
+// === Module 14513: BadgeTileContent ===
 
-// Module 14497 (BadgeTileContent)
+// Module 14513 (BadgeTileContent)
 import ThemesDefault from "Themes" /* 709 */;
 import CircleInformationIcon from "CircleInformationIcon" /* 4433 */;
-import PressableCard from "PressableCard" /* 5609 */;
-import FormCheckbox from "FormCheckbox" /* 7693 */;
-import BadgeCatalogIconDefault from "BadgeCatalogIcon" /* 9010 */;
-import PX_16 from "PX_16" /* 14498 */;
+import PressableCard from "PressableCard" /* 5610 */;
+import FormCheckbox from "FormCheckbox" /* 7696 */;
+import BadgeCatalogIconDefault from "BadgeCatalogIcon" /* 9014 */;
+import PX_16 from "PX_16" /* 14514 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_7 from "handleFormOpen" /* 8078 */;
+import closure_7 from "handleFormOpen" /* 8081 */;
 import closure_8 from "mergeGuildAvatar" /* 1921 */;
-import closure_9 from "initialize" /* 8573 */;
+import closure_9 from "initialize" /* 8577 */;
 import ME from "ME" /* 673 */;
-import { ACTION_SHEET_MINIMUM_BOTTOM_PADDING as closure_14 } from "ACTION_SHEET_START_HEIGHT_RATIO" /* 5631 */;
+import { ACTION_SHEET_MINIMUM_BOTTOM_PADDING as closure_14 } from "ACTION_SHEET_START_HEIGHT_RATIO" /* 5632 */;
 import { PremiumUpsellTypes } from "GuildFeatures" /* 1923 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
@@ -54,7 +54,7 @@ function BadgeTileContent(arg0) {
           const obj2 = { size: "sm", variant: "secondary-overlay", icon: null, accessibilityLabel: null, accessibilityHint: null, onPress: null };
           const obj3 = { size: "sm", color: null };
           obj3[1] = ThemesDefault.colors.CONTROL_OVERLAY_SECONDARY_TEXT_DEFAULT;
-          obj2[2] = tmp13(tmp11(7750).EyeSlashIcon, obj3);
+          obj2[2] = tmp13(tmp11(7753).EyeSlashIcon, obj3);
           if (showAccessibilityLabel == null) {
             showAccessibilityLabel = badge.name;
           }
@@ -62,7 +62,7 @@ function BadgeTileContent(arg0) {
           const intl = tmp11(1233).intl;
           obj2[4] = intl.string(tmp11(1233).t.hHHpvU);
           obj2[5] = onShowPress;
-          obj1[1] = tmp13(tmp11(8015).IconButton, obj2);
+          obj1[1] = tmp13(tmp11(8018).IconButton, obj2);
           let tmp13Result = tmp13(closure_6, obj1);
           const tmp17 = closure_6;
         }
@@ -130,10 +130,10 @@ let closure_24 = importAllResult.memo((badge) => {
   if (typeof getSlotOffset !== "function") {
     HermesBuiltin.throwTypeError();
   }
-  const result = index % badge(14498).BADGE_GRID_COLUMNS;
-  const result1 = result * (tileSize + badge(14498).BADGE_GRID_GAP);
-  const rounded = Math.floor(index / badge(14498).BADGE_GRID_COLUMNS);
-  const result2 = rounded * (tileSize + badge(14498).BADGE_GRID_GAP);
+  const result = index % badge(14514).BADGE_GRID_COLUMNS;
+  const result1 = result * (tileSize + badge(14514).BADGE_GRID_GAP);
+  const rounded = Math.floor(index / badge(14514).BADGE_GRID_COLUMNS);
+  const result2 = rounded * (tileSize + badge(14514).BADGE_GRID_GAP);
   let obj = badge(4205);
   const checkboxA11yNative = obj.useCheckboxA11yNative({ checked: selected });
   const items = [badge, onPress];
@@ -167,12 +167,12 @@ let closure_24 = importAllResult.memo((badge) => {
     obj2[0] = intl.formatToPlainString(tmp2(1233).t["21W3EN"], obj3);
     if (alwaysVisible) {
       const intl3 = tmp2(1233).intl;
-      const tmp2Result = tmp2(9019);
+      const tmp2Result = tmp2(9023);
       let t = tmp2(1233).t;
-      const isPinnedBadgeResult = tmp2(9019).isPinnedBadge(tmp12);
+      const isPinnedBadgeResult = tmp2(9023).isPinnedBadge(tmp12);
       t = { accessibilityRole: "button", accessibilityHint: null };
-      t[1] = intl3.string(tmp2(9019).isPinnedBadge(tmp12) ? t.t3udZb : t.nPQVxb);
-      const tmp17 = tmp2(9019).isPinnedBadge(tmp12) ? t.t3udZb : t.nPQVxb;
+      t[1] = intl3.string(tmp2(9023).isPinnedBadge(tmp12) ? t.t3udZb : t.nPQVxb);
+      const tmp17 = tmp2(9023).isPinnedBadge(tmp12) ? t.t3udZb : t.nPQVxb;
     } else {
       const obj4 = {};
       const merged = Object.assign(checkboxA11yNative);
@@ -646,7 +646,7 @@ export default function CustomizeBadgesSheet(analyticsLocations) {
   let frameCallback;
   let callback2;
   let tmp = first1();
-  let obj = first(9018);
+  let obj = first(9022);
   tenureBadgeHideable = obj.useConfig({ location: "CustomizeBadgesSheet" }).tenureBadgeHideable;
   obj1 = stateFromStores1;
   const tmp5 = stateFromStores(stateFromStores1.useState(0), 2);
@@ -672,8 +672,8 @@ export default function CustomizeBadgesSheet(analyticsLocations) {
   if (analyticsLocations == null) {
     analyticsLocations = [];
   }
-  analyticsLocations = first(5961)(analyticsLocations, tmp2(5981).BADGES_REORDER_ACTION_SHEET).analyticsLocations;
-  context = obj1.useContext(tmp2(5943));
+  analyticsLocations = first(5962)(analyticsLocations, tmp2(5982).BADGES_REORDER_ACTION_SHEET).analyticsLocations;
+  context = obj1.useContext(tmp2(5944));
   const items2 = [context, analyticsLocations];
   const callback1 = obj1.useCallback(() => {
     let obj = context;
@@ -682,8 +682,8 @@ export default function CustomizeBadgesSheet(analyticsLocations) {
     }
     obj = { analyticsLocation: obj, analyticsLocations, premiumFeatureCardOrder: null };
     obj = { page: set.USER_SETTINGS, section: fixedBadges.USER_PROFILE, object: memo.BUTTON_CTA };
-    obj[2] = tenureBadgeHideable(8226).PremiumFeatureCardOrder.TIER_2_LEADING;
-    first(8402)(obj);
+    obj[2] = tenureBadgeHideable(8230).PremiumFeatureCardOrder.TIER_2_LEADING;
+    first(8406)(obj);
   }, items2);
   let tmp9Result = tmp9(586);
   const items3 = [pendingBadgeDisplayOrder];
@@ -722,14 +722,14 @@ export default function CustomizeBadgesSheet(analyticsLocations) {
   const effect1 = obj1.useEffect(() => {
     if (null != stateFromStores) {
       if (!tmp2) {
-        const badgeDirectory = tenureBadgeHideable(8578).fetchBadgeDirectory(tmp);
-        const obj2 = tenureBadgeHideable(8578);
+        const badgeDirectory = tenureBadgeHideable(8582).fetchBadgeDirectory(tmp);
+        const obj2 = tenureBadgeHideable(8582);
       }
       const obj = pendingBadgeDisplayOrder;
       tmp2 = pendingBadgeDisplayOrder.hasCatalogFor(tmp) && !pendingBadgeDisplayOrder.isCatalogStaleFor(tmp);
     }
   }, items8);
-  let tmp12 = first(5961);
+  let tmp12 = first(5962);
   const tmp4 = stateFromStores;
   const items9 = [stateFromStoresArray];
   const stateFromStoresObject1 = tenureBadgeHideable(586).useStateFromStoresObject(items9, () => {
@@ -740,18 +740,18 @@ export default function CustomizeBadgesSheet(analyticsLocations) {
   pendingBadgeHiddenBadges = stateFromStoresObject1.pendingBadgeHiddenBadges;
   const items10 = [stateFromStoresArray, pendingBadgeDisplayOrder, pendingBadgeHiddenBadges];
   memo = obj1.useMemo(() => {
-    let obj = tenureBadgeHideable(12722);
+    let obj = tenureBadgeHideable(12734);
     obj = { pendingBadgeDisplayOrder, pendingBadgeHiddenBadges };
     return obj.applyPendingBadgeSettings(stateFromStoresArray, obj);
   }, items10);
   const items11 = [tenureBadgeHideable];
   closure_12 = obj1.useMemo(() => {
-    let obj = tenureBadgeHideable(9019);
+    let obj = tenureBadgeHideable(9023);
     obj = { tenureBadgeHideable };
     return obj.getUnhideableBadgeIds(obj);
   }, items11);
   const items12 = [memo];
-  const memo1 = obj1.useMemo(() => tenureBadgeHideable(9019).groupCustomizableBadges(memo), items12);
+  const memo1 = obj1.useMemo(() => tenureBadgeHideable(9023).groupCustomizableBadges(memo), items12);
   fixedBadges = memo1.fixedBadges;
   reorderableBadges = memo1.reorderableBadges;
   hiddenBadges = memo1.hiddenBadges;
@@ -759,8 +759,8 @@ export default function CustomizeBadgesSheet(analyticsLocations) {
   memo2 = obj1.useMemo(() => reorderableBadges.map((badge_id) => badge_id.badge_id), items13);
   const tmp9Result1 = tenureBadgeHideable(586);
   sharedValue = tenureBadgeHideable(4217).useSharedValue(memo2);
-  closure_18 = tmp2(7746)((items) => {
-    const result = tenureBadgeHideable(12722).setPendingBadgeDisplayOrder(items);
+  closure_18 = tmp2(7749)((items) => {
+    const result = tenureBadgeHideable(12734).setPendingBadgeDisplayOrder(items);
   });
   const tmp9Result2 = tenureBadgeHideable(4217);
   sharedValue1 = tenureBadgeHideable(4217).useSharedValue(false);
@@ -773,17 +773,17 @@ export default function CustomizeBadgesSheet(analyticsLocations) {
   const tmp4Result = tmp4(obj1.useState(() => new Set()), 2);
   first1 = tmp4Result[0];
   closure_21 = tmp4Result[1];
-  closure_22 = tmp2(7746)((badge_id) => {
+  closure_22 = tmp2(7749)((badge_id) => {
     closure_0 = badge_id;
     const mapped = hiddenBadges.map((badge_id) => badge_id.badge_id);
     if (mapped.includes(badge_id.badge_id)) {
       if (stateFromStores1) {
         const items = [];
         items[HermesBuiltin.arraySpread(memo2, 0)] = badge_id.badge_id;
-        const result = tenureBadgeHideable(12722).setPendingBadgeDisplayOrder(items);
-        const obj4 = tenureBadgeHideable(12722);
+        const result = tenureBadgeHideable(12734).setPendingBadgeDisplayOrder(items);
+        const obj4 = tenureBadgeHideable(12734);
       }
-      const result1 = tenureBadgeHideable(12722).setPendingBadgeHiddenBadges(mapped.filter((arg0) => arg0 !== badge_id.badge_id));
+      const result1 = tenureBadgeHideable(12734).setPendingBadgeHiddenBadges(mapped.filter((arg0) => arg0 !== badge_id.badge_id));
       const AccessibilityAnnouncer = tenureBadgeHideable(1350).AccessibilityAnnouncer;
       const intl2 = tenureBadgeHideable(1233).intl;
       let obj = { badgeName: null };
@@ -795,11 +795,11 @@ export default function CustomizeBadgesSheet(analyticsLocations) {
       const _HermesInternal = HermesInternal;
       obj[0] = "BADGE_ALWAYS_VISIBLE-" + badge_id.badge_id;
       const intl = tenureBadgeHideable(1233).intl;
-      const obj3 = tenureBadgeHideable(9019);
+      const obj3 = tenureBadgeHideable(9023);
       const t = tenureBadgeHideable(1233).t;
-      obj[1] = intl.string(tenureBadgeHideable(9019).isPinnedBadge(badge_id.badge_id) ? t.t3udZb : t.nPQVxb);
+      obj[1] = intl.string(tenureBadgeHideable(9023).isPinnedBadge(badge_id.badge_id) ? t.t3udZb : t.nPQVxb);
       obj = obj.open(obj);
-      const isPinnedBadgeResult = tenureBadgeHideable(9019).isPinnedBadge(badge_id.badge_id);
+      const isPinnedBadgeResult = tenureBadgeHideable(9023).isPinnedBadge(badge_id.badge_id);
     } else {
       callback((items) => {
         const set = new Set(items);
@@ -812,35 +812,35 @@ export default function CustomizeBadgesSheet(analyticsLocations) {
   });
   const size = first1.size;
   const tmp9Result3 = tenureBadgeHideable(4217);
-  const tmp28 = first(7746)(() => {
+  const tmp28 = first(7749)(() => {
     const set = new Set(hiddenBadges.map((badge_id) => badge_id.badge_id));
     for (const item10015 of first1) {
       let addResult = set.add(item10015);
       continue;
     }
     if (stateFromStores1) {
-      const result = tenureBadgeHideable(12722).setPendingBadgeDisplayOrder(memo2.filter((arg0) => !set.has(arg0)));
-      const obj2 = tenureBadgeHideable(12722);
+      const result = tenureBadgeHideable(12734).setPendingBadgeDisplayOrder(memo2.filter((arg0) => !set.has(arg0)));
+      const obj2 = tenureBadgeHideable(12734);
     }
     const items = [...set];
-    const result1 = tenureBadgeHideable(12722).setPendingBadgeHiddenBadges(items);
+    const result1 = tenureBadgeHideable(12734).setPendingBadgeHiddenBadges(items);
     const AccessibilityAnnouncer = tenureBadgeHideable(1350).AccessibilityAnnouncer;
     const intl = tenureBadgeHideable(1233).intl;
     AccessibilityAnnouncer.announce(intl.formatToPlainString(tenureBadgeHideable(1233).t.q3t0Ht, { count: first1.size }));
     const obj = { count: first1.size };
-    const obj3 = tenureBadgeHideable(12722);
+    const obj3 = tenureBadgeHideable(12734);
     callback(new Set());
   });
-  badgeTileSize = tenureBadgeHideable(14498).getBadgeTileSize(tmp2(1492)().width);
+  badgeTileSize = tenureBadgeHideable(14514).getBadgeTileSize(tmp2(1492)().width);
   const sum1 = fixedBadges.length + reorderableBadges.length + hiddenBadges.length;
-  const rounded = Math.ceil(sum1 / tmp9(14498).BADGE_GRID_COLUMNS);
+  const rounded = Math.ceil(sum1 / tmp9(14514).BADGE_GRID_COLUMNS);
   let num = 0;
   if (rounded > 0) {
     let result = rounded * badgeTileSize;
     const diff = rounded - 1;
-    num = result + diff * tmp9(14498).BADGE_GRID_GAP;
+    num = result + diff * tmp9(14514).BADGE_GRID_GAP;
   }
-  const tmp9Result4 = tenureBadgeHideable(14498);
+  const tmp9Result4 = tenureBadgeHideable(14514);
   animatedRef = tenureBadgeHideable(4217).useAnimatedRef();
   const tmp9Result5 = tenureBadgeHideable(4217);
   scrollViewOffset = tenureBadgeHideable(4217).useScrollViewOffset(animatedRef);
@@ -861,15 +861,15 @@ export default function CustomizeBadgesSheet(analyticsLocations) {
             const result1 = obj.set(0);
             const obj2 = tenureBadgeHideable(4217);
             const _Math = Math;
-            obj2.scrollTo(animatedRef, 0, Math.max(first(10951)(scrollViewOffset.get() + 700 * value * value / 1000), 0), false);
-            const tmp12 = first(10951);
+            obj2.scrollTo(animatedRef, 0, Math.max(first(10955)(scrollViewOffset.get() + 700 * value * value / 1000), 0), false);
+            const tmp12 = first(10955);
           }
           obj = sharedValue3;
         }
       }
     }
   }
-  obj = { autoScrollSpeed: sharedValue2, autoScrollElapsed: sharedValue3, MS_PER_FRAME_60FPS: sharedValue1, AUTO_SCROLL_PIXELS_PER_SECOND: 700, scrollTo: tmp9(4217).scrollTo, scrollRef: animatedRef, roundToNearestPixel: tmp2(10951), scrollOffset: scrollViewOffset };
+  obj = { autoScrollSpeed: sharedValue2, autoScrollElapsed: sharedValue3, MS_PER_FRAME_60FPS: sharedValue1, AUTO_SCROLL_PIXELS_PER_SECOND: 700, scrollTo: tmp9(4217).scrollTo, scrollRef: animatedRef, roundToNearestPixel: tmp2(10955), scrollOffset: scrollViewOffset };
   re.__closure = obj;
   re.__workletHash = 8283557804556;
   re.__initData = closure_39;
@@ -917,8 +917,8 @@ export default function CustomizeBadgesSheet(analyticsLocations) {
       const intl3 = tmp9(1233).intl;
       obj4[2] = intl3.string(tmp9(1233).t.JrOki0);
       obj3[7] = memo2(tmp9(4474).Text, obj4);
-      tmp47 = memo2(tmp2(14499), obj3);
-      const tmp2Result = tmp2(14499);
+      tmp47 = memo2(tmp2(14515), obj3);
+      const tmp2Result = tmp2(14515);
     }
     const items17 = [tmp47, ];
     const obj5 = { accessibilityRole: "list", style: null, children: null };
@@ -981,7 +981,7 @@ export default function CustomizeBadgesSheet(analyticsLocations) {
     } else {
       obj9 = { style: null, children: null };
       obj9[0] = tmp.message;
-      obj9[1] = tmp41(tmp9(6056).ActivityIndicator, { animating: true, size: "large" });
+      obj9[1] = tmp41(tmp9(6057).ActivityIndicator, { animating: true, size: "large" });
     }
     tmp41Result = tmp41(tmp42, obj9);
     tmp44 = tmp42;
@@ -995,7 +995,7 @@ export default function CustomizeBadgesSheet(analyticsLocations) {
   const intl6 = tmp9(1233).intl;
   let t = tmp9(1233).t;
   obj11[1] = intl6.string(stateFromStores1 ? t["Vzc4+8"] : t.ZuXSRp);
-  obj10[3] = memo2(tenureBadgeHideable(5629).BottomSheetTitleHeader, obj11);
+  obj10[3] = memo2(tenureBadgeHideable(5630).BottomSheetTitleHeader, obj11);
   const items20 = [tmp.action, ];
   let actionHidden = tmp51;
   if (0 === size) {
@@ -1019,11 +1019,11 @@ export default function CustomizeBadgesSheet(analyticsLocations) {
   const intl7 = tmp9(1233).intl;
   obj14[2] = intl7.formatToPlainString(tenureBadgeHideable(1233).t.j3DsAJ, { count: size });
   const tmp9Result10 = tenureBadgeHideable(4217);
-  obj14[3] = memo2(tenureBadgeHideable(7750).EyeSlashIcon, { color: first(709).colors.CONTROL_PRIMARY_TEXT_DEFAULT });
+  obj14[3] = memo2(tenureBadgeHideable(7753).EyeSlashIcon, { color: first(709).colors.CONTROL_PRIMARY_TEXT_DEFAULT });
   obj14[4] = tmp28;
-  obj13[1] = memo2(tenureBadgeHideable(4928).Button, obj14);
-  obj12[5] = memo2(tenureBadgeHideable(5561).SafeAreaPaddingView, obj13);
+  obj13[1] = memo2(tenureBadgeHideable(4929).Button, obj14);
+  obj12[5] = memo2(tenureBadgeHideable(5562).SafeAreaPaddingView, obj13);
   obj10[4] = memo2(tmp44, obj12);
-  obj10[5] = memo2(tenureBadgeHideable(5632).BottomSheetScrollView, { ref: animatedRef, contentContainerStyle: { paddingBottom: sum }, children: tmp41Result });
-  return memo2(tenureBadgeHideable(5630).BottomSheet, obj10);
+  obj10[5] = memo2(tenureBadgeHideable(5633).BottomSheetScrollView, { ref: animatedRef, contentContainerStyle: { paddingBottom: sum }, children: tmp41Result });
+  return memo2(tenureBadgeHideable(5631).BottomSheet, obj10);
 };

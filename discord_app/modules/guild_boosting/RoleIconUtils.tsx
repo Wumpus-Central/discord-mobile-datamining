@@ -1,6 +1,6 @@
-// === Module 5986: getRoleIconData ===
+// === Module 5987: getRoleIconData ===
 
-// Module 5986 (getRoleIconData)
+// Module 5987 (getRoleIconData)
 import getAvatarURL from "getAvatarURL" /* 1430 */;
 import handleImageLoad from "handleImageLoad" /* 1464 */;
 import parseRawEmojiObjectDefault from "parseRawEmojiObject" /* 4134 */;

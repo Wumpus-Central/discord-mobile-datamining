@@ -1,6 +1,6 @@
-// === Module 17276: _requestAgeSignalChallenge ===
+// === Module 17296: _requestAgeSignalChallenge ===
 
-// Module 17276 (_requestAgeSignalChallenge)
+// Module 17296 (_requestAgeSignalChallenge)
 import closure_2 from "asyncGeneratorStep" /* 5 */;
 import { Endpoints } from "ME" /* 673 */;
 

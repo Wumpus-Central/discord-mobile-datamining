@@ -1,11 +1,11 @@
-// === Module 14734: FamilyCenterActivityGiftRow ===
+// === Module 14749: FamilyCenterActivityGiftRow ===
 
-// Module 14734 (FamilyCenterActivityGiftRow)
+// Module 14749 (FamilyCenterActivityGiftRow)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 709 */;
-import useCollectiblesDataDefault from "useCollectiblesData" /* 8090 */;
-import useSelectedTeenUser from "useSelectedTeenUser" /* 14722 */;
-import getCollectibleTypeName from "getCollectibleTypeName" /* 14731 */;
+import useCollectiblesDataDefault from "useCollectiblesData" /* 8093 */;
+import useSelectedTeenUser from "useSelectedTeenUser" /* 14737 */;
+import getCollectibleTypeName from "getCollectibleTypeName" /* 14746 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
@@ -57,10 +57,10 @@ export default function FamilyCenterActivityGiftRow(arg0) {
     obj[4] = claimedAt;
     obj = { style: null, children: null };
     obj[0] = tmp.container;
-    const giftSubtext = tmp5(14733).getGiftSubtext(obj);
+    const giftSubtext = tmp5(14748).getGiftSubtext(obj);
     obj1 = { displayName: null, product: null, isSubscription: null, subscriptionPlanId: null };
     obj1[0] = displayName;
-    tmp2Result = tmp2(14732);
+    tmp2Result = tmp2(14747);
     if (product == null) {
       product = null;
     }

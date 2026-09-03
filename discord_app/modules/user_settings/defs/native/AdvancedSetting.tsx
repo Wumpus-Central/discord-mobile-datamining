@@ -1,11 +1,11 @@
-// === Module 15355: route ===
+// === Module 15369: route ===
 
-// Module 15355 (route)
+// Module 15369 (route)
 import set from "set" /* 2 */;
 import ME from "ME" /* 673 */;
 import getSystemLocale from "getSystemLocale" /* 1233 */;
-import SettingsIcon from "SettingsIcon" /* 6249 */;
-import createToggle from "createToggle" /* 11288 */;
+import SettingsIcon from "SettingsIcon" /* 6250 */;
+import createToggle from "createToggle" /* 11292 */;
 
 obj = {
   useTitle() {
@@ -19,7 +19,7 @@ obj = {
 obj = {
   route: ME.UserSettingsSections.ADVANCED,
   getComponent() {
-    return require(15356).default;
+    return require(15370).default;
   }
 };
 const route = createToggle.createRoute(obj);

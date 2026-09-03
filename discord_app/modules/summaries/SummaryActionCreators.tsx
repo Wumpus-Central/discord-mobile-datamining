@@ -1,13 +1,13 @@
-// === Module 11201: fetchSummary ===
+// === Module 11205: fetchSummary ===
 
-// Module 11201 (fetchSummary)
+// Module 11205 (fetchSummary)
 import setDefault from "set" /* 684 */;
 import dispatcherDefault from "dispatcher" /* 706 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "noop" /* 19 */;
-import closure_5 from "_handleConnectionOpen" /* 5229 */;
+import closure_5 from "_handleConnectionOpen" /* 5230 */;
 import closure_6 from "ensureGuildLoaded" /* 1386 */;
-import closure_7 from "handleQuickSwitcherUpdate" /* 11202 */;
+import closure_7 from "handleQuickSwitcherUpdate" /* 11206 */;
 import { Routes } from "ME" /* 673 */;
 
 const require = arg1;

@@ -1,27 +1,27 @@
-// === Module 16792: renderItemJSX ===
+// === Module 16812: renderItemJSX ===
 
-// Module 16792 (renderItemJSX)
+// Module 16812 (renderItemJSX)
 import ThemesDefault from "Themes" /* 709 */;
 import getSystemLocale from "getSystemLocale" /* 1233 */;
-import GuildIconSizesDefault from "GuildIconSizes" /* 6012 */;
-import sortByMatchScore from "sortByMatchScore" /* 9946 */;
-import renderCategoryItem from "renderCategoryItem" /* 15926 */;
-import getLayoutStyleDefault from "getLayoutStyle" /* 16793 */;
-import itemsDefault from "items" /* 16794 */;
-import renderChannelWrapperDefault from "renderChannelWrapper" /* 16795 */;
-import _modDef16797 from "module_16797" /* 16797 */;
-import ChannelContentDefault from "ChannelContent" /* 16798 */;
-import renderChannelBadgeDefault from "renderChannelBadge" /* 16800 */;
-import _modDef16801 from "module_16801" /* 16801 */;
-import _modDef16807 from "module_16807" /* 16807 */;
-import handleVoiceOrStageChannelConnectPressDefault from "handleVoiceOrStageChannelConnectPress" /* 16808 */;
-import userDefault from "user" /* 16810 */;
+import GuildIconSizesDefault from "GuildIconSizes" /* 6013 */;
+import sortByMatchScore from "sortByMatchScore" /* 9950 */;
+import renderCategoryItem from "renderCategoryItem" /* 15942 */;
+import getLayoutStyleDefault from "getLayoutStyle" /* 16813 */;
+import itemsDefault from "items" /* 16814 */;
+import renderChannelWrapperDefault from "renderChannelWrapper" /* 16815 */;
+import _modDef16817 from "module_16817" /* 16817 */;
+import ChannelContentDefault from "ChannelContent" /* 16818 */;
+import renderChannelBadgeDefault from "renderChannelBadge" /* 16820 */;
+import _modDef16821 from "module_16821" /* 16821 */;
+import _modDef16827 from "module_16827" /* 16827 */;
+import handleVoiceOrStageChannelConnectPressDefault from "handleVoiceOrStageChannelConnectPress" /* 16828 */;
+import userDefault from "user" /* 16830 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_5 from "_getSystemLocale" /* 1995 */;
-import closure_6 from "updateGuildUnreadSentinel" /* 7390 */;
+import closure_6 from "updateGuildUnreadSentinel" /* 7391 */;
 import closure_7 from "createGuildRecordFromRust" /* 1908 */;
-import { UnreadSetting } from "ReadStateTypes" /* 4702 */;
+import { UnreadSetting } from "ReadStateTypes" /* 4703 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -36,26 +36,26 @@ function renderItemJSX(result) {
       let obj = { guild: null };
       obj[0] = result.record;
       return callback(closure_14, obj);
-    } else if (tmp13(9946).AutocompleterResultTypes.TEXT_CHANNEL === type) {
+    } else if (tmp13(9950).AutocompleterResultTypes.TEXT_CHANNEL === type) {
       obj = { channel: null, navigationReplace: true, showGuildBadgeIcon: true };
       obj[0] = result.record;
-      return callback(_modDef16801, obj);
-    } else if (tmp13(9946).AutocompleterResultTypes.GROUP_DM === type) {
+      return callback(_modDef16821, obj);
+    } else if (tmp13(9950).AutocompleterResultTypes.GROUP_DM === type) {
       obj1 = { channel: null, navigationReplace: true };
       obj1[0] = result.record;
-      return callback(_modDef16807, obj1);
-    } else if (tmp13(9946).AutocompleterResultTypes.VOICE_CHANNEL === type) {
+      return callback(_modDef16827, obj1);
+    } else if (tmp13(9950).AutocompleterResultTypes.VOICE_CHANNEL === type) {
       const obj2 = { channel: null };
       obj2[0] = result.record;
       return callback(handleVoiceOrStageChannelConnectPressDefault, obj2);
-    } else if (tmp13(9946).AutocompleterResultTypes.USER === type) {
+    } else if (tmp13(9950).AutocompleterResultTypes.USER === type) {
       ({ record: obj4[0], comparator: obj4[1] } = result);
       return callback(userDefault, { user: null, comparator: null });
-    } else if (tmp13(9946).AutocompleterResultTypes.HEADER === type) {
+    } else if (tmp13(9950).AutocompleterResultTypes.HEADER === type) {
       const obj4 = { name: null, styles: null };
       obj4[0] = result.record.text;
       obj4[1] = tmp;
-      return tmp13(15926).renderCategoryItem(obj4);
+      return tmp13(15942).renderCategoryItem(obj4);
     } else {
       obj = { variant: "text-sm/semibold", children: null };
       obj[1] = result.type;
@@ -92,7 +92,7 @@ let closure_14 = importAllResult.memo((guild) => {
   const items1 = [closure_6];
   const stateFromStoresObject = obj.useStateFromStoresObject(items1, () => ({ unread: closure_1_6.hasUnread(guild.id), mentionCount: closure_1_6.getMentionCount(guild.id), isMentionLowImportance: closure_1_6.getIsMentionLowImportance(guild.id) }));
   ({ unread, mentionCount, isMentionLowImportance } = stateFromStoresObject);
-  obj1 = guild(4935);
+  obj1 = guild(4936);
   const fontScale = obj1.useFontScale();
   let obj2 = guild(586);
   const items2 = [closure_5];
@@ -102,7 +102,7 @@ let closure_14 = importAllResult.memo((guild) => {
   obj = { children: null };
   const tmp7 = itemsDefault;
   obj1 = { unread, resolvedUnreadSetting: UnreadSetting.ALL_MESSAGES };
-  const items4 = [callback(_modDef16797, obj1), , ];
+  const items4 = [callback(_modDef16817, obj1), , ];
   obj2 = { size: tmp2.icon.guildIconSize, guild, style: items5 };
   items5 = [tmp.guildIcon, tmp2.icon.margin];
   items4[1] = callback(GuildIconSizesDefault, obj2);
@@ -112,7 +112,7 @@ let closure_14 = importAllResult.memo((guild) => {
   items4[2] = ChannelContentDefault(obj3);
   obj[0] = items4;
   obj[3] = tmp8(callback2(closure_10, obj), { fontScale });
-  return tmp7(callback(guild(5076).PressableHighlight, obj));
+  return tmp7(callback(guild(5077).PressableHighlight, obj));
 });
 let closure_16 = importAllResult.memo((arg0) => {
   ({ name, onPress, note } = arg0);

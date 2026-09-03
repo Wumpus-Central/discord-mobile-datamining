@@ -1,6 +1,6 @@
-// === Module 7841: closeConversationsAndJumpToMessage ===
+// === Module 7844: closeConversationsAndJumpToMessage ===
 
-// Module 7841 (closeConversationsAndJumpToMessage)
+// Module 7844 (closeConversationsAndJumpToMessage)
 import set from "set" /* 2 */;
 import getRootNavigationRef from "getRootNavigationRef" /* 4333 */;
 import transitionToChannel from "transitionToChannel" /* 4489 */;

@@ -1,8 +1,8 @@
-// === Module 8510: isTestModeForApplication ===
+// === Module 8514: isTestModeForApplication ===
 
-// Module 8510 (isTestModeForApplication)
-import closure_2 from "initialize" /* 8511 */;
-import closure_3 from "reset" /* 8512 */;
+// Module 8514 (isTestModeForApplication)
+import closure_2 from "initialize" /* 8515 */;
+import closure_3 from "reset" /* 8516 */;
 
 const require = arg1;
 let result = require("set").fileFinishedImporting("modules/game_store/TestModeUtils.tsx");

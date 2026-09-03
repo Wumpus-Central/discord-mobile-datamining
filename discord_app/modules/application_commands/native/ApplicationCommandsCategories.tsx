@@ -1,12 +1,12 @@
-// === Module 12191: ApplicationCommandsCategories ===
+// === Module 12198: ApplicationCommandsCategories ===
 
-// Module 12191 (ApplicationCommandsCategories)
+// Module 12198 (ApplicationCommandsCategories)
 import ThemesDefault from "Themes" /* 709 */;
-import preloadDefault from "preload" /* 5501 */;
+import preloadDefault from "preload" /* 5502 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_6 from "trackCommunicationDisabled" /* 1991 */;
-import ICON_SIZE from "ICON_SIZE" /* 12188 */;
+import ICON_SIZE from "ICON_SIZE" /* 12195 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -73,7 +73,7 @@ let closure_10 = importAllResult.memo((section) => {
   obj[2] = formatToPlainStringResult;
   const items2 = [tmp.item, active ? tmp.activeItem : tmp.fadedItem];
   obj[3] = <stateFromStores style={items2}>{tmp6}</stateFromStores>;
-  return jsx(section(5076).PressableOpacity, {
+  return jsx(section(5077).PressableOpacity, {
     onPress() {
       return callback(closure_2);
     },

@@ -1,19 +1,19 @@
-// === Module 16105: getDropIndex ===
+// === Module 16121: getDropIndex ===
 
-// Module 16105 (getDropIndex)
+// Module 16121 (getDropIndex)
 import _modDef1205 from "module_1205" /* 1205 */;
 import getSystemLocale from "getSystemLocale" /* 1233 */;
 import AccessibilityAnnouncer3 from "AccessibilityAnnouncer" /* 1362 */;
 import HapticFeedbackTypes from "HapticFeedbackTypes" /* 4446 */;
-import renderDefaultEmpty from "renderDefaultEmpty" /* 7804 */;
+import renderDefaultEmpty from "renderDefaultEmpty" /* 7807 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "noop" /* 19 */;
 import { Dimensions } from "get ActivityIndicator" /* 17 */;
 import closure_6 from "createGuildRecordFromRust" /* 1908 */;
-import closure_7 from "insertUnsortedGuilds" /* 5389 */;
-import { GuildsNodeType } from "insertUnsortedGuilds" /* 5389 */;
-import importDefaultResult from "withEqualityFn" /* 16106 */;
-import GUILD_ITEM_SIZE from "GUILD_ITEM_SIZE" /* 16107 */;
+import closure_7 from "insertUnsortedGuilds" /* 5390 */;
+import { GuildsNodeType } from "insertUnsortedGuilds" /* 5390 */;
+import importDefaultResult from "withEqualityFn" /* 16122 */;
+import GUILD_ITEM_SIZE from "GUILD_ITEM_SIZE" /* 16123 */;
 import module_4217 from "module_4217" /* 4217 */;
 import apply from "apply" /* 12 */;
 import importDefaultResult1 from "debounce" /* 633 */;
@@ -270,7 +270,7 @@ function getItemAndNodeFromTouchEvent(arg0, arg1, current) {
         if (null != GUILDS) {
           const type = item.type;
           if (renderDefaultEmpty.FastListItemTypes.SECTION !== type) {
-            if (tmp10(7804).FastListItemTypes.ITEM === type) {
+            if (tmp10(7807).FastListItemTypes.ITEM === type) {
               if (GUILDS.type !== GuildsNodeType.ROOT) {
                 let tmp13 = GUILDS;
                 if (GUILDS.type !== tmp12.FOLDER) {
@@ -634,7 +634,7 @@ export default function useGuildsBarGesture() {
         const close = menu.requestClose(-1 === activeIndex.get());
       }
     }
-    state.setStateShallow({ dragSpecs: "disabled", overSpecs: "Date" });
+    state.setStateShallow({ dragSpecs: "Array", overSpecs: "PX_16" });
     const value = gestureState.get();
     if (null != value.mode) {
       const obj5 = {};
@@ -759,7 +759,7 @@ export default function useGuildsBarGesture() {
             }
           }
         }
-        const obj5 = { dragSpecs: null, overSpecs: "Array", windowSize: true };
+        const obj5 = { dragSpecs: null, overSpecs: "Array", windowSize: 102039555 };
         obj5[0] = obj;
         obj5[2] = sum;
         setStateShallow(obj5);

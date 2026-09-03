@@ -1,19 +1,19 @@
-// === Module 9734: RemoveIcon ===
+// === Module 9738: RemoveIcon ===
 
-// Module 9734 (RemoveIcon)
+// Module 9738 (RemoveIcon)
 import noopAll from "noop" /* 19 */;
 import Button from "Button" /* 1296 */;
 import useCheckboxA11yNative from "useCheckboxA11yNative" /* 4205 */;
 import Text from "Text" /* 4474 */;
-import TableRowInner from "TableRowInner" /* 5607 */;
-import FormCheckbox from "FormCheckbox" /* 7693 */;
-import getRoleRowDataAll from "getRoleRowData" /* 9721 */;
-import ShieldUserIcon from "ShieldUserIcon" /* 9735 */;
-import registerAssetDefault from "registerAsset" /* 9736 */;
-import registerAssetDefault2 from "registerAsset" /* 9737 */;
+import TableRowInner from "TableRowInner" /* 5608 */;
+import FormCheckbox from "FormCheckbox" /* 7696 */;
+import getRoleRowDataAll from "getRoleRowData" /* 9725 */;
+import ShieldUserIcon from "ShieldUserIcon" /* 9739 */;
+import registerAssetDefault from "registerAsset" /* 9740 */;
+import registerAssetDefault2 from "registerAsset" /* 9741 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_5 from "mergeGuildAvatar" /* 1921 */;
-import { RowType } from "RowType" /* 8687 */;
+import { RowType } from "RowType" /* 8691 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -61,8 +61,8 @@ function RemoveIcon(item) {
     }
     obj = { style: null };
     obj[0] = prop;
-    obj[4] = closure_7(item(6234).CircleXIcon, obj);
-    tmp3Result = tmp3(item(5076).PressableOpacity, obj);
+    obj[4] = closure_7(item(6235).CircleXIcon, obj);
+    tmp3Result = tmp3(item(5077).PressableOpacity, obj);
   }
   return tmp3Result;
 }

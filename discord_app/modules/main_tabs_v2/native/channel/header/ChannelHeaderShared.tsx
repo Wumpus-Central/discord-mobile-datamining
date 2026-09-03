@@ -1,17 +1,17 @@
-// === Module 13155: TitleWrapper ===
+// === Module 13167: TitleWrapper ===
 
-// Module 13155 (TitleWrapper)
+// Module 13167 (TitleWrapper)
 import ThemesDefault from "Themes" /* 709 */;
 import getSystemLocale from "getSystemLocale" /* 1233 */;
 import Button from "Button" /* 1296 */;
 import map from "map" /* 4197 */;
 import Text from "Text" /* 4474 */;
 import computeChannelName from "computeChannelName" /* 4674 */;
-import getChannelIcon from "getChannelIcon" /* 4981 */;
-import AVERAGE_FONT_WIDTH_RATIODefault from "AVERAGE_FONT_WIDTH_RATIO" /* 8937 */;
-import FacepileGroupDMAvatarDefault from "FacepileGroupDMAvatar" /* 10869 */;
-import registerAssetDefault from "registerAsset" /* 13156 */;
-import _modDef13157 from "module_13157" /* 13157 */;
+import getChannelIcon from "getChannelIcon" /* 4982 */;
+import AVERAGE_FONT_WIDTH_RATIODefault from "AVERAGE_FONT_WIDTH_RATIO" /* 8941 */;
+import FacepileGroupDMAvatarDefault from "FacepileGroupDMAvatar" /* 10873 */;
+import registerAssetDefault from "registerAsset" /* 13168 */;
+import _modDef13169 from "module_13169" /* 13169 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
@@ -49,7 +49,7 @@ function TitleWrapper(headerAccessibilityLabel) {
     obj[5] = tmp5;
     obj[6] = tmp.wrapper;
     obj[7] = children;
-    tmp6Result = callback2(titleContentHeight(5076).PressableOpacity, obj);
+    tmp6Result = callback2(titleContentHeight(5077).PressableOpacity, obj);
     const tmp6 = callback2;
   }
   return tmp6Result;
@@ -165,7 +165,7 @@ function MemberCountText(arg0) {
   }
   obj[1] = memberCount;
   obj[3] = leadingAccessoryWidth;
-  const children = [closure_8(_modDef13157, obj), ];
+  const children = [closure_8(_modDef13169, obj), ];
   let tmp4Result = null;
   if (withSeparator) {
     tmp4Result = tmp4(Text.Text, { variant: "text-sm/normal", color: "text-subtle", children: "\u2022" });

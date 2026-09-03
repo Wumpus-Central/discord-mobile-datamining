@@ -1,6 +1,6 @@
-// === Module 15960: useFavoritesGuildAutoAddedThreadsAction ===
+// === Module 15976: useFavoritesGuildAutoAddedThreadsAction ===
 
-// Module 15960 (useFavoritesGuildAutoAddedThreadsAction)
+// Module 15976 (useFavoritesGuildAutoAddedThreadsAction)
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "mergeGuildAvatar" /* 1921 */;
 import closure_5 from "initializeFromUserSettings" /* 1389 */;
@@ -9,7 +9,7 @@ const require = arg1;
 let result = require("set").fileFinishedImporting("modules/favorites/hooks/useFavoritesGuildAutoAddedThreadsAction.tsx");
 
 export default function useFavoritesGuildAutoAddedThreadsAction() {
-  let obj = hasAccess(10329);
+  let obj = hasAccess(10333);
   hasAccess = obj.useFavoritesAccess("useFavoritesGuildAutoAddedThreadsAction").hasAccess;
   const items = [closure_4];
   if (hasAccess) {

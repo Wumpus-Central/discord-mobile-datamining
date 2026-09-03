@@ -1,22 +1,22 @@
-// === Module 5465: showTooManyUserGuildsAlert ===
+// === Module 5466: showTooManyUserGuildsAlert ===
 
-// Module 5465 (showTooManyUserGuildsAlert)
+// Module 5466 (showTooManyUserGuildsAlert)
 import encodeProperties from "encodeProperties" /* 500 */;
 import sendRequest from "sendRequest" /* 527 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 695 */;
 import dispatcherDefault from "dispatcher" /* 706 */;
 import transitionTo from "transitionTo" /* 1219 */;
 import getSystemLocale from "getSystemLocale" /* 1233 */;
-import _modDef4713 from "module_4713" /* 4713 */;
-import shouldShowAgeGateForVoiceChannel from "shouldShowAgeGateForVoiceChannel" /* 4731 */;
-import setDefault from "set" /* 4857 */;
-import stopLurkingAll from "stopLurkingAll" /* 6174 */;
-import getPreviousSafeRouteForNsfwReturnDefault from "getPreviousSafeRouteForNsfwReturn" /* 6180 */;
+import _modDef4714 from "module_4714" /* 4714 */;
+import shouldShowAgeGateForVoiceChannel from "shouldShowAgeGateForVoiceChannel" /* 4732 */;
+import setDefault from "set" /* 4858 */;
+import stopLurkingAll from "stopLurkingAll" /* 6175 */;
+import getPreviousSafeRouteForNsfwReturnDefault from "getPreviousSafeRouteForNsfwReturn" /* 6181 */;
 import closure_5 from "_objectWithoutProperties" /* 109 */;
 import closure_6 from "asyncGeneratorStep" /* 5 */;
-import closure_7 from "set" /* 5466 */;
+import closure_7 from "set" /* 5467 */;
 import closure_8 from "fetchFingerprint" /* 1215 */;
-import closure_9 from "set" /* 5390 */;
+import closure_9 from "set" /* 5391 */;
 import closure_10 from "comparator" /* 1981 */;
 import closure_11 from "createGuildRecordFromRust" /* 1908 */;
 import closure_12 from "handleConnectionOpen" /* 1980 */;
@@ -626,7 +626,7 @@ export default {
   },
   setCommunicationDisabledUntil(moderator_report_id) {
     ({ guildId, userId, communicationDisabledUntilTimestamp, duration, reason, location: _location } = moderator_report_id);
-    let obj = _modDef4713;
+    let obj = _modDef4714;
     obj = { url: closure_16.GUILD_MEMBER(guildId, userId), reason, body: { communication_disabled_until: communicationDisabledUntilTimestamp, moderator_report_id: moderator_report_id.moderatorReportId }, oldFormErrors: true, trackedActionData: null, rejectWithError: null };
     obj = { event: encodeProperties.NetworkActionNames.USER_COMMUNICATION_DISABLED_UPDATE, properties: null };
     obj1 = { guild_id: guildId, target_user_id: userId, duration: null, reason: null, communication_disabled_until: null, location: null };
@@ -963,7 +963,7 @@ export default {
       const obj5 = closure_1_0(527);
       obj1[3] = obj5.rejectWithMigratedError();
       closure_0 = yield HTTP.patch(obj1);
-      const obj = closure_1_1(6176);
+      const obj = closure_1_1(6177);
       const result = obj.checkGuildTemplateDirty(closure_0);
       return closure_0;
     })();
@@ -995,7 +995,7 @@ export default {
       obj1[1] = closure_1_1;
       obj1[3] = closure_1_0(527).rejectWithMigratedError();
       closure_0 = yield HTTP.patch(obj1);
-      const obj = closure_1_1(6176);
+      const obj = closure_1_1(6177);
       const result = obj.checkGuildTemplateDirty(closure_0);
       return closure_0;
     })();
@@ -1012,7 +1012,7 @@ export default {
       obj1[1] = closure_1_1;
       obj1[3] = closure_1_0(527).rejectWithMigratedError();
       closure_0 = yield HTTP.patch(obj1);
-      const obj = closure_1_1(6176);
+      const obj = closure_1_1(6177);
       const result = obj.checkGuildTemplateDirty(closure_0);
       return closure_0;
     })();
@@ -1144,7 +1144,7 @@ export default {
         const defaultChannel = store.getDefaultChannel(guildId);
         if (null != defaultChannel) {
           if (!obj3.isChannelContentGated(defaultChannel)) {
-            let tmp11Result = tmp11(6182);
+            let tmp11Result = tmp11(6183);
             if (!tmp11Result.isChannelSpoilerGated(defaultChannel)) {
               tmp11Result = tmp11(1219);
               tmp11Result.transitionTo(closure_21.CHANNEL(guildId, defaultChannel.id));

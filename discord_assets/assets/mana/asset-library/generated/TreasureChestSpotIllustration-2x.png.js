@@ -1,6 +1,6 @@
-// === Module 7111: metadata ===
+// === Module 7112: metadata ===
 
-// Module 7111 (metadata)
+// Module 7112 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/TreasureChestSpotIllustration-2x.png.js");

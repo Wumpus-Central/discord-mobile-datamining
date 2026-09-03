@@ -1,6 +1,6 @@
-// === Module 15797: RegistrationBailoutButton ===
+// === Module 15813: RegistrationBailoutButton ===
 
-// Module 15797 (RegistrationBailoutButton)
+// Module 15813 (RegistrationBailoutButton)
 import noopAll from "noop" /* 19 */;
 import getSystemLocale from "getSystemLocale" /* 1233 */;
 import Button from "Button" /* 1296 */;

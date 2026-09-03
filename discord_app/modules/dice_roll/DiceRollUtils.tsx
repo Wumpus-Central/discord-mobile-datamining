@@ -1,6 +1,6 @@
-// === Module 12176: getBarText ===
+// === Module 12182: getBarText ===
 
-// Module 12176 (getBarText)
+// Module 12182 (getBarText)
 import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1233 */;
 

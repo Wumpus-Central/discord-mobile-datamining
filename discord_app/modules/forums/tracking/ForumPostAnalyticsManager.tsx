@@ -1,8 +1,8 @@
-// === Module 7527: handleThreadCreate ===
+// === Module 7528: handleThreadCreate ===
 
-// Module 7527 (handleThreadCreate)
-import initializeDefault from "initialize" /* 5494 */;
-import closure_3 from "handleThreadCreateOrUpdate" /* 5457 */;
+// Module 7528 (handleThreadCreate)
+import initializeDefault from "initialize" /* 5495 */;
+import closure_3 from "handleThreadCreateOrUpdate" /* 5458 */;
 import closure_4 from "fetchFingerprint" /* 1215 */;
 import closure_5 from "ensureGuildLoaded" /* 1386 */;
 

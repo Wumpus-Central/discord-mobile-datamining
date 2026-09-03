@@ -1,6 +1,6 @@
-// === Module 16056: useEnsureSyncedChannelVoiceStates ===
+// === Module 16072: useEnsureSyncedChannelVoiceStates ===
 
-// Module 16056 (useEnsureSyncedChannelVoiceStates)
+// Module 16072 (useEnsureSyncedChannelVoiceStates)
 import closure_2 from "_slicedToArray" /* 32 */;
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "getParticipants" /* 4494 */;
@@ -8,7 +8,7 @@ import closure_5 from "isVoiceMuted" /* 4498 */;
 import closure_6 from "fetchFingerprint" /* 1215 */;
 import closure_7 from "ensureGuildLoaded" /* 1386 */;
 import closure_8 from "trackCommunicationDisabled" /* 1991 */;
-import closure_9 from "retryFailedUsers" /* 13632 */;
+import closure_9 from "retryFailedUsers" /* 13647 */;
 import closure_10 from "createRTCConnection" /* 4554 */;
 import closure_11 from "mergeGuildAvatar" /* 1921 */;
 import closure_12 from "updateVoiceState" /* 4497 */;

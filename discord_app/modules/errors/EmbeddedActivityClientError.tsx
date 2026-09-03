@@ -1,6 +1,6 @@
-// === Module 9488: prototype ===
+// === Module 9492: prototype ===
 
-// Module 9488 (prototype)
+// Module 9492 (prototype)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/errors/EmbeddedActivityClientError.tsx");

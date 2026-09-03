@@ -1,6 +1,6 @@
-// === Module 15853: MESSAGES_ITEM_CHANNEL_PRESSABLE_PADDING ===
+// === Module 15869: MESSAGES_ITEM_CHANNEL_PRESSABLE_PADDING ===
 
-// Module 15853 (MESSAGES_ITEM_CHANNEL_PRESSABLE_PADDING)
+// Module 15869 (MESSAGES_ITEM_CHANNEL_PRESSABLE_PADDING)
 import ThemesDefault from "Themes" /* 709 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
@@ -8,7 +8,7 @@ import closure_5 from "sortActivity" /* 4569 */;
 import closure_6 from "generateOldThreadCutoff" /* 4493 */;
 import closure_7 from "markAllUserIdListsStale" /* 4130 */;
 import closure_8 from "handleConnectionOpen" /* 1980 */;
-import closure_9 from "updateUserGuildSettingsInternal" /* 4701 */;
+import closure_9 from "updateUserGuildSettingsInternal" /* 4702 */;
 import closure_10 from "mergeGuildAvatar" /* 1921 */;
 import { ActivityTypes } from "ME" /* 673 */;
 import jsxProd from "jsxProd" /* 21 */;
@@ -75,7 +75,7 @@ const memoResult = importAllResult.memo(function MessagesItemChannelBase(channel
       obj[0] = store.getStatus(obj.getRecipientId());
       obj[1] = activities;
     } else {
-      obj = { status: "disabled", activities: "Date" };
+      obj = { status: "Array", activities: "PX_16" };
     }
     return obj;
   });

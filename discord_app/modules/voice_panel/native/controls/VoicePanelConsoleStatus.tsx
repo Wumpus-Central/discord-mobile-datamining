@@ -1,10 +1,10 @@
-// === Module 16995: VoicePanelConsoleStatus ===
+// === Module 17015: VoicePanelConsoleStatus ===
 
-// Module 16995 (VoicePanelConsoleStatus)
+// Module 17015 (VoicePanelConsoleStatus)
 import ThemesDefault from "Themes" /* 709 */;
 import closure_3 from "noop" /* 19 */;
-import { EDGE_GUTTER } from "CARD_SIZE" /* 12066 */;
-import { CONTROLS_HEIGHT } from "VoicePanelControlsModes" /* 12061 */;
+import { EDGE_GUTTER } from "CARD_SIZE" /* 12072 */;
+import { CONTROLS_HEIGHT } from "VoicePanelControlsModes" /* 12067 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 

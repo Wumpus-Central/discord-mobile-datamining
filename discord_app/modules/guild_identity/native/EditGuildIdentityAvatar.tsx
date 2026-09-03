@@ -1,6 +1,6 @@
-// === Module 14530: EditGuildIdentityAvatar ===
+// === Module 14546: EditGuildIdentityAvatar ===
 
-// Module 14530 (EditGuildIdentityAvatar)
+// Module 14546 (EditGuildIdentityAvatar)
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "trackCommunicationDisabled" /* 1991 */;
 import closure_5 from "mergeGuildAvatar" /* 1921 */;

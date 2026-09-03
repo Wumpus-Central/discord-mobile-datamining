@@ -1,19 +1,19 @@
-// === Module 8778: HeaderView ===
+// === Module 8782: HeaderView ===
 
-// Module 8778 (HeaderView)
+// Module 8782 (HeaderView)
 import ThemesDefault from "Themes" /* 709 */;
 import hexToRgba from "hexToRgba" /* 4326 */;
 import CircleInformationIcon from "CircleInformationIcon" /* 4433 */;
 import Text from "Text" /* 4474 */;
-import ArrowDefault from "Arrow" /* 8780 */;
+import ArrowDefault from "Arrow" /* 8784 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_8 from "getUserAgnosticState" /* 4477 */;
 import closure_9 from "ensureGuildLoaded" /* 1386 */;
 import closure_10 from "getUncachedChannelPermissions" /* 4120 */;
-import { REMEDIATION_ELEMENT_TYPES } from "REMEDIATION_ELEMENT_TYPES" /* 8779 */;
-import { IN_APP_REPORTS_NODE } from "IN_APP_REPORTS_NODE" /* 8777 */;
+import { REMEDIATION_ELEMENT_TYPES } from "REMEDIATION_ELEMENT_TYPES" /* 8783 */;
+import { IN_APP_REPORTS_NODE } from "IN_APP_REPORTS_NODE" /* 8781 */;
 import ME from "ME" /* 673 */;
 import { Permissions } from "sum" /* 502 */;
 import jsxProd from "jsxProd" /* 21 */;
@@ -116,7 +116,7 @@ function ChildItem(child) {
   const items2 = [closure_17(closure_6, obj1), callback2(ArrowDefault, {})];
   obj[1] = items2;
   obj[3] = closure_17(closure_6, obj);
-  return callback2(child(5076).PressableHighlight, obj);
+  return callback2(child(5077).PressableHighlight, obj);
 }
 function ChildrenView(node) {
   const children = node.node.children;

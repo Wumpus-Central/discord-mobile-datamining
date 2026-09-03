@@ -1,13 +1,12 @@
-// === Module 11689: ? ===
+// === Module 11685: ? ===
 
-// Module 11689
+// Module 11685
 import dispatcherDefault from "dispatcher" /* 706 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2008 */;
 import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4445 */;
-import _modDef4723 from "module_4723" /* 4723 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import SafetyHubView from "SafetyHubView" /* 8705 */;
-import { AGE_VERIFICATION_GET_STARTED_MODAL_KEY as closure_6 } from "set" /* 8698 */;
+import SafetyHubView from "SafetyHubView" /* 8709 */;
+import { AGE_VERIFICATION_GET_STARTED_MODAL_KEY as closure_6 } from "set" /* 8702 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;
@@ -17,21 +16,56 @@ let obj = {
     obj = dispatcherDefault;
     obj.dispatch({ type: "SAFETY_HUB_AUTOMATED_UNDERAGE_APPEAL_MODAL_OPEN" });
     obj = { classificationId, onClose };
-    ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(11690, dependencyMap.paths), closure_4, obj);
+    ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(11686, dependencyMap.paths), closure_4, obj);
   },
   openV2(arg0, onClose) {
-    closure_0 = arg0;
+    const _require = arg0;
     importDefault = onClose;
     obj = dispatcherDefault;
     obj.dispatch({ type: "SAFETY_HUB_AUTOMATED_UNDERAGE_APPEAL_MODAL_OPEN" });
+    if (obj2.isCurrentUserSuspended()) {
+      if (tmp4Result.isExpressiveModalV2Enabled(tmp4(8703).AgeVerificationModalEntryPoint.AUTOMATED_UNDERAGE_APPEALS)) {
+        const _Math = Math;
+        const _Date = Date;
+        dependencyMap = Math.floor(Date.now() / 1000);
+        let tmpResult = tmp(4724);
+        obj = { onClose: null };
+        obj[0] = onClose;
+        tmpResult.pushLazy(callback(function*() {
+          closure_0 = tmp2;
+          yield closure_1_0(paths[8])(paths[13], paths.paths);
+          closure_0 = arg1.default;
+          return () => closure_2_7(closure_0, {
+            entryPoint: closure_2_0(table[11]).AgeVerificationModalEntryPoint.AUTOMATED_UNDERAGE_APPEALS,
+            onClose() {
+              let tmp;
+              if (callback != null) {
+                tmp = callback();
+              }
+              return tmp;
+            },
+            onComplete() {
+              closure_0 = closure_2;
+              closure_1_0(closure_1_2[4]).resetAgeCheckStatus();
+              obj = closure_1_0(closure_1_2[4]);
+              closure_1_1(closure_1_2[5]).dispatch({ type: "SAFETY_HUB_EXPRESSIVE_MODAL_V2_VERIFICATION_SUBMITTED" });
+              const obj2 = closure_1_1(closure_1_2[5]);
+              closure_1_1(closure_1_2[5]).dispatch({ type: "SAFETY_HUB_AUTOMATED_UNDERAGE_APPEAL_START_POLL" });
+              const timerId = setTimeout(() => callback(closure_1_2[4]).checkSuspendedUserAgeVerificationV2(callback), closure_1_5);
+            }
+          });
+        }), obj, closure_6);
+      }
+    }
+    tmpResult = tmp(4724);
     obj = { onClose };
-    _modDef4723.pushLazy(callback(function*() {
+    tmpResult.pushLazy(callback(function*() {
       closure_0 = tmp2;
-      yield closure_1_0(paths[7])(paths[9], paths.paths);
+      yield closure_1_0(paths[8])(paths[14], paths.paths);
       closure_0 = arg1.default;
       return () => closure_2_7(closure_0, {
         classificationId: closure_0,
-        entryPoint: closure_2_0(table[10]).AgeVerificationModalEntryPoint.AUTOMATED_UNDERAGE_APPEALS,
+        entryPoint: closure_2_0(table[11]).AgeVerificationModalEntryPoint.AUTOMATED_UNDERAGE_APPEALS,
         isRetry: false,
         useEmbeddedMethods: true,
         onComplete() {
@@ -52,7 +86,7 @@ let obj = {
   },
   start_verification_check() {
     dispatcherDefault.dispatch({ type: "SAFETY_HUB_AUTOMATED_UNDERAGE_APPEAL_START_POLL" });
-    const timerId = setTimeout(() => callback(table[11]).checkSuspendedUserAgeVerification(), closure_5);
+    const timerId = setTimeout(() => callback(table[4]).checkSuspendedUserAgeVerification(), closure_5);
   }
 };
 let result = require("set").fileFinishedImporting("modules/safety_hub/AutomatedUnderageAppealModalActionCreators.native.tsx");

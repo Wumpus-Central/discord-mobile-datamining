@@ -1,6 +1,6 @@
-// === Module 15125: getHorizontalOrVerticalStartPoint ===
+// === Module 15140: getHorizontalOrVerticalStartPoint ===
 
-// Module 15125 (getHorizontalOrVerticalStartPoint)
+// Module 15140 (getHorizontalOrVerticalStartPoint)
 import set from "set" /* 2 */;
 
 function getHorizontalOrVerticalStartPoint(arg0, arg1, arg2) {

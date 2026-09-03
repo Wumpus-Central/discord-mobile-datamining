@@ -1,6 +1,6 @@
-// === Module 5479: waitForOnboardingCompletion ===
+// === Module 5480: waitForOnboardingCompletion ===
 
-// Module 5479 (waitForOnboardingCompletion)
+// Module 5480 (waitForOnboardingCompletion)
 import closure_3 from "trackCommunicationDisabled" /* 1991 */;
 import { GuildMemberFlags } from "GuildMemberFlags" /* 4108 */;
 

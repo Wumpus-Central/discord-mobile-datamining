@@ -1,6 +1,6 @@
-// === Module 13584: useIsDontBadgeMutedVcsEnabled ===
+// === Module 13599: useIsDontBadgeMutedVcsEnabled ===
 
-// Module 13584 (useIsDontBadgeMutedVcsEnabled)
+// Module 13599 (useIsDontBadgeMutedVcsEnabled)
 import getUnitIdDefault from "getUnitId" /* 1468 */;
 
 let closure_0 = getUnitIdDefault({ kind: "user", name: "2026-06-dont-badge-muted-vcs", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });

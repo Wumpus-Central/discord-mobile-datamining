@@ -1,6 +1,6 @@
-// === Module 16181: useGuildsBarSelectedGuildScroller ===
+// === Module 16197: useGuildsBarSelectedGuildScroller ===
 
-// Module 16181 (useGuildsBarSelectedGuildScroller)
+// Module 16197 (useGuildsBarSelectedGuildScroller)
 import closure_0 from "noop" /* 19 */;
 import closure_1 from "handleConnectionOpen" /* 4299 */;
 

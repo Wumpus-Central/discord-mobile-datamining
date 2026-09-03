@@ -1,12 +1,12 @@
-// === Module 15292: toggle ===
+// === Module 15307: toggle ===
 
-// Module 15292 (toggle)
+// Module 15307 (toggle)
 import initialize from "initialize" /* 586 */;
 import getSystemLocale from "getSystemLocale" /* 1233 */;
 import explicitContentFromProto from "explicitContentFromProto" /* 4166 */;
-import UserSettingsText from "UserSettingsText" /* 15290 */;
+import UserSettingsText from "UserSettingsText" /* 15305 */;
 import closure_2 from "CHANNEL_SIDEBAR_WIDTH" /* 1303 */;
-import createToggle from "createToggle" /* 11288 */;
+import createToggle from "createToggle" /* 11292 */;
 
 require = arg1;
 createToggle = {

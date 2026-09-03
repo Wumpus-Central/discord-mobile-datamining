@@ -1,10 +1,10 @@
-// === Module 17382: initialize ===
+// === Module 17402: initialize ===
 
-// Module 17382 (initialize)
+// Module 17402 (initialize)
 import initializeDefault from "initialize" /* 586 */;
 import setDefault from "set" /* 684 */;
 import dispatcherDefault from "dispatcher" /* 706 */;
-import closure_0 from "prototype" /* 17383 */;
+import closure_0 from "prototype" /* 17403 */;
 import closure_1 from "handleConnectionOpen" /* 4299 */;
 import importDefaultResult from "priv" /* 1400 */;
 

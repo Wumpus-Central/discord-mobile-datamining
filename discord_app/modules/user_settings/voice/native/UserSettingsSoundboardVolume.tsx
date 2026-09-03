@@ -1,10 +1,10 @@
-// === Module 10094: SoundboardVolume ===
+// === Module 10098: SoundboardVolume ===
 
-// Module 10094 (SoundboardVolume)
+// Module 10098 (SoundboardVolume)
 import noopAll from "noop" /* 19 */;
 import combinedDefault from "combined" /* 1994 */;
-import contextDefault from "context" /* 5961 */;
-import VolumeSliderDefault from "VolumeSlider" /* 10091 */;
+import contextDefault from "context" /* 5962 */;
+import VolumeSliderDefault from "VolumeSlider" /* 10095 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { HelpdeskArticles } from "ME" /* 673 */;
 import jsxProd from "jsxProd" /* 21 */;
@@ -18,7 +18,7 @@ const result = require("set").fileFinishedImporting("modules/user_settings/voice
 
 export default function SoundboardVolume() {
   const tmp = callback3();
-  let obj = analyticsLocations(6197);
+  let obj = analyticsLocations(6198);
   const amplitudinalSoundboardVolume = obj.getAmplitudinalSoundboardVolume();
   analyticsLocations = contextDefault().analyticsLocations;
   obj = { title: null, hasIcons: false, children: null };
@@ -50,6 +50,6 @@ export default function SoundboardVolume() {
   items[1] = callback(analyticsLocations(4474).Text, obj4);
   obj1[0] = items;
   obj[1] = callback2(closure_6, obj1);
-  obj[2] = callback(analyticsLocations(5607).TableRow, obj);
-  return callback(analyticsLocations(10084).UserSettingsTableRowGroup, obj);
+  obj[2] = callback(analyticsLocations(5608).TableRow, obj);
+  return callback(analyticsLocations(10088).UserSettingsTableRowGroup, obj);
 };

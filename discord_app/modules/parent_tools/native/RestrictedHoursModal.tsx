@@ -1,10 +1,10 @@
-// === Module 17108: RestrictedHoursLogoutBlockingLayer ===
+// === Module 17128: RestrictedHoursLogoutBlockingLayer ===
 
-// Module 17108 (RestrictedHoursLogoutBlockingLayer)
+// Module 17128 (RestrictedHoursLogoutBlockingLayer)
 import ThemesDefault from "Themes" /* 709 */;
-import useBackPressHandlerDefault from "useBackPressHandler" /* 4925 */;
-import ActivityIndicator from "ActivityIndicator" /* 6056 */;
-import useIsInRestrictedHoursDefault from "useIsInRestrictedHours" /* 17111 */;
+import useBackPressHandlerDefault from "useBackPressHandler" /* 4926 */;
+import ActivityIndicator from "ActivityIndicator" /* 6057 */;
+import useIsInRestrictedHoursDefault from "useIsInRestrictedHours" /* 17131 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
@@ -209,18 +209,18 @@ export default function RestrictedHoursModal() {
     if (!tmp4.current) {
       tmp.current = true;
       callback(true);
-      const obj = tmp4(6060);
-      tmp4(6060).logout("restricted_hours").finally(() => {
+      const obj = tmp4(6061);
+      tmp4(6061).logout("restricted_hours").finally(() => {
         if (ref.current) {
           closure_1.current = false;
           callback(false);
         }
       });
-      const logoutResult = tmp4(6060).logout("restricted_hours");
+      const logoutResult = tmp4(6061).logout("restricted_hours");
     }
   }, []);
   importDefault = tmp4;
-  let obj = callback(6016);
+  let obj = callback(6017);
   const items = [callback, tmp4];
   const items1 = [tmp];
   const navigatorScreens = obj.useNavigatorScreens(() => ({
@@ -238,11 +238,11 @@ export default function RestrictedHoursModal() {
       current = tmp4.current;
     }
     if (!current) {
-      const result = callback(17107).closeRestrictedHoursModal();
-      const obj = callback(17107);
+      const result = callback(17127).closeRestrictedHoursModal();
+      const obj = callback(17127);
     }
   }, items1);
   useBackPressHandlerDefault(() => true);
   obj = { screens: navigatorScreens, initialRouteName: constants.MAIN };
-  return callback2(callback(11724).Modal, obj);
+  return callback2(callback(11729).Modal, obj);
 };

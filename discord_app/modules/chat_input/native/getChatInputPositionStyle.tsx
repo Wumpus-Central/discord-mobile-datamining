@@ -1,6 +1,6 @@
-// === Module 12050: getChatInputPositionStyle ===
+// === Module 12056: getChatInputPositionStyle ===
 
-// Module 12050 (getChatInputPositionStyle)
+// Module 12056 (getChatInputPositionStyle)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import set2 from "set" /* 1234 */;

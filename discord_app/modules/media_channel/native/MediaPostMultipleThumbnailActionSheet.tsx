@@ -1,6 +1,6 @@
-// === Module 10364: MediaPostThumbnailActionSheet ===
+// === Module 10368: MediaPostThumbnailActionSheet ===
 
-// Module 10364 (MediaPostThumbnailActionSheet)
+// Module 10368 (MediaPostThumbnailActionSheet)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 709 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
@@ -63,9 +63,9 @@ export default function MediaPostThumbnailActionSheet(markAsDismissed) {
   obj6[2] = function onPress() {
     return markAsDismissed(closure_1_4.UNKNOWN);
   };
-  items2[5] = callback(markAsDismissed(4928).Button, obj6);
+  items2[5] = callback(markAsDismissed(4929).Button, obj6);
   obj[1] = items2;
-  obj[1] = callback2(markAsDismissed(5632).BottomSheetScrollView, obj);
+  obj[1] = callback2(markAsDismissed(5633).BottomSheetScrollView, obj);
   obj[2] = callback(View, obj);
-  return callback(markAsDismissed(5630).BottomSheet, obj);
+  return callback(markAsDismissed(5631).BottomSheet, obj);
 };

@@ -1,6 +1,6 @@
-// === Module 8559: useBadges ===
+// === Module 8563: useBadges ===
 
-// Module 8559 (useBadges)
+// Module 8563 (useBadges)
 import explicitContentFromProto from "explicitContentFromProto" /* 4166 */;
 import closure_2 from "initialize" /* 4323 */;
 import closure_3 from "mergeGuildAvatar" /* 1921 */;

@@ -1,6 +1,6 @@
-// === Module 6413: metadata ===
+// === Module 6414: metadata ===
 
-// Module 6413 (metadata)
+// Module 6414 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/ChestOrbSpotIllustration-2x.png.js");

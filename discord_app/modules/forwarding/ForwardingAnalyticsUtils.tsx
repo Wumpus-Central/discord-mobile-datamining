@@ -1,8 +1,8 @@
-// === Module 11487: trackForwardStart ===
+// === Module 11492: trackForwardStart ===
 
-// Module 11487 (trackForwardStart)
+// Module 11492 (trackForwardStart)
 import expandEventPropertiesDefault from "expandEventProperties" /* 695 */;
-import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata" /* 4700 */;
+import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata" /* 4701 */;
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "ensureGuildLoaded" /* 1386 */;
 import { AnalyticEvents } from "ME" /* 673 */;
@@ -36,9 +36,9 @@ export const trackForwardSent = function trackForwardSent(arg0) {
     }
     const merged = Object.assign(collectGuildAnalyticsMetadata.collectGuildAnalyticsMetadata(guild_id));
     const obj5 = collectGuildAnalyticsMetadata;
-    const merged1 = Object.assign(tmp13(4700).collectChannelAnalyticsMetadata(channel));
+    const merged1 = Object.assign(tmp13(4701).collectChannelAnalyticsMetadata(channel));
     tmpResult.track(AnalyticEvents.MESSAGE_SHORTCUT_ACTION_SENT, obj);
-    const tmp13Result = tmp13(4700);
+    const tmp13Result = tmp13(4701);
   }
 };
 export const trackForwardCopyLink = function trackForwardCopyLink(channel_id, id) {

@@ -1,14 +1,14 @@
-// === Module 17435: MemberRow ===
+// === Module 17455: MemberRow ===
 
-// Module 17435 (MemberRow)
+// Module 17455 (MemberRow)
 import ThemesDefault from "Themes" /* 709 */;
 import useCheckboxA11yNative from "useCheckboxA11yNative" /* 4205 */;
-import FormCheckbox from "FormCheckbox" /* 7693 */;
-import memoResult1Default from "memoResult1" /* 10900 */;
+import FormCheckbox from "FormCheckbox" /* 7696 */;
+import memoResult1Default from "memoResult1" /* 10904 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import { MAX_BULK_ROLE_MEMBERS_ADD } from "title" /* 17429 */;
+import { MAX_BULK_ROLE_MEMBERS_ADD } from "title" /* 17449 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -85,7 +85,7 @@ class AddMembersBody {
     tmp10 = closure_9;
     tmp11 = closure_8;
     obj2 = { placeholder: null, tags: null, onChangeText: null, onRemove: null, autoFocus: null, inActionSheet: null };
-    tmp4Result = require("module_9738");
+    tmp4Result = require("module_9742");
     intl = require("getSystemLocale").intl;
     obj2[0] = intl.string(require("getSystemLocale").t.vMiCaQ);
     values = Object.values(pendingAdditions);

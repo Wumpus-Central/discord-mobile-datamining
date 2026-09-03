@@ -1,7 +1,7 @@
-// === Module 13024: launchMobile ===
+// === Module 13036: launchMobile ===
 
-// Module 13024 (launchMobile)
-import formatDefault from "format" /* 4836 */;
+// Module 13036 (launchMobile)
+import formatDefault from "format" /* 4837 */;
 
 const os = formatDefault.os;
 let family;

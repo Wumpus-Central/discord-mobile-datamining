@@ -1,6 +1,6 @@
-// === Module 6095: SubscriptionPlans ===
+// === Module 6096: SubscriptionPlans ===
 
-// Module 6095 (SubscriptionPlans)
+// Module 6096 (SubscriptionPlans)
 import set from "set" /* 2 */;
 import GuildFeatures from "GuildFeatures" /* 1923 */;
 import isMetaQuest from "isMetaQuest" /* 1623 */;

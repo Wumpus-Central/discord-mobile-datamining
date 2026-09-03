@@ -1,13 +1,13 @@
-// === Module 11895: useTrackAppLauncherHomeItemImpression ===
+// === Module 11901: useTrackAppLauncherHomeItemImpression ===
 
-// Module 11895 (useTrackAppLauncherHomeItemImpression)
+// Module 11901 (useTrackAppLauncherHomeItemImpression)
 import closure_3 from "noop" /* 19 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/app_launcher/native/screens/home/useTrackAppLauncherHomeItemImpression.tsx");
 
 export const useTrackAppLauncherHomeItemImpression = function useTrackAppLauncherHomeItemImpression() {
-  let obj = trackAppLauncherItemImpressionOnFirstView(11896);
+  let obj = trackAppLauncherItemImpressionOnFirstView(11902);
   trackAppLauncherItemImpressionOnFirstView = obj.useTrackAppLauncherItemImpressionOnFirstView().trackAppLauncherItemImpressionOnFirstView;
   obj = {
     trackAppLauncherHomeItemImpression: React.useCallback((viewableItems) => {

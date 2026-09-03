@@ -1,11 +1,11 @@
-// === Module 7780: ChangePhoneReason ===
+// === Module 7783: ChangePhoneReason ===
 
-// Module 7780 (ChangePhoneReason)
+// Module 7783 (ChangePhoneReason)
 import sendRequest from "sendRequest" /* 527 */;
 import dispatcherDefault from "dispatcher" /* 706 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "fetchFingerprint" /* 1215 */;
-import { PHONE_VERIFICATION_MODAL_KEY as closure_5 } from "PHONE_VERIFICATION_MODAL_KEY" /* 7778 */;
+import { PHONE_VERIFICATION_MODAL_KEY as closure_5 } from "PHONE_VERIFICATION_MODAL_KEY" /* 7781 */;
 import { Endpoints } from "ME" /* 673 */;
 
 require = arg1;
@@ -108,7 +108,7 @@ export default {
       if (c3) {
         obj1.authorization = "";
       }
-      const obj5 = closure_1_1(4713);
+      const obj5 = closure_1_1(4714);
       const obj2 = { url: null, headers: null, body: null, oldFormErrors: true, trackedActionData: null, rejectWithError: null };
       obj2[0] = closure_1_6.VERIFY_PHONE;
       obj2[1] = obj1;

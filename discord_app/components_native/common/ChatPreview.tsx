@@ -1,23 +1,23 @@
-// === Module 13140: componentDidMount ===
+// === Module 13152: componentDidMount ===
 
-// Module 13140 (componentDidMount)
+// Module 13152 (componentDidMount)
 import ThemesDefault from "Themes" /* 709 */;
 import set from "set" /* 1234 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1492 */;
 import Text from "Text" /* 4474 */;
-import PressableBase from "PressableBase" /* 5076 */;
-import setOptionsDefault from "setOptions" /* 7850 */;
-import getPreviousMessagesDefault from "getPreviousMessages" /* 11358 */;
-import DCDChatListDefault from "DCDChatList" /* 11684 */;
-import GuildNSFWDefault from "GuildNSFW" /* 12427 */;
-import ChannelSpoilerDefault from "ChannelSpoiler" /* 12429 */;
+import PressableBase from "PressableBase" /* 5077 */;
+import setOptionsDefault from "setOptions" /* 7853 */;
+import getPreviousMessagesDefault from "getPreviousMessages" /* 11363 */;
+import DCDChatListDefault from "DCDChatList" /* 11696 */;
+import GuildNSFWDefault from "GuildNSFW" /* 12439 */;
+import ChannelSpoilerDefault from "ChannelSpoiler" /* 12441 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_6 from "maybeApplyNoTextColorForLightCustomTheme" /* 4470 */;
 import closure_7 from "setContent" /* 4186 */;
 import closure_8 from "ensureGuildLoaded" /* 1386 */;
 import closure_9 from "mergeGuildAvatar" /* 1921 */;
-import Changeset from "Changeset" /* 7851 */;
+import Changeset from "Changeset" /* 7854 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -93,7 +93,7 @@ class ChatPreviewBase extends PureComponent {
           let arr = items;
           const first = items[0];
           if (null != first) {
-            if (messages(11748)(c0, first[first.length - 1], props)) {
+            if (messages(11753)(c0, first[first.length - 1], props)) {
               items = [props];
               arr = arr.unshift(items);
             } else {
@@ -216,7 +216,7 @@ class ChatPreviewBase extends PureComponent {
         const jumpTargetId = tmp3.jumpTargetId;
         let tmp23;
         if (!tmp7) {
-          obj = { rows: null, scrollToMessageId: null, jumpTargetId: null, jumpType: "flex", shouldInitialScroll: "Array", animated: 0, scrollPosition: 3, focusTargetId: 2 };
+          obj = { rows: null, scrollToMessageId: null, jumpTargetId: null, jumpType: "flex", shouldInitialScroll: "Array", animated: "agente", scrollPosition: "b\u00FAsqueda", focusTargetId: "cara" };
           obj[0] = tmp22;
           obj[1] = jumpTargetId;
           obj[2] = jumpTargetId;
@@ -504,7 +504,7 @@ prototype["render"] = function render() {
   const obj2 = { bottom: true, style: tmp.jumpToChatButtonContainer, children: null };
   tmp9Result = set;
   obj2[2] = callback(PressableBase.PressableOpacity, { accessibilityRole: "button", style: tmp.jumpToChatButton, onPress: self.handleJumpToChat, children: callback(Text.Text, obj4) });
-  tmp6Result = tmp6(tmp9(5561).SafeAreaPaddingView, obj2);
+  tmp6Result = tmp6(tmp9(5562).SafeAreaPaddingView, obj2);
   tmp14 = tmp6Result;
 };
 ChatPreviewBase.contextType = require("ManaContext").ThemeContext;
@@ -526,10 +526,10 @@ export const ChatPreview = function ChatPreview(channelId) {
   const items1 = [closure_8];
   const stateFromStores1 = channelId(586).useStateFromStores(items1, () => closure_1_8.getChannel(channelId));
   const obj2 = channelId(586);
-  const isChannelSpoilerGated = channelId(6182).useIsChannelSpoilerGated(stateFromStores1);
-  const obj3 = channelId(6182);
-  const isChannelContentGated = channelId(4731).useIsChannelContentGated(stateFromStores1);
-  const obj4 = channelId(4731);
+  const isChannelSpoilerGated = channelId(6183).useIsChannelSpoilerGated(stateFromStores1);
+  const obj3 = channelId(6183);
+  const isChannelContentGated = channelId(4732).useIsChannelContentGated(stateFromStores1);
+  const obj4 = channelId(4732);
   const items2 = [closure_7];
   obj = {};
   const stateFromStores2 = channelId(586).useStateFromStores(items2, () => null != content.getContent());

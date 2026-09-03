@@ -1,6 +1,6 @@
-// === Module 15129: useSyncedModeThemeName ===
+// === Module 15144: useSyncedModeThemeName ===
 
-// Module 15129 (useSyncedModeThemeName)
+// Module 15144 (useSyncedModeThemeName)
 import closure_3 from "handleThemeChange" /* 1301 */;
 import { BACKGROUND_GRADIENT_PRESETS_MAP as closure_4 } from "ThemeTypes" /* 1347 */;
 

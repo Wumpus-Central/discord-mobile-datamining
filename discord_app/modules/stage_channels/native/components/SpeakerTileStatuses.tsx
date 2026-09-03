@@ -1,15 +1,15 @@
-// === Module 10155: VoiceStatus ===
+// === Module 10159: VoiceStatus ===
 
-// Module 10155 (VoiceStatus)
+// Module 10159 (VoiceStatus)
 import ThemesDefault from "Themes" /* 709 */;
 import Button from "Button" /* 1296 */;
-import registerAssetDefault from "registerAsset" /* 7751 */;
-import registerAssetDefault2 from "registerAsset" /* 10157 */;
+import registerAssetDefault from "registerAsset" /* 7754 */;
+import registerAssetDefault2 from "registerAsset" /* 10161 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_4 from "_detectH265HardwareDecode" /* 4529 */;
 import closure_5 from "updateVoiceState" /* 4497 */;
-import closure_6 from "buildStageChannelUserRoles" /* 5373 */;
+import closure_6 from "buildStageChannelUserRoles" /* 5374 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -48,15 +48,15 @@ const memoResult = importAllResult.memo((userId) => {
     flag2 = false;
   }
   if (stateFromStores) {
-    let tmp5 = channelId(10112);
+    let tmp5 = channelId(10116);
     let flag3 = true;
   } else if (flag2) {
-    tmp5 = channelId(9608);
+    tmp5 = channelId(9612);
     flag3 = false;
   } else {
     flag3 = false;
     if (flag) {
-      tmp5 = channelId(9609);
+      tmp5 = channelId(9613);
       flag3 = false;
     }
   }
@@ -83,7 +83,7 @@ const memoResult1 = importAllResult.memo((userId) => {
   const items1 = [channelId, userId];
   let tmp4;
   if (obj.useStateFromStores(items, () => closure_1_6.isModerator(userId, channelId), items1)) {
-    tmp4 = channelId(10156);
+    tmp4 = channelId(10160);
   }
   let tmp6 = null;
   if (null != tmp4) {

@@ -1,6 +1,6 @@
-// === Module 6079: isGuildSpaceAdmin ===
+// === Module 6080: isGuildSpaceAdmin ===
 
-// Module 6079 (isGuildSpaceAdmin)
+// Module 6080 (isGuildSpaceAdmin)
 import closure_2 from "createGuildRecordFromRust" /* 1908 */;
 import closure_3 from "getUncachedChannelPermissions" /* 4120 */;
 import { Permissions } from "ME" /* 673 */;
@@ -32,7 +32,7 @@ export function canUseGuildSpace(closure_2, getChannelIdForGuildTransition) {
 }
 export const useCanUseGuildSpace = function useCanUseGuildSpace(id, useGuildActionRows) {
   let stateFromStores = id;
-  const guildSpaceExperimentEnabled = stateFromStores(6080).useGuildSpaceExperimentEnabled(id, useGuildActionRows);
+  const guildSpaceExperimentEnabled = stateFromStores(6081).useGuildSpaceExperimentEnabled(id, useGuildActionRows);
   let tmpResult = tmp(586);
   const items = [closure_2];
   const items1 = [id];

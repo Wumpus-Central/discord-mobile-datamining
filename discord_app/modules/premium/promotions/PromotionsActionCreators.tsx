@@ -1,12 +1,12 @@
-// === Module 13236: fetchActivePromotions ===
+// === Module 13248: fetchActivePromotions ===
 
-// Module 13236 (fetchActivePromotions)
+// Module 13248 (fetchActivePromotions)
 import dispatcherDefault from "dispatcher" /* 706 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_getSystemLocale" /* 1995 */;
-import closure_5 from "createFromServer" /* 8458 */;
+import closure_5 from "createFromServer" /* 8462 */;
 import closure_6 from "mergeGuildAvatar" /* 1921 */;
-import closure_7 from "createEmptyPromotionsByType" /* 10696 */;
+import closure_7 from "createEmptyPromotionsByType" /* 10700 */;
 import { PREMIUM_SUBSCRIPTION_APPLICATION as closure_8 } from "GuildFeatures" /* 1923 */;
 import { Endpoints } from "ME" /* 673 */;
 
@@ -252,7 +252,7 @@ function _fetchClaimedOutboundPromotionCodes() {
       throw arg1;
     } else if (arg0 !== 2) {
       const body = arg1.body;
-      callback = body.map(callback(13238).claimedOutboundPromotionCodeFromServer);
+      callback = body.map(callback(13250).claimedOutboundPromotionCodeFromServer);
       const obj = callback2(706);
       const obj4 = { type: "CLAIMED_OUTBOUND_PROMOTION_CODES_FETCH_SUCCESS", claimedOutboundPromotionCodes: null };
       obj4[1] = callback;

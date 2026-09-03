@@ -1,11 +1,11 @@
-// === Module 8083: guildHasTag ===
+// === Module 8086: guildHasTag ===
 
-// Module 8083 (guildHasTag)
+// Module 8086 (guildHasTag)
 import GuildMemberFlags from "GuildMemberFlags" /* 4126 */;
 import closure_2 from "trackCommunicationDisabled" /* 1991 */;
 import closure_3 from "createGuildRecordFromRust" /* 1908 */;
 import closure_4 from "mergeGuildAvatar" /* 1921 */;
-import items from "items" /* 7862 */;
+import items from "items" /* 7865 */;
 import { GuildFeatures } from "ME" /* 673 */;
 
 require = arg1;

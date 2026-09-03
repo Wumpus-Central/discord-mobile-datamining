@@ -1,7 +1,7 @@
-// === Module 14655: defineParentalControlledSetting ===
+// === Module 14670: defineParentalControlledSetting ===
 
-// Module 14655 (defineParentalControlledSetting)
-import closure_3 from "getSettings" /* 7294 */;
+// Module 14670 (defineParentalControlledSetting)
+import closure_3 from "getSettings" /* 7295 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/user_settings/family_center/ParentalControlledUserSettingsDefinitions.tsx");

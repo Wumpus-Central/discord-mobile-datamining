@@ -1,12 +1,12 @@
-// === Module 8902: CollectiblesShopCardInternalV2 ===
+// === Module 8906: CollectiblesShopCardInternalV2 ===
 
-// Module 8902 (CollectiblesShopCardInternalV2)
+// Module 8906 (CollectiblesShopCardInternalV2)
 import ThemesDefault from "Themes" /* 709 */;
-import context from "context" /* 8905 */;
+import context from "context" /* 8909 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_5 from "handleThemeChange" /* 1301 */;
-import closure_6 from "updateCategoriesAndProducts" /* 7296 */;
+import closure_6 from "updateCategoriesAndProducts" /* 7297 */;
 import items from "items" /* 675 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;

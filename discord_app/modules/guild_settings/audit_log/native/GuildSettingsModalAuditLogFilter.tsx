@@ -1,12 +1,12 @@
-// === Module 17365: GuildSettingsModalAuditLogFilter ===
+// === Module 17385: GuildSettingsModalAuditLogFilter ===
 
-// Module 17365 (GuildSettingsModalAuditLogFilter)
+// Module 17385 (GuildSettingsModalAuditLogFilter)
 import ThemesDefault from "Themes" /* 709 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_6 from "mergeGuildAvatar" /* 1921 */;
-import closure_7 from "AuditLogActions" /* 17356 */;
+import closure_7 from "AuditLogActions" /* 17376 */;
 import { AuditLogFilterTypes } from "ME" /* 673 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
@@ -231,8 +231,8 @@ export const createAuditLogFilterUserData = function createAuditLogFilterUserDat
 };
 export const createAuditLogFilterActionData = function createAuditLogFilterActionData(closure_4) {
   const _require = closure_4;
-  const obj = _require(17358);
-  const mapped = _require(17358).ACTION_FILTER_ITEMS().map((label, index) => ({ label: label.label, value: label.value, selected: closure_0 === label.value, index }));
+  const obj = _require(17378);
+  const mapped = _require(17378).ACTION_FILTER_ITEMS().map((label, index) => ({ label: label.label, value: label.value, selected: closure_0 === label.value, index }));
   return mapped.sort((selected, selected2) => {
     let num = -1;
     if (!selected.selected) {

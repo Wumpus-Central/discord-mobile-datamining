@@ -1,8 +1,8 @@
-// === Module 14376: createFromServer ===
+// === Module 14392: createFromServer ===
 
-// Module 14376 (createFromServer)
+// Module 14392 (createFromServer)
 import toJSDefault from "toJS" /* 1935 */;
-import transformStoreAssetFromServer from "transformStoreAssetFromServer" /* 14377 */;
+import transformStoreAssetFromServer from "transformStoreAssetFromServer" /* 14393 */;
 import closure_2 from "createdAt" /* 1934 */;
 
 require = arg1;

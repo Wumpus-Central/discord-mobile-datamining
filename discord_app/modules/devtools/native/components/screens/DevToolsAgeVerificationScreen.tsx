@@ -1,13 +1,13 @@
-// === Module 15537: showAgeVerificationTestModal ===
+// === Module 15551: showAgeVerificationTestModal ===
 
-// Module 15537 (showAgeVerificationTestModal)
+// Module 15551 (showAgeVerificationTestModal)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 709 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
-import TableRowInner from "TableRowInner" /* 5607 */;
-import TableRowArrow from "TableRowArrow" /* 5614 */;
-import TableRowGroupTitle from "TableRowGroupTitle" /* 6000 */;
-import KeyIcon from "KeyIcon" /* 7740 */;
+import TableRowInner from "TableRowInner" /* 5608 */;
+import TableRowArrow from "TableRowArrow" /* 5615 */;
+import TableRowGroupTitle from "TableRowGroupTitle" /* 6001 */;
+import KeyIcon from "KeyIcon" /* 7743 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import { ScrollView } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
@@ -49,10 +49,10 @@ function _showAgeVerificationTestModal() {
       obj2[4] = function onComplete() {
         tmp3(tmp15[8]).open({ content: "[On Complete] Successfully age verified", key: "age-verification-test-success" });
       };
-      obj2[5] = lib(8699).AgeVerificationModalEntryPoint.DEV_TOOLS_QUICK_ACTIONS;
-      callback(8697).showAgeVerification(obj2);
+      obj2[5] = lib(8703).AgeVerificationModalEntryPoint.DEV_TOOLS_QUICK_ACTIONS;
+      callback(8701).showAgeVerification(obj2);
       c3 = 0;
-      const obj7 = callback(8697);
+      const obj7 = callback(8701);
     }
     c3 = 0;
     return arg1;
@@ -89,8 +89,8 @@ export default function DevToolsAgeVerificationScreen() {
   items1[1] = callback2(TableRowInner.TableRow, {
     label: "Launch Age Verification Modal",
     onPress() {
-      let obj = callback2(8697);
-      obj = { entryPoint: callback(8699).AgeVerificationModalEntryPoint.DEV_TOOLS_QUICK_ACTIONS };
+      let obj = callback2(8701);
+      obj = { entryPoint: callback(8703).AgeVerificationModalEntryPoint.DEV_TOOLS_QUICK_ACTIONS };
       return obj.showAgeVerificationGetStartedModal(obj);
     },
     icon: callback2(KeyIcon.KeyIcon, {}),

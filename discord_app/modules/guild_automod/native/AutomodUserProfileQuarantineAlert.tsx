@@ -1,20 +1,20 @@
-// === Module 11665: ChatBlockedAlert ===
+// === Module 11670: ChatBlockedAlert ===
 
-// Module 11665 (ChatBlockedAlert)
+// Module 11670 (ChatBlockedAlert)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 709 */;
 import getSystemLocale from "getSystemLocale" /* 1233 */;
 import Button from "Button" /* 1296 */;
 import Text from "Text" /* 4474 */;
-import componentDidMountDefault from "componentDidMount" /* 4947 */;
-import registerAssetDefault from "registerAsset" /* 11666 */;
+import componentDidMountDefault from "componentDidMount" /* 4948 */;
+import registerAssetDefault from "registerAsset" /* 11671 */;
 import closure_6 from "_slicedToArray" /* 32 */;
 import closure_7 from "_objectWithoutProperties" /* 109 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_9 from "fetchFingerprint" /* 1215 */;
 import closure_10 from "trackCommunicationDisabled" /* 1991 */;
 import closure_11 from "createGuildRecordFromRust" /* 1908 */;
-import { QUARANTINE_USER_ALERT_KEY } from "AutomodEventType" /* 11658 */;
+import { QUARANTINE_USER_ALERT_KEY } from "AutomodEventType" /* 11663 */;
 import ME from "ME" /* 673 */;
 import { GuildMemberFlags } from "GuildMemberFlags" /* 4108 */;
 import jsxProd from "jsxProd" /* 21 */;
@@ -56,8 +56,8 @@ function PerServerProfileAlert(arg0) {
     stringResult = intl.string(getSystemLocale.t.TBeZmG);
   }
   const tmp = callback2(arg0, closure_4);
-  const tmp2Result = tmp2(11667);
-  [require, tmp8] = callback(tmp2(11667).useOpenFixQuarantinedProfileModal({ guildId }), 2);
+  const tmp2Result = tmp2(11672);
+  [require, tmp8] = callback(tmp2(11672).useOpenFixQuarantinedProfileModal({ guildId }), 2);
   if (!tmp8) {
     const intl3 = tmp2(1233).intl;
     stringResult = intl3.string(tmp2(1233).t.FFj5Dt);
@@ -138,7 +138,7 @@ export default function AutomodUserProfileQuarantineAlert(guildId) {
       return guildId(closure_1_2[21]).getAutomodReason(automodQuarantinedGuildMemberFlags);
     }
   }, items4);
-  stateFromStores(4945)(() => {
+  stateFromStores(4946)(() => {
     let obj = stateFromStores(closure_1_2[23]);
     obj = { type: closure_1_12, guild_id: guildId, other_user_id: stateFromStores };
     obj.track(closure_1_13.OPEN_MODAL, obj);

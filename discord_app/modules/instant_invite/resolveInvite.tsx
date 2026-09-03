@@ -1,11 +1,11 @@
-// === Module 8878: map ===
+// === Module 8882: map ===
 
-// Module 8878 (map)
+// Module 8882 (map)
 import expandEventPropertiesDefault from "expandEventProperties" /* 695 */;
-import _modDef4713 from "module_4713" /* 4713 */;
+import _modDef4714 from "module_4714" /* 4714 */;
 import closure_3 from "fetchFingerprint" /* 1215 */;
 import closure_4 from "createGuildRecordFromRust" /* 1908 */;
-import InviteSendStates from "InviteSendStates" /* 7491 */;
+import InviteSendStates from "InviteSendStates" /* 7492 */;
 import ME from "ME" /* 673 */;
 
 const require = arg1;
@@ -156,8 +156,8 @@ export default function resolveInvite(inviteKey, arg1, inviteInstanceId) {
       return obj.exact(obj);
     };
     obj1[3] = obj2;
-    const value = _modDef4713.get(obj1);
-    const tmp4Result = _modDef4713;
+    const value = _modDef4714.get(obj1);
+    const tmp4Result = _modDef4714;
     const cleanupPromise = value.then((body) => {
       body = body.body;
       if (null != callback) {

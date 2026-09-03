@@ -1,10 +1,10 @@
-// === Module 7207: _fetchReferralEligibleUsers ===
+// === Module 7208: _fetchReferralEligibleUsers ===
 
-// Module 7207 (_fetchReferralEligibleUsers)
+// Module 7208 (_fetchReferralEligibleUsers)
 import sendRequest from "sendRequest" /* 527 */;
 import dispatcherDefault from "dispatcher" /* 706 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "createFromServer" /* 7208 */;
+import closure_4 from "createFromServer" /* 7209 */;
 import closure_5 from "createdAt" /* 1934 */;
 import closure_6 from "handleConnectionOpen" /* 1980 */;
 import ME from "ME" /* 673 */;
@@ -313,7 +313,7 @@ function _createReferralTrial() {
       if (closure_3.body.code === constants.INVALID_MESSAGE_SEND_USER) {
         dependencyMap = currentlySelectedChannelId.getCurrentlySelectedChannelId();
         if (null != dependencyMap) {
-          const obj6 = fromServer(7210);
+          const obj6 = fromServer(7211);
           obj6.sendClydeError(dependencyMap, closure_3.body.code);
         }
       }

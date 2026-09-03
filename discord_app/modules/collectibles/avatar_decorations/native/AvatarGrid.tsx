@@ -1,6 +1,6 @@
-// === Module 8129: GridAvatar ===
+// === Module 8132: GridAvatar ===
 
-// Module 8129 (GridAvatar)
+// Module 8132 (GridAvatar)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 709 */;
 import Button from "Button" /* 1296 */;
@@ -34,7 +34,7 @@ function GridAvatar(user) {
   obj[3] = size;
   if (undefined !== pendingAvatarSrc) {
     obj = { source: null };
-    const tmp2Result = tmp2(8117);
+    const tmp2Result = tmp2(8120);
     obj[0] = tmp2Result.getAvatarSource(user, guildId, pendingAvatarSrc, stateFromStores1);
     const merged = Object.assign(obj);
     obj1 = obj;

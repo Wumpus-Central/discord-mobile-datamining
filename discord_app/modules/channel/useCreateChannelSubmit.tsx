@@ -1,6 +1,6 @@
-// === Module 9718: useCreateChannelSubmit ===
+// === Module 9722: useCreateChannelSubmit ===
 
-// Module 9718 (useCreateChannelSubmit)
+// Module 9722 (useCreateChannelSubmit)
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import closure_5 from "_slicedToArray" /* 32 */;
 import closure_6 from "noop" /* 19 */;

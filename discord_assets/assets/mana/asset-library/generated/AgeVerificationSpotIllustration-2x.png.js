@@ -1,6 +1,6 @@
-// === Module 6311: metadata ===
+// === Module 6312: metadata ===
 
-// Module 6311 (metadata)
+// Module 6312 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/AgeVerificationSpotIllustration-2x.png.js");

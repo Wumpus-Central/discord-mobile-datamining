@@ -1,12 +1,12 @@
-// === Module 17553: Header ===
+// === Module 17573: Header ===
 
-// Module 17553 (Header)
+// Module 17573 (Header)
 import ThemesDefault from "Themes" /* 709 */;
 import getSystemLocale from "getSystemLocale" /* 1233 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
 import Text from "Text" /* 4474 */;
-import SafeAreaPaddingView from "SafeAreaPaddingView" /* 5561 */;
-import FormSeparatorDefault from "FormSeparator" /* 15042 */;
+import SafeAreaPaddingView from "SafeAreaPaddingView" /* 5562 */;
+import FormSeparatorDefault from "FormSeparator" /* 15057 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
@@ -42,7 +42,7 @@ function Footer(arg0) {
   items[1] = obj;
   obj[0] = items;
   obj = { loading: submitting, disabled: !canProceedToNextStep, text: stringResult, onPress: onProceed };
-  obj[1] = callback(tmp5(4928).Button, obj);
+  obj[1] = callback(tmp5(4929).Button, obj);
   return callback(closure_4, obj);
 }
 ({ View: c4, ScrollView: c5 } = get_ActivityIndicator);

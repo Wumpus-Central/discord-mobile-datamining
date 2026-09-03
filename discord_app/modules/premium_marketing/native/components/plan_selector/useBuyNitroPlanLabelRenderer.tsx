@@ -1,6 +1,6 @@
-// === Module 13287: useBuyNitroPlanLabelRenderer ===
+// === Module 13299: useBuyNitroPlanLabelRenderer ===
 
-// Module 13287 (useBuyNitroPlanLabelRenderer)
+// Module 13299 (useBuyNitroPlanLabelRenderer)
 import ThemesDefault from "Themes" /* 709 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;

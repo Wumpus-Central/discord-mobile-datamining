@@ -1,6 +1,6 @@
-// === Module 15030: MAX_SUBSCRIPTION_TIERS ===
+// === Module 15045: MAX_SUBSCRIPTION_TIERS ===
 
-// Module 15030 (MAX_SUBSCRIPTION_TIERS)
+// Module 15045 (MAX_SUBSCRIPTION_TIERS)
 import set from "set" /* 2 */;
 import sum from "sum" /* 502 */;
 import GuildFeatures from "GuildFeatures" /* 1923 */;

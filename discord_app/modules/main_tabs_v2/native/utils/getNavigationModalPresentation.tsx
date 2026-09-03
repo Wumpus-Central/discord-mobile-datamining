@@ -1,9 +1,9 @@
-// === Module 10883: getNavigationModalPresentation ===
+// === Module 10887: getNavigationModalPresentation ===
 
-// Module 10883 (getNavigationModalPresentation)
+// Module 10887 (getNavigationModalPresentation)
 import DCDDeviceManager from "DCDDeviceManager" /* 4457 */;
-import useIsWindowLarge from "useIsWindowLarge" /* 7727 */;
-import handleOrientationChange from "handleOrientationChange" /* 8618 */;
+import useIsWindowLarge from "useIsWindowLarge" /* 7730 */;
+import handleOrientationChange from "handleOrientationChange" /* 8622 */;
 import set from "set" /* 1234 */;
 
 if (set.isAndroid()) {
@@ -51,8 +51,8 @@ export default function getNavigationModalPresentation() {
       if (null != orientationLock) {
         str2 = "portrait";
       } else {
-        const orientation = tmp5(8618).getOrientation();
-        const tmp5Result = tmp5(8618);
+        const orientation = tmp5(8622).getOrientation();
+        const tmp5Result = tmp5(8622);
       }
       str4 = str2;
     }

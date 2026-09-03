@@ -1,6 +1,6 @@
-// === Module 16873: useInviteMembersCallback ===
+// === Module 16893: useInviteMembersCallback ===
 
-// Module 16873 (useInviteMembersCallback)
+// Module 16893 (useInviteMembersCallback)
 import closure_2 from "noop" /* 19 */;
 import closure_3 from "ensureGuildLoaded" /* 1386 */;
 import ME from "ME" /* 673 */;

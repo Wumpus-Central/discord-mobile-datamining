@@ -1,6 +1,6 @@
-// === Module 7600: MIN_SCHEDULE_TIME_INTO_FUTURE_SECONDS ===
+// === Module 7601: MIN_SCHEDULE_TIME_INTO_FUTURE_SECONDS ===
 
-// Module 7600 (MIN_SCHEDULE_TIME_INTO_FUTURE_SECONDS)
+// Module 7601 (MIN_SCHEDULE_TIME_INTO_FUTURE_SECONDS)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/ScheduledMessagesConstants.tsx");

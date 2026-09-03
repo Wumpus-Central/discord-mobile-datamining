@@ -1,6 +1,6 @@
-// === Module 17437: updateGuildRole ===
+// === Module 17457: updateGuildRole ===
 
-// Module 17437 (updateGuildRole)
+// Module 17457 (updateGuildRole)
 import dispatcherDefault from "dispatcher" /* 706 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import { Endpoints } from "ME" /* 673 */;
@@ -106,7 +106,7 @@ function _updateGuildRole() {
             return obj5;
           } else {
             closure_7 = arg1;
-            obj = callback2(6176);
+            obj = callback2(6177);
             const result = obj.checkGuildTemplateDirty(callback);
             c5 = 3;
             const obj6 = { value: null, done: true };

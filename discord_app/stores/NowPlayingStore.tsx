@@ -1,9 +1,9 @@
-// === Module 13624: _handlePresenceUpdate ===
+// === Module 13639: _handlePresenceUpdate ===
 
-// Module 13624 (_handlePresenceUpdate)
+// Module 13639 (_handlePresenceUpdate)
 import initializeDefault from "initialize" /* 586 */;
 import dispatcherDefault from "dispatcher" /* 706 */;
-import closure_2 from "recomputeAffinities" /* 7413 */;
+import closure_2 from "recomputeAffinities" /* 7414 */;
 import closure_3 from "sortActivity" /* 4569 */;
 import closure_4 from "mergeGuildAvatar" /* 1921 */;
 import { ActivityTypes } from "ME" /* 673 */;

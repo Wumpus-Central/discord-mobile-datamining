@@ -1,8 +1,8 @@
-// === Module 15646: useTrackProductCardImpression ===
+// === Module 15660: useTrackProductCardImpression ===
 
-// Module 15646 (useTrackProductCardImpression)
+// Module 15660 (useTrackProductCardImpression)
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "updateCategoriesAndProducts" /* 7296 */;
+import closure_4 from "updateCategoriesAndProducts" /* 7297 */;
 import { AnalyticEvents } from "ME" /* 673 */;
 
 const require = arg1;

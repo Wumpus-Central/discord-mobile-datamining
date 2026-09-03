@@ -1,6 +1,6 @@
-// === Module 8911: showUserProfileActionSheet ===
+// === Module 8915: showUserProfileActionSheet ===
 
-// Module 8911 (showUserProfileActionSheet)
+// Module 8915 (showUserProfileActionSheet)
 import asyncRequireImpl from "asyncRequireImpl" /* 2008 */;
 import explicitContentFromProto from "explicitContentFromProto" /* 4166 */;
 import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4445 */;
@@ -16,7 +16,7 @@ function showUserProfileActionSheet(ignoreBlockedSpeedBump, arg1) {
     const isBlockedResult = closure_5.isBlocked(ignoreBlockedSpeedBump.userId);
     const isIgnoredResult = closure_5.isIgnored(ignoreBlockedSpeedBump.userId);
     if (isIgnoredResult) {
-      const tmp8 = tmp2(2008)(8912, tmp3.paths);
+      const tmp8 = tmp2(2008)(8916, tmp3.paths);
       let obj = ACTION_SHEET_HEIGHT_HALFDefault;
       const _HermesInternal = HermesInternal;
       const combined = "UserProfileIgnoredSpeedBump" + ignoreBlockedSpeedBump.userId;
@@ -31,7 +31,7 @@ function showUserProfileActionSheet(ignoreBlockedSpeedBump, arg1) {
       obj.openLazy(tmp8, combined, obj, str);
     }
   }
-  const tmp20 = asyncRequireImpl(8915, dependencyMap.paths);
+  const tmp20 = asyncRequireImpl(8919, dependencyMap.paths);
   const combined1 = "UserProfile" + ignoreBlockedSpeedBump.userId;
   obj = {};
   const merged1 = Object.assign(ignoreBlockedSpeedBump);

@@ -1,6 +1,6 @@
-// === Module 9436: UserProfileActivityVoiceChannel ===
+// === Module 9440: UserProfileActivityVoiceChannel ===
 
-// Module 9436 (UserProfileActivityVoiceChannel)
+// Module 9440 (UserProfileActivityVoiceChannel)
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import sum from "sum" /* 502 */;
 import closure_4 from "getUncachedChannelPermissions" /* 4120 */;

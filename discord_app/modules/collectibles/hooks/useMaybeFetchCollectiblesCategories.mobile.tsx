@@ -1,8 +1,8 @@
-// === Module 8094: useMaybeFetchCollectiblesCategories ===
+// === Module 8097: useMaybeFetchCollectiblesCategories ===
 
-// Module 8094 (useMaybeFetchCollectiblesCategories)
+// Module 8097 (useMaybeFetchCollectiblesCategories)
 import initialize from "initialize" /* 586 */;
-import useMaybeFetchCollectiblesCategoriesShared from "useMaybeFetchCollectiblesCategoriesShared" /* 8095 */;
+import useMaybeFetchCollectiblesCategoriesShared from "useMaybeFetchCollectiblesCategoriesShared" /* 8098 */;
 import closure_2 from "getUserAgnosticState" /* 4477 */;
 
 require = arg1;

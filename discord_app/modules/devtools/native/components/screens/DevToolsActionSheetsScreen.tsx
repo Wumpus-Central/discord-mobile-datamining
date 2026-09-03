@@ -1,14 +1,14 @@
-// === Module 15549: ActionSheetSelector ===
+// === Module 15563: ActionSheetSelector ===
 
-// Module 15549 (ActionSheetSelector)
+// Module 15563 (ActionSheetSelector)
 import ThemesDefault from "Themes" /* 709 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2008 */;
-import _modDef4723 from "module_4723" /* 4723 */;
-import RedesignBottomSheetTitleHeaderBase from "RedesignBottomSheetTitleHeaderBase" /* 5629 */;
-import Background from "Background" /* 5630 */;
-import TableRowGroupTitle from "TableRowGroupTitle" /* 6000 */;
-import _modDef13031 from "module_13031" /* 13031 */;
-import _modDef13033 from "module_13033" /* 13033 */;
+import _modDef4724 from "module_4724" /* 4724 */;
+import RedesignBottomSheetTitleHeaderBase from "RedesignBottomSheetTitleHeaderBase" /* 5630 */;
+import Background from "Background" /* 5631 */;
+import TableRowGroupTitle from "TableRowGroupTitle" /* 6001 */;
+import _modDef13043 from "module_13043" /* 13043 */;
+import _modDef13045 from "module_13045" /* 13045 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
@@ -35,7 +35,7 @@ function ActionSheetSelector(arg0) {
     children: items.map((type) => {
       closure_0 = type;
       const obj = {
-        icon: closure_1_7(closure_1_0(8751).WarningIcon, { size: "md" }),
+        icon: closure_1_7(closure_1_0(8755).WarningIcon, { size: "md" }),
         label: null,
         subLabel: null,
         onPress() {
@@ -53,7 +53,7 @@ function ActionSheetSelector(arg0) {
       obj[4] = tmpResult;
       obj[5] = 0 === arg1;
       obj[6] = arg1 === closure_1_10.length - 1;
-      return closure_1_7(closure_1_0(5607).TableRow, obj, type.type);
+      return closure_1_7(closure_1_0(5608).TableRow, obj, type.type);
     })
   });
   obj[1] = callback2(closure_5, obj);
@@ -72,7 +72,7 @@ let items = [
     label: "Blocked Domain",
     description: "Shows a warning for potentially malicious domains",
     show() {
-      return _modDef13033.show("https://example-phishing-site.com/malicious-page");
+      return _modDef13045.show("https://example-phishing-site.com/malicious-page");
     }
   },
   {
@@ -80,7 +80,7 @@ let items = [
     label: "Suspicious Download",
     description: "Warns users about potentially dangerous file downloads",
     show() {
-      return _modDef13031.show("https://suspicious-file.com/dangerous-file.exe");
+      return _modDef13043.show("https://suspicious-file.com/dangerous-file.exe");
     }
   },
   {
@@ -88,7 +88,7 @@ let items = [
     label: "Inappropriate Conversation",
     description: "Shows safety warning for inappropriate conversations",
     show() {
-      return _modDef4723.pushLazy(asyncRequireImpl(15550, dependencyMap.paths), { warningId: "test-warning-123", warningType: "inappropriate_conversation", senderId: "123456789", channelId: "987654321" }, "INAPPROPRIATE_CONVERSATION_TAKEOVER_MODAL");
+      return _modDef4724.pushLazy(asyncRequireImpl(15564, dependencyMap.paths), { warningId: "test-warning-123", warningType: "inappropriate_conversation", senderId: "123456789", channelId: "987654321" }, "INAPPROPRIATE_CONVERSATION_TAKEOVER_MODAL");
     }
   }
 ];
@@ -98,7 +98,7 @@ const obj2 = {
   label: "Blocked Domain",
   description: "Shows a warning for potentially malicious domains",
   show() {
-    return _modDef13033.show("https://example-phishing-site.com/malicious-page");
+    return _modDef13045.show("https://example-phishing-site.com/malicious-page");
   }
 };
 const result = require("set").fileFinishedImporting("modules/devtools/native/components/screens/DevToolsActionSheetsScreen.tsx");
@@ -119,9 +119,9 @@ export default function DevToolsActionSheetsScreen() {
   }, items);
   obj = { spacing: 16, children: null };
   obj = { children: null };
-  const items1 = [callback2(first(4474).Text, { variant: "heading-lg/medium", children: "Action Sheets" }), callback2(first(6000).TableRowGroup, { description: "Tap an option to launch the action sheet immediately", hasIcons: false, children: callback2(first(5607).TableRow, obj2) })];
+  const items1 = [callback2(first(4474).Text, { variant: "heading-lg/medium", children: "Action Sheets" }), callback2(first(6001).TableRowGroup, { description: "Tap an option to launch the action sheet immediately", hasIcons: false, children: callback2(first(5608).TableRow, obj2) })];
   obj[0] = items1;
-  obj[1] = callback3(first(5609).Card, obj);
-  obj[2] = callback2(first(4926).Stack, obj);
+  obj[1] = callback3(first(5610).Card, obj);
+  obj[2] = callback2(first(4927).Stack, obj);
   return callback2(closure_6, obj);
 };

@@ -1,18 +1,18 @@
-// === Module 17462: componentDidMount ===
+// === Module 17482: componentDidMount ===
 
-// Module 17462 (componentDidMount)
+// Module 17482 (componentDidMount)
 import ThemesDefault from "Themes" /* 709 */;
 import getSystemLocale from "getSystemLocale" /* 1233 */;
 import Text from "Text" /* 4474 */;
-import getInviteURLDefault from "getInviteURL" /* 7513 */;
-import TextInput from "TextInput" /* 7714 */;
-import getErrorMessageFromErrorCode from "getErrorMessageFromErrorCode" /* 17343 */;
-import _modDef17464 from "module_17464" /* 17464 */;
-import registerAssetDefault from "registerAsset" /* 17465 */;
+import getInviteURLDefault from "getInviteURL" /* 7514 */;
+import TextInput from "TextInput" /* 7717 */;
+import getErrorMessageFromErrorCode from "getErrorMessageFromErrorCode" /* 17363 */;
+import _modDef17484 from "module_17484" /* 17484 */;
+import registerAssetDefault from "registerAsset" /* 17485 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_5 from "FormStates" /* 17463 */;
+import closure_5 from "FormStates" /* 17483 */;
 import closure_6 from "createGuildRecordFromRust" /* 1908 */;
-import closure_7 from "handleFormInit" /* 9751 */;
+import closure_7 from "handleFormInit" /* 9755 */;
 import { GuildFeatures } from "ME" /* 673 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
@@ -93,7 +93,7 @@ prototype["updateNavigator"] = function updateNavigator(submitting, isEditing) {
     if (submitting) {
       let fn = () => null;
     } else if (isEditing) {
-      let setOptionsResult = self(5503);
+      let setOptionsResult = self(5504);
       fn = setOptionsResult.getHeaderConditionalBackButton(this.handleCancel);
     }
     setOptionsResult = { headerLeft: null, headerRight: null };
@@ -118,7 +118,7 @@ prototype["updateNavigator"] = function updateNavigator(submitting, isEditing) {
   }
 };
 prototype["componentWillUnmount"] = function componentWillUnmount() {
-  _modDef17464.closeModal();
+  _modDef17484.closeModal();
 };
 prototype["render"] = function render() {
   const self = this;
@@ -241,7 +241,7 @@ export default function ConnectedGuildSettingsModalVanityURL(guildId) {
     obj[4] = navigation;
     obj[5] = tmp;
     obj[6] = guildId.contentContainerStyle;
-    const items3 = [callback(GuildSettingsModalVanityURL, obj), callback(tmp2(5947).NavScrim, {})];
+    const items3 = [callback(GuildSettingsModalVanityURL, obj), callback(tmp2(5948).NavScrim, {})];
     obj[0] = items3;
     tmp10 = callback2(closure_11, obj);
   }

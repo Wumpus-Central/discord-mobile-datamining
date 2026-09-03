@@ -1,12 +1,12 @@
-// === Module 10199: isReactionMilestoneNotification ===
+// === Module 10203: isReactionMilestoneNotification ===
 
-// Module 10199 (isReactionMilestoneNotification)
+// Module 10203 (isReactionMilestoneNotification)
 import apply from "apply" /* 12 */;
 import v1 from "v1" /* 511 */;
 import setDefault from "set" /* 684 */;
-import collectGuildAnalyticsMetadataDefault from "collectGuildAnalyticsMetadata" /* 4700 */;
+import collectGuildAnalyticsMetadataDefault from "collectGuildAnalyticsMetadata" /* 4701 */;
 import closure_3 from "noop" /* 19 */;
-import { REACTION_MILESTONE_COUNTS } from "set" /* 10200 */;
+import { REACTION_MILESTONE_COUNTS } from "set" /* 10204 */;
 import ME from "ME" /* 673 */;
 
 require = arg1;

@@ -1,6 +1,6 @@
-// === Module 14478: HuePicker ===
+// === Module 14494: HuePicker ===
 
-// Module 14478 (HuePicker)
+// Module 14494 (HuePicker)
 import ThemesDefault from "Themes" /* 709 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;

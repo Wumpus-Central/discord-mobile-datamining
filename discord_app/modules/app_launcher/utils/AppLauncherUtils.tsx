@@ -1,22 +1,22 @@
-// === Module 8153: getShelfBadgeTypeIfActive ===
+// === Module 8157: getShelfBadgeTypeIfActive ===
 
-// Module 8153 (getShelfBadgeTypeIfActive)
+// Module 8157 (getShelfBadgeTypeIfActive)
 import getSystemLocale from "getSystemLocale" /* 1233 */;
 import set from "set" /* 1234 */;
 import getAvatarURLDefault from "getAvatarURL" /* 1430 */;
 import PermissionOverwriteType from "PermissionOverwriteType" /* 1954 */;
-import buildCommand from "buildCommand" /* 7275 */;
-import AppLauncherEntrypoint from "AppLauncherEntrypoint" /* 8444 */;
-import getApplicationFlags from "getApplicationFlags" /* 8445 */;
-import getPlatformDefault from "getPlatform" /* 8446 */;
-import canInstallApplication from "canInstallApplication" /* 8454 */;
+import buildCommand from "buildCommand" /* 7276 */;
+import AppLauncherEntrypoint from "AppLauncherEntrypoint" /* 8448 */;
+import getApplicationFlags from "getApplicationFlags" /* 8449 */;
+import getPlatformDefault from "getPlatform" /* 8450 */;
+import canInstallApplication from "canInstallApplication" /* 8458 */;
 import closure_4 from "_objectWithoutProperties" /* 109 */;
 import closure_5 from "asyncGeneratorStep" /* 5 */;
-import closure_6 from "getIndexKey" /* 8154 */;
+import closure_6 from "getIndexKey" /* 8158 */;
 import closure_7 from "createExecutable" /* 4504 */;
-import closure_8 from "handleDismissWithDismissed" /* 8443 */;
+import closure_8 from "handleDismissWithDismissed" /* 8447 */;
 import { ApplicationFlags } from "ME" /* 673 */;
-import { BuiltInSectionId } from "TRUE_OPTION_NAME" /* 4952 */;
+import { BuiltInSectionId } from "TRUE_OPTION_NAME" /* 4953 */;
 import { MessageSendLocation } from "MESSAGE_GROUP_SPACING" /* 4471 */;
 
 require = arg1;

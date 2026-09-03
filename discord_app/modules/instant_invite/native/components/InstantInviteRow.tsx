@@ -1,15 +1,15 @@
-// === Module 10006: ? ===
+// === Module 10010: ? ===
 
-// Module 10006
+// Module 10010
 import ThemesDefault from "Themes" /* 709 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_4 from "ensureGuildLoaded" /* 1386 */;
-import closure_5 from "updateWithLatestInvite" /* 9932 */;
+import closure_5 from "updateWithLatestInvite" /* 9936 */;
 import closure_6 from "createGuildRecordFromRust" /* 1908 */;
-import closure_7 from "_computeRows" /* 9944 */;
+import closure_7 from "compareRowsByMatchScore" /* 9948 */;
 import closure_8 from "mergeGuildAvatar" /* 1921 */;
-import setSendState from "setSendState" /* 10007 */;
-import { InviteSendStates } from "InviteSendStates" /* 7491 */;
+import setSendState from "setSendState" /* 10011 */;
+import { InviteSendStates } from "InviteSendStates" /* 7492 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 import importAllResult from "noop" /* 19 */;

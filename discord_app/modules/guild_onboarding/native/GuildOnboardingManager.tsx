@@ -1,7 +1,7 @@
-// === Module 17186: prototype ===
+// === Module 17206: prototype ===
 
-// Module 17186 (prototype)
-import initializeDefault from "initialize" /* 5494 */;
+// Module 17206 (prototype)
+import initializeDefault from "initialize" /* 5495 */;
 import closure_3 from "trackCommunicationDisabled" /* 1991 */;
 import closure_4 from "createGuildRecordFromRust" /* 1908 */;
 import closure_5 from "handleConnectionOpen" /* 4299 */;
@@ -56,7 +56,7 @@ let prototype = function GuildOnboardingManager() {
     }
   };
   applyArgumentsResult.handleGuildDelete = function handleGuildDelete(guild) {
-    const result = applyArgumentsResult(5470).discardOnboardingPromise(guild.guild.id);
+    const result = applyArgumentsResult(5471).discardOnboardingPromise(guild.guild.id);
   };
   applyArgumentsResult._openOnboardingIfIncomplete = function _openOnboardingIfIncomplete(guildId) {
     guild = guild.getGuild(guildId);
@@ -84,7 +84,7 @@ let prototype = function GuildOnboardingManager() {
         if (hasFlagResult) {
           obj = { guildId: null };
           obj[0] = guildId;
-          callback(5470)(obj);
+          callback(5471)(obj);
         }
       }
     }

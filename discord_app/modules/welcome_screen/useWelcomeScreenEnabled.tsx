@@ -1,6 +1,6 @@
-// === Module 12417: useWelcomeScreenEnabled ===
+// === Module 12429: useWelcomeScreenEnabled ===
 
-// Module 12417 (useWelcomeScreenEnabled)
+// Module 12429 (useWelcomeScreenEnabled)
 import set from "set" /* 2 */;
 import ME from "ME" /* 673 */;
 import createChannelRecord from "createChannelRecord" /* 1390 */;

@@ -1,10 +1,10 @@
-// === Module 16559: FriendsScreen ===
+// === Module 16580: FriendsScreen ===
 
-// Module 16559 (FriendsScreen)
+// Module 16580 (FriendsScreen)
 import ThemesDefault from "Themes" /* 709 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "recountRelationshipTypes" /* 7412 */;
+import closure_5 from "recountRelationshipTypes" /* 7413 */;
 import closure_6 from "markAllUserIdListsStale" /* 4130 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;

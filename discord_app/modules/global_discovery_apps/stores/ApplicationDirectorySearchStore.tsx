@@ -1,10 +1,10 @@
-// === Module 11863: getSearchResults ===
+// === Module 11869: getSearchResults ===
 
-// Module 11863 (getSearchResults)
+// Module 11869 (getSearchResults)
 import initializeDefault from "initialize" /* 586 */;
 import dispatcherDefault from "dispatcher" /* 706 */;
 import privDefault from "priv" /* 1400 */;
-import SearchAppsRequestSource from "SearchAppsRequestSource" /* 11864 */;
+import SearchAppsRequestSource from "SearchAppsRequestSource" /* 11870 */;
 
 require = arg1;
 let obj = { FETCHING: 0, [0]: "FETCHING", FETCHED: 1, [1]: "FETCHED", ERROR: 2, [2]: "ERROR" };

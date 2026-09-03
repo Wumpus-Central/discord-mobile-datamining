@@ -1,6 +1,6 @@
-// === Module 12416: handleInviteData ===
+// === Module 12428: handleInviteData ===
 
-// Module 12416 (handleInviteData)
+// Module 12428 (handleInviteData)
 import initializeDefault from "initialize" /* 586 */;
 import dispatcherDefault from "dispatcher" /* 706 */;
 

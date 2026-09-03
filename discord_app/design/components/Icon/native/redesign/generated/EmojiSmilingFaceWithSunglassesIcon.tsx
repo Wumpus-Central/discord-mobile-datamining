@@ -1,10 +1,10 @@
-// === Module 15218: EmojiSmilingFaceWithSunglassesIcon ===
+// === Module 15233: EmojiSmilingFaceWithSunglassesIcon ===
 
-// Module 15218 (EmojiSmilingFaceWithSunglassesIcon)
+// Module 15233 (EmojiSmilingFaceWithSunglassesIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 709 */;
 import BaseIconImage from "BaseIconImage" /* 4196 */;
-import registerAsset from "registerAsset" /* 15219 */;
+import registerAsset from "registerAsset" /* 15234 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

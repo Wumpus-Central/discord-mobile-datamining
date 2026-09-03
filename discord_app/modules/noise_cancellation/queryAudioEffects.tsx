@@ -1,6 +1,6 @@
-// === Module 13781: _queryAudioEffects ===
+// === Module 13797: _queryAudioEffects ===
 
-// Module 13781 (_queryAudioEffects)
+// Module 13797 (_queryAudioEffects)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import { AnalyticEvents } from "ME" /* 673 */;
 

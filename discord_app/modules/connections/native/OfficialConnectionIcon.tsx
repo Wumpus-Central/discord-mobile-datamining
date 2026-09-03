@@ -1,12 +1,12 @@
-// === Module 11386: OfficialConnectionIcon ===
+// === Module 11391: OfficialConnectionIcon ===
 
-// Module 11386 (OfficialConnectionIcon)
+// Module 11391 (OfficialConnectionIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 709 */;
 import Button from "Button" /* 1296 */;
-import useRoleIcon from "useRoleIcon" /* 5985 */;
-import registerAssetDefault from "registerAsset" /* 11387 */;
-import registerAssetDefault2 from "registerAsset" /* 11388 */;
+import useRoleIcon from "useRoleIcon" /* 5986 */;
+import registerAssetDefault from "registerAsset" /* 11392 */;
+import registerAssetDefault2 from "registerAsset" /* 11393 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import ME from "ME" /* 673 */;
 import jsxProd from "jsxProd" /* 21 */;

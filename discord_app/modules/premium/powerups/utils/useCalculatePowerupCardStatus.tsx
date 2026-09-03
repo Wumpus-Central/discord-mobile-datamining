@@ -1,6 +1,6 @@
-// === Module 12307: useCalculatePowerupCardStatus ===
+// === Module 12319: useCalculatePowerupCardStatus ===
 
-// Module 12307 (useCalculatePowerupCardStatus)
+// Module 12319 (useCalculatePowerupCardStatus)
 import closure_3 from "noop" /* 19 */;
 import { PowerupActiveStatusType } from "BoostedGuildTiers" /* 4365 */;
 

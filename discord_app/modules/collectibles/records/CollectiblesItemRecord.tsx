@@ -1,12 +1,12 @@
-// === Module 7300: createCollectiblesItemsFromServerResponse ===
+// === Module 7301: createCollectiblesItemsFromServerResponse ===
 
-// Module 7300 (createCollectiblesItemsFromServerResponse)
+// Module 7301 (createCollectiblesItemsFromServerResponse)
 import CollectiblesItemType from "CollectiblesItemType" /* 1949 */;
-import closure_2 from "fromServer" /* 7301 */;
+import closure_2 from "fromServer" /* 7302 */;
 import closure_3 from "fromServer" /* 1947 */;
-import closure_4 from "fromServer" /* 7302 */;
-import closure_5 from "fromServer" /* 7303 */;
-import closure_6 from "fromServer" /* 7304 */;
+import closure_4 from "fromServer" /* 7303 */;
+import closure_5 from "fromServer" /* 7304 */;
+import closure_6 from "fromServer" /* 7305 */;
 import ME from "ME" /* 673 */;
 
 require = arg1;

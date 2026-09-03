@@ -1,6 +1,6 @@
-// === Module 10814: StorefrontPlatform ===
+// === Module 10818: StorefrontPlatform ===
 
-// Module 10814 (StorefrontPlatform)
+// Module 10818 (StorefrontPlatform)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/StorefrontPlatform.tsx");

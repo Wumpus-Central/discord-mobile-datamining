@@ -1,9 +1,9 @@
-// === Module 11290: useSubscribeMissingActivities ===
+// === Module 11294: useSubscribeMissingActivities ===
 
-// Module 11290 (useSubscribeMissingActivities)
+// Module 11294 (useSubscribeMissingActivities)
 import closure_2 from "_slicedToArray" /* 32 */;
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "handleConnectionOpenOrResumed" /* 11291 */;
+import closure_4 from "handleConnectionOpenOrResumed" /* 11295 */;
 import closure_5 from "sortActivity" /* 4569 */;
 
 const require = arg1;

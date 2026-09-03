@@ -1,7 +1,7 @@
-// === Module 5010: shouldShowMembershipVerificationGate ===
+// === Module 5011: shouldShowMembershipVerificationGate ===
 
-// Module 5010 (shouldShowMembershipVerificationGate)
-import isValidFormResponse from "isValidFormResponse" /* 5011 */;
+// Module 5011 (shouldShowMembershipVerificationGate)
+import isValidFormResponse from "isValidFormResponse" /* 5012 */;
 import closure_2 from "trackCommunicationDisabled" /* 1991 */;
 import closure_3 from "createGuildRecordFromRust" /* 1908 */;
 import closure_4 from "mergeGuildAvatar" /* 1921 */;

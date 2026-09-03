@@ -1,11 +1,11 @@
-// === Module 11555: fetchJoinSecret ===
+// === Module 11560: fetchJoinSecret ===
 
-// Module 11555 (fetchJoinSecret)
+// Module 11560 (fetchJoinSecret)
 import _modDef4190 from "module_4190" /* 4190 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import ME from "ME" /* 673 */;
 import { ActivityIntent } from "items3" /* 4506 */;
-import { MAIN_SURFACE } from "FrameLayoutModes" /* 9478 */;
+import { MAIN_SURFACE } from "FrameLayoutModes" /* 9482 */;
 
 const require = arg1;
 function fetchJoinSecret(application) {
@@ -28,7 +28,7 @@ function fetchJoinSecret(application) {
   const HTTP = _require(527).HTTP;
   obj = { url: closure_4.USER_ACTIVITY_JOIN(userId, sessionId, id), retries: 3, query: tmp2, oldFormErrors: true, rejectWithError: true };
   const value = HTTP.get(obj);
-  return value.then((arg0) => f124251(arg0), () => {
+  return value.then((arg0) => f124489(arg0), () => {
     let obj = id(application[7]);
     obj = { type: "ACTIVITY_JOIN_FAILED", applicationId: id };
     obj.dispatch(obj);
@@ -139,9 +139,9 @@ export default {
                 let tmp9 = closure_1_10(tmp25, () => true);
               } else {
                 tmp9 = (function joinViaDeeplink(application) {
-                  let f124251 = application;
+                  let f124489 = application;
                   application = application.application;
-                  if (application.id === f124251(application[4]).DISCORD_CONNECT_EXAMPLE_APP_APPLICATION_ID) {
+                  if (application.id === f124489(application[4]).DISCORD_CONNECT_EXAMPLE_APP_APPLICATION_ID) {
                     let deeplink_uri = tmp(tmp2[4]).DISCORD_CONNECT_EXAMPLE_APP_DEEPLINK_URI;
                   } else {
                     deeplink_uri = application.deeplink_uri;
@@ -153,7 +153,7 @@ export default {
                     }
                     return resolved;
                   }
-                  f124251 = (body) => {
+                  f124489 = (body) => {
                     const join_url = body.body.join_url;
                     const secret = body.body.secret;
                     if (null != join_url) {
@@ -163,7 +163,7 @@ export default {
                       ({ id: obj5[1], parent_id: obj5[2] } = application);
                       obj[3] = secret;
                       obj[4] = closure_1_8.PLAY;
-                      let flag3 = f124251.embedded;
+                      let flag3 = f124489.embedded;
                       if (flag3 == null) {
                         flag3 = false;
                       }
@@ -187,7 +187,7 @@ export default {
                         ({ id: obj8[1], parent_id: obj8[2] } = application);
                         obj1[3] = secret;
                         obj1[4] = closure_1_8.PLAY;
-                        let flag = f124251.embedded;
+                        let flag = f124489.embedded;
                         if (flag == null) {
                           flag = false;
                         }
@@ -218,7 +218,7 @@ export default {
                   const HTTP = tmp(tmp2[8]).HTTP;
                   obj = { url: closure_4.USER_ACTIVITY_JOIN(userId, sessionId, id), retries: 3, query: tmp8, oldFormErrors: true, rejectWithError: true };
                   const value = HTTP.get(obj);
-                  resolved = value.then((arg0) => f124251(arg0), () => {
+                  resolved = value.then((arg0) => f124489(arg0), () => {
                     let obj = id(application[7]);
                     obj = { type: "ACTIVITY_JOIN_FAILED", applicationId: id };
                     obj.dispatch(obj);

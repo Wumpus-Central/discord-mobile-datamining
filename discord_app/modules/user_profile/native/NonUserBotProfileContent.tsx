@@ -1,15 +1,15 @@
-// === Module 8932: ? ===
+// === Module 8936: ? ===
 
-// Module 8932
+// Module 8936
 import getNicknameDefault from "getNickname" /* 4673 */;
-import useProfileThemeDefault from "useProfileTheme" /* 8541 */;
-import useSharedStylesDefault from "useSharedStyles" /* 8543 */;
-import useBadgesDefault from "useBadges" /* 8559 */;
-import useUserProfileBannerHeightDefault from "useUserProfileBannerHeight" /* 8923 */;
-import useUserProfileOverscrollStylesDefault from "useUserProfileOverscrollStyles" /* 8933 */;
+import useProfileThemeDefault from "useProfileTheme" /* 8545 */;
+import useSharedStylesDefault from "useSharedStyles" /* 8547 */;
+import useBadgesDefault from "useBadges" /* 8563 */;
+import useUserProfileBannerHeightDefault from "useUserProfileBannerHeight" /* 8927 */;
+import useUserProfileOverscrollStylesDefault from "useUserProfileOverscrollStyles" /* 8937 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import ARBITRARY_LARGE_OFFSET from "ARBITRARY_LARGE_OFFSET" /* 6009 */;
-import { ACTION_SHEET_MAX_WIDTH } from "ACTION_SHEET_START_HEIGHT_RATIO" /* 5631 */;
+import ARBITRARY_LARGE_OFFSET from "ARBITRARY_LARGE_OFFSET" /* 6010 */;
+import { ACTION_SHEET_MAX_WIDTH } from "ACTION_SHEET_START_HEIGHT_RATIO" /* 5632 */;
 import jsxProd from "jsxProd" /* 21 */;
 import importAllResult from "noop" /* 19 */;
 
@@ -21,7 +21,7 @@ const memoResult = importAllResult.memo(function NonUserBotProfileContent(scroll
   let trackUserProfileAction;
   importDefault = undefined;
   const tmp3 = useSharedStylesDefault();
-  let obj = trackUserProfileAction(8571);
+  let obj = trackUserProfileAction(8575);
   trackUserProfileAction = obj.useUserProfileAnalyticsContext().trackUserProfileAction;
   obj1 = getNicknameDefault;
   let guild_id;
@@ -41,7 +41,7 @@ const memoResult = importAllResult.memo(function NonUserBotProfileContent(scroll
   const tmp10 = useUserProfileOverscrollStylesDefault({ scrollPosition: scrollPosition.scrollPosition, bannerHeight: tmp9 });
   ({ theme, primaryColor, secondaryColor } = useProfileThemeDefault({ user, displayProfile }));
   const tmp11 = useProfileThemeDefault({ user, displayProfile });
-  const userProfileColors = trackUserProfileAction(8545).useUserProfileColors({ theme, primaryColor, secondaryColor });
+  const userProfileColors = trackUserProfileAction(8549).useUserProfileColors({ theme, primaryColor, secondaryColor });
   const containerBackground = userProfileColors.containerBackground;
   if (null == user) {
     return null;
@@ -54,7 +54,7 @@ const memoResult = importAllResult.memo(function NonUserBotProfileContent(scroll
     obj[4] = bannerImageAnimatedStyle;
     obj[5] = blurAnimatedProps;
     obj[6] = showBlur;
-    const items = [callback(tmp(8934), obj), ];
+    const items = [callback(tmp(8938), obj), ];
     obj = { style: null, children: null };
     obj[0] = contentAnimatedStyle;
     obj1 = { user: null, guildId: null, backgroundColor: null, disableStatus: true };
@@ -65,7 +65,7 @@ const memoResult = importAllResult.memo(function NonUserBotProfileContent(scroll
     }
     obj1[1] = guildId;
     obj1[2] = tmp13;
-    const items1 = [callback(tmp4(8568).OpenableUserProfileAvatar, obj1), ];
+    const items1 = [callback(tmp4(8572).OpenableUserProfileAvatar, obj1), ];
     const obj2 = { style: null, children: null };
     const items2 = [, , ];
     ({ profileContentWrapper: arr2[0], profileContent: arr2[1] } = tmp3);
@@ -79,7 +79,7 @@ const memoResult = importAllResult.memo(function NonUserBotProfileContent(scroll
     const obj5 = { user: null, guildId: null, displayName: null, pronouns: null, badges: null, badgeContainerBackground: null, displayNameAccessibilityHint: null, onPressDisplayName: null, onPressUserTag: null, onPressPronouns: null, showBadgeToastOnPress: true };
     obj5[0] = user;
     let guild_id1;
-    tmpResult = tmp(8936);
+    tmpResult = tmp(8940);
     if (channel != null) {
       guild_id1 = channel.guild_id;
     }
@@ -120,7 +120,7 @@ const memoResult = importAllResult.memo(function NonUserBotProfileContent(scroll
     obj9[0] = containerBackground;
     items4[1] = obj9;
     obj8[3] = items4;
-    obj7[1] = callback(tmp(9050), obj8);
+    obj7[1] = callback(tmp(9054), obj8);
     items3[1] = callback(View, obj7);
     obj2[1] = items3;
     items1[1] = closure_8(View, obj2);
@@ -129,7 +129,7 @@ const memoResult = importAllResult.memo(function NonUserBotProfileContent(scroll
     obj6[0] = items;
     return closure_8(closure_9, obj6);
   }
-  const tmp4Result = trackUserProfileAction(8545);
+  const tmp4Result = trackUserProfileAction(8549);
 });
 let result = require("set").fileFinishedImporting("modules/user_profile/native/NonUserBotProfileContent.tsx");
 

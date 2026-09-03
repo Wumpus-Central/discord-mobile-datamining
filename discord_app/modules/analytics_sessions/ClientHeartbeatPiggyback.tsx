@@ -1,6 +1,6 @@
-// === Module 7223: getClientHeartbeatPiggybackProperties ===
+// === Module 7224: getClientHeartbeatPiggybackProperties ===
 
-// Module 7223 (getClientHeartbeatPiggybackProperties)
+// Module 7224 (getClientHeartbeatPiggybackProperties)
 import initializeDefault from "initialize" /* 4501 */;
 
 initializeDefault;

@@ -1,6 +1,6 @@
-// === Module 7663: MemberVerificationAlertSuccess ===
+// === Module 7666: MemberVerificationAlertSuccess ===
 
-// Module 7663 (MemberVerificationAlertSuccess)
+// Module 7666 (MemberVerificationAlertSuccess)
 import noopAll from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4470 */;

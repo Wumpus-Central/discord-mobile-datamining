@@ -1,9 +1,9 @@
-// === Module 11888: RecommendationAppRow ===
+// === Module 11894: RecommendationAppRow ===
 
-// Module 11888 (RecommendationAppRow)
+// Module 11894 (RecommendationAppRow)
 import noopAll from "noop" /* 19 */;
 import getAvatarURLDefault from "getAvatarURL" /* 1430 */;
-import AppRowLabel from "AppRowLabel" /* 11878 */;
+import AppRowLabel from "AppRowLabel" /* 11884 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

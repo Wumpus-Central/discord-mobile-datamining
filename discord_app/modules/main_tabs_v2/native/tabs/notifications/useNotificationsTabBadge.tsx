@@ -1,8 +1,8 @@
-// === Module 16213: useNotificationsTabBadge ===
+// === Module 16232: useNotificationsTabBadge ===
 
-// Module 16213 (useNotificationsTabBadge)
+// Module 16232 (useNotificationsTabBadge)
 import closure_2 from "noop" /* 19 */;
-import closure_3 from "_validate" /* 7393 */;
+import closure_3 from "_validate" /* 7394 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/tabs/notifications/useNotificationsTabBadge.tsx");

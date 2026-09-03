@@ -1,9 +1,9 @@
-// === Module 12833: useHideFriendRequestNotes ===
+// === Module 12845: useHideFriendRequestNotes ===
 
-// Module 12833 (useHideFriendRequestNotes)
+// Module 12845 (useHideFriendRequestNotes)
 import set from "set" /* 2 */;
 import explicitContentFromProto from "explicitContentFromProto" /* 4166 */;
-import useUserIsTeen from "useUserIsTeen" /* 8786 */;
+import useUserIsTeen from "useUserIsTeen" /* 8790 */;
 
 const result = set.fileFinishedImporting("modules/people/HideFriendRequestNotesUtils.tsx");
 

@@ -1,6 +1,6 @@
-// === Module 11468: useShouldHideMediaOptions ===
+// === Module 11473: useShouldHideMediaOptions ===
 
-// Module 11468 (useShouldHideMediaOptions)
+// Module 11473 (useShouldHideMediaOptions)
 import closure_2 from "ensureGuildLoaded" /* 1386 */;
 import { ChannelFlags } from "set" /* 1393 */;
 

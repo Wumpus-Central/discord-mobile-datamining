@@ -1,10 +1,10 @@
-// === Module 15664: ListEdgeSpacer ===
+// === Module 15678: ListEdgeSpacer ===
 
-// Module 15664 (ListEdgeSpacer)
+// Module 15678 (ListEdgeSpacer)
 import ThemesDefault from "Themes" /* 709 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_6 from "updateCategoriesAndProducts" /* 7296 */;
+import closure_6 from "updateCategoriesAndProducts" /* 7297 */;
 import { CollectiblesMobileShopScreen as closure_7 } from "items" /* 675 */;
 import { UserSettingsSections } from "ME" /* 673 */;
 import jsxProd from "jsxProd" /* 21 */;

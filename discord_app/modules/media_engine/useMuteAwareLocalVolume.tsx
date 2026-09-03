@@ -1,6 +1,6 @@
-// === Module 10122: useMuteAwareLocalVolume ===
+// === Module 10126: useMuteAwareLocalVolume ===
 
-// Module 10122 (useMuteAwareLocalVolume)
+// Module 10126 (useMuteAwareLocalVolume)
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "_detectH265HardwareDecode" /* 4529 */;
 

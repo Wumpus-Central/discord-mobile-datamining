@@ -1,9 +1,9 @@
-// === Module 9720: ? ===
+// === Module 9724: ? ===
 
-// Module 9720
+// Module 9724
 import set from "set" /* 2 */;
 import createChannelRecord from "createChannelRecord" /* 1390 */;
-import _modDef4723 from "module_4723" /* 4723 */;
+import _modDef4724 from "module_4724" /* 4724 */;
 import closure_4 from "ensureGuildLoaded" /* 1386 */;
 
 const isGuildReadableType = createChannelRecord.isGuildReadableType;
@@ -15,7 +15,7 @@ export default {
   open(arg0, arg1, arg2, arg3) {
     const self = this;
     if (null != arg1) {
-      const obj2 = _modDef4723;
+      const obj2 = _modDef4724;
       const tmp = arg0;
       let obj = { channelType: null, guildId: null, categoryId: null, cloneChannelId: null, onChannelCreated: null };
       obj[0] = tmp;
@@ -34,13 +34,13 @@ export default {
           const obj = self(closure_1_2[2]);
         }
       };
-      obj2.pushLazy(self(2008)(9715, dependencyMap.paths), obj, CREATE_CHANNEL_MODAL_KEY);
+      obj2.pushLazy(self(2008)(9719, dependencyMap.paths), obj, CREATE_CHANNEL_MODAL_KEY);
       const tmp2 = arg2;
       let tmp3 = arg3;
-      const tmp9 = self(2008)(9715, dependencyMap.paths);
+      const tmp9 = self(2008)(9719, dependencyMap.paths);
     }
   },
   close() {
-    _modDef4723.popWithKey(CREATE_CHANNEL_MODAL_KEY);
+    _modDef4724.popWithKey(CREATE_CHANNEL_MODAL_KEY);
   }
 };

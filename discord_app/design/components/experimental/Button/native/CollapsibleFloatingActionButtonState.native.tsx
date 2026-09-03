@@ -1,6 +1,6 @@
-// === Module 9006: useCollapsibleFloatingActionButtonState ===
+// === Module 9010: useCollapsibleFloatingActionButtonState ===
 
-// Module 9006 (useCollapsibleFloatingActionButtonState)
+// Module 9010 (useCollapsibleFloatingActionButtonState)
 import _mod4217 from "module_4217" /* 4217 */;
 import closure_2 from "noop" /* 19 */;
 

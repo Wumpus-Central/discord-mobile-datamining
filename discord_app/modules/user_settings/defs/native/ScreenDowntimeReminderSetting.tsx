@@ -1,14 +1,14 @@
-// === Module 15342: toggle ===
+// === Module 15356: toggle ===
 
-// Module 15342 (toggle)
+// Module 15356 (toggle)
 import initialize from "initialize" /* 586 */;
 import getSystemLocale from "getSystemLocale" /* 1233 */;
-import apexExperiment from "apexExperiment" /* 7348 */;
-import useUserIdsForLinkStatus from "useUserIdsForLinkStatus" /* 8787 */;
-import useUserIsTeenAgeGroupDefault from "useUserIsTeenAgeGroup" /* 14740 */;
-import _modDef15343 from "module_15343" /* 15343 */;
-import closure_3 from "DesktopNotificationTypes" /* 10186 */;
-import createToggle from "createToggle" /* 11288 */;
+import apexExperiment from "apexExperiment" /* 7349 */;
+import useUserIdsForLinkStatus from "useUserIdsForLinkStatus" /* 8791 */;
+import useUserIsTeenAgeGroupDefault from "useUserIsTeenAgeGroup" /* 14755 */;
+import _modDef15357 from "module_15357" /* 15357 */;
+import closure_3 from "DesktopNotificationTypes" /* 10190 */;
+import createToggle from "createToggle" /* 11292 */;
 
 require = arg1;
 createToggle = {
@@ -26,7 +26,7 @@ createToggle = {
     return initialize.useStateFromStores(items, () => obj.screenDowntimeReminder);
   },
   onValueChange(screenDowntimeReminder) {
-    return _modDef15343.setScreenDowntimeReminder(screenDowntimeReminder);
+    return _modDef15357.setScreenDowntimeReminder(screenDowntimeReminder);
   },
   usePredicate() {
     let isFamilyCenterV3Enabled = apexExperiment.useIsFamilyCenterV3Enabled({ location: "ScreenDowntimeReminderSetting" });

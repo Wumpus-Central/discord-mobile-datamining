@@ -1,6 +1,6 @@
-// === Module 10045: useCanRaiseHand ===
+// === Module 10049: useCanRaiseHand ===
 
-// Module 10045 (useCanRaiseHand)
+// Module 10049 (useCanRaiseHand)
 import closure_2 from "getUncachedChannelPermissions" /* 4120 */;
 import { Permissions } from "sum" /* 502 */;
 

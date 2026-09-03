@@ -1,9 +1,9 @@
-// === Module 12991: ChannelPreview ===
+// === Module 13003: ChannelPreview ===
 
-// Module 12991 (ChannelPreview)
+// Module 13003 (ChannelPreview)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 709 */;
-import GuildIconSizesDefault from "GuildIconSizes" /* 6012 */;
+import GuildIconSizesDefault from "GuildIconSizes" /* 6013 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_4 from "createGuildRecordFromRust" /* 1908 */;
 import jsxProd from "jsxProd" /* 21 */;
@@ -51,7 +51,7 @@ export default function ChannelPreview(stageInstance) {
       const obj4 = { guild: null, size: null, selected: false };
       obj4[0] = stateFromStores;
       const hexWithOpacityResult = tmp2(4326).hexWithOpacity(tmp.borderColor.color, 0.08);
-      obj4[1] = tmp2(6012).GuildIconSizes.XXSMALL;
+      obj4[1] = tmp2(6013).GuildIconSizes.XXSMALL;
       const items3 = [callback(GuildIconSizesDefault, obj4), ];
       const obj5 = { style: null, variant: "text-sm/medium", color: "text-default", children: null };
       obj5[0] = tmp.guildName;

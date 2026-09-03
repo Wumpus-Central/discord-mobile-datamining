@@ -1,6 +1,6 @@
-// === Module 9886: useIsStreamRTCConnectionEmpty ===
+// === Module 9890: useIsStreamRTCConnectionEmpty ===
 
-// Module 9886 (useIsStreamRTCConnectionEmpty)
+// Module 9890 (useIsStreamRTCConnectionEmpty)
 import initialize from "initialize" /* 586 */;
 import closure_2 from "fetchFingerprint" /* 1215 */;
 import closure_3 from "createRTCConnection" /* 4554 */;

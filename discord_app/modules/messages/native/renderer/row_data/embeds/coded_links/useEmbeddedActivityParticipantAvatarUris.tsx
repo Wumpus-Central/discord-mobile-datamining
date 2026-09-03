@@ -1,6 +1,6 @@
-// === Module 13104: useEmbeddedActivityParticipantAvatarUris ===
+// === Module 13116: useEmbeddedActivityParticipantAvatarUris ===
 
-// Module 13104 (useEmbeddedActivityParticipantAvatarUris)
+// Module 13116 (useEmbeddedActivityParticipantAvatarUris)
 import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1470 */;
 import closure_2 from "noop" /* 19 */;
 import closure_3 from "participantFromServer" /* 1385 */;

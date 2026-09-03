@@ -1,10 +1,10 @@
-// === Module 12829: UserProfileMutuals ===
+// === Module 12841: UserProfileMutuals ===
 
-// Module 12829 (UserProfileMutuals)
+// Module 12841 (UserProfileMutuals)
 import noopAll from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import { UserProfileSections } from "USER_PROFILE_TOOLTIP_DELAY" /* 8569 */;
-import { DIVIDER_DOT } from "ARBITRARY_LARGE_OFFSET" /* 6009 */;
+import { UserProfileSections } from "USER_PROFILE_TOOLTIP_DELAY" /* 8573 */;
+import { DIVIDER_DOT } from "ARBITRARY_LARGE_OFFSET" /* 6010 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -22,11 +22,11 @@ export default function UserProfileMutuals(user) {
   dependencyMap = undefined;
   c3 = undefined;
   const tmp = callback2();
-  let obj = user(8571);
+  let obj = user(8575);
   const userProfileAnalyticsContext = obj.useUserProfileAnalyticsContext();
   ({ context: c2, trackUserProfileAction: c3 } = userProfileAnalyticsContext);
-  ({ mutualFriends, mutualGuilds } = guildId(9242)(user));
-  if (guildId(9244)(user)) {
+  ({ mutualFriends, mutualGuilds } = guildId(9246)(user));
+  if (guildId(9248)(user)) {
     let tmp7 = null != mutualFriends;
     if (tmp7) {
       tmp7 = mutualFriends.length > 0;
@@ -76,15 +76,15 @@ export default function UserProfileMutuals(user) {
       obj1[0] = tmp2(1296).AvatarSizes.SIZE_16;
       obj1[1] = mapped.length;
       obj1[2] = mapped.map((username) => username.username);
-      obj1[3] = mapped.map((id) => callback(user(_undefined[16]).Avatar, { user: id, size: user(_undefined[16]).AvatarSizes.SIZE_16, guildId: "r" }, id.id));
-      const items = [callback(tmp2(9440).AvatarPile, obj1), ];
+      obj1[3] = mapped.map((id) => callback(user(_undefined[16]).Avatar, { user: id, size: user(_undefined[16]).AvatarSizes.SIZE_16, guildId: "accessible" }, id.id));
+      const items = [callback(tmp2(9444).AvatarPile, obj1), ];
       const obj2 = { variant: null, color: null, children: null };
       obj2[0] = c8;
       obj2[1] = c9;
-      obj2[2] = tmp5(9274)(mutualFriends.length);
+      obj2[2] = tmp5(9278)(mutualFriends.length);
       items[1] = callback(tmp2(4474).Text, obj2);
       obj[3] = items;
-      tmp9Result = tmp9(tmp2(5076).PressableOpacity, obj);
+      tmp9Result = tmp9(tmp2(5077).PressableOpacity, obj);
     }
     const items1 = [tmp9Result, , ];
     let tmp15 = tmp7;
@@ -132,23 +132,23 @@ export default function UserProfileMutuals(user) {
       let tmp21 = !tmp7;
       if (!tmp7) {
         const obj5 = { size: null, totalCount: null, names: null, children: null };
-        obj5[0] = tmp2(6012).GuildIconSizes.XXSMALL;
+        obj5[0] = tmp2(6013).GuildIconSizes.XXSMALL;
         obj5[1] = mapped1.length;
         obj5[2] = mapped1.map((name) => name.name);
         obj5[3] = mapped1.map((guild) => {
           const obj = { guild, size: user(_undefined[20]).GuildIconSizes.XXSMALL };
           return callback(guildId(_undefined[20]), obj, guild.id);
         });
-        tmp21 = callback(tmp2(9283).GuildIconPile, obj5);
+        tmp21 = callback(tmp2(9287).GuildIconPile, obj5);
       }
       const items2 = [tmp21, ];
       const obj6 = { variant: null, color: null, children: null };
       obj6[0] = c8;
       obj6[1] = c9;
-      obj6[2] = tmp5(9247)(mutualGuilds.length);
+      obj6[2] = tmp5(9251)(mutualGuilds.length);
       items2[1] = callback(tmp2(4474).Text, obj6);
       obj4[3] = items2;
-      tmp9Result = tmp9(tmp2(5076).PressableOpacity, obj4);
+      tmp9Result = tmp9(tmp2(5077).PressableOpacity, obj4);
     }
     items1[2] = tmp9Result;
     obj[1] = items1;
@@ -156,5 +156,5 @@ export default function UserProfileMutuals(user) {
   } else {
     return null;
   }
-  const tmp6 = guildId(9242)(user);
+  const tmp6 = guildId(9246)(user);
 };

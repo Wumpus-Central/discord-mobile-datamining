@@ -1,11 +1,11 @@
-// === Module 15681: route ===
+// === Module 15695: route ===
 
-// Module 15681 (route)
+// Module 15695 (route)
 import set from "set" /* 2 */;
 import ME from "ME" /* 673 */;
 import getSystemLocale from "getSystemLocale" /* 1233 */;
-import MobileUserSettings from "MobileUserSettings" /* 7893 */;
-import createToggle from "createToggle" /* 11288 */;
+import MobileUserSettings from "MobileUserSettings" /* 7896 */;
+import createToggle from "createToggle" /* 11292 */;
 
 obj = {
   useTitle() {
@@ -19,7 +19,7 @@ obj = {
 obj = {
   route: ME.UserSettingsSections.SECURE_FRAMES_VERIFIED_DEVICES,
   getComponent() {
-    return require(15682) /* VerificationListItem */.default;
+    return require(15696) /* VerificationListItem */.default;
   }
 };
 const route = createToggle.createRoute(obj);

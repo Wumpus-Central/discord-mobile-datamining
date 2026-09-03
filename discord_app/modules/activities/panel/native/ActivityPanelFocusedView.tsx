@@ -1,16 +1,16 @@
-// === Module 16839: BaseActivityPanelFocusedView ===
+// === Module 16859: BaseActivityPanelFocusedView ===
 
-// Module 16839 (BaseActivityPanelFocusedView)
+// Module 16859 (BaseActivityPanelFocusedView)
 import ThemesDefault from "Themes" /* 709 */;
 import importAllResult from "noop" /* 19 */;
 import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4470 */;
 import closure_5 from "ensureGuildLoaded" /* 1386 */;
 import closure_6 from "participantFromServer" /* 1385 */;
 import { ActivityLayoutMode } from "items3" /* 4506 */;
-import ActivityPanelModes from "ActivityPanelModes" /* 9479 */;
-import DEFAULT_PORTRAIT_SAFE_AREAS_CONFIG from "DEFAULT_PORTRAIT_SAFE_AREAS_CONFIG" /* 16834 */;
+import ActivityPanelModes from "ActivityPanelModes" /* 9483 */;
+import DEFAULT_PORTRAIT_SAFE_AREAS_CONFIG from "DEFAULT_PORTRAIT_SAFE_AREAS_CONFIG" /* 16854 */;
 import { ThemeTypes } from "ME" /* 673 */;
-import { IS_IOS } from "VoicePanelModes" /* 12063 */;
+import { IS_IOS } from "VoicePanelModes" /* 12069 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 

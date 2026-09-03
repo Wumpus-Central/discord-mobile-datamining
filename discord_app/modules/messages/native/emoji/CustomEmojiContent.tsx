@@ -1,10 +1,10 @@
-// === Module 9193: CustomEmojiContent ===
+// === Module 9197: CustomEmojiContent ===
 
-// Module 9193 (CustomEmojiContent)
+// Module 9197 (CustomEmojiContent)
 import ThemesDefault from "Themes" /* 709 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_7 from "computeRolesForGuild" /* 5410 */;
+import closure_7 from "computeRolesForGuild" /* 5411 */;
 import closure_8 from "handleConnectionOpen" /* 4299 */;
 import closure_9 from "mergeGuildAvatar" /* 1921 */;
 import ME from "ME" /* 673 */;

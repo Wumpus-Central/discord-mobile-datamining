@@ -1,14 +1,14 @@
-// === Module 17637: syncYYTextReplacementExperiment ===
+// === Module 17657: syncYYTextReplacementExperiment ===
 
-// Module 17637 (syncYYTextReplacementExperiment)
+// Module 17657 (syncYYTextReplacementExperiment)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import sendRequest from "sendRequest" /* 527 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 695 */;
 import set2 from "set" /* 1234 */;
-import initializeDefault from "initialize" /* 5494 */;
-import shouldEnableYYTextReplacement from "shouldEnableYYTextReplacement" /* 17638 */;
-import apexExperimentDefault from "apexExperiment" /* 17640 */;
+import initializeDefault from "initialize" /* 5495 */;
+import shouldEnableYYTextReplacement from "shouldEnableYYTextReplacement" /* 17658 */;
+import apexExperimentDefault from "apexExperiment" /* 17660 */;
 import closure_4 from "_getSystemLocale" /* 1995 */;
 import closure_5 from "fetchFingerprint" /* 1215 */;
 
@@ -30,7 +30,7 @@ function updateIOSExperiments() {
     if (NSUserDefaultsBridge != null) {
       const setShouldEnableYYTextReplacement = NSUserDefaultsBridge.setShouldEnableYYTextReplacement;
       if (setShouldEnableYYTextReplacement != null) {
-        let tmpResult = tmp(17638);
+        let tmpResult = tmp(17658);
         const result = setShouldEnableYYTextReplacement(tmpResult.shouldEnableYYTextReplacement({ location: "NativeExperimentBridgeManager" }));
       }
     }
@@ -39,7 +39,7 @@ function updateIOSExperiments() {
   if (NSUserDefaultsBridge2 != null) {
     const setShouldFixPushNotificationRawPayload = NSUserDefaultsBridge2.setShouldFixPushNotificationRawPayload;
     if (setShouldFixPushNotificationRawPayload != null) {
-      tmpResult = tmp(5227);
+      tmpResult = tmp(5228);
       const result1 = setShouldFixPushNotificationRawPayload(tmpResult.isIOSPushNotificationRawPayloadFixExperimentEnabled());
     }
   }

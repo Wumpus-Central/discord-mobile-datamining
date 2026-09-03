@@ -1,10 +1,10 @@
-// === Module 7038: SoundboardSpotIllustration ===
+// === Module 7039: SoundboardSpotIllustration ===
 
-// Module 7038 (SoundboardSpotIllustration)
+// Module 7039 (SoundboardSpotIllustration)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5501 */;
-import metadataDefault from "metadata" /* 7039 */;
+import preloadDefault from "preload" /* 5502 */;
+import metadataDefault from "metadata" /* 7040 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/SoundboardSpotIllustration.native.tsx");

@@ -1,6 +1,6 @@
-// === Module 15396: UserSettingsPushNotificationLogs ===
+// === Module 15410: UserSettingsPushNotificationLogs ===
 
-// Module 15396 (UserSettingsPushNotificationLogs)
+// Module 15410 (UserSettingsPushNotificationLogs)
 import ThemesDefault from "Themes" /* 709 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
@@ -158,7 +158,7 @@ export default function UserSettingsPushNotificationLogs() {
   callback2 = tmp9;
   let obj = { style: tmp9.wrap, children: null };
   obj = { style: tmp9.searchWrap, children: null };
-  let items1 = [callback3(first(6230).SearchField, { size: "md", placeholder: "Filter (regex)", onChange: tmp[1], defaultValue: first }), ];
+  let items1 = [callback3(first(6231).SearchField, { size: "md", placeholder: "Filter (regex)", onChange: tmp[1], defaultValue: first }), ];
   obj = { style: tmp9.shareButton, accessibilityLabel: null, onPress: null, children: null };
   const intl = first(1233).intl;
   obj[1] = intl.string(first(1233).t.leICvh);
@@ -195,7 +195,7 @@ export default function UserSettingsPushNotificationLogs() {
             dependencyMap = 1;
             c3 = 1;
             obj1 = { value: null, done: false };
-            obj1[0] = closure_1_1(10296)();
+            obj1[0] = closure_1_1(10300)();
             return obj1;
           }
         } else if (arg0 === 1) {
@@ -208,9 +208,9 @@ export default function UserSettingsPushNotificationLogs() {
           return obj2;
         } else {
           closure_0 = arg1;
-          obj = closure_1_0(8647);
+          obj = closure_1_0(8651);
           const obj3 = { message: null };
-          obj3[0] = closure_1_1(10297)(closure_0, false);
+          obj3[0] = closure_1_1(10301)(closure_0, false);
           obj.showShareActionSheet(obj3, "push-notification-logs");
           c3 = 3;
           return { value: "HermesInternal", done: null };
@@ -221,8 +221,8 @@ export default function UserSettingsPushNotificationLogs() {
       }
     }
   });
-  obj[3] = callback3(first(13000).ShareIcon, {});
-  items1[1] = callback3(first(5076).PressableOpacity, obj);
+  obj[3] = callback3(first(13012).ShareIcon, {});
+  items1[1] = callback3(first(5077).PressableOpacity, obj);
   obj[1] = items1;
   let items2 = [callback4(View, obj), ];
   obj1 = { contentContainerStyle: null, data: null, renderItem: null };
@@ -248,7 +248,7 @@ export default function UserSettingsPushNotificationLogs() {
     obj[1] = items;
     return closure_1_8(closure_1_6, obj, item.index);
   };
-  items2[1] = callback3(first(8113).FlashList, obj1);
+  items2[1] = callback3(first(8116).FlashList, obj1);
   obj[1] = items2;
   return callback4(View, obj);
 };

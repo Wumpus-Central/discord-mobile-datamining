@@ -1,6 +1,6 @@
-// === Module 12042: PortalKeyboardPlaceholderInner ===
+// === Module 12048: PortalKeyboardPlaceholderInner ===
 
-// Module 12042 (PortalKeyboardPlaceholderInner)
+// Module 12048 (PortalKeyboardPlaceholderInner)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 709 */;
 import set from "set" /* 1234 */;
@@ -9,9 +9,9 @@ import KeyboardTypes from "KeyboardTypes" /* 1625 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
 import useSystemKeyboardHeightDefault from "useSystemKeyboardHeight" /* 1893 */;
 import useKeyboardTypeDefault from "useKeyboardType" /* 4342 */;
-import useCustomKeyboardHeightDefault from "useCustomKeyboardHeight" /* 5605 */;
-import useGradientBottom from "useGradientBottom" /* 7626 */;
-import useIsWindowLargeDefault from "useIsWindowLarge" /* 7727 */;
+import useCustomKeyboardHeightDefault from "useCustomKeyboardHeight" /* 5606 */;
+import useGradientBottom from "useGradientBottom" /* 7627 */;
+import useIsWindowLargeDefault from "useIsWindowLarge" /* 7730 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;

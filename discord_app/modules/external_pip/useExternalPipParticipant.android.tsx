@@ -1,6 +1,6 @@
-// === Module 16821: useExternalPipParticipant ===
+// === Module 16841: useExternalPipParticipant ===
 
-// Module 16821 (useExternalPipParticipant)
+// Module 16841 (useExternalPipParticipant)
 import closure_2 from "_slicedToArray" /* 32 */;
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "getParticipants" /* 4494 */;

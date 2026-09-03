@@ -1,9 +1,9 @@
-// === Module 9958: getHasImportantUnread ===
+// === Module 9962: getHasImportantUnread ===
 
-// Module 9958 (getHasImportantUnread)
+// Module 9962 (getHasImportantUnread)
 import closure_2 from "generateOldThreadCutoff" /* 4493 */;
-import closure_3 from "updateUserGuildSettingsInternal" /* 4701 */;
-import { UnreadSetting } from "ReadStateTypes" /* 4702 */;
+import closure_3 from "updateUserGuildSettingsInternal" /* 4702 */;
+import { UnreadSetting } from "ReadStateTypes" /* 4703 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/read_states/ReadStateUtils.tsx");

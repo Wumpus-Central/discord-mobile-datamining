@@ -1,7 +1,7 @@
-// === Module 9365: FederatedSocialModal ===
+// === Module 9369: FederatedSocialModal ===
 
-// Module 9365 (FederatedSocialModal)
-import getPlatformUserUrlDefault from "getPlatformUserUrl" /* 5235 */;
+// Module 9369 (FederatedSocialModal)
+import getPlatformUserUrlDefault from "getPlatformUserUrl" /* 5236 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
@@ -30,7 +30,7 @@ export default function FederatedSocialModal(platformType) {
   let obj = { headerTitle: null, headerLeft: null, render: null };
   let intl2 = _require(1233).intl;
   obj[0] = intl2.formatToPlainString(_require(1233).t["ImMhq+"], { serviceName: name });
-  obj[1] = _require(5503).getHeaderBackButton(platformType.onClose);
+  obj[1] = _require(5504).getHeaderBackButton(platformType.onClose);
   obj[2] = function render() {
     ({ location: closure_0, successRedirect: closure_1, platformType } = platformType);
     const onClose = platformType.onClose;
@@ -190,5 +190,5 @@ export default function FederatedSocialModal(platformType) {
     return closure_1_8(platformType(closure_1_2[11]).SafeAreaPaddingView, obj);
   };
   screens[0] = obj;
-  return callback(_require(6016).Navigator, { initialRouteName: "root", screens });
+  return callback(_require(6017).Navigator, { initialRouteName: "root", screens });
 };

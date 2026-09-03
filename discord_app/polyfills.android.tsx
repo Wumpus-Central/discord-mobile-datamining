@@ -1,9 +1,9 @@
-// === Module 14074: toLocaleLowerCase ===
+// === Module 14090: toLocaleLowerCase ===
 
-// Module 14074 (toLocaleLowerCase)
+// Module 14090 (toLocaleLowerCase)
 import set from "set" /* 2 */;
-import addLikelySubtags from "addLikelySubtags" /* 14075 */;
-import module_14171 from "module_14171" /* 14171 */;
+import addLikelySubtags from "addLikelySubtags" /* 14091 */;
+import module_14187 from "module_14187" /* 14187 */;
 
 String.prototype.toLocaleLowerCase = function toLocaleLowerCase() {
   const self = this;

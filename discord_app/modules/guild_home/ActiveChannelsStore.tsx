@@ -1,6 +1,6 @@
-// === Module 13581: truncateOldMessageData ===
+// === Module 13596: truncateOldMessageData ===
 
-// Module 13581 (truncateOldMessageData)
+// Module 13596 (truncateOldMessageData)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 586 */;

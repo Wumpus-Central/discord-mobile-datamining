@@ -1,6 +1,6 @@
-// === Module 9938: openInstantInviteActionSheet ===
+// === Module 9942: openInstantInviteActionSheet ===
 
-// Module 9938 (openInstantInviteActionSheet)
+// Module 9942 (openInstantInviteActionSheet)
 import set from "set" /* 2 */;
 import encodeProperties from "encodeProperties" /* 500 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2008 */;
@@ -19,5 +19,5 @@ export default function openInstantInviteActionSheet(invite_channel_id) {
   const merged = Object.assign(invite_channel_id);
   obj.impressionName = encodeProperties.ImpressionNames.GUILD_INVITE;
   obj.impressionProperties = { invite_channel_id: invite_channel_id.channel.id, invite_guild_id: invite_channel_id.channel.guild_id };
-  obj.openLazy(asyncRequireImpl(9939, dependencyMap.paths), combined, obj, invite_channel_id.stackingBehavior);
+  obj.openLazy(asyncRequireImpl(9943, dependencyMap.paths), combined, obj, invite_channel_id.stackingBehavior);
 };

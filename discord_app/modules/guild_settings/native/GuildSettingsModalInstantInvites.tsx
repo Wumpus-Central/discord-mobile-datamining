@@ -1,18 +1,18 @@
-// === Module 17466: InvitesDisabledRow ===
+// === Module 17486: InvitesDisabledRow ===
 
-// Module 17466 (InvitesDisabledRow)
+// Module 17486 (InvitesDisabledRow)
 import getSystemLocale from "getSystemLocale" /* 1233 */;
 import combinedDefault from "combined" /* 1994 */;
-import registerAssetDefault from "registerAsset" /* 7689 */;
-import TableCheckboxRow from "TableCheckboxRow" /* 7692 */;
+import registerAssetDefault from "registerAsset" /* 7692 */;
+import TableCheckboxRow from "TableCheckboxRow" /* 7695 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_6 from "computeAlertSettings" /* 10185 */;
-import importDefaultResult from "createFromServer" /* 8666 */;
+import closure_6 from "computeAlertSettings" /* 10189 */;
+import importDefaultResult from "createFromServer" /* 8670 */;
 import closure_7 from "ensureGuildLoaded" /* 1386 */;
 import closure_8 from "createGuildRecordFromRust" /* 1908 */;
-import closure_9 from "handleFormInit" /* 9751 */;
+import closure_9 from "handleFormInit" /* 9755 */;
 import ME from "ME" /* 673 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
@@ -222,7 +222,7 @@ export default function ConnectedGuildSettingsModalInstantInvites(guildId) {
     obj[0] = stateFromStores;
     obj[1] = tmp5;
     obj[2] = guildId.contentContainerStyle;
-    const items1 = [callback(GuildSettingsModalInstantInvites, obj), callback(guildId(5947).NavScrim, {})];
+    const items1 = [callback(GuildSettingsModalInstantInvites, obj), callback(guildId(5948).NavScrim, {})];
     obj[0] = items1;
     tmp6 = callback2(closure_13, obj);
   }

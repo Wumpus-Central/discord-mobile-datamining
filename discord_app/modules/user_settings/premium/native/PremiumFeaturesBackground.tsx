@@ -1,10 +1,10 @@
-// === Module 8103: PremiumFeaturesBackground ===
+// === Module 8106: PremiumFeaturesBackground ===
 
-// Module 8103 (PremiumFeaturesBackground)
+// Module 8106 (PremiumFeaturesBackground)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 709 */;
-import LinearGradientDefault from "LinearGradient" /* 4940 */;
-import { Gradients } from "items" /* 7186 */;
+import LinearGradientDefault from "LinearGradient" /* 4941 */;
+import { Gradients } from "items" /* 7187 */;
 import { PremiumTypes } from "GuildFeatures" /* 1923 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;

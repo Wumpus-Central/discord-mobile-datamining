@@ -1,8 +1,8 @@
-// === Module 16953: useCameraEncodeError ===
+// === Module 16973: useCameraEncodeError ===
 
-// Module 16953 (useCameraEncodeError)
+// Module 16973 (useCameraEncodeError)
 import closure_2 from "fetchFingerprint" /* 1215 */;
-import closure_3 from "isAVErrorContextOfType" /* 9577 */;
+import closure_3 from "isAVErrorContextOfType" /* 9581 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/errors/hooks/useCameraEncodeError.tsx");

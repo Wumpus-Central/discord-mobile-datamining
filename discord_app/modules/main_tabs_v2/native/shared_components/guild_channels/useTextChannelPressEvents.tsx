@@ -1,6 +1,6 @@
-// === Module 16805: useTextChannelPressEvents ===
+// === Module 16825: useTextChannelPressEvents ===
 
-// Module 16805 (useTextChannelPressEvents)
+// Module 16825 (useTextChannelPressEvents)
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "ensureGuildLoaded" /* 1386 */;
 

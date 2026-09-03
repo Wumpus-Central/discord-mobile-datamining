@@ -1,6 +1,6 @@
-// === Module 12325: useAvailableBoostCountForPowerup ===
+// === Module 12337: useAvailableBoostCountForPowerup ===
 
-// Module 12325 (useAvailableBoostCountForPowerup)
+// Module 12337 (useAvailableBoostCountForPowerup)
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "createGuildRecordFromRust" /* 1908 */;
 import closure_5 from "calculateAppliedBoosts" /* 4364 */;

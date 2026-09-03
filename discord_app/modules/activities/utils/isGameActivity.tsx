@@ -1,6 +1,6 @@
-// === Module 9262: isGameActivity ===
+// === Module 9266: isGameActivity ===
 
-// Module 9262 (isGameActivity)
+// Module 9266 (isGameActivity)
 import set from "set" /* 2 */;
 import ME from "ME" /* 673 */;
 

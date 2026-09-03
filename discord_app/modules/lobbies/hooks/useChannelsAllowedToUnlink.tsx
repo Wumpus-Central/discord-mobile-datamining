@@ -1,6 +1,6 @@
-// === Module 17344: getChannelsAllowedToUnlink ===
+// === Module 17364: getChannelsAllowedToUnlink ===
 
-// Module 17344 (getChannelsAllowedToUnlink)
+// Module 17364 (getChannelsAllowedToUnlink)
 import closure_2 from "comparator" /* 1981 */;
 import { GUILD_SELECTABLE_CHANNELS_KEY as closure_3 } from "comparator" /* 1981 */;
 import closure_4 from "getUncachedChannelPermissions" /* 4120 */;

@@ -1,21 +1,21 @@
-// === Module 16318: AddEmojiButton ===
+// === Module 16337: AddEmojiButton ===
 
-// Module 16318 (AddEmojiButton)
+// Module 16337 (AddEmojiButton)
 import ThemesDefault from "Themes" /* 709 */;
 import getSystemLocale from "getSystemLocale" /* 1233 */;
 import set from "set" /* 1234 */;
 import MAX_REACTIONS from "MAX_REACTIONS" /* 4132 */;
 import hexToRgba from "hexToRgba" /* 4326 */;
-import PressableBase from "PressableBase" /* 5076 */;
-import checkReactionResponse from "checkReactionResponse" /* 7518 */;
-import ForwardingIconDefault from "ForwardingIcon" /* 11494 */;
-import ArrowAngleLeftUpIcon from "ArrowAngleLeftUpIcon" /* 11534 */;
+import PressableBase from "PressableBase" /* 5077 */;
+import checkReactionResponse from "checkReactionResponse" /* 7519 */;
+import ForwardingIconDefault from "ForwardingIcon" /* 11499 */;
+import ArrowAngleLeftUpIcon from "ArrowAngleLeftUpIcon" /* 11539 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_8 from "updateState" /* 6159 */;
+import closure_8 from "updateState" /* 6160 */;
 import closure_9 from "ensureGuildLoaded" /* 1386 */;
-import closure_10 from "recomputeGuild" /* 5365 */;
+import closure_10 from "recomputeGuild" /* 5366 */;
 import closure_11 from "getUncachedChannelPermissions" /* 4120 */;
 import ME from "ME" /* 673 */;
 import { EmojiIntention } from "set" /* 1924 */;

@@ -1,6 +1,6 @@
-// === Module 8009: useChangelog ===
+// === Module 8012: useChangelog ===
 
-// Module 8009 (useChangelog)
+// Module 8012 (useChangelog)
 import defaultAreStatesEqual from "defaultAreStatesEqual" /* 644 */;
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "_getSystemLocale" /* 1995 */;

@@ -1,6 +1,6 @@
-// === Module 7594: _fileSize ===
+// === Module 7595: _fileSize ===
 
-// Module 7594 (_fileSize)
+// Module 7595 (_fileSize)
 import timestampDefault from "timestamp" /* 3 */;
 import applyDefault from "apply" /* 12 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;

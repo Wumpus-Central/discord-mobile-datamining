@@ -1,10 +1,10 @@
-// === Module 11043: PremiumGiftingPromotionSuccessActions ===
+// === Module 11047: PremiumGiftingPromotionSuccessActions ===
 
-// Module 11043 (PremiumGiftingPromotionSuccessActions)
+// Module 11047 (PremiumGiftingPromotionSuccessActions)
 import ThemesDefault from "Themes" /* 709 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import { isAvatarDecorationRecord, isNameplateRecord } from "fromServer" /* 7301 */;
+import { isAvatarDecorationRecord, isNameplateRecord } from "fromServer" /* 7302 */;
 import closure_7 from "mergeGuildAvatar" /* 1921 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;

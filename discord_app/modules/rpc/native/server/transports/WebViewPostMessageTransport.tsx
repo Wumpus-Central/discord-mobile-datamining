@@ -1,10 +1,10 @@
-// === Module 9512: ? ===
+// === Module 9516: ? ===
 
-// Module 9512
+// Module 9516
 import timestampDefault from "timestamp" /* 3 */;
-import stripSensitiveLoggingDataDefault from "stripSensitiveLoggingData" /* 9513 */;
-import loggerDefault from "logger" /* 9524 */;
-import importDefaultResult from "map" /* 9514 */;
+import stripSensitiveLoggingDataDefault from "stripSensitiveLoggingData" /* 9517 */;
+import loggerDefault from "logger" /* 9528 */;
+import importDefaultResult from "map" /* 9518 */;
 
 importDefaultResult = new importDefaultResult(require("validateSocketClient").validateSocketClient, new timestampDefault("RPCServer:PostMessage"), loggerDefault, (arg0, info, id) => {
   const combined = "Socket Message: " + id.id;

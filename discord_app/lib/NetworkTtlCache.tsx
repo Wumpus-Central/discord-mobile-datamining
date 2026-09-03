@@ -1,6 +1,6 @@
-// === Module 13602: NetworkTtlCacheStatus ===
+// === Module 13617: NetworkTtlCacheStatus ===
 
-// Module 13602 (NetworkTtlCacheStatus)
+// Module 13617 (NetworkTtlCacheStatus)
 import set from "set" /* 2 */;
 
 let closure_0 = { IDLE: "idle", LOADING: "loading", SUCCESS: "success", ERROR: "error" };

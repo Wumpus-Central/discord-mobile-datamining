@@ -1,6 +1,6 @@
-// === Module 13015: shouldShowVoiceChannelChangeConfirmation ===
+// === Module 13027: shouldShowVoiceChannelChangeConfirmation ===
 
-// Module 13015 (shouldShowVoiceChannelChangeConfirmation)
+// Module 13027 (shouldShowVoiceChannelChangeConfirmation)
 import closure_0 from "set" /* 4495 */;
 import closure_1 from "CHANNEL_SIDEBAR_WIDTH" /* 1303 */;
 import closure_2 from "fetchFingerprint" /* 1215 */;

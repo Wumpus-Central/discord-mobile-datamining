@@ -1,12 +1,12 @@
-// === Module 6122: useCanManageGuildOfficialMessages ===
+// === Module 6123: useCanManageGuildOfficialMessages ===
 
-// Module 6122 (useCanManageGuildOfficialMessages)
+// Module 6123 (useCanManageGuildOfficialMessages)
 import int2hslRaw from "int2hslRaw" /* 685 */;
 import nDefault from "n" /* 686 */;
 import hexToRgba from "hexToRgba" /* 4326 */;
-import experimentDefault from "experiment" /* 6123 */;
-import useCanStartPrivateThread from "useCanStartPrivateThread" /* 6124 */;
-import isSystemMessageDefault from "isSystemMessage" /* 6125 */;
+import experimentDefault from "experiment" /* 6124 */;
+import useCanStartPrivateThread from "useCanStartPrivateThread" /* 6125 */;
+import isSystemMessageDefault from "isSystemMessage" /* 6126 */;
 import closure_3 from "createGuildRecordFromRust" /* 1908 */;
 import closure_4 from "getUncachedChannelPermissions" /* 4120 */;
 import { GUILD_OFFICIAL_HIGHLIGHT_ALPHA as closure_5 } from "MESSAGE_GROUP_SPACING" /* 4471 */;

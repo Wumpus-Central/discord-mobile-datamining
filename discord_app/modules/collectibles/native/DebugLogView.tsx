@@ -1,11 +1,11 @@
-// === Module 15670: DebugLogView ===
+// === Module 15684: DebugLogView ===
 
-// Module 15670 (DebugLogView)
+// Module 15684 (DebugLogView)
 import ThemesDefault from "Themes" /* 709 */;
 import closure_2 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_6 from "getUserAgnosticState" /* 4477 */;
-import useCollectiblesDebugStore from "useCollectiblesDebugStore" /* 7311 */;
+import useCollectiblesDebugStore from "useCollectiblesDebugStore" /* 7312 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 

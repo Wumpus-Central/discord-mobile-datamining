@@ -1,6 +1,6 @@
-// === Module 12799: useHandleBuyNow ===
+// === Module 12811: useHandleBuyNow ===
 
-// Module 12799 (useHandleBuyNow)
+// Module 12811 (useHandleBuyNow)
 import timestampDefault from "timestamp" /* 3 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
@@ -49,7 +49,7 @@ function useHandleBuyNow(product) {
               v0 = 1;
               dependencyMap = 1;
               obj1 = { value: null, done: false };
-              obj1[0] = closure_1_0(7295).fetchCollectiblesPurchases();
+              obj1[0] = closure_1_0(7296).fetchCollectiblesPurchases();
               return obj1;
             }
           } else if (arg0 === 1) {
@@ -64,7 +64,7 @@ function useHandleBuyNow(product) {
             callback(false);
             obj = v0(4445);
             obj.hideActionSheet();
-            obj1 = v0(11044);
+            obj1 = v0(11048);
             const obj3 = { product: null, useCategoryImage: true };
             obj3[0] = closure_0;
             obj1.open(obj3);

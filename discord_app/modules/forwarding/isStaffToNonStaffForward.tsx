@@ -1,6 +1,6 @@
-// === Module 11491: isStaffToNonStaffForward ===
+// === Module 11496: isStaffToNonStaffForward ===
 
-// Module 11491 (isStaffToNonStaffForward)
+// Module 11496 (isStaffToNonStaffForward)
 import closure_0 from "ensureGuildLoaded" /* 1386 */;
 import closure_1 from "createGuildRecordFromRust" /* 1908 */;
 import closure_2 from "mergeGuildAvatar" /* 1921 */;

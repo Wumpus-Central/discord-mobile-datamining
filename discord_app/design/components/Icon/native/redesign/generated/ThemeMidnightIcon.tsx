@@ -1,10 +1,10 @@
-// === Module 15094: ThemeMidnightIcon ===
+// === Module 15109: ThemeMidnightIcon ===
 
-// Module 15094 (ThemeMidnightIcon)
+// Module 15109 (ThemeMidnightIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 709 */;
 import BaseIconImage from "BaseIconImage" /* 4196 */;
-import registerAsset from "registerAsset" /* 15095 */;
+import registerAsset from "registerAsset" /* 15110 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

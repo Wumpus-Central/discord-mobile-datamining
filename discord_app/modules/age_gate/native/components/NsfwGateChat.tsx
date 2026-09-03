@@ -1,11 +1,11 @@
-// === Module 12425: NsfwGateChat ===
+// === Module 12437: NsfwGateChat ===
 
-// Module 12425 (NsfwGateChat)
+// Module 12437 (NsfwGateChat)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 709 */;
 import getSystemLocale from "getSystemLocale" /* 1233 */;
 import Text from "Text" /* 4474 */;
-import registerAssetDefault from "registerAsset" /* 12426 */;
+import registerAssetDefault from "registerAsset" /* 12438 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;

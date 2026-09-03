@@ -1,10 +1,10 @@
-// === Module 7875: buildPlatformedThemedEmojiColorPalette ===
+// === Module 7878: buildPlatformedThemedEmojiColorPalette ===
 
-// Module 7875 (buildPlatformedThemedEmojiColorPalette)
+// Module 7878 (buildPlatformedThemedEmojiColorPalette)
 import set from "set" /* 2 */;
 import hexToRgba from "hexToRgba" /* 4326 */;
 import hslToRgbDefault from "hslToRgb" /* 4327 */;
-import getURLDefault from "getURL" /* 7537 */;
+import getURLDefault from "getURL" /* 7538 */;
 
 function buildPlatformedThemedEmojiColorPalette(shouldProcessMobileColors) {
   ({ colors, saturationFactor } = shouldProcessMobileColors);

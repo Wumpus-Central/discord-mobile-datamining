@@ -1,15 +1,15 @@
-// === Module 12235: SpamMessageRequestHamActionSheet ===
+// === Module 12247: SpamMessageRequestHamActionSheet ===
 
-// Module 12235 (SpamMessageRequestHamActionSheet)
+// Module 12247 (SpamMessageRequestHamActionSheet)
 import initialize from "initialize" /* 586 */;
 import ThemesDefault from "Themes" /* 709 */;
 import getSystemLocale from "getSystemLocale" /* 1233 */;
-import Button from "Button" /* 4928 */;
-import RedesignBottomSheetTitleHeaderBase from "RedesignBottomSheetTitleHeaderBase" /* 5629 */;
-import Background from "Background" /* 5630 */;
-import ActionSheetCloseButton from "ActionSheetCloseButton" /* 5998 */;
-import Form from "Form" /* 8372 */;
-import useMessageRequestActions from "useMessageRequestActions" /* 12230 */;
+import Button from "Button" /* 4929 */;
+import RedesignBottomSheetTitleHeaderBase from "RedesignBottomSheetTitleHeaderBase" /* 5630 */;
+import Background from "Background" /* 5631 */;
+import ActionSheetCloseButton from "ActionSheetCloseButton" /* 5999 */;
+import Form from "Form" /* 8376 */;
+import useMessageRequestActions from "useMessageRequestActions" /* 12242 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
@@ -50,7 +50,7 @@ export default function SpamMessageRequestHamActionSheet(arg0) {
       obj = { key: "MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE", content: null, icon: null };
       const intl = recipientId(1233).intl;
       obj[1] = intl.string(recipientId(1233).t["EDYbS+"]);
-      obj[2] = callback(7689);
+      obj[2] = callback(7692);
       obj.open(obj);
     },
     onAcceptSuccess(arg0) {

@@ -1,6 +1,6 @@
-// === Module 14045: Badge ===
+// === Module 14061: Badge ===
 
-// Module 14045 (Badge)
+// Module 14061 (Badge)
 import ThemesDefault from "Themes" /* 709 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
@@ -118,7 +118,7 @@ class Badge {
         items4[0] = items2.badgeText;
         items4[1] = textStyle;
         obj3[0] = items4;
-        tmp11 = require("module_8400");
+        tmp11 = require("module_8404");
         tmpResult2 = require("shortenAndLocalizeNumber");
         tmp12 = globalThis;
         _Math = Math;

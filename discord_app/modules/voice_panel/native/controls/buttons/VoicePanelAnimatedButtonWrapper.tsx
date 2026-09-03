@@ -1,9 +1,9 @@
-// === Module 17001: AnimatedButtonWrapper ===
+// === Module 17021: AnimatedButtonWrapper ===
 
-// Module 17001 (AnimatedButtonWrapper)
+// Module 17021 (AnimatedButtonWrapper)
 import ThemesDefault from "Themes" /* 709 */;
 import closure_3 from "noop" /* 19 */;
-import { MODE_CHANGE_PHYSICS } from "VoicePanelModes" /* 12063 */;
+import { MODE_CHANGE_PHYSICS } from "VoicePanelModes" /* 12069 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 import importDefaultResult from "module_4217" /* 4217 */;

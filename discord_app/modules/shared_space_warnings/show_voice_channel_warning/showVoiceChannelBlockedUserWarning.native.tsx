@@ -1,11 +1,11 @@
-// === Module 13616: showVoiceChannelBlockedUserWarning ===
+// === Module 13631: showVoiceChannelBlockedUserWarning ===
 
-// Module 13616 (showVoiceChannelBlockedUserWarning)
+// Module 13631 (showVoiceChannelBlockedUserWarning)
 import keys from "keys" /* 688 */;
 import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4445 */;
-import closure_3 from "getState" /* 7166 */;
-import useSharedSpacesWarningStore from "useSharedSpacesWarningStore" /* 13611 */;
-import { VoiceChannelWarningSurfaces as closure_6 } from "GdmWarningMedium" /* 13614 */;
+import closure_3 from "getState" /* 7167 */;
+import useSharedSpacesWarningStore from "useSharedSpacesWarningStore" /* 13626 */;
+import { VoiceChannelWarningSurfaces as closure_6 } from "GdmWarningMedium" /* 13629 */;
 
 require = arg1;
 ({ queueBlockWarning: c4, dequeueBlockWarning: c5 } = useSharedSpacesWarningStore);
@@ -26,8 +26,8 @@ export const showVoiceChannelBlockedUserWarning = function showVoiceChannelBlock
     obj[1] = items;
     obj[2] = constants.POST_JOIN_SHEET;
     obj[3] = obj;
-    obj.openLazy(tmp2(2008)(13617, dependencyMap.paths), "gdm_blocked_user_action_sheet", obj);
-    const tmp11 = tmp2(2008)(13617, dependencyMap.paths);
+    obj.openLazy(tmp2(2008)(13632, dependencyMap.paths), "gdm_blocked_user_action_sheet", obj);
+    const tmp11 = tmp2(2008)(13632, dependencyMap.paths);
   } else {
     callback();
   }

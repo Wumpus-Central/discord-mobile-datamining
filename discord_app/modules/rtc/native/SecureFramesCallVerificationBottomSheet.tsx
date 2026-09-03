@@ -1,7 +1,7 @@
-// === Module 16929: SecureFramesCallVerificationBottomSheet ===
+// === Module 16949: SecureFramesCallVerificationBottomSheet ===
 
-// Module 16929 (SecureFramesCallVerificationBottomSheet)
-import SecureFramesVerificationBottomSheetDefault from "SecureFramesVerificationBottomSheet" /* 9878 */;
+// Module 16949 (SecureFramesCallVerificationBottomSheet)
+import SecureFramesVerificationBottomSheetDefault from "SecureFramesVerificationBottomSheet" /* 9882 */;
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "createRTCConnection" /* 4554 */;
 import { AnalyticsSections } from "ME" /* 673 */;
@@ -38,7 +38,7 @@ export default function SecureFramesCallVerificationBottomSheet(channelId) {
   const intl3 = channelId(1233).intl;
   obj = { helpArticle: null };
   const tmp3 = SecureFramesVerificationBottomSheetDefault;
-  obj[0] = channelId(9861).getSecureFramesHelpdeskArticle();
+  obj[0] = channelId(9865).getSecureFramesHelpdeskArticle();
   obj[2] = intl3.format(channelId(1233).t.wKxADe, obj);
   obj[3] = stateFromStores;
   obj[4] = callback;

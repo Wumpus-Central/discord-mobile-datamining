@@ -1,6 +1,6 @@
-// === Module 13230: getBillingInformationStringNative ===
+// === Module 13242: getBillingInformationStringNative ===
 
-// Module 13230 (getBillingInformationStringNative)
+// Module 13242 (getBillingInformationStringNative)
 import closure_2 from "asyncGeneratorStep" /* 5 */;
 import { SubscriptionStatusTypes } from "ME" /* 673 */;
 

@@ -1,6 +1,6 @@
-// === Module 9049: useGetGuildJoinRequest ===
+// === Module 9053: useGetGuildJoinRequest ===
 
-// Module 9049 (useGetGuildJoinRequest)
+// Module 9053 (useGetGuildJoinRequest)
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "handleGatewayJoinRequestUpdate" /* 4300 */;
 

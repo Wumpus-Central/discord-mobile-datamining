@@ -1,7 +1,7 @@
-// === Module 17721: NativeReactAssetModule ===
+// === Module 17745: NativeReactAssetModule ===
 
-// Module 17721 (NativeReactAssetModule)
-import enforcingDefault from "enforcing" /* 17722 */;
+// Module 17745 (NativeReactAssetModule)
+import enforcingDefault from "enforcing" /* 17746 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import set from "set" /* 1234 */;
 

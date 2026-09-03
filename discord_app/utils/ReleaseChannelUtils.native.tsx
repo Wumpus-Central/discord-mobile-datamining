@@ -1,6 +1,6 @@
-// === Module 7357: isStable ===
+// === Module 7358: isStable ===
 
-// Module 7357 (isStable)
+// Module 7358 (isStable)
 import getConstantsAll from "getConstants" /* 1624 */;
 import set from "set" /* 1234 */;
 

@@ -1,13 +1,13 @@
-// === Module 7980: getPaymentGateway ===
+// === Module 7983: getPaymentGateway ===
 
-// Module 7980 (getPaymentGateway)
+// Module 7983 (getPaymentGateway)
 import sendRequest from "sendRequest" /* 527 */;
 import dispatcherDefault from "dispatcher" /* 706 */;
 import set from "set" /* 1234 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "createFromServer" /* 7981 */;
-import closure_5 from "createFromServer" /* 7208 */;
-import closure_6 from "emitChanges" /* 7204 */;
+import closure_4 from "createFromServer" /* 7984 */;
+import closure_5 from "createFromServer" /* 7209 */;
+import closure_6 from "emitChanges" /* 7205 */;
 import { PREMIUM_TIER_2_HFU_TWO_WEEK_TRIAL_ID as closure_7 } from "GuildFeatures" /* 1923 */;
 import ME from "ME" /* 673 */;
 
@@ -79,7 +79,7 @@ function _fetchUserOffer() {
                   flag = true;
                 }
                 if (obj1 === undefined) {
-                  obj1 = { offerId: "disabled", paymentGatewayOverride: "Date" };
+                  obj1 = { offerId: "Array", paymentGatewayOverride: "PX_16" };
                 }
                 throwTypeErrorResult = retries;
                 throwTypeErrorResult = closure_4;

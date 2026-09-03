@@ -1,13 +1,13 @@
-// === Module 6008: UserProfileCard ===
+// === Module 6009: UserProfileCard ===
 
-// Module 6008 (UserProfileCard)
+// Module 6009 (UserProfileCard)
 import ThemesDefault from "Themes" /* 709 */;
 import Text from "Text" /* 4474 */;
-import PressableBase from "PressableBase" /* 5076 */;
-import ChevronSmallRightIcon from "ChevronSmallRightIcon" /* 6011 */;
+import PressableBase from "PressableBase" /* 5077 */;
+import ChevronSmallRightIcon from "ChevronSmallRightIcon" /* 6012 */;
 import closure_2 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import ARBITRARY_LARGE_OFFSET from "ARBITRARY_LARGE_OFFSET" /* 6009 */;
+import ARBITRARY_LARGE_OFFSET from "ARBITRARY_LARGE_OFFSET" /* 6010 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 

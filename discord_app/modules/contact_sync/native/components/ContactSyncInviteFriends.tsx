@@ -1,10 +1,10 @@
-// === Module 12462: ContactSyncInviteFriends ===
+// === Module 12474: ContactSyncInviteFriends ===
 
-// Module 12462 (ContactSyncInviteFriends)
+// Module 12474 (ContactSyncInviteFriends)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 709 */;
-import preloadDefault from "preload" /* 5501 */;
-import registerAssetDefault from "registerAsset" /* 12463 */;
+import preloadDefault from "preload" /* 5502 */;
+import registerAssetDefault from "registerAsset" /* 12475 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_4 from "mergeGuildAvatar" /* 1921 */;
 import ME from "ME" /* 673 */;
@@ -60,7 +60,7 @@ export default function ContactSyncInviteFriends() {
     const tmp5 = callback;
     callback(closure_1_2[15]).showShareActionSheet({ message: formatToPlainStringResult }, tmp3.CONTACT_SYNC_MODAL);
   };
-  obj4[1] = callback(_require(4928).Button, obj5);
+  obj4[1] = callback(_require(4929).Button, obj5);
   items2[1] = callback(View, obj4);
   obj[0] = items2;
   return callback2(closure_9, obj);

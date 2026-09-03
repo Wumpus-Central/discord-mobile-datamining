@@ -1,7 +1,7 @@
-// === Module 10044: useLocalStorageState ===
+// === Module 10048: useLocalStorageState ===
 
-// Module 10044 (useLocalStorageState)
-import useMountLayoutEffectDefault from "useMountLayoutEffect" /* 4945 */;
+// Module 10048 (useLocalStorageState)
+import useMountLayoutEffectDefault from "useMountLayoutEffect" /* 4946 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 

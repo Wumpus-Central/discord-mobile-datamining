@@ -1,11 +1,11 @@
-// === Module 4918: isBlurDisabled ===
+// === Module 4919: isBlurDisabled ===
 
-// Module 4918 (isBlurDisabled)
+// Module 4919 (isBlurDisabled)
 import ThemesDefault from "Themes" /* 709 */;
 import map from "map" /* 4197 */;
-import MODERN_ANDROID_BLURRING_AVAILABLE from "MODERN_ANDROID_BLURRING_AVAILABLE" /* 4923 */;
+import MODERN_ANDROID_BLURRING_AVAILABLE from "MODERN_ANDROID_BLURRING_AVAILABLE" /* 4924 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import { useVisualEffectViewOverrides as closure_4 } from "useVisualEffectViewOverrides" /* 4919 */;
+import { useVisualEffectViewOverrides as closure_4 } from "useVisualEffectViewOverrides" /* 4920 */;
 import { jsx } from "jsxProd" /* 21 */;
 import set from "set" /* 1234 */;
 import importAllResult from "noop" /* 19 */;
@@ -56,7 +56,7 @@ export default importAllResult.forwardRef(function VisualEffectView(blurAmount) 
     let tmp13 = null == android_blurTargetViewNativeId;
     if (!tmp13) {
       if (android_softwareBlurDisabled) {
-        android_softwareBlurDisabled = !tmp3(4923).MODERN_ANDROID_BLURRING_AVAILABLE;
+        android_softwareBlurDisabled = !tmp3(4924).MODERN_ANDROID_BLURRING_AVAILABLE;
       }
       tmp13 = true === android_softwareBlurDisabled;
     }
@@ -89,8 +89,8 @@ export default importAllResult.forwardRef(function VisualEffectView(blurAmount) 
     obj1[3] = tintColorOverride;
     obj1[4] = android_blurTargetViewNativeId;
     const merged2 = Object.assign(merged);
-    tmp14Result = tmp14(tmp5(4923), obj1);
-    const tmp5Result = tmp5(4923);
+    tmp14Result = tmp14(tmp5(4924), obj1);
+    const tmp5Result = tmp5(4924);
   } else {
     const obj2 = { ref: null, blurEffectName: null, blurAmount: null, tintColor: null };
     obj2[0] = arg1;
@@ -109,7 +109,7 @@ export default importAllResult.forwardRef(function VisualEffectView(blurAmount) 
       const merged3 = Object.assign(merged);
       tmp14Result = tmp14(tmp15, obj2);
     } else {
-      if (!tmp3(4920).MODERN_IOS_BLURS_EFFECTS_AVAILABLE) {
+      if (!tmp3(4921).MODERN_IOS_BLURS_EFFECTS_AVAILABLE) {
         let str2 = "UIBlurEffectStyleDark";
         if ("light" === blurTheme) {
           str2 = "UIBlurEffectStyleLight";

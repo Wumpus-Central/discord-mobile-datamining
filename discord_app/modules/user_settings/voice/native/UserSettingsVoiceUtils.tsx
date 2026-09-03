@@ -1,8 +1,8 @@
-// === Module 10098: handleAutomaticGainControlChange ===
+// === Module 10102: handleAutomaticGainControlChange ===
 
-// Module 10098 (handleAutomaticGainControlChange)
+// Module 10102 (handleAutomaticGainControlChange)
 import initialize from "initialize" /* 586 */;
-import trackDeviceChangedDefault from "trackDeviceChanged" /* 9803 */;
+import trackDeviceChangedDefault from "trackDeviceChanged" /* 9807 */;
 import closure_3 from "_detectH265HardwareDecode" /* 4529 */;
 import ME from "ME" /* 673 */;
 

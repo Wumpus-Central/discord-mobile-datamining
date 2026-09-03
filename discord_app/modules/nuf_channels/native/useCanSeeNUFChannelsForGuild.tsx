@@ -1,6 +1,6 @@
-// === Module 16072: useCanSeeNUFChannelsForGuild ===
+// === Module 16088: useCanSeeNUFChannelsForGuild ===
 
-// Module 16072 (useCanSeeNUFChannelsForGuild)
+// Module 16088 (useCanSeeNUFChannelsForGuild)
 import closure_2 from "trackCommunicationDisabled" /* 1991 */;
 import closure_3 from "createGuildRecordFromRust" /* 1908 */;
 import closure_4 from "mergeGuildAvatar" /* 1921 */;

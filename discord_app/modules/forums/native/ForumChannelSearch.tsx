@@ -1,10 +1,10 @@
-// === Module 13145: ForumChannelCloseSearchButton ===
+// === Module 13157: ForumChannelCloseSearchButton ===
 
-// Module 13145 (ForumChannelCloseSearchButton)
+// Module 13157 (ForumChannelCloseSearchButton)
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_5 from "ensureGuildLoaded" /* 1386 */;
-import closure_6 from "initialize" /* 7522 */;
+import closure_6 from "initialize" /* 7523 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -49,7 +49,7 @@ const memoResult = importAllResult.memo((channelId) => {
 const memoResult1 = importAllResult.memo((channelId) => {
   channelId = channelId.channelId;
   ({ guildId: importDefault, placeholder } = channelId);
-  let obj = channelId(13146);
+  let obj = channelId(13158);
   const canSearchForumPostsByChannelId = obj.useCanSearchForumPostsByChannelId(channelId);
   const tmp = callback();
   const items = [closure_6];

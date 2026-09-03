@@ -1,6 +1,6 @@
-// === Module 9916: useIsVideoMode ===
+// === Module 9920: useIsVideoMode ===
 
-// Module 9916 (useIsVideoMode)
+// Module 9920 (useIsVideoMode)
 import initialize from "initialize" /* 586 */;
 import closure_2 from "reset" /* 4500 */;
 import closure_3 from "ensureGuildLoaded" /* 1386 */;

@@ -1,6 +1,6 @@
-// === Module 13981: SpeakerPulse ===
+// === Module 13997: SpeakerPulse ===
 
-// Module 13981 (SpeakerPulse)
+// Module 13997 (SpeakerPulse)
 import ThemesDefault from "Themes" /* 709 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;

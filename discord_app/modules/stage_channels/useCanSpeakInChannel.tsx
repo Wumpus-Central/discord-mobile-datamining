@@ -1,6 +1,6 @@
-// === Module 9564: useCanCurrentUserSpeakInChannel ===
+// === Module 9568: useCanCurrentUserSpeakInChannel ===
 
-// Module 9564 (useCanCurrentUserSpeakInChannel)
+// Module 9568 (useCanCurrentUserSpeakInChannel)
 import initialize from "initialize" /* 586 */;
 import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 4668 */;
 import useAudienceRequestToSpeakStateDefault from "useAudienceRequestToSpeakState" /* 4668 */;

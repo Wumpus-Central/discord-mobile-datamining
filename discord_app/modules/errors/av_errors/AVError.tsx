@@ -1,6 +1,6 @@
-// === Module 9578: mapped ===
+// === Module 9582: mapped ===
 
-// Module 9578 (mapped)
+// Module 9582 (mapped)
 import timestampDefault from "timestamp" /* 3 */;
 import closure_3 from "_objectWithoutProperties" /* 109 */;
 

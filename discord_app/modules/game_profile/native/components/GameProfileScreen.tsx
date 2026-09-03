@@ -1,13 +1,13 @@
-// === Module 8822: GetButton ===
+// === Module 8826: GetButton ===
 
-// Module 8822 (GetButton)
+// Module 8826 (GetButton)
 import ThemesDefault from "Themes" /* 709 */;
 import getSystemLocale from "getSystemLocale" /* 1233 */;
-import Button from "Button" /* 4928 */;
+import Button from "Button" /* 4929 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_7 from "getSimilarGames" /* 8823 */;
+import closure_7 from "getSimilarGames" /* 8827 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 

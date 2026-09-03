@@ -1,11 +1,11 @@
-// === Module 7200: useShouldShowPremiumTrialUserSettingsAvatarBadge ===
+// === Module 7201: useShouldShowPremiumTrialUserSettingsAvatarBadge ===
 
-// Module 7200 (useShouldShowPremiumTrialUserSettingsAvatarBadge)
+// Module 7201 (useShouldShowPremiumTrialUserSettingsAvatarBadge)
 import set from "set" /* 2 */;
 import DismissibleContent from "DismissibleContent" /* 1372 */;
 import GuildFeatures from "GuildFeatures" /* 1923 */;
 import UNSAFE_isDismissibleContentDismissed from "UNSAFE_isDismissibleContentDismissed" /* 4298 */;
-import usePremiumTrialOffer from "usePremiumTrialOffer" /* 7201 */;
+import usePremiumTrialOffer from "usePremiumTrialOffer" /* 7202 */;
 
 let closure_2 = GuildFeatures.PremiumSubscriptionSKUToPremiumType;
 let result = set.fileFinishedImporting("modules/premium/native/MobileTrialUtils.tsx");
@@ -48,7 +48,7 @@ export const useNitroTrialCtaOverride = function useNitroTrialCtaOverride(user_p
   if (null == subscriptionTrial) {
     return null;
   } else {
-    let tmpResult = tmp(13181);
+    let tmpResult = tmp(13193);
     obj = { location: null };
     obj[0] = user_profile_premium_upsell_card;
     if (tmpResult.isAndroidTwoWeekTrialsTrialCTAEnabled(obj)) {

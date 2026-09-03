@@ -1,10 +1,10 @@
-// === Module 11663: _transformClientActionToApiAction ===
+// === Module 11668: _transformClientActionToApiAction ===
 
-// Module 11663 (_transformClientActionToApiAction)
+// Module 11668 (_transformClientActionToApiAction)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import dispatcherDefault from "dispatcher" /* 706 */;
 import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1470 */;
-import _transformMetadataToCamelCase from "_transformMetadataToCamelCase" /* 11664 */;
+import _transformMetadataToCamelCase from "_transformMetadataToCamelCase" /* 11669 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "createGuildRoleRecordFromRust" /* 1984 */;
 import closure_5 from "createGuildRecordFromRust" /* 1908 */;
@@ -18,7 +18,7 @@ function _transformClientActionToApiAction(type) {
 }
 function _transformClientRuleToApiRule(id) {
   const _require = id;
-  let obj = _require(11664);
+  let obj = _require(11669);
   const result = obj._transformMetadataToSnakeCase(id.triggerMetadata);
   if (null != result) {
     delete tmp2[tmp];
@@ -419,16 +419,16 @@ export const removeMentionRaidRestrictionWithFeedback = function removeMentionRa
     canResult = closure_6.can(constants.MANAGE_GUILD, guild);
   }
   if (canResult) {
-    const result = _require(11657).openConfirmRemoveMentionRaid(() => {
-      let obj = callback(4700);
-      obj = { feedback_type: callback(7272).Feedback.MENTION_RAID_REMOVE_RESTRICTION, decision_id: closure_1 };
+    const result = _require(11662).openConfirmRemoveMentionRaid(() => {
+      let obj = callback(4701);
+      obj = { feedback_type: callback(7273).Feedback.MENTION_RAID_REMOVE_RESTRICTION, decision_id: closure_1 };
       obj.trackWithMetadata(closure_1_7.GUILD_AUTOMOD_FEEDBACK, obj);
       const HTTP = callback(527).HTTP;
       obj = { url: closure_1_8.GUILD_AUTOMOD_CLEAR_MENTION_RAID(callback), rejectWithError: true };
       HTTP.post(obj);
       dependencyMap();
     });
-    let obj = _require(11657);
+    let obj = _require(11662);
   }
 };
 export const clearMentionRaidDetected = function clearMentionRaidDetected(guildId) {

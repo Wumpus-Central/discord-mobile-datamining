@@ -1,8 +1,8 @@
-// === Module 13865: ShareAttachments ===
+// === Module 13881: ShareAttachments ===
 
-// Module 13865 (ShareAttachments)
+// Module 13881 (ShareAttachments)
 import ThemesDefault from "Themes" /* 709 */;
-import LinearGradientDefault from "LinearGradient" /* 4940 */;
+import LinearGradientDefault from "LinearGradient" /* 4941 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;

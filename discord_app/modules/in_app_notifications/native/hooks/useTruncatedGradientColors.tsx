@@ -1,6 +1,6 @@
-// === Module 10213: useTruncatedGradientColors ===
+// === Module 10217: useTruncatedGradientColors ===
 
-// Module 10213 (useTruncatedGradientColors)
+// Module 10217 (useTruncatedGradientColors)
 import set from "set" /* 2 */;
 import noop from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 709 */;

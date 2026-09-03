@@ -1,6 +1,6 @@
-// === Module 17285: isParentalConsentWarningFetchEnabled ===
+// === Module 17305: isParentalConsentWarningFetchEnabled ===
 
-// Module 17285 (isParentalConsentWarningFetchEnabled)
+// Module 17305 (isParentalConsentWarningFetchEnabled)
 import set from "set" /* 2 */;
 import ApexExperiment from "ApexExperiment" /* 1467 */;
 

@@ -1,6 +1,6 @@
-// === Module 12064: MIN_PAN_GESTURE_MOVE ===
+// === Module 12070: MIN_PAN_GESTURE_MOVE ===
 
-// Module 12064 (MIN_PAN_GESTURE_MOVE)
+// Module 12070 (MIN_PAN_GESTURE_MOVE)
 import set from "set" /* 1234 */;
 
 set = set.isIOS();

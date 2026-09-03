@@ -1,8 +1,8 @@
-// === Module 10383: transformFavoriteGifUrl ===
+// === Module 10387: transformFavoriteGifUrl ===
 
-// Module 10383 (transformFavoriteGifUrl)
+// Module 10387 (transformFavoriteGifUrl)
 import isDiscordProxiedAssetUrlDefault from "isDiscordProxiedAssetUrl" /* 1485 */;
-import isRefreshableAttachmentUrlAll from "isRefreshableAttachmentUrl" /* 10055 */;
+import isRefreshableAttachmentUrlAll from "isRefreshableAttachmentUrl" /* 10059 */;
 import closure_4 from "noop" /* 19 */;
 
 const require = arg1;
@@ -27,7 +27,7 @@ function transformFavoriteGifUrl(url) {
       const result1 = searchParams2.set("animated", "true");
       return str.toString();
     } else {
-      const tmp14Result = tmp14(10055);
+      const tmp14Result = tmp14(10059);
     }
     obj6 = isRefreshableAttachmentUrlAll;
     tmp14 = importAll;
@@ -60,7 +60,7 @@ let result = require("set").fileFinishedImporting("modules/gif_picker/native/GIF
 
 export const GIF_HEADER_HEIGHT = 56;
 export const useFavoriteGIFsMobile = function useFavoriteGIFsMobile() {
-  let obj = sortedFavoriteGIFs(10384);
+  let obj = sortedFavoriteGIFs(10388);
   sortedFavoriteGIFs = obj.useSortedFavoriteGIFs(transformFavoriteGifUrl);
   const items = [sortedFavoriteGIFs];
   obj = {

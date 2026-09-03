@@ -1,6 +1,6 @@
-// === Module 15173: AnimatedStripe ===
+// === Module 15188: AnimatedStripe ===
 
-// Module 15173 (AnimatedStripe)
+// Module 15188 (AnimatedStripe)
 import noopAll from "noop" /* 19 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import jsxProd from "jsxProd" /* 21 */;

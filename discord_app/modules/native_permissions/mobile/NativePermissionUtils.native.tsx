@@ -1,18 +1,18 @@
-// === Module 5098: combineStatuses ===
+// === Module 5099: combineStatuses ===
 
-// Module 5098 (combineStatuses)
+// Module 5099 (combineStatuses)
 import timestampDefault from "timestamp" /* 3 */;
 import getSystemLocale from "getSystemLocale" /* 1233 */;
-import useAlertStore from "useAlertStore" /* 4859 */;
-import openPrivacySettingsDefault from "openPrivacySettings" /* 5099 */;
+import useAlertStore from "useAlertStore" /* 4860 */;
+import openPrivacySettingsDefault from "openPrivacySettings" /* 5100 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import NativePermissionStatus from "NativePermissionStatus" /* 4730 */;
+import NativePermissionStatus from "NativePermissionStatus" /* 4731 */;
 import { jsx } from "jsxProd" /* 21 */;
 import set from "set" /* 1234 */;
 import isMetaQuest from "isMetaQuest" /* 1623 */;
-import { NativePermissionBaseUtils } from "requestAuthorization" /* 5095 */;
+import { NativePermissionBaseUtils } from "requestAuthorization" /* 5096 */;
 
 require = arg1;
 function combineStatuses(items) {

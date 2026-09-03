@@ -1,10 +1,10 @@
-// === Module 7220: isClickstreamEnabled ===
+// === Module 7221: isClickstreamEnabled ===
 
-// Module 7220 (isClickstreamEnabled)
+// Module 7221 (isClickstreamEnabled)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 695 */;
-import clickstreamExperimentEnabled from "clickstreamExperimentEnabled" /* 7221 */;
-import getClickstreamDrainEvent from "getClickstreamDrainEvent" /* 7222 */;
+import clickstreamExperimentEnabled from "clickstreamExperimentEnabled" /* 7222 */;
+import getClickstreamDrainEvent from "getClickstreamDrainEvent" /* 7223 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "fetchFingerprint" /* 1215 */;
 import closure_5 from "createRTCConnection" /* 4554 */;

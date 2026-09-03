@@ -1,10 +1,10 @@
-// === Module 16978: useVoiceChannelGames ===
+// === Module 16998: useVoiceChannelGames ===
 
-// Module 16978 (useVoiceChannelGames)
+// Module 16998 (useVoiceChannelGames)
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "fetchFingerprint" /* 1215 */;
 import closure_5 from "sortActivity" /* 4569 */;
-import closure_6 from "filterPlayingActivities" /* 5231 */;
+import closure_6 from "filterPlayingActivities" /* 5232 */;
 import closure_7 from "mergeGuildAvatar" /* 1921 */;
 
 const require = arg1;
@@ -49,8 +49,8 @@ export default function useVoiceChannelGames(arg0, arg1, arg2) {
     }
   }, items1);
   const obj = _require(586);
-  const getGamesForAppIds = _require(9892).useGetGamesForAppIds(stateFromStoresArray);
-  let obj2 = _require(9892);
+  const getGamesForAppIds = _require(9896).useGetGamesForAppIds(stateFromStoresArray);
+  let obj2 = _require(9896);
   const items2 = [closure_7];
   stateFromStores = _require(586).useStateFromStores(items2, () => {
     currentUser = currentUser.getCurrentUser();

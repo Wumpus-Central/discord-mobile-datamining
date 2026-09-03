@@ -1,24 +1,24 @@
-// === Module 11114: useReactors ===
+// === Module 11118: useReactors ===
 
-// Module 11114 (useReactors)
+// Module 11118 (useReactors)
 import ThemesDefault from "Themes" /* 709 */;
 import getSystemLocale from "getSystemLocale" /* 1233 */;
 import Button from "Button" /* 1296 */;
 import getAvatarURLDefault from "getAvatarURL" /* 1430 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
 import Text from "Text" /* 4474 */;
-import EmojiDefault from "Emoji" /* 5593 */;
-import Background from "Background" /* 5630 */;
-import BottomSheetModal from "BottomSheetModal" /* 5632 */;
-import getNoResultsSource from "getNoResultsSource" /* 8925 */;
-import useEmojiColorPalette from "useEmojiColorPalette" /* 11117 */;
+import EmojiDefault from "Emoji" /* 5594 */;
+import Background from "Background" /* 5631 */;
+import BottomSheetModal from "BottomSheetModal" /* 5633 */;
+import getNoResultsSource from "getNoResultsSource" /* 8929 */;
+import useEmojiColorPalette from "useEmojiColorPalette" /* 11121 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_10 from "maybeApplyNoTextColorForLightCustomTheme" /* 4470 */;
 import closure_11 from "ensureGuildLoaded" /* 1386 */;
 import closure_12 from "trackCommunicationDisabled" /* 1991 */;
-import closure_13 from "reactionKey" /* 7516 */;
+import closure_13 from "reactionKey" /* 7517 */;
 import closure_14 from "getUncachedChannelPermissions" /* 4120 */;
 import ME from "ME" /* 673 */;
 import jsxProd from "jsxProd" /* 21 */;
@@ -312,7 +312,7 @@ function EmojiOptionsButton(channelId) {
   const items = [closure_11];
   const items1 = [channelId];
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_11.getChannel(channelId), items1);
-  const tmp3 = messageId(11118)(stateFromStores);
+  const tmp3 = messageId(11122)(stateFromStores);
   closure_2 = tmp3;
   dependencyMap = tmp4;
   const items2 = [channelId, messageId, reactions[reactionSelectedIndex], tmp3];
@@ -330,7 +330,7 @@ function EmojiOptionsButton(channelId) {
   obj[2] = intl.string(channelId(1233).t.pCaYID);
   const items3 = [callback2(channelId(4474).Text, obj), ];
   const tmp = callback4();
-  items3[1] = callback2(channelId(6011).ChevronSmallRightIcon, { color: messageId(709).colors.ICON_SUBTLE, size: "xs" });
+  items3[1] = callback2(channelId(6012).ChevronSmallRightIcon, { color: messageId(709).colors.ICON_SUBTLE, size: "xs" });
   obj[2] = items3;
   return callback3(closure_7, obj);
 }
@@ -338,7 +338,7 @@ function ReactionTabs(setReactionSelectedIndex) {
   const tmp = callback4();
   ({ reactions, reactionSelectedIndex } = setReactionSelectedIndex);
   setReactionSelectedIndex = setReactionSelectedIndex.setReactionSelectedIndex;
-  let obj = setReactionSelectedIndex(5988);
+  let obj = setReactionSelectedIndex(5989);
   obj = { style: tmp.reactionTab, children: null };
   obj = {
     tabs: reactions.map((emoji) => {
@@ -359,11 +359,11 @@ function ReactionTabs(setReactionSelectedIndex) {
     initialNumTabsToRender: reactionSelectedIndex(4132).MAX_REACTIONS
   };
   ({ tab: obj3[1], tabActive: obj3[2], tabSelected: obj3[3] } = tmp);
-  const items = [callback2(setReactionSelectedIndex(11120), obj), callback2(setReactionSelectedIndex(8378), { outer: true }), ];
+  const items = [callback2(setReactionSelectedIndex(11124), obj), callback2(setReactionSelectedIndex(8382), { outer: true }), ];
   obj1 = { style: tmp.removeButtonContainer, children: null };
   const obj2 = { style: tmp.emojiTextIdentifier, variant: "eyebrow", color: "text-default", children: null };
   const tmp4 = callback2;
-  const tmp5 = setReactionSelectedIndex(11120);
+  const tmp5 = setReactionSelectedIndex(11124);
   obj2[3] = reactionSelectedIndex(4132).getReactionEmojiName(reactions[reactionSelectedIndex].emoji);
   const items1 = [callback2(reactionSelectedIndex(4474).Text, obj2), ];
   const obj3 = {};

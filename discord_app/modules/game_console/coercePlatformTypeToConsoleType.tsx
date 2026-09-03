@@ -1,9 +1,9 @@
-// === Module 10114: coercePlatformTypeToConsoleType ===
+// === Module 10118: coercePlatformTypeToConsoleType ===
 
-// Module 10114 (coercePlatformTypeToConsoleType)
+// Module 10118 (coercePlatformTypeToConsoleType)
 import set from "set" /* 2 */;
 import ME from "ME" /* 673 */;
-import XBOX_URL_BASE from "XBOX_URL_BASE" /* 9326 */;
+import XBOX_URL_BASE from "XBOX_URL_BASE" /* 9330 */;
 
 const GameConsoleTypes = XBOX_URL_BASE.GameConsoleTypes;
 const PlatformTypes = ME.PlatformTypes;

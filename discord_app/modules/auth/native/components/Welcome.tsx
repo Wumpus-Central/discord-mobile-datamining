@@ -1,28 +1,28 @@
-// === Module 15770: InviteCard ===
+// === Module 15786: InviteCard ===
 
-// Module 15770 (InviteCard)
+// Module 15786 (InviteCard)
 import _modDef38 from "module_38" /* 38 */;
 import ThemesDefault from "Themes" /* 709 */;
 import getSystemLocale from "getSystemLocale" /* 1233 */;
 import Button from "Button" /* 1296 */;
 import nameFromUserDefault from "nameFromUser" /* 4322 */;
 import Text from "Text" /* 4474 */;
-import useIsWindowLargeDefault from "useIsWindowLarge" /* 7727 */;
-import renderDefault from "render" /* 12421 */;
-import registerAssetDefault from "registerAsset" /* 13107 */;
-import registerAsset from "registerAsset" /* 13824 */;
+import useIsWindowLargeDefault from "useIsWindowLarge" /* 7730 */;
+import renderDefault from "render" /* 12433 */;
+import registerAssetDefault from "registerAsset" /* 13119 */;
+import registerAsset from "registerAsset" /* 13840 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_7 from "isUnderageAnonymous" /* 15771 */;
+import closure_7 from "isUnderageAnonymous" /* 15787 */;
 import closure_8 from "getHash" /* 4391 */;
-import closure_9 from "handleGuildTemplateResolveSuccess" /* 7212 */;
-import closure_10 from "initialize" /* 12206 */;
+import closure_9 from "handleGuildTemplateResolveSuccess" /* 7213 */;
+import closure_10 from "initialize" /* 12213 */;
 import closure_11 from "createdAt" /* 1934 */;
 import closure_12 from "updateInvite" /* 4462 */;
-import closure_13 from "getDisplayedInviteCode" /* 8880 */;
+import closure_13 from "getDisplayedInviteCode" /* 8884 */;
 import ME from "ME" /* 673 */;
-import { GuildTemplateStates } from "GUILD_TEMPLATES_MEMBER_COUNT_PROMOTION_THRESHOLD" /* 6179 */;
-import { InviteTypes } from "InviteSendStates" /* 7491 */;
+import { GuildTemplateStates } from "GUILD_TEMPLATES_MEMBER_COUNT_PROMOTION_THRESHOLD" /* 6180 */;
+import { InviteTypes } from "InviteSendStates" /* 7492 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -45,7 +45,7 @@ function InviteCard(invite) {
       let tmp18 = callback;
     } else if (null != tmp2) {
       _modDef38(null != inviter, "Null inviter");
-      obj = { user: null, guildId: "r" };
+      obj = { user: null, guildId: "Array" };
       const tmp12 = new closure_11(inviter);
       obj[0] = tmp12;
       tmp14 = callback(Button.Avatar, obj);
@@ -58,7 +58,7 @@ function InviteCard(invite) {
     } else if (null == inviter) {
       return null;
     } else {
-      obj = { user: null, guildId: "r" };
+      obj = { user: null, guildId: "Array" };
       const tmp33 = new closure_11(inviter);
       obj[0] = tmp33;
       const intl3 = getSystemLocale.intl;

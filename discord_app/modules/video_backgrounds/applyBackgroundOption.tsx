@@ -1,13 +1,13 @@
-// === Module 9808: _getFilterBlob ===
+// === Module 9812: _getFilterBlob ===
 
-// Module 9808 (_getFilterBlob)
-import _fetchVideoFilterAssets from "_fetchVideoFilterAssets" /* 9811 */;
-import getLastUsedVideoBackgroundOption from "getLastUsedVideoBackgroundOption" /* 9813 */;
-import isVideoBackgroundSupportedDefault from "isVideoBackgroundSupported" /* 9820 */;
+// Module 9812 (_getFilterBlob)
+import _fetchVideoFilterAssets from "_fetchVideoFilterAssets" /* 9815 */;
+import getLastUsedVideoBackgroundOption from "getLastUsedVideoBackgroundOption" /* 9817 */;
+import isVideoBackgroundSupportedDefault from "isVideoBackgroundSupported" /* 9824 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "mergeGuildAvatar" /* 1921 */;
-import closure_5 from "handleSyncedStoresUpdate" /* 9809 */;
-import VideoFilterType from "VideoFilterType" /* 7768 */;
+import closure_5 from "handleSyncedStoresUpdate" /* 9813 */;
+import VideoFilterType from "VideoFilterType" /* 7771 */;
 import { NOOP } from "ME" /* 673 */;
 
 require = arg1;
@@ -149,12 +149,12 @@ function _applyBackgroundOption() {
                       c8 = 2;
                       c9 = 1;
                       obj3 = { value: null, done: false };
-                      obj3[0] = callback2(9819)(videoFilterAssetURL);
+                      obj3[0] = callback2(9823)(videoFilterAssetURL);
                       return obj3;
                     }
                   }
                 }
-                const tmp24 = callback2(9814)()[tmp61];
+                const tmp24 = callback2(9818)()[tmp61];
                 const isVideo = tmp24.isVideo;
                 closure_3 = isVideo;
                 if (isVideo == null) {

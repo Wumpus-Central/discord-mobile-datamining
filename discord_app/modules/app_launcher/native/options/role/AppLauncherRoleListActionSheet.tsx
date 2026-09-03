@@ -1,11 +1,11 @@
-// === Module 11974: RoleIcon ===
+// === Module 11980: RoleIcon ===
 
-// Module 11974 (RoleIcon)
-import ShieldUserIcon from "ShieldUserIcon" /* 9735 */;
-import stylesDefault from "styles" /* 11972 */;
+// Module 11980 (RoleIcon)
+import ShieldUserIcon from "ShieldUserIcon" /* 9739 */;
+import stylesDefault from "styles" /* 11978 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
-import closure_6 from "getRoleMemberCount" /* 5591 */;
+import closure_6 from "getRoleMemberCount" /* 5592 */;
 import { isEveryoneRole } from "GuildRoleRecordTypeTag" /* 1985 */;
 import closure_8 from "createGuildRoleRecordFromRust" /* 1984 */;
 import { DEFAULT_ROLE_COLOR_HEX } from "ME" /* 673 */;

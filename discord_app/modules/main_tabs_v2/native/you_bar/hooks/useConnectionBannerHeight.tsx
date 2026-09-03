@@ -1,11 +1,11 @@
-// === Module 14928: useConnectionBannerHeight ===
+// === Module 14943: useConnectionBannerHeight ===
 
-// Module 14928 (useConnectionBannerHeight)
+// Module 14943 (useConnectionBannerHeight)
 import initialize from "initialize" /* 586 */;
-import apexExperimentDefault from "apexExperiment" /* 13563 */;
-import closure_3 from "updateState" /* 13562 */;
-import { ConnectivityIndicatorState as closure_4 } from "updateState" /* 13562 */;
-import { CONNECTION_BANNER_HEIGHT } from "CONNECTION_BANNER_HEIGHT" /* 14925 */;
+import apexExperimentDefault from "apexExperiment" /* 13578 */;
+import closure_3 from "updateState" /* 13577 */;
+import { ConnectivityIndicatorState as closure_4 } from "updateState" /* 13577 */;
+import { CONNECTION_BANNER_HEIGHT } from "CONNECTION_BANNER_HEIGHT" /* 14940 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/you_bar/hooks/useConnectionBannerHeight.tsx");

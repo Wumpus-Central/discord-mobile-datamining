@@ -1,6 +1,6 @@
-// === Module 9047: useIsEligibleForUserProfileWYSIWYGEditing ===
+// === Module 9051: useIsEligibleForUserProfileWYSIWYGEditing ===
 
-// Module 9047 (useIsEligibleForUserProfileWYSIWYGEditing)
+// Module 9051 (useIsEligibleForUserProfileWYSIWYGEditing)
 import set from "set" /* 2 */;
 import ApexExperiment from "ApexExperiment" /* 1467 */;
 

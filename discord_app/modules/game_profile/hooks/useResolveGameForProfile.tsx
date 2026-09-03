@@ -1,10 +1,10 @@
-// === Module 8819: useResolveGameForProfile ===
+// === Module 8823: useResolveGameForProfile ===
 
-// Module 8819 (useResolveGameForProfile)
+// Module 8823 (useResolveGameForProfile)
 import set from "set" /* 2 */;
-import useGetOrFetchApplications from "useGetOrFetchApplications" /* 5967 */;
-import importDefaultResult1 from "importDefaultResult1" /* 6162 */;
-import useResolveGameDefault from "useResolveGame" /* 8820 */;
+import useGetOrFetchApplications from "useGetOrFetchApplications" /* 5968 */;
+import importDefaultResult1 from "importDefaultResult1" /* 6163 */;
+import useResolveGameDefault from "useResolveGame" /* 8824 */;
 
 let result = set.fileFinishedImporting("modules/game_profile/hooks/useResolveGameForProfile.tsx");
 

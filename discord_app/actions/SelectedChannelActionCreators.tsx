@@ -1,10 +1,10 @@
-// === Module 5363: ? ===
+// === Module 5364: ? ===
 
-// Module 5363
+// Module 5364
 import dispatcherDefault from "dispatcher" /* 706 */;
 import transitionTo from "transitionTo" /* 1219 */;
-import selectVoiceChannelAdditional from "selectVoiceChannelAdditional" /* 5364 */;
-import disconnectRemoteAll from "disconnectRemote" /* 9900 */;
+import getChannelSelectionOrigin from "getChannelSelectionOrigin" /* 5365 */;
+import disconnectRemoteAll from "disconnectRemote" /* 9904 */;
 import closure_4 from "set" /* 4495 */;
 import closure_5 from "ensureGuildLoaded" /* 1386 */;
 import closure_6 from "_detectH265HardwareDecode" /* 4529 */;
@@ -17,12 +17,15 @@ const result = require("set").fileFinishedImporting("actions/SelectedChannelActi
 export default {
   selectChannel(guildId) {
     guildId = guildId.guildId;
-    ({ channelId, messageId, jumpType, source, skipMessageFetch } = guildId);
-    let tmp = null;
+    ({ channelId, messageId, jumpType, source, skipMessageFetch, opensChannel } = guildId);
+    const channelSelectionOrigin = getChannelSelectionOrigin.getChannelSelectionOrigin();
+    ({ fromGuildId, fromChannelId } = channelSelectionOrigin);
+    const obj = getChannelSelectionOrigin;
+    let tmp2 = null;
     if (guildId !== closure_7) {
-      tmp = guildId;
+      tmp2 = guildId;
     }
-    dispatcherDefault.dispatch({ type: "CHANNEL_SELECT", guildId: tmp, channelId, messageId, jumpType, source, skipMessageFetch });
+    dispatcherDefault.dispatch({ type: "CHANNEL_SELECT", guildId: tmp2, channelId, fromGuildId, fromChannelId, messageId, jumpType, source, skipMessageFetch, opensChannel });
   },
   selectPrivateChannel(id) {
     transitionTo.transitionTo(closure_8.CHANNEL(closure_7, id));
@@ -48,7 +51,7 @@ export default {
         const mediaEngine = supported.getMediaEngine();
         mediaEngine.interact();
       }
-      const obj5 = selectVoiceChannelAdditional;
+      const obj5 = getChannelSelectionOrigin;
       const voiceChannelAdditional = obj5.selectVoiceChannelAdditional(id, guildId, flag, flag2, obj);
     }
   },

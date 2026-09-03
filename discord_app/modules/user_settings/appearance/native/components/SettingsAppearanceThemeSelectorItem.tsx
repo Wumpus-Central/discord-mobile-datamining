@@ -1,6 +1,6 @@
-// === Module 15098: GradientThemeBackground ===
+// === Module 15113: GradientThemeBackground ===
 
-// Module 15098 (GradientThemeBackground)
+// Module 15113 (GradientThemeBackground)
 import noopAll from "noop" /* 19 */;
 import defaultAreStatesEqual from "defaultAreStatesEqual" /* 644 */;
 import ThemesDefault from "Themes" /* 709 */;
@@ -10,14 +10,14 @@ import isThemeLight from "isThemeLight" /* 1363 */;
 import map from "map" /* 4197 */;
 import useCheckboxA11yNative from "useCheckboxA11yNative" /* 4205 */;
 import hslToRgbDefault from "hslToRgb" /* 4327 */;
-import PressableBase from "PressableBase" /* 5076 */;
-import getMixedGradientColor from "getMixedGradientColor" /* 5078 */;
-import getMixedGradientColorDefault from "getMixedGradientColor" /* 5078 */;
-import registerAssetDefault from "registerAsset" /* 15099 */;
-import SynchronizeIconDefault from "SynchronizeIcon" /* 15100 */;
+import PressableBase from "PressableBase" /* 5077 */;
+import getMixedGradientColor from "getMixedGradientColor" /* 5079 */;
+import getMixedGradientColorDefault from "getMixedGradientColor" /* 5079 */;
+import registerAssetDefault from "registerAsset" /* 15114 */;
+import SynchronizeIconDefault from "SynchronizeIcon" /* 15115 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_4 from "handleThemeChange" /* 1301 */;
-import importDefaultResult from "THEME_ITEM_WIDTH" /* 15097 */;
+import importDefaultResult from "THEME_ITEM_WIDTH" /* 15112 */;
 import { ThemeTypes } from "sum" /* 502 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;

@@ -1,6 +1,6 @@
-// === Module 12747: WishlistVisibility ===
+// === Module 12759: WishlistVisibility ===
 
-// Module 12747 (WishlistVisibility)
+// Module 12759 (WishlistVisibility)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/WishlistVisibility.tsx");

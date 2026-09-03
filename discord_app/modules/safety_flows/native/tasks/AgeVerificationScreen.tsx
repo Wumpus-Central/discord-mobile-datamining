@@ -1,6 +1,6 @@
-// === Module 17696: AgeVerificationScreen ===
+// === Module 17720: AgeVerificationScreen ===
 
-// Module 17696 (AgeVerificationScreen)
+// Module 17720 (AgeVerificationScreen)
 import closure_3 from "noop" /* 19 */;
 import { Pressable } from "get ActivityIndicator" /* 17 */;
 import closure_5 from "mergeGuildAvatar" /* 1921 */;

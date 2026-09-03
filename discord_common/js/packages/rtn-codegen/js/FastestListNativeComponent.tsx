@@ -1,6 +1,6 @@
-// === Module 7788: __INTERNAL_VIEW_CONFIG ===
+// === Module 7791: __INTERNAL_VIEW_CONFIG ===
 
-// Module 7788 (__INTERNAL_VIEW_CONFIG)
+// Module 7791 (__INTERNAL_VIEW_CONFIG)
 import set from "set" /* 2 */;
 import renderElement from "renderElement" /* 114 */;
 import weakSet from "weakSet" /* 106 */;

@@ -1,8 +1,8 @@
-// === Module 11752: ? ===
+// === Module 11757: ? ===
 
-// Module 11752
+// Module 11757
 import set from "set" /* 2 */;
-import GUILD_TEMPLATES_MEMBER_COUNT_PROMOTION_THRESHOLD from "GUILD_TEMPLATES_MEMBER_COUNT_PROMOTION_THRESHOLD" /* 6179 */;
+import GUILD_TEMPLATES_MEMBER_COUNT_PROMOTION_THRESHOLD from "GUILD_TEMPLATES_MEMBER_COUNT_PROMOTION_THRESHOLD" /* 6180 */;
 import ME from "ME" /* 673 */;
 
 ({ InviteStates: obj1, MessageEmbedTypes: c3 } = ME);

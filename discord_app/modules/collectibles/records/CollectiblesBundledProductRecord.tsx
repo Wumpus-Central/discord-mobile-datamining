@@ -1,6 +1,6 @@
-// === Module 7299: fromServer ===
+// === Module 7300: fromServer ===
 
-// Module 7299 (fromServer)
+// Module 7300 (fromServer)
 import set from "set" /* 2 */;
 import getPricesFromServerDefault from "getPricesFromServer" /* 4523 */;
 

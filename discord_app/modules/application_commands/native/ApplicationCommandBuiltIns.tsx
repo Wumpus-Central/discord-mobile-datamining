@@ -1,7 +1,7 @@
-// === Module 8166: get untranslatedDescription ===
+// === Module 8170: get untranslatedDescription ===
 
-// Module 8166 (get untranslatedDescription)
-import setDefault from "set" /* 4857 */;
+// Module 8170 (get untranslatedDescription)
+import setDefault from "set" /* 4858 */;
 import closure_3 from "markAllUserIdListsStale" /* 4130 */;
 import closure_4 from "mergeGuildAvatar" /* 1921 */;
 

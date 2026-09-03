@@ -1,10 +1,10 @@
-// === Module 17702: SENT_TIMESTAMP_FORMATTER ===
+// === Module 17726: SENT_TIMESTAMP_FORMATTER ===
 
-// Module 17702 (SENT_TIMESTAMP_FORMATTER)
+// Module 17726 (SENT_TIMESTAMP_FORMATTER)
 import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1233 */;
 import messagesProxyDefault from "messagesProxy" /* 2662 */;
-import getEmptyActivityFormatter from "getEmptyActivityFormatter" /* 7347 */;
+import getEmptyActivityFormatter from "getEmptyActivityFormatter" /* 7348 */;
 
 function SENT_TIMESTAMP_FORMATTER() {
   const obj = { seconds: null, minutes: null, hours: null, yesterday: null, days: null, date: null };

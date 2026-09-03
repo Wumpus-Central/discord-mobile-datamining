@@ -1,10 +1,10 @@
-// === Module 8144: createVoiceChannelBadge ===
+// === Module 8148: createVoiceChannelBadge ===
 
-// Module 8144 (createVoiceChannelBadge)
+// Module 8148 (createVoiceChannelBadge)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import ME from "ME" /* 673 */;
-import experiment from "experiment" /* 8145 */;
+import experiment from "experiment" /* 8149 */;
 import closure_3 from "ensureGuildLoaded" /* 1386 */;
 import closure_4 from "getUncachedChannelPermissions" /* 4120 */;
 import closure_5 from "updateVoiceState" /* 4497 */;
@@ -25,18 +25,18 @@ export const createVoiceChannelBadge = function createVoiceChannelBadge(id, guil
         }
         channel = channel.getChannel(channelId);
         if (null != channel) {
-          let tmpResult = tmp(4981);
+          let tmpResult = tmp(4982);
           const assetSource = Image.resolveAssetSource(tmpResult.getChannelIcon(channel));
           let uri;
           if (assetSource != null) {
             uri = assetSource.uri;
           }
           if (null != uri) {
-            tmpResult = tmp(4731);
+            tmpResult = tmp(4732);
             let result = tmpResult.shouldAgeVerifyForAgeGate();
             if (result) {
-              result = tmp(4731).shouldShowAgeGateForChannelId(channel.id);
-              const tmpResult1 = tmp(4731);
+              result = tmp(4732).shouldShowAgeGateForChannelId(channel.id);
+              const tmpResult1 = tmp(4732);
             }
             let isPrivateResult = channel.isPrivate();
             if (!isPrivateResult) {

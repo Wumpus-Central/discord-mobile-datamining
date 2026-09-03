@@ -1,10 +1,10 @@
-// === Module 13864: _sendShareMessage ===
+// === Module 13880: _sendShareMessage ===
 
-// Module 13864 (_sendShareMessage)
+// Module 13880 (_sendShareMessage)
 import dispatcherDefault from "dispatcher" /* 4194 */;
-import registerAssetDefault from "registerAsset" /* 11111 */;
+import registerAssetDefault from "registerAsset" /* 11115 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import { DraftType } from "handleChanged" /* 4854 */;
+import { DraftType } from "handleChanged" /* 4855 */;
 import { MessageSendLocation } from "MESSAGE_GROUP_SPACING" /* 4471 */;
 
 const require = arg1;
@@ -74,13 +74,13 @@ function _sendShareMessage() {
               if (dependencyMap == null) {
                 lib2 = "";
               }
-              constants = lib2(7436).parse(lib2, lib2);
+              constants = lib2(7437).parse(lib2, lib2);
               if (c4.length > 0) {
-                let obj2 = lib2(8171);
+                let obj2 = lib2(8175);
                 obj2.clearAll(id, c4.ChannelMessage);
               }
-              future = new lib(8157).Future();
-              let obj3 = lib2(7210);
+              future = new lib(8161).Future();
+              let obj3 = lib2(7211);
               obj2 = { location: null, doNotNotifyOnError: true, attachmentsToUpload: null, onAttachmentUploadError: null };
               obj2[0] = constants.SHARE_MODAL;
               obj2[2] = c4;

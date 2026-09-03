@@ -1,15 +1,15 @@
-// === Module 11332: getVideoQuestWatchCtaText ===
+// === Module 11336: getVideoQuestWatchCtaText ===
 
-// Module 11332 (getVideoQuestWatchCtaText)
+// Module 11336 (getVideoQuestWatchCtaText)
 import getSystemLocale from "getSystemLocale" /* 1233 */;
 import coerceMainRoute from "coerceMainRoute" /* 4332 */;
-import getQuestDeliveryDataForPlacement from "getQuestDeliveryDataForPlacement" /* 7453 */;
-import trackQuestEvent from "trackQuestEvent" /* 7473 */;
-import getApplicationIdsByTaskTypes from "getApplicationIdsByTaskTypes" /* 7479 */;
-import _manuallyStartConsoleQuest from "_manuallyStartConsoleQuest" /* 11133 */;
+import getQuestDeliveryDataForPlacement from "getQuestDeliveryDataForPlacement" /* 7454 */;
+import trackQuestEvent from "trackQuestEvent" /* 7474 */;
+import getApplicationIdsByTaskTypes from "getApplicationIdsByTaskTypes" /* 7480 */;
+import _manuallyStartConsoleQuest from "_manuallyStartConsoleQuest" /* 11137 */;
 import closure_2 from "handleConnectionInfoChange" /* 4574 */;
-import closure_3 from "initializeState" /* 7458 */;
-import closure_4 from "_toPropertyKey" /* 7460 */;
+import closure_3 from "initializeState" /* 7459 */;
+import closure_4 from "_toPropertyKey" /* 7461 */;
 import { AnalyticEvents } from "ME" /* 673 */;
 
 require = arg1;
@@ -60,7 +60,7 @@ export const getVideoQuestProgressRemainingAccessibilityLabel = function getVide
     const intl5 = tmp(1233).intl;
     return intl5.string(tmp(1233).t["ij5E/5"]);
   } else {
-    const remainingTaskTime = tmp(7479).getRemainingTaskTime(questTaskDetails);
+    const remainingTaskTime = tmp(7480).getRemainingTaskTime(questTaskDetails);
     ({ minutes, seconds } = remainingTaskTime);
     if (minutes > 0) {
       if (seconds > 0) {
@@ -86,7 +86,7 @@ export const getVideoQuestProgressRemainingAccessibilityLabel = function getVide
       obj2[0] = seconds;
       formatToPlainStringResult = intl.formatToPlainString(tmp(1233).t["0BZpdi"], obj2);
     }
-    const tmpResult = tmp(7479);
+    const tmpResult = tmp(7480);
   }
 };
 export const formatVideoProgressRatio = function formatVideoProgressRatio(bound, current) {
@@ -158,8 +158,8 @@ export const handleVideoQuestModalClose = function handleVideoQuestModalClose(ar
         isQuestExpiredResult = null != completedAt1;
       }
       if (!isQuestExpiredResult) {
-        tmp6(11133).updateVideoProgress(quest.id, videoProgress.maxTimestampSec);
-        const tmp6Result = tmp6(11133);
+        tmp6(11137).updateVideoProgress(quest.id, videoProgress.maxTimestampSec);
+        const tmp6Result = tmp6(11137);
       }
       tmp6 = require;
     }

@@ -1,6 +1,6 @@
-// === Module 10699: useGiftStyles ===
+// === Module 10703: useGiftStyles ===
 
-// Module 10699 (useGiftStyles)
+// Module 10703 (useGiftStyles)
 import set from "set" /* 2 */;
 import GuildFeatures from "GuildFeatures" /* 1923 */;
 

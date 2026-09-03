@@ -1,6 +1,6 @@
-// === Module 13028: CustomLinkType ===
+// === Module 13040: CustomLinkType ===
 
-// Module 13028 (CustomLinkType)
+// Module 13040 (CustomLinkType)
 import closure_0 from "_slicedToArray" /* 32 */;
 
 let obj = { MANAGED: 0, [0]: "MANAGED", QUICK: 1, [1]: "QUICK" };

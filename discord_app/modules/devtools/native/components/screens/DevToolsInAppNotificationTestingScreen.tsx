@@ -1,15 +1,15 @@
-// === Module 15554: getSelectedGuildChannel ===
+// === Module 15568: getSelectedGuildChannel ===
 
-// Module 15554 (getSelectedGuildChannel)
+// Module 15568 (getSelectedGuildChannel)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import ThemesDefault from "Themes" /* 709 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
 import dispatcherDefault from "dispatcher" /* 4194 */;
-import StickerFormat from "StickerFormat" /* 5220 */;
-import isReactionMilestoneNotification from "isReactionMilestoneNotification" /* 10199 */;
+import StickerFormat from "StickerFormat" /* 5221 */;
+import isReactionMilestoneNotification from "isReactionMilestoneNotification" /* 10203 */;
 import closure_3 from "noop" /* 19 */;
 import { ScrollView } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "loadSavedGuildStickers" /* 5452 */;
+import closure_5 from "loadSavedGuildStickers" /* 5453 */;
 import { createChannelRecord } from "createChannelRecord" /* 1390 */;
 import closure_7 from "hasFlag" /* 4131 */;
 import closure_8 from "ensureGuildLoaded" /* 1386 */;
@@ -688,7 +688,7 @@ export default function DevToolsInAppNotificationTestingScreen() {
       }, label.label);
     })
   };
-  items1[2] = callback(_require(6000).TableRowGroup, obj);
+  items1[2] = callback(_require(6001).TableRowGroup, obj);
   obj[2] = items1;
   return callback2(ScrollView, obj);
 };

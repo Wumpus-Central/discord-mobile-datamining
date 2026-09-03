@@ -1,6 +1,6 @@
-// === Module 16257: ForYouSuggestedFriendsSectionHeader ===
+// === Module 16276: ForYouSuggestedFriendsSectionHeader ===
 
-// Module 16257 (ForYouSuggestedFriendsSectionHeader)
+// Module 16276 (ForYouSuggestedFriendsSectionHeader)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 709 */;
 import getSystemLocale from "getSystemLocale" /* 1233 */;

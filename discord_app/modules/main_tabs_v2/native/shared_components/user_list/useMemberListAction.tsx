@@ -1,6 +1,6 @@
-// === Module 11409: useMemberListAction ===
+// === Module 11414: useMemberListAction ===
 
-// Module 11409 (useMemberListAction)
+// Module 11414 (useMemberListAction)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
@@ -14,7 +14,7 @@ import createCacheKey from "createCacheKey" /* 4478 */;
 
 const require = arg1;
 ({ Permissions: c10, AnalyticsSections: unpackModuleId, InstantInviteSources: closure_12 } = ME);
-let closure_14 = { listActionRenderer: "disabled", listActionHeight: "Date" };
+let closure_14 = { listActionRenderer: "Array", listActionHeight: "PX_16" };
 let closure_15 = createCacheKey.createStyles({ wrapper: { paddingTop: require("PX_24").USERS_LIST_PADDING_BETWEEN_SECTIONS } });
 let result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/user_list/useMemberListAction.tsx");
 

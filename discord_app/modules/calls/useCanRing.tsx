@@ -1,13 +1,13 @@
-// === Module 9887: useCanRingToGuildVoiceChannel ===
+// === Module 9891: useCanRingToGuildVoiceChannel ===
 
-// Module 9887 (useCanRingToGuildVoiceChannel)
-import getChannelRoleSubscriptionStatusDefault from "getChannelRoleSubscriptionStatus" /* 4960 */;
-import experimentDefault from "experiment" /* 9888 */;
+// Module 9891 (useCanRingToGuildVoiceChannel)
+import getChannelRoleSubscriptionStatusDefault from "getChannelRoleSubscriptionStatus" /* 4961 */;
+import experimentDefault from "experiment" /* 9892 */;
 import closure_3 from "fetchFingerprint" /* 1215 */;
-import closure_4 from "callConnect" /* 5230 */;
+import closure_4 from "callConnect" /* 5231 */;
 import closure_5 from "ensureGuildLoaded" /* 1386 */;
 import closure_6 from "trackCommunicationDisabled" /* 1991 */;
-import closure_7 from "recomputeGuild" /* 5365 */;
+import closure_7 from "recomputeGuild" /* 5366 */;
 import closure_8 from "getUncachedChannelPermissions" /* 4120 */;
 import closure_9 from "sortActivity" /* 4569 */;
 import closure_10 from "markAllUserIdListsStale" /* 4130 */;

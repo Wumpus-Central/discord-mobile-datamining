@@ -1,15 +1,15 @@
-// === Module 16843: Loading ===
+// === Module 16863: Loading ===
 
-// Module 16843 (Loading)
+// Module 16863 (Loading)
 import ThemesDefault from "Themes" /* 709 */;
-import _modDef9940 from "module_9940" /* 9940 */;
+import _modDef9944 from "module_9944" /* 9944 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import setSendState from "setSendState" /* 10007 */;
-import closure_8 from "_computeRows" /* 9944 */;
+import setSendState from "setSendState" /* 10011 */;
+import closure_8 from "compareRowsByMatchScore" /* 9948 */;
 import { ActivityActionTypes } from "ME" /* 673 */;
-import InviteSendStates from "InviteSendStates" /* 7491 */;
+import InviteSendStates from "InviteSendStates" /* 7492 */;
 import { NOOP_NULL } from "sum" /* 502 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
@@ -26,7 +26,7 @@ function Loading() {
     let tmp4 = dependencyMap;
     let obj = { row: null };
     obj[0] = num;
-    let arr = items.push(callback3(_modDef9940, obj, num));
+    let arr = items.push(callback3(_modDef9944, obj, num));
     num = num + 1;
   } while (num < 10);
   obj = { children: null };
@@ -56,9 +56,9 @@ export default function ActivityInviteSheet(activity) {
   let callback;
   let React;
   const tmp = callback5();
-  analyticsLocations = analyticsLocations(5961)(analyticsLocations(5981).ACTIVITY_INVITE_SHEET).analyticsLocations;
+  analyticsLocations = analyticsLocations(5962)(analyticsLocations(5982).ACTIVITY_INVITE_SHEET).analyticsLocations;
   const tmp2 = analyticsLocations;
-  const tmp4 = analyticsLocations(5961);
+  const tmp4 = analyticsLocations(5962);
   [tmp6, c2] = callback(React.useState(null), 2);
   const tmp7 = callback2((arg0) => arg0);
   callback = tmp7;
@@ -165,11 +165,11 @@ export default function ActivityInviteSheet(activity) {
   obj1 = { title: null };
   const intl = tmp11(1233).intl;
   obj1[0] = intl.string(activity(1233).t["OzOM/q"]);
-  obj[3] = closure_13(activity(5629).BottomSheetTitleHeader, obj1);
+  obj[3] = closure_13(activity(5630).BottomSheetTitleHeader, obj1);
   if (null != tmp6) {
     const obj2 = { style: null, Illustration: null, title: null };
     obj2[0] = tmp.emptyState;
-    obj2[1] = tmp11(9962).AppCrash;
+    obj2[1] = tmp11(9966).AppCrash;
     obj2[2] = tmp6;
     let tmp19Result = tmp17(tmp11(1296).EmptyState, obj2);
   } else if (tmp15) {
@@ -179,10 +179,10 @@ export default function ActivityInviteSheet(activity) {
     const obj4 = { style: null, children: null };
     obj4[0] = tmp.searchAndShareContainer;
     const obj5 = { size: "md", isRound: true, onChange: null, placeholder: null };
-    obj5[2] = tmp11(9960).searchInviteSuggestions;
+    obj5[2] = tmp11(9964).searchInviteSuggestions;
     const intl2 = tmp11(1233).intl;
     obj5[3] = intl2.string(tmp11(1233).t.iI1gMg);
-    obj4[1] = tmp17(tmp11(6230).SearchField, obj5);
+    obj4[1] = tmp17(tmp11(6231).SearchField, obj5);
     obj3[0] = tmp17(View, obj4);
     const items4 = [tmp17(View, obj3), ];
     if (tmp16) {
@@ -198,7 +198,7 @@ export default function ActivityInviteSheet(activity) {
       obj7[2] = callback;
       obj7[3] = callback2;
       obj7[4] = callback1;
-      tmp17Result = tmp17(tmp2(16844), obj7);
+      tmp17Result = tmp17(tmp2(16864), obj7);
     }
     const obj8 = { children: null };
     items4[1] = tmp17Result;
@@ -208,6 +208,6 @@ export default function ActivityInviteSheet(activity) {
     const tmp20 = closure_14;
   }
   obj[4] = tmp19Result;
-  obj[1] = closure_13(activity(5630).BottomSheet, obj);
-  return closure_13(activity(5961).AnalyticsLocationProvider, obj);
+  obj[1] = closure_13(activity(5631).BottomSheet, obj);
+  return closure_13(activity(5962).AnalyticsLocationProvider, obj);
 };

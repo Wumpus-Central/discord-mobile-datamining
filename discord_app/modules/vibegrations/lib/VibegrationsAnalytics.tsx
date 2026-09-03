@@ -1,10 +1,10 @@
-// === Module 16409: vibegrationLocation ===
+// === Module 16428: vibegrationLocation ===
 
-// Module 16409 (vibegrationLocation)
+// Module 16428 (vibegrationLocation)
 import expandEventPropertiesDefault from "expandEventProperties" /* 695 */;
-import vibegrationsAppIdFromTopic from "vibegrationsAppIdFromTopic" /* 6102 */;
+import vibegrationsAppIdFromTopic from "vibegrationsAppIdFromTopic" /* 6103 */;
 import closure_3 from "addApplication" /* 4519 */;
-import closure_4 from "isProjectOwner" /* 16406 */;
+import closure_4 from "isProjectOwner" /* 16425 */;
 import { AnalyticEvents } from "ME" /* 673 */;
 
 require = arg1;
@@ -105,6 +105,15 @@ export const trackVibegrationTurnResulted = function trackVibegrationTurnResulte
     cost_usd = null;
   }
   obj.turn_cost = cost_usd;
+  const tokens = result.tokens;
+  if (null == tokens) {
+    obj1 = { turn_input_tokens: null, turn_output_tokens: null, turn_cache_write_tokens: null, turn_cache_read_tokens: null, turn_total_tokens: null };
+  } else {
+    obj1 = { turn_input_tokens: null, turn_output_tokens: null, turn_cache_write_tokens: null, turn_cache_read_tokens: null, turn_total_tokens: null };
+    ({ input_tokens: obj4[0], output_tokens: obj4[1], cache_creation_input_tokens: obj4[2], cache_read_input_tokens: obj4[3] } = tokens);
+    obj1[4] = tokens.input_tokens + tokens.output_tokens + tokens.cache_creation_input_tokens + tokens.cache_read_input_tokens;
+  }
+  const merged1 = Object.assign(obj1);
   obj.track(AnalyticEvents.VIBEGRATION_TURN_RESULTED, obj);
 };
 export const trackVibegrationDeployed = function trackVibegrationDeployed(closure_0, isPreview) {

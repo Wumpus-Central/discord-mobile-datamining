@@ -1,18 +1,18 @@
-// === Module 4938: PillWrapper ===
+// === Module 4939: PillWrapper ===
 
-// Module 4938 (PillWrapper)
+// Module 4939 (PillWrapper)
 import ThemesDefault from "Themes" /* 709 */;
 import map from "map" /* 4197 */;
 import ManaContext from "ManaContext" /* 4204 */;
 import _modDef4217 from "module_4217" /* 4217 */;
-import MINIMUM_HIT_AREA2 from "MINIMUM_HIT_AREA" /* 4933 */;
-import styleProperties from "styleProperties" /* 4934 */;
-import LinearGradientDefault from "LinearGradient" /* 4940 */;
+import MINIMUM_HIT_AREA2 from "MINIMUM_HIT_AREA" /* 4934 */;
+import styleProperties from "styleProperties" /* 4935 */;
+import LinearGradientDefault from "LinearGradient" /* 4941 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import MINIMUM_HIT_AREA from "MINIMUM_HIT_AREA" /* 4933 */;
+import MINIMUM_HIT_AREA from "MINIMUM_HIT_AREA" /* 4934 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
 require = arg1;
@@ -40,7 +40,7 @@ function PillWrapper(expressivePressState) {
   if (shiny) {
     obj = { variant: null };
     obj[0] = variant;
-    tmp7 = callback2(tmp(4939).ButtonShine, obj);
+    tmp7 = callback2(tmp(4940).ButtonShine, obj);
   }
   if ("experimental_premium-primary" !== variant) {
     if ("experimental_premium-basic" !== variant) {

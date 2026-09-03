@@ -1,10 +1,10 @@
-// === Module 16889: useSoundboardSoundLock ===
+// === Module 16909: useSoundboardSoundLock ===
 
-// Module 16889 (useSoundboardSoundLock)
+// Module 16909 (useSoundboardSoundLock)
 import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4139 */;
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "mergeGuildAvatar" /* 1921 */;
-import { DEFAULT_SOUND_GUILD_ID } from "MAX_LENGTH_SOUND_NAME" /* 4967 */;
+import { DEFAULT_SOUND_GUILD_ID } from "MAX_LENGTH_SOUND_NAME" /* 4968 */;
 
 const require = arg1;
 let result = require("set").fileFinishedImporting("modules/soundboard/native/utils/useSoundboardSoundLock.tsx");
@@ -15,8 +15,8 @@ export const useSoundboardSoundLock = function useSoundboardSoundLock(sound, cha
   let obj = _require(586);
   const items = [closure_4];
   const stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
-  const result = _require(6197).canUseSoundboardSound(stateFromStores, sound, channel);
-  const obj2 = _require(6197);
+  const result = _require(6198).canUseSoundboardSound(stateFromStores, sound, channel);
+  const obj2 = _require(6198);
   const tmp4 = !result;
   const result1 = getPremiumPlanItemDefault.canUseSoundboardEverywhere(stateFromStores);
   let tmp6 = !result1;

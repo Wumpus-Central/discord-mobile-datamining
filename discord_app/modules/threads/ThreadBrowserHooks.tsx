@@ -1,14 +1,14 @@
-// === Module 12523: useTrackThreadBrowserTab ===
+// === Module 12535: useTrackThreadBrowserTab ===
 
-// Module 12523 (useTrackThreadBrowserTab)
+// Module 12535 (useTrackThreadBrowserTab)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
-import { useShouldShowResolvedFlagsForChannel as closure_5 } from "useReportToModChannelFiltersStore" /* 12524 */;
+import { useShouldShowResolvedFlagsForChannel as closure_5 } from "useReportToModChannelFiltersStore" /* 12536 */;
 import closure_6 from "ensureGuildLoaded" /* 1386 */;
 import closure_7 from "getUncachedChannelPermissions" /* 4120 */;
 import closure_8 from "generateOldThreadCutoff" /* 4493 */;
-import closure_9 from "handleThreadCreateOrUpdate" /* 5457 */;
-import closure_10 from "listKey" /* 7520 */;
+import closure_9 from "handleThreadCreateOrUpdate" /* 5458 */;
+import closure_10 from "listKey" /* 7521 */;
 import closure_11 from "storeThread" /* 4122 */;
 import { Permissions } from "sum" /* 502 */;
 

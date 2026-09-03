@@ -1,6 +1,6 @@
-// === Module 12781: CollectiblesShopPricePlaceholder ===
+// === Module 12793: CollectiblesShopPricePlaceholder ===
 
-// Module 12781 (CollectiblesShopPricePlaceholder)
+// Module 12793 (CollectiblesShopPricePlaceholder)
 import ThemesDefault from "Themes" /* 709 */;
 import _modDef4217 from "module_4217" /* 4217 */;
 import closure_3 from "noop" /* 19 */;

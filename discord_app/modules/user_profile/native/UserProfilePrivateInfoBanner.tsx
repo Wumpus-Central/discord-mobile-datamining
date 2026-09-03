@@ -1,6 +1,6 @@
-// === Module 12730: UserProfilePrivateInfoBanner ===
+// === Module 12742: UserProfilePrivateInfoBanner ===
 
-// Module 12730 (UserProfilePrivateInfoBanner)
+// Module 12742 (UserProfilePrivateInfoBanner)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;

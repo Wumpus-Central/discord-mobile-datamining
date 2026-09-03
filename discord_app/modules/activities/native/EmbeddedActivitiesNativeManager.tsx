@@ -1,18 +1,18 @@
-// === Module 9466: postMessageToWebView ===
+// === Module 9470: postMessageToWebView ===
 
-// Module 9466 (postMessageToWebView)
+// Module 9470 (postMessageToWebView)
 import v1 from "v1" /* 511 */;
 import dispatcherDefault from "dispatcher" /* 706 */;
 import ComponentDispatcher from "ComponentDispatcher" /* 1228 */;
 import getSystemLocale from "getSystemLocale" /* 1233 */;
 import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1470 */;
 import dispatcherDefault2 from "dispatcher" /* 4194 */;
-import _modDef4858 from "module_4858" /* 4858 */;
-import enforcingDefault from "enforcing" /* 9467 */;
-import getShelfItemTrackingPropertiesDefault from "getShelfItemTrackingProperties" /* 9469 */;
-import NativeModulesDefault from "NativeModules" /* 9472 */;
-import _runPrimaryAppCommandOrJoinEmbeddedActivity from "_runPrimaryAppCommandOrJoinEmbeddedActivity" /* 9482 */;
-import registerAssetDefault from "registerAsset" /* 9531 */;
+import _modDef4859 from "module_4859" /* 4859 */;
+import enforcingDefault from "enforcing" /* 9471 */;
+import getShelfItemTrackingPropertiesDefault from "getShelfItemTrackingProperties" /* 9473 */;
+import NativeModulesDefault from "NativeModules" /* 9476 */;
+import _runPrimaryAppCommandOrJoinEmbeddedActivity from "_runPrimaryAppCommandOrJoinEmbeddedActivity" /* 9486 */;
+import registerAssetDefault from "registerAsset" /* 9535 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "ensureGuildLoaded" /* 1386 */;
 import closure_5 from "createRTCConnection" /* 4554 */;
@@ -20,7 +20,7 @@ import closure_6 from "participantFromServer" /* 1385 */;
 import { DISALLOWED_NAVIGATION_ERROR_CLOSE_ACTIVITY as closure_7 } from "items3" /* 4506 */;
 import ME from "ME" /* 673 */;
 import { TransportTypes } from "RPC_SCOPE_CONFIG" /* 4380 */;
-import WebView from "WebView" /* 8608 */;
+import WebView from "WebView" /* 8612 */;
 import set from "set" /* 1234 */;
 
 require = arg1;
@@ -259,7 +259,7 @@ class EmbeddedActivitiesNativeManager extends tmp6 {
 const prototype = EmbeddedActivitiesNativeManager.prototype;
 prototype["showErrorModal"] = function showErrorModal(reason, id) {
   ({ code, message } = reason);
-  let obj = _modDef4858;
+  let obj = _modDef4859;
   obj = { title: null, body: null };
   const intl = getSystemLocale.intl;
   obj[0] = intl.formatToPlainString(getSystemLocale.t.hbiAO6, { code });
@@ -267,7 +267,7 @@ prototype["showErrorModal"] = function showErrorModal(reason, id) {
   obj.show(obj);
 };
 prototype["showLaunchErrorModal"] = function showLaunchErrorModal(message) {
-  let obj = _modDef4858;
+  let obj = _modDef4859;
   obj = { title: null, body: null };
   const intl = getSystemLocale.intl;
   obj[0] = intl.string(getSystemLocale.t.PtobXW);

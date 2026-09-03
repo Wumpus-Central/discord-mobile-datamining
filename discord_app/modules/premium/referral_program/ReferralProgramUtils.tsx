@@ -1,6 +1,6 @@
-// === Module 7973: getReferralTrialOfferExpirationCopy ===
+// === Module 7976: getReferralTrialOfferExpirationCopy ===
 
-// Module 7973 (getReferralTrialOfferExpirationCopy)
+// Module 7976 (getReferralTrialOfferExpirationCopy)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import initialize from "initialize" /* 586 */;
 import setDefault from "set" /* 684 */;
@@ -8,8 +8,8 @@ import getSystemLocale from "getSystemLocale" /* 1233 */;
 import DismissibleContent from "DismissibleContent" /* 1372 */;
 import addVersionedDismissedContent from "addVersionedDismissedContent" /* 1374 */;
 import UNSAFE_isDismissibleContentDismissed from "UNSAFE_isDismissibleContentDismissed" /* 4298 */;
-import useIsEligibleSenderForReferralProgram from "useIsEligibleSenderForReferralProgram" /* 7974 */;
-import closure_3 from "emitChanges" /* 7206 */;
+import useIsEligibleSenderForReferralProgram from "useIsEligibleSenderForReferralProgram" /* 7977 */;
+import closure_3 from "emitChanges" /* 7207 */;
 import { ContentDismissActionType } from "ContentDismissActionType" /* 1383 */;
 
 require = arg1;

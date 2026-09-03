@@ -1,9 +1,9 @@
-// === Module 15807: PromotionalEmailCheckBox ===
+// === Module 15823: PromotionalEmailCheckBox ===
 
-// Module 15807 (PromotionalEmailCheckBox)
+// Module 15823 (PromotionalEmailCheckBox)
 import noopAll from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import setPromoEmailConsentState from "setPromoEmailConsentState" /* 6061 */;
+import setPromoEmailConsentState from "setPromoEmailConsentState" /* 6062 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -37,7 +37,7 @@ export default function PromotionalEmailCheckBox(style) {
     obj[4] = tmp.checkboxRow;
     obj1 = { checked: null };
     obj1[0] = tmp3;
-    const items = [callback2(tmp4(7693).FormCheckbox, obj1), ];
+    const items = [callback2(tmp4(7696).FormCheckbox, obj1), ];
     const obj2 = { variant: "text-xs/medium", color: "text-muted", style: null, children: null };
     obj2[2] = tmp.checkboxLabel;
     const intl2 = tmp4(1233).intl;

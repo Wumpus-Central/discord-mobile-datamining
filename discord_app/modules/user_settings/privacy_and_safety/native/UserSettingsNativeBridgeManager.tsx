@@ -1,10 +1,10 @@
-// === Module 17643: prototype ===
+// === Module 17663: prototype ===
 
-// Module 17643 (prototype)
+// Module 17663 (prototype)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import set2 from "set" /* 1234 */;
-import initializeDefault from "initialize" /* 5494 */;
+import initializeDefault from "initialize" /* 5495 */;
 import closure_3 from "handleConnectionClosedOrResumed" /* 1339 */;
 
 const NativeModules = get_ActivityIndicator.NativeModules;

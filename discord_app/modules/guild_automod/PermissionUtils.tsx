@@ -1,6 +1,6 @@
-// === Module 16648: canCurrentUserManageMessageFilters ===
+// === Module 16668: canCurrentUserManageMessageFilters ===
 
-// Module 16648 (canCurrentUserManageMessageFilters)
+// Module 16668 (canCurrentUserManageMessageFilters)
 import closure_2 from "createGuildRecordFromRust" /* 1908 */;
 import closure_3 from "getUncachedChannelPermissions" /* 4120 */;
 import ME from "ME" /* 673 */;

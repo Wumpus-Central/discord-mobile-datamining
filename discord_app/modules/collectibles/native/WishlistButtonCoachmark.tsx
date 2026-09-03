@@ -1,6 +1,6 @@
-// === Module 15648: WishlistButtonCoachmark ===
+// === Module 15662: WishlistButtonCoachmark ===
 
-// Module 15648 (WishlistButtonCoachmark)
+// Module 15662 (WishlistButtonCoachmark)
 import closure_2 from "_slicedToArray" /* 32 */;
 import closure_3 from "noop" /* 19 */;
 import { ContentDismissActionType } from "ContentDismissActionType" /* 1383 */;
@@ -13,7 +13,7 @@ export default function WishlistButtonCoachmark(anchorRef) {
   dependencyMap = undefined;
   let callback;
   let registerDismiss;
-  hasNeverWishlisted = hasNeverWishlisted(8909).useHasNeverWishlisted();
+  hasNeverWishlisted = hasNeverWishlisted(8913).useHasNeverWishlisted();
   let items = [hasNeverWishlisted];
   const memo = registerDismiss.useMemo(() => {
     if (hasNeverWishlisted) {
@@ -24,13 +24,13 @@ export default function WishlistButtonCoachmark(anchorRef) {
     }
     return items1;
   }, items);
-  let obj = hasNeverWishlisted(8909);
-  const tmp3 = callback(hasNeverWishlisted(6260).useSelectedDismissibleContent(memo), 2);
+  let obj = hasNeverWishlisted(8913);
+  const tmp3 = callback(hasNeverWishlisted(6261).useSelectedDismissibleContent(memo), 2);
   dependencyMap = tmp4;
   const tmp5 = tmp3[0] === hasNeverWishlisted(1372).DismissibleContent.WISHLIST_MOBILE_NUX_PRODUCT_CARD_COACHMARK;
   callback = tmp5;
-  const obj2 = hasNeverWishlisted(6260);
-  registerDismiss = hasNeverWishlisted(15645).useCollectiblesCoachmarkScrollDismissContext().registerDismiss;
+  const obj2 = hasNeverWishlisted(6261);
+  registerDismiss = hasNeverWishlisted(15659).useCollectiblesCoachmarkScrollDismissContext().registerDismiss;
   let items1 = [tmp5, registerDismiss, tmp3[1]];
   const effect = registerDismiss.useEffect(() => {
     if (closure_2) {
@@ -50,7 +50,7 @@ export default function WishlistButtonCoachmark(anchorRef) {
     };
     return obj;
   }, items2);
-  const obj3 = hasNeverWishlisted(15645);
-  const coachmark = hasNeverWishlisted(8987).useCoachmark(anchorRef.anchorRef, memo1);
+  const obj3 = hasNeverWishlisted(15659);
+  const coachmark = hasNeverWishlisted(8991).useCoachmark(anchorRef.anchorRef, memo1);
   return null;
 };

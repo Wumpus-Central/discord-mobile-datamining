@@ -1,14 +1,14 @@
-// === Module 12490: HubEmailConnectionStudentPrompt ===
+// === Module 12502: HubEmailConnectionStudentPrompt ===
 
-// Module 12490 (HubEmailConnectionStudentPrompt)
+// Module 12502 (HubEmailConnectionStudentPrompt)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 709 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { HubEmailConnectionSteps } from "HubEmailConnectionSteps" /* 12481 */;
+import { HubEmailConnectionSteps } from "HubEmailConnectionSteps" /* 12493 */;
 import ME from "ME" /* 673 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
-import importDefaultResult from "createTextStyle" /* 5469 */;
+import importDefaultResult from "createTextStyle" /* 5470 */;
 
 const require = arg1;
 noopAll;
@@ -40,9 +40,9 @@ export default function HubEmailConnectionStudentPrompt(onClose) {
   obj1[1] = intl.string(onClose(1233).t["+/Pv0h"]);
   const items = [callback(onClose(1296).LegacyText, obj1), , ];
   const obj2 = { DEPRECATED_style: tmp.row, leading: null, trailing: null, label: null, subLabel: null, onPress: null };
-  const obj3 = { source: invite(12491) };
+  const obj3 = { source: invite(12503) };
   obj2[1] = callback(closure_4, obj3);
-  obj2[2] = invite(5600).Arrow;
+  obj2[2] = invite(5601).Arrow;
   const intl2 = onClose(1233).intl;
   obj2[3] = intl2.string(onClose(1233).t["a7a/D+"]);
   const intl3 = onClose(1233).intl;
@@ -53,18 +53,18 @@ export default function HubEmailConnectionStudentPrompt(onClose) {
     obj = { onClose, invite };
     arr = arr.push(closure_1_5.VERIFY_EMAIL, obj);
   };
-  items[1] = callback(invite(5600), obj2);
+  items[1] = callback(invite(5601), obj2);
   const obj4 = { DEPRECATED_style: tmp.row, leading: null, trailing: null, label: null, onPress: null };
   const obj5 = { source: null };
-  const tmp2 = invite(5600);
-  obj5[0] = invite(12492);
+  const tmp2 = invite(5601);
+  obj5[0] = invite(12504);
   obj4[1] = callback(closure_4, obj5);
-  obj4[2] = invite(5600).Arrow;
+  obj4[2] = invite(5601).Arrow;
   const intl4 = onClose(1233).intl;
   obj4[3] = intl4.string(onClose(1233).t.GLG9n4);
   obj4[4] = onClose;
-  items[2] = callback(invite(5600), obj4);
+  items[2] = callback(invite(5601), obj4);
   obj[1] = items;
   obj[0] = callback2(closure_3, obj);
-  return callback(onClose(12489).HubEmailConnectionScreen, obj);
+  return callback(onClose(12501).HubEmailConnectionScreen, obj);
 };

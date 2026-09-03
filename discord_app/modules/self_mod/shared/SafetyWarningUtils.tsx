@@ -1,6 +1,6 @@
-// === Module 11227: trackViewedEvent ===
+// === Module 11231: trackViewedEvent ===
 
-// Module 11227 (trackViewedEvent)
+// Module 11231 (trackViewedEvent)
 import expandEventPropertiesDefault from "expandEventProperties" /* 695 */;
 import closure_2 from "mergeGuildAvatar" /* 1921 */;
 import { AnalyticEvents } from "ME" /* 673 */;

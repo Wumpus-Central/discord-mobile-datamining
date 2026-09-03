@@ -1,6 +1,6 @@
-// === Module 8803: getWidgetAssetURL ===
+// === Module 8807: getWidgetAssetURL ===
 
-// Module 8803 (getWidgetAssetURL)
+// Module 8807 (getWidgetAssetURL)
 import set from "set" /* 2 */;
 import ME from "ME" /* 673 */;
 import getAvatarURL from "getAvatarURL" /* 1430 */;

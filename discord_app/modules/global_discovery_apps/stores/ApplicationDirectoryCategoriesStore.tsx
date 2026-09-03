@@ -1,6 +1,6 @@
-// === Module 11867: getLastFetchTimeMs ===
+// === Module 11873: getLastFetchTimeMs ===
 
-// Module 11867 (getLastFetchTimeMs)
+// Module 11873 (getLastFetchTimeMs)
 import initializeDefault from "initialize" /* 586 */;
 import dispatcherDefault from "dispatcher" /* 706 */;
 

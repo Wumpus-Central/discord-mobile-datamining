@@ -1,14 +1,14 @@
-// === Module 16205: AvatarDefault ===
+// === Module 16224: AvatarDefault ===
 
-// Module 16205 (AvatarDefault)
+// Module 16224 (AvatarDefault)
 import ThemesDefault from "Themes" /* 709 */;
 import Button from "Button" /* 1296 */;
 import map from "map" /* 4197 */;
-import SolidCutout from "SolidCutout" /* 8106 */;
-import SolidCutoutDefault from "SolidCutout" /* 8106 */;
-import ReactionIcon from "ReactionIcon" /* 8237 */;
+import SolidCutout from "SolidCutout" /* 8109 */;
+import SolidCutoutDefault from "SolidCutout" /* 8109 */;
+import ReactionIcon from "ReactionIcon" /* 8241 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import CONNECTION_BANNER_HEIGHT from "CONNECTION_BANNER_HEIGHT" /* 14925 */;
+import CONNECTION_BANNER_HEIGHT from "CONNECTION_BANNER_HEIGHT" /* 14940 */;
 import { StatusTypes } from "ME" /* 673 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
@@ -28,7 +28,7 @@ function AvatarDefault() {
   const result = num / 2;
   const sum = result + tmp2(1296).STATUS_PADDING;
   const diff = tmp7 - sum - num / 4 * 2;
-  obj = { shape: tmp2(8106).CutoutShape.Circle, x: diff, y: diff, size: 2 * sum };
+  obj = { shape: tmp2(8109).CutoutShape.Circle, x: diff, y: diff, size: 2 * sum };
   obj = { style: null, children: null };
   obj1 = { height: tmp2(1296).AVATAR_SIZE_MAP[tmp6], width: tmp2(1296).AVATAR_SIZE_MAP[tmp6], position: "relative" };
   obj[0] = obj1;

@@ -1,6 +1,6 @@
-// === Module 9627: useStableSafeAreaInsets ===
+// === Module 9631: useStableSafeAreaInsets ===
 
-// Module 9627 (useStableSafeAreaInsets)
+// Module 9631 (useStableSafeAreaInsets)
 import context from "context" /* 1495 */;
 import useSafeAreaInsets from "useSafeAreaInsets" /* 1627 */;
 import enforcingDefault from "enforcing" /* 1639 */;

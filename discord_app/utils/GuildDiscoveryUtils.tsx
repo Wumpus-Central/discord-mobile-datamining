@@ -1,6 +1,6 @@
-// === Module 6194: _startLurking ===
+// === Module 6195: _startLurking ===
 
-// Module 6194 (_startLurking)
+// Module 6195 (_startLurking)
 import expandEventPropertiesDefault from "expandEventProperties" /* 695 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "initialize" /* 4121 */;

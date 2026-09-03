@@ -1,6 +1,6 @@
-// === Module 6130: useAvailableTags ===
+// === Module 6131: useAvailableTags ===
 
-// Module 6130 (useAvailableTags)
+// Module 6131 (useAvailableTags)
 import closure_2 from "noop" /* 19 */;
 import closure_3 from "ensureGuildLoaded" /* 1386 */;
 import closure_4 from "getUncachedChannelPermissions" /* 4120 */;

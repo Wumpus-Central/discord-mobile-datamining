@@ -1,10 +1,10 @@
-// === Module 6820: NitroCoinSpotIllustration ===
+// === Module 6821: NitroCoinSpotIllustration ===
 
-// Module 6820 (NitroCoinSpotIllustration)
+// Module 6821 (NitroCoinSpotIllustration)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5501 */;
-import metadataDefault from "metadata" /* 6821 */;
+import preloadDefault from "preload" /* 5502 */;
+import metadataDefault from "metadata" /* 6822 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/NitroCoinSpotIllustration.native.tsx");

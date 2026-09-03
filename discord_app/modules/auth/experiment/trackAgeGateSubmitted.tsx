@@ -1,6 +1,6 @@
-// === Module 15781: trackAgeGateSubmitted ===
+// === Module 15797: trackAgeGateSubmitted ===
 
-// Module 15781 (trackAgeGateSubmitted)
+// Module 15797 (trackAgeGateSubmitted)
 import set from "set" /* 2 */;
 import ME from "ME" /* 673 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 695 */;

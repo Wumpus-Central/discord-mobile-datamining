@@ -1,9 +1,9 @@
-// === Module 13327: MAX_REFERRALS_SENT ===
+// === Module 13339: MAX_REFERRALS_SENT ===
 
-// Module 13327 (MAX_REFERRALS_SENT)
+// Module 13339 (MAX_REFERRALS_SENT)
 import closure_2 from "noop" /* 19 */;
 import closure_3 from "mergeGuildAvatar" /* 1921 */;
-import closure_4 from "emitChanges" /* 7206 */;
+import closure_4 from "emitChanges" /* 7207 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/premium/referral_program/hooks/useReferralProgramBannerDetails.tsx");

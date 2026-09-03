@@ -1,6 +1,6 @@
-// === Module 9831: isStableVoiceStateEqual ===
+// === Module 9835: isStableVoiceStateEqual ===
 
-// Module 9831 (isStableVoiceStateEqual)
+// Module 9835 (isStableVoiceStateEqual)
 import shallowEqualDefault from "shallowEqual" /* 640 */;
 import closure_3 from "_detectH265HardwareDecode" /* 4529 */;
 import closure_4 from "updateVoiceState" /* 4497 */;

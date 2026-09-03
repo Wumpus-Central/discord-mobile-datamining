@@ -1,6 +1,6 @@
-// === Module 7396: getDurationString ===
+// === Module 7397: getDurationString ===
 
-// Module 7396 (getDurationString)
+// Module 7397 (getDurationString)
 import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1233 */;
 import hooksDefault from "hooks" /* 4074 */;

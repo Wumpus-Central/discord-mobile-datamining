@@ -1,10 +1,10 @@
-// === Module 12807: useWishlistSuggestionsDismissibleContent ===
+// === Module 12819: useWishlistSuggestionsDismissibleContent ===
 
-// Module 12807 (useWishlistSuggestionsDismissibleContent)
+// Module 12819 (useWishlistSuggestionsDismissibleContent)
 import setDefault from "set" /* 684 */;
 import closure_2 from "_slicedToArray" /* 32 */;
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "createUserWidgetFromServer" /* 7375 */;
+import closure_4 from "createUserWidgetFromServer" /* 7376 */;
 import { ContentDismissActionType } from "ContentDismissActionType" /* 1383 */;
 
 const require = arg1;

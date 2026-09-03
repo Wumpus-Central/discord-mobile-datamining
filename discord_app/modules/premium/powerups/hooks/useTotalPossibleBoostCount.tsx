@@ -1,6 +1,6 @@
-// === Module 16042: useTotalPossibleBoostCount ===
+// === Module 16058: useTotalPossibleBoostCount ===
 
-// Module 16042 (useTotalPossibleBoostCount)
+// Module 16058 (useTotalPossibleBoostCount)
 import set from "set" /* 2 */;
 import noop from "noop" /* 19 */;
 import BoostedGuildTiers from "BoostedGuildTiers" /* 4365 */;

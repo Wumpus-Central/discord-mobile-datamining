@@ -1,6 +1,6 @@
-// === Module 15309: hasAndroidNotificationChannels ===
+// === Module 15324: hasAndroidNotificationChannels ===
 
-// Module 15309 (hasAndroidNotificationChannels)
+// Module 15324 (hasAndroidNotificationChannels)
 import set from "set" /* 2 */;
 import set2 from "set" /* 1234 */;
 import DCDDeviceManager from "DCDDeviceManager" /* 4457 */;

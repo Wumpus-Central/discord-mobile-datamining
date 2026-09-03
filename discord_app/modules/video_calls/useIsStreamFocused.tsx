@@ -1,6 +1,6 @@
-// === Module 9636: useIsStreamFocused ===
+// === Module 9640: useIsStreamFocused ===
 
-// Module 9636 (useIsStreamFocused)
+// Module 9640 (useIsStreamFocused)
 import closure_2 from "getParticipants" /* 4494 */;
 import { isStreamParticipant } from "ParticipantTypes" /* 4499 */;
 

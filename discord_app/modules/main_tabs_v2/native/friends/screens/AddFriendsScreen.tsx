@@ -1,18 +1,18 @@
-// === Module 16582: handleFindFriends ===
+// === Module 16602: handleFindFriends ===
 
-// Module 16582 (handleFindFriends)
+// Module 16602 (handleFindFriends)
 import ThemesDefault from "Themes" /* 709 */;
-import handleNameInputScreenOrSuggestions from "handleNameInputScreenOrSuggestions" /* 12438 */;
+import handleNameInputScreenOrSuggestions from "handleNameInputScreenOrSuggestions" /* 12450 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import closure_5 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_8 from "recountRelationshipTypes" /* 7412 */;
+import closure_8 from "recountRelationshipTypes" /* 7413 */;
 import closure_9 from "markAllUserIdListsStale" /* 4130 */;
 import closure_10 from "mergeGuildAvatar" /* 1921 */;
-import { Sections } from "SuggestedFriendSource" /* 12461 */;
+import { Sections } from "SuggestedFriendSource" /* 12473 */;
 import ME from "ME" /* 673 */;
-import { ContactPermissions } from "ContactSyncLandingPage" /* 12440 */;
+import { ContactPermissions } from "ContactSyncLandingPage" /* 12452 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -100,7 +100,7 @@ function _handleShare() {
             obj3[1] = code;
             const intl2 = callback(1233).intl;
             const obj4 = { link: null };
-            obj4[0] = code(7513)(code);
+            obj4[0] = code(7514)(code);
             obj3[2] = intl2.formatToPlainString(callback(1233).t.PJf9P9, obj4);
             obj3[3] = constants.ADD_FRIENDS_MODAL;
             callback(obj3);

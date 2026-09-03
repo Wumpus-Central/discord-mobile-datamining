@@ -1,6 +1,6 @@
-// === Module 14549: handleInit ===
+// === Module 14565: handleInit ===
 
-// Module 14549 (handleInit)
+// Module 14565 (handleInit)
 import initializeDefault from "initialize" /* 586 */;
 import dispatcherDefault from "dispatcher" /* 706 */;
 

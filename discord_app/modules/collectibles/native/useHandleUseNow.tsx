@@ -1,9 +1,9 @@
-// === Module 11050: useHandleUseNow ===
+// === Module 11054: useHandleUseNow ===
 
-// Module 11050 (useHandleUseNow)
-import useOpenProfileSettingsDefault from "useOpenProfileSettings" /* 9045 */;
+// Module 11054 (useHandleUseNow)
+import useOpenProfileSettingsDefault from "useOpenProfileSettings" /* 9049 */;
 import closure_3 from "noop" /* 19 */;
-import { RootNavigatorScreen } from "MODE_CHANGE_PHYSICS" /* 11051 */;
+import { RootNavigatorScreen } from "MODE_CHANGE_PHYSICS" /* 11055 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/collectibles/native/useHandleUseNow.tsx");
@@ -36,7 +36,7 @@ export const useHandleUseNow = function useHandleUseNow(onSuccess) {
     obj[1] = intl.string(onSuccess(1233).t.CKsXk3);
     obj.open(obj);
   }, []);
-  let obj = onSuccess(11052);
+  let obj = onSuccess(11056);
   handleUseNow = obj.useHandleUseNow({ product, onSuccess: callback, onError: callback1 });
   ({ handleUseNow, isApplying, canUseNow } = handleUseNow);
   const tmp4 = useOpenProfileSettingsDefault({ analyticsLocations });

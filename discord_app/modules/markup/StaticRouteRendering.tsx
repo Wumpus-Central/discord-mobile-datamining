@@ -1,6 +1,6 @@
-// === Module 4976: staticRouteToTranslation ===
+// === Module 4977: staticRouteToTranslation ===
 
-// Module 4976 (staticRouteToTranslation)
+// Module 4977 (staticRouteToTranslation)
 import getSystemLocale from "getSystemLocale" /* 1233 */;
 import closure_2 from "createGuildRoleRecordFromRust" /* 1984 */;
 

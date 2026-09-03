@@ -1,19 +1,19 @@
-// === Module 5231: filterPlayingActivities ===
+// === Module 5232: filterPlayingActivities ===
 
-// Module 5231 (filterPlayingActivities)
+// Module 5232 (filterPlayingActivities)
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 586 */;
 import isUndefinedOrNullDefault from "isUndefinedOrNull" /* 656 */;
 import dispatcherDefault from "dispatcher" /* 706 */;
 import hasFlag from "hasFlag" /* 1398 */;
 import explicitContentFromProto from "explicitContentFromProto" /* 4166 */;
-import isListeningOnSpotifyDefault from "isListeningOnSpotify" /* 9269 */;
-import closure_3 from "upsertAccount" /* 5232 */;
+import isListeningOnSpotifyDefault from "isListeningOnSpotify" /* 9273 */;
+import closure_3 from "upsertAccount" /* 5233 */;
 import closure_4 from "handleConnectionClosedOrResumed" /* 1339 */;
 import closure_5 from "gameFromServer" /* 4514 */;
-import closure_6 from "checkIdleAFK" /* 5362 */;
+import closure_6 from "checkIdleAFK" /* 5363 */;
 import closure_7 from "setLibraryApplications" /* 4517 */;
-import closure_8 from "updateActivities" /* 9446 */;
+import closure_8 from "updateActivities" /* 9450 */;
 import closure_9 from "sortActivity" /* 4569 */;
 import { sortActivity } from "sortActivity" /* 4569 */;
 import closure_11 from "handleUpdate" /* 4496 */;

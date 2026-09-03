@@ -1,6 +1,6 @@
-// === Module 8567: GifTag ===
+// === Module 8571: GifTag ===
 
-// Module 8567 (GifTag)
+// Module 8571 (GifTag)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;

@@ -1,19 +1,19 @@
-// === Module 16980: VoicePanelPIP ===
+// === Module 17000: VoicePanelPIP ===
 
-// Module 16980 (VoicePanelPIP)
+// Module 17000 (VoicePanelPIP)
 import ManaContext from "ManaContext" /* 4204 */;
-import context2 from "context" /* 16908 */;
+import context2 from "context" /* 16928 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_7 from "participantFromServer" /* 1385 */;
-import closure_8 from "map" /* 9477 */;
-import closure_9 from "withEqualityFn" /* 4728 */;
-import VoicePanelModes from "VoicePanelModes" /* 12063 */;
-import { VoicePanelControlsModes } from "VoicePanelControlsModes" /* 12061 */;
-import { VoicePanelPIPModes } from "VoicePanelPIPModes" /* 16904 */;
-import { ActivityPanelModes } from "ActivityPanelModes" /* 9479 */;
-import { isLaunched } from "FrameLayoutModes" /* 9478 */;
+import closure_8 from "map" /* 9481 */;
+import closure_9 from "withEqualityFn" /* 4729 */;
+import VoicePanelModes from "VoicePanelModes" /* 12069 */;
+import { VoicePanelControlsModes } from "VoicePanelControlsModes" /* 12067 */;
+import { VoicePanelPIPModes } from "VoicePanelPIPModes" /* 16924 */;
+import { ActivityPanelModes } from "ActivityPanelModes" /* 9483 */;
+import { isLaunched } from "FrameLayoutModes" /* 9482 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -592,7 +592,7 @@ let closure_35 = importAllResult.memo((transitionState) => {
       };
     }
   }, items1);
-  panelCardStillInPIP = obj.useContext(transitionCleanUp(12062)).panelCardStillInPIP;
+  panelCardStillInPIP = obj.useContext(transitionCleanUp(12068)).panelCardStillInPIP;
   const tmp4 = callback(panelCardStillInPIP.useState(tmp), 2);
   class I {
     constructor() {

@@ -1,14 +1,14 @@
-// === Module 10996: GiftingBadgeLevelUpProgress ===
+// === Module 11000: GiftingBadgeLevelUpProgress ===
 
-// Module 10996 (GiftingBadgeLevelUpProgress)
+// Module 11000 (GiftingBadgeLevelUpProgress)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 709 */;
 import getSystemLocale from "getSystemLocale" /* 1233 */;
 import messagesProxyDefault from "messagesProxy" /* 2464 */;
 import Text from "Text" /* 4474 */;
-import GiftingBadgeIconDefault from "GiftingBadgeIcon" /* 10743 */;
+import GiftingBadgeIconDefault from "GiftingBadgeIcon" /* 10747 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import { getSingleRequirementThreshold as closure_4 } from "initialize" /* 8573 */;
+import { getSingleRequirementThreshold as closure_4 } from "initialize" /* 8577 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 

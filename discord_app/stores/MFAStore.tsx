@@ -1,6 +1,6 @@
-// === Module 13623: getVerificationKey ===
+// === Module 13638: getVerificationKey ===
 
-// Module 13623 (getVerificationKey)
+// Module 13638 (getVerificationKey)
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 586 */;
 import setSecondaryTokenAll from "setSecondaryToken" /* 704 */;

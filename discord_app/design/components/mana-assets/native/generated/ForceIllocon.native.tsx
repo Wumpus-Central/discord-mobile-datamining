@@ -1,10 +1,10 @@
-// === Module 6566: ForceIllocon ===
+// === Module 6567: ForceIllocon ===
 
-// Module 6566 (ForceIllocon)
+// Module 6567 (ForceIllocon)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5501 */;
-import metadataDefault from "metadata" /* 6567 */;
+import preloadDefault from "preload" /* 5502 */;
+import metadataDefault from "metadata" /* 6568 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/ForceIllocon.native.tsx");

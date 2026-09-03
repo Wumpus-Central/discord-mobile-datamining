@@ -1,15 +1,15 @@
-// === Module 16619: YouExpiringTrialOfferCard ===
+// === Module 16639: YouExpiringTrialOfferCard ===
 
-// Module 16619 (YouExpiringTrialOfferCard)
+// Module 16639 (YouExpiringTrialOfferCard)
 import setDefault from "set" /* 684 */;
 import ThemesDefault from "Themes" /* 709 */;
 import hooksDefault from "hooks" /* 4074 */;
-import useCountdownDefault from "useCountdown" /* 7193 */;
+import useCountdownDefault from "useCountdown" /* 7194 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "clearDismissUntil" /* 13599 */;
+import closure_5 from "clearDismissUntil" /* 13614 */;
 import ME from "ME" /* 673 */;
-import { Gradients } from "items" /* 7186 */;
+import { Gradients } from "items" /* 7187 */;
 import { PREMIUM_TIER_2_TRIAL_FOR_EVERYONE_TRIAL_ID as closure_11 } from "GuildFeatures" /* 1923 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
@@ -41,7 +41,7 @@ export default function YouExpiringTrialOfferCard(navigateToPremium) {
   obj1 = navigateToPremium(644);
   let items = [shouldShowExpiringTrialOfferCard];
   stateFromStores = obj1.useStateFromStores(items, () => shouldShowExpiringTrialOfferCard.getNoticeType());
-  let obj2 = navigateToPremium(7201);
+  let obj2 = navigateToPremium(7202);
   premiumTrialOffer = obj2.usePremiumTrialOffer();
   let num = 0;
   if (null != premiumTrialOffer) {
@@ -52,7 +52,7 @@ export default function YouExpiringTrialOfferCard(navigateToPremium) {
     }
   }
   const tmp7Result = useCountdownDefault(num, closure_15);
-  let tmp4Result = tmp4(16618);
+  let tmp4Result = tmp4(16638);
   shouldShowExpiringTrialOfferCard = tmp4Result.useShouldShowExpiringTrialOfferCard();
   const items1 = [stateFromStores, shouldShowExpiringTrialOfferCard, premiumTrialOffer];
   const effect = stateFromStores.useEffect(() => {
@@ -144,7 +144,7 @@ export default function YouExpiringTrialOfferCard(navigateToPremium) {
         const obj7 = { width: 16, height: 16, color: null };
         obj7[2] = tmp3.closeIcon.color;
         obj6[5] = closure_12(tmp4(1296).CloseIcon, obj7);
-        items2[1] = closure_12(tmp4(5076).PressableOpacity, obj6);
+        items2[1] = closure_12(tmp4(5077).PressableOpacity, obj6);
         const obj8 = { style: null, text: null, onPress: null, renderIcon: null, renderLinearGradient: null };
         obj8[0] = tmp3.primaryCTA;
         const intl5 = tmp4(1233).intl;
@@ -187,7 +187,7 @@ export default function YouExpiringTrialOfferCard(navigateToPremium) {
         const obj9 = { style: null, children: null };
         obj9[0] = navigateToPremium.style;
         obj9[1] = closure_14(closure_13, obj4);
-        return closure_12(tmp(6008), obj9);
+        return closure_12(tmp(6009), obj9);
       }
     }
     return null;

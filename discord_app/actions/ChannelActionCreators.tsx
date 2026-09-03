@@ -6,8 +6,8 @@ import dispatcherDefault from "dispatcher" /* 706 */;
 import transitionTo from "transitionTo" /* 1219 */;
 import getRootNavigationRef from "getRootNavigationRef" /* 4333 */;
 import transitionToChannel from "transitionToChannel" /* 4489 */;
-import _modDef5363 from "module_5363" /* 5363 */;
-import isChangelogChannelDefault from "isChangelogChannel" /* 8660 */;
+import _modDef5364 from "module_5364" /* 5364 */;
+import isChangelogChannelDefault from "isChangelogChannel" /* 8664 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import closure_5 from "handleUserSettingsProtoStoreChange" /* 4492 */;
@@ -282,9 +282,9 @@ export default {
           tmp3 = channel;
           const tmp6Result = tmp6(4489);
         } else {
-          const privateChannel = _modDef5363.selectPrivateChannel(channel.id);
+          const privateChannel = _modDef5364.selectPrivateChannel(channel.id);
           tmp3 = channel;
-          const obj3 = _modDef5363;
+          const obj3 = _modDef5364;
         }
         obj2 = getRootNavigationRef;
         tmp6 = require;
@@ -417,8 +417,8 @@ export default {
       transitionToChannel.transitionToChannel(tmp.id, { navigationReplace: true });
       const tmp5Result = transitionToChannel;
     } else {
-      const privateChannel = _modDef5363.selectPrivateChannel(tmp.id);
-      const tmp2Result = _modDef5363;
+      const privateChannel = _modDef5364.selectPrivateChannel(tmp.id);
+      const tmp2Result = _modDef5364;
     }
     return tmp;
   },
@@ -439,7 +439,7 @@ export default {
       tmpResult.track(constants.CHANGE_LOG_DM_REMOVED, obj);
     }
     tmpResult = tmp(706);
-    obj = { id, guild_id: "Array", parent_id: "alignItems" };
+    obj = { id, guild_id: "Array", parent_id: "isArray" };
     tmpResult.dispatch({ type: "CHANNEL_DELETE", channel: obj, silent: flag2 });
     if (flag) {
       transitionTo.transitionTo(constants2.FRIENDS);
@@ -578,7 +578,7 @@ export default {
         tmp10 = isThreadResult;
       }
       if (!tmp10) {
-        obj1 = closure_1_1(6176);
+        obj1 = closure_1_1(6177);
         const result = obj1.checkGuildTemplateDirty(guildId);
       }
       return closure_1;
@@ -905,7 +905,7 @@ export default {
     } else {
       result = closure_11.CHANNEL_STORE_LISTING(arg0);
     }
-    const result1 = _require(4755).httpGetWithCountryCodeQuery(result);
+    const result1 = _require(4756).httpGetWithCountryCodeQuery(result);
     return result1.then((body) => {
       let obj = closure_1_1(closure_1_2[13]);
       obj = { type: "STORE_LISTING_FETCH_SUCCESS", channelId: closure_0, storeListing: body.body };
@@ -937,7 +937,7 @@ export default {
       const obj4 = closure_1_0(527);
       obj2[3] = obj4.rejectWithMigratedError();
       closure_0 = yield HTTP.post(obj2);
-      const obj = closure_1_1(6176);
+      const obj = closure_1_1(6177);
       const result = obj.checkGuildTemplateDirty(closure_0);
       return closure_0;
     })();

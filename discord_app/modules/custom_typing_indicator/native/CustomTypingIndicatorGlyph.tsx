@@ -1,6 +1,6 @@
-// === Module 11776: CustomTypingIndicatorGlyph ===
+// === Module 11782: CustomTypingIndicatorGlyph ===
 
-// Module 11776 (CustomTypingIndicatorGlyph)
+// Module 11782 (CustomTypingIndicatorGlyph)
 import noopAll from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;

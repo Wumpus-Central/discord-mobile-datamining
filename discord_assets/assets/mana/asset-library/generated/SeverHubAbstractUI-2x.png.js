@@ -1,6 +1,6 @@
-// === Module 7009: metadata ===
+// === Module 7010: metadata ===
 
-// Module 7009 (metadata)
+// Module 7010 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/SeverHubAbstractUI-2x.png.js");

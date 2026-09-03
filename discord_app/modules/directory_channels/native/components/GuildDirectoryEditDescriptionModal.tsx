@@ -1,8 +1,8 @@
-// === Module 12105: GuildDirectoryEditDescription ===
+// === Module 12111: GuildDirectoryEditDescription ===
 
-// Module 12105 (GuildDirectoryEditDescription)
+// Module 12111 (GuildDirectoryEditDescription)
 import noopAll from "noop" /* 19 */;
-import _modDef12104 from "module_12104" /* 12104 */;
+import _modDef12110 from "module_12110" /* 12110 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
@@ -46,7 +46,7 @@ function GuildDirectoryEditDescription(entry) {
                 return obj;
               } else {
                 closure_2 = tmp4;
-                let obj2 = closure_1_2(12106);
+                let obj2 = closure_1_2(12112);
                 dependencyMap = 1;
                 c4 = 1;
                 obj1 = { value: null, done: false };
@@ -62,7 +62,7 @@ function GuildDirectoryEditDescription(entry) {
               obj2[0] = arg1;
               return obj2;
             } else {
-              obj = callback(12104);
+              obj = callback(12110);
               obj.close();
               c4 = 3;
               return { value: "HermesInternal", done: null };
@@ -111,10 +111,10 @@ function GuildDirectoryEditDescription(entry) {
   obj3[1] = intl2.string(entry(1233).t["R3BPH+"]);
   obj3[2] = entry;
   obj3[3] = entry.channelId;
-  items[1] = callback(_onSubmit(12107), obj3);
+  items[1] = callback(_onSubmit(12113), obj3);
   obj[2] = items;
   obj[2] = callback2(closure_6, obj);
-  return callback(entry(5561).SafeAreaPaddingView, obj);
+  return callback(entry(5562).SafeAreaPaddingView, obj);
 }
 noopAll;
 ({ View: c5, ScrollView: closure_6 } = get_ActivityIndicator);
@@ -135,7 +135,7 @@ export default function GuildDirectoryEditDescriptionModal(arg0) {
   obj = {};
   obj = {
     fullscreen: true,
-    headerLeft: _require(5503).getHeaderCloseButton(_modDef12104.close),
+    headerLeft: _require(5504).getHeaderCloseButton(_modDef12110.close),
     headerTitle() {
       return null;
     },
@@ -147,5 +147,5 @@ export default function GuildDirectoryEditDescriptionModal(arg0) {
   obj[EDIT_DESCRIPTION] = obj;
   obj[0] = obj;
   obj[1] = EDIT_DESCRIPTION;
-  return callback(_require(6016).Navigator, obj);
+  return callback(_require(6017).Navigator, obj);
 };

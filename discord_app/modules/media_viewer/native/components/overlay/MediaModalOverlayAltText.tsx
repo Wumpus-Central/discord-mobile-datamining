@@ -1,6 +1,6 @@
-// === Module 13054: ? ===
+// === Module 13066: ? ===
 
-// Module 13054
+// Module 13066
 import ThemesDefault from "Themes" /* 709 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
@@ -37,7 +37,7 @@ const memoResult = importAllResult.memo(function MediaModalOverlayAltTextButton(
       const intl = tmp3(1233).intl;
       obj[2] = intl.string(tmp3(1233).t.Q5VqrN);
       obj[3] = jsx(tmp3(4474).Text, { variant: "text-xs/semibold", color: "text-overlay-light", children: null });
-      tmp4 = jsx(tmp3(5076).PressableOpacity, { variant: "text-xs/semibold", color: "text-overlay-light", children: null });
+      tmp4 = jsx(tmp3(5077).PressableOpacity, { variant: "text-xs/semibold", color: "text-overlay-light", children: null });
     }
   }
   return tmp4;

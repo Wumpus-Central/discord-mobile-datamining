@@ -1,46 +1,14 @@
-// === Module 16416: TierSection ===
+// === Module 16435: VibegrationsModelSettingsSheet ===
 
-// Module 16416 (TierSection)
+// Module 16435 (VibegrationsModelSettingsSheet)
 import ThemesDefault from "Themes" /* 709 */;
-import getSystemLocale from "getSystemLocale" /* 1233 */;
 import messagesProxyDefault from "messagesProxy" /* 3500 */;
-import Text from "Text" /* 4474 */;
-import Stack from "Stack" /* 4926 */;
-import context from "context" /* 7701 */;
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "rejectPendingPublish" /* 16408 */;
-import { sendModelSettings } from "rejectPendingPublish" /* 16408 */;
+import closure_4 from "rejectPendingPublish" /* 16427 */;
+import { sendModelSettings } from "rejectPendingPublish" /* 16427 */;
 import jsxProd from "jsxProd" /* 21 */;
 
-require = arg1;
-function TierSection(arg0) {
-  ({ title, modelChoices, thinkingChoices, value } = arg0);
-  ({ onPickModel, onPickThinking } = arg0);
-  let obj = { direction: "vertical", spacing: ThemesDefault.space.PX_8, children: null };
-  const items = [callback(Text.Text, { variant: "text-sm/semibold", color: "text-muted", children: title }), , ];
-  obj = { hasIcons: false, defaultValue: value.model, onChange: onPickModel, title: null, accessibilityLabel: null, children: null };
-  const intl = getSystemLocale.intl;
-  obj[3] = intl.string(messagesProxyDefault["9FRudW"]);
-  const intl2 = getSystemLocale.intl;
-  obj[4] = "" + title + " \u2014 " + intl2.string(messagesProxyDefault["9FRudW"]);
-  obj[5] = modelChoices.map((label) => callback2(callback(7702).TableRadioRow, { label: label.label, subLabel: callback(16417).PROVIDER_LABELS[label.provider], value: label.id }, label.id));
-  items[1] = callback(context.TableRadioGroup, obj);
-  obj = { hasIcons: false, defaultValue: value.thinking, onChange: onPickThinking, title: null, accessibilityLabel: null, children: null };
-  const intl3 = getSystemLocale.intl;
-  obj[3] = intl3.string(messagesProxyDefault["4AsQHS"]);
-  const intl4 = getSystemLocale.intl;
-  obj[4] = "" + title + " \u2014 " + intl4.string(messagesProxyDefault["4AsQHS"]);
-  obj[5] = thinkingChoices.map((value) => {
-    let tmp2 = callback(16417).THINKING_LABELS[value];
-    if (tmp2 == null) {
-      tmp2 = value;
-    }
-    return closure_6(callback(7702).TableRadioRow, { label: tmp2, value }, value);
-  });
-  items[2] = callback(context.TableRadioGroup, obj);
-  obj[2] = items;
-  return callback2(Stack.Stack, obj);
-}
+const require = arg1;
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 const result = require("set").fileFinishedImporting("modules/vibegrations/native/VibegrationsModelSettingsSheet.tsx");
 
@@ -60,7 +28,8 @@ export default function VibegrationsModelSettingsSheet(projectId) {
     }
     if (null != settings) {
       try {
-        closure_1_5(projectId, arg0(settings));
+        closure_1_5(projectId, projectId(closure_1_2[4]).vibegrationsSettingsForTier(arg0(settings.main)));
+        const obj = projectId(closure_1_2[4]);
       } catch (err) {
       }
     }
@@ -69,82 +38,64 @@ export default function VibegrationsModelSettingsSheet(projectId) {
     return null;
   } else {
     ({ settings, choices } = stateFromStores);
+    const intl = tmp(1233).intl;
+    const stringResult = intl.string(messagesProxyDefault["9FRudW"]);
+    const intl2 = tmp(1233).intl;
+    const stringResult1 = intl2.string(messagesProxyDefault["4AsQHS"]);
     obj = { scrollable: true, header: null, children: null };
     obj = { title: null };
-    const intl = tmp(1233).intl;
-    obj[0] = intl.string(messagesProxyDefault["2NWMqY"]);
-    obj[1] = callback(tmp(5629).BottomSheetTitleHeader, obj);
+    const intl3 = tmp(1233).intl;
+    obj[0] = intl3.string(messagesProxyDefault["2NWMqY"]);
+    obj[1] = callback(tmp(5630).BottomSheetTitleHeader, obj);
     obj1 = { children: null };
     const obj2 = { direction: "vertical", spacing: null, children: null };
     obj2[1] = ThemesDefault.space.PX_16;
-    const obj3 = { title: null, modelChoices: null, thinkingChoices: null, value: null, onPickModel: null, onPickThinking: null };
-    const intl2 = tmp(1233).intl;
-    obj3[0] = intl2.string(messagesProxyDefault.ISmynF);
-    ({ main: obj6[1], thinking: obj6[2] } = choices);
-    obj3[3] = settings.main;
-    obj3[4] = function onPickModel(arg0) {
+    const obj3 = { hasIcons: false, defaultValue: null, onChange: null, title: null, accessibilityLabel: null, children: null };
+    obj3[1] = settings.main.model;
+    obj3[2] = function onChange(arg0) {
       closure_0 = arg0;
-      return callback((main) => {
-        let obj = {};
-        const merged = Object.assign(main);
-        obj = {};
-        const merged1 = Object.assign(main.main);
+      return callback((arg0) => {
+        const obj = {};
+        const merged = Object.assign(arg0);
         obj.model = closure_0;
-        obj.main = obj;
         return obj;
       });
     };
-    obj3[5] = function onPickThinking(arg0) {
+    obj3[3] = stringResult;
+    obj3[4] = stringResult;
+    const main = choices.main;
+    obj3[5] = main.map((label) => callback2(projectId(7705).TableRadioRow, { label: label.label, subLabel: projectId(16437).PROVIDER_LABELS[label.provider], value: label.id }, label.id));
+    const items3 = [callback(tmp(7704).TableRadioGroup, obj3), , ];
+    const obj4 = { hasIcons: false, defaultValue: null, onChange: null, title: null, accessibilityLabel: null, children: null };
+    obj4[1] = settings.main.thinking;
+    obj4[2] = function onChange(arg0) {
       closure_0 = arg0;
-      return callback((main) => {
-        let obj = {};
-        const merged = Object.assign(main);
-        obj = {};
-        const merged1 = Object.assign(main.main);
+      return callback((arg0) => {
+        const obj = {};
+        const merged = Object.assign(arg0);
         obj.thinking = closure_0;
-        obj.main = obj;
         return obj;
       });
     };
-    const items3 = [callback(TierSection, obj3), , ];
-    const obj4 = { title: null, modelChoices: null, thinkingChoices: null, value: null, onPickModel: null, onPickThinking: null };
-    const intl3 = tmp(1233).intl;
-    obj4[0] = intl3.string(messagesProxyDefault.hdt1ph);
-    ({ subagent: obj7[1], thinking: obj7[2] } = choices);
-    obj4[3] = settings.subagent;
-    obj4[4] = function onPickModel(arg0) {
-      closure_0 = arg0;
-      return callback((subagent) => {
-        let obj = {};
-        const merged = Object.assign(subagent);
-        obj = {};
-        const merged1 = Object.assign(subagent.subagent);
-        obj.model = closure_0;
-        obj.subagent = obj;
-        return obj;
-      });
-    };
-    obj4[5] = function onPickThinking(arg0) {
-      closure_0 = arg0;
-      return callback((subagent) => {
-        let obj = {};
-        const merged = Object.assign(subagent);
-        obj = {};
-        const merged1 = Object.assign(subagent.subagent);
-        obj.thinking = closure_0;
-        obj.subagent = obj;
-        return obj;
-      });
-    };
-    items3[1] = callback(TierSection, obj4);
+    obj4[3] = stringResult1;
+    obj4[4] = stringResult1;
+    const thinking = choices.thinking;
+    obj4[5] = thinking.map((value) => {
+      let tmp2 = projectId(16437).THINKING_LABELS[value];
+      if (tmp2 == null) {
+        tmp2 = value;
+      }
+      return closure_6(projectId(7705).TableRadioRow, { label: tmp2, value }, value);
+    });
+    items3[1] = callback(tmp(7704).TableRadioGroup, obj4);
     const obj5 = { variant: "text-xs/normal", color: "text-muted", children: null };
     const intl4 = tmp(1233).intl;
     obj5[2] = intl4.string(messagesProxyDefault.ICU5aW);
     items3[2] = callback(tmp(4474).Text, obj5);
     obj2[2] = items3;
-    obj1[0] = callback2(tmp(4926).Stack, obj2);
-    obj[2] = callback(tmp(5632).BottomSheetScrollView, obj1);
-    return callback(tmp(5997).ActionSheet, obj);
+    obj1[0] = callback2(tmp(4927).Stack, obj2);
+    obj[2] = callback(tmp(5633).BottomSheetScrollView, obj1);
+    return callback(tmp(5998).ActionSheet, obj);
   }
 };
 export const VIBEGRATIONS_MODEL_SETTINGS_SHEET_KEY = "VibegrationsModelSettingsSheet";

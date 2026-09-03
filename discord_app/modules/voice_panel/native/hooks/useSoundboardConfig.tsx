@@ -1,7 +1,7 @@
-// === Module 17015: useSoundboardConfig ===
+// === Module 17035: useSoundboardConfig ===
 
-// Module 17015 (useSoundboardConfig)
-import useIsConnectedToVoiceChannelDefault from "useIsConnectedToVoiceChannel" /* 16853 */;
+// Module 17035 (useSoundboardConfig)
+import useIsConnectedToVoiceChannelDefault from "useIsConnectedToVoiceChannel" /* 16873 */;
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "ensureGuildLoaded" /* 1386 */;
 import closure_5 from "_detectH265HardwareDecode" /* 4529 */;

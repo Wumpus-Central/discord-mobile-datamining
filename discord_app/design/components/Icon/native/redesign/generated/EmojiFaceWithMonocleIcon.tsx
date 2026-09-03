@@ -1,10 +1,10 @@
-// === Module 15200: EmojiFaceWithMonocleIcon ===
+// === Module 15215: EmojiFaceWithMonocleIcon ===
 
-// Module 15200 (EmojiFaceWithMonocleIcon)
+// Module 15215 (EmojiFaceWithMonocleIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 709 */;
 import BaseIconImage from "BaseIconImage" /* 4196 */;
-import registerAsset from "registerAsset" /* 15201 */;
+import registerAsset from "registerAsset" /* 15216 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

@@ -1,12 +1,12 @@
-// === Module 7619: PressableNavigatorBackIcon ===
+// === Module 7620: PressableNavigatorBackIcon ===
 
-// Module 7619 (PressableNavigatorBackIcon)
+// Module 7620 (PressableNavigatorBackIcon)
 import ThemesDefault from "Themes" /* 709 */;
 import Button from "Button" /* 1296 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_6 from "ensureGuildLoaded" /* 1386 */;
-import closure_7 from "updateGuildUnreadSentinel" /* 7390 */;
+import closure_7 from "updateGuildUnreadSentinel" /* 7391 */;
 import closure_8 from "handleConnectionOpen" /* 1980 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;

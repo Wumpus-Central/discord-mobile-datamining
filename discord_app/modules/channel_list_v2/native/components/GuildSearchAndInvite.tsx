@@ -1,17 +1,17 @@
-// === Module 12087: handleInviteDisabledPress ===
+// === Module 12093: handleInviteDisabledPress ===
 
-// Module 12087 (handleInviteDisabledPress)
+// Module 12093 (handleInviteDisabledPress)
 import ThemesDefault from "Themes" /* 709 */;
-import useAlertStore from "useAlertStore" /* 4859 */;
-import setDefault from "set" /* 7746 */;
-import useEventsButtonPropsDefault from "useEventsButtonProps" /* 12166 */;
+import useAlertStore from "useAlertStore" /* 4860 */;
+import setDefault from "set" /* 7749 */;
+import useEventsButtonPropsDefault from "useEventsButtonProps" /* 12172 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_5 from "ensureGuildLoaded" /* 1386 */;
 import closure_6 from "comparator" /* 1981 */;
 import closure_7 from "createGuildRecordFromRust" /* 1908 */;
 import closure_8 from "handleConnectionOpen" /* 1980 */;
-import { SEARCH_BAR_MARGIN_BOTTOM } from "hairlineWidth" /* 10223 */;
+import { SEARCH_BAR_MARGIN_BOTTOM } from "hairlineWidth" /* 10227 */;
 import ME from "ME" /* 673 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
@@ -158,8 +158,8 @@ const memoResult = importAllResult.memo(function ConnectedGuildSearchAndInviteIn
     const channels = closure_1_6.getChannels(guild.id);
     const result = guild(closure_1_2[30]).handleOpenInviteActionsheet(guild, channelId, channels, closure_1_11.GUILD_HEADER);
   });
-  const shouldShowInvitesDisabledNotif = guild(12163).useShouldShowInvitesDisabledNotif(guild);
-  const obj2 = guild(12163);
+  const shouldShowInvitesDisabledNotif = guild(12169).useShouldShowInvitesDisabledNotif(guild);
+  const obj2 = guild(12169);
   const tmp5 = useEventsButtonPropsDefault(guild);
   obj = { guildId: guild.id, canInvite: stateFromStores, invitesDisabled: shouldShowInvitesDisabledNotif, onInvitePress: tmp2, onEventsPress: tmp5.handlePress, onEventsLongPress: tmp5.handleLongPress, hasUnreadEvents: tmp5.hasUnread, useEventsButton: null, useButtonComponent: null };
   if (flag2) {

@@ -1,6 +1,6 @@
-// === Module 14925: CONNECTION_BANNER_HEIGHT ===
+// === Module 14940: CONNECTION_BANNER_HEIGHT ===
 
-// Module 14925 (CONNECTION_BANNER_HEIGHT)
+// Module 14940 (CONNECTION_BANNER_HEIGHT)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import ThemesDefault from "Themes" /* 709 */;

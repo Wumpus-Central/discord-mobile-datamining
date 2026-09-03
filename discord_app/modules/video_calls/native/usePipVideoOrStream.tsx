@@ -1,9 +1,9 @@
-// === Module 9552: usePipVideoOrStream ===
+// === Module 9556: usePipVideoOrStream ===
 
-// Module 9552 (usePipVideoOrStream)
+// Module 9556 (usePipVideoOrStream)
 import closure_3 from "participantFromServer" /* 1385 */;
 import closure_4 from "getParticipants" /* 4494 */;
-import closure_5 from "updateSpeaker" /* 9553 */;
+import closure_5 from "updateSpeaker" /* 9557 */;
 import closure_6 from "reset" /* 4500 */;
 import closure_7 from "fetchFingerprint" /* 1215 */;
 import closure_8 from "ensureGuildLoaded" /* 1386 */;

@@ -1,6 +1,6 @@
-// === Module 9876: SecureFramesCodeGrid ===
+// === Module 9880: SecureFramesCodeGrid ===
 
-// Module 9876 (SecureFramesCodeGrid)
+// Module 9880 (SecureFramesCodeGrid)
 import ThemesDefault from "Themes" /* 709 */;
 import Text from "Text" /* 4474 */;
 import closure_2 from "noop" /* 19 */;

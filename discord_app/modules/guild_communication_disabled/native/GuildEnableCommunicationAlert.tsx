@@ -1,6 +1,6 @@
-// === Module 11639: GuildEnableCommunicationAlert ===
+// === Module 11644: GuildEnableCommunicationAlert ===
 
-// Module 11639 (GuildEnableCommunicationAlert)
+// Module 11644 (GuildEnableCommunicationAlert)
 import noopAll from "noop" /* 19 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
@@ -56,7 +56,7 @@ export default function GuildEnableCommunicationAlert(guildId) {
               return obj;
             } else {
               closure_0 = tmp4;
-              obj1 = v0(11638);
+              obj1 = v0(11643);
               v0 = 1;
               dependencyMap = 1;
               obj1 = { value: null, done: false };
@@ -75,7 +75,7 @@ export default function GuildEnableCommunicationAlert(guildId) {
             const obj2 = { key: "GUILD_ENABLE_COMMUNICATION_SUCCESS", content: null, icon: null };
             const intl = closure_1_0(1233).intl;
             obj2[1] = intl.string(closure_1_0(1233).t["/Mmbfv"]);
-            obj2[2] = v0(9531);
+            obj2[2] = v0(9535);
             v0(4194).open(obj2);
             dependencyMap = 3;
             return { value: "HermesInternal", done: null };
@@ -97,8 +97,8 @@ export default function GuildEnableCommunicationAlert(guildId) {
   }
   const tmp2 = callback();
   dependencyMap = tmp2;
-  closure_3 = _handleConfirmRemoveTimeout(userId(7895)(userId, guildId), 1)[0];
-  userId(4945)(() => {
+  closure_3 = _handleConfirmRemoveTimeout(userId(7898)(userId, guildId), 1)[0];
+  userId(4946)(() => {
     let obj = userId(countdown[11]);
     obj = { type: closure_1_7, guild_id: guildId, other_user_id: userId };
     obj.track(closure_1_9.OPEN_MODAL, obj);
@@ -135,7 +135,7 @@ export default function GuildEnableCommunicationAlert(guildId) {
   const tmp11 = closure_11;
   const tmp12 = View;
   const tmp3 = userId;
-  const tmp7 = userId(4947);
+  const tmp7 = userId(4948);
   let str = userId(4673).getName(guildId, null, user);
   if (str == null) {
     str = "";

@@ -1,6 +1,6 @@
-// === Module 17094: IdGenerator ===
+// === Module 17114: IdGenerator ===
 
-// Module 17094 (IdGenerator)
+// Module 17114 (IdGenerator)
 import set from "set" /* 2 */;
 import generate from "generate" /* 507 */;
 

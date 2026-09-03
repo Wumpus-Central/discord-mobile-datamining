@@ -1,6 +1,6 @@
-// === Module 5131: KESTREL_GA_UPLOAD_LIMIT_MB ===
+// === Module 5132: KESTREL_GA_UPLOAD_LIMIT_MB ===
 
-// Module 5131 (KESTREL_GA_UPLOAD_LIMIT_MB)
+// Module 5132 (KESTREL_GA_UPLOAD_LIMIT_MB)
 import set from "set" /* 2 */;
 import ApexExperiment from "ApexExperiment" /* 1467 */;
 

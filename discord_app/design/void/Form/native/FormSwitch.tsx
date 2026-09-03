@@ -1,6 +1,6 @@
-// === Module 8384: FormSwitch ===
+// === Module 8388: FormSwitch ===
 
-// Module 8384 (FormSwitch)
+// Module 8388 (FormSwitch)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 709 */;
 import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 1362 */;

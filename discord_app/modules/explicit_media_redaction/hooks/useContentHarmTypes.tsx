@@ -1,7 +1,7 @@
-// === Module 10282: useEnabledHarmTypesBitmaskForChannelAndAuthorId ===
+// === Module 10286: useEnabledHarmTypesBitmaskForChannelAndAuthorId ===
 
-// Module 10282 (useEnabledHarmTypesBitmaskForChannelAndAuthorId)
-import getEligibleHarmTypesConfigsForContext from "getEligibleHarmTypesConfigsForContext" /* 6146 */;
+// Module 10286 (useEnabledHarmTypesBitmaskForChannelAndAuthorId)
+import getEligibleHarmTypesConfigsForContext from "getEligibleHarmTypesConfigsForContext" /* 6147 */;
 import closure_2 from "noop" /* 19 */;
 import closure_3 from "handleConnectionClosedOrResumed" /* 1339 */;
 import closure_4 from "ensureGuildLoaded" /* 1386 */;
@@ -12,8 +12,8 @@ require = arg1;
 function useEnabledHarmTypesBitmaskForChannelAndAuthorId(channelId, authorId) {
   const _require = channelId;
   dependencyMap = authorId;
-  const eligibleHarmTypesConfigsForContext = _require(6146).getEligibleHarmTypesConfigsForContext();
-  let obj = _require(6146);
+  const eligibleHarmTypesConfigsForContext = _require(6147).getEligibleHarmTypesConfigsForContext();
+  let obj = _require(6147);
   let items = [closure_6];
   const stateFromStores = _require(586).useStateFromStores(items, () => currentUser.getCurrentUser());
   const obj2 = _require(586);
@@ -30,7 +30,7 @@ function useEnabledHarmTypesBitmaskForChannelAndAuthorId(channelId, authorId) {
     const merged = Object.assign(arg0);
     obj[harmType.harmType] = harmType.getProtoUserSettings(settings.settings);
     return obj;
-  }, {}), items3, _require(6153).areSettingsEqual);
+  }, {}), items3, _require(6154).areSettingsEqual);
   const items4 = [stateFromStores1, eligibleHarmTypesConfigsForContext, stateFromStores2, authorId, stateFromStores];
   const memo = eligibleHarmTypesConfigsForContext.useMemo(() => {
     if (null != stateFromStores1) {
@@ -59,10 +59,10 @@ function useEnabledHarmTypesBitmaskForChannelAndAuthorId(channelId, authorId) {
     }
   }, items4);
   if (0 === memo.length) {
-    let NONE = tmp(6149).ContentHarmTypeBitMask.NONE;
+    let NONE = tmp(6150).ContentHarmTypeBitMask.NONE;
   } else {
-    NONE = tmp(6146).contentHarmTypesToFlags(memo);
-    const tmpResult = tmp(6146);
+    NONE = tmp(6147).contentHarmTypesToFlags(memo);
+    const tmpResult = tmp(6147);
   }
   return NONE;
 }

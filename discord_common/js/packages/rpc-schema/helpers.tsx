@@ -1,6 +1,6 @@
-// === Module 14355: RPCCommands ===
+// === Module 14371: RPCCommands ===
 
-// Module 14355 (RPCCommands)
+// Module 14371 (RPCCommands)
 import set from "set" /* 2 */;
 import sum from "sum" /* 502 */;
 

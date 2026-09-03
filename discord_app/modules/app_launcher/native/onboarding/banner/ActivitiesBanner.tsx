@@ -1,9 +1,9 @@
-// === Module 11844: ActivitiesBanner ===
+// === Module 11850: ActivitiesBanner ===
 
-// Module 11844 (ActivitiesBanner)
+// Module 11850 (ActivitiesBanner)
 import noopAll from "noop" /* 19 */;
-import useActivityApplications from "useActivityApplications" /* 11833 */;
-import BannerBaseDefault from "BannerBase" /* 11856 */;
+import useActivityApplications from "useActivityApplications" /* 11839 */;
+import BannerBaseDefault from "BannerBase" /* 11862 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import { jsx } from "jsxProd" /* 21 */;
 

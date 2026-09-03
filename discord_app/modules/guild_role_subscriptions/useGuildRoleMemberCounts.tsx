@@ -1,8 +1,8 @@
-// === Module 5590: useGuildRoleMemberCounts ===
+// === Module 5591: useGuildRoleMemberCounts ===
 
-// Module 5590 (useGuildRoleMemberCounts)
+// Module 5591 (useGuildRoleMemberCounts)
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "getRoleMemberCount" /* 5591 */;
+import closure_4 from "getRoleMemberCount" /* 5592 */;
 
 const require = arg1;
 let closure_5 = {};

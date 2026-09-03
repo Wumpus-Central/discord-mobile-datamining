@@ -1,10 +1,10 @@
-// === Module 7507: createMessage ===
+// === Module 7508: createMessage ===
 
-// Module 7507 (createMessage)
+// Module 7508 (createMessage)
 import _modDef38 from "module_38" /* 38 */;
-import snowflakeSequence from "snowflakeSequence" /* 7508 */;
-import closure_3 from "processMessage" /* 7349 */;
-import { ReferencedMessageState } from "processMessage" /* 7349 */;
+import snowflakeSequence from "snowflakeSequence" /* 7509 */;
+import closure_3 from "processMessage" /* 7350 */;
+import { ReferencedMessageState } from "processMessage" /* 7350 */;
 import closure_5 from "createdAt" /* 1934 */;
 import closure_6 from "mergeGuildAvatar" /* 1921 */;
 import ME from "ME" /* 673 */;

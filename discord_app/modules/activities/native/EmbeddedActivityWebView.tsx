@@ -1,13 +1,13 @@
-// === Module 9624: getSafeArea ===
+// === Module 9628: getSafeArea ===
 
-// Module 9624 (getSafeArea)
+// Module 9628 (getSafeArea)
 import timestampDefault from "timestamp" /* 3 */;
-import usePreviousDefault from "usePrevious" /* 8591 */;
+import usePreviousDefault from "usePrevious" /* 8595 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import closure_5 from "_slicedToArray" /* 32 */;
 import closure_6 from "noop" /* 19 */;
 import { Linking } from "get ActivityIndicator" /* 17 */;
-import closure_8 from "initialize" /* 8511 */;
+import closure_8 from "initialize" /* 8515 */;
 import items3 from "items3" /* 4506 */;
 import ME from "ME" /* 673 */;
 import { TransportTypes } from "RPC_SCOPE_CONFIG" /* 4380 */;

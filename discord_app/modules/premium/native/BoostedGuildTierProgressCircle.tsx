@@ -1,11 +1,11 @@
-// === Module 13386: BoostedGuildTierProgressCircle ===
+// === Module 13401: BoostedGuildTierProgressCircle ===
 
-// Module 13386 (BoostedGuildTierProgressCircle)
+// Module 13401 (BoostedGuildTierProgressCircle)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 709 */;
 import getGuildTierFromGuild from "getGuildTierFromGuild" /* 4369 */;
 import useGuildAppliedBoostCountDefault from "useGuildAppliedBoostCount" /* 4384 */;
-import getTier048PxSource from "getTier048PxSource" /* 13387 */;
+import getTier048PxSource from "getTier048PxSource" /* 13402 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import ME from "ME" /* 673 */;
 import jsxProd from "jsxProd" /* 21 */;
@@ -62,11 +62,11 @@ export default function BoostedGuildTierProgressCircle(arg0) {
       if (guild.premiumTier !== constants.NONE) {
         const premiumTier = guild.premiumTier;
         if (tmp13.TIER_1 === premiumTier) {
-          let tier048PxSource = tmp2(13391);
+          let tier048PxSource = tmp2(13406);
         } else if (tmp13.TIER_2 === premiumTier) {
-          tier048PxSource = tmp2(13392);
+          tier048PxSource = tmp2(13407);
         } else if (tmp13.TIER_3 === premiumTier) {
-          tier048PxSource = tmp2(13393);
+          tier048PxSource = tmp2(13408);
         }
       }
       const obj2 = { source: null, style: null, accessibilityElementsHidden: true, importantForAccessibility: "no" };
@@ -82,7 +82,7 @@ export default function BoostedGuildTierProgressCircle(arg0) {
       obj[2] = tmp10(tmp11, obj1);
       return tmp8(tmp9, obj);
     }
-    tmp19Result = tmp19(13387);
+    tmp19Result = tmp19(13402);
     tier048PxSource = tmp19Result.getTier048PxSource(theme);
     const obj10 = getGuildTierFromGuild;
   }

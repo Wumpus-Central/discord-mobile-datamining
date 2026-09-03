@@ -1,11 +1,11 @@
-// === Module 17453: RolePermissionTemplatesActionSheet ===
+// === Module 17473: RolePermissionTemplatesActionSheet ===
 
-// Module 17453 (RolePermissionTemplatesActionSheet)
+// Module 17473 (RolePermissionTemplatesActionSheet)
 import ThemesDefault from "Themes" /* 709 */;
 import getSystemLocale from "getSystemLocale" /* 1233 */;
-import RedesignBottomSheetTitleHeaderBase from "RedesignBottomSheetTitleHeaderBase" /* 5629 */;
-import ActionSheet from "ActionSheet" /* 5997 */;
-import GuildSettingsRoleTemplateDefault from "GuildSettingsRoleTemplate" /* 17433 */;
+import RedesignBottomSheetTitleHeaderBase from "RedesignBottomSheetTitleHeaderBase" /* 5630 */;
+import ActionSheet from "ActionSheet" /* 5998 */;
+import GuildSettingsRoleTemplateDefault from "GuildSettingsRoleTemplate" /* 17453 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import ME from "ME" /* 673 */;

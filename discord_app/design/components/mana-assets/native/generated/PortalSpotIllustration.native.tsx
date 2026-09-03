@@ -1,10 +1,10 @@
-// === Module 6912: PortalSpotIllustration ===
+// === Module 6913: PortalSpotIllustration ===
 
-// Module 6912 (PortalSpotIllustration)
+// Module 6913 (PortalSpotIllustration)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5501 */;
-import metadataDefault from "metadata" /* 6913 */;
+import preloadDefault from "preload" /* 5502 */;
+import metadataDefault from "metadata" /* 6914 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/PortalSpotIllustration.native.tsx");

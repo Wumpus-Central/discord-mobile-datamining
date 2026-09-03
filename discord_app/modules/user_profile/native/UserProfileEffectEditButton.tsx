@@ -1,10 +1,10 @@
-// === Module 14503: UserProfileEffectEditButton ===
+// === Module 14519: UserProfileEffectEditButton ===
 
-// Module 14503 (UserProfileEffectEditButton)
+// Module 14519 (UserProfileEffectEditButton)
 import ThemesDefault from "Themes" /* 709 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import { COLLECTIBLES_PREVIEW_SIZE } from "ARBITRARY_LARGE_OFFSET" /* 6009 */;
+import { COLLECTIBLES_PREVIEW_SIZE } from "ARBITRARY_LARGE_OFFSET" /* 6010 */;
 import { NOOP } from "sum" /* 502 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;

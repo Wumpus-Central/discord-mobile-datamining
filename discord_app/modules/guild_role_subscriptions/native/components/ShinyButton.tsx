@@ -1,10 +1,10 @@
-// === Module 9152: ShinyButton ===
+// === Module 9156: ShinyButton ===
 
-// Module 9152 (ShinyButton)
+// Module 9156 (ShinyButton)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 709 */;
-import CollapsingText from "CollapsingText" /* 4929 */;
-import registerAssetDefault from "registerAsset" /* 9153 */;
+import CollapsingText from "CollapsingText" /* 4930 */;
+import registerAssetDefault from "registerAsset" /* 9157 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 

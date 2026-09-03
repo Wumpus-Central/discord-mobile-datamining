@@ -1,8 +1,8 @@
-// === Module 12874: ReportContent ===
+// === Module 12886: ReportContent ===
 
-// Module 12874 (ReportContent)
+// Module 12886 (ReportContent)
 import ThemesDefault from "Themes" /* 709 */;
-import NavigationStack from "NavigationStack" /* 6016 */;
+import NavigationStack from "NavigationStack" /* 6017 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
@@ -124,7 +124,7 @@ function ReportContent(applicationId) {
     const intl4 = tmp2(tmp3[10]).intl;
     obj1[2] = intl4.string(tmp2(tmp3[10]).t.IQHicr);
     const items3 = [tmp15(tmp2(tmp3[14]).Text, obj1), ];
-    let obj2 = { value: "Array", onChange: false, hasIcons: null, children: "CLIENT_REQUEST_TIMEOUT" };
+    let obj2 = { value: "Array", onChange: false, hasIcons: null, children: 500 };
     obj2[1] = function onChange(arg0) {
       closure_0 = arg0;
       const timerId = setTimeout(() => {

@@ -1,13 +1,13 @@
-// === Module 13613: getUserCalloutRowText ===
+// === Module 13628: getUserCalloutRowText ===
 
-// Module 13613 (getUserCalloutRowText)
+// Module 13628 (getUserCalloutRowText)
 import ThemesDefault from "Themes" /* 709 */;
 import getSystemLocale from "getSystemLocale" /* 1233 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_6 from "ensureGuildLoaded" /* 1386 */;
 import closure_7 from "mergeGuildAvatar" /* 1921 */;
-import GdmWarningMedium from "GdmWarningMedium" /* 13614 */;
+import GdmWarningMedium from "GdmWarningMedium" /* 13629 */;
 import { AnalyticEvents } from "ME" /* 673 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
@@ -84,13 +84,13 @@ function UserCalloutAvatars(userIds) {
       obj[2] = REFRESH_MEDIUM_32;
       let tmp6 = callback(tmp(1296).Avatar, obj);
     } else {
-      tmp6 = callback(tmp(11621).UserIcon, {});
+      tmp6 = callback(tmp(11626).UserIcon, {});
     }
   } else {
     obj = { users: null, size: null };
     obj[0] = found;
     obj[1] = tmp(1296).AvatarSizes.REFRESH_MEDIUM_32;
-    return callback(tmp(10869).FacepileGroupDMAvatar, obj);
+    return callback(tmp(10873).FacepileGroupDMAvatar, obj);
   }
 }
 function BlockedUserInGDMDescription(arg0) {

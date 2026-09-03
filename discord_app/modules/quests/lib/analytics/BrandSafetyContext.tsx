@@ -1,10 +1,10 @@
-// === Module 9014: getBrandSafetyContext ===
+// === Module 9018: getBrandSafetyContext ===
 
-// Module 9014 (getBrandSafetyContext)
+// Module 9018 (getBrandSafetyContext)
 import set from "set" /* 2 */;
 import getAvatarURLDefault from "getAvatarURL" /* 1430 */;
-import MAX_BRAND_SAFETY_CONTEXT_ARRAY_LEN from "MAX_BRAND_SAFETY_CONTEXT_ARRAY_LEN" /* 9016 */;
-import SidebarVisibilityMethodStore from "SidebarVisibilityMethodStore" /* 9015 */;
+import MAX_BRAND_SAFETY_CONTEXT_ARRAY_LEN from "MAX_BRAND_SAFETY_CONTEXT_ARRAY_LEN" /* 9020 */;
+import SidebarVisibilityMethodStore from "SidebarVisibilityMethodStore" /* 9019 */;
 import closure_5 from "ensureGuildLoaded" /* 1386 */;
 import closure_6 from "createGuildRecordFromRust" /* 1908 */;
 import closure_7 from "markAllUserIdListsStale" /* 4130 */;
@@ -16,9 +16,9 @@ let closure_10 = MAX_BRAND_SAFETY_CONTEXT_ARRAY_LEN.MAX_BRAND_SAFETY_CONTEXT_ARR
 let result = set.fileFinishedImporting("modules/quests/lib/analytics/BrandSafetyContext.tsx");
 
 export const getBrandSafetyContext = function getBrandSafetyContext(questContent) {
-  let obj = _require(7453);
+  let obj = _require(7454);
   const result = obj.isBillableQuestContent(questContent);
-  obj1 = _require(7453);
+  obj1 = _require(7454);
   const adContext = obj1.getAdContext(questContent);
   const tmp4 = callback2();
   const tmp5 = callback();

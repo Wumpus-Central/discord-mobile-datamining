@@ -1,6 +1,6 @@
-// === Module 8809: CONTEXT_MENU_LONG_PRESS_DURATION_MS ===
+// === Module 8813: CONTEXT_MENU_LONG_PRESS_DURATION_MS ===
 
-// Module 8809 (CONTEXT_MENU_LONG_PRESS_DURATION_MS)
+// Module 8813 (CONTEXT_MENU_LONG_PRESS_DURATION_MS)
 import HapticFeedbackTypes2 from "HapticFeedbackTypes" /* 4446 */;
 import set from "set" /* 1234 */;
 

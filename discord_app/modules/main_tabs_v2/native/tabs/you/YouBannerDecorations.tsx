@@ -1,12 +1,12 @@
-// === Module 16605: useHasSettingsBadge ===
+// === Module 16625: useHasSettingsBadge ===
 
-// Module 16605 (useHasSettingsBadge)
+// Module 16625 (useHasSettingsBadge)
 import ThemesDefault from "Themes" /* 709 */;
 import PlatformTypes from "PlatformTypes" /* 1235 */;
 import DismissibleContent from "DismissibleContent" /* 1372 */;
 import UNSAFE_isDismissibleContentDismissed from "UNSAFE_isDismissibleContentDismissed" /* 4298 */;
-import hasUserTrialOfferExpired from "hasUserTrialOfferExpired" /* 7203 */;
-import useEligibleActiveOutboundPromotions from "useEligibleActiveOutboundPromotions" /* 13347 */;
+import hasUserTrialOfferExpired from "hasUserTrialOfferExpired" /* 7204 */;
+import useEligibleActiveOutboundPromotions from "useEligibleActiveOutboundPromotions" /* 13362 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_7 from "mergeGuildAvatar" /* 1921 */;

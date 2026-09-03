@@ -1,6 +1,6 @@
-// === Module 13275: BuyNitroSectionHeader ===
+// === Module 13287: BuyNitroSectionHeader ===
 
-// Module 13275 (BuyNitroSectionHeader)
+// Module 13287 (BuyNitroSectionHeader)
 import set from "set" /* 2 */;
 import Text from "Text" /* 4474 */;
 import jsxProd from "jsxProd" /* 21 */;

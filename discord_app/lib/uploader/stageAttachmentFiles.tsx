@@ -1,6 +1,6 @@
-// === Module 7596: _stageAttachmentFiles ===
+// === Module 7597: _stageAttachmentFiles ===
 
-// Module 7596 (_stageAttachmentFiles)
+// Module 7597 (_stageAttachmentFiles)
 import closure_2 from "asyncGeneratorStep" /* 5 */;
 import { AbortCodes } from "ME" /* 673 */;
 

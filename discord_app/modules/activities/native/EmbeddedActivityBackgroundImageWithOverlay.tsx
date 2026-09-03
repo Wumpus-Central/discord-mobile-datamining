@@ -1,8 +1,8 @@
-// === Module 9633: EmbeddedActivityBackgroundImageWithOverlay ===
+// === Module 9637: EmbeddedActivityBackgroundImageWithOverlay ===
 
-// Module 9633 (EmbeddedActivityBackgroundImageWithOverlay)
+// Module 9637 (EmbeddedActivityBackgroundImageWithOverlay)
 import ThemesDefault from "Themes" /* 709 */;
-import useEmbeddedActivityBackgroundDefault from "useEmbeddedActivityBackground" /* 9634 */;
+import useEmbeddedActivityBackgroundDefault from "useEmbeddedActivityBackground" /* 9638 */;
 import closure_2 from "_slicedToArray" /* 32 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;

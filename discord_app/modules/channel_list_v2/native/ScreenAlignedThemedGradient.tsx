@@ -1,11 +1,11 @@
-// === Module 16062: ScreenAlignedThemedGradient ===
+// === Module 16078: ScreenAlignedThemedGradient ===
 
-// Module 16062 (ScreenAlignedThemedGradient)
+// Module 16078 (ScreenAlignedThemedGradient)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import getMixedGradientColorDefault from "getMixedGradientColor" /* 5078 */;
-import useActiveThemeType from "useActiveThemeType" /* 7628 */;
-import tDefault from "t" /* 10951 */;
+import getMixedGradientColorDefault from "getMixedGradientColor" /* 5079 */;
+import useActiveThemeType from "useActiveThemeType" /* 7629 */;
+import tDefault from "t" /* 10955 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 

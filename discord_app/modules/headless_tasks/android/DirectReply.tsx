@@ -1,6 +1,6 @@
-// === Module 17754: promise ===
+// === Module 17778: promise ===
 
-// Module 17754 (promise)
+// Module 17778 (promise)
 import timestampDefault from "timestamp" /* 3 */;
 import closure_2 from "asyncGeneratorStep" /* 5 */;
 import { NativeModules } from "get ActivityIndicator" /* 17 */;
@@ -24,7 +24,7 @@ export default (arg0) => {
           closure_0 = arg0;
           c3 = 0;
           c4 = 0;
-          return (/* F124971 */ function*() { ... })();
+          return (/* F125210 */ function*() { ... })();
         });
         closure_0 = tmp;
         const apply = tmp.apply;

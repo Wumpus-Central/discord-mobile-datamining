@@ -1,10 +1,10 @@
-// === Module 17394: BoostGemOutlineIcon ===
+// === Module 17414: BoostGemOutlineIcon ===
 
-// Module 17394 (BoostGemOutlineIcon)
+// Module 17414 (BoostGemOutlineIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 709 */;
 import BaseIconImage from "BaseIconImage" /* 4196 */;
-import registerAsset from "registerAsset" /* 17395 */;
+import registerAsset from "registerAsset" /* 17415 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

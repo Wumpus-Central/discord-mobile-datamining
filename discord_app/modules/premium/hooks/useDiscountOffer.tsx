@@ -1,10 +1,10 @@
-// === Module 7979: useDiscountOffer ===
+// === Module 7982: useDiscountOffer ===
 
-// Module 7979 (useDiscountOffer)
+// Module 7982 (useDiscountOffer)
 import closure_2 from "_slicedToArray" /* 32 */;
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "mergeGuildAvatar" /* 1921 */;
-import closure_5 from "emitChanges" /* 7204 */;
+import closure_5 from "emitChanges" /* 7205 */;
 import GuildFeatures from "GuildFeatures" /* 1923 */;
 
 const require = arg1;

@@ -1,14 +1,14 @@
-// === Module 10742: GiftingBadgeInfoActionSheet ===
+// === Module 10746: GiftingBadgeInfoActionSheet ===
 
-// Module 10742 (GiftingBadgeInfoActionSheet)
+// Module 10746 (GiftingBadgeInfoActionSheet)
 import ThemesDefault from "Themes" /* 709 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
 import messagesProxyDefault from "messagesProxy" /* 2464 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4470 */;
-import closure_6 from "initialize" /* 8573 */;
-import { getSingleRequirementThreshold as closure_7 } from "initialize" /* 8573 */;
+import closure_6 from "initialize" /* 8577 */;
+import { getSingleRequirementThreshold as closure_7 } from "initialize" /* 8577 */;
 import { AnalyticEvents } from "ME" /* 673 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
@@ -38,7 +38,7 @@ export default function GiftingBadgeInfoActionSheet() {
   const _require = tmp;
   let obj = _require(586);
   let items = [closure_6];
-  const stateFromStores = obj.useStateFromStores(items, () => badgeById.getBadgeById(lib(8570).BadgeId.GIFTING));
+  const stateFromStores = obj.useStateFromStores(items, () => badgeById.getBadgeById(lib(8574).BadgeId.GIFTING));
   obj1 = _require(586);
   const items1 = [closure_5];
   importDefault = obj1.useStateFromStores(items1, () => useReducedMotion.useReducedMotion);
@@ -114,5 +114,5 @@ export default function GiftingBadgeInfoActionSheet() {
   items4[1] = callback(View, obj4);
   obj[1] = items4;
   obj5[2] = callback2(View, obj);
-  return callback(_require(5630).BottomSheet, obj5);
+  return callback(_require(5631).BottomSheet, obj5);
 };

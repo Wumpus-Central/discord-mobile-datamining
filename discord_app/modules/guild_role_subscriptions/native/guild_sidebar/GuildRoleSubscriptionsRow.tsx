@@ -1,9 +1,9 @@
-// === Module 16025: GuildRoleSubscriptionsRow ===
+// === Module 16041: GuildRoleSubscriptionsRow ===
 
-// Module 16025 (GuildRoleSubscriptionsRow)
+// Module 16041 (GuildRoleSubscriptionsRow)
 import ThemesDefault from "Themes" /* 709 */;
-import BaseChannelSubtitleDefault from "BaseChannelSubtitle" /* 12171 */;
-import registerAssetDefault from "registerAsset" /* 12541 */;
+import BaseChannelSubtitleDefault from "BaseChannelSubtitle" /* 12177 */;
+import registerAssetDefault from "registerAsset" /* 12553 */;
 import closure_3 from "noop" /* 19 */;
 import { Routes } from "ME" /* 673 */;
 import { StaticChannelRoute } from "set" /* 1393 */;
@@ -38,7 +38,7 @@ export default function GuildRoleSubscriptionsRow(selected) {
     };
     obj.openLazy(id(closure_1_2[10])(closure_1_2[9], closure_1_2.paths), rolesubscriptionschannelactionsheet, obj);
   }, items1);
-  const ChannelModes = id(12171).ChannelModes;
+  const ChannelModes = id(12177).ChannelModes;
   if (selected) {
     let DEFAULT = ChannelModes.SELECTED;
     let tmp6 = tmp4;
@@ -56,8 +56,8 @@ export default function GuildRoleSubscriptionsRow(selected) {
   const intl2 = tmp6(1233).intl;
   obj[0] = intl2.string(tmp6(1233).t["KzCF/6"]);
   obj[1] = DEFAULT;
-  obj[7] = jsx(tmp6(12171).BaseChannelName, { name: null, mode: null });
+  obj[7] = jsx(tmp6(12177).BaseChannelName, { name: null, mode: null });
   obj = { disableColor: true, mode: DEFAULT, source: registerAssetDefault };
-  obj[8] = jsx(tmp6(12171).BaseChannelIcon, { disableColor: true, mode: DEFAULT, source: registerAssetDefault });
+  obj[8] = jsx(tmp6(12177).BaseChannelIcon, { disableColor: true, mode: DEFAULT, source: registerAssetDefault });
   return jsx(BaseChannelSubtitleDefault, { disableColor: true, mode: DEFAULT, source: registerAssetDefault });
 };

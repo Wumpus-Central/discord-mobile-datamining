@@ -1,9 +1,9 @@
-// === Module 8907: trackImpression ===
+// === Module 8911: trackImpression ===
 
-// Module 8907 (trackImpression)
+// Module 8911 (trackImpression)
 import encodeProperties2 from "encodeProperties" /* 500 */;
 import dispatcherDefault from "dispatcher" /* 706 */;
-import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata" /* 4700 */;
+import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata" /* 4701 */;
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "ensureGuildLoaded" /* 1386 */;
 import closure_5 from "handleConnectionOpen" /* 1980 */;
@@ -46,7 +46,7 @@ function trackImpression(type, arg1, arg2) {
   }
   let tmpResult = tmp(695);
   obj = { impression_type: type, location: callback3() };
-  tmpResult = tmp(4700);
+  tmpResult = tmp(4701);
   const merged = Object.assign(tmpResult.collectGuildAnalyticsMetadata(guild_id));
   const merged1 = Object.assign(collectGuildAnalyticsMetadata.collectChannelAnalyticsMetadata(channel.getChannel(channel_id)));
   const merged2 = Object.assign(properties);
@@ -79,7 +79,7 @@ export default function useTrackImpression(arg0) {
   closure_4 = undefined;
   React = React.useRef(undefined);
   closure_4 = React.useRef(undefined);
-  obj(4945)(() => {
+  obj(4946)(() => {
     if (obj.trackOnInitialLoad) {
       const tmp6 = obj(656)(ref.current, obj);
       if (!tmp6) {
@@ -92,7 +92,7 @@ export default function useTrackImpression(arg0) {
       if (!tmp6) {
         obj = {};
         const merged = Object.assign(tmp5);
-        obj.sequenceId = tmp2(4724)("impression_");
+        obj.sequenceId = tmp2(4725)("impression_");
         closure_1_13(obj, tmp.disableTrack);
         const fn = () => {
           if (null != obj) {
@@ -116,7 +116,7 @@ export default function useTrackImpression(arg0) {
       if (!tmp6) {
         obj = {};
         const merged = Object.assign(tmp5);
-        obj.sequenceId = tmp2(4724)("impression_");
+        obj.sequenceId = tmp2(4725)("impression_");
         closure_1_13(obj, tmp.disableTrack);
         const fn = () => {
           if (null != obj) {

@@ -1,12 +1,12 @@
-// === Module 11813: num2 ===
+// === Module 11819: num2 ===
 
-// Module 11813 (num2)
+// Module 11819 (num2)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 709 */;
 import getSystemLocale from "getSystemLocale" /* 1233 */;
-import ChatIcon from "ChatIcon" /* 5024 */;
-import useLoadForumUnreadCounts from "useLoadForumUnreadCounts" /* 7638 */;
-import AnimatedCountDefault from "AnimatedCount" /* 11173 */;
+import ChatIcon from "ChatIcon" /* 5025 */;
+import useLoadForumUnreadCounts from "useLoadForumUnreadCounts" /* 7639 */;
+import AnimatedCountDefault from "AnimatedCount" /* 11177 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;

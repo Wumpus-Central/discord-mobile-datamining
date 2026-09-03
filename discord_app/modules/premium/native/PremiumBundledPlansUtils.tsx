@@ -1,7 +1,7 @@
-// === Module 7161: getPremiumBundledItemsFromProductId ===
+// === Module 7162: getPremiumBundledItemsFromProductId ===
 
-// Module 7161 (getPremiumBundledItemsFromProductId)
-import SubscriptionPlans from "SubscriptionPlans" /* 6095 */;
+// Module 7162 (getPremiumBundledItemsFromProductId)
+import SubscriptionPlans from "SubscriptionPlans" /* 6096 */;
 import closure_2 from "_slicedToArray" /* 32 */;
 import GuildFeatures from "GuildFeatures" /* 1923 */;
 
@@ -110,13 +110,13 @@ export const getPremiumBundleWithPredicate = function getPremiumBundleWithPredic
 };
 export { getPremiumBundledItemsFromProductId };
 export const getToggledIntervalProduct = function getToggledIntervalProduct(productId) {
-  if (productId in _require(6095).AppStorePremiumProductIdsToPremiumBundledItems) {
-    const tmp8 = tmp(6095).AppStorePremiumProductIdsToPremiumBundledItems[productId];
+  if (productId in _require(6096).AppStorePremiumProductIdsToPremiumBundledItems) {
+    const tmp8 = tmp(6096).AppStorePremiumProductIdsToPremiumBundledItems[productId];
     _require = tmp8;
     let tmp11 = null;
     if (tmp8.premiumTier !== closure_4.TIER_1) {
       const _Object = Object;
-      const values = Object.values(tmp(6095).AppStorePremiumProductIdsToPremiumBundledItems);
+      const values = Object.values(tmp(6096).AppStorePremiumProductIdsToPremiumBundledItems);
       const found = values.find((numPremiumGuild) => numPremiumGuild.numPremiumGuild === numPremiumGuild.numPremiumGuild && numPremiumGuild.premiumTier === numPremiumGuild.premiumTier && numPremiumGuild.interval !== numPremiumGuild.interval && !numPremiumGuild.isDeprecated);
       productId = undefined;
       if (found != null) {
@@ -133,16 +133,16 @@ export const getToggledIntervalProduct = function getToggledIntervalProduct(prod
   }
 };
 export const getProductIdsForBothIntervals = function getProductIdsForBothIntervals(arg0) {
-  if (arg0 in _require(6095).AppStorePremiumProductIdsToPremiumBundledItems) {
-    const tmp8 = tmp(6095).AppStorePremiumProductIdsToPremiumBundledItems[arg0];
+  if (arg0 in _require(6096).AppStorePremiumProductIdsToPremiumBundledItems) {
+    const tmp8 = tmp(6096).AppStorePremiumProductIdsToPremiumBundledItems[arg0];
     _require = undefined;
-    if (arg0 in tmp(6095).AppStorePremiumProductIdsToPremiumBundledItems) {
-      const tmp14 = tmp(6095).AppStorePremiumProductIdsToPremiumBundledItems[arg0];
+    if (arg0 in tmp(6096).AppStorePremiumProductIdsToPremiumBundledItems) {
+      const tmp14 = tmp(6096).AppStorePremiumProductIdsToPremiumBundledItems[arg0];
       _require = tmp14;
       let tmp17 = null;
       if (tmp14.premiumTier !== closure_4.TIER_1) {
         const _Object = Object;
-        const values = Object.values(tmp(6095).AppStorePremiumProductIdsToPremiumBundledItems);
+        const values = Object.values(tmp(6096).AppStorePremiumProductIdsToPremiumBundledItems);
         const found = values.find((numPremiumGuild) => numPremiumGuild.numPremiumGuild === numPremiumGuild.numPremiumGuild && numPremiumGuild.premiumTier === numPremiumGuild.premiumTier && numPremiumGuild.interval !== numPremiumGuild.interval && !numPremiumGuild.isDeprecated);
         let productId;
         if (found != null) {
@@ -196,9 +196,9 @@ export const productsHaveSamePerks = function productsHaveSamePerks(productId, a
           if (productId === arg1) {
             return true;
           } else if (productId in SubscriptionPlans.AppStorePremiumProductIdsToPremiumBundledItems) {
-            const tmp12 = tmp20(6095).AppStorePremiumProductIdsToPremiumBundledItems[productId];
-            if (arg1 in tmp20(6095).AppStorePremiumProductIdsToPremiumBundledItems) {
-              const tmp18 = tmp20(6095).AppStorePremiumProductIdsToPremiumBundledItems[arg1];
+            const tmp12 = tmp20(6096).AppStorePremiumProductIdsToPremiumBundledItems[productId];
+            if (arg1 in tmp20(6096).AppStorePremiumProductIdsToPremiumBundledItems) {
+              const tmp18 = tmp20(6096).AppStorePremiumProductIdsToPremiumBundledItems[arg1];
               return tmp12.numPremiumGuild === tmp18.numPremiumGuild && tmp12.premiumTier === tmp18.premiumTier;
             } else {
               const _Error2 = Error;
@@ -244,8 +244,8 @@ export const excludeNitroOnlyPlansForActiveTrial = function excludeNitroOnlyPlan
 };
 export { getSubscriptionItemsForProduct };
 export const getModifySubscriptionItemsForProduct = function getModifySubscriptionItemsForProduct(productId, closure_0) {
-  if (productId in found(6095).AppStorePremiumProductIdsToPremiumBundledItems) {
-    const tmp8 = tmp(6095).AppStorePremiumProductIdsToPremiumBundledItems[productId];
+  if (productId in found(6096).AppStorePremiumProductIdsToPremiumBundledItems) {
+    const tmp8 = tmp(6096).AppStorePremiumProductIdsToPremiumBundledItems[productId];
     if (null != tmp8.premiumTier) {
       let tmpResult = tmp(4139);
       if (tmpResult.isBoostOnlySubscription(closure_0)) {

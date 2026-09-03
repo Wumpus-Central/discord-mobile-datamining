@@ -1,15 +1,15 @@
-// === Module 16428: VibegrationsSettingsSheet ===
+// === Module 16448: VibegrationsSettingsSheet ===
 
-// Module 16428 (VibegrationsSettingsSheet)
+// Module 16448 (VibegrationsSettingsSheet)
 import ThemesDefault from "Themes" /* 709 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_7 from "newMessage" /* 16405 */;
-import rejectPendingPublish from "rejectPendingPublish" /* 16408 */;
-import closure_11 from "rejectPendingPublish" /* 16408 */;
-import closure_12 from "isProjectOwner" /* 16406 */;
+import closure_7 from "newMessage" /* 16424 */;
+import rejectPendingPublish from "rejectPendingPublish" /* 16427 */;
+import closure_11 from "rejectPendingPublish" /* 16427 */;
+import closure_12 from "isProjectOwner" /* 16425 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -258,7 +258,7 @@ export default function VibegrationsSettingsSheet(projectId) {
     obj[9] = first2;
     tmp12Result = memo(projectId(closure_2[20]).TextInput, obj, value.name);
   }
-  let tmp3 = map(notifyAgent(5602)({ includeKeyboardHeight: true }).insets.bottom);
+  let tmp3 = map(notifyAgent(5603)({ includeKeyboardHeight: true }).insets.bottom);
   dependencyMap = tmp3;
   let obj = projectId(586);
   let items = [closure_11];
@@ -371,7 +371,7 @@ export default function VibegrationsSettingsSheet(projectId) {
     return items;
   }, items4);
   let someResult = found1.some((arg0) => map.has(arg0));
-  const segmentedControlState = projectId(9273).useSegmentedControlState({ items: memo3, pageWidth: tmp24, defaultIndex: num, onSetActiveIndex: tmp22 });
+  const segmentedControlState = projectId(9277).useSegmentedControlState({ items: memo3, pageWidth: tmp24, defaultIndex: num, onSetActiveIndex: tmp22 });
   if (tmp19) {
     let tmp28 = 1 === tmp21;
   } else {
@@ -562,7 +562,7 @@ export default function VibegrationsSettingsSheet(projectId) {
   obj = { title: null };
   let intl = tmp4(1233).intl;
   obj[0] = intl.string(notifyAgent(3500).gTMvzD);
-  obj[1] = memo(projectId(5629).BottomSheetTitleHeader, obj);
+  obj[1] = memo(projectId(5630).BottomSheetTitleHeader, obj);
   obj1 = { style: tmp3.container, children: null };
   let tmp32Result = null;
   if (null != note) {
@@ -621,7 +621,7 @@ export default function VibegrationsSettingsSheet(projectId) {
       obj6[0] = callback;
       const obj7 = { state: null };
       obj7[0] = segmentedControlState;
-      obj6[1] = tmp32(tmp4(9784).SegmentedControl, obj7);
+      obj6[1] = tmp32(tmp4(9788).SegmentedControl, obj7);
       tmp32Result2 = tmp32(tmp34, obj6);
     }
     const items9 = [tmp32Result2, ];
@@ -659,9 +659,9 @@ export default function VibegrationsSettingsSheet(projectId) {
   obj12[2] = first2;
   obj12[3] = !(null != memo4.values || null != memo4.secrets);
   obj12[4] = callback1;
-  items7[4] = memo(projectId(4928).Button, obj12);
+  items7[4] = memo(projectId(4929).Button, obj12);
   obj1[1] = items7;
   obj[2] = memo1(first1, obj1);
-  return memo(projectId(5997).ActionSheet, obj);
+  return memo(projectId(5998).ActionSheet, obj);
 };
 export const VIBEGRATIONS_SETTINGS_SHEET_KEY = "VibegrationsSettingsSheet";

@@ -1,10 +1,10 @@
-// === Module 11944: ArrowsUpDownIcon ===
+// === Module 11950: ArrowsUpDownIcon ===
 
-// Module 11944 (ArrowsUpDownIcon)
+// Module 11950 (ArrowsUpDownIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 709 */;
 import BaseIconImage from "BaseIconImage" /* 4196 */;
-import registerAsset from "registerAsset" /* 11945 */;
+import registerAsset from "registerAsset" /* 11951 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

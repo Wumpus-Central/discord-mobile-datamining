@@ -1,16 +1,16 @@
-// === Module 8135: reactionForId ===
+// === Module 8139: reactionForId ===
 
-// Module 8135 (reactionForId)
+// Module 8139 (reactionForId)
 import isCommunicationDisabled from "isCommunicationDisabled" /* 4109 */;
 import GuildMemberFlags from "GuildMemberFlags" /* 4126 */;
-import formatExpirationLabel from "formatExpirationLabel" /* 8137 */;
+import formatExpirationLabel from "formatExpirationLabel" /* 8141 */;
 import closure_3 from "maybeApplyNoTextColorForLightCustomTheme" /* 4470 */;
-import closure_4 from "getEmojiToGroupId" /* 5409 */;
+import closure_4 from "getEmojiToGroupId" /* 5410 */;
 import closure_5 from "ensureGuildLoaded" /* 1386 */;
 import closure_6 from "trackCommunicationDisabled" /* 1991 */;
-import closure_7 from "reinjectEphemerals" /* 4735 */;
+import closure_7 from "reinjectEphemerals" /* 4736 */;
 import closure_8 from "mergeGuildAvatar" /* 1921 */;
-import { getPollState } from "useMessagePollInteractions" /* 8136 */;
+import { getPollState } from "useMessagePollInteractions" /* 8140 */;
 import ME from "ME" /* 673 */;
 import set from "set" /* 2 */;
 

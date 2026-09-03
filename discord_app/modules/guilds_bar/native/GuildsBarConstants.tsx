@@ -1,6 +1,6 @@
-// === Module 16107: GUILD_ITEM_SIZE ===
+// === Module 16123: GUILD_ITEM_SIZE ===
 
-// Module 16107 (GUILD_ITEM_SIZE)
+// Module 16123 (GUILD_ITEM_SIZE)
 import set from "set" /* 2 */;
 import ThemesDefault from "Themes" /* 709 */;
 import map from "map" /* 4197 */;

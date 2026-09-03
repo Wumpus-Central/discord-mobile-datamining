@@ -1,6 +1,6 @@
-// === Module 9038: useGuildProfileGames ===
+// === Module 9042: useGuildProfileGames ===
 
-// Module 9038 (useGuildProfileGames)
+// Module 9042 (useGuildProfileGames)
 import closure_2 from "noop" /* 19 */;
 import closure_3 from "getOfficialApplicationId" /* 4503 */;
 import closure_4 from "handleLoadMessages" /* 4502 */;
@@ -99,7 +99,7 @@ export const useAllGuildProfileGames = function useAllGuildProfileGames(profile)
   games = profile.games;
   const items = [closure_5];
   const stateFromStores = games(586).useStateFromStores(items, () => authenticated.isAuthenticated());
-  games(6162);
+  games(6163);
   if (null != games) {
     if (!stateFromStores) {
       let items1 = [];

@@ -15,6 +15,7 @@ import metadataDefault10 from "metadata" /* 4695 */;
 import metadataDefault11 from "metadata" /* 4696 */;
 import metadataDefault12 from "metadata" /* 4697 */;
 import metadataDefault13 from "metadata" /* 4698 */;
+import metadataDefault14 from "metadata" /* 4699 */;
 
 let ytIYuY = arg1;
 let YpJ7QS = importDefault;
@@ -22,7 +23,7 @@ let obj = {};
 obj = {
   background: metadataDefault,
   backgroundBlurred: metadataDefault2,
-  aspectRatio: 1.3667000333667,
+  aspectRatio: 1.366583541147132,
   getName() {
     const intl = ytIYuY(1233).intl;
     return intl.formatToPlainString(v4(2270)["3xb4VY"], { number: 1 });
@@ -30,6 +31,7 @@ obj = {
   seats: null,
   plants: null,
   duck: null,
+  notePad: null,
   screen: null
 };
 obj = {};
@@ -333,12 +335,14 @@ const items = [{ plantDeadAsset: metadataDefault3, plantDyingAsset: metadataDefa
 obj[5] = items;
 const obj23 = { plantDeadAsset: metadataDefault3, plantDyingAsset: metadataDefault4, plantLiveAsset: metadataDefault5, plantVaseAsset: metadataDefault6, x: 45.57, y: 50.62 };
 obj[6] = { asset: metadataDefault7, position: { x: 67.3, y: 45 }, width: 4.8 };
-obj[7] = { topLeft: { x: 56.8, y: 16.15 }, topRight: { x: 75.85, y: 23 }, bottomRight: { x: 75.3, y: 41.3 }, bottomLeft: { x: 56.95, y: 33.75 } };
+const obj24 = { asset: metadataDefault7, position: { x: 67.3, y: 45 }, width: 4.8 };
+obj[7] = { asset: metadataDefault8, position: { x: 81.5, y: 84.5 }, width: 4 };
+obj[8] = { topLeft: { x: 56.8, y: 16.15 }, topRight: { x: 75.85, y: 23 }, bottomRight: { x: 75.3, y: 41.3 }, bottomLeft: { x: 56.95, y: 33.75 } };
 obj[require("GuildRoomBackgrounds").GuildRoomBackgrounds.DEFAULT] = obj;
-const obj25 = {
-  background: metadataDefault8,
+const obj26 = {
+  background: metadataDefault9,
   backgroundBlurred: metadataDefault2,
-  aspectRatio: 1.2905982905982907,
+  aspectRatio: 1.2894117647058823,
   getName() {
     const intl = ytIYuY(1233).intl;
     return intl.formatToPlainString(v4(2270)["3xb4VY"], { number: 2 });
@@ -346,25 +350,13 @@ const obj25 = {
   seats: null,
   plants: null,
   duck: null,
+  notePad: null,
   screen: null
 };
-const obj26 = {};
-const obj27 = { name: "PC_SEAT_1", getLabel: null, position: null };
+const obj27 = {};
+const obj28 = { name: "PC_SEAT_1", getLabel: null, position: null };
 ytIYuY = messagesProxyDefault.ytIYuY;
 YpJ7QS = 1;
-obj27[1] = () => {
-  const intl = ytIYuY(1233).intl;
-  const obj = { seatType: null, number: null };
-  const intl2 = ytIYuY(1233).intl;
-  obj[0] = intl2.string(ytIYuY);
-  obj[1] = v4;
-  return intl.formatToPlainString(v4(2270).crFI7e, obj);
-};
-obj27[2] = require("GUILD_ROOM_BACKGROUND_POSITIONS").GUILD_ROOM_BACKGROUND_POSITIONS[require("GuildRoomBackgrounds").GuildRoomBackgrounds.LIVING_ROOM_2][0];
-obj26[require("GuildRoomSeats").GuildRoomSeats.SEAT_1] = obj27;
-const obj28 = { name: "PC_SEAT_2", getLabel: null, position: null };
-ytIYuY = messagesProxyDefault.ytIYuY;
-YpJ7QS = 2;
 obj28[1] = () => {
   const intl = ytIYuY(1233).intl;
   const obj = { seatType: null, number: null };
@@ -373,11 +365,11 @@ obj28[1] = () => {
   obj[1] = v4;
   return intl.formatToPlainString(v4(2270).crFI7e, obj);
 };
-obj28[2] = require("GUILD_ROOM_BACKGROUND_POSITIONS").GUILD_ROOM_BACKGROUND_POSITIONS[require("GuildRoomBackgrounds").GuildRoomBackgrounds.LIVING_ROOM_2][1];
-obj26[require("GuildRoomSeats").GuildRoomSeats.SEAT_2] = obj28;
-const obj29 = { name: "PC_SEAT_3", getLabel: null, position: null };
+obj28[2] = require("GUILD_ROOM_BACKGROUND_POSITIONS").GUILD_ROOM_BACKGROUND_POSITIONS[require("GuildRoomBackgrounds").GuildRoomBackgrounds.LIVING_ROOM_2][0];
+obj27[require("GuildRoomSeats").GuildRoomSeats.SEAT_1] = obj28;
+const obj29 = { name: "PC_SEAT_2", getLabel: null, position: null };
 ytIYuY = messagesProxyDefault.ytIYuY;
-YpJ7QS = 3;
+YpJ7QS = 2;
 obj29[1] = () => {
   const intl = ytIYuY(1233).intl;
   const obj = { seatType: null, number: null };
@@ -386,25 +378,24 @@ obj29[1] = () => {
   obj[1] = v4;
   return intl.formatToPlainString(v4(2270).crFI7e, obj);
 };
-obj29[2] = require("GUILD_ROOM_BACKGROUND_POSITIONS").GUILD_ROOM_BACKGROUND_POSITIONS[require("GuildRoomBackgrounds").GuildRoomBackgrounds.LIVING_ROOM_2][2];
-obj26[require("GuildRoomSeats").GuildRoomSeats.SEAT_3] = obj29;
-const obj30 = { name: "DUO_SEAT_1", getLabel: null, position: null };
-ytIYuY = messagesProxyDefault.p7JgFM;
-YpJ7QS = messagesProxyDefault.YpJ7QS;
+obj29[2] = require("GUILD_ROOM_BACKGROUND_POSITIONS").GUILD_ROOM_BACKGROUND_POSITIONS[require("GuildRoomBackgrounds").GuildRoomBackgrounds.LIVING_ROOM_2][1];
+obj27[require("GuildRoomSeats").GuildRoomSeats.SEAT_2] = obj29;
+const obj30 = { name: "PC_SEAT_3", getLabel: null, position: null };
+ytIYuY = messagesProxyDefault.ytIYuY;
+YpJ7QS = 3;
 obj30[1] = () => {
   const intl = ytIYuY(1233).intl;
-  const obj = { seatType: null, position: null };
+  const obj = { seatType: null, number: null };
   const intl2 = ytIYuY(1233).intl;
   obj[0] = intl2.string(ytIYuY);
-  const intl3 = ytIYuY(1233).intl;
-  obj[1] = intl3.string(v4);
-  return intl.formatToPlainString(v4(2270).LFdLjz, obj);
+  obj[1] = v4;
+  return intl.formatToPlainString(v4(2270).crFI7e, obj);
 };
-obj30[2] = require("GUILD_ROOM_BACKGROUND_POSITIONS").GUILD_ROOM_BACKGROUND_POSITIONS[require("GuildRoomBackgrounds").GuildRoomBackgrounds.LIVING_ROOM_2][3];
-obj26[require("GuildRoomSeats").GuildRoomSeats.SEAT_4] = obj30;
-const obj31 = { name: "DUO_SEAT_2", getLabel: null, position: null };
+obj30[2] = require("GUILD_ROOM_BACKGROUND_POSITIONS").GUILD_ROOM_BACKGROUND_POSITIONS[require("GuildRoomBackgrounds").GuildRoomBackgrounds.LIVING_ROOM_2][2];
+obj27[require("GuildRoomSeats").GuildRoomSeats.SEAT_3] = obj30;
+const obj31 = { name: "DUO_SEAT_1", getLabel: null, position: null };
 ytIYuY = messagesProxyDefault.p7JgFM;
-YpJ7QS = messagesProxyDefault.wxkoLF;
+YpJ7QS = messagesProxyDefault.YpJ7QS;
 obj31[1] = () => {
   const intl = ytIYuY(1233).intl;
   const obj = { seatType: null, position: null };
@@ -414,11 +405,11 @@ obj31[1] = () => {
   obj[1] = intl3.string(v4);
   return intl.formatToPlainString(v4(2270).LFdLjz, obj);
 };
-obj31[2] = require("GUILD_ROOM_BACKGROUND_POSITIONS").GUILD_ROOM_BACKGROUND_POSITIONS[require("GuildRoomBackgrounds").GuildRoomBackgrounds.LIVING_ROOM_2][4];
-obj26[require("GuildRoomSeats").GuildRoomSeats.SEAT_5] = obj31;
-const obj32 = { name: "DUO_SEAT_STANDING_1", getLabel: null, position: null };
+obj31[2] = require("GUILD_ROOM_BACKGROUND_POSITIONS").GUILD_ROOM_BACKGROUND_POSITIONS[require("GuildRoomBackgrounds").GuildRoomBackgrounds.LIVING_ROOM_2][3];
+obj27[require("GuildRoomSeats").GuildRoomSeats.SEAT_4] = obj31;
+const obj32 = { name: "DUO_SEAT_2", getLabel: null, position: null };
 ytIYuY = messagesProxyDefault.p7JgFM;
-YpJ7QS = messagesProxyDefault.Qt29nt;
+YpJ7QS = messagesProxyDefault.wxkoLF;
 obj32[1] = () => {
   const intl = ytIYuY(1233).intl;
   const obj = { seatType: null, position: null };
@@ -428,11 +419,11 @@ obj32[1] = () => {
   obj[1] = intl3.string(v4);
   return intl.formatToPlainString(v4(2270).LFdLjz, obj);
 };
-obj32[2] = require("GUILD_ROOM_BACKGROUND_POSITIONS").GUILD_ROOM_BACKGROUND_POSITIONS[require("GuildRoomBackgrounds").GuildRoomBackgrounds.LIVING_ROOM_2][5];
-obj26[require("GuildRoomSeats").GuildRoomSeats.SEAT_6] = obj32;
-const obj33 = { name: "MAIN_COUCH_SEAT_1", getLabel: null, position: null };
-ytIYuY = messagesProxyDefault.wjBOG8;
-YpJ7QS = messagesProxyDefault.lQKxC5;
+obj32[2] = require("GUILD_ROOM_BACKGROUND_POSITIONS").GUILD_ROOM_BACKGROUND_POSITIONS[require("GuildRoomBackgrounds").GuildRoomBackgrounds.LIVING_ROOM_2][4];
+obj27[require("GuildRoomSeats").GuildRoomSeats.SEAT_5] = obj32;
+const obj33 = { name: "DUO_SEAT_STANDING_1", getLabel: null, position: null };
+ytIYuY = messagesProxyDefault.p7JgFM;
+YpJ7QS = messagesProxyDefault.Qt29nt;
 obj33[1] = () => {
   const intl = ytIYuY(1233).intl;
   const obj = { seatType: null, position: null };
@@ -442,11 +433,11 @@ obj33[1] = () => {
   obj[1] = intl3.string(v4);
   return intl.formatToPlainString(v4(2270).LFdLjz, obj);
 };
-obj33[2] = require("GUILD_ROOM_BACKGROUND_POSITIONS").GUILD_ROOM_BACKGROUND_POSITIONS[require("GuildRoomBackgrounds").GuildRoomBackgrounds.LIVING_ROOM_2][6];
-obj26[require("GuildRoomSeats").GuildRoomSeats.SEAT_7] = obj33;
-const obj34 = { name: "MAIN_COUCH_SEAT_2", getLabel: null, position: null };
+obj33[2] = require("GUILD_ROOM_BACKGROUND_POSITIONS").GUILD_ROOM_BACKGROUND_POSITIONS[require("GuildRoomBackgrounds").GuildRoomBackgrounds.LIVING_ROOM_2][5];
+obj27[require("GuildRoomSeats").GuildRoomSeats.SEAT_6] = obj33;
+const obj34 = { name: "MAIN_COUCH_SEAT_1", getLabel: null, position: null };
 ytIYuY = messagesProxyDefault.wjBOG8;
-YpJ7QS = messagesProxyDefault.WMBV4i;
+YpJ7QS = messagesProxyDefault.lQKxC5;
 obj34[1] = () => {
   const intl = ytIYuY(1233).intl;
   const obj = { seatType: null, position: null };
@@ -456,11 +447,11 @@ obj34[1] = () => {
   obj[1] = intl3.string(v4);
   return intl.formatToPlainString(v4(2270).LFdLjz, obj);
 };
-obj34[2] = require("GUILD_ROOM_BACKGROUND_POSITIONS").GUILD_ROOM_BACKGROUND_POSITIONS[require("GuildRoomBackgrounds").GuildRoomBackgrounds.LIVING_ROOM_2][7];
-obj26[require("GuildRoomSeats").GuildRoomSeats.SEAT_8] = obj34;
-const obj35 = { name: "MAIN_COUCH_SEAT_3", getLabel: null, position: null };
+obj34[2] = require("GUILD_ROOM_BACKGROUND_POSITIONS").GUILD_ROOM_BACKGROUND_POSITIONS[require("GuildRoomBackgrounds").GuildRoomBackgrounds.LIVING_ROOM_2][6];
+obj27[require("GuildRoomSeats").GuildRoomSeats.SEAT_7] = obj34;
+const obj35 = { name: "MAIN_COUCH_SEAT_2", getLabel: null, position: null };
 ytIYuY = messagesProxyDefault.wjBOG8;
-YpJ7QS = messagesProxyDefault["yG+xS0"];
+YpJ7QS = messagesProxyDefault.WMBV4i;
 obj35[1] = () => {
   const intl = ytIYuY(1233).intl;
   const obj = { seatType: null, position: null };
@@ -470,11 +461,11 @@ obj35[1] = () => {
   obj[1] = intl3.string(v4);
   return intl.formatToPlainString(v4(2270).LFdLjz, obj);
 };
-obj35[2] = require("GUILD_ROOM_BACKGROUND_POSITIONS").GUILD_ROOM_BACKGROUND_POSITIONS[require("GuildRoomBackgrounds").GuildRoomBackgrounds.LIVING_ROOM_2][8];
-obj26[require("GuildRoomSeats").GuildRoomSeats.SEAT_9] = obj35;
-const obj36 = { name: "MAIN_COUCH_SEAT_4", getLabel: null, position: null };
+obj35[2] = require("GUILD_ROOM_BACKGROUND_POSITIONS").GUILD_ROOM_BACKGROUND_POSITIONS[require("GuildRoomBackgrounds").GuildRoomBackgrounds.LIVING_ROOM_2][7];
+obj27[require("GuildRoomSeats").GuildRoomSeats.SEAT_8] = obj35;
+const obj36 = { name: "MAIN_COUCH_SEAT_3", getLabel: null, position: null };
 ytIYuY = messagesProxyDefault.wjBOG8;
-YpJ7QS = messagesProxyDefault["5ZigwU"];
+YpJ7QS = messagesProxyDefault["yG+xS0"];
 obj36[1] = () => {
   const intl = ytIYuY(1233).intl;
   const obj = { seatType: null, position: null };
@@ -484,11 +475,11 @@ obj36[1] = () => {
   obj[1] = intl3.string(v4);
   return intl.formatToPlainString(v4(2270).LFdLjz, obj);
 };
-obj36[2] = require("GUILD_ROOM_BACKGROUND_POSITIONS").GUILD_ROOM_BACKGROUND_POSITIONS[require("GuildRoomBackgrounds").GuildRoomBackgrounds.LIVING_ROOM_2][9];
-obj26[require("GuildRoomSeats").GuildRoomSeats.SEAT_10] = obj36;
-const obj37 = { name: "MAIN_COUCH_SEAT_5", getLabel: null, position: null };
+obj36[2] = require("GUILD_ROOM_BACKGROUND_POSITIONS").GUILD_ROOM_BACKGROUND_POSITIONS[require("GuildRoomBackgrounds").GuildRoomBackgrounds.LIVING_ROOM_2][8];
+obj27[require("GuildRoomSeats").GuildRoomSeats.SEAT_9] = obj36;
+const obj37 = { name: "MAIN_COUCH_SEAT_4", getLabel: null, position: null };
 ytIYuY = messagesProxyDefault.wjBOG8;
-YpJ7QS = messagesProxyDefault.iVfA9i;
+YpJ7QS = messagesProxyDefault["5ZigwU"];
 obj37[1] = () => {
   const intl = ytIYuY(1233).intl;
   const obj = { seatType: null, position: null };
@@ -498,51 +489,12 @@ obj37[1] = () => {
   obj[1] = intl3.string(v4);
   return intl.formatToPlainString(v4(2270).LFdLjz, obj);
 };
-obj37[2] = require("GUILD_ROOM_BACKGROUND_POSITIONS").GUILD_ROOM_BACKGROUND_POSITIONS[require("GuildRoomBackgrounds").GuildRoomBackgrounds.LIVING_ROOM_2][10];
-obj26[require("GuildRoomSeats").GuildRoomSeats.SEAT_11] = obj37;
-const obj38 = { name: "SIDE_GROUP_SEAT_1", getLabel: null, position: null };
-ytIYuY = messagesProxyDefault["C+LGlh"];
-YpJ7QS = 1;
+obj37[2] = require("GUILD_ROOM_BACKGROUND_POSITIONS").GUILD_ROOM_BACKGROUND_POSITIONS[require("GuildRoomBackgrounds").GuildRoomBackgrounds.LIVING_ROOM_2][9];
+obj27[require("GuildRoomSeats").GuildRoomSeats.SEAT_10] = obj37;
+const obj38 = { name: "MAIN_COUCH_SEAT_5", getLabel: null, position: null };
+ytIYuY = messagesProxyDefault.wjBOG8;
+YpJ7QS = messagesProxyDefault.iVfA9i;
 obj38[1] = () => {
-  const intl = ytIYuY(1233).intl;
-  const obj = { seatType: null, number: null };
-  const intl2 = ytIYuY(1233).intl;
-  obj[0] = intl2.string(ytIYuY);
-  obj[1] = v4;
-  return intl.formatToPlainString(v4(2270).crFI7e, obj);
-};
-obj38[2] = require("GUILD_ROOM_BACKGROUND_POSITIONS").GUILD_ROOM_BACKGROUND_POSITIONS[require("GuildRoomBackgrounds").GuildRoomBackgrounds.LIVING_ROOM_2][11];
-obj26[require("GuildRoomSeats").GuildRoomSeats.SEAT_12] = obj38;
-const obj39 = { name: "SIDE_GROUP_SEAT_2", getLabel: null, position: null };
-ytIYuY = messagesProxyDefault["C+LGlh"];
-YpJ7QS = 2;
-obj39[1] = () => {
-  const intl = ytIYuY(1233).intl;
-  const obj = { seatType: null, number: null };
-  const intl2 = ytIYuY(1233).intl;
-  obj[0] = intl2.string(ytIYuY);
-  obj[1] = v4;
-  return intl.formatToPlainString(v4(2270).crFI7e, obj);
-};
-obj39[2] = require("GUILD_ROOM_BACKGROUND_POSITIONS").GUILD_ROOM_BACKGROUND_POSITIONS[require("GuildRoomBackgrounds").GuildRoomBackgrounds.LIVING_ROOM_2][12];
-obj26[require("GuildRoomSeats").GuildRoomSeats.SEAT_13] = obj39;
-const obj40 = { name: "SIDE_GROUP_SEAT_3", getLabel: null, position: null };
-ytIYuY = messagesProxyDefault["C+LGlh"];
-YpJ7QS = 3;
-obj40[1] = () => {
-  const intl = ytIYuY(1233).intl;
-  const obj = { seatType: null, number: null };
-  const intl2 = ytIYuY(1233).intl;
-  obj[0] = intl2.string(ytIYuY);
-  obj[1] = v4;
-  return intl.formatToPlainString(v4(2270).crFI7e, obj);
-};
-obj40[2] = require("GUILD_ROOM_BACKGROUND_POSITIONS").GUILD_ROOM_BACKGROUND_POSITIONS[require("GuildRoomBackgrounds").GuildRoomBackgrounds.LIVING_ROOM_2][13];
-obj26[require("GuildRoomSeats").GuildRoomSeats.SEAT_14] = obj40;
-const obj41 = { name: "SIDE_GROUP_SEAT_STANDING_1", getLabel: null, position: null };
-ytIYuY = messagesProxyDefault["C+LGlh"];
-YpJ7QS = messagesProxyDefault.Qt29nt;
-obj41[1] = () => {
   const intl = ytIYuY(1233).intl;
   const obj = { seatType: null, position: null };
   const intl2 = ytIYuY(1233).intl;
@@ -551,12 +503,12 @@ obj41[1] = () => {
   obj[1] = intl3.string(v4);
   return intl.formatToPlainString(v4(2270).LFdLjz, obj);
 };
-obj41[2] = require("GUILD_ROOM_BACKGROUND_POSITIONS").GUILD_ROOM_BACKGROUND_POSITIONS[require("GuildRoomBackgrounds").GuildRoomBackgrounds.LIVING_ROOM_2][14];
-obj26[require("GuildRoomSeats").GuildRoomSeats.SEAT_15] = obj41;
-const obj42 = { name: "BACKROOM_SEAT_1", getLabel: null, position: null };
-ytIYuY = messagesProxyDefault.lkzfot;
+obj38[2] = require("GUILD_ROOM_BACKGROUND_POSITIONS").GUILD_ROOM_BACKGROUND_POSITIONS[require("GuildRoomBackgrounds").GuildRoomBackgrounds.LIVING_ROOM_2][10];
+obj27[require("GuildRoomSeats").GuildRoomSeats.SEAT_11] = obj38;
+const obj39 = { name: "SIDE_GROUP_SEAT_1", getLabel: null, position: null };
+ytIYuY = messagesProxyDefault["C+LGlh"];
 YpJ7QS = 1;
-obj42[1] = () => {
+obj39[1] = () => {
   const intl = ytIYuY(1233).intl;
   const obj = { seatType: null, number: null };
   const intl2 = ytIYuY(1233).intl;
@@ -564,11 +516,51 @@ obj42[1] = () => {
   obj[1] = v4;
   return intl.formatToPlainString(v4(2270).crFI7e, obj);
 };
-obj42[2] = require("GUILD_ROOM_BACKGROUND_POSITIONS").GUILD_ROOM_BACKGROUND_POSITIONS[require("GuildRoomBackgrounds").GuildRoomBackgrounds.LIVING_ROOM_2][15];
-obj26[require("GuildRoomSeats").GuildRoomSeats.SEAT_16] = obj42;
-const obj43 = { name: "BACKROOM_SEAT_2", getLabel: null, position: null, dim: true };
-ytIYuY = messagesProxyDefault.lkzfot;
+obj39[2] = require("GUILD_ROOM_BACKGROUND_POSITIONS").GUILD_ROOM_BACKGROUND_POSITIONS[require("GuildRoomBackgrounds").GuildRoomBackgrounds.LIVING_ROOM_2][11];
+obj27[require("GuildRoomSeats").GuildRoomSeats.SEAT_12] = obj39;
+const obj40 = { name: "SIDE_GROUP_SEAT_2", getLabel: null, position: null };
+ytIYuY = messagesProxyDefault["C+LGlh"];
 YpJ7QS = 2;
+obj40[1] = () => {
+  const intl = ytIYuY(1233).intl;
+  const obj = { seatType: null, number: null };
+  const intl2 = ytIYuY(1233).intl;
+  obj[0] = intl2.string(ytIYuY);
+  obj[1] = v4;
+  return intl.formatToPlainString(v4(2270).crFI7e, obj);
+};
+obj40[2] = require("GUILD_ROOM_BACKGROUND_POSITIONS").GUILD_ROOM_BACKGROUND_POSITIONS[require("GuildRoomBackgrounds").GuildRoomBackgrounds.LIVING_ROOM_2][12];
+obj27[require("GuildRoomSeats").GuildRoomSeats.SEAT_13] = obj40;
+const obj41 = { name: "SIDE_GROUP_SEAT_3", getLabel: null, position: null };
+ytIYuY = messagesProxyDefault["C+LGlh"];
+YpJ7QS = 3;
+obj41[1] = () => {
+  const intl = ytIYuY(1233).intl;
+  const obj = { seatType: null, number: null };
+  const intl2 = ytIYuY(1233).intl;
+  obj[0] = intl2.string(ytIYuY);
+  obj[1] = v4;
+  return intl.formatToPlainString(v4(2270).crFI7e, obj);
+};
+obj41[2] = require("GUILD_ROOM_BACKGROUND_POSITIONS").GUILD_ROOM_BACKGROUND_POSITIONS[require("GuildRoomBackgrounds").GuildRoomBackgrounds.LIVING_ROOM_2][13];
+obj27[require("GuildRoomSeats").GuildRoomSeats.SEAT_14] = obj41;
+const obj42 = { name: "SIDE_GROUP_SEAT_STANDING_1", getLabel: null, position: null };
+ytIYuY = messagesProxyDefault["C+LGlh"];
+YpJ7QS = messagesProxyDefault.Qt29nt;
+obj42[1] = () => {
+  const intl = ytIYuY(1233).intl;
+  const obj = { seatType: null, position: null };
+  const intl2 = ytIYuY(1233).intl;
+  obj[0] = intl2.string(ytIYuY);
+  const intl3 = ytIYuY(1233).intl;
+  obj[1] = intl3.string(v4);
+  return intl.formatToPlainString(v4(2270).LFdLjz, obj);
+};
+obj42[2] = require("GUILD_ROOM_BACKGROUND_POSITIONS").GUILD_ROOM_BACKGROUND_POSITIONS[require("GuildRoomBackgrounds").GuildRoomBackgrounds.LIVING_ROOM_2][14];
+obj27[require("GuildRoomSeats").GuildRoomSeats.SEAT_15] = obj42;
+const obj43 = { name: "BACKROOM_SEAT_1", getLabel: null, position: null };
+ytIYuY = messagesProxyDefault.lkzfot;
+YpJ7QS = 1;
 obj43[1] = () => {
   const intl = ytIYuY(1233).intl;
   const obj = { seatType: null, number: null };
@@ -577,11 +569,11 @@ obj43[1] = () => {
   obj[1] = v4;
   return intl.formatToPlainString(v4(2270).crFI7e, obj);
 };
-obj43[2] = require("GUILD_ROOM_BACKGROUND_POSITIONS").GUILD_ROOM_BACKGROUND_POSITIONS[require("GuildRoomBackgrounds").GuildRoomBackgrounds.LIVING_ROOM_2][16];
-obj26[require("GuildRoomSeats").GuildRoomSeats.SEAT_17] = obj43;
-const obj44 = { name: "BACKROOM_SEAT_3", getLabel: null, position: null };
+obj43[2] = require("GUILD_ROOM_BACKGROUND_POSITIONS").GUILD_ROOM_BACKGROUND_POSITIONS[require("GuildRoomBackgrounds").GuildRoomBackgrounds.LIVING_ROOM_2][15];
+obj27[require("GuildRoomSeats").GuildRoomSeats.SEAT_16] = obj43;
+const obj44 = { name: "BACKROOM_SEAT_2", getLabel: null, position: null, dim: true };
 ytIYuY = messagesProxyDefault.lkzfot;
-YpJ7QS = 3;
+YpJ7QS = 2;
 obj44[1] = () => {
   const intl = ytIYuY(1233).intl;
   const obj = { seatType: null, number: null };
@@ -590,11 +582,11 @@ obj44[1] = () => {
   obj[1] = v4;
   return intl.formatToPlainString(v4(2270).crFI7e, obj);
 };
-obj44[2] = require("GUILD_ROOM_BACKGROUND_POSITIONS").GUILD_ROOM_BACKGROUND_POSITIONS[require("GuildRoomBackgrounds").GuildRoomBackgrounds.LIVING_ROOM_2][17];
-obj26[require("GuildRoomSeats").GuildRoomSeats.SEAT_18] = obj44;
-const obj45 = { name: "RAFTERS_SEAT_1", getLabel: null, position: null };
-ytIYuY = messagesProxyDefault.IE3e0y;
-YpJ7QS = 1;
+obj44[2] = require("GUILD_ROOM_BACKGROUND_POSITIONS").GUILD_ROOM_BACKGROUND_POSITIONS[require("GuildRoomBackgrounds").GuildRoomBackgrounds.LIVING_ROOM_2][16];
+obj27[require("GuildRoomSeats").GuildRoomSeats.SEAT_17] = obj44;
+const obj45 = { name: "BACKROOM_SEAT_3", getLabel: null, position: null };
+ytIYuY = messagesProxyDefault.lkzfot;
+YpJ7QS = 3;
 obj45[1] = () => {
   const intl = ytIYuY(1233).intl;
   const obj = { seatType: null, number: null };
@@ -603,11 +595,11 @@ obj45[1] = () => {
   obj[1] = v4;
   return intl.formatToPlainString(v4(2270).crFI7e, obj);
 };
-obj45[2] = require("GUILD_ROOM_BACKGROUND_POSITIONS").GUILD_ROOM_BACKGROUND_POSITIONS[require("GuildRoomBackgrounds").GuildRoomBackgrounds.LIVING_ROOM_2][18];
-obj26[require("GuildRoomSeats").GuildRoomSeats.SEAT_19] = obj45;
-const obj46 = { name: "RAFTERS_SEAT_2", getLabel: null, position: null };
+obj45[2] = require("GUILD_ROOM_BACKGROUND_POSITIONS").GUILD_ROOM_BACKGROUND_POSITIONS[require("GuildRoomBackgrounds").GuildRoomBackgrounds.LIVING_ROOM_2][17];
+obj27[require("GuildRoomSeats").GuildRoomSeats.SEAT_18] = obj45;
+const obj46 = { name: "RAFTERS_SEAT_1", getLabel: null, position: null };
 ytIYuY = messagesProxyDefault.IE3e0y;
-YpJ7QS = 2;
+YpJ7QS = 1;
 obj46[1] = () => {
   const intl = ytIYuY(1233).intl;
   const obj = { seatType: null, number: null };
@@ -616,11 +608,11 @@ obj46[1] = () => {
   obj[1] = v4;
   return intl.formatToPlainString(v4(2270).crFI7e, obj);
 };
-obj46[2] = require("GUILD_ROOM_BACKGROUND_POSITIONS").GUILD_ROOM_BACKGROUND_POSITIONS[require("GuildRoomBackgrounds").GuildRoomBackgrounds.LIVING_ROOM_2][19];
-obj26[require("GuildRoomSeats").GuildRoomSeats.SEAT_20] = obj46;
-const obj47 = { name: "RAFTERS_SEAT_3", getLabel: null, position: null };
+obj46[2] = require("GUILD_ROOM_BACKGROUND_POSITIONS").GUILD_ROOM_BACKGROUND_POSITIONS[require("GuildRoomBackgrounds").GuildRoomBackgrounds.LIVING_ROOM_2][18];
+obj27[require("GuildRoomSeats").GuildRoomSeats.SEAT_19] = obj46;
+const obj47 = { name: "RAFTERS_SEAT_2", getLabel: null, position: null };
 ytIYuY = messagesProxyDefault.IE3e0y;
-YpJ7QS = 3;
+YpJ7QS = 2;
 obj47[1] = () => {
   const intl = ytIYuY(1233).intl;
   const obj = { seatType: null, number: null };
@@ -629,11 +621,11 @@ obj47[1] = () => {
   obj[1] = v4;
   return intl.formatToPlainString(v4(2270).crFI7e, obj);
 };
-obj47[2] = require("GUILD_ROOM_BACKGROUND_POSITIONS").GUILD_ROOM_BACKGROUND_POSITIONS[require("GuildRoomBackgrounds").GuildRoomBackgrounds.LIVING_ROOM_2][20];
-obj26[require("GuildRoomSeats").GuildRoomSeats.SEAT_21] = obj47;
-const obj48 = { name: "PC_SEAT_4", getLabel: null, position: null };
-ytIYuY = messagesProxyDefault.ytIYuY;
-YpJ7QS = 4;
+obj47[2] = require("GUILD_ROOM_BACKGROUND_POSITIONS").GUILD_ROOM_BACKGROUND_POSITIONS[require("GuildRoomBackgrounds").GuildRoomBackgrounds.LIVING_ROOM_2][19];
+obj27[require("GuildRoomSeats").GuildRoomSeats.SEAT_20] = obj47;
+const obj48 = { name: "RAFTERS_SEAT_3", getLabel: null, position: null };
+ytIYuY = messagesProxyDefault.IE3e0y;
+YpJ7QS = 3;
 obj48[1] = () => {
   const intl = ytIYuY(1233).intl;
   const obj = { seatType: null, number: null };
@@ -642,17 +634,32 @@ obj48[1] = () => {
   obj[1] = v4;
   return intl.formatToPlainString(v4(2270).crFI7e, obj);
 };
-obj48[2] = require("GUILD_ROOM_BACKGROUND_POSITIONS").GUILD_ROOM_BACKGROUND_POSITIONS[require("GuildRoomBackgrounds").GuildRoomBackgrounds.LIVING_ROOM_2][21];
-obj26[require("GuildRoomSeats").GuildRoomSeats.SEAT_22] = obj48;
-obj25[4] = obj26;
-const obj24 = { asset: metadataDefault7, position: { x: 67.3, y: 45 }, width: 4.8 };
-const items1 = [{ plantDeadAsset: metadataDefault9, plantDyingAsset: metadataDefault10, plantLiveAsset: metadataDefault11, plantVaseAsset: metadataDefault12, x: 41, y: 46 }];
-obj25[5] = items1;
-const obj49 = { plantDeadAsset: metadataDefault9, plantDyingAsset: metadataDefault10, plantLiveAsset: metadataDefault11, plantVaseAsset: metadataDefault12, x: 41, y: 46 };
-obj25[6] = { asset: metadataDefault13, position: { x: 64.6, y: 58.5 }, width: 4.8 };
-obj25[7] = { topLeft: { x: 51.85, y: 33.5 }, topRight: { x: 69.15, y: 40.5 }, bottomRight: { x: 69.3, y: 57.3 }, bottomLeft: { x: 51.95, y: 49.1 } };
-obj[require("GuildRoomBackgrounds").GuildRoomBackgrounds.LIVING_ROOM_2] = obj25;
-const obj50 = { asset: metadataDefault13, position: { x: 64.6, y: 58.5 }, width: 4.8 };
+obj48[2] = require("GUILD_ROOM_BACKGROUND_POSITIONS").GUILD_ROOM_BACKGROUND_POSITIONS[require("GuildRoomBackgrounds").GuildRoomBackgrounds.LIVING_ROOM_2][20];
+obj27[require("GuildRoomSeats").GuildRoomSeats.SEAT_21] = obj48;
+const obj49 = { name: "PC_SEAT_4", getLabel: null, position: null };
+ytIYuY = messagesProxyDefault.ytIYuY;
+YpJ7QS = 4;
+obj49[1] = () => {
+  const intl = ytIYuY(1233).intl;
+  const obj = { seatType: null, number: null };
+  const intl2 = ytIYuY(1233).intl;
+  obj[0] = intl2.string(ytIYuY);
+  obj[1] = v4;
+  return intl.formatToPlainString(v4(2270).crFI7e, obj);
+};
+obj49[2] = require("GUILD_ROOM_BACKGROUND_POSITIONS").GUILD_ROOM_BACKGROUND_POSITIONS[require("GuildRoomBackgrounds").GuildRoomBackgrounds.LIVING_ROOM_2][21];
+obj27[require("GuildRoomSeats").GuildRoomSeats.SEAT_22] = obj49;
+obj26[4] = obj27;
+const obj25 = { asset: metadataDefault8, position: { x: 81.5, y: 84.5 }, width: 4 };
+const items1 = [{ plantDeadAsset: metadataDefault10, plantDyingAsset: metadataDefault11, plantLiveAsset: metadataDefault12, plantVaseAsset: metadataDefault13, x: 41, y: 46 }];
+obj26[5] = items1;
+const obj50 = { plantDeadAsset: metadataDefault10, plantDyingAsset: metadataDefault11, plantLiveAsset: metadataDefault12, plantVaseAsset: metadataDefault13, x: 41, y: 46 };
+obj26[6] = { asset: metadataDefault14, position: { x: 64.6, y: 58.5 }, width: 4.8 };
+const obj51 = { asset: metadataDefault14, position: { x: 64.6, y: 58.5 }, width: 4.8 };
+obj26[7] = { asset: metadataDefault8, position: { x: 69, y: 78.5 }, width: 4 };
+obj26[8] = { topLeft: { x: 51.85, y: 33.5 }, topRight: { x: 69.15, y: 40.5 }, bottomRight: { x: 69.3, y: 57.3 }, bottomLeft: { x: 51.95, y: 49.1 } };
+obj[require("GuildRoomBackgrounds").GuildRoomBackgrounds.LIVING_ROOM_2] = obj26;
+const obj52 = { asset: metadataDefault8, position: { x: 69, y: 78.5 }, width: 4 };
 const result = require("set").fileFinishedImporting("modules/guild_rooms/GuildRoomConstants.tsx");
 
 export const GUILD_ROOM_SPATIAL_AUDIO_MODE = "guild-room";

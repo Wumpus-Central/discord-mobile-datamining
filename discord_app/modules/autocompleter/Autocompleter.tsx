@@ -1,16 +1,16 @@
-// === Module 9947: getAutocompleterBoosterMap ===
+// === Module 9951: getAutocompleterBoosterMap ===
 
-// Module 9947 (getAutocompleterBoosterMap)
+// Module 9951 (getAutocompleterBoosterMap)
 import isNullOrEmpty from "isNullOrEmpty" /* 1901 */;
 import tDefault from "t" /* 4192 */;
 import getPathsFromURL from "getPathsFromURL" /* 4461 */;
 import CodedLinkType from "CodedLinkType" /* 4466 */;
-import NOOP from "NOOP" /* 5393 */;
-import NOOPDefault from "NOOP" /* 5393 */;
-import getGuildNameSuggestionDefault from "getGuildNameSuggestion" /* 5464 */;
-import getTransformedUserDefault from "getTransformedUser" /* 9950 */;
-import closure_3 from "handleUserUpdate" /* 9948 */;
-import closure_4 from "fromPath" /* 9949 */;
+import NOOP from "NOOP" /* 5394 */;
+import NOOPDefault from "NOOP" /* 5394 */;
+import getGuildNameSuggestionDefault from "getGuildNameSuggestion" /* 5465 */;
+import getTransformedUserDefault from "getTransformedUser" /* 9954 */;
+import closure_3 from "handleUserUpdate" /* 9952 */;
+import closure_4 from "fromPath" /* 9953 */;
 import { GUILD_VOCAL_CHANNELS_KEY } from "comparator" /* 1981 */;
 import closure_6 from "markAllUserIdListsStale" /* 4130 */;
 import closure_7 from "mergeGuildAvatar" /* 1921 */;
@@ -370,8 +370,8 @@ prototype["queryTextChannels"] = function queryTextChannels(closure_1, _limit) {
   const self = this;
   if (this._include(AutocompleterResultTypes.TEXT_CHANNEL)) {
     if (self.options.frecencyBoosters) {
-      let boosterMap = blacklist(5393).getBoosterMap(tmp);
-      const obj2 = blacklist(5393);
+      let boosterMap = blacklist(5394).getBoosterMap(tmp);
+      const obj2 = blacklist(5394);
     } else {
       boosterMap = {};
     }
@@ -418,8 +418,8 @@ prototype["queryGuilds"] = function queryGuilds(arg0, arg1) {
   const self = this;
   if (this._include(AutocompleterResultTypes.GUILD)) {
     if (self.options.frecencyBoosters) {
-      let boosterMap = blacklist(5393).getBoosterMap(tmp);
-      const obj2 = blacklist(5393);
+      let boosterMap = blacklist(5394).getBoosterMap(tmp);
+      const obj2 = blacklist(5394);
     } else {
       boosterMap = {};
     }
@@ -526,8 +526,8 @@ prototype["queryGroupDMs"] = function queryGroupDMs(arg0, arg1) {
   if (this._include(AutocompleterResultTypes.GROUP_DM)) {
     const blacklist = self.options.blacklist;
     if (self.options.frecencyBoosters) {
-      let boosterMap = blacklist(5393).getBoosterMap(tmp);
-      const obj2 = blacklist(5393);
+      let boosterMap = blacklist(5394).getBoosterMap(tmp);
+      const obj2 = blacklist(5394);
     } else {
       boosterMap = {};
     }
@@ -559,7 +559,7 @@ prototype["queryApplications"] = function queryApplications(arg0, arg1) {
 };
 prototype["queryGameProfiles"] = function queryGameProfiles(query, _limit) {
   if (this._include(AutocompleterResultTypes.GAME_PROFILE)) {
-    let result = _require(9952).queryGamesAutocomplete(query);
+    let result = _require(9956).queryGamesAutocomplete(query);
     if (result == null) {
       result = [];
     }
@@ -601,7 +601,7 @@ prototype["queryLink"] = function queryLink(query, _refetchForSingleCategoryLimi
       obj = { type: null, record: null, score: null };
       obj[0] = tmp.LINK;
       obj[1] = closure_4.fromInviteCode(findCodedLinkResult.code);
-      let tmp3Result = tmp3(5393);
+      let tmp3Result = tmp3(5394);
       obj[2] = tmp3Result.calculateScore(11);
       const items = [obj];
       return items;
@@ -628,7 +628,7 @@ prototype["queryLink"] = function queryLink(query, _refetchForSingleCategoryLimi
               obj = { type: null, record: null, score: null };
               obj[0] = tmp.LINK;
               obj[1] = closure_4.fromPath(pathname);
-              tmp3Result = tmp3(5393);
+              tmp3Result = tmp3(5394);
               obj[2] = tmp3Result.calculateScore(11);
               const items1 = [obj];
               let items2 = items1;

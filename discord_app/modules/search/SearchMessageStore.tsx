@@ -1,11 +1,11 @@
-// === Module 6136: handleReaction ===
+// === Module 6137: handleReaction ===
 
-// Module 6136 (handleReaction)
+// Module 6137 (handleReaction)
 import initializeDefault from "initialize" /* 586 */;
 import dispatcherDefault from "dispatcher" /* 706 */;
 import MAX_REACTIONS from "MAX_REACTIONS" /* 4132 */;
 import V6OrEarlierAPIError from "V6OrEarlierAPIError" /* 4376 */;
-import createMinimalMessageRecord from "createMinimalMessageRecord" /* 4737 */;
+import createMinimalMessageRecord from "createMinimalMessageRecord" /* 4738 */;
 import closure_2 from "fetchFingerprint" /* 1215 */;
 import closure_3 from "ensureGuildLoaded" /* 1386 */;
 import closure_4 from "markAllUserIdListsStale" /* 4130 */;

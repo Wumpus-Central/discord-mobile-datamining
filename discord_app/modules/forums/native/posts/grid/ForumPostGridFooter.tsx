@@ -1,12 +1,12 @@
-// === Module 11812: ForumPostGridFooter ===
+// === Module 11818: ForumPostGridFooter ===
 
-// Module 11812 (ForumPostGridFooter)
+// Module 11818 (ForumPostGridFooter)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 709 */;
-import MaxForumPostReactions from "MaxForumPostReactions" /* 11268 */;
-import useTypingUserIds from "useTypingUserIds" /* 11761 */;
-import num2Default from "num2" /* 11813 */;
-import ForumPostTypingUsersDefault from "ForumPostTypingUsers" /* 11814 */;
+import MaxForumPostReactions from "MaxForumPostReactions" /* 11272 */;
+import useTypingUserIds from "useTypingUserIds" /* 11767 */;
+import num2Default from "num2" /* 11819 */;
+import ForumPostTypingUsersDefault from "ForumPostTypingUsers" /* 11820 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { AnalyticsObjects } from "ME" /* 673 */;
 import jsxProd from "jsxProd" /* 21 */;

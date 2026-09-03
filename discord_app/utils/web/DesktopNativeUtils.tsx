@@ -1,13 +1,13 @@
-// === Module 5584: sanitizeFilename ===
+// === Module 5585: sanitizeFilename ===
 
-// Module 5584 (sanitizeFilename)
+// Module 5585 (sanitizeFilename)
 import log from "log" /* 4 */;
 import Storage3 from "Storage" /* 592 */;
 import GuildThemeSourcePreference from "GuildThemeSourcePreference" /* 4409 */;
 import GameTheme from "GameTheme" /* 4516 */;
-import DomainMigrationEventType from "DomainMigrationEventType" /* 5585 */;
-import IPCEvents from "IPCEvents" /* 5586 */;
-import getExtensionFromContentType from "getExtensionFromContentType" /* 5587 */;
+import DomainMigrationEventType from "DomainMigrationEventType" /* 5586 */;
+import IPCEvents from "IPCEvents" /* 5587 */;
+import getExtensionFromContentType from "getExtensionFromContentType" /* 5588 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import { NativeFeatures } from "ME" /* 673 */;
@@ -620,7 +620,7 @@ obj.setBadge = function setBadge(arg0) {
     let tmpResult = tmp(1234);
     if ("win32" === tmpResult.getPlatformName()) {
       const self = this;
-      this.sendIPC(tmp(5586).IPCEvents.APP_BADGE_SET, arg0);
+      this.sendIPC(tmp(5587).IPCEvents.APP_BADGE_SET, arg0);
     } else {
       tmpResult = tmp(1234);
       if ("linux" === tmpResult.getPlatformName()) {
@@ -945,7 +945,7 @@ obj.copyImageBlob = function copyImageBlob(arg0, arg1) {
 obj.canSaveImage = function canSaveImage(closure_1_0, closure_1_1) {
   if (null != closure_1_0) {
     if (require(1234) /* set */.isPlatformEmbedded) {
-      const decideFileExtensionResult = tmp(5587).decideFileExtension(closure_1_0, closure_1_1);
+      const decideFileExtensionResult = tmp(5588).decideFileExtension(closure_1_0, closure_1_1);
       let hasItem = null == decideFileExtensionResult;
       if (!hasItem) {
         hasItem = set2.has(decideFileExtensionResult);
@@ -1725,7 +1725,7 @@ obj.setTrafficLightPosition = function setTrafficLightPosition(arg0) {
     if ("darwin" === tmpResult.getPlatformName()) {
       try {
         const self = this;
-        this.sendIPC(tmp(5586).IPCEvents.WINDOW_SET_TRAFFIC_LIGHT_POSITION, arg0);
+        this.sendIPC(tmp(5587).IPCEvents.WINDOW_SET_TRAFFIC_LIGHT_POSITION, arg0);
       } catch (err) {
       }
     }

@@ -6,7 +6,7 @@ import now from "now" /* 1335 */;
 import defineProperty from "defineProperty" /* 1336 */;
 import create2 from "create" /* 1930 */;
 import closure_2 from "_slicedToArray" /* 32 */;
-import { MessageType, MessageType as MessageType2, MessageType as MessageType3, MessageType as MessageType4, MessageType as MessageType5, MessageType as MessageType6, MessageType as MessageType7, MessageType as MessageType8, MessageType as MessageType9, MessageType as MessageType10, MessageType as MessageType11, MessageType as MessageType12, MessageType as MessageType13, MessageType as MessageType14, MessageType as MessageType15, MessageType as MessageType16, MessageType as MessageType17, MessageType as MessageType18, MessageType as MessageType19, MessageType as MessageType20, MessageType as MessageType21, MessageType as MessageType22, MessageType as MessageType23, MessageType as MessageType24, MessageType as MessageType25, MessageType as MessageType26, MessageType as MessageType27, MessageType as MessageType28, MessageType as MessageType29, MessageType as MessageType30, MessageType as MessageType31, MessageType as MessageType32, MessageType as MessageType33 } from "module_1306" /* 1306 */;
+import { MessageType, MessageType as MessageType2, MessageType as MessageType3, MessageType as MessageType4, MessageType as MessageType5, MessageType as MessageType6, MessageType as MessageType7, MessageType as MessageType8, MessageType as MessageType9, MessageType as MessageType10, MessageType as MessageType11, MessageType as MessageType12, MessageType as MessageType13, MessageType as MessageType14, MessageType as MessageType15, MessageType as MessageType16, MessageType as MessageType17, MessageType as MessageType18, MessageType as MessageType19, MessageType as MessageType20, MessageType as MessageType21, MessageType as MessageType22, MessageType as MessageType23, MessageType as MessageType24, MessageType as MessageType25, MessageType as MessageType26, MessageType as MessageType27, MessageType as MessageType28, MessageType as MessageType29, MessageType as MessageType30, MessageType as MessageType31, MessageType as MessageType32, MessageType as MessageType33, MessageType as MessageType34 } from "module_1306" /* 1306 */;
 
 require = arg1;
 let obj = { DAY_OF_WEEK_UNSPECIFIED: 0, [0]: "DAY_OF_WEEK_UNSPECIFIED", MONDAY: 1, [1]: "MONDAY", TUESDAY: 2, [2]: "TUESDAY", WEDNESDAY: 3, [3]: "WEDNESDAY", THURSDAY: 4, [4]: "THURSDAY", FRIDAY: 5, [5]: "FRIDAY", SATURDAY: 6, [6]: "SATURDAY", SUNDAY: 7, [7]: "SUNDAY" };
@@ -138,12 +138,12 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(hours, tag, writ
   return tag;
 };
 let items = [{ no: 1, name: "hours", kind: "scalar", T: 5 }, { no: 2, name: "minutes", kind: "scalar", T: 5 }, { no: 3, name: "seconds", kind: "scalar", T: 5 }, { no: 4, name: "nanos", kind: "scalar", T: 5 }];
-let tmp9 = new "SUBSCRIPTION_GROUP"("discord_protos.users.v1.TimeOfDay", items, tmp7, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", tmp3, tmp2, tmp, arg1, dependencyMap, obj, obj, obj, obj1, obj2, obj3, obj4, obj5, obj6);
+let tmp8 = new "SUBSCRIPTION_GROUP"("discord_protos.users.v1.TimeOfDay", items, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", tmp3, tmp2, tmp, arg1, dependencyMap, obj, obj, obj, obj1, obj2, obj3, obj4, obj5, obj6, obj7);
 // ThrowIfThisInitialized (0x7c)
-let closure_18 = tmp9;
+let closure_18 = tmp8;
 class User$Type extends MessageType2 {
   constructor() {
-    items = [, , , , , , , , , , , ];
+    items = [, , , , , , , , , , , , ];
     items[0] = { no: 1, name: "id", kind: "scalar", T: 4 };
     items[1] = { no: 2, name: "username", kind: "scalar", T: 9 };
     items[2] = { no: 3, name: "discriminator", kind: "scalar", T: 9 };
@@ -189,20 +189,28 @@ class User$Type extends MessageType2 {
             return closure_24;
           }
     };
-    obj = { no: 12, name: "safety_state", kind: "message", T: null };
+    items[10] = {
+      no: 12,
+      name: "safety_state",
+      kind: "message",
+      T() {
+            return callback(1930).SafetyState;
+          }
+    };
+    obj = { no: 13, name: "display_name_styles", kind: "message", T: null };
     class T {
       constructor() {
-        return require("create").SafetyState;
+        return closure_21;
       }
     }
     obj[3] = T;
-    items[10] = obj;
-    items[11] = {
-      no: 13,
-      name: "display_name_styles",
+    items[11] = obj;
+    items[12] = {
+      no: 14,
+      name: "vad_colors",
       kind: "message",
       T() {
-            return closure_21;
+            return closure_47;
           }
     };
     tmp = new tmp("discord_protos.users.v1.User", items, T);
@@ -230,7 +238,7 @@ prototype2["internalBinaryRead"] = function internalBinaryRead(pos) {
   }
   const sum = pos.pos + arg1;
   if (pos.pos < sum) {
-    obj.displayNameStyles = mediumUserType2.internalBinaryRead(pos, pos.uint32(), arg2, obj.displayNameStyles);
+    obj.vadColors = closure_47.internalBinaryRead(pos, pos.uint32(), arg2, obj.vadColors);
   }
   return obj;
 };
@@ -292,6 +300,11 @@ prototype2["internalBinaryWrite"] = function internalBinaryWrite(id, tag, writeU
     const tagResult11 = tag.tag(13, _mod1306.WireType.LengthDelimited);
     const joined6 = mediumUserType2.internalBinaryWrite(id.displayNameStyles, tag.tag(13, _mod1306.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult6 = mediumUserType2.internalBinaryWrite(id.displayNameStyles, tag.tag(13, _mod1306.WireType.LengthDelimited).fork(), writeUnknownFields);
+  }
+  if (id.vadColors) {
+    const tagResult12 = tag.tag(14, _mod1306.WireType.LengthDelimited);
+    const joined7 = closure_47.internalBinaryWrite(id.vadColors, tag.tag(14, _mod1306.WireType.LengthDelimited).fork(), writeUnknownFields).join();
+    const internalBinaryWriteResult7 = closure_47.internalBinaryWrite(id.vadColors, tag.tag(14, _mod1306.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {
@@ -364,9 +377,17 @@ let items1 = [
     T() {
       return closure_21;
     }
+  },
+  {
+    no: 14,
+    name: "vad_colors",
+    kind: "message",
+    T() {
+      return closure_47;
+    }
   }
 ];
-items = new items("discord_protos.users.v1.User", items1, tmp7, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", tmp3, undefined, tmp, arg1, dependencyMap, obj, obj, obj, obj1, obj2, obj3, obj4, obj5);
+items = new items("discord_protos.users.v1.User", items1, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", tmp3, undefined, tmp, arg1, dependencyMap, obj, obj, obj, obj1, obj2, obj3, obj4, obj5, obj6);
 // ThrowIfThisInitialized (0x7c)
 class MediumUser$Type extends MessageType3 {
   constructor() {
@@ -581,7 +602,7 @@ const items2 = [
     }
   }
 ];
-items1 = new items("discord_protos.users.v1.MediumUser", items2, tmp7, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", tmp3, undefined, tmp, arg1, dependencyMap, obj, obj, obj, obj1, obj2, obj3, obj4, obj5);
+items1 = new items("discord_protos.users.v1.MediumUser", items2, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", tmp3, undefined, tmp, arg1, dependencyMap, obj, obj, obj, obj1, obj2, obj3, obj4, obj5, obj6);
 // ThrowIfThisInitialized (0x7c)
 class UserAvatarDecoration$Type extends MessageType4 {
   constructor() {
@@ -732,7 +753,7 @@ const items3 = [
     }
   }
 ];
-const mediumUserType = new MediumUser$Type("discord_protos.users.v1.UserAvatarDecoration", items3, tmp7, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", tmp3, undefined, tmp, arg1, dependencyMap, obj, obj, obj, obj1, obj2, obj3, obj4, obj5, obj6);
+const mediumUserType = new MediumUser$Type("discord_protos.users.v1.UserAvatarDecoration", items3, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", tmp3, undefined, tmp, arg1, dependencyMap, obj, obj, obj, obj1, obj2, obj3, obj4, obj5, obj6, obj7);
 // ThrowIfThisInitialized (0x7c)
 class UserNameplate$Type extends MessageType5 {
   constructor() {
@@ -899,7 +920,7 @@ const items4 = [
   },
   { no: 5, name: "label", kind: "scalar", T: 9 }
 ];
-const mediumUserType1 = new MediumUser$Type("discord_protos.users.v1.UserNameplate", items4, tmp7, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", tmp3, undefined, tmp, arg1, dependencyMap, obj, obj, obj, obj1, obj2, obj3, obj4, obj5, obj6);
+const mediumUserType1 = new MediumUser$Type("discord_protos.users.v1.UserNameplate", items4, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", tmp3, undefined, tmp, arg1, dependencyMap, obj, obj, obj, obj1, obj2, obj3, obj4, obj5, obj6, obj7);
 // ThrowIfThisInitialized (0x7c)
 class DisplayNameStyles$Type extends MessageType6 {
   constructor() {
@@ -1095,7 +1116,7 @@ const items5 = [
     }
   }
 ];
-const mediumUserType2 = new MediumUser$Type("discord_protos.users.v1.DisplayNameStyles", items5, tmp7, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", tmp3, undefined, tmp, arg1, dependencyMap, obj, obj, obj, obj1, obj2, obj3, obj4, obj5, obj6);
+const mediumUserType2 = new MediumUser$Type("discord_protos.users.v1.DisplayNameStyles", items5, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", tmp3, undefined, tmp, arg1, dependencyMap, obj, obj, obj, obj1, obj2, obj3, obj4, obj5, obj6, obj7);
 // ThrowIfThisInitialized (0x7c)
 class UserTypingIndicatorStyle$Type extends MessageType7 {
   constructor() {
@@ -1265,7 +1286,7 @@ const items6 = [
     }
   }
 ];
-const mediumUserType3 = new MediumUser$Type("discord_protos.users.v1.UserTypingIndicatorStyle", items6, tmp7, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", tmp3, undefined, tmp, arg1, dependencyMap, obj, obj, obj, obj1, obj2, obj3, obj4, obj5, obj6);
+const mediumUserType3 = new MediumUser$Type("discord_protos.users.v1.UserTypingIndicatorStyle", items6, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", tmp3, undefined, tmp, arg1, dependencyMap, obj, obj, obj, obj1, obj2, obj3, obj4, obj5, obj6, obj7);
 // ThrowIfThisInitialized (0x7c)
 class TypingIndicatorEmoji$Type extends MessageType8 {
   constructor() {
@@ -1280,7 +1301,7 @@ class TypingIndicatorEmoji$Type extends MessageType8 {
 }
 const prototype8 = TypingIndicatorEmoji$Type.prototype;
 prototype8["create"] = function create(arr) {
-  obj = { emoji: { oneofKind: "r" }, animated: false };
+  obj = { emoji: { oneofKind: "Array" }, animated: false };
   const _Object = Object;
   obj = { enumerable: false, value: this };
   _Object.defineProperty(obj, _mod1306.MESSAGE_TYPE, obj);
@@ -1373,7 +1394,7 @@ prototype8["internalBinaryWrite"] = function internalBinaryWrite(emoji, tag, wri
   return tag;
 };
 const items7 = [{ no: 1, name: "custom_emoji_id", kind: "scalar", oneof: "emoji", T: 6 }, { no: 2, name: "unicode_emoji", kind: "scalar", oneof: "emoji", T: 9 }, { no: 3, name: "animated", kind: "scalar", T: 8 }];
-const mediumUserType4 = new MediumUser$Type("discord_protos.users.v1.TypingIndicatorEmoji", items7, tmp7, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", tmp3, undefined, tmp, arg1, dependencyMap, obj, obj, obj, obj1, obj2, obj3, obj4, obj5, obj6);
+const mediumUserType4 = new MediumUser$Type("discord_protos.users.v1.TypingIndicatorEmoji", items7, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", tmp3, undefined, tmp, arg1, dependencyMap, obj, obj, obj, obj1, obj2, obj3, obj4, obj5, obj6, obj7);
 // ThrowIfThisInitialized (0x7c)
 class UserCollectibles$Type extends MessageType9 {
   constructor() {
@@ -1484,7 +1505,7 @@ const items8 = [
     }
   }
 ];
-const mediumUserType5 = new MediumUser$Type("discord_protos.users.v1.UserCollectibles", items8, tmp7, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", tmp3, undefined, tmp, arg1, dependencyMap, obj, obj, obj, obj1, obj2, obj3, obj4, obj5, obj6);
+const mediumUserType5 = new MediumUser$Type("discord_protos.users.v1.UserCollectibles", items8, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", tmp3, undefined, tmp, arg1, dependencyMap, obj, obj, obj, obj1, obj2, obj3, obj4, obj5, obj6, obj7);
 // ThrowIfThisInitialized (0x7c)
 class UserPrimaryGuild$Type extends MessageType10 {
   constructor() {
@@ -1688,7 +1709,7 @@ const items9 = [
     }
   }
 ];
-const mediumUserType6 = new MediumUser$Type("discord_protos.users.v1.UserPrimaryGuild", items9, tmp7, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", tmp3, undefined, tmp, arg1, dependencyMap, obj, obj, obj, obj1, obj2, obj3, obj4, obj5, obj6);
+const mediumUserType6 = new MediumUser$Type("discord_protos.users.v1.UserPrimaryGuild", items9, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", tmp3, undefined, tmp, arg1, dependencyMap, obj, obj, obj, obj1, obj2, obj3, obj4, obj5, obj6, obj7);
 // ThrowIfThisInitialized (0x7c)
 class ScheduleRule$Type extends MessageType11 {
   constructor() {
@@ -1899,7 +1920,7 @@ const items10 = [
   },
   { no: 6, name: "enabled", kind: "scalar", T: 8 }
 ];
-const mediumUserType7 = new MediumUser$Type("discord_protos.users.v1.ScheduleRule", items10, tmp7, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", tmp3, undefined, tmp, arg1, dependencyMap, obj, obj, obj, obj1, obj2, obj3, obj4, obj5, obj6);
+const mediumUserType7 = new MediumUser$Type("discord_protos.users.v1.ScheduleRule", items10, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", tmp3, undefined, tmp, arg1, dependencyMap, obj, obj, obj, obj1, obj2, obj3, obj4, obj5, obj6, obj7);
 // ThrowIfThisInitialized (0x7c)
 class RestrictedSchedule$Type extends MessageType12 {
   constructor() {
@@ -2019,7 +2040,7 @@ const items11 = [
     }
   }
 ];
-const mediumUserType8 = new MediumUser$Type("discord_protos.users.v1.RestrictedSchedule", items11, tmp7, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", tmp3, undefined, tmp, arg1, dependencyMap, obj, obj, obj, obj1, obj2, obj3, obj4, obj5, obj6);
+const mediumUserType8 = new MediumUser$Type("discord_protos.users.v1.RestrictedSchedule", items11, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", tmp3, undefined, tmp, arg1, dependencyMap, obj, obj, obj, obj1, obj2, obj3, obj4, obj5, obj6, obj7);
 // ThrowIfThisInitialized (0x7c)
 class CrossPlatformRestriction$Type extends MessageType13 {
   constructor() {
@@ -2142,7 +2163,7 @@ const items12 = [
   },
   { no: 2, name: "application_id", kind: "scalar", T: 6 }
 ];
-const mediumUserType9 = new MediumUser$Type("discord_protos.users.v1.CrossPlatformRestriction", items12, tmp7, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", tmp3, undefined, tmp, arg1, dependencyMap, obj, obj, obj, obj1, obj2, obj3, obj4, obj5, obj6);
+const mediumUserType9 = new MediumUser$Type("discord_protos.users.v1.CrossPlatformRestriction", items12, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", tmp3, undefined, tmp, arg1, dependencyMap, obj, obj, obj, obj1, obj2, obj3, obj4, obj5, obj6, obj7);
 // ThrowIfThisInitialized (0x7c)
 class BadgeCommon$Type extends MessageType14 {
   constructor() {
@@ -2256,7 +2277,7 @@ const items13 = [
     }
   }
 ];
-const mediumUserType10 = new MediumUser$Type("discord_protos.users.v1.BadgeCommon", items13, tmp7, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", tmp3, undefined, tmp, arg1, dependencyMap, obj, obj, obj, obj1, obj2, obj3, obj4, obj5, obj6);
+const mediumUserType10 = new MediumUser$Type("discord_protos.users.v1.BadgeCommon", items13, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", tmp3, undefined, tmp, arg1, dependencyMap, obj, obj, obj, obj1, obj2, obj3, obj4, obj5, obj6, obj7);
 // ThrowIfThisInitialized (0x7c)
 class AprilFools2026Badge$Type extends MessageType15 {
   constructor() {
@@ -2383,7 +2404,7 @@ const items14 = [
   { no: 2, name: "level", kind: "scalar", T: 5 },
   { no: 3, name: "combat_class", kind: "scalar", T: 9 }
 ];
-const mediumUserType11 = new MediumUser$Type("discord_protos.users.v1.AprilFools2026Badge", items14, tmp7, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", tmp3, undefined, tmp, arg1, dependencyMap, obj, obj, obj, obj1, obj2, obj3, obj4, obj5, obj6);
+const mediumUserType11 = new MediumUser$Type("discord_protos.users.v1.AprilFools2026Badge", items14, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", tmp3, undefined, tmp, arg1, dependencyMap, obj, obj, obj, obj1, obj2, obj3, obj4, obj5, obj6, obj7);
 // ThrowIfThisInitialized (0x7c)
 class Badge$Type extends MessageType16 {
   constructor() {
@@ -2405,7 +2426,7 @@ class Badge$Type extends MessageType16 {
 }
 const prototype16 = Badge$Type.prototype;
 prototype16["create"] = function create(arr) {
-  obj = { badge: { oneofKind: "r" } };
+  obj = { badge: { oneofKind: "Array" } };
   const _Object = Object;
   obj = { enumerable: false, value: this };
   _Object.defineProperty(obj, _mod1306.MESSAGE_TYPE, obj);
@@ -2498,7 +2519,7 @@ const items15 = [
     }
   }
 ];
-const mediumUserType12 = new MediumUser$Type("discord_protos.users.v1.Badge", items15, tmp7, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", tmp3, undefined, tmp, arg1, dependencyMap, obj, obj, obj, obj1, obj2, obj3, obj4, obj5, obj6);
+const mediumUserType12 = new MediumUser$Type("discord_protos.users.v1.Badge", items15, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", tmp3, undefined, tmp, arg1, dependencyMap, obj, obj, obj, obj1, obj2, obj3, obj4, obj5, obj6, obj7);
 // ThrowIfThisInitialized (0x7c)
 class UserBadges$Type extends MessageType17 {
   constructor() {
@@ -2618,7 +2639,7 @@ const items16 = [
     }
   }
 ];
-const mediumUserType13 = new MediumUser$Type("discord_protos.users.v1.UserBadges", items16, tmp7, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", tmp3, undefined, tmp, arg1, dependencyMap, obj, obj, obj, obj1, obj2, obj3, obj4, obj5, obj6);
+const mediumUserType13 = new MediumUser$Type("discord_protos.users.v1.UserBadges", items16, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", tmp3, undefined, tmp, arg1, dependencyMap, obj, obj, obj, obj1, obj2, obj3, obj4, obj5, obj6, obj7);
 // ThrowIfThisInitialized (0x7c)
 class AnonymizationInfo$Type extends MessageType18 {
   constructor() {
@@ -2756,7 +2777,7 @@ const items17 = [
     }
   }
 ];
-const mediumUserType14 = new MediumUser$Type("discord_protos.users.v1.AnonymizationInfo", items17, tmp7, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", tmp3, undefined, tmp, arg1, dependencyMap, obj, obj, obj, obj1, obj2, obj3, obj4, obj5, obj6);
+const mediumUserType14 = new MediumUser$Type("discord_protos.users.v1.AnonymizationInfo", items17, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", tmp3, undefined, tmp, arg1, dependencyMap, obj, obj, obj, obj1, obj2, obj3, obj4, obj5, obj6, obj7);
 // ThrowIfThisInitialized (0x7c)
 class UserData$Type extends MessageType19 {
   constructor() {
@@ -2766,7 +2787,7 @@ class UserData$Type extends MessageType19 {
             return closure_35;
           }
     };
-    items = [, , , , , , , , , , , , , , , , , , , ];
+    items = [, , , , , , , , , , , , , , , , , , , , ];
     items[0] = { no: 1, name: "linked_users", kind: "map", K: 6, V: obj };
     obj = {
       kind: "message",
@@ -2907,6 +2928,14 @@ class UserData$Type extends MessageType19 {
           }
     };
     items[19] = { no: 20, name: "disable_staff_discount", kind: "scalar", T: 8 };
+    items[20] = {
+      no: 21,
+      name: "vad_colors",
+      kind: "message",
+      T() {
+            return closure_47;
+          }
+    };
     tmp = new tmp("discord_protos.users.v1.UserData", items, T);
     // ThrowIfThisInitialized (0x7c)
     return tmp;
@@ -2930,9 +2959,9 @@ prototype19["internalBinaryRead"] = function internalBinaryRead(pos) {
   if (arg3 == null) {
     obj = self.create();
   }
-  const sum = pos.pos + arg1;
-  if (pos.pos < sum) {
-    obj.disableStaffDiscount = pos.bool();
+  if (pos.pos < pos.pos + arg1) {
+    [r10019, r10020] = callback(pos.tag(), 2);
+    const tmp3 = callback(pos.tag(), 2);
   }
   return obj;
 };
@@ -3165,8 +3194,8 @@ prototype19["internalBinaryWrite"] = function internalBinaryWrite(linkedUsers, t
   }
   if (linkedUsers.countryData) {
     const tagResult21 = tag.tag(16, _mod1306.WireType.LengthDelimited);
-    const joined18 = closure_46.internalBinaryWrite(linkedUsers.countryData, tag.tag(16, _mod1306.WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult15 = closure_46.internalBinaryWrite(linkedUsers.countryData, tag.tag(16, _mod1306.WireType.LengthDelimited).fork(), writeUnknownFields);
+    const joined18 = perksType.internalBinaryWrite(linkedUsers.countryData, tag.tag(16, _mod1306.WireType.LengthDelimited).fork(), writeUnknownFields).join();
+    const internalBinaryWriteResult15 = perksType.internalBinaryWrite(linkedUsers.countryData, tag.tag(16, _mod1306.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (false !== linkedUsers.isPendingRequiredAction) {
     tag.tag(17, _mod1306.WireType.Varint).bool(linkedUsers.isPendingRequiredAction);
@@ -3185,6 +3214,11 @@ prototype19["internalBinaryWrite"] = function internalBinaryWrite(linkedUsers, t
   if (false !== linkedUsers.disableStaffDiscount) {
     tag.tag(20, _mod1306.WireType.Varint).bool(linkedUsers.disableStaffDiscount);
     const tagResult25 = tag.tag(20, _mod1306.WireType.Varint);
+  }
+  if (linkedUsers.vadColors) {
+    const tagResult26 = tag.tag(21, _mod1306.WireType.LengthDelimited);
+    const joined21 = closure_47.internalBinaryWrite(linkedUsers.vadColors, tag.tag(21, _mod1306.WireType.LengthDelimited).fork(), writeUnknownFields).join();
+    const internalBinaryWriteResult18 = closure_47.internalBinaryWrite(linkedUsers.vadColors, tag.tag(21, _mod1306.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {
@@ -3487,9 +3521,9 @@ const items18 = [
     }
   }
 ];
-let tmp28 = new "binaryReadMap3"("discord_protos.users.v1.AgeAssuranceData", items18, tmp7, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", "binaryReadMap2", undefined, tmp, arg1, dependencyMap, obj, obj, obj, obj1, obj2, obj3, obj4, obj5, obj6, obj7);
+let tmp27 = new "binaryReadMap3"("discord_protos.users.v1.AgeAssuranceData", items18, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", tmp3, undefined, tmp, arg1, dependencyMap, obj, obj, obj, obj1, obj2, obj3, obj4, obj5, obj6, obj7, obj8, obj9);
 // ThrowIfThisInitialized (0x7c)
-let closure_34 = tmp28;
+let closure_34 = tmp27;
 class LinkedUser$Type extends MessageType21 {
   constructor() {
     items = [, , , , , ];
@@ -3697,9 +3731,9 @@ const items19 = [
     }
   }
 ];
-let tmp29 = new "binaryReadMap3"("discord_protos.users.v1.LinkedUser", items19, tmp7, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", "binaryReadMap2", undefined, tmp, arg1, dependencyMap, obj, obj, obj, obj1, obj2, obj3, obj4, obj5, obj6, obj7);
+let tmp28 = new "binaryReadMap3"("discord_protos.users.v1.LinkedUser", items19, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", tmp3, undefined, tmp, arg1, dependencyMap, obj, obj, obj, obj1, obj2, obj3, obj4, obj5, obj6, obj7, obj8, obj9);
 // ThrowIfThisInitialized (0x7c)
-let closure_35 = tmp29;
+let closure_35 = tmp28;
 class RateLimitData$Type extends MessageType22 {
   constructor() {
     obj = {
@@ -3812,9 +3846,9 @@ let items20 = [
     }
   }
 ];
-let tmp30 = new "binaryReadMap3"("discord_protos.users.v1.RateLimitData", items20, tmp7, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", "binaryReadMap2", undefined, tmp, arg1, dependencyMap, obj, obj, obj, obj1, obj2, obj3, obj4, obj5, obj6, obj7);
+let tmp29 = new "binaryReadMap3"("discord_protos.users.v1.RateLimitData", items20, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", tmp3, undefined, tmp, arg1, dependencyMap, obj, obj, obj, obj1, obj2, obj3, obj4, obj5, obj6, obj7, obj8, obj9);
 // ThrowIfThisInitialized (0x7c)
-let closure_36 = tmp30;
+let closure_36 = tmp29;
 class FeatureLimits$Type extends MessageType23 {
   constructor() {
     obj = {
@@ -3973,7 +4007,7 @@ const items21 = [
     }
   }
 ];
-items20 = new items20("discord_protos.users.v1.FeatureLimits", items21, tmp7, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", "binaryReadMap2", undefined, tmp, arg1, dependencyMap, obj, obj, obj, obj1, obj2, obj3, obj4, obj5, obj6);
+items20 = new items20("discord_protos.users.v1.FeatureLimits", items21, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", tmp3, undefined, tmp, arg1, dependencyMap, obj, obj, obj, obj1, obj2, obj3, obj4, obj5, obj6, obj7, obj8);
 // ThrowIfThisInitialized (0x7c)
 class SafetyFlag$Type extends MessageType24 {
   constructor() {
@@ -4087,7 +4121,7 @@ let items22 = [
     }
   }
 ];
-const items201 = new items20("discord_protos.users.v1.SafetyFlag", items22, tmp7, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", "binaryReadMap2", undefined, tmp, arg1, dependencyMap, obj, obj, obj, obj1, obj2, obj3, obj4, obj5, obj6);
+const items201 = new items20("discord_protos.users.v1.SafetyFlag", items22, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", tmp3, undefined, tmp, arg1, dependencyMap, obj, obj, obj, obj1, obj2, obj3, obj4, obj5, obj6, obj7, obj8);
 // ThrowIfThisInitialized (0x7c)
 class GuildShardingConfig$Type extends MessageType25 {
   constructor() {
@@ -4200,7 +4234,7 @@ prototype25["internalBinaryWrite"] = function internalBinaryWrite(shards, tag, w
   return tag;
 };
 const items23 = [{ no: 1, name: "shards", kind: "scalar", repeat: 1, T: 5 }];
-items22 = new items22("discord_protos.users.v1.GuildShardingConfig", items23, tmp7, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", "binaryReadMap2", undefined, tmp, arg1, dependencyMap, obj, obj, obj, obj1, obj2, obj3, obj4, obj5);
+items22 = new items22("discord_protos.users.v1.GuildShardingConfig", items23, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", tmp3, undefined, tmp, arg1, dependencyMap, obj, obj, obj, obj1, obj2, obj3, obj4, obj5, obj6, obj7);
 // ThrowIfThisInitialized (0x7c)
 class QuestMetadata$Type extends MessageType26 {
   constructor() {
@@ -4289,7 +4323,7 @@ prototype26["internalBinaryWrite"] = function internalBinaryWrite(questsComplete
   return tag;
 };
 const items24 = [{ no: 1, name: "quests_completed", kind: "scalar", T: 13 }];
-const guildShardingConfigType = new GuildShardingConfig$Type("discord_protos.users.v1.QuestMetadata", items24, tmp7, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", "binaryReadMap2", undefined, tmp, arg1, dependencyMap, obj, obj, obj, obj1, obj2, obj3, obj4, obj5, obj6);
+const guildShardingConfigType = new GuildShardingConfig$Type("discord_protos.users.v1.QuestMetadata", items24, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", tmp3, undefined, tmp, arg1, dependencyMap, obj, obj, obj, obj1, obj2, obj3, obj4, obj5, obj6, obj7, obj8);
 // ThrowIfThisInitialized (0x7c)
 class PremiumState$Type extends MessageType27 {
   constructor() {
@@ -4447,7 +4481,7 @@ const items25 = [
     }
   }
 ];
-const guildShardingConfigType1 = new GuildShardingConfig$Type("discord_protos.users.v1.PremiumState", items25, tmp7, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", "binaryReadMap2", undefined, tmp, arg1, dependencyMap, obj, obj, obj, obj1, obj2, obj3, obj4, obj5, obj6);
+const guildShardingConfigType1 = new GuildShardingConfig$Type("discord_protos.users.v1.PremiumState", items25, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", tmp3, undefined, tmp, arg1, dependencyMap, obj, obj, obj, obj1, obj2, obj3, obj4, obj5, obj6, obj7, obj8);
 // ThrowIfThisInitialized (0x7c)
 class StoreCountry$Type extends MessageType28 {
   constructor() {
@@ -4568,7 +4602,7 @@ const items26 = [
     }
   }
 ];
-const guildShardingConfigType2 = new GuildShardingConfig$Type("discord_protos.users.v1.StoreCountry", items26, tmp7, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", "binaryReadMap2", undefined, tmp, arg1, dependencyMap, obj, obj, obj, obj1, obj2, obj3, obj4, obj5, obj6);
+const guildShardingConfigType2 = new GuildShardingConfig$Type("discord_protos.users.v1.StoreCountry", items26, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", tmp3, undefined, tmp, arg1, dependencyMap, obj, obj, obj, obj1, obj2, obj3, obj4, obj5, obj6, obj7, obj8);
 // ThrowIfThisInitialized (0x7c)
 class PerkConfig$Type extends MessageType29 {
   constructor() {
@@ -4608,7 +4642,7 @@ class PerkConfig$Type extends MessageType29 {
 }
 const prototype29 = PerkConfig$Type.prototype;
 prototype29["create"] = function create(arr) {
-  obj = { source: [], kind: { oneofKind: "r" } };
+  obj = { source: [], kind: { oneofKind: "Array" } };
   const _Object = Object;
   obj = { enumerable: false, value: this };
   _Object.defineProperty(obj, _mod1306.MESSAGE_TYPE, obj);
@@ -4763,7 +4797,7 @@ const items27 = [
     }
   }
 ];
-const guildShardingConfigType3 = new GuildShardingConfig$Type("discord_protos.users.v1.PerkConfig", items27, tmp7, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", "binaryReadMap2", undefined, tmp, arg1, dependencyMap, obj, obj, obj, obj1, obj2, obj3, obj4, obj5, obj6);
+const guildShardingConfigType3 = new GuildShardingConfig$Type("discord_protos.users.v1.PerkConfig", items27, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", tmp3, undefined, tmp, arg1, dependencyMap, obj, obj, obj, obj1, obj2, obj3, obj4, obj5, obj6, obj7, obj8);
 // ThrowIfThisInitialized (0x7c)
 class PerkConfigIncreasedFileUploadSize$Type extends MessageType30 {
   constructor() {
@@ -4855,7 +4889,7 @@ prototype30["internalBinaryWrite"] = function internalBinaryWrite(maxSize, tag, 
 const items28 = [];
 const obj36 = { no: 1, name: "max_size", kind: "scalar", T: 4 };
 items28[0] = obj36;
-const guildShardingConfigType4 = new GuildShardingConfig$Type("discord_protos.users.v1.PerkConfigIncreasedFileUploadSize", items28, tmp7, tmp6, tmp5, "create", PerkConfigIncreasedFileUploadSize$Type, "internalBinaryRead", "internalBinaryWrite", "binaryReadMap2", undefined, tmp, arg1, dependencyMap, obj, obj, obj, obj1, obj2, obj3, obj4, obj5, obj6, obj7, obj8, obj9, obj10, obj11, obj12, obj13, obj14, obj15, obj16, obj17, obj18, tmp9, new.target, items, new.target, items1, mediumUserType, mediumUserType1, mediumUserType2, mediumUserType3, mediumUserType4, mediumUserType5, mediumUserType6, mediumUserType7, mediumUserType8, mediumUserType9, mediumUserType10, mediumUserType11, mediumUserType12, mediumUserType13, mediumUserType14, userDataType, tmp28, tmp29, tmp30, items20, items201, new.target, items22, guildShardingConfigType, guildShardingConfigType1, guildShardingConfigType2, guildShardingConfigType3, GuildShardingConfig$Type, items28, new.target, exports, obj36, undefined, 3, 2, 1, 0, 15, 14, 13, 12, 11, 10);
+const guildShardingConfigType4 = new GuildShardingConfig$Type("discord_protos.users.v1.PerkConfigIncreasedFileUploadSize", items28, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", PerkConfigIncreasedFileUploadSize$Type, undefined, tmp, arg1, dependencyMap, obj, obj, obj, obj1, obj2, obj3, obj4, obj5, obj6, obj7, obj8, obj9, obj10, obj11, obj12, obj13, obj14, obj15, obj16, obj17, obj18, tmp8, new.target, items, new.target, items1, mediumUserType, mediumUserType1, mediumUserType2, mediumUserType3, mediumUserType4, mediumUserType5, mediumUserType6, mediumUserType7, mediumUserType8, mediumUserType9, mediumUserType10, mediumUserType11, mediumUserType12, mediumUserType13, mediumUserType14, userDataType, tmp27, tmp28, tmp29, items20, items201, new.target, items22, guildShardingConfigType, guildShardingConfigType1, guildShardingConfigType2, guildShardingConfigType3, GuildShardingConfig$Type, items28, "binaryReadMap2", new.target, exports, obj36, undefined, 3, 2, 1, 0, 15, 14, 13, 12);
 // ThrowIfThisInitialized (0x7c)
 class PerkConfigIncreasedGuildLimit$Type extends MessageType31 {
   constructor() {
@@ -4946,7 +4980,7 @@ prototype31["internalBinaryWrite"] = function internalBinaryWrite(maxGuilds, tag
 const items29 = [];
 const obj37 = { no: 1, name: "max_guilds", kind: "scalar", T: 13 };
 items29[0] = obj37;
-const perkConfigIncreasedFileUploadSizeType = new PerkConfigIncreasedFileUploadSize$Type("discord_protos.users.v1.PerkConfigIncreasedGuildLimit", items29, tmp7, tmp6, PerkConfigIncreasedGuildLimit$Type, "create", PerkConfigIncreasedFileUploadSize$Type, "internalBinaryRead", "internalBinaryWrite", "binaryReadMap2", undefined, tmp, arg1, dependencyMap, obj, obj, obj, obj1, obj2, obj3, obj4, obj5, obj6, obj7, obj8, obj9, obj10, obj11, obj12, obj13, obj14, obj15, obj16, obj17, obj18, tmp9, new.target, items, new.target, items1, mediumUserType, mediumUserType1, mediumUserType2, mediumUserType3, mediumUserType4, mediumUserType5, mediumUserType6, mediumUserType7, mediumUserType8, mediumUserType9, mediumUserType10, mediumUserType11, mediumUserType12, mediumUserType13, mediumUserType14, userDataType, tmp28, tmp29, tmp30, items20, items201, new.target, items22, guildShardingConfigType, guildShardingConfigType1, guildShardingConfigType2, guildShardingConfigType3, guildShardingConfigType4, items29, new.target, exports, obj37, undefined, 3, 2, 1, 0, 15, 14, 13, 12, 11, 10, 9, 8);
+const perkConfigIncreasedFileUploadSizeType = new PerkConfigIncreasedFileUploadSize$Type("discord_protos.users.v1.PerkConfigIncreasedGuildLimit", items29, tmp6, tmp5, "create", PerkConfigIncreasedGuildLimit$Type, "internalBinaryRead", "internalBinaryWrite", PerkConfigIncreasedFileUploadSize$Type, undefined, tmp, arg1, dependencyMap, obj, obj, obj, obj1, obj2, obj3, obj4, obj5, obj6, obj7, obj8, obj9, obj10, obj11, obj12, obj13, obj14, obj15, obj16, obj17, obj18, tmp8, new.target, items, new.target, items1, mediumUserType, mediumUserType1, mediumUserType2, mediumUserType3, mediumUserType4, mediumUserType5, mediumUserType6, mediumUserType7, mediumUserType8, mediumUserType9, mediumUserType10, mediumUserType11, mediumUserType12, mediumUserType13, mediumUserType14, userDataType, tmp27, tmp28, tmp29, items20, items201, new.target, items22, guildShardingConfigType, guildShardingConfigType1, guildShardingConfigType2, guildShardingConfigType3, guildShardingConfigType4, items29, "binaryReadMap2", new.target, exports, obj37, undefined, 3, 2, 1, 0, 15, 14, 13, 12, 11, 10, 9);
 // ThrowIfThisInitialized (0x7c)
 class Perks$Type extends MessageType32 {
   constructor() {
@@ -5178,7 +5212,7 @@ const obj40 = {
   }
 };
 items30[3] = obj40;
-const perkConfigIncreasedFileUploadSizeType1 = new PerkConfigIncreasedFileUploadSize$Type("discord_protos.users.v1.Perks", items30, tmp7, T, Perks$Type, "create", PerkConfigIncreasedFileUploadSize$Type, "internalBinaryRead", "internalBinaryWrite", items30, undefined, tmp, arg1, dependencyMap, obj, obj, obj, obj1, obj2, obj3, obj4, obj5, obj6, obj7, obj8, obj9, obj10, obj11, obj12, obj13, obj14, obj15, obj16, obj17, obj18, tmp9, new.target, items, new.target, items1, mediumUserType, mediumUserType1, mediumUserType2, mediumUserType3, mediumUserType4, mediumUserType5, mediumUserType6, mediumUserType7, mediumUserType8, mediumUserType9, mediumUserType10, mediumUserType11, mediumUserType12, mediumUserType13, mediumUserType14, userDataType, tmp28, tmp29, tmp30, items20, items201, new.target, items22, guildShardingConfigType, guildShardingConfigType1, guildShardingConfigType2, guildShardingConfigType3, guildShardingConfigType4, perkConfigIncreasedFileUploadSizeType, new.target, exports, obj40, undefined, 3, 2, 1, 0, 15, 14, 13, 12, 11, 10, 9, 8);
+const perkConfigIncreasedFileUploadSizeType1 = new PerkConfigIncreasedFileUploadSize$Type("discord_protos.users.v1.Perks", items30, tmp6, T, "create", Perks$Type, "internalBinaryRead", "internalBinaryWrite", PerkConfigIncreasedFileUploadSize$Type, undefined, tmp, arg1, dependencyMap, obj, obj, obj, obj1, obj2, obj3, obj4, obj5, obj6, obj7, obj8, obj9, obj10, obj11, obj12, obj13, obj14, obj15, obj16, obj17, obj18, tmp8, new.target, items, new.target, items1, mediumUserType, mediumUserType1, mediumUserType2, mediumUserType3, mediumUserType4, mediumUserType5, mediumUserType6, mediumUserType7, mediumUserType8, mediumUserType9, mediumUserType10, mediumUserType11, mediumUserType12, mediumUserType13, mediumUserType14, userDataType, tmp27, tmp28, tmp29, items20, items201, new.target, items22, guildShardingConfigType, guildShardingConfigType1, guildShardingConfigType2, guildShardingConfigType3, guildShardingConfigType4, perkConfigIncreasedFileUploadSizeType, items30, new.target, exports, obj40, undefined, 3, 2, 1, 0, 15, 14, 13, 12, 11, 10, 9);
 // ThrowIfThisInitialized (0x7c)
 class UserCountryData$Type extends MessageType33 {
   constructor() {
@@ -5416,9 +5450,124 @@ const items31 = [
 ];
 const obj41 = { no: 5, name: "country_scores", kind: "map", K: 9, V: { kind: "scalar", T: 2 } };
 items31[4] = obj41;
-let tmp41 = new "binaryReadMap5"("discord_protos.users.v1.UserCountryData", items31, tmp7, T, Perks$Type, "create", UserCountryData$Type, "binaryReadMap5", items31, new.target, undefined, tmp, arg1, dependencyMap, obj, obj, obj, obj1, obj2, obj3, obj4, obj5, obj6, obj7, obj8, obj9, obj10, obj11, obj12, obj13, obj14, obj15, obj16, obj17, obj18, tmp9, new.target, items, new.target, items1, mediumUserType, mediumUserType1, mediumUserType2, mediumUserType3, mediumUserType4, mediumUserType5, mediumUserType6, mediumUserType7, mediumUserType8, mediumUserType9, mediumUserType10, mediumUserType11, mediumUserType12, mediumUserType13, mediumUserType14, userDataType, tmp28, tmp29, tmp30, items20, items201, new.target, items22, guildShardingConfigType, guildShardingConfigType1, guildShardingConfigType2, guildShardingConfigType3, guildShardingConfigType4, perkConfigIncreasedFileUploadSizeType, perkConfigIncreasedFileUploadSizeType1, exports, obj41, undefined, 3, 2, 1, 0, 15, 14, 13, 12, 11, 10);
+const perksType = new Perks$Type("discord_protos.users.v1.UserCountryData", items31, tmp6, UserCountryData$Type, "create", Perks$Type, "internalBinaryRead", "internalBinaryWrite", items31, undefined, tmp, arg1, dependencyMap, obj, obj, obj, obj1, obj2, obj3, obj4, obj5, obj6, obj7, obj8, obj9, obj10, obj11, obj12, obj13, obj14, obj15, obj16, obj17, obj18, tmp8, new.target, items, new.target, items1, mediumUserType, mediumUserType1, mediumUserType2, mediumUserType3, mediumUserType4, mediumUserType5, mediumUserType6, mediumUserType7, mediumUserType8, mediumUserType9, mediumUserType10, mediumUserType11, mediumUserType12, mediumUserType13, mediumUserType14, userDataType, tmp27, tmp28, tmp29, items20, items201, new.target, items22, guildShardingConfigType, guildShardingConfigType1, guildShardingConfigType2, guildShardingConfigType3, guildShardingConfigType4, perkConfigIncreasedFileUploadSizeType, perkConfigIncreasedFileUploadSizeType1, new.target, exports, obj41, undefined, 3, 2, 1, 0, 15, 14, 13, 12, 11, 10, 9, 8, 7);
 // ThrowIfThisInitialized (0x7c)
-let closure_46 = tmp41;
+class VadColors$Type extends MessageType34 {
+  constructor() {
+    items = [];
+    items[0] = { no: 1, name: "colors", kind: "scalar", repeat: 1, T: 13 };
+    tmp = new tmp("discord_protos.users.v1.VadColors", items, new.target);
+    // ThrowIfThisInitialized (0x7c)
+    return tmp;
+  }
+}
+const prototype34 = VadColors$Type.prototype;
+prototype34["create"] = function create(arr) {
+  obj = { colors: [] };
+  const _Object = Object;
+  obj = { enumerable: false, value: this };
+  _Object.defineProperty(obj, _mod1306.MESSAGE_TYPE, obj);
+  if (undefined !== arr) {
+    const result = _mod1306.reflectionMergePartial(this, obj, arr);
+    const tmpResult = _mod1306;
+  }
+  return obj;
+};
+prototype34["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnknownField) {
+  const self = this;
+  obj = arg3;
+  if (arg3 == null) {
+    obj = self.create();
+  }
+  const sum = pos.pos + arg1;
+  if (pos.pos < sum) {
+    do {
+      let tmp3 = callback;
+      let tmp4 = callback(pos.tag(), 2);
+      [tmp5, tmp6] = tmp4;
+      if (1 === tmp5) {
+        let tmp22 = require;
+        let tmp23 = dependencyMap;
+        if (tmp6 === _mod1306.WireType.LengthDelimited) {
+          let sum1 = pos.int32() + pos.pos;
+          if (pos.pos < sum1) {
+            do {
+              let colors = obj.colors;
+              let arr = colors.push(pos.uint32());
+              pos = pos.pos;
+            } while (pos < sum1);
+          }
+        } else {
+          let colors1 = obj.colors;
+          arr = colors1.push(pos.uint32());
+        }
+      } else {
+        let onRead = readUnknownField.readUnknownField;
+        if ("throw" === onRead) {
+          let tmp15 = globalThis;
+          let _globalThis = globalThis;
+          let _HermesInternal = HermesInternal;
+          let str = ") for ";
+          let str2 = " (wire type ";
+          let str3 = "Unknown field ";
+          let tmp16 = tmp5;
+          let tmp17 = tmp6;
+          let tmp18 = new.target;
+          let tmp19 = new.target;
+          error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
+          let tmp21 = error;
+          throw error;
+        } else {
+          let skipResult = pos.skip(tmp6);
+          if (false !== onRead) {
+            if (true === onRead) {
+              let tmp8 = require;
+              let tmp9 = dependencyMap;
+              onRead = _mod1306.UnknownFieldHandler.onRead;
+            }
+            let tmp10 = obj;
+            let tmp11 = tmp5;
+            let tmp12 = tmp6;
+            let tmp13 = skipResult;
+            let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
+          }
+        }
+      }
+    } while (pos.pos < sum);
+  }
+  return obj;
+};
+prototype34["internalBinaryWrite"] = function internalBinaryWrite(colors, tag, writeUnknownFields) {
+  let length;
+  if (colors.colors.length) {
+    tag.tag(1, _mod1306.WireType.LengthDelimited).fork();
+    let num2 = 0;
+    if (0 < colors.colors.length) {
+      do {
+        let uint32Result = tag.uint32(colors.colors[num2]);
+        num2 = num2 + 1;
+        length = colors.colors.length;
+      } while (num2 < length);
+    }
+    const joined = tag.join();
+    const tagResult = tag.tag(1, _mod1306.WireType.LengthDelimited);
+  }
+  let onWrite = writeUnknownFields.writeUnknownFields;
+  if (false !== onWrite) {
+    if (1 == onWrite) {
+      onWrite = _mod1306.UnknownFieldHandler.onWrite;
+    }
+    const self = this;
+    onWrite(this.typeName, colors, tag);
+  }
+  return tag;
+};
+const items32 = [];
+const obj42 = { no: 1, name: "colors", kind: "scalar", repeat: 1, T: 13 };
+items32[0] = obj42;
+let tmp41 = new "internalBinaryRead"("discord_protos.users.v1.VadColors", items32, tmp6, UserCountryData$Type, "create", VadColors$Type, "internalBinaryRead", items32, new.target, undefined, tmp, arg1, dependencyMap, obj, obj, obj, obj1, obj2, obj3, obj4, obj5, obj6, obj7, obj8, obj9, obj10, obj11, obj12, obj13, obj14, obj15, obj16, obj17, obj18, tmp8, new.target, items, new.target, items1, mediumUserType, mediumUserType1, mediumUserType2, mediumUserType3, mediumUserType4, mediumUserType5, mediumUserType6, mediumUserType7, mediumUserType8, mediumUserType9, mediumUserType10, mediumUserType11, mediumUserType12, mediumUserType13, mediumUserType14, userDataType, tmp27, tmp28, tmp29, items20, items201, new.target, items22, guildShardingConfigType, guildShardingConfigType1, guildShardingConfigType2, guildShardingConfigType3, guildShardingConfigType4, perkConfigIncreasedFileUploadSizeType, perkConfigIncreasedFileUploadSizeType1, perksType, exports, obj42, undefined, 3, 2, 1, 0, 15, 14, 13, 12, 11, 10, 9);
+// ThrowIfThisInitialized (0x7c)
+let closure_47 = tmp41;
 let result = require("set").fileFinishedImporting("../discord_common/js/packages/protos/discord_protos/users/v1/user.tsx");
 
 export const DayOfWeek = obj;
@@ -5442,7 +5591,7 @@ export const PremiumSubscriptionType = obj15;
 export const PremiumSubscriptionGroupRole = obj16;
 export const Perk = obj17;
 export const PerkSource = obj18;
-export const TimeOfDay = tmp9;
+export const TimeOfDay = tmp8;
 export const User = items;
 export const MediumUser = items1;
 export const UserAvatarDecoration = mediumUserType;
@@ -5461,9 +5610,9 @@ export const Badge = mediumUserType12;
 export const UserBadges = mediumUserType13;
 export const AnonymizationInfo = mediumUserType14;
 export const UserData = userDataType;
-export const AgeAssuranceData = tmp28;
-export const LinkedUser = tmp29;
-export const RateLimitData = tmp30;
+export const AgeAssuranceData = tmp27;
+export const LinkedUser = tmp28;
+export const RateLimitData = tmp29;
 export const FeatureLimits = items20;
 export const SafetyFlag = items201;
 export const GuildShardingConfig = items22;
@@ -5474,4 +5623,5 @@ export const PerkConfig = guildShardingConfigType3;
 export const PerkConfigIncreasedFileUploadSize = guildShardingConfigType4;
 export const PerkConfigIncreasedGuildLimit = perkConfigIncreasedFileUploadSizeType;
 export const Perks = perkConfigIncreasedFileUploadSizeType1;
-export const UserCountryData = tmp41;
+export const UserCountryData = perksType;
+export const VadColors = tmp41;

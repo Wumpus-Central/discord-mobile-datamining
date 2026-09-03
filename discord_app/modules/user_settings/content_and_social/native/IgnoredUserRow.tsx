@@ -1,6 +1,6 @@
-// === Module 14638: IgnoredUserRow ===
+// === Module 14653: IgnoredUserRow ===
 
-// Module 14638 (IgnoredUserRow)
+// Module 14653 (IgnoredUserRow)
 import noopAll from "noop" /* 19 */;
 import closure_3 from "mergeGuildAvatar" /* 1921 */;
 import { jsx } from "jsxProd" /* 21 */;
@@ -9,7 +9,7 @@ const require = arg1;
 function IgnoredUserRow(userRecord) {
   userRecord = userRecord.userRecord;
   let analyticsLocations;
-  analyticsLocations = analyticsLocations(5961)().analyticsLocations;
+  analyticsLocations = analyticsLocations(5962)().analyticsLocations;
   let obj = { icon: null, label: null, subLabel: null, labelLineClamp: 1, subLabelLineClamp: 1, accessibilityRole: "button", accessibilityActions: null, onAccessibilityAction: null, onPress: null, trailing: null };
   obj = { source: userRecord.getAvatarSource(undefined), size: userRecord(1296).AvatarSizes.REFRESH_MEDIUM_32 };
   obj[0] = jsx(userRecord(1296).Avatar, { source: userRecord.getAvatarSource(undefined), size: userRecord(1296).AvatarSizes.REFRESH_MEDIUM_32 });
@@ -54,8 +54,8 @@ function IgnoredUserRow(userRecord) {
   obj1[3] = function onPress() {
     analyticsLocations(closure_1_2[3]).unignoreUser(userRecord.id, "ignored-users-list-mobile");
   };
-  obj[9] = jsx(userRecord(4928).Button, { size: "sm", variant: "secondary", text: null, onPress: null });
-  return jsx(userRecord(5607).TableRow, { name: "unignore", label: null });
+  obj[9] = jsx(userRecord(4929).Button, { size: "sm", variant: "secondary", text: null, onPress: null });
+  return jsx(userRecord(5608).TableRow, { name: "unignore", label: null });
 }
 noopAll;
 const result = require("set").fileFinishedImporting("modules/user_settings/content_and_social/native/IgnoredUserRow.tsx");

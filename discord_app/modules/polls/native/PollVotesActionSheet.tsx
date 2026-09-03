@@ -1,19 +1,19 @@
-// === Module 11522: PollEmoji ===
+// === Module 11527: PollEmoji ===
 
-// Module 11522 (PollEmoji)
+// Module 11527 (PollEmoji)
 import ThemesDefault from "Themes" /* 709 */;
 import getSystemLocale from "getSystemLocale" /* 1233 */;
 import useThemeDefault from "useTheme" /* 4413 */;
 import Text from "Text" /* 4474 */;
-import EmojiDefault from "Emoji" /* 5593 */;
+import EmojiDefault from "Emoji" /* 5594 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_9 from "maybeApplyNoTextColorForLightCustomTheme" /* 4470 */;
-import closure_10 from "getEmojiToGroupId" /* 5409 */;
+import closure_10 from "getEmojiToGroupId" /* 5410 */;
 import closure_11 from "ensureGuildLoaded" /* 1386 */;
-import closure_12 from "reinjectEphemerals" /* 4735 */;
+import closure_12 from "reinjectEphemerals" /* 4736 */;
 import closure_13 from "mergeGuildAvatar" /* 1921 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
@@ -334,9 +334,9 @@ function NoResults() {
   const tmp6 = closure_7;
   const tmp8 = closure_6;
   if (obj3.isThemeDark(tmp4)) {
-    let tmp2Result = tmp2(11524);
+    let tmp2Result = tmp2(11529);
   } else {
-    tmp2Result = tmp2(11525);
+    tmp2Result = tmp2(11530);
   }
   obj[1] = tmp2Result;
   const items = [closure_14(tmp8, obj), , ];
@@ -424,7 +424,7 @@ let closure_18 = importAllResult.forwardRef((answer, ref) => {
   obj2[3] = items3;
   items2[2] = closure_15(answer(4474).Text, obj2);
   obj[6] = items2;
-  return closure_15(answer(5076).PressableHighlight, obj);
+  return closure_15(answer(5077).PressableHighlight, obj);
 });
 let closure_20 = { code: "function PollVotesActionSheetTsx1(){const{opacity}=this.__closure;return{flex:1,opacity:opacity.get(),marginBottom:32};}" };
 let result = require("set").fileFinishedImporting("modules/polls/native/PollVotesActionSheet.tsx");

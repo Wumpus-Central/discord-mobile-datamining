@@ -1,6 +1,6 @@
-// === Module 10127: ChannelCallSingleController ===
+// === Module 10131: ChannelCallSingleController ===
 
-// Module 10127 (ChannelCallSingleController)
+// Module 10131 (ChannelCallSingleController)
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "reset" /* 4500 */;
 import closure_5 from "fetchFingerprint" /* 1215 */;
@@ -29,7 +29,7 @@ export const ChannelCallSingleController = function ChannelCallSingleController(
       return null;
     } else {
       let tmp18 = channel;
-      tmp18 = tmp18(selectedParticipant.user.id === tmp15 ? 10128 : 10130);
+      tmp18 = tmp18(selectedParticipant.user.id === tmp15 ? 10132 : 10134);
       let obj = { participant: null, channel: null };
       obj[0] = selectedParticipant;
       obj[1] = channel;
@@ -40,7 +40,7 @@ export const ChannelCallSingleController = function ChannelCallSingleController(
     obj = { participant: null, channel: null };
     obj[0] = selectedParticipant;
     obj[1] = channel;
-    return jsx(channel(10131), { participant: null, channel: null });
+    return jsx(channel(10135), { participant: null, channel: null });
   } else if (tmp5.HIDDEN_STREAM === type) {
     return null;
   } else if (tmp5.ACTIVITY === type) {

@@ -1,12 +1,12 @@
-// === Module 5373: buildStageChannelUserRoles ===
+// === Module 5374: buildStageChannelUserRoles ===
 
-// Module 5373 (buildStageChannelUserRoles)
+// Module 5374 (buildStageChannelUserRoles)
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 586 */;
 import dispatcherDefault from "dispatcher" /* 706 */;
 import applyOverwritesAll from "applyOverwrites" /* 4125 */;
 import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 4668 */;
-import useIsStageSpeakingDisabledForCurrentUser from "useIsStageSpeakingDisabledForCurrentUser" /* 5374 */;
+import useIsStageSpeakingDisabledForCurrentUser from "useIsStageSpeakingDisabledForCurrentUser" /* 5375 */;
 import closure_4 from "ensureGuildLoaded" /* 1386 */;
 import closure_5 from "trackCommunicationDisabled" /* 1991 */;
 import closure_6 from "createGuildRoleRecordFromRust" /* 1984 */;

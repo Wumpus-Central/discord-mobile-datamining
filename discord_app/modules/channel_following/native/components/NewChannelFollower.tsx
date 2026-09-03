@@ -1,6 +1,6 @@
-// === Module 11183: canFollowIntoChannel ===
+// === Module 11187: canFollowIntoChannel ===
 
-// Module 11183 (canFollowIntoChannel)
+// Module 11187 (canFollowIntoChannel)
 import ThemesDefault from "Themes" /* 709 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
@@ -11,7 +11,7 @@ import closure_9 from "comparator" /* 1981 */;
 import { GUILD_SELECTABLE_CHANNELS_KEY as closure_10 } from "comparator" /* 1981 */;
 import closure_11 from "createGuildRecordFromRust" /* 1908 */;
 import closure_12 from "getUncachedChannelPermissions" /* 4120 */;
-import closure_13 from "insertUnsortedGuilds" /* 5389 */;
+import closure_13 from "insertUnsortedGuilds" /* 5390 */;
 import ME from "ME" /* 673 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;

@@ -1,9 +1,9 @@
-// === Module 15971: useFavoritesGuildHeaderAction ===
+// === Module 15987: useFavoritesGuildHeaderAction ===
 
-// Module 15971 (useFavoritesGuildHeaderAction)
+// Module 15987 (useFavoritesGuildHeaderAction)
 import getSystemLocale from "getSystemLocale" /* 1233 */;
 import messagesProxyDefault from "messagesProxy" /* 3178 */;
-import useFavoritesAccess from "useFavoritesAccess" /* 10329 */;
+import useFavoritesAccess from "useFavoritesAccess" /* 10333 */;
 import closure_3 from "noop" /* 19 */;
 import { Routes } from "ME" /* 673 */;
 

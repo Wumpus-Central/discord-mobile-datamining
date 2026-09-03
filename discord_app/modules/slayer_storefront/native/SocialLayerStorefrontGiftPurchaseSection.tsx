@@ -1,11 +1,11 @@
-// === Module 10959: SocialLayerStorefrontGiftPurchaseSection ===
+// === Module 10963: SocialLayerStorefrontGiftPurchaseSection ===
 
-// Module 10959 (SocialLayerStorefrontGiftPurchaseSection)
+// Module 10963 (SocialLayerStorefrontGiftPurchaseSection)
 import ThemesDefault from "Themes" /* 709 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import { useNativeCheckoutStore } from "context" /* 7178 */;
+import { useNativeCheckoutStore } from "context" /* 7179 */;
 import closure_7 from "mergeGuildAvatar" /* 1921 */;
 import { AnalyticEvents } from "ME" /* 673 */;
 import { GiftingOrigin } from "GuildFeatures" /* 1923 */;

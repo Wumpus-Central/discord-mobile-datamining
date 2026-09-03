@@ -1,10 +1,10 @@
-// === Module 10158: StageSectionHeader ===
+// === Module 10162: StageSectionHeader ===
 
-// Module 10158 (StageSectionHeader)
+// Module 10162 (StageSectionHeader)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 709 */;
 import _modDef4217 from "module_4217" /* 4217 */;
-import registerAssetDefault from "registerAsset" /* 5951 */;
+import registerAssetDefault from "registerAsset" /* 5952 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;

@@ -1,9 +1,9 @@
-// === Module 13217: WhatYouLoseItem ===
+// === Module 13229: WhatYouLoseItem ===
 
-// Module 13217 (WhatYouLoseItem)
+// Module 13229 (WhatYouLoseItem)
 import ThemesDefault from "Themes" /* 709 */;
 import Text from "Text" /* 4474 */;
-import preloadDefault from "preload" /* 5501 */;
+import preloadDefault from "preload" /* 5502 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { PremiumTypes } from "GuildFeatures" /* 1923 */;

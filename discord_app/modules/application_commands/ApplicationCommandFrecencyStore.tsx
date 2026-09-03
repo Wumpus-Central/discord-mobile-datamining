@@ -1,12 +1,12 @@
-// === Module 8156: handleUserSettingsProtoStoreChange ===
+// === Module 8160: handleUserSettingsProtoStoreChange ===
 
-// Module 8156 (handleUserSettingsProtoStoreChange)
+// Module 8160 (handleUserSettingsProtoStoreChange)
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 586 */;
 import dispatcherDefault from "dispatcher" /* 706 */;
 import DEFAULT_FRECENCYDefault from "DEFAULT_FRECENCY" /* 4566 */;
 import closure_2 from "handleConnectionClosedOrResumed" /* 1339 */;
-import TRUE_OPTION_NAME from "TRUE_OPTION_NAME" /* 4952 */;
+import TRUE_OPTION_NAME from "TRUE_OPTION_NAME" /* 4953 */;
 import { UserSettingsTypes } from "MAX_FAVORITES" /* 682 */;
 
 function handleUserSettingsProtoStoreChange() {

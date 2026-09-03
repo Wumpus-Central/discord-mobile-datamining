@@ -1,9 +1,9 @@
-// === Module 9087: UserProfileConfirmRemoveFriend ===
+// === Module 9091: UserProfileConfirmRemoveFriend ===
 
-// Module 9087 (UserProfileConfirmRemoveFriend)
+// Module 9091 (UserProfileConfirmRemoveFriend)
 import noopAll from "noop" /* 19 */;
 import getSystemLocale from "getSystemLocale" /* 1233 */;
-import getAlertModalItemKey from "getAlertModalItemKey" /* 4863 */;
+import getAlertModalItemKey from "getAlertModalItemKey" /* 4864 */;
 import jsxProd from "jsxProd" /* 21 */;
 
 require = arg1;

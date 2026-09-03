@@ -1,11 +1,11 @@
-// === Module 7298: fromServer ===
+// === Module 7299: fromServer ===
 
-// Module 7298 (fromServer)
+// Module 7299 (fromServer)
 import getPricesFromServerDefault from "getPricesFromServer" /* 4523 */;
-import fromServerDefault from "fromServer" /* 7305 */;
+import fromServerDefault from "fromServer" /* 7306 */;
 import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "fromServer" /* 7299 */;
-import createCollectiblesItemsFromServerResponse from "createCollectiblesItemsFromServerResponse" /* 7300 */;
+import closure_4 from "fromServer" /* 7300 */;
+import createCollectiblesItemsFromServerResponse from "createCollectiblesItemsFromServerResponse" /* 7301 */;
 import { REWARD_CATEGORY_AND_REWARD_SKU_IDS as closure_7 } from "items" /* 675 */;
 import ME from "ME" /* 673 */;
 
@@ -139,7 +139,7 @@ CollectiblesProductRecord["fromStorefrontProductRecord"] = function fromStorefro
             }
             ({ items, item } = obj);
             first = closure_1_3(tenantMetadata.selectedOptions, 1)[0];
-            obj = { baseVariantName: null, baseVariantSkuId: null, variantLabel: null, variantValue: null, storeListingId: null, skuId: null, name: null, summary: null, styles: "Button", type: "Array", premiumType: "accessible", items: true, categorySkuId: true, isCategoryReward: true, prices: true, previewAssets: true, googleSkuIds: true, eligibleOffers: true, variants: true, bundledProducts: null, isFirstParty: null };
+            obj = { baseVariantName: null, baseVariantSkuId: null, variantLabel: null, variantValue: null, storeListingId: null, skuId: null, name: null, summary: null, styles: "Button", type: "Array", premiumType: "call", items: false, categorySkuId: false, isCategoryReward: false, prices: false, previewAssets: false, googleSkuIds: false, eligibleOffers: false, variants: false, bundledProducts: false, isFirstParty: false };
             obj[0] = skus.name;
             obj[1] = first.id;
             let str;

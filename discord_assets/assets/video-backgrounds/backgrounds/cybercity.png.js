@@ -1,6 +1,6 @@
-// === Module 9815: metadata ===
+// === Module 9819: metadata ===
 
-// Module 9815 (metadata)
+// Module 9819 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/video-backgrounds/backgrounds/cybercity.png.js");

@@ -1,22 +1,22 @@
-// === Module 16264: ForYouShowAllRow ===
+// === Module 16283: ForYouShowAllRow ===
 
-// Module 16264 (ForYouShowAllRow)
+// Module 16283 (ForYouShowAllRow)
 import ThemesDefault from "Themes" /* 709 */;
 import getSystemLocale from "getSystemLocale" /* 1233 */;
 import set from "set" /* 1234 */;
 import Button from "Button" /* 1296 */;
 import Text from "Text" /* 4474 */;
-import getFontScale from "getFontScale" /* 4935 */;
-import PressableBase from "PressableBase" /* 5076 */;
-import registerAssetDefault from "registerAsset" /* 5622 */;
-import getLayoutStyles from "getLayoutStyles" /* 10224 */;
-import AvatarDuoPile from "AvatarDuoPile" /* 14043 */;
-import renderChannelPressableWrapper from "renderChannelPressableWrapper" /* 16259 */;
-import renderChannelWrapper from "renderChannelWrapper" /* 16260 */;
+import getFontScale from "getFontScale" /* 4936 */;
+import PressableBase from "PressableBase" /* 5077 */;
+import registerAssetDefault from "registerAsset" /* 5623 */;
+import getLayoutStyles from "getLayoutStyles" /* 10228 */;
+import AvatarDuoPile from "AvatarDuoPile" /* 14059 */;
+import renderChannelPressableWrapper from "renderChannelPressableWrapper" /* 16278 */;
+import renderChannelWrapper from "renderChannelWrapper" /* 16279 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { AnalyticEvents } from "ME" /* 673 */;
-import { Sections } from "SuggestedFriendSource" /* 12461 */;
+import { Sections } from "SuggestedFriendSource" /* 12473 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -111,7 +111,7 @@ export const ForYouSuggestedFriendShowAllRow = function ForYouSuggestedFriendSho
     children: React.useMemo(() => {
       const substr = suggestedFriends.slice(2, 4);
       return substr.map((user) => {
-        const obj = { user: user.user, guildId: "Array", size: true };
+        const obj = { user: user.user, guildId: "Array", size: 102039555 };
         const obj2 = closure_1_0(closure_1_2[6]);
         const tmp = closure_1_7;
         const AvatarSizes = closure_1_0(closure_1_2[11]).AvatarSizes;

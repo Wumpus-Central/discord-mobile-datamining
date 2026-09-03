@@ -1,10 +1,10 @@
-// === Module 14788: EmptyStateCard ===
+// === Module 14803: EmptyStateCard ===
 
-// Module 14788 (EmptyStateCard)
+// Module 14803 (EmptyStateCard)
 import ThemesDefault from "Themes" /* 709 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
 import Text from "Text" /* 4474 */;
-import PressableCard from "PressableCard" /* 5609 */;
+import PressableCard from "PressableCard" /* 5610 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { AnalyticsLocations } from "ME" /* 673 */;
@@ -72,7 +72,7 @@ let result = require("set").fileFinishedImporting("modules/user_settings/connect
 
 export default function ConnectionsEmptyStateUpsell() {
   const tmp = callback3();
-  let obj = emptyStatePlatforms(7257);
+  let obj = emptyStatePlatforms(7258);
   emptyStatePlatforms = obj.useEmptyStatePlatforms();
   const items = [emptyStatePlatforms];
   const memo = React.useMemo(() => emptyStatePlatforms.slice(0, 3), items);
@@ -85,13 +85,13 @@ export default function ConnectionsEmptyStateUpsell() {
   obj[0] = items2;
   obj1 = { style: tmp.content, children: null };
   const obj2 = { spacing: 16, direction: "vertical", align: "center", style: tmp.textContainer, children: null };
-  const items3 = [callback(emptyStatePlatforms(4926).Stack, { spacing: 16, justify: "center", direction: "horizontal", children: memo.map((platform) => callback(closure_9, { platform }, platform.type)) }), ];
+  const items3 = [callback(emptyStatePlatforms(4927).Stack, { spacing: 16, justify: "center", direction: "horizontal", children: memo.map((platform) => callback(closure_9, { platform }, platform.type)) }), ];
   const obj4 = { spacing: 16, justify: "center", direction: "horizontal", children: null };
   const items4 = [memo1.map((platform) => callback(closure_9, { platform }, platform.type)), callback(OtherConnectionsCard, { count: emptyStatePlatforms.length - 5 })];
   obj4[3] = items4;
-  items3[1] = callback2(emptyStatePlatforms(4926).Stack, obj4);
+  items3[1] = callback2(emptyStatePlatforms(4927).Stack, obj4);
   obj2[4] = items3;
-  const items5 = [callback2(emptyStatePlatforms(4926).Stack, obj2), ];
+  const items5 = [callback2(emptyStatePlatforms(4927).Stack, obj2), ];
   const obj6 = { spacing: 8, align: "center", style: tmp.textContainer, children: null };
   const obj7 = { variant: "text-lg/bold", color: "mobile-text-heading-primary", style: tmp.text, children: null };
   const intl = emptyStatePlatforms(1233).intl;
@@ -102,7 +102,7 @@ export default function ConnectionsEmptyStateUpsell() {
   obj8[3] = intl2.string(emptyStatePlatforms(1233).t.XijaQP);
   items6[1] = callback(emptyStatePlatforms(4474).Text, obj8);
   obj6[3] = items6;
-  items5[1] = callback2(emptyStatePlatforms(4926).Stack, obj6);
+  items5[1] = callback2(emptyStatePlatforms(4927).Stack, obj6);
   obj1[1] = items5;
   obj[1] = callback2(View, obj1);
   return callback(View, obj);

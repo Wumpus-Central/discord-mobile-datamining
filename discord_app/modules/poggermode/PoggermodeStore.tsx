@@ -1,13 +1,13 @@
-// === Module 7585: updateCombo ===
+// === Module 7586: updateCombo ===
 
-// Module 7585 (updateCombo)
+// Module 7586 (updateCombo)
 import initializeDefault from "initialize" /* 586 */;
 import dispatcherDefault from "dispatcher" /* 706 */;
-import getComboShakeIntensity from "getComboShakeIntensity" /* 7586 */;
+import getComboShakeIntensity from "getComboShakeIntensity" /* 7587 */;
 import closure_2 from "fetchFingerprint" /* 1215 */;
 import closure_3 from "handleConnectionOpen" /* 1980 */;
-import closure_4 from "initialize" /* 7432 */;
-import ConfettiLocation from "ConfettiLocation" /* 7433 */;
+import closure_4 from "initialize" /* 7433 */;
+import ConfettiLocation from "ConfettiLocation" /* 7434 */;
 import { ComponentActions } from "ME" /* 673 */;
 import set from "set" /* 2 */;
 
@@ -215,12 +215,12 @@ const poggermodeStore = new PoggermodeStore(dispatcherDefault, {
             if (null != mentions) {
               if (null != mentions.find((id) => id.id === id)) {
                 if (null != value) {
-                  let num2 = id(7586).getComboShakeIntensity(value, LEVEL_4.LEVEL_4);
+                  let num2 = id(7587).getComboShakeIntensity(value, LEVEL_4.LEVEL_4);
                   if (num2 == null) {
                     num2 = 0.001;
                   }
                   let result = num2;
-                  const obj2 = id(7586);
+                  const obj2 = id(7587);
                 } else {
                   const _Math = Math;
                   result = 4 * Math.random();

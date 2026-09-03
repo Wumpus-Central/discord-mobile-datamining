@@ -1,7 +1,7 @@
-// === Module 9043: useGuildProfileCTA ===
+// === Module 9047: useGuildProfileCTA ===
 
-// Module 9043 (useGuildProfileCTA)
-import usePendingFolderGuildIdsDefault from "usePendingFolderGuildIds" /* 9044 */;
+// Module 9047 (useGuildProfileCTA)
+import usePendingFolderGuildIdsDefault from "usePendingFolderGuildIds" /* 9048 */;
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "fetchFingerprint" /* 1215 */;
 import closure_5 from "trackCommunicationDisabled" /* 1991 */;
@@ -66,7 +66,7 @@ export default function useGuildProfileCTA(id) {
           if (num == null) {
             num = 0;
           }
-          obj[1] = id(1398).hasFlag(num, id(8678).GuildInviteFlags.IS_APPLICATION_BYPASS);
+          obj[1] = id(1398).hasFlag(num, id(8682).GuildInviteFlags.IS_APPLICATION_BYPASS);
           obj[2] = invite.roles;
           const obj2 = id(1398);
           const tmp6 = id;
@@ -220,13 +220,13 @@ export const getGuildProfileCTAType = function getGuildProfileCTAType(guildProfi
         if (num == null) {
           num = 0;
         }
-        flag = obj.hasFlag(num, set(8678).GuildInviteFlags.IS_APPLICATION_BYPASS);
+        flag = obj.hasFlag(num, set(8682).GuildInviteFlags.IS_APPLICATION_BYPASS);
         tmp11 = inviteKeyForGuildId;
         const tmp13 = set;
       }
     }
   }
-  const pendingFolderGuildIds = set(9044).getPendingFolderGuildIds();
+  const pendingFolderGuildIds = set(9048).getPendingFolderGuildIds();
   if (tmp7) {
     let roles;
     if (invite != null) {
@@ -288,7 +288,7 @@ export const getGuildProfileCTAType = function getGuildProfileCTAType(guildProfi
     }
     return APPLY_TO_JOIN;
   }
-  const obj2 = set(9044);
+  const obj2 = set(9048);
   const tmp15 = set;
   tmp7 = null != joinedAt;
 };

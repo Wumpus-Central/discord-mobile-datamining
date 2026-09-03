@@ -1,16 +1,16 @@
-// === Module 12219: LeftSlot ===
+// === Module 12230: LeftSlot ===
 
-// Module 12219 (LeftSlot)
+// Module 12230 (LeftSlot)
 import ThemesDefault from "Themes" /* 709 */;
 import ManaContext from "ManaContext" /* 4204 */;
 import _modDef4217 from "module_4217" /* 4217 */;
-import renderChatInputActionButtonGiftAndThreadDefault from "renderChatInputActionButtonGiftAndThread" /* 12035 */;
-import FadeTransitionItem from "FadeTransitionItem" /* 12036 */;
-import useChatInputFloatingBounceDefault from "useChatInputFloatingBounce" /* 12037 */;
+import renderChatInputActionButtonGiftAndThreadDefault from "renderChatInputActionButtonGiftAndThread" /* 12041 */;
+import FadeTransitionItem from "FadeTransitionItem" /* 12042 */;
+import useChatInputFloatingBounceDefault from "useChatInputFloatingBounce" /* 12043 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import { CHAT_INPUT_FLOATING_BOUNCE_ENTER_DELAY_MS as closure_6 } from "TextAreaCta" /* 11758 */;
+import { CHAT_INPUT_FLOATING_BOUNCE_ENTER_DELAY_MS as closure_6 } from "TextAreaCta" /* 11763 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -24,7 +24,7 @@ function LeftSlot(state) {
   items = [wrapperStyle, { width: slotWidth }, animatedStyle];
   const tmp = useChatInputFloatingBounceDefault(obj);
   const merged = Object.assign(FadeTransitionItem.interactivityProps(isInteractive));
-  obj.children = callback2(renderChatInputActionButtonGiftAndThreadDefault, { canStartThreads: false, channel, onPress, styleButton: "PX_16", shouldShowThread: "cowboy" });
+  obj.children = callback2(renderChatInputActionButtonGiftAndThreadDefault, { canStartThreads: false, channel, onPress, styleButton: "PX_16", shouldShowThread: "sticker_pack_199" });
   return callback2(_modDef4217.View, obj);
 }
 let c4 = importAllResult;
@@ -77,7 +77,7 @@ const forwardRefResult = importAllResult.forwardRef((channel, ref) => {
   }
   const items1 = [tmp14Result, ];
   obj1 = { active: keyboardType === channel(1625).KeyboardTypes.EXPRESSION, showKeyboardIcon, onPress: onPressExpression };
-  items1[1] = callback2(onPressAction(11967), obj1);
+  items1[1] = callback2(onPressAction(11973), obj1);
   obj[1] = items1;
   return closure_8(View, obj);
 });

@@ -1,6 +1,6 @@
-// === Module 11722: ModalFooter ===
+// === Module 11727: ModalFooter ===
 
-// Module 11722 (ModalFooter)
+// Module 11727 (ModalFooter)
 import noopAll from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;

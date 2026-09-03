@@ -1,6 +1,6 @@
-// === Module 17615: AdvancedInstantInvite ===
+// === Module 17635: AdvancedInstantInvite ===
 
-// Module 17615 (AdvancedInstantInvite)
+// Module 17635 (AdvancedInstantInvite)
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_5 from "markAllUserIdListsStale" /* 4130 */;

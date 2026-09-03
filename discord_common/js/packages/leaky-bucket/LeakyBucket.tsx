@@ -1,6 +1,6 @@
-// === Module 9523: _processQueue ===
+// === Module 9527: _processQueue ===
 
-// Module 9523 (_processQueue)
+// Module 9527 (_processQueue)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_common/js/packages/leaky-bucket/LeakyBucket.tsx");

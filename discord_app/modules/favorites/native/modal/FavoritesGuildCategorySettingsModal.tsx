@@ -1,6 +1,6 @@
-// === Module 15932: FavoritesGuildCategorySettings ===
+// === Module 15948: FavoritesGuildCategorySettings ===
 
-// Module 15932 (FavoritesGuildCategorySettings)
+// Module 15948 (FavoritesGuildCategorySettings)
 import ThemesDefault from "Themes" /* 709 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
@@ -141,12 +141,12 @@ let result = require("set").fileFinishedImporting("modules/favorites/native/moda
 export default function FavoritesGuildCategorySettingsModal(categoryId) {
   categoryId = categoryId.categoryId;
   let onGoBack;
-  onGoBack = onGoBack(10881)().onGoBack;
+  onGoBack = onGoBack(10885)().onGoBack;
   const obj = { screenKey: "favoritesGuildCategorySettings", title: null, render: null };
   const intl = categoryId(1233).intl;
   obj[1] = intl.string(categoryId(1233).t["/uELTj"]);
   obj[2] = function render() {
     return closure_1_8(closure_1_11, { categoryId, onGoBack });
   };
-  return callback(onGoBack(10882), obj);
+  return callback(onGoBack(10886), obj);
 };

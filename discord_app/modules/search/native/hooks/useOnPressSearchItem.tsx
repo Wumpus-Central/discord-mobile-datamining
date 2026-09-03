@@ -1,13 +1,13 @@
-// === Module 16458: handleVoiceOrStageChannelConnectPress ===
+// === Module 16479: handleVoiceOrStageChannelConnectPress ===
 
-// Module 16458 (handleVoiceOrStageChannelConnectPress)
+// Module 16479 (handleVoiceOrStageChannelConnectPress)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "noop" /* 19 */;
 import closure_5 from "ensureGuildLoaded" /* 1386 */;
-import closure_6 from "prototype" /* 12129 */;
-import MessageEmbedTypes from "MessageEmbedTypes" /* 7632 */;
-import { SearchNavigatorScreens } from "SearchNavigatorScreens" /* 16459 */;
-import { SearchFilterAddLocations } from "SearchEntrypointAnalyticsLocations" /* 7631 */;
+import closure_6 from "prototype" /* 12135 */;
+import MessageEmbedTypes from "MessageEmbedTypes" /* 7633 */;
+import { SearchNavigatorScreens } from "SearchNavigatorScreens" /* 16480 */;
+import { SearchFilterAddLocations } from "SearchEntrypointAnalyticsLocations" /* 7632 */;
 import ME from "ME" /* 673 */;
 import { StaticChannelRoute } from "set" /* 1393 */;
 

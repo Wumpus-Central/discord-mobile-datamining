@@ -1,10 +1,10 @@
-// === Module 17401: StickerPlusIcon ===
+// === Module 17421: StickerPlusIcon ===
 
-// Module 17401 (StickerPlusIcon)
+// Module 17421 (StickerPlusIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 709 */;
 import BaseIconImage from "BaseIconImage" /* 4196 */;
-import registerAsset from "registerAsset" /* 17402 */;
+import registerAsset from "registerAsset" /* 17422 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

@@ -1,50 +1,50 @@
-// === Module 13192: handleCancelSubscription ===
+// === Module 13204: handleCancelSubscription ===
 
-// Module 13192 (handleCancelSubscription)
+// Module 13204 (handleCancelSubscription)
 import ThemesDefault from "Themes" /* 709 */;
 import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4139 */;
-import contextDefault from "context" /* 5961 */;
-import QUICK_SWITCHERDefault from "QUICK_SWITCHER" /* 5981 */;
-import registerAssetDefault from "registerAsset" /* 7986 */;
-import registerAssetDefault2 from "registerAsset" /* 8365 */;
-import registerAssetDefault3 from "registerAsset" /* 10708 */;
-import registerAssetDefault4 from "registerAsset" /* 10709 */;
-import registerAssetDefault5 from "registerAsset" /* 10710 */;
-import registerAssetDefault6 from "registerAsset" /* 10711 */;
-import registerAssetDefault7 from "registerAsset" /* 10712 */;
-import registerAssetDefault8 from "registerAsset" /* 10714 */;
-import registerAssetDefault9 from "registerAsset" /* 10717 */;
-import registerAssetDefault10 from "registerAsset" /* 13193 */;
-import registerAssetDefault11 from "registerAsset" /* 13194 */;
-import registerAssetDefault12 from "registerAsset" /* 13195 */;
-import registerAssetDefault13 from "registerAsset" /* 13196 */;
-import registerAssetDefault14 from "registerAsset" /* 13197 */;
-import registerAssetDefault15 from "registerAsset" /* 13198 */;
-import registerAssetDefault16 from "registerAsset" /* 13199 */;
-import registerAssetDefault17 from "registerAsset" /* 13200 */;
-import registerAssetDefault18 from "registerAsset" /* 13201 */;
-import registerAssetDefault19 from "registerAsset" /* 13202 */;
-import registerAssetDefault20 from "registerAsset" /* 13203 */;
-import registerAssetDefault21 from "registerAsset" /* 13204 */;
-import registerAssetDefault22 from "registerAsset" /* 13205 */;
-import registerAssetDefault23 from "registerAsset" /* 13206 */;
-import registerAssetDefault24 from "registerAsset" /* 13207 */;
-import registerAssetDefault25 from "registerAsset" /* 13208 */;
-import registerAssetDefault26 from "registerAsset" /* 13209 */;
-import registerAssetDefault27 from "registerAsset" /* 13210 */;
-import registerAssetDefault28 from "registerAsset" /* 13211 */;
-import registerAssetDefault29 from "registerAsset" /* 13212 */;
-import registerAssetDefault30 from "registerAsset" /* 13213 */;
-import registerAssetDefault31 from "registerAsset" /* 13214 */;
-import registerAssetDefault32 from "registerAsset" /* 13215 */;
-import openPremiumPlanWhatYouLoseActionSheetDefault from "openPremiumPlanWhatYouLoseActionSheet" /* 13216 */;
-import createSubscriptionInvoicePreview from "createSubscriptionInvoicePreview" /* 13226 */;
+import contextDefault from "context" /* 5962 */;
+import QUICK_SWITCHERDefault from "QUICK_SWITCHER" /* 5982 */;
+import registerAssetDefault from "registerAsset" /* 7989 */;
+import registerAssetDefault2 from "registerAsset" /* 8369 */;
+import registerAssetDefault3 from "registerAsset" /* 10712 */;
+import registerAssetDefault4 from "registerAsset" /* 10713 */;
+import registerAssetDefault5 from "registerAsset" /* 10714 */;
+import registerAssetDefault6 from "registerAsset" /* 10715 */;
+import registerAssetDefault7 from "registerAsset" /* 10716 */;
+import registerAssetDefault8 from "registerAsset" /* 10718 */;
+import registerAssetDefault9 from "registerAsset" /* 10721 */;
+import registerAssetDefault10 from "registerAsset" /* 13205 */;
+import registerAssetDefault11 from "registerAsset" /* 13206 */;
+import registerAssetDefault12 from "registerAsset" /* 13207 */;
+import registerAssetDefault13 from "registerAsset" /* 13208 */;
+import registerAssetDefault14 from "registerAsset" /* 13209 */;
+import registerAssetDefault15 from "registerAsset" /* 13210 */;
+import registerAssetDefault16 from "registerAsset" /* 13211 */;
+import registerAssetDefault17 from "registerAsset" /* 13212 */;
+import registerAssetDefault18 from "registerAsset" /* 13213 */;
+import registerAssetDefault19 from "registerAsset" /* 13214 */;
+import registerAssetDefault20 from "registerAsset" /* 13215 */;
+import registerAssetDefault21 from "registerAsset" /* 13216 */;
+import registerAssetDefault22 from "registerAsset" /* 13217 */;
+import registerAssetDefault23 from "registerAsset" /* 13218 */;
+import registerAssetDefault24 from "registerAsset" /* 13219 */;
+import registerAssetDefault25 from "registerAsset" /* 13220 */;
+import registerAssetDefault26 from "registerAsset" /* 13221 */;
+import registerAssetDefault27 from "registerAsset" /* 13222 */;
+import registerAssetDefault28 from "registerAsset" /* 13223 */;
+import registerAssetDefault29 from "registerAsset" /* 13224 */;
+import registerAssetDefault30 from "registerAsset" /* 13225 */;
+import registerAssetDefault31 from "registerAsset" /* 13226 */;
+import registerAssetDefault32 from "registerAsset" /* 13227 */;
+import openPremiumPlanWhatYouLoseActionSheetDefault from "openPremiumPlanWhatYouLoseActionSheet" /* 13228 */;
+import createSubscriptionInvoicePreview from "createSubscriptionInvoicePreview" /* 13238 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import closure_5 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_10 from "mergeGuildAvatar" /* 1921 */;
-import closure_11 from "updateProduct" /* 6092 */;
+import closure_11 from "updateProduct" /* 6093 */;
 import ME from "ME" /* 673 */;
 import GuildFeatures from "GuildFeatures" /* 1923 */;
 import jsxProd from "jsxProd" /* 21 */;
@@ -100,14 +100,14 @@ function _handleCancelSubscription() {
               obj1[0] = callback;
               obj1[1] = closure_1;
               obj1[2] = dependencyMap;
-              obj1[3] = callback(10677).STEP_ANALYTICS_NAMES[callback(undefined, 10677).CancellationFlowSteps.MOBILE_SUBSCRIPTION_MANAGE];
-              const result = callback(10677).trackPremiumSubscriptionCancellationFlowStep(obj1);
+              obj1[3] = callback(10681).STEP_ANALYTICS_NAMES[callback(undefined, 10681).CancellationFlowSteps.MOBILE_SUBSCRIPTION_MANAGE];
+              const result = callback(10681).trackPremiumSubscriptionCancellationFlowStep(obj1);
               let isPurchasedViaApple;
               if (callback != null) {
                 isPurchasedViaApple = tmp15.isPurchasedViaApple;
               }
               if (isPurchasedViaApple) {
-                let tmp18Result = tmp18(11014);
+                let tmp18Result = tmp18(11018);
                 c4 = 1;
                 c3 = 1;
                 const obj2 = { value: null, done: false };
@@ -123,7 +123,7 @@ function _handleCancelSubscription() {
                   closure_1_8.openURL(tmp18Result.getExternalSubscriptionMethodUrl(tmp15.paymentGateway, "SUBSCRIPTION_MANAGEMENT"));
                 }
               }
-              const obj7 = callback(10677);
+              const obj7 = callback(10681);
             }
           } else if (arg0 === 1) {
             c3 = 3;
@@ -161,9 +161,9 @@ function handleManageSubscription(subscription, closure_3, analyticsLocations) {
     const hasActiveTrial = subscription.hasActiveTrial;
     dependencyMap = false;
     try {
-      let obj = _require(7161);
+      let obj = _require(7162);
       const productIdFromSubscription = obj.getProductIdFromSubscription(subscription, false);
-      let tmp4 = _require(6095).AppStorePremiumProductIdsToPremiumBundledItems[productIdFromSubscription];
+      let tmp4 = _require(6096).AppStorePremiumProductIdsToPremiumBundledItems[productIdFromSubscription];
       let interval;
       if (tmp4 != null) {
         interval = tmp4.interval;
@@ -172,14 +172,14 @@ function handleManageSubscription(subscription, closure_3, analyticsLocations) {
       let flag = false;
       if (subscription.paymentGateway === constants3.APPLE_ADVANCED_COMMERCE) {
         try {
-          const productIdFromSubscription1 = _require(7161).getProductIdFromSubscription(subscription, true);
-          const tmp12 = _require(6095).AppStorePremiumProductIdsToPremiumBundledItems[productIdFromSubscription1];
+          const productIdFromSubscription1 = _require(7162).getProductIdFromSubscription(subscription, true);
+          const tmp12 = _require(6096).AppStorePremiumProductIdsToPremiumBundledItems[productIdFromSubscription1];
           let interval1;
           if (tmp12 != null) {
             interval1 = tmp12.interval;
           }
           flag = interval1 === constants5.YEAR;
-          const obj2 = _require(7161);
+          const obj2 = _require(7162);
         } catch (err) {
         }
       }
@@ -217,8 +217,8 @@ function handleManageSubscription(subscription, closure_3, analyticsLocations) {
         }
         return tmp4;
       };
-      const result = _require(7163).launchPremiumPlanSelect(obj);
-      const obj3 = _require(7163);
+      const result = _require(7164).launchPremiumPlanSelect(obj);
+      const obj3 = _require(7164);
     } catch (err) {
     }
   }
@@ -269,7 +269,7 @@ function _onResubscribeClick() {
               closure_1 = tmp2;
               if (lib.isACOM) {
                 obj1 = { requestIdentifier: null, subscriptionId: null };
-                const obj9 = lib(7173);
+                const obj9 = lib(7174);
                 obj1[0] = lib(511).v4();
                 obj1[1] = tmp25.id;
                 dependencyMap = 1;
@@ -278,7 +278,7 @@ function _onResubscribeClick() {
                 obj2[0] = obj9.resubscribeGenericSubscription(obj1, true);
                 return obj2;
               } else if (tmp25.isPurchasedViaApple) {
-                obj6 = lib(11014);
+                obj6 = lib(11018);
                 dependencyMap = 3;
                 c3 = 1;
                 const obj3 = { value: null, done: false };
@@ -299,7 +299,7 @@ function _onResubscribeClick() {
               obj4[0] = arg1;
               return obj4;
             } else {
-              obj2 = lib(4837);
+              obj2 = lib(4838);
               dependencyMap = 2;
               c3 = 1;
               obj5 = { value: null, done: false };
@@ -766,14 +766,14 @@ export default function PremiumSubscriptionDetails(subscription) {
       const obj2 = { subscription: null, renewalMutations: null };
       obj2[0] = subscription;
       obj2[1] = subscription.renewalMutations;
-      tmp9Result = tmp9(tmp2(13227), obj2);
+      tmp9Result = tmp9(tmp2(13239), obj2);
     }
     items[1] = tmp9Result;
     tmp9Result = subscription.status === constants4.ACCOUNT_HOLD;
     if (tmp9Result) {
       const obj3 = { subscription: null };
       obj3[0] = subscription;
-      tmp9Result = tmp9(tmp2(13228), obj3);
+      tmp9Result = tmp9(tmp2(13240), obj3);
     }
     items[2] = tmp9Result;
     const obj4 = { subscription: null, renewalInvoicePreview: null, onClickManagePremiumGuild: null };
@@ -796,14 +796,14 @@ export default function PremiumSubscriptionDetails(subscription) {
 export const onCancelClick = function onCancelClick(subscription, analyticsLocations) {
   const _require = subscription;
   importDefault = analyticsLocations;
-  let obj = _require(10677);
+  let obj = _require(10681);
   const result = obj.trackPremiumSubscriptionCancellationStarted(subscription, analyticsLocations);
   if (obj2.isBoostOnlySubscription(subscription)) {
     let tmp4ResultResult = handleCancelSubscription(subscription, analyticsLocations);
   } else {
     obj = { subscription: null, mode: null, onContinue: null };
     obj[0] = subscription;
-    obj[1] = _require(13217).WhatYouLoseMode.CANCEL;
+    obj[1] = _require(13229).WhatYouLoseMode.CANCEL;
     obj[2] = function onContinue(arg0) {
       return closure_1_28(closure_0, closure_1, arg0);
     };

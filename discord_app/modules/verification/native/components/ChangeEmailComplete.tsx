@@ -1,22 +1,22 @@
-// === Module 7776: handlePress ===
+// === Module 7779: handlePress ===
 
-// Module 7776 (handlePress)
+// Module 7779 (handlePress)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 709 */;
 import getSystemLocale from "getSystemLocale" /* 1233 */;
 import Text from "Text" /* 4474 */;
-import Button from "Button" /* 4928 */;
-import _modDef7696 from "module_7696" /* 7696 */;
-import registerAssetDefault from "registerAsset" /* 7710 */;
+import Button from "Button" /* 4929 */;
+import _modDef7699 from "module_7699" /* 7699 */;
+import registerAssetDefault from "registerAsset" /* 7713 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { resetChangeEmailStore } from "ChangeEmailFields" /* 7698 */;
+import { resetChangeEmailStore } from "ChangeEmailFields" /* 7701 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
 require = arg1;
 function handlePress() {
   resetChangeEmailStore();
-  _modDef7696.close();
+  _modDef7699.close();
 }
 noopAll;
 ({ View: c3, Image: c4, ScrollView: c5 } = get_ActivityIndicator);

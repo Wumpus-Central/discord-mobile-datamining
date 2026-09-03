@@ -1,6 +1,6 @@
-// === Module 13696: _initStats ===
+// === Module 13711: _initStats ===
 
-// Module 13696 (_initStats)
+// Module 13711 (_initStats)
 import sleep from "sleep" /* 4558 */;
 import closure_2 from "handleConnectionInfoChange" /* 4574 */;
 import ME from "ME" /* 673 */;

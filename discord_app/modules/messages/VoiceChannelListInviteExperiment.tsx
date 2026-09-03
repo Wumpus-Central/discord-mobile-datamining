@@ -1,6 +1,6 @@
-// === Module 11163: getVoiceChannelListInviteExperiment ===
+// === Module 11167: getVoiceChannelListInviteExperiment ===
 
-// Module 11163 (getVoiceChannelListInviteExperiment)
+// Module 11167 (getVoiceChannelListInviteExperiment)
 import set from "set" /* 2 */;
 import createExperiment from "createExperiment" /* 4389 */;
 

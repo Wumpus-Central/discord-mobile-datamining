@@ -1,10 +1,10 @@
-// === Module 7879: processColorStrings ===
+// === Module 7882: processColorStrings ===
 
-// Module 7879 (processColorStrings)
+// Module 7882 (processColorStrings)
 import nDefault from "n" /* 686 */;
 import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1470 */;
-import useHasEnhancedRoleColors from "useHasEnhancedRoleColors" /* 4957 */;
-import useHasEnhancedRoleColorsDefault from "useHasEnhancedRoleColors" /* 4957 */;
+import useHasEnhancedRoleColors from "useHasEnhancedRoleColors" /* 4958 */;
+import useHasEnhancedRoleColorsDefault from "useHasEnhancedRoleColors" /* 4958 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { processColor } from "get ActivityIndicator" /* 17 */;

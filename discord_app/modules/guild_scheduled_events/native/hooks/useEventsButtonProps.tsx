@@ -1,11 +1,11 @@
-// === Module 12166: useEventsButtonProps ===
+// === Module 12172: useEventsButtonProps ===
 
-// Module 12166 (useEventsButtonProps)
-import useGuildEventsDefault from "useGuildEvents" /* 9644 */;
+// Module 12172 (useEventsButtonProps)
+import useGuildEventsDefault from "useGuildEvents" /* 9648 */;
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "generateOldThreadCutoff" /* 4493 */;
-import closure_5 from "updateUserGuildSettingsInternal" /* 4701 */;
-import { ReadStateTypes } from "ReadStateTypes" /* 4702 */;
+import closure_5 from "updateUserGuildSettingsInternal" /* 4702 */;
+import { ReadStateTypes } from "ReadStateTypes" /* 4703 */;
 
 const require = arg1;
 let result = require("set").fileFinishedImporting("modules/guild_scheduled_events/native/hooks/useEventsButtonProps.tsx");
@@ -46,13 +46,13 @@ export default function useEventsButtonProps(id) {
     const intl = tmp(1233).intl;
     name = intl.string(tmp(1233).t.tlopTM);
   }
-  let mode = tmp(12171).ChannelModes.DEFAULT;
+  let mode = tmp(12177).ChannelModes.DEFAULT;
   let tmp8 = hasUnread;
   if (hasUnread) {
     tmp8 = !eventsMuted;
   }
   if (tmp8) {
-    mode = tmp(12171).ChannelModes.UNREAD_IMPORTANT;
+    mode = tmp(12177).ChannelModes.UNREAD_IMPORTANT;
   }
   return { hasUnread, mentionCount, mode, name, eventsMuted, handlePress, handleLongPress };
 };

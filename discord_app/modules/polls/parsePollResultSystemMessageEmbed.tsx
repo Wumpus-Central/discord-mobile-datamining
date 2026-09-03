@@ -1,6 +1,6 @@
-// === Module 7960: parsePollResultSystemMessageEmbed ===
+// === Module 7963: parsePollResultSystemMessageEmbed ===
 
-// Module 7960 (parsePollResultSystemMessageEmbed)
+// Module 7963 (parsePollResultSystemMessageEmbed)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/polls/parsePollResultSystemMessageEmbed.tsx");

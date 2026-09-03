@@ -1,10 +1,10 @@
-// === Module 15220: EmojiSquintingFaceWithTongueIcon ===
+// === Module 15235: EmojiSquintingFaceWithTongueIcon ===
 
-// Module 15220 (EmojiSquintingFaceWithTongueIcon)
+// Module 15235 (EmojiSquintingFaceWithTongueIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 709 */;
 import BaseIconImage from "BaseIconImage" /* 4196 */;
-import registerAsset from "registerAsset" /* 15221 */;
+import registerAsset from "registerAsset" /* 15236 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

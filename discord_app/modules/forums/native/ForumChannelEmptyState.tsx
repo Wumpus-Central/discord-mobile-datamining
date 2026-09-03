@@ -1,6 +1,6 @@
-// === Module 12528: ? ===
+// === Module 12540: ? ===
 
-// Module 12528
+// Module 12540
 import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 1362 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
 import Text from "Text" /* 4474 */;
@@ -26,9 +26,9 @@ const memoResult = importAllResult.memo((topViewHeight) => {
   items = [tmp.container, { marginBottom: rect.bottom + rect.top + num }];
   let obj2 = AccessibilityAnnouncer;
   if (obj2.isThemeLight(obj.useThemeContext().theme)) {
-    let tmp4Result = tmp4(12529);
+    let tmp4Result = tmp4(12541);
   } else {
-    tmp4Result = tmp4(12530);
+    tmp4Result = tmp4(12542);
   }
   obj = { source: tmp4Result, style: tmp.image };
   const items1 = [closure_5(closure_4, obj), , ];

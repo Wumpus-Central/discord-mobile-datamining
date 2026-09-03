@@ -1,6 +1,6 @@
-// === Module 16090: GameCommunityMultiGuildUpsellCard ===
+// === Module 16106: GameCommunityMultiGuildUpsellCard ===
 
-// Module 16090 (GameCommunityMultiGuildUpsellCard)
+// Module 16106 (GameCommunityMultiGuildUpsellCard)
 import ThemesDefault from "Themes" /* 709 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;

@@ -1,13 +1,13 @@
-// === Module 12092: DefaultState ===
+// === Module 12098: DefaultState ===
 
-// Module 12092 (DefaultState)
+// Module 12098 (DefaultState)
 import ThemesDefault from "Themes" /* 709 */;
-import registerAssetDefault from "registerAsset" /* 12096 */;
+import registerAssetDefault from "registerAsset" /* 12102 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_9 from "createGuildRecordFromRust" /* 1908 */;
-import closure_10 from "getSearchState" /* 12093 */;
+import closure_10 from "getSearchState" /* 12099 */;
 import ME from "ME" /* 673 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
@@ -38,7 +38,7 @@ function EmptyState(channel) {
   let obj = channel(586);
   const items = [closure_9];
   importDefault = obj.useStateFromStores(items, () => closure_1_9.getGuild(channel.getGuildId()));
-  obj1 = channel(12097);
+  obj1 = channel(12103);
   const canCreateOrAddGuildInDirectory = obj1.useCanCreateOrAddGuildInDirectory(channel);
   const intl = channel(1233).intl;
   if (canCreateOrAddGuildInDirectory) {

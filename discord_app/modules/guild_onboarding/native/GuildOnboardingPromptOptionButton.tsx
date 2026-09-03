@@ -1,12 +1,12 @@
-// === Module 5589: PromptOptionButton ===
+// === Module 5590: PromptOptionButton ===
 
-// Module 5589 (PromptOptionButton)
+// Module 5590 (PromptOptionButton)
 import ThemesDefault from "Themes" /* 709 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_6 from "maybeApplyNoTextColorForLightCustomTheme" /* 4470 */;
-import closure_7 from "getEmojiToGroupId" /* 5409 */;
+import closure_7 from "getEmojiToGroupId" /* 5410 */;
 import { EMOJI_URL_BASE_SIZE } from "set" /* 1924 */;
 import jsxProd from "jsxProd" /* 21 */;
 import { Easing } from "module_4217" /* 4217 */;
@@ -120,12 +120,12 @@ export default function PromptOptionButton(option) {
       return obj1;
     }
   }
-  obj = { selected, withTiming: option(4479).withTiming, Easing: option(4217).Easing, useReducedMotion: stateFromStores1, withSequence: option(4217).withSequence, withSpring: option(4927).withSpring };
+  obj = { selected, withTiming: option(4479).withTiming, Easing: option(4217).Easing, useReducedMotion: stateFromStores1, withSequence: option(4217).withSequence, withSpring: option(4928).withSpring };
   R.__closure = obj;
   R.__workletHash = 8281627194581;
   R.__initData = closure_13;
   const animatedStyle = obj2.useAnimatedStyle(R);
-  const tmp8 = selected(5590)(option.guildId);
+  const tmp8 = selected(5591)(option.guildId);
   closure_5 = tmp8;
   num = 0;
   if (null != tmp8) {
@@ -440,7 +440,7 @@ export default function PromptOptionButton(option) {
     const obj7 = { textEmojiStyle: null, fastImageStyle: null, src: null, name: null };
     ({ optionTextEmoji: obj24[0], optionImageEmoji: obj24[1] } = tmp);
     let emojiURL;
-    let tmp7Result = tmp7(5593);
+    let tmp7Result = tmp7(5594);
     if (null != stateFromStores) {
       tmp7Result = tmp7(1430);
       const obj8 = { id: null, animated: null, size: null };
@@ -477,7 +477,7 @@ export default function PromptOptionButton(option) {
   obj9[1] = items9;
   items8[1] = closure_10(closure_5, obj9);
   obj5[8] = items8;
-  const items10 = [closure_10(option(5076).PressableOpacity, obj5), , , ];
+  const items10 = [closure_10(option(5077).PressableOpacity, obj5), , , ];
   tmp44Result = null;
   if (num > 0) {
     const obj12 = { accessible: false, importantForAccessibility: "no-hide-descendants", accessibilityElementsHidden: true, style: null, children: null };
@@ -497,7 +497,7 @@ export default function PromptOptionButton(option) {
   const obj10 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: option.title };
   const tmp2Result9 = option(4205);
   const tmp43 = closure_5;
-  obj15[1] = callback2(option(5596).CheckmarkSmallIcon, { size: "xs", color: selected(709).colors.WHITE });
+  obj15[1] = callback2(option(5597).CheckmarkSmallIcon, { size: "xs", color: selected(709).colors.WHITE });
   items10[2] = callback2(selected(4217).View, obj15);
   if (canBeNew) {
     canBeNew = !selected;

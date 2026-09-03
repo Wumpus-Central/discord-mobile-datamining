@@ -1,7 +1,7 @@
-// === Module 12820: useCanDM ===
+// === Module 12832: useCanDM ===
 
-// Module 12820 (useCanDM)
-import closure_2 from "recountRelationshipTypes" /* 7412 */;
+// Module 12832 (useCanDM)
+import closure_2 from "recountRelationshipTypes" /* 7413 */;
 import closure_3 from "initialize" /* 4121 */;
 import closure_4 from "fetchFingerprint" /* 1215 */;
 import closure_5 from "trackCommunicationDisabled" /* 1991 */;

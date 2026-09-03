@@ -1,10 +1,10 @@
-// === Module 14499: UserProfileUpsellCard ===
+// === Module 14515: UserProfileUpsellCard ===
 
-// Module 14499 (UserProfileUpsellCard)
+// Module 14515 (UserProfileUpsellCard)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 709 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { Gradients } from "items" /* 7186 */;
+import { Gradients } from "items" /* 7187 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;
 
@@ -42,7 +42,7 @@ export default function UserProfileUpsellCard(headerText) {
     obj[0] = tmp.titleContainer;
     obj1 = { color: null, size: "xs" };
     obj1[0] = ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY;
-    const items3 = [tmp2(tmp3(8104).NitroWheelIcon, obj1), ];
+    const items3 = [tmp2(tmp3(8107).NitroWheelIcon, obj1), ];
     const obj2 = { variant: "heading-sm/bold", children: null };
     obj2[1] = headerText;
     items3[1] = tmp2(tmp3(4474).Text, obj2);

@@ -1,10 +1,10 @@
-// === Module 10030: GroupArrowDownIcon ===
+// === Module 10034: GroupArrowDownIcon ===
 
-// Module 10030 (GroupArrowDownIcon)
+// Module 10034 (GroupArrowDownIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 709 */;
 import BaseIconImage from "BaseIconImage" /* 4196 */;
-import registerAsset from "registerAsset" /* 10031 */;
+import registerAsset from "registerAsset" /* 10035 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

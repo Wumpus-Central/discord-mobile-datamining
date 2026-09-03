@@ -1,8 +1,8 @@
-// === Module 9675: useCanShowTooltip ===
+// === Module 9679: useCanShowTooltip ===
 
-// Module 9675 (useCanShowTooltip)
+// Module 9679 (useCanShowTooltip)
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "set" /* 9676 */;
+import closure_4 from "set" /* 9680 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/tooltip/useCanShowTooltip.tsx");

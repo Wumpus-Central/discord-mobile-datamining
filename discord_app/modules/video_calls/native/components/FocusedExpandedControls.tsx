@@ -1,20 +1,20 @@
-// === Module 10119: ExpandedControlItemIcon ===
+// === Module 10123: ExpandedControlItemIcon ===
 
-// Module 10119 (ExpandedControlItemIcon)
+// Module 10123 (ExpandedControlItemIcon)
 import noopAll from "noop" /* 19 */;
 import initialize from "initialize" /* 586 */;
 import ThemesDefault from "Themes" /* 709 */;
 import getSystemLocale from "getSystemLocale" /* 1233 */;
 import Button from "Button" /* 1296 */;
-import Form from "Form" /* 8372 */;
-import _handleToggleVideo from "_handleToggleVideo" /* 9796 */;
-import stopScreenshareDefault from "stopScreenshare" /* 10064 */;
-import VolumeSliderDefault from "VolumeSlider" /* 10091 */;
-import NOOP from "NOOP" /* 10108 */;
-import registerAssetDefault from "registerAsset" /* 10120 */;
-import registerAssetDefault2 from "registerAsset" /* 10121 */;
-import useMuteAwareLocalVolumeDefault from "useMuteAwareLocalVolume" /* 10122 */;
-import useDeafStatesDefault from "useDeafStates" /* 10123 */;
+import Form from "Form" /* 8376 */;
+import _handleToggleVideo from "_handleToggleVideo" /* 9800 */;
+import stopScreenshareDefault from "stopScreenshare" /* 10068 */;
+import VolumeSliderDefault from "VolumeSlider" /* 10095 */;
+import NOOP from "NOOP" /* 10112 */;
+import registerAssetDefault from "registerAsset" /* 10124 */;
+import registerAssetDefault2 from "registerAsset" /* 10125 */;
+import useMuteAwareLocalVolumeDefault from "useMuteAwareLocalVolume" /* 10126 */;
+import useDeafStatesDefault from "useDeafStates" /* 10127 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_5 from "reset" /* 4500 */;
 import closure_6 from "fetchFingerprint" /* 1215 */;
@@ -130,7 +130,7 @@ export const StreamVolumeItem = function StreamVolumeItem() {
   if (null != stateFromStores) {
     obj1 = { label: null };
     obj1[0] = tmp11;
-    tmp9Result = tmp9(tmp2(8372).FormRow, obj1);
+    tmp9Result = tmp9(tmp2(8376).FormRow, obj1);
   }
   return tmp9Result;
 };
@@ -163,7 +163,7 @@ export const DeafenButton = function DeafenButton(disabled) {
   }
   let obj = NOOP;
   const deafHandler = obj.createDeafHandler(useDeafStatesDefault(disabled.channel));
-  obj = { disabled: flag, onPress: deafHandler.onPress, iconSource: importDefault(deafHandler.deaf ? 10124 : 10125), label: null };
+  obj = { disabled: flag, onPress: deafHandler.onPress, iconSource: importDefault(deafHandler.deaf ? 10128 : 10129), label: null };
   const intl = tmp4(1233).intl;
   obj[3] = intl.string(getSystemLocale.t.wjcRFX);
   return callback(ExpandedControlItem, obj);

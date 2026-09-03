@@ -1,13 +1,13 @@
-// === Module 9495: ConfirmActivityGateContent ===
+// === Module 9499: ConfirmActivityGateContent ===
 
-// Module 9495 (ConfirmActivityGateContent)
+// Module 9499 (ConfirmActivityGateContent)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 709 */;
 import getSystemLocale from "getSystemLocale" /* 1233 */;
 import Button from "Button" /* 1296 */;
 import Text from "Text" /* 4474 */;
-import setDefault from "set" /* 4857 */;
-import SvgComponentDefault from "SvgComponent" /* 9496 */;
+import setDefault from "set" /* 4858 */;
+import SvgComponentDefault from "SvgComponent" /* 9500 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4478 */;

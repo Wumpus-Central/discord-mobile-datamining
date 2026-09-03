@@ -1,11 +1,11 @@
-// === Module 5486: ack ===
+// === Module 5487: ack ===
 
-// Module 5486 (ack)
+// Module 5487 (ack)
 import dispatcherDefault from "dispatcher" /* 706 */;
-import closure_2 from "rebuild" /* 5456 */;
+import closure_2 from "rebuild" /* 5457 */;
 import { isReadableType } from "createChannelRecord" /* 1390 */;
 import closure_4 from "ensureGuildLoaded" /* 1386 */;
-import closure_5 from "setIndex" /* 5487 */;
+import closure_5 from "setIndex" /* 5488 */;
 import closure_6 from "mergeGuildAvatar" /* 1921 */;
 import { CURRENT_APP_CONTEXT } from "ME" /* 673 */;
 
@@ -91,7 +91,7 @@ export const ackChannel = function ackChannel(channel, arg1) {
       tmpResult.dispatch(obj);
       const fromTimestampResult = tmpResult.fromTimestamp(Date.now());
     } else {
-      obj = { type: "CHANNEL_ACK", channelId: null, messageId: "y", immediate: "column", force: "hidden", context: "BULK_ACK", location: null };
+      obj = { type: "CHANNEL_ACK", channelId: null, messageId: "y", immediate: "has", force: null, context: "\u{1F60B}", location: 6 };
       obj[1] = id;
       obj[3] = true;
       obj[4] = true;

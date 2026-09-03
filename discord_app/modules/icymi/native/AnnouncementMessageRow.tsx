@@ -1,17 +1,17 @@
-// === Module 16308: AnnouncementMessageRowWrapper ===
+// === Module 16327: AnnouncementMessageRowWrapper ===
 
-// Module 16308 (AnnouncementMessageRowWrapper)
+// Module 16327 (AnnouncementMessageRowWrapper)
 import ThemesDefault from "Themes" /* 709 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_5 from "ensureGuildLoaded" /* 1386 */;
 import closure_6 from "createGuildRecordFromRust" /* 1908 */;
 import closure_7 from "markAllUserIdListsStale" /* 4130 */;
-import closure_8 from "updateUserGuildSettingsInternal" /* 4701 */;
+import closure_8 from "updateUserGuildSettingsInternal" /* 4702 */;
 import closure_9 from "mergeGuildAvatar" /* 1921 */;
-import { ITEM_PADDING } from "ITEM_PADDING" /* 16309 */;
+import { ITEM_PADDING } from "ITEM_PADDING" /* 16328 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createICYMIStyles from "createICYMIStyles" /* 16271 */;
+import createICYMIStyles from "createICYMIStyles" /* 16290 */;
 
 const require = arg1;
 let c3 = importAllResult;

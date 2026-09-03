@@ -1,6 +1,6 @@
-// === Module 8039: SnowflakeSelectDefaultValueTypes ===
+// === Module 8042: SnowflakeSelectDefaultValueTypes ===
 
-// Module 8039 (SnowflakeSelectDefaultValueTypes)
+// Module 8042 (SnowflakeSelectDefaultValueTypes)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/SnowflakeSelectDefaultValueTypes.tsx");

@@ -1,9 +1,9 @@
-// === Module 16715: getRestrictedHiddenMediaCount ===
+// === Module 16735: getRestrictedHiddenMediaCount ===
 
-// Module 16715 (getRestrictedHiddenMediaCount)
+// Module 16735 (getRestrictedHiddenMediaCount)
 import set from "set" /* 2 */;
-import getStickerExtensionFromFormatType from "getStickerExtensionFromFormatType" /* 4852 */;
-import getForwardInfo from "getForwardInfo" /* 7872 */;
+import getStickerExtensionFromFormatType from "getStickerExtensionFromFormatType" /* 4853 */;
+import getForwardInfo from "getForwardInfo" /* 7875 */;
 
 let result = set.fileFinishedImporting("modules/message_request/getRestrictedHiddenMediaCount.tsx");
 

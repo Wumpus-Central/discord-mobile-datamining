@@ -1,6 +1,6 @@
-// === Module 12291: useGuildPowerupNewPerkMarketingVersion ===
+// === Module 12303: useGuildPowerupNewPerkMarketingVersion ===
 
-// Module 12291 (useGuildPowerupNewPerkMarketingVersion)
+// Module 12303 (useGuildPowerupNewPerkMarketingVersion)
 import closure_2 from "noop" /* 19 */;
 import closure_3 from "createGuildRecordFromRust" /* 1908 */;
 import closure_4 from "getUncachedChannelPermissions" /* 4120 */;
@@ -59,7 +59,7 @@ export default function useGuildPowerupNewPerkMarketingVersion(guildId) {
           if (obj.canUseMobileServerTagSettings(guildId)) {
             return stateFromStores1.GUILD_TAG;
           }
-          obj = guildId(9753);
+          obj = guildId(9757);
         }
       }
     }

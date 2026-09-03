@@ -1,6 +1,6 @@
-// === Module 9536: useSelectedParticipant ===
+// === Module 9540: useSelectedParticipant ===
 
-// Module 9536 (useSelectedParticipant)
+// Module 9540 (useSelectedParticipant)
 import closure_2 from "getParticipants" /* 4494 */;
 
 const require = arg1;
