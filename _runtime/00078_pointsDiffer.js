@@ -1,7 +1,7 @@
 // === Module 78: pointsDiffer ===
 
 // Module 78 (pointsDiffer)
-let closure_0 = { x: "disabled", y: "Date" };
+let closure_0 = { x: "Array", y: "PX_16" };
 arg5.default = function pointsDiffer(arg0, arg1) {
   let point = arg0;
   if (!arg0) {

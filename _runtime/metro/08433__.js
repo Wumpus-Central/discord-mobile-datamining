@@ -1,31 +1,29 @@
 // === Module 8433: ? ===
 
 // Module 8433
-import colorPropType from "colorPropType" /* 8417 */;
-import _mod8424 from "module_8424" /* 8424 */;
+import colorPropType from "colorPropType" /* 8421 */;
+import _mod8429 from "module_8429" /* 8429 */;
+import merged12 from "merged1" /* 8430 */;
+import merged22 from "merged2" /* 8431 */;
 import emptyFunction from "emptyFunction" /* 4307 */;
 
-let obj = {};
-const module_8424 = Object.assign(_mod8424);
-obj.color = colorPropType;
-obj.fontFamily = emptyFunction.string;
-obj.fontSize = emptyFunction.number;
-obj.fontStyle = emptyFunction.oneOf(["normal", "italic"]);
-obj.fontWeight = emptyFunction.oneOf(["normal", "bold", "100", "200", "300", "400", "500", "600", "700", "800", "900"]);
-obj.fontVariant = emptyFunction.arrayOf(emptyFunction.oneOf(["small-caps", "oldstyle-nums", "lining-nums", "tabular-nums", "proportional-nums"]));
-obj = { width: emptyFunction.number, height: emptyFunction.number };
-obj.textShadowOffset = emptyFunction.shape(obj);
-obj.textShadowRadius = emptyFunction.number;
-obj.textShadowColor = colorPropType;
-obj.letterSpacing = emptyFunction.number;
-obj.lineHeight = emptyFunction.number;
-obj.textAlign = emptyFunction.oneOf(["auto", "left", "right", "center", "justify"]);
-obj.textAlignVertical = emptyFunction.oneOf(["auto", "top", "bottom", "center"]);
-obj.includeFontPadding = emptyFunction.bool;
-obj.textDecorationLine = emptyFunction.oneOf(["none", "underline", "line-through", "underline line-through"]);
-obj.textDecorationStyle = emptyFunction.oneOf(["solid", "double", "dotted", "dashed"]);
-obj.textDecorationColor = colorPropType;
-obj.textTransform = emptyFunction.oneOf(["none", "capitalize", "uppercase", "lowercase"]);
-obj.writingDirection = emptyFunction.oneOf(["auto", "ltr", "rtl"]);
+const obj = {};
+const module_8429 = Object.assign(_mod8429);
+const merged1 = Object.assign(merged12);
+const merged2 = Object.assign(merged22);
+obj.resizeMode = emptyFunction.oneOf(["center", "contain", "cover", "repeat", "stretch"]);
+obj.backfaceVisibility = emptyFunction.oneOf(["visible", "hidden"]);
+obj.backgroundColor = colorPropType;
+obj.borderColor = colorPropType;
+obj.borderWidth = emptyFunction.number;
+obj.borderRadius = emptyFunction.number;
+obj.overflow = emptyFunction.oneOf(["visible", "hidden"]);
+obj.tintColor = colorPropType;
+obj.opacity = emptyFunction.number;
+obj.overlayColor = emptyFunction.string;
+obj.borderTopLeftRadius = emptyFunction.number;
+obj.borderTopRightRadius = emptyFunction.number;
+obj.borderBottomLeftRadius = emptyFunction.number;
+obj.borderBottomRightRadius = emptyFunction.number;
 
 export default obj;

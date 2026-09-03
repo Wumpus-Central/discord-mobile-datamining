@@ -3,7 +3,7 @@
 // Module 8323 (_isNativeReflectConstruct)
 import noopAll from "noop" /* 19 */;
 import _inheritsDefault from "_inherits" /* 98 */;
-import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 8274 */;
+import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 8268 */;
 import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 8324 */;
 import closure_3 from "_classCallCheck" /* 41 */;
 import closure_4 from "_possibleConstructorReturn" /* 93 */;
@@ -11,7 +11,7 @@ import closure_5 from "_getPrototypeOf" /* 95 */;
 import importDefaultResult from "_createClass" /* 42 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const Line = arg1;
+const ForeignObject = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -32,12 +32,12 @@ function _isNativeReflectConstruct() {
   }
 }
 noopAll;
-class Line {
+class ForeignObject {
   constructor() {
     self = this;
-    tmp = closure_3(this, Line);
+    tmp = closure_3(this, ForeignObject);
     tmp2 = closure_5;
-    obj = closure_5(Line);
+    obj = closure_5(ForeignObject);
     tmp3 = closure_4;
     if (_isNativeReflectConstruct()) {
       tmp7 = globalThis;
@@ -52,37 +52,31 @@ class Line {
     return tmp3(self, constructResult);
   }
 }
-_inheritsDefault(Line, _isNativeReflectConstructDefault);
+_inheritsDefault(ForeignObject, _isNativeReflectConstructDefault);
 const items = [
   {
     key: "render",
     value: function render() {
       const self = this;
       const props = this.props;
-      let obj = {};
-      ({ x1, y1, x2, y2 } = props);
-      const merged = Object.assign(self(8265).extract(this, props));
-      obj.x1 = x1;
-      obj.y1 = y1;
-      obj.x2 = x2;
-      obj.y2 = y2;
+      let obj = { x: props.x, y: props.y, width: props.width, height: props.height };
       obj = {
         ref(arg0) {
           return self.refMethod(arg0);
         }
       };
-      const obj2 = self(8265);
+      const tmp = __INTERNAL_VIEW_CONFIGDefault;
+      const merged = Object.assign(self(8269).withoutXY(this, props));
       const merged1 = Object.assign(obj);
-      return jsx(__INTERNAL_VIEW_CONFIGDefault, {
-        ref(arg0) {
-          return self.refMethod(arg0);
-        }
-      });
+      obj.children = props.children;
+      return <tmp ref={function ref(arg0) {
+        return self.refMethod(arg0);
+      }} />;
     }
   }
 ];
-const importDefaultResultResult = importDefaultResult(Line, items);
-importDefaultResultResult.displayName = "Line";
-importDefaultResultResult.defaultProps = { x1: 0, y1: 0, x2: 0, y2: 0 };
+const importDefaultResultResult = importDefaultResult(ForeignObject, items);
+importDefaultResultResult.displayName = "ForeignObject";
+importDefaultResultResult.defaultProps = { x: "0%", y: "0%", width: "100%", height: "100%" };
 
 export default importDefaultResultResult;

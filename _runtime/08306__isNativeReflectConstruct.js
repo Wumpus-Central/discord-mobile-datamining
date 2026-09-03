@@ -3,7 +3,7 @@
 // Module 8306 (_isNativeReflectConstruct)
 import noopDefault from "noop" /* 19 */;
 import _inheritsDefault from "_inherits" /* 98 */;
-import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 8289 */;
+import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 8293 */;
 import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 8307 */;
 import closure_3 from "_classCallCheck" /* 41 */;
 import closure_4 from "_possibleConstructorReturn" /* 93 */;
@@ -11,7 +11,7 @@ import closure_5 from "_getPrototypeOf" /* 95 */;
 import importDefaultResult from "_createClass" /* 42 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const FeMerge = arg1;
+const FeOffset = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -32,12 +32,12 @@ function _isNativeReflectConstruct() {
   }
 }
 noopDefault;
-class FeMerge {
+class FeOffset {
   constructor() {
     self = this;
-    tmp = closure_3(this, FeMerge);
+    tmp = closure_3(this, FeOffset);
     tmp2 = closure_5;
-    obj = closure_5(FeMerge);
+    obj = closure_5(FeOffset);
     tmp3 = closure_4;
     if (_isNativeReflectConstruct()) {
       tmp7 = globalThis;
@@ -52,30 +52,33 @@ class FeMerge {
     return tmp3(self, constructResult);
   }
 }
-_inheritsDefault(FeMerge, _isNativeReflectConstructDefault);
+_inheritsDefault(FeOffset, _isNativeReflectConstructDefault);
 let obj = {
   key: "render",
   value: function render() {
     const self = this;
+    const merged = Object.assign(this.props);
     const obj = {
       ref(arg0) {
         return self.refMethod(arg0);
       }
     };
     const tmp = __INTERNAL_VIEW_CONFIGDefault;
-    const merged = Object.assign(self(8288).extractFilter(this.props));
-    const obj2 = self(8288);
-    const merged1 = Object.assign(self(8288).extractFeMerge(this.props, this));
+    const merged1 = Object.assign(self(8292).extractFilter(this.props));
+    const obj2 = self(8292);
+    const merged2 = Object.assign(self(8292).extractIn(this.props));
     return <tmp ref={function ref(arg0) {
       return self.refMethod(arg0);
     }} />;
   }
 };
 const items = [obj];
-const importDefaultResultResult = importDefaultResult(FeMerge, items);
-importDefaultResultResult.displayName = "FeMerge";
+const importDefaultResultResult = importDefaultResult(FeOffset, items);
+importDefaultResultResult.displayName = "FeOffset";
 obj = {};
 let merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
+obj.dx = 0;
+obj.dy = 0;
 importDefaultResultResult.defaultProps = obj;
 
 export default importDefaultResultResult;

@@ -239,7 +239,7 @@ const items = [
       };
       let obj2 = self(27);
       if (obj2.shouldPressibilityUseW3CPointerEventsForHover()) {
-        obj = { onPointerEnter: "disabled", onPointerLeave: "Date" };
+        obj = { onPointerEnter: "Array", onPointerLeave: "PX_16" };
         const _config = this._config;
         const onHoverIn = _config.onHoverIn;
         const onHoverOut = _config.onHoverOut;

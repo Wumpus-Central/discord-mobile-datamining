@@ -1,12 +1,13 @@
 // === Module 7195: useForceUpdate ===
 
 // Module 7195 (useForceUpdate)
-import closure_0 from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
+import useForceUpdateDefault from "useForceUpdate" /* 7196 */;
+import useStableMemoDefault from "useStableMemo" /* 7197 */;
+import areHookInputsEqualDefault from "areHookInputsEqual" /* 7198 */;
+import useLazyValueDefault from "useLazyValue" /* 7199 */;
 
-({ useCallback: closure_1, useState: obj1 } = noop);
 
-export default function useForceUpdate() {
-  callback = callback(callback3({}), 2)[1];
-  return callback2(() => callback({}), []);
-};
+export const useForceUpdate = useForceUpdateDefault;
+export const useStableMemo = useStableMemoDefault;
+export const useLazyValue = useLazyValueDefault;
+export const areHookInputsEqual = areHookInputsEqualDefault;

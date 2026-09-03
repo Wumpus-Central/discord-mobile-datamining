@@ -4,4 +4,4 @@
 import registerAsset from "registerAsset" /* 1240 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/premium/gifting", scales: [1], hash: "f8ecd93dae35aa0b00715df1380bf365", name: "PremiumGifting.compiled.messages", type: "jsona" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/premium/gifting", scales: [1], hash: "4fbfb339c9c465d1be5655d13a64cb22", name: "PremiumGifting.compiled.messages", type: "jsona" });

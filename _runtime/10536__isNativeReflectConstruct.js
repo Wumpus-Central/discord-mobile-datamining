@@ -1,13 +1,15 @@
 // === Module 10536: _isNativeReflectConstruct ===
 
 // Module 10536 (_isNativeReflectConstruct)
-import _isNativeReflectConstruct2 from "_isNativeReflectConstruct" /* 10467 */;
-import NLMergeDateTimeRefiner from "_classCallCheck" /* 41 */;
+import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10457 */;
+import now from "now" /* 10474 */;
+import PTCasualDateParser from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import closure_1 from "_possibleConstructorReturn" /* 93 */;
 import closure_2 from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
+let self = this;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -27,51 +29,123 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-let fn = this;
+let self2 = this;
 if (this) {
-  fn = this.__importDefault;
+  self2 = self.__createBinding;
 }
-if (!fn) {
-  fn = (__esModule) => {
-    if (!__esModule) {
-      const obj = { default: null };
-      obj[0] = __esModule;
-      let tmp = obj;
-    } else {
-      tmp = __esModule;
-    }
-    return tmp;
-  };
-}
-class NLMergeDateTimeRefiner {
-  constructor() {
-    self = this;
-    tmp = NLMergeDateTimeRefiner(this, NLMergeDateTimeRefiner);
-    tmp2 = closure_2;
-    obj = closure_2(NLMergeDateTimeRefiner);
-    tmp3 = closure_1;
-    if (_isNativeReflectConstruct()) {
-      tmp7 = globalThis;
-      _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
-    } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
-    }
-    return tmp3(self, constructResult);
+if (self2) {
+  let __setModuleDefault = self;
+  if (self) {
+    __setModuleDefault = self.__setModuleDefault;
   }
-}
-_inherits(NLMergeDateTimeRefiner, fn(_isNativeReflectConstruct2).default);
-const items = [
-  {
-    key: "patternBetween",
-    value: function patternBetween() {
-      const regExp = new RegExp("^\\s*(om|na|voor|in de|,|-)?\\s*$");
-      return regExp;
+  if (__setModuleDefault) {
+    let fn = self;
+    if (self) {
+      fn = self.__importStar;
     }
+    if (!fn) {
+      function u(arg0) {
+        let fn = Object.getOwnPropertyNames;
+        if (!fn) {
+          fn = (obj) => {
+            const items = [];
+            for (const key10005 in arg0) {
+              let tmp2 = key10005;
+              let _Object = Object;
+              let call = hasOwnProperty.call;
+              if (typeof call === "unknown") {
+                let hasOwnPropertyResult = hasOwnProperty(key10005);
+              } else {
+                hasOwnPropertyResult = call(arg0, key10005);
+              }
+              if (!hasOwnPropertyResult) {
+                continue;
+              } else {
+                items[items.length] = key10005;
+                continue;
+              }
+              continue;
+            }
+            return items;
+          };
+        }
+        return fn(arg0);
+      }
+      fn = (__esModule) => {
+        if (__esModule) {
+          if (__esModule.__esModule) {
+            return __esModule;
+          }
+        }
+        const obj = {};
+        if (null != __esModule) {
+          const arr = u(__esModule);
+          for (let num = 0; num < arr.length; num = num + 1) {
+            let tmp2 = num;
+            if ("default" !== arr[num]) {
+              let tmp3 = self2;
+              let tmp4 = self2(obj, __esModule, arr[num]);
+            }
+          }
+        }
+        __setModuleDefault(obj, __esModule);
+        return obj;
+      };
+    }
+    const _Object3 = Object;
+    let closure_7 = fn(now);
+    class PTCasualDateParser {
+      constructor() {
+        self = this;
+        tmp = PTCasualDateParser(this, PTCasualDateParser);
+        tmp2 = closure_2;
+        obj = closure_2(PTCasualDateParser);
+        tmp3 = closure_1;
+        if (_isNativeReflectConstruct()) {
+          tmp7 = globalThis;
+          _Reflect = Reflect;
+          tmp8 = arguments;
+          constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+        } else {
+          tmp4 = arguments;
+          tmp5 = arguments;
+          constructResult = obj(...arguments);
+        }
+        return tmp3(self, constructResult);
+      }
+    }
+    _inherits(PTCasualDateParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+    let obj = { key: "innerPattern", value: null };
+    obj[1] = function innerPattern(arg0) {
+      return /(agora|hoje|amanha|amanhã|ontem)(?=\W|$)/i;
+    };
+    let items = [obj, ];
+    obj = { key: "innerExtract", value: null };
+    obj[1] = function innerExtract(reference) {
+      const formatted = arg1[0].toLowerCase();
+      if ("agora" === formatted) {
+        return closure_7.now(reference.reference);
+      } else if ("hoje" === formatted) {
+        return closure_7.today(reference.reference);
+      } else {
+        if ("amanha" !== formatted) {
+          if ("amanh\u00E3" !== formatted) {
+            if ("ontem" === formatted) {
+              return closure_7.yesterday(reference.reference);
+            } else {
+              return tmp2;
+            }
+          }
+        }
+        return closure_7.tomorrow(reference.reference);
+      }
+      const str = arg1[0];
+    };
+    items[1] = obj;
+    exports.default = _createClass(PTCasualDateParser, items);
+  } else {
+    const _Object2 = Object;
   }
-];
-
-export default _createClass(NLMergeDateTimeRefiner, items);
+} else {
+  let _Object = Object;
+}

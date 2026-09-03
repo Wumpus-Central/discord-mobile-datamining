@@ -4,4 +4,4 @@
 import registerAsset from "registerAsset" /* 1240 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Illustration/native/redesign/generated/images", width: 238, height: 96, scales: [2, 3], hash: "b1d330bd5ccfa2833454c026755830a6", name: "img_stream_failed_darker", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/application_streaming", width: 300, height: 120, scales: [2, 3], hash: "a3a7de10a959d0177fccd05afcb73752", name: "img_stream_ended_dark", type: "png" });

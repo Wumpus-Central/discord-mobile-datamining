@@ -1,30 +1,10 @@
 // === Module 17066: ? ===
 
 // Module 17066
-globalThis.IntlMessageFormat.__addLocaleData({
-  locale: "it",
-  pluralRuleFunction(arg0, arg1) {
-    if (arg1) {
-      if (11 != arg0) {
-        if (8 != arg0) {
-          if (80 != arg0) {
-            let str4 = "other";
-          }
-          let str3 = str4;
-        }
-      }
-      str4 = "many";
-    } else {
-      str3 = "other";
-      if (1 == arg0) {
-        str3 = "other";
-        if (!str.split(".")[1]) {
-          str3 = "one";
-        }
-      }
-    }
-    return str3;
-  }
-});
-globalThis.IntlMessageFormat.__addLocaleData({ locale: "it-CH", parentLocale: "it" });
-globalThis.IntlMessageFormat.__addLocaleData({ locale: "it-SM", parentLocale: "it" });
+import MessageFormat from "MessageFormat" /* 17067 */;
+import module_573 from "module_573" /* 573 */;
+
+const _default = MessageFormat.default;
+_default.default = _default;
+
+export default _default;

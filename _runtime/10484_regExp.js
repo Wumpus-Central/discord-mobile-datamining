@@ -1,13 +1,15 @@
 // === Module 10484: regExp ===
 
 // Module 10484 (regExp)
-import ExtractTimezoneOffsetRefiner from "_classCallCheck" /* 41 */;
+import WEEKDAY_DICTIONARY from "WEEKDAY_DICTIONARY" /* 10449 */;
+import closure_2 from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 
-const regExp = new RegExp("^\\s*(?:\\(?(?:GMT|UTC)\\s?)?([+-])(\\d{1,2})(?::?(\\d{2}))?\\)?", "i");
-class ExtractTimezoneOffsetRefiner {
+const ENExtractYearSuffixRefiner = require;
+const regExp = new RegExp("^\\s*(" + WEEKDAY_DICTIONARY.YEAR_PATTERN + ")", "i");
+class ENExtractYearSuffixRefiner {
   constructor() {
-    tmp = ExtractTimezoneOffsetRefiner(this, ExtractTimezoneOffsetRefiner);
+    tmp = closure_2(this, ENExtractYearSuffixRefiner);
     return;
   }
 }
@@ -17,37 +19,28 @@ const items = [
     value: function refine(arg0, arr) {
       closure_0 = arg0;
       const item = arr.forEach((start) => {
-        const text = start;
+        const lib = start;
         start = start.start;
-        if (!start.isCertain("timezoneOffset")) {
-          let obj = text;
-          const match = closure_1_1.exec(text.text.substring(start.index + start.text.length));
+        if (start.isDateWithUnknownYear()) {
+          let obj = lib;
+          const match = closure_1_3.exec(lib.text.substring(start.index + start.text.length));
           if (match) {
-            obj.debug(() => {
-              console.log("Extracting timezone: '" + match[0] + "' into : " + closure_0);
-            });
-            const _parseInt = parseInt;
-            let str2 = match[3];
-            const result = 60 * parseInt(match[2]);
-            if (!str2) {
-              str2 = "0";
-            }
-            const sum = result + parseInt(str2);
-            if (sum <= 840) {
-              let tmp7 = sum;
-              if ("-" === match[1]) {
-                tmp7 = -sum;
-              }
+            if (str2.trim().length > 3) {
+              obj.debug(() => {
+                console.log("Extracting year: '" + match[0] + "' into : " + closure_0);
+              });
+              const parseYearResult = lib(closure_1_1[2]).parseYear(match[1]);
               if (null != start.end) {
                 const end = start.end;
-                obj = end.assign("timezoneOffset", tmp7);
+                obj = end.assign("year", parseYearResult);
               }
               const start2 = start.start;
-              obj = start2.assign("timezoneOffset", tmp7);
+              obj = start2.assign("year", parseYearResult);
               start.text = start.text + match[0];
             }
+            str2 = match[0];
           }
-          const str = text.text;
+          const str = lib.text;
         }
       });
       return arr;
@@ -55,4 +48,4 @@ const items = [
   }
 ];
 
-export default _createClass(ExtractTimezoneOffsetRefiner, items);
+export default _createClass(ENExtractYearSuffixRefiner, items);

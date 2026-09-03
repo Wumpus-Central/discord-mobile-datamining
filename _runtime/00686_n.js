@@ -5,7 +5,7 @@ let fn = function n() {
   let length;
   let length2;
   let obj = {};
-  let f106830 = obj;
+  let f107047 = obj;
   let items = ["Boolean", "Number", "String", "Function", "Array", "Date", "RegExp", "Undefined", "Null"];
   let num = 0;
   if (0 < items.length) {
@@ -107,7 +107,7 @@ let fn = function n() {
         str4 = "Trying to call a non-function";
         throwTypeErrorResult = HermesBuiltin.throwTypeError();
       }
-      tmp5 = f106830;
+      tmp5 = f107047;
       toString = Object.prototype.toString;
       call = toString.call;
       tmp6 = tmp5[typeof call === "unknown" ? toString(first) : call(toString, first)] || "object";
@@ -217,7 +217,7 @@ let fn = function n() {
       }
       toString = Object.prototype.toString;
       call = toString.call;
-      tmp = f106830;
+      tmp = f107047;
       tmp2 = tmp[typeof call === "unknown" ? toString(hex) : call(toString, hex)] || "object";
       if ("function" == tmp2) {
         hexResult = self.hex();
@@ -351,7 +351,7 @@ let fn = function n() {
         _Object = Object;
         toString = Object.prototype.toString;
         call = toString.call;
-        tmp2 = f106830;
+        tmp2 = f107047;
         tmp4 = tmp2[typeof call === "unknown" ? toString(arg0) : call(toString, arg0)] || "object";
         str = "number";
         if ("number" === tmp4) {
@@ -683,7 +683,7 @@ let fn = function n() {
             throwTypeErrorResult = HermesBuiltin.throwTypeError();
           }
           tmp12 = arg1;
-          tmp13 = f106830;
+          tmp13 = f107047;
           tmp14 = globalThis;
           _Object = Object;
           toString = Object.prototype.toString;
@@ -973,8 +973,8 @@ let fn = function n() {
         const str3 = items[diff1];
       }
       str = formatted;
-      const tmp7 = f106830;
-      tmp9 = f106830[typeof call === "unknown" ? toString(items[diff1]) : call(toString, items[diff1])] || "object";
+      const tmp7 = f107047;
+      tmp9 = f107047[typeof call === "unknown" ? toString(items[diff1]) : call(toString, items[diff1])] || "object";
     }
     if (!str) {
       str = "lsa";
@@ -1184,8 +1184,8 @@ let fn = function n() {
         const str3 = items[diff1];
       }
       str = formatted;
-      const tmp7 = f106830;
-      tmp9 = f106830[typeof call === "unknown" ? toString(items[diff1]) : call(toString, items[diff1])] || "object";
+      const tmp7 = f107047;
+      tmp9 = f107047[typeof call === "unknown" ? toString(items[diff1]) : call(toString, items[diff1])] || "object";
     }
     if (!str) {
       str = "rgb";
@@ -1262,8 +1262,8 @@ let fn = function n() {
             return "css";
           }
         }
-        const tmp6 = f106830;
-        tmp8 = f106830[typeof call === "unknown" ? toString(arg0) : call(toString, arg0)] || "object";
+        const tmp6 = f107047;
+        tmp8 = f107047[typeof call === "unknown" ? toString(arg0) : call(toString, arg0)] || "object";
       }
     }
   });
@@ -1478,8 +1478,8 @@ let fn = function n() {
         const str3 = items[diff1];
       }
       str = formatted;
-      const tmp11 = f106830;
-      tmp13 = f106830[typeof call === "unknown" ? toString(items[diff1]) : call(toString, items[diff1])] || "object";
+      const tmp11 = f107047;
+      tmp13 = f107047[typeof call === "unknown" ? toString(items[diff1]) : call(toString, items[diff1])] || "object";
     }
     if (!str) {
       str = "auto";
@@ -1601,8 +1601,8 @@ let fn = function n() {
             return "hex";
           }
         }
-        const tmp6 = f106830;
-        tmp8 = f106830[typeof call === "unknown" ? toString(arg0) : call(toString, arg0)] || "object";
+        const tmp6 = f107047;
+        tmp8 = f107047[typeof call === "unknown" ? toString(arg0) : call(toString, arg0)] || "object";
       }
     }
   });
@@ -2395,8 +2395,8 @@ let fn = function n() {
             return "named";
           }
         }
-        const tmp6 = f106830;
-        tmp8 = f106830[typeof call === "unknown" ? toString(arg0) : call(toString, arg0)] || "object";
+        const tmp6 = f107047;
+        tmp8 = f107047[typeof call === "unknown" ? toString(arg0) : call(toString, arg0)] || "object";
       }
     }
   });
@@ -2475,8 +2475,8 @@ let fn = function n() {
             }
           }
         }
-        const tmp6 = f106830;
-        tmp8 = f106830[typeof call === "unknown" ? toString(first) : call(toString, first)] || "object";
+        const tmp6 = f107047;
+        tmp8 = f107047[typeof call === "unknown" ? toString(first) : call(toString, first)] || "object";
       }
     }
   });
@@ -2966,12 +2966,12 @@ let fn = function n() {
       const _Object3 = Object;
       const call2 = toString2.call;
       tmp13 = type$p;
-      tmp17 = f106830[typeof call === "unknown" ? toString(arg0) : call(toString, arg0)] || "object";
+      tmp17 = f107047[typeof call === "unknown" ? toString(arg0) : call(toString, arg0)] || "object";
       let obj2 = arg1;
       if ("object" !== tmp21) {
         obj2 = Color(arg1);
       }
-      tmp21 = f106830[typeof call2 === "unknown" ? toString2(arg1) : call2(toString2, arg1)] || "object";
+      tmp21 = f107047[typeof call2 === "unknown" ? toString2(arg1) : call2(toString2, arg1)] || "object";
       const obj3 = tmp5[first](obj, obj2, num);
       const alphaResult = obj.alpha();
       return obj3.alpha(alphaResult + num * (obj2.alpha() - obj.alpha()));
@@ -3729,77 +3729,77 @@ let fn = function n() {
     }
     tmp = blend;
   }
-  f106830 = (arg0, arg1) => {
-    const items = [f106830(arg0[0], arg1[0]), f106830(arg0[1], arg1[1]), f106830(arg0[2], arg1[2])];
+  f107047 = (arg0, arg1) => {
+    const items = [f107047(arg0[0], arg1[0]), f107047(arg0[1], arg1[1]), f107047(arg0[2], arg1[2])];
     return items;
   };
   blend.normal = (arg0, arg1) => {
     obj = chroma$k(arg1);
     const rgbResult = chroma$k(arg1).rgb();
-    return chroma$k.rgb(f106830(rgbResult, chroma$k(arg0).rgb()));
+    return chroma$k.rgb(f107047(rgbResult, chroma$k(arg0).rgb()));
   };
-  f106830 = (arg0, arg1) => {
-    const items = [f106830(arg0[0], arg1[0]), f106830(arg0[1], arg1[1]), f106830(arg0[2], arg1[2])];
+  f107047 = (arg0, arg1) => {
+    const items = [f107047(arg0[0], arg1[0]), f107047(arg0[1], arg1[1]), f107047(arg0[2], arg1[2])];
     return items;
   };
   blend.multiply = (arg0, arg1) => {
     obj = chroma$k(arg1);
     const rgbResult = chroma$k(arg1).rgb();
-    return chroma$k.rgb(f106830(rgbResult, chroma$k(arg0).rgb()));
+    return chroma$k.rgb(f107047(rgbResult, chroma$k(arg0).rgb()));
   };
-  f106830 = (arg0, arg1) => {
-    const items = [f106830(arg0[0], arg1[0]), f106830(arg0[1], arg1[1]), f106830(arg0[2], arg1[2])];
+  f107047 = (arg0, arg1) => {
+    const items = [f107047(arg0[0], arg1[0]), f107047(arg0[1], arg1[1]), f107047(arg0[2], arg1[2])];
     return items;
   };
   blend.screen = (arg0, arg1) => {
     obj = chroma$k(arg1);
     const rgbResult = chroma$k(arg1).rgb();
-    return chroma$k.rgb(f106830(rgbResult, chroma$k(arg0).rgb()));
+    return chroma$k.rgb(f107047(rgbResult, chroma$k(arg0).rgb()));
   };
-  f106830 = (arg0, arg1) => {
-    const items = [f106830(arg0[0], arg1[0]), f106830(arg0[1], arg1[1]), f106830(arg0[2], arg1[2])];
+  f107047 = (arg0, arg1) => {
+    const items = [f107047(arg0[0], arg1[0]), f107047(arg0[1], arg1[1]), f107047(arg0[2], arg1[2])];
     return items;
   };
   blend.overlay = (arg0, arg1) => {
     obj = chroma$k(arg1);
     const rgbResult = chroma$k(arg1).rgb();
-    return chroma$k.rgb(f106830(rgbResult, chroma$k(arg0).rgb()));
+    return chroma$k.rgb(f107047(rgbResult, chroma$k(arg0).rgb()));
   };
-  f106830 = (arg0, arg1) => {
-    const items = [f106830(arg0[0], arg1[0]), f106830(arg0[1], arg1[1]), f106830(arg0[2], arg1[2])];
+  f107047 = (arg0, arg1) => {
+    const items = [f107047(arg0[0], arg1[0]), f107047(arg0[1], arg1[1]), f107047(arg0[2], arg1[2])];
     return items;
   };
   blend.darken = (arg0, arg1) => {
     obj = chroma$k(arg1);
     const rgbResult = chroma$k(arg1).rgb();
-    return chroma$k.rgb(f106830(rgbResult, chroma$k(arg0).rgb()));
+    return chroma$k.rgb(f107047(rgbResult, chroma$k(arg0).rgb()));
   };
-  f106830 = (arg0, arg1) => {
-    const items = [f106830(arg0[0], arg1[0]), f106830(arg0[1], arg1[1]), f106830(arg0[2], arg1[2])];
+  f107047 = (arg0, arg1) => {
+    const items = [f107047(arg0[0], arg1[0]), f107047(arg0[1], arg1[1]), f107047(arg0[2], arg1[2])];
     return items;
   };
   blend.lighten = (arg0, arg1) => {
     obj = chroma$k(arg1);
     const rgbResult = chroma$k(arg1).rgb();
-    return chroma$k.rgb(f106830(rgbResult, chroma$k(arg0).rgb()));
+    return chroma$k.rgb(f107047(rgbResult, chroma$k(arg0).rgb()));
   };
-  f106830 = (arg0, arg1) => {
-    const items = [f106830(arg0[0], arg1[0]), f106830(arg0[1], arg1[1]), f106830(arg0[2], arg1[2])];
+  f107047 = (arg0, arg1) => {
+    const items = [f107047(arg0[0], arg1[0]), f107047(arg0[1], arg1[1]), f107047(arg0[2], arg1[2])];
     return items;
   };
   blend.dodge = (arg0, arg1) => {
     obj = chroma$k(arg1);
     const rgbResult = chroma$k(arg1).rgb();
-    return chroma$k.rgb(f106830(rgbResult, chroma$k(arg0).rgb()));
+    return chroma$k.rgb(f107047(rgbResult, chroma$k(arg0).rgb()));
   };
-  f106830 = (arg0, arg1) => {
-    const items = [f106830(arg0[0], arg1[0]), f106830(arg0[1], arg1[1]), f106830(arg0[2], arg1[2])];
+  f107047 = (arg0, arg1) => {
+    const items = [f107047(arg0[0], arg1[0]), f107047(arg0[1], arg1[1]), f107047(arg0[2], arg1[2])];
     return items;
   };
   blend.burn = (arg0, arg1) => {
     obj = chroma$k(arg1);
     const rgbResult = chroma$k(arg1).rgb();
-    return chroma$k.rgb(f106830(rgbResult, chroma$k(arg0).rgb()));
+    return chroma$k.rgb(f107047(rgbResult, chroma$k(arg0).rgb()));
   };
   pow = Math.pow;
   sin = Math.sin;
@@ -4043,8 +4043,8 @@ let fn = function n() {
       }
       return items1;
     }
-    const tmp = f106830;
-    tmp2 = f106830[typeof call === "unknown" ? toString(analyzeResult) : call(toString, analyzeResult)] || "object";
+    const tmp = f107047;
+    tmp2 = f107047[typeof call === "unknown" ? toString(analyzeResult) : call(toString, analyzeResult)] || "object";
   }
   sqrt = Math.sqrt;
   pow = Math.pow;

@@ -1,15 +1,17 @@
 // === Module 14226: ? ===
 
 // Module 14226
-import _mod14224 from "module_14224" /* 14224 */;
+import _mod14195 from "module_14195" /* 14195 */;
+import element from "element" /* 14227 */;
+import getOwnPropertyDescriptor from "getOwnPropertyDescriptor" /* 14194 */;
 
+let tmp2 = !getOwnPropertyDescriptor;
+if (!getOwnPropertyDescriptor) {
+  tmp2 = !_mod14195(() => 7 !== Object.defineProperty(element("div"), "a", {
+    get() {
+      return 7;
+    }
+  }).a);
+}
 
-export default (arg0, arg1) => {
-  const tmp = _mod14224(arg0);
-  if (tmp < 0) {
-    let tmp3 = max(tmp + arg1, 0);
-  } else {
-    tmp3 = min(tmp, arg1);
-  }
-  return tmp3;
-};
+export default tmp2;

@@ -1,0 +1,210 @@
+// === Module 5734: NativeEventsManager ===
+
+// Module 5734 (NativeEventsManager)
+import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 5676 */;
+import closure_3 from "_objectWithoutProperties" /* 109 */;
+import noop from "noop" /* 19 */;
+import { findNodeHandle } from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
+import { Reanimated } from "module_5704" /* 5704 */;
+
+let closure_2 = ["onGestureHandlerReanimatedStateChange", "onGestureHandlerReanimatedEvent", "onGestureHandlerReanimatedTouchEvent"];
+({ useEffect: c4, useMemo: c5, useRef: closure_6 } = noop);
+let NativeEventsManager;
+if (Reanimated != null) {
+  NativeEventsManager = Reanimated.NativeEventsManager;
+}
+let tmp4 = NativeEventsManager;
+if (!NativeEventsManager) {
+  try {
+    NativeEventsManager = require("importDefaultResult1").NativeEventsManager;
+    tmp4 = NativeEventsManager;
+  } catch (err) {
+  }
+}
+if (tmp4) {
+  class LeanReanimatedNativeDetector {
+    constructor(arg0) {
+      closure_0 = closure_6(null);
+      closure_1 = closure_6(null);
+      tmp = closure_6(null);
+      closure_2 = tmp;
+      onGestureHandlerReanimatedStateChange = global.onGestureHandlerReanimatedStateChange;
+      closure_3 = onGestureHandlerReanimatedStateChange;
+      onGestureHandlerReanimatedEvent = global.onGestureHandlerReanimatedEvent;
+      closure_4 = onGestureHandlerReanimatedEvent;
+      onGestureHandlerReanimatedTouchEvent = global.onGestureHandlerReanimatedTouchEvent;
+      closure_5 = onGestureHandlerReanimatedTouchEvent;
+      tmp2 = closure_3(global, closure_2);
+      items = [, , ];
+      items[0] = onGestureHandlerReanimatedEvent;
+      items[1] = onGestureHandlerReanimatedStateChange;
+      items[2] = onGestureHandlerReanimatedTouchEvent;
+      tmp3 = closure_5(() => ({ onGestureHandlerReanimatedStateChange, onGestureHandlerReanimatedEvent, onGestureHandlerReanimatedTouchEvent }), items);
+      closure_6 = tmp3;
+      tmp4 = closure_4(() => {
+        let num = closure_1_7(ref3.current);
+        if (num == null) {
+          num = -1;
+        }
+        ref3.__nativeTag = num;
+        ref2.current = new closure_1_9({
+          props: closure_6,
+          _componentRef: ref3,
+          _componentViewTag: num,
+          getComponentViewTag() {
+            return num;
+          }
+        });
+        let current = ref2.current;
+        current.attachEvents();
+        return () => {
+          const current = ref.current;
+          if (current != null) {
+            current.detachEvents();
+          }
+        };
+      }, []);
+      items1 = [];
+      items1[0] = tmp3;
+      tmp5 = closure_4(() => {
+        if (ref.current) {
+          const current = ref2.current;
+          if (current != null) {
+            current.updateEvents(tmp.current);
+          }
+        }
+        ref.current = closure_6;
+      }, items1);
+      obj = { ref: tmp };
+      tmp6 = require("__INTERNAL_VIEW_CONFIG");
+      merged = Object.assign(tmp2);
+      return jsx(tmp6, obj);
+    }
+  }
+} else {
+  class LeanReanimatedNativeDetector {
+    constructor(arg0) {
+      closure_0 = closure_6(null);
+      closure_1 = closure_6(null);
+      tmp = closure_6(null);
+      closure_2 = tmp;
+      onGestureHandlerReanimatedStateChange = global.onGestureHandlerReanimatedStateChange;
+      closure_3 = onGestureHandlerReanimatedStateChange;
+      onGestureHandlerReanimatedEvent = global.onGestureHandlerReanimatedEvent;
+      closure_4 = onGestureHandlerReanimatedEvent;
+      onGestureHandlerReanimatedTouchEvent = global.onGestureHandlerReanimatedTouchEvent;
+      closure_5 = onGestureHandlerReanimatedTouchEvent;
+      tmp2 = closure_3(global, closure_2);
+      items = [, , ];
+      items[0] = onGestureHandlerReanimatedEvent;
+      items[1] = onGestureHandlerReanimatedStateChange;
+      items[2] = onGestureHandlerReanimatedTouchEvent;
+      tmp3 = closure_5(() => ({ onGestureHandlerReanimatedStateChange, onGestureHandlerReanimatedEvent, onGestureHandlerReanimatedTouchEvent }), items);
+      closure_6 = tmp3;
+      tmp4 = closure_4(() => {
+        let num = closure_1_7(ref3.current);
+        if (num == null) {
+          num = -1;
+        }
+        ref3.__nativeTag = num;
+        ref2.current = new closure_1_9({
+          props: closure_6,
+          _componentRef: ref3,
+          _componentViewTag: num,
+          getComponentViewTag() {
+            return num;
+          }
+        });
+        let current = ref2.current;
+        current.attachEvents();
+        return () => {
+          const current = ref.current;
+          if (current != null) {
+            current.detachEvents();
+          }
+        };
+      }, []);
+      items1 = [];
+      items1[0] = tmp3;
+      tmp5 = closure_4(() => {
+        if (ref.current) {
+          const current = ref2.current;
+          if (current != null) {
+            current.updateEvents(tmp.current);
+          }
+        }
+        ref.current = closure_6;
+      }, items1);
+      obj = { ref: tmp };
+      tmp6 = require("__INTERNAL_VIEW_CONFIG");
+      merged = Object.assign(tmp2);
+      return jsx(tmp6, obj);
+    }
+  }
+  let LeanReanimatedNativeDetector;
+  if (tmp5 != null) {
+    class LeanReanimatedNativeDetector {
+      constructor(arg0) {
+        closure_0 = closure_6(null);
+        closure_1 = closure_6(null);
+        tmp = closure_6(null);
+        closure_2 = tmp;
+        onGestureHandlerReanimatedStateChange = global.onGestureHandlerReanimatedStateChange;
+        closure_3 = onGestureHandlerReanimatedStateChange;
+        onGestureHandlerReanimatedEvent = global.onGestureHandlerReanimatedEvent;
+        closure_4 = onGestureHandlerReanimatedEvent;
+        onGestureHandlerReanimatedTouchEvent = global.onGestureHandlerReanimatedTouchEvent;
+        closure_5 = onGestureHandlerReanimatedTouchEvent;
+        tmp2 = closure_3(global, closure_2);
+        items = [, , ];
+        items[0] = onGestureHandlerReanimatedEvent;
+        items[1] = onGestureHandlerReanimatedStateChange;
+        items[2] = onGestureHandlerReanimatedTouchEvent;
+        tmp3 = closure_5(() => ({ onGestureHandlerReanimatedStateChange, onGestureHandlerReanimatedEvent, onGestureHandlerReanimatedTouchEvent }), items);
+        closure_6 = tmp3;
+        tmp4 = closure_4(() => {
+          let num = closure_1_7(ref3.current);
+          if (num == null) {
+            num = -1;
+          }
+          ref3.__nativeTag = num;
+          ref2.current = new closure_1_9({
+            props: closure_6,
+            _componentRef: ref3,
+            _componentViewTag: num,
+            getComponentViewTag() {
+              return num;
+            }
+          });
+          let current = ref2.current;
+          current.attachEvents();
+          return () => {
+            const current = ref.current;
+            if (current != null) {
+              current.detachEvents();
+            }
+          };
+        }, []);
+        items1 = [];
+        items1[0] = tmp3;
+        tmp5 = closure_4(() => {
+          if (ref.current) {
+            const current = ref2.current;
+            if (current != null) {
+              current.updateEvents(tmp.current);
+            }
+          }
+          ref.current = closure_6;
+        }, items1);
+        obj = { ref: tmp };
+        tmp6 = require("__INTERNAL_VIEW_CONFIG");
+        merged = Object.assign(tmp2);
+        return jsx(tmp6, obj);
+      }
+    }
+    LeanReanimatedNativeDetector = obj.createAnimatedComponent(__INTERNAL_VIEW_CONFIGDefault);
+  }
+}
+
+export const ReanimatedNativeDetector = LeanReanimatedNativeDetector;

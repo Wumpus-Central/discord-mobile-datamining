@@ -1,4 +1,17 @@
 // === Module 5693: ? ===
 
 // Module 5693
-arg5.ActionType = { REANIMATED_WORKLET: 1, NATIVE_ANIMATED_EVENT: 2, JS_FUNCTION_OLD_API: 3, JS_FUNCTION_NEW_API: 4, NATIVE_DETECTOR: 5, VIRTUAL_DETECTOR: 6 };
+if (typeof setImmediate === "function") {
+  const _setImmediate = setImmediate;
+  let bindResult = setImmediate.bind(null);
+} else {
+  const _requestAnimationFrame2 = requestAnimationFrame;
+  if (typeof requestAnimationFrame === "function") {
+    const _requestAnimationFrame = requestAnimationFrame;
+    bindResult = requestAnimationFrame.bind(null);
+  } else {
+    const _queueMicrotask = queueMicrotask;
+    bindResult = queueMicrotask.bind(null);
+  }
+}
+arg5.ghQueueMicrotask = bindResult;

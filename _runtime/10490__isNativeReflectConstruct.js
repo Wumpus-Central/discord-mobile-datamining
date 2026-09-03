@@ -1,12 +1,11 @@
 // === Module 10490: _isNativeReflectConstruct ===
 
 // Module 10490 (_isNativeReflectConstruct)
-import AbstractTimeExpressionParser from "AbstractTimeExpressionParser" /* 10460 */;
-import DETimeExpressionParser from "_classCallCheck" /* 41 */;
+import Filter from "Filter" /* 10469 */;
+import UnlikelyFormatFilter from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import closure_1 from "_possibleConstructorReturn" /* 93 */;
 import closure_2 from "_getPrototypeOf" /* 95 */;
-import closure_3 from "_get" /* 96 */;
 import _inherits from "_inherits" /* 98 */;
 
 function _isNativeReflectConstruct() {
@@ -28,57 +27,81 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class DETimeExpressionParser {
-  constructor() {
+class UnlikelyFormatFilter {
+  constructor(arg0) {
     self = this;
-    tmp = DETimeExpressionParser(this, DETimeExpressionParser);
+    tmp = UnlikelyFormatFilter(this, UnlikelyFormatFilter);
     tmp2 = closure_2;
-    obj = closure_2(DETimeExpressionParser);
+    obj = closure_2(UnlikelyFormatFilter);
     tmp3 = closure_1;
     if (_isNativeReflectConstruct()) {
-      tmp7 = globalThis;
+      tmp5 = globalThis;
       _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
     } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
+      constructResult = obj.apply(self, undefined);
     }
-    return tmp3(self, constructResult);
+    tmp3Result = tmp3(self, constructResult);
+    tmp3Result.strictMode = global;
+    return tmp3Result;
   }
 }
-_inherits(DETimeExpressionParser, AbstractTimeExpressionParser.AbstractTimeExpressionParser);
-let items = [
+_inherits(UnlikelyFormatFilter, Filter.Filter);
+const items = [
   {
-    key: "primaryPrefix",
-    value: function primaryPrefix() {
-      return "(?:(?:um|von)\\s*)?";
-    }
-  },
-  {
-    key: "followingPhase",
-    value: function followingPhase() {
-      return "\\s*(?:\\-|\\\u2013|\\~|\\\u301C|bis)\\s*";
-    }
-  },
-  {
-    key: "extractPrimaryTimeComponents",
-    value: function extractPrimaryTimeComponents(arg0, arg1) {
-      let fnResult = null;
-      if (!str.match(/^\s*\d{4}\s*$/)) {
-        let self = this;
-        self = this;
-        let fn = callback2(callback(self.prototype), "extractPrimaryTimeComponents", this);
-        if (typeof fn === "function") {
-          fn = (items) => fn.apply(self, items);
+    key: "isValid",
+    value: function isValid(debug, text) {
+      closure_0 = text;
+      if (str2.match(/^\d*(\.\d*)?$/)) {
+        debug.debug(() => {
+          console.log("Removing unlikely result '" + text.text + "'");
+        });
+        let flag = false;
+      } else {
+        const start = text.start;
+        if (start.isValidDate()) {
+          if (text.end) {
+            const end = text.end;
+            if (!end.isValidDate()) {
+              debug.debug(() => {
+                console.log("Removing invalid result: " + text + " (" + text.end + ")");
+              });
+              let flag2 = false;
+            }
+          }
+          const self = this;
+          const strictMode = this.strictMode;
+          let isStrictModeValidResult = !strictMode;
+          if (strictMode) {
+            isStrictModeValidResult = self.isStrictModeValid(debug, text);
+          }
+          flag2 = isStrictModeValidResult;
+        } else {
+          debug.debug(() => {
+            console.log("Removing invalid result: " + text + " (" + text.start + ")");
+          });
+          flag = false;
         }
-        const items = [arg0, arg1];
-        fnResult = fn(items);
       }
-      return fnResult;
+      return flag;
+    }
+  },
+  {
+    key: "isStrictModeValid",
+    value: function isStrictModeValid(debug, start) {
+      closure_0 = start;
+      start = start.start;
+      const result = start.isOnlyWeekdayComponent();
+      let flag = !result;
+      if (result) {
+        debug.debug(() => {
+          console.log("(Strict) Removing weekday only component: " + start + " (" + start.end + ")");
+        });
+        flag = false;
+      }
+      return flag;
     }
   }
 ];
 
-export default _createClass(DETimeExpressionParser, items);
+export default _createClass(UnlikelyFormatFilter, items);

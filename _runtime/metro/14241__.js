@@ -1,7 +1,7 @@
 // === Module 14241: ? ===
 
 // Module 14241
-import _mod14175 from "module_14175" /* 14175 */;
 
-
-export default _mod14175;
+export default Math.trunc || (function trunc(arg0) {
+  return 0 < +arg0 ? floor : ceil(+arg0);
+});

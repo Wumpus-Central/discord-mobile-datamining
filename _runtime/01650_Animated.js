@@ -252,7 +252,7 @@ export const KeyboardProvider = (enabled) => {
     }
   }, items1);
   obj2 = { value: tmp9, children: null };
-  obj3 = { ref: tmp3, enabled: first, navigationBarTranslucent: null, statusBarTranslucent: null, preserveEdgeToEdge: null, style: null, onKeyboardMoveReanimated: null, onKeyboardMoveStart: "Boolean", onKeyboardMove: "a.m.", onKeyboardMoveInteractive: "p.m.", onKeyboardMoveEnd: "midnat", onFocusedInputLayoutChangedReanimated: "middag", children: "morgen" };
+  obj3 = { ref: tmp3, enabled: first, navigationBarTranslucent: null, statusBarTranslucent: null, preserveEdgeToEdge: null, style: null, onKeyboardMoveReanimated: null, onKeyboardMoveStart: "Boolean", onKeyboardMove: "flag_mq", onKeyboardMoveInteractive: "<string:1980204637>", onKeyboardMoveEnd: "<string:1263826516>", onFocusedInputLayoutChangedReanimated: "<string:2255548443>", children: null };
   let tmp18 = fn;
   let tmp19 = fn;
   if (!fn) {

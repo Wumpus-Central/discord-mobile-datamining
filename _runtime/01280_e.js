@@ -2244,12 +2244,12 @@ let fn = (arg0) => {
 };
 let global = fn;
 if (typeof obj === "object") {
-  let f107551 = obj;
+  let f107768 = obj;
   if (typeof globalThis.define === "function") {
     if (globalThis.define.amd) {
       globalThis.define("tslib", ["exports"], (arg0) => {
         closure_0 = arg0;
-        if (arg0 !== f107551) {
+        if (arg0 !== f107768) {
           const _Object = Object;
           if (typeof Object.create === "function") {
             const _Object2 = Object;
@@ -2257,10 +2257,10 @@ if (typeof obj === "object") {
             arg0.__esModule = true;
           }
         }
-        closure_0 = f107551;
-        f107551 = (arg0, arg1) => {
+        closure_0 = f107768;
+        f107768 = (arg0, arg1) => {
           let tmp2Result = arg1;
-          if (f107551) {
+          if (f107768) {
             tmp2Result = tmp2(arg0, arg1);
           }
           closure_0[arg0] = tmp2Result;
@@ -2269,7 +2269,7 @@ if (typeof obj === "object") {
         // // eliminated: always false
         closure_0((arg0, arg1) => {
           let tmp2Result = arg1;
-          if (f107551) {
+          if (f107768) {
             tmp2Result = tmp2(arg0, arg1);
           }
           closure_0[arg0] = tmp2Result;
@@ -2282,7 +2282,7 @@ if (typeof obj === "object") {
     if (typeof obj2.exports === "object") {
       const _exports = obj2.exports;
       global = _exports;
-      f107551 = undefined;
+      f107768 = undefined;
       if (_exports !== obj) {
         let _Object3 = Object;
         if (typeof Object.create === "function") {
@@ -2292,9 +2292,9 @@ if (typeof obj === "object") {
         }
       }
       global = obj;
-      f107551 = (arg0, arg1) => {
+      f107768 = (arg0, arg1) => {
         let tmp2Result = arg1;
-        if (f107551) {
+        if (f107768) {
           tmp2Result = tmp2(arg0, arg1);
         }
         closure_0[arg0] = tmp2Result;
@@ -2310,7 +2310,7 @@ if (typeof obj === "object") {
       }
       fn((arg0, arg1) => {
         let tmp2Result = arg1;
-        if (f107551) {
+        if (f107768) {
           tmp2Result = tmp2(arg0, arg1);
         }
         closure_0[arg0] = tmp2Result;
@@ -2329,7 +2329,7 @@ if (typeof obj === "object") {
   }
   fn((arg0, arg1) => {
     let tmp2Result = arg1;
-    if (f107551) {
+    if (f107768) {
       tmp2Result = tmp2(arg0, arg1);
     }
     closure_0[arg0] = tmp2Result;

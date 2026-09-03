@@ -2,10 +2,9 @@
 
 // Module 5787 (_isNativeReflectConstruct)
 import _inheritsDefault from "_inherits" /* 98 */;
-import ForceTouchGesture from "_classCallCheck" /* 41 */;
+import LongPressGesture from "_classCallCheck" /* 41 */;
 import closure_1 from "_possibleConstructorReturn" /* 93 */;
 import closure_2 from "_getPrototypeOf" /* 95 */;
-import closure_3 from "_get" /* 96 */;
 import importDefaultResult from "_createClass" /* 42 */;
 
 function _isNativeReflectConstruct() {
@@ -27,28 +26,12 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-function changeEventCalculator(force, force2) {
-  if (undefined === force2) {
-    let obj = { forceChange: null };
-    obj[0] = force.force;
-  } else {
-    obj = { forceChange: null };
-    obj[0] = force.force - force2.force;
-  }
-  obj = {};
-  const merged = Object.assign(force);
-  const merged1 = Object.assign(obj);
-  return obj;
-}
-changeEventCalculator.__closure = {};
-changeEventCalculator.__workletHash = 11365193947542;
-changeEventCalculator.__initData = { code: "function changeEventCalculator_Pnpm_forceTouchGestureTs1(current,previous){let changePayload;if(previous===undefined){changePayload={forceChange:current.force};}else{changePayload={forceChange:current.force-previous.force};}return{...current,...changePayload};}" };
-class ForceTouchGesture {
+class LongPressGesture {
   constructor() {
     self = this;
-    tmp = ForceTouchGesture(this, ForceTouchGesture);
+    tmp = LongPressGesture(this, LongPressGesture);
     tmp2 = closure_2;
-    obj = closure_2(ForceTouchGesture);
+    obj = closure_2(LongPressGesture);
     tmp3 = closure_1;
     if (_isNativeReflectConstruct()) {
       tmp5 = globalThis;
@@ -59,47 +42,34 @@ class ForceTouchGesture {
     }
     tmp3Result = tmp3(self, constructResult);
     tmp3Result.config = {};
-    tmp3Result.handlerName = "ForceTouchGestureHandler";
+    tmp3Result.handlerName = "LongPressGestureHandler";
+    result = tmp3Result.shouldCancelWhenOutside(true);
     return tmp3Result;
   }
 }
-_inheritsDefault(ForceTouchGesture, require("_isNativeReflectConstruct").ContinousBaseGesture);
-let items = [
+_inheritsDefault(LongPressGesture, require("_isNativeReflectConstruct").BaseGesture);
+const items = [
   {
-    key: "minForce",
-    value: function minForce(minForce) {
-      this.config.minForce = minForce;
+    key: "minDuration",
+    value: function minDuration(CONTEXT_MENU_LONG_PRESS_DURATION_MS) {
+      this.config.minDurationMs = CONTEXT_MENU_LONG_PRESS_DURATION_MS;
       return this;
     }
   },
   {
-    key: "maxForce",
-    value: function maxForce(maxForce) {
-      this.config.maxForce = maxForce;
+    key: "maxDistance",
+    value: function maxDistance(maxDist) {
+      this.config.maxDist = maxDist;
       return this;
     }
   },
   {
-    key: "feedbackOnActivation",
-    value: function feedbackOnActivation(feedbackOnActivation) {
-      this.config.feedbackOnActivation = feedbackOnActivation;
+    key: "numberOfPointers",
+    value: function numberOfPointers(numberOfPointers) {
+      this.config.numberOfPointers = numberOfPointers;
       return this;
-    }
-  },
-  {
-    key: "onChange",
-    value: function onChange(arg0) {
-      this.handlers.changeEventCalculator = changeEventCalculator;
-      const self = this;
-      let fn;
-      fn = callback2(callback(self.prototype), "onChange", this);
-      if (typeof fn === "function") {
-        fn = (items) => fn.apply(self, items);
-      }
-      const items = [arg0];
-      return fn(items);
     }
   }
 ];
 
-export const ForceTouchGesture = importDefaultResult(ForceTouchGesture, items);
+export const LongPressGesture = importDefaultResult(LongPressGesture, items);

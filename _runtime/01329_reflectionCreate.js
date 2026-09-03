@@ -19,7 +19,7 @@ arg5.reflectionCreate = function reflectionCreate(value) {
       let tmp4 = nextResult;
       let tmp5 = nextResult;
       if (tmp3.oneof) {
-        obj[tmp3.oneof] = { oneofKind: "r" };
+        obj[tmp3.oneof] = { oneofKind: "Array" };
       } else if (tmp3.repeat) {
         let tmp13 = localName;
         obj[localName] = [];

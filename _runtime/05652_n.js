@@ -2,38 +2,43 @@
 
 // Module 5652 (n)
 import cancelAnimation from "cancelAnimation" /* 1652 */;
+import GESTURE_SOURCE from "GESTURE_SOURCE" /* 5634 */;
 
 require = arg1;
 const dependencyMap = arg6;
-const fn = function n(arg0, arg1) {
-  if ("easeIn" === arg0) {
-    let obj = { easing: null, duration: null };
-    const Easing3 = cancelAnimation.Easing;
-    obj[0] = Easing3.in(cancelAnimation.Easing.ease);
-    obj[1] = arg1;
-    return obj;
-  } else if ("easeOut" === arg0) {
-    obj = { easing: null, duration: null };
-    const Easing2 = cancelAnimation.Easing;
-    obj[0] = Easing2.out(cancelAnimation.Easing.ease);
-    obj[1] = arg1;
-    return obj;
-  } else if ("easeInEaseOut" === arg0) {
-    obj1 = { easing: null, duration: null };
-    const Easing = cancelAnimation.Easing;
-    obj1[0] = Easing.inOut(cancelAnimation.Easing.ease);
-    obj1[1] = arg1;
-    return obj1;
-  } else if ("linear" === arg0) {
-    obj = { easing: null, duration: null };
-    obj[0] = cancelAnimation.Easing.linear;
-    obj[1] = arg1;
-    return obj;
-  } else if ("keyboard" === arg0) {
-    return { damping: 500, stiffness: 1000, mass: 3, overshootClamping: true, restDisplacementThreshold: 10, restSpeedThreshold: 10 };
+const fn = function n(arg0) {
+  ({ point, configs, velocity } = arg0);
+  if (velocity === undefined) {
+    velocity = 0;
   }
+  ({ overrideReduceMotion, onComplete } = arg0);
+  if (!configs) {
+    configs = GESTURE_SOURCE.ANIMATION_CONFIGS;
+  }
+  if (overrideReduceMotion) {
+    configs.reduceMotion = overrideReduceMotion;
+  }
+  if (!("duration" in configs)) {
+    if (!("easing" in configs)) {
+      let tmp3 = require;
+      let TIMING = GESTURE_SOURCE.ANIMATION_METHOD.SPRING;
+    }
+    if (TIMING === GESTURE_SOURCE.ANIMATION_METHOD.TIMING) {
+      let tmp3Result = cancelAnimation;
+      let withTimingResult = tmp3Result.withTiming(point, configs, onComplete);
+    } else {
+      tmp3Result = cancelAnimation;
+      const _Object = Object;
+      const obj = { velocity: null };
+      obj[0] = velocity;
+      withTimingResult = tmp3Result.withSpring(point, Object.assign(obj, configs), onComplete);
+    }
+    return withTimingResult;
+  }
+  TIMING = GESTURE_SOURCE.ANIMATION_METHOD.TIMING;
+  tmp3 = require;
 };
-fn.__closure = { Easing: require("cancelAnimation").Easing };
-fn.__workletHash = 10639588577824;
-fn.__initData = { code: "function pnpm_getKeyboardAnimationConfigsTs1(easing,duration){const{Easing}=this.__closure;switch(easing){case'easeIn':return{easing:Easing.in(Easing.ease),duration:duration};case'easeOut':return{easing:Easing.out(Easing.ease),duration:duration};case'easeInEaseOut':return{easing:Easing.inOut(Easing.ease),duration:duration};case'linear':return{easing:Easing.linear,duration:duration};case'keyboard':return{damping:500,stiffness:1000,mass:3,overshootClamping:true,restDisplacementThreshold:10,restSpeedThreshold:10};}}" };
-arg5.getKeyboardAnimationConfigs = fn;
+fn.__closure = { ANIMATION_CONFIGS: require("GESTURE_SOURCE").ANIMATION_CONFIGS, ANIMATION_METHOD: require("GESTURE_SOURCE").ANIMATION_METHOD, withTiming: require("cancelAnimation").withTiming, withSpring: require("cancelAnimation").withSpring };
+fn.__workletHash = 17032227615993;
+fn.__initData = { code: "function pnpm_animateTs1({point:point,configs:configs,velocity=0,overrideReduceMotion:overrideReduceMotion,onComplete:onComplete}){const{ANIMATION_CONFIGS,ANIMATION_METHOD,withTiming,withSpring}=this.__closure;if(!configs){configs=ANIMATION_CONFIGS;}if(overrideReduceMotion){configs.reduceMotion=overrideReduceMotion;}const type='duration'in configs||'easing'in configs?ANIMATION_METHOD.TIMING:ANIMATION_METHOD.SPRING;if(type===ANIMATION_METHOD.TIMING){return withTiming(point,configs,onComplete);}return withSpring(point,Object.assign({velocity:velocity},configs),onComplete);}" };
+arg5.animate = fn;

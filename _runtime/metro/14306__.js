@@ -1,55 +1,36 @@
 // === Module 14306: ? ===
 
 // Module 14306
-import noop from "noop" /* 19 */;
-import map from "map" /* 14288 */;
-import _isNativeReflectConstruct from "_isNativeReflectConstruct" /* 14307 */;
-import closure_2 from "jsxProd" /* 21 */;
-
-if (noop) {
-  const __esModule = noop.__esModule;
-}
-if (!map) {
-  let obj = { default: null };
-  obj[0] = map;
-  let tmp4 = obj;
-} else {
-  tmp4 = map;
-}
-map = tmp4;
-if (!_isNativeReflectConstruct) {
-  obj = { default: null };
-  obj[0] = _isNativeReflectConstruct;
-  let tmp6 = obj;
-} else {
-  tmp6 = _isNativeReflectConstruct;
-}
-_isNativeReflectConstruct = tmp6;
-
-export default () => () => {
-  closure_0 = closure_0.default();
-  obj = {
-    onCommand(type) {
-      if ("storybook" === type.type) {
-        closure_0.emit("storybook", type.payload);
+arg5.default = undefined;
+let closure_0 = { url: "http://localhost:8081" };
+arg5.default = () => {
+  let obj = arg0;
+  if (arg0 === undefined) {
+    obj = {};
+  }
+  return () => {
+    closure_0 = Object.assign({}, obj, closure_0);
+    obj = {
+      onCommand(type) {
+        if ("editor.open" === type.type) {
+          const payload = type.payload;
+          let num = payload.lineNumber;
+          const _HermesInternal = HermesInternal;
+          obj = { file: null, lineNumber: null };
+          obj[0] = payload.file;
+          const combined = "" + url.url + "/open-stack-frame";
+          if (!num) {
+            num = 1;
+          }
+          obj[1] = num;
+          const _fetch = fetch;
+          obj = { method: "POST", body: null };
+          const _JSON = JSON;
+          obj[1] = JSON.stringify(obj);
+          const response = fetch(combined, obj);
+        }
       }
-    },
-    features: obj
+    };
+    return obj;
   };
-  obj = {
-    storybookSwitcher(arg0) {
-      closure_0 = arg0;
-      return (arg0) => {
-        closure_0 = arg0;
-        return function StorybookSwitcherContainer(arg0) {
-          let obj = { storybookUi: closure_0, emitter: closure_0, children: null };
-          obj = {};
-          const merged = Object.assign(arg0);
-          obj[2] = <closure_0 />;
-          return <closure_3_1.default />;
-        };
-      };
-    }
-  };
-  return obj;
 };

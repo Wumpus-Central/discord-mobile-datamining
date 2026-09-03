@@ -2,7 +2,7 @@
 
 // Module 5786 (_isNativeReflectConstruct)
 import _inheritsDefault from "_inherits" /* 98 */;
-import LongPressGesture from "_classCallCheck" /* 41 */;
+import FlingGesture from "_classCallCheck" /* 41 */;
 import closure_1 from "_possibleConstructorReturn" /* 93 */;
 import closure_2 from "_getPrototypeOf" /* 95 */;
 import importDefaultResult from "_createClass" /* 42 */;
@@ -26,12 +26,12 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class LongPressGesture {
+class FlingGesture {
   constructor() {
     self = this;
-    tmp = LongPressGesture(this, LongPressGesture);
+    tmp = FlingGesture(this, FlingGesture);
     tmp2 = closure_2;
-    obj = closure_2(LongPressGesture);
+    obj = closure_2(FlingGesture);
     tmp3 = closure_1;
     if (_isNativeReflectConstruct()) {
       tmp5 = globalThis;
@@ -42,34 +42,26 @@ class LongPressGesture {
     }
     tmp3Result = tmp3(self, constructResult);
     tmp3Result.config = {};
-    tmp3Result.handlerName = "LongPressGestureHandler";
-    result = tmp3Result.shouldCancelWhenOutside(true);
+    tmp3Result.handlerName = "FlingGestureHandler";
     return tmp3Result;
   }
 }
-_inheritsDefault(LongPressGesture, require("_isNativeReflectConstruct").BaseGesture);
+_inheritsDefault(FlingGesture, require("_isNativeReflectConstruct").BaseGesture);
 const items = [
-  {
-    key: "minDuration",
-    value: function minDuration(CONTEXT_MENU_LONG_PRESS_DURATION_MS) {
-      this.config.minDurationMs = CONTEXT_MENU_LONG_PRESS_DURATION_MS;
-      return this;
-    }
-  },
-  {
-    key: "maxDistance",
-    value: function maxDistance(maxDist) {
-      this.config.maxDist = maxDist;
-      return this;
-    }
-  },
   {
     key: "numberOfPointers",
     value: function numberOfPointers(numberOfPointers) {
       this.config.numberOfPointers = numberOfPointers;
       return this;
     }
+  },
+  {
+    key: "direction",
+    value: function direction(DOWN) {
+      this.config.direction = DOWN;
+      return this;
+    }
   }
 ];
 
-export const LongPressGesture = importDefaultResult(LongPressGesture, items);
+export const FlingGesture = importDefaultResult(FlingGesture, items);

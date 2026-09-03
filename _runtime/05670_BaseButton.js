@@ -1,21 +1,37 @@
 // === Module 5670: BaseButton ===
 
 // Module 5670 (BaseButton)
-import Animated from "Animated" /* 5671 */;
-import importDefaultResult1 from "importDefaultResult1" /* 5759 */;
-import hitSlopDefault from "hitSlop" /* 5760 */;
-import Touchable from "Touchable" /* 5771 */;
+import BaseButton from "BaseButton" /* 5671 */;
+import GestureDetectorType from "GestureDetectorType" /* 5674 */;
+import useCompetingGestures from "useCompetingGestures" /* 5766 */;
+import t from "t" /* 5773 */;
 
 
-export const BaseButton = Animated.BaseButton;
-export const BorderlessButton = Animated.BorderlessButton;
-export const PureNativeButton = Animated.PureNativeButton;
-export const RawButton = Animated.RawButton;
-export const RectButton = Animated.RectButton;
-export const FlatList = importDefaultResult1.FlatList;
-export const RefreshControl = importDefaultResult1.RefreshControl;
-export const ScrollView = importDefaultResult1.ScrollView;
-export const Switch = importDefaultResult1.Switch;
-export const TextInput = importDefaultResult1.TextInput;
-export const Pressable = hitSlopDefault;
-export const Touchable = Touchable.Touchable;
+export const BaseButton = BaseButton.BaseButton;
+export const BorderlessButton = BaseButton.BorderlessButton;
+export const FlatList = BaseButton.FlatList;
+export const Pressable = BaseButton.Pressable;
+export const RawButton = BaseButton.RawButton;
+export const RectButton = BaseButton.RectButton;
+export const RefreshControl = BaseButton.RefreshControl;
+export const ScrollView = BaseButton.ScrollView;
+export const Switch = BaseButton.Switch;
+export const TextInput = BaseButton.TextInput;
+export const Touchable = BaseButton.Touchable;
+export const GestureDetector = GestureDetectorType.GestureDetector;
+export const GestureDetectorType = GestureDetectorType.GestureDetectorType;
+export const InterceptingGestureDetector = GestureDetectorType.InterceptingGestureDetector;
+export const VirtualGestureDetector = GestureDetectorType.VirtualGestureDetector;
+export const GestureStateManager = t.GestureStateManager;
+export const useCompetingGestures = useCompetingGestures.useCompetingGestures;
+export const useExclusiveGestures = useCompetingGestures.useExclusiveGestures;
+export const useFlingGesture = useCompetingGestures.useFlingGesture;
+export const useHoverGesture = useCompetingGestures.useHoverGesture;
+export const useLongPressGesture = useCompetingGestures.useLongPressGesture;
+export const useManualGesture = useCompetingGestures.useManualGesture;
+export const useNativeGesture = useCompetingGestures.useNativeGesture;
+export const usePanGesture = useCompetingGestures.usePanGesture;
+export const usePinchGesture = useCompetingGestures.usePinchGesture;
+export const useRotationGesture = useCompetingGestures.useRotationGesture;
+export const useSimultaneousGestures = useCompetingGestures.useSimultaneousGestures;
+export const useTapGesture = useCompetingGestures.useTapGesture;

@@ -1,14 +1,13 @@
 // === Module 10467: _isNativeReflectConstruct ===
 
 // Module 10467 (_isNativeReflectConstruct)
-import Filter from "Filter" /* 10465 */;
-import closure_2 from "_classCallCheck" /* 41 */;
+import _isNativeReflectConstruct2 from "_isNativeReflectConstruct" /* 10468 */;
+import ENMergeDateRangeRefiner from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
-import closure_3 from "_possibleConstructorReturn" /* 93 */;
-import closure_4 from "_getPrototypeOf" /* 95 */;
+import closure_1 from "_possibleConstructorReturn" /* 93 */;
+import closure_2 from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
-const AbstractMergeDateTimeRefiner = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -28,13 +27,29 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class AbstractMergeDateTimeRefiner {
+let fn = this;
+if (this) {
+  fn = this.__importDefault;
+}
+if (!fn) {
+  fn = (__esModule) => {
+    if (!__esModule) {
+      const obj = { default: null };
+      obj[0] = __esModule;
+      let tmp = obj;
+    } else {
+      tmp = __esModule;
+    }
+    return tmp;
+  };
+}
+class ENMergeDateRangeRefiner {
   constructor() {
     self = this;
-    tmp = closure_2(this, AbstractMergeDateTimeRefiner);
-    tmp2 = closure_4;
-    obj = closure_4(AbstractMergeDateTimeRefiner);
-    tmp3 = closure_3;
+    tmp = ENMergeDateRangeRefiner(this, ENMergeDateRangeRefiner);
+    tmp2 = closure_2;
+    obj = closure_2(ENMergeDateRangeRefiner);
+    tmp3 = closure_1;
     if (_isNativeReflectConstruct()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
@@ -48,44 +63,14 @@ class AbstractMergeDateTimeRefiner {
     return tmp3(self, constructResult);
   }
 }
-_inherits(AbstractMergeDateTimeRefiner, Filter.MergingRefiner);
+_inherits(ENMergeDateRangeRefiner, fn(_isNativeReflectConstruct2).default);
 const items = [
   {
-    key: "shouldMergeResults",
-    value: function shouldMergeResults(str, start, start2) {
-      start = start.start;
-      let isOnlyDateResult = start.isOnlyDate();
-      if (isOnlyDateResult) {
-        start2 = start2.start;
-        isOnlyDateResult = start2.isOnlyTime();
-      }
-      if (!isOnlyDateResult) {
-        const start3 = start2.start;
-        let isOnlyDateResult1 = start3.isOnlyDate();
-        if (isOnlyDateResult1) {
-          const start4 = start.start;
-          isOnlyDateResult1 = start4.isOnlyTime();
-        }
-        isOnlyDateResult = isOnlyDateResult1;
-      }
-      if (isOnlyDateResult) {
-        const self = this;
-        isOnlyDateResult = null != str.match(this.patternBetween());
-      }
-      return isOnlyDateResult;
-    }
-  },
-  {
-    key: "mergeResults",
-    value: function mergeResults(arg0, start, text) {
-      start = start.start;
-      const mergeDateTimeResult = AbstractMergeDateTimeRefiner(10468).mergeDateTimeResult;
-      const tmp2 = start.isOnlyDate() ? mergeDateTimeResult(start, text) : mergeDateTimeResult(text, start);
-      tmp2.index = start.index;
-      tmp2.text = start.text + arg0 + text.text;
-      return tmp2;
+    key: "patternBetween",
+    value: function patternBetween() {
+      return /^\s*(to|-|–|until|through|till)\s*$/i;
     }
   }
 ];
 
-export default _createClass(AbstractMergeDateTimeRefiner, items);
+export default _createClass(ENMergeDateRangeRefiner, items);

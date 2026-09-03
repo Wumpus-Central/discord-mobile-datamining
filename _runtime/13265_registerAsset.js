@@ -4,4 +4,4 @@
 import registerAsset from "registerAsset" /* 1240 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "d6f2100bc35d4631ec4aaba26d151036", name: "LettersIcon", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/premium_marketing/native/images", width: 218, height: 180, scales: [2, 3], hash: "bd4d35211a1db60224ac1f8c89da052c", name: "img_custom_sounds", type: "png" });
