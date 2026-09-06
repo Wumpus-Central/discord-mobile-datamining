@@ -1,5 +1,5 @@
 // _runtime/10727_registerAsset.js
-import registerAsset from "01240_registerAsset.js";
+import registerAsset from "01122_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 279,
   height: 48,
   scales: [2, 3],
-  hash: "1fff7418e65eeae25a3f248ccb7dea3b",
-  name: "img_nitro_tier_1_activated_light",
+  hash: "e03e83c5ddeddb7941bbe7457ccf1a98",
+  name: "img_nitro_tier_2_activated_light",
   type: "png",
 });

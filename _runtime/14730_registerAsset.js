@@ -1,13 +1,11 @@
 // _runtime/14730_registerAsset.js
-import registerAsset from "01240_registerAsset.js";
+import registerAsset from "01122_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/parent_tools/images",
-  width: 76,
-  height: 76,
+  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcw==",
   scales: [1],
-  hash: "357b6ff4f5f31060d463e9e4858af437",
-  name: "family_center_chat_check_icon",
-  type: "png",
+  hash: "9be1e00e05c78b657d2f957036b4d710",
+  name: "es-ES.messages.9be1e00e05c78b657d2f957036b4d710.compiled.messages",
+  type: "jsona",
 });

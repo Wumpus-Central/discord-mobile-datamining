@@ -1,11 +1,11 @@
 // _runtime/02399_registerAsset.js
-import registerAsset from "01240_registerAsset.js";
+import registerAsset from "01122_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/parent_tools",
+  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9wYXJlbnRfdG9vbHM=",
   scales: [1],
-  hash: "f4b4922b77620604d580b6c5d139732f",
-  name: "FamilyCenter.compiled.messages",
+  hash: "6f348377f660a2fae262bd4c98eb0bcf",
+  name: "da.messages.6f348377f660a2fae262bd4c98eb0bcf.compiled.messages",
   type: "jsona",
 });

@@ -1,11 +1,11 @@
 // _runtime/03433_registerAsset.js
-import registerAsset from "01240_registerAsset.js";
+import registerAsset from "01122_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/conversations",
+  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9zbGF5ZXJfc3RvcmVmcm9udC9pbnRs",
   scales: [1],
-  hash: "8e7c46ba423edaf69778fd849d9ff2b9",
-  name: "Conversations.compiled.messages",
+  hash: "08e5ed3d61a2954e539e829941bbc5ad",
+  name: "ko.messages.08e5ed3d61a2954e539e829941bbc5ad.compiled.messages",
   type: "jsona",
 });

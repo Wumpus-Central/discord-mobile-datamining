@@ -1,13 +1,13 @@
 // _runtime/11708_registerAsset.js
-import registerAsset from "01240_registerAsset.js";
+import registerAsset from "01122_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/safety_hub/images",
-  width: 258,
-  height: 235,
-  scales: [1],
-  hash: "67aa3a4595e9ab08ffca5da7eba4c713",
-  name: "check-with-stars",
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "6deb5144fd1fa39d4c62b384e76c1144",
+  name: "BookmarkIcon",
   type: "png",
 });

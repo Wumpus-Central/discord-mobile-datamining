@@ -1,11 +1,11 @@
 // _runtime/02753_registerAsset.js
-import registerAsset from "01240_registerAsset.js";
+import registerAsset from "01122_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9ub3RpZmljYXRpb25zX2luYm94",
+  httpServerLocation: "/assets/modules/notifications",
   scales: [1],
-  hash: "c7f2795d1917279dfa24dac2e9fedc0b",
-  name: "uk.messages.c7f2795d1917279dfa24dac2e9fedc0b.compiled.messages",
+  hash: "6da65e6eff3590b54eacf80338418194",
+  name: "NotificationSettings.compiled.messages",
   type: "jsona",
 });

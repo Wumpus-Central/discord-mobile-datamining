@@ -1,11 +1,11 @@
 // _runtime/03256_registerAsset.js
-import registerAsset from "01240_registerAsset.js";
+import registerAsset from "01122_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9wcmVtaXVtL2xvZ2l0ZWNoXzNwcA==",
+  httpServerLocation: "/assets/modules/favorites/intl",
   scales: [1],
-  hash: "075b3a1b143c4e8b116dadcba0b2929b",
-  name: "it.messages.075b3a1b143c4e8b116dadcba0b2929b.compiled.messages",
+  hash: "ce4184361e98f5adacc679504a00346f",
+  name: "FavoritesGuild.compiled.messages",
   type: "jsona",
 });

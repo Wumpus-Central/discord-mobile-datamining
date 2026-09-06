@@ -1,13 +1,13 @@
 // _runtime/17458_registerAsset.js
-import registerAsset from "01240_registerAsset.js";
+import registerAsset from "01122_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/guild_settings/roles/native/images",
-  width: 660,
-  height: 240,
-  scales: [2, 3],
-  hash: "914423837bb34bd9385887217de01b93",
-  name: "illustration-dark-large",
+  httpServerLocation: "/assets/modules/nuf/native/components/notification",
+  width: 302,
+  height: 202,
+  scales: [1, 2],
+  hash: "21f19c3533062eebc26337b4e7ba590a",
+  name: "notification_upsell",
   type: "png",
 });

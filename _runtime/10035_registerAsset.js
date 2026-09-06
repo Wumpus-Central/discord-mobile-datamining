@@ -1,13 +1,13 @@
 // _runtime/10035_registerAsset.js
-import registerAsset from "01240_registerAsset.js";
+import registerAsset from "01122_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
+  httpServerLocation: "/assets/modules/video_calls/native/images",
+  width: 20,
+  height: 20,
   scales: [2, 3],
-  hash: "e535ea871b8155df08d1e92a6b532c6c",
-  name: "GroupArrowDownIcon",
+  hash: "40d8dc40d3509844c13de0abfc4c355d",
+  name: "camera_swap",
   type: "png",
 });

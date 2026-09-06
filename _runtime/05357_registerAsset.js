@@ -1,13 +1,13 @@
 // _runtime/05357_registerAsset.js
-import registerAsset from "01240_registerAsset.js";
+import registerAsset from "01122_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/images/platforms",
-  width: 256,
-  height: 256,
+  width: 255,
+  height: 255,
   scales: [1],
-  hash: "fe74ca7646b268434faf18f4ad85990b",
-  name: "img_meta_quest_light",
-  type: "svg",
+  hash: "083817c43b3689d5baeb4ee0ef9714bc",
+  name: "img_account_sync_epic_light",
+  type: "png",
 });

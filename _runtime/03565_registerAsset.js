@@ -1,11 +1,11 @@
 // _runtime/03565_registerAsset.js
-import registerAsset from "01240_registerAsset.js";
+import registerAsset from "01122_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/connected_devices",
+  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9jdXN0b21fdHlwaW5nX2luZGljYXRvci9pbnRs",
   scales: [1],
-  hash: "fac01a310aa1e8bc3d1aaac6ab09e1c9",
-  name: "DeviceDetected.compiled.messages",
+  hash: "862f94ba40567d5e60e3444d946eb4da",
+  name: "ko.messages.862f94ba40567d5e60e3444d946eb4da.compiled.messages",
   type: "jsona",
 });

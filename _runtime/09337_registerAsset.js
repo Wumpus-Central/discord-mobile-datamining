@@ -1,13 +1,13 @@
 // _runtime/09337_registerAsset.js
-import registerAsset from "01240_registerAsset.js";
+import registerAsset from "01122_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native",
-  width: 16,
-  height: 16,
+  httpServerLocation: "/assets/images/native/custom_app_icons/SunsetIcon",
+  width: 60,
+  height: 60,
   scales: [2, 3],
-  hash: "d082de3975b39d41cd3c34c609bd917a",
-  name: "ic_launch",
+  hash: "9f9f6665c181624b81b98f40c0532d57",
+  name: "SunsetIcon",
   type: "png",
 });

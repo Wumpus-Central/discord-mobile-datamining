@@ -1,2 +1,14 @@
 // _runtime/metro/00525__.js
-arg5.default = "00000000-0000-0000-0000-000000000000";
+let tmp = typeof global === "object";
+if (typeof global === "object") {
+  tmp = global;
+}
+if (tmp) {
+  const _Object = Object;
+  tmp = global.Object === Object;
+}
+if (tmp) {
+  tmp = global;
+}
+
+export default tmp;

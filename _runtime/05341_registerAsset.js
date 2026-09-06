@@ -1,5 +1,5 @@
 // _runtime/05341_registerAsset.js
-import registerAsset from "01240_registerAsset.js";
+import registerAsset from "01122_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 255,
   height: 255,
   scales: [1],
-  hash: "c7326c633c855d160a4c15850754cc11",
-  name: "img_account_sync_mastodon_light_and_dark",
+  hash: "0351fb913e7f70cdcd36a98d12d92c64",
+  name: "img_account_sync_xbox_white",
   type: "png",
 });

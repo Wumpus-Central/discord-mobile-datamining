@@ -1,11 +1,12 @@
 // _runtime/10563__isNativeReflectConstruct.js
-import AbstractParserWithWordBoundaryChecking from "10457_AbstractParserWithWordBoundaryChecking.js";
-import ZHHantCasualDateParser from "metro/00041__classCallCheck.js";
+import AbstractParserWithWordBoundaryChecking from "10439_AbstractParserWithWordBoundaryChecking.js";
+import closure_2 from "metro/00041__classCallCheck.js";
 import _createClass from "metro/00042__createClass.js";
-import closure_1 from "metro/00093__possibleConstructorReturn.js";
-import closure_2 from "00095__getPrototypeOf.js";
+import closure_3 from "metro/00093__possibleConstructorReturn.js";
+import closure_4 from "00095__getPrototypeOf.js";
 import _inherits from "00098__inherits.js";
 
+let AbstractParserWithLeftRightBoundaryChecking = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -24,13 +25,13 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-class ZHHantCasualDateParser {
+class AbstractParserWithLeftBoundaryChecking {
   constructor() {
     self = this;
-    tmp = ZHHantCasualDateParser(this, ZHHantCasualDateParser);
-    tmp2 = closure_2;
-    obj = closure_2(ZHHantCasualDateParser);
-    tmp3 = closure_1;
+    tmp = closure_2(this, AbstractParserWithLeftRightBoundaryChecking);
+    tmp2 = closure_4;
+    obj = closure_4(AbstractParserWithLeftRightBoundaryChecking);
+    tmp3 = closure_3;
     if (_isNativeReflectConstruct()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
@@ -44,178 +45,71 @@ class ZHHantCasualDateParser {
     return tmp3(self, constructResult);
   }
 }
-_inherits(ZHHantCasualDateParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+AbstractParserWithLeftRightBoundaryChecking = AbstractParserWithLeftBoundaryChecking;
+_inherits(
+  AbstractParserWithLeftBoundaryChecking,
+  AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking,
+);
+let obj = {
+  key: "patternLeftBoundary",
+  value: function patternLeftBoundary() {
+    return AbstractParserWithLeftRightBoundaryChecking(10561).REGEX_PARTS.leftBoundary;
+  },
+};
 const items = [
+  obj,
   {
     key: "innerPattern",
     value: function innerPattern(arg0) {
       const regExp = new RegExp(
-        "(\u800C\u5BB6|\u7ACB(?:\u523B|\u5373)|\u5373\u523B)|(\u4ECA|\u660E|\u524D|\u5927\u524D|\u5F8C|\u5927\u5F8C|\u807D|\u6628|\u5C0B|\u7434)(\u65E9|\u671D|\u665A)|(\u4E0A(?:\u5348|\u665D)|\u671D(?:\u65E9)|\u65E9(?:\u4E0A)|\u4E0B(?:\u5348|\u665D)|\u664F(?:\u665D)|\u665A(?:\u4E0A)|\u591C(?:\u665A)?|\u4E2D(?:\u5348)|\u51CC(?:\u6668))|(\u4ECA|\u660E|\u524D|\u5927\u524D|\u5F8C|\u5927\u5F8C|\u807D|\u6628|\u5C0B|\u7434)(?:\u65E5|\u5929)(?:[\\s|,|\uFF0C]*)(?:(\u4E0A(?:\u5348|\u665D)|\u671D(?:\u65E9)|\u65E9(?:\u4E0A)|\u4E0B(?:\u5348|\u665D)|\u664F(?:\u665D)|\u665A(?:\u4E0A)|\u591C(?:\u665A)?|\u4E2D(?:\u5348)|\u51CC(?:\u6668)))?",
-        "i",
+        this.innerPatternString(arg0),
+        AbstractParserWithLeftRightBoundaryChecking(10561).REGEX_PARTS.flags,
       );
       return regExp;
     },
   },
   {
-    key: "innerExtract",
-    value: function innerExtract(createParsingResult, index) {
-      const parsingResult = createParsingResult.createParsingResult(index.index, index[0]);
-      const refDate = createParsingResult.refDate;
-      const date = new Date(refDate.getTime());
-      if (index[1]) {
-        const start16 = parsingResult.start;
-        start16.imply("hour", refDate.getHours());
-        const start17 = parsingResult.start;
-        start17.imply("minute", refDate.getMinutes());
-        const start18 = parsingResult.start;
-        start18.imply("second", refDate.getSeconds());
-        const start19 = parsingResult.start;
-        start19.imply("millisecond", refDate.getMilliseconds());
-      } else if (index[2]) {
-        if ("\u660E" != index[2]) {
-          if ("\u807D" != tmp25) {
-            if ("\u6628" != tmp25) {
-              if ("\u5C0B" != tmp25) {
-                if ("\u7434" != tmp25) {
-                  if ("\u524D" == tmp25) {
-                    date.setDate(date.getDate() - 2);
-                  } else if ("\u5927\u524D" == tmp25) {
-                    date.setDate(date.getDate() - 3);
-                  } else if ("\u5F8C" == tmp25) {
-                    date.setDate(date.getDate() + 2);
-                  } else if ("\u5927\u5F8C" == tmp25) {
-                    date.setDate(date.getDate() + 3);
-                  }
-                }
-              }
-            }
-            date.setDate(date.getDate() - 1);
-          }
-          if ("\u65E9" != tmp26) {
-            if ("\u671D" != tmp26) {
-              if ("\u665A" == tmp26) {
-                const start25 = parsingResult.start;
-                start25.imply("hour", 22);
-                const start26 = parsingResult.start;
-                start26.imply("meridiem", 1);
-              }
-            }
-          }
-          const start15 = parsingResult.start;
-          start15.imply("hour", 6);
-        }
-        if (refDate.getHours() > 1) {
-          date.setDate(date.getDate() + 1);
-        }
-      } else if (index[4]) {
-        const first = index[4][0];
-        if ("\u65E9" != first) {
-          if ("\u671D" != first) {
-            if ("\u4E0A" != first) {
-              if ("\u4E0B" != first) {
-                if ("\u664F" != first) {
-                  if ("\u4E2D" == first) {
-                    const start10 = parsingResult.start;
-                    start10.imply("hour", 12);
-                    const start11 = parsingResult.start;
-                    start11.imply("meridiem", 1);
-                  } else {
-                    if ("\u591C" != first) {
-                      if ("\u665A" != first) {
-                        if ("\u51CC" == first) {
-                          const start24 = parsingResult.start;
-                          start24.imply("hour", 0);
-                        }
-                      }
-                    }
-                    const start8 = parsingResult.start;
-                    start8.imply("hour", 22);
-                    const start9 = parsingResult.start;
-                    start9.imply("meridiem", 1);
-                  }
-                }
-              }
-              const start12 = parsingResult.start;
-              start12.imply("hour", 15);
-              const start13 = parsingResult.start;
-              start13.imply("meridiem", 1);
-            }
-          }
-        }
-        const start14 = parsingResult.start;
-        start14.imply("hour", 6);
-      } else if (index[5]) {
-        if ("\u660E" != index[5]) {
-          if ("\u807D" != tmp2) {
-            if ("\u6628" != tmp2) {
-              if ("\u5C0B" != tmp2) {
-                if ("\u7434" != tmp2) {
-                  if ("\u524D" == tmp2) {
-                    date.setDate(date.getDate() - 2);
-                  } else if ("\u5927\u524D" == tmp2) {
-                    date.setDate(date.getDate() - 3);
-                  } else if ("\u5F8C" == tmp2) {
-                    date.setDate(date.getDate() + 2);
-                  } else if ("\u5927\u5F8C" == tmp2) {
-                    date.setDate(date.getDate() + 3);
-                  }
-                }
-              }
-            }
-            date.setDate(date.getDate() - 1);
-          }
-          if (index[6]) {
-            const first1 = tmp8[0];
-            if ("\u65E9" != first1) {
-              if ("\u671D" != first1) {
-                if ("\u4E0A" != first1) {
-                  if ("\u4E0B" != first1) {
-                    if ("\u664F" != first1) {
-                      if ("\u4E2D" == first1) {
-                        const start3 = parsingResult.start;
-                        start3.imply("hour", 12);
-                        const start4 = parsingResult.start;
-                        start4.imply("meridiem", 1);
-                      } else {
-                        if ("\u591C" != first1) {
-                          if ("\u665A" != first1) {
-                            if ("\u51CC" == first1) {
-                              const start23 = parsingResult.start;
-                              start23.imply("hour", 0);
-                            }
-                          }
-                        }
-                        const start = parsingResult.start;
-                        start.imply("hour", 22);
-                        const start2 = parsingResult.start;
-                        start2.imply("meridiem", 1);
-                      }
-                    }
-                  }
-                  const start5 = parsingResult.start;
-                  start5.imply("hour", 15);
-                  const start6 = parsingResult.start;
-                  start6.imply("meridiem", 1);
-                }
-              }
-            }
-            const start7 = parsingResult.start;
-            start7.imply("hour", 6);
-          }
-        }
-        if (refDate.getHours() > 1) {
-          date.setDate(date.getDate() + 1);
-        }
-      }
-      const start20 = parsingResult.start;
-      start20.assign("day", date.getDate());
-      const start21 = parsingResult.start;
-      start21.assign("month", date.getMonth() + 1);
-      const start22 = parsingResult.start;
-      start22.assign("year", date.getFullYear());
-      return parsingResult;
+    key: "innerPatternHasChange",
+    value: function innerPatternHasChange(arg0, arg1) {
+      return false;
     },
   },
 ];
+const _moduleResult = _createClass(AbstractParserWithLeftBoundaryChecking, items);
+class AbstractParserWithLeftRightBoundaryChecking {
+  constructor() {
+    self = this;
+    tmp = closure_2(this, AbstractParserWithLeftRightBoundaryChecking);
+    tmp2 = closure_4;
+    obj = closure_4(AbstractParserWithLeftRightBoundaryChecking);
+    tmp3 = closure_3;
+    if (_isNativeReflectConstruct()) {
+      tmp7 = globalThis;
+      _Reflect = Reflect;
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+    } else {
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
+    }
+    return tmp3(self, constructResult);
+  }
+}
+_inherits(AbstractParserWithLeftRightBoundaryChecking, _moduleResult);
+obj = {
+  key: "innerPattern",
+  value: function innerPattern(arg0) {
+    const combined =
+      "" + this.innerPatternString(arg0) + AbstractParserWithLeftRightBoundaryChecking(10561).REGEX_PARTS.rightBoundary;
+    const regExp = new RegExp(combined, AbstractParserWithLeftRightBoundaryChecking(10561).REGEX_PARTS.flags);
+    return regExp;
+  },
+};
+const items1 = [obj];
 
-export default _createClass(ZHHantCasualDateParser, items);
+export const AbstractParserWithLeftBoundaryChecking = _moduleResult;
+export const AbstractParserWithLeftRightBoundaryChecking = _createClass(
+  AbstractParserWithLeftRightBoundaryChecking,
+  items1,
+);

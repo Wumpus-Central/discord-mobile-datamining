@@ -1,5 +1,5 @@
 // _runtime/05335_registerAsset.js
-import registerAsset from "01240_registerAsset.js";
+import registerAsset from "01122_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 255,
   height: 255,
   scales: [1],
-  hash: "1c6dca03661172aa5af3340a0d3930a2",
-  name: "img_account_sync_tiktok_light",
+  hash: "11d22afa82357c17306bb835b9fe7074",
+  name: "img_account_sync_x_white",
   type: "svg",
 });

@@ -1,13 +1,13 @@
 // _runtime/12529_registerAsset.js
-import registerAsset from "01240_registerAsset.js";
+import registerAsset from "01122_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/hub/native/images",
-  width: 200,
-  height: 139.5,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
   scales: [2, 3],
-  hash: "42c68794718ccb3cc57c33bf57ed6d23",
-  name: "hub-header",
+  hash: "220c71f96225f35f4c52e38db6b8734b",
+  name: "SoundboardIcon",
   type: "png",
 });

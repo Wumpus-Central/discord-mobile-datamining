@@ -1,6 +1,6 @@
 // _runtime/10509__isNativeReflectConstruct.js
-import _isNativeReflectConstruct2 from "10471__isNativeReflectConstruct.js";
-import FRMergeDateTimeRefiner from "metro/00041__classCallCheck.js";
+import Filter from "10451_Filter.js";
+import JPMergeWeekdayComponentRefiner from "metro/00041__classCallCheck.js";
 import _createClass from "metro/00042__createClass.js";
 import closure_1 from "metro/00093__possibleConstructorReturn.js";
 import closure_2 from "00095__getPrototypeOf.js";
@@ -24,28 +24,12 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-let fn = this;
-if (this) {
-  fn = this.__importDefault;
-}
-if (!fn) {
-  fn = (__esModule) => {
-    if (!__esModule) {
-      const obj = { default: null };
-      obj[0] = __esModule;
-      let tmp = obj;
-    } else {
-      tmp = __esModule;
-    }
-    return tmp;
-  };
-}
-class FRMergeDateTimeRefiner {
+class JPMergeWeekdayComponentRefiner {
   constructor() {
     self = this;
-    tmp = FRMergeDateTimeRefiner(this, FRMergeDateTimeRefiner);
+    tmp = JPMergeWeekdayComponentRefiner(this, JPMergeWeekdayComponentRefiner);
     tmp2 = closure_2;
-    obj = closure_2(FRMergeDateTimeRefiner);
+    obj = closure_2(JPMergeWeekdayComponentRefiner);
     tmp3 = closure_1;
     if (_isNativeReflectConstruct()) {
       tmp7 = globalThis;
@@ -60,15 +44,43 @@ class FRMergeDateTimeRefiner {
     return tmp3(self, constructResult);
   }
 }
-_inherits(FRMergeDateTimeRefiner, fn(_isNativeReflectConstruct2).default);
+_inherits(JPMergeWeekdayComponentRefiner, Filter.MergingRefiner);
 const items = [
   {
-    key: "patternBetween",
-    value: function patternBetween() {
-      const regExp = new RegExp("^\\s*(T|\u00E0|a|au|vers|de|,|-)?\\s*$");
-      return regExp;
+    key: "mergeResults",
+    value: function mergeResults(arg0, clone, text) {
+      const cloneResult = clone.clone();
+      cloneResult.text = clone.text + arg0 + text.text;
+      const start = cloneResult.start;
+      const start2 = text.start;
+      start.assign("weekday", start2.get("weekday"));
+      if (cloneResult.end) {
+        const end = cloneResult.end;
+        const start3 = text.start;
+        end.assign("weekday", start3.get("weekday"));
+      }
+      return cloneResult;
+    },
+  },
+  {
+    key: "shouldMergeResults",
+    value: function shouldMergeResults(str, start, start2) {
+      start = start.start;
+      let isCertainResult = start.isCertain("day");
+      if (isCertainResult) {
+        start2 = start2.start;
+        isCertainResult = start2.isOnlyWeekdayComponent();
+      }
+      if (isCertainResult) {
+        const start3 = start2.start;
+        isCertainResult = !start3.isCertain("hour");
+      }
+      if (isCertainResult) {
+        isCertainResult = null !== str.match(/^[,、の]?\s*$/);
+      }
+      return isCertainResult;
     },
   },
 ];
 
-export default _createClass(FRMergeDateTimeRefiner, items);
+export default _createClass(JPMergeWeekdayComponentRefiner, items);

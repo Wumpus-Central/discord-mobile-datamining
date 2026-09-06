@@ -1,13 +1,13 @@
 // _runtime/15953_registerAsset.js
-import registerAsset from "01240_registerAsset.js";
+import registerAsset from "01122_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/images/native/icons",
-  width: 18,
-  height: 18,
+  width: 20,
+  height: 20,
   scales: [1, 2],
-  hash: "424c540aff53032ef3cdcb5f4766723e",
-  name: "ic_rulebook_16px",
+  hash: "a29a6c52d3f111d84d3e5afb9287492b",
+  name: "ic_add_circle",
   type: "png",
 });

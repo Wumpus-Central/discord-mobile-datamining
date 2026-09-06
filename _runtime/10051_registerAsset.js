@@ -1,13 +1,13 @@
 // _runtime/10051_registerAsset.js
-import registerAsset from "01240_registerAsset.js";
+import registerAsset from "01122_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "9bcd40cb62b748b314b1aa933da9be99",
-  name: "HandRequestDenyIcon",
+  httpServerLocation: "/assets/modules/stage_channels/native/images",
+  width: 16,
+  height: 16,
+  scales: [1, 2, 3],
+  hash: "98e013109b389eb9fdfad5277cb35b88",
+  name: "ic_moderator",
   type: "png",
 });

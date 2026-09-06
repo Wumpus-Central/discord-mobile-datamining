@@ -1,13 +1,13 @@
 // _runtime/10717_registerAsset.js
-import registerAsset from "01240_registerAsset.js";
+import registerAsset from "01122_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/images/native/premium/illustrations",
-  width: 87,
-  height: 100,
+  width: 91,
+  height: 90,
   scales: [2, 3],
-  hash: "fea63c35d752daa1f371f2069e1b5793",
-  name: "img_wumpus_lightro",
+  hash: "055143aab1e4ce106d248b3615fa3d2c",
+  name: "img_bundle_banner",
   type: "png",
 });

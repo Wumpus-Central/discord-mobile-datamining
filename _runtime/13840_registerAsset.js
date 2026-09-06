@@ -1,13 +1,13 @@
 // _runtime/13840_registerAsset.js
-import registerAsset from "01240_registerAsset.js";
+import registerAsset from "01122_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native",
-  width: 120,
-  height: 120,
+  httpServerLocation: "/assets/images/native/icons",
+  width: 24,
+  height: 24,
   scales: [2, 3],
-  hash: "0242e2e3975e7ca5a2256573e276d96f",
-  name: "logo",
+  hash: "5ad61954329ae43fee881a48ae602d3b",
+  name: "ic_paperclip_24px",
   type: "png",
 });

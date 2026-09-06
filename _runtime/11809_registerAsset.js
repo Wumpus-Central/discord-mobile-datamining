@@ -1,13 +1,13 @@
 // _runtime/11809_registerAsset.js
-import registerAsset from "01240_registerAsset.js";
+import registerAsset from "01122_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/icons",
-  width: 20,
-  height: 20,
+  httpServerLocation: "/assets/images/native",
+  width: 50,
+  height: 50,
   scales: [2, 3],
-  hash: "fb208a5c686091d257485844d9c5539d",
-  name: "ic_play_dark",
+  hash: "1f317b3826e833bdfd8eb425b9e3f548",
+  name: "img_poop_light",
   type: "png",
 });

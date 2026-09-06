@@ -1,12 +1,15 @@
 // _runtime/10482__isNativeReflectConstruct.js
-import Filter from "10469_Filter.js";
+import AbstractParserWithWordBoundaryChecking from "10439_AbstractParserWithWordBoundaryChecking.js";
+import now from "10456_now.js";
+import _isNativeReflectConstruct2 from "10483__isNativeReflectConstruct.js";
 import closure_2 from "metro/00041__classCallCheck.js";
 import _createClass from "metro/00042__createClass.js";
 import closure_3 from "metro/00093__possibleConstructorReturn.js";
 import closure_4 from "00095__getPrototypeOf.js";
 import _inherits from "00098__inherits.js";
 
-const ENMergeRelativeFollowByDateRefiner = require;
+let self = this;
+const DECasualDateParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -25,88 +28,179 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-class ENMergeRelativeFollowByDateRefiner {
-  constructor() {
-    self = this;
-    tmp = closure_2(this, ENMergeRelativeFollowByDateRefiner);
-    tmp2 = closure_4;
-    obj = closure_4(ENMergeRelativeFollowByDateRefiner);
-    tmp3 = closure_3;
-    if (_isNativeReflectConstruct()) {
-      tmp7 = globalThis;
-      _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
-    } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
-    }
-    return tmp3(self, constructResult);
-  }
+let self2 = this;
+if (this) {
+  self2 = self.__createBinding;
 }
-_inherits(ENMergeRelativeFollowByDateRefiner, Filter.MergingRefiner);
-const items = [
-  {
-    key: "patternBetween",
-    value: function patternBetween() {
-      return /^\s*$/i;
-    },
-  },
-  {
-    key: "shouldMergeResults",
-    value: function shouldMergeResults(str, text, start) {
-      let match = str.match(this.patternBetween());
-      if (match) {
-        const tmp4 = null != text.text.match(/\s+(before|from)$/i);
-        let tmp5 = !tmp4;
-        if (!tmp4) {
-          tmp5 = null == text.text.match(/\s+(after|since)$/i);
-          const str2 = text.text;
+if (self2) {
+  let __setModuleDefault = self;
+  if (self) {
+    __setModuleDefault = self.__setModuleDefault;
+  }
+  if (__setModuleDefault) {
+    let fn = self;
+    if (self) {
+      fn = self.__importStar;
+    }
+    if (!fn) {
+      function u(arg0) {
+        let fn = Object.getOwnPropertyNames;
+        if (!fn) {
+          fn = (obj) => {
+            const items = [];
+            for (const key10005 in arg0) {
+              let tmp2 = key10005;
+              let _Object = Object;
+              let call = hasOwnProperty.call;
+              if (typeof call === "unknown") {
+                let hasOwnPropertyResult = hasOwnProperty(key10005);
+              } else {
+                hasOwnPropertyResult = call(arg0, key10005);
+              }
+              if (!hasOwnPropertyResult) {
+                continue;
+              } else {
+                items[items.length] = key10005;
+                continue;
+              }
+              continue;
+            }
+            return items;
+          };
         }
-        let tmp6 = !tmp5;
-        if (!tmp5) {
-          start = start.start;
-          let value = start.get("day");
-          if (value) {
-            const start2 = start.start;
-            value = start2.get("month");
+        return fn(arg0);
+      }
+      fn = (__esModule) => {
+        if (__esModule) {
+          if (__esModule.__esModule) {
+            return __esModule;
           }
-          if (value) {
-            const start3 = start.start;
-            value = start3.get("year");
-          }
-          tmp6 = value;
         }
-        match = tmp6;
-        str = text.text;
+        const obj = {};
+        if (null != __esModule) {
+          const arr = u(__esModule);
+          for (let num = 0; num < arr.length; num = num + 1) {
+            let tmp2 = num;
+            if ("default" !== arr[num]) {
+              let tmp3 = self2;
+              let tmp4 = self2(obj, __esModule, arr[num]);
+            }
+          }
+        }
+        __setModuleDefault(obj, __esModule);
+        return obj;
+      };
+    }
+    let fn2 = self;
+    if (self) {
+      fn2 = self.__importDefault;
+    }
+    if (!fn2) {
+      fn2 = (__esModule) => {
+        if (!__esModule) {
+          const obj = { default: null };
+          obj[0] = __esModule;
+          let tmp = obj;
+        } else {
+          tmp = __esModule;
+        }
+        return tmp;
+      };
+    }
+    const _Object3 = Object;
+    let closure_9 = fn2(_isNativeReflectConstruct2);
+    let closure_10 = fn(now);
+    const _RegExp = RegExp;
+    const regExp = new RegExp(
+      "(jetzt|heute|morgen|\u00FCbermorgen|uebermorgen|gestern|vorgestern|letzte\\s*nacht)(?:\\s*(morgen|vormittag|mittags?|nachmittag|abend|nacht|mitternacht))?(?=\\W|$)",
+      "i",
+    );
+    class DECasualDateParser {
+      constructor() {
+        self = this;
+        tmp = closure_2(this, DECasualDateParser);
+        tmp2 = closure_4;
+        obj = closure_4(DECasualDateParser);
+        tmp3 = closure_3;
+        if (_isNativeReflectConstruct()) {
+          tmp7 = globalThis;
+          _Reflect = Reflect;
+          tmp8 = arguments;
+          constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+        } else {
+          tmp4 = arguments;
+          tmp5 = arguments;
+          constructResult = obj(...arguments);
+        }
+        return tmp3(self, constructResult);
       }
-      return match;
-    },
-  },
-  {
-    key: "mergeResults",
-    value: function mergeResults(arg0, text, start) {
-      const parseDurationResult = ENMergeRelativeFollowByDateRefiner(10449).parseDuration(text.text);
-      let reverseDurationResult = parseDurationResult;
-      if (null != str.match(/\s+(before|from)$/i)) {
-        reverseDurationResult = tmp(10452).reverseDuration(parseDurationResult);
+    }
+    _inherits(DECasualDateParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+    let obj = { key: "innerPattern", value: null };
+    obj[1] = function innerPattern(arg0) {
+      return regExp;
+    };
+    let items = [obj];
+    obj = { key: "innerExtract", value: null };
+    obj[1] = function innerExtract(reference) {
+      reference = reference.reference;
+      const dateWithAdjustedTimezone = reference.getDateWithAdjustedTimezone();
+      const str2 = arg1[1] || "".toLowerCase();
+      const formatted = arg1[2] || "".toLowerCase();
+      const parsingComponents = reference.createParsingComponents();
+      if ("jetzt" === str2) {
+        let nowResult = closure_10.now(reference.reference);
+      } else if ("heute" === str2) {
+        nowResult = closure_10.today(reference.reference);
+      } else if ("morgen" === str2) {
+        const addDurationResult = DECasualDateParser(10434).addDuration(dateWithAdjustedTimezone, { day: 1 });
+        DECasualDateParser(10438).assignSimilarDate(parsingComponents, addDurationResult);
+        DECasualDateParser(10438).implySimilarTime(parsingComponents, addDurationResult);
+        nowResult = parsingComponents;
+      } else {
+        if ("\u00FCbermorgen" !== str2) {
+          if ("uebermorgen" !== str2) {
+            if ("gestern" === str2) {
+              const addDurationResult1 = DECasualDateParser(10434).addDuration(dateWithAdjustedTimezone, { day: -1 });
+              DECasualDateParser(10438).assignSimilarDate(parsingComponents, addDurationResult1);
+              DECasualDateParser(10438).implySimilarTime(parsingComponents, addDurationResult1);
+              nowResult = parsingComponents;
+            } else if ("vorgestern" === str2) {
+              const addDurationResult2 = DECasualDateParser(10434).addDuration(dateWithAdjustedTimezone, { day: -2 });
+              DECasualDateParser(10438).assignSimilarDate(parsingComponents, addDurationResult2);
+              DECasualDateParser(10438).implySimilarTime(parsingComponents, addDurationResult2);
+              nowResult = parsingComponents;
+            } else {
+              nowResult = parsingComponents;
+              if (str2.match(/letzte\s*nacht/)) {
+                let addDurationResult3 = dateWithAdjustedTimezone;
+                if (dateWithAdjustedTimezone.getHours() > 6) {
+                  addDurationResult3 = DECasualDateParser(10434).addDuration(dateWithAdjustedTimezone, { day: -1 });
+                }
+                DECasualDateParser(10438).assignSimilarDate(parsingComponents, addDurationResult3);
+                parsingComponents.imply("hour", 0);
+                nowResult = parsingComponents;
+              }
+            }
+          }
+        }
+        const addDurationResult4 = DECasualDateParser(10434).addDuration(dateWithAdjustedTimezone, { day: 2 });
+        DECasualDateParser(10438).assignSimilarDate(parsingComponents, addDurationResult4);
+        DECasualDateParser(10438).implySimilarTime(parsingComponents, addDurationResult4);
+        nowResult = parsingComponents;
       }
-      const ParsingComponents = tmp(10453).ParsingComponents;
-      const ReferenceWithTimezone = tmp(10453).ReferenceWithTimezone;
-      start = start.start;
-      const relativeFromReference = ParsingComponents.createRelativeFromReference(
-        ReferenceWithTimezone.fromDate(start.date()),
-        reverseDurationResult,
-      );
-      return new ENMergeRelativeFollowByDateRefiner(10453).ParsingResult(
-        start.reference,
-        text.index,
-        "" + text.text + arg0 + start.text,
-        relativeFromReference,
-      );
-    },
-  },
-];
-
-export default _createClass(ENMergeRelativeFollowByDateRefiner, items);
+      let result = nowResult;
+      if (formatted) {
+        result = mod.default.extractTimeComponents(nowResult, formatted);
+        const _default = mod.default;
+      }
+      return result;
+    };
+    items[1] = obj;
+    exports.default = _createClass(DECasualDateParser, items);
+  } else {
+    const _Object2 = Object;
+  }
+} else {
+  let _Object = Object;
+}

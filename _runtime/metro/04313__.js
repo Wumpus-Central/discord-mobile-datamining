@@ -1,10 +1,20 @@
 // _runtime/metro/04313__.js
-let fn = Array.isArray;
-if (!fn) {
-  fn = (arg0) => {
-    const call = toString.call;
-    return "[object Array]" == (typeof call === "unknown" ? toString() : call(arg0));
-  };
-}
 
-export default fn;
+export default {
+  uiViewClassName: "RiveView",
+  supportsRawText: false,
+  bubblingEventTypes: {},
+  directEventTypes: {},
+  validAttributes: {
+    artboardName: true,
+    stateMachineName: true,
+    autoPlay: true,
+    file: true,
+    alignment: true,
+    fit: true,
+    layoutScaleFactor: true,
+    dataBind: true,
+    onError: true,
+    hybridRef: true,
+  },
+};

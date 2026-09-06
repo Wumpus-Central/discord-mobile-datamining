@@ -1,14 +1,13 @@
 // _runtime/10622__isNativeReflectConstruct.js
-import repeatedTimeunitPattern from "10450_repeatedTimeunitPattern.js";
-import AbstractParserWithWordBoundaryChecking from "10457_AbstractParserWithWordBoundaryChecking.js";
-import WEEKDAY_DICTIONARY from "10619_WEEKDAY_DICTIONARY.js";
+import AbstractParserWithWordBoundaryChecking from "10439_AbstractParserWithWordBoundaryChecking.js";
+import WEEKDAY_DICTIONARY from "10620_WEEKDAY_DICTIONARY.js";
 import closure_2 from "metro/00041__classCallCheck.js";
 import _createClass from "metro/00042__createClass.js";
 import closure_3 from "metro/00093__possibleConstructorReturn.js";
 import closure_4 from "00095__getPrototypeOf.js";
 import _inherits from "00098__inherits.js";
 
-const ENMonthNameParser = require;
+const SVTimeUnitCasualRelativeFormatParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -28,73 +27,70 @@ function _isNativeReflectConstruct() {
   } catch (err) {}
 }
 const regExp = new RegExp(
-  "((?:in)\\s*)?(" +
-    repeatedTimeunitPattern.matchAnyPattern(WEEKDAY_DICTIONARY.MONTH_DICTIONARY) +
-    ")\\s*(?:[,-]?\\s*(" +
-    WEEKDAY_DICTIONARY.YEAR_PATTERN +
-    ")?)?(?=[^\\s\\w]|\\s+[^0-9]|\\s+$|$)",
+  "(denna|den h\u00E4r|f\u00F6rra|passerade|n\u00E4sta|kommande|efter|\\+|-)\\s*(" +
+    WEEKDAY_DICTIONARY.TIME_UNITS_PATTERN +
+    ")(?=\\W|$)",
   "i",
 );
-class ENMonthNameParser {
+const regExp1 = new RegExp(
+  "(denna|den h\u00E4r|f\u00F6rra|passerade|n\u00E4sta|kommande|efter|\\+|-)\\s*(" +
+    WEEKDAY_DICTIONARY.TIME_UNITS_NO_ABBR_PATTERN +
+    ")(?=\\W|$)",
+  "i",
+);
+class SVTimeUnitCasualRelativeFormatParser {
   constructor() {
+    flag = global;
+    if (global === undefined) {
+      flag = true;
+    }
     self = this;
-    tmp = closure_2(this, ENMonthNameParser);
+    tmp = closure_2(this, SVTimeUnitCasualRelativeFormatParser);
     tmp2 = closure_4;
-    obj = closure_4(ENMonthNameParser);
+    obj = closure_4(SVTimeUnitCasualRelativeFormatParser);
     tmp3 = closure_3;
     if (_isNativeReflectConstruct()) {
-      tmp7 = globalThis;
+      tmp5 = globalThis;
       _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
     } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
+      constructResult = obj.apply(self, undefined);
     }
-    return tmp3(self, constructResult);
+    tmp3Result = tmp3(self, constructResult);
+    tmp3Result.allowAbbreviations = flag;
+    return tmp3Result;
   }
 }
-_inherits(ENMonthNameParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+_inherits(
+  SVTimeUnitCasualRelativeFormatParser,
+  AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking,
+);
 const items = [
   {
     key: "innerPattern",
     value: function innerPattern() {
-      return regExp;
+      return this.allowAbbreviations ? regExp : regExp1;
     },
   },
   {
     key: "innerExtract",
-    value: function innerExtract(createParsingResult, index) {
-      const formatted = index[2].toLowerCase();
-      if (index[0].length <= 3) {
-        if (!ENMonthNameParser(10619).FULL_MONTH_NAME_DICTIONARY[formatted]) {
-          return null;
+    value: function innerExtract(reference) {
+      const formatted = arg1[1].toLowerCase();
+      const parseDurationResult = SVTimeUnitCasualRelativeFormatParser(10620).parseDuration(arg1[2]);
+      if (parseDurationResult) {
+        if ("f\u00F6rra" !== formatted) {
+          if ("passerade" !== formatted) {
+            let reverseDurationResult = parseDurationResult;
+          }
+          const ParsingComponents = tmp2(10435).ParsingComponents;
+          return ParsingComponents.createRelativeFromReference(reference.reference, reverseDurationResult);
         }
-      }
-      let str2 = index[1];
-      if (!str2) {
-        str2 = "";
-      }
-      const parsingResult = createParsingResult.createParsingResult(
-        index.index + str2.length,
-        index.index + index[0].length,
-      );
-      const start = parsingResult.start;
-      start.imply("day", 1);
-      const tmp9 = ENMonthNameParser(10619).MONTH_DICTIONARY[formatted];
-      const start2 = parsingResult.start;
-      start2.assign("month", tmp9);
-      if (index[3]) {
-        const start4 = parsingResult.start;
-        start4.assign("year", tmp7(10619).parseYear(index[3]));
+        reverseDurationResult = tmp2(10434).reverseDuration(parseDurationResult);
       } else {
-        const start3 = parsingResult.start;
-        start3.imply("year", tmp7(10451).findYearClosestToRef(createParsingResult.refDate, 1, tmp9));
+        return null;
       }
-      return parsingResult;
     },
   },
 ];
 
-export default _createClass(ENMonthNameParser, items);
+export default _createClass(SVTimeUnitCasualRelativeFormatParser, items);

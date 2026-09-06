@@ -7919,7 +7919,7 @@ function commitRootWhenReady(current, subtreeFlags) {
       throw Error("Should not already be working.");
     } else if (null !== lanes) {
       if (lanes === current.current) {
-        const _Error = Error;
+        let _Error = Error;
         throw Error("Cannot commit the same tree as before. This error is likely caused by a bug in React. Please file an issue.");
       } else {
         (function markRootFinished(pendingLanes, arg1, pendingLanes2, arg3, arg4, arg5) {
@@ -7992,13 +7992,12 @@ function commitRootWhenReady(current, subtreeFlags) {
             closure_277 = closure_277 | 4;
             try {
               (function commitBeforeMutationEffects(arg0, lanes) {
-                let _return2;
+                let length;
                 let _return = lanes;
                 if (null !== lanes) {
-                  let child = _return.child;
+                  const child = _return.child;
                   if (1028 & _return.subtreeFlags) {
                     if (null !== child) {
-                      _return = child;
                       child.return = tmp3;
                       _return = child;
                       let tmp5 = child;
@@ -8006,30 +8005,212 @@ function commitRootWhenReady(current, subtreeFlags) {
                   }
                   tmp5 = _return;
                   if (null !== _return) {
-                    if (1024 & child) {
-                      if (null !== _return) {
-                        const stateNode = _return2.stateNode;
-                        try {
-                          const snapshotBeforeUpdate = stateNode.getSnapshotBeforeUpdate(callback3(_return2.type, tmp13), tmp14);
-                          stateNode.__reactInternalSnapshotBeforeUpdate = snapshotBeforeUpdate;
-                        } catch (tmp10) {
-                          callback5(tmp2, tmp2.return, tmp10);
+                    ({ alternate, flags } = _return);
+                    switch (_return.tag) {
+                      case 0:
+                        if (4 & flags) {
+                          const updateQueue = tmp6.updateQueue;
+                          let events = null;
+                          if (null !== updateQueue) {
+                            events = tmp15.events;
+                          }
+                          if (null !== events) {
+                            let num = 0;
+                            if (0 < arr.length) {
+                              do {
+                                let tmp19 = events;
+                                let tmp20 = arr[num];
+                                tmp20.ref.impl = tmp20.nextImpl;
+                                num = num + 1;
+                                length = arr.length;
+                              } while (num < length);
+                            }
+                          }
                         }
-                      }
-                    }
-                    while (true) {
-                      let sibling = _return2.sibling;
-                      child = sibling;
-                      if (null !== sibling) {
-                        _return = child;
-                        _return2 = _return2.return;
-                        child.return = _return2;
-                        _return = child;
-                        tmp5 = child;
-                      } else {
-                        _return = _return2.return;
-                        tmp5 = _return;
-                      }
+                        const sibling = tmp6.sibling;
+                        if (null !== sibling) {
+                          tmp23.return = tmp6.return;
+                          _return = tmp23;
+                          tmp5 = tmp23;
+                        } else {
+                          _return = tmp6.return;
+                          tmp5 = _return;
+                        }
+                      break;
+                      case 1:
+                        if (1024 & flags) {
+                          if (null !== alternate) {
+                            const stateNode = tmp6.stateNode;
+                            try {
+                              const snapshotBeforeUpdate = stateNode.getSnapshotBeforeUpdate(callback3(tmp6.type, tmp28), tmp29);
+                              stateNode.__reactInternalSnapshotBeforeUpdate = snapshotBeforeUpdate;
+                            } catch (tmp11) {
+                              callback5(tmp2, tmp2.return, tmp11);
+                            }
+                          }
+                        }
+                      break;
+                      case 2:
+                        let tmp22 = 1024 & flags;
+                        if (tmp22) {
+                          let _Error = Error;
+                          let ErrorResult = Error("This unit of work tag should not have side-effects. This error is likely caused by a bug in React. Please file an issue.");
+                          throw ErrorResult;
+                        }
+                      break;
+                      case 3:
+                      break;
+                      case 4:
+                      break;
+                      case 5:
+                      break;
+                      case 6:
+                      break;
+                      case 7:
+                        tmp22 = 1024 & flags;
+                        if (tmp22) {
+                          _Error = Error;
+                          ErrorResult = Error("This unit of work tag should not have side-effects. This error is likely caused by a bug in React. Please file an issue.");
+                          throw ErrorResult;
+                        }
+                      break;
+                      case 8:
+                        tmp22 = 1024 & flags;
+                        if (tmp22) {
+                          _Error = Error;
+                          ErrorResult = Error("This unit of work tag should not have side-effects. This error is likely caused by a bug in React. Please file an issue.");
+                          throw ErrorResult;
+                        }
+                      break;
+                      case 9:
+                        tmp22 = 1024 & flags;
+                        if (tmp22) {
+                          _Error = Error;
+                          ErrorResult = Error("This unit of work tag should not have side-effects. This error is likely caused by a bug in React. Please file an issue.");
+                          throw ErrorResult;
+                        }
+                      break;
+                      case 10:
+                        tmp22 = 1024 & flags;
+                        if (tmp22) {
+                          _Error = Error;
+                          ErrorResult = Error("This unit of work tag should not have side-effects. This error is likely caused by a bug in React. Please file an issue.");
+                          throw ErrorResult;
+                        }
+                      break;
+                      case 11:
+                      break;
+                      case 12:
+                        tmp22 = 1024 & flags;
+                        if (tmp22) {
+                          _Error = Error;
+                          ErrorResult = Error("This unit of work tag should not have side-effects. This error is likely caused by a bug in React. Please file an issue.");
+                          throw ErrorResult;
+                        }
+                      break;
+                      case 13:
+                        tmp22 = 1024 & flags;
+                        if (tmp22) {
+                          _Error = Error;
+                          ErrorResult = Error("This unit of work tag should not have side-effects. This error is likely caused by a bug in React. Please file an issue.");
+                          throw ErrorResult;
+                        }
+                      break;
+                      case 14:
+                        tmp22 = 1024 & flags;
+                        if (tmp22) {
+                          _Error = Error;
+                          ErrorResult = Error("This unit of work tag should not have side-effects. This error is likely caused by a bug in React. Please file an issue.");
+                          throw ErrorResult;
+                        }
+                      break;
+                      case 15:
+                      break;
+                      case 16:
+                        tmp22 = 1024 & flags;
+                        if (tmp22) {
+                          _Error = Error;
+                          ErrorResult = Error("This unit of work tag should not have side-effects. This error is likely caused by a bug in React. Please file an issue.");
+                          throw ErrorResult;
+                        }
+                      break;
+                      case 17:
+                      break;
+                      case 18:
+                        tmp22 = 1024 & flags;
+                        if (tmp22) {
+                          _Error = Error;
+                          ErrorResult = Error("This unit of work tag should not have side-effects. This error is likely caused by a bug in React. Please file an issue.");
+                          throw ErrorResult;
+                        }
+                      break;
+                      case 19:
+                        tmp22 = 1024 & flags;
+                        if (tmp22) {
+                          _Error = Error;
+                          ErrorResult = Error("This unit of work tag should not have side-effects. This error is likely caused by a bug in React. Please file an issue.");
+                          throw ErrorResult;
+                        }
+                      break;
+                      case 20:
+                        tmp22 = 1024 & flags;
+                        if (tmp22) {
+                          _Error = Error;
+                          ErrorResult = Error("This unit of work tag should not have side-effects. This error is likely caused by a bug in React. Please file an issue.");
+                          throw ErrorResult;
+                        }
+                      break;
+                      case 21:
+                        tmp22 = 1024 & flags;
+                        if (tmp22) {
+                          _Error = Error;
+                          ErrorResult = Error("This unit of work tag should not have side-effects. This error is likely caused by a bug in React. Please file an issue.");
+                          throw ErrorResult;
+                        }
+                      break;
+                      case 22:
+                        tmp22 = 1024 & flags;
+                        if (tmp22) {
+                          _Error = Error;
+                          ErrorResult = Error("This unit of work tag should not have side-effects. This error is likely caused by a bug in React. Please file an issue.");
+                          throw ErrorResult;
+                        }
+                      break;
+                      case 23:
+                        tmp22 = 1024 & flags;
+                        if (tmp22) {
+                          _Error = Error;
+                          ErrorResult = Error("This unit of work tag should not have side-effects. This error is likely caused by a bug in React. Please file an issue.");
+                          throw ErrorResult;
+                        }
+                      break;
+                      case 24:
+                        tmp22 = 1024 & flags;
+                        if (tmp22) {
+                          _Error = Error;
+                          ErrorResult = Error("This unit of work tag should not have side-effects. This error is likely caused by a bug in React. Please file an issue.");
+                          throw ErrorResult;
+                        }
+                      break;
+                      case 25:
+                        tmp22 = 1024 & flags;
+                        if (tmp22) {
+                          _Error = Error;
+                          ErrorResult = Error("This unit of work tag should not have side-effects. This error is likely caused by a bug in React. Please file an issue.");
+                          throw ErrorResult;
+                        }
+                      break;
+                      case 26:
+                      break;
+                      case 27:
+                      break;
+                      default:
+                        tmp22 = 1024 & flags;
+                        if (tmp22) {
+                          _Error = Error;
+                          ErrorResult = Error("This unit of work tag should not have side-effects. This error is likely caused by a bug in React. Please file an issue.");
+                          throw ErrorResult;
+                        }
                     }
                   }
                 }
@@ -13095,7 +13276,7 @@ __CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE.S = (arg0, obj) 
         tmp5 = tmp6;
       }
       c124 = tmp5;
-      obj = { status: "pending", value: "Array", then: true };
+      obj = { status: "pending", value: "Array", then: "\u{1F469}\u{1F3FE}\u200D\u2764\uFE0F\u200D\u{1F48B}\u200D\u{1F469}\u{1F3FF}" };
       obj[2] = function then(arg0) {
         items.push(arg0);
       };
@@ -13365,8 +13546,8 @@ let closure_210 = {
     const items = [tmp3.memoizedState, bindResult];
     return items;
   },
-  useRef(stateFromStores) {
-    let obj = { current: stateFromStores };
+  useRef(first) {
+    let obj = { current: first };
     obj = { memoizedState: null, baseState: null, baseQueue: null, queue: null, next: null };
     if (null === obj) {
       c165.memoizedState = obj;

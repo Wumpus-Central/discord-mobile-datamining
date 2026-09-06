@@ -1,13 +1,13 @@
 // _runtime/09343_registerAsset.js
-import registerAsset from "01240_registerAsset.js";
+import registerAsset from "01122_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/consoles",
-  width: 254,
-  height: 127,
+  httpServerLocation: "/assets/images/native/custom_app_icons/CircuitIcon",
+  width: 60,
+  height: 60,
   scales: [2, 3],
-  hash: "4d6a15fbe9eb4d6c66e3d9151f9a0183",
-  name: "link_failure",
+  hash: "68832d737c55ed046c40e8d11571a54e",
+  name: "CircuitIcon",
   type: "png",
 });

@@ -1,5 +1,5 @@
 // _runtime/10115_registerAsset.js
-import registerAsset from "01240_registerAsset.js";
+import registerAsset from "01122_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "06839429466f04b07ee5c7156e6fbf8c",
-  name: "MicrophoneIcon",
+  hash: "4e1581119cf1ddaae8c3aa4ebdd90f99",
+  name: "StickerIcon",
   type: "png",
 });

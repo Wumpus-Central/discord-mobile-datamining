@@ -1,13 +1,13 @@
 // _runtime/13495_registerAsset.js
-import registerAsset from "01240_registerAsset.js";
+import registerAsset from "01122_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/guild_boosting/native/images",
-  width: 424,
-  height: 254,
-  scales: [1],
-  hash: "616e0e1297b795db059112c52470eab4",
-  name: "top_perk_streaming_quality",
+  httpServerLocation: "/assets/images/native/premium/illustrations",
+  width: 98,
+  height: 88,
+  scales: [2, 3],
+  hash: "e786e2db9ac41808374260a48d3a5876",
+  name: "img_marketing_frog",
   type: "png",
 });

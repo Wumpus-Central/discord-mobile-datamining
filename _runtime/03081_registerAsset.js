@@ -1,11 +1,11 @@
 // _runtime/03081_registerAsset.js
-import registerAsset from "01240_registerAsset.js";
+import registerAsset from "01122_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/application_account_linking",
+  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9wcmVtaXVtL3ByZW1pdW1fZ3JvdXA=",
   scales: [1],
-  hash: "316d44c83c7a5e996ce231e7195a41e7",
-  name: "IncentivizedAccountLinking.compiled.messages",
+  hash: "8e224024ab0ea0eef2e1890991fd1dac",
+  name: "nl.messages.8e224024ab0ea0eef2e1890991fd1dac.compiled.messages",
   type: "jsona",
 });

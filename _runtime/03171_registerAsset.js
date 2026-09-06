@@ -1,11 +1,11 @@
 // _runtime/03171_registerAsset.js
-import registerAsset from "01240_registerAsset.js";
+import registerAsset from "01122_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9jYWxsX2ZlZWRiYWNrX3R1dG9yaWFscy93ZWI=",
+  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9oYW5nb3V0X3dpbmRvdw==",
   scales: [1],
-  hash: "9223c3c67d01747c7ba57599a6dbd5a4",
-  name: "th.messages.9223c3c67d01747c7ba57599a6dbd5a4.compiled.messages",
+  hash: "4b5e9555172c3070034226fa54b53433",
+  name: "fr.messages.4b5e9555172c3070034226fa54b53433.compiled.messages",
   type: "jsona",
 });

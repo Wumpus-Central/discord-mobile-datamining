@@ -1,11 +1,11 @@
 // _runtime/02169_registerAsset.js
-import registerAsset from "01240_registerAsset.js";
+import registerAsset from "01122_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9jb2xsZWN0aWJsZXMvd2Vi",
+  httpServerLocation: "/assets/modules/checkout/messages",
   scales: [1],
-  hash: "27ab9102761827eca8b7549277a16631",
-  name: "uk.messages.27ab9102761827eca8b7549277a16631.compiled.messages",
+  hash: "6a429731d2a9e33e0bfb2eab2a72054e",
+  name: "GiftCard.compiled.messages",
   type: "jsona",
 });

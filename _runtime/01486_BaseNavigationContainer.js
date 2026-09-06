@@ -1,0 +1,82 @@
+// _runtime/01486_BaseNavigationContainer.js
+import getPartialState from "01499_getPartialState.js";
+import useNavigationIndependentTree from "01501_useNavigationIndependentTree.js";
+import createNavigationContainerRef from "01509_createNavigationContainerRef.js";
+import findFocusedRoute from "01510_findFocusedRoute.js";
+import NavigationContainerRefContext from "01514_NavigationContainerRefContext.js";
+import ThemeProvider from "01519_ThemeProvider.js";
+import context from "01520_context.js";
+import createNavigatorFactory from "01521_createNavigatorFactory.js";
+import getItemsFromScreens from "01522_getItemsFromScreens.js";
+import useRoute from "01523_useRoute.js";
+import context2 from "01524_context.js";
+import context1 from "01525_context1.js";
+import useNavigation from "01526_useNavigation.js";
+import NavigationContext from "01527_NavigationContext.js";
+import CurrentRenderContext from "01532_CurrentRenderContext.js";
+import weakMap from "01533_weakMap.js";
+import getFocusedRouteNameFromRoute from "01534_getFocusedRouteNameFromRoute.js";
+import serializeParamValue from "01537_serializeParamValue.js";
+import prepareConfigResources from "01545_prepareConfigResources.js";
+import NavigationHelpersContext from "01549_NavigationHelpersContext.js";
+import NavigationIndependentTree from "01550_NavigationIndependentTree.js";
+import NavigationMetaContext from "01552_NavigationMetaContext.js";
+import PreventRemoveContext from "01553_PreventRemoveContext.js";
+import transformPreventedRoutes from "01554_transformPreventedRoutes.js";
+import useTheme from "01555_useTheme.js";
+import useFocusEffect from "01556_useFocusEffect.js";
+import isNavigationState from "01557_isNavigationState.js";
+import useNavigationState from "01575_useNavigationState.js";
+import useNavigationContainerRef from "01576_useNavigationContainerRef.js";
+import usePreventRemove from "01577_usePreventRemove.js";
+import usePreventRemoveContext from "01578_usePreventRemoveContext.js";
+import useStateForPath from "01579_useStateForPath.js";
+import formatToList from "01580_formatToList.js";
+
+for (const key10013 in require("PrivateValueStore")) {
+  let tmp2 = key10013;
+  arg5[key10013] = require("PrivateValueStore")[key10013];
+  continue;
+}
+for (const key10017 in require("CommonActions")) {
+  let tmp3 = key10017;
+  arg5[key10017] = require("CommonActions")[key10017];
+  continue;
+}
+
+export const BaseNavigationContainer = getPartialState.BaseNavigationContainer;
+export const createNavigationContainerRef = createNavigationContainerRef.createNavigationContainerRef;
+export const createNavigatorFactory = createNavigatorFactory.createNavigatorFactory;
+export const CurrentRenderContext = CurrentRenderContext.CurrentRenderContext;
+export const findFocusedRoute = findFocusedRoute.findFocusedRoute;
+export const getActionFromState = weakMap.getActionFromState;
+export const getFocusedRouteNameFromRoute = getFocusedRouteNameFromRoute.getFocusedRouteNameFromRoute;
+export const getPathFromState = serializeParamValue.getPathFromState;
+export const getStateFromPath = prepareConfigResources.getStateFromPath;
+export const NavigationContainerRefContext = NavigationContainerRefContext.NavigationContainerRefContext;
+export const NavigationContext = NavigationContext.NavigationContext;
+export const NavigationHelpersContext = NavigationHelpersContext.NavigationHelpersContext;
+export const NavigationIndependentTree = NavigationIndependentTree.NavigationIndependentTree;
+export const NavigationMetaContext = NavigationMetaContext.NavigationMetaContext;
+export const NavigationProvider = context2.NavigationProvider;
+export const NavigationRouteContext = context2.NavigationRouteContext;
+export const PreventRemoveContext = PreventRemoveContext.PreventRemoveContext;
+export const PreventRemoveProvider = transformPreventedRoutes.PreventRemoveProvider;
+export const createComponentForStaticNavigation = getItemsFromScreens.createComponentForStaticNavigationDeprecated;
+export const createPathConfigForStaticNavigation = getItemsFromScreens.createPathConfigForStaticNavigation;
+export const createScreenFactory = getItemsFromScreens.createScreenFactory;
+export const ThemeContext = context.ThemeContext;
+export const ThemeProvider = ThemeProvider.ThemeProvider;
+export const useTheme = useTheme.useTheme;
+export const useFocusEffect = useFocusEffect.useFocusEffect;
+export const useIsFocused = context1.useIsFocused;
+export const useNavigation = useNavigation.useNavigation;
+export const useNavigationBuilder = isNavigationState.useNavigationBuilder;
+export const useNavigationContainerRef = useNavigationContainerRef.useNavigationContainerRef;
+export const useNavigationIndependentTree = useNavigationIndependentTree.useNavigationIndependentTree;
+export const useNavigationState = useNavigationState.useNavigationState;
+export const usePreventRemove = usePreventRemove.usePreventRemove;
+export const usePreventRemoveContext = usePreventRemoveContext.usePreventRemoveContext;
+export const useRoute = useRoute.useRoute;
+export const useStateForPath = useStateForPath.useStateForPath;
+export const validatePathConfig = formatToList.validatePathConfig;

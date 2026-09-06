@@ -1,13 +1,13 @@
 // _runtime/09335_registerAsset.js
-import registerAsset from "01240_registerAsset.js";
+import registerAsset from "01122_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/icons",
-  width: 24,
-  height: 24,
+  httpServerLocation: "/assets/images/native/custom_app_icons/PirateIcon",
+  width: 60,
+  height: 60,
   scales: [2, 3],
-  hash: "4550be26e4ce88ab0a8f2d917df660a6",
-  name: "ic_xbox_24px",
+  hash: "02ec404298afd1c009d52e4ac428845a",
+  name: "PirateIcon",
   type: "png",
 });

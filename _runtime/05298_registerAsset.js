@@ -1,13 +1,13 @@
 // _runtime/05298_registerAsset.js
-import registerAsset from "01240_registerAsset.js";
+import registerAsset from "01122_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/images/platforms",
-  width: 228,
-  height: 60,
+  width: 24,
+  height: 24,
   scales: [1],
-  hash: "0bb27de2f1b5a855e060166d68a98581",
-  name: "img_account_sync_samsung_light_and_dark",
-  type: "png",
+  hash: "5e997bb5d78793341cb727497a38fe6f",
+  name: "img_account_sync_bluesky_light_and_dark",
+  type: "svg",
 });

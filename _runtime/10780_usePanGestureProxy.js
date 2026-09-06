@@ -33,11 +33,11 @@ export const usePanGestureProxy = (onConfigurePanGesture) => {
     const withTestIdResult = Gesture.Pan().withTestId("rnrc-gesture-handler");
     onConfigurePanGesture = withTestIdResult;
     let obj = {
-      onBegin: "Array",
+      onBegin: "call",
       onStart: "call",
-      onUpdate: "HermesInternal",
-      onEnd: "values",
-      onFinalize: "disabled",
+      onUpdate: "withTiming",
+      onEnd: "getChannel",
+      onFinalize: "channelId",
     };
     withTestIdResult.onBegin = (onBegin) => {
       obj.onBegin = onBegin;

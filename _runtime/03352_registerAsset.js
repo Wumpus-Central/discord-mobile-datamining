@@ -1,11 +1,11 @@
 // _runtime/03352_registerAsset.js
-import registerAsset from "01240_registerAsset.js";
+import registerAsset from "01122_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcw==",
+  httpServerLocation: "/assets/modules/partner_perks/xbox/partner_pass",
   scales: [1],
-  hash: "d43751bf083d84f335b500701e8f1853",
-  name: "it.messages.d43751bf083d84f335b500701e8f1853.compiled.messages",
+  hash: "5d043a239e74f1fd73cda189aff4d907",
+  name: "XboxPartnerPass.compiled.messages",
   type: "jsona",
 });

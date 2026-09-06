@@ -1,11 +1,11 @@
 // _runtime/03467_registerAsset.js
-import registerAsset from "01240_registerAsset.js";
+import registerAsset from "01122_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/game_invite_channels",
+  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9jb252ZXJzYXRpb25z",
   scales: [1],
-  hash: "1f9ab1ee6385662cdd6891a4feb70a40",
-  name: "GameInviteChannels.compiled.messages",
+  hash: "134b39e54b97c89ceb536c79a49a2f34",
+  name: "nl.messages.134b39e54b97c89ceb536c79a49a2f34.compiled.messages",
   type: "jsona",
 });

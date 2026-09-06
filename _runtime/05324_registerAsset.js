@@ -1,13 +1,13 @@
 // _runtime/05324_registerAsset.js
-import registerAsset from "01240_registerAsset.js";
+import registerAsset from "01122_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/images/platforms",
-  width: 267,
-  height: 267,
+  width: 24,
+  height: 24,
   scales: [1],
-  hash: "898dc79e0285b8e9855531eeca36bf84",
-  name: "img_roblox_white",
+  hash: "1c6c58beca1fec7f3c53119b27e0466a",
+  name: "img_account_sync_facebook_light_and_dark",
   type: "svg",
 });

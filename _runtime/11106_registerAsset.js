@@ -1,5 +1,5 @@
 // _runtime/11106_registerAsset.js
-import registerAsset from "01240_registerAsset.js";
+import registerAsset from "01122_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "9d92aa1c45b82a477ca0857bf43b0863",
-  name: "PencilSparkleIcon",
+  hash: "80a1b67e775ddb8de80fde27e63a5302",
+  name: "CircleQuestionIcon-secondary",
   type: "png",
 });

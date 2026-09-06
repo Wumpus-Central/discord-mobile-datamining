@@ -1,13 +1,13 @@
 // _runtime/13327_registerAsset.js
-import registerAsset from "01240_registerAsset.js";
+import registerAsset from "01122_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/premium/native/images/perks",
-  width: 300,
-  height: 175,
+  httpServerLocation: "/assets/images/native/premium/logos",
+  width: 449.5,
+  height: 245,
   scales: [2, 3],
-  hash: "7d09a15a2a5682035199dcfee2a26d08",
-  name: "badge",
+  hash: "ee35a42e9eee806c9e4a6146b7529edb",
+  name: "img_logo_nitro_tier_0_light",
   type: "png",
 });

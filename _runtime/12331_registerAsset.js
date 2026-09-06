@@ -1,13 +1,13 @@
 // _runtime/12331_registerAsset.js
-import registerAsset from "01240_registerAsset.js";
+import registerAsset from "01122_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
+  httpServerLocation: "/assets/modules/create_guild/native/images",
+  width: 48,
+  height: 48,
   scales: [2, 3],
-  hash: "027cfc6a5bd867529dfeaf25fa2ca1f4",
-  name: "HeadphonesIcon",
+  hash: "cae160e8dcd3fb84e6eda225bda4b4a6",
+  name: "img_clubs",
   type: "png",
 });

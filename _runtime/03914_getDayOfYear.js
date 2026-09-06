@@ -1,0 +1,45 @@
+// _runtime/03914_getDayOfYear.js
+import _typeof from "metro/03650__typeof.js";
+import startOfYear from "03869_startOfYear.js";
+import differenceInCalendarDays from "03812_differenceInCalendarDays.js";
+import requiredArgs from "03651_requiredArgs.js";
+
+if (!_typeof) {
+  let obj = { default: null };
+  obj[0] = _typeof;
+  let tmp3 = obj;
+} else {
+  tmp3 = _typeof;
+}
+_typeof = tmp3;
+if (!startOfYear) {
+  obj = { default: null };
+  obj[0] = startOfYear;
+  let tmp5 = obj;
+} else {
+  tmp5 = startOfYear;
+}
+startOfYear = tmp5;
+if (!differenceInCalendarDays) {
+  obj = { default: null };
+  obj[0] = differenceInCalendarDays;
+  let tmp7 = obj;
+} else {
+  tmp7 = differenceInCalendarDays;
+}
+differenceInCalendarDays = tmp7;
+if (!requiredArgs) {
+  const obj1 = { default: null };
+  obj1[0] = requiredArgs;
+  let tmp9 = obj1;
+} else {
+  tmp9 = requiredArgs;
+}
+requiredArgs = tmp9;
+
+export default function getDayOfYear(arg0) {
+  requiredArgs.default(1, arguments);
+  const defaultResult1 = _typeof.default(arg0);
+  return differenceInCalendarDays.default(defaultResult1, startOfYear.default(defaultResult1)) + 1;
+};
+export default exports.default;

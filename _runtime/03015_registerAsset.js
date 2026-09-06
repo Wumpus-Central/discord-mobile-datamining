@@ -1,11 +1,11 @@
 // _runtime/03015_registerAsset.js
-import registerAsset from "01240_registerAsset.js";
+import registerAsset from "01122_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/application_widget",
+  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9hcHBsaWNhdGlvbl9hY2NvdW50X2xpbmtpbmc=",
   scales: [1],
-  hash: "062641250687eb2699a25dd8f44d77ae",
-  name: "ApplicationWidget.compiled.messages",
+  hash: "2d4f86f642d1035a298894fdb487db33",
+  name: "el.messages.2d4f86f642d1035a298894fdb487db33.compiled.messages",
   type: "jsona",
 });

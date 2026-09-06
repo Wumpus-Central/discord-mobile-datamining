@@ -1,5 +1,5 @@
 // _runtime/05332_registerAsset.js
-import registerAsset from "01240_registerAsset.js";
+import registerAsset from "01122_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 255,
   height: 255,
   scales: [1],
-  hash: "8d6755adef39a79b94cc758161d8de0c",
-  name: "img_account_sync_ebay_white",
-  type: "svg",
+  hash: "99749051c874e2c29d0c8fc118b6ecf2",
+  name: "img_account_sync_x_white",
+  type: "png",
 });

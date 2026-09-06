@@ -1,34 +1,47 @@
 // _runtime/metro/05199__.js
-const module = arg2;
-const dependencyMap = arg6;
-arg5.default = {
-  decode(arg0, buffer) {
-    let value = module(5200).get();
-    if (undefined !== value) {
-      if (undefined !== arg0) {
-        try {
-          value = new value(arg0);
-          const _DataView = DataView;
-          if (buffer instanceof DataView) {
-            buffer = buffer.buffer;
+import _mod5200 from "05200__.js";
+import _mod5202 from "05202__.js";
+
+const self = this;
+let self2 = this;
+if (this) {
+  self2 = self.__createBinding;
+}
+if (self2) {
+  let fn = self;
+  if (self) {
+    fn = self.__exportStar;
+  }
+  if (!fn) {
+    fn = (obj, exports) => {
+      for (const key10007 in arg0) {
+        let tmp5 = key10007;
+        let tmp6 = "default" === key10007;
+        if (tmp6) {
+          if (tmp6) {
+            continue;
           } else {
-            const _Uint8Array = Uint8Array;
-            buffer = Uint8Array.from(buffer);
+            let tmp3 = self2;
+            let tmp4 = self2(arg1, arg0, key10007);
+            continue;
           }
-          value.decode(buffer);
-        } catch (err) {}
+          continue;
+        } else {
+          let _Object = Object;
+          let call = hasOwnProperty.call;
+          if (typeof call === "unknown") {
+            let hasOwnPropertyResult = hasOwnProperty(key10007);
+          } else {
+            hasOwnPropertyResult = call(arg1, key10007);
+          }
+          let tmp2 = hasOwnPropertyResult;
+        }
       }
-    }
-    const mapped = buffer.map((arg0) => String.fromCharCode(arg0));
-    return (function decodeAsciiValue(mapped) {
-      try {
-        const _decodeURIComponent = decodeURIComponent;
-        const _escape = escape;
-        return decodeURIComponent(escape(mapped));
-      } catch (err) {
-        return tmp;
-      }
-    })(mapped.join(""));
-  },
-  TAG_HEADER_SIZE: 5,
-};
+    };
+  }
+  const _Object2 = Object;
+  fn(_mod5200, exports);
+  fn(_mod5202, exports);
+} else {
+  let _Object = Object;
+}

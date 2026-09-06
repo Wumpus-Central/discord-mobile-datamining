@@ -1,13 +1,13 @@
 // _runtime/16888_registerAsset.js
-import registerAsset from "01240_registerAsset.js";
+import registerAsset from "01122_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/icons/user_profile",
-  width: 24,
-  height: 24,
+  httpServerLocation: "/assets/images/native/empties",
+  width: 414.5,
+  height: 200,
   scales: [2, 3],
-  hash: "c67b491c21edfc140b968b3afa5e6528",
-  name: "ic_video_disabled",
+  hash: "98918a2680690cf1174a4749a18c1a4a",
+  name: "pending_dark",
   type: "png",
 });

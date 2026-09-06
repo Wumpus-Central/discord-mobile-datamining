@@ -1,5 +1,5 @@
 // _runtime/08917_registerAsset.js
-import registerAsset from "01240_registerAsset.js";
+import registerAsset from "01122_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "dc61f45d0cc4d873f94fb631a2db066a",
-  name: "CircleCheckIcon",
+  hash: "8d9a4a6e9caf6cfaa5505c9d5954c20b",
+  name: "ThumbsUpIcon",
   type: "png",
 });

@@ -1,5 +1,5 @@
 // _runtime/05284_registerAsset.js
-import registerAsset from "01240_registerAsset.js";
+import registerAsset from "01122_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 255,
   height: 255,
   scales: [1],
-  hash: "e94b8b952ebeea94014c9e671ef91d08",
-  name: "img_account_sync_x_dark",
+  hash: "d9ea4c0baebc914200caf39582084fac",
+  name: "img_account_sync_twitch_light_and_dark",
   type: "png",
 });

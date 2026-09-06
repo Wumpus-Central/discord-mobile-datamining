@@ -1,13 +1,13 @@
 // _runtime/13505_registerAsset.js
-import registerAsset from "01240_registerAsset.js";
+import registerAsset from "01122_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/guild_boosting/tier_icons/flower_star/light",
-  width: 24,
-  height: 23,
+  httpServerLocation: "/assets/design/components/Illustration/native/redesign/generated/images",
+  width: 420,
+  height: 112,
   scales: [2, 3],
-  hash: "34f1b491773518eba109fd7be7fe4cb9",
-  name: "tier_1_24px",
+  hash: "e2e6d0edbd6c916cde4ea4f22a6f794c",
+  name: "subscription_placeholder_pattern_darker",
   type: "png",
 });

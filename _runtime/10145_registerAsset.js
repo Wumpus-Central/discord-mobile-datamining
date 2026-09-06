@@ -1,13 +1,13 @@
 // _runtime/10145_registerAsset.js
-import registerAsset from "01240_registerAsset.js";
+import registerAsset from "01122_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/video_calls/native/images",
-  width: 20,
-  height: 20,
+  httpServerLocation: "/assets/images/native/chat_sidebar",
+  width: 24,
+  height: 24,
   scales: [2, 3],
-  hash: "680bf4fd0485a160338f41e352ddc0a6",
-  name: "grid",
+  hash: "735f759c8548e858d5ddb5e988a22d5f",
+  name: "ic_notif_off",
   type: "png",
 });

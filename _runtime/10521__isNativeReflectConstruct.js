@@ -1,6 +1,6 @@
 // _runtime/10521__isNativeReflectConstruct.js
-import _isNativeReflectConstruct2 from "10468__isNativeReflectConstruct.js";
-import JPMergeDateRangeRefiner from "metro/00041__classCallCheck.js";
+import _isNativeReflectConstruct2 from "10450__isNativeReflectConstruct.js";
+import NLMergeDateRangeRefiner from "metro/00041__classCallCheck.js";
 import _createClass from "metro/00042__createClass.js";
 import closure_1 from "metro/00093__possibleConstructorReturn.js";
 import closure_2 from "00095__getPrototypeOf.js";
@@ -40,12 +40,12 @@ if (!fn) {
     return tmp;
   };
 }
-class JPMergeDateRangeRefiner {
+class NLMergeDateRangeRefiner {
   constructor() {
     self = this;
-    tmp = JPMergeDateRangeRefiner(this, JPMergeDateRangeRefiner);
+    tmp = NLMergeDateRangeRefiner(this, NLMergeDateRangeRefiner);
     tmp2 = closure_2;
-    obj = closure_2(JPMergeDateRangeRefiner);
+    obj = closure_2(NLMergeDateRangeRefiner);
     tmp3 = closure_1;
     if (_isNativeReflectConstruct()) {
       tmp7 = globalThis;
@@ -60,14 +60,14 @@ class JPMergeDateRangeRefiner {
     return tmp3(self, constructResult);
   }
 }
-_inherits(JPMergeDateRangeRefiner, fn(_isNativeReflectConstruct2).default);
+_inherits(NLMergeDateRangeRefiner, fn(_isNativeReflectConstruct2).default);
 const items = [
   {
     key: "patternBetween",
     value: function patternBetween() {
-      return /^\s*(から|－|ー|-|～|~)\s*$/i;
+      return /^\s*(tot|-)\s*$/i;
     },
   },
 ];
 
-export default _createClass(JPMergeDateRangeRefiner, items);
+export default _createClass(NLMergeDateRangeRefiner, items);

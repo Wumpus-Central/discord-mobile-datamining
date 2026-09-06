@@ -1,11 +1,11 @@
 // _runtime/03241_registerAsset.js
-import registerAsset from "01240_registerAsset.js";
+import registerAsset from "01122_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/premium/call_of_duty_3pp",
+  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9mYXZvcml0ZXMvaW50bA==",
   scales: [1],
-  hash: "11d34bfaf58dae63618b0f9e7cb2f98a",
-  name: "CallOfDuty3PP.compiled.messages",
+  hash: "bed5369f36ad21bed699f6535559f1c7",
+  name: "ko.messages.bed5369f36ad21bed699f6535559f1c7.compiled.messages",
   type: "jsona",
 });

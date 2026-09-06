@@ -1,11 +1,15 @@
 // _runtime/01774__isNativeReflectConstruct.js
-import PinwheelOut from "metro/00032__slicedToArray.js";
-import closure_1 from "metro/00041__classCallCheck.js";
+import noopDefault from "00019_noop.js";
+import _inheritsDefault from "00098__inherits.js";
+import closure_2 from "metro/00041__classCallCheck.js";
+import closure_3 from "metro/00093__possibleConstructorReturn.js";
+import closure_4 from "00095__getPrototypeOf.js";
 import importDefaultResult from "metro/00042__createClass.js";
-import closure_2 from "metro/00093__possibleConstructorReturn.js";
-import closure_3 from "00095__getPrototypeOf.js";
-import importDefaultResult1 from "00098__inherits.js";
+import noop from "00019_noop.js";
+import { jsx } from "react/00021_jsxProd.js";
+import isJest from "01639_isJest.js";
 
+const LayoutAnimationConfig = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -24,129 +28,109 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-let closure_5 = {
-  code: "function pnpm_PinwheelTs1(){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{opacity:delayFunction(delay,animation(1,config)),transform:[{scale:delayFunction(delay,animation(1,config))},{rotate:delayFunction(delay,animation('0rad',config))}]},initialValues:{opacity:0,transform:[{scale:0},{rotate:'5rad'}],...initialValues},callback:callback};}",
-};
-class PinwheelIn {
+function SkipEntering(children) {
+  const tmp = callback4(children.shouldSkip);
+  closure_0 = tmp;
+  const tmp2 = callback4(children.itemKey);
+  if (children.itemKey !== tmp2.current) {
+    ({ shouldSkip: tmp.current, itemKey: tmp2.current } = children);
+  }
+  const items = [tmp, children.itemKey];
+  callback3(() => {
+    closure_0.current = false;
+  }, items);
+  return jsx(closure_10 ? context : context.Provider, { value: tmp, children: children.children });
+}
+({ Children: c5, useEffect: closure_6, useRef: error, Component, createContext } = noop);
+noopDefault;
+let closure_10 = isJest.isReact19();
+const context = createContext(null);
+class LayoutAnimationConfig {
   constructor() {
     self = this;
-    items = [...arguments];
-    closure_0 = undefined;
-    tmp = closure_1(this, closure_0);
-    items1 = [...items];
-    tmp2 = closure_3;
-    obj = closure_3(closure_0);
-    tmp3 = closure_2;
+    tmp = closure_2(this, LayoutAnimationConfig);
+    tmp2 = closure_4;
+    obj = closure_4(LayoutAnimationConfig);
+    tmp3 = closure_3;
     if (_isNativeReflectConstruct()) {
-      tmp5 = globalThis;
+      tmp7 = globalThis;
       _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
     } else {
-      constructResult = obj.apply(self, items1);
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
     }
-    tmp3Result = tmp3(self, constructResult);
-    closure_0 = tmp3Result;
-    tmp3Result.build = () => {
-      delayFunction = delayFunction.getDelayFunction();
-      const tmp2 = callback(delayFunction.getAnimationAndConfig(), 2);
-      const first = tmp2[0];
-      closure_2 = tmp4;
-      const delay = delayFunction.getDelay();
-      const callbackV = delayFunction.callbackV;
-      const initialValues = delayFunction.initialValues;
-      const fn = function e() {
-        let obj = { animations: null, initialValues: null, callback: null };
-        obj = { opacity: delayFunction(delay, first(1, closure_2)), transform: null };
-        obj = { scale: delayFunction(delay, first(1, closure_2)) };
-        const items = [obj, { rotate: delayFunction(delay, first("0rad", closure_2)) }];
-        obj[1] = items;
-        obj[0] = obj;
-        const items1 = [{ scale: 0 }, { rotate: "5rad" }];
-        const merged = Object.assign(initialValues);
-        obj[1] = { opacity: 0, transform: items1 };
-        obj[2] = callbackV;
-        return obj;
-      };
-      fn.__closure = { delayFunction, delay, animation: first, config: tmp2[1], initialValues, callback: callbackV };
-      fn.__workletHash = 8890961567516;
-      fn.__initData = closure_1_5;
-      return fn;
-    };
-    return tmp3Result;
+    return tmp3(self, constructResult);
   }
 }
-PinwheelOut = PinwheelIn;
-importDefaultResult1(PinwheelIn, require("BaseAnimationBuilder").ComplexAnimationBuilder);
-let obj = {
-  key: "createInstance",
-  value: function createInstance() {
-    return PinwheelOut();
-  },
-};
-let items = [obj];
-const importDefaultResultResult = importDefaultResult(PinwheelIn, null, items);
-importDefaultResultResult.presetName = "PinwheelIn";
-let closure_6 = {
-  code: "function pnpm_PinwheelTs2(){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{opacity:delayFunction(delay,animation(0,config)),transform:[{scale:delayFunction(delay,animation(0,config))},{rotate:delayFunction(delay,animation('5rad',config))}]},initialValues:{opacity:1,transform:[{scale:1},{rotate:'0rad'}],...initialValues},callback:callback};}",
-};
-class PinwheelOut {
-  constructor() {
+_inheritsDefault(LayoutAnimationConfig, Component);
+isJest = {
+  key: "getMaybeWrappedChildren",
+  value: function getMaybeWrappedChildren() {
+    let self = this;
     self = this;
-    items = [...arguments];
-    closure_0 = undefined;
-    tmp = closure_1(this, closure_0);
-    items1 = [...items];
-    tmp2 = closure_3;
-    obj = closure_3(closure_0);
-    tmp3 = closure_2;
-    if (_isNativeReflectConstruct()) {
-      tmp5 = globalThis;
-      _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
-    } else {
-      constructResult = obj.apply(self, items1);
+    if (closure_1_5.count(this.props.children) > 1) {
+      if (self.props.skipExiting) {
+        let children = closure_1_5.map(self.props.children, (children) => (
+          <self itemKey={self.props.itemKey} skipExiting>
+            {arg0}
+          </self>
+        ));
+      }
+      return children;
     }
-    tmp3Result = tmp3(self, constructResult);
-    closure_0 = tmp3Result;
-    tmp3Result.build = () => {
-      delayFunction = delayFunction.getDelayFunction();
-      const tmp2 = callback(delayFunction.getAnimationAndConfig(), 2);
-      const first = tmp2[0];
-      closure_2 = tmp4;
-      const delay = delayFunction.getDelay();
-      const callbackV = delayFunction.callbackV;
-      const initialValues = delayFunction.initialValues;
-      const fn = function e() {
-        let obj = { animations: null, initialValues: null, callback: null };
-        obj = { opacity: delayFunction(delay, first(0, closure_2)), transform: null };
-        obj = { scale: delayFunction(delay, first(0, closure_2)) };
-        const items = [obj, { rotate: delayFunction(delay, first("5rad", closure_2)) }];
-        obj[1] = items;
-        obj[0] = obj;
-        const items1 = [{ scale: 1 }, { rotate: "0rad" }];
-        const merged = Object.assign(initialValues);
-        obj[1] = { opacity: 1, transform: items1 };
-        obj[2] = callbackV;
-        return obj;
-      };
-      fn.__closure = { delayFunction, delay, animation: first, config: tmp2[1], initialValues, callback: callbackV };
-      fn.__workletHash = 15028563671839;
-      fn.__initData = closure_1_6;
-      return fn;
-    };
-    return tmp3Result;
-  }
-}
-importDefaultResult1(PinwheelOut, require("BaseAnimationBuilder").ComplexAnimationBuilder);
-obj = {
-  key: "createInstance",
-  value: function createInstance() {
-    return PinwheelOut();
+    children = self.props.children;
   },
 };
-let items1 = [obj];
-const importDefaultResultResult1 = importDefaultResult(PinwheelOut, null, items1);
-importDefaultResultResult1.presetName = "PinwheelOut";
+let items = [
+  isJest,
+  {
+    key: "setShouldAnimateExiting",
+    value: function setShouldAnimateExiting() {
+      const self = this;
+      if (1 === closure_5.count(this.props.children)) {
+        const findNodeHandleResult = LayoutAnimationConfig(1744).findNodeHandle(self);
+        if (findNodeHandleResult) {
+          const result = tmp(1680).setShouldAnimateExitingForTag(findNodeHandleResult, !self.props.skipExiting);
+          const tmpResult = tmp(1680);
+        }
+        const obj = LayoutAnimationConfig(1744);
+        tmp = LayoutAnimationConfig;
+      }
+    },
+  },
+  {
+    key: "componentWillUnmount",
+    value: function componentWillUnmount() {
+      const self = this;
+      if (undefined !== this.props.skipExiting) {
+        const result = self.setShouldAnimateExiting();
+      }
+    },
+  },
+  {
+    key: "render",
+    value: function render() {
+      const self = this;
+      const maybeWrappedChildren = this.getMaybeWrappedChildren();
+      let tmp2 = maybeWrappedChildren;
+      if (undefined !== this.props.skipEntering) {
+        const obj = { itemKey: null, shouldSkip: null, children: null };
+        obj[0] = self.props.itemKey;
+        obj[1] = self.props.skipEntering;
+        obj[2] = maybeWrappedChildren;
+        tmp2 = (
+          <SkipEntering itemKey={null} shouldSkip={null}>
+            {null}
+          </SkipEntering>
+        );
+      }
+      return tmp2;
+    },
+  },
+];
 
-export const PinwheelIn = importDefaultResultResult;
-export const PinwheelOut = importDefaultResultResult1;
+export const SkipEnteringContext = context;
+export const LayoutAnimationConfig = importDefaultResult(LayoutAnimationConfig, items);

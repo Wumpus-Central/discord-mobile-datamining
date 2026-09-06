@@ -1,11 +1,11 @@
 // _runtime/02297_registerAsset.js
-import registerAsset from "01240_registerAsset.js";
+import registerAsset from "01122_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9ndWlsZF9yb29tcw==",
+  httpServerLocation: "/assets/modules/clips",
   scales: [1],
-  hash: "c26e9897663e85f68af568f3c0fdb09d",
-  name: "uk.messages.c26e9897663e85f68af568f3c0fdb09d.compiled.messages",
+  hash: "e40afc589553b1a69a50f31d89a89520",
+  name: "Clips.compiled.messages",
   type: "jsona",
 });

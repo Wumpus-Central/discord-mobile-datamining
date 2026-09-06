@@ -1,5 +1,5 @@
 // _runtime/08880_registerAsset.js
-import registerAsset from "01240_registerAsset.js";
+import registerAsset from "01122_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "e8a96141e48bf46350215d4dadeaaebc",
-  name: "ExperimentalGameControllerLinkIcon",
+  hash: "34bb1c89964a0349aafd993e713936d7",
+  name: "ScreenIcon",
   type: "png",
 });

@@ -1,11 +1,11 @@
 // _runtime/03548_registerAsset.js
-import registerAsset from "01240_registerAsset.js";
+import registerAsset from "01122_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9jb25uZWN0ZWRfZGV2aWNlcw==",
+  httpServerLocation: "/assets/modules/vibegrations/intl",
   scales: [1],
-  hash: "51d9d7ecae6822205500d4cb68aa967f",
-  name: "it.messages.51d9d7ecae6822205500d4cb68aa967f.compiled.messages",
+  hash: "2bb3c86cd683ec73b23a7721e8b02b50",
+  name: "VibegrationsUntranslated.compiled.messages",
   type: "jsona",
 });

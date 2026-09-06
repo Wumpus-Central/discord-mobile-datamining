@@ -1,13 +1,13 @@
 // _runtime/15285_registerAsset.js
-import registerAsset from "01240_registerAsset.js";
+import registerAsset from "01122_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/../discord_common/js/shared/images/flags",
-  width: 70,
-  height: 47,
+  httpServerLocation: "/assets/images/native/avatars",
+  width: 161,
+  height: 160,
   scales: [1],
-  hash: "c9f51873ae719a6b4b8c6724362e999e",
-  name: "nl",
+  hash: "4410c16931512594c3c3f276c24fe456",
+  name: "nelly_1",
   type: "png",
 });

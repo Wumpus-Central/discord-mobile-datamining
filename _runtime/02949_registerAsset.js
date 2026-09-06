@@ -1,11 +1,11 @@
 // _runtime/02949_registerAsset.js
-import registerAsset from "01240_registerAsset.js";
+import registerAsset from "01122_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/age_assurance",
+  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcw==",
   scales: [1],
-  hash: "c780a2f16f1a3677379f891df8a526f5",
-  name: "AgeAssurance.compiled.messages",
+  hash: "efe467bd970b27bcfc802627f57679ad",
+  name: "da.messages.efe467bd970b27bcfc802627f57679ad.compiled.messages",
   type: "jsona",
 });

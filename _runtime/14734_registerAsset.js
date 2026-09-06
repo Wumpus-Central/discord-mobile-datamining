@@ -1,13 +1,11 @@
 // _runtime/14734_registerAsset.js
-import registerAsset from "01240_registerAsset.js";
+import registerAsset from "01122_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/parent_tools/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "87391322b2483c883b3f5fd1ac4080a9",
-  name: "ic_eye",
-  type: "png",
+  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcw==",
+  scales: [1],
+  hash: "406f15d4572033c11106797ebd57c5c9",
+  name: "hr.messages.406f15d4572033c11106797ebd57c5c9.compiled.messages",
+  type: "jsona",
 });

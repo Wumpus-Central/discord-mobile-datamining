@@ -1,13 +1,13 @@
 // _runtime/08021_registerAsset.js
-import registerAsset from "01240_registerAsset.js";
+import registerAsset from "01122_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
+  httpServerLocation: "/assets/images/native/auto_moderation",
+  width: 16,
+  height: 16,
   scales: [2, 3],
-  hash: "06dd03fc60ccef8d12f4f7cb6c5d239c",
-  name: "XNeutralIcon",
+  hash: "9fc7a06bd709251a424bf9095d4f7ecf",
+  name: "ic_auto_moderation_shield",
   type: "png",
 });

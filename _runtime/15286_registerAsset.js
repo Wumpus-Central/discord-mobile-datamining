@@ -1,13 +1,13 @@
 // _runtime/15286_registerAsset.js
-import registerAsset from "01240_registerAsset.js";
+import registerAsset from "01122_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/../discord_common/js/shared/images/flags",
-  width: 70,
-  height: 47,
+  httpServerLocation: "/assets/images/native/avatars",
+  width: 161,
+  height: 161,
   scales: [1],
-  hash: "fcdf14841cd468de3f43704be16fa303",
-  name: "no",
+  hash: "1b6a1fd726ebdfc69d47b037085b4f19",
+  name: "graggle_2",
   type: "png",
 });

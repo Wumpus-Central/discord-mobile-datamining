@@ -1,11 +1,11 @@
 // _runtime/02173_registerAsset.js
-import registerAsset from "01240_registerAsset.js";
+import registerAsset from "01122_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/collectibles/web",
+  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9jb2xsZWN0aWJsZXMvd2Vi",
   scales: [1],
-  hash: "badc2ccdf19fd542b091b55c09e8bee9",
-  name: "ShopExternalSkus.compiled.messages",
+  hash: "803693e032df6c7df40fd0c7af437d2c",
+  name: "da.messages.803693e032df6c7df40fd0c7af437d2c.compiled.messages",
   type: "jsona",
 });

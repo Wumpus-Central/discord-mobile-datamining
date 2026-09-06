@@ -1,13 +1,13 @@
 // _runtime/05325_registerAsset.js
-import registerAsset from "01240_registerAsset.js";
+import registerAsset from "01122_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/images/platforms",
-  width: 255,
-  height: 255,
+  width: 24,
+  height: 24,
   scales: [1],
-  hash: "e0fcff705b60ad228f8934b127b63657",
-  name: "img_account_sync_paypal_light_and_dark",
-  type: "png",
+  hash: "b5850b914f9528f3de18a75020fab1b9",
+  name: "img_account_sync_facebook_white",
+  type: "svg",
 });

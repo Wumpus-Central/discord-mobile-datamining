@@ -1,11 +1,11 @@
 // _runtime/02491_registerAsset.js
-import registerAsset from "01240_registerAsset.js";
+import registerAsset from "01122_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9wcmVtaXVtL2ZpbGVfdXBsb2Fk",
+  httpServerLocation: "/assets/modules/premium/gifting",
   scales: [1],
-  hash: "46cdeecf47b8aa5d7e54db6770bc4b34",
-  name: "ru.messages.46cdeecf47b8aa5d7e54db6770bc4b34.compiled.messages",
+  hash: "8d179ad11e2a36f9d3ec9f31c06fe95d",
+  name: "PremiumGifting.compiled.messages",
   type: "jsona",
 });

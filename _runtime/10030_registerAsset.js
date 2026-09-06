@@ -1,13 +1,13 @@
 // _runtime/10030_registerAsset.js
-import registerAsset from "01240_registerAsset.js";
+import registerAsset from "01122_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  httpServerLocation: "/assets/modules/guild_home/native/images",
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "2deb3f64961131491b7db6bb10903f69",
-  name: "DoorExitIcon",
+  hash: "993926a8b2d3f46d31ad06ea07adc917",
+  name: "ic_feed_more",
   type: "png",
 });

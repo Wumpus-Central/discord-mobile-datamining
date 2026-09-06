@@ -1,13 +1,13 @@
 // _runtime/09977_registerAsset.js
-import registerAsset from "01240_registerAsset.js";
+import registerAsset from "01122_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/instant_invite/native/images",
-  width: 32,
-  height: 32,
+  httpServerLocation: "/assets/images/native/icons",
+  width: 24,
+  height: 24,
   scales: [2, 3],
-  hash: "6745f221b3e662876db35721a519454b",
-  name: "copy",
+  hash: "4782ad45462ec62f2912f2f8f1ed8388",
+  name: "ic_leave_24px",
   type: "png",
 });

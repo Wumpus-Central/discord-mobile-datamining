@@ -1,13 +1,13 @@
 // _runtime/10731_registerAsset.js
-import registerAsset from "01240_registerAsset.js";
+import registerAsset from "01122_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/activated",
-  width: 302,
-  height: 42,
+  httpServerLocation: "/assets/images/native/premium/logos",
+  width: 101,
+  height: 19,
   scales: [2, 3],
-  hash: "2192040384b5c0bcacd48b43d2555bec",
-  name: "img_plan_activated_light",
+  hash: "dc1cee3a8f17b01e1093a161d78cdfbe",
+  name: "img_logo_plus_boost",
   type: "png",
 });

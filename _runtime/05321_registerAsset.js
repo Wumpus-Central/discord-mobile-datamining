@@ -1,13 +1,13 @@
 // _runtime/05321_registerAsset.js
-import registerAsset from "01240_registerAsset.js";
+import registerAsset from "01122_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/images/platforms",
-  width: 256,
-  height: 256,
+  width: 24,
+  height: 24,
   scales: [1],
-  hash: "8fce658b14b12e381e1ecc554a57f171",
-  name: "img_roblox_white",
-  type: "png",
+  hash: "5f8b57af5ab5fdfa6cf52708c91c3adb",
+  name: "img_account_sync_reddit_white",
+  type: "svg",
 });

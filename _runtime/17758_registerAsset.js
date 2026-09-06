@@ -1,13 +1,13 @@
 // _runtime/17758_registerAsset.js
-import registerAsset from "01240_registerAsset.js";
+import registerAsset from "01122_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/guild_role_subscription",
-  width: 67.5,
-  height: 92.5,
+  httpServerLocation: "/assets/modules/guild_role_subscriptions/native/images",
+  width: 20,
+  height: 20,
   scales: [2, 3],
-  hash: "1da146fe37f3351b22cf5b5c1c44b1cf",
-  name: "image_role_subscription_badge",
+  hash: "66f5395e0dcbde2df92fe7a6979a5fca",
+  name: "ic_emoji_picker_20px",
   type: "png",
 });

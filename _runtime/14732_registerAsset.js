@@ -1,13 +1,11 @@
 // _runtime/14732_registerAsset.js
-import registerAsset from "01240_registerAsset.js";
+import registerAsset from "01122_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "f5391dfd0b449071e14dba1ee723d353",
-  name: "ChatCheckIcon",
-  type: "png",
+  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcw==",
+  scales: [1],
+  hash: "83ea440976e1bf74518a3ca193b3b886",
+  name: "fr.messages.83ea440976e1bf74518a3ca193b3b886.compiled.messages",
+  type: "jsona",
 });

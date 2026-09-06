@@ -1,13 +1,13 @@
 // _runtime/09887_registerAsset.js
-import registerAsset from "01240_registerAsset.js";
+import registerAsset from "01122_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
+  httpServerLocation: "/assets/modules/instant_invite/native/images",
+  width: 60,
+  height: 60,
   scales: [2, 3],
-  hash: "6d493c91631ba30b8d8c55fe48d43780",
-  name: "CheckmarkLargeBoldIcon",
+  hash: "a07985aa2246ccd4facb50f3c745ccda",
+  name: "twitter",
   type: "png",
 });

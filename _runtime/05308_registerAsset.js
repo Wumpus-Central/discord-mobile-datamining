@@ -1,5 +1,5 @@
 // _runtime/05308_registerAsset.js
-import registerAsset from "01240_registerAsset.js";
+import registerAsset from "01122_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [1],
-  hash: "a7079fa45817ad0281dfe779b5383d9a",
-  name: "img_account_sync_playstation_light",
+  hash: "964ceb6798f932043a2351717bacaa2a",
+  name: "img_account_sync_skype_light_and_dark",
   type: "svg",
 });

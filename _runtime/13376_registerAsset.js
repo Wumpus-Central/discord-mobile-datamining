@@ -1,13 +1,13 @@
 // _runtime/13376_registerAsset.js
-import registerAsset from "01240_registerAsset.js";
+import registerAsset from "01122_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/logos",
-  width: 51,
-  height: 13,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
   scales: [2, 3],
-  hash: "ee96056252cac57fcc904e8f5b1f0e16",
-  name: "img_logo_basic_small_light",
+  hash: "ffb75c82f97e39285286ef89f1767a3c",
+  name: "ServerGridIcon",
   type: "png",
 });

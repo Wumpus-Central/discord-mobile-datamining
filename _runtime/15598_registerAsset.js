@@ -1,5 +1,5 @@
 // _runtime/15598_registerAsset.js
-import registerAsset from "01240_registerAsset.js";
+import registerAsset from "01122_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "0d0b8d91cad785fc29460e6b86930814",
-  name: "FolderPlusIcon",
+  hash: "0b857719cad21b09b5bc6a1b36ef90c4",
+  name: "TrainIcon",
   type: "png",
 });

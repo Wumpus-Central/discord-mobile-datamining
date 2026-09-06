@@ -1,11 +1,11 @@
 // _runtime/02501_registerAsset.js
-import registerAsset from "01240_registerAsset.js";
+import registerAsset from "01122_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/report_to_mod",
+  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9wcmVtaXVtL2ZpbGVfdXBsb2Fk",
   scales: [1],
-  hash: "ec267ac9bfb9116e20a64f6afed5ac84",
-  name: "ReportToMod.compiled.messages",
+  hash: "938ba8089e90423410b69dcbf005586f",
+  name: "el.messages.938ba8089e90423410b69dcbf005586f.compiled.messages",
   type: "jsona",
 });

@@ -1,13 +1,13 @@
 // _runtime/10725_registerAsset.js
-import registerAsset from "01240_registerAsset.js";
+import registerAsset from "01122_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/images/native/premium/activated",
-  width: 278.5,
+  width: 279,
   height: 48,
   scales: [2, 3],
-  hash: "fd5849efd39a217c9ef72fb828af8485",
-  name: "img_nitro_tier_0_activated_light",
+  hash: "1fff7418e65eeae25a3f248ccb7dea3b",
+  name: "img_nitro_tier_1_activated_light",
   type: "png",
 });

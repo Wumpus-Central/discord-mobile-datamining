@@ -1,13 +1,13 @@
 // _runtime/17762_registerAsset.js
-import registerAsset from "01240_registerAsset.js";
+import registerAsset from "01122_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/summaries/native/images",
-  width: 14,
-  height: 18,
+  httpServerLocation: "/assets/modules/guild_role_subscriptions/native/images",
+  width: 24,
+  height: 24,
   scales: [2, 3],
-  hash: "a62b86dc1d2c11cbfe0a98b586c4b359",
-  name: "summary_indicator_start",
+  hash: "1247f104e440c51e7ce468de478229f3",
+  name: "ic_select_manually_24px",
   type: "png",
 });

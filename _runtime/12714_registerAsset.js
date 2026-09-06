@@ -1,13 +1,13 @@
 // _runtime/12714_registerAsset.js
-import registerAsset from "01240_registerAsset.js";
+import registerAsset from "01122_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "ae439aad7c7ee77514ad4b1f3601a8e9",
-  name: "VideoSlashIcon",
+  httpServerLocation: "/assets/modules/create_guild/native/images",
+  width: 161,
+  height: 105,
+  scales: [1, 2, 3],
+  hash: "15df55e98006c5e50dacb86d466b47d8",
+  name: "invite-wumpus-ticket",
   type: "png",
 });

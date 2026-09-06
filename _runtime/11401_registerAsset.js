@@ -1,13 +1,13 @@
 // _runtime/11401_registerAsset.js
-import registerAsset from "01240_registerAsset.js";
+import registerAsset from "01122_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images",
-  width: 54,
-  height: 54,
-  scales: [1],
-  hash: "9a03a674792f2187c83109744abce109",
-  name: "connections-profile-steam-dota2",
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "88df5c832b935fed96e52c66883efce1",
+  name: "CircleXIcon",
   type: "png",
 });

@@ -1,11 +1,11 @@
 // _runtime/03192_registerAsset.js
-import registerAsset from "01240_registerAsset.js";
+import registerAsset from "01122_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9mYXZvcml0ZXMvaW50bA==",
+  httpServerLocation: "/assets/modules/hangout_window",
   scales: [1],
-  hash: "20ab27ea7464e6e16e6217c23a99adcb",
-  name: "it.messages.20ab27ea7464e6e16e6217c23a99adcb.compiled.messages",
+  hash: "0ffaf58e78768b3ade273f3634f7892a",
+  name: "HangoutWindow.compiled.messages",
   type: "jsona",
 });

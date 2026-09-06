@@ -1,5 +1,5 @@
 // _runtime/05291_registerAsset.js
-import registerAsset from "01240_registerAsset.js";
+import registerAsset from "01122_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [1],
-  hash: "9531281533f8a11dbbdded76baff0291",
-  name: "img_account_sync_spotify_light_and_dark",
+  hash: "8ba3e8ee2991f198308400197cdb28bc",
+  name: "img_account_sync_youtube_white",
   type: "svg",
 });

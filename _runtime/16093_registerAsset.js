@@ -1,13 +1,13 @@
 // _runtime/16093_registerAsset.js
-import registerAsset from "01240_registerAsset.js";
+import registerAsset from "01122_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/main_tabs_v2/native/tabs/guilds/empty_states/images",
-  width: 32,
-  height: 32,
-  scales: [2, 3, 4],
-  hash: "c33937cb1ecf8da1cf6ed34f37467be9",
-  name: "ic-customize",
+  httpServerLocation: "/assets/images/native",
+  width: 24,
+  height: 24,
+  scales: [1, 2, 3],
+  hash: "bd1486d1560b353007e677fb6cc6f8f2",
+  name: "ic_upload",
   type: "png",
 });

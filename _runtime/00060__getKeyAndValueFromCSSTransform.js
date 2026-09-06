@@ -62,7 +62,7 @@ arg5.default = function processTransform(str) {
               obj1[1] = Number(match2[1]);
               obj = obj1;
             } else {
-              let obj2 = { key: null, value: "Array" };
+              let obj2 = { key: null, value: "a" };
               obj2[0] = tmp3;
               obj = obj2;
             }

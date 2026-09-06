@@ -1,11 +1,11 @@
 // _runtime/02431_registerAsset.js
-import registerAsset from "01240_registerAsset.js";
+import registerAsset from "01122_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/premium/powerups",
+  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9wcmVtaXVtL3Bvd2VydXBz",
   scales: [1],
-  hash: "b24e9223725c6bf5ddf729ce5a676b3b",
-  name: "GuildPowerups.compiled.messages",
+  hash: "ee82c1ae320384028b9bee910c09fa2c",
+  name: "da.messages.ee82c1ae320384028b9bee910c09fa2c.compiled.messages",
   type: "jsona",
 });

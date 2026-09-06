@@ -1,13 +1,13 @@
 // _runtime/13219_registerAsset.js
-import registerAsset from "01240_registerAsset.js";
+import registerAsset from "01122_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/illustrations",
-  width: 51,
-  height: 36,
+  httpServerLocation: "/assets/modules/guild_templates/native/images",
+  width: 32,
+  height: 32,
   scales: [2, 3],
-  hash: "048133a782a00bf1ceee354227e49996",
-  name: "img_boost_resubscribe_mobile",
+  hash: "10db56263423f61f9d871a4581be001b",
+  name: "ic_guild_template",
   type: "png",
 });

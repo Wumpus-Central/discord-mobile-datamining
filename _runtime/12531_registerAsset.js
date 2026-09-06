@@ -1,13 +1,13 @@
 // _runtime/12531_registerAsset.js
-import registerAsset from "01240_registerAsset.js";
+import registerAsset from "01122_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/directory_channels/native/images",
-  width: 32,
-  height: 32,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
   scales: [2, 3],
-  hash: "cf9fbd33b5f8251873e494b446828ceb",
-  name: "invite",
+  hash: "027cfc6a5bd867529dfeaf25fa2ca1f4",
+  name: "HeadphonesIcon",
   type: "png",
 });

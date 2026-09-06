@@ -1,13 +1,13 @@
 // _runtime/14947_registerAsset.js
-import registerAsset from "01240_registerAsset.js";
+import registerAsset from "01122_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/quests/native/images",
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
   width: 24,
   height: 24,
-  scales: [1, 2, 3],
-  hash: "d34103fd5e89ba1cd4ca70f2429c1570",
-  name: "ic_wreath",
+  scales: [2, 3],
+  hash: "c8ba289430cf44af74e8a6dfe840935f",
+  name: "LaptopPhoneIcon",
   type: "png",
 });

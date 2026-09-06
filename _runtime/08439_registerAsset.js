@@ -1,5 +1,5 @@
 // _runtime/08439_registerAsset.js
-import registerAsset from "01240_registerAsset.js";
+import registerAsset from "01122_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "9710a1ee79723d3b78a21470e6bc1f77",
-  name: "ShieldIcon",
+  hash: "48354bca4647923912a0392de88da6fa",
+  name: "IdCardIcon",
   type: "png",
 });

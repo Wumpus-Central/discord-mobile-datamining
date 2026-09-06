@@ -1,13 +1,13 @@
 // _runtime/13514_registerAsset.js
-import registerAsset from "01240_registerAsset.js";
+import registerAsset from "01122_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/guild_boosting",
-  width: 203,
-  height: 120,
-  scales: [1, 2, 3],
-  hash: "0c52217e1b36f758b126e56747a120ea",
-  name: "guild_subscription_removal_light",
+  httpServerLocation: "/assets/images/native/premium/guild_boosting/tier_icons/colored",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "81c4c8246b195a90d6f5bb90212bbc6a",
+  name: "tier_3_32px",
   type: "png",
 });

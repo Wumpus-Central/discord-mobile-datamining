@@ -1,12 +1,13 @@
 // _runtime/10616__isNativeReflectConstruct.js
-import _isNativeReflectConstruct2 from "10606__isNativeReflectConstruct.js";
+import AbstractParserWithWordBoundaryChecking from "10439_AbstractParserWithWordBoundaryChecking.js";
+import WEEKDAY_DICTIONARY from "10601_WEEKDAY_DICTIONARY.js";
 import closure_2 from "metro/00041__classCallCheck.js";
 import _createClass from "metro/00042__createClass.js";
 import closure_3 from "metro/00093__possibleConstructorReturn.js";
 import closure_4 from "00095__getPrototypeOf.js";
 import _inherits from "00098__inherits.js";
 
-const UKTimeUnitCasualRelativeFormatParser = require;
+const ENTimeUnitCasualRelativeFormatParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -25,12 +26,18 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-class UKTimeUnitCasualRelativeFormatParser {
+const regExp = new RegExp(
+  "(questo|ultimo|passato|prossimo|dopo|questa|ultima|passata|prossima|\\+|-)\\s*(" +
+    WEEKDAY_DICTIONARY.TIME_UNITS_PATTERN +
+    ")(?=\\W|$)",
+  "i",
+);
+class ENTimeUnitCasualRelativeFormatParser {
   constructor() {
     self = this;
-    tmp = closure_2(this, UKTimeUnitCasualRelativeFormatParser);
+    tmp = closure_2(this, ENTimeUnitCasualRelativeFormatParser);
     tmp2 = closure_4;
-    obj = closure_4(UKTimeUnitCasualRelativeFormatParser);
+    obj = closure_4(ENTimeUnitCasualRelativeFormatParser);
     tmp3 = closure_3;
     if (_isNativeReflectConstruct()) {
       tmp7 = globalThis;
@@ -45,33 +52,32 @@ class UKTimeUnitCasualRelativeFormatParser {
     return tmp3(self, constructResult);
   }
 }
-_inherits(UKTimeUnitCasualRelativeFormatParser, _isNativeReflectConstruct2.AbstractParserWithLeftRightBoundaryChecking);
+_inherits(
+  ENTimeUnitCasualRelativeFormatParser,
+  AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking,
+);
 const items = [
   {
-    key: "innerPatternString",
-    value: function innerPatternString(arg0) {
-      return (
-        "(\u0446\u0456|\u043E\u0441\u0442\u0430\u043D\u043D\u0456|\u043C\u0438\u043D\u0443\u043B\u0456|\u043C\u0430\u0439\u0431\u0443\u0442\u043D\u0456|\u043D\u0430\u0441\u0442\u0443\u043F\u043D\u0456|\u043F\u0456\u0441\u043B\u044F|\u0447\u0435\u0440\u0435\u0437|\\+|-)\\s*(" +
-        UKTimeUnitCasualRelativeFormatParser(10604).TIME_UNITS_PATTERN +
-        ")"
-      );
+    key: "innerPattern",
+    value: function innerPattern() {
+      return regExp;
     },
   },
   {
     key: "innerExtract",
     value: function innerExtract(reference) {
       const formatted = arg1[1].toLowerCase();
-      const parseDurationResult = UKTimeUnitCasualRelativeFormatParser(10604).parseDuration(arg1[3]);
-      if ("\u043E\u0441\u0442\u0430\u043D\u043D\u0456" !== formatted) {
-        if ("\u043C\u0438\u043D\u0443\u043B\u0456" !== formatted) {
+      const parseDurationResult = ENTimeUnitCasualRelativeFormatParser(10601).parseDuration(arg1[2]);
+      if ("last" !== formatted) {
+        if ("past" !== formatted) {
           let reverseDurationResult = parseDurationResult;
         }
-        const ParsingComponents = tmp2(10453).ParsingComponents;
+        const ParsingComponents = tmp2(10435).ParsingComponents;
         return ParsingComponents.createRelativeFromReference(reference.reference, reverseDurationResult);
       }
-      reverseDurationResult = tmp2(10452).reverseDuration(parseDurationResult);
+      reverseDurationResult = tmp2(10434).reverseDuration(parseDurationResult);
     },
   },
 ];
 
-export default _createClass(UKTimeUnitCasualRelativeFormatParser, items);
+export default _createClass(ENTimeUnitCasualRelativeFormatParser, items);

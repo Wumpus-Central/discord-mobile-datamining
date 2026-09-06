@@ -1,11 +1,11 @@
 // _runtime/03416_registerAsset.js
-import registerAsset from "01240_registerAsset.js";
+import registerAsset from "01122_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9jb252ZXJzYXRpb25z",
+  httpServerLocation: "/assets/modules/video_player",
   scales: [1],
-  hash: "a588f0bad575f46230b2edb765a82681",
-  name: "it.messages.a588f0bad575f46230b2edb765a82681.compiled.messages",
+  hash: "81026198b198a840d393b2692f40aeb8",
+  name: "VideoPlayer.compiled.messages",
   type: "jsona",
 });

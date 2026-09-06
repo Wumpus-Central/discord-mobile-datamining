@@ -1,13 +1,13 @@
 // _runtime/11724_registerAsset.js
-import registerAsset from "01240_registerAsset.js";
+import registerAsset from "01122_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
+  httpServerLocation: "/assets/modules/polls/native/images",
+  width: 138,
+  height: 130,
   scales: [2, 3],
-  hash: "a568e12daf3f479ad26c9db6582fe1a2",
-  name: "CreditCardIcon",
+  hash: "2b9e354438218d1560976bef68047eb2",
+  name: "load-issue-dark",
   type: "png",
 });

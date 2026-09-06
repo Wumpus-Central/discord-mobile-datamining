@@ -1,11 +1,11 @@
 // _runtime/02233_registerAsset.js
-import registerAsset from "01240_registerAsset.js";
+import registerAsset from "01122_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9nb19saXZl",
+  httpServerLocation: "/assets/modules/go_live/web/modal",
   scales: [1],
-  hash: "af5b3e10246be62cb7aaeef026c586eb",
-  name: "uk.messages.af5b3e10246be62cb7aaeef026c586eb.compiled.messages",
+  hash: "cd2d5c0ef187afb877c9d94c96dd5098",
+  name: "GoLiveModal.compiled.messages",
   type: "jsona",
 });

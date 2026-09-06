@@ -1,11 +1,11 @@
 // _runtime/02527_registerAsset.js
-import registerAsset from "01240_registerAsset.js";
+import registerAsset from "01122_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9vdmVybGF5L3dlYi92Mw==",
+  httpServerLocation: "/assets/modules/premium/file_upload",
   scales: [1],
-  hash: "b8dca7aee95671fb91ef079fa2c21e4c",
-  name: "th.messages.b8dca7aee95671fb91ef079fa2c21e4c.compiled.messages",
+  hash: "23b8cc9c9f2f7ce0243fa024f7324767",
+  name: "NitroFileUpload.compiled.messages",
   type: "jsona",
 });

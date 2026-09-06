@@ -1,13 +1,13 @@
 // _runtime/13214_registerAsset.js
-import registerAsset from "01240_registerAsset.js";
+import registerAsset from "01122_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/illustrations",
-  width: 51,
-  height: 36,
+  httpServerLocation: "/assets/images/native/icons",
+  width: 24,
+  height: 24,
   scales: [2, 3],
-  hash: "24a795d24a7018dbf13e204b38f24588",
-  name: "img_classic_resubscribe_mobile",
+  hash: "dcfca3dda846f0acd5adc9867fb467b3",
+  name: "ic_group_dm",
   type: "png",
 });

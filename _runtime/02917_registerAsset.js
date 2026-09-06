@@ -1,11 +1,11 @@
 // _runtime/02917_registerAsset.js
-import registerAsset from "01240_registerAsset.js";
+import registerAsset from "01122_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/checkpoint",
+  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9jaGVja3BvaW50",
   scales: [1],
-  hash: "b12f864e6ef57f14618e22f2b6960161",
-  name: "Checkpoint.compiled.messages",
+  hash: "f8df84c13373aeb469419d3a8ad00b7f",
+  name: "da.messages.f8df84c13373aeb469419d3a8ad00b7f.compiled.messages",
   type: "jsona",
 });

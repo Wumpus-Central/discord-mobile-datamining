@@ -1,13 +1,13 @@
 // _runtime/13187_registerAsset.js
-import registerAsset from "01240_registerAsset.js";
+import registerAsset from "01122_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/saved_messages",
-  width: 297,
-  height: 238,
-  scales: [1],
-  hash: "ee27927c992063817a4891d6fea39469",
-  name: "wumpus-bookmark",
+  httpServerLocation: "/assets/images/native/icons",
+  width: 24,
+  height: 24,
+  scales: [1, 2, 3],
+  hash: "4ae27cd370cebdaa94f014645ce27672",
+  name: "ic_feedback",
   type: "png",
 });

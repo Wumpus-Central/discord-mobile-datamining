@@ -1,11 +1,11 @@
 // _runtime/03401_registerAsset.js
-import registerAsset from "01240_registerAsset.js";
+import registerAsset from "01122_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/slayer_storefront/intl",
+  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcw==",
   scales: [1],
-  hash: "cb0c07073c6e43447fa7ac54aa478138",
-  name: "SlayerStorefront.compiled.messages",
+  hash: "5d866175d36836d40ba9b9c346e4ee45",
+  name: "ko.messages.5d866175d36836d40ba9b9c346e4ee45.compiled.messages",
   type: "jsona",
 });

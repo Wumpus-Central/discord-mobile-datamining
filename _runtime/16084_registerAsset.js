@@ -1,13 +1,13 @@
 // _runtime/16084_registerAsset.js
-import registerAsset from "01240_registerAsset.js";
+import registerAsset from "01122_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/guild_role_subscriptions/native/images",
-  width: 375,
-  height: 120,
-  scales: [2, 3],
-  hash: "5ac140c0ecf6d86d0e8c0b66480112aa",
-  name: "IAP_feature_education",
+  httpServerLocation: "/assets/modules/main_tabs_v2/native/images",
+  width: 64,
+  height: 64,
+  scales: [1, 2, 3],
+  hash: "2d232c4ffc7aee7f8419734bdb63af83",
+  name: "screenshare",
   type: "png",
 });

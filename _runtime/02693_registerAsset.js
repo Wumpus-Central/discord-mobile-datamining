@@ -1,11 +1,11 @@
 // _runtime/02693_registerAsset.js
-import registerAsset from "01240_registerAsset.js";
+import registerAsset from "01122_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/safety_flows",
+  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcw==",
   scales: [1],
-  hash: "f614c08c76b02de5adb2fd79d588a060",
-  name: "SafetyFlows.compiled.messages",
+  hash: "107b8182d613c984a64f5eed9eaa171c",
+  name: "da.messages.107b8182d613c984a64f5eed9eaa171c.compiled.messages",
   type: "jsona",
 });

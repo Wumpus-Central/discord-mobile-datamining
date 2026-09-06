@@ -1,11 +1,12 @@
 // _runtime/10485__isNativeReflectConstruct.js
-import Filter from "10469_Filter.js";
-import ENUnlikelyFormatFilter from "metro/00041__classCallCheck.js";
+import AbstractParserWithWordBoundaryChecking from "10439_AbstractParserWithWordBoundaryChecking.js";
+import closure_2 from "metro/00041__classCallCheck.js";
 import _createClass from "metro/00042__createClass.js";
-import closure_1 from "metro/00093__possibleConstructorReturn.js";
-import closure_2 from "00095__getPrototypeOf.js";
+import closure_3 from "metro/00093__possibleConstructorReturn.js";
+import closure_4 from "00095__getPrototypeOf.js";
 import _inherits from "00098__inherits.js";
 
+const DETimeUnitAgoFormatParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -24,13 +25,13 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-class ENUnlikelyFormatFilter {
+class DETimeUnitAgoFormatParser {
   constructor() {
     self = this;
-    tmp = ENUnlikelyFormatFilter(this, ENUnlikelyFormatFilter);
-    tmp2 = closure_2;
-    obj = closure_2(ENUnlikelyFormatFilter);
-    tmp3 = closure_1;
+    tmp = closure_2(this, DETimeUnitAgoFormatParser);
+    tmp2 = closure_4;
+    obj = closure_4(DETimeUnitAgoFormatParser);
+    tmp3 = closure_3;
     if (_isNativeReflectConstruct()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
@@ -41,47 +42,52 @@ class ENUnlikelyFormatFilter {
     return tmp3(self, constructResult);
   }
 }
-_inherits(ENUnlikelyFormatFilter, Filter.Filter);
+_inherits(DETimeUnitAgoFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const items = [
   {
-    key: "isValid",
-    value: function isValid(text, text2) {
-      closure_0 = text2;
-      const str2 = text2.text.trim();
-      if (str2 === str3.trim()) {
-        return true;
-      } else {
-        if ("may" === str2.toLowerCase()) {
-          const str4 = text.text;
-          const str5 = text.text.substring(0, text2.index);
-          if (!str6.match(/\b(in)$/i)) {
-            text.debug(() => {
-              console.log("Removing unlikely result: " + closure_0);
-            });
-            return false;
-          }
-          str6 = text.text.substring(0, text2.index).trim();
-        }
-        const formatted = str2.toLowerCase();
-        const endsWithResult = formatted.endsWith("the second");
-        let flag2 = !endsWithResult;
-        if (endsWithResult) {
-          flag2 = false;
-          if (str9.trim().length > 0) {
-            text.debug(() => {
-              console.log("Removing unlikely result: " + closure_0);
-            });
-            flag2 = false;
-          }
-          const str8 = text.text;
-          str9 = text.text.substring(text2.index + text2.text.length);
-        }
-        return flag2;
+    key: "innerPattern",
+    value: function innerPattern() {
+      const regExp = new RegExp(
+        "(?:\\s*((?:n\u00E4chste|kommende|folgende|letzte|vergangene|vorige|vor(?:her|an)gegangene)(?:s|n|m|r)?|vor|in)\\s*)?(" +
+          DETimeUnitAgoFormatParser(10478).NUMBER_PATTERN +
+          ")?(?:\\s*(n\u00E4chste|kommende|folgende|letzte|vergangene|vorige|vor(?:her|an)gegangene)(?:s|n|m|r)?)?\\s*(" +
+          DETimeUnitAgoFormatParser(10432).matchAnyPattern(DETimeUnitAgoFormatParser(10478).TIME_UNIT_DICTIONARY) +
+          ")",
+        "i",
+      );
+      return regExp;
+    },
+  },
+  {
+    key: "innerExtract",
+    value: function innerExtract(reference) {
+      let num = 1;
+      if (arg1[2]) {
+        num = DETimeUnitAgoFormatParser(10478).parseNumberPattern(arg1[2]);
       }
-      const str = text2.text;
-      str3 = text.text;
+      const obj = {};
+      obj[DETimeUnitAgoFormatParser(10478).TIME_UNIT_DICTIONARY[arg1[4].toLowerCase(arg1[4])]] = num;
+      const formatted = arg1[1] || arg1[3] || "".toLowerCase();
+      if (formatted) {
+        let isMatch = /vor/.test(formatted);
+        if (!isMatch) {
+          isMatch = /letzte/.test(formatted);
+          const obj3 = /letzte/;
+        }
+        if (!isMatch) {
+          isMatch = /vergangen/.test(formatted);
+          const obj4 = /vergangen/;
+        }
+        let reverseDurationResult = obj;
+        if (isMatch) {
+          reverseDurationResult = tmp3(10434).reverseDuration(obj);
+        }
+        const ParsingComponents = tmp3(10435).ParsingComponents;
+        return ParsingComponents.createRelativeFromReference(reference.reference, reverseDurationResult);
+      }
+      const str2 = arg1[1] || arg1[3] || "";
     },
   },
 ];
 
-export default _createClass(ENUnlikelyFormatFilter, items);
+export default _createClass(DETimeUnitAgoFormatParser, items);

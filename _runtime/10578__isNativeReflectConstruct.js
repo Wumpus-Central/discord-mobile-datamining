@@ -1,13 +1,11 @@
 // _runtime/10578__isNativeReflectConstruct.js
-import AbstractParserWithWordBoundaryChecking from "10457_AbstractParserWithWordBoundaryChecking.js";
-import REGEX_PARTS from "10579_REGEX_PARTS.js";
-import closure_2 from "metro/00041__classCallCheck.js";
+import _isNativeReflectConstruct2 from "10453__isNativeReflectConstruct.js";
+import ESMergeDateTimeRefiner from "metro/00041__classCallCheck.js";
 import _createClass from "metro/00042__createClass.js";
-import closure_3 from "metro/00093__possibleConstructorReturn.js";
-import closure_4 from "00095__getPrototypeOf.js";
+import closure_1 from "metro/00093__possibleConstructorReturn.js";
+import closure_2 from "00095__getPrototypeOf.js";
 import _inherits from "00098__inherits.js";
 
-const RUTimeUnitWithinFormatParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -26,18 +24,29 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-let closure_6 =
-  "(?:(?:\u043E\u043A\u043E\u043B\u043E|\u043F\u0440\u0438\u043C\u0435\u0440\u043D\u043E)\\s*(?:~\\s*)?)?(" +
-  REGEX_PARTS.TIME_UNITS_PATTERN +
-  ")" +
-  REGEX_PARTS.REGEX_PARTS.rightBoundary;
-class RUTimeUnitWithinFormatParser {
+let fn = this;
+if (this) {
+  fn = this.__importDefault;
+}
+if (!fn) {
+  fn = (__esModule) => {
+    if (!__esModule) {
+      const obj = { default: null };
+      obj[0] = __esModule;
+      let tmp = obj;
+    } else {
+      tmp = __esModule;
+    }
+    return tmp;
+  };
+}
+class ESMergeDateTimeRefiner {
   constructor() {
     self = this;
-    tmp = closure_2(this, RUTimeUnitWithinFormatParser);
-    tmp2 = closure_4;
-    obj = closure_4(RUTimeUnitWithinFormatParser);
-    tmp3 = closure_3;
+    tmp = ESMergeDateTimeRefiner(this, ESMergeDateTimeRefiner);
+    tmp2 = closure_2;
+    obj = closure_2(ESMergeDateTimeRefiner);
+    tmp3 = closure_1;
     if (_isNativeReflectConstruct()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
@@ -51,40 +60,15 @@ class RUTimeUnitWithinFormatParser {
     return tmp3(self, constructResult);
   }
 }
-_inherits(RUTimeUnitWithinFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+_inherits(ESMergeDateTimeRefiner, fn(_isNativeReflectConstruct2).default);
 const items = [
   {
-    key: "patternLeftBoundary",
-    value: function patternLeftBoundary() {
-      return RUTimeUnitWithinFormatParser(10579).REGEX_PARTS.leftBoundary;
-    },
-  },
-  {
-    key: "innerPattern",
-    value: function innerPattern(option) {
-      let _RegExp = RegExp;
-      if (option.option.forwardDate) {
-        _RegExp = new _RegExp(tmp, RUTimeUnitWithinFormatParser(10579).REGEX_PARTS.flags);
-      } else {
-        const _HermesInternal = HermesInternal;
-        const combined =
-          "(?:\u0432 \u0442\u0435\u0447\u0435\u043D\u0438\u0435|\u0432 \u0442\u0435\u0447\u0435\u043D\u0438\u0438)\\s*" +
-          tmp;
-        _RegExp = new _RegExp(combined, RUTimeUnitWithinFormatParser(10579).REGEX_PARTS.flags);
-      }
-      return _RegExp;
-    },
-  },
-  {
-    key: "innerExtract",
-    value: function innerExtract(reference) {
-      const ParsingComponents = RUTimeUnitWithinFormatParser(10453).ParsingComponents;
-      return ParsingComponents.createRelativeFromReference(
-        reference.reference,
-        RUTimeUnitWithinFormatParser(10579).parseDuration(arg1[1]),
-      );
+    key: "patternBetween",
+    value: function patternBetween() {
+      const regExp = new RegExp("^\\s*(?:,|de|aslas|a)?\\s*$");
+      return regExp;
     },
   },
 ];
 
-export default _createClass(RUTimeUnitWithinFormatParser, items);
+export default _createClass(ESMergeDateTimeRefiner, items);

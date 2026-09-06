@@ -1,12 +1,11 @@
 // _runtime/10515__isNativeReflectConstruct.js
-import AbstractParserWithWordBoundaryChecking from "10457_AbstractParserWithWordBoundaryChecking.js";
-import closure_2 from "metro/00041__classCallCheck.js";
+import _isNativeReflectConstruct2 from "10453__isNativeReflectConstruct.js";
+import PTMergeDateTimeRefiner from "metro/00041__classCallCheck.js";
 import _createClass from "metro/00042__createClass.js";
-import closure_3 from "metro/00093__possibleConstructorReturn.js";
-import closure_4 from "00095__getPrototypeOf.js";
+import closure_1 from "metro/00093__possibleConstructorReturn.js";
+import closure_2 from "00095__getPrototypeOf.js";
 import _inherits from "00098__inherits.js";
 
-const FRTimeUnitAgoFormatParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -25,46 +24,51 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-class FRTimeUnitAgoFormatParser {
+let fn = this;
+if (this) {
+  fn = this.__importDefault;
+}
+if (!fn) {
+  fn = (__esModule) => {
+    if (!__esModule) {
+      const obj = { default: null };
+      obj[0] = __esModule;
+      let tmp = obj;
+    } else {
+      tmp = __esModule;
+    }
+    return tmp;
+  };
+}
+class PTMergeDateTimeRefiner {
   constructor() {
     self = this;
-    tmp = closure_2(this, FRTimeUnitAgoFormatParser);
-    tmp2 = closure_4;
-    obj = closure_4(FRTimeUnitAgoFormatParser);
-    tmp3 = closure_3;
+    tmp = PTMergeDateTimeRefiner(this, PTMergeDateTimeRefiner);
+    tmp2 = closure_2;
+    obj = closure_2(PTMergeDateTimeRefiner);
+    tmp3 = closure_1;
     if (_isNativeReflectConstruct()) {
-      tmp5 = globalThis;
+      tmp7 = globalThis;
       _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
     } else {
-      constructResult = obj.apply(self, undefined);
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
     }
     return tmp3(self, constructResult);
   }
 }
-_inherits(FRTimeUnitAgoFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+_inherits(PTMergeDateTimeRefiner, fn(_isNativeReflectConstruct2).default);
 const items = [
   {
-    key: "innerPattern",
-    value: function innerPattern() {
-      const regExp = new RegExp(
-        "il y a\\s*(" + FRTimeUnitAgoFormatParser(10512).TIME_UNITS_PATTERN + ")(?=(?:\\W|$))",
-        "i",
-      );
+    key: "patternBetween",
+    value: function patternBetween() {
+      const regExp = new RegExp("^\\s*(?:,|\u00E0)?\\s*$");
       return regExp;
-    },
-  },
-  {
-    key: "innerExtract",
-    value: function innerExtract(reference) {
-      const parseDurationResult = FRTimeUnitAgoFormatParser(10512).parseDuration(arg1[1]);
-      const ParsingComponents = FRTimeUnitAgoFormatParser(10453).ParsingComponents;
-      return ParsingComponents.createRelativeFromReference(
-        reference.reference,
-        FRTimeUnitAgoFormatParser(10452).reverseDuration(FRTimeUnitAgoFormatParser(10512).parseDuration(arg1[1])),
-      );
     },
   },
 ];
 
-export default _createClass(FRTimeUnitAgoFormatParser, items);
+export default _createClass(PTMergeDateTimeRefiner, items);

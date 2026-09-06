@@ -1,11 +1,11 @@
 // _runtime/03113_registerAsset.js
-import registerAsset from "01240_registerAsset.js";
+import registerAsset from "01122_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/premium/tenure_reward",
+  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcw==",
   scales: [1],
-  hash: "4ce7db81a29e051a11be32b72852c173",
-  name: "TenureReward.compiled.messages",
+  hash: "afd659e7753f08717182e883cfd6d859",
+  name: "nl.messages.afd659e7753f08717182e883cfd6d859.compiled.messages",
   type: "jsona",
 });

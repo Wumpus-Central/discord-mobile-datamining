@@ -1,13 +1,13 @@
 // _runtime/14970_registerAsset.js
-import registerAsset from "01240_registerAsset.js";
+import registerAsset from "01122_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/quests/native/images",
-  width: 375,
-  height: 58,
-  scales: [1, 2, 3],
-  hash: "e5d497e242dfffadb8102108e8df2b1a",
-  name: "clouds_background",
+  httpServerLocation: "/assets/images/native",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "24a38b74eed4b16cf7662ebd8e1be84d",
+  name: "ic_message_retry",
   type: "png",
 });

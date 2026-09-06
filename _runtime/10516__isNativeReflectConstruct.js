@@ -1,12 +1,11 @@
 // _runtime/10516__isNativeReflectConstruct.js
-import AbstractParserWithWordBoundaryChecking from "10457_AbstractParserWithWordBoundaryChecking.js";
-import closure_2 from "metro/00041__classCallCheck.js";
+import _isNativeReflectConstruct2 from "10450__isNativeReflectConstruct.js";
+import PTMergeDateRangeRefiner from "metro/00041__classCallCheck.js";
 import _createClass from "metro/00042__createClass.js";
-import closure_3 from "metro/00093__possibleConstructorReturn.js";
-import closure_4 from "00095__getPrototypeOf.js";
+import closure_1 from "metro/00093__possibleConstructorReturn.js";
+import closure_2 from "00095__getPrototypeOf.js";
 import _inherits from "00098__inherits.js";
 
-const FRTimeUnitWithinFormatParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -25,13 +24,29 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-class FRTimeUnitWithinFormatParser {
+let fn = this;
+if (this) {
+  fn = this.__importDefault;
+}
+if (!fn) {
+  fn = (__esModule) => {
+    if (!__esModule) {
+      const obj = { default: null };
+      obj[0] = __esModule;
+      let tmp = obj;
+    } else {
+      tmp = __esModule;
+    }
+    return tmp;
+  };
+}
+class PTMergeDateRangeRefiner {
   constructor() {
     self = this;
-    tmp = closure_2(this, FRTimeUnitWithinFormatParser);
-    tmp2 = closure_4;
-    obj = closure_4(FRTimeUnitWithinFormatParser);
-    tmp3 = closure_3;
+    tmp = PTMergeDateRangeRefiner(this, PTMergeDateRangeRefiner);
+    tmp2 = closure_2;
+    obj = closure_2(PTMergeDateRangeRefiner);
+    tmp3 = closure_1;
     if (_isNativeReflectConstruct()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
@@ -45,28 +60,14 @@ class FRTimeUnitWithinFormatParser {
     return tmp3(self, constructResult);
   }
 }
-_inherits(FRTimeUnitWithinFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+_inherits(PTMergeDateRangeRefiner, fn(_isNativeReflectConstruct2).default);
 const items = [
   {
-    key: "innerPattern",
-    value: function innerPattern() {
-      const regExp = new RegExp(
-        "(?:dans|en|pour|pendant|de)\\s*(" + FRTimeUnitWithinFormatParser(10512).TIME_UNITS_PATTERN + ")(?=\\W|$)",
-        "i",
-      );
-      return regExp;
-    },
-  },
-  {
-    key: "innerExtract",
-    value: function innerExtract(reference) {
-      const ParsingComponents = FRTimeUnitWithinFormatParser(10453).ParsingComponents;
-      return ParsingComponents.createRelativeFromReference(
-        reference.reference,
-        FRTimeUnitWithinFormatParser(10512).parseDuration(arg1[1]),
-      );
+    key: "patternBetween",
+    value: function patternBetween() {
+      return /^\s*(?:-)\s*$/i;
     },
   },
 ];
 
-export default _createClass(FRTimeUnitWithinFormatParser, items);
+export default _createClass(PTMergeDateRangeRefiner, items);

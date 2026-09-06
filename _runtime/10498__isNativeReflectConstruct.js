@@ -1,11 +1,12 @@
 // _runtime/10498__isNativeReflectConstruct.js
-import _isNativeReflectConstruct2 from "10468__isNativeReflectConstruct.js";
-import DEMergeDateRangeRefiner from "metro/00041__classCallCheck.js";
+import AbstractParserWithWordBoundaryChecking from "10439_AbstractParserWithWordBoundaryChecking.js";
+import closure_2 from "metro/00041__classCallCheck.js";
 import _createClass from "metro/00042__createClass.js";
-import closure_1 from "metro/00093__possibleConstructorReturn.js";
-import closure_2 from "00095__getPrototypeOf.js";
+import closure_3 from "metro/00093__possibleConstructorReturn.js";
+import closure_4 from "00095__getPrototypeOf.js";
 import _inherits from "00098__inherits.js";
 
+const FRTimeUnitWithinFormatParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -24,29 +25,13 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-let fn = this;
-if (this) {
-  fn = this.__importDefault;
-}
-if (!fn) {
-  fn = (__esModule) => {
-    if (!__esModule) {
-      const obj = { default: null };
-      obj[0] = __esModule;
-      let tmp = obj;
-    } else {
-      tmp = __esModule;
-    }
-    return tmp;
-  };
-}
-class DEMergeDateRangeRefiner {
+class FRTimeUnitWithinFormatParser {
   constructor() {
     self = this;
-    tmp = DEMergeDateRangeRefiner(this, DEMergeDateRangeRefiner);
-    tmp2 = closure_2;
-    obj = closure_2(DEMergeDateRangeRefiner);
-    tmp3 = closure_1;
+    tmp = closure_2(this, FRTimeUnitWithinFormatParser);
+    tmp2 = closure_4;
+    obj = closure_4(FRTimeUnitWithinFormatParser);
+    tmp3 = closure_3;
     if (_isNativeReflectConstruct()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
@@ -60,14 +45,28 @@ class DEMergeDateRangeRefiner {
     return tmp3(self, constructResult);
   }
 }
-_inherits(DEMergeDateRangeRefiner, fn(_isNativeReflectConstruct2).default);
+_inherits(FRTimeUnitWithinFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const items = [
   {
-    key: "patternBetween",
-    value: function patternBetween() {
-      return /^\s*(bis(?:\s*(?:am|zum))?|-)\s*$/i;
+    key: "innerPattern",
+    value: function innerPattern() {
+      const regExp = new RegExp(
+        "(?:dans|en|pour|pendant|de)\\s*(" + FRTimeUnitWithinFormatParser(10494).TIME_UNITS_PATTERN + ")(?=\\W|$)",
+        "i",
+      );
+      return regExp;
+    },
+  },
+  {
+    key: "innerExtract",
+    value: function innerExtract(reference) {
+      const ParsingComponents = FRTimeUnitWithinFormatParser(10435).ParsingComponents;
+      return ParsingComponents.createRelativeFromReference(
+        reference.reference,
+        FRTimeUnitWithinFormatParser(10494).parseDuration(arg1[1]),
+      );
     },
   },
 ];
 
-export default _createClass(DEMergeDateRangeRefiner, items);
+export default _createClass(FRTimeUnitWithinFormatParser, items);

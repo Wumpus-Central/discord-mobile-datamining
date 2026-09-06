@@ -1,13 +1,13 @@
 // _runtime/17567_registerAsset.js
-import registerAsset from "01240_registerAsset.js";
+import registerAsset from "01122_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/guild_role_subscriptions/native/images",
+  httpServerLocation: "/assets/images/native/icons",
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "ed13dc1c27325d7ffd6ba2403047329c",
-  name: "ic_full_server_gating_24px",
+  hash: "e34464fbaad016de0cccce358d754f22",
+  name: "ic_overflow_android",
   type: "png",
 });

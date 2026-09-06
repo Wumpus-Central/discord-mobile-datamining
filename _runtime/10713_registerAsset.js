@@ -1,13 +1,13 @@
 // _runtime/10713_registerAsset.js
-import registerAsset from "01240_registerAsset.js";
+import registerAsset from "01122_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/images/native/premium/backgrounds",
-  width: 411,
-  height: 134,
+  width: 375,
+  height: 152,
   scales: [2, 3],
-  hash: "68fc474265691715b1946d199d680a26",
-  name: "img_classic_subheader_mobile",
+  hash: "bd0899bbe9025729a8e812d462104779",
+  name: "img_bundle_subheader_mobile",
   type: "png",
 });

@@ -1,13 +1,13 @@
 // _runtime/13428_registerAsset.js
-import registerAsset from "01240_registerAsset.js";
+import registerAsset from "01122_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/guild_boosting",
-  width: 177.5,
-  height: 112,
+  httpServerLocation: "/assets/modules/premium/native/images/perks",
+  width: 300,
+  height: 175,
   scales: [2, 3],
-  hash: "d63f711157bc9a870f14f2f22d76c3fb",
-  name: "guild_subscription_no_guilds_dark",
+  hash: "9fd167b3326279649df94a86f059e292",
+  name: "large_uploads",
   type: "png",
 });

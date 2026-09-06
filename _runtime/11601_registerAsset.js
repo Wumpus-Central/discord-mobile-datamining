@@ -1,13 +1,13 @@
 // _runtime/11601_registerAsset.js
-import registerAsset from "01240_registerAsset.js";
+import registerAsset from "01122_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/icons",
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
   width: 24,
   height: 24,
-  scales: [1, 2, 3],
-  hash: "5870bc3ada01ff369d707eaeba6296c2",
-  name: "camera_upload_light",
+  scales: [2, 3],
+  hash: "2ec8d4d40c93ceea32933ae4e505df6e",
+  name: "ChatPlusIcon",
   type: "png",
 });

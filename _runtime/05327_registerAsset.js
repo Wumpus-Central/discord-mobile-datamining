@@ -1,5 +1,5 @@
 // _runtime/05327_registerAsset.js
-import registerAsset from "01240_registerAsset.js";
+import registerAsset from "01122_registerAsset.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 255,
   height: 255,
   scales: [1],
-  hash: "65690d7389997bdd64f7d1687ed64321",
-  name: "img_account_sync_paypal_light_and_dark",
-  type: "svg",
+  hash: "8db07373f3f919fb237f49a66c873b13",
+  name: "img_account_sync_twitter_white",
+  type: "png",
 });
