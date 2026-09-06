@@ -1,4 +1,5 @@
 // discord_app/modules/feedback/native/FeedbackForm.tsx
+import _modDef12 from "../../../../_runtime/metro/00012__.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import FeedbackUtils from "../FeedbackUtils.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
@@ -46,6 +47,7 @@ export const FeedbackForm = function FeedbackForm(otherKey) {
     if (!obj.isEqual(closure_5, reasons)) {
       _undefined(FeedbackUtils.shuffleProblems(reasons, otherKey));
     }
+    obj = _modDef12;
   }, items);
   const tmp8 = trackOpen(noop.useState({}), 2);
   const first = tmp8[0];
@@ -60,7 +62,7 @@ export const FeedbackForm = function FeedbackForm(otherKey) {
       flag = false;
     }
     const obj = {};
-    const merged = Object.assign(tmp);
+    const merged = Object.assign(first);
     obj.doNotShowAgain = !flag;
     closure_8(obj);
     onFeedbackChanged(first);

@@ -16,6 +16,6 @@ export default noop.forwardRef((arg0, ref) => {
   const merged = Object.assign(arg0);
   obj.horizontal = true;
   obj.nestedScrollEnabled = true;
-  obj.children = <ScrollView ref={arg1} />;
+  obj.children = <ScrollView ref={ref} />;
   return jsx(LegacyBaseButton.GestureDetector, { ref });
 });

@@ -5,6 +5,7 @@ import Server from "../../../flow/Server.tsx";
 import HapticUtils from "../../haptics/HapticUtils.native.tsx";
 import AppAnalyticsUtils from "../../app_analytics/AppAnalyticsUtils.tsx";
 import ApplicationCommandUtils from "../../application_commands/ApplicationCommandUtils.tsx";
+import ApplicationCommandTypes from "../../application_commands/ApplicationCommandTypes.tsx";
 import ApplicationCommandActionCreatorsAll from "../../application_commands/ApplicationCommandActionCreators.tsx";
 import AppLauncherUtils from "../utils/AppLauncherUtils.tsx";
 import FrecencySection from "screens/home/FrecencySection.tsx";
@@ -37,9 +38,9 @@ export const handleApplicationSelected = function handleApplicationSelected(entr
     source: null,
   };
   if (application.id === BuiltInSectionId.BUILT_IN) {
-    let APP = tmp(7523).ApplicationCommandTriggerSections.BUILT_IN;
+    let APP = ApplicationCommandTypes.ApplicationCommandTriggerSections.BUILT_IN;
   } else {
-    APP = tmp(7523).ApplicationCommandTriggerSections.APP;
+    APP = ApplicationCommandTypes.ApplicationCommandTriggerSections.APP;
   }
   obj.section = APP;
   let id = application.id;
@@ -141,10 +142,10 @@ export const getInitialOptionValues = function getInitialOptionValues(option) {
     }
     return items1;
   } else {
-    if (tmp2(1894).ApplicationCommandOptionType.STRING !== type) {
-      if (tmp2(1894).ApplicationCommandOptionType.INTEGER !== type) {
-        if (tmp2(1894).ApplicationCommandOptionType.NUMBER !== type) {
-          if (tmp2(1894).ApplicationCommandOptionType.CHANNEL === type) {
+    if (Server.ApplicationCommandOptionType.STRING !== type) {
+      if (Server.ApplicationCommandOptionType.INTEGER !== type) {
+        if (Server.ApplicationCommandOptionType.NUMBER !== type) {
+          if (Server.ApplicationCommandOptionType.CHANNEL === type) {
             if (null != found) {
               const _String5 = String;
               if (null != ChannelStore.getChannel(String(found.value))) {
@@ -157,7 +158,7 @@ export const getInitialOptionValues = function getInitialOptionValues(option) {
               return items3;
             }
             items3 = [{ type: "text", text: "" }];
-          } else if (tmp2(1894).ApplicationCommandOptionType.USER === type) {
+          } else if (Server.ApplicationCommandOptionType.USER === type) {
             if (null != found) {
               const _String3 = String;
               if (null != UserStore.getUser(String(found.value))) {
@@ -170,7 +171,7 @@ export const getInitialOptionValues = function getInitialOptionValues(option) {
               return items5;
             }
             items5 = [{ type: "text", text: "" }];
-          } else if (tmp2(1894).ApplicationCommandOptionType.ROLE === type) {
+          } else if (Server.ApplicationCommandOptionType.ROLE === type) {
             if (null != found) {
               if (typeof found.value === "string") {
                 if (found.value in roles) {
@@ -182,7 +183,7 @@ export const getInitialOptionValues = function getInitialOptionValues(option) {
               }
             }
             items7 = [{ type: "text", text: "" }];
-          } else if (tmp2(1894).ApplicationCommandOptionType.MENTIONABLE === type) {
+          } else if (Server.ApplicationCommandOptionType.MENTIONABLE === type) {
             if (null != found) {
               if (found.value === option.guildId) {
                 const items8 = [{ type: "textMention", text: "@everyone" }];

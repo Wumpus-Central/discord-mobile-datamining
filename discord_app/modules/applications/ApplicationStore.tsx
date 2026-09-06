@@ -26,14 +26,12 @@ function addApplication(fromServer) {
       if (null == nextResult.application) {
         continue;
       } else {
-        let obj3 = ApplicationRecord;
-        let tmp13 = addApplication;
         if (tmp12.application instanceof ApplicationRecord) {
           let application = tmp12.application;
         } else {
-          application = obj3.createFromServer(tmp12.application);
+          application = ApplicationRecord.createFromServer(tmp12.application);
         }
-        let tmp13Result = tmp13(application);
+        let tmp13Result = addApplication(application);
       }
     }
   }
@@ -101,11 +99,10 @@ function handleEntitlementsFetched(arg0) {
 function handleIntegrationsChanged(guildId) {
   guildId = guildId.guildId;
   if (map2.has(guildId)) {
-    obj.delete(guildId);
+    map2.delete(guildId);
   } else {
     return false;
   }
-  obj = map2;
 }
 let closure_2 = [];
 let map = new Map();
@@ -404,6 +401,7 @@ const applicationStore = new ApplicationStore(DispatcherDefault, {
       let tmp5 = addApplication(ApplicationRecord.createFromServer(tmp2.application));
       continue;
     }
+    tmp = arg0.libraryApplications[Symbol.iterator]();
   },
   STORE_LISTING_FETCH_SUCCESS: function handleStoreListingFetch(storeListing) {
     storeListing = storeListing.storeListing;

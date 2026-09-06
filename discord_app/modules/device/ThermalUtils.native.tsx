@@ -22,7 +22,7 @@ let closure_5 = module_560.create((arg0) => {
     } else {
       resolved = Promise.resolve(undefined);
     }
-    tmpResult = require("DeviceUtils");
+    tmpResult = tmp(4539);
   } else {
     const DCDDeviceThermalStateManager = NativeModules.DCDDeviceThermalStateManager;
     const thermalState1 = DCDDeviceThermalStateManager.getThermalState();
@@ -50,6 +50,8 @@ let closure_5 = module_560.create((arg0) => {
     });
     return { rawThermalState: "Array" };
   }
+  obj = require("PlatformUtils");
+  tmp = _require;
 });
 const result = size.fileFinishedImporting("modules/device/ThermalUtils.native.tsx");
 

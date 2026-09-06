@@ -5,10 +5,10 @@ import size from "../../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/messages/native/long_press/showLongPressMessageActionSheet.tsx");
 
-export const showLongPressMessageActionSheet = function showLongPressMessageActionSheet(arg0) {
+export const showLongPressMessageActionSheet = function showLongPressMessageActionSheet(analyticsLocation) {
   ActionSheetActionCreatorsDefault.openLazy(
     asyncRequireImpl(11658, dependencyMap.paths),
     "MessageLongPressActionSheet",
-    arg0,
+    analyticsLocation,
   );
 };

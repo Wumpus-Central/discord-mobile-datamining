@@ -160,13 +160,12 @@ export const MediaModalOverlayFooter = function MediaModalOverlayFooter(channelI
         value = first2 === first1;
       }
       if (!value) {
-        if (obj.get()) {
+        if (sharedValue.get()) {
           callback();
         } else {
           callback1();
         }
       }
-      obj = sharedValue;
     }
   }, items4);
   const items5 = [tmp11[1]];
@@ -184,11 +183,11 @@ export const MediaModalOverlayFooter = function MediaModalOverlayFooter(channelI
       if (2 === sharedValue1.get()) {
         const obj = ReanimatedRexport;
         value = sharedValue2.get();
-        const items = [tmp, ,];
+        const items = [first3, ,];
         const _Math = Math;
-        items[1] = Math.max(first2, tmp);
+        items[1] = Math.max(first2, first3);
         const _Math2 = Math;
-        items[2] = Math.max(first2, tmp) + 40;
+        items[2] = Math.max(first2, first3) + 40;
         height = obj.interpolate(value, [0, 1, 2], items, "clamp");
       }
     }

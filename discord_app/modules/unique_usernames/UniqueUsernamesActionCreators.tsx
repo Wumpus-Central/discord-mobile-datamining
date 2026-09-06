@@ -12,9 +12,9 @@ export default {
   resetSuggestions() {
     return DispatcherDefault.dispatch({ type: "UNIQUE_USERNAME_SUGGESTIONS_RESET" });
   },
-  fetchSuggestionsRegistration(arg0) {
-    closure_0 = arg0;
-    return (async (arg0, value) => {
+  fetchSuggestionsRegistration(globalName) {
+    closure_0 = globalName;
+    return (async () => {
       tmp3(tmp19[3]).dispatch({ type: "UNIQUE_USERNAME_SUGGESTIONS_RESET" });
       const HTTP = global_name(tmp19[4]).HTTP;
       const request = {
@@ -58,7 +58,7 @@ export default {
       });
     })();
   },
-  attemptUsername(arg0, registration, arg2, arg3) {
+  attemptUsername(arg0) {
     closure_0 = arg0;
     if (registration === undefined) {
       let str = "modal";
@@ -67,11 +67,11 @@ export default {
     if (arg2 === undefined) {
       flag = false;
     }
-    let flag2 = arg3;
-    if (arg3 === undefined) {
+    let flag2 = flag3;
+    if (flag3 === undefined) {
       flag2 = false;
     }
-    return flag2(function* (arg0, value) {
+    return flag2(function* () {
       if (c6 === 2) {
         c6 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");

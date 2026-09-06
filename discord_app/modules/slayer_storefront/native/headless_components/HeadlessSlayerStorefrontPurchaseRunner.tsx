@@ -1,8 +1,9 @@
 // discord_app/modules/slayer_storefront/native/headless_components/HeadlessSlayerStorefrontPurchaseRunner.tsx
+import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
 import AnalyticsUtilsDefault from "../../../../utils/AnalyticsUtils.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-const require = fn;
+require = fn;
 let useNativeCheckoutStore = fn(7424).useNativeCheckoutStore;
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const size = fn(2);
@@ -58,6 +59,7 @@ export const HeadlessSlayerStorefrontPurchaseRunner = function HeadlessSlayerSto
       AnalyticsUtilsDefault.track(AnalyticEvents.PAYMENT_FLOW_SUCCEEDED, closure_3);
     }
     closure_1_1();
+    obj = PlatformUtils;
   };
   obj.onPurchaseError = onPurchaseError;
   obj.onPurchasePending = function onPurchasePending() {};

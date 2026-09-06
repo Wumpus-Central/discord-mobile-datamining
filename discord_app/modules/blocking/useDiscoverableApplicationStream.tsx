@@ -3,7 +3,7 @@ import ApplicationStreamingStore from "../../stores/ApplicationStreamingStore.ts
 import RelationshipStore from "../../stores/RelationshipStore.tsx";
 
 const require = fn;
-function getDiscoverableApplicationStream(id, items) {
+function getDiscoverableApplicationStream(id) {
   let tmp = items;
   if (items === undefined) {
     items = [ApplicationStreamingStore, RelationshipStore];

@@ -157,6 +157,7 @@ function ReportContent(applicationId) {
         if (tmp2) {
           closure_7(null);
         }
+        tmp2 = null != first1 && arg0 !== first1.name;
       },
       placeholder: null,
     };

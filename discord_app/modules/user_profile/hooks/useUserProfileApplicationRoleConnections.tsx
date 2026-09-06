@@ -19,7 +19,7 @@ export default function useUserProfileApplicationRoleConnections(arg0) {
   return useMemo(() => {
     let prop;
     if (stateFromStores != null) {
-      prop = tmp.applicationRoleConnections;
+      prop = stateFromStores.applicationRoleConnections;
     }
     return null == prop ? closure_4 : stateFromStores.applicationRoleConnections;
   }, items1);

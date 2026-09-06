@@ -43,7 +43,7 @@ export default function useUploadAvatar(guildId) {
   useCallback = tmp2;
   const items2 = [stateFromStores, guildId, flag, tmp2];
   return useCallback(
-    stateFromStores(function* (arg0, value) {
+    stateFromStores(function* () {
       if (c3 === 2) {
         c3 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -121,10 +121,10 @@ export default function useUploadAvatar(guildId) {
             obj4.originalMd5 = originalMd5;
             closure_128_4 = obj1.createPendingImage(obj4);
             if (closure_129_1) {
-              let tmp28Result = tmp28(8167);
+              let tmp28Result = tmp2(8167);
               tmp28Result.setTryItOutAvatar(closure_128_4);
             } else {
-              tmp28Result = tmp28(8164);
+              tmp28Result = tmp2(8164);
               const obj5 = { guildId: closure_129_0, avatar: closure_128_4 };
               tmp28Result.setPendingChanges(obj5);
               const result = tmp2(8166).announcePendingAvatarChange("set");

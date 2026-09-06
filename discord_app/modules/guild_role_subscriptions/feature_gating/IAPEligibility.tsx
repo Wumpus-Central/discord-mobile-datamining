@@ -1,9 +1,9 @@
 // discord_app/modules/guild_role_subscriptions/feature_gating/IAPEligibility.tsx
 import PlatformUtils from "../../../utils/PlatformUtils.tsx";
+import getSystemVersion from "getSystemVersion.native.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import GuildStore from "../../../stores/GuildStore.tsx";
 
-const getSystemVersion = tmp(5500);
 require = fn;
 let c4 = "13.2";
 let items = [fn(1074).GuildFeatures.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE];

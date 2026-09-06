@@ -71,8 +71,8 @@ export const useAppliedTags = function useAppliedTags(thread) {
   const items2 = [stateFromStoresObject, thread];
   return noop.useMemo(() => {
     let found;
-    if (closure_0 != null) {
-      const appliedTags = obj.appliedTags;
+    if (thread != null) {
+      const appliedTags = thread.appliedTags;
       if (appliedTags != null) {
         const mapped = appliedTags.map((item) => memo[item]);
         if (mapped != null) {
@@ -84,8 +84,8 @@ export const useAppliedTags = function useAppliedTags(thread) {
       found = closure_6;
     }
     let result;
-    if (closure_0 != null) {
-      result = obj.isModeratorReportChannel();
+    if (thread != null) {
+      result = thread.isModeratorReportChannel();
     }
     let result1 = found;
     if (result) {
@@ -132,8 +132,8 @@ export const useSomeAppliedTags = function useSomeAppliedTags(thread, arg1) {
   const items2 = [stateFromStoresObject, thread];
   memo = noop.useMemo(() => {
     let found;
-    if (closure_0 != null) {
-      const appliedTags = obj.appliedTags;
+    if (thread != null) {
+      const appliedTags = thread.appliedTags;
       if (appliedTags != null) {
         const mapped = appliedTags.map((item) => memo[item]);
         if (mapped != null) {
@@ -145,8 +145,8 @@ export const useSomeAppliedTags = function useSomeAppliedTags(thread, arg1) {
       found = closure_6;
     }
     let result;
-    if (closure_0 != null) {
-      result = obj.isModeratorReportChannel();
+    if (thread != null) {
+      result = thread.isModeratorReportChannel();
     }
     let result1 = found;
     if (result) {

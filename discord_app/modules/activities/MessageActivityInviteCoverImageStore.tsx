@@ -16,9 +16,8 @@ const messageActivityInviteCoverImageStore = new MessageActivityInviteCoverImage
     if (closure_0.get(messageId) === coverImageURL) {
       return false;
     } else {
-      const result = obj.set(messageId, coverImageURL);
+      const result = closure_0.set(messageId, coverImageURL);
     }
-    obj = closure_0;
   },
 });
 const size = fn(2);

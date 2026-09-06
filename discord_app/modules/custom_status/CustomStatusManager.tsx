@@ -64,9 +64,8 @@ let prototype = function CustomStatusManager() {
         }
       }
       if (null != timeout2) {
-        obj.stop();
+        timeout2.stop();
       }
-      obj = timeout2;
     }
   };
   applyArgumentsResult.manageExpiringStatus = function manageExpiringStatus() {

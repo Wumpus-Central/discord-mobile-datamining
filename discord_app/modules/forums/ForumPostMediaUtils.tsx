@@ -1,9 +1,11 @@
 // discord_app/modules/forums/ForumPostMediaUtils.tsx
 import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
+import URLUtilsDefault from "../../utils/URLUtils.tsx";
 import GlobalUtils from "../../utils/GlobalUtils.tsx";
 import FlagUtils from "../../../discord_common/js/shared/utils/FlagUtils.tsx";
 import UserSettings from "../user_settings/UserSettings.tsx";
 import MediaFormatTesters from "../messages/MediaFormatTesters.tsx";
+import InteractionComponentUtils from "../interaction_components/InteractionComponentUtils.tsx";
 import noop from "../../../_runtime/metro/00019__.js";
 import ThreadMessageStore from "../threads/ThreadMessageStore.tsx";
 import ChannelStore from "../../stores/ChannelStore.tsx";
@@ -43,7 +45,7 @@ function isMediaAttachment(filename) {
   }
   return flag;
 }
-function getForumPostMedia(attachments, InlineAttachmentMedia) {
+function getForumPostMedia(attachments) {
   let setting = InlineAttachmentMedia;
   if (InlineAttachmentMedia === undefined) {
     InlineAttachmentMedia = UserSettings.InlineAttachmentMedia;
@@ -79,7 +81,7 @@ function getForumPostMedia(attachments, InlineAttachmentMedia) {
               const isVideoFileResult = require("MediaFormatTesters").isVideoFile(tmp3);
               let hasFlagResult = null != flags.flags;
               if (hasFlagResult) {
-                let tmp12Result = tmp12(tmp13[8]);
+                let tmp12Result = require("FlagUtils");
                 hasFlagResult = tmp12Result.hasFlag(flags.flags, constants.IS_THUMBNAIL);
               }
               let str = proxy_url;
@@ -87,7 +89,7 @@ function getForumPostMedia(attachments, InlineAttachmentMedia) {
                 str = tmp;
               }
               if (isVideoFileResult) {
-                str = require("URLUtils").toURLSafe(proxy_url);
+                str = URLUtilsDefault.toURLSafe(proxy_url);
                 if (null == str) {
                   return null;
                 } else {
@@ -95,7 +97,6 @@ function getForumPostMedia(attachments, InlineAttachmentMedia) {
                   searchParams.append("format", "webp");
                   str = str.toString();
                 }
-                const obj2 = require("URLUtils");
               }
               const size = {
                 type: constants2.ATTACHMENT,
@@ -112,7 +113,7 @@ function getForumPostMedia(attachments, InlineAttachmentMedia) {
                 mediaIndex: null,
                 srcIsAnimated: null,
               };
-              tmp12Result = tmp12(tmp13[8]);
+              tmp12Result = require("FlagUtils");
               let num = flags;
               if (flags == null) {
                 num = 0;
@@ -126,12 +127,11 @@ function getForumPostMedia(attachments, InlineAttachmentMedia) {
               size.attachmentId = flags.id;
               size.mediaIndex = mediaIndex;
               const obj6 = require("MediaFormatTesters");
-              const tmp11 = constants;
               let num2 = flags.flags;
               if (num2 == null) {
                 num2 = 0;
               }
-              size.srcIsAnimated = require("FlagUtils").hasFlag(num2, tmp11.IS_ANIMATED);
+              size.srcIsAnimated = require("FlagUtils").hasFlag(num2, constants.IS_ANIMATED);
               return size;
             }
           }
@@ -222,14 +222,16 @@ function useForumPostEmbeds(embeds, flag) {
                 return size;
               }
             }
+            tmp = null == thumbnail && null != image.images;
           });
-          let found = mapped.filter(require("GlobalUtils").isNotNullish);
+          let found = mapped.filter(tmp(1369).isNotNullish);
         }
         return found;
       }
     }
     found = [];
   }
+  tmp = _require;
 }
 function useForumPostMediaProperties(firstResult, flag) {
   const InlineAttachmentMedia = UserSettings.InlineAttachmentMedia;
@@ -245,10 +247,10 @@ function useForumPostMediaProperties(firstResult, flag) {
     if (tmp4) {
       if (null != components) {
         const _Array = Array;
-        const tmpResult = tmp(4785);
-        const flattenComponentsResult = tmp(4785).flattenComponents(components);
-        const arr = Array.from(tmp(4785).flattenComponents(components).values());
-        items1 = Array.from(tmp(4785).flattenComponents(components).values())
+        const tmpResult = InteractionComponentUtils;
+        const flattenComponentsResult = InteractionComponentUtils.flattenComponents(components);
+        const arr = Array.from(InteractionComponentUtils.flattenComponents(components).values());
+        items1 = Array.from(InteractionComponentUtils.flattenComponents(components).values())
           .flatMap((type) => {
             type = type.type;
             if (require("Server").ComponentType.THUMBNAIL === type) {
@@ -256,7 +258,7 @@ function useForumPostMediaProperties(firstResult, flag) {
               if (spoiler == null) {
                 spoiler = false;
               }
-              let tmpResult = tmp(tmp2[13]);
+              let tmpResult = require("MediaTypes");
               let unfurledMediaItemType = tmpResult.getUnfurledMediaItemType(media);
               let tmp6 = null;
               if ("INVALID" !== unfurledMediaItemType) {
@@ -290,21 +292,24 @@ function useForumPostMediaProperties(firstResult, flag) {
                   version = contentScanMetadata.version;
                 }
                 size.contentScanVersion = version;
-                tmpResult = tmp(tmp2[8]);
-                size.srcIsAnimated = tmpResult.hasFlag(media.flags, tmp(tmp2[13]).UnfurledMediaItemFlags.IS_ANIMATED);
+                tmpResult = require("FlagUtils");
+                size.srcIsAnimated = tmpResult.hasFlag(
+                  media.flags,
+                  require("MediaTypes").UnfurledMediaItemFlags.IS_ANIMATED,
+                );
                 size.isVideo = "VIDEO" === unfurledMediaItemType;
                 size.srcUnfurledMediaItem = media;
                 tmp6 = size;
               }
               return tmp6;
-            } else if (tmp(tmp2[12]).ComponentType.MEDIA_GALLERY === type) {
+            } else if (require("Server").ComponentType.MEDIA_GALLERY === type) {
               const items = type.items;
               return items.map((item) => {
                 ({ media, spoiler } = item);
                 if (spoiler == null) {
                   spoiler = false;
                 }
-                const unfurledMediaItemType = closure_1_0(closure_1_2[13]).getUnfurledMediaItemType(media);
+                const unfurledMediaItemType = closure_1_0(dependencyMap[13]).getUnfurledMediaItemType(media);
                 let tmp4 = null;
                 if ("INVALID" !== unfurledMediaItemType) {
                   const size = {
@@ -337,14 +342,14 @@ function useForumPostMediaProperties(firstResult, flag) {
                     version = contentScanMetadata.version;
                   }
                   size.contentScanVersion = version;
-                  size.srcIsAnimated = tmp(tmp2[8]).hasFlag(
+                  size.srcIsAnimated = closure_1_0(dependencyMap[8]).hasFlag(
                     media.flags,
-                    tmp(tmp2[13]).UnfurledMediaItemFlags.IS_ANIMATED,
+                    closure_1_0(dependencyMap[13]).UnfurledMediaItemFlags.IS_ANIMATED,
                   );
                   size.isVideo = "VIDEO" === unfurledMediaItemType;
                   size.srcUnfurledMediaItem = media;
                   tmp4 = size;
-                  const tmpResult = tmp(tmp2[8]);
+                  const tmpResult = closure_1_0(dependencyMap[8]);
                 }
                 return tmp4;
               });
@@ -352,66 +357,20 @@ function useForumPostMediaProperties(firstResult, flag) {
               return null;
             }
           })
-          .filter(tmp(1369).isNotNullish);
-        const flatMapResult = Array.from(tmp(4785).flattenComponents(components).values()).flatMap((type) => {
-          type = type.type;
-          if (require("Server").ComponentType.THUMBNAIL === type) {
-            ({ media, spoiler } = type);
-            if (spoiler == null) {
-              spoiler = false;
-            }
-            let tmpResult = tmp(tmp2[13]);
-            let unfurledMediaItemType = tmpResult.getUnfurledMediaItemType(media);
-            let tmp6 = null;
-            if ("INVALID" !== unfurledMediaItemType) {
-              let size = {
-                type: constants.COMPONENT,
-                src: null,
-                height: null,
-                width: null,
-                spoiler: null,
-                contentScanVersion: null,
-                flags: 0,
-                srcIsAnimated: null,
-                isVideo: null,
-                mediaIndex: 0,
-                srcUnfurledMediaItem: null,
-              };
-              ({ proxyUrl: obj3.src, height } = media);
-              if (height == null) {
-                height = 0;
-              }
-              size.height = height;
-              let num = media.width;
-              if (num == null) {
-                num = 0;
-              }
-              size.width = num;
-              size.spoiler = spoiler;
-              let contentScanMetadata = media.contentScanMetadata;
-              let version;
-              if (contentScanMetadata != null) {
-                version = contentScanMetadata.version;
-              }
-              size.contentScanVersion = version;
-              tmpResult = tmp(tmp2[8]);
-              size.srcIsAnimated = tmpResult.hasFlag(media.flags, tmp(tmp2[13]).UnfurledMediaItemFlags.IS_ANIMATED);
-              size.isVideo = "VIDEO" === unfurledMediaItemType;
-              size.srcUnfurledMediaItem = media;
-              tmp6 = size;
-            }
-            return tmp6;
-          } else if (tmp(tmp2[12]).ComponentType.MEDIA_GALLERY === type) {
-            const items = type.items;
-            return items.map((item) => {
-              ({ media, spoiler } = item);
+          .filter(GlobalUtils.isNotNullish);
+        const flatMapResult = Array.from(InteractionComponentUtils.flattenComponents(components).values()).flatMap(
+          (type) => {
+            type = type.type;
+            if (require("Server").ComponentType.THUMBNAIL === type) {
+              ({ media, spoiler } = type);
               if (spoiler == null) {
                 spoiler = false;
               }
-              const unfurledMediaItemType = closure_1_0(closure_1_2[13]).getUnfurledMediaItemType(media);
-              let tmp4 = null;
+              let tmpResult = require("MediaTypes");
+              let unfurledMediaItemType = tmpResult.getUnfurledMediaItemType(media);
+              let tmp6 = null;
               if ("INVALID" !== unfurledMediaItemType) {
-                const size = {
+                let size = {
                   type: constants.COMPONENT,
                   src: null,
                   height: null,
@@ -435,27 +394,78 @@ function useForumPostMediaProperties(firstResult, flag) {
                 }
                 size.width = num;
                 size.spoiler = spoiler;
-                const contentScanMetadata = media.contentScanMetadata;
+                let contentScanMetadata = media.contentScanMetadata;
                 let version;
                 if (contentScanMetadata != null) {
                   version = contentScanMetadata.version;
                 }
                 size.contentScanVersion = version;
-                size.srcIsAnimated = tmp(tmp2[8]).hasFlag(
+                tmpResult = require("FlagUtils");
+                size.srcIsAnimated = tmpResult.hasFlag(
                   media.flags,
-                  tmp(tmp2[13]).UnfurledMediaItemFlags.IS_ANIMATED,
+                  require("MediaTypes").UnfurledMediaItemFlags.IS_ANIMATED,
                 );
                 size.isVideo = "VIDEO" === unfurledMediaItemType;
                 size.srcUnfurledMediaItem = media;
-                tmp4 = size;
-                const tmpResult = tmp(tmp2[8]);
+                tmp6 = size;
               }
-              return tmp4;
-            });
-          } else {
-            return null;
-          }
-        });
+              return tmp6;
+            } else if (require("Server").ComponentType.MEDIA_GALLERY === type) {
+              const items = type.items;
+              return items.map((item) => {
+                ({ media, spoiler } = item);
+                if (spoiler == null) {
+                  spoiler = false;
+                }
+                const unfurledMediaItemType = closure_1_0(dependencyMap[13]).getUnfurledMediaItemType(media);
+                let tmp4 = null;
+                if ("INVALID" !== unfurledMediaItemType) {
+                  const size = {
+                    type: constants.COMPONENT,
+                    src: null,
+                    height: null,
+                    width: null,
+                    spoiler: null,
+                    contentScanVersion: null,
+                    flags: 0,
+                    srcIsAnimated: null,
+                    isVideo: null,
+                    mediaIndex: 0,
+                    srcUnfurledMediaItem: null,
+                  };
+                  ({ proxyUrl: obj3.src, height } = media);
+                  if (height == null) {
+                    height = 0;
+                  }
+                  size.height = height;
+                  let num = media.width;
+                  if (num == null) {
+                    num = 0;
+                  }
+                  size.width = num;
+                  size.spoiler = spoiler;
+                  const contentScanMetadata = media.contentScanMetadata;
+                  let version;
+                  if (contentScanMetadata != null) {
+                    version = contentScanMetadata.version;
+                  }
+                  size.contentScanVersion = version;
+                  size.srcIsAnimated = closure_1_0(dependencyMap[8]).hasFlag(
+                    media.flags,
+                    closure_1_0(dependencyMap[13]).UnfurledMediaItemFlags.IS_ANIMATED,
+                  );
+                  size.isVideo = "VIDEO" === unfurledMediaItemType;
+                  size.srcUnfurledMediaItem = media;
+                  tmp4 = size;
+                  const tmpResult = closure_1_0(dependencyMap[8]);
+                }
+                return tmp4;
+              });
+            } else {
+              return null;
+            }
+          },
+        );
       }
     }
     items1 = [];
@@ -525,10 +535,10 @@ export const useForumPostComponentsMedia = function useForumPostComponentsMedia(
     if (tmp3) {
       if (null != components) {
         const _Array = Array;
-        const tmpResult = tmp(4785);
-        const flattenComponentsResult = tmp(4785).flattenComponents(components);
-        const arr = Array.from(tmp(4785).flattenComponents(components).values());
-        let found = Array.from(tmp(4785).flattenComponents(components).values())
+        const tmpResult = InteractionComponentUtils;
+        const flattenComponentsResult = InteractionComponentUtils.flattenComponents(components);
+        const arr = Array.from(InteractionComponentUtils.flattenComponents(components).values());
+        let found = Array.from(InteractionComponentUtils.flattenComponents(components).values())
           .flatMap((type) => {
             type = type.type;
             if (require("Server").ComponentType.THUMBNAIL === type) {
@@ -536,7 +546,7 @@ export const useForumPostComponentsMedia = function useForumPostComponentsMedia(
               if (spoiler == null) {
                 spoiler = false;
               }
-              let tmpResult = tmp(tmp2[13]);
+              let tmpResult = require("MediaTypes");
               let unfurledMediaItemType = tmpResult.getUnfurledMediaItemType(media);
               let tmp6 = null;
               if ("INVALID" !== unfurledMediaItemType) {
@@ -570,21 +580,24 @@ export const useForumPostComponentsMedia = function useForumPostComponentsMedia(
                   version = contentScanMetadata.version;
                 }
                 size.contentScanVersion = version;
-                tmpResult = tmp(tmp2[8]);
-                size.srcIsAnimated = tmpResult.hasFlag(media.flags, tmp(tmp2[13]).UnfurledMediaItemFlags.IS_ANIMATED);
+                tmpResult = require("FlagUtils");
+                size.srcIsAnimated = tmpResult.hasFlag(
+                  media.flags,
+                  require("MediaTypes").UnfurledMediaItemFlags.IS_ANIMATED,
+                );
                 size.isVideo = "VIDEO" === unfurledMediaItemType;
                 size.srcUnfurledMediaItem = media;
                 tmp6 = size;
               }
               return tmp6;
-            } else if (tmp(tmp2[12]).ComponentType.MEDIA_GALLERY === type) {
+            } else if (require("Server").ComponentType.MEDIA_GALLERY === type) {
               const items = type.items;
               return items.map((item) => {
                 ({ media, spoiler } = item);
                 if (spoiler == null) {
                   spoiler = false;
                 }
-                const unfurledMediaItemType = closure_1_0(closure_1_2[13]).getUnfurledMediaItemType(media);
+                const unfurledMediaItemType = closure_1_0(dependencyMap[13]).getUnfurledMediaItemType(media);
                 let tmp4 = null;
                 if ("INVALID" !== unfurledMediaItemType) {
                   const size = {
@@ -617,14 +630,14 @@ export const useForumPostComponentsMedia = function useForumPostComponentsMedia(
                     version = contentScanMetadata.version;
                   }
                   size.contentScanVersion = version;
-                  size.srcIsAnimated = tmp(tmp2[8]).hasFlag(
+                  size.srcIsAnimated = closure_1_0(dependencyMap[8]).hasFlag(
                     media.flags,
-                    tmp(tmp2[13]).UnfurledMediaItemFlags.IS_ANIMATED,
+                    closure_1_0(dependencyMap[13]).UnfurledMediaItemFlags.IS_ANIMATED,
                   );
                   size.isVideo = "VIDEO" === unfurledMediaItemType;
                   size.srcUnfurledMediaItem = media;
                   tmp4 = size;
-                  const tmpResult = tmp(tmp2[8]);
+                  const tmpResult = closure_1_0(dependencyMap[8]);
                 }
                 return tmp4;
               });
@@ -632,66 +645,20 @@ export const useForumPostComponentsMedia = function useForumPostComponentsMedia(
               return null;
             }
           })
-          .filter(tmp(1369).isNotNullish);
-        const flatMapResult = Array.from(tmp(4785).flattenComponents(components).values()).flatMap((type) => {
-          type = type.type;
-          if (require("Server").ComponentType.THUMBNAIL === type) {
-            ({ media, spoiler } = type);
-            if (spoiler == null) {
-              spoiler = false;
-            }
-            let tmpResult = tmp(tmp2[13]);
-            let unfurledMediaItemType = tmpResult.getUnfurledMediaItemType(media);
-            let tmp6 = null;
-            if ("INVALID" !== unfurledMediaItemType) {
-              let size = {
-                type: constants.COMPONENT,
-                src: null,
-                height: null,
-                width: null,
-                spoiler: null,
-                contentScanVersion: null,
-                flags: 0,
-                srcIsAnimated: null,
-                isVideo: null,
-                mediaIndex: 0,
-                srcUnfurledMediaItem: null,
-              };
-              ({ proxyUrl: obj3.src, height } = media);
-              if (height == null) {
-                height = 0;
-              }
-              size.height = height;
-              let num = media.width;
-              if (num == null) {
-                num = 0;
-              }
-              size.width = num;
-              size.spoiler = spoiler;
-              let contentScanMetadata = media.contentScanMetadata;
-              let version;
-              if (contentScanMetadata != null) {
-                version = contentScanMetadata.version;
-              }
-              size.contentScanVersion = version;
-              tmpResult = tmp(tmp2[8]);
-              size.srcIsAnimated = tmpResult.hasFlag(media.flags, tmp(tmp2[13]).UnfurledMediaItemFlags.IS_ANIMATED);
-              size.isVideo = "VIDEO" === unfurledMediaItemType;
-              size.srcUnfurledMediaItem = media;
-              tmp6 = size;
-            }
-            return tmp6;
-          } else if (tmp(tmp2[12]).ComponentType.MEDIA_GALLERY === type) {
-            const items = type.items;
-            return items.map((item) => {
-              ({ media, spoiler } = item);
+          .filter(GlobalUtils.isNotNullish);
+        const flatMapResult = Array.from(InteractionComponentUtils.flattenComponents(components).values()).flatMap(
+          (type) => {
+            type = type.type;
+            if (require("Server").ComponentType.THUMBNAIL === type) {
+              ({ media, spoiler } = type);
               if (spoiler == null) {
                 spoiler = false;
               }
-              const unfurledMediaItemType = closure_1_0(closure_1_2[13]).getUnfurledMediaItemType(media);
-              let tmp4 = null;
+              let tmpResult = require("MediaTypes");
+              let unfurledMediaItemType = tmpResult.getUnfurledMediaItemType(media);
+              let tmp6 = null;
               if ("INVALID" !== unfurledMediaItemType) {
-                const size = {
+                let size = {
                   type: constants.COMPONENT,
                   src: null,
                   height: null,
@@ -715,39 +682,85 @@ export const useForumPostComponentsMedia = function useForumPostComponentsMedia(
                 }
                 size.width = num;
                 size.spoiler = spoiler;
-                const contentScanMetadata = media.contentScanMetadata;
+                let contentScanMetadata = media.contentScanMetadata;
                 let version;
                 if (contentScanMetadata != null) {
                   version = contentScanMetadata.version;
                 }
                 size.contentScanVersion = version;
-                size.srcIsAnimated = tmp(tmp2[8]).hasFlag(
+                tmpResult = require("FlagUtils");
+                size.srcIsAnimated = tmpResult.hasFlag(
                   media.flags,
-                  tmp(tmp2[13]).UnfurledMediaItemFlags.IS_ANIMATED,
+                  require("MediaTypes").UnfurledMediaItemFlags.IS_ANIMATED,
                 );
                 size.isVideo = "VIDEO" === unfurledMediaItemType;
                 size.srcUnfurledMediaItem = media;
-                tmp4 = size;
-                const tmpResult = tmp(tmp2[8]);
+                tmp6 = size;
               }
-              return tmp4;
-            });
-          } else {
-            return null;
-          }
-        });
+              return tmp6;
+            } else if (require("Server").ComponentType.MEDIA_GALLERY === type) {
+              const items = type.items;
+              return items.map((item) => {
+                ({ media, spoiler } = item);
+                if (spoiler == null) {
+                  spoiler = false;
+                }
+                const unfurledMediaItemType = closure_1_0(dependencyMap[13]).getUnfurledMediaItemType(media);
+                let tmp4 = null;
+                if ("INVALID" !== unfurledMediaItemType) {
+                  const size = {
+                    type: constants.COMPONENT,
+                    src: null,
+                    height: null,
+                    width: null,
+                    spoiler: null,
+                    contentScanVersion: null,
+                    flags: 0,
+                    srcIsAnimated: null,
+                    isVideo: null,
+                    mediaIndex: 0,
+                    srcUnfurledMediaItem: null,
+                  };
+                  ({ proxyUrl: obj3.src, height } = media);
+                  if (height == null) {
+                    height = 0;
+                  }
+                  size.height = height;
+                  let num = media.width;
+                  if (num == null) {
+                    num = 0;
+                  }
+                  size.width = num;
+                  size.spoiler = spoiler;
+                  const contentScanMetadata = media.contentScanMetadata;
+                  let version;
+                  if (contentScanMetadata != null) {
+                    version = contentScanMetadata.version;
+                  }
+                  size.contentScanVersion = version;
+                  size.srcIsAnimated = closure_1_0(dependencyMap[8]).hasFlag(
+                    media.flags,
+                    closure_1_0(dependencyMap[13]).UnfurledMediaItemFlags.IS_ANIMATED,
+                  );
+                  size.isVideo = "VIDEO" === unfurledMediaItemType;
+                  size.srcUnfurledMediaItem = media;
+                  tmp4 = size;
+                  const tmpResult = closure_1_0(dependencyMap[8]);
+                }
+                return tmp4;
+              });
+            } else {
+              return null;
+            }
+          },
+        );
       }
       return found;
     }
     found = [];
   }
 };
-export const useForumPostMediaThumbnail = function useForumPostMediaThumbnail(
-  firstMessage,
-  stateFromStores1,
-  hasSpoilerEmbeds,
-) {
-  closure_0 = stateFromStores1;
+export const useForumPostMediaThumbnail = function useForumPostMediaThumbnail(firstMessage, stateFromStores1) {
   let flag = hasSpoilerEmbeds;
   if (hasSpoilerEmbeds === undefined) {
     flag = false;
@@ -756,11 +769,11 @@ export const useForumPostMediaThumbnail = function useForumPostMediaThumbnail(
   closure_1 = tmp;
   let items = [stateFromStores1, tmp];
   return noop.useMemo(() => {
-    if (null == closure_0) {
+    if (null == stateFromStores1) {
       return [];
     } else {
       let arr = closure_1;
-      if (obj.isMediaChannel()) {
+      if (stateFromStores1.isMediaChannel()) {
         const found = arr.find((isThumbnail) => isThumbnail.isThumbnail);
         if (null != found) {
           const items = [found];
@@ -771,7 +784,6 @@ export const useForumPostMediaThumbnail = function useForumPostMediaThumbnail(
         return arr;
       }
     }
-    obj = closure_0;
   }, items);
 };
 export { useForumPostMediaProperties };
@@ -786,10 +798,10 @@ export const useFindFirstMediaProperties = function useFindFirstMediaProperties(
     if (tmp5) {
       if (null != components) {
         const _Array = Array;
-        const tmpResult = tmp(4785);
-        const flattenComponentsResult = tmp(4785).flattenComponents(components);
-        const arr = Array.from(tmp(4785).flattenComponents(components).values());
-        items = Array.from(tmp(4785).flattenComponents(components).values())
+        const tmpResult = InteractionComponentUtils;
+        const flattenComponentsResult = InteractionComponentUtils.flattenComponents(components);
+        const arr = Array.from(InteractionComponentUtils.flattenComponents(components).values());
+        items = Array.from(InteractionComponentUtils.flattenComponents(components).values())
           .flatMap((type) => {
             type = type.type;
             if (require("Server").ComponentType.THUMBNAIL === type) {
@@ -797,7 +809,7 @@ export const useFindFirstMediaProperties = function useFindFirstMediaProperties(
               if (spoiler == null) {
                 spoiler = false;
               }
-              let tmpResult = tmp(tmp2[13]);
+              let tmpResult = require("MediaTypes");
               let unfurledMediaItemType = tmpResult.getUnfurledMediaItemType(media);
               let tmp6 = null;
               if ("INVALID" !== unfurledMediaItemType) {
@@ -831,21 +843,24 @@ export const useFindFirstMediaProperties = function useFindFirstMediaProperties(
                   version = contentScanMetadata.version;
                 }
                 size.contentScanVersion = version;
-                tmpResult = tmp(tmp2[8]);
-                size.srcIsAnimated = tmpResult.hasFlag(media.flags, tmp(tmp2[13]).UnfurledMediaItemFlags.IS_ANIMATED);
+                tmpResult = require("FlagUtils");
+                size.srcIsAnimated = tmpResult.hasFlag(
+                  media.flags,
+                  require("MediaTypes").UnfurledMediaItemFlags.IS_ANIMATED,
+                );
                 size.isVideo = "VIDEO" === unfurledMediaItemType;
                 size.srcUnfurledMediaItem = media;
                 tmp6 = size;
               }
               return tmp6;
-            } else if (tmp(tmp2[12]).ComponentType.MEDIA_GALLERY === type) {
+            } else if (require("Server").ComponentType.MEDIA_GALLERY === type) {
               const items = type.items;
               return items.map((item) => {
                 ({ media, spoiler } = item);
                 if (spoiler == null) {
                   spoiler = false;
                 }
-                const unfurledMediaItemType = closure_1_0(closure_1_2[13]).getUnfurledMediaItemType(media);
+                const unfurledMediaItemType = closure_1_0(dependencyMap[13]).getUnfurledMediaItemType(media);
                 let tmp4 = null;
                 if ("INVALID" !== unfurledMediaItemType) {
                   const size = {
@@ -878,14 +893,14 @@ export const useFindFirstMediaProperties = function useFindFirstMediaProperties(
                     version = contentScanMetadata.version;
                   }
                   size.contentScanVersion = version;
-                  size.srcIsAnimated = tmp(tmp2[8]).hasFlag(
+                  size.srcIsAnimated = closure_1_0(dependencyMap[8]).hasFlag(
                     media.flags,
-                    tmp(tmp2[13]).UnfurledMediaItemFlags.IS_ANIMATED,
+                    closure_1_0(dependencyMap[13]).UnfurledMediaItemFlags.IS_ANIMATED,
                   );
                   size.isVideo = "VIDEO" === unfurledMediaItemType;
                   size.srcUnfurledMediaItem = media;
                   tmp4 = size;
-                  const tmpResult = tmp(tmp2[8]);
+                  const tmpResult = closure_1_0(dependencyMap[8]);
                 }
                 return tmp4;
               });
@@ -893,66 +908,20 @@ export const useFindFirstMediaProperties = function useFindFirstMediaProperties(
               return null;
             }
           })
-          .filter(tmp(1369).isNotNullish);
-        const flatMapResult = Array.from(tmp(4785).flattenComponents(components).values()).flatMap((type) => {
-          type = type.type;
-          if (require("Server").ComponentType.THUMBNAIL === type) {
-            ({ media, spoiler } = type);
-            if (spoiler == null) {
-              spoiler = false;
-            }
-            let tmpResult = tmp(tmp2[13]);
-            let unfurledMediaItemType = tmpResult.getUnfurledMediaItemType(media);
-            let tmp6 = null;
-            if ("INVALID" !== unfurledMediaItemType) {
-              let size = {
-                type: constants.COMPONENT,
-                src: null,
-                height: null,
-                width: null,
-                spoiler: null,
-                contentScanVersion: null,
-                flags: 0,
-                srcIsAnimated: null,
-                isVideo: null,
-                mediaIndex: 0,
-                srcUnfurledMediaItem: null,
-              };
-              ({ proxyUrl: obj3.src, height } = media);
-              if (height == null) {
-                height = 0;
-              }
-              size.height = height;
-              let num = media.width;
-              if (num == null) {
-                num = 0;
-              }
-              size.width = num;
-              size.spoiler = spoiler;
-              let contentScanMetadata = media.contentScanMetadata;
-              let version;
-              if (contentScanMetadata != null) {
-                version = contentScanMetadata.version;
-              }
-              size.contentScanVersion = version;
-              tmpResult = tmp(tmp2[8]);
-              size.srcIsAnimated = tmpResult.hasFlag(media.flags, tmp(tmp2[13]).UnfurledMediaItemFlags.IS_ANIMATED);
-              size.isVideo = "VIDEO" === unfurledMediaItemType;
-              size.srcUnfurledMediaItem = media;
-              tmp6 = size;
-            }
-            return tmp6;
-          } else if (tmp(tmp2[12]).ComponentType.MEDIA_GALLERY === type) {
-            const items = type.items;
-            return items.map((item) => {
-              ({ media, spoiler } = item);
+          .filter(GlobalUtils.isNotNullish);
+        const flatMapResult = Array.from(InteractionComponentUtils.flattenComponents(components).values()).flatMap(
+          (type) => {
+            type = type.type;
+            if (require("Server").ComponentType.THUMBNAIL === type) {
+              ({ media, spoiler } = type);
               if (spoiler == null) {
                 spoiler = false;
               }
-              const unfurledMediaItemType = closure_1_0(closure_1_2[13]).getUnfurledMediaItemType(media);
-              let tmp4 = null;
+              let tmpResult = require("MediaTypes");
+              let unfurledMediaItemType = tmpResult.getUnfurledMediaItemType(media);
+              let tmp6 = null;
               if ("INVALID" !== unfurledMediaItemType) {
-                const size = {
+                let size = {
                   type: constants.COMPONENT,
                   src: null,
                   height: null,
@@ -976,27 +945,78 @@ export const useFindFirstMediaProperties = function useFindFirstMediaProperties(
                 }
                 size.width = num;
                 size.spoiler = spoiler;
-                const contentScanMetadata = media.contentScanMetadata;
+                let contentScanMetadata = media.contentScanMetadata;
                 let version;
                 if (contentScanMetadata != null) {
                   version = contentScanMetadata.version;
                 }
                 size.contentScanVersion = version;
-                size.srcIsAnimated = tmp(tmp2[8]).hasFlag(
+                tmpResult = require("FlagUtils");
+                size.srcIsAnimated = tmpResult.hasFlag(
                   media.flags,
-                  tmp(tmp2[13]).UnfurledMediaItemFlags.IS_ANIMATED,
+                  require("MediaTypes").UnfurledMediaItemFlags.IS_ANIMATED,
                 );
                 size.isVideo = "VIDEO" === unfurledMediaItemType;
                 size.srcUnfurledMediaItem = media;
-                tmp4 = size;
-                const tmpResult = tmp(tmp2[8]);
+                tmp6 = size;
               }
-              return tmp4;
-            });
-          } else {
-            return null;
-          }
-        });
+              return tmp6;
+            } else if (require("Server").ComponentType.MEDIA_GALLERY === type) {
+              const items = type.items;
+              return items.map((item) => {
+                ({ media, spoiler } = item);
+                if (spoiler == null) {
+                  spoiler = false;
+                }
+                const unfurledMediaItemType = closure_1_0(dependencyMap[13]).getUnfurledMediaItemType(media);
+                let tmp4 = null;
+                if ("INVALID" !== unfurledMediaItemType) {
+                  const size = {
+                    type: constants.COMPONENT,
+                    src: null,
+                    height: null,
+                    width: null,
+                    spoiler: null,
+                    contentScanVersion: null,
+                    flags: 0,
+                    srcIsAnimated: null,
+                    isVideo: null,
+                    mediaIndex: 0,
+                    srcUnfurledMediaItem: null,
+                  };
+                  ({ proxyUrl: obj3.src, height } = media);
+                  if (height == null) {
+                    height = 0;
+                  }
+                  size.height = height;
+                  let num = media.width;
+                  if (num == null) {
+                    num = 0;
+                  }
+                  size.width = num;
+                  size.spoiler = spoiler;
+                  const contentScanMetadata = media.contentScanMetadata;
+                  let version;
+                  if (contentScanMetadata != null) {
+                    version = contentScanMetadata.version;
+                  }
+                  size.contentScanVersion = version;
+                  size.srcIsAnimated = closure_1_0(dependencyMap[8]).hasFlag(
+                    media.flags,
+                    closure_1_0(dependencyMap[13]).UnfurledMediaItemFlags.IS_ANIMATED,
+                  );
+                  size.isVideo = "VIDEO" === unfurledMediaItemType;
+                  size.srcUnfurledMediaItem = media;
+                  tmp4 = size;
+                  const tmpResult = closure_1_0(dependencyMap[8]);
+                }
+                return tmp4;
+              });
+            } else {
+              return null;
+            }
+          },
+        );
       }
     }
     items = [];
@@ -1024,10 +1044,10 @@ export const useFirstMediaIsEmbed = function useFirstMediaIsEmbed(firstMessage, 
     if (tmp5) {
       if (null != components) {
         const _Array = Array;
-        let tmpResult = tmp(4785);
-        const flattenComponentsResult = tmp(4785).flattenComponents(components);
-        const arr = Array.from(tmp(4785).flattenComponents(components).values());
-        items = Array.from(tmp(4785).flattenComponents(components).values())
+        let tmpResult = InteractionComponentUtils;
+        const flattenComponentsResult = InteractionComponentUtils.flattenComponents(components);
+        const arr = Array.from(InteractionComponentUtils.flattenComponents(components).values());
+        items = Array.from(InteractionComponentUtils.flattenComponents(components).values())
           .flatMap((type) => {
             type = type.type;
             if (require("Server").ComponentType.THUMBNAIL === type) {
@@ -1035,7 +1055,7 @@ export const useFirstMediaIsEmbed = function useFirstMediaIsEmbed(firstMessage, 
               if (spoiler == null) {
                 spoiler = false;
               }
-              let tmpResult = tmp(tmp2[13]);
+              let tmpResult = require("MediaTypes");
               let unfurledMediaItemType = tmpResult.getUnfurledMediaItemType(media);
               let tmp6 = null;
               if ("INVALID" !== unfurledMediaItemType) {
@@ -1069,21 +1089,24 @@ export const useFirstMediaIsEmbed = function useFirstMediaIsEmbed(firstMessage, 
                   version = contentScanMetadata.version;
                 }
                 size.contentScanVersion = version;
-                tmpResult = tmp(tmp2[8]);
-                size.srcIsAnimated = tmpResult.hasFlag(media.flags, tmp(tmp2[13]).UnfurledMediaItemFlags.IS_ANIMATED);
+                tmpResult = require("FlagUtils");
+                size.srcIsAnimated = tmpResult.hasFlag(
+                  media.flags,
+                  require("MediaTypes").UnfurledMediaItemFlags.IS_ANIMATED,
+                );
                 size.isVideo = "VIDEO" === unfurledMediaItemType;
                 size.srcUnfurledMediaItem = media;
                 tmp6 = size;
               }
               return tmp6;
-            } else if (tmp(tmp2[12]).ComponentType.MEDIA_GALLERY === type) {
+            } else if (require("Server").ComponentType.MEDIA_GALLERY === type) {
               const items = type.items;
               return items.map((item) => {
                 ({ media, spoiler } = item);
                 if (spoiler == null) {
                   spoiler = false;
                 }
-                const unfurledMediaItemType = closure_1_0(closure_1_2[13]).getUnfurledMediaItemType(media);
+                const unfurledMediaItemType = closure_1_0(dependencyMap[13]).getUnfurledMediaItemType(media);
                 let tmp4 = null;
                 if ("INVALID" !== unfurledMediaItemType) {
                   const size = {
@@ -1116,14 +1139,14 @@ export const useFirstMediaIsEmbed = function useFirstMediaIsEmbed(firstMessage, 
                     version = contentScanMetadata.version;
                   }
                   size.contentScanVersion = version;
-                  size.srcIsAnimated = tmp(tmp2[8]).hasFlag(
+                  size.srcIsAnimated = closure_1_0(dependencyMap[8]).hasFlag(
                     media.flags,
-                    tmp(tmp2[13]).UnfurledMediaItemFlags.IS_ANIMATED,
+                    closure_1_0(dependencyMap[13]).UnfurledMediaItemFlags.IS_ANIMATED,
                   );
                   size.isVideo = "VIDEO" === unfurledMediaItemType;
                   size.srcUnfurledMediaItem = media;
                   tmp4 = size;
-                  const tmpResult = tmp(tmp2[8]);
+                  const tmpResult = closure_1_0(dependencyMap[8]);
                 }
                 return tmp4;
               });
@@ -1131,66 +1154,20 @@ export const useFirstMediaIsEmbed = function useFirstMediaIsEmbed(firstMessage, 
               return null;
             }
           })
-          .filter(tmp(1369).isNotNullish);
-        const flatMapResult = Array.from(tmp(4785).flattenComponents(components).values()).flatMap((type) => {
-          type = type.type;
-          if (require("Server").ComponentType.THUMBNAIL === type) {
-            ({ media, spoiler } = type);
-            if (spoiler == null) {
-              spoiler = false;
-            }
-            let tmpResult = tmp(tmp2[13]);
-            let unfurledMediaItemType = tmpResult.getUnfurledMediaItemType(media);
-            let tmp6 = null;
-            if ("INVALID" !== unfurledMediaItemType) {
-              let size = {
-                type: constants.COMPONENT,
-                src: null,
-                height: null,
-                width: null,
-                spoiler: null,
-                contentScanVersion: null,
-                flags: 0,
-                srcIsAnimated: null,
-                isVideo: null,
-                mediaIndex: 0,
-                srcUnfurledMediaItem: null,
-              };
-              ({ proxyUrl: obj3.src, height } = media);
-              if (height == null) {
-                height = 0;
-              }
-              size.height = height;
-              let num = media.width;
-              if (num == null) {
-                num = 0;
-              }
-              size.width = num;
-              size.spoiler = spoiler;
-              let contentScanMetadata = media.contentScanMetadata;
-              let version;
-              if (contentScanMetadata != null) {
-                version = contentScanMetadata.version;
-              }
-              size.contentScanVersion = version;
-              tmpResult = tmp(tmp2[8]);
-              size.srcIsAnimated = tmpResult.hasFlag(media.flags, tmp(tmp2[13]).UnfurledMediaItemFlags.IS_ANIMATED);
-              size.isVideo = "VIDEO" === unfurledMediaItemType;
-              size.srcUnfurledMediaItem = media;
-              tmp6 = size;
-            }
-            return tmp6;
-          } else if (tmp(tmp2[12]).ComponentType.MEDIA_GALLERY === type) {
-            const items = type.items;
-            return items.map((item) => {
-              ({ media, spoiler } = item);
+          .filter(GlobalUtils.isNotNullish);
+        const flatMapResult = Array.from(InteractionComponentUtils.flattenComponents(components).values()).flatMap(
+          (type) => {
+            type = type.type;
+            if (require("Server").ComponentType.THUMBNAIL === type) {
+              ({ media, spoiler } = type);
               if (spoiler == null) {
                 spoiler = false;
               }
-              const unfurledMediaItemType = closure_1_0(closure_1_2[13]).getUnfurledMediaItemType(media);
-              let tmp4 = null;
+              let tmpResult = require("MediaTypes");
+              let unfurledMediaItemType = tmpResult.getUnfurledMediaItemType(media);
+              let tmp6 = null;
               if ("INVALID" !== unfurledMediaItemType) {
-                const size = {
+                let size = {
                   type: constants.COMPONENT,
                   src: null,
                   height: null,
@@ -1214,27 +1191,78 @@ export const useFirstMediaIsEmbed = function useFirstMediaIsEmbed(firstMessage, 
                 }
                 size.width = num;
                 size.spoiler = spoiler;
-                const contentScanMetadata = media.contentScanMetadata;
+                let contentScanMetadata = media.contentScanMetadata;
                 let version;
                 if (contentScanMetadata != null) {
                   version = contentScanMetadata.version;
                 }
                 size.contentScanVersion = version;
-                size.srcIsAnimated = tmp(tmp2[8]).hasFlag(
+                tmpResult = require("FlagUtils");
+                size.srcIsAnimated = tmpResult.hasFlag(
                   media.flags,
-                  tmp(tmp2[13]).UnfurledMediaItemFlags.IS_ANIMATED,
+                  require("MediaTypes").UnfurledMediaItemFlags.IS_ANIMATED,
                 );
                 size.isVideo = "VIDEO" === unfurledMediaItemType;
                 size.srcUnfurledMediaItem = media;
-                tmp4 = size;
-                const tmpResult = tmp(tmp2[8]);
+                tmp6 = size;
               }
-              return tmp4;
-            });
-          } else {
-            return null;
-          }
-        });
+              return tmp6;
+            } else if (require("Server").ComponentType.MEDIA_GALLERY === type) {
+              const items = type.items;
+              return items.map((item) => {
+                ({ media, spoiler } = item);
+                if (spoiler == null) {
+                  spoiler = false;
+                }
+                const unfurledMediaItemType = closure_1_0(dependencyMap[13]).getUnfurledMediaItemType(media);
+                let tmp4 = null;
+                if ("INVALID" !== unfurledMediaItemType) {
+                  const size = {
+                    type: constants.COMPONENT,
+                    src: null,
+                    height: null,
+                    width: null,
+                    spoiler: null,
+                    contentScanVersion: null,
+                    flags: 0,
+                    srcIsAnimated: null,
+                    isVideo: null,
+                    mediaIndex: 0,
+                    srcUnfurledMediaItem: null,
+                  };
+                  ({ proxyUrl: obj3.src, height } = media);
+                  if (height == null) {
+                    height = 0;
+                  }
+                  size.height = height;
+                  let num = media.width;
+                  if (num == null) {
+                    num = 0;
+                  }
+                  size.width = num;
+                  size.spoiler = spoiler;
+                  const contentScanMetadata = media.contentScanMetadata;
+                  let version;
+                  if (contentScanMetadata != null) {
+                    version = contentScanMetadata.version;
+                  }
+                  size.contentScanVersion = version;
+                  size.srcIsAnimated = closure_1_0(dependencyMap[8]).hasFlag(
+                    media.flags,
+                    closure_1_0(dependencyMap[13]).UnfurledMediaItemFlags.IS_ANIMATED,
+                  );
+                  size.isVideo = "VIDEO" === unfurledMediaItemType;
+                  size.srcUnfurledMediaItem = media;
+                  tmp4 = size;
+                  const tmpResult = closure_1_0(dependencyMap[8]);
+                }
+                return tmp4;
+              });
+            } else {
+              return null;
+            }
+          },
+        );
       }
     }
     items = [];

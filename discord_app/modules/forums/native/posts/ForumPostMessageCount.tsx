@@ -1,6 +1,7 @@
 // discord_app/modules/forums/native/posts/ForumPostMessageCount.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
+import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import ChatIcon from "../../../../design/components/Icon/native/redesign/generated/ChatIcon.tsx";
 import ForumHooks from "../../ForumHooks.tsx";
 import AnimatedCounterDefault from "AnimatedCounter.tsx";
@@ -47,7 +48,7 @@ export default function ForumPostMessageCount(hasUnreads) {
   obj = { style: null, accessibilityLabel: null, children: null };
   const items = [tmp.container, containerStyle];
   obj.style = items;
-  const intl = tmp2(1114).intl;
+  const intl = util.intl;
   obj.accessibilityLabel = intl.formatToPlainString(util.t["8M0DrB"], { count: messageCountText });
   obj = { size: "xs", style: hasUnreads ? tmp.iconUnread : tmp.iconRead, color: null };
   let str2 = "icon-muted";
@@ -58,20 +59,20 @@ export default function ForumPostMessageCount(hasUnreads) {
   const items1 = [React4(ChatIcon.ChatIcon, obj), ,];
   if (isMaxMessageCount) {
     const obj1 = { variant: "text-sm/semibold", color: str, children: messageCountText };
-    let tmp7Result = tmp7(tmp2(4556).Text, obj1);
+    let tmp7Result = React4(Text_Text.Text, obj1);
   } else {
     const obj2 = { count: messageCount, textVariant: "text-sm/semibold", textColor: str, animate: false };
-    tmp7Result = tmp7(AnimatedCounterDefault, obj2);
+    tmp7Result = React4(AnimatedCounterDefault, obj2);
   }
   items1[1] = tmp7Result;
   let tmp5Result = null != unreadCount;
   if (tmp5Result) {
     const obj3 = { variant: "text-sm/semibold", color: "text-brand", style: tmp.messageUnreadCount, children: null };
-    const intl2 = tmp2(1114).intl;
+    const intl2 = util.intl;
     const obj4 = { count: unreadCount };
-    const items2 = ["(", intl2.format(tmp2(1114).t.z3PEth, obj4), ")"];
+    const items2 = ["(", intl2.format(util.t.z3PEth, obj4), ")"];
     obj3.children = items2;
-    tmp5Result = tmp5(tmp2(4556).Text, obj3);
+    tmp5Result = hasOwnProperty(Text_Text.Text, obj3);
   }
   items1[2] = tmp5Result;
   obj.children = items1;

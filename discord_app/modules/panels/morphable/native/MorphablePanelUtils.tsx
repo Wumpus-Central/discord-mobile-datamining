@@ -92,15 +92,15 @@ function calculatePIPPositionFromVelocity(arg0) {
         const _Math8 = Math;
         const _Math9 = Math;
         rect.left = Math.min(Math.max(diff4, 0), diff1);
-        if (typeof tmp21 === "function") {
+        if (typeof clamp === "function") {
           const _Math10 = Math;
           const _Math11 = Math;
           rect.right = Math.min(Math.max(tmp22, 0), diff1);
-          if (typeof tmp21 === "function") {
+          if (typeof clamp === "function") {
             const _Math12 = Math;
             const _Math13 = Math;
             rect.top = Math.min(Math.max(diff5, 0), diff3);
-            if (typeof tmp21 === "function") {
+            if (typeof clamp === "function") {
               const _Math14 = Math;
               const _Math15 = Math;
               rect.bottom = Math.min(Math.max(tmp23, 0), diff3);

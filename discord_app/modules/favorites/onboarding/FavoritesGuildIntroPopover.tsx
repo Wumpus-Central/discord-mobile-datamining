@@ -67,6 +67,7 @@ export default noop.memo(function FavoritesGuildIntroPopover() {
     }
   }
   items1 = [];
+  tmp6 = DismissibleContentShownStateStore((postConnectionOpen) => postConnectionOpen.postConnectionOpen);
 });
 export function hasOfferedFavoritesGuildOnboarding() {
   return c11;

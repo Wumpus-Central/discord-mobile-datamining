@@ -10,7 +10,7 @@ import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js
 import AuthenticationStore from "../../../stores/AuthenticationStore.tsx";
 
 require = fn;
-let closure_10 = async function _executeHeadlessTask(name, arg1, arg2) {
+let closure_10 = async function _executeHeadlessTask() {
   closure_1 = arg1;
   closure_2 = arg2;
   c11 = 0;
@@ -62,7 +62,6 @@ let closure_10 = async function _executeHeadlessTask(name, arg1, arg2) {
               const obj2 = { name };
               obj1.data = obj2;
               SentryUtilsDefault.addBreadcrumb(obj1);
-              const tmp251 = name;
               const result = RequestGatewaySocketAll.recordStartHeadlessTask();
               const result1 = fast_connect.closeFastConnectSocket();
               closure_136_5 = false;
@@ -74,7 +73,7 @@ let closure_10 = async function _executeHeadlessTask(name, arg1, arg2) {
                 tmp256.log("Pausing socket in headless task because app state is not active");
                 PauseGatewaySocketAll.setIsPaused(true);
               }
-              let obj3 = { client_app_state: AppState.currentState, name: tmp251 };
+              let obj3 = { client_app_state: AppState.currentState, name };
               AnalyticsUtilsDefault.track(constants.HEADLESS_TASK_INVOKED, obj3);
               c11 = 3;
               c12 = 1;

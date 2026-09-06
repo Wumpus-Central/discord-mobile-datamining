@@ -5,6 +5,8 @@ import useAlertStore from "../../../../../design/components/AlertModal/native/us
 import StreamPermissionUtils from "../../../../go_live/utils/StreamPermissionUtils.tsx";
 import CallsUtils from "../../../../voice_calls/native/CallsUtils.tsx";
 import openIgnoreThermalStateAlert from "../../../../activities/native/openIgnoreThermalStateAlert.tsx";
+import VideoIcon from "../../../../../design/components/Icon/native/redesign/generated/VideoIcon.tsx";
+import VideoSlashIcon2 from "../../../../../design/components/Icon/native/redesign/generated/VideoSlashIcon.tsx";
 import VoicePanelVideoGuardErrorAlert from "../../alerts/VoicePanelVideoGuardErrorAlert.tsx";
 import VoicePanelNoVideoPermissionsAlert from "../../alerts/VoicePanelNoVideoPermissionsAlert.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
@@ -25,9 +27,9 @@ function VideoButtonRive(arg0) {
   }
   obj.defaultViewModelInstance = str;
   if (isVideoEnabled) {
-    let VideoSlashIcon = tmp3(10110).VideoIcon;
+    let VideoSlashIcon = VideoIcon.VideoIcon;
   } else {
-    VideoSlashIcon = tmp3(13046).VideoSlashIcon;
+    VideoSlashIcon = VideoSlashIcon2.VideoSlashIcon;
   }
   obj.fallback = <VideoSlashIcon color={color} />;
   obj.children = jsx(native.CameraRive, {
@@ -118,7 +120,7 @@ export default function VideoButton(arg0) {
     element.style = stateFromStores1 ? voicePanelButtonStyles.iconBgSelected : voicePanelButtonStyles.iconBg;
     if (!videoEnabled) {
       obj = { color: voicePanelButtonStyles.iconFill.color };
-      memo = tmp12(tmp3(tmp2[21]).VideoDenyIcon, obj);
+      memo = jsx(tmp3(tmp2[21]).VideoDenyIcon, { color: voicePanelButtonStyles.iconFill.color });
     }
     element.children = memo;
     return jsx(tmp(tmp2[20]), {
@@ -130,4 +132,5 @@ export default function VideoButton(arg0) {
       children: null,
     });
   }
+  let obj5 = channelId(stateFromStores1[11]);
 }

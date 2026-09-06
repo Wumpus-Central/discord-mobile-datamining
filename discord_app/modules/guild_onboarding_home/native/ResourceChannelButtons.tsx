@@ -56,13 +56,13 @@ export default function ResourceChannelButtons(channel) {
         return closure_4(first.channelId);
       };
       obj.children = closure_6(tmp(tmp2[9]).Button, obj1);
-      tmp11 = closure_6(tmp10, obj);
+      tmp11 = closure_6(View, obj);
     }
     const items1 = [tmp11, ,];
     let tmp14 = null != first && null != tmp7;
     if (tmp14) {
       const obj3 = { style: tmp4.spacer };
-      tmp14 = closure_6(tmp10, obj3);
+      tmp14 = closure_6(View, obj3);
     }
     items1[1] = tmp14;
     let tmp16 = null != tmp7;
@@ -75,11 +75,11 @@ export default function ResourceChannelButtons(channel) {
         return closure_4(channelId.channelId);
       };
       obj4.children = closure_6(tmp(tmp2[9]).Button, obj5);
-      tmp16 = closure_6(tmp10, obj4);
+      tmp16 = closure_6(View, obj4);
     }
     items1[2] = tmp16;
     obj.children = items1;
-    let tmp9Result = closure_7(tmp10, obj);
+    let tmp9Result = closure_7(View, obj);
   } else {
     tmp9Result = null;
   }

@@ -49,7 +49,7 @@ export default noop.memo(function GIFPickerCategoriesPage(columns) {
     GIF_PICKER_ITEM_ESIMTATED_HEIGHT = columns(onSelectCategory[5]).GIF_PICKER_ITEM_ESIMTATED_HEIGHT / 2;
     tmp3 = columns;
   }
-  let tmp6 = closure_7(GIF_PICKER_ITEM_ESIMTATED_HEIGHT);
+  const tmp6 = closure_7(GIF_PICKER_ITEM_ESIMTATED_HEIGHT);
   closure_4 = tmp6;
   let tmp3Result = tmp3(tmp2[8]);
   let items = [trendingCategories];
@@ -88,24 +88,19 @@ export default noop.memo(function GIFPickerCategoriesPage(columns) {
   const items3 = [columns, data, onSelectCategory, tmp6];
   const callback = GIF_PICKER_ITEM_ESIMTATED_HEIGHT.useCallback((arg0, arg1) => {
     const items = [];
-    let num = 0;
-    if (0 < columns) {
-      do {
-        let tmp2 = tmp[num];
-        if (null != tmp2) {
-          let obj = { item: tmp2, onSelectCategory: null };
-          obj.onSelectCategory = onSelectCategory;
-          let tmp7 = jsx(GIFPickerCategoryViewDefault, { item: tmp2, onSelectCategory: null }, num);
-        } else {
-          obj = { style: null };
-          let items1 = [,];
-          ({ item: arr2[0], placeholder: arr2[1] } = closure_4);
-          obj.style = items1;
-          tmp7 = <View key={num} style={null} />;
-        }
-        let arr = items.push(tmp7);
-        num = num + 1;
-      } while (num < columns);
+    for (let num = 0; num < columns; num = num + 1) {
+      let tmp2 = tmp[num];
+      if (null != tmp2) {
+        let obj = { item: tmp2, onSelectCategory };
+        let tmp7 = jsx(GIFPickerCategoryViewDefault, { item: tmp2, onSelectCategory }, num);
+      } else {
+        obj = { style: null };
+        let items1 = [,];
+        ({ item: arr2[0], placeholder: arr2[1] } = closure_4);
+        obj.style = items1;
+        tmp7 = <View key={num} style={null} />;
+      }
+      let arr = items.push(tmp7);
     }
     obj = { style: closure_4.item, collapsable: false, children: items };
     return (

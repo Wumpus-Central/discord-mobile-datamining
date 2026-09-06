@@ -104,8 +104,8 @@ export const useChangeSpendingLimitFormState = function useChangeSpendingLimitFo
     save: null,
   };
   let tmp23 = null != stateFromStores1;
-  const callback1 = obj3.useCallback(
-    formatted(function* (arg0, value) {
+  const callback1 = noop.useCallback(
+    formatted(function* () {
       if (c4 === 2) {
         c4 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");

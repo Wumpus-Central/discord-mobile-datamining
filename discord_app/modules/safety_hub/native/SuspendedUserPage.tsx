@@ -1,10 +1,13 @@
 // discord_app/modules/safety_hub/native/SuspendedUserPage.tsx
 import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import util from "../../../intl/index.native.tsx";
 import LinkingDefault from "../../../lib/native/Linking.tsx";
+import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import AuthenticationActionCreatorsDefault from "../../../actions/AuthenticationActionCreators.tsx";
 import _modDef6992 from "../../../../_runtime/metro/06992__.js";
 import common_SafeAreaView from "../../../components_native/common/SafeAreaView.tsx";
+import IconButton from "../../../design/components/Button/native/IconButton.native.tsx";
 import SafetyHubPageDefault from "SafetyHubPage.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import SafetyHubStore from "../SafetyHubStore.tsx";
@@ -51,13 +54,13 @@ export default function SuspendedUserSafetyHubPage() {
   if (tmp6Result) {
     obj = { style: tmp.header, children: null };
     const obj1 = { variant: "destructive", accessibilityLabel: null, onPress: null, icon: null };
-    const intl = tmp2(1114).intl;
-    obj1.accessibilityLabel = intl.string(tmp2(1114).t.cpT0Cq);
+    const intl = util.intl;
+    obj1.accessibilityLabel = intl.string(util.t.cpT0Cq);
     obj1.onPress = function onPress() {
       AuthenticationActionCreatorsDefault.closeSuspendedUser();
     };
     obj1.icon = _modDef6992;
-    const items1 = [tmp5(tmp2(8097).IconButton, obj1)];
+    const items1 = [React5(IconButton.IconButton, obj1)];
     const obj2 = {
       style: tmp.text,
       onPress() {
@@ -67,21 +70,21 @@ export default function SuspendedUserSafetyHubPage() {
       color: "control-critical-primary-text-default",
       children: null,
     };
-    const intl2 = tmp2(1114).intl;
-    const items2 = [intl2.string(tmp2(1114).t["MG+Bzb"]), " "];
+    const intl2 = util.intl;
+    const items2 = [intl2.string(util.t["MG+Bzb"]), " "];
     const obj3 = {
       style: tmp.link,
       variant: "text-xs/medium",
       color: "control-critical-primary-text-default",
       children: null,
     };
-    const intl3 = tmp2(1114).intl;
-    obj3.children = intl3.string(tmp2(1114).t["9JceHN"]);
-    items2[2] = tmp5(tmp2(4556).Text, obj3);
+    const intl3 = util.intl;
+    obj3.children = intl3.string(util.t["9JceHN"]);
+    items2[2] = React5(Text_Text.Text, obj3);
     obj2.children = items2;
-    items1[1] = tmp6(tmp2(4556).Text, obj2);
+    items1[1] = React6(Text_Text.Text, obj2);
     obj.children = items1;
-    tmp6Result = tmp6(tmp7, obj);
+    tmp6Result = React6(View, obj);
   }
   const rect = { top: true, right: true, left: true, children: null };
   const items3 = [tmp6Result, React5(SafetyHubPageDefault, { visible: true })];

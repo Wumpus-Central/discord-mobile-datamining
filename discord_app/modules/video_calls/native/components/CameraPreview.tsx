@@ -34,7 +34,7 @@ function CameraPreview(arg0) {
   reveal = noop.useContext(participantScreenIsFocused(9474).RevealContext).reveal;
   let tmp8 = stateFromStores(9496)();
   noop = tmp8;
-  let tmp9 = closure_9();
+  const tmp9 = closure_9();
   closure_5 = tmp9;
   const tmp10 = stateFromStores(9475)(channel.id);
   closure_6 = tmp10;
@@ -90,16 +90,15 @@ function CameraPreview(arg0) {
     let sum1 = bottom + value2;
     if (participantScreenIsFocused) {
       if (reveal) {
-        sum = NavigatorConstants.NAV_BAR_HEIGHT + tmp + tmp2;
+        sum = NavigatorConstants.NAV_BAR_HEIGHT + tmp + value2;
       }
-      if (tmp9) {
-        sum1 = closure_4 + tmp4 + tmp2;
+      if (reveal) {
+        sum1 = closure_4 + bottom + value2;
       }
       let sum2 = sum1;
       let tmp8 = sum;
-      tmp9 = reveal;
     } else {
-      sum2 = closure_5 + tmp4 + tmp2;
+      sum2 = closure_5 + bottom + value2;
       tmp8 = sum;
     }
     closure_12(tmp8);
@@ -111,7 +110,7 @@ function CameraPreview(arg0) {
     return obj;
   }
   __closure = {
-    withTiming: tmp(4561).withTiming,
+    withTiming: participantScreenIsFocused(4561).withTiming,
     marginTopState: marginTop,
     TIMING_CONFIG: __closure,
     marginBottomState: first1,
@@ -128,16 +127,16 @@ function CameraPreview(arg0) {
     function handleHidePip() {
       const result = participantScreenIsFocused(9584).setPipEnabledWhileFocusedOnActivityOrStream(false);
     }
-    const intl2 = tmp(1114).intl;
-    obj1.text = intl2.string(tmp(1114).t.L3I0Jr);
+    const intl2 = participantScreenIsFocused(1114).intl;
+    obj1.text = intl2.string(participantScreenIsFocused(1114).t.L3I0Jr);
     obj1.onClick = handleHidePip;
     const items4 = [obj1];
     let items6 = items4;
   } else if (tmp28.HANDLE_THERMAL_EVENT === tmp27) {
     obj2 = { text: null, onClick: null };
-    const intl = tmp(1114).intl;
-    obj2.text = intl.string(tmp(1114).t["1fRDnT"]);
-    obj2.onClick = tmp(9585).openIgnoreThermalStateAlert;
+    const intl = participantScreenIsFocused(1114).intl;
+    obj2.text = intl.string(participantScreenIsFocused(1114).t["1fRDnT"]);
+    obj2.onClick = participantScreenIsFocused(9585).openIgnoreThermalStateAlert;
     const items5 = [obj2];
     items6 = items5;
   } else {
@@ -150,7 +149,7 @@ function CameraPreview(arg0) {
     obj3 = { gesture: tmp29, children: null };
     const obj4 = { style: closure_5.absoluteFill };
     obj3.children = closure_21(closure_6, obj4);
-    tmp32 = closure_21(tmp(6655).GestureDetector, obj3);
+    tmp32 = closure_21(participantScreenIsFocused(6655).GestureDetector, obj3);
   }
   const items7 = [tmp32];
   obj5 = { style: closure_5.absoluteFill, pointerEvents: "box-none", children: null };
@@ -317,17 +316,17 @@ export default function CameraPreviewContainer(channel) {
       }
     }
     if (flag) {
-      let tmp6 = null != closure_2;
+      let tmp6 = null != id;
       if (tmp6) {
         let id1;
-        if (tmp5 != null) {
-          id1 = tmp5.id;
+        if (id != null) {
+          id1 = id.id;
         }
         tmp6 = id1 !== id;
       }
-      if (null == closure_2) {
-        if (!obj2.isGuildStageVoice()) {
-          const participants = ChannelRTCStore.getParticipants(obj2.id);
+      if (null == id) {
+        if (!channel.isGuildStageVoice()) {
+          const participants = ChannelRTCStore.getParticipants(channel.id);
           let found = participants;
           if (participants.length <= 4) {
             found = participants.filter((user) => {
@@ -358,15 +357,15 @@ export default function CameraPreviewContainer(channel) {
     const tmp2 = closure_2_20(user);
     let type;
     if (user != null) {
-      type = tmp.type;
+      type = user.type;
     }
     if (tmp2) {
       let streamId;
-      if (tmp != null) {
-        streamId = tmp.streamId;
+      if (user != null) {
+        streamId = user.streamId;
       }
       if (null != streamId) {
-        let found = tmp;
+        let found = user;
       }
       let streamId1;
       if (found != null) {
@@ -380,11 +379,11 @@ export default function CameraPreviewContainer(channel) {
     }
     if (tmp2) {
       id = undefined;
-      if (tmp != null) {
-        id = tmp.user.id;
+      if (user != null) {
+        id = user.user.id;
       }
       if (id !== AuthenticationStore.getId()) {
-        const participant = ChannelRTCStore.getParticipant(channel.id, tmp.user.id);
+        const participant = ChannelRTCStore.getParticipant(channel.id, user.user.id);
         let localVideoDisabled;
         if (participant != null) {
           localVideoDisabled = participant.localVideoDisabled;
@@ -395,10 +394,11 @@ export default function CameraPreviewContainer(channel) {
         }
       }
     }
-    if (type === constants2.USER) {
+    if (tmp4) {
       const streamParticipants = ChannelRTCStore.getStreamParticipants(channel.id);
       found = streamParticipants.find((user) => user.user.id === user.user.id);
     }
+    tmp4 = type === constants2.USER;
   });
   const tmp4Result2 = channel(504);
   const items4 = [ChannelRTCStore];
@@ -419,7 +419,7 @@ export default function CameraPreviewContainer(channel) {
   let tmp20 = null;
   if (null != tmp19) {
     tmp20 = null;
-    if (tmp19.user.id !== obj2.getId()) {
+    if (tmp19.user.id !== AuthenticationStore.getId()) {
       if (!flag) {
         let id2;
         if (stateFromStores5 != null) {
@@ -471,4 +471,5 @@ export default function CameraPreviewContainer(channel) {
   } else {
     tmp25 = null;
   }
+  const tmp4Result5 = channel(504);
 }

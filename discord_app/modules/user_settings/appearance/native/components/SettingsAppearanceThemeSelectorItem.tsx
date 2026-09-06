@@ -1,6 +1,7 @@
 // discord_app/modules/user_settings/appearance/native/components/SettingsAppearanceThemeSelectorItem.tsx
 import useStateFromStores from "../../../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import util from "../../../../../intl/index.native.tsx";
 import native from "../../../../../design/void/native.tsx";
 import ClientThemesTypes from "../../../../client_themes/ClientThemesTypes.tsx";
 import useToken from "../../../../../design/tokens/native/useToken.tsx";
@@ -38,7 +39,7 @@ function GradientThemeBackground(arg0) {
   const items1 = [timestampProducer(ThemedGradientDefault, obj1)];
   if (isThemeLocked) {
     const obj3 = { source: _modDef15274, style: tmp4.lock };
-    isThemeLocked = tmp7(native.Icon, obj3);
+    isThemeLocked = timestampProducer(native.Icon, obj3);
   }
   items1[1] = isThemeLocked;
   obj.children = items1;
@@ -54,9 +55,9 @@ function DefaultThemeBackground(item) {
   } else {
     theme = item.theme;
   }
-  let tmpResult = tmp(4262);
+  let tmpResult = useToken;
   const token = tmpResult.useToken(nativeDefault.colors.BACKGROUND_BASE_LOWER, theme);
-  tmpResult = tmp(4262);
+  tmpResult = useToken;
   const token1 = tmpResult.useToken(nativeDefault.colors.BORDER_STRONG, theme);
   obj = { style: null, children: null };
   const size = {
@@ -74,8 +75,8 @@ function DefaultThemeBackground(item) {
   if ("system" === item.theme) {
     obj = { style: { alignSelf: "center", justifyContent: "center", flex: 1 }, children: null };
     const obj1 = { fill: token2 };
-    obj.children = tmp9(SynchronizeIconNativeDefault, obj1);
-    tmp9Result = tmp9(tmp10, obj);
+    obj.children = timestampProducer(SynchronizeIconNativeDefault, obj1);
+    tmp9Result = timestampProducer(View, obj);
   }
   obj.children = tmp9Result;
   return timestampProducer(View, obj);
@@ -101,7 +102,7 @@ function CustomThemeBackground(arg0) {
   const items1 = [timestampProducer(ThemedGradient.CustomThemedGradient, obj1)];
   if (isThemeLocked) {
     const obj3 = { source: _modDef15274, style: tmp4.lock };
-    isThemeLocked = tmp7(tmp(1178).Icon, obj3);
+    isThemeLocked = timestampProducer(native.Icon, obj3);
   }
   items1[1] = isThemeLocked;
   obj.children = items1;
@@ -143,9 +144,9 @@ let closure_9 = createStyles.createStyles((arg0) => {
   const internal = nativeDefault.internal;
   const resolveSemanticColor = internal.resolveSemanticColor;
   if (arg0) {
-    let semanticColor = resolveSemanticColor(tmp3.DARKER, tmp(576).colors.INTERACTIVE_TEXT_DEFAULT);
+    let semanticColor = resolveSemanticColor(ThemeTypes.DARKER, nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT);
   } else {
-    semanticColor = resolveSemanticColor(tmp3.LIGHT, tmp(576).colors.INTERACTIVE_TEXT_DEFAULT);
+    semanticColor = resolveSemanticColor(ThemeTypes.LIGHT, nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT);
   }
   obj.lock = { position: "absolute", alignSelf: "center", opacity: 0.6, tintColor: semanticColor };
   return obj;
@@ -169,7 +170,7 @@ export default function ThemeSelectorItem(onPress) {
     let obj = { item: themePreset };
     let tmp8 = timestampProducer(DefaultThemeBackground, obj);
     let tmp9 = timestampProducer;
-  } else if (themePreset.type === tmp4(1231).ClientThemeType.CUSTOM_BACKGROUND_GRADIENT) {
+  } else if (themePreset.type === ClientThemesTypes.ClientThemeType.CUSTOM_BACKGROUND_GRADIENT) {
     obj = { item: themePreset, isThemeLocked: isPreview };
     tmp8 = timestampProducer(CustomThemeBackground, obj);
     tmp9 = timestampProducer;
@@ -192,8 +193,8 @@ export default function ThemeSelectorItem(onPress) {
   };
   let stringResult;
   if (isPreview) {
-    const intl = tmp4(1114).intl;
-    stringResult = intl.string(tmp4(1114).t.VqGKm0);
+    const intl = util.intl;
+    stringResult = intl.string(util.t.VqGKm0);
   }
   obj1.accessibilityHint = stringResult;
   const obj2 = { style: tmp.themeSelectorItem, children: null };
@@ -203,7 +204,7 @@ export default function ThemeSelectorItem(onPress) {
   }
   if (isNew) {
     const obj3 = { style: tmp.newRedCircle };
-    isNew = tmp9(tmp17, obj3);
+    isNew = tmp9(View, obj3);
   }
   items[1] = isNew;
   obj2.children = items;

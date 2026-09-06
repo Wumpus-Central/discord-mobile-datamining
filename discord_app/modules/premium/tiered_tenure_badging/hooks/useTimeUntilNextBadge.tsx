@@ -20,16 +20,16 @@ export const useTimeUntilNextBadge = function useTimeUntilNextBadge() {
     if (null != nextTenureBadge) {
       if (null != premiumSince) {
         const tenureReqNumMonths = tmp.tenureReqNumMonths;
-        let obj = _modDef4153(tmp2);
+        let obj = _modDef4153(premiumSince);
         const addResult = obj.add(tenureReqNumMonths, "months");
         obj = { days: null, months: null };
         const _Math = Math;
         const addResult1 = obj.add(tenureReqNumMonths, "months").add(1, "day");
-        const obj5 = _modDef4153(tmp2);
-        const addResult2 = _modDef4153(tmp2).add(tenureReqNumMonths, "months");
+        const obj5 = _modDef4153(premiumSince);
+        const addResult2 = _modDef4153(premiumSince).add(tenureReqNumMonths, "months");
         obj.days = Math.max(
           0,
-          _modDef4153(tmp2).add(tenureReqNumMonths, "months").add(1, "day").diff(_modDef4153(), "days"),
+          _modDef4153(premiumSince).add(tenureReqNumMonths, "months").add(1, "day").diff(_modDef4153(), "days"),
         );
         const _Math2 = Math;
         const _Math3 = Math;

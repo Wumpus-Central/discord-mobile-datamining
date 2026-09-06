@@ -33,7 +33,7 @@ export default function PressableNavigatorButtonWrapper(children) {
   const tmp = closure_2();
   return (
     <View collapsable={false} style={flag ? tmp.buttonWrapperModal : tmp.buttonWrapper} importantForAccessibility="yes">
-      {arg0.children}
+      {children.children}
     </View>
   );
 }

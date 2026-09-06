@@ -32,7 +32,7 @@ function PremiumGuildTierPill(arg0) {
     }
     let tmp7 = tmp22;
     obj5 = shared;
-  } else if (tmp6.TIER_1 === tier) {
+  } else if (BoostedGuildTiers.TIER_1 === tier) {
     let tmp17 = _modDef13612;
     const tmp16 = _modDef13611;
     if (obj4.isThemeDark(theme)) {
@@ -40,7 +40,7 @@ function PremiumGuildTierPill(arg0) {
     }
     tmp7 = tmp17;
     obj4 = shared;
-  } else if (tmp6.TIER_2 === tier) {
+  } else if (BoostedGuildTiers.TIER_2 === tier) {
     let tmp12 = _modDef13614;
     const tmp11 = _modDef13613;
     if (obj3.isThemeDark(theme)) {
@@ -48,7 +48,7 @@ function PremiumGuildTierPill(arg0) {
     }
     tmp7 = tmp12;
     obj3 = shared;
-  } else if (tmp6.TIER_3 === tier) {
+  } else if (BoostedGuildTiers.TIER_3 === tier) {
     let tmp8 = _modDef13616;
     const tmp26 = _modDef13615;
     if (obj8.isThemeDark(theme)) {

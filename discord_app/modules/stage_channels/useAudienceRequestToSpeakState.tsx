@@ -15,11 +15,11 @@ const RequestToSpeakStates = {
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/stage_channels/useAudienceRequestToSpeakState.tsx");
 
-export default function useAudienceRequestToSpeakState(arg0, arg1) {
-  _require = arg0;
-  dependencyMap = arg1;
+export default function useAudienceRequestToSpeakState(stateFromStores, id) {
+  _require = stateFromStores;
+  dependencyMap = id;
   const items = [VoiceStateStore];
-  const items1 = [arg0, arg1];
+  const items1 = [stateFromStores, id];
   return require("initialize").useStateFromStores(
     items,
     () => {

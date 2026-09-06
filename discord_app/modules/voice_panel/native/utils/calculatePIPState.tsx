@@ -75,7 +75,7 @@ export default function calculatePIPState(
   }
   let SquarePIPReferenceDimensions = getTargetDimensions.getTargetDimensions(id1);
   if (SquarePIPReferenceDimensions == null) {
-    SquarePIPReferenceDimensions = tmp13(17087).SquarePIPReferenceDimensions;
+    SquarePIPReferenceDimensions = VoicePanelPIPUtils.SquarePIPReferenceDimensions;
   }
   if (tmp10) {
     tmp10 = tmp;

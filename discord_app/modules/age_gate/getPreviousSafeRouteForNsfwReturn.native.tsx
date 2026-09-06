@@ -1,6 +1,7 @@
 // discord_app/modules/age_gate/getPreviousSafeRouteForNsfwReturn.native.tsx
 import Constants from "../../Constants.tsx";
 import AgeGateUtils from "AgeGateUtils.tsx";
+import SpoilerChannelUtils from "../spoiler_channels/SpoilerChannelUtils.tsx";
 import NavigationHistoryStore from "../main_tabs_v2/native/NavigationHistoryStore.tsx";
 import ChannelStore from "../../stores/ChannelStore.tsx";
 import GuildChannelStore from "../../stores/GuildChannelStore.tsx";
@@ -22,10 +23,9 @@ export default function getPreviousSafeRouteForNsfwReturn() {
       if (obj.startsWith(React2)) {
         let channel = ChannelStore.getChannel(tmp3);
         if (null != channel) {
-          let tmp11 = require;
           let obj4 = AgeGateUtils;
           if (!obj4.isChannelContentGated(channel)) {
-            let tmp11Result = tmp11(7329);
+            let tmp11Result = SpoilerChannelUtils;
             if (!tmp11Result.isChannelSpoilerGated(channel)) {
               let guild_id = channel.guild_id;
               if (guild_id == null) {
@@ -39,10 +39,9 @@ export default function getPreviousSafeRouteForNsfwReturn() {
       } else if (obj.startsWith(React3)) {
         defaultChannel = GuildChannelStore.getDefaultChannel(tmp3);
         if (null != defaultChannel) {
-          let tmp13 = require;
           let obj7 = AgeGateUtils;
           if (!obj7.isChannelContentGated(defaultChannel)) {
-            let tmp13Result = tmp13(7329);
+            let tmp13Result = SpoilerChannelUtils;
             if (!tmp13Result.isChannelSpoilerGated(defaultChannel)) {
               break;
             }

@@ -2,6 +2,7 @@
 import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
+import AvatarUtilsDefault from "../../../utils/AvatarUtils.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import EmojiDefault from "../../emojis/native/Emoji.tsx";
 import ForumTagContextMenuDefault from "ForumTagContextMenu.tsx";
@@ -55,14 +56,14 @@ class AppliedForumTag {
         }
         if (tmp11Result) {
           obj = { textEmojiStyle: null, fastImageStyle: null, src: null, name: null };
-          ({ textEmoji: obj3.textEmojiStyle, emoji: obj3.fastImageStyle } = tmp4);
+          ({ textEmoji: obj3.textEmojiStyle, emoji: obj3.fastImageStyle } = container);
           let emojiURL;
           if (null != closure_5) {
             const obj1 = { id: null, animated: null, size: null };
-            ({ id: obj5.id, animated: obj5.animated } = tmp14);
+            ({ id: obj5.id, animated: obj5.animated } = closure_5);
             obj1.size = EMOJI_URL_BASE_SIZE;
-            emojiURL = tmp12(1396).getEmojiURL(obj1);
-            const tmp12Result = tmp12(1396);
+            emojiURL = AvatarUtilsDefault.getEmojiURL(obj1);
+            const tmp12Result = AvatarUtilsDefault;
           }
           obj.src = emojiURL;
           if (str == null) {
@@ -70,8 +71,6 @@ class AppliedForumTag {
           }
           obj.name = str;
           tmp11Result = timestampProducer(EmojiDefault, obj);
-          tmp12 = importDefault;
-          tmp14 = closure_5;
         }
         const items1 = [
           tmp11Result,

@@ -1,5 +1,6 @@
 // discord_app/modules/stage_channels/StageChannelNewUserManager.tsx
 import DispatcherDefault from "../../Dispatcher.tsx";
+import StageChannelAlertActionCreatorsAll from "StageChannelAlertActionCreators.tsx";
 import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
 import SelectedChannelStore from "../../stores/SelectedChannelStore.tsx";
 import StageChannelRoleStore from "StageChannelRoleStore.tsx";
@@ -25,16 +26,11 @@ class StageChannelNewUserManager extends tmp2 {
                 isAudienceMemberResult = audienceMember.isAudienceMember(channelId.userId, voiceChannelId);
               }
               if (isAudienceMemberResult) {
-                const Storage = tmp11(tmp12[6]).Storage;
-                const result = Storage.set(tmp13, true);
-                const result1 = require("StageChannelAlertActionCreators").openStageChannelAudienceNoticeModal(
-                  voiceChannelId,
-                );
-                const obj = require("StageChannelAlertActionCreators");
+                const Storage = applyArgumentsResult(dependencyMap[6]).Storage;
+                const result = Storage.set(closure_2_7, true);
+                const result1 = StageChannelAlertActionCreatorsAll.openStageChannelAudienceNoticeModal(voiceChannelId);
               }
             }
-            tmp11 = applyArgumentsResult;
-            tmp13 = closure_2_7;
           }
         }
       });

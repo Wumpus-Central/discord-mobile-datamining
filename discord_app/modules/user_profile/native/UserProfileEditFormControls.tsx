@@ -5,6 +5,7 @@ import PlatformUtils from "../../../utils/PlatformUtils.tsx";
 import native from "../../../design/void/native.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import Pressables from "../../../design/void/Pressables/native/Pressables.tsx";
+import TableRowArrow from "../../../design/components/TableRow/native/TableRowArrow.native.tsx";
 import Input from "../../../design/components/Input/native/Input.native.tsx";
 import FormSwitch from "../../../design/components/Forms/native/FormSwitch.native.tsx";
 import NitroWheelIcon from "../../../design/components/Icon/native/redesign/generated/NitroWheelIcon.tsx";
@@ -140,8 +141,8 @@ export const UserProfileEditFormButton = function UserProfileEditFormButton(load
   obj.accessibilityValue = accessibilityValue;
   let stringResult;
   if (!disabled) {
-    const intl = tmp3(1114).intl;
-    stringResult = intl.string(tmp3(1114).t["4lAcxv"]);
+    const intl = util.intl;
+    stringResult = intl.string(util.t["4lAcxv"]);
   }
   obj.accessibilityHint = stringResult;
   obj.accessibilityState = { disabled, busy: flag };
@@ -152,19 +153,19 @@ export const UserProfileEditFormButton = function UserProfileEditFormButton(load
     let tmp2Result = null != buttonText;
     if (tmp2Result) {
       const obj1 = { text: buttonText };
-      tmp2Result = tmp2(FormControlText, obj1);
+      tmp2Result = timestampProducer(FormControlText, obj1);
     }
     const items2 = [tmp2Result];
     const obj2 = { text: buttonSubtext };
-    items2[1] = tmp2(FormControlSubtext, obj2);
+    items2[1] = timestampProducer(FormControlSubtext, obj2);
     obj.children = items2;
-    content = tmp5(hasOwnProperty, obj);
+    content = React5(hasOwnProperty, obj);
   }
   items1[1] = content;
   items1[2] = trailing;
   tmp2Result = !flag2;
   if (!flag2) {
-    tmp2Result = tmp2(tmp3(5612).TableRowArrow, {});
+    tmp2Result = timestampProducer(TableRowArrow.TableRowArrow, {});
   }
   items1[3] = tmp2Result;
   obj.children = items1;

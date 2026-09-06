@@ -18,7 +18,6 @@ export const useMaybeFetchCollectiblesCategoriesShared = function useMaybeFetchC
   arg0,
   noOp,
   arg2,
-  skipFetch,
 ) {
   _require = arg0;
   dependencyMap = noOp;
@@ -28,31 +27,36 @@ export const useMaybeFetchCollectiblesCategoriesShared = function useMaybeFetchC
     flag = false;
   }
   let hasLoadedExperiments;
-  closure_6 = undefined;
+  let lastSuccessfulFetch;
   let obj = require("initialize");
   let items = [hasLoadedExperiments];
   const stateFromStores = obj.useStateFromStores(items, () => hasLoadedExperiments.hasLoadedExperiments);
-  const items1 = [closure_6];
+  const items1 = [lastSuccessfulFetch];
   const tmp2 = _slicedToArray(
     require("initialize").useStateFromStoresArray(items1, () => {
       const items = [, , , , , ,];
-      ({ isFetchingCategories: arr[0], lastFetchOptions: arr[1], error: arr[2], lastErrorTimestamp } = closure_6);
+      ({
+        isFetchingCategories: arr[0],
+        lastFetchOptions: arr[1],
+        error: arr[2],
+        lastErrorTimestamp,
+      } = lastSuccessfulFetch);
       if (lastErrorTimestamp == null) {
         lastErrorTimestamp = 0;
       }
       items[3] = lastErrorTimestamp;
-      let num = tmp.lastSuccessfulFetch;
+      let num = lastSuccessfulFetch.lastSuccessfulFetch;
       if (num == null) {
         num = 0;
       }
       items[4] = num;
-      ({ categories: arr[5], skipNumCategories: arr[6] } = closure_6);
+      ({ categories: arr[5], skipNumCategories: arr[6] } = lastSuccessfulFetch);
       return items;
     }),
     7,
   );
   hasLoadedExperiments = tmp3;
-  closure_6 = tmp4;
+  lastSuccessfulFetch = tmp4;
   closure_7 = tmp5;
   closure_8 = tmp6;
   const skipNumCategories = tmp7;
@@ -63,6 +67,7 @@ export const useMaybeFetchCollectiblesCategoriesShared = function useMaybeFetchC
         if (!CollectiblesCategoryStore.isFetchingCategories) {
           const _Date = Date;
           const _Boolean = Boolean;
+          Date.now() - closure_7 < React6;
           if (!Boolean(closure_6)) {
             const obj = {};
             const merged = Object.assign(closure_0);
@@ -76,13 +81,15 @@ export const useMaybeFetchCollectiblesCategoriesShared = function useMaybeFetchC
               tmp19 = Date.now() - closure_8 < React5;
             }
             if (!tmp19) {
-              const collectiblesCategories = tmp11(7541).fetchCollectiblesCategories(obj, closure_1, closure_2);
-              const tmp11Result = tmp11(7541);
+              const collectiblesCategories = CollectiblesActionCreators.fetchCollectiblesCategories(
+                obj,
+                closure_1,
+                closure_2,
+              );
+              const tmp11Result = CollectiblesActionCreators;
             }
-            tmp11 = require;
             const tmp16 = !result;
           }
-          const tmp6 = Date.now() - closure_7 < React6;
         }
       }
     }

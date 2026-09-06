@@ -3,6 +3,8 @@ import _modDef12 from "../../../../../_runtime/metro/00012__.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
 import useA11yRolesNative from "../../../../../discord_common/js/packages/design/hooks/useA11yRolesNative.tsx";
+import TableRow from "../../../../design/components/TableRow/native/TableRow.native.tsx";
+import FormRadio from "../../../../design/components/Forms/native/FormRadio.native.tsx";
 import AppIconTypes from "../../AppIconTypes.tsx";
 import AppIconDefault from "../AppIcon.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
@@ -86,9 +88,10 @@ export default function AppIconRow(arg0) {
         tmp10Result = null;
       }
       obj.trailing = tmp10Result;
-      tmp10Result = tmp10(tmp3(5605).TableRow, obj, id);
+      tmp10Result = jsx(TableRow.TableRow, obj, id);
     }
     const obj1 = { selected: tmp7 };
-    tmp10Result = tmp10(tmp3(5689).FormRadio, obj1);
+    tmp10Result = jsx(FormRadio.FormRadio, { selected: tmp7 });
   }
+  const tmp3Result = useA11yRolesNative;
 }

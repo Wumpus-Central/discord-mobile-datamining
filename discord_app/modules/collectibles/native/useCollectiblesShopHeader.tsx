@@ -5,6 +5,7 @@ import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
+import CheckmarkSmallIcon3 from "../../../design/components/Icon/native/redesign/generated/CheckmarkSmallIcon.tsx";
 import AnalyticsLocationDefault from "../../app_analytics/AnalyticsLocation.tsx";
 import showUserProfileActionSheetDefault from "../../user_profile/native/showUserProfileActionSheet.tsx";
 import ShopIcon from "../../../design/components/Icon/native/redesign/generated/ShopIcon.tsx";
@@ -25,11 +26,11 @@ function CollectiblesShopHeaderTitle(currentScreen) {
     children: null,
   };
   if (currentScreen.currentScreen === constants.ORBS) {
-    const intl2 = tmp5(1114).intl;
-    let stringResult = intl2.string(tmp5(1114).t.ElYQFS);
+    const intl2 = util.intl;
+    let stringResult = intl2.string(util.t.ElYQFS);
   } else {
-    const intl = tmp5(1114).intl;
-    stringResult = intl.string(tmp5(1114).t.pWG4ze);
+    const intl = util.intl;
+    stringResult = intl.string(util.t.pWG4ze);
   }
   obj.children = stringResult;
   items[1] = closure_1_10(Text_Text.Heading, obj);
@@ -63,12 +64,12 @@ function CollectiblesShopHeaderRight(currentScreen) {
     };
     let CheckmarkSmallIcon;
     if (currentScreen === constants.FEATURED_PAGE) {
-      CheckmarkSmallIcon = tmp(7133).CheckmarkSmallIcon;
+      CheckmarkSmallIcon = CheckmarkSmallIcon3.CheckmarkSmallIcon;
     }
     obj.trailingIndicator = CheckmarkSmallIcon;
     let items = [obj, ,];
     obj = { label: null, action: null, trailingIndicator: null };
-    const intl2 = tmp(1114).intl;
+    const intl2 = util.intl;
     obj.label = intl2.string(util.t.RSyoZu);
     obj.action = function action() {
       currentScreen(7541);
@@ -81,12 +82,12 @@ function CollectiblesShopHeaderRight(currentScreen) {
     };
     let CheckmarkSmallIcon1;
     if (currentScreen === constants.SHOP_ALL) {
-      CheckmarkSmallIcon1 = tmp(7133).CheckmarkSmallIcon;
+      CheckmarkSmallIcon1 = CheckmarkSmallIcon3.CheckmarkSmallIcon;
     }
     obj.trailingIndicator = CheckmarkSmallIcon1;
     items[1] = obj;
     obj = { label: null, action: null, trailingIndicator: null };
-    const intl3 = tmp(1114).intl;
+    const intl3 = util.intl;
     obj.label = intl3.string(util.t.EBYkzk);
     obj.action = function action() {
       currentScreen(7541);
@@ -99,7 +100,7 @@ function CollectiblesShopHeaderRight(currentScreen) {
     };
     let CheckmarkSmallIcon2;
     if (currentScreen === constants.ORBS) {
-      CheckmarkSmallIcon2 = tmp(7133).CheckmarkSmallIcon;
+      CheckmarkSmallIcon2 = CheckmarkSmallIcon3.CheckmarkSmallIcon;
     }
     obj.trailingIndicator = CheckmarkSmallIcon2;
     items[2] = obj;
@@ -151,13 +152,13 @@ function CollectiblesShopHeaderRight(currentScreen) {
   const callback1 = noop.useCallback(() => {
     let id;
     if (stateFromStores != null) {
-      id = tmp.id;
+      id = stateFromStores.id;
     }
     if (null != id) {
       let obj = { cta_name: "wishlist header button", page_type: currentScreen };
       obj.track(AnalyticEvents.COLLECTIBLES_SHOP_ELEMENT_CLICKED, obj);
       ModalActionCreatorsDefault.popAll();
-      obj = { userId: tmp.id, sourceAnalyticsLocations: null, initialSection: null };
+      obj = { userId: stateFromStores.id, sourceAnalyticsLocations: null, initialSection: null };
       const items = [AnalyticsLocationDefault.COLLECTIBLES_SHOP];
       obj.sourceAnalyticsLocations = items;
       obj.initialSection = UserProfileSections.WISHLIST;
@@ -167,12 +168,12 @@ function CollectiblesShopHeaderRight(currentScreen) {
   const tmp2Result = currentScreen(balance[27]);
   if (isEligibleForQuests) {
     obj = { balance, onPress: callback };
-    let tmp13Result = tmp13(tmp2Result.BalanceWidgetPillButton, obj);
-    let tmp16 = tmp13;
+    let tmp13Result = closure_10(tmp2Result.BalanceWidgetPillButton, obj);
+    let tmp16 = closure_10;
   } else {
     obj1 = { balance };
-    tmp13Result = tmp13(tmp2Result.BalanceWidgetPill, obj1);
-    tmp16 = tmp13;
+    tmp13Result = closure_10(tmp2Result.BalanceWidgetPill, obj1);
+    tmp16 = closure_10;
   }
   const items4 = [tmp13Result, ,];
   let tmp16Result = null != stateFromStores;

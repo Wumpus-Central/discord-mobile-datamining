@@ -278,7 +278,7 @@ export default function GameProfileDetails(game) {
         if (memo.length > 1) {
           prop = null;
           if (index < arr2.length - 1) {
-            prop = tmp3.detailsRowBottomBorder;
+            prop = closure_2.detailsRowBottomBorder;
           }
         }
         let obj = { style: items, children: null };
@@ -290,7 +290,7 @@ export default function GameProfileDetails(game) {
             variant: "text-sm/normal",
             color: "text-subtle",
             lineClamp: 1,
-            style: tmp3.detailsRowValue,
+            style: closure_2.detailsRowValue,
             children: children.value,
           };
           value = React6(Text_Text.Text, obj);

@@ -1,9 +1,10 @@
 // discord_app/modules/premium/native/google_play_price_changes/GooglePlayPriceChangeStore.tsx
 import initializeDefault from "../../../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../../../Dispatcher.tsx";
+import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
 import SubscriptionStore from "../../../../stores/billing/SubscriptionStore.tsx";
 
-const require = fn;
+require = fn;
 function onInitializeSync() {
   priceChange = null;
   c4 = false;
@@ -29,6 +30,7 @@ function onInitializeSync() {
       c4 = true;
     }
   }
+  obj = PlatformUtils;
 }
 let items = [, ,];
 ({ ACTIVE: arr[0], PAST_DUE: arr[1], UNPAID: arr[2] } = fn(1074).SubscriptionStatusTypes);

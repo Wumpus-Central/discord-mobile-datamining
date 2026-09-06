@@ -2,13 +2,13 @@
 import _mod17 from "../../../../_runtime/metro/00017__.js";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import utils_ColorUtils from "../../../../discord_common/js/shared/utils/ColorUtils.tsx";
 import DisplayNameEffect from "../../../../discord_common/js/shared/shared-constants/DisplayNameEffect.tsx";
 import LinearGradientDefault from "../../../../_runtime/04987_LinearGradient.js";
 import GummyStripesDefault from "effects/GummyStripes.tsx";
 import createStyles from "../../../design/components/Styles/native/createStyles.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
-const utils_ColorUtils = tmp2(1091);
 const View = _mod17.View;
 const jsx = jsxProd.jsx;
 let obj = { colorSwatch: null, gummySwatch: null };

@@ -22,7 +22,7 @@ let prototype = function SoundboardManager() {
     });
     map = new Map();
   };
-  applyArgumentsResult._playSound = function _playSound(soundId, arg1, userId) {
+  applyArgumentsResult._playSound = function _playSound(soundId, arg1) {
     let num = arg1;
     if (arg1 === undefined) {
       num = 1;
@@ -48,7 +48,7 @@ let prototype = function SoundboardManager() {
       }
     }
   };
-  closure_129_0 = asyncGeneratorStep(async (arg0, value) => {
+  closure_129_0 = asyncGeneratorStep(async (arg0) => {
     closure_129_4 = false;
     await closure_129_0.playWithListener();
     if (2 === tmp7) {

@@ -3,6 +3,7 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import AvatarUtilsDefault from "../../../../utils/AvatarUtils.tsx";
 import EmojiUtilsDefault from "../../../../utils/EmojiUtils.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
+import EmojiDefault from "../../../emojis/native/Emoji.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -17,13 +18,12 @@ function TraitEmoji(emoji) {
       ({ id: obj2.id, animated: obj2.animated } = emoji);
       emojiURL = obj.getEmojiURL(obj);
     }
-    const tmp5 = importDefault;
     obj = {
       src: emojiURL,
       name: EmojiUtilsDefault.isCustomEmoji(emoji) ? emoji.name : emoji.surrogates,
       fastImageStyle: tmp.emojiImage,
     };
-    return hasOwnProperty(tmp5(7130), obj);
+    return hasOwnProperty(EmojiDefault, obj);
   }
 }
 function GuildProfileTraitView(trait) {

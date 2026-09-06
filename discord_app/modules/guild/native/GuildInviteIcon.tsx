@@ -1,7 +1,9 @@
 // discord_app/modules/guild/native/GuildInviteIcon.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
+import native from "../../../design/void/native.tsx";
 import AvatarUtilsDefault from "../../../utils/AvatarUtils.tsx";
+import StringUtils from "../../../utils/StringUtils.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import StylesheetUtils from "../../../utils/StylesheetUtils.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -59,7 +61,7 @@ GuildInviteIcon.prototype["render"] = function render() {
       source: null,
     });
   } else {
-    const acronym = tmp2(1925).getAcronym(guild.name);
+    const acronym = StringUtils.getAcronym(guild.name);
     let num = closure_5[acronym.length - 1];
     if (num == null) {
       num = 10;
@@ -83,7 +85,7 @@ GuildInviteIcon.prototype["render"] = function render() {
     items2[1] = obj4;
     obj3.style = items2;
     obj3.children = acronym;
-    obj2.children = jsx(tmp2(1178).LegacyText, { numberOfLines: 1, style: null, children: null });
+    obj2.children = jsx(native.LegacyText, { numberOfLines: 1, style: null, children: null });
     return (
       <View accessible accessibilityRole="image" accessibilityLabel={formatToPlainStringResult} style={null}>
         {null}

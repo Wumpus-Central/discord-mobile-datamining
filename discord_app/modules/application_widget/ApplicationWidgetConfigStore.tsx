@@ -7,7 +7,7 @@ function updateApplicationConfigs(configs) {
   if (0 !== Object.keys(configs).length) {
     const _Object3 = Object;
     function _loop() {
-      const set = new Set(obj.map((config_id) => config_id.config_id));
+      new Set(obj.map((config_id) => config_id.config_id));
       let found;
       if (closure_3[_slicedToArray] != null) {
         found = arr.filter((config_id) => !set.has(config_id.config_id));
@@ -15,7 +15,7 @@ function updateApplicationConfigs(configs) {
       if (found == null) {
         found = [];
       }
-      const items = [...obj];
+      const items = [...tmp];
       closure_3[_slicedToArray] = items;
     }
     const entries = Object.entries(configs);

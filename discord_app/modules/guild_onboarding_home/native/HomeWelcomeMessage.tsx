@@ -88,7 +88,7 @@ export default function HomeWelcomeMessage(guildId) {
   guildId = guildId.guildId;
   let stateFromStores2;
   let stateFromStores3;
-  const tmp = closure_10();
+  let tmp = closure_10();
   let tmp2 = guildId;
   let tmp3 = stateFromStores2;
   let obj = guildId(stateFromStores2[8]);
@@ -139,16 +139,17 @@ export default function HomeWelcomeMessage(guildId) {
       id = undefined;
       ({ id, getAvatarURL } = obj);
       if (stateFromStores3 != null) {
-        id = tmp5.id;
+        id = stateFromStores3.id;
       }
       let id1;
       const avatarURL = getAvatarURL(id, 80);
       if (stateFromStores3 != null) {
-        id1 = tmp5.id;
+        id1 = stateFromStores3.id;
       }
       obj = { dispatchWait: true, guildId: id1 };
       maybeFetchUserProfileDefault(id, avatarURL, obj);
     }
+    tmp = null == stateFromStores2 || obj.isNonUserBot();
   }, items4);
   const tmp11 = stateFromStores1(tmp3[10])({
     user: stateFromStores2,
@@ -164,11 +165,11 @@ export default function HomeWelcomeMessage(guildId) {
         if (null != stateFromStores2.avatarDecoration) {
           const items6 = [null, , ,];
           obj2 = { style: tmp.avatarBackground };
-          items6[1] = tmp17(tmp20, obj2);
+          items6[1] = closure_8(View, obj2);
           const obj3 = { style: tmp.avatar, user: stateFromStores2, size: null, disableStatus: true };
           let tmp7Result = tmp7(tmp3[16]);
           obj3.size = tmp2(tmp3[17]).AvatarSizes.NORMAL;
-          items6[2] = tmp17(tmp7Result, obj3);
+          items6[2] = closure_8(tmp7Result, obj3);
           const obj4 = {
             containerStyle: tmp.welcomeContainer,
             primaryColor,
@@ -184,7 +185,7 @@ export default function HomeWelcomeMessage(guildId) {
             variant: "text-md/semibold",
             children: tmp7(tmp3[20]).getName(guildId, null, stateFromStores2),
           };
-          const items7 = [tmp17(tmp2(tmp3[19]).Text, obj7)];
+          const items7 = [closure_8(tmp2(tmp3[19]).Text, obj7)];
           let tmp17Result = null;
           if (tmp16) {
             const obj8 = {
@@ -193,18 +194,18 @@ export default function HomeWelcomeMessage(guildId) {
               source: tmp7(tmp3[21]),
               disableColor: true,
             };
-            tmp17Result = tmp17(tmp2(tmp3[17]).Icon, obj8);
+            tmp17Result = closure_8(tmp2(tmp3[17]).Icon, obj8);
           }
           items7[1] = tmp17Result;
           obj6.children = items7;
-          const items8 = [tmp19(tmp20, obj6)];
+          const items8 = [closure_9(View, obj6)];
           let username = name;
           if (name == null) {
             username = stateFromStores.username;
           }
           const parts = stateFromStores1.message.split(/\[@username\]/g);
           const items9 = [];
-          let tmp28 = tmp17;
+          let tmp28 = closure_8;
           let num3 = 0;
           if (0 < parts.length - 1) {
             do {
@@ -226,13 +227,13 @@ export default function HomeWelcomeMessage(guildId) {
           const obj12 = { variant: "text-sm/normal", style: tmp.message, children: parts[parts.length - 1] };
           items9.push(tmp28(tmp2(tmp3[19]).Text, obj12, parts.length));
           obj11.children = items9;
-          items8[1] = tmp17(tmp2(tmp3[19]).Text, obj11);
+          items8[1] = closure_8(tmp2(tmp3[19]).Text, obj11);
           obj5.children = items8;
-          obj4.children = tmp19(tmp20, obj5);
-          items6[3] = tmp17(tmp7Result, obj4);
+          obj4.children = closure_9(View, obj5);
+          items6[3] = closure_8(tmp7Result, obj4);
           obj1.children = items6;
-          obj.children = tmp19(tmp20, obj1);
-          return tmp17(tmp18, obj);
+          obj.children = closure_9(View, obj1);
+          return closure_8(tmp18, obj);
         } else {
           const items10 = [tmp.avatarBorder];
           if (null != primaryColor) {
@@ -245,7 +246,7 @@ export default function HomeWelcomeMessage(guildId) {
           const obj14 = { backgroundColor: int2rgbaResult };
           items10[1] = obj14;
           obj13.style = items10;
-          tmp17Result = tmp17(tmp20, obj13);
+          tmp17Result = closure_8(View, obj13);
         }
         tmp16 = null != stateFromStores3 && stateFromStores3.ownerId === stateFromStores2.id;
       }

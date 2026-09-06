@@ -5,16 +5,16 @@ const require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_launcher/native/screens/search/useTrackSearchItems.tsx");
 
-export const useTrackSearchItems = function useTrackSearchItems(callback3, memo1, set) {
+export const useTrackSearchItems = function useTrackSearchItems(callback3, memo1, current) {
   _require = callback3;
   dependencyMap = memo1;
-  noop = set;
+  noop = current;
   let obj = require("AppLauncherContext");
   const entrypoint = obj.useAppLauncherContext().entrypoint;
   closure_4 = noop.useRef({});
-  noop.useRef(set);
+  noop.useRef(current);
   obj = { handleViewableItemsChanged: null };
-  const items = [entrypoint, callback3, memo1, set];
+  const items = [entrypoint, callback3, memo1, current];
   obj.handleViewableItemsChanged = noop.useCallback((viewableItems) => {
     viewableItems = viewableItems.viewableItems;
     if (ref.current !== current) {

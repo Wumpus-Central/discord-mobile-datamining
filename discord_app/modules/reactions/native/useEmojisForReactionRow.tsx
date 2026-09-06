@@ -6,11 +6,11 @@ const EmojiIntention = fn(1374).EmojiIntention;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/reactions/native/useEmojisForReactionRow.tsx");
 
-export const useEmojisForReactionRow = function useEmojisForReactionRow(channel, arg1, arg2) {
+export const useEmojisForReactionRow = function useEmojisForReactionRow(channel, emojiLineHeight, arg2) {
   _require = channel;
   const guildId = channel.getGuildId();
   const frequentlyUsedReactionEmojis = require("EmojiPickerUtils").useFrequentlyUsedReactionEmojis(guildId);
-  rounded = Math.floor(Math.min(frequentlyUsedReactionEmojis(rounded[3])().width, arg1) / arg2);
+  rounded = Math.floor(Math.min(frequentlyUsedReactionEmojis(rounded[3])().width, emojiLineHeight) / arg2);
   const items = [frequentlyUsedReactionEmojis, channel, rounded];
   const memo = noop.useMemo(() => {
     let length;

@@ -23,11 +23,11 @@ export default function getTimestampString(arg0, fn) {
   }
   function formatString(minutes, diffResult) {
     if (tmp3) {
-      let tmp5 = tmp[minutes];
+      let tmp5 = dependencyMap[minutes];
       if (tmp5 == null) {
         let tmp6;
-        if (tmp2 != null) {
-          tmp6 = tmp2[minutes];
+        if (time != null) {
+          tmp6 = time[minutes];
         }
         tmp5 = tmp6;
       }
@@ -37,8 +37,8 @@ export default function getTimestampString(arg0, fn) {
       let tmp4 = tmp5;
     } else {
       tmp4 = undefined;
-      if (tmp2 != null) {
-        tmp4 = tmp2[minutes];
+      if (time != null) {
+        tmp4 = time[minutes];
       }
       if (tmp4 == null) {
         tmp4 = null;
@@ -102,7 +102,7 @@ export default function getTimestampString(arg0, fn) {
   }
   if (diffResult < c4) {
     const _Math4 = Math;
-    const formatStringResult4 = formatString("months", Math.floor(diffResult / tmp11));
+    const formatStringResult4 = formatString("months", Math.floor(diffResult / c3));
     if (null != formatStringResult4) {
       return formatStringResult4;
     }
@@ -114,13 +114,12 @@ export default function getTimestampString(arg0, fn) {
     }
     if (null != years) {
       const _Math5 = Math;
-      const formatStringResult5 = formatString("years", Math.floor(diffResult / tmp14));
+      const formatStringResult5 = formatString("years", Math.floor(diffResult / c4));
       if (null != formatStringResult5) {
         return formatStringResult5;
       }
     }
   }
   let obj = require("../../../_runtime/metro/04153__.js")();
-  tmp11 = c3;
   return require("../../../_runtime/metro/04153__.js")(arg0).format("LL");
 }

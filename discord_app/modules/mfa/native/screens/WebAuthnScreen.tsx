@@ -88,12 +88,12 @@ export default function WebAuthnScreen(arg0) {
       .then(() => closure_1_4(true))
       .catch((error) => {
         if (error instanceof finish(1272).HTTPResponseError) {
-          const intl = tmp(1114).intl;
-          dependencyMap(intl.string(tmp(1114).t.xSCvBf));
+          const intl = finish(1114).intl;
+          dependencyMap(intl.string(finish(1114).t.xSCvBf));
         } else {
-          const result = tmp(6951).captureWebAuthnException(error, {});
+          const result = finish(6951).captureWebAuthnException(error, {});
           dependencyMap(error.message);
-          const tmpResult = tmp(6951);
+          const tmpResult = finish(6951);
         }
       })
       .finally(() => _undefined(false));
@@ -109,16 +109,16 @@ export default function WebAuthnScreen(arg0) {
     error: null,
   };
   const tmp2 = authenticatorSelection(noop.useState(false), 2);
-  let intl = tmp5(1114).intl;
+  let intl = finish(1114).intl;
   obj.headerText = intl.string(finish(1114).t.saHocI);
-  const intl2 = tmp5(1114).intl;
+  const intl2 = finish(1114).intl;
   obj.subtitle = intl2.string(finish(1114).t.YpMrqM);
   obj.headerImage = challenge(finish(14676).KeyImage, {});
   let shouldDisplayAndroidFidoSelector = NativeCeremoniesDefault.shouldDisplayAndroidFidoSelector;
   if (shouldDisplayAndroidFidoSelector) {
     obj = { authenticatorSelection, setAuthenticator: tmpResult[1], inProgress: null };
-    let tmp18 = tmp3;
-    if (!tmp3) {
+    let tmp18 = tmp11;
+    if (!tmp11) {
       tmp18 = tmp11;
     }
     obj.inProgress = tmp18;
@@ -127,14 +127,14 @@ export default function WebAuthnScreen(arg0) {
   obj.content = shouldDisplayAndroidFidoSelector;
   obj1 = { variant: "primary", text: null, loading: null, disabled: null, onPress: null };
   const tmp16 = MfaOptionScreenDefault;
-  const intl3 = tmp5(1114).intl;
+  const intl3 = finish(1114).intl;
   obj1.text = intl3.string(finish(1114).t.Xr3Eks);
-  let tmp20 = tmp3;
-  if (!tmp3) {
+  let tmp20 = tmp11;
+  if (!tmp11) {
     tmp20 = tmp11;
   }
   obj1.loading = tmp20;
-  obj1.disabled = tmp3;
+  obj1.disabled = tmp11;
   obj1.onPress = callback;
   obj.submit = challenge(buttonDefault, obj1);
   obj.screenProps = { mfaChallenge, finish };

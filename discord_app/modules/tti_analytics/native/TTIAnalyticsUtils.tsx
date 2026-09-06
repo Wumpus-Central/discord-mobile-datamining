@@ -2,6 +2,7 @@
 import AppStartPerformanceDefault from "../../../../discord_common/js/packages/app-start-performance/AppStartPerformance.tsx";
 import SentryUtilsDefault from "../../../utils/SentryUtils.native.tsx";
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
+import NavigationRouteUtils from "../../main_tabs_v2/helpers/NavigationRouteUtils.native.tsx";
 import RootNavigationRef from "../../main_tabs_v2/RootNavigationRef.native.tsx";
 import NativeTTIManagerModuleDefault from "../../../../discord_common/js/packages/rtn-codegen/js/NativeTTIManagerModule.tsx";
 import DeviceUtils from "../../../utils/native/DeviceUtils.tsx";
@@ -16,7 +17,6 @@ import ChannelStore from "../../../stores/ChannelStore.tsx";
 import DeveloperOptionsStore from "../../../stores/DeveloperOptionsStore.tsx";
 import ClientInfoUtils from "../../../utils/native/ClientInfoUtils.tsx";
 
-const NavigationRouteUtils = tmp(4417);
 require = fn;
 function getDeviceMetadata() {
   if (null == obj) {
@@ -109,7 +109,7 @@ function sharedProperties(screen_name, has_cached_data, arg2) {
   obj.manifest = tmp;
   return obj;
 }
-let closure_23 = async function _trackAppUIViewedAsync(arg0, value) {
+let closure_23 = async function _trackAppUIViewedAsync(arg0) {
   if (c6 === 2) {
     c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -203,12 +203,12 @@ let closure_23 = async function _trackAppUIViewedAsync(arg0, value) {
                     const readySupplemental2 = closure_1_1(9).readySupplemental;
                     let hasDataResult = readySupplemental2.hasData();
                     if (hasDataResult) {
-                      const firstContentfulPaint = tmp6(9).firstContentfulPaint;
+                      const firstContentfulPaint = closure_1_1(9).firstContentfulPaint;
                       let hasDataResult1 = firstContentfulPaint.hasData();
                       if (!hasDataResult1) {
-                        const renderLatestMessages = tmp6(9).renderLatestMessages;
-                        hasDataResult1 = renderLatestMessages.hasData() || null != tmp6(9).interstitial;
-                        const tmp10 = renderLatestMessages.hasData() || null != tmp6(9).interstitial;
+                        const renderLatestMessages = closure_1_1(9).renderLatestMessages;
+                        hasDataResult1 = renderLatestMessages.hasData() || null != closure_1_1(9).interstitial;
+                        const tmp10 = renderLatestMessages.hasData() || null != closure_1_1(9).interstitial;
                       }
                       hasDataResult = hasDataResult1;
                     }
@@ -232,6 +232,7 @@ let closure_23 = async function _trackAppUIViewedAsync(arg0, value) {
               }
               return flag2;
             });
+            obj = closure_1_1(9);
           }
         })();
         c6 = 3;
@@ -243,7 +244,7 @@ let closure_23 = async function _trackAppUIViewedAsync(arg0, value) {
     }
   }
 };
-let closure_24 = async function _logLegacyAppUiViewed(arg0, value) {
+let closure_24 = async function _logLegacyAppUiViewed(arg0) {
   if (c8 === 2) {
     c8 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -329,7 +330,7 @@ function trackAppUIViewed2() {
   }
   return applyArgumentsResult;
 }
-let closure_28 = async function _trackAppUIViewed(arg0, value) {
+let closure_28 = async function _trackAppUIViewed() {
   if (c6 === 2) {
     c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -538,7 +539,7 @@ function batchKeys(arg0) {
   }
   return items;
 }
-let closure_30 = async function _trackAppLaunchCompletedAsync(arg0, value) {
+let closure_30 = async function _trackAppLaunchCompletedAsync(arg0) {
   if (c8 === 2) {
     c8 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -642,7 +643,7 @@ export const trackAppOpened = function trackAppOpened(launcher) {
   obj.theme = ThemeStore.theme;
   AnalyticsUtilsDefault.track(AnalyticEvents.APP_OPENED, obj, { logEventProperties: true });
 };
-export const trackAppUIViewed = function trackAppUIViewed(ModalScreen, arg1, hasCacheResult) {
+export const trackAppUIViewed = function trackAppUIViewed() {
   let tmp = ModalScreen;
   if (ModalScreen === undefined) {
     tmp = getRedesignScreenName();
@@ -671,7 +672,7 @@ export const trackAppUIViewed = function trackAppUIViewed(ModalScreen, arg1, has
 export function getLastTrackedAppUiViewed2Properties() {
   return c26;
 }
-export const trackAppLaunchCompleted = function trackAppLaunchCompleted(unknown, hasCacheResult) {
+export const trackAppLaunchCompleted = function trackAppLaunchCompleted() {
   let str = unknown;
   if (unknown === undefined) {
     str = getRedesignScreenName();

@@ -3,6 +3,7 @@ import ReanimatedRexport from "../../reanimated/ReanimatedRexport.tsx";
 import NavigationRouteUtils from "../../main_tabs_v2/helpers/NavigationRouteUtils.native.tsx";
 import HapticUtils from "../../haptics/HapticUtils.native.tsx";
 import timing from "../../../design/animation/reanimated/timing/timing.tsx";
+import HomeDrawerAnimations from "HomeDrawerAnimations.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import HomeDrawerStore from "HomeDrawerStore.tsx";
@@ -234,9 +235,9 @@ export const useHomeGesture = function useHomeGesture() {
   let items = [tmp9, tmp10, updateMaxX, enableHome];
   const effect = obj5.useEffect(() => {
     if (enableHome) {
-      tmp(closure_13, closure_14);
+      updateMaxX(closure_13, closure_14);
     } else {
-      tmp({ width: 0, height: 0 }, { top: 0, bottom: 0, left: 0, right: 0 });
+      updateMaxX({ width: 0, height: 0 }, { top: 0, bottom: 0, left: 0, right: 0 });
     }
   }, items);
   const items1 = [enableHome, panelX, snapX, isOpenTarget];
@@ -287,6 +288,7 @@ export const useHomeGesture = function useHomeGesture() {
           }
         }
       }
+      const obj = panelX(isOpenTarget[18]);
     }
     navigation.addListener("state", handleStateChange);
     return () => {
@@ -421,12 +423,13 @@ export const useHomeGesture = function useHomeGesture() {
         num = maxX;
       }
       const result1 = isSnappedOpen.set(
-        panelX(isOpenTarget[10]).withTiming(num, tmp3(tmp4[11]).HOME_DRAWER_SETTLE_TIMING),
+        panelX(isOpenTarget[10]).withTiming(num, panelX(isOpenTarget[11]).HOME_DRAWER_SETTLE_TIMING),
       );
-      let tmp3Result = tmp3(tmp4[10]);
-      const result2 = visualPanelX.set(tmp3Result.withTiming(0, tmp3(tmp4[11]).HOME_DRAWER_SETTLE_TIMING));
-      tmp3Result = tmp3(tmp4[7]);
+      let tmp3Result = panelX(isOpenTarget[10]);
+      const result2 = visualPanelX.set(tmp3Result.withTiming(0, panelX(isOpenTarget[11]).HOME_DRAWER_SETTLE_TIMING));
+      tmp3Result = panelX(isOpenTarget[7]);
       tmp3Result.runOnJS(panelX(isOpenTarget[18]).setHomeDrawerState)(flag);
+      const obj = panelX(isOpenTarget[10]);
     }
     obj = {
       isOpenTarget: settleDrawer,
@@ -566,9 +569,9 @@ export const useHomeGesture = function useHomeGesture() {
     const onBeginResult = result.maxPointers(1).onBegin(fn);
     const fn3 = function n(absoluteX) {
       if (beginDrag.get().active) {
-        const diff = absoluteX.absoluteX - obj.get().initialX;
+        const diff = absoluteX.absoluteX - beginDrag.get().initialX;
         const result = sharedValue.set(diff);
-        if (0 === obj.get().panelX) {
+        if (0 === beginDrag.get().panelX) {
           if (diff >= 0) {
             let set = isSnappedOpen.set;
             if (diff < sharedValue1) {
@@ -580,7 +583,7 @@ export const useHomeGesture = function useHomeGesture() {
           }
         }
         const _Math = Math;
-        const result2 = isSnappedOpen.set(Math.max(diff + obj.get().panelX, 0));
+        const result2 = isSnappedOpen.set(Math.max(diff + beginDrag.get().panelX, 0));
       }
     };
     fn3.__closure = {

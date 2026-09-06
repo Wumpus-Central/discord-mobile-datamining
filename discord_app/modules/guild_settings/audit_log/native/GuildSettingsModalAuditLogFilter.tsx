@@ -121,14 +121,14 @@ export default function GuildSettingsModalAuditLogFilter(data) {
       onPress: null,
       trailing: null,
     };
-    if (selected === constants.USER) {
+    if (tmp === constants.USER) {
       const obj1 = { style: closure_3.allUsersIconContainer, children: null };
-      const obj2 = { size: tmp5(tmp6[19]).Icon.Sizes.MEDIUM, source: filterType(tmp6[20]) };
-      obj1.children = tmp4(tmp5(tmp6[19]).Icon, obj2);
-      tmp4Result = tmp4(first, obj1);
+      const obj2 = { size: tmp5(guildId[19]).Icon.Sizes.MEDIUM, source: filterType(guildId[20]) };
+      obj1.children = closure_1_9(tmp5(guildId[19]).Icon, obj2);
+      tmp4Result = closure_1_9(first, obj1);
     } else {
       const obj3 = { action: value };
-      tmp4Result = tmp4(filterType(tmp6[21]), obj3);
+      tmp4Result = closure_1_9(filterType(guildId[21]), obj3);
     }
     obj.icon = tmp4Result;
     obj.label = item.item.label;
@@ -136,7 +136,8 @@ export default function GuildSettingsModalAuditLogFilter(data) {
       return callback(!selected, value);
     };
     obj.trailing = closure_1_9(data(guildId[17]).FormRadio, { selected });
-    tmp4Result = tmp4(data(guildId[18]).TableRow, obj);
+    tmp4Result = closure_1_9(data(guildId[18]).TableRow, obj);
+    tmp = selected;
   }, items3);
   if (filterType === AuditLogFilterTypes.USER) {
     let intl3 = tmp4(tmp3[9]).intl;
@@ -157,12 +158,12 @@ export default function GuildSettingsModalAuditLogFilter(data) {
     const intl5 = tmp4(tmp3[9]).intl;
     obj.title = intl5.formatToPlainString(tmp4(tmp3[9]).t.ZGVL3g, { count: 0 });
     obj.Illustration = tmp4(tmp3[23]).NoResults;
-    let tmp14Result = tmp14(tmp4(tmp3[19]).EmptyState, obj);
+    let tmp14Result = closure_9(tmp4(tmp3[19]).EmptyState, obj);
   } else {
     let obj1 = { keyExtractor: memo.keyExtractor, renderItem: callback1, data, contentContainerStyle: null };
     let obj2 = { paddingHorizontal: filterType(tmp3[8]).space.PX_12, paddingBottom: filterType(guildId[12])().bottom };
     obj1.contentContainerStyle = obj2;
-    tmp14Result = tmp14(tmp4(tmp3[24]).FlashList, obj1);
+    tmp14Result = closure_9(tmp4(tmp3[24]).FlashList, obj1);
   }
   let obj3 = { children: null };
   items4[1] = tmp14Result;
@@ -170,13 +171,13 @@ export default function GuildSettingsModalAuditLogFilter(data) {
   obj3.children = items4;
   return closure_11(closure_10, obj3);
 }
-export const createAuditLogFilterUserData = function createAuditLogFilterUserData(arg0) {
-  _require = arg0;
+export const createAuditLogFilterUserData = function createAuditLogFilterUserData(userIdFilter) {
+  _require = userIdFilter;
   const items = [];
   let obj = { label: null, value: null, selected: null, index: 0 };
   const intl = require("util").intl;
   obj.label = intl.string(require("util").t.ZRFdsL);
-  obj.selected = null == arg0;
+  obj.selected = null == userIdFilter;
   items.push(obj);
   set = new Set();
   const logs = GuildSettingsAuditLogStore.logs;
@@ -185,7 +186,7 @@ export const createAuditLogFilterUserData = function createAuditLogFilterUserDat
     if (null != userId) {
       const user = UserStore.getUser(userId);
       if (!tmp) {
-        obj3.add(userId);
+        set.add(userId);
         const obj = {
           label: UserUtilsDefault.getUserTag(user),
           value: user,
@@ -194,7 +195,6 @@ export const createAuditLogFilterUserData = function createAuditLogFilterUserDat
         };
         items.push(obj);
       }
-      obj3 = set;
       tmp = set.has(userId) || null == user;
     }
   });
@@ -203,7 +203,7 @@ export const createAuditLogFilterUserData = function createAuditLogFilterUserDat
     if (null != item) {
       const user = UserStore.getUser(item);
       if (!tmp) {
-        obj3.add(item);
+        set.add(item);
         const obj = {
           label: UserUtilsDefault.getUserTag(user),
           value: user,
@@ -212,7 +212,6 @@ export const createAuditLogFilterUserData = function createAuditLogFilterUserDat
         };
         items.push(obj);
       }
-      obj3 = set;
       tmp = set.has(item) || null == user;
     }
   });
@@ -229,8 +228,8 @@ export const createAuditLogFilterUserData = function createAuditLogFilterUserDat
   });
   return items;
 };
-export const createAuditLogFilterActionData = function createAuditLogFilterActionData(arg0) {
-  closure_0 = arg0;
+export const createAuditLogFilterActionData = function createAuditLogFilterActionData(actionFilter) {
+  closure_0 = actionFilter;
   const mapped = AuditLogUtils.ACTION_FILTER_ITEMS().map((label, index) => ({
     label: label.label,
     value: label.value,

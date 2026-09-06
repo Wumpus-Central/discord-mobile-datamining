@@ -176,7 +176,7 @@ export default function StreamQualityLiveIndicator(arg0) {
         obj2 = { style: tmp2.qualityTag, children: null };
         if (tmp21Result) {
           const obj3 = { source: tmp5(tmp4[22]), style: tmp2.nitroWheel, resizeMode: "contain" };
-          tmp21Result = tmp21(tmp5(tmp4[21]), obj3);
+          tmp21Result = closure_9(tmp5(tmp4[21]), obj3);
           const tmp5Result3 = tmp5(tmp4[21]);
         }
         const items4 = [tmp21Result];
@@ -200,7 +200,7 @@ export default function StreamQualityLiveIndicator(arg0) {
         items6[1] = closure_9(tmp3(tmp4[13]).LiveTag, obj5);
         obj1.children = items6;
         obj.children = closure_10(tmp3(tmp4[20]).PressableOpacity, obj1);
-        tmp21Result = tmp21(tmp5(tmp4[11]).View, obj);
+        tmp21Result = closure_9(tmp5(tmp4[11]).View, obj);
         const tmp3Result2 = tmp3(tmp4[14]);
       }
       return tmp21Result;

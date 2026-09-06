@@ -7,9 +7,9 @@ const Endpoints = Constants.Endpoints;
 const result = size.fileFinishedImporting("actions/NoteActionCreators.tsx");
 
 export default {
-  updateNote(arg0, note) {
+  updateNote(userId, note) {
     const HTTP = HTTPUtils.HTTP;
-    const request = { url: Endpoints.NOTE(arg0), body: { note }, oldFormErrors: true, rejectWithError: true };
+    const request = { url: Endpoints.NOTE(userId), body: { note }, oldFormErrors: true, rejectWithError: true };
     return HTTP.put(request);
   },
 };

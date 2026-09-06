@@ -1,4 +1,5 @@
 // discord_app/modules/game_profile/GameProfileReviewUtils.tsx
+import util from "../../intl/index.native.tsx";
 import GameDetectionTypes from "../game_detection/GameDetectionTypes.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
@@ -8,17 +9,17 @@ export const getSteamReviewScoreDescriptionColor = function getSteamReviewScoreD
   if (GameDetectionTypes.SteamReviewScoreDescription.NO_USER_REVIEWS === NO_USER_REVIEWS) {
     return "text-subtle";
   } else {
-    if (tmp(1934).SteamReviewScoreDescription.OVERWHELMINGLY_POSITIVE !== NO_USER_REVIEWS) {
-      if (tmp(1934).SteamReviewScoreDescription.VERY_POSITIVE !== NO_USER_REVIEWS) {
-        if (tmp(1934).SteamReviewScoreDescription.POSITIVE !== NO_USER_REVIEWS) {
-          if (tmp(1934).SteamReviewScoreDescription.MOSTLY_POSITIVE !== NO_USER_REVIEWS) {
-            if (tmp(1934).SteamReviewScoreDescription.MIXED === NO_USER_REVIEWS) {
+    if (GameDetectionTypes.SteamReviewScoreDescription.OVERWHELMINGLY_POSITIVE !== NO_USER_REVIEWS) {
+      if (GameDetectionTypes.SteamReviewScoreDescription.VERY_POSITIVE !== NO_USER_REVIEWS) {
+        if (GameDetectionTypes.SteamReviewScoreDescription.POSITIVE !== NO_USER_REVIEWS) {
+          if (GameDetectionTypes.SteamReviewScoreDescription.MOSTLY_POSITIVE !== NO_USER_REVIEWS) {
+            if (GameDetectionTypes.SteamReviewScoreDescription.MIXED === NO_USER_REVIEWS) {
               return "steam-review-text-mixed";
             } else {
-              if (tmp(1934).SteamReviewScoreDescription.MOSTLY_NEGATIVE !== NO_USER_REVIEWS) {
-                if (tmp(1934).SteamReviewScoreDescription.NEGATIVE !== NO_USER_REVIEWS) {
-                  if (tmp(1934).SteamReviewScoreDescription.VERY_NEGATIVE !== NO_USER_REVIEWS) {
-                    if (tmp(1934).SteamReviewScoreDescription.OVERWHELMINGLY_NEGATIVE !== NO_USER_REVIEWS) {
+              if (GameDetectionTypes.SteamReviewScoreDescription.MOSTLY_NEGATIVE !== NO_USER_REVIEWS) {
+                if (GameDetectionTypes.SteamReviewScoreDescription.NEGATIVE !== NO_USER_REVIEWS) {
+                  if (GameDetectionTypes.SteamReviewScoreDescription.VERY_NEGATIVE !== NO_USER_REVIEWS) {
+                    if (GameDetectionTypes.SteamReviewScoreDescription.OVERWHELMINGLY_NEGATIVE !== NO_USER_REVIEWS) {
                       return "text-subtle";
                     }
                   }
@@ -35,35 +36,35 @@ export const getSteamReviewScoreDescriptionColor = function getSteamReviewScoreD
 };
 export const getSteamReviewScoreDescriptionIntl = function getSteamReviewScoreDescriptionIntl(result) {
   if (GameDetectionTypes.SteamReviewScoreDescription.NO_USER_REVIEWS === result) {
-    const intl10 = tmp(1114).intl;
-    return intl10.string(tmp(1114).t.CLMt8J);
-  } else if (tmp(1934).SteamReviewScoreDescription.OVERWHELMINGLY_POSITIVE === result) {
-    const intl9 = tmp(1114).intl;
-    return intl9.string(tmp(1114).t["75sx1S"]);
-  } else if (tmp(1934).SteamReviewScoreDescription.VERY_POSITIVE === result) {
-    const intl8 = tmp(1114).intl;
-    return intl8.string(tmp(1114).t["EkOVg+"]);
-  } else if (tmp(1934).SteamReviewScoreDescription.POSITIVE === result) {
-    const intl7 = tmp(1114).intl;
-    return intl7.string(tmp(1114).t.ZUkFtr);
-  } else if (tmp(1934).SteamReviewScoreDescription.MOSTLY_POSITIVE === result) {
-    const intl6 = tmp(1114).intl;
-    return intl6.string(tmp(1114).t.M7Z09a);
-  } else if (tmp(1934).SteamReviewScoreDescription.MIXED === result) {
-    const intl5 = tmp(1114).intl;
-    return intl5.string(tmp(1114).t.c8yuHR);
-  } else if (tmp(1934).SteamReviewScoreDescription.MOSTLY_NEGATIVE === result) {
-    const intl4 = tmp(1114).intl;
-    return intl4.string(tmp(1114).t.H0MSjG);
-  } else if (tmp(1934).SteamReviewScoreDescription.NEGATIVE === result) {
-    const intl3 = tmp(1114).intl;
-    return intl3.string(tmp(1114).t.vpLrgz);
-  } else if (tmp(1934).SteamReviewScoreDescription.VERY_NEGATIVE === result) {
-    const intl2 = tmp(1114).intl;
-    return intl2.string(tmp(1114).t["5spYuX"]);
-  } else if (tmp(1934).SteamReviewScoreDescription.OVERWHELMINGLY_NEGATIVE === result) {
-    const intl = tmp(1114).intl;
-    return intl.string(tmp(1114).t.A8uk5J);
+    const intl10 = util.intl;
+    return intl10.string(util.t.CLMt8J);
+  } else if (GameDetectionTypes.SteamReviewScoreDescription.OVERWHELMINGLY_POSITIVE === result) {
+    const intl9 = util.intl;
+    return intl9.string(util.t["75sx1S"]);
+  } else if (GameDetectionTypes.SteamReviewScoreDescription.VERY_POSITIVE === result) {
+    const intl8 = util.intl;
+    return intl8.string(util.t["EkOVg+"]);
+  } else if (GameDetectionTypes.SteamReviewScoreDescription.POSITIVE === result) {
+    const intl7 = util.intl;
+    return intl7.string(util.t.ZUkFtr);
+  } else if (GameDetectionTypes.SteamReviewScoreDescription.MOSTLY_POSITIVE === result) {
+    const intl6 = util.intl;
+    return intl6.string(util.t.M7Z09a);
+  } else if (GameDetectionTypes.SteamReviewScoreDescription.MIXED === result) {
+    const intl5 = util.intl;
+    return intl5.string(util.t.c8yuHR);
+  } else if (GameDetectionTypes.SteamReviewScoreDescription.MOSTLY_NEGATIVE === result) {
+    const intl4 = util.intl;
+    return intl4.string(util.t.H0MSjG);
+  } else if (GameDetectionTypes.SteamReviewScoreDescription.NEGATIVE === result) {
+    const intl3 = util.intl;
+    return intl3.string(util.t.vpLrgz);
+  } else if (GameDetectionTypes.SteamReviewScoreDescription.VERY_NEGATIVE === result) {
+    const intl2 = util.intl;
+    return intl2.string(util.t["5spYuX"]);
+  } else if (GameDetectionTypes.SteamReviewScoreDescription.OVERWHELMINGLY_NEGATIVE === result) {
+    const intl = util.intl;
+    return intl.string(util.t.A8uk5J);
   } else {
     return null;
   }

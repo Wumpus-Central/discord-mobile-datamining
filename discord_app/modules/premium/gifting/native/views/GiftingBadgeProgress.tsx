@@ -103,7 +103,7 @@ export default function GiftingBadgeProgress(title) {
     const intl = util.intl;
     const obj4 = { count: progress, threshold: tmp2 };
     obj3.children = intl.format(_modDef2492.iIpfQe, obj4);
-    tmp16Result = tmp16(Text_Text.Text, obj3);
+    tmp16Result = hasOwnProperty(Text_Text.Text, obj3);
   }
   obj2.children = tmp16Result;
   items1[2] = hasOwnProperty(View, obj2);
@@ -116,7 +116,7 @@ export default function GiftingBadgeProgress(title) {
   tmp16Result = null != simple_icon_url1;
   if (tmp16Result) {
     const obj5 = { icon: nextTier.simple_icon_url, size: iconSize };
-    tmp16Result = tmp16(GiftingBadgeIconDefault, obj5);
+    tmp16Result = hasOwnProperty(GiftingBadgeIconDefault, obj5);
   }
   items[2] = tmp16Result;
   obj.children = items;

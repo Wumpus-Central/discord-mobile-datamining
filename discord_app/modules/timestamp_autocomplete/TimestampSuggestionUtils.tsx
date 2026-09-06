@@ -16,7 +16,7 @@ let result = size.fileFinishedImporting("modules/timestamp_autocomplete/Timestam
 export const preloadTimestampParser = function preloadTimestampParser() {
   _mod10426;
 };
-export const queryTimestampSuggestions = function queryTimestampSuggestions(arg0, cloneResult1) {
+export const queryTimestampSuggestions = function queryTimestampSuggestions(arg0) {
   let obj = cloneResult1;
   if (cloneResult1 === undefined) {
     obj = _modDef4153();
@@ -50,13 +50,13 @@ export const queryTimestampSuggestions = function queryTimestampSuggestions(arg0
     if (tmp14) {
       start = first.start;
       let invalidResult = obj1(start.date());
-      let tmp20 = tmp16;
+      let tmp20 = importDefault;
     } else if (tmp3) {
       invalidResult = obj1.invalid();
-      tmp20 = tmp16;
+      tmp20 = importDefault;
     } else {
       invalidResult = obj1(arg0, items1, true);
-      tmp20 = tmp16;
+      tmp20 = importDefault;
     }
     let str6 = invalidResult.creationData().format;
     let cloneResult = invalidResult;
@@ -147,11 +147,10 @@ export const queryTimestampSuggestions = function queryTimestampSuggestions(arg0
               const stringResult = intl4.string(obj1.currentName);
               let stringResult2 = stringResult;
               if (obj4.isSameOrBefore(obj)) {
-                const intl5 = tmp39(1114).intl;
+                const intl5 = util.intl;
                 let stringResult1 = intl5.string(obj1.nextName);
                 stringResult2 = stringResult;
               }
-              tmp39 = require;
             } else if (obj4.isSame(cloneResult1, obj1.periodType)) {
               const intl2 = util.intl;
               stringResult2 = intl2.string(obj1.previousName);

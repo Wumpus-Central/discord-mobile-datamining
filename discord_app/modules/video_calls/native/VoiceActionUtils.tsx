@@ -16,14 +16,14 @@ const DominantMuteState = {
 const result = size.fileFinishedImporting("modules/video_calls/native/VoiceActionUtils.tsx");
 
 export { DominantMuteState };
-export const createMuteHandler = function createMuteHandler(muteStates, stateFromStores) {
+export const createMuteHandler = function createMuteHandler(muteStates) {
   let flag = stateFromStores;
   if (stateFromStores === undefined) {
     flag = false;
   }
   let dominantMuteState = obj.NONE;
   if (muteStates.selfMute) {
-    dominantMuteState = tmp.SELF_MUTE;
+    dominantMuteState = obj.SELF_MUTE;
   }
   if (flag) {
     let onPress = NOOP;
@@ -32,11 +32,11 @@ export const createMuteHandler = function createMuteHandler(muteStates, stateFro
   }
   if (muteStates.suppress) {
     onPress = CallsUtils.showSuppressedAlert;
-    dominantMuteState = tmp.SUPPRESS;
+    dominantMuteState = obj.SUPPRESS;
   }
   if (muteStates.mute) {
     onPress = CallsUtils.showServerMuteAlert;
-    dominantMuteState = tmp.SERVER_MUTE;
+    dominantMuteState = obj.SERVER_MUTE;
   }
   const mute = muteStates.selfMute || muteStates.mute || muteStates.suppress;
   return { mute, onPress, dominantMuteState };

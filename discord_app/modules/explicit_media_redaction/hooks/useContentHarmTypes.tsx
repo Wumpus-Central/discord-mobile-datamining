@@ -40,10 +40,10 @@ function useEnabledHarmTypesBitmaskForChannelAndAuthorId(channelId, authorId) {
     if (null != stateFromStores1) {
       let id;
       if (stateFromStores != null) {
-        id = tmp2.id;
+        id = stateFromStores.id;
       }
-      if (tmp !== id) {
-        if (null != tmp2) {
+      if (closure_1 !== id) {
+        if (null != stateFromStores) {
           const mapped = eligibleHarmTypesConfigsForContext.map((harmType) => {
             let tmp3 = null;
             if (null != stateFromStores1) {
@@ -59,7 +59,6 @@ function useEnabledHarmTypesBitmaskForChannelAndAuthorId(channelId, authorId) {
         }
         return [];
       }
-      tmp = closure_1;
     }
   }, items4);
   if (0 === memo.length) {

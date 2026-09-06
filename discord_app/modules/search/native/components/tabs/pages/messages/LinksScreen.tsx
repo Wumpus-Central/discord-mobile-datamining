@@ -105,16 +105,12 @@ export default noop.memo(function LinksScreen(searchContext) {
       let obj = { numColumns: placeholderCount, numResults: items.length, placeholderCount: tmp2 };
       const adjustedPlaceholderCount = searchContext(fileOrLinkImageDimensions[10]).getAdjustedPlaceholderCount(obj);
       for (let num = 0; num < adjustedPlaceholderCount; num = num + 1) {
-        let element = { type: null, key: null, props: null };
-        element.type = onPressSearchLink.FILE_OR_LINK_PLACEHOLDER;
+        let element = { type: onPressSearchLink.FILE_OR_LINK_PLACEHOLDER, key: null, props: null };
         let _HermesInternal = HermesInternal;
         element.key = "file-or-link-placeholder-" + num;
-        obj = { imageStyle: null, containerStyle: null };
-        obj.imageStyle = fileOrLinkImageDimensions;
+        obj = { imageStyle: fileOrLinkImageDimensions, containerStyle: null };
         let obj3 = searchContext(fileOrLinkImageDimensions[9]);
-        let obj1 = { itemIndex: length + num, spacing: null, numColumns: null };
-        obj1.spacing = spacing;
-        obj1.numColumns = placeholderCount;
+        let obj1 = { itemIndex: length + num, spacing, numColumns: placeholderCount };
         obj.containerStyle = obj3.getGridItemSpacingStyles(obj1);
         element.props = obj;
         let arr = items.push(element);

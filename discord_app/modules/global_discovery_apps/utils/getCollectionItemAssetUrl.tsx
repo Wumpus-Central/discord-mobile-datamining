@@ -25,7 +25,7 @@ export const getCollectionItemAssetUrl = function getCollectionItemAssetUrl(arg0
     const _HermesInternal2 = HermesInternal;
     let combined =
       "https://" +
-      tmp2 +
+      React4 +
       "/app-assets/application-directory/collection-items/" +
       itemId +
       "/" +

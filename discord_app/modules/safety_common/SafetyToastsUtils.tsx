@@ -1,5 +1,8 @@
 // discord_app/modules/safety_common/SafetyToastsUtils.tsx
 import util from "../../intl/index.native.tsx";
+import _modDef2528 from "../report_to_mod/ReportToMod.messages.js";
+import _modDef2946 from "../age_assurance/AgeAssurance.messages.js";
+import UserUtilsDefault from "../../utils/UserUtils.tsx";
 import NicknameUtilsDefault from "../../utils/NicknameUtils.tsx";
 import ChannelStore from "../../stores/ChannelStore.tsx";
 import UserStore from "../../stores/UserStore.tsx";
@@ -23,67 +26,67 @@ export const getSafetyToastTypeContent = function getSafetyToastTypeContent(BLOC
   }
   let name = obj.getName(guild_id, id, user);
   if (name == null) {
-    name = tmp3(4404).getGlobalName(user);
-    const tmp3Result = tmp3(4404);
+    name = UserUtilsDefault.getGlobalName(user);
+    const tmp3Result = UserUtilsDefault;
   }
   if (SafetyToastType.IGNORE_SUCCESS === BLOCK_SUCCESS) {
     const intl18 = util.intl;
     obj = { username: name };
     return intl18.formatToPlainString(util.t["+joqrP"], obj);
-  } else if (tmp8.UNIGNORE_SUCCESS === BLOCK_SUCCESS) {
+  } else if (SafetyToastType.UNIGNORE_SUCCESS === BLOCK_SUCCESS) {
     const intl17 = util.intl;
     obj = { username: name };
     return intl17.formatToPlainString(util.t.THExKa, obj);
-  } else if (tmp8.BLOCK_SUCCESS === BLOCK_SUCCESS) {
+  } else if (SafetyToastType.BLOCK_SUCCESS === BLOCK_SUCCESS) {
     const intl16 = util.intl;
     const obj1 = { username: name };
     return intl16.formatToPlainString(util.t.XXPrIs, obj1);
-  } else if (tmp8.UNBLOCK_SUCCESS === BLOCK_SUCCESS) {
+  } else if (SafetyToastType.UNBLOCK_SUCCESS === BLOCK_SUCCESS) {
     const intl15 = util.intl;
     const obj2 = { username: name };
     return intl15.formatToPlainString(util.t.uExcGX, obj2);
-  } else if (tmp8.MUTE_SUCCESS === BLOCK_SUCCESS) {
+  } else if (SafetyToastType.MUTE_SUCCESS === BLOCK_SUCCESS) {
     const intl14 = util.intl;
     const obj3 = { username: name };
     return intl14.formatToPlainString(util.t.X4NtYb, obj3);
-  } else if (tmp8.UNMUTE_SUCCESS === BLOCK_SUCCESS) {
+  } else if (SafetyToastType.UNMUTE_SUCCESS === BLOCK_SUCCESS) {
     const intl13 = util.intl;
     const obj4 = { username: name };
     return intl13.formatToPlainString(util.t.tRaBfY, obj4);
-  } else if (tmp8.REPORT_SUCCESS === BLOCK_SUCCESS) {
+  } else if (SafetyToastType.REPORT_SUCCESS === BLOCK_SUCCESS) {
     const intl12 = util.intl;
     const obj5 = { username: name };
     return intl12.formatToPlainString(util.t.FOptFU, obj5);
-  } else if (tmp8.TIGGER_PAWTECT_ERROR === BLOCK_SUCCESS) {
+  } else if (SafetyToastType.TIGGER_PAWTECT_ERROR === BLOCK_SUCCESS) {
     const intl11 = util.intl;
     return intl11.string(util.t.c6kn6F);
-  } else if (tmp8.AGE_VERIFICATION_FAE_FAILED === BLOCK_SUCCESS) {
+  } else if (SafetyToastType.AGE_VERIFICATION_FAE_FAILED === BLOCK_SUCCESS) {
     const intl10 = util.intl;
-    return intl10.string(tmp3(2946)["9F2y52"]);
-  } else if (tmp8.AGE_VERIFICATION_ID_FAILED === BLOCK_SUCCESS) {
+    return intl10.string(_modDef2946["9F2y52"]);
+  } else if (SafetyToastType.AGE_VERIFICATION_ID_FAILED === BLOCK_SUCCESS) {
     const intl9 = util.intl;
-    return intl9.string(tmp3(2946)["40UKek"]);
-  } else if (tmp8.AGE_VERIFICATION_UNDERAGE === BLOCK_SUCCESS) {
+    return intl9.string(_modDef2946["40UKek"]);
+  } else if (SafetyToastType.AGE_VERIFICATION_UNDERAGE === BLOCK_SUCCESS) {
     const intl8 = util.intl;
-    return intl8.string(tmp3(2946).XBGt7g);
-  } else if (tmp8.TIGGER_PAWTECT_VERIFIED === BLOCK_SUCCESS) {
+    return intl8.string(_modDef2946.XBGt7g);
+  } else if (SafetyToastType.TIGGER_PAWTECT_VERIFIED === BLOCK_SUCCESS) {
     const intl7 = util.intl;
     return intl7.string(util.t["7nKAXx"]);
-  } else if (tmp8.GENERIC_ERROR === BLOCK_SUCCESS) {
+  } else if (SafetyToastType.GENERIC_ERROR === BLOCK_SUCCESS) {
     const intl6 = util.intl;
     return intl6.string(util.t.zBpoc7);
-  } else if (tmp8.REPORT_TO_MOD_SUCCESS === BLOCK_SUCCESS) {
+  } else if (SafetyToastType.REPORT_TO_MOD_SUCCESS === BLOCK_SUCCESS) {
     const intl5 = util.intl;
-    return intl5.string(tmp3(2528).iBypeZ);
-  } else if (tmp8.SAFETY_FEEDBACK_SUCCESS === BLOCK_SUCCESS) {
+    return intl5.string(_modDef2528.iBypeZ);
+  } else if (SafetyToastType.SAFETY_FEEDBACK_SUCCESS === BLOCK_SUCCESS) {
     const intl4 = util.intl;
     return intl4.string(util.t.TcFR5k);
-  } else if (tmp8.EXISTING_USER_AGE_GATE_SUCCESS === BLOCK_SUCCESS) {
+  } else if (SafetyToastType.EXISTING_USER_AGE_GATE_SUCCESS === BLOCK_SUCCESS) {
     const intl3 = util.intl;
     return intl3.string(util.t["susqq/"]);
-  } else if (tmp8.AGE_VERIFICATION_METHOD_UNAVAILABLE === BLOCK_SUCCESS) {
+  } else if (SafetyToastType.AGE_VERIFICATION_METHOD_UNAVAILABLE === BLOCK_SUCCESS) {
     const intl2 = util.intl;
-    return intl2.string(tmp3(2946).vVwFCK);
+    return intl2.string(_modDef2946.vVwFCK);
   } else {
     const intl = util.intl;
     return intl.string(util.t["+c5xtT"]);

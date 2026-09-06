@@ -22,7 +22,7 @@ function getFriendInviteCode() {
   }
   return applyArgumentsResult;
 }
-let closure_11 = async function _getFriendInviteCode(arg0, value) {
+let closure_11 = async function _getFriendInviteCode() {
   if (c5 === 2) {
     c5 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -103,7 +103,7 @@ function handleShare() {
   }
   return applyArgumentsResult;
 }
-let closure_13 = async function _handleShare(arg0, value) {
+let closure_13 = async function _handleShare() {
   if (c3 === 2) {
     c3 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -173,7 +173,7 @@ function handleLink() {
   }
   return applyArgumentsResult;
 }
-let closure_15 = async function _handleLink(arg0, value) {
+let closure_15 = async function _handleLink() {
   if (c3 === 2) {
     c3 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");

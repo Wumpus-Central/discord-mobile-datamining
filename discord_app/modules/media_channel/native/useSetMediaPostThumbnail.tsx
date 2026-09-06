@@ -11,7 +11,7 @@ const result = size.fileFinishedImporting("modules/media_channel/native/useSetMe
 
 export default function useSetMediaPostThumbnail(arg0, arg1) {
   _require = arg0;
-  closure_1 = arg1;
+  const user = arg1;
   const items = [UploadAttachmentStore];
   stateFromStores = require("useStateFromStores").useStateFromStores(items, () => {
     const uploads = UploadAttachmentStore.getUploads(closure_0, DraftType.ChannelMessage);
@@ -37,33 +37,33 @@ export default function useSetMediaPostThumbnail(arg0, arg1) {
   const items1 = [stateFromStores, arg0, arg1];
   return noop.useCallback(() => {
     let id;
-    if (closure_1 != null) {
-      id = tmp.id;
+    if (user != null) {
+      id = user.id;
     }
     if (null != id) {
       let tmp4 = null != stateFromStores;
       if (tmp4) {
         let id1;
-        if (tmp != null) {
-          id1 = tmp.id;
+        if (user != null) {
+          id1 = user.id;
         }
-        tmp4 = tmp24.id !== id1;
+        tmp4 = stateFromStores.id !== id1;
       }
       if (tmp4) {
         let obj = UploadAttachmentActionCreatorsDefault;
-        obj.update(closure_0, tmp24.id, DraftType.ChannelMessage, { thumbnail: false });
+        obj.update(closure_0, stateFromStores.id, DraftType.ChannelMessage, { thumbnail: false });
       }
       let flag;
-      if (tmp != null) {
-        flag = tmp.isThumbnail;
+      if (user != null) {
+        flag = user.isThumbnail;
       }
       if (flag == null) {
         flag = false;
       }
       const obj2 = UploadAttachmentActionCreatorsDefault;
       let id2;
-      if (tmp != null) {
-        id2 = tmp.id;
+      if (user != null) {
+        id2 = user.id;
       }
       obj = { thumbnail: !flag, spoiler: false };
       obj2.update(closure_0, id2, DraftType.ChannelMessage, obj);

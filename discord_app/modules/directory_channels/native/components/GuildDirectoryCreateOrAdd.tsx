@@ -149,12 +149,12 @@ let closure_14 = noop.memo((guild) => {
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/directory_channels/native/components/GuildDirectoryCreateOrAdd.tsx");
 
-export default function GuildDirectoryCreateOrAdd(set) {
-  _require = set;
+export default function GuildDirectoryCreateOrAdd(current) {
+  _require = current;
   const tmp = closure_12();
   let obj = require("useNavigation");
   const navigation = obj.useNavigation();
-  ref = addedGuilds.useRef(set);
+  ref = addedGuilds.useRef(current);
   let tmp6 = navigation(ref[19])(ref);
   const effect = addedGuilds.useEffect(() => {
     ref.current = current;
@@ -219,18 +219,18 @@ export default function GuildDirectoryCreateOrAdd(set) {
     items3,
   );
   if (tmp8.loading) {
-    obj = { style: tmp.loadingContainer, children: tmp15(tabIndex, {}) };
-    let tmp15Result = tmp15(bottom, obj);
+    obj = { style: tmp.loadingContainer, children: closure_10(tabIndex, {}) };
+    let tmp15Result = closure_10(bottom, obj);
   } else {
     obj = { children: null };
     const obj1 = { style: tmp.container, children: null };
     const obj2 = { data: memo, ListHeaderComponent: callback2, renderItem: callback1, contentContainerStyle: tmp14 };
-    const items4 = [tmp15(setTabIndex, obj2)];
+    const items4 = [closure_10(setTabIndex, obj2)];
     const obj3 = { handleFooterPress: callback };
-    items4[1] = tmp15(GuildDirectoryCreateOrAddFooter, obj3);
+    items4[1] = closure_10(GuildDirectoryCreateOrAddFooter, obj3);
     obj1.children = items4;
     obj.children = closure_11(bottom, obj1);
-    tmp15Result = tmp15(require("GuildDirectoryAddModal").GuildDirectoryAddModalScreen, obj);
+    tmp15Result = closure_10(require("GuildDirectoryAddModal").GuildDirectoryAddModalScreen, obj);
   }
   return tmp15Result;
 }

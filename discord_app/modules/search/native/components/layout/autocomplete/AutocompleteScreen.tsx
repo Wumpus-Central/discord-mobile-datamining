@@ -62,12 +62,12 @@ export default noop.memo(function AutocompleteScreen(searchContext) {
     const prefixTag = SearchQueryStore.getPrefixTag(searchContext);
     if (null != prefixTag) {
       let obj = SearchPlatformActionCreatorsDefault;
-      obj.updateSearchQuery(tmp, (setTextInputValue) => {
+      obj.updateSearchQuery(searchContext, (setTextInputValue) => {
         setTextInputValue.setTextInputValue("");
         setTextInputValue.addTag({ type: constants2.ANSWER, text });
         const result = setTextInputValue.restoreDraftTextInputValue();
       });
-      obj = { searchContext: tmp, searchTokenType: null, location: null };
+      obj = { searchContext, searchTokenType: null, location: null };
       ({ searchTokenType: obj3.searchTokenType, location: obj3.location } = prefixTag);
       search_tracking_TrackingDefault.trackSearchFilterAdd(obj);
       callback();
@@ -80,13 +80,13 @@ export default noop.memo(function AutocompleteScreen(searchContext) {
       const prefixTag = SearchQueryStore.getPrefixTag(searchContext);
       if (null != prefixTag) {
         let obj = SearchPlatformActionCreatorsDefault;
-        obj.updateSearchQuery(tmp9, (setTextInputValue) => {
+        obj.updateSearchQuery(searchContext, (setTextInputValue) => {
           setTextInputValue.setTextInputValue("");
           const obj = { type: constants2.ANSWER, text: stateFromStores(first[15]).getUserTag(user), userId: user.id };
           setTextInputValue.addTag(obj);
           const result = setTextInputValue.restoreDraftTextInputValue();
         });
-        obj = { searchContext: tmp9, searchTokenType: null, location: null };
+        obj = { searchContext, searchTokenType: null, location: null };
         ({ searchTokenType: obj3.searchTokenType, location: obj3.location } = prefixTag);
         search_tracking_TrackingDefault.trackSearchFilterAdd(obj);
         callback();
@@ -101,13 +101,12 @@ export default noop.memo(function AutocompleteScreen(searchContext) {
       if (null != prefixTag) {
         let userTag = useChannelName.computeChannelName(channel, UserStore, RelationshipStore);
         if (channel.isDM()) {
-          const user = obj6.getUser(channel.getRecipientId());
+          const user = UserStore.getUser(channel.getRecipientId());
           if (null != user) {
             userTag = UserUtilsDefault.getUserTag(user);
           }
         }
-        obj6 = UserStore;
-        SearchPlatformActionCreatorsDefault.updateSearchQuery(tmp8, (setTextInputValue) => {
+        SearchPlatformActionCreatorsDefault.updateSearchQuery(searchContext, (setTextInputValue) => {
           setTextInputValue.setTextInputValue("");
           const obj = {
             type: constants2.ANSWER,
@@ -117,7 +116,7 @@ export default noop.memo(function AutocompleteScreen(searchContext) {
           setTextInputValue.addTag(obj);
           const result = setTextInputValue.restoreDraftTextInputValue();
         });
-        let obj = { searchContext: tmp8, searchTokenType: null, location: null };
+        let obj = { searchContext, searchTokenType: null, location: null };
         ({ searchTokenType: obj4.searchTokenType, location: obj4.location } = prefixTag);
         search_tracking_TrackingDefault.trackSearchFilterAdd(obj);
         callback();
@@ -173,16 +172,11 @@ export default noop.memo(function AutocompleteScreen(searchContext) {
   const memo = fullscreenPlaceholderCount.useMemo(() => {
     const items = [];
     if (set1) {
-      let num2 = 0;
-      if (0 < fullscreenPlaceholderCount) {
-        do {
-          let obj = { type: null, key: null };
-          obj.type = constants.MESSAGE_PLACEHOLDER;
-          let _HermesInternal = HermesInternal;
-          obj.key = "message-placeholder-" + num2;
-          let arr = items.push(obj);
-          num2 = num2 + 1;
-        } while (num2 < fullscreenPlaceholderCount);
+      for (let num2 = 0; num2 < fullscreenPlaceholderCount; num2 = num2 + 1) {
+        let obj = { type: constants.MESSAGE_PLACEHOLDER, key: null };
+        let _HermesInternal = HermesInternal;
+        obj.key = "message-placeholder-" + num2;
+        let arr = items.push(obj);
       }
       return items;
     } else {
@@ -215,7 +209,7 @@ export default noop.memo(function AutocompleteScreen(searchContext) {
                 set.add(id);
                 items.push(toSearchListUserItemResult);
               }
-              let tmpResult = tmp(16725);
+              let tmpResult = AutocompleteScreenUtils;
               const result = tmpResult.toSearchListChannelItem(channel, callback3);
               let id1;
               if (channel != null) {
@@ -236,7 +230,7 @@ export default noop.memo(function AutocompleteScreen(searchContext) {
               if (tmp22) {
                 const element = { type: constants.GENERIC, props: null };
                 obj = { text, icon: null, onPress: null };
-                tmpResult = tmp(16725);
+                tmpResult = AutocompleteScreenUtils;
                 obj.icon = tmpResult.getSearchFilterHasIcon(text);
                 obj.onPress = callback1;
                 element.props = obj;
@@ -244,11 +238,12 @@ export default noop.memo(function AutocompleteScreen(searchContext) {
               }
               if (tmp27) {
                 const element1 = { type: constants.GENERIC, props: null };
-                obj = { text, icon: tmp(16725).getSearchFilterAuthorTypeIcon(text), onPress: callback1 };
+                obj = { text, icon: AutocompleteScreenUtils.getSearchFilterAuthorTypeIcon(text), onPress: callback1 };
                 element1.props = obj;
                 items.push(element1);
-                const tmpResult1 = tmp(16725);
+                const tmpResult1 = AutocompleteScreenUtils;
               }
+              tmp27 = closure_1_0 === constants2.FILTER_AUTHOR_TYPE && null != text;
             });
           }
         }
@@ -256,14 +251,14 @@ export default noop.memo(function AutocompleteScreen(searchContext) {
       if (0 === items.length) {
         if (mode.type !== constants3.FILTER) {
           if (null != tokens[tokens.length - 1]) {
-            const token = new tmp2(tmp3[19]).Token(tmp32);
+            const token = new searchContext(first[19]).Token(tmp32);
             if (token.type === constants4.ANSWER_USERNAME_FROM) {
-              let tmp2Result = tmp2(tmp3[20]);
+              let tmp2Result = searchContext(first[20]);
               if (tmp2Result.isValidUserAutocomplete(token)) {
                 const data = token.getData("userId");
                 if (null != data) {
                   const user = callback2.getUser(data);
-                  tmp2Result = tmp2(tmp3[18]);
+                  tmp2Result = searchContext(first[18]);
                   let toSearchListUserItemResult = tmp2Result.toSearchListUserItem(tmp4, user, callback2);
                   let id;
                   if (user != null) {
@@ -302,7 +297,7 @@ export default noop.memo(function AutocompleteScreen(searchContext) {
                   });
                 }
               }
-              tmp2Result1 = tmp2(tmp3[20]);
+              tmp2Result1 = searchContext(first[20]);
             }
           }
         }

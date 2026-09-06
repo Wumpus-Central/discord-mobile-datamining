@@ -26,10 +26,10 @@ export default function useAvailableBoostCountForPowerup(arg0, arg1) {
   const items2 = [arg1, stateFromStores1];
   const memo = noop.useMemo(() => {
     if (null != closure_1) {
-      if (tmp.type === constants.LEVEL) {
+      if (closure_1.type === constants.LEVEL) {
         if (null != stateFromStores1) {
           closure_0 = tmp9;
-          if (null == closure_1_8[tmp.skuId]) {
+          if (null == closure_1_8[closure_1.skuId]) {
             let items = [];
           } else {
             const _Object = Object;

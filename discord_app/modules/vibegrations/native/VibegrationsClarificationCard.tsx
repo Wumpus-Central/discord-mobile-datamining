@@ -64,16 +64,14 @@ export default function VibegrationsClarificationCard(clarification) {
       closure_4(obj);
       const result = VibegrationsClarification.nextClarificationStep(clarification, obj, bound);
       if (null == result) {
-        const result1 = tmp13(16607).formatClarificationAnswers(tmp15, obj);
+        const result1 = VibegrationsClarification.formatClarificationAnswers(clarification, obj);
         if ("" !== result1) {
           tmp(result1);
         }
-        const tmp13Result = tmp13(16607);
+        const tmp13Result = VibegrationsClarification;
       } else {
         closure_6(result);
       }
-      tmp13 = require;
-      tmp15 = clarification;
     }
   }, items);
   let items1 = [callback];
@@ -83,7 +81,7 @@ export default function VibegrationsClarificationCard(clarification) {
   const callback1 = noop.useCallback(() => {
     if (!closure_7) {
       if (0 !== bound) {
-        closure_0 = clarification.questions[tmp - 1];
+        closure_0 = clarification.questions[bound - 1];
         closure_4((arg0) => {
           const merged = Object.assign(arg0);
           delete tmp[tmp2];
@@ -94,7 +92,7 @@ export default function VibegrationsClarificationCard(clarification) {
           delete tmp[tmp2];
           return {};
         });
-        closure_6(tmp - 1);
+        closure_6(bound - 1);
       }
     }
   }, items2);
@@ -135,12 +133,12 @@ export default function VibegrationsClarificationCard(clarification) {
       fn = () => closure_11(closure_0);
     }
     let obj = { onPress: fn, accessibilityLabel: null, children: null };
-    const intl = tmp2(tmp3[8]).intl;
+    const intl = clarification(optionHeader[8]).intl;
     if (true === answer.recommended) {
-      let k7lEgj = onSubmit(tmp3[9]).aL1BKQ;
+      let k7lEgj = onSubmit(optionHeader[9]).aL1BKQ;
       let tmp5 = onSubmit;
     } else {
-      k7lEgj = onSubmit(tmp3[9]).k7lEgj;
+      k7lEgj = onSubmit(optionHeader[9]).k7lEgj;
       tmp5 = onSubmit;
     }
     obj = { answer: answer.label };
@@ -156,9 +154,9 @@ export default function VibegrationsClarificationCard(clarification) {
     let tmp8Result = null;
     if (true === answer.recommended) {
       const obj2 = { variant: "text-xs/semibold", color: "text-muted", children: null };
-      const intl2 = tmp2(tmp3[8]).intl;
-      obj2.children = intl2.string(tmp5(tmp3[9]).OXRWyV);
-      tmp8Result = tmp8(tmp2(tmp3[7]).Text, obj2);
+      const intl2 = clarification(optionHeader[8]).intl;
+      obj2.children = intl2.string(tmp5(optionHeader[9]).OXRWyV);
+      tmp8Result = closure_6(clarification(optionHeader[7]).Text, obj2);
     }
     items[1] = tmp8Result;
     obj.children = items;
@@ -168,7 +166,7 @@ export default function VibegrationsClarificationCard(clarification) {
       tmp8Result = null;
       if ("" !== answer.detail) {
         const obj3 = { variant: "text-xs/normal", color: "text-muted", children: answer.detail };
-        tmp8Result = tmp8(tmp2(tmp3[7]).Text, obj3);
+        tmp8Result = closure_6(clarification(optionHeader[7]).Text, obj3);
       }
     }
     items1[1] = tmp8Result;

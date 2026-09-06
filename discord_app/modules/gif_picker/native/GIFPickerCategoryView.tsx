@@ -4,6 +4,8 @@ import util from "../../../intl/index.native.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import useAccessibilityPressDefault from "../../a11y/native/useAccessibilityPress.tsx";
+import StarIcon from "../../../design/components/Icon/native/redesign/generated/StarIcon.tsx";
+import AnalyticsIcon from "../../../design/components/Icon/native/redesign/generated/AnalyticsIcon.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -59,13 +61,13 @@ export default function GIFPickerCategoryView(onSelectCategory) {
   const items1 = [React5(FastImageDefault, obj), React5(React4, { style: tmp.gifOverlay })];
   const obj2 = { style: tmp.categoryName, accessible: false, children: null };
   if (item.type === GIFPickerResultTypes.TRENDING_GIFS) {
-    const obj3 = { size: "sm", style: tmp.categoryNameIcon, color: tmp6(576).colors.WHITE };
-    let tmp10Result = tmp10(tmp3(10384).AnalyticsIcon, obj3);
+    const obj3 = { size: "sm", style: tmp.categoryNameIcon, color: nativeDefault.colors.WHITE };
+    let tmp10Result = React5(AnalyticsIcon.AnalyticsIcon, obj3);
   } else {
     tmp10Result = null;
     if (item.type === tmp12.FAVORITES) {
-      const obj4 = { size: "sm", style: tmp.categoryNameIcon, color: tmp6(576).colors.WHITE };
-      tmp10Result = tmp10(tmp3(10235).StarIcon, obj4);
+      const obj4 = { size: "sm", style: tmp.categoryNameIcon, color: nativeDefault.colors.WHITE };
+      tmp10Result = React5(StarIcon.StarIcon, obj4);
     }
   }
   const items2 = [

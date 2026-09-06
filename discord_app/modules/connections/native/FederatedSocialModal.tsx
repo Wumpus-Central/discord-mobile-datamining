@@ -44,7 +44,7 @@ export default function FederatedSocialModal(platformType) {
   obj.render = function render() {
     ({ location: closure_0, successRedirect: closure_1, platformType } = platformType);
     const onClose = platformType.onClose;
-    closure_7 = async function _tryHandle(arg0, value) {
+    closure_7 = async function _tryHandle() {
       if (c5 === 2) {
         c5 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");

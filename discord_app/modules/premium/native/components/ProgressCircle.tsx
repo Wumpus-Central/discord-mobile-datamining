@@ -55,7 +55,7 @@ prototype["render"] = function render() {
   let tmp4 = null;
   if (null != children) {
     obj = { style: tmp.circleOverlay, children };
-    tmp4 = React4(tmp3, obj);
+    tmp4 = React4(View, obj);
   }
   items1[1] = tmp4;
   obj.children = items1;

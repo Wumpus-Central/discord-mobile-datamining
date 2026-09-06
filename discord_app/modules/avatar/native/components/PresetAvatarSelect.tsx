@@ -34,7 +34,7 @@ function DefaultAvatarButton(selected) {
     children: null,
   };
   items[1] = prop;
-  const intl = tmp3(1114).intl;
+  const intl = util.intl;
   obj.accessibilityHint = intl.string(util.t.vw2RsD);
   obj.onPress = onSelect;
   obj = { style: tmp.defaultAvatarButton, source: { uri: source } };

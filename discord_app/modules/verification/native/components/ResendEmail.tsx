@@ -104,8 +104,8 @@ export default function ResendEmail() {
     const intl4 = tmp2(1114).intl;
     obj6.text = intl4.string(tmp2(1114).t.Vm8akB);
     obj6.onPress = callback;
-    obj5.children = tmp16(tmp2(4975).Button, obj6);
-    tmp16Result = tmp16(tmp15, obj5);
+    obj5.children = closure_9(tmp2(4975).Button, obj6);
+    tmp16Result = closure_9(View, obj5);
   }
   items4[4] = tmp16Result;
   obj.children = items4;

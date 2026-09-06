@@ -97,16 +97,15 @@ function computeGuildMediaState(guildId) {
     map = new Map();
     allApplicationStreams = allApplicationStreams.getAllApplicationStreams();
     for (const item10029 of allApplicationStreams) {
-      let tmp7 = item10029;
       if (null != item10029.guildId) {
-        if (!blockedOrIgnoredIDs.has(tmp7.ownerId)) {
-          value = map.get(tmp7.guildId);
+        if (!blockedOrIgnoredIDs.has(item10029.ownerId)) {
+          value = map.get(item10029.guildId);
           let arr = value;
           if (null != value) {
-            arr = arr.push(tmp7.channelId);
+            arr = arr.push(item10029.channelId);
           } else {
-            let items = [tmp7.channelId];
-            let result = map.set(tmp7.guildId, items);
+            let items = [item10029.channelId];
+            let result = map.set(item10029.guildId, items);
           }
         }
       }
@@ -204,15 +203,13 @@ function computeGuildMediaState(guildId) {
     const usersWithVideo = VoiceStateStore.getUsersWithVideo(guildId);
     for (const item10049 of usersWithVideo) {
       let blockedOrIgnoredUserIds = tmp2.blockedOrIgnoredUserIds;
-      let tmp20 = item10049;
       if (!blockedOrIgnoredUserIds.has(item10049)) {
-        let tmp23 = voiceStates[tmp20];
+        let tmp23 = voiceStates[item10049];
         let channelId;
-        let tmp21 = isBadgeableVoiceChannel;
         if (tmp23 != null) {
           channelId = tmp23.channelId;
         }
-        if (tmp21(arg0, channelId, afkChannelId, tmp2.skipMutedVcs)) {
+        if (isBadgeableVoiceChannel(arg0, channelId, afkChannelId, tmp2.skipMutedVcs)) {
           flag = true;
           obj.return();
           break;

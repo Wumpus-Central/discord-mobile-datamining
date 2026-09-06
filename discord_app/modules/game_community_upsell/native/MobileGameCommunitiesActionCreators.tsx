@@ -64,11 +64,13 @@ export const fetchMobileGameCommunities = function fetchMobileGameCommunities(ga
               value.then(() => { ... }, () => { ... }).catch(/* F123678 */ function() { ... });
             });
           }
+          let obj = closure_1_1(dependencyMap[4]);
         }).catch(() => {
 
         });
       });
     }
+    let obj = closure_1_1(dependencyMap[4]);
   });
 };
 export const fetchMobileGameCommunitiesIfStale = function fetchMobileGameCommunitiesIfStale() {
@@ -128,11 +130,13 @@ export const fetchMobileGameCommunitiesIfStale = function fetchMobileGameCommuni
                   value.then(() => { ... }, () => { ... }).catch(/* F123678 */ function() { ... });
                 });
               }
+              let obj = closure_1_1(dependencyMap[4]);
             }).catch(() => {
 
             });
           });
         }
+        let obj = closure_1_1(dependencyMap[4]);
       });
     }
   }

@@ -31,10 +31,9 @@ export default function useGuildRoleMemberCounts(arg0) {
       }
       if (!tmp4) {
         const _Date2 = Date;
-        tmp2[tmp] = Date.now();
-        const memberCounts = GuildRoleMemberActionCreatorsAll.fetchMemberCounts(tmp);
+        closure_5[closure_0] = Date.now();
+        const memberCounts = GuildRoleMemberActionCreatorsAll.fetchMemberCounts(closure_0);
       }
-      tmp2 = closure_5;
     }
   }, items1);
   return stateFromStores;

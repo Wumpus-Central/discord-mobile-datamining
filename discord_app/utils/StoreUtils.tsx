@@ -10,7 +10,7 @@ import SubscriptionStore from "../stores/billing/SubscriptionStore.tsx";
 import allSettled from "../../_runtime/04803_allSettled.js";
 
 require = fn;
-let closure_10 = async function _httpGetWithCountryCodeQuery(arg0, value) {
+let closure_10 = async function _httpGetWithCountryCodeQuery(arg0) {
   if (c8 === 2) {
     c8 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -83,7 +83,7 @@ let closure_10 = async function _httpGetWithCountryCodeQuery(arg0, value) {
                 }
                 closure_133_3.push(
                   (function waitForSubscriptionsToBeFetched() {
-                    closure_0 = closure_2(function* (arg0, value) {
+                    closure_0 = closure_2(function* (arg0) {
                       if (c3 === 2) {
                         c3 = 3;
                         throw new TypeError("Generator functions may not be called on executing generators");
@@ -111,7 +111,7 @@ let closure_10 = async function _httpGetWithCountryCodeQuery(arg0, value) {
                               c1 = 0;
                               closure_129_0 = closure_0;
                               if (closure_1_6.hasFetchedSubscriptions()) {
-                                tmp18();
+                                closure_0();
                               } else if (closure_1_4.isSubscriptionFetching) {
                                 function wait() {
                                   if (closure_2_4.isSubscriptionFetching) {
@@ -132,7 +132,6 @@ let closure_10 = async function _httpGetWithCountryCodeQuery(arg0, value) {
                                 return obj1;
                               }
                               c3 = 3;
-                              tmp18 = closure_0;
                             }
                           } else if (arg0 === 1) {
                             c3 = 3;
@@ -257,7 +256,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("utils/StoreUtils.tsx");
 
 export const SUPPORTS_WEBP = tmp4;
-export const getAssetURL = function getAssetURL(arg0, mimeType, arg2, mp4) {
+export const getAssetURL = function getAssetURL(application_id, mimeType, size, mp4) {
   let str = mp4;
   if (null == mp4) {
     str = "mp4";
@@ -277,17 +276,17 @@ export const getAssetURL = function getAssetURL(arg0, mimeType, arg2, mp4) {
   }
   if (null != CDN_HOST) {
     const _HermesInternal2 = HermesInternal;
-    let combined = "" + "https:" + "//" + CDN_HOST + "/app-assets/" + arg0 + "/store/" + id + "." + str;
+    let combined = "" + "https:" + "//" + CDN_HOST + "/app-assets/" + application_id + "/store/" + id + "." + str;
   } else {
     const _window = window;
     const _HermesInternal = HermesInternal;
-    combined = "" + "https:" + window.GLOBAL_ENV.API_ENDPOINT + React5.STORE_ASSET(arg0, id, str);
+    combined = "" + "https:" + window.GLOBAL_ENV.API_ENDPOINT + React5.STORE_ASSET(application_id, id, str);
   }
   let sum = combined;
-  if (null != arg2) {
+  if (null != size) {
     const obj = ImageLoaderUtils;
     const _HermesInternal3 = HermesInternal;
-    sum = combined + "?size=" + obj.getBestMediaProxySize(arg2 * ImageLoaderUtils.getDevicePixelRatio());
+    sum = combined + "?size=" + obj.getBestMediaProxySize(size * ImageLoaderUtils.getDevicePixelRatio());
   }
   return sum;
 };
@@ -304,9 +303,9 @@ export const httpGetWithCountryCodeQuery = function httpGetWithCountryCodeQuery(
 export const nativePlatformTypeToSKUOperatingSystem = function nativePlatformTypeToSKUOperatingSystem(platform) {
   if (PlatformUtils.PlatformTypes.WINDOWS === platform) {
     return constants.WINDOWS;
-  } else if (tmp(1115).PlatformTypes.OSX === platform) {
+  } else if (PlatformUtils.PlatformTypes.OSX === platform) {
     return constants.MACOS;
-  } else if (tmp(1115).PlatformTypes.LINUX === platform) {
+  } else if (PlatformUtils.PlatformTypes.LINUX === platform) {
     return constants.LINUX;
   } else {
     return null;
@@ -316,10 +315,10 @@ export const skuOperatingSystemToText = function skuOperatingSystemToText(arg0) 
   if (constants.WINDOWS === arg0) {
     const intl3 = util.intl;
     return intl3.string(util.t["0/xHFO"]);
-  } else if (tmp.MACOS === arg0) {
+  } else if (constants.MACOS === arg0) {
     const intl2 = util.intl;
     return intl2.string(util.t.E4u4n5);
-  } else if (tmp.LINUX === arg0) {
+  } else if (constants.LINUX === arg0) {
     const intl = util.intl;
     return intl.string(util.t.tcawo3);
   } else {

@@ -62,9 +62,9 @@ class UserSettingsPremiumGuildSubscriptions extends PureComponent {
       obj = { destinationPane: constants2.PREMIUM };
       const result = UserSettingsUtils.trackUserSettingsPaneViewed(obj);
       if (null != found) {
-        navigation.navigate(tmp2.PREMIUM, undefined, { pop: true });
+        navigation.navigate(constants2.PREMIUM, undefined, { pop: true });
       } else {
-        navigation.push(tmp2.PREMIUM);
+        navigation.push(constants2.PREMIUM);
       }
     };
     return applyArgumentsResult;
@@ -82,6 +82,7 @@ prototype["componentDidMount"] = function componentDidMount() {
   if (!self.props.isFetchingPaymentSources) {
     const paymentSources = actions_BillingActionCreators.fetchPaymentSources();
   }
+  tmp4 = self.props.shouldFetchSubscriptionPlans && !self.props.isFetchingSubscriptionPlans;
 };
 prototype["renderPremiumGuildSubscriptions"] = function renderPremiumGuildSubscriptions() {
   const tmp = closure_16(this.context);
@@ -110,15 +111,14 @@ prototype["renderPremiumGuildSubscriptions"] = function renderPremiumGuildSubscr
         color: "text-default",
         children: externalManagementMessage,
       };
-      tmp6Result = tmp6(tmp7(4556).Text, obj2);
+      tmp6Result = closure_1_14(Text_Text.Text, obj2);
     }
     const obj3 = { children: null };
     items1[2] = tmp6Result;
     obj.children = items1;
     const items2 = [__initData(React4, obj), closure_1_14(GuildBoostSlotsInventoryDefault, {})];
     obj3.children = items2;
-    tmp3Result = tmp3(noop.Fragment, obj3);
-    tmp7 = require;
+    tmp3Result = __initData(noop.Fragment, obj3);
   }
   return tmp3Result;
 };
@@ -232,8 +232,6 @@ export default function ConnectedUserSettingsPremiumGuildSubscriptions(route) {
   const externalManagementMessage = require("PremiumManagementUtils").getExternalManagementMessage(stateFromStores, {
     shouldAllowExternalManagement: true,
   });
-  const tmp10 = UserSettingsPremiumGuildSubscriptions;
-  const tmp9 = closure_14;
   const tmpResult3 = require("PremiumManagementUtils");
   let tmp11 = null;
   if (tmpResult4.isMetaQuest()) {
@@ -241,5 +239,5 @@ export default function ConnectedUserSettingsPremiumGuildSubscriptions(route) {
   }
   obj.externalManagementMessage = tmp11;
   const merged = Object.assign(stateFromStoresObject);
-  return tmp9(tmp10, obj);
+  return closure_14(UserSettingsPremiumGuildSubscriptions, obj);
 }

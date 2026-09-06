@@ -5,7 +5,7 @@ import PollAttachmentUtils from "PollAttachmentUtils.tsx";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 
 require = fn;
-let closure_6 = async function _handlePollGifAttachmentAdd(arg0, value) {
+let closure_6 = async function _handlePollGifAttachmentAdd(arg0) {
   if (c8 === 2) {
     c8 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -151,7 +151,7 @@ let closure_6 = async function _handlePollGifAttachmentAdd(arg0, value) {
     }
   }
 };
-let closure_7 = async function _removePollUploadAttachment(arg0, arg1) {
+let closure_7 = async function _removePollUploadAttachment(arg0) {
   UploadAttachmentActionCreatorsDefault.remove(closure_0, closure_1, Poll.Poll);
   await FileManagerUtils.removeFile("cache", PollAttachmentUtils.getFilePathForGif(closure_2));
   if (1 === tmp6) {
@@ -159,13 +159,13 @@ let closure_7 = async function _removePollUploadAttachment(arg0, arg1) {
     c3 = 3;
   } else if (arg0 === 1) {
     c3 = 3;
-    throw arg1;
+    throw value;
   } else if (arg0 !== 2) {
     c6 = 0;
   }
-  return arg1;
+  return value;
 };
-let closure_8 = async function _removeAllPollUploadAttachments(arg0, arg1) {
+let closure_8 = async function _removeAllPollUploadAttachments(arg0) {
   UploadAttachmentActionCreatorsDefault.clearAll(closure_0, Poll.Poll);
   await FileManagerUtils.clearFolder("cache", POLL_ATTACHMENT_FOLDER);
   if (1 === tmp6) {
@@ -173,11 +173,11 @@ let closure_8 = async function _removeAllPollUploadAttachments(arg0, arg1) {
     c1 = 3;
   } else if (arg0 === 1) {
     c1 = 3;
-    throw arg1;
+    throw value;
   } else if (arg0 !== 2) {
     c4 = 0;
   }
-  return arg1;
+  return value;
 };
 const DraftType = fn(4901).DraftType;
 const POLL_ATTACHMENT_FOLDER = fn(7829).POLL_ATTACHMENT_FOLDER;

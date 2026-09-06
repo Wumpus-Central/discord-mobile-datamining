@@ -12,8 +12,9 @@ export default function parseContentForSuppressNotifications(str) {
     const items1 = [false, str];
     items2 = items1;
   } else {
-    items2 = [true, str.substring(7).trim()];
+    items2 = [true];
     str = str.substring(7);
+    items2[1] = str.trim();
   }
   return items2;
 }

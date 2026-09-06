@@ -34,15 +34,14 @@ export default function GuildLimitedAccessInfoAlert(arg0) {
   const guild = GuildStore.getGuild(guildId);
   let formatResult1 = intl.format(util.t.ZqkXsC, obj);
   if (null != guild) {
-    const intl2 = tmp2(1114).intl;
-    obj = { guildName: guild.name, helpdeskArticle: tmp4 };
-    formatResult1 = intl2.format(tmp2(1114).t.jn0Xyx, obj);
+    const intl2 = util.intl;
+    obj = { guildName: guild.name, helpdeskArticle };
+    formatResult1 = intl2.format(util.t.jn0Xyx, obj);
   }
   obj = { onClose, children: null };
   const formatResult = intl.format(util.t.ZqkXsC, obj);
-  tmp4 = helpdeskArticle;
   const obj1 = { style: tmp.header, children: null };
-  const intl3 = tmp2(1114).intl;
+  const intl3 = util.intl;
   obj1.children = intl3.string(util.t.kJwpBW);
   const items = [
     hasOwnProperty(native.LegacyText, obj1),

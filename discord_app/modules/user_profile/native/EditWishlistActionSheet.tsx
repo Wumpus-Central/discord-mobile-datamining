@@ -81,7 +81,7 @@ export default function EditWishlistActionSheet(wishlistId) {
   value = undefined;
   closure_9 = undefined;
   closure_10 = undefined;
-  let tmp = closure_16();
+  const tmp = closure_16();
   dependencyMap = tmp;
   let obj = wishlistId(504);
   let items = [stateFromStores2];
@@ -94,7 +94,7 @@ export default function EditWishlistActionSheet(wishlistId) {
     tmp4(7182).USER_PROFILE_EDIT_WISHLIST_ACTION_SHEET,
   ).analyticsLocations;
   obj = { maxWidth: ACTION_SHEET_MAX_WIDTH };
-  let tmp5 = analyticsContext(7162);
+  const tmp5 = analyticsContext(7162);
   ({ cardWidth: c5, rowWidth } = analyticsContext(13086)(obj));
   if (null != rowWidth) {
     obj = { width: rowWidth };
@@ -128,10 +128,10 @@ export default function EditWishlistActionSheet(wishlistId) {
   const effect = analyticsLocations.useEffect(() => {
     let visibility;
     if (stateFromStores2 != null) {
-      visibility = tmp.visibility;
+      visibility = stateFromStores2.visibility;
     }
     if (null != visibility) {
-      closure_9(tmp.visibility === WishlistVisibility2.WishlistVisibility.PUBLIC);
+      closure_9(stateFromStores2.visibility === WishlistVisibility2.WishlistVisibility.PUBLIC);
     }
   }, items4);
   const items5 = [stateFromStores];
@@ -169,6 +169,7 @@ export default function EditWishlistActionSheet(wishlistId) {
     }
     obj.productLines = tmp8;
     const result1 = UserProfileAnalyticsUtils.trackUserProfileWishlistAction(obj);
+    const tmp2 = first ? WishlistVisibility.PRIVATE : WishlistVisibility.PUBLIC;
   }, items6);
   closure_10 = obj6.useCallback((skuId) => {
     const result = WishlistActionCreatorsDefault.removeSkuFromWishlist(wishlistId, skuId, analyticsLocations);
@@ -193,14 +194,14 @@ export default function EditWishlistActionSheet(wishlistId) {
   const items8 = [closure_14(stateFromStores, obj4)];
   if (stateFromStores1) {
     if (null == stateFromStores) {
-      const obj7 = { style: tmp.loadingContainer, children: tmp16(c5, {}) };
-      let tmp16Result = tmp16(tmp19, obj7);
+      const obj7 = { style: tmp.loadingContainer, children: closure_14(c5, {}) };
+      let tmp16Result = closure_14(tmp19, obj7);
     }
     items8[1] = tmp16Result;
     obj3.children = items8;
     obj2.children = closure_15(tmp19, obj3);
-    obj1.children = tmp16(tmp2(6627).BottomSheetScrollView, obj2);
-    return tmp16(tmp4Result, obj1);
+    obj1.children = closure_14(tmp2(6627).BottomSheetScrollView, obj2);
+    return closure_14(tmp4Result, obj1);
   }
   tmp16Result = null;
   if (0 !== memo.length) {
@@ -220,7 +221,7 @@ export default function EditWishlistActionSheet(wishlistId) {
         }
         obj.exiting = tmp6;
         let tmp7;
-        if (!tmp5) {
+        if (!closure_3) {
           tmp7 = closure_1_17;
         }
         obj.layout = tmp7;
@@ -249,17 +250,17 @@ export default function EditWishlistActionSheet(wishlistId) {
           combined = formatToPlainStringResult;
         }
         obj1.accessibilityLabel = combined;
-        obj1 = tmp8(wishlistId(str[31]).IconButton, obj1);
+        obj1 = closure_1_14(wishlistId(str[31]).IconButton, obj1);
         obj.children = obj1;
-        obj = tmp8(stateFromStores, obj);
+        obj = closure_1_14(stateFromStores, obj);
         items[1] = obj;
         obj.children = items;
         skuId = skuId.skuId;
         closure_1_15(analyticsContext(itemWrapper[29]), obj, skuId);
         const tmp3 = analyticsContext(itemWrapper[29]);
-        tmp5 = closure_3;
       }
     });
-    tmp16Result = tmp16(tmp19, obj8);
+    tmp16Result = closure_14(tmp19, obj8);
   }
+  tmp4Result = analyticsContext(11151);
 }

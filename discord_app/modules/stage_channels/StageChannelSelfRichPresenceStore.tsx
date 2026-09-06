@@ -3,6 +3,8 @@ import initializeDefault from "../../../discord_common/js/packages/flux/index.ts
 import DispatcherDefault from "../../Dispatcher.tsx";
 import _modDef1332 from "../../../_runtime/metro/01332__.js";
 import PermissionUtilsAll from "../../utils/PermissionUtils.tsx";
+import useChannelName from "../channel/useChannelName.tsx";
+import StageMediaHooks from "StageMediaHooks.tsx";
 import StageChannelParticipants from "StageChannelParticipants.tsx";
 import StageChannelRichPresenceUtils from "StageChannelRichPresenceUtils.tsx";
 import ChannelStore from "../../stores/ChannelStore.tsx";
@@ -49,7 +51,7 @@ function handleUpdateActivity() {
               }
               const mutableParticipants = StageChannelParticipantStore.getMutableParticipants(
                 channel.id,
-                tmp12(5425).StageChannelParticipantNamedIndex.SPEAKER,
+                StageChannelParticipants.StageChannelParticipantNamedIndex.SPEAKER,
               );
               const length = mutableParticipants.filter(
                 (type) => type.type === StageChannelParticipants.StageChannelParticipantTypes.STREAM,
@@ -80,11 +82,11 @@ function handleUpdateActivity() {
                 topic = channel.topic;
               }
               if (topic == null) {
-                let tmp12Result = tmp12(4713);
+                let tmp12Result = useChannelName;
                 topic = tmp12Result.computeChannelName(channel, UserStore, RelationshipStore);
               }
               timestamps.name = topic;
-              tmp12Result = tmp12(5417);
+              tmp12Result = StageMediaHooks;
               timestamps.type = tmp12Result.getStageHasMedia(channel.id) ? map1.WATCHING : map1.LISTENING;
               let start;
               if (tmp15 != null) {

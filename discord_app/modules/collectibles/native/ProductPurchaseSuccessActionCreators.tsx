@@ -12,7 +12,7 @@ export default {
     ModalActionCreatorsDefault.pushLazy(
       asyncGeneratorStep(async () => {
         await require("asyncRequireImpl")(paths[2], paths.paths);
-        return arg1.default;
+        return value.default;
       }),
       merged,
       ShopProductPurchaseSuccessModal,

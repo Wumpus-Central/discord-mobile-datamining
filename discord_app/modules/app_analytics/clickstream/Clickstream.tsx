@@ -8,7 +8,7 @@ import AuthenticationStore from "../../../stores/AuthenticationStore.tsx";
 import RTCConnectionStore from "../../../stores/RTCConnectionStore.tsx";
 
 require = fn;
-function isClickstreamEnabled(flag) {
+function isClickstreamEnabled() {
   if (flag === undefined) {
     flag = true;
   }
@@ -22,12 +22,12 @@ function isClickstreamEnabled(flag) {
   }
   return result;
 }
-function drainClickstream(flag) {
+function drainClickstream() {
   if (flag === undefined) {
     flag = true;
   }
   if (isClickstreamEnabled(flag)) {
-    const tmp3 = obj[Symbol.iterator]();
+    const tmp3 = map[Symbol.iterator]();
     while (tmp3 !== undefined) {
       let tmp8 = _slicedToArray(tmp5, 2);
       let first = tmp8[0];
@@ -38,7 +38,7 @@ function drainClickstream(flag) {
     }
     map.clear();
   } else {
-    obj.clear();
+    map.clear();
   }
 }
 const map = new Map();
@@ -56,9 +56,9 @@ export const trackClickstream = function trackClickstream(CHANNEL_LATEST_MESSAGE
   result = ClickstreamExperiment.clickstreamExperimentEnabled();
   if (result) {
     if (!map.has(CHANNEL_LATEST_MESSAGES_LOADED_CLICKSTREAM)) {
-      const result1 = obj3.set(CHANNEL_LATEST_MESSAGES_LOADED_CLICKSTREAM, []);
+      const result1 = map.set(CHANNEL_LATEST_MESSAGES_LOADED_CLICKSTREAM, []);
     }
-    value = obj3.get(CHANNEL_LATEST_MESSAGES_LOADED_CLICKSTREAM);
+    value = map.get(CHANNEL_LATEST_MESSAGES_LOADED_CLICKSTREAM);
     if (value != null) {
       obj = { timestamp: null, rtc_state: null };
       const _Date = Date;

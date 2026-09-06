@@ -55,9 +55,9 @@ export default function PasswordlessUpsellPromoSheet() {
     loading: null,
     disabled: null,
   };
-  const intl3 = tmp2(tmp3[8]).intl;
+  const intl3 = require("util").intl;
   const string2 = intl3.string;
-  const t2 = tmp2(tmp3[8]).t;
+  const t2 = require("util").t;
   if (tmp7) {
     let string2Result = string2(t2.wePEBF);
   } else {
@@ -78,9 +78,9 @@ export default function PasswordlessUpsellPromoSheet() {
     text: null,
     disabled: null,
   };
-  const intl4 = tmp2(tmp3[8]).intl;
+  const intl4 = require("util").intl;
   const string3 = intl4.string;
-  const t3 = tmp2(tmp3[8]).t;
+  const t3 = require("util").t;
   if (tmp7) {
     let string3Result = string3(t3.wePEBF);
   } else {

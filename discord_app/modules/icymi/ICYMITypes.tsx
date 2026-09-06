@@ -44,13 +44,13 @@ export const typeToString = function typeToString(type) {
       str5 = str6;
     }
     return str5;
-  } else if (tmp.ACTIVITY === type) {
+  } else if (obj.ACTIVITY === type) {
     return "hotwheels_gaming_activity";
-  } else if (tmp.CUSTOM_STATUS === type) {
+  } else if (obj.CUSTOM_STATUS === type) {
     return "hotwheels_custom_status";
-  } else if (tmp.GUILD_EVENT === type) {
+  } else if (obj.GUILD_EVENT === type) {
     return "guild_event";
-  } else if (tmp.RECOMMENDED_GUILDS === type) {
+  } else if (obj.RECOMMENDED_GUILDS === type) {
     return "recommended_guilds";
   }
 };

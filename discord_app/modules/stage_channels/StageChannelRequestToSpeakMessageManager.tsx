@@ -32,12 +32,12 @@ StageChannelRequestToSpeakMessageManager.prototype["handleVoiceStateUpdates"] = 
               if (null != requestToSpeakTimestamp) {
                 user = user.getUser(userId);
                 if (null != user) {
-                  const result = tmp11(17487).sendStageRequestToSpeakEphemeralMessage(
+                  const result = userId(17487).sendStageRequestToSpeakEphemeralMessage(
                     channelId,
                     user,
                     requestToSpeakTimestamp,
                   );
-                  const tmp11Result = tmp11(17487);
+                  const tmp11Result = userId(17487);
                 }
               } else {
                 messages = messages.getMessages(channelId);
@@ -57,7 +57,6 @@ StageChannelRequestToSpeakMessageManager.prototype["handleVoiceStateUpdates"] = 
                 }
               }
             }
-            tmp11 = userId;
           }
         }
       }

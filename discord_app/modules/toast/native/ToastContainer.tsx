@@ -3,6 +3,7 @@ import native from "../../../design/void/native.tsx";
 import native2 from "../../../../discord_common/js/packages/design/native.tsx";
 import AccessibilityAnnouncer2 from "../../../../discord_common/js/packages/design/components/AccessibilityAnnouncer/AccessibilityAnnouncer.android.tsx";
 import ReanimatedRexport from "../../reanimated/ReanimatedRexport.tsx";
+import spring from "../../../design/animation/reanimated/spring/spring.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
 import ToastStore from "ToastStore.tsx";
@@ -71,15 +72,15 @@ function AnimatedToast(toast) {
     items = [num3, sum];
     const interpolateResult = obj.interpolate(value, items, items);
     if (stateFromStores) {
-      value = obj2.get();
+      value = sharedValue1.get();
     } else {
-      let tmp8Result = tmp8(4974);
-      value = tmp8Result.withSpring(obj2.get(), closure_10);
+      let tmp8Result = spring;
+      value = tmp8Result.withSpring(sharedValue1.get(), closure_10);
     }
     obj = { opacity: value, transform: null, maxWidth: null };
     let withSpringResult = interpolateResult;
     if (!stateFromStores) {
-      tmp8Result = tmp8(4974);
+      tmp8Result = spring;
       const fn = function t(arg0) {
         let tmp = arg0;
         if (arg0) {
@@ -90,7 +91,7 @@ function AnimatedToast(toast) {
           const obj = merged(cleanUp[6]);
         }
       };
-      obj = { state, TransitionStates: tmp8(4271).TransitionStates, runOnJS: tmp8(4296).runOnJS, cleanUp };
+      obj = { state, TransitionStates: native2.TransitionStates, runOnJS: ReanimatedRexport.runOnJS, cleanUp };
       fn.__closure = obj;
       fn.__workletHash = 633151838569;
       fn.__initData = __initData;
@@ -163,8 +164,8 @@ function AnimatedToast(toast) {
   }
   return tmp17;
 }
-function renderItem(arg0, toast, state, cleanUp) {
-  return <AnimatedToast key={arg0} toast={arg1} state={arg2} cleanUp={arg3} />;
+function renderItem(key, toast, state, cleanUp) {
+  return <AnimatedToast key={key} toast={toast} state={state} cleanUp={cleanUp} />;
 }
 function getItemKey(key) {
   return key.key;

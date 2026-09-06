@@ -9,7 +9,10 @@ import ChatViewWrapperDefault from "ChatViewWrapper.tsx";
 import ChatViewStickyHeaderDefault from "ChatViewStickyHeader.tsx";
 import MessagesDefault from "../../messages/native/Messages.tsx";
 import ChatInputDefault from "../../chat_input/native/ChatInput.tsx";
+import JumpToPresentButtonDefault from "../../../components_native/chat/JumpToPresentButton.tsx";
 import ChatBeginningRowDefault from "../../../components_native/chat/ChatBeginningRow.tsx";
+import PortalKeyboardInlineComponentDefault from "../../keyboard/native/PortalKeyboardInlineComponent.ios.tsx";
+import ChatPlaceholderDefault from "placeholder/ChatPlaceholder.tsx";
 import ChannelSafeAreaBottomDefault from "../../main_tabs_v2/native/channel/ChannelSafeAreaBottom.android.tsx";
 import VoiceMessageOverlayDefault from "../../voice_messages/native/components/VoiceMessageOverlay.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -201,9 +204,7 @@ export default noop.memo(function ChatView(alwaysRespectKeyboard) {
         visibleMessagesWindowHandler,
         children: null,
       };
-      const tmp2 = closure_2_11;
       const tmp5 = ChatViewWrapperDefault;
-      const tmp8 = channel;
       const items = [
         React7(ChatInputDefault, {
           ref: chatInputRef,
@@ -225,8 +226,6 @@ export default noop.memo(function ChatView(alwaysRespectKeyboard) {
         setNoExtractUI,
         onJumpToPresent,
       };
-      const tmp11 = ref;
-      const tmp12 = onJumpToPresent;
       const tmp9 = MessagesDefault;
       obj2.guildId = channel.getGuildId();
       obj2.shouldRender = shouldRender;
@@ -236,20 +235,20 @@ export default noop.memo(function ChatView(alwaysRespectKeyboard) {
       let obj5 = PlatformUtils;
       let tmp7Result = null;
       if (!obj5.isAndroid()) {
-        const obj3 = { channelId: tmp8.id, messagesRef: tmp11 };
-        tmp7Result = tmp7(tmp3(12637), obj3);
+        const obj3 = { channelId: channel.id, messagesRef: ref };
+        tmp7Result = React7(PortalKeyboardInlineComponentDefault, obj3);
       }
       items1[1] = tmp7Result;
       tmp7Result = null;
       if (c15) {
-        const obj4 = { screenIndex: tmp10 };
-        tmp7Result = tmp7(tmp3(12638), obj4);
+        const obj4 = { screenIndex };
+        tmp7Result = React7(ChatPlaceholderDefault, obj4);
       }
       items1[2] = tmp7Result;
       let tmp7Result1 = null;
       if (tmp14Result.isAndroid()) {
-        obj5 = { channelId: tmp6, screenIndex: tmp10, onJumpToPresent: tmp12 };
-        tmp7Result1 = tmp7(tmp3(12267), obj5);
+        obj5 = { channelId, screenIndex, onJumpToPresent };
+        tmp7Result1 = React7(JumpToPresentButtonDefault, obj5);
       }
       const obj6 = { children: null };
       items1[3] = tmp7Result1;
@@ -260,7 +259,7 @@ export default noop.memo(function ChatView(alwaysRespectKeyboard) {
         React7(VoiceMessageOverlayDefault, { channelId }),
       ];
       obj6.children = items2;
-      return closure_2_10(tmp2, obj6);
+      return closure_2_10(closure_2_11, obj6);
     }
     if (channelIsLoading) {
       if (!GatewayConnectionStore.isConnected()) {

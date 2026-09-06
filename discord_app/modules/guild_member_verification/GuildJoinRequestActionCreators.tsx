@@ -7,136 +7,144 @@ import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 import GuildJoinRequestStore from "GuildJoinRequestStore.tsx";
 
 require = fn;
-let closure_9 = async function _fetchGuildJoinRequests(arg0, value) {
-  if (c7 === 2) {
-    c7 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp6 === 3) {
-    if (arg0 === 1) {
-      throw value;
-    } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
-    } else {
-      return { value: "HermesInternal", done: null };
-    }
-  } else {
-    try {
-      c7 = 2;
-      if (0 === c6) {
-        if (arg0 === 1) {
-          c7 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c7 = 3;
-          obj = { value, done: true };
-          return obj;
-        } else {
-          closure_3 = tmp3;
-          closure_2 = tmp7;
-          closure_130_0 = undefined;
-          closure_130_1 = undefined;
-          closure_130_2 = undefined;
-          closure_130_3 = undefined;
-          closure_130_4 = undefined;
-          closure_130_5 = undefined;
-          ({ guildId: closure_130_0, status } = closure_0);
-          if (status === undefined) {
-            status = MemberVerificationTypes.GuildJoinRequestApplicationStatuses.SUBMITTED;
-          }
-          closure_130_1 = status;
-          ({ before: closure_130_2, after: closure_130_3, limit } = closure_0);
-          if (limit === undefined) {
-            limit = MemberVerificationTypes.MAX_RESULTS_PER_PAGE;
-          }
-          closure_130_4 = limit;
-          let flag = tmp69.force;
-          if (flag === undefined) {
-            flag = false;
-          }
-          closure_130_5 = flag;
-          closure_130_6 = undefined;
-          closure_130_7 = undefined;
-          let total;
-          closure_130_9 = undefined;
-          c6 = 1;
-          c7 = 1;
-          return { value: "PX_16", done: true };
-        }
-      } else if (1 === tmp7) {
-        if (arg0 === 1) {
-          c7 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c7 = 3;
-          const obj1 = { value, done: true };
-          return obj1;
-        } else {
-          let tmp31 = closure_130_5;
-          if (!closure_130_5) {
-            tmp31 = !closure_131_5.hasFetched(closure_130_0);
-          }
-          closure_130_6 = tmp31;
-          if (!closure_131_5.isFetching()) {
-            if (closure_130_6) {
-              let obj5 = closure_131_1(closure_131_2[6]);
-              obj5.dispatch({ type: "GUILD_JOIN_REQUESTS_FETCH_START" });
-              c5 = 1;
-              const HTTP = closure_131_0(closure_131_2[7]).HTTP;
-              const request = { url: closure_131_8.GUILD_JOIN_REQUESTS(closure_130_0), query: null, rejectWithError: null };
-              const obj2 = { status: closure_130_1, limit: closure_130_4, before: closure_130_2, after: closure_130_3 };
-              request.query = obj2;
-              request.rejectWithError = closure_131_0(closure_131_2[7]).rejectWithMigratedError();
-              c6 = 3;
-              c7 = 1;
-              const obj3 = { value: HTTP.get(request), done: false };
-              return obj3;
-            }
-          }
-          c7 = 3;
-          return { value: "HermesInternal", done: null };
-        }
-      } else if (2 === tmp7) {
-        c5 = 0;
-        closure_130_10 = closure_4;
-        let obj4 = closure_131_1(closure_131_2[6]);
-        obj4.dispatch({ type: "GUILD_JOIN_REQUESTS_FETCH_FAILURE" });
-        throw closure_130_10;
-      } else if (arg0 === 1) {
-        c7 = 3;
+let closure_9 = async function _fetchGuildJoinRequests(arg0) {
+  let force = arg0;
+  c6 = 0;
+  c7 = 0;
+  c5 = 0;
+  let iter = (async (arg0) => {
+    if (c7 === 2) {
+      c7 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp6 === 3) {
+      if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        c5 = 0;
-        c7 = 3;
-        obj4 = { value, done: true };
-        return obj4;
+        let obj = { value, done: true };
+        return obj;
       } else {
-        closure_130_7 = value;
-        total = closure_130_7.body.total;
-        const guild_join_requests = closure_130_7.body.guild_join_requests;
-        importDefault = guild_join_requests;
-        if (guild_join_requests == null) {
-          importDefault = [];
-        }
-        closure_130_9 = importDefault.map(closure_131_6);
-        obj = closure_131_1(closure_131_2[6]);
-        obj5 = { type: "GUILD_JOIN_REQUESTS_FETCH_SUCCESS", status: closure_130_1, requests: closure_130_9, total, limit: closure_130_4, guildId: closure_130_0 };
-        obj.dispatch(obj5);
-        c5 = 0;
-        c7 = 3;
-        const obj6 = { value: closure_130_7, done: true };
-        return obj6;
+        return { value: "HermesInternal", done: null };
       }
-    } catch (tmp57) {
-      closure_4 = tmp57;
-      if (tmp4 === c5) {
-        c7 = tmp2;
-        throw tmp57;
-      } else {
-        c6 = tmp;
+    } else {
+      try {
+        c7 = 2;
+        if (0 === c6) {
+          if (arg0 === 1) {
+            c7 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c7 = 3;
+            obj = { value, done: true };
+            return obj;
+          } else {
+            closure_3 = tmp3;
+            closure_2 = tmp7;
+            closure_130_0 = undefined;
+            closure_130_1 = undefined;
+            closure_130_2 = undefined;
+            closure_130_3 = undefined;
+            closure_130_4 = undefined;
+            closure_130_5 = undefined;
+            ({ guildId: closure_130_0, status } = force);
+            if (status === undefined) {
+              status = MemberVerificationTypes.GuildJoinRequestApplicationStatuses.SUBMITTED;
+            }
+            closure_130_1 = status;
+            ({ before: closure_130_2, after: closure_130_3, limit } = force);
+            if (limit === undefined) {
+              limit = MemberVerificationTypes.MAX_RESULTS_PER_PAGE;
+            }
+            closure_130_4 = limit;
+            let flag = force.force;
+            if (flag === undefined) {
+              flag = false;
+            }
+            closure_130_5 = flag;
+            closure_130_6 = undefined;
+            closure_130_7 = undefined;
+            let total;
+            closure_130_9 = undefined;
+            c6 = 1;
+            c7 = 1;
+            return { value: "PX_16", done: true };
+          }
+        } else if (1 === tmp7) {
+          if (arg0 === 1) {
+            c7 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c7 = 3;
+            const obj1 = { value, done: true };
+            return obj1;
+          } else {
+            let tmp31 = closure_130_5;
+            if (!closure_130_5) {
+              tmp31 = !closure_131_5.hasFetched(closure_130_0);
+            }
+            closure_130_6 = tmp31;
+            if (!closure_131_5.isFetching()) {
+              if (closure_130_6) {
+                let obj5 = closure_131_1(closure_131_2[6]);
+                obj5.dispatch({ type: "GUILD_JOIN_REQUESTS_FETCH_START" });
+                c5 = 1;
+                const HTTP = closure_131_0(closure_131_2[7]).HTTP;
+                const request = { url: closure_131_8.GUILD_JOIN_REQUESTS(closure_130_0), query: null, rejectWithError: null };
+                const obj2 = { status: closure_130_1, limit: closure_130_4, before: closure_130_2, after: closure_130_3 };
+                request.query = obj2;
+                request.rejectWithError = closure_131_0(closure_131_2[7]).rejectWithMigratedError();
+                c6 = 3;
+                c7 = 1;
+                const obj3 = { value: HTTP.get(request), done: false };
+                return obj3;
+              }
+            }
+            c7 = 3;
+            return { value: "HermesInternal", done: null };
+          }
+        } else if (2 === tmp7) {
+          c5 = 0;
+          closure_130_10 = closure_4;
+          let obj4 = closure_131_1(closure_131_2[6]);
+          obj4.dispatch({ type: "GUILD_JOIN_REQUESTS_FETCH_FAILURE" });
+          throw closure_130_10;
+        } else if (arg0 === 1) {
+          c7 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c5 = 0;
+          c7 = 3;
+          obj4 = { value, done: true };
+          return obj4;
+        } else {
+          closure_130_7 = value;
+          total = closure_130_7.body.total;
+          const guild_join_requests = closure_130_7.body.guild_join_requests;
+          closure_1 = guild_join_requests;
+          if (guild_join_requests == null) {
+            closure_1 = [];
+          }
+          closure_130_9 = closure_1.map(closure_131_6);
+          obj = closure_131_1(closure_131_2[6]);
+          obj5 = { type: "GUILD_JOIN_REQUESTS_FETCH_SUCCESS", status: closure_130_1, requests: closure_130_9, total, limit: closure_130_4, guildId: closure_130_0 };
+          obj.dispatch(obj5);
+          c5 = 0;
+          c7 = 3;
+          const obj6 = { value: closure_130_7, done: true };
+          return obj6;
+        }
+      } catch (tmp57) {
+        closure_4 = tmp57;
+        if (tmp4 === c5) {
+          c7 = tmp2;
+          throw tmp57;
+        } else {
+          c6 = tmp;
+        }
       }
     }
-  }
+  })();
+  iter.next();
+  return iter;
 };
 let closure_10 = async function _fetchGuildJoinRequestsForUser() {
   closure_4 = tmp2;
@@ -144,7 +152,8 @@ let closure_10 = async function _fetchGuildJoinRequestsForUser() {
   closure_131_0 = closure_0;
   closure_131_1 = closure_1;
   const HTTP = HTTPUtils.HTTP;
-  closure_131_2 = await HTTP.get({ url: closure_2_8.GUILD_JOIN_REQUESTS_FOR_USER(closure_0, closure_1), rejectWithError: HTTPUtils.rejectWithMigratedError() });
+  await HTTP.get({ url: closure_2_8.GUILD_JOIN_REQUESTS_FOR_USER(closure_0, closure_1), rejectWithError: HTTPUtils.rejectWithMigratedError() });
+  closure_131_2 = value;
   const body = closure_131_2.body;
   dependencyMap = body;
   if (body == null) {
@@ -155,7 +164,7 @@ let closure_10 = async function _fetchGuildJoinRequestsForUser() {
   closure_132_1(closure_132_2[6]).dispatch({ type: "GUILD_JOIN_REQUESTS_FOR_USER_FETCH_SUCCESS", guildId: closure_131_0, userId: closure_131_1, requests: closure_131_3 });
   return closure_131_2;
 };
-let closure_11 = async function _removeGuildJoinRequest(arg0, value) {
+let closure_11 = async function _removeGuildJoinRequest(arg0) {
   if (c6 === 2) {
     c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -224,7 +233,7 @@ let closure_11 = async function _removeGuildJoinRequest(arg0, value) {
     }
   }
 };
-let closure_12 = async function _ackUserGuildJoinRequest(arg0, value) {
+let closure_12 = async function _ackUserGuildJoinRequest(arg0) {
   if (c7 === 2) {
     c7 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -314,7 +323,7 @@ let closure_13 = async function _updateGuildJoinRequest() {
   closure_134_0(closure_134_2[8]);
   request.rejectWithError = closure_134_0(closure_134_2[7]).rejectWithMigratedError();
   closure_134_0(closure_134_2[7]);
-  closure_133_5 = await HTTP.patch(request).catch((error) => {
+  await HTTP.patch(request).catch((error) => {
     let body = error;
     if (error) {
       body = error.body;
@@ -333,6 +342,7 @@ let closure_13 = async function _updateGuildJoinRequest() {
     }
     return Promise.reject(error);
   });
+  closure_133_5 = value;
   closure_134_1(closure_134_2[6]).dispatch({ type: "GUILD_JOIN_REQUEST_UPDATE", guildId: closure_133_0, status: closure_133_5.body.application_status, request: closure_133_5.body });
   await "HermesInternal";
   closure_6 = tmp3;
@@ -348,7 +358,7 @@ let closure_13 = async function _updateGuildJoinRequest() {
   closure_133_4 = closure_4;
   return "PX_16";
 };
-let closure_14 = async function _resetGuildJoinRequest(arg0, value) {
+let closure_14 = async function _resetGuildJoinRequest(arg0) {
   if (c6 === 2) {
     c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -417,7 +427,7 @@ let closure_14 = async function _resetGuildJoinRequest(arg0, value) {
     }
   }
 };
-let closure_15 = async function _fetchRequestToJoinGuilds(arg0, value) {
+let closure_15 = async function _fetchRequestToJoinGuilds() {
   if (c3 === 2) {
     c3 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -477,13 +487,14 @@ let closure_16 = async function _fetchJoinRequestForInterview() {
   closure_2 = tmp2;
   closure_1 = tmp5;
   const HTTP = HTTPUtils.HTTP;
-  closure_129_0 = await HTTP.get({ url: closure_2_8.JOIN_REQUEST(closure_0), rejectWithError: HTTPUtils.rejectWithMigratedError() });
+  await HTTP.get({ url: closure_2_8.JOIN_REQUEST(closure_0), rejectWithError: HTTPUtils.rejectWithMigratedError() });
+  closure_129_0 = value;
   closure_129_1 = closure_130_6(closure_129_0.body);
   { url: React6.JOIN_REQUEST(closure_0), rejectWithError: HTTPUtils.rejectWithMigratedError() };
   closure_130_1(closure_130_2[6]).dispatch({ type: "GUILD_JOIN_REQUEST_BY_ID_FETCH_SUCCESS", joinRequest: closure_129_1 });
   return closure_129_0;
 };
-let closure_17 = async function _createOrEnterJoinRequestInterview(arg0, value) {
+let closure_17 = async function _createOrEnterJoinRequestInterview(arg0) {
   if (c5 === 2) {
     c5 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");

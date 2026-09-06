@@ -1,16 +1,20 @@
 // discord_app/modules/app_launcher/native/base_components/CommandRowButton.tsx
+import util from "../../../../intl/index.native.tsx";
+import SendMessageIcon from "../../../../design/components/Icon/native/redesign/generated/SendMessageIcon.tsx";
+import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
+import TableRowArrow from "../../../../design/components/TableRow/native/TableRowArrow.native.tsx";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-const require = fn;
+require = fn;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_launcher/native/base_components/CommandRowButton.tsx");
 
 export default function CommandRowIcon(hasOptions) {
   if (hasOptions.hasOptions) {
-    let tmp3Result = tmp3(tmp4(5612).TableRowArrow, {});
+    let tmp3Result = jsx(TableRowArrow.TableRowArrow, {});
   } else {
     const obj = {
       size: "sm",
@@ -22,12 +26,21 @@ export default function CommandRowIcon(hasOptions) {
       variant: "tertiary",
       disabled: null,
     };
-    const intl = tmp4(1114).intl;
-    obj.text = intl.string(tmp4(1114).t.TXNS7S);
+    const intl = util.intl;
+    obj.text = intl.string(util.t.TXNS7S);
     obj.onPress = tmp2;
-    obj.icon = tmp3(tmp4(4505).SendMessageIcon, { size: "sm" });
+    obj.icon = jsx(SendMessageIcon.SendMessageIcon, { size: "sm" });
     obj.disabled = tmp;
-    tmp3Result = tmp3(tmp4(4975).Button, obj);
+    tmp3Result = jsx(components_Button_Button.Button, {
+      size: "sm",
+      text: null,
+      onPress: null,
+      icon: null,
+      iconPosition: "end",
+      grow: false,
+      variant: "tertiary",
+      disabled: null,
+    });
   }
   return tmp3Result;
 }
@@ -50,7 +63,7 @@ export const useCommandRowSend = function useCommandRowSend(command) {
   commandContext = obj.useCommandContext(command.context);
   const items = [onExecuteCommand, command, commandContext, beforeExecuteCommand, sectionName];
   callback = sectionName.useCallback(
-    onExecuteCommand(function* (arg0, value) {
+    onExecuteCommand(function* () {
       if (c4 === 2) {
         c4 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");

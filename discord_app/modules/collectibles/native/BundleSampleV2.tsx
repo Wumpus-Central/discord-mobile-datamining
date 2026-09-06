@@ -1,6 +1,7 @@
 // discord_app/modules/collectibles/native/BundleSampleV2.tsx
 import _modDef38 from "../../../../_runtime/metro/00038__.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import native from "../../../design/void/native.tsx";
 import utils from "../nameplates/utils.tsx";
 import CollectiblesItemType from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
@@ -51,19 +52,19 @@ function BundleStaticPreviewContent(mutedBackground) {
     tmp21Result = null != tmp;
   }
   if (tmp21Result) {
-    const obj1 = { style: tmp19.bgBleedClip, pointerEvents: "none", children: null };
+    const obj1 = { style: closure_9.bgBleedClip, pointerEvents: "none", children: null };
     tmp21Result = tmp;
     if (mutedBackground.mutedBackground) {
-      const obj2 = { style: tmp19.bgMutedWrap, pointerEvents: "none", children: tmp };
-      tmp21Result = tmp21(tmp18, obj2);
+      const obj2 = { style: closure_9.bgMutedWrap, pointerEvents: "none", children: tmp };
+      tmp21Result = timestampProducer(React4, obj2);
     }
     obj1.children = tmp21Result;
-    tmp21Result = tmp21(tmp18, obj1);
+    tmp21Result = timestampProducer(React4, obj1);
   }
   const items = [tmp21Result];
   let tmp24Result = null != fgStatic;
   if (tmp24Result) {
-    const obj3 = { style: tmp19.fgClip, pointerEvents: "none", children: null };
+    const obj3 = { style: closure_9.fgClip, pointerEvents: "none", children: null };
     let combined1 = fgStatic;
     if (null != targetSize) {
       combined1 = fgStatic;
@@ -91,9 +92,9 @@ function BundleStaticPreviewContent(mutedBackground) {
     };
     const obj5 = { uri: combined1 };
     obj4.source = obj5;
-    obj4.style = tmp19.fgImage;
+    obj4.style = closure_9.fgImage;
     obj3.children = timestampProducer(FastImageDefault, obj4);
-    tmp24Result = tmp24(tmp18, obj3);
+    tmp24Result = timestampProducer(React4, obj3);
   }
   items[1] = tmp24Result;
   obj.children = items;
@@ -117,7 +118,7 @@ function BundleSampleV2Composed(arg0) {
     obj = { style: tmp.pfx, children: null };
     const obj1 = { item: pfx };
     obj.children = timestampProducer(ProfileEffectSampleV2Default, obj1);
-    tmp12 = timestampProducer(tmp11, obj);
+    tmp12 = timestampProducer(React4, obj);
   }
   const items = [tmp12, ,];
   if (null == deco) {
@@ -125,22 +126,22 @@ function BundleSampleV2Composed(arg0) {
     if (null == nameplateData) {
       items[2] = null;
       obj.children = items;
-      return React5(tmp11, obj);
+      return React5(React4, obj);
     } else {
       const obj2 = { style: tmp.nameplate, children: null };
       let AvatarSizes = dependencyMap;
       let obj3 = { width: tmp8.nameplatePreviewWidth, avatarSize: null, nameplate: null };
       if ("large" === size) {
-        AvatarSizes = tmp23(1178).AvatarSizes;
+        AvatarSizes = native.AvatarSizes;
         let XSMALL_20 = AvatarSizes.NORMAL;
       } else {
-        XSMALL_20 = tmp23(1178).AvatarSizes.XSMALL_20;
+        XSMALL_20 = native.AvatarSizes.XSMALL_20;
       }
       obj3.avatarSize = XSMALL_20;
       obj3.nameplate = nameplateData;
-      obj3 = tmp22(NameplateDummyUserPreview.NameplateDummyUserPreview, obj3);
+      obj3 = timestampProducer(NameplateDummyUserPreview.NameplateDummyUserPreview, obj3);
       obj2.children = obj3;
-      timestampProducer(tmp11, obj2);
+      timestampProducer(React4, obj2);
     }
   } else {
     const obj4 = { style: null, children: null };
@@ -148,8 +149,12 @@ function BundleSampleV2Composed(arg0) {
     obj4.style = items1;
     const obj5 = { item: deco, size: tmp9, threeTierBundle: null != nameplateData };
     obj4.children = timestampProducer(AvatarDecorationSampleV2Default, obj5);
-    timestampProducer(tmp11, obj4);
+    timestampProducer(React4, obj4);
   }
+  tmp9 =
+    null != nameplateData
+      ? BUNDLE_PREVIEW_CONFIG[size].avatarDecorationSizeTriple
+      : BUNDLE_PREVIEW_CONFIG[size].avatarDecorationSize;
 }
 get_ActivityIndicator = fn(17);
 ({ PixelRatio: c3, StyleSheet, View: closure_4 } = get_ActivityIndicator);

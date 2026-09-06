@@ -152,7 +152,7 @@ export default function TabBar(tabIndexSelected) {
         tabStyleSelected={tabStyleSelected}
         onSelect={flag2 ? callback : onSelect}
       >
-        {arg0.item}
+        {children.item}
       </Tab>
     );
   }, items3);

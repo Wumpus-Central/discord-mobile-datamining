@@ -66,13 +66,13 @@ export default function SocialLayerStorefrontGiftProductDetails(sku) {
       const obj4 = { uri: memo };
       obj3.source = obj4;
       obj3.style = tmp.appIcon;
-      tmp8Result = tmp8(closure_4, obj3);
+      tmp8Result = closure_7(closure_4, obj3);
     }
     const items2 = [tmp8Result];
     const obj5 = { variant: "text-sm/medium", color: "text-muted", children: getOrFetchApplication.name };
-    items2[1] = tmp8(tmp2(4556).Text, obj5);
+    items2[1] = closure_7(tmp2(4556).Text, obj5);
     obj2.children = items2;
-    tmp6Result = tmp6(tmp7, obj2);
+    tmp6Result = closure_8(closure_5, obj2);
   }
   const items3 = [
     tmp6Result,
@@ -83,7 +83,7 @@ export default function SocialLayerStorefrontGiftProductDetails(sku) {
   tmp8Result = null != userPrice;
   if (tmp8Result) {
     const obj7 = { variant: "text-md/semibold", children: userPrice };
-    tmp8Result = tmp8(tmp2(4556).Text, obj7);
+    tmp8Result = closure_7(tmp2(4556).Text, obj7);
   }
   items1[2] = tmp8Result;
   obj.children = items1;

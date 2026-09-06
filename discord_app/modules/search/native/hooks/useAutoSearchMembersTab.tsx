@@ -19,9 +19,9 @@ export const useAutoSearchMembersTab = function useAutoSearchMembersTab(searchCo
       const debounceResult = _mod12.debounce((searchQueryString) => {
         let obj = autocompleteVisible;
         if (!autocompleteVisible.isAutocompleteVisible(searchContext)) {
-          const guildIdFromSearchContext = closure_0(12340).getGuildIdFromSearchContext(tmp);
+          const guildIdFromSearchContext = closure_0(12340).getGuildIdFromSearchContext(searchContext);
           if (null != guildIdFromSearchContext) {
-            const channelIds = obj.getChannelIds(tmp);
+            const channelIds = obj.getChannelIds(searchContext);
             let tmp8 = null;
             if (0 !== channelIds.size) {
               let first = null;
@@ -32,14 +32,14 @@ export const useAutoSearchMembersTab = function useAutoSearchMembersTab(searchCo
               tmp8 = first;
             }
             obj = {
-              searchContext: tmp,
+              searchContext,
               searchQueryString,
               guildId: guildIdFromSearchContext,
               channelId: tmp8,
               threadId: null,
             };
             let tmp12 = null;
-            if (tmp.type === constants.THREAD) {
+            if (searchContext.type === constants.THREAD) {
               tmp12 = tmp8;
             }
             obj.threadId = tmp12;

@@ -2,7 +2,9 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
+import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
 import TableRow from "../../../../design/components/TableRow/native/TableRow.native.tsx";
+import ArrowLargeLeftIcon from "../../../../design/components/Icon/native/redesign/generated/ArrowLargeLeftIcon.tsx";
 import BottomSheetTitleHeader from "../../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
 import MessageRemindersTypes from "../MessageRemindersTypes.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
@@ -62,11 +64,11 @@ export default function MessageReminderDurationActionSheet(createReminder) {
     let tmpResult = null != onBack;
     if (tmpResult) {
       obj = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, children: null };
-      const intl2 = tmp2(1114).intl;
-      obj.accessibilityLabel = intl2.string(tmp2(1114).t["13/7kX"]);
+      const intl2 = util.intl;
+      obj.accessibilityLabel = intl2.string(util.t["13/7kX"]);
       obj.onPress = tmp4;
-      obj.children = tmp(tmp2(5628).ArrowLargeLeftIcon, { size: "md" });
-      tmpResult = tmp(tmp2(5123).PressableOpacity, obj);
+      obj.children = timestampProducer(ArrowLargeLeftIcon.ArrowLargeLeftIcon, { size: "md" });
+      tmpResult = timestampProducer(Pressables.PressableOpacity, obj);
     }
     obj.leading = tmpResult;
     return timestampProducer(BottomSheetTitleHeader.BottomSheetTitleHeader, obj);

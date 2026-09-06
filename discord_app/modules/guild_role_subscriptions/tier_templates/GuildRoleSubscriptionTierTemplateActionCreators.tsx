@@ -4,7 +4,7 @@ import HTTPUtils from "../../../../discord_common/js/packages/http-utils/HTTPUti
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 
 require = fn;
-let closure_5 = async function _getTemplates(arg0, value) {
+let closure_5 = async function _getTemplates(arg0) {
   if (c4 === 2) {
     c4 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");

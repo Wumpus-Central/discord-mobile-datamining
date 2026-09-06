@@ -1,12 +1,12 @@
 // discord_app/modules/calls/native/VideoBackground.tsx
 import native from "../../../design/void/native.tsx";
+import LinearGradientDefault from "../../../../_runtime/04987_LinearGradient.js";
 import VideoBackgroundManagerDefault from "VideoBackgroundManager.tsx";
 import useProfileTileGradientDefault from "useProfileTileGradient.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import apply from "../../../../_runtime/metro/00012__.js";
 
-const LinearGradientDefault = tmp6(4987);
 require = fn;
 function useDominantRGBFromImage(arg0, arg1) {
   _require = arg0;
@@ -36,12 +36,12 @@ function useDominantRGBFromImage(arg0, arg1) {
     }
     if (tmp2) {
       if (null == VideoBackgroundManagerDefault.cachedDominantColors[closure_0]) {
-        if (typeof tmp === "number") {
+        if (typeof first === "number") {
           const ImageManager = timestampProducer.ImageManager;
-          let dominantColorsLocalAsset = ImageManager.getDominantColorsLocalAsset(React5.resolveAssetSource(tmp));
+          let dominantColorsLocalAsset = ImageManager.getDominantColorsLocalAsset(React5.resolveAssetSource(first));
         } else {
           const ImageManager2 = timestampProducer.ImageManager;
-          dominantColorsLocalAsset = ImageManager2.getDominantColors(React5.resolveAssetSource(tmp));
+          dominantColorsLocalAsset = ImageManager2.getDominantColors(React5.resolveAssetSource(first));
         }
         dominantColorsLocalAsset
           .then((result) => {
@@ -64,9 +64,8 @@ function useDominantRGBFromImage(arg0, arg1) {
           }
         });
       } else {
-        closure_3(tmp4(8250).cachedDominantColors[tmp6]);
+        closure_3(VideoBackgroundManagerDefault.cachedDominantColors[tmp6]);
       }
-      tmp4 = importDefault;
     }
   }, items);
   return tmp8[0];
@@ -203,7 +202,10 @@ export default noop.memo(VideoBackground);
 export const AvatarSizes = fn(1178).AvatarSizes;
 export const memoizedImageSource = memoizeResult;
 export { useDominantRGBFromImage };
-export const useDominantColorFromImage = function useDominantColorFromImage(arg0, arg1) {
-  const tmp = useDominantRGBFromImage(arg0, arg1);
+export const useDominantColorFromImage = function useDominantColorFromImage(
+  pendingAvatarSrc,
+  memoizedImageSourceResult,
+) {
+  const tmp = useDominantRGBFromImage(pendingAvatarSrc, memoizedImageSourceResult);
   return "rgb(" + tmp.r + ", " + tmp.g + ", " + tmp.b + ")";
 };

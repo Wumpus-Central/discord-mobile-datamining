@@ -4,6 +4,7 @@ import util from "../../../../../intl/index.native.tsx";
 import shared from "../../../../../design/shared.tsx";
 import useThemeDefault from "../../../../../hooks/useTheme.tsx";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
+import AppLauncherTypes from "../../../AppLauncherTypes.tsx";
 import AppLauncherNativeUtils from "../../AppLauncherNativeUtils.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
@@ -37,13 +38,13 @@ export default function EmptyState() {
   let obj = shared;
   const tmp4Result = importDefault(obj.isThemeLight(useThemeDefault()) ? 12114 : 12115);
   const logAppLauncherEmptyStateView = AppLauncherNativeUtils.useLogAppLauncherEmptyStateView(
-    tmp2(9409).AppLauncherEmptyStateType.HOME_NO_PERMISSIONS,
+    AppLauncherTypes.AppLauncherEmptyStateType.HOME_NO_PERMISSIONS,
   );
   obj = { style: tmp.container, children: null };
   obj = { style: tmp.image, resizeMode: "contain", source: tmp4Result };
   const items = [hasOwnProperty(React4, obj)];
   const obj1 = { style: tmp.textContainer, variant: "text-sm/medium", color: "text-muted", children: null };
-  const intl = tmp2(1114).intl;
+  const intl = util.intl;
   obj1.children = intl.string(util.t.uDnXXj);
   items[1] = hasOwnProperty(Text_Text.Text, obj1);
   obj.children = items;

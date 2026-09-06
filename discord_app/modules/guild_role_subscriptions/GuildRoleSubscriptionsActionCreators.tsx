@@ -5,7 +5,7 @@ import _slicedToArray from "../../../_runtime/metro/00032__.js";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 
 const require = fn;
-let closure_7 = async function _fetchSubscriptionsSettings(arg0, value) {
+let closure_7 = async function _fetchSubscriptionsSettings(arg0) {
   if (c4 === 2) {
     c4 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -60,7 +60,7 @@ let closure_7 = async function _fetchSubscriptionsSettings(arg0, value) {
     }
   }
 };
-let closure_8 = async function _updateSubscriptionsSettings(arg0, value) {
+let closure_8 = async function _updateSubscriptionsSettings(arg0) {
   if (c5 === 2) {
     c5 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -115,7 +115,7 @@ let closure_8 = async function _updateSubscriptionsSettings(arg0, value) {
     }
   }
 };
-let closure_9 = async function _fetchAllSubscriptionListingsDataForGuild(arg0, value) {
+let closure_9 = async function _fetchAllSubscriptionListingsDataForGuild(arg0) {
   if (c12 === 2) {
     c12 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -286,7 +286,8 @@ let closure_9 = async function _fetchAllSubscriptionListingsDataForGuild(arg0, v
 let closure_10 = async function _createSubscriptionGroupListing() {
   closure_3 = tmp5;
   closure_2 = tmp2;
-  closure_130_0 = await GuildRoleSubscriptionsHttpApiAll.createGuildRoleSubscriptionGroupListing(closure_0, closure_1);
+  await GuildRoleSubscriptionsHttpApiAll.createGuildRoleSubscriptionGroupListing(closure_0, closure_1);
+  closure_130_0 = value;
   GuildRoleSubscriptionsHttpApiAll;
   closure_131_1(closure_131_3[4]).dispatch({
     type: "GUILD_ROLE_SUBSCRIPTIONS_UPDATE_GROUP_LISTING",
@@ -297,11 +298,8 @@ let closure_10 = async function _createSubscriptionGroupListing() {
 let closure_11 = async function _updateSubscriptionGroupListing() {
   closure_4 = tmp5;
   closure_3 = tmp2;
-  closure_131_0 = await GuildRoleSubscriptionsHttpApiAll.updateGuildRoleSubscriptionGroupListing(
-    closure_0,
-    closure_1,
-    closure_2,
-  );
+  await GuildRoleSubscriptionsHttpApiAll.updateGuildRoleSubscriptionGroupListing(closure_0, closure_1, closure_2);
+  closure_131_0 = value;
   GuildRoleSubscriptionsHttpApiAll;
   closure_132_1(closure_132_3[4]).dispatch({
     type: "GUILD_ROLE_SUBSCRIPTIONS_UPDATE_GROUP_LISTING",
@@ -319,11 +317,11 @@ let closure_12 = async function _deleteSubscriptionGroupListing() {
   closure_131_1(closure_131_3[4]).dispatch(obj3);
   return true;
 };
-let closure_13 = async function _fetchSubscriptionListingForPlan(planId) {
+let closure_13 = async function _fetchSubscriptionListingForPlan() {
   c8 = 0;
   c9 = 0;
   c7 = 0;
-  return (async (arg0, value) => {
+  return (async (arg0) => {
     if (c9 === 2) {
       c9 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -426,7 +424,7 @@ let closure_13 = async function _fetchSubscriptionListingForPlan(planId) {
     }
   })();
 };
-let closure_14 = async function _deleteSubscriptionListing(arg0, value) {
+let closure_14 = async function _deleteSubscriptionListing(arg0) {
   if (c6 === 2) {
     c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -480,7 +478,7 @@ let closure_14 = async function _deleteSubscriptionListing(arg0, value) {
     }
   }
 };
-let closure_15 = async function _archiveSubscriptionListing(arg0, value) {
+let closure_15 = async function _archiveSubscriptionListing(arg0) {
   if (c6 === 2) {
     c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -538,7 +536,7 @@ let closure_15 = async function _archiveSubscriptionListing(arg0, value) {
     }
   }
 };
-let closure_16 = async function _updateSubscriptionTrial(arg0, value) {
+let closure_16 = async function _updateSubscriptionTrial(arg0) {
   if (c6 === 2) {
     c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -603,7 +601,7 @@ function fetchGuildRoleSubscriptionGroupListing() {
   }
   return applyArgumentsResult;
 }
-let closure_18 = async function _fetchGuildRoleSubscriptionGroupListing(arg0, value) {
+let closure_18 = async function _fetchGuildRoleSubscriptionGroupListing(arg0) {
   if (c6 === 2) {
     c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -683,7 +681,7 @@ let closure_18 = async function _fetchGuildRoleSubscriptionGroupListing(arg0, va
     }
   }
 };
-let closure_19 = async function _createSubscriptionListing(arg0, value) {
+let closure_19 = async function _createSubscriptionListing(arg0) {
   if (c4 === 2) {
     c4 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -796,7 +794,7 @@ let closure_19 = async function _createSubscriptionListing(arg0, value) {
     }
   }
 };
-let closure_20 = async function _updateSubscriptionListing(arg0, value) {
+let closure_20 = async function _updateSubscriptionListing(arg0) {
   if (c4 === 2) {
     c4 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -895,7 +893,7 @@ let closure_20 = async function _updateSubscriptionListing(arg0, value) {
     }
   }
 };
-let closure_21 = async function _fetchMonetizationRestrictions(arg0, value) {
+let closure_21 = async function _fetchMonetizationRestrictions(arg0) {
   if (c8 === 2) {
     c8 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");

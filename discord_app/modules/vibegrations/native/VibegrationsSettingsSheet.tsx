@@ -257,7 +257,7 @@ export default function VibegrationsSettingsSheet(projectId) {
         };
         items2[1] = memo(projectId(closure_2[22]).Button, obj3);
         obj.children = items2;
-        let tmp12Result = tmp14(tmp15, obj, value.name);
+        let tmp12Result = memo1(first1, obj, value.name);
       }
       return tmp12Result;
     }
@@ -312,7 +312,7 @@ export default function VibegrationsSettingsSheet(projectId) {
   const tmp12 = first(noop.useState(false), 2);
   const first2 = tmp12[0];
   closure_11 = tmp12[1];
-  let tmp14 = first(noop.useState(false), 2);
+  const tmp14 = first(noop.useState(false), 2);
   closure_12 = tmp14[1];
   let items1 = [stateFromStores];
   const memo = noop.useMemo(() => {
@@ -434,8 +434,8 @@ export default function VibegrationsSettingsSheet(projectId) {
           const tmp4 = "checkbox" !== found.type && "";
         }
         if (closure_1 !== tmp3) {
-          if (typeof str !== "string") {
-            let tmp6 = str;
+          if (typeof closure_1 !== "string") {
+            let tmp6 = closure_1;
           } else {
             tmp6 = null;
           }
@@ -457,9 +457,8 @@ export default function VibegrationsSettingsSheet(projectId) {
     while (tmp8 !== undefined) {
       let tmp11 = first(tmp9, 2);
       [tmp12, str] = tmp11;
-      let str2 = str;
       if ("" !== str.trim()) {
-        secrets[tmp12] = str2.trim();
+        secrets[tmp12] = str.trim();
       }
       continue;
     }
@@ -483,7 +482,7 @@ export default function VibegrationsSettingsSheet(projectId) {
   closure_20 = tmp30;
   const items6 = [null != memo4.values || null != memo4.secrets, notifyAgent, projectId, first2, memo4];
   const callback1 = obj1.useCallback(
-    stateFromStores(function* (arg0, value) {
+    stateFromStores(function* () {
       if (c7 === 2) {
         c7 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");

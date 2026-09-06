@@ -178,7 +178,7 @@ export default function VibegrationsNativeComposer(projectId) {
   [boxFocused, c5] = _slicedToArray(noop.useState(false), 2);
   let tmp4 = _slicedToArray(noop.useState(false), 2);
   [tmp6, c6] = _slicedToArray(noop.useState(null), 2);
-  let tmp5 = _slicedToArray(noop.useState(null), 2);
+  const tmp5 = _slicedToArray(noop.useState(null), 2);
   [tmp8, c7] = _slicedToArray(noop.useState(null), 2);
   let tmp10 = null != tmp8;
   const callback = noop.useCallback((nativeEvent) => {
@@ -231,7 +231,7 @@ export default function VibegrationsNativeComposer(projectId) {
       }
     };
   }, items);
-  _require = asyncGeneratorStep(async (arg0, value, arg2, arg3) => {
+  _require = asyncGeneratorStep(async (arg0, arg1, arg2, arg3) => {
     closure_5 = tmp3;
     closure_132_0 = closure_0;
     closure_132_1 = closure_2;
@@ -330,9 +330,9 @@ export default function VibegrationsNativeComposer(projectId) {
       let tmp15 = closure_9;
       const diff = VibegrationsTypes.VIBEGRATIONS_MAX_ATTACHMENTS_PER_MESSAGE - closure_9.current.length;
       if (map.length > diff) {
-        let intl = tmp16(1114).intl;
+        let intl = util.intl;
         let obj = { count: null };
-        VIBEGRATIONS_MAX_ATTACHMENTS_PER_MESSAGE = tmp16(7248).VIBEGRATIONS_MAX_ATTACHMENTS_PER_MESSAGE;
+        VIBEGRATIONS_MAX_ATTACHMENTS_PER_MESSAGE = VibegrationsTypes.VIBEGRATIONS_MAX_ATTACHMENTS_PER_MESSAGE;
         obj.count = VIBEGRATIONS_MAX_ATTACHMENTS_PER_MESSAGE;
         _undefined3(intl.formatToPlainString(_modDef3547.DlX57a, obj));
         const _Math = Math;
@@ -400,7 +400,7 @@ export default function VibegrationsNativeComposer(projectId) {
   }, items3);
   const items4 = [callback4];
   callback5 = obj.useCallback(
-    asyncGeneratorStep(async (arg0, value) => {
+    asyncGeneratorStep(async () => {
       if (c3 === 2) {
         c3 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -493,7 +493,7 @@ export default function VibegrationsNativeComposer(projectId) {
   );
   const items5 = [callback4];
   callback6 = obj.useCallback(
-    asyncGeneratorStep(async (arg0, value) => {
+    asyncGeneratorStep(async () => {
       if (c3 === 2) {
         c3 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -658,7 +658,7 @@ export default function VibegrationsNativeComposer(projectId) {
         let tmp10Result = null;
         if (null != children.errorText) {
           const obj3 = { variant: "text-xs/normal", color: "text-feedback-critical", children: children.errorText };
-          tmp10Result = tmp10(tmp11(tmp12[14]).Text, obj3);
+          tmp10Result = closure_10(tmp11(tmp12[14]).Text, obj3);
         }
         items1[1] = tmp10Result;
         obj1.children = items1;

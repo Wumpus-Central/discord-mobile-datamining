@@ -30,9 +30,9 @@ export default function usePendingGameProfileReturn(channelId) {
   const callback = noop.useCallback(() => {
     if (null != stateFromStores) {
       const obj = {
-        gameId: tmp.gameId,
+        gameId: stateFromStores.gameId,
         source: GameProfileAnalyticUtils.GameProfileSources.AnnouncementChannelReturn,
-        initialScrollOffset: tmp.initialScrollOffset,
+        initialScrollOffset: stateFromStores.initialScrollOffset,
       };
       obj.returnToGameProfile(obj);
     }
@@ -41,11 +41,11 @@ export default function usePendingGameProfileReturn(channelId) {
   stateFromStores1 = channelId(stateFromStores1[4]).useStateFromStores(items2, () => {
     let gameId;
     if (stateFromStores != null) {
-      gameId = tmp.gameId;
+      gameId = stateFromStores.gameId;
     }
     let game = null;
     if (null != gameId) {
-      game = GameStore.getGame(tmp.gameId);
+      game = GameStore.getGame(stateFromStores.gameId);
     }
     return game;
   });

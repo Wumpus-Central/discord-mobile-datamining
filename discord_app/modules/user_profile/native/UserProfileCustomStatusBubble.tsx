@@ -41,13 +41,12 @@ function EmojiImage(id) {
   let obj = { style: null, source: null, resizeMode: "contain" };
   const items = [{ height: size, width: size }, id.style];
   obj.style = items;
-  const tmp2 = React7;
   const tmp3 = FastImageDefault;
   obj = { id: id.emojiId, animated: null, size: null };
   const obj2 = AvatarUtilsDefault;
   obj = { uri: obj2.getEmojiURL(obj), animated: Boolean(animated) && setting, size: EMOJI_URL_BASE_SIZE };
   obj.source = obj;
-  return tmp2(tmp3, obj);
+  return React7(tmp3, obj);
 }
 function TextStatusContent(arg0) {
   ({ emoji, lineHeight, isPlaceholderText } = arg0);
@@ -77,7 +76,7 @@ function TextStatusContent(arg0) {
       obj4.style = obj5;
       items[1] = React7(timestampProducer, obj4);
       obj.children = items;
-      let tmp8Result = tmp8(closure_1_11, obj);
+      let tmp8Result = closure_1_10(closure_1_11, obj);
     } else {
       let name;
       if (emoji != null) {
@@ -92,7 +91,7 @@ function TextStatusContent(arg0) {
         obj7.style = obj8;
         items1[1] = React7(timestampProducer, obj7);
         obj6.children = items1;
-        tmp8Result = tmp8(closure_1_11, obj6);
+        tmp8Result = closure_1_10(closure_1_11, obj6);
       }
     }
     const items2 = [tmp8Result, text];
@@ -136,7 +135,6 @@ function EmojiOnlyStatusContent(arg0) {
   };
   let str;
   const tmp = closure_18();
-  const tmp12 = timestampProducer;
   if (emoji != null) {
     str = emoji.name;
   }
@@ -145,7 +143,7 @@ function EmojiOnlyStatusContent(arg0) {
   }
   obj1.name = str;
   obj.children = React7(EmojiDefault, obj1);
-  return React7(tmp12, obj);
+  return React7(timestampProducer, obj);
 }
 get_ActivityIndicator = fn(17);
 ({ PixelRatio: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
@@ -168,10 +166,10 @@ let closure_12 = createStyles.createStyles((arg0) => {
   const colors = nativeDefault.colors;
   if (arg0) {
     let BACKGROUND_SURFACE_HIGH = colors.CUSTOM_STATUS_BUBBLE_BG;
-    let tmp4 = tmp;
+    let tmp4 = importDefault;
   } else {
     BACKGROUND_SURFACE_HIGH = colors.BACKGROUND_SURFACE_HIGH;
-    tmp4 = tmp;
+    tmp4 = importDefault;
   }
   obj = { backgroundColor: BACKGROUND_SURFACE_HIGH, borderColor: null, borderWidth: 1 };
   const colors2 = tmp4(576).colors;
@@ -211,7 +209,7 @@ let closure_18 = createStyles.createStyles(() => ({ container: { alignItems: "ce
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/native/UserProfileCustomStatusBubble.tsx");
 
-export default noop.forwardRef((showFullStatus, ref) => {
+export default noop.forwardRef((showFullStatus, arg1) => {
   ({ customStatusActivity, themeType, hasCustomProfileTheme, editEnabled } = showFullStatus);
   showFullStatus = showFullStatus.showFullStatus;
   _require = tmp2;
@@ -222,12 +220,12 @@ export default noop.forwardRef((showFullStatus, ref) => {
   const colors = require("native").colors;
   if (hasCustomProfileTheme) {
     let BACKGROUND_SURFACE_HIGH = colors.CUSTOM_STATUS_BUBBLE_BG;
-    let tmp7 = tmp6;
-    let tmp8 = tmp6;
+    let tmp7 = importDefault;
+    let tmp8 = importDefault;
   } else {
     BACKGROUND_SURFACE_HIGH = colors.BACKGROUND_SURFACE_HIGH;
-    tmp7 = tmp6;
-    tmp8 = tmp6;
+    tmp7 = importDefault;
+    tmp8 = importDefault;
   }
   const token = obj.useToken(BACKGROUND_SURFACE_HIGH);
   let tmp4Result = tmp4(tmp5[16]);
@@ -329,9 +327,9 @@ export default noop.forwardRef((showFullStatus, ref) => {
     left: statusBubblePaddingHorizontal,
     right: statusBubblePaddingHorizontal,
   };
-  ref = obj4.useRef(null);
-  const imperativeHandle = obj4.useImperativeHandle(ref, () => ref.current);
   const tmp4Result1 = require("useGameMentionsAsPlainText");
+  const imperativeHandle = obj4.useImperativeHandle(arg1, () => ref.current);
+  const ref = obj4.useRef(null);
   scaledTextLineHeight = require("useScaledTextLineHeight").useScaledTextLineHeight(textVariant);
   if (!tmp15) {
     if (!tmp22) {

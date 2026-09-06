@@ -94,11 +94,11 @@ prototype["setSpeaking"] = function setSpeaking(userId, speaking) {
       }
     }
   } else if (userId in self.totalSpeakers) {
-    self.totalSpeakers[userId] = tmp.NONE;
+    self.totalSpeakers[userId] = SpeakingFlags.NONE;
   }
   if (self.userId === userId) {
     if (speaking !== self.speaking) {
-      if (speaking !== tmp.NONE) {
+      if (speaking !== SpeakingFlags.NONE) {
         const _Object2 = Object;
         values = Object.values(VoiceStateStore.getVoiceStatesForChannel(self.channelId));
         const found = values.filter((selfDeaf) => {

@@ -14,7 +14,7 @@ let closure_3 = {
   Rpc: "rpc",
   GameServerPing: "game_server_ping",
 };
-let closure_4 = {
+const dependencyMap = {
   [AnalyticEvents.DEVICE_EVENT]: (data) => {
     data = data.data;
     let tmp = null;
@@ -311,7 +311,7 @@ let closure_4 = {
     return tmp;
   },
 };
-let closure_5 = {
+const dependencyMap2 = {
   [AnalyticEvents.TOUCH_EVENT]: (data) => {
     data = data.data;
     let tmp = null;
@@ -815,27 +815,23 @@ let closure_5 = {
 const result = size.fileFinishedImporting("modules/telemetry_ring/native/channels/ZoomedInAnalyticBuilder.tsx");
 
 export const buildZoomedInAnalyticsEvent = function buildZoomedInAnalyticsEvent(key) {
-  if (key.key in closure_4) {
-    const tmp6 = tmp[key](key);
+  if (key.key.key in dependencyMap) {
+    const tmp6 = dependencyMap[key](key);
     let tmp7 = null;
     if (null != tmp6) {
       let obj = { key, props: tmp6 };
       tmp7 = obj;
     }
     return tmp7;
-  } else {
-    if (key in closure_5) {
-      const tmp4 = tmp2[key.key](key);
-      let tmp5 = null;
-      if (null != tmp4) {
-        obj = { key: key2, props: tmp4 };
-        tmp5 = obj;
-      }
-      return tmp5;
-    } else {
-      return null;
+  } else if (key in dependencyMap2) {
+    const tmp4 = dependencyMap2[key.key](key);
+    let tmp5 = null;
+    if (null != tmp4) {
+      obj = { key: key2, props: tmp4 };
+      tmp5 = obj;
     }
-    tmp2 = closure_5;
+    return tmp5;
+  } else {
+    return null;
   }
-  tmp = closure_4;
 };

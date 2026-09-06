@@ -58,7 +58,15 @@ export default noop.memo(function ActivityShelfItemBackground(aspectRatio) {
               accessibilityLabel={null}
             />
           );
-          let tmp9Result = tmp9(NativeViewDefault, obj);
+          let tmp9Result = jsx(NativeViewDefault, {
+            onError() {
+              return closure_0(true);
+            },
+            source: null,
+            style: null,
+            accessibilityRole: "image",
+            accessibilityLabel: null,
+          });
         }
       }
       obj = { style: tmp.previewImage };

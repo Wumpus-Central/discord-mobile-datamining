@@ -25,7 +25,7 @@ export default noop.memo(function GuildsBar(enableHome) {
   let tmp4 = useGuildsBarGestureDefault();
   const fastListRef = tmp4.fastListRef;
   ({ scrollPosition, gesture, scrollerRef, persistantKeys, onFastListScroll, onFastListScrollWorklet } = tmp4);
-  let tmp = closure_6();
+  const tmp = closure_6();
   ({ listProps, listDataProps } = useGuildsBarPropsDefault(fastListRef));
   const items = [fastListRef];
   const effect = noop.useEffect(() => {
@@ -37,7 +37,7 @@ export default noop.memo(function GuildsBar(enableHome) {
   closure_129_3 = noop.useRef(false);
   const effect1 = noop.useEffect(() => {
     if (obj.isAndroid()) {
-      closure_0 = ref(tmp[4]).addOnPipModeChangedListener((arg0) => {
+      closure_0 = ref(ref2[4]).addOnPipModeChangedListener((arg0) => {
         if (arg0) {
           ref3.current = true;
         }
@@ -51,14 +51,13 @@ export default noop.memo(function GuildsBar(enableHome) {
       };
     }
     obj = fastListRef(ref2[3]);
-    tmp = ref2;
   }, []);
   const items1 = [fastListRef, listProps];
   const effect2 = noop.useEffect(() => {
     const current = ref2.current;
     ref2.current = fastListRef;
     if (ref3.current) {
-      let num = tmp.chunkBase;
+      let num = fastListRef.chunkBase;
       if (num == null) {
         num = 0;
       }
@@ -74,7 +73,7 @@ export default noop.memo(function GuildsBar(enableHome) {
             const blocks = current2.computeBlocks();
           }
         }
-        tmp4 = tmp.insetStart === current.insetStart && tmp.insetEnd === current.insetEnd;
+        tmp4 = fastListRef.insetStart === current.insetStart && fastListRef.insetEnd === current.insetEnd;
       }
     }
   }, items1);
@@ -84,7 +83,6 @@ export default noop.memo(function GuildsBar(enableHome) {
   obj = { gesture, children: null };
   obj = { style: tmp.wrapper, collapsable: false, nativeID: "guilds-bar-view", children: null };
   const tmp10 = StartupProfilerDefault;
-  const tmp11 = closure_5;
   const obj1 = {};
   const tmp12 = NativeViewDefault;
   const merged = Object.assign(listProps);
@@ -111,7 +109,7 @@ export default noop.memo(function GuildsBar(enableHome) {
     closure_4(FavoritesGuildIntroPopoverDefault, {}),
   ];
   obj.children = items2;
-  obj.children = tmp11(tmp12, obj);
+  obj.children = closure_5(tmp12, obj);
   obj.children = closure_4(fastListRef(6655).GestureDetector, obj);
   return closure_4(tmp10, obj);
 });

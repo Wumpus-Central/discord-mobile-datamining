@@ -46,12 +46,12 @@ let ActivityActionTypes = {
   [6]: "STREAM_REQUEST",
 };
 ActivityActionTypes = {
-  USER(arg0) {
-    return "/users/" + arg0;
+  USER(userId) {
+    return "/users/" + userId;
   },
-  USER_RELATIONSHIPS(arg0) {
-    let tmp = arg0;
-    if (arg0 === undefined) {
+  USER_RELATIONSHIPS() {
+    let tmp = userId;
+    if (userId === undefined) {
       tmp = ME;
     }
     return "/users/" + tmp + "/relationships";
@@ -79,8 +79,8 @@ ActivityActionTypes = {
   USER_PROFILE_WIDGET_CLIP_UPLOAD: "/users/@me/widgets/clips/upload",
   WIDGET_CONFIGS_FEATURED: "/widget-configs/featured",
   WIDGET_CONFIGS_DEVELOPER: "/widget-configs/developer",
-  APPLICATION_WIDGET_CONFIGS(arg0) {
-    return "/applications/" + arg0 + "/widget-configs";
+  APPLICATION_WIDGET_CONFIGS(applicationId) {
+    return "/applications/" + applicationId + "/widget-configs";
   },
   APPLICATION_WIDGET_REFRESH(arg0) {
     return "/applications/" + arg0 + "/widget/refresh";
@@ -91,15 +91,15 @@ ActivityActionTypes = {
   USER_CHANNELS: "/users/@me/channels",
   USER_CHANNELS_BULK_LEAVE: "/users/@me/channels/bulk-leave",
   USER_GROUP_DM_SHELL: "/users/@me/channels/group-dm-shell",
-  USER_WISHLIST(arg0) {
-    return "/wishlists/" + arg0;
+  USER_WISHLIST(wishlistId) {
+    return "/wishlists/" + wishlistId;
   },
   USER_WISHLIST_PATCH(arg0) {
     return "/users/@me/wishlists/" + arg0;
   },
   USER_WISHLIST_ITEMS: "/users/@me/wishlist/items",
-  USER_WISHLIST_ITEM(arg0, arg1) {
-    return "/users/@me/wishlists/" + arg0 + "/items/" + arg1;
+  USER_WISHLIST_ITEM(wishlistId, skuId) {
+    return "/users/@me/wishlists/" + wishlistId + "/items/" + skuId;
   },
   USER_APPLICATION_IDENTITIES(arg0) {
     return "/users/" + arg0 + "/application-identities";
@@ -188,20 +188,20 @@ ActivityActionTypes = {
   GUILD_MIGRATE_COMMAND_SCOPE(arg0) {
     return "/guilds/" + arg0 + "/migrate-command-scope";
   },
-  GUILD_BANS_SEARCH(arg0) {
-    return "/guilds/" + arg0 + "/bans/search";
+  GUILD_BANS_SEARCH(guildId) {
+    return "/guilds/" + guildId + "/bans/search";
   },
-  GUILD_BANS(arg0) {
-    return "/guilds/" + arg0 + "/bans";
+  GUILD_BANS(guildId) {
+    return "/guilds/" + guildId + "/bans";
   },
   GUILD_BAN(id, id2) {
     return "/guilds/" + id + "/bans/" + id2;
   },
-  GUILD_ROLES(arg0) {
-    return "/guilds/" + arg0 + "/roles";
+  GUILD_ROLES(id) {
+    return "/guilds/" + id + "/roles";
   },
-  GUILD_ROLE_MEMBER_COUNTS(arg0) {
-    return "/guilds/" + arg0 + "/roles/member-counts";
+  GUILD_ROLE_MEMBER_COUNTS(guildId) {
+    return "/guilds/" + guildId + "/roles/member-counts";
   },
   GUILD_ROLE_CONNECTIONS_CONFIGURATIONS(arg0) {
     return "/guilds/" + arg0 + "/roles/connections-configurations";
@@ -242,8 +242,8 @@ ActivityActionTypes = {
   GUILD_INSTANT_INVITES(id) {
     return "/guilds/" + id + "/invites";
   },
-  GUILD_WIDGET(arg0) {
-    return "/guilds/" + arg0 + "/widget";
+  GUILD_WIDGET(guildId) {
+    return "/guilds/" + guildId + "/widget";
   },
   GUILD_VANITY_URL(id) {
     return "/guilds/" + id + "/vanity-url";
@@ -328,8 +328,8 @@ ActivityActionTypes = {
   GUILD_BANNER(id, banner, webp) {
     return "/guilds/" + id + "/banners/" + banner + "." + webp;
   },
-  GUILD_HOME_SETTINGS(arg0) {
-    return "/guilds/" + arg0 + "/new-member-welcome";
+  GUILD_HOME_SETTINGS(guildId) {
+    return "/guilds/" + guildId + "/new-member-welcome";
   },
   GUILD_CONFIG_GATES(arg0) {
     return "/guilds/" + arg0 + "/config-gates";
@@ -354,8 +354,8 @@ ActivityActionTypes = {
     }
     return "/guilds/" + arg0 + "/avatars/" + arg1 + "." + str;
   },
-  GUILD_MEMBER_ACTIONS(arg0) {
-    return "/guilds/" + arg0 + "/new-member-actions";
+  GUILD_MEMBER_ACTIONS(guildId) {
+    return "/guilds/" + guildId + "/new-member-actions";
   },
   GUILD_MEMBER_ACTION_UPDATE(guildId, channelId) {
     return "/guilds/" + guildId + "/new-member-action/" + channelId;
@@ -395,8 +395,8 @@ ActivityActionTypes = {
   GUILD(id) {
     return "/guilds/" + id;
   },
-  GUILD_BASIC(arg0) {
-    return "/guilds/" + arg0 + "/basic";
+  GUILD_BASIC(guildId) {
+    return "/guilds/" + guildId + "/basic";
   },
   GUILD_SPACE(arg0) {
     return "/guilds/" + arg0 + "/space";
@@ -453,7 +453,7 @@ ActivityActionTypes = {
     }
     return "/users/" + arg0 + "/avatars/" + arg1 + "." + str;
   },
-  ARCHIVED_AVATAR(userId, avatarId, storageHash, webp) {
+  ARCHIVED_AVATAR(userId, avatarId, storageHash) {
     let str = webp;
     if (webp === undefined) {
       str = "jpg";
@@ -482,8 +482,8 @@ ActivityActionTypes = {
   COLLECTIBLES_CLAIM: "/users/@me/claim-premium-collectibles-product",
   COLLECTIBLES_CLAIM_CATEGORY_REWARD: "/users/@me/claim-reward-category-product",
   COLLECTIBLES_PURCHASES: "/users/@me/collectibles-purchases",
-  COLLECTIBLES_PRODUCTS(arg0) {
-    return "/collectibles-products/" + arg0;
+  COLLECTIBLES_PRODUCTS(skuId) {
+    return "/collectibles-products/" + skuId;
   },
   COLLECTIBLES_VALID_GIFT_RECIPIENT: "/users/@me/valid-collectibles-gift-recipient",
   COLLECTIBLES_VALID_GIFT_RECIPIENTS_BATCH: "/users/@me/valid-collectibles-gift-recipients-batch",
@@ -492,7 +492,7 @@ ActivityActionTypes = {
   COLLECTIBLES_SHOP_TAB_LAYOUT(arg0) {
     return "/collectibles-shop-tab-layouts/" + arg0;
   },
-  GUILD_MEMBER_BANNER(guildId, id, banner, webp) {
+  GUILD_MEMBER_BANNER(guildId, id, banner) {
     let str = webp;
     if (webp === undefined) {
       str = "png";
@@ -502,8 +502,8 @@ ActivityActionTypes = {
   CHANNEL_CONVERSATIONS(arg0) {
     return "/channels/" + arg0 + "/conversations";
   },
-  CHANNEL_CONVERSATION_MESSAGES(arg0, arg1) {
-    return "/channels/" + arg0 + "/conversations/" + arg1 + "/messages";
+  CHANNEL_CONVERSATION_MESSAGES(channelId, conversationId) {
+    return "/channels/" + channelId + "/conversations/" + conversationId + "/messages";
   },
   MESSAGES(channelId) {
     return "/channels/" + channelId + "/messages";
@@ -591,11 +591,11 @@ ActivityActionTypes = {
   CHANNEL_ACK(arg0) {
     return "/channels/" + arg0 + "/messages/ack";
   },
-  CHANNEL_STORE_LISTING(arg0) {
-    return "/channels/" + arg0 + "/store-listing";
+  CHANNEL_STORE_LISTING(channelId) {
+    return "/channels/" + channelId + "/store-listing";
   },
-  CHANNEL_STORE_LISTING_SKU(arg0, arg1) {
-    return "/channels/" + arg0 + "/store-listings/" + arg1;
+  CHANNEL_STORE_LISTING_SKU(channelId, arg1) {
+    return "/channels/" + channelId + "/store-listings/" + arg1;
   },
   CHANNEL_ENTITLEMENT_GRANT(arg0) {
     return "/channels/" + arg0 + "/store-listing/entitlement-grant";
@@ -603,8 +603,8 @@ ActivityActionTypes = {
   CHANNEL_FOLLOWERS(arg0) {
     return "/channels/" + arg0 + "/followers";
   },
-  CHANNEL_FOLLOWER_STATS(arg0) {
-    return "/channels/" + arg0 + "/follower-stats";
+  CHANNEL_FOLLOWER_STATS(channel_id) {
+    return "/channels/" + channel_id + "/follower-stats";
   },
   CHANNEL_FOLLOWER_MESSAGE_STATS(arg0) {
     return "/channels/" + arg0 + "/follower-message-stats";
@@ -675,8 +675,8 @@ ActivityActionTypes = {
   UNCLAIMED_GAMES: "/users/@me/unclaimed-games",
   USERS_ME_CUSTOM_THEMES: "/users/@me/custom-themes",
   CONNECTIONS: "/users/@me/connections",
-  CONNECTIONS_AUTHORIZE(arg0) {
-    return "/connections/" + arg0 + "/authorize";
+  CONNECTIONS_AUTHORIZE(platform_type) {
+    return "/connections/" + platform_type + "/authorize";
   },
   CONNECTIONS_SESSION_HANDOFF(arg0) {
     return "/connections/" + arg0 + "/callback/session-handoff";
@@ -699,8 +699,8 @@ ActivityActionTypes = {
   },
   XBOX_HANDOFF: "/consoles/xbox-handoff",
   NOTES: "/users/@me/notes",
-  NOTE(arg0) {
-    return "/users/@me/notes/" + arg0;
+  NOTE(userId) {
+    return "/users/@me/notes/" + userId;
   },
   MENTIONS: "/users/@me/mentions",
   MENTIONS_MESSAGE_ID(id) {
@@ -757,8 +757,8 @@ ActivityActionTypes = {
   INVITE(arg0) {
     return "/invites/" + arg0;
   },
-  INVITE_FRIEND_MEMBERS(arg0) {
-    return "/invites/" + arg0 + "/friend-members";
+  INVITE_FRIEND_MEMBERS(code) {
+    return "/invites/" + code + "/friend-members";
   },
   UNRESOLVED_GUILD_TEMPLATE(code) {
     return "/guilds/templates/" + code;
@@ -866,8 +866,8 @@ ActivityActionTypes = {
   GUILD_WEBHOOKS(id) {
     return "/guilds/" + id + "/webhooks";
   },
-  WEBHOOK(arg0) {
-    return "/webhooks/" + arg0;
+  WEBHOOK(webhookId) {
+    return "/webhooks/" + webhookId;
   },
   WEBHOOK_INTEGRATION(webhookId, token) {
     return "/webhooks/" + webhookId + "/" + token;
@@ -925,8 +925,8 @@ ActivityActionTypes = {
   GUILD_POWERUP_UPDATE(arg0, arg1) {
     return "/guilds/" + arg0 + "/entitlements/" + arg1;
   },
-  GAME_SERVERS(arg0) {
-    return "/guilds/" + arg0 + "/game-servers";
+  GAME_SERVERS(guildId) {
+    return "/guilds/" + guildId + "/game-servers";
   },
   GAME_SERVER_REGIONS(arg0) {
     return "/guilds/" + arg0 + "/game-server-regions";
@@ -939,8 +939,8 @@ ActivityActionTypes = {
   GAME_SERVER_ME_WAKE(arg0) {
     return "/users/@me/game-servers/" + arg0 + "/wake";
   },
-  GAME_SERVER_WAKE(arg0, arg1) {
-    return "/guilds/" + arg0 + "/game-servers/" + arg1 + "/wake";
+  GAME_SERVER_WAKE(guildId, arg1) {
+    return "/guilds/" + guildId + "/game-servers/" + arg1 + "/wake";
   },
   SEARCH_CHANNEL(searchId) {
     return "/channels/" + searchId + "/messages/search";
@@ -956,8 +956,8 @@ ActivityActionTypes = {
   BILLING_PAYMENT_SOURCE(arg0) {
     return "/users/@me/billing/payment-sources/" + arg0;
   },
-  BILLING_WALLET_INFORMATION(arg0) {
-    return "/users/@me/billing/wallet/" + arg0 + "/information";
+  BILLING_WALLET_INFORMATION(paymentSourceId) {
+    return "/users/@me/billing/wallet/" + paymentSourceId + "/information";
   },
   BILLING_PAYMENTS: "/users/@me/billing/payments",
   BILLING_PAYMENT(arg0) {
@@ -1056,8 +1056,8 @@ ActivityActionTypes = {
   BILLING_STORE_COUNTRY: "/billing/store-country",
   PREMIUM_GROUP_MEMBERSHIP: "/users/@me/premium-group/membership",
   PREMIUM_GROUP_INVITES: "/users/@me/premium-group/invites",
-  PREMIUM_GROUP_INVITE(arg0) {
-    return "/users/@me/premium-group/invites/" + arg0;
+  PREMIUM_GROUP_INVITE(subscriptionGroupMemberId) {
+    return "/users/@me/premium-group/invites/" + subscriptionGroupMemberId;
   },
   PROGRAM_REWARDS: "/users/@me/program-rewards",
   VERIFY_PURCHASE: "/google-play/verify-purchase-token",
@@ -1103,8 +1103,8 @@ ActivityActionTypes = {
   },
   STOREFRONT_PRODUCTS_WITH_SKUS: "/storefront/products",
   STOREFRONT_PRODUCTS_BY_SKU_IDS: "/storefront/products/skus",
-  STOREFRONT_PRODUCT_BY_SKU_ID(arg0) {
-    return "/storefront/products/sku/" + arg0;
+  STOREFRONT_PRODUCT_BY_SKU_ID(skuId) {
+    return "/storefront/products/sku/" + skuId;
   },
   STOREFRONT_PROMOTIONS: "/storefront/promotions",
   STOREFRONT_PRICES: "/storefront/pricing",
@@ -1126,11 +1126,11 @@ ActivityActionTypes = {
   STORE_PUBLISHED_LISTINGS_SKU_JOIN_GUILD(arg0) {
     return "/store/published-listings/skus/" + arg0 + "/guild/join";
   },
-  STORE_PUBLISHED_LISTINGS_SUBSCRIPTION_PLANS(arg0) {
-    return "/store/published-listings/skus/" + arg0 + "/subscription-plans";
+  STORE_PUBLISHED_LISTINGS_SUBSCRIPTION_PLANS(skuId) {
+    return "/store/published-listings/skus/" + skuId + "/subscription-plans";
   },
-  STORE_SKU(arg0) {
-    return "/store/skus/" + arg0;
+  STORE_SKU(skuId) {
+    return "/store/skus/" + skuId;
   },
   STORE_SKU_PURCHASE(arg0) {
     return "/store/skus/" + arg0 + "/purchase";
@@ -1147,11 +1147,11 @@ ActivityActionTypes = {
   SOCIAL_LAYER_STOREFRONT_BY_APPLICATION_ID(applicationId) {
     return "/partner-sdk/applications/" + applicationId + "/application-storefront";
   },
-  SOCIAL_LAYER_STOREFRONTS_ALL(arg0) {
-    return "/partner-sdk/applications/" + arg0 + "/storefronts/preview";
+  SOCIAL_LAYER_STOREFRONTS_ALL(applicationId) {
+    return "/partner-sdk/applications/" + applicationId + "/storefronts/preview";
   },
-  SOCIAL_LAYER_STOREFRONT_BY_ID(arg0, arg1) {
-    return "/partner-sdk/applications/" + arg0 + "/storefront/" + arg1 + "/preview";
+  SOCIAL_LAYER_STOREFRONT_BY_ID(arg0, storefrontId) {
+    return "/partner-sdk/applications/" + arg0 + "/storefront/" + storefrontId + "/preview";
   },
   SOCIAL_LAYER_APPLICATION_STOREFRONT_SKU_BY_APPLICATION_ID(applicationId, id) {
     return "/partner-sdk/applications/" + applicationId + "/storefront/skus/" + id;
@@ -1162,8 +1162,8 @@ ActivityActionTypes = {
   SOCIAL_LAYER_APPLICATION_STOREFRONT_SKU_ELIGIBILITY(arg0, skuId) {
     return "/partner-sdk/applications/" + arg0 + "/storefront/skus/" + skuId + "/eligibility";
   },
-  SOCIAL_LAYER_STOREFRONT_ANNOUNCEMENT(arg0) {
-    return "/partner-sdk/guilds/" + arg0 + "/application-storefront/announcement";
+  SOCIAL_LAYER_STOREFRONT_ANNOUNCEMENT(guildId) {
+    return "/partner-sdk/guilds/" + guildId + "/application-storefront/announcement";
   },
   SOCIAL_LAYER_STOREFRONT_CONFIG: "/partner-sdk/storefront-config",
   SOCIAL_LAYER_STOREFRONT_LAUNCH_ANNOUNCEMENT: "/partner-sdk/storefront-launch-announcement",
@@ -1181,8 +1181,8 @@ ActivityActionTypes = {
   ORDER_SIGN(arg0) {
     return "/billing/orders/" + arg0 + "/sign";
   },
-  ORDER_CANCEL_SIGNING(arg0) {
-    return "/billing/orders/" + arg0 + "/cancel-signing";
+  ORDER_CANCEL_SIGNING(orderId) {
+    return "/billing/orders/" + orderId + "/cancel-signing";
   },
   ORDER_DISCARD(arg0) {
     return "/billing/orders/" + arg0 + "/discard";
@@ -1215,8 +1215,8 @@ ActivityActionTypes = {
     return "/users/@me/applications/" + id + "/ticket";
   },
   ENTITLEMENTS_GIFTABLE: "/users/@me/entitlements/gifts",
-  STORE_ASSET(arg0, banner_asset_id, mp4) {
-    return "/store/applications/" + arg0 + "/assets/" + banner_asset_id + "." + mp4;
+  STORE_ASSET(React5, banner_asset_id, mp4) {
+    return "/store/applications/" + React5 + "/assets/" + banner_asset_id + "." + mp4;
   },
   APPLICATION_ASSET(arg0, arg1, arg2) {
     return "/applications/" + arg0 + "/app-assets/" + arg1 + "." + arg2;
@@ -1244,8 +1244,8 @@ ActivityActionTypes = {
   },
   USER_GIFT_CODE_CREATE: "/users/@me/entitlements/gift-codes",
   USER_GIFT_CODE_DELIVERIES: "/users/@me/gift-code-deliveries",
-  USER_GIFT_CODE_REVOKE(arg0) {
-    return "/users/@me/entitlements/gift-codes/" + arg0;
+  USER_GIFT_CODE_REVOKE(code) {
+    return "/users/@me/entitlements/gift-codes/" + code;
   },
   USER_GIFT_CODES: "/users/@me/entitlements/gift-codes",
   GIFT_INTENTS_DISMISS: "/users/@me/gift-intents/dismiss",
@@ -1281,8 +1281,8 @@ ActivityActionTypes = {
   GUILD_DISCOVERY_METADATA(arg0) {
     return "/guilds/" + arg0 + "/discovery-metadata";
   },
-  GUILD_DISCOVERY_UPDATE_CATEGORY(arg0, arg1) {
-    return "/guilds/" + arg0 + "/discovery-categories/" + arg1;
+  GUILD_DISCOVERY_UPDATE_CATEGORY(guildId, categoryId) {
+    return "/guilds/" + guildId + "/discovery-categories/" + categoryId;
   },
   STREAM_PREVIEW(HTTPResult) {
     return "/streams/" + HTTPResult + "/preview";
@@ -1293,8 +1293,8 @@ ActivityActionTypes = {
   STREAM(encodeStreamKeyResult) {
     return "/streams/" + encodeStreamKeyResult + "/stream";
   },
-  GUILD_PREVIEW(arg0) {
-    return "/guilds/" + arg0 + "/preview";
+  GUILD_PREVIEW(guildId) {
+    return "/guilds/" + guildId + "/preview";
   },
   USER_AFFINITIES: "/users/@me/affinities/users",
   USER_AFFINITIES_V2: "/users/@me/affinities/v2/users",
@@ -1366,7 +1366,7 @@ ActivityActionTypes = {
   APPLICATION_BOT_GUILD_COMMAND_PERMISSIONS(arg0, arg1, arg2) {
     return "/applications/" + arg0 + "/guilds/" + arg1 + "/commands/" + arg2 + "/permissions";
   },
-  UPDATE_VOICE_STATE(guildId, id) {
+  UPDATE_VOICE_STATE(guildId) {
     let str = id;
     if (id === undefined) {
       str = "@me";
@@ -1388,8 +1388,8 @@ ActivityActionTypes = {
   SEND_UNAUTHENTICATED_REPORT_PINCODE(name) {
     return "/reporting/unauthenticated/" + name + "/code";
   },
-  VERIFY_UNAUTHENTICATED_REPORT(arg0) {
-    return "/reporting/unauthenticated/" + arg0 + "/verify";
+  VERIFY_UNAUTHENTICATED_REPORT(name) {
+    return "/reporting/unauthenticated/" + name + "/verify";
   },
   SUBMIT_MODERATOR_MESSAGE_REPORT(channel_id, id) {
     return "/channels/" + channel_id + "/" + id + "/mod-report";
@@ -1440,13 +1440,13 @@ ActivityActionTypes = {
     }
     return "/guilds/" + arg0 + "/scheduled-events/" + arg1 + str + "/users";
   },
-  USER_GUILD_EVENT(arg0, arg1, arg2) {
+  USER_GUILD_EVENT(guildId, guildEventId, guildEventExceptionId) {
     let str = "";
-    if (null != arg2) {
+    if (null != guildEventExceptionId) {
       const _HermesInternal = HermesInternal;
-      str = "/" + arg2;
+      str = "/" + guildEventExceptionId;
     }
-    return "/guilds/" + arg0 + "/scheduled-events/" + arg1 + str + "/users/@me";
+    return "/guilds/" + guildId + "/scheduled-events/" + guildEventId + str + "/users/@me";
   },
   USER_GUILD_EVENTS: "/users/@me/scheduled-events",
   GUILD_EVENT_EXCEPTIONS(guild_id, id) {
@@ -1491,8 +1491,8 @@ ActivityActionTypes = {
   DIRECTORY_CHANNEL_ENTRY(channelId, guildId) {
     return "/channels/" + channelId + "/directory-entry/" + guildId;
   },
-  DIRECTORY_ENTRIES_SEARCH(arg0) {
-    return "/channels/" + arg0 + "/directory-entries/search";
+  DIRECTORY_ENTRIES_SEARCH(channelId) {
+    return "/channels/" + channelId + "/directory-entries/search";
   },
   DIRECTORY_CHANNEL_CATEGORY_COUNTS(arg0) {
     return "/channels/" + arg0 + "/directory-entries/counts";
@@ -1507,8 +1507,8 @@ ActivityActionTypes = {
   TEAMS: "/teams",
   APPLICATIONS: "/applications",
   APPLICATIONS_WITH_ASSETS: "/applications-with-assets",
-  APPLICATION_OWNER_TRANSFER(arg0) {
-    return "/applications/" + arg0 + "/transfer";
+  APPLICATION_OWNER_TRANSFER(_require) {
+    return "/applications/" + _require + "/transfer";
   },
   HUB_WAITLIST_SIGNUP: "/hub-waitlist/signup",
   HUB_EMAIL_VERIFY: "/guilds/automations/email-domain-lookup/verify",
@@ -1597,8 +1597,8 @@ ActivityActionTypes = {
   SUBSCRIPTION_PLAN_GUILD_ROLE_GROUP_LISTING(arg0) {
     return "/subscription-plans/" + arg0 + "/guild-role-subscription-group-listing";
   },
-  MEDIA_POST_RESHARE_GET_PREVIEW(arg0) {
-    return "/channels/" + arg0 + "/media-post-preview";
+  MEDIA_POST_RESHARE_GET_PREVIEW(threadId) {
+    return "/channels/" + threadId + "/media-post-preview";
   },
   UNFURL_EMBED_URLS: "/unfurler/embed-urls",
   BUG_REPORTS: "/private/bug-reports",
@@ -1687,8 +1687,8 @@ ActivityActionTypes = {
   APPLICATION_DIRECTORY_APPLICATION(arg0) {
     return "/application-directory-static/applications/" + arg0;
   },
-  APPLICATION_DIRECTORY_EMBED_APPLICATION(arg0) {
-    return "/application-directory/applications/" + arg0 + "/embed";
+  APPLICATION_DIRECTORY_EMBED_APPLICATION(applicationId) {
+    return "/application-directory/applications/" + applicationId + "/embed";
   },
   APPLICATION_DIRECTORY_CATEGORIES: "/application-directory-static/categories",
   APPLICATION_DIRECTORY_SIMILAR(arg0) {
@@ -1753,17 +1753,17 @@ ActivityActionTypes = {
   },
   MESSAGE_REQUESTS_SUPPLEMENTAL_DATA: "/users/@me/message-requests/supplemental-data",
   CONNECT_REQUEST_CREATE: "/consoles/connect-request",
-  CONNECT_REQUEST(arg0) {
-    return "/consoles/connect-request/" + arg0;
+  CONNECT_REQUEST(nonce) {
+    return "/consoles/connect-request/" + nonce;
   },
-  CONSOLES_DEVICES(arg0) {
-    return "/consoles/" + arg0 + "/devices";
+  CONSOLES_DEVICES(platform) {
+    return "/consoles/" + platform + "/devices";
   },
-  CONSOLES_DEVICES_COMMANDS(arg0, arg1) {
-    return "/consoles/" + arg0 + "/devices/" + arg1 + "/commands";
+  CONSOLES_DEVICES_COMMANDS(platform, arg1) {
+    return "/consoles/" + platform + "/devices/" + arg1 + "/commands";
   },
-  CONSOLES_DEVICES_COMMAND(arg0, arg1, arg2) {
-    return "/consoles/" + arg0 + "/devices/" + arg1 + "/commands/" + arg2;
+  CONSOLES_DEVICES_COMMAND(platform, deviceId, commandId) {
+    return "/consoles/" + platform + "/devices/" + deviceId + "/commands/" + commandId;
   },
   ELIGIBLE_APPLICATION_SUBSCRIPTION_GUILDS: "/users/@me/billing/eligible-application-subscription-guilds",
   APPLICATION_USER_ROLE_CONNECTIONS: "/users/@me/applications/role-connections",
@@ -1779,12 +1779,12 @@ ActivityActionTypes = {
   CREATE_REFERRAL(arg0) {
     return "/users/@me/referrals/" + arg0;
   },
-  FAMILY_CENTER_TEEN_ACTIVITY(arg0) {
-    return "/family-center/" + arg0 + "/activity";
+  FAMILY_CENTER_TEEN_ACTIVITY(topUserActivities) {
+    return "/family-center/" + topUserActivities + "/activity";
   },
   FAMILY_CENTER_TEEN_ACTIVITY_ME: "/family-center/@me",
-  FAMILY_CENTER_TEEN_ACTIVITY_MORE(arg0, arg1, arg2, arg3) {
-    return "/family-center/more-activity/" + arg0 + "/" + arg1 + "/" + arg2 + "/" + arg3;
+  FAMILY_CENTER_TEEN_ACTIVITY_MORE(topUserActivities, topGuildActivities, arg2, arg3) {
+    return "/family-center/more-activity/" + topUserActivities + "/" + topGuildActivities + "/" + arg2 + "/" + arg3;
   },
   FAMILY_CENTER_LINKED_USERS: "/users/@me/linked-users",
   FAMILY_CENTER_LINK_CODE: "/family-center/@me/link-code",
@@ -1828,11 +1828,11 @@ ActivityActionTypes = {
     return "/guilds/" + arg0 + "/members/unusual-dm-activity";
   },
   SAFETY_HUB: "/safety-hub/@me",
-  SAFETY_HUB_REQUEST_REVIEW(arg0) {
-    return "/safety-hub/request-review/" + arg0;
+  SAFETY_HUB_REQUEST_REVIEW(classificationId) {
+    return "/safety-hub/request-review/" + classificationId;
   },
-  SAFETY_HUB_REQUEST_SUSPENDED_USER_REVIEW(arg0) {
-    return "/safety-hub/suspended/request-review/" + arg0;
+  SAFETY_HUB_REQUEST_SUSPENDED_USER_REVIEW(classificationId) {
+    return "/safety-hub/suspended/request-review/" + classificationId;
   },
   SAFETY_HUB_SUSPENDED: "/safety-hub/suspended/@me",
   SAFETY_HUB_REQUEST_SUSPENDED_AGE_VERIFICATION: "/safety-hub/suspended/request-verification",
@@ -1873,8 +1873,8 @@ ActivityActionTypes = {
   QUEST_PREVIEW(arg0) {
     return "/quests/" + arg0 + "/preview";
   },
-  QUESTS_ENROLL(arg0) {
-    return "/quests/" + arg0 + "/enroll";
+  QUESTS_ENROLL(questId) {
+    return "/quests/" + questId + "/enroll";
   },
   QUEST_ON_CONSOLE_START(arg0) {
     return "/quests/" + arg0 + "/console/start";
@@ -1885,17 +1885,17 @@ ActivityActionTypes = {
   QUESTS_HEARTBEAT(arg0) {
     return "/quests/" + arg0 + "/heartbeat";
   },
-  QUESTS_VIDEO_PROGRESS(arg0) {
-    return "/quests/" + arg0 + "/video-progress";
+  QUESTS_VIDEO_PROGRESS(quest_id) {
+    return "/quests/" + quest_id + "/video-progress";
   },
-  QUESTS_REWARD_CODE(arg0) {
-    return "/quests/" + arg0 + "/reward-code";
+  QUESTS_REWARD_CODE(questId) {
+    return "/quests/" + questId + "/reward-code";
   },
-  QUESTS_CLAIM_REWARD(arg0) {
-    return "/quests/" + arg0 + "/claim-reward";
+  QUESTS_CLAIM_REWARD(questId) {
+    return "/quests/" + questId + "/claim-reward";
   },
-  QUESTS_DISMISS_CONTENT(arg0, arg1) {
-    return "/quests/" + arg0 + "/dismissible-content/" + arg1 + "/dismiss";
+  QUESTS_DISMISS_CONTENT(questId, content) {
+    return "/quests/" + questId + "/dismissible-content/" + content + "/dismiss";
   },
   QUESTS_PREVIEW_STATUS(arg0) {
     return "/quests/" + arg0 + "/preview/status";
@@ -1928,8 +1928,8 @@ ActivityActionTypes = {
   DELETE_SAFETY_WARNINGS(arg0) {
     return "/channels/" + arg0 + "/safety-warnings";
   },
-  SAFETY_WARNING_FALSE_POSITIVE(arg0) {
-    return "/channels/" + arg0 + "/safety-warning/report-false-positive";
+  SAFETY_WARNING_FALSE_POSITIVE(channelId) {
+    return "/channels/" + channelId + "/safety-warning/report-false-positive";
   },
   MY_CONTENT_INVENTORY(arg0) {
     let str = "";
@@ -1939,8 +1939,8 @@ ActivityActionTypes = {
     }
     return "/content-inventory/users/@me" + str;
   },
-  CONTENT_INVENTORY_OUTBOX(arg0) {
-    return "/content-inventory/users/" + arg0 + "/outbox";
+  CONTENT_INVENTORY_OUTBOX(userId) {
+    return "/content-inventory/users/" + userId + "/outbox";
   },
   DELETE_MY_CONTENT_INVENTORY_OUTBOX_ENTRY_HISTORY(id) {
     return "/content-inventory/users/@me/outbox/entries/id/" + id + "/history";
@@ -1979,11 +1979,11 @@ ActivityActionTypes = {
     return "/users/@me/relationships/" + id + "/ignore";
   },
   SCHEDULED_MESSAGES: "/users/@me/scheduled-messages",
-  SCHEDULED_MESSAGE(arg0) {
-    return "/users/@me/scheduled-messages/" + arg0;
+  SCHEDULED_MESSAGE(scheduledMessageId) {
+    return "/users/@me/scheduled-messages/" + scheduledMessageId;
   },
-  SCHEDULED_MESSAGE_SEND(arg0) {
-    return "/users/@me/scheduled-messages/" + arg0 + "/send";
+  SCHEDULED_MESSAGE_SEND(scheduledMessageId) {
+    return "/users/@me/scheduled-messages/" + scheduledMessageId + "/send";
   },
   HOLIDAY_REDEEM_PRIZE: "/holidays/redeem-prize",
   APPLIED_BOOST_MODIFY_END_DATE: "/debug/applied-boosts/ends-at",
@@ -2006,11 +2006,11 @@ ActivityActionTypes = {
   },
   CONFERENCE_MODE_EVENTS: "/conference-mode/events",
   CONFERENCE_MODE_CONFERENCES: "/conference-mode/conference",
-  GUILD_MIGRATE_PIN_PERMISSION(arg0) {
-    return "/guilds/" + arg0 + "/migrate-pin-permission";
+  GUILD_MIGRATE_PIN_PERMISSION(guildId) {
+    return "/guilds/" + guildId + "/migrate-pin-permission";
   },
-  GUILD_MIGRATE_SLOWMODE_PERMISSION(arg0) {
-    return "/guilds/" + arg0 + "/migrate-bypass-slowmode-permission";
+  GUILD_MIGRATE_SLOWMODE_PERMISSION(guildId) {
+    return "/guilds/" + guildId + "/migrate-bypass-slowmode-permission";
   },
   QUESTS_GET_DECISIONS: "/quests/get-decisions",
   QUESTS_CREATIVE_PREVIEW: "/quests/preview",
@@ -2021,8 +2021,8 @@ ActivityActionTypes = {
     return "/quests/creatives/" + adCreativeId + "/dismiss";
   },
   QUESTS_APP_STORE_METADATA: "/quests/appstore-metadata",
-  GAME_ANNOUNCEMENTS(arg0) {
-    return "/games/" + arg0 + "/announcements";
+  GAME_ANNOUNCEMENTS(gameId) {
+    return "/games/" + gameId + "/announcements";
   },
   GUILD_ROOM(arg0, arg1) {
     return "/guilds/" + arg0 + "/rooms/" + arg1;
@@ -2046,8 +2046,8 @@ ActivityActionTypes = {
   VIBEGRATIONS_PROJECT(arg0) {
     return "/vibegrations/projects/" + arg0;
   },
-  VIBEGRATIONS_PROJECT_WS_TICKET(arg0) {
-    return "/vibegrations/projects/" + arg0 + "/ws-ticket";
+  VIBEGRATIONS_PROJECT_WS_TICKET(projectId) {
+    return "/vibegrations/projects/" + projectId + "/ws-ticket";
   },
   VIBEGRATIONS_PROJECT_REMIX_TICKET(arg0) {
     return "/vibegrations/projects/" + arg0 + "/remix-ticket";

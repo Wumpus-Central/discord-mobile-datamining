@@ -20,11 +20,15 @@ function AvatarDefault() {
   }
   const tmp7 = native.AVATAR_SIZE_MAP[hasOwnProperty];
   const result = num / 2;
-  const sum = result + tmp2(1178).STATUS_PADDING;
+  const sum = result + native.STATUS_PADDING;
   const diff = tmp7 - sum - (num / 4) * 2;
-  const point = { shape: tmp2(8813).CutoutShape.Circle, x: diff, y: diff, size: 2 * sum };
+  const point = { shape: ClipView.CutoutShape.Circle, x: diff, y: diff, size: 2 * sum };
   obj = { style: null, children: null };
-  size = { height: tmp2(1178).AVATAR_SIZE_MAP[tmp6], width: tmp2(1178).AVATAR_SIZE_MAP[tmp6], position: "relative" };
+  size = {
+    height: native.AVATAR_SIZE_MAP[hasOwnProperty],
+    width: native.AVATAR_SIZE_MAP[hasOwnProperty],
+    position: "relative",
+  };
   obj.style = size;
   obj = { cutouts: null, children: null };
   const items = [point];

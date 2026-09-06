@@ -66,9 +66,9 @@ export default function BugReporterFeatureActionSheet(features) {
       if (tmp) {
         let isEmptyResult = feature(setFeature[12]).isEmpty(first);
         if (!isEmptyResult) {
-          let tmp2Result = tmp2(tmp3[13]);
+          let tmp2Result = feature(setFeature[13]);
           let str3;
-          const formatted = str.toLowerCase();
+          const formatted = first.toLowerCase();
           if (asana_inbox_id.name != null) {
             str3 = str2.toLowerCase();
           }
@@ -78,9 +78,9 @@ export default function BugReporterFeatureActionSheet(features) {
           isEmptyResult = tmp2Result(formatted, str3);
         }
         if (!isEmptyResult) {
-          tmp2Result = tmp2(tmp3[13]);
+          tmp2Result = feature(setFeature[13]);
           let str5;
-          const formatted1 = str.toLowerCase();
+          const formatted1 = first.toLowerCase();
           if (asana_inbox_id.squad != null) {
             str5 = str4.toLowerCase();
           }

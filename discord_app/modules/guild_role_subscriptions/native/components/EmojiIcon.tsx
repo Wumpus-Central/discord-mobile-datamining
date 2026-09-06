@@ -1,4 +1,5 @@
 // discord_app/modules/guild_role_subscriptions/native/components/EmojiIcon.tsx
+import AvatarUtilsDefault from "../../../../utils/AvatarUtils.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import EmojiDefault from "../../../emojis/native/Emoji.tsx";
 import _modDef10302 from "../../../../../_runtime/metro/10302__.js";
@@ -61,8 +62,8 @@ export default function EmojiIcon(size) {
       const obj2 = { id: null, animated: null, size: null };
       ({ id: obj4.id, animated: obj4.animated } = emojiByIdOrName);
       obj2.size = num;
-      let url = tmp9(1396).getEmojiURL(obj2);
-      const tmp9Result = tmp9(1396);
+      let url = AvatarUtilsDefault.getEmojiURL(obj2);
+      const tmp9Result = AvatarUtilsDefault;
     } else {
       url = emojiByIdOrName.url;
     }
@@ -74,7 +75,6 @@ export default function EmojiIcon(size) {
       name: null,
       src: null,
     });
-    tmp9 = importDefault;
   }
   return tmp8Result;
 }

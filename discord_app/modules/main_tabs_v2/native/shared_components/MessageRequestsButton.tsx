@@ -1,11 +1,16 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/MessageRequestsButton.tsx
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
+import util from "../../../../intl/index.native.tsx";
+import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
+import IconButton from "../../../../design/components/Button/native/IconButton.native.tsx";
 import _modDef9883 from "../../../../../_runtime/metro/09883__.js";
-import IconActionButtonDefault from "IconActionButton.tsx";
+import IconActionButton from "IconActionButton.tsx";
 import _mod16029 from "../../../../design/components/LottieIcon/native/generated/index.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import MessageRequestStore from "../../../message_request/MessageRequestStore.tsx";
 import SpamMessageRequestStore from "../../../message_request/SpamMessageRequestStore.tsx";
+
+const IconActionButtonDefault = IconActionButton;
 
 require = fn;
 function MessageRequestAnimation(color) {
@@ -65,20 +70,20 @@ export default function MessageRequestsButton(alternateVariant) {
         size: "sm",
         accessibilityLabel: null,
       };
-      const intl3 = tmp3(1114).intl;
-      obj.accessibilityLabel = intl3.string(tmp3(1114).t.e7GWjQ);
+      const intl3 = util.intl;
+      obj.accessibilityLabel = intl3.string(util.t.e7GWjQ);
       const merged1 = Object.assign(merged);
-      let tmp21 = React5(tmp3(4975).Button, obj);
+      let tmp21 = React5(components_Button_Button.Button, obj);
       let tmp16 = React5;
     } else {
       tmp16 = React5;
       obj1 = { variant: "secondary", size: "sm", icon: React5(MessageRequestAnimation, {}), accessibilityLabel: null };
-      const intl2 = tmp3(1114).intl;
-      obj1.accessibilityLabel = intl2.string(tmp3(1114).t.e7GWjQ);
+      const intl2 = util.intl;
+      obj1.accessibilityLabel = intl2.string(util.t.e7GWjQ);
       const merged2 = Object.assign(merged);
-      tmp21 = React5(tmp3(8097).IconButton, obj1);
+      tmp21 = React5(IconButton.IconButton, obj1);
     }
-    const items2 = [tmp21, str > 0 && tmp16(tmp3(13253).ButtonBadge, { badgePosition: "right" })];
+    const items2 = [tmp21, str > 0 && tmp16(IconActionButton.ButtonBadge, { badgePosition: "right" })];
     obj.children = items2;
     return React6(View, obj);
   } else {
@@ -90,8 +95,8 @@ export default function MessageRequestsButton(alternateVariant) {
       badge: null,
       badgePosition: "right",
     };
-    const intl = tmp3(1114).intl;
-    obj2.accessibilityLabel = intl.string(tmp3(1114).t.e7GWjQ);
+    const intl = util.intl;
+    obj2.accessibilityLabel = intl.string(util.t.e7GWjQ);
     let str1;
     if (str > 0) {
       str1 = str.toString();

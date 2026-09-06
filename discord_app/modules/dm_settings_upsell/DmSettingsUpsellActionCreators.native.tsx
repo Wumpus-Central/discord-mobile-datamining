@@ -2,6 +2,7 @@
 import Storage3 from "../../../discord_common/js/packages/storage/Storage.tsx";
 import asyncRequireImpl from "../../../_runtime/01896_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../action_sheet/native/ActionSheetActionCreators.tsx";
+import DmSettingsUpsellUtils from "DmSettingsUpsellUtils.tsx";
 import DmSettingsUpsellConstants from "DmSettingsUpsellConstants.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
@@ -16,8 +17,8 @@ export default {
     const timestamp = Date.now();
     if (null != value) {
       if (timestamp - value <= React4) {
-        tmp(17344).trackEvent(tmp(17344).DmUpsellActionTypes.SUPPRESSED_BY_COOLDOWN, guildId);
-        const tmpResult = tmp(17344);
+        DmSettingsUpsellUtils.trackEvent(DmSettingsUpsellUtils.DmUpsellActionTypes.SUPPRESSED_BY_COOLDOWN, guildId);
+        const tmpResult = DmSettingsUpsellUtils;
       }
     }
     ActionSheetActionCreatorsDefault.openLazy(
@@ -25,7 +26,8 @@ export default {
       "dm_settings_upsell_modal",
       { guildId },
     );
-    const Storage2 = tmp(510).Storage;
+    const Storage2 = Storage3.Storage;
     const result = Storage2.set(React3, timestamp);
+    const obj = { guildId };
   },
 };

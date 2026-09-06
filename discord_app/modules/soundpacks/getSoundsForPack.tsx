@@ -62,6 +62,6 @@ let closure_0 = {
 };
 const result = size.fileFinishedImporting("modules/soundpacks/getSoundsForPack.tsx");
 
-export default function getSoundPack(arg0) {
-  return closure_0[arg0];
+export default function getSoundPack(soundpack) {
+  return closure_0[soundpack];
 }

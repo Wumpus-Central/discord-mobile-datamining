@@ -134,6 +134,7 @@ function handleLongPressCommandMention(arg0, arg1) {
     options: items,
     hasIcons: true,
   });
+  const tmpResult = require("showSimpleActionSheet");
 }
 const AppLauncherNativeConstants = fn(1482);
 ({ AppLauncherRouteName: hasOwnProperty, useAppLauncherNavigation: metroRequire } = AppLauncherNativeConstants);
@@ -186,10 +187,10 @@ export default function MarkupReactCommandRule(node) {
         navigateToLastChannelDefault();
         ActionSheetActionCreatorsDefault.hideActionSheet();
         if (bestActiveInput != null) {
-          obj2.openSystemKeyboard();
+          bestActiveInput.openSystemKeyboard();
         }
         if (bestActiveInput != null) {
-          const applicationCommandManager = obj2.getApplicationCommandManager();
+          const applicationCommandManager = bestActiveInput.getApplicationCommandManager();
           if (applicationCommandManager != null) {
             ({ commandId, commandName } = node);
             applicationCommandManager.setPartialCommand(
@@ -247,10 +248,10 @@ export default function MarkupReactCommandRule(node) {
         navigateToLastChannelDefault();
         ActionSheetActionCreatorsDefault.hideActionSheet();
         if (bestActiveInput != null) {
-          obj2.openSystemKeyboard();
+          bestActiveInput.openSystemKeyboard();
         }
         if (bestActiveInput != null) {
-          const applicationCommandManager = obj2.getApplicationCommandManager();
+          const applicationCommandManager = bestActiveInput.getApplicationCommandManager();
           if (applicationCommandManager != null) {
             ({ commandId, commandName } = node);
             applicationCommandManager.setPartialCommand(

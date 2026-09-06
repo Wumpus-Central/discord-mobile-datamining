@@ -77,9 +77,9 @@ function transformToRowGeneratedComponent(message, accessory) {
     const tmpResult3 = tmp(tmp2[7]);
     const obj2 = {
       expensive() {
-        if (null != closure_1) {
-          if (0 !== arr.length) {
-            const mapped = arr.map(message);
+        if (null != accessory) {
+          if (0 !== accessory.length) {
+            const mapped = accessory.map(message);
             const intl = util.intl;
             const obj = { selections: mapped.join(",") };
             return intl.formatToPlainString(util.t["I/ROH+"], obj);
@@ -229,12 +229,12 @@ function transformToRowGeneratedComponent(message, accessory) {
                       if (height > 0) {
                         let obj = MediaFormatTesters;
                         if (obj.isImageContentType(contentType)) {
-                          let VISUAL_PLACEHOLDER = tmp(8126).MediaGalleryItemType.IMAGE;
+                          let VISUAL_PLACEHOLDER = RowGeneratorTypes.MediaGalleryItemType.IMAGE;
                         } else {
                           if (tmpResult.isVideoContentType(contentType)) {
-                            VISUAL_PLACEHOLDER = tmp(8126).MediaGalleryItemType.VIDEO;
+                            VISUAL_PLACEHOLDER = RowGeneratorTypes.MediaGalleryItemType.VIDEO;
                           }
-                          tmpResult = tmp(4710);
+                          tmpResult = MediaFormatTesters;
                         }
                       }
                       let tmp4Result = ExplicitMediaUtils;
@@ -538,9 +538,9 @@ function transformToRowGeneratedComponent(message, accessory) {
     const tmpResult22 = tmp(tmp2[7]);
     obj18 = {
       expensive() {
-        if (null != closure_1) {
-          if (0 !== arr.length) {
-            const mapped = arr.map(message);
+        if (null != accessory) {
+          if (0 !== accessory.length) {
+            const mapped = accessory.map(message);
             const intl = util.intl;
             const obj = { selections: mapped.join(",") };
             return intl.formatToPlainString(util.t["I/ROH+"], obj);
@@ -565,12 +565,12 @@ function transformUnfurledMediaItem(media, shouldShowMedia) {
       if (null != height) {
         if (height > 0) {
           if (obj.isImageContentType(contentType)) {
-            let VISUAL_PLACEHOLDER = tmp(8126).MediaGalleryItemType.IMAGE;
+            let VISUAL_PLACEHOLDER = RowGeneratorTypes.MediaGalleryItemType.IMAGE;
           } else {
             if (tmpResult.isVideoContentType(contentType)) {
-              VISUAL_PLACEHOLDER = tmp(8126).MediaGalleryItemType.VIDEO;
+              VISUAL_PLACEHOLDER = RowGeneratorTypes.MediaGalleryItemType.VIDEO;
             }
-            tmpResult = tmp(4710);
+            tmpResult = MediaFormatTesters;
           }
           obj = MediaFormatTesters;
         }
@@ -624,19 +624,19 @@ export default function transformMessageComponents(message, arr) {
   const mapped = arr.map((item) => transformToRowGeneratedComponent(obj, item));
   return mapped.filter(textDisplayComponent(1369).isNotNullish);
 }
-export const getUnfurledMediaItemType = function getUnfurledMediaItemType(arg0) {
-  ({ width, height, contentType } = arg0);
+export const getUnfurledMediaItemType = function getUnfurledMediaItemType(media) {
+  ({ width, height, contentType } = media);
   if (null != width) {
     if (width > 0) {
       if (null != height) {
         if (height > 0) {
           if (obj.isImageContentType(contentType)) {
-            return tmp(8126).MediaGalleryItemType.IMAGE;
+            return RowGeneratorTypes.MediaGalleryItemType.IMAGE;
           } else {
             if (tmpResult.isVideoContentType(contentType)) {
-              return tmp(8126).MediaGalleryItemType.VIDEO;
+              return RowGeneratorTypes.MediaGalleryItemType.VIDEO;
             }
-            tmpResult = tmp(4710);
+            tmpResult = MediaFormatTesters;
           }
           obj = MediaFormatTesters;
         }

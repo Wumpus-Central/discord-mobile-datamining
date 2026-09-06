@@ -28,9 +28,9 @@ function YouBarAvatarLarge(transitionState) {
   let obj1 = transitionState(OFFLINE[12]);
   const items1 = [UserStore];
   const stateFromStores = obj1.useStateFromStores(items1, () => currentUser.getCurrentUser());
-  let result = transitionState(OFFLINE[13]).AVATAR_SIZE_MAP[closure_13] / closure_20;
+  let result = transitionState(OFFLINE[13]).AVATAR_SIZE_MAP[closure_13] / height;
   c3 = result;
-  let result1 = (closure_20 - transitionState(OFFLINE[13]).AVATAR_SIZE_MAP[closure_13]) / 2;
+  let result1 = (height - transitionState(OFFLINE[13]).AVATAR_SIZE_MAP[closure_13]) / 2;
   let tmp8 = transitionState === transitionState(OFFLINE[14]).TransitionStates.MOUNTED;
   let obj2 = transitionState(OFFLINE[15]);
   let num = 0;
@@ -53,7 +53,7 @@ function YouBarAvatarLarge(transitionState) {
   sharedValue2 = tmp2Result.useSharedValue(tmp11);
   let tmp = closure_24();
   if (tmp8) {
-    let diff = -closure_17 - (tmp5 - closure_15) / 2;
+    let diff = -closure_17 - (height - closure_15) / 2;
   } else {
     diff = -result1;
   }
@@ -175,7 +175,7 @@ function YouBarAvatarLarge(transitionState) {
   if (null != stateFromStores) {
     obj = { style: null, children: null };
     const items5 = [tmp.avatarShadow, ,];
-    size = { position: "absolute", width: tmp5, height: tmp5 };
+    size = { position: "absolute", width: height, height };
     items5[1] = size;
     items5[2] = animatedStyle;
     obj.style = items5;
@@ -185,10 +185,10 @@ function YouBarAvatarLarge(transitionState) {
       nativeCutouts = memo.nativeCutouts;
     }
     obj = { cutouts: nativeCutouts, style: null, children: null };
-    const size1 = { position: "absolute", width: tmp5, height: tmp5 };
+    const size1 = { position: "absolute", width: height, height };
     obj.style = size1;
     obj1 = { style: null };
-    size2 = { width: tmp5, height: tmp5, borderRadius: tmp5 / 2, backgroundColor: token };
+    size2 = { width: height, height, borderRadius: height / 2, backgroundColor: token };
     obj1.style = size2;
     obj.children = closure_22(sharedValue1, obj1);
     const items6 = [closure_22(tmp23Result, obj), , ,];
@@ -227,13 +227,13 @@ function YouBarAvatarLarge(transitionState) {
       }
     }
     let obj3 = { cutouts: mapped, style: null, pointerEvents: "none", children: null };
-    const size3 = { position: "absolute", top: -1, left: -1, width: tmp5 + 2, height: tmp5 + 2 };
+    const size3 = { position: "absolute", top: -1, left: -1, width: height + 2, height: height + 2 };
     obj3.style = size3;
     let obj4 = { style: null };
     const size4 = {
-      width: tmp5 + 2,
-      height: tmp5 + 2,
-      borderRadius: (tmp5 + 2) / 2,
+      width: height + 2,
+      height: height + 2,
+      borderRadius: (height + 2) / 2,
       borderWidth: 1,
       borderColor: tmp26,
     };
@@ -248,18 +248,18 @@ function YouBarAvatarLarge(transitionState) {
       obj5.avatarDecoration = avatarDecoration;
       const rect2 = { position: "absolute", top: null, left: null };
       const tmp2Result7 = tmp2(tmp3[21]);
-      rect2.top = -tmp2(tmp3[21]).getDecorationSizeForAvatarSize(tmp33) - tmp5 / 2;
+      rect2.top = -tmp2(tmp3[21]).getDecorationSizeForAvatarSize(tmp33) - height / 2;
       const tmp2Result8 = tmp2(tmp3[21]);
-      rect2.left = -tmp2(tmp3[21]).getDecorationSizeForAvatarSize(tmp33) - tmp5 / 2;
+      rect2.left = -tmp2(tmp3[21]).getDecorationSizeForAvatarSize(tmp33) - height / 2;
       obj5.decorationStyle = rect2;
       obj5.animate = stateFromStores1 && "always";
       const tmp2Result9 = tmp2(tmp3[21]);
       const tmp2Result10 = tmp2(tmp3[21]);
       obj5.cutout = tmp2Result10.getDecorationCutoutForAvatarCutout(
         memo,
-        (tmp2(tmp3[21]).getDecorationSizeForAvatarSize(tmp33) - tmp5) / 2,
+        (tmp2(tmp3[21]).getDecorationSizeForAvatarSize(tmp33) - height) / 2,
       );
-      tmp29Result = tmp29(tmp23Result1, obj5, avatarDecoration.asset);
+      tmp29Result = closure_22(tmp23Result1, obj5, avatarDecoration.asset);
       const tmp2Result11 = tmp2(tmp3[21]);
     }
     items6[3] = tmp29Result;
@@ -442,7 +442,7 @@ export default noop.memo(function YouBarAvatarAnimated(isLargeAvatar) {
     setIsAvatarPressed(false);
   }, items1);
   callback1 = noop.useCallback(
-    asyncGeneratorStep(async (arg0, value) => {
+    asyncGeneratorStep(async () => {
       if (paths === 2) {
         paths = 3;
         throw new TypeError("Generator functions may not be called on executing generators");

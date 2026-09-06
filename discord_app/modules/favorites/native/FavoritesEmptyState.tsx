@@ -7,6 +7,7 @@ import Stack_Stack from "../../../design/components/Stack/native/Stack.native.ts
 import components_Button_Button from "../../../design/components/Button/native/Button.native.tsx";
 import native from "../../../design/assets/native.tsx";
 import FavoritesHooks from "../FavoritesHooks.tsx";
+import PlusMediumIcon from "../../../design/components/Icon/native/redesign/generated/PlusMediumIcon.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -56,15 +57,15 @@ export default function FavoritesEmptyState() {
   items[1] = timestampProducer(Stack_Stack.Stack, obj);
   if (obj.useFavoritesAccess("favorites_empty_state").hasAccess) {
     const obj3 = { variant: "primary", text: null, icon: null, onPress: null };
-    const intl4 = tmp2(1114).intl;
-    obj3.text = intl4.string(tmp9(3225)["6kk0gM"]);
-    obj3.icon = tmp8(tmp2(12753).PlusMediumIcon, {});
+    const intl4 = util.intl;
+    obj3.text = intl4.string(_modDef3225["6kk0gM"]);
+    obj3.icon = hasOwnProperty(PlusMediumIcon.PlusMediumIcon, {});
     obj3.onPress = callback;
     let obj4 = obj3;
   } else {
     obj4 = { variant: "primary", text: null, onPress: null };
-    const intl3 = tmp2(1114).intl;
-    obj4.text = intl3.string(tmp9(3225).yYVbdv);
+    const intl3 = util.intl;
+    obj4.text = intl3.string(_modDef3225.yYVbdv);
     obj4.onPress = callback1;
   }
   items[2] = hasOwnProperty(components_Button_Button.Button, obj4);

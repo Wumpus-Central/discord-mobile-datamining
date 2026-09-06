@@ -18,7 +18,7 @@ export const useIsPersistentSecureFramesFingerprint = function useIsPersistentSe
   [tmp3, c3] = _slicedToArray(noop.useState(false), 2);
   const isOtherUserKeyPersistent = _slicedToArray(noop.useState(false), 2);
   noop = isOtherUserKeyPersistent[1];
-  closure_0 = asyncGeneratorStep(async (arg0, value) => {
+  closure_0 = asyncGeneratorStep(async (arg0, arg1) => {
     if (c7 === 2) {
       c7 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");

@@ -95,12 +95,11 @@ function ForLaterPage(type) {
     let tmp25Result = null;
     if (tmp9) {
       const obj6 = { isReminder: tmp5, isAtLimit: tmp8 };
-      tmp25Result = tmp25(tmp2(13294), obj6);
+      tmp25Result = closure_7(tmp2(13294), obj6);
     }
     items2[1] = tmp25Result;
     obj3.children = items2;
     tmp24Result = closure_8(tmp4(7162).AnalyticsLocationProvider, obj3);
-    tmp25 = closure_7;
   }
   return tmp24Result;
 }

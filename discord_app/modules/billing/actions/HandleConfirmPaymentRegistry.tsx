@@ -96,7 +96,7 @@ class StripePaymentConfirmationHandler extends PaymentConfirmationHandler {
 const prototype = StripePaymentConfirmationHandler.prototype;
 prototype["getStripe"] = function getStripe() {
   const self = this;
-  return (async (arg0, value) => {
+  return (async () => {
     if (c3 === 2) {
       c3 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -161,7 +161,7 @@ prototype["getPaymentIntentInfo"] = function getPaymentIntentInfo() {
       oldFormErrors: true,
       rejectWithError: true,
     });
-    const body = arg1.body;
+    const body = value.body;
     value = {
       clientSecret: body.stripe_payment_intent_client_secret,
       paymentMethodId: body.stripe_payment_intent_payment_method_id,
@@ -174,7 +174,8 @@ prototype["getStripeRedirect"] = function getStripeRedirect(arg0) {
   const self = this;
   return self(function* () {
     closure_1 = tmp2;
-    closure_129_0 = yield self.getStripe();
+    yield self.getStripe();
+    closure_129_0 = value;
     const handlerRegistry = closure_130_3.handlerRegistry;
     let obj3 = { stripe: closure_129_0, paymentSource: closure_130_3.paymentSource, paymentMethodId: closure_130_2 };
     closure_129_1 = handlerRegistry.constructStripeConfirmPaymentHandler(obj3);
@@ -188,7 +189,8 @@ prototype["getStripeRedirect"] = function getStripeRedirect(arg0) {
     }
     obj4.return_url =
       aPIBaseURL + c4.BILLING_POPUP_BRIDGE_CALLBACK_REDIRECT_PREFIX(closure_130_3.paymentSourceType, _var, "success");
-    closure_129_4 = yield stripeConfirmPayment(closure_130_0, obj4, { handleActions: false });
+    yield stripeConfirmPayment(closure_130_0, obj4, { handleActions: false });
+    closure_129_4 = value;
     const paymentIntent = closure_129_4.paymentIntent;
     const error = closure_129_4.error;
     if (null != error) {
@@ -214,7 +216,7 @@ prototype["getStripeRedirect"] = function getStripeRedirect(arg0) {
 prototype["confirmRedirectedPaymentSource"] = function confirmRedirectedPaymentSource(arg0) {
   ({ clientSecret: require, paymentMethodId: importAll } = arg0);
   const self = this;
-  return (async (arg0, value) => {
+  return (async () => {
     if (c3 === 2) {
       c3 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -288,14 +290,16 @@ prototype["confirmDirectPaymentSource"] = function confirmDirectPaymentSource(ar
   ({ clientSecret: require, paymentMethodId: importAll } = arg0);
   const self = this;
   return (async () => {
-    closure_128_0 = await self.getStripe();
+    await self.getStripe();
+    closure_128_0 = value;
     const handlerRegistry = closure_129_2.handlerRegistry;
     let obj3 = { stripe: closure_128_0, paymentSource: closure_129_2.paymentSource, paymentMethodId: closure_129_1 };
     closure_128_1 = handlerRegistry.constructStripeConfirmPaymentHandler(obj3);
     const stripeConfirmPayment = closure_128_1.stripeConfirmPayment;
     const paymentMethod = closure_128_1.paymentMethod;
     closure_128_4 = closure_128_1.pendingCustomerAction;
-    closure_128_5 = await stripeConfirmPayment(closure_129_0, { payment_method: paymentMethod });
+    await stripeConfirmPayment(closure_129_0, { payment_method: paymentMethod });
+    closure_128_5 = value;
     const paymentIntent = closure_128_5.paymentIntent;
     const error = closure_128_5.error;
     if (null != error) {
@@ -314,7 +318,7 @@ prototype["confirmDirectPaymentSource"] = function confirmDirectPaymentSource(ar
 };
 prototype["confirmPayment"] = function confirmPayment() {
   const self = this;
-  return (async (arg0, value) => {
+  return (async () => {
     if (c3 === 2) {
       c3 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -322,7 +326,8 @@ prototype["confirmPayment"] = function confirmPayment() {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        value = { value, done: true };
+        value = { value: null, done: true };
+        value.value = value;
         return value;
       } else {
         return { value: "HermesInternal", done: null };
@@ -336,7 +341,8 @@ prototype["confirmPayment"] = function confirmPayment() {
             throw value;
           } else if (arg0 === 2) {
             c3 = 3;
-            value = { value, done: true };
+            value = { value: null, done: true };
+            value.value = value;
             return value;
           } else {
             closure_1 = tmp5;

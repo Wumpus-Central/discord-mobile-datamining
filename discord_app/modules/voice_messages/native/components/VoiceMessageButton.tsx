@@ -107,7 +107,8 @@ export default noop.memo((disabled) => {
   const tmp9 = sharedValue1(11527)();
   _require = sharedValue(function* (arg0) {
     let obj6 = closure_0(12256);
-    closure_129_2 = yield obj6.endAudioRecording();
+    yield obj6.endAudioRecording();
+    closure_129_2 = value;
     const data = closure_129_2.data;
     const startTimeMillis = closure_129_2.startTimeMillis;
     closure_1_6(false);
@@ -222,13 +223,13 @@ export default noop.memo((disabled) => {
         tmp5 = tmp6;
       }
       if (!tmp5) {
-        tmp5 = ref2.current !== closure_0(closure_2[23]).VoiceMessageRecordingResult.CANCELLED_ON_BACKGROUND;
+        tmp5 = ref2.current !== closure_0(dependencyMap[23]).VoiceMessageRecordingResult.CANCELLED_ON_BACKGROUND;
       }
       if (!tmp5) {
-        sharedValue1(tmp4[30]);
+        sharedValue1(dependencyMap[30]);
         const obj = { key: "VOICE_MESSAGE_CANCELLED_ON_BACKGROUND", content: null, icon: null, position: "bottom" };
-        const intl = tmp3(tmp4[31]).intl;
-        obj.content = intl.string(tmp3(tmp4[31]).t.JM7Y2D);
+        const intl = closure_0(dependencyMap[31]).intl;
+        obj.content = intl.string(closure_0(dependencyMap[31]).t.JM7Y2D);
         obj.icon = function icon() {
           return closure_1_26(closure_1_28, {});
         };
@@ -274,7 +275,7 @@ export default noop.memo((disabled) => {
       }
       return applyArgumentsResult;
     }
-    closure_1 = async function _cancel(arg0, value) {
+    closure_1 = async function _cancel() {
       if (c3 === 2) {
         c3 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -373,7 +374,7 @@ export default noop.memo((disabled) => {
   }, items6);
   const items7 = [first, tmp5[2], channelId];
   const callback1 = noop.useCallback(
-    sharedValue(function* (arg0, value) {
+    sharedValue(function* () {
       if (c5 === 2) {
         c5 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -404,18 +405,18 @@ export default noop.memo((disabled) => {
               if (
                 !(function isNormalModalOpen() {
                   if (obj.isModalOpen()) {
-                    let tmpResult = tmp(tmp2[17]);
+                    let tmpResult = closure_1_0(dependencyMap[17]);
                     const openModalKey = tmpResult.getOpenModalKey();
                     let tmp5 = null == openModalKey;
                     if (!tmp5) {
-                      tmpResult = tmp(tmp2[18]);
+                      tmpResult = closure_1_0(dependencyMap[18]);
                       tmp5 = !tmpResult.isVoiceChannelModalKey(openModalKey);
                     }
                     return tmp5;
                   } else {
                     return false;
                   }
-                  obj = closure_1_0(closure_1_2[17]);
+                  obj = closure_1_0(dependencyMap[17]);
                 })()
               ) {
                 if (ref.current) {
@@ -532,18 +533,17 @@ export default noop.memo((disabled) => {
       const tmp6 = voiceMessageAnimationState.get()[1];
       if (VoiceMessageAnimationState.SENDING === tmp6) {
         callback({ isCancelling: false });
-      } else if (tmp7.CANCELLING === tmp6) {
+      } else if (VoiceMessageAnimationState.CANCELLING === tmp6) {
         callback({ isCancelling: true });
-      } else if (tmp7.LOCKING === tmp6) {
+      } else if (VoiceMessageAnimationState.LOCKING === tmp6) {
         setIsUsingHoldGesture(false);
         const items = [,];
-        ({ LOCKING: arr[0], LOCKED: arr[1] } = tmp7);
-        const result = obj2.set(items);
+        ({ LOCKING: arr[0], LOCKED: arr[1] } = VoiceMessageAnimationState);
+        const result = voiceMessageAnimationState.set(items);
         ReanimatedRexport.runOnJS(triggerHapticGuarded)();
       } else {
         VoiceMessageUtils.endAudioRecording();
       }
-      obj2 = voiceMessageAnimationState;
     } else {
       VoiceMessageUtils.endAudioRecording();
     }
@@ -551,7 +551,7 @@ export default noop.memo((disabled) => {
   let obj3 = require("NavigationRouteUtils");
   const tmp21 = sharedValue1(9759);
   let intl = require("util").intl;
-  const tmp22 = sharedValue(function* (arg0, value) {
+  const tmp22 = sharedValue(function* () {
     if (c2 === 2) {
       c2 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -607,7 +607,7 @@ export default noop.memo((disabled) => {
   c14 = sum;
   const items10 = [disabled, tmp5[1], tmp, callback1, sum, callback2, callback3];
   ({ accessibilityActions, onAccessibilityAction } = tmp21(
-    sharedValue(function* (arg0, value) {
+    sharedValue(function* () {
       if (c2 === 2) {
         c2 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -737,7 +737,7 @@ export default noop.memo((disabled) => {
     disabled: null,
   };
   const tmp21Result = tmp21(
-    sharedValue(function* (arg0, value) {
+    sharedValue(function* () {
       if (c2 === 2) {
         c2 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");

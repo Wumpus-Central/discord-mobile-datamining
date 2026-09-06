@@ -48,7 +48,7 @@ export default function MemberVerificationAlert(arg0) {
   let tmp10Result = null;
   if (null != subtitle) {
     const obj1 = { style: tmp2.subtitle, variant: "text-sm/medium", color: "text-default", children: subtitle };
-    tmp10Result = tmp10(Text_Text.Text, obj1);
+    tmp10Result = React4(Text_Text.Text, obj1);
   }
   items[2] = tmp10Result;
   items[3] = React4(View, { style: tmp2.buttons, children: buttons });

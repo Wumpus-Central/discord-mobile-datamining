@@ -132,13 +132,12 @@ prototype["transaction"] = function transaction(arg0, arg1) {
 };
 prototype["upgradeTransaction"] = function upgradeTransaction(arg0) {
   if (typeof GuildDaoTransaction === "function") {
-    const obj = Object.create(tmp.prototype);
+    const obj = Object.create(GuildDaoTransaction.prototype);
     obj.state = tmp2;
     return obj;
   } else {
     throw new TypeError("Trying to call a non-function");
   }
-  tmp = GuildDaoTransaction;
 };
 prototype["getManySyncUnsafe"] = function getManySyncUnsafe(arg0, arg1) {
   const table = this.table;
@@ -161,13 +160,12 @@ const prototype2 = GuildDaoTransaction.prototype;
 GuildDaoTransaction["fromDatabaseTransaction"] = function fromDatabaseTransaction(prefix, tableId, transaction) {
   const tableTransaction = new Table.TableTransaction(prefix, tableId, transaction);
   if (typeof GuildDaoTransaction === "function") {
-    const obj = Object.create(tmp.prototype);
+    const obj = Object.create(GuildDaoTransaction.prototype);
     obj.state = tableTransaction;
     return obj;
   } else {
     throw new TypeError("Trying to call a non-function");
   }
-  tmp = GuildDaoTransaction;
 };
 prototype2["put"] = function put(arg0, arg1, arg2) {
   let Replace = arg3;

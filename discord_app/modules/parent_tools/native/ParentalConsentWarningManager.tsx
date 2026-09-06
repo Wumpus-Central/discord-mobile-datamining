@@ -78,9 +78,8 @@ let prototype = function ParentalConsentWarningManager() {
       if (state.state === constants.ACTIVE) {
         ParentalConsentWarningActionCreators.maybeFetchWarning();
         if (!ParentalConsentWarningStore.shouldFetchToday()) {
-          maybePresentModal(obj2.getWarning());
+          maybePresentModal(ParentalConsentWarningStore.getWarning());
         }
-        obj2 = ParentalConsentWarningStore;
       }
     },
     CURRENT_USER_UPDATE(user) {

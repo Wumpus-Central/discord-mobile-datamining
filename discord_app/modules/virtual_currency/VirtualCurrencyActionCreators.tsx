@@ -16,7 +16,7 @@ function fetchVirtualCurrencyBalance() {
   }
   return applyArgumentsResult;
 }
-let closure_8 = async function _fetchVirtualCurrencyBalance(arg0, value) {
+let closure_8 = async function _fetchVirtualCurrencyBalance() {
   if (c5 === 2) {
     c5 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -100,7 +100,7 @@ let closure_8 = async function _fetchVirtualCurrencyBalance(arg0, value) {
     }
   }
 };
-let closure_9 = async function _redeemVirtualCurrencyForSKU(arg0, value) {
+let closure_9 = async function _redeemVirtualCurrencyForSKU(arg0) {
   if (c6 === 2) {
     c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");

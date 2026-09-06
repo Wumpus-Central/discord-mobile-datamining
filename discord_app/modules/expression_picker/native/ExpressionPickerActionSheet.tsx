@@ -1,5 +1,6 @@
 // discord_app/modules/expression_picker/native/ExpressionPickerActionSheet.tsx
 import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
+import PlatformUtils from "../../../utils/PlatformUtils.tsx";
 import useWindowDimensionsDefault from "../../screen/useWindowDimensions.native.tsx";
 import KeyboardTypes from "../../keyboard/native/KeyboardTypes.tsx";
 import useSafeAreaInsetsDefault from "../../safe_area/useSafeAreaInsets.native.tsx";
@@ -7,7 +8,10 @@ import ReanimatedRexport from "../../reanimated/ReanimatedRexport.tsx";
 import useKeyboardType from "../../keyboard/native/useKeyboardType.tsx";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import NavigatorConstants from "../../../design/components/Navigator/native/NavigatorConstants.native.tsx";
+import Sheet_BottomSheet from "../../../design/components/Sheet/native/BottomSheet.native.tsx";
 import KeyboardUtils from "../../../utils/native/KeyboardUtils.tsx";
+import PortalKeyboardFooterIOSDefault from "../../keyboard/native/PortalKeyboardFooterIOS.ios.tsx";
+import ExpressionPickerDefault from "ExpressionPicker.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import ChannelStore from "../../../stores/ChannelStore.tsx";
 
@@ -33,10 +37,10 @@ export default function ExpressionPickerActionSheet(arg0) {
   const diff = height - NavigatorConstants.NAV_BAR_HEIGHT_MULTILINE - useSafeAreaInsetsDefault().top;
   let tmp15Result = null;
   if (undefined !== stateFromStores) {
-    let isIOSResult = tmp2(1115).isIOS();
+    let isIOSResult = PlatformUtils.isIOS();
     if (isIOSResult) {
       obj = { animatedSheetIndex: sharedValue, followSystemKeyboard: true };
-      isIOSResult = closure_7(tmp7(10275), obj);
+      isIOSResult = closure_7(PortalKeyboardFooterIOSDefault, obj);
     }
     obj = { children: null };
     const items1 = [isIOSResult];
@@ -74,11 +78,11 @@ export default function ExpressionPickerActionSheet(arg0) {
       stickerFormats: STICKER_FORMATS,
       height: diff,
     };
-    obj1.children = closure_7(tmp7(10276), obj2);
-    items1[1] = closure_7(tmp2(7150).BottomSheet, obj1);
+    obj1.children = closure_7(ExpressionPickerDefault, obj2);
+    items1[1] = closure_7(Sheet_BottomSheet.BottomSheet, obj1);
     obj.children = items1;
     tmp15Result = closure_9(closure_8, obj);
-    const tmp2Result = tmp2(1115);
+    const tmp2Result = PlatformUtils;
   }
   return tmp15Result;
 }

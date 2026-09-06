@@ -6,6 +6,10 @@ import asyncRequireImpl from "../../../../_runtime/01896_asyncRequireImpl.js";
 import DismissibleContentUtils from "../../dismissible_content/DismissibleContentUtils.tsx";
 import RootNavigationRef from "../../main_tabs_v2/RootNavigationRef.native.tsx";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
+import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
+import ModalDispatchQueueDefault from "../../main_tabs_v2/native/modal/ModalDispatchQueue.tsx";
+import openUserSettings from "../../user_settings/core/native/openUserSettings.tsx";
+import FamilyCenterActionCreatorsDefault from "../FamilyCenterActionCreators.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import FamilyCenterStore from "../FamilyCenterStore.tsx";
 
@@ -82,26 +86,25 @@ export default function ParentalConsentWarningModal(daysRemaining) {
         return tmp;
       })
     ) {
-      let tmp2Result = tmp2(7539);
+      let tmp2Result = FamilyCenterActionCreatorsDefault;
       const tab = tmp2Result.selectTab(constants.REQUESTS);
       const rootNavigationRef = RootNavigationRef.getRootNavigationRef();
       if (null != rootNavigationRef) {
         if (rootNavigationRef.isReady()) {
           obj = { screen: constants3.FAMILY_CENTER };
-          tmp9(7382).openUserSettings(obj);
-          const tmp9Result = tmp9(7382);
+          openUserSettings.openUserSettings(obj);
+          const tmp9Result = openUserSettings;
         }
       }
-      tmp2Result = tmp2(4766);
+      tmp2Result = ModalDispatchQueueDefault;
       tmp2Result.enqueue(() => {
         daysRemaining(callback[10]);
         const obj = { screen: constants3.FAMILY_CENTER };
         return obj.openUserSettings(obj);
       });
-      tmp9 = require;
     } else {
-      tmp2(4763).pushLazy(asyncRequireImpl(17463, dependencyMap.paths));
-      const tmp2Result1 = tmp2(4763);
+      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(17463, dependencyMap.paths));
+      const tmp2Result1 = ModalActionCreatorsDefault;
     }
   }, items2);
   const intl = daysRemaining(callback[15]).intl;

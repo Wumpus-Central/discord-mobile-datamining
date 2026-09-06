@@ -18,7 +18,7 @@ function GuildFeedBanner(guild) {
   let height;
   let drawerWidth;
   ({ hideDescription, hideMemberCount } = guild);
-  let tmp = closure_13();
+  const tmp = closure_13();
   let obj = guild(4296);
   const sharedValue = obj.useSharedValue(0);
   let obj1 = guild(4296);
@@ -49,15 +49,15 @@ function GuildFeedBanner(guild) {
     let guildBannerSource = null;
     if (null != guild.banner) {
       obj = { id: null, banner: null };
-      ({ id: obj3.id, banner: obj3.banner } = tmp);
+      ({ id: obj3.id, banner: obj3.banner } = guild);
       guildBannerSource = AvatarUtilsDefault.getGuildBannerSource(obj, hasItem);
     }
     let guildHomeHeaderSource = guildBannerSource;
     if (null != guild) {
       guildHomeHeaderSource = guildBannerSource;
-      if (null != tmp.homeHeader) {
+      if (null != guild.homeHeader) {
         obj = { id: null, homeHeader: null };
-        ({ id: obj5.id, homeHeader: obj5.homeHeader } = tmp);
+        ({ id: obj5.id, homeHeader: obj5.homeHeader } = guild);
         guildHomeHeaderSource = AvatarUtilsDefault.getGuildHomeHeaderSource(obj);
       }
     }
@@ -93,12 +93,10 @@ function GuildFeedBanner(guild) {
     if (closure_2) {
       const _Math = Math;
       const _Math2 = Math;
-      return Math.min(Math.max(tmp, tmp2) - drawerWidth, bound);
+      return Math.min(Math.max(width, height) - drawerWidth, bound);
     } else {
       return bound - 2 * GUILD_FEED_CARD_MARGIN_HORIZONTAL;
     }
-    tmp = width;
-    tmp2 = height;
   }, items4);
   if (null != memo) {
     obj = { style: null, source: null, onLoad: null };
@@ -149,7 +147,7 @@ function GuildFeedBanner(guild) {
   let tmp17Result = null;
   if (null != guildBadgeSource) {
     const obj8 = { style: tmp.icon, source: guildBadgeSource, disableColor: true };
-    tmp17Result = tmp17(tmp2(1178).Icon, obj8);
+    tmp17Result = closure_11(tmp2(1178).Icon, obj8);
   }
   items11[1] = tmp17Result;
   obj6.children = items11;
@@ -157,7 +155,7 @@ function GuildFeedBanner(guild) {
   tmp17Result = null;
   if (null != description) {
     const obj9 = { style: tmp.description, variant: "text-sm/medium", color: "text-default", children: description };
-    tmp17Result = tmp17(tmp2(4556).Text, obj9);
+    tmp17Result = closure_11(tmp2(4556).Text, obj9);
   }
   items10[2] = tmp17Result;
   let tmp15Result1 = null != discoverableGuild && !hideMemberCount;
@@ -179,13 +177,13 @@ function GuildFeedBanner(guild) {
         children: null,
       };
       const obj12 = { style: tmp.publicIcon, source: tmp6(16556) };
-      const items12 = [tmp17(tmp2(1178).Icon, obj12)];
+      const items12 = [closure_11(tmp2(1178).Icon, obj12)];
       const obj13 = { variant: "text-xs/medium", color: "text-default", children: null };
       let intl = tmp2(1114).intl;
       obj13.children = intl.string(tmp2(1114).t["B/vjCu"]);
-      items12[1] = tmp17(tmp2(4556).Text, obj13);
+      items12[1] = closure_11(tmp2(4556).Text, obj13);
       obj11.children = items12;
-      tmp15Result = tmp15(tmp2(5123).PressableOpacity, obj11);
+      tmp15Result = closure_12(tmp2(5123).PressableOpacity, obj11);
     }
     const items13 = [tmp15Result];
     tmp15Result = null;
@@ -194,20 +192,20 @@ function GuildFeedBanner(guild) {
       if (null != discoverableGuild.memberCount) {
         const obj14 = { children: null };
         const obj15 = { style: tmp.dotOnline };
-        const items14 = [tmp17(tmp16, obj15)];
+        const items14 = [closure_11(tmp16, obj15)];
         const obj16 = { variant: "text-xs/medium", color: "text-default", children: null };
         const intl2 = tmp2(1114).intl;
         ({ presenceCount: obj28.online, memberCount: obj28.offline } = discoverableGuild);
         obj16.children = intl2.format(tmp2(1114).t.QCNv6P, { online: null, offline: null });
-        items14[1] = tmp17(tmp2(4556).Text, obj16);
+        items14[1] = closure_11(tmp2(4556).Text, obj16);
         obj14.children = items14;
-        tmp15Result = tmp15(obj2.Fragment, obj14);
+        tmp15Result = closure_12(obj2.Fragment, obj14);
         const obj17 = { online: null, offline: null };
       }
     }
     items13[1] = tmp15Result;
     obj10.children = items13;
-    tmp15Result1 = tmp15(tmp16, obj10);
+    tmp15Result1 = closure_12(tmp16, obj10);
   }
   items10[3] = tmp15Result1;
   obj3.children = items10;

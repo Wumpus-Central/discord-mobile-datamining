@@ -248,7 +248,7 @@ prototype["render"] = function render() {
   } else {
     stringResult = string(t.OpuAlK);
   }
-  tmp2(webhookId(4556).Text, { variant: "text-sm/medium", color: "text-link", children: stringResult });
+  closure_11(webhookId(4556).Text, { variant: "text-sm/medium", color: "text-link", children: stringResult });
   let obj = { style: tmp.form, contentContainerStyle: null, children: null };
   const items = [{ paddingTop: 16 }, self.props.contentContainerStyle];
   obj.contentContainerStyle = items;
@@ -270,7 +270,7 @@ prototype["render"] = function render() {
     obj.iconProps = obj1;
     const intl2 = tmp3(1114).intl;
     obj.label = intl2.string(tmp3(1114).t["7+5GQa"]);
-    tmp2Result = tmp2(IconLabelBlockDefault, obj);
+    tmp2Result = closure_11(IconLabelBlockDefault, obj);
     const tmp8Result = IconLabelBlockDefault;
   }
   const items1 = [tmp2Result, , , ,];
@@ -312,8 +312,8 @@ prototype["render"] = function render() {
     obj7.label = "" + aPIBaseURL + closure_7.WEBHOOK_INTEGRATION(webhookId, token);
     obj7.onPress = self.handleCopyUrl;
     obj7.trailing = tmp2Result;
-    obj6.children = tmp2(tmp3(5605).TableRow, obj7);
-    tmp2Result1 = tmp2(tmp3(5687).TableRowGroup, obj6);
+    obj6.children = closure_11(tmp3(5605).TableRow, obj7);
+    tmp2Result1 = closure_11(tmp3(5687).TableRowGroup, obj6);
     const tmp3Result1 = tmp3(1272);
   }
   items1[3] = tmp2Result1;

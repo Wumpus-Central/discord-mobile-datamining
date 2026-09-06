@@ -40,11 +40,16 @@ export default function GuildActionSheetTabItems(guild) {
     const channelId = SelectedChannelStore.getChannelId(guild.id);
     let channel = ChannelStore.getChannel(utils_InstantInviteUtils.getInviteChannelId(channelId, stateFromStores));
     if (null == channel) {
-      channel = GuildChannelStore.getDefaultChannel(tmp.id);
+      channel = GuildChannelStore.getDefaultChannel(guild.id);
     }
     if (null != channel) {
       const tmp3Result = instant_invite_InstantInviteUtils;
-      const result = tmp3Result.handleOpenInviteActionsheet(tmp, channel.id, tmp5, constants4.SERVER_PROFILE);
+      const result = tmp3Result.handleOpenInviteActionsheet(
+        guild,
+        channel.id,
+        stateFromStores,
+        constants4.SERVER_PROFILE,
+      );
     }
   }, items1);
   obj = { direction: "horizontal", style: { flexWrap: "wrap" }, children: null };
@@ -77,7 +82,7 @@ export default function GuildActionSheetTabItems(guild) {
       ActionSheetActionCreatorsDefault.hideActionSheet();
       closure_2();
     };
-    shouldRenderInviteResult = tmp7(tmp(8097).IconButton, obj3);
+    shouldRenderInviteResult = closure_12(tmp(8097).IconButton, obj3);
   }
   items2[1] = shouldRenderInviteResult;
   let obj4 = { variant: "secondary", label: null, icon: null, grow: true, onPress: null };
@@ -98,7 +103,7 @@ export default function GuildActionSheetTabItems(guild) {
       ActionSheetActionCreatorsDefault.hideActionSheet();
       GuildSettingsActionCreatorsDefault.open(guild.id);
     };
-    canAccessSettings = tmp7(tmp(8097).IconButton, obj5);
+    canAccessSettings = closure_12(tmp(8097).IconButton, obj5);
   }
   items2[3] = canAccessSettings;
   obj.children = items2;

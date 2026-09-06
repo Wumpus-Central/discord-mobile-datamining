@@ -17,7 +17,6 @@ export const useCollapsibleFloatingActionButtonState = function useCollapsibleFl
 };
 export const useCollapsibleFloatingActionButtonScroll = function useCollapsibleFloatingActionButtonScroll(
   collapsibleFloatingActionButtonState,
-  UNDETERMINED,
 ) {
   const collapseText = collapsibleFloatingActionButtonState.collapseText;
   let num = UNDETERMINED;

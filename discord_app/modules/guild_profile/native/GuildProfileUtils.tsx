@@ -1,5 +1,6 @@
 // discord_app/modules/guild_profile/native/GuildProfileUtils.tsx
 import AvatarUtilsDefault from "../../../utils/AvatarUtils.tsx";
+import tinycolorDefault from "../../../../_runtime/07552_tinycolor.js";
 import useAvatarColor from "../../avatar/useAvatarColor.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
@@ -53,15 +54,15 @@ export const getProfilePrimaryColor = function getProfilePrimaryColor(guildProfi
         [tmp4, tmp5, tmp6] = _slicedToArray(first, 3);
         obj = { r: tmp4, g: tmp5, b: tmp6 };
         const tmp3 = _slicedToArray(first, 3);
-        const obj2 = tmp8(7552)(obj);
+        const obj2 = tinycolorDefault(obj);
         let num2 = 1;
-        ({ h, s, l } = tmp8(7552)(obj).toHsl());
+        ({ h, s, l } = tinycolorDefault(obj).toHsl());
         if (AccessibilityStore.desaturateUserColors) {
           num2 = AccessibilityStore.saturation;
         }
         obj = { h, s: s * num2, l };
-        const toHslResult = tmp8(7552)(obj).toHsl();
-        return tmp8(7552)(obj).toHexString();
+        const toHslResult = tinycolorDefault(obj).toHsl();
+        return tinycolorDefault(obj).toHexString();
       } else {
         return null;
       }

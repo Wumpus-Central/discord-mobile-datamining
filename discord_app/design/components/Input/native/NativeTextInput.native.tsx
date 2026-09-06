@@ -29,6 +29,7 @@ export const useKeyboardBlurring = function useKeyboardBlurring(ref) {
           current.blur();
         }
       }
+      tmp = systemKeyboardOpen === systemKeyboardOpen || systemKeyboardOpen;
     });
   }, items);
 };
@@ -45,6 +46,7 @@ export const NativeTextInput = noop.forwardRef((value, ref2) => {
           current.blur();
         }
       }
+      tmp = systemKeyboardOpen === systemKeyboardOpen || systemKeyboardOpen;
     });
   }, items);
   value = value.value;
@@ -126,4 +128,5 @@ export const NativeTextInput = noop.forwardRef((value, ref2) => {
     value.keyboardAppearance = tmp6(tmp3[10]).isThemeDark(tmp12) ? KeyboardThemes.DARK : KeyboardThemes.LIGHT;
     const tmp6Result1 = tmp6(tmp3[10]);
   }
+  tmp4 = require("useBottomSheetKeyboardHandling")(value);
 });

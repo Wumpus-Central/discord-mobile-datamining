@@ -2,7 +2,9 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import DateUtils from "../../../../utils/DateUtils.tsx";
 import MemberVerificationTypes from "../../MemberVerificationTypes.tsx";
+import CircleCheckIcon from "../../../../design/components/Icon/native/redesign/generated/CircleCheckIcon.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
+import CircleXIcon from "../../../../design/components/Icon/native/redesign/generated/CircleXIcon.tsx";
 import openJoinRequestActionSheetDefault from "../openJoinRequestActionSheet.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -15,14 +17,14 @@ function ApplicationStatusIcon(status) {
       color: nativeDefault.colors.STATUS_POSITIVE_BACKGROUND,
       secondaryColor: nativeDefault.colors.STATUS_POSITIVE_TEXT,
     };
-    return timestampProducer(tmp(4520).CircleCheckIcon, obj);
-  } else if (tmp(4384).GuildJoinRequestApplicationStatuses.REJECTED === status) {
+    return timestampProducer(CircleCheckIcon.CircleCheckIcon, obj);
+  } else if (MemberVerificationTypes.GuildJoinRequestApplicationStatuses.REJECTED === status) {
     obj = {
       size: "sm",
       color: nativeDefault.colors.ICON_FEEDBACK_CRITICAL,
       secondaryColor: nativeDefault.colors.WHITE,
     };
-    return timestampProducer(tmp(6616).CircleXIcon, obj);
+    return timestampProducer(CircleXIcon.CircleXIcon, obj);
   } else {
     return null;
   }

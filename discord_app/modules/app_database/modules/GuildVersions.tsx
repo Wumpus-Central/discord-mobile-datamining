@@ -62,7 +62,7 @@ class GuildVersions {
 }
 const prototype = GuildVersions.prototype;
 prototype["getCommittedVersions"] = function getCommittedVersions() {
-  return (async (arg0, value) => {
+  return (async () => {
     if (c6 === 2) {
       c6 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -344,14 +344,11 @@ prototype["commit"] = function commit(database) {
     while (tmp21 !== undefined) {
       let tmp5 = _slicedToArray(tmp2, 2);
       [tmp6, tmp7] = tmp5;
-      let tmp8 = tmp7;
       if (null != tmp7) {
-        let obj = { id: null, version: null };
-        obj.id = tmp6;
-        obj.version = tmp8;
+        let obj = { id: tmp6, version: tmp7 };
         let putResult = result.put(obj);
         let committed2 = self.committed;
-        let result1 = committed2.set(tmp6, tmp8);
+        let result1 = committed2.set(tmp6, tmp7);
       } else {
         let deleteResult = result.delete(tmp6);
         let committed = self.committed;

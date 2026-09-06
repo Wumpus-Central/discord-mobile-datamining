@@ -1,5 +1,7 @@
 // discord_app/design/void/TextInput/native/TextInput.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
+import ColorUtils from "../../../../utils/ColorUtils.tsx";
 import shared from "../../../shared.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -25,19 +27,19 @@ const forwardRefResult = noop.forwardRef((style, ref) => {
   obj = { ref, style: null, keyboardAppearance: null, placeholderTextColor: null, selectionColor: null };
   const items = [tmp2.input, style.style];
   obj.style = items;
-  let tmp3Result = tmp3(4411);
+  let tmp3Result = shared;
   obj.keyboardAppearance = tmp3Result.isThemeDark(theme) ? React4.DARK : React4.LIGHT;
   obj.placeholderTextColor = tmp2.placeholderTextColor.color;
-  tmp3Result = tmp3(1115);
+  tmp3Result = PlatformUtils;
   let hexWithOpacityResult = tmp6;
   if (tmp3Result.isAndroid()) {
-    hexWithOpacityResult = tmp3(4409).hexWithOpacity(tmp6, 0.5);
-    const tmp3Result1 = tmp3(4409);
+    hexWithOpacityResult = ColorUtils.hexWithOpacity(tmp6, 0.5);
+    const tmp3Result1 = ColorUtils;
   }
   obj.selectionColor = hexWithOpacityResult;
   const merged1 = Object.assign(merged);
   return (
-    <TextInput ref={arg1} style={null} keyboardAppearance={null} placeholderTextColor={null} selectionColor={null} />
+    <TextInput ref={ref} style={null} keyboardAppearance={null} placeholderTextColor={null} selectionColor={null} />
   );
 });
 forwardRefResult.displayName = "VoidTextInput";

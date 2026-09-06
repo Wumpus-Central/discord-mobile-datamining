@@ -1,7 +1,13 @@
 // discord_app/modules/game_profile/native/components/GameProfileReviews.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import util from "../../../../intl/index.native.tsx";
+import GameDetectionTypes from "../../../game_detection/GameDetectionTypes.tsx";
+import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import GameProfileAnalyticUtils from "../../GameProfileAnalyticUtils.tsx";
 import useSteamWebsiteUrl from "../../hooks/useSteamWebsiteUrl.tsx";
+import SteamReleaseStatus from "../../../../../discord_common/js/shared/shared-constants/SteamReleaseStatus.tsx";
+import calculateSteamReviewScoreDescription2 from "../../../game_detection/calculateSteamReviewScoreDescription.tsx";
+import GameProfileReviewUtils from "../../GameProfileReviewUtils.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -46,9 +52,6 @@ function SteamReviewRow(url) {
   const items3 = [closure_8(closure_4, obj)];
   const obj2 = { style: tmp.steamRatingContainer, children: null };
   const obj3 = { variant: "text-sm/medium", color: steamReviewScoreDescriptionColor, children: null };
-  const tmp10 = closure_5;
-  const tmp11 = closure_4;
-  const tmp12 = closure_7;
   const tmp4 = trackAction(8683);
   obj3.children = url(8724).getSteamReviewScoreDescriptionIntl(result);
   const items4 = [closure_7(url(4556).Text, obj3)];
@@ -58,14 +61,14 @@ function SteamReviewRow(url) {
     const intl2 = tmp6(1114).intl;
     const obj5 = { rating_count: ratingCount.toLocaleString() };
     obj4.children = intl2.format(tmp6(1114).t.sgIoin, obj5).toString();
-    tmp12Result = tmp12(tmp6(4556).Text, obj4);
+    tmp12Result = closure_7(tmp6(4556).Text, obj4);
     const str = intl2.format(tmp6(1114).t.sgIoin, obj5);
   }
   items4[1] = tmp12Result;
   obj2.children = items4;
-  items3[1] = closure_8(tmp11, obj2);
+  items3[1] = closure_8(closure_4, obj2);
   obj.children = items3;
-  return closure_8(tmp10, obj);
+  return closure_8(closure_5, obj);
 }
 function OpenCriticReview(url) {
   url = url.url;
@@ -131,8 +134,8 @@ function OpenCriticReview(url) {
     obj3.source = obj4;
     obj3.style = tmp.opencriticTopCriticImage;
     obj3.accessibilityLabel = str;
-    obj2.children = tmp12(closure_6, obj3);
-    tmp12Result = tmp12(tmp13, obj2);
+    obj2.children = closure_7(closure_6, obj3);
+    tmp12Result = closure_7(closure_4, obj2);
   }
   const items2 = [tmp12Result, ,];
   let tmp9Result = null;
@@ -149,15 +152,15 @@ function OpenCriticReview(url) {
         const intl3 = tmp11(1114).intl;
         obj5.accessibilityLabel = intl3.string(tmp11(1114).t.Ub4YR1);
         const obj7 = { rating: topCriticRating, strokeColor: foregroundColor, size: 32 };
-        const items4 = [tmp12(trackAction(8731), obj7)];
+        const items4 = [closure_7(trackAction(8731), obj7)];
         const obj8 = { style: tmp.opencriticTopCriticRatingContainer, children: null };
         const obj9 = { variant: "text-xs/bold", color: "text-overlay-light", children: null };
         const _Math = Math;
         obj9.children = Math.floor(topCriticRating);
-        obj8.children = tmp12(tmp11(4556).Text, obj9);
-        items4[1] = tmp12(tmp13, obj8);
+        obj8.children = closure_7(tmp11(4556).Text, obj9);
+        items4[1] = closure_7(closure_4, obj8);
         obj5.children = items4;
-        tmp9Result = tmp9(tmp13, obj5);
+        tmp9Result = closure_8(closure_4, obj5);
       }
     }
   }
@@ -172,7 +175,7 @@ function OpenCriticReview(url) {
       );
       const intl4 = tmp11(1114).intl;
       obj10.children = intl4.string(tmp11(1114).t["0xYzpO"]);
-      tmp12Result = tmp12(tmp11(4556).Text, obj10);
+      tmp12Result = closure_7(tmp11(4556).Text, obj10);
     }
   } else {
     tmp12Result = null;
@@ -288,13 +291,14 @@ export default function GameProfileReviews(arg0) {
   if (null == game) {
     return null;
   } else {
-    const tmp6 = game.steamReleaseStatus !== tmp2(8691).SteamReleaseStatus.RETIRED_ABANDONED && null != steamWebsiteUrl;
+    const tmp6 =
+      game.steamReleaseStatus !== SteamReleaseStatus.SteamReleaseStatus.RETIRED_ABANDONED && null != steamWebsiteUrl;
     const reviews = game.reviews;
     let steam;
     if (reviews != null) {
       steam = reviews.steam;
     }
-    let tmp2Result = tmp2(8723);
+    let tmp2Result = calculateSteamReviewScoreDescription2;
     const calculateSteamReviewScoreDescription = tmp2Result.calculateSteamReviewScoreDescription;
     if (steam != null) {
       let recentRating = steam.recentRating;
@@ -304,9 +308,9 @@ export default function GameProfileReviews(arg0) {
     }
     let tmp10 = tmp6;
     if (tmp6) {
-      tmp10 = tmp9 !== tmp2(1934).SteamReviewScoreDescription.NO_USER_REVIEWS;
+      tmp10 = tmp9 !== GameDetectionTypes.SteamReviewScoreDescription.NO_USER_REVIEWS;
     }
-    tmp2Result = tmp2(8724);
+    tmp2Result = GameProfileReviewUtils;
     const result = tmp2Result.canShowLocalizedSteamReview(steam);
     if (result) {
       let localizedRating;
@@ -326,7 +330,7 @@ export default function GameProfileReviews(arg0) {
     } else if (!tmp14) {
       ratingCount = steam.ratingCount;
     }
-    const t = tmp2(1114).t;
+    const t = util.t;
     const reviews2 = game.reviews;
     let opencritic;
     if (reviews2 != null) {
@@ -345,9 +349,9 @@ export default function GameProfileReviews(arg0) {
       style: tmp.headerText,
       children: null,
     };
-    const intl = tmp2(1114).intl;
-    obj.children = intl.string(tmp2(1114).t.GaAQXP);
-    const items = [React5(tmp2(4556).Text, obj)];
+    const intl = util.intl;
+    obj.children = intl.string(util.t.GaAQXP);
+    const items = [React5(Text_Text.Text, obj)];
     const obj1 = { style: tmp.reviewContainer, children: null };
     let tmp22Result = null;
     if (tmp10) {
@@ -368,8 +372,8 @@ export default function GameProfileReviews(arg0) {
         }
         obj2.showBorderBottom = tmp25;
         obj2.trackAction = trackAction;
-        const intl2 = tmp2(1114).intl;
-        obj2.title = intl2.string(tmp2(1114).t.MQGNsN);
+        const intl2 = util.intl;
+        obj2.title = intl2.string(util.t.MQGNsN);
         recentRating = undefined;
         if (steam != null) {
           recentRating = steam.recentRating;
@@ -380,7 +384,7 @@ export default function GameProfileReviews(arg0) {
           recentRatingCount = steam.recentRatingCount;
         }
         obj2.ratingCount = recentRatingCount;
-        tmp22Result = tmp22(SteamReviewRow, obj2);
+        tmp22Result = React5(SteamReviewRow, obj2);
       }
     }
     const items1 = [tmp22Result, ,];
@@ -397,11 +401,11 @@ export default function GameProfileReviews(arg0) {
           ratingCount: null,
           isRecentRating: false,
         };
-        const intl3 = tmp2(1114).intl;
+        const intl3 = util.intl;
         obj3.title = intl3.string(tmp16);
         obj3.rating = rating;
         obj3.ratingCount = ratingCount;
-        tmp22Result = tmp22(SteamReviewRow, obj3);
+        tmp22Result = React5(SteamReviewRow, obj3);
       }
     }
     items1[1] = tmp22Result;
@@ -410,14 +414,14 @@ export default function GameProfileReviews(arg0) {
       tmp22Result1 = null;
       if (null != opencriticUrl) {
         const obj4 = { game, url: opencriticUrl, trackAction };
-        tmp22Result1 = tmp22(OpenCriticReview, obj4);
+        tmp22Result1 = React5(OpenCriticReview, obj4);
       }
     }
     items1[2] = tmp22Result1;
     obj1.children = items1;
     items[1] = React6(React4, obj1);
     obj.children = items;
-    tmp20Result = tmp20(tmp21, obj);
+    tmp20Result = React6(React4, obj);
     tmp16 = result ? t["aWb+V4"] : t["8e4LiB"];
   }
 }

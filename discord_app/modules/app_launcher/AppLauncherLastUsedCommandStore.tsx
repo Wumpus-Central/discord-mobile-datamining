@@ -20,12 +20,12 @@ prototype["getLastUsedCommandId"] = function getLastUsedCommandId() {
   let lastUsedCommandId = null;
   if (null != lastUsedTimeMs.lastUsedTimeMs) {
     lastUsedCommandId = null;
-    if (null != tmp2.lastUsedCommandId) {
-      if (tmp > tmp2.lastUsedTimeMs + closure_0) {
-        tmp2.lastUsedCommandId = null;
-        tmp2.lastUsedTimeMs = null;
+    if (null != lastUsedTimeMs.lastUsedCommandId) {
+      if (tmp > lastUsedTimeMs.lastUsedTimeMs + closure_0) {
+        lastUsedTimeMs.lastUsedCommandId = null;
+        lastUsedTimeMs.lastUsedTimeMs = null;
       }
-      lastUsedCommandId = tmp2.lastUsedCommandId;
+      lastUsedCommandId = lastUsedTimeMs.lastUsedCommandId;
     }
   }
   return lastUsedCommandId;

@@ -54,11 +54,10 @@ function syncLocalSoundboardMutesFromUserSettings(proto) {
   while (tmp2 !== undefined) {
     let tmp5 = _slicedToArray(tmp3, 2);
     let first = tmp5[0];
-    let obj2 = set1;
     if (tmp5[1].soundboardMuted) {
-      let addResult = obj2.add(first);
+      let addResult = set1.add(first);
     } else {
-      let deleteResult = obj2.delete(first);
+      let deleteResult = set1.delete(first);
     }
     continue;
   }
@@ -69,6 +68,7 @@ function syncLocalSoundboardMutesFromUserSettings(proto) {
     }
     continue;
   }
+  tmp2 = entries[Symbol.iterator]();
 }
 const SoundboardConstants = fn(5014);
 ({ DEFAULT_SOUND_GUILD_ID: closure_7, EMPTY_SOUND_ID_LIST: closure_8 } = SoundboardConstants);
@@ -332,14 +332,14 @@ FetchState = {
     }
     const diff1 = num2 - 1;
     if (diff <= 0) {
-      obj.delete(soundId);
+      map2.delete(soundId);
     } else {
-      const result = obj.set(soundId, diff);
+      const result = map2.set(soundId, diff);
     }
     if (diff1 <= 0) {
-      obj2.delete(userId);
+      map3.delete(userId);
     } else {
-      const result1 = obj2.set(userId, diff1);
+      const result1 = map3.set(userId, diff1);
     }
   },
   GUILD_SOUNDBOARD_SOUNDS_UPDATE: function handleSoundsUpdate(guildId) {
@@ -376,7 +376,6 @@ FetchState = {
       if (soundIds == null) {
         soundIds = [];
       }
-      set = new Set(soundIds);
       if (tmp) {
         closure_22 = [];
       }
@@ -401,6 +400,7 @@ FetchState = {
           closure_22,
         );
       }
+      set = new Set(soundIds);
     } else if (tmp2.PRELOADED_USER_SETTINGS === type) {
       syncLocalSoundboardMutesFromUserSettings(proto);
       const SoundboardSettings = UserSettings.SoundboardSettings;
@@ -434,9 +434,9 @@ FetchState = {
   AUDIO_TOGGLE_LOCAL_SOUNDBOARD_MUTE: function handleToggleLocalSoundboardMute(userId) {
     userId = userId.userId;
     if (set1.has(userId)) {
-      obj.delete(userId);
+      set1.delete(userId);
     } else {
-      obj.add(userId);
+      set1.add(userId);
     }
   },
   OVERLAY_INITIALIZE: function handleOverlayInitialize(soundboardStoreState) {

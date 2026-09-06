@@ -1,5 +1,6 @@
 // discord_common/js/packages/application-widget-renderer/src/resolvedDisplayField.tsx
 import resolvedValues from "resolvedValues.tsx";
+import ApplicationWidgetFieldPresentationType from "../../../shared/shared-constants/ApplicationWidgetFieldPresentationType.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
 let result = size.fileFinishedImporting(
@@ -27,7 +28,7 @@ export const resolveTextComponentValues = function resolveTextComponentValues(
     let iter = resolveFieldValue(subtitle_1.fields.text, items);
     let str = null;
     if (!flag2) {
-      const items1 = [tmp9(8929).ResolvedValueType.STRING, tmp9(8929).ResolvedValueType.NUMBER];
+      const items1 = [resolvedValues.ResolvedValueType.STRING, resolvedValues.ResolvedValueType.NUMBER];
       str = resolveFieldValue(subtitle_1.fields.label, items1);
     }
     if (null == iter) {
@@ -105,9 +106,11 @@ export const resolveStatComponentValues = function resolveStatComponentValues(
     if (null == iter) {
       obj = { status: "skeleton" };
     } else {
-      if (iter.type === tmp6(8929).ResolvedValueType.STRING) {
+      if (iter.type === resolvedValues.ResolvedValueType.STRING) {
         let formatResult = iter.value;
-      } else if (iter.presentationType === tmp6(8930).ApplicationWidgetFieldPresentationType.DURATION) {
+      } else if (
+        iter.presentationType === ApplicationWidgetFieldPresentationType.ApplicationWidgetFieldPresentationType.DURATION
+      ) {
         formatResult = formatDurationNarrow(iter.value);
       } else {
         formatResult = format.format(iter.value);

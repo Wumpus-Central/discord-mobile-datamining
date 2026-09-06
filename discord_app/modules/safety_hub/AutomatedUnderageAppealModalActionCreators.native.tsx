@@ -31,7 +31,7 @@ let obj = {
         tmpResult.pushLazy(
           asyncGeneratorStep(async () => {
             await tmp2(paths[8])(paths[13], paths.paths);
-            closure_128_0 = arg1.default;
+            closure_128_0 = value.default;
             return () => (
               <closure_1_0
                 entryPoint={closure_0(8413).AgeVerificationModalEntryPoint.AUTOMATED_UNDERAGE_APPEALS}
@@ -61,13 +61,14 @@ let obj = {
           closure_6,
         );
       }
+      tmp4Result = tmp4(8429);
     }
     tmpResult = tmp(4763);
     obj = { onClose };
     tmpResult.pushLazy(
       asyncGeneratorStep(async () => {
         await tmp2(paths[8])(paths[14], paths.paths);
-        closure_128_0 = arg1.default;
+        closure_128_0 = value.default;
         return () => (
           <closure_1_0
             classificationId={classificationId}
@@ -87,6 +88,7 @@ let obj = {
       obj,
       closure_6,
     );
+    obj2 = require("SafetyHubUtils");
   },
   close() {
     DispatcherDefault.dispatch({ type: "SAFETY_HUB_AUTOMATED_UNDERAGE_APPEAL_MODAL_CLOSE" });

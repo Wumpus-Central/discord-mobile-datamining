@@ -58,10 +58,9 @@ let result = HTTPUtils.setRejectWithMigratedError(function isRejectWithMigratedE
 HTTPUtils = fn(1272);
 HTTPUtils.setRequestPatch({
   prepareRequest(promise) {
-    closure_0 = promise;
-    const _default = closure_0(502).default;
-    const _default2 = closure_0(1347).default;
-    const _default3 = closure_0(1371).default;
+    const _default = promise(502).default;
+    const _default2 = promise(1347).default;
+    const _default3 = promise(1371).default;
     importDefault = performance.now();
     if ("/" === promise.url[0]) {
       let tmpResult = tmp(1272);
@@ -95,7 +94,7 @@ HTTPUtils.setRequestPatch({
       if (tmp13) {
         const result4 = promise.set("X-Installation-ID", installationForTracking);
       }
-      if (closure_0(1115).isPlatformEmbedded) {
+      if (promise(1115).isPlatformEmbedded) {
         const tmpResult1 = tmp(17);
         if (tmpResult2.isAndroid()) {
           let LocalizationManager = tmp(1117).default;
@@ -116,10 +115,10 @@ HTTPUtils.setRequestPatch({
             closure_0 = 10;
             const reduced = items.reduce((arr, item) => {
               if (10 === closure_0) {
-                arr.push(item);
+                arr = arr.push(item);
               } else {
                 const _HermesInternal = HermesInternal;
-                arr.push("" + item + ";q=0." + closure_0);
+                arr = arr.push("" + item + ";q=0." + closure_0);
               }
               closure_0 = Math.max(closure_0 - 1, 1);
               return arr;
@@ -129,7 +128,7 @@ HTTPUtils.setRequestPatch({
         );
         tmpResult2 = tmp(1115);
       }
-      const result6 = promise.set("X-Discord-Locale", closure_0(2025).default.locale);
+      const result6 = promise.set("X-Discord-Locale", promise(2025).default.locale);
       const tmp19 = getTimeZoneDefault();
       if (null != tmp19) {
         const result7 = promise.set("X-Discord-Timezone", tmp19);
@@ -186,7 +185,7 @@ HTTPUtils.setRequestPatch({
     importAll = (function shouldTrackHttpRequest(url) {
       return !isAnalyticsEndpoint(url);
     })(promise.url);
-    _default4 = closure_0(1242).default;
+    _default4 = promise(1242).default;
     LogAggregatorAll.report("Network", "Sending " + promise.method + " to " + promise.url);
     promise.on("response", (status) => {
       let text = null;
@@ -224,7 +223,7 @@ HTTPUtils.setRequestPatch({
     });
     promise.on("error", (status, text) => {
       let obj = LogAggregatorAll;
-      ({ method, url } = closure_0);
+      ({ method, url } = promise);
       status = undefined;
       if (status != null) {
         status = status.status;
@@ -238,8 +237,8 @@ HTTPUtils.setRequestPatch({
         if ("parse" in status) {
           if (status.parse) {
             let str = "[FILTERED]";
-            if (closure_6.includes(tmp2.url)) {
-              const xhr = tmp2.xhr;
+            if (closure_6.includes(promise.url)) {
+              const xhr = promise.xhr;
               let substr;
               if (xhr != null) {
                 const responseText = xhr.responseText;
@@ -251,7 +250,7 @@ HTTPUtils.setRequestPatch({
             }
             obj = { category: "superagent", message: "Failed to parse HTTP response.", data: null };
             const request = { method: null, url: null, responseText: null, status: null };
-            ({ method: obj4.method, url: obj4.url } = tmp2);
+            ({ method: obj4.method, url: obj4.url } = promise);
             request.responseText = str;
             request.status = status.status;
             obj.data = request;
@@ -261,7 +260,7 @@ HTTPUtils.setRequestPatch({
       }
       if (c2) {
         const request1 = { url: null, method: null, status_code: null, duration_ms: null };
-        ({ url: obj5.url, method: obj5.method } = tmp2);
+        ({ url: obj5.url, method: obj5.method } = promise);
         let status1;
         if (text != null) {
           status1 = text.status;
@@ -408,11 +407,11 @@ HTTPUtils.setRequestPatch({
       code1 = body4.code;
     }
     if (obj.isLimitedAccessErrorCode(statusCode.statusCode, code1)) {
-      tmp7(1896)(5522, tmp8.paths).then((result) => {
+      tmp7(1896)(5522, dependencyMap.paths).then((result) => {
         result.default();
       });
       flag = false;
-      const promise3 = tmp7(1896)(5522, tmp8.paths);
+      const promise3 = tmp7(1896)(5522, dependencyMap.paths);
     } else {
       const body5 = statusCode.body;
       let code2;
@@ -420,7 +419,7 @@ HTTPUtils.setRequestPatch({
         code2 = body5.code;
       }
       if (tmp7Result.isLimitedAccessErrorCode(statusCode.statusCode, code2)) {
-        tmp7(1896)(13830, tmp8.paths).then((result) => {
+        tmp7(1896)(13830, dependencyMap.paths).then((result) => {
           const body = statusCode.body;
           let guild_id;
           if (body != null) {
@@ -429,7 +428,7 @@ HTTPUtils.setRequestPatch({
           result.default(guild_id);
         });
         flag = false;
-        const promise2 = tmp7(1896)(13830, tmp8.paths);
+        const promise2 = tmp7(1896)(13830, dependencyMap.paths);
       } else {
         flag = 403 === statusCode.statusCode;
         if (flag) {
@@ -441,19 +440,20 @@ HTTPUtils.setRequestPatch({
           flag = code3 === AbortCodes.RESTRICTED_HOURS_ACTIVE;
         }
         if (flag) {
-          tmp7(1896)(17293, tmp8.paths).then((openRestrictedHoursModal) => {
+          tmp7(1896)(17293, dependencyMap.paths).then((openRestrictedHoursModal) => {
             const result = openRestrictedHoursModal.openRestrictedHoursModal();
           });
           flag = false;
-          const promise = tmp7(1896)(17293, tmp8.paths);
+          const promise = tmp7(1896)(17293, dependencyMap.paths);
         }
       }
       tmp7Result = tmp7(17292);
     }
+    obj = statusCode(9045);
   },
 });
 HTTPUtils = fn(1272);
-let closure_0 = asyncGeneratorStep(async (arg0, value) => {
+let closure_0 = asyncGeneratorStep(async (arg0) => {
   if (c4 === 2) {
     c4 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -482,13 +482,12 @@ let closure_0 = asyncGeneratorStep(async (arg0, value) => {
           const _HermesInternal2 = HermesInternal;
           tmp5(7).report("Network", "Request to " + closure_0 + " failed, will retry.");
           const obj7 = tmp5(7);
-          const tmp24 = tmp2;
           if (obj8.isOnline()) {
             c4 = 3;
           } else {
             dependencyMap = 1;
             c4 = 1;
-            const obj1 = { value: tmp24(1461).awaitOnline(), done: false };
+            const obj1 = { value: tmp2(1461).awaitOnline(), done: false };
             return obj1;
           }
           obj8 = tmp2(1461);

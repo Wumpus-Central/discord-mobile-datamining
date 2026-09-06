@@ -49,14 +49,14 @@ export default function BlockedUserInVoiceChannelActionSheet(arg0) {
   const t = require("util").t;
   if (stateFromStores) {
     let items2 = [string(t.cpgfFk), "\n"];
-    const intl3 = tmp2(tmp3[12]).intl;
-    items2[2] = intl3.string(tmp2(tmp3[12]).t.UKQ4Cn);
+    const intl3 = require("util").intl;
+    items2[2] = intl3.string(require("util").t.UKQ4Cn);
     obj.children = items2;
     let tmp9 = obj;
   } else {
     const items3 = [string(t.xj3j47), "\n"];
-    const intl2 = tmp2(tmp3[12]).intl;
-    items3[2] = intl2.string(tmp2(tmp3[12]).t.wWueRW);
+    const intl2 = require("util").intl;
+    items3[2] = intl2.string(require("util").t.wWueRW);
     obj.children = items3;
     tmp9 = obj;
   }
@@ -64,13 +64,13 @@ export default function BlockedUserInVoiceChannelActionSheet(arg0) {
   obj1 = { source: blockedUserId(tmp3[14]), style: tmp.headerImage };
   const items4 = [closure_14(closure_3, obj1), , ,];
   let obj2 = { style: tmp.headerText, children: null };
-  const obj3 = {
+  let obj3 = {
     variant: "heading-xl/bold",
     color: "mobile-text-heading-primary",
     style: tmp.centerText,
     children: null,
   };
-  const intl4 = tmp2(tmp3[12]).intl;
+  const intl4 = require("util").intl;
   obj3.children = intl4.string(require("util").t["1/gpFh"]);
   const items5 = [closure_14(require("Text/Text").Text, obj3)];
   const tmp7Result = closure_13(closure_12, tmp9);
@@ -82,18 +82,18 @@ export default function BlockedUserInVoiceChannelActionSheet(arg0) {
   obj2.children = items5;
   items4[1] = closure_13(closure_4, obj2);
   if (null != user) {
-    const obj5 = { size: tmp2(tmp3[18]).AvatarSizes.SMALL, user, guildId: null };
+    const obj5 = { size: require("native").AvatarSizes.SMALL, user, guildId: null };
     let guild_id;
     if (stateFromStores1 != null) {
       guild_id = stateFromStores1.guild_id;
     }
     obj5.guildId = guild_id;
-    let tmp11Result = tmp11(tmp2(tmp3[18]).Avatar, obj5);
+    let tmp11Result = closure_14(require("native").Avatar, obj5);
   } else {
-    tmp11Result = tmp11(tmp2(tmp3[19]).UserIcon, {});
+    tmp11Result = closure_14(require("UserIcon").UserIcon, {});
   }
   const obj6 = { icon: tmp11Result, label: null };
-  const intl5 = tmp2(tmp3[12]).intl;
+  const intl5 = require("util").intl;
   let username;
   if (user != null) {
     username = user.username;
@@ -103,7 +103,7 @@ export default function BlockedUserInVoiceChannelActionSheet(arg0) {
   obj6.label = intl5.formatToPlainString(require("util").t.w0YvUo, { userName: username });
   const items6 = [closure_14(require("TableRow").TableRow, obj6)];
   const obj9 = { icon: closure_14(require("MicrophoneIcon").MicrophoneIcon, {}), label: null };
-  const intl6 = tmp2(tmp3[12]).intl;
+  const intl6 = require("util").intl;
   obj9.label = intl6.string(require("util").t["+4O9nX"]);
   items6[1] = closure_14(require("TableRow").TableRow, obj9);
   obj8.children = items6;
@@ -140,7 +140,7 @@ export default function BlockedUserInVoiceChannelActionSheet(arg0) {
     },
     text: null,
   };
-  const intl7 = tmp2(tmp3[12]).intl;
+  const intl7 = require("util").intl;
   obj11.text = intl7.string(require("util").t["Y56/oK"]);
   const items7 = [closure_14(require("components/Button/Button").Button, obj11)];
   const obj12 = {
@@ -158,7 +158,7 @@ export default function BlockedUserInVoiceChannelActionSheet(arg0) {
         warning_surface: null,
       };
       if (stateFromStores) {
-        const items = [tmp2];
+        const items = [blockedUserId];
         let items1 = items;
       } else {
         items1 = [];
@@ -167,7 +167,7 @@ export default function BlockedUserInVoiceChannelActionSheet(arg0) {
       if (stateFromStores) {
         let items2 = [];
       } else {
-        items2 = [tmp2];
+        items2 = [blockedUserId];
       }
       obj.ignored_user_ids = items2;
       obj.warning_surface = constants2.POST_JOIN_SHEET;
@@ -175,7 +175,7 @@ export default function BlockedUserInVoiceChannelActionSheet(arg0) {
     },
     text: null,
   };
-  const intl8 = tmp2(tmp3[12]).intl;
+  const intl8 = require("util").intl;
   obj12.text = intl8.string(require("util").t.bCcJST);
   items7[1] = closure_14(require("components/Button/Button").Button, obj12);
   obj10.children = items7;

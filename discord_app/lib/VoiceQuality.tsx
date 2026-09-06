@@ -108,7 +108,6 @@ class VoiceQuality extends tmp2 {
         const duration4 = outboundStats.duration;
         duration4.connected = duration4.connected + 1;
         let obj2 = outboundStats(4589);
-        const tmp7 = importDefault;
         let num = 0;
         const reduced = _modDef12.reduce(
           outboundStats.inboundStats,
@@ -331,7 +330,7 @@ class VoiceQuality extends tmp2 {
                 if (tmp26) {
                   const sum = num + num3;
                   let obj4 = _modDef12;
-                  const calculateMosResult = obj8.calculateMos(sum, obj4.clamp(diff1 / (diff + diff1), 0, 1));
+                  const calculateMosResult = closure_0.calculateMos(sum, obj4.clamp(diff1 / (diff + diff1), 0, 1));
                   const _Math = Math;
                   const rounded = Math.floor(calculateMosResult);
                   mosBuckets[rounded] = mosBuckets[rounded] + 1;
@@ -370,10 +369,10 @@ class VoiceQuality extends tmp2 {
                 obj1.frameOpStats = current;
                 obj1.decryptFailureBeforeSuccessCount = decryptFailureBeforeSuccessCount;
                 const merged = Object.assign(current);
-                obj8.inboundStats[tmp37] = obj1;
+                closure_0.inboundStats[closure_0] = obj1;
                 const obj2 = {
-                  previousTimestampMs: obj8.periodicInboundStats[tmp37].previousTimestampMs,
-                  previous: obj8.periodicInboundStats[tmp37].previous,
+                  previousTimestampMs: closure_0.periodicInboundStats[closure_0].previousTimestampMs,
+                  previous: closure_0.periodicInboundStats[closure_0].previous,
                   currentTimestampMs: null,
                   current: null,
                   accelerateRateSum: null,
@@ -389,24 +388,25 @@ class VoiceQuality extends tmp2 {
                 if (num20 == null) {
                   num20 = 0;
                 }
-                obj2.accelerateRateSum = obj8.periodicInboundStats[tmp37].accelerateRateSum + num20;
+                obj2.accelerateRateSum = closure_0.periodicInboundStats[closure_0].accelerateRateSum + num20;
                 let num21 = type.expandRate;
                 if (num21 == null) {
                   num21 = 0;
                 }
-                obj2.expandRateSum = obj8.periodicInboundStats[tmp37].expandRateSum + num21;
+                obj2.expandRateSum = closure_0.periodicInboundStats[closure_0].expandRateSum + num21;
                 let num22 = type.preemptiveExpandRate;
                 if (num22 == null) {
                   num22 = 0;
                 }
-                obj2.preemptiveExpandRateSum = obj8.periodicInboundStats[tmp37].preemptiveExpandRateSum + num22;
+                obj2.preemptiveExpandRateSum =
+                  closure_0.periodicInboundStats[closure_0].preemptiveExpandRateSum + num22;
                 let num23 = type.speechExpandRate;
                 if (num23 == null) {
                   num23 = 0;
                 }
-                obj2.speechExpandRateSum = obj8.periodicInboundStats[tmp37].speechExpandRateSum + num23;
-                obj2.numRateSamples = obj8.periodicInboundStats[tmp37].numRateSamples + 1;
-                obj8.periodicInboundStats[tmp37] = obj2;
+                obj2.speechExpandRateSum = closure_0.periodicInboundStats[closure_0].speechExpandRateSum + num23;
+                obj2.numRateSamples = closure_0.periodicInboundStats[closure_0].numRateSamples + 1;
+                closure_0.periodicInboundStats[closure_0] = obj2;
                 tmp26 = diff > 0 && diff1 >= 0;
               } else {
                 const obj3 = {
@@ -434,7 +434,7 @@ class VoiceQuality extends tmp2 {
                 obj3.bufferStats = current;
                 obj3.frameOpStats = current;
                 const merged1 = Object.assign(current);
-                obj8.inboundStats[tmp37] = obj3;
+                closure_0.inboundStats[closure_0] = obj3;
                 obj4 = {
                   previousTimestampMs: null,
                   previous: null,
@@ -472,7 +472,7 @@ class VoiceQuality extends tmp2 {
                   num14 = 0;
                 }
                 obj4.speechExpandRateSum = num14;
-                obj8.periodicInboundStats[tmp37] = obj4;
+                closure_0.periodicInboundStats[closure_0] = obj4;
               }
             }
           });
@@ -509,7 +509,7 @@ class VoiceQuality extends tmp2 {
           const duration3 = obj.duration;
           duration3.participation = duration3.participation + 1;
         }
-        tmp7Result = tmp7(12);
+        tmp7Result = _modDef12;
       }
     };
     tmp3.connection = global;
@@ -994,15 +994,13 @@ prototype["getPeriodicStats"] = function getPeriodicStats() {
   while (tmp2 !== undefined) {
     let tmp5 = _slicedToArray(tmp3, 2);
     [tmp6, tmp7] = tmp5;
-    let tmp8 = tmp7;
     ({ previous, current, currentTimestampMs, previousTimestampMs } = tmp7);
-    let tmp9 = previousTimestampMs;
     let numRateSamples = tmp7.numRateSamples;
     if (undefined !== previousTimestampMs) {
-      if (currentTimestampMs > tmp9) {
-        let diff = currentTimestampMs - tmp9;
+      if (currentTimestampMs > previousTimestampMs) {
+        let diff = currentTimestampMs - previousTimestampMs;
         obj = {
-          userId: null,
+          userId: tmp6,
           silent: null,
           normal: null,
           merged: null,
@@ -1016,7 +1014,6 @@ prototype["getPeriodicStats"] = function getPeriodicStats() {
           speechExpandRate: null,
           durationMs: null,
         };
-        obj.userId = tmp6;
         let silent = current.silent;
         if (silent == null) {
           let num = previous.silent;
@@ -1080,10 +1077,10 @@ prototype["getPeriodicStats"] = function getPeriodicStats() {
           cng = 0 - num7;
         }
         obj.cng = cng;
-        obj.accelerateRate = tmp8.accelerateRateSum / numRateSamples;
-        obj.expandRate = tmp8.expandRateSum / numRateSamples;
-        obj.preemptiveExpandRate = tmp8.preemptiveExpandRateSum / numRateSamples;
-        obj.speechExpandRate = tmp8.speechExpandRateSum / numRateSamples;
+        obj.accelerateRate = tmp7.accelerateRateSum / numRateSamples;
+        obj.expandRate = tmp7.expandRateSum / numRateSamples;
+        obj.preemptiveExpandRate = tmp7.preemptiveExpandRateSum / numRateSamples;
+        obj.speechExpandRate = tmp7.speechExpandRateSum / numRateSamples;
         obj.durationMs = diff;
         if (obj.normal + obj.merged + obj.expanded + obj.accelerated + obj.preemptiveExpanded > 0) {
           let arr = items.push(tmp26);

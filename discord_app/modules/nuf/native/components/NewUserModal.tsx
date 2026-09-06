@@ -54,6 +54,7 @@ export default function NewUserModal(arg0) {
         }
       }
       first(4763).popWithKey(closure_0(17448).NEW_USER_MODAL_KEY);
+      const obj = first(4763);
     });
   }, items);
   let obj1 = require("useNavigatorBackPressHandler");

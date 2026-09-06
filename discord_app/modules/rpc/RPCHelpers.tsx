@@ -130,116 +130,122 @@ function fetchApplicationRPC(arg0) {
     },
   );
 }
-let closure_31 = async function _validateSocketApplication(arg0, value) {
-  if (c8 === 2) {
-    c8 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp4 === 3) {
-    if (arg0 === 1) {
-      throw value;
-    } else if (arg0 === 2) {
-      obj = { value, done: true };
-      return obj;
+let closure_31 = async function _validateSocketApplication(arg0, arg1, arg2) {
+  let transport = arg0;
+  closure_1 = arg1;
+  closure_2 = arg2;
+  c7 = 0;
+  c8 = 0;
+  return (async (arg0, value, arg2) => {
+    if (c8 === 2) {
+      c8 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp4 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        obj = { value, done: true };
+        return obj;
+      } else {
+        return { value: "HermesInternal", done: null };
+      }
     } else {
-      return { value: "HermesInternal", done: null };
-    }
-  } else {
-    try {
-      c8 = 2;
-      if (0 === c7) {
-        if (arg0 === 1) {
-          c8 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c8 = 3;
-          obj = { value, done: true };
-          return obj;
-        } else {
-          closure_5 = tmp4;
-          closure_6 = tmp2;
-          closure_134_0 = closure_0;
-          closure_134_1 = closure_1;
-          closure_134_2 = closure_2;
-          let application2;
-          closure_134_4 = undefined;
-          closure_134_5 = undefined;
-          let id;
-          let name;
-          let icon;
-          let coverImage;
-          let flags;
-          let parentId;
-          application2 = application.getApplication(closure_1);
-          if (typeof closure_2 === "string") {
-            if (tmp66.transport === constants.POST_MESSAGE) {
-              const tmp21 = getURLForApplicationDefault(tmp67);
-              if (null != tmp21) {
-                const items = [tmp21];
+      try {
+        c8 = 2;
+        if (0 === c7) {
+          if (arg0 === 1) {
+            c8 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c8 = 3;
+            obj = { value, done: true };
+            return obj;
+          } else {
+            closure_5 = tmp4;
+            closure_6 = tmp2;
+            closure_134_0 = transport;
+            closure_134_1 = closure_1;
+            closure_134_2 = closure_2;
+            let application2;
+            closure_134_4 = undefined;
+            closure_134_5 = undefined;
+            let id;
+            let name;
+            let icon;
+            let coverImage;
+            let flags;
+            let parentId;
+            application2 = application.getApplication(closure_1);
+            if (typeof closure_2 === "string") {
+              if (transport.transport === constants.POST_MESSAGE) {
+                const tmp21 = getURLForApplicationDefault(closure_1);
+                if (null != tmp21) {
+                  const items = [tmp21];
+                }
+                const obj1 = { closeCode: constants2.INVALID_ORIGIN };
+                const tmp52 = new RPCErrorDefault(obj1, "Invalid Origin");
+                throw tmp52;
+              } else {
+                c7 = 1;
+                c8 = 1;
+                const obj2 = { value: fetchApplicationRPC(closure_1), done: false };
+                return obj2;
               }
-              const obj1 = { closeCode: constants2.INVALID_ORIGIN };
-              const tmp52 = new RPCErrorDefault(obj1, "Invalid Origin");
-              throw tmp52;
-            } else {
-              c7 = 1;
+            }
+            if (null == application2) {
+              closure_4 = closure_133_5;
+              createFromServer = closure_133_5.createFromServer;
+              c7 = 2;
               c8 = 1;
-              const obj2 = { value: fetchApplicationRPC(tmp67), done: false };
-              return obj2;
+              const obj3 = { value: closure_133_30(closure_134_1), done: false };
+              return obj3;
+            } else {
+              closure_134_5 = application2;
+              id = closure_134_5.id;
+              name = closure_134_5.name;
+              icon = closure_134_5.icon;
+              coverImage = closure_134_5.coverImage;
+              flags = closure_134_5.flags;
+              parentId = closure_134_5.parentId;
+              const obj4 = { id, parentId, name, icon, coverImage, flags };
+              closure_134_0.application = obj4;
+              c8 = 3;
             }
           }
-          if (null == application2) {
-            closure_4 = closure_133_5;
-            const createFromServer = closure_133_5.createFromServer;
-            c7 = 2;
-            c8 = 1;
-            const obj3 = { value: closure_133_30(closure_134_1), done: false };
-            return obj3;
-          } else {
-            closure_134_5 = application2;
-            id = closure_134_5.id;
-            name = closure_134_5.name;
-            icon = closure_134_5.icon;
-            coverImage = closure_134_5.coverImage;
-            flags = closure_134_5.flags;
-            parentId = closure_134_5.parentId;
-            const obj4 = { id, parentId, name, icon, coverImage, flags };
-            closure_134_0.application = obj4;
+        } else if (1 === tmp5) {
+          if (arg0 === 1) {
             c8 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c8 = 3;
+            const obj5 = { value, done: true };
+            return obj5;
+          } else {
+            closure_134_4 = value;
+            application2 = closure_133_5.createFromServer(closure_134_4);
+            if (!closure_133_28(closure_134_2, closure_134_4.rpc_origins)) {
+              const obj6 = { closeCode: closure_133_21.INVALID_ORIGIN };
+              const tmp16 = new closure_133_1(closure_133_2[26])(obj6, "Invalid Origin");
+              throw tmp16;
+            }
           }
-          tmp66 = closure_0;
-        }
-      } else if (1 === tmp5) {
-        if (arg0 === 1) {
+        } else if (arg0 === 1) {
           c8 = 3;
           throw value;
-        } else if (arg0 === 2) {
-          c8 = 3;
-          const obj5 = { value, done: true };
-          return obj5;
-        } else {
-          closure_134_4 = value;
-          application2 = closure_133_5.createFromServer(closure_134_4);
-          if (!closure_133_28(closure_134_2, closure_134_4.rpc_origins)) {
-            const obj6 = { closeCode: closure_133_21.INVALID_ORIGIN };
-            const tmp16 = new closure_133_1(closure_133_2[26])(obj6, "Invalid Origin");
-            throw tmp16;
-          }
+        } else if (arg0 !== 2) {
+          application2 = createFromServer(value);
         }
-      } else if (arg0 === 1) {
         c8 = 3;
-        throw value;
-      } else if (arg0 !== 2) {
-        application2 = createFromServer(value);
+        obj = { value, done: true };
+        return obj;
+      } catch (tmp54) {
+        c8 = tmp;
+        throw tmp54;
       }
-      c8 = 3;
-      obj = { value, done: true };
-      return obj;
-    } catch (tmp54) {
-      c8 = tmp;
-      throw tmp54;
     }
-  }
+  })();
 };
-let closure_32 = async function _processSocketThrottlers(arg0, value) {
+let closure_32 = async function _processSocketThrottlers(arg0) {
   if (c7 === 2) {
     c7 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -416,12 +422,12 @@ export const transformChannel = function transformChannel(channel, arg1) {
   return Promise.all(items).then(() => {
     if (!nSFW.isNSFW()) {
       if (closure_1) {
-        const messages = MessageStore.getMessages(tmp.id);
+        const messages = MessageStore.getMessages(nSFW.id);
         const mapped = messages.toArray().map(transformInternalTextMessage);
         const toArrayResult = messages.toArray();
       }
       const _Object = Object;
-      const values = Object.values(VoiceStateStore.getVoiceStatesForChannel(tmp.id));
+      const values = Object.values(VoiceStateStore.getVoiceStatesForChannel(nSFW.id));
       obj = {
         id: null,
         name: null,
@@ -441,9 +447,9 @@ export const transformChannel = function transformChannel(channel, arg1) {
         topic: obj2.topic,
         bitrate: obj2.bitrate,
         userLimit: obj2.user_limit,
-      } = tmp);
+      } = nSFW);
       obj.guild_id = guild_id;
-      obj.position = tmp.position;
+      obj.position = nSFW.position;
       obj.messages = [];
       obj.voice_states = values.map((userId) => {
         userId = userId.userId;
@@ -456,7 +462,7 @@ export const transformChannel = function transformChannel(channel, arg1) {
           throw error;
         } else {
           let voice_state = {
-            nick: closure_1(4712).getName(tmp, id.id, user),
+            nick: closure_1(4712).getName(dependencyMap, id.id, user),
             mute: MediaEngineStore.isLocalMute(user.id),
             volume: MediaEngineStore.getLocalVolume(user.id),
             pan: MediaEngineStore.getLocalPan(user.id),
@@ -468,7 +474,6 @@ export const transformChannel = function transformChannel(channel, arg1) {
           voice_state.user = closure_1(9560)(user);
           return voice_state;
         }
-        tmp = dependencyMap;
       });
       return obj;
     } else {
@@ -526,10 +531,9 @@ export const isMatchingOrigin = function isMatchingOrigin(str) {
             const isMatch = regExp.test(str);
             let tmp8 = !isMatch;
             if (isMatch) {
-              tmp8 = !obj2.test(origin);
+              tmp8 = !regExp.test(origin);
             }
             tmp6 = !tmp8;
-            obj2 = regExp;
           }
           tmp4 = tmp6;
         }
@@ -555,8 +559,8 @@ export const hasMessageReadPermission = function hasMessageReadPermission(channe
 };
 export const getVoiceConnectionState = function getVoiceConnectionState(state) {
   if (constants5.RTC_CONNECTED !== state) {
-    if (tmp.RTC_CONNECTING !== state) {
-      if (tmp.RTC_DISCONNECTED !== state) {
+    if (constants5.RTC_CONNECTING !== state) {
+      if (constants5.RTC_DISCONNECTED !== state) {
         return state;
       }
     }

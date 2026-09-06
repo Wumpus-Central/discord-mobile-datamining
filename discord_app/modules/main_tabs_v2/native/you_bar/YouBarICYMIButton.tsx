@@ -39,7 +39,7 @@ export default noop.memo(function YouBarICYMIButton(hasNameplate) {
       rootNavigationRef.navigate("icymi", obj);
     }
   };
-  const intl = tmp5(1114).intl;
+  const intl = util.intl;
   obj.accessibilityLabel = intl.string(util.t["jnXV/V"]);
   return jsx(YouBarButtonDefault, { size: "custom", style: tmp.icon, color: null });
 });

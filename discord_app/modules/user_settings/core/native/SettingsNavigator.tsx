@@ -2,6 +2,7 @@
 import _modDef38 from "../../../../../_runtime/metro/00038__.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
+import native from "../../../../design/void/native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
 import UserSettingsUtils from "../../../../utils/UserSettingsUtils.tsx";
@@ -16,8 +17,8 @@ import UserSettingSearchStore from "../../UserSettingSearchStore.tsx";
 require = fn;
 function SettingHeaderBadge(badge) {
   if (badge.badge.badgeType === SettingRendererTypes.SettingsBadgeType.BETA) {
-    const obj = { size: tmp(1178).BetaSizes.SMALL };
-    return closure_1_10(tmp(1178).BetaTag, obj);
+    const obj = { size: native.BetaSizes.SMALL };
+    return closure_1_10(native.BetaTag, obj);
   }
 }
 function LeftAlignedHeaderTitle(children) {

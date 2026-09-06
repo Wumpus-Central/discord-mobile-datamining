@@ -50,7 +50,6 @@ export default function GuildHeaderCoachmarks(arg0) {
   }, items2);
   const tmp11 = stateFromStores(mobileBoostProgressBarEnabled[13])();
   const obj3 = guild(mobileBoostProgressBarEnabled[15]);
-  const tmp13 = constants;
   const tmp14 = _slicedToArray;
   [tmp16, tmp17] = _slicedToArray(
     guild(mobileBoostProgressBarEnabled[15]).useSelectedDismissibleContent(memo, constants.GUILD_HEADER_TOOLTIPS),
@@ -71,7 +70,11 @@ export default function GuildHeaderCoachmarks(arg0) {
     tmp18 = tmp11;
   }
   const tmp14Result = tmp14(
-    guild(mobileBoostProgressBarEnabled[16]).useBoostToUnlockCoachmarkDCF(tmp18, guild.id, tmp13.GUILD_HEADER_TOOLTIPS),
+    guild(mobileBoostProgressBarEnabled[16]).useBoostToUnlockCoachmarkDCF(
+      tmp18,
+      guild.id,
+      constants.GUILD_HEADER_TOOLTIPS,
+    ),
     2,
   );
   if (first == null) {
@@ -80,10 +83,10 @@ export default function GuildHeaderCoachmarks(arg0) {
   if (guild(mobileBoostProgressBarEnabled[14]).DismissibleContent.BOOST_PROGRESS_BAR_MOBILE_COACHMARK === first) {
     obj = { targetRef, guild, markAsDismissed: tmp17 };
     return jsx(tmp5(tmp2[17]), { targetRef, guild, markAsDismissed: tmp17 });
-  } else if (tmp(tmp2[14]).DismissibleContent.GUILD_THEME_MEMBER_COACHMARK === first) {
+  } else if (guild(tmp2[14]).DismissibleContent.GUILD_THEME_MEMBER_COACHMARK === first) {
     obj = { guildId: guild.id, targetRef, markAsDismissed: tmp17 };
     return jsx(tmp5(tmp2[18]), { guildId: guild.id, targetRef, markAsDismissed: tmp17 });
-  } else if (tmp(tmp2[14]).DismissibleContent.BOOST_TO_UNLOCK_COACHMARK === first) {
+  } else if (guild(tmp2[14]).DismissibleContent.BOOST_TO_UNLOCK_COACHMARK === first) {
     let tmp21 = null;
     if (null != tmp10) {
       obj1 = { guildId: guild.id, powerup: tmp10, targetRef, markAsDismissed: tmp14Result[1] };

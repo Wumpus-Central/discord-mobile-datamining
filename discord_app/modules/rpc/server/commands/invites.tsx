@@ -17,7 +17,7 @@ obj.scope = obj;
 obj.handler = function handler(arg0) {
   ({ socket: require, args } = arg0);
   ({ user_id: dependencyMap, content: asyncGeneratorStep } = args);
-  return (async (arg0, value) => {
+  return (async () => {
     if (connectedActivityLocation === 2) {
       connectedActivityLocation = 3;
       throw new TypeError("Generator functions may not be called on executing generators");

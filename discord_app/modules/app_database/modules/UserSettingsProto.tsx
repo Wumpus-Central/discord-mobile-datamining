@@ -52,6 +52,7 @@ class UserSettingsProto {
           }
           const result1 = closure_1_0(1986).nonGuildVersionsTransaction(database);
           result1.put({ id: "user_settings_version", version: num });
+          const obj3 = closure_1_0(1986);
         }, "handleUserSettingsProtoChange");
       }
     };
@@ -63,7 +64,7 @@ class UserSettingsProto {
 const prototype = UserSettingsProto.prototype;
 prototype["getAll"] = function getAll(arg0) {
   closure_0 = arg0;
-  return (async (arg0, value) => {
+  return (async () => {
     if (c7 === 2) {
       c7 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -187,6 +188,7 @@ obj.handleUserSettingsProtoChange = function handleUserSettingsProtoChange() {
       }
       const result1 = closure_1_0(1986).nonGuildVersionsTransaction(database);
       result1.put({ id: "user_settings_version", version: num });
+      const obj3 = closure_1_0(1986);
     }, "handleUserSettingsProtoChange");
   }
 };

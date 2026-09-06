@@ -144,12 +144,12 @@ export const ICYMIAnalytics = {
         let str = str2;
       } else {
         str = "hotwheels_gaming_activity";
-        if (tmp3(8348).ICYMIItemTypes.ACTIVITY !== type) {
+        if (ICYMITypes.ICYMIItemTypes.ACTIVITY !== type) {
           str = "hotwheels_custom_status";
-          if (tmp3(8348).ICYMIItemTypes.CUSTOM_STATUS !== type) {
+          if (ICYMITypes.ICYMIItemTypes.CUSTOM_STATUS !== type) {
             str = "guild_event";
-            if (tmp3(8348).ICYMIItemTypes.GUILD_EVENT !== type) {
-              if (tmp3(8348).ICYMIItemTypes.RECOMMENDED_GUILDS === type) {
+            if (ICYMITypes.ICYMIItemTypes.GUILD_EVENT !== type) {
+              if (ICYMITypes.ICYMIItemTypes.RECOMMENDED_GUILDS === type) {
                 str = "recommended_guilds";
               }
             }
@@ -170,12 +170,12 @@ export const ICYMIAnalytics = {
         let str = str2;
       } else {
         str = "hotwheels_gaming_activity";
-        if (tmp3(8348).ICYMIItemTypes.ACTIVITY !== type) {
+        if (ICYMITypes.ICYMIItemTypes.ACTIVITY !== type) {
           str = "hotwheels_custom_status";
-          if (tmp3(8348).ICYMIItemTypes.CUSTOM_STATUS !== type) {
+          if (ICYMITypes.ICYMIItemTypes.CUSTOM_STATUS !== type) {
             str = "guild_event";
-            if (tmp3(8348).ICYMIItemTypes.GUILD_EVENT !== type) {
-              if (tmp3(8348).ICYMIItemTypes.RECOMMENDED_GUILDS === type) {
+            if (ICYMITypes.ICYMIItemTypes.GUILD_EVENT !== type) {
+              if (ICYMITypes.ICYMIItemTypes.RECOMMENDED_GUILDS === type) {
                 str = "recommended_guilds";
               }
             }

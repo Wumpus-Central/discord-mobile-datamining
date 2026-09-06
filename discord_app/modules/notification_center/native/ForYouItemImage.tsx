@@ -116,9 +116,9 @@ export const ForYouItemImage = noop.memo((item) => {
       tmpResult.size = compactMode ? AvatarSizes.REFRESH_MEDIUM_32 : AvatarSizes.LARGE_48;
       avatarDecoration = avatarDecoration.avatarDecoration;
       tmpResult.avatarDecoration = avatarDecoration;
-      tmpResult = tmp(native.Avatar, tmpResult);
+      tmpResult = jsx(native.Avatar, { source: null, size: null, avatarDecoration: null });
       tmpResult.children = tmpResult;
-      tmpResult = tmp(Pressables.PressableOpacity, tmpResult);
+      tmpResult = jsx(Pressables.PressableOpacity, tmpResult);
     }
   }, items1);
   if (null != item.icon_name) {

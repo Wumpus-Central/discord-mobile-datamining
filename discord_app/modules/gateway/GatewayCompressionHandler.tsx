@@ -108,7 +108,7 @@ prototype3["getAlgorithm"] = function getAlgorithm() {
 prototype3["usesLegacyCompression"] = function usesLegacyCompression() {
   return false;
 };
-prototype3["feed"] = function feed(buffer) {
+prototype3["feed"] = function feed(arg0) {
   const self = this;
   if (null == this._inflate) {
     const _Error3 = Error;
@@ -120,9 +120,9 @@ prototype3["feed"] = function feed(buffer) {
     throw error1;
   } else {
     const _ArrayBuffer = ArrayBuffer;
-    if (buffer instanceof ArrayBuffer) {
+    if (arg0 instanceof ArrayBuffer) {
       const _DataView = DataView;
-      const dataView = new DataView(buffer);
+      const dataView = new DataView(arg0);
       let tmp9 = dataView.byteLength >= 4;
       if (tmp9) {
         tmp9 = 65535 === dataView.getUint32(dataView.byteLength - 4, false);
@@ -132,10 +132,10 @@ prototype3["feed"] = function feed(buffer) {
       if (Z_SYNC_FLUSH) {
         Z_SYNC_FLUSH = self._pako.Z_SYNC_FLUSH;
       }
-      _inflate.push(buffer, Z_SYNC_FLUSH);
+      _inflate.push(arg0, Z_SYNC_FLUSH);
     } else {
       const _Error = Error;
-      const error2 = new Error("Expected array buffer, but got " + typeof buffer);
+      const error2 = new Error("Expected array buffer, but got " + typeof arg0);
       throw error2;
     }
   }
@@ -268,7 +268,7 @@ prototype5["bindWebSocket"] = function bindWebSocket(_socketId) {
   const isAndroidResult = PlatformUtils.isAndroid();
   if (supportsZstdResult) {
     if (isAndroidResult) {
-      const _default2 = tmp2(13649).default;
+      const _default2 = NativeCompressionModule.default;
       if (_default2 != null) {
         const result = _default2.enableZstdStreamSupport(self._socketId);
       }
@@ -277,7 +277,7 @@ prototype5["bindWebSocket"] = function bindWebSocket(_socketId) {
       const result1 = DCDCompressionManager2.enableZstdStreamSupport(self._socketId, 0);
     }
   } else if (isAndroidResult) {
-    const _default = tmp2(13649).default;
+    const _default = NativeCompressionModule.default;
     if (_default != null) {
       const result2 = _default.enableZlibStreamSupport(self._socketId);
     }
@@ -311,7 +311,7 @@ prototype5["close"] = function close() {
   this._socketId = null;
   if (null !== _socketId) {
     if (obj.isAndroid()) {
-      const _default = tmp(13649).default;
+      const _default = NativeCompressionModule.default;
       if (_default != null) {
         const result = _default.disableZlibStreamSupport(_socketId);
       }
@@ -320,7 +320,6 @@ prototype5["close"] = function close() {
       const result1 = DCDCompressionManager.disableZlibStreamSupport(_socketId);
     }
     obj = PlatformUtils;
-    tmp = require;
   }
 };
 items.push(fn4);

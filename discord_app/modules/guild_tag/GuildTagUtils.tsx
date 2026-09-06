@@ -29,7 +29,7 @@ export const guildSupportsTags = function guildSupportsTags(guild) {
   const features = guild.features;
   return features.has(GuildFeatures.GUILD_TAGS);
 };
-export const getGuildTagBadgeUrl = function getGuildTagBadgeUrl(guildId, badge, SIZE_12) {
+export const getGuildTagBadgeUrl = function getGuildTagBadgeUrl(guildId, badge) {
   if (SIZE_12 === undefined) {
     SIZE_12 = SIZE_12.SIZE_12;
   }

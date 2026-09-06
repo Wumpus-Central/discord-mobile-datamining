@@ -1,7 +1,9 @@
 // discord_app/modules/messages/native/renderer/system_messages/RemoveRecipientSystemMessage.tsx
+import util from "../../../../../intl/index.native.tsx";
 import ChannelRecord from "../../../../../records/ChannelRecord.tsx";
 import useAuthorWithProcessedColor from "useAuthorWithProcessedColor.tsx";
 import formatUsernameOnClickDefault from "formatUsernameOnClick.tsx";
+import createCommonMessageDefault from "createCommonMessage.tsx";
 import ChannelStore from "../../../../../stores/ChannelStore.tsx";
 import UserStore from "../../../../../stores/UserStore.tsx";
 import size from "../../../../../../_runtime/metro/00002__.js";
@@ -26,35 +28,35 @@ export const createRemoveRecipientSystemMessage = function createRemoveRecipient
     usernameOnClick: formatUsernameOnClickDefault({ message, author: messageAuthorWithProcessedColor, roleStyle }),
   };
   if (message.author.id === first) {
-    const intl = tmp5(1114).intl;
+    const intl = util.intl;
     const formatToParts = intl.formatToParts;
-    const t = tmp5(1114).t;
+    const t = util.t;
     if (hasItem) {
       let formatToPartsResult = formatToParts(t.uHmblj, obj);
     } else {
       formatToPartsResult = formatToParts(t["Qn5+Lf"], obj);
     }
     obj = { content: formatToPartsResult };
-    const merged = Object.assign(tmp8(7964)(message));
+    const merged = Object.assign(createCommonMessageDefault(message));
     return obj;
   } else {
     const user = UserStore.getUser(first);
-    const userAuthorWithProcessedColor = tmp5(7960).getUserAuthorWithProcessedColor(user, channel);
+    const userAuthorWithProcessedColor = useAuthorWithProcessedColor.getUserAuthorWithProcessedColor(user, channel);
     const obj1 = {};
     const merged1 = Object.assign(obj);
     obj1.otherUsername = userAuthorWithProcessedColor.nick;
     const obj2 = { userId: first, message, author: userAuthorWithProcessedColor, roleStyle };
-    obj1.otherUsernameOnClick = tmp8(7962)(obj2);
-    const intl2 = tmp5(1114).intl;
+    obj1.otherUsernameOnClick = formatUsernameOnClickDefault(obj2);
+    const intl2 = util.intl;
     const formatToParts2 = intl2.formatToParts;
-    const t2 = tmp5(1114).t;
+    const t2 = util.t;
     if (hasItem) {
       let formatToParts2Result = formatToParts2(t2.KBrM5t, obj1);
     } else {
       formatToParts2Result = formatToParts2(t2.QtZ0RD, obj1);
     }
     const obj3 = { content: formatToParts2Result };
-    const merged2 = Object.assign(tmp8(7964)(message));
+    const merged2 = Object.assign(createCommonMessageDefault(message));
     return obj3;
   }
 };

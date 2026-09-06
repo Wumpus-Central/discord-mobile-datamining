@@ -87,9 +87,8 @@ export default noop.memo(function HeaderGlassBlur(shown) {
   obj2.style = items1;
   const items2 = [closure_4(VisualEffectViewAnimatedDefault, obj2)];
   const obj3 = { style: tmp.strokeContainer, children: null };
-  tmp6(5589);
   const items3 = [closure_4(NativeViewDefault, { style: tmp.stroke })];
-  const tmp6Result = tmp6(5589);
+  const tmp6Result = NativeViewDefault;
   const obj4 = { style: tmp.stroke };
   obj5 = { style: tmp2(4411).isThemeDark(tmp7) ? tmp.strokeAlt : tmp.strokeAltLight };
   items3[1] = closure_4(tmp6Result, obj5);

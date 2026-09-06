@@ -25,9 +25,9 @@ const prototype = function SearchQueryStateManager(type) {
     const queryString = tagsManager.getQueryString(flag);
     if (0 !== queryString.length) {
       const _HermesInternal = HermesInternal;
-      let textInputValue = "" + queryString + " " + tmp.textInputValue;
+      let textInputValue = "" + queryString + " " + obj.textInputValue;
     } else {
-      textInputValue = tmp.textInputValue;
+      textInputValue = obj.textInputValue;
     }
     return textInputValue;
   };
@@ -50,9 +50,9 @@ const prototype = function SearchQueryStateManager(type) {
     const isExplicitSearchSubmitted = obj.isExplicitSearchSubmitted;
     let tmp2 = !isExplicitSearchSubmitted;
     if (!isExplicitSearchSubmitted) {
-      let tmp3 = 0 === tmp.textInputValue.trim().length;
+      let tmp3 = 0 === obj.textInputValue.trim().length;
       if (tmp3) {
-        const tagsManager = tmp.tagsManager;
+        const tagsManager = obj.tagsManager;
         tmp3 = !tagsManager.hasUserAddedTags();
       }
       tmp2 = tmp3;
@@ -131,9 +131,9 @@ const prototype = function SearchQueryStateManager(type) {
   };
   obj.restoreDraftTextInputValue = function restoreDraftTextInputValue() {
     if (null != obj.draftTextInputValue) {
-      tmp.textInputValue = tmp.draftTextInputValue;
-      tmp.textInputChangedFromInput = false;
-      tmp.draftTextInputValue = null;
+      obj.textInputValue = obj.draftTextInputValue;
+      obj.textInputChangedFromInput = false;
+      obj.draftTextInputValue = null;
     }
   };
   obj.reset = function reset() {

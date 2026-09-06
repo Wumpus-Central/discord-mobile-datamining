@@ -15,7 +15,7 @@ const prototype = QuestDockStore.prototype;
 prototype["initialize"] = function initialize(questDockSoftDismissedAt) {
   if (null != questDockSoftDismissedAt) {
     c3 = questDockSoftDismissedAt.questDockSoftDismissedAt;
-    COLLAPSED = QuestDockUtils.isSoftDismissed(c3) ? tmp4.SOFT_DISMISSED : tmp4.COLLAPSED;
+    COLLAPSED = QuestDockUtils.isSoftDismissed(c3) ? QuestDockMode.SOFT_DISMISSED : QuestDockMode.COLLAPSED;
   }
 };
 prototype["getState"] = function getState() {

@@ -1,10 +1,10 @@
 // discord_app/actions/FriendsActionCreators.tsx
 import DispatcherDefault from "../Dispatcher.tsx";
 import Constants from "../Constants.tsx";
+import router_utils from "../modules/routing/router_utils.tsx";
+import trackFriendListClickedDefault from "../modules/app_analytics/track/friends_list_viewed/trackFriendListClicked.tsx";
 import size from "../../_runtime/metro/00002__.js";
 
-const router_utils = tmp(1100);
-const trackFriendListClickedDefault = tmp5(16752);
 const Routes = Constants.Routes;
 const result = size.fileFinishedImporting("actions/FriendsActionCreators.tsx");
 

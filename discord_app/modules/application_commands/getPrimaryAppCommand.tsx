@@ -9,79 +9,84 @@ import ChannelStore from "../../stores/ChannelStore.tsx";
 import ApplicationCommandIndexStore from "ApplicationCommandIndexStore.tsx";
 
 require = fn;
-let closure_10 = async function _getPrimaryAppCommand(arg0, value) {
-  if (c5 === 2) {
-    c5 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp4 === 3) {
-    if (arg0 === 1) {
-      throw value;
-    } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+let closure_10 = async function _getPrimaryAppCommand(arg0) {
+  closure_0 = arg0;
+  c4 = 0;
+  c5 = 0;
+  return (async (arg0, value) => {
+    if (c5 === 2) {
+      c5 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp4 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        let obj = { value, done: true };
+        return obj;
+      } else {
+        return { value: "HermesInternal", done: null };
+      }
     } else {
-      return { value: "HermesInternal", done: null };
-    }
-  } else {
-    try {
-      c5 = 2;
-      if (0 === c4) {
-        if (arg0 === 1) {
+      try {
+        c5 = 2;
+        if (0 === c4) {
+          if (arg0 === 1) {
+            c5 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c5 = 3;
+            obj = { value, done: true };
+            return obj;
+          } else {
+            closure_3 = tmp5;
+            closure_2 = tmp2;
+            closure_130_0 = applicationId;
+            closure_130_1 = undefined;
+            closure_130_2 = undefined;
+            channel = channel.getChannel(closure_0);
+            closure_130_1 = channel;
+            closure_130_2 = undefined;
+            let tmp13 = null != channel;
+            if (tmp13) {
+              const obj1 = { channel, type: "channel" };
+              const tmp12 = queryForPrimaryAppCommand(obj1, applicationId);
+              closure_130_2 = tmp12;
+              tmp13 = null == tmp12;
+            }
+            if (tmp13) {
+              const obj2 = { type: "application", applicationId };
+              c4 = 1;
+              c5 = 1;
+              const obj3 = { value: closure_2_5(obj2), done: false };
+              return obj3;
+            }
+          }
+        } else if (arg0 === 1) {
           c5 = 3;
           throw value;
         } else if (arg0 === 2) {
           c5 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
-          closure_3 = tmp5;
-          closure_2 = tmp2;
-          closure_130_0 = closure_1;
-          closure_130_1 = undefined;
-          closure_130_2 = undefined;
-          channel = channel.getChannel(closure_0);
-          closure_130_1 = channel;
-          closure_130_2 = undefined;
-          let tmp13 = null != channel;
-          if (tmp13) {
-            const obj1 = { channel, type: "channel" };
-            const tmp12 = queryForPrimaryAppCommand(obj1, tmp32);
-            closure_130_2 = tmp12;
-            tmp13 = null == tmp12;
-          }
-          if (tmp13) {
-            const obj2 = { type: "application", applicationId: tmp32 };
-            c4 = 1;
-            c5 = 1;
-            const obj3 = { value: hasOwnProperty(obj2), done: false };
-            return obj3;
-          }
+          obj = { channel: closure_130_1, type: "channel" };
+          closure_130_2 = closure_131_11(obj, closure_130_0);
         }
-      } else if (arg0 === 1) {
-        c5 = 3;
-        throw value;
-      } else if (arg0 === 2) {
-        c5 = 3;
-        const obj4 = { value, done: true };
-        return obj4;
-      } else {
-        obj = { channel: closure_130_1, type: "channel" };
-        closure_130_2 = closure_131_11(obj, closure_130_0);
+        if (null != closure_130_2) {
+          c5 = 3;
+          const obj5 = { value: closure_130_2, done: true };
+          return obj5;
+        } else {
+          const _Error = Error;
+          const error = new Error(closure_131_8);
+          throw error;
+        }
+      } catch (tmp26) {
+        c5 = tmp;
+        throw tmp26;
       }
-      if (null != closure_130_2) {
-        c5 = 3;
-        const obj5 = { value: closure_130_2, done: true };
-        return obj5;
-      } else {
-        const _Error = Error;
-        const error = new Error(closure_131_8);
-        throw error;
-      }
-    } catch (tmp26) {
-      c5 = tmp;
-      throw tmp26;
     }
-  }
+  })();
 };
 function queryForPrimaryAppCommand(withAffinitySuggestions, id) {
   let obj = { commandTypes: null };

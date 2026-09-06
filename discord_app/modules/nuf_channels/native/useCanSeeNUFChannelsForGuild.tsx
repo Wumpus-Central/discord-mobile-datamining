@@ -1,4 +1,5 @@
 // discord_app/modules/nuf_channels/native/useCanSeeNUFChannelsForGuild.tsx
+import FlagUtils from "../../../../discord_common/js/shared/utils/FlagUtils.tsx";
 import UserUtils from "../../../utils/UserUtils.tsx";
 import GuildMemberStore from "../../../stores/GuildMemberStore.tsx";
 import GuildStore from "../../../stores/GuildStore.tsx";
@@ -26,9 +27,9 @@ export const useCanSeeNUFChannelsForGuild = function useCanSeeNUFChannelsForGuil
             if (!features2.has(GuildFeatures.HUB)) {
               const selfMember = GuildMemberStore.getSelfMember(closure_0);
               const features = guild.features;
-              let hasFlagResult = features.has(tmp12.GUILD_ONBOARDING) && null != selfMember;
+              let hasFlagResult = features.has(GuildFeatures.GUILD_ONBOARDING) && null != selfMember;
               if (hasFlagResult) {
-                let tmp10Result = tmp10(1384);
+                let tmp10Result = FlagUtils;
                 let num = selfMember.flags;
                 if (num == null) {
                   num = 0;
@@ -36,7 +37,7 @@ export const useCanSeeNUFChannelsForGuild = function useCanSeeNUFChannelsForGuil
                 hasFlagResult = tmp10Result.hasFlag(num, GuildMemberFlags.STARTED_ONBOARDING);
               }
               if (hasFlagResult) {
-                tmp10Result = tmp10(1384);
+                tmp10Result = FlagUtils;
                 let num2 = selfMember.flags;
                 if (num2 == null) {
                   num2 = 0;
@@ -45,7 +46,6 @@ export const useCanSeeNUFChannelsForGuild = function useCanSeeNUFChannelsForGuil
               }
               return !hasFlagResult;
             }
-            tmp12 = GuildFeatures;
           }
           return false;
         }

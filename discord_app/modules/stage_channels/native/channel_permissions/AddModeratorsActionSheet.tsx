@@ -56,7 +56,7 @@ export default function AddModeratorsActionSheet(channel) {
         c5 = 3;
       } else if (arg0 === 1) {
         c5 = 3;
-        throw arg1;
+        throw value;
       } else if (arg0 !== 2) {
         const result = closure_0(tmp19[14]).memberOrRoleAddedToast(closure_128_1, closure_128_0);
         closure_0(tmp19[14]);
@@ -64,7 +64,7 @@ export default function AddModeratorsActionSheet(channel) {
         c3 = 0;
         tmp3(tmp19[15]);
       }
-      return arg1;
+      return value;
     });
     dependencyMap = tmp;
     const apply = tmp.apply;
@@ -110,8 +110,8 @@ export default function AddModeratorsActionSheet(channel) {
         let obj4 = obj;
       }
       const obj1 = { scrollable: true, header: null, startExpanded: true, children: null };
-      obj.trailing = tmp12(tmp13, obj4);
-      obj1.header = tmp12(tmp4(7149).BottomSheetTitleHeader, obj);
+      obj.trailing = <tmp13 {...obj4} />;
+      obj1.header = jsx(tmp4(7149).BottomSheetTitleHeader, obj);
       let obj2 = { style: tmp.container, children: null };
       const obj3 = {
         inActionSheet: true,
@@ -121,9 +121,16 @@ export default function AddModeratorsActionSheet(channel) {
         pendingAdditions,
         setPendingAdditions: tmp2[1],
       };
-      obj2.children = tmp12(pendingAdditions(9764), obj3);
-      obj1.children = tmp12(View, obj2);
-      return tmp12(tmp4(7150).BottomSheet, obj1);
+      obj2.children = jsx(tmp7(9764), {
+        inActionSheet: true,
+        channel,
+        guild: stateFromStores,
+        permission: tmp4(1965).MODERATE_STAGE_CHANNEL_PERMISSIONS,
+        pendingAdditions,
+        setPendingAdditions: tmp2[1],
+      });
+      obj1.children = <View style={tmp.container}>{null}</View>;
+      return jsx(tmp4(7150).BottomSheet, { scrollable: true, header: null, startExpanded: true, children: null });
     }
     obj4 = { size: "sm", disabled: tmp11, text: null, onPress: null };
     const intl = tmp4(1114).intl;
@@ -139,4 +146,6 @@ export default function AddModeratorsActionSheet(channel) {
       return applyArgumentsResult;
     };
   }
+  tmp = closure_10();
+  tmp7 = pendingAdditions;
 }

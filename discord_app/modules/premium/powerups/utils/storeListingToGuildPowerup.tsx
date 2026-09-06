@@ -160,8 +160,8 @@ export default function storeListingToGuildPowerup(arr, powerup_metadata) {
           const merged1 = Object.assign(obj);
           return obj;
         }
-      } else if (tmp7.PERK === category_type) {
-        obj = { type: tmp7.PERK, description: null };
+      } else if (GuildPowerupType.PERK === category_type) {
+        obj = { type: GuildPowerupType.PERK, description: null };
         let str = powerup_metadata.description;
         if (str == null) {
           str = "";

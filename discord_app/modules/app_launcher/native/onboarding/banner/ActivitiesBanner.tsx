@@ -1,4 +1,5 @@
 // discord_app/modules/app_launcher/native/onboarding/banner/ActivitiesBanner.tsx
+import util from "../../../../../intl/index.native.tsx";
 import useActivityApplications from "../hooks/useActivityApplications.tsx";
 import BannerBaseDefault from "BannerBase.tsx";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
@@ -17,9 +18,9 @@ export default function ActivitiesBanner(context) {
     tmp6Result = null;
     if (null != tmp5) {
       obj = { image: tmp8, text: null };
-      const intl = tmp(1114).intl;
+      const intl = util.intl;
       const obj1 = { activityName: tmp4.name };
-      obj.text = intl.formatToPlainString(tmp(1114).t.zHMWuV, obj1);
+      obj.text = intl.formatToPlainString(util.t.zHMWuV, obj1);
       tmp6Result = jsx(BannerBaseDefault, { image: tmp8, text: null });
       const tmp7Result = BannerBaseDefault;
     }

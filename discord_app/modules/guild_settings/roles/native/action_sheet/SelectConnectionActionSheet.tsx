@@ -1,12 +1,17 @@
 // discord_app/modules/guild_settings/roles/native/action_sheet/SelectConnectionActionSheet.tsx
 import util from "../../../../../intl/index.native.tsx";
+import native from "../../../../../design/void/native.tsx";
 import useThemeDefault from "../../../../../hooks/useTheme.tsx";
 import ActionSheetActionCreatorsDefault from "../../../../action_sheet/native/ActionSheetActionCreators.tsx";
+import TableRow from "../../../../../design/components/TableRow/native/TableRow.native.tsx";
 import TableRowGroup from "../../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
 import BottomSheetModal from "../../../../../../_runtime/06627_BottomSheetModal.js";
 import common_SafeAreaView from "../../../../../components_native/common/SafeAreaView.tsx";
 import BottomSheetTitleHeader from "../../../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
 import ActionSheet from "../../../../../design/components/Sheet/native/ActionSheet.native.tsx";
+import ConnectionsHooks from "../../../../connections/ConnectionsHooks.tsx";
+import SegmentedControlState from "../../../../../design/components/SegmentedControl/native/SegmentedControlState.native.tsx";
+import SegmentedControl from "../../../../../design/components/SegmentedControl/native/SegmentedControl.native.tsx";
 import useGetOrFetchApplicationBatched from "../../../../applications/useGetOrFetchApplicationBatched.tsx";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
@@ -22,8 +27,8 @@ function IdentityApplicationRow(arg0) {
     const bot = getOrFetchApplicationBatched.bot;
     let tmp6Result = null;
     if (null != bot) {
-      obj = { user: bot, size: tmp(1178).AvatarSizes.XSMALL, guildId: "Array" };
-      tmp6Result = tmp6(tmp(1178).Avatar, obj);
+      obj = { user: bot, size: native.AvatarSizes.XSMALL, guildId: "Array" };
+      tmp6Result = timestampProducer(native.Avatar, obj);
     }
     obj = { icon: tmp6Result, label: getOrFetchApplicationBatched.name, subLabel: null, onPress: null };
     let description;
@@ -32,7 +37,7 @@ function IdentityApplicationRow(arg0) {
     }
     obj.subLabel = description;
     obj.onPress = onPress;
-    return timestampProducer(tmp(5605).TableRow, obj);
+    return timestampProducer(TableRow.TableRow, obj);
   }
 }
 const View = fn(17).View;
@@ -79,7 +84,7 @@ export default function SelectConnectionActionSheet(arg0) {
       return tmp2;
     });
   }
-  let tmp3Result = tmp3(7503);
+  let tmp3Result = ConnectionsHooks;
   const platforms = tmp3Result.usePlatforms();
   const found1 = platforms.filter((type) => !set.has(type.type));
   let mapped1;
@@ -88,7 +93,7 @@ export default function SelectConnectionActionSheet(arg0) {
     icon = icon.icon;
     const source = obj.makeSource(require("shared").isThemeDark(closure_5) ? icon.darkPNG : icon.lightPNG);
     obj = {
-      icon: closure_1_6(tmp(tmp2[6]).Icon, { source, disableColor: true }),
+      icon: closure_1_6(require("native").Icon, { source, disableColor: true }),
       label: icon.name,
       onPress() {
         require(icon.type);
@@ -150,17 +155,17 @@ export default function SelectConnectionActionSheet(arg0) {
   if (num == null) {
     num = 0;
   }
-  const intl2 = tmp3(1114).intl;
+  const intl2 = util.intl;
   const items = [intl2.string(util.t["3fe7U5"])];
   if (num > 0) {
-    const intl3 = tmp3(1114).intl;
-    items.push(intl3.string(tmp3(1114).t.PHjkRE));
+    const intl3 = util.intl;
+    items.push(intl3.string(util.t.PHjkRE));
   }
-  if (mapped2.length > 0) {
-    const intl4 = tmp3(1114).intl;
-    items.push(intl4.string(tmp3(1114).t.y3ZnnU));
+  if (tmp11) {
+    const intl4 = util.intl;
+    items.push(intl4.string(util.t.y3ZnnU));
   }
-  tmp3Result = tmp3(9792);
+  tmp3Result = SegmentedControlState;
   obj = {
     pageWidth: 0,
     defaultIndex: first,
@@ -188,14 +193,14 @@ export default function SelectConnectionActionSheet(arg0) {
   if (num > 0) {
     const obj1 = { children: null };
     const obj2 = { state: segmentedControlState };
-    obj1.children = tmp2(tmp3(9793).SegmentedControl, obj2);
-    let tmp2Result = tmp2(closure_5, obj1);
+    obj1.children = closure_6(SegmentedControl.SegmentedControl, obj2);
+    let tmp2Result = closure_6(closure_5, obj1);
   } else {
     tmp2Result = null;
   }
   const items1 = [tmp2Result];
   const obj3 = { children: null };
-  const tmp16 = closure_7;
+  tmp11 = mapped2.length > 0;
   const tmp4 = closure_6(BottomSheetTitleHeader.BottomSheetTitleHeader, obj);
   obj3.children = closure_6(common_SafeAreaView.SafeAreaPaddingView, {
     bottom: true,
@@ -203,5 +208,5 @@ export default function SelectConnectionActionSheet(arg0) {
   });
   items1[1] = closure_6(BottomSheetModal.BottomSheetScrollView, obj3);
   obj.children = items1;
-  return tmp16(ActionSheet.ActionSheet, obj);
+  return closure_7(ActionSheet.ActionSheet, obj);
 }

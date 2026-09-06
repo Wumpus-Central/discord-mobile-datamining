@@ -1,6 +1,7 @@
 // discord_app/modules/chat/SlowmodeUtils.tsx
 import DurationsDefault from "../../utils/Durations.tsx";
 import util from "../../intl/index.native.tsx";
+import _modDef4153 from "../../../_runtime/metro/04153__.js";
 import PermissionStore from "../../stores/PermissionStore.tsx";
 
 require = fn;
@@ -26,7 +27,7 @@ export const getSlowmodeIndicatorText = function getSlowmodeIndicatorText(stateF
     const intl2 = util.intl;
     return intl2.string(util.t["8+NidX"]);
   } else if (stateFromStores >= DurationsDefault.Millis.HOUR) {
-    let tmp2Result = tmp2(4153);
+    let tmp2Result = _modDef4153;
     const time2 = tmp2Result.duration(stateFromStores);
     const _HermesInternal3 = HermesInternal;
     const combined = "" + time2.minutes();
@@ -36,7 +37,7 @@ export const getSlowmodeIndicatorText = function getSlowmodeIndicatorText(stateF
     const _HermesInternal5 = HermesInternal;
     return "" + time2.hours() + ":" + padStartResult + ":" + combined1.padStart(2, "0");
   } else if (stateFromStores > 0) {
-    tmp2Result = tmp2(4153);
+    tmp2Result = _modDef4153;
     const time = tmp2Result.duration(stateFromStores);
     const _HermesInternal = HermesInternal;
     const combined2 = "" + time.seconds();
@@ -54,12 +55,12 @@ export const getSlowmodeDescription = function getSlowmodeDescription(rateLimitP
   }
   if (rateLimitPerUser >= DurationsDefault.Seconds.HOUR) {
     const _Math2 = Math;
-    const rounded = Math.floor(rateLimitPerUser / tmp(1090).Seconds.HOUR);
+    const rounded = Math.floor(rateLimitPerUser / DurationsDefault.Seconds.HOUR);
     const _Math3 = Math;
-    const diff = rateLimitPerUser - rounded * tmp(1090).Seconds.HOUR;
-    const rounded1 = Math.floor(diff / tmp(1090).Seconds.MINUTE);
-    const diff1 = rateLimitPerUser - rounded * tmp(1090).Seconds.HOUR;
-    const diff2 = diff1 - rounded1 * tmp(1090).Seconds.MINUTE;
+    const diff = rateLimitPerUser - rounded * DurationsDefault.Seconds.HOUR;
+    const rounded1 = Math.floor(diff / DurationsDefault.Seconds.MINUTE);
+    const diff1 = rateLimitPerUser - rounded * DurationsDefault.Seconds.HOUR;
+    const diff2 = diff1 - rounded1 * DurationsDefault.Seconds.MINUTE;
     const intl3 = util.intl;
     const t3 = util.t;
     const time = { hours: rounded, minutes: rounded1, seconds: diff2 };

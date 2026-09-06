@@ -1,4 +1,5 @@
 // discord_app/design/components/TextField/native/BaseTextField.native.tsx
+import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
 import mergeProps from "../../../utils/native/mergeProps.native.tsx";
 import useFocus from "../../../utils/native/useFocus.native.tsx";
 import InputFieldContainer from "../../Input/native/InputFieldContainer.native.tsx";
@@ -17,7 +18,6 @@ export const BaseTextField = noop.forwardRef((size, ref2) => {
   let obj2 = useFocus;
   const focus = obj2.useFocus();
   ({ focusProps, isFocused } = focus);
-  const ref = noop.useRef(null);
   let tmp6 = null;
   if (size.enableAndroidSanitizedInputWorkaround) {
     ({ secureTextEntry, keyboardType, autoComplete } = size);
@@ -27,13 +27,13 @@ export const BaseTextField = noop.forwardRef((size, ref2) => {
     if (keyboardType === undefined) {
       keyboardType = "default";
     }
-    let tmpResult = tmp(1115);
+    let tmpResult = PlatformUtils;
     let str = "off";
     if (!tmpResult.isAndroid()) {
       str = autoComplete;
     }
     obj = { autoComplete: str, secureTextEntry: null, keyboardType: null };
-    tmpResult = tmp(1115);
+    tmpResult = PlatformUtils;
     obj.secureTextEntry = tmpResult.isAndroid() || secureTextEntry;
     const tmp7 = tmpResult.isAndroid() || secureTextEntry;
     let str2 = "visible-password";
@@ -42,7 +42,7 @@ export const BaseTextField = noop.forwardRef((size, ref2) => {
     }
     obj.keyboardType = str2;
     tmp6 = obj;
-    tmpResult1 = tmp(1115);
+    tmpResult1 = PlatformUtils;
   }
   const onChangeText = size.onChangeText;
   const items = [onChangeText];
@@ -68,6 +68,7 @@ export const BaseTextField = noop.forwardRef((size, ref2) => {
   const items1 = [size.leading, ,];
   obj2 = {};
   const merged1 = Object.assign(tmp6);
+  const ref = noop.useRef(null);
   const merged2 = Object.assign(mergeProps.mergeProps(size, focusProps));
   let replaced = str3;
   if (null != size.value) {
@@ -80,8 +81,6 @@ export const BaseTextField = noop.forwardRef((size, ref2) => {
   }
   obj2.defaultValue = replaced1;
   obj2.onChangeText = callback;
-  const tmp11 = React3;
-  const tmp9 = React4;
   const tmpResult2 = mergeProps;
   obj2.ref = mergeProps.mergeRefs(ref, ref2);
   const items2 = [, ,];
@@ -89,8 +88,8 @@ export const BaseTextField = noop.forwardRef((size, ref2) => {
   items2[2] = size.inputStyle;
   obj2.style = items2;
   obj2.placeholderTextColor = inputStyles.placeholderText.color;
-  items1[1] = tmp11(NativeTextInput.NativeTextInput, obj2);
+  items1[1] = React3(NativeTextInput.NativeTextInput, obj2);
   items1[2] = size.trailing;
   obj1.children = items1;
-  return tmp9(InputFieldContainer.InputFieldContainer, obj1);
+  return React4(InputFieldContainer.InputFieldContainer, obj1);
 });

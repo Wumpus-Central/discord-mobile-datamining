@@ -18,8 +18,8 @@ export const hasUserTrialOfferExpired = function hasUserTrialOfferExpired(hasExp
   }
   return flag;
 };
-export const useTrialOffer = function useTrialOffer(arg0) {
-  _require = arg0;
+export const useTrialOffer = function useTrialOffer(React3) {
+  _require = React3;
   const items = [UserOfferStore];
   stateFromStores = require("initialize").useStateFromStores(items, () => UserOfferStore.getUserTrialOffer(closure_0));
   let flag;
@@ -33,23 +33,22 @@ export const useTrialOffer = function useTrialOffer(arg0) {
   first = tmp4[0];
   noop = tmp4[1];
   const obj = require("initialize");
-  const obj2 = UserOfferStore;
   const obj3 = noop;
   const items1 = [UserStore];
-  const stateFromStores1 = require("initialize").useStateFromStores(items1, () => closure_0(stateFromStores[5]).isPremium(currentUser.getCurrentUser()));
+  const stateFromStores1 = require("initialize").useStateFromStores(items1, () => React3(stateFromStores[5]).isPremium(currentUser.getCurrentUser()));
   let result = !stateFromStores1;
   if (stateFromStores1) {
-    result = obj2.canFractionalPremiumUserUseOffer();
+    result = UserOfferStore.canFractionalPremiumUserUseOffer();
   }
   const items2 = [first, stateFromStores];
   const effect = obj3.useEffect(() => {
     if (null != stateFromStores) {
-      if (tmp.hasAcknowledged) {
-        const timeout = new closure_0(stateFromStores[6]).Timeout();
-        if (null != tmp) {
+      if (stateFromStores.hasAcknowledged) {
+        const timeout = new React3(stateFromStores[6]).Timeout();
+        if (null != stateFromStores) {
           let num = 0;
-          if (null != tmp.expiresAt) {
-            const expiresAt = tmp.expiresAt;
+          if (null != stateFromStores.expiresAt) {
+            const expiresAt = stateFromStores.expiresAt;
             const _Date = Date;
             const time = expiresAt.getTime();
             num = time - Date.now();
@@ -62,14 +61,14 @@ export const useTrialOffer = function useTrialOffer(arg0) {
             }
             if (null != closure_2_1) {
               let num = 0;
-              if (null != tmp4.expiresAt) {
-                let expiresAt = tmp4.expiresAt;
+              if (null != closure_2_1.expiresAt) {
+                let expiresAt = closure_2_1.expiresAt;
                 let _Date = Date;
                 let time = expiresAt.getTime();
                 num = time - Date.now();
               }
               if (closure_1_0 != null) {
-                obj.start(num, () => {
+                closure_1_0.start(num, () => {
                   if (!closure_2_2) {
                     if (closure_2_1.hasExpired) {
                       closure_2_3(true);
@@ -77,14 +76,14 @@ export const useTrialOffer = function useTrialOffer(arg0) {
                   }
                   if (null != closure_2_1) {
                     let num = 0;
-                    if (null != tmp4.expiresAt) {
-                      let expiresAt = tmp4.expiresAt;
+                    if (null != closure_2_1.expiresAt) {
+                      let expiresAt = closure_2_1.expiresAt;
                       let _Date = Date;
                       let time = expiresAt.getTime();
                       num = time - Date.now();
                     }
                     if (closure_1_0 != null) {
-                      obj.start(num, () => {
+                      closure_1_0.start(num, () => {
                         if (!closure_2_2) {
                           if (closure_2_1.hasExpired) {
                             closure_2_3(true);
@@ -92,24 +91,21 @@ export const useTrialOffer = function useTrialOffer(arg0) {
                         }
                         if (null != closure_2_1) {
                           let num = 0;
-                          if (null != tmp4.expiresAt) {
-                            let expiresAt = tmp4.expiresAt;
+                          if (null != closure_2_1.expiresAt) {
+                            let expiresAt = closure_2_1.expiresAt;
                             let _Date = Date;
                             let time = expiresAt.getTime();
                             num = time - Date.now();
                           }
                           if (closure_1_0 != null) {
-                            obj.start(num, () => { ... });
+                            closure_1_0.start(num, () => { ... });
                           }
-                          obj = closure_1_0;
                         }
                       });
                     }
-                    obj = closure_1_0;
                   }
                 });
               }
-              obj = closure_1_0;
             }
           });
         }

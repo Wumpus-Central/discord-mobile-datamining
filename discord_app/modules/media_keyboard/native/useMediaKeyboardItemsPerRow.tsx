@@ -13,11 +13,11 @@ export const useMediaKeyboardItemsPerRow = function useMediaKeyboardItemsPerRow(
   let itemsPerRow = 8;
   if (useWindowSizeClassifier.WindowSizeClassifier.XLARGE !== tmp2) {
     itemsPerRow = 6;
-    if (tmp3(4421).WindowSizeClassifier.LARGE !== tmp2) {
+    if (useWindowSizeClassifier.WindowSizeClassifier.LARGE !== tmp2) {
       itemsPerRow = 4;
-      if (tmp3(4421).WindowSizeClassifier.NORMAL !== tmp2) {
+      if (useWindowSizeClassifier.WindowSizeClassifier.NORMAL !== tmp2) {
         itemsPerRow = 3;
-        if (tmp3(4421).WindowSizeClassifier.SMALL !== tmp2) {
+        if (useWindowSizeClassifier.WindowSizeClassifier.SMALL !== tmp2) {
           const _Error = Error;
           const _HermesInternal = HermesInternal;
           const error = new Error("Unknown window size classifier: " + tmp2);

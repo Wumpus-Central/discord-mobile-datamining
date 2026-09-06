@@ -50,7 +50,7 @@ export const useAgeVerificationMethodsV2 = function useAgeVerificationMethodsV2(
   const tmp8 = _slicedToArray(noop.useState(false), 2);
   _slicedToArray = tmp8[1];
   noop = noop.useRef(true);
-  closure_0 = asyncGeneratorStep(async (arg0, value) => {
+  closure_0 = asyncGeneratorStep(async (arg0) => {
     if (c6 === 2) {
       c6 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -80,8 +80,8 @@ export const useAgeVerificationMethodsV2 = function useAgeVerificationMethodsV2(
             if (!closure_0) {
               if (null != methodsV2) {
                 closure_0(methodsV2);
-                tmp6(tmp84.methodsV2FooterMessage);
-                tmp4(tmp84.methodsV2OutageBannerMessage);
+                tmp6(callback.methodsV2FooterMessage);
+                tmp4(callback.methodsV2OutageBannerMessage);
                 tmp75(false);
                 v0(false);
                 c6 = 3;

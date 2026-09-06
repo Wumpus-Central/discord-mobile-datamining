@@ -7,7 +7,7 @@ import GuildRoomStore from "GuildRoomStore.tsx";
 require = fn;
 function serverGuildRoomObjectToClient(object_type) {
   if (object_type.object_type === GuildRoomTypes.GuildRoomObjectTypes.PLANT) {
-    let obj = { objectType: tmp(4719).GuildRoomObjectTypes.PLANT };
+    let obj = { objectType: GuildRoomTypes.GuildRoomObjectTypes.PLANT };
     obj = { objectId: null, createdBy: null, updatedAt: null, updatedBy: null };
     ({ object_id: obj2.objectId, created_by: obj2.createdBy } = object_type);
     let date;
@@ -19,7 +19,7 @@ function serverGuildRoomObjectToClient(object_type) {
     obj.updatedBy = object_type.updated_by;
     const merged = Object.assign(obj);
   } else {
-    obj = { objectType: tmp(4719).GuildRoomObjectTypes.NOTE };
+    obj = { objectType: GuildRoomTypes.GuildRoomObjectTypes.NOTE };
     const obj1 = { objectId: null, createdBy: null, updatedAt: null, updatedBy: null };
     ({ object_id: obj4.objectId, created_by: obj4.createdBy } = object_type);
     let date1;

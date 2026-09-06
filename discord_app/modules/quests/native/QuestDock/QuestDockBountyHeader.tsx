@@ -1,6 +1,8 @@
 // discord_app/modules/quests/native/QuestDock/QuestDockBountyHeader.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import spring from "../../../../design/animation/reanimated/spring/spring.tsx";
+import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
+import ReanimatedNativeViewDefault from "../../../core/native/ReanimatedNativeView.tsx";
 import QuestDockBackgroundBlurHeaderDefault from "QuestDockBackgroundBlurHeader.tsx";
 import QuestDockHeaderSeparatorDefault from "QuestDockHeaderSeparator.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -150,7 +152,7 @@ export default noop.memo(function QuestDockBountyHeader() {
     };
     const obj4 = { uri: questDockBounty.productIcon };
     obj3.source = obj4;
-    tmp10Result = tmp10(tmp11(5587), obj3);
+    tmp10Result = closure_7(FastImageDefault, obj3);
   }
   const items = [tmp10Result];
   const obj5 = {
@@ -162,7 +164,7 @@ export default noop.memo(function QuestDockBountyHeader() {
   const obj6 = { style: null, children: null };
   const items1 = [tmp4.copy, animatedStyle];
   obj6.style = items1;
-  let tmp11Result = tmp11(7073);
+  let tmp11Result = ReanimatedNativeViewDefault;
   const items2 = [
     closure_7(activeQuestDockMode(4556).Text, {
       variant: "text-xs/medium",
@@ -184,7 +186,7 @@ export default noop.memo(function QuestDockBountyHeader() {
   const obj7 = { style: null, children: null };
   const items4 = [tmp4.expandedContent, animatedStyle1];
   obj7.style = items4;
-  tmp11Result = tmp11(7073);
+  tmp11Result = ReanimatedNativeViewDefault;
   const items5 = [closure_7(QuestDockHeaderSeparatorDefault, {})];
   const obj8 = { style: tmp4.expandedLabel, children: null };
   const items6 = [

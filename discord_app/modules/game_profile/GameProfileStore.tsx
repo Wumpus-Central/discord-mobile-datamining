@@ -13,8 +13,8 @@ let c7 = null;
 const Store = initializeDefault.Store;
 class GameProfileStore extends Store {}
 const prototype = GameProfileStore.prototype;
-prototype["getSimilarGames"] = function getSimilarGames(arg0) {
-  return closure_0[arg0];
+prototype["getSimilarGames"] = function getSimilarGames(gameId) {
+  return closure_0[gameId];
 };
 prototype["getShopCollectionSkuIds"] = function getShopCollectionSkuIds(arg0) {
   return closure_1[arg0];

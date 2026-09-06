@@ -44,15 +44,15 @@ export const useGameMentionData = function useGameMentionData(gameId) {
     items,
     () => {
       const currentUser = UserStore.getCurrentUser();
-      const game = GameStore.getGame(closure_0);
-      const gameById = GameAutocompleteStore.getGameById(closure_0);
+      const game = GameStore.getGame(gameId);
+      const gameById = GameAutocompleteStore.getGameById(gameId);
       if (null != game) {
         let nsfwAllowed;
         if (currentUser != null) {
           nsfwAllowed = currentUser.nsfwAllowed;
         }
         if (!obj2.isGameProfileObscured(game, nsfwAllowed)) {
-          let obj = { gameId: tmp, gameName: null, gameIcon: null };
+          let obj = { gameId, gameName: null, gameIcon: null };
           ({ name: obj3.gameName, media } = game);
           let icon;
           if (media != null) {
@@ -63,7 +63,7 @@ export const useGameMentionData = function useGameMentionData(gameId) {
         }
         obj2 = useGameProfileObscured;
       } else if (null != gameById) {
-        obj = { gameId: tmp, gameName: null, gameIcon: null };
+        obj = { gameId, gameName: null, gameIcon: null };
         ({ name: obj.gameName, icon: obj.gameIcon } = gameById);
         tmp5 = obj;
       }

@@ -53,7 +53,7 @@ export default function HubEmailConnectionSubmitSchool(arg0) {
   ({ onClose: require, email: importDefault } = arg0);
   _slicedToArray = undefined;
   let ref;
-  closure_7 = async function _submitWaitlist(arg0, value) {
+  closure_7 = async function _submitWaitlist() {
     if (c5 === 2) {
       c5 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -199,7 +199,7 @@ export default function HubEmailConnectionSubmitSchool(arg0) {
   const items2 = [closure_10(value, obj1), closure_9(value, { style: tmp.redesignGrowSpacing })];
   const obj7 = { style: tmp.redesignSubmit, children: null };
   const obj8 = { size: "lg", loading: tmp4[0], text: null, onPress: null };
-  const intl5 = tmp2(1114).intl;
+  const intl5 = util.intl;
   obj8.text = intl5.string(util.t.PDsYAo);
   obj8.onPress = function submitWaitlist() {
     const self = this;

@@ -47,13 +47,13 @@ export const markContentAsDismissed = function markContentAsDismissed(
       dismissedGuildContent = UserSettingsProtoStore.getDismissedGuildContent(closure_2);
       let hasBitResult = null != dismissedGuildContent;
       if (hasBitResult) {
-        hasBitResult = Uint8ArrayUtils.hasBit(dismissedGuildContent, tmp);
+        hasBitResult = Uint8ArrayUtils.hasBit(dismissedGuildContent, closure_1);
       }
       if (!c0) {
         const tmp9 = Uint8ArrayUtils;
-        dismissedGuildContent.dismissedGuildContent = tmp6
+        dismissedGuildContent.dismissedGuildContent = c0
           ? tmp9.addBit
-          : tmp9.removeBit(dismissedGuildContent.dismissedGuildContent, tmp);
+          : tmp9.removeBit(dismissedGuildContent.dismissedGuildContent, closure_1);
       }
       return false;
     },
@@ -62,7 +62,7 @@ export const markContentAsDismissed = function markContentAsDismissed(
   if (arg2) {
     let UNKNOWN = AUTO_DISMISS;
     obj = {
-      type: require("dismissible_content").DismissibleGuildContent[GAME_SERVER_HOSTING_GUILD_ELIGIBLE_COACHMARK],
+      type: tmp(1943).DismissibleGuildContent[GAME_SERVER_HOSTING_GUILD_ELIGIBLE_COACHMARK],
       guild_id: guildId,
       action: null,
     };
@@ -72,6 +72,7 @@ export const markContentAsDismissed = function markContentAsDismissed(
     obj.action = UNKNOWN;
     AnalyticsUtilsDefault.track(AnalyticEvents.DISMISSIBLE_CONTENT_DISMISSED, obj);
   }
+  tmp = _require;
 };
 export const unmarkContentAsDismissed = function unmarkContentAsDismissed(dc, guildId) {
   _require = false;
@@ -83,13 +84,13 @@ export const unmarkContentAsDismissed = function unmarkContentAsDismissed(dc, gu
       dismissedGuildContent = UserSettingsProtoStore.getDismissedGuildContent(closure_2);
       let hasBitResult = null != dismissedGuildContent;
       if (hasBitResult) {
-        hasBitResult = Uint8ArrayUtils.hasBit(dismissedGuildContent, tmp);
+        hasBitResult = Uint8ArrayUtils.hasBit(dismissedGuildContent, closure_1);
       }
       if (!c0) {
         const tmp9 = Uint8ArrayUtils;
-        dismissedGuildContent.dismissedGuildContent = tmp6
+        dismissedGuildContent.dismissedGuildContent = c0
           ? tmp9.addBit
-          : tmp9.removeBit(dismissedGuildContent.dismissedGuildContent, tmp);
+          : tmp9.removeBit(dismissedGuildContent.dismissedGuildContent, closure_1);
       }
       return false;
     },

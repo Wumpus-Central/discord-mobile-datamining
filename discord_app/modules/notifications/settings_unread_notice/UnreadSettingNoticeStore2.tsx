@@ -26,7 +26,7 @@ function startInterval() {
         flag = false;
         if (shouldTrackChannel(closure_16)) {
           if (!(closure_16 in closure_1_14.channels)) {
-            tmp4.channels[tmp3] = { lastActionTime: 0, viewDuration: 0, numSends: 0 };
+            closure_1_14.channels[closure_16] = { lastActionTime: 0, viewDuration: 0, numSends: 0 };
           }
           const _Date = Date;
           const timestamp = Date.now();
@@ -56,13 +56,13 @@ function shouldTrackChannel(channelId) {
       const basicChannel = ChannelStore.getBasicChannel(channelId);
       if (null != basicChannel) {
         if (null != basicChannel.guild_id) {
-          if (obj.isGuildOrCategoryOrChannelMuted(basicChannel.guild_id, basicChannel.id)) {
+          if (UserGuildSettingsStore.isGuildOrCategoryOrChannelMuted(basicChannel.guild_id, basicChannel.id)) {
             return false;
           } else {
             const id = basicChannel.id;
             let flag2 = false;
             if (null != id) {
-              const tmp7 = obj.getChannelOverrides(tmp6)[id];
+              const tmp7 = UserGuildSettingsStore.getChannelOverrides(tmp6)[id];
               let tmp8 = null != tmp7;
               if (tmp8) {
                 let tmp9 = null != tmp7.message_notifications;
@@ -89,7 +89,7 @@ function shouldTrackChannel(channelId) {
               const parent_id = basicChannel.parent_id;
               let flag3 = false;
               if (null != parent_id) {
-                const tmp16 = obj.getChannelOverrides(tmp15)[parent_id];
+                const tmp16 = UserGuildSettingsStore.getChannelOverrides(tmp15)[parent_id];
                 let tmp17 = null != tmp16;
                 if (tmp17) {
                   let tmp18 = null != tmp16.message_notifications;
@@ -113,10 +113,10 @@ function shouldTrackChannel(channelId) {
               if (flag3) {
                 return false;
               } else {
-                const unreadSetting = obj.resolveUnreadSetting(basicChannel);
+                const unreadSetting = UserGuildSettingsStore.resolveUnreadSetting(basicChannel);
                 return (
-                  obj.getChannelUnreadSetting(basicChannel.guild_id, basicChannel.id) === UnreadSetting.UNSET &&
-                  unreadSetting !== UnreadSetting.ALL_MESSAGES
+                  UserGuildSettingsStore.getChannelUnreadSetting(basicChannel.guild_id, basicChannel.id) ===
+                    UnreadSetting.UNSET && unreadSetting !== UnreadSetting.ALL_MESSAGES
                 );
               }
             }
@@ -195,7 +195,6 @@ prototype["maybeAutoUpgradeChannel"] = function maybeAutoUpgradeChannel(id) {
             return false;
           } else {
             for (const item10040 of closure_1_11) {
-              let tmp12 = item10040;
               if (tmp8 < item10040.timeSinceJoin) {
                 obj2.return();
                 let flag = true;
@@ -234,7 +233,7 @@ const unreadSettingNoticeStore2Class = new UnreadSettingNoticeStore2Class(Dispat
       flag = false;
       if (shouldTrackChannel(channelId)) {
         if (!(channelId in closure_14.channels)) {
-          tmp4.channels[tmp3] = { lastActionTime: 0, viewDuration: 0, numSends: 0 };
+          closure_14.channels[tmp3] = { lastActionTime: 0, viewDuration: 0, numSends: 0 };
         }
         const _Date = Date;
         const timestamp = Date.now();
@@ -270,7 +269,7 @@ const unreadSettingNoticeStore2Class = new UnreadSettingNoticeStore2Class(Dispat
           flag = false;
           if (shouldTrackChannel(closure_16)) {
             if (!(closure_16 in closure_1_14.channels)) {
-              tmp4.channels[tmp3] = { lastActionTime: 0, viewDuration: 0, numSends: 0 };
+              closure_1_14.channels[closure_16] = { lastActionTime: 0, viewDuration: 0, numSends: 0 };
             }
             const _Date = Date;
             const timestamp = Date.now();
@@ -311,7 +310,7 @@ const unreadSettingNoticeStore2Class = new UnreadSettingNoticeStore2Class(Dispat
         } else if (shouldTrackChannel(optimistic.channelId)) {
           const channelId = optimistic.channelId;
           if (!(channelId in closure_14.channels)) {
-            tmp5.channels[channelId] = { lastActionTime: 0, viewDuration: 0, numSends: 0 };
+            closure_14.channels[channelId] = { lastActionTime: 0, viewDuration: 0, numSends: 0 };
           }
           const _Date = Date;
           closure_14.channels[channelId].lastActionTime = Date.now();

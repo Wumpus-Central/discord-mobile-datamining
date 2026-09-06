@@ -53,11 +53,10 @@ export const packStageChannelPartyId = function packStageChannelPartyId(channel,
     }
     const features2 = guild.features;
     let tmp4 = tmp3;
-    if (features2.has(tmp2.VERIFIED)) {
+    if (features2.has(GuildFeatures.VERIFIED)) {
       tmp4 = tmp3 | 4;
     }
     str = tmp4;
-    tmp2 = GuildFeatures;
   }
   return "" + c7 + channel.guild_id + ":" + channel.id + ":" + str.toString(16) + ":" + stageInstanceByChannel.id;
 };

@@ -36,7 +36,7 @@ obj.buttonWrapper = createStyles;
 obj.activeBrand = { tintColor: nativeDefault.colors.CHAT_INPUT_ACTION_ICON_ACTIVE_TINT };
 let closure_10 = createStyles.createStyles(obj);
 let __initData = { code: "function ChatInputActionsTsx1(){return{opacity:1};}" };
-const forwardRefResult = noop.forwardRef((canStartThreads, ref) => {
+const forwardRefResult = noop.forwardRef((canStartThreads, arg1) => {
   canStartThreads = canStartThreads.canStartThreads;
   const channel = canStartThreads.channel;
   const isAppLauncherEnabled = canStartThreads.isAppLauncherEnabled;
@@ -69,7 +69,7 @@ const forwardRefResult = noop.forwardRef((canStartThreads, ref) => {
   closure_19 = tmp9[1];
   closure_20 = noop.useRef(null);
   const imperativeHandle = noop.useImperativeHandle(
-    ref,
+    arg1,
     noop.useMemo(() => {
       closure_0 = {
         onDismissActions(arg0) {
@@ -274,7 +274,7 @@ const forwardRefResult = noop.forwardRef((canStartThreads, ref) => {
           let tmp44Result = onAttachPress(canStartThreads(isAppLauncherEnabled[29]).ContextMenu, obj, index);
         } else {
           if (null != closure_9) {
-            let obj4 = canStartThreads(tmp46[31]);
+            let obj4 = canStartThreads(isAppLauncherEnabled[31]);
             let mergeRefsResult = obj4.mergeRefs(closure_20, tmp48);
           } else {
             mergeRefsResult = closure_20;
@@ -290,9 +290,9 @@ const forwardRefResult = noop.forwardRef((canStartThreads, ref) => {
             IconComponent: null,
             onPress: null,
           };
-          let intl2 = canStartThreads(tmp46[17]).intl;
+          let intl2 = canStartThreads(isAppLauncherEnabled[17]).intl;
           obj.accessibilityLabel = intl2.string(canStartThreads(isAppLauncherEnabled[17]).t.aDZSuz);
-          const intl3 = canStartThreads(tmp46[17]).intl;
+          const intl3 = canStartThreads(isAppLauncherEnabled[17]).intl;
           obj.accessibilityHint = intl3.string(canStartThreads(isAppLauncherEnabled[17]).t.o7j1jA);
           const obj1 = { expanded: active };
           obj.accessibilityState = obj1;
@@ -307,7 +307,7 @@ const forwardRefResult = noop.forwardRef((canStartThreads, ref) => {
           const tmp47 = channel(isAppLauncherEnabled[30]);
         }
         return tmp44Result;
-      } else if (tmp.APPS === type) {
+      } else if (canUpload.APPS === type) {
         const obj2 = {
           accessible: !closure_24,
           active,
@@ -317,7 +317,7 @@ const forwardRefResult = noop.forwardRef((canStartThreads, ref) => {
           styleActiveIcon: activeBrand.activeBrand,
         };
         return onAttachPress(channel(isAppLauncherEnabled[33]), obj2, index);
-      } else if (tmp.ALL_PHOTOS === type) {
+      } else if (canUpload.ALL_PHOTOS === type) {
         const obj3 = {
           accessibilityLabel: null,
           accessible: null,

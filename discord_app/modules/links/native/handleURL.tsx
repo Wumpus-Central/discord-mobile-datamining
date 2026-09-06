@@ -11,7 +11,7 @@ function sanitizeURLPart(str) {
   }
   return replaced;
 }
-let closure_9 = async function _handleURL(arg0, value) {
+let closure_9 = async function _handleURL(arg0) {
   if (c8 === 2) {
     c8 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -72,22 +72,21 @@ let closure_9 = async function _handleURL(arg0, value) {
                 }
                 let tmp11 = closure_1_3;
                 if (closure_1_3) {
-                  tmp11 = tmp10 === tmp5.IN_APP;
+                  tmp11 = tmp10 === constants.IN_APP;
                 }
                 SAFARI = tmp10;
                 if (tmp11) {
-                  if (browserManagerSelectedBrowser !== tmp5.IN_APP) {
+                  if (browserManagerSelectedBrowser !== constants.IN_APP) {
                     SAFARI = browserManagerSelectedBrowser;
                   } else {
-                    tmp8(1115).isIOS() ? tmp5.SAFARI : tmp5.CHROME;
-                    const tmp8Result = tmp8(1115);
+                    closure_0(1115).isIOS() ? constants.SAFARI : constants.CHROME;
+                    const tmp8Result = closure_0(1115);
                   }
                 }
                 const obj3 = closure_0(4525);
-                tmp8 = closure_0;
               }
               if (constants.IN_APP === SAFARI) {
-                const result = closure_0(4525).browserManagerOpenUrl(closure_1_0, tmp5.IN_APP);
+                const result = closure_0(4525).browserManagerOpenUrl(closure_1_0, constants.IN_APP);
                 result.catch(() => {
                   const intl = closure_2_0(1114).intl;
                   closure_2_0(4258).presentFailedToast(
@@ -104,8 +103,8 @@ let closure_9 = async function _handleURL(arg0, value) {
                   const tmpResult = closure_1(4527);
                 }
                 const obj8 = closure_0(1115);
-              } else if (tmp5.CHROME === SAFARI) {
-                const result1 = closure_0(4525).browserManagerOpenUrl(closure_1_0, tmp5.CHROME);
+              } else if (constants.CHROME === SAFARI) {
+                const result1 = closure_0(4525).browserManagerOpenUrl(closure_1_0, constants.CHROME);
                 result1.catch(() => {
                   const intl = closure_2_0(1114).intl;
                   closure_2_0(4258).presentFailedToast(
@@ -114,8 +113,8 @@ let closure_9 = async function _handleURL(arg0, value) {
                 });
                 const obj6 = closure_0(4525);
               } else {
-                const SAFARI2 = tmp5.SAFARI;
-                const result2 = closure_0(4525).browserManagerOpenUrl(closure_1_0, tmp5.SAFARI);
+                const SAFARI2 = constants.SAFARI;
+                const result2 = closure_0(4525).browserManagerOpenUrl(closure_1_0, constants.SAFARI);
                 const obj5 = closure_0(4525);
               }
             } else {
@@ -123,6 +122,7 @@ let closure_9 = async function _handleURL(arg0, value) {
               closure_0(4258).presentFailedToast(intl.string(closure_0(1114).t.XiqzAp));
               const obj2 = closure_0(4258);
             }
+            obj = closure_1(4257);
           };
           c7 = 1;
           c8 = 1;
@@ -252,6 +252,7 @@ let closure_9 = async function _handleURL(arg0, value) {
                       logger.info("URL is not a custom scheme.");
                       fn(false);
                     });
+                    nextResult = iter.next();
                   })(closure_131_0),
                   done: false,
                 };

@@ -1,7 +1,11 @@
 // discord_app/modules/quests/utils/QuestCopyUtils.tsx
 import util from "../../../intl/index.native.tsx";
+import AdCreativeType from "../../../../discord_common/js/shared/shared-constants/AdCreativeType.tsx";
 import ClipboardUtils from "../../../utils/ClipboardUtils.native.tsx";
+import AnalyticsActions from "../lib/analytics/AnalyticsActions.tsx";
 import AdAnalyticsInterfaceExperiment from "../experiments/AdAnalyticsInterfaceExperiment.tsx";
+import captureAdUserAction from "../../ads/analytics/captureAdUserAction.tsx";
+import captureAdUserActionTypes from "../../ads/analytics/captureAdUserActionTypes.tsx";
 import QuestConstants from "../QuestConstants.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
@@ -63,28 +67,28 @@ export const getDisclosureText = function getDisclosureText(arg0) {
   const stringResult = intl.string(util.t.fEbrT8);
   if (isTargetedDisclosure) {
     if (isContextualDisclosure) {
-      const intl5 = tmp(1114).intl;
-      nPg6f1 = tmp(1114).t.nPg6f1;
+      const intl5 = util.intl;
+      nPg6f1 = util.t.nPg6f1;
       let stringResult1 = intl5.string(nPg6f1);
     } else {
       if (null == cosponsorName) {
-        const intl4 = tmp(1114).intl;
+        const intl4 = util.intl;
         let obj = { gamePublisher };
-        let formatToPlainStringResult = intl4.formatToPlainString(tmp(1114).t.Piihy1, obj);
+        let formatToPlainStringResult = intl4.formatToPlainString(util.t.Piihy1, obj);
       } else {
-        const intl3 = tmp(1114).intl;
+        const intl3 = util.intl;
         obj = { gamePublisher, cosponsorName };
-        formatToPlainStringResult = intl3.formatToPlainString(tmp(1114).t.DV47Gy, obj);
+        formatToPlainStringResult = intl3.formatToPlainString(util.t.DV47Gy, obj);
       }
       const _HermesInternal = HermesInternal;
       stringResult1 = "" + formatToPlainStringResult + " " + stringResult;
     }
-  } else if (adCreativeType !== tmp(5451).AdCreativeType.QUEST) {
+  } else if (adCreativeType !== AdCreativeType.AdCreativeType.QUEST) {
     return stringResult;
   } else {
-    const intl2 = tmp(1114).intl;
+    const intl2 = util.intl;
     const formatToPlainString = intl2.formatToPlainString;
-    let t = tmp(1114).t;
+    let t = util.t;
     if (isVideoQuest) {
       t = { gamePublisher };
       let formatToPlainStringResult1 = formatToPlainString(t.rctMRl, t);
@@ -101,17 +105,17 @@ export const getDisclosureText = function getDisclosureText(arg0) {
 export const getExternalCtaLabel = function getExternalCtaLabel(quest) {
   return quest.config.ctaConfig.buttonLabel;
 };
-export const getSortMethodText = function getSortMethodText(arg0) {
-  if (constants.SUGGESTED === arg0) {
+export const getSortMethodText = function getSortMethodText(dependencyMap) {
+  if (constants.SUGGESTED === dependencyMap) {
     const intl4 = util.intl;
     return intl4.string(util.t.gBfXPZ);
-  } else if (tmp.MOST_RECENT === arg0) {
+  } else if (constants.MOST_RECENT === dependencyMap) {
     const intl3 = util.intl;
     return intl3.string(util.t.K6oEu2);
-  } else if (tmp.EXPIRING_SOON === arg0) {
+  } else if (constants.EXPIRING_SOON === dependencyMap) {
     const intl2 = util.intl;
     return intl2.string(util.t.IB22n3);
-  } else if (tmp.RECENTLY_ENROLLED === arg0) {
+  } else if (constants.RECENTLY_ENROLLED === dependencyMap) {
     const intl = util.intl;
     return intl.string(util.t["BB+2tX"]);
   }
@@ -120,10 +124,10 @@ export const getFilterTypeText = function getFilterTypeText(filter) {
   if (constants2.VIRTUAL_CURRENCY === filter) {
     const intl5 = util.intl;
     return intl5.string(util.t.ElYQFS);
-  } else if (tmp.COLLECTIBLE === filter) {
+  } else if (constants2.COLLECTIBLE === filter) {
     const intl4 = util.intl;
     return intl4.string(util.t.Jg17Ut);
-  } else if (tmp.IN_GAME === filter) {
+  } else if (constants2.IN_GAME === filter) {
     const intl3 = util.intl;
     return intl3.string(util.t["O/J2kr"]);
   } else if (constants3.VIDEO === filter) {
@@ -158,10 +162,10 @@ export const copyShareLink = function copyShareLink(id, ctaContent) {
       "copy_share_link",
     )
   ) {
-    let tmpResult = tmp(11193);
+    let tmpResult = captureAdUserAction;
     obj = {
-      type: tmp(11197).AdUserActionType.CLICK_INTERNAL,
-      adCreativeType: tmp(5451).AdCreativeType.QUEST,
+      type: captureAdUserActionTypes.AdUserActionType.CLICK_INTERNAL,
+      adCreativeType: AdCreativeType.AdCreativeType.QUEST,
       adCreativeId: id,
       questContentCTA: ctaContent,
       surfaceId: null,
@@ -177,7 +181,7 @@ export const copyShareLink = function copyShareLink(id, ctaContent) {
     } = ctaContent);
     tmpResult.captureAdUserAction(obj);
   } else {
-    tmpResult = tmp(7718);
+    tmpResult = AnalyticsActions;
     obj = {
       questId: id,
       questContent: ctaContent.content,
@@ -194,6 +198,7 @@ export const copyShareLink = function copyShareLink(id, ctaContent) {
     const result = tmpResult.trackQuestContentClicked(obj);
   }
   ClipboardUtils.copy("" + location.protocol + "//" + location.host + "/quests/" + id);
+  const tmpResult1 = ClipboardUtils;
 };
 export const getDefaultReward = function getDefaultReward(config) {
   if (0 === config.rewardsConfig.rewards.length) {

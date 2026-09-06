@@ -366,9 +366,9 @@ function ThemePicker(defaultIndex) {
   ];
   callback1 = obj1.useCallback(() => {
     if (closure_14) {
-      let tmp3 = tmp[first];
+      let tmp3 = mobileThemes[first];
     } else {
-      tmp3 = tmp[activeIndex2.get(activeIndex2)];
+      tmp3 = mobileThemes[activeIndex2.get(activeIndex2)];
     }
     if (null != mode) {
       const result = UserSettingsAppearanceThemeUtils.handleSaveSyncedModeTheme(tmp3, tmp5, analyticsLocations);
@@ -469,8 +469,8 @@ function ThemePicker(defaultIndex) {
         };
         let stringResult = headerTitle;
         if (headerTitle == null) {
-          const intl = tmp2(tmp3[15]).intl;
-          stringResult = intl.string(tmp2(tmp3[15]).t.XAS5Pi);
+          const intl = defaultIndex(isPreview[15]).intl;
+          stringResult = intl.string(defaultIndex(isPreview[15]).t.XAS5Pi);
         }
         obj.children = stringResult;
         return closure_14(defaultIndex(isPreview[39]).Text, obj);
@@ -489,7 +489,7 @@ function ThemePicker(defaultIndex) {
         }
         obj = { animated: true, variant: "text-md/semibold", style: items, children: null };
         items[1] = obj;
-        const intl = tmp2(1114).intl;
+        const intl = util.intl;
         obj.children = intl.string(util.t.i4jeWR);
         obj.children = closure_3_14(Text_Text.Text, obj);
         return closure_3_14(Pressables.PressableOpacity, obj);

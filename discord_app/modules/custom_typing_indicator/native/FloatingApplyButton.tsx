@@ -122,7 +122,14 @@ export default function FloatingApplyButton(visible) {
   }
   if (renderButtonResult == null) {
     let obj3 = { variant: "primary", size: "lg", disabled, onPress: callback, text, loading: visible.loading };
-    renderButtonResult = tmp7(visible(stateFromStores[10]).Button, obj3);
+    renderButtonResult = jsx(visible(stateFromStores[10]).Button, {
+      variant: "primary",
+      size: "lg",
+      disabled,
+      onPress: callback,
+      text,
+      loading: visible.loading,
+    });
   }
   obj1.children = renderButtonResult;
   obj.children = jsx(onPress(stateFromStores[6]).View, {

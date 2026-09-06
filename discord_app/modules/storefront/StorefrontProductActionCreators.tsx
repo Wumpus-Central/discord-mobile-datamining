@@ -6,7 +6,7 @@ import StorefrontProductStore from "StorefrontProductStore.tsx";
 import StorefrontProductRecord from "records/StorefrontProductRecord.tsx";
 
 const require = fn;
-let closure_10 = async function _maybeFetchProductsWithSkus(arg0, value) {
+let closure_10 = async function _maybeFetchProductsWithSkus(arg0) {
   if (c6 === 2) {
     c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -145,7 +145,7 @@ function shouldFetchProductBySku(item10006) {
     if ("loading" === fetchStateForSku) {
       return false;
     } else {
-      const fetchedAtForSku = obj.getFetchedAtForSku(item10006);
+      const fetchedAtForSku = StorefrontProductStore.getFetchedAtForSku(item10006);
       if (null != fetchedAtForSku) {
         const _Date = Date;
         return Date.now() - fetchedAtForSku > ("error" === fetchStateForSku ? closure_9 : closure_8);
@@ -153,12 +153,11 @@ function shouldFetchProductBySku(item10006) {
         return true;
       }
     }
-    obj = StorefrontProductStore;
   } else {
     return false;
   }
 }
-let closure_12 = async function _maybeFetchProductsBySkuIds(arg0, value) {
+let closure_12 = async function _maybeFetchProductsBySkuIds(arg0) {
   if (c6 === 2) {
     c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");

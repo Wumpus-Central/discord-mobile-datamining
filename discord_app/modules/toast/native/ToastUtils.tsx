@@ -175,10 +175,10 @@ export const presentNoiseCancellation = function presentNoiseCancellation(arg0) 
   const t = util.t;
   if (arg0) {
     let stringResult = string(t["Q+fhfv"]);
-    let tmp4 = tmp2;
+    let tmp4 = require;
   } else {
     stringResult = string(t.hEMHnF);
-    tmp4 = tmp2;
+    tmp4 = require;
   }
   obj = { key: "NOISE_CANCELLATION_TOGGLE", content: stringResult, IconComponent: null, iconColor: null };
   if (arg0) {

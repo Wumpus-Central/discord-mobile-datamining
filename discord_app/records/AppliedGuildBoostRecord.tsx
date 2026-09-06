@@ -32,7 +32,7 @@ prototype["createFromServer"] = function createFromServer(user) {
     }
   }
   if (typeof prototype === "function") {
-    const tmp9 = new prototype(tmp4, _Date, str, tmp, new.target, id, guild_id, user_id, user);
+    const tmp9 = new prototype(tmp4, _Date, str, prototype, new.target, id, guild_id, user_id, user);
     tmp9.id = id;
     tmp9.guildId = guild_id;
     tmp9.userId = user_id;

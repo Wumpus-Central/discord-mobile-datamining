@@ -66,7 +66,7 @@ export default function VoiceChatHeaderIcon(disabled) {
   }
   items[1] = disabledOpacity;
   obj.style = items;
-  obj = { source, color: tmp.badge.backgroundColor, size: tmp3(1178).Icon.Sizes.SMALL_20 };
+  obj = { source, color: tmp.badge.backgroundColor, size: native.Icon.Sizes.SMALL_20 };
   const items1 = [timestampProducer(native.Icon, obj), children];
   obj.children = items1;
   return React5(Pressables.PressableOpacity, obj);

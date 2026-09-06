@@ -1,5 +1,7 @@
 // discord_app/modules/guild_scheduled_events/native/components/GuildScheduledEventPrompts.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import util from "../../../../intl/index.native.tsx";
+import Form from "../../../../design/void/Form/native/index.tsx";
 import useManageResourcePermissions from "../../../permissions/useManageResourcePermissions.tsx";
 import GuildScheduledEventModalActionCreators from "../GuildScheduledEventModalActionCreators.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -49,11 +51,11 @@ export const ScheduleEventPrompt = function ScheduleEventPrompt(isLive) {
     };
     ({ iconStyle: obj2.iconStyle, iconContainerStyle: obj2.iconContainerStyle } = tmp);
     obj.completed = isLive.isLive;
-    const intl = tmp2(1114).intl;
-    obj.title = intl.string(tmp2(1114).t["60lJ0C"]);
-    const intl2 = tmp2(1114).intl;
-    obj.subtitle = intl2.string(tmp2(1114).t["EYn7/y"]);
-    tmp4 = jsx(tmp2(8593).FormCTA, {
+    const intl = util.intl;
+    obj.title = intl.string(util.t["60lJ0C"]);
+    const intl2 = util.intl;
+    obj.subtitle = intl2.string(util.t["EYn7/y"]);
+    tmp4 = jsx(Form.FormCTA, {
       style: tmp.actionBarCTAContainer,
       onPress() {
         const obj = { channel };

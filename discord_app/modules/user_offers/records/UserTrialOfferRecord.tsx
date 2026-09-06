@@ -67,7 +67,7 @@ UserTrialOfferRecord["createFromServer"] = function createFromServer(expires_at)
       tmp4,
       _Date2,
       tmp10,
-      tmp,
+      UserTrialOfferRecord,
       new.target,
       id,
       user_id,

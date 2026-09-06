@@ -40,7 +40,7 @@ export default function RegisterDisplayName() {
   _require = navigation;
   const tmp7 = context(callback.useState(false), 2);
   importDefault = tmp7[1];
-  let tmp4 = require("useWideAuthView")();
+  const tmp4 = require("useWideAuthView")();
   const tmp9 = context(
     callback.useState(() => {
       str = closure_1_9.getState().registrationOptions.globalName;
@@ -51,7 +51,6 @@ export default function RegisterDisplayName() {
     }),
     2,
   );
-  str = tmp9[0];
   asyncGeneratorStep = tmp9[1];
   const tmp10 = (function getGlobalNameError(str) {
     if (closure_1_16.includes(str)) {
@@ -68,7 +67,7 @@ export default function RegisterDisplayName() {
         }
       }
     }
-  })(str);
+  })(tmp9[0]);
   context = callback.useContext(require("Auth").TrackRegistrationContext);
   const tmp8 = closure_9((errors) => errors.errors);
   let obj1 = require("RegistrationStepsUtils");
@@ -86,7 +85,7 @@ export default function RegisterDisplayName() {
   _require = asyncGeneratorStep(async (globalName) => {
     c2 = 0;
     c3 = 0;
-    return (async (arg0, value) => {
+    return (async (arg0) => {
       if (c3 === 2) {
         c3 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -122,11 +121,11 @@ export default function RegisterDisplayName() {
               }
               if (!tmp6) {
                 tmp2(true);
-                if (!UniqueUsernamesStore.wasRegistrationSuggestionFetched(tmp27)) {
+                if (!UniqueUsernamesStore.wasRegistrationSuggestionFetched(globalName)) {
                   obj1 = tmp2(str[19]);
                   c2 = 1;
                   c3 = 1;
-                  let obj3 = { value: obj1.fetchSuggestionsRegistration(tmp27), done: false };
+                  let obj3 = { value: obj1.fetchSuggestionsRegistration(globalName), done: false };
                   return obj3;
                 }
               }
@@ -186,7 +185,6 @@ export default function RegisterDisplayName() {
   }
   obj = { headerText: null, children: null };
   const tmp14 = require("useInitialRegistrationStep");
-  const tmp22 = closure_13;
   let intl = tmp5(tmp3[10]).intl;
   obj.headerText = intl.string(require("util").t.LYIh7j);
   obj = { style: tmp.globalName, children: null };
@@ -232,11 +230,11 @@ export default function RegisterDisplayName() {
   obj2.children = closure_12(require("components/Button/Button").Button, obj3);
   items3[1] = closure_12(View, obj2);
   obj.children = items3;
-  const tmp22Result = tmp22(require("AuthFormView"), obj);
+  const tmp22Result = closure_13(require("AuthFormView"), obj);
   let tmp24Result = tmp22Result;
   if (!tmp4) {
     const obj4 = { style: tmp.page, children: tmp22Result };
-    tmp24Result = tmp24(tmp2(tmp3[25]), obj4);
+    tmp24Result = closure_12(tmp2(tmp3[25]), obj4);
   }
   return tmp24Result;
 }

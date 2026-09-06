@@ -10,13 +10,13 @@ export const getRemoteJoinFooterLabel = function getRemoteJoinFooterLabel(remote
   if (ActivityGamePlatforms.DESKTOP === remoteJoinPlatform) {
     const intl5 = util.intl;
     return intl5.string(util.t.aqN8U9);
-  } else if (tmp.IOS === remoteJoinPlatform) {
+  } else if (ActivityGamePlatforms.IOS === remoteJoinPlatform) {
     const intl4 = util.intl;
     return intl4.string(util.t.CyQ5ia);
-  } else if (tmp.ANDROID === remoteJoinPlatform) {
+  } else if (ActivityGamePlatforms.ANDROID === remoteJoinPlatform) {
     const intl3 = util.intl;
     return intl3.string(util.t.fMs6uW);
-  } else if (tmp.XBOX === remoteJoinPlatform) {
+  } else if (ActivityGamePlatforms.XBOX === remoteJoinPlatform) {
     const intl2 = util.intl;
     return intl2.string(util.t.o0hjdt);
   } else {

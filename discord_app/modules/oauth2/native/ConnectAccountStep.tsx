@@ -1,8 +1,10 @@
 // discord_app/modules/oauth2/native/ConnectAccountStep.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
+import native from "../../../design/void/native.tsx";
 import AvatarUtils from "../../../utils/AvatarUtils.tsx";
 import shared from "../../../design/shared.tsx";
+import useThemeDefault from "../../../hooks/useTheme.tsx";
 import CheckmarkLargeIcon from "../../../design/components/Icon/native/redesign/generated/CheckmarkLargeIcon.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import PlatformsDefault from "../../../lib/Platforms.tsx";
@@ -146,7 +148,7 @@ export default function ConnectAccountStep(clientId) {
     let tmp16Result = null;
     if (null != null) {
       const obj11 = { source: null, style: tmp.platformIcon, disableColor: true };
-      tmp16Result = tmp16(tmp5(1178).Icon, obj11);
+      tmp16Result = closure_8(tmp5(1178).Icon, obj11);
     }
     const items7 = [tmp16Result, ,];
     const obj12 = { variant: "text-md/medium", style: tmp.cardName, color: "text-default", children: platformName };
@@ -182,6 +184,7 @@ export default function ConnectAccountStep(clientId) {
     const icon = value.icon;
     const source = tmp5Result.makeSource(tmp5Result.isThemeLight(tmp4) ? icon.lightPNG : icon.darkPNG);
   }
+  tmp4 = platformType(4495)();
 }
 export const ConnectedAccountCard = function ConnectedAccountCard(arg0) {
   ({ platformName, connectedAccount } = arg0);
@@ -200,14 +203,14 @@ export const ConnectedAccountCard = function ConnectedAccountCard(arg0) {
     let tmp10Result = null;
     if (null != null) {
       const obj3 = { source: null, style: tmp.platformIconSmall, disableColor: true };
-      tmp10Result = tmp10(tmp11(1178).Icon, obj3);
+      tmp10Result = React6(native.Icon, obj3);
     }
     const items1 = [tmp10Result, ,];
     const obj4 = { style: tmp.cardInfo, children: null };
     const obj5 = { variant: "text-md/medium", color: "mobile-text-heading-primary", children: connectedAccount.name };
     const items2 = [React6(Text_Text.Text, obj5)];
     const obj6 = { variant: "text-xs/normal", color: "text-muted", children: null };
-    const intl2 = tmp11(1114).intl;
+    const intl2 = util.intl;
     const obj7 = { platformName, connectedAccountId: connectedAccount.id };
     obj6.children = intl2.format(util.t.Dkd7sE, obj7);
     items2[1] = React6(Text_Text.Text, obj6);
@@ -218,7 +221,7 @@ export const ConnectedAccountCard = function ConnectedAccountCard(arg0) {
     obj2.children = items1;
     items[1] = React7(View, obj2);
     const obj9 = { variant: "text-sm/normal", color: "text-default", children: null };
-    const intl3 = tmp11(1114).intl;
+    const intl3 = util.intl;
     const obj10 = { applicationName };
     obj9.children = intl3.format(util.t.pyRNXJ, obj10);
     items[2] = React6(Text_Text.Text, obj9);
@@ -232,4 +235,5 @@ export const ConnectedAccountCard = function ConnectedAccountCard(arg0) {
     const icon = value.icon;
     const source = obj1.makeSource(obj2.isThemeLight(tmp4) ? icon.lightPNG : icon.darkPNG);
   }
+  tmp4 = useThemeDefault();
 };

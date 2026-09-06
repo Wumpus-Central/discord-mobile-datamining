@@ -238,17 +238,17 @@ export default function SKUPreview(arg0) {
   if (SKUProductLines.COLLECTIBLES === productLine) {
     let obj = { sku, size };
     return <CollectiblesSKUPreview sku={sku} size={size} />;
-  } else if (tmp3.SOCIAL_LAYER_GAME_ITEM === productLine) {
+  } else if (SKUProductLines.SOCIAL_LAYER_GAME_ITEM === productLine) {
     obj = { sku, size };
     return <SocialLayerStorefrontSKUPreview sku={sku} size={size} />;
-  } else if (tmp3.PREMIUM === productLine) {
+  } else if (SKUProductLines.PREMIUM === productLine) {
     const obj1 = { size };
     return <PremiumSKUPreview size={size} />;
   } else {
-    if (tmp3.APPLICATION !== productLine) {
-      if (tmp3.BOOST !== productLine) {
-        if (tmp3.GUILD_ROLE !== productLine) {
-          if (tmp3.GUILD_PRODUCT !== productLine) {
+    if (SKUProductLines.APPLICATION !== productLine) {
+      if (SKUProductLines.BOOST !== productLine) {
+        if (SKUProductLines.GUILD_ROLE !== productLine) {
+          if (SKUProductLines.GUILD_PRODUCT !== productLine) {
             obj = GlobalUtils;
             obj.assertNever(sku.productLine);
           }

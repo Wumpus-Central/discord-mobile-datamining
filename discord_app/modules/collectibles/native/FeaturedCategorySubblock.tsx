@@ -1,6 +1,7 @@
 // discord_app/modules/collectibles/native/FeaturedCategorySubblock.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
+import AnalyticsLocationDefault from "../../app_analytics/AnalyticsLocation.tsx";
 import CollectiblesActionCreators from "../CollectiblesActionCreators.tsx";
 import VisibilitySensorDefault from "VisibilitySensor.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -74,8 +75,8 @@ export default function _default(subblock) {
   obj.onPress = function onPress() {
     let obj = AnalyticsUtilsDefault;
     let sessionId;
-    if (closure_2 != null) {
-      sessionId = tmp3.sessionId;
+    if (analyticsContext != null) {
+      sessionId = analyticsContext.sessionId;
     }
     obj = {
       collectibles_shop_session_id: sessionId,
@@ -88,31 +89,31 @@ export default function _default(subblock) {
       cta_name: null,
     };
     let pageSection;
-    if (closure_2 != null) {
-      pageSection = tmp3.pageSection;
+    if (analyticsContext != null) {
+      pageSection = analyticsContext.pageSection;
     }
     obj.page_section = pageSection;
     let pageCategory;
-    if (closure_2 != null) {
-      pageCategory = tmp3.pageCategory;
+    if (analyticsContext != null) {
+      pageCategory = analyticsContext.pageCategory;
     }
     obj.page_category = pageCategory;
     let tilePosition;
-    if (closure_2 != null) {
-      tilePosition = tmp3.tilePosition;
+    if (analyticsContext != null) {
+      tilePosition = analyticsContext.tilePosition;
     }
     obj.tile_position = String(tilePosition);
     obj.track(constants.COLLECTIBLES_SHOP_ELEMENT_CLICKED, obj);
     if (null != stateFromStores) {
-      if (tmp9.isOrbsExclusive) {
+      if (stateFromStores.isOrbsExclusive) {
         obj = { analyticsLocations: null, analyticsSource: null, screen: null };
-        const items = [tmp(7182).COLLECTIBLES_SHOP];
+        const items = [AnalyticsLocationDefault.COLLECTIBLES_SHOP];
         obj.analyticsLocations = items;
-        obj.analyticsSource = tmp(7182).COLLECTIBLES_SHOP;
+        obj.analyticsSource = AnalyticsLocationDefault.COLLECTIBLES_SHOP;
         obj.screen = constants.ORBS;
         const result = CollectiblesActionCreators.openCollectiblesShopMobile(obj);
       } else {
-        const obj1 = { category: tmp9, analyticsContext: tmp3 };
+        const obj1 = { category: stateFromStores, analyticsContext };
         navigation.navigate(constants2.COLLECTIBLES_SHOP_VIEW_ALL_CATEGORY_ITEMS, obj1);
       }
     }
@@ -124,18 +125,17 @@ export default function _default(subblock) {
     let obj4 = { uri: assetUrl };
     obj3.source = obj4;
     obj3.style = tmp.bannerImage;
-    tmp11Result = tmp11(stateFromStores, obj3);
+    tmp11Result = closure_8(stateFromStores, obj3);
   }
   const items1 = [tmp11Result];
   const tmp12 = VisibilitySensorDefault;
-  const tmp13 = closure_9;
   let result = subblock(7554).shouldShowLimitedTimeBadge(date);
   if (result) {
     const obj5 = { style: tmp.limitedTimeBadge };
-    result = tmp11(tmp2(8832).LimitedTimeBadge, obj5);
+    result = closure_8(tmp2(8832).LimitedTimeBadge, obj5);
   }
   items1[1] = result;
   obj.children = items1;
-  obj.children = tmp13(subblock(5123).PressableOpacity, obj);
+  obj.children = closure_9(subblock(5123).PressableOpacity, obj);
   return closure_8(tmp12, obj);
 }

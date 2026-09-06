@@ -1,5 +1,6 @@
 // discord_app/modules/auth/native/AuthManager.tsx
 import DispatcherDefault from "../../../Dispatcher.tsx";
+import PlatformUtils from "../../../utils/PlatformUtils.tsx";
 import transitionToGuild from "../../routing/transitionToGuild.native.tsx";
 import SentMessageIntentsHandlerDefault from "../../messages/SentMessageIntentsHandler.android.tsx";
 import PushNotificationActionCreators from "../../../actions/native/PushNotificationActionCreators.tsx";
@@ -26,7 +27,7 @@ class AuthManager extends tmp3 {
       LOGIN = constants2.LOGIN;
     };
     closure_129_0 = undefined;
-    closure_129_0 = closure_3(async (arg0, value) => {
+    closure_129_0 = closure_3(async (arg0) => {
       if (DCDShortcutManager === 2) {
         DCDShortcutManager = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -55,7 +56,7 @@ class AuthManager extends tmp3 {
               closure_129_0 = applyArgumentsResult;
               closure_1_5.dismiss();
               if (tmp2(1953)()) {
-                tmp24();
+                applyArgumentsResult();
                 DCDShortcutManager = 3;
               } else {
                 const NativePermissionManager = DCDShortcutManager.NativePermissionManager;
@@ -64,7 +65,6 @@ class AuthManager extends tmp3 {
                 const obj1 = { value: NativePermissionManager.getNotificationAuthorizationStatus(), done: false };
                 return obj1;
               }
-              tmp24 = applyArgumentsResult;
             }
           } else if (arg0 === 1) {
             DCDShortcutManager = 3;
@@ -101,14 +101,16 @@ class AuthManager extends tmp3 {
         const tmpResult = PushNotificationActionCreators;
       }
       const result1 = applyArgumentsResult.handleRegisterComplete();
+      obj = PlatformUtils;
     };
     applyArgumentsResult.handleRegisterComplete = function handleRegisterComplete() {
       if (!obj.hasDeferredInvite()) {
-        let tmpResult = tmp(12746);
+        let tmpResult = applyArgumentsResult(12746);
         tmpResult.setNewUser(constants.ORGANIC_REGISTERED);
       }
-      tmpResult = tmp(12704);
+      tmpResult = applyArgumentsResult(12704);
       tmpResult.startOnboarding();
+      obj = applyArgumentsResult(9820);
     };
     applyArgumentsResult.handleLoginWithConnection = function handleLoginWithConnection() {
       const result = applyArgumentsResult.handlePushNotificationOptIn(() => {

@@ -51,14 +51,14 @@ export default function ComponentProfiler(arg0) {
                 update: null,
                 nestedUpdate: null,
               };
-              if (typeof tmp4 === "function") {
+              if (typeof StatCollector === "function") {
                 obj.update = Object.assign({
                   totalMicroseconds: 0,
                   count: 0,
                   minMicroseconds: null,
                   maxMicroseconds: null,
                 });
-                if (typeof tmp4 === "function") {
+                if (typeof StatCollector === "function") {
                   obj.nestedUpdate = Object.assign({
                     totalMicroseconds: 0,
                     count: 0,

@@ -120,7 +120,7 @@ export default function RestrictedMessagePreviewActions(channel) {
       tmp18 = null;
       formatResult = null;
     }
-  } else if (tmp13.PENDING_INCOMING === stateFromStores) {
+  } else if (constants2.PENDING_INCOMING === stateFromStores) {
     const intl5 = tmp2(tmp3[20]).intl;
     const obj2 = { username: null };
     let obj7 = user(tmp3[13]);
@@ -136,7 +136,7 @@ export default function RestrictedMessagePreviewActions(channel) {
     obj4.text = intl7.string(tmp2(tmp3[20]).t.rQSndv);
     obj4.onPress = callback2;
     tmp18 = closure_9(tmp2(tmp3[19]).Button, obj4);
-  } else if (tmp13.FRIEND === stateFromStores) {
+  } else if (constants2.FRIEND === stateFromStores) {
     const obj5 = { size: "sm", variant: "secondary", text: null, onPress: null };
     const intl4 = tmp2(tmp3[20]).intl;
     obj5.text = intl4.string(tmp2(tmp3[20]).t.cvSt1J);
@@ -144,7 +144,7 @@ export default function RestrictedMessagePreviewActions(channel) {
     tmp19 = closure_9(tmp2(tmp3[19]).Button, obj5);
     tmp18 = null;
     formatResult = null;
-  } else if (tmp13.PENDING_OUTGOING === stateFromStores) {
+  } else if (constants2.PENDING_OUTGOING === stateFromStores) {
     const obj6 = { size: "sm", variant: "active", text: null, disabled: true, onPress: "a" };
     const intl3 = tmp2(tmp3[20]).intl;
     obj6.text = intl3.string(tmp2(tmp3[20]).t.xMH6vD);
@@ -155,7 +155,7 @@ export default function RestrictedMessagePreviewActions(channel) {
     tmp18 = null;
     tmp19 = null;
     formatResult = null;
-    if (tmp13.BLOCKED === stateFromStores) {
+    if (constants2.BLOCKED === stateFromStores) {
       obj7 = { size: "sm", variant: "secondary", text: null, onPress: null };
       const intl9 = tmp2(tmp3[20]).intl;
       obj7.text = intl9.string(tmp2(tmp3[20]).t.XyHpKH);

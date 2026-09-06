@@ -13,13 +13,13 @@ const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/emoji_picker/native/components/EmojiPickerListComponent.ios.tsx");
 
-export default noop.forwardRef((paddingTop, ref) => {
+export default noop.forwardRef((paddingTop, arg1) => {
   ({ categoryIndexActive: require, data } = paddingTop);
   const stickyHeaderIndices = data.headerIndices;
   paddingTop = paddingTop.paddingTop;
   const paddingBottom = paddingTop.paddingBottom;
   ({ onShowNitroUpsell, renderItem } = paddingTop);
-  ref = paddingBottom.useRef(null);
+  const ref = paddingBottom.useRef(null);
   const items = [paddingTop, paddingBottom];
   const contentContainerStyle = paddingBottom.useMemo(() => ({ paddingTop, paddingBottom }), items);
   const getItemType = paddingBottom.useCallback((type) => type.type, []);
@@ -28,20 +28,20 @@ export default noop.forwardRef((paddingTop, ref) => {
     type = type.type;
     if (require("useEmojiPickerData").EmojiPickerItemType.PLACEHOLDER === type) {
       arg0.size = 0;
-    } else if (tmp(tmp2[3]).EmojiPickerItemType.TITLE === type) {
+    } else if (require("useEmojiPickerData").EmojiPickerItemType.TITLE === type) {
       arg0.size = closure_1_5 + closure_1_6 + closure_1_7;
     } else {
-      if (tmp(tmp2[3]).EmojiPickerItemType.EMOJI_ROW !== type) {
-        if (tmp(tmp2[3]).EmojiPickerItemType.EMOJI_ROW_NSFW !== type) {
-          if (tmp(tmp2[3]).EmojiPickerItemType.FOOTER_UPSELL === type) {
-            arg0.size = tmp(tmp2[4]).EMOJI_PICKER_PREMIUM_UPSELL_HEIGHT;
+      if (require("useEmojiPickerData").EmojiPickerItemType.EMOJI_ROW !== type) {
+        if (require("useEmojiPickerData").EmojiPickerItemType.EMOJI_ROW_NSFW !== type) {
+          if (require("useEmojiPickerData").EmojiPickerItemType.FOOTER_UPSELL === type) {
+            arg0.size = require("EmojiPickerPremiumSearchUpsell").EMOJI_PICKER_PREMIUM_UPSELL_HEIGHT;
           }
         }
       }
       arg0.size = ref;
     }
   }, []);
-  const imperativeHandle = paddingBottom.useImperativeHandle(ref, () => ({
+  const imperativeHandle = paddingBottom.useImperativeHandle(arg1, () => ({
     scrollToHeaderIndex(animated) {
       let flag = animated.animated;
       if (flag === undefined) {
@@ -64,21 +64,19 @@ export default noop.forwardRef((paddingTop, ref) => {
       }
     },
     onStickyHeaderRendered(arg0) {
-      let arr;
       let num = 0;
       let num2 = 0;
       let num3 = 0;
       if (0 < length.length) {
         do {
           let tmp2 = num3;
-          arr = length;
           if (arg0 >= length[num2]) {
             tmp2 = num2;
           }
           num2 = num2 + 1;
           num3 = tmp2;
           num = tmp2;
-        } while (num2 < arr.length);
+        } while (num2 < length.length);
       }
       const result = closure_1_0.set(num);
     },

@@ -123,7 +123,7 @@ export default function GuildSettingsServerTagColorPickerActionSheet(secondaryCo
   let throttledFunction;
   let callback5;
   const bound = Math.max(240, Math.min(secondaryColor(onSelectColor[9])().width - 2 * ref, 358));
-  let tmp4 = sharedValue1(bound);
+  const tmp4 = sharedValue1(bound);
   _slicedToArray = tmp5;
   const first = first2[0];
   let obj = first;
@@ -293,6 +293,7 @@ export default function GuildSettingsServerTagColorPickerActionSheet(secondaryCo
         callback2(first3, combined);
         callback3(combined);
       }
+      obj = ColorUtils;
     }
     combined = first4.toUpperCase();
   }, items9);
@@ -382,6 +383,7 @@ export default function GuildSettingsServerTagColorPickerActionSheet(secondaryCo
       onSelectColor(formatted, tmp7);
       ActionSheetActionCreatorsDefault.hideActionSheet();
     }
+    obj = ColorUtils;
   }, items12);
   if ("" !== tag) {
     str2 = tag;

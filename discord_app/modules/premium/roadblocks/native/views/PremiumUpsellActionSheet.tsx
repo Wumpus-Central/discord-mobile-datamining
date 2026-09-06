@@ -1,13 +1,16 @@
 // discord_app/modules/premium/roadblocks/native/views/PremiumUpsellActionSheet.tsx
 import initialize from "../../../../../../discord_common/js/packages/flux/index.tsx";
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import util from "../../../../../intl/index.native.tsx";
 import PlatformUtils from "../../../../../utils/PlatformUtils.tsx";
 import AnalyticsUtilsDefault from "../../../../../utils/AnalyticsUtils.tsx";
 import PremiumUtils from "../../../../../utils/PremiumUtils.tsx";
 import ChatInputUtils from "../../../../../utils/native/ChatInputUtils.tsx";
 import ActionSheetActionCreatorsDefault from "../../../../action_sheet/native/ActionSheetActionCreators.tsx";
+import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import LinearGradientDefault from "../../../../../../_runtime/04987_LinearGradient.js";
 import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
+import TableSwitchRow from "../../../../../design/components/TableRow/native/TableSwitchRow.native.tsx";
 import openPremiumUpsellActionSheet from "../utils/openPremiumUpsellActionSheet.tsx";
 import showForLaterModal from "../../../../saved_messages/native/showForLaterModal.tsx";
 import SavedMessagesTypes from "../../../../saved_messages/SavedMessagesTypes.tsx";
@@ -37,15 +40,15 @@ function AlwaysCompressImagesSwitch(isKestrelTreatment) {
     if (!isKestrelTreatment.isKestrelTreatment) {
       obj = { style: tmp.compressionContainer, children: null };
       obj = { start: true, end: true, label: null, value: null, onValueChange: null, subLabel: null };
-      const intl = tmp2(1114).intl;
-      obj.label = intl.string(tmp2(1114).t.ix8XIj);
+      const intl = util.intl;
+      obj.label = intl.string(util.t.ix8XIj);
       obj.value = stateFromStores;
       obj.onValueChange = callback;
       const obj1 = { style: tmp.compressionHint, variant: "text-xs/normal", children: null };
-      const intl2 = tmp2(1114).intl;
-      obj1.children = intl2.string(tmp2(1114).t["wC0+Ph"]);
-      obj.subLabel = __initData2(tmp2(4556).Text, obj1);
-      obj.children = __initData2(tmp2(7201).TableSwitchRow, obj);
+      const intl2 = util.intl;
+      obj1.children = intl2.string(util.t["wC0+Ph"]);
+      obj.subLabel = __initData2(Text_Text.Text, obj1);
+      obj.children = __initData2(TableSwitchRow.TableSwitchRow, obj);
       tmp6 = __initData2(View, obj);
     }
   }
@@ -189,7 +192,6 @@ export default function PremiumUpsellActionSheet(onDismiss) {
   let onViewAllPerks;
   noop = undefined;
   const tmp = closure_25();
-  const tmp2 = legacyProps;
   const tmp3 = useTier0UpsellContent;
   let obj = legacyProps(useTier0UpsellContent[39]);
   const items = [UserStore];
@@ -201,84 +203,88 @@ export default function PremiumUpsellActionSheet(onDismiss) {
     initialUpsellKey = legacyProps.initialUpsellKey;
   }
   if (initialUpsellKey == null) {
-    let tmp2Result = tmp2(tmp3[49]);
+    let tmp2Result = legacyProps(tmp3[49]);
     initialUpsellKey = tmp2Result.getUpsellType(featureName);
   }
   const premiumUpsellConfig = obj1.usePremiumUpsellConfig(initialUpsellKey, analyticsLocations2);
   useTier0UpsellContent = premiumUpsellConfig.useTier0UpsellContent;
   onViewAllPerks = premiumUpsellConfig.onViewAllPerks;
-  tmp2Result = tmp2(tmp3[39]);
+  tmp2Result = legacyProps(tmp3[39]);
   const items1 = [ThemeStore];
   const stateFromStores1 = tmp2Result.useStateFromStores(items1, () => theme.theme);
   const items2 = [SelectedGuildStore];
-  const stateFromStores2 = tmp2(tmp3[39]).useStateFromStores(items2, () => guildId.getGuildId());
+  const stateFromStores2 = legacyProps(tmp3[39]).useStateFromStores(items2, () => guildId.getGuildId());
   const tmp12 = useTier0UpsellContent ? closure_12.TIER_0 : closure_12.TIER_2;
-  const tmp2Result1 = tmp2(tmp3[39]);
+  const tmp2Result1 = legacyProps(tmp3[39]);
   const tmp6 = analyticsLocations;
-  const token = tmp2(tmp3[16]).useToken(tmp5(tmp3[15]).colors.EXPRESSIVE_GRADIENT_NITRO_GREEN_START);
-  const tmp2Result2 = tmp2(tmp3[16]);
+  const token = legacyProps(tmp3[16]).useToken(tmp5(tmp3[15]).colors.EXPRESSIVE_GRADIENT_NITRO_GREEN_START);
+  const tmp2Result2 = legacyProps(tmp3[16]);
   let str = "dark";
-  const token1 = tmp2(tmp3[16]).useToken(tmp5(tmp3[15]).colors.EXPRESSIVE_GRADIENT_NITRO_GREEN_END);
+  const token1 = legacyProps(tmp3[16]).useToken(tmp5(tmp3[15]).colors.EXPRESSIVE_GRADIENT_NITRO_GREEN_END);
   if (stateFromStores1 === constants4.LIGHT) {
     str = "light";
   }
-  const tmp2Result3 = tmp2(tmp3[16]);
-  const premiumTypeDisplayName = tmp2(tmp3[17]).getPremiumTypeDisplayName(tmp12);
+  const tmp2Result3 = legacyProps(tmp3[16]);
+  const premiumTypeDisplayName = legacyProps(tmp3[17]).getPremiumTypeDisplayName(tmp12);
   let kestrelConfig;
-  if (featureName === tmp2(tmp3[18]).EntitlementFeatureNames.INCREASED_FILE_UPLOAD_SIZE) {
-    kestrelConfig = tmp2(tmp3[19]).getKestrelConfig({ location: "native.PremiumUpsellActionSheet" });
-    const tmp2Result5 = tmp2(tmp3[19]);
+  if (featureName === legacyProps(tmp3[18]).EntitlementFeatureNames.INCREASED_FILE_UPLOAD_SIZE) {
+    kestrelConfig = legacyProps(tmp3[19]).getKestrelConfig({ location: "native.PremiumUpsellActionSheet" });
+    const tmp2Result5 = legacyProps(tmp3[19]);
   }
   let effectiveKestrelLimit;
   if (null != kestrelConfig) {
-    const tmp2Result6 = tmp2(tmp3[19]);
+    const tmp2Result6 = legacyProps(tmp3[19]);
     effectiveKestrelLimit = tmp2Result6.getEffectiveKestrelLimit(
       kestrelConfig,
-      tmp2(tmp3[20]).maxFileSize(stateFromStores2),
+      legacyProps(tmp3[20]).maxFileSize(stateFromStores2),
     );
-    const tmp2Result7 = tmp2(tmp3[20]);
+    const tmp2Result7 = legacyProps(tmp3[20]);
   }
-  const tmp18 = subfeatureName === tmp2(tmp3[21]).PremiumUpsellSubfeatureNames.SAVED_MESSAGES_REMINDER_LIMIT;
+  const tmp18 = subfeatureName === legacyProps(tmp3[21]).PremiumUpsellSubfeatureNames.SAVED_MESSAGES_REMINDER_LIMIT;
   closure_129_0 = tmp18;
-  if (subfeatureName === tmp2(tmp3[21]).PremiumUpsellSubfeatureNames.SAVED_MESSAGES_BOOKMARK_LIMIT) {
-    const forLaterLimit = tmp2(tmp3[22]).getForLaterLimit("native.PremiumUpsellActionSheet", tmp18);
-    const tmp2Result8 = tmp2(tmp3[22]);
+  if (subfeatureName === legacyProps(tmp3[21]).PremiumUpsellSubfeatureNames.SAVED_MESSAGES_BOOKMARK_LIMIT) {
+    const forLaterLimit = legacyProps(tmp3[22]).getForLaterLimit("native.PremiumUpsellActionSheet", tmp18);
+    const tmp2Result8 = legacyProps(tmp3[22]);
   }
   const tmp20 = tmp18 ? closure_20 : closure_19;
   obj = {};
   obj = { title: null, description: null, analyticsPage: null, upsellType: null, image: null };
-  const intl = tmp2(tmp3[23]).intl;
-  obj.title = intl.string(tmp2(tmp3[23]).t.jGDYF0);
-  const intl2 = tmp2(tmp3[23]).intl;
-  obj.description = intl2.formatToPlainString(tmp2(tmp3[23]).t["fc+8uy"], { nitroTierName: premiumTypeDisplayName });
+  const intl = legacyProps(tmp3[23]).intl;
+  obj.title = intl.string(legacyProps(tmp3[23]).t.jGDYF0);
+  const intl2 = legacyProps(tmp3[23]).intl;
+  obj.description = intl2.formatToPlainString(legacyProps(tmp3[23]).t["fc+8uy"], {
+    nitroTierName: premiumTypeDisplayName,
+  });
   obj.analyticsPage = constants3.PREMIUM_UPSELL_SOUNDBOARD_EVERYWHERE;
   obj.upsellType = constants.SOUNDBOARD_EVERYWHERE_UPSELL;
   obj1 = { uri: "https://cdn.discordapp.com/assets/premium/roadblocks/soundboard_" + str + ".png" };
   obj.image = obj1;
-  obj[tmp2(tmp3[18]).EntitlementFeatureNames.SOUNDBOARD_EVERYWHERE] = obj;
+  obj[legacyProps(tmp3[18]).EntitlementFeatureNames.SOUNDBOARD_EVERYWHERE] = obj;
   const obj2 = { title: null, description: null, analyticsPage: null, upsellType: null, image: null };
-  const intl3 = tmp2(tmp3[23]).intl;
-  obj2.title = intl3.string(tmp2(tmp3[23]).t.zY5PPb);
-  const intl4 = tmp2(tmp3[23]).intl;
-  obj2.description = intl4.formatToPlainString(tmp2(tmp3[23]).t["uukIF/"], { nitroTierName: premiumTypeDisplayName });
+  const intl3 = legacyProps(tmp3[23]).intl;
+  obj2.title = intl3.string(legacyProps(tmp3[23]).t.zY5PPb);
+  const intl4 = legacyProps(tmp3[23]).intl;
+  obj2.description = intl4.formatToPlainString(legacyProps(tmp3[23]).t["uukIF/"], {
+    nitroTierName: premiumTypeDisplayName,
+  });
   obj2.analyticsPage = constants3.PREMIUM_UPSELL_EMOJI_EVERYWHERE;
   obj2.upsellType = constants.EMOJI_EVERYWHERE_UPSELL;
-  const tmp2Result4 = tmp2(tmp3[17]);
+  const tmp2Result4 = legacyProps(tmp3[17]);
   obj2.image = { uri: "https://cdn.discordapp.com/assets/premium/roadblocks/emoji_" + str + ".png" };
-  obj[tmp2(tmp3[18]).EntitlementFeatureNames.EMOJIS_EVERYWHERE] = obj2;
+  obj[legacyProps(tmp3[18]).EntitlementFeatureNames.EMOJIS_EVERYWHERE] = obj2;
   const obj4 = { title: null, description: null, analyticsPage: null, upsellType: null, illustration: null };
-  const intl5 = tmp2(tmp3[23]).intl;
-  obj4.title = intl5.string(tmp2(tmp3[23]).t.Eukdgl);
-  const intl6 = tmp2(tmp3[23]).intl;
-  obj4.description = intl6.string(tmp2(tmp3[23]).t.sMmd7s);
+  const intl5 = legacyProps(tmp3[23]).intl;
+  obj4.title = intl5.string(legacyProps(tmp3[23]).t.Eukdgl);
+  const intl6 = legacyProps(tmp3[23]).intl;
+  obj4.description = intl6.string(legacyProps(tmp3[23]).t.sMmd7s);
   obj4.analyticsPage = constants3.PREMIUM_UPSELL_STICKERS_EVERYWHERE;
   obj4.upsellType = constants.STICKERS_EVERYWHERE_UPSELL;
-  obj4.illustration = closure_22(tmp2(tmp3[24]).StickersSpotIllustration, {
+  obj4.illustration = closure_22(legacyProps(tmp3[24]).StickersSpotIllustration, {
     width: 188,
     height: 106,
     accessible: false,
   });
-  obj[tmp2(tmp3[18]).EntitlementFeatureNames.STICKERS_EVERYWHERE] = obj4;
+  obj[legacyProps(tmp3[18]).EntitlementFeatureNames.STICKERS_EVERYWHERE] = obj4;
   const obj5 = {
     title: null,
     showBetaBadge: null,
@@ -288,8 +294,8 @@ export default function PremiumUpsellActionSheet(onDismiss) {
     upsellType: null,
     image: null,
   };
-  const intl7 = tmp2(tmp3[23]).intl;
-  obj5.title = intl7.string(tmp2(tmp3[23]).t["G+pngo"]);
+  const intl7 = legacyProps(tmp3[23]).intl;
+  obj5.title = intl7.string(legacyProps(tmp3[23]).t["G+pngo"]);
   let enabled;
   if (kestrelConfig != null) {
     enabled = kestrelConfig.enabled;
@@ -300,58 +306,62 @@ export default function PremiumUpsellActionSheet(onDismiss) {
     enabled1 = kestrelConfig.enabled;
   }
   obj5.isKestrelRaisedCap = true === enabled1;
-  const obj3 = { uri: "https://cdn.discordapp.com/assets/premium/roadblocks/emoji_" + str + ".png" };
+  let obj3 = { uri: "https://cdn.discordapp.com/assets/premium/roadblocks/emoji_" + str + ".png" };
   const obj6 = { guildId: stateFromStores2, maxSize: effectiveKestrelLimit, hideLearnMore: null, onClick: null };
   let isGA;
   if (kestrelConfig != null) {
     isGA = kestrelConfig.isGA;
   }
-  const tmp2Result9 = tmp2(tmp3[20]);
+  const tmp2Result9 = legacyProps(tmp3[20]);
   obj6.hideLearnMore = true === isGA;
   obj6.onClick = function onClick() {
     const obj = analyticsLocations2(useTier0UpsellContent[25]);
     obj.openURL(analyticsLocations2(useTier0UpsellContent[26]).getArticleURL(constants.NITRO_FAQ));
   };
-  obj5.description = closure_22(closure_23, { children: tmp2(tmp3[20]).fileUploadLimitRoadblockDescription(obj6) });
+  obj5.description = closure_22(closure_23, {
+    children: legacyProps(tmp3[20]).fileUploadLimitRoadblockDescription(obj6),
+  });
   obj5.analyticsPage = constants3.PREMIUM_UPSELL_FILE_UPLOAD;
   obj5.upsellType = constants.LARGER_FILE_UPLOAD_UPSELL;
-  const obj7 = { children: tmp2(tmp3[20]).fileUploadLimitRoadblockDescription(obj6) };
+  const obj7 = { children: legacyProps(tmp3[20]).fileUploadLimitRoadblockDescription(obj6) };
   obj5.image = { uri: "https://cdn.discordapp.com/assets/premium/roadblocks/file_upload_" + str + "_v2.png" };
-  obj[tmp2(tmp3[18]).EntitlementFeatureNames.INCREASED_FILE_UPLOAD_SIZE] = obj5;
+  obj[legacyProps(tmp3[18]).EntitlementFeatureNames.INCREASED_FILE_UPLOAD_SIZE] = obj5;
   const obj9 = { title: null, description: null, analyticsPage: null, upsellType: null, image: null };
-  const intl8 = tmp2(tmp3[23]).intl;
-  obj9.title = intl8.string(tmp2(tmp3[23]).t.SI7R9I);
-  const intl9 = tmp2(tmp3[23]).intl;
-  obj9.description = intl9.formatToPlainString(tmp2(tmp3[23]).t.uGkSY2, { nitroTierName: premiumTypeDisplayName });
+  const intl8 = legacyProps(tmp3[23]).intl;
+  obj9.title = intl8.string(legacyProps(tmp3[23]).t.SI7R9I);
+  const intl9 = legacyProps(tmp3[23]).intl;
+  obj9.description = intl9.formatToPlainString(legacyProps(tmp3[23]).t.uGkSY2, {
+    nitroTierName: premiumTypeDisplayName,
+  });
   obj9.analyticsPage = constants3.PREMIUM_UPSELL_ANIMATED_EMOJI;
   obj9.upsellType = constants.ANIMATED_EMOJI_UPSELL;
   const obj8 = { uri: "https://cdn.discordapp.com/assets/premium/roadblocks/file_upload_" + str + "_v2.png" };
   obj9.image = { uri: "https://cdn.discordapp.com/assets/premium/roadblocks/emoji_" + str + ".png" };
-  obj[tmp2(tmp3[18]).EntitlementFeatureNames.ANIMATED_EMOJIS] = obj9;
+  obj[legacyProps(tmp3[18]).EntitlementFeatureNames.ANIMATED_EMOJIS] = obj9;
   const obj11 = { title: null, description: null, analyticsPage: null, upsellType: null, image: null };
-  const intl10 = tmp2(tmp3[23]).intl;
-  obj11.title = intl10.string(tmp2(tmp3[23]).t.p0I2Bk);
-  const intl11 = tmp2(tmp3[23]).intl;
-  obj11.description = intl11.string(tmp2(tmp3[23]).t.jBqF2k);
+  const intl10 = legacyProps(tmp3[23]).intl;
+  obj11.title = intl10.string(legacyProps(tmp3[23]).t.p0I2Bk);
+  const intl11 = legacyProps(tmp3[23]).intl;
+  obj11.description = intl11.string(legacyProps(tmp3[23]).t.jBqF2k);
   obj11.analyticsPage = constants3.PREMIUM_UPSELL_CLIENT_THEMES;
   obj11.upsellType = constants.CLIENT_THEMES_UPSELL;
   obj11.image = analyticsLocations2(tmp3[27]);
-  obj[tmp2(tmp3[18]).EntitlementFeatureNames.CLIENT_THEMES] = obj11;
+  obj[legacyProps(tmp3[18]).EntitlementFeatureNames.CLIENT_THEMES] = obj11;
   const obj12 = { title: null, description: null, analyticsPage: null, upsellType: null, image: null };
-  const intl12 = tmp2(tmp3[23]).intl;
-  obj12.title = intl12.string(tmp2(tmp3[23]).t.TYFwcy);
-  const intl13 = tmp2(tmp3[23]).intl;
-  obj12.description = intl13.string(tmp2(tmp3[23]).t.HDt8ip);
+  const intl12 = legacyProps(tmp3[23]).intl;
+  obj12.title = intl12.string(legacyProps(tmp3[23]).t.TYFwcy);
+  const intl13 = legacyProps(tmp3[23]).intl;
+  obj12.description = intl13.string(legacyProps(tmp3[23]).t.HDt8ip);
   obj12.analyticsPage = constants3.PREMIUM_UPSELL_APP_ICONS;
   obj12.upsellType = constants.APP_ICON_UPSELL;
   obj12.image = analyticsLocations2(tmp3[28]);
-  obj[tmp2(tmp3[18]).EntitlementFeatureNames.APP_ICONS] = obj12;
+  obj[legacyProps(tmp3[18]).EntitlementFeatureNames.APP_ICONS] = obj12;
   if (null == forLaterLimit) {
-    const intl15 = tmp2(tmp3[23]).intl;
-    let stringResult = intl15.string(tmp2(tmp3[23]).t.YXk6N7);
+    const intl15 = legacyProps(tmp3[23]).intl;
+    let stringResult = intl15.string(legacyProps(tmp3[23]).t.YXk6N7);
   } else {
-    const intl14 = tmp2(tmp3[23]).intl;
-    const t = tmp2(tmp3[23]).t;
+    const intl14 = legacyProps(tmp3[23]).intl;
+    const t = legacyProps(tmp3[23]).t;
     const obj13 = { premiumMax: tmp20 };
     stringResult = intl14.formatToPlainString(tmp18 ? t["cpj9o/"] : t.Oxm3Sq, obj13);
   }
@@ -364,11 +374,11 @@ export default function PremiumUpsellActionSheet(onDismiss) {
     image: null,
   };
   if (null == forLaterLimit) {
-    const intl17 = tmp2(tmp3[23]).intl;
-    let stringResult1 = intl17.string(tmp2(tmp3[23]).t["m/HzW8"]);
+    const intl17 = legacyProps(tmp3[23]).intl;
+    let stringResult1 = intl17.string(legacyProps(tmp3[23]).t["m/HzW8"]);
   } else {
-    const intl16 = tmp2(tmp3[23]).intl;
-    const t2 = tmp2(tmp3[23]).t;
+    const intl16 = legacyProps(tmp3[23]).intl;
+    const t2 = legacyProps(tmp3[23]).t;
     const obj15 = { children: null };
     const obj16 = {
       max: forLaterLimit,
@@ -382,13 +392,13 @@ export default function PremiumUpsellActionSheet(onDismiss) {
       },
     };
     obj15.children = intl16.format(tmp18 ? t2.NRF0Wh : t2.o5OLyw, obj16);
-    stringResult1 = tmp23(tmp26, obj15);
+    stringResult1 = closure_22(closure_23, obj15);
   }
   obj14.description = stringResult1;
   obj14.analyticsPage = constants3.PREMIUM_UPSELL_FOR_LATER;
   obj14.upsellType = constants.FOR_LATER_MODAL_UPSELL;
   obj14.image = analyticsLocations2(tmp18 ? tmp3[33] : tmp3[34]);
-  obj[tmp2(tmp3[18]).EntitlementFeatureNames.SAVED_MESSAGES] = obj14;
+  obj[legacyProps(tmp3[18]).EntitlementFeatureNames.SAVED_MESSAGES] = obj14;
   const obj17 = {
     title: null,
     showBetaBadge: true,
@@ -397,11 +407,11 @@ export default function PremiumUpsellActionSheet(onDismiss) {
     upsellType: null,
     image: null,
   };
-  const intl18 = tmp2(tmp3[23]).intl;
-  obj17.title = intl18.formatToPlainString(tmp2(tmp3[23]).t.GNoaxo, { premiumMax });
+  const intl18 = legacyProps(tmp3[23]).intl;
+  obj17.title = intl18.formatToPlainString(legacyProps(tmp3[23]).t.GNoaxo, { premiumMax });
   const obj19 = { children: null };
-  const intl19 = tmp2(tmp3[23]).intl;
-  obj19.children = intl19.format(tmp2(tmp3[23]).t["1kFyto"], {
+  const intl19 = legacyProps(tmp3[23]).intl;
+  obj19.children = intl19.format(legacyProps(tmp3[23]).t["1kFyto"], {
     premiumMax,
     onClick() {
       analyticsLocations2(useTier0UpsellContent[29]).hideActionSheet(
@@ -415,7 +425,7 @@ export default function PremiumUpsellActionSheet(onDismiss) {
   obj17.analyticsPage = constants3.PREMIUM_UPSELL_SCHEDULED_MESSAGES;
   obj17.upsellType = constants.SCHEDULED_MESSAGES_MODAL_UPSELL;
   obj17.image = analyticsLocations2(tmp3[36]);
-  obj[tmp2(tmp3[18]).EntitlementFeatureNames.SCHEDULED_MESSAGES] = obj17;
+  obj[legacyProps(tmp3[18]).EntitlementFeatureNames.SCHEDULED_MESSAGES] = obj17;
   const obj21 = {
     title: null,
     description: null,
@@ -424,22 +434,24 @@ export default function PremiumUpsellActionSheet(onDismiss) {
     image: null,
     imageGradientBackground: null,
   };
-  const intl20 = tmp2(tmp3[23]).intl;
-  obj21.title = intl20.string(tmp2(tmp3[23]).t.ETZQx5);
-  const intl21 = tmp2(tmp3[23]).intl;
-  obj21.description = intl21.formatToPlainString(tmp2(tmp3[23]).t["4nlpei"], { fps: ApplicationStreamFPS.FPS_60 });
+  const intl20 = legacyProps(tmp3[23]).intl;
+  obj21.title = intl20.string(legacyProps(tmp3[23]).t.ETZQx5);
+  const intl21 = legacyProps(tmp3[23]).intl;
+  obj21.description = intl21.formatToPlainString(legacyProps(tmp3[23]).t["4nlpei"], {
+    fps: ApplicationStreamFPS.FPS_60,
+  });
   obj21.analyticsPage = constants3.PREMIUM_UPSELL_STREAM_HIGH_QUALITY;
   obj21.upsellType = constants.STREAM_QUALITY_UPSELL;
   obj21.image = analyticsLocations2(tmp3[37]);
   const obj23 = {
     colors: null,
-    start: tmp2(tmp3[38]).HorizontalGradient.START,
-    end: tmp2(tmp3[38]).HorizontalGradient.END,
+    start: legacyProps(tmp3[38]).HorizontalGradient.START,
+    end: legacyProps(tmp3[38]).HorizontalGradient.END,
   };
   const items3 = [token, token1];
   obj23.colors = items3;
   obj21.imageGradientBackground = obj23;
-  obj[tmp2(tmp3[18]).EntitlementFeatureNames.STREAM_HIGH_QUALITY] = obj21;
+  obj[legacyProps(tmp3[18]).EntitlementFeatureNames.STREAM_HIGH_QUALITY] = obj21;
   noop = tmp30;
   const obj10 = { uri: "https://cdn.discordapp.com/assets/premium/roadblocks/emoji_" + str + ".png" };
   const obj18 = { premiumMax };
@@ -455,16 +467,16 @@ export default function PremiumUpsellActionSheet(onDismiss) {
   };
   const obj22 = { fps: ApplicationStreamFPS.FPS_60 };
   const items4 = [AccessibilityStore];
-  const stateFromStores3 = tmp2(tmp3[39]).useStateFromStores(items4, () => useReducedMotion.useReducedMotion);
-  const tmp2Result10 = tmp2(tmp3[39]);
-  let mobileEmojiPickerUpsellRestyleEnabledForFeature = tmp2(
+  const stateFromStores3 = legacyProps(tmp3[39]).useStateFromStores(items4, () => useReducedMotion.useReducedMotion);
+  const tmp2Result10 = legacyProps(tmp3[39]);
+  let mobileEmojiPickerUpsellRestyleEnabledForFeature = legacyProps(
     tmp3[50],
   ).getMobileEmojiPickerUpsellRestyleEnabledForFeature(featureName, "native.PremiumUpsellActionSheet");
   if (!mobileEmojiPickerUpsellRestyleEnabledForFeature) {
-    mobileEmojiPickerUpsellRestyleEnabledForFeature = tmp2(
+    mobileEmojiPickerUpsellRestyleEnabledForFeature = legacyProps(
       tmp3[51],
     ).getMobileStickerPickerUpsellRestyleEnabledForFeature(featureName, "native.PremiumUpsellActionSheet");
-    const tmp2Result12 = tmp2(tmp3[51]);
+    const tmp2Result12 = legacyProps(tmp3[51]);
   }
   const items5 = [obj[featureName], analyticsLocations2, useTier0UpsellContent, legacyProps];
   const effect = noop.useEffect(() => {
@@ -500,12 +512,12 @@ export default function PremiumUpsellActionSheet(onDismiss) {
   if (null != obj[featureName]) {
     const obj24 = { startExpanded: true, onDismiss: onDismiss.onDismiss, children: null };
     const obj25 = { pageConfig: tmp30, styles: tmp, useReducedMotion: stateFromStores3 };
-    const items6 = [tmp23(PremiumUpsellHero, obj25), , ,];
+    const items6 = [closure_22(PremiumUpsellHero, obj25), , ,];
     const obj26 = { style: tmp.textContainer, children: null };
     let tmp23Result = null;
     if (true === tmp30.showBetaBadge) {
-      const obj27 = { size: tmp2(tmp3[56]).BetaSizes.SMALL, gradient: true, style: tmp.betaTag };
-      tmp23Result = tmp23(tmp5(tmp3[56]), obj27);
+      const obj27 = { size: legacyProps(tmp3[56]).BetaSizes.SMALL, gradient: true, style: tmp.betaTag };
+      tmp23Result = closure_22(tmp5(tmp3[56]), obj27);
       const tmp5Result = tmp5(tmp3[56]);
     }
     const items7 = [tmp23Result, ,];
@@ -515,19 +527,19 @@ export default function PremiumUpsellActionSheet(onDismiss) {
       accessibilityRole: "header",
       children: tmp30.title,
     };
-    items7[1] = tmp23(tmp2(tmp3[42]).Text, obj28);
+    items7[1] = closure_22(legacyProps(tmp3[42]).Text, obj28);
     const obj29 = { style: null, variant: "text-sm/normal", children: null };
     const items8 = [,];
     ({ text: arr9[0], description: arr9[1] } = tmp);
     obj29.style = items8;
     obj29.children = tmp30.description;
-    items7[2] = tmp23(tmp2(tmp3[42]).Text, obj29);
+    items7[2] = closure_22(legacyProps(tmp3[42]).Text, obj29);
     obj26.children = items7;
     items6[1] = closure_24(View, obj26);
     tmp23Result = null;
-    if (featureName === tmp2(tmp3[18]).EntitlementFeatureNames.INCREASED_FILE_UPLOAD_SIZE) {
+    if (featureName === legacyProps(tmp3[18]).EntitlementFeatureNames.INCREASED_FILE_UPLOAD_SIZE) {
       const obj30 = { isKestrelTreatment: true === tmp30.isKestrelRaisedCap };
-      tmp23Result = tmp23(AlwaysCompressImagesSwitch, obj30);
+      tmp23Result = closure_22(AlwaysCompressImagesSwitch, obj30);
     }
     items6[2] = tmp23Result;
     const obj31 = { style: tmp.buttonContainer, children: null };
@@ -537,9 +549,9 @@ export default function PremiumUpsellActionSheet(onDismiss) {
       onPress = tmp34.onPress;
     }
     obj32.onPress = onPress;
-    const intl22 = tmp2(tmp3[23]).intl;
+    const intl22 = legacyProps(tmp3[23]).intl;
     const string = intl22.string;
-    const t3 = tmp2(tmp3[23]).t;
+    const t3 = legacyProps(tmp3[23]).t;
     if (useTier0UpsellContent) {
       let stringResult2 = string(t3.cM8bbx);
     } else {
@@ -557,17 +569,17 @@ export default function PremiumUpsellActionSheet(onDismiss) {
     }
     const obj33 = { children: null };
     obj32.variant = str3;
-    const items9 = [tmp23(tmp2(tmp3[57]).Button, obj32)];
+    const items9 = [closure_22(legacyProps(tmp3[57]).Button, obj32)];
     const obj34 = { variant: "secondary", text: null, onPress: null };
-    const intl23 = tmp2(tmp3[23]).intl;
-    obj34.text = intl23.string(tmp2(tmp3[23]).t.PcTCB7);
+    const intl23 = legacyProps(tmp3[23]).intl;
+    obj34.text = intl23.string(legacyProps(tmp3[23]).t.PcTCB7);
     obj34.onPress = tmp35;
-    items9[1] = tmp23(tmp2(tmp3[57]).Button, obj34);
+    items9[1] = closure_22(legacyProps(tmp3[57]).Button, obj34);
     obj31.children = items9;
     items6[3] = closure_24(View, obj31);
     obj33.children = items6;
     obj24.children = closure_24(View, obj33);
-    tmp23Result1 = tmp23(tmp2(tmp3[55]).ActionSheet, obj24);
+    tmp23Result1 = closure_22(legacyProps(tmp3[55]).ActionSheet, obj24);
   }
   return tmp23Result1;
 }

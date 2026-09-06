@@ -55,14 +55,14 @@ export default function ICYMISettingsActionSheet() {
         const item = dehydratedItems.forEach((type) => {
           let tmp3 = type.type === stateFromStoresObject(paths[18]).ICYMIItemTypes.MESSAGE;
           if (tmp3) {
-            tmp3 = type.data.channel_type === tmp(tmp2[19]).ChannelTypes.GUILD_ANNOUNCEMENT;
+            tmp3 = type.data.channel_type === stateFromStoresObject(paths[19]).ChannelTypes.GUILD_ANNOUNCEMENT;
           }
           if (tmp3) {
-            let obj = closure_1_1(tmp2[20]);
+            let obj = closure_1_1(paths[20]);
             tmp3 = obj.compare(closure_1_5.ackMessageId(type.data.channel_id), type.data.message_id) >= 0;
           }
           if (tmp3) {
-            const tmpResult = tmp(tmp2[21]);
+            const tmpResult = stateFromStoresObject(paths[21]);
             const channel_id = type.data.channel_id;
             obj = { object: constants2.ACK_GRAVITY_CLEAR_READ_STATES_BUTTON, objectType: constants.ACK_SEMI_AUTOMATIC };
             tmpResult.ack(
@@ -70,9 +70,9 @@ export default function ICYMISettingsActionSheet() {
               obj,
               true,
               true,
-              closure_1_1(tmp2[20]).atPreviousMillisecond(type.data.message_id),
+              closure_1_1(paths[20]).atPreviousMillisecond(type.data.message_id),
             );
-            const obj4 = closure_1_1(tmp2[20]);
+            const obj4 = closure_1_1(paths[20]);
           }
         });
         require("ICYMIActionCreators").clearReadStates();
@@ -83,7 +83,7 @@ export default function ICYMISettingsActionSheet() {
     items1[1] = closure_10(tmp(5605).TableRow, obj2);
     let obj3 = {
       label: "Regenerate feed and clear read states",
-      onPress: asyncGeneratorStep(async (arg0, value) => {
+      onPress: asyncGeneratorStep(async () => {
         if (dependencyMap === 2) {
           dependencyMap = 3;
           throw new TypeError("Generator functions may not be called on executing generators");
@@ -141,7 +141,7 @@ export default function ICYMISettingsActionSheet() {
     };
     items1[2] = closure_10(tmp(5605).TableRow, obj3);
     obj1.children = items1;
-    tmp5Result = tmp5(closure_11, obj1);
+    tmp5Result = closure_12(closure_11, obj1);
   }
   let obj4 = { showGradient: true, startExpanded: true, children: null };
   const items2 = [tmp5Result];

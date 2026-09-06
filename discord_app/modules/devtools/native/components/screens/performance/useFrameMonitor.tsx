@@ -7,13 +7,12 @@ require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/devtools/native/components/screens/performance/useFrameMonitor.tsx");
 
-export default function useFrameMonitor(set) {
-  let current = set;
+export default function useFrameMonitor(current) {
   const monitoring = _slicedToArray(noop.useState(false), 2);
   closure_1 = monitoring[1];
   _slicedToArray = noop.useRef(null);
-  noop = noop.useRef(set);
-  const items = [set];
+  noop = noop.useRef(current);
+  const items = [current];
   const effect = noop.useEffect(() => {
     closure_3.current = current;
   }, items);

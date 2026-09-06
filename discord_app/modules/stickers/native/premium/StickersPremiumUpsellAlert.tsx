@@ -177,7 +177,7 @@ export default function StickersPremiumUpsellAlert(arg0) {
   const obj1 = { source: analyticsLocations(6992) };
   const items2 = [closure_14(closure_5, { source: analyticsLocations(10412), style: tmp.imageHeader }), ,];
   const obj4 = { style: tmp.description, variant: "text-md/medium", children: null };
-  const intl3 = tmp9(1114).intl;
+  const intl3 = util.intl;
   if (priceString == null) {
     priceString = closure_13;
   }
@@ -185,7 +185,6 @@ export default function StickersPremiumUpsellAlert(arg0) {
   obj4.children = intl3.format(util.t.TBsJfQ, { monthlyPrice: priceString });
   items2[1] = closure_14(Text_Text.Text, obj4);
   const obj3 = { source: analyticsLocations(10412), style: tmp.imageHeader };
-  const tmp13 = closure_6;
   items2[2] = closure_14(closure_4, {
     style: tmp.perks,
     children: items.map((perk, index) =>
@@ -194,7 +193,7 @@ export default function StickersPremiumUpsellAlert(arg0) {
   });
   obj2.children = items2;
   obj5.children = closure_15(closure_4, obj2);
-  items1[1] = closure_14(tmp13, obj5);
+  items1[1] = closure_14(closure_6, obj5);
   obj.children = items1;
   return closure_15(tmp3Result, obj);
 }

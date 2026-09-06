@@ -1,6 +1,8 @@
 // discord_app/modules/gif_picker/native/GIFPickerNoResults.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import util from "../../../intl/index.native.tsx";
 import native from "../../../design/void/native.tsx";
+import BottomSheetModal from "../../../../_runtime/06627_BottomSheetModal.js";
 import useExpressionPickerInsetsDefault from "../../expression_picker/native/useExpressionPickerInsets.tsx";
 import SearchEmpty from "../../../design/components/Illustration/native/redesign/generated/SearchEmpty.tsx";
 import useModalDismissGuardRefreshControl from "../../keyboard/native/useModalDismissGuardRefreshControl.tsx";
@@ -31,15 +33,15 @@ export default noop.memo(function GIFPickerNoResults(inActionSheet) {
   let obj = SearchEmpty;
   const searchEmptySource = obj.useSearchEmptySource();
   if (inActionSheet.categoryType === GIFPickerResultTypes.FAVORITES) {
-    const intl2 = tmp4(1114).intl;
-    let stringResult = intl2.string(tmp4(1114).t.ZH4o6l);
+    const intl2 = util.intl;
+    let stringResult = intl2.string(util.t.ZH4o6l);
   } else {
-    const intl = tmp4(1114).intl;
-    stringResult = intl.string(tmp4(1114).t["5dX4UM"]);
+    const intl = util.intl;
+    stringResult = intl.string(util.t["5dX4UM"]);
   }
   const modalDismissGuardRefreshControl = useModalDismissGuardRefreshControl.useModalDismissGuardRefreshControl();
   if (inActionSheet) {
-    let BottomSheetScrollView = tmp4(6627).BottomSheetScrollView;
+    let BottomSheetScrollView = BottomSheetModal.BottomSheetScrollView;
   } else {
     BottomSheetScrollView = ScrollView;
   }

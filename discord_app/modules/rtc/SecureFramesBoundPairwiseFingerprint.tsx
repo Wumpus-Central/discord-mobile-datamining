@@ -4,7 +4,7 @@ import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
 import RTCConnectionStore from "../../stores/RTCConnectionStore.tsx";
 
 const require = fn;
-let closure_8 = async function _computeBoundPairwiseFingerprint(arg0, value) {
+let closure_8 = async function _computeBoundPairwiseFingerprint(arg0) {
   if (c3 === 2) {
     c3 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -65,7 +65,7 @@ let closure_8 = async function _computeBoundPairwiseFingerprint(arg0, value) {
                     const _Uint8Array2 = Uint8Array;
                     const uint8Array3 = new Uint8Array(secureFramesRosterMapEntry);
                     const pairwiseFingerprint = obj4.generatePairwiseFingerprint(
-                      tmp,
+                      closure_6,
                       uint8Array2,
                       id,
                       uint8Array3,
@@ -74,19 +74,19 @@ let closure_8 = async function _computeBoundPairwiseFingerprint(arg0, value) {
                     const nextPromise = pairwiseFingerprint.then((result) =>
                       closure_1_1(dependencyMap[4]).fromByteArray(result),
                     );
-                    if (obj3.size >= 16) {
-                      value = obj3.keys().next().value;
+                    if (map.size >= 16) {
+                      value = map.keys().next().value;
                       if (null != value) {
-                        obj3.delete(value);
+                        map.delete(value);
                       }
-                      const iter = obj3.keys();
+                      const iter = map.keys();
                     }
-                    const result = obj3.set(joined, nextPromise);
+                    const result = map.set(joined, nextPromise);
                     nextPromise.catch(() => map.delete(joined));
                     return nextPromise;
                   }
                   const obj2 = closure_1(206);
-                })(id, secureFramesRosterMapEntry1, tmp18, secureFramesRosterMapEntry),
+                })(id, secureFramesRosterMapEntry1, closure_0, secureFramesRosterMapEntry),
                 done: false,
               };
               return obj1;

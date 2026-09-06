@@ -156,7 +156,7 @@ export default function IntegrationTypeSelector(application) {
         ({ label: obj.label, subLabel: obj.subLabel } = icon);
         let tmpResult;
         if (icon.beta) {
-          tmpResult = tmp(application(memo1[15]).BetaTag, {});
+          tmpResult = closure_1_5(application(memo1[15]).BetaTag, {});
         }
         obj.trailing = tmpResult;
         return closure_1_5(application(memo1[14]).TableRow, obj, icon.type);

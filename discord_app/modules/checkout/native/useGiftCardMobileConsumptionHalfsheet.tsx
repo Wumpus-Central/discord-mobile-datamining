@@ -166,12 +166,11 @@ export const useGiftCardMobileConsumptionHalfsheet = function useGiftCardMobileC
         ref.current(constants.USER_DISMISS);
       }
     }
-    if (first === enabled(closure_2[8]).DismissibleContent.GIFT_CARD_MOBILE_CONSUMPTION_UNAVAILABLE_HALFSHEET) {
-      const subscription = stateFromStores(tmp[11]).subscribe("HIDE_ACTION_SHEET", handleHide);
+    if (first === enabled(dependencyMap[8]).DismissibleContent.GIFT_CARD_MOBILE_CONSUMPTION_UNAVAILABLE_HALFSHEET) {
+      const subscription = stateFromStores(dependencyMap[11]).subscribe("HIDE_ACTION_SHEET", handleHide);
       return () => {
         DispatcherDefault.unsubscribe("HIDE_ACTION_SHEET", handleHide);
       };
     }
-    tmp = closure_2;
   }, items11);
 };

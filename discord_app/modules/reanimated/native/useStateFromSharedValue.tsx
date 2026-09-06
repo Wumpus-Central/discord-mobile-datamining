@@ -78,16 +78,16 @@ export default function useStateFromSharedValue(arg0) {
   }, items);
   return tmp[0];
 }
-export const useDerivedStateFromSharedValue = function useDerivedStateFromSharedValue(activeIndex, set) {
+export const useDerivedStateFromSharedValue = function useDerivedStateFromSharedValue(activeIndex, current) {
   [tmp2, _slicedToArray] = _slicedToArray(
     noop.useState(() => callback(activeIndex.get(), undefined)),
     2,
   );
-  noop = noop.useRef(set);
+  noop = noop.useRef(current);
   const layoutEffect = noop.useLayoutEffect(() => {
     closure_3.current = current;
   });
-  const current = noop.useCallback((arg0) => {
+  current = noop.useCallback((arg0) => {
     closure_0 = arg0;
     return closure_2((current) => ref.current(closure_0, current));
   }, []);

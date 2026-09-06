@@ -42,10 +42,9 @@ export default function GuildOnboardingModal(guildId) {
       let hasItem = features.has(constants.MEMBER_VERIFICATION_GATE_ENABLED);
       if (hasItem) {
         const features2 = guild.features;
-        hasItem = !features2.has(tmp3.MEMBER_VERIFICATION_MANUAL_APPROVAL);
+        hasItem = !features2.has(constants.MEMBER_VERIFICATION_MANUAL_APPROVAL);
       }
       tmp2 = hasItem;
-      tmp3 = constants;
     }
     return tmp2;
   });
@@ -94,4 +93,5 @@ export default function GuildOnboardingModal(guildId) {
     return jsx(tmp(tmp2[19]).Navigator, { screens: tmp8, initialRouteName: PROMPT, headerBackTitle: null });
   }
   PROMPT = callback1.PROMPT;
+  const obj3 = guildId(onClose[16]);
 }

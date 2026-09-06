@@ -168,7 +168,7 @@ export default function AnimatedEffectEmoji(onComplete) {
     obj2.surrogates = emoji.name;
     obj1.children = <Emoji url={null} surrogates={null} />;
     obj.children = <View style={tmp.voiceChannelEffectEmoji}>{null}</View>;
-    tmp9Result = tmp9(sentAt(tmp3[10]).View, obj);
+    tmp9Result = jsx(sentAt(tmp3[10]).View, { style: null, children: null });
   }
   return tmp9Result;
 }

@@ -2,7 +2,9 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
 import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
+import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
+import ArrowLargeLeftIcon from "../../../../design/components/Icon/native/redesign/generated/ArrowLargeLeftIcon.tsx";
 import SearchField from "../../../../design/components/TextField/native/SearchField.native.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -43,7 +45,7 @@ export default noop.forwardRef((onClose, ref) => {
   let obj1 = PlatformUtils;
   if (obj1.isAndroid()) {
     obj = { style: tmp2.cancelIcon };
-    let tmp3Result = tmp3(tmp4(5628).ArrowLargeLeftIcon, obj);
+    let tmp3Result = React3(ArrowLargeLeftIcon.ArrowLargeLeftIcon, obj);
   } else {
     obj = {
       style: tmp2.cancelText,
@@ -52,14 +54,14 @@ export default noop.forwardRef((onClose, ref) => {
       color: "mobile-text-heading-primary",
       children: null,
     };
-    const intl2 = tmp4(1114).intl;
-    obj.children = intl2.string(tmp4(1114).t["ETE/oC"]);
-    tmp3Result = tmp3(tmp4(4556).Text, obj);
+    const intl2 = util.intl;
+    obj.children = intl2.string(util.t["ETE/oC"]);
+    tmp3Result = React3(Text_Text.Text, obj);
   }
   obj.children = tmp3Result;
-  tmp3Result = tmp3(Pressables.PressableOpacity, obj);
+  tmp3Result = React3(Pressables.PressableOpacity, obj);
   obj1 = { style: tmp2.container, children: null };
-  let tmp4Result = tmp4(1115);
+  let tmp4Result = PlatformUtils;
   let tmp10 = null;
   if (tmp4Result.isAndroid()) {
     tmp10 = tmp3Result;
@@ -71,7 +73,7 @@ export default noop.forwardRef((onClose, ref) => {
   obj3.children = React3(SearchField.SearchField, { size: "md", isRound: true, ref });
   obj2.children = React3(React2, obj3);
   items[1] = React3(React2, obj2);
-  tmp4Result = tmp4(1115);
+  tmp4Result = PlatformUtils;
   let tmp12 = null;
   if (!tmp4Result.isAndroid()) {
     tmp12 = tmp3Result;

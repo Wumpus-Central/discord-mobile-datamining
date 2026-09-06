@@ -1,4 +1,7 @@
 // discord_app/modules/channel/native/components/CreateChannelTypeDescription.tsx
+import util from "../../../../intl/index.native.tsx";
+import Text_Text from "../../../../design/components/Text/native/Text.tsx";
+import GuildProfileVisibility from "../../../../../discord_common/js/shared/shared-constants/GuildProfileVisibility.tsx";
 import useGuildProfile from "../../../guild_profile/hooks/useGuildProfile.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -18,7 +21,7 @@ export default function CreateChannelTypeDescription(guildId) {
   ({ guildProfile, fetchGuildProfile } = guildProfile);
   let hasItem = null != guildProfile;
   if (hasItem) {
-    const VISIBLE = tmp(5551).GuildProfileVisibilitySets.VISIBLE;
+    const VISIBLE = GuildProfileVisibility.GuildProfileVisibilitySets.VISIBLE;
     hasItem = VISIBLE.has(guildProfile.visibility);
   }
   let tmp6 = !tmp5;
@@ -36,9 +39,9 @@ export default function CreateChannelTypeDescription(guildId) {
   if (tmp6) {
     obj = { children: null };
     obj = { variant: "text-sm/normal", color: "text-subtle", children: null };
-    const intl = tmp(1114).intl;
-    obj.children = intl.string(tmp(1114).t["2Ab4Id"]);
-    obj.children = jsx(tmp(4556).Text, { variant: "text-sm/normal", color: "text-subtle", children: null });
+    const intl = util.intl;
+    obj.children = intl.string(util.t["2Ab4Id"]);
+    obj.children = jsx(Text_Text.Text, { variant: "text-sm/normal", color: "text-subtle", children: null });
     tmp9 = (
       <View variant="text-sm/normal" color="text-subtle">
         {null}

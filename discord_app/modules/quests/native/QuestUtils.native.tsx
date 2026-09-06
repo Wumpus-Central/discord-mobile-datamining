@@ -12,8 +12,12 @@ import QuestTypes from "../QuestTypes.tsx";
 import openUserSettings from "../../user_settings/core/native/openUserSettings.tsx";
 import getQuestLogger from "../lib/getQuestLogger.tsx";
 import utils_QuestUtils from "../utils/QuestUtils.tsx";
+import GameControllerIcon from "../../../design/components/Icon/native/redesign/generated/GameControllerIcon.tsx";
 import QuestActionCreators from "../QuestActionCreators.tsx";
 import QuestRewardUtils from "../utils/QuestRewardUtils.tsx";
+import QuestOrbsRewardModal from "QuestOrbsRewardModal.native.tsx";
+import openQuestCollectibleRewardModal from "openQuestCollectibleRewardModal.tsx";
+import CloudIcon from "../../../design/components/Icon/native/redesign/generated/CloudIcon.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import QuestHomeNavigationStore from "../QuestHomeNavigationStore.tsx";
@@ -34,21 +38,21 @@ function viewReward(quest) {
   let obj = QuestRewardUtils;
   if (obj.hasQuestRewardCode(quest.config)) {
     obj = { questId: quest.id, questContent, questContentPosition, sourceQuestContent };
-    ActionSheetActionCreatorsDefault.openLazy(tmp(1896)(11772, dependencyMap.paths), timestampProducer, obj);
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(11772, dependencyMap.paths), timestampProducer, obj);
   } else {
-    let tmpResult = tmp(11290);
+    let tmpResult = QuestRewardUtils;
     if (tmpResult.hasVirtualCurrencyReward(quest.config)) {
-      tmpResult = tmp(11779);
+      tmpResult = QuestOrbsRewardModal;
       obj = { quest };
       const result = tmpResult.openQuestOrbsRewardModal(obj);
     } else {
       const obj1 = { quest, product, onSuccess };
-      const result1 = tmp(11786).openQuestCollectibleRewardModal(obj1);
-      const tmpResult1 = tmp(11786);
+      const result1 = openQuestCollectibleRewardModal.openQuestCollectibleRewardModal(obj1);
+      const tmpResult1 = openQuestCollectibleRewardModal;
     }
   }
 }
-let closure_15 = async function _handleRewardClaim(arg0, value) {
+let closure_15 = async function _handleRewardClaim(arg0) {
   if (c6 === 2) {
     c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -128,7 +132,7 @@ let closure_15 = async function _handleRewardClaim(arg0, value) {
     }
   }
 };
-let closure_16 = async function _handleRewardClaimThenView(arg0, value) {
+let closure_16 = async function _handleRewardClaimThenView(arg0) {
   if (c4 === 2) {
     c4 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -378,18 +382,17 @@ export const getPrimaryCtaIcon = function getPrimaryCtaIcon(quest, arg1) {
       }
       obj = { marginRight: num };
       const features2 = quest.config.features;
-      if (features2.includes(tmp3.CLOUD_GAMING_ACTIVITY)) {
+      if (features2.includes(constants.CLOUD_GAMING_ACTIVITY)) {
         obj = { size: "sm", style: null, color: null };
         obj.style = obj;
         obj.color = nativeDefault.colors.WHITE;
-        let tmp5Result = tmp5(tmp(11787).CloudIcon, obj);
+        let tmp5Result = closure_1_10(CloudIcon.CloudIcon, obj);
       } else {
         const obj1 = { size: "sm", style: obj, color: nativeDefault.colors.WHITE };
-        tmp5Result = tmp5(tmp(9223).GameControllerIcon, obj1);
+        tmp5Result = closure_1_10(GameControllerIcon.GameControllerIcon, obj1);
       }
       return tmp5Result;
     }
-    tmp3 = constants;
   }
 };
 export const showQuestUnavailableAlert = function showQuestUnavailableAlert() {

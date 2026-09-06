@@ -14,9 +14,8 @@ prototype["initialize"] = function initialize(arg0) {
     const _Object = Object;
     const values = Object.values(Soundpacks);
     if (!values.includes(arg0.soundpack)) {
-      obj.soundpack = tmp2.CLASSIC;
+      obj.soundpack = Soundpacks.CLASSIC;
     }
-    tmp2 = Soundpacks;
   }
 };
 prototype["getState"] = function getState() {

@@ -84,11 +84,11 @@ export default function _default(message) {
     tmp4 = obj;
   }
   const tmp6 = _slicedToArray(first1.useState(tmp4), 2);
-  const customTheme = tmp6[0];
+  const first = tmp6[0];
   _slicedToArray = tmp6[1];
   let baseTheme;
   if (undefined !== sharedClientTheme) {
-    let obj2 = sharedClientTheme(customTheme[24]);
+    let obj2 = sharedClientTheme(first[24]);
     baseTheme = obj2.getBaseTheme(sharedClientTheme.base_theme);
   }
   let tmp5Result = tmp5(obj.useState(baseTheme), 2);
@@ -103,21 +103,21 @@ export default function _default(message) {
     let tmp4;
     if (undefined !== sharedClientTheme) {
       const obj = { colors: null, gradientColorStops: null, gradientAngle: null, baseMix: null };
-      const colors = tmp2.colors;
+      const colors = sharedClientTheme.colors;
       obj.colors = colors.map((item) => "#" + item);
       obj.gradientColorStops = [];
-      ({ gradient_angle: obj.gradientAngle, base_mix: obj.baseMix } = tmp2);
+      ({ gradient_angle: obj.gradientAngle, base_mix: obj.baseMix } = sharedClientTheme);
       tmp4 = obj;
     }
     closure_3(tmp4);
     let baseTheme;
     if (undefined !== sharedClientTheme) {
-      baseTheme = ClientThemesUtils.getBaseTheme(tmp2.base_theme);
+      baseTheme = ClientThemesUtils.getBaseTheme(sharedClientTheme.base_theme);
     }
     closure_5(baseTheme);
     AnalyticsUtilsDefault.track(AnalyticEvents.CUSTOM_THEME_SHARE_PREVIEWED, {});
   }, items);
-  const items1 = [customTheme, first1];
+  const items1 = [first, first1];
   closure_5(() => {
     let tmp2 = undefined !== customTheme;
     if (tmp2) {
@@ -147,20 +147,20 @@ export default function _default(message) {
   );
   obj = { ref: tmp2, backdropOpacity: 0, children: null };
   const obj1 = { title: null };
-  const intl = sharedClientTheme(customTheme[14]).intl;
+  const intl = sharedClientTheme(first[14]).intl;
   obj1.title = intl.string(require("../../intl/ClientThemes.messages.js")["3ej1LT"]);
-  const items4 = [closure_12(sharedClientTheme(customTheme[13]).BottomSheetTitleHeader, obj1), ,];
+  const items4 = [closure_12(sharedClientTheme(first[13]).BottomSheetTitleHeader, obj1), ,];
   obj2 = { style: tmp.contentWrapper, children: null };
   let obj3 = { variant: "heading-md/medium", style: tmp.centeredText, children: null };
-  const intl2 = sharedClientTheme(customTheme[14]).intl;
+  const intl2 = sharedClientTheme(first[14]).intl;
   obj3.children = intl2.string(require("../../intl/ClientThemes.messages.js").qZMUoL);
-  obj2.children = closure_12(sharedClientTheme(customTheme[16]).Text, obj3);
+  obj2.children = closure_12(sharedClientTheme(first[16]).Text, obj3);
   items4[1] = closure_12(ref, obj2);
   let obj4 = { style: tmp.ctaContainer, children: null };
   const items5 = [
     closure_12(PrimaryActionButton, {
       onPressApply() {
-        let tmp2 = undefined !== first;
+        let tmp2 = undefined !== customUserThemeSettings;
         if (tmp2) {
           tmp2 = undefined !== first1;
         }
@@ -170,8 +170,8 @@ export default function _default(message) {
         if (tmp2) {
           closure_7(true);
           let obj = CustomThemeMobileActionCreators;
-          obj.updateCustomTheme(tmp, first1);
-          obj = { customUserThemeSettings: tmp, theme: first1 };
+          obj.updateCustomTheme(customUserThemeSettings, first1);
+          obj = { customUserThemeSettings, theme: first1 };
           UserSettingsActionCreators.saveClientTheme(obj);
           CustomThemeMobileActionCreators.clearPreviewTheme();
           AnalyticsUtilsDefault.track(AnalyticEvents.CUSTOM_THEME_SHARE_APPLIED, {});
@@ -182,8 +182,8 @@ export default function _default(message) {
     }),
   ];
   const obj6 = { text: null, onPress: null, variant: "secondary" };
-  const intl3 = sharedClientTheme(customTheme[14]).intl;
-  obj6.text = intl3.string(sharedClientTheme(customTheme[14]).t["13/7kX"]);
+  const intl3 = sharedClientTheme(first[14]).intl;
+  obj6.text = intl3.string(sharedClientTheme(first[14]).t["13/7kX"]);
   obj6.onPress = function onPress() {
     if (null !== ref.current) {
       CustomThemeMobileActionCreators.clearPreviewTheme();
@@ -192,9 +192,9 @@ export default function _default(message) {
       current.closeActionSheet();
     }
   };
-  items5[1] = closure_12(sharedClientTheme(customTheme[18]).Button, obj6);
+  items5[1] = closure_12(sharedClientTheme(first[18]).Button, obj6);
   obj4.children = items5;
   items4[2] = closure_13(ref, obj4);
   obj.children = items4;
-  return closure_13(sharedClientTheme(customTheme[12]).BottomSheet, obj);
+  return closure_13(sharedClientTheme(first[12]).BottomSheet, obj);
 }

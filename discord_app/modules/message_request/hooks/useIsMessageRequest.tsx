@@ -18,9 +18,9 @@ export const useIsEitherTypeOfMessageRequest = function useIsEitherTypeOfMessage
   return require("initialize").useStateFromStores(items, () => {
     let tmp2 = null != closure_0;
     if (tmp2) {
-      let isMessageRequestResult = MessageRequestStore.isMessageRequest(tmp);
+      let isMessageRequestResult = MessageRequestStore.isMessageRequest(closure_0);
       if (!isMessageRequestResult) {
-        isMessageRequestResult = SpamMessageRequestStore.isSpam(tmp);
+        isMessageRequestResult = SpamMessageRequestStore.isSpam(closure_0);
       }
       tmp2 = isMessageRequestResult;
     }

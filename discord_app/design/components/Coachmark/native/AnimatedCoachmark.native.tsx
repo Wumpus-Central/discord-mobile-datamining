@@ -19,7 +19,7 @@ function renderTooltipItem(arg0, enterExitAnimatedStyles) {
     obj = {};
     const merged = Object.assign(arg0);
     obj.enterExitAnimatedStyles = enterExitAnimatedStyles;
-    tmpResult = tmp(Coachmark.CoachmarkContainer, obj);
+    tmpResult = jsx(Coachmark.CoachmarkContainer, {});
   }
   obj.children = tmpResult;
   return jsx(ReanimatedRexportDefault.View, { style: null, pointerEvents: "box-none", children: null });
@@ -48,7 +48,6 @@ export const AnimatedCoachmark = function AnimatedCoachmark(visible) {
   };
   let tmp8;
   const tmp2 = _slicedToArray(noop.useState(visible), 2);
-  const tmp6 = jsx;
   if (tmp3) {
     tmp8 = merged;
   }
@@ -56,5 +55,12 @@ export const AnimatedCoachmark = function AnimatedCoachmark(visible) {
   obj.entering = result;
   obj.exiting = result;
   obj.renderItem = renderTooltipItem;
-  return tmp6(AnimatedEnterExitItemDefault, obj);
+  return jsx(AnimatedEnterExitItemDefault, {
+    useReducedMotion: noop.useContext(AccessibilityPreferencesContext.AccessibilityPreferencesContext).reducedMotion
+      .enabled,
+    item: null,
+    entering: null,
+    exiting: null,
+    renderItem: null,
+  });
 };

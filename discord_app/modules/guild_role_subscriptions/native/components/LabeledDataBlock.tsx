@@ -1,6 +1,8 @@
 // discord_app/modules/guild_role_subscriptions/native/components/LabeledDataBlock.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import native from "../../../../design/void/native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
+import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import TextStyles from "../../../rebrand/native/TextStyles.tsx";
 
@@ -47,9 +49,9 @@ export default function LabeledDataBlock(arg0) {
   let tmp4Result = null != icon;
   if (tmp4Result) {
     const obj1 = { accessibilityRole: "button", onPress: onPressIcon, children: null };
-    const obj2 = { size: tmp5(1178).Icon.Sizes.SMALL, source: icon };
-    obj1.children = tmp4(tmp5(1178).Icon, obj2);
-    tmp4Result = tmp4(tmp5(5123).PressableOpacity, obj1);
+    const obj2 = { size: native.Icon.Sizes.SMALL, source: icon };
+    obj1.children = React3(native.Icon, obj2);
+    tmp4Result = React3(Pressables.PressableOpacity, obj1);
   }
   items1[1] = tmp4Result;
   obj.children = items1;
@@ -57,7 +59,7 @@ export default function LabeledDataBlock(arg0) {
   tmp4Result = children;
   if (typeof children === "string") {
     const obj3 = { style: tmp.data, children };
-    tmp4Result = tmp4(tmp5(1178).LegacyText, obj3);
+    tmp4Result = React3(native.LegacyText, obj3);
   }
   items2[1] = tmp4Result;
   obj.children = items2;

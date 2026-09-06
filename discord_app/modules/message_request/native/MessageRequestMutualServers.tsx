@@ -65,7 +65,7 @@ export default function MessageRequestMutualServers(textVariant) {
     tmp11Result = tmp7Result;
     if (length > 0) {
       const obj3 = { accessibilityRole: "button", onPress, children: tmp7Result };
-      tmp11Result = tmp11(tmp4(5123).PressableOpacity, obj3);
+      tmp11Result = closure_4(tmp4(5123).PressableOpacity, obj3);
     }
   }
   return tmp11Result;

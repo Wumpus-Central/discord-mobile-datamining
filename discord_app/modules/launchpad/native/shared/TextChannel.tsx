@@ -67,7 +67,6 @@ export default noop.memo(function TextChannel(subtitle) {
   let obj3 = channel(504);
   const items1 = [ChannelStore];
   const stateFromStores1 = obj3.useStateFromStores(items1, () => ChannelStore.getChannel(channel.parent_id));
-  const tmp9 = arr4(4713)(stateFromStores1);
   let tmp2Result = tmp2(7885);
   const unreadThreadsCountForParent = tmp2Result.useUnreadThreadsCountForParent(channel.guild_id, channel.id);
   let tmp12 = unread;
@@ -78,6 +77,7 @@ export default noop.memo(function TextChannel(subtitle) {
   const tmp8ResultResult = tmp8Result(channel, { unread: tmp12 });
   tmp2Result = tmp2(7329);
   const isChannelSpoilerGated = tmp2Result.useIsChannelSpoilerGated(channel);
+  const tmp9 = arr4(4713)(stateFromStores1);
   const fontScale = channel(4982).useFontScale();
   const tmp2Result1 = channel(4982);
   const items2 = [LocaleStore];
@@ -120,7 +120,6 @@ export default noop.memo(function TextChannel(subtitle) {
     obj.underlayColor = tmp17;
     obj1 = { color: tmp17 };
     obj.androidRippleConfig = getThemedRippleConfig(obj1);
-    const tmp26 = closure_11;
     const tmp2Result3 = tmp2(9546);
     const merged = Object.assign(tmp2(16989).useTextChannelPressEvents(channel, flag2));
     const tmp2Result4 = tmp2(16989);
@@ -202,7 +201,7 @@ export default noop.memo(function TextChannel(subtitle) {
     obj4.end = tmp41;
     items5[1] = tmp8Result1(obj4);
     obj.children = items5;
-    return tmp8Result(tmp26(tmp2(5123).PressableHighlight, obj));
+    return tmp8Result(closure_11(tmp2(5123).PressableHighlight, obj));
   }
   const tmp18 = arr4(5007)(channel.id);
   result = channel(16988).renderChannelSubtitle({
@@ -211,4 +210,5 @@ export default noop.memo(function TextChannel(subtitle) {
     channelId: channel.id,
     guildId: channel.guild_id,
   });
+  const tmp2Result6 = channel(16988);
 });

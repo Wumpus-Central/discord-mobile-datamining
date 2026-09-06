@@ -2,6 +2,7 @@
 import PlatformUtils from "../../../utils/PlatformUtils.tsx";
 import QuestDataUtils from "../../quests/utils/QuestDataUtils.tsx";
 import apexExperiment from "../../quests/experiments/index.tsx";
+import IosAttributionNativeModule from "IosAttributionNativeModule.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/ads/ios_attribution/IosAttributionEligibility.tsx");
@@ -31,14 +32,14 @@ export const getIosAttributionClickFramework = function getIosAttributionClickFr
   const IosAttributionFeatureGate = apexExperiment.IosAttributionFeatureGate;
   let enabled = IosAttributionFeatureGate.getConfig({ location: "quest_ios_attribution" }).enabled;
   if (enabled) {
-    let tmpResult = tmp(1115);
+    let tmpResult = PlatformUtils;
     enabled = tmpResult.isIOS();
   }
   let activeIosAttributionFramework = null;
   if (enabled) {
     activeIosAttributionFramework = null;
     if (arg0) {
-      tmpResult = tmp(7699);
+      tmpResult = QuestDataUtils;
       const adContext = tmpResult.getAdContext(sourceQuestContent, adContentId);
       let prop;
       if (adContext != null) {
@@ -46,8 +47,8 @@ export const getIosAttributionClickFramework = function getIosAttributionClickFr
       }
       activeIosAttributionFramework = null;
       if (true === prop) {
-        activeIosAttributionFramework = tmp(11491).getActiveIosAttributionFramework();
-        const tmpResult1 = tmp(11491);
+        activeIosAttributionFramework = IosAttributionNativeModule.getActiveIosAttributionFramework();
+        const tmpResult1 = IosAttributionNativeModule;
       }
     }
   }

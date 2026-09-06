@@ -40,10 +40,10 @@ let closure_13 = createStyles.createStyles((arg0, arg1, color, borderColor) => {
   const space = nativeDefault.space;
   if (isIOSResult) {
     let PX_24 = space.PX_24;
-    let tmp7 = tmp5;
+    let tmp7 = importDefault;
   } else {
     PX_24 = space.PX_4 + arg0;
-    tmp7 = tmp5;
+    tmp7 = importDefault;
   }
   let BACKGROUND_SURFACE_HIGH = arg1;
   const obj1 = {
@@ -99,10 +99,10 @@ export default noop.memo((navigateToPremium) => {
     user: stateFromStores,
     displayProfile: navigateToPremium(gradientSecondaryBackground[14])(id),
   }));
-  let tmpResult = tmp(tmp2[16]);
+  let tmpResult = navigateToSettings(tmp2[16]);
   const userProfileColors = tmpResult.useUserProfileColors({ theme, primaryColor, secondaryColor });
   ({ containerBorderColor, gradientSecondaryBackground } = userProfileColors);
-  tmpResult = tmp(tmp2[17]);
+  tmpResult = navigateToSettings(tmp2[17]);
   if (!tmpResult.isThemeLight(theme)) {
     containerBackground = userProfileColors.containerBackground;
   } else {
@@ -119,11 +119,18 @@ export default noop.memo((navigateToPremium) => {
       let hexResult1 = null;
       if (null != containerBackground) {
         const obj = _modDef672;
-        const obj2 = _modDef672(tmp);
-        const hexResult = _modDef672(tmp).hex("rgb");
-        const obj3 = _modDef672(tmp);
-        hexResult1 = obj.mix(gradientSecondaryBackground, hexResult, _modDef672(tmp).alpha(), "rgb").hex("rgb");
-        const mixResult = obj.mix(gradientSecondaryBackground, hexResult, _modDef672(tmp).alpha(), "rgb");
+        const obj2 = _modDef672(containerBackground);
+        const hexResult = _modDef672(containerBackground).hex("rgb");
+        const obj3 = _modDef672(containerBackground);
+        hexResult1 = obj
+          .mix(gradientSecondaryBackground, hexResult, _modDef672(containerBackground).alpha(), "rgb")
+          .hex("rgb");
+        const mixResult = obj.mix(
+          gradientSecondaryBackground,
+          hexResult,
+          _modDef672(containerBackground).alpha(),
+          "rgb",
+        );
       }
       return hexResult1;
     }, items1),
@@ -140,11 +147,10 @@ export default noop.memo((navigateToPremium) => {
   const tmpResult1 = navigateToSettings(gradientSecondaryBackground[19]);
   let tmp13 = navigateToSettings(gradientSecondaryBackground[9]).useUnseenOutboundPromotions().length > 0;
   const tmpResult2 = navigateToSettings(gradientSecondaryBackground[9]);
-  const tmp14 = closure_9;
   const tmpResult3 = navigateToSettings(gradientSecondaryBackground[10]);
   const tmp15 = null != navigateToSettings(gradientSecondaryBackground[10]).useTrialOffer(closure_9);
   let result = navigateToSettings(gradientSecondaryBackground[11]).useIsDismissibleContentDismissed_UNSAFE(
-    tmp(tmp2[12]).DismissibleContent.TRIAL_FOR_ALL_2026_SETTINGS_BADGE,
+    navigateToSettings(tmp2[12]).DismissibleContent.TRIAL_FOR_ALL_2026_SETTINGS_BADGE,
   );
   let tmp17 = !result;
   if (!result) {
@@ -165,7 +171,7 @@ export default noop.memo((navigateToPremium) => {
   ).useMobileReferralSubscriberProfileEntrypointButtonConfig("YouBannerDecorations");
   ({ enabled, showReferralNotificationDot } = mobileReferralSubscriberProfileEntrypointButtonConfig);
   const tmpResult6 = navigateToSettings(gradientSecondaryBackground[22]);
-  const tmp21 = null != navigateToSettings(gradientSecondaryBackground[10]).useTrialOffer(tmp14);
+  const tmp21 = null != navigateToSettings(gradientSecondaryBackground[10]).useTrialOffer(closure_9);
   currentUser = tmp21;
   const items2 = [tmp13, navigateToSettings, tmp21];
   const items3 = [navigateToPremium];
@@ -175,15 +181,15 @@ export default noop.memo((navigateToPremium) => {
     navigateToSettings();
     let tmp5 = closure_7;
     if (closure_7) {
-      let tmpResult = tmp(4380);
+      let tmpResult = DismissibleContentUnsafeUtils;
       tmp5 = !tmpResult.UNSAFE_isDismissibleContentDismissed(
-        tmp(1943).DismissibleContent.TRIAL_FOR_ALL_2026_SETTINGS_BADGE,
+        dismissible_content.DismissibleContent.TRIAL_FOR_ALL_2026_SETTINGS_BADGE,
       );
     }
     if (tmp5) {
-      tmpResult = tmp(4380);
+      tmpResult = DismissibleContentUnsafeUtils;
       const result1 = tmpResult.UNSAFE_markDismissibleContentAsDismissed(
-        tmp(1943).DismissibleContent.TRIAL_FOR_ALL_2026_SETTINGS_BADGE,
+        dismissible_content.DismissibleContent.TRIAL_FOR_ALL_2026_SETTINGS_BADGE,
       );
     }
   }, items2);
@@ -196,9 +202,9 @@ export default noop.memo((navigateToPremium) => {
   if (isEligibleForQuests) {
     obj = { IconComponent: null, accessibilityLabel: null, onPress: null, showRedDot: null };
     let tmp4Result = tmp4(tmp2[26]);
-    obj.IconComponent = tmp(tmp2[27]).QuestsIcon;
-    const intl = tmp(tmp2[28]).intl;
-    obj.accessibilityLabel = intl.string(tmp(tmp2[28]).t.JALI2K);
+    obj.IconComponent = navigateToSettings(tmp2[27]).QuestsIcon;
+    const intl = navigateToSettings(tmp2[28]).intl;
+    obj.accessibilityLabel = intl.string(navigateToSettings(tmp2[28]).t.JALI2K);
     obj.onPress = tmp24;
     obj.showRedDot = showBadge;
     tmp25 = closure_10(tmp4Result, obj, "quests");
@@ -212,32 +218,32 @@ export default noop.memo((navigateToPremium) => {
     let tmp28Result = null;
     if (enabled) {
       obj = { onPress: callback1, showReferralNotificationDot };
-      tmp28Result = tmp28(tmp4(tmp2[30]), obj, "nitro-subscriber");
+      tmp28Result = closure_10(tmp4(tmp2[30]), obj, "nitro-subscriber");
     }
   } else {
     const obj1 = { IconComponent: null, accessibilityLabel: null, label: null, onPress: null };
     tmp4Result = tmp4(tmp2[26]);
-    obj1.IconComponent = tmp(tmp2[31]).NitroWheelIcon;
-    const intl2 = tmp(tmp2[28]).intl;
-    obj1.accessibilityLabel = intl2.string(tmp(tmp2[28]).t.Ipxkog);
-    const intl3 = tmp(tmp2[28]).intl;
-    obj1.label = intl3.string(tmp(tmp2[28]).t.Ipxkog);
+    obj1.IconComponent = navigateToSettings(tmp2[31]).NitroWheelIcon;
+    const intl2 = navigateToSettings(tmp2[28]).intl;
+    obj1.accessibilityLabel = intl2.string(navigateToSettings(tmp2[28]).t.Ipxkog);
+    const intl3 = navigateToSettings(tmp2[28]).intl;
+    obj1.label = intl3.string(navigateToSettings(tmp2[28]).t.Ipxkog);
     obj1.onPress = callback1;
-    tmp28Result = tmp28(tmp4Result, obj1, "nitro");
+    tmp28Result = closure_10(tmp4Result, obj1, "nitro");
   }
   items5[2] = tmp28Result;
   let obj2 = { ref: settingsButtonRef, IconComponent: null, accessibilityLabel: null, onPress: null, showRedDot: null };
   const tmpResult7 = navigateToSettings(gradientSecondaryBackground[10]);
   obj2.IconComponent = navigateToSettings(gradientSecondaryBackground[32]).SettingsIcon;
-  const intl4 = tmp(tmp2[28]).intl;
+  const intl4 = navigateToSettings(tmp2[28]).intl;
   obj2.accessibilityLabel = intl4.string(navigateToSettings(gradientSecondaryBackground[28]).t["3D5yo/"]);
   obj2.onPress = callback;
   obj2.showRedDot = tmp13;
   items5[3] = closure_10(navigateToPremium(gradientSecondaryBackground[26]), obj2, "settings");
   const found = items5.filter((item) => null != item);
   if (isLoading) {
-    obj3 = { style: tmp11.loading, children: tmp28(showBadge, { size: "small" }) };
-    isLoading = tmp28(isBadged, obj3);
+    obj3 = { style: tmp11.loading, children: closure_10(showBadge, { size: "small" }) };
+    isLoading = closure_10(isBadged, obj3);
   }
   let obj4 = { children: null };
   const items6 = [

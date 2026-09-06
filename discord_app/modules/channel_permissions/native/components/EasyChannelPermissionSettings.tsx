@@ -35,7 +35,7 @@ function ChannelPermissionSettingsBasicView(channel) {
     }
     return applyArgumentsResult;
   }
-  closure_7 = async function _togglePrivateChannel(arg0, value) {
+  closure_7 = async function _togglePrivateChannel() {
     if (dependencyMap === 2) {
       dependencyMap = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -118,7 +118,7 @@ function ChannelPermissionSettingsBasicView(channel) {
       }
     }
   };
-  closure_8 = async function _onPrivateChannelSwitchChange(arg0, value) {
+  closure_8 = async function _onPrivateChannelSwitchChange() {
     if (dependencyMap === 2) {
       dependencyMap = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -251,7 +251,7 @@ function ChannelPermissionSettingsBasicView(channel) {
     if (null != guild) {
       if (null != sortedGuildRoles) {
         const obj = ChannelPermissionsUtilsAll;
-        const existingRolesRows = obj.getExistingRolesRows(tmp, tmp2, channel, channel.accessPermissions);
+        const existingRolesRows = obj.getExistingRolesRows(guild, sortedGuildRoles, channel, channel.accessPermissions);
       }
       return [];
     }
@@ -326,8 +326,8 @@ function ChannelPermissionSettingsBasicView(channel) {
         obj5 = { messageType: tmp2(tmp3[31]).HelpMessageTypes.WARNING, children: null };
         let intl4 = tmp2(tmp3[23]).intl;
         obj5.children = intl4.string(tmp2(tmp3[23]).t["5f3HIC"]);
-        obj4.children = tmp25(tmp2(tmp3[31]).HelpMessage, obj5);
-        tmp25Result = tmp25(closure_7, obj4);
+        obj4.children = closure_23(tmp2(tmp3[31]).HelpMessage, obj5);
+        tmp25Result = closure_23(closure_7, obj4);
       }
       items3[1] = tmp25Result;
       tmp25Result = !canEveryoneRoleResult1;
@@ -342,8 +342,8 @@ function ChannelPermissionSettingsBasicView(channel) {
         obj7 = { messageType: tmp2(tmp3[31]).HelpMessageTypes.WARNING, children: null };
         const intl5 = tmp2(tmp3[23]).intl;
         obj7.children = intl5.string(tmp2(tmp3[23]).t.ZAk4Q9);
-        obj6.children = tmp25(tmp2(tmp3[31]).HelpMessage, obj7);
-        tmp25Result = tmp25(closure_7, obj6);
+        obj6.children = closure_23(tmp2(tmp3[31]).HelpMessage, obj7);
+        tmp25Result = closure_23(closure_7, obj6);
       }
       items3[2] = tmp25Result;
       const obj8 = { hasIcons: true, children: null };
@@ -435,14 +435,14 @@ export default function EasyChannelPermissionSettings(arg0) {
     isGuildStageVoiceResult = stateFromStores.isGuildStageVoice();
   }
   if (isGuildStageVoiceResult) {
-    let BASIC = tmp7.MODERATORS;
-    let tmp8 = tmp7;
+    let BASIC = constants.MODERATORS;
+    let tmp8 = constants;
   } else if (stateFromStores1) {
-    BASIC = tmp7.ADVANCED;
-    tmp8 = tmp7;
+    BASIC = constants.ADVANCED;
+    tmp8 = constants;
   } else {
-    BASIC = tmp7.BASIC;
-    tmp8 = tmp7;
+    BASIC = constants.BASIC;
+    tmp8 = constants;
   }
   const tmp9 = _slicedToArray(noop.useState(BASIC), 2);
   defaultIndex = tmp9[0];
@@ -470,17 +470,17 @@ export default function EasyChannelPermissionSettings(arg0) {
     }
     closure_4(arg0);
   }, items3);
-  const intl = tmp(tmp2[23]).intl;
+  const intl = require("util").intl;
   const items4 = [intl.string(require("util").t["Mw/UDN"])];
-  const intl2 = tmp(tmp2[23]).intl;
+  const intl2 = require("util").intl;
   items4[1] = intl2.string(require("util").t["0a6awf"]);
   let isGuildStageVoiceResult1;
   if (stateFromStores != null) {
     isGuildStageVoiceResult1 = stateFromStores.isGuildStageVoice();
   }
   if (true === isGuildStageVoiceResult1) {
-    const intl3 = tmp(tmp2[23]).intl;
-    items4.push(intl3.string(tmp(tmp2[23]).t.YIIUJ3));
+    const intl3 = require("util").intl;
+    items4.push(intl3.string(require("util").t.YIIUJ3));
   }
   obj = {
     pageWidth: 0,
@@ -508,23 +508,24 @@ export default function EasyChannelPermissionSettings(arg0) {
     let obj2 = { paddingHorizontal: origin(tmp2[16]).space.PX_12 };
     obj1.style = obj2;
     obj3 = { state: segmentedControlState };
-    obj1.children = closure_23(tmp(tmp2[38]).SegmentedControl, obj3);
+    obj1.children = closure_23(require("SegmentedControl").SegmentedControl, obj3);
     const items6 = [closure_23(closure_7, obj1)];
     obj4 = { style: tmp4.content, children: null };
     if (defaultIndex === tmp8.BASIC) {
       obj5 = { channel: stateFromStores, privateToggleState: tmp11[0], setPrivateToggleState: tmp12 };
-      let tmp21Result = tmp21(ChannelPermissionSettingsBasicView, obj5);
+      let tmp21Result = closure_23(ChannelPermissionSettingsBasicView, obj5);
     } else if (defaultIndex === tmp8.MODERATORS) {
       const obj6 = { channel: stateFromStores };
-      tmp21Result = tmp21(tmp22(tmp2[39]), obj6);
+      tmp21Result = closure_23(origin(tmp2[39]), obj6);
     } else {
       const obj7 = { channelId: stateFromStores.id };
-      tmp21Result = tmp21(tmp22(tmp2[40]), obj7);
+      tmp21Result = closure_23(origin(tmp2[40]), obj7);
     }
     obj4.children = tmp21Result;
-    obj4 = tmp21(closure_8, obj4);
+    obj4 = closure_23(closure_8, obj4);
     items6[1] = obj4;
     obj.children = items6;
     closure_24(closure_7, obj);
   }
+  const tmpResult = require("SegmentedControlState");
 }

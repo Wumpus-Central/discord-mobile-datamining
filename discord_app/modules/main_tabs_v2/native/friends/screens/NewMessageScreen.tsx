@@ -19,6 +19,8 @@ import GroupPlusIcon from "../../../../../design/components/Icon/native/redesign
 import NoResultsDefault from "../../shared_components/user_list/NoResults.tsx";
 import ChatViewDefault from "../../../../chat/native/ChatView.tsx";
 import getGroupDMRecipientLimitDefault from "../../../../group_dm/getGroupDMRecipientLimit.tsx";
+import GroupDMNitroCapExperimentDefault from "../../../../group_dm/GroupDMNitroCapExperiment.tsx";
+import NewMessageUserListDefault from "../../shared_components/user_list/NewMessageUserList.tsx";
 import GroupDMNitroUpsellBannerDefault from "../../../../group_dm/native/GroupDMNitroUpsellBanner.tsx";
 import useOnMessageSendDefault from "../../../../messages/useOnMessageSend.tsx";
 import asyncGeneratorStep from "../../../../../../_runtime/00005_asyncGeneratorStep.js";
@@ -47,10 +49,10 @@ function isPrivateChannelMatch(arr, channel) {
     return true;
   }
 }
-function findLocalMatchingPrivateChannelId(arg0) {
-  closure_0 = arg0;
-  if (1 === arg0.length) {
-    let dMFromUserId = ChannelStore.getDMFromUserId(arg0[0]);
+function findLocalMatchingPrivateChannelId(handleChannelCreate) {
+  closure_0 = handleChannelCreate;
+  if (1 === handleChannelCreate.length) {
+    let dMFromUserId = ChannelStore.getDMFromUserId(handleChannelCreate[0]);
     if (dMFromUserId == null) {
       dMFromUserId = null;
     }
@@ -78,7 +80,7 @@ function findLocalMatchingPrivateChannelId(arg0) {
     return null;
   }
 }
-let closure_23 = async function _findMatchingPrivateChannelId(arg0, value) {
+let closure_23 = async function _findMatchingPrivateChannelId(arg0) {
   if (c1 === 2) {
     c1 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -103,12 +105,12 @@ let closure_23 = async function _findMatchingPrivateChannelId(arg0, value) {
           obj = { value, done: true };
           return obj;
         } else {
-          const tmp19 = findLocalMatchingPrivateChannelId(closure_0);
+          const tmp19 = findLocalMatchingPrivateChannelId(length);
           if (null != tmp19) {
             c1 = 3;
             const obj1 = { value: tmp19, done: true };
             return obj1;
-          } else if (arr.length > 1) {
+          } else if (length.length > 1) {
             c1 = 3;
             return { value: null, done: true };
           } else {
@@ -117,7 +119,7 @@ let closure_23 = async function _findMatchingPrivateChannelId(arg0, value) {
             c2 = 2;
             c1 = 1;
             obj2 = { value: null, done: false };
-            obj2.value = obj2.getDMChannel(arr[0]);
+            obj2.value = obj2.getDMChannel(length[0]);
             return obj2;
           }
         }
@@ -180,21 +182,21 @@ function Header(recipientLimit) {
   } else {
     obj = { style: tmp.header, children: null };
     const obj1 = { title };
-    const items1 = [closure_17(tmp3(7863).GenericHeaderTitle, obj1)];
+    const items1 = [closure_17(numInGroup(7863).GenericHeaderTitle, obj1)];
     const obj2 = { style: tmp6, variant: "text-xs/medium", color: null, children: null };
     let str = "text-muted";
     if (0 === memo) {
       str = "text-feedback-critical";
     }
     obj2.color = str;
-    const intl = tmp3(1114).intl;
+    const intl = numInGroup(1114).intl;
     if (0 === memo) {
-      let stringResult = intl.string(tmp3(1114).t.yiQW1O);
+      let stringResult = intl.string(numInGroup(1114).t.yiQW1O);
     } else {
       const obj3 = { number: null };
       const _HermesInternal = HermesInternal;
       obj3.number = "" + memo;
-      stringResult = intl.formatToPlainString(tmp3(1114).t.HrSDPF, obj3);
+      stringResult = intl.formatToPlainString(numInGroup(1114).t.HrSDPF, obj3);
     }
     obj2.children = stringResult;
     items1[1] = closure_17(closure_19, obj2);
@@ -321,7 +323,7 @@ export default function NewMessageScreen(navigation) {
   const tmp6 = selectedUserIds(noop.useState(items1), 2);
   selectedUserIds = tmp6[0];
   noop = tmp6[1];
-  let tmp4 = useAnalyticsLocationsDefault;
+  const tmp4 = useAnalyticsLocationsDefault;
   [tmp8, c6] = selectedUserIds(obj.useState(false), 2);
   let tmp7 = selectedUserIds(obj.useState(false), 2);
   [tmp10, c7] = selectedUserIds(obj.useState(false), 2);
@@ -337,9 +339,8 @@ export default function NewMessageScreen(navigation) {
       if (channel.id !== handleChannelCreate(7221).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID) {
         if (channel.isPrivate()) {
           if (isPrivateChannelMatch(handleChannelCreate, channel)) {
-            dependencyMap(findLocalMatchingPrivateChannelId(tmp2));
+            dependencyMap(findLocalMatchingPrivateChannelId(handleChannelCreate));
           }
-          tmp2 = handleChannelCreate;
         }
       }
     }
@@ -371,7 +372,7 @@ export default function NewMessageScreen(navigation) {
   closure_129_3 = stateFromStores;
   const items4 = [selectedUserIds, stateFromStores];
   const effect1 = obj.useEffect(() => {
-    navigation = async function _doAction(arg0, value) {
+    const navigation = async function _doAction() {
       if (c3 === 2) {
         c3 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -426,7 +427,7 @@ export default function NewMessageScreen(navigation) {
           } else {
             closure_128_0 = value;
             if (null == closure_128_0) {
-              FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID = navigation(closure_2_2[17]).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID;
+              FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID = recipients(closure_2_2[17]).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID;
             } else {
               FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID = closure_128_0;
             }
@@ -442,10 +443,10 @@ export default function NewMessageScreen(navigation) {
     if (0 !== navigation.length) {
       let isPrivateResult;
       if (insets != null) {
-        isPrivateResult = obj.isPrivate();
+        isPrivateResult = insets.isPrivate();
       }
       if (isPrivateResult) {
-        isPrivateResult = isPrivateChannelMatch(tmp, obj);
+        isPrivateResult = isPrivateChannelMatch(tmp, insets);
       }
       if (!isPrivateResult) {
         (function doAction() {
@@ -466,16 +467,16 @@ export default function NewMessageScreen(navigation) {
   const items5 = [selectedUserIds, FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID];
   const effect2 = obj.useEffect(() => {
     if (null == source_page) {
-      if (null == findLocalMatchingPrivateChannelId(closure_0)) {
+      if (null == findLocalMatchingPrivateChannelId(recipients)) {
         let obj = { id: null, type: null, name: "", guild_id: null, recipients: null };
         let tmp7 = PrivateChannelRecord;
         obj.id = FakePlaceholderPrivateChannel.FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID;
-        if (1 === arr.length) {
+        if (1 === recipients.length) {
           let GROUP_DM = constants2.DM;
         } else {
           GROUP_DM = constants2.GROUP_DM;
         }
-        obj = { type: GROUP_DM, channel: null, recipients: arr };
+        obj = { type: GROUP_DM, channel: null, recipients };
         tmp7 = new tmp7(obj);
         obj.channel = tmp7;
         obj.dispatch(obj);
@@ -493,12 +494,12 @@ export default function NewMessageScreen(navigation) {
   const effect3 = obj.useEffect(() => {
     let tmp2 = null != insets;
     if (tmp2) {
-      tmp2 = tmp.id === FakePlaceholderPrivateChannel.FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID;
+      tmp2 = insets.id === FakePlaceholderPrivateChannel.FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID;
     }
     if (tmp2) {
       const obj = {
         type: "LOAD_MESSAGES_SUCCESS",
-        channelId: tmp.id,
+        channelId: insets.id,
         messages: [],
         isBefore: false,
         isAfter: false,
@@ -512,7 +513,7 @@ export default function NewMessageScreen(navigation) {
     }
   }, items6);
   const ref = obj.useRef(null);
-  let tmp2Result = tmp2(11594);
+  let tmp2Result = GroupDMNitroCapExperimentDefault;
   const config = tmp2Result.useConfig({ location: "NewMessageScreen" });
   const tmp20 = getGroupDMRecipientLimitDefault({ useNitroCapExperiment: true });
   relationshipCount = tmp20;
@@ -540,11 +541,12 @@ export default function NewMessageScreen(navigation) {
         let tmp2 = null;
         if (null !== FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID) {
           tmp2 = null;
-          if (tmp !== closure_0(closure_2[17]).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID) {
-            const obj = { channelId: tmp, screenIndex: "new-message" };
-            tmp2 = closure_2_17(source_page(tmp4[35]), obj);
+          if (
+            FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID !== closure_0(dependencyMap[17]).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID
+          ) {
+            const obj = { channelId: FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID, screenIndex: "new-message" };
+            tmp2 = closure_2_17(source_page(dependencyMap[35]), obj);
           }
-          tmp4 = closure_2;
         }
         return tmp2;
       },
@@ -555,7 +557,7 @@ export default function NewMessageScreen(navigation) {
     navigation.goBack();
     router_utils.transitionTo(value2.CHANNEL(guildId, arg0));
   }, items8);
-  _require = insets(function* (arg0, value) {
+  _require = insets(function* (arg0) {
     if (selectedUserIds === 2) {
       selectedUserIds = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -582,15 +584,15 @@ export default function NewMessageScreen(navigation) {
           } else {
             closure_1 = tmp3;
             closure_129_0 = undefined;
-            if (navigation instanceof c7) {
+            if (closure_0 instanceof c7) {
               source_page(tmp2[20]).track(callback.MESSAGE_COMPOSER_SEARCH_RESULT_CLICKED);
-              navigateToChannel(tmp50.id);
+              navigateToChannel(closure_0.id);
               selectedUserIds = 3;
               const obj1 = { value: undefined, done: true };
               return obj1;
-            } else if (friend.isFriend(tmp50.id)) {
+            } else if (friend.isFriend(closure_0.id)) {
               let arr = selectedUserIds;
-              const index = selectedUserIds.indexOf(tmp50.id);
+              const index = selectedUserIds.indexOf(closure_0.id);
               let items = [];
               HermesBuiltin.arraySpread(selectedUserIds, 0);
               if (-1 === index) {
@@ -598,14 +600,14 @@ export default function NewMessageScreen(navigation) {
                   if (enabled) {
                     source_page(tmp2[37])("NewMessageScreen");
                   } else {
-                    navigation(tmp2[38]).showMaxGroupMembers();
-                    const obj6 = navigation(tmp2[38]);
+                    closure_0(tmp2[38]).showMaxGroupMembers();
+                    const obj6 = closure_0(tmp2[38]);
                   }
                   source_page(tmp2[20]).track(callback.MESSAGE_COMPOSER_MAX_USERS_ADDED);
                   selectedUserIds = 3;
                   const obj7 = source_page(tmp2[20]);
                 } else {
-                  arr = items.push(tmp50.id);
+                  arr = items.push(closure_0.id);
                 }
               } else {
                 items.splice(index, 1);
@@ -618,7 +620,7 @@ export default function NewMessageScreen(navigation) {
               let obj3 = source_page(tmp2[16]);
               c3 = 1;
               selectedUserIds = 1;
-              const obj2 = { value: obj3.getOrEnsurePrivateChannel(tmp50.id), done: false };
+              const obj2 = { value: obj3.getOrEnsurePrivateChannel(closure_0.id), done: false };
               return obj2;
             }
           }
@@ -775,7 +777,7 @@ export default function NewMessageScreen(navigation) {
     defaultNoResultsFound: null,
     autoFocusSearch: true,
   };
-  tmp2Result = tmp2(12366);
+  tmp2Result = NewMessageUserListDefault;
   obj1.afterSearchContent = closure_17(GroupDMNitroUpsellBannerDefault, {
     location: "NewMessageScreen",
     memberCount: selectedUserIds.length + 1,

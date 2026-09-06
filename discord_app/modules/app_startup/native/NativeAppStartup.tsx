@@ -14,10 +14,10 @@ import SelectedChannelStore from "../../../stores/SelectedChannelStore.tsx";
 import AppStateStore from "../../../stores/native/AppStateStore.tsx";
 
 require = fn;
-function linkFromAppsFlyer(arg0) {
+function linkFromAppsFlyer(url) {
   try {
     const _URL = URL;
-    const uRL = new URL(arg0);
+    const uRL = new URL(url);
     const searchParams = uRL.searchParams;
     return "true" === searchParams.get("fromAppsFlyer");
   } catch (tmp8) {
@@ -36,7 +36,7 @@ function getInitialURLs() {
   }
   return applyArgumentsResult;
 }
-let closure_24 = async function _getInitialURLs(arg0, value) {
+let closure_24 = async function _getInitialURLs() {
   closure_0 = tmp2;
   closure_128_0 = [];
   DeepLinkManager = DeepLinkManager.DeepLinkManager;
@@ -125,8 +125,10 @@ function sharedInit() {
         const DeeplinkSource = url(handleNotification[14]).DeeplinkSource;
         obj.source = linkFromAppsFlyer(url) ? DeeplinkSource.AppsFlyer : DeeplinkSource.OS;
         closure_1(handleNotification[15])("handleURL", () => closure_1_0(paths[16])).default(obj, false);
+        const tmp5 = linkFromAppsFlyer(url);
       });
     }
+    obj = url(handleNotification[23]);
   });
   closure_9.ignoreLogs(["Non-serializable values were found in the navigation state", "Overriding previous layout animation with new one before the first began", "Check the render method of `SceneView`", "Open debugger to view warnings."]);
   const obj2 = require("websocketTelemetryHook");
@@ -139,6 +141,7 @@ function sharedInit() {
       closure_1(handleNotification[25]).prepareUpdate(versionRequired.versionRequired);
       obj = closure_1(handleNotification[25]);
     }
+    tmp = null != versionRequired && null != versionRequired.versionRequired;
   });
   const obj3 = require("BundleUpdater");
   const listener1 = require("BundleUpdater").addEventListener("downloaded", (event) => {
@@ -172,11 +175,11 @@ function sharedInit() {
     closure_1(handleNotification[27]).dispatch({ type: "APP_STATE_UPDATE_WILL_BECOME_ACTIVE" });
   });
   if (AppStateStore.getState() !== currentState.currentState) {
-    tmp(tmp2[15])("handleAppStateChange", () => _true(handleNotification[28])).default(obj8.currentState);
+    tmp(tmp2[15])("handleAppStateChange", () => _true(handleNotification[28])).default(currentState.currentState);
   } else {
     if (!tmp4Result.isAndroid()) {
       if (!c21) {
-        if (obj8.currentState === constants.ACTIVE) {
+        if (currentState.currentState === constants.ACTIVE) {
           c21 = true;
           tmp(tmp2[15])("trackAppOpened", () => _true(handleNotification[29])).trackAppOpened("launcher");
         }
@@ -184,7 +187,7 @@ function sharedInit() {
     }
     tmp4Result = tmp4(tmp2[23]);
   }
-  const listener3 = obj8.addEventListener("change", (event) => {
+  const listener3 = currentState.addEventListener("change", (event) => {
     const appStateChangeStart = closure_1(handleNotification[12]).imports.appStateChangeStart;
     appStateChangeStart.record();
     obj = closure_1(handleNotification[24]);
@@ -235,7 +238,7 @@ function sharedInit() {
   };
   return obj;
 }
-let closure_27 = async function _trackFirstLaunched(arg0, value) {
+let closure_27 = async function _trackFirstLaunched() {
   if (c6 === 2) {
     c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -270,9 +273,9 @@ let closure_27 = async function _trackFirstLaunched(arg0, value) {
             const obj1 = {};
             let obj2 = require("PlatformUtils");
             if (obj2.isAndroid()) {
-              let IOS = tmp22.ANDROID;
+              let IOS = constants.ANDROID;
             } else {
-              IOS = tmp22.IOS;
+              IOS = constants.IOS;
             }
             obj1.platform = IOS;
             InstallReferrer = InstallReferrer.InstallReferrer;
@@ -329,9 +332,9 @@ let closure_29 = async function _loadStorage() {
     c5 = 3;
   } else if (arg0 === 1) {
     c5 = 3;
-    throw arg1;
+    throw value;
   } else if (arg0 !== 2) {
-    closure_128_0 = arg1;
+    closure_128_0 = value;
     loadStorage = closure_129_1(closure_129_3[12]).loadStorage;
     loadStorage.recordEnd();
     const parseStorage = closure_129_1(closure_129_3[12]).parseStorage;
@@ -341,7 +344,7 @@ let closure_29 = async function _loadStorage() {
     });
     c3 = 0;
   }
-  return arg1;
+  return value;
 };
 function loadKvStorage() {
   try {
@@ -366,7 +369,7 @@ let closure_36 = async function _initializeIntl(arg0) {
   let log = arg0;
   c3 = 0;
   c4 = 0;
-  let iter = (async (arg0, value) => {
+  let iter = (async (arg0) => {
     await closure_130_0(closure_130_3[39]).preloadAllIntlMessageFiles();
     await closure_130_0(closure_130_3[40]).waitForAllDefaultIntlMessagesLoaded();
     if (log2) {
@@ -385,7 +388,7 @@ let closure_36 = async function _initializeIntl(arg0) {
   iter.next();
   return iter;
 };
-let closure_38 = async function _init(_payload, value) {
+let closure_38 = async function _init(_payload) {
   if (c3 === 2) {
     c3 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -651,7 +654,7 @@ let closure_38 = async function _init(_payload, value) {
     }
   }
 };
-let closure_39 = async function _initHeadlessTask(arg0, value) {
+let closure_39 = async function _initHeadlessTask() {
   if (c3 === 2) {
     c3 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -742,8 +745,8 @@ function initializeTokenStorage() {
     const token = NativeFastConnectModuleDefault.getConstants().token;
     if (null != token) {
       closure_20.log("Applying token storage fix.");
-      const Storage2 = tmp(510).Storage;
-      const result = Storage2.set(tmp3, token);
+      const Storage2 = Storage4.Storage;
+      const result = Storage2.set(closure_1_17, token);
       obj = closure_20;
     } else {
       closure_20.log("Cannot apply token storage fix as token not in NSUserDefaults.");
@@ -754,10 +757,11 @@ function initializeTokenStorage() {
     closure_20.verbose("No need to apply token storage fix as token already exists.");
   }
   TokenManagerAll.init();
-  const Storage3 = tmp(510).Storage;
-  obj = { storageHasToken: null != Storage3.get(tmp3), tokenManagerHasToken: null != TokenManagerAll.getToken() };
+  const Storage3 = Storage4.Storage;
+  obj = { storageHasToken: null != Storage3.get(closure_1_17), tokenManagerHasToken: null != TokenManagerAll.getToken() };
   obj.verbose("Token manager has initialized", obj);
   global();
+  const tmp12 = null != TokenManagerAll.getToken();
 }
 const module_17229 = fn(17229);
 const superagentPatch = fn(17279);

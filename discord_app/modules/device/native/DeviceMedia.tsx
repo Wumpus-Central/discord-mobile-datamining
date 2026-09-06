@@ -153,7 +153,7 @@ export default {
           const obj = { assets, page: 0, lastAssetIndex: batchSize, endCursor: null, hasReachedEnd: null };
           let end_cursor;
           if (assets != null) {
-            const page_info = tmp2.page_info;
+            const page_info = assets.page_info;
             if (page_info != null) {
               end_cursor = page_info.end_cursor;
             }
@@ -161,7 +161,7 @@ export default {
           obj.endCursor = end_cursor;
           let num;
           if (assets != null) {
-            const page_info2 = tmp2.page_info;
+            const page_info2 = assets.page_info;
             if (page_info2 != null) {
               num = page_info2.has_next_page;
             }
@@ -172,6 +172,7 @@ export default {
           obj.hasReachedEnd = !num;
           state.setState(obj);
         });
+        const obj3 = batchSize(1249);
       }
     });
   },

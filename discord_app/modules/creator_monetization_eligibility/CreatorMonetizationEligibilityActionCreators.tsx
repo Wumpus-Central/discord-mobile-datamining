@@ -3,7 +3,7 @@ import HTTPUtils from "../../../discord_common/js/packages/http-utils/HTTPUtils.
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 
 require = fn;
-let closure_6 = async function _createCreatorMonetizationEnableRequest(arg0, value) {
+let closure_6 = async function _createCreatorMonetizationEnableRequest(arg0) {
   if (c1 === 2) {
     c1 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -61,9 +61,9 @@ let closure_7 = async function _getCreatorMonetizationEligibility() {
     url: Endpoints.CREATOR_MONETIZATION_ELIGIBILITY(closure_0),
     rejectWithError: HTTPUtils.rejectWithMigratedError(),
   });
-  return arg1.body;
+  return value.body;
 };
-let closure_8 = async function _acceptCreatorMonetizationTerms(arg0, value) {
+let closure_8 = async function _acceptCreatorMonetizationTerms(arg0) {
   if (c2 === 2) {
     c2 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -115,7 +115,7 @@ let closure_8 = async function _acceptCreatorMonetizationTerms(arg0, value) {
     }
   }
 };
-let closure_9 = async function _acceptCreatorMonetizationTermsV(arg0, value) {
+let closure_9 = async function _acceptCreatorMonetizationTermsV(arg0) {
   if (c1 === 2) {
     c1 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -173,9 +173,9 @@ let closure_10 = async function _getCreatorMonetizationOnboardingMarketing() {
     url: Endpoints.CREATOR_MONETIZATION_MARKETING_ONBOARDING(closure_0),
     rejectWithError: HTTPUtils.rejectWithMigratedError(),
   });
-  return arg1.body;
+  return value.body;
 };
-let closure_11 = async function _ownershipTransferOnboard(arg0, team_id) {
+let closure_11 = async function _ownershipTransferOnboard(arg0) {
   closure_0 = arg0;
   c4 = 0;
   c5 = 0;
@@ -197,7 +197,7 @@ let closure_11 = async function _ownershipTransferOnboard(arg0, team_id) {
     return body;
   })();
 };
-let closure_12 = async function _requestRemoveMonetization(arg0, value) {
+let closure_12 = async function _requestRemoveMonetization(arg0) {
   if (c1 === 2) {
     c1 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -267,7 +267,7 @@ let closure_13 = async function _removeMonetization() {
     type: closure_130_5.GUILD_ROLE_SUBSCRIPTIONS,
     includeTeam: true,
   });
-  return arg1;
+  return value;
 };
 const Endpoints = fn(1074).Endpoints;
 const ApplicationTypes = fn(1350).ApplicationTypes;

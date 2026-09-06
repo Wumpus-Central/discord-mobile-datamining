@@ -1,6 +1,8 @@
 // discord_app/modules/forums/native/composer/ForumComposer.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
+import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
+import KeyboardUIStore from "../../../keyboard/native/KeyboardUIStore.native.tsx";
 import KeyboardTypes from "../../../keyboard/native/KeyboardTypes.tsx";
 import asyncRequireImpl from "../../../../../_runtime/01896_asyncRequireImpl.js";
 import dismissible_content from "../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
@@ -18,6 +20,7 @@ import useFocusHandlers from "hooks/useFocusHandlers.tsx";
 import ForumGuidelinesActionSheet from "../ForumGuidelinesActionSheet.tsx";
 import openExpressionPickerActionSheet from "../../../expression_picker/native/openExpressionPickerActionSheet.tsx";
 import DismissibleActionSheet from "../../../dismissible_content/native/DismissibleActionSheet.tsx";
+import ImageCarouselDefault from "../../../../components_native/chat/ImageCarousel.tsx";
 import MediaKeyboardUtils from "../../../media_keyboard/native/MediaKeyboardUtils.tsx";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
@@ -110,20 +113,14 @@ function ActionBar(channel) {
   obj.style = items2;
   if (isMediaChannelResult) {
     obj = { attachments: stateFromStores, channelId: channel.id, highlightThumbnails: true };
-    isMediaChannelResult = closure_29(tmp5(10631), obj);
+    isMediaChannelResult = closure_29(ImageCarouselDefault, obj);
   }
   const items3 = [isMediaChannelResult];
   obj1 = { style: tmp.actions, children: null };
   if (!stateFromStores1) {
     const items4 = [stateFromStores1, , ,];
     if (tmp10) {
-      const obj2 = {
-        accessibilityLabel: null,
-        style: null,
-        IconComponent: null,
-        onPress: null,
-        foregroundRipple: true,
-      };
+      let obj2 = { accessibilityLabel: null, style: null, IconComponent: null, onPress: null, foregroundRipple: true };
       const intl2 = tmp2(1114).intl;
       obj2.accessibilityLabel = intl2.string(tmp2(1114).t["112vVE"]);
       const items5 = [,];
@@ -139,6 +136,9 @@ function ActionBar(channel) {
             if (!tmp5) {
               closure_1_5();
             }
+            tmp5 =
+              closure_1_7 !== channel(1609).KeyboardTypes.SYSTEM &&
+              closure_1_7 !== channel(1609).KeyboardTypes.EXPRESSION;
           },
           title: null,
           tags: null,
@@ -151,6 +151,9 @@ function ActionBar(channel) {
           if (!tmp4) {
             closure_1_5();
           }
+          tmp4 =
+            closure_1_7 !== channel(1609).KeyboardTypes.SYSTEM &&
+            closure_1_7 !== channel(1609).KeyboardTypes.EXPRESSION;
         };
         obj.openLazy(asyncRequireImpl(11248, dependencyMap.paths), "ForumPostTagsActionSheet", obj);
       };
@@ -188,7 +191,7 @@ function ActionBar(channel) {
       submitting = !canPost;
     }
     obj5.disabled = submitting;
-    const obj6 = { size: "sm", color: tmp5(576).colors.WHITE };
+    const obj6 = { size: "sm", color: nativeDefault.colors.WHITE };
     obj5.icon = closure_29(tmp2(5071).ChatIcon, obj6);
     obj5.onPress = function onPress() {
       if (canPost) {
@@ -196,11 +199,11 @@ function ActionBar(channel) {
       }
     };
     obj4.children = closure_29(tmp2(4975).Button, obj5);
-    items4[3] = closure_29(tmp13, obj4);
+    items4[3] = closure_29(closure_9, obj4);
     obj1.children = items4;
-    items3[1] = tmp12(tmp13, obj1);
+    items3[1] = closure_30(closure_9, obj1);
     obj.children = items3;
-    return tmp12(tmp13, obj);
+    return closure_30(closure_9, obj);
   } else {
     const obj7 = { accessibilityLabel: null, style: null, IconComponent: null, onPress: null, foregroundRipple: true };
     let intl = tmp2(1114).intl;
@@ -420,7 +423,7 @@ export default function ForumComposer(parentChannel) {
     channel(threadSettingsDraft[24]).isThemeDark(theme.theme),
   );
   const unsafe_rawColors = thread(threadSettingsDraft[21]).unsafe_rawColors;
-  let tmp10 = stateFromStores3 ? unsafe_rawColors.PRIMARY_330 : unsafe_rawColors.PRIMARY_460;
+  const tmp10 = stateFromStores3 ? unsafe_rawColors.PRIMARY_330 : unsafe_rawColors.PRIMARY_460;
   let tmp5Result = tmp5(tmp3[23]);
   const items5 = [closure_17];
   const stateFromStores4 = tmp5Result.useStateFromStores(items5, () =>
@@ -431,11 +434,11 @@ export default function ForumComposer(parentChannel) {
   stateFromStores5 = tmp5Result.useStateFromStores(items6, () =>
     UploadAttachmentStore.getUploads(channel.id, DraftType.ChannelMessage),
   );
-  let tmp12 = thread(threadSettingsDraft[25])();
+  const tmp12 = thread(threadSettingsDraft[25])();
   theme = tmp12;
-  let tmp13 = thread(threadSettingsDraft[26])();
+  const tmp13 = thread(threadSettingsDraft[26])();
   closure_12 = tmp13;
-  let tmp14 = thread(threadSettingsDraft[27])(parentChannel);
+  const tmp14 = thread(threadSettingsDraft[27])(parentChannel);
   [tmp17, c13] = message(obj.useState(false), 2);
   if (isEdit) {
     let name;
@@ -452,7 +455,7 @@ export default function ForumComposer(parentChannel) {
   let tmp15Result = tmp15(obj.useState(str2), 2);
   value = tmp15Result[0];
   closure_15 = tmp15Result[1];
-  let tmp16 = message(obj.useState(false), 2);
+  const tmp16 = message(obj.useState(false), 2);
   const channelTemplate = require("ForumHooks").useChannelTemplate(parentChannel);
   let str3 = "";
   if (isEdit) {
@@ -487,8 +490,8 @@ export default function ForumComposer(parentChannel) {
       let map;
       if (!isEdit) {
         appliedTags = undefined;
-        if (tmp != null) {
-          appliedTags = tmp.appliedTags;
+        if (threadSettingsDraft != null) {
+          appliedTags = threadSettingsDraft.appliedTags;
         }
         if (null != appliedTags) {
           if (0 !== appliedTags.size) {
@@ -593,90 +596,93 @@ export default function ForumComposer(parentChannel) {
   memo = obj.useMemo(() => new Set(first1.map((id) => id.id)), items10);
   const items11 = [appliedTags];
   memo1 = obj.useMemo(() => new Set(appliedTags.map((id) => id.id)), items11);
-  _require = onClose(function* (arg0, value) {
-    if (v1 === 2) {
-      v1 = 3;
-      throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp4 === 3) {
-      if (arg0 === 1) {
-        throw value;
-      } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
-      } else {
-        return { value: "HermesInternal", done: null };
-      }
-    } else {
-      try {
-        v1 = 2;
-        if (0 === c2) {
-          if (arg0 === 1) {
-            v1 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            v1 = 3;
-            obj = { value, done: true };
-            return obj;
-          } else {
-            if (null == tmp2) {
-              v1 = 3;
-            } else {
-              let tmp6 = null != message;
-              if (tmp6) {
-                tmp6 = tmp45.content !== tmp42;
-              }
-              if (tmp6) {
-                let obj2 = thread(threadSettingsDraft[36]);
-                const obj1 = { content: tmp42 };
-                obj2.editMessage(tmp2.id, tmp45.id, obj1);
-              }
-              let obj4 = thread(threadSettingsDraft[37]);
-              if (!obj4.isEqual(memo1, memo)) {
-                let obj5 = thread(threadSettingsDraft[38]);
-                const _Array = Array;
-                c2 = 1;
-                v1 = 1;
-                obj2 = { value: obj5.updateForumPostTags(tmp2.id, Array.from(tmp14)), done: false };
-                return obj2;
-              }
-              tmp14 = memo;
-            }
-            callback3(tmp2);
-          }
+  _require = onClose((content) => {
+    c2 = 0;
+    c3 = 0;
+    return (function* (arg0) {
+      if (v1 === 2) {
+        v1 = 3;
+        throw new TypeError("Generator functions may not be called on executing generators");
+      } else if (tmp4 === 3) {
+        if (arg0 === 1) {
+          throw value;
+        } else if (arg0 === 2) {
+          let obj = { value, done: true };
+          return obj;
         } else {
-          if (1 === tmp5) {
+          return { value: "HermesInternal", done: null };
+        }
+      } else {
+        try {
+          v1 = 2;
+          if (0 === c2) {
             if (arg0 === 1) {
               v1 = 3;
               throw value;
             } else if (arg0 === 2) {
               v1 = 3;
-              const obj3 = { value, done: true };
-              return obj3;
+              obj = { value, done: true };
+              return obj;
+            } else {
+              if (null == tmp2) {
+                v1 = 3;
+              } else {
+                let tmp6 = null != message;
+                if (tmp6) {
+                  tmp6 = message.content !== content;
+                }
+                if (tmp6) {
+                  let obj2 = thread(threadSettingsDraft[36]);
+                  const obj1 = { content };
+                  obj2.editMessage(tmp2.id, message.id, obj1);
+                }
+                let obj4 = thread(threadSettingsDraft[37]);
+                if (!obj4.isEqual(memo1, memo)) {
+                  let obj5 = thread(threadSettingsDraft[38]);
+                  const _Array = Array;
+                  c2 = 1;
+                  v1 = 1;
+                  obj2 = { value: obj5.updateForumPostTags(tmp2.id, Array.from(memo)), done: false };
+                  return obj2;
+                }
+              }
+              callback3(tmp2);
             }
-          } else if (arg0 === 1) {
-            v1 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            v1 = 3;
-            obj = { value, done: true };
-            return obj;
+          } else {
+            if (1 === tmp5) {
+              if (arg0 === 1) {
+                v1 = 3;
+                throw value;
+              } else if (arg0 === 2) {
+                v1 = 3;
+                const obj3 = { value, done: true };
+                return obj3;
+              }
+            } else if (arg0 === 1) {
+              v1 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              v1 = 3;
+              obj = { value, done: true };
+              return obj;
+            }
+            if (str4.getChannelId() === tmp2.id) {
+              v1(true);
+            }
           }
-          if (str4.getChannelId() === tmp2.id) {
-            v1(true);
+          if (tmp2.name !== name) {
+            obj4 = { name };
+            c2 = 2;
+            v1 = 1;
+            obj5 = { value: thread(threadSettingsDraft[39]).saveChannel(tmp2.id, obj4), done: false };
+            return obj5;
           }
+        } catch (tmp37) {
+          v1 = tmp;
+          throw tmp37;
         }
-        if (tmp2.name !== name) {
-          obj4 = { name };
-          c2 = 2;
-          v1 = 1;
-          obj5 = { value: thread(threadSettingsDraft[39]).saveChannel(tmp2.id, obj4), done: false };
-          return obj5;
-        }
-      } catch (tmp37) {
-        v1 = tmp;
-        throw tmp37;
       }
-    }
+    })();
   });
   const items12 = [thread, message, memo1, memo, value, callback3, onClose];
   callback4 = obj.useCallback(function () {
@@ -742,7 +748,7 @@ export default function ForumComposer(parentChannel) {
     appliedTags: memo,
     onThreadCreated: callback3,
   });
-  _require = tmp41(function* (arg0, value) {
+  _require = tmp41(function* (arg0) {
     if (c6 === 2) {
       c6 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -938,7 +944,7 @@ export default function ForumComposer(parentChannel) {
         const intl4 = channel(threadSettingsDraft[43]).intl;
         obj.title = intl4.string(channel(threadSettingsDraft[43]).t.l8rYLt);
         const intl5 = channel(threadSettingsDraft[43]).intl;
-        obj = { currentLength: arr.length, maxLength: tmp40 };
+        obj = { currentLength: str4.length, maxLength: tmp40 };
         obj.body = intl5.formatToPlainString(channel(threadSettingsDraft[43]).t.FfjF15, obj);
         thread(threadSettingsDraft[42]).show(obj);
         const obj4 = thread(threadSettingsDraft[42]);
@@ -994,12 +1000,13 @@ export default function ForumComposer(parentChannel) {
         const timerId = setTimeout(() => {
           let tmp3 = thread;
           if (thread == null) {
-            tmp3 = tmp2;
+            tmp3 = channel;
           }
           current.setSelection(channel, tmp3);
         });
       }
     }
+    obj = PlatformUtils;
   }, []);
   const tmp15Result4 = message(obj.useState(obj), 2);
   onPressEmoji = require("ExpressionPickerHandlers").usePressEmojiHandler({
@@ -1153,35 +1160,35 @@ export default function ForumComposer(parentChannel) {
       if (!isEdit) {
         let name;
         if (threadSettingsDraft != null) {
-          name = tmp.name;
+          name = threadSettingsDraft.name;
         }
         if (null != name) {
           let name1;
-          if (tmp != null) {
-            name1 = tmp.name;
+          if (threadSettingsDraft != null) {
+            name1 = threadSettingsDraft.name;
           }
           const tmp6Result = sanitizeThreadNameDefault(name1, true);
           let name2;
-          if (tmp != null) {
-            name2 = tmp.name;
+          if (threadSettingsDraft != null) {
+            name2 = threadSettingsDraft.name;
           }
           if (tmp6Result !== name2) {
             const obj = { name: tmp6Result };
-            tmp4(7777).changeThreadSettings(channel.id, obj);
+            DraftActionCreatorsDefault.changeThreadSettings(channel.id, obj);
             closure_15(tmp6Result);
-            const tmp4Result = tmp4(7777);
+            const tmp4Result = DraftActionCreatorsDefault;
           }
-          tmp4 = importDefault;
         }
       }
     };
     obj6.onFocus = function onFocus() {
       if (!tmp4) {
-        const obj = { type: tmp2(1609).KeyboardTypes.SYSTEM, context: { keyboardWillOpen: true } };
-        tmp2(1481).setKeyboardType(obj);
-        const tmp2Result = tmp2(1481);
+        const obj = { type: KeyboardTypes.KeyboardTypes.SYSTEM, context: { keyboardWillOpen: true } };
+        KeyboardUIStore.setKeyboardType(obj);
+        const tmp2Result = KeyboardUIStore;
       }
       _undefined(useFocusHandlers.PostComposerInputs.TITLE);
+      tmp4 = closure_11 !== KeyboardTypes.KeyboardTypes.MEDIA && closure_11 !== KeyboardTypes.KeyboardTypes.EXPRESSION;
     };
     obj6.onNext = callback;
     const items22 = [createForumPost(tmp5(tmp3[55]).FormInput, obj6), ,];
@@ -1281,9 +1288,9 @@ export default function ForumComposer(parentChannel) {
     obj19.onSelectionChange = callback8;
     obj19.onFocus = function onFocus() {
       if (closure_11 === KeyboardTypes.KeyboardTypes.MEDIA) {
-        const obj = { type: tmp(1609).KeyboardTypes.SYSTEM, context: { keyboardWillOpen: true } };
-        tmp(1481).setKeyboardType(obj);
-        const tmpResult = tmp(1481);
+        const obj = { type: KeyboardTypes.KeyboardTypes.SYSTEM, context: { keyboardWillOpen: true } };
+        KeyboardUIStore.setKeyboardType(obj);
+        const tmpResult = KeyboardUIStore;
       }
       _undefined(useFocusHandlers.PostComposerInputs.CONTENT);
     };

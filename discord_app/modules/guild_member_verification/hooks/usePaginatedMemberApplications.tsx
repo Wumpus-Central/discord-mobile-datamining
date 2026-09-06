@@ -23,8 +23,7 @@ export const usePaginatedMemberApplications = function usePaginatedMemberApplica
   _slicedToArray = tmp[1];
   noop = noop.useRef(null);
   closure_6 = noop.useRef(false);
-  closure_0 = error((guildId, arg1) => {
-    closure_1 = arg1;
+  closure_0 = error((guildId, status) => {
     c6 = 0;
     c7 = 0;
     c5 = 0;
@@ -58,7 +57,7 @@ export const usePaginatedMemberApplications = function usePaginatedMemberApplica
               closure_130_1 = undefined;
               if (!tmp8.current) {
                 const _HermesInternal = HermesInternal;
-                const combined = "" + tmp67 + "-" + tmp68;
+                const combined = "" + guildId + "-" + status;
                 let flag = false;
                 if (combined !== ref2.current) {
                   ref2.current = combined;
@@ -72,15 +71,17 @@ export const usePaginatedMemberApplications = function usePaginatedMemberApplica
                   ref2 = 2;
                   ref.current = true;
                   let obj1 = guildJoinRequests(ref[5]);
-                  obj1 = { guildId, status: tmp68, limit, force: true };
+                  obj1 = { guildId, status, limit, force: true };
                   const merged = Object.assign(
-                    (function getRequestPaginationParams(after, arg1, arg2, arg3, flag) {
-                      const tmp2 = arg3 === guildId(4384).GuildJoinRequestApplicationStatuses.SUBMITTED;
-                      if (arg2 === guildId(4384).GuildJoinRequestSortOrders.TIMESTAMP_DESC) {
+                    (function getRequestPaginationParams(after, status, guildId2, status2, flag) {
+                      const tmp2 = status2 === guildId(4384).GuildJoinRequestApplicationStatuses.SUBMITTED;
+                      if (guildId2 === guildId(4384).GuildJoinRequestSortOrders.TIMESTAMP_DESC) {
                         if (!flag) {
-                          if (0 !== arg1.length) {
+                          if (0 !== status.length) {
                             let obj = {
-                              before: tmp2 ? arg1[arg1.length - 1].joinRequestId : arg1[arg1.length - 1].actionedAt,
+                              before: tmp2
+                                ? status[status.length - 1].joinRequestId
+                                : status[status.length - 1].actionedAt,
                             };
                             return obj;
                           }
@@ -88,13 +89,15 @@ export const usePaginatedMemberApplications = function usePaginatedMemberApplica
                         obj = { before: null };
                         const _Date = Date;
                         const date = new Date();
-                        obj.before = closure_1_1(11).fromTimestamp(date.getTime());
+                        obj.before = status(11).fromTimestamp(date.getTime());
                         return obj;
                       } else {
                         if (!flag) {
-                          if (0 !== arg1.length) {
+                          if (0 !== status.length) {
                             obj = {
-                              after: tmp2 ? arg1[arg1.length - 1].joinRequestId : arg1[arg1.length - 1].actionedAt,
+                              after: tmp2
+                                ? status[status.length - 1].joinRequestId
+                                : status[status.length - 1].actionedAt,
                             };
                             return obj;
                           }
@@ -102,7 +105,7 @@ export const usePaginatedMemberApplications = function usePaginatedMemberApplica
                         const obj1 = { after };
                         return obj1;
                       }
-                    })(guildId, closure_1, tmp67, tmp68, flag),
+                    })(guildId, status, guildId, status, flag),
                   );
                   limit = 3;
                   c7 = 1;

@@ -65,35 +65,35 @@ export default noop.memo(function FileGridItem(containerStyle) {
         containerWidth: null,
         renderFallback: null,
       };
-      ({ attachment: obj3.attachment, channelId: obj3.channelId } = tmp);
-      obj.authorId = tmp.author.id;
+      ({ attachment: obj3.attachment, channelId: obj3.channelId } = data);
+      obj.authorId = data.author.id;
       obj.scale = scale;
       obj.containerHeight = imageStyle.height + React5;
       obj.containerWidth = imageStyle.width + React5;
       obj.renderFallback = function renderFallback() {
         const obj = { style: null, children: null };
-        const items = [icon.icon, imageStyle];
+        const items = [icon.icon, closure_1_2];
         obj.style = items;
         const filename = attachment.attachment.filename;
         if (obj2.isImageFile(filename)) {
-          let tmpResult = tmp(tmp3(tmp4[7]).ImageIcon, { size: "lg", color: "interactive-text-default" });
+          let tmpResult = closure_2_9(data(imageStyle[7]).ImageIcon, { size: "lg", color: "interactive-text-default" });
         } else {
           if (tmp3Result.isVideoFile(filename)) {
-            tmpResult = tmp(tmp3(tmp4[8]).VideoIcon, { size: "lg", color: "interactive-text-default" });
+            tmpResult = closure_2_9(data(imageStyle[8]).VideoIcon, { size: "lg", color: "interactive-text-default" });
           } else {
-            tmpResult = tmp(tmp3(tmp4[9]).FileIcon, { size: "lg", color: "interactive-text-default" });
+            tmpResult = closure_2_9(data(imageStyle[9]).FileIcon, { size: "lg", color: "interactive-text-default" });
           }
-          tmp3Result = tmp3(tmp4[6]);
+          tmp3Result = data(imageStyle[6]);
         }
         obj.children = tmpResult;
         return closure_2_9(scale, obj);
       };
       return React7(SearchMediaImage.SearchAttachmentMediaImage, obj);
-    } else if (tmp2.ATTACHMENT === type) {
+    } else if (constants.ATTACHMENT === type) {
       const size = { fileName, containerStyle: imageStyle, height: null, width: null };
       ({ height: obj2.height, width: obj2.width } = imageStyle);
       return React7(SearchMediaImage.SearchFileMediaImage, size);
-    } else if (tmp2.AUDIO === type) {
+    } else if (constants.AUDIO === type) {
       const size1 = { containerStyle: imageStyle, height: null, width: null };
       ({ height: obj.height, width: obj.width } = imageStyle);
       return React7(SearchMediaImage.SearchSoundMediaImage, size1);

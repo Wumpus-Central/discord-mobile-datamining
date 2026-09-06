@@ -60,7 +60,7 @@ export const EmojiPickerRowButton = function EmojiPickerRowButton(iconSize) {
     style: null,
     children: null,
   };
-  const intl = tmp2(1114).intl;
+  const intl = util.intl;
   obj.accessibilityLabel = intl.string(util.t.lfIHs4);
   obj.onPress = onPress;
   const items = [tmp.emojiContainer, styles];
@@ -116,7 +116,7 @@ export const EmojiReactionRowButton = function EmojiReactionRowButton(emoji) {
   obj.style = items;
   if (null == animated) {
     obj.children = null;
-    return tmp4(Pressables.PressableOpacity, obj);
+    return jsx(Pressables.PressableOpacity, obj);
   } else {
     let getEmojiURL = importDefault;
     obj = { textEmojiStyle: null, fastImageStyle: null, name: null, src: null };
@@ -138,8 +138,9 @@ export const EmojiReactionRowButton = function EmojiReactionRowButton(emoji) {
       url = animated.url;
     }
     obj.src = url;
-    tmp4(EmojiDefault, obj);
+    jsx(EmojiDefault, { textEmojiStyle: null, fastImageStyle: null, name: null, src: null });
   }
+  tmp2 = closure_7(emojiSize, emojiFontSize, emojiLineHeight);
 };
 export const getEmojiKey = function getEmojiKey(type, index) {
   if (null == type) {

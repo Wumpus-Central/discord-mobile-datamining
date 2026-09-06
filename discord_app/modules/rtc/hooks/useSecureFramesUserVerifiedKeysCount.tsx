@@ -17,7 +17,7 @@ export const useSecureFramesUserVerifiedKeysCount = function useSecureFramesUser
       return null;
     } else {
       const _Uint8Array = Uint8Array;
-      const uint8Array = new Uint8Array(tmp);
+      const uint8Array = new Uint8Array(keyToOmit);
       return _mod9135.serializeKey(uint8Array);
     }
   }, items);

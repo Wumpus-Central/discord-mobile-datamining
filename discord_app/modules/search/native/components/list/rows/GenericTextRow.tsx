@@ -21,7 +21,7 @@ export default noop.memo(function GenericTextRow(text) {
   const items = [onPress, text];
   let obj = { style: tmp.title, children: null };
   onPress = noop.useCallback(
-    asyncGeneratorStep(async (arg0, value) => {
+    asyncGeneratorStep(async () => {
       if (c0 === 2) {
         c0 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -91,7 +91,7 @@ export default noop.memo(function GenericTextRow(text) {
   );
   icon = null != icon;
   if (icon) {
-    icon = tmp3(icon, { size: "sm", color: "mobile-text-heading-primary" });
+    icon = <icon size="sm" color="mobile-text-heading-primary" />;
   }
   return jsx(SearchListRow.SearchListRow, {
     icon,

@@ -1,7 +1,11 @@
 // discord_app/modules/quests/managers/QuestFetchManager.tsx
 import DurationsDefault from "../../../utils/Durations.tsx";
+import PlatformUtils from "../../../utils/PlatformUtils.tsx";
 import SentryUtilsDefault from "../../../utils/SentryUtils.native.tsx";
+import QuestActionCreators from "../QuestActionCreators.tsx";
+import DiscordAppStateDefault from "../../app_state/DiscordAppState.native.tsx";
 import QuestsEligibility from "../lib/QuestsEligibility.tsx";
+import QuestFetchReconnectJitterExperiment from "../experiments/QuestFetchReconnectJitterExperiment.tsx";
 import QuestStore from "../QuestStore.tsx";
 import AutomaticLifecycleManager from "../../../lib/AutomaticLifecycleManager.tsx";
 
@@ -38,17 +42,16 @@ class QuestFetchManager extends tmp2 {
       applyArgumentsResult.hasHandledConnectionOpen = true;
       if (applyArgumentsResult.hasHandledConnectionOpen) {
         if (isEligibleForQuests) {
-          let DEFAULT_QUEST_FETCH_JITTER_CONFIG = tmp5(17814).getQuestFetchReconnectJitterConfig({
-            location: "QuestFetchManager",
-          });
-          const tmp5Result = tmp5(17814);
+          let DEFAULT_QUEST_FETCH_JITTER_CONFIG =
+            QuestFetchReconnectJitterExperiment.getQuestFetchReconnectJitterConfig({ location: "QuestFetchManager" });
+          const tmp5Result = QuestFetchReconnectJitterExperiment;
         }
         const _Math = Math;
         const _Math2 = Math;
         ({ questFetchJitterMs, questHomeHeroJitterMs } = DEFAULT_QUEST_FETCH_JITTER_CONFIG);
         const rounded = Math.floor(Math.random() * questFetchJitterMs);
         const _window = window;
-        tmp.initialFetchTimerId = window.setTimeout(() => {
+        applyArgumentsResult.initialFetchTimerId = window.setTimeout(() => {
           if (Date.now() - QuestStore.lastFetchedCurrentQuests > closure_2_7) {
             closure_1_0._fetch("post_connect_initial");
           }
@@ -57,17 +60,18 @@ class QuestFetchManager extends tmp2 {
           const _Math3 = Math;
           const _Math4 = Math;
           const _window2 = window;
-          tmp.initialQuestHomeHeroFetchTimerId = window.setTimeout(
+          applyArgumentsResult.initialQuestHomeHeroFetchTimerId = window.setTimeout(
             () => {
               try {
-                const questHomeHero = closure_1_0(closure_1_2[5]).fetchQuestHomeHero();
+                const questHomeHero = closure_1_0(dependencyMap[5]).fetchQuestHomeHero();
+                const obj = closure_1_0(dependencyMap[5]);
               } catch (err) {}
             },
             rounded + Math.floor(Math.random() * questHomeHeroJitterMs),
           );
         }
       }
-      DEFAULT_QUEST_FETCH_JITTER_CONFIG = tmp5(17814).DEFAULT_QUEST_FETCH_JITTER_CONFIG;
+      DEFAULT_QUEST_FETCH_JITTER_CONFIG = QuestFetchReconnectJitterExperiment.DEFAULT_QUEST_FETCH_JITTER_CONFIG;
     };
     applyArgumentsResult.handleRunningGamesChange = function handleRunningGamesChange() {};
     applyArgumentsResult.handleUserSettingsProtoUpdate = function handleUserSettingsProtoUpdate(settings) {
@@ -131,14 +135,13 @@ QuestFetchManager.prototype["_fetch"] = function _fetch(callerSource) {
     obj.isFetchingCurrentQuests = QuestStore.isFetchingCurrentQuests;
     obj.data = obj;
     SentryUtilsDefault.addBreadcrumb(obj);
-    let tmpResult = tmp(11276);
+    let tmpResult = QuestActionCreators;
     const currentQuests = tmpResult.fetchCurrentQuests();
-    tmpResult = tmp(1115);
+    tmpResult = PlatformUtils;
     if (tmpResult.isMac()) {
-      const state = tmp6(11300).getState();
-      const tmp6Result = tmp6(11300);
+      const state = DiscordAppStateDefault.getState();
+      const tmp6Result = DiscordAppStateDefault;
     }
-    tmp6 = importDefault;
   }
 };
 const questFetchManager = new QuestFetchManager();

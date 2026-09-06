@@ -37,7 +37,7 @@ function getChannels(getGuildId, arr) {
   if (null == guildId) {
     const items = [];
     if (tmp2) {
-      items.push(getGuildId);
+      arr = items.push(getGuildId);
     }
     tmp2 = null == arr || arr.includes(getGuildId.type);
     return guildId(12)(items).map((id) => {
@@ -102,12 +102,11 @@ const prototype = function ApplicationCommandOptionValueParser(channel) {
       return obj;
     });
     function matchUser() {
-      const arr = closure_2_12;
       obj = closure_1;
       if (typeof closure_2_14 === "function") {
         let firstResult = null;
-        if (str[0] === arr) {
-          closure_1 = str.substr(arr.length);
+        if (arr7[0] === closure_2_12) {
+          closure_1 = arr7.substr(closure_2_12.length);
           const found = obj
             .sortBy((text) => -text.text.length)
             .filter((text) => {
@@ -125,33 +124,30 @@ const prototype = function ApplicationCommandOptionValueParser(channel) {
         if (null != id) {
           obj = { type: "userMention", userId: firstResult.id };
           let tmp7 = obj;
-        } else {
-          if (typeof tmp === "function") {
-            let firstResult1 = null;
-            if (str[0] === arr) {
-              closure_1 = str.substr(arr.length);
-              const found1 = obj6
-                .sortBy((text) => -text.text.length)
-                .filter((text) => {
-                  const formatted = closure_1.toLowerCase();
-                  return formatted === text.text.toLowerCase();
-                });
-              const mapped1 = found1.map((id) => ({ text: arr + id.text, id: id.id }));
-              firstResult1 = mapped1.first();
-              const sortByResult1 = obj6.sortBy((text) => -text.text.length);
-            }
-            let id1;
-            if (firstResult1 != null) {
-              id1 = firstResult1.id;
-            }
-            if (null != id1) {
-              obj = { type: "userMention", userId: firstResult1.id };
-              tmp7 = obj;
-            }
-          } else {
-            throw new TypeError("Trying to call a non-function");
+        } else if (typeof tmp === "function") {
+          let firstResult1 = null;
+          if (arr7[0] === closure_2_12) {
+            closure_1 = arr7.substr(closure_2_12.length);
+            const found1 = closure_3
+              .sortBy((text) => -text.text.length)
+              .filter((text) => {
+                const formatted = closure_1.toLowerCase();
+                return formatted === text.text.toLowerCase();
+              });
+            const mapped1 = found1.map((id) => ({ text: arr + id.text, id: id.id }));
+            firstResult1 = mapped1.first();
+            const sortByResult1 = closure_3.sortBy((text) => -text.text.length);
           }
-          obj6 = closure_3;
+          let id1;
+          if (firstResult1 != null) {
+            id1 = firstResult1.id;
+          }
+          if (null != id1) {
+            obj = { type: "userMention", userId: firstResult1.id };
+            tmp7 = obj;
+          }
+        } else {
+          throw new TypeError("Trying to call a non-function");
         }
         return tmp7;
       } else {
@@ -185,12 +181,11 @@ const prototype = function ApplicationCommandOptionValueParser(channel) {
       }
     }
     function matchRole() {
-      const arr = closure_2_12;
       obj = closure_2;
       if (typeof closure_2_14 === "function") {
         let firstResult = null;
-        if (str[0] === arr) {
-          closure_1 = str.substr(arr.length);
+        if (arr7[0] === closure_2_12) {
+          closure_1 = arr7.substr(closure_2_12.length);
           const found = obj
             .sortBy((text) => -text.text.length)
             .filter((text) => {
@@ -207,7 +202,7 @@ const prototype = function ApplicationCommandOptionValueParser(channel) {
         }
         if (null != id) {
           obj = { type: "roleMention", roleId: firstResult.id };
-        } else if ("@everyone" === str) {
+        } else if ("@everyone" === arr7) {
           obj = { type: "textMention", text: "@everyone" };
         }
         return obj;
@@ -359,12 +354,11 @@ export const useApplicationCommandOptionValueParser = function useApplicationCom
           return obj;
         });
         function matchUser() {
-          const arr = closure_2_12;
           obj = closure_1;
           if (typeof closure_2_14 === "function") {
             let firstResult = null;
-            if (str[0] === arr) {
-              closure_1 = str.substr(arr.length);
+            if (arr7[0] === closure_2_12) {
+              closure_1 = arr7.substr(closure_2_12.length);
               const found = obj
                 .sortBy((text) => -text.text.length)
                 .filter((text) => {
@@ -382,33 +376,30 @@ export const useApplicationCommandOptionValueParser = function useApplicationCom
             if (null != id) {
               obj = { type: "userMention", userId: firstResult.id };
               let tmp7 = obj;
-            } else {
-              if (typeof tmp === "function") {
-                let firstResult1 = null;
-                if (str[0] === arr) {
-                  closure_1 = str.substr(arr.length);
-                  const found1 = obj6
-                    .sortBy((text) => -text.text.length)
-                    .filter((text) => {
-                      const formatted = closure_1.toLowerCase();
-                      return formatted === text.text.toLowerCase();
-                    });
-                  const mapped1 = found1.map((id) => ({ text: arr + id.text, id: id.id }));
-                  firstResult1 = mapped1.first();
-                  const sortByResult1 = obj6.sortBy((text) => -text.text.length);
-                }
-                let id1;
-                if (firstResult1 != null) {
-                  id1 = firstResult1.id;
-                }
-                if (null != id1) {
-                  obj = { type: "userMention", userId: firstResult1.id };
-                  tmp7 = obj;
-                }
-              } else {
-                throw new TypeError("Trying to call a non-function");
+            } else if (typeof tmp === "function") {
+              let firstResult1 = null;
+              if (arr7[0] === closure_2_12) {
+                closure_1 = arr7.substr(closure_2_12.length);
+                const found1 = closure_3
+                  .sortBy((text) => -text.text.length)
+                  .filter((text) => {
+                    const formatted = closure_1.toLowerCase();
+                    return formatted === text.text.toLowerCase();
+                  });
+                const mapped1 = found1.map((id) => ({ text: arr + id.text, id: id.id }));
+                firstResult1 = mapped1.first();
+                const sortByResult1 = closure_3.sortBy((text) => -text.text.length);
               }
-              obj6 = closure_3;
+              let id1;
+              if (firstResult1 != null) {
+                id1 = firstResult1.id;
+              }
+              if (null != id1) {
+                obj = { type: "userMention", userId: firstResult1.id };
+                tmp7 = obj;
+              }
+            } else {
+              throw new TypeError("Trying to call a non-function");
             }
             return tmp7;
           } else {
@@ -442,12 +433,11 @@ export const useApplicationCommandOptionValueParser = function useApplicationCom
           }
         }
         function matchRole() {
-          const arr = closure_2_12;
           obj = closure_2;
           if (typeof closure_2_14 === "function") {
             let firstResult = null;
-            if (str[0] === arr) {
-              closure_1 = str.substr(arr.length);
+            if (arr7[0] === closure_2_12) {
+              closure_1 = arr7.substr(closure_2_12.length);
               const found = obj
                 .sortBy((text) => -text.text.length)
                 .filter((text) => {
@@ -464,7 +454,7 @@ export const useApplicationCommandOptionValueParser = function useApplicationCom
             }
             if (null != id) {
               obj = { type: "roleMention", roleId: firstResult.id };
-            } else if ("@everyone" === str) {
+            } else if ("@everyone" === arr7) {
               obj = { type: "textMention", text: "@everyone" };
             }
             return obj;

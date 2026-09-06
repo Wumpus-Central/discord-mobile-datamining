@@ -63,7 +63,7 @@ export default noop.memo(function VoiceOrStageSummaryRow(layout) {
   layoutStyles = obj.getLayoutStyles(layout.layout);
   const size = layoutStyles.voiceOrStageSummaryRow.size;
   closure_3 = Math.max(users.length - max, 0);
-  let tmp4 = closure_6(size);
+  const tmp4 = closure_6(size);
   closure_4 = tmp4;
   obj = { style: null, children: null };
   let items = [tmp4.container];
@@ -126,7 +126,7 @@ export default noop.memo(function VoiceOrStageSummaryRow(layout) {
     let obj4 = { variant: "text-sm/bold", style: { marginLeft: 4 }, children: audienceCount };
     items4[1] = closure_4(tmp(tmp2[6]).Text, obj4);
     obj2.children = items4;
-    obj1.children = tmp5(tmp6, obj2);
+    obj1.children = closure_5(tmp6, obj2);
     tmp8Result = tmp8(tmp6, obj1);
     const tmp9 = users.length > 0 && { marginLeft: -12 };
   }

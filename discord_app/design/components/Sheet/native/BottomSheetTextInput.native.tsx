@@ -22,9 +22,9 @@ export const BottomSheetTextInput = function BottomSheetTextInput(ref) {
     ref(current) {
       ref.current = current;
       if (typeof ref === "function") {
-        tmp(current);
-      } else if (null != tmp) {
-        tmp.current = current;
+        ref(current);
+      } else if (null != ref) {
+        ref.current = current;
       }
     },
     onFocus: onFocus2,
@@ -36,9 +36,9 @@ export const BottomSheetTextInput = function BottomSheetTextInput(ref) {
     ref(current) {
       ref.current = current;
       if (typeof ref === "function") {
-        tmp(current);
-      } else if (null != tmp) {
-        tmp.current = current;
+        ref(current);
+      } else if (null != ref) {
+        ref.current = current;
       }
     },
     onFocus: onFocus2,

@@ -56,13 +56,13 @@ function FriendRequestButton(user) {
   stateFromStores = tmp3Result.useStateFromStores(items, () => RelationshipStore.getRelationshipType(user.id));
   userDisplayName = trackUserProfileAction(4404).useName(user);
   if (stateFromStores !== RelationshipTypes.FRIEND) {
-    if (stateFromStores !== tmp5.BLOCKED) {
+    if (stateFromStores !== RelationshipTypes.BLOCKED) {
       if (gameFriendsForUser.length > 0) {
         return null;
-      } else if (stateFromStores === tmp5.PENDING_INCOMING) {
+      } else if (stateFromStores === RelationshipTypes.PENDING_INCOMING) {
         return null;
       } else {
-        if (stateFromStores === tmp5.PENDING_OUTGOING) {
+        if (stateFromStores === RelationshipTypes.PENDING_OUTGOING) {
           let UserPlusIcon = tmp3(13125).UserClockIcon;
         } else {
           UserPlusIcon = tmp3(4497).UserPlusIcon;
@@ -70,7 +70,7 @@ function FriendRequestButton(user) {
         const intl = tmp3(1114).intl;
         const string = intl.string;
         const t = tmp3(1114).t;
-        if (stateFromStores === tmp5.PENDING_OUTGOING) {
+        if (stateFromStores === RelationshipTypes.PENDING_OUTGOING) {
           let stringResult = string(t["fMm5q/"]);
         } else {
           stringResult = string(t["7815ae"]);
@@ -78,7 +78,7 @@ function FriendRequestButton(user) {
         const intl2 = tmp3(1114).intl;
         const string2 = intl2.string;
         const t2 = tmp3(1114).t;
-        if (stateFromStores === tmp5.PENDING_OUTGOING) {
+        if (stateFromStores === RelationshipTypes.PENDING_OUTGOING) {
           let string2Result = string2(t2.H0Ql7N);
         } else {
           string2Result = string2(t2.gc9aSx);
@@ -104,7 +104,7 @@ function FriendRequestButton(user) {
             }
           },
           hasCustomProfileTheme,
-          isPending: stateFromStores === tmp5.PENDING_OUTGOING,
+          isPending: stateFromStores === RelationshipTypes.PENDING_OUTGOING,
         };
         return closure_6(ButtonComponent, obj);
       }
@@ -161,8 +161,8 @@ export default function UserProfileContactButtons(user) {
     ChannelActionCreatorsDefault.openPrivateChannel(obj);
   }
   if (stateFromStores !== RelationshipTypes.FRIEND) {
-    if (stateFromStores !== tmp8.BLOCKED) {
-      if (stateFromStores !== tmp8.PENDING_INCOMING) {
+    if (stateFromStores !== RelationshipTypes.BLOCKED) {
+      if (stateFromStores !== RelationshipTypes.PENDING_INCOMING) {
         if (0 === gameFriendsForUser.length) {
           obj = { style: null, children: null };
           const items1 = [tmp3.threeButtonLayout, style];
@@ -225,7 +225,7 @@ export default function UserProfileContactButtons(user) {
           obj2.children = items3;
           items2[1] = closure_7(View, obj2);
           obj.children = items2;
-          let tmp9Result = tmp15(tmp16, obj, "three-button-group");
+          let tmp9Result = closure_7(View, obj, "three-button-group");
         }
         return tmp9Result;
       }
@@ -298,5 +298,6 @@ export default function UserProfileContactButtons(user) {
   obj13.children = closure_6(user(onPress[7]).Button, obj14);
   items5[1] = closure_6(View, obj13);
   obj8.children = items5;
-  tmp9Result = closure_7(tmp10, obj8, "two-button-group");
+  tmp9Result = closure_7(View, obj8, "two-button-group");
+  const obj9 = { flexDirection: "row", gap: trackUserProfileAction(onPress[6]).space.PX_12 };
 }

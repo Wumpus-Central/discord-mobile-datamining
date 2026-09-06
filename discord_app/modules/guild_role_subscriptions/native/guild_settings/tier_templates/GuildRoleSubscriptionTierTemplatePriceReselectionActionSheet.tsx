@@ -4,7 +4,9 @@ import util from "../../../../../intl/index.native.tsx";
 import useA11yRolesNative from "../../../../../../discord_common/js/packages/design/hooks/useA11yRolesNative.tsx";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
+import PriceUtils from "../../../../../utils/PriceUtils.tsx";
 import TouchableHitBoxDefault from "../../../../../design/void/TouchableHitBox/native/TouchableHitBox.tsx";
+import GuildRoleSubscriptionTypeUtils from "../../../GuildRoleSubscriptionTypeUtils.tsx";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
@@ -24,21 +26,20 @@ function PriceOptionRow(selected) {
   obj = { style: items, accessibilityRole, accessibilityState, onPress, children: null };
   items[1] = containerSelected;
   obj = { style: tmp.rowStatusIcon, source: null };
-  const tmp5 = closure_1_10;
   const tmp7 = TouchableHitBoxDefault;
   obj.source = importDefault(selected ? 17692 : 16563);
   const items1 = [React7(FastImageDefault, obj)];
   const obj1 = { variant: "text-sm/normal", color: "text-default", children: null };
-  const intl = tmp2(1114).intl;
+  const intl = util.intl;
   const obj2 = { price: null, interval: null };
-  let tmp2Result = tmp2(7234);
+  let tmp2Result = PriceUtils;
   obj2.price = tmp2Result.formatPrice(price, CurrencyCodes.USD);
-  tmp2Result = tmp2(15231);
+  tmp2Result = GuildRoleSubscriptionTypeUtils;
   obj2.interval = tmp2Result.formatPlanInterval({ interval: SubscriptionIntervalTypes.MONTH, interval_count: 1 });
   obj1.children = intl.format(util.t.CgmBaG, obj2);
   items1[1] = React7(Text_Text.Text, obj1);
   obj.children = items1;
-  return tmp5(tmp7, obj);
+  return closure_1_10(tmp7, obj);
 }
 get_ActivityIndicator = fn(17);
 ({ TouchableOpacity: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);

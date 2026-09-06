@@ -12,7 +12,7 @@ import GuildStore from "../../../stores/GuildStore.tsx";
 import MessageStore from "../../../stores/MessageStore.tsx";
 
 require = fn;
-let closure_16 = async function _upload2(arg0, value) {
+let closure_16 = async function _upload2(arg0) {
   if (c9 === 2) {
     c9 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -80,7 +80,6 @@ let closure_16 = async function _upload2(arg0, value) {
             const kestrelConfig = obj.getKestrelConfig({ location: "native.AddMediaToOriginalForumPostActionSheet" });
             const maxFileSizeResult = closure_0(5134).maxFileSize(id.id);
             const obj2 = closure_0(5134);
-            const tmp3 = id;
             const effectiveKestrelLimit = closure_0(5179).getEffectiveKestrelLimit(kestrelConfig, maxFileSizeResult);
             if (currentSize.currentSize > effectiveKestrelLimit) {
               closure_1_5.cancel();
@@ -90,12 +89,13 @@ let closure_16 = async function _upload2(arg0, value) {
                 file: currentSize,
                 maxSize: effectiveKestrelLimit,
                 baseMaxSize: maxFileSizeResult,
-                guildId: tmp3.id,
+                guildId: id.id,
                 analyticsLocations,
               };
               closure_1(9310)(obj);
               const obj4 = closure_1(4527);
             }
+            const obj3 = closure_0(5179);
           });
           closure_132_5.on("error", () => {
             dependencyMap(false);

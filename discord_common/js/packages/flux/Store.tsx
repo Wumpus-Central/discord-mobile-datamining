@@ -29,7 +29,6 @@ class Store {
       }
       if (hasAnyResult) {
         flux_EmitterDefault.markChanged(obj);
-        const tmp2 = importDefault;
         let isPaused = flux_EmitterDefault.getIsPaused();
         if (isPaused) {
           isPaused = null != obj._mustEmitChanges;
@@ -38,10 +37,11 @@ class Store {
           isPaused = obj._mustEmitChanges(arg0);
         }
         if (isPaused) {
-          tmp2(508).resume(false);
-          const tmp2Result = tmp2(508);
+          flux_EmitterDefault.resume(false);
+          const tmp2Result = flux_EmitterDefault;
         }
       }
+      const _changeCallbacks = obj._changeCallbacks;
     };
     obj.addChangeListener = obj._changeCallbacks.add;
     obj.removeChangeListener = obj._changeCallbacks.remove;
@@ -130,6 +130,7 @@ prototype["syncWith"] = function syncWith(items, handleUserSettingsProtoStoreCha
         }
         const tmpResult = flux_EmitterDefault;
       }
+      obj = flux_EmitterDefault;
     };
     closure_0 = wrapper;
     if (num == null) {

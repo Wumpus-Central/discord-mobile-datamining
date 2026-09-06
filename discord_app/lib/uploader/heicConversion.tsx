@@ -4,74 +4,78 @@ import heicFilename from "heicFilename.tsx";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 
 require = fn;
-let closure_6 = async function _preConvertHeicForUpload(arg0, value) {
-  if (c6 === 2) {
-    c6 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp4 === 3) {
-    if (arg0 === 1) {
-      throw value;
-    } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+let closure_6 = async function _preConvertHeicForUpload() {
+  closure_1 = arg1;
+  closure_2 = arg2;
+  c5 = 0;
+  c6 = 0;
+  return (async (arg0, value, arg2) => {
+    if (c6 === 2) {
+      c6 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp4 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        let obj = { value, done: true };
+        return obj;
+      } else {
+        return { value: "HermesInternal", done: null };
+      }
     } else {
-      return { value: "HermesInternal", done: null };
-    }
-  } else {
-    try {
-      c6 = 2;
-      if (0 === c5) {
-        if (arg0 === 1) {
+      try {
+        c6 = 2;
+        if (0 === c5) {
+          if (arg0 === 1) {
+            c6 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c6 = 3;
+            obj = { value, done: true };
+            return obj;
+          } else {
+            closure_4 = tmp5;
+            closure_3 = tmp2;
+            closure_131_0 = value;
+            closure_131_1 = undefined;
+            if (obj8.isHeicFile(value)) {
+              c5 = 1;
+              c6 = 1;
+              const obj1 = { value: maybeConvertHeicToJpeg(value, closure_1, closure_2), done: false };
+              return obj1;
+            } else {
+              c6 = 3;
+              const obj2 = { value, done: true };
+              return obj2;
+            }
+            obj8 = heicFilename;
+          }
+        } else if (arg0 === 1) {
           c6 = 3;
           throw value;
         } else if (arg0 === 2) {
           c6 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
-          closure_4 = tmp5;
-          closure_3 = tmp2;
-          closure_131_0 = closure_0;
-          closure_131_1 = undefined;
-          if (obj8.isHeicFile(closure_0)) {
-            c5 = 1;
-            c6 = 1;
-            const obj1 = { value: maybeConvertHeicToJpeg(tmp34, tmp35, tmp36), done: false };
-            return obj1;
-          } else {
-            c6 = 3;
-            const obj2 = { value: tmp34, done: true };
-            return obj2;
+          closure_131_1 = value;
+          if (null != closure_131_1) {
+            if (closure_131_1.success) {
+              c6 = 3;
+            }
+            const _File = File;
+            const items = [closure_131_1.convertedBlob];
+            obj = closure_132_0(closure_132_2[2]);
+            const obj4 = { type: "image/jpeg", lastModified: closure_131_0.lastModified };
+            const file = new File(items, obj.renameToJpegExtension(closure_131_0.name), obj4);
           }
-          obj8 = heicFilename;
-          tmp35 = closure_1;
-          tmp36 = closure_2;
         }
-      } else if (arg0 === 1) {
-        c6 = 3;
-        throw value;
-      } else if (arg0 === 2) {
-        c6 = 3;
-        const obj3 = { value, done: true };
-        return obj3;
-      } else {
-        closure_131_1 = value;
-        if (null != closure_131_1) {
-          if (closure_131_1.success) {
-            c6 = 3;
-          }
-          const _File = File;
-          const items = [closure_131_1.convertedBlob];
-          obj = closure_132_0(closure_132_2[2]);
-          const obj4 = { type: "image/jpeg", lastModified: closure_131_0.lastModified };
-          const file = new File(items, obj.renameToJpegExtension(closure_131_0.name), obj4);
-        }
+      } catch (tmp26) {
+        c6 = tmp;
+        throw tmp26;
       }
-    } catch (tmp26) {
-      c6 = tmp;
-      throw tmp26;
     }
-  }
+  })();
 };
 function maybeConvertHeicToJpeg() {
   const self = this;
@@ -83,7 +87,7 @@ function maybeConvertHeicToJpeg() {
   }
   return applyArgumentsResult;
 }
-let closure_8 = async function _maybeConvertHeicToJpeg(arg0, value) {
+let closure_8 = async function _maybeConvertHeicToJpeg(arg0) {
   if (c8 === 2) {
     c8 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");

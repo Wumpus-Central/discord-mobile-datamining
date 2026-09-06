@@ -112,7 +112,7 @@ export const useStableVideoState = function useStableVideoState(arg0, arg1) {
     items,
     () => {
       if (null != closure_0) {
-        const voiceState = VoiceStateStore.getVoiceState(closure_1, tmp);
+        const voiceState = VoiceStateStore.getVoiceState(closure_1, closure_0);
       }
       if (null != closure_0) {
         if (null != voiceState) {
@@ -144,7 +144,7 @@ export const useVideoIconState = function useVideoIconState(id, guildId) {
     items,
     () => {
       if (null != closure_0) {
-        const voiceState = VoiceStateStore.getVoiceState(closure_1, tmp);
+        const voiceState = VoiceStateStore.getVoiceState(closure_1, closure_0);
       }
       if (null != closure_0) {
         if (null != voiceState) {

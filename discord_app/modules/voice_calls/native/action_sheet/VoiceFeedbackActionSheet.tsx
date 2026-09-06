@@ -3,6 +3,7 @@ import AnalyticsUtilsDefault from "../../../../utils/AnalyticsUtils.tsx";
 import asyncRequireImpl from "../../../../../_runtime/01896_asyncRequireImpl.js";
 import _modDef2658 from "../../../feedback/intl/Feedback.messages.js";
 import ToastUtils from "../../../toast/native/ToastUtils.tsx";
+import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import FeedbackUtils from "../../../feedback/FeedbackUtils.tsx";
 import FeedbackActionSheetV2Default from "../../../feedback/native/FeedbackActionSheetV2.tsx";
 import shouldShowLogUploadForCategory from "../../../feedback/shouldShowLogUploadForCategory.tsx";
@@ -135,18 +136,16 @@ export default function VoiceFeedbackActionSheet(analyticsData) {
       trackVoiceFeedbackDefault(AnalyticEvents.CALL_REPORT_PROBLEM, obj);
       if (null != reason) {
         if (obj3.shouldShowLogUploadForCategory(rating, category, reason)) {
-          ({ media_session_id: obj6.mediaSessionId, rtc_connection_id: obj6.rtcConnectionId } = tmp7);
-          tmp20(4527).openLazy(asyncRequireImpl(17356, dependencyMap.paths), "UploadLogs", {
+          ({ media_session_id: obj6.mediaSessionId, rtc_connection_id: obj6.rtcConnectionId } = analyticsData);
+          ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17356, dependencyMap.paths), "UploadLogs", {
             mediaSessionId: null,
             rtcConnectionId: null,
           });
           const obj1 = { mediaSessionId: null, rtcConnectionId: null };
-          const tmp20Result = tmp20(4527);
+          const tmp20Result = ActionSheetActionCreatorsDefault;
         }
         obj3 = shouldShowLogUploadForCategory;
       }
-      tmp20 = importDefault;
-      tmp7 = analyticsData;
       ToastUtils.presentFeedbackSent();
     }
   };

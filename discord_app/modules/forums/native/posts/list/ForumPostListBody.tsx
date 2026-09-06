@@ -1,8 +1,10 @@
 // discord_app/modules/forums/native/posts/list/ForumPostListBody.tsx
 import GameInvitesChannelUtils from "../../../../game_invite_channels/GameInvitesChannelUtils.tsx";
 import ForumPostUsername from "../ForumPostUsername.tsx";
+import ForumPostMedia from "../ForumPostMedia.tsx";
 import ForumPostTimestampDefault from "../ForumPostTimestamp.tsx";
 import ForumPostNewTagDefault from "../ForumPostNewTag.tsx";
+import ForumPostTitleDefault from "../ForumPostTitle.tsx";
 import ForumPostMessageContentDefault from "../ForumPostMessageContent.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
@@ -51,7 +53,7 @@ export default function ForumPostListBody(arg0) {
   let tmp9Result = !isGameInvitesPost;
   if (!isGameInvitesPost) {
     const obj4 = { title: thread.name, lineClamp: 2, ellipsizeMode: "tail", hasUnreads };
-    tmp9Result = tmp9(tmp10(12016), obj4);
+    tmp9Result = hasOwnProperty(ForumPostTitleDefault, obj4);
   }
   items2[1] = tmp9Result;
   items2[2] = hasOwnProperty(ForumPostMessageContentDefault, {
@@ -79,7 +81,7 @@ export default function ForumPostListBody(arg0) {
       }
       obj5.firstMessageId = id;
       obj5.containerStyle = tmp.thumbnailContainer;
-      tmp9Result = tmp9(tmp2(12009).ForumPostMediaThumbnail, obj5);
+      tmp9Result = hasOwnProperty(ForumPostMedia.ForumPostMediaThumbnail, obj5);
     }
   }
   items3[1] = tmp9Result;

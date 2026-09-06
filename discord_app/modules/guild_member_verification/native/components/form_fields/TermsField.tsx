@@ -25,7 +25,7 @@ export default function TermsField(field) {
     flag = false;
   }
   obj = { start: true, end: true, checked: flag, label: null, onPress: null };
-  const intl = tmp5(1114).intl;
+  const intl = util.intl;
   obj.label = intl.string(util.t["2EXfGJ"]);
   obj.onPress = onChange;
   items[1] = React4(TableCheckboxRow.TableCheckboxRow, obj);

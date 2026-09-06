@@ -1,9 +1,11 @@
 // discord_app/modules/messages/native/MessagesHooks.tsx
 import _modDef12 from "../../../../_runtime/metro/00012__.js";
+import discord_common_shallowEqual from "../../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx";
 import GlobalUtils from "../../../utils/GlobalUtils.tsx";
 import ApplicationActionCreatorsDefault from "../../applications/ApplicationActionCreators.tsx";
 import InviteTypeUtils from "../../instant_invite/InviteTypeUtils.tsx";
 import messages_MessagesUtils from "MessagesUtils.tsx";
+import ChannelInfoActionCreators from "../../channel/ChannelInfoActionCreators.tsx";
 import ChatUpdatesQueueDefault from "../../chat/native/ChatUpdatesQueue.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -27,6 +29,7 @@ export const useMessageAuthorActivities = function useMessageAuthorActivities(ar
       if (tmp) {
         obj[author.author.id] = null;
       }
+      tmp = null != author.author && null != author.activity;
     });
     return obj;
   }, items);
@@ -47,6 +50,7 @@ export const useFetchMessageApplications = function useFetchMessageApplications(
       if (tmp) {
         set.add(applicationId.applicationId);
       }
+      tmp = null != applicationId.applicationId && null == applicationId.application;
     });
     return Array.from(set);
   }, items);
@@ -55,12 +59,13 @@ export const useFetchMessageApplications = function useFetchMessageApplications(
   const effect = noop.useEffect(() => {
     if (!obj.areArraysShallowEqual(memo, ref.current)) {
       const obj2 = ApplicationActionCreatorsDefault;
-      const found = _modDef12(tmp3).filter(GlobalUtils.isNotNullish);
-      const arr = _modDef12(tmp3);
+      const found = _modDef12(memo).filter(GlobalUtils.isNotNullish);
+      const arr = _modDef12(memo);
       const applications = obj2.fetchApplications(found.uniq().value(), false);
-      ref.current = tmp3;
+      ref.current = memo;
       const iter = found.uniq();
     }
+    obj = discord_common_shallowEqual;
   }, items1);
 };
 export const useFetchVoiceChannelInviteStartTimes = function useFetchVoiceChannelInviteStartTimes(stateFromStores4) {
@@ -102,7 +107,6 @@ export const useFetchVoiceChannelInviteStartTimes = function useFetchVoiceChanne
     while (iter !== undefined) {
       let tmp3 = nextResult;
       if (null != nextResult.guild) {
-        let tmp4 = require;
         let obj = InviteTypeUtils;
         if (obj.isVoiceChannelInvite(tmp3)) {
           let id = tmp3.guild.id;
@@ -112,7 +116,7 @@ export const useFetchVoiceChannelInviteStartTimes = function useFetchVoiceChanne
             result = VoiceChannelStartTimeStore.hasRequestedStartTimes(tmp8);
           }
           if (!result) {
-            let tmp4Result = tmp4(11477);
+            let tmp4Result = ChannelInfoActionCreators;
             let channelInfo = tmp4Result.fetchChannelInfo(tmp8);
           }
         }

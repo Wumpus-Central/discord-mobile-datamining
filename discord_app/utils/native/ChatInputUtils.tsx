@@ -1,7 +1,9 @@
 // discord_app/utils/native/ChatInputUtils.tsx
+import KeyboardUIStore from "../../modules/keyboard/native/KeyboardUIStore.native.tsx";
 import KeyboardTypes from "../../modules/keyboard/native/KeyboardTypes.tsx";
 import KeyboardManagerUtils from "KeyboardManagerUtils.tsx";
 import ScreenIndexFrozen from "../../modules/channel/native/ScreenIndexFrozen.tsx";
+import useKeyboardType from "../../modules/keyboard/native/useKeyboardType.tsx";
 import PortalKeyboardUIStore from "../../modules/keyboard/native/PortalKeyboardUIStore.native.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
@@ -9,13 +11,13 @@ function getBestActiveInput() {
   let str;
   if (0 !== map1.size) {
     str = "voice-panel";
-    if (!obj.has("voice-panel")) {
+    if (!map1.has("voice-panel")) {
       str = "message-request";
-      if (!obj.has("message-request")) {
+      if (!map1.has("message-request")) {
         str = "new-message";
-        if (!obj.has("new-message")) {
+        if (!map1.has("new-message")) {
           const _Array = Array;
-          const found = Array.from(obj.keys()).filter((item) => {
+          const found = Array.from(map1.keys()).filter((item) => {
             let tmp = typeof item === "number";
             if (typeof item === "number") {
               tmp = !ScreenIndexFrozen.isScreenIndexFrozen(item);
@@ -29,14 +31,14 @@ function getBestActiveInput() {
             const _Math2 = Math;
             str = HermesBuiltin.apply(items, Math);
           }
-          const arr = Array.from(obj.keys());
+          const arr = Array.from(map1.keys());
         }
       }
     }
   }
   value = undefined;
   if (null != str) {
-    value = obj.get(str);
+    value = map1.get(str);
   }
   let current;
   if (value != null) {
@@ -58,11 +60,11 @@ export function createInputRefTracker(id, screenIndex) {
         if (null != obj) {
           value = map.get(id);
           if (null != value) {
-            value.delete(tmp16);
+            value.delete(closure_0);
             if (0 === value.size) {
               map.delete(id);
             }
-            map1.delete(tmp16);
+            map1.delete(closure_0);
           }
           obj = null;
         }
@@ -73,12 +75,12 @@ export function createInputRefTracker(id, screenIndex) {
           const _Map = Map;
           value = new Map();
         }
-        const result = value.set(tmp2, obj);
+        const result = value.set(closure_0, obj);
         const result1 = map.set(id, value);
-        const result2 = map1.set(tmp2, obj);
+        const result2 = map1.set(closure_0, obj);
         const _process = process;
         if ("development" === process.env.DEVELOPMENT) {
-          const hasItem = map1.has(tmp2);
+          const hasItem = map1.has(closure_0);
         }
       } else {
         obj.current = current;
@@ -89,38 +91,37 @@ export function createInputRefTracker(id, screenIndex) {
         const current2 = obj.current;
         value = map.get(current2);
         if (null != value) {
-          value.delete(tmp15);
+          value.delete(closure_0);
           if (0 === value.size) {
-            obj3.delete(current2);
+            map.delete(current2);
           }
-          map1.delete(tmp15);
+          map1.delete(closure_0);
         }
         const current = obj.current;
-        value = obj3.get(current);
+        value = map.get(current);
         if (value == null) {
           const _Map = Map;
           value = new Map();
         }
-        const result = value.set(tmp15, tmp5);
-        const result1 = obj3.set(current, value);
-        const result2 = map1.set(tmp15, tmp5);
+        const result = value.set(closure_0, obj);
+        const result1 = map.set(current, value);
+        const result2 = map1.set(closure_0, obj);
         const _process = process;
         if ("development" === process.env.DEVELOPMENT) {
-          const hasItem = obj2.has(tmp15);
+          const hasItem = map1.has(closure_0);
         }
-        obj2 = map1;
       }
     },
     unregister() {
-      if (null != obj) {
-        const current = obj.current;
+      if (null != map) {
+        const current = map.current;
         value = map.get(current);
         if (null != value) {
-          value.delete(tmp2);
+          value.delete(closure_0);
           if (0 === value.size) {
-            obj.delete(current);
+            map.delete(current);
           }
-          map1.delete(tmp2);
+          map1.delete(closure_0);
         }
       }
     },
@@ -228,12 +229,13 @@ export const dismissKeyboard = function dismissKeyboard() {
   if (null != obj2) {
     obj2.closeCustomKeyboard();
   }
-  let tmpResult = tmp(4427);
+  let tmpResult = useKeyboardType;
   const keyboardType = tmpResult.getKeyboardType();
   if (keyboardType !== KeyboardTypes.KeyboardTypes.SYSTEM) {
-    tmpResult = tmp(1481);
-    obj = { type: tmp(1609).KeyboardTypes.SYSTEM };
+    tmpResult = KeyboardUIStore;
+    obj = { type: KeyboardTypes.KeyboardTypes.SYSTEM };
     tmpResult.setKeyboardType(obj);
   }
   const result1 = PortalKeyboardUIStore.closePortalKeyboardRequest();
+  const tmpResult1 = PortalKeyboardUIStore;
 };

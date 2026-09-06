@@ -20,7 +20,7 @@ function getStripe() {
   }
   return resolved;
 }
-let closure_11 = async function _authenticatePaymentIntentForPaymentId(arg0, value) {
+let closure_11 = async function _authenticatePaymentIntentForPaymentId(arg0) {
   if (c6 === 2) {
     c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -309,16 +309,16 @@ export const validateExpiry = function validateExpiry(arg0) {
 export { getStripe };
 export const getStripeClientMode = function getStripeClientMode() {
   if (null == constants.STRIPE.KEY) {
-    logger.warn("getStripeClientMode() called before PaymentSettings.STRIPE.KEY initialized: ", tmp.STRIPE.KEY);
+    logger.warn("getStripeClientMode() called before PaymentSettings.STRIPE.KEY initialized: ", constants.STRIPE.KEY);
     let str2 = "unknown";
   } else {
-    const KEY = tmp.STRIPE.KEY;
+    const KEY = constants.STRIPE.KEY;
     str2 = "live";
     if (!KEY.startsWith("pk_live")) {
-      const KEY2 = tmp.STRIPE.KEY;
+      const KEY2 = constants.STRIPE.KEY;
       let str4 = "test";
       if (!KEY2.startsWith("pk_test")) {
-        logger.warn("Unexpected value for Stripe public key: ", tmp.STRIPE.KEY);
+        logger.warn("Unexpected value for Stripe public key: ", constants.STRIPE.KEY);
         str4 = "unknown";
       }
       str2 = str4;

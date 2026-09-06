@@ -23,9 +23,9 @@ export default function ViewModerators(channel) {
     closure_0 = name;
     let obj = channel(handleRemovePermission[14]);
     if (name.rowType === constants.ROLE) {
-      let MEMBER = tmp(tmp2[17]).PermissionOverwriteType.ROLE;
+      let MEMBER = channel(handleRemovePermission[17]).PermissionOverwriteType.ROLE;
     } else {
-      MEMBER = tmp(tmp2[17]).PermissionOverwriteType.MEMBER;
+      MEMBER = channel(handleRemovePermission[17]).PermissionOverwriteType.MEMBER;
     }
     closure_2 = obj.removeModeratorOverwrite(name.id, MEMBER, closure_0);
     obj = {
@@ -37,16 +37,16 @@ export default function ViewModerators(channel) {
       hideActionSheet: false,
       confirmColor: null,
     };
-    const intl = tmp(tmp2[19]).intl;
+    const intl = channel(handleRemovePermission[19]).intl;
     obj.title = intl.string(channel(handleRemovePermission[19]).t.GuPYQB);
-    const intl2 = tmp(tmp2[19]).intl;
+    const intl2 = channel(handleRemovePermission[19]).intl;
     obj = { name: name.name };
     obj.body = intl2.format(channel(handleRemovePermission[19]).t.xERCnZ, obj);
-    const intl3 = tmp(tmp2[19]).intl;
+    const intl3 = channel(handleRemovePermission[19]).intl;
     obj.cancelText = intl3.string(channel(handleRemovePermission[19]).t["ETE/oC"]);
-    const intl4 = tmp(tmp2[19]).intl;
+    const intl4 = channel(handleRemovePermission[19]).intl;
     obj.confirmText = intl4.string(channel(handleRemovePermission[19]).t.fKxYb0);
-    closure_1 = asyncGeneratorStep(async (arg0, value) => {
+    closure_1 = asyncGeneratorStep(async () => {
       if (c2 === 2) {
         c2 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -71,13 +71,13 @@ export default function ViewModerators(channel) {
               obj = { value, done: true };
               return obj;
             } else {
-              if (obj11.isEmptyOverwrite(closure_2)) {
+              if (obj11.isEmptyOverwrite(id)) {
                 c1 = 2;
                 c2 = 1;
-                let obj1 = { value: v1(4573).clearPermissionOverwrite(tmp2.id, tmp27.id), done: false };
+                let obj1 = { value: v1(4573).clearPermissionOverwrite(tmp2.id, id.id), done: false };
                 return obj1;
               } else {
-                const items = [tmp27];
+                const items = [id];
                 c1 = 1;
                 c2 = 1;
                 let obj2 = { value: tmp2(9739).savePermissionUpdates(tmp2.id, items), done: false };
@@ -128,6 +128,7 @@ export default function ViewModerators(channel) {
     };
     obj.confirmColor = channel(handleRemovePermission[23]).ButtonColors.RED;
     guildId(handleRemovePermission[18]).show(obj);
+    let obj2 = guildId(handleRemovePermission[18]);
   }
   let obj = channel(handleRemovePermission[12]);
   const navigation = obj.useNavigation();
@@ -199,8 +200,8 @@ export default function ViewModerators(channel) {
             obj.track(AnalyticEvents.OPEN_POPOUT, { type: "Grant Channel Access" });
             const _HermesInternal = HermesInternal;
             const obj2 = ActionSheetActionCreatorsDefault;
-            obj = { channel: tmp, canSkip: false };
-            obj2.openLazy(asyncRequireImpl(16824, dependencyMap.paths), "channel-add-moderators-" + tmp.id, obj);
+            obj = { channel, canSkip: false };
+            obj2.openLazy(asyncRequireImpl(16824, dependencyMap.paths), "channel-add-moderators-" + channel.id, obj);
             const tmp7 = asyncRequireImpl(16824, dependencyMap.paths);
           }
         };

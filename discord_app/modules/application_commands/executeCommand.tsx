@@ -4,6 +4,7 @@ import FileUtils from "../../utils/FileUtils.tsx";
 import ApplicationCommandTypes from "ApplicationCommandTypes.tsx";
 import MessageQueue from "../../lib/MessageQueue.tsx";
 import InteractionActionCreatorsAll from "../interactions/InteractionActionCreators.tsx";
+import UserActionCreatorsAll from "../../actions/UserActionCreators.tsx";
 import ApplicationCommandQueryApiAll from "ApplicationCommandQueryApi.tsx";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 import EmojiStore from "../emojis/EmojiStore.tsx";
@@ -14,713 +15,727 @@ import UserStore from "../../stores/UserStore.tsx";
 import ApplicationCommandStore from "ApplicationCommandStore.tsx";
 
 require = fn;
-let closure_16 = async function _executeCommand(arg0, value) {
-  if (c16 === 2) {
-    c16 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp3 === 3) {
-    if (arg0 === 1) {
-      throw value;
-    } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+let closure_16 = async function _executeCommand(arg0) {
+  let source = arg0;
+  c15 = 0;
+  c16 = 0;
+  c13 = 0;
+  let iter = (async (arg0) => {
+    if (c16 === 2) {
+      c16 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp3 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        let obj = { value, done: true };
+        return obj;
+      } else {
+        return { value: "HermesInternal", done: null };
+      }
     } else {
-      return { value: "HermesInternal", done: null };
-    }
-  } else {
-    while (true) {
-      c16 = 2;
-      let tmp4 = c15;
-      if (0 === c15) {
-        if (arg0 === 1) {
-          c16 = 3;
-          throw value;
-        } else if (arg0 === 2) {
+      while (true) {
+        c16 = 2;
+        let tmp4 = c15;
+        if (0 === c15) {
+          if (arg0 === 1) {
+            c16 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c16 = 3;
+            obj = { value, done: true };
+            return obj;
+          } else {
+            closure_12 = tmp;
+            closure_11 = tmp4;
+            closure_139_0 = undefined;
+            closure_139_1 = undefined;
+            closure_139_2 = undefined;
+            closure_139_3 = undefined;
+            closure_139_4 = undefined;
+            closure_139_5 = undefined;
+            closure_139_6 = undefined;
+            closure_139_7 = undefined;
+            let source2;
+            ({
+              command: closure_139_0,
+              optionValues: closure_139_1,
+              context: closure_139_2,
+              commandTargetId: closure_139_3,
+              maxSizeCallback: closure_139_4,
+              commandOrigin,
+            } = source);
+            if (commandOrigin === undefined) {
+              commandOrigin = ApplicationCommandTypes.CommandOrigin.CHAT;
+            }
+            closure_139_5 = commandOrigin;
+            ({ sectionName: closure_139_6, interactionLifecycleOptionsFactory } = source);
+            if (interactionLifecycleOptionsFactory === undefined) {
+              interactionLifecycleOptionsFactory = displayInteractionLifecycleInChat;
+            }
+            closure_139_7 = interactionLifecycleOptionsFactory;
+            source2 = source.source;
+            closure_139_9 = undefined;
+            closure_139_10 = undefined;
+            closure_139_11 = undefined;
+            closure_139_12 = undefined;
+            let commandAttachmentDraftType;
+            closure_139_14 = undefined;
+            closure_139_15 = undefined;
+            let channelId;
+            closure_139_17 = undefined;
+            closure_139_18 = undefined;
+            closure_139_19 = undefined;
+            closure_139_20 = undefined;
+            closure_139_21 = undefined;
+            closure_139_22 = undefined;
+            closure_139_23 = undefined;
+            closure_139_24 = undefined;
+            let upload;
+            closure_139_26 = undefined;
+            closure_139_27 = undefined;
+            closure_139_28 = undefined;
+            closure_139_29 = undefined;
+            let name2;
+            closure_139_31 = undefined;
+            c15 = 1;
+            c16 = 1;
+            return { value: "PX_16", done: true };
+          }
+        } else {
+          if (1 === tmp4) {
+            if (arg0 === 1) {
+              c16 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c16 = 3;
+              let obj1 = { value, done: true };
+              return obj1;
+            } else if (null != closure_139_2.channel) {
+              source = closure_140_10.getSource(closure_139_2.channel.id);
+              closure_1 = source;
+              if (source == null) {
+                closure_1 = source2;
+              }
+              closure_139_9 = closure_1;
+              commandOrigin = closure_140_10.getCommandOrigin(closure_139_2.channel.id);
+              closure_2 = commandOrigin;
+              if (commandOrigin == null) {
+                closure_2 = closure_139_5;
+              }
+              closure_139_10 = closure_2;
+              if (null == closure_139_2.autocomplete) {
+                let obj24 = closure_140_1(closure_140_3[10]);
+                let obj2 = { type: "APPLICATION_COMMAND_USED", context: null, command: null, commandOrigin: null };
+                obj2.context = closure_139_2;
+                obj2.command = closure_139_0;
+                obj2.commandOrigin = closure_139_10;
+                let dispatchResult = obj24.dispatch(obj2);
+              }
+              let obj26 = closure_140_1(closure_140_3[11]);
+              c15 = 2;
+              c16 = 1;
+              let obj3 = { value: obj26.unarchiveThreadIfNecessary(closure_139_2.channel.id), done: false };
+              return obj3;
+            } else {
+              c16 = 3;
+            }
+          } else if (2 === tmp4) {
+            if (arg0 === 1) {
+              c16 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c16 = 3;
+              let obj4 = { value, done: true };
+              return obj4;
+            } else {
+              closure_139_11 = [];
+              closure_139_12 = [];
+              let obj31 = closure_140_0(closure_140_3[12]);
+              commandAttachmentDraftType = obj31.getCommandAttachmentDraftType(closure_139_10);
+              if (null != closure_139_0.options) {
+                options = closure_139_0.options;
+                dependencyMap = options[Symbol.iterator]();
+                while (dependencyMap !== undefined) {
+                  c13 = 1;
+                  closure_139_14 = tmp13;
+                  if (
+                    closure_139_14.type !== closure_140_0(closure_140_3[13]).ApplicationCommandOptionType.SUB_COMMAND
+                  ) {
+                    if (
+                      closure_139_14.type !==
+                      closure_140_0(closure_140_3[13]).ApplicationCommandOptionType.SUB_COMMAND_GROUP
+                    ) {
+                      if (closure_139_14.name in closure_139_1) {
+                        let autocomplete = closure_139_2.autocomplete;
+                        let name;
+                        if (autocomplete != null) {
+                          name = autocomplete.name;
+                        }
+                        let tmp19 = name === closure_139_14.name || undefined;
+                        closure_139_15 = tmp19;
+                        channelId = undefined;
+                        if (
+                          closure_139_14.type !== closure_140_0(closure_140_3[13]).ApplicationCommandOptionType.STRING
+                        ) {
+                          if (
+                            closure_139_14.type !==
+                            closure_140_0(closure_140_3[13]).ApplicationCommandOptionType.ATTACHMENT
+                          ) {
+                            let obj5 = closure_140_2(closure_140_3[14]);
+                            closure_139_17 = obj5.filterEmpty(closure_139_1[closure_139_14.name]);
+                            let tmp102 = null != closure_139_2.autocomplete;
+                            let tmp100 = closure_140_1(closure_140_3[16]);
+                            if (!tmp102) {
+                              tmp102 = 1 === closure_139_17.length;
+                            }
+                            let _HermesInternal2 = HermesInternal;
+                            let tmp100Result = tmp100(
+                              tmp102,
+                              'Option "' + closure_139_14.name + '" expects a single option type',
+                            );
+                            if (null != closure_139_17[0]) {
+                              let first = closure_139_17[0];
+                              closure_6 = first;
+                              if (first == null) {
+                                closure_6 = { type: "text", text: "" };
+                              }
+                              closure_139_18 = closure_6;
+                              let type = closure_139_14.type;
+                              if (closure_140_0(closure_140_3[13]).ApplicationCommandOptionType.CHANNEL === type) {
+                                if ("channelMention" === closure_139_18.type) {
+                                  channelId = closure_139_18.channelId;
+                                } else if ("text" === closure_139_18.type) {
+                                  let obj38 = closure_140_0(closure_140_3[12]);
+                                  if (obj38.isSnowflake(closure_139_18.text)) {
+                                    let str4 = closure_139_18.text;
+                                    channelId = str4.trim();
+                                  } else {
+                                    let obj15 = closure_140_0(closure_140_3[17]);
+                                    let guild7 = closure_139_2.guild;
+                                    id = undefined;
+                                    if (guild7 != null) {
+                                      id = guild7.id;
+                                    }
+                                    closure_139_19 = obj15.resolveApplicationCommandOption(
+                                      closure_139_18.text,
+                                      id,
+                                      closure_139_2.channel.id,
+                                    );
+                                    type = undefined;
+                                    let tmp297 = closure_140_1(closure_140_3[16]);
+                                    if (closure_139_19 != null) {
+                                      type = closure_139_19.type;
+                                    }
+                                    let _HermesInternal7 = HermesInternal;
+                                    let tmp297Result = tmp297(
+                                      "channelMention" === type,
+                                      "Failed to resolve " + closure_139_18.text,
+                                    );
+                                    channelId = closure_139_19.channelId;
+                                  }
+                                }
+                              } else if (closure_140_0(closure_140_3[13]).ApplicationCommandOptionType.ROLE === type) {
+                                if ("roleMention" === closure_139_18.type) {
+                                  channelId = closure_139_18.roleId;
+                                } else if ("text" === closure_139_18.type) {
+                                  obj12 = closure_140_0(closure_140_3[12]);
+                                  if (obj12.isSnowflake(closure_139_18.text)) {
+                                    let str3 = closure_139_18.text;
+                                    channelId = str3.trim();
+                                  } else {
+                                    let obj13 = closure_140_0(closure_140_3[17]);
+                                    let text2 = closure_139_18.text;
+                                    let guild6 = closure_139_2.guild;
+                                    let id1;
+                                    if (guild6 != null) {
+                                      id1 = guild6.id;
+                                    }
+                                    closure_139_20 = obj13.resolveApplicationCommandOption(
+                                      text2,
+                                      id1,
+                                      closure_139_2.channel.id,
+                                      { allowUsers: false },
+                                    );
+                                    let type1;
+                                    let tmp275 = closure_140_1(closure_140_3[16]);
+                                    if (closure_139_20 != null) {
+                                      type1 = closure_139_20.type;
+                                    }
+                                    let _HermesInternal6 = HermesInternal;
+                                    let tmp275Result = tmp275(
+                                      "roleMention" === type1,
+                                      "Failed to resolve " + closure_139_18.text,
+                                    );
+                                    channelId = closure_139_20.roleId;
+                                  }
+                                } else {
+                                  let tmp248 = "textMention" === closure_139_18.type;
+                                  if (tmp248) {
+                                    tmp248 = "@everyone" === closure_139_18.text;
+                                  }
+                                  if (tmp248) {
+                                    let guild5 = closure_139_2.guild;
+                                    let id2;
+                                    if (guild5 != null) {
+                                      id2 = guild5.id;
+                                    }
+                                    channelId = id2;
+                                  }
+                                }
+                              } else if (closure_140_0(closure_140_3[13]).ApplicationCommandOptionType.USER === type) {
+                                if ("userMention" === closure_139_18.type) {
+                                  channelId = closure_139_18.userId;
+                                } else if ("text" === closure_139_18.type) {
+                                  let obj37 = closure_140_0(closure_140_3[12]);
+                                  if (obj37.isSnowflake(closure_139_18.text)) {
+                                    let str2 = closure_139_18.text;
+                                    channelId = str2.trim();
+                                  } else {
+                                    let obj11 = closure_140_0(closure_140_3[17]);
+                                    let text = closure_139_18.text;
+                                    let guild4 = closure_139_2.guild;
+                                    let id3;
+                                    if (guild4 != null) {
+                                      id3 = guild4.id;
+                                    }
+                                    closure_139_21 = obj11.resolveApplicationCommandOption(
+                                      text,
+                                      id3,
+                                      closure_139_2.channel.id,
+                                      { allowRoles: false },
+                                    );
+                                    let type2;
+                                    let tmp235 = closure_140_1(closure_140_3[16]);
+                                    if (closure_139_21 != null) {
+                                      type2 = closure_139_21.type;
+                                    }
+                                    let _HermesInternal5 = HermesInternal;
+                                    let tmp235Result = tmp235(
+                                      "userMention" === type2,
+                                      "Failed to resolve " + closure_139_18.text,
+                                    );
+                                    channelId = closure_139_21.userId;
+                                  }
+                                }
+                              } else if (
+                                closure_140_0(closure_140_3[13]).ApplicationCommandOptionType.MENTIONABLE === type
+                              ) {
+                                if ("userMention" === closure_139_18.type) {
+                                  channelId = closure_139_18.userId;
+                                } else if ("roleMention" === closure_139_18.type) {
+                                  channelId = closure_139_18.roleId;
+                                } else {
+                                  if ("textMention" === closure_139_18.type) {
+                                    if ("@everyone" === closure_139_18.text) {
+                                      let guild3 = closure_139_2.guild;
+                                      let id4;
+                                      if (guild3 != null) {
+                                        id4 = guild3.id;
+                                      }
+                                      channelId = id4;
+                                    }
+                                  }
+                                  if ("text" === closure_139_18.type) {
+                                    let obj36 = closure_140_0(closure_140_3[12]);
+                                    if (obj36.isSnowflake(closure_139_18.text)) {
+                                      let str = closure_139_18.text;
+                                      channelId = str.trim();
+                                    } else {
+                                      let obj10 = closure_140_0(closure_140_3[17]);
+                                      let guild = closure_139_2.guild;
+                                      let id5;
+                                      if (guild != null) {
+                                        id5 = guild.id;
+                                      }
+                                      closure_139_22 = obj10.resolveApplicationCommandOption(
+                                        closure_139_18.text,
+                                        id5,
+                                        closure_139_2.channel.id,
+                                      );
+                                      let type3;
+                                      if (closure_139_22 != null) {
+                                        type3 = closure_139_22.type;
+                                      }
+                                      if ("userMention" === type3) {
+                                        channelId = closure_139_22.userId;
+                                      } else {
+                                        let type4;
+                                        if (closure_139_22 != null) {
+                                          type4 = closure_139_22.type;
+                                        }
+                                        if ("roleMention" === type4) {
+                                          channelId = closure_139_22.roleId;
+                                        } else {
+                                          let type5;
+                                          if (closure_139_22 != null) {
+                                            type5 = closure_139_22.type;
+                                          }
+                                          if ("textMention" === type5) {
+                                            if ("@everyone" === closure_139_22.text) {
+                                              let guild2 = closure_139_2.guild;
+                                              let id6;
+                                              if (guild2 != null) {
+                                                id6 = guild2.id;
+                                              }
+                                              channelId = id6;
+                                            }
+                                          }
+                                          let _HermesInternal4 = HermesInternal;
+                                          let tmp199 = closure_140_1(closure_140_3[16]);
+                                          let tmp199Result = tmp199(false, "Failed to resolve " + closure_139_18.text);
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              } else if (
+                                closure_140_0(closure_140_3[13]).ApplicationCommandOptionType.BOOLEAN === type
+                              ) {
+                                if ("text" === closure_139_18.type) {
+                                  let obj35 = closure_140_0(closure_140_3[15]);
+                                  let str23 = closure_139_18.text;
+                                  channelId = obj35.toChoiceBooleanValue(str23.trim());
+                                }
+                              } else if (
+                                closure_140_0(closure_140_3[13]).ApplicationCommandOptionType.INTEGER === type
+                              ) {
+                                if ("text" === closure_139_18.type) {
+                                  let str22 = closure_139_18.text;
+                                  closure_139_23 = str22.trim();
+                                  if (null != closure_139_14.choices) {
+                                    let obj9 = closure_140_0(closure_140_3[15]);
+                                    channelId = obj9.findChoiceNumberValue(closure_139_14.choices, closure_139_23);
+                                  } else if (closure_139_14.autocomplete) {
+                                    if (null != closure_139_2.autocomplete) {
+                                      if (closure_139_15) {
+                                        channelId = closure_139_2.autocomplete.query;
+                                      }
+                                    }
+                                    let obj8 = closure_140_0(closure_140_3[15]);
+                                    let result = obj8.findAutocompleteChoiceNumberValue(
+                                      closure_139_2.channel.id,
+                                      closure_139_14.name,
+                                      closure_139_23,
+                                    );
+                                  }
+                                  if (null == channelId) {
+                                    let _Number2 = Number;
+                                    let obj34 = closure_140_2(closure_140_3[14]);
+                                    channelId = Number(
+                                      obj34.normalizeNumericString(closure_140_6.locale, closure_139_23),
+                                    );
+                                  }
+                                }
+                              } else if (
+                                closure_140_0(closure_140_3[13]).ApplicationCommandOptionType.NUMBER === type
+                              ) {
+                                if ("text" === closure_139_18.type) {
+                                  let str21 = closure_139_18.text;
+                                  closure_139_24 = str21.trim();
+                                  if (null != closure_139_14.choices) {
+                                    let obj7 = closure_140_0(closure_140_3[15]);
+                                    channelId = obj7.findChoiceNumberValue(closure_139_14.choices, closure_139_24);
+                                  } else if (closure_139_14.autocomplete) {
+                                    if (null != closure_139_2.autocomplete) {
+                                      if (closure_139_15) {
+                                        channelId = closure_139_2.autocomplete.query;
+                                      }
+                                    }
+                                    let obj6 = closure_140_0(closure_140_3[15]);
+                                    let result1 = obj6.findAutocompleteChoiceNumberValue(
+                                      closure_139_2.channel.id,
+                                      closure_139_14.name,
+                                      closure_139_24,
+                                    );
+                                  }
+                                  if (null == channelId) {
+                                    let _Number = Number;
+                                    let obj33 = closure_140_2(closure_140_3[14]);
+                                    channelId = Number(
+                                      obj33.normalizeNumericString(closure_140_6.locale, closure_139_24),
+                                    );
+                                  }
+                                }
+                              } else {
+                                let _Error = Error;
+                                let _HermesInternal3 = HermesInternal;
+                                let tmp122 = new.target;
+                                let tmp123 = new.target;
+                                let error = new Error("Unsupported option type: " + closure_139_14.type);
+                                throw error;
+                              }
+                              let tmp308 = "" !== channelId;
+                              if (!tmp308) {
+                                tmp308 = null == closure_139_2.autocomplete;
+                              }
+                              if (!tmp308) {
+                                tmp308 = closure_139_15;
+                              }
+                              if (tmp308) {
+                                let tmp317 = null != closure_139_2.autocomplete;
+                                let tmp315 = closure_140_1(closure_140_3[16]);
+                                if (!tmp317) {
+                                  tmp317 = null != channelId;
+                                }
+                                let _HermesInternal8 = HermesInternal;
+                                let tmp315Result = tmp315(
+                                  tmp317,
+                                  'Unexpected value for option "' + closure_139_14.name + '"',
+                                );
+                                if (null != channelId) {
+                                  obj5 = { type: null, name: null, value: null, focused: null };
+                                  obj5.type = closure_139_14.type;
+                                  obj5.name = closure_139_14.name;
+                                  obj5.value = channelId;
+                                  obj5.focused = closure_139_15;
+                                  let arr = closure_139_11.push(obj5);
+                                }
+                              }
+                            }
+                          } else {
+                            if (null != closure_139_2.autocomplete) {
+                              c13 = 0;
+                              continue;
+                            } else {
+                              upload = closure_140_8.getUpload(
+                                closure_139_2.channel.id,
+                                closure_139_14.name,
+                                commandAttachmentDraftType,
+                              );
+                              if (null == upload) {
+                                c13 = 0;
+                                continue;
+                              } else {
+                                closure_139_26 = closure_139_12.length;
+                                arr = closure_139_12.push(upload);
+                                obj6 = { type: null, name: null, value: null, focused: null };
+                                obj6.type = closure_139_14.type;
+                                obj6.name = closure_139_14.name;
+                                obj6.value = closure_139_26;
+                                obj6.focused = closure_139_15;
+                                let arr1 = closure_139_11.push(obj6);
+                              }
+                            }
+                            continue;
+                          }
+                          continue;
+                        } else {
+                          let obj32 = closure_140_2(closure_140_3[14]);
+                          let str20 = obj32.getOptionalString(closure_139_1, closure_139_14.name);
+                          let trimmed;
+                          if (str20 != null) {
+                            trimmed = str20.trim();
+                          }
+                          c5 = trimmed;
+                          if (trimmed == null) {
+                            c5 = "";
+                          }
+                          closure_139_27 = c5;
+                          if (null != closure_139_14.choices) {
+                            obj2 = closure_140_0(closure_140_3[15]);
+                            channelId = obj2.findChoiceStringValue(closure_139_14.choices, closure_139_27);
+                          } else if (closure_139_14.autocomplete) {
+                            if (null != closure_139_2.autocomplete) {
+                              if (closure_139_15) {
+                                channelId = closure_139_2.autocomplete.query;
+                              }
+                            }
+                            obj1 = closure_140_0(closure_140_3[15]);
+                            let result2 = obj1.findAutocompleteChoiceStringValue(
+                              closure_139_2.channel.id,
+                              closure_139_14.name,
+                              closure_139_27,
+                            );
+                          }
+                          if (null == channelId) {
+                            channelId = closure_139_27;
+                          }
+                          if ("" === channelId) {
+                            if (null != closure_139_2.autocomplete) {
+                              if (!closure_139_15) {
+                                c13 = 0;
+                                continue;
+                              }
+                              continue;
+                            }
+                          }
+                          let tmp64 = null != closure_139_2.autocomplete;
+                          let tmp62 = closure_140_1(closure_140_3[16]);
+                          if (!tmp64) {
+                            tmp64 = null != channelId;
+                          }
+                          let _HermesInternal = HermesInternal;
+                          let tmp62Result = tmp62(tmp64, 'Option "' + closure_139_14.name + '" expects a value');
+                          obj7 = { type: null, name: null, value: null, focused: null };
+                          obj7.type = closure_139_14.type;
+                          obj7.name = closure_139_14.name;
+                          obj7.value = channelId;
+                          obj7.focused = closure_139_15;
+                          let arr2 = closure_139_11.push(obj7);
+                        }
+                      }
+                      continue;
+                    }
+                  }
+                  c13 = 0;
+                  continue;
+                }
+              }
+              if (null != closure_139_0.subCommandPath) {
+                closure_139_28 = closure_139_0.subCommandPath.length - 1;
+                if (closure_139_28 >= 0) {
+                  do {
+                    closure_139_29 = closure_139_0.subCommandPath[closure_139_28];
+                    name2 = closure_139_29.name;
+                    obj8 = { type: null, name: null, options: null };
+                    obj8.type = closure_139_29.type;
+                    obj8.name = name2;
+                    obj8.options = closure_139_11;
+                    let items = [obj8];
+                    closure_139_11 = items;
+                    closure_139_28 = closure_139_28 - 1;
+                  } while (closure_139_28 >= 0);
+                }
+              }
+              if (null != closure_139_0.execute) {
+                let obj20 = closure_140_1(closure_140_3[18]);
+                obj9 = { command_id: null, application_id: null, command_type: null, location: null, source: null };
+                obj9.command_id = closure_139_0.id;
+                obj9.application_id = closure_139_0.applicationId;
+                obj9.command_type = closure_139_0.type;
+                obj9.location = closure_140_21(closure_139_10);
+                obj9.source = closure_139_9;
+                let trackWithMetadataResult = obj20.trackWithMetadata(closure_140_12.APPLICATION_COMMAND_USED, obj9);
+                c16 = 3;
+                obj10 = { value: closure_139_0.execute(closure_139_11, closure_139_2), done: true };
+                return obj10;
+              } else if (
+                closure_139_0.inputType !== closure_140_0(closure_140_3[9]).ApplicationCommandInputType.BUILT_IN
+              ) {
+                if (
+                  closure_139_0.inputType !== closure_140_0(closure_140_3[9]).ApplicationCommandInputType.BUILT_IN_TEXT
+                ) {
+                  if (
+                    closure_139_0.inputType !==
+                    closure_140_0(closure_140_3[9]).ApplicationCommandInputType.BUILT_IN_INTEGRATION
+                  ) {
+                    obj11 = {
+                      version: null,
+                      id: null,
+                      guild_id: null,
+                      name: null,
+                      type: null,
+                      options: null,
+                      application_command: null,
+                    };
+                    obj11.version = closure_139_0.version;
+                    let rootCommand2 = closure_139_0.rootCommand;
+                    let id7;
+                    if (rootCommand2 != null) {
+                      id7 = rootCommand2.id;
+                    }
+                    id = id7;
+                    if (id7 == null) {
+                      id = closure_139_0.id;
+                    }
+                    obj11.id = id;
+                    obj11.guild_id = closure_139_0.guildId;
+                    let rootCommand = closure_139_0.rootCommand;
+                    let name1;
+                    if (rootCommand != null) {
+                      name1 = rootCommand.name;
+                    }
+                    untranslatedName = name1;
+                    if (name1 == null) {
+                      untranslatedName = closure_139_0.untranslatedName;
+                    }
+                    obj11.name = untranslatedName;
+                    obj11.type = closure_139_0.type;
+                    obj11.options = closure_139_11;
+                    obj11.application_command = closure_139_0.rootCommand;
+                    closure_139_31 = obj11;
+                    if (null != closure_139_3) {
+                      closure_139_31.target_id = closure_139_3;
+                    }
+                    if (null != closure_139_2.autocomplete) {
+                      let obj19 = closure_140_0(closure_140_3[19]);
+                      let performAutocompleteResult = obj19.performAutocomplete(
+                        closure_139_0,
+                        closure_139_2,
+                        closure_139_31,
+                      );
+                    } else {
+                      let obj40 = closure_140_1(closure_140_3[20]);
+                      let clearAllResult = obj40.clearAll(closure_139_2.channel.id, commandAttachmentDraftType);
+                      closure_10 = closure_140_18;
+                      obj12 = {};
+                      obj12.applicationId = closure_139_0.applicationId;
+                      obj12.data = closure_139_31;
+                      obj12.context = closure_139_2;
+                      obj12.attachments = closure_139_12;
+                      obj12.maxSizeCallback = closure_139_4;
+                      obj12.onMessageSuccess = function onMessageSuccess() {
+                        const values = Object.values(closure_1_1);
+                        const flatMapResult = values.flatMap((arr) => {
+                          const mapped = arr.map((type) => {
+                            if ("emoji" === type.type) {
+                              const obj = { names: null, surrogates: "", unicodeVersion: 6 };
+                              const name = type.name;
+                              const items = [name.replaceAll(":", "")];
+                              obj.names = items;
+                              let emoji = new closure_1_0(closure_1_3[21]).Emoji(obj);
+                            } else {
+                              emoji = null;
+                              if ("customEmoji" === type.type) {
+                                emoji = customEmojiById.getCustomEmojiById(type.emojiId);
+                              }
+                            }
+                            return emoji;
+                          });
+                          return mapped.filter(closure_1_0(dependencyMap[22]).isNotNullish);
+                        });
+                        if (flatMapResult.length > 0) {
+                          let obj = { type: "EMOJI_TRACK_USAGE", emojiUsed: flatMapResult };
+                          closure_1(dependencyMap[10]).dispatch(obj);
+                          const obj2 = closure_1(dependencyMap[10]);
+                        }
+                      };
+                      obj12.analytics_location = closure_140_21(closure_139_10);
+                      obj12.sectionName = closure_139_6;
+                      obj12.source = closure_139_9;
+                      c15 = 4;
+                      c16 = 1;
+                      obj13 = { value: closure_139_7(closure_139_0, closure_139_2, closure_139_31), done: false };
+                      return obj13;
+                    }
+                  }
+                }
+              }
+            }
+          } else if (3 === tmp4) {
+            c13 = 0;
+            dependencyMap.return();
+            throw closure_1_14;
+          } else if (arg0 === 1) {
+            c16 = 3;
+            throw value;
+          } else if (arg0 !== 2) {
+            obj12.interactionLifecycleOptions = value;
+            let tmp7 = closure_10(obj12);
+          }
           c16 = 3;
           obj = { value, done: true };
           return obj;
-        } else {
-          closure_12 = tmp;
-          closure_11 = tmp4;
-          closure_139_0 = undefined;
-          closure_139_1 = undefined;
-          closure_139_2 = undefined;
-          closure_139_3 = undefined;
-          closure_139_4 = undefined;
-          closure_139_5 = undefined;
-          closure_139_6 = undefined;
-          closure_139_7 = undefined;
-          let source2;
-          let tmp585 = closure_0;
-          ({
-            command: closure_139_0,
-            optionValues: closure_139_1,
-            context: closure_139_2,
-            commandTargetId: closure_139_3,
-            maxSizeCallback: closure_139_4,
-            commandOrigin,
-          } = closure_0);
-          if (commandOrigin === undefined) {
-            commandOrigin = ApplicationCommandTypes.CommandOrigin.CHAT;
-          }
-          closure_139_5 = commandOrigin;
-          ({ sectionName: closure_139_6, interactionLifecycleOptionsFactory } = tmp585);
-          if (interactionLifecycleOptionsFactory === undefined) {
-            interactionLifecycleOptionsFactory = displayInteractionLifecycleInChat;
-          }
-          closure_139_7 = interactionLifecycleOptionsFactory;
-          source2 = tmp585.source;
-          closure_139_9 = undefined;
-          closure_139_10 = undefined;
-          closure_139_11 = undefined;
-          closure_139_12 = undefined;
-          let commandAttachmentDraftType;
-          closure_139_14 = undefined;
-          closure_139_15 = undefined;
-          let channelId;
-          closure_139_17 = undefined;
-          closure_139_18 = undefined;
-          closure_139_19 = undefined;
-          closure_139_20 = undefined;
-          closure_139_21 = undefined;
-          closure_139_22 = undefined;
-          closure_139_23 = undefined;
-          closure_139_24 = undefined;
-          let upload;
-          closure_139_26 = undefined;
-          closure_139_27 = undefined;
-          closure_139_28 = undefined;
-          closure_139_29 = undefined;
-          let name2;
-          closure_139_31 = undefined;
-          c15 = 1;
-          c16 = 1;
-          return { value: "PX_16", done: true };
         }
-      } else {
-        if (1 === tmp4) {
-          if (arg0 === 1) {
-            c16 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c16 = 3;
-            let obj1 = { value, done: true };
-            return obj1;
-          } else if (null != closure_139_2.channel) {
-            let source = closure_140_10.getSource(closure_139_2.channel.id);
-            closure_1 = source;
-            if (source == null) {
-              closure_1 = source2;
-            }
-            closure_139_9 = closure_1;
-            commandOrigin = closure_140_10.getCommandOrigin(closure_139_2.channel.id);
-            closure_2 = commandOrigin;
-            if (commandOrigin == null) {
-              closure_2 = closure_139_5;
-            }
-            closure_139_10 = closure_2;
-            if (null == closure_139_2.autocomplete) {
-              let obj24 = closure_140_1(closure_140_3[10]);
-              let obj2 = { type: "APPLICATION_COMMAND_USED", context: null, command: null, commandOrigin: null };
-              obj2.context = closure_139_2;
-              obj2.command = closure_139_0;
-              obj2.commandOrigin = closure_139_10;
-              let dispatchResult = obj24.dispatch(obj2);
-            }
-            let obj26 = closure_140_1(closure_140_3[11]);
-            c15 = 2;
-            c16 = 1;
-            let obj3 = { value: obj26.unarchiveThreadIfNecessary(closure_139_2.channel.id), done: false };
-            return obj3;
-          } else {
-            c16 = 3;
-          }
-        } else if (2 === tmp4) {
-          if (arg0 === 1) {
-            c16 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c16 = 3;
-            let obj4 = { value, done: true };
-            return obj4;
-          } else {
-            closure_139_11 = [];
-            closure_139_12 = [];
-            let obj31 = closure_140_0(closure_140_3[12]);
-            commandAttachmentDraftType = obj31.getCommandAttachmentDraftType(closure_139_10);
-            if (null != closure_139_0.options) {
-              let options = closure_139_0.options;
-              dependencyMap = options[Symbol.iterator]();
-              while (dependencyMap !== undefined) {
-                c13 = 1;
-                closure_139_14 = tmp13;
-                if (closure_139_14.type !== closure_140_0(closure_140_3[13]).ApplicationCommandOptionType.SUB_COMMAND) {
-                  if (
-                    closure_139_14.type !==
-                    closure_140_0(closure_140_3[13]).ApplicationCommandOptionType.SUB_COMMAND_GROUP
-                  ) {
-                    if (closure_139_14.name in closure_139_1) {
-                      let autocomplete = closure_139_2.autocomplete;
-                      let name;
-                      if (autocomplete != null) {
-                        name = autocomplete.name;
-                      }
-                      let tmp19 = name === closure_139_14.name || undefined;
-                      closure_139_15 = tmp19;
-                      channelId = undefined;
-                      if (
-                        closure_139_14.type !== closure_140_0(closure_140_3[13]).ApplicationCommandOptionType.STRING
-                      ) {
-                        if (
-                          closure_139_14.type !==
-                          closure_140_0(closure_140_3[13]).ApplicationCommandOptionType.ATTACHMENT
-                        ) {
-                          let obj5 = closure_140_2(closure_140_3[14]);
-                          closure_139_17 = obj5.filterEmpty(closure_139_1[closure_139_14.name]);
-                          let tmp102 = null != closure_139_2.autocomplete;
-                          let tmp100 = closure_140_1(closure_140_3[16]);
-                          if (!tmp102) {
-                            tmp102 = 1 === closure_139_17.length;
-                          }
-                          let _HermesInternal2 = HermesInternal;
-                          let tmp100Result = tmp100(
-                            tmp102,
-                            'Option "' + closure_139_14.name + '" expects a single option type',
-                          );
-                          if (null != closure_139_17[0]) {
-                            let first = closure_139_17[0];
-                            closure_6 = first;
-                            if (first == null) {
-                              closure_6 = { type: "text", text: "" };
-                            }
-                            closure_139_18 = closure_6;
-                            let type = closure_139_14.type;
-                            if (closure_140_0(closure_140_3[13]).ApplicationCommandOptionType.CHANNEL === type) {
-                              if ("channelMention" === closure_139_18.type) {
-                                channelId = closure_139_18.channelId;
-                              } else if ("text" === closure_139_18.type) {
-                                let obj38 = closure_140_0(closure_140_3[12]);
-                                if (obj38.isSnowflake(closure_139_18.text)) {
-                                  let str4 = closure_139_18.text;
-                                  channelId = str4.trim();
-                                } else {
-                                  let obj15 = closure_140_0(closure_140_3[17]);
-                                  let guild7 = closure_139_2.guild;
-                                  let id;
-                                  if (guild7 != null) {
-                                    id = guild7.id;
-                                  }
-                                  closure_139_19 = obj15.resolveApplicationCommandOption(
-                                    closure_139_18.text,
-                                    id,
-                                    closure_139_2.channel.id,
-                                  );
-                                  type = undefined;
-                                  let tmp297 = closure_140_1(closure_140_3[16]);
-                                  if (closure_139_19 != null) {
-                                    type = closure_139_19.type;
-                                  }
-                                  let _HermesInternal7 = HermesInternal;
-                                  let tmp297Result = tmp297(
-                                    "channelMention" === type,
-                                    "Failed to resolve " + closure_139_18.text,
-                                  );
-                                  channelId = closure_139_19.channelId;
-                                }
-                              }
-                            } else if (closure_140_0(closure_140_3[13]).ApplicationCommandOptionType.ROLE === type) {
-                              if ("roleMention" === closure_139_18.type) {
-                                channelId = closure_139_18.roleId;
-                              } else if ("text" === closure_139_18.type) {
-                                let obj12 = closure_140_0(closure_140_3[12]);
-                                if (obj12.isSnowflake(closure_139_18.text)) {
-                                  let str3 = closure_139_18.text;
-                                  channelId = str3.trim();
-                                } else {
-                                  let obj13 = closure_140_0(closure_140_3[17]);
-                                  let text2 = closure_139_18.text;
-                                  let guild6 = closure_139_2.guild;
-                                  let id1;
-                                  if (guild6 != null) {
-                                    id1 = guild6.id;
-                                  }
-                                  closure_139_20 = obj13.resolveApplicationCommandOption(
-                                    text2,
-                                    id1,
-                                    closure_139_2.channel.id,
-                                    { allowUsers: false },
-                                  );
-                                  let type1;
-                                  let tmp275 = closure_140_1(closure_140_3[16]);
-                                  if (closure_139_20 != null) {
-                                    type1 = closure_139_20.type;
-                                  }
-                                  let _HermesInternal6 = HermesInternal;
-                                  let tmp275Result = tmp275(
-                                    "roleMention" === type1,
-                                    "Failed to resolve " + closure_139_18.text,
-                                  );
-                                  channelId = closure_139_20.roleId;
-                                }
-                              } else {
-                                let tmp248 = "textMention" === closure_139_18.type;
-                                if (tmp248) {
-                                  tmp248 = "@everyone" === closure_139_18.text;
-                                }
-                                if (tmp248) {
-                                  let guild5 = closure_139_2.guild;
-                                  let id2;
-                                  if (guild5 != null) {
-                                    id2 = guild5.id;
-                                  }
-                                  channelId = id2;
-                                }
-                              }
-                            } else if (closure_140_0(closure_140_3[13]).ApplicationCommandOptionType.USER === type) {
-                              if ("userMention" === closure_139_18.type) {
-                                channelId = closure_139_18.userId;
-                              } else if ("text" === closure_139_18.type) {
-                                let obj37 = closure_140_0(closure_140_3[12]);
-                                if (obj37.isSnowflake(closure_139_18.text)) {
-                                  let str2 = closure_139_18.text;
-                                  channelId = str2.trim();
-                                } else {
-                                  let obj11 = closure_140_0(closure_140_3[17]);
-                                  let text = closure_139_18.text;
-                                  let guild4 = closure_139_2.guild;
-                                  let id3;
-                                  if (guild4 != null) {
-                                    id3 = guild4.id;
-                                  }
-                                  closure_139_21 = obj11.resolveApplicationCommandOption(
-                                    text,
-                                    id3,
-                                    closure_139_2.channel.id,
-                                    { allowRoles: false },
-                                  );
-                                  let type2;
-                                  let tmp235 = closure_140_1(closure_140_3[16]);
-                                  if (closure_139_21 != null) {
-                                    type2 = closure_139_21.type;
-                                  }
-                                  let _HermesInternal5 = HermesInternal;
-                                  let tmp235Result = tmp235(
-                                    "userMention" === type2,
-                                    "Failed to resolve " + closure_139_18.text,
-                                  );
-                                  channelId = closure_139_21.userId;
-                                }
-                              }
-                            } else if (
-                              closure_140_0(closure_140_3[13]).ApplicationCommandOptionType.MENTIONABLE === type
-                            ) {
-                              if ("userMention" === closure_139_18.type) {
-                                channelId = closure_139_18.userId;
-                              } else if ("roleMention" === closure_139_18.type) {
-                                channelId = closure_139_18.roleId;
-                              } else {
-                                if ("textMention" === closure_139_18.type) {
-                                  if ("@everyone" === closure_139_18.text) {
-                                    let guild3 = closure_139_2.guild;
-                                    let id4;
-                                    if (guild3 != null) {
-                                      id4 = guild3.id;
-                                    }
-                                    channelId = id4;
-                                  }
-                                }
-                                if ("text" === closure_139_18.type) {
-                                  let obj36 = closure_140_0(closure_140_3[12]);
-                                  if (obj36.isSnowflake(closure_139_18.text)) {
-                                    let str = closure_139_18.text;
-                                    channelId = str.trim();
-                                  } else {
-                                    let obj10 = closure_140_0(closure_140_3[17]);
-                                    let guild = closure_139_2.guild;
-                                    let id5;
-                                    if (guild != null) {
-                                      id5 = guild.id;
-                                    }
-                                    closure_139_22 = obj10.resolveApplicationCommandOption(
-                                      closure_139_18.text,
-                                      id5,
-                                      closure_139_2.channel.id,
-                                    );
-                                    let type3;
-                                    if (closure_139_22 != null) {
-                                      type3 = closure_139_22.type;
-                                    }
-                                    if ("userMention" === type3) {
-                                      channelId = closure_139_22.userId;
-                                    } else {
-                                      let type4;
-                                      if (closure_139_22 != null) {
-                                        type4 = closure_139_22.type;
-                                      }
-                                      if ("roleMention" === type4) {
-                                        channelId = closure_139_22.roleId;
-                                      } else {
-                                        let type5;
-                                        if (closure_139_22 != null) {
-                                          type5 = closure_139_22.type;
-                                        }
-                                        if ("textMention" === type5) {
-                                          if ("@everyone" === closure_139_22.text) {
-                                            let guild2 = closure_139_2.guild;
-                                            let id6;
-                                            if (guild2 != null) {
-                                              id6 = guild2.id;
-                                            }
-                                            channelId = id6;
-                                          }
-                                        }
-                                        let _HermesInternal4 = HermesInternal;
-                                        let tmp199 = closure_140_1(closure_140_3[16]);
-                                        let tmp199Result = tmp199(false, "Failed to resolve " + closure_139_18.text);
-                                      }
-                                    }
-                                  }
-                                }
-                              }
-                            } else if (closure_140_0(closure_140_3[13]).ApplicationCommandOptionType.BOOLEAN === type) {
-                              if ("text" === closure_139_18.type) {
-                                let obj35 = closure_140_0(closure_140_3[15]);
-                                let str23 = closure_139_18.text;
-                                channelId = obj35.toChoiceBooleanValue(str23.trim());
-                              }
-                            } else if (closure_140_0(closure_140_3[13]).ApplicationCommandOptionType.INTEGER === type) {
-                              if ("text" === closure_139_18.type) {
-                                let str22 = closure_139_18.text;
-                                closure_139_23 = str22.trim();
-                                if (null != closure_139_14.choices) {
-                                  let obj9 = closure_140_0(closure_140_3[15]);
-                                  channelId = obj9.findChoiceNumberValue(closure_139_14.choices, closure_139_23);
-                                } else if (closure_139_14.autocomplete) {
-                                  if (null != closure_139_2.autocomplete) {
-                                    if (closure_139_15) {
-                                      channelId = closure_139_2.autocomplete.query;
-                                    }
-                                  }
-                                  let obj8 = closure_140_0(closure_140_3[15]);
-                                  let result = obj8.findAutocompleteChoiceNumberValue(
-                                    closure_139_2.channel.id,
-                                    closure_139_14.name,
-                                    closure_139_23,
-                                  );
-                                }
-                                if (null == channelId) {
-                                  let _Number2 = Number;
-                                  let obj34 = closure_140_2(closure_140_3[14]);
-                                  channelId = Number(
-                                    obj34.normalizeNumericString(closure_140_6.locale, closure_139_23),
-                                  );
-                                }
-                              }
-                            } else if (closure_140_0(closure_140_3[13]).ApplicationCommandOptionType.NUMBER === type) {
-                              if ("text" === closure_139_18.type) {
-                                let str21 = closure_139_18.text;
-                                closure_139_24 = str21.trim();
-                                if (null != closure_139_14.choices) {
-                                  let obj7 = closure_140_0(closure_140_3[15]);
-                                  channelId = obj7.findChoiceNumberValue(closure_139_14.choices, closure_139_24);
-                                } else if (closure_139_14.autocomplete) {
-                                  if (null != closure_139_2.autocomplete) {
-                                    if (closure_139_15) {
-                                      channelId = closure_139_2.autocomplete.query;
-                                    }
-                                  }
-                                  let obj6 = closure_140_0(closure_140_3[15]);
-                                  let result1 = obj6.findAutocompleteChoiceNumberValue(
-                                    closure_139_2.channel.id,
-                                    closure_139_14.name,
-                                    closure_139_24,
-                                  );
-                                }
-                                if (null == channelId) {
-                                  let _Number = Number;
-                                  let obj33 = closure_140_2(closure_140_3[14]);
-                                  channelId = Number(
-                                    obj33.normalizeNumericString(closure_140_6.locale, closure_139_24),
-                                  );
-                                }
-                              }
-                            } else {
-                              let _Error = Error;
-                              let _HermesInternal3 = HermesInternal;
-                              let tmp122 = new.target;
-                              let tmp123 = new.target;
-                              let error = new Error("Unsupported option type: " + closure_139_14.type);
-                              throw error;
-                            }
-                            let tmp308 = "" !== channelId;
-                            if (!tmp308) {
-                              tmp308 = null == closure_139_2.autocomplete;
-                            }
-                            if (!tmp308) {
-                              tmp308 = closure_139_15;
-                            }
-                            if (tmp308) {
-                              let tmp317 = null != closure_139_2.autocomplete;
-                              let tmp315 = closure_140_1(closure_140_3[16]);
-                              if (!tmp317) {
-                                tmp317 = null != channelId;
-                              }
-                              let _HermesInternal8 = HermesInternal;
-                              let tmp315Result = tmp315(
-                                tmp317,
-                                'Unexpected value for option "' + closure_139_14.name + '"',
-                              );
-                              if (null != channelId) {
-                                obj5 = { type: null, name: null, value: null, focused: null };
-                                obj5.type = closure_139_14.type;
-                                obj5.name = closure_139_14.name;
-                                obj5.value = channelId;
-                                obj5.focused = closure_139_15;
-                                let arr = closure_139_11.push(obj5);
-                              }
-                            }
-                          }
-                        } else {
-                          if (null != closure_139_2.autocomplete) {
-                            c13 = 0;
-                            continue;
-                          } else {
-                            upload = closure_140_8.getUpload(
-                              closure_139_2.channel.id,
-                              closure_139_14.name,
-                              commandAttachmentDraftType,
-                            );
-                            if (null == upload) {
-                              c13 = 0;
-                              continue;
-                            } else {
-                              closure_139_26 = closure_139_12.length;
-                              arr = closure_139_12.push(upload);
-                              obj6 = { type: null, name: null, value: null, focused: null };
-                              obj6.type = closure_139_14.type;
-                              obj6.name = closure_139_14.name;
-                              obj6.value = closure_139_26;
-                              obj6.focused = closure_139_15;
-                              let arr1 = closure_139_11.push(obj6);
-                            }
-                          }
-                          continue;
-                        }
-                        continue;
-                      } else {
-                        let obj32 = closure_140_2(closure_140_3[14]);
-                        let str20 = obj32.getOptionalString(closure_139_1, closure_139_14.name);
-                        let trimmed;
-                        if (str20 != null) {
-                          trimmed = str20.trim();
-                        }
-                        c5 = trimmed;
-                        if (trimmed == null) {
-                          c5 = "";
-                        }
-                        closure_139_27 = c5;
-                        if (null != closure_139_14.choices) {
-                          obj2 = closure_140_0(closure_140_3[15]);
-                          channelId = obj2.findChoiceStringValue(closure_139_14.choices, closure_139_27);
-                        } else if (closure_139_14.autocomplete) {
-                          if (null != closure_139_2.autocomplete) {
-                            if (closure_139_15) {
-                              channelId = closure_139_2.autocomplete.query;
-                            }
-                          }
-                          obj1 = closure_140_0(closure_140_3[15]);
-                          let result2 = obj1.findAutocompleteChoiceStringValue(
-                            closure_139_2.channel.id,
-                            closure_139_14.name,
-                            closure_139_27,
-                          );
-                        }
-                        if (null == channelId) {
-                          channelId = closure_139_27;
-                        }
-                        if ("" === channelId) {
-                          if (null != closure_139_2.autocomplete) {
-                            if (!closure_139_15) {
-                              c13 = 0;
-                              continue;
-                            }
-                            continue;
-                          }
-                        }
-                        let tmp64 = null != closure_139_2.autocomplete;
-                        let tmp62 = closure_140_1(closure_140_3[16]);
-                        if (!tmp64) {
-                          tmp64 = null != channelId;
-                        }
-                        let _HermesInternal = HermesInternal;
-                        let tmp62Result = tmp62(tmp64, 'Option "' + closure_139_14.name + '" expects a value');
-                        obj7 = { type: null, name: null, value: null, focused: null };
-                        obj7.type = closure_139_14.type;
-                        obj7.name = closure_139_14.name;
-                        obj7.value = channelId;
-                        obj7.focused = closure_139_15;
-                        let arr2 = closure_139_11.push(obj7);
-                      }
-                    }
-                    continue;
-                  }
-                }
-                c13 = 0;
-                continue;
-              }
-            }
-            if (null != closure_139_0.subCommandPath) {
-              closure_139_28 = closure_139_0.subCommandPath.length - 1;
-              if (closure_139_28 >= 0) {
-                do {
-                  closure_139_29 = closure_139_0.subCommandPath[closure_139_28];
-                  name2 = closure_139_29.name;
-                  obj8 = { type: null, name: null, options: null };
-                  obj8.type = closure_139_29.type;
-                  obj8.name = name2;
-                  obj8.options = closure_139_11;
-                  let items = [obj8];
-                  closure_139_11 = items;
-                  closure_139_28 = closure_139_28 - 1;
-                } while (closure_139_28 >= 0);
-              }
-            }
-            if (null != closure_139_0.execute) {
-              let obj20 = closure_140_1(closure_140_3[18]);
-              obj9 = { command_id: null, application_id: null, command_type: null, location: null, source: null };
-              obj9.command_id = closure_139_0.id;
-              obj9.application_id = closure_139_0.applicationId;
-              obj9.command_type = closure_139_0.type;
-              obj9.location = closure_140_21(closure_139_10);
-              obj9.source = closure_139_9;
-              let trackWithMetadataResult = obj20.trackWithMetadata(closure_140_12.APPLICATION_COMMAND_USED, obj9);
-              c16 = 3;
-              obj10 = { value: closure_139_0.execute(closure_139_11, closure_139_2), done: true };
-              return obj10;
-            } else if (
-              closure_139_0.inputType !== closure_140_0(closure_140_3[9]).ApplicationCommandInputType.BUILT_IN
-            ) {
-              if (
-                closure_139_0.inputType !== closure_140_0(closure_140_3[9]).ApplicationCommandInputType.BUILT_IN_TEXT
-              ) {
-                if (
-                  closure_139_0.inputType !==
-                  closure_140_0(closure_140_3[9]).ApplicationCommandInputType.BUILT_IN_INTEGRATION
-                ) {
-                  obj11 = {
-                    version: null,
-                    id: null,
-                    guild_id: null,
-                    name: null,
-                    type: null,
-                    options: null,
-                    application_command: null,
-                  };
-                  obj11.version = closure_139_0.version;
-                  let rootCommand2 = closure_139_0.rootCommand;
-                  let id7;
-                  if (rootCommand2 != null) {
-                    id7 = rootCommand2.id;
-                  }
-                  id = id7;
-                  if (id7 == null) {
-                    id = closure_139_0.id;
-                  }
-                  obj11.id = id;
-                  obj11.guild_id = closure_139_0.guildId;
-                  let rootCommand = closure_139_0.rootCommand;
-                  let name1;
-                  if (rootCommand != null) {
-                    name1 = rootCommand.name;
-                  }
-                  let untranslatedName = name1;
-                  if (name1 == null) {
-                    untranslatedName = closure_139_0.untranslatedName;
-                  }
-                  obj11.name = untranslatedName;
-                  obj11.type = closure_139_0.type;
-                  obj11.options = closure_139_11;
-                  obj11.application_command = closure_139_0.rootCommand;
-                  closure_139_31 = obj11;
-                  if (null != closure_139_3) {
-                    closure_139_31.target_id = closure_139_3;
-                  }
-                  if (null != closure_139_2.autocomplete) {
-                    let obj19 = closure_140_0(closure_140_3[19]);
-                    let performAutocompleteResult = obj19.performAutocomplete(
-                      closure_139_0,
-                      closure_139_2,
-                      closure_139_31,
-                    );
-                  } else {
-                    let obj40 = closure_140_1(closure_140_3[20]);
-                    let clearAllResult = obj40.clearAll(closure_139_2.channel.id, commandAttachmentDraftType);
-                    ApplicationCommandStore = closure_140_18;
-                    obj12 = {};
-                    obj12.applicationId = closure_139_0.applicationId;
-                    obj12.data = closure_139_31;
-                    obj12.context = closure_139_2;
-                    obj12.attachments = closure_139_12;
-                    obj12.maxSizeCallback = closure_139_4;
-                    obj12.onMessageSuccess = function onMessageSuccess() {
-                      const values = Object.values(closure_1_1);
-                      const flatMapResult = values.flatMap((arr) => {
-                        const mapped = arr.map((type) => {
-                          if ("emoji" === type.type) {
-                            const obj = { names: null, surrogates: "", unicodeVersion: 6 };
-                            const name = type.name;
-                            const items = [name.replaceAll(":", "")];
-                            obj.names = items;
-                            let emoji = new closure_1_0(closure_1_3[21]).Emoji(obj);
-                          } else {
-                            emoji = null;
-                            if ("customEmoji" === type.type) {
-                              emoji = customEmojiById.getCustomEmojiById(type.emojiId);
-                            }
-                          }
-                          return emoji;
-                        });
-                        return mapped.filter(closure_1_0(dependencyMap[22]).isNotNullish);
-                      });
-                      if (flatMapResult.length > 0) {
-                        let obj = { type: "EMOJI_TRACK_USAGE", emojiUsed: flatMapResult };
-                        closure_1(dependencyMap[10]).dispatch(obj);
-                        const obj2 = closure_1(dependencyMap[10]);
-                      }
-                    };
-                    obj12.analytics_location = closure_140_21(closure_139_10);
-                    obj12.sectionName = closure_139_6;
-                    obj12.source = closure_139_9;
-                    c15 = 4;
-                    c16 = 1;
-                    obj13 = { value: closure_139_7(closure_139_0, closure_139_2, closure_139_31), done: false };
-                    return obj13;
-                  }
-                }
-              }
-            }
-          }
-        } else if (3 === tmp4) {
-          c13 = 0;
-          dependencyMap.return();
-          throw closure_1_14;
-        } else if (arg0 === 1) {
-          c16 = 3;
-          throw value;
-        } else if (arg0 !== 2) {
-          obj12.interactionLifecycleOptions = value;
-          let tmp7 = ApplicationCommandStore(obj12);
-        }
-        c16 = 3;
-        obj = { value, done: true };
-        return obj;
       }
     }
-  }
+  })();
+  iter.next();
+  return iter;
 };
-let closure_17 = async function _retryCommandMessage(arg0, arg1, arg2) {
+let closure_17 = async function _retryCommandMessage(arg0) {
   let commandType = arg0;
-  closure_1 = arg1;
   closure_2 = arg2;
   c5 = 0;
   c6 = 0;
@@ -750,20 +765,24 @@ let closure_17 = async function _retryCommandMessage(arg0, arg1, arg2) {
             return obj;
           } else {
             if (commandType.isCommandType()) {
-              if (null != tmp18.interactionData) {
-                if (null != tmp20.command) {
-                  const obj1 = { channel: tmp19, guild: null };
+              if (null != commandType.interactionData) {
+                if (null != closure_2.command) {
+                  const obj1 = { channel, guild: null };
                   guild = null;
-                  if (null != tmp19.guild_id) {
-                    guild = guild.getGuild(tmp19.guild_id);
+                  if (null != channel.guild_id) {
+                    guild = guild.getGuild(channel.guild_id);
                   }
                   obj1.guild = guild;
                   closure_4 = enqueueCommandInteraction;
-                  obj2 = { applicationId: tmp20.command.applicationId, data: tmp18.interactionData, context: obj1 };
+                  obj2 = {
+                    applicationId: closure_2.command.applicationId,
+                    data: commandType.interactionData,
+                    context: obj1,
+                  };
                   c5 = 1;
                   c6 = 1;
                   const obj3 = {
-                    value: displayInteractionLifecycleInChat(tmp20.command, obj1, tmp18.interactionData),
+                    value: displayInteractionLifecycleInChat(closure_2.command, obj1, commandType.interactionData),
                     done: false,
                   };
                   return obj3;
@@ -872,6 +891,7 @@ function enqueueCommandInteraction(interactionLifecycleOptions) {
               if (ok) {
                 closure_1();
               }
+              obj = onMessageSuccess(dependencyMap[26]);
             });
           }
         });
@@ -889,8 +909,7 @@ function enqueueCommandInteraction(interactionLifecycleOptions) {
     }
     closure_129_0 = message;
     closure_129_1 = onMessageSuccess;
-    const tmp10 = onMessageSuccess;
-    obj1 = { type: tmp10(7834).MessageDataType.COMMAND, message };
+    obj1 = { type: onMessageSuccess(7834).MessageDataType.COMMAND, message };
     message(7834).enqueue(obj1, (ok) => {
       ({ nonce, applicationId, channelId, guildId } = closure_0);
       if (guildId == null) {
@@ -910,6 +929,7 @@ function enqueueCommandInteraction(interactionLifecycleOptions) {
       if (ok) {
         closure_1();
       }
+      obj = onMessageSuccess(dependencyMap[26]);
     });
     const obj6 = message(7834);
   }
@@ -992,12 +1012,11 @@ let closure_20 = async function _displayInteractionLifecycleInChat(arg0, arg1, a
                     c6 = 1;
                     c7 = 2;
                     c8 = 1;
-                    const obj4 = { value: tmp65(8181).getUser(cachedApplicationSection.botId), done: false };
+                    const obj4 = { value: UserActionCreatorsAll.getUser(cachedApplicationSection.botId), done: false };
                     return obj4;
                   }
                 }
               }
-              tmp65 = importAll;
             }
           }
         } else if (1 === tmp8) {
@@ -1063,13 +1082,13 @@ let closure_20 = async function _displayInteractionLifecycleInChat(arg0, arg1, a
             let result = arg1;
             if (tmp2) {
               let obj = closure_1(obj6[30]);
-              obj.sendClydeError(tmp.channel.id, code);
+              obj.sendClydeError(channel.channel.id, code);
             }
             if (tmp7) {
               result = closure_0(obj6[26]).interactionCallbackErrorReason(reason, closure_1_0.applicationId);
               const obj2 = closure_0(obj6[26]);
             }
-            obj = { type: "MESSAGE_SEND_FAILED", messageId: user.id, channelId: tmp.channel.id, reason: result };
+            obj = { type: "MESSAGE_SEND_FAILED", messageId: user.id, channelId: channel.channel.id, reason: result };
             closure_1(obj6[10]).dispatch(obj);
             const obj3 = closure_1(obj6[10]);
             tmp2 = null == arg1 && null != code;
@@ -1092,25 +1111,25 @@ let closure_20 = async function _displayInteractionLifecycleInChat(arg0, arg1, a
 };
 function getAnalyticsLocationFromCommandOrigin(arg0) {
   if (ApplicationCommandTypes.CommandOrigin.APPLICATION_LAUNCHER === arg0) {
-    return tmp(7523).ApplicationCommandTriggerLocations.APP_LAUNCHER;
-  } else if (tmp(7523).CommandOrigin.APP_LAUNCHER_APPLICATION_VIEW === arg0) {
-    return tmp(7523).ApplicationCommandTriggerLocations.APP_LAUNCHER_APPLICATION_VIEW;
-  } else if (tmp(7523).CommandOrigin.IMAGE_RECS_MENU === arg0) {
-    return tmp(7523).ApplicationCommandTriggerLocations.IMAGE_RECS_MENU;
-  } else if (tmp(7523).CommandOrigin.IMAGE_RECS_SUBMENU === arg0) {
-    return tmp(7523).ApplicationCommandTriggerLocations.IMAGE_RECS_SUBMENU;
-  } else if (tmp(7523).CommandOrigin.ACTIVITY_INSTANCE_EMBED === arg0) {
-    return tmp(7523).ApplicationCommandTriggerLocations.ACTIVITY_INSTANCE_EMBED;
-  } else if (tmp(7523).CommandOrigin.ACTIVITY_BOOKMARK_EMBED === arg0) {
-    return tmp(7523).ApplicationCommandTriggerLocations.ACTIVITY_BOOKMARK_EMBED;
-  } else if (tmp(7523).CommandOrigin.MINI_SHELF === arg0) {
-    return tmp(7523).ApplicationCommandTriggerLocations.ACTIVITIES_MINI_SHELF;
-  } else if (tmp(7523).CommandOrigin.VOICE_TILE_ACTIVITY_SUGGESTIONS === arg0) {
-    return tmp(7523).ApplicationCommandTriggerLocations.VC_TILE_ACTIVITY_SUGGESTION;
-  } else if (tmp(7523).CommandOrigin.APP_DMS_ENTRY_POINT_COMMAND_BUTTON === arg0) {
-    return tmp(7523).ApplicationCommandTriggerLocations.APP_DMS_ENTRY_POINT_COMMAND_BUTTON;
+    return ApplicationCommandTypes.ApplicationCommandTriggerLocations.APP_LAUNCHER;
+  } else if (ApplicationCommandTypes.CommandOrigin.APP_LAUNCHER_APPLICATION_VIEW === arg0) {
+    return ApplicationCommandTypes.ApplicationCommandTriggerLocations.APP_LAUNCHER_APPLICATION_VIEW;
+  } else if (ApplicationCommandTypes.CommandOrigin.IMAGE_RECS_MENU === arg0) {
+    return ApplicationCommandTypes.ApplicationCommandTriggerLocations.IMAGE_RECS_MENU;
+  } else if (ApplicationCommandTypes.CommandOrigin.IMAGE_RECS_SUBMENU === arg0) {
+    return ApplicationCommandTypes.ApplicationCommandTriggerLocations.IMAGE_RECS_SUBMENU;
+  } else if (ApplicationCommandTypes.CommandOrigin.ACTIVITY_INSTANCE_EMBED === arg0) {
+    return ApplicationCommandTypes.ApplicationCommandTriggerLocations.ACTIVITY_INSTANCE_EMBED;
+  } else if (ApplicationCommandTypes.CommandOrigin.ACTIVITY_BOOKMARK_EMBED === arg0) {
+    return ApplicationCommandTypes.ApplicationCommandTriggerLocations.ACTIVITY_BOOKMARK_EMBED;
+  } else if (ApplicationCommandTypes.CommandOrigin.MINI_SHELF === arg0) {
+    return ApplicationCommandTypes.ApplicationCommandTriggerLocations.ACTIVITIES_MINI_SHELF;
+  } else if (ApplicationCommandTypes.CommandOrigin.VOICE_TILE_ACTIVITY_SUGGESTIONS === arg0) {
+    return ApplicationCommandTypes.ApplicationCommandTriggerLocations.VC_TILE_ACTIVITY_SUGGESTION;
+  } else if (ApplicationCommandTypes.CommandOrigin.APP_DMS_ENTRY_POINT_COMMAND_BUTTON === arg0) {
+    return ApplicationCommandTypes.ApplicationCommandTriggerLocations.APP_DMS_ENTRY_POINT_COMMAND_BUTTON;
   } else {
-    return tmp(7523).ApplicationCommandTriggerLocations.SLASH_UI;
+    return ApplicationCommandTypes.ApplicationCommandTriggerLocations.SLASH_UI;
   }
 }
 function getMaxAndTotalFileSize() {
@@ -1214,7 +1233,7 @@ let closure_23 = async function _getMaxAndTotalFileSize(arg0, arg1) {
     }
   })();
 };
-let closure_24 = async function _stageAttachments(arg0, value) {
+let closure_24 = async function _stageAttachments(arg0) {
   if (c8 === 2) {
     c8 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -1262,6 +1281,7 @@ let closure_24 = async function _stageAttachments(arg0, value) {
               constants.ENTITY_TOO_LARGE,
               intl.formatToPlainString(closure_0(1114).t.fxEKdS, obj),
             );
+            const obj3 = closure_0(5134);
           };
           closure_132_3 = FileUtils.maxFileSize(closure_2);
           maxTotalAttachmentSize = UploadUtils.getMaxTotalAttachmentSize({

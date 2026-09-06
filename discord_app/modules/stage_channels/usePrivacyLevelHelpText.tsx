@@ -33,7 +33,7 @@ export default function useStagePrivacyLevelSettings(channel, privacy_level, arg
   } else if (stateFromStores) {
     if (canEveryoneRoleResult) {
       let formatResult = null;
-      if (arg2 === tmp6.PUBLIC) {
+      if (arg2 === constants.PUBLIC) {
         const intl3 = tmp(1114).intl;
         obj = { articleURL: HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.STAGE_CHANNEL_GUIDELINES) };
         formatResult = intl3.format(tmp(1114).t["ew/Jq4"], obj);

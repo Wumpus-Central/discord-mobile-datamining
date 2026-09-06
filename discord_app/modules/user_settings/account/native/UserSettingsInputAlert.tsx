@@ -1,5 +1,6 @@
 // discord_app/modules/user_settings/account/native/UserSettingsInputAlert.tsx
 import HTTPUtils from "../../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import Stack_Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
 import common_AlertDefault from "../../../../components_native/common/Alert.tsx";
 import KeyboardAwareViewDefault from "../../../keyboard/native/KeyboardAwareView.tsx";
@@ -83,7 +84,7 @@ prototype["renderContent"] = function renderContent() {
     let tmp7 = null != helpText;
     if (tmp7) {
       let obj = { variant: "text-md/normal", children: helpText };
-      tmp7 = React3(tmp5(4556).Text, obj);
+      tmp7 = React3(Text_Text.Text, obj);
     }
     const items = [tmp7];
     obj = {

@@ -62,7 +62,7 @@ export const useLoadReportedMessage = function useLoadReportedMessage(messageRef
   const stateFromStores = messageReference(504).useStateFromStores(items, () => {
     let message = null;
     if (null != messageReference) {
-      message = MessageStore.getMessage(tmp.channel_id, tmp.message_id);
+      message = MessageStore.getMessage(messageReference.channel_id, messageReference.message_id);
     }
     return message;
   });

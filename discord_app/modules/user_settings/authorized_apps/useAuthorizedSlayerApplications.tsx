@@ -17,9 +17,9 @@ export default function useAuthorizedSlayerApplications(arg0, arg1) {
   const items1 = [AuthorizedAppsStore];
   stateFromStores1 = require("initialize").useStateFromStores(items1, () => {
     if (closure_0) {
-      let newestTokensForNonChildrenApplications = obj.getNewestTokensForNonChildrenApplications();
+      let newestTokensForNonChildrenApplications = AuthorizedAppsStore.getNewestTokensForNonChildrenApplications();
     } else {
-      newestTokensForNonChildrenApplications = obj.getNewestTokens();
+      newestTokensForNonChildrenApplications = AuthorizedAppsStore.getNewestTokens();
     }
     return newestTokensForNonChildrenApplications;
   });

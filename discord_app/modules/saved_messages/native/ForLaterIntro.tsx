@@ -210,8 +210,8 @@ export default function ForLaterIntro(type) {
     style: tmp.text,
     children: null,
   };
-  const intl = tmp2(1114).intl;
-  const t = tmp2(1114).t;
+  const intl = util.intl;
+  const t = util.t;
   obj2.children = intl.string(tmp4 ? t["5Iw19e"] : t["93WOd1"]);
   const items1 = [timestampProducer(Text_Text.Heading, obj2)];
   const obj3 = {
@@ -221,10 +221,10 @@ export default function ForLaterIntro(type) {
     includeFontPadding: true,
     children: null,
   };
-  const intl2 = tmp2(1114).intl;
-  const t2 = tmp2(1114).t;
-  const intl3 = tmp2(1114).intl;
-  const t3 = tmp2(1114).t;
+  const intl2 = util.intl;
+  const t2 = util.t;
+  const intl3 = util.intl;
+  const t3 = util.t;
   obj3.children = intl2.format(tmp4 ? t2.YI4UjI : t2["5TSj/g"], {
     itemName: intl3.string(tmp4 ? t3.mJ3P0N : t3.tpxJto),
   });

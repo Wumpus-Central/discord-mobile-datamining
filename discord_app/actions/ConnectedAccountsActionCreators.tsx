@@ -89,11 +89,12 @@ export default {
       const text = `${tmp49}?`;
       const text1 = `${tmp49}?${str11.toString()}`;
       const HTTP = platform_type(tmp2[4]).HTTP;
-      closure_129_0 = await HTTP.get({
+      await HTTP.get({
         url: text1,
         oldFormErrors: true,
         rejectWithError: platform_type(tmp2[4]).rejectWithMigratedError(),
       });
+      closure_129_0 = value;
       const url = closure_129_0.body.url;
       platform_type = url;
       if (url == null) {
@@ -213,7 +214,7 @@ export default {
   },
   refreshAccessToken(type, id) {
     closure_1 = id;
-    return (async (arg0, value) => {
+    return (async () => {
       if (constants === 2) {
         constants = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -313,13 +314,13 @@ export default {
     request.rejectWithError = HTTPUtils.rejectWithMigratedError();
     return HTTP.post(request);
   },
-  completeTwoWayLink(arg0, location, arg2, arg3, arg4) {
+  completeTwoWayLink(arg0, location, _location, arg3, arg4) {
     closure_0 = arg0;
     closure_1 = location;
-    closure_2 = arg2;
+    closure_2 = _location;
     asyncGeneratorStep = arg3;
     closure_4 = arg4;
-    return (async (arg0, value) => {
+    return (async () => {
       if (v3 === 2) {
         v3 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -347,7 +348,7 @@ export default {
               let obj3 = null;
               if (null != closure_1) {
                 let obj2 = v3(code[7]);
-                const callbackParamsFromURL = obj2.getCallbackParamsFromURL(tmp13);
+                const callbackParamsFromURL = obj2.getCallbackParamsFromURL(closure_1);
                 const error = callbackParamsFromURL.error;
                 if (obj3 == error) {
                   const obj1 = { code, state, two_way_link_code: tmp10, token_redirect_uri };
@@ -363,7 +364,6 @@ export default {
                 logger.error("Two-way link: missing authorize location");
               }
               v3 = 3;
-              tmp13 = closure_1;
             }
           } else if (arg0 === 1) {
             v3 = 3;

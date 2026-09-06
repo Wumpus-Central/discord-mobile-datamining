@@ -49,9 +49,9 @@ prototype["userSpeakingChange"] = function userSpeakingChange(arg0) {
         if (!self.connection.destroyed) {
           const _HermesInternal = HermesInternal;
           logger.info("BaseConnection.userSpeakingChange: Reduced framerate after " + React3 + " ms.");
-          obj.framerateReductionTimeout = undefined;
-          obj.sinkWants.isMuted = true;
-          const result = obj.updateRemoteWantsFramerate();
+          self.framerateReductionTimeout = undefined;
+          self.sinkWants.isMuted = true;
+          const result = self.updateRemoteWantsFramerate();
         }
       }, closure_3);
     } else if (self.sinkWants.isMuted) {

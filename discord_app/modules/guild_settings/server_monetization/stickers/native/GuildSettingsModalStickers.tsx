@@ -1,6 +1,8 @@
 // discord_app/modules/guild_settings/server_monetization/stickers/native/GuildSettingsModalStickers.tsx
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import util from "../../../../../intl/index.native.tsx";
 import GuildBoostingUtils from "../../../../../utils/GuildBoostingUtils.tsx";
+import LockIcon from "../../../../../design/components/Icon/native/redesign/generated/LockIcon.tsx";
 import TableRow from "../../../../../design/components/TableRow/native/TableRow.native.tsx";
 import TableRowGroup from "../../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
 import showGuildSettingsStickerCreateModalDefault from "showGuildSettingsStickerCreateModal.tsx";
@@ -158,12 +160,12 @@ export default noop.memo(function GuildSettingsModalStickers(guildId) {
             str = "icon-muted";
           }
           obj = { color: str };
-          tmp7Result = tmp7(IconComponent, obj);
+          tmp7Result = closure_2_12(IconComponent, obj);
         }
         obj = { icon: tmp7Result, label: label.title, subLabel: null, trailing: null };
-        const intl = tmp2(1114).intl;
+        const intl = util.intl;
         const format = intl.format;
-        const t = tmp2(1114).t;
+        const t = util.t;
         if (guildTier < tier) {
           obj1 = { required: React6[tier], decorator: "" };
           let formatResult = format(t.t2Wbo1, obj1);
@@ -174,7 +176,7 @@ export default noop.memo(function GuildSettingsModalStickers(guildId) {
         obj.subLabel = formatResult;
         tmp7Result = undefined;
         if (guildTier < tier) {
-          tmp7Result = tmp7(tmp2(5095).LockIcon, { color: "icon-muted" });
+          tmp7Result = closure_2_12(LockIcon.LockIcon, { color: "icon-muted" });
         }
         let obj3 = { hasIcons: true, children: null };
         obj.trailing = tmp7Result;
@@ -204,15 +206,15 @@ export default noop.memo(function GuildSettingsModalStickers(guildId) {
               if (null != user) {
                 obj = { style: closure_1.userRow, children: null };
                 const obj3 = { user, size: tmp10(1178).AvatarSizes.XSMALL_20, guildId };
-                const items1 = [tmp9(tmp10(1178).Avatar, obj3)];
+                const items1 = [closure_1_12(tmp10(1178).Avatar, obj3)];
                 const obj4 = {
                   variant: "text-sm/medium",
                   color: "text-subtle",
                   children: closure_1_1(4404).getName(user),
                 };
-                items1[1] = tmp9(tmp10(4556).Text, obj4);
+                items1[1] = closure_1_12(tmp10(4556).Text, obj4);
                 obj.children = items1;
-                tmp16Result = tmp16(tmp12, obj);
+                tmp16Result = closure_1_13(closure_1_4, obj);
                 const tmp14Result = closure_1_1(4404);
               }
               const obj5 = { children: null };
@@ -221,7 +223,7 @@ export default noop.memo(function GuildSettingsModalStickers(guildId) {
               obj.label = closure_1_13(closure_1_4, obj5);
               let tmp9Result;
               if (tmp8) {
-                tmp9Result = tmp9(tmp10(5612).TableRowArrow, {});
+                tmp9Result = closure_1_12(tmp10(5612).TableRowArrow, {});
               }
               obj.trailing = tmp9Result;
               let fn;

@@ -3,10 +3,10 @@ import size from "../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("stores/MaskedLinkStoreMethodsAdditional.native.tsx");
 
-export const getHostname = function getHostname(arg0) {
+export const getHostname = function getHostname(url) {
   try {
     const _URL = URL;
-    const uRL = new URL(arg0);
+    const uRL = new URL(url);
     return uRL.hostname;
   } catch (err) {
     return "";

@@ -14,9 +14,9 @@ const createStyles = fn(4560);
 let closure_8 = createStyles.createStyles((arg0, arg1, arg2) => {
   let MEDIUM_BUTTON_PADDING = ButtonConstants.LARGE_BUTTON_PADDING;
   if ("sm" === arg0) {
-    MEDIUM_BUTTON_PADDING = tmp(4980).SMALL_BUTTON_PADDING;
+    MEDIUM_BUTTON_PADDING = ButtonConstants.SMALL_BUTTON_PADDING;
   } else if ("md" === arg0) {
-    MEDIUM_BUTTON_PADDING = tmp(4980).MEDIUM_BUTTON_PADDING;
+    MEDIUM_BUTTON_PADDING = ButtonConstants.MEDIUM_BUTTON_PADDING;
   }
   const sum = arg1 + 2 * MEDIUM_BUTTON_PADDING;
   const buttonBorderRadius = ButtonConstants.getButtonBorderRadius(arg0);
@@ -52,7 +52,7 @@ let closure_8 = createStyles.createStyles((arg0, arg1, arg2) => {
     left: 0,
     right: 0,
     bottom: 0,
-    backgroundColor: tmp5(576).colors.REDESIGN_IMAGE_BUTTON_PRESSED_BACKGROUND,
+    backgroundColor: nativeDefault.colors.REDESIGN_IMAGE_BUTTON_PRESSED_BACKGROUND,
     borderRadius: buttonBorderRadius,
   };
   obj.imageDim = rect;
@@ -152,16 +152,16 @@ export const ImageButton = noop.forwardRef((size, ref) => {
     obj4.onPressIn = callback;
     obj4.onPressOut = callback1;
     obj4.maxFontSizeMultiplier = maxFontSizeMultiplier;
-    const items4 = [tmp10(tmp2(tmp3[11]).BaseIconButton, obj4)];
+    const items4 = [closure_6(onPressIn(tmp3[11]).BaseIconButton, obj4)];
     const obj5 = {
       variant: "text-xs/medium",
       color: "interactive-text-default",
       maxFontSizeMultiplier,
       children: label,
     };
-    items4[1] = tmp10(tmp2(tmp3[12]).Text, obj5);
+    items4[1] = closure_6(onPressIn(tmp3[12]).Text, obj5);
     obj3.children = items4;
-    let tmp10Result = closure_7(tmp2(tmp3[10]).BaseButton, obj3);
+    let tmp10Result = closure_7(onPressIn(tmp3[10]).BaseButton, obj3);
   } else {
     const obj6 = { ref };
     const merged3 = Object.assign(merged);
@@ -172,7 +172,7 @@ export const ImageButton = noop.forwardRef((size, ref) => {
     obj6.variant = "secondary";
     obj6.onPressIn = callback;
     obj6.onPressOut = callback1;
-    tmp10Result = tmp10(tmp2(tmp3[11]).BaseIconButton, obj6);
+    tmp10Result = closure_6(onPressIn(tmp3[11]).BaseIconButton, obj6);
   }
   return tmp10Result;
 });

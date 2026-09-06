@@ -3,6 +3,7 @@ import LoggerDefault from "../../modules/debug/Logger.tsx";
 import Storage2 from "../../../discord_common/js/packages/storage/Storage.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
 import TokenManagerAll from "../../../discord_common/js/shared/lib/TokenManager.tsx";
+import PlatformUtils from "../../utils/PlatformUtils.tsx";
 import discord_common_AnalyticsUtils from "../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
 import HTTPUtils from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import TrackedHTTPUtilsDefault from "../../utils/TrackedHTTPUtils.tsx";
@@ -26,7 +27,7 @@ let closure_16 = async function _getOrRefreshPushSyncToken(arg0) {
   c5 = 0;
   c6 = 0;
   c4 = 0;
-  return (async (arg0, value) => {
+  return (async (arg0) => {
     if (c6 === 2) {
       c6 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -57,7 +58,7 @@ let closure_16 = async function _getOrRefreshPushSyncToken(arg0) {
             let token2;
             if (null == pushSyncToken.pushSyncToken) {
               let obj5 = TokenManagerAll;
-              const token = obj5.getToken(tmp39.id);
+              const token = obj5.getToken(pushSyncToken.id);
               if (null == token) {
                 c6 = 3;
                 return { value: null, done: true };
@@ -74,7 +75,7 @@ let closure_16 = async function _getOrRefreshPushSyncToken(arg0) {
               }
             } else {
               c6 = 3;
-              const obj4 = { value: tmp39.pushSyncToken, done: true };
+              const obj4 = { value: pushSyncToken.pushSyncToken, done: true };
               return obj4;
             }
           }
@@ -128,7 +129,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("actions/native/PushNotificationActionCreators.tsx");
 
 export default {
-  registerDevice(token, flag) {
+  registerDevice(token) {
     if (flag === undefined) {
       flag = false;
     }
@@ -161,26 +162,26 @@ export default {
         tmp8 = closure_1_12();
       }
       obj = { provider: tmp8, token, bypass_server_throttling_supported: null, bundle_id: null };
-      let isAndroidResult = tmp2(1115).isAndroid();
+      let isAndroidResult = PlatformUtils.isAndroid();
       if (isAndroidResult) {
         isAndroidResult = !map1;
       }
       obj.bypass_server_throttling_supported = isAndroidResult;
       obj.bundle_id = bundle_id;
       request.body = obj;
-      obj = { event: tmp2(1250).NetworkActionNames.USER_REGISTER_DEVICE_TOKEN };
+      obj = { event: discord_common_AnalyticsUtils.NetworkActionNames.USER_REGISTER_DEVICE_TOKEN };
       request.trackedActionData = obj;
       syncDeviceResult = obj.post(request);
-      const tmp2Result = tmp2(1115);
+      const tmp2Result = PlatformUtils;
     }
     return syncDeviceResult;
   },
-  syncDevice(token, flag) {
+  syncDevice(token) {
     closure_0 = token;
     if (flag === undefined) {
       flag = false;
     }
-    return (async (arg0, value) => {
+    return (async () => {
       const id2 = id.getId();
       validUsers = validUsers.getValidUsers();
       const sorted = validUsers.sort((id, id2) => {

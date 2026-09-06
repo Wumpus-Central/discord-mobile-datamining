@@ -187,6 +187,7 @@ export default function GiftCodeRedeemStart(giftCode) {
       const socialLayerStorefrontConfig = SocialLayerStorefrontActionCreators.fetchSocialLayerStorefrontConfig();
       const tmpResult = SocialLayerStorefrontActionCreators;
     }
+    obj = SlayerStorefrontUtils;
   }, items5);
   const items6 = [giftCode, customMessage, emojiName, soundId];
   const effect3 = user.useEffect(() => {

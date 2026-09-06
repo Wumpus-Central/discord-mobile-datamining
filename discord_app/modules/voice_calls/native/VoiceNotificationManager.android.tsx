@@ -188,9 +188,9 @@ class VoiceNotificationManager {
             stringResult = string(t.w4m945);
           }
           items[1] = updateServiceHandlerResult.createAction(channel, "ToggleSelfMute", stringResult);
-          const intl4 = tmp23(1114).intl;
+          const intl4 = size(1114).intl;
           const string2 = intl4.string;
-          const t2 = tmp23(1114).t;
+          const t2 = size(1114).t;
           if (deafened) {
             let string2Result = string2(t2["2US872"]);
           } else {
@@ -198,7 +198,7 @@ class VoiceNotificationManager {
           }
           items[2] = updateServiceHandlerResult.createAction(channel, "ToggleDeafen", string2Result);
           obj.auxiliaryActions = items;
-          const ServiceNotificationType = tmp23(7758).ServiceNotificationType;
+          const ServiceNotificationType = size(7758).ServiceNotificationType;
           obj.type = isStreaming ? ServiceNotificationType.SCREEN_SHARE : ServiceNotificationType.VOICE_CALL;
           obj.icon = tmp7;
           obj.color = tmp8;
@@ -400,9 +400,9 @@ size.handleUpdate = function handleUpdate(connectionState) {
         stringResult = string(t.w4m945);
       }
       items[1] = updateServiceHandlerResult.createAction(channel, "ToggleSelfMute", stringResult);
-      const intl4 = tmp23(1114).intl;
+      const intl4 = size(1114).intl;
       const string2 = intl4.string;
-      const t2 = tmp23(1114).t;
+      const t2 = size(1114).t;
       if (deafened) {
         let string2Result = string2(t2["2US872"]);
       } else {
@@ -410,7 +410,7 @@ size.handleUpdate = function handleUpdate(connectionState) {
       }
       items[2] = updateServiceHandlerResult.createAction(channel, "ToggleDeafen", string2Result);
       obj.auxiliaryActions = items;
-      const ServiceNotificationType = tmp23(7758).ServiceNotificationType;
+      const ServiceNotificationType = size(7758).ServiceNotificationType;
       obj.type = isStreaming ? ServiceNotificationType.SCREEN_SHARE : ServiceNotificationType.VOICE_CALL;
       obj.icon = tmp7;
       obj.color = tmp8;

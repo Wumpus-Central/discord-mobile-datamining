@@ -93,7 +93,7 @@ export default function useMobilePurchaseSKU(skuId) {
     c5 = 0;
     c6 = 0;
     c4 = 0;
-    return (async (arg0, value) => {
+    return (async (arg0) => {
       if (v3 === 2) {
         v3 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -230,7 +230,7 @@ export default function useMobilePurchaseSKU(skuId) {
     orderId,
   ];
   return analyticsData.useCallback(
-    asyncGeneratorStep(async (arg0, value) => {
+    asyncGeneratorStep(async () => {
       if (c6 === 2) {
         c6 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");

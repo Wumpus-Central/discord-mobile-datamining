@@ -26,7 +26,7 @@ export const useHandleClaim = function useHandleClaim(product) {
         v2(tmp20[5]);
       } else if (arg0 === 1) {
         c4 = 3;
-        throw arg1;
+        throw value;
       } else if (arg0 !== 2) {
         v2(tmp20[3]).hideAllActionSheets();
         v2(tmp20[3]);
@@ -37,7 +37,7 @@ export const useHandleClaim = function useHandleClaim(product) {
         c3 = 0;
         tmp3(tmp20[2]);
       }
-      return arg1;
+      return value;
     }),
     items,
   );

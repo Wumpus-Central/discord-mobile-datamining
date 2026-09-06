@@ -23,7 +23,6 @@ export const useAppChannelApplicationOptions = function useAppChannelApplication
   guildId,
   channelId,
   selectedApplicationId,
-  disabled,
 ) {
   let flag = disabled;
   if (disabled === undefined) {

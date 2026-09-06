@@ -1,4 +1,5 @@
 // discord_app/modules/activities/utils/CustomActivityLinkUtils.tsx
+import HTTPUtils from "../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import utils_CustomActivityLinkUtils from "../../../../discord_common/js/shared/activities/utils/CustomActivityLinkUtils.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import CustomActivityLinksStore from "../stores/CustomActivityLinksStore.tsx";
@@ -14,7 +15,7 @@ function fetchCustomActivityLink() {
   }
   return applyArgumentsResult;
 }
-let closure_7 = async function _fetchCustomActivityLink(arg0, value) {
+let closure_7 = async function _fetchCustomActivityLink(arg0) {
   if (c2 === 2) {
     c2 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -40,23 +41,23 @@ let closure_7 = async function _fetchCustomActivityLink(arg0, value) {
           return obj;
         } else {
           if (null != closure_0) {
-            if (null != tmp13) {
-              const result = utils_CustomActivityLinkUtils.decodeCustomActivityLink(tmp13);
+            if (null != closure_1) {
+              const result = utils_CustomActivityLinkUtils.decodeCustomActivityLink(closure_1);
               if (null == result) {
                 c2 = 3;
                 return { value: null, done: true };
               } else {
                 const type2 = result.type;
-                if (tmp15(tmp16[3]).CustomLinkType.MANAGED === type2) {
-                  const HTTP2 = tmp15(tmp16[4]).HTTP;
-                  const obj1 = { url: Endpoints.APPLICATION_MANAGED_ACTIVITY_LINK(tmp12, result.decodedLinkId), rejectWithError: false };
+                if (utils_CustomActivityLinkUtils.CustomLinkType.MANAGED === type2) {
+                  const HTTP2 = HTTPUtils.HTTP;
+                  const obj1 = { url: Endpoints.APPLICATION_MANAGED_ACTIVITY_LINK(closure_0, result.decodedLinkId), rejectWithError: false };
                   c3 = 1;
                   c2 = 1;
                   const obj2 = { value: HTTP2.get(obj1), done: false };
                   return obj2;
-                } else if (tmp15(tmp16[3]).CustomLinkType.QUICK === type2) {
-                  const HTTP = tmp15(tmp16[4]).HTTP;
-                  const obj3 = { url: Endpoints.APPLICATION_QUICK_ACTIVITY_LINK(tmp12, result.decodedLinkId), rejectWithError: false };
+                } else if (utils_CustomActivityLinkUtils.CustomLinkType.QUICK === type2) {
+                  const HTTP = HTTPUtils.HTTP;
+                  const obj3 = { url: Endpoints.APPLICATION_QUICK_ACTIVITY_LINK(closure_0, result.decodedLinkId), rejectWithError: false };
                   c3 = 2;
                   c2 = 1;
                   const obj4 = { value: HTTP.get(obj3), done: false };
@@ -103,7 +104,7 @@ let closure_7 = async function _fetchCustomActivityLink(arg0, value) {
     }
   }
 };
-let closure_8 = async function _getCustomActivityLinkParams(arg0, value) {
+let closure_8 = async function _getCustomActivityLinkParams(arg0) {
   if (c7 === 2) {
     c7 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -148,10 +149,9 @@ let closure_8 = async function _getCustomActivityLinkParams(arg0, value) {
             c6 = 1;
             c5 = 2;
             c7 = 1;
-            const obj5 = { value: fetchCustomActivityLink(tmp20, tmp21), done: false };
+            const obj5 = { value: fetchCustomActivityLink(closure_0, closure_1), done: false };
             return obj5;
           }
-          tmp20 = closure_0;
         }
       } else if (1 === tmp6) {
         c6 = 0;
@@ -198,6 +198,7 @@ function loadCustomActivityLink() {
   return applyArgumentsResult;
 }
 let closure_10 = async function _loadCustomActivityLink() {
+  closure_130_1 = value;
   if (null == closure_130_1) {
     return Promise.reject("fetchCustomActivityLink body is null");
   }
@@ -207,10 +208,10 @@ let closure_10 = async function _loadCustomActivityLink() {
   closure_2 = tmp2;
   closure_130_0 = closure_0;
   if (null != closure_0) {
-    if (null != tmp25) {
+    if (null != closure_1) {
       c4 = 1;
       c5 = 1;
-      return { value: fetchCustomActivityLink(tmp24, tmp25), done: false };
+      return { value: fetchCustomActivityLink(tmp24, closure_1), done: false };
     }
   }
   return Promise.reject("appId or linkId null");
@@ -246,10 +247,9 @@ export const getOrFetchCustomActivityLink = function getOrFetchCustomActivityLin
     one = null;
     if (!set.has(linkId)) {
       loadCustomActivityLink(id, linkId);
-      obj.add(linkId);
+      set.add(linkId);
       one = null;
     }
-    obj = set;
   }
   return one;
 };

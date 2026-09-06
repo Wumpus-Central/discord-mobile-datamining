@@ -85,6 +85,11 @@ export default function AddModerators(guildId) {
         ? () => closure_1_8(stringResult(navigation[14]).HeaderSubmittingIndicator, {})
         : () => React6(HeaderActionButton.HeaderActionButton, { text: stringResult, onPress }),
     });
+    const obj = {
+      headerRight: first
+        ? () => closure_1_8(stringResult(navigation[14]).HeaderSubmittingIndicator, {})
+        : () => React6(HeaderActionButton.HeaderActionButton, { text: stringResult, onPress }),
+    };
   }, items1);
   obj = { style: tmp3.addMembersContainer, children: null };
   obj = { style: tmp3.moderatorDescriptionContainer, children: null };
@@ -96,8 +101,8 @@ export default function AddModerators(guildId) {
   if (null != tmp10[1].message) {
     let obj2 = { style: tmp3.errorMessage, children: null };
     const obj3 = { messageType: tmp4(tmp5[17]).HelpMessageTypes.ERROR, children: tmp12.message };
-    obj2.children = tmp20(tmp4(tmp5[17]).HelpMessage, obj3);
-    tmp = tmp20(tmp19, obj2);
+    obj2.children = closure_8(tmp4(tmp5[17]).HelpMessage, obj3);
+    tmp = closure_8(tmp19, obj2);
   }
   items2[1] = tmp;
   const obj4 = {

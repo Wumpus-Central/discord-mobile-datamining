@@ -97,10 +97,10 @@ export default function FamilyCenterTopActivity() {
           return tmp2;
         }),
       };
-      items3[1] = closure_7(tmp8, obj3);
+      items3[1] = closure_7(View, obj3);
       obj1.children = items3;
-      obj.children = tmp7(stateFromStores(tmp3[12]), obj1);
-      tmp9 = closure_7(tmp8, obj);
+      obj.children = closure_8(stateFromStores(tmp3[12]), obj1);
+      tmp9 = closure_7(View, obj);
       const tmp12 = stateFromStores(tmp3[12]);
     }
     const items4 = [tmp9];
@@ -135,15 +135,15 @@ export default function FamilyCenterTopActivity() {
           return tmp2;
         }),
       };
-      items5[1] = closure_7(tmp8, obj7);
+      items5[1] = closure_7(View, obj7);
       obj5.children = items5;
-      obj4.children = tmp7(stateFromStores(tmp3[12]), obj5);
-      tmp13 = closure_7(tmp8, obj4);
+      obj4.children = closure_8(stateFromStores(tmp3[12]), obj5);
+      tmp13 = closure_7(View, obj4);
       const tmp16 = stateFromStores(tmp3[12]);
     }
     items4[1] = tmp13;
     obj.children = items4;
-    let tmp7Result = tmp7(tmp8, obj);
+    let tmp7Result = closure_8(View, obj);
   } else {
     tmp7Result = null;
   }

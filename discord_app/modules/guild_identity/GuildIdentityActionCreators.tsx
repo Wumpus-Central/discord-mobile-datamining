@@ -3,7 +3,7 @@ import DispatcherDefault from "../../Dispatcher.tsx";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 
 const require = fn;
-let closure_5 = async function _saveGuildIdentityChanges(arg0, value) {
+let closure_5 = async function _saveGuildIdentityChanges(arg0) {
   if (c8 === 2) {
     c8 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");

@@ -26,24 +26,24 @@ export default function useMaybeTrackProfileFrameViewed(skuId) {
   closure_2(() => {
     if (null != skuId) {
       if (null != openedAt) {
-        let tmp3 = ref2.current === tmp;
+        let tmp3 = ref2.current === skuId;
         if (tmp3) {
-          tmp3 = ref3.current === tmp22;
+          tmp3 = ref3.current === openedAt;
         }
         if (!tmp3) {
-          tmp23.current = tmp;
-          ref3.current = tmp22;
+          ref2.current = skuId;
+          ref3.current = openedAt;
           ref4.current = false;
           ref.current = undefined;
         }
         const _Date = Date;
         const timestamp = Date.now();
         if (ref.current == null) {
-          tmp9.current = timestamp - tmp22;
+          ref.current = timestamp - openedAt;
         }
         let state;
         if (stateFromStores != null) {
-          state = tmp10.state;
+          state = stateFromStores.state;
         }
         let current = "success" !== state;
         if (!current) {
@@ -53,27 +53,26 @@ export default function useMaybeTrackProfileFrameViewed(skuId) {
           ref4.current = true;
           const obj = {
             profileUi: "PROFILE_FRAME",
-            timeToInteractiveMs: tmp9.current,
-            timeToLoadMs: timestamp - tmp22,
+            timeToInteractiveMs: ref.current,
+            timeToLoadMs: timestamp - openedAt,
             timeToFetchMs: null,
             viewStartedAt: null,
             fetchStartedAt: null,
             analyticsLocations: null,
           };
           let diff;
-          if (null != tmp10.startedAt) {
-            if (null != tmp10.endedAt) {
-              diff = tmp10.endedAt - tmp10.startedAt;
+          if (null != stateFromStores.startedAt) {
+            if (null != stateFromStores.endedAt) {
+              diff = stateFromStores.endedAt - stateFromStores.startedAt;
             }
           }
           obj.timeToFetchMs = diff;
-          obj.viewStartedAt = tmp22;
-          obj.fetchStartedAt = tmp10.startedAt;
+          obj.viewStartedAt = openedAt;
+          obj.fetchStartedAt = stateFromStores.startedAt;
           obj.analyticsLocations = analyticsLocations;
           const merged = Object.assign(closure_1_2);
           const result = obj.maybeTrackUserProfileUiViewed(obj);
         }
-        tmp23 = ref2;
       }
     }
   }, items1);

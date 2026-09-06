@@ -93,9 +93,9 @@ const secondaryIndexMap = new fn(4195).SecondaryIndexMap(
   (saveData) => {
     const items = [SavedMessagesTypes.SavedMessageSortTypes.ALL];
     if (null != saveData.saveData.dueAt) {
-      let BOOKMARK = tmp(7860).SavedMessageSortTypes.REMINDER;
+      let BOOKMARK = SavedMessagesTypes.SavedMessageSortTypes.REMINDER;
     } else {
-      BOOKMARK = tmp(7860).SavedMessageSortTypes.BOOKMARK;
+      BOOKMARK = SavedMessagesTypes.SavedMessageSortTypes.BOOKMARK;
     }
     items[1] = BOOKMARK;
     return items;
@@ -192,6 +192,7 @@ const savedMessagesStore = new SavedMessagesStore(DispatcherDefault, {
       let tmp7 = upsertSavedMessage(tmp5);
       continue;
     }
+    tmp4 = arg0.savedMessages[Symbol.iterator]();
   },
   SAVED_MESSAGE_CREATE: function handleCreate(savedMessage) {
     upsertSavedMessage(savedMessage.savedMessage);
@@ -238,6 +239,7 @@ const savedMessagesStore = new SavedMessagesStore(DispatcherDefault, {
       let tmp5 = nullifyMessageObject(obj);
       continue;
     }
+    tmp2 = arg0.ids[Symbol.iterator]();
   },
   MESSAGE_UPDATE: function handleMessageUpdate(message) {
     message = message.message;
@@ -256,9 +258,8 @@ const savedMessagesStore = new SavedMessagesStore(DispatcherDefault, {
           const obj = {};
           const merged = Object.assign(value);
           obj.message = MessageRecordUtils.updateMessageRecord(value.message, message);
-          const result = obj3.set(combined, obj);
+          const result = secondaryIndexMap.set(combined, obj);
         }
-        obj3 = secondaryIndexMap;
       }
     }
     return false;

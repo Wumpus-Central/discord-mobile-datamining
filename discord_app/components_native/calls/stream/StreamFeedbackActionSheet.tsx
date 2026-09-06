@@ -2,6 +2,7 @@
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
 import asyncRequireImpl from "../../../../_runtime/01896_asyncRequireImpl.js";
 import ToastUtils from "../../../modules/toast/native/ToastUtils.tsx";
+import ActionSheetActionCreatorsDefault from "../../../modules/action_sheet/native/ActionSheetActionCreators.tsx";
 import FeedbackUtils from "../../../modules/feedback/FeedbackUtils.tsx";
 import trackStreamProblemDefault from "../../../modules/go_live/utils/trackStreamProblem.tsx";
 import shouldShowLogUploadForCategory from "../../../modules/feedback/shouldShowLogUploadForCategory.tsx";
@@ -30,14 +31,14 @@ export default function StreamFeedbackActionSheet(stream) {
   const intl3 = stream(1114).intl;
   let stringResult2 = intl3.string(stream(1114).t.CqjnLN);
   obj = {
-    value: stateFromStores ? tmp7.STREAMING : tmp7.STREAM_WATCHING,
+    value: stateFromStores ? constants.STREAMING : constants.STREAM_WATCHING,
     label: null,
     problemsHeader: null,
     problemOptions: null,
     freeformConfig: null,
   };
   const intl4 = tmp(1114).intl;
-  let tmp9 = analyticsData(2658);
+  const tmp9 = analyticsData(2658);
   if (stateFromStores) {
     let TVTIT1 = tmp9["0ZBLiZ"];
     let tmp10 = tmp8;
@@ -63,7 +64,6 @@ export default function StreamFeedbackActionSheet(stream) {
     trackOpen: null,
     trackReport: null,
   };
-  const tmp11 = jsx;
   const tmpResult = stream(11629);
   if (stateFromStores) {
     stringResult2 = stringResult1;
@@ -82,18 +82,18 @@ export default function StreamFeedbackActionSheet(stream) {
       game_id: null,
     };
     let id = null;
-    if (null != closure_2) {
-      id = tmp.id;
+    if (null != streamApplication) {
+      id = streamApplication.id;
     }
     obj.application_id = id;
     let name = null;
-    if (null != closure_2) {
-      name = tmp.name;
+    if (null != streamApplication) {
+      name = streamApplication.name;
     }
     obj.application_name = name;
     let id1 = null;
-    if (null != closure_2) {
-      id1 = tmp.id;
+    if (null != streamApplication) {
+      id1 = streamApplication.id;
     }
     obj.game_id = id1;
     obj.track(AnalyticEvents.OPEN_POPOUT, obj);
@@ -143,20 +143,26 @@ export default function StreamFeedbackActionSheet(stream) {
       trackStreamProblemDefault(obj);
       if (null != reason) {
         if (obj3.shouldShowLogUploadForCategory(rating, category, reason)) {
-          ({ media_session_id: obj6.mediaSessionId, rtc_connection_id: obj6.rtcConnectionId } = tmp9);
-          tmp22(4527).openLazy(asyncRequireImpl(17356, dependencyMap.paths), "UploadLogs", {
+          ({ media_session_id: obj6.mediaSessionId, rtc_connection_id: obj6.rtcConnectionId } = analyticsData);
+          ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17356, dependencyMap.paths), "UploadLogs", {
             mediaSessionId: null,
             rtcConnectionId: null,
           });
           const obj1 = { mediaSessionId: null, rtcConnectionId: null };
-          const tmp22Result = tmp22(4527);
+          const tmp22Result = ActionSheetActionCreatorsDefault;
         }
         obj3 = shouldShowLogUploadForCategory;
       }
-      tmp22 = importDefault;
-      tmp9 = analyticsData;
       ToastUtils.presentFeedbackSent();
     }
   };
-  return tmp11(tmp10(17354), obj1);
+  return jsx(tmp10(17354), {
+    headerLabel: stringResult,
+    showHeaderCloseButton: true,
+    ratingBody: null,
+    categoriesHeader: null,
+    optionsTree: null,
+    trackOpen: null,
+    trackReport: null,
+  });
 }

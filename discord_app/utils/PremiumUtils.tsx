@@ -4,11 +4,14 @@ import _modDef38 from "../../_runtime/metro/00038__.js";
 import initialize from "../../discord_common/js/packages/flux/index.tsx";
 import DurationsDefault from "Durations.tsx";
 import util from "../intl/index.native.tsx";
+import PerksStateUtils from "../modules/premium/perks_state/PerksStateUtils.tsx";
+import user2 from "../../discord_common/js/packages/protos/discord_protos/users/v1/user.tsx";
 import PremiumTypeUtils from "PremiumTypeUtils.tsx";
 import _modDef3063 from "../modules/premium/premium_group/PremiumGroup.messages.js";
 import _modDef4153 from "../../_runtime/metro/04153__.js";
 import PremiumSubscription from "../modules/premium/PremiumSubscription.tsx";
 import BillingUtils from "BillingUtils.tsx";
+import DateUtils from "DateUtils.tsx";
 import openURLDefault from "../lib/openURL.tsx";
 import FileSizeUtils from "FileSizeUtils.tsx";
 import NitroFileUploadExperiments from "../modules/premium/experiments/NitroFileUploadExperiments.tsx";
@@ -25,18 +28,17 @@ import PaymentSourceStore from "../stores/billing/PaymentSourceStore.tsx";
 import SubscriptionPlanStore from "../stores/billing/SubscriptionPlanStore.tsx";
 import SubscriptionStore from "../stores/billing/SubscriptionStore.tsx";
 
-const DateUtils = tmp5(4242);
 require = fn;
 function getPremiumPlanItem(subscription) {
   const items = subscription.items;
   return items.find((planId) => set.has(planId.planId));
 }
-function getDefaultPrice(PREMIUM_MONTH_TIER_2, arg1, flag, currency, flag2) {
-  flag = arg1;
+function getDefaultPrice(PREMIUM_MONTH_TIER_2, arg1) {
+  let flag = arg1;
   if (arg1 === undefined) {
     flag = false;
   }
-  flag2 = flag;
+  let flag2 = flag;
   if (flag === undefined) {
     flag2 = false;
   }
@@ -82,9 +84,9 @@ function getPrice(planId) {
   if (null != SubscriptionPlanStore.get(planId)) {
     let str2 = constants3.DEFAULT;
     if (flag2) {
-      str2 = tmp9.GIFT;
+      str2 = constants3.GIFT;
     } else if (flag) {
-      str2 = tmp9.PREMIUM_TIER_1;
+      str2 = constants3.PREMIUM_TIER_1;
     }
     obj = { paymentSourceId, purchaseType: str2, currency };
     ({ paymentSourceId: paymentSourceId2, purchaseType, currency: currency2 } = obj);
@@ -107,8 +109,8 @@ function getPrice(planId) {
         let found1;
         if (null != paymentSourceId2) {
           let obj2 = { purchaseType };
-          found1 = tmp10(planId, obj2).find((currency) => currency.currency === currency.toLowerCase());
-          const tmp10Result = tmp10(planId, obj2);
+          found1 = experimentalGetPrices(planId, obj2).find((currency) => currency.currency === currency.toLowerCase());
+          const tmp10Result = experimentalGetPrices(planId, obj2);
         }
         found = found1;
       }
@@ -135,7 +137,6 @@ function getPrice(planId) {
     } else {
       return first;
     }
-    tmp10 = experimentalGetPrices;
   } else {
     const _Error2 = Error;
     const error1 = new Error("Plan not found");
@@ -240,8 +241,7 @@ function getItemPlansTotalServerPrice(items, currency, id) {
   if (null != baseSubscriptionItemForSubscriptionItems) {
     premiumType = dependencyMap2[baseSubscriptionItemForSubscriptionItems.planId].premiumType;
   }
-  tmp(1885);
-  const tmpResult = tmp(1885);
+  const tmpResult = PremiumTypeUtils;
   const isPremiumAtLeastResult = tmpResult.isPremiumAtLeast(premiumType, __initData17.TIER_0);
   const iter = items[Symbol.iterator]();
   const nextResult = iter.next();
@@ -323,33 +323,33 @@ function getIntervalString(interval, arg1, arg2) {
   if (constants7.MONTH === interval) {
     const intl7 = util.intl;
     if (TIER_2 === __initData17.TIER_0) {
-      let poEovT2 = tmp26(1114).t.NPKsLz;
+      let poEovT2 = util.t.NPKsLz;
     } else {
-      poEovT2 = tmp26(1114).t.poEovT;
+      poEovT2 = util.t.poEovT;
     }
     obj = { timeInterval: null };
-    const intl8 = tmp26(1114).intl;
+    const intl8 = util.intl;
     obj.timeInterval = intl8.string(util.t.FPybU7);
     let formatToPlainStringResult1 = intl7.formatToPlainString(poEovT2, obj);
     if (!flag) {
-      const intl9 = tmp26(1114).intl;
-      formatToPlainStringResult1 = intl9.string(tmp26(1114).t.Mh9bTt);
+      const intl9 = util.intl;
+      formatToPlainStringResult1 = intl9.string(util.t.Mh9bTt);
     }
     return formatToPlainStringResult1;
   } else if (tmp16.YEAR === interval) {
     const intl4 = util.intl;
     if (TIER_2 === __initData17.TIER_0) {
-      let poEovT = tmp22(1114).t.NPKsLz;
+      let poEovT = util.t.NPKsLz;
     } else {
-      poEovT = tmp22(1114).t.poEovT;
+      poEovT = util.t.poEovT;
     }
     obj = { timeInterval: null };
-    const intl5 = tmp22(1114).intl;
+    const intl5 = util.intl;
     obj.timeInterval = intl5.string(util.t.tfqrhj);
     let formatToPlainStringResult2 = intl4.formatToPlainString(poEovT, obj);
     if (!flag) {
-      const intl6 = tmp22(1114).intl;
-      formatToPlainStringResult2 = intl6.string(tmp22(1114).t.DRgqMo);
+      const intl6 = util.intl;
+      formatToPlainStringResult2 = intl6.string(util.t.DRgqMo);
     }
     return formatToPlainStringResult2;
   } else {
@@ -384,7 +384,7 @@ function getPremiumType(planIdFromItems) {
     throw error;
   }
 }
-function getDisplayName(planId, arg1, arg2, duration) {
+function getDisplayName(planId, arg1, arg2) {
   let flag = arg1;
   if (arg1 === undefined) {
     flag = false;
@@ -397,10 +397,10 @@ function getDisplayName(planId, arg1, arg2, duration) {
     const intl15 = util.intl;
     if (flag) {
       obj = { duration };
-      let formatResult = intl15.format(tmp48(1114).t.TZXHNj, obj);
+      let formatResult = intl15.format(util.t.TZXHNj, obj);
     } else {
       const string8 = intl15.string;
-      const t8 = tmp48(1114).t;
+      const t8 = util.t;
       if (flag2) {
         formatResult = string8(t8["81iAgs"]);
       } else {
@@ -408,14 +408,14 @@ function getDisplayName(planId, arg1, arg2, duration) {
       }
     }
     return formatResult;
-  } else if (tmp.PREMIUM_YEAR_TIER_0 === planId) {
+  } else if (SubscriptionPlans.PREMIUM_YEAR_TIER_0 === planId) {
     const intl14 = util.intl;
     if (flag) {
       obj = { duration };
-      let formatResult1 = intl14.format(tmp45(1114).t.eqRhC7, obj);
+      let formatResult1 = intl14.format(util.t.eqRhC7, obj);
     } else {
       const string7 = intl14.string;
-      const t7 = tmp45(1114).t;
+      const t7 = util.t;
       if (flag2) {
         formatResult1 = string7(t7.UvzqY1);
       } else {
@@ -423,7 +423,7 @@ function getDisplayName(planId, arg1, arg2, duration) {
       }
     }
     return formatResult1;
-  } else if (tmp.PREMIUM_MONTH_TIER_1 === planId) {
+  } else if (SubscriptionPlans.PREMIUM_MONTH_TIER_1 === planId) {
     const intl13 = util.intl;
     const string6 = intl13.string;
     const t6 = util.t;
@@ -433,7 +433,7 @@ function getDisplayName(planId, arg1, arg2, duration) {
       string6Result = string6(t6["7O6qSq"]);
     }
     return string6Result;
-  } else if (tmp.PREMIUM_YEAR_TIER_1 === planId) {
+  } else if (SubscriptionPlans.PREMIUM_YEAR_TIER_1 === planId) {
     const intl12 = util.intl;
     const string5 = intl12.string;
     const t5 = util.t;
@@ -443,14 +443,14 @@ function getDisplayName(planId, arg1, arg2, duration) {
       string5Result = string5(t5.Md5xbi);
     }
     return string5Result;
-  } else if (tmp.PREMIUM_MONTH_TIER_2 === planId) {
+  } else if (SubscriptionPlans.PREMIUM_MONTH_TIER_2 === planId) {
     const intl11 = util.intl;
     if (flag) {
       const obj1 = { duration };
-      let formatResult2 = intl11.format(tmp36(1114).t.aI6QXz, obj1);
+      let formatResult2 = intl11.format(util.t.aI6QXz, obj1);
     } else {
       const string4 = intl11.string;
-      const t4 = tmp36(1114).t;
+      const t4 = util.t;
       if (flag2) {
         formatResult2 = string4(t4.SmVbHc);
       } else {
@@ -458,7 +458,7 @@ function getDisplayName(planId, arg1, arg2, duration) {
       }
     }
     return formatResult2;
-  } else if (tmp.PREMIUM_GROUP_MONTH === planId) {
+  } else if (SubscriptionPlans.PREMIUM_GROUP_MONTH === planId) {
     const intl10 = util.intl;
     if (flag2) {
       let stringResult = intl10.string(util.t.SmVbHc);
@@ -467,14 +467,14 @@ function getDisplayName(planId, arg1, arg2, duration) {
       stringResult = intl10.formatToPlainString(_modDef3063["8bPDtb"], obj2);
     }
     return stringResult;
-  } else if (tmp.PREMIUM_YEAR_TIER_2 === planId) {
+  } else if (SubscriptionPlans.PREMIUM_YEAR_TIER_2 === planId) {
     const intl9 = util.intl;
     if (flag) {
       const obj3 = { duration };
-      let formatResult3 = intl9.format(tmp28(1114).t["1wBcPi"], obj3);
+      let formatResult3 = intl9.format(util.t["1wBcPi"], obj3);
     } else {
       const string3 = intl9.string;
-      const t3 = tmp28(1114).t;
+      const t3 = util.t;
       if (flag2) {
         formatResult3 = string3(t3.JIq4O1);
       } else {
@@ -482,13 +482,13 @@ function getDisplayName(planId, arg1, arg2, duration) {
       }
     }
     return formatResult3;
-  } else if (tmp.PREMIUM_3_MONTH_TIER_2 === planId) {
+  } else if (SubscriptionPlans.PREMIUM_3_MONTH_TIER_2 === planId) {
     const intl8 = util.intl;
     return intl8.string(util.t.wCbINr);
-  } else if (tmp.PREMIUM_6_MONTH_TIER_2 === planId) {
+  } else if (SubscriptionPlans.PREMIUM_6_MONTH_TIER_2 === planId) {
     const intl7 = util.intl;
     return intl7.string(util.t["e3/ArU"]);
-  } else if (tmp.PREMIUM_MONTH_GUILD === planId) {
+  } else if (SubscriptionPlans.PREMIUM_MONTH_GUILD === planId) {
     const intl6 = util.intl;
     const string2 = intl6.string;
     const t2 = util.t;
@@ -498,7 +498,7 @@ function getDisplayName(planId, arg1, arg2, duration) {
       string2Result = string2(t2["h80cx/"]);
     }
     return string2Result;
-  } else if (tmp.PREMIUM_YEAR_GUILD === planId) {
+  } else if (SubscriptionPlans.PREMIUM_YEAR_GUILD === planId) {
     const intl5 = util.intl;
     const string = intl5.string;
     const t = util.t;
@@ -508,16 +508,16 @@ function getDisplayName(planId, arg1, arg2, duration) {
       stringResult1 = string(t.ZHkls0);
     }
     return stringResult1;
-  } else if (tmp.PREMIUM_3_MONTH_GUILD === planId) {
+  } else if (SubscriptionPlans.PREMIUM_3_MONTH_GUILD === planId) {
     const intl4 = util.intl;
     return intl4.string(util.t.EZHHB6);
-  } else if (tmp.PREMIUM_6_MONTH_GUILD === planId) {
+  } else if (SubscriptionPlans.PREMIUM_6_MONTH_GUILD === planId) {
     const intl3 = util.intl;
     return intl3.string(util.t.X2KDO2);
-  } else if (tmp.PREMIUM_MONTH_LEGACY === planId) {
+  } else if (SubscriptionPlans.PREMIUM_MONTH_LEGACY === planId) {
     const intl2 = util.intl;
     return intl2.string(util.t.PD6k79);
-  } else if (tmp.PREMIUM_YEAR_LEGACY === planId) {
+  } else if (SubscriptionPlans.PREMIUM_YEAR_LEGACY === planId) {
     const intl = util.intl;
     return intl.string(util.t.LtJgTC);
   } else {
@@ -616,7 +616,7 @@ function getPlanDescription(arg0) {
     }
     tmp18 = tmp21;
   }
-  let tmp25 = subscription.status === tmp17.UNPAID && null !== subscription.latestInvoice;
+  let tmp25 = subscription.status === constants4.UNPAID && null !== subscription.latestInvoice;
   if (tmp25) {
     const latestInvoice = subscription.latestInvoice;
     let status;
@@ -626,9 +626,9 @@ function getPlanDescription(arg0) {
     tmp25 = status === constants.OPEN;
   }
   if (tmp18) {
-    let CANCELED = tmp17.CANCELED;
+    let CANCELED = constants4.CANCELED;
   } else {
-    CANCELED = tmp25 ? tmp17.UNPAID : subscription.status;
+    CANCELED = tmp25 ? constants4.UNPAID : subscription.status;
   }
   let flag;
   if (renewalInvoiceWithoutEntitlementsPreview != null) {
@@ -700,14 +700,14 @@ function getPlanDescription(arg0) {
         const obj2 = { num: sum };
         let format3Result1 = format3(t2["U+z/HJ"], obj2);
         if (SubscriptionPlans.PREMIUM_MONTH_TIER_0 !== planId) {
-          if (tmp46.PREMIUM_YEAR_TIER_0 !== planId) {
-            if (tmp46.PREMIUM_MONTH_TIER_1 !== planId) {
-              if (tmp46.PREMIUM_YEAR_TIER_1 !== planId) {
-                if (tmp46.PREMIUM_MONTH_TIER_2 !== planId) {
-                  if (tmp46.PREMIUM_YEAR_TIER_2 !== planId) {
-                    if (tmp46.PREMIUM_3_MONTH_TIER_2 !== planId) {
-                      if (tmp46.PREMIUM_6_MONTH_TIER_2 !== planId) {
-                        if (tmp46.PREMIUM_GROUP_MONTH !== planId) {
+          if (SubscriptionPlans.PREMIUM_YEAR_TIER_0 !== planId) {
+            if (SubscriptionPlans.PREMIUM_MONTH_TIER_1 !== planId) {
+              if (SubscriptionPlans.PREMIUM_YEAR_TIER_1 !== planId) {
+                if (SubscriptionPlans.PREMIUM_MONTH_TIER_2 !== planId) {
+                  if (SubscriptionPlans.PREMIUM_YEAR_TIER_2 !== planId) {
+                    if (SubscriptionPlans.PREMIUM_3_MONTH_TIER_2 !== planId) {
+                      if (SubscriptionPlans.PREMIUM_6_MONTH_TIER_2 !== planId) {
+                        if (SubscriptionPlans.PREMIUM_GROUP_MONTH !== planId) {
                           const _Error2 = Error;
                           const _HermesInternal = HermesInternal;
                           const error1 = new Error("Invalid planId " + planId);
@@ -717,7 +717,7 @@ function getPlanDescription(arg0) {
                     }
                   }
                 }
-                if (tmp17.CANCELED === CANCELED) {
+                if (constants4.CANCELED === CANCELED) {
                   const intl14 = util.intl;
                   const format5 = intl14.format;
                   let t3 = util.t;
@@ -733,7 +733,7 @@ function getPlanDescription(arg0) {
                     const obj4 = { num: sum };
                     return format5(t3.EcSdRH, obj4);
                   }
-                } else if (tmp17.ACCOUNT_HOLD === CANCELED) {
+                } else if (constants4.ACCOUNT_HOLD === CANCELED) {
                   const intl13 = util.intl;
                   const format4 = intl13.format;
                   let t4 = util.t;
@@ -749,11 +749,11 @@ function getPlanDescription(arg0) {
                     const obj6 = { num: sum };
                     return format4(t4.ivjxcn, obj6);
                   }
-                } else if (tmp17.UNPAID === CANCELED) {
+                } else if (constants4.UNPAID === CANCELED) {
                   const intl12 = util.intl;
                   const obj7 = { num: sum };
                   return intl12.format(util.t["0HopYf"], obj7);
-                } else if (tmp17.PAUSE_PENDING === CANCELED) {
+                } else if (constants4.PAUSE_PENDING === CANCELED) {
                   let diffResult = null;
                   if (null != subscription.pauseEndsAt) {
                     let obj18 = _modDef4153(subscription.pauseEndsAt);
@@ -769,20 +769,20 @@ function getPlanDescription(arg0) {
                     formatResult1 = intl10.format(util.t.VlWufv, obj9);
                   }
                   return formatResult1;
-                } else if (tmp17.PAUSED === CANCELED) {
+                } else if (constants4.PAUSED === CANCELED) {
                   if (!hasFractionalPremiumWithSub) {
                     const intl9 = util.intl;
                     const obj10 = { resumeDate: subscription.pauseEndsAt };
                     format3Result1 = intl9.format(util.t["6RTdZA"], obj10);
                   }
                   return format3Result1;
-                } else if (tmp17.BILLING_RETRY === CANCELED) {
+                } else if (constants4.BILLING_RETRY === CANCELED) {
                   const intl8 = util.intl;
                   const obj11 = { endDate: null };
                   let obj15 = _modDef4153(subscription.currentPeriodStart);
                   obj11.endDate = obj15.add(__initData7, "days").toDate();
                   return intl8.format(util.t["IlJ/HV"], obj11);
-                } else if (tmp17.PAST_DUE === CANCELED) {
+                } else if (constants4.PAST_DUE === CANCELED) {
                   const intl7 = util.intl;
                   const obj12 = { endDate: null, onClick: null };
                   let tmp5Result = DateUtils;
@@ -796,7 +796,7 @@ function getPlanDescription(arg0) {
                   return intl7.format(util.t["d+0vwo"], obj12);
                 } else if (!hasDiscountApplied) {
                   return format3Result1;
-                } else if (planId === tmp46.PREMIUM_YEAR_TIER_2) {
+                } else if (planId === SubscriptionPlans.PREMIUM_YEAR_TIER_2) {
                   const intl6 = util.intl;
                   let percentage;
                   if (activeDiscountInfo != null) {
@@ -853,7 +853,7 @@ function getPlanDescription(arg0) {
                 }
               }
             }
-            if (tmp17.CANCELED === CANCELED) {
+            if (constants4.CANCELED === CANCELED) {
               const intl21 = util.intl;
               if (tmp24) {
                 const format7 = intl21.format;
@@ -868,7 +868,7 @@ function getPlanDescription(arg0) {
               } else {
                 return intl21.string(util.t.K6tYFa);
               }
-            } else if (tmp17.ACCOUNT_HOLD === CANCELED) {
+            } else if (constants4.ACCOUNT_HOLD === CANCELED) {
               const intl20 = util.intl;
               const format6 = intl20.format;
               let t6 = util.t;
@@ -883,10 +883,10 @@ function getPlanDescription(arg0) {
               } else {
                 return format6(t6["0+/WH7"], {});
               }
-            } else if (tmp17.UNPAID === CANCELED) {
+            } else if (constants4.UNPAID === CANCELED) {
               const intl19 = util.intl;
               return intl19.format(util.t.McIzwj, {});
-            } else if (tmp17.PAUSE_PENDING === CANCELED) {
+            } else if (constants4.PAUSE_PENDING === CANCELED) {
               let diffResult1 = null;
               if (null != subscription.pauseEndsAt) {
                 diffResult1 = _modDef4153(subscription.pauseEndsAt).diff(subscription.currentPeriodEnd, "days");
@@ -902,14 +902,14 @@ function getPlanDescription(arg0) {
                 formatResult3 = intl17.format(util.t.VlWufv, obj18);
               }
               return formatResult3;
-            } else if (tmp17.PAUSED === CANCELED) {
+            } else if (constants4.PAUSED === CANCELED) {
               if (!hasFractionalPremiumWithSub) {
                 const intl16 = util.intl;
                 const obj19 = { resumeDate: subscription.pauseEndsAt };
                 stringResult2 = intl16.format(util.t["6RTdZA"], obj19);
               }
               return stringResult2;
-            } else if (tmp17.PAST_DUE === CANCELED) {
+            } else if (constants4.PAST_DUE === CANCELED) {
               const intl15 = util.intl;
               const obj20 = { endDate: null, onClick: null };
               tmp5Result = DateUtils;
@@ -926,7 +926,7 @@ function getPlanDescription(arg0) {
             }
           }
         }
-        if (tmp17.CANCELED === CANCELED) {
+        if (constants4.CANCELED === CANCELED) {
           const intl28 = util.intl;
           if (tmp24) {
             const format9 = intl28.format;
@@ -941,7 +941,7 @@ function getPlanDescription(arg0) {
           } else {
             return intl28.string(util.t.JshLzq);
           }
-        } else if (tmp17.ACCOUNT_HOLD === CANCELED) {
+        } else if (constants4.ACCOUNT_HOLD === CANCELED) {
           const intl27 = util.intl;
           const format8 = intl27.format;
           let t8 = util.t;
@@ -956,10 +956,10 @@ function getPlanDescription(arg0) {
           } else {
             return format8(t8.SsLIXS, {});
           }
-        } else if (tmp17.UNPAID === CANCELED) {
+        } else if (constants4.UNPAID === CANCELED) {
           const intl26 = util.intl;
           return intl26.format(util.t.cmkbFB, {});
-        } else if (tmp17.PAUSE_PENDING === CANCELED) {
+        } else if (constants4.PAUSE_PENDING === CANCELED) {
           let diffResult2 = null;
           if (null != subscription.pauseEndsAt) {
             diffResult2 = _modDef4153(subscription.pauseEndsAt).diff(subscription.currentPeriodEnd, "days");
@@ -975,14 +975,14 @@ function getPlanDescription(arg0) {
             formatResult4 = intl24.format(util.t.VlWufv, obj24);
           }
           return formatResult4;
-        } else if (tmp17.PAUSED === CANCELED) {
+        } else if (constants4.PAUSED === CANCELED) {
           if (!hasFractionalPremiumWithSub) {
             const intl23 = util.intl;
             const obj25 = { resumeDate: subscription.pauseEndsAt };
             stringResult1 = intl23.format(util.t["6RTdZA"], obj25);
           }
           return stringResult1;
-        } else if (tmp17.PAST_DUE === CANCELED) {
+        } else if (constants4.PAST_DUE === CANCELED) {
           const intl22 = util.intl;
           const obj26 = {
             endDate: DateUtils.dateFormat(getBillingGracePeriodDaysAndExpiresDate(subscription).expiresDate, "LL"),
@@ -997,6 +997,8 @@ function getPlanDescription(arg0) {
       }
     }
   }
+  const formatPriceResult = obj1.formatPrice(tmp4.amount, tmp4.currency);
+  tmp3 = null != premiumTypeSubscription && null != premiumTypeSubscription.paymentSourceId;
 }
 function getPremiumPlanOptions(isPremium) {
   ({ skuId, defaultPlanId } = isPremium);
@@ -1012,13 +1014,13 @@ function getPremiumPlanOptions(isPremium) {
         const items = [,];
         ({ PREMIUM_YEAR_TIER_0: arr3[0], PREMIUM_MONTH_TIER_0: arr3[1] } = SubscriptionPlans);
         let items2 = items;
-      } else if (tmp3.TIER_1 === skuId) {
+      } else if (__initData16.TIER_1 === skuId) {
         const items1 = [SubscriptionPlans.PREMIUM_MONTH_TIER_1];
         items2 = items1;
-      } else if (tmp3.TIER_2 === skuId) {
+      } else if (__initData16.TIER_2 === skuId) {
         items2 = [,];
         ({ PREMIUM_YEAR_TIER_2: arr[0], PREMIUM_MONTH_TIER_2: arr[1] } = SubscriptionPlans);
-      } else if (tmp3.GUILD === skuId) {
+      } else if (__initData16.GUILD === skuId) {
         return [];
       } else {
         const _Error = Error;
@@ -1100,9 +1102,8 @@ function getBillingGracePeriodDaysAndExpiresDate(subscription) {
         prop4 = metadata5.grace_period_expires_date;
       }
       const obj2 = { days: null, expiresDate: null };
-      const tmp11 = importDefault;
       obj2.days = _modDef4153(prop4).diff(subscription.currentPeriodStart, "days");
-      obj2.expiresDate = tmp11(4153)(subscription.metadata.grace_period_expires_date);
+      obj2.expiresDate = _modDef4153(subscription.metadata.grace_period_expires_date);
       return obj2;
     } else {
       const tmp8 = null == subscription.paymentSourceId ? closure_1_19 : __initData8;
@@ -1142,7 +1143,7 @@ function getExpectedRenewalDate(premiumSubscription, fractionalPremiumInfo) {
   }
   return toDateResult;
 }
-function getBillingInformationString(status, subscriptionPeriodStart, first1, flag, fractionalPremiumInfo) {
+function getBillingInformationString(status, subscriptionPeriodStart) {
   let tmp = first1;
   if (first1 === undefined) {
     tmp = null;
@@ -1180,10 +1181,10 @@ function getBillingInformationString(status, subscriptionPeriodStart, first1, fl
       mapped.reduce((acc, item) => item + acc, 0),
       tmp6.currency,
     );
-    let tmp14 = tmp8;
+    let tmp14 = require;
   } else {
     formatPriceResult = formatPrice(tmp6.total, tmp6.currency);
-    tmp14 = tmp8;
+    tmp14 = require;
   }
   const currentUser = UserStore.getCurrentUser();
   let isOnReverseTrialResult;
@@ -1204,11 +1205,11 @@ function getBillingInformationString(status, subscriptionPeriodStart, first1, fl
     const intl15 = tmp14(1114).intl;
     obj = { endDate: subscriptionPeriodStart.subscriptionPeriodStart };
     return intl15.format(tmp14(1114).t["Whp/qk"], obj);
-  } else if (status.status === tmp16.PAUSE_PENDING) {
+  } else if (status.status === constants4.PAUSE_PENDING) {
     const intl14 = tmp14(1114).intl;
     ({ currentPeriodEnd: obj26.pauseDate, pauseEndsAt: obj26.resumeDate } = status);
     return intl14.format(tmp14(1114).t.uBLUGU, { pauseDate: null, resumeDate: null });
-  } else if (status.status === tmp16.PAUSED) {
+  } else if (status.status === constants4.PAUSED) {
     if (tmp2.fractionalState !== constants6.NONE) {
       const intl13 = tmp14(1114).intl;
       let obj2 = { renewalDate: null, price: null };
@@ -1244,7 +1245,7 @@ function getBillingInformationString(status, subscriptionPeriodStart, first1, fl
       }
     }
     return formatResult;
-  } else if (status.status === tmp16.PAST_DUE) {
+  } else if (status.status === constants4.PAST_DUE) {
     let expiresDate = getBillingGracePeriodDaysAndExpiresDate(status).expiresDate;
     let isPurchasedViaGoogle = status.isPurchasedViaGoogle;
     if (isPurchasedViaGoogle) {
@@ -1281,9 +1282,9 @@ function getBillingInformationString(status, subscriptionPeriodStart, first1, fl
       };
       const paymentGateway3 = status.paymentGateway;
       if (constants2.APPLE_PARTNER !== paymentGateway3) {
-        if (tmp64.APPLE_ADVANCED_COMMERCE !== paymentGateway3) {
-          if (tmp64.APPLE !== paymentGateway3) {
-            if (tmp64.GOOGLE === paymentGateway3) {
+        if (constants2.APPLE_ADVANCED_COMMERCE !== paymentGateway3) {
+          if (constants2.APPLE !== paymentGateway3) {
+            if (constants2.GOOGLE === paymentGateway3) {
               let PAYMENT_SOURCE_MANAGEMENT2 = constants10.PAYMENT_SOURCE_MANAGEMENT;
             } else {
               const _Error3 = Error;
@@ -1301,14 +1302,14 @@ function getBillingInformationString(status, subscriptionPeriodStart, first1, fl
       const obj7 = { endDate: expiresDate.toDate(), price: formatPriceResult };
       return format2(t2.qEIzyi, obj7);
     }
-  } else if (status.status === tmp16.BILLING_RETRY) {
+  } else if (status.status === constants4.BILLING_RETRY) {
     const intl8 = tmp14(1114).intl;
     const obj8 = { endDate: null, price: null };
     const obj18 = _modDef4153(status.currentPeriodStart);
     obj8.endDate = _modDef4153(status.currentPeriodStart).add(__initData7, "days").toDate();
     obj8.price = formatPriceResult;
     return intl8.format(tmp14(1114).t.EMTLOT, obj8);
-  } else if (status.status === tmp16.ACCOUNT_HOLD) {
+  } else if (status.status === constants4.ACCOUNT_HOLD) {
     if (status.isPurchasedViaGoogle) {
       if (!tmp14Result.isGooglePlayBillingSupported()) {
         const intl6 = tmp14(1114).intl;
@@ -1318,9 +1319,9 @@ function getBillingInformationString(status, subscriptionPeriodStart, first1, fl
         obj9.paymentGatewayName = dependencyMap3[status.paymentGateway];
         const paymentGateway2 = status.paymentGateway;
         if (constants2.APPLE_PARTNER !== paymentGateway2) {
-          if (tmp45.APPLE_ADVANCED_COMMERCE !== paymentGateway2) {
-            if (tmp45.APPLE !== paymentGateway2) {
-              if (tmp45.GOOGLE === paymentGateway2) {
+          if (constants2.APPLE_ADVANCED_COMMERCE !== paymentGateway2) {
+            if (constants2.APPLE !== paymentGateway2) {
+              if (constants2.GOOGLE === paymentGateway2) {
                 let PAYMENT_SOURCE_MANAGEMENT = constants10.PAYMENT_SOURCE_MANAGEMENT;
               } else {
                 const _Error2 = Error;
@@ -1364,7 +1365,7 @@ function getBillingInformationString(status, subscriptionPeriodStart, first1, fl
       const intl5 = tmp14(1114).intl;
       obj11 = { prepaidEndDate: status.currentPeriodEnd };
       return intl5.format(tmp14(1114).t.awpB0C, obj11);
-    } else if (status.status === tmp16.UNPAID) {
+    } else if (status.status === constants4.UNPAID) {
       const intl4 = tmp14(1114).intl;
       const obj12 = { maxProcessingTimeInDays };
       return intl4.format(tmp14(1114).t.CzTKom, obj12);
@@ -1377,9 +1378,9 @@ function getBillingInformationString(status, subscriptionPeriodStart, first1, fl
       };
       const paymentGateway = status.paymentGateway;
       if (constants2.APPLE_PARTNER !== paymentGateway) {
-        if (tmp33.APPLE_ADVANCED_COMMERCE !== paymentGateway) {
-          if (tmp33.APPLE !== paymentGateway) {
-            if (tmp33.GOOGLE === paymentGateway) {
+        if (constants2.APPLE_ADVANCED_COMMERCE !== paymentGateway) {
+          if (constants2.APPLE !== paymentGateway) {
+            if (constants2.GOOGLE === paymentGateway) {
               let SUBSCRIPTION_MANAGEMENT = constants10.SUBSCRIPTION_MANAGEMENT;
             } else {
               const _Error = Error;
@@ -1571,7 +1572,7 @@ function isPremiumGuildSubscriptionCanceled(subscription) {
   }
   return tmp3;
 }
-function getFormattedPriceForPlan(id, arg1, arg2, flag, flag2) {
+function getFormattedPriceForPlan(id, arg1, arg2) {
   if (flag === undefined) {
     flag = false;
   }
@@ -1618,7 +1619,7 @@ function getPlanIdFromInvoice(subscription, renewalInvoicePreview) {
 function getStatusFromInvoice(subscription, renewalInvoicePreview) {
   const status = subscription.status;
   if (subscription.status !== constants4.CANCELED) {
-    if (subscription.status !== tmp.PAUSE_PENDING) {
+    if (subscription.status !== constants4.PAUSE_PENDING) {
       _modDef38(null != renewalInvoicePreview, "Expected invoicePreview");
       const invoiceItems = renewalInvoicePreview.invoiceItems;
       const found = invoiceItems.find((subscriptionPlanId) => set.has(subscriptionPlanId.subscriptionPlanId));
@@ -1628,7 +1629,7 @@ function getStatusFromInvoice(subscription, renewalInvoicePreview) {
       }
       let CANCELED = status;
       if (tmp8) {
-        CANCELED = tmp.CANCELED;
+        CANCELED = constants4.CANCELED;
       }
       return CANCELED;
     }
@@ -1689,19 +1690,19 @@ function getBillingReviewSubheader(arg0, id, arg2) {
     if (SubscriptionPlans.PREMIUM_MONTH_TIER_0 === id) {
       const intl15 = util.intl;
       return intl15.string(util.t["0ggVqN"]);
-    } else if (tmp.PREMIUM_YEAR_TIER_0 === id) {
+    } else if (SubscriptionPlans.PREMIUM_YEAR_TIER_0 === id) {
       const intl14 = util.intl;
       return intl14.string(util.t["jm+ZQw"]);
-    } else if (tmp.PREMIUM_MONTH_TIER_1 === id) {
+    } else if (SubscriptionPlans.PREMIUM_MONTH_TIER_1 === id) {
       const intl13 = util.intl;
       return intl13.string(util.t.uph4Jx);
-    } else if (tmp.PREMIUM_YEAR_TIER_1 === id) {
+    } else if (SubscriptionPlans.PREMIUM_YEAR_TIER_1 === id) {
       const intl12 = util.intl;
       return intl12.string(util.t["D/l7Yt"]);
     } else {
-      if (tmp.PREMIUM_MONTH_TIER_2 !== id) {
-        if (tmp.PREMIUM_GROUP_MONTH !== id) {
-          if (tmp.PREMIUM_YEAR_TIER_2 === id) {
+      if (SubscriptionPlans.PREMIUM_MONTH_TIER_2 !== id) {
+        if (SubscriptionPlans.PREMIUM_GROUP_MONTH !== id) {
+          if (SubscriptionPlans.PREMIUM_YEAR_TIER_2 === id) {
             const intl10 = util.intl;
             return intl10.string(util.t.G0mISV);
           }
@@ -1721,7 +1722,7 @@ function getBillingReviewSubheader(arg0, id, arg2) {
       string6Result = string6(t6["/G3aKw"]);
     }
     return string6Result;
-  } else if (tmp2.PREMIUM_YEAR_TIER_0 === id) {
+  } else if (SubscriptionPlans.PREMIUM_YEAR_TIER_0 === id) {
     const intl8 = util.intl;
     const string5 = intl8.string;
     const t5 = util.t;
@@ -1731,7 +1732,7 @@ function getBillingReviewSubheader(arg0, id, arg2) {
       string5Result = string5(t5["2eQpsL"]);
     }
     return string5Result;
-  } else if (tmp2.PREMIUM_MONTH_TIER_1 === id) {
+  } else if (SubscriptionPlans.PREMIUM_MONTH_TIER_1 === id) {
     const intl7 = util.intl;
     const string4 = intl7.string;
     const t4 = util.t;
@@ -1741,7 +1742,7 @@ function getBillingReviewSubheader(arg0, id, arg2) {
       string4Result = string4(t4.gueLg5);
     }
     return string4Result;
-  } else if (tmp2.PREMIUM_YEAR_TIER_1 === id) {
+  } else if (SubscriptionPlans.PREMIUM_YEAR_TIER_1 === id) {
     const intl6 = util.intl;
     const string3 = intl6.string;
     const t3 = util.t;
@@ -1751,7 +1752,7 @@ function getBillingReviewSubheader(arg0, id, arg2) {
       string3Result = string3(t3["MhH/vW"]);
     }
     return string3Result;
-  } else if (tmp2.PREMIUM_MONTH_TIER_2 === id) {
+  } else if (SubscriptionPlans.PREMIUM_MONTH_TIER_2 === id) {
     const intl5 = util.intl;
     const string2 = intl5.string;
     const t2 = util.t;
@@ -1761,11 +1762,11 @@ function getBillingReviewSubheader(arg0, id, arg2) {
       string2Result = string2(t2.LQVQIq);
     }
     return string2Result;
-  } else if (tmp2.PREMIUM_GROUP_MONTH === id) {
+  } else if (SubscriptionPlans.PREMIUM_GROUP_MONTH === id) {
     const intl4 = util.intl;
     obj = { premiumGroupProductName: closure_47() };
     return intl4.formatToPlainString(_modDef3063.LwdrNi, obj);
-  } else if (tmp2.PREMIUM_YEAR_TIER_2 === id) {
+  } else if (SubscriptionPlans.PREMIUM_YEAR_TIER_2 === id) {
     const intl3 = util.intl;
     const string = intl3.string;
     const t = util.t;
@@ -1776,16 +1777,16 @@ function getBillingReviewSubheader(arg0, id, arg2) {
     }
     return stringResult;
   } else {
-    if (tmp2.PREMIUM_3_MONTH_TIER_2 !== id) {
-      if (tmp2.PREMIUM_6_MONTH_TIER_2 !== id) {
-        if (tmp2.NONE_MONTH !== id) {
-          if (tmp2.NONE_YEAR !== id) {
-            if (tmp2.NONE_3_MONTH !== id) {
-              if (tmp2.NONE_6_MONTH !== id) {
-                if (tmp2.PREMIUM_MONTH_GUILD !== id) {
-                  if (tmp2.PREMIUM_YEAR_GUILD !== id) {
-                    if (tmp2.PREMIUM_3_MONTH_GUILD !== id) {
-                      if (tmp2.PREMIUM_6_MONTH_GUILD !== id) {
+    if (SubscriptionPlans.PREMIUM_3_MONTH_TIER_2 !== id) {
+      if (SubscriptionPlans.PREMIUM_6_MONTH_TIER_2 !== id) {
+        if (SubscriptionPlans.NONE_MONTH !== id) {
+          if (SubscriptionPlans.NONE_YEAR !== id) {
+            if (SubscriptionPlans.NONE_3_MONTH !== id) {
+              if (SubscriptionPlans.NONE_6_MONTH !== id) {
+                if (SubscriptionPlans.PREMIUM_MONTH_GUILD !== id) {
+                  if (SubscriptionPlans.PREMIUM_YEAR_GUILD !== id) {
+                    if (SubscriptionPlans.PREMIUM_3_MONTH_GUILD !== id) {
+                      if (SubscriptionPlans.PREMIUM_6_MONTH_GUILD !== id) {
                         const _Error = Error;
                         const error = new Error("User is purchasing an unsupported plan");
                         obj = { tags: null };
@@ -1837,28 +1838,29 @@ function formatTrialCtaIntervalDuration(intervalType) {
   if (constants7.DAY === MONTH) {
     if (num >= 7) {
       if (num % 7 === 0) {
-        const intl4 = tmp3(1114).intl;
+        const intl4 = util.intl;
         obj = { weeks: num / 7, price: formatPriceResult };
-        let formatToPlainStringResult = intl4.formatToPlainString(tmp3(1114).t.C6i5Jt, obj);
+        let formatToPlainStringResult = intl4.formatToPlainString(util.t.C6i5Jt, obj);
       }
       return formatToPlainStringResult;
     }
-    const intl3 = tmp3(1114).intl;
+    const intl3 = util.intl;
     obj = { days: num, price: formatPriceResult };
-    formatToPlainStringResult = intl3.formatToPlainString(tmp3(1114).t.cR9ifw, obj);
-  } else if (tmp6.MONTH === MONTH) {
-    const intl2 = tmp3(1114).intl;
+    formatToPlainStringResult = intl3.formatToPlainString(util.t.cR9ifw, obj);
+  } else if (constants7.MONTH === MONTH) {
+    const intl2 = util.intl;
     const obj1 = { months: num, price: formatPriceResult };
-    return intl2.formatToPlainString(tmp3(1114).t["8FZfNo"], obj1);
-  } else if (tmp6.YEAR === MONTH) {
-    const intl = tmp3(1114).intl;
+    return intl2.formatToPlainString(util.t["8FZfNo"], obj1);
+  } else if (constants7.YEAR === MONTH) {
+    const intl = util.intl;
     const obj2 = { years: num, price: formatPriceResult };
-    return intl.formatToPlainString(tmp3(1114).t.xzAcST, obj2);
+    return intl.formatToPlainString(util.t.xzAcST, obj2);
   } else {
     const _Error = Error;
     const error = new Error("Unsupported interval duration.");
     throw error;
   }
+  const tmp2 = getDefaultCurrency();
 }
 function getItemsWithUpsertedPlanIdForGroup(renewalMutations, planId, quantity, has) {
   if (has.has(planId)) {
@@ -1980,11 +1982,11 @@ function isNewUser(createdAt) {
 }
 function formatPriceString(amount, arg1) {
   if (constants7.MONTH === arg1) {
-    const intl2 = tmp(1114).intl;
-    let stringResult = intl2.string(tmp(1114).t.FPybU7);
+    const intl2 = util.intl;
+    let stringResult = intl2.string(util.t.FPybU7);
   } else if (tmp4.YEAR === arg1) {
-    const intl = tmp(1114).intl;
-    stringResult = intl.string(tmp(1114).t.tfqrhj);
+    const intl = util.intl;
+    stringResult = intl.string(util.t.tfqrhj);
   } else {
     const _Error = Error;
     const error = new Error("Unexpected interval");
@@ -2054,7 +2056,7 @@ function calculateMonthlyPriceEquivalentTotal(priceOptions) {
   if (subscriptionPlan.interval === constants7.DAY) {
     return null;
   } else {
-    if (subscriptionPlan.interval === tmp.MONTH) {
+    if (subscriptionPlan.interval === constants7.MONTH) {
       if (1 === subscriptionPlan.intervalCount) {
         return null;
       }
@@ -2072,7 +2074,7 @@ function calculateMonthlyPriceEquivalentTotal(priceOptions) {
     if (null == tmp5) {
       return null;
     } else {
-      if (subscriptionPlan.interval === tmp.MONTH) {
+      if (subscriptionPlan.interval === constants7.MONTH) {
         let intervalCount = subscriptionPlan.intervalCount;
       } else {
         intervalCount = 12 * subscriptionPlan.intervalCount;
@@ -2081,7 +2083,7 @@ function calculateMonthlyPriceEquivalentTotal(priceOptions) {
     }
   }
 }
-function calculateDiscountPercentageForYearlyPlan(subscriptionPlan, arg1, isGift) {
+function calculateDiscountPercentageForYearlyPlan(subscriptionPlan, arg1) {
   let flag = arg1;
   if (arg1 === undefined) {
     flag = false;
@@ -2106,7 +2108,7 @@ function calculateDiscountPercentageForYearlyPlan(subscriptionPlan, arg1, isGift
     }
   }
 }
-function calculateYearlyPlanDollarSavingsAmount(subscriptionPlan, arg1, priceOptions) {
+function calculateYearlyPlanDollarSavingsAmount(subscriptionPlan, arg1) {
   let flag = arg1;
   if (arg1 === undefined) {
     flag = false;
@@ -2303,9 +2305,9 @@ obj = {
   getSkuIdForPremiumType(premiumType) {
     if (__initData17.TIER_0 === premiumType) {
       return __initData16.TIER_0;
-    } else if (tmp.TIER_1 === premiumType) {
+    } else if (__initData17.TIER_1 === premiumType) {
       return __initData16.TIER_1;
-    } else if (tmp.TIER_2 === premiumType) {
+    } else if (__initData17.TIER_2 === premiumType) {
       return __initData16.TIER_2;
     }
   },
@@ -2486,40 +2488,40 @@ obj = {
       if (stateFromStores != null) {
         perks = stateFromStores.perks;
       }
-      hasPerkResult = tmp(1377).hasPerk(perks, tmp(1379).Perk.MONTHLY_ORBS);
-      const tmpResult = tmp(1377);
+      hasPerkResult = PerksStateUtils.hasPerk(perks, user2.Perk.MONTHLY_ORBS);
+      const tmpResult = PerksStateUtils;
     }
     return hasPerkResult;
   },
   canUseShopDiscounts(currentUser) {
     let isXboxGamePassPerksEnabled = XboxGamePassPerksExperiment.getIsXboxGamePassPerksEnabled("canUseShopDiscounts");
     if (isXboxGamePassPerksEnabled) {
-      let tmpResult = tmp(1377);
+      let tmpResult = PerksStateUtils;
       let perks;
       if (currentUser != null) {
         perks = currentUser.perks;
       }
-      isXboxGamePassPerksEnabled = tmpResult.hasPerk(perks, tmp(1379).Perk.SHOP_DISCOUNTS);
+      isXboxGamePassPerksEnabled = tmpResult.hasPerk(perks, user2.Perk.SHOP_DISCOUNTS);
     }
     if (!isXboxGamePassPerksEnabled) {
-      tmpResult = tmp(13980);
-      isXboxGamePassPerksEnabled = tmpResult.canUserUse(tmp(13980).COLLECTIBLES, currentUser);
+      tmpResult = ProductCatalog;
+      isXboxGamePassPerksEnabled = tmpResult.canUserUse(ProductCatalog.COLLECTIBLES, currentUser);
     }
     return isXboxGamePassPerksEnabled;
   },
   canUseMoreQuestOrbs(perks) {
     let isXboxGamePassPerksEnabled = XboxGamePassPerksExperiment.getIsXboxGamePassPerksEnabled("canUseMoreQuestOrbs");
     if (isXboxGamePassPerksEnabled) {
-      let tmpResult = tmp(1377);
+      let tmpResult = PerksStateUtils;
       perks = undefined;
       if (perks != null) {
         perks = perks.perks;
       }
-      isXboxGamePassPerksEnabled = tmpResult.hasPerk(perks, tmp(1379).Perk.MORE_QUEST_ORBS);
+      isXboxGamePassPerksEnabled = tmpResult.hasPerk(perks, user2.Perk.MORE_QUEST_ORBS);
     }
     if (!isXboxGamePassPerksEnabled) {
-      tmpResult = tmp(13980);
-      isXboxGamePassPerksEnabled = tmpResult.canUserUse(tmp(13980).QUEST_ORB_MULTIPLIER, perks);
+      tmpResult = ProductCatalog;
+      isXboxGamePassPerksEnabled = tmpResult.canUserUse(ProductCatalog.QUEST_ORB_MULTIPLIER, perks);
     }
     return isXboxGamePassPerksEnabled;
   },
@@ -2551,13 +2553,13 @@ export const getPremiumBranding = function getPremiumBranding(renewalMutations) 
     return TIER_0;
   }
   if (planId !== SubscriptionPlans.PREMIUM_MONTH_TIER_0) {
-    if (planId !== tmp9.PREMIUM_YEAR_TIER_0) {
-      if (planId !== tmp9.PREMIUM_MONTH_TIER_1) {
-        if (planId !== tmp9.PREMIUM_YEAR_TIER_1) {
-          if (planId !== tmp9.PREMIUM_MONTH_TIER_2) {
-            if (planId !== tmp9.PREMIUM_YEAR_TIER_2) {
-              if (planId !== tmp9.PREMIUM_3_MONTH_TIER_2) {
-                if (planId !== tmp9.PREMIUM_6_MONTH_TIER_2) {
+    if (planId !== SubscriptionPlans.PREMIUM_YEAR_TIER_0) {
+      if (planId !== SubscriptionPlans.PREMIUM_MONTH_TIER_1) {
+        if (planId !== SubscriptionPlans.PREMIUM_YEAR_TIER_1) {
+          if (planId !== SubscriptionPlans.PREMIUM_MONTH_TIER_2) {
+            if (planId !== SubscriptionPlans.PREMIUM_YEAR_TIER_2) {
+              if (planId !== SubscriptionPlans.PREMIUM_3_MONTH_TIER_2) {
+                if (planId !== SubscriptionPlans.PREMIUM_6_MONTH_TIER_2) {
                   TIER_0 = obj.PREMIUM_GUILD;
                 }
               }
@@ -2597,12 +2599,12 @@ export const usePlanSelectPriceState = function usePlanSelectPriceState(arg0, ar
   let items = [arg1];
   const memo = noop.useMemo(() => {
     let available_plans = null;
-    if (null != closure_1) {
+    if (null != currency) {
       available_plans = null;
-      if (null != tmp.checkoutContext) {
+      if (null != currency.checkoutContext) {
         available_plans = null;
-        if (null != tmp.checkoutContext.available_plans) {
-          available_plans = tmp.checkoutContext.available_plans;
+        if (null != currency.checkoutContext.available_plans) {
+          available_plans = currency.checkoutContext.available_plans;
         }
       }
     }
@@ -2613,7 +2615,7 @@ export const usePlanSelectPriceState = function usePlanSelectPriceState(arg0, ar
     let tmp2 = closure_0;
     if (null != memo) {
       obj = {};
-      const merged = Object.assign(tmp);
+      const merged = Object.assign(closure_0);
       const _Object = Object;
       obj.contextPlanPrices = Object.fromEntries(
         memo.map((item) => {
@@ -2625,12 +2627,12 @@ export const usePlanSelectPriceState = function usePlanSelectPriceState(arg0, ar
       tmp2 = obj;
     }
     obj = { priceOptions: tmp2, planPricesLoading: null };
-    let tmp7 = null != tmp.currency;
+    let tmp7 = null != closure_0.currency;
     if (tmp7) {
       tmp7 = null != currency;
     }
     if (tmp7) {
-      tmp7 = currency.currency !== tmp.currency;
+      tmp7 = currency.currency !== closure_0.currency;
     }
     if (tmp7) {
       tmp7 = null == closure_2;
@@ -2640,7 +2642,7 @@ export const usePlanSelectPriceState = function usePlanSelectPriceState(arg0, ar
   }, items1);
 };
 export { getPrice };
-export const getCountryPrices = function getCountryPrices(planId, DEFAULT) {
+export const getCountryPrices = function getCountryPrices(planId) {
   if (DEFAULT === undefined) {
     DEFAULT = constants3.DEFAULT;
   }
@@ -2667,8 +2669,8 @@ export const experimentalGetPrice = function experimentalGetPrice(id, arg1) {
       let found1;
       if (null != paymentSourceId) {
         obj = { purchaseType };
-        found1 = tmp3(id, obj).find((currency) => currency.currency === currency.toLowerCase());
-        const tmp3Result = tmp3(id, obj);
+        found1 = experimentalGetPrices(id, obj).find((currency) => currency.currency === currency.toLowerCase());
+        const tmp3Result = experimentalGetPrices(id, obj);
       }
       found = found1;
     }
@@ -2676,15 +2678,14 @@ export const experimentalGetPrice = function experimentalGetPrice(id, arg1) {
   } else {
     return arr[0];
   }
-  tmp3 = experimentalGetPrices;
 };
 export { getServerPriceFromClientPrice };
 export { getItemPlansTotalServerPrice };
 export const getSubscriptionWithNewPlansTotalServerPrice = function getSubscriptionWithNewPlansTotalServerPrice(
   renewalMutations,
   arg1,
-  arg2,
-  arg3,
+  currency,
+  id,
 ) {
   let items = arg1;
   if (null === arg1) {
@@ -2725,19 +2726,19 @@ export const getSubscriptionWithNewPlansTotalServerPrice = function getSubscript
   } else {
     mapped = items.filter((planId) => !set.has(planId.planId));
   }
-  return getItemPlansTotalServerPrice(mapped, arg2, arg3);
+  return getItemPlansTotalServerPrice(mapped, currency, id);
 };
 export { getInterval };
 export const getDiscountIntervalString = function getDiscountIntervalString(arg0) {
   if (constants5.MONTH === arg0) {
     const intl2 = util.intl;
     return intl2.string(util.t.FPybU7);
-  } else if (tmp.YEAR === arg0) {
+  } else if (constants5.YEAR === arg0) {
     const intl = util.intl;
     return intl.string(util.t.tfqrhj);
   } else {
-    if (tmp.DAY !== arg0) {
-      const WEEK = tmp.WEEK;
+    if (constants5.DAY !== arg0) {
+      const WEEK = constants5.WEEK;
     }
     const _Error = Error;
     const error = new Error("Unexpected interval");
@@ -2752,10 +2753,10 @@ export const getDisplayNameFromSku = function getDisplayNameFromSku(skuId1) {
   if (__initData16.TIER_0 === skuId1) {
     const intl3 = util.intl;
     return intl3.string(util.t["t9uG/o"]);
-  } else if (tmp.TIER_1 === skuId1) {
+  } else if (__initData16.TIER_1 === skuId1) {
     const intl2 = util.intl;
     return intl2.string(util.t.FSOz78);
-  } else if (tmp.TIER_2 === skuId1) {
+  } else if (__initData16.TIER_2 === skuId1) {
     const intl = util.intl;
     return intl.string(util.t.lG6a5x);
   } else {
@@ -2781,14 +2782,14 @@ export const getPremiumTypeDisplayName = function getPremiumTypeDisplayName(TIER
       str2 = intl3.string(util.t["t9uG/o"]);
     }
     return str2;
-  } else if (tmp.TIER_1 === TIER_0) {
+  } else if (__initData17.TIER_1 === TIER_0) {
     let str = "Classic";
     if (!flag) {
       const intl2 = util.intl;
       str = intl2.string(util.t.FSOz78);
     }
     return str;
-  } else if (tmp.TIER_2 === TIER_0) {
+  } else if (__initData17.TIER_2 === TIER_0) {
     const intl = util.intl;
     return intl.string(util.t.lG6a5x);
   }
@@ -2830,7 +2831,6 @@ export const getPlanDescriptionFromInvoice = function getPlanDescriptionFromInvo
     amount = result.amount;
   }
   const obj3 = PriceUtils;
-  const tmp4 = getPlanDescription;
   obj.price = obj3.formatRate(
     PriceUtils.formatPrice(amount, renewalInvoicePreview.currency),
     value.interval,
@@ -2843,7 +2843,7 @@ export const getPlanDescriptionFromInvoice = function getPlanDescriptionFromInvo
   obj.renewalInvoiceWithEntitlementsPreview = renewalInvoiceWithEntitlementsPreview;
   obj.hasFractionalPremiumWithSub = hasFractionalPremiumWithSub;
   obj.fractionalPremiumInfo = hasDiscountApplied.fractionalPremiumInfo;
-  return tmp4(obj);
+  return getPlanDescription(obj);
 };
 export const getExternalPlanDisplayName = function getExternalPlanDisplayName(renewalMutations) {
   ({ planId, additionalPlans } = renewalMutations);
@@ -2903,21 +2903,21 @@ export const getPlanIdForPremiumType = function getPlanIdForPremiumType(premiumT
   ({ MONTH: arr[0], YEAR: arr[1] } = constants7);
   if (set.has(YEAR)) {
     if (__initData17.TIER_0 === premiumType) {
-      if (YEAR === tmp.MONTH) {
+      if (YEAR === constants7.MONTH) {
         let PREMIUM_YEAR_TIER_0 = SubscriptionPlans.PREMIUM_MONTH_TIER_0;
       } else {
         PREMIUM_YEAR_TIER_0 = SubscriptionPlans.PREMIUM_YEAR_TIER_0;
       }
       return PREMIUM_YEAR_TIER_0;
-    } else if (tmp7.TIER_1 === premiumType) {
-      if (YEAR === tmp.MONTH) {
+    } else if (__initData17.TIER_1 === premiumType) {
+      if (YEAR === constants7.MONTH) {
         let PREMIUM_YEAR_TIER_1 = SubscriptionPlans.PREMIUM_MONTH_TIER_1;
       } else {
         PREMIUM_YEAR_TIER_1 = SubscriptionPlans.PREMIUM_YEAR_TIER_1;
       }
       return PREMIUM_YEAR_TIER_1;
-    } else if (tmp7.TIER_2 === premiumType) {
-      if (YEAR === tmp.MONTH) {
+    } else if (__initData17.TIER_2 === premiumType) {
+      if (YEAR === constants7.MONTH) {
         let PREMIUM_YEAR_TIER_2 = SubscriptionPlans.PREMIUM_MONTH_TIER_2;
       } else {
         PREMIUM_YEAR_TIER_2 = SubscriptionPlans.PREMIUM_YEAR_TIER_2;
@@ -3114,9 +3114,9 @@ export const getPremiumGuildHeaderDescription = function getPremiumGuildHeaderDe
       }
       return format2Result;
     } else {
-      if (tmp24.PAUSE_PENDING !== status) {
-        if (tmp24.PAUSED !== status) {
-          if (tmp24.PAST_DUE === status) {
+      if (constants4.PAUSE_PENDING !== status) {
+        if (constants4.PAUSED !== status) {
+          if (constants4.PAST_DUE === status) {
             if (subscription.isBoostOnly) {
               const intl4 = util.intl;
               const obj5 = { endDate: null, onClick: null };
@@ -3133,15 +3133,15 @@ export const getPremiumGuildHeaderDescription = function getPremiumGuildHeaderDe
             if (tmp21) {
               const intl3 = tmp26.intl;
               const obj6 = { activeQuantity: tmp4Result, pendingQuantity: bound };
-              return intl3.format(tmp25(1114).t["krRy+d"], obj6);
+              return intl3.format(util.t["krRy+d"], obj6);
             } else {
               const t2 = tmp26.t;
               if (flag3) {
                 let BmaudS = t2["4nc7+E"];
-                let tmp28 = tmp25;
+                let tmp28 = require;
               } else {
                 BmaudS = t2.BmaudS;
-                tmp28 = tmp25;
+                tmp28 = require;
               }
               const intl2 = tmp28(1114).intl;
               const obj7 = { activeQuantity: tmp4Result, pendingQuantity: bound, rate: str };
@@ -3150,7 +3150,7 @@ export const getPremiumGuildHeaderDescription = function getPremiumGuildHeaderDe
           } else {
             const intl = tmp26.intl;
             const format = intl.format;
-            const t = tmp25(1114).t;
+            const t = util.t;
             if (tmp21) {
               obj8 = { quantity: tmp5 };
               let formatResult = format(t["5iud9s"], obj8);
@@ -3255,7 +3255,7 @@ export const formatTrialOfferIntervalDuration = function formatTrialOfferInterva
       formatToPlainString3Result = formatToPlainString3(t3["kbBj/h"], obj1);
     }
     return formatToPlainString3Result;
-  } else if (tmp2.MONTH === MONTH) {
+  } else if (constants7.MONTH === MONTH) {
     const intl2 = util.intl;
     const formatToPlainString2 = intl2.formatToPlainString;
     const t2 = util.t;
@@ -3267,7 +3267,7 @@ export const formatTrialOfferIntervalDuration = function formatTrialOfferInterva
       formatToPlainString2Result = formatToPlainString2(t2["4SEnCZ"], obj3);
     }
     return formatToPlainString2Result;
-  } else if (tmp2.YEAR === MONTH) {
+  } else if (constants7.YEAR === MONTH) {
     const intl = util.intl;
     const formatToPlainString = intl.formatToPlainString;
     t = util.t;
@@ -3343,7 +3343,7 @@ export const formatIntervalDuration = function formatIntervalDuration(intervalTy
       formatToPlainString3Result = formatToPlainString3(t3["k2UNz+"], obj1);
     }
     return formatToPlainString3Result;
-  } else if (tmp2.MONTH === MONTH) {
+  } else if (constants7.MONTH === MONTH) {
     const intl2 = util.intl;
     const formatToPlainString2 = intl2.formatToPlainString;
     const t2 = util.t;
@@ -3355,7 +3355,7 @@ export const formatIntervalDuration = function formatIntervalDuration(intervalTy
       formatToPlainString2Result = formatToPlainString2(t2.kridzK, obj3);
     }
     return formatToPlainString2Result;
-  } else if (tmp2.YEAR === MONTH) {
+  } else if (constants7.YEAR === MONTH) {
     const intl = util.intl;
     const formatToPlainString = intl.formatToPlainString;
     t = util.t;
@@ -3378,9 +3378,9 @@ export const getExternalSubscriptionMethodUrl = function getExternalSubscription
   PAYMENT_SOURCE_MANAGEMENT,
 ) {
   if (constants2.APPLE_PARTNER !== paymentGateway) {
-    if (tmp.APPLE_ADVANCED_COMMERCE !== paymentGateway) {
-      if (tmp.APPLE !== paymentGateway) {
-        if (tmp.GOOGLE === paymentGateway) {
+    if (constants2.APPLE_ADVANCED_COMMERCE !== paymentGateway) {
+      if (constants2.APPLE !== paymentGateway) {
+        if (constants2.GOOGLE === paymentGateway) {
           return constants10[PAYMENT_SOURCE_MANAGEMENT];
         } else {
           const _Error = Error;
@@ -3539,13 +3539,13 @@ export const getPremiumTypeFromPlanId = function getPremiumTypeFromPlanId(arg0) 
   if (SubscriptionPlans.PREMIUM_MONTH_TIER_0 === arg0) {
     obj = { premiumType: __initData17.TIER_0, planInterval: constants7.MONTH };
     return obj;
-  } else if (tmp.PREMIUM_YEAR_TIER_0 === arg0) {
+  } else if (SubscriptionPlans.PREMIUM_YEAR_TIER_0 === arg0) {
     obj = { premiumType: __initData17.TIER_0, planInterval: constants7.YEAR };
     return obj;
   } else {
-    if (tmp.PREMIUM_MONTH_TIER_2 !== arg0) {
-      if (tmp.PREMIUM_GROUP_MONTH !== arg0) {
-        if (tmp.PREMIUM_YEAR_TIER_2 === arg0) {
+    if (SubscriptionPlans.PREMIUM_MONTH_TIER_2 !== arg0) {
+      if (SubscriptionPlans.PREMIUM_GROUP_MONTH !== arg0) {
+        if (SubscriptionPlans.PREMIUM_YEAR_TIER_2 === arg0) {
           obj = { premiumType: __initData17.TIER_2, planInterval: constants7.YEAR };
           return obj;
         } else {
@@ -3584,14 +3584,14 @@ export const getOfferNoticeThreshold = function getOfferNoticeThreshold(trialId)
     } else if (__initData14 === trialId) {
       return closure_1_44;
     } else {
-      return tmp;
+      return closure_1_46;
     }
   } else {
     let tmp3 = null != trialId;
     if (tmp3) {
       tmp3 = "discountId" in trialId;
     }
-    return tmp;
+    return closure_1_46;
   }
 };
 export const isTrialOffer = function isTrialOffer(arg0) {

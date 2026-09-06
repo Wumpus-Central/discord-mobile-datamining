@@ -15,6 +15,7 @@ function setLibraryApplications(libraryApplications) {
     closure_9[obj.getComboId(fromServer.id, fromServer.branchId)] = fromServer;
     continue;
   }
+  tmp = libraryApplications[Symbol.iterator]();
 }
 function handleLibraryApplicationUpdate(libraryApplication) {
   const fromServer = LibraryApplicationRecord.createFromServer(libraryApplication.libraryApplication);
@@ -40,30 +41,30 @@ prototype["initialize"] = function initialize() {
   value = Storage.get(LibraryApplicationStore);
   if (null != value) {
     if (null == value.activeLaunchOptionIds) {
-      const Storage2 = tmp2(510).Storage;
-      const Storage3 = tmp2(510).Storage;
-      value = Storage3.get(tmp4);
+      const Storage2 = Storage6.Storage;
+      const Storage3 = Storage6.Storage;
+      value = Storage3.get(LibraryApplicationStore);
       if (value == null) {
         value = {};
       }
       let obj = {};
       const merged = Object.assign(value);
       obj.activeLaunchOptionIds = activeLaunchOptionIds;
-      const result = Storage2.set(tmp4, obj);
+      const result = Storage2.set(LibraryApplicationStore, obj);
     } else {
       activeLaunchOptionIds = value.activeLaunchOptionIds;
     }
     if (null == value.activeLibraryApplicationBranchIds) {
-      const Storage4 = tmp2(510).Storage;
-      const Storage5 = tmp2(510).Storage;
-      let value1 = Storage5.get(tmp4);
+      const Storage4 = Storage6.Storage;
+      const Storage5 = Storage6.Storage;
+      let value1 = Storage5.get(LibraryApplicationStore);
       if (value1 == null) {
         value1 = {};
       }
       obj = {};
       const merged1 = Object.assign(value1);
       obj.activeLibraryApplicationBranchIds = activeLibraryApplicationBranchIds;
-      const result1 = Storage4.set(tmp4, obj);
+      const result1 = Storage4.set(LibraryApplicationStore, obj);
     } else {
       activeLibraryApplicationBranchIds = value.activeLibraryApplicationBranchIds;
     }
@@ -94,12 +95,12 @@ prototype["hasLibraryApplication"] = function hasLibraryApplication() {
   const merged1 = Object.assign(closure_9);
   return Object.keys({}).length > 0;
 };
-prototype["hasApplication"] = function hasApplication(arg0, arg1) {
+prototype["hasApplication"] = function hasApplication(applicationId, branchId) {
   let flag = arg2;
   if (arg2 === undefined) {
     flag = false;
   }
-  const comboId = LibraryApplicationUtils.getComboId(arg0, arg1);
+  const comboId = LibraryApplicationUtils.getComboId(applicationId, branchId);
   let obj2 = dependencyMap[comboId];
   if (obj2 == null) {
     obj2 = dependencyMap2[comboId];
@@ -144,10 +145,6 @@ prototype["getLibraryApplication"] = function getLibraryApplication(applicationI
   return tmp6;
 };
 prototype["getActiveLibraryApplication"] = function getActiveLibraryApplication(id) {
-  let flag = arg1;
-  if (arg1 === undefined) {
-    flag = false;
-  }
   if (null != activeLibraryApplicationBranchIds[id]) {
     let obj = LibraryApplicationUtils;
     const comboId = obj.getComboId(id, tmp);
@@ -159,9 +156,8 @@ prototype["getActiveLibraryApplication"] = function getActiveLibraryApplication(
       if (tmp2Result.isUserEntitledToLibraryApplication(obj2)) {
         return obj2;
       }
-      tmp2Result = tmp2(7399);
+      tmp2Result = LibraryApplicationUtils;
     }
-    tmp2 = require;
   }
   obj = {};
   const merged = Object.assign(dependencyMap2);
@@ -182,12 +178,12 @@ prototype["getActiveLibraryApplication"] = function getActiveLibraryApplication(
     continue;
   }
 };
-prototype["isUpdatingFlags"] = function isUpdatingFlags(arg0, arg1) {
-  return set.has(LibraryApplicationUtils.getComboId(arg0, arg1));
+prototype["isUpdatingFlags"] = function isUpdatingFlags(applicationId, branchId) {
+  return set.has(LibraryApplicationUtils.getComboId(applicationId, branchId));
 };
-prototype["getActiveLaunchOptionId"] = function getActiveLaunchOptionId(arg0, arg1) {
+prototype["getActiveLaunchOptionId"] = function getActiveLaunchOptionId(applicationId, branchId) {
   const obj = LibraryApplicationUtils;
-  return activeLaunchOptionIds[obj.getComboId(obj, arg0, arg1)];
+  return activeLaunchOptionIds[obj.getComboId(obj, applicationId, branchId)];
 };
 Object.defineProperty(prototype, "fetched", {
   get: function fetched() {

@@ -35,13 +35,13 @@ export const useExplicitContentSettingOrDefault = function useExplicitContentSet
     explicitContentNonFriendDm: null,
     explicitContentFriendDm: null,
   };
-  let tmpResult = tmp(7298);
+  let tmpResult = SensitiveMediaExplicitRedactionSettingsUtils;
   let prop1;
   if (stateFromStoresObject != null) {
     prop1 = stateFromStoresObject.explicitContentNonFriendDm;
   }
   obj.explicitContentNonFriendDm = tmpResult.resolveExplicitContentSettingWithDefaults({ setting: prop1, isDm: true });
-  tmpResult = tmp(7298);
+  tmpResult = SensitiveMediaExplicitRedactionSettingsUtils;
   let prop2;
   if (stateFromStoresObject != null) {
     prop2 = stateFromStoresObject.explicitContentFriendDm;
@@ -78,13 +78,13 @@ export const useGoreContentSettingOrDefault = function useGoreContentSettingOrDe
     goreContentNonFriendDm: null,
     goreContentFriendDm: null,
   };
-  let tmpResult = tmp(7301);
+  let tmpResult = SensitiveMediaGoreRedactionSettingsUtils;
   let prop;
   if (stateFromStoresObject != null) {
     prop = stateFromStoresObject.goreContentNonFriendDm;
   }
   obj.goreContentNonFriendDm = tmpResult.resolveGoreSettingWithDefaults({ setting: prop, isDm: true });
-  tmpResult = tmp(7301);
+  tmpResult = SensitiveMediaGoreRedactionSettingsUtils;
   let goreContentFriendDm;
   if (stateFromStoresObject != null) {
     goreContentFriendDm = stateFromStoresObject.goreContentFriendDm;

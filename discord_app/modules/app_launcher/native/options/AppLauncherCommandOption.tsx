@@ -2,6 +2,8 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import utils_AutocompleteUtilsDefault from "../../../../utils/native/AutocompleteUtils.tsx";
 import AppLauncherChoicesOptionDefault from "choices/AppLauncherChoicesOption.tsx";
+import AppLauncherAutocompleteOptionDefault from "autocomplete/AppLauncherAutocompleteOption.tsx";
+import AppLauncherTextInputOptionDefault from "text_input/AppLauncherTextInputOption.tsx";
 import AppLauncherAttachmentOptionDefault from "attachment/AppLauncherAttachmentOption.tsx";
 import AppLauncherBooleanOptionDefault from "boolean/AppLauncherBooleanOption.tsx";
 import AppLauncherMentionableOptionDefault from "mentionable/AppLauncherMentionableOption.tsx";
@@ -103,11 +105,11 @@ export default function AppLauncherCommandOption(option) {
                 let obj = { type: "userMention", userId: mentionable.result.user.id };
                 const items = [obj];
                 View(name, items);
-              } else if (tmp4(12180).MentionableItemTypes.ROLE === type) {
+              } else if (AppLauncherMentionableListActionSheet.MentionableItemTypes.ROLE === type) {
                 obj = { type: "roleMention", roleId: mentionable.result.id };
                 const items1 = [obj];
                 View(name, items1);
-              } else if (tmp4(12180).MentionableItemTypes.GLOBAL === type) {
+              } else if (AppLauncherMentionableListActionSheet.MentionableItemTypes.GLOBAL === type) {
                 const result = mentionable.result;
                 if (result.text === obj4.MENTION_EVERYONE().text) {
                   const items2 = [{ type: "textMention", text: "@everyone" }];
@@ -325,7 +327,7 @@ export default function AppLauncherCommandOption(option) {
       hasError: null,
     };
     let first6;
-    let tmp64Result = tmp64(12170);
+    let tmp64Result = AppLauncherAutocompleteOptionDefault;
     if (optionValues.current[name.name] != tmp44) {
       first6 = tmp52[0];
     }
@@ -366,7 +368,7 @@ export default function AppLauncherCommandOption(option) {
       onPressIn: null,
     };
     let first7;
-    tmp64Result = tmp64(12172);
+    tmp64Result = AppLauncherTextInputOptionDefault;
     if (optionValues.current[name.name] != tmp44) {
       first7 = tmp46[0];
     }

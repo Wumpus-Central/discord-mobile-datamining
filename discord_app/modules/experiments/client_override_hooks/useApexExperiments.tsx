@@ -20,7 +20,7 @@ function mergeApexExperiments(experimentsMetadata, registeredExperiments) {
       shortLabel: "Variant " + id.id,
       type: id.type,
     }));
-    const set = new Set(mapped.map((id) => id.id));
+    new Set(mapped.map((id) => id.id));
     if (null != dependencyMap[_slicedToArray]) {
       const _Object = Object;
       const keys = Object.keys(tmp4.variations);

@@ -4,6 +4,7 @@ import useAnalyticsLocations from "../../../app_analytics/useAnalyticsLocations.
 import AnalyticsLocationDefault from "../../../app_analytics/AnalyticsLocation.tsx";
 import GameProfileHeaderDefault from "GameProfileHeader.tsx";
 import GameProfileMediaDefault from "GameProfileMedia.tsx";
+import GameProfileStoreLinksDefault from "GameProfileStoreLinks.tsx";
 import GameProfileReviewsDefault from "GameProfileReviews.tsx";
 import GameProfileSummaryDefault from "GameProfileSummary.tsx";
 import GameProfileLinkAccountDefault from "GameProfileLinkAccount.tsx";
@@ -95,8 +96,8 @@ export default function GameProfileView(arg0) {
       children: null,
     };
     const obj2 = { game, websiteButtons, trackAction };
-    obj1.children = tmp5(tmp2(8721), obj2);
-    tmp5Result = tmp5(tmp7, obj1);
+    obj1.children = hasOwnProperty(GameProfileStoreLinksDefault, obj2);
+    tmp5Result = hasOwnProperty(View, obj1);
   }
   items2[1] = tmp5Result;
   items2[2] = hasOwnProperty(GameProfileReviewsDefault, { game, trackAction });

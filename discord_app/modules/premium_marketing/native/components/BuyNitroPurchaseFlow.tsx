@@ -134,11 +134,11 @@ function BuyNitroPurchaseRunner(item) {
           c5 = 3;
         } else if (arg0 === 1) {
           c5 = 3;
-          throw arg1;
+          throw value;
         } else if (arg0 !== 2) {
           c4 = 0;
         }
-        return arg1;
+        return value;
       });
       dependencyMap = tmp;
       const apply = tmp.apply;
@@ -170,7 +170,7 @@ function BuyNitroPurchaseRunner(item) {
         basePurchaseFlowAnalyticsFields = obj3.getBasePurchaseFlowAnalyticsFields(obj);
         if (!hasEmittedPaymentFlowStartedRef.current) {
           hasEmittedPaymentFlowStartedRef.current = true;
-          let tmp5Result = tmp5(tmp6[11]);
+          let tmp5Result = item(tmp6[11]);
           obj1 = {};
           const merged = Object.assign(basePurchaseFlowAnalyticsFields);
           obj1.application_id = applicationId;
@@ -178,7 +178,7 @@ function BuyNitroPurchaseRunner(item) {
           obj1.sku_id = result1;
           let customCheckoutFlowForAnalytics;
           if (result) {
-            tmp5Result = tmp5(tmp6[8]);
+            tmp5Result = item(tmp6[8]);
             customCheckoutFlowForAnalytics = tmp5Result.getCustomCheckoutFlowForAnalytics();
           }
           obj1.custom_checkout_flow = customCheckoutFlowForAnalytics;
@@ -199,7 +199,7 @@ function BuyNitroPurchaseRunner(item) {
         };
         onExit(obj2);
         if (result) {
-          const tmp5Result1 = tmp5(tmp6[13]);
+          const tmp5Result1 = item(tmp6[13]);
           obj3 = { planId: tmp9.basePlanId, isGift: false, loadId: tmp11 };
           const result3 = tmp5Result1.goToStandalonePremiumCheckoutFromMobileApp(
             "premium_nitro_marketing_page",
@@ -275,12 +275,12 @@ export default function BuyNitroPurchaseFlow(item) {
   let obj = item(1115);
   if (obj.isIOS()) {
     if (NitroACOMSubscriptionExperiment.useConfig({ location: "BuyNitroPurchaseFlow" }).enabled) {
-      let APPLE = tmp2.APPLE_ADVANCED_COMMERCE;
+      let APPLE = PaymentGateways.APPLE_ADVANCED_COMMERCE;
     } else {
-      APPLE = tmp2.APPLE;
+      APPLE = PaymentGateways.APPLE;
     }
   } else {
-    const GOOGLE = tmp2.GOOGLE;
+    const GOOGLE = PaymentGateways.GOOGLE;
     let tmp8;
     if (null != stagedTrialId) {
       obj = { subscription_preview: null };
@@ -301,7 +301,7 @@ export default function BuyNitroPurchaseFlow(item) {
     }, items);
     const obj1 = {
       paymentGateway: GOOGLE,
-      orderRequired: GOOGLE === tmp2.APPLE_ADVANCED_COMMERCE,
+      orderRequired: GOOGLE === PaymentGateways.APPLE_ADVANCED_COMMERCE,
       skuIds: [],
       defaultPlans: memo,
       isGift: false,
@@ -344,7 +344,7 @@ export default function BuyNitroPurchaseFlow(item) {
     );
     return jsx(NativeCheckoutStoreProviderDefault, {
       paymentGateway: GOOGLE,
-      orderRequired: GOOGLE === tmp2.APPLE_ADVANCED_COMMERCE,
+      orderRequired: GOOGLE === PaymentGateways.APPLE_ADVANCED_COMMERCE,
       skuIds: [],
       defaultPlans: memo,
       isGift: false,

@@ -11,10 +11,10 @@ const BasicPermissions = fn(1085).BasicPermissions;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/go_live/useFetchStreamPreview.tsx");
 
-export default function useFetchStreamPreview(arg0, arg1, arg2) {
-  _require = arg0;
-  dependencyMap = arg1;
-  noop = arg2;
+export default function useFetchStreamPreview(guildId, channelId, id) {
+  _require = guildId;
+  dependencyMap = channelId;
+  noop = id;
   closure_3 = tmp;
   let obj = require("initialize");
   const items = [closure_4];
@@ -58,7 +58,7 @@ export default function useFetchStreamPreview(arg0, arg1, arg2) {
   if (!stateFromStores) {
     stateFromStores = stateFromStores1;
   }
-  const items4 = [shouldFetchPreview, arg1, arg0, arg2, null == arg1 || null == arg2, stateFromStores];
+  const items4 = [shouldFetchPreview, channelId, guildId, id, null == channelId || null == id, stateFromStores];
   const effect = noop.useEffect(() => {
     let tmp = shouldFetchPreview;
     if (shouldFetchPreview) {
@@ -71,7 +71,7 @@ export default function useFetchStreamPreview(arg0, arg1, arg2) {
       const streamPreview = StreamActionCreators.fetchStreamPreview(closure_0, closure_1, closure_2);
     }
   }, items4);
-  if (!(null == arg1 || null == arg2)) {
+  if (!(null == channelId || null == id)) {
     if (stateFromStores) {
       obj = { previewUrl, isLoading };
     }

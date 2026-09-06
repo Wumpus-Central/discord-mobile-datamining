@@ -130,7 +130,7 @@ export const NotificationCenterForYou = (panelVariant) => {
     if (!forceUnacked.forceUnacked) {
       if (!first2.has(forceUnacked.id)) {
         const _Set = Set;
-        set = new Set(tmp);
+        set = new Set(first2);
         set.add(forceUnacked.id);
         closure_20(set);
       }
@@ -316,19 +316,19 @@ export const NotificationCenterForYou = (panelVariant) => {
         obj = { kind: "suggested-friends-header", id: "suggested-friends-header", showDivider: arr9.length > 0 };
         arr = items4.push(obj);
         let num5 = 2;
-        if (arr11.length <= 3) {
-          num5 = arr11.length;
+        if (friendSuggestions.length <= 3) {
+          num5 = friendSuggestions.length;
         }
         const _Math = Math;
-        const substr = arr11.slice(0, Math.min(arr11.length, num5));
+        const substr = friendSuggestions.slice(0, Math.min(friendSuggestions.length, num5));
         const item2 = substr.forEach((id) => {
           items4.push({ kind: "suggested-friends-row", id: id.user.id, suggestedFriend: id });
         });
-        if (arr11.length > 3) {
+        if (friendSuggestions.length > 3) {
           const obj1 = {
             kind: "suggested-friends-show-all-row",
             id: "suggested-friends-show-all-row",
-            suggestedFriends: arr11,
+            suggestedFriends: friendSuggestions,
           };
           items4.push(obj1);
         }

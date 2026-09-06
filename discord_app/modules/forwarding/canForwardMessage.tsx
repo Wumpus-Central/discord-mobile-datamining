@@ -6,7 +6,7 @@ import GuildStore from "../../stores/GuildStore.tsx";
 import PermissionStore from "../../stores/PermissionStore.tsx";
 
 require = fn;
-function canForwardMessage(state, PermissionStore, GatedChannelStore, ChannelStore, GuildStore) {
+function canForwardMessage(state) {
   let obj = PermissionStore;
   if (PermissionStore === undefined) {
     obj = PermissionStore;

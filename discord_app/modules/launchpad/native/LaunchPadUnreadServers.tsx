@@ -94,11 +94,11 @@ let closure_14 = noop.memo(function PrivateChannelItemInner(channelId) {
   stateFromStores1 = obj2.useStateFromStores(items1, () => {
     let isPrivateResult;
     if (stateFromStores != null) {
-      isPrivateResult = obj.isPrivate();
+      isPrivateResult = stateFromStores.isPrivate();
     }
     let user;
     if (isPrivateResult) {
-      user = UserStore.getUser(obj.getRecipientId());
+      user = UserStore.getUser(stateFromStores.getRecipientId());
     }
     return user;
   });
@@ -184,16 +184,16 @@ export default noop.memo(function LaunchPadUnreadServers(selectedGuildId) {
   const categoryStyles = obj.useCategoryStyles();
   unreadGuilds.useRef(-1);
   const items = [setSelectedGuild, selectedGuildId];
-  const onGuildSelect = unreadGuilds.useCallback((arg0) => {
+  const onGuildSelect = unreadGuilds.useCallback((id) => {
     if (ref.current < 0) {
-      if (isGuildSelectableDefault(arg0)) {
+      if (isGuildSelectableDefault(id)) {
         let tmp6;
-        if (arg0 !== selectedGuildId) {
-          tmp6 = arg0;
+        if (id !== selectedGuildId) {
+          tmp6 = id;
         }
         setSelectedGuild(tmp6);
         const _setTimeout = setTimeout;
-        tmp.current = setTimeout(() => {
+        ref.current = setTimeout(() => {
           clearTimeout(ref.current);
           ref.current = -1;
         }, 400);
@@ -201,7 +201,7 @@ export default noop.memo(function LaunchPadUnreadServers(selectedGuildId) {
     }
     clearTimeout(ref.current);
     ref.current = -1;
-    transitionToGuild.transitionToGuild(arg0);
+    transitionToGuild.transitionToGuild(id);
   }, items);
   const effect = unreadGuilds.useEffect(() => () => clearTimeout(ref.current), []);
   const ref = unreadGuilds.useRef(null);
@@ -302,4 +302,5 @@ export default noop.memo(function LaunchPadUnreadServers(selectedGuildId) {
   t[1] = tmp;
   obj.children = t;
   closure_11(visible, obj);
+  const AnimatedFastListResult = AnimatedFastList(tmp[19]);
 });

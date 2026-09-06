@@ -114,7 +114,7 @@ export default function ConversationListScreen() {
     }
     return applyArgumentsResult;
   }
-  _require = conversationBackoffRef(function* (arg0, value) {
+  _require = conversationBackoffRef(function* () {
     if (ref === 2) {
       ref = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -143,14 +143,14 @@ export default function ConversationListScreen() {
             if (null != channelConversations) {
               if (channelConversations.length > 0) {
                 if (length.length > 0) {
-                  if (arr[0].conversationId === channelConversations[channelConversations.length - 1].id) {
+                  if (length[0].conversationId === channelConversations[channelConversations.length - 1].id) {
                     guildId = 1;
                     let obj2 = tmp3(guildId[17]);
                     const obj1 = {
                       channelId: tmp32,
                       guildId,
                       direction: "before",
-                      anchor: arr[arr.length - 1].conversationId,
+                      anchor: length[length.length - 1].conversationId,
                       limit,
                       throwOnError: true,
                       hydrateMessages: null,
@@ -242,14 +242,12 @@ export default function ConversationListScreen() {
       let conversationId = item10018.item.conversationId;
       let tmp9 = conversationId;
       let current = ref.current;
-      let tmp11 = ref;
       if (!current.has(conversationId)) {
         let ConversationsAnalytics = ConversationsAnalytics2.ConversationsAnalytics;
-        let obj = { channelId: null, conversationId: null, isFocusMode: false };
-        obj.channelId = _handleEndReached;
+        let obj = { channelId: _handleEndReached, conversationId: null, isFocusMode: false };
         obj.conversationId = tmp9;
         let result = ConversationsAnalytics.trackPreviewImpression(obj);
-        let current2 = tmp11.current;
+        let current2 = ref.current;
         let addResult = current2.add(tmp9);
       }
       continue;

@@ -4,8 +4,10 @@ import Storage2 from "../../../../discord_common/js/packages/storage/Storage.tsx
 import DispatcherDefault from "../../../Dispatcher.tsx";
 import ConstantsIOS from "../../../ConstantsIOS.tsx";
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
+import NavigationRouteUtils from "../../main_tabs_v2/helpers/NavigationRouteUtils.native.tsx";
 import RootNavigationRef from "../../main_tabs_v2/RootNavigationRef.native.tsx";
 import TimeUtils from "../../../../discord_common/js/packages/time-utils/TimeUtils.tsx";
+import useKeyboardIsOpen from "../../keyboard/native/useKeyboardIsOpen.tsx";
 import RequestReviewNoTTIExperiment2 from "RequestReviewNoTTIExperiment.tsx";
 import requestReviewModalDefault from "requestReviewModal.tsx";
 import InstallTime from "../../install/native/InstallTime.tsx";
@@ -19,10 +21,10 @@ function showReviewRequestModal() {
   const rootNavigationRef = obj.getRootNavigationRef();
   let tmp3 = null != rootNavigationRef && rootNavigationRef.isReady();
   if (tmp3) {
-    let tmpResult = tmp(4417);
+    let tmpResult = NavigationRouteUtils;
     tmp3 = null != tmpResult.coerceGuildsRoute(rootNavigationRef.getCurrentRoute());
   }
-  tmpResult = tmp(6625);
+  tmpResult = useKeyboardIsOpen;
   const keyboardIsOpen = tmpResult.getKeyboardIsOpen();
   const tmp5 = null != SelectedChannelStore.getVoiceChannelId();
   if (tmp3) {
@@ -30,7 +32,7 @@ function showReviewRequestModal() {
       if (!tmp5) {
         AnalyticsUtilsDefault.track(AnalyticEvents.REVIEW_REQUEST_SHOW_ATTEMPTED);
         obj.revision = 1;
-        const Storage = tmp(510).Storage;
+        const Storage = Storage2.Storage;
         const result = Storage.set(RequestReviewStore, obj);
         requestReviewModalDefault();
         closure_10 = false;
@@ -47,7 +49,7 @@ function showReviewRequestModal() {
     clearTimeout(timeout);
     timeout = -1;
   }
-  const RequestReviewNoTTIExperiment = tmp(13696).RequestReviewNoTTIExperiment;
+  const RequestReviewNoTTIExperiment = RequestReviewNoTTIExperiment2.RequestReviewNoTTIExperiment;
   let skipTTICheck = RequestReviewNoTTIExperiment.getConfig({ location: "RequestReviewStore" }).skipTTICheck;
   let tmp18 = closure_10;
   if (closure_10) {
@@ -62,7 +64,7 @@ function showReviewRequestModal() {
   }
   if (tmp18) {
     const _setTimeout = setTimeout;
-    timeout = setTimeout(showReviewRequestModal, tmp(4589).MS_PER_MINUTE);
+    timeout = setTimeout(showReviewRequestModal, TimeUtils.MS_PER_MINUTE);
   }
 }
 function handleConnectionClosedOrInterrupted() {
@@ -118,7 +120,7 @@ obj = {
       clearTimeout(timeout);
       timeout = -1;
     }
-    const RequestReviewNoTTIExperiment = tmp(13696).RequestReviewNoTTIExperiment;
+    const RequestReviewNoTTIExperiment = RequestReviewNoTTIExperiment2.RequestReviewNoTTIExperiment;
     let skipTTICheck = RequestReviewNoTTIExperiment.getConfig({ location: "RequestReviewStore" }).skipTTICheck;
     let tmp13 = closure_10;
     if (closure_10) {
@@ -133,7 +135,7 @@ obj = {
     }
     if (tmp13) {
       const _setTimeout = setTimeout;
-      timeout = setTimeout(showReviewRequestModal, tmp(4589).MS_PER_MINUTE);
+      timeout = setTimeout(showReviewRequestModal, TimeUtils.MS_PER_MINUTE);
     }
   },
   CONNECTION_RESUMED: function handleConnectionResumed() {
@@ -194,7 +196,7 @@ obj = {
         clearTimeout(timeout);
         timeout = -1;
       }
-      const RequestReviewNoTTIExperiment = tmp(13696).RequestReviewNoTTIExperiment;
+      const RequestReviewNoTTIExperiment = RequestReviewNoTTIExperiment2.RequestReviewNoTTIExperiment;
       let skipTTICheck = RequestReviewNoTTIExperiment.getConfig({ location: "RequestReviewStore" }).skipTTICheck;
       let tmp8 = closure_10;
       if (closure_10) {
@@ -209,7 +211,7 @@ obj = {
       }
       if (tmp8) {
         const _setTimeout = setTimeout;
-        timeout = setTimeout(showReviewRequestModal, tmp(4589).MS_PER_MINUTE);
+        timeout = setTimeout(showReviewRequestModal, TimeUtils.MS_PER_MINUTE);
       }
     } else if (-1 !== timeout) {
       const _clearTimeout2 = clearTimeout;

@@ -124,7 +124,7 @@ function FocusedControlsAboveActionBarView(positionY) {
     const items1 = [tmp.aboveActionBarChildrenContainer, animatedStyle];
     obj2.style = items1;
     obj2.children = aboveActionBar;
-    tmp4Result = tmp4(offsetY(4296).View, obj2);
+    tmp4Result = closure_13(offsetY(4296).View, obj2);
   }
   items[2] = tmp4Result;
   obj1.children = items;
@@ -322,6 +322,7 @@ class FocusedControlsBottomDrawer {
             closure_8();
           }
           closure_7(!tmp);
+          obj2 = closure_0(sum3[20]);
         }, items);
         Gesture = tmp19(tmp3[21]).Gesture;
         PanResult = Gesture.Pan();
@@ -816,7 +817,7 @@ export default function FocusedControlsBottomControls(omitPTT) {
   let tmp4Result = null;
   if (!flag) {
     obj = { look: CallPTTButton.CallPTTButtonLooks.BLUR, style: tmp.ptbButton, sendCallback, stopCallback };
-    tmp4Result = tmp4(CallPTTButtonDefault, obj);
+    tmp4Result = map1(CallPTTButtonDefault, obj);
   }
   items[2] = tmp4Result;
   obj.children = items;

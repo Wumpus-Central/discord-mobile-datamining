@@ -55,7 +55,7 @@ export default function ChannelItemEmbeddedActivities(muted) {
     const items = [React4(GameIconDefault, obj1)];
     if (2 === embeddedApps.length) {
       obj = { game: embeddedApps[1].application, size };
-      let tmp16Result = tmp16(GameIconDefault, obj);
+      let tmp16Result = React4(GameIconDefault, obj);
     } else {
       const obj2 = { style: null, children: null };
       const items1 = [tmp3.overflowContainer];
@@ -65,8 +65,8 @@ export default function ChannelItemEmbeddedActivities(muted) {
       const obj4 = { style: tmp3.overflow, variant: "text-xs/bold", children: null };
       const _HermesInternal = HermesInternal;
       obj4.children = "+" + diff;
-      obj2.children = tmp16(Text_Text.Text, obj4);
-      tmp16Result = tmp16(tmp15, obj2);
+      obj2.children = React4(Text_Text.Text, obj4);
+      tmp16Result = React4(View, obj2);
     }
     items[1] = tmp16Result;
     obj.children = items;

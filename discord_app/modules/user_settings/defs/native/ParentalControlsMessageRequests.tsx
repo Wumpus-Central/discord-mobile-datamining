@@ -2,6 +2,7 @@
 import util from "../../../../intl/index.native.tsx";
 import _modDef2396 from "../../../parent_tools/FamilyCenter.messages.js";
 import AgeVerificationActionCreatorsDefault from "../../../age_assurance/AgeVerificationActionCreators.native.tsx";
+import AgeVerificationAnalyticsUtils from "../../../age_assurance/AgeVerificationAnalyticsUtils.tsx";
 import useSelectedTeen from "../../../parent_tools/hooks/useSelectedTeen.tsx";
 import useParentalControlSettings from "../../../parent_tools/hooks/useParentalControlSettings.tsx";
 import ParentalControlledUserSettings from "../../family_center/ParentalControlledUserSettings.tsx";
@@ -40,10 +41,9 @@ let SettingBuilders = {
       if (!arg0) {
         let obj = DefaultDMSettingsExperiment;
         if (obj.shouldAgeVerifyForDMDefaultOff()) {
-          obj = { entryPoint: tmp2(8413).AgeVerificationModalEntryPoint.MESSAGE_REQUESTS_SETTINGS };
+          obj = { entryPoint: AgeVerificationAnalyticsUtils.AgeVerificationModalEntryPoint.MESSAGE_REQUESTS_SETTINGS };
           const result = AgeVerificationActionCreatorsDefault.showAgeVerificationGetStartedModal(obj);
         }
-        tmp2 = require;
       }
       const ParentalControlledDefaultMessageRequestRestricted =
         ParentalControlledUserSettings.ParentalControlledDefaultMessageRequestRestricted;

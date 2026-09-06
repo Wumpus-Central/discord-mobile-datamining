@@ -28,11 +28,10 @@ export default function GuildsBarFooterWrapper(children) {
   const isHomeDrawerEnabled = useHomeDrawerGesture.useIsHomeDrawerEnabled();
   const style = [tmp2.footerWrapper];
   let tmp6 = null;
-  const tmp4 = jsx;
   if (!isHomeDrawerEnabled) {
     obj = { width: token + GUILD_ITEM_HIT_SLOP.left + GUILD_ITEM_HIT_SLOP.right };
     tmp6 = obj;
   }
   style[1] = tmp6;
-  return tmp4(NativeViewDefault, { style, children: children.children });
+  return jsx(NativeViewDefault, { style, children: children.children });
 }

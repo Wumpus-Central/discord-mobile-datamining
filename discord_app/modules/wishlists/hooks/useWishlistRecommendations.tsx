@@ -43,20 +43,20 @@ function useWishlistRecommendationsWithWishlists(userIdsAndWishlistIds) {
   const effect = memo1.useEffect(() => {
     if (0 !== userIdsAndWishlistIds.length) {
       if (0 !== memo3.length) {
-        recommendations = WishlistRecommendationsStore.getRecommendations(tmp, tmp8);
+        recommendations = WishlistRecommendationsStore.getRecommendations(userIdsAndWishlistIds, memo3);
         if (null != recommendations) {
           if ("loading" !== recommendations.state) {
             const _Date = Date;
             let tmp3 = "success" === recommendations.state;
+            recommendations.fetchedAt < Date.now() - closure_9;
             if (tmp3) {
               tmp3 = recommendations.data.skus.length >= stateFromStores;
             }
-            const tmp14 = recommendations.fetchedAt < Date.now() - closure_9;
           }
         }
         const wishlistRecommendations = WishlistActionCreatorsDefault.fetchWishlistRecommendations(
-          tmp8,
-          tmp,
+          memo3,
+          userIdsAndWishlistIds,
           stateFromStores,
         );
       }
@@ -91,31 +91,29 @@ function useWishlistRecommendationsWithWishlists(userIdsAndWishlistIds) {
     while (iter !== undefined) {
       let items = nextResult.items;
       for (const item10023 of items) {
-        let tmp6 = item10023;
         let isOwned = null == item10023.sku;
         if (!isOwned) {
-          isOwned = tmp6.isOwned;
+          isOwned = item10023.isOwned;
         }
         if (!isOwned) {
-          let obj2 = userIdsAndWishlistIds;
           let tmp8 = null != userIdsAndWishlistIds;
           if (tmp8) {
-            tmp8 = !obj2.includes(tmp6.sku.applicationId);
+            tmp8 = !userIdsAndWishlistIds.includes(item10023.sku.applicationId);
           }
           isOwned = tmp8;
         }
         if (isOwned) {
           continue;
         } else {
-          if (null != obj[tmp6.skuId]) {
-            obj = obj[tmp6.skuId];
+          if (null != obj[item10023.skuId]) {
+            obj = obj[item10023.skuId];
           } else {
             obj = {};
           }
           obj = {};
           let merged = Object.assign(obj);
           obj[tmp3.userId] = skusToUserAndReasonRecommendations.WISHLIST;
-          obj[tmp6.skuId] = obj;
+          obj[item10023.skuId] = obj;
         }
       }
       continue;
@@ -174,11 +172,11 @@ function useWishlistRecommendationsWithWishlists(userIdsAndWishlistIds) {
   const items7 = [tmp7, memo2];
   const memo4 = obj.useMemo(() => {
     if (null != stateFromStores) {
-      if ("success" === tmp.state) {
+      if ("success" === stateFromStores.state) {
         let obj = { filteredRecommendations: null, skusToUserAndReasonRecommendations: null };
-        const skus = tmp.data.skus;
+        const skus = stateFromStores.data.skus;
         obj.filteredRecommendations = skus.filter((id) => !(id.id in memo2));
-        obj.skusToUserAndReasonRecommendations = tmp.data.skusToUserAndReason;
+        obj.skusToUserAndReasonRecommendations = stateFromStores.data.skusToUserAndReason;
       }
       return obj;
     }
@@ -213,7 +211,7 @@ function useWishlistRecommendationsWithWishlists(userIdsAndWishlistIds) {
     if (!isFetching) {
       str = "loading";
       if (null != stateFromStores) {
-        if (null == tmp) {
+        if (null == stateFromStores) {
           if (errors.filter(GlobalUtils.isNotNullish).length > 0) {
             let str2 = "error";
           } else {
@@ -231,7 +229,7 @@ function useWishlistRecommendationsWithWishlists(userIdsAndWishlistIds) {
     const items = [...recommendations.map((id) => id.id), ...wishlistAndRecommendations.map((id) => id.id)];
     return _mod12.uniq(items);
   }, items10);
-  let obj2 = userIdsAndWishlistIds(memo3[7]);
+  const obj2 = userIdsAndWishlistIds(memo3[7]);
   const getOrFetchStorefrontPricesForSkuIds = userIdsAndWishlistIds(memo3[12]).useGetOrFetchStorefrontPricesForSkuIds({
     skuIds: memo7,
   });

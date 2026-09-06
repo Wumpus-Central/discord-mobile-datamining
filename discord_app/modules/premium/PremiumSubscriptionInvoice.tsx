@@ -15,7 +15,7 @@ function createSubscriptionInvoicePreview() {
   }
   return applyArgumentsResult;
 }
-let closure_14 = async function _createSubscriptionInvoicePreview(arg0, value) {
+let closure_14 = async function _createSubscriptionInvoicePreview(arg0) {
   if (c6 === 2) {
     c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -181,7 +181,7 @@ function updateSubscriptionInvoicePreview() {
   }
   return applyArgumentsResult;
 }
-let closure_16 = async function _updateSubscriptionInvoicePreview(arg0, value) {
+let closure_16 = async function _updateSubscriptionInvoicePreview(arg0) {
   if (c6 === 2) {
     c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -352,7 +352,7 @@ function createOneTimePurchaseInvoicePreview() {
   }
   return applyArgumentsResult;
 }
-let closure_18 = async function _createOneTimePurchaseInvoicePreview(arg0, value) {
+let closure_18 = async function _createOneTimePurchaseInvoicePreview(arg0) {
   if (c6 === 2) {
     c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -479,7 +479,7 @@ function getSubscriptionInvoice() {
   }
   return applyArgumentsResult;
 }
-let closure_20 = async function _getSubscriptionInvoice(arg0, value) {
+let closure_20 = async function _getSubscriptionInvoice(arg0) {
   if (c4 === 2) {
     c4 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -593,16 +593,16 @@ export const useFetchGenericInvoicePreview = function useFetchGenericInvoicePrev
         c5 = 3;
       } else if (arg0 === 1) {
         c5 = 3;
-        throw arg1;
+        throw value;
       } else if (arg0 !== 2) {
-        closure_128_0 = arg1;
+        closure_128_0 = value;
         if (!closure_129_0) {
           tmp26(closure_128_0);
         }
         v0 = 0;
       }
       v0 = 0;
-      return arg1;
+      return value;
     };
     c0 = false;
     if (!c0) {
@@ -675,16 +675,16 @@ export const useFetchSubscriptionGiftInvoicePreview = function useFetchSubscript
         c5 = 3;
       } else if (arg0 === 1) {
         c5 = 3;
-        throw arg1;
+        throw value;
       } else if (arg0 !== 2) {
-        closure_128_0 = arg1;
+        closure_128_0 = value;
         if (!closure_129_0) {
           tmp26(closure_128_0);
         }
         v0 = 0;
       }
       v0 = 0;
-      return arg1;
+      return value;
     };
     c0 = false;
     if (!c0) {
@@ -780,10 +780,10 @@ export const useFetchSubscriptionInvoicePreview = function useFetchSubscriptionI
     }
     obj = tmp2;
     if ("subscriptionId" in tmp2) {
-      tmp.current = true;
+      ref.current = true;
       return updateSubscriptionInvoicePreview(tmp2);
     } else if ("items" in tmp2) {
-      tmp.current = true;
+      ref.current = true;
       const _JSON = JSON;
       obj = {};
       const merged1 = Object.assign(tmp2);
@@ -833,16 +833,16 @@ export const useFetchSubscriptionInvoicePreview = function useFetchSubscriptionI
         c5 = 3;
       } else if (arg0 === 1) {
         c5 = 3;
-        throw arg1;
+        throw value;
       } else if (arg0 !== 2) {
-        closure_128_0 = arg1;
+        closure_128_0 = value;
         if (!closure_129_0) {
           tmp26(closure_128_0);
         }
         v0 = 0;
       }
       v0 = 0;
-      return arg1;
+      return value;
     };
     c0 = false;
     if (!c0) {
@@ -900,16 +900,16 @@ export const useGetSubscriptionInvoice = function useGetSubscriptionInvoice(prev
         c5 = 3;
       } else if (arg0 === 1) {
         c5 = 3;
-        throw arg1;
+        throw value;
       } else if (arg0 !== 2) {
-        closure_128_0 = arg1;
+        closure_128_0 = value;
         if (!closure_129_0) {
           tmp26(closure_128_0);
         }
         v0 = 0;
       }
       v0 = 0;
-      return arg1;
+      return value;
     };
     c0 = false;
     if (!c0) {

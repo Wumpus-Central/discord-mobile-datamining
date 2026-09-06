@@ -7,8 +7,8 @@ require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/unique_usernames/useUsernameStatus.tsx");
 
-export const useUsernameStatus = (arg0, flag, flag2) => {
-  closure_0 = arg0;
+export const useUsernameStatus = (username) => {
+  closure_0 = username;
   if (flag === undefined) {
     flag = true;
   }
@@ -16,10 +16,10 @@ export const useUsernameStatus = (arg0, flag, flag2) => {
     flag2 = false;
   }
   closure_1 = tmp;
-  const usernameLiveCheck = useUsernameLiveCheck.useUsernameLiveCheck(arg0, flag, flag2);
+  const usernameLiveCheck = useUsernameLiveCheck.useUsernameLiveCheck(username, flag, flag2);
   const tmp3 = _slicedToArray(noop.useState(undefined), 2);
   closure_3 = tmp3[1];
-  const items = [usernameLiveCheck, arg0, arg3];
+  const items = [usernameLiveCheck, username, username];
   const effect = noop.useEffect(() => {
     if ("" !== closure_0) {
       if (tmp !== closure_1) {

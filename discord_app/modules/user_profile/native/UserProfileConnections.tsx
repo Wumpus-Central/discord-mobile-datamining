@@ -6,13 +6,17 @@ import native2 from "../../../design/void/native.tsx";
 import AvatarUtilsDefault from "../../../utils/AvatarUtils.tsx";
 import ToastUtils from "../../toast/native/ToastUtils.tsx";
 import useToken from "../../../design/tokens/native/useToken.tsx";
+import shared from "../../../design/shared.tsx";
 import HapticUtils from "../../haptics/HapticUtils.native.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import TableRow from "../../../design/components/TableRow/native/TableRow.native.tsx";
+import TableRowGroup from "../../../design/components/TableRow/native/TableRowGroup.native.tsx";
 import ClipboardUtils from "../../../utils/ClipboardUtils.native.tsx";
 import UserProfileCardDefault from "UserProfileCard.tsx";
 import MaskedLinkUtils from "../../../utils/MaskedLinkUtils.tsx";
 import ConnectionMetadataVanityItems from "../../connections/native/ConnectionMetadataVanityItems.tsx";
+import _modDef11580 from "../../../../_runtime/metro/11580__.js";
+import _modDef11581 from "../../../../_runtime/metro/11581__.js";
 import useUserProfileApplicationRoleConnectionsDefault from "../hooks/useUserProfileApplicationRoleConnections.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import LocaleStore from "../../user_settings/LocaleStore.tsx";
@@ -29,23 +33,24 @@ function VerifiedIcon(arg0) {
   let obj1 = useToken;
   let PLATFORM_TWITTER = obj1.useToken(nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, theme);
   if (isTwitterVerifiedAccount) {
-    PLATFORM_TWITTER = tmp4(576).unsafe_rawColors.PLATFORM_TWITTER;
+    PLATFORM_TWITTER = nativeDefault.unsafe_rawColors.PLATFORM_TWITTER;
   }
   if (!tmp2Result.isThemeLight(theme)) {
     if (!isTwitterVerifiedAccount) {
-      let WHITE = tmp4(576).unsafe_rawColors.BLACK;
+      let WHITE = nativeDefault.unsafe_rawColors.BLACK;
     }
     obj = { style: tmp.verifiedIconContainer, children: null };
-    obj = { source: tmp4(11580), color: PLATFORM_TWITTER };
+    obj = { source: _modDef11580, color: PLATFORM_TWITTER };
     const merged = Object.assign(obj);
-    const items = [closure_1_12(tmp2(1178).Icon, obj)];
-    obj1 = { source: tmp4(11581), color: WHITE };
+    const items = [closure_1_12(native2.Icon, obj)];
+    obj1 = { source: _modDef11581, color: WHITE };
     const merged1 = Object.assign(obj);
-    items[1] = closure_1_12(tmp2(1178).Icon, obj1);
+    items[1] = closure_1_12(native2.Icon, obj1);
     obj.children = items;
     return map1(View, obj);
   }
-  WHITE = tmp4(576).unsafe_rawColors.WHITE;
+  WHITE = nativeDefault.unsafe_rawColors.WHITE;
+  tmp2Result = shared;
 }
 const View = fn(17).View;
 let Constants = fn(7208);
@@ -120,10 +125,10 @@ let closure_18 = noop.memo((userId) => {
     if (tmp12) {
       tmp12 = null.length > 0;
     }
-    value = account(tmp3[18]).get(account.type);
+    value = tmp4(tmp3[18]).get(account.type);
     c4 = value;
     tmp2Result = tmp2(tmp3[19]);
-    const tmp4Result = account(tmp3[18]);
+    const tmp4Result = tmp4(tmp3[18]);
     if (tmp2Result1.isThemeDark(theme)) {
       let darkPNG;
       if (!tmp14) {
@@ -222,11 +227,11 @@ let closure_18 = noop.memo((userId) => {
     let tmp29Result = null;
     if (account.verified) {
       obj1 = { theme, isTwitterVerifiedAccount: tmp19 };
-      tmp29Result = tmp29(VerifiedIcon, obj1);
+      tmp29Result = closure_12(VerifiedIcon, obj1);
     }
     items4[1] = tmp29Result;
     obj.children = items4;
-    let tmp27Result = tmp27(tmp28, obj);
+    let tmp27Result = closure_13(tmp28, obj);
     if (null != createdAtDate) {
       tmp29Result = null;
       if (null != createdAtDate) {
@@ -234,18 +239,18 @@ let closure_18 = noop.memo((userId) => {
         let intl = tmp2(tmp3[26]).intl;
         const obj3 = { date: createdAtDate };
         obj2.children = intl.format(tmp2(tmp3[26]).t["9rfonh"], obj3);
-        tmp29Result = tmp29(tmp2(tmp3[27]).Text, obj2);
+        tmp29Result = closure_12(tmp2(tmp3[27]).Text, obj2);
       }
       const items5 = [tmp29Result];
       let tmp29Result1 = null;
       if (tmp12) {
         const obj4 = { style: tmp.connectionMetadata, children: null };
-        tmp29Result1 = tmp29(tmp28, obj4);
+        tmp29Result1 = closure_12(tmp28, obj4);
       }
       const obj5 = { children: null };
       items5[1] = tmp29Result1;
       obj5.children = items5;
-      tmp27Result = tmp27(closure_14, obj5);
+      tmp27Result = closure_13(closure_14, obj5);
     }
     const obj6 = {
       label: tmp27Result,
@@ -262,7 +267,7 @@ let closure_18 = noop.memo((userId) => {
     obj6.icon = closure_12(tmp2(tmp3[29]).BaseIconImage, obj7);
     let tmp29Result2;
     if (null != platformUserUrl) {
-      tmp29Result2 = tmp29(tmp2(tmp3[30]).LinkExternalSmallIcon, { size: "sm" });
+      tmp29Result2 = closure_12(tmp2(tmp3[30]).LinkExternalSmallIcon, { size: "sm" });
     }
     obj6.trailing = tmp29Result2;
     let tmp39 = callback1;
@@ -280,19 +285,19 @@ let closure_18 = noop.memo((userId) => {
     if (constants.REDDIT === type) {
       let redditMetadataItems = tmp2(tmp3[11]).generateRedditMetadataItems(metadata, metadataItem);
       const tmp2Result2 = tmp2(tmp3[11]);
-    } else if (tmp9.STEAM === type) {
+    } else if (constants.STEAM === type) {
       redditMetadataItems = tmp2(tmp3[11]).generateSteamMetadataItems(metadata, metadataItem);
       const tmp2Result3 = tmp2(tmp3[11]);
     } else {
-      if (tmp9.BLUESKY !== type) {
-        if (tmp9.TWITTER !== type) {
-          if (tmp9.MASTODON !== type) {
-            if (tmp9.PAYPAL === type) {
+      if (constants.BLUESKY !== type) {
+        if (constants.TWITTER !== type) {
+          if (constants.MASTODON !== type) {
+            if (constants.PAYPAL === type) {
               redditMetadataItems = tmp2(tmp3[11]).generatePaypalMetadataItems(metadata, metadataItem);
               const tmp2Result4 = tmp2(tmp3[11]);
-            } else if (tmp9.EBAY !== type) {
+            } else if (constants.EBAY !== type) {
               redditMetadataItems = null;
-              if (tmp9.TIKTOK === type) {
+              if (constants.TIKTOK === type) {
                 redditMetadataItems = tmp2(tmp3[11]).generateTikTokMetadataItems(metadata, metadataItem);
                 const tmp2Result5 = tmp2(tmp3[11]);
               }
@@ -306,6 +311,7 @@ let closure_18 = noop.memo((userId) => {
       const tmp2Result7 = tmp2(tmp3[11]);
     }
   }
+  tmp4 = account;
 });
 let closure_19 = noop.memo((application) => {
   application = application.application;
@@ -352,7 +358,7 @@ let closure_19 = noop.memo((application) => {
   let tmp8Result;
   if (null != iconSource) {
     obj = { size, source: iconSource, style: tmp.applicationIcon };
-    tmp8Result = tmp8(tmp2(tmp3[29]).BaseIconImage, obj);
+    tmp8Result = closure_12(tmp2(tmp3[29]).BaseIconImage, obj);
   }
   obj.icon = tmp8Result;
   obj.onPress = callback;
@@ -374,7 +380,7 @@ const memoResult = noop.memo((applicationRoleConnection) => {
     tmp7 = null;
     if (null != applicationRoleConnection.platform_username) {
       obj = { variant: "text-xs/medium", color: "text-subtle", children: applicationRoleConnection.platform_username };
-      tmp7 = closure_1_12(tmp2(4556).Text, obj);
+      tmp7 = closure_1_12(Text_Text.Text, obj);
     }
   }
   const items = [tmp7, ,];
@@ -390,7 +396,7 @@ const memoResult = noop.memo((applicationRoleConnection) => {
   items[1] = tmp9;
   const obj3 = { style: tmp.poweredByContainer, children: null };
   const obj4 = { variant: "text-xs/medium", color: "text-muted", children: null };
-  const intl = tmp2(1114).intl;
+  const intl = util.intl;
   obj4.children = intl.format(util.t.zIT9YA, {
     applicationHook() {
       return applicationRoleConnection.application.name;
@@ -480,11 +486,11 @@ export const UserProfileApplicationRoleConnectionsCard = function UserProfileApp
       obj = { style: null, title: null, titleStyle: null, children: null };
       const items1 = [tmp.cardContainer, style];
       obj.style = items1;
-      const intl = tmp4(1114).intl;
-      obj.title = intl.string(tmp4(1114).t.PHjkRE);
+      const intl = util.intl;
+      obj.title = intl.string(util.t.PHjkRE);
       obj.titleStyle = tmp.refreshCardTitle;
       obj = { hasIcons: true, children: mapped };
-      obj.children = closure_1_12(tmp4(5687).TableRowGroup, obj);
+      obj.children = closure_1_12(TableRowGroup.TableRowGroup, obj);
       return closure_1_12(UserProfileCardDefault, obj);
     }
   }

@@ -1,9 +1,11 @@
 // discord_app/modules/messages/native/renderer/row_data/embeds/coded_links/EmbeddedActivityInviteEmbed.tsx
 import DispatcherDefault from "../../../../../../../Dispatcher.tsx";
 import util from "../../../../../../../intl/index.native.tsx";
+import useChannelName from "../../../../../../channel/useChannelName.tsx";
 import utils_ChannelUtils from "../../../../../../../utils/native/ChannelUtils.tsx";
 import getEmbedThemeColorsDefault from "../getEmbedThemeColors.tsx";
 import ApplicationAssetUtils from "../../../../../../../utils/ApplicationAssetUtils.tsx";
+import useEmbeddedActivityParticipantAvatarUris from "useEmbeddedActivityParticipantAvatarUris.tsx";
 import _slicedToArray from "../../../../../../../../_runtime/metro/00032__.js";
 import EmbeddedActivitiesStore from "../../../../../../activities/EmbeddedActivitiesStore.tsx";
 import ApplicationAssetsStore from "../../../../../../applications/ApplicationAssetsStore.tsx";
@@ -86,12 +88,12 @@ export const createEmbeddedActivityInviteEmbed = function createEmbeddedActivity
         const string = util.intl.string;
         if (null != channel) {
           if (null != name) {
-            const intl2 = tmp25(1114).intl;
+            const intl2 = util.intl;
             obj = { channelName: null, guildName: null };
-            let tmp25Result = tmp25(4713);
+            let tmp25Result = useChannelName;
             obj.channelName = tmp25Result.computeChannelName(channel, UserStore, RelationshipStore);
             obj.guildName = name;
-            let formatToPartsResult = intl2.formatToParts(tmp25(1114).t.omZR7L, obj);
+            let formatToPartsResult = intl2.formatToParts(util.t.omZR7L, obj);
           }
           let tmp30 = null != id;
           if (tmp30) {
@@ -108,30 +110,30 @@ export const createEmbeddedActivityInviteEmbed = function createEmbeddedActivity
           }
           if (null != id) {
             if (null != id2) {
-              tmp25Result = tmp25(13216);
+              tmp25Result = useEmbeddedActivityParticipantAvatarUris;
               const obj1 = { channelId: id, guildId: id2, applicationId: id };
               let embeddedActivityParticipantAvatarUris = tmp25Result.getEmbeddedActivityParticipantAvatarUris(obj1);
             }
-            const string2 = tmp25(1114).intl.string;
+            const string2 = util.intl.string;
             if (0 === embeddedActivityParticipantAvatarUris.length) {
-              const intl4 = tmp25(1114).intl;
-              let stringResult = intl4.string(tmp25(1114).t.I0v0Qv);
+              const intl4 = util.intl;
+              let stringResult = intl4.string(util.t.I0v0Qv);
             } else {
               stringResult = tmp35;
               if (tmp30) {
-                const intl3 = tmp25(1114).intl;
-                stringResult = intl3.string(tmp25(1114).t.KC26NR);
+                const intl3 = util.intl;
+                stringResult = intl3.string(util.t.KC26NR);
               }
             }
-            let assetIds1 = tmp25(8139).getAssetIds(id, closure_16);
+            let assetIds1 = ApplicationAssetUtils.getAssetIds(id, closure_16);
             if (assetIds1 == null) {
               assetIds1 = [];
             }
             const first = _slicedToArray(assetIds1, 1)[0];
             let assetImage;
             if (null != first) {
-              assetImage = tmp25(8139).getAssetImage(id, first, 1024);
-              const tmp25Result2 = tmp25(8139);
+              assetImage = ApplicationAssetUtils.getAssetImage(id, first, 1024);
+              const tmp25Result2 = ApplicationAssetUtils;
             }
             obj2 = {};
             const merged = Object.assign(baseColors);
@@ -145,8 +147,8 @@ export const createEmbeddedActivityInviteEmbed = function createEmbeddedActivity
             obj2.participantAvatarUris = embeddedActivityParticipantAvatarUris;
             obj2.acceptLabelText = stringResult;
             obj2.splashUrl = assetImage;
-            const intl5 = tmp25(1114).intl;
-            obj2.noParticipantsText = intl5.string(tmp25(1114).t.PZLnuD);
+            const intl5 = util.intl;
+            obj2.noParticipantsText = intl5.string(util.t.PZLnuD);
             obj2.ctaEnabled = !tmp30;
             return obj2;
           }
@@ -154,9 +156,9 @@ export const createEmbeddedActivityInviteEmbed = function createEmbeddedActivity
         }
         formatToPartsResult = null;
         if (null != name) {
-          const intl = tmp25(1114).intl;
+          const intl = util.intl;
           obj3 = { guildName: name };
-          formatToPartsResult = intl.formatToParts(tmp25(1114).t.u0vaDE, obj3);
+          formatToPartsResult = intl.formatToParts(util.t.u0vaDE, obj3);
         }
       }
     }

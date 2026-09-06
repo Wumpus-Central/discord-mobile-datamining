@@ -3,8 +3,15 @@ import initialize from "../../../../../../../discord_common/js/packages/flux/ind
 import nativeDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import native from "../../../../../../design/void/native.tsx";
 import UserUtilsDefault from "../../../../../../utils/UserUtils.tsx";
+import Text_Text from "../../../../../../design/components/Text/native/Text.tsx";
 import useChannelNameDefault from "../../../../../channel/useChannelName.tsx";
 import useMessageAuthorDefault from "../../../../../messages/useMessageAuthor.tsx";
+import enhanced_role_colors_EnhancedRoleColorUtils from "../../../../../premium/enhanced_role_colors/native/EnhancedRoleColorUtils.tsx";
+import BotTagDefault from "../../../../../applications/native/BotTag.tsx";
+import _modDef10145 from "../../../../../../../_runtime/metro/10145__.js";
+import _modDef10391 from "../../../../../../../_runtime/metro/10391__.js";
+import BellZIcon from "../../../../../../design/components/Icon/native/redesign/generated/BellZIcon.tsx";
+import useSearchMessageTimestamp from "../../../hooks/useSearchMessageTimestamp.tsx";
 import PollBadgeDefault from "../../../../../polls/native/PollBadge.tsx";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../../../a11y/AccessibilityStore.tsx";
@@ -45,20 +52,20 @@ function GuildChannelMessageRowHeader(channel) {
     ,
   ];
   if (muted) {
-    const obj2 = { source: tmp6(10145), size: tmp2(1178).Icon.Sizes.EXTRA_SMALL, style: tmp.channelStatus };
-    muted = tmp10(tmp2(1178).Icon, obj2);
+    const obj2 = { source: _modDef10145, size: tmp2(1178).Icon.Sizes.EXTRA_SMALL, style: tmp.channelStatus };
+    muted = closure_11(tmp2(1178).Icon, obj2);
   }
   items1[2] = muted;
   if (isFavorite) {
-    const obj3 = { source: tmp6(10391), size: tmp2(1178).Icon.Sizes.EXTRA_SMALL, style: tmp.channelStatus };
-    isFavorite = tmp10(tmp2(1178).Icon, obj3);
+    const obj3 = { source: _modDef10391, size: tmp2(1178).Icon.Sizes.EXTRA_SMALL, style: tmp.channelStatus };
+    isFavorite = closure_11(tmp2(1178).Icon, obj3);
   }
   items1[3] = isFavorite;
   let isSystemDMResult = channel.isSystemDM();
   if (isSystemDMResult) {
-    const obj4 = { type: tmp6(9438).Types.SYSTEM_DM, verified: true };
-    isSystemDMResult = tmp10(tmp6(9438), obj4);
-    const tmp6Result = tmp6(9438);
+    const obj4 = { type: BotTagDefault.Types.SYSTEM_DM, verified: true };
+    isSystemDMResult = closure_11(BotTagDefault, obj4);
+    const tmp6Result = BotTagDefault;
   }
   items1[4] = isSystemDMResult;
   obj.children = items1;
@@ -77,15 +84,16 @@ function PrivateChannelMessageRowLabel(message) {
   message = message.message;
   const channel = message.channel;
   let muted = message.muted;
-  const tmp = closure_13();
+  let tmp = closure_13();
   const items = [message.author];
   const items1 = [channel];
   const memo = noop.useMemo(() => UserUtilsDefault.getName(message.author), items);
   const effect = noop.useEffect(() => {
     if (tmp) {
-      const recipients = obj.recipients;
+      const recipients = channel.recipients;
       const item = recipients.forEach((item) => message(closure_1_2[20]).getUser(item));
     }
+    tmp = channel.isDM() || channel.isGroupDM();
   }, items1);
   let obj = message(16670);
   const searchMessageTimestamp = obj.useSearchMessageTimestamp(message, channel);
@@ -103,13 +111,13 @@ function PrivateChannelMessageRowLabel(message) {
   ];
   if (muted) {
     const obj1 = { source: channel(10145), size: tmp4(1178).Icon.Sizes.EXTRA_SMALL, style: tmp.channelStatus };
-    muted = tmp9(tmp4(1178).Icon, obj1);
+    muted = closure_11(tmp4(1178).Icon, obj1);
   }
   items2[1] = muted;
   let isSystemDMResult = channel.isSystemDM();
   if (isSystemDMResult) {
     const obj2 = { type: channel(9438).Types.SYSTEM_DM, verified: true };
-    isSystemDMResult = tmp9(channel(9438), obj2);
+    isSystemDMResult = closure_11(channel(9438), obj2);
     const tmp13 = channel(9438);
   }
   items2[2] = isSystemDMResult;
@@ -129,13 +137,13 @@ function PrivateChannelMessageRowLabel(message) {
   let tmp9Result = null;
   if (message.hasFlag(MessageFlags.SUPPRESS_NOTIFICATIONS)) {
     const obj4 = { size: "xs", style: tmp.suppressNotificationsIcon };
-    tmp9Result = tmp9(tmp4(13287).BellZIcon, obj4);
+    tmp9Result = closure_11(tmp4(13287).BellZIcon, obj4);
   }
   items3[2] = tmp9Result;
   tmp9Result = null;
   if (message.isPoll()) {
     const obj5 = { style: tmp.pollBadge };
-    tmp9Result = tmp9(channel(16671), obj5);
+    tmp9Result = closure_11(channel(16671), obj5);
   }
   items3[3] = tmp9Result;
   obj.children = items3;
@@ -152,16 +160,16 @@ function GuildChannelMessageRowLabel(arg0) {
     if (null != colorString) {
       obj = { color: colorString };
     }
-    let tmp2Result = tmp2(7961);
+    let tmp2Result = enhanced_role_colors_EnhancedRoleColorUtils;
     const processColorStringsArray = tmp2Result.useProcessColorStringsArray(colorStrings);
-    tmp2Result = tmp2(7961);
+    tmp2Result = enhanced_role_colors_EnhancedRoleColorUtils;
     const isRoleStyleAndRoleColorsEligibleForERC = tmp2Result.useIsRoleStyleAndRoleColorsEligibleForERC(
       channel.guild_id,
       message.author.id,
       stateFromStores,
       processColorStringsArray,
     );
-    const searchMessageTimestamp = tmp2(16670).useSearchMessageTimestamp(message, channel);
+    const searchMessageTimestamp = useSearchMessageTimestamp.useSearchMessageTimestamp(message, channel);
     obj = { style: tmp.labelContainer, children: null };
     const obj1 = { style: tmp.authorRow, children: null };
     let tmp18 = "dot" === stateFromStores;
@@ -171,7 +179,7 @@ function GuildChannelMessageRowLabel(arg0) {
     }
     if (tmp18) {
       const obj2 = { size: "small", color: colorString, colors: colorStrings };
-      tmp18 = closure_1_11(tmp2(1178).RoleDot, obj2);
+      tmp18 = closure_1_11(native.RoleDot, obj2);
     }
     const items1 = [tmp18];
     const obj3 = {
@@ -188,7 +196,7 @@ function GuildChannelMessageRowLabel(arg0) {
     }
     obj3.gradientColors = tmp22;
     obj3.children = tmp7;
-    items1[1] = closure_1_11(tmp2(4556).Text, obj3);
+    items1[1] = closure_1_11(Text_Text.Text, obj3);
     obj1.children = items1;
     const items2 = [closure_1_12(React4, obj1), , ,];
     const obj4 = {
@@ -199,22 +207,23 @@ function GuildChannelMessageRowLabel(arg0) {
       accessibilityLabel: timestampAccessibilityLabel,
       children: timestamp,
     };
-    items2[1] = closure_1_11(tmp2(4556).Text, obj4);
+    items2[1] = closure_1_11(Text_Text.Text, obj4);
     let tmp21Result = null;
     if (message.hasFlag(MessageFlags.SUPPRESS_NOTIFICATIONS)) {
       const obj5 = { size: "xs", style: tmp.suppressNotificationsIcon };
-      tmp21Result = tmp21(tmp2(13287).BellZIcon, obj5);
+      tmp21Result = closure_1_11(BellZIcon.BellZIcon, obj5);
     }
     items2[2] = tmp21Result;
     tmp21Result = null;
     if (message.isPoll()) {
       const obj6 = { style: tmp.pollBadge };
-      tmp21Result = tmp21(PollBadgeDefault, obj6);
+      tmp21Result = closure_1_11(PollBadgeDefault, obj6);
     }
     items2[3] = tmp21Result;
     obj.children = items2;
     return closure_1_12(React4, obj);
   }
+  const tmp6 = useMessageAuthorDefault(message);
 }
 get_ActivityIndicator = fn(17);
 ({ Platform, View: closure_4 } = get_ActivityIndicator);
@@ -311,7 +320,7 @@ export default noop.memo(function MessageRow(message) {
       const intl = tmp(stringResult[28]).intl;
       stringResult = intl.string(tmp(stringResult[28]).t["5uaI/7"]);
       obj2.children = stringResult;
-      let tmp13Result = tmp13(tmp(stringResult[15]).Text, obj2);
+      let tmp13Result = closure_11(tmp(stringResult[15]).Text, obj2);
     } else {
       const obj3 = {
         message,
@@ -322,12 +331,13 @@ export default noop.memo(function MessageRow(message) {
         lineClamp,
         messageSizeCacheRef,
       };
-      tmp13Result = tmp13(tmp(stringResult[29]).NativeMessageChannelRowPreview, obj3);
+      tmp13Result = closure_11(tmp(stringResult[29]).NativeMessageChannelRowPreview, obj3);
     }
     obj.subLabel = tmp13Result;
     obj.onPress = callback;
     body = body.body;
     obj.bodyStyle = body;
-    tmp13Result = tmp13(tmp(stringResult[27]).SearchListRow, obj);
+    tmp13Result = closure_11(tmp(stringResult[27]).SearchListRow, obj);
   }
+  const tmpResult1 = message(stringResult[26]);
 });

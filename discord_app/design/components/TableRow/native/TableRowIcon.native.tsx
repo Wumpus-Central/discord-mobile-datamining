@@ -102,13 +102,13 @@ export const TableRowIcon = function TableRowIcon(arg0) {
       obj.style = items;
       if (null != IconComponent) {
         obj = { size: str3, color };
-        let tmp11Result = tmp11(IconComponent, obj);
+        let tmp11Result = <IconComponent size={str3} color={color} />;
       } else {
         obj = { color, source, size: REFRESH_SMALL_16 };
-        tmp11Result = tmp11(IconDefault, obj);
+        tmp11Result = jsx(IconDefault, { color, source, size: REFRESH_SMALL_16 });
       }
       obj.children = tmp11Result;
-      tmp11Result = tmp11(View, obj);
+      tmp11Result = <View style={null}>{null}</View>;
       const tmp4 = _objectWithoutProperties(translucent, closure_3);
       break;
     case "text-status-online":

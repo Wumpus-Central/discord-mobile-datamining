@@ -25,7 +25,7 @@ let closure_4 = identity.createWithEqualityFn((arg0) => {
           obj = {};
           const merged = Object.assign(pollsByChannelId.pollsByChannelId);
           obj = {};
-          const merged1 = Object.assign(pollsByChannelId.pollsByChannelId[tmp2]);
+          const merged1 = Object.assign(pollsByChannelId.pollsByChannelId[closure_1_0]);
           obj[closure_1_1] = tmpResult;
           obj[closure_1_0] = obj;
           obj.pollsByChannelId = obj;

@@ -63,7 +63,7 @@ export default function UserProfileFrameEditButton(arg0) {
   obj.guildValue = profileFrame1;
   obj.guildId = guildId;
   const profilePreviewValue = obj2.getProfilePreviewValue(obj);
-  let tmp2Result = tmp2(11042);
+  let tmp2Result = user(11042);
   let skuId;
   if (profilePreviewValue != null) {
     skuId = profilePreviewValue.skuId;
@@ -80,7 +80,7 @@ export default function UserProfileFrameEditButton(arg0) {
   if (type === user(1889).CollectiblesItemType.PROFILE_FRAME) {
     const first1 = product.items[0];
   }
-  tmp2Result = tmp2(8166);
+  tmp2Result = user(8166);
   userProfileFrame = tmp2Result.useUserProfileFrame({ user, guildId });
   if (undefined !== pendingProfileFrame) {
     userProfileFrame = pendingProfileFrame;
@@ -92,16 +92,16 @@ export default function UserProfileFrameEditButton(arg0) {
       name = product.name;
     }
     if (name == null) {
-      const intl = tmp2(1114).intl;
-      name = intl.string(tmp2(1114).t.PoWNfe);
+      const intl = user(1114).intl;
+      name = intl.string(user(1114).t.PoWNfe);
     }
     let formatToPlainStringResult = name;
     if (null != guildId) {
       formatToPlainStringResult = name;
       if (null == userProfileFrame) {
-        const intl2 = tmp2(1114).intl;
+        const intl2 = user(1114).intl;
         obj = { label: name };
-        formatToPlainStringResult = intl2.formatToPlainString(tmp2(1114).t.ep5D4i, obj);
+        formatToPlainStringResult = intl2.formatToPlainString(user(1114).t.ep5D4i, obj);
       }
     }
     if (fetchCollectiblesProduct.isFetching) {
@@ -114,12 +114,12 @@ export default function UserProfileFrameEditButton(arg0) {
         disabled: true,
         hideArrow: true,
       };
-      const intl4 = tmp2(1114).intl;
-      obj1.label = intl4.string(tmp2(1114).t.GWrZOd);
-      const intl5 = tmp2(1114).intl;
-      obj1.buttonText = intl5.string(tmp2(1114).t.MKDeyL);
+      const intl4 = user(1114).intl;
+      obj1.label = intl4.string(user(1114).t.GWrZOd);
+      const intl5 = user(1114).intl;
+      obj1.buttonText = intl5.string(user(1114).t.MKDeyL);
       obj1.onPress = NOOP;
-      obj1.leading = tmp19(tmp2(5577).ActivityIndicator, { animating: true, size: "large" });
+      obj1.leading = jsx(user(5577).ActivityIndicator, { animating: true, size: "large" });
       obj2 = obj1;
     } else {
       obj2 = {
@@ -130,10 +130,12 @@ export default function UserProfileFrameEditButton(arg0) {
         onPress: null,
         leading: null,
       };
-      const intl3 = tmp2(1114).intl;
-      obj2.label = intl3.string(tmp2(1114).t.GWrZOd);
-      const obj3 = { showNewBadge: tmp5[0] === tmp2(1943).DismissibleContent.PROFILE_FRAME_USER_PROFILE_NEW_BADGE };
-      obj2.labelTrailing = tmp19(tmp2(14618).UserProfileEditFormLabelBadges, obj3);
+      const intl3 = user(1114).intl;
+      obj2.label = intl3.string(user(1114).t.GWrZOd);
+      const obj3 = { showNewBadge: tmp5[0] === user(1943).DismissibleContent.PROFILE_FRAME_USER_PROFILE_NEW_BADGE };
+      obj2.labelTrailing = jsx(user(14618).UserProfileEditFormLabelBadges, {
+        showNewBadge: tmp5[0] === user(1943).DismissibleContent.PROFILE_FRAME_USER_PROFILE_NEW_BADGE,
+      });
       obj2.buttonText = formatToPlainStringResult;
       const obj4 = { text: formatToPlainStringResult };
       obj2.accessibilityValue = obj4;
@@ -146,16 +148,21 @@ export default function UserProfileFrameEditButton(arg0) {
           previewHeight: COLLECTIBLES_PREVIEW_SIZE - 2 * PX_4,
           profileBackgroundColor: guildId(576).colors.BACKGROUND_SURFACE_HIGH,
         };
-        obj5.children = tmp19(guildId(8822), obj6);
-        let tmp19Result = tmp19(View, obj5);
+        obj5.children = jsx(guildId(8822), {
+          profileFrame: first1,
+          previewWidth: COLLECTIBLES_PREVIEW_SIZE - 2 * guildId(576).space.PX_8,
+          previewHeight: COLLECTIBLES_PREVIEW_SIZE - 2 * PX_4,
+          profileBackgroundColor: guildId(576).colors.BACKGROUND_SURFACE_HIGH,
+        });
+        let tmp19Result = <View style={tmp.previewContainer}>{null}</View>;
         const tmp24 = guildId(8822);
       } else {
         const obj7 = { source: guildId(13172), style: tmp.noneIcon };
-        tmp19Result = tmp19(tmp2(1178).Icon, obj7);
+        tmp19Result = jsx(user(1178).Icon, { source: guildId(13172), style: tmp.noneIcon });
       }
       obj2.leading = tmp19Result;
     }
-    return jsx(tmp2(14618).UserProfileEditFormButton, obj2);
+    return jsx(user(14618).UserProfileEditFormButton, obj2);
   } else {
     return null;
   }

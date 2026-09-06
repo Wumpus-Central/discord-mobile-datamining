@@ -32,10 +32,10 @@ function PendingCancellationWarning(slots) {
       obj = { style: tmp.pendingCancellationIcon, source: _modDef5597 };
       const items1 = [closure_1_19(timestampProducer, obj)];
       const obj1 = { style: tmp.pendingCancellationMessage, variant: "text-sm/medium", children: null };
-      const intl = tmp2(1114).intl;
+      const intl = util.intl;
       const obj2 = { date: stateFromStores.currentPeriodEnd, canceledCount: found.length };
-      obj1.children = intl.format(tmp2(1114).t.SFpsCH, obj2);
-      items1[1] = closure_1_19(tmp2(4556).Text, obj1);
+      obj1.children = intl.format(util.t.SFpsCH, obj2);
+      items1[1] = closure_1_19(Text_Text.Text, obj1);
       obj.children = items1;
       tmp5 = closure_1_20(React5, obj);
     }
@@ -228,7 +228,7 @@ const result = size.fileFinishedImporting(
 export default function SubscribeModalConfirmation(arg0) {
   ({ guildId: require, guildBoostSlots: importDefault, location: _location } = arg0);
   ({ intent: asyncGeneratorStep, onResult: noop } = arg0);
-  closure_8 = async function _handleSubscribe(arg0, value) {
+  closure_8 = async function _handleSubscribe(arg0) {
     if (c6 === 2) {
       c6 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -270,7 +270,7 @@ export default function SubscribeModalConfirmation(arg0) {
             }
             tmp3(tmp32[27])(everyResult, "Cannot use a premium guild subscription slot while on cooldown");
             c4 = 1;
-            if (tmp56) {
+            if (closure_0) {
               c5 = 2;
               c6 = 1;
               const obj1 = {
@@ -293,7 +293,6 @@ export default function SubscribeModalConfirmation(arg0) {
               };
               return obj1;
             }
-            tmp56 = closure_0;
             const tmp59 = tmp3(tmp32[27]);
           }
         } else {
@@ -400,8 +399,8 @@ export default function SubscribeModalConfirmation(arg0) {
   const items3 = [GuildBoostSlotStore];
   const stateFromStoresArray = obj2.useStateFromStoresArray(items3, () => {
     if (null != importDefault) {
-      if (arr.length > 0) {
-        return arr;
+      if (importDefault.length > 0) {
+        return importDefault;
       }
     }
     if (GuildBoostSlotStore.hasFetched) {
@@ -449,7 +448,7 @@ export default function SubscribeModalConfirmation(arg0) {
         previousGuildSubscriptionSlots: stateFromStoresArray,
         isModifyingSubscription: stateFromStores1,
       };
-      tmp14Result = tmp14(TransferConfirmation, obj1);
+      tmp14Result = closure_19(TransferConfirmation, obj1);
     } else {
       obj2 = {
         guild: stateFromStores,
@@ -457,12 +456,12 @@ export default function SubscribeModalConfirmation(arg0) {
         isModifyingSubscription: stateFromStores1,
         onPremiumGuildSubscribe: handleSubscribe,
       };
-      tmp14Result = tmp14(SubscribeConfirmation, obj2);
+      tmp14Result = closure_19(SubscribeConfirmation, obj2);
     }
     let obj3 = { children: null };
     obj.children = tmp14Result;
     obj3.children = closure_19(closure_8, obj);
-    tmp14Result = tmp14(stateFromStoresArray, obj3);
+    tmp14Result = closure_19(stateFromStoresArray, obj3);
   }
   return tmp14Result;
 }

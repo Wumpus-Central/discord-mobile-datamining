@@ -14,10 +14,10 @@ export const updateClientPremiumTypeOverride = function updateClientPremiumTypeO
     currentUser = UserStore.getCurrentUser();
   }
   if (null != currentUser) {
-    let tmp2Result = tmp2(573);
+    let tmp2Result = DispatcherDefault;
     obj = { type: "UPDATE_CLIENT_PREMIUM_TYPE", user: currentUser };
     tmp2Result.dispatch(obj);
-    tmp2Result = tmp2(573);
+    tmp2Result = DispatcherDefault;
     const obj1 = { type: "CURRENT_USER_UPDATE", user: createMessage.userRecordToServer(currentUser) };
     tmp2Result.dispatch(obj1);
   }

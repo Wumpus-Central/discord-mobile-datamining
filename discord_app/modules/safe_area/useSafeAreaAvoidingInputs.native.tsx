@@ -6,7 +6,7 @@ import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 import noop from "../../../_runtime/metro/00019__.js";
 
 require = fn;
-let closure_5 = async function _calculateScrollOffset(arg0, value) {
+let closure_5 = async function _calculateScrollOffset(arg0) {
   if (c6 === 2) {
     c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -33,25 +33,25 @@ let closure_5 = async function _calculateScrollOffset(arg0, value) {
         } else {
           c4 = 0;
           closure_3 = tmp2;
-          closure_131_0 = closure_0;
+          closure_131_0 = _require;
           closure_131_1 = closure_1;
           closure_131_2 = undefined;
           closure_131_3 = undefined;
-          if (null == closure_0) {
+          if (null == _require) {
             c6 = 3;
             const obj1 = { value: nativeDefault.space.PX_16, done: true };
             return obj1;
           } else {
-            const type = iter.type;
+            const type = _require.type;
             if ("toRef" === type) {
               let obj3 = ViewMeasureUtils;
               c5 = 1;
               c6 = 1;
-              const obj2 = { value: obj3.measureViewRefInWindow(iter.ref), done: false };
+              const obj2 = { value: obj3.measureViewRefInWindow(_require.ref), done: false };
               return obj2;
             } else if ("toValue" === type) {
               c6 = 3;
-              obj3 = { value: iter.value, done: true };
+              obj3 = { value: _require.value, done: true };
               return obj3;
             } else if ("toBottom" === type) {
               const _Number = Number;
@@ -108,7 +108,7 @@ export default function useSafeAreaAvoidingInputs(insets) {
   }, items);
   const items1 = [insets, scrollViewRef];
   onFocus = onFocus.useCallback(
-    asyncGeneratorStep(async (arg0, value) => {
+    asyncGeneratorStep(async () => {
       if (c3 === 2) {
         c3 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");

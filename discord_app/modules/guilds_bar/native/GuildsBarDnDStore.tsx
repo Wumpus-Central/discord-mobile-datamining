@@ -80,6 +80,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
           const result = obj.set(obj);
         }
       }, 0);
+      const obj4 = dropSpecs(1249);
     }
     const tmp = gestureState();
   };
@@ -104,6 +105,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
         const result1 = gestureState.set(obj1);
       }
     }
+    const tmp = closure_1();
   };
   return obj;
 });
@@ -141,12 +143,11 @@ export const useItemDragState = function useItemDragState(arg0, arg1) {
         if (dropSpecs != null) {
           id1 = dropSpecs.dragNode.id;
         }
-        tmp5 = id1 === tmp4;
+        tmp5 = id1 === closure_0;
       }
       tmp2 = tmp5;
-      tmp4 = closure_0;
     }
-    let tmp8 = !tmp;
+    let tmp8 = !closure_1;
     if (!closure_1) {
       let id2;
       if (overSpecs != null) {
@@ -225,15 +226,15 @@ export const useFolderBGHeightOffset = function useFolderBGHeightOffset(arg0) {
             num = 0;
             if (dragSpecs.node.type === GuildsNodeType.GUILD) {
               if (dragSpecs.node.parentId === closure_0) {
-                if (overSpecs.node.parentId !== tmp3) {
-                  if (overSpecs.node.id !== tmp3) {
+                if (overSpecs.node.parentId !== closure_0) {
+                  if (overSpecs.node.id !== closure_0) {
                     dragSpecs = dragSpecs.itemSize;
                     const num3 = -1 * dragSpecs;
                   } else {
                     overSpecs = "after";
                   }
                 }
-              } else if (overSpecs.node.parentId === tmp3) {
+              } else if (overSpecs.node.parentId === closure_0) {
               }
             }
           }

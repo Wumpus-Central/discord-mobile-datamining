@@ -5,7 +5,9 @@ import util from "../../../../intl/index.native.tsx";
 import native from "../../../../design/void/native.tsx";
 import ColorUtils from "../../../../utils/ColorUtils.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
+import LinearGradientDefault from "../../../../../_runtime/04987_LinearGradient.js";
 import ColorConstants from "../../../colors/native/ColorConstants.tsx";
+import PremiumGroupWordmarkDefault from "PremiumGroupWordmark.tsx";
 import usePremiumGroupFeaturesTableCardTextDefault from "../hooks/usePremiumGroupFeaturesTableCardText.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createStyles from "../../../../design/components/Styles/native/createStyles.tsx";
@@ -78,21 +80,24 @@ export default function PremiumGroupFeaturesTableCard(arg0) {
       borderWidth: 2,
       direction: native.GradientBorder.Direction.HORIZONTAL,
       colors: Gradients.PREMIUM_TIER_2,
-      borderRadius: tmp2(576).radii.sm,
+      borderRadius: nativeDefault.radii.sm,
       style,
       children: null,
     };
     obj = { start: { x: 0, y: 0 }, end: { x: 1, y: 0 }, colors: null, locations: null, style: null, children: null };
     let obj2 = ColorUtils;
     const items = [obj2.hexWithOpacity("#8547C6", 0.15), ,];
-    const tmp2Result = tmp2(4987);
+    const tmp2Result = LinearGradientDefault;
     items[1] = ColorUtils.hexWithOpacity("#B845C1", 0.15);
     items[2] = ColorUtils.hexWithOpacity("#AB5D8A", 0.15);
     obj.colors = items;
     obj.locations = [0, 0.4996, 0.9593];
     obj.style = tmp.premiumGroupCard;
     obj = { style: tmp.headerContainer, children: null };
-    const items1 = [hasOwnProperty(tmp2(9381), { width: 181, height: 16 }), hasOwnProperty(BetaPill, {})];
+    const items1 = [
+      hasOwnProperty(PremiumGroupWordmarkDefault, { width: 181, height: 16 }),
+      hasOwnProperty(BetaPill, {}),
+    ];
     obj.children = items1;
     const items2 = [timestampProducer(View, obj), ,];
     const obj1 = { variant: "text-sm/normal", style: tmp.title, children: subheaderString };

@@ -43,7 +43,7 @@ export const useMediaViewerPanGestureConfig = function useMediaViewerPanGestureC
   const sharedValue = require("ReanimatedRexport").useSharedValue(false);
   let obj = require("ReanimatedRexport");
   const sharedValue1 = require("ReanimatedRexport").useSharedValue(false);
-  const obj2 = require("ReanimatedRexport");
+  let obj2 = require("ReanimatedRexport");
   const sharedValue2 = require("ReanimatedRexport").useSharedValue(0);
   const obj3 = require("ReanimatedRexport");
   const sharedValue3 = require("ReanimatedRexport").useSharedValue(0);
@@ -166,15 +166,12 @@ export const useMediaViewerPanGesture = function useMediaViewerPanGesture(panGes
       if (Math.abs(velocity.get()) > closure_1_0) {
         swipeVelocityThreshold(isInteracting[1]).runOnJS(closure_1_6)();
         const obj5 = swipeVelocityThreshold(isInteracting[1]);
-      } else {
-        if (0 !== translatePos.get()) {
-          obj = { velocity: null };
-          obj.velocity = obj.get();
-          const merged = Object.assign(start);
-          const result1 = obj2.set(swipeVelocityThreshold(isInteracting[4]).withSpring(0, obj));
-          const obj3 = swipeVelocityThreshold(isInteracting[4]);
-        }
-        obj2 = translatePos;
+      } else if (0 !== translatePos.get()) {
+        obj = { velocity: null };
+        obj.velocity = obj.get();
+        const merged = Object.assign(start);
+        const result1 = translatePos.set(swipeVelocityThreshold(isInteracting[4]).withSpring(0, obj));
+        const obj3 = swipeVelocityThreshold(isInteracting[4]);
       }
     };
     const onTouchesDownResult = Gesture.Pan()
@@ -203,14 +200,14 @@ export const useMediaViewerPanGesture = function useMediaViewerPanGesture(panGes
     const Gesture = swipeVelocityThreshold(isInteracting[6]).Gesture;
     const NativeResult = Gesture.Native();
     swipeVelocityThreshold = NativeResult;
-    closure_1 = [];
+    dependencyMap = [];
     return {
       panGestureGenerator(index) {
-        if (null != closure_1[index]) {
-          return tmp[index];
+        if (null != dependencyMap[index]) {
+          return dependencyMap[index];
         } else {
-          tmp[index] = callback().blocksExternalGesture(NativeResult);
-          return tmp[index];
+          dependencyMap[index] = callback().blocksExternalGesture(NativeResult);
+          return dependencyMap[index];
         }
       },
       nativeGesture: NativeResult,

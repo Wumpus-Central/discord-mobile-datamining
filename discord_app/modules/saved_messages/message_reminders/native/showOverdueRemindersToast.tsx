@@ -1,6 +1,9 @@
 // discord_app/modules/saved_messages/message_reminders/native/showOverdueRemindersToast.tsx
+import util from "../../../../intl/index.native.tsx";
 import ToastActionCreatorsDefault from "../../../toast/native/ToastActionCreators.tsx";
+import ClockIcon from "../../../../design/components/Icon/native/redesign/generated/ClockIcon.tsx";
 import ForLaterExperiment from "../../ForLaterExperiment.tsx";
+import MessageRemindersSeenStorage from "MessageRemindersSeenStorage.tsx";
 import SavedMessagesStore from "../../SavedMessagesStore.tsx";
 
 require = fn;
@@ -14,24 +17,23 @@ export const showOverdueRemindersToast = function showOverdueRemindersToast() {
   if (obj.isForLaterExperimentOn("showOverdueRemindersToast")) {
     const overdueMessageReminderCount = SavedMessagesStore.getOverdueMessageReminderCount();
     if (0 !== overdueMessageReminderCount) {
-      const mostRecentOverdueDueAt = obj2.getMostRecentOverdueDueAt();
-      let tmpResult = tmp(7861);
+      const mostRecentOverdueDueAt = SavedMessagesStore.getMostRecentOverdueDueAt();
+      let tmpResult = MessageRemindersSeenStorage;
       if (mostRecentOverdueDueAt > tmpResult.getRemindersLastSeenAt()) {
-        tmpResult = tmp(7861);
+        tmpResult = MessageRemindersSeenStorage;
         tmpResult.markRemindersSeen();
         obj = {
           key: "overdue-message-reminders",
-          IconComponent: tmp(4523).ClockIcon,
+          IconComponent: ClockIcon.ClockIcon,
           content: null,
           position: "bottom",
           toastDurationMs: 5000,
         };
-        const intl = tmp(1114).intl;
+        const intl = util.intl;
         obj = { count: overdueMessageReminderCount };
-        obj.content = intl.formatToPlainString(tmp(1114).t.yBmFPA, obj);
+        obj.content = intl.formatToPlainString(util.t.yBmFPA, obj);
         ToastActionCreatorsDefault.open(obj);
       }
     }
-    obj2 = SavedMessagesStore;
   }
 };

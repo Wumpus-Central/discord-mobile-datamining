@@ -20,12 +20,12 @@ let closure_9 = async function _getSubscriptionSkusViaListings() {
   closure_130_0 = closure_0;
   closure_130_1 = importDefault;
   let found = importDefault.filter((type) => type.type === constants.SUBSCRIPTION_GROUP);
-  closure_130_2 = await Promise.all(
+  await Promise.all(
     found.map(
       (() => {
         closure_0 = closure_1_4(function* (arg0) {
           yield closure_0(closure_2_3[3]).fetchAllSubscriptionListingsDataForApplication(closure_0, closure_0.id);
-          return arg1;
+          return value;
         });
         return function () {
           const self = this;
@@ -40,6 +40,7 @@ let closure_9 = async function _getSubscriptionSkusViaListings() {
       })(),
     ),
   );
+  closure_130_2 = value;
   closure_130_3 = [];
   let item = closure_130_2.forEach((subscription_listings) => {
     if (null == subscription_listings) {
@@ -108,7 +109,7 @@ let closure_11 = async function _getSkusHandler(arg0) {
   let socket = arg0;
   c6 = 0;
   c7 = 0;
-  let iter = (async (arg0, value) => {
+  let iter = (async (arg0) => {
     if (c7 === 2) {
       c7 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -162,13 +163,13 @@ let closure_11 = async function _getSkusHandler(arg0) {
               throw tmp32;
             } else {
               if (obj18.isTestModeForApplication(id)) {
-                let tmp64Result = tmp64(tmp65[7]);
+                let tmp64Result = closure_133_2(closure_133_3[7]);
                 c6 = 2;
                 c7 = 1;
                 const obj3 = { value: tmp64Result.fetchTestSKUsForApplication(id, false), done: false };
                 return obj3;
               } else {
-                tmp64Result = tmp64(tmp65[8]);
+                tmp64Result = closure_133_2(closure_133_3[8]);
                 c6 = 3;
                 c7 = 1;
                 const obj4 = { value: tmp64Result.fetchAllStoreListingsForApplication(id), done: false };
@@ -291,7 +292,8 @@ let obj = {
     closure_0 = arg0;
     return (async () => {
       value = {};
-      value.skus = await closure_1_10(value);
+      await closure_1_10(value);
+      value.skus = value;
       return value;
     })();
   },
@@ -303,7 +305,8 @@ obj = {
     closure_0 = arg0;
     return (async () => {
       value = {};
-      value.entitlements = await closure_1_12(value);
+      await closure_1_12(value);
+      value.entitlements = value;
       return value;
     })();
   },

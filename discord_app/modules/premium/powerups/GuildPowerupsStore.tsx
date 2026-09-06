@@ -227,6 +227,7 @@ obj = {
     obj.unlockedPowerupsFetchCooldown = Date.now();
     obj.hasFetchedUnlockedPowerups = true;
     obj[guildId] = obj;
+    const tmp3 = calculateAppliedBoosts(guildId);
   },
   GUILD_POWERUP_ENTITLEMENTS_CREATE: function handleGuildPowerupCreated(arg0) {
     ({ guildId, entitlements } = arg0);

@@ -1,5 +1,6 @@
 // discord_app/modules/guild_settings/native/GuildSettingsModalOfficialMessages.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import _modDef672 from "../../../../_runtime/metro/00672__.js";
 import util from "../../../intl/index.native.tsx";
 import native from "../../../design/void/native.tsx";
 import asyncRequireImpl from "../../../../_runtime/01896_asyncRequireImpl.js";
@@ -33,7 +34,7 @@ function MessagePreview(theme) {
   }
   let obj = GuildOfficialMessageUtils;
   const accessibleGuildOfficialTextColor = obj.getAccessibleGuildOfficialTextColor(selectedColor, semanticColor, num);
-  let obj2 = tmp3(672)(selectedColor);
+  let obj2 = _modDef672(selectedColor);
   const hexResult = accessibleGuildOfficialTextColor.hex();
   const alphaResult = obj2.alpha(closure_1_10);
   obj = { style: null, pointerEvents: "none", children: null };

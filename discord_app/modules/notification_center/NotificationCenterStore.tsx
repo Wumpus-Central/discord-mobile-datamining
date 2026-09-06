@@ -32,9 +32,8 @@ prototype["initialize"] = function initialize(localItemAcks) {
         let tmp5 = _slicedToArray(tmp3, 2);
         [tmp6, tmp7] = tmp5;
         let _Date = Date;
-        let tmp8 = tmp7;
         if (Date.now() - tmp7 < closure_1_5) {
-          obj[tmp6] = tmp8;
+          obj[tmp6] = tmp7;
         }
         continue;
       }

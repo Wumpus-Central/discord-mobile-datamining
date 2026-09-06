@@ -1,6 +1,7 @@
 // discord_app/modules/voice_panel/native/VoicePanelSystemUIManager.tsx
 import ReactBatchUpdates from "../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
 import ReanimatedRexport from "../../reanimated/ReanimatedRexport.tsx";
+import cheapWorkletShallowEqual from "../../reanimated/native/cheapWorkletShallowEqual.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import ChannelRTCStore from "../../calls/ChannelRTCStore.tsx";
@@ -51,7 +52,7 @@ export default noop.memo(function VoicePanelSystemUIManager() {
           closure_2_5(tmp4);
           participant = undefined;
           if (null != c0) {
-            participant = participant.getParticipant(focusedId, tmp3);
+            participant = participant.getParticipant(focusedId, c0);
           }
           let type;
           if (participant != null) {
@@ -64,6 +65,7 @@ export default noop.memo(function VoicePanelSystemUIManager() {
             tmp14 = !tmp11;
           }
           closure_2_7(tmp14);
+          const obj = focused(mode[9]);
         });
       },
       500,
@@ -97,7 +99,7 @@ export default noop.memo(function VoicePanelSystemUIManager() {
             closure_2_5(tmp4);
             participant = undefined;
             if (null != c0) {
-              participant = participant.getParticipant(focusedId, tmp3);
+              participant = participant.getParticipant(focusedId, c0);
             }
             let type;
             if (participant != null) {
@@ -110,6 +112,7 @@ export default noop.memo(function VoicePanelSystemUIManager() {
               tmp14 = !tmp11;
             }
             closure_2_7(tmp14);
+            const obj = focused(mode[9]);
           });
         }
       },
@@ -137,10 +140,12 @@ export default noop.memo(function VoicePanelSystemUIManager() {
   fn.__workletHash = 2478376475717;
   fn.__initData = __initData;
   const fn2 = function u(safeAreaState, current) {
-    if (!obj.cheapWorkletShallowEqual(safeAreaState, current)) {
+    if (!obj.cheapWorkletShallowEqual(safeAreaState, tmp)) {
       ReanimatedRexport.runOnJS(handleStateChange)(safeAreaState);
       const tmp2Result = ReanimatedRexport;
     }
+    obj = cheapWorkletShallowEqual;
+    tmp = current;
   };
   let obj = {
     cheapWorkletShallowEqual: focused(mode[12]).cheapWorkletShallowEqual,

@@ -14,10 +14,9 @@ export const canCurrentUserManageMessageFilters = function canCurrentUserManageM
     const guild = GuildStore.getGuild(guild_id);
     let canResult = null != guild;
     if (canResult) {
-      canResult = obj.can(constants2.MANAGE_GUILD, guild);
+      canResult = PermissionStore.can(constants2.MANAGE_GUILD, guild);
     }
     tmp = canResult;
-    obj = PermissionStore;
   }
   return tmp;
 };
@@ -37,11 +36,11 @@ export const useCanCurrentUserManageAutomod = function useCanCurrentUserManageAu
     items,
     () => {
       if (GuildStore !== undefined) {
-        if (obj2 !== undefined) {
+        if (PermissionStore !== undefined) {
           const guild = GuildStore.getGuild(tmp);
           let canResult = null != guild;
           if (canResult) {
-            canResult = obj2.can(constants2.MANAGE_GUILD, guild);
+            canResult = PermissionStore.can(constants2.MANAGE_GUILD, guild);
           }
           return canResult;
         }

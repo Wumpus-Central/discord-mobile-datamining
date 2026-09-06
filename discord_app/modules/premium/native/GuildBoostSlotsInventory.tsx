@@ -66,7 +66,7 @@ function GuildBoostSlotsInventoryRow(arg0) {
   let tmp4Result = null;
   if (!isLast) {
     const obj2 = { style: tmp.subscriptionSlotBorder };
-    tmp4Result = closure_1_11(tmp3, obj2);
+    tmp4Result = closure_1_11(hasOwnProperty, obj2);
   }
   items2[1] = tmp4Result;
   obj.children = items2;
@@ -99,7 +99,7 @@ function GuildBoostSlot(guildBoostSlot) {
     let tmp6Result = null;
     if (null != guildBoostSlot.cooldownEndsAt) {
       const obj1 = { cooldownEndsAt: guildBoostSlot.cooldownEndsAt };
-      tmp6Result = tmp6(GuildBoostSlotCooldown, obj1);
+      tmp6Result = closure_11(GuildBoostSlotCooldown, obj1);
     }
     obj.subtitle = tmp6Result;
     tmp6Result = null;
@@ -117,8 +117,8 @@ function GuildBoostSlot(guildBoostSlot) {
       const obj3 = { variant: "text-md/medium", color: "control-brand-foreground", children: null };
       const intl2 = guildBoostSlot(1114).intl;
       obj3.children = intl2.string(guildBoostSlot(1114).t.jqqLb6);
-      obj2.children = tmp6(guildBoostSlot(4556).Text, obj3);
-      tmp6Result = tmp6(guildBoostSlot(5123).PressableOpacity, obj2);
+      obj2.children = closure_11(guildBoostSlot(4556).Text, obj3);
+      tmp6Result = closure_11(guildBoostSlot(5123).PressableOpacity, obj2);
     }
     obj.action = tmp6Result;
     obj.isLast = tmp;
@@ -182,7 +182,7 @@ function UnusedGuildBoostSlots(unusedSlots) {
       let tmpResult = null;
       if (null != cooldownEndsAt.cooldownEndsAt) {
         obj = { cooldownEndsAt: cooldownEndsAt.cooldownEndsAt };
-        tmpResult = tmp(GuildBoostSlotCooldown, obj);
+        tmpResult = closure_2_11(GuildBoostSlotCooldown, obj);
       }
       obj.subtitle = tmpResult;
       obj.isLast = index === found.length - 1;
@@ -268,7 +268,7 @@ function BoostedGuild(arg0) {
   let tmp11Result = null;
   if (null != guildBannerSource) {
     const obj3 = { style: tmp.subscriptionImageOverlay };
-    tmp11Result = tmp11(tmp10, obj3);
+    tmp11Result = closure_11(closure_5, obj3);
   }
   items3[1] = tmp11Result;
   items3[2] = closure_11(guildBoostSlots(13507), { guild: stateFromStores, theme: stateFromStores1 });
@@ -425,11 +425,11 @@ export default function GuildBoostSlotsInventory() {
           ),
         ];
         obj1.children = items3;
-        tmp10Result = tmp10(closure_13, obj1);
+        tmp10Result = closure_12(closure_13, obj1);
       }
       items2[1] = tmp10Result;
       obj.children = items2;
-      tmp10Result = tmp10(closure_5, obj);
+      tmp10Result = closure_12(closure_5, obj);
     }
   } else {
     tmp10Result = null;

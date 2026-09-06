@@ -67,7 +67,6 @@ export const ForwardMessageFooter = function ForwardMessageFooter(message) {
   }
   obj = { preview: null, sendButton: null, chatInput: null, warningText: null, avoidKeyboard: null };
   const obj5 = message(trackForwardEditContextMessageOnce[5]);
-  const tmp13 = onSend;
   obj.preview = jsx(message(trackForwardEditContextMessageOnce[11]).ForwardPreview, {
     message,
     channel: selectedDestinationChannel,
@@ -88,7 +87,7 @@ export const ForwardMessageFooter = function ForwardMessageFooter(message) {
     onPress: null,
     loading: null,
   });
-  obj.chatInput = jsx(tmp13(trackForwardEditContextMessageOnce[13]), {
+  obj.chatInput = jsx(onSend(trackForwardEditContextMessageOnce[13]), {
     inputRef: textInputRef,
     text,
     onChange: callback,

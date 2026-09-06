@@ -84,7 +84,6 @@ export default function useOnboardingMonetizationEnableFlow(features) {
   tmp9Result = tmp9(2024);
   obj.faqUrl = tmp9Result.getArticleURL(constants2.CREATOR_FAQ);
   const tmp16 = refresh(17713)(eligibility);
-  const tmp26 = constants2;
   if (isApplicationRejected) {
     if (tmpResult.useIsMonetizationReapplicationDisabled(id2).isMonetizationReapplicationDisabled) {
       if (true === hasItem) {
@@ -105,7 +104,10 @@ export default function useOnboardingMonetizationEnableFlow(features) {
   let formatResult2;
   if (tmp28) {
     const intl2 = tmp(1114).intl;
-    const obj2 = { requestCooldownDuration, creatorRevenuePolicyUrl: tmp9(2024).getArticleURL(tmp26.CREATOR_POLICY) };
+    const obj2 = {
+      requestCooldownDuration,
+      creatorRevenuePolicyUrl: tmp9(2024).getArticleURL(constants2.CREATOR_POLICY),
+    };
     formatResult2 = intl2.format(tmp(1114).t.TvX207, obj2);
     const tmp9Result1 = tmp9(2024);
   }

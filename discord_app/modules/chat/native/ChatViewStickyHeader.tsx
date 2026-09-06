@@ -6,6 +6,8 @@ import LikelyAtoWarningBannerDefault from "../../ato_alerts/native/components/Li
 import StrangerDangerWarningBannerDefault from "../../self_mod/stranger_danger/native/components/StrangerDangerWarningBanner.tsx";
 import InappropriateConversationWarningBannerDefault from "../../self_mod/inappropriate_conversation/native/components/InappropriateConversationWarningBanner.tsx";
 import useUnreadSettingNoticeDefault from "../../notifications/settings_unread_notice/utils/useUnreadSettingNotice.tsx";
+import ForumPostActionBarDefault from "../../forums/native/ForumPostActionBar.tsx";
+import UnreadSettingNoticeDefault from "../../notifications/settings_unread_notice/native/UnreadSettingNotice.tsx";
 import ChatBannerDefault from "../../messages/native/ChatBanner.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -43,12 +45,12 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/chat/native/ChatViewStickyHeader.tsx");
 
 export default noop.memo(
-  noop.forwardRef((handleScrollToNewMessages, ref) => {
+  noop.forwardRef((handleScrollToNewMessages, arg1) => {
     const channel = handleScrollToNewMessages.channel;
     const tmp = _slicedToArray(noop.useState(false), 2);
     closure_1 = tmp[1];
     ({ showUnreadsNotice, clearUnreadsNotice } = useUnreadSettingNoticeDefault(channel));
-    const imperativeHandle = noop.useImperativeHandle(ref, () => ({
+    const imperativeHandle = noop.useImperativeHandle(arg1, () => ({
       onChatViewScrolled(isFirstMessageVisible) {
         if (forumPost.isForumPost()) {
           closure_1_1(!isFirstMessageVisible.isFirstMessageVisible);
@@ -60,7 +62,7 @@ export default noop.memo(
       tmp8 = null;
       if (tmp[0]) {
         let obj = { channel };
-        tmp8 = timestampProducer(tmp2(11413), obj);
+        tmp8 = timestampProducer(ForumPostActionBarDefault, obj);
       }
     }
     const items = [tmp8, , ,];
@@ -73,7 +75,7 @@ export default noop.memo(
     let tmp13 = null;
     if (showUnreadsNotice) {
       obj = { channel, clearUnreadsNotice };
-      tmp13 = timestampProducer(tmp2(11417), obj);
+      tmp13 = timestampProducer(UnreadSettingNoticeDefault, obj);
     }
     const obj1 = { children: null };
     items[2] = tmp13;

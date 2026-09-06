@@ -77,7 +77,7 @@ export const getGuildIconURL = function getGuildIconURL(id, size) {
   const obj = { id: id.id, size, icon: id.icon, canAnimate: flag, lossless: flag2 };
   return obj.getGuildIconURL(obj);
 };
-export const getGuildIconSource = function getGuildIconSource(arg0, size, flag) {
+export const getGuildIconSource = function getGuildIconSource(arg0, size) {
   closure_0 = arg0;
   importDefault = size;
   if (flag === undefined) {

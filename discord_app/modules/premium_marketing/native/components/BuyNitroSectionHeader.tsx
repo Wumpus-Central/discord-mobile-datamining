@@ -21,14 +21,13 @@ export default function BuyNitroSectionHeader(arg0) {
     if (-1 !== index) {
       obj = { children: null };
       const items = [title.slice(0, index), ,];
-      obj = { variant: "text-sm/semibold", color: "text-link", accessibilityRole: "link", onPress, children: tmp5 };
-      items[1] = tmp(Text_Text.Text, obj);
+      obj = { variant: "text-sm/semibold", color: "text-link", accessibilityRole: "link", onPress, children: Nitro };
+      items[1] = React2(Text_Text.Text, obj);
       items[2] = title.slice(index + 5);
       obj.children = items;
       tmp7 = React4(React3, obj);
     }
     tmp4 = tmp7;
-    tmp5 = Nitro;
   }
   obj.children = tmp4;
   return React2(Text_Text.Text, obj);

@@ -33,10 +33,8 @@ prototype["handleVoiceStateUpdates"] = function handleVoiceStateUpdates(arg0) {
   const iter = arg0.voiceStates[Symbol.iterator]();
   while (iter !== undefined) {
     ({ userId, guildId, channelId, sessionId, oldChannelId } = nextResult);
-    let obj = AuthenticationStore;
-    let tmp2 = userId;
     if (userId === AuthenticationStore.getId()) {
-      if (sessionId === obj.getSessionId()) {
+      if (sessionId === AuthenticationStore.getSessionId()) {
         if (channelId !== channelId) {
           let isExperimentEnabledResult = null != channelId;
           if (isExperimentEnabledResult) {
@@ -68,11 +66,12 @@ prototype["handleVoiceStateUpdates"] = function handleVoiceStateUpdates(arg0) {
       }
       if (tmp4) {
         let obj2 = GuildRoomActionCreators;
-        let result = obj2.guildRoomLocalDisconnect(tmp2, oldChannelId);
+        let result = obj2.guildRoomLocalDisconnect(userId, oldChannelId);
       }
     }
     continue;
   }
+  nextResult = iter.next();
 };
 prototype["handleConnectionResumed"] = function handleConnectionResumed() {
   let isExperimentEnabledResult = null != channelId;

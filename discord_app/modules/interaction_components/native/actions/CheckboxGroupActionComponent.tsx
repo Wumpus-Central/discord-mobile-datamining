@@ -30,7 +30,7 @@ export default noop.memo((type) => {
   closure_5 = obj.useMemo(() => {
     type = undefined;
     if (state != null) {
-      type = tmp.type;
+      type = state.type;
     }
     return type === type ? state.values : [];
   }, items1);
@@ -38,19 +38,20 @@ export default noop.memo((type) => {
     hasIcons: false,
     children: options.map((label) => {
       const hasItem = closure_5.includes(label.value);
-      const obj = {
+      let obj = {
         label: label.label,
         subLabel: label.description,
         checked: hasItem,
         onPress: (arg0) => {
           if (arg0) {
             const items = [];
-            items[HermesBuiltin.arraySpread(arr, 0)] = value;
+            items[HermesBuiltin.arraySpread(closure_5, 0)] = value;
             let found = items;
           } else {
-            found = arr.filter((item) => item !== closure_1_0);
+            found = closure_5.filter((item) => item !== closure_1_0);
           }
           executeStateUpdate({ type, values: found });
+          const obj = { type, values: found };
         },
         disabled: null,
       };

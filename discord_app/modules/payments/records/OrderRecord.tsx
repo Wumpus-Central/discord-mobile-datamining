@@ -44,7 +44,7 @@ BillingFacetRecord["createFromOrder"] = function createFromOrder(billing_facet) 
       const tmp11 = new BillingFacetRecord(
         tmp,
         billing_facet,
-        tmp3,
+        BillingFacetRecord,
         new.target,
         payment_gateway,
         payment_source_id,

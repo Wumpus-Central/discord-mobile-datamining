@@ -77,7 +77,7 @@ export default function useRequiredLinkedLobbyApplicationAuthorization(require_a
   }, items5);
   const items6 = [stateFromStores, authorizationsFetchState, stateFromStores1];
   stateFromStores1(() => {
-    let tmp2 = null != stateFromStores && null != tmp.parentId;
+    let tmp2 = null != stateFromStores && null != stateFromStores.parentId;
     if (tmp2) {
       tmp2 = null == stateFromStores1;
     }
@@ -85,7 +85,7 @@ export default function useRequiredLinkedLobbyApplicationAuthorization(require_a
       tmp2 = authorizationsFetchState === FetchState.FETCHED;
     }
     if (tmp2) {
-      const items = [tmp.parentId];
+      const items = [stateFromStores.parentId];
       const applications = ApplicationActionCreatorsDefault.fetchApplications(items, false);
     }
   }, items6);

@@ -57,7 +57,7 @@ export default function EmbeddedActivityBackgroundImageWithOverlay(arg0) {
         items[1] = obj3;
         obj2.style = items;
         obj.children = <hasOwnProperty style={null} />;
-        tmp7Result = tmp7(React4, obj);
+        tmp7Result = <React4 uri={url} />;
       }
     }
   }

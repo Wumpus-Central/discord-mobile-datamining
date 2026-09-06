@@ -3,6 +3,7 @@ import Constants from "../../../Constants.tsx";
 import useRoleSubscriptionsVisibleInGuild from "../../guild_role_subscriptions/useRoleSubscriptionsVisibleInGuild.tsx";
 import CreatorMonetizationRestrictionsHooks from "../../creator_monetization_review/CreatorMonetizationRestrictionsHooks.tsx";
 import GuildProductsEligibility from "../../guild_products/GuildProductsEligibility.tsx";
+import useGuildShopPreviewVisible from "useGuildShopPreviewVisible.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
 const GuildFeatures = Constants.GuildFeatures;
@@ -14,13 +15,13 @@ export const useGuildShopVisibleInGuild = function useGuildShopVisibleInGuild(id
     id = id.id;
   }
   const guildEligibleForGuildProducts = GuildProductsEligibility.useGuildEligibleForGuildProducts(id);
-  let tmpResult = tmp(7250);
+  let tmpResult = useRoleSubscriptionsVisibleInGuild;
   let id1;
   if (id != null) {
     id1 = id.id;
   }
   const roleSubscriptionsVisibleInGuild = tmpResult.useRoleSubscriptionsVisibleInGuild(id1);
-  tmpResult = tmp(7263);
+  tmpResult = useGuildShopPreviewVisible;
   const guildShopPreviewVisible = tmpResult.useGuildShopPreviewVisible(id);
   let id2;
   if (id != null) {
@@ -30,7 +31,7 @@ export const useGuildShopVisibleInGuild = function useGuildShopVisibleInGuild(id
     CreatorMonetizationRestrictionsHooks.useShouldHideGuildPurchaseEntryPoints(id2).shouldHideGuildPurchaseEntryPoints;
   return false;
 };
-export const isGuildShopVisibleInGuild = function isGuildShopVisibleInGuild(id, arg1) {
+export const isGuildShopVisibleInGuild = function isGuildShopVisibleInGuild(id, unsafeMutableRoles) {
   id = undefined;
   if (id != null) {
     id = id.id;
@@ -40,6 +41,6 @@ export const isGuildShopVisibleInGuild = function isGuildShopVisibleInGuild(id, 
   if (id != null) {
     id1 = id.id;
   }
-  const result1 = useRoleSubscriptionsVisibleInGuild.areRoleSubscriptionsVisibleInGuild(id1, arg1);
+  const result1 = useRoleSubscriptionsVisibleInGuild.areRoleSubscriptionsVisibleInGuild(id1, unsafeMutableRoles);
   return false;
 };

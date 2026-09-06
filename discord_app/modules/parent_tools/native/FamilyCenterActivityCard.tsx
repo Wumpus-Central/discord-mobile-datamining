@@ -12,6 +12,7 @@ import useIsInAdultAgeGroupDefault from "../hooks/useIsInAdultAgeGroup.tsx";
 import TouchableHitBoxDefault from "../../../design/void/TouchableHitBox/native/TouchableHitBox.tsx";
 import useAgeSpecificText from "../hooks/useAgeSpecificText.tsx";
 import _modDef12769 from "../../../../_runtime/metro/12769__.js";
+import _modDef14890 from "../../../../_runtime/metro/14890__.js";
 import FamilyCenterUsernameHeaderDefault from "FamilyCenterUsernameHeader.tsx";
 import useSelectedTeenUser from "../hooks/useSelectedTeenUser.tsx";
 import FamilyCenterActivityTotalDefault from "FamilyCenterActivityTotal.tsx";
@@ -41,8 +42,8 @@ function FamilyCenterActivityCardPrefaceText() {
   obj = { style: tmp.container, children: null };
   let tmp12 = null;
   if (!tmp4) {
-    obj1 = { color: tmp.icon.color, source: tmp2(14890), style: tmp.icon };
-    tmp12 = React6(tmp5(1178).Icon, obj1);
+    obj1 = { color: tmp.icon.color, source: _modDef14890, style: tmp.icon };
+    tmp12 = React6(native.Icon, obj1);
   }
   const items = [tmp12, ,];
   obj2 = { style: tmp.text, variant: "text-xs/semibold", color: "text-subtle", children: null };
@@ -62,8 +63,6 @@ function FamilyCenterActivityCardPrefaceText() {
     children: null,
   };
   const formatToPlainStringResult = intl.formatToPlainString(_modDef2396.tazvHQ, obj);
-  const tmp10 = React7;
-  const tmp11 = View;
   const tmp2Result = TouchableHitBoxDefault;
   obj3.children = React6(native.Icon, {
     color: tmp.icon.color,
@@ -73,7 +72,7 @@ function FamilyCenterActivityCardPrefaceText() {
   });
   items[2] = React6(tmp2Result, obj3);
   obj.children = items;
-  return tmp10(tmp11, obj);
+  return React7(View, obj);
 }
 function FamilyCenterHeaderSubText() {
   const tmp2 = useIsInAdultAgeGroupDefault();
@@ -275,10 +274,10 @@ const memoResult = noop.memo((arg0) => {
   const AvatarSizes = native.AvatarSizes;
   if (inSelector) {
     let NORMAL = AvatarSizes.SMALL;
-    let tmp4 = tmp2;
+    let tmp4 = require;
   } else {
     NORMAL = AvatarSizes.NORMAL;
-    tmp4 = tmp2;
+    tmp4 = require;
   }
   let obj = { style: tmp.header, children: null };
   obj = { style: tmp.avatarContainer, children: null };
@@ -432,7 +431,7 @@ export default function FamilyCenterActivityCard() {
           return closure_1_8(FamilyCenterActivitySectionDefault, { displayType }, "section-" + displayType);
         }),
       };
-      tmp11Result = tmp11(tmp10, obj4);
+      tmp11Result = closure_8(View, obj4);
     }
     items2[2] = tmp11Result;
     obj2.children = items2;

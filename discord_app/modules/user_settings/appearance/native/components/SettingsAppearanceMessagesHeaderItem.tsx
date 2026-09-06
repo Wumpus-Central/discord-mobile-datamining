@@ -34,7 +34,7 @@ export default function MessagesHeaderItem(animatedStyles) {
     children: null,
   });
   return (
-    <View animated style={arg0.animatedStyles.textNormal} variant="text-lg/bold">
+    <View animated style={animatedStyles.animatedStyles.textNormal} variant="text-lg/bold">
       {null}
     </View>
   );

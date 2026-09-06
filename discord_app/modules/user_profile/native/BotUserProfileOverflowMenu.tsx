@@ -108,6 +108,7 @@ export default function BotUserProfileOverflowMenu(application) {
         }
         RelationshipActionCreatorsDefault.unignoreUser(id, newestAnalyticsLocation, id);
         showUserProfile();
+        const obj = { action: "UNIGNORE", analyticsLocations };
       };
       items3.push(obj);
     }
@@ -149,6 +150,7 @@ export default function BotUserProfileOverflowMenu(application) {
         };
         obj.impressionName = discord_common_AnalyticsUtils.ImpressionNames.BLOCK_USER_CONFIRMATION;
         obj2.openLazy(asyncRequireImpl(11383, dependencyMap.paths), closure_2_12, obj, "stack");
+        const tmp4 = asyncRequireImpl(11383, dependencyMap.paths);
       };
       items3.push(obj1);
       if (result) {
@@ -160,8 +162,8 @@ export default function BotUserProfileOverflowMenu(application) {
           trackUserProfileAction(obj);
           let tmp3;
           if ("@me" !== guildId) {
-            if (null !== tmp2) {
-              tmp3 = tmp2;
+            if (null !== guildId) {
+              tmp3 = guildId;
             }
           }
           const obj2 = ActionSheetActionCreatorsDefault;
@@ -177,6 +179,7 @@ export default function BotUserProfileOverflowMenu(application) {
             obj,
             "replaceAll",
           );
+          const tmp5 = asyncRequireImpl(12991, dependencyMap.paths);
         };
         items3.push(obj2);
       } else {
@@ -241,7 +244,7 @@ export default function BotUserProfileOverflowMenu(application) {
     }
     const DeveloperMode = tmp(tmp2[34]).DeveloperMode;
     if (DeveloperMode.getSetting()) {
-      const obj6 = { label: null, action: null };
+      let obj6 = { label: null, action: null };
       const intl8 = tmp(tmp2[15]).intl;
       obj6.label = intl8.string(tmp(tmp2[15]).t["/AXYnE"]);
       obj6.action = function action() {
@@ -320,4 +323,5 @@ export default function BotUserProfileOverflowMenu(application) {
     };
     items3.push(obj11);
   }
+  const tmp9 = user(channel[12]);
 }

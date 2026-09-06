@@ -1,4 +1,5 @@
 // discord_app/modules/soundboard/useSoundGrid.tsx
+import GuildBoostingUtils from "../../utils/GuildBoostingUtils.tsx";
 import SoundboardTypes from "SoundboardTypes.tsx";
 import useManageResourcePermissions from "../permissions/useManageResourcePermissions.tsx";
 import useSoundOrganizer from "useSoundOrganizer.tsx";
@@ -312,20 +313,20 @@ export default function useSoundGrid(guild_id) {
       }
       if (undefined !== stateFromStores1) {
         let tmp28 = flag;
-        let value1 = obj2.get(tmp23.id);
+        let value1 = obj2.get(stateFromStores1.id);
         if (value1 == null) {
           value1 = [];
         }
         let tmp57Result = value1;
         if (null != soundOrganizer) {
-          tmp57Result = tmp57(value1);
+          tmp57Result = soundOrganizer(value1);
         }
         const mapped = tmp57Result.map((sound, index) => ({
           type: categories(length[10]).SoundboardSoundItemType.SOUND,
           sound,
           index,
         }));
-        const tmp24 = value1.length < tmp13(4454).getMaxSoundboardSlots(tmp23) && stateFromStores2;
+        const tmp24 = value1.length < GuildBoostingUtils.getMaxSoundboardSlots(stateFromStores1) && stateFromStores2;
         let tmp26 = !tmp24;
         if (!tmp24) {
           tmp26 = !tmp25;
@@ -334,7 +335,7 @@ export default function useSoundGrid(guild_id) {
           tmp26 = tmp28;
         }
         if (!tmp26) {
-          const obj4 = { type: tmp13(5020).SoundboardSoundItemType.ADD_SOUND, guild: tmp23 };
+          const obj4 = { type: SoundboardTypes.SoundboardSoundItemType.ADD_SOUND, guild: stateFromStores1 };
           mapped.push(obj4);
         }
         if (tmp28) {
@@ -342,23 +343,27 @@ export default function useSoundGrid(guild_id) {
         }
         if (!tmp28) {
           const obj5 = { categoryInfo: null, key: null, items: null };
-          const obj6 = { type: tmp13(5020).SoundboardSoundGridSectionType.GUILD, guild: tmp23, isNitroLocked: false };
+          const obj6 = {
+            type: SoundboardTypes.SoundboardSoundGridSectionType.GUILD,
+            guild: stateFromStores1,
+            isNitroLocked: false,
+          };
           obj5.categoryInfo = obj6;
-          obj5.key = tmp23.id;
+          obj5.key = stateFromStores1.id;
           obj5.items = mapped;
           items.push(obj5);
         }
-        const tmp13Result = tmp13(4454);
+        const tmp13Result = GuildBoostingUtils;
       }
       if (!c11) {
         value2 = obj2.get(closure_2_11);
         if (value2 == null) {
           value2 = closure_2_12;
         }
-        const obj7 = { key: tmp13(5020).SoundboardSoundGridSectionType.DEFAULTS, categoryInfo: null, items: null };
-        const obj8 = { type: tmp13(5020).SoundboardSoundGridSectionType.DEFAULTS };
+        const obj7 = { key: SoundboardTypes.SoundboardSoundGridSectionType.DEFAULTS, categoryInfo: null, items: null };
+        const obj8 = { type: SoundboardTypes.SoundboardSoundGridSectionType.DEFAULTS };
         obj7.categoryInfo = obj8;
-        const sortSoundsOldestToNewestCreationDate = tmp13(17064).sortSoundsOldestToNewestCreationDate;
+        const sortSoundsOldestToNewestCreationDate = useSoundOrganizer.sortSoundsOldestToNewestCreationDate;
         let result1 = value2;
         if (null != sortSoundsOldestToNewestCreationDate) {
           result1 = sortSoundsOldestToNewestCreationDate(value2);
@@ -380,7 +385,7 @@ export default function useSoundGrid(guild_id) {
       };
       let id;
       if (stateFromStores1 != null) {
-        id = tmp23.id;
+        id = stateFromStores1.id;
       }
       obj9.currentGuildId = id;
       obj9.allSounds = obj2;
@@ -394,16 +399,18 @@ export default function useSoundGrid(guild_id) {
         while (iter !== undefined) {
           let tmp2 = nextResult;
           if (nextResult.id !== currentGuildId) {
-            let tmp9 = stateFromStores3;
             let items = allSounds.get(tmp2.id);
             if (items == null) {
               items = [];
             }
-            let tmp9Result = tmp9(items, sortSoundsFn);
+            let tmp9Result = stateFromStores3(items, sortSoundsFn);
             if (tmp9Result.length > 0) {
               let obj = { categoryInfo: null, key: null, items: null };
-              obj = { type: null, guild: null, isNitroLocked: null };
-              obj.type = closure_0(flag2[10]).SoundboardSoundGridSectionType.GUILD;
+              obj = {
+                type: closure_0(flag2[10]).SoundboardSoundGridSectionType.GUILD,
+                guild: null,
+                isNitroLocked: null,
+              };
               obj.guild = tmp2;
               obj.isNitroLocked = !hasNitro;
               obj.categoryInfo = obj;
@@ -415,15 +422,15 @@ export default function useSoundGrid(guild_id) {
           continue;
         }
       })(obj9);
-      if (tmp30) {
+      if (c11) {
         let value3 = obj2.get(closure_2_11);
         if (value3 == null) {
           value3 = closure_2_12;
         }
-        const obj10 = { key: tmp13(5020).SoundboardSoundGridSectionType.DEFAULTS, categoryInfo: null, items: null };
-        const obj11 = { type: tmp13(5020).SoundboardSoundGridSectionType.DEFAULTS };
+        const obj10 = { key: SoundboardTypes.SoundboardSoundGridSectionType.DEFAULTS, categoryInfo: null, items: null };
+        const obj11 = { type: SoundboardTypes.SoundboardSoundGridSectionType.DEFAULTS };
         obj10.categoryInfo = obj11;
-        const sortSoundsOldestToNewestCreationDate2 = tmp13(17064).sortSoundsOldestToNewestCreationDate;
+        const sortSoundsOldestToNewestCreationDate2 = useSoundOrganizer.sortSoundsOldestToNewestCreationDate;
         let result2 = value3;
         if (null != sortSoundsOldestToNewestCreationDate2) {
           result2 = sortSoundsOldestToNewestCreationDate2(value3);
@@ -451,7 +458,6 @@ export default function useSoundGrid(guild_id) {
       const obj13 = { favoriteSoundCount: size.size, unlockedCustomSoundCount, lockedCustomSoundCount };
       obj12.soundCounts = obj13;
       let arr4 = Array.from(obj2.values());
-      tmp30 = c11;
     }
     return obj12;
   }, items10);

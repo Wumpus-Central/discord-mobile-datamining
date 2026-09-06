@@ -78,8 +78,7 @@ export default noop.memo(function MessagesScreen(isFocused) {
     let obj = { numColumns: 1, numResults: items.length, placeholderCount };
     const adjustedPlaceholderCount = obj.getAdjustedPlaceholderCount(obj);
     for (let num = 0; num < adjustedPlaceholderCount; num = num + 1) {
-      obj = { type: null, key: null };
-      obj.type = constants.MESSAGE_PLACEHOLDER;
+      obj = { type: constants.MESSAGE_PLACEHOLDER, key: null };
       let _HermesInternal = HermesInternal;
       obj.key = "message-placeholder-" + num;
       let arr = items.push(obj);

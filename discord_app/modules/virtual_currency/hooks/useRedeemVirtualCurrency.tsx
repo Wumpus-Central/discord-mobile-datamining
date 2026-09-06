@@ -207,8 +207,8 @@ export const useRedeemVirtualCurrency = function useRedeemVirtualCurrency(order)
   signOrder(() => {
     if (null == error) {
       if (null != entitlements) {
-        if (arr.length > 0) {
-          const mapped = arr.map((sku) => {
+        if (entitlements.length > 0) {
+          const mapped = entitlements.map((sku) => {
             sku = sku.sku;
             let name;
             if (sku != null) {
@@ -223,11 +223,11 @@ export const useRedeemVirtualCurrency = function useRedeemVirtualCurrency(order)
           }
           const joined = mapped.join(", ");
           let str4 = "IDs";
-          if (1 === arr.length) {
+          if (1 === entitlements.length) {
             str4 = "ID";
           }
           let obj = { amountDescription: "1 orb", redeemedItemDescription: null };
-          const mapped1 = arr.map((id) => id.id);
+          const mapped1 = entitlements.map((id) => id.id);
           const _HermesInternal = HermesInternal;
           obj.redeemedItemDescription = "" + str2 + ": " + joined + ". Entitlement " + str4 + ": " + mapped1.join(", ");
           closure_0(intl2.format(util.t.JxNFav, obj));

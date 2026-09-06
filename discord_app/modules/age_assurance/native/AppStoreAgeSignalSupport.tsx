@@ -1,5 +1,6 @@
 // discord_app/modules/age_assurance/native/AppStoreAgeSignalSupport.tsx
 import MetaQuestUtils from "../../device/MetaQuestUtils.android.tsx";
+import DeviceUtils from "../../../utils/native/DeviceUtils.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
 let c2 = 26;
@@ -12,11 +13,11 @@ export const isAppStoreAgeSignalSupported = function isAppStoreAgeSignalSupporte
   if (obj.isMetaQuest()) {
     return false;
   } else {
-    let tmpResult = tmp(4539);
+    let tmpResult = DeviceUtils;
     if (tmpResult.getIsRunningOnSimulator()) {
       return false;
     } else {
-      tmpResult = tmp(4539);
+      tmpResult = DeviceUtils;
       const parts = tmpResult.getSystemVersion().split(".");
       const _parseInt = parseInt;
       const parsed = parseInt(parts[0], 10);

@@ -1,8 +1,10 @@
 // discord_app/design/components/TextInput/native/GhostInput.native.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import useFieldLabelA11yNative from "../../../../../discord_common/js/packages/design/hooks/useFieldLabelA11yNative.tsx";
 import Text_Text from "../../Text/native/Text.tsx";
 import Input from "../../Input/native/Input.native.tsx";
 import getRequiredFieldA11yName from "../../Input/native/getRequiredFieldA11yName.native.tsx";
+import useTextField from "../../TextField/native/useTextField.native.tsx";
 import InputFieldContainer from "../../Input/native/InputFieldContainer.native.tsx";
 import NativeTextInput from "../../Input/native/NativeTextInput.native.tsx";
 import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
@@ -43,10 +45,10 @@ export const GhostInput = function GhostInput(size) {
   const tmp4 = closure_6(size.size, size.status);
   const isCentered = size.isCentered;
   const autoFocus = size.autoFocus;
-  let tmpResult = tmp(4278);
+  let tmpResult = useFieldLabelA11yNative;
   const fieldLabelA11yNative = tmpResult.useFieldLabelA11yNative(size);
   const accessibilityLabel = fieldLabelA11yNative.accessibilityLabel;
-  tmpResult = tmp(6614);
+  tmpResult = useTextField;
   const textField = tmpResult.useTextField(size, undefined);
   obj = {};
   const merged = Object.assign(size);

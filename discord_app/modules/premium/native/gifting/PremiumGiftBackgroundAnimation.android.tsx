@@ -76,8 +76,8 @@ export default function PremiumGiftBackgroundAnimation(giftStyle) {
       closure_11(false);
     } else {
       if (!tmp4) {
-        closure_9(tmp2(8082).AnimationState.ACTION);
-        closure_5(tmp2(8082).AnimationState.LOOP);
+        closure_9(PremiumGiftingUtils.AnimationState.ACTION);
+        closure_5(PremiumGiftingUtils.AnimationState.LOOP);
       }
       tmp4 = first === PremiumGiftingUtils.AnimationState.LOOP || arg0;
     }

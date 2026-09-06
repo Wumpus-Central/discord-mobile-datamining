@@ -1,5 +1,6 @@
 // discord_app/modules/collectibles/native/headless_components/HeadlessCollectiblesPurchaseFlow.tsx
 import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
+import BillingPlatformUtils from "../../../device/BillingPlatformUtils.tsx";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import openProductDetailsActionSheet from "../openProductDetailsActionSheet.tsx";
 import useProductPurchaseState from "../../hooks/useProductPurchaseState.tsx";
@@ -27,11 +28,11 @@ export default function HeadlessCollectiblesPurchaseFlow(arg0) {
   const isPurchased = obj.useProductPurchaseState(product).isPurchased;
   let obj1 = PlatformUtils;
   if (obj1.isIOS()) {
-    let GOOGLE = tmp5.APPLE_ADVANCED_COMMERCE;
-    let tmp6 = tmp5;
+    let GOOGLE = PaymentGateways.APPLE_ADVANCED_COMMERCE;
+    let tmp6 = PaymentGateways;
   } else {
-    GOOGLE = tmp5.GOOGLE;
-    tmp6 = tmp5;
+    GOOGLE = PaymentGateways.GOOGLE;
+    tmp6 = PaymentGateways;
   }
   let tmp7 = !isPurchased;
   if (!isPurchased) {
@@ -41,8 +42,8 @@ export default function HeadlessCollectiblesPurchaseFlow(arg0) {
     if (!tmp8) {
       let result = GOOGLE === tmp6.GOOGLE;
       if (result) {
-        result = tmp(4231).isGooglePlayBillingSupported();
-        const tmpResult = tmp(4231);
+        result = BillingPlatformUtils.isGooglePlayBillingSupported();
+        const tmpResult = BillingPlatformUtils;
       }
       tmp8 = result;
     }

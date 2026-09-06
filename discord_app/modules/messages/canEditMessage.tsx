@@ -1,16 +1,17 @@
 // discord_app/modules/messages/canEditMessage.tsx
 import MessageRecordUtils from "MessageRecordUtils.tsx";
 import isSystemMessageDefault from "isSystemMessage.tsx";
+import isForwardMessageDefault from "../forwarding/isForwardMessage.tsx";
 import Constants from "../../Constants.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
 ({ MessageFlags: c3, MessageStates: closure_4, MessageTypes: hasOwnProperty } = Constants);
 let result = size.fileFinishedImporting("modules/messages/canEditMessage.tsx");
 
-export default function canEditMessage(author, arg1) {
-  let tmp = null != arg1;
+export default function canEditMessage(author, id) {
+  let tmp = null != id;
   if (tmp) {
-    let tmp3 = author.author.id === arg1;
+    let tmp3 = author.author.id === id;
     if (tmp3) {
       let tmp5 = author.state === constants2.SENT;
       if (tmp5) {
@@ -27,7 +28,7 @@ export default function canEditMessage(author, arg1) {
                 const isPollResult = author.isPoll();
                 let tmp17 = !isPollResult;
                 if (!isPollResult) {
-                  const tmp18 = tmp6(7302)(author);
+                  const tmp18 = isForwardMessageDefault(author);
                   let tmp19 = !tmp18;
                   if (!tmp18) {
                     tmp19 = author.type !== constants3.MEDIA_MENTION_MESSAGE;
@@ -43,7 +44,6 @@ export default function canEditMessage(author, arg1) {
           tmp9 = result;
         }
         tmp5 = tmp9;
-        tmp6 = importDefault;
       }
       tmp3 = tmp5;
     }

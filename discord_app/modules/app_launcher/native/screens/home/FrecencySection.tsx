@@ -303,10 +303,10 @@ export default function FrecencySection(loading) {
       let APPS = COMMANDS.COMMANDS;
       let tmp12 = COMMANDS;
     }
-    const tmp4Result = loading(tmp10(APPS), 2);
+    const tmp4Result = tmp4(tmp10(APPS), 2);
     first1 = tmp4Result[0];
     closure_12 = tmp4Result[1];
-    const tmp16 = obj.useAppLauncherContext().entrypoint === tmp2(tmp3[15]).AppLauncherEntrypoint.VOICE;
+    const tmp16 = obj.useAppLauncherContext().entrypoint === require("AppLauncherTypes").AppLauncherEntrypoint.VOICE;
     closure_13 = tmp16;
     let items1 = [commands.length, apps.length, loading, first1];
     const effect = obj1.useEffect(() => {
@@ -327,20 +327,18 @@ export default function FrecencySection(loading) {
           length = commands.length;
         }
         trackWithMetadataResult = { num: length, section_name: null, location: null };
-        if (tmp7 === tmp8.APPS) {
-          let RECENT_COMMANDS = tmp5(9409).AppLauncherSectionName.RECENT_APPS;
+        if (first1 === obj8.APPS) {
+          let RECENT_COMMANDS = AppLauncherTypes.AppLauncherSectionName.RECENT_APPS;
         } else {
-          RECENT_COMMANDS = tmp5(9409).AppLauncherSectionName.RECENT_COMMANDS;
+          RECENT_COMMANDS = AppLauncherTypes.AppLauncherSectionName.RECENT_COMMANDS;
         }
         trackWithMetadataResult.section_name = RECENT_COMMANDS;
-        HOME = tmp5(9409).AppLauncherLocations.HOME;
+        HOME = AppLauncherTypes.AppLauncherLocations.HOME;
         trackWithMetadataResult.location = HOME;
         trackWithMetadataResult = trackWithMetadataResult.trackWithMetadata(
           AnalyticEvents.APP_LAUNCHER_FRECENTS_SEEN,
           trackWithMetadataResult,
         );
-        tmp7 = first1;
-        tmp8 = obj8;
       }
     }, items1);
     const items2 = [apps];
@@ -385,22 +383,22 @@ export default function FrecencySection(loading) {
         return obj;
       }
     }
-    obj = { withTiming: tmp2(tmp3[18]).withTiming, isRecentsMenuOpen };
+    obj = { withTiming: require("timing").withTiming, isRecentsMenuOpen };
     G.__closure = obj;
     G.__workletHash = 4528534448308;
     G.__initData = __initData;
-    style = tmp2(tmp3[17]).useAnimatedStyle(G);
+    style = require("ReanimatedRexport").useAnimatedStyle(G);
     if (0 === commands.length) {
       if (0 === apps.length) {
         return null;
       }
     }
     obj = { label: null, IconComponent: null, action: null };
-    let intl = tmp2(tmp3[19]).intl;
-    obj.label = intl.string(tmp2(tmp3[19]).t.XRBNsN);
+    let intl = require("util").intl;
+    obj.label = intl.string(require("util").t.XRBNsN);
     let prop;
     if (first1 === tmp12.COMMANDS) {
-      prop = tmp2(tmp3[20]).CheckmarkSmallBoldIcon;
+      prop = require("CheckmarkSmallBoldIcon").CheckmarkSmallBoldIcon;
     }
     obj.IconComponent = prop;
     obj.action = function action() {
@@ -412,11 +410,11 @@ export default function FrecencySection(loading) {
     };
     const items4 = [obj];
     obj1 = { label: null, IconComponent: null, action: null };
-    const intl2 = tmp2(tmp3[19]).intl;
-    obj1.label = intl2.string(tmp2(tmp3[19]).t.TCAk0p);
+    const intl2 = require("util").intl;
+    obj1.label = intl2.string(require("util").t.TCAk0p);
     let prop1;
     if (first1 === tmp12.APPS) {
-      prop1 = tmp2(tmp3[20]).CheckmarkSmallBoldIcon;
+      prop1 = require("CheckmarkSmallBoldIcon").CheckmarkSmallBoldIcon;
     }
     obj1.IconComponent = prop1;
     obj1.action = function action() {
@@ -439,14 +437,14 @@ export default function FrecencySection(loading) {
       if (null == found) {
         return null;
       } else {
-        let tmp2Result = tmp2(tmp3[9]);
+        let tmp2Result = context(commands[9]);
         let FAKE_BUILT_IN_APP = found.application;
         if (FAKE_BUILT_IN_APP == null) {
-          FAKE_BUILT_IN_APP = tmp2(tmp3[9]).FAKE_BUILT_IN_APP;
+          FAKE_BUILT_IN_APP = context(commands[9]).FAKE_BUILT_IN_APP;
         }
         const sectionName = tmp2Result.getSectionName(FAKE_BUILT_IN_APP);
-        if (type.type === tmp2(tmp3[23]).ApplicationCommandType.PRIMARY_ENTRY_POINT) {
-          tmp2Result = tmp2(tmp3[9]);
+        if (type.type === context(commands[23]).ApplicationCommandType.PRIMARY_ENTRY_POINT) {
+          tmp2Result = context(commands[9]);
           let displayName = tmp2Result.formatPrimaryEntryPointCommandName(type.displayName);
         } else {
           displayName = type.displayName;
@@ -472,16 +470,16 @@ export default function FrecencySection(loading) {
         const items = [tmp10];
         const obj1 = { children: null };
         const obj2 = { variant: "text-sm/semibold", color: "mobile-text-heading-primary", children: displayName };
-        const items1 = [first1(tmp2(tmp3[26]).Text, obj2)];
+        const items1 = [first1(context(commands[26]).Text, obj2)];
         const obj3 = { variant: "text-xs/normal", color: "text-subtle", children: sectionName };
-        items1[1] = first1(tmp2(tmp3[26]).Text, obj3);
+        items1[1] = first1(context(commands[26]).Text, obj3);
         obj1.children = items1;
         items[1] = closure_12(onAppSelected, obj1);
         obj.children = items;
-        return closure_12(tmp2(tmp3[24]).PressableScale, obj, type.id);
+        return closure_12(context(commands[24]).PressableScale, obj, type.id);
       }
     });
-    let found = mapped.filter(tmp2(tmp3[10]).isNotNullish);
+    let found = mapped.filter(require("GlobalUtils").isNotNullish);
     const mapped1 = memo.map((section) => {
       let applicationId = section;
       let tmp = null;
@@ -542,8 +540,8 @@ export default function FrecencySection(loading) {
             if (apps.length > 0) {
               obj = { style, children: null };
               const obj1 = { color: "interactive-text-default", style: selection.contextMenuIcon };
-              obj.children = tmp5(ChevronSmallDownIcon.ChevronSmallDownIcon, obj1);
-              tmp5Result = tmp5(ReanimatedRexportDefault.View, obj);
+              obj.children = closure_2_11(ChevronSmallDownIcon.ChevronSmallDownIcon, obj1);
+              tmp5Result = closure_2_11(ReanimatedRexportDefault.View, obj);
             }
           }
           items[1] = tmp5Result;
@@ -551,7 +549,7 @@ export default function FrecencySection(loading) {
           return closure_2_12(hasOwnProperty, obj);
         },
       };
-      const items5 = [first1(tmp2(tmp3[27]).ContextMenu, obj4)];
+      const items5 = [first1(require("ContextMenu").ContextMenu, obj4)];
       let tmp31 = COMMANDS === tmp12.APPS;
       if (tmp31) {
         tmp31 = tmp9;
@@ -576,10 +574,10 @@ export default function FrecencySection(loading) {
         return launchingActivity(COMMANDS);
       };
       const obj6 = { variant: "text-sm/medium", color: "text-brand", children: null };
-      const intl3 = tmp2(tmp3[19]).intl;
-      obj6.children = intl3.string(tmp2(tmp3[19]).t["/qG8v7"]);
-      obj5.children = first1(tmp2(tmp3[26]).Text, obj6);
-      items5[1] = first1(tmp2(tmp3[29]).PressableOpacity, obj5);
+      const intl3 = require("util").intl;
+      obj6.children = intl3.string(require("util").t["/qG8v7"]);
+      obj5.children = first1(require("Text/Text").Text, obj6);
+      items5[1] = first1(require("Pressables").PressableOpacity, obj5);
       obj3.children = items5;
       const items6 = [closure_12(onAppSelected, obj3)];
       const obj7 = {
@@ -606,9 +604,10 @@ export default function FrecencySection(loading) {
         COMMANDS = tmp12.COMMANDS;
       }
     }
-    let tmp2Result = tmp2(tmp3[17]);
+    let tmp2Result = require("ReanimatedRexport");
   }
   tmp12 = COMMANDS;
   APPS = COMMANDS.APPS;
+  tmp4 = loading;
 }
 export const SectionItemType = obj8;

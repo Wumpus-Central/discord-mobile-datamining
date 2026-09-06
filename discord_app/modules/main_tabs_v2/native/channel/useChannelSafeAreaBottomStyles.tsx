@@ -1,5 +1,6 @@
 // discord_app/modules/main_tabs_v2/native/channel/useChannelSafeAreaBottomStyles.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
 import KeyboardTypes from "../../../keyboard/native/KeyboardTypes.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import GatewayConnectionStore from "../../../gateway/GatewayConnectionStore.tsx";
@@ -60,18 +61,18 @@ export default function useChannelSafeAreaBottomStyles(arg0) {
       const guildId = channel.getGuildId();
     }
     if (gradientBottom !== StaticChannelRoute.GUILD_HOME) {
-      if (tmp !== StaticChannelRoute.ROLE_SUBSCRIPTIONS) {
+      if (gradientBottom !== StaticChannelRoute.ROLE_SUBSCRIPTIONS) {
         if (!stateFromStores) {
           if (GatewayConnectionStore.isConnected()) {
             if (MediaEngineStore.getMode() !== InputModes.PUSH_TO_TALK) {
               if (noop === KeyboardTypes.KeyboardTypes.EXPRESSION) {
-                let tmp10Result = tmp10(1115);
+                let tmp10Result = PlatformUtils;
                 if (tmp10Result.isAndroid()) {
                   let VOICE = constants.EXPRESSION_PICKER;
                 }
               }
               if (noop === KeyboardTypes.KeyboardTypes.MEDIA) {
-                tmp10Result = tmp10(1115);
+                tmp10Result = PlatformUtils;
                 if (tmp10Result.isAndroid()) {
                   VOICE = constants.MEDIA;
                 }
@@ -80,7 +81,7 @@ export default function useChannelSafeAreaBottomStyles(arg0) {
                 if (tmp10Result1.isAndroid()) {
                   VOICE = constants.APPS;
                 }
-                tmp10Result1 = tmp10(1115);
+                tmp10Result1 = PlatformUtils;
               }
               let isDirectoryResult;
               if (channel != null) {
@@ -103,7 +104,7 @@ export default function useChannelSafeAreaBottomStyles(arg0) {
                     VOICE = constants.CHAT;
                   }
                 }
-                if (null != tmp) {
+                if (null != gradientBottom) {
                   let NONE2 = constants.CHAT;
                 } else {
                   NONE2 = constants.NONE;
@@ -111,7 +112,7 @@ export default function useChannelSafeAreaBottomStyles(arg0) {
               }
             }
             VOICE = constants.VOICE;
-          } else if (null == tmp) {
+          } else if (null == gradientBottom) {
             let NONE = constants.NONE;
           } else {
             NONE = constants.CHAT;
@@ -125,23 +126,23 @@ export default function useChannelSafeAreaBottomStyles(arg0) {
   const items1 = [tmp6, gradientBottom, stateFromStores];
   return noop.useMemo(() => {
     if (stateFromStores !== constants.NONE) {
-      if (tmp !== tmp2.DIRECTORY) {
-        if (tmp !== tmp2.EXPRESSION_PICKER) {
-          if (tmp !== tmp2.MEDIA) {
-            if (tmp !== tmp2.APPS) {
-              if (tmp === tmp2.CHAT) {
+      if (stateFromStores !== constants.DIRECTORY) {
+        if (stateFromStores !== constants.EXPRESSION_PICKER) {
+          if (stateFromStores !== constants.MEDIA) {
+            if (stateFromStores !== constants.APPS) {
+              if (stateFromStores === constants.CHAT) {
                 let obj = {};
                 const merged = Object.assign(closure_1.chat);
                 const merged1 = Object.assign(gradientBottom);
                 let prop = obj;
-              } else if (tmp === tmp2.VOICE) {
+              } else if (stateFromStores === constants.VOICE) {
                 obj = {};
                 const merged2 = Object.assign(closure_1.voice);
                 const merged3 = Object.assign(gradientBottom);
                 prop = obj;
               } else {
                 prop = {};
-                const merged4 = Object.assign(closure_1[tmp]);
+                const merged4 = Object.assign(closure_1[stateFromStores]);
                 const merged5 = Object.assign(gradientBottom);
               }
             }

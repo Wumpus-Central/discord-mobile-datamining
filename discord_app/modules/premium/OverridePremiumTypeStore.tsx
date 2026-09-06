@@ -64,9 +64,9 @@ prototype["initialize"] = function initialize(premiumTypeActual) {
     if (null != premiumTypeActual.createdAtOverride) {
       const _Date = Date;
       const date = new Date(premiumTypeActual.createdAtOverride);
-      tmp4.createdAtOverride = date;
+      closure_4.createdAtOverride = date;
     } else {
-      tmp4.createdAtOverride = UNSELECTED_CREATED_AT_DATE;
+      closure_4.createdAtOverride = UNSELECTED_CREATED_AT_DATE;
     }
   } else {
     closure_4.premiumTypeOverride = UNSELECTED_PREMIUM_TYPE_OVERRIDE;

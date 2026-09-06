@@ -23,7 +23,7 @@ export const CollectiblesAnalyticsProvider = function CollectiblesAnalyticsProvi
         return {};
       }, items)}
     >
-      {arg0.children}
+      {children.children}
     </context.Provider>
   );
 };

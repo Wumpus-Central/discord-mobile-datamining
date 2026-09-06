@@ -1,10 +1,10 @@
 // discord_app/modules/premium/native/gift_code_modal/GiftBoxAnimation.tsx
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
+import _mod4745 from "module_4745" /* 4745 */;
 import LottieAnimationViewDefault from "../../../../components_native/common/LottieAnimationView.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 
-const _mod4745 = tmp(4745);
 require = fn;
 const PremiumGiftStyles = fn(1373).PremiumGiftStyles;
 const jsx = fn(21).jsx;

@@ -6,15 +6,20 @@ import size from "../../../../_runtime/metro/00002__.js";
 const AnalyticEvents = Constants.AnalyticEvents;
 const result = size.fileFinishedImporting("modules/user_settings/voice/trackVoiceAndVideoSettingsUpdate.tsx");
 
-export default function trackVoiceAndVideoDebuggingSettingsUpdated(arg0, arg1, arg2, location_stack) {
+export default function trackVoiceAndVideoDebuggingSettingsUpdated(
+  active_input_profile,
+  enabled,
+  RTCDebugStore,
+  location_stack,
+) {
   let obj = AnalyticsUtilsDefault;
   let StringResult;
-  if (null != arg2) {
+  if (null != RTCDebugStore) {
     const _String = String;
-    StringResult = String(arg2);
+    StringResult = String(RTCDebugStore);
   }
   obj = { previous_setting_value: StringResult };
-  obj[arg0] = arg1;
+  obj[active_input_profile] = enabled;
   obj.location_stack = location_stack;
   return obj.track(AnalyticEvents.VOICE_AND_VIDEO_SETTINGS_UPDATED, obj);
 }

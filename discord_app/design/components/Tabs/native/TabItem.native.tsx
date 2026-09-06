@@ -57,15 +57,14 @@ function TabItemCount(arg0) {
     let active = inactive.inactive;
     value = setItemDimensions.get();
     if (value === index) {
-      active = tmp.pressed;
+      active = inactive.pressed;
     } else if (tmp2) {
-      active = tmp.inactive;
-    } else if (tmp5 === tmp4) {
-      active = tmp.active;
+      active = inactive.inactive;
+    } else if (tmp5 === index) {
+      active = inactive.active;
     }
     const obj = { color: null };
     tmp2 = setItemDimensions.get() >= 0;
-    tmp4 = index;
     obj.color = spring.withSpring(active, closure_7, "animate-always");
     return obj;
   };
@@ -156,24 +155,23 @@ export const TabItem = function TabItem(arg0) {
     tmp6 = closure_11();
   }
   closure_129_3 = tmp6;
-  let tmp3Result = tmp3(tmp4[3]);
+  let tmp3Result = index(tmp4[3]);
   const fn2 = function c() {
     let active = inactive.inactive;
     value = setItemDimensions.get();
     if (value === index) {
-      active = tmp.pressed;
+      active = inactive.pressed;
     } else if (tmp2) {
-      active = tmp.inactive;
-    } else if (tmp5 === tmp4) {
-      active = tmp.active;
+      active = inactive.inactive;
+    } else if (tmp5 === index) {
+      active = inactive.active;
     }
     const obj = { color: null };
     tmp2 = setItemDimensions.get() >= 0;
-    tmp4 = index;
     obj.color = spring.withSpring(active, closure_7, "animate-always");
     return obj;
   };
-  obj = { colors: tmp6, pressed, index, activeIndex, withSpring: tmp3(tmp4[6]).withSpring, TEXT_SPRING_CONFIG };
+  obj = { colors: tmp6, pressed, index, activeIndex, withSpring: index(tmp4[6]).withSpring, TEXT_SPRING_CONFIG };
   fn2.__closure = obj;
   fn2.__workletHash = 11643476765161;
   fn2.__initData = __initData;
@@ -190,12 +188,12 @@ export const TabItem = function TabItem(arg0) {
     ReanimatedRexport2.runOnUI(setItemDimensions)(index, nativeEvent.nativeEvent.layout);
   };
   obj.accessibilityRole = "tab";
-  tmp3Result = tmp3(tmp4[8]);
+  tmp3Result = index(tmp4[8]);
   let formatToPlainStringResult;
   if (tmp3Result.isAndroid()) {
-    const intl = tmp3(tmp4[9]).intl;
+    const intl = index(tmp4[9]).intl;
     const obj1 = { position: index + 1, tabCount: itemCount };
-    formatToPlainStringResult = intl.formatToPlainString(tmp3(tmp4[9]).t["4EsQA1"], obj1);
+    formatToPlainStringResult = intl.formatToPlainString(index(tmp4[9]).t["4EsQA1"], obj1);
   }
   obj.accessibilityHint = formatToPlainStringResult;
   obj.animatedProps = animatedProps;

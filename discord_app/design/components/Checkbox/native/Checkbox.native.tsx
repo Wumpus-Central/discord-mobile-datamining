@@ -1,4 +1,5 @@
 // discord_app/design/components/Checkbox/native/Checkbox.native.tsx
+import util from "../../../../intl/index.native.tsx";
 import useA11yRolesNative from "../../../../../discord_common/js/packages/design/hooks/useA11yRolesNative.tsx";
 import Text_Text from "../../Text/native/Text.tsx";
 import Stack_Stack from "../../Stack/native/Stack.native.tsx";
@@ -32,9 +33,9 @@ export const Checkbox = function Checkbox(onToggle) {
   let str = "";
   let str2 = "";
   if (required) {
-    const intl = tmp2(1114).intl;
+    const intl = util.intl;
     const _HermesInternal = HermesInternal;
-    str2 = " (" + intl.string(tmp2(1114).t.EkokLy) + ")";
+    str2 = " (" + intl.string(util.t.EkokLy) + ")";
   }
   const sum = label + str2;
   if (null != description) {
@@ -52,10 +53,10 @@ export const Checkbox = function Checkbox(onToggle) {
   const items1 = [label];
   if (required) {
     const obj2 = { variant: "text-md/bold", color: "text-feedback-critical", "aria-label": null, children: null };
-    const intl2 = tmp2(1114).intl;
-    obj2["aria-label"] = intl2.string(tmp2(1114).t.EkokLy);
+    const intl2 = util.intl;
+    obj2["aria-label"] = intl2.string(util.t.EkokLy);
     obj2.children = [" ", "*"];
-    required = tmp10(tmp2(4556).Text, obj2);
+    required = hasOwnProperty(Text_Text.Text, obj2);
   }
   items1[1] = required;
   obj1.children = hasOwnProperty(Text_Text.Text, { variant: "text-md/medium", children: items1 });
@@ -63,7 +64,7 @@ export const Checkbox = function Checkbox(onToggle) {
   let tmp5Result = null != description;
   if (tmp5Result) {
     const obj3 = { variant: "text-sm/normal", color: "text-subtle", children: description };
-    tmp5Result = tmp5(tmp2(4556).Text, obj3);
+    tmp5Result = React4(Text_Text.Text, obj3);
   }
   const obj4 = { direction: "horizontal", children: null };
   items2[1] = tmp5Result;

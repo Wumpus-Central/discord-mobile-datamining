@@ -1,5 +1,6 @@
 // discord_app/design/components/Text/native/useManaTextMigrationHighlight.tsx
 import _mod17 from "../../../../../_runtime/metro/00017__.js";
+import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import DevSettingsStore from "../../../../modules/devtools/dev_settings/DevSettingsStore.tsx";
 import ThemeStore from "../../../../modules/user_settings/ThemeStore.tsx";
@@ -49,6 +50,7 @@ export const useManaTextMigrationHighlight = function useManaTextMigrationHighli
       ? tmp.overridden
       : tmp.highlight;
   }
+  obj = initialize;
 };
 export const withManaTextMigrationHighlight = function withManaTextMigrationHighlight(fromEntriesResult) {
   let proxy = fromEntriesResult;

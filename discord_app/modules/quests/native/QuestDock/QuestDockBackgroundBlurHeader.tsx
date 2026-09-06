@@ -346,7 +346,7 @@ export default noop.memo(function QuestDockBackgroundBlurHeader(arg0) {
   V.__workletHash = 8904986205240;
   V.__initData = __initData7;
   const animatedStyle5 = obj11.useAnimatedStyle(V);
-  let tmp17 = closure_15();
+  const tmp17 = closure_15();
   let obj4 = { style: null, layout: questDockHeaderLayoutAnimation, children: null };
   let items = [tmp17.header, animatedStyle];
   obj4.style = items;
@@ -359,7 +359,7 @@ export default noop.memo(function QuestDockBackgroundBlurHeader(arg0) {
   let obj14 = activeQuestDockMode(1116);
   if (obj14.isAndroid()) {
     if (null != blurHash) {
-      obj5 = { placeholder: blurHash, animatedStyle: animatedStyle5, animatedLayout: tmp20 };
+      obj5 = { placeholder: blurHash, animatedStyle: animatedStyle5, animatedLayout: questDockHeaderLayoutAnimation };
       let tmp23 = closure_12(tmp7(15193), obj5);
       let tmp22 = closure_12;
     }
@@ -368,12 +368,12 @@ export default noop.memo(function QuestDockBackgroundBlurHeader(arg0) {
     obj7 = { style: null, layout: null, children: null };
     const items2 = [tmp17.collapsedContent, animatedStyle2];
     obj7.style = items2;
-    obj7.layout = tmp20;
+    obj7.layout = questDockHeaderLayoutAnimation;
     let tmp7Result = tmp7(7073);
     const obj8 = { style: animatedStyle1, children: collapsedContent };
     obj7.children = tmp22(tmp7(7073), obj8);
     const items3 = [tmp22(tmp7Result, obj7)];
-    obj9 = { animatedProps, style: animatedStyle4, layout: tmp20, children: null };
+    obj9 = { animatedProps, style: animatedStyle4, layout: questDockHeaderLayoutAnimation, children: null };
     tmp7Result = tmp7(7073);
     obj10 = { style: null, children: null };
     const items4 = [tmp17.expandedContent, animatedStyle3];
@@ -391,7 +391,7 @@ export default noop.memo(function QuestDockBackgroundBlurHeader(arg0) {
       obj14 = { color: tmp7(576).colors.INTERACTIVE_TEXT_ACTIVE, style: tmp17.actionDisclosuresIcon };
       items6[1] = tmp22(tmp(11105).CircleQuestionIcon, obj14);
       obj12.children = items6;
-      obj11.children = tmp18(closure_13, obj12);
+      obj11.children = closure_14(closure_13, obj12);
       let tmp22Result = tmp22(tmp(5123).PressableOpacity, obj11);
     } else {
       const obj15 = { style: null, children: null };
@@ -402,7 +402,7 @@ export default noop.memo(function QuestDockBackgroundBlurHeader(arg0) {
       const intl = tmp(1114).intl;
       obj16.children = intl.string(tmp(1114).t.o6FLcF);
       obj15.children = tmp22(tmp(4556).Text, obj16);
-      tmp22Result = tmp22(tmp25, obj15);
+      tmp22Result = tmp22(closure_6, obj15);
     }
     const items8 = [tmp22Result, tmp22(tmp7(15195), {})];
     const obj17 = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, style: null, children: null };
@@ -479,13 +479,14 @@ export default noop.memo(function QuestDockBackgroundBlurHeader(arg0) {
     obj17.children = tmp22(tmp(8672).MoreHorizontalIcon, obj18);
     items8[2] = tmp22(tmp(5123).PressableOpacity, obj17);
     obj10.children = items8;
-    obj9.children = tmp18(tmp7(7073), obj10);
+    obj9.children = closure_14(tmp7(7073), obj10);
     items3[1] = tmp22(tmp7Result, obj9);
     obj6.children = items3;
-    items1[2] = tmp18(closure_6, obj6);
+    items1[2] = closure_14(closure_6, obj6);
     obj4.children = items1;
-    return tmp18(tmp19, obj4);
+    return closure_14(tmp19, obj4);
   }
   tmp22 = closure_12;
-  tmp23 = closure_12(tmp7(15161), { animatedStyle: animatedStyle5, animatedLayout: tmp20 });
+  tmp23 = closure_12(tmp7(15161), { animatedStyle: animatedStyle5, animatedLayout: questDockHeaderLayoutAnimation });
+  tmp19 = questDockWrapperSpecs(7073);
 });

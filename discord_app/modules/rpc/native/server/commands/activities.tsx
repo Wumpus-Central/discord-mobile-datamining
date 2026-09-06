@@ -1,9 +1,9 @@
 // discord_app/modules/rpc/native/server/commands/activities.tsx
 import RPCErrorDefault from "../../../RPCError.tsx";
+import instant_invite_InstantInviteUtils from "../../../../instant_invite/native/InstantInviteUtils.tsx";
 import validateOpenInviteDialog from "../../../helpers/validateOpenInviteDialog.tsx";
 import asyncGeneratorStep from "../../../../../../_runtime/00005_asyncGeneratorStep.js";
 
-const instant_invite_InstantInviteUtils = tmp(9820);
 require = fn;
 let Constants = fn(4465);
 ({ RPC_AUTHENTICATED_SCOPE, RPC_LOCAL_SCOPE, RPC_SCOPE_CONFIG } = Constants);
@@ -29,6 +29,7 @@ obj.handler = function handler(socket) {
     const id = socket.application.id;
     obj.targetApplicationId = id;
     const result1 = instant_invite_InstantInviteUtils.showInstantInviteActionSheet(tmp4, obj);
+    const tmpResult = instant_invite_InstantInviteUtils;
   }
 };
 obj[RPCCommands.OPEN_INVITE_DIALOG] = obj;
@@ -39,7 +40,7 @@ obj2[RPC_SCOPE_CONFIG.ANY] = items1;
 obj1.scope = obj2;
 obj1.handler = function handler(socket) {
   socket = socket.socket;
-  return (async (arg0, value) => {
+  return (async () => {
     if (c3 === 2) {
       c3 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -115,7 +116,7 @@ obj1.handler = function handler(socket) {
             dependencyMap = 2;
             c3 = 1;
             const obj5 = {
-              value: tmp85(5150).launchImageLibraryAsync({
+              value: tmp2(5150).launchImageLibraryAsync({
                 mediaType: "photo",
                 includeBase64: false,
                 selectionLimit: 1,
@@ -125,7 +126,7 @@ obj1.handler = function handler(socket) {
             return obj5;
           } else {
             const obj6 = { errorCode: constants.UNKNOWN_ERROR };
-            const tmp42 = new tmp85(9554)(obj6, "Missing photo permissions");
+            const tmp42 = new tmp2(9554)(obj6, "Missing photo permissions");
             throw tmp42;
           }
         } else if (2 === tmp6) {

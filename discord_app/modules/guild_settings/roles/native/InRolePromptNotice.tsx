@@ -1,7 +1,11 @@
 // discord_app/modules/guild_settings/roles/native/InRolePromptNotice.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import util from "../../../../intl/index.native.tsx";
+import native from "../../../../design/void/native.tsx";
 import FlagUtils from "../../../../../discord_common/js/shared/utils/FlagUtils.tsx";
+import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import _modDef9625 from "../../../../../_runtime/metro/09625__.js";
+import GuildSettingsUtils from "../../GuildSettingsUtils.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -33,30 +37,30 @@ export default function InRolePromptNotice(role) {
     return null;
   } else {
     obj = { style: string.promptRow, children: null };
-    const tmpResult = tmp(17631);
-    let Icon = tmp(1178).Icon;
+    const tmpResult = GuildSettingsUtils;
+    let Icon = native.Icon;
     if (isRolePowerfulResult) {
       obj = { style: string.icon, source: _modDef9625, color: nativeDefault.unsafe_rawColors.YELLOW_300 };
-      const items = [tmp6(Icon, obj)];
+      const items = [hasOwnProperty(Icon, obj)];
       const obj1 = { style: string.promptText, variant: "text-sm/medium", children: null };
-      const intl2 = tmp(1114).intl;
+      const intl2 = util.intl;
       string = intl2.string;
-      stringResult = string(tmp(1114).t.YRbgXz);
+      stringResult = string(util.t.YRbgXz);
       obj1.children = stringResult;
-      Icon = tmp6(tmp(4556).Text, obj1);
+      Icon = hasOwnProperty(Text_Text.Text, obj1);
       items[1] = Icon;
       obj.children = items;
-      let tmp4Result = tmp4(tmp5, obj);
+      let tmp4Result = timestampProducer(View, obj);
     } else {
       const obj2 = { style: string.icon, source: _modDef9625 };
-      const items1 = [tmp6(Icon, obj2)];
+      const items1 = [hasOwnProperty(Icon, obj2)];
       const obj3 = { style: string.promptText, variant: "text-sm/medium", children: null };
-      const intl = tmp(1114).intl;
-      obj3.children = intl.string(tmp(1114).t.mqeO2v);
-      items1[1] = tmp6(tmp(4556).Text, obj3);
+      const intl = util.intl;
+      obj3.children = intl.string(util.t.mqeO2v);
+      items1[1] = hasOwnProperty(Text_Text.Text, obj3);
       obj.children = items1;
-      tmp4Result = tmp4(tmp5, obj);
+      tmp4Result = timestampProducer(View, obj);
     }
-    isRolePowerfulResult = tmp(17631).isRolePowerful(role);
+    isRolePowerfulResult = GuildSettingsUtils.isRolePowerful(role);
   }
 }

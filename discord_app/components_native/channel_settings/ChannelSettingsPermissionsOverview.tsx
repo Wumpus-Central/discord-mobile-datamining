@@ -42,7 +42,7 @@ function ChannelPermissionSyncModule(channel) {
     obj.confirmText = intl3.string(channel(1114).t.eW8Gy4);
     const intl4 = channel(1114).intl;
     obj.cancelText = intl4.string(channel(1114).t.s4uM3b);
-    closure_0 = asyncGeneratorStep(async (arg0, value) => {
+    closure_0 = asyncGeneratorStep(async () => {
       if (c3 === 2) {
         c3 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -204,9 +204,9 @@ function RoleRow(onDelete) {
     tmp2Result = null;
     if (!tmp) {
       obj = { color: nativeDefault.colors.ICON_FEEDBACK_CRITICAL, accessibilityLabel: null };
-      const intl = tmp3(1114).intl;
-      obj.accessibilityLabel = intl.string(tmp3(1114).t.N86XcP);
-      tmp2Result = tmp2(tmp3(15312).CircleMinusIcon, obj);
+      const intl = util.intl;
+      obj.accessibilityLabel = intl.string(util.t.N86XcP);
+      tmp2Result = value2(CircleMinusIcon.CircleMinusIcon, obj);
     }
   }
   obj.icon = tmp2Result;
@@ -276,7 +276,7 @@ function MemberRow(arg0) {
     obj = { color: nativeDefault.colors.ICON_FEEDBACK_CRITICAL, accessibilityLabel: null };
     const intl = util.intl;
     obj.accessibilityLabel = intl.string(util.t.N86XcP);
-    tmpResult = tmp(CircleMinusIcon.CircleMinusIcon, obj);
+    tmpResult = value2(CircleMinusIcon.CircleMinusIcon, obj);
   }
   obj.leading = tmpResult;
   return value2(DetailedGuildIdentityUserRowDefault, obj);

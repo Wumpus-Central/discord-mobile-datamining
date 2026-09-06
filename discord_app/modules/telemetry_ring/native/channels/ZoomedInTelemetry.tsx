@@ -34,7 +34,7 @@ prototype["getExportBatchSize"] = function getExportBatchSize() {
 prototype["exportEntries"] = function exportEntries(arg0, arg1) {
   closure_0 = arg0;
   closure_1 = arg1;
-  return (async (arg0, value) => {
+  return (async () => {
     if (c2 === 2) {
       c2 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");

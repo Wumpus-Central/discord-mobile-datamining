@@ -38,11 +38,10 @@ export default function AppLauncherChoicesOption(option) {
           }
           if (null != found) {
             const obj = { choice: found, index: null };
-            const choices1 = tmp.choices;
+            const choices1 = option.choices;
             obj.index = choices1.indexOf(found);
             return obj;
           }
-          tmp = option;
         }
       }
     }),

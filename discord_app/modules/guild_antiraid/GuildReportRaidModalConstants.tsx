@@ -31,16 +31,16 @@ export const getReportRaidTypeLabel = function getReportRaidTypeLabel(arg0) {
   if (obj.DM_SPAM === arg0) {
     const intl5 = util.intl;
     return intl5.string(util.t["9CYNmS"]);
-  } else if (tmp.MENTION_SPAM === arg0) {
+  } else if (obj.MENTION_SPAM === arg0) {
     const intl4 = util.intl;
     return intl4.string(util.t["hR/IdO"]);
-  } else if (tmp.MESSAGE_SPAM === arg0) {
+  } else if (obj.MESSAGE_SPAM === arg0) {
     const intl3 = util.intl;
     return intl3.string(util.t.fwloj2);
-  } else if (tmp.SETTINGS_SPAM === arg0) {
+  } else if (obj.SETTINGS_SPAM === arg0) {
     const intl2 = util.intl;
     return intl2.string(util.t.ETFVFw);
-  } else if (tmp.SUSPICIOUS_USERS === arg0) {
+  } else if (obj.SUSPICIOUS_USERS === arg0) {
     const intl = util.intl;
     return intl.string(util.t["lKXu+n"]);
   } else {

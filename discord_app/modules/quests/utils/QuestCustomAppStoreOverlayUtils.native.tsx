@@ -1,30 +1,31 @@
 // discord_app/modules/quests/utils/QuestCustomAppStoreOverlayUtils.native.tsx
 import apexExperiment from "../experiments/index.tsx";
 import QuestPlatformUtils from "QuestPlatformUtils.tsx";
+import AppStoreOverlayContent from "../native/AppStoreOverlay/AppStoreOverlayContent.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
 function fetchCustomAppStoreOverlayContent(cta) {
   const CustomAppStoreOverlayExperiment = apexExperiment.CustomAppStoreOverlayExperiment;
   let enabled = CustomAppStoreOverlayExperiment.getConfig({ location: "quest_open_game_link" }).enabled;
   if (enabled) {
-    let tmpResult = tmp(11496);
+    let tmpResult = QuestPlatformUtils;
     enabled = null != tmpResult.getInlineStoreParamsFromCta(cta);
   }
   let inlineStoreParamsFromCta = null;
   if (enabled) {
-    tmpResult = tmp(11496);
+    tmpResult = QuestPlatformUtils;
     inlineStoreParamsFromCta = tmpResult.getInlineStoreParamsFromCta(cta);
   }
   if (null == inlineStoreParamsFromCta) {
     let resolved = Promise.resolve(null);
   } else {
-    const tmpResult1 = tmp(11498);
-    let url = tmp(11496).getDirectAppStoreLinkFromCta(cta);
+    const tmpResult1 = AppStoreOverlayContent;
+    let url = QuestPlatformUtils.getDirectAppStoreLinkFromCta(cta);
     if (url == null) {
       url = cta.url;
     }
     resolved = tmpResult1.getAppStoreOverlayContent(inlineStoreParamsFromCta, url);
-    const tmpResult2 = tmp(11496);
+    const tmpResult2 = QuestPlatformUtils;
   }
   return resolved;
 }

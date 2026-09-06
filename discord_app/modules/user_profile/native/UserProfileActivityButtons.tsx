@@ -7,14 +7,16 @@ import LinkingDefault from "../../../lib/native/Linking.tsx";
 import RootNavigationRef from "../../main_tabs_v2/RootNavigationRef.native.tsx";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
+import PrivateChannelCallUtils from "../../../utils/native/PrivateChannelCallUtils.tsx";
 import components_Button_Button from "../../../design/components/Button/native/Button.native.tsx";
 import useAnalyticsLocationsDefault from "../../app_analytics/useAnalyticsLocations.tsx";
 import isStreamingDefault from "../../activities/utils/isStreaming.tsx";
+import StageChannelModalActionCreators from "../../stage_channels/StageChannelModalActionCreators.tsx";
 import authorizeConnectionDefault from "../../connections/authorizeConnection.native.tsx";
 import handleJoinEmbeddedActivityDefault from "../../activities/handleJoinEmbeddedActivity.tsx";
 import GamesActionCreatorsDefault from "../../../actions/GamesActionCreators.native.tsx";
 import getActivityChannelIdDefault from "../../activities/utils/getActivityChannelId.tsx";
-import getActivityJoinabilityDefault from "../../activities/utils/getActivityJoinability.tsx";
+import getActivityJoinability from "../../activities/utils/getActivityJoinability.tsx";
 import getStreamURLDefault from "../../activities/utils/getStreamURL.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -29,6 +31,8 @@ import RelationshipStore from "../../../stores/RelationshipStore.tsx";
 import SelectedChannelStore from "../../../stores/SelectedChannelStore.tsx";
 import SelfPresenceStore from "../../../stores/SelfPresenceStore.tsx";
 import VoiceStateStore from "../../../stores/VoiceStateStore.tsx";
+
+const getActivityJoinabilityDefault = getActivityJoinability;
 
 require = fn;
 const Constants = fn(1074);
@@ -188,16 +192,16 @@ export const JoinGameActivityButton = function JoinGameActivityButton(onAction) 
   let tmp3 = null;
   if (null != application) {
     tmp3 = null;
-    if (stateFromStores !== tmp(13034).ActivityJoinability.CANNOT_JOIN) {
-      if (stateFromStores === tmp(13034).ActivityJoinability.JOINED) {
-        const intl2 = tmp(1114).intl;
-        let stringResult = intl2.string(tmp(1114).t.DPfdsq);
+    if (stateFromStores !== getActivityJoinability.ActivityJoinability.CANNOT_JOIN) {
+      if (stateFromStores === getActivityJoinability.ActivityJoinability.JOINED) {
+        const intl2 = util.intl;
+        let stringResult = intl2.string(util.t.DPfdsq);
       } else {
-        const intl = tmp(1114).intl;
-        stringResult = intl.string(tmp(1114).t.VJlc0S);
+        const intl = util.intl;
+        stringResult = intl.string(util.t.VJlc0S);
       }
       obj = { text: stringResult, variant: "active", disabled: null, onPress: null };
-      JOINED = tmp(13034).ActivityJoinability.JOINED;
+      JOINED = getActivityJoinability.ActivityJoinability.JOINED;
       obj.disabled = stateFromStores === JOINED;
       obj.onPress = function onPress() {
         onAction({ action: "PRESS_JOIN_BUTTON" });
@@ -214,7 +218,7 @@ export const JoinGameActivityButton = function JoinGameActivityButton(onAction) 
         const joined = obj.join(obj);
         ActionSheetActionCreatorsDefault.hideAllActionSheets();
       };
-      jsx(tmp(4975).Button, { text: stringResult, variant: "active", disabled: null, onPress: null });
+      jsx(components_Button_Button.Button, { text: stringResult, variant: "active", disabled: null, onPress: null });
     }
   }
   return tmp3;
@@ -237,7 +241,7 @@ export const PlayOnSpotifyButton = function PlayOnSpotifyButton(arg0) {
         disableColor: true,
         style: tmp.icon,
       });
-      obj.onPress = asyncGeneratorStep(async (arg0, value) => {
+      obj.onPress = asyncGeneratorStep(async () => {
         if (c5 === 2) {
           c5 = 3;
           throw new TypeError("Generator functions may not be called on executing generators");
@@ -402,10 +406,10 @@ export const VoiceChannelButtons = function VoiceChannelButtons(channel) {
           rootNavigationRef.goBack();
         }
         if (c3) {
-          let tmp5Result = tmp5(8393);
+          let tmp5Result = StageChannelModalActionCreators;
           tmp5Result.connectAndOpen(channel);
         } else {
-          tmp5Result = tmp5(4767);
+          tmp5Result = PrivateChannelCallUtils;
           tmp5Result.openGuildVoiceModal(channel, newestAnalyticsLocation);
         }
       };
@@ -462,6 +466,15 @@ export const ConnectPlatformButton = function ConnectPlatformButton(type) {
           return obj.openUserSettings(obj);
         },
       });
+      let obj = {
+        platformType: _undefined.type,
+        location: newestAnalyticsLocation,
+        onClose() {
+          type(newestAnalyticsLocation[44]);
+          const obj = { screen: constants.CONNECTIONS };
+          return obj.openUserSettings(obj);
+        },
+      };
     };
     return jsx(tmp4(tmp3[24]).Button, { platform: value.name });
   }
@@ -478,15 +491,15 @@ export const CustomActivityButton = function CustomActivityButton(index) {
     if (index < activity.buttons.length) {
       let obj = index;
       if (activity(index[45])(activity)) {
-        const intl = tmp3(obj[25]).intl;
-        let stringResult = intl.string(tmp3(obj[25]).t.I6JG46);
+        const intl = require("util").intl;
+        let stringResult = intl.string(require("util").t.I6JG46);
       } else {
         stringResult = activity.buttons[index];
       }
       obj = {
         text: stringResult,
         variant: "secondary",
-        onPress: onAction(function* (arg0, value) {
+        onPress: onAction(function* () {
           if (c5 === 2) {
             c5 = 3;
             throw new TypeError("Generator functions may not be called on executing generators");
@@ -595,7 +608,7 @@ export const CustomActivityButton = function CustomActivityButton(index) {
       jsx(require("components/Button/Button").Button, {
         text: stringResult,
         variant: "secondary",
-        onPress: onAction(function* (arg0, value) {
+        onPress: onAction(function* () {
           if (c5 === 2) {
             c5 = 3;
             throw new TypeError("Generator functions may not be called on executing generators");

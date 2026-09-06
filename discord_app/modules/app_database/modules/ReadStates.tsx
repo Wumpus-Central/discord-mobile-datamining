@@ -42,7 +42,8 @@ prototype["getAll"] = function getAll(arg0) {
     const _performance2 = performance;
     closure_128_0 = performance.now();
     const states = tmp2(tmp5[4]).readStates(tmp2);
-    closure_128_1 = await states.getMany();
+    await states.getMany();
+    closure_128_1 = value;
     const _performance = performance;
     closure_128_2 = performance.now();
     const _HermesInternal = HermesInternal;
@@ -88,14 +89,13 @@ prototype["handleWriteCaches"] = function handleWriteCaches(database, arg1) {
       while (iter !== undefined) {
         let tmp7 = nextResult;
         if (null != nextResult._lastMessageId) {
-          let tmp35 = importDefault;
           let obj12 = SnowflakeUtilsDefault;
           if (1 === obj12.compare(tmp7._lastMessageId, str2)) {
             str2 = tmp7._lastMessageId;
           }
           let hasItem = set.has(tmp7.channelId);
           if (hasItem) {
-            let tmp35Result = tmp35(11);
+            let tmp35Result = SnowflakeUtilsDefault;
             hasItem = 1 === tmp35Result.compare(tmp7._lastMessageId, _lastMessageId);
           }
           if (hasItem) {

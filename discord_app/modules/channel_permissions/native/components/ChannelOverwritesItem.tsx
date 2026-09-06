@@ -60,7 +60,7 @@ function RemoveIcon(item) {
     }
     obj = { style: prop };
     obj.children = closure_7(item(6616).CircleXIcon, obj);
-    tmp3Result = tmp3(item(5123).PressableOpacity, obj);
+    tmp3Result = closure_7(item(5123).PressableOpacity, obj);
   }
   return tmp3Result;
 }
@@ -102,7 +102,7 @@ function RoleItem(arg0) {
   obj.end = end;
   if (showRemove) {
     obj = { item, channelId };
-    trailing = tmp(RemoveIcon, obj);
+    trailing = React5(RemoveIcon, obj);
   }
   obj.trailing = trailing;
   obj.onPress = onPress;
@@ -142,13 +142,8 @@ function MemberItem(arg0) {
   const items1 = [React5(Text_Text.Text, obj)];
   let tmp4Result = null;
   if (item.rowType === RowType.OWNER) {
-    obj = {
-      size: tmp5(1178).Icon.Sizes.REFRESH_SMALL_16,
-      source: _modDef9753,
-      disableColor: true,
-      style: tmp.ownerIcon,
-    };
-    tmp4Result = tmp4(tmp5(1178).Icon, obj);
+    obj = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef9753, disableColor: true, style: tmp.ownerIcon };
+    tmp4Result = React5(native.Icon, obj);
   }
   items1[1] = tmp4Result;
   obj.children = items1;
@@ -178,7 +173,7 @@ function MemberItem(arg0) {
   obj1.end = end;
   if (showRemove) {
     const obj3 = { item, channelId, onRemove };
-    trailing = tmp4(RemoveIcon, obj3);
+    trailing = React5(RemoveIcon, obj3);
   }
   obj1.trailing = trailing;
   obj1.onPress = onPress;

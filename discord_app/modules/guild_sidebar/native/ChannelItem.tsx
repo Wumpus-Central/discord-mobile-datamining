@@ -4,6 +4,7 @@ import router_utils from "../../routing/router_utils.tsx";
 import AvatarUtilsDefault from "../../../utils/AvatarUtils.tsx";
 import utils_ChannelUtils from "../../../utils/native/ChannelUtils.tsx";
 import BookCheckIcon2 from "../../../design/components/Icon/native/redesign/generated/BookCheckIcon.tsx";
+import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import BaseChannelItem from "BaseChannelItem.tsx";
 import _modDef16117 from "../../../../_runtime/metro/16117__.js";
 import _objectWithoutProperties from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
@@ -56,9 +57,8 @@ function ChannelIcon(arg0) {
       const channelIconSource = obj.getChannelIconSource(obj);
       if (null != channelIconSource) {
         const obj1 = { style: tmp.groupDmAvatar, source: channelIconSource };
-        return map1(tmp5(5587), obj1);
+        return map1(FastImageDefault, obj1);
       }
-      tmp5 = importDefault;
     }
     if (tmp2) {
       let tmp12 = _modDef16117;
@@ -175,7 +175,7 @@ export default noop.memo((channel) => {
     let tmp10 = null;
     if (isSubscriptionGated) {
       obj = { locked: needSubscriptionToAccess };
-      tmp10 = closure_13(tmp3(tmp4[22]), obj);
+      tmp10 = closure_13(require("GuildRoleSubscriptionGatedChannelIcon"), obj);
     }
     items[1] = tmp10;
     obj.children = items;

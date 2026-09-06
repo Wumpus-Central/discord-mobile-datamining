@@ -1,6 +1,8 @@
 // discord_app/modules/voice_panel/native/controls/buttons/VoicePanelDrawerToggleButton.tsx
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import NativeViewDefault from "../../../../core/native/NativeView.tsx";
+import ChevronSmallDownIcon from "../../../../../design/components/Icon/native/redesign/generated/ChevronSmallDownIcon.tsx";
+import ChevronSmallUpIcon2 from "../../../../../design/components/Icon/native/redesign/generated/ChevronSmallUpIcon.tsx";
 import useDrawerToggleDefault from "../useDrawerToggle.tsx";
 import VoicePanelStyles from "VoicePanelStyles.tsx";
 import VoicePanelAnimatedButtonWrapperDefault from "VoicePanelAnimatedButtonWrapper.tsx";
@@ -34,7 +36,6 @@ export default function VoicePanelDrawerToggleButton(arg0) {
   ({ isDrawerOpen, handlePress, accessibilityLabel } = useDrawerToggleDefault(openTab));
   const element = { onPress: handlePress, props, accessibilityLabel, children: null };
   const tmp5 = useDrawerToggleDefault(openTab);
-  const tmp6 = React4;
   obj = { style: null };
   const items = [tmp.circle, { backgroundColor: voicePanelButtonStyles.iconBg.backgroundColor }];
   obj.style = items;
@@ -42,12 +43,12 @@ export default function VoicePanelDrawerToggleButton(arg0) {
   obj = { style: tmp.iconContainer, children: null };
   const tmp7 = VoicePanelAnimatedButtonWrapperDefault;
   if (isDrawerOpen) {
-    let ChevronSmallUpIcon = tmp2(11153).ChevronSmallDownIcon;
+    let ChevronSmallUpIcon = ChevronSmallDownIcon.ChevronSmallDownIcon;
   } else {
-    ChevronSmallUpIcon = tmp2(13573).ChevronSmallUpIcon;
+    ChevronSmallUpIcon = ChevronSmallUpIcon2.ChevronSmallUpIcon;
   }
   obj.children = React3(ChevronSmallUpIcon, { color: voicePanelButtonStyles.iconFill.color });
   items1[1] = React3(NativeViewDefault, obj);
   element.children = items1;
-  return tmp6(tmp7, element);
+  return React4(tmp7, element);
 }

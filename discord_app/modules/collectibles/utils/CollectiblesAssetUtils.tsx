@@ -24,7 +24,7 @@ export const getCollectiblesItemAssetUrl = function getCollectiblesItemAssetUrl(
       }
       _HermesInternal = _HermesInternal.HermesInternal;
       str = "/";
-      let combined = tmp4 + "/" + skuId + "/" + str9 + assetFormat;
+      let combined = c2 + "/" + skuId + "/" + str9 + assetFormat;
     } else {
       let str3 = "";
       if (`/`) {
@@ -32,7 +32,7 @@ export const getCollectiblesItemAssetUrl = function getCollectiblesItemAssetUrl(
         str3 = "" + assetId + "/";
       }
       const _HermesInternal3 = HermesInternal;
-      combined = "https://cdn.discordapp.com/" + tmp4 + "/" + skuId + "/" + str3 + assetFormat;
+      combined = "https://cdn.discordapp.com/" + c2 + "/" + skuId + "/" + str3 + assetFormat;
     }
   }
 };

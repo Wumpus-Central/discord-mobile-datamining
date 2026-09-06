@@ -13,17 +13,16 @@ import MessageStore from "../../stores/MessageStore.tsx";
 import UploadAttachmentStore from "../../stores/UploadAttachmentStore.tsx";
 
 const require = fn;
-function getPollVoteEventProperties(arg0, arg1) {
-  closure_0 = arg0;
-  const items = [...arg1];
+function getPollVoteEventProperties(answers, set) {
+  const items = [...set];
   importDefault = 0;
   importAll = 0;
   for (const item10012 of items) {
     let tmp = (function _loop(item10012) {
-      closure_0 = item10012;
+      answers = item10012;
       let poll_media;
-      if (closure_0 != null) {
-        const found = closure_0.find((answer_id) => answer_id.answer_id === parseInt(closure_0));
+      if (answers != null) {
+        const found = answers.find((answer_id) => answer_id.answer_id === parseInt(closure_0));
         if (found != null) {
           poll_media = found.poll_media;
         }
@@ -145,7 +144,7 @@ function optimisticallySetAnswers() {
   }
   return applyArgumentsResult;
 }
-let closure_23 = async function _optimisticallySetAnswers(arg0, value) {
+let closure_23 = async function _optimisticallySetAnswers(arg0) {
   if (1 === tmp5) {
     if (arg0 === 1) {
       c5 = 3;
@@ -178,15 +177,13 @@ let closure_23 = async function _optimisticallySetAnswers(arg0, value) {
           let obj = messageId(573);
           obj = {
             type: item10006.type,
-            channelId: null,
-            messageId: null,
+            channelId,
+            messageId,
             emoji: null,
             userId: null,
             optimistic: true,
             reactionType: null,
           };
-          obj.channelId = channelId;
-          obj.messageId = messageId;
           obj = { id, name: id };
           obj.emoji = obj;
           obj.userId = userId;
@@ -225,7 +222,7 @@ function handlePollSubmitVote() {
   }
   return applyArgumentsResult;
 }
-let closure_25 = async function _handlePollSubmitVote(arg0, value) {
+let closure_25 = async function _handlePollSubmitVote(arg0) {
   if (c9 === 2) {
     c9 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -417,7 +414,7 @@ let closure_25 = async function _handlePollSubmitVote(arg0, value) {
     }
   }
 };
-let closure_26 = async function _handleClearPollVote(arg0, value) {
+let closure_26 = async function _handleClearPollVote(arg0) {
   if (c4 === 2) {
     c4 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -517,7 +514,7 @@ let closure_26 = async function _handleClearPollVote(arg0, value) {
     }
   }
 };
-let closure_27 = async function _handlePollActionTapped(arg0, value) {
+let closure_27 = async function _handlePollActionTapped(arg0) {
   if (c4 === 2) {
     c4 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -618,13 +615,7 @@ let closure_27 = async function _handlePollActionTapped(arg0, value) {
                     show_results: null == showResults || !showResults.showResults,
                     votes_count: num,
                   });
-                  obj = {
-                    channelId: tmp2,
-                    selectedAnswerIds: new Set(),
-                    submitting: null,
-                    editing: null,
-                    showResults: null,
-                  };
+                  obj = { channelId, selectedAnswerIds: new Set(), submitting: null, editing: null, showResults: null };
                   let flag;
                   if (showResults != null) {
                     flag = showResults.submitting;
@@ -678,7 +669,7 @@ let closure_27 = async function _handlePollActionTapped(arg0, value) {
     }
   }
 };
-let closure_28 = async function _createPoll(arg0, value) {
+let closure_28 = async function _createPoll(arg0) {
   if (c6 === 2) {
     c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -851,7 +842,7 @@ let closure_28 = async function _createPoll(arg0, value) {
     }
   }
 };
-let closure_29 = async function _endPollEarly(arg0, value) {
+let closure_29 = async function _endPollEarly(arg0) {
   const obj2 = { title: null, body: null };
   const intl = closure_130_0(closure_130_3[13]).intl;
   obj2.title = intl.string(closure_130_0(closure_130_3[13]).t["+rfkTK"]);
@@ -1001,6 +992,7 @@ export default {
       obj = { channelId: channelId2, messageId: messageId2, answerId };
       handleShowVotesForAnswer(obj);
     }
+    const obj3 = answerId(message[16]);
   },
   handlePollSubmitVote,
   handleUpdateVoteEditingState,

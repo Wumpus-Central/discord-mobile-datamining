@@ -37,10 +37,10 @@ function SegmentedControlPage(children) {
     let tmp2 = Math.floor(pageIndex.get()) === index;
     if (!tmp2) {
       const _Math = Math;
-      tmp2 = Math.ceil(pageIndex.get()) === tmp;
+      tmp2 = Math.ceil(pageIndex.get()) === index;
     }
     if (!tmp2) {
-      tmp2 = scrollTargetPageIndex.get() === tmp;
+      tmp2 = scrollTargetPageIndex.get() === index;
     }
     return tmp2;
   };
@@ -356,20 +356,19 @@ export const SegmentedControlPages = function SegmentedControlPages(onEndDragWor
     if (0 !== pageWidth) {
       const _Math = Math;
       const _Math2 = Math;
-      const bound = Math.max(MathUtils.roundIfClose(arg0.x / tmp, 0.0001), 0);
-      const tmp13 = require;
-      const result = sharedValue.set(Math.min(bound, MathUtils.roundIfClose(width.width / tmp, 0.0001) - 1));
+      const bound = Math.max(MathUtils.roundIfClose(arg0.x / pageWidth, 0.0001), 0);
+      const result = sharedValue.set(Math.min(bound, MathUtils.roundIfClose(width.width / pageWidth, 0.0001) - 1));
       const result1 = sharedValue.get() % 1;
       let tmp4 = result1 === 0;
       if (result1 === 0) {
         value = sharedValue1.get();
-        tmp4 = value !== obj2.get();
+        tmp4 = value !== sharedValue.get();
       }
       if (tmp4) {
-        const result2 = sharedValue1.set(obj2.get());
-        const tmp13Result = tmp13(4296);
-        tmp13(4296).runOnJS(callback1)(obj2.get());
-        const runOnJSResult = tmp13(4296).runOnJS(callback1);
+        const result2 = sharedValue1.set(sharedValue.get());
+        const tmp13Result = ReanimatedRexport2;
+        ReanimatedRexport2.runOnJS(callback1)(sharedValue.get());
+        const runOnJSResult = ReanimatedRexport2.runOnJS(callback1);
       }
     }
   }
@@ -409,15 +408,14 @@ export const SegmentedControlPages = function SegmentedControlPages(onEndDragWor
   function re(contentOffset) {
     contentOffset = contentOffset.contentOffset;
     if (-1 !== scrollTarget.get()) {
-      if (0 === obj2.roundIfClose(contentOffset.x - obj.get(), 0.0001)) {
-        const result = obj.set(-1);
+      if (0 === obj2.roundIfClose(contentOffset.x - scrollTarget.get(), 0.0001)) {
+        const result = scrollTarget.set(-1);
       } else {
-        value = obj.get();
-        tmp(4296).runOnJS(callback2)(value);
-        const tmpResult = tmp(4296);
+        value = scrollTarget.get();
+        ReanimatedRexport2.runOnJS(callback2)(value);
+        const tmpResult = ReanimatedRexport2;
       }
       obj2 = MathUtils;
-      tmp = require;
     }
     callback3(contentOffset, contentOffset.contentSize);
   }
@@ -436,7 +434,7 @@ export const SegmentedControlPages = function SegmentedControlPages(onEndDragWor
     ({ contentOffset, contentSize } = arg0);
     if (0 !== contentSize.width) {
       if (sharedValue2.get() !== contentOffset.x) {
-        const result = obj4.set(contentOffset.x);
+        const result = sharedValue2.set(contentOffset.x);
         if (sharedValue3 != null) {
           tmp24(arg0);
         }
@@ -446,24 +444,23 @@ export const SegmentedControlPages = function SegmentedControlPages(onEndDragWor
         if (rounded % Math.round(contentSize.width) == 0) {
           if (contentOffset.x < 0) {
             const result1 = scrollOverflow.set(contentOffset.x);
-          } else if (contentOffset.x > contentSize.width - tmp4) {
-            const result2 = scrollOverflow.set(contentOffset.x - (contentSize.width - tmp4));
+          } else if (contentOffset.x > contentSize.width - pageWidth) {
+            const result2 = scrollOverflow.set(contentOffset.x - (contentSize.width - pageWidth));
           } else {
             const result3 = scrollOverflow.set(0);
           }
           if (-1 !== scrollTarget.get()) {
-            if (0 === obj3.roundIfClose(contentOffset.x - obj2.get(), 0.0001)) {
-              const result4 = obj2.set(-1);
+            if (0 === obj3.roundIfClose(contentOffset.x - scrollTarget.get(), 0.0001)) {
+              const result4 = scrollTarget.set(-1);
             }
             obj3 = MathUtils;
           }
           callback3(contentOffset, contentSize);
         } else {
-          const result5 = sharedValue4.get() * tmp4;
+          const result5 = sharedValue4.get() * pageWidth;
           ReanimatedRexport2.runOnJS(callback2)(result5);
         }
       }
-      obj4 = sharedValue2;
     }
   }
   obj3 = {
@@ -584,6 +581,7 @@ export const SegmentedControlPages = function SegmentedControlPages(onEndDragWor
     if (!tmp) {
       const result = callback4.set(arg0);
     }
+    tmp = null != arg1 && arg1[0] === arg0[0] && arg1[1] === arg0[1];
   }
   ie.__closure = { visiblePageRange };
   ie.__workletHash = 14106897948399;
@@ -624,15 +622,15 @@ export const SegmentedControlPages = function SegmentedControlPages(onEndDragWor
     obj5.scrollEventThrottle = num;
     obj5.children = items.map((item, index) => (
       <SegmentedControlPage
-        key={arg1}
-        index={arg1}
+        key={index}
+        index={index}
         activePageRangeStart={activePageRangeStart}
         activePageRangeEnd={activePageRangeEnd}
         reportedPageIndex={sharedValue1}
         pageIndex={sharedValue}
         scrollTargetPageIndex={derivedValue}
         style={memo}
-        item={arg0}
+        item={item}
       />
     ));
     let tmp27Result = tmp27(scrollTarget, obj5);

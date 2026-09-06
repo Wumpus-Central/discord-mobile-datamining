@@ -94,7 +94,6 @@ function VibegrationsCollaboratorRolesSheet(guildId) {
     require("../intl/VibegrationsUntranslated.messages.js").eaqbJt,
     obj,
   );
-  const tmp12 = closure_11;
   obj.footer = closure_10(closure_6, {
     style: tmp.roleListFooter,
     children: closure_10(guildId(onSave[16]).Text, {
@@ -123,10 +122,10 @@ function VibegrationsCollaboratorRolesSheet(guildId) {
   if (0 === memo.length) {
     const obj6 = { style: tmp.roleListEmpty, children: null };
     const obj7 = { variant: "text-md/normal", color: "text-muted", children: null };
-    const intl7 = tmp2(tmp3[13]).intl;
-    obj7.children = intl7.string(tmp2(tmp3[13]).t.V6nAfF);
-    obj6.children = tmp13(tmp2(tmp3[16]).Text, obj7);
-    let tmp13Result = tmp13(closure_6, obj6);
+    const intl7 = tmp2(onSave[13]).intl;
+    obj7.children = intl7.string(tmp2(onSave[13]).t.V6nAfF);
+    obj6.children = closure_10(tmp2(onSave[16]).Text, obj7);
+    let tmp13Result = closure_10(closure_6, obj6);
   } else {
     const obj8 = {
       hasIcons: false,
@@ -173,12 +172,12 @@ function VibegrationsCollaboratorRolesSheet(guildId) {
         return closure_1_10(guildId(onSave[22]).TableCheckboxRow, obj, children.id);
       }),
     };
-    tmp13Result = tmp13(tmp2(tmp3[21]).TableRowGroup, obj8);
+    tmp13Result = closure_10(tmp2(onSave[21]).TableRowGroup, obj8);
   }
   obj5.children = tmp13Result;
   items4[1] = closure_10(guildId(onSave[20]).BottomSheetScrollView, obj5);
   obj.children = items4;
-  return tmp12(guildId(onSave[15]).ActionSheet, obj);
+  return closure_11(guildId(onSave[15]).ActionSheet, obj);
 }
 const View = fn(17).View;
 const DEFAULT_ROLE_COLOR_HEX = fn(1074).DEFAULT_ROLE_COLOR_HEX;
@@ -335,9 +334,9 @@ export default function VibegrationsProjectSettingsSheet(projectId) {
     closure_1 = arg1;
     closure_6((arg0) => {
       if (closure_1) {
-        let tmp2 = arg0 | tmp;
+        let tmp2 = arg0 | closure_0;
       } else {
-        tmp2 = arg0 & ~tmp;
+        tmp2 = arg0 & ~closure_0;
       }
       return tmp2;
     });
@@ -369,7 +368,7 @@ export default function VibegrationsProjectSettingsSheet(projectId) {
     trimmed,
   ];
   const callback3 = obj1.useCallback(
-    prop(function* (arg0, value) {
+    prop(function* () {
       if (c4 === 2) {
         c4 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");

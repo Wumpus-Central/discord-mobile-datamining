@@ -1,10 +1,13 @@
 // discord_app/utils/GuildBoostingUtils.tsx
 import util from "../intl/index.native.tsx";
 import SentryUtilsDefault from "SentryUtils.native.tsx";
+import GlobalUtils from "GlobalUtils.tsx";
 import HelpdeskUtilsDefault from "HelpdeskUtils.tsx";
+import _modDef3063 from "../modules/premium/premium_group/PremiumGroup.messages.js";
 import _modDef4153 from "../../_runtime/metro/04153__.js";
 import PremiumUtilsAll from "PremiumUtils.tsx";
 import PremiumGuildOverrides from "../../discord_common/js/shared/shared-constants/PremiumGuildOverrides.tsx";
+import FileSizeUtils from "FileSizeUtils.tsx";
 import BoostingActionCreators from "../actions/BoostingActionCreators.tsx";
 import useGuildPowerupsBoostCount from "../modules/premium/powerups/hooks/useGuildPowerupsBoostCount.tsx";
 import GuildStore from "../stores/GuildStore.tsx";
@@ -13,9 +16,6 @@ import GuildBoostSlotStore from "../stores/billing/GuildBoostSlotStore.tsx";
 import SubscriptionStore from "../stores/billing/SubscriptionStore.tsx";
 import apply from "../../_runtime/metro/00012__.js";
 
-const GlobalUtils = tmp2(1369);
-const _modDef3063 = tmp7(3063);
-const FileSizeUtils = tmp2(4457);
 require = fn;
 function getGuildTierFromGuild(arg0) {
   const guild = GuildStore.getGuild(arg0);
@@ -286,7 +286,7 @@ export const getTiers = (arg0) => {
   obj13.icon = obj.STICKER;
   items2[1] = obj13;
   const intl21 = util.intl;
-  const TIER_2 = tmp.TIER_2;
+  const TIER_2 = BoostedGuildTiers.TIER_2;
   if (TIER_2 === BoostedGuildTiers.NONE) {
     let diff1 = tmp9[TIER_2];
   } else {
@@ -385,7 +385,7 @@ export const getTiers = (arg0) => {
   obj30.icon = obj.STICKER;
   items3[1] = obj30;
   const intl40 = util.intl;
-  const TIER_3 = tmp.TIER_3;
+  const TIER_3 = BoostedGuildTiers.TIER_3;
   if (TIER_3 === BoostedGuildTiers.NONE) {
     let diff2 = tmp9[TIER_3];
   } else {
@@ -474,13 +474,13 @@ export const getTierName = function getTierName(tier, arg1) {
       stringResult = string(t.mx8j2m);
     }
     return stringResult;
-  } else if (tmp2.TIER_1 === tier) {
+  } else if (BoostedGuildTiers.TIER_1 === tier) {
     const intl3 = util.intl;
     return intl3.string(util.t.nzXtaS);
-  } else if (tmp2.TIER_2 === tier) {
+  } else if (BoostedGuildTiers.TIER_2 === tier) {
     const intl2 = util.intl;
     return intl2.string(util.t["h33/uW"]);
-  } else if (tmp2.TIER_3 === tier) {
+  } else if (BoostedGuildTiers.TIER_3 === tier) {
     const intl = util.intl;
     return intl.string(util.t.BfF6ED);
   } else {
@@ -494,13 +494,13 @@ export const getShortenedTierName = function getShortenedTierName(arg0) {
   if (BoostedGuildTiers.NONE === arg0) {
     const intl4 = util.intl;
     return intl4.string(util.t.LcKgJd);
-  } else if (tmp.TIER_1 === arg0) {
+  } else if (BoostedGuildTiers.TIER_1 === arg0) {
     const intl3 = util.intl;
     return intl3.string(util.t.xRjU1V);
-  } else if (tmp.TIER_2 === arg0) {
+  } else if (BoostedGuildTiers.TIER_2 === arg0) {
     const intl2 = util.intl;
     return intl2.string(util.t.C7e2Bo);
-  } else if (tmp.TIER_3 === arg0) {
+  } else if (BoostedGuildTiers.TIER_3 === arg0) {
     const intl = util.intl;
     return intl.string(util.t.avGxmk);
   } else {
@@ -512,16 +512,16 @@ export const getShortenedTierName = function getShortenedTierName(arg0) {
 export const minimumRequiredTierForGuildFeature = apply.memoize((arg0) => {
   const features = dependencyMap[BoostedGuildTiers.TIER_1].features;
   if (features.includes(arg0)) {
-    let TIER_1 = tmp2.TIER_1;
+    let TIER_1 = BoostedGuildTiers.TIER_1;
   } else {
-    const features2 = tmp[tmp2.TIER_2].features;
+    const features2 = dependencyMap[BoostedGuildTiers.TIER_2].features;
     if (features2.includes(arg0)) {
-      TIER_1 = tmp2.TIER_2;
+      TIER_1 = BoostedGuildTiers.TIER_2;
     } else {
-      const features3 = tmp[tmp2.TIER_3].features;
+      const features3 = dependencyMap[BoostedGuildTiers.TIER_3].features;
       TIER_1 = null;
       if (features3.includes(arg0)) {
-        TIER_1 = tmp2.TIER_3;
+        TIER_1 = BoostedGuildTiers.TIER_3;
       }
     }
   }
@@ -530,11 +530,11 @@ export const minimumRequiredTierForGuildFeature = apply.memoize((arg0) => {
 export const boostedGuildTierToAnalyticsObjectType = function boostedGuildTierToAnalyticsObjectType(arg0) {
   if (BoostedGuildTiers.NONE === arg0) {
     return React6.NONE;
-  } else if (tmp.TIER_1 === arg0) {
+  } else if (BoostedGuildTiers.TIER_1 === arg0) {
     return React6.TIER_1;
-  } else if (tmp.TIER_2 === arg0) {
+  } else if (BoostedGuildTiers.TIER_2 === arg0) {
     return React6.TIER_2;
-  } else if (tmp.TIER_3 === arg0) {
+  } else if (BoostedGuildTiers.TIER_3 === arg0) {
     return React6.TIER_3;
   } else {
     return null;
@@ -598,7 +598,7 @@ export const generateBlockGuildSubscriptionPurchasesNode = function generateBloc
   if (!tmp3) {
     const guildBoostSlots = BoostingActionCreators.fetchGuildBoostSlots();
   }
-  let values = apply.values(tmp2.boostSlots);
+  let values = apply.values(GuildBoostSlotStore.boostSlots);
   let prop;
   const found = values.filter((isAvailable) => isAvailable.isAvailable());
   if (premiumTypeSubscription != null) {
@@ -622,7 +622,7 @@ export const generateBlockGuildSubscriptionPurchasesNode = function generateBloc
     return intl7.formatToPlainString(_modDef3063["5xN/C1"], obj);
   } else {
     const _Object = Object;
-    values = Object.values(tmp2.boostSlots);
+    values = Object.values(GuildBoostSlotStore.boostSlots);
     const reduced = values.reduce(
       (numCanceledGuildBoostSlots, subscription) => {
         subscription = subscription.subscription;
@@ -724,7 +724,7 @@ export const appliedGuildBoostsRequiredForPerks = function appliedGuildBoostsReq
   if (true === hasItem) {
     return 0;
   } else {
-    const guild1 = obj.getGuild(arg1);
+    const guild1 = GuildStore.getGuild(arg1);
     let premiumTier;
     if (guild1 != null) {
       premiumTier = guild1.premiumTier;
@@ -737,7 +737,6 @@ export const appliedGuildBoostsRequiredForPerks = function appliedGuildBoostsReq
       (arr.length - arr.filter((endsAt) => null != endsAt.endsAt).length)
     );
   }
-  obj = GuildStore;
 };
 export const GuildTierSubscriptionsOrdered = items1;
 export const getGracePeriodEndingDate = function getGracePeriodEndingDate(arr, arg1) {
@@ -819,13 +818,12 @@ export const getAvailableStickerSlotCount = function getAvailableStickerSlotCoun
     return 0;
   } else {
     let num3 = 0;
-    if (null != tmp[index - 1]) {
+    if (null != items[index - 1]) {
       num3 = dependencyMap4[tmp3];
     }
     const _Math = Math;
     return Math.max(0, dependencyMap2[tier] - stickers.slice(num3, dependencyMap4[tier]).length);
   }
-  tmp = items;
 };
 export const getAvailableSoundboardSoundCount = function getAvailableSoundboardSoundCount(premiumFeatures, arg1, arg2) {
   if (-1 === items.indexOf(arg2)) {

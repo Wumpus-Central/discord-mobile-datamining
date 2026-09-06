@@ -144,7 +144,7 @@ export default noop.memo(function ChannelsScreen(searchContext) {
         let tmp = closure_0;
         let tmp3 = closure_0;
         if (channel.isGuildStageVoice()) {
-          tmp3 = tmp2;
+          tmp3 = closure_1;
         }
         let arr = tmp3[channel.id];
         if (arr == null) {
@@ -152,7 +152,7 @@ export default noop.memo(function ChannelsScreen(searchContext) {
         }
         channel2 = channel2.channel;
         if (channel2.isGuildStageVoice()) {
-          tmp = tmp2;
+          tmp = closure_1;
         }
         let arr2 = tmp[channel2.id];
         if (arr2 == null) {
@@ -191,16 +191,11 @@ export default noop.memo(function ChannelsScreen(searchContext) {
     }
     if (!stateFromStores3) {
       if (0 === items.length) {
-        let num2 = 0;
-        if (0 < fullscreenPlaceholderCount) {
-          do {
-            let obj1 = { type: null, key: null };
-            obj1.type = stateFromStores3.MESSAGE_PLACEHOLDER;
-            let _HermesInternal = HermesInternal;
-            obj1.key = "message-placeholder-" + num2;
-            arr1 = items.push(obj1);
-            num2 = num2 + 1;
-          } while (num2 < fullscreenPlaceholderCount);
+        for (let num2 = 0; num2 < fullscreenPlaceholderCount; num2 = num2 + 1) {
+          let obj1 = { type: stateFromStores3.MESSAGE_PLACEHOLDER, key: null };
+          let _HermesInternal = HermesInternal;
+          obj1.key = "message-placeholder-" + num2;
+          arr1 = items.push(obj1);
         }
       }
     }

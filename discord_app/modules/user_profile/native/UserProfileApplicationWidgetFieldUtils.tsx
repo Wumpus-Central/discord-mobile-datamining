@@ -20,12 +20,12 @@ let closure_6 = createStyles.createStyles(createStyles);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/native/UserProfileApplicationWidgetFieldUtils.tsx");
 
-export const formatDurationNarrow = function formatDurationNarrow(arg0) {
+export const formatDurationNarrow = function formatDurationNarrow(value) {
   let num = 0;
-  if (Number.isFinite(arg0)) {
+  if (Number.isFinite(value)) {
     const _Math = Math;
     const _Math2 = Math;
-    num = Math.max(0, Math.floor(arg0));
+    num = Math.max(0, Math.floor(value));
   }
   const rounded = Math.floor(num / 3600000);
   const result = Math.floor(num / 60000) % 60;
@@ -73,11 +73,10 @@ export const FieldText = function FieldText(arg0) {
       const obj3 = { uri: field.icon.url };
       obj.source = obj3;
       obj.style = tmp.fieldIcon;
-      tmp11Result = tmp11(React2, obj);
+      tmp11Result = React4(React2, obj);
     }
     items[1] = tmp11Result;
     obj.children = items;
     tmp9Result = hasOwnProperty(React3, obj);
-    tmp11 = React4;
   }
 };

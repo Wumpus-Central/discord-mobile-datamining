@@ -101,7 +101,7 @@ let closure_19 = noop.memo((searchContext) => {
     isInitialSearchQuery.useState(() => SearchHistoryStore.getSearchHistory(searchContext)),
     2,
   );
-  let tmp3 = messages(
+  const tmp3 = messages(
     isInitialSearchQuery.useState(() => SearchHistoryStore.getSearchHistory(searchContext)),
     2,
   );
@@ -119,14 +119,14 @@ let closure_19 = noop.memo((searchContext) => {
     }, items1),
   );
   c6 = tmp4;
-  let tmp6 = onJumpToMedia(suggestedData[22])(searchContext.width);
+  const tmp6 = onJumpToMedia(suggestedData[22])(searchContext.width);
   const mediaSize = tmp6;
   const items2 = [messages, searchContext];
   const memo = isInitialSearchQuery.useMemo(() => {
     if (null != messages) {
-      if (0 !== arr.length) {
+      if (0 !== messages.length) {
         const items = [];
-        const obj2 = arr[Symbol.iterator]();
+        const obj2 = messages[Symbol.iterator]();
         while (obj2 !== undefined) {
           let obj = SearchPlatformUtils;
           let items1 = [tmp2];
@@ -178,16 +178,11 @@ let closure_19 = noop.memo((searchContext) => {
     const items = [];
     if (!isInitialSearchQuery) {
       if (0 === items.length) {
-        let num3 = 0;
-        if (0 < fullscreenPlaceholderCount) {
-          do {
-            let obj = { type: null, key: null };
-            obj.type = constants.MESSAGE_PLACEHOLDER;
-            let _HermesInternal = HermesInternal;
-            obj.key = "message-placeholder-" + num3;
-            let arr = items.push(obj);
-            num3 = num3 + 1;
-          } while (num3 < fullscreenPlaceholderCount);
+        for (let num3 = 0; num3 < fullscreenPlaceholderCount; num3 = num3 + 1) {
+          let obj = { type: constants.MESSAGE_PLACEHOLDER, key: null };
+          let _HermesInternal = HermesInternal;
+          obj.key = "message-placeholder-" + num3;
+          let arr = items.push(obj);
         }
         return items;
       }
@@ -259,7 +254,7 @@ let closure_20 = noop.memo((searchContext) => {
   _require = asyncGeneratorStep(async (searchContext) => {
     c3 = 0;
     c4 = 0;
-    return (async (arg0, value) => {
+    return (async (arg0) => {
       if (c4 === 2) {
         c4 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -409,12 +404,12 @@ export default noop.memo(function RecentScreenContainer(arg0) {
   if (SearchTypes.DMS === type) {
     let obj = { searchContext, onJumpToMedia, width };
     return <closure_20 searchContext={searchContext} onJumpToMedia={onJumpToMedia} width={width} />;
-  } else if (tmp.GUILD === type) {
+  } else if (SearchTypes.GUILD === type) {
     obj = { searchContext, onJumpToMedia, width };
     return <closure_21 searchContext={searchContext} onJumpToMedia={onJumpToMedia} width={width} />;
   } else {
-    if (tmp.GUILD_CHANNEL !== type) {
-      if (tmp.CHANNEL !== type) {
+    if (SearchTypes.GUILD_CHANNEL !== type) {
+      if (SearchTypes.CHANNEL !== type) {
         return null;
       }
     }

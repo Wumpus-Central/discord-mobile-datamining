@@ -33,7 +33,7 @@ function maybeGetParticipants(id) {
       if (channel.isGuildStageVoice()) {
         const guild_id = channel.guild_id;
         if (!set.has(guild_id)) {
-          obj.add(guild_id);
+          set.add(guild_id);
           const values = _modDef12(ChannelStore.getMutableGuildChannelsForGuild(guild_id)).values();
           const item = values.forEach((isGuildStageVoice) => {
             let tmp = null != isGuildStageVoice && isGuildStageVoice.isGuildStageVoice();
@@ -62,7 +62,6 @@ function maybeGetParticipants(id) {
           tmp10 = tmp12;
         }
         tmp2 = tmp10;
-        obj = set;
       }
     }
     return tmp2;
@@ -114,10 +113,9 @@ function updateParticipant(arg0) {
           } else {
             flag = true;
             if (null == map.get(channel.id)) {
-              const result = obj4.set(channel.id, channel);
+              const result = map.set(channel.id, channel);
               flag = true;
             }
-            obj4 = map;
           }
         }
       }
@@ -169,10 +167,9 @@ function handleUserUpdate(user) {
           } else {
             flag = true;
             if (null == map.get(channel.id)) {
-              const result = obj4.set(channel.id, channel);
+              const result = map.set(channel.id, channel);
               flag = true;
             }
-            obj4 = map;
           }
         }
       }
@@ -219,10 +216,9 @@ function handleRelationshipUpdate(relationship) {
           } else {
             flag = true;
             if (null == map.get(channel.id)) {
-              const result = obj4.set(channel.id, channel);
+              const result = map.set(channel.id, channel);
               flag = true;
             }
-            obj4 = map;
           }
         }
       }
@@ -284,10 +280,9 @@ function handleStreamClose(streamKey) {
             } else {
               flag = true;
               if (null == map.get(channel.id)) {
-                const result = obj4.set(channel.id, channel);
+                const result = map.set(channel.id, channel);
                 flag = true;
               }
-              obj4 = map;
             }
           }
         }
@@ -484,10 +479,9 @@ const stageChannelParticipantStore = new StageChannelParticipantStore(Dispatcher
                     } else {
                       flag = true;
                       if (null == map.get(channel.id)) {
-                        const result = obj4.set(channel.id, channel);
+                        const result = map.set(channel.id, channel);
                         flag = true;
                       }
-                      obj4 = map;
                     }
                   }
                 }
@@ -587,10 +581,9 @@ const stageChannelParticipantStore = new StageChannelParticipantStore(Dispatcher
                       } else {
                         flag = true;
                         if (null == map.get(channel.id)) {
-                          const result = obj4.set(channel.id, channel);
+                          const result = map.set(channel.id, channel);
                           flag = true;
                         }
-                        obj4 = map;
                       }
                     }
                   }
@@ -628,10 +621,9 @@ const stageChannelParticipantStore = new StageChannelParticipantStore(Dispatcher
                       } else {
                         flag = true;
                         if (null == map.get(channel.id)) {
-                          const result = obj4.set(channel.id, channel);
+                          const result = map.set(channel.id, channel);
                           flag = true;
                         }
-                        obj4 = map;
                       }
                     }
                   }
@@ -692,7 +684,7 @@ const stageChannelParticipantStore = new StageChannelParticipantStore(Dispatcher
             tmp4 = _modDef1332(isGuildStageVoice.permissionOverwrites, value.permissionOverwrites);
           }
           if (!tmp4) {
-            arr.push(isGuildStageVoice.id);
+            arr = arr.push(isGuildStageVoice.id);
             const result = secondaryIndexMap.set(isGuildStageVoice.id, isGuildStageVoice);
           }
           return arr;
@@ -730,10 +722,9 @@ const stageChannelParticipantStore = new StageChannelParticipantStore(Dispatcher
             } else {
               flag = true;
               if (null == map.get(channel.id)) {
-                const result = obj4.set(channel.id, channel);
+                const result = map.set(channel.id, channel);
                 flag = true;
               }
-              obj4 = map;
             }
           }
         }
@@ -783,10 +774,9 @@ const stageChannelParticipantStore = new StageChannelParticipantStore(Dispatcher
               } else {
                 flag = true;
                 if (null == map.get(channel.id)) {
-                  const result = obj4.set(channel.id, channel);
+                  const result = map.set(channel.id, channel);
                   flag = true;
                 }
-                obj4 = map;
               }
             }
           }
@@ -836,10 +826,9 @@ const stageChannelParticipantStore = new StageChannelParticipantStore(Dispatcher
               } else {
                 flag = true;
                 if (null == map.get(channel.id)) {
-                  const result = obj4.set(channel.id, channel);
+                  const result = map.set(channel.id, channel);
                   flag = true;
                 }
-                obj4 = map;
               }
             }
           }

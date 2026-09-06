@@ -4,6 +4,7 @@ import util from "../../../intl/index.native.tsx";
 import PlatformUtils from "../../../utils/PlatformUtils.tsx";
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
 import dismissible_content from "../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
+import DismissibleContentUnsafeUtils from "../../dismissible_content/DismissibleContentUnsafeUtils.tsx";
 import _mod11102 from "../../../../discord_assets/assets/virtual_currency/images/native/balancePromotion_bg_animated.mp4.js";
 import _mod11103 from "../../../../discord_assets/assets/virtual_currency/images/native/balancePromotion_bg_static.png.js";
 import _mod11104 from "../../../../discord_assets/assets/virtual_currency/images/native/balancePromotion_rewards.png.js";
@@ -57,7 +58,13 @@ let closure_12 = createStyles.createStyles((color) => {
   }
   obj1.lineHeight = num;
   obj.balanceText = obj1;
-  const size = { width: "100%", height: "100%", alignItems: "center", flex: 1, marginBottom: tmp(576).space.PX_16 };
+  const size = {
+    width: "100%",
+    height: "100%",
+    alignItems: "center",
+    flex: 1,
+    marginBottom: nativeDefault.space.PX_16,
+  };
   obj.content = size;
   obj5 = PlatformUtils;
   obj.header = {
@@ -71,19 +78,19 @@ let closure_12 = createStyles.createStyles((color) => {
   const size1 = {
     width: 32,
     height: 32,
-    backgroundColor: tmp(576).colors.REDESIGN_BUTTON_TERTIARY_BACKGROUND,
-    borderRadius: tmp(576).radii.round,
+    backgroundColor: nativeDefault.colors.REDESIGN_BUTTON_TERTIARY_BACKGROUND,
+    borderRadius: nativeDefault.radii.round,
     justifyContent: "center",
     alignItems: "center",
   };
   obj.infoIconBackground = size1;
-  const rect = { position: "absolute", left: tmp(576).space.PX_16, top: tmp(576).space.PX_16, zIndex: 10 };
+  const rect = { position: "absolute", left: nativeDefault.space.PX_16, top: nativeDefault.space.PX_16, zIndex: 10 };
   obj.infoIconContainer = rect;
-  const rect1 = { position: "absolute", top: 0, left: 0, right: 0, borderRadius: tmp(576).radii.xl, bottom: -100 };
+  const rect1 = { position: "absolute", top: 0, left: 0, right: 0, borderRadius: nativeDefault.radii.xl, bottom: -100 };
   obj.promotionalBackground = rect1;
   obj.promotionalBackgroundContainer = { flex: 1, height: 428 };
   obj.promotionalBannerAsset = { width: "100%", height: "100%" };
-  const size2 = { width: "100%", height: 144, gap: tmp(576).space.PX_12, marginBottom: tmp(576).space.PX_64 };
+  const size2 = { width: "100%", height: 144, gap: nativeDefault.space.PX_12, marginBottom: nativeDefault.space.PX_64 };
   obj.promotionalBannerContainer = size2;
   obj.promotionalBannerText = {
     color,
@@ -110,9 +117,6 @@ export default function _default(balance) {
   const enabled = noop.useContext(num(ref[11]).AccessibilityPreferencesContext).reducedMotion.enabled;
   const items = [num];
   const memo = noop.useMemo(() => {
-    if (num == null) {
-      num = 0;
-    }
     let tmp = null;
     if (num > 4100) {
       const obj = {
@@ -141,12 +145,13 @@ export default function _default(balance) {
       )
     ) {
       obj = { dismissAction: ContentDismissActionType.AUTO_DISMISS };
-      const result = tmp3(4380).UNSAFE_markDismissibleContentAsDismissed(
-        tmp3(1943).DismissibleContent.VIRTUAL_CURRENCY_MOBILE_ONBOARDING_PILL,
+      const result = DismissibleContentUnsafeUtils.UNSAFE_markDismissibleContentAsDismissed(
+        dismissible_content.DismissibleContent.VIRTUAL_CURRENCY_MOBILE_ONBOARDING_PILL,
         obj,
       );
-      const tmp3Result = tmp3(4380);
+      const tmp3Result = DismissibleContentUnsafeUtils;
     }
+    obj3 = DismissibleContentUnsafeUtils;
   }, []);
   obj = { theme: themeOverride, children: null };
   obj = {
@@ -181,21 +186,21 @@ export default function _default(balance) {
         }
       },
     };
-    items2[1] = tmp11(tmp3(tmp4[21]).ActionSheetHeaderBar, obj2);
-    const obj3 = { style: tmp9.infoIconContainer, children: null };
+    items2[1] = closure_10(tmp3(tmp4[21]).ActionSheetHeaderBar, obj2);
+    let obj3 = { style: tmp9.infoIconContainer, children: null };
     const obj4 = { onPress: callback, accessibilityRole: "link", accessibilityLabel: null, children: null };
     let intl = tmp3(tmp4[8]).intl;
     obj4.accessibilityLabel = intl.string(tmp3(tmp4[8]).t.B1oJtQ);
     const obj5 = { style: tmp9.infoIconBackground, children: null };
-    const obj6 = { size: "sm", color: tmp7(tmp4[13]).colors.INTERACTIVE_TEXT_DEFAULT };
-    obj5.children = tmp11(tmp3(tmp4[22]).CircleQuestionIcon, obj6);
-    obj4.children = tmp11(tmp13, obj5);
-    obj3.children = tmp11(closure_5, obj4);
-    items2[2] = tmp11(tmp13, obj3);
+    const obj6 = { size: "sm", color: require("native").colors.INTERACTIVE_TEXT_DEFAULT };
+    obj5.children = closure_10(tmp3(tmp4[22]).CircleQuestionIcon, obj6);
+    obj4.children = closure_10(closure_4, obj5);
+    obj3.children = closure_10(closure_5, obj4);
+    items2[2] = closure_10(closure_4, obj3);
     const obj7 = { style: tmp9.header, children: null };
     const obj8 = { style: tmp9.balanceHeader, children: null };
     const obj9 = { size: "lg", color: token };
-    const items3 = [tmp11(tmp3(tmp4[23]).OrbsIcon, obj9)];
+    const items3 = [closure_10(tmp3(tmp4[23]).OrbsIcon, obj9)];
     const obj10 = { variant: "display-md", style: tmp9.balanceText, accessibilityLabel: null, children: null };
     const intl2 = tmp3(tmp4[8]).intl;
     let num2 = num;
@@ -208,10 +213,10 @@ export default function _default(balance) {
       num = 0;
     }
     obj10.children = num;
-    items3[1] = tmp11(tmp3(tmp4[24]).Text, obj10);
+    items3[1] = closure_10(tmp3(tmp4[24]).Text, obj10);
     obj8.children = items3;
-    obj7.children = tmp12(tmp13, obj8);
-    items2[3] = tmp11(tmp13, obj7);
+    obj7.children = closure_11(closure_4, obj8);
+    items2[3] = closure_10(closure_4, obj7);
     let tmp12Result = null != memo && null != memo.bannerImage;
     if (tmp12Result) {
       const obj12 = { style: tmp9.promotionalBannerContainer, children: null };
@@ -219,37 +224,37 @@ export default function _default(balance) {
       const obj14 = { uri: memo.bannerImage };
       obj13.source = obj14;
       obj13.style = tmp9.promotionalBannerAsset;
-      const items4 = [tmp11(tmp7(tmp4[19]), obj13)];
+      const items4 = [closure_10(require("FastImage"), obj13)];
       let tmp11Result = null != memo.bannerText;
       if (tmp11Result) {
         tmp11Result = "" !== memo.bannerText;
       }
       if (tmp11Result) {
         const obj15 = { variant: "heading-xl/medium", style: tmp9.promotionalBannerText, children: memo.bannerText };
-        tmp11Result = tmp11(tmp3(tmp4[24]).Text, obj15);
+        tmp11Result = closure_10(tmp3(tmp4[24]).Text, obj15);
       }
       items4[1] = tmp11Result;
       obj12.children = items4;
-      tmp12Result = tmp12(tmp13, obj12);
+      tmp12Result = closure_11(closure_4, obj12);
     }
     items2[4] = tmp12Result;
     const obj16 = { style: tmp9.actions, children: null };
     ({ buttonText: obj25.text, onButtonPress: obj25.onPress } = primaryButtonConfig);
-    const items5 = [tmp11(tmp3(tmp4[25]).Button, { text: null, variant: "primary", size: "lg", onPress: null })];
+    const items5 = [closure_10(tmp3(tmp4[25]).Button, { text: null, variant: "primary", size: "lg", onPress: null })];
     ({ buttonText: obj26.text, onButtonPress: obj26.onPress } = secondaryButtonConfig);
-    items5[1] = tmp11(tmp3(tmp4[25]).Button, { text: null, variant: "tertiary", size: "lg", onPress: null });
+    items5[1] = closure_10(tmp3(tmp4[25]).Button, { text: null, variant: "tertiary", size: "lg", onPress: null });
     obj16.children = items5;
-    items2[5] = tmp12(tmp13, obj16);
+    items2[5] = closure_11(closure_4, obj16);
     obj1.children = items2;
-    obj.children = tmp12(tmp13, obj1);
-    obj.children = tmp11(tmp3(tmp4[18]).BottomSheet, obj);
-    return tmp11(tmp3(tmp4[17]).ThemeContextProvider, obj);
+    obj.children = closure_11(closure_4, obj1);
+    obj.children = closure_10(tmp3(tmp4[18]).BottomSheet, obj);
+    return closure_10(tmp3(tmp4[17]).ThemeContextProvider, obj);
   } else if (enabled) {
     const obj19 = { source: null, style: null, resizeMode: "cover" };
     const obj20 = { uri: memo.backgroundImage };
     obj19.source = obj20;
     obj19.style = tmp9.promotionalBackground;
-    tmp11Result = tmp11(tmp7(tmp4[19]), obj19);
+    tmp11Result = closure_10(require("FastImage"), obj19);
   } else {
     const obj21 = {
       source: null,
@@ -268,6 +273,8 @@ export default function _default(balance) {
     obj21.poster = memo.backgroundImage;
     obj21.style = tmp9.promotionalBackground;
     obj21.paused = enabled;
-    tmp11Result = tmp11(tmp3(tmp4[20]).VideoComponent, obj21);
+    tmp11Result = closure_10(tmp3(tmp4[20]).VideoComponent, obj21);
   }
+  let tmp3Result = num(ref[12]);
+  tmp6 = undefined === themeOverride && null != memo;
 }

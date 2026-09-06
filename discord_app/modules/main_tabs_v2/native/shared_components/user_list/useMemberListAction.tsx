@@ -44,11 +44,11 @@ export default function useMemberListAction(channel) {
   stateFromStores = channel(stateFromStores[11]).useStateFromStores(items, () => {
     let isDMResult;
     if (channel != null) {
-      isDMResult = obj.isDM();
+      isDMResult = channel.isDM();
     }
     let tmp2 = null;
     if (isDMResult) {
-      const user = UserStore.getUser(obj.getRecipientId());
+      const user = UserStore.getUser(channel.getRecipientId());
       let username;
       if (user != null) {
         username = user.username;
@@ -150,28 +150,30 @@ export default function useMemberListAction(channel) {
                   callback.MEMBER_LIST,
                 );
                 if ("open" === groupDMAddMembersAction) {
-                  let tmp8Result = tmp8(tmp9[20]);
+                  let tmp8Result = channel(stateFromStores[20]);
                   if (
                     tmp8Result.UNSAFE_isDismissibleContentDismissed(
-                      tmp8(tmp9[21]).DismissibleContent.GDM_INVITE_REMINDER,
+                      channel(stateFromStores[21]).DismissibleContent.GDM_INVITE_REMINDER,
                     )
                   ) {
                     onClick();
                   } else {
                     const obj = { onClick };
-                    closure_1(tmp9[22])(obj);
+                    closure_1(stateFromStores[22])(obj);
                   }
                 } else {
-                  tmp8Result = tmp8(tmp9[14]);
-                  const result = tmp8Result.showGroupDMAddMembersRoadblock(groupDMAddMembersAction, tmp10.MEMBER_LIST);
+                  tmp8Result = channel(stateFromStores[14]);
+                  const result = tmp8Result.showGroupDMAddMembersRoadblock(
+                    groupDMAddMembersAction,
+                    callback.MEMBER_LIST,
+                  );
                 }
                 const obj4 = channel(stateFromStores[14]);
-                tmp10 = callback;
               }
             };
             tmp12 = obj;
           } else if (c3) {
-            obj.iconSource = tmp4(tmp5[23]);
+            obj.iconSource = tmp4(stateFromStores[23]);
             obj.IconComponent = channel(stateFromStores[24]).SettingsIcon;
             const intl2 = channel(stateFromStores[17]).intl;
             obj.label = intl2.string(channel(stateFromStores[17]).t.z9Mqln);
@@ -184,7 +186,7 @@ export default function useMemberListAction(channel) {
             };
             tmp12 = obj;
           } else {
-            obj.iconSource = tmp4(tmp5[18]);
+            obj.iconSource = tmp4(stateFromStores[18]);
             obj.IconComponent = channel(stateFromStores[19]).GroupPlusIcon;
             const intl = channel(stateFromStores[17]).intl;
             obj.label = intl.string(channel(stateFromStores[17]).t["Ab/6S0"]);

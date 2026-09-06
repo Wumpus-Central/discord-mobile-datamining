@@ -273,13 +273,12 @@ prototype["getPings"] = function getPings() {
 };
 prototype["getAveragePing"] = function getAveragePing() {
   let num = 0;
-  if (null != closure_3) {
+  if (null != authStore) {
     let averagePing;
-    if (closure_3 != null) {
-      averagePing = obj.getAveragePing();
+    if (authStore != null) {
+      averagePing = authStore.getAveragePing();
     }
     num = averagePing;
-    obj = closure_3;
   }
   return num;
 };
@@ -313,13 +312,13 @@ prototype["getRTCConnectionId"] = function getRTCConnectionId() {
 };
 prototype["getDuration"] = function getDuration() {
   let duration;
-  if (closure_3 != null) {
-    duration = obj.getDuration();
+  if (authStore != null) {
+    duration = authStore.getDuration();
   }
   if (duration == null) {
     let duration1;
-    if (obj != null) {
-      duration1 = obj.duration;
+    if (authStore != null) {
+      duration1 = authStore.duration;
     }
     duration = duration1;
   }
@@ -477,19 +476,18 @@ obj = {
     ({ voiceStates, receivedAt: require } = arg0);
     return voiceStates.reduce((acc, userId) => {
       if (c17 != null) {
-        obj.updateVoiceStates(userId.userId, userId.channelId);
+        c17.updateVoiceStates(userId.userId, userId.channelId);
       }
       let tmp2 = closure_18;
       if (!closure_18) {
         let num;
         if (c17 != null) {
-          num = obj2.getStats().max_voice_state_count;
+          num = c17.getStats().max_voice_state_count;
         }
         if (num == null) {
           num = 0;
         }
         tmp2 = num > 1;
-        obj2 = c17;
       }
       closure_18 = tmp2;
       if (AuthenticationStore.getId() !== userId.userId) {
@@ -518,13 +516,12 @@ obj = {
                 closure_3 = createRTCConnection(userId.guildId, userId.channelId, _require);
                 let num9;
                 if (c17 != null) {
-                  num9 = obj7.getStats().max_voice_state_count;
+                  num9 = c17.getStats().max_voice_state_count;
                 }
                 if (num9 == null) {
                   num9 = 0;
                 }
                 closure_18 = num9 > 1;
-                obj7 = c17;
               }
               tmp26 = userId.guildId !== closure_3.guildId && null == userId.channelId;
             }
@@ -561,20 +558,18 @@ obj = {
               closure_3 = createRTCConnection(userId.guildId, userId.channelId, _require);
               let num5;
               if (c17 != null) {
-                num5 = obj5.getStats().max_voice_state_count;
+                num5 = c17.getStats().max_voice_state_count;
               }
               if (num5 == null) {
                 num5 = 0;
               }
               closure_18 = num5 > 1;
-              obj5 = c17;
             }
           }
           return acc;
         }
         return true;
       }
-      obj = c17;
     }, false);
   },
   VOICE_CHANNEL_SELECT: function handleVoiceChannelSelect(channelId) {

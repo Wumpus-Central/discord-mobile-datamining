@@ -27,9 +27,9 @@ let SettingBuilders = {
     if (null != selectedTeenId) {
       const ParentalControlledFriendSourceFlags = ParentalControlledUserSettings.ParentalControlledFriendSourceFlags;
       if (arg0) {
-        let tmp7 = tmp5;
+        let tmp7 = React4;
       } else {
-        tmp7 = tmp5 & ~constants.NO_RELATION;
+        tmp7 = React4 & ~constants.NO_RELATION;
       }
       const result = ParentalControlledFriendSourceFlags.updateControlledSetting(selectedTeenId, tmp7);
     }

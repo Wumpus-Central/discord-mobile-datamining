@@ -24,16 +24,16 @@ function HomeDrawerDMsRow() {
     obj = { style: tmp.onlineDot };
     const items1 = [React5(View, obj)];
     const obj1 = { variant: "text-xs/medium", color: "text-muted", lineClamp: 1, children: null };
-    const intl = tmp2(1114).intl;
+    const intl = util.intl;
     const obj2 = { numFriends: stateFromStores };
-    obj1.children = intl.format(tmp2(1114).t.N5UIKr, obj2);
-    items1[1] = React5(tmp2(4556).Text, obj1);
+    obj1.children = intl.format(util.t.N5UIKr, obj2);
+    items1[1] = React5(Text_Text.Text, obj1);
     obj.children = items1;
     tmp5 = React6(View, obj);
   }
   const obj3 = { title: null, subtitle: null };
   const obj4 = { variant: "text-md/medium", color: "text-default", lineClamp: 1, children: null };
-  const intl2 = tmp2(1114).intl;
+  const intl2 = util.intl;
   obj4.children = intl2.string(util.t.YUU0RF);
   obj3.title = React5(Text_Text.Text, obj4);
   obj3.subtitle = tmp5;

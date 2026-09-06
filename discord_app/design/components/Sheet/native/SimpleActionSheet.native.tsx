@@ -1,5 +1,7 @@
 // discord_app/design/components/Sheet/native/SimpleActionSheet.native.tsx
+import BottomSheetTitleHeader from "BottomSheetTitleHeader.native.tsx";
 import ActionSheet from "ActionSheet.native.tsx";
+import ActionSheetCloseButton from "ActionSheetCloseButton.native.tsx";
 import ActionSheetRow from "ActionSheetRow.native.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 

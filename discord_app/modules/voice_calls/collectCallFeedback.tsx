@@ -1,6 +1,8 @@
 // discord_app/modules/voice_calls/collectCallFeedback.tsx
 import DispatcherDefault from "../../Dispatcher.tsx";
 import AppAnalyticsUtils from "../app_analytics/AppAnalyticsUtils.tsx";
+import VideoBackgroundUtils from "../video_backgrounds/VideoBackgroundUtils.tsx";
+import LastUsedVideoBackgroundOption from "../video_backgrounds/LastUsedVideoBackgroundOption.tsx";
 import VideoBackgroundStore from "../video_backgrounds/VideoBackgroundStore.tsx";
 import ChannelStore from "../../stores/ChannelStore.tsx";
 import MediaEngineStore from "../../stores/MediaEngineStore.tsx";
@@ -55,7 +57,7 @@ export default function collectCallFeedback(fn, arg1, arg2, videoEnabled) {
         if (VideoBackgroundStore.hasUsedBackgroundInCall) {
           obj = {};
           const merged1 = Object.assign(obj);
-          let tmp5Result = tmp5(9100);
+          let tmp5Result = LastUsedVideoBackgroundOption;
           const lastUsedVideoBackgroundOption = tmp5Result.getLastUsedVideoBackgroundOption(UserStore.getCurrentUser());
           const videoDevices = MediaEngineStore.getVideoDevices();
           const tmp22 = videoDevices[MediaEngineStore.getVideoDeviceId(MediaEngineStore)];
@@ -69,11 +71,11 @@ export default function collectCallFeedback(fn, arg1, arg2, videoEnabled) {
             video_effect_type: null,
             video_effect_detail: null,
           };
-          tmp5Result = tmp5(9097);
+          tmp5Result = VideoBackgroundUtils;
           obj1.video_effect_type = tmp5Result.getEffectAnalyticsType(lastUsedVideoBackgroundOption);
-          obj1.video_effect_detail = tmp5(9097).getEffectDetailAnalyticsName(lastUsedVideoBackgroundOption);
+          obj1.video_effect_detail = VideoBackgroundUtils.getEffectDetailAnalyticsName(lastUsedVideoBackgroundOption);
           const merged2 = Object.assign(obj1);
-          const tmp5Result1 = tmp5(9097);
+          const tmp5Result1 = VideoBackgroundUtils;
           const obj2 = { type: "VIDEO_BACKGROUND_SHOW_FEEDBACK", analyticsData: obj };
           DispatcherDefault.dispatch(obj2);
         } else {

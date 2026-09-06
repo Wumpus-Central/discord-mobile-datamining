@@ -2526,8 +2526,8 @@ export const canUserUse = function canUserUse(COLLECTIBLES, isPremiumWithFractio
         if (isPremiumWithFractionalPremiumOnly != null) {
           perks1 = isPremiumWithFractionalPremiumOnly.perks;
         }
-        const tmp9Result = tmp9(1377);
-        if (config === tmp9(13983).DenormalizedPerksReadConfig.DUAL_READ_RETURN_NEW) {
+        const tmp9Result = closure_0(1377);
+        if (config === closure_0(13983).DenormalizedPerksReadConfig.DUAL_READ_RETURN_NEW) {
           featureValue = hasPerkResult;
         }
         return featureValue;

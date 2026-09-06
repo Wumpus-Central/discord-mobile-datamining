@@ -253,7 +253,7 @@ export default function GuildWelcomeActionSheet(guildId) {
       const items = [];
       const items1 = [];
       has_custom_emojis = false;
-      const welcome_channels = tmp.welcome_channels;
+      const welcome_channels = welcomeScreen.welcome_channels;
       const item = welcome_channels.forEach((description) => {
         items.push(description.description);
         items1.push(description.channel_id);
@@ -266,7 +266,7 @@ export default function GuildWelcomeActionSheet(guildId) {
         guild_id: guildId,
         options: items,
         options_channel_ids: items1,
-        guild_description: tmp.description,
+        guild_description: welcomeScreen.description,
         has_custom_emojis,
       };
       obj.track(constants.GUILD_WELCOME_SCREEN_OPTION_SELECTED, obj);

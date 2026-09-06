@@ -866,7 +866,7 @@ let items = [
   { no: 2, name: "linked_id", kind: "scalar", T: 6 },
   { no: 3, name: "shared_control", kind: "scalar", T: 8 },
 ];
-let tmp8 = new "DEFAULT"(
+const tmp8 = new "DEFAULT"(
   "discord_protos.discord_experimentation.v1.Experiment.NumberLineSettings",
   items,
   tmp5,
@@ -1420,7 +1420,7 @@ const items3 = [
 ];
 const obj13 = { no: 6, name: "decision_log_sample_rate", kind: "scalar", T: 1 };
 items3[5] = obj13;
-let tmp11 = new "internalBinaryRead"(
+const tmp11 = new "internalBinaryRead"(
   "discord_protos.discord_experimentation.v1.DebugConfig",
   items3,
   tmp5,

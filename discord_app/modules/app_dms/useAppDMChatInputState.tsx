@@ -27,8 +27,8 @@ export default function useAppDMChatInputState(context) {
   items = [channel];
   const memo = application.useMemo(() => {
     if (null != channel) {
-      if (true === obj.isDM()) {
-        const user = UserStore.getUser(obj.getRecipientId());
+      if (true === channel.isDM()) {
+        const user = UserStore.getUser(channel.getRecipientId());
         let tmp3 = null;
         if (undefined !== user) {
           tmp3 = null;
@@ -55,8 +55,8 @@ export default function useAppDMChatInputState(context) {
     let tmp2;
     if (null !== memo) {
       let id;
-      if (tmp != null) {
-        id = tmp.id;
+      if (memo != null) {
+        id = memo.id;
       }
       const userProfile = UserProfileStore.getUserProfile(id);
       application = undefined;
@@ -95,10 +95,10 @@ export default function useAppDMChatInputState(context) {
   const effect1 = obj.useEffect(() => {
     let id;
     if (memo != null) {
-      id = tmp.id;
+      id = memo.id;
     }
     if (null != id) {
-      const obj = { type: "APP_DM_OPEN", botUserId: tmp.id };
+      const obj = { type: "APP_DM_OPEN", botUserId: memo.id };
       obj.dispatch(obj);
     }
   }, items4);

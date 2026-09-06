@@ -67,7 +67,7 @@ export default function SettingsPrivacyAndSafetyGuildSelectActionSheet() {
             const obj = { type: first(4792).SelectOptionType.GUILD, value: null, label: null, guild: null };
             ({ id: obj.value, name: obj.label } = guild);
             obj.guild = guild;
-            arr.push(obj);
+            arr = arr.push(obj);
           }
           return arr;
         }, items);
@@ -183,4 +183,5 @@ export default function SettingsPrivacyAndSafetyGuildSelectActionSheet() {
   obj2.label = intl2.string(first(callback[10]).t["32u1Dx"]);
   obj2.value = value;
   selectionActionComponent = obj2;
+  const tmp4Result = first(callback[9]);
 }

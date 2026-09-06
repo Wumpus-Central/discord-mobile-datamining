@@ -65,26 +65,26 @@ export default function QuestDisclosureModalInner(isTargetedDisclosure) {
   const setting = DropsOptedOut.useSetting();
   let obj = { icon: null, text: null };
   if (setting) {
-    obj.icon = tmp5(tmp2(9286).ServerIcon, { size: "xs" });
+    obj.icon = closure_6(tmp2(9286).ServerIcon, { size: "xs" });
     const intl4 = tmp2(1114).intl;
     obj.text = intl4.string(tmp2(1114).t["2bL0wT"]);
     let items = [obj];
-    let tmp6 = tmp5;
+    let tmp6 = closure_6;
     items1 = items;
   } else {
-    obj.icon = tmp5(tmp2(8886).GlobeEarthIcon, { size: "xs" });
+    obj.icon = closure_6(tmp2(8886).GlobeEarthIcon, { size: "xs" });
     const intl = tmp2(1114).intl;
     obj.text = intl.string(tmp2(1114).t.xQSdPv);
     items1 = [obj, ,];
-    obj = { icon: tmp5(tmp2(11825).UserIcon, { size: "xs" }), text: null };
+    obj = { icon: closure_6(tmp2(11825).UserIcon, { size: "xs" }), text: null };
     const intl2 = tmp2(1114).intl;
     obj.text = intl2.string(tmp2(1114).t.mYt7hQ);
     items1[1] = obj;
-    obj = { icon: tmp5(tmp2(9223).GameControllerIcon, { size: "xs" }), text: null };
+    obj = { icon: closure_6(tmp2(9223).GameControllerIcon, { size: "xs" }), text: null };
     const intl3 = tmp2(1114).intl;
     obj.text = intl3.string(tmp2(1114).t.XAsWxQ);
     items1[2] = obj;
-    tmp6 = tmp5;
+    tmp6 = closure_6;
   }
   const obj1 = { style: tmp.container, contentContainerStyle: tmp.contentContainer, children: null };
   const items2 = [
@@ -95,9 +95,6 @@ export default function QuestDisclosureModalInner(isTargetedDisclosure) {
   ];
   const obj3 = { variant: "text-md/normal", color: "mobile-text-heading-primary", children: null };
   const obj2 = { style: tmp.illustration, children: tmp6(require("native").WumpusCouchSpotIllustration, {}) };
-  const tmp7 = closure_7;
-  const tmp8 = closure_3;
-  const tmp9 = closure_4;
   obj3.children = require("QuestCopyUtils").getDisclosureText({
     adCreativeType,
     gamePublisher,
@@ -122,7 +119,7 @@ export default function QuestDisclosureModalInner(isTargetedDisclosure) {
         }
         obj = {
           style: items1,
-          children: tmp3(Text_Text.Text, { variant: "text-md/semibold", children: children.text }),
+          children: timestampProducer(Text_Text.Text, { variant: "text-md/semibold", children: children.text }),
         };
         items1[1] = lastTargetItem;
         items[1] = timestampProducer(React4, obj);
@@ -146,7 +143,7 @@ export default function QuestDisclosureModalInner(isTargetedDisclosure) {
   obj8.text = intl6.string(require("util").t.cpT0Cq);
   obj8.onPress = onClose;
   obj7.children = tmp6(require("components/Button/Button").Button, obj8);
-  items2[4] = tmp6(tmp9, obj7);
+  items2[4] = tmp6(closure_4, obj7);
   obj1.children = items2;
-  return tmp7(tmp8, obj1);
+  return closure_7(closure_3, obj1);
 }

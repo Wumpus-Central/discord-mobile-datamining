@@ -174,8 +174,8 @@ export default function UserSettingsAuthedApp(oauth2Token) {
         let obj = { appDMChannelMuteConfig: null, muted: false };
       } else {
         obj = {
-          appDMChannelMuteConfig: UserGuildSettingsStore.getChannelMuteConfig(null, tmp),
-          muted: UserGuildSettingsStore.isChannelMuted(null, tmp),
+          appDMChannelMuteConfig: UserGuildSettingsStore.getChannelMuteConfig(null, stateFromStores3),
+          muted: UserGuildSettingsStore.isChannelMuted(null, stateFromStores3),
         };
       }
       return obj;
@@ -213,7 +213,7 @@ export default function UserSettingsAuthedApp(oauth2Token) {
         color: "text-default",
         children: tmp4(stringResult[41]).parseBioReactWithCachedAST(description),
       };
-      tmp19Result = tmp19(tmp4(stringResult[15]).Text, obj4);
+      tmp19Result = closure_17(tmp4(stringResult[15]).Text, obj4);
       const tmp4Result = tmp4(stringResult[41]);
     }
   }
@@ -253,7 +253,7 @@ export default function UserSettingsAuthedApp(oauth2Token) {
             if (null != rootNavigationRef) {
               if (rootNavigationRef.isReady()) {
                 let obj = {
-                  channelId: tmp,
+                  channelId: stateFromStores3,
                   applicationId: application.id,
                   initialRouteName: constants2.MUTE,
                   source: "authorized-apps-settings",
@@ -265,7 +265,7 @@ export default function UserSettingsAuthedApp(oauth2Token) {
             obj = NotificationSettingsModalActionCreatorsDefault;
             const result = obj.updateAppDMOverrideSettings(
               null,
-              tmp,
+              stateFromStores3,
               application.id,
               { muted: false },
               NotificationSettingsUtils.NotificationLabels.Unmuted,
@@ -274,9 +274,9 @@ export default function UserSettingsAuthedApp(oauth2Token) {
         }
       },
     };
-    obj7.children = tmp19(tmp4(stringResult[43]).TableSwitchRow, obj8);
-    obj5.children = tmp19(tmp4(stringResult[42]).TableRowGroup, obj7);
-    tmp19Result = tmp19(tmp18, obj5);
+    obj7.children = closure_17(tmp4(stringResult[43]).TableSwitchRow, obj8);
+    obj5.children = closure_17(tmp4(stringResult[42]).TableRowGroup, obj7);
+    tmp19Result = closure_17(tmp18, obj5);
   }
   items10[1] = tmp19Result;
   const obj9 = { style: tmp.section, children: null };
@@ -311,7 +311,7 @@ export default function UserSettingsAuthedApp(oauth2Token) {
     const intl5 = tmp4(stringResult[18]).intl;
     obj12.label = intl5.string(tmp4(stringResult[18]).t["lx+Gec"]);
     obj12.onPress = handleClickToS;
-    tmp19Result1 = tmp19(tmp4(stringResult[44]).TableRow, obj12);
+    tmp19Result1 = closure_17(tmp4(stringResult[44]).TableRow, obj12);
   }
   items11[1] = tmp19Result1;
   let tmp19Result2 = null != application.privacy_policy_url;
@@ -326,7 +326,7 @@ export default function UserSettingsAuthedApp(oauth2Token) {
     const intl6 = tmp4(stringResult[18]).intl;
     obj13.label = intl6.string(tmp4(stringResult[18]).t.okSwq9);
     obj13.onPress = handleClickPrivacyPolicy;
-    tmp19Result2 = tmp19(tmp4(stringResult[44]).TableRow, obj13);
+    tmp19Result2 = closure_17(tmp4(stringResult[44]).TableRow, obj13);
   }
   items11[2] = tmp19Result2;
   obj10.children = items11;
@@ -354,16 +354,16 @@ export default function UserSettingsAuthedApp(oauth2Token) {
     items10[4] = undefined;
     if (shouldWarnAuthorizedAppTwoWay) {
       const obj17 = { application };
-      shouldWarnAuthorizedAppTwoWay = tmp19(AuthorizedAppTwoWay, obj17);
+      shouldWarnAuthorizedAppTwoWay = closure_17(AuthorizedAppTwoWay, obj17);
     }
     items10[5] = shouldWarnAuthorizedAppTwoWay;
     if (tmp19Result3) {
       const obj18 = { application };
-      tmp19Result3 = tmp19(ParentApp, obj18);
+      tmp19Result3 = closure_17(ParentApp, obj18);
     }
     items10[6] = tmp19Result3;
     obj.children = items10;
-    return tmp15(tmp16, obj);
+    return closure_18(tmp16, obj);
   } else {
     const obj19 = { title: null, hasIcons: false, children: null };
     const intl9 = tmp4(stringResult[18]).intl;
@@ -385,9 +385,10 @@ export default function UserSettingsAuthedApp(oauth2Token) {
         return React4(id);
       };
     }
-    obj19.children = tmp19(tmp4(stringResult[44]).TableRow, obj21);
-    tmp19(tmp4(stringResult[42]).TableRowGroup, obj19);
+    obj19.children = closure_17(tmp4(stringResult[44]).TableRow, obj21);
+    closure_17(tmp4(stringResult[42]).TableRowGroup, obj19);
   }
+  const tmp20 = application(stateFromStores[40]);
 }
 export const handleDeleteApp = function handleDeleteApp(application) {
   application = application.application;

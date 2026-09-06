@@ -1,5 +1,7 @@
 // discord_app/modules/collectibles/native/UnlockWithNitroButton.tsx
 import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
+import util from "../../../intl/index.native.tsx";
+import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import BaseTextButton from "../../../design/components/Button/native/BaseTextButton.native.tsx";
 import ProductIds from "../../premium/native/ProductIds.android.tsx";
 import NitroWheelIcon from "../../../design/components/Icon/native/redesign/generated/NitroWheelIcon.tsx";
@@ -31,13 +33,18 @@ export const UnlockWithNitroButton = function UnlockWithNitroButton(shouldShrink
   });
   importDefault = useOpenNitroSubscribeActionSheetDefault();
   if (text == null) {
-    const intl = tmp(1114).intl;
-    text = intl.string(tmp(1114).t.sEAnVH);
+    const intl = util.intl;
+    text = intl.string(util.t.sEAnVH);
   }
   let tmp4Result;
   if (flag) {
     obj = { variant: "text-xs/semibold", color: "text-overlay-light", allowFontScaling: false, children: text };
-    tmp4Result = tmp4(tmp(4556).Text, obj);
+    tmp4Result = jsx(Text_Text.Text, {
+      variant: "text-xs/semibold",
+      color: "text-overlay-light",
+      allowFontScaling: false,
+      children: text,
+    });
   }
   obj = {
     textElement: tmp4Result,

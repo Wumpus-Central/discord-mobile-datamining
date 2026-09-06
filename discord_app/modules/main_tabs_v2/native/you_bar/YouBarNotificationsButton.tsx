@@ -51,13 +51,13 @@ export default noop.memo(function YouBarNotificationsButton(hasNameplate) {
     obj = { scaleX: obj.withSpring(num, YOU_BAR_SPRING_CONFIG) };
     const items = [obj];
     obj.transform = items;
-    let tmpResult = tmp(4974);
+    let tmpResult = spring;
     let num2 = 0;
     if (c0 > 0) {
       num2 = nativeDefault.space.PX_4;
     }
     obj.marginLeft = tmpResult.withSpring(num2, YOU_BAR_SPRING_CONFIG);
-    tmpResult = tmp(4974);
+    tmpResult = spring;
     let num3 = 0;
     if (c0 > 0) {
       num3 = 1;

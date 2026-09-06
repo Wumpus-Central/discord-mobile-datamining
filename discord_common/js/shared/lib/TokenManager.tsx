@@ -66,22 +66,21 @@ function removeToken(__analytics__) {
 function encryptAndStoreTokens() {
   let result;
   if (safeStorage != null) {
-    result = obj.isEncryptionAvailable();
+    result = safeStorage.isEncryptionAvailable();
   }
   if (result) {
-    if (null != tmp2) {
+    if (null != global) {
       let result1;
-      if (obj != null) {
-        result1 = obj.isEncryptionAvailable();
+      if (safeStorage != null) {
+        result1 = safeStorage.isEncryptionAvailable();
       }
-      let combined = obj2;
+      let combined = global;
       if (result1) {
-        combined = obj2;
-        if (!obj2.startsWith(c4)) {
+        combined = global;
+        if (!global.startsWith(c4)) {
           let _HermesInternal = HermesInternal;
-          combined = "" + tmp6 + obj.encryptString(obj2);
+          combined = "" + c4 + safeStorage.encryptString(global);
         }
-        tmp6 = c4;
       }
       closure_8 = combined;
     }
@@ -94,16 +93,15 @@ function encryptAndStoreTokens() {
         const items = [tmp];
         let result;
         if (safeStorage != null) {
-          result = obj2.isEncryptionAvailable();
+          result = safeStorage.isEncryptionAvailable();
         }
         let combined = obj;
         if (result) {
           combined = obj;
           if (!obj.startsWith(closure_1_4)) {
             const _HermesInternal = HermesInternal;
-            combined = "" + tmp4 + obj2.encryptString(obj);
+            combined = "" + closure_1_4 + safeStorage.encryptString(obj);
           }
-          tmp4 = closure_1_4;
         }
         items[1] = combined;
         return items;
@@ -117,7 +115,7 @@ function encryptAndStoreTokens() {
     }, {});
     c9 = true;
   } else {
-    closure_8 = tmp2;
+    closure_8 = global;
     closure_11 = closure_10;
   }
   if (c12) {
@@ -151,9 +149,9 @@ const dependencyMap = {};
 let closure_11 = {};
 let c12 = false;
 let c13 = false;
-function getToken(arg0) {
-  if (null != arg0) {
-    let tmp = dependencyMap[arg0];
+function getToken(id) {
+  if (null != id) {
+    let tmp = dependencyMap[id];
   } else {
     tmp = global;
   }

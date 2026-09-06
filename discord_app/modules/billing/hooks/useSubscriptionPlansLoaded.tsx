@@ -5,7 +5,7 @@ import SubscriptionPlanStore from "../../../stores/billing/SubscriptionPlanStore
 import SubscriptionStore from "../../../stores/billing/SubscriptionStore.tsx";
 
 const require = fn;
-function getSubscriptionPlansLoaded(items, items2) {
+function getSubscriptionPlansLoaded() {
   let tmp = items;
   if (items === undefined) {
     items = [];

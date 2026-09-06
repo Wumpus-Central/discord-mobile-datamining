@@ -119,7 +119,7 @@ let prototype = function NewUserManager() {
     },
   };
   closure_129_1 = applyArgumentsResult;
-  closure_129_0 = asyncGeneratorStep(async (arg0, value) => {
+  closure_129_0 = asyncGeneratorStep(async (arg0) => {
     if (c6 === 2) {
       c6 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -154,12 +154,12 @@ let prototype = function NewUserManager() {
               flag = false;
             }
             closure_131_0 = flag;
-            let flag2 = tmp82.skipAttempt;
+            let flag2 = applyArgumentsResult.skipAttempt;
             if (flag2 === undefined) {
               flag2 = false;
             }
             closure_131_1 = flag2;
-            let flag3 = tmp82.back;
+            let flag3 = applyArgumentsResult.back;
             if (flag3 === undefined) {
               flag3 = false;
             }

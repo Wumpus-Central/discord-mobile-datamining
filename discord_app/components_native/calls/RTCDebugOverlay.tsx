@@ -137,7 +137,7 @@ function RTCDebugContext(context) {
             title: "inbound",
             children: keys.map((userId) => closure_2_14(closure_2_23, { userId, data: inbound[userId] }, userId)),
           };
-          tmp6Result = closure_2_14(tmp2, obj2);
+          tmp6Result = closure_2_14(Section, obj2);
         }
         items[3] = tmp6Result;
         obj.children = items;

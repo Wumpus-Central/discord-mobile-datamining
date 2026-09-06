@@ -74,7 +74,7 @@ export default function StageSectionHeader(collapsed) {
   let tmp5Result = null != children;
   if (tmp5Result) {
     const obj3 = { style: tmp.children, children };
-    tmp5Result = tmp5(tmp6, obj3);
+    tmp5Result = closure_6(closure_4, obj3);
   }
   items1[1] = tmp5Result;
   const obj4 = { style: tmp.collapseButton, children: null };

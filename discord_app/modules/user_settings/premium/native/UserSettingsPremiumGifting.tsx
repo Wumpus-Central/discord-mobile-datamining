@@ -163,12 +163,12 @@ export default noop.forwardRef(function UserSettingsPremiumGifting(arg0, ref) {
       obj6 = { title: null };
       const intl = tmp6(tmp4[31]).intl;
       obj6.title = intl.string(tmp3(tmp4[39]).sFokBp);
-      obj5.children = tmp19(GiftingSectionTitle, obj6);
-      const items5 = [tmp19(tmp18, obj5)];
+      obj5.children = closure_14(GiftingSectionTitle, obj6);
+      const items5 = [closure_14(closure_6, obj5)];
       const obj7 = { analyticsLocation };
-      items5[1] = tmp19(tmp3(tmp4[40]), obj7);
+      items5[1] = closure_14(tmp3(tmp4[40]), obj7);
       obj4.children = items5;
-      enabled = tmp17(closure_16, obj4);
+      enabled = closure_15(closure_16, obj4);
     }
     const items6 = [enabled, ,];
     if (tmp13) {
@@ -179,7 +179,7 @@ export default noop.forwardRef(function UserSettingsPremiumGifting(arg0, ref) {
           if (0 === keys.length) {
             const obj8 = { style: tmp2.emptyGiftLinks, children: null };
             const obj9 = { style: tmp2.emptyImage, source: tmp3(tmp4[29]) };
-            const items7 = [tmp19(c5, obj9)];
+            const items7 = [closure_14(c5, obj9)];
             const obj10 = { style: tmp2.emptyGiftDescription, accessible: true, children: null };
             const obj11 = {
               style: tmp2.emptyGiftHeader,
@@ -189,7 +189,7 @@ export default noop.forwardRef(function UserSettingsPremiumGifting(arg0, ref) {
             };
             const intl3 = tmp6(tmp4[31]).intl;
             obj11.children = intl3.string(tmp6(tmp4[31]).t.B1qgZn);
-            const items8 = [tmp19(tmp6(tmp4[30]).Text, obj11)];
+            const items8 = [closure_14(tmp6(tmp4[30]).Text, obj11)];
             const obj12 = {
               style: tmp2.emptyGiftInformation,
               variant: "text-sm/medium",
@@ -198,11 +198,11 @@ export default noop.forwardRef(function UserSettingsPremiumGifting(arg0, ref) {
             };
             const intl4 = tmp6(tmp4[31]).intl;
             obj12.children = intl4.string(tmp6(tmp4[31]).t["OV/u0n"]);
-            items8[1] = tmp19(tmp6(tmp4[30]).Text, obj12);
+            items8[1] = closure_14(tmp6(tmp4[30]).Text, obj12);
             obj10.children = items8;
-            items7[1] = tmp17(tmp18, obj10);
+            items7[1] = closure_15(closure_6, obj10);
             obj8.children = items7;
-            let tmp17Result = tmp17(tmp18, obj8);
+            let tmp17Result = closure_15(closure_6, obj8);
           }
           const obj13 = { style: tmp2.inventorySectionWrapper, children: null };
           tmp17Result = null;
@@ -212,9 +212,9 @@ export default noop.forwardRef(function UserSettingsPremiumGifting(arg0, ref) {
             const obj16 = { title: null };
             const intl8 = tmp6(tmp4[31]).intl;
             obj16.title = intl8.string(tmp6(tmp4[31]).t.wFsj3B);
-            obj15.children = tmp19(GiftingSectionTitle, obj16);
+            obj15.children = closure_14(GiftingSectionTitle, obj16);
             const items9 = [
-              tmp19(tmp18, obj15),
+              closure_14(closure_6, obj15),
               claimedEndedOutboundPromotions.map((code) => {
                 const outboundPromotion = code.promotion;
                 return closure_1_14(
@@ -232,7 +232,7 @@ export default noop.forwardRef(function UserSettingsPremiumGifting(arg0, ref) {
               ),
             ];
             obj14.children = items9;
-            tmp17Result = tmp17(closure_16, obj14);
+            tmp17Result = closure_15(closure_16, obj14);
           }
           const items10 = [tmp17Result];
           let tmp17Result1 = null;
@@ -242,9 +242,9 @@ export default noop.forwardRef(function UserSettingsPremiumGifting(arg0, ref) {
             const obj19 = { title: null };
             const intl2 = tmp6(tmp4[31]).intl;
             obj19.title = intl2.string(tmp6(tmp4[31]).t["9KeUbY"]);
-            obj18.children = tmp19(GiftingSectionTitle, obj19);
+            obj18.children = closure_14(GiftingSectionTitle, obj19);
             const items11 = [
-              tmp19(tmp18, obj18),
+              closure_14(closure_6, obj18),
               keys.map((item) => {
                 let obj = GiftCodeUtils;
                 ({ skuId, subscriptionPlanId, giftStyle } = obj.parseComboId(item));
@@ -253,11 +253,11 @@ export default noop.forwardRef(function UserSettingsPremiumGifting(arg0, ref) {
               }),
             ];
             obj17.children = items11;
-            tmp17Result1 = tmp17(closure_16, obj17);
+            tmp17Result1 = closure_15(closure_16, obj17);
           }
           items10[1] = tmp17Result1;
           obj13.children = items10;
-          tmp17Result = tmp17(tmp18, obj13);
+          tmp17Result = closure_15(closure_6, obj13);
         }
       }
     }
@@ -285,14 +285,14 @@ export default noop.forwardRef(function UserSettingsPremiumGifting(arg0, ref) {
       }
       const intl5 = tmp6(tmp4[31]).intl;
       obj23.title = intl5.string(tmp6(tmp4[31]).t["55Ccy0"]);
-      const items12 = [tmp19(GiftingSectionTitle, obj23), , ,];
+      const items12 = [closure_14(GiftingSectionTitle, obj23), , ,];
       const obj24 = { premiumType: closure_12.TIER_2, style: tmp2.tierCard, children: null };
       let tmp3Result = tmp3(tmp4[34]);
       const obj25 = { style: tmp2.cardText, variant: "text-sm/medium", color: "text-default", children: null };
       const intl6 = tmp6(tmp4[31]).intl;
       const obj26 = { onClick: handleLearnMorePremiumClick };
       obj25.children = intl6.format(tmp6(tmp4[31]).t.thORji, obj26);
-      const items13 = [tmp19(tmp6(tmp4[30]).Text, obj25)];
+      const items13 = [closure_14(tmp6(tmp4[30]).Text, obj25)];
       const obj27 = { style: tmp2.buttonWrapper, children: null };
       const obj28 = {
         recipientUserId,
@@ -301,7 +301,7 @@ export default noop.forwardRef(function UserSettingsPremiumGifting(arg0, ref) {
         planId: closure_13.PREMIUM_YEAR_TIER_2,
         analyticsLocation,
       };
-      const items14 = [tmp19(tmp3(tmp4[35]), obj28)];
+      const items14 = [closure_14(tmp3(tmp4[35]), obj28)];
       const obj29 = {
         recipientUserId,
         style: tmp2.giftPurchaseButton,
@@ -309,13 +309,13 @@ export default noop.forwardRef(function UserSettingsPremiumGifting(arg0, ref) {
         planId: closure_13.PREMIUM_MONTH_TIER_2,
         analyticsLocation,
       };
-      items14[1] = tmp19(tmp3(tmp4[35]), obj29);
+      items14[1] = closure_14(tmp3(tmp4[35]), obj29);
       obj27.children = items14;
-      items13[1] = tmp17(tmp18, obj27);
+      items13[1] = closure_15(closure_6, obj27);
       obj24.children = items13;
-      items12[1] = tmp17(tmp3Result, obj24);
+      items12[1] = closure_15(tmp3Result, obj24);
       const obj30 = { style: tmp2.warningMargins };
-      items12[2] = tmp19(tmp3(tmp4[36]), obj30);
+      items12[2] = closure_14(tmp3(tmp4[36]), obj30);
       const obj31 = { children: null };
       const obj32 = { premiumType: closure_12.TIER_0, style: tmp2.tierCard, children: null };
       tmp3Result = tmp3(tmp4[34]);
@@ -323,7 +323,7 @@ export default noop.forwardRef(function UserSettingsPremiumGifting(arg0, ref) {
       const intl7 = tmp6(tmp4[31]).intl;
       const obj34 = { onClick: handleLearnMoreNitroBasicClick };
       obj33.children = intl7.format(tmp6(tmp4[31]).t.NmpnsP, obj34);
-      const items15 = [tmp19(tmp6(tmp4[30]).Text, obj33)];
+      const items15 = [closure_14(tmp6(tmp4[30]).Text, obj33)];
       const obj35 = { style: tmp2.buttonWrapper, children: null };
       const obj36 = {
         recipientUserId,
@@ -332,7 +332,7 @@ export default noop.forwardRef(function UserSettingsPremiumGifting(arg0, ref) {
         planId: closure_13.PREMIUM_YEAR_TIER_0,
         analyticsLocation,
       };
-      const items16 = [tmp19(tmp3(tmp4[35]), obj36)];
+      const items16 = [closure_14(tmp3(tmp4[35]), obj36)];
       const obj37 = {
         recipientUserId,
         style: tmp2.giftPurchaseButton,
@@ -340,23 +340,23 @@ export default noop.forwardRef(function UserSettingsPremiumGifting(arg0, ref) {
         planId: closure_13.PREMIUM_MONTH_TIER_0,
         analyticsLocation,
       };
-      items16[1] = tmp19(tmp3(tmp4[35]), obj37);
+      items16[1] = closure_14(tmp3(tmp4[35]), obj37);
       obj35.children = items16;
-      items15[1] = tmp17(tmp18, obj35);
+      items15[1] = closure_15(closure_6, obj35);
       obj32.children = items15;
-      const items17 = [tmp17(tmp3Result, obj32)];
+      const items17 = [closure_15(tmp3Result, obj32)];
       const obj38 = { style: tmp2.warningMargins };
-      items17[1] = tmp19(tmp3(tmp4[36]), obj38);
+      items17[1] = closure_14(tmp3(tmp4[36]), obj38);
       obj31.children = items17;
-      items12[3] = tmp17(closure_16, obj31);
+      items12[3] = closure_15(closure_16, obj31);
       obj22.children = items12;
-      tmp17Result2 = tmp17(tmp18, obj22);
+      tmp17Result2 = closure_15(closure_6, obj22);
     }
     items6[2] = tmp17Result2;
     obj3.children = items6;
     items4[1] = closure_15(closure_7, obj3);
     obj2.children = items4;
-    tmp17Result3 = tmp17(tmp18, obj2);
+    tmp17Result3 = closure_15(closure_6, obj2);
   }
   return tmp17Result3;
 });

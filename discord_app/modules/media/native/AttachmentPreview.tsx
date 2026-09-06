@@ -5,6 +5,7 @@ import native from "../../../design/void/native.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import FileUtils from "../../../utils/FileUtils.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
+import common_Video from "../../../components_native/common/Video.tsx";
 import _modDef10197 from "../../../../_runtime/metro/10197__.js";
 import _modDef10198 from "../../../../_runtime/metro/10198__.js";
 import _modDef10199 from "../../../../_runtime/metro/10199__.js";
@@ -158,15 +159,14 @@ let closure_13 = noop.memo((borderRadius) => {
       isIOSResult = uri.startsWith("ph://");
     }
     if (!isIOSResult) {
-      let isAndroidResult = tmp2(1115).isAndroid();
+      let isAndroidResult = PlatformUtils.isAndroid();
       if (isAndroidResult) {
         isAndroidResult = uri.startsWith("content://");
       }
       isIOSResult = isAndroidResult;
-      const tmp2Result = tmp2(1115);
+      const tmp2Result = PlatformUtils;
     }
     isMatch = isIOSResult;
-    tmp2 = require;
   }
   let obj = { style: null, children: null };
   const items = [size1, style, { overflow: "hidden" }];
@@ -176,7 +176,7 @@ let closure_13 = noop.memo((borderRadius) => {
     const items1 = [size1, style];
     obj.style = items1;
     obj.source = size;
-    obj.children = tmp6(FastImageDefault, obj);
+    obj.children = timestampProducer(FastImageDefault, obj);
     let tmp10 = obj;
   } else {
     const obj1 = { style: null, source: null, localImageSource: null };
@@ -184,7 +184,7 @@ let closure_13 = noop.memo((borderRadius) => {
     obj1.style = items2;
     obj1.source = size;
     obj1.localImageSource = size;
-    obj.children = tmp6(native.ThumbnailImage, obj1);
+    obj.children = timestampProducer(native.ThumbnailImage, obj1);
     tmp10 = obj;
   }
   return timestampProducer(hasOwnProperty, tmp10);
@@ -223,8 +223,8 @@ export default function AttachmentPreview(height) {
     if (!isVideo) {
       let obj2 = PlatformUtils;
       if (obj2.isIOS()) {
-        let tmp6 = tmp8;
-        let CirclePlayIcon = tmp7;
+        let tmp6 = dependencyMap;
+        let CirclePlayIcon = require;
       }
       tmp9 = defaultPreview;
       if (isVideo) {
@@ -243,12 +243,11 @@ export default function AttachmentPreview(height) {
           obj.style = size1;
           let obj1 = { uri };
           obj.source = obj1;
-          obj.children = timestampProducer(tmp7(8307).VideoComponent, obj);
+          obj.children = timestampProducer(common_Video.VideoComponent, obj);
           tmp9 = timestampProducer(hasOwnProperty, obj);
         }
-        tmp7Result = tmp7(1115);
+        tmp7Result = PlatformUtils;
       }
-      tmp8 = dependencyMap;
     } else {
       tmp6 = dependencyMap;
       obj1 = PlatformUtils;

@@ -3,9 +3,9 @@ import useSettingNavigationRoute from "../../core/native/useSettingNavigationRou
 import AnalyticsLocationDefault from "../../../app_analytics/AnalyticsLocation.tsx";
 import useGiftCardMobileConsumptionHalfsheet from "../../../checkout/native/useGiftCardMobileConsumptionHalfsheet.tsx";
 import useShopOrientationLock from "../../../collectibles/native/useShopOrientationLock.tsx";
+import CollectiblesShopV2 from "../../../collectibles/native/CollectiblesShopV2.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-const CollectiblesShopV2 = tmp(15807);
 require = fn;
 const constants = fn(1076).CollectiblesMobileShopScreen;
 const jsx = fn(21).jsx;

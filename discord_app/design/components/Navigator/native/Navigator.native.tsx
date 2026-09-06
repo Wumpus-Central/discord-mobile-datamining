@@ -1,9 +1,11 @@
 // discord_app/design/components/Navigator/native/Navigator.native.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import util from "../../../../intl/index.native.tsx";
 import SentryInitUtils from "../../../../modules/errors/native/SentryInitUtils.tsx";
 import Link from "../../../../../_runtime/01484_Link.js";
 import NavigatorHeader from "NavigatorHeader.native.tsx";
 import useNavigatorShouldCrossfade from "useNavigatorShouldCrossfade.native.tsx";
+import StackNavigator from "../../../../../_runtime/07002_StackNavigator.js";
 import NavigatorScreen from "NavigatorScreen.native.tsx";
 import useNavigationTheme from "useNavigationTheme.native.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
@@ -141,8 +143,8 @@ function NavigationStack(screens) {
       if (headerBackTitle == null) {
         let stringResult;
         if (1 === routes.length) {
-          const intl = tmp3(1114).intl;
-          stringResult = intl.string(tmp3(1114).t["13/7kX"]);
+          const intl = util.intl;
+          stringResult = intl.string(util.t["13/7kX"]);
         }
         tmp5 = stringResult;
       }
@@ -167,13 +169,13 @@ function NavigationStack(screens) {
           return obj;
         };
       } else {
-        fn2 = tmp3(7002).CardStyleInterpolators.forHorizontalIOS;
+        fn2 = StackNavigator.CardStyleInterpolators.forHorizontalIOS;
       }
       obj.cardStyleInterpolator = fn2;
       if (disableHeaderAnimation) {
-        let fn3 = tmp3(7002).HeaderStyleInterpolators.forNoAnimation;
-      } else if (tmp2) {
-        fn3 = tmp3(7002).HeaderStyleInterpolators.forFade;
+        let fn3 = StackNavigator.HeaderStyleInterpolators.forNoAnimation;
+      } else if (navigatorShouldCrossfade) {
+        fn3 = StackNavigator.HeaderStyleInterpolators.forFade;
       } else {
         fn3 = (arg0) => {
           ({ current, next, layouts, direction } = arg0);
@@ -318,8 +320,8 @@ let closure_7 = createStyles.createStyles(createStyles);
 const size = fn(2);
 let result = size.fileFinishedImporting("design/components/Navigator/native/Navigator.native.tsx");
 
-export const useNavigatorScreens = function useNavigatorScreens(getNextRenewalDateLabel, items) {
-  return noop.useMemo(getNextRenewalDateLabel, items);
+export const useNavigatorScreens = function useNavigatorScreens(arg0, items) {
+  return noop.useMemo(arg0, items);
 };
 export const useAccessibilityNativeStackOptions = function useAccessibilityNativeStackOptions() {
   const navigatorShouldCrossfade = useNavigatorShouldCrossfade.useNavigatorShouldCrossfade();

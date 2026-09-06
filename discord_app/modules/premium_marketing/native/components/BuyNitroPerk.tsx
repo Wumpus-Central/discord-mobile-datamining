@@ -56,7 +56,6 @@ export default function BuyNitroPerk(perk) {
   };
   const items = [hasOwnProperty(BuyNitroGradientDefault, obj)];
   const tmp = closure_9();
-  const tmp4 = hasOwnProperty;
   items[1] = hasOwnProperty(perk.IconComponent, { size: "sm", color: nativeDefault.colors.WHITE });
   obj.children = items;
   obj.icon = timestampProducer(React4, obj);
@@ -68,5 +67,5 @@ export default function BuyNitroPerk(perk) {
   obj.onPress = fn;
   obj.start = start;
   obj.end = end;
-  return tmp4(TableRow.TableRow, obj);
+  return hasOwnProperty(TableRow.TableRow, obj);
 }

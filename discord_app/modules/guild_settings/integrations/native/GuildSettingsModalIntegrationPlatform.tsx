@@ -1,14 +1,20 @@
 // discord_app/modules/guild_settings/integrations/native/GuildSettingsModalIntegrationPlatform.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
+import AvatarUtils from "../../../../utils/AvatarUtils.tsx";
+import shared from "../../../../design/shared.tsx";
 import actions_AlertActionCreatorsDefault from "../../../../actions/native/AlertActionCreators.tsx";
 import common_AlertDefault from "../../../../components_native/common/Alert.tsx";
 import PlatformsDefault from "../../../../lib/Platforms.tsx";
+import TableRow from "../../../../design/components/TableRow/native/TableRow.native.tsx";
 import NavigatorHeader from "../../../../design/components/Navigator/native/NavigatorHeader.native.tsx";
+import TableRowGroup from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
+import TableSwitchRow from "../../../../design/components/TableRow/native/TableSwitchRow.native.tsx";
 import HeaderActionButton from "../../../../design/components/Navigator/native/HeaderActionButton.native.tsx";
 import openUserSettings from "../../../user_settings/core/native/openUserSettings.tsx";
 import GuildSettingsActionCreatorsDefault from "../../GuildSettingsActionCreators.tsx";
 import GuildSettingsModalIntegrations from "GuildSettingsModalIntegrations.tsx";
+import IntegrationTypes from "../../../../../discord_common/js/shared/shared-constants/IntegrationTypes.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import GuildSettingsStore from "../../GuildSettingsStore.tsx";
 
@@ -42,7 +48,7 @@ class IntegrationItem extends Component {
       guild = props.guild;
       const integration = props.integration;
       if (!integration.syncing) {
-        const setState = guild.setState;
+        const setState = tmp.setState;
         if (integration.enabled) {
           setState({ enabled: false });
           let showResult = {
@@ -57,16 +63,16 @@ class IntegrationItem extends Component {
           const intl = applyArgumentsResult(1114).intl;
           showResult.title = intl.string(applyArgumentsResult(1114).t.emx3lN);
           if ("youtube" === integration.type) {
-            const intl3 = tmp9(1114).intl;
-            let stringResult = intl3.string(tmp9(1114).t.anKQWU);
+            const intl3 = applyArgumentsResult(1114).intl;
+            let stringResult = intl3.string(applyArgumentsResult(1114).t.anKQWU);
           } else {
-            const intl2 = tmp9(1114).intl;
-            stringResult = intl2.string(tmp9(1114).t["BW/xtn"]);
+            const intl2 = applyArgumentsResult(1114).intl;
+            stringResult = intl2.string(applyArgumentsResult(1114).t["BW/xtn"]);
           }
           showResult.body = stringResult;
-          const intl4 = tmp9(1114).intl;
+          const intl4 = applyArgumentsResult(1114).intl;
           showResult.confirmText = intl4.string(applyArgumentsResult(1114).t.R9GHya);
-          const intl5 = tmp9(1114).intl;
+          const intl5 = applyArgumentsResult(1114).intl;
           showResult.cancelText = intl5.string(applyArgumentsResult(1114).t["ETE/oC"]);
           showResult.onConfirm = function onConfirm() {
             return GuildSettingsActionCreatorsDefault.disableIntegration(guild.id, integration.id);
@@ -82,6 +88,7 @@ class IntegrationItem extends Component {
           showResult.enableIntegration(guild.id, integration.type, integration.id);
         }
       }
+      tmp = guild;
     };
     return applyArgumentsResult;
   }
@@ -111,14 +118,14 @@ IntegrationItem.prototype["render"] = function render() {
     GuildSettingsModalIntegrations.SUPPORTED_SETTINGS_INTEGRATION_PLATFORMS;
   if (SUPPORTED_SETTINGS_INTEGRATION_PLATFORMS.includes(integration.type)) {
     const type = integration.type;
-    if (tmp(17600).IntegrationTypes.YOUTUBE === type) {
+    if (IntegrationTypes.IntegrationTypes.YOUTUBE === type) {
       const account = integration.account;
       let name;
       if (account != null) {
         name = account.name;
       }
       let combined = name;
-    } else if (tmp(17600).IntegrationTypes.TWITCH === type) {
+    } else if (IntegrationTypes.IntegrationTypes.TWITCH === type) {
       const _HermesInternal = HermesInternal;
       let str = "twitch.tv/";
       combined = "twitch.tv/" + integration.name;
@@ -134,7 +141,7 @@ IntegrationItem.prototype["render"] = function render() {
       obj = { style: styles.trailingWrapper, children: null };
       let syncing = integration.syncing;
       if (syncing) {
-        syncing = tmp17(React3, { animating: true, size: "small" });
+        syncing = closure_1_11(React3, { animating: true, size: "small" });
       }
       obj.children = syncing;
       obj.trailing = closure_1_11(hasOwnProperty, obj);
@@ -154,20 +161,19 @@ IntegrationItem.prototype["render"] = function render() {
         }
         return enabled;
       };
-      const items = [closure_1_11(tmp(5605).TableRow, obj)];
+      const items = [closure_1_11(TableRow.TableRow, obj)];
       const obj2 = { value: null, disabled: null, onValueChange: null, label: null };
       const _Boolean = Boolean;
       obj2.value = Boolean(self.state.enabled);
       obj2.disabled = true === integration.syncing;
       obj2.onValueChange = self.handleToggleEnabled;
-      const intl = tmp(1114).intl;
-      obj2.label = intl.string(tmp(1114).t.vQC6vR);
-      items[1] = closure_1_11(tmp(7201).TableSwitchRow, obj2);
+      const intl = util.intl;
+      obj2.label = intl.string(util.t.vQC6vR);
+      items[1] = closure_1_11(TableSwitchRow.TableSwitchRow, obj2);
       obj1.children = items;
-      return closure_1_12(tmp(5687).TableRowGroup, obj1);
+      return closure_1_12(TableRowGroup.TableRowGroup, obj1);
     } else {
-      tmp(1396);
-      const tmpResult = tmp(4411);
+      const tmpResult = shared;
       const icon = { source: null, style: null };
       icon.source = tmpResult.makeSource(tmpResult.isThemeDark(props.theme) ? icon.darkPNG : icon.lightPNG);
       icon.style = styles.platformIcon;
@@ -190,8 +196,8 @@ export default function GuildSettingsModalIntegrationPlatform(platformType) {
   guild = undefined;
   function onSave() {
     if (null != guild) {
-      const obj = { features: tmp.features };
-      obj.saveGuild(tmp.id, obj);
+      const obj = { features: guild.features };
+      obj.saveGuild(guild.id, obj);
     }
   }
   let obj = platformType(4262);

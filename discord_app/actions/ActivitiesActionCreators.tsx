@@ -135,9 +135,9 @@ export default {
           }
           obj.message_id = id;
           obj.trackWithMetadata(constants3.INVITE_SENT, obj);
-          const activitySessionKey = getActivitySessionKey.getActivitySessionKey(tmp2);
+          const activitySessionKey = getActivitySessionKey.getActivitySessionKey(activity);
           if (null != activitySessionKey) {
-            RichPresenceInviteBarActionCreators.markChannelInvited(activitySessionKey, tmp5.id);
+            RichPresenceInviteBarActionCreators.markChannelInvited(activitySessionKey, channel.id);
             const tmp8Result = RichPresenceInviteBarActionCreators;
           }
           return Promise.resolve(channel);
@@ -174,7 +174,8 @@ export default {
         query: obj1,
         rejectWithError: tmp4(1272).rejectWithMigratedError(),
       };
-      closure_128_0 = await HTTP.get(request);
+      await HTTP.get(request);
+      closure_128_0 = value;
       return { secret: closure_128_0.body.secret, joinUrl: closure_128_0.body.join_url };
     })();
   },
@@ -196,7 +197,7 @@ export default {
         rejectWithError: v3(1272).rejectWithMigratedError(),
       };
       await HTTP.post(request);
-      return arg1.body;
+      return value.body;
     })();
   },
 };

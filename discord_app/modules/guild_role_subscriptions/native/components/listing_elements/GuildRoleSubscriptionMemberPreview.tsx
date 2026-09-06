@@ -3,7 +3,13 @@ import initialize from "../../../../../../discord_common/js/packages/flux/index.
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import utils_ColorUtilsAll from "../../../../../../discord_common/js/shared/utils/ColorUtils.tsx";
 import util from "../../../../../intl/index.native.tsx";
+import native from "../../../../../design/void/native.tsx";
+import AvatarUtilsDefault from "../../../../../utils/AvatarUtils.tsx";
+import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import NicknameUtilsDefault from "../../../../../utils/NicknameUtils.tsx";
+import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
+import guild_boosting_RoleIconUtils from "../../../../guild_boosting/RoleIconUtils.tsx";
+import RoleIconDefault from "../../../../roles/native/RoleIcon.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import UserStore from "../../../../../stores/UserStore.tsx";
 
@@ -47,34 +53,34 @@ export const GuildRoleSubscriptionMemberPreview = function GuildRoleSubscription
   if (null == role) {
     return null;
   } else {
-    let tmp6Result = tmp6(1396);
+    let tmp6Result = AvatarUtilsDefault;
     let avatarURL;
     if (stateFromStores != null) {
       avatarURL = stateFromStores.getAvatarURL(guildId, 40);
     }
     if (avatarURL == null) {
-      tmp6Result = tmp6(1396);
+      tmp6Result = AvatarUtilsDefault;
       avatarURL = tmp6Result.getDefaultAvatarURL(undefined, undefined);
     }
     const source = tmp6Result.makeSource(avatarURL);
-    const roleIconData = tmp4(7187).getRoleIconData(role, 16);
+    const roleIconData = guild_boosting_RoleIconUtils.getRoleIconData(role, 16);
     obj = { style: null, children: null };
     const items1 = [tmp3.container, style];
     obj.style = items1;
     obj = { style: tmp3.avatar, source };
-    const items2 = [timestampProducer(tmp6(5587), obj)];
+    const items2 = [timestampProducer(FastImageDefault, obj)];
     const obj1 = { style: tmp3.content, children: null };
     const obj2 = { style: tmp3.contextRow, children: null };
     const obj3 = { variant: "text-md/semibold", color: "interactive-text-active", style: null, children: null };
     const obj4 = { color: null };
-    const tmp4Result = tmp4(7187);
+    const tmp4Result = guild_boosting_RoleIconUtils;
     obj4.color = utils_ColorUtilsAll.int2hex(role.color);
     obj3.style = obj4;
     obj3.children = tmp8;
-    const items3 = [timestampProducer(tmp4(4556).Text, obj3), , ,];
+    const items3 = [timestampProducer(Text_Text.Text, obj3), , ,];
     let tmp12Result = null;
     if (null != roleIconData) {
-      const items4 = [tmp14(tmp4(1178).Spacer, { size: 4 })];
+      const items4 = [timestampProducer(native.Spacer, { size: 4 })];
       const obj5 = { name: role.name, source: null, unicodeEmoji: null, size: 16 };
       let tmp19;
       if (null != roleIconData.customIconSrc) {
@@ -84,14 +90,14 @@ export const GuildRoleSubscriptionMemberPreview = function GuildRoleSubscription
       const obj7 = { children: null };
       obj5.source = tmp19;
       obj5.unicodeEmoji = roleIconData.unicodeEmoji;
-      items4[1] = tmp14(tmp6(7188), obj5);
+      items4[1] = timestampProducer(RoleIconDefault, obj5);
       obj7.children = items4;
-      tmp12Result = tmp12(React5, obj7);
-      const tmp6Result1 = tmp6(7188);
+      tmp12Result = React6(React5, obj7);
+      const tmp6Result1 = RoleIconDefault;
     }
     items3[1] = tmp12Result;
-    items3[2] = timestampProducer(tmp4(1178).Spacer, { size: 8 });
-    items3[3] = timestampProducer(tmp4(4556).Text, {
+    items3[2] = timestampProducer(native.Spacer, { size: 8 });
+    items3[3] = timestampProducer(Text_Text.Text, {
       variant: "text-xs/medium",
       color: "text-muted",
       children: "4:20 PM",
@@ -99,7 +105,7 @@ export const GuildRoleSubscriptionMemberPreview = function GuildRoleSubscription
     obj2.children = items3;
     const items5 = [React6(View, obj2)];
     const obj8 = { variant: "text-md/normal", color: "text-default", style: textStyle, children: content };
-    items5[1] = timestampProducer(tmp4(4556).Text, obj8);
+    items5[1] = timestampProducer(Text_Text.Text, obj8);
     obj1.children = items5;
     items2[1] = React6(View, obj1);
     obj.children = items2;

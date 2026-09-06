@@ -90,11 +90,9 @@ export default function FormBigRadioBox(arg0) {
   if (selected) {
     selected = tmp.iconContainerSelected;
   }
-  const tmp5 = hasOwnProperty;
   const tmp6 = TouchableHitBoxDefault;
-  const tmp9 = View;
   items2[1] = selected;
-  items1[1] = React4(tmp9, { style: items2, children: React4(native.Icon, { source: icon }) });
+  items1[1] = React4(View, { style: items2, children: React4(native.Icon, { source: icon }) });
   items1[2] = React4(Text_Text.Text, {
     style: tmp.title,
     accessibilityRole: "header",
@@ -108,5 +106,5 @@ export default function FormBigRadioBox(arg0) {
     children: description,
   });
   obj.children = items1;
-  return tmp5(tmp6, obj);
+  return hasOwnProperty(tmp6, obj);
 }

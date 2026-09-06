@@ -5,7 +5,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 import GuildBoostSlotStore from "../../../stores/billing/GuildBoostSlotStore.tsx";
 
 require = fn;
-let closure_14 = async function _handleBoostPress(analyticsLocations, guildId, section) {
+let closure_14 = async function _handleBoostPress() {
   c4 = 0;
   c5 = 0;
   return (async (arg0, value, arg2) => {

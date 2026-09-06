@@ -20,7 +20,7 @@ function VariantOption(variant) {
   obj.style = items1;
   if (isPurchased) {
     const obj1 = { variant };
-    isPurchased = tmp2(VariantCheckmark, obj1);
+    isPurchased = React4(VariantCheckmark, obj1);
   }
   obj.children = isPurchased;
   obj.children = React4(View, obj);
@@ -29,8 +29,7 @@ function VariantOption(variant) {
 function VariantCheckmark(variant) {
   const colors = nativeDefault.colors;
   const tmp = useIsVariantColorLightDefault(variant.variant);
-  const tmp2 = React4;
-  return tmp2(CheckmarkSmallIcon.CheckmarkSmallIcon, {
+  return React4(CheckmarkSmallIcon.CheckmarkSmallIcon, {
     color: useIsVariantColorLightDefault(variant.variant) ? colors.BLACK : colors.WHITE,
     size: "xxs",
   });
@@ -87,7 +86,7 @@ let closure_7 = createStyles.createStyles((arg0) => {
   size1.borderWidth = num;
   size1.borderColor = nativeDefault.colors.BUTTON_OUTLINE_PRIMARY_TEXT;
   obj.variantOptionInner = size1;
-  obj = { backgroundColor: tmp(576).colors.ICON_MUTED };
+  obj = { backgroundColor: nativeDefault.colors.ICON_MUTED };
   obj.variantOverflowInner = obj;
   return obj;
 });

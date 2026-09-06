@@ -6,12 +6,12 @@ import size from "../../../../_runtime/metro/00002__.js";
 const CustomColorPicker = "CustomColorPicker";
 const result = size.fileFinishedImporting("modules/color_picker/native/showCustomColorPickerActionSheet.tsx");
 
-export default function showCustomColorPickerActionSheet(arg0, arg1) {
+export default function showCustomColorPickerActionSheet(arg0, stack) {
   ActionSheetActionCreatorsDefault.openLazy(
     asyncRequireImpl(14596, dependencyMap.paths),
     CustomColorPicker,
     arg0,
-    arg1,
+    stack,
   );
 }
 export const CUSTOM_COLOR_PICKER_KEY = "CustomColorPicker";

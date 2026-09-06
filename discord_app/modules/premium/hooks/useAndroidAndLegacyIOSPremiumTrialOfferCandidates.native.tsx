@@ -32,29 +32,29 @@ export const useAndroidAndLegacyIOSPremiumTrialOfferCandidates =
     if (values.every((item) => offerIds.has(item))) {
       tmp4 = trialOffer;
     }
-    let tmpResult = tmp(7449);
+    let tmpResult = useTrialOffer;
     const trialOffer1 = tmpResult.useTrialOffer(React3);
-    values = Object.values(tmp(7240).TrialIdToProductOfferId[React3]);
+    values = Object.values(ProductIds.TrialIdToProductOfferId[React3]);
     let tmp6 = null;
     if (values.every((item) => offerIds.has(item))) {
       tmp6 = trialOffer1;
     }
-    tmpResult = tmp(7449);
+    tmpResult = useTrialOffer;
     const trialOffer2 = tmpResult.useTrialOffer(React4);
-    const values1 = Object.values(tmp(7240).TrialIdToProductOfferId[React4]);
+    const values1 = Object.values(ProductIds.TrialIdToProductOfferId[React4]);
     let tmp8 = null;
     if (values1.every((item) => offerIds.has(item))) {
       tmp8 = trialOffer2;
     }
     const trialOffer3 = useTrialOffer.useTrialOffer(hasOwnProperty);
-    const values2 = Object.values(tmp(7240).TrialIdToProductOfferId[hasOwnProperty]);
+    const values2 = Object.values(ProductIds.TrialIdToProductOfferId[hasOwnProperty]);
     let tmp10 = null;
     if (values2.every((item) => offerIds.has(item))) {
       tmp10 = trialOffer3;
     }
     const tmpResult1 = useTrialOffer;
     const trialOffer4 = useTrialOffer.useTrialOffer(React5);
-    const values3 = Object.values(tmp(7240).TrialIdToProductOfferId[React5]);
+    const values3 = Object.values(ProductIds.TrialIdToProductOfferId[React5]);
     let tmp12 = null;
     if (values3.every((item) => offerIds.has(item))) {
       tmp12 = trialOffer4;
@@ -62,7 +62,7 @@ export const useAndroidAndLegacyIOSPremiumTrialOfferCandidates =
     const items1 = [tmp12, tmp4, tmp6, tmp8, ,];
     const tmpResult2 = useTrialOffer;
     const trialOffer5 = useTrialOffer.useTrialOffer(React6);
-    const values4 = Object.values(tmp(7240).TrialIdToProductOfferId[React6]);
+    const values4 = Object.values(ProductIds.TrialIdToProductOfferId[React6]);
     let tmp14 = null;
     if (values4.every((item) => offerIds.has(item))) {
       tmp14 = trialOffer5;

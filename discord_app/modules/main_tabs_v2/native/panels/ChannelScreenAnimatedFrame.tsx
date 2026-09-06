@@ -1,5 +1,6 @@
 // discord_app/modules/main_tabs_v2/native/panels/ChannelScreenAnimatedFrame.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import native from "../../../../design/void/native.tsx";
 import timing from "../../../../design/animation/reanimated/timing/timing.tsx";
 import PanelsConfig from "../../../panels/native/PanelsConfig.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";

@@ -13,7 +13,7 @@ function useHandleBuyNow(product) {
   asyncGeneratorStep = product.stageCollectibleChangeForEditProfile;
   let isBuying;
   noop = undefined;
-  closure_7 = async function _onPurchaseComplete(arg0, value) {
+  closure_7 = async function _onPurchaseComplete() {
     if (dependencyMap === 2) {
       dependencyMap = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -101,7 +101,7 @@ function useHandleBuyNow(product) {
   obj = { handleBuyNow: null, isBuying };
   const items = [tmp3, isBuying, onBuy, product.skuId, onBuySettled];
   obj.handleBuyNow = noop.useCallback(
-    asyncGeneratorStep(async (arg0, value) => {
+    asyncGeneratorStep(async () => {
       if (c5 === 2) {
         c5 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");

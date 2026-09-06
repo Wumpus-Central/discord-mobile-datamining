@@ -320,10 +320,9 @@ export const useLinkTimestampText = function useLinkTimestampText(id, status) {
     return null;
   } else {
     const _Date = Date;
-    require("FamilyCenterUtils").formatLinkTimestamp(
-      Date.parse(stateFromStores),
-      status === constants.PENDING ? closure_10 : closure_6,
-    );
-    const tmpResult = require("FamilyCenterUtils");
+    tmp(7593).formatLinkTimestamp(Date.parse(stateFromStores), status === constants.PENDING ? closure_10 : closure_6);
+    const tmpResult = tmp(7593);
   }
+  const obj = require("useStateFromStores");
+  tmp = _require;
 };

@@ -75,6 +75,23 @@ export default function UserProfileEditNote(userId) {
                 }
               },
             });
+            const obj = {
+              hasEdits: str !== closure_6,
+              onHasEdits: closure_1_0(4425).dismissKeyboard,
+              resetPending() {
+                let str = closure_1_5;
+                if (closure_1_5 == null) {
+                  str = "";
+                }
+                return closure_1_7(str);
+              },
+              onConfirm() {
+                closure_0(true);
+                if (dependencyMap != null) {
+                  dependencyMap();
+                }
+              },
+            };
           }),
       ),
       headerRight(arg0) {

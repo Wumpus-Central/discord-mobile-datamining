@@ -2,12 +2,14 @@
 import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
 import initialize from "../../../discord_common/js/packages/flux/index.tsx";
 import AgeGateConstants from "AgeGateConstants.tsx";
+import util from "../../intl/index.native.tsx";
 import GuildRecord from "../../records/GuildRecord.tsx";
 import HelpdeskUtilsDefault from "../../utils/HelpdeskUtils.tsx";
 import AgeVerificationUtils from "../age_assurance/AgeVerificationUtils.tsx";
 import RegionalFeatureConfigUtils from "../regional_feature_config/RegionalFeatureConfigUtils.tsx";
 import AgeGatedFeature from "../../../discord_common/js/shared/shared-constants/AgeGatedFeature.tsx";
 import AgeGateModalActionCreators from "AgeGateModalActionCreators.tsx";
+import AgeVerificationAnalyticsUtils from "../age_assurance/AgeVerificationAnalyticsUtils.tsx";
 import ChannelStore from "../../stores/ChannelStore.tsx";
 import GuildNSFWAgreeStore from "../../stores/GuildNSFWAgreeStore.tsx";
 import GuildStore from "../../stores/GuildStore.tsx";
@@ -22,16 +24,16 @@ function shouldShowAgeGateForVoiceChannel(channelId) {
     const currentUser = UserStore.getCurrentUser();
     let flag = false;
     if (null != currentUser) {
-      let tmpResult = tmp(4773);
+      let tmpResult = AgeVerificationUtils;
       const result1 = tmpResult.shouldShowTiggerPawtect();
-      tmpResult = tmp(5423);
-      const tmp9 = tmpResult.isFeatureAgeGated(tmp(5424).AgeGatedFeature.AGE_GATED_SPACES) && result1;
+      tmpResult = RegionalFeatureConfigUtils;
+      const tmp9 = tmpResult.isFeatureAgeGated(AgeGatedFeature.AgeGatedFeature.AGE_GATED_SPACES) && result1;
       flag =
         true !== currentUser.nsfwAllowed ||
-        (tmpResult.isFeatureAgeGated(tmp(5424).AgeGatedFeature.AGE_GATED_SPACES) && result1);
+        (tmpResult.isFeatureAgeGated(AgeGatedFeature.AgeGatedFeature.AGE_GATED_SPACES) && result1);
       const tmp10 =
         true !== currentUser.nsfwAllowed ||
-        (tmpResult.isFeatureAgeGated(tmp(5424).AgeGatedFeature.AGE_GATED_SPACES) && result1);
+        (tmpResult.isFeatureAgeGated(AgeGatedFeature.AgeGatedFeature.AGE_GATED_SPACES) && result1);
     }
     let tmp12 = !flag;
     if (flag) {
@@ -212,60 +214,61 @@ export const useAgeGateVerifyContentForGuild = function useAgeGateVerifyContentF
   if (isFeatureAgeGated) {
     shouldShowTiggerPawtect = obj4.useShouldShowTiggerPawtect();
   }
-  const intl = tmp(1114).intl;
-  const t = tmp(1114).t;
+  const intl = util.intl;
+  const t = util.t;
   const stringResult = intl.string(tmp3 ? t.xi46lg : t.ZmwvDc);
   obj = { title: null, description: null, agreement: null, modalType: null };
   if (shouldShowTiggerPawtect) {
     obj.title = stringResult;
-    const intl6 = tmp(1114).intl;
+    const intl6 = util.intl;
     if (!isAgeVerified) {
       const string = intl6.string;
-      const t4 = tmp(1114).t;
+      const t4 = util.t;
       if (tmp3) {
         let stringResult1 = string(t4.V6Gmu9);
       } else {
         stringResult1 = string(t4["5rygLk"]);
       }
       obj.description = stringResult1;
-      const intl7 = tmp(1114).intl;
-      obj.agreement = intl7.string(tmp(1114).t.FDSSia);
-      obj.modalType = tmp(8413).NsfwSpaceWarningModalType.NSFW_CHANNEL_AGE_VERIFY;
+      const intl7 = util.intl;
+      obj.agreement = intl7.string(util.t.FDSSia);
+      obj.modalType = AgeVerificationAnalyticsUtils.NsfwSpaceWarningModalType.NSFW_CHANNEL_AGE_VERIFY;
     }
     const format = intl6.format;
-    let string2 = tmp(1114).t;
+    let string2 = util.t;
     if (tmp3) {
       let formatResult = format(string2["8tk6bB"], {});
     } else {
       formatResult = format(string2.XQZvwn, {});
     }
     obj.description = formatResult;
-    const intl8 = tmp(1114).intl;
+    const intl8 = util.intl;
     string2 = intl8.string;
-    obj.agreement = string2(tmp(1114).t.Zt4Mf4);
-    NSFW_CHANNEL_AGE_VERIFY = tmp(8413).NsfwSpaceWarningModalType.NSFW_CHANNEL_AGE_VERIFY;
+    obj.agreement = string2(util.t.Zt4Mf4);
+    NSFW_CHANNEL_AGE_VERIFY = AgeVerificationAnalyticsUtils.NsfwSpaceWarningModalType.NSFW_CHANNEL_AGE_VERIFY;
     obj.modalType = NSFW_CHANNEL_AGE_VERIFY;
   } else if (stateFromStores) {
-    const intl4 = tmp(1114).intl;
-    const t3 = tmp(1114).t;
+    const intl4 = util.intl;
+    const t3 = util.t;
     obj.title = intl4.string(tmp3 ? t3["H0SG/g"] : t3.NEabBa);
-    const intl5 = tmp(1114).intl;
-    let NSFW_CHANNEL_UNDERAGE = tmp(1114).t;
+    const intl5 = util.intl;
+    let NSFW_CHANNEL_UNDERAGE = util.t;
     obj = { helpURL: HelpdeskUtilsDefault.getArticleURL(constants.NSFW_AGE_GATING) };
     obj.description = intl5.format(tmp3 ? NSFW_CHANNEL_UNDERAGE["6++3cX"] : NSFW_CHANNEL_UNDERAGE["2kHZes"], obj);
-    NSFW_CHANNEL_UNDERAGE = tmp(8413).NsfwSpaceWarningModalType.NSFW_CHANNEL_UNDERAGE;
+    NSFW_CHANNEL_UNDERAGE = AgeVerificationAnalyticsUtils.NsfwSpaceWarningModalType.NSFW_CHANNEL_UNDERAGE;
     obj.modalType = NSFW_CHANNEL_UNDERAGE;
     const tmp9 = tmp3 ? NSFW_CHANNEL_UNDERAGE["6++3cX"] : NSFW_CHANNEL_UNDERAGE["2kHZes"];
   } else {
     obj.title = stringResult;
-    const intl2 = tmp(1114).intl;
-    const t2 = tmp(1114).t;
+    const intl2 = util.intl;
+    const t2 = util.t;
     obj.description = intl2.string(tmp3 ? t2.ZtuRts : t2.E4Cd5I);
-    const intl3 = tmp(1114).intl;
-    obj.agreement = intl3.string(tmp(1114).t.wVq7uo);
-    obj.modalType = tmp(8413).NsfwSpaceWarningModalType.NSFW_CHANNEL_VERIFIED;
+    const intl3 = util.intl;
+    obj.agreement = intl3.string(util.t.wVq7uo);
+    obj.modalType = AgeVerificationAnalyticsUtils.NsfwSpaceWarningModalType.NSFW_CHANNEL_VERIFIED;
     return obj;
   }
+  obj4 = AgeVerificationUtils;
 };
 export const useAgeGateVerifyContent = function useAgeGateVerifyContent(source) {
   let obj = AgeVerificationUtils;
@@ -280,23 +283,23 @@ export const useAgeGateVerifyContent = function useAgeGateVerifyContent(source) 
   initialize;
   [][0] = UserStore;
   if (source !== AgeGateSource.JOIN_LARGE_GUILD_UNDERAGE) {
-    if (source !== tmp6.ACCESS_LARGE_GUILD_UNDERAGE) {
+    if (source !== AgeGateSource.ACCESS_LARGE_GUILD_UNDERAGE) {
       if (isAgeVerified) {
         obj = { verifyAgreementButtonText: null, verifyGateDescription: null, verifyTitle: null };
-        const intl9 = tmp(1114).intl;
-        obj.verifyAgreementButtonText = intl9.string(tmp(1114).t.Zt4Mf4);
-        const intl10 = tmp(1114).intl;
+        const intl9 = util.intl;
+        obj.verifyAgreementButtonText = intl9.string(util.t.Zt4Mf4);
+        const intl10 = util.intl;
         const format = intl10.format;
-        const t2 = tmp(1114).t;
+        const t2 = util.t;
         if (tmp7) {
           let formatResult = format(t2["8tk6bB"], {});
         } else {
           formatResult = format(t2.XQZvwn, {});
         }
         obj.verifyGateDescription = formatResult;
-        const intl11 = tmp(1114).intl;
+        const intl11 = util.intl;
         const string3 = intl11.string;
-        let xi46lg2 = tmp(1114).t;
+        let xi46lg2 = util.t;
         if (tmp7) {
           xi46lg2 = xi46lg2.xi46lg;
           let string3Result = string3(xi46lg2);
@@ -305,43 +308,43 @@ export const useAgeGateVerifyContent = function useAgeGateVerifyContent(source) 
         }
         obj.verifyTitle = string3Result;
       } else {
-        if (source === tmp6.LARGE_GUILD) {
+        if (source === AgeGateSource.LARGE_GUILD) {
           obj = { verifyTitle: null, verifyGateDescription: null, verifyAgreementButtonText: null };
-          const intl6 = tmp(1114).intl;
-          obj.verifyTitle = intl6.string(tmp(1114).t["7ymzsL"]);
-          const intl7 = tmp(1114).intl;
-          obj.verifyGateDescription = intl7.string(tmp(1114).t.SxY4IW);
-          const intl8 = tmp(1114).intl;
-          obj.verifyAgreementButtonText = intl8.string(tmp(1114).t.FDSSia);
+          const intl6 = util.intl;
+          obj.verifyTitle = intl6.string(util.t["7ymzsL"]);
+          const intl7 = util.intl;
+          obj.verifyGateDescription = intl7.string(util.t.SxY4IW);
+          const intl8 = util.intl;
+          obj.verifyAgreementButtonText = intl8.string(util.t.FDSSia);
           obj1 = obj;
         } else {
           if (tmp9) {
             if (tmp7) {
               if (!shouldShowTiggerPawtect) {
                 obj1 = { verifyTitle: null, verifyGateDescription: null, verifyAgreementButtonText: null };
-                const intl = tmp(1114).intl;
-                obj1.verifyTitle = intl.string(tmp(1114).t["H0SG/g"]);
-                const intl2 = tmp(1114).intl;
+                const intl = util.intl;
+                obj1.verifyTitle = intl.string(util.t["H0SG/g"]);
+                const intl2 = util.intl;
                 obj2 = { helpURL: HelpdeskUtilsDefault.getArticleURL(constants.AGE_GATE) };
-                obj1.verifyGateDescription = intl2.format(tmp(1114).t["6++3cX"], obj2);
+                obj1.verifyGateDescription = intl2.format(util.t["6++3cX"], obj2);
               }
             }
           }
           const obj3 = { verifyAgreementButtonText: null, verifyGateDescription: null, verifyTitle: null };
-          const intl3 = tmp(1114).intl;
-          obj3.verifyAgreementButtonText = intl3.string(tmp(1114).t.FDSSia);
-          const intl4 = tmp(1114).intl;
+          const intl3 = util.intl;
+          obj3.verifyAgreementButtonText = intl3.string(util.t.FDSSia);
+          const intl4 = util.intl;
           const string = intl4.string;
-          const t = tmp(1114).t;
+          const t = util.t;
           if (tmp7) {
             let stringResult = string(t.V6Gmu9);
           } else {
             stringResult = string(t["5rygLk"]);
           }
           obj3.verifyGateDescription = stringResult;
-          const intl5 = tmp(1114).intl;
+          const intl5 = util.intl;
           const string2 = intl5.string;
-          let xi46lg = tmp(1114).t;
+          let xi46lg = util.t;
           if (tmp7) {
             xi46lg = xi46lg.xi46lg;
             let string2Result = string2(xi46lg);
@@ -355,28 +358,28 @@ export const useAgeGateVerifyContent = function useAgeGateVerifyContent(source) 
     }
   }
   if (source === AgeGateSource.JOIN_LARGE_GUILD_UNDERAGE) {
-    let MjQbfi = tmp(1114).t["u/xsK9"];
+    let MjQbfi = util.t["u/xsK9"];
   } else {
-    MjQbfi = tmp(1114).t.MjQbfi;
+    MjQbfi = util.t.MjQbfi;
   }
-  const intl12 = tmp(1114).intl;
+  const intl12 = util.intl;
   const string4 = intl12.string;
-  const t3 = tmp(1114).t;
+  const t3 = util.t;
   if (isAgeVerified) {
     let string4Result = string4(t3.SAoMVJ);
   } else {
     string4Result = string4(t3.SxY4IW);
   }
-  const intl13 = tmp(1114).intl;
+  const intl13 = util.intl;
   const string5 = intl13.string;
-  const t4 = tmp(1114).t;
+  const t4 = util.t;
   if (isAgeVerified) {
     let string5Result = string5(t4.Zt4Mf4);
   } else {
     string5Result = string5(t4.FDSSia);
   }
   const obj4 = { verifyTitle: null, verifyGateDescription: null, verifyAgreementButtonText: null };
-  const intl14 = tmp(1114).intl;
+  const intl14 = util.intl;
   obj4.verifyTitle = intl14.string(MjQbfi);
   obj4.verifyGateDescription = string4Result;
   obj4.verifyAgreementButtonText = string5Result;
@@ -488,10 +491,10 @@ export const maybeShowAgeGate = function maybeShowAgeGate(guildId, channelId, JO
     }
     AgeGateModalActionCreators.openAgeGateModal(NSFW_SERVER);
   } else {
-    const currentUser1 = obj.getCurrentUser();
+    const currentUser1 = UserStore.getCurrentUser();
     let tmp13 = null != currentUser1 && null == currentUser1.nsfwAllowed;
     if (tmp13) {
-      const currentUser2 = obj.getCurrentUser();
+      const currentUser2 = UserStore.getCurrentUser();
       let flag4 = false;
       if (null != currentUser2) {
         const result1 = AgeVerificationUtils.shouldShowTiggerPawtect();

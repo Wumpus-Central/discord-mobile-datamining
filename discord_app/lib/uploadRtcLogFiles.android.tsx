@@ -3,7 +3,7 @@ import LoggerDefault from "../modules/debug/Logger.tsx";
 import asyncGeneratorStep from "../../_runtime/00005_asyncGeneratorStep.js";
 
 const require = fn;
-let closure_6 = async function _uploadRtcLogFiles(arg0, value) {
+let closure_6 = async function _uploadRtcLogFiles(arg0) {
   if (c8 === 2) {
     c8 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");

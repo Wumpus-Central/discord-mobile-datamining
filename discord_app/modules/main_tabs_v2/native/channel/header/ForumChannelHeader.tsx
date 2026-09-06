@@ -38,11 +38,22 @@ export default noop.memo((arg0) => {
   if (obj.useIsForumChannelSearchActive(channelId)) {
     obj = { style: tmp.search, children: null };
     obj = { channelId, guildId, placeholder: searchPlaceholder };
-    obj.children = tmp4(ForumChannelSearch.ForumChannelSearchInput, obj);
-    let tmp4Result = tmp4(View, obj);
+    obj.children = jsx(ForumChannelSearch.ForumChannelSearchInput, {
+      channelId,
+      guildId,
+      placeholder: searchPlaceholder,
+    });
+    let tmp4Result = <View channelId={channelId} guildId={guildId} placeholder={searchPlaceholder} />;
   } else {
     const obj1 = { channelId, guildId, pressable, isGuildMemberCountVisible, isNavigationScreen, screenIndex };
-    tmp4Result = tmp4(GuildChannelHeaderDefault, obj1);
+    tmp4Result = jsx(GuildChannelHeaderDefault, {
+      channelId,
+      guildId,
+      pressable,
+      isGuildMemberCountVisible,
+      isNavigationScreen,
+      screenIndex,
+    });
   }
   return tmp4Result;
 });

@@ -2,7 +2,7 @@
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 
 const require = fn;
-let closure_4 = async function _launchActivityInBotDM(arg0, value) {
+let closure_4 = async function _launchActivityInBotDM(arg0) {
   if (c4 === 2) {
     c4 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");

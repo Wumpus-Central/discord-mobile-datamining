@@ -1,7 +1,10 @@
 // discord_app/modules/parent_tools/RestrictedHoursManager.tsx
 import DispatcherDefault from "../../Dispatcher.tsx";
+import util from "../../intl/index.native.tsx";
+import FamilyCenterModels from "FamilyCenterModels.tsx";
 import _modDef2396 from "FamilyCenter.messages.js";
 import FamilyCenterV3Experiment from "FamilyCenterV3Experiment.tsx";
+import FamilyCenterRestrictedHoursUtils from "FamilyCenterRestrictedHoursUtils.tsx";
 import RestrictedHoursActionCreators from "RestrictedHoursActionCreators.native.tsx";
 import NotificationSettingsStore from "../../stores/NotificationSettingsStore.tsx";
 import UserStore from "../../stores/UserStore.tsx";
@@ -49,13 +52,12 @@ function scheduleUpcomingWarning() {
       const combined = "" + tmp7.rule.ruleId + ":" + tmp7.startAtMs;
       if (combined !== c9) {
         ({ startAtMs, rule } = tmp7);
-        const intl = tmp5(1114).intl;
+        const intl = util.intl;
         const _Date2 = Date;
         const date2 = new Date(startAtMs);
-        tmp5(10083);
-        const items = [tmp5(1394).JS_DAY_TO_DAY_OF_WEEK[date2.getDay(date2)]];
+        const items = [FamilyCenterModels.JS_DAY_TO_DAY_OF_WEEK[date2.getDay(date2)]];
         const stringResult = intl.string(_modDef2396["0JlDg0"]);
-        const tmp5Result = tmp5(10083);
+        const tmp5Result = FamilyCenterRestrictedHoursUtils;
         const _HermesInternal2 = HermesInternal;
         const formatDaysResult = tmp5Result.formatDays(items);
         const trimmed = "" + tmp5Result.formatDays(items) + " " + tmp5Result.getScheduleRuleDateRange(rule).trim();

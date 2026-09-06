@@ -243,19 +243,18 @@ export default function GameProfileScreen(gameId) {
   const items6 = [memo, callback2, tmp6Result];
   callback3 = obj1.useCallback(() => {
     if (1 === memo.length) {
-      const first = _slicedToArray(arr, 1)[0];
+      const first = _slicedToArray(memo, 1)[0];
       callback2(first.action);
       closure_4(first.url);
-    } else if (arr.length > 1) {
+    } else if (memo.length > 1) {
       let obj = { key: GameProfileStoreLinksActionSheet.ACTION_SHEET_KEY, content: null, stackingBehavior: "stack" };
       let str = ref2.current;
       const obj2 = ActionSheetActionCreators;
-      const tmp11 = React6;
       if (str == null) {
         str = "";
       }
-      obj = { gameName: str, websiteButtons: arr, trackAction: callback2 };
-      obj.content = tmp11(GameProfileStoreLinksActionSheetDefault, obj);
+      obj = { gameName: str, websiteButtons: memo, trackAction: callback2 };
+      obj.content = React6(GameProfileStoreLinksActionSheetDefault, obj);
       obj2.showActionSheet(obj);
     }
   }, items6);
@@ -302,6 +301,7 @@ export default function GameProfileScreen(gameId) {
       obj.guildId = guildId;
       obj.isVerified = isVerified;
       const result = gameId(sourceUserId[12]).trackGameProfileClose(obj);
+      const obj2 = gameId(sourceUserId[12]);
     },
     items8,
   );

@@ -1,6 +1,7 @@
 // discord_app/modules/virtual_currency/native/OrbCheckoutAmountTag.tsx
 import _mod17 from "../../../../_runtime/metro/00017__.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import util from "../../../intl/index.native.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import OrbsIcon from "../../../design/components/Icon/native/redesign/generated/OrbsIcon.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
@@ -23,12 +24,12 @@ export default function OrbCheckoutAmountTag(orbAmount) {
   obj = { size: "custom", color: "icon-strong", style: tmp.orbsIcon };
   const items = [React3(OrbsIcon.OrbsIcon, obj)];
   if (null == orbAmount) {
-    const intl2 = tmp5(1114).intl;
-    let stringResult = intl2.string(tmp5(1114).t.pfChQr);
+    const intl2 = util.intl;
+    let stringResult = intl2.string(util.t.pfChQr);
   } else {
-    const intl = tmp5(1114).intl;
+    const intl = util.intl;
     obj = { orbAmount };
-    stringResult = intl.formatToPlainString(tmp5(1114).t.W4DfeF, obj);
+    stringResult = intl.formatToPlainString(util.t.W4DfeF, obj);
   }
   const obj1 = { variant: "text-md/semibold", accessibilityLabel: stringResult, children: null };
   let str = "--";

@@ -1,10 +1,14 @@
 // discord_app/modules/stage_channels/useToggleRequestToSpeak.tsx
-import useAudienceRequestToSpeakStateDefault from "useAudienceRequestToSpeakState.tsx";
+import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState.tsx";
 import useStageSpeakingForCurrentUser from "useStageSpeakingForCurrentUser.tsx";
+import StageChannelActionCreators from "StageChannelActionCreators.tsx";
 import AgeVerificationActionCreatorsDefault from "../age_assurance/AgeVerificationActionCreators.native.tsx";
+import AgeVerificationAnalyticsUtils from "../age_assurance/AgeVerificationAnalyticsUtils.tsx";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
 import noop from "../../../_runtime/metro/00019__.js";
 import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
+
+const useAudienceRequestToSpeakStateDefault = useAudienceRequestToSpeakState;
 
 require = fn;
 const size = fn(2);
@@ -32,15 +36,17 @@ export default function useToggleRequestToSpeak(id) {
     () => {
       let obj = useStageSpeakingForCurrentUser;
       if (obj.shouldAgeVerifyToSpeakForCurrentUser(id.id)) {
-        obj = { entryPoint: tmp(8413).AgeVerificationModalEntryPoint.STAGE_CHANNEL_RAISE_HAND };
+        obj = { entryPoint: AgeVerificationAnalyticsUtils.AgeVerificationModalEntryPoint.STAGE_CHANNEL_RAISE_HAND };
         const result = AgeVerificationActionCreatorsDefault.showAgeVerificationGetStartedModal(obj);
       } else {
-        if (closure_1 === tmp(4707).RequestToSpeakStates.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK) {
-          let tmpResult = tmp(8398);
-          const result1 = tmpResult.audienceAckRequestToSpeak(tmp3, true);
+        if (
+          closure_1 === useAudienceRequestToSpeakState.RequestToSpeakStates.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK
+        ) {
+          let tmpResult = StageChannelActionCreators;
+          const result1 = tmpResult.audienceAckRequestToSpeak(id, true);
         } else {
-          tmpResult = tmp(8398);
-          tmpResult.toggleRequestToSpeak(tmp3, !first);
+          tmpResult = StageChannelActionCreators;
+          tmpResult.toggleRequestToSpeak(id, !first);
         }
         closure_4(!first);
       }

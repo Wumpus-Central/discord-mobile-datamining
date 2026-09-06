@@ -22,14 +22,16 @@ let closure_6 = async function _generatePairwiseFingerprint() {
   closure_6 = tmp2;
   const items = [KeyFingerprint.generateKeyFingerprint(closure_0, closure_1, closure_2)];
   items[1] = KeyFingerprint.generateKeyFingerprint(closure_0, closure_3, closure_4);
-  closure_133_0 = await Promise.all(items);
+  await Promise.all(items);
+  closure_133_0 = value;
   const sorted = closure_133_0.sort(closure_134_5);
   const _Uint8Array2 = Uint8Array;
   const uint8Array = new Uint8Array(closure_133_0[0].byteLength + closure_133_0[1].byteLength);
   closure_133_1 = uint8Array;
   const result = closure_133_1.set(closure_133_0[0], 0);
   const result1 = closure_133_1.set(closure_133_0[1], closure_133_0[0].byteLength);
-  closure_133_2 = await closure_134_0(closure_134_1[2]).scryptAsync(closure_133_1, closure_134_3, closure_134_4);
+  await closure_134_0(closure_134_1[2]).scryptAsync(closure_133_1, closure_134_3, closure_134_4);
+  closure_133_2 = value;
   const _Uint8Array = Uint8Array;
   const uint8Array1 = new Uint8Array(closure_133_2);
   return uint8Array1;

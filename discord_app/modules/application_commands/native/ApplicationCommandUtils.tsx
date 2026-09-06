@@ -48,20 +48,19 @@ export const openCommandAttachmentPreview = function openCommandAttachmentPrevie
   name,
   fn,
 ) {
-  closure_0 = applicationCommandManager;
   importDefault = channelId;
   dependencyMap = name;
   upload = UploadAttachmentStore.getUpload(channelId, name, upload.SlashCommand);
   if (null != upload) {
-    const obj = {
+    let obj = {
       channelId,
       disableSpoiler: true,
       onClose: fn,
       onRemove() {
         UploadAttachmentActionCreatorsDefault.remove(closure_1, upload.id, DraftType.SlashCommand);
         let found;
-        if (closure_0 != null) {
-          const activeCommand = obj2.props.activeCommand;
+        if (applicationCommandManager != null) {
+          const activeCommand = applicationCommandManager.props.activeCommand;
           if (activeCommand != null) {
             const options = activeCommand.options;
             if (options != null) {
@@ -70,8 +69,10 @@ export const openCommandAttachmentPreview = function openCommandAttachmentPrevie
           }
         }
         if (null != found) {
-          if (obj2 != null) {
-            const result = obj2.insertOrJumpCommandOption(found, undefined, false, { displayText: "" });
+          if (applicationCommandManager != null) {
+            const result = applicationCommandManager.insertOrJumpCommandOption(found, undefined, false, {
+              displayText: "",
+            });
           }
         }
       },

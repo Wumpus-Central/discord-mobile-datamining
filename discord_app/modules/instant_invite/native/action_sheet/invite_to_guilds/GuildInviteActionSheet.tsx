@@ -99,6 +99,7 @@ function GuildList(recipientId) {
   obj2.title = intl2.string(recipientId(1114).t["c5T+X/"]);
   obj2.data = arr2;
   items[1] = obj2;
+  const tmp3 = _slicedToArray(obj.useServerInviteRows(recipientId, recipientId.query), 2);
 }
 const View = fn(17).View;
 const jsxProd = fn(21);

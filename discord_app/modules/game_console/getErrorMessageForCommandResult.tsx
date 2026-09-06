@@ -7,10 +7,10 @@ import size from "../../../_runtime/metro/00002__.js";
 const constants = GameConsoleConstants.GameConsoleCommandResultErrorCodes;
 const result = size.fileFinishedImporting("modules/game_console/getErrorMessageForCommandResult.tsx");
 
-export default function getErrorMessageForCommandResult(arg0, arg1, code) {
-  if ("failed" === arg1) {
+export default function getErrorMessageForCommandResult(device, result, code) {
+  if ("failed" === result) {
     code = code.code;
-    ({ platform, name } = arg0);
+    ({ platform, name } = device);
     if (constants.CONSOLE_DEVICE_COMMUNICATION_RESTRICTED === code) {
       let obj = { title: null, body: null };
       const intl7 = util.intl;
@@ -19,7 +19,7 @@ export default function getErrorMessageForCommandResult(arg0, arg1, code) {
       obj = { deviceType: platform };
       obj.body = intl8.formatToPlainString(util.t["cYX/3E"], obj);
       let obj7 = obj;
-    } else if (tmp2.CONSOLE_DEVICE_INVALID_POWER_MODE === code) {
+    } else if (constants.CONSOLE_DEVICE_INVALID_POWER_MODE === code) {
       const obj1 = { title: null, body: null };
       const intl5 = util.intl;
       const obj2 = { deviceType: platform };
@@ -29,7 +29,7 @@ export default function getErrorMessageForCommandResult(arg0, arg1, code) {
       obj1.body = intl6.formatToPlainString(util.t.RyOvpJ, obj3);
       obj7 = obj1;
     } else {
-      if (tmp2.CONSOLE_DEVICE_UNVAILABLE_FROM_OTHER_USERS === code) {
+      if (constants.CONSOLE_DEVICE_UNVAILABLE_FROM_OTHER_USERS === code) {
         const obj4 = { title: null, body: null };
         const intl3 = util.intl;
         const obj5 = { deviceType: platform };
@@ -38,7 +38,7 @@ export default function getErrorMessageForCommandResult(arg0, arg1, code) {
         const obj6 = { deviceName: name };
         obj4.body = intl4.formatToPlainString(util.t.InKtnC, obj6);
         obj7 = obj4;
-      } else if (tmp2.CONSOLE_DEVICE_ACCOUNT_LINK_ERROR !== code) {
+      } else if (constants.CONSOLE_DEVICE_ACCOUNT_LINK_ERROR !== code) {
         obj7 = { title: null, body: null };
         const intl12 = util.intl;
         obj7.title = intl12.string(util.t.QL1y93);
@@ -56,7 +56,7 @@ export default function getErrorMessageForCommandResult(arg0, arg1, code) {
     }
   } else {
     let tmp = null;
-    if ("n/a" === arg1) {
+    if ("n/a" === result) {
       let tmp19 = null;
       if (code.code === constants.CONSOLE_DEVICE_PASSCODE_UNLOCK_REQUIRED) {
         const obj10 = { title: null, body: null };

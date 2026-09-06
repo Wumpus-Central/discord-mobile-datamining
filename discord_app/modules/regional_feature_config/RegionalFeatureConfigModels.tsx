@@ -84,8 +84,8 @@ RegionalFeatureConfig["fromConnectionOpen"] = function fromConnectionOpen(region
       if (typeof AppStoreConfig === "function") {
         const obj1 = Object.create(tmp7.prototype);
         obj1.shouldCollectSignal = true === tmp8;
-        if (typeof tmp === "function") {
-          const obj2 = Object.create(tmp.prototype);
+        if (typeof RegionalFeatureConfig === "function") {
+          const obj2 = Object.create(RegionalFeatureConfig.prototype);
           obj2.settings = obj;
           obj2.ageVerification = obj;
           obj2.appStore = obj1;

@@ -40,6 +40,7 @@ function handleChannelUpdates(arg0) {
     }
     continue;
   }
+  tmp = arg0.channels[Symbol.iterator]();
 }
 function handleVoiceStateUpdates(voiceStates) {
   voiceStates = voiceStates.voiceStates;

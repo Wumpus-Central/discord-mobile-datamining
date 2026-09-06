@@ -33,8 +33,8 @@ export const getRoleIconData = function getRoleIconData(role, arg1) {
         let str3 = "quality=lossless";
         let str5 = "";
         if (null != arg1) {
-          tmp5(1430);
-          tmp5(1430);
+          ImageLoaderUtils;
+          ImageLoaderUtils;
           let str7 = "";
           const text = `size=${tmp9(arg1 * obj3.getDevicePixelRatio())}`;
           if (!closure_7) {

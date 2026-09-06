@@ -3,6 +3,7 @@ import LoggerDefault from "../../debug/Logger.tsx";
 import _modDef38 from "../../../../_runtime/metro/00038__.js";
 import DispatcherDefault from "../../../Dispatcher.tsx";
 import util from "../../../intl/index.native.tsx";
+import HTTPUtils from "../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import useWindowDimensions from "../../screen/useWindowDimensions.native.tsx";
 import inject from "../../../../discord_common/js/packages/media-engine/native/inject.tsx";
 import UserSettings from "../../user_settings/UserSettings.tsx";
@@ -27,89 +28,93 @@ function handleThumbnailUpload() {
   }
   return applyArgumentsResult;
 }
-let closure_18 = async function _handleThumbnailUpload(arg0, value) {
-  if (c7 === 2) {
-    c7 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp6 === 3) {
-    if (arg0 === 1) {
-      throw value;
-    } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+let closure_18 = async function _handleThumbnailUpload() {
+  closure_1 = arg1;
+  c6 = 0;
+  c7 = 0;
+  c5 = 0;
+  return (async (arg0, value) => {
+    if (c7 === 2) {
+      c7 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp6 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        let obj = { value, done: true };
+        return obj;
+      } else {
+        return { value: "HermesInternal", done: null };
+      }
     } else {
-      return { value: "HermesInternal", done: null };
-    }
-  } else {
-    try {
-      c7 = 2;
-      if (0 === c6) {
-        if (arg0 === 1) {
-          c7 = 3;
-          throw value;
-        } else if (arg0 === 2) {
+      try {
+        c7 = 2;
+        if (0 === c6) {
+          if (arg0 === 1) {
+            c7 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c7 = 3;
+            obj = { value, done: true };
+            return obj;
+          } else {
+            closure_3 = tmp3;
+            closure_2 = tmp7;
+            closure_130_0 = streamKey;
+            closure_130_1 = closure_1;
+            const DisableStreamPreviews = UserSettings.DisableStreamPreviews;
+            if (!DisableStreamPreviews.getSetting()) {
+              timeout.stop();
+              const _HermesInternal = HermesInternal;
+              const combined = "" + closure_2_8 + closure_1;
+              let obj1 = DispatcherDefault;
+              obj1 = { type: "STREAM_PREVIEW_FETCH_SUCCESS", streamKey, previewURL: combined };
+              obj1.dispatch(obj1);
+              c5 = 1;
+              const HTTP = HTTPUtils.HTTP;
+              const request = {
+                url: closure_2_9.STREAM_PREVIEW(streamKey),
+                body: null,
+                oldFormErrors: true,
+                rejectWithError: false,
+              };
+              obj2 = { thumbnail: combined };
+              request.body = obj2;
+              c6 = 2;
+              c7 = 1;
+              const obj3 = { value: HTTP.post(request), done: false };
+              return obj3;
+            }
+          }
+        } else {
+          if (1 === tmp7) {
+            c5 = 0;
+            closure_130_2 = closure_4;
+            closure_131_13.error("Failed to post stream preview", closure_130_2);
+            closure_131_14.start(60000, () => closure_2_17(streamKey, closure_1_1));
+          } else if (arg0 === 1) {
+            c7 = 3;
+            throw value;
+          } else if (arg0 !== 2) {
+            c5 = 0;
+          }
+          c5 = 0;
           c7 = 3;
           obj = { value, done: true };
           return obj;
-        } else {
-          closure_3 = tmp3;
-          closure_2 = tmp7;
-          closure_130_0 = closure_0;
-          closure_130_1 = closure_1;
-          const DisableStreamPreviews = UserSettings.DisableStreamPreviews;
-          if (!DisableStreamPreviews.getSetting()) {
-            timeout.stop();
-            const _HermesInternal = HermesInternal;
-            const combined = "" + React6 + tmp33;
-            let obj1 = require("Dispatcher");
-            obj1 = { type: "STREAM_PREVIEW_FETCH_SUCCESS", streamKey: tmp32, previewURL: combined };
-            obj1.dispatch(obj1);
-            c5 = 1;
-            const HTTP = tmp34(tmp35[11]).HTTP;
-            const request = {
-              url: React7.STREAM_PREVIEW(tmp32),
-              body: null,
-              oldFormErrors: true,
-              rejectWithError: false,
-            };
-            obj2 = { thumbnail: combined };
-            request.body = obj2;
-            c6 = 2;
-            c7 = 1;
-            const obj3 = { value: HTTP.post(request), done: false };
-            return obj3;
-          }
-          tmp33 = closure_1;
-          tmp34 = require;
         }
-      } else {
-        if (1 === tmp7) {
-          c5 = 0;
-          closure_130_2 = closure_4;
-          closure_131_13.error("Failed to post stream preview", closure_130_2);
-          closure_131_14.start(60000, () => closure_2_17(closure_1_0, closure_1_1));
-        } else if (arg0 === 1) {
-          c7 = 3;
-          throw value;
-        } else if (arg0 !== 2) {
-          c5 = 0;
-        }
-        c5 = 0;
         c7 = 3;
-        obj = { value, done: true };
-        return obj;
-      }
-      c7 = 3;
-    } catch (tmp24) {
-      closure_4 = tmp24;
-      if (tmp4 === c5) {
-        c7 = tmp2;
-        throw tmp24;
-      } else {
-        c6 = tmp;
+      } catch (tmp24) {
+        closure_4 = tmp24;
+        if (tmp4 === c5) {
+          c7 = tmp2;
+          throw tmp24;
+        } else {
+          c6 = tmp;
+        }
       }
     }
-  }
+  })();
 };
 const Linking = fn(17).Linking;
 const Constants = fn(1074);
@@ -133,7 +138,7 @@ class VoiceEngineStreamingManager extends tmp6 {
           channelId = channelId.channelId;
           if (channelId !== channelId) {
             if (closure_19 != null) {
-              obj.stopBroadcast();
+              closure_19.stopBroadcast();
             }
             allActiveStreams = allActiveStreams.getAllActiveStreams();
             const item = allActiveStreams.forEach((channelId) => {
@@ -142,7 +147,6 @@ class VoiceEngineStreamingManager extends tmp6 {
                 StreamActionCreators.stopStream(encodeStreamKeyResult, false);
               }
             });
-            obj = closure_19;
           }
         }
       ] = tmp3;
@@ -162,7 +166,7 @@ prototype["_initialize"] = function _initialize() {
     if (null != channel) {
       const guildId = channel.getGuildId();
       currentUserActiveStream(4702).startStream(guildId, channel.id, { sourceId: "screen:0" });
-      currentUserActiveStream = currentAppIntent.getCurrentUserActiveStream();
+      currentUserActiveStream = obj2.getCurrentUserActiveStream();
       if (null != currentUserActiveStream) {
         const tmp2Result = closure_1(4761);
         const participant = tmp2Result.selectParticipant(
@@ -195,6 +199,7 @@ prototype["_initialize"] = function _initialize() {
     } else {
       let result = closure_19.stopBroadcastWithError(-1, "Not currently in a voice channel");
     }
+    obj2 = currentAppIntent;
   });
   const result1 = voiceEngine.setBroadcastFinishedCallback(() => {
     logger.log("Broadcast Finished");

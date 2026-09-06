@@ -1,4 +1,5 @@
 // discord_app/modules/guild_onboarding_home/GuildOnboardingHomeActionCreators.tsx
+import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
 import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
 import HTTPUtils from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
@@ -10,7 +11,7 @@ import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore.t
 import GuildOnboardingMemberActionStore from "GuildOnboardingMemberActionStore.tsx";
 
 require = fn;
-let closure_10 = async function _fetchGuildHomeSettings(guildId) {
+let closure_10 = async function _fetchGuildHomeSettings() {
   c5 = 0;
   c6 = 0;
   c4 = 0;
@@ -23,7 +24,8 @@ let closure_10 = async function _fetchGuildHomeSettings(guildId) {
     await HTTP.get(obj2);
     obj2 = closure_130_1(closure_130_2[6]);
     obj2.dispatch({ type: "GUILD_HOME_SETTINGS_FETCH_FAIL", guildId: closure_129_0 });
-    closure_129_1 = await "HermesInternal";
+    await "HermesInternal";
+    closure_129_1 = value;
     closure_129_2 = closure_130_0(closure_130_2[8]).settingsFromServer(closure_129_1.body);
     closure_130_0(closure_130_2[8]);
     closure_130_1(closure_130_2[6]).dispatch({
@@ -34,95 +36,100 @@ let closure_10 = async function _fetchGuildHomeSettings(guildId) {
     return closure_129_2;
   })();
 };
-let closure_11 = async function _fetchNewMemberActions(arg0, value) {
-  if (c6 === 2) {
-    c6 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp6 === 3) {
-    if (arg0 === 1) {
-      throw value;
-    } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
-    } else {
-      return { value: "HermesInternal", done: null };
-    }
-  } else {
-    try {
-      c6 = 2;
-      let isFullServerPreviewResult = c5;
-      if (0 === c5) {
-        if (arg0 === 1) {
-          c6 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c6 = 3;
-          obj = { value, done: true };
-          return obj;
-        } else {
-          closure_2 = tmp3;
-          closure_129_0 = closure_0;
-          closure_129_1 = undefined;
-          closure_129_2 = undefined;
-          isFullServerPreviewResult = fullServerPreview.isFullServerPreview(closure_0);
-          if (!isFullServerPreviewResult) {
-            let obj4 = DispatcherDefault;
-            const obj1 = { type: "GUILD_NEW_MEMBER_ACTIONS_FETCH_START", guildId: tmp37 };
-            obj4.dispatch(obj1);
-            c4 = 1;
-            const HTTP = HTTPUtils.HTTP;
-            let obj2 = { url: React7.GUILD_MEMBER_ACTIONS(tmp37), oldFormErrors: true, rejectWithError: true };
-            c5 = 2;
-            c6 = 1;
-            const obj3 = { value: HTTP.get(obj2), done: false };
-            return obj3;
-          }
-        }
-      } else if (1 === isFullServerPreviewResult) {
-        c4 = 0;
-        obj2 = closure_130_1(closure_130_2[6]);
-        obj4 = { type: "GUILD_NEW_MEMBER_ACTIONS_FETCH_FAIL", guildId: closure_129_0 };
-        isFullServerPreviewResult = obj2.dispatch(obj4);
-      } else if (arg0 === 1) {
-        c6 = 3;
-        throw value;
-      } else if (arg0 === 2) {
-        c4 = 0;
-        c6 = 3;
-        const obj5 = { value, done: true };
-        return obj5;
-      } else {
-        closure_129_1 = value;
-        closure_129_2 = closure_130_0(closure_130_2[8]).actionsFromServer(closure_129_1.body);
-        const obj11 = closure_130_0(closure_130_2[8]);
-        const obj6 = {
-          type: "GUILD_NEW_MEMBER_ACTIONS_FETCH_SUCCESS",
-          guildId: closure_129_0,
-          memberActions: closure_129_2,
-        };
-        closure_130_1(closure_130_2[6]).dispatch(obj6);
-        c4 = 0;
-        c6 = 3;
-        obj = { value: closure_129_2, done: true };
-        return obj;
-      }
-      c6 = 3;
-    } catch (tmp20) {
-      closure_3 = tmp20;
-      if (tmp4 === c4) {
-        c6 = tmp2;
-        throw tmp20;
-      } else {
-        c5 = tmp;
-      }
-    }
-  }
-};
-let closure_12 = async function _clearNewMemberActions(guildId) {
+let closure_11 = async function _fetchNewMemberActions() {
   c5 = 0;
   c6 = 0;
   c4 = 0;
-  return (async (arg0, value) => {
+  return (async (arg0) => {
+    if (c6 === 2) {
+      c6 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp6 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        let obj = { value, done: true };
+        return obj;
+      } else {
+        return { value: "HermesInternal", done: null };
+      }
+    } else {
+      try {
+        c6 = 2;
+        isFullServerPreviewResult = c5;
+        if (0 === c5) {
+          if (arg0 === 1) {
+            c6 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c6 = 3;
+            obj = { value, done: true };
+            return obj;
+          } else {
+            closure_2 = tmp3;
+            closure_129_0 = guildId;
+            closure_129_1 = undefined;
+            closure_129_2 = undefined;
+            isFullServerPreviewResult = fullServerPreview.isFullServerPreview(guildId);
+            if (!isFullServerPreviewResult) {
+              let obj4 = DispatcherDefault;
+              const obj1 = { type: "GUILD_NEW_MEMBER_ACTIONS_FETCH_START", guildId };
+              obj4.dispatch(obj1);
+              c4 = 1;
+              const HTTP = HTTPUtils.HTTP;
+              let obj2 = { url: closure_2_9.GUILD_MEMBER_ACTIONS(guildId), oldFormErrors: true, rejectWithError: true };
+              c5 = 2;
+              c6 = 1;
+              const obj3 = { value: HTTP.get(obj2), done: false };
+              return obj3;
+            }
+          }
+        } else if (1 === isFullServerPreviewResult) {
+          c4 = 0;
+          obj2 = closure_130_1(closure_130_2[6]);
+          obj4 = { type: "GUILD_NEW_MEMBER_ACTIONS_FETCH_FAIL", guildId: closure_129_0 };
+          isFullServerPreviewResult = obj2.dispatch(obj4);
+        } else if (arg0 === 1) {
+          c6 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c4 = 0;
+          c6 = 3;
+          const obj5 = { value, done: true };
+          return obj5;
+        } else {
+          closure_129_1 = value;
+          closure_129_2 = closure_130_0(closure_130_2[8]).actionsFromServer(closure_129_1.body);
+          const obj11 = closure_130_0(closure_130_2[8]);
+          const obj6 = {
+            type: "GUILD_NEW_MEMBER_ACTIONS_FETCH_SUCCESS",
+            guildId: closure_129_0,
+            memberActions: closure_129_2,
+          };
+          closure_130_1(closure_130_2[6]).dispatch(obj6);
+          c4 = 0;
+          c6 = 3;
+          obj = { value: closure_129_2, done: true };
+          return obj;
+        }
+        c6 = 3;
+      } catch (tmp20) {
+        closure_3 = tmp20;
+        if (tmp4 === c4) {
+          c6 = tmp2;
+          throw tmp20;
+        } else {
+          c5 = tmp;
+        }
+      }
+    }
+  })();
+};
+let closure_12 = async function _clearNewMemberActions() {
+  c5 = 0;
+  c6 = 0;
+  c4 = 0;
+  return (async (arg0) => {
     closure_2 = tmp3;
     closure_129_0 = guildId;
     DispatcherDefault.dispatch({ type: "GUILD_NEW_MEMBER_ACTIONS_DELETE_START", guildId });
@@ -249,17 +256,17 @@ export const completeNewMemberAction = function completeNewMemberAction(guildId,
     const actionForChannel = GuildOnboardingHomeSettingsStore.getActionForChannel(guildId, channelId);
     if (null != channel) {
       if (null != actionForChannel) {
-        let tmpResult = tmp(11);
+        let tmpResult = SnowflakeUtilsDefault;
         let completedActions = GuildOnboardingMemberActionStore.getCompletedActions(guildId);
         if (completedActions == null) {
           completedActions = {};
         }
         closure_0 = tmpResult.keys(completedActions);
-        let newMemberActions = obj3.getNewMemberActions(guildId);
+        let newMemberActions = GuildOnboardingHomeSettingsStore.getNewMemberActions(guildId);
         if (newMemberActions == null) {
           newMemberActions = [];
         }
-        tmpResult = tmp(1242);
+        tmpResult = AnalyticsUtilsDefault;
         obj = { guild_id: null, channel_id: null, channel_action_type: null, has_completed_all: null };
         ({ guild_id: obj6.guild_id, id: obj6.channel_id } = channel);
         obj.channel_action_type = actionForChannel.actionType;
@@ -276,6 +283,5 @@ export const completeNewMemberAction = function completeNewMemberAction(guildId,
     const HTTP = HTTPUtils.HTTP;
     const obj1 = { url: React7.GUILD_MEMBER_ACTION_UPDATE(guildId, channelId), rejectWithError: true };
     HTTP.post(obj1);
-    obj3 = GuildOnboardingHomeSettingsStore;
   }
 };

@@ -13,5 +13,5 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/stage_channels/native/components/StageChannelBackground.tsx");
 
 export default function StageChannelBackground(children) {
-  return <View style={closure_2().container}>{arg0.children}</View>;
+  return <View style={closure_2().container}>{children.children}</View>;
 }

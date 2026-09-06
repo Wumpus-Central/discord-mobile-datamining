@@ -335,17 +335,17 @@ export default {
     let str = "filter_from";
     if (constants.FILTER_FROM !== searchTokenType) {
       str = "filter_mentions";
-      if (tmp.FILTER_MENTIONS !== searchTokenType) {
+      if (constants.FILTER_MENTIONS !== searchTokenType) {
         str = "filter_in";
-        if (tmp.FILTER_IN !== searchTokenType) {
+        if (constants.FILTER_IN !== searchTokenType) {
           str = "filter_has";
-          if (tmp.FILTER_HAS !== searchTokenType) {
+          if (constants.FILTER_HAS !== searchTokenType) {
             str = "filter_on";
-            if (tmp.FILTER_ON !== searchTokenType) {
+            if (constants.FILTER_ON !== searchTokenType) {
               str = "filter_after";
-              if (tmp.FILTER_AFTER !== searchTokenType) {
+              if (constants.FILTER_AFTER !== searchTokenType) {
                 str = null;
-                if (tmp.FILTER_BEFORE === searchTokenType) {
+                if (constants.FILTER_BEFORE === searchTokenType) {
                   str = "filter_before";
                 }
               }
@@ -374,17 +374,17 @@ export default {
     let str = "filter_from";
     if (constants.FILTER_FROM !== searchTokenType) {
       str = "filter_mentions";
-      if (tmp.FILTER_MENTIONS !== searchTokenType) {
+      if (constants.FILTER_MENTIONS !== searchTokenType) {
         str = "filter_in";
-        if (tmp.FILTER_IN !== searchTokenType) {
+        if (constants.FILTER_IN !== searchTokenType) {
           str = "filter_has";
-          if (tmp.FILTER_HAS !== searchTokenType) {
+          if (constants.FILTER_HAS !== searchTokenType) {
             str = "filter_on";
-            if (tmp.FILTER_ON !== searchTokenType) {
+            if (constants.FILTER_ON !== searchTokenType) {
               str = "filter_after";
-              if (tmp.FILTER_AFTER !== searchTokenType) {
+              if (constants.FILTER_AFTER !== searchTokenType) {
                 str = null;
-                if (tmp.FILTER_BEFORE === searchTokenType) {
+                if (constants.FILTER_BEFORE === searchTokenType) {
                   str = "filter_before";
                 }
               }

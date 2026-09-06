@@ -31,16 +31,16 @@ export default function useUnreadSettingNotice(id) {
   const effect1 = noop.useEffect(() => {
     let hasItem = set.has(id.type);
     if (hasItem) {
-      hasItem = first !== tmp.id;
+      hasItem = first !== id.id;
     }
     if (hasItem) {
       hasItem = shouldUseNewNotificationSystem;
     }
     if (hasItem) {
-      hasItem = UnreadSettingNoticeStore2Default.maybeAutoUpgradeChannel(tmp.id);
+      hasItem = UnreadSettingNoticeStore2Default.maybeAutoUpgradeChannel(id.id);
     }
     if (hasItem) {
-      closure_3(tmp.id);
+      closure_3(id.id);
     }
   }, items2);
   obj = { showUnreadsNotice: first === id.id, clearUnreadsNotice: noop.useCallback(() => closure_3(""), []) };

@@ -149,7 +149,7 @@ export default function GroupDMAvatar(pileSizeOverride) {
             accessible,
             accessibilityLabel,
           };
-          let tmp5 = closure_5(tmp(1178).Avatar, obj);
+          let tmp5 = closure_5(channel(1178).Avatar, obj);
         } else {
           obj = {
             status,
@@ -167,7 +167,7 @@ export default function GroupDMAvatar(pileSizeOverride) {
       return tmp5;
     }
   }
-  tmp5 = closure_5(tmp(1178).Avatar, {
+  tmp5 = closure_5(channel(1178).Avatar, {
     autoStatusCutout: true,
     status,
     style,

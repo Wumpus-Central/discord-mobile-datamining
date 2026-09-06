@@ -36,7 +36,7 @@ function UserListItem(userId) {
   let tmp8Result = null != stateFromStores;
   if (tmp8Result) {
     obj = { user: stateFromStores, guildId: "Array", size: tmp(tmp2[14]).AvatarSizes.REFRESH_MEDIUM_32 };
-    tmp8Result = tmp8(tmp(tmp2[14]).Avatar, obj);
+    tmp8Result = closure_7(tmp(tmp2[14]).Avatar, obj);
   }
   obj = {
     icon: tmp8Result,

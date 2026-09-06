@@ -165,6 +165,7 @@ obj2.onPress = function onPress(channel) {
       actions_AlertActionCreatorsDefault.show(obj1);
     }
   });
+  const tmpResult = tmp(4693);
 };
 items[3] = obj2;
 let obj3 = { type: obj.MAIL, fullIcon: null, icon: null, isAvailable: null, getLabel: null, onPress: null };
@@ -223,6 +224,7 @@ obj3.onPress = function onPress(channel) {
       actions_AlertActionCreatorsDefault.show(obj1);
     }
   });
+  const tmpResult = tmp(4693);
 };
 items[4] = obj3;
 let obj4 = { type: obj.FB_MESSENGER, fullIcon: _modDef9884, isAvailable: null, getLabel: null, onPress: null };

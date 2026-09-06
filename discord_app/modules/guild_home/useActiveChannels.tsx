@@ -43,7 +43,7 @@ export const getActiveTextChannels = function getActiveTextChannels(guildId) {
         return false;
       } else {
         if (null != hasFlag.parent_id) {
-          if (obj.has(hasFlag.parent_id)) {
+          if (set.has(hasFlag.parent_id)) {
             return false;
           }
         }
@@ -66,7 +66,6 @@ export const getActiveTextChannels = function getActiveTextChannels(guildId) {
           return false;
         }
       }
-      obj = set;
     } else {
       return false;
     }

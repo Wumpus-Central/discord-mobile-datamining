@@ -3,6 +3,7 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import native from "../../../../design/void/native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import Stack_Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
+import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
 import Form from "../../../../design/void/Form/native/index.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -14,8 +15,8 @@ function ComparisonRow(entry) {
   const combined = "" + entry.color;
   let redesignVariant = null;
   if (entry.look !== native.ButtonLooks.LINK) {
-    redesignVariant = tmp4(1178).getRedesignVariant(entry.color);
-    const tmp4Result = tmp4(1178);
+    redesignVariant = native.getRedesignVariant(entry.color);
+    const tmp4Result = native;
   }
   items = [tmp.comparisonRow];
   let darkBg = hasItem;
@@ -54,7 +55,7 @@ function ComparisonRow(entry) {
   let darkText = null;
   if (hasItem) {
     darkText = null;
-    if (entry.look === tmp4(1178).ButtonLooks.FILLED) {
+    if (entry.look === native.ButtonLooks.FILLED) {
       darkText = tmp.darkText;
     }
   }
@@ -65,22 +66,28 @@ function ComparisonRow(entry) {
   const items4 = [React4(React3, obj2)];
   if (null != redesignVariant) {
     const obj4 = { style: tmp.comparisonSide, children: null };
-    const items5 = [tmp9(tmp4(4556).Text, { variant: "text-xxs/medium", color: "text-muted", children: "mana" })];
+    const items5 = [
+      hasOwnProperty(Text_Text.Text, { variant: "text-xxs/medium", color: "text-muted", children: "mana" }),
+    ];
     const obj5 = {
       variant: redesignVariant,
       size: "md",
       text: redesignVariant,
       onPress() {},
     };
-    items5[1] = tmp9(tmp4(4975).Button, obj5);
+    items5[1] = hasOwnProperty(components_Button_Button.Button, obj5);
     obj4.children = items5;
-    let tmp9Result = tmp7(tmp8, obj4);
+    let tmp9Result = React4(React3, obj4);
   } else {
     const obj6 = {
       style: tmp.comparisonSide,
-      children: tmp9(tmp4(4556).Text, { variant: "text-xs/medium", color: "text-muted", children: "no mapping" }),
+      children: hasOwnProperty(Text_Text.Text, {
+        variant: "text-xs/medium",
+        color: "text-muted",
+        children: "no mapping",
+      }),
     };
-    tmp9Result = tmp9(tmp8, obj6);
+    tmp9Result = hasOwnProperty(React3, obj6);
   }
   items4[1] = tmp9Result;
   obj1.children = items4;
@@ -125,7 +132,7 @@ function ComboRow(combo) {
   let darkText = null;
   if (hasItem) {
     darkText = null;
-    if (combo.look === tmp6(1178).ButtonLooks.FILLED) {
+    if (combo.look === native.ButtonLooks.FILLED) {
       darkText = tmp.darkText;
     }
   }

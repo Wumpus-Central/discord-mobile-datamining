@@ -1,6 +1,12 @@
 // discord_app/modules/media_viewer/native/components/MediaModalSpoilerOverlay.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import util from "../../../../intl/index.native.tsx";
+import PlatformUtils2 from "../../../../utils/PlatformUtils.tsx";
 import useToken from "../../../../design/tokens/native/useToken.tsx";
+import ReanimatedRexportDefault from "../../../reanimated/ReanimatedRexport.tsx";
+import Text_Text from "../../../../design/components/Text/native/Text.tsx";
+import VisualEffectViewDefault from "../../../visual_effect_view/native/VisualEffectView.tsx";
+import ImageWarningIcon from "../../../../design/components/Icon/native/redesign/generated/ImageWarningIcon.tsx";
 import useMediaItemSpoilerState from "../useMediaItemSpoilerState.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -54,28 +60,28 @@ export default noop.memo(function MediaModalSpoilerOverlay(source) {
     if (source.obscure) {
       let str = "dark";
     } else {
+      PlatformUtils2;
       str = "light";
-      const tmpResult = tmp(1115);
     }
     obj = { blurTheme: str, android_fallbackColor: token, style: absoluteFill.absoluteFill };
-    const items1 = [timestampProducer(tmp3(4965), obj)];
+    const items1 = [timestampProducer(VisualEffectViewDefault, obj)];
     obj1 = { style: items2.spoilerOverlayContainer, children: null };
     const obj2 = { style: null, children: null };
     if (source.obscure) {
       obj2.style = items2.obscureContentContainer;
-      items2 = [tmp9(tmp(5081).ImageWarningIcon, { size: "lg", color: "white" })];
+      items2 = [timestampProducer(ImageWarningIcon.ImageWarningIcon, { size: "lg", color: "white" })];
       const obj3 = {
         accessibilityRole: "text",
         variant: "heading-md/medium",
         color: "text-overlay-light",
         children: null,
       };
-      const intl2 = tmp(1114).intl;
-      stringResult = intl2.string(tmp(1114).t.SpxcUR);
+      const intl2 = util.intl;
+      stringResult = intl2.string(util.t.SpxcUR);
       obj3.children = stringResult;
-      items2[1] = tmp9(tmp(4556).Text, obj3);
+      items2[1] = timestampProducer(Text_Text.Text, obj3);
       obj2.children = items2;
-      let tmp9Result = tmp7(tmp11, obj2);
+      let tmp9Result = React5(hasOwnProperty, obj2);
     } else {
       obj2.style = items2.spoilerOverlayBackground;
       const obj4 = {
@@ -84,17 +90,18 @@ export default noop.memo(function MediaModalSpoilerOverlay(source) {
         color: "text-overlay-light",
         children: null,
       };
-      const intl = tmp(1114).intl;
-      obj4.children = intl.string(tmp(1114).t["F+x38C"]).toUpperCase();
-      obj2.children = tmp9(tmp(4556).Text, obj4);
-      tmp9Result = tmp9(tmp11, obj2);
-      const str2 = intl.string(tmp(1114).t["F+x38C"]);
+      const intl = util.intl;
+      obj4.children = intl.string(util.t["F+x38C"]).toUpperCase();
+      obj2.children = timestampProducer(Text_Text.Text, obj4);
+      tmp9Result = timestampProducer(hasOwnProperty, obj2);
+      const str2 = intl.string(util.t["F+x38C"]);
     }
     obj1.children = tmp9Result;
-    obj1 = tmp9(tmp11, obj1);
+    obj1 = timestampProducer(hasOwnProperty, obj1);
     items1[1] = obj1;
     obj.children = items1;
-    React5(tmp3(4296).View, obj);
-    const tmp3Result = tmp3(4965);
+    React5(ReanimatedRexportDefault.View, obj);
+    const tmp3Result = VisualEffectViewDefault;
   }
+  tmp5 = _slicedToArray(obj1.useMediaItemSpoilerState(index), 2);
 });

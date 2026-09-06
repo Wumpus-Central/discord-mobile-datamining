@@ -30,7 +30,12 @@ export default noop.memo(function QuestDockBountyBody() {
     isQuestDockExpanded = isRendered;
   }
   obj = {
-    rewardTile: tmp6(QuestDockInsetHeaderBody.QuestDockBodyRewardTile, obj),
+    rewardTile: jsx(QuestDockInsetHeaderBody.QuestDockBodyRewardTile, {
+      assetUrl: _modDef11297,
+      isAnimatedAsset: true,
+      paused: null,
+      withAnimation: null,
+    }),
     title: null,
     description: null,
     ctaText: null,
@@ -42,13 +47,18 @@ export default noop.memo(function QuestDockBountyBody() {
     str = "";
   }
   obj.title = str;
-  const intl = tmp2(1114).intl;
+  const intl = util.intl;
   obj.description = intl.string(util.t["1uzE2S"]);
-  const intl2 = tmp2(1114).intl;
+  const intl2 = util.intl;
   obj.ctaText = intl2.string(util.t["1IPUq9"]);
   obj.onCtaPress = callback;
   return jsx(QuestDockInsetHeaderBodyDefault, {
-    rewardTile: tmp6(QuestDockInsetHeaderBody.QuestDockBodyRewardTile, obj),
+    rewardTile: jsx(QuestDockInsetHeaderBody.QuestDockBodyRewardTile, {
+      assetUrl: _modDef11297,
+      isAnimatedAsset: true,
+      paused: null,
+      withAnimation: null,
+    }),
     title: null,
     description: null,
     ctaText: null,

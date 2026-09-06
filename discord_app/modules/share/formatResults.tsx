@@ -23,7 +23,7 @@ function getChannelIdFromDestinationId(type) {
     return tmp4;
   }
 }
-let closure_12 = async function _getOrResolveChannelIdFromDestinationId(arg0, value) {
+let closure_12 = async function _getOrResolveChannelIdFromDestinationId(arg0) {
   if (c1 === 2) {
     c1 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -48,18 +48,18 @@ let closure_12 = async function _getOrResolveChannelIdFromDestinationId(arg0, va
           obj = { value, done: true };
           return obj;
         } else {
-          const tmp20 = getChannelIdFromDestinationId(closure_0);
+          const tmp20 = getChannelIdFromDestinationId(_require);
           if (null != tmp20) {
             c1 = 3;
             const obj1 = { value: tmp20, done: true };
             return obj1;
-          } else if ("user" === tmp18.type) {
+          } else if ("user" === _require.type) {
             c4 = 1;
             let obj2 = ChannelActionCreatorsDefault;
             c2 = 2;
             c1 = 1;
             obj2 = { value: null, done: false };
-            obj2.value = obj2.getOrEnsurePrivateChannel(tmp18.id);
+            obj2.value = obj2.getOrEnsurePrivateChannel(_require.id);
             return obj2;
           } else {
             c1 = 3;
@@ -330,7 +330,7 @@ export const formatResultsWithHeaders = function formatResultsWithHeaders(hasNon
     return items2;
   } else {
     const mapped = frequentChannels.map((id) => createAutocompleterResultForChannelIdDefault(id.id));
-    const found = mapped.filter(tmp(1369).isNotNullish);
+    const found = mapped.filter(queryMode(1369).isNotNullish);
     const found1 = found.filter(isAllowedType);
     if (null != queryMode) {
       const items3 = [headerResult];
@@ -340,8 +340,8 @@ export const formatResultsWithHeaders = function formatResultsWithHeaders(hasNon
       );
       let items4 = items3;
     } else {
-      const intl2 = tmp(1114).intl;
-      items4 = [tmp(9835).createHeaderResult(intl2.string(tmp(1114).t["80lOZ1"])), ,];
+      const intl2 = queryMode(1114).intl;
+      items4 = [queryMode(9835).createHeaderResult(intl2.string(queryMode(1114).t["80lOZ1"])), ,];
       let tmp13 = null;
       if (null != selectedChannelId) {
         const tmp7 = createAutocompleterResultForChannelIdDefault(selectedChannelId);
@@ -349,7 +349,7 @@ export const formatResultsWithHeaders = function formatResultsWithHeaders(hasNon
         if (null != tmp7) {
           let tmp9 = null;
           if (isAllowedType(tmp7)) {
-            let canResult = tmp7.type === tmp(9835).AutocompleterResultTypes.USER;
+            let canResult = tmp7.type === queryMode(9835).AutocompleterResultTypes.USER;
             if (!canResult) {
               canResult = PermissionStore.can(constants.VIEW_CHANNEL, tmp7.record);
             }
@@ -365,7 +365,7 @@ export const formatResultsWithHeaders = function formatResultsWithHeaders(hasNon
       items4[1] = tmp13;
       items4[2] = headerResult;
       HermesBuiltin.arraySpread(found1, 3);
-      const tmpResult = tmp(9835);
+      const tmpResult = queryMode(9835);
     }
     return mergeAndDedupeResultsWithHeaders(items4, items1);
   }

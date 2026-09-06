@@ -39,12 +39,12 @@ export const useUpdateIsOnStartStageScreenEffect = function useUpdateIsOnStartSt
   const items3 = [stateFromStores, tmp3];
   const effect = noop.useEffect(() => {
     if (stateFromStores) {
-      if (!tmp) {
+      if (!closure_2) {
         let isOnStartStageScreen = false;
         ReactBatchUpdates.batchUpdates(() => state.setState({ isOnStartStageScreen }));
       }
     } else {
-      isOnStartStageScreen = tmp;
+      isOnStartStageScreen = closure_2;
       ReactBatchUpdates.batchUpdates(() => state.setState({ isOnStartStageScreen }));
     }
   }, items3);

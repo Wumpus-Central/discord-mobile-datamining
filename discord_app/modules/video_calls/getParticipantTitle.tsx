@@ -1,4 +1,5 @@
 // discord_app/modules/video_calls/getParticipantTitle.tsx
+import util from "../../intl/index.native.tsx";
 import CallConstants from "../calls/CallConstants.tsx";
 import NicknameUtilsDefault from "../../utils/NicknameUtils.tsx";
 import useIsGuestOrLurker from "../guild_member/useIsGuestOrLurker.tsx";
@@ -27,9 +28,9 @@ export default function getParticipantTitle(guild_id, type, name) {
     let str = "";
     const name1 = NicknameUtilsDefault.getName(guild_id.getGuildId(), guild_id.id, type.user);
     if (result) {
-      const intl = tmp10(1114).intl;
+      const intl = util.intl;
       const _HermesInternal = HermesInternal;
-      str = " " + intl.string(tmp10(1114).t["pFO/Ph"]);
+      str = " " + intl.string(util.t["pFO/Ph"]);
     }
     return name1 + str;
   }

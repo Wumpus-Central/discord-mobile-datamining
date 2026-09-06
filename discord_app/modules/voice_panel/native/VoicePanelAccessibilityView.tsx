@@ -35,7 +35,7 @@ export default function VoicePanelAccessibilityView(pointerEvents) {
   const merged1 = Object.assign(merged);
   return (
     <closure_4
-      style={arg0.style}
+      style={pointerEvents.style}
       pointerEvents={str}
       nativeID={nativeID}
       accessibilityViewIsModal={null}

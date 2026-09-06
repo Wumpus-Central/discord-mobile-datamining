@@ -16,10 +16,10 @@ export default function MediaModalSheetWrapper(onCloseCallback) {
   const effect = noop.useEffect(() => {
     let transitionState;
     if (context != null) {
-      transitionState = obj.transitionState;
+      transitionState = context.transitionState;
     }
     if ("exiting" === transitionState) {
-      obj.onLeave();
+      context.onLeave();
     }
   }, items);
   const items1 = [onCloseCallback];

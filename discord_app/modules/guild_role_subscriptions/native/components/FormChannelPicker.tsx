@@ -48,7 +48,6 @@ export default function FormChannelPicker(channelId) {
   obj.style = items2;
   let tmp10 = null;
   const tmp3 = require("FormStyles")();
-  const tmp8 = closure_5;
   if (null != stateFromStores) {
     let TextIcon = tmp5(tmp2[11]).getChannelIconComponent(stateFromStores);
     if (TextIcon == null) {
@@ -76,5 +75,5 @@ export default function FormChannelPicker(channelId) {
     source: require("../../../../../_runtime/metro/09939__.js"),
   });
   obj.children = items3;
-  return tmp8(tmpResult, obj);
+  return closure_5(tmpResult, obj);
 }

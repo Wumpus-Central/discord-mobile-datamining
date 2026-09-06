@@ -86,7 +86,7 @@ export default function ConversationPreviewMessage(message) {
     }
     if (tmp24Result) {
       ({ colorString: obj10.color, colorStrings: obj10.colors } = stateFromStores1);
-      tmp24Result = tmp24(tmp2(tmp3[14]).RoleDot, { size: "small", color: null, colors: null });
+      tmp24Result = closure_7(tmp2(tmp3[14]).RoleDot, { size: "small", color: null, colors: null });
       const obj4 = { size: "small", color: null, colors: null };
     }
     const items5 = [tmp24Result];

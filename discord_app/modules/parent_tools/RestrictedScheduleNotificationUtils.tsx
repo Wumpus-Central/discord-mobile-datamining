@@ -12,7 +12,6 @@ function isOnlyDayLoss(label, label2) {
     if (obj2.isEqual(label.startTime, label2.startTime)) {
       if (tmp7Result.isEqual(label.endTime, label2.endTime)) {
         const _Set = Set;
-        const set = new Set(label.days);
         let everyResult = label2.days.length < label.days.length;
         if (everyResult) {
           const days = label2.days;
@@ -22,12 +21,11 @@ function isOnlyDayLoss(label, label2) {
       } else {
         return false;
       }
-      tmp7Result = tmp7(12);
+      tmp7Result = _modDef12;
     } else {
       return false;
     }
     obj2 = _modDef12;
-    tmp7 = importDefault;
   }
 }
 let RestrictedScheduleNotificationKind = {
@@ -76,15 +74,15 @@ export const diffSchedules = function diffSchedules(EMPTY_SCHEDULE_SNAPSHOT, toS
     closure_4 = closure_4 + 1;
     if (Created === obj.Removed) {
       closure_5 = closure_5 + 1;
-    } else if (Created === tmp2.Created) {
+    } else if (Created === obj.Created) {
       closure_2 = value;
       closure_6 = closure_6 + 1;
-    } else if (Created === tmp2.Updated) {
+    } else if (Created === obj.Updated) {
       closure_3 = value;
       closure_7 = closure_7 + 1;
     } else {
       const items = [,];
-      ({ Enabled: arr[0], Disabled: arr[1] } = tmp2);
+      ({ Enabled: arr[0], Disabled: arr[1] } = obj);
       if (items.includes(Created)) {
         closure_8 = closure_8 + 1;
       }

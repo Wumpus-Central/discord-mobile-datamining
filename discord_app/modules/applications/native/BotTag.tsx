@@ -5,17 +5,17 @@ import CheckmarkSmallBoldIcon from "../../../design/components/Icon/native/redes
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-function getBotLabel(BOT) {
+function getBotLabel() {
   if (BOT === undefined) {
     BOT = BotTagTypes.BOT;
   }
   if (BotTagTypes.SYSTEM_DM !== BOT) {
-    if (tmp2.OFFICIAL !== BOT) {
-      if (tmp2.SERVER === BOT) {
+    if (BotTagTypes.OFFICIAL !== BOT) {
+      if (BotTagTypes.SERVER === BOT) {
         const intl2 = util.intl;
         let stringResult = intl2.string(util.t.PuJGuM);
       } else {
-        const BOT2 = tmp2.BOT;
+        const BOT2 = BotTagTypes.BOT;
         const intl = util.intl;
         stringResult = intl.string(util.t["9RNkeF"]);
       }

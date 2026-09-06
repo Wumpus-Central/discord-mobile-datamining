@@ -24,10 +24,10 @@ export const surveyHide = function surveyHide(key, dismissed) {
   const track = AnalyticsUtilsDefault.track;
   if (dismissed) {
     obj = { notice_type: constants.SURVEY, survey_id: key, dismissed };
-    track(tmp3.APP_NOTICE_CLOSED, obj);
+    track(hasOwnProperty.APP_NOTICE_CLOSED, obj);
   } else {
     const obj1 = { notice_type: constants.SURVEY };
-    track(tmp3.APP_NOTICE_PRIMARY_CTA_OPENED, obj1);
+    track(hasOwnProperty.APP_NOTICE_PRIMARY_CTA_OPENED, obj1);
   }
 };
 export const surveyFetch = function surveyFetch(surveyOverride, disable_auto_seen) {

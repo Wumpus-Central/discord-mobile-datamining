@@ -49,7 +49,6 @@ export default noop.memo((look) => {
     BRAND = __closure.BRAND;
   }
   ({ style, sendCallback } = look);
-  const stopCallback = look.stopCallback;
   let stateFromStores1;
   let first;
   noop = undefined;
@@ -84,13 +83,13 @@ export default noop.memo((look) => {
     isGuildStageVoiceResult = !tmp5;
   }
   ref = obj5.useRef(false);
-  tmp5 = stopCallback(stateFromStores1[11])(stateFromStores1);
+  tmp5 = look.stopCallback(stateFromStores1[11])(stateFromStores1);
   const voiceChatNavigationContext = sendCallback(onTouchStart[12]).useVoiceChatNavigationContext();
   prop = undefined;
   if (voiceChatNavigationContext != null) {
     prop = voiceChatNavigationContext.setIsSwipeToChatDisabled;
   }
-  const items4 = [ref, first, first1, sendCallback, stopCallback];
+  const items4 = [ref, first, first1, sendCallback, look.stopCallback];
   const effect = obj5.useEffect(() => {
     let tmp = first;
     if (!first) {
@@ -108,7 +107,7 @@ export default noop.memo((look) => {
     }
     ref.current = tmp;
   }, items4);
-  const Gesture = tmp2(onTouchStart[14]).Gesture;
+  const Gesture = sendCallback(onTouchStart[14]).Gesture;
   const tmp2Result = sendCallback(onTouchStart[12]);
   class F {
     constructor() {
@@ -126,7 +125,7 @@ export default noop.memo((look) => {
     }
   }
   __closure = {
-    runOnJS: tmp2(onTouchStart[15]).runOnJS,
+    runOnJS: sendCallback(onTouchStart[15]).runOnJS,
     setDragging: tmp11,
     setPressed: tmp8,
     setIsSwipeToChatDisabled: prop,
@@ -142,7 +141,7 @@ export default noop.memo((look) => {
       return;
     }
   }
-  __closure = { runOnJS: tmp2(onTouchStart[15]).runOnJS, setDragging: tmp11 };
+  __closure = { runOnJS: sendCallback(onTouchStart[15]).runOnJS, setDragging: tmp11 };
   N.__closure = __closure;
   N.__workletHash = 8439106360958;
   N.__initData = __initData;
@@ -172,7 +171,7 @@ export default noop.memo((look) => {
         obj1 = { gesture: onEndResult, children: null };
         View = View(onTouchStart[15]).View;
         obj2 = { style: items7, children: null };
-        style = tmp2(onTouchStart[16]).Button;
+        style = sendCallback(onTouchStart[16]).Button;
         const obj3 = {
           style: buttonBlurPressed,
           textStyle: string.textStyle,
@@ -181,9 +180,9 @@ export default noop.memo((look) => {
           onTouchEnd: null,
           darkenOnPress: true,
         };
-        const intl = tmp2(onTouchStart[17]).intl;
+        const intl = sendCallback(onTouchStart[17]).intl;
         string = intl.string;
-        obj3.text = string(tmp2(onTouchStart[17]).t.Q8gkVL);
+        obj3.text = string(sendCallback(onTouchStart[17]).t.Q8gkVL);
         onTouchStart = function onTouchStart() {
           closure_4(true);
           mode(false);
@@ -210,7 +209,7 @@ export default noop.memo((look) => {
         );
         onEndResult = <View style={items7}>{null}</View>;
         obj1.children = onEndResult;
-        jsx(tmp2(onTouchStart[14]).GestureDetector, { gesture: onEndResult, children: null });
+        jsx(sendCallback(onTouchStart[14]).GestureDetector, { gesture: onEndResult, children: null });
       }
     }
   }

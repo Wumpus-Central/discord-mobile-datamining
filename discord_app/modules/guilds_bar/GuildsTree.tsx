@@ -24,7 +24,7 @@ prototype["getSnapshot"] = function getSnapshot() {
     nodes = {};
     let merged = Object.assign(tmp2);
     nodes.children = undefined;
-    let children = tmp2.children;
+    children = tmp2.children;
     nodes.childrenIds = children.map((id) => id.id);
     nodes[key10005] = nodes;
     continue;
@@ -53,7 +53,7 @@ prototype["loadSnapshot"] = function loadSnapshot(tree) {
   self.root.children = rootChildrenIds.map((item) => self.nodes[item]);
   self.version = self.version + 1;
 };
-prototype["moveNextTo"] = function moveNextTo(node, node1, moveToBelow) {
+prototype["moveNextTo"] = function moveNextTo(node, node1) {
   let flag = moveToBelow;
   if (moveToBelow === undefined) {
     flag = false;
@@ -65,7 +65,7 @@ prototype["moveNextTo"] = function moveNextTo(node, node1, moveToBelow) {
   } else {
     root = self.root;
   }
-  const children = root.children;
+  children = root.children;
   const index = children.indexOf(node1);
   let tmp7 = node.type === obj.FOLDER;
   if (tmp7) {
@@ -85,7 +85,7 @@ prototype["moveNextTo"] = function moveNextTo(node, node1, moveToBelow) {
   self.version = self.version + 1;
   return self;
 };
-prototype["moveInto"] = function moveInto(node, c0, flag) {
+prototype["moveInto"] = function moveInto(node, c0) {
   if (flag === undefined) {
     flag = true;
   }
@@ -93,17 +93,17 @@ prototype["moveInto"] = function moveInto(node, c0, flag) {
   this._pluckNode(node);
   let num = 0;
   if (flag) {
-    num = c0.children.length;
+    num = _require.children.length;
   }
   const items = [...c0.children];
-  c0.children = items;
-  const children = c0.children;
+  _require.children = items;
+  children = _require.children;
   children.splice(num, 0, node);
-  node.parentId = c0.id;
+  node.parentId = _require.id;
   self.version = self.version + 1;
   return self;
 };
-prototype["addNode"] = function addNode(type, c0, flag) {
+prototype["addNode"] = function addNode(type) {
   const self = this;
   let root = c0;
   if (c0 === undefined) {
@@ -137,7 +137,7 @@ prototype["replaceNode"] = function replaceNode(node, cloneNodeResult) {
   } else {
     root = self.root;
   }
-  const children = root.children;
+  children = root.children;
   const index = children.indexOf(node);
   _modDef38(index >= 0, "[GUILDS TREE] existing node (" + node.id + ") did not exist within its specified parent (" + node.parentId + ")");
   const items = [...root.children];
@@ -196,7 +196,7 @@ prototype["sortedGuildNodes"] = function sortedGuildNodes() {
   } else if (null == root.children) {
     items1 = [];
   } else {
-    const children = root.children;
+    children = root.children;
     const mapped = children.map((type) => {
       if (type.type === closure_1_3.GUILD) {
         let items = [type];
@@ -259,7 +259,7 @@ prototype["_pluckNode"] = function _pluckNode(parentId) {
     root = self.root;
   }
   _modDef38(null != root, "[GUILDS TREE] source node (" + parentId.id + ") had a parent id (" + parentId.parentId + ") which doesn't exist in the tree");
-  const children = root.children;
+  children = root.children;
   const tmp2 = null != root;
   _modDef38(null != children, "[GUILDS TREE] source node (" + parentId.id + ") had a parent id (" + parentId.parentId + ") which contains no children");
   root.children = children.filter((item) => item !== closure_0);

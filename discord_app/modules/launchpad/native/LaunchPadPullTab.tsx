@@ -203,9 +203,9 @@ export default noop.memo(function LaunchPadPullTab(launchPadSharedState) {
               const result = gestureState.setLaunchPadPullTabMinimized(false);
             }
             if (null == closure_4.get()) {
-              const result1 = obj3.set(arg1);
+              const result1 = closure_4.set(arg1);
             }
-            value = obj3.get();
+            value = closure_4.get();
             if (value == null) {
               value = arg1;
             }
@@ -216,7 +216,7 @@ export default noop.memo(function LaunchPadPullTab(launchPadSharedState) {
           } else {
             const result4 = gestureState.setLaunchPadPullTabMinimized(true);
             if (null != closure_4.get()) {
-              const result5 = obj5.set(undefined);
+              const result5 = closure_4.set(undefined);
             }
             const sum1 = arg0 + CHAT_INPUT_HEIGHT + 2 * LAUNCH_PAD_MARGIN;
             const diff1 =
@@ -227,11 +227,12 @@ export default noop.memo(function LaunchPadPullTab(launchPadSharedState) {
               num2 = sum1 - diff1;
             }
             if (0 < num2) {
-              const diff2 = obj2.get().position - num2;
-              const result6 = obj4.setLaunchPadPullTabPosition(diff2, obj2.get().offset + num2);
+              const diff2 = launchPadPullTabState.get().position - num2;
+              const result6 = gestureState.setLaunchPadPullTabPosition(
+                diff2,
+                launchPadPullTabState.get().offset + num2,
+              );
             }
-            obj4 = gestureState;
-            obj5 = closure_4;
           }
         }
       }

@@ -2,6 +2,7 @@
 import _modDef12 from "../../../_runtime/metro/00012__.js";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
+import StageChannelPermissions from "StageChannelPermissions.tsx";
 import PermissionUtilsAll from "../../utils/PermissionUtils.tsx";
 import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState.tsx";
 import useStageSpeakingForCurrentUser from "useStageSpeakingForCurrentUser.tsx";
@@ -13,7 +14,7 @@ import UserStore from "../../stores/UserStore.tsx";
 import VoiceStateStore from "../../stores/VoiceStateStore.tsx";
 
 require = fn;
-function buildStageChannelUserRoles(user, id2, flag) {
+function buildStageChannelUserRoles(user, id2) {
   if (flag === undefined) {
     flag = false;
   }
@@ -40,7 +41,7 @@ function buildStageChannelUserRoles(user, id2, flag) {
         let canResult = null;
         if (flag) {
           obj = {
-            permission: tmp8(1965).MODERATE_STAGE_CHANNEL_PERMISSIONS,
+            permission: StageChannelPermissions.MODERATE_STAGE_CHANNEL_PERMISSIONS,
             user,
             context: guild,
             overwrites: channel.permissionOverwrites,
@@ -50,7 +51,6 @@ function buildStageChannelUserRoles(user, id2, flag) {
         }
         obj[obj.MODERATOR] = canResult;
         let tmp4 = obj;
-        tmp8 = require;
       }
       dependencyMap[id2][user] = tmp4;
       return tmp4;
@@ -135,7 +135,7 @@ prototype["isAudienceMember"] = function isAudienceMember(userId, voiceChannelId
   }
   return tmp3;
 };
-prototype["getPermissionsForUser"] = function getPermissionsForUser(id, id2, flag) {
+prototype["getPermissionsForUser"] = function getPermissionsForUser(id, id2) {
   if (flag === undefined) {
     flag = false;
   }

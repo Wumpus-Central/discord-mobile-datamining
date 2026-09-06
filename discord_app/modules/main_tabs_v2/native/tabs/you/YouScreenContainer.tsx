@@ -1,5 +1,6 @@
 // discord_app/modules/main_tabs_v2/native/tabs/you/YouScreenContainer.tsx
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import utils_PlatformUtils from "../../../../../../discord_common/js/shared/utils/PlatformUtils.tsx";
 import useSafeAreaInsetsDefault from "../../../../safe_area/useSafeAreaInsets.native.tsx";
 import TabsPerformanceTracker from "../TabsPerformanceTracker.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
@@ -32,7 +33,6 @@ const result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/you/
 export default noop.memo(function YouScreenContainer(route) {
   route = route.route;
   let items1 = closure_6();
-  let tmp = importDefault;
   let tmp5Result = dependencyMap;
   let obj = TabsPerformanceTracker;
   const trackTabPerformance = obj.useTrackTabPerformance(RootNavigatorScreen.YOU);
@@ -44,7 +44,7 @@ export default noop.memo(function YouScreenContainer(route) {
   }
   if (useChatLayoutDefault().isChatBesideChannelList) {
     const items = [items1.container];
-    let tmp3Result = tmp3(1116);
+    let tmp3Result = utils_PlatformUtils;
     let tmp7;
     if (tmp3Result.isAndroid()) {
       obj = {};
@@ -55,7 +55,7 @@ export default noop.memo(function YouScreenContainer(route) {
     obj = { style: null, children: null };
     items[1] = tmp7;
     obj.style = items;
-    tmp3Result = tmp3(1116);
+    tmp3Result = utils_PlatformUtils;
     if (tmp3Result.isAndroid()) {
       const obj1 = { style: null, children: null };
       items1 = [,];
@@ -63,19 +63,18 @@ export default noop.memo(function YouScreenContainer(route) {
       const obj2 = { maxWidth: 0.6 * useWindowDimensionsDefault().width };
       items1[1] = obj2;
       obj1.style = items1;
-      tmp = YouScreenDefault;
       const obj3 = { initialTab };
-      tmp5Result = tmp5(tmp, obj3);
+      tmp5Result = <tmp initialTab={initialTab} />;
       obj1.children = tmp5Result;
-      tmp5Result = tmp5(tmp6, obj1);
+      tmp5Result = <View style={null}>{null}</View>;
     } else {
       const obj4 = { initialTab };
-      tmp5Result = tmp5(YouScreenDefault, obj4);
+      tmp5Result = jsx(YouScreenDefault, { initialTab });
     }
     obj.children = tmp5Result;
-    tmp5(View, obj);
+    <View style={null}>{null}</View>;
   } else {
     const obj5 = { initialTab };
-    return tmp5(YouScreenDefault, obj5);
+    return jsx(YouScreenDefault, { initialTab });
   }
 });

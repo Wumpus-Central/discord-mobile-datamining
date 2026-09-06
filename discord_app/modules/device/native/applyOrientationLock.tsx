@@ -5,7 +5,7 @@ import size from "../../../../_runtime/metro/00002__.js";
 
 let result = size.fileFinishedImporting("modules/device/native/applyOrientationLock.tsx");
 
-export const applyOrientationLock = function applyOrientationLock(PORTRAIT, flag) {
+export const applyOrientationLock = function applyOrientationLock(PORTRAIT) {
   if (flag === undefined) {
     flag = true;
   }

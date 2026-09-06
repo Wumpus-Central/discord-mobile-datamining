@@ -55,9 +55,9 @@ export default function _default(markAsDismissed) {
   }, items);
   const effect = memo.useEffect(() => {
     if (null != userDiscountOffer) {
-      const obj = { location: analyticsLocations, discount_offer_id: tmp.id };
+      const obj = { location: analyticsLocations, discount_offer_id: userDiscountOffer.id };
       obj.track(constants.PREMIUM_DISCOUNT_OFFER_ACTION_SHEET_VIEWED, obj);
-      UserOfferActionCreators.acknowledgeUserOffer(undefined, tmp);
+      UserOfferActionCreators.acknowledgeUserOffer(undefined, userDiscountOffer);
     }
   }, []);
   const items1 = [userDiscountOffer, markAsDismissed];

@@ -1,6 +1,7 @@
 // discord_app/modules/guests/GuestUtils.tsx
 import FlagUtils from "../../../discord_common/js/shared/utils/FlagUtils.tsx";
 import GuildMemberConstants from "../guild_member/GuildMemberConstants.tsx";
+import GuildInviteFlags from "../../../discord_common/js/shared/shared-constants/GuildInviteFlags.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
 const GuildMemberFlags = GuildMemberConstants.GuildMemberFlags;
@@ -27,8 +28,8 @@ export default {
         if (num2 == null) {
           num2 = 0;
         }
-        hasFlagResult1 = tmp2(1384).hasFlag(num2, tmp2(8392).GuildInviteFlags.IS_GUEST_INVITE);
-        const tmp2Result = tmp2(1384);
+        hasFlagResult1 = FlagUtils.hasFlag(num2, GuildInviteFlags.GuildInviteFlags.IS_GUEST_INVITE);
+        const tmp2Result = FlagUtils;
       }
       tmp = hasFlagResult1;
     }

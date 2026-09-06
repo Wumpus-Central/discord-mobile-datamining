@@ -13,9 +13,8 @@ function showUserProfileActionSheet(ignoreBlockedSpeedBump, arg1) {
   const IgnoreProfileSpeedbumpDisabled = UserSettings.IgnoreProfileSpeedbumpDisabled;
   if (!ignoreBlockedSpeedBump.ignoreBlockedSpeedBump) {
     const isBlockedResult = RelationshipStore.isBlocked(ignoreBlockedSpeedBump.userId);
-    const isIgnoredResult = RelationshipStore.isIgnored(ignoreBlockedSpeedBump.userId);
     if (isIgnoredResult) {
-      const tmp8 = tmp2(1896)(8182, tmp3.paths);
+      const tmp8 = asyncRequireImpl(8182, dependencyMap.paths);
       const _HermesInternal = HermesInternal;
       const combined = "UserProfileIgnoredSpeedBump" + ignoreBlockedSpeedBump.userId;
       let obj = {};
@@ -28,6 +27,7 @@ function showUserProfileActionSheet(ignoreBlockedSpeedBump, arg1) {
       obj.openedAt = timestamp;
       obj.openLazy(tmp8, combined, obj, str);
     }
+    isIgnoredResult = RelationshipStore.isIgnored(ignoreBlockedSpeedBump.userId);
   }
   const tmp20 = asyncRequireImpl(8200, dependencyMap.paths);
   const combined1 = "UserProfile" + ignoreBlockedSpeedBump.userId;
@@ -61,7 +61,7 @@ export const getUserProfileIgnoredSpeedBumpActionSheetKey = function getUserProf
 export const showUserProfileActionSheetPostConnection = function showUserProfileActionSheetPostConnection(arg0) {
   closure_0 = arg0;
   addPostConnectionCallback(
-    asyncGeneratorStep(async (arg0, value) => {
+    asyncGeneratorStep(async () => {
       if (c5 === 2) {
         c5 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");

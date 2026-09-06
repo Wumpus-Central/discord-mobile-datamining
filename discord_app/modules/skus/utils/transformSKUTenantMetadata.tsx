@@ -104,7 +104,7 @@ export default function transformSKUTenantMetadata(social_layer) {
           obj1.assets = tmp13;
           obj1.label = item.label;
           tmp7 = obj1;
-        } else if (tmp8(1889).CollectiblesItemType.NAMEPLATE === type) {
+        } else if (CollectiblesItemType.CollectiblesItemType.NAMEPLATE === type) {
           const obj3 = { id: null, type: null, asset: null, assets: null, label: null, palette: null };
           ({ id: obj5.id, type: obj5.type, asset: obj5.asset, assets } = item);
           let tmp12;
@@ -120,7 +120,7 @@ export default function transformSKUTenantMetadata(social_layer) {
           obj3.assets = tmp12;
           ({ label: obj5.label, palette: obj5.palette } = item);
           tmp7 = obj3;
-        } else if (tmp8(1889).CollectiblesItemType.PROFILE_EFFECT === type) {
+        } else if (CollectiblesItemType.CollectiblesItemType.PROFILE_EFFECT === type) {
           const obj5 = {
             id: null,
             type: null,
@@ -151,7 +151,7 @@ export default function transformSKUTenantMetadata(social_layer) {
           }
           obj5.effects = mapped1;
           tmp7 = obj5;
-        } else if (tmp8(1889).CollectiblesItemType.PROFILE_FRAME === type) {
+        } else if (CollectiblesItemType.CollectiblesItemType.PROFILE_FRAME === type) {
           const obj6 = {
             id: null,
             type: null,

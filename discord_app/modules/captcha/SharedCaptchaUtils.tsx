@@ -34,11 +34,11 @@ export const extractCaptchaPropsFromResponse = function extractCaptchaPropsFromR
   obj.options = obj;
   return obj;
 };
-export const emitCaptchaDistributionMetric = function emitCaptchaDistributionMetric(arg0) {
+export const emitCaptchaDistributionMetric = function emitCaptchaDistributionMetric(constants) {
   if (React2()) {
     const _setTimeout = setTimeout;
     const timerId = setTimeout(() => closure_1_1(), closure_3);
   }
-  React(arg0);
+  React(constants);
 };
 export const CaptchaCancelError = prototype;

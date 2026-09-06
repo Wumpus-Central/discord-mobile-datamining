@@ -17,7 +17,7 @@ function SyncedLoadingAlertModal(onConfirm) {
   obj = {
     variant: "primary",
     text: confirmText,
-    onPress: asyncGeneratorStep(async (arg0, value) => {
+    onPress: asyncGeneratorStep(async () => {
       if (c4 === 2) {
         c4 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -126,7 +126,7 @@ export const showCheckoutOrderErrorModal = function showCheckoutOrderErrorModal(
     obj.content = intl2.string(closure_0(1114).t.PjfUXe);
     const intl3 = closure_0(1114).intl;
     obj.confirmText = intl3.string(closure_0(1114).t["7NqTJn"]);
-    dependencyMap = asyncGeneratorStep(async (arg0, value) => {
+    dependencyMap = asyncGeneratorStep(async () => {
       if (c3 === 2) {
         c3 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");

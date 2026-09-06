@@ -8,7 +8,7 @@ let closure_4 = {};
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/gif_picker/FavoriteGIFHooks.tsx");
 
-export const useFavoriteGIFs = function useFavoriteGIFs(flag) {
+export const useFavoriteGIFs = function useFavoriteGIFs() {
   if (flag === undefined) {
     flag = true;
   }
@@ -64,7 +64,7 @@ export const useShouldShowTooltipOnFavorite = function useShouldShowTooltipOnFav
   }
   return flag;
 };
-export const useIsFavoriteGIF = function useIsFavoriteGIF(arg0, flag) {
+export const useIsFavoriteGIF = function useIsFavoriteGIF(arg0) {
   if (flag === undefined) {
     flag = true;
   }

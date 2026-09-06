@@ -18,45 +18,45 @@ const VoicePanelControlsConstants = fn(12271);
 const InputModes = fn(1074).InputModes;
 const jsx = fn(21).jsx;
 let closure_9 = {
-  mic(arg0, arg1) {
+  mic(key, arg1) {
     const merged = Object.assign(arg1);
-    return jsx(VoicePanelMicButton.MicButton, {}, arg0);
+    return jsx(VoicePanelMicButton.MicButton, {}, key);
   },
-  ptt(arg0, arg1) {
+  ptt(key, arg1) {
     const merged = Object.assign(arg1);
-    return jsx(VoicePanelMicButton.PTTButton, {}, arg0);
+    return jsx(VoicePanelMicButton.PTTButton, {}, key);
   },
-  micConnected(arg0, arg1) {
+  micConnected(key, arg1) {
     const merged = Object.assign(arg1);
-    return jsx(VoicePanelMicButton.MicButton, {}, arg0);
+    return jsx(VoicePanelMicButton.MicButton, {}, key);
   },
-  connect(arg0, arg1) {
+  connect(key, arg1) {
     const merged = Object.assign(arg1);
-    return jsx(VoicePanelConnectButtonDefault, {}, arg0);
+    return jsx(VoicePanelConnectButtonDefault, {}, key);
   },
-  chat(arg0, arg1) {
+  chat(key, arg1) {
     const merged = Object.assign(arg1);
-    return jsx(VoicePanelChatButtonDefault, {}, arg0);
+    return jsx(VoicePanelChatButtonDefault, {}, key);
   },
-  disconnectCancel(arg0, arg1) {
+  disconnectCancel(key, arg1) {
     const merged = Object.assign(arg1);
-    return jsx(VoicePanelDisconnectCancelButtonDefault, {}, arg0);
+    return jsx(VoicePanelDisconnectCancelButtonDefault, {}, key);
   },
-  video(arg0, arg1) {
+  video(key, arg1) {
     const merged = Object.assign(arg1);
-    return jsx(VoicePanelVideoButtonDefault, {}, arg0);
+    return jsx(VoicePanelVideoButtonDefault, {}, key);
   },
-  soundboard(arg0, arg1) {
+  soundboard(key, arg1) {
     const merged = Object.assign(arg1);
-    return jsx(VoicePanelSoundboardButtonDefault, {}, arg0);
+    return jsx(VoicePanelSoundboardButtonDefault, {}, key);
   },
-  screenshare(arg0, arg1) {
+  screenshare(key, arg1) {
     const merged = Object.assign(arg1);
-    return jsx(VoicePanelScreenshareButtonDefault, {}, arg0);
+    return jsx(VoicePanelScreenshareButtonDefault, {}, key);
   },
-  drawerToggle(arg0, arg1) {
+  drawerToggle(key, arg1) {
     const merged = Object.assign(arg1);
-    return jsx(VoicePanelDrawerToggleButtonDefault, {}, arg0);
+    return jsx(VoicePanelDrawerToggleButtonDefault, {}, key);
   },
 };
 const __initData = {
@@ -97,37 +97,36 @@ export default function useControlsButtons() {
   return treatment.useMemo(() => {
     c0 = false;
     closure_1 = 0;
-    const mapped = (function getButtons(arg0, stateFromStores, treatment) {
+    const mapped = (function getButtons(dependencyMap, stateFromStores, treatment) {
       const items = [];
       const push = items.push;
-      if (arg0) {
+      if (dependencyMap) {
         let obj = { type: "icon-normal", key: "connected-video", render: redux.video };
         push(obj);
         if (!stateFromStores) {
-          obj = { type: "icon-normal", key: "connected-mic", render: tmp6.micConnected };
+          obj = { type: "icon-normal", key: "connected-mic", render: redux.micConnected };
           items.push(obj);
         }
         if (treatment === _true(17101).MobileGoLiveEntrypointTreatment.SCREENSHARE_REPLACES_CHAT) {
-          const obj1 = { type: "icon-normal", key: "connected-screenshare", render: tmp6.screenshare };
+          const obj1 = { type: "icon-normal", key: "connected-screenshare", render: redux.screenshare };
           items.push(obj1);
         } else {
-          const obj2 = { type: "icon-normal", key: "connected-chat", render: tmp6.chat };
+          const obj2 = { type: "icon-normal", key: "connected-chat", render: redux.chat };
           items.push(obj2);
         }
         if (stateFromStores) {
-          const obj3 = { type: "icon-large", key: "connected-ptt", render: tmp6.ptt };
+          const obj3 = { type: "icon-large", key: "connected-ptt", render: redux.ptt };
           items.push(obj3);
         }
-        if (treatment === tmp10(17101).MobileGoLiveEntrypointTreatment.SCREENSHARE_REPLACES_SOUNDBOARD) {
-          const obj4 = { type: "icon-normal", key: "connected-screenshare", render: tmp6.screenshare };
+        if (treatment === _true(17101).MobileGoLiveEntrypointTreatment.SCREENSHARE_REPLACES_SOUNDBOARD) {
+          const obj4 = { type: "icon-normal", key: "connected-screenshare", render: redux.screenshare };
           items.push(obj4);
         } else {
-          const obj5 = { type: "icon-normal", key: "connected-soundboard", render: tmp6.soundboard };
+          const obj5 = { type: "icon-normal", key: "connected-soundboard", render: redux.soundboard };
           items.push(obj5);
         }
         const obj6 = { type: "icon-normal", key: "connected-disconnect", render: redux.disconnectCancel };
         items.push(obj6);
-        tmp10 = _true;
       } else {
         obj = { type: "icon-normal", key: "disconnected-mute", render: redux.mic };
         push(obj);

@@ -25,7 +25,8 @@ export const AppStartInfo = {
   getAppStartInfo() {
     return (async () => {
       let obj5 = NativeTTIManagerModuleDefault;
-      closure_128_0 = await obj5.getAppStartedTimestamp();
+      await obj5.getAppStartedTimestamp();
+      closure_128_0 = value;
       if (closure_128_0 <= 0) {
         const _Error = Error;
         const error = new Error(
@@ -38,7 +39,8 @@ export const AppStartInfo = {
       items[1] = closure_129_0(closure_129_1[3]).getLaunchScenario();
       closure_129_0(closure_129_1[3]);
       items[2] = closure_129_0(closure_129_1[3]).getAppFirstVisibleTimestamp();
-      closure_128_1 = await Promise.all(items);
+      await Promise.all(items);
+      closure_128_1 = value;
       closure_128_2 = closure_129_2(closure_128_1, 3);
       closure_128_3 = closure_128_2[0];
       closure_128_4 = closure_128_2[1];

@@ -13,7 +13,7 @@ export default function useGuildBoostPurchaseHandler(arg0) {
   _require = arg0;
   let obj = require("MobileWebRedirectCheckoutUtils");
   const result = obj.isMobileWebRedirectCheckoutEnabled();
-  _require = asyncGeneratorStep(async (arg0, value) => {
+  _require = asyncGeneratorStep(async (arg0, arg1) => {
     if (c4 === 2) {
       c4 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");

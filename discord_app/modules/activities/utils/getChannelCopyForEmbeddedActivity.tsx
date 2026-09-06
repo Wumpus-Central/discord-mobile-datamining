@@ -4,9 +4,9 @@ import size from "../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/activities/utils/getChannelCopyForEmbeddedActivity.tsx");
 
-export default function getChannelCopyForEmbeddedActivity(arg0) {
-  let stringResult = arg0;
-  if (null == arg0) {
+export default function getChannelCopyForEmbeddedActivity(name) {
+  let stringResult = name;
+  if (null == name) {
     const intl = util.intl;
     stringResult = intl.string(util.t["2YCamo"]);
   }

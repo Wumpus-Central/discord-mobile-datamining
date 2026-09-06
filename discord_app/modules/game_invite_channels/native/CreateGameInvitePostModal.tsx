@@ -112,10 +112,10 @@ function CreateGameInvitePostContent(parentChannel) {
     obj6.subLabel = joined;
     const obj7 = { style: tmp.tagsTrailing, children: null };
     const obj8 = { variant: "text-md/medium", color: "text-muted", children: tags.length };
-    obj7.children = tmp15(tmp9(4556).Text, obj8);
-    obj6.trailing = tmp15(tmp14, obj7);
+    obj7.children = closure_7(tmp9(4556).Text, obj8);
+    obj6.trailing = closure_7(View, obj7);
     obj6.onPress = callback1;
-    tmp15Result = tmp15(tmp9(5605).TableRow, obj6);
+    tmp15Result = closure_7(tmp9(5605).TableRow, obj6);
   }
   const obj9 = { hasIcons: false, children: null };
   const items7 = [tmp15Result];

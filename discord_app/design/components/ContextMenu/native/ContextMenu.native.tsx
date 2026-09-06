@@ -1,7 +1,12 @@
 // discord_app/design/components/ContextMenu/native/ContextMenu.native.tsx
+import util from "../../../../intl/index.native.tsx";
 import PlatformUtils2 from "../../../../utils/PlatformUtils.tsx";
 import ReanimatedRexport from "../../../../modules/reanimated/ReanimatedRexport.tsx";
+import shared from "../../../shared.tsx";
+import HapticUtils from "../../../../modules/haptics/HapticUtils.native.tsx";
+import useIsScreenReaderEnabled from "../../../../modules/a11y/native/useIsScreenReaderEnabled.native.tsx";
 import setAccessibilityFocus from "../../../../modules/a11y/native/setAccessibilityFocus.android.tsx";
+import LegacyBaseButton from "../../../../../_runtime/06655_LegacyBaseButton.js";
 import ContextMenuState from "ContextMenuState.native.tsx";
 import ContextMenuConstants from "ContextMenuConstants.native.tsx";
 import UID from "../../../../modules/core/web/UID.tsx";
@@ -207,10 +212,11 @@ export const ContextMenu = function ContextMenu(triggerOnLongPress) {
     };
     ContextMenuState.showContextMenu(size);
     if (obj4.isAndroid()) {
-      const AccessibilityAnnouncer = tmp3(4411).AccessibilityAnnouncer;
-      const intl = tmp3(1114).intl;
-      AccessibilityAnnouncer.announce(intl.string(tmp3(1114).t.ZqK0uI));
+      const AccessibilityAnnouncer = shared.AccessibilityAnnouncer;
+      const intl = util.intl;
+      AccessibilityAnnouncer.announce(intl.string(util.t.ZqK0uI));
     }
+    obj4 = PlatformUtils2;
   }, items7);
   class L {
     constructor() {
@@ -522,24 +528,24 @@ export const ContextMenu = function ContextMenu(triggerOnLongPress) {
     onPanGestureEnd.__workletHash = 12851223476540;
     onPanGestureEnd.__initData = __initData;
     if (flag) {
-      const Gesture2 = tmp2(6655).Gesture;
+      const Gesture2 = LegacyBaseButton.Gesture;
       const PanResult = Gesture2.Pan();
       const fn4 = function i(absoluteX) {
         const result = items(flag2[5]).updateContextMenuState(absoluteX.absoluteX, absoluteX.absoluteY, activeIndex);
       };
-      obj = { updateContextMenuState: tmp2(8667).updateContextMenuState, state: tmp };
+      obj = { updateContextMenuState: ContextMenuState.updateContextMenuState, state: contextMenuState };
       fn4.__closure = obj;
       fn4.__workletHash = 2460213213323;
       fn4.__initData = __initData2;
       const enabledResult = Gesture2.Pan().enabled(flag5);
       const onUpdateResult = Gesture2.Pan().enabled(flag5).onUpdate(fn4);
-      const Gesture3 = tmp2(6655).Gesture;
+      const Gesture3 = LegacyBaseButton.Gesture;
       const onEndResult = Gesture2.Pan().enabled(flag5).onUpdate(fn4).onEnd(onPanGestureEnd);
       const LongPressResult = Gesture3.LongPress();
       const enabledResult1 = Gesture3.LongPress().enabled(flag5);
       let result = Gesture3.LongPress()
         .enabled(flag5)
-        .minDuration(tmp2(8668).CONTEXT_MENU_LONG_PRESS_DURATION_MS)
+        .minDuration(ContextMenuConstants.CONTEXT_MENU_LONG_PRESS_DURATION_MS)
         .shouldCancelWhenOutside(false);
       const fn5 = function n() {
         const obj = items(flag2[3]);
@@ -547,9 +553,9 @@ export const ContextMenu = function ContextMenu(triggerOnLongPress) {
         callback3();
       };
       obj = {
-        runOnJS: tmp2(4296).runOnJS,
-        triggerHapticFeedback: tmp2(4528).triggerHapticFeedback,
-        CONTEXT_MENU_OPEN_HAPTIC: tmp2(8668).CONTEXT_MENU_OPEN_HAPTIC,
+        runOnJS: ReanimatedRexport.runOnJS,
+        triggerHapticFeedback: HapticUtils.triggerHapticFeedback,
+        CONTEXT_MENU_OPEN_HAPTIC: ContextMenuConstants.CONTEXT_MENU_OPEN_HAPTIC,
         measureButtonAndShowMenu: callback3,
       };
       fn5.__closure = obj;
@@ -557,11 +563,11 @@ export const ContextMenu = function ContextMenu(triggerOnLongPress) {
       fn5.__initData = __initData3;
       const minDurationResult = Gesture3.LongPress()
         .enabled(flag5)
-        .minDuration(tmp2(8668).CONTEXT_MENU_LONG_PRESS_DURATION_MS);
-      const Gesture4 = tmp2(6655).Gesture;
+        .minDuration(ContextMenuConstants.CONTEXT_MENU_LONG_PRESS_DURATION_MS);
+      const Gesture4 = LegacyBaseButton.Gesture;
       return Gesture4.Simultaneous(result.onStart(fn5), onEndResult);
     } else {
-      const Gesture = tmp2(6655).Gesture;
+      const Gesture = LegacyBaseButton.Gesture;
       if (flag2) {
         const TapResult = Gesture.Tap();
         const fn3 = function o() {
@@ -581,9 +587,9 @@ export const ContextMenu = function ContextMenu(triggerOnLongPress) {
           callback3();
         };
         const obj2 = {
-          runOnJS: tmp2(4296).runOnJS,
-          triggerHapticFeedback: tmp2(4528).triggerHapticFeedback,
-          CONTEXT_MENU_OPEN_HAPTIC: tmp2(8668).CONTEXT_MENU_OPEN_HAPTIC,
+          runOnJS: ReanimatedRexport.runOnJS,
+          triggerHapticFeedback: HapticUtils.triggerHapticFeedback,
+          CONTEXT_MENU_OPEN_HAPTIC: ContextMenuConstants.CONTEXT_MENU_OPEN_HAPTIC,
           measureButtonAndShowMenu: callback3,
         };
         fn.__closure = obj2;
@@ -593,7 +599,7 @@ export const ContextMenu = function ContextMenu(triggerOnLongPress) {
         const fn2 = function e(absoluteX) {
           const result = items(flag2[5]).updateContextMenuState(absoluteX.absoluteX, absoluteX.absoluteY, activeIndex);
         };
-        const obj3 = { updateContextMenuState: tmp2(8667).updateContextMenuState, state: tmp };
+        const obj3 = { updateContextMenuState: ContextMenuState.updateContextMenuState, state: contextMenuState };
         fn2.__closure = obj3;
         fn2.__workletHash = 17473642675622;
         fn2.__initData = __initData5;
@@ -621,11 +627,11 @@ export const ContextMenu = function ContextMenu(triggerOnLongPress) {
   const callback5 = obj2.useCallback(() => {
     let isAndroidResult = PlatformUtils2.isAndroid();
     if (isAndroidResult) {
-      let tmpResult = tmp(4962);
+      let tmpResult = useIsScreenReaderEnabled;
       isAndroidResult = tmpResult.getIsScreenReaderEnabled();
     }
     if (isAndroidResult) {
-      tmpResult = tmp(4296);
+      tmpResult = ReanimatedRexport;
       tmpResult.runOnUI(callback3)();
     }
   }, items12);

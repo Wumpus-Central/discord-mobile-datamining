@@ -86,7 +86,7 @@ export default function SubscribeModalGuildSelect(guildBoostSlots) {
             hasItem = set.has(guild.id);
           }
           if (!hasItem) {
-            arr.push(guild);
+            arr = arr.push(guild);
           }
           return arr;
         }, array);
@@ -97,7 +97,7 @@ export default function SubscribeModalGuildSelect(guildBoostSlots) {
         reduced = obj.queryGuilds(obj).reduce((arr, record) => {
           record = record.record;
           if (!set.has(record.id)) {
-            arr.push(record);
+            arr = arr.push(record);
           }
           return arr;
         }, array);

@@ -42,11 +42,11 @@ export default noop.memo((type) => {
   const memo1 = obj.useMemo(() => {
     type = undefined;
     if (state != null) {
-      type = iter.type;
+      type = state.type;
     }
     value = null;
     if (type === type) {
-      value = iter.value;
+      value = state.value;
     }
     return value;
   }, items1);
@@ -57,14 +57,14 @@ export default noop.memo((type) => {
     if (closure_7) {
       num = 60;
     }
-    obj = { maxHeight: obj.withSpring(num, tmp(4978).SUBTLE_SPRING), marginTop: null, opacity: null };
-    let tmpResult = tmp(4974);
+    obj = { maxHeight: obj.withSpring(num, springPresets.SUBTLE_SPRING), marginTop: null, opacity: null };
+    let tmpResult = spring;
     let num2 = 0;
     if (closure_7) {
       num2 = 8;
     }
     obj.marginTop = tmpResult.withSpring(num2, springPresets.SUBTLE_SPRING);
-    tmpResult = tmp(4974);
+    tmpResult = spring;
     let num3 = 0;
     if (closure_7) {
       num3 = 1;

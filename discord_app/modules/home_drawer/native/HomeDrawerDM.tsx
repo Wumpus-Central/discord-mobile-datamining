@@ -3,7 +3,9 @@ import HomeDrawerExperiment from "HomeDrawerExperiment.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import useChannelName from "../../channel/useChannelName.tsx";
 import ChannelListLayoutTypes from "../../main_tabs_v2/ChannelListLayoutTypes.tsx";
+import BellSlashIcon2 from "../../../design/components/Icon/native/redesign/generated/BellSlashIcon.tsx";
 import ChannelRowPreview from "../../main_tabs_v2/native/shared_components/ChannelRowPreview.tsx";
+import BellZIcon from "../../../design/components/Icon/native/redesign/generated/BellZIcon.tsx";
 import useMessagePreviewsDefault from "../../main_tabs_v2/useMessagePreviews.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import RelationshipStore from "../../../stores/RelationshipStore.tsx";
@@ -23,8 +25,8 @@ function HomeDrawerDMExpandedChildren(channel) {
   const stateFromStores = channel(504).useStateFromStores(items1, () => {
     let tmp2 = null;
     if (null != channel) {
-      if (isMultiUserDM(tmp.type)) {
-        let channelName = useChannelName.computeChannelName(tmp, UserStore, RelationshipStore);
+      if (isMultiUserDM(channel.type)) {
+        let channelName = useChannelName.computeChannelName(channel, UserStore, RelationshipStore);
       } else {
         channelName = null;
       }
@@ -47,15 +49,15 @@ function HomeDrawerDMExpandedChildren(channel) {
     if (null == stateFromStores1) {
       let obj = { isMuted: false, isTemporary: false };
     } else {
-      let tmp2 = null == tmp.end_time;
+      let tmp2 = null == stateFromStores1.end_time;
       if (!tmp2) {
         const _Date = Date;
-        const date = new Date(tmp.end_time);
+        const date = new Date(stateFromStores1.end_time);
         const _Date2 = Date;
         const date1 = new Date();
         tmp2 = date > date1;
       }
-      obj = { isMuted: tmp2, isTemporary: null != tmp.end_time };
+      obj = { isMuted: tmp2, isTemporary: null != stateFromStores1.end_time };
     }
     return obj;
   }, items3);
@@ -65,19 +67,19 @@ function HomeDrawerDMExpandedChildren(channel) {
   const title = stateFromStores.useMemo(() => {
     let isMuted;
     if (memo != null) {
-      isMuted = tmp.isMuted;
+      isMuted = memo.isMuted;
     }
     if (isMuted) {
       let isTemporary;
-      if (tmp != null) {
-        isTemporary = tmp.isTemporary;
+      if (memo != null) {
+        isTemporary = memo.isTemporary;
       }
       let tmp5Result = dependencyMap;
       if (isTemporary) {
-        tmp5Result = tmp5(13287);
+        tmp5Result = BellZIcon;
         let BellSlashIcon = tmp5Result.BellZIcon;
       } else {
-        BellSlashIcon = tmp5(9059).BellSlashIcon;
+        BellSlashIcon = BellSlashIcon2.BellSlashIcon;
       }
     } else {
       let obj = { style: closure_1.title, children: null };

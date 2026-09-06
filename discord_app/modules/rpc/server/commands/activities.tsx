@@ -24,7 +24,7 @@ obj = {
   scope: fn(14464).activityInstanceConnectedParticipantsScope,
   handler(socket) {
     socket = socket.socket;
-    return (async (arg0, value) => {
+    return (async () => {
       if (constants2 === 2) {
         constants2 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -55,7 +55,7 @@ obj = {
               const obj10 = value(tmp29[4]);
               const validateApplicationResult = value(tmp29[4]).validateApplication(socket.application);
               if (obj11.hasApplicationFlag(socket.application, constants2.EMBEDDED)) {
-                const tmp26 = tmp45(tmp46[7])();
+                const tmp26 = tmp3(tmp29[7])();
                 c3 = 1;
                 value = {};
                 let id;
@@ -68,7 +68,7 @@ obj = {
                 return obj1;
               } else {
                 const obj2 = { errorCode: constants.UNAUTHORIZED_FOR_APPLICATION };
-                const tmp24 = new tmp45(tmp46[6])(obj2, "This application cannot access this API");
+                const tmp24 = new tmp3(tmp29[6])(obj2, "This application cannot access this API");
                 throw tmp24;
               }
               obj11 = value(tmp29[5]);

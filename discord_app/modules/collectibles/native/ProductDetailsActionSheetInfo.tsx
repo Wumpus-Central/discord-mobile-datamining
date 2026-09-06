@@ -1,6 +1,7 @@
 // discord_app/modules/collectibles/native/ProductDetailsActionSheetInfo.tsx
 import _mod17 from "../../../../_runtime/metro/00017__.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import util from "../../../intl/index.native.tsx";
 import CollectiblesItemType from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import CollectiblesUtils from "../CollectiblesUtils.tsx";
@@ -38,19 +39,19 @@ function ProductPurchaseStatus(product) {
   const productPurchaseState = obj1.useProductPurchaseState(product);
   if (productPurchaseState.isPurchased) {
     obj = { variant: "text-md/semibold", color: "interactive-text-active", children: null };
-    const intl2 = tmp(1114).intl;
-    obj.children = intl2.string(tmp(1114).t["6cfuDj"]);
-    let children = tmp6(tmp(4556).Text, obj);
+    const intl2 = util.intl;
+    obj.children = intl2.string(util.t["6cfuDj"]);
+    let children = React4(Text_Text.Text, obj);
   } else if (tmp5) {
     obj = { variant: "text-md/semibold", color: "interactive-text-active", children: null };
-    const intl = tmp(1114).intl;
-    obj.children = intl.string(tmp(1114).t.BEjTij);
-    children = tmp6(tmp(4556).Text, obj);
+    const intl = util.intl;
+    obj.children = intl.string(util.t.BEjTij);
+    children = React4(Text_Text.Text, obj);
   } else {
     children = !result;
     if (!result) {
       obj1 = { product, onTrackPress: product.onTrackPress };
-      children = tmp6(InlinePriceTagDefault, obj1);
+      children = React4(InlinePriceTagDefault, obj1);
     }
   }
   return React4(View, { children });

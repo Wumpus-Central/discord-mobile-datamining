@@ -29,7 +29,7 @@ export default function SafetyTipsRow(arg0) {
     icon: jsx(
       (children) => (
         <View style={indexContainer.indexContainer}>
-          {jsx(Text_Text.Text, { variant: "heading-md/semibold", color: "text-brand", children: arg0.index })}
+          {jsx(Text_Text.Text, { variant: "heading-md/semibold", color: "text-brand", children: children.index })}
         </View>
       ),
       { index },

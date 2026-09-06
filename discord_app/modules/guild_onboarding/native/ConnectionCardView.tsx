@@ -1,6 +1,9 @@
 // discord_app/modules/guild_onboarding/native/ConnectionCardView.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import util from "../../../intl/index.native.tsx";
+import CircleCheckIcon from "../../../design/components/Icon/native/redesign/generated/CircleCheckIcon.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
+import components_Button_Button from "../../../design/components/Button/native/Button.native.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -59,7 +62,7 @@ export default function ConnectionCardView(description) {
   }
   if (tmp4Result) {
     const obj2 = { variant: "text-sm/normal", color: "text-subtle", children: description };
-    tmp4Result = tmp4(tmp5(4556).Text, obj2);
+    tmp4Result = React4(Text_Text.Text, obj2);
   }
   items1[1] = tmp4Result;
   obj1.children = items1;
@@ -67,24 +70,24 @@ export default function ConnectionCardView(description) {
   obj.children = items;
   const items2 = [hasOwnProperty(React2, obj)];
   if (isLoading) {
-    tmp4Result = tmp4(React3, { size: "small" });
+    tmp4Result = React4(React3, { size: "small" });
   } else if (isConnected) {
     const obj3 = { style: tmp.connectedStatus, children: null };
     const obj4 = { variant: "text-sm/medium", color: "text-feedback-positive", children: null };
-    const intl2 = tmp5(1114).intl;
-    obj4.children = intl2.string(tmp5(1114).t["LV+CXH"]);
+    const intl2 = util.intl;
+    obj4.children = intl2.string(util.t["LV+CXH"]);
     const items3 = [
-      tmp4(tmp5(4556).Text, obj4),
-      tmp4(tmp5(4520).CircleCheckIcon, { size: "sm", color: "status-positive" }),
+      React4(Text_Text.Text, obj4),
+      React4(CircleCheckIcon.CircleCheckIcon, { size: "sm", color: "status-positive" }),
     ];
     obj3.children = items3;
-    tmp4Result = tmp2(tmp3, obj3);
+    tmp4Result = hasOwnProperty(React2, obj3);
   } else {
     const obj5 = { variant: "primary", size: "sm", onPress: onConnect, text: null, disabled: null };
-    const intl = tmp5(1114).intl;
-    obj5.text = intl.string(tmp5(1114).t.S0W8Z5);
+    const intl = util.intl;
+    obj5.text = intl.string(util.t.S0W8Z5);
     obj5.disabled = !canConnect;
-    tmp4Result = tmp4(tmp5(4975).Button, obj5);
+    tmp4Result = React4(components_Button_Button.Button, obj5);
   }
   items2[1] = tmp4Result;
   obj.children = items2;

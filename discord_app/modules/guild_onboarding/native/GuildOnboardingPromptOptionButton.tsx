@@ -4,6 +4,7 @@ import util from "../../../intl/index.native.tsx";
 import AccessibilityAnnouncer2 from "../../../../discord_common/js/packages/design/components/AccessibilityAnnouncer/AccessibilityAnnouncer.android.tsx";
 import ReanimatedRexport from "../../reanimated/ReanimatedRexport.tsx";
 import timing from "../../../design/animation/reanimated/timing/timing.tsx";
+import spring from "../../../design/animation/reanimated/spring/spring.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
@@ -122,7 +123,7 @@ export default function PromptOptionButton(option) {
   const stateFromStores = __closure.useStateFromStores(items, () => {
     let id;
     if (option != null) {
-      const emoji = tmp.emoji;
+      const emoji = option.emoji;
       if (emoji != null) {
         id = emoji.id;
       }
@@ -130,8 +131,8 @@ export default function PromptOptionButton(option) {
     let usableCustomEmojiById = null;
     if (null != id) {
       let id1;
-      if (tmp != null) {
-        const emoji2 = tmp.emoji;
+      if (option != null) {
+        const emoji2 = option.emoji;
         if (emoji2 != null) {
           id1 = emoji2.id;
         }
@@ -339,7 +340,7 @@ export default function PromptOptionButton(option) {
   ({ title: arr7[2], description: arr7[3] } = option);
   const memo = obj4.useMemo(() => {
     if (closure_13) {
-      const emoji = tmp.emoji;
+      const emoji = option.emoji;
       let str;
       if (emoji != null) {
         str = emoji.name;
@@ -348,29 +349,29 @@ export default function PromptOptionButton(option) {
         str = "";
       }
       const replaced = str.replace(/^:|:$/g, "");
-      if (null != tmp.description) {
-        if (tmp.description.length > 0) {
+      if (null != option.description) {
+        if (option.description.length > 0) {
           const intl3 = util.intl;
           obj = { emojiName: replaced, title: null, description: null };
-          ({ title: obj3.title, description: obj3.description } = tmp);
+          ({ title: obj3.title, description: obj3.description } = option);
           let formatToPlainStringResult = intl3.formatToPlainString(util.t.nSzqkg, obj);
         }
         return formatToPlainStringResult;
       }
       const intl2 = util.intl;
-      obj = { emojiName: replaced, title: tmp.title };
+      obj = { emojiName: replaced, title: option.title };
       formatToPlainStringResult = intl2.formatToPlainString(util.t.rBPpAN, obj);
     } else {
-      if (null != tmp.description) {
-        if (tmp.description.length > 0) {
+      if (null != option.description) {
+        if (option.description.length > 0) {
           const intl = util.intl;
           obj = { title: null, description: null };
-          ({ title: obj.title, description: obj.description } = tmp);
+          ({ title: obj.title, description: obj.description } = option);
           let title = intl.formatToPlainString(util.t.U4lDOC, obj);
         }
         return title;
       }
-      title = tmp.title;
+      title = option.title;
     }
   }, items5);
   token = option(4262).useToken(tmp7(576).colors.BORDER_SUBTLE);

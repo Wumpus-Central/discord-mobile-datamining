@@ -2,6 +2,8 @@
 import _modDef38 from "../../../../_runtime/metro/00038__.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import CollectiblesItemType from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
+import _modDef8811 from "../../../../_runtime/metro/08811__.js";
+import CutoutableAvatarDecorationDefault from "components/CutoutableAvatarDecoration.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -48,14 +50,14 @@ export default function AvatarDecorationSampleV2(arg0) {
   let obj = { style: items, resizeMode: "contain", source: null, accessible: false };
   items[1] = solidAvatar;
   if (null == avatarSource) {
-    avatarSource = tmp2(8811);
+    avatarSource = _modDef8811;
   }
   obj = { children: null, source: avatarSource };
   const items1 = [hasOwnProperty(React3, obj)];
   obj = {
     style: tmp.avatarDecoration,
     accessibilityLabel: item.label,
-    children: tmp8(tmp2(8812), { avatarDecoration: item, size, animate }),
+    children: hasOwnProperty(CutoutableAvatarDecorationDefault, { avatarDecoration: item, size, animate }),
   };
   items1[1] = hasOwnProperty(React4, obj);
   obj.children = items1;

@@ -1,4 +1,5 @@
 // discord_app/modules/checkpoint/CheckpointUtils.tsx
+import util from "../../intl/index.native.tsx";
 import TimeUtils from "../../../discord_common/js/packages/time-utils/TimeUtils.tsx";
 import notification_center_getTimestampString from "../notification_center/getTimestampString.tsx";
 import _modDef8144 from "../../../discord_assets/assets/checkpoint/card-plant.png.js";
@@ -22,17 +23,17 @@ export const getVoiceDurationString = function getVoiceDurationString(totalVoice
   ({ time, unit } = timeAndUnit);
   const time2 = notification_center_getTimestampString.getAbbreviatedFormatter();
   if (null == time) {
-    const intl3 = tmp(1114).intl;
+    const intl3 = util.intl;
     return intl3.formatToPlainString(time2.minutes, { minutes: 0 });
   } else {
     const _Math = Math;
     const rounded = Math.round(time);
-    if (unit === tmp(4589).TimeUnits.HOURS) {
-      const intl2 = tmp(1114).intl;
+    if (unit === TimeUtils.TimeUnits.HOURS) {
+      const intl2 = util.intl;
       obj = { hours: rounded };
       let formatToPlainStringResult = intl2.formatToPlainString(time2.hours, obj);
     } else {
-      const intl = tmp(1114).intl;
+      const intl = util.intl;
       obj = { minutes: rounded };
       formatToPlainStringResult = intl.formatToPlainString(time2.minutes, obj);
     }

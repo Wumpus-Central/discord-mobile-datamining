@@ -49,7 +49,7 @@ export const useControllerPIPState = function useControllerPIPState(channelId) {
   const stateFromStores = current(504).useStateFromStores(
     items,
     () => {
-      const channel = ChannelStore.getChannel(obj);
+      const channel = ChannelStore.getChannel(ChannelStore);
       let isVocalResult;
       if (channel != null) {
         isVocalResult = channel.isVocal();
@@ -71,27 +71,26 @@ export const useControllerPIPState = function useControllerPIPState(channelId) {
       } else {
         const embeddedActivityLocationChannelId =
           embeddedActivityLocationUtils.getEmbeddedActivityLocationChannelId(connectedActivityLocation);
-        const channel1 = obj.getChannel(embeddedActivityLocationChannelId);
+        const channel1 = ChannelStore.getChannel(embeddedActivityLocationChannelId);
         let result = null != channel1;
-        const activityPanelMode = obj3.getActivityPanelMode();
+        const activityPanelMode = EmbeddedActivitiesStore.getActivityPanelMode();
         if (result) {
           result = ActivitiesInTextUtils.isActivityInTextSupportedForChannel(channel1);
           const tmp14Result = ActivitiesInTextUtils;
         }
         if (result) {
-          result = embeddedActivityLocationChannelId !== tmp;
+          result = embeddedActivityLocationChannelId !== ChannelStore;
         }
         let tmp10 = activityPanelMode === ActivityPanelModes.PIP;
         if (tmp10) {
-          tmp10 = ref === VoicePanelModes.PIP || embeddedActivityLocationChannelId !== tmp;
-          const tmp13 = ref === VoicePanelModes.PIP || embeddedActivityLocationChannelId !== tmp;
+          tmp10 = ref === VoicePanelModes.PIP || embeddedActivityLocationChannelId !== ChannelStore;
+          const tmp13 = ref === VoicePanelModes.PIP || embeddedActivityLocationChannelId !== ChannelStore;
         }
         if (result) {
           result = tmp10;
         }
         return result;
       }
-      obj3 = EmbeddedActivitiesStore;
     },
     items1,
   );
@@ -103,7 +102,7 @@ export const useControllerPIPState = function useControllerPIPState(channelId) {
   const items2 = [first1];
   const layoutEffect = noop.useLayoutEffect(() => () => first1.cancel(), items2);
   const obj2 = current(504);
-  let tmp5 = ref;
+  const tmp5 = ref;
   [tmp14, c7] = current(
     noop.useState(() => closure_2.getTargetDimensions(ref)),
     2,

@@ -35,10 +35,9 @@ function getOrParseMessagePreviewMarkupAST(arg0) {
       initialParserState,
       postProcessor,
     );
-    const result = obj.set(content, astParserForResultResult);
+    const result = closure_3.set(content, astParserForResultResult);
     return astParserForResultResult;
   }
-  obj = closure_3;
 }
 const tmp2 = new privDefault({ max: 2000 });
 let closure_3 = tmp2;

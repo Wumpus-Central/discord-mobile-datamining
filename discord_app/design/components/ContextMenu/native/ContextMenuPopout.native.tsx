@@ -37,7 +37,6 @@ function ContextMenuBackdrop(onDismiss) {
     accessibilityLabel: null,
   };
   const tmp = closure_15();
-  const tmp3 = closure_6;
   const obj4 = visible(1115);
   const intl = visible(1114).intl;
   const string = intl.string;
@@ -48,7 +47,7 @@ function ContextMenuBackdrop(onDismiss) {
     stringResult = string(t.xs0juG);
   }
   obj.accessibilityLabel = stringResult;
-  return tmp3(visible(4963).Backdrop, obj);
+  return closure_6(visible(4963).Backdrop, obj);
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
@@ -136,16 +135,16 @@ export const ContextMenuPopout = function ContextMenuPopout(cleanUp) {
   const tmp5 = diff2();
   ({ top, bottom } = cleanUp(positionX[9])({ includeKeyboardHeight: true }).insets);
   obj = { ignoreKeyboard: null };
-  let tmpResult = tmp(tmp2[11]);
+  let tmpResult = transitionState(tmp2[11]);
   obj.ignoreKeyboard = tmpResult.isAndroid();
   const size = cleanUp(positionX[10])(obj);
   let diff = size.height - y;
   if ("below" === positionY) {
     const diff1 = diff - bottom;
-    diff2 = diff1 - tmp(tmp2[6]).CONTEXT_MENU_EDGE_OFFSET;
+    diff2 = diff1 - transitionState(tmp2[6]).CONTEXT_MENU_EDGE_OFFSET;
   } else {
     const diff3 = diff - top;
-    diff2 = diff3 - tmp(tmp2[6]).CONTEXT_MENU_EDGE_OFFSET;
+    diff2 = diff3 - transitionState(tmp2[6]).CONTEXT_MENU_EDGE_OFFSET;
   }
   const tmp13 = positionY(obj1.useState(height >= diff2), 2);
   __initData = tmp13[1];
@@ -159,7 +158,7 @@ export const ContextMenuPopout = function ContextMenuPopout(cleanUp) {
     maxHeight: diff2,
     maxWidth: size.width - transitionState(positionX[6]).CONTEXT_MENU_EDGE_OFFSET - x,
   };
-  tmpResult = tmp(tmp2[7]);
+  tmpResult = transitionState(tmp2[7]);
   class R {
     constructor() {
       result = Math.min(closure_9, height) / 2;
@@ -244,17 +243,17 @@ export const ContextMenuPopout = function ContextMenuPopout(cleanUp) {
   obj1 = {
     maxHeight: diff2,
     height,
-    CONTEXT_MENU_MIN_WIDTH: tmp(tmp2[6]).CONTEXT_MENU_MIN_WIDTH,
+    CONTEXT_MENU_MIN_WIDTH: transitionState(tmp2[6]).CONTEXT_MENU_MIN_WIDTH,
     positionY,
     positionX,
-    CONTEXT_MENU_MIN_SCALE: tmp(tmp2[6]).CONTEXT_MENU_MIN_SCALE,
-    withSpring: tmp(tmp2[12]).withSpring,
-    interpolate: tmp(tmp2[7]).interpolate,
+    CONTEXT_MENU_MIN_SCALE: transitionState(tmp2[6]).CONTEXT_MENU_MIN_SCALE,
+    withSpring: transitionState(tmp2[12]).withSpring,
+    interpolate: transitionState(tmp2[7]).interpolate,
     visible: sharedValue,
-    CONTEXT_MENU_SPRING: tmp(tmp2[6]).CONTEXT_MENU_SPRING,
+    CONTEXT_MENU_SPRING: transitionState(tmp2[6]).CONTEXT_MENU_SPRING,
     transitionState,
-    TransitionStates: tmp(tmp2[8]).TransitionStates,
-    runOnJS: tmp(tmp2[7]).runOnJS,
+    TransitionStates: transitionState(tmp2[8]).TransitionStates,
+    runOnJS: transitionState(tmp2[7]).runOnJS,
     cleanUp,
     onClose,
   };
@@ -325,7 +324,7 @@ export const ContextMenuPopout = function ContextMenuPopout(cleanUp) {
       accessibilityRole: "header",
       children: title,
     };
-    obj5.children = tmp22(tmp(tmp2[15]).Text, obj6);
+    obj5.children = tmp22(transitionState(tmp2[15]).Text, obj6);
     const items7 = [tmp22(state, obj5), tmp22(ContextMenuDivider, {})];
     obj4.children = items7;
     tmp20Result = tmp20(tmp21, obj4);
@@ -386,7 +385,7 @@ export const ContextMenuPopout = function ContextMenuPopout(cleanUp) {
     if (height.includes(index)) {
       obj = { children: null };
       const _HermesInternal = HermesInternal;
-      const items = [tmp2(ContextMenuDivider, {}, "divider-" + index), tmp2Result];
+      const items = [requestClose(ContextMenuDivider, {}, "divider-" + index), tmp2Result];
       obj.children = items;
       tmp7 = sharedValue(onClose, obj);
     }

@@ -134,6 +134,7 @@ export default function HappeningNowCardEmbeddedActivity(guildId) {
         tmp(tmp2, true);
       }
     });
+    const promise = asyncRequireImpl(9536, dependencyMap.paths);
   }, items3);
   context = obj3.useContext(tmp2(tmp3[16]).ViewableHappeningNowCardKeysContext);
   obj3.useRef(cardKey);

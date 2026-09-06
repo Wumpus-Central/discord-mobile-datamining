@@ -1,6 +1,8 @@
 // discord_app/modules/user_settings/voice/AudioSettingsUtils.tsx
 import UserSettingsConstants from "../UserSettingsConstants.tsx";
 import BaseConnectionEvent from "../../../../discord_common/js/packages/media-engine/index.tsx";
+import PerceptualVolumeUtils from "../../../utils/PerceptualVolumeUtils.tsx";
+import AudioSettingsDefaultVolumes from "../../../../discord_common/js/shared/shared-constants/AudioSettingsDefaultVolumes.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
 const constants = UserSettingsConstants.ProtoAudioSettingsContextTypes;
@@ -8,14 +10,14 @@ let result = size.fileFinishedImporting("modules/user_settings/voice/AudioSettin
 
 export const snapVolumeToDefault = function snapVolumeToDefault(USER, DEFAULT) {
   if (DEFAULT === BaseConnectionEvent.MediaEngineContextTypes.STREAM) {
-    USER = tmp(9093).AudioSettingsDefaultVolumes.STREAM;
+    USER = AudioSettingsDefaultVolumes.AudioSettingsDefaultVolumes.STREAM;
   } else {
-    USER = tmp(9093).AudioSettingsDefaultVolumes.USER;
+    USER = AudioSettingsDefaultVolumes.AudioSettingsDefaultVolumes.USER;
   }
   let tmp3 = USER;
-  let tmpResult = tmp(5015);
+  let tmpResult = PerceptualVolumeUtils;
   const result = tmpResult.amplitudeToPerceptual(USER);
-  tmpResult = tmp(5015);
+  tmpResult = PerceptualVolumeUtils;
   if (Math.abs(result - tmpResult.amplitudeToPerceptual(USER)) < 1) {
     tmp3 = USER;
   }

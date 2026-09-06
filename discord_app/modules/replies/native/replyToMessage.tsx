@@ -43,7 +43,7 @@ export default function longPressMessageHandleReply(arg0) {
       if (null != pendingReply) {
         if (pendingReply.message.id === message.id) {
           const currentUser1 = UserStore.getCurrentUser();
-          let tmp3Result = tmp3(1242);
+          let tmp3Result = AnalyticsUtilsDefault;
           obj = {
             message_id: message.id,
             channel_id: null,
@@ -79,7 +79,7 @@ export default function longPressMessageHandleReply(arg0) {
       }
     }
   }
-  tmp3Result = tmp3(1242);
+  tmp3Result = AnalyticsUtilsDefault;
   const merged = Object.assign(AppAnalyticsUtils.collectGuildAnalyticsMetadata(channel.guild_id));
   const obj1 = { source: actionSource };
   const merged1 = Object.assign(AppAnalyticsUtils.collectChannelAnalyticsMetadata(channel));
@@ -105,4 +105,5 @@ export default function longPressMessageHandleReply(arg0) {
       current3.openSystemKeyboard();
     }
   }
+  const tmp7Result = PendingReplyActionCreators;
 }

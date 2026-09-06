@@ -99,10 +99,11 @@ function BrowseChannelsOption(guild) {
         stringResult = string(h9mGOP.et6wav);
       }
       obj.label = stringResult;
-      tmp8Result = tmp8(tmp9, obj);
+      tmp8Result = closure_21(tmp9, obj);
     }
-    tmp8Result = tmp8(tmp3(12291).NewBadge, {});
+    tmp8Result = closure_21(tmp3(12291).NewBadge, {});
   }
+  const obj3 = guild(504);
 }
 function ChangeIdentityOption(arg0) {
   ({ guild, user } = arg0);
@@ -124,14 +125,14 @@ function ChangeIdentityOption(arg0) {
     if (user.hasAvatarForGuild(guild.id)) {
       obj = { style: tmp.identitySublabel, children: null };
       const obj1 = { size: tmp7(1178).AvatarSizes.SIZE_16, style: tmp.guildServerAvatar, user, guildId: guild.id };
-      const items = [tmp6(tmp7(1178).Avatar, obj1)];
+      const items = [closure_21(tmp7(1178).Avatar, obj1)];
       const obj2 = { user, nick: nickname, usernameStyle: null, discriminatorStyle: null, nicknameStyle: null };
       ({
         identityName: obj5.usernameStyle,
         identityName: obj5.discriminatorStyle,
         identityName: obj5.nicknameStyle,
       } = tmp);
-      items[1] = tmp6(DiscordTagDefault, obj2);
+      items[1] = closure_21(DiscordTagDefault, obj2);
       obj.children = items;
       tmp9 = closure_22(View, obj);
     }
@@ -327,7 +328,7 @@ export const GuildUnreadAction = function GuildUnreadAction(guild) {
     let tmp7Result = null;
     if (features.has(constants2.COMMUNITY)) {
       obj = { guild };
-      tmp7Result = tmp7(BrowseChannelsOption, obj);
+      tmp7Result = closure_21(BrowseChannelsOption, obj);
     }
     obj1 = { hasIcons: false, children: null };
     items4[2] = tmp7Result;
@@ -358,8 +359,9 @@ export const GuildUnreadAction = function GuildUnreadAction(guild) {
         }
       },
     };
-    tmp7Result = tmp7(tmp(tmp2[18]).ActionSheetRow, t);
+    tmp7Result = closure_21(tmp(tmp2[18]).ActionSheetRow, t);
   }
+  const obj3 = guild(stateFromStores1[17]);
 };
 export const GuildActionSheetPrimaryActions = function GuildActionSheetPrimaryActions(guild) {
   guild = guild.guild;
@@ -450,7 +452,7 @@ export const GuildActionSheetDirectoryActions = function GuildActionSheetDirecto
         hasIcons: false,
         children: items.map((children, index) => closure_1_21(React.Fragment, { children }, index)),
       };
-      tmp5Result = tmp5(tmp9(7200).ActionSheetRow.Group, obj);
+      tmp5Result = closure_21(tmp9(7200).ActionSheetRow.Group, obj);
     }
     return tmp5Result;
   } else {
@@ -475,8 +477,9 @@ export const GuildActionSheetDirectoryActions = function GuildActionSheetDirecto
         useAlertStore.openAlert("guild-action-sheet-leave-server", __initData(lazyResult, obj));
       },
     };
-    t = items.push(tmp5(tmp9(7200).ActionSheetRow, obj));
+    t = items.push(closure_21(tmp9(7200).ActionSheetRow, obj));
   }
+  tmp4 = closure_7(guild, currentUser);
 };
 export const GuildActionSheetSecondaryActions = function GuildActionSheetSecondaryActions(guild) {
   guild = guild.guild;
@@ -502,7 +505,7 @@ export const GuildActionSheetSecondaryActions = function GuildActionSheetSeconda
     obj.onValueChange = function onValueChange() {
       return OptInOnboardingUtils.toggleShowAllChannels(guild.id);
     };
-    items.push(tmp8(tmp3(7200).ActionSheetSwitchRow, obj));
+    items.push(closure_21(tmp3(7200).ActionSheetSwitchRow, obj));
   }
   items.push(closure_21(HideMutedChannelsOption, { guild }));
   items.push(closure_21(RestrictedGuildPrivacyOption, { guild }));
@@ -518,7 +521,7 @@ export const GuildActionSheetSecondaryActions = function GuildActionSheetSeconda
       ActionSheetActionCreatorsDefault.hideActionSheet();
       GuildAntiRaidModalActionCreators.openReportRaidModal(guild.id);
     };
-    items.push(tmp8(tmp3(7200).ActionSheetRow, obj));
+    items.push(closure_21(tmp3(7200).ActionSheetRow, obj));
   }
   if (!tmp2) {
     obj1 = { label: null, onPress: null };
@@ -528,7 +531,7 @@ export const GuildActionSheetSecondaryActions = function GuildActionSheetSeconda
       ActionSheetActionCreatorsDefault.hideActionSheet();
       const result = ReportModals.showReportModalForGuild(guild);
     };
-    items.push(tmp8(tmp3(7200).ActionSheetRow, obj1));
+    items.push(closure_21(tmp3(7200).ActionSheetRow, obj1));
   }
   if (!shouldShowIncidentActions) {
     if (tmp2) {
@@ -538,7 +541,7 @@ export const GuildActionSheetSecondaryActions = function GuildActionSheetSeconda
           hasIcons: false,
           children: items.map((children, index) => closure_1_21(React.Fragment, { children }, index)),
         };
-        tmp8Result = tmp8(tmp3(7200).ActionSheetRow.Group, obj2);
+        tmp8Result = closure_21(tmp3(7200).ActionSheetRow.Group, obj2);
       }
       return tmp8Result;
     } else {
@@ -563,7 +566,7 @@ export const GuildActionSheetSecondaryActions = function GuildActionSheetSeconda
           useAlertStore.openAlert("guild-action-sheet-leave-server", __initData(lazyResult, obj));
         },
       };
-      t2 = items.push(tmp8(tmp3(7200).ActionSheetRow, obj3));
+      t2 = items.push(closure_21(tmp3(7200).ActionSheetRow, obj3));
     }
   } else {
     const intl4 = tmp3(1114).intl;
@@ -589,8 +592,9 @@ export const GuildActionSheetSecondaryActions = function GuildActionSheetSeconda
         );
       },
     };
-    t = items.push(tmp8(tmp3(7200).ActionSheetRow, obj4));
+    t = items.push(closure_21(tmp3(7200).ActionSheetRow, obj4));
   }
+  const tmp3Result = guild(13909);
 };
 export const GuildDeveloperOptionAction = function GuildDeveloperOptionAction(guild) {
   guild = guild.guild;
@@ -619,7 +623,7 @@ export const GuildDeveloperOptionAction = function GuildDeveloperOptionAction(gu
             ToastUtils.presentLinkCopied();
           }
         };
-        items.push(tmp7(tmp(7200).ActionSheetRow, obj));
+        items.push(closure_21(tmp(7200).ActionSheetRow, obj));
       }
       if (null != guild.banner) {
         obj = { label: null, onPress: null };
@@ -633,7 +637,7 @@ export const GuildDeveloperOptionAction = function GuildDeveloperOptionAction(gu
             ToastUtils.presentLinkCopied();
           }
         };
-        items.push(tmp7(tmp(7200).ActionSheetRow, obj));
+        items.push(closure_21(tmp(7200).ActionSheetRow, obj));
       }
     }
     const obj1 = { hasIcons: false, title: null, children: null };

@@ -2,6 +2,7 @@
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import ReanimatedRexport from "../../reanimated/ReanimatedRexport.tsx";
 import EmojiPickerListRow from "../../emoji_picker/native/components/EmojiPickerListRow.tsx";
+import openEmojiActionSheet2 from "../../emoji_picker/native/components/openEmojiActionSheet.tsx";
 import EmojiSuggestionBarUtils from "EmojiSuggestionBarUtils.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
@@ -56,7 +57,7 @@ function EmojiSuggestionBarSmallAnimated(displayEmojis) {
       if (locked) {
         let openEmojiActionSheet = noop;
       } else {
-        openEmojiActionSheet = tmp2(10328).openEmojiActionSheet;
+        openEmojiActionSheet = openEmojiActionSheet2.openEmojiActionSheet;
       }
       obj.onLongPressEmoji = openEmojiActionSheet;
       obj.animateEmoji = !reducedMotion;
@@ -119,7 +120,7 @@ const __initData = {
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/chat_input/native/EmojiSuggestionBarSmall.tsx");
 
-export const EmojiSuggestionBarSmall = noop.forwardRef((anchorTop, ref) => {
+export const EmojiSuggestionBarSmall = noop.forwardRef((anchorTop, arg1) => {
   anchorTop = anchorTop.anchorTop;
   const onOccupiedHeightChange = anchorTop.onOccupiedHeightChange;
   let unlockedEmojis;
@@ -127,7 +128,7 @@ export const EmojiSuggestionBarSmall = noop.forwardRef((anchorTop, ref) => {
   const emojiSuggestionBarState = anchorTop(unlockedEmojis[5]).useEmojiSuggestionBarState(
     merged,
     anchorTop(unlockedEmojis[5]).MAX_SUGGESTIONS_LARGE,
-    ref,
+    arg1,
   );
   unlockedEmojis = emojiSuggestionBarState.unlockedEmojis;
   const lockedEmojis = emojiSuggestionBarState.lockedEmojis;
@@ -145,14 +146,14 @@ export const EmojiSuggestionBarSmall = noop.forwardRef((anchorTop, ref) => {
     };
     return obj;
   }, items);
-  const renderItem = lockedEmojis.useCallback((arg0, arg1, transitionState, cleanUp) => {
+  const renderItem = lockedEmojis.useCallback((key, arg1, transitionState, cleanUp) => {
     const obj = {};
     const merged = Object.assign(arg1);
     obj.anchorTop = anchorTop;
     obj.onOccupiedHeightChange = onOccupiedHeightChange;
     obj.transitionState = transitionState;
     obj.cleanUp = cleanUp;
-    return <EmojiSuggestionBarSmallAnimated key={arg0} />;
+    return <EmojiSuggestionBarSmallAnimated key={key} />;
   }, items1);
   return reducedMotion(anchorTop(unlockedEmojis[9]).TransitionItem, { item, renderItem });
 });

@@ -1,13 +1,15 @@
 // discord_app/modules/instant_invite/native/components/InstantInviteRow.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import InstantInviteUtils from "../../../../utils/InstantInviteUtils.tsx";
-import InviteQueueDefault from "../../../../lib/InviteQueue.tsx";
+import InviteQueue from "../../../../lib/InviteQueue.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import ChannelStore from "../../../../stores/ChannelStore.tsx";
 import CreateInviteModalStore from "../../../../stores/CreateInviteModalStore.tsx";
 import GuildStore from "../../../../stores/GuildStore.tsx";
 import InviteSuggestionsStore from "../../../../stores/InviteSuggestionsStore.tsx";
 import UserStore from "../../../../stores/UserStore.tsx";
+
+const InviteQueueDefault = InviteQueue;
 
 require = fn;
 const View = fn(17).View;
@@ -140,50 +142,50 @@ export default noop.memo(function InstantInviteRow(row) {
               }
             }
           }
-          React7(tmp, id, InviteSendStates.SENDING);
+          React7(code, id, InviteSendStates.SENDING);
           const type = row.type;
           if (InstantInviteUtils.RowTypes.FRIEND !== type) {
-            if (tmp7(9822).RowTypes.DM !== type) {
-              if (tmp7(9822).RowTypes.GROUP_DM === type) {
-                if (null != tmp) {
+            if (InstantInviteUtils.RowTypes.DM !== type) {
+              if (InstantInviteUtils.RowTypes.GROUP_DM === type) {
+                if (null != code) {
                   let obj3 = InviteQueueDefault;
                   let obj = {
-                    inviteKey: tmp,
-                    type: tmp7(9895).InvitePropertiesType.GROUP_DM,
-                    channel: ChannelStore.getChannel(tmp3),
+                    inviteKey: code,
+                    type: InviteQueue.InvitePropertiesType.GROUP_DM,
+                    channel: ChannelStore.getChannel(id),
                     location: "Invite Action Sheet",
                     inviteAnalyticsMetadata: null,
                   };
-                  obj = { suggestionData: InviteSuggestionsStore.getSelectedInviteMetadata(tmp6), source };
+                  obj = { suggestionData: InviteSuggestionsStore.getSelectedInviteMetadata(row), source };
                   obj.inviteAnalyticsMetadata = obj;
                   obj3.enqueue(obj, handleSendState);
                 }
-              } else if (tmp7(9822).RowTypes.CHANNEL === type) {
-                if (null != tmp) {
+              } else if (InstantInviteUtils.RowTypes.CHANNEL === type) {
+                if (null != code) {
                   obj = InviteQueueDefault;
                   const obj1 = {
-                    inviteKey: tmp,
-                    type: tmp7(9895).InvitePropertiesType.CHANNEL,
-                    channel: ChannelStore.getChannel(tmp3),
+                    inviteKey: code,
+                    type: InviteQueue.InvitePropertiesType.CHANNEL,
+                    channel: ChannelStore.getChannel(id),
                     location: "Invite Action Sheet",
                     inviteAnalyticsMetadata: null,
                   };
-                  const obj2 = { suggestionData: InviteSuggestionsStore.getSelectedInviteMetadata(tmp6), source };
+                  const obj2 = { suggestionData: InviteSuggestionsStore.getSelectedInviteMetadata(row), source };
                   obj1.inviteAnalyticsMetadata = obj2;
                   obj.enqueue(obj1, handleSendState);
                 }
               }
             }
           }
-          if (null != tmp) {
+          if (null != code) {
             obj3 = {
-              inviteKey: tmp,
-              type: tmp7(9895).InvitePropertiesType.USER,
-              user: UserStore.getUser(tmp3),
+              inviteKey: code,
+              type: InviteQueue.InvitePropertiesType.USER,
+              user: UserStore.getUser(id),
               location: "Invite Action Sheet",
               inviteAnalyticsMetadata: null,
             };
-            const obj4 = { suggestionData: InviteSuggestionsStore.getSelectedInviteMetadata(tmp6), source };
+            const obj4 = { suggestionData: InviteSuggestionsStore.getSelectedInviteMetadata(row), source };
             obj3.inviteAnalyticsMetadata = obj4;
             InviteQueueDefault.enqueue(obj3, handleSendState);
           }
@@ -247,13 +249,24 @@ export default noop.memo(function InstantInviteRow(row) {
       source: avatarSource,
       size: tmp2(tmp3[17]).AvatarSizes.REFRESH_MEDIUM_32,
     });
-    tmp22(tmp2(tmp3[16]).PressableOpacity, obj7);
+    jsx(tmp2(tmp3[16]).PressableOpacity, {
+      importantForAccessibility: "no-hide-descendants",
+      accessibilityElementsHidden: true,
+      onPress(stopPropagation) {
+        stopPropagation.stopPropagation();
+        if (onPressAvatar != null) {
+          tmp2(id);
+        }
+      },
+      style: { padding: 8, margin: -8 },
+      children: null,
+    });
     const obj9 = { nick: null, user: null };
     const tmp8Result3 = tmp8(tmp3[18]);
     obj9.nick = tmp8(tmp3[19]).getGlobalName(user);
     obj9.user = user;
     let tmp27;
-    const tmp22Result = tmp22(tmp8Result3, obj9);
+    const tmp22Result = <tmp8Result3 nick={null} user={null} />;
     if (null != onPressAvatar) {
       const intl = tmp2(tmp3[20]).intl;
       let tag;
@@ -289,4 +302,5 @@ export default noop.memo(function InstantInviteRow(row) {
     tmp18 = tmp27;
     const tmp8Result4 = tmp8(tmp3[19]);
   }
+  tmp = closure_13();
 });

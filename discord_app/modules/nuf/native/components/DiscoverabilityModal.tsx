@@ -69,7 +69,7 @@ function DiscoverabilityNameScene() {
   }
   obj.initialName = name;
   obj.children = jsx(ContactSyncNameInputDefault, { onNext: callback, loading: false, initialName: null });
-  return <tmp6 onNext={callback} loading={false} initialName={null} />;
+  return <View onNext={callback} loading={false} initialName={null} />;
 }
 class DiscoverabilityModal {
   constructor() {

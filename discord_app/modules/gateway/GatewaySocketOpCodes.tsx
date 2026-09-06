@@ -125,7 +125,7 @@ prototype["updateGuildSubscriptions"] = function updateGuildSubscriptions(subscr
 prototype["callConnect"] = function callConnect(channel_id) {
   this.send(GatewaySocketOpcode.Opcode.CALL_CONNECT, { channel_id });
 };
-prototype["streamCreate"] = function streamCreate(streamType, guildId, channelId, region) {
+prototype["streamCreate"] = function streamCreate(streamType, guildId, channelId) {
   let tmp = region;
   if (region === undefined) {
     tmp = null;

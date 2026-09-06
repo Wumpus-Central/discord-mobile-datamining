@@ -1,7 +1,7 @@
 // discord_app/modules/media_uploads/DetectedFileSize.tsx
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 
-let closure_1 = async function _getDetectedFileSize(arg0, value) {
+let closure_1 = async function _getDetectedFileSize(arg0) {
   if (c1 === 2) {
     c1 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");

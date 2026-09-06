@@ -46,13 +46,12 @@ obj.handler = function handler(args) {
     if (channel.isPrivate()) {
       const scopes = socket.authorization.scopes;
       if (!scopes.includes(OAuth2Scopes.OAuth2Scopes.RPC)) {
-        if (!scopes.includes(tmp(8339).OAuth2Scopes.DM_CHANNELS_READ)) {
+        if (!scopes.includes(OAuth2Scopes.OAuth2Scopes.DM_CHANNELS_READ)) {
           obj = { errorCode: constants2.INVALID_PERMISSIONS };
           const tmp8 = new RPCErrorDefault(obj, "Invalid scope");
           throw tmp8;
         }
       }
-      tmp = require;
     }
     const obj3 = RPCHelpers;
     return obj3.transformChannel(

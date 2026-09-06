@@ -543,13 +543,13 @@ prototype["createPanResponder"] = function createPanResponder(arg0, point, value
       if (null != active) {
         dy.dx = 0;
         const layout = active.layout;
-        tmp.moveY = layout.pageY + layout.frameHeight / 2 + dy.dy;
+        self.moveY = layout.pageY + layout.frameHeight / 2 + dy.dy;
         let str = "up";
-        if (dy.dy >= tmp.dy) {
+        if (dy.dy >= self.dy) {
           str = "down";
         }
-        tmp.direction = str;
-        tmp.dy = dy.dy;
+        self.direction = str;
+        self.dy = dy.dy;
         closure_0(arg0, dy);
       }
     },
@@ -558,9 +558,9 @@ prototype["createPanResponder"] = function createPanResponder(arg0, point, value
       const pan = state.pan;
       const onMoveStart = closure_1.onMoveStart;
       if (null != state.active) {
-        tmp.moved = true;
-        tmp.dy = 0;
-        tmp.direction = "down";
+        self.moved = true;
+        self.dy = 0;
+        self.direction = "down";
         if (onMoveStart != null) {
           onMoveStart();
         }

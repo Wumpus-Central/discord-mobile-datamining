@@ -4,6 +4,8 @@ import util from "../../../../intl/index.native.tsx";
 import useChannelNameDefault from "../../../channel/useChannelName.tsx";
 import useMountEffectDefault from "../../../../hooks/useMountEffect.tsx";
 import StageChannelActionCreators from "../../StageChannelActionCreators.tsx";
+import StatusBarDefault from "../../../status_bar/native/components/StatusBar.android.tsx";
+import useCanSpeakInChannelDefault from "../../useCanSpeakInChannel.tsx";
 import useIsInvitedToSpeakDefault from "../../useIsInvitedToSpeak.tsx";
 import PushNotificationDefault from "../../../../lib/pushnotification/PushNotification.tsx";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
@@ -19,7 +21,7 @@ class StageChannelRaiseHandAck {
     closure_1 = undefined;
     closure_2 = undefined;
     closure_3 = undefined;
-    closure_4 = async function _handleAcceptInvite(arg0, value) {
+    closure_4 = async function _handleAcceptInvite() {
       if (c5 === 2) {
         c5 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -330,7 +332,7 @@ export default function GlobalStageChannelStatus(arg0) {
     stringResult = intl.string(id(1114).t["/YzI63"]);
   }
   const tmp7 = useIsInvitedToSpeakDefault();
-  let invitedHeaderText = tmp3(9583)(id);
+  let invitedHeaderText = useCanSpeakInChannelDefault(id);
   let obj = id(504);
   const items = [StageInstanceStore];
   const items1 = [id];
@@ -363,7 +365,7 @@ export default function GlobalStageChannelStatus(arg0) {
         } else {
           obj = { style: tmp.noticeContainer, children: null };
           const obj1 = { animated: true, barStyle: str };
-          const items2 = [closure_10(tmp3(9481), obj1), ,];
+          const items2 = [closure_10(StatusBarDefault, obj1), ,];
           const obj2 = { style: activeSpeakerIcon, size: tmp8(1178).Icon.Sizes.REFRESH_SMALL_16, source: null };
           tmp8Result = tmp8(5028);
           obj2.source = tmp8Result.getChannelIconWithGuild(channel, guild);
@@ -384,7 +386,7 @@ export default function GlobalStageChannelStatus(arg0) {
             }
             items4[1] = tmp17;
             obj3.children = items4;
-            tmp13Result = tmp13(tmp8(1178).LegacyText, obj3);
+            tmp13Result = closure_11(tmp8(1178).LegacyText, obj3);
           }
           const items5 = [tmp13Result];
           let tmp15Result = !tmp12;
@@ -397,15 +399,14 @@ export default function GlobalStageChannelStatus(arg0) {
             items6[1] = invitedHeaderText;
             obj4.style = items6;
             obj4.children = combined;
-            tmp15Result = tmp15(tmp8(1178).LegacyText, obj4);
+            tmp15Result = closure_10(tmp8(1178).LegacyText, obj4);
           }
           const obj5 = { numberOfLines: 1, children: null };
           items5[1] = tmp15Result;
           obj5.children = items5;
           items2[2] = closure_11(tmp8(1178).LegacyText, obj5);
           obj.children = items2;
-          tmp13Result = tmp13(View, obj);
-          tmp15 = closure_10;
+          tmp13Result = closure_11(View, obj);
         }
         return tmp13Result;
       }

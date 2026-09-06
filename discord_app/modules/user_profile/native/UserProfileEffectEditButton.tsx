@@ -53,14 +53,14 @@ export default function UserProfileEffectEditButton(isTryItOut) {
   obj.guildValue = profileEffect1;
   obj.guildId = guildId;
   const profilePreviewValue = obj.getProfilePreviewValue(obj);
-  let tmp2Result = tmp2(tmp3[9]);
+  let tmp2Result = user(tmp3[9]);
   let skuId;
   if (profilePreviewValue != null) {
     skuId = profilePreviewValue.skuId;
   }
   const fetchCollectiblesProduct = tmp2Result.useFetchCollectiblesProduct(skuId);
   ({ product, isFetching } = fetchCollectiblesProduct);
-  tmp2Result = tmp2(tmp3[8]);
+  tmp2Result = user(tmp3[8]);
   userProfileEffect = tmp2Result.useUserProfileEffect({ user, guildId });
   if (undefined !== pendingProfileEffect) {
     userProfileEffect = pendingProfileEffect;
@@ -75,16 +75,16 @@ export default function UserProfileEffectEditButton(isTryItOut) {
     name = product.name;
   }
   if (name == null) {
-    const intl = tmp2(tmp3[13]).intl;
-    name = intl.string(tmp2(tmp3[13]).t.PoWNfe);
+    const intl = user(tmp3[13]).intl;
+    name = intl.string(user(tmp3[13]).t.PoWNfe);
   }
   let formatToPlainStringResult = name;
   if (null != guildId) {
     formatToPlainStringResult = name;
     if (null == userProfileEffect) {
-      const intl2 = tmp2(tmp3[13]).intl;
+      const intl2 = user(tmp3[13]).intl;
       obj = { label: name };
-      formatToPlainStringResult = intl2.formatToPlainString(tmp2(tmp3[13]).t.ep5D4i, obj);
+      formatToPlainStringResult = intl2.formatToPlainString(user(tmp3[13]).t.ep5D4i, obj);
     }
   }
   if (isFetching) {
@@ -97,17 +97,17 @@ export default function UserProfileEffectEditButton(isTryItOut) {
       disabled: true,
       hideArrow: true,
     };
-    const intl4 = tmp2(tmp3[13]).intl;
-    obj1.label = intl4.string(tmp2(tmp3[13]).t.wR5wOo);
-    const intl5 = tmp2(tmp3[13]).intl;
-    obj1.buttonText = intl5.string(tmp2(tmp3[13]).t.MKDeyL);
+    const intl4 = user(tmp3[13]).intl;
+    obj1.label = intl4.string(user(tmp3[13]).t.wR5wOo);
+    const intl5 = user(tmp3[13]).intl;
+    obj1.buttonText = intl5.string(user(tmp3[13]).t.MKDeyL);
     obj1.onPress = NOOP;
-    obj1.leading = tmp13(tmp2(tmp3[15]).ActivityIndicator, { animating: true, size: "large" });
+    obj1.leading = closure_6(user(tmp3[15]).ActivityIndicator, { animating: true, size: "large" });
     let obj2 = obj1;
   } else {
     obj2 = { label: null, buttonText: null, accessibilityValue: null, onPress: null, leading: null };
-    const intl3 = tmp2(tmp3[13]).intl;
-    obj2.label = intl3.string(tmp2(tmp3[13]).t.wR5wOo);
+    const intl3 = user(tmp3[13]).intl;
+    obj2.label = intl3.string(user(tmp3[13]).t.wR5wOo);
     obj2.buttonText = formatToPlainStringResult;
     const obj3 = { text: formatToPlainStringResult };
     obj2.accessibilityValue = obj3;
@@ -118,15 +118,15 @@ export default function UserProfileEffectEditButton(isTryItOut) {
       const obj6 = { uri: guildId(tmp3[17]) };
       obj5.source = obj6;
       obj5.style = tmp.sampleProfile;
-      const items1 = [tmp13(guildId(tmp3[16]), obj5)];
+      const items1 = [closure_6(guildId(tmp3[16]), obj5)];
       const obj7 = { skuId: profilePreviewValue.skuId, bannerAdjustment: 0, useThumbnail: true };
-      items1[1] = tmp13(guildId(tmp3[18]), obj7);
+      items1[1] = closure_6(guildId(tmp3[18]), obj7);
       obj4.children = items1;
       let tmp13Result = closure_7(View, obj4);
       const tmp19 = guildId(tmp3[16]);
     } else {
       const obj8 = { source: guildId(tmp3[20]), style: tmp.noneIcon };
-      tmp13Result = tmp13(tmp2(tmp3[19]).Icon, obj8);
+      tmp13Result = closure_6(user(tmp3[19]).Icon, obj8);
     }
     obj2.leading = tmp13Result;
   }

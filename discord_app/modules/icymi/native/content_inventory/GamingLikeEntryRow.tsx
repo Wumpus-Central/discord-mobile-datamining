@@ -210,7 +210,6 @@ export default function GamingLikeEntryRow(content) {
         obj1 = { children: null };
         obj2 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", style: tmp20, children: null };
         isEntryActiveResult = tmp2Result.isEntryActive(content);
-        const tmp19 = closure_8;
         obj2.children = tmp5(tmp3[25]).getName(stateFromStores);
         const items5 = [closure_7(tmp2(tmp3[24]).Text, obj2)];
         const obj3 = { lineClamp: 1, variant: "text-xs/normal", color: "text-muted", children: null };
@@ -219,7 +218,7 @@ export default function GamingLikeEntryRow(content) {
         obj3.children = tmp2Result1.getRelativeTimestamp(tmp5(tmp3[27]).extractTimestamp(content.id));
         items5[1] = closure_7(tmp2(tmp3[24]).Text, obj3);
         obj1.children = items5;
-        element.title = closure_9(tmp19, obj1);
+        element.title = closure_9(closure_8, obj1);
         const tmp5Result2 = tmp5(tmp3[27]);
         let str = "text-default";
         if (tmp2Result2.isEntryActive(content)) {
@@ -275,7 +274,7 @@ export default function GamingLikeEntryRow(content) {
         }
         if (tmp16Result) {
           const obj15 = { style: tmp.badges, children: memo };
-          tmp16Result = tmp16(tmp21, obj15);
+          tmp16Result = closure_7(View, obj15);
         }
         items8[1] = tmp16Result;
         obj11.children = items8;
@@ -290,7 +289,7 @@ export default function GamingLikeEntryRow(content) {
           obj16.reactText = intl3.formatToPlainString(tmp2(tmp3[22]).t.ghWi8V, obj17);
           obj16.onReply = openReplyActionSheet;
           obj16.onForward = callback1;
-          tmp16Result = tmp16(tmp2(tmp3[31]).ContentInventoryReplyRow, obj16);
+          tmp16Result = closure_7(tmp2(tmp3[31]).ContentInventoryReplyRow, obj16);
           const tmp5Result3 = tmp5(tmp3[25]);
         }
         const obj18 = { children: null };

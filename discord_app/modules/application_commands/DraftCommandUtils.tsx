@@ -11,7 +11,7 @@ export const toDraftCommand = function toDraftCommand(activeCommand, result1) {
   if (null == activeCommand) {
     return null;
   } else {
-    let tmp2 = (function getCommandTextPrefix(activeCommand, result1) {
+    const tmp2 = (function getCommandTextPrefix(activeCommand, result1) {
       const items = [,];
       ({ displayName: arr[0], untranslatedName: arr[1] } = activeCommand);
       const obj = items[Symbol.iterator]();

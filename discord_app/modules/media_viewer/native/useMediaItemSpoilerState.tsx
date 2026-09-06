@@ -1,4 +1,6 @@
 // discord_app/modules/media_viewer/native/useMediaItemSpoilerState.tsx
+import native from "../../../design/void/native.tsx";
+import ReanimatedRexport from "../../reanimated/ReanimatedRexport.tsx";
 import timing from "../../../design/animation/reanimated/timing/timing.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -37,11 +39,11 @@ export const useMediaItemSpoilerState = function useMediaItemSpoilerState(index)
     if (state) {
       num = 1;
     }
-    obj = { duration: 200, easing: tmp2(1178).STANDARD_EASING };
+    obj = { duration: 200, easing: native.STANDARD_EASING };
     const fn = function t() {
       closure_0(state[3]).runOnJS(setSpoilerActive)(closure_1_1);
     };
-    obj = { runOnJS: tmp2(4296).runOnJS, setSpoilerActive, hasSpoiler: state };
+    obj = { runOnJS: ReanimatedRexport.runOnJS, setSpoilerActive, hasSpoiler: state };
     fn.__closure = obj;
     fn.__workletHash = 15930548853488;
     fn.__initData = __initData;

@@ -1,7 +1,9 @@
 // discord_app/modules/oauth2/native/ErrorResult.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import util from "../../../intl/index.native.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
+import components_Button_Button from "../../../design/components/Button/native/Button.native.tsx";
 import common_SafeAreaView from "../../../components_native/common/SafeAreaView.tsx";
 import _modDef9250 from "../../../../_runtime/metro/09250__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -38,8 +40,8 @@ export default function ErrorResult(error) {
   const items = [hasOwnProperty(React3, obj)];
   const obj1 = { style: tmp.text, variant: "text-md/medium", children: null };
   if (error == null) {
-    const intl = tmp3(1114).intl;
-    error = intl.string(tmp3(1114).t.mqn873);
+    const intl = util.intl;
+    error = intl.string(util.t.mqn873);
   }
   obj1.children = error;
   items[1] = hasOwnProperty(Text_Text.Text, obj1);
@@ -48,12 +50,12 @@ export default function ErrorResult(error) {
   let tmp6Result = null;
   if (!error.hideFooter) {
     const obj2 = { size: "lg", text: null, onPress: null };
-    const intl2 = tmp3(1114).intl;
-    obj2.text = intl2.string(tmp3(1114).t.cpT0Cq);
+    const intl2 = util.intl;
+    obj2.text = intl2.string(util.t.cpT0Cq);
     obj2.onPress = function onPress() {
       return ModalActionCreatorsDefault.pop();
     };
-    tmp6Result = tmp6(tmp3(4975).Button, obj2);
+    tmp6Result = hasOwnProperty(components_Button_Button.Button, obj2);
   }
   items1[1] = tmp6Result;
   obj.children = items1;

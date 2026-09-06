@@ -88,7 +88,7 @@ prototype["fromServer"] = function fromServer(sku_id) {
     date1 = new Date(expires_at);
   }
   if (typeof prototype === "function") {
-    const obj = Object.create(tmp2.prototype);
+    const obj = Object.create(prototype.prototype);
     obj.skuId = sku_id;
     obj.name = name;
     obj.type = type;

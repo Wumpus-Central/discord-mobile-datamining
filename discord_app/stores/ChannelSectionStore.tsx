@@ -582,7 +582,7 @@ const channelSectionStore = new ChannelSectionStore(DispatcherDefault, {
         if (sidebars[channelId] != null) {
           type = tmp10.type;
         }
-        if (type === tmp(7282).SidebarType.VIEW_CHANNEL) {
+        if (type === SidebarActionTypes.SidebarType.VIEW_CHANNEL) {
           if (tmp10.channelId === channelId) {
             return flag;
           }
@@ -592,8 +592,8 @@ const channelSectionStore = new ChannelSectionStore(DispatcherDefault, {
         if (null != channel) {
           flag2 = flag;
           if (isChannelChatInSidebar(channel.type)) {
-            let obj = { type: tmp(7282).SidebarType.VIEW_CHANNEL, channelId, details: null };
-            obj = { type: tmp(7282).ViewChannelDetailType.CHAT, initialMessageId: messageId };
+            let obj = { type: SidebarActionTypes.SidebarType.VIEW_CHANNEL, channelId, details: null };
+            obj = { type: SidebarActionTypes.ViewChannelDetailType.CHAT, initialMessageId: messageId };
             obj.details = obj;
             sidebars[channelId] = obj;
             flag2 = true;

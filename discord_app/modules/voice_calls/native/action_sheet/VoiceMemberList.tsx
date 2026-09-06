@@ -67,7 +67,7 @@ function VoiceSectionRow(arg0) {
   importDefault = obj.useAnalyticsContext();
   const analyticsLocations = useAnalyticsLocationsDefault().analyticsLocations;
   if (tmp3) {
-    dependencyMap = async function _onItemPress(arg0, value) {
+    dependencyMap = async function _onItemPress(arg0) {
       if (c6 === 2) {
         c6 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -99,16 +99,16 @@ function VoiceSectionRow(arg0) {
                 tmp13 = null != closure_1;
               }
               if (tmp13) {
-                tmp13 = null != tmp29;
+                tmp13 = null != analyticsLocations;
               }
               if (tmp13) {
                 let obj2 = analyticsLocations(tmp5[28]);
                 const result = obj2.dismissGlobalKeyboard();
                 let obj3 = closure_1(tmp5[29]);
-                const voiceChannel = obj3.selectVoiceChannel(tmp28.id);
+                const voiceChannel = obj3.selectVoiceChannel(isActionSheet.id);
                 const obj1 = {
-                  applicationId: tmp29.applicationId,
-                  activityChannelId: tmp28.id,
+                  applicationId: analyticsLocations.applicationId,
+                  activityChannelId: isActionSheet.id,
                   locationObject: _location.location,
                   analyticsLocations,
                 };
@@ -141,7 +141,7 @@ function VoiceSectionRow(arg0) {
     obj = {
       embeddedActivity: item,
       channelId,
-      onItemPress(arg0, arg1, arg2) {
+      onItemPress(application, arg1, stateFromStores) {
         const self = this;
         const apply = closure_3.apply;
         if (typeof apply === "unknown") {
@@ -203,10 +203,10 @@ let closure_26 = noop.memo((channel) => {
       obj.label = intl2.string(tmp4(1114).t["6Qgrev"]);
       obj.onPress = function onPress() {
         if (channel.isPrivate()) {
-          openGroupDMAddMembersDefault(tmp.id, constants.CHANNEL_CALL);
+          openGroupDMAddMembersDefault(channel.id, constants.CHANNEL_CALL);
         } else {
           const obj = { source: constants2.VOICE_CHANNEL };
-          const result = obj.showInstantInviteActionSheet(tmp, obj);
+          const result = obj.showInstantInviteActionSheet(channel, obj);
         }
       };
       items[1] = closure_21(tmp4(8593).FormRow, obj);
@@ -278,7 +278,7 @@ export default noop.forwardRef(function VoiceMemberList(channel, ref) {
         hasItem = set.has(user.id);
       }
       if (!hasItem) {
-        arr.push(user);
+        arr = arr.push(user);
       }
       return arr;
     }, items4);
@@ -352,14 +352,14 @@ export default noop.forwardRef(function VoiceMemberList(channel, ref) {
             tmp18 = __initData(VoiceSectionRow, obj);
           }
           return tmp18;
-        } else if (tmp.SPECTATING === type) {
+        } else if (constants.SPECTATING === type) {
           obj = {};
           const merged = Object.assign(item);
           obj.onPress = onPress;
           obj.isSpectating = true;
           obj.isActionSheet = true;
           return __initData(VoiceMemberUserDefault, obj);
-        } else if (tmp.DISCONNECTED === type) {
+        } else if (constants.DISCONNECTED === type) {
           obj = { user: item, channel, isActionSheet: flag, onPress };
           return __initData(VoiceMemberUser.DisconnectedUserRow, obj);
         }
@@ -368,9 +368,9 @@ export default noop.forwardRef(function VoiceMemberList(channel, ref) {
         obj3 = { theme: ThemeTypes.DARK, children: null };
         obj4 = { style: tmp2.container, children: null };
         const obj5 = { channel };
-        const items8 = [tmp24(tmp5(tmp4[41]).VoiceChannelHeader, obj5), ,];
+        const items8 = [closure_21(tmp5(tmp4[41]).VoiceChannelHeader, obj5), ,];
         const obj6 = { style: tmp2.headerFormDivider };
-        items8[1] = tmp24(tmp5(tmp4[19]).FormDivider, obj6);
+        items8[1] = closure_21(tmp5(tmp4[19]).FormDivider, obj6);
         const obj7 = { inActionSheet: true, style: tmp2.voiceChannelContainer };
         tmp3Result = tmp3(tmp4[42]);
         const merged1 = Object.assign(merged);
@@ -403,7 +403,7 @@ export default noop.forwardRef(function VoiceMemberList(channel, ref) {
               if (tmp) {
                 tmp4 = tmp4(13785);
                 calculateActivityRowHeight = tmp4.calculateActivityRowHeight;
-                let result = calculateActivityRowHeight(tmp9);
+                let result = calculateActivityRowHeight(closure_4);
               } else {
                 const voiceState = tmp8.voiceState;
                 let selfStream;
@@ -417,14 +417,13 @@ export default noop.forwardRef(function VoiceMemberList(channel, ref) {
               }
               tmp = undefined !== tmp8.url && undefined !== tmp8.applicationId;
             }
-            tmp9 = closure_4;
           }
         };
         obj7.sections = items5.map((data) => data.data.length);
-        items8[2] = tmp24(tmp3Result, obj7);
+        items8[2] = closure_21(tmp3Result, obj7);
         obj4.children = items8;
         obj3.children = closure_22(items5, obj4);
-        let tmp24Result = tmp24(tmp5(tmp4[40]).ThemeContextProvider, obj3);
+        let tmp24Result = closure_21(tmp5(tmp4[40]).ThemeContextProvider, obj3);
       } else {
         const obj8 = {
           ref,
@@ -440,13 +439,13 @@ export default noop.forwardRef(function VoiceMemberList(channel, ref) {
         tmp24Result = null;
         if (!flag2) {
           const obj9 = { channel };
-          tmp24Result = tmp24(closure_26, obj9);
+          tmp24Result = closure_21(closure_26, obj9);
         }
         obj8.ListFooterComponent = tmp24Result;
         const obj10 = { channel };
-        obj8.ListHeaderComponent = tmp24(closure_25, obj10);
+        obj8.ListHeaderComponent = closure_21(closure_25, obj10);
         const merged2 = Object.assign(merged);
-        tmp24Result = tmp24(set, obj8);
+        tmp24Result = closure_21(set, obj8);
       }
       return tmp24Result;
     }
@@ -456,4 +455,5 @@ export default noop.forwardRef(function VoiceMemberList(channel, ref) {
     const obj12 = { type: constants4.DISCONNECTED, title: null, data: reduced };
     items5.push(obj12);
   }
+  const obj11 = { type: constants4.VOICE, title: null, data: stateFromStores1.concat(stateFromStores) };
 });

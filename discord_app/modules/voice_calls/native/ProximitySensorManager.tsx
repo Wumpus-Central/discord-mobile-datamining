@@ -27,6 +27,7 @@ function handleChange() {
     const tmp6Result = PlatformUtils2;
   }
   const result = ProximitySensorManager.setProximityMonitoringEnabled(tmp8);
+  tmp4 = ApplicationStreamingStore.getAllActiveStreams().length > 0;
 }
 const PlatformUtils = fn(1115);
 if (PlatformUtils.isIOS()) {

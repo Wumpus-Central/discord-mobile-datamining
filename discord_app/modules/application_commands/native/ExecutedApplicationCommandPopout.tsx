@@ -9,6 +9,7 @@ import ToastUtils from "../../toast/native/ToastUtils.tsx";
 import UserUtilsDefault from "../../../utils/UserUtils.tsx";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
+import useChannelName from "../../channel/useChannelName.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import ApplicationCommandTypes from "../ApplicationCommandTypes.tsx";
 import InteractionActionCreatorsAll from "../../interactions/InteractionActionCreators.tsx";
@@ -26,7 +27,6 @@ import ApplicationCommandIndexStore from "../ApplicationCommandIndexStore.tsx";
 
 require = fn;
 function getCommandOptionComponents(option) {
-  const iter = option.option;
   let channel = option.channel;
   ({ guild, commandOptionSpec, styles } = option);
   const text = `${option.parentOptionName} ${iter.name}`;
@@ -39,7 +39,7 @@ function getCommandOptionComponents(option) {
   if (name_localized == null) {
     name_localized = iter.name;
   }
-  if (null != iter.value) {
+  if (null != option.option.value) {
     const _HermesInternal2 = HermesInternal;
     let str = ":";
     let combined = " " + name_localized + ":";
@@ -47,7 +47,7 @@ function getCommandOptionComponents(option) {
     const _HermesInternal = HermesInternal;
     combined = " " + name_localized;
   }
-  if (iter.type !== iter(1894).ApplicationCommandOptionType.SUB_COMMAND) {
+  if (option.option.type !== option.option(1894).ApplicationCommandOptionType.SUB_COMMAND) {
     if (iter.type !== tmp6(1894).ApplicationCommandOptionType.SUB_COMMAND_GROUP) {
       if (null != iter.value) {
         function getUserComponent(user, styles) {
@@ -175,11 +175,13 @@ function getCommandOptionComponents(option) {
   items.push(
     closure_23(
       noop.Fragment,
-      { children: closure_23(iter(1178).LegacyText, { children: combined }, "optionKey-" + iter.name) },
+      {
+        children: closure_23(option.option(1178).LegacyText, { children: combined }, "optionKey-" + option.option.name),
+      },
       text,
     ),
   );
-  if (null != iter.options) {
+  if (null != option.option.options) {
     let options;
     if (commandOptionSpec != null) {
       options = commandOptionSpec.options;
@@ -231,24 +233,24 @@ function getCommandCopyText(item10021, channel, guild, name_localized) {
     combined = "" + name_localized;
   }
   if (item10021.type !== Server.ApplicationCommandOptionType.SUB_COMMAND) {
-    if (item10021.type !== tmp5(1894).ApplicationCommandOptionType.SUB_COMMAND_GROUP) {
+    if (item10021.type !== Server.ApplicationCommandOptionType.SUB_COMMAND_GROUP) {
       let sum = null;
       if (null != item10021.value) {
         const type = item10021.type;
-        if (tmp5(1894).ApplicationCommandOptionType.USER === type) {
+        if (Server.ApplicationCommandOptionType.USER === type) {
           const user = UserStore.getUser(item10021.value.toString());
           sum = null;
           if (null != user) {
             sum = __initData2 + UserUtilsDefault.getUserTag(user, { decoration: "never" });
           }
-        } else if (tmp5(1894).ApplicationCommandOptionType.CHANNEL === type) {
+        } else if (Server.ApplicationCommandOptionType.CHANNEL === type) {
           channel = ChannelStore.getChannel(item10021.value.toString());
           sum = null;
           if (null != channel) {
-            sum = closure_1_20 + tmp5(4713).computeChannelName(channel, UserStore, RelationshipStore);
-            const tmp5Result = tmp5(4713);
+            sum = closure_1_20 + useChannelName.computeChannelName(channel, UserStore, RelationshipStore);
+            const tmp5Result = useChannelName;
           }
-        } else if (tmp5(1894).ApplicationCommandOptionType.ROLE === type) {
+        } else if (Server.ApplicationCommandOptionType.ROLE === type) {
           value = item10021.value;
           let role;
           if (null != guild) {
@@ -260,7 +262,7 @@ function getCommandCopyText(item10021, channel, guild, name_localized) {
           }
         } else {
           sum = null;
-          if (tmp5(1894).ApplicationCommandOptionType.MENTIONABLE === type) {
+          if (Server.ApplicationCommandOptionType.MENTIONABLE === type) {
             str = item10021.value.toString();
             let role1;
             if (null != guild) {
@@ -436,7 +438,7 @@ function CommandContentContainer(channelId) {
     let items = [__initData3(native.LegacyText, obj, "integrationName-" + data.name)];
     let combined = items;
     if (null != data.options) {
-      const application_command = tmp.application_command;
+      const application_command = data.application_command;
       let options;
       if (application_command != null) {
         options = application_command.options;
@@ -444,26 +446,20 @@ function CommandContentContainer(channelId) {
       if (options == null) {
         options = [];
       }
-      options = tmp.options;
+      options = data.options;
       const iter = options[Symbol.iterator]();
       const nextResult = iter.next();
       while (iter !== undefined) {
         obj = {
           option: nextResult,
-          channel: null,
-          guild: null,
-          messageId: null,
+          channel,
+          guild,
+          messageId,
           parentOptionName: "",
-          commandOptionSpec: null,
-          styles: null,
-          analyticsLocations: null,
+          commandOptionSpec: fromEntriesResult[nextResult.name],
+          styles,
+          analyticsLocations,
         };
-        obj.channel = channel;
-        obj.guild = guild;
-        obj.messageId = messageId;
-        obj.commandOptionSpec = fromEntriesResult[nextResult.name];
-        obj.styles = styles;
-        obj.analyticsLocations = analyticsLocations;
         combined = combined.concat(getCommandOptionComponents(obj));
         continue;
       }
@@ -537,12 +533,12 @@ function CommandActionsContainer(channelId) {
       name_localized = application_command.name_localized;
     }
     if (name_localized == null) {
-      name_localized = tmp.name;
+      name_localized = data.name;
     }
     let items = [__initData + name_localized];
     let combined = items;
     if (null != data.options) {
-      const application_command2 = tmp.application_command;
+      const application_command2 = data.application_command;
       let options;
       const _Object = Object;
       if (application_command2 != null) {
@@ -551,7 +547,7 @@ function CommandActionsContainer(channelId) {
       if (options == null) {
         options = [];
       }
-      options = tmp.options;
+      options = data.options;
       for (const item10021 of options) {
         combined = combined.concat(getCommandCopyText(item10021, channel, guild, tmp3[item10021.name]));
         continue;
@@ -573,12 +569,13 @@ function CommandActionsContainer(channelId) {
     if (null != channel) {
       let obj = { channel: tmp27, type: "channel" };
       obj = { commandTypes: null };
-      const items1 = [tmp13(1894).ApplicationCommandType.CHAT];
+      const items1 = [Server.ApplicationCommandType.CHAT];
       obj.commandTypes = items1;
       const query = ApplicationCommandIndexStore.query(obj, obj, { allowFetch: true });
     }
     obj2 = PlatformUtils;
     ToastUtils.presentCommandCopied();
+    const tmp13Result = ToastUtils;
   }, items2);
   const items3 = [];
   if (!someResult) {
@@ -599,19 +596,19 @@ function CommandActionsContainer(channelId) {
       let obj = ActionSheetActionCreatorsDefault;
       obj.hideActionSheet();
       if (null != data.options) {
-        if (tmp3.options.length > 0) {
+        if (data.options.length > 0) {
           const items = [
             Server.ApplicationCommandOptionType.SUB_COMMAND,
             Server.ApplicationCommandOptionType.SUB_COMMAND_GROUP,
           ];
-          if (items.includes(tmp3.options[0].type)) {
-            const items1 = [tmp3.options[0].name];
-            let options = tmp3.options[0].options;
+          if (items.includes(data.options[0].type)) {
+            const items1 = [data.options[0].name];
+            let options = data.options[0].options;
             let hasItem = null != options && options.length > 0;
             if (hasItem) {
               const items2 = [
-                tmp4(1894).ApplicationCommandOptionType.SUB_COMMAND,
-                tmp4(1894).ApplicationCommandOptionType.SUB_COMMAND_GROUP,
+                Server.ApplicationCommandOptionType.SUB_COMMAND,
+                Server.ApplicationCommandOptionType.SUB_COMMAND_GROUP,
               ];
               hasItem = items2.includes(options[0].type);
             }
@@ -622,14 +619,14 @@ function CommandActionsContainer(channelId) {
             if (chatInputRef != null) {
               const current2 = chatInputRef.current;
               if (current2 != null) {
-                obj = { type: tmp4(1609).KeyboardTypes.APP_LAUNCHER, context: null };
+                obj = { type: KeyboardTypes.KeyboardTypes.APP_LAUNCHER, context: null };
                 obj = {
                   initialRouteName: AppLauncherRouteName.COMMAND_VIEW,
-                  analyticsLocation: tmp4(7523).ApplicationCommandTriggerLocations.RECALL,
+                  analyticsLocation: ApplicationCommandTypes.ApplicationCommandTriggerLocations.RECALL,
                   preSelectedCommand: null,
                 };
                 const obj1 = { commandId: null, prefilledOptions: null };
-                const sum = tmp3.id + SUB_COMMAND_KEY_SEPARATOR;
+                const sum = data.id + SUB_COMMAND_KEY_SEPARATOR;
                 obj1.commandId = sum + items1.join(SUB_COMMAND_KEY_SEPARATOR);
                 obj1.prefilledOptions = options;
                 obj.preSelectedCommand = obj1;
@@ -650,7 +647,7 @@ function CommandActionsContainer(channelId) {
             preSelectedCommand: null,
           };
           const obj4 = { commandId: null, prefilledOptions: null };
-          ({ id: obj4.commandId, options: obj4.prefilledOptions } = tmp3);
+          ({ id: obj4.commandId, options: obj4.prefilledOptions } = data);
           obj3.preSelectedCommand = obj4;
           obj2.context = obj3;
           current.openCustomKeyboard(obj2);
@@ -731,19 +728,19 @@ export default function ExecutedCommandPopout(channelId) {
   const effect = noop.useEffect(() => {
     let interactionData;
     if (stateFromStores != null) {
-      interactionData = tmp.interactionData;
+      interactionData = stateFromStores.interactionData;
     }
     let tmp3 = null == interactionData;
     if (!tmp3) {
       let type;
-      if (tmp != null) {
-        type = tmp.interactionData.type;
+      if (stateFromStores != null) {
+        type = stateFromStores.interactionData.type;
       }
       let tmp7 = type === Server.ApplicationCommandType.CHAT;
       if (tmp7) {
         let application_command;
-        if (tmp != null) {
-          application_command = tmp.interactionData.application_command;
+        if (stateFromStores != null) {
+          application_command = stateFromStores.interactionData.application_command;
         }
         tmp7 = undefined === application_command;
       }
@@ -767,7 +764,7 @@ export default function ExecutedCommandPopout(channelId) {
     }
     obj1.data = interactionData2;
     obj1.messageType = messageType;
-    const items2 = [tmp9(CommandContentContainer, obj1)];
+    const items2 = [closure_23(CommandContentContainer, obj1)];
     const obj2 = { channelId, chatInputRef, data: null };
     let interactionData3;
     if (stateFromStores != null) {
@@ -775,12 +772,12 @@ export default function ExecutedCommandPopout(channelId) {
     }
     const obj3 = { children: null };
     obj2.data = interactionData3;
-    items2[1] = tmp9(CommandActionsContainer, obj2);
+    items2[1] = closure_23(CommandActionsContainer, obj2);
     obj3.children = items2;
     let tmp9Result = closure_24(closure_25, obj3);
   } else {
     const obj4 = { style: tmp.activityIndicator, size: "large" };
-    tmp9Result = tmp9(closure_5, obj4);
+    tmp9Result = closure_23(closure_5, obj4);
   }
   obj.children = tmp9Result;
   obj.children = closure_23(channelId(7150).BottomSheet, obj);

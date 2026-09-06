@@ -14,7 +14,7 @@ export default function useProfileEffect(arg0) {
   const items = [CollectiblesCategoryStore, CollectiblesPurchaseStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => {
     if (null != closure_0) {
-      const product = CollectiblesCategoryStore.getProduct(tmp);
+      const product = CollectiblesCategoryStore.getProduct(closure_0);
       let first;
       if (product != null) {
         first = product.items[0];
@@ -22,13 +22,13 @@ export default function useProfileEffect(arg0) {
       if (isProfileEffectRecord(first)) {
         return product.items[0];
       } else {
-        const purchase = CollectiblesPurchaseStore.getPurchase(tmp);
+        const purchase = CollectiblesPurchaseStore.getPurchase(closure_0);
         let first1;
         if (purchase != null) {
           first1 = purchase.items[0];
         }
         let first2;
-        if (tmp4(first1)) {
+        if (isProfileEffectRecord(first1)) {
           first2 = purchase.items[0];
         }
         return first2;

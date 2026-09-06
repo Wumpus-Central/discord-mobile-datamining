@@ -8,6 +8,7 @@ import StreamActionCreators from "../../../../actions/StreamActionCreators.tsx";
 import spring from "../../../../design/animation/reanimated/spring/spring.tsx";
 import LinearGradientDefault from "../../../../../_runtime/04987_LinearGradient.js";
 import showUserProfileActionSheetDefault from "../../../user_profile/native/showUserProfileActionSheet.tsx";
+import cheapWorkletShallowEqual from "../../../reanimated/native/cheapWorkletShallowEqual.tsx";
 import roundToNearestPixelDefault from "../utils/roundToNearestPixel.tsx";
 import VoicePanelPIPUtils from "../pip/VoicePanelPIPUtils.tsx";
 import computeCardBorderRadiusDefault from "../utils/computeCardBorderRadius.tsx";
@@ -78,13 +79,13 @@ function SelfStreamCard(sharedCoords) {
     };
     const intl2 = tmp3(tmp4[23]).intl;
     obj3.children = intl2.string(tmp3(tmp4[23]).t.dKeLGt);
-    const items2 = [tmp11(tmp3(tmp4[15]).Text, obj3)];
+    const items2 = [closure_20(tmp3(tmp4[15]).Text, obj3)];
     const obj4 = { size: "lg", variant: "primary-overlay", onPress: callback, text: null };
     const intl3 = tmp3(tmp4[23]).intl;
     obj4.text = intl3.string(tmp3(tmp4[23]).t.CpkXwZ);
-    items2[1] = tmp11(tmp3(tmp4[24]).Button, obj4);
+    items2[1] = closure_20(tmp3(tmp4[24]).Button, obj4);
     obj2.children = items2;
-    tmp6Result = tmp6(closure_21, obj2);
+    tmp6Result = closure_22(closure_21, obj2);
   }
   items1[2] = tmp6Result;
   obj.children = items1;
@@ -186,7 +187,7 @@ function SpeakingIndicator(id) {
     if (tmp) {
       str2 = "animate-never";
     }
-    obj = { borderRadius: spring.withSpring(num, tmp18, str2), borderWidth: null };
+    obj = { borderRadius: spring.withSpring(num, SPEAKING_PHYSICS, str2), borderWidth: null };
     let num2 = 0;
     if (!tmp) {
       num2 = 0;
@@ -249,7 +250,7 @@ function SpeakingIndicator(id) {
     if (tmp) {
       str2 = "animate-never";
     }
-    obj = { borderRadius: spring.withSpring(num, tmp18, str2), borderWidth: null };
+    obj = { borderRadius: spring.withSpring(num, SPEAKING_PHYSICS, str2), borderWidth: null };
     let num2 = 0;
     if (!tmp) {
       num2 = 0;
@@ -383,7 +384,7 @@ function AnimatedWrapper(children) {
   E.__workletHash = 8770947887509;
   E.__initData = __initData12;
   derivedValue1 = tmp5Result.useDerivedValue(E);
-  const tmp3 = derivedValue2();
+  let tmp3 = derivedValue2();
   let tmp9 = contentDimensions;
   let fn = function b() {
     if (connected.get()) {
@@ -1061,8 +1062,8 @@ let closure_34 = noop.memo((id) => {
   const items2 = [stream, setFocused];
   const callback = setFocused.useCallback(() => {
     if (null != stream) {
-      StreamActionCreators.watchStream(tmp, { forceMultiple: true });
-      setFocused(StreamKeyUtils.encodeStreamKey(tmp));
+      StreamActionCreators.watchStream(stream, { forceMultiple: true });
+      setFocused(StreamKeyUtils.encodeStreamKey(stream));
     }
   }, items2);
   [tmp8, tmp9] = focused(setFocused.useState(false), 2);
@@ -1103,32 +1104,32 @@ let closure_34 = noop.memo((id) => {
     return closure_20(SelfStreamCard, __closure);
   } else if (null == activeStream) {
     obj1 = { mode: context.mode, stream, onPress: callback, disabled: false, layout };
-    return closure_20(tmp4(tmp2[29]).VoicePanelStreamPreview, obj1);
+    return closure_20(tmp4(streamGuildId[29]).VoicePanelStreamPreview, obj1);
   } else {
     if (null == tmp11Result) {
       if (activeStream.state !== ApplicationStreamStates.FAILED) {
-        if (activeStream.state === tmp29.ENDED) {
+        if (activeStream.state === ApplicationStreamStates.ENDED) {
           let obj2 = { stream: activeStream, removeSplashImage: !tmp8, type: null, style: null };
-          let tmpResult = tmp(tmp2[30]);
-          obj2.type = tmp4(tmp2[30]).VideoEmptyTypes.STREAM_ENDED;
+          let tmpResult = tmp(streamGuildId[30]);
+          obj2.type = tmp4(streamGuildId[30]).VideoEmptyTypes.STREAM_ENDED;
           obj2.style = stream.absoluteFill;
           return closure_20(tmpResult, obj2);
         } else {
-          if (activeStream.state === tmp29.RECONNECTING) {
+          if (activeStream.state === ApplicationStreamStates.RECONNECTING) {
             const obj3 = { title: null };
-            const intl = tmp4(tmp2[23]).intl;
-            obj3.title = intl.string(tmp4(tmp2[23]).t["pdFFK+"]);
-            let tmp15 = closure_20(tmp4(tmp2[31]).StreamTextOverlay, obj3);
+            const intl = tmp4(streamGuildId[23]).intl;
+            obj3.title = intl.string(tmp4(streamGuildId[23]).t["pdFFK+"]);
+            let tmp15 = closure_20(tmp4(streamGuildId[31]).StreamTextOverlay, obj3);
           } else {
             tmp15 = null;
-            if (activeStream.state === tmp29.PAUSED) {
+            if (activeStream.state === ApplicationStreamStates.PAUSED) {
               const obj4 = { title: null, subtext: null };
-              const intl2 = tmp4(tmp2[23]).intl;
-              obj4.title = intl2.string(tmp4(tmp2[23]).t["5q17w5"]);
-              const intl3 = tmp4(tmp2[23]).intl;
+              const intl2 = tmp4(streamGuildId[23]).intl;
+              obj4.title = intl2.string(tmp4(streamGuildId[23]).t["5q17w5"]);
+              const intl3 = tmp4(streamGuildId[23]).intl;
               const obj5 = { username: userNick };
-              obj4.subtext = intl3.formatToPlainString(tmp4(tmp2[23]).t.meVVlb, obj5);
-              tmp15 = closure_20(tmp4(tmp2[31]).StreamTextOverlay, obj4);
+              obj4.subtext = intl3.formatToPlainString(tmp4(streamGuildId[23]).t.meVVlb, obj5);
+              tmp15 = closure_20(tmp4(streamGuildId[31]).StreamTextOverlay, obj4);
             }
           }
           const obj6 = {
@@ -1143,18 +1144,18 @@ let closure_34 = noop.memo((id) => {
             isCamera: false,
             paused: null,
           };
-          tmpResult = tmp(tmp2[32]);
+          tmpResult = tmp(streamGuildId[32]);
           if (streamId == null) {
             streamId = null;
           }
           const obj7 = { children: null };
           obj6.streamId = streamId;
           obj6.userId = userId;
-          obj6.streamKey = tmp4(tmp2[21]).encodeStreamKey(activeStream);
+          obj6.streamKey = tmp4(streamGuildId[21]).encodeStreamKey(activeStream);
           obj6.isScrollVisible = isScrollVisible;
-          obj6.videoSpinnerContext = tmp4(tmp2[33]).VideoSpinnerContext.REMOTE_STREAM;
+          obj6.videoSpinnerContext = tmp4(streamGuildId[33]).VideoSpinnerContext.REMOTE_STREAM;
           obj6.sharedCoords = sharedCoords;
-          obj6.paused = activeStream.state === tmp29.PAUSED;
+          obj6.paused = activeStream.state === ApplicationStreamStates.PAUSED;
           const items3 = [closure_20(tmpResult, obj6), tmp15];
           obj7.children = items3;
           return closure_22(closure_21, obj7);
@@ -1165,10 +1166,10 @@ let closure_34 = noop.memo((id) => {
       avError: tmp11Result,
       stream: activeStream,
       removeSplashImage: !tmp8,
-      type: tmp4(tmp2[30]).VideoEmptyTypes.STREAM_FAILED,
+      type: tmp4(streamGuildId[30]).VideoEmptyTypes.STREAM_FAILED,
       style: stream.absoluteFill,
     };
-    return closure_20(tmp(tmp2[30]), obj8);
+    return closure_20(tmp(streamGuildId[30]), obj8);
   }
   const tmp11 = userId(streamGuildId[27]);
 });
@@ -1234,7 +1235,7 @@ let closure_37 = noop.memo(function AnimatedUserCardInner(isRinging) {
   let items = [tmp.userRoundedCard, animatedStyle];
   obj1.style = items;
   let tmp12 = null;
-  let tmp2Result = tmp2(tmp3[38]);
+  let tmp2Result = layoutPhysics(tmp3[38]);
   if (null != tmp6) {
     const obj2 = {
       colors: tmp6,
@@ -1249,10 +1250,10 @@ let closure_37 = noop.memo(function AnimatedUserCardInner(isRinging) {
   const items1 = [tmp12];
   if (null == cachedSourceFromURI) {
     const obj3 = { style: tmp.avatarPlaceholder };
-    let tmp21Result = closure_20(tmp2(tmp3[22]), obj3);
+    let tmp21Result = closure_20(layoutPhysics(tmp3[22]), obj3);
   } else {
     let prop;
-    tmp2Result = tmp2(tmp3[38]);
+    tmp2Result = layoutPhysics(tmp3[38]);
     if (null == avatarDecoration) {
       prop = tmp.avatarImageMaskStyles;
     }
@@ -1262,13 +1263,13 @@ let closure_37 = noop.memo(function AnimatedUserCardInner(isRinging) {
     obj4.layout = layout;
     if (null != avatarDecoration) {
       const obj5 = { source: cachedSourceFromURI, size: tmp4(tmp3[17]).AvatarSizes.XXLARGE, avatarDecoration };
-      tmp21Result = tmp21(tmp4(tmp3[17]).Avatar, obj5);
+      tmp21Result = closure_20(tmp4(tmp3[17]).Avatar, obj5);
     } else {
       const size = { source: cachedSourceFromURI, resizeMode: "stretch", width: 80, height: 80, style: tmp.image };
-      tmp21Result = tmp21(tmp2(tmp3[39]), size);
+      tmp21Result = closure_20(layoutPhysics(tmp3[39]), size);
     }
     obj4.children = tmp21Result;
-    tmp21Result = tmp21(tmp2Result, obj4);
+    tmp21Result = closure_20(tmp2Result, obj4);
   }
   items1[1] = tmp21Result;
   obj1.children = items1;
@@ -1327,8 +1328,7 @@ const __initData10 = {
 };
 let closure_47 = { isSelf: false, hasVideo: false, user: { id: "Array" } };
 function layoutTransitionFunction(originX, SUBTLE_SPRING) {
-  let flag = arg2;
-  if (arg2 === undefined) {
+  if (flag === undefined) {
     flag = false;
   }
   let obj = spring;
@@ -1343,13 +1343,13 @@ function layoutTransitionFunction(originX, SUBTLE_SPRING) {
     width: null,
     height: null,
   };
-  let tmpResult = tmp(4974);
+  let tmpResult = spring;
   let str3 = str;
   if (flag) {
     str3 = "animate-never";
   }
   size.originY = tmpResult.withSpring(originX.targetOriginY, SUBTLE_SPRING, str3);
-  tmpResult = tmp(4974);
+  tmpResult = spring;
   let str4 = str;
   if (flag) {
     str4 = "animate-never";
@@ -1447,7 +1447,7 @@ export default noop.memo(function VoicePanelCard(cleanUp) {
     DEFAULT = tmp5(tmp2[28]).MediaEngineContextTypes.DEFAULT;
   }
   let tmpResultResult = tmpResult(DEFAULT, str);
-  const tmp13 = windowDimensions(id2[53])(str);
+  windowDimensions(id2[53])(str);
   if (transitionState === scrollPosition(id2[44]).TransitionStates.MOUNTED) {
     let num = 1;
   } else {
@@ -1508,12 +1508,11 @@ export default noop.memo(function VoicePanelCard(cleanUp) {
       stiffness: windowDimensions(id2[55])(closure_11.stiffness - 20, closure_11.stiffness + 20),
     };
     __closure = { physics: __closure, layoutTransition: null };
-    function layoutTransition(arg0) {
-      let flag = arg1;
-      if (arg1 === undefined) {
+    function layoutTransition(originX) {
+      if (flag === undefined) {
         flag = false;
       }
-      return layoutTransitionFunction(arg0, obj, flag);
+      return layoutTransitionFunction(originX, obj, flag);
     }
     __closure = { layoutTransitionFunction, physics: __closure };
     layoutTransition.__closure = __closure;
@@ -1570,7 +1569,7 @@ export default noop.memo(function VoicePanelCard(cleanUp) {
   } else if (null != tmp4) {
     type = item.type;
     const type2 = tmp4.type;
-    if (tmp11.USER === type2) {
+    if (ParticipantTypes.USER === type2) {
       ({ id: id3, streamId, user } = tmp4);
       if (tmp4.hasVideo) {
         if (stateFromStores) {
@@ -1614,8 +1613,8 @@ export default noop.memo(function VoicePanelCard(cleanUp) {
             obj4.userId = user.id;
             user = StyleSheet.absoluteFill;
             obj4.style = user;
-            tmp31Result = tmp31(tmp(tmp2[58]), obj4);
-            tmp28 = tmp31;
+            tmp31Result = closure_20(tmp(tmp2[58]), obj4);
+            tmp28 = closure_20;
             const tmpResult2 = tmp(tmp2[58]);
           }
         }
@@ -1635,9 +1634,9 @@ export default noop.memo(function VoicePanelCard(cleanUp) {
       obj5.layoutPhysics = physics;
       obj5.userId = user.id;
       obj5.guildId = guildId;
-      tmp25 = tmp26;
-      tmp26Result = tmp26(closure_37, obj5);
-    } else if (tmp11.STREAM === type2) {
+      tmp25 = closure_20;
+      tmp26Result = closure_20(closure_37, obj5);
+    } else if (ParticipantTypes.STREAM === type2) {
       const obj6 = {
         userId: tmp4.user.id,
         id: null,
@@ -1656,7 +1655,7 @@ export default noop.memo(function VoicePanelCard(cleanUp) {
       obj6.layout = layoutTransition;
       tmp26Result = closure_20(closure_34, obj6);
       tmp25 = closure_20;
-    } else if (tmp11.ACTIVITY === type2) {
+    } else if (ParticipantTypes.ACTIVITY === type2) {
       const obj7 = { sharedVisible: sharedValue, applicationId: tmp4.applicationId, layout: layoutTransition };
       tmp26Result = closure_20(tmp(tmp2[59]), obj7, tmp4.id);
       tmp25 = closure_20;
@@ -1671,4 +1670,5 @@ export default noop.memo(function VoicePanelCard(cleanUp) {
   };
   tmp26Result = closure_20(closure_37, obj8);
   tmp25 = closure_20;
+  const tmp5Result4 = scrollPosition(id2[14]);
 });

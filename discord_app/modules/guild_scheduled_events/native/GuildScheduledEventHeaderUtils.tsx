@@ -1,8 +1,11 @@
 // discord_app/modules/guild_scheduled_events/native/GuildScheduledEventHeaderUtils.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import util from "../../../intl/index.native.tsx";
 import GuildScheduledEventsConstants from "../GuildScheduledEventsConstants.tsx";
+import _modDef8622 from "../../../../_runtime/metro/08622__.js";
 import ScheduleUtils from "../utils/ScheduleUtils.tsx";
 import _modDef9783 from "../../../../_runtime/metro/09783__.js";
+import _modDef9784 from "../../../../_runtime/metro/09784__.js";
 import GuildScheduledEventStore from "../GuildScheduledEventStore.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
@@ -28,53 +31,53 @@ export const getGuildScheduledEventHeaderProps = function getGuildScheduledEvent
   const ICON_SUBTLE = nativeDefault.colors.ICON_SUBTLE;
   let tmp8Result = _modDef9783;
   if (tmp4) {
-    const intl4 = tmp(1114).intl;
-    let stringResult = intl4.string(tmp(1114).t["X2K3/4"]);
+    const intl4 = util.intl;
+    let stringResult = intl4.string(util.t["X2K3/4"]);
     if (isStage) {
-      tmp8Result = tmp8(8622);
+      tmp8Result = _modDef8622;
     }
     let entity_type;
     if (event != null) {
       entity_type = event.entity_type;
     }
     if (entity_type === constants.EXTERNAL) {
-      const intl5 = tmp(1114).intl;
-      stringResult = intl5.string(tmp(1114).t.TxqPQR);
+      const intl5 = util.intl;
+      stringResult = intl5.string(util.t.TxqPQR);
     }
-    let ICON_FEEDBACK_CRITICAL = tmp8(576).colors.ICON_FEEDBACK_POSITIVE;
+    let ICON_FEEDBACK_CRITICAL = nativeDefault.colors.ICON_FEEDBACK_POSITIVE;
     let stringResult1 = stringResult;
   } else if (tmp7) {
-    tmp8Result = tmp8(9784);
+    tmp8Result = _modDef9784;
     stringResult1 = startDateTimeString;
     ICON_FEEDBACK_CRITICAL = ICON_SUBTLE;
   } else if (currentOrPastEvent) {
-    tmp8Result = tmp8(9784);
-    const intl3 = tmp(1114).intl;
-    stringResult1 = intl3.string(tmp(1114).t.WINqKV);
+    tmp8Result = _modDef9784;
+    const intl3 = util.intl;
+    stringResult1 = intl3.string(util.t.WINqKV);
     ICON_FEEDBACK_CRITICAL = ICON_SUBTLE;
   } else {
     stringResult1 = startDateTimeString;
     ICON_FEEDBACK_CRITICAL = ICON_SUBTLE;
     if (upcomingEvent) {
       if (diffMinutes > 0) {
-        const intl2 = tmp(1114).intl;
+        const intl2 = util.intl;
         obj = { minutes: diffMinutes };
-        let formatToPlainStringResult = intl2.formatToPlainString(tmp(1114).t.PQlCWk, obj);
+        let formatToPlainStringResult = intl2.formatToPlainString(util.t.PQlCWk, obj);
       } else {
-        const intl = tmp(1114).intl;
-        formatToPlainStringResult = intl.string(tmp(1114).t.WINqKV);
+        const intl = util.intl;
+        formatToPlainStringResult = intl.string(util.t.WINqKV);
       }
       stringResult1 = formatToPlainStringResult;
-      tmp8Result = tmp8(9784);
+      tmp8Result = _modDef9784;
       ICON_FEEDBACK_CRITICAL = ICON_SUBTLE;
-      const tmp8Result1 = tmp8(9784);
+      const tmp8Result1 = _modDef9784;
     }
   }
   if (isCanceled) {
-    ICON_FEEDBACK_CRITICAL = tmp8(576).colors.ICON_FEEDBACK_CRITICAL;
+    ICON_FEEDBACK_CRITICAL = nativeDefault.colors.ICON_FEEDBACK_CRITICAL;
   }
   obj = { icon: tmp8Result, text: stringResult1, color: null, shouldChangeTextColor: null };
-  const internal = tmp8(576).internal;
+  const internal = nativeDefault.internal;
   obj.color = internal.resolveSemanticColor(theme, ICON_FEEDBACK_CRITICAL);
   let tmp17 = !tmp7;
   if (!tmp7) {

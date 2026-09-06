@@ -62,7 +62,7 @@ let closure_35 = async function _handleVoiceOrStageChannelConnectPress(arg0) {
   let guildStageVoice = arg0;
   c2 = 0;
   c3 = 0;
-  return (async (arg0, value) => {
+  return (async (arg0) => {
     if (c3 === 2) {
       c3 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -93,12 +93,12 @@ let closure_35 = async function _handleVoiceOrStageChannelConnectPress(arg0) {
             if (isGuildStageVoiceResult) {
               c2 = 2;
               c3 = 1;
-              const obj1 = { value: tmp21(tmp20[20], tmp20.paths), done: false };
+              const obj1 = { value: tmp21(dependencyMap[20], dependencyMap.paths), done: false };
               return obj1;
             } else {
               c2 = 1;
               c3 = 1;
-              const obj2 = { value: tmp21(tmp20[22], tmp20.paths), done: false };
+              const obj2 = { value: tmp21(dependencyMap[22], dependencyMap.paths), done: false };
               return obj2;
             }
             isGuildStageVoiceResult = guildStageVoice.isGuildStageVoice();
@@ -184,8 +184,7 @@ function ChannelLongPressActionSheetConnected(channel) {
   const stateFromStores1 = tmp5Result.useStateFromStores(items3, () =>
     UserGuildSettingsStore.isChannelMuted(guildId, channel.id),
   );
-  let tmp10 = UserGuildSettingsStore;
-  const tmp3 = onClose(guildId[82]);
+  let tmp3 = onClose(guildId[82]);
   const items4 = [ReadStateStore];
   const stateFromStores2 = tmp5(tmp2[85]).useStateFromStores(items4, () =>
     ReadStateStore.hasUnreadOrMentions(channel.id),
@@ -233,7 +232,7 @@ function ChannelLongPressActionSheetConnected(channel) {
   const stateFromStores7 = tmp5(tmp2[85]).useStateFromStores(items9, () => currentUser.getCurrentUser());
   const tmp5Result7 = tmp5(tmp2[85]);
   const tmp26 = null != stateFromStores7 && channel.isOwner(stateFromStores7.id);
-  const items10 = [tmp10];
+  const items10 = [UserGuildSettingsStore];
   const stateFromStores8 = tmp5(tmp2[85]).useStateFromStores(items10, () =>
     UserGuildSettingsStore.isMessagesFavorite(channel.id),
   );
@@ -306,7 +305,7 @@ function ChannelLongPressActionSheetConnected(channel) {
       buttons1.push(obj3);
     }
   }
-  const obj4 = { sectionKey: "gdm", buttons: [] };
+  let obj4 = { sectionKey: "gdm", buttons: [] };
   const obj5 = { sectionKey: "gdm-destructive", buttons: [] };
   if (channel.isGroupDM()) {
     if (!isFavoritesGuildSelected) {
@@ -323,12 +322,12 @@ function ChannelLongPressActionSheetConnected(channel) {
         let formatResult = intl2.format(util.t.SSIVOu, { name: channelName });
         let formatToPlainStringResult1 = intl.formatToPlainString(util.t.hJ5Ap4, { name: channelName });
         if (channel.isManaged()) {
-          const intl3 = tmp(1114).intl;
+          const intl3 = util.intl;
           obj = { name: channelName };
-          formatToPlainStringResult1 = intl3.formatToPlainString(tmp(1114).t.hVGjEW, obj);
-          const intl4 = tmp(1114).intl;
+          formatToPlainStringResult1 = intl3.formatToPlainString(util.t.hVGjEW, obj);
+          const intl4 = util.intl;
           obj = { name: channelName };
-          formatResult = intl4.format(tmp(1114).t.IK1Qvs, obj);
+          formatResult = intl4.format(util.t.IK1Qvs, obj);
         }
         const formatToPlainStringResult = intl.formatToPlainString(util.t.hJ5Ap4, { name: channelName });
         const obj1 = {
@@ -338,9 +337,9 @@ function ChannelLongPressActionSheetConnected(channel) {
           cancelText: null,
           onConfirm: null,
         };
-        const intl5 = tmp(1114).intl;
+        const intl5 = util.intl;
         obj1.confirmText = intl5.string(util.t.p89ACt);
-        const intl6 = tmp(1114).intl;
+        const intl6 = util.intl;
         obj1.cancelText = intl6.string(util.t.gm1Vej);
         obj1.onConfirm = function onConfirm() {
           onClose(guildId[27]).closePrivateChannel(
@@ -663,7 +662,7 @@ function ChannelLongPressActionSheetConnected(channel) {
       }
       const obj29 = { sectionKey: "threads", buttons: [] };
       tmp82 =
-        tmp58(channel.type) || channel.isCategory() || channel.isGuildStageVoice() || channel.isForumLikeChannel();
+        closure_9(channel.type) || channel.isCategory() || channel.isGuildStageVoice() || channel.isForumLikeChannel();
       if (!tmp85) {
         const buttons16 = obj29.buttons;
         const obj30 = { label: null, IconComponent: null, onPress: null };
@@ -727,7 +726,7 @@ function ChannelLongPressActionSheetConnected(channel) {
           obj34.label = intl30.string(tmp5(tmp2[23]).t.saZaRb);
           obj34.IconComponent = tmp5(tmp2[45]).XSmallIcon;
           obj34.onPress = function onPress() {
-            return (async (arg0, value) => {
+            return (async () => {
               if (paths === 2) {
                 paths = 3;
                 throw new TypeError("Generator functions may not be called on executing generators");
@@ -849,21 +848,22 @@ function ChannelLongPressActionSheetConnected(channel) {
             obj40.onPress = function onPress() {
               let type;
               if (!channel.isCategory()) {
-                type = obj2.type;
+                type = channel.type;
               }
-              guildId = obj2.getGuildId();
+              guildId = channel.getGuildId();
               const obj = CreateChannelModalActionCreatorsDefault;
               let id;
               if (!channel.isCategory()) {
-                id = obj2.id;
+                id = channel.id;
               }
               obj.open(type, guildId, channel.isCategory() ? channel.id : channel.parent_id, id);
+              const tmp3 = channel.isCategory() ? channel.id : channel.parent_id;
             };
             obj40 = buttons23.push(obj40);
             isCategoryResult1 = channel.isCategory();
           }
           tmp105 =
-            tmp58(channel.type) || channel.isForumLikeChannel() || channel.isGuildVoice() || channel.isCategory();
+            closure_9(channel.type) || channel.isForumLikeChannel() || channel.isGuildVoice() || channel.isCategory();
         }
         if (setting) {
           const buttons24 = obj38.buttons;
@@ -897,6 +897,7 @@ function ChannelLongPressActionSheetConnected(channel) {
           if (!tmp) {
             onClose();
           }
+          tmp = 0 !== items12.length || setting;
         }, items16);
         const obj43 = { value: analyticsLocations, children: null };
         const obj44 = { showGradient: true, startExpanded: null, header: null, children: null };
@@ -1024,6 +1025,7 @@ function ChannelLongPressActionSheetConnected(channel) {
             obj = { channelId: channel.id, initialRouteName: constants.MUTE, source: "channel-long-press-sheet" };
             rootNavigationRef.navigate("sidebar", obj);
           }
+          tmp = null != rootNavigationRef && rootNavigationRef.isReady();
         },
       };
       buttons27.push(obj48);
@@ -1049,6 +1051,7 @@ function ChannelLongPressActionSheetConnected(channel) {
     };
     t3 = buttons28.push(obj49);
   }
+  const tmp36 = onClose(tmp2[93])(channel, "ChannelLongPressActionSheet");
 }
 const SafetyWarningTypes = fn(10915).SafetyWarningTypes;
 const ChannelRecord = fn(1961);

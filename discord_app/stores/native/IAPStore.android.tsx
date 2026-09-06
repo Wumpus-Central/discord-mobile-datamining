@@ -49,10 +49,10 @@ function skusLoaded(arg0) {
   try {
     mapped = undefined;
     if (mapped != null) {
-      mapped = mapped.map(updateProduct);
+      mapped = arr2.map(updateProduct);
     }
     if (mapped != null) {
-      const item2 = mapped.forEach((identifier) => {
+      const item2 = arr3.forEach((identifier) => {
         const result = map.set(identifier.identifier, identifier);
       });
     }
@@ -61,6 +61,8 @@ function skusLoaded(arg0) {
     } else if (tmp12.SUBSCRIPTION === skusType) {
       c13 = false;
     }
+    arr2 = mapped;
+    arr3 = mapped;
   } catch (tmp7) {
     let result = BillingUtils.captureBillingException(tmp7);
   }
@@ -151,14 +153,13 @@ const iAPStore = new IAPStore(DispatcherDefault, {
   GPLAY_VERIFICATION_END: function handleVerificationEnd(productId) {
     productId = productId.productId;
     if (set1.has(productId)) {
-      obj.delete(productId);
+      set1.delete(productId);
     } else {
       const _Error = Error;
       const _HermesInternal = HermesInternal;
       const error = new Error("Tried verifying product without initialization: " + productId);
       throw error;
     }
-    obj = set1;
   },
   GPLAY_UPDATE_PENDING_DOWNGRADE: function handleUpdatePendingDowngrade(pendingDowngrade) {
     pendingDowngrade = pendingDowngrade.pendingDowngrade;

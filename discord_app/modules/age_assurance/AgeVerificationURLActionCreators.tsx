@@ -16,7 +16,7 @@ function requestAgeVerification() {
   }
   return applyArgumentsResult;
 }
-let closure_8 = async function _requestAgeVerification(arg0, value) {
+let closure_8 = async function _requestAgeVerification(arg0) {
   if (c4 === 2) {
     c4 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -102,10 +102,10 @@ let closure_8 = async function _requestAgeVerification(arg0, value) {
     }
   }
 };
-let closure_9 = async function _requestIncodeMethodSession(method) {
+let closure_9 = async function _requestIncodeMethodSession() {
   c3 = 0;
   c4 = 0;
-  return (async (arg0, value) => {
+  return (async (arg0) => {
     closure_2 = tmp4;
     await requestAgeVerification({ method, vendor: constants.INCODE });
     const incode_parameters = value.incode_parameters;
@@ -144,7 +144,7 @@ function initiateAgeVerification() {
   }
   return applyArgumentsResult;
 }
-let closure_11 = async function _initiateAgeVerification(method, vendor) {
+let closure_11 = async function _initiateAgeVerification() {
   c3 = 0;
   c2 = 0;
   return (async (arg0, value) => {
@@ -164,7 +164,7 @@ function initiateAgeVerificationV2() {
   }
   return applyArgumentsResult;
 }
-let closure_13 = async function _initiateAgeVerificationV(method, vendor) {
+let closure_13 = async function _initiateAgeVerificationV() {
   c3 = 0;
   c2 = 0;
   return (async (arg0, value) => {
@@ -184,7 +184,7 @@ function initiateSuspendedUserAgeVerificationV2() {
   }
   return applyArgumentsResult;
 }
-let closure_15 = async function _initiateSuspendedUserAgeVerificationV(method, vendor) {
+let closure_15 = async function _initiateSuspendedUserAgeVerificationV() {
   c3 = 0;
   c2 = 0;
   return (async (arg0, value) => {
@@ -199,7 +199,7 @@ let closure_15 = async function _initiateSuspendedUserAgeVerificationV(method, v
     return value.body;
   })();
 };
-let closure_16 = async function _requestAgeVerificationV(arg0, value) {
+let closure_16 = async function _requestAgeVerificationV(arg0) {
   if (c2 === 2) {
     c2 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -228,12 +228,12 @@ let closure_16 = async function _requestAgeVerificationV(arg0, value) {
           if (obj3.isCurrentUserSuspended()) {
             c3 = 2;
             c2 = 1;
-            const obj1 = { value: initiateSuspendedUserAgeVerificationV2(tmp5, tmp6), done: false };
+            const obj1 = { value: initiateSuspendedUserAgeVerificationV2(closure_0, closure_1), done: false };
             return obj1;
           } else {
             c3 = 1;
             c2 = 1;
-            const obj2 = { value: initiateAgeVerificationV2(tmp5, tmp6), done: false };
+            const obj2 = { value: initiateAgeVerificationV2(closure_0, closure_1), done: false };
             return obj2;
           }
         }
@@ -275,7 +275,7 @@ function initiateSuspendedUserAgeVerification() {
   }
   return applyArgumentsResult;
 }
-let closure_18 = async function _initiateSuspendedUserAgeVerification(arg0, value) {
+let closure_18 = async function _initiateSuspendedUserAgeVerification(arg0) {
   if (c4 === 2) {
     c4 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -351,10 +351,10 @@ let closure_18 = async function _initiateSuspendedUserAgeVerification(arg0, valu
     }
   }
 };
-let closure_19 = async function _registerIncodeInterview(interview_id) {
+let closure_19 = async function _registerIncodeInterview() {
   c2 = 0;
   c1 = 0;
-  return (async (arg0, value) => {
+  return (async (arg0) => {
     if (c1 === 2) {
       c1 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -406,7 +406,7 @@ let closure_19 = async function _registerIncodeInterview(interview_id) {
     }
   })();
 };
-let closure_20 = async function _requestIncodeSessionBootstrap(arg0, value) {
+let closure_20 = async function _requestIncodeSessionBootstrap() {
   if (c4 === 2) {
     c4 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -507,7 +507,7 @@ let closure_21 = async function _getAgeVerificationMethods() {
       });
   }
   await catchPromise;
-  return arg1;
+  return value;
 };
 function fetchAgeVerificationMethods() {
   const HTTP = HTTPUtils.HTTP;

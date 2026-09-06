@@ -12,10 +12,9 @@ export const prefetchFamilyCenterAgeGroupWhen = function prefetchFamilyCenterAge
   }
   if (tmp) {
     if (!FamilyCenterStore.isLoading()) {
-      if (obj.canRefetch()) {
+      if (FamilyCenterStore.canRefetch()) {
         FamilyCenterActionCreatorsDefault.initialPageLoad();
       }
     }
-    obj = FamilyCenterStore;
   }
 };

@@ -48,16 +48,15 @@ export const trackForwardSent = function trackForwardSent(arg0) {
   if ("message-shortcut" === source) {
     const channel = ChannelStore.getChannel(channelId);
     obj = { action: "forward", original_message_id: messageId };
-    const tmp13 = require;
     const tmpResult = AnalyticsUtilsDefault;
     let guild_id;
     if (channel != null) {
       guild_id = channel.guild_id;
     }
     const merged = Object.assign(AppAnalyticsUtils.collectGuildAnalyticsMetadata(guild_id));
-    const merged1 = Object.assign(tmp13(4740).collectChannelAnalyticsMetadata(channel));
+    const merged1 = Object.assign(AppAnalyticsUtils.collectChannelAnalyticsMetadata(channel));
     tmpResult.track(AnalyticEvents.MESSAGE_SHORTCUT_ACTION_SENT, obj);
-    const tmp13Result = tmp13(4740);
+    const tmp13Result = AppAnalyticsUtils;
   }
 };
 export const trackForwardCopyLink = function trackForwardCopyLink(channel_id, id) {

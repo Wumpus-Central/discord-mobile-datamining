@@ -15,7 +15,7 @@ export const useCutoutBackgroundColor = function useCutoutBackgroundColor() {
 };
 export const CutoutBackgroundProvider = function CutoutBackgroundProvider(children) {
   const backgroundColor = children.backgroundColor;
-  const context = noop.useContext(closure_5);
+  const context = noop.useContext(redux);
   const internal = nativeDefault.internal;
   if (internal.isSemanticColor(backgroundColor)) {
     const tmp5 = backgroundColor;
@@ -39,5 +39,5 @@ export const CutoutBackgroundProvider = function CutoutBackgroundProvider(childr
   } else if (undefined === token) {
     value = context;
   }
-  return <closure_5.Provider value={value}>{arg0.children}</closure_5.Provider>;
+  return <redux.Provider value={value}>{children.children}</redux.Provider>;
 };

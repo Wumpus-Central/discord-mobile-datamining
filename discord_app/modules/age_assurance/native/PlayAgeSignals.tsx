@@ -3,76 +3,29 @@ import NativePlayAgeSignalsModuleDefault from "../../../../discord_common/js/pac
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 
 const require = fn;
-let closure_4 = async function _getAgeSignals(arg0, value) {
-  if (c0 === 2) {
-    c0 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp3 === 3) {
-    if (arg0 === 1) {
-      throw value;
-    } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
-    } else {
-      return { value: "HermesInternal", done: null };
-    }
-  } else {
-    try {
-      c0 = 2;
-      if (0 === c1) {
-        if (arg0 === 1) {
-          c0 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c0 = 3;
-          obj = { value, done: true };
-          return obj;
-        } else {
-          if (null == NativePlayAgeSignalsModuleDefault) {
-            const _Error = Error;
-            const error = new Error("NativePlayAgeSignalsModule is not available on this platform");
-            throw error;
-          } else {
-            (function applyFakeAgeSignalsScenarioFromExperiment() {
-              if (null != closure_1_1(closure_1_2[1])) {
-                const fakePlayAgeSignalsConfig = closure_1_0(tmp2[2]).getFakePlayAgeSignalsConfig(
-                  "PlayAgeSignals.getAgeSignals",
-                );
-                ({ enabled, scenario } = fakePlayAgeSignalsConfig);
-                const obj = closure_1_0(tmp2[2]);
-                let str2 = "";
-                if (enabled) {
-                  str2 = scenario;
-                }
-                const result = closure_1_1(tmp2[1]).setFakeAgeSignalsScenario(str2);
-                const tmpResult = closure_1_1(tmp2[1]);
-              }
-            })();
-            c1 = 1;
-            c0 = 1;
-            const obj1 = { value: tmp5(tmp6[1]).getAgeSignals(), done: false };
-            return obj1;
-          }
-          tmp5 = importDefault;
-          tmp6 = dependencyMap;
-        }
-      } else if (arg0 === 1) {
-        c0 = 3;
-        throw value;
-      } else if (arg0 === 2) {
-        c0 = 3;
-        const obj2 = { value, done: true };
-        return obj2;
-      } else {
-        c0 = 3;
-        obj = { value, done: true };
-        return obj;
-      }
-    } catch (tmp14) {
-      c0 = tmp;
-      throw tmp14;
-    }
+let closure_4 = async function _getAgeSignals() {
+  if (null == NativePlayAgeSignalsModuleDefault) {
+    const _Error = Error;
+    const error = new Error("NativePlayAgeSignalsModule is not available on this platform");
+    throw error;
   }
+  (function applyFakeAgeSignalsScenarioFromExperiment() {
+    if (null != closure_1_1(dependencyMap[1])) {
+      const fakePlayAgeSignalsConfig = closure_1_0(dependencyMap[2]).getFakePlayAgeSignalsConfig(
+        "PlayAgeSignals.getAgeSignals",
+      );
+      ({ enabled, scenario } = fakePlayAgeSignalsConfig);
+      const obj = closure_1_0(dependencyMap[2]);
+      let str2 = "";
+      if (enabled) {
+        str2 = scenario;
+      }
+      const result = closure_1_1(dependencyMap[1]).setFakeAgeSignalsScenario(str2);
+      const tmpResult = closure_1_1(dependencyMap[1]);
+    }
+  })();
+  await NativePlayAgeSignalsModuleDefault.getAgeSignals();
+  return value;
 };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/age_assurance/native/PlayAgeSignals.tsx");

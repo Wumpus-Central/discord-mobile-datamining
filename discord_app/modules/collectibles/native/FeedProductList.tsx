@@ -39,7 +39,7 @@ function SkeletonGrid(accessibilityLabel) {
     <View
       style={tmp.skeletonGrid}
       accessibilityRole="list"
-      accessibilityLabel={arg0.accessibilityLabel}
+      accessibilityLabel={accessibilityLabel.accessibilityLabel}
       accessibilityState={{ busy: true }}
       accessible
     >

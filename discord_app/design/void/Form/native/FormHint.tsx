@@ -1,5 +1,7 @@
 // discord_app/design/void/Form/native/FormHint.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import native from "../../native.tsx";
+import Text_Text from "../../../components/Text/native/Text.tsx";
 import RedesignCompat from "../../../components/RedesignCompat/native/RedesignCompat.native.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -32,7 +34,12 @@ export default function FormHint(inset) {
     const items = [redesignHorizontalPadding, style];
     obj.style = items;
     obj.children = children;
-    let tmp4Result = tmp4(tmp2(4556).Text, obj);
+    let tmp4Result = jsx(Text_Text.Text, {
+      variant: "text-sm/medium",
+      color: "text-muted",
+      style: null,
+      children: null,
+    });
   } else {
     const items1 = [tmp.formHintText, ,];
     let horizonatalPadding = !flag;
@@ -44,7 +51,7 @@ export default function FormHint(inset) {
     items1[2] = style;
     obj.style = items1;
     obj.children = children;
-    tmp4Result = tmp4(tmp2(1178).LegacyText, obj);
+    tmp4Result = jsx(native.LegacyText, { style: null, children: null });
   }
   return tmp4Result;
 }

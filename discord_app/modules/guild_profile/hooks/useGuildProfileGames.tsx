@@ -24,7 +24,7 @@ export default function useGuildProfileGames(games) {
     tmp5(items1);
     closure_129_0 = games;
     const items2 = [games];
-    stateFromStoresArray = memo.useMemo(() => {
+    memo.useMemo(() => {
       const map = new Map();
       if (null == closure_0) {
         return map;
@@ -40,7 +40,7 @@ export default function useGuildProfileGames(games) {
       }
     }, items2);
     const items3 = [GameStore];
-    stateFromStoresArray = require("initialize").useStateFromStoresArray(items3, () => {
+    stateFromStoresArray = tmp(tmp2[4]).useStateFromStoresArray(items3, () => {
       const gameApplicationIds = games.gameApplicationIds;
       const mapped = gameApplicationIds.map((item) => {
         game = game.getGame(item);
@@ -92,6 +92,8 @@ export default function useGuildProfileGames(games) {
     return obj;
   }
   items1 = games.gameApplicationIds;
+  tmp = _require;
+  tmp2 = stateFromStoresArray;
 }
 export const useAllGuildProfileGames = function useAllGuildProfileGames(profile) {
   _require = profile;
@@ -122,7 +124,7 @@ export const useAllGuildProfileGames = function useAllGuildProfileGames(profile)
       }
     }, items2);
     const items3 = [GameStore];
-    return require("initialize").useStateFromStoresArray(items3, () => {
+    return tmp(504).useStateFromStoresArray(items3, () => {
       const gameApplicationIds = games.gameApplicationIds;
       const mapped = gameApplicationIds.map((item) => {
         game = game.getGame(item);
@@ -135,4 +137,6 @@ export const useAllGuildProfileGames = function useAllGuildProfileGames(profile)
     });
   }
   items1 = profile.gameApplicationIds;
+  const obj = require("initialize");
+  tmp = _require;
 };

@@ -1,11 +1,13 @@
 // discord_app/modules/accept_invite/native/AcceptInvite.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import GlobalUtils from "../../../utils/GlobalUtils.tsx";
+import AvatarUtilsDefault from "../../../utils/AvatarUtils.tsx";
 import ImageLoaderUtils from "../../image_upload/ImageLoaderUtils.tsx";
 import useWindowDimensionsDefault from "../../screen/useWindowDimensions.native.tsx";
 import useToken from "../../../design/tokens/native/useToken.tsx";
 import DeprecatedLayoutAnimation from "../../animations/native/DeprecatedLayoutAnimation.tsx";
 import Card from "../../../design/components/Card/native/Card.native.tsx";
+import _modDef12726 from "../../../../_runtime/metro/12726__.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
@@ -28,15 +30,15 @@ function getInviteState(invite) {
       if (!tmp2) {
         state = invite.state;
         if (InviteStates.RESOLVED !== state) {
-          if (tmp4.ACCEPTED !== state) {
-            if (tmp4.EXPIRED !== state) {
-              if (tmp4.BANNED !== state) {
-                if (tmp4.ERROR !== state) {
-                  if (tmp4.RESOLVING !== state) {
-                    if (tmp4.APP_NOT_OPENED !== state) {
-                      if (tmp4.APP_OPENED !== state) {
-                        if (tmp4.APP_OPENING !== state) {
-                          if (tmp4.ACCEPTING !== state) {
+          if (InviteStates.ACCEPTED !== state) {
+            if (InviteStates.EXPIRED !== state) {
+              if (InviteStates.BANNED !== state) {
+                if (InviteStates.ERROR !== state) {
+                  if (InviteStates.RESOLVING !== state) {
+                    if (InviteStates.APP_NOT_OPENED !== state) {
+                      if (InviteStates.APP_OPENED !== state) {
+                        if (InviteStates.APP_OPENING !== state) {
+                          if (InviteStates.ACCEPTING !== state) {
                             GlobalUtils.assertNever(state);
                           }
                         }
@@ -142,14 +144,14 @@ export default function AcceptInvite(invite) {
     splash = guild.splash;
   }
   if (null == splash) {
-    let guildSplashSource = tmp3(12726);
+    let guildSplashSource = _modDef12726;
   } else {
     obj = { id: null, splash: null, size: null };
     ({ id: obj3.id, splash: obj3.splash } = guild);
     let obj3 = ImageLoaderUtils;
     obj.size = width * obj3.getDevicePixelRatio();
-    guildSplashSource = tmp3(1396).getGuildSplashSource(obj);
-    const tmp3Result = tmp3(1396);
+    guildSplashSource = AvatarUtilsDefault.getGuildSplashSource(obj);
+    const tmp3Result = AvatarUtilsDefault;
   }
   obj = { style: null, children: null };
   const items = [tmp2.parentContainer, { height, width }];

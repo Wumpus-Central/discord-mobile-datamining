@@ -9,15 +9,13 @@ export const coalesceInvoiceItems = function coalesceInvoiceItems(arr) {
   const set = new Set();
   const mapped = arr.map((subscriptionPlanId) => {
     for (const item10009 of items) {
-      let tmp = item10009;
-      let tmp3 = item10009;
       if (item10009.subscriptionPlanId === arg0.subscriptionPlanId) {
-        if (tmp3.subscriptionPlanPrice === arg0.subscriptionPlanPrice) {
-          if (tmp3.amount === arg0.amount) {
+        if (item10009.subscriptionPlanPrice === arg0.subscriptionPlanPrice) {
+          if (item10009.amount === arg0.amount) {
             let obj2 = _modDef12;
-            if (obj2.isEqual(tmp3.discounts, arg0.discounts)) {
-              let addResult = set.add(tmp.subscriptionPlanId);
-              tmp.quantity = tmp.quantity + arg0.quantity;
+            if (obj2.isEqual(item10009.discounts, arg0.discounts)) {
+              let addResult = set.add(item10009.subscriptionPlanId);
+              item10009.quantity = item10009.quantity + arg0.quantity;
               obj.return();
             }
           }

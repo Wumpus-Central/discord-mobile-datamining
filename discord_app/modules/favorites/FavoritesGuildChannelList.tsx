@@ -206,14 +206,12 @@ function computeFavoritesState(favoriteChannels, arg1) {
                 subtitle: null,
               };
               const obj5 = c1(dependencyMap[24]);
-              const tmp13 = closure_1;
-              const tmp28 = c1;
               obj.subtitle = favoriteChannels(dependencyMap[20]).computeSubtitle(isPrivate, isCollapsedResult, false);
               if (!tmp4) {
                 if (!tmp7) {
                   if (tmp28Result.isEmpty(activeJoinedUnreadThreadsForParent)) {
                     if (mentionCount.getMentionCount(isPrivate.id) <= 0) {
-                      if (tmp13) {
+                      if (closure_1) {
                         if (isMutedResult) {
                           return null;
                         }
@@ -223,7 +221,7 @@ function computeFavoritesState(favoriteChannels, arg1) {
                           if (!closure_1_2) {
                             if (!items2(isPrivate.type)) {
                               if (closure_9(isPrivate.type)) {
-                                if (false === obj8.hasUnread(isPrivate.id)) {
+                                if (false === mentionCount.hasUnread(isPrivate.id)) {
                                   return null;
                                 }
                               }
@@ -234,9 +232,8 @@ function computeFavoritesState(favoriteChannels, arg1) {
                       }
                       return obj;
                     }
-                    obj8 = mentionCount;
                   }
-                  tmp28Result = tmp28(tmp11[24]);
+                  tmp28Result = c1(dependencyMap[24]);
                 }
               }
               return obj;
@@ -379,8 +376,6 @@ function computeFavoritesState(favoriteChannels, arg1) {
                     subtitle: null,
                   };
                   const obj5 = c1(dependencyMap[24]);
-                  const tmp13 = closure_1;
-                  const tmp28 = c1;
                   obj.subtitle = favoriteChannels(dependencyMap[20]).computeSubtitle(
                     isPrivate,
                     isCollapsedResult,
@@ -390,7 +385,7 @@ function computeFavoritesState(favoriteChannels, arg1) {
                     if (!tmp7) {
                       if (tmp28Result.isEmpty(activeJoinedUnreadThreadsForParent)) {
                         if (mentionCount.getMentionCount(isPrivate.id) <= 0) {
-                          if (tmp13) {
+                          if (closure_1) {
                             if (isMutedResult) {
                               return null;
                             }
@@ -400,7 +395,7 @@ function computeFavoritesState(favoriteChannels, arg1) {
                               if (!closure_1_2) {
                                 if (!items2(isPrivate.type)) {
                                   if (closure_9(isPrivate.type)) {
-                                    if (false === obj8.hasUnread(isPrivate.id)) {
+                                    if (false === mentionCount.hasUnread(isPrivate.id)) {
                                       return null;
                                     }
                                   }
@@ -411,9 +406,8 @@ function computeFavoritesState(favoriteChannels, arg1) {
                           }
                           return obj;
                         }
-                        obj8 = mentionCount;
                       }
-                      tmp28Result = tmp28(tmp11[24]);
+                      tmp28Result = c1(dependencyMap[24]);
                     }
                   }
                   return obj;
@@ -533,7 +527,7 @@ function computeFavoritesState(favoriteChannels, arg1) {
       }
       let tmp5 = !tmp3;
       if (!tmp3) {
-        tmp5 = 0 === found1[arg0 - tmp(undefined, 7528).SECTION_INDEX_FIRST_NAMED_CATEGORY].channelList.length;
+        tmp5 = 0 === found1[arg0 - ChannelListState.SECTION_INDEX_FIRST_NAMED_CATEGORY].channelList.length;
       }
       return tmp5;
     },
@@ -541,7 +535,7 @@ function computeFavoritesState(favoriteChannels, arg1) {
       if (arg0 === ChannelListState.SECTION_INDEX_UNCATEGORIZED_CHANNELS) {
         let tmp4 = obj;
       } else {
-        tmp4 = found1[arg0 - tmp(undefined, 7528).SECTION_INDEX_FIRST_NAMED_CATEGORY];
+        tmp4 = found1[arg0 - ChannelListState.SECTION_INDEX_FIRST_NAMED_CATEGORY];
       }
       return tmp4;
     },
@@ -580,9 +574,7 @@ function computeFavoritesState(favoriteChannels, arg1) {
               num2 = num2 + 1;
               continue;
             }
-            obj = { section: null, row: null };
-            obj.section = num + ChannelListState.SECTION_INDEX_UNCATEGORIZED_CHANNELS;
-            obj.row = num2;
+            obj = { section: num + ChannelListState.SECTION_INDEX_UNCATEGORIZED_CHANNELS, row: num2 };
             let items1 = [obj];
             return items1;
           }

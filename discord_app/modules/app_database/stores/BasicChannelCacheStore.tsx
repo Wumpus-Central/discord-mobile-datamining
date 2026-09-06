@@ -89,6 +89,7 @@ prototype["handleCacheLoadedLazy"] = function handleCacheLoadedLazy(arg0) {
     }
     continue;
   }
+  tmp3 = arg0.basicGuildChannels[Symbol.iterator]();
 };
 prototype["handleCacheLoadedLazyNoCache"] = function handleCacheLoadedLazyNoCache() {
   const guilds = this.guilds;
@@ -101,12 +102,12 @@ prototype["handleConnectionOpen"] = function handleConnectionOpen() {
   const guilds = this.guilds;
   const keys = guilds.keys();
   for (const item10012 of keys) {
-    let tmp2 = item10012;
     if (!allGuildIdsResult.has(item10012)) {
-      let deleteResult = self.delete(tmp2);
+      let deleteResult = self.delete(item10012);
     }
     continue;
   }
+  const allGuildIdsResult = GuildMembershipStore.allGuildIds();
 };
 prototype["handleLogout"] = function handleLogout() {
   const guilds = this.guilds;

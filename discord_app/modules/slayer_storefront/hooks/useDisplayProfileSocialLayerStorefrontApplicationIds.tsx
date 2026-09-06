@@ -1,6 +1,7 @@
 // discord_app/modules/slayer_storefront/hooks/useDisplayProfileSocialLayerStorefrontApplicationIds.tsx
 import _mod12 from "../../../../_runtime/metro/00012__.js";
 import UserProfileGameWidgetTypes from "../../user_profile/UserProfileGameWidgetTypes.tsx";
+import UserProfileApplicationWidgetTypes from "../../user_profile/UserProfileApplicationWidgetTypes.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import SocialLayerStorefrontStore from "../SocialLayerStorefrontStore.tsx";
 
@@ -22,11 +23,11 @@ export default function useDisplayProfileSocialLayerStorefrontApplicationIds(use
   let items = [tmp];
   const memo = areUsersInSocialLayerStorefrontMutualGuildsApplicationIds.useMemo(() => {
     let userId;
-    if (closure_0 != null) {
-      userId = tmp.userId;
+    if (application != null) {
+      userId = application.userId;
     }
     if (null != userId) {
-      const items = [tmp.userId];
+      const items = [application.userId];
       let items1 = items;
     } else {
       items1 = [];
@@ -52,8 +53,8 @@ export default function useDisplayProfileSocialLayerStorefrontApplicationIds(use
     items1,
     () => {
       let widgets;
-      if (closure_0 != null) {
-        widgets = tmp.widgets;
+      if (application != null) {
+        widgets = application.widgets;
       }
       if (null == widgets) {
         return [];
@@ -61,17 +62,15 @@ export default function useDisplayProfileSocialLayerStorefrontApplicationIds(use
         const _Set = Set;
         const set = new Set();
         let widgets1;
-        if (tmp != null) {
-          widgets1 = tmp.widgets;
+        if (application != null) {
+          widgets1 = application.widgets;
         }
         if (widgets1 == null) {
           widgets1 = [];
         }
         for (const item10011 of widgets1) {
-          let tmp5 = item10011;
-          let tmp6 = require;
           if (item10011 instanceof UserProfileGameWidgetTypes.BaseGameWidget) {
-            let games = tmp5.games;
+            let games = item10011.games;
             let item = games.forEach((gameId) => {
               const applicationIdFromDetectableId = stateFromStoresArray.getApplicationIdFromDetectableId(
                 gameId.gameId,
@@ -80,9 +79,9 @@ export default function useDisplayProfileSocialLayerStorefrontApplicationIds(use
                 set.add(applicationIdFromDetectableId);
               }
             });
-          } else if (tmp5 instanceof tmp6(7633).ApplicationWidget) {
+          } else if (item10011 instanceof UserProfileApplicationWidgetTypes.ApplicationWidget) {
             let applicationIdFromDetectableId = SocialLayerStorefrontStore.getApplicationIdFromDetectableId(
-              tmp5.applicationId,
+              item10011.applicationId,
             );
             if (null != applicationIdFromDetectableId) {
               let addResult = set.add(tmp12);

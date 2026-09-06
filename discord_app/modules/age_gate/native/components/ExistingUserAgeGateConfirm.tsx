@@ -33,14 +33,14 @@ export default function ExistingUserAgeGateConfirm(age) {
       c4 = 3;
     } else if (arg0 === 1) {
       c4 = 3;
-      throw arg1;
+      throw value;
     } else if (arg0 !== 2) {
-      if (arg1.shouldShowError) {
+      if (value.shouldShowError) {
         closure_128_1.pop();
       }
       c3 = 0;
     }
-    return arg1;
+    return value;
   };
   const tmp = closure_10();
   let obj = onConfirm(1483);

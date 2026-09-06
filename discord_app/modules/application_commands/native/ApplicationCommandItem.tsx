@@ -56,10 +56,10 @@ export default function ApplicationCommandItem(highlighted) {
     if (null != importDefault) {
       let botId;
       if (section != null) {
-        botId = tmp2.botId;
+        botId = section.botId;
       }
       if (null != botId) {
-        return GuildMemberStore.getMember(tmp, tmp2.botId);
+        return GuildMemberStore.getMember(tmp, section.botId);
       }
     }
   });
@@ -78,7 +78,7 @@ export default function ApplicationCommandItem(highlighted) {
     name = section.name;
   }
   obj = { accessibilityLabel: null, style: null, accessibilityRole: "button", onPress: null, children: null };
-  const intl = tmp(tmp2[11]).intl;
+  const intl = section(tmp2[11]).intl;
   obj = { applicationName: name, commandDescription: command.displayDescription, commandName: command.displayName };
   obj.accessibilityLabel = intl.formatToPlainString(section(stateFromStores[11]).t.eo8b3e, obj);
   obj1 = {};

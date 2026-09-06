@@ -7,7 +7,7 @@ import PermissionStore from "../../stores/PermissionStore.tsx";
 import UserStore from "../../stores/UserStore.tsx";
 
 require = fn;
-function getGuildMemberAgeInRange(arg0, arg1, arg2) {
+function getGuildMemberAgeInRange(arg0, arg1, dependencyMap) {
   ({ maxDaysOld, minDaysOld } = arg1);
   if (minDaysOld === undefined) {
     minDaysOld = 0;
@@ -17,8 +17,8 @@ function getGuildMemberAgeInRange(arg0, arg1, arg2) {
   if (guild != null) {
     joinedAt = guild.joinedAt;
   }
-  if (null != arg2) {
-    const member = GuildMemberStore.getMember(arg0, arg2);
+  if (null != dependencyMap) {
+    const member = GuildMemberStore.getMember(arg0, dependencyMap);
     let joinedAt1;
     if (member != null) {
       joinedAt1 = member.joinedAt;
@@ -46,7 +46,7 @@ function getGuildMemberAgeInRange(arg0, arg1, arg2) {
     return tmp13;
   }
 }
-function canKickMember(user, guild, items) {
+function canKickMember(user, guild) {
   let tmp = items;
   if (items === undefined) {
     items = [PermissionStore];
@@ -230,12 +230,12 @@ export const useCanManageMessages = function useCanManageMessages(arg0, arg1) {
   return require("initialize").useStateFromStores(items, () => {
     const items = [PermissionStore];
     [obj2] = items;
-    let canManageUserResult = null != obj && null != tmp;
+    let canManageUserResult = null != nonUserBot && null != closure_1;
     if (canManageUserResult) {
-      canManageUserResult = obj2.canManageUser(Permissions.MANAGE_MESSAGES, obj, tmp);
+      canManageUserResult = obj2.canManageUser(Permissions.MANAGE_MESSAGES, nonUserBot, closure_1);
     }
     if (canManageUserResult) {
-      canManageUserResult = !obj.isNonUserBot();
+      canManageUserResult = !nonUserBot.isNonUserBot();
     }
     return canManageUserResult;
   });

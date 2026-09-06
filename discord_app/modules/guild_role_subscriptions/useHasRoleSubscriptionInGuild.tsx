@@ -5,18 +5,18 @@ import GuildRoleStore from "../../stores/GuildRoleStore.tsx";
 import GuildStore from "../../stores/GuildStore.tsx";
 
 const require = fn;
-function computeHasRoleSubscriptionsInGuild(id1, arg1) {
-  let tmp = arg2;
-  if (arg2 === undefined) {
+function computeHasRoleSubscriptionsInGuild(id1, rolesSnapshot) {
+  let tmp = stateFromStores;
+  if (stateFromStores === undefined) {
     let member = null;
     if (null != id1) {
       member = GuildMemberStore.getMember(id1, AuthenticationStore.getId());
     }
     tmp = member;
   }
-  let tmp5 = arg3;
-  if (arg3 === undefined) {
-    const items = [GuildStore];
+  let tmp5 = items;
+  if (items === undefined) {
+    items = [GuildStore];
     tmp5 = items;
   }
   [obj] = tmp5;
@@ -72,7 +72,7 @@ export default function useHasRoleSubscriptionInGuild(arg0) {
     () => {
       let rolesSnapshot;
       if (null != closure_0) {
-        rolesSnapshot = GuildRoleStore.getRolesSnapshot(tmp2);
+        rolesSnapshot = GuildRoleStore.getRolesSnapshot(closure_0);
       }
       const items = [GuildStore];
       return computeHasRoleSubscriptionsInGuild(closure_0, rolesSnapshot, stateFromStores, items);

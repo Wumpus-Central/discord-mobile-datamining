@@ -29,15 +29,15 @@ export default noop.memo(function FavoritesGuildSuggestionsLoader() {
   const items = [isEligible, isSelected];
   const layoutEffect = noop.useLayoutEffect(() => {
     if (isSelected) {
-      tmp.current = true;
+      ref.current = true;
     } else {
-      const current = tmp.current;
+      const current = ref.current;
       let tmp2 = !current;
       if (!current) {
         tmp2 = isEligible;
       }
       if (!tmp2) {
-        tmp.current = false;
+        ref.current = false;
         React4(React3);
       }
     }

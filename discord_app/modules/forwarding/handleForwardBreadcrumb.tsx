@@ -10,7 +10,7 @@ let closure_9 = async function _handleForwardBreadcrumb(arg0) {
   c4 = 0;
   c5 = 0;
   c3 = 0;
-  return (async (arg0, value) => {
+  return (async (arg0) => {
     if (c5 === 2) {
       c5 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -45,11 +45,11 @@ let closure_9 = async function _handleForwardBreadcrumb(arg0) {
             closure_129_5 = undefined;
             closure_129_6 = undefined;
             if (null != messageReference.messageReference) {
-              let guild_id = tmp59.messageReference.guild_id;
+              let guild_id = messageReference.messageReference.guild_id;
               closure_129_1 = guild_id;
-              const channel_id = tmp59.messageReference.channel_id;
+              const channel_id = messageReference.messageReference.channel_id;
               closure_129_2 = channel_id;
-              message_id = tmp59.messageReference.message_id;
+              message_id = messageReference.messageReference.message_id;
               channel2 = channel.getChannel(channel_id);
               closure_129_5 = false;
               if (null == channel2) {

@@ -7,10 +7,12 @@ import ToastUtils from "../../../toast/native/ToastUtils.tsx";
 import ActionSheetActionCreatorsDefault from "../ActionSheetActionCreators.tsx";
 import useChannelNameDefault from "../../../channel/useChannelName.tsx";
 import AlertActionCreatorsDefault from "../../../../actions/AlertActionCreators.tsx";
+import GuildIconDefault from "../../../guild/native/GuildIcon.tsx";
 import ReadStateActionCreators from "../../../../actions/ReadStateActionCreators.tsx";
 import AnalyticsLocationDefault from "../../../app_analytics/AnalyticsLocation.tsx";
 import ClipboardUtils from "../../../../utils/ClipboardUtils.native.tsx";
 import ActionSheetRow from "../../../../design/components/Sheet/native/ActionSheetRow.native.tsx";
+import MessageActionCreatorsDefault from "../../../../actions/MessageActionCreators.tsx";
 import ThreadActionCreatorsDefault from "../../../threads/ThreadActionCreators.tsx";
 import ChannelSettingsActionCreatorsDefault from "../../../../actions/ChannelSettingsActionCreators.tsx";
 import buildFavoritesSectionButtonsDefault from "../../../favorites/native/buildFavoritesSectionButtons.tsx";
@@ -94,9 +96,9 @@ export default function ForumPostLongPressActionSheet(thread) {
   const tmp18 = useChannelNameDefault(thread, true);
   if (null != stateFromStores) {
     obj = { guild: stateFromStores, size: tmp(5584).GuildIconSizes.LARGE };
-    let tmp21 = jsx(tmp17(5584), { guild: stateFromStores, size: tmp(5584).GuildIconSizes.LARGE });
+    let tmp21 = jsx(GuildIconDefault, { guild: stateFromStores, size: tmp(5584).GuildIconSizes.LARGE });
     let tmp20 = jsx;
-    const tmp17Result = tmp17(5584);
+    const tmp17Result = GuildIconDefault;
   } else {
     tmp20 = jsx;
     obj = { size: tmp(1178).AvatarSizes.LARGE, channel: thread };
@@ -344,8 +346,8 @@ export default function ForumPostLongPressActionSheet(thread) {
                   const intl = thread(1114).intl;
                   let tmp3 = label === intl.string(thread(1114).t.nEOg1N);
                   if (!tmp3) {
-                    const intl2 = tmp(1114).intl;
-                    tmp3 = label === intl2.string(tmp(1114).t.xwMqD7);
+                    const intl2 = thread(1114).intl;
+                    tmp3 = label === intl2.string(thread(1114).t.xwMqD7);
                   }
                   return closure_1_14(thread(7200).ActionSheetRow, {
                     variant: str,
@@ -389,10 +391,10 @@ export default function ForumPostLongPressActionSheet(thread) {
                   const su3voL = util.t.su3voL;
                   { postName: null }.postName = "\"" + thread.name + "\"";
                   if (GuildStore) {
-                    const intl4 = tmp(1114).intl;
-                    let stringResult1 = intl4.string(tmp(1114).t.xwMqD7);
-                    const intl5 = tmp(1114).intl;
-                    let stringResult2 = intl5.string(tmp(1114).t.RUHcyk);
+                    const intl4 = util.intl;
+                    let stringResult1 = intl4.string(util.t.xwMqD7);
+                    const intl5 = util.intl;
+                    let stringResult2 = intl5.string(util.t.RUHcyk);
                   } else {
                     let tmp6 = LurkingStore;
                     if (LurkingStore) {
@@ -401,25 +403,25 @@ export default function ForumPostLongPressActionSheet(thread) {
                     stringResult2 = tmp5;
                     stringResult1 = stringResult;
                     if (tmp6) {
-                      const intl3 = tmp(1114).intl;
+                      const intl3 = util.intl;
                       let obj = { postName: null };
                       const _HermesInternal = HermesInternal;
                       obj.postName = "\"" + thread.name + "\"";
-                      stringResult2 = intl3.format(tmp(1114).t["6/pY2+"], obj);
+                      stringResult2 = intl3.format(util.t["6/pY2+"], obj);
                       stringResult1 = stringResult;
                     }
                   }
                   obj = { title: stringResult1, body: stringResult2, cancelText: null, confirmText: null, onConfirm: null, confirmColor: null };
-                  const intl6 = tmp(1114).intl;
+                  const intl6 = util.intl;
                   obj.cancelText = intl6.string(util.t.gm1Vej);
-                  const intl7 = tmp(1114).intl;
+                  const intl7 = util.intl;
                   obj.confirmText = intl7.string(util.t.p89ACt);
                   obj.onConfirm = function onConfirm() {
                     if (closure_1_7) {
-                      let tmpResult = tmp(tmp2[43]);
+                      let tmpResult = MessageActionCreatorsDefault;
                       tmpResult.deleteMessage(user.id, SnowflakeUtilsDefault.castChannelIdAsMessageId(user.id));
                     } else {
-                      tmpResult = tmp(tmp2[29]);
+                      tmpResult = ChannelSettingsActionCreatorsDefault;
                       tmpResult.deleteChannel(user.id);
                     }
                   };
@@ -482,4 +484,5 @@ export default function ForumPostLongPressActionSheet(thread) {
     obj.ack(thread.id, obj, true, true);
   };
   buttons12.push(obj23);
+  hasFlagResult = thread.hasFlag(ChannelFlags.PINNED);
 };

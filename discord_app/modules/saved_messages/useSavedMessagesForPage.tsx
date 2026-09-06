@@ -47,14 +47,14 @@ export default function useSavedMessagesForPage() {
       lastChanged = SavedMessagesStore.getLastChanged();
       if (lastChanged !== lastChanged) {
         if (ref.current) {
-          if (!obj.getIsStale()) {
+          if (!SavedMessagesStore.getIsStale()) {
             tmp9.current = false;
             if (SavedMessagesTypes.SavedMessageSortTypes.BOOKMARK === ALL) {
-              let messageBookmarks = obj.getMessageBookmarks();
+              let messageBookmarks = SavedMessagesStore.getMessageBookmarks();
             } else if (SavedMessagesTypes.SavedMessageSortTypes.REMINDER === ALL) {
-              messageBookmarks = obj.getMessageReminders();
+              messageBookmarks = SavedMessagesStore.getMessageReminders();
             } else {
-              messageBookmarks = obj.getSavedMessages();
+              messageBookmarks = SavedMessagesStore.getSavedMessages();
             }
             c2(messageBookmarks.map((saveData) => saveData.saveData));
           }

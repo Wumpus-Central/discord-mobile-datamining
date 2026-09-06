@@ -25,7 +25,7 @@ export default function useWelcomeScreenEnabled(arg0, arg1) {
       const features2 = guild.features;
       if (features2.has(GuildFeatures.COMMUNITY)) {
         const features3 = guild.features;
-        if (features3.has(tmp5.GUILD_SERVER_GUIDE)) {
+        if (features3.has(GuildFeatures.GUILD_SERVER_GUIDE)) {
           return false;
         } else {
           const channel = ChannelStore.getChannel(closure_0);
@@ -39,7 +39,6 @@ export default function useWelcomeScreenEnabled(arg0, arg1) {
           return tmp9;
         }
       }
-      tmp5 = GuildFeatures;
     }
     return false;
   });

@@ -86,8 +86,8 @@ export const useCustomStatusActivity = function useCustomStatusActivity() {
       let usableCustomEmojiById = null;
       if (null != emojiId) {
         usableCustomEmojiById = null;
-        if ("0" !== tmp) {
-          usableCustomEmojiById = EmojiStore.getUsableCustomEmojiById(tmp);
+        if ("0" !== emojiId) {
+          usableCustomEmojiById = EmojiStore.getUsableCustomEmojiById(emojiId);
         }
       }
       return usableCustomEmojiById;

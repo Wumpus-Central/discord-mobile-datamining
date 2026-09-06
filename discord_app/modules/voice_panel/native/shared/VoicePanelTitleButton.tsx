@@ -5,6 +5,7 @@ import NicknameUtilsDefault from "../../../../utils/NicknameUtils.tsx";
 import useChannelNameDefault from "../../../channel/useChannelName.tsx";
 import BaseTextButton from "../../../../design/components/Button/native/BaseTextButton.native.tsx";
 import _modDef5033 from "../../../../../_runtime/metro/05033__.js";
+import _modDef5037 from "../../../../../_runtime/metro/05037__.js";
 import _modDef7142 from "../../../../../_runtime/metro/07142__.js";
 import native from "../../../../design/components/experimental/native.tsx";
 import ShieldLockIcon from "../../../../design/components/Icon/native/redesign/generated/ShieldLockIcon.tsx";
@@ -18,7 +19,6 @@ import ApplicationStore from "../../../applications/ApplicationStore.tsx";
 import StageInstanceStore from "../../../stage_channels/StageInstanceStore.tsx";
 import ChannelStore from "../../../../stores/ChannelStore.tsx";
 
-const _modDef5037 = tmp5(5037);
 require = fn;
 function ChannelButtonIcons() {
   let obj = { style: closure_11().channelButtons, children: null };
@@ -55,9 +55,9 @@ function ChannelButton(channelId) {
   }
   obj.text = str;
   if (isCallSecureFramesVerified) {
-    let tmp3Result = tmp5(ChannelButtonIcons, {});
+    let tmp3Result = closure_9(ChannelButtonIcons, {});
   } else {
-    tmp3Result = tmp3(7142);
+    tmp3Result = _modDef7142;
   }
   obj.icon = tmp3Result;
   obj.iconOpticalOffsetMargin = -nativeDefault.space.PX_4;
@@ -229,10 +229,10 @@ export default noop.memo(function VoicePanelTitleButton() {
     if (tmp3.type === ParticipantTypes.STREAM) {
       obj = { participant: tmp3, onPress };
       return closure_9(StreamButton, obj);
-    } else if (tmp3.type === tmp5.ACTIVITY) {
+    } else if (tmp3.type === ParticipantTypes.ACTIVITY) {
       obj = { participant: tmp3, onPress };
       return closure_9(ActivityButton, obj);
-    } else if (tmp3.type === tmp5.USER) {
+    } else if (tmp3.type === ParticipantTypes.USER) {
       const obj1 = { participant: tmp3, onPress };
       return closure_9(UserButton, obj1);
     }

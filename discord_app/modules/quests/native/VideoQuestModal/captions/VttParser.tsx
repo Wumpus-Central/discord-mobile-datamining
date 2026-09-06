@@ -106,7 +106,7 @@ export const parseVtt = function parseVtt(text) {
                   tmp2,
                   "\n",
                   tmp,
-                  tmp7,
+                  closure_1_0,
                   combined,
                   0,
                   index,
@@ -117,7 +117,6 @@ export const parseVtt = function parseVtt(text) {
               } else {
                 throw new TypeError("Trying to call a non-function");
               }
-              tmp7 = closure_1_0;
             }
           }
           if (found.length > 1) {
@@ -136,7 +135,7 @@ export const parseVtt = function parseVtt(text) {
                     tmp2,
                     "\n",
                     tmp,
-                    tmp16,
+                    closure_1_0,
                     combined1,
                     0,
                     index,
@@ -147,7 +146,6 @@ export const parseVtt = function parseVtt(text) {
                 } else {
                   throw new TypeError("Trying to call a non-function");
                 }
-                tmp16 = closure_1_0;
               }
               obj2 = found[1];
             }
@@ -163,8 +161,8 @@ export const parseVtt = function parseVtt(text) {
           const parts1 = found[0].split(" --> ");
           if (2 === parts1.length) {
             if (regex.test(parts1[0])) {
-              if (obj7.test(parts1[1])) {
-                const match = parts1[0].match(obj7);
+              if (regex.test(parts1[1])) {
+                const match = parts1[0].match(regex);
                 let num = 0;
                 if (null != match) {
                   let str13 = match[1];
@@ -178,7 +176,7 @@ export const parseVtt = function parseVtt(text) {
                   num = result * 60 + result1 + parseFloat(match[3]);
                 }
                 let str14 = parts1[1];
-                const match1 = str14.match(obj7);
+                const match1 = str14.match(regex);
                 let num3 = 0;
                 if (null != match1) {
                   let str15 = match1[1];
@@ -202,7 +200,7 @@ export const parseVtt = function parseVtt(text) {
                         tmp5,
                         _parseFloat,
                         str14,
-                        obj7,
+                        regex,
                         "\n",
                         "",
                         str10,
@@ -224,7 +222,7 @@ export const parseVtt = function parseVtt(text) {
                         tmp5,
                         _parseFloat,
                         str14,
-                        obj7,
+                        regex,
                         "\n",
                         "",
                         str10,
@@ -246,10 +244,10 @@ export const parseVtt = function parseVtt(text) {
                       const tmp42 = new closure_1_2(
                         combined4,
                         tmp6,
-                        tmp35,
+                        closure_1_0,
                         combined4,
                         new.target,
-                        obj7,
+                        regex,
                         "\n",
                         "",
                         str10,
@@ -269,10 +267,9 @@ export const parseVtt = function parseVtt(text) {
                     } else {
                       throw new TypeError("Trying to call a non-function");
                     }
-                    tmp35 = closure_1_0;
                   }
                 }
-                const trimmed1 = parts1[1].replace(obj7, "").trim();
+                const trimmed1 = parts1[1].replace(regex, "").trim();
                 found.shift();
                 const str21 = found.join("\n");
                 if ("" === str21.trim()) {
@@ -281,13 +278,13 @@ export const parseVtt = function parseVtt(text) {
                   obj = { identifier: str10, start: num, end: num3, text: str21, styles: trimmed1 };
                   return obj;
                 }
-                const str20 = parts1[1].replace(obj7, "");
+                const str20 = parts1[1].replace(regex, "");
               }
             }
           }
           const combined5 = "Invalid cue timestamp (cue #" + index + ")";
           if (typeof closure_1_0 === "function") {
-            const tmp69 = new closure_1_2(combined5, tmp6, tmp5, tmp4, tmp3, obj7, "\n");
+            const tmp69 = new closure_1_2(combined5, tmp6, tmp5, tmp4, tmp3, regex, "\n");
             tmp69.error = undefined;
             tmp69.name = "ParserError";
             throw tmp69;

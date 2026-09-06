@@ -1,7 +1,10 @@
 // discord_app/modules/in_app_reports/native/components/InAppReportsBottomButton.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
+import native from "../../../../design/void/native.tsx";
 import _modDef2528 from "../../../report_to_mod/ReportToMod.messages.js";
+import Text_Text from "../../../../design/components/Text/native/Text.tsx";
+import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -46,33 +49,33 @@ export default function InAppReportsBottomButton(button) {
   } else {
     const string3 = util.intl.string;
     if ("submit" === button.type) {
-      const intl2 = tmp17(1114).intl;
+      const intl2 = util.intl;
       const string = intl2.string;
       if (isModeratorReport) {
         let stringResult = string(_modDef2528.ZUyreS);
       } else {
-        const intl3 = tmp17(1114).intl;
-        const stringResult1 = string(tmp17(1114).t["G+vU89"]);
+        const intl3 = util.intl;
+        const stringResult1 = string(util.t["G+vU89"]);
         stringResult = stringResult1;
-        const formatResult = intl3.format(tmp17(1114).t.Q0tSKT, {});
+        const formatResult = intl3.format(util.t.Q0tSKT, {});
       }
     } else {
       if ("next" === button.type) {
-        const intl = tmp17(1114).intl;
-        let stringResult2 = intl.string(tmp17(1114).t.PDTjLN);
+        const intl = util.intl;
+        let stringResult2 = intl.string(util.t.PDTjLN);
       } else {
         stringResult2 = tmp19;
         if ("cancel" === button.type) {
-          const intl5 = tmp17(1114).intl;
-          stringResult2 = intl5.string(tmp17(1114).t["ETE/oC"]);
+          const intl5 = util.intl;
+          stringResult2 = intl5.string(util.t["ETE/oC"]);
         }
       }
-      const intl4 = tmp17(1114).intl;
+      const intl4 = util.intl;
       const string2 = intl4.string;
       if (isModeratorReport) {
         let string2Result = string2(_modDef2528.psKFdJ);
       } else {
-        string2Result = string2(tmp17(1114).t.h6D8Vy);
+        string2Result = string2(util.t.h6D8Vy);
       }
       let obj = { style: tmp.container, children: null };
       obj = { style: tmp.divider };
@@ -81,7 +84,7 @@ export default function InAppReportsBottomButton(button) {
       let tmp14Result = null;
       if (null != tmp3) {
         const obj1 = { style: tmp.descriptionText, variant: "text-xs/medium", color: "text-default", children: tmp3 };
-        tmp14Result = tmp14(tmp17(4556).Text, obj1);
+        tmp14Result = React4(Text_Text.Text, obj1);
       }
       const items1 = [tmp14Result, ,];
       const obj2 = {
@@ -92,11 +95,11 @@ export default function InAppReportsBottomButton(button) {
         text: stringResult2,
         variant: str2,
       };
-      items1[1] = React4(tmp17(4975).Button, obj2);
+      items1[1] = React4(components_Button_Button.Button, obj2);
       tmp14Result = null;
       if (hasError) {
         const obj3 = { style: tmp.errorText, children: string2Result };
-        tmp14Result = tmp14(tmp17(1178).LegacyText, obj3);
+        tmp14Result = React4(native.LegacyText, obj3);
       }
       items1[2] = tmp14Result;
       obj.children = items1;

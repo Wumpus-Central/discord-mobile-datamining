@@ -2,6 +2,7 @@
 import throttleDefault from "../../../../../../_runtime/00550_throttle.js";
 import util from "../../../../../intl/index.native.tsx";
 import PermissionUtilsAll from "../../../../../utils/PermissionUtils.tsx";
+import UserUtilsDefault from "../../../../../utils/UserUtils.tsx";
 import NicknameUtilsDefault from "../../../../../utils/NicknameUtils.tsx";
 import GuildUtilsDefault from "../../../../../utils/GuildUtils.tsx";
 import showUserProfileActionSheetDefault from "../../../../user_profile/native/showUserProfileActionSheet.tsx";
@@ -73,7 +74,7 @@ export default noop.memo(function GuildChannelUserList(searchable) {
   closure_129_3 = searchableEmptyState;
   const ref1 = flag3.useRef(null);
   closure_129_4 = ref1;
-  let tmp5 = onUserLongPress(flag3.useState(""), 2);
+  const tmp5 = onUserLongPress(flag3.useState(""), 2);
   closure_129_5 = str;
   closure_129_6 = tmp5[1];
   let tmp6 = onUserLongPress(flag3.useState(closure_20), 2);
@@ -88,11 +89,11 @@ export default noop.memo(function GuildChannelUserList(searchable) {
       obj = { guild: channelId, strict: true };
       obj.userFilters = obj;
       tmp = new tmp(
-        (arg0, str) => {
+        (canMentionEveryone, str) => {
           if ("" === str.trim()) {
             analyticsLocations(closure_20);
           } else {
-            analyticsLocations(arg0);
+            analyticsLocations(canMentionEveryone);
           }
         },
         items,
@@ -264,7 +265,7 @@ export default noop.memo(function GuildChannelUserList(searchable) {
           tmp6 = closure_0;
         }
         closure_0 = tmp6;
-        const members = groups.getMembers(tmp4);
+        const members = groups.getMembers(guildId);
         const found = members.filter((roles) => {
           roles = roles.roles;
           let hasItem = roles.includes(roleId);
@@ -278,14 +279,14 @@ export default noop.memo(function GuildChannelUserList(searchable) {
           const user1 = UserStore.getUser(userId2.userId);
           let str = NicknameUtilsDefault.getNickname(guildId, closure_0, user);
           if (str == null) {
-            let tmp3Result = tmp3(4404);
+            let tmp3Result = UserUtilsDefault;
             str = tmp3Result.getGlobalName(user);
           }
-          tmp3Result = tmp3(4712);
+          tmp3Result = NicknameUtilsDefault;
           let str2 = tmp3Result.getNickname(guildId, closure_0, user1);
           if (str2 == null) {
-            str2 = tmp3(4404).getGlobalName(user1);
-            const tmp3Result1 = tmp3(4404);
+            str2 = UserUtilsDefault.getGlobalName(user1);
+            const tmp3Result1 = UserUtilsDefault;
           }
           if (str == null) {
             str = "";
@@ -297,7 +298,6 @@ export default noop.memo(function GuildChannelUserList(searchable) {
         });
       }
       obj = channelId(onUserPress[20]);
-      tmp4 = guildId;
     }
     return [];
   });
@@ -381,7 +381,7 @@ export default noop.memo(function GuildChannelUserList(searchable) {
         if (arg1 < stateFromStoresArray.length) {
           let user = stateFromStores1.getUser(tmp4.userId);
           if (null != user) {
-            let obj = { user, guildMember: tmp4, end: arg1 === arr.length - 1 };
+            let obj = { user, guildMember: tmp4, end: arg1 === stateFromStoresArray.length - 1 };
             let tmp3 = obj;
           }
         }

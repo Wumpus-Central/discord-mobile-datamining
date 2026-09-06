@@ -1,5 +1,6 @@
 // discord_app/modules/quests/utils/QuestMatchingUtils.tsx
 import QuestDataUtils from "QuestDataUtils.tsx";
+import utils_QuestUtils from "QuestUtils.tsx";
 import QuestTaskUtils from "QuestTaskUtils.tsx";
 import getApplicationIdsForGameDefault from "../../games/utils/getApplicationIdsForGame.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
@@ -58,12 +59,11 @@ function getQuestByActivity(result, arg1) {
   while (obj !== undefined) {
     let tmp3 = _slicedToArray(tmp, 2);
     [r10011, tmp4] = tmp3;
-    let tmp5 = tmp4;
     if (questMatchesActivity(arg1, tmp4)) {
       let obj2 = QuestDataUtils;
-      if (!obj2.isQuestExpired(tmp5)) {
+      if (!obj2.isQuestExpired(tmp4)) {
         obj.return();
-        return tmp5;
+        return tmp4;
       }
     }
     continue;
@@ -92,31 +92,30 @@ export const getQuestByApplicationId = function getQuestByApplicationId(arg0, ar
   while (obj !== undefined) {
     let tmp4 = _slicedToArray(tmp2, 2);
     [r10013, tmp5] = tmp4;
-    let tmp6 = tmp5;
     if (questMatchesApplicationId(arg1, tmp5)) {
       let obj2 = QuestDataUtils;
-      if (!obj2.isQuestExpired(tmp6)) {
-        let tmp = tmp5;
+      if (!obj2.isQuestExpired(tmp5)) {
         obj.return();
         break;
       }
-      return tmp;
+      return tmp5;
     }
     continue;
   }
 };
 export const allPlayOnDesktopQuestsByApplicationId = function allPlayOnDesktopQuestsByApplicationId(arr, arg1) {
   closure_0 = arg1;
-  return Array.from(arr.values()).filter((quest) => {
+  arr = Array.from(arr.values());
+  return arr.filter((quest) => {
     let obj = QuestTaskUtils;
     const allApplicationIds = obj.getAllApplicationIds(quest);
     let hasPlayOnDesktopTaskResult = null != allApplicationIds && allApplicationIds.some((item) => item === closure_0);
     if (hasPlayOnDesktopTaskResult) {
-      let tmpResult = tmp(7699);
+      let tmpResult = QuestDataUtils;
       hasPlayOnDesktopTaskResult = !tmpResult.isQuestExpired(quest);
     }
     if (hasPlayOnDesktopTaskResult) {
-      tmpResult = tmp(7724);
+      tmpResult = QuestTaskUtils;
       obj = { quest };
       hasPlayOnDesktopTaskResult = tmpResult.hasPlayOnDesktopTask(obj);
     }
@@ -157,11 +156,11 @@ export const getEligibleQuestsForApplicationId = function getEligibleQuestsForAp
       const activityApplicationId = QuestTaskUtils.getActivityApplicationId(userStatus);
       let canLaunchActivityResult = null != userStatus;
       if (canLaunchActivityResult) {
-        let tmpResult = tmp(7722);
+        let tmpResult = utils_QuestUtils;
         canLaunchActivityResult = tmpResult.canLaunchActivity(userStatus);
       }
       if (canLaunchActivityResult) {
-        tmpResult = tmp(7699);
+        tmpResult = QuestDataUtils;
         canLaunchActivityResult = !tmpResult.isQuestExpired(userStatus);
       }
       if (canLaunchActivityResult) {

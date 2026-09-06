@@ -1,5 +1,6 @@
 // discord_app/modules/icymi/ICYMIUtils.tsx
 import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
+import util from "../../intl/index.native.tsx";
 import MessageRecordUtils from "../messages/MessageRecordUtils.tsx";
 import ForumPostMediaUtils from "../forums/ForumPostMediaUtils.tsx";
 import ContentInventoryEntryType from "../../../discord_common/js/shared/shared-constants/ContentInventoryEntryType.tsx";
@@ -31,7 +32,7 @@ function hydrateItems() {
   }
   return applyArgumentsResult;
 }
-let closure_17 = async function _hydrateItems(arg0, value) {
+let closure_17 = async function _hydrateItems(arg0) {
   if (c3 === 2) {
     c3 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -60,7 +61,7 @@ let closure_17 = async function _hydrateItems(arg0, value) {
           const substr = dependencyMap.slice(closure_1, dependencyMap2);
           if (0 !== substr.length) {
             let obj1 = ICYMIActionCreatorsDefault;
-            const hydratedAttempt = obj1.loadHydratedAttempt(generateHydrationId(tmp23, tmp24));
+            const hydratedAttempt = obj1.loadHydratedAttempt(generateHydrationId(closure_1, dependencyMap2));
             const found = substr.filter((item) => null == dependencyMap[item.id]);
             const found1 = found.filter((type) => type.type === dependencyMap(8348).ICYMIItemTypes.MESSAGE);
             const mapped = found1.map((channel_id) => ({
@@ -114,7 +115,10 @@ let closure_17 = async function _hydrateItems(arg0, value) {
             obj1.activityItems = mapped2;
             c4 = 1;
             c3 = 1;
-            const obj2 = { value: ICYMIActionCreatorsDefault.fetchHydrated(tmp23, tmp24, obj1), done: false };
+            const obj2 = {
+              value: ICYMIActionCreatorsDefault.fetchHydrated(closure_1, dependencyMap2, obj1),
+              done: false,
+            };
             return obj2;
           }
         }
@@ -134,7 +138,7 @@ let closure_17 = async function _hydrateItems(arg0, value) {
     }
   }
 };
-let closure_18 = async function _hydrateNextPage(arg0, value) {
+let closure_18 = async function _hydrateNextPage() {
   if (c0 === 2) {
     c0 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -189,7 +193,7 @@ let closure_18 = async function _hydrateNextPage(arg0, value) {
     }
   }
 };
-let closure_19 = async function _regenerateFeedAndClearReadStates(arg0, value) {
+let closure_19 = async function _regenerateFeedAndClearReadStates(arg0) {
   if (c4 === 2) {
     c4 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -256,14 +260,20 @@ let closure_19 = async function _regenerateFeedAndClearReadStates(arg0, value) {
               tmp2 = type.data.channel_type === constants.GUILD_ANNOUNCEMENT;
             }
             if (tmp2) {
-              obj = closure_1(tmp[13]);
+              obj = closure_1(constants[13]);
               tmp2 = obj.compare(closure_2_9.ackMessageId(type.data.channel_id), type.data.message_id) >= 0;
             }
             if (tmp2) {
               const channel_id = type.data.channel_id;
               obj = { object, objectType: constants.ACK_SEMI_AUTOMATIC };
-              closure_1_1(channel_id, obj, true, true, closure_1(tmp[13]).atPreviousMillisecond(type.data.message_id));
-              const obj3 = closure_1(tmp[13]);
+              closure_1_1(
+                channel_id,
+                obj,
+                true,
+                true,
+                closure_1(constants[13]).atPreviousMillisecond(type.data.message_id),
+              );
+              const obj3 = closure_1(constants[13]);
             }
           });
           let obj11 = closure_130_1(closure_130_2[11]);
@@ -366,8 +376,8 @@ export const isGuildItem = function isGuildItem(type) {
 export const isChannelCustomScoreEligible = function isChannelCustomScoreEligible(stateFromStores) {
   let tmp2 = stateFromStores.type === constants.GUILD_FORUM;
   if (!tmp2) {
-    tmp2 = stateFromStores.type === tmp.GUILD_ANNOUNCEMENT || stateFromStores.type === tmp.GUILD_TEXT;
-    const tmp3 = stateFromStores.type === tmp.GUILD_ANNOUNCEMENT || stateFromStores.type === tmp.GUILD_TEXT;
+    tmp2 = stateFromStores.type === constants.GUILD_ANNOUNCEMENT || stateFromStores.type === constants.GUILD_TEXT;
+    const tmp3 = stateFromStores.type === constants.GUILD_ANNOUNCEMENT || stateFromStores.type === constants.GUILD_TEXT;
   }
   return tmp2;
 };
@@ -386,9 +396,9 @@ export const numberToCustomScore = function numberToCustomScore(stateFromStores1
 export const customScoreToNumber = function customScoreToNumber(DEFAULT) {
   if (obj.MORE === DEFAULT) {
     return 1;
-  } else if (tmp.LESS === DEFAULT) {
+  } else if (obj.LESS === DEFAULT) {
     return -1;
-  } else if (tmp.MUTED === DEFAULT) {
+  } else if (obj.MUTED === DEFAULT) {
     return -2;
   } else {
     return 0;
@@ -405,9 +415,9 @@ export const hydrateNextPage = function hydrateNextPage() {
   }
   return applyArgumentsResult;
 };
-export const createGravityMessageFromServer = function createGravityMessageFromServer(message, arg1) {
+export const createGravityMessageFromServer = function createGravityMessageFromServer(message, data) {
   obj = {};
-  const merged = Object.assign(arg1);
+  const merged = Object.assign(data);
   obj.message = MessageRecordUtils.createMessageRecord(message.message);
   let fromServerResult;
   if (null != message.thread_channel) {
@@ -465,9 +475,9 @@ export const useICYMIMessage = function useICYMIMessage(id, before_message_id) {
     () => {
       let tmp2 = null;
       if (null != closure_1) {
-        let message = MessageStore.getMessage(closure_0, tmp);
+        let message = MessageStore.getMessage(closure_0, closure_1);
         if (message == null) {
-          const hydratedItem = ICYMIStore.getHydratedItem(tmp);
+          const hydratedItem = ICYMIStore.getHydratedItem(closure_1);
           let message1;
           if (hydratedItem != null) {
             message1 = hydratedItem.message;
@@ -702,13 +712,13 @@ export const determineContentType = function determineContentType(channel, messa
     if (message.attachments.length > 0) {
       let ContentType = dependencyMap;
       if (obj.isValidImageAttachment(message.attachments[0])) {
-        ContentType = tmp6(8348).ContentType;
+        ContentType = ICYMITypes.ContentType;
         let IMAGE = ContentType.IMAGE;
       } else {
-        const result = tmp6(7897).isValidVideoAttachment(message.attachments[0]);
-        const ContentType2 = tmp6(8348).ContentType;
+        const result = ForumPostMediaUtils.isValidVideoAttachment(message.attachments[0]);
+        const ContentType2 = ICYMITypes.ContentType;
         IMAGE = result ? ContentType2.VIDEO : ContentType2.FILE;
-        const tmp6Result = tmp6(7897);
+        const tmp6Result = ForumPostMediaUtils;
       }
       obj = ForumPostMediaUtils;
     } else {
@@ -727,42 +737,42 @@ export const contentTypeToText = function contentTypeToText(arg0) {
     flag = false;
   }
   if (ICYMITypes.ContentType.POPULAR_MESSAGE === arg0) {
-    const intl10 = tmp(1114).intl;
-    return intl10.string(tmp(1114).t["H/2+cl"]);
-  } else if (tmp(8348).ContentType.IMAGE === arg0) {
-    const intl9 = tmp(1114).intl;
-    return intl9.string(tmp(1114).t.gmOWAo);
-  } else if (tmp(8348).ContentType.VIDEO === arg0) {
-    const intl8 = tmp(1114).intl;
-    return intl8.string(tmp(1114).t.swhcPM);
-  } else if (tmp(8348).ContentType.LINK === arg0) {
-    const intl7 = tmp(1114).intl;
-    return intl7.string(tmp(1114).t.oj5yvD);
-  } else if (tmp(8348).ContentType.THREAD === arg0) {
-    const intl6 = tmp(1114).intl;
-    return intl6.string(tmp(1114).t.DwLrLK);
-  } else if (tmp(8348).ContentType.FORUM_POST === arg0) {
-    const intl5 = tmp(1114).intl;
-    return intl5.string(tmp(1114).t["Q9/6BS"]);
-  } else if (tmp(8348).ContentType.CHANGED_STATUS === arg0) {
-    const intl4 = tmp(1114).intl;
-    return intl4.string(tmp(1114).t.TGrUmi);
-  } else if (tmp(8348).ContentType.INTERESTING === arg0) {
-    const intl3 = tmp(1114).intl;
-    return intl3.string(tmp(1114).t["TahE/i"]);
-  } else if (tmp(8348).ContentType.ANNOUNCEMENT === arg0) {
-    const intl2 = tmp(1114).intl;
+    const intl10 = util.intl;
+    return intl10.string(util.t["H/2+cl"]);
+  } else if (ICYMITypes.ContentType.IMAGE === arg0) {
+    const intl9 = util.intl;
+    return intl9.string(util.t.gmOWAo);
+  } else if (ICYMITypes.ContentType.VIDEO === arg0) {
+    const intl8 = util.intl;
+    return intl8.string(util.t.swhcPM);
+  } else if (ICYMITypes.ContentType.LINK === arg0) {
+    const intl7 = util.intl;
+    return intl7.string(util.t.oj5yvD);
+  } else if (ICYMITypes.ContentType.THREAD === arg0) {
+    const intl6 = util.intl;
+    return intl6.string(util.t.DwLrLK);
+  } else if (ICYMITypes.ContentType.FORUM_POST === arg0) {
+    const intl5 = util.intl;
+    return intl5.string(util.t["Q9/6BS"]);
+  } else if (ICYMITypes.ContentType.CHANGED_STATUS === arg0) {
+    const intl4 = util.intl;
+    return intl4.string(util.t.TGrUmi);
+  } else if (ICYMITypes.ContentType.INTERESTING === arg0) {
+    const intl3 = util.intl;
+    return intl3.string(util.t["TahE/i"]);
+  } else if (ICYMITypes.ContentType.ANNOUNCEMENT === arg0) {
+    const intl2 = util.intl;
     const string = intl2.string;
-    const t = tmp(1114).t;
+    const t = util.t;
     if (flag) {
       let stringResult = string(t.E0MW8I);
     } else {
       stringResult = string(t["2ih63V"]);
     }
     return stringResult;
-  } else if (tmp(8348).ContentType.FILE === arg0) {
-    const intl = tmp(1114).intl;
-    return intl.string(tmp(1114).t.pYrnTY);
+  } else if (ICYMITypes.ContentType.FILE === arg0) {
+    const intl = util.intl;
+    return intl.string(util.t.pYrnTY);
   }
 };
 export const regenerateFeedAndClearReadStates = function regenerateFeedAndClearReadStates() {

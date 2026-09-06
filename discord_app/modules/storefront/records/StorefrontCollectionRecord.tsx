@@ -81,7 +81,6 @@ prototype["fromServer"] = function fromServer(arg0) {
   obj.isOrbsExclusive = is_orbs_exclusive;
   obj.createdAt = new Date(created_at);
   const date = new Date(created_at);
-  const tmp2 = prototype;
   obj.updatedAt = new Date(updated_at);
   let date2;
   if (null != unpublished_at) {
@@ -145,7 +144,7 @@ prototype["fromServer"] = function fromServer(arg0) {
     wide_banner_title: obj2.wideBannerTitle,
     wide_banner_body: obj2.wideBannerBody,
   } = collectibles);
-  return new tmp2(obj);
+  return new prototype(obj);
 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/storefront/records/StorefrontCollectionRecord.tsx");

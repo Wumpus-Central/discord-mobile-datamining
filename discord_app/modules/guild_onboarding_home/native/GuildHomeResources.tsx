@@ -85,7 +85,7 @@ function ResourceChannelRow(channelId) {
         obj4 = { guildId: null, channelId: null };
         ({ guild_id: obj15.guildId, id: obj15.channelId } = stateFromStores);
         obj3.children = tmp10Result.parse(tmp11, true, obj4);
-        tmp19Result = tmp19(tmp2(4556).Text, obj3);
+        tmp19Result = closure_12(tmp2(4556).Text, obj3);
       }
       items4[1] = tmp19Result;
       tmp19Result = !tmp16;
@@ -100,7 +100,7 @@ function ResourceChannelRow(channelId) {
         };
         ({ guild_id: obj18.guildId, id: obj18.channelId } = stateFromStores);
         obj5.children = tmp10(4550).parse(description, true, { guildId: null, channelId: null });
-        tmp19Result = tmp19(tmp2(4556).Text, obj5);
+        tmp19Result = closure_12(tmp2(4556).Text, obj5);
         const obj6 = { guildId: null, channelId: null };
         const tmp10Result1 = tmp10(4550);
       }
@@ -115,7 +115,7 @@ function ResourceChannelRow(channelId) {
           const obj8 = { uri: resourceChannelIconURL };
           obj7.source = obj8;
           obj7.style = tmp.icon;
-          tmp19Result1 = tmp19(closure_5, obj7);
+          tmp19Result1 = closure_12(closure_5, obj7);
         }
       }
       items5[1] = tmp19Result1;
@@ -150,7 +150,7 @@ function ResourceChannelRow(channelId) {
               }
               obj9.firstMessageId = id;
               obj9.containerStyle = tmp.thumbnail;
-              tmp19Result2 = tmp19(tmp2(12009).ForumPostMediaThumbnail, obj9);
+              tmp19Result2 = closure_12(tmp2(12009).ForumPostMediaThumbnail, obj9);
             }
           }
         }

@@ -7,7 +7,7 @@ import GuildStore from "../../stores/GuildStore.tsx";
 const useHasRoleSubscriptionInGuildDefault = useHasRoleSubscriptionInGuild;
 
 require = fn;
-function computeCanEveryoneInGuildSeeRoleSubscriptions(id1, items) {
+function computeCanEveryoneInGuildSeeRoleSubscriptions(id1) {
   let tmp = items;
   if (items === undefined) {
     items = [GuildStore, ImpersonateStore];
@@ -35,10 +35,13 @@ const GuildFeatures = fn(1074).GuildFeatures;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_role_subscriptions/useRoleSubscriptionsVisibleInGuild.tsx");
 
-export const areRoleSubscriptionsVisibleInGuild = function areRoleSubscriptionsVisibleInGuild(id1, arg1) {
+export const areRoleSubscriptionsVisibleInGuild = function areRoleSubscriptionsVisibleInGuild(id1, unsafeMutableRoles) {
   let hasRoleSubscriptionsInGuild = computeCanEveryoneInGuildSeeRoleSubscriptions(id1);
   if (!hasRoleSubscriptionsInGuild) {
-    hasRoleSubscriptionsInGuild = useHasRoleSubscriptionInGuild.computeHasRoleSubscriptionsInGuild(id1, arg1);
+    hasRoleSubscriptionsInGuild = useHasRoleSubscriptionInGuild.computeHasRoleSubscriptionsInGuild(
+      id1,
+      unsafeMutableRoles,
+    );
   }
   return hasRoleSubscriptionsInGuild;
 };

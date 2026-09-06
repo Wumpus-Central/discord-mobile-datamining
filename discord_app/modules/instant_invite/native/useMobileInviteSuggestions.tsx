@@ -91,6 +91,7 @@ export default function useMobileInviteSuggestions(arg0, _location, arg2, applic
       inviteSuggestions.catch(NOOP_NULL).finally(() => {
         closure_1_7(false);
       });
+      const catchPromise = inviteSuggestions.catch(NOOP_NULL);
     }
     memberIds = [];
   }, items2);

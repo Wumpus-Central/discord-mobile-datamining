@@ -2,7 +2,9 @@
 import LoggerDefault from "../../../debug/Logger.tsx";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import ComponentDispatchUtils from "../../../../utils/ComponentDispatchUtils.tsx";
+import NavigationRouteUtils from "../../helpers/NavigationRouteUtils.native.tsx";
 import RootNavigationRef from "../../RootNavigationRef.native.tsx";
+import useChatLayout from "../../../chat/native/useChatLayout.tsx";
 import ChatInputUtils from "../../../../utils/native/ChatInputUtils.tsx";
 import AppAnalyticsUtilsDefault from "../../../app_analytics/AppAnalyticsUtils.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
@@ -232,13 +234,13 @@ export default function _default(channelId) {
       if (rootNavigationRef != null) {
         currentRoute = rootNavigationRef.getCurrentRoute();
       }
-      let tmp23Result = tmp23(4420);
+      let tmp23Result = useChatLayout;
       isChatLockedOpen = tmp23Result.getChatLayout().isChatLockedOpen;
-      tmp23Result = tmp23(4417);
+      tmp23Result = NavigationRouteUtils;
       let coerceChannelRouteResult = tmp23Result.coerceChannelRoute(currentRoute);
       if (tmp3) {
-        coerceChannelRouteResult = tmp23(4417).coerceGuildsRoute(currentRoute);
-        const tmp23Result1 = tmp23(4417);
+        coerceChannelRouteResult = NavigationRouteUtils.coerceGuildsRoute(currentRoute);
+        const tmp23Result1 = NavigationRouteUtils;
       }
       obj = { route: coerceChannelRouteResult, channelId: gesture, currentRoute, isChatLockedOpen, routeParams: null };
       let params;
@@ -257,18 +259,18 @@ export default function _default(channelId) {
         if (params2 != null) {
           channelId = params2.channelId;
         }
-        if (channelId !== tmp5) {
+        if (channelId !== gesture) {
           params = coerceChannelRouteResult.params;
           let channelId1;
           if (params != null) {
             channelId1 = params.channelId;
           }
-          const obj2 = { routeChannelId: channelId1, expectedChannelId: tmp5 };
+          const obj2 = { routeChannelId: channelId1, expectedChannelId: gesture };
           navigation.verbose("handleBackPress", "route channelId mismatch", obj2);
           flag = false;
-        } else if (React5(tmp5)) {
+        } else if (React5(gesture)) {
           navigation.verbose("handleBackPress", "cancelling search before closing panel");
-          React6(tmp5, false, "initial");
+          React6(gesture, false, "initial");
           flag = true;
         } else {
           callback3();
@@ -347,12 +349,11 @@ export default function _default(channelId) {
     if (arg0 !== arg1) {
       const result = disallowGesture.set(arg0);
       if (disallowGesture2 != null) {
-        const result1 = obj.set(arg0);
+        const result1 = disallowGesture2.set(arg0);
       }
       if (!arg0) {
         const result2 = disallowGesture3.set(false);
       }
-      obj = disallowGesture2;
     }
   };
   fn2.__closure = {
@@ -372,10 +373,9 @@ export default function _default(channelId) {
     if (!tmp) {
       let tmp4 = null != translateX3;
       if (tmp4) {
-        tmp4 = obj.get() > 0;
+        tmp4 = translateX3.get() > 0;
       }
       tmp = tmp4;
-      obj = translateX3;
     }
     return tmp;
   };

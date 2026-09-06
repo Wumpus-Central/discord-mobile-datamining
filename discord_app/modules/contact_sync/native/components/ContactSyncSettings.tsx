@@ -18,7 +18,7 @@ function syncContacts() {
   }
   return applyArgumentsResult;
 }
-let closure_14 = async function _syncContacts(arg0, value) {
+let closure_14 = async function _syncContacts(arg0) {
   if (c8 === 2) {
     c8 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -50,18 +50,17 @@ let closure_14 = async function _syncContacts(arg0, value) {
           let payload;
           hasOwnProperty();
           if (closure_2) {
-            if (null != tmp43) {
-              if (null != tmp44) {
+            if (null != closure_0) {
+              if (null != closure_1) {
                 c6 = 1;
                 let obj4 = ContactSyncUtils;
                 c7 = 2;
                 c8 = 1;
-                let obj1 = { value: obj4.getContacts(tmp44), done: false };
+                let obj1 = { value: obj4.getContacts(closure_1), done: false };
                 return obj1;
               }
             }
           }
-          tmp43 = closure_0;
         }
       } else {
         if (1 === tmp8) {
@@ -127,7 +126,7 @@ function updateFriendSync() {
   }
   return applyArgumentsResult;
 }
-let closure_16 = async function _updateFriendSync(arg0, value) {
+let closure_16 = async function _updateFriendSync(arg0) {
   if (c8 === 2) {
     c8 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -244,7 +243,7 @@ export default function ContactSyncSettings() {
   const hasFlagResult = tmpResult.hasFlag(setting, constants2.FIND_BY_PHONE);
   dependencyMap = hasFlagResult;
   const isContactSyncEnabledResult = tmpResult.isContactSyncEnabled(contactSyncAccount);
-  const hasFlagResult1 = contactSyncAccount(1384).hasFlag(setting, constants2.FIND_BY_EMAIL);
+  const tmpResult1 = contactSyncAccount(1384);
   obj = { title: null, children: null };
   const intl = tmp(1114).intl;
   obj.title = intl.string(contactSyncAccount(1114).t.bGSsnc);
@@ -258,7 +257,7 @@ export default function ContactSyncSettings() {
     };
     const items1 = [closure_10(tmp(8593).FormSwitchRow, obj1), closure_10(tmp(8593).FormDivider, {})];
     obj.children = items1;
-    tmp10Result = tmp10(tmp11, obj);
+    tmp10Result = closure_12(closure_11, obj);
   }
   const items2 = [tmp10Result, ,];
   const obj2 = { label: null, value: null, onValueChange: null };
@@ -278,12 +277,12 @@ export default function ContactSyncSettings() {
   tmp10Result = null;
   if (null != contactSyncAccount) {
     let obj3 = { children: null };
-    const items3 = [tmp14(tmp(8593).FormDivider, {})];
+    const items3 = [closure_10(tmp(8593).FormDivider, {})];
     const obj4 = { label: null, trailing: null, onPress: null };
     const intl3 = tmp(1114).intl;
     obj4.label = intl3.string(tmp(1114).t.nAsWKy);
     const obj5 = { label: contactSyncAccount.name };
-    obj4.trailing = tmp14(tmp(8593).FormRow.Arrow, obj5);
+    obj4.trailing = closure_10(tmp(8593).FormRow.Arrow, obj5);
     obj4.onPress = function onPress() {
       phone(hasFlagResult[11]).track(constants.OPEN_MODAL, {
         type: "Change Name",
@@ -295,9 +294,9 @@ export default function ContactSyncSettings() {
         "Contact Sync Name Update Modal",
       );
     };
-    items3[1] = tmp14(tmp(8593).FormRow, obj4);
+    items3[1] = closure_10(tmp(8593).FormRow, obj4);
     obj3.children = items3;
-    tmp10Result = tmp10(tmp11, obj3);
+    tmp10Result = closure_12(closure_11, obj3);
   }
   const obj6 = { children: null };
   items2[2] = tmp10Result;
@@ -305,7 +304,7 @@ export default function ContactSyncSettings() {
   const items4 = [closure_12(contactSyncAccount(8593).FormSection, obj), , ,];
   const obj7 = { children: null };
   const intl4 = tmp(1114).intl;
-  const tmpResult1 = contactSyncAccount(1384);
+  const hasFlagResult1 = contactSyncAccount(1384).hasFlag(setting, constants2.FIND_BY_EMAIL);
   obj7.children = intl4.format(contactSyncAccount(1114).t.BoR0dO, {
     onClick: contactSyncAccount(12680).handleOpenLearnMoreLink,
   });

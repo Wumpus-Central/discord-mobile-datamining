@@ -47,7 +47,7 @@ export default function useFastestListSections(fastestListId) {
     }
     let str;
     if (keyExtractor != null) {
-      str = tmp4(FastestListItemTypeDefault.LIST_FOOTER, 0, 0);
+      str = keyExtractor(FastestListItemTypeDefault.LIST_FOOTER, 0, 0);
     }
     if (str == null) {
       str = "";
@@ -58,7 +58,7 @@ export default function useFastestListSections(fastestListId) {
     }
     let str2;
     if (keyExtractor != null) {
-      str2 = tmp4(FastestListItemTypeDefault.LIST_HEADER, 0, 0);
+      str2 = keyExtractor(FastestListItemTypeDefault.LIST_HEADER, 0, 0);
     }
     if (str2 == null) {
       str2 = "";
@@ -75,7 +75,7 @@ export default function useFastestListSections(fastestListId) {
     const items3 = [];
     if (typeof itemSize === "number") {
       obj = { sizes: null };
-      const items4 = [tmp];
+      const items4 = [itemSize];
       obj.sizes = items4;
       items3.push(obj);
     }
@@ -105,61 +105,56 @@ export default function useFastestListSections(fastestListId) {
           sectionFooterSizes: items6,
           sectionFooterSizeIsUniform: typeof tmp11 === "number",
           itemKeys: items,
-          itemSizeIsUniform: typeof tmp === "number",
+          itemSizeIsUniform: typeof itemSize === "number",
           itemSizes: items3,
         };
         return obj;
       }
     }
-    num3 = 0;
-    if (0 < sections.length) {
-      do {
-        if (typeof tmp10 !== "number") {
-          let arr5 = items5.push(num3(num3));
+    for (let num3 = 0; num3 < sections.length; num3 = num3 + 1) {
+      if (typeof tmp10 !== "number") {
+        let arr5 = items5.push(num3(num3));
+      }
+      if (typeof tmp11 !== "number") {
+        let arr6 = items6.push(num4(num3));
+      }
+      if (!tmp12) {
+        let str4 = keyExtractor(FastestListItemTypeDefault.SECTION_HEADER, num3, 0);
+        if (str4 == null) {
+          str4 = "";
         }
-        if (typeof tmp11 !== "number") {
-          let arr6 = items6.push(num4(num3));
+        let arr7 = items1.push(str4);
+        let str5 = keyExtractor(FastestListItemTypeDefault.SECTION_FOOTER, num3, 0);
+        if (str5 == null) {
+          str5 = "";
+        }
+        let arr8 = items2.push(str5);
+      }
+      if (typeof itemSize !== "number") {
+        let tmp25 = sections[num3];
+        if (typeof itemSize !== "number") {
+          let obj1 = { sizes: [] };
+          let arr9 = items3.push(obj1);
         }
         if (!tmp12) {
-          let tmp17 = keyExtractor;
-          let str4 = keyExtractor(FastestListItemTypeDefault.SECTION_HEADER, num3, 0);
-          if (str4 == null) {
-            str4 = "";
-          }
-          let arr7 = items1.push(str4);
-          let str5 = tmp17(FastestListItemTypeDefault.SECTION_FOOTER, num3, 0);
-          if (str5 == null) {
-            str5 = "";
-          }
-          let arr8 = items2.push(str5);
+          let obj2 = { keys: [] };
+          let arr10 = items.push(obj2);
         }
-        if (typeof tmp !== "number") {
-          let tmp25 = sections[num3];
-          if (typeof tmp !== "number") {
-            let obj1 = { sizes: [] };
-            let arr9 = items3.push(obj1);
+        for (let num4 = 0; num4 < tmp25; num4 = num4 + 1) {
+          if (typeof itemSize !== "number") {
+            let sizes = items3[num3].sizes;
+            let arr11 = sizes.push(itemSize(num3, num4));
           }
           if (!tmp12) {
-            let obj2 = { keys: [] };
-            let arr10 = items.push(obj2);
-          }
-          for (let num4 = 0; num4 < tmp25; num4 = num4 + 1) {
-            if (typeof tmp !== "number") {
-              let sizes = items3[num3].sizes;
-              let arr11 = sizes.push(itemSize(num3, num4));
+            let keys = items[num3].keys;
+            let str6 = keyExtractor(FastestListItemTypeDefault.ITEM, num3, num4);
+            if (str6 == null) {
+              str6 = "";
             }
-            if (!tmp12) {
-              let keys = items[num3].keys;
-              let str6 = keyExtractor(FastestListItemTypeDefault.ITEM, num3, num4);
-              if (str6 == null) {
-                str6 = "";
-              }
-              let arr12 = keys.push(str6);
-            }
+            let arr12 = keys.push(str6);
           }
         }
-        num3 = num3 + 1;
-      } while (num3 < sections.length);
+      }
     }
   }, items);
   let items1 = [tmp, memo];

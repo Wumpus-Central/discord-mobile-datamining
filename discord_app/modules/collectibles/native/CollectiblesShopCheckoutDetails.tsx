@@ -1,10 +1,12 @@
 // discord_app/modules/collectibles/native/CollectiblesShopCheckoutDetails.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import FractionalPremiumSKUs from "../../../../discord_common/js/shared/shared-constants/FractionalPremiumSKUs.tsx";
+import util from "../../../intl/index.native.tsx";
 import utils from "../nameplates/utils.tsx";
 import CollectiblesItemType from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
+import CollectiblesProductUtils from "../utils/CollectiblesProductUtils.tsx";
 import useShopProductItems from "../hooks/useShopProductItems.tsx";
 import useCurrentUser from "../hooks/useCurrentUser.tsx";
 import useMaybeFetchProfileFrameDefault from "../profile_frames/hooks/useMaybeFetchProfileFrame.tsx";
@@ -12,8 +14,12 @@ import useProfileEffectDefault from "../profile_effects/useProfileEffect.tsx";
 import BundleSampleV2Default from "BundleSampleV2.tsx";
 import AvatarDecorationSampleV2Default from "AvatarDecorationSampleV2.tsx";
 import NameplateDefault from "../nameplates/native/Nameplate.tsx";
+import ProfileFrameSamplePreviewDefault from "../profile_frames/native/previews/ProfileFrameSamplePreview.tsx";
 import _modDef8845 from "../../../../discord_assets/assets/orbs/orb_profile_badge_icon-2x.png.js";
+import FractionalNitroCoinIllustration from "FractionalNitroCoinIllustration.tsx";
+import collectibles_CollectiblesUtils from "CollectiblesUtils.tsx";
 import getProductName from "../utils/getProductName.tsx";
+import _modDef11011 from "../../../../discord_assets/assets/collectibles/previews/sample_profile_small.png.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -24,19 +30,19 @@ function ProfileEffectAssetPreview(item) {
   if (null != tmp4) {
     let obj = { style: tmp.profileEffectContainer, children: null };
     obj = { source: null, alt: null, style: null, resizeMode: "cover" };
-    obj = { uri: tmp2(11011) };
+    obj = { uri: _modDef11011 };
     obj.source = obj;
     obj.alt = tmp4.accessibilityLabel;
     obj.style = tmp.profileEffect;
-    const items = [React5(tmp2(5587), obj)];
+    const items = [React5(FastImageDefault, obj)];
     const obj1 = { style: tmp.profileEffect, source: null, alt: null, resizeMode: "cover" };
     const obj2 = { uri: tmp4.thumbnailPreviewSrc };
     obj1.source = obj2;
     obj1.alt = tmp4.title;
-    items[1] = React5(tmp2(5587), obj1);
+    items[1] = React5(FastImageDefault, obj1);
     obj.children = items;
     tmp5 = React6(View, obj);
-    const tmp2Result = tmp2(5587);
+    const tmp2Result = FastImageDefault;
   }
   return tmp5;
 }
@@ -49,10 +55,10 @@ function ProfileFrameAssetPreview(arg0) {
       profileFrame: tmp3,
       previewWidth: width,
       previewHeight: height,
-      profileBackgroundColor: tmp(576).colors.BACKGROUND_BASE_LOW,
+      profileBackgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
     };
-    tmp4 = React5(tmp(8822), obj);
-    const tmpResult = tmp(8822);
+    tmp4 = React5(ProfileFrameSamplePreviewDefault, obj);
+    const tmpResult = ProfileFrameSamplePreviewDefault;
   }
   return tmp4;
 }
@@ -138,10 +144,10 @@ function CollectibleProductPreviewContent(userAvatarSource) {
   if (ALL.has(product.skuId)) {
     const size = {
       skuId: product.skuId,
-      width: tmp2(8846).FRACTIONAL_NITRO_COIN_SIZE.CHECKOUT,
-      height: tmp2(8846).FRACTIONAL_NITRO_COIN_SIZE.CHECKOUT,
+      width: FractionalNitroCoinIllustration.FRACTIONAL_NITRO_COIN_SIZE.CHECKOUT,
+      height: FractionalNitroCoinIllustration.FRACTIONAL_NITRO_COIN_SIZE.CHECKOUT,
     };
-    return React5(tmp2(8846).FractionalNitroCoinIllustration, size);
+    return React5(FractionalNitroCoinIllustration.FractionalNitroCoinIllustration, size);
   } else if (product.skuId === EXTERNAL_PRODUCT_SKU_IDS.ORB_PROFILE_BADGE) {
     let obj = { source: null, style: null };
     obj = { uri: _modDef8845 };
@@ -150,7 +156,7 @@ function CollectibleProductPreviewContent(userAvatarSource) {
     return React5(FastImageDefault, obj);
   } else {
     const type = product.type;
-    if (tmp2(1889).CollectiblesItemType.AVATAR_DECORATION === type) {
+    if (CollectiblesItemType.CollectiblesItemType.AVATAR_DECORATION === type) {
       const obj1 = {
         item: product.items[0],
         size: width,
@@ -158,16 +164,16 @@ function CollectibleProductPreviewContent(userAvatarSource) {
         animate: false,
       };
       return React5(AvatarDecorationSampleV2Default, obj1);
-    } else if (tmp2(1889).CollectiblesItemType.PROFILE_EFFECT === type) {
+    } else if (CollectiblesItemType.CollectiblesItemType.PROFILE_EFFECT === type) {
       const obj2 = { item: product.items[0] };
       return React5(ProfileEffectAssetPreview, obj2);
-    } else if (tmp2(1889).CollectiblesItemType.NAMEPLATE === type) {
+    } else if (CollectiblesItemType.CollectiblesItemType.NAMEPLATE === type) {
       const obj3 = { item: product.items[0] };
       return React5(NameplateAssetPreview, obj3);
-    } else if (tmp2(1889).CollectiblesItemType.PROFILE_FRAME === type) {
+    } else if (CollectiblesItemType.CollectiblesItemType.PROFILE_FRAME === type) {
       const size1 = { item: product.items[0], width, height };
       return React5(ProfileFrameAssetPreview, size1);
-    } else if (tmp2(1889).CollectiblesItemType.BUNDLE === type) {
+    } else if (CollectiblesItemType.CollectiblesItemType.BUNDLE === type) {
       const size2 = { product, width, height };
       return React5(BundleAssetPreview, size2);
     } else {
@@ -185,28 +191,28 @@ function ProductDetails(product) {
   const memo = noop.useMemo(() => {
     const ALL = FractionalPremiumSKUs.FractionalPremiumSKUsSets.ALL;
     if (ALL.has(product.skuId)) {
-      const intl7 = tmp(1114).intl;
-      return intl7.string(tmp(1114).t.DFMPWS);
-    } else if (tmp3.skuId === EXTERNAL_PRODUCT_SKU_IDS.ORB_PROFILE_BADGE) {
-      const intl6 = tmp(1114).intl;
-      return intl6.string(tmp(1114).t["0+rBWT"]);
+      const intl7 = util.intl;
+      return intl7.string(util.t.DFMPWS);
+    } else if (product.skuId === EXTERNAL_PRODUCT_SKU_IDS.ORB_PROFILE_BADGE) {
+      const intl6 = util.intl;
+      return intl6.string(util.t["0+rBWT"]);
     } else {
-      const type = tmp3.type;
-      if (tmp(1889).CollectiblesItemType.AVATAR_DECORATION === type) {
-        const intl5 = tmp(1114).intl;
-        return intl5.string(tmp(1114).t["7v0T9P"]);
-      } else if (tmp(1889).CollectiblesItemType.PROFILE_EFFECT === type) {
-        const intl4 = tmp(1114).intl;
-        return intl4.string(tmp(1114).t.wR5wOo);
-      } else if (tmp(1889).CollectiblesItemType.NAMEPLATE === type) {
-        const intl3 = tmp(1114).intl;
-        return intl3.string(tmp(1114).t.x5CoXR);
-      } else if (tmp(1889).CollectiblesItemType.PROFILE_FRAME === type) {
-        const intl2 = tmp(1114).intl;
-        return intl2.string(tmp(1114).t.GWrZOd);
-      } else if (tmp(1889).CollectiblesItemType.BUNDLE === type) {
-        const intl = tmp(1114).intl;
-        return intl.string(tmp(1114).t.Zr5tjn);
+      const type = product.type;
+      if (CollectiblesItemType.CollectiblesItemType.AVATAR_DECORATION === type) {
+        const intl5 = util.intl;
+        return intl5.string(util.t["7v0T9P"]);
+      } else if (CollectiblesItemType.CollectiblesItemType.PROFILE_EFFECT === type) {
+        const intl4 = util.intl;
+        return intl4.string(util.t.wR5wOo);
+      } else if (CollectiblesItemType.CollectiblesItemType.NAMEPLATE === type) {
+        const intl3 = util.intl;
+        return intl3.string(util.t.x5CoXR);
+      } else if (CollectiblesItemType.CollectiblesItemType.PROFILE_FRAME === type) {
+        const intl2 = util.intl;
+        return intl2.string(util.t.GWrZOd);
+      } else if (CollectiblesItemType.CollectiblesItemType.BUNDLE === type) {
+        const intl = util.intl;
+        return intl.string(util.t.Zr5tjn);
       } else {
         return null;
       }
@@ -241,11 +247,11 @@ function ProductPriceAmountTag(product) {
   const items = [product, hasShopDiscount, useOrbPrice];
   const memo = noop.useMemo(() => {
     if (useOrbPrice) {
-      let tmpResult = tmp(7553);
+      let tmpResult = CollectiblesProductUtils;
       const obj = { product, hasShopDiscount };
       const orbPrice = tmpResult.getProductOrbPrice(obj);
     } else {
-      tmpResult = tmp(8848);
+      tmpResult = collectibles_CollectiblesUtils;
       const priceText = tmpResult.getFormattedPriceForCollectiblesProduct(product, hasShopDiscount, true);
     }
     return { orbPrice, priceText };
@@ -257,11 +263,11 @@ function ProductPriceAmountTag(product) {
       amount = orbPrice.amount;
     }
     let obj = { orbAmount: amount };
-    let tmp3Result = tmp3(hasShopDiscount(useOrbPrice[25]), obj);
+    let tmp3Result = closure_7(hasShopDiscount(useOrbPrice[25]), obj);
     const tmp9 = hasShopDiscount(useOrbPrice[25]);
   } else {
     obj = { variant: "text-md/semibold", children: tmp2 };
-    tmp3Result = tmp3(require("Text/Text").Text, obj);
+    tmp3Result = closure_7(require("Text/Text").Text, obj);
   }
   return tmp3Result;
 }
@@ -339,10 +345,10 @@ let closure_10 = createStyles.createStyles((arg0) => {
   const colors = nativeDefault.colors;
   if (arg0) {
     let BORDER_FEEDBACK_CRITICAL = colors.BACKGROUND_BRAND;
-    let tmp4 = tmp;
+    let tmp4 = importDefault;
   } else {
     BORDER_FEEDBACK_CRITICAL = colors.BORDER_FEEDBACK_CRITICAL;
-    tmp4 = tmp;
+    tmp4 = importDefault;
   }
   let obj = { giftProductContainer: null };
   obj = {
@@ -402,9 +408,9 @@ export default function CollectiblesShopCheckoutDetails(recipientUser) {
     let obj = getProductName;
     const productNameAndTypeLabel = obj.getProductNameAndTypeLabel(product);
     if (flag2) {
-      const intl = tmp(1114).intl;
-      let tmpResult = tmp(7553);
-      obj = { product: tmp3, hasShopDiscount };
+      const intl = util.intl;
+      let tmpResult = CollectiblesProductUtils;
+      obj = { product, hasShopDiscount };
       const productOrbPrice = tmpResult.getProductOrbPrice(obj);
       let str2;
       if (productOrbPrice != null) {
@@ -414,10 +420,10 @@ export default function CollectiblesShopCheckoutDetails(recipientUser) {
         str2 = "";
       }
       obj = { orbAmount: str2 };
-      let str = intl.formatToPlainString(tmp(1114).t.W4DfeF, obj);
+      let str = intl.formatToPlainString(util.t.W4DfeF, obj);
     } else {
-      tmpResult = tmp(8848);
-      str = tmpResult.getFormattedPriceForCollectiblesProduct(tmp3, hasShopDiscount, true);
+      tmpResult = collectibles_CollectiblesUtils;
+      str = tmpResult.getFormattedPriceForCollectiblesProduct(product, hasShopDiscount, true);
       if (str == null) {
         str = "";
       }
@@ -444,8 +450,8 @@ export default function CollectiblesShopCheckoutDetails(recipientUser) {
     const obj2 = { variant: "text-xs/semibold", color: "text-feedback-critical", children: null };
     let intl = tmp3(1114).intl;
     obj2.children = intl.string(tmp3(1114).t["3YfczA"]);
-    obj1.children = tmp10(tmp3(4556).Text, obj2);
-    flag3 = tmp10(tmp9, obj1);
+    obj1.children = closure_7(tmp3(4556).Text, obj2);
+    flag3 = closure_7(View, obj1);
   }
   items3[1] = flag3;
   obj.children = items3;

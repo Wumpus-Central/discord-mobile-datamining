@@ -62,10 +62,10 @@ export const useGetStreamApplication = function useGetStreamApplication(stream) 
     () => {
       let obj = PresenceStore;
       let tmp2 = null;
-      if (null != closure_0) {
+      if (null != stream) {
         let findActivityResult = null;
-        if (null != tmp) {
-          findActivityResult = obj.findActivity(tmp.ownerId, _findPlayingActivity);
+        if (null != stream) {
+          findActivityResult = obj.findActivity(stream.ownerId, _findPlayingActivity);
         }
         let tmp5 = null;
         if (null != findActivityResult) {

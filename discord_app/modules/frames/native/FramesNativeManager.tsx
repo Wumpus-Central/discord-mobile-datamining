@@ -23,7 +23,7 @@ function postMessageToWebView() {
   }
   return applyArgumentsResult;
 }
-let closure_12 = async function _postMessageToWebView(arg0, arg1) {
+let closure_12 = async function _postMessageToWebView(arg0) {
   closure_2 = tmp3;
   await closure_2_9.injectJavaScript(getPostMessageJavaScriptDefault(closure_0));
   if (1 === tmp7) {
@@ -34,11 +34,11 @@ let closure_12 = async function _postMessageToWebView(arg0, arg1) {
     closure_130_1(closure_130_2[11]);
   } else if (arg0 === 1) {
     c6 = 3;
-    throw arg1;
+    throw value;
   } else if (arg0 !== 2) {
     c4 = 0;
   }
-  return arg1;
+  return value;
 };
 const isLaunched = fn(9511).isLaunched;
 const ComponentActions = fn(1074).ComponentActions;
@@ -95,15 +95,16 @@ class FramesNativeManager extends tmp5 {
             origin: managedFrame.data.url,
             iframeId: managedFrame.data.iframeId,
           };
-          obj.handleMessage(parsed, obj, postMessageToWebView);
+          obj.handleMessage(tmp5, obj, postMessageToWebView);
         }
+        tmp5 = parsed;
       } catch (tmp18) {
         const _SyntaxError = SyntaxError;
         if (tmp18 instanceof SyntaxError) {
           if (tmp2.data === closure_7) {
             const managedFrame1 = self.getManagedFrame();
             if (null != managedFrame1) {
-              obj3.leaveFrame(managedFrame1.id);
+              self.leaveFrame(managedFrame1.id);
               obj = { body: null, confirmText: null };
               const intl = util.intl;
               obj.body = intl.string(util.t.tYBBWz);
@@ -111,7 +112,6 @@ class FramesNativeManager extends tmp5 {
               obj.confirmText = intl2.string(util.t.BddRzS);
               actions_AlertActionCreatorsDefault.show(obj);
             }
-            obj3 = self;
           }
         } else {
           throw tmp18;

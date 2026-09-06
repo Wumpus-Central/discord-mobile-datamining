@@ -58,7 +58,7 @@ class VoiceDuration {
   }
 }
 const prototype = VoiceDuration.prototype;
-prototype["start"] = function start(flag, flag2) {
+prototype["start"] = function start() {
   const self = this;
   if (flag === undefined) {
     flag = false;
@@ -96,9 +96,9 @@ prototype["start"] = function start(flag, flag2) {
   const connection = self.connection;
   connection.on(discord_common_BaseConnectionEvent.BaseConnectionEvent.Speaking, (arg0, arg1) => {
     if (self.userId === arg0) {
-      obj.onSpeaking(0 !== arg1);
+      self.onSpeaking(0 !== arg1);
     } else {
-      obj.onListening(0 !== arg1, arg0);
+      self.onListening(0 !== arg1, arg0);
     }
   });
   self.onMuted(flag);
@@ -216,14 +216,14 @@ prototype["addSpeechChunk"] = function addSpeechChunk() {
       if (num == null) {
         num = 0;
       }
-      const speakingMinimumChunks2 = tmp.speakingMinimumChunks;
+      const speakingMinimumChunks2 = self.speakingMinimumChunks;
       const result = speakingMinimumChunks2.set(item, num + closure_0);
-      const speakingMinimumChunkCounts = tmp.speakingMinimumChunkCounts;
+      const speakingMinimumChunkCounts = self.speakingMinimumChunkCounts;
       let num2 = speakingMinimumChunkCounts.get(item);
       if (num2 == null) {
         num2 = 0;
       }
-      const speakingMinimumChunkCounts2 = tmp.speakingMinimumChunkCounts;
+      const speakingMinimumChunkCounts2 = self.speakingMinimumChunkCounts;
       const result1 = speakingMinimumChunkCounts2.set(item, num2 + 1);
     });
   }

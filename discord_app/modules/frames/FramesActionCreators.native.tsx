@@ -4,7 +4,8 @@ import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 import VoiceStateStore from "../../stores/VoiceStateStore.tsx";
 
 let closure_5 = async function _launchFrameOnNative() {
-  closure_129_0 = await _launchFrameAll.launchFrame(closure_0);
+  await _launchFrameAll.launchFrame(closure_0);
+  closure_129_0 = value;
   (function closeVoicePanel() {
     if (currentClientInVoiceChannel.isCurrentClientInVoiceChannel()) {
       closure_1_0(closure_1_2[2])();

@@ -1,8 +1,12 @@
 // discord_app/modules/parent_tools/native/FamilyCenterActivityGiftRow.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import UserUtilsDefault from "../../../utils/UserUtils.tsx";
+import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import useCollectiblesDataDefault from "../../collectibles/hooks/useCollectiblesData.tsx";
 import useSelectedTeenUser from "../hooks/useSelectedTeenUser.tsx";
 import FamilyCenterActivityPurchaseRowUtils from "../FamilyCenterActivityPurchaseRowUtils.tsx";
+import FamilyCenterActivityItemPreviewDefault from "FamilyCenterActivityItemPreview.tsx";
+import FamilyCenterActivityGiftRowUtils from "../FamilyCenterActivityGiftRowUtils.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -52,16 +56,16 @@ export default function FamilyCenterActivityGiftRow(arg0) {
     obj = { claimed, price, gifterName: null, offeredAt: null, claimedAt: null };
     let name = null;
     if (null != teenUserForId) {
-      let tmp2Result = tmp2(4404);
+      let tmp2Result = UserUtilsDefault;
       name = tmp2Result.getName(teenUserForId);
     }
     obj.gifterName = name;
     obj.offeredAt = offeredAt;
     obj.claimedAt = claimedAt;
     obj = { style: tmp.container, children: null };
-    const giftSubtext = tmp5(14904).getGiftSubtext(obj);
+    const giftSubtext = FamilyCenterActivityGiftRowUtils.getGiftSubtext(obj);
     obj1 = { displayName, product: null, isSubscription: null, subscriptionPlanId: null };
-    tmp2Result = tmp2(14903);
+    tmp2Result = FamilyCenterActivityItemPreviewDefault;
     if (product == null) {
       product = null;
     }
@@ -77,9 +81,9 @@ export default function FamilyCenterActivityGiftRow(arg0) {
       lineClamp: 1,
       children: displayName,
     };
-    const items1 = [React4(tmp5(4556).Text, obj3)];
+    const items1 = [React4(Text_Text.Text, obj3)];
     const obj4 = { variant: "text-xs/medium", color: "text-muted", children: giftSubtext };
-    items1[1] = React4(tmp5(4556).Text, obj4);
+    items1[1] = React4(Text_Text.Text, obj4);
     obj2.children = items1;
     items[1] = hasOwnProperty(View, obj2);
     obj.children = items;

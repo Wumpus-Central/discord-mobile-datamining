@@ -23,11 +23,11 @@ function handleActivityStateChanged(COMPLETE, JOIN, type) {
     obj = { state: COMPLETE, remotePartyId };
     obj[JOIN] = obj;
     obj[applicationId] = obj;
-    if (COMPLETE === tmp5.FAILED) {
+    if (COMPLETE === constants.FAILED) {
       closure_129_0 = applicationId;
       closure_129_1 = JOIN;
       if (null != dependencyMap[applicationId]) {
-        tmp16[applicationId].stop();
+        dependencyMap[applicationId].stop();
       }
       const timeout = new applicationId(4447).Timeout();
       timeout.start(c9, () => {
@@ -35,14 +35,14 @@ function handleActivityStateChanged(COMPLETE, JOIN, type) {
         return obj.dispatch(obj);
       });
       dependencyMap[applicationId] = timeout;
-    } else if (COMPLETE === tmp5.LOADING) {
+    } else if (COMPLETE === constants.LOADING) {
       let num = 15000;
       if (null == remotePartyId) {
         num = c9;
       }
       const activityType = JOIN;
       if (null != dependencyMap[applicationId]) {
-        tmp7[applicationId].stop();
+        dependencyMap[applicationId].stop();
       }
       const timeout1 = new applicationId(4447).Timeout();
       timeout1.start(num, () => {

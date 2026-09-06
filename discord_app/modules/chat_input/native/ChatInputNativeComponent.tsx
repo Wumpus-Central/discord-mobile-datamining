@@ -47,31 +47,31 @@ const forwardRefResult = noop.forwardRef((markAsSpoilerTitle, ref) => {
   const unsafe_rawColors = nativeDefault.unsafe_rawColors;
   if (isThemeDarkResult) {
     let PRIMARY_500 = unsafe_rawColors.WHITE;
-    let tmp9 = tmp8;
+    let tmp9 = importDefault;
   } else {
     PRIMARY_500 = unsafe_rawColors.PRIMARY_500;
-    tmp9 = tmp8;
+    tmp9 = importDefault;
   }
   let num = 0.6;
   if (null != ClientThemesBackgroundStore.gradientPreset) {
     num = 0.8;
   }
-  let tmp4Result = tmp4(1115);
+  let tmp4Result = PlatformUtils;
   let tmp11;
   if (!tmp4Result.isAndroid()) {
     tmp11 = accessibilityLabel;
   }
-  tmp4Result = tmp4(1115);
+  tmp4Result = PlatformUtils;
   let tmp12;
   if (!tmp4Result.isAndroid()) {
     tmp12 = customKeyboard;
   }
-  const hexWithOpacityResult = ColorUtils.hexWithOpacity(PRIMARY_500, num);
+  PlatformUtils;
   let num2 = 2;
   if (isThemeDarkResult) {
     num2 = 1;
   }
-  const tmp4Result1 = PlatformUtils;
+  const hexWithOpacityResult = ColorUtils.hexWithOpacity(PRIMARY_500, num);
   obj = {
     accessible,
     accessibilityLabel: tmp11,

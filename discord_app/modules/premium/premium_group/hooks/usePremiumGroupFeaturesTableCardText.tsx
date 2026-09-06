@@ -1,6 +1,9 @@
 // discord_app/modules/premium/premium_group/hooks/usePremiumGroupFeaturesTableCardText.tsx
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
+import util from "../../../../intl/index.native.tsx";
 import user from "../../../../../discord_common/js/packages/protos/discord_protos/users/v1/user.tsx";
+import _modDef3063 from "../PremiumGroup.messages.js";
+import PremiumGroupUtils from "../PremiumGroupUtils.native.tsx";
 import usePremiumGroupPrimaryNameDefault from "usePremiumGroupPrimaryName.tsx";
 import SubscriptionStore from "../../../../stores/billing/SubscriptionStore.tsx";
 
@@ -21,28 +24,28 @@ export default function usePremiumGroupFeaturesTableCardText(arg0, arg1) {
   if (arg0 === user.PremiumSubscriptionGroupRole.UNSPECIFIED) {
     return null;
   } else {
-    if (arg0 === tmp(1379).PremiumSubscriptionGroupRole.PRIMARY) {
-      let priceString = tmp(8049).getPriceString(stateFromStores, { withIntervals: true });
-      const tmpResult = tmp(8049);
+    if (arg0 === user.PremiumSubscriptionGroupRole.PRIMARY) {
+      let priceString = PremiumGroupUtils.getPriceString(stateFromStores, { withIntervals: true });
+      const tmpResult = PremiumGroupUtils;
     } else {
       priceString = null;
       if (null != tmp4) {
-        const intl = tmp(1114).intl;
+        const intl = util.intl;
         obj = { primaryName: tmp4, premiumGroupProductName: React4() };
-        priceString = intl.format(tmp3(3063).Nu9LNm, obj);
+        priceString = intl.format(_modDef3063.Nu9LNm, obj);
       }
     }
     let str = "...";
     if (null != priceString) {
       str = priceString;
     }
-    if (arg0 === tmp(1379).PremiumSubscriptionGroupRole.PRIMARY) {
-      const intl3 = tmp(1114).intl;
+    if (arg0 === user.PremiumSubscriptionGroupRole.PRIMARY) {
+      const intl3 = util.intl;
       obj = { helpCenterLink, premiumGroupProductName: React4() };
-      let formatResult = intl3.format(tmp3(3063)["+R/K74"], obj);
+      let formatResult = intl3.format(_modDef3063["+R/K74"], obj);
     } else {
-      const intl2 = tmp(1114).intl;
-      const tmp3Result = tmp3(3063);
+      const intl2 = util.intl;
+      const tmp3Result = _modDef3063;
       obj1 = { helpCenterLink };
       formatResult = intl2.format(arg1 ? tmp3Result["xF+upx"] : tmp3Result.qqfnOm, obj1);
     }

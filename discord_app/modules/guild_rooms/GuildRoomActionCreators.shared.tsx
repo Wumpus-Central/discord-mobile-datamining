@@ -11,7 +11,7 @@ import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
 import GuildRoomStore from "GuildRoomStore.tsx";
 
 require = fn;
-let closure_8 = async function _guildRoomConnect(arg0, value) {
+let closure_8 = async function _guildRoomConnect(arg0) {
   if (c13 === 2) {
     c13 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -42,7 +42,6 @@ let closure_8 = async function _guildRoomConnect(arg0, value) {
           closure_136_0 = closure_0;
           closure_136_1 = closure_1;
           closure_136_2 = closure_2;
-          let tmp90 = closure_3;
           closure_136_3 = closure_3;
           closure_136_4 = undefined;
           closure_136_5 = undefined;
@@ -53,21 +52,18 @@ let closure_8 = async function _guildRoomConnect(arg0, value) {
           closure_136_10 = undefined;
           c11 = 1;
           closure_4 = closure_2;
-          let tmp87 = closure_0;
-          let tmp88 = closure_1;
           if (closure_2 == null) {
             closure_4 = React5;
           }
           closure_136_4 = closure_4;
-          let UNSET = tmp90;
+          let UNSET = closure_3;
           let tmp40 = closure_4;
-          if (tmp90 == null) {
+          if (closure_3 == null) {
             UNSET = GuildRoomSeats.GuildRoomSeats.UNSET;
           }
           closure_136_5 = UNSET;
           let HTTP = HTTPUtils.HTTP;
-          let request = { url: null, body: null, rejectWithError: true };
-          request.url = Endpoints.GUILD_ROOM_CONNECT(tmp87, tmp88);
+          let request = { url: Endpoints.GUILD_ROOM_CONNECT(closure_0, closure_1), body: null, rejectWithError: true };
           let obj1 = { position: tmp40, seat: UNSET };
           request.body = obj1;
           c12 = 2;
@@ -172,9 +168,8 @@ let closure_8 = async function _guildRoomConnect(arg0, value) {
     }
   }
 };
-let closure_9 = async function _guildRoomUpdate(arg0, roomId, arg2) {
+let closure_9 = async function _guildRoomUpdate(arg0) {
   closure_0 = arg0;
-  closure_2 = arg2;
   c7 = 0;
   c8 = 0;
   c6 = 0;
@@ -221,38 +216,38 @@ let closure_9 = async function _guildRoomUpdate(arg0, roomId, arg2) {
             const obj1 = { type: "GUILD_ROOM_LOCAL_UPDATE", roomId };
             let background;
             if (body != null) {
-              background = tmp104.background;
+              background = body.background;
             }
             if (null != background) {
-              obj1.background = tmp104.background;
+              obj1.background = body.background;
             }
             let user_position;
             if (body != null) {
-              user_position = tmp104.user_position;
+              user_position = body.user_position;
             }
             if (null != user_position) {
-              obj1.position = tmp104.user_position;
+              obj1.position = body.user_position;
             }
             let user_seat;
             if (body != null) {
-              user_seat = tmp104.user_seat;
+              user_seat = body.user_seat;
             }
             if (null != user_seat) {
-              obj1.seat = tmp104.user_seat;
+              obj1.seat = body.user_seat;
             }
             let user_status_id;
             if (body != null) {
-              user_status_id = tmp104.user_status_id;
+              user_status_id = body.user_status_id;
             }
             if (null != user_status_id) {
-              obj1.statusId = tmp104.user_status_id;
+              obj1.statusId = body.user_status_id;
             }
             let user_status_text;
             if (body != null) {
-              user_status_text = tmp104.user_status_text;
+              user_status_text = body.user_status_text;
             }
             if (null != user_status_text) {
-              obj1.statusText = tmp104.user_status_text;
+              obj1.statusText = body.user_status_text;
             }
             DispatcherDefault.dispatch(obj1);
             const HTTP = HTTPUtils.HTTP;
@@ -389,7 +384,7 @@ function guildRoomObjectCreate() {
   }
   return applyArgumentsResult;
 }
-let closure_11 = async function _guildRoomObjectCreate(arg0, arg1, body) {
+let closure_11 = async function _guildRoomObjectCreate(arg0, arg1) {
   closure_0 = arg0;
   closure_1 = arg1;
   c4 = 0;
@@ -401,7 +396,7 @@ let closure_11 = async function _guildRoomObjectCreate(arg0, arg1, body) {
     return value;
   })();
 };
-let closure_12 = async function _guildRoomObjectUpdate(arg0, arg1, arg2, body) {
+let closure_12 = async function _guildRoomObjectUpdate(arg0, arg1, arg2) {
   closure_0 = arg0;
   closure_1 = arg1;
   closure_2 = arg2;
@@ -428,7 +423,7 @@ function guildRoomObjectDelete() {
   }
   return applyArgumentsResult;
 }
-let closure_14 = async function _guildRoomObjectDelete(arg0, arg1, arg2, body) {
+let closure_14 = async function _guildRoomObjectDelete(arg0, arg1, arg2) {
   closure_0 = arg0;
   closure_1 = arg1;
   closure_2 = arg2;
@@ -449,7 +444,7 @@ function deletePendingGuildRoomNote(roomId) {
   const obj = { type: "GUILD_ROOM_PENDING_NOTE_DELETE", roomId };
   obj.dispatch(obj);
 }
-let closure_16 = async function _createGuildRoomNote(arg0, roomId, content, position) {
+let closure_16 = async function _createGuildRoomNote(arg0) {
   closure_0 = arg0;
   c8 = 0;
   c9 = 0;
@@ -534,7 +529,7 @@ let closure_16 = async function _createGuildRoomNote(arg0, roomId, content, posi
     }
   })();
 };
-let closure_17 = async function _deleteGuildRoomNote(arg0, value) {
+let closure_17 = async function _deleteGuildRoomNote(arg0) {
   if (c6 === 2) {
     c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -591,7 +586,7 @@ let closure_17 = async function _deleteGuildRoomNote(arg0, value) {
     }
   }
 };
-let closure_18 = async function _fetchGuildRoom(arg0, arg1) {
+let closure_18 = async function _fetchGuildRoom(arg0) {
   closure_3 = tmp3;
   closure_130_0 = closure_0;
   const HTTP = HTTPUtils.HTTP;
@@ -604,16 +599,16 @@ let closure_18 = async function _fetchGuildRoom(arg0, arg1) {
     closure_131_0(closure_131_2[13]);
   } else if (arg0 === 1) {
     c7 = 3;
-    throw arg1;
+    throw value;
   } else if (arg0 !== 2) {
-    closure_130_1 = arg1;
+    closure_130_1 = value;
     closure_130_2 = closure_131_0(closure_131_2[6]).serverGuildRoomToClient(closure_130_1.body);
     obj1 = closure_131_1(closure_131_2[7]);
     obj1.dispatch({ type: "GUILD_ROOM_FETCH_SUCCESS", guildId: closure_130_0, room: closure_130_2 });
     c5 = 0;
     closure_131_0(closure_131_2[6]);
   }
-  return arg1;
+  return value;
 };
 let Endpoints = fn(1074).Endpoints;
 let closure_7 = { x: 0, y: 0 };

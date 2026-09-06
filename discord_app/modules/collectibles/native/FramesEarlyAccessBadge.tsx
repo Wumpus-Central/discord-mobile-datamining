@@ -69,7 +69,7 @@ function BadgeWithTooltip(tooltipPosition) {
   if (isThemeDarkResult) {
     str = "control-overlay-primary-text-default";
   }
-  const intl2 = tmp7(1114).intl;
+  const intl2 = util.intl;
   const stringResult1 = intl2.string(util.t["1m6qcO"]);
   obj = {
     ref,
@@ -97,7 +97,7 @@ function StaticBadge() {
   if (isThemeDarkResult) {
     str = "control-overlay-primary-text-default";
   }
-  const intl = tmp4(1114).intl;
+  const intl = util.intl;
   const stringResult = intl.string(util.t["1m6qcO"]);
   obj = { accessibilityLabel: stringResult, style: null, children: null };
   const items = [tmp3.pillBase, isThemeDarkResult ? tmp3.pillDark : tmp3.pillLight];
@@ -128,14 +128,14 @@ export default function _default(tooltipPosition) {
   if (!obj.useIsProfileFramesEarlyAccessPhase(tooltipPosition.location)) {
     return null;
   } else if (flag2) {
-    let tmp3Result = tmp3(StaticBadge, {});
+    let tmp3Result = React5(StaticBadge, {});
   } else if (flag) {
     obj = { tooltipPosition: str };
-    tmp3Result = tmp3(BadgeWithTooltip, obj);
+    tmp3Result = React5(BadgeWithTooltip, obj);
   } else {
     obj = { zIndex: 3, children: null };
     const obj1 = { tooltipPosition: str };
-    obj.children = tmp3(BadgeWithTooltip, obj1);
-    tmp3Result = tmp3(LayerScope.LayerScope, obj);
+    obj.children = React5(BadgeWithTooltip, obj1);
+    tmp3Result = React5(LayerScope.LayerScope, obj);
   }
 }

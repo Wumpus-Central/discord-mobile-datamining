@@ -19,14 +19,13 @@ InlineUploader["fromBlob"] = function fromBlob(surface, arg1) {
   let obj = DiscordMd5Default;
   obj.fromBlob(arg1);
   if (typeof InlineUploader === "function") {
-    obj = Object.create(tmp.prototype);
+    obj = Object.create(InlineUploader.prototype);
     obj.surface = surface;
     obj.originalMd5Promise = tmp3;
     return obj;
   } else {
     throw new TypeError("Trying to call a non-function");
   }
-  tmp = InlineUploader;
 };
 prototype["getOriginalMd5"] = function getOriginalMd5() {
   return this.originalMd5Promise;
@@ -49,12 +48,11 @@ InlineUploader["buildHeadersForMd5"] = function buildHeadersForMd5(originalMd5, 
         let tmp3 = arg0[item10006];
         let tmp4 = tmp3;
         let isMatch = null != tmp3;
-        let tmp2 = item10006;
         if (isMatch) {
           isMatch = regex.test(tmp4);
         }
         if (isMatch) {
-          let items1 = [tmp2];
+          let items1 = [item10006];
           items1[1] = tmp4;
           let arr = items.push(items1);
         }
@@ -101,7 +99,7 @@ prototype["buildHeaders"] = function buildHeaders(arg0) {
     closure_1 = buildHeadersForMd5;
     buildHeadersForMd5 = buildHeadersForMd5.buildHeadersForMd5;
     await self.originalMd5Promise;
-    return buildHeadersForMd5(arg1, closure_130_0);
+    return buildHeadersForMd5(value, closure_130_0);
   })();
 };
 const size = fn(2);

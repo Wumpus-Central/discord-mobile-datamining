@@ -33,7 +33,7 @@ export default function GuildEnableCommunicationAlert(guildId) {
   guildId = guildId.guildId;
   const userId = guildId.userId;
   const merged = Object.assign(guildId, Object.assign({ guildId: 0, userId: 0, onCancel: 0 }));
-  _slicedToArray = async function _handleConfirmRemoveTimeout(arg0, value) {
+  _slicedToArray = async function _handleConfirmRemoveTimeout(arg0) {
     if (dependencyMap === 2) {
       dependencyMap = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -123,8 +123,6 @@ export default function GuildEnableCommunicationAlert(guildId) {
   obj = { style: tmp2.description, variant: "text-sm/medium", children: null };
   const intl4 = tmp9(1114).intl;
   const user = UserStore.getUser(userId);
-  const tmp11 = closure_11;
-  const tmp12 = View;
   const tmp7 = userId(4994);
   let str = userId(4712).getName(guildId, null, user);
   if (str == null) {
@@ -136,7 +134,7 @@ export default function GuildEnableCommunicationAlert(guildId) {
       let num = 0;
       if (null != closure_3) {
         const _Date = Date;
-        num = new Date(tmp);
+        num = new Date(closure_3);
       }
       return closure_2_10(CountDownDefault, { style: countdown.countdown, deadline: num, withUnits: true });
     },
@@ -150,6 +148,6 @@ export default function GuildEnableCommunicationAlert(guildId) {
   obj2.children = intl5.format(guildId(1114).t.KtENkK, { link });
   items[1] = closure_10(guildId(4556).Text, obj2);
   obj.children = items;
-  obj.children = tmp11(tmp12, obj);
+  obj.children = closure_11(View, obj);
   return closure_10(tmp7, obj);
 }

@@ -6,6 +6,7 @@ import PlatformUtils2 from "../PlatformUtils.tsx";
 import v1 from "../../../_runtime/01256_v1.js";
 import ClientInfoUtilsAll from "ClientInfoUtils.tsx";
 import DeviceUtils from "DeviceUtils.tsx";
+import ProductIds from "../../modules/premium/native/ProductIds.android.tsx";
 import StorekitIAPQueueDefault from "../../modules/billing/native/StorekitIAPQueue.tsx";
 import GeneratedPaymentCurrencies from "../../../discord_common/js/shared/shared-constants/GeneratedPaymentCurrencies.tsx";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
@@ -47,7 +48,7 @@ let closure_16 = async function _restorePurchases(arg0) {
   let fullRestore = arg0;
   c7 = 0;
   c8 = 0;
-  let iter = (async (arg0, value) => {
+  let iter = (async (arg0) => {
     if (c8 === 2) {
       c8 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -253,10 +254,9 @@ function isStorekit2Available() {
   if (isIOSResult) {
     let isAvailableResult;
     if (closure_1_12 != null) {
-      isAvailableResult = obj2.isAvailable();
+      isAvailableResult = closure_1_12.isAvailable();
     }
     isIOSResult = 1 === isAvailableResult;
-    obj2 = closure_1_12;
   }
   return isIOSResult;
 }
@@ -274,7 +274,7 @@ function remapStorefront(countryCode) {
   }
   return { currency, country };
 }
-let closure_19 = async function _fetchStoreFront(arg0, value) {
+let closure_19 = async function _fetchStoreFront() {
   if (c5 === 2) {
     c5 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -359,9 +359,9 @@ let _default = {
   loadProducts() {
     if (obj.isIOS()) {
       const _Object = Object;
-      let items = [StorekitIAPQueueDefault.fetchSubscriptions(Object.values(tmp(7240).ProductIds))];
+      let items = [StorekitIAPQueueDefault.fetchSubscriptions(Object.values(ProductIds.ProductIds))];
       const _Object2 = Object;
-      items[1] = StorekitIAPQueueDefault.fetchProducts(Object.values(tmp(7240).ProductIds));
+      items[1] = StorekitIAPQueueDefault.fetchProducts(Object.values(ProductIds.ProductIds));
       let nextPromise = _Promise.all(items).then((result) => {
         [r10007, tmp] = result;
         set = new Set();
@@ -428,9 +428,8 @@ let _default = {
                 } else {
                   const _Error2 = Error;
                   const error = new Error("purchaseProduct: no valid user");
-                  tmp48(error);
+                  withOffer(error);
                 }
-                tmp48 = withOffer;
               }
             } else {
               if (1 === tmp7) {
@@ -631,9 +630,8 @@ export const makeIAPRequest = function makeIAPRequest(arg0, arg1, arg2) {
               } else {
                 const _Error2 = Error;
                 const error = new Error("purchaseProduct: no valid user");
-                tmp61(error);
+                sku(error);
               }
-              tmp61 = sku;
             }
           } else {
             if (1 === tmp7) {
@@ -716,10 +714,10 @@ export const useCanPurchaseIAP = function useCanPurchaseIAP(productId) {
     const isReadyResult = IAPStore.isReady();
     let tmp2 = !isReadyResult;
     if (isReadyResult) {
-      let isBusyResult = obj.isBusy();
+      let isBusyResult = IAPStore.isBusy();
       if (isBusyResult) {
-        isBusyResult = null == closure_0 || !obj.isPurchasingProduct(tmp4);
-        const tmp6 = null == closure_0 || !obj.isPurchasingProduct(tmp4);
+        isBusyResult = null == closure_0 || !IAPStore.isPurchasingProduct(tmp4);
+        const tmp6 = null == closure_0 || !IAPStore.isPurchasingProduct(tmp4);
       }
       tmp2 = isBusyResult;
     }
@@ -736,10 +734,9 @@ export const manageSubscription = function manageSubscription() {
   if (isIOSResult) {
     let isAvailableResult;
     if (closure_1_12 != null) {
-      isAvailableResult = obj2.isAvailable();
+      isAvailableResult = closure_1_12.isAvailable();
     }
     isIOSResult = 1 === isAvailableResult;
-    obj2 = closure_1_12;
   }
   if (isIOSResult) {
     let result = closure_1_12.showManageSubscriptions();

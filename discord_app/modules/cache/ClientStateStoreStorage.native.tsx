@@ -4,10 +4,10 @@ import size from "../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/cache/ClientStateStoreStorage.native.tsx");
 
-export const setClientState = function setClientState(arg0) {
+export const setClientState = function setClientState(id) {
   let str;
-  if (arg0 != null) {
-    str = arg0.toString();
+  if (id != null) {
+    str = id.toString();
   }
   NativeFastConnectModuleDefault.setClientState(str, undefined);
 };

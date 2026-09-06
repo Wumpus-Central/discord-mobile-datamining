@@ -4,6 +4,7 @@ import useChatLayout from "../../../chat/native/useChatLayout.tsx";
 import useBaseAppContainerDimensions from "../useBaseAppContainerDimensions.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
+const useChatLayoutDefault = useChatLayout;
 const useBaseAppContainerDimensionsDefault = useBaseAppContainerDimensions;
 
 const DM_WIDTH = Constants.DM_WIDTH;
@@ -35,4 +36,5 @@ export const useDrawerWidth = function useDrawerWidth() {
     const _Math = Math;
     bound = Math.min(closure_4, width - 32);
   }
+  tmp = useChatLayoutDefault();
 };

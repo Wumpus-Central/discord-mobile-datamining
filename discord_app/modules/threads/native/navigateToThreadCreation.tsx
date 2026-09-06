@@ -1,8 +1,9 @@
 // discord_app/modules/threads/native/navigateToThreadCreation.tsx
+import NavigationRouteUtils from "../../main_tabs_v2/helpers/NavigationRouteUtils.native.tsx";
+import transitionToChannel from "../../routing/transitionToChannel.tsx";
 import ThreadActionCreatorsDefault from "../ThreadActionCreators.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
-const transitionToChannel = tmp3(4571);
 let result = size.fileFinishedImporting("modules/threads/native/navigateToThreadCreation.tsx");
 
 export const navigateToThreadCreation = function navigateToThreadCreation(channel, Message) {
@@ -11,4 +12,5 @@ export const navigateToThreadCreation = function navigateToThreadCreation(channe
     transitionToChannel.transitionToChannel(channel.id);
     const tmp3Result = transitionToChannel;
   }
+  obj2 = NavigationRouteUtils;
 };

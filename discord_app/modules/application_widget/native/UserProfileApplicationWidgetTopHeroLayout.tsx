@@ -5,6 +5,7 @@ import _modDef5664 from "../../../../_runtime/metro/05664__.js";
 import UserProfileSharedStyles from "../../user_profile/native/UserProfileSharedStyles.tsx";
 import resolvedValuesFromUserApplicationIdentityProfile from "../../../../discord_common/js/packages/application-widget-renderer/src/index.tsx";
 import UserProfileApplicationWidgetFieldUtils from "../../user_profile/native/UserProfileApplicationWidgetFieldUtils.tsx";
+import UserProfileApplicationWidgetSkeletons from "../../user_profile/native/UserProfileApplicationWidgetSkeletons.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
@@ -122,7 +123,7 @@ export default function UserProfileApplicationWidgetTopHeroLayout(header) {
   let tmp15Result = null == fieldValue || null == tmp3;
   if (tmp15Result) {
     obj3 = { style: tmp.heroImageSkeleton };
-    tmp15Result = tmp15(tmp4(9014).ImageSkeleton, obj3);
+    tmp15Result = React6(UserProfileApplicationWidgetSkeletons.ImageSkeleton, obj3);
   }
   obj2.children = tmp15Result;
   items3[1] = React6(timestampProducer, obj2);
@@ -151,20 +152,20 @@ export default function UserProfileApplicationWidgetTopHeroLayout(header) {
       ({ START: obj16.start, END: obj16.end } = HorizontalGradient);
       obj8.colors = colors;
       obj8.style = tmp.heroImageFadeGradient;
-      const items5 = [tmp15(LinearGradientDefault, obj8)];
+      const items5 = [React6(LinearGradientDefault, obj8)];
       const obj9 = { style: tmp.heroImageMaskRemainder };
-      items5[1] = tmp15(tmp14, obj9);
+      items5[1] = React6(timestampProducer, obj9);
       obj7.children = items5;
-      obj6.maskElement = tmp13(tmp14, obj7);
+      obj6.maskElement = React7(timestampProducer, obj7);
       const obj10 = { source: null, style: null };
       const obj11 = { uri: fieldValue.media.url };
       obj10.source = obj11;
       obj10.style = { width: "100%", height: "100%" };
-      obj6.children = tmp15(hasOwnProperty, obj10);
-      tmp15Result = tmp15(_modDef5664, obj6);
+      obj6.children = React6(hasOwnProperty, obj10);
+      tmp15Result = React6(_modDef5664, obj6);
     }
     obj4.children = tmp15Result;
-    tmp15Result1 = tmp15(tmp14, obj4);
+    tmp15Result1 = React6(timestampProducer, obj4);
   }
   items1[2] = tmp15Result1;
   obj.children = items1;

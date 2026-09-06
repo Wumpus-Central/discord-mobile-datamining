@@ -47,7 +47,8 @@ export default function SafetyCheckScreen() {
     obj = {
       headerRef: ref,
       currentStep: tmp2(tmp3[11]).EnableCommunityModalSteps.STEP_1,
-      disableNextStep: guild.explicitContentFilter !== tmp17.ALL_MEMBERS || guild.verificationLevel === tmp15.NONE,
+      disableNextStep:
+        guild.explicitContentFilter !== constants2.ALL_MEMBERS || guild.verificationLevel === constants.NONE,
       children: null,
     };
     obj = { style: enableCommunitySharedStyles.content, children: null };
@@ -88,7 +89,7 @@ export default function SafetyCheckScreen() {
     const obj9 = { label: null, value: null, disabled: null, onValueChange: null };
     const intl5 = tmp2(tmp3[13]).intl;
     obj9.label = intl5.string(tmp2(tmp3[13]).t["rkA56+"]);
-    obj9.value = guild.verificationLevel !== tmp15.NONE;
+    obj9.value = guild.verificationLevel !== constants.NONE;
     obj9.disabled = verificationLevel !== tmp16;
     obj9.onValueChange = function onValueChange(arg0) {
       if (null != guild) {
@@ -115,7 +116,7 @@ export default function SafetyCheckScreen() {
     const obj12 = { label: null, value: null, disabled: null, onValueChange: null };
     const intl7 = tmp2(tmp3[13]).intl;
     obj12.label = intl7.string(tmp2(tmp3[13]).t.zOuzl7);
-    obj12.value = guild.explicitContentFilter === tmp17.ALL_MEMBERS;
+    obj12.value = guild.explicitContentFilter === constants2.ALL_MEMBERS;
     obj12.disabled = first1 === tmp18;
     obj12.onValueChange = function onValueChange(arg0) {
       if (null != guild) {
@@ -137,8 +138,8 @@ export default function SafetyCheckScreen() {
     obj5.children = items3;
     items2[1] = closure_11(tmp2(tmp3[14]).Stack, obj5);
     obj.children = items2;
-    tmp20Result = tmp20(tmp2(tmp3[11]).EnableCommunityModalScreen, obj);
-    const tmp21 = guild.explicitContentFilter !== tmp17.ALL_MEMBERS || guild.verificationLevel === tmp15.NONE;
+    tmp20Result = closure_11(tmp2(tmp3[11]).EnableCommunityModalScreen, obj);
+    const tmp21 = guild.explicitContentFilter !== constants2.ALL_MEMBERS || guild.verificationLevel === constants.NONE;
   }
   return tmp20Result;
 }

@@ -1,11 +1,11 @@
 // discord_app/modules/app_icons/native/SettingsItemAppIcon.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import AppIconTypes from "../AppIconTypes.tsx";
+import ClydeIcon from "../../../design/components/Icon/native/redesign/generated/ClydeIcon.tsx";
 import AppIconUtils from "AppIconUtils.tsx";
 import AppIconDefault from "AppIcon.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
-const ClydeIcon = tmp4(10818);
 require = fn;
 const getIconById = fn(9323).getIconById;
 const jsx = fn(21).jsx;
@@ -33,4 +33,5 @@ export default function SettingsItemAppIcon(color) {
     return tmp11;
   }
   tmp11 = jsx(ClydeIcon.ClydeIcon, { color: INTERACTIVE_ICON_DEFAULT });
+  tmp7 = getIconById(currentAppIcon);
 }

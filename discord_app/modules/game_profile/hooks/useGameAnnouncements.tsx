@@ -15,17 +15,17 @@ export default function useGameAnnouncements(arg0, limit) {
   const stateFromStoresObject = obj.useStateFromStoresObject(items, () => {
     let announcements;
     if (null != closure_0) {
-      announcements = GameProfileStore.getAnnouncements(tmp);
+      announcements = GameProfileStore.getAnnouncements(closure_0);
     }
     const obj = { data: announcements, hasFetched: null, isFetching: null };
-    let result = null != tmp;
+    let result = null != closure_0;
     if (result) {
-      result = GameProfileStore.hasAnnouncementsBeenFetched(tmp);
+      result = GameProfileStore.hasAnnouncementsBeenFetched(closure_0);
     }
     obj.hasFetched = result;
-    let result1 = null != tmp;
+    let result1 = null != closure_0;
     if (result1) {
-      result1 = GameProfileStore.isAnnouncementsFetching(tmp);
+      result1 = GameProfileStore.isAnnouncementsFetching(closure_0);
     }
     obj.isFetching = result1;
     return obj;
@@ -35,11 +35,11 @@ export default function useGameAnnouncements(arg0, limit) {
   hasFetched(() => {
     let result = null == closure_0 || hasFetched;
     if (!result) {
-      result = GameProfileStore.isAnnouncementsFetching(tmp);
+      result = GameProfileStore.isAnnouncementsFetching(closure_0);
     }
     if (!result) {
       const obj = { limit };
-      const gameAnnouncements = obj.getGameAnnouncements(tmp, obj);
+      const gameAnnouncements = obj.getGameAnnouncements(closure_0, obj);
     }
   }, items1);
   let messages;

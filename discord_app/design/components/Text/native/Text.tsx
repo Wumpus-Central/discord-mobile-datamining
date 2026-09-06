@@ -1,6 +1,8 @@
 // discord_app/design/components/Text/native/Text.tsx
 import _modDef12 from "../../../../../_runtime/metro/00012__.js";
+import NativeText2 from "../../../../../_runtime/00299_NativeText.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import utils_PlatformUtils from "../../../../../discord_common/js/shared/utils/PlatformUtils.tsx";
 import useManaTextMigrationHighlight2 from "useManaTextMigrationHighlight.tsx";
 import PlainTextExperimentContext from "PlainTextExperimentContext.tsx";
 import useTypographyVariantRemap from "../../../../../discord_common/js/packages/design/components/Text/useTypographyVariantRemap.native.tsx";
@@ -161,7 +163,6 @@ const forwardRefResult = noop.forwardRef((animated, ref) => {
   const arraySpreadResult = HermesBuiltin.arraySpread(includeFontPadding ? items : closure_11, 2);
   items[arraySpreadResult] = style;
   items[arraySpreadResult + 1] = manaTextMigrationHighlight;
-  tmp4(4569);
   const element = {
     animated: flag,
     children,
@@ -173,7 +174,7 @@ const forwardRefResult = noop.forwardRef((animated, ref) => {
     props: null,
     style: null,
   };
-  const tmp4Result = tmp4(1116);
+  const tmp4Result = utils_PlatformUtils;
   element.isIOS = tmp4Result.isIOS();
   element.props = merged;
   element.style = items;
@@ -210,7 +211,6 @@ const forwardRefResult = noop.forwardRef((animated, ref) => {
     };
     let StringResult;
     const tmp19 = _objectWithoutProperties(plainTextEligibility, closure_3);
-    const tmp20 = jsx;
     if (null != fontWeight) {
       const _String = String;
       StringResult = String(fontWeight);
@@ -237,10 +237,27 @@ const forwardRefResult = noop.forwardRef((animated, ref) => {
     }
     obj.ellipsizeMode = ellipsizeMode;
     const merged1 = Object.assign(merged);
-    return tmp20(_modDef4570, obj);
+    return jsx(_modDef4570, {
+      text: children,
+      color: color2,
+      fontSize,
+      fontFamily,
+      fontWeight: null,
+      fontStyle: null,
+      textAlign: null,
+      textAlignVertical: null,
+      textDecorationLine: null,
+      lineHeight: null,
+      letterSpacing: null,
+      hasLetterSpacing: null,
+      style: null,
+      numberOfLines: null,
+      ellipsizeMode: null,
+      allowFontScaling: true,
+    });
   } else {
     if (flag2) {
-      let NativeText = tmp4(299).NativeText;
+      let NativeText = NativeText2.NativeText;
     } else {
       NativeText = flag ? closure_9 : Text;
     }
@@ -268,5 +285,5 @@ export const Heading = noop.forwardRef((variant, ref) => {
   const merged = Object.assign(variant);
   obj.accessibilityRole = "header";
   obj.variant = typographyVariantRemap;
-  return <forwardRefResult ref={arg1} />;
+  return <forwardRefResult ref={ref} />;
 });

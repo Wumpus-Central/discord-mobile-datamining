@@ -59,9 +59,9 @@ export default noop.memo(function MessagesItemSuggestedFriendsHeader(stickyAt) {
     const obj1 = { absolute: true, wide: true, componentStyles: tmp7, tall: true, mix: true };
     const items1 = [hasOwnProperty(ThemedGradientDefault, obj1)];
     const obj2 = { style: tmp.stickyOverlay };
-    items1[1] = hasOwnProperty(tmp9, obj2);
+    items1[1] = hasOwnProperty(React4, obj2);
     obj.children = items1;
-    tmp8Result = tmp8(timestampProducer, obj);
+    tmp8Result = React5(timestampProducer, obj);
   }
   const items2 = [tmp8Result];
   const obj3 = {
@@ -73,7 +73,7 @@ export default noop.memo(function MessagesItemSuggestedFriendsHeader(stickyAt) {
     color: "text-default",
     children: null,
   };
-  const intl = tmp2(1114).intl;
+  const intl = util.intl;
   obj3.children = intl.string(util.t["1uAmCw"]);
   items2[1] = hasOwnProperty(Text_Text.Text, obj3);
   obj.children = items2;

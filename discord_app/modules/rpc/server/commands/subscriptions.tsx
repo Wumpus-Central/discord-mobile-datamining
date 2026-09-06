@@ -8,7 +8,7 @@ const Constants = fn(1074);
 let obj = {
   handler(arg0) {
     ({ server: require, socket: importDefault, evt: dependencyMap, args: asyncGeneratorStep } = arg0);
-    return (async (arg0, value) => {
+    return (async () => {
       if (c3 === 2) {
         c3 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -60,7 +60,7 @@ let obj = {
                 if (null != tmp66.validation) {
                   dependencyMap = 1;
                   c3 = 1;
-                  const obj3 = { value: obj13.getJoi(), done: false };
+                  const obj3 = { value: events.getJoi(), done: false };
                   return obj3;
                 }
                 const tmp71Result = tmp71(1242);
@@ -69,7 +69,6 @@ let obj = {
                 const tmp10 = new tmp71(9554)(obj4, "Not authenticated or invalid scope");
                 throw tmp10;
               }
-              obj13 = events;
             }
           } else if (arg0 === 1) {
             c3 = 3;

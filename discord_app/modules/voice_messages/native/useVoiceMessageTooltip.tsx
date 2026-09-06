@@ -34,6 +34,7 @@ export default function useVoiceMessageTooltip() {
         if (closure_0 !== obj.getKeyboardIsOpen({ includeCustomKeyboard: true })) {
           closure_2_4();
         }
+        obj = closure_0(dependencyMap[4]);
       });
       const _setTimeout = setTimeout;
       const timeout = setTimeout(() => {

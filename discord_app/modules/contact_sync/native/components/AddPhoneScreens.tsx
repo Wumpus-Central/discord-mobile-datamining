@@ -66,7 +66,8 @@ export const VerifyPhoneScreen = function VerifyPhoneScreen() {
     closure_1 = tmp2;
     _require(true);
     importDefault(undefined);
-    closure_129_0 = await closure_0(tmp5[15]).verifyPhone(closure_0);
+    await closure_0(tmp5[15]).verifyPhone(closure_0);
+    closure_129_0 = value;
     const codeIntercepted = closure_129_0.codeIntercepted;
     const addedPhone = closure_129_0.addedPhone;
     const error = closure_129_0.error;

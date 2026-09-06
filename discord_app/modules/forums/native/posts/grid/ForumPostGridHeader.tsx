@@ -2,6 +2,7 @@
 import ForumPostPinIconDefault from "../ForumPostPinIcon.tsx";
 import ForumPostUsername from "../ForumPostUsername.tsx";
 import ForumPostTimestampDefault from "../ForumPostTimestamp.tsx";
+import ForumPostNewTagDefault from "../ForumPostNewTag.tsx";
 import ForumPostTitleDefault from "../ForumPostTitle.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
@@ -42,7 +43,7 @@ export default function ForumPostGridHeader(arg0) {
     }),
   ];
   if (isNew) {
-    isNew = tmp8(tmp10(12015), {});
+    isNew = timestampProducer(ForumPostNewTagDefault, {});
   }
   items[3] = isNew;
   obj.children = items;

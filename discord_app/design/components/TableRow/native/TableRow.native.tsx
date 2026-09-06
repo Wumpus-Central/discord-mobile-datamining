@@ -2,10 +2,14 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
 import useToken from "../../../tokens/native/useToken.tsx";
+import Text_Text from "../../Text/native/Text.tsx";
 import useFontScale from "../../../../modules/screen/native/useFontScale.tsx";
+import TableRowDivider from "TableRowDivider.native.tsx";
 import TableRowGroupContext from "TableRowGroupContext.native.tsx";
 import Card from "../../Card/native/Card.native.tsx";
+import TableRowArrow from "TableRowArrow.native.tsx";
 import TableRowTrailingText from "TableRowTrailingText.native.tsx";
+import DragIcon from "../../Icon/native/redesign/generated/DragIcon.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -289,8 +293,8 @@ let closure_10 = createStyles.createStyles((arg0, arg1, arg2) => {
   };
   obj.row = obj;
   obj = {
-    minWidth: tmp(576).modules.mobile.TABLE_ROW_ICON_SIZE,
-    marginEnd: tmp(576).modules.mobile.TABLE_ROW_PADDING,
+    minWidth: nativeDefault.modules.mobile.TABLE_ROW_ICON_SIZE,
+    marginEnd: nativeDefault.modules.mobile.TABLE_ROW_PADDING,
     alignItems: "center",
     justifyContent: "center",
   };

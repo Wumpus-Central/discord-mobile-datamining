@@ -1,4 +1,5 @@
 // discord_app/modules/premium/native/hooks/useDiscountedPremiumProductInfo.android.tsx
+import PriceUtils from "../../../../utils/PriceUtils.tsx";
 import ProductIds from "../ProductIds.android.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -22,32 +23,31 @@ export const useDiscountedPremiumProductInfo = function useDiscountedPremiumProd
           const tmp8 = ProductIds.DiscountIdToProductOfferId[tmp.discountId];
           let tmp2;
           if (tmp8 != null) {
-            tmp2 = tmp8[tmp5.identifier];
+            tmp2 = tmp8[discountedProduct.identifier];
           }
           closure_0 = tmp2;
           if (null == tmp2) {
             return null;
           } else {
             if (str2.toUpperCase() in CurrencyCodes) {
-              let USD = tmp5.currencyCode.toLowerCase();
+              let USD = discountedProduct.currencyCode.toLowerCase();
             } else {
               USD = tmp9.USD;
             }
-            if (null != tmp5.subscriptionOffers) {
-              const subscriptionOffers = tmp5.subscriptionOffers;
+            if (null != discountedProduct.subscriptionOffers) {
+              const subscriptionOffers = discountedProduct.subscriptionOffers;
               const found = subscriptionOffers.find((offerId) => offerId.offerId === closure_0);
               if (null != found) {
                 if (null != found.pricingPhases) {
                   if (found.pricingPhases.length > 0) {
                     const result = found.pricingPhases[0].price / 100;
-                    return tmp6(7234).formatPrice(result, USD, { convertToMajorUnits: false });
+                    return PriceUtils.formatPrice(result, USD, { convertToMajorUnits: false });
                   }
                 }
               }
             }
             return null;
           }
-          tmp6 = require;
         }
       }
       return null;

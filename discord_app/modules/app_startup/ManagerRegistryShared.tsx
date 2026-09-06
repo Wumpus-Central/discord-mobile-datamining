@@ -28,15 +28,14 @@ function populateMap(actions) {
     tmp5 = tmp6;
   }
   for (const item10030 of tmp5) {
-    let tmp9 = item10030;
-    let tmp10 = closure_2;
     if (!(item10030 in closure_2)) {
-      tmp10[tmp9] = [];
+      closure_2[item10030] = [];
     }
-    let arr4 = tmp10[tmp9];
+    let arr4 = closure_2[item10030];
     let arr = arr4.push(arg0);
     continue;
   }
+  tmp = actions.hasStoreChangeListeners || actions.loadAfterConnectionOpen;
 }
 function handleAction(type) {
   let tmp3 = "CONNECTION_OPEN" !== type.type;
@@ -49,14 +48,13 @@ function handleAction(type) {
   if (type.type in closure_2) {
     const items = [];
     for (const item10018 of tmp5) {
-      let obj = item10018;
       if (!c3) {
-        if (obj.neverLoadBeforeConnectionOpen) {
-          let arr = items.push(obj);
+        if (item10018.neverLoadBeforeConnectionOpen) {
+          let arr = items.push(item10018);
         }
         continue;
       }
-      let inlineRequireResult = obj.inlineRequire();
+      let inlineRequireResult = item10018.inlineRequire();
       let initializeResult = inlineRequireResult.initialize();
     }
     if (items.length > 0) {

@@ -6,6 +6,8 @@ import getGuildModeratorReportingEnabledDefault from "getGuildModeratorReporting
 import ReportUtils from "../../utils/ReportUtils.tsx";
 import getGuildModeratorReportChannelIdDefault from "getGuildModeratorReportChannelId.tsx";
 import SelfModUtils from "../self_mod/SelfModUtils.tsx";
+import ObscuredMediaUtils from "../explicit_media_redaction/ObscuredMediaUtils.tsx";
+import HarmTypeConfiguration from "../explicit_media_redaction/HarmTypeConfiguration.tsx";
 import ForumChannelTypes from "../forums/ForumChannelTypes.tsx";
 import ForumPostMessagesStore from "../forums/ForumPostMessagesStore.tsx";
 import ChannelStore from "../../stores/ChannelStore.tsx";
@@ -38,7 +40,7 @@ export const canReportMessageToMods = function canReportMessageToMods(message) {
   }
   obj = ReportUtils;
 };
-export const canAccessReportsChannel = function canAccessReportsChannel(arg0, items) {
+export const canAccessReportsChannel = function canAccessReportsChannel(arg0) {
   let tmp = items;
   if (items === undefined) {
     items = [GuildStore, UserStore];
@@ -74,8 +76,8 @@ export const getReportToModChannelId = function getReportToModChannelId(arg0) {
   }
   return tmp2;
 };
-export const isModeratorReportOrPostChannelId = function isModeratorReportOrPostChannelId(arg0) {
-  const channel = ChannelStore.getChannel(arg0);
+export const isModeratorReportOrPostChannelId = function isModeratorReportOrPostChannelId(channelId2) {
+  const channel = ChannelStore.getChannel(channelId2);
   let tmp = null != channel;
   if (tmp) {
     let tmp2 = null != channel;
@@ -180,11 +182,11 @@ export const isSafeToTransitionToReportForCurrentUser = function isSafeToTransit
           tmp9 = null == firstMessage;
         }
         if (!tmp9) {
-          tmp9 = !tmp10(7292).messageHasObscurableMediaForBitmask(
+          tmp9 = !ObscuredMediaUtils.messageHasObscurableMediaForBitmask(
             firstMessage,
-            tmp10(7295).ContentHarmTypeBitMask.EXPLICIT,
+            HarmTypeConfiguration.ContentHarmTypeBitMask.EXPLICIT,
           );
-          const tmp10Result = tmp10(7292);
+          const tmp10Result = ObscuredMediaUtils;
         }
         return tmp9;
       } else {

@@ -185,10 +185,10 @@ export default function ThreadList(onCreateThreadPress) {
     if (unjoinedThreadIds.length > 0) {
       const obj1 = { type: "section", title: null };
       const intl3 = onThreadPress(contentContainerStyle[13]).intl;
-      const obj2 = { count: arr3.length };
+      const obj2 = { count: unjoinedThreadIds.length };
       obj1.title = intl3.formatToPlainString(onThreadPress(contentContainerStyle[13]).t.GHY7yQ, obj2);
       items.push(obj1);
-      const item1 = arr3.forEach((threadId, index) =>
+      const item1 = unjoinedThreadIds.forEach((threadId, index) =>
         items.push({
           type: "thread",
           threadId,
@@ -253,13 +253,13 @@ export default function ThreadList(onCreateThreadPress) {
   items4[7] = onEndReached;
   items4[8] = loading;
   items4[9] = contentContainerStyle;
-  const callback1 = noop.useCallback((arg0, arg1, state, cleanUp) => {
+  const callback1 = noop.useCallback((key, arg1, state, cleanUp) => {
     if (constants.EMPTY === arg1) {
       let obj = { contentContainerStyle: closure_3.container, state, cleanUp, children: null };
       obj = { onCreateThreadPress };
       obj.children = jsx(ThreadListEmptyDefault, { onCreateThreadPress });
-      return <EnterExitCrossFadeContainer key={arg0} onCreateThreadPress={onCreateThreadPress} />;
-    } else if (tmp.LOADING === arg1) {
+      return <EnterExitCrossFadeContainer key={key} onCreateThreadPress={onCreateThreadPress} />;
+    } else if (constants.LOADING === arg1) {
       const obj1 = { contentContainerStyle: null, state: null, cleanUp: null, children: null };
       const items = [,];
       ({ container: arr[0], center: arr[1] } = closure_3);
@@ -268,11 +268,11 @@ export default function ThreadList(onCreateThreadPress) {
       obj1.cleanUp = cleanUp;
       obj1.children = jsx(ThreadListLoadingIndicatorDefault, {});
       return (
-        <EnterExitCrossFadeContainer key={arg0} contentContainerStyle={null} state={null} cleanUp={null}>
+        <EnterExitCrossFadeContainer key={key} contentContainerStyle={null} state={null} cleanUp={null}>
           {null}
         </EnterExitCrossFadeContainer>
       );
-    } else if (tmp.LIST === arg1) {
+    } else if (constants.LIST === arg1) {
       obj = { contentContainerStyle: closure_3.container, state, cleanUp, children: null };
       const obj2 = {
         data: memo,
@@ -314,7 +314,12 @@ export default function ThreadList(onCreateThreadPress) {
         contentContainerStyle: null,
       });
       return (
-        <EnterExitCrossFadeContainer key={arg0} contentContainerStyle={closure_3.container} state={arg2} cleanUp={arg3}>
+        <EnterExitCrossFadeContainer
+          key={key}
+          contentContainerStyle={closure_3.container}
+          state={state}
+          cleanUp={cleanUp}
+        >
           {null}
         </EnterExitCrossFadeContainer>
       );

@@ -1,6 +1,8 @@
 // discord_app/modules/webauthn/native/PasskeyUpsellManager.tsx
 import dismissible_content from "../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
 import DismissibleContentUnsafeUtils from "../../dismissible_content/DismissibleContentUnsafeUtils.tsx";
+import NavigationRouteUtils from "../../main_tabs_v2/helpers/NavigationRouteUtils.native.tsx";
+import WebAuthnActionCreators from "../WebAuthnActionCreators.tsx";
 import MFAUtils from "../../../utils/MFAUtils.tsx";
 import PasskeyUpsellActionCreatorsDefault from "PasskeyUpsellActionCreators.tsx";
 import AuthenticationStore from "../../../stores/AuthenticationStore.tsx";
@@ -33,20 +35,22 @@ prototype["handlePasskeyUpsellShow"] = function handlePasskeyUpsellShow() {
   if (c8) {
     if (MFAUtils.hasWebAuthn) {
       if (AuthenticationStore.getLoginStatus() === LoginStates.NONE) {
-        if (obj.attemptedPasswordLogin()) {
-          let tmpResult = tmp(4380);
-          if (!tmpResult.UNSAFE_isDismissibleContentDismissed(tmp(1943).DismissibleContent.PASSWORDLESS_UPSELL)) {
+        if (AuthenticationStore.attemptedPasswordLogin()) {
+          let tmpResult = DismissibleContentUnsafeUtils;
+          if (
+            !tmpResult.UNSAFE_isDismissibleContentDismissed(dismissible_content.DismissibleContent.PASSWORDLESS_UPSELL)
+          ) {
             if (!WebAuthnStore.hasFetchedCredentials()) {
-              tmpResult = tmp(4417);
+              tmpResult = NavigationRouteUtils;
               if (!tmpResult.isModalOpen()) {
                 const currentUser = UserStore.getCurrentUser();
                 if (tmp6) {
-                  if (obj3.hasFetchedCredentials()) {
+                  if (WebAuthnStore.hasFetchedCredentials()) {
                     PasskeyUpsellActionCreatorsDefault.openPasskeyUpsell();
                   } else if (!c7) {
                     c7 = true;
-                    const webAuthnCredentials = tmp(6597).fetchWebAuthnCredentials();
-                    const tmpResult1 = tmp(6597);
+                    const webAuthnCredentials = WebAuthnActionCreators.fetchWebAuthnCredentials();
+                    const tmpResult1 = WebAuthnActionCreators;
                   }
                 }
                 tmp6 = undefined !== currentUser && currentUser.verified;
@@ -55,7 +59,6 @@ prototype["handlePasskeyUpsellShow"] = function handlePasskeyUpsellShow() {
           }
         }
       }
-      obj = AuthenticationStore;
     }
   }
 };

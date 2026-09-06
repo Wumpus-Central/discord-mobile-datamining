@@ -49,9 +49,9 @@ export const useDisplayNameStylesAccessibleColors = function useDisplayNameStyle
           saturationFactor: null,
         };
         if (effectId === displayNameStyles(stateFromStores[3]).DisplayNameEffect.TOON) {
-          let tmp4 = tmp2(tmp[6])("#333");
+          let tmp4 = backgroundColor(stateFromStores[6])("#333");
         } else {
-          tmp4 = tmp2(tmp[6])(closure_1_1);
+          tmp4 = backgroundColor(stateFromStores[6])(closure_1_1);
         }
         obj.background = tmp4;
         obj.ratio = minContrastRatio.minContrastRatio;

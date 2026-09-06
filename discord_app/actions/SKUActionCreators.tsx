@@ -11,198 +11,208 @@ import StorefrontPromotionOverrideStore from "../modules/storefront/StorefrontPr
 import SKUStore from "../stores/game_store/SKUStore.tsx";
 
 require = fn;
-let closure_8 = async function _fetchSKU(arg0, value) {
-  if (c6 === 2) {
-    c6 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp6 === 3) {
-    if (arg0 === 1) {
-      throw value;
-    } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
-    } else {
-      return { value: "HermesInternal", done: null };
-    }
-  } else {
-    try {
-      c6 = 2;
-      if (0 === c5) {
-        if (arg0 === 1) {
-          c6 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c6 = 3;
-          obj = { value, done: true };
-          return obj;
-        } else {
-          closure_2 = tmp3;
-          closure_1 = tmp7;
-          closure_129_0 = closure_0;
-          closure_129_1 = undefined;
-          if (null == SKUStore.get(closure_0)) {
-            let obj5 = DispatcherDefault;
-            const obj1 = { type: "SKU_FETCH_START", skuId: tmp45 };
-            obj5.dispatch(obj1);
-            c4 = 1;
-            const obj2 = { url: React5.STORE_SKU(tmp45), rejectWithError: null };
-            const obj8 = StoreUtils;
-            obj2.rejectWithError = HTTPUtils.rejectWithMigratedError();
-            c5 = 2;
-            c6 = 1;
-            let obj3 = { value: obj8.httpGetWithCountryCodeQuery(obj2), done: false };
-            return obj3;
-          } else {
-            c6 = 3;
-          }
-        }
-      } else if (1 === tmp7) {
-        c4 = 0;
-        obj3 = closure_130_1(closure_130_2[4]);
-        const obj4 = { type: "SKU_FETCH_FAIL", skuId: closure_129_0 };
-        obj3.dispatch(obj4);
-        const _HermesInternal = HermesInternal;
-        let tmp23 = closure_130_1(closure_130_2[7]);
-        tmp23 = new tmp23("Failed to fetch SKU " + closure_129_0);
-        throw tmp23;
-      } else if (arg0 === 1) {
-        c6 = 3;
-        throw value;
-      } else if (arg0 !== 2) {
-        closure_129_1 = value;
-        obj = closure_130_1(closure_130_2[4]);
-        obj5 = { type: "SKU_FETCH_SUCCESS", sku: closure_129_1.body };
-        obj.dispatch(obj5);
-        c4 = 0;
-      }
-      c4 = 0;
+let closure_8 = async function _fetchSKU() {
+  c5 = 0;
+  c6 = 0;
+  c4 = 0;
+  return (async (arg0) => {
+    if (c6 === 2) {
       c6 = 3;
-      const obj6 = { value, done: true };
-      return obj6;
-    } catch (tmp36) {
-      closure_3 = tmp36;
-      if (tmp4 === c4) {
-        c6 = tmp2;
-        throw tmp36;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp6 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        let obj = { value, done: true };
+        return obj;
       } else {
-        c5 = tmp;
+        return { value: "HermesInternal", done: null };
+      }
+    } else {
+      try {
+        c6 = 2;
+        if (0 === c5) {
+          if (arg0 === 1) {
+            c6 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c6 = 3;
+            obj = { value, done: true };
+            return obj;
+          } else {
+            closure_2 = tmp3;
+            closure_1 = tmp7;
+            closure_129_0 = skuId;
+            closure_129_1 = undefined;
+            if (null == SKUStore.get(skuId)) {
+              let obj5 = DispatcherDefault;
+              const obj1 = { type: "SKU_FETCH_START", skuId };
+              obj5.dispatch(obj1);
+              c4 = 1;
+              const obj2 = { url: closure_2_7.STORE_SKU(skuId), rejectWithError: null };
+              const obj8 = StoreUtils;
+              obj2.rejectWithError = HTTPUtils.rejectWithMigratedError();
+              c5 = 2;
+              c6 = 1;
+              let obj3 = { value: obj8.httpGetWithCountryCodeQuery(obj2), done: false };
+              return obj3;
+            } else {
+              c6 = 3;
+            }
+          }
+        } else if (1 === tmp7) {
+          c4 = 0;
+          obj3 = closure_130_1(closure_130_2[4]);
+          const obj4 = { type: "SKU_FETCH_FAIL", skuId: closure_129_0 };
+          obj3.dispatch(obj4);
+          const _HermesInternal = HermesInternal;
+          let tmp23 = closure_130_1(closure_130_2[7]);
+          tmp23 = new tmp23("Failed to fetch SKU " + closure_129_0);
+          throw tmp23;
+        } else if (arg0 === 1) {
+          c6 = 3;
+          throw value;
+        } else if (arg0 !== 2) {
+          closure_129_1 = value;
+          obj = closure_130_1(closure_130_2[4]);
+          obj5 = { type: "SKU_FETCH_SUCCESS", sku: closure_129_1.body };
+          obj.dispatch(obj5);
+          c4 = 0;
+        }
+        c4 = 0;
+        c6 = 3;
+        const obj6 = { value, done: true };
+        return obj6;
+      } catch (tmp36) {
+        closure_3 = tmp36;
+        if (tmp4 === c4) {
+          c6 = tmp2;
+          throw tmp36;
+        } else {
+          c5 = tmp;
+        }
       }
     }
-  }
+  })();
 };
-let closure_9 = async function _fetchPublishedSKU(arg0, value) {
-  if (c9 === 2) {
-    c9 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp7 === 3) {
-    if (arg0 === 1) {
-      throw value;
-    } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+let closure_9 = async function _fetchPublishedSKU(arg0) {
+  closure_0 = arg0;
+  closure_3 = arg3;
+  c8 = 0;
+  c9 = 0;
+  c7 = 0;
+  return (async (arg0, value, arg2, arg3) => {
+    if (c9 === 2) {
+      c9 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp7 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        let obj = { value, done: true };
+        return obj;
+      } else {
+        return { value: "HermesInternal", done: null };
+      }
     } else {
-      return { value: "HermesInternal", done: null };
-    }
-  } else {
-    try {
-      c9 = 2;
-      if (0 === c8) {
-        if (arg0 === 1) {
+      try {
+        c9 = 2;
+        if (0 === c8) {
+          if (arg0 === 1) {
+            c9 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c9 = 3;
+            obj = { value, done: true };
+            return obj;
+          } else {
+            closure_5 = tmp3;
+            closure_4 = tmp5;
+            closure_132_0 = skuId;
+            closure_132_1 = undefined;
+            closure_132_2 = undefined;
+            if (null == SKUStore.get(skuId)) {
+              let obj6 = DispatcherDefault;
+              let obj1 = { type: "SKU_FETCH_START", skuId };
+              obj6.dispatch(obj1);
+              c7 = 1;
+              const result = TestModeUtils.isTestModeForApplication(closure_0);
+              closure_132_1 = result;
+              if (result) {
+                let STORE_SKUResult = closure_2_7.STORE_SKU(skuId);
+              } else {
+                STORE_SKUResult = closure_2_7.STORE_PUBLISHED_LISTINGS_SKU(skuId);
+              }
+              const obj2 = { url: STORE_SKUResult, rejectWithError: null };
+              let tmp36Result = HTTPUtils;
+              obj2.rejectWithError = tmp36Result.rejectWithMigratedError();
+              const obj3 = {};
+              if (variants_return_style === ShopVariantsReturnStyle.ShopVariantsReturnStyle.VARIANTS_GROUP) {
+                obj3.variants_return_style = variants_return_style;
+              }
+              if (closure_3) {
+                obj3.include_unpublished = true;
+              }
+              const _Object = Object;
+              if (Object.keys(obj3).length > 0) {
+                obj2.query = obj3;
+              }
+              tmp36Result = StoreUtils;
+              c8 = 2;
+              c9 = 1;
+              let obj4 = { value: tmp36Result.httpGetWithCountryCodeQuery(obj2), done: false };
+              return obj4;
+            } else {
+              c9 = 3;
+            }
+          }
+        } else if (1 === tmp8) {
+          c7 = 0;
+          obj4 = closure_133_1(closure_133_2[4]);
+          const obj5 = { type: "SKU_FETCH_FAIL", skuId: closure_132_0 };
+          obj4.dispatch(obj5);
+          const _HermesInternal = HermesInternal;
+          let tmp27 = closure_133_1(closure_133_2[7]);
+          tmp27 = new tmp27("Failed to fetch SKU " + closure_132_0);
+          throw tmp27;
+        } else if (arg0 === 1) {
           c9 = 3;
           throw value;
-        } else if (arg0 === 2) {
-          c9 = 3;
-          obj = { value, done: true };
-          return obj;
-        } else {
-          closure_5 = tmp3;
-          closure_4 = tmp5;
-          closure_132_0 = closure_1;
-          closure_132_1 = undefined;
-          closure_132_2 = undefined;
-          if (null == SKUStore.get(closure_1)) {
-            let obj6 = DispatcherDefault;
-            let obj1 = { type: "SKU_FETCH_START", skuId: tmp60 };
-            obj6.dispatch(obj1);
-            c7 = 1;
-            const result = TestModeUtils.isTestModeForApplication(tmp59);
-            closure_132_1 = result;
-            if (result) {
-              let STORE_SKUResult = obj10.STORE_SKU(tmp60);
-            } else {
-              STORE_SKUResult = obj10.STORE_PUBLISHED_LISTINGS_SKU(tmp60);
-            }
-            const obj2 = { url: STORE_SKUResult, rejectWithError: null };
-            let tmp36Result = tmp36(1272);
-            obj2.rejectWithError = tmp36Result.rejectWithMigratedError();
-            const obj3 = {};
-            if (tmp61 === ShopVariantsReturnStyle.ShopVariantsReturnStyle.VARIANTS_GROUP) {
-              obj3.variants_return_style = tmp61;
-            }
-            if (tmp62) {
-              obj3.include_unpublished = true;
-            }
-            const _Object = Object;
-            if (Object.keys(obj3).length > 0) {
-              obj2.query = obj3;
-            }
-            tmp36Result = tmp36(4802);
-            c8 = 2;
-            c9 = 1;
-            let obj4 = { value: tmp36Result.httpGetWithCountryCodeQuery(obj2), done: false };
-            return obj4;
+        } else if (arg0 !== 2) {
+          closure_132_2 = value;
+          const body = closure_132_2.body;
+          if (closure_132_1) {
+            let sku = body;
           } else {
-            c9 = 3;
+            sku = body.sku;
           }
-          tmp59 = closure_0;
-          tmp62 = closure_3;
+          obj = { type: "SKU_FETCH_SUCCESS", sku };
+          closure_133_1(closure_133_2[4]).dispatch(obj);
+          if (!closure_132_1) {
+            obj1 = closure_133_1(closure_133_2[4]);
+            obj6 = { type: "STORE_LISTING_FETCH_SUCCESS", storeListing: closure_132_2.body };
+            obj1.dispatch(obj6);
+          }
+          c7 = 0;
+          const obj18 = closure_133_1(closure_133_2[4]);
         }
-      } else if (1 === tmp8) {
         c7 = 0;
-        obj4 = closure_133_1(closure_133_2[4]);
-        const obj5 = { type: "SKU_FETCH_FAIL", skuId: closure_132_0 };
-        obj4.dispatch(obj5);
-        const _HermesInternal = HermesInternal;
-        let tmp27 = closure_133_1(closure_133_2[7]);
-        tmp27 = new tmp27("Failed to fetch SKU " + closure_132_0);
-        throw tmp27;
-      } else if (arg0 === 1) {
         c9 = 3;
-        throw value;
-      } else if (arg0 !== 2) {
-        closure_132_2 = value;
-        const body = closure_132_2.body;
-        if (closure_132_1) {
-          let sku = body;
+        const obj7 = { value, done: true };
+        return obj7;
+      } catch (tmp43) {
+        closure_6 = tmp43;
+        if (tmp4 === c7) {
+          c9 = tmp2;
+          throw tmp43;
         } else {
-          sku = body.sku;
+          c8 = tmp;
         }
-        obj = { type: "SKU_FETCH_SUCCESS", sku };
-        closure_133_1(closure_133_2[4]).dispatch(obj);
-        if (!closure_132_1) {
-          obj1 = closure_133_1(closure_133_2[4]);
-          obj6 = { type: "STORE_LISTING_FETCH_SUCCESS", storeListing: closure_132_2.body };
-          obj1.dispatch(obj6);
-        }
-        c7 = 0;
-        const obj18 = closure_133_1(closure_133_2[4]);
-      }
-      c7 = 0;
-      c9 = 3;
-      const obj7 = { value, done: true };
-      return obj7;
-    } catch (tmp43) {
-      closure_6 = tmp43;
-      if (tmp4 === c7) {
-        c9 = tmp2;
-        throw tmp43;
-      } else {
-        c8 = tmp;
       }
     }
-  }
+  })();
 };
-let closure_10 = async function _fetchTestSKUsForApplication(arg0, value) {
+let closure_10 = async function _fetchTestSKUsForApplication(arg0) {
   if (c5 === 2) {
     c5 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -288,7 +298,7 @@ let closure_10 = async function _fetchTestSKUsForApplication(arg0, value) {
     }
   }
 };
-let closure_11 = async function _previewPurchaseSku(arg0, value) {
+let closure_11 = async function _previewPurchaseSku(arg0) {
   if (c6 === 2) {
     c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -410,7 +420,7 @@ let closure_11 = async function _previewPurchaseSku(arg0, value) {
     }
   }
 };
-let closure_12 = async function _grantChannelBranchEntitlement(applicationId, arg1, skuId) {
+let closure_12 = async function _grantChannelBranchEntitlement() {
   closure_1 = arg1;
   c7 = 0;
   c8 = 0;
@@ -510,7 +520,7 @@ let closure_12 = async function _grantChannelBranchEntitlement(applicationId, ar
     }
   })();
 };
-let closure_14 = async function _orderSKU(sku_id, payment_source_id, request_gateway_country_code, arg3, arg4) {
+let closure_14 = async function _orderSKU() {
   closure_3 = arg3;
   closure_4 = arg4;
   c9 = 0;
@@ -636,7 +646,7 @@ let closure_14 = async function _orderSKU(sku_id, payment_source_id, request_gat
     }
   })();
 };
-let closure_15 = async function _purchaseSKU(arg0, value) {
+let closure_15 = async function _purchaseSKU(arg0) {
   if (c11 === 2) {
     c11 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -902,7 +912,7 @@ let closure_15 = async function _purchaseSKU(arg0, value) {
     }
   }
 };
-let closure_16 = async function _resendPaymentVerificationEmail(arg0, value) {
+let closure_16 = async function _resendPaymentVerificationEmail() {
   if (c6 === 2) {
     c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");

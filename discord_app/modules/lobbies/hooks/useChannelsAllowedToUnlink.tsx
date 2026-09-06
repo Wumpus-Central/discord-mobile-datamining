@@ -33,8 +33,8 @@ export const useChannelsAllowedToUnlink = function useChannelsAllowedToUnlink(id
   let items = [PermissionStore, GuildChannelStore];
   return require("initialize").useStateFromStoresArray(items, () => {
     if (GuildChannelStore !== undefined) {
-      if (tmp2 !== undefined) {
-        closure_0 = tmp2;
+      if (PermissionStore !== undefined) {
+        closure_0 = PermissionStore;
         if (null == tmp) {
           let items = [];
         } else {

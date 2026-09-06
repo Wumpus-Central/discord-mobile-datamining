@@ -40,8 +40,8 @@ prototype["getScheduledMaintenance"] = function getScheduledMaintenance() {
         const _Date = Date;
         const _Date2 = Date;
         const timestamp = Date.now();
-        const date = new Date(scheduled_until);
         tmp3 = null;
+        const date = new Date(scheduled_until);
       }
     }
   }

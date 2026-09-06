@@ -157,10 +157,10 @@ export const getRoleSubscriptionPurchaseSystemMessageContentMobile =
     } else {
       if (flag) {
         let OxP1NC = t.OxP1NC;
-        let tmp7 = tmp3;
+        let tmp7 = require;
       } else {
         OxP1NC = t["6Z1E+7"];
-        tmp7 = tmp3;
+        tmp7 = require;
       }
       const intl = tmp7(1114).intl;
       let name;
@@ -186,6 +186,7 @@ export const getRoleSubscriptionPurchaseSystemMessageContentMobile =
       obj.months = num;
       return intl.formatToParts(OxP1NC, obj);
     }
+    tmp2 = num > 0;
   };
 export const isEligibleForRoleSubscriptionPurchaseSystemMessageSettings =
   function isEligibleForRoleSubscriptionPurchaseSystemMessageSettings(guild) {

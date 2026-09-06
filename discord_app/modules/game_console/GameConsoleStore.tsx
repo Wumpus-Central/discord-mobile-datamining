@@ -20,15 +20,15 @@ prototype["getUserAgnosticState"] = function getUserAgnosticState() {
   obj = { lastSelectedDeviceByPlatform: obj };
   return obj;
 };
-prototype["getDevicesForPlatform"] = function getDevicesForPlatform(arg0) {
-  let tmp = dependencyMap[arg0];
+prototype["getDevicesForPlatform"] = function getDevicesForPlatform(require) {
+  let tmp = dependencyMap[require];
   if (tmp == null) {
     tmp = closure_8;
   }
   return tmp;
 };
-prototype["getLastSelectedDeviceByPlatform"] = function getLastSelectedDeviceByPlatform(arg0) {
-  return obj[arg0];
+prototype["getLastSelectedDeviceByPlatform"] = function getLastSelectedDeviceByPlatform(require) {
+  return obj[require];
 };
 prototype["getDevice"] = function getDevice(arg0, arg1) {
   let tmp2;
@@ -37,8 +37,8 @@ prototype["getDevice"] = function getDevice(arg0, arg1) {
   }
   return tmp2;
 };
-prototype["getFetchingDevices"] = function getFetchingDevices(arg0) {
-  return set1.has(arg0);
+prototype["getFetchingDevices"] = function getFetchingDevices(require) {
+  return set1.has(require);
 };
 prototype["getPendingDeviceCommands"] = function getPendingDeviceCommands() {
   return set;

@@ -61,8 +61,8 @@ export const QuestDockGestureContextProvider = noop.memo(function QuestDockGestu
   const obj8 = sharedValue(sharedValue2[7]);
   sharedValue2 = obj8.useSharedValue(
     sharedValue(sharedValue2[9]).isSoftDismissed(QuestDockStore.questDockSoftDismissedAt)
-      ? tmp6.SOFT_DISMISSED
-      : tmp6.COLLAPSED,
+      ? QuestDockMode.SOFT_DISMISSED
+      : QuestDockMode.COLLAPSED,
   );
   const obj9 = sharedValue(sharedValue2[9]);
   sharedValue3 = tmp(tmp2[7]).useSharedValue(closure_7);
@@ -101,7 +101,7 @@ export const QuestDockGestureContextProvider = noop.memo(function QuestDockGestu
         items1,
       )}
     >
-      {arg0.children}
+      {children.children}
     </context.Provider>
   );
 });

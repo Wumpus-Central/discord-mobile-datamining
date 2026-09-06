@@ -33,7 +33,7 @@ function EnrolledBodyWatchTask(quest) {
   }
   items[5] = completedAt;
   const effect = hasWatchVideoOnMobileTasks.useEffect(() => {
-    closure_0 = async function _maybeOpenVideoQuestModal(arg0, value) {
+    closure_0 = async function _maybeOpenVideoQuestModal() {
       if (c2 === 2) {
         c2 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -277,14 +277,13 @@ export default noop.memo(function QuestDockEnrolledBody() {
   obj.style = items2;
   obj.onLayout = callback;
   const tmp2 = closure_15();
-  const tmp6 = View;
   if (obj4.hasWatchVideoTasks(questDockQuest)) {
     const obj1 = { quest: questDockQuest };
-    let tmp5Result = tmp5(EnrolledBodyWatchTask, obj1);
+    let tmp5Result = closure_12(EnrolledBodyWatchTask, obj1);
   } else {
     const obj2 = { quest: questDockQuest };
-    tmp5Result = tmp5(EnrolledBodyPlayStreamTask, obj2);
+    tmp5Result = closure_12(EnrolledBodyPlayStreamTask, obj2);
   }
   obj.children = tmp5Result;
-  return closure_12(tmp6, obj);
+  return closure_12(View, obj);
 });

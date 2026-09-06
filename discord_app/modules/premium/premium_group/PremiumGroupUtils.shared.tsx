@@ -19,11 +19,10 @@ export const getPriceString = function getPriceString(hasAnyPremiumGroup, arg1) 
           return null;
         } else {
           const price = PremiumUtils.getPrice(planIdFromItems);
-          const tmp2 = require;
           const formatPriceResult = PriceUtils.formatPrice(price.amount, price.currency);
           if (tmp) {
             ({ interval, intervalCount } = value);
-            return tmp2(7234).formatRate(formatPriceResult, interval, intervalCount);
+            return PriceUtils.formatRate(formatPriceResult, interval, intervalCount);
           } else {
             return formatPriceResult;
           }

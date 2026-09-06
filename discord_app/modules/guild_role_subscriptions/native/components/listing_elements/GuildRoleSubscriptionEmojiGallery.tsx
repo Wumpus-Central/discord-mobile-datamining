@@ -28,8 +28,8 @@ export default function EmojiGallery(emojiIds) {
         children: arr.map((id) => jsx(EmojiIconDefault, { size: 22, fontSize: 18, guildId, id }, id)),
       });
       return (
-        <View key={arg1} gap={16}>
-          {arg0.map((id) => jsx(EmojiIconDefault, { size: 22, fontSize: 18, guildId, id }, id))}
+        <View key={index} gap={16}>
+          {arr.map((id) => jsx(EmojiIconDefault, { size: 22, fontSize: 18, guildId, id }, id))}
         </View>
       );
     }),
@@ -44,15 +44,15 @@ export default function EmojiGallery(emojiIds) {
         children: arr.map((id) => jsx(EmojiIconDefault, { size: 22, fontSize: 18, guildId, id }, id)),
       });
       return (
-        <View key={arg1} gap={16}>
-          {arg0.map((id) => jsx(EmojiIconDefault, { size: 22, fontSize: 18, guildId, id }, id))}
+        <View key={index} gap={16}>
+          {arr.map((id) => jsx(EmojiIconDefault, { size: 22, fontSize: 18, guildId, id }, id))}
         </View>
       );
     }),
   });
   return (
     <View gap={8}>
-      {chunkDefault(arg0.emojiIds, maxPerRow).map((arr, index) => {
+      {chunkDefault(emojiIds.emojiIds, maxPerRow).map((arr, index) => {
         let obj = { style: { flexDirection: "row" }, children: null };
         obj = {
           gap: 16,
@@ -63,8 +63,8 @@ export default function EmojiGallery(emojiIds) {
           children: arr.map((id) => jsx(EmojiIconDefault, { size: 22, fontSize: 18, guildId, id }, id)),
         });
         return (
-          <View key={arg1} gap={16}>
-            {arg0.map((id) => jsx(EmojiIconDefault, { size: 22, fontSize: 18, guildId, id }, id))}
+          <View key={index} gap={16}>
+            {arr.map((id) => jsx(EmojiIconDefault, { size: 22, fontSize: 18, guildId, id }, id))}
           </View>
         );
       })}

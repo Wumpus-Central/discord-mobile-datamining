@@ -96,15 +96,22 @@ class AlertWrapper extends PureComponent {
         items.push(obj.spring(applyArgumentsResult.state.scale, { toValue: 1, useNativeDriver: true }));
       }
       obj.parallel(items).start(arg0);
+      const parallelResult = obj.parallel(items);
     };
     applyArgumentsResult.componentWillLeave = function componentWillLeave(arg0) {
       let obj = { toValue: 0, easing: timestampProducer.linear, duration: 100, useNativeDriver: true };
       const items = [RN.timing(applyArgumentsResult.state.opacity, obj)];
       if (!applyArgumentsResult.props.useReducedMotion) {
-        obj = { toValue: 0, easing: obj3.in(obj3.ease), duration: 100, useNativeDriver: true };
+        obj = {
+          toValue: 0,
+          easing: timestampProducer.in(timestampProducer.ease),
+          duration: 100,
+          useNativeDriver: true,
+        };
         items.push(obj.timing(applyArgumentsResult.state.scale, obj));
       }
       obj.parallel(items).start(arg0);
+      const parallelResult = obj.parallel(items);
     };
     applyArgumentsResult.handleRequestClose = function handleRequestClose() {
       if (applyArgumentsResult.props.isDismissable) {
@@ -176,8 +183,8 @@ export default noop.memo(function Alerts() {
         const _HermesInternal = HermesInternal;
         const combined = "alert-registery-" + openModal.key;
         if (combined === ref.current.renderKey) {
-          if (discord_common_shallowEqualDefault(props, tmp4.current.props)) {
-            let fn = tmp4.current.renderAlert;
+          if (discord_common_shallowEqualDefault(props, ref.current.props)) {
+            let fn = ref.current.renderAlert;
           }
           obj = { renderAlert: fn, renderKey: combined, props: openModal.props };
           return obj;

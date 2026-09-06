@@ -21,7 +21,7 @@ export default function ChannelSelectComponentActionSheet(guildId) {
   const items = [channelId, channelTypes];
   ({ labelComponent, containerId, onSubmit, allowEmpty } = guildId);
   const callback = noop.useCallback(
-    (arg0) => SearchableSelectActionComponentUtils.queryChannels(arg0, channelId, channelTypes),
+    (query) => SearchableSelectActionComponentUtils.queryChannels(query, channelId, channelTypes),
     items,
   );
   const tmp2 = guildId(channelTypes[5])({

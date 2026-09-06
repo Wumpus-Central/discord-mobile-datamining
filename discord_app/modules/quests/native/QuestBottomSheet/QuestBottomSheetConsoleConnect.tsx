@@ -47,8 +47,8 @@ function ConsoleRow(onPress) {
     obj.label = intl3.string(util.t.JafL6p);
     let stringResult;
     if (null != merged.account) {
-      const intl4 = tmp8(1114).intl;
-      stringResult = intl4.string(tmp8(1114).t["u30/ut"]);
+      const intl4 = util.intl;
+      stringResult = intl4.string(util.t["u30/ut"]);
     }
     obj.subLabel = stringResult;
     obj.onPress = function onPress() {
@@ -67,8 +67,8 @@ function ConsoleRow(onPress) {
     obj.label = intl.string(util.t.Nfvo72);
     let stringResult1;
     if (null != merged.account) {
-      const intl2 = tmp4(1114).intl;
-      stringResult1 = intl2.string(tmp4(1114).t["u30/ut"]);
+      const intl2 = util.intl;
+      stringResult1 = intl2.string(util.t["u30/ut"]);
     }
     obj.subLabel = stringResult1;
     obj.onPress = function onPress() {
@@ -182,6 +182,7 @@ export default function QuestBottomSheetConsoleConnect(quest) {
         }
         const obj3 = { platformType: account.type, location: "quests", onClose: openQuestBottomSheet };
         authorizeConnectionDefault(obj3);
+        obj12 = AdAnalyticsInterfaceExperiment;
       }
     },
   };

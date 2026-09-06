@@ -46,27 +46,27 @@ export default function validateJumpWithAlert(author, onConfirm) {
       if (!isPrivateResult) {
         if (!PermissionStore.can(Permissions.MODERATE_MEMBERS, channel)) {
           const obj3 = { title: null, body: null, confirmText: null };
-          const intl = tmp(1114).intl;
-          obj3.title = intl.string(tmp(1114).t["6vJKFk"]);
-          const intl2 = tmp(1114).intl;
+          const intl = util.intl;
+          obj3.title = intl.string(util.t["6vJKFk"]);
+          const intl2 = util.intl;
           const obj4 = { name: author.author.username };
-          obj3.body = intl2.formatToPlainString(tmp(1114).t.zKNgPF, obj4);
-          const intl3 = tmp(1114).intl;
-          obj3.confirmText = intl3.string(tmp(1114).t.BddRzS);
+          obj3.body = intl2.formatToPlainString(util.t.zKNgPF, obj4);
+          const intl3 = util.intl;
+          obj3.confirmText = intl3.string(util.t.BddRzS);
           obj3.show(obj3);
         }
         return false;
       }
       const obj5 = { title: null, body: null, confirmText: null, cancelText: null, onConfirm: null };
-      const intl4 = tmp(1114).intl;
-      obj5.title = intl4.string(tmp(1114).t["cZcG+P"]);
-      const intl5 = tmp(1114).intl;
+      const intl4 = util.intl;
+      obj5.title = intl4.string(util.t["cZcG+P"]);
+      const intl5 = util.intl;
       const obj6 = { name: author.author.username };
-      obj5.body = intl5.formatToPlainString(tmp(1114).t["1YTWty"], obj6);
-      const intl6 = tmp(1114).intl;
-      obj5.confirmText = intl6.string(tmp(1114).t["+TSRGD"]);
-      const intl7 = tmp(1114).intl;
-      obj5.cancelText = intl7.string(tmp(1114).t["ETE/oC"]);
+      obj5.body = intl5.formatToPlainString(util.t["1YTWty"], obj6);
+      const intl6 = util.intl;
+      obj5.confirmText = intl6.string(util.t["+TSRGD"]);
+      const intl7 = util.intl;
+      obj5.cancelText = intl7.string(util.t["ETE/oC"]);
       obj5.onConfirm = onConfirm;
       obj6.show(obj5);
     } else {

@@ -3,6 +3,8 @@ import asyncRequireImpl from "../../../../../_runtime/01896_asyncRequireImpl.js"
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import NotificationSettingsUtils from "../../../../utils/NotificationSettingsUtils.tsx";
 import NotificationSettingsModalActionCreatorsDefault from "../../../../actions/NotificationSettingsModalActionCreators.tsx";
+import _modDef12377 from "../../../../../_runtime/metro/12377__.js";
+import _modDef12378 from "../../../../../_runtime/metro/12378__.js";
 import openGuildActionSheetDefault from "../../../guild_action_sheet/native/openGuildActionSheet.tsx";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import GuildStore from "../../../../stores/GuildStore.tsx";
@@ -21,7 +23,7 @@ export default function getGuildsBarGuildMenuItems(guildId) {
   const intl = require("util").intl;
   obj.label = intl.string(require("util").t.e6RscS);
   obj.action = function action() {
-    return (async (arg0, value) => {
+    return (async () => {
       if (paths === 2) {
         paths = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -93,7 +95,7 @@ export default function getGuildsBarGuildMenuItems(guildId) {
     const splice = items.splice;
     const obj2 = { iconSource: null, label: null, action: null };
     if (isMutedResult) {
-      obj2.iconSource = tmp5(12378);
+      obj2.iconSource = _modDef12378;
       const intl5 = tmp(1114).intl;
       obj2.label = intl5.string(tmp(1114).t.De0BTC);
       obj2.action = function action() {
@@ -107,7 +109,7 @@ export default function getGuildsBarGuildMenuItems(guildId) {
       };
       splice(1, 0, obj2);
     } else {
-      obj2.iconSource = tmp5(12377);
+      obj2.iconSource = _modDef12377;
       const intl4 = tmp(1114).intl;
       obj2.label = intl4.string(tmp(1114).t.vRzp7P);
       obj2.action = function action() {

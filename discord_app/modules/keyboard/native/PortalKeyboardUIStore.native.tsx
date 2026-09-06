@@ -1,4 +1,5 @@
 // discord_app/modules/keyboard/native/PortalKeyboardUIStore.native.tsx
+import v1 from "../../../../_runtime/01256_v1.js";
 import ZustandStore from "../../../lib/ZustandStore.tsx";
 import PortalKeyboard from "PortalKeyboard.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
@@ -52,12 +53,16 @@ export const openPortalKeyboard = function openPortalKeyboard(type, channelId, c
   }
   if (!tmp3) {
     obj = { keyboard: null, state: null };
-    obj = { id: tmp5(1256).v4(), type, channelId, chatInputRef };
+    obj = { id: v1.v4(), type, channelId, chatInputRef };
     obj.keyboard = obj;
-    obj.state = tmp5(4431).PortalKeyboardState.REQUEST_OPEN;
+    obj.state = PortalKeyboard.PortalKeyboardState.REQUEST_OPEN;
     obj.setState(obj);
-    const tmp5Result = tmp5(1256);
+    const tmp5Result = v1;
   }
+  tmp7 =
+    state === PortalKeyboard.PortalKeyboardState.REQUEST_OPEN ||
+    state === PortalKeyboard.PortalKeyboardState.OPENING ||
+    state === PortalKeyboard.PortalKeyboardState.OPEN;
 };
 export const registerPortalKeyboardRenderer = function registerPortalKeyboardRenderer(id) {
   closure_0 = id;
@@ -127,7 +132,9 @@ export const closePortalKeyboardRequest = function closePortalKeyboardRequest() 
   let obj = zustandStore;
   const field = zustandStore.getField("state");
   if (tmp4) {
-    obj = { state: tmp2(4431).PortalKeyboardState.REQUEST_CLOSE };
+    obj = { state: PortalKeyboard.PortalKeyboardState.REQUEST_CLOSE };
     obj.setState(obj);
   }
+  tmp4 =
+    field !== PortalKeyboard.PortalKeyboardState.CLOSED && field !== PortalKeyboard.PortalKeyboardState.REQUEST_CLOSE;
 };

@@ -59,7 +59,7 @@ export default {
     });
   },
   showNotification() {
-    return (async (arg0, value) => {
+    return (async () => {
       if (c0 === 2) {
         c0 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -94,11 +94,11 @@ export default {
     })();
   },
   shouldRequestNotification: true,
-  playNotificationSound(arg0) {
-    let num = arg1;
-    if (arg1 === undefined) {
+  playNotificationSound(bit_message1) {
+    let num = _volume;
+    if (_volume === undefined) {
       num = 1;
     }
-    SoundUtils.playSound(arg0, num, undefined, arg2);
+    SoundUtils.playSound(bit_message1, num, undefined, soundpack);
   },
 };

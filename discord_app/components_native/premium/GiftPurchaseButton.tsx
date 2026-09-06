@@ -65,7 +65,8 @@ export default function GiftPurchaseButton(style) {
   const callback = analyticsLocations.useCallback(
     productIdForGift(function* () {
       let obj1 = { planId, recipientUserId, productId: productIdForGift };
-      closure_128_0 = yield createOrReuseGiftOrder(obj1);
+      yield createOrReuseGiftOrder(obj1);
+      closure_128_0 = value;
       const premiumTypeFromPlanId = planId(4218).getPremiumTypeFromPlanId(closure_129_0);
       const premiumType = premiumTypeFromPlanId.premiumType;
       const planInterval = premiumTypeFromPlanId.planInterval;
@@ -118,5 +119,5 @@ export default function GiftPurchaseButton(style) {
     disabled: !canPurchaseIAP,
     grow: true,
   });
-  return <createOrReuseGiftOrder style={arg0.style}>{null}</createOrReuseGiftOrder>;
+  return <createOrReuseGiftOrder style={style.style}>{null}</createOrReuseGiftOrder>;
 }

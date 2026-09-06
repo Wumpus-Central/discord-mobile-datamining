@@ -44,7 +44,7 @@ export default function useCreateCreatorMonetizationAcceptTermsRequest(arg0, arg
   obj.loading = tmp4;
   const items3 = [arg0, arg1, isExpeditedOnboardingGuild];
   obj.submitAcceptTermsRequest = noop.useCallback(
-    asyncGeneratorStep(async (arg0, value) => {
+    asyncGeneratorStep(async () => {
       if (c5 === 2) {
         c5 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");

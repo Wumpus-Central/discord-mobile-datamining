@@ -13,10 +13,9 @@ const result = size.fileFinishedImporting(
 );
 
 export default function FormTrialActiveUserLimitPicker(activeTrialUserlimit) {
-  const str = activeTrialUserlimit.activeTrialUserlimit;
   const onChange = activeTrialUserlimit.onChange;
   dependencyMap = onChange(17749)();
-  if (null == str) {
+  if (null == activeTrialUserlimit.activeTrialUserlimit) {
     let intl = str(1114).intl;
     let stringResult = intl.string(str(1114).t.zHfL6o);
   } else {

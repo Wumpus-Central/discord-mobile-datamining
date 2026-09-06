@@ -61,15 +61,14 @@ export default function useVoiceChannelGames(arg0, arg1, arg2) {
     const items = [];
     const set = new Set();
     for (const item10013 of getGamesForAppIds) {
-      let tmp = item10013;
       let obj2 = useGameProfileObscured;
       let result = obj2.isGameProfileObscured(item10013, stateFromStores);
       if (!result) {
-        result = set.has(tmp.id);
+        result = set.has(item10013.id);
       }
       if (!result) {
-        let addResult = set.add(tmp.id);
-        let arr = items.push(tmp.id);
+        let addResult = set.add(item10013.id);
+        let arr = items.push(item10013.id);
       }
       continue;
     }

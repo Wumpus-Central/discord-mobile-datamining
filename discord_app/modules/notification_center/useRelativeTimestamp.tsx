@@ -23,10 +23,10 @@ export const useRelativeTimestamp = function useRelativeTimestamp(timestamp) {
     dependencyMap(timestamp(7641).getRelativeTimestamp(interval, flag));
     const diff = Date.now() - interval;
     if (diff <= flag(1090).Millis.DAY) {
-      if (diff >= tmp4(1090).Millis.HOUR) {
-        let MINUTE = tmp4(1090).Millis.HOUR;
+      if (diff >= flag(1090).Millis.HOUR) {
+        let MINUTE = flag(1090).Millis.HOUR;
       } else {
-        MINUTE = tmp4(1090).Millis.MINUTE;
+        MINUTE = flag(1090).Millis.MINUTE;
       }
       const _setInterval = setInterval;
       interval = setInterval(

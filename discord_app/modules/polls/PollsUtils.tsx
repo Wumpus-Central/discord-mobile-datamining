@@ -2,6 +2,7 @@
 import DurationsDefault from "../../utils/Durations.tsx";
 import util from "../../intl/index.native.tsx";
 import v1 from "../../../_runtime/01256_v1.js";
+import utils_StringUtils from "../../../discord_common/js/shared/utils/StringUtils.tsx";
 import NicknameUtilsDefault from "../../utils/NicknameUtils.tsx";
 import useMessageAuthor from "../messages/useMessageAuthor.tsx";
 import FakePlaceholderPrivateChannel from "../channel/FakePlaceholderPrivateChannel.tsx";
@@ -37,16 +38,15 @@ function getSampleOfVoterUsernamesForAnswer(message, id) {
     items = [];
   }
   const obj = { id, name: "", animated: false };
-  const tmp2 = closure_9;
   const tmp5 = guildId(12);
   const tmp5Result = guildId(12)(Array.from(items));
   const rejectResult = guildId(12)(Array.from(items)).reject((id) => blockedOrIgnored.isBlockedOrIgnored(id.id));
   const takeResult = guildId(12)(Array.from(items))
     .reject((id) => blockedOrIgnored.isBlockedOrIgnored(id.id))
-    .take(tmp2);
+    .take(closure_9);
   return guildId(12)(Array.from(items))
     .reject((id) => blockedOrIgnored.isBlockedOrIgnored(id.id))
-    .take(tmp2)
+    .take(closure_9)
     .map((item) => {
       let id;
       if (channel != null) {
@@ -134,20 +134,22 @@ export const useCanPostPollsInChannel = function useCanPostPollsInChannel(channe
   _require = channel;
   const items = [PermissionStore];
   return require("initialize").useStateFromStores(items, () => {
-    let tmp = null != closure_0;
+    let tmp = null != _private;
     if (tmp) {
-      tmp = obj.id !== FakePlaceholderPrivateChannel.FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID;
+      tmp = _private.id !== FakePlaceholderPrivateChannel.FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID;
     }
     if (tmp) {
       const POLLS = constants.POLLS;
-      let hasItem = POLLS.has(obj.type);
+      let hasItem = POLLS.has(_private.type);
       if (hasItem) {
-        let isPrivateResult = obj.isPrivate();
+        let isPrivateResult = _private.isPrivate();
         if (!isPrivateResult) {
           isPrivateResult =
-            PermissionStore.can(constants2.SEND_MESSAGES, obj) && PermissionStore.can(constants2.SEND_POLLS, obj);
+            PermissionStore.can(constants2.SEND_MESSAGES, _private) &&
+            PermissionStore.can(constants2.SEND_POLLS, _private);
           const tmp8 =
-            PermissionStore.can(constants2.SEND_MESSAGES, obj) && PermissionStore.can(constants2.SEND_POLLS, obj);
+            PermissionStore.can(constants2.SEND_MESSAGES, _private) &&
+            PermissionStore.can(constants2.SEND_POLLS, _private);
         }
         hasItem = isPrivateResult;
       }
@@ -157,7 +159,7 @@ export const useCanPostPollsInChannel = function useCanPostPollsInChannel(channe
   });
 };
 export const isPollCreationEmpty = function isPollCreationEmpty(c4, answers) {
-  let tmp = 0 === c4.length;
+  let tmp = 0 === MessageReactionsStore.length;
   if (tmp) {
     tmp =
       null ==
@@ -289,10 +291,10 @@ export const getPollResultsReplyPreview = function getPollResultsReplyPreview(me
   }
   let truncateTextResult = str;
   if (null != React6) {
-    truncateTextResult = tmp(1926).truncateText(str, tmp4);
-    const tmpResult = tmp(1926);
+    truncateTextResult = utils_StringUtils.truncateText(str, React6);
+    const tmpResult = utils_StringUtils;
   }
-  const intl = tmp(1114).intl;
+  const intl = util.intl;
   obj = { username: messageAuthor.nick, title: truncateTextResult };
   return intl.format(util.t.Vn97Ka, obj);
 };
@@ -316,10 +318,10 @@ export const getPollResultsReplyPreviewMobile = function getPollResultsReplyPrev
     }
     let truncateTextResult = str;
     if (null != React6) {
-      truncateTextResult = tmp2(1926).truncateText(str, tmp5);
-      const tmp2Result = tmp2(1926);
+      truncateTextResult = utils_StringUtils.truncateText(str, React6);
+      const tmp2Result = utils_StringUtils;
     }
-    const intl = tmp2(1114).intl;
+    const intl = util.intl;
     obj = { username: messageAuthor.nick, title: truncateTextResult };
     return intl.formatToParts(util.t.Vn97Ka, obj);
   } else {

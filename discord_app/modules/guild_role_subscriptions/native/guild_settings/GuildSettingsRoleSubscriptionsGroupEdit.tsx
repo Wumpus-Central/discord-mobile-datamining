@@ -1,4 +1,5 @@
 // discord_app/modules/guild_role_subscriptions/native/guild_settings/GuildSettingsRoleSubscriptionsGroupEdit.tsx
+import util from "../../../../intl/index.native.tsx";
 import ToastUtils from "../../../toast/native/ToastUtils.tsx";
 import GuildSettingsRoleSubscriptionContainerDefault from "GuildSettingsRoleSubscriptionContainer.tsx";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
@@ -77,7 +78,7 @@ function GuildSettingsRoleSubscriptionsGroupEditInner(guildId) {
   }
   const items = [str, guildId, updateSubscriptionsSettings, subscriptionsSettings, first, first1, isFullServerGating];
   callback = obj2.useCallback(
-    first(function* (arg0, value) {
+    first(function* () {
       if (c2 === 2) {
         c2 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -173,8 +174,8 @@ function GuildSettingsRoleSubscriptionsGroupEditInner(guildId) {
     if (null != error) {
       let anyErrorMessage = error.getAnyErrorMessage();
       if (anyErrorMessage == null) {
-        const intl = tmp(1114).intl;
-        anyErrorMessage = intl.string(tmp(1114).t.ZUEGFn);
+        const intl = util.intl;
+        anyErrorMessage = intl.string(util.t.ZUEGFn);
       }
       ToastUtils.presentError(anyErrorMessage);
     }

@@ -1,8 +1,8 @@
 // discord_app/modules/messages/WebViewWebmSupportTest.native.tsx
 import PlatformUtils from "../../utils/PlatformUtils.tsx";
+import DeviceUtils from "../../utils/native/DeviceUtils.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
-const DeviceUtils = tmp(4539);
 const ARM64_ = "ARM64_";
 const result = size.fileFinishedImporting("modules/messages/WebViewWebmSupportTest.native.tsx");
 

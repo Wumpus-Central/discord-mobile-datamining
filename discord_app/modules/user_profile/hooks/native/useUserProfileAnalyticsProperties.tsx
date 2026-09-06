@@ -48,8 +48,8 @@ export default function useUserProfileAnalyticsProperties(userId) {
     let tmp2 = null != displayProfile;
     if (tmp2) {
       let result;
-      if (obj2 != null) {
-        result = obj2.hasPremiumCustomization();
+      if (displayProfile != null) {
+        result = displayProfile.hasPremiumCustomization();
       }
       tmp2 = result;
     }
@@ -57,7 +57,7 @@ export default function useUserProfileAnalyticsProperties(userId) {
     obj.profile_has_theme_color_customized = null != displayProfile && displayProfile.hasThemeColors();
     let prop;
     if (displayProfile != null) {
-      prop = obj2.popoutAnimationParticleType;
+      prop = displayProfile.popoutAnimationParticleType;
     }
     obj.profile_has_theme_animation = null != prop;
     let avatarDecoration;
@@ -80,7 +80,7 @@ export default function useUserProfileAnalyticsProperties(userId) {
   memo1 = obj.useMemo(() => {
     let nick;
     if (guildMember != null) {
-      nick = tmp.nick;
+      nick = guildMember.nick;
     }
     const obj = {
       has_nickname: Boolean(nick),
@@ -90,17 +90,17 @@ export default function useUserProfileAnalyticsProperties(userId) {
     };
     let avatar;
     if (guildMember != null) {
-      avatar = tmp.avatar;
+      avatar = guildMember.avatar;
     }
     obj.has_guild_member_avatar = Boolean(avatar);
     let result;
     if (displayProfile != null) {
-      result = obj2.isUsingGuildMemberBanner();
+      result = displayProfile.isUsingGuildMemberBanner();
     }
     obj.has_guild_member_banner = result;
     let result1;
     if (displayProfile != null) {
-      result1 = obj2.isUsingGuildMemberBio();
+      result1 = displayProfile.isUsingGuildMemberBio();
     }
     obj.has_guild_member_bio = result1;
     return obj;

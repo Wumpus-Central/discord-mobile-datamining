@@ -1,8 +1,12 @@
 // discord_app/modules/connectivity/native/components/GlobalStatusContent.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
 import useVoiceStateForRemoteSessionDefault from "../../../game_console/hooks/useVoiceStateForRemoteSession.tsx";
+import ChannelCallModalDefault from "../../../video_calls/native/components/ChannelCallModal.tsx";
+import StatusBarDefault from "../../../status_bar/native/components/StatusBar.android.tsx";
 import useCanSpeakInChannelDefault from "../../../stage_channels/useCanSpeakInChannel.tsx";
 import useIsInvitedToSpeakDefault from "../../../stage_channels/useIsInvitedToSpeak.tsx";
+import GlobalStageChannelStatusDefault from "../../../stage_channels/native/components/GlobalStageChannelStatus.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import ChannelStore from "../../../../stores/ChannelStore.tsx";
 import GuildStore from "../../../../stores/GuildStore.tsx";
@@ -37,7 +41,7 @@ export default function ConnectivityGlobalStatusContent() {
     () => {
       let channelId;
       if (closure_0 != null) {
-        channelId = tmp2.channelId;
+        channelId = closure_0.channelId;
       }
       if (channelId == null) {
         channelId = RTCConnectionStore.getChannelId();
@@ -55,7 +59,7 @@ export default function ConnectivityGlobalStatusContent() {
       let str;
       const guild = GuildStore.getGuild(guildId1);
       if (closure_0 != null) {
-        str = tmp2.sessionId;
+        str = closure_0.sessionId;
       }
       if (str == null) {
         str = "";
@@ -101,7 +105,7 @@ export default function ConnectivityGlobalStatusContent() {
   tmp5Result = tmp5(5126);
   let isScreenLandscape = tmp5Result.useIsScreenLandscape();
   if (isScreenLandscape) {
-    isScreenLandscape = tmp5(4417).isModalOpen(tmp2(9466));
+    isScreenLandscape = tmp5(4417).isModalOpen(ChannelCallModalDefault);
     const tmp5Result1 = tmp5(4417);
   }
   if (isScreenLandscape) {
@@ -110,7 +114,7 @@ export default function ConnectivityGlobalStatusContent() {
   }
   let num = 0;
   if (!isScreenLandscape) {
-    num = tmp2(1611)().top;
+    num = useSafeAreaInsetsDefault().top;
   }
   obj = { style: null, children: null };
   const items2 = [tmp14 ? tmp.bg : tmp.bgNeutral, tmp.container];
@@ -118,7 +122,7 @@ export default function ConnectivityGlobalStatusContent() {
   items2[2] = obj;
   obj.style = items2;
   if (isScreenLandscape) {
-    isScreenLandscape = closure_10(tmp2(9481), { hidden: true });
+    isScreenLandscape = closure_10(StatusBarDefault, { hidden: true });
   }
   const items3 = [isScreenLandscape];
   let tmp19 = null;
@@ -131,7 +135,7 @@ export default function ConnectivityGlobalStatusContent() {
       rtcConnectionState,
       remotePlatform,
     };
-    tmp19 = closure_10(tmp2(9686), obj1);
+    tmp19 = closure_10(GlobalStageChannelStatusDefault, obj1);
   }
   items3[1] = tmp19;
   obj.children = items3;

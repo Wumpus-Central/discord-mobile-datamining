@@ -4,7 +4,7 @@ import useAuthorizationApp from "../hooks/useAuthorizationApp.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 
 require = fn;
-let closure_5 = async function _startAuthorizationNoHook(arg0, value) {
+let closure_5 = async function _startAuthorizationNoHook(arg0) {
   if (c7 === 2) {
     c7 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");

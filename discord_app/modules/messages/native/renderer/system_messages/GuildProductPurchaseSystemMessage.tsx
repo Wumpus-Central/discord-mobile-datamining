@@ -1,9 +1,12 @@
 // discord_app/modules/messages/native/renderer/system_messages/GuildProductPurchaseSystemMessage.tsx
+import util from "../../../../../intl/index.native.tsx";
+import AvatarUtils from "../../../../../utils/AvatarUtils.tsx";
 import utils_AvatarUtils from "../../../../../utils/native/AvatarUtils.tsx";
 import useMessageAuthor from "../../../useMessageAuthor.tsx";
 import useAuthorWithProcessedColor from "useAuthorWithProcessedColor.tsx";
 import formatUsernameOnClickDefault from "formatUsernameOnClick.tsx";
 import createCommonMessageDefault from "createCommonMessage.tsx";
+import GuildProductSystemMessageUtils from "../../../../guild_products/GuildProductSystemMessageUtils.tsx";
 import MessageRecord from "../../../../../records/MessageRecord.tsx";
 import ChannelStore from "../../../../../stores/ChannelStore.tsx";
 
@@ -43,12 +46,12 @@ export const createGuildProductPurchaseSystemMessage = function createGuildProdu
     utils_AvatarUtils;
     if (null != guildMemberAvatar) {
       if (null != guildId) {
-        let tmp5Result = tmp5(1396);
+        let tmp5Result = AvatarUtils;
         obj = { userId: author.id, avatar: guildMemberAvatar, guildId };
         let guildMemberAvatarSource = tmp5Result.getGuildMemberAvatarSource(obj, author);
       }
       obj = { content: null, totalMonthsSubscribed: 0, username: null, avatarURL: null, welcomeLabel: null };
-      tmp5Result = tmp5(7994);
+      tmp5Result = GuildProductSystemMessageUtils;
       obj1 = { username: messageAuthorWithProcessedColor.nick, usernameOnClickHandler: null, productName: null };
       obj2 = { message, author: messageAuthorWithProcessedColor, roleStyle: message.roleStyle };
       obj1.usernameOnClickHandler = formatUsernameOnClickDefault(obj2);
@@ -56,11 +59,12 @@ export const createGuildProductPurchaseSystemMessage = function createGuildProdu
       obj.content = tmp5Result.getGuildProductPurchaseSystemMessageContentMobile(obj1);
       obj.username = messageAuthorWithProcessedColor.nick;
       obj.avatarURL = tmp9(guildMemberAvatarSource).uri;
-      const intl = tmp5(1114).intl;
-      obj.welcomeLabel = intl.string(tmp5(1114).t.s2N5HS);
+      const intl = util.intl;
+      obj.welcomeLabel = intl.string(util.t.s2N5HS);
       const merged1 = Object.assign(createCommonMessageDefault(obj));
       return obj;
     }
     guildMemberAvatarSource = author.getAvatarSource(undefined);
   }
+  const tmp2 = new MessageRecord(message.message);
 };

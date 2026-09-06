@@ -40,9 +40,8 @@ export default function useIframeLifecycle(id) {
       ComponentDispatch.dispatch(ComponentActions.IFRAME_MOUNT, obj);
       let current = ref.current;
       if (current != null) {
-        current(tmp4);
+        current(id);
       }
-      tmp4 = id;
     }
     return () => {
       if (ref2.current) {
@@ -51,9 +50,8 @@ export default function useIframeLifecycle(id) {
         ComponentDispatch.dispatch(flag.IFRAME_UNMOUNT, obj);
         const current = ref.current;
         if (current != null) {
-          current(tmp4);
+          current(id);
         }
-        tmp4 = id;
       }
     };
   }, items);

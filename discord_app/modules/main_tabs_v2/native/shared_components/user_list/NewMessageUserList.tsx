@@ -19,20 +19,19 @@ function matchGroupDMRecipients(trimmed1, recipients) {
     let tmp4 = user;
     if (null != user) {
       let username = tmp4.username;
-      let tmp19 = importDefault;
       let toLocaleLowerCaseResult = username.toLocaleLowerCase();
       if (fuzzysearchDefault(trimmed1, toLocaleLowerCaseResult)) {
         obj.return();
         return 1;
       } else {
-        let tmp19Result = tmp19(4404);
+        let tmp19Result = UserUtilsDefault;
         let globalName = tmp19Result.getGlobalName(tmp4);
         let toLocaleLowerCaseResult1;
         if (globalName != null) {
           toLocaleLowerCaseResult1 = globalName.toLocaleLowerCase();
         }
         if (null != toLocaleLowerCaseResult1) {
-          if (tmp19(5517)(trimmed1, tmp7)) {
+          if (fuzzysearchDefault(trimmed1, tmp7)) {
             obj.return();
             return 1;
           }
@@ -43,7 +42,7 @@ function matchGroupDMRecipients(trimmed1, recipients) {
           toLocaleLowerCaseResult2 = nickname.toLocaleLowerCase();
         }
         if (null != toLocaleLowerCaseResult2) {
-          if (tmp19(5517)(trimmed1, tmp12)) {
+          if (fuzzysearchDefault(trimmed1, tmp12)) {
             obj.return();
             return 1;
           }
@@ -199,7 +198,7 @@ export default function NewMessageUserList(selectedUserIds) {
   const effect = rowMode.useEffect(() => {
     if (closure_0) {
       if ("" !== onSelectUser) {
-        closure_0 = obj.toLocaleLowerCase();
+        closure_0 = onSelectUser.toLocaleLowerCase();
         const _Object = Object;
         const values = Object.values(closure_6.getMutablePrivateChannels());
         const found = values.filter(filterGroupDMs);
@@ -230,7 +229,6 @@ export default function NewMessageUserList(selectedUserIds) {
       } else {
         onQueryChanged(closure_1_13);
       }
-      obj = onSelectUser;
     } else {
       onQueryChanged(closure_1_13);
     }
@@ -251,7 +249,7 @@ export default function NewMessageUserList(selectedUserIds) {
       obj = { title: null, items: null };
       let intl = util.intl;
       obj.title = intl.string(util.t.qGlQrW);
-      obj.items = arr2.map((data) => ({ type: "GroupDMChannelRecord", data }));
+      obj.items = _undefined2.map((data) => ({ type: "GroupDMChannelRecord", data }));
       const findIndexResult = obj.findIndex((title) => {
         const intl = selectedUserIds(1114).intl;
         return title.title === intl.string(selectedUserIds(1114).t.y29JXs);
@@ -268,7 +266,6 @@ export default function NewMessageUserList(selectedUserIds) {
       }
       return items1;
     }
-    arr2 = _undefined2;
   }, items2);
   const items3 = [memo];
   const memo1 = rowMode.useMemo(() => memo.map((items) => items.items.length), items3);
@@ -308,7 +305,7 @@ export default function NewMessageUserList(selectedUserIds) {
       obj.onPress = onSelectUser;
       let flag;
       if (disabledUserIds != null) {
-        flag = obj4.includes(user.id);
+        flag = disabledUserIds.includes(user.id);
       }
       if (flag == null) {
         flag = false;
@@ -323,15 +320,13 @@ export default function NewMessageUserList(selectedUserIds) {
         obj.mode = TOGGLE;
         obj = { variant: "text-xs/medium", color: "text-muted", children: UserUtilsDefault.getUserTag(user) };
         obj.subLabel = closure_2_10(Text_Text.Text, obj);
-        obj.arrow = !obj5.isFriend(user.id);
+        obj.arrow = !RelationshipStore.isFriend(user.id);
         obj.start = tmp2;
         obj.end = tmp3;
         element.props = obj;
         return element;
       }
       TOGGLE = rowMode;
-      obj4 = disabledUserIds;
-      obj5 = RelationshipStore;
     } else if ("GroupDMChannelRecord" === type) {
       const element1 = { type: "gdm", props: null };
       const obj1 = { channel: tmp.data, onPress: onSelectUser, arrow: true, start: tmp2, end: tmp3 };
@@ -399,7 +394,7 @@ export default function NewMessageUserList(selectedUserIds) {
       insetEnd: 12,
       disableThemedGradient: true,
     };
-    let tmp32Result = tmp32(UsersFastList, obj2);
+    let tmp32Result = closure_10(UsersFastList, obj2);
   } else {
     const obj3 = { style: null, children: null };
     if (tmp21) {
@@ -414,19 +409,21 @@ export default function NewMessageUserList(selectedUserIds) {
       let tmp24 = obj3;
     } else {
       obj3.style = noResults;
-      let obj4 = { title: null, subtitle: null, children: null };
+      const obj4 = { title: null, subtitle: null, children: null };
       tmp6Result = tmp6(tmp7[19]);
       let intl = UsersFastList(tmp7[15]).intl;
       obj4.title = intl.string(UsersFastList(tmp7[15]).t.sPAvXU);
       const intl2 = UsersFastList(tmp7[15]).intl;
       obj4.subtitle = intl2.string(UsersFastList(tmp7[15]).t.nQ05z2);
-      let obj5 = { actions: noResultActions };
-      obj4.children = tmp32(UsersFastList(tmp7[17]).UserFlashListActions, obj5);
-      obj3.children = tmp32(tmp6Result, obj4);
+      const obj5 = { actions: noResultActions };
+      obj4.children = closure_10(UsersFastList(tmp7[17]).UserFlashListActions, obj5);
+      obj3.children = closure_10(tmp6Result, obj4);
       tmp24 = obj3;
     }
-    tmp32Result = tmp32(c5, tmp24);
+    tmp32Result = closure_10(c5, tmp24);
   }
+  tmp21 = 0 === str.length && null != defaultNoResultsFound;
+  const tmp9 = onQueryChanged(rowMode.useState([]), 2);
 }
 export { matchGroupDM };
 export { filterGroupDMs };
@@ -440,7 +437,7 @@ export const useSearchGDMNames = function useSearchGDMNames(arg0, arg1, arg2) {
   const effect = noop.useEffect(() => {
     if (closure_0) {
       if ("" !== onSelectUser) {
-        closure_0 = obj.toLocaleLowerCase();
+        closure_0 = onSelectUser.toLocaleLowerCase();
         const _Object = Object;
         const values = Object.values(closure_6.getMutablePrivateChannels());
         const found = values.filter(filterGroupDMs);
@@ -471,7 +468,6 @@ export const useSearchGDMNames = function useSearchGDMNames(arg0, arg1, arg2) {
       } else {
         onQueryChanged(closure_1_13);
       }
-      obj = onSelectUser;
     } else {
       onQueryChanged(closure_1_13);
     }

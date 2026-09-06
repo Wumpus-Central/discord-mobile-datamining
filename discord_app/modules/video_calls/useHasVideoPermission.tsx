@@ -14,12 +14,12 @@ export default function useHasVideoPermission(arg0) {
   return require("initialize").useStateFromStores(
     items,
     () => {
-      let tmp = null != closure_0;
+      let tmp = null != _private;
       if (tmp) {
-        let isPrivateResult = obj.isPrivate();
+        let isPrivateResult = _private.isPrivate();
         if (!isPrivateResult) {
           const obj2 = StreamPermissionUtils;
-          isPrivateResult = obj2.canStreamInChannel(obj, GuildStore, PermissionStore, false);
+          isPrivateResult = obj2.canStreamInChannel(_private, GuildStore, PermissionStore, false);
         }
         tmp = isPrivateResult;
       }

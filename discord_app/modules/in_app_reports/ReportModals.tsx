@@ -10,7 +10,7 @@ import MessageRecord from "../../records/MessageRecord.tsx";
 import UserRecord from "../../records/UserRecord.tsx";
 
 require = fn;
-let closure_8 = async function _submitHamReportForFirstDM(record, arg1) {
+let closure_8 = async function _submitHamReportForFirstDM() {
   closure_1 = arg1;
   c3 = 0;
   c5 = 0;
@@ -37,7 +37,7 @@ let closure_8 = async function _submitHamReportForFirstDM(record, arg1) {
     return value;
   })();
 };
-let closure_9 = async function _submitReportForInappropriateConversationSafetyAlert(record, arg1, arg2) {
+let closure_9 = async function _submitReportForInappropriateConversationSafetyAlert() {
   closure_1 = arg1;
   closure_2 = arg2;
   c4 = 0;
@@ -156,9 +156,10 @@ export const showReportModalForGuildScheduledEvent = function showReportModalFor
   obj = { report_type: MenuTypes.ReportNames.GUILD_SCHEDULED_EVENT };
   const merged = Object.assign(obj);
   obj1.trackWithMetadata(AnalyticEvents.IAR_MODAL_OPEN, obj);
-  obj = { name: tmp(8630).ReportNames.GUILD_SCHEDULED_EVENT, record: guild_scheduled_event_id };
+  obj = { name: MenuTypes.ReportNames.GUILD_SCHEDULED_EVENT, record: guild_scheduled_event_id };
   obj1 = { onSubmit };
   showReportModal.showReportModal(obj, {}, obj1);
+  const tmpResult = showReportModal;
 };
 export const showReportModalForFirstDM = function showReportModalForFirstDM(id, onSubmit) {
   let obj = { message_id: id.id, channel_id: id.channel_id };

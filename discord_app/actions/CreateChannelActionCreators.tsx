@@ -71,7 +71,7 @@ export default {
         obj.branch_id = guildId.branchId;
       }
     }
-    if (type === tmp8.GUILD_APP) {
+    if (type === constants.GUILD_APP) {
       if (null == applicationId) {
         const _Error = Error;
         const error1 = new Error("Unexpected missing application");
@@ -111,7 +111,6 @@ export default {
       },
     };
     request.trackedActionData = obj;
-    tmp8 = constants;
     const tmpResult = permissionOverwrites(4753);
     request.rejectWithError = guildId(1272).rejectWithMigratedError();
     const obj6 = guildId(1272);
@@ -120,13 +119,13 @@ export default {
         if (UserGuildSettingsStore.isOptInEnabled(guildId)) {
           const obj = { flags: constants.OPT_IN_ENABLED };
           const result = obj.updateChannelOverrideSettings(
-            tmp,
+            guildId,
             body.body.id,
             obj,
             NotificationSettingsUtils.NotificationLabels.OptedIn,
           );
         }
-        const result1 = GuildTemplateTooltipActionCreatorsDefault.checkGuildTemplateDirty(tmp);
+        const result1 = GuildTemplateTooltipActionCreatorsDefault.checkGuildTemplateDirty(guildId);
         return body;
       },
       (body) => {

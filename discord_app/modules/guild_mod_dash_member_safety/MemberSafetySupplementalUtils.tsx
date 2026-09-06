@@ -14,8 +14,8 @@ function createFetchKeys(arg0, arr) {
 function getUserIdFromFetchKey(arg0) {
   return arg0.split("-")[1];
 }
-function updateFetchRequests(arr, arg1) {
-  closure_0 = arg1;
+function updateFetchRequests(arr, PENDING) {
+  closure_0 = PENDING;
   const item = arr.forEach((item) => {
     closure_5[item] = closure_0;
   });
@@ -29,7 +29,7 @@ function _transformFetchMemberSupplementalResponse(userId) {
     integrationType: userId.integration_type,
   };
 }
-let closure_13 = async function _fetchMemberSupplemental(arg0, value) {
+let closure_13 = async function _fetchMemberSupplemental(arg0) {
   if (c7 === 2) {
     c7 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -79,7 +79,7 @@ let closure_13 = async function _fetchMemberSupplemental(arg0, value) {
             updateFetchRequests(tmp52, constants.PENDING);
             c5 = 1;
             const HTTP = HTTPUtils.HTTP;
-            const request = { url: Endpoints.MEMBER_SAFETY_SUPPLEMENTAL(tmp49), body: null, rejectWithError: true };
+            const request = { url: Endpoints.MEMBER_SAFETY_SUPPLEMENTAL(closure_0), body: null, rejectWithError: true };
             const obj2 = { user_ids: arr2 };
             request.body = obj2;
             c6 = 2;
@@ -87,7 +87,6 @@ let closure_13 = async function _fetchMemberSupplemental(arg0, value) {
             const obj3 = { value: HTTP.post(request), done: false };
             return obj3;
           }
-          tmp49 = closure_0;
         }
       } else if (1 === tmp7) {
         c5 = 0;

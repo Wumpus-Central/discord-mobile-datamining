@@ -21,12 +21,12 @@ export default function useUserProfileConnections(arg0) {
   return useMemo(() => {
     let connectedAccounts;
     if (stateFromStores != null) {
-      connectedAccounts = tmp.connectedAccounts;
+      connectedAccounts = stateFromStores.connectedAccounts;
     }
     if (null == connectedAccounts) {
       let found = closure_5;
     } else {
-      const connectedAccounts1 = tmp.connectedAccounts;
+      const connectedAccounts1 = stateFromStores.connectedAccounts;
       found = connectedAccounts1.filter((type) => {
         type = type.type;
         value = platformAllowed(stateFromStores[4]).get(type);

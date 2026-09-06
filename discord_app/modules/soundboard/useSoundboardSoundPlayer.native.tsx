@@ -30,13 +30,13 @@ export default function useSoundboardSoundPlayer(arg0, arg1) {
   let obj = { playSoundboardSound: null, isPlayingSound: null, previewSound: null, isPreviewingSound: false };
   const items2 = [arg0, audioRef, arg1];
   const stateFromStores = obj.useStateFromStores(items, () => SoundboardStore.isPlayingSound(soundId.soundId), items1);
-  obj.playSoundboardSound = noop.useCallback((arg0) => {
+  obj.playSoundboardSound = noop.useCallback((items) => {
     if (null != audioRef.current) {
       const current = audioRef.current;
       current.pause();
     }
     if (null != closure_1) {
-      SoundboardUtils.playSound(closure_0, tmp2, arg0);
+      SoundboardUtils.playSound(closure_0, tmp2, items);
     }
   }, items2);
   obj.isPlayingSound = stateFromStores;

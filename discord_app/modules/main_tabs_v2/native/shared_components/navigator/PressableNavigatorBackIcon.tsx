@@ -84,9 +84,8 @@ export const PressableNavigatorBackIcon = noop.forwardRef((navigation, ref) => {
   const callback = obj1.useCallback(() => {
     if (null == onPress) {
       if (navigation != null) {
-        obj.goBack();
+        navigation.goBack();
       }
-      obj = navigation;
     } else {
       tmp();
     }
@@ -111,8 +110,8 @@ export const PressableNavigatorBackIcon = noop.forwardRef((navigation, ref) => {
   if (stateFromStores > 0) {
     obj2 = { style: tmp2.maskWrapper, children: null };
     const obj3 = { value: stateFromStores, maxValue: 99, backgroundColor, unread: false, style: memo };
-    obj2.children = tmp8(tmp9(tmp4[15]), obj3);
-    tmp8Result = tmp8(tmp14, obj2);
+    obj2.children = closure_9(tmp9(tmp4[15]), obj3);
+    tmp8Result = closure_9(closure_4, obj2);
   }
   const obj4 = { children: null };
   items3[1] = tmp8Result;

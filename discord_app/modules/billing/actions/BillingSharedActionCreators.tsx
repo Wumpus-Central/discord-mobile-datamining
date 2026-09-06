@@ -8,7 +8,7 @@ import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js
 import PaymentSourceRecord from "../../../records/PaymentSourceRecord.tsx";
 
 require = fn;
-let closure_8 = async function _validatePaymentSourceBillingAddress(arg0, value) {
+let closure_8 = async function _validatePaymentSourceBillingAddress(arg0) {
   if (c6 === 2) {
     c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -89,12 +89,12 @@ let closure_9 = async function _popupBridgeState() {
   closure_129_0 = closure_0;
   const HTTP = HTTPUtils.HTTP;
   await HTTP.post({ url: closure_2_7.BILLING_POPUP_BRIDGE(closure_0), oldFormErrors: true, rejectWithError: true });
-  const state = arg1.body.state;
+  const state = value.body.state;
   { url: React5.BILLING_POPUP_BRIDGE(closure_0), oldFormErrors: true, rejectWithError: true };
   closure_130_1(closure_130_2[6]).dispatch({ type: "BILLING_POPUP_BRIDGE_STATE_UPDATE", state, paymentSourceType: closure_129_0 });
   return state;
 };
-let closure_10 = async function _createPaymentSource(arg0, value) {
+let closure_10 = async function _createPaymentSource(arg0) {
   if (c10 === 2) {
     c10 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -248,7 +248,7 @@ export const validatePaymentSourceBillingAddress = function validatePaymentSourc
   }
   return applyArgumentsResult;
 };
-export const dispatchConfirmationError = function dispatchConfirmationError(type, flag, stringResult, arg3) {
+export const dispatchConfirmationError = function dispatchConfirmationError(type) {
   if (flag === undefined) {
     flag = true;
   }
@@ -299,12 +299,12 @@ export const dispatchConfirmationError = function dispatchConfirmationError(type
     tmp12 = obj1;
     billingError = billingError1;
     flag2 = flag;
-    tmp15 = tmp4;
+    tmp15 = require;
     if (429 === billingError1.code) {
       flag2 = false;
       tmp12 = obj1;
       billingError = billingError1;
-      tmp15 = tmp4;
+      tmp15 = require;
     }
   }
   DispatcherDefault.dispatch({ type: "BILLING_PAYMENT_SOURCE_CREATE_FAIL", error: billingError });

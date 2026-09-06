@@ -1,6 +1,8 @@
 // discord_app/modules/group_dm/native/useGroupDMNitroUpsellAction.tsx
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
+import openUserSettings from "../../user_settings/core/native/openUserSettings.tsx";
 import GroupDMNitroUpsellModel from "GroupDMNitroUpsellModel.tsx";
+import PremiumMarketingUtil from "../../premium/PremiumMarketingUtil.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -24,15 +26,15 @@ export default function useGroupDMNitroUpsellAction(audience) {
     if (GroupDMNitroUpsellModel.GroupDMNitroUpsellRoute.MANAGE === groupDMNitroUpsellRoute) {
       obj = { location: _location };
       AnalyticsUtilsDefault.track(constants.PREMIUM_PROMOTION_OPENED, obj);
-      let tmpResult = tmp(7382);
+      let tmpResult = openUserSettings;
       obj = { screen: constants2.PREMIUM_MANAGE_PLAN };
       tmpResult.openUserSettings(obj);
-    } else if (tmp(11591).GroupDMNitroUpsellRoute.MARKETING === groupDMNitroUpsellRoute) {
+    } else if (GroupDMNitroUpsellModel.GroupDMNitroUpsellRoute.MARKETING === groupDMNitroUpsellRoute) {
       const obj1 = { location: _location };
       obj1.track(constants.PREMIUM_PROMOTION_OPENED, obj1);
-      tmpResult = tmp(11597);
+      tmpResult = PremiumMarketingUtil;
       const result = tmpResult.navigateToPremiumHomePage();
-    } else if (tmp(11591).GroupDMNitroUpsellRoute.CHECKOUT === groupDMNitroUpsellRoute) {
+    } else if (GroupDMNitroUpsellModel.GroupDMNitroUpsellRoute.CHECKOUT === groupDMNitroUpsellRoute) {
       if (onCheckout != null) {
         onCheckout();
       }

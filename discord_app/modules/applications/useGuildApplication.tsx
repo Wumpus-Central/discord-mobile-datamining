@@ -24,7 +24,7 @@ export default function useGuildApplication(arg0, arg1) {
   closure_6 = tmp5[1];
   const items1 = [application, arg1, arg0];
   const callback = first.useCallback(
-    asyncGeneratorStep(async (arg0, value) => {
+    asyncGeneratorStep(async () => {
       if (c5 === 2) {
         c5 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");

@@ -3,13 +3,13 @@ import DispatcherDefault from "../../../../Dispatcher.tsx";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import ReanimatedRexport2 from "../../../reanimated/ReanimatedRexport.tsx";
 import MemberVerificationTypes from "../../MemberVerificationTypes.tsx";
+import MemberVerificationAlertActionCreators from "../MemberVerificationAlertActionCreators.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import GuildMemberStore from "../../../../stores/GuildMemberStore.tsx";
 import MemberVerificationFormStore from "../../MemberVerificationFormStore.tsx";
 
 const ReanimatedRexport = ReanimatedRexport2;
 
-const MemberVerificationAlertActionCreators = tmp3(5527);
 require = fn;
 const View = fn(17).View;
 const MemberVerificationFormConstants = fn(5573);
@@ -213,12 +213,15 @@ export default function MemberVerificationModal(guildId) {
         obj6 = {
           guild: tmp12,
           onSuccess(application_status) {
-            const tmp = guildId;
             const tmp2 = null != GuildMemberStore.getSelfMember(guildId);
             if (!tmp5) {
-              const result = MemberVerificationAlertActionCreators.openMemberVerificationPendingAlert(tmp);
+              const result = MemberVerificationAlertActionCreators.openMemberVerificationPendingAlert(guildId);
               const tmp3Result = MemberVerificationAlertActionCreators;
             }
+            tmp5 =
+              application_status.application_status !==
+                MemberVerificationTypes.GuildJoinRequestApplicationStatuses.SUBMITTED ||
+              null != GuildMemberStore.getSelfMember(guildId);
           },
           onClose,
         };
@@ -298,4 +301,5 @@ export default function MemberVerificationModal(guildId) {
   }
   animatedScrollHandler = obj1.useAnimatedScrollHandler(A);
   tmp28 = closure_9(closure_4, { style: tmp.flexLoading, children: closure_9(guildId(top[18]).ActivityIndicator, {}) });
+  const obj12 = { style: tmp.flexLoading, children: closure_9(guildId(top[18]).ActivityIndicator, {}) };
 }

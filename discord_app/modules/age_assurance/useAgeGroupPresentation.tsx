@@ -1,5 +1,6 @@
 // discord_app/modules/age_assurance/useAgeGroupPresentation.tsx
 import Constants from "../../Constants.tsx";
+import util from "../../intl/index.native.tsx";
 import HelpdeskUtilsDefault from "../../utils/HelpdeskUtils.tsx";
 import AgeVerificationUtils from "AgeVerificationUtils.tsx";
 import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators.native.tsx";
@@ -43,14 +44,14 @@ export const useAgeGroupValueLabel = function useAgeGroupValueLabel() {
     tmp5 = tmp4;
   }
   if (tmp5.ADULT === UNVERIFIED) {
-    const intl3 = tmp(1114).intl;
-    return intl3.string(tmp(1114).t.XxRj7f);
+    const intl3 = util.intl;
+    return intl3.string(util.t.XxRj7f);
   } else if (tmp5.TEEN === UNVERIFIED) {
-    const intl2 = tmp(1114).intl;
-    return intl2.string(tmp(1114).t.sK0dmH);
+    const intl2 = util.intl;
+    return intl2.string(util.t.sK0dmH);
   } else if (tmp5.UNVERIFIED === UNVERIFIED) {
-    const intl = tmp(1114).intl;
-    return intl.string(tmp(1114).t.lKDPGA);
+    const intl = util.intl;
+    return intl.string(util.t.lKDPGA);
   }
   obj2 = AgeVerificationUtils;
 };

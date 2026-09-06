@@ -1,6 +1,9 @@
 // discord_app/design/void/Form/native/FreeFormInputGroup.tsx
 import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
+import native from "../../native.tsx";
+import Text_Text from "../../../components/Text/native/Text.tsx";
 import RedesignCompat from "../../../components/RedesignCompat/native/RedesignCompat.native.tsx";
+import TextInput from "../../../components/TextInput/native/TextInput.native.tsx";
 import FreeFormLabelDefault from "FreeFormLabel.tsx";
 import FreeFormTextInputDefault from "FreeFormTextInput.tsx";
 import FreeFormErrorLabelDefault from "FreeFormErrorLabel.tsx";
@@ -69,12 +72,12 @@ export default noop.forwardRef((accessibilityLabel, ref) => {
       description: hint,
       placeholder,
       onChange: onChangeText,
-      isClearable: clearButtonVisibility !== tmp8(1178).ClearButtonVisibility.WITH_CONTENT,
+      isClearable: clearButtonVisibility !== native.ClearButtonVisibility.WITH_CONTENT,
       keyboardType: str,
       secureTextEntry: isAndroidResult,
       autoCapitalize: merged.autoCapitalize,
     };
-    return hasOwnProperty(tmp8(6606).TextInput, obj);
+    return hasOwnProperty(TextInput.TextInput, obj);
   } else {
     obj = { style, children: null };
     let tmp14 = null;
@@ -86,12 +89,10 @@ export default noop.forwardRef((accessibilityLabel, ref) => {
     const obj2 = {};
     const merged1 = Object.assign(merged);
     if (accessibilityLabel == null) {
-      if (null == label) {
-        const tmp23 = label;
-      } else {
-        const tmp8Result = tmp8(1115);
+      if (null != label) {
+        PlatformUtils;
       }
-      accessibilityLabel = tmp23;
+      accessibilityLabel = label;
     }
     obj2.accessibilityLabel = accessibilityLabel;
     obj2.accessibilityLabelledBy = id;
@@ -106,13 +107,13 @@ export default noop.forwardRef((accessibilityLabel, ref) => {
     let tmp17Result = null;
     if (null != error) {
       const obj3 = { style: tmp2.error, children: error };
-      tmp17Result = tmp17(FreeFormErrorLabelDefault, obj3);
+      tmp17Result = hasOwnProperty(FreeFormErrorLabelDefault, obj3);
     }
     items[2] = tmp17Result;
     tmp17Result = null;
     if (null != hint) {
       const obj4 = { style: tmp2.hint, variant: "text-xs/medium", color: "text-muted", children: hint };
-      tmp17Result = tmp17(tmp8(4556).Text, obj4);
+      tmp17Result = hasOwnProperty(Text_Text.Text, obj4);
     }
     items[3] = tmp17Result;
     obj.children = items;

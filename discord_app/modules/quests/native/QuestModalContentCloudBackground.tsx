@@ -20,7 +20,7 @@ let closure_7 = createStyles.createStyles((arg0) => {
   obj.zIndex = 1;
   obj.wrapper = obj;
   obj = {};
-  const merged2 = Object.assign(tmp.absoluteFillObject);
+  const merged2 = Object.assign(absoluteFillObject.absoluteFillObject);
   const merged3 = Object.assign(arg0 ? { top: "Array" } : { bottom: "Array" });
   if (arg0) {
     let obj1 = {};
@@ -33,15 +33,15 @@ let closure_7 = createStyles.createStyles((arg0) => {
   obj.width = "100%";
   obj.cloudsImage = obj;
   const obj2 = {};
-  const merged5 = Object.assign(tmp.absoluteFillObject);
+  const merged5 = Object.assign(absoluteFillObject.absoluteFillObject);
   obj2.bottom = undefined;
   obj2.width = "100%";
   obj.cloudsImageLight = obj2;
   const obj3 = {};
-  const merged6 = Object.assign(tmp.absoluteFillObject);
+  const merged6 = Object.assign(absoluteFillObject.absoluteFillObject);
   obj3.opacity = 1;
   obj.gradient = obj3;
-  const merged7 = Object.assign(tmp.absoluteFillObject);
+  const merged7 = Object.assign(absoluteFillObject.absoluteFillObject);
   obj.solidBackground = {};
   return obj;
 });
@@ -72,17 +72,17 @@ export default function QuestModalContentCloudBackground(align) {
   obj.style = items;
   if (isThemeDarkResult) {
     obj = { colors: "top" === str ? items : closure_9, style: tmp.gradient };
-    tmp6(LinearGradientDefault, obj);
+    hasOwnProperty(LinearGradientDefault, obj);
   } else {
     obj1 = { style: tmp.solidBackground };
-    const items1 = [tmp6(tmp5, obj1)];
+    const items1 = [hasOwnProperty(React3, obj1)];
     const obj2 = { style: null, source: null, resizeMode: null };
     const items2 = [isThemeDarkResult ? tmp.cloudsImage : tmp.cloudsImageLight, imgStyle];
     obj2.style = items2;
     obj2.source = importDefault(isThemeDarkResult ? 15128 : 15129);
     obj2.resizeMode = str2;
-    items1[1] = tmp6(FastImageDefault, obj2);
+    items1[1] = hasOwnProperty(FastImageDefault, obj2);
     obj.children = items1;
-    return tmp4(tmp5, obj);
+    return tmp4(React3, obj);
   }
 }

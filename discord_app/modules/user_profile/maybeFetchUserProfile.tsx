@@ -9,7 +9,7 @@ require = fn;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/maybeFetchUserProfile.tsx");
 
-export default function maybeFetchUserProfile(id, guildIconURL, guildMember) {
+export default function maybeFetchUserProfile(id, guildIconURL) {
   _require = id;
   let obj = guildMember;
   if (guildMember === undefined) {
@@ -42,8 +42,8 @@ export default function maybeFetchUserProfile(id, guildIconURL, guildMember) {
   } else if (UserProfileStore.isFetchingProfile(id, guildId)) {
     return Promise.resolve();
   } else {
-    const userProfile = obj10.getUserProfile(id);
-    const guildMemberProfile = obj10.getGuildMemberProfile(id, guildId);
+    const userProfile = UserProfileStore.getUserProfile(id);
+    const guildMemberProfile = UserProfileStore.getGuildMemberProfile(id, guildId);
     let tmp7 = userProfile;
     if (null != guildId) {
       tmp7 = guildMemberProfile;
@@ -79,8 +79,8 @@ export default function maybeFetchUserProfile(id, guildIconURL, guildMember) {
         }
       }
     }
-    const mutualGuilds = obj10.getMutualGuilds(id);
-    const mutualFriends = obj10.getMutualFriends(id);
+    const mutualGuilds = UserProfileStore.getMutualGuilds(id);
+    const mutualFriends = UserProfileStore.getMutualFriends(id);
     const tmp17 = null == guildId ? null == userProfile : null == guildMemberProfile;
     let tmp18 = !tmp17;
     if (!tmp17) {

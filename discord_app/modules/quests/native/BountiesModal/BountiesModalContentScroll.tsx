@@ -10,19 +10,24 @@ import QuestContent from "../../../../../discord_common/js/shared/shared-constan
 import AdCreativeType from "../../../../../discord_common/js/shared/shared-constants/AdCreativeType.tsx";
 import AnalyticsActions from "../../lib/analytics/AnalyticsActions.tsx";
 import AnalyticsTypes from "../../lib/analytics/AnalyticsTypes.tsx";
+import _mod8874 from "../../../../../discord_common/js/packages/flash-list/index.js";
 import QuestActionCreators from "../../QuestActionCreators.tsx";
 import hooks_QuestHooks from "../../hooks/QuestHooks.tsx";
 import AppStoreOverlayTelemetryManager from "../AppStoreOverlayTelemetryManager.tsx";
 import VideoQuestUtils from "../../utils/VideoQuestUtils.tsx";
 import useBountiesExperience from "../../experiments/useBountiesExperience.tsx";
 import BountiesVerticalScrollExperiment from "../../experiments/BountiesVerticalScrollExperiment.tsx";
+import QuestContentImpressionTracker from "../QuestContentImpressionTracker.native.tsx";
 import shared_ThemeTypes from "../../../../../discord_common/js/packages/design/shared/ThemeTypes.tsx";
 import BountiesModalActionCreatorsDefault from "BountiesModalActionCreators.tsx";
 import BountiesScrollPromptFooter from "BountiesScrollPromptFooter.tsx";
 import useBountiesRecapScroll from "useBountiesRecapScroll.tsx";
 import useBountySwipeUpNux from "useBountySwipeUpNux.tsx";
 import useBountiesAutoScroll from "useBountiesAutoScroll.tsx";
+import useBountiesRecapOrbCount from "useBountiesRecapOrbCount.tsx";
 import BountiesScrollVideoItem from "BountiesScrollVideoItem.tsx";
+import useBountyVideoEndAppStoreOverlay from "useBountyVideoEndAppStoreOverlay.tsx";
+import BountiesScrollRecapFooter from "BountiesScrollRecapFooter.tsx";
 import BountiesScrollRecapPage from "BountiesScrollRecapPage.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -158,8 +163,8 @@ function BountiesModalContentScrollInner(arg0) {
       let tmp2 = questHomeBounties;
       if (findIndexResult > 0) {
         const items = [];
-        let arraySpreadResult = HermesBuiltin.arraySpread(arr.slice(findIndexResult), 0);
-        arraySpreadResult = HermesBuiltin.arraySpread(arr.slice(0, findIndexResult), arraySpreadResult);
+        let arraySpreadResult = HermesBuiltin.arraySpread(questHomeBounties.slice(findIndexResult), 0);
+        arraySpreadResult = HermesBuiltin.arraySpread(questHomeBounties.slice(0, findIndexResult), arraySpreadResult);
         tmp2 = items;
       }
       return tmp2;
@@ -179,7 +184,7 @@ function BountiesModalContentScrollInner(arg0) {
   const sharedValue = obj4.useSharedValue(1);
   let obj5 = ReanimatedRexport;
   const sharedValue1 = obj5.useSharedValue(0);
-  const tmp6 = height;
+  let tmp6 = height;
   let tmp7 = height(noop.useState(BountiesScrollPromptFooter.BOUNTIES_MODAL_BASE_FOOTER_HEIGHT), 2);
   [tmp18, c15] = height(noop.useState(null), 2);
   const ref = noop.useRef(null);
@@ -345,7 +350,7 @@ function BountiesModalContentScrollInner(arg0) {
       const tmpResult = AnalyticsActions;
     }
   }, items12);
-  let tmp5Result = tmp5(15012);
+  let tmp5Result = useBountiesAutoScroll;
   obj = {
     listRef: ref,
     enabled: null,
@@ -458,8 +463,10 @@ function BountiesModalContentScrollInner(arg0) {
         dismissRecurringSwipeUpNux(ContentDismissActionType.USER_DISMISS);
       }
     }
+    const tmp = takeDidAutoScroll();
+    tmp6 = 0 === first4 && arg0 > 0;
   }, items16);
-  tmp5Result = tmp5(15013);
+  tmp5Result = useBountiesRecapOrbCount;
   orbAmount = tmp5Result.useBountiesRecapOrbCount({
     scrollY: sharedValue4,
     lastBountyScrollOffset: result1,
@@ -607,8 +614,8 @@ function BountiesModalContentScrollInner(arg0) {
     }
   }
   obj3 = {
-    VerticalScrollingDirection: tmp5(7728).VerticalScrollingDirection,
-    runOnJS: tmp5(4296).runOnJS,
+    VerticalScrollingDirection: AnalyticsTypes.VerticalScrollingDirection,
+    runOnJS: ReanimatedRexport.runOnJS,
     cancelScrollAffordance: cancel,
     isDraggingSharedValue: sharedValue3,
     IS_ANDROID,
@@ -634,7 +641,7 @@ function BountiesModalContentScrollInner(arg0) {
   }
   obj4 = {
     showRecapPullZone: tmp30,
-    runOnJS: tmp5(4296).runOnJS,
+    runOnJS: ReanimatedRexport.runOnJS,
     handleRecapMomentumEnd,
     isScrollingInBoundsSharedValue: sharedValue2,
   };
@@ -664,7 +671,7 @@ function BountiesModalContentScrollInner(arg0) {
       return;
     }
   }
-  obj5 = { runOnJS: tmp5(4296).runOnJS, commitSwipe: callback5 };
+  obj5 = { runOnJS: ReanimatedRexport.runOnJS, commitSwipe: callback5 };
   Wt.__closure = obj5;
   Wt.__workletHash = 14015091539518;
   Wt.__initData = __initData5;
@@ -682,7 +689,7 @@ function BountiesModalContentScrollInner(arg0) {
     showRecapPullZone: tmp30,
     scrollY: sharedValue4,
     lastBountyScrollOffset: result1,
-    RECAP_SNAP_EPSILON: tmp5(15009).RECAP_SNAP_EPSILON,
+    RECAP_SNAP_EPSILON: useBountiesRecapScroll.RECAP_SNAP_EPSILON,
   };
   jt.__closure = obj6;
   jt.__workletHash = 6584708256992;
@@ -699,7 +706,7 @@ function BountiesModalContentScrollInner(arg0) {
       return;
     }
   }
-  obj7 = { runOnJS: tmp5(4296).runOnJS, setShowRecapFooter: tmp46 };
+  obj7 = { runOnJS: ReanimatedRexport.runOnJS, setShowRecapFooter: tmp46 };
   Xt.__closure = obj7;
   Xt.__workletHash = 10788669301891;
   Xt.__initData = sharedValue3;
@@ -720,7 +727,7 @@ function BountiesModalContentScrollInner(arg0) {
       ReanimatedRexport.runOnJS(closure_32)(arg0);
     }
   }
-  obj8 = { runOnJS: tmp5(4296).runOnJS, setIsRecapPageRevealed: tmp37 };
+  obj8 = { runOnJS: ReanimatedRexport.runOnJS, setIsRecapPageRevealed: tmp37 };
   qt.__closure = obj8;
   qt.__workletHash = 12713474352874;
   qt.__initData = hasSingleUseSwipeUpNux;
@@ -738,7 +745,7 @@ function BountiesModalContentScrollInner(arg0) {
     showRecapPullZone: tmp30,
     scrollY: sharedValue4,
     fullRecapScrollOffset: sum1,
-    RECAP_SNAP_EPSILON: tmp5(15009).RECAP_SNAP_EPSILON,
+    RECAP_SNAP_EPSILON: useBountiesRecapScroll.RECAP_SNAP_EPSILON,
   };
   to.__closure = obj9;
   to.__workletHash = 5669564400667;
@@ -748,7 +755,7 @@ function BountiesModalContentScrollInner(arg0) {
       ReanimatedRexport.runOnJS(closure_34)(arg0);
     }
   }
-  obj10 = { runOnJS: tmp5(4296).runOnJS, setIsRecapPageOnTop: tmp40 };
+  obj10 = { runOnJS: ReanimatedRexport.runOnJS, setIsRecapPageOnTop: tmp40 };
   eo.__closure = obj10;
   eo.__workletHash = 8102193741774;
   eo.__initData = hasRecurringSwipeUpNux;
@@ -810,7 +817,7 @@ function BountiesModalContentScrollInner(arg0) {
       ReanimatedRexport.runOnJS(closure_65)(arg0);
     }
   }
-  obj11 = { runOnJS: tmp5(4296).runOnJS, setHideListFooterPadding: tmp80 };
+  obj11 = { runOnJS: ReanimatedRexport.runOnJS, setHideListFooterPadding: tmp80 };
   so.__closure = obj11;
   so.__workletHash = 7553157067719;
   so.__initData = memo6;
@@ -874,7 +881,7 @@ function BountiesModalContentScrollInner(arg0) {
     return useBountiesRecapScroll.getRevealProgress(sharedValue4.get(), result1, height3);
   }
   obj12 = {
-    getRevealProgress: tmp5(15009).getRevealProgress,
+    getRevealProgress: useBountiesRecapScroll.getRevealProgress,
     scrollY: sharedValue4,
     lastBountyScrollOffset: result1,
     recapRevealHeight: height3,
@@ -1161,17 +1168,17 @@ function BountiesModalContentScrollInner(arg0) {
     return null;
   } else {
     if (tmp55) {
-      let tmp99 = c15(tmp2(15046), {});
+      let tmp99 = c15(sourceQuestContent(15046), {});
     } else {
       tmp99 = null;
       if (tmp45) {
         const obj18 = { orbAmount: stateFromStores };
-        tmp99 = c15(tmp5(15047).BountiesScrollRecapFooter, obj18);
+        tmp99 = c15(BountiesScrollRecapFooter.BountiesScrollRecapFooter, obj18);
       }
     }
     const obj19 = { value: memo3, children: null };
     const obj20 = { style: tmp.root, children: null };
-    let tmp2Result = tmp2(15048);
+    let tmp2Result = sourceQuestContent(15048);
     if (peekActive) {
       peekActive = !tmp19;
     }
@@ -1189,8 +1196,8 @@ function BountiesModalContentScrollInner(arg0) {
       obj22.pointerEvents = str2;
       const obj23 = {
         adContentId: orbAmount,
-        adCreativeType: tmp5(5451).AdCreativeType.BOUNTY,
-        questContent: tmp5(5449).QuestContent.BOUNTIES_END_INTERSTITIAL,
+        adCreativeType: AdCreativeType.AdCreativeType.BOUNTY,
+        questContent: QuestContent.QuestContent.BOUNTIES_END_INTERSTITIAL,
         overrideVisibility: first3,
         sourceQuestContent,
         children() {
@@ -1201,8 +1208,8 @@ function BountiesModalContentScrollInner(arg0) {
           });
         },
       };
-      obj22.children = tmp102(tmp5(11778).QuestContentImpressionTrackerNative, obj23);
-      tmp102Result = tmp102(tmp2(4296).View, obj22);
+      obj22.children = tmp102(QuestContentImpressionTracker.QuestContentImpressionTrackerNative, obj23);
+      tmp102Result = tmp102(sourceQuestContent(4296).View, obj22);
     }
     items30[1] = tmp102Result;
     const obj24 = { style: memo9, children: null };
@@ -1227,8 +1234,8 @@ function BountiesModalContentScrollInner(arg0) {
       scrollEnabled: !tmp19,
       contentContainerStyle: memo10,
     };
-    obj24.children = c15(tmp5(8874).AnimatedFlashList, obj25);
-    items30[2] = c15(tmp2(4296).View, obj24);
+    obj24.children = c15(_mod8874.AnimatedFlashList, obj25);
+    items30[2] = c15(sourceQuestContent(4296).View, obj24);
     tmp102Result = null;
     if (null != tmp18) {
       const obj26 = {
@@ -1238,7 +1245,7 @@ function BountiesModalContentScrollInner(arg0) {
         onDismiss: callback2,
         onInstallPress: tmp18.onInstallPress,
       };
-      tmp102Result = tmp102(tmp2(15053), obj26);
+      tmp102Result = tmp102(sourceQuestContent(15053), obj26);
     }
     items30[3] = tmp102Result;
     let tmp102Result1 = null;
@@ -1249,8 +1256,8 @@ function BountiesModalContentScrollInner(arg0) {
         const items32 = [memo15, animatedStyle4];
         obj27.style = items32;
         const obj28 = { colors, style: memo.absoluteFill };
-        obj27.children = tmp102(tmp2(4987), obj28);
-        tmp102Result1 = tmp102(tmp2(4296).View, obj27);
+        obj27.children = tmp102(sourceQuestContent(4987), obj28);
+        tmp102Result1 = tmp102(sourceQuestContent(4296).View, obj27);
       }
     }
     items30[4] = tmp102Result1;
@@ -1265,22 +1272,22 @@ function BountiesModalContentScrollInner(arg0) {
     let tmp102Result2 = null;
     if (tmp42) {
       const obj30 = { onPress: callback6 };
-      tmp102Result2 = tmp102(tmp2(15054), obj30);
+      tmp102Result2 = tmp102(sourceQuestContent(15054), obj30);
     }
     obj29.children = tmp102Result2;
-    items30[5] = c15(tmp2(4296).View, obj29);
+    items30[5] = c15(sourceQuestContent(4296).View, obj29);
     let tmp102Result3 = null;
     if (visible) {
       tmp102Result3 = null;
       if (!tmp19) {
         const obj31 = { style: memo13, pointerEvents: "none", children: null };
         const obj32 = { progress, showProgressRing };
-        obj31.children = tmp102(tmp2(15055), obj32);
+        obj31.children = tmp102(sourceQuestContent(15055), obj32);
         tmp102Result3 = tmp102(tmp104, obj31);
       }
     }
     items30[6] = tmp102Result3;
-    tmp2Result = tmp2(15006);
+    tmp2Result = sourceQuestContent(15006);
     if (!tmp55) {
       tmp55 = tmp45;
     }
@@ -1297,7 +1304,7 @@ function BountiesModalContentScrollInner(arg0) {
     items30[7] = c15(tmp2Result, obj33);
     obj20.children = items30;
     obj19.children = ref(questHomeBounties, obj20);
-    return c15(tmp5(15017).BountyVideoEndAppStoreProvider, obj19);
+    return c15(useBountyVideoEndAppStoreOverlay.BountyVideoEndAppStoreProvider, obj19);
   }
   const obj17 = { runOnJS: ReanimatedRexport.runOnJS, setIsCloseButtonPressable: tmp43 };
 }

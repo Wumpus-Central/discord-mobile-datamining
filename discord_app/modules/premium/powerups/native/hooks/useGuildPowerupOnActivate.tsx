@@ -52,13 +52,13 @@ export default function useGuildPowerupOnActivate(arg0, arg1) {
           } else {
             PERK = shouldUseMobileWebRedirectCheckout.PERK;
           }
-          let obj = PERK(tmp18[10]);
+          let obj = PERK(onToggle[10]);
           obj.hideActionSheet(closure_0(onToggle[11]).GUILD_POWERUPS_BOTTOM_SHEET_KEY);
           if (availableGuildBoostSlots.length > 0) {
-            let tmp17Result = tmp17(tmp18[12]);
+            let tmp17Result = tmp17(onToggle[12]);
             obj = {
               guildBoostSlots: availableGuildBoostSlots.slice(0, diff),
-              guildId: tmp.id,
+              guildId: stateFromStores.id,
               intent: PERK,
               onResult(arg0) {
                 if (arg0) {
@@ -68,13 +68,13 @@ export default function useGuildPowerupOnActivate(arg0, arg1) {
             };
             tmp17Result.openTransferModal(obj);
           } else if (shouldUseMobileWebRedirectCheckout) {
-            handleMobileWebRedirectCheckout(analyticsLocations, tmp.id);
+            handleMobileWebRedirectCheckout(analyticsLocations, stateFromStores.id);
           } else {
-            tmp17Result = tmp17(tmp18[13]);
+            tmp17Result = tmp17(onToggle[13]);
             obj = {
               source: { page: "Guild Powerups", section: "Powerup Activation" },
               analyticsLocations,
-              guildId: tmp.id,
+              guildId: stateFromStores.id,
               onBack() {
                 return PERK(4763).popWithKey(diff(7412).PREMIUM_KEY);
               },

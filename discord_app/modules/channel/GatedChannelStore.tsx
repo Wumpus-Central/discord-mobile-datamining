@@ -3,6 +3,7 @@ import initializeDefault from "../../../discord_common/js/packages/flux/index.ts
 import DispatcherDefault from "../../Dispatcher.tsx";
 import PremiumRoleUtils from "../guild_role_subscriptions/PremiumRoleUtils.tsx";
 import RolePermissionUtils from "../guild_role_subscriptions/RolePermissionUtils.tsx";
+import CreatorMonetizationRestrictionsUtils from "../creator_monetization_review/CreatorMonetizationRestrictionsUtils.tsx";
 import ImpersonateStore from "../impersonate/ImpersonateStore.tsx";
 import ChannelStore from "../../stores/ChannelStore.tsx";
 import GuildMemberStore from "../../stores/GuildMemberStore.tsx";
@@ -47,7 +48,7 @@ function isChannelSubscriptionGatedInGuild(channel, guild) {
   const features = guild.features;
   if (!features.has(constants2.CREATOR_MONETIZABLE)) {
     const features2 = guild.features;
-    if (!features2.has(tmp.CREATOR_MONETIZABLE_PROVISIONAL)) {
+    if (!features2.has(constants2.CREATOR_MONETIZABLE_PROVISIONAL)) {
       return false;
     }
   }
@@ -72,18 +73,15 @@ function isChannelSubscriptionGatedInGuild(channel, guild) {
     }
     continue;
   }
-  const obj3 = GuildRoleStore;
-  tmp = constants2;
   const tmp14 = hasPermission(GuildRoleStore.getEveryoneRole(guild), constants.VIEW_CHANNEL);
   if (!tmp14) {
     if (!obj4.isChannelAccessDeniedBy(channel, channel.permissionOverwrites[guild.id])) {
-      const sortedRoles = obj3.getSortedRoles(guild.id);
+      const sortedRoles = GuildRoleStore.getSortedRoles(guild.id);
       for (const item10077 of sortedRoles) {
         obj = { guildId: arg1.id, role: item10077, isPreviewingRoles: isViewingServerShopResult };
-        let tmp19 = item10077;
         if (isSubscriptionGated(obj)) {
           let obj7 = RolePermissionUtils;
-          if (obj7.hasViewChannelPermission(tmp19)) {
+          if (obj7.hasViewChannelPermission(item10077)) {
             obj5.return();
             let flag3 = true;
             return true;
@@ -284,10 +282,11 @@ const gatedChannelStore = new GatedChannelStore(DispatcherDefault, {
   GUILD_ROLE_SUBSCRIPTIONS_FETCH_RESTRICTIONS_SUCCESS: function handleRoleSubscriptionsRestrictionsUpdate(guildId) {
     guildId = guildId.guildId;
     if (obj.isRestrictedFromShowingGuildPurchaseEntryPoints(guildId.restrictions)) {
-      obj2.add(guildId);
+      set.add(guildId);
     } else {
-      obj2.delete(guildId);
+      set.delete(guildId);
     }
+    obj = CreatorMonetizationRestrictionsUtils;
   },
   GUILD_ROLE_SUBSCRIPTIONS_FETCH_RESTRICTIONS_FAILURE: function handleRoleSubscriptionsRestrictionsFetchFailure(
     guildId,

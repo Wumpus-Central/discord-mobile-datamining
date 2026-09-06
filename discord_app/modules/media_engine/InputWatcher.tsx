@@ -16,7 +16,7 @@ class InputWatcher {
     obj.inputDetected = undefined;
     obj.lastUpdateTime = performance.now();
     closure_129_0 = obj;
-    obj.fetchInputDeviceOSConfig = closure_4(async (arg0, value) => {
+    obj.fetchInputDeviceOSConfig = closure_4(async () => {
       if (c5 === 2) {
         c5 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -68,7 +68,7 @@ class InputWatcher {
                     if ("" !== guid) {
                       c4 = 2;
                       c5 = 1;
-                      const obj1 = { value: tmp54(tmp45[9]).default.ensureModule("discord_voice"), done: false };
+                      const obj1 = { value: logger(tmp45[9]).default.ensureModule("discord_voice"), done: false };
                       return obj1;
                     }
                   }
@@ -79,14 +79,12 @@ class InputWatcher {
                   return obj2;
                 }
               }
-              obj10 = tmp29(tmp45[6]);
-              tmp54 = tmp29;
+              obj10 = logger(tmp45[6]);
             }
           } else if (1 === tmp7) {
             v0 = 0;
             closure_128_5 = tmp45;
             const _HermesInternal = HermesInternal;
-            tmp29 = logger;
             logger.warn("Failed to get device OS volume and/or mute state: " + closure_128_5);
           } else if (2 === tmp7) {
             if (arg0 === 1) {
@@ -141,7 +139,7 @@ class InputWatcher {
       }
       stateChangeTimeout.start(
         num,
-        asyncGeneratorStep(async (arg0, value) => {
+        asyncGeneratorStep(async () => {
           if (inputDetected === 2) {
             inputDetected = 3;
             throw new TypeError("Generator functions may not be called on executing generators");

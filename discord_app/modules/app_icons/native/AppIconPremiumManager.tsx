@@ -38,7 +38,7 @@ prototype["handleAppStateUpdate"] = function handleAppStateUpdate(state) {
 };
 prototype["validateAndResetIfNeeded"] = function validateAndResetIfNeeded() {
   const self = this;
-  return (async (arg0, value) => {
+  return (async () => {
     if (v3 === 2) {
       v3 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");

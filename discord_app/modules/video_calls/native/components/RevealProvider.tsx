@@ -1,6 +1,8 @@
 // discord_app/modules/video_calls/native/components/RevealProvider.tsx
 import useIsPrivateAudioOnlyCallDefault from "../useIsPrivateAudioOnlyCall.tsx";
 import useIsActivityFocusedDefault from "../../../activities/useIsActivityFocused.tsx";
+import StatusBarDefault from "../../../status_bar/native/components/StatusBar.android.tsx";
+import HomeIndicatorDefault from "../../../voice_panel/native/HomeIndicator.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import ActionSheetStore from "../../../action_sheet/native/ActionSheetStore.tsx";
 import GameConsoleStore from "../../../game_console/GameConsoleStore.tsx";
@@ -86,13 +88,13 @@ export default function RevealProvider(showStatus) {
   }
   const obj = { value: tmp2, children: null };
   let tmp10 = !reveal;
-  let tmp4Result = tmp4(9481);
+  let tmp4Result = StatusBarDefault;
   if (!reveal) {
     tmp10 = !flag;
   }
   const items1 = [closure_10(tmp4Result, { hidden: tmp10, animated: true, barStyle: str }), children];
   let tmp12 = !reveal;
-  tmp4Result = tmp4(9483);
+  tmp4Result = HomeIndicatorDefault;
   if (!reveal) {
     tmp12 = !prefersDeferringSystemGestures;
   }

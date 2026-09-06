@@ -1,8 +1,13 @@
 // discord_app/modules/gif_picker/native/GIFPickerHeader.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import util from "../../../intl/index.native.tsx";
+import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import timing from "../../../design/animation/reanimated/timing/timing.tsx";
 import timingPresets from "../../../design/animation/reanimated/timing/timingPresets.tsx";
+import Pressables from "../../../design/void/Pressables/native/Pressables.tsx";
+import SearchField from "../../../design/components/TextField/native/SearchField.native.tsx";
 import GifProvider from "../GifProvider.tsx";
+import ChevronLargeLeftIcon from "../../../design/components/Icon/native/redesign/generated/ChevronLargeLeftIcon.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
@@ -182,7 +187,7 @@ export default noop.memo(function GIFPickerHeader(arg0) {
       ref: searchInputRef,
       isRound: true,
     };
-    let tmp13Result = tmp6(tmp2(7050).SearchField, obj);
+    let tmp13Result = React5(SearchField.SearchField, obj);
   } else {
     obj = { style: tmp.headerContainer, children: null };
     const obj1 = {
@@ -192,22 +197,22 @@ export default noop.memo(function GIFPickerHeader(arg0) {
       accessibilityLabel: null,
       children: null,
     };
-    const intl4 = tmp2(1114).intl;
+    const intl4 = util.intl;
     const obj2 = { destination: null };
-    const intl5 = tmp2(1114).intl;
-    obj2.destination = intl5.string(tmp2(1114).t.ffgJrs);
-    obj1.accessibilityLabel = intl4.formatToPlainString(tmp2(1114).t.UTypEu, obj2);
+    const intl5 = util.intl;
+    obj2.destination = intl5.string(util.t.ffgJrs);
+    obj1.accessibilityLabel = intl4.formatToPlainString(util.t.UTypEu, obj2);
     const obj3 = { color: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE, size: "sm" };
-    const items = [tmp6(tmp2(10375).ChevronLargeLeftIcon, obj3)];
-    if (categoryType === tmp8.TRENDING_GIFS) {
-      const intl3 = tmp2(1114).intl;
-      let stringResult = intl3.string(tmp2(1114).t.TsWCdW);
-    } else if (categoryType === tmp8.FAVORITES) {
-      const intl2 = tmp2(1114).intl;
-      stringResult = intl2.string(tmp2(1114).t.k8fFjp);
+    const items = [React5(ChevronLargeLeftIcon.ChevronLargeLeftIcon, obj3)];
+    if (categoryType === GIFPickerResultTypes.TRENDING_GIFS) {
+      const intl3 = util.intl;
+      let stringResult = intl3.string(util.t.TsWCdW);
+    } else if (categoryType === GIFPickerResultTypes.FAVORITES) {
+      const intl2 = util.intl;
+      stringResult = intl2.string(util.t.k8fFjp);
     } else {
-      const intl = tmp2(1114).intl;
-      stringResult = intl.string(tmp2(1114).t["5h0QOP"]);
+      const intl = util.intl;
+      stringResult = intl.string(util.t["5h0QOP"]);
     }
     const obj4 = {
       variant: "text-sm/semibold",
@@ -215,17 +220,17 @@ export default noop.memo(function GIFPickerHeader(arg0) {
       maxFontSizeMultiplier: 2,
       children: stringResult,
     };
-    items[1] = tmp6(tmp2(4556).Text, obj4);
+    items[1] = React5(Text_Text.Text, obj4);
     obj1.children = items;
-    const items1 = [React7(tmp2(5123).PressableOpacity, obj1)];
-    let tmp6Result = categoryType === tmp8.FAVORITES;
+    const items1 = [React7(Pressables.PressableOpacity, obj1)];
+    let tmp6Result = categoryType === GIFPickerResultTypes.FAVORITES;
     if (tmp6Result) {
       const obj5 = { columnWidth, onQueryChange: onFavoritesQueryChange };
-      tmp6Result = tmp6(FavoritesSearch, obj5);
+      tmp6Result = React5(FavoritesSearch, obj5);
     }
     items1[1] = tmp6Result;
     obj.children = items1;
-    tmp13Result = tmp13(tmp7, obj);
+    tmp13Result = React7(View, obj);
   }
   obj.children = tmp13Result;
   return React5(View, obj);

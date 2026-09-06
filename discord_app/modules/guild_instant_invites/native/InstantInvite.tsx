@@ -88,7 +88,7 @@ export default noop.memo((onInviteRevoked) => {
   items3[1] = closure_7(invite(10941).InstantInviteDetails, { channel: memo, expiresAt: invite.getExpiresAt() });
   if (tmp9Result) {
     const obj3 = { roleIds: memo1, guildId: id };
-    tmp9Result = tmp9(InviteRolesDisplayDefault, obj3);
+    tmp9Result = closure_7(InviteRolesDisplayDefault, obj3);
   }
   items3[2] = tmp9Result;
   const obj4 = { style: tmp.creatorWrapper, children: null };
@@ -105,7 +105,7 @@ export default noop.memo((onInviteRevoked) => {
       id2 = inviter2.id;
     }
     const obj5 = { start: true, end: true, userId: id2, guildId: id };
-    tmp9Result = tmp9(DetailedGuildIdentityUserRowDefault, obj5);
+    tmp9Result = closure_7(DetailedGuildIdentityUserRowDefault, obj5);
   }
   const obj6 = { children: null };
   const obj7 = { direction: "horizontal", align: "flex-end", children: null };
@@ -219,7 +219,7 @@ export const LinkedChannelInvite = function LinkedChannelInvite(channel) {
   let tmp15Result = null;
   if (null != linked_by) {
     const obj5 = { start: true, end: true, userId: linked_by, guildId: channel.guild_id };
-    tmp15Result = tmp15(tmp8(10942), obj5);
+    tmp15Result = closure_7(tmp8(10942), obj5);
   }
   const obj6 = { children: null };
   const obj3 = {

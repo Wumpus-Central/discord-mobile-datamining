@@ -7,7 +7,7 @@ const require = fn;
 function AdContentImpressionTrackerBaseNative(skipRemountKey) {
   let obj = adContentIds2(504);
   let items = [AppStateStore];
-  let tmp3 = obj.useStateFromStores(items, () => state.getState()) === AppStates.ACTIVE;
+  const tmp3 = obj.useStateFromStores(items, () => state.getState()) === AppStates.ACTIVE;
   const ref = noop.useRef(null);
   const tmp5 = visibilityRef;
   let obj1 = adContentIds2(11486);
@@ -36,7 +36,7 @@ function AdContentImpressionTrackerBaseNative(skipRemountKey) {
           obj.calculateVisibility = function calculateVisibility() {
             let tmp4;
             if (visibilityRef != null) {
-              const current = tmp2.current;
+              const current = visibilityRef.current;
               if (current != null) {
                 children = current.children;
                 if (children != null) {
@@ -51,30 +51,30 @@ function AdContentImpressionTrackerBaseNative(skipRemountKey) {
             let num = 0;
             if (null != layout) {
               let layout1;
-              if (tmp2 != null) {
-                const parent = tmp2.current.parent;
+              if (visibilityRef != null) {
+                const parent = visibilityRef.current.parent;
                 if (parent != null) {
                   layout1 = parent.layout;
                 }
               }
               num = 0;
               if (null != layout1) {
-                let str = tmp2.current.axis;
+                let str = visibilityRef.current.axis;
                 if (str == null) {
                   str = "vertical";
                 }
                 if ("horizontal" === str) {
                   num = 0;
-                  if (null != tmp2.current.parent.scrollX) {
+                  if (null != visibilityRef.current.parent.scrollX) {
                     const items = [tmp4.layout.x, tmp4.layout.x + tmp4.layout.width];
                     const items1 = [
-                      tmp2.current.parent.scrollX,
-                      tmp2.current.parent.scrollX + tmp2.current.parent.layout.width,
+                      visibilityRef.current.parent.scrollX,
+                      visibilityRef.current.parent.scrollX + visibilityRef.current.parent.layout.width,
                     ];
                     let items3 = items1;
                     let items2 = items;
-                    if (null != tmp2.current.parent.firstItemOffset) {
-                      const firstItemOffset = tmp2.current.parent.firstItemOffset;
+                    if (null != visibilityRef.current.parent.firstItemOffset) {
+                      const firstItemOffset = visibilityRef.current.parent.firstItemOffset;
                       items2[0] = items2[0] + firstItemOffset;
                       items2[1] = items2[1] + firstItemOffset;
                     }
@@ -87,11 +87,11 @@ function AdContentImpressionTrackerBaseNative(skipRemountKey) {
                   }
                 } else {
                   num = 0;
-                  if (null != tmp2.current.parent.scrollY) {
+                  if (null != visibilityRef.current.parent.scrollY) {
                     items2 = [tmp4.layout.y, tmp4.layout.y + tmp4.layout.height];
                     items3 = [
-                      tmp2.current.parent.scrollY,
-                      tmp2.current.parent.scrollY + tmp2.current.parent.layout.height,
+                      visibilityRef.current.parent.scrollY,
+                      visibilityRef.current.parent.scrollY + visibilityRef.current.parent.layout.height,
                     ];
                     const height = tmp4.layout.height;
                   }

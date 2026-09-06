@@ -7,6 +7,7 @@ import UnicodeEmojisDefault from "../../emojis/UnicodeEmojis.tsx";
 import EmojiUtilsDefault from "../../../utils/EmojiUtils.tsx";
 import _mod4745 from "module_4745" /* 4745 */;
 import useFormattedExpirationLabel from "useFormattedExpirationLabel.tsx";
+import PollLayoutTypes from "../../../../discord_common/js/shared/shared-constants/PollLayoutTypes.tsx";
 import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
 import EmojiStore from "../../emojis/EmojiStore.tsx";
 import ChannelStore from "../../../stores/ChannelStore.tsx";
@@ -33,8 +34,8 @@ function reactionForId(reactions, combined) {
   }
 }
 function computeBasicPollChatData(message, arg1) {
-  let obj = arg2;
-  if (arg2 === undefined) {
+  let obj = time;
+  if (time === undefined) {
     obj = {};
   }
   let formattedExpirationLabel = obj.formattedExpirationLabel;
@@ -191,7 +192,7 @@ let pollMedia = {
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/polls/chat/formatPollMessageChatData.tsx");
 
-export default function formatPollMessageChatData(poll, arg1, time) {
+export default function formatPollMessageChatData(poll, arg1) {
   let obj = time;
   if (time === undefined) {
     obj = {};
@@ -391,10 +392,9 @@ export default function formatPollMessageChatData(poll, arg1, time) {
             pollMedia.shouldAnimateTransition = tmp20;
             const _Math = Math;
             pollMedia.votesPercentage = Math.round(100 * num2);
-            const match1 = tmp8(4745).match(layout_type);
-            const str2 = tmp8(4745);
+            const match1 = _mod4745.match(layout_type);
             pollMedia.votes = match1
-              .with(tmp8(11720).PollLayoutTypes.IMAGE_ONLY_ANSWERS, () => "(" + num.toLocaleString() + ")")
+              .with(PollLayoutTypes.PollLayoutTypes.IMAGE_ONLY_ANSWERS, () => "(" + num.toLocaleString() + ")")
               .otherwise(() => {
                 const intl = flag(layout_type[16]).intl;
                 return intl.formatToPlainString(flag(layout_type[16]).t.XRkuof, { count: num });
@@ -442,6 +442,16 @@ export default function formatPollMessageChatData(poll, arg1, time) {
             obj2.animated = flag2;
             tmp11 = null == flag3 && null != name.id;
           }
+          otherwiseResult = match
+            .with({ isExpired: true, isLeader: true, didSelfVote: true }, () => "victorSelected")
+            .with({ isExpired: true, isLeader: true, didSelfVote: false }, () => "victorNotSelected")
+            .with({ isExpired: true, didSelfVote: true }, () => "loserSelected")
+            .with({ isExpired: true }, () => "notVoted")
+            .with({ didSelfVote: true, isExpired: false }, () => "voted")
+            .with({ hasVoted: true, isExpired: false }, () => "notVoted")
+            .with({ isSelected: true }, () => "selected")
+            .with({ isExpired: false, showResults: true }, () => "notVoted")
+            .otherwise(() => "normalVote");
         });
         obj1 = { isExpired, canSubmitVote, hasVoted, isEditingVote, canRemoveVote, isInteractive, showResults };
         let match = tmp4(tmp5[8]).match(obj1);
@@ -497,7 +507,7 @@ export default function formatPollMessageChatData(poll, arg1, time) {
             return obj;
           });
         tmp4Result = tmp4(tmp5[19]);
-        const otherwiseResult = match
+        let otherwiseResult = match
           .with({ isInteractive: false }, () => {})
           .with({ isExpired: true }, () => {})
           .with({ isEditingVote: true }, () => {

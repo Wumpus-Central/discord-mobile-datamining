@@ -17,20 +17,20 @@ function useChangelog(changelogId, stateFromStores) {
     () => {
       changelog = null;
       if (null != closure_0) {
-        changelog = ChangelogStore.getChangelog(tmp, closure_1);
+        changelog = ChangelogStore.getChangelog(closure_0, closure_1);
       }
       let changelog1 = null;
       if (null != closure_0) {
-        changelog1 = ChangelogStore.getChangelog(tmp, "en-US");
+        changelog1 = ChangelogStore.getChangelog(closure_0, "en-US");
       }
-      let changelogLoadStatus = null != tmp;
+      let changelogLoadStatus = null != closure_0;
       if (changelogLoadStatus) {
-        changelogLoadStatus = ChangelogStore.getChangelogLoadStatus(tmp, "en-US");
+        changelogLoadStatus = ChangelogStore.getChangelogLoadStatus(closure_0, "en-US");
       }
       const obj = { changelog, loadState: null, defaultChangelog: null, defaultLoadState: null };
-      let changelogLoadStatus1 = null != tmp;
+      let changelogLoadStatus1 = null != closure_0;
       if (changelogLoadStatus1) {
-        changelogLoadStatus1 = ChangelogStore.getChangelogLoadStatus(tmp, closure_1);
+        changelogLoadStatus1 = ChangelogStore.getChangelogLoadStatus(closure_0, closure_1);
       }
       obj.loadState = changelogLoadStatus1;
       obj.defaultChangelog = changelog1;
@@ -80,7 +80,6 @@ export const useCurrentChangelog = function useCurrentChangelog() {
   const stateFromStores = obj.useStateFromStores(items, () => locale.locale);
   const items1 = [ChangelogStore];
   const stateFromStores1 = useStateFromStores.useStateFromStores(items1, () => ChangelogStore.latestChangelogId());
-  const tmp4 = ChangelogStore;
   const items2 = [ChangelogStore];
   const stateFromStores2 = useStateFromStores.useStateFromStores(items2, () => ChangelogStore.getConfig());
   let tmp7 = null != stateFromStores2;
@@ -96,7 +95,7 @@ export const useCurrentChangelog = function useCurrentChangelog() {
   if (tmp9) {
     tmp9 = null == stateFromStores1;
   }
-  const items3 = [tmp4];
+  const items3 = [ChangelogStore];
   const stateFromStores3 = useStateFromStores.useStateFromStores(items3, () => ChangelogStore.overrideId());
   const tmpResult = useStateFromStores;
   ({ changelog, loaded } = useChangelog(stateFromStores1, stateFromStores));

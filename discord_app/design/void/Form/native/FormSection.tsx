@@ -1,6 +1,8 @@
 // discord_app/design/void/Form/native/FormSection.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
 import RedesignCompat from "../../../components/RedesignCompat/native/RedesignCompat.native.tsx";
+import TableRowGroup from "../../../components/TableRow/native/TableRowGroup.native.tsx";
 import FormRowDefault from "FormRow.tsx";
 import FormDividerDefault from "FormDivider.tsx";
 import FormTitleDefault from "FormTitle.tsx";
@@ -78,12 +80,12 @@ export default function FormSection(arg0) {
     }
     obj1.hasTrailingText = flag;
     obj1.children = found;
-    obj.children = timestampProducer(tmp3(5687).TableRowGroup, obj1);
+    obj.children = timestampProducer(TableRowGroup.TableRowGroup, obj1);
     const items = [timestampProducer(React4, obj)];
     let tmp20Result = null;
     if (null != hint) {
       const obj2 = { style: { marginTop: 8 }, children: hint };
-      tmp20Result = tmp20(tmp19, obj2);
+      tmp20Result = timestampProducer(React4, obj2);
     }
     items[1] = tmp20Result;
     obj.children = items;
@@ -120,12 +122,14 @@ export default function FormSection(arg0) {
     if (null != tmp6) {
       if (TitleStyleType.DEFAULT === titleStyleType) {
         titledSectionNoBorderOrMargin = tmp2.titledSectionHeader;
-      } else if (tmp12.ANDROID_NO_BORDER === titleStyleType) {
-        titledSectionNoBorderOrMargin = tmp3(1115).isAndroid() ? tmp2.titledSectionNoBorder : tmp2.titledSectionHeader;
-        const tmp3Result = tmp3(1115);
+      } else if (TitleStyleType.ANDROID_NO_BORDER === titleStyleType) {
+        titledSectionNoBorderOrMargin = PlatformUtils.isAndroid()
+          ? tmp2.titledSectionNoBorder
+          : tmp2.titledSectionHeader;
+        const tmp3Result = PlatformUtils;
       } else {
         titledSectionNoBorderOrMargin = emptySectionHeader;
-        if (tmp12.NO_BORDER_OR_MARGIN === titleStyleType) {
+        if (TitleStyleType.NO_BORDER_OR_MARGIN === titleStyleType) {
           titledSectionNoBorderOrMargin = tmp2.titledSectionNoBorderOrMargin;
         }
       }

@@ -64,20 +64,20 @@ function ProductPurchaseGradientBackground(product) {
       const items = [token, token, token1, closure_22, closure_22];
       let items2 = items;
     } else {
-      const primary2 = tmp.primary;
+      const primary2 = backgroundColors.primary;
       const toHexStringResult = primary2.toHexString();
       if (closure_1) {
         const items1 = [toHexStringResult, ,];
-        const secondary2 = tmp.secondary;
+        const secondary2 = backgroundColors.secondary;
         items1[1] = secondary2.toHexString();
-        const tertiary = tmp.tertiary;
+        const tertiary = backgroundColors.tertiary;
         items1[2] = tertiary.toHexString();
         items2 = items1;
       } else {
         items2 = [toHexStringResult, , , ,];
-        const primary = tmp.primary;
+        const primary = backgroundColors.primary;
         items2[1] = primary.toHexString();
-        const secondary = tmp.secondary;
+        const secondary = backgroundColors.secondary;
         items2[2] = secondary.toHexString();
         items2[3] = closure_22;
         items2[4] = closure_22;
@@ -164,13 +164,13 @@ let closure_16 = createStyles.createStyles((arg0) => {
   obj1.marginTop = str;
   let PX_32;
   if (arg0 === CollectiblesItemType.CollectiblesItemType.NAMEPLATE) {
-    PX_32 = tmp(576).space.PX_32;
+    PX_32 = nativeDefault.space.PX_32;
   }
   obj1.marginHorizontal = PX_32;
   if (flag) {
-    if (arg0 === tmp3(1889).CollectiblesItemType.AVATAR_DECORATION) {
+    if (arg0 === CollectiblesItemType.CollectiblesItemType.AVATAR_DECORATION) {
       const obj2 = {
-        shadowColor: tmp(576).unsafe_rawColors.PRIMARY_630,
+        shadowColor: nativeDefault.unsafe_rawColors.PRIMARY_630,
         shadowOffset: { width: 0, height: 0 },
         shadowOpacity: 1,
         shadowRadius: 60,
@@ -182,7 +182,7 @@ let closure_16 = createStyles.createStyles((arg0) => {
     obj.preview = obj1;
     obj.previewBundle = { flex: 1, justifyContent: "flex-start", alignItems: "center", minHeight: 250 };
     const obj3 = {
-      paddingTop: tmp(576).space.PX_24,
+      paddingTop: nativeDefault.space.PX_24,
       minHeight: null,
       flexDirection: "column",
       alignItems: "center",
@@ -190,22 +190,22 @@ let closure_16 = createStyles.createStyles((arg0) => {
       gap: null,
     };
     let str2;
-    if (arg0 === tmp3(1889).CollectiblesItemType.AVATAR_DECORATION) {
+    if (arg0 === CollectiblesItemType.CollectiblesItemType.AVATAR_DECORATION) {
       str2 = "32%";
     }
     obj3.minHeight = str2;
-    obj3.gap = tmp(576).space.PX_16;
+    obj3.gap = nativeDefault.space.PX_16;
     obj.messages = obj3;
-    const obj4 = { textAlign: "center", marginHorizontal: tmp(576).space.PX_32 };
+    const obj4 = { textAlign: "center", marginHorizontal: nativeDefault.space.PX_32 };
     obj.title = obj4;
-    const obj5 = { marginBottom: tmp(576).space.PX_16 };
+    const obj5 = { marginBottom: nativeDefault.space.PX_16 };
     obj.footer = obj5;
     const obj6 = {
       flexDirection: "row",
-      gap: tmp(576).space.PX_12,
-      paddingVertical: tmp(576).space.PX_16,
-      marginHorizontal: tmp(576).space.PX_24,
-      borderRadius: tmp(576).radii.round,
+      gap: nativeDefault.space.PX_12,
+      paddingVertical: nativeDefault.space.PX_16,
+      marginHorizontal: nativeDefault.space.PX_24,
+      borderRadius: nativeDefault.radii.round,
     };
     obj.cta = obj6;
     return obj;
@@ -417,7 +417,7 @@ export default function ProductPurchaseSuccessModal(stageCollectibleChangeForEdi
       showOrbBalancePill = tmp31(tmp2(11090).BalanceWidgetPill, obj8);
     }
     obj7.children = showOrbBalancePill;
-    const items5 = [tmp31(tmp28, obj7)];
+    const items5 = [tmp31(closure_8, obj7)];
     let toHexStringResult;
     if (backgroundColors != null) {
       const label = backgroundColors.label;
@@ -429,7 +429,7 @@ export default function ProductPurchaseSuccessModal(stageCollectibleChangeForEdi
     const obj9 = { tintColor: toHexStringResult, onCancel };
     items5[1] = tmp31(CancelButton, obj9);
     obj6.children = items5;
-    const items6 = [tmp27(tmp28, obj6), ,];
+    const items6 = [closure_13(closure_8, obj6), ,];
     const obj10 = { style: { flex: 1 }, contentContainerStyle: tmp6.body, alwaysBounceVertical: false, children: null };
     const obj11 = { style: null, children: null };
     const items7 = [tmp6.preview, animatedStyle];
@@ -458,7 +458,7 @@ export default function ProductPurchaseSuccessModal(stageCollectibleChangeForEdi
         tmp30Result = tmp30(tmp4(8797), obj13);
       }
       obj12.children = tmp30Result;
-      tmp30Result = tmp30(tmp28, obj12);
+      tmp30Result = tmp30(closure_8, obj12);
     } else if (tmp2(1889).CollectiblesItemType.AVATAR_DECORATION === type) {
       const obj14 = {
         item: _slicedToArray(product.items, 1)[0],
@@ -509,13 +509,13 @@ export default function ProductPurchaseSuccessModal(stageCollectibleChangeForEdi
       obj21.children = formatResult;
       items10[1] = tmp31(tmp2(4556).Text, obj21);
       obj24.children = items10;
-      renderMessagesResult = tmp27(closure_14, obj24);
+      renderMessagesResult = closure_13(closure_14, obj24);
       const tmp2Result12 = tmp2(7554);
     }
     obj18.children = renderMessagesResult;
     items8[1] = tmp31(tmp4(4296).View, obj18);
     obj10.children = items8;
-    items6[1] = tmp27(closure_7, obj10);
+    items6[1] = closure_13(closure_7, obj10);
     const obj25 = { style: tmp6.footer, children: null };
     const obj26 = { style: tmp6.cta, children: null };
     if (canUseNow) {
@@ -536,18 +536,19 @@ export default function ProductPurchaseSuccessModal(stageCollectibleChangeForEdi
       obj28.text = intl.string(tmp2(1114).t["2p2aYz"]);
     }
     obj26.children = tmp31(tmp2(4975).Button, obj28);
-    obj25.children = tmp31(tmp28, obj26);
-    items6[2] = tmp31(tmp28, obj25);
+    obj25.children = tmp31(closure_8, obj26);
+    items6[2] = tmp31(closure_8, obj25);
     rect.children = items6;
-    items3[1] = tmp27(tmp2(7123).SafeAreaPaddingView, rect);
+    items3[1] = closure_13(tmp2(7123).SafeAreaPaddingView, rect);
     const obj29 = { style: null, pointerEvents: "none" };
     const items11 = [tmp6.curtain, animatedStyle2];
     obj29.style = items11;
     items3[2] = tmp31(tmp4(4296).View, obj29);
     obj2.children = items3;
-    return tmp27(tmp28, obj2);
+    return closure_13(closure_8, obj2);
   }
   tmp29 = closure_12(ProductPurchaseGradientBackground, { product });
   tmp30 = closure_12;
   tmp31 = closure_12;
+  const tmp24 = _slicedToArray(obj3.useState(), 2);
 }

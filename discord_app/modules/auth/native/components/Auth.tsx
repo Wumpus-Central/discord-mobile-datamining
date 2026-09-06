@@ -1,8 +1,12 @@
 // discord_app/modules/auth/native/components/Auth.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import util from "../../../../intl/index.native.tsx";
+import utils_PlatformUtils from "../../../../../discord_common/js/shared/utils/PlatformUtils.tsx";
 import KeyboardChatScrollView from "../../../../../_runtime/01625_KeyboardChatScrollView.js";
 import useWideAuthViewDefault from "../useWideAuthView.tsx";
+import WideAuthScrollContext from "WideAuthScrollContext.tsx";
 import BackgroundImageDefault from "atoms/BackgroundImage.tsx";
+import Navigator from "../../../../design/components/Navigator/native/Navigator.native.tsx";
 import StackNavigator from "../../../../../_runtime/07002_StackNavigator.js";
 import RegistrationHandoff from "../RegistrationHandoff.tsx";
 import RegistrationUtils from "../RegistrationUtils.tsx";
@@ -57,8 +61,6 @@ function NavigatorWithCaptchaHook() {
     closure_1(false);
   }, []);
   obj = { backgroundImageSource: null, backgroundImageCover: true };
-  const tmp15 = closure_11;
-  const tmp16 = closure_10;
   const tmp7 = _slicedToArray(noop.useState(first[first.length - 1].name), 2);
   obj.backgroundImageSource = _mod15996;
   const children = [closure_9(BackgroundImageDefault, obj)];
@@ -126,11 +128,11 @@ function NavigatorWithCaptchaHook() {
     }
     const obj7 = { paddingLeft: num2, paddingTop: tmp4(576).space.PX_24, paddingBottom: tmp4(576).space.PX_16 };
     obj6.headerLeftContainerStyle = obj7;
-    obj5.children = tmp17(tmp(7000).Navigator, obj6);
-    obj2.children = tmp17(closure_6, obj5);
-    obj.children = tmp17(closure_6, obj2);
-    let tmp17Result = tmp17(tmp(6973).WideAuthScrollContext.Provider, obj);
-    tmpResult = tmp(1116);
+    obj5.children = closure_9(Navigator.Navigator, obj6);
+    obj2.children = closure_9(closure_6, obj5);
+    obj.children = closure_9(closure_6, obj2);
+    let tmp17Result = closure_9(WideAuthScrollContext.WideAuthScrollContext.Provider, obj);
+    tmpResult = utils_PlatformUtils;
   } else {
     const obj8 = {
       screens: RegistrationStepsUtils,
@@ -142,15 +144,15 @@ function NavigatorWithCaptchaHook() {
       headerStyle: null,
     };
     ({ transparent: obj4.viewStyle, transparent: obj4.containerStyle } = tmp6);
-    const intl = tmp(1114).intl;
-    obj8.headerBackTitle = intl.string(tmp(1114).t["13/7kX"]);
+    const intl = util.intl;
+    obj8.headerBackTitle = intl.string(util.t["13/7kX"]);
     obj8.initialRouteStack = first;
     obj8.onWillFocus = closure_5.dismiss;
     obj8.headerStyle = { borderBottomWidth: 0 };
-    tmp17Result = tmp17(tmp(7000).Navigator, obj8);
+    tmp17Result = closure_9(Navigator.Navigator, obj8);
   }
   children[1] = tmp17Result;
-  return tmp15(tmp16, { children });
+  return closure_11(closure_10, { children });
 }
 get_ActivityIndicator = fn(17);
 ({ Keyboard: hasOwnProperty, View: metroRequire, StyleSheet } = get_ActivityIndicator);
@@ -175,7 +177,7 @@ const screens = Object.fromEntries(
     let tmp6 = null;
     if (tmp !== AuthStates.MFA) {
       tmp6 = null;
-      if (tmp !== tmp5.WELCOME) {
+      if (tmp !== AuthStates.WELCOME) {
         obj = {
           headerLeft(arg0) {
             function backImage() {

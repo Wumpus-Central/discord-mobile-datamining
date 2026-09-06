@@ -1,6 +1,8 @@
 // discord_app/modules/activities/native/ActivityShelfBadge.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import util from "../../../intl/index.native.tsx";
 import Server from "../../../flow/Server.tsx";
+import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -58,9 +60,9 @@ export default function ActivityShelfBadge(arg0) {
     ({ newBadge: arr[1], elevationShadow: arr[2] } = tmp);
     obj.style = items;
     obj = { variant: "text-xs/semibold", style: tmp.badgeText, color: "text-overlay-light", children: null };
-    const intl = tmp2(1114).intl;
-    obj.children = intl.string(tmp2(1114).t.y2b7CA);
-    obj.children = jsx(tmp2(4556).Text, {
+    const intl = util.intl;
+    obj.children = intl.string(util.t.y2b7CA);
+    obj.children = jsx(Text_Text.Text, {
       variant: "text-xs/semibold",
       style: tmp.badgeText,
       color: "text-overlay-light",
@@ -73,15 +75,15 @@ export default function ActivityShelfBadge(arg0) {
     );
   } else {
     tmp6 = null;
-    if (labelType === tmp2(1894).EmbeddedActivityLabelTypes.UPDATED) {
+    if (labelType === Server.EmbeddedActivityLabelTypes.UPDATED) {
       obj = { style: null, children: null };
       const items1 = [replacementStyles, ,];
       ({ updatedBadge: arr2[1], elevationShadow: arr2[2] } = tmp);
       obj.style = items1;
       const obj1 = { variant: "text-xs/semibold", style: tmp.badgeText, color: "text-overlay-light", children: null };
-      const intl2 = tmp2(1114).intl;
-      obj1.children = intl2.string(tmp2(1114).t["/qdhkk"]);
-      obj.children = jsx(tmp2(4556).Text, {
+      const intl2 = util.intl;
+      obj1.children = intl2.string(util.t["/qdhkk"]);
+      obj.children = jsx(Text_Text.Text, {
         variant: "text-xs/semibold",
         style: tmp.badgeText,
         color: "text-overlay-light",

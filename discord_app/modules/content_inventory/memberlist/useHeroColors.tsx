@@ -80,7 +80,7 @@ export const getHeroColors = function getHeroColors(game_name) {
   const fallbackHeroColor = obj.getFallbackHeroColor(ThemeStore.theme, AccessibilityStore.saturation);
   num = 1;
   if (AccessibilityStore.desaturateUserColors) {
-    num = tmp.saturation;
+    num = AccessibilityStore.saturation;
   }
   const useColorStore = tmp2(8132).useColorStore;
   const arr = useColorStore.getState().palette[game_name];
@@ -104,7 +104,6 @@ export const getHeroColors = function getHeroColors(game_name) {
   const hex2intResult = tmp2Result.hex2int(tmp7);
   tmp2Result = tmp2(1091);
   const hex2intResult1 = tmp2Result.hex2int(tmp8);
-  tmp = AccessibilityStore;
   const tmp6 = _slicedToArray(mapped, 2);
   let num2 = 1;
   let tmp11 = hex2intResult;

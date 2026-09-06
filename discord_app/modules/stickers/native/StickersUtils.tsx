@@ -39,7 +39,7 @@ export const useStickerCategories = function useStickerCategories(channel) {
     });
     return found1.map((type) => {
       if (type.type !== stickerPackCategories(5268).StickerCategoryTypes.FAVORITE) {
-        if (type.type !== tmp(5268).StickerCategoryTypes.RECENT) {
+        if (type.type !== stickerPackCategories(5268).StickerCategoryTypes.RECENT) {
           return type;
         }
       }

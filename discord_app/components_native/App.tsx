@@ -2,6 +2,7 @@
 import TTITrackerDefault from "../modules/tti_analytics/TTITracker.tsx";
 import VoiceEngineStreamingManagerDefault from "../modules/go_live/native/VoiceEngineStreamingManager.tsx";
 import AccessibilityFocusLockManagerDefault from "../modules/a11y/native/AccessibilityFocusLockManager.tsx";
+import IosImageTypesManagerDefault from "../modules/media/native/IosImageTypesManager.tsx";
 import AuthenticationActionCreatorsDefault from "../actions/AuthenticationActionCreators.tsx";
 import ForegroundServiceManagerDefault from "../modules/foreground_service/mobile/ForegroundServiceManager.android.tsx";
 import SentMessageIntentsHandlerDefault from "../modules/messages/SentMessageIntentsHandler.android.tsx";
@@ -35,7 +36,6 @@ import noop from "../../_runtime/metro/00019__.js";
 import MobileNativeUpdateStore from "../modules/mobile_native_updater/MobileNativeUpdateStore.tsx";
 import AuthenticationStore from "../stores/AuthenticationStore.tsx";
 
-const IosImageTypesManagerDefault = tmp(5160);
 const require = fn;
 const NativeModules = fn(17).NativeModules;
 const AudioManagerStore = fn(9086);
@@ -91,13 +91,12 @@ export default function App() {
     SessionAdManagerDefault.initialize();
     VoiceEngineStreamingManagerDefault.initialize();
     TouchEventAnalyticsManagerDefault.initialize();
-    const tmp29 = stateFromStores;
     if (obj26.isIOS()) {
       IosImageTypesManagerDefault.initialize();
       const tmpResult = IosImageTypesManagerDefault;
     }
     obj26 = stateFromStores(1115);
-    const result = tmp29(12782).initializeRouteManagerIfNeeded();
+    const result = stateFromStores(12782).initializeRouteManagerIfNeeded();
     return () => {
       closure_1_1(14442).terminate();
       const obj = closure_1_1(14442);

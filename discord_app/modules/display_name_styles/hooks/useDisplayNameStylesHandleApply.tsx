@@ -2,6 +2,8 @@
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
 import DisplayNameEffect from "../../../../discord_common/js/shared/shared-constants/DisplayNameEffect.tsx";
 import DisplayNameFont from "../../../../discord_common/js/shared/shared-constants/DisplayNameFont.tsx";
+import UserProfileSettingsActionCreators from "../../user_profile/UserProfileSettingsActionCreators.tsx";
+import UserProfileActionCreators from "../../user_profile/UserProfileActionCreators.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -32,21 +34,21 @@ export const useDisplayNameStylesHandleApply = function useDisplayNameStylesHand
     if (hasChanges) {
       let tmp4 = selectedEffectId === DisplayNameEffect.DisplayNameEffect.SOLID;
       if (tmp4) {
-        tmp4 = arr.length > 0;
+        tmp4 = selectedColors.length > 0;
       }
       if (tmp4) {
-        tmp4 = arr[0] === defaultColor;
+        tmp4 = selectedColors[0] === defaultColor;
       }
-      let items = arr;
+      let items = selectedColors;
       if (tmp4) {
         items = [];
       }
       let obj = { fontId: selectedFontId, effectId: selectedEffectId, colors: items };
       if (isTryItOut) {
-        let tmp2Result = tmp2(8167);
+        let tmp2Result = UserProfileActionCreators;
         const result = tmp2Result.setTryItOutDisplayNameStyles(obj);
       } else {
-        tmp2Result = tmp2(8164);
+        tmp2Result = UserProfileSettingsActionCreators;
         obj = { guildId, displayNameStyles: null };
         obj.displayNameStyles = obj;
         tmp2Result.setPendingChanges(obj);

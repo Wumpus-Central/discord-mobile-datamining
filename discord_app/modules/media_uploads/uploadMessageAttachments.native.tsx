@@ -3,7 +3,7 @@ import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 import UploadStore from "../../stores/UploadStore.tsx";
 
 const require = fn;
-let closure_6 = async function _uploadMessageAttachments(arg0, value) {
+let closure_6 = async function _uploadMessageAttachments(arg0) {
   if (c5 === 2) {
     c5 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");

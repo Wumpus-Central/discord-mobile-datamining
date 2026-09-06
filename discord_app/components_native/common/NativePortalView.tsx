@@ -56,12 +56,13 @@ export default noop.memo((paused) => {
       return () => {
         loopPlayback.setLoopPlayback(portal.portal, false);
         if (obj.isAndroid()) {
-          muted(onLoad[6]).unregisterView(tmp.portal);
+          muted(onLoad[6]).unregisterView(portal.portal);
           const obj2 = muted(onLoad[6]);
         } else {
-          DCDPortalViewManager.unregisterView(tmp.portal);
+          DCDPortalViewManager.unregisterView(portal.portal);
         }
         set.add(portal.portal);
+        obj = paused(onLoad[4]);
       };
     }, items2);
     const items3 = [onLoad, merged.portal];
@@ -73,15 +74,15 @@ export default noop.memo((paused) => {
       }
     }, items3);
     paused(onLoad[4]);
-    const obj = {};
+    let obj = {};
     const merged1 = Object.assign(merged);
     const items4 = [tmp2.base, style];
     obj.style = items4;
     if (isAndroidResult) {
       obj.onPortalViewLoaded = callback;
-      let tmp17Result = tmp17(tmp18, obj);
+      let tmp17Result = <closure_6 {...obj} />;
     } else {
-      tmp17Result = tmp17(tmp18, obj);
+      tmp17Result = <closure_6 {...obj} />;
     }
     return tmp17Result;
   }

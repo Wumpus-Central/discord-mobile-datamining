@@ -34,7 +34,7 @@ export default function ParagraphField(field) {
     str = "";
   }
   obj.value = str;
-  const intl = tmp3(1114).intl;
+  const intl = util.intl;
   obj.placeholder = intl.string(util.t["Sqn+Wh"]);
   obj.onChange = field.onChange;
   obj.children = jsx(TextArea.TextArea, {

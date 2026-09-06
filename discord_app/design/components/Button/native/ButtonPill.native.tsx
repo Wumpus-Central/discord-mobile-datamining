@@ -2,15 +2,19 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import useToken from "../../../tokens/native/useToken.tsx";
 import native from "../../../../../discord_common/js/packages/design/native.tsx";
-import ReanimatedRexportDefault from "../../../../modules/reanimated/ReanimatedRexport.tsx";
+import ReanimatedRexport from "../../../../modules/reanimated/ReanimatedRexport.tsx";
+import shared from "../../../shared.tsx";
 import spring from "../../../animation/reanimated/spring/spring.tsx";
 import springPresets from "../../../animation/reanimated/spring/springPresets.tsx";
 import ButtonConstants2 from "ButtonConstants.native.tsx";
 import ButtonHooks from "ButtonHooks.native.tsx";
+import ButtonShine from "ButtonShine.native.tsx";
 import LinearGradientDefault from "../../../../../_runtime/04987_LinearGradient.js";
 import ButtonEllipsis from "ButtonEllipsis.native.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
+
+const ReanimatedRexportDefault = ReanimatedRexport;
 
 require = fn;
 function PillWrapper(expressivePressState) {
@@ -40,7 +44,7 @@ function PillWrapper(expressivePressState) {
   let tmp7 = null;
   if (shiny) {
     obj = { variant };
-    tmp7 = React5(tmp(4986).ButtonShine, obj);
+    tmp7 = React5(ButtonShine.ButtonShine, obj);
   }
   if ("experimental_premium-primary" !== variant) {
     if ("experimental_premium-basic" !== variant) {
@@ -64,9 +68,9 @@ function PillWrapper(expressivePressState) {
         obj2 = { buttonColor: tmp5.expressiveRiveFill.color, cornerRadius: tmp5.expressivePill.borderRadius };
         const merged = Object.assign(expressivePressState);
         obj1.dataBinding = obj2;
-        obj.children = React5(tmp(4271).ExpressiveButtonRive, obj1);
-        tmp11Result = tmp11(hasOwnProperty, obj);
-        tmpResult = tmp(4411);
+        obj.children = React5(native.ExpressiveButtonRive, obj1);
+        tmp11Result = React5(hasOwnProperty, obj);
+        tmpResult = shared;
       }
       obj3 = { children: null };
       const items3 = [tmp11Result];
@@ -75,10 +79,10 @@ function PillWrapper(expressivePressState) {
       obj4.style = items4;
       const items5 = [children, tmp7];
       obj4.children = items5;
-      items3[1] = tmp9(tmp6(4296).View, obj4);
+      items3[1] = React6(ReanimatedRexportDefault.View, obj4);
       obj3.children = items3;
     }
-    return tmp9(tmp10, obj3);
+    return React6(tmp10, obj3);
   }
   obj5 = { start: { x: 0, y: 0 }, end: { x: 1, y: 0 }, style: null, colors: null };
   const items6 = [style, gradientPillStyles, timestampProducer.absoluteFill];
@@ -97,6 +101,7 @@ function PillWrapper(expressivePressState) {
   items7[1] = React6(ReanimatedRexportDefault.View, obj7);
   obj6.children = items7;
   obj3 = obj6;
+  const tmp6Result = LinearGradientDefault;
 }
 class BasicButtonPill {
   constructor(arg0) {
@@ -167,13 +172,13 @@ class LoadingButtonPill {
     effect = closure_4.useEffect(() => {
       if (null != ref.current) {
         const _clearTimeout = clearTimeout;
-        clearTimeout(tmp.current);
+        clearTimeout(ref.current);
       }
       if (flag) {
         _undefined(true);
       } else {
         const _setTimeout = setTimeout;
-        tmp.current = setTimeout(() => {
+        ref.current = setTimeout(() => {
           _undefined(false);
         }, 500);
       }
@@ -244,8 +249,8 @@ function useLoadingStyles(flag, DEFAULT_BUTTON_SIZE) {
     obj = { opacity: null, transform: null };
     if (enabled) {
       let withDelayResult = withSpringResult;
-      if (!tmp3) {
-        let tmpResult = tmp(4296);
+      if (!closure_0) {
+        let tmpResult = ReanimatedRexport;
         withDelayResult = tmpResult.withDelay(c10, withSpringResult);
       }
       obj.opacity = withDelayResult;
@@ -254,12 +259,12 @@ function useLoadingStyles(flag, DEFAULT_BUTTON_SIZE) {
       let tmp6 = obj;
     } else {
       obj.opacity = withSpringResult;
-      tmpResult = tmp(4974);
+      tmpResult = spring;
       let num2 = 0;
-      if (tmp3) {
+      if (closure_0) {
         num2 = -1 * num;
       }
-      obj = { translateY: tmpResult.withSpring(num2, tmp(4978).SUBTLE_SPRING) };
+      obj = { translateY: tmpResult.withSpring(num2, springPresets.SUBTLE_SPRING) };
       const items1 = [obj];
       obj.transform = items1;
       tmp6 = obj;
@@ -290,8 +295,8 @@ function useLoadingStyles(flag, DEFAULT_BUTTON_SIZE) {
     obj = { opacity: null, transform: null };
     if (enabled) {
       let withDelayResult = withSpringResult;
-      if (tmp3) {
-        let tmpResult = tmp(4296);
+      if (closure_0) {
+        let tmpResult = ReanimatedRexport;
         withDelayResult = tmpResult.withDelay(c10, withSpringResult);
       }
       obj.opacity = withDelayResult;
@@ -300,12 +305,12 @@ function useLoadingStyles(flag, DEFAULT_BUTTON_SIZE) {
       let tmp5 = obj;
     } else {
       obj.opacity = withSpringResult;
-      tmpResult = tmp(4974);
+      tmpResult = spring;
       let num2 = 0;
-      if (!tmp3) {
+      if (!closure_0) {
         num2 = num;
       }
-      obj = { translateY: tmpResult.withSpring(num2, tmp(4978).SUBTLE_SPRING) };
+      obj = { translateY: tmpResult.withSpring(num2, springPresets.SUBTLE_SPRING) };
       const items1 = [obj];
       obj.transform = items1;
       tmp5 = obj;

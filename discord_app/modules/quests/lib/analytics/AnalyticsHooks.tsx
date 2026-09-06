@@ -1,4 +1,5 @@
 // discord_app/modules/quests/lib/analytics/AnalyticsHooks.tsx
+import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
 import AnalyticsUtilsDefault from "../../../../utils/AnalyticsUtils.tsx";
 import v1 from "../../../../../_runtime/01256_v1.js";
 import AdCreativeType from "../../../../../discord_common/js/shared/shared-constants/AdCreativeType.tsx";
@@ -70,12 +71,10 @@ export const useTrackQuestContentClickedWithImpression = function useTrackQuestC
       const merged = Object.assign(AnalyticsTypes.getContentProperties(questContent, closure_1_3, closure_1_4));
       const merged1 = Object.assign(getDeviceMetadataDefault());
       obj.cta_name = cta_name;
-      const tmp = callback;
-      const tmp4 = questContent;
       obj.click_id = v1.v4();
       advertisingId = null;
       if (null != advertisingId) {
-        let tmp2Result = tmp2(1115);
+        let tmp2Result = PlatformUtils;
         advertisingId = null;
         if (tmp2Result.isIOS()) {
           advertisingId = advertisingId.advertisingId;
@@ -84,7 +83,7 @@ export const useTrackQuestContentClickedWithImpression = function useTrackQuestC
       obj.apple_advertising_id = advertisingId;
       let advertisingId1 = null;
       if (null != advertisingId) {
-        tmp2Result = tmp2(1115);
+        tmp2Result = PlatformUtils;
         advertisingId1 = null;
         if (tmp2Result.isAndroid()) {
           advertisingId1 = advertisingId.advertisingId;
@@ -113,9 +112,10 @@ export const useTrackQuestContentClickedWithImpression = function useTrackQuestC
       obj.properties = obj;
       obj.trackGuildAndChannelMetadata = trackGuildAndChannelMetadata;
       const tmp2Result1 = QuestHomeSearchSession;
-      obj.shouldExtendSession = QuestDataUtils.isBillableQuestContent(tmp4);
+      obj.shouldExtendSession = QuestDataUtils.isBillableQuestContent(questContent);
       obj.sourceQuestContent = sourceQuestContent;
-      tmp(obj);
+      callback(obj);
+      const tmp2Result2 = QuestDataUtils;
     });
   }, items1);
 };
@@ -172,12 +172,10 @@ export const useTrackAdContentClickedWithImpression = function useTrackAdContent
       const merged = Object.assign(AnalyticsTypes.getContentProperties(questContent, closure_1_5, closure_1_6));
       const merged1 = Object.assign(getDeviceMetadataDefault());
       obj.cta_name = cta_name;
-      const tmp = callback;
-      const tmp4 = questContent;
       obj.click_id = v1.v4();
       advertisingId = null;
       if (null != advertisingId) {
-        let tmp2Result = tmp2(1115);
+        let tmp2Result = PlatformUtils;
         advertisingId = null;
         if (tmp2Result.isIOS()) {
           advertisingId = advertisingId.advertisingId;
@@ -186,7 +184,7 @@ export const useTrackAdContentClickedWithImpression = function useTrackAdContent
       obj.apple_advertising_id = advertisingId;
       let advertisingId1 = null;
       if (null != advertisingId) {
-        tmp2Result = tmp2(1115);
+        tmp2Result = PlatformUtils;
         advertisingId1 = null;
         if (tmp2Result.isAndroid()) {
           advertisingId1 = advertisingId.advertisingId;
@@ -205,9 +203,10 @@ export const useTrackAdContentClickedWithImpression = function useTrackAdContent
       obj.properties = obj;
       obj.trackGuildAndChannelMetadata = trackGuildAndChannelMetadata;
       const tmp2Result1 = QuestHomeSearchSession;
-      obj.shouldExtendSession = QuestDataUtils.isBillableQuestContent(tmp4);
+      obj.shouldExtendSession = QuestDataUtils.isBillableQuestContent(questContent);
       obj.sourceQuestContent = sourceQuestContent;
-      tmp(obj);
+      callback(obj);
+      const tmp2Result2 = QuestDataUtils;
     });
   }, items1);
 };

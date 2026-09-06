@@ -22,16 +22,16 @@ export const StickyWrapper = function StickyWrapper(header) {
   obj.style = items;
   let tmp5Result = null;
   if (null != header) {
-    const items1 = [tmp3.header];
+    const items1 = [wrapper.header];
     let androidHeader;
     if (obj2.isAndroid()) {
-      androidHeader = tmp3.androidHeader;
+      androidHeader = wrapper.androidHeader;
     }
     obj = { style: null, children: null };
     items1[1] = androidHeader;
     obj.style = items1;
     obj.children = header;
-    tmp5Result = React3(tmp2, obj);
+    tmp5Result = React3(React2, obj);
     obj2 = utils_PlatformUtils;
   }
   const items2 = [tmp5Result, header.children];

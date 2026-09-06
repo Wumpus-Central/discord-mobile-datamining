@@ -1,4 +1,6 @@
 // discord_app/modules/game_console/getXboxURIForChannel.tsx
+import util from "../../intl/index.native.tsx";
+import HTTPUtils from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import useChannelName from "../channel/useChannelName.tsx";
 import GuildStore from "../../stores/GuildStore.tsx";
 import MediaEngineStore from "../../stores/MediaEngineStore.tsx";
@@ -35,8 +37,8 @@ export default function getXboxURIForChannel(channelId, arg1) {
     name = guild.name;
   }
   if (name == null) {
-    const intl = tmp5(1114).intl;
-    name = intl.string(tmp5(1114).t.LJpTRF);
+    const intl = util.intl;
+    name = intl.string(util.t.LJpTRF);
   }
   obj.guildName = name;
   obj.muted = MediaEngineStore.isSelfMute();
@@ -44,10 +46,10 @@ export default function getXboxURIForChannel(channelId, arg1) {
   obj.nonce = nonce;
   const str = timestampProducer(obj);
   if (forQRCode) {
-    const aPIBaseURL = tmp5(1272).getAPIBaseURL();
+    const aPIBaseURL = HTTPUtils.getAPIBaseURL();
     const _HermesInternal2 = HermesInternal;
     let combined = "" + aPIBaseURL + constants.XBOX_HANDOFF + "?" + str.toString();
-    const tmp5Result = tmp5(1272);
+    const tmp5Result = HTTPUtils;
   } else {
     const _HermesInternal = HermesInternal;
     combined = "" + React5 + "?" + str.toString();

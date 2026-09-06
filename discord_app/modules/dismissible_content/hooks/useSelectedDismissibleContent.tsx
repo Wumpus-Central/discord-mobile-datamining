@@ -7,11 +7,7 @@ require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/dismissible_content/hooks/useSelectedDismissibleContent.tsx");
 
-export const useSelectedDismissibleContent = function useSelectedDismissibleContent(
-  items,
-  APP_LAUNCHER_ONBOARDING,
-  bypassAutoDismiss,
-) {
+export const useSelectedDismissibleContent = function useSelectedDismissibleContent(items, APP_LAUNCHER_ONBOARDING) {
   let flag = bypassAutoDismiss;
   if (bypassAutoDismiss === undefined) {
     flag = false;
@@ -30,7 +26,6 @@ export const useSelectedSingleUseGuildDismissibleContent = function useSelectedS
   items4,
   id,
   CHANNEL_NOTICES,
-  flag,
 ) {
   if (flag === undefined) {
     flag = false;
@@ -56,7 +51,6 @@ export const useSelectedVersionedDismissibleContent = function useSelectedVersio
   COLLECTIBLES_SHOP_ENTRY_MARKETING,
   latestVersion,
   groupName,
-  bypassAutoDismiss,
 ) {
   let flag = bypassAutoDismiss;
   if (bypassAutoDismiss === undefined) {
@@ -90,7 +84,6 @@ export const useSelectedTimeRecurringDismissibleContent = function useSelectedTi
   prop,
   timeRecurringConfig,
   groupName,
-  bypassAutoDismiss,
 ) {
   let flag = bypassAutoDismiss;
   if (bypassAutoDismiss === undefined) {
@@ -116,7 +109,6 @@ export const useSelectedSnowflakeBoundDismissibleContent = function useSelectedS
   prop,
   newSnowflakeId,
   groupName,
-  bypassAutoDismiss,
 ) {
   let flag = bypassAutoDismiss;
   if (bypassAutoDismiss === undefined) {
@@ -139,7 +131,7 @@ export const useSelectedSnowflakeBoundDismissibleContent = function useSelectedS
   return items;
 };
 export const useSelectedSnowflakeBoundGuildDismissibleContent =
-  function useSelectedSnowflakeBoundGuildDismissibleContent(prop, id, newSnowflakeId, GUILD_HEADER_TOOLTIPS, flag) {
+  function useSelectedSnowflakeBoundGuildDismissibleContent(prop, id, newSnowflakeId, GUILD_HEADER_TOOLTIPS) {
     if (flag === undefined) {
       flag = false;
     }
@@ -176,7 +168,6 @@ export const useSelectedTimeRecurringSnowflakeBoundDismissibleContent =
     newSnowflakeId,
     timeRecurringConfig,
     groupName,
-    bypassAutoDismiss,
   ) {
     let flag = bypassAutoDismiss;
     if (bypassAutoDismiss === undefined) {

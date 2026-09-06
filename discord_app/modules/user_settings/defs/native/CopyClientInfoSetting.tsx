@@ -21,9 +21,9 @@ function getClientInfo() {
   }
   let str2 = "N/A";
   if (str.trim().length > 0) {
-    str2 = tmp4.Manifest;
+    str2 = Manifest.Manifest;
   }
-  const Build = tmp4.Build;
+  const Build = Manifest.Build;
   let str3 = "N/A";
   if (null != Build) {
     str3 = "N/A";
@@ -42,7 +42,7 @@ function getClientInfo() {
       str6 = str5;
     }
   }
-  const Version = tmp4.Version;
+  const Version = Manifest.Version;
   let str8 = "N/A";
   if (null != Version) {
     str8 = "N/A";
@@ -51,7 +51,7 @@ function getClientInfo() {
     }
   }
   const obj = { appVersion: str8, buildNumber: str3, buildOverride: str6, manifest: str2, releaseChannel: null };
-  const ReleaseChannel = tmp4.ReleaseChannel;
+  const ReleaseChannel = Manifest.ReleaseChannel;
   let str10 = "N/A";
   if (null != ReleaseChannel) {
     str10 = "N/A";

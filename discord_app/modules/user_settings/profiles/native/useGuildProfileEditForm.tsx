@@ -122,7 +122,7 @@ export default function useGuildProfileEditForm() {
   }
   obj = {
     handleSubmit: obj6.useCallback(
-      pendingPronouns(function* (arg0, value) {
+      pendingPronouns(function* () {
         closure_3 = tmp2;
         if (!closure_15) {
           if (null != stateFromStores) {

@@ -31,7 +31,7 @@ function createHandoffTokenWithLoadingModal(arg0) {
       const obj6 = require("SimpleLoadingModal");
     } else {
       obj = { reason: "user_not_authenticated_in_app", fingerprint: null, handoff_source: null };
-      const tmpResult = fingerprint(tmp2[6]);
+      const tmpResult = fingerprint(handoff_source[6]);
       obj.fingerprint = require("FingerprintUtils").maybeExtractId(fingerprint);
       obj.handoff_source = handoff_source;
       const obj1 = { fingerprint };
@@ -41,7 +41,7 @@ function createHandoffTokenWithLoadingModal(arg0) {
     }
   });
 }
-let closure_10 = async function _redirectWithHandoffToken(arg0, value) {
+let closure_10 = async function _redirectWithHandoffToken(arg0) {
   if (c6 === 2) {
     c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -168,7 +168,8 @@ let closure_11 = async function _redirectDeveloperPortalWithHandoffToken() {
   obj3.nonce = nonce;
   obj3.handoffSource = closure_132_0(closure_132_2[8]).LoginHandoffSource.ROLE_SUBSCRIPTION_SETTING;
   closure_131_2 = obj3;
-  closure_131_3 = await closure_132_9(closure_131_2);
+  await closure_132_9(closure_131_2);
+  closure_131_3 = value;
   const _URL = URL;
   const _location = location;
   const _HermesInternal = HermesInternal;

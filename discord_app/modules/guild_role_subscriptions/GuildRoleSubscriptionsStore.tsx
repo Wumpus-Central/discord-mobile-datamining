@@ -23,6 +23,7 @@ function saveGroupListing(groupListing) {
     let tmp6 = saveListing(tmp4);
     continue;
   }
+  tmp3 = prop[Symbol.iterator]();
 }
 function saveListing(id) {
   const result = secondaryIndexMap1.set(id.id, id);
@@ -162,6 +163,7 @@ FetchState = {
       }
       continue;
     }
+    const tmp = getSubscriptionGroupListingsForGuild(guildId);
   },
   GUILD_ROLE_SUBSCRIPTIONS_FETCH_LISTINGS_SUCCESS: function handleFetchListingsSuccess(arg0) {
     ({ guildId, groupListings, subscriptionTrials } = arg0);
@@ -177,6 +179,7 @@ FetchState = {
       continue;
     }
     saveBenefitChannels(benefitChannels);
+    tmp = groupListings[Symbol.iterator]();
   },
   GUILD_ROLE_SUBSCRIPTIONS_FETCH_LISTINGS_FAILURE: function handleFetchListingsFailure(guildId) {
     closure_7[guildId.guildId] = obj.FETCHED;

@@ -7,6 +7,7 @@ import ThreadSortOrder from "../../../discord_common/js/shared/shared-constants/
 import useMessageAuthor from "../messages/useMessageAuthor.tsx";
 import ReadStateActionCreators from "../../actions/ReadStateActionCreators.tsx";
 import ForumUtils from "ForumUtils.tsx";
+import ThreadUtils from "../threads/ThreadUtils.tsx";
 import renderMessageMarkupDefault from "../messages/renderMessageMarkup.tsx";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 import noop from "../../../_runtime/metro/00019__.js";
@@ -72,11 +73,10 @@ export const useLoadForumUnreadCounts = function useLoadForumUnreadCounts(channe
       }));
       if (mapped.length > 0) {
         const obj = { type: "REQUEST_FORUM_UNREADS", guildId: null, channelId: null, threads: null };
-        ({ guild_id: obj2.guildId, id: obj2.channelId } = tmp2);
+        ({ guild_id: obj2.guildId, id: obj2.channelId } = channel);
         obj.threads = mapped;
         obj.dispatch(obj);
       }
-      tmp2 = channel;
     }
   }, items1);
 };
@@ -111,7 +111,7 @@ export const useFacepileUsers = function useFacepileUsers(thread, typingUserIds)
   });
   return stateFromStoresArray;
 };
-export const useLastActiveTimestamp = function useLastActiveTimestamp(thread, sortOrder, format) {
+export const useLastActiveTimestamp = function useLastActiveTimestamp(thread, sortOrder) {
   _require = thread;
   closure_1 = sortOrder;
   let DURATION_AGO = format;
@@ -130,10 +130,10 @@ export const useLastActiveTimestamp = function useLastActiveTimestamp(thread, so
   const items2 = [lastMessageTimestamp, sortOrder, memo, memo1];
   return lastMessageTimestamp.useMemo(() => {
     if (closure_1 === ThreadSortOrder.ThreadSortOrder.CREATION_DATE) {
-      let tmpResult = tmp(7781);
+      let tmpResult = ThreadUtils;
       let timestampString = tmpResult.getTimestampString(memo, memo1);
     } else {
-      tmpResult = tmp(7781);
+      tmpResult = ThreadUtils;
       timestampString = tmpResult.getTimestampString(lastMessageTimestamp, memo1);
     }
     return timestampString;
@@ -169,11 +169,11 @@ export const useDefaultReactionEmoji = function useDefaultReactionEmoji(defaultR
   let animated = obj.useStateFromStores(items, () => {
     let emojiId;
     if (message != null) {
-      emojiId = tmp.emojiId;
+      emojiId = message.emojiId;
     }
     let usableCustomEmojiById = null;
     if (null != emojiId) {
-      usableCustomEmojiById = EmojiStore.getUsableCustomEmojiById(tmp.emojiId);
+      usableCustomEmojiById = EmojiStore.getUsableCustomEmojiById(message.emojiId);
     }
     return usableCustomEmojiById;
   });
@@ -214,11 +214,11 @@ export const useSomeForumPostReactions = function useSomeForumPostReactions(mess
   let animated = obj.useStateFromStores(items, () => {
     let emojiId;
     if (message != null) {
-      emojiId = tmp.emojiId;
+      emojiId = message.emojiId;
     }
     let usableCustomEmojiById = null;
     if (null != emojiId) {
-      usableCustomEmojiById = EmojiStore.getUsableCustomEmojiById(tmp.emojiId);
+      usableCustomEmojiById = EmojiStore.getUsableCustomEmojiById(message.emojiId);
     }
     return usableCustomEmojiById;
   });
@@ -286,11 +286,11 @@ export const useMaxPossibleForumPostReactions = function useMaxPossibleForumPost
   let animated = obj.useStateFromStores(items, () => {
     let emojiId;
     if (message != null) {
-      emojiId = tmp.emojiId;
+      emojiId = message.emojiId;
     }
     let usableCustomEmojiById = null;
     if (null != emojiId) {
-      usableCustomEmojiById = EmojiStore.getUsableCustomEmojiById(tmp.emojiId);
+      usableCustomEmojiById = EmojiStore.getUsableCustomEmojiById(message.emojiId);
     }
     return usableCustomEmojiById;
   });
@@ -501,7 +501,7 @@ export const useForumPostAuthor = function useForumPostAuthor(thread) {
   author = require("useMessageAuthor").useNullableUserAuthor(author, thread);
   const effect = noop.useEffect(() => {
     if (null != thread.ownerId) {
-      const member = GuildMemberRequesterStore.requestMember(tmp.guild_id, tmp.ownerId);
+      const member = GuildMemberRequesterStore.requestMember(thread.guild_id, thread.ownerId);
     }
   }, items2);
   return { user, author };
@@ -546,10 +546,10 @@ export const useForumPostFirstMessageMarkup = function useForumPostFirstMessageM
   const memo = noop.useMemo(() => {
     let content;
     if (firstMessage != null) {
-      content = tmp.content;
+      content = firstMessage.content;
     }
     if (null != content) {
-      if ("" !== tmp.content) {
+      if ("" !== firstMessage.content) {
         const obj = {
           formatInline: flag,
           noStyleAndInteraction: flag2,
@@ -559,7 +559,7 @@ export const useForumPostFirstMessageMarkup = function useForumPostFirstMessageM
           textColor: str,
           disablePressableChannelMention: true,
         };
-        renderMessageMarkupDefault(tmp, obj);
+        renderMessageMarkupDefault(firstMessage, obj);
       }
       return { hasSpoilerEmbeds: false, content: null };
     }
@@ -601,14 +601,13 @@ export const useForumPostReadStates = function useForumPostReadStates(stateFromS
   });
 };
 export const useChannelTemplate = function useChannelTemplate(parentChannel) {
-  closure_0 = parentChannel;
   const items = [parentChannel];
   return noop.useMemo(() => {
     let str = "";
-    if (null != closure_0) {
+    if (null != parentChannel) {
       str = "";
-      if (null != tmp.template) {
-        str = tmp.template.trim();
+      if (null != parentChannel.template) {
+        str = parentChannel.template.trim();
       }
     }
     return str;
@@ -692,7 +691,7 @@ export const useAutomaticForumSearch = function useAutomaticForumSearch(channel,
     PermissionStore.can(constants3.READ_MESSAGE_HISTORY, closure_0),
   );
   isSearchLoading.useRef(null);
-  const obj2 = require("initialize");
+  let obj2 = require("initialize");
   isSearchLoading.useRef(new Set());
   const items2 = [stateFromStores, , , , , , ,];
   ({ guild_id: arr3[1], id: arr3[2] } = channel);
@@ -706,13 +705,14 @@ export const useAutomaticForumSearch = function useAutomaticForumSearch(channel,
       if (null != ref.current) {
         tagFilter(tagSetting[33]).clearForumSearch(user.id);
         tmp.current = null;
+        const obj2 = tagFilter(tagSetting[33]);
       }
     }
     if (null != searchQuery) {
-      if (0 !== arr.length) {
+      if (0 !== searchQuery.length) {
         if (!flag) {
           if (stateFromStores) {
-            if (ref.current !== arr) {
+            if (ref.current !== searchQuery) {
               if (!isSearchLoading) {
                 const _setTimeout = setTimeout;
                 user = setTimeout(
@@ -726,12 +726,12 @@ export const useAutomaticForumSearch = function useAutomaticForumSearch(channel,
                       c0 = 3;
                     } else if (arg0 === 1) {
                       c0 = 3;
-                      throw arg1;
+                      throw value;
                     } else if (arg0 !== 2) {
                       c2 = 0;
                     }
                     c2 = 0;
-                    return arg1;
+                    return value;
                   }),
                   350,
                 );
@@ -760,13 +760,13 @@ export const useUnreadThreadsCountForParent = function useUnreadThreadsCountForP
     if (isForumLikeChannelResult) {
       const activeJoinedUnreadThreadsForParent = ActiveJoinedThreadsStore.getActiveJoinedUnreadThreadsForParent(
         channel,
-        tmp2,
+        importDefault,
       );
       const activeUnjoinedUnreadThreadsForParent = ActiveJoinedThreadsStore.getActiveUnjoinedUnreadThreadsForParent(
         channel,
-        tmp2,
+        importDefault,
       );
-      const ackMessageIdResult = ReadStateStore.ackMessageId(tmp2);
+      const ackMessageIdResult = ReadStateStore.ackMessageId(importDefault);
       if (null == ackMessageIdResult) {
         return 0;
       } else {
@@ -838,13 +838,13 @@ export const useForumActiveThreadIds = function useForumActiveThreadIds(channel)
     if (isForumLikeChannelResult) {
       const activeJoinedUnreadThreadsForParent = ActiveJoinedThreadsStore.getActiveJoinedUnreadThreadsForParent(
         channel,
-        tmp2,
+        importDefault,
       );
       const activeUnjoinedUnreadThreadsForParent = ActiveJoinedThreadsStore.getActiveUnjoinedUnreadThreadsForParent(
         channel,
-        tmp2,
+        importDefault,
       );
-      const ackMessageIdResult = ReadStateStore.ackMessageId(tmp2);
+      const ackMessageIdResult = ReadStateStore.ackMessageId(importDefault);
       if (null == ackMessageIdResult) {
         return 0;
       } else {

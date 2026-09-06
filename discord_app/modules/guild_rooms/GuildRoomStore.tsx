@@ -17,12 +17,6 @@ function resolveCreatingNotes(roomId, objects) {
           const id = AuthenticationStore.getId();
           const _Set = Set;
           const found = value.filter((createdBy) => createdBy.createdBy === closure_0);
-          const set = new Set(
-            found.map((position) => {
-              position = position.position;
-              return "" + position.x + "," + position.y;
-            }),
-          );
           const found1 = arr.filter((position) => {
             position = position.position;
             return !set.has("" + position.x + "," + position.y);
@@ -34,6 +28,12 @@ function resolveCreatingNotes(roomId, objects) {
               tmp3[roomId] = found1;
             }
           }
+          const set = new Set(
+            found.map((position) => {
+              position = position.position;
+              return "" + position.x + "," + position.y;
+            }),
+          );
         }
       }
     }
@@ -114,8 +114,8 @@ prototype["getRoomUsers"] = function getRoomUsers(channelId) {
   }
   return tmp;
 };
-prototype["getRoomObjects"] = function getRoomObjects(arg0) {
-  let tmp = closure_15[arg0];
+prototype["getRoomObjects"] = function getRoomObjects(roomId) {
+  let tmp = closure_15[roomId];
   if (tmp == null) {
     tmp = map1;
   }
@@ -151,8 +151,8 @@ prototype["getCreatingNotes"] = function getCreatingNotes(arg0) {
   }
   return tmp;
 };
-prototype["getNotes"] = function getNotes(arg0) {
-  const roomObjects = this.getRoomObjects(arg0);
+prototype["getNotes"] = function getNotes(roomId) {
+  const roomObjects = this.getRoomObjects(roomId);
   value = roomObjects.get(GuildRoomTypes.GuildRoomObjectTypes.NOTE);
   if (value == null) {
     value = closure_11;
@@ -235,7 +235,7 @@ DEFAULT_ROOM = {
     }
     dependencyMap2[room.roomId] = room.users;
     if (null != value) {
-      if (tmp3[room.roomId] != null) {
+      if (dependencyMap2[room.roomId] != null) {
         const result = obj2.set(id, value);
       }
     }
@@ -291,14 +291,14 @@ DEFAULT_ROOM = {
       const id = AuthenticationStore.getId();
       if (null != background) {
         let obj = {};
-        const merged = Object.assign(tmp[roomId]);
+        const merged = Object.assign(dependencyMap[roomId]);
         obj.background = background;
-        tmp[roomId] = obj;
+        dependencyMap[roomId] = obj;
       }
       value = dependencyMap2[roomId].get(id);
       if (null != value) {
         const _Map = Map;
-        map = new Map(tmp4[roomId]);
+        map = new Map(dependencyMap2[roomId]);
         obj = {};
         const merged1 = Object.assign(value);
         if (position == null) {
@@ -318,7 +318,7 @@ DEFAULT_ROOM = {
         }
         obj.statusText = statusText;
         const result = map.set(id, obj);
-        tmp4[roomId] = map;
+        dependencyMap2[roomId] = map;
       }
     }
   },
@@ -328,6 +328,7 @@ DEFAULT_ROOM = {
     if (tmp3) {
       const result = map2.set(channelId, mediaSessionId);
     }
+    tmp3 = null != channelId && null != mediaSessionId;
   },
   GUILD_ROOM_PENDING_NOTE_START: function handlePendingNoteStart(roomId) {
     closure_23[roomId.roomId] = { position: null };

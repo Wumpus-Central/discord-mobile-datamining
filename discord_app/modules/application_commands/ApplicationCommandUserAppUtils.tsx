@@ -1,8 +1,8 @@
 // discord_app/modules/application_commands/ApplicationCommandUserAppUtils.tsx
+import util from "../../intl/index.native.tsx";
 import EphemeralMessageReason from "../../../discord_common/js/shared/shared-constants/EphemeralMessageReason.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
-const util = tmp(1114);
 const result = size.fileFinishedImporting("modules/application_commands/ApplicationCommandUserAppUtils.tsx");
 
 export const getEphemeralReasonMessage = function getEphemeralReasonMessage(ephemerality_reason1) {

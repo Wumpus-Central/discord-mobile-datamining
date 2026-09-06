@@ -1,4 +1,5 @@
 // discord_app/modules/quests/native/VideoQuestModal/VideoQuestPlayer.tsx
+import ClientInfoUtils from "../../../../utils/native/ClientInfoUtils.tsx";
 import QuestActionCreators from "../../QuestActionCreators.tsx";
 import AssetUtils from "../../lib/AssetUtils.tsx";
 import VideoQuestUtils from "../../utils/VideoQuestUtils.tsx";
@@ -160,11 +161,11 @@ export const VideoQuestPlayer = noop.memo((onLoad) => {
   const items2 = [id, gameTitle, targetSeconds, url1, videoTitle, str];
   const effect = obj3.useEffect(() => {
     if (null != url1) {
-      if (0 !== arr.length) {
+      if (0 !== url1.length) {
         if (null != ref.current) {
           let obj = { location: QuestsExperimentLocations.VIDEO_MODAL_MOBILE };
           if (obj.getVideoQoEMetricsConfig(obj).externalAnalyticsEnabled) {
-            constants = tmp2(1364).getConstants();
+            constants = ClientInfoUtils.getConstants();
             obj = {
               videoRef: tmp.current,
               feature: "quests",
@@ -174,7 +175,7 @@ export const VideoQuestPlayer = noop.memo((onLoad) => {
             };
             ({ Version: obj4.appVersion, ReleaseChannel: obj4.releaseChannel } = constants);
             const obj1 = {
-              contentId: arr,
+              contentId: url1,
               videoStreamType: str,
               contentType: "quests",
               durationMs: 1000 * targetSeconds,
@@ -183,17 +184,17 @@ export const VideoQuestPlayer = noop.memo((onLoad) => {
               gameName: gameTitle,
             };
             obj.contentMetadata = obj1;
-            const mobileMuxWrapper = new tmp2(15136).MobileMuxWrapper(obj);
+            const mobileMuxWrapper = new SimpleMuxWrapper.MobileMuxWrapper(obj);
             ref2.current = mobileMuxWrapper;
             let current = ref2.current;
             current.initialize();
             return () => {
               if (null != ref2.current) {
-                const current = tmp.current;
+                const current = ref2.current;
                 current.onProgress(ref.current);
-                const current2 = tmp.current;
+                const current2 = ref2.current;
                 current2.destroy();
-                tmp.current = null;
+                ref2.current = null;
               }
             };
           }
@@ -223,7 +224,7 @@ export const VideoQuestPlayer = noop.memo((onLoad) => {
       current.onLoad(duration);
     }
     if (null != naturalSize) {
-      const current2 = tmp3.current;
+      const current2 = closure_27.current;
       if (current2 != null) {
         const result = current2.updateVideoSourceDimensions(naturalSize.width, naturalSize.height);
       }
@@ -239,7 +240,7 @@ export const VideoQuestPlayer = noop.memo((onLoad) => {
       tmp6 = trackId.length > 0;
     }
     if (tmp6) {
-      const current3 = tmp3.current;
+      const current3 = closure_27.current;
       if (current3 != null) {
         current3.onVideoTrackChange(trackId, videoTracks);
       }

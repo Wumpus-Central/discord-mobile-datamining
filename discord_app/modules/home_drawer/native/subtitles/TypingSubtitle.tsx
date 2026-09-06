@@ -1,5 +1,7 @@
 // discord_app/modules/home_drawer/native/subtitles/TypingSubtitle.tsx
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
+import utils_ChannelUtils from "../../../../utils/native/ChannelUtils.tsx";
+import TextIcon from "../../../../design/components/Icon/native/redesign/generated/TextIcon.tsx";
 import useSubtitleStyles from "useSubtitleStyles.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -17,11 +19,11 @@ export default function TypingSubtitle(arg0) {
   const subtitleStyles = obj.useSubtitleStyles();
   let channelIconComponentWithGuild;
   if (null != channel) {
-    channelIconComponentWithGuild = tmp(5028).getChannelIconComponentWithGuild(channel, guild);
-    const tmpResult = tmp(5028);
+    channelIconComponentWithGuild = utils_ChannelUtils.getChannelIconComponentWithGuild(channel, guild);
+    const tmpResult = utils_ChannelUtils;
   }
   if (channelIconComponentWithGuild == null) {
-    channelIconComponentWithGuild = tmp(5080).TextIcon;
+    channelIconComponentWithGuild = TextIcon.TextIcon;
   }
   obj = { style: subtitleStyles.subtitleRow, children: null };
   let tmp7 = null;
@@ -42,7 +44,7 @@ export default function TypingSubtitle(arg0) {
     const obj2 = { variant: "text-xs/medium", children: null };
     const items1 = [channelName, "  \u00B7  "];
     obj2.children = items1;
-    tmp5Result = tmp5(tmp(4556).Text, obj2);
+    tmp5Result = React4(Text_Text.Text, obj2);
   }
   const items2 = [tmp5Result, text];
   obj1.children = items2;

@@ -5,11 +5,13 @@ import useWindowDimensionsDefault from "../../../../screen/useWindowDimensions.n
 import useNavigation from "../../../../../design/components/Navigator/native/useNavigation.native.tsx";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../../design/components/Button/native/Button.native.tsx";
+import useIsScreenLandscape from "../../../../screen/useIsScreenLandscape.native.tsx";
 import useTrackImpressionDefault from "../../../../app_analytics/useTrackImpression.tsx";
+import useYouBarTotalHeight from "../../you_bar/hooks/useYouBarTotalHeight.tsx";
+import _modDef16054 from "../../../../../../_runtime/metro/16054__.js";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
-const _modDef16054 = tmp2(16054);
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Image: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
@@ -54,9 +56,9 @@ export default function MessagesEmptyState() {
     width = tmp5;
   }
   const result = 0.9 * width;
-  let tmp7Result = tmp7(5126);
+  let tmp7Result = useIsScreenLandscape;
   const isScreenLandscape = tmp7Result.useIsScreenLandscape();
-  tmp7Result = tmp7(15100);
+  tmp7Result = useYouBarTotalHeight;
   const items1 = [tmp.scrollViewContentContainer];
   let tmp18;
   if (isScreenLandscape) {
@@ -79,11 +81,11 @@ export default function MessagesEmptyState() {
   const items2 = [React6(hasOwnProperty, obj4)];
   const obj6 = { style: tmp.textWrapper, children: null };
   const obj7 = { color: "mobile-text-heading-primary", variant: "heading-md/bold", style: tmp.title, children: null };
-  const intl = tmp7(1114).intl;
+  const intl = util.intl;
   obj7.children = intl.string(util.t["8JZof8"]);
   const items3 = [React6(Text_Text.Heading, obj7)];
   const obj8 = { color: "text-default", variant: "text-md/medium", style: tmp.body, children: null };
-  const intl2 = tmp7(1114).intl;
+  const intl2 = util.intl;
   obj8.children = intl2.string(util.t["qm+H7x"]);
   items3[1] = React6(Text_Text.Text, obj8);
   obj6.children = items3;
@@ -92,7 +94,7 @@ export default function MessagesEmptyState() {
   const items4 = [React7(hasOwnProperty, obj3)];
   const obj9 = { style: tmp.buttonWrapper, children: null };
   const obj10 = { text: null, onPress: null, size: "lg" };
-  const intl3 = tmp7(1114).intl;
+  const intl3 = util.intl;
   obj10.text = intl3.string(util.t.zIJnA6);
   obj10.onPress = callback1;
   obj9.children = React6(components_Button_Button.Button, obj10);

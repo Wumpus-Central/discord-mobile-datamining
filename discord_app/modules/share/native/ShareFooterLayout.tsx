@@ -81,7 +81,7 @@ export default function ShareFooterLayout(arg0) {
     const obj2 = { style: tmp.footerSeparator };
     items1[1] = closure_4(View, obj2);
     obj1.children = items1;
-    tmp6Result = tmp6(closure_5, obj1);
+    tmp6Result = closure_6(closure_5, obj1);
   }
   const items2 = [tmp6Result];
   const obj3 = { style: tmp.warningWrapper, children: null };

@@ -22,8 +22,7 @@ function computeVideoTileGradientStops(modalV2BackgroundColor, modalV2Background
       if (DARK == null) {
         DARK = ThemeTypes.DARK;
       }
-      tmp9(1091);
-      const tmp9Result = tmp9(8229);
+      const tmp9Result = UserProfileGradientUtils;
       const int2rgbArrayResult = tmp9Result.int2rgbArray(
         tmp9Result.calculateModalV2BackgroundColor(modalV2BackgroundColor, modalV2BackgroundColor, DARK),
       );

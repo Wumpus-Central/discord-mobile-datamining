@@ -21,9 +21,13 @@ class ChannelCallModalManager extends tmp2 {
         DispatcherDefault.wait(() => {
           const result = applyArgumentsResult(dependencyMap[4]).dismissVoiceChannelScreens(channel);
         });
-        obj.terminate();
+        applyArgumentsResult.terminate();
       }
       applyArgumentsResult.inVoiceChannel = isInChannelResult;
+      tmp4 =
+        null != channel &&
+        applyArgumentsResult.inVoiceChannel &&
+        applyArgumentsResult.inVoiceChannel !== isInChannelResult;
     };
     return applyArgumentsResult;
   }

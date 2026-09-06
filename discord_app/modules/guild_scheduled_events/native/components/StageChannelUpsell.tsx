@@ -100,6 +100,7 @@ export default function StageChannelUpsell(arg0) {
           if (null != tmp) {
             closure_1_1(tmp);
           }
+          const obj = { id, type: constants.GUILD_STAGE_VOICE };
         },
         onClose() {
           closure_1_1(dependencyMap[17]).popWithKey(closure_1_12);

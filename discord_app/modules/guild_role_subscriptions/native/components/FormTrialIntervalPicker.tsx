@@ -42,6 +42,7 @@ export default function FormTrialIntervalPicker(disabled) {
       }
       obj.selectedItem = tmp3;
       obj.openLazy(asyncRequireImpl(9426, dependencyMap.paths), GuildRoleSubscriptionTrialIntervalSelect, obj);
+      const tmp = asyncRequireImpl(9426, dependencyMap.paths);
     },
     disabled: disabled.disabled,
   };
@@ -64,6 +65,7 @@ export default function FormTrialIntervalPicker(disabled) {
       }
       obj.selectedItem = tmp3;
       obj.openLazy(asyncRequireImpl(9426, dependencyMap.paths), GuildRoleSubscriptionTrialIntervalSelect, obj);
+      const tmp = asyncRequireImpl(9426, dependencyMap.paths);
     },
     disabled: disabled.disabled,
   });

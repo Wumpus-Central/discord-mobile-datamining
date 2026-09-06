@@ -2,6 +2,8 @@
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import CollectiblesItemType from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
+import AnalyticsLocationDefault from "../../app_analytics/AnalyticsLocation.tsx";
+import showUserProfileActionSheetDefault from "../../user_profile/native/showUserProfileActionSheet.tsx";
 import SKUPreview from "../../skus/native/SKUPreview.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -38,10 +40,10 @@ export default function WishlistNUXAddedItemActionSheet(product) {
   memo = noop.useMemo(() => {
     if (product.type === CollectiblesItemType.CollectiblesItemType.BUNDLE) {
       let obj = { type: "bundle", items: null, previewAssets: null };
-      ({ items: obj2.items, previewAssets: obj2.previewAssets } = tmp);
+      ({ items: obj2.items, previewAssets: obj2.previewAssets } = product);
       return obj;
     } else {
-      const first = _slicedToArray(tmp.items, 1)[0];
+      const first = _slicedToArray(product.items, 1)[0];
       let tmp5;
       if (null != first) {
         obj = { type: "single", item: first };
@@ -60,11 +62,11 @@ export default function WishlistNUXAddedItemActionSheet(product) {
     obj.hideAllActionSheets();
     if (null != stateFromStores) {
       obj = { userId: tmp4.id, sourceAnalyticsLocations: null, initialSection: null };
-      const items = [tmp(7182).COLLECTIBLES_SHOP];
+      const items = [AnalyticsLocationDefault.COLLECTIBLES_SHOP];
       obj.sourceAnalyticsLocations = items;
       obj.initialSection = UserProfileSections.WISHLIST;
-      tmp(8179)(obj);
-      const tmpResult = tmp(8179);
+      showUserProfileActionSheetDefault(obj);
+      const tmpResult = showUserProfileActionSheetDefault;
     }
   }, items2);
   const callback2 = noop.useCallback(() => {

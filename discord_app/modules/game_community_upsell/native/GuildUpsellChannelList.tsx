@@ -190,17 +190,22 @@ export default function GuildUpsellChannelList(style) {
     items[3] = closure_2_11(timestampProducer, obj2);
     let tmpResult = stateFromStoresArray.length > 0;
     if (tmpResult) {
-      const obj5 = { style: tmp3.joinSection, children: null };
+      const obj5 = { style: closure_0.joinSection, children: null };
       const obj6 = { variant: "heading-md/bold", color: "mobile-text-heading-primary", children: null };
-      const intl5 = tmp5(1114).intl;
-      obj6.children = intl5.string(tmp5(1114).t.rJRote);
-      const items2 = [tmp4(tmp5(4556).Text, obj6)];
-      const obj7 = { variant: "text-sm/medium", color: "text-subtle", style: tmp3.descriptionSpacing, children: null };
-      const intl6 = tmp5(1114).intl;
-      obj7.children = intl6.string(tmp5(1114).t.pJT2DK);
-      items2[1] = tmp4(tmp5(4556).Text, obj7);
+      const intl5 = util.intl;
+      obj6.children = intl5.string(util.t.rJRote);
+      const items2 = [closure_2_10(Text_Text.Text, obj6)];
+      const obj7 = {
+        variant: "text-sm/medium",
+        color: "text-subtle",
+        style: closure_0.descriptionSpacing,
+        children: null,
+      };
+      const intl6 = util.intl;
+      obj7.children = intl6.string(util.t.pJT2DK);
+      items2[1] = closure_2_10(Text_Text.Text, obj7);
       obj5.children = items2;
-      tmpResult = tmp(tmp2, obj5);
+      tmpResult = closure_2_11(timestampProducer, obj5);
     }
     items[4] = tmpResult;
     obj.children = items;

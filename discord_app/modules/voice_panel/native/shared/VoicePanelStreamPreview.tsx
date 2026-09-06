@@ -71,12 +71,12 @@ export const VoicePanelStreamPreview = function VoicePanelStreamPreview(mode) {
     () => {
       let tmp2 = null != stream;
       if (tmp2) {
-        tmp2 = tmp.ownerId === AuthenticationStore.getId();
+        tmp2 = stream.ownerId === AuthenticationStore.getId();
       }
       if (tmp2) {
         tmp2 =
           null ==
-          ApplicationStreamingStore.getStreamerActiveStreamMetadataForStream(StreamKeyUtils.encodeStreamKey(tmp));
+          ApplicationStreamingStore.getStreamerActiveStreamMetadataForStream(StreamKeyUtils.encodeStreamKey(stream));
       }
       return tmp2;
     },
@@ -125,25 +125,23 @@ export const VoicePanelStreamPreview = function VoicePanelStreamPreview(mode) {
   }
   const items2 = [tmp14];
   const obj3 = { style: animatedStyle, layout, children: null };
-  const tmp11 = closure_7;
-  const tmp12 = closure_8;
   const tmp4 = stream(10062);
   if (stateFromStores) {
     const obj4 = { style: tmp.ownStreamTextContainer, children: null };
     const obj5 = { variant: "text-sm/semibold", color: "text-overlay-light", style: tmp.ownStreamText, children: null };
     const intl2 = tmp8(1114).intl;
     obj5.children = intl2.string(tmp8(1114).t["ro/HN8"]);
-    obj4.children = tmp16(tmp8(4556).Text, obj5);
-    let tmp16Result = tmp16(closure_3, obj4);
+    obj4.children = closure_6(tmp8(4556).Text, obj5);
+    let tmp16Result = closure_6(closure_3, obj4);
   } else {
     const obj6 = { layout, disabled, text: null, size: "sm", variant: "primary-overlay", onPress: null };
     const intl = tmp8(1114).intl;
     obj6.text = intl.string(tmp8(1114).t["7Xq/nV"]);
     obj6.onPress = onPress;
-    tmp16Result = tmp16(closure_9, obj6);
+    tmp16Result = closure_6(closure_9, obj6);
   }
   obj3.children = tmp16Result;
   items2[1] = closure_6(stream(7073), obj3);
   obj.children = items2;
-  return tmp11(tmp12, obj);
+  return closure_7(closure_8, obj);
 };

@@ -2,15 +2,18 @@
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
 import ReactBatchUpdates from "../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
+import StickersUtils from "../StickersUtils.tsx";
 import StickerSendability from "../StickerSendability.tsx";
 import PremiumUpsellUtilsDefault from "../../../utils/native/PremiumUpsellUtils.tsx";
 import StickersSearchUtils from "../StickersSearchUtils.tsx";
-import openStickerPackDetailActionSheetDefault from "openStickerPackDetailActionSheet.tsx";
+import openStickerPackDetailActionSheet from "openStickerPackDetailActionSheet.tsx";
 import showStickerDetailActionSheet from "showStickerDetailActionSheet.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import UserStore from "../../../stores/UserStore.tsx";
 import StickersStore from "../StickersStore.tsx";
+
+const openStickerPackDetailActionSheetDefault = openStickerPackDetailActionSheet;
 
 require = fn;
 get_ActivityIndicator = fn(17);
@@ -84,12 +87,12 @@ export default noop.memo(function StickerPicker(channel) {
     const stickerSendability = obj.getStickerSendability(pack_id, UserStore.getCurrentUser(), channel);
     if (stickerSendability === StickerSendability.StickerSendability.SENDABLE) {
       onPressSticker(pack_id);
-    } else if (stickerSendability === tmp(7337).StickerSendability.SENDABLE_WITH_PREMIUM) {
-      let tmpResult = tmp(4899);
+    } else if (stickerSendability === StickerSendability.StickerSendability.SENDABLE_WITH_PREMIUM) {
+      let tmpResult = StickersUtils;
       if (tmpResult.isStandardSticker(pack_id)) {
         const stickerPack = StickersStore.getStickerPack(pack_id.pack_id);
         if (null != stickerPack) {
-          if (null != tmp3.guild_id) {
+          if (null != channel.guild_id) {
             let DM_CHANNEL2 = constants2.GUILD_CHANNEL;
           } else {
             DM_CHANNEL2 = constants2.DM_CHANNEL;
@@ -97,12 +100,12 @@ export default noop.memo(function StickerPicker(channel) {
           obj = { analyticsLocation: null, analyticsPopoutType: null, stickerPack: null };
           obj = { page: DM_CHANNEL2 };
           obj.analyticsLocation = obj;
-          obj.analyticsPopoutType = tmp(10394).AnalyticsPopoutType.STICKER_PACK_DETAIL;
+          obj.analyticsPopoutType = openStickerPackDetailActionSheet.AnalyticsPopoutType.STICKER_PACK_DETAIL;
           obj.stickerPack = stickerPack;
           openStickerPackDetailActionSheetDefault(obj);
         }
       } else {
-        tmpResult = tmp(4899);
+        tmpResult = StickersUtils;
         if (tmpResult.isGuildSticker(pack_id)) {
           let obj2 = PremiumUpsellUtilsDefault;
           const obj1 = {
@@ -110,7 +113,7 @@ export default noop.memo(function StickerPicker(channel) {
             analyticsLocation: null,
             analyticsLocations: null,
           };
-          if (null != tmp3.guild_id) {
+          if (null != channel.guild_id) {
             let DM_CHANNEL = constants2.GUILD_CHANNEL;
           } else {
             DM_CHANNEL = constants2.DM_CHANNEL;
@@ -143,16 +146,16 @@ export default noop.memo(function StickerPicker(channel) {
     obj2.placeholder = intl.string(tmp2(1114).t.dt5h1C);
     obj2.onChange = callback;
     obj2.onFocus = callback2;
-    obj1.children = tmp18(tmp2(7050).SearchField, obj2);
-    tmp18Result = tmp18(tmp20, obj1);
+    obj1.children = closure_14(tmp2(7050).SearchField, obj2);
+    tmp18Result = closure_14(closure_5, obj1);
   }
   const items5 = [tmp18Result, ,];
   if (stateFromStores) {
     if (0 === stickerCategories.length) {
       obj3 = { style: tmp.emptyState, children: null };
-      tmp = tmp18(tmp8(10413), {});
+      tmp = closure_14(tmp8(10413), {});
       obj3.children = tmp;
-      tmp18Result = tmp18(tmp20, obj3);
+      tmp18Result = closure_14(closure_5, obj3);
     } else {
       const obj4 = {
         bottomSheetRef,
@@ -178,16 +181,17 @@ export default noop.memo(function StickerPicker(channel) {
       obj4.stickerFormats = stickerFormats;
       obj4.searchResults = tmp11;
       obj4.inPortalKeyboard = inPortalKeyboard;
-      tmp18Result = tmp18(tmp8(10414), obj4);
+      tmp18Result = closure_14(tmp8(10414), obj4);
       const tmp8Result = tmp8(10414);
     }
   } else {
     const obj5 = { animating: true, size: "large", style: tmp.loadingIndicator };
-    items5[1] = tmp18(closure_6, obj5);
+    items5[1] = closure_14(closure_6, obj5);
     const obj6 = { categories: stickerCategories, categoryIndex: tmp6[0], style: safeAreaStyle };
-    items5[2] = tmp18(tmp8(10419), obj6);
+    items5[2] = closure_14(tmp8(10419), obj6);
     obj.children = items5;
-    obj.children = closure_15(tmp20, obj);
-    return tmp18(channel(7162).AnalyticsLocationProvider, obj);
+    obj.children = closure_15(closure_5, obj);
+    return closure_14(channel(7162).AnalyticsLocationProvider, obj);
   }
+  const tmp12 = onPressSticker(10283)({ hasCategories: true });
 });

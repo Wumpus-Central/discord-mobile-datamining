@@ -69,30 +69,29 @@ export default function useNativeForumPostContent(arg0) {
               let stringResult = intl6.string(util.t.mE3KJN);
             } else {
               if (obj5.getMessageStickers(message).length > 0) {
-                const intl5 = tmp28(1114).intl;
-                stringResult = intl5.string(tmp28(1114).t["7K5Lma"]);
+                const intl5 = util.intl;
+                stringResult = intl5.string(util.t["7K5Lma"]);
               } else {
                 if (null != message.interaction) {
                   if ("" === message.content) {
-                    const intl4 = tmp28(1114).intl;
-                    stringResult = intl4.string(tmp28(1114).t["2v7kfl"]);
+                    const intl4 = util.intl;
+                    stringResult = intl4.string(util.t["2v7kfl"]);
                   }
                 }
                 if (message.hasFlag(MessageFlags.IS_VOICE_MESSAGE)) {
-                  const intl3 = tmp28(1114).intl;
-                  stringResult = intl3.string(tmp28(1114).t["6bhHrc"]);
-                } else if (message.hasFlag(tmp14.IS_COMPONENTS_V2)) {
-                  const intl2 = tmp28(1114).intl;
-                  stringResult = intl2.string(tmp28(1114).t.Xxm5i3);
+                  const intl3 = util.intl;
+                  stringResult = intl3.string(util.t["6bhHrc"]);
+                } else if (message.hasFlag(MessageFlags.IS_COMPONENTS_V2)) {
+                  const intl2 = util.intl;
+                  stringResult = intl2.string(util.t.Xxm5i3);
                 } else {
                   stringResult = null;
                   if (tmp15) {
-                    const intl = tmp28(1114).intl;
-                    stringResult = intl.string(tmp28(1114).t.JAKsM8);
+                    const intl = util.intl;
+                    stringResult = intl.string(util.t.JAKsM8);
                   }
                   tmp15 = message.embeds.length > 0 || message.attachments.length > 0;
                 }
-                tmp14 = MessageFlags;
               }
               obj5 = StickersUtils;
             }

@@ -2,9 +2,9 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
 import useDrawerWidth from "../../../screen/native/drawer/useDrawerWidth.tsx";
+import FavoritesEmptyStateDefault from "../../../favorites/native/FavoritesEmptyState.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-const FavoritesEmptyStateDefault = tmp3(16735);
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: c3, View: closure_4 } = get_ActivityIndicator);

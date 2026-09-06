@@ -3,10 +3,10 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import useSafeAreaInsetsDefault from "../../safe_area/useSafeAreaInsets.native.tsx";
 import NavigatorHeader from "../../../design/components/Navigator/native/NavigatorHeader.native.tsx";
 import _mod5631 from "../../../../_runtime/metro/05631__.js";
+import useIsWindowLarge from "../../screen/native/useIsWindowLarge.tsx";
 import HeaderShared from "../../main_tabs_v2/native/shared_components/HeaderShared.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
-const useIsWindowLarge = tmp5(6945);
 require = fn;
 const jsx = fn(21).jsx;
 fn(4560);
@@ -47,13 +47,29 @@ export default function SearchableDestinationListHeader(arg0) {
     headerStatusBarHeight: null,
   };
   ({ headerLeftContainer: obj.headerLeftContainerStyle, headerRightContainer: obj.headerRightContainerStyle } = tmp);
-  const tmp4 = jsx;
   if (!obj3.isIOS()) {
     let num = useSafeAreaInsetsDefault().top;
   } else {
+    useIsWindowLarge;
     num = 0;
-    const tmp5Result = useIsWindowLarge;
   }
   obj.headerStatusBarHeight = num + nativeDefault.space.PX_8;
-  return tmp4(_mod5631.Header, obj);
+  return jsx(_mod5631.Header, {
+    headerStyle: tmp.header,
+    title,
+    headerTitle(children) {
+      return jsx(HeaderShared.GenericHeaderTitle, {
+        title: children.children,
+        subtitle,
+        subtitleColor,
+        variant: "redesign/heading-18/bold",
+      });
+    },
+    headerTitleAlign: "center",
+    headerLeft: NavigatorHeader.getHeaderCloseButton(onClose),
+    headerRight,
+    headerLeftContainerStyle: null,
+    headerRightContainerStyle: null,
+    headerStatusBarHeight: null,
+  });
 }

@@ -13,11 +13,13 @@ import components_Button_Button from "../../../design/components/Button/native/B
 import ActivityIndicator_ActivityIndicator from "../../../design/components/ActivityIndicator/native/ActivityIndicator.native.tsx";
 import NavigatorHeader2 from "../../../design/components/Navigator/native/NavigatorHeader.native.tsx";
 import native2 from "../../../design/assets/native.tsx";
+import _modDef6992 from "../../../../_runtime/metro/06992__.js";
 import FamilyCenterActionCreatorsDefault from "../FamilyCenterActionCreators.tsx";
 import FamilyCenterUtils from "../FamilyCenterUtils.tsx";
 import ModalScreen from "../../../design/components/Modal/native/ModalScreen.native.tsx";
 import ModalContent from "../../../design/components/Modal/native/ModalContent.native.tsx";
 import useIsInAdultAgeGroupDefault from "../hooks/useIsInAdultAgeGroup.tsx";
+import _modDef11564 from "../../../../_runtime/metro/11564__.js";
 import FamilyCenterModalRequestRouting from "../FamilyCenterModalRequestRouting.tsx";
 import ModalFooter from "../../../design/components/Modal/native/ModalFooter.native.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
@@ -359,7 +361,7 @@ function FamilyCenterPrereqLoading(arg0) {
   let obj = useNavigation;
   dependencyMap = obj.useNavigation();
   const effect = noop.useEffect(() => {
-    closure_1 = async function _runPrereq(arg0, value) {
+    closure_1 = async function _runPrereq() {
       if (c3 === 2) {
         c3 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");

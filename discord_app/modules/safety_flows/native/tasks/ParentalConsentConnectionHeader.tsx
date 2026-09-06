@@ -63,7 +63,7 @@ export const ParentalConsentConnectionNavbar = function ParentalConsentConnectio
       color: "mobile-text-heading-primary",
       children: stateFromStores,
     };
-    tmp5Result = tmp5(Text_Text.Text, obj2);
+    tmp5Result = hasOwnProperty(Text_Text.Text, obj2);
   }
   items1[1] = tmp5Result;
   obj.children = items1;

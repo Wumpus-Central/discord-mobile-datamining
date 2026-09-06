@@ -57,7 +57,7 @@ export default function VibegrationsSecretRequestCard(projectId) {
       let note = request.note;
     }
     obj = { variant: "text-sm/normal", color: "text-default", children: note };
-    items1[1] = tmp5(tmp9, obj);
+    items1[1] = closure_5(tmp9, obj);
     const obj1 = { style: tmp.chips, children: null };
     const fields = request.fields;
     obj1.children = fields.map((children) => {
@@ -66,13 +66,13 @@ export default function VibegrationsSecretRequestCard(projectId) {
       obj.children = hasOwnProperty(Text_Text.Text, obj);
       return hasOwnProperty(View, obj, children.name);
     });
-    items1[2] = tmp5(tmp4, obj1);
+    items1[2] = closure_5(View, obj1);
     const obj2 = { variant: "secondary", size: "sm", onPress: callback, text: null };
     const intl3 = tmp6(1114).intl;
     obj2.text = intl3.string(tmp8(3547)["gVV+HX"]);
-    items1[3] = tmp5(tmp6(4975).Button, obj2);
+    items1[3] = closure_5(tmp6(4975).Button, obj2);
     obj.children = items1;
-    return closure_6(tmp4, obj);
+    return closure_6(View, obj);
   }
   const intl2 = tmp6(1114).intl;
   note = intl2.string(tmp8(3547).jxvtin);

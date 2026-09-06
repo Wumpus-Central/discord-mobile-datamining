@@ -59,12 +59,12 @@ function ConnectedForumPost(arg0) {
   const stateFromStoresObject = require("initialize").useStateFromStoresObject(items2, () => {
     let isBlockedForMessageResult = null != firstMessage;
     if (isBlockedForMessageResult) {
-      isBlockedForMessageResult = RelationshipStore.isBlockedForMessage(tmp);
+      isBlockedForMessageResult = RelationshipStore.isBlockedForMessage(firstMessage);
     }
     const obj = { isBlocked: isBlockedForMessageResult, isIgnored: null };
-    let isIgnoredForMessageResult = null != tmp;
+    let isIgnoredForMessageResult = null != firstMessage;
     if (isIgnoredForMessageResult) {
-      isIgnoredForMessageResult = RelationshipStore.isIgnoredForMessage(tmp);
+      isIgnoredForMessageResult = RelationshipStore.isIgnoredForMessage(firstMessage);
     }
     obj.isIgnored = isIgnoredForMessageResult;
     return obj;
@@ -127,12 +127,13 @@ function ConnectedForumPost(arg0) {
       isNew = "blocked";
     }
     obj4.senderModifier = isNew;
-    tmp = tmp16(tmp3, obj4);
+    tmp = closure_6(tmp3, obj4);
     obj3.children = tmp;
-    tmp16Result = tmp16(ForumPostPressableContainer, obj3);
+    tmp16Result = closure_6(ForumPostPressableContainer, obj3);
   } else {
     return closure_6(tmp3(tmp[15]), {});
   }
+  const obj8 = require("initialize");
 }
 const useForumChannelStore = fn(12001).useForumChannelStore;
 const jsxProd = fn(21);

@@ -1,5 +1,6 @@
 // discord_app/modules/share/native/DestinationFailedAlertModal.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import util from "../../../intl/index.native.tsx";
 import native from "../../../design/void/native.tsx";
 import UserUtilsDefault from "../../../utils/UserUtils.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
@@ -114,12 +115,12 @@ function FailedDestinationRow(destination) {
   const stateFromStoresObject = obj.useStateFromStoresObject(items, () => {
     let channel = null;
     if ("channel" === destination.type) {
-      channel = ChannelStore.getChannel(tmp.id);
+      channel = ChannelStore.getChannel(destination.id);
     }
     const obj = { channel, user: null };
     let user = null;
     if ("user" === destination.type) {
-      user = UserStore.getUser(tmp.id);
+      user = UserStore.getUser(destination.id);
     }
     obj.user = user;
     return obj;
@@ -184,20 +185,20 @@ export default function DestinationFailedAlertModal(arg0) {
   if (null != onRetry) {
     obj = { children: null };
     const obj1 = { variant: "primary", onPress: onRetry, text: null };
-    const intl2 = tmp3(1114).intl;
-    obj1.text = intl2.string(tmp3(1114).t["5911Lb"]);
-    const items = [tmp2(tmp3(4910).AlertActionButton, obj1, "confirm")];
+    const intl2 = util.intl;
+    obj1.text = intl2.string(util.t["5911Lb"]);
+    const items = [closure_1_10(AlertModal.AlertActionButton, obj1, "confirm")];
     const obj2 = { variant: "secondary", text: null };
-    const intl3 = tmp3(1114).intl;
-    obj2.text = intl3.string(tmp3(1114).t.WAI6xu);
-    items[1] = tmp2(tmp3(4910).AlertActionButton, obj2, "cancel");
+    const intl3 = util.intl;
+    obj2.text = intl3.string(util.t.WAI6xu);
+    items[1] = closure_1_10(AlertModal.AlertActionButton, obj2, "cancel");
     obj.children = items;
     let tmp2Result = closure_1_11(closure_1_12, obj);
   } else {
     const obj3 = { variant: "primary", text: null };
-    const intl = tmp3(1114).intl;
-    obj3.text = intl.string(tmp3(1114).t.BddRzS);
-    tmp2Result = tmp2(tmp3(4910).AlertActionButton, obj3, "confirm");
+    const intl = util.intl;
+    obj3.text = intl.string(util.t.BddRzS);
+    tmp2Result = closure_1_10(AlertModal.AlertActionButton, obj3, "confirm");
   }
   obj.actions = closure_1_10(AlertModal.AlertActions, { children: tmp2Result });
   return closure_1_10(AlertModal.AlertModal, obj);

@@ -158,9 +158,8 @@ const guildStickersStore = new GuildStickersStore(
       }
       const partitionKeys = getPartitionKeys.getPartitionKeys();
       for (const item10028 of partitionKeys) {
-        let tmp3 = item10028;
         if (!set.has(item10028)) {
-          let removePartitionResult = arg1.removePartition(tmp3);
+          let removePartitionResult = arg1.removePartition(item10028);
         }
         continue;
       }
@@ -249,6 +248,7 @@ const guildStickersStore = new GuildStickersStore(
         let setPartitionResult = setPartition.setPartition(tmp4[0], parseServerGuildStickers(tmp4[1]));
         continue;
       }
+      tmp = arg0.stickers[Symbol.iterator]();
     },
     GUILD_STICKERS_FETCH_SUCCESS(guildId, setPartition) {
       setPartition.setPartition(guildId.guildId, parseServerGuildStickers(guildId.stickers));

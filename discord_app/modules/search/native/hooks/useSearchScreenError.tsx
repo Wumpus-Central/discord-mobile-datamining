@@ -1,4 +1,5 @@
 // discord_app/modules/search/native/hooks/useSearchScreenError.tsx
+import util from "../../../../intl/index.native.tsx";
 import ToastActionCreatorsDefault from "../../../toast/native/ToastActionCreators.tsx";
 import _modDef9625 from "../../../../../_runtime/metro/09625__.js";
 import SearchUtils from "../../SearchUtils.tsx";
@@ -26,8 +27,8 @@ export const useMessageSearchErrorScreen = function useMessageSearchErrorScreen(
     anyErrorMessage = stateFromStores.getAnyErrorMessage();
   }
   if (anyErrorMessage == null) {
-    const intl = tmp(tmp2[6]).intl;
-    anyErrorMessage = intl.string(tmp(tmp2[6]).t.uvDZBZ);
+    const intl = require("util").intl;
+    anyErrorMessage = intl.string(require("util").t.uvDZBZ);
   }
   ref = anyErrorMessage.useRef(null);
   const items1 = [stateFromStores, anyErrorMessage];
@@ -61,16 +62,16 @@ export const useMessageTabCountsErrorText = function useMessageTabCountsErrorTex
     const searchResultsQuery = SearchQueryStore.getSearchResultsQuery(searchContext);
     const searchTabFetchId = SearchUtils.getSearchTabFetchId(searchContext, closure_6, searchResultsQuery);
     if (SearchMessageStore.getIsInitialFetchComplete(searchTabFetchId)) {
-      if (null != obj2.getTotalCount(searchTabFetchId)) {
+      if (null != SearchMessageStore.getTotalCount(searchTabFetchId)) {
         return null;
       } else {
-        const error = obj2.getError(searchTabFetchId);
+        const error = SearchMessageStore.getError(searchTabFetchId);
         let tmp5 = null;
         if (null != error) {
           let anyErrorMessage = error.getAnyErrorMessage();
           if (anyErrorMessage == null) {
-            const intl = tmp2(1114).intl;
-            anyErrorMessage = intl.string(tmp2(1114).t.uvDZBZ);
+            const intl = util.intl;
+            anyErrorMessage = intl.string(util.t.uvDZBZ);
           }
           tmp5 = anyErrorMessage;
         }

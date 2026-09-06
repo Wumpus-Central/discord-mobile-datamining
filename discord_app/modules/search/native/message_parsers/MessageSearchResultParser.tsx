@@ -8,7 +8,7 @@ fn(16711).CachedSearchResultParser;
 const prototype = function SearchResultMessageParser(searchQueryString, lineClamp) {
   const tmp4 = new prototype(tmp3, tmp2, tmp, new.target, new.target);
   _require = tmp4;
-  tmp4.truncateMessage = function truncateMessage(content, tokenizedQueryContent, lineClamp) {
+  tmp4.truncateMessage = function truncateMessage(content, tokenizedQueryContent) {
     let num = lineClamp;
     if (lineClamp === undefined) {
       num = 1;
@@ -68,12 +68,14 @@ const prototype = function SearchResultMessageParser(searchQueryString, lineClam
               if (!set.has(rawTitle.type)) {
                 rawDescription = rawTitle.rawDescription;
               }
+              obj = { truncated: null, index: null, contentType: "description" };
+              obj.truncated = obj.truncateMessage(rawDescription, obj.tokenizedQueryContent, obj.lineClamp);
+              obj.index = index;
               const truncateMessageResult1 = obj.truncateMessage(
                 rawDescription,
                 obj.tokenizedQueryContent,
                 obj.lineClamp,
               );
-              obj = { truncated: truncateMessageResult1, index, contentType: "description" };
             }
             return obj;
           });

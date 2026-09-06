@@ -126,11 +126,11 @@ function Duration(animationValue) {
   const items2 = [first1];
   const effect1 = first1.useEffect(() => {
     if (null != first1) {
-      if (tmp !== constants.ENDED) {
+      if (first1 !== constants.ENDED) {
         let num = 1000;
         if (!useReducedMotion.useReducedMotion) {
           let num2 = 250;
-          if (tmp === tmp4.WARN) {
+          if (first1 === tmp4.WARN) {
             num2 = 500;
           }
           num = num2;

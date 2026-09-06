@@ -1,5 +1,6 @@
 // discord_app/modules/messages/native/renderer/system_messages/ReferralSystemMessage.tsx
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import renderer_EmbedUtils from "../EmbedUtils.tsx";
 import createCommonMessageDefault from "createCommonMessage.tsx";
 import _modDef8051 from "../../../../../../_runtime/metro/08051__.js";
 import ReferralTrialEmbedRedesign from "../row_data/embeds/ReferralTrialEmbedRedesign.tsx";
@@ -44,11 +45,10 @@ export const createReferralSystemMessage = function createReferralSystemMessage(
         const merged = Object.assign(createCommonMessageDefault(message));
         obj.referralTrialOfferInfo = referralTrialEmbedRedeemable;
         const tmp17 = closure_5(theme);
-        obj.iconUrl = tmp8(7946).getAssetUriForEmbed(_modDef8051);
+        obj.iconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef8051);
         ({ iconTintColor: obj4.iconTintColor, iconDividerColor: obj4.iconDividerColor } = tmp17);
         return obj;
       }
-      tmp8 = require;
     } else {
       const obj6 = ReferralTrialEmbedRedesign;
       const referralTrialEmbedRedesign = obj6.createReferralTrialEmbedRedesign(
@@ -64,12 +64,11 @@ export const createReferralSystemMessage = function createReferralSystemMessage(
         const merged1 = Object.assign(createCommonMessageDefault(message));
         obj.referralTrialOfferInfoRedesign = referralTrialEmbedRedesign;
         const tmp4 = closure_5(theme);
-        obj.iconUrl = tmp23(7946).getAssetUriForEmbed(_modDef8051);
+        obj.iconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef8051);
         ({ iconTintColor: obj.iconTintColor, iconDividerColor: obj.iconDividerColor } = tmp4);
         obj.timestamp = undefined;
         return obj;
       }
-      tmp23 = require;
     }
   }
 };

@@ -1,5 +1,6 @@
 // discord_app/modules/routing/native/BackPressManager.tsx
 import _mod17 from "../../../../_runtime/metro/00017__.js";
+import KeyboardUIStore from "../../keyboard/native/KeyboardUIStore.native.tsx";
 import KeyboardTypes from "../../keyboard/native/KeyboardTypes.tsx";
 import useKeyboardType from "../../keyboard/native/useKeyboardType.tsx";
 import ContextMenuState from "../../../design/components/ContextMenu/native/ContextMenuState.native.tsx";
@@ -12,10 +13,10 @@ function handleBackPress() {
   const keyboardType = useKeyboardType.getKeyboardType();
   let flag = keyboardType !== KeyboardTypes.KeyboardTypes.SYSTEM;
   if (flag) {
-    obj = { type: tmp(1609).KeyboardTypes.SYSTEM };
-    tmp(1481).setKeyboardType(obj);
+    obj = { type: KeyboardTypes.KeyboardTypes.SYSTEM };
+    KeyboardUIStore.setKeyboardType(obj);
     flag = true;
-    const tmpResult = tmp(1481);
+    const tmpResult = KeyboardUIStore;
   }
   return flag;
 }

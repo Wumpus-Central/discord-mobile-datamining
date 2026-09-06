@@ -1,5 +1,6 @@
 // discord_app/modules/quests/native/AppStoreOverlayTelemetryManager.tsx
 import Constants from "../../../Constants.tsx";
+import ConstantsIOS from "../../../ConstantsIOS.tsx";
 import PlatformUtils from "../../../utils/PlatformUtils.tsx";
 import AutomaticLifecycleManager from "../../../lib/AutomaticLifecycleManager.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
@@ -27,9 +28,9 @@ AppStoreOverlayTelemetryManager.prototype["handleAppStateUpdate"] = function han
   } else {
     let flag = null != _null;
     if (flag) {
-      if (state !== tmp(1093).AppStates.ACTIVE) {
+      if (state !== ConstantsIOS.AppStates.ACTIVE) {
         flag = false;
-        if (state === tmp(1093).AppStates.BACKGROUND) {
+        if (state === ConstantsIOS.AppStates.BACKGROUND) {
           _null.trackOverlayEvent(AnalyticEvents.QUEST_APP_STORE_OVERLAY_BACKGROUNDED);
           const _Date = Date;
           c4 = Date.now();

@@ -6,7 +6,7 @@ import size from "../../../../../../_runtime/metro/00002__.js";
 const ChannelDetailsButtonTypes = ChannelDetailsConstants.ChannelDetailsButtonTypes;
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/sidebar/details/ChannelDetailsUtils.tsx");
 
-export const getChannelDetailsButtons = function getChannelDetailsButtons(channel, stateFromStores) {
+export const getChannelDetailsButtons = function getChannelDetailsButtons(channel) {
   let flag = stateFromStores;
   if (stateFromStores === undefined) {
     flag = false;

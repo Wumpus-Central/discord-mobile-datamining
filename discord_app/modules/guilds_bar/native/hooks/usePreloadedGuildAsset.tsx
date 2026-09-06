@@ -28,21 +28,21 @@ export default function usePreloadedGuildAsset(guildId, icon, asset) {
     if (guildId === ref.current.guildId) {
       if (null != icon) {
         if (tmp5) {
-          tmp2.current.preloading = tmp3;
-          FastImageDefault.preload(tmp3).then(() => {
+          ref.current.preloading = icon;
+          FastImageDefault.preload(icon).then(() => {
             let tmp2 = ref.current.guildId === guildId;
             if (tmp2) {
-              tmp2 = tmp.current.preloading === icon;
+              tmp2 = ref.current.preloading === icon;
             }
             if (tmp2) {
-              tmp.current.icon = icon;
-              tmp.current.asset = asset;
+              ref.current.icon = icon;
+              ref.current.asset = asset;
               closure_1_3({});
             }
           });
-          const preloadResult = FastImageDefault.preload(tmp3);
+          const preloadResult = FastImageDefault.preload(icon);
         }
-        tmp5 = tmp3 !== tmp2.current.icon && tmp3 !== tmp2.current.preloading;
+        tmp5 = icon !== ref.current.icon && icon !== ref.current.preloading;
       }
     }
     ref.current.guildId = guildId;

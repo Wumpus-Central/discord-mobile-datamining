@@ -150,7 +150,7 @@ export const getAudioInputDevices = function getAudioInputDevices() {
       }
       if (isMatch) {
         obj = { id, type: AUDIO_INPUT, index: -1, name: "Default" };
-        mapped.unshift(obj);
+        arr = mapped.unshift(obj);
       }
       return closure_0(mapped);
     });
@@ -228,7 +228,7 @@ export const getAudioOutputDevices = function getAudioOutputDevices() {
       }
       if (isMatch) {
         obj = { id, type: AUDIO_OUTPUT, index: -1, name: "Default" };
-        mapped.unshift(obj);
+        arr = mapped.unshift(obj);
       }
       return closure_0(mapped);
     });
@@ -306,7 +306,7 @@ export const getVideoInputDevices = function getVideoInputDevices() {
       }
       if (isMatch) {
         obj = { id, type: VIDEO_INPUT, index: -1, name: "Default" };
-        mapped.unshift(obj);
+        arr = mapped.unshift(obj);
       }
       return closure_0(mapped);
     });

@@ -1,5 +1,6 @@
 // discord_app/modules/markup/PlatformMarkupRules.native.tsx
 import _mod17 from "../../../_runtime/metro/00017__.js";
+import util from "../../intl/index.native.tsx";
 import AvatarUtilsDefault from "../../utils/AvatarUtils.tsx";
 import getGameMediaRefURLDefault from "../games/getGameMediaRefURL.tsx";
 import UnicodeEmojisDefault from "../emojis/UnicodeEmojis.tsx";
@@ -198,8 +199,8 @@ obj.gameMention = {
       gameName = gameMentionData.gameName;
     }
     if (gameName == null) {
-      const intl = tmp2(1114).intl;
-      gameName = intl.string(tmp2(1114).t["11pdXZ"]);
+      const intl = util.intl;
+      gameName = intl.string(util.t["11pdXZ"]);
     }
     obj.displayName = gameName;
     return obj;
@@ -407,8 +408,8 @@ export const hydrateGameMention = function hydrateGameMention(gameId, channelId)
     gameName = gameMentionData.gameName;
   }
   if (gameName == null) {
-    const intl = tmp(1114).intl;
-    gameName = intl.string(tmp(1114).t["11pdXZ"]);
+    const intl = util.intl;
+    gameName = intl.string(util.t["11pdXZ"]);
   }
   obj.displayName = gameName;
   return obj;

@@ -1,6 +1,9 @@
 // discord_app/modules/user_profile/native/UserProfileStackedActionSheet.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import util from "../../../intl/index.native.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
+import Pressables from "../../../design/void/Pressables/native/Pressables.tsx";
+import ArrowLargeLeftIcon from "../../../design/components/Icon/native/redesign/generated/ArrowLargeLeftIcon.tsx";
 import Sheet_BottomSheet from "../../../design/components/Sheet/native/BottomSheet.native.tsx";
 import Form from "../../../design/void/Form/native/index.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -39,11 +42,11 @@ export default function UserProfileStackedActionSheet(onBack) {
   items[1] = { justifyContent: str };
   if (tmp4Result) {
     obj = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, children: null };
-    const intl = tmp5(1114).intl;
-    obj.accessibilityLabel = intl.string(tmp5(1114).t["13/7kX"]);
+    const intl = util.intl;
+    obj.accessibilityLabel = intl.string(util.t["13/7kX"]);
     obj.onPress = onBack;
-    obj.children = tmp4(tmp5(5628).ArrowLargeLeftIcon, { size: "md" });
-    tmp4Result = tmp4(tmp5(5123).PressableOpacity, obj);
+    obj.children = React4(ArrowLargeLeftIcon.ArrowLargeLeftIcon, { size: "md" });
+    tmp4Result = React4(Pressables.PressableOpacity, obj);
   }
   const items1 = [
     tmp4Result,
@@ -56,7 +59,7 @@ export default function UserProfileStackedActionSheet(onBack) {
   ];
   if (tmp4Result) {
     const obj1 = { style: tmp2.headerSpacer };
-    tmp4Result = tmp4(tmp9, obj1);
+    tmp4Result = React4(View, obj1);
   }
   items1[2] = tmp4Result;
   obj.children = items1;

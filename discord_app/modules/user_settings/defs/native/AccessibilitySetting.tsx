@@ -1,5 +1,6 @@
 // discord_app/modules/user_settings/defs/native/AccessibilitySetting.tsx
 import util from "../../../../intl/index.native.tsx";
+import native from "../../../../design/void/native.tsx";
 import useSelectedDismissibleContent from "../../../dismissible_content/hooks/useSelectedDismissibleContent.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -22,15 +23,15 @@ let SettingBuilders = {
     let tmp5 = null;
     if (null != tmp4) {
       let hasItem;
-      if (obj2 != null) {
-        hasItem = obj2.includes(tmp4);
+      if (items != null) {
+        hasItem = items.includes(tmp4);
       }
       tmp5 = null;
       if (hasItem) {
         obj = { text: null };
-        const intl = tmp(1114).intl;
-        obj.text = intl.string(tmp(1114).t.y2b7CA);
-        tmp5 = jsx(tmp(1178).TextBadge, { text: null });
+        const intl = util.intl;
+        obj.text = intl.string(util.t.y2b7CA);
+        tmp5 = jsx(native.TextBadge, { text: null });
       }
     }
     return tmp5;
@@ -45,10 +46,9 @@ let SettingBuilders = {
       if (tmp2) {
         let hasItem;
         if (items != null) {
-          hasItem = obj.includes(tmp);
+          hasItem = items.includes(tmp);
         }
         tmp2 = hasItem;
-        obj = items;
       }
       if (tmp2) {
         closure_1(ContentDismissActionType.TAKE_ACTION);

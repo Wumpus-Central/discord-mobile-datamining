@@ -25,12 +25,11 @@ export const useGroupListingsFetchContext = function useGroupListingsFetchContex
   } else {
     const fetchGroupListingsForGuild = context.fetchGroupListingsForGuild;
     const items = [fetchGroupListingsForGuild];
-    const effect = obj.useEffect(() => {
+    const effect = noop.useEffect(() => {
       fetchGroupListingsForGuild();
     }, items);
     return context.listingsLoaded;
   }
-  obj = noop;
 };
 export const GroupListingsFetchContextProvider = function GroupListingsFetchContextProvider(guildId) {
   guildId = guildId.guildId;

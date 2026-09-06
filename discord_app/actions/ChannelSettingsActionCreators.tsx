@@ -103,7 +103,7 @@ function saveChannel() {
   }
   return applyArgumentsResult;
 }
-let closure_9 = async function _saveChannel(arg0, value) {
+let closure_9 = async function _saveChannel(arg0) {
   if (c5 === 2) {
     c5 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -303,18 +303,17 @@ let closure_9 = async function _saveChannel(arg0, value) {
             closure_1(573);
             const obj = { type: "CHANNEL_SETTINGS_SUBMIT_SUCCESS", channelId };
             obj.dispatch(obj);
-            guildId = undefined;
-            if (guildId != null) {
-              guildId = guildId.getGuildId();
+            let guildId;
+            if (closure_1_27 != null) {
+              guildId = closure_1_27.getGuildId();
             }
             let tmp5 = null == guildId;
             if (!tmp5) {
               let isThreadResult;
-              if (guildId != null) {
-                isThreadResult = obj4.isThread();
+              if (closure_1_27 != null) {
+                isThreadResult = closure_1_27.isThread();
               }
               tmp5 = isThreadResult;
-              obj4 = guildId;
             }
             if (!tmp5) {
               const result = closure_1(7323).checkGuildTemplateDirty(guildId);
@@ -348,7 +347,7 @@ function deleteChannel() {
   }
   return applyArgumentsResult;
 }
-let closure_10 = async function _deleteChannel(arg0, value) {
+let closure_10 = async function _deleteChannel(arg0) {
   if (c4 === 2) {
     c4 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");

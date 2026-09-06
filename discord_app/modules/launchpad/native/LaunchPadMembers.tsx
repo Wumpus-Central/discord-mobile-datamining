@@ -1,5 +1,7 @@
 // discord_app/modules/launchpad/native/LaunchPadMembers.tsx
 import useStateFromStores from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
+import util from "../../../intl/index.native.tsx";
+import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import GuildChannelUserListDefault from "../../main_tabs_v2/native/shared_components/user_list/GuildChannelUserList.tsx";
 import PrivateChannelUserListDefault from "../../main_tabs_v2/native/shared_components/user_list/PrivateChannelUserList.tsx";
 import ThreadChannelUserListDefault from "../../main_tabs_v2/native/shared_components/user_list/ThreadChannelUserList.tsx";
@@ -97,9 +99,9 @@ export default noop.memo(function LaunchPadMembers() {
   } else {
     const obj5 = { style: tmp.emptyWrapper, children: null };
     const obj6 = { style: tmp.emptyText, variant: "text-md/semibold", children: null };
-    const intl = tmp2(1114).intl;
-    obj6.children = intl.string(tmp2(1114).t["+7wtJq"]);
-    obj5.children = jsx(tmp2(4556).Text, { style: tmp.emptyText, variant: "text-md/semibold", children: null });
+    const intl = util.intl;
+    obj6.children = intl.string(util.t["+7wtJq"]);
+    obj5.children = jsx(Text_Text.Text, { style: tmp.emptyText, variant: "text-md/semibold", children: null });
     tmp8 = <View style={tmp.emptyWrapper}>{null}</View>;
   }
   return tmp8;

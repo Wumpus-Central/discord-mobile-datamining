@@ -119,10 +119,9 @@ export const isVerifiedGameExecutable = function isVerifiedGameExecutable(str, a
         if (tmp) {
           let endsWithResult;
           if (substr != null) {
-            endsWithResult = obj.endsWith(os.name);
+            endsWithResult = substr.endsWith(os.name);
           }
           tmp = endsWithResult;
-          obj = substr;
         }
         return tmp;
       });

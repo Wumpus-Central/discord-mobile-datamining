@@ -220,25 +220,25 @@ obj.containerVRXLarge = {
 };
 const result5 = size.fileFinishedImporting("design/void/Status/native/getStatusContainerStyle.tsx");
 
-export default function getStatusContainerStyle(arg0, arg1) {
-  let flag = arg2;
-  if (arg2 === undefined) {
+export default function getStatusContainerStyle(items, flag) {
+  flag = flag2;
+  if (flag2 === undefined) {
     flag = false;
   }
   const SMALL = StatusSizes.SMALL;
   if (flag) {
-    if (SMALL === arg0) {
+    if (SMALL === items) {
       return obj.containerVRSmall;
-    } else if (tmp.REFRESH_MEDIUM_10 === arg0) {
+    } else if (StatusSizes.REFRESH_MEDIUM_10 === items) {
       return obj.containerVRRefreshMedium;
-    } else if (tmp.MEDIUM === arg0) {
+    } else if (StatusSizes.MEDIUM === items) {
       return obj.containerVRMedium;
-    } else if (tmp.LARGE === arg0) {
+    } else if (StatusSizes.LARGE === items) {
       return obj.containerVRLarge;
-    } else if (tmp.XLARGE === arg0) {
+    } else if (StatusSizes.XLARGE === items) {
       return obj.containerVRXLarge;
     } else {
-      const result = arg0 * VR_STATUS_SCALE;
+      const result = items * VR_STATUS_SCALE;
       const sum = result + 2 * STATUS_PADDING;
       const size = {
         width: result * VR_STATUS_WIDTH_RATIO + 2 * STATUS_PADDING,
@@ -251,16 +251,16 @@ export default function getStatusContainerStyle(arg0, arg1) {
       };
       return size;
     }
-  } else if (SMALL === arg0) {
-    return arg1 ? obj.containerMobileOnlineSmall : obj.containerSmall;
-  } else if (tmp.REFRESH_MEDIUM_10 === arg0) {
-    return arg1 ? obj.containerMobileOnlineRefreshMedium : obj.containerRefreshMedium;
-  } else if (tmp.MEDIUM === arg0) {
-    return arg1 ? obj.containerMobileOnlineMedium : obj.containerMedium;
-  } else if (tmp.LARGE === arg0) {
-    return arg1 ? obj.containerMobileOnlineLarge : obj.containerLarge;
-  } else if (tmp.XLARGE === arg0) {
-    return arg1 ? obj.containerMobileOnlineXLarge : obj.containerXLarge;
+  } else if (SMALL === items) {
+    return flag ? obj.containerMobileOnlineSmall : obj.containerSmall;
+  } else if (StatusSizes.REFRESH_MEDIUM_10 === items) {
+    return flag ? obj.containerMobileOnlineRefreshMedium : obj.containerRefreshMedium;
+  } else if (StatusSizes.MEDIUM === items) {
+    return flag ? obj.containerMobileOnlineMedium : obj.containerMedium;
+  } else if (StatusSizes.LARGE === items) {
+    return flag ? obj.containerMobileOnlineLarge : obj.containerLarge;
+  } else if (StatusSizes.XLARGE === items) {
+    return flag ? obj.containerMobileOnlineXLarge : obj.containerXLarge;
   } else {
     const size1 = {
       width: null,
@@ -271,14 +271,14 @@ export default function getStatusContainerStyle(arg0, arg1) {
       paddingTop: null,
       paddingBottom: null,
     };
-    const sum1 = arg0 + 2 * STATUS_PADDING;
+    const sum1 = items + 2 * STATUS_PADDING;
     size1.width = sum1;
     let num2 = 0;
-    if (arg1) {
+    if (flag) {
       num2 = sum1 / 2.5;
     }
     size1.height = sum1 + num2;
-    if (arg1) {
+    if (flag) {
       let result1 = sum1 / 4;
     } else {
       result1 = sum1 / 2;
@@ -287,12 +287,12 @@ export default function getStatusContainerStyle(arg0, arg1) {
     size1.paddingLeft = STATUS_PADDING;
     size1.paddingRight = STATUS_PADDING;
     let num5 = 0;
-    if (arg1) {
+    if (flag) {
       num5 = 1;
     }
     size1.paddingTop = STATUS_PADDING + num5;
     let num6 = 0;
-    if (arg1) {
+    if (flag) {
       num6 = 1;
     }
     size1.paddingBottom = STATUS_PADDING + num6;

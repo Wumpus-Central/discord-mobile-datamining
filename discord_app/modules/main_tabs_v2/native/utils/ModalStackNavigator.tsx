@@ -59,7 +59,7 @@ export default noop.memo(function ModalStackNavigator(children) {
         return obj;
       }}
     >
-      {arg0.render}
+      {children.render}
     </closure_4.Screen>
   );
   return (
@@ -75,7 +75,7 @@ export default noop.memo(function ModalStackNavigator(children) {
         return obj;
       }}
     >
-      {arg0.render}
+      {children.render}
     </closure_4.Navigator>
   );
 });

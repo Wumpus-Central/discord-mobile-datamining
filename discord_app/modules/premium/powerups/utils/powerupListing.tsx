@@ -63,7 +63,7 @@ function orderPowerupListings(items) {
   }
   return tmp10;
 }
-function buildPowerupListings(arg0, arr, arg2) {
+function buildPowerupListings(type, arr, gameServerEnabled) {
   const items = [];
   closure_1 = arr.reduce((acc, type) => {
     if (type.type !== constants.PERK) {
@@ -81,10 +81,10 @@ function buildPowerupListings(arg0, arr, arg2) {
   }, {});
   function _loop() {
     if (type.type === GuildPowerupType.LEVEL) {
-      let obj = { type: "singleLevel", powerup: tmp };
+      let obj = { type: "singleLevel", powerup: type };
       items.push(obj);
       return 0;
-    } else if (null != dependencyMap[tmp.skuId]) {
+    } else if (null != dependencyMap[type.skuId]) {
       if (undefined !== closure_1[tmp13]) {
         closure_0 = obj[tmp13];
         const sorted = obj2.sort((skuId, skuId2) => {
@@ -97,22 +97,22 @@ function buildPowerupListings(arg0, arr, arg2) {
       }
       return 0;
     } else {
-      obj = { type: "singlePerk", powerup: tmp, badge: PERK_SKU_BADGES[tmp.skuId] };
+      obj = { type: "singlePerk", powerup: type, badge: PERK_SKU_BADGES[type.skuId] };
       items.push(obj);
     }
   }
   const iter = arr[Symbol.iterator]();
   while (iter !== undefined) {
-    let type = iter.next();
+    type = iter.next();
     let _loopResult = _loop();
     continue;
   }
-  let tmp2 = arg2;
-  if (arg2) {
-    tmp2 = arg0 === GuildPowerupType.PERK;
+  let tmp2 = gameServerEnabled;
+  if (gameServerEnabled) {
+    tmp2 = type === GuildPowerupType.PERK;
   }
   if (tmp2) {
-    items.push({ type: "gameServer" });
+    arr = items.push({ type: "gameServer" });
   }
   return orderPowerupListings(items);
 }
@@ -166,7 +166,7 @@ export const useBuildGuildPowerupsSections = function useBuildGuildPowerupsSecti
           return arr;
         } else {
           const obj = { type, listings: buildPowerupListings(type, tmp, gameServerEnabled) };
-          arr.push(obj);
+          arr = arr.push(obj);
           return arr;
         }
       }, []),

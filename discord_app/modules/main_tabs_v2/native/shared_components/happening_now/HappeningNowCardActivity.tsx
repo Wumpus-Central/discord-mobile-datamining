@@ -1,16 +1,22 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowCardActivity.tsx
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import util from "../../../../../intl/index.native.tsx";
 import native from "../../../../../design/void/native.tsx";
 import AnalyticsUtilsDefault from "../../../../../utils/AnalyticsUtils.tsx";
 import asyncRequireImpl from "../../../../../../_runtime/01896_asyncRequireImpl.js";
 import ColorUtils from "../../../../../utils/ColorUtils.tsx";
+import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
 import ApplicationAssetUtils from "../../../../../utils/ApplicationAssetUtils.tsx";
 import VideoBackground from "../../../../calls/native/VideoBackground.tsx";
+import StreamPreviewDefault from "../../../../../components_native/StreamPreview.tsx";
 import useFetchStreamPreviewDefault from "../../../../go_live/useFetchStreamPreview.tsx";
+import isListeningOnSpotifyDefault from "../../../../activities/utils/isListeningOnSpotify.tsx";
+import isOnXboxDefault from "../../../../activities/utils/isOnXbox.tsx";
 import useLiveStageData from "useLiveStageData.tsx";
 import _modDef16074 from "../../../../../../_runtime/metro/16074__.js";
 import _modDef16075 from "../../../../../../_runtime/metro/16075__.js";
 import HappeningNowAvatarStack from "HappeningNowAvatarStack.tsx";
+import _modDef16084 from "../../../../../../_runtime/metro/16084__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import StageInstanceStore from "../../../../stage_channels/StageInstanceStore.tsx";
 import UserStore from "../../../../../stores/UserStore.tsx";
@@ -113,45 +119,45 @@ function IconOrPreview(arg0) {
     if (null != stream) {
       obj = { style: memo, children: null };
       obj = { stream, children: null, style: null, ctaText: null, disabled: true };
-      let tmp2Result = tmp2(10059);
+      let tmp2Result = StreamPreviewDefault;
       obj1 = { style: null, textStyle: null, allowFontScaling: false };
       ({ cardImageStreamLive: obj13.style, stageStreamLiveText: obj13.textStyle } = tmp);
-      obj.children = closure_1_11(tmp28(1178).LiveTag, obj1);
+      obj.children = closure_1_11(native.LiveTag, obj1);
       obj.style = tmp.cardImageStreamPreview;
-      const intl5 = tmp28(1114).intl;
-      obj.ctaText = intl5.string(tmp28(1114).t["7Xq/nV"]);
+      const intl5 = util.intl;
+      obj.ctaText = intl5.string(util.t["7Xq/nV"]);
       obj.children = closure_1_11(tmp2Result, obj);
       return closure_1_11(React4, obj);
     } else {
-      if (tmp2(10891)(activity)) {
-        const intl4 = tmp28(1114).intl;
-        let stringResult = intl4.string(tmp28(1114).t.rmnkz4);
+      if (isListeningOnSpotifyDefault(activity)) {
+        const intl4 = util.intl;
+        let stringResult = intl4.string(util.t.rmnkz4);
       } else {
         let type;
         if (activity != null) {
           type = activity.type;
         }
         if (type === constants2.LISTENING) {
-          const intl3 = tmp28(1114).intl;
-          stringResult = intl3.string(tmp28(1114).t.kUEnxN);
-        } else if (tmp2(13002)(activity)) {
-          const intl2 = tmp28(1114).intl;
-          stringResult = intl2.string(tmp28(1114).t.T0uYK9);
+          const intl3 = util.intl;
+          stringResult = intl3.string(util.t.kUEnxN);
+        } else if (isOnXboxDefault(activity)) {
+          const intl2 = util.intl;
+          stringResult = intl2.string(util.t.T0uYK9);
         } else {
           let type1;
           if (activity != null) {
             type1 = activity.type;
           }
           if (type1 !== tmp37.CUSTOM_STATUS) {
-            const intl = tmp28(1114).intl;
-            stringResult = intl.string(tmp28(1114).t["2TbM/G"]);
+            const intl = util.intl;
+            stringResult = intl.string(util.t["2TbM/G"]);
           }
         }
       }
       const obj2 = { style: memo, accessibilityLabel: stringResult, children: null };
       obj3 = { style: tmp35, children: null };
       obj4 = { style: tmp.cardImageAsset, source: memoizedImageSourceResult };
-      obj3.children = closure_1_11(tmp2(5587), obj4);
+      obj3.children = closure_1_11(FastImageDefault, obj4);
       obj2.children = closure_1_11(React4, obj3);
       return closure_1_11(React4, obj2);
     }
@@ -165,7 +171,7 @@ function IconOrPreview(arg0) {
       userId = substr.charCodeAt(0);
       tmp2Result = items[userId % items.length];
     } else {
-      tmp2Result = tmp2(16084);
+      tmp2Result = _modDef16084;
     }
   }
 }
@@ -354,18 +360,18 @@ export default noop.memo((userId) => {
     obj.highlighted_user_ids = items;
     let channelId;
     if (stream != null) {
-      channelId = tmp.channelId;
+      channelId = stream.channelId;
     }
     obj.destination_channel_id = channelId;
     obj.track(constants3.ACTIVITY_CARD_CLICKED, obj);
     if (null != stream) {
-      asyncRequireImpl(9536, tmp6.paths).then((result) => result.default(channelId.channelId, true));
-      const promise2 = asyncRequireImpl(9536, tmp6.paths);
+      asyncRequireImpl(9536, dependencyMap.paths).then((result) => result.default(channelId.channelId, true));
+      const promise2 = asyncRequireImpl(9536, dependencyMap.paths);
     } else {
-      asyncRequireImpl(8179, tmp6.paths).then((result) =>
+      asyncRequireImpl(8179, dependencyMap.paths).then((result) =>
         result.default({ userId, localUser, sourceAnalyticsLocations }),
       );
-      const promise = asyncRequireImpl(8179, tmp6.paths);
+      const promise = asyncRequireImpl(8179, dependencyMap.paths);
     }
   }, items2);
   if (null == stateFromStores) {
@@ -396,27 +402,27 @@ export default noop.memo((userId) => {
         const obj2 = { style: tmp.stagePreviewWrapper, children: null };
         const obj3 = { style: tmp.cardImageStream, children: null };
         const obj4 = { userId: stateFromStores.id, activity, game: getOrFetchApplication, stream };
-        obj3.children = tmp23(IconOrPreview, obj4);
-        const items3 = [tmp23(stream, obj3)];
+        obj3.children = closure_11(IconOrPreview, obj4);
+        const items3 = [closure_11(stream, obj3)];
         tmp23Result = null;
         if (null != stateFromStores1) {
           const obj5 = { user: stateFromStores, stage: stateFromStores1 };
-          tmp23Result = tmp23(StageStreamAvatars, obj5);
+          tmp23Result = closure_11(StageStreamAvatars, obj5);
         }
         const obj6 = { children: null };
         items3[1] = tmp23Result;
         obj2.children = items3;
-        const items4 = [tmp25(stream, obj2)];
+        const items4 = [closure_12(stream, obj2)];
         const obj7 = { stage: stateFromStores1, renderingContext, guildId, streamingUser: stateFromStores };
-        items4[1] = tmp23(tmp4(tmp3[23]).HappeningNowLiveStageContent, obj7);
+        items4[1] = closure_11(tmp4(tmp3[23]).HappeningNowLiveStageContent, obj7);
         obj6.children = items4;
         let obj8 = obj6;
       } else {
         obj8 = { children: null };
         const obj9 = { style: tmp.cardImage, children: null };
         const obj10 = { userId: stateFromStores.id, activity, game: getOrFetchApplication, stream };
-        obj9.children = tmp23(IconOrPreview, obj10);
-        const items5 = [tmp23(stream, obj9)];
+        obj9.children = closure_11(IconOrPreview, obj10);
+        const items5 = [closure_11(stream, obj9)];
         const obj11 = { style: tmp.content, children: null };
         const obj12 = {
           user: stateFromStores,
@@ -427,17 +433,17 @@ export default noop.memo((userId) => {
           style: tmp.cardAvatar,
           autoStatusCutout,
         };
-        const items6 = [tmp23(tmp4(tmp3[24]).Avatar, obj12), ,];
+        const items6 = [closure_11(tmp4(tmp3[24]).Avatar, obj12), ,];
         const obj13 = { noMargin: true, children: name };
-        items6[1] = tmp23(tmp4(tmp3[22]).HappeningNowCardHeader, obj13);
+        items6[1] = closure_11(tmp4(tmp3[22]).HappeningNowCardHeader, obj13);
         const obj14 = { activity, stream };
-        items6[2] = tmp23(tmp4(tmp3[25]).HappeningNowActivityCardSubtitle, obj14);
+        items6[2] = closure_11(tmp4(tmp3[25]).HappeningNowActivityCardSubtitle, obj14);
         obj11.children = items6;
-        items5[1] = tmp25(stream, obj11);
+        items5[1] = closure_12(stream, obj11);
         obj8.children = items5;
       }
       obj1.children = closure_12(closure_13, obj8);
-      tmp23Result = tmp23(tmp2Result, obj1);
+      tmp23Result = closure_11(tmp2Result, obj1);
     }
     return tmp23Result;
   }

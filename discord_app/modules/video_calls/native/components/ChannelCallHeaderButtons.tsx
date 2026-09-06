@@ -1,10 +1,12 @@
 // discord_app/modules/video_calls/native/components/ChannelCallHeaderButtons.tsx
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
+import util from "../../../../intl/index.native.tsx";
 import ChannelRTCActionCreatorsDefault from "../../../../actions/ChannelRTCActionCreators.tsx";
 import AudioActionCreatorsDefault from "../../../../actions/AudioActionCreators.tsx";
 import useSelectedParticipantDefault from "../../useSelectedParticipant.tsx";
 import ChannelCallNavigatorIconDefault from "ChannelCallNavigatorIcon.tsx";
 import _modDef10035 from "../../../../../_runtime/metro/10035__.js";
+import _modDef10036 from "../../../../../_runtime/metro/10036__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import MediaEngineStore from "../../../../stores/MediaEngineStore.tsx";
 
@@ -25,8 +27,8 @@ export const CameraButton = function CameraButton() {
   let tmp4 = null;
   if (stateFromStoresObject.isVideoEnabled) {
     obj = { accessibilityLabel: null, source: null, onPress: null, disableBackground: true };
-    const intl = tmp(1114).intl;
-    obj.accessibilityLabel = intl.string(tmp(1114).t["t9eQ/g"]);
+    const intl = util.intl;
+    obj.accessibilityLabel = intl.string(util.t["t9eQ/g"]);
     obj.source = _modDef10035;
     obj.onPress = function onPress() {
       const keys = Object.keys(closure_1_1);
@@ -53,12 +55,17 @@ export const GridButton = function GridButton(channel) {
       const obj = { accessibilityLabel: null, source: null, onPress: null, disableBackground: true };
       const intl = channel(1114).intl;
       obj.accessibilityLabel = intl.string(channel(1114).t.HK4JIu);
-      obj.source = tmp(10036);
+      obj.source = _modDef10036;
       obj.onPress = function onPress() {
         return ChannelRTCActionCreatorsDefault.selectParticipant(channel.id, null);
       };
-      tmp4 = jsx(tmp(9924), { accessibilityLabel: null, source: null, onPress: null, disableBackground: true });
-      const tmpResult = tmp(9924);
+      tmp4 = jsx(ChannelCallNavigatorIconDefault, {
+        accessibilityLabel: null,
+        source: null,
+        onPress: null,
+        disableBackground: true,
+      });
+      const tmpResult = ChannelCallNavigatorIconDefault;
     }
   }
   return tmp4;

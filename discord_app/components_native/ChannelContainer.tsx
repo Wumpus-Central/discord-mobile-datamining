@@ -4,6 +4,7 @@ import dismissible_content from "../../discord_common/js/packages/protos/discord
 import DismissibleContentUnsafeUtils from "../modules/dismissible_content/DismissibleContentUnsafeUtils.tsx";
 import useChatLayoutDefault from "../modules/chat/native/useChatLayout.tsx";
 import common_NotificationsDefault from "common/Notifications.tsx";
+import useChannelStylesShared from "useChannelStylesShared.tsx";
 import noop from "../../_runtime/metro/00019__.js";
 import LurkingStore from "../modules/lurker_mode/LurkingStore.tsx";
 import ChannelStore from "../stores/ChannelStore.tsx";
@@ -53,7 +54,7 @@ export const ChannelContainer = function ChannelContainer(children) {
   if (isStageChannel) {
     tmp5 = channelId(9583)(stateFromStoresObject.voiceChannelId);
   }
-  let tmpResult = tmp(504);
+  let tmpResult = initialize;
   const items1 = [LurkingStore];
   let isPrivateResult = null != channel;
   const stateFromStores = tmpResult.useStateFromStores(items1, () => {
@@ -95,7 +96,7 @@ export const ChannelContainer = function ChannelContainer(children) {
       );
     }
   }, items2);
-  tmpResult = tmp(11323);
+  tmpResult = useChannelStylesShared;
   const channelStyles = tmpResult.useChannelStyles();
   obj = { style: channelStyles.scene, children: null };
   obj = { style: channelStyles.flex, children: null };
@@ -108,13 +109,13 @@ export const ChannelContainer = function ChannelContainer(children) {
     tmp15 = null;
     if (stateFromStores) {
       const obj1 = { channel };
-      tmp15 = closure_10(tmp4(11324), obj1);
+      tmp15 = closure_10(channelId(11324), obj1);
     }
   }
   const items3 = [tmp15, children.children];
   if (tmp5) {
     const obj2 = { style: channelStyles.callPTTButton };
-    tmp5 = closure_10(tmp4(9695), obj2);
+    tmp5 = closure_10(channelId(9695), obj2);
   }
   items3[2] = tmp5;
   obj.children = items3;

@@ -27,8 +27,8 @@ export default function PremiumGiftAnalytics(currentStep) {
     if (currentStep !== ref.current) {
       const _Date = Date;
       const timestamp = Date.now();
-      if (null != tmp2.current) {
-        let isIOSResult = tmp === PremiumAnalyticsUtils.PaymentFlowStep.CONFIRM;
+      if (null != ref.current) {
+        let isIOSResult = currentStep === PremiumAnalyticsUtils.PaymentFlowStep.CONFIRM;
         if (isIOSResult) {
           let obj = PlatformUtils;
           isIOSResult = obj.isIOS();
@@ -47,8 +47,8 @@ export default function PremiumGiftAnalytics(currentStep) {
         obj1 = {};
         const obj6 = AnalyticsUtilsDefault;
         const obj2 = {
-          from_step: tmp2.current,
-          to_step: tmp,
+          from_step: ref.current,
+          to_step: currentStep,
           step_duration_ms: timestamp - ref2.current,
           flow_duration_ms: timestamp - ref.current,
           subscription_plan_gateway_plan_id: productId,
@@ -61,13 +61,13 @@ export default function PremiumGiftAnalytics(currentStep) {
         const result = PaymentFlowStartedTriggerPoint.trackPaymentFlowStartedAnalyticsAndCTP(basePurchaseAnalytics);
         obj3 = {};
         const obj11 = AnalyticsUtilsDefault;
-        const obj4 = { initial_step: tmp };
+        const obj4 = { initial_step: currentStep };
         const merged2 = Object.assign(
           PremiumAnalyticsUtils.getPaymentFlowStepAnalyticsFields(basePurchaseAnalytics, obj4),
         );
         obj11.track(AnalyticEvents.PAYMENT_FLOW_LOADED, obj3);
       }
-      tmp2.current = tmp;
+      ref.current = currentStep;
       ref2.current = timestamp;
     }
   }, items);

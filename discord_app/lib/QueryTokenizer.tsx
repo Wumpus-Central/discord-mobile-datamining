@@ -168,14 +168,15 @@ prototype["addRule"] = function addRule(type) {
   if (null != follows) {
     const item = follows.forEach((item) => {
       if (null == self._followers[item]) {
-        tmp._followers[item] = [];
+        self._followers[item] = [];
       }
-      let arr = tmp._followers[item];
+      let arr = self._followers[item];
       arr = arr.push({ regex: regExp, type, validator, cache: map });
+      const obj = { regex: regExp, type, validator, cache: map };
     });
   } else {
     const _rules = this._rules;
-    const obj = { regex: tmp, type, validator, cache: tmp7 };
+    let obj = { regex: tmp, type, validator, cache: tmp7 };
     _rules.push(obj);
   }
 };
@@ -223,7 +224,7 @@ prototype["tokenize"] = function tokenize(errorcode) {
     }
     _data = self._nonTokenType;
     if (typeof Token === "function") {
-      arr = Object.create(tmp32.prototype);
+      arr = Object.create(Token.prototype);
       if (_data instanceof Token) {
         const items2 = [];
         HermesBuiltin.arraySpread(_data.match, 0);
@@ -269,7 +270,7 @@ prototype["tokenize"] = function tokenize(errorcode) {
     }
     _data2 = self._nonTokenType;
     if (typeof Token === "function") {
-      let obj = Object.create(tmp35.prototype);
+      let obj = Object.create(Token.prototype);
       if (_data1 instanceof Token) {
         const items5 = [];
         HermesBuiltin.arraySpread(_data1.match, 0);

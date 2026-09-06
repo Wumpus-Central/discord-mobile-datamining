@@ -1,5 +1,6 @@
 // discord_app/modules/native_permissions/mobile/openNotificationSettings.native.tsx
 import _mod17 from "../../../../_runtime/metro/00017__.js";
+import PlatformUtils from "../../../utils/PlatformUtils.tsx";
 import NativeDeviceSettingsModuleDefault from "../../../../discord_common/js/packages/rtn-codegen/js/NativeDeviceSettingsModule.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
@@ -13,4 +14,5 @@ export default function openNotificationSettings() {
     const DeviceSettingsManager = NativeModules.DeviceSettingsManager;
     const result1 = DeviceSettingsManager.openNotificationSettings();
   }
+  obj = PlatformUtils;
 }

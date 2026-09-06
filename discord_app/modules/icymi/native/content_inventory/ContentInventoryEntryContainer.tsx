@@ -144,7 +144,7 @@ export default function ContentInventoryEntryContainer(contentId) {
     obj1.children = items5;
     obj.children = closure_7(View, obj1);
     obj.children = closure_6(tmp3(tmp4[11]).SimplePost, obj);
-    tmp7Result = tmp7(tmp3(tmp4[10]).PressableHighlight, obj);
+    tmp7Result = closure_6(tmp3(tmp4[10]).PressableHighlight, obj);
   }
   return tmp7Result;
 }

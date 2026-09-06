@@ -5,9 +5,9 @@ import reanimated_AccessibilityPreferencesSharedValue from "../AccessibilityPref
 import size from "../../../../../_runtime/metro/00002__.js";
 
 const CONFIG_NEVER_ANIMATE_TIMING = ReanimatedConstants.CONFIG_NEVER_ANIMATE_TIMING;
-function withTiming(value, timingStandard, fn, fn2) {
-  let str = fn;
-  if (fn === undefined) {
+function withTiming(value, timingStandard, arg2) {
+  let str = arg2;
+  if (arg2 === undefined) {
     str = "respect-motion-settings";
   }
   const accessibilityPreferencesSharedValue =
@@ -21,14 +21,14 @@ function withTiming(value, timingStandard, fn, fn2) {
       }
       obj = {};
       const merged = Object.assign(obj);
-      obj.reduceMotion = tmp(4296).ReduceMotion.Never;
+      obj.reduceMotion = ReanimatedRexport.ReduceMotion.Never;
       tmp7 = obj;
     }
     let tmp5 = tmp7;
   } else {
     tmp5 = CONFIG_NEVER_ANIMATE_TIMING;
   }
-  return ReanimatedRexport.withTiming(value, tmp5, fn2);
+  return ReanimatedRexport.withTiming(value, tmp5, fn);
 }
 withTiming.__closure = {
   accessibilityPreferencesSharedValue:

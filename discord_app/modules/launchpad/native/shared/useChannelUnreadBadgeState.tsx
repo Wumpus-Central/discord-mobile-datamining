@@ -22,7 +22,7 @@ export const useChannelUnreadBadgeState = function useChannelUnreadBadgeState(ch
     };
     let hasUnreadResult = !dependencyMap;
     if (!dependencyMap) {
-      hasUnreadResult = obj2.hasUnread(tmp.id);
+      hasUnreadResult = ReadStateStore.hasUnread(user.id);
     }
     obj.unread = hasUnreadResult;
     obj.mentionCount = ReadStateStore.getMentionCount(user.id);
@@ -72,7 +72,7 @@ export const useBaseChannelUnreadBadgeState = function useBaseChannelUnreadBadge
     };
     let hasUnreadResult = !dependencyMap;
     if (!dependencyMap) {
-      hasUnreadResult = obj2.hasUnread(tmp.id);
+      hasUnreadResult = ReadStateStore.hasUnread(user.id);
     }
     obj.unread = hasUnreadResult;
     obj.mentionCount = ReadStateStore.getMentionCount(user.id);

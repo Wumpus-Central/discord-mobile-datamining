@@ -38,8 +38,6 @@ function ForYouShowAllRow(panelVariant) {
   const items = [tmp4.pressable, { borderRadius: layoutStyles.container.borderRadius }];
   obj.style = items;
   obj = { style: tmp4.avatar, children: null };
-  const tmp8 = React7;
-  const tmp9 = React6;
   const AvatarSizes = native.AvatarSizes;
   obj1 = { children: null };
   obj2 = {
@@ -57,14 +55,14 @@ function ForYouShowAllRow(panelVariant) {
     style: tmp4.nameText,
     children: null,
   };
-  const intl = tmp(1114).intl;
+  const intl = util.intl;
   obj4.children = intl.format(util.t.NrzztX, { count });
   obj3.children = React5(Text_Text.Text, obj4);
   items1[1] = React5(View, obj3);
-  const obj5 = { style: tmp4.icon, color: tmp4.iconColor.color, source: _modDef7142, size: tmp(1178).IconSizes.CUSTOM };
+  const obj5 = { style: tmp4.icon, color: tmp4.iconColor.color, source: _modDef7142, size: native.IconSizes.CUSTOM };
   items1[2] = React5(native.Icon, obj5);
   obj1.children = items1;
-  obj.children = obj5.renderChannelWrapper(tmp8(tmp9, obj1), { layout, fontScale, panelVariant });
+  obj.children = obj5.renderChannelWrapper(React7(React6, obj1), { layout, fontScale, panelVariant });
   return obj3.renderChannelPressableWrapper(React5(Pressables.PressableHighlight, obj), { layout, panelVariant });
 }
 const View = fn(17).View;
@@ -116,7 +114,7 @@ let closure_10 = createStyles.createStyles((layout) => {
   const merged = Object.assign(sizeStyle);
   obj2.marginRight = layoutStyles.icon.margin.marginRight + 4;
   obj.avatar = obj2;
-  const size = { width: 8, height: 32, paddingRight: tmp4(576).space.PX_24 };
+  const size = { width: 8, height: 32, paddingRight: nativeDefault.space.PX_24 };
   obj.icon = size;
   obj6 = PlatformUtils;
   obj.iconColor = { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
@@ -153,12 +151,11 @@ export const ForYouSuggestedFriendShowAllRow = function ForYouSuggestedFriendSho
       return substr.map((user) => {
         const obj = { user: user.user, guildId: "Array", size: -1 };
         const obj2 = suggestedFriends(messagesTabLayout[6]);
-        const tmp = closure_2_7;
         const AvatarSizes = suggestedFriends(messagesTabLayout[11]).AvatarSizes;
         obj.size = suggestedFriends(messagesTabLayout[6]).isLayoutCompact(closure_1_2)
           ? AvatarSizes.XSMALL_20
           : AvatarSizes.SMALL;
-        return tmp(suggestedFriends(messagesTabLayout[11]).Avatar, obj, user.user.id);
+        return closure_2_7(suggestedFriends(messagesTabLayout[11]).Avatar, obj, user.user.id);
       });
     }, items1),
     count: suggestedFriends.length,

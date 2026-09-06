@@ -205,9 +205,9 @@ export default function MemberVerificationGuildHeader(hasManualFormFields) {
   obj9.children = formatResult;
   items4[1] = closure_6(scrollTop(tmp3[13]).Heading, obj9);
   const obj12 = { style: tmp.headerDescription, variant: "text-sm/medium", color: "text-default", children: null };
-  const intl2 = tmp9(tmp3[14]).intl;
+  const intl2 = scrollTop(tmp3[14]).intl;
   const string = intl2.string;
-  const t2 = tmp9(tmp3[14]).t;
+  const t2 = scrollTop(tmp3[14]).t;
   if (hasManualFormFields) {
     let stringResult = string(t2["3smSPP"]);
   } else {

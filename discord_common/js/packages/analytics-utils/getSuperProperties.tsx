@@ -8,6 +8,9 @@ import clientLaunchId from "clientLaunchId.tsx";
 import formatDefault from "../../../../_runtime/01341_format.js";
 import NativeMetaQuestModule from "../rtn-codegen/js/NativeMetaQuestModule.tsx";
 import NativeDeviceModule from "../rtn-codegen/js/NativeDeviceModule.tsx";
+import NativeClientInfoModule from "../rtn-codegen/js/NativeClientInfoModule.tsx";
+import DesignIds from "../../shared/shared-constants/DesignIds.tsx";
+import SessionStorage3 from "../storage/SessionStorage.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
 function getOS() {
@@ -53,10 +56,10 @@ function getDeviceProperties() {
   obj.system_locale = getSystemLocale();
   obj.has_client_mods = ClientModDetectionUtils.usesClientMods();
   try {
-    const tmp2Result = tmp2(17);
+    const tmp2Result = _mod17;
     if ("android" === tmp2Result.Platform.OS) {
-      constants = tmp2(1344).default.getConstants();
-      let _default = tmp2(1344).default;
+      constants = NativeClientInfoModule.default.getConstants();
+      let _default = NativeClientInfoModule.default;
     } else {
       const InfoDictionaryManager = tmp2Result.NativeModules.InfoDictionaryManager;
       constants = InfoDictionaryManager.getConstants();
@@ -69,7 +72,7 @@ function getDeviceProperties() {
     obj.client_version = Version + str2;
     obj.release_channel = ReleaseChannel;
     obj.device_vendor_id = DeviceVendorID;
-    obj.design_id = tmp2(1345).DesignIds.DESIGN_TABS_IA;
+    obj.design_id = DesignIds.DesignIds.DESIGN_TABS_IA;
     return obj;
   } catch (err) {}
 }
@@ -156,20 +159,20 @@ if (null == obj) {
       value = Storage.get(deviceProperties);
       if (null == value) {
         const tmp6 = getDeviceProperties();
-        const Storage2 = tmp(510).Storage;
+        const Storage2 = Storage5.Storage;
         const result = Storage2.set(deviceProperties, tmp6);
         value = tmp6;
       }
-      const Storage3 = tmp(510).Storage;
+      const Storage3 = Storage5.Storage;
       value = Storage3.get(referralProperties);
       if (null == value) {
         obj = {};
-        const Storage4 = tmp(510).Storage;
-        const result1 = Storage4.set(tmp8, obj);
+        const Storage4 = Storage5.Storage;
+        const result1 = Storage4.set(referralProperties, obj);
         value = obj;
       }
-      const SessionStorage = tmp(1346).SessionStorage;
-      let value1 = SessionStorage.get(tmp8);
+      const SessionStorage = SessionStorage3.SessionStorage;
+      let value1 = SessionStorage.get(referralProperties);
       if (null == value1) {
         obj = {};
         obj = {};
@@ -179,8 +182,8 @@ if (null == obj) {
           obj["" + item + "_current"] = obj[item];
           return obj[item];
         });
-        const SessionStorage2 = tmp(1346).SessionStorage;
-        const result2 = SessionStorage2.set(tmp8, obj);
+        const SessionStorage2 = SessionStorage3.SessionStorage;
+        const result2 = SessionStorage2.set(referralProperties, obj);
         value1 = obj;
       }
       const merged = Object.assign(value);
@@ -192,8 +195,8 @@ if (null == obj) {
       const obj3 = {};
       const merged1 = Object.assign(obj2);
       if ("android" === tmpResult.Platform.OS) {
-        let str = tmp(1343).default.getConstants().systemVersion;
-        const _default = tmp(1343).default;
+        let str = NativeDeviceModule.default.getConstants().systemVersion;
+        const _default = NativeDeviceModule.default;
       } else {
         str = tmpResult.NativeModules.DCDDeviceManager.systemVersion;
       }

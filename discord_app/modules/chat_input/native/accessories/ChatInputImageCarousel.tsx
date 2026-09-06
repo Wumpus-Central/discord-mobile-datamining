@@ -27,9 +27,8 @@ export default noop.memo(function ChatInputImageCarousel(canUpload) {
         if (canUpload) {
           uploads = null;
           if (null == ApplicationCommandStore.getActiveCommand(channelId)) {
-            uploads = UploadAttachmentStore.getUploads(tmp5, DraftType.ChannelMessage);
+            uploads = UploadAttachmentStore.getUploads(channelId, DraftType.ChannelMessage);
           }
-          tmp5 = channelId;
         }
         tmp = uploads;
       }

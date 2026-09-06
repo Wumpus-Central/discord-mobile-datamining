@@ -36,7 +36,7 @@ function HasBadgeCoachmark(markAsDismissed) {
   let tmp4Result = null != currentTier.simple_icon_url;
   if (tmp4Result) {
     const obj1 = { icon: currentTier.simple_icon_url, size: 120 };
-    tmp4Result = tmp4(GiftingBadgeIconDefault, obj1);
+    tmp4Result = closure_8(GiftingBadgeIconDefault, obj1);
   }
   obj.children = tmp4Result;
   const items2 = [closure_8(closure_5, obj), ,];

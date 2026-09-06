@@ -38,11 +38,11 @@ function ProposalCard(proposal) {
   obj.children = intl.string(_modDef3547["60htw+"]);
   const items1 = [closure_1_14(Text_Text.Text, obj), , , , ,];
   if ("" === trimmed) {
-    const intl2 = tmp6(1114).intl;
-    let stringResult = intl2.string(tmp8(3547).IHCafX);
+    const intl2 = util.intl;
+    let stringResult = intl2.string(_modDef3547.IHCafX);
   } else {
-    stringResult = tmp8(4550).parse(trimmed, true, closure_16);
-    const tmp8Result = tmp8(4550);
+    stringResult = MarkupUtilsDefault.parse(trimmed, true, closure_16);
+    const tmp8Result = MarkupUtilsDefault;
   }
   items1[1] = closure_1_14(Text_Text.Text, {
     variant: "text-md/normal",
@@ -53,9 +53,9 @@ function ProposalCard(proposal) {
   if (proposal.changes.length > 0) {
     obj = { direction: "vertical", spacing: 4, children: null };
     const obj1 = { variant: "text-sm/semibold", color: "text-muted", children: null };
-    const intl3 = tmp6(1114).intl;
-    obj1.children = intl3.string(tmp8(3547).KLyB8Y);
-    const items2 = [tmp3(tmp6(4556).Text, obj1)];
+    const intl3 = util.intl;
+    obj1.children = intl3.string(_modDef3547.KLyB8Y);
+    const items2 = [closure_1_14(Text_Text.Text, obj1)];
     const changes = proposal.changes;
     items2[1] = changes.map((item, index) =>
       closure_1_14(
@@ -65,42 +65,42 @@ function ProposalCard(proposal) {
       ),
     );
     obj.children = items2;
-    tmp5Result = tmp5(tmp6(4973).Stack, obj);
+    tmp5Result = __initData(Stack_Stack.Stack, obj);
   }
   items1[2] = tmp5Result;
   tmp5Result = null;
   if (bot_permissions.length > 0) {
     const obj2 = { direction: "vertical", spacing: 4, children: null };
     const obj3 = { variant: "text-sm/semibold", color: "text-muted", children: null };
-    const intl4 = tmp6(1114).intl;
-    obj3.children = intl4.string(tmp8(3547).ieqTtP);
-    const items3 = [tmp3(tmp6(4556).Text, obj3)];
+    const intl4 = util.intl;
+    obj3.children = intl4.string(_modDef3547.ieqTtP);
+    const items3 = [closure_1_14(Text_Text.Text, obj3)];
     const obj4 = { variant: "text-sm/normal", color: "text-default", children: bot_permissions.join(", ") };
-    items3[1] = tmp3(tmp6(4556).Text, obj4);
+    items3[1] = closure_1_14(Text_Text.Text, obj4);
     obj2.children = items3;
-    tmp5Result = tmp5(tmp6(4973).Stack, obj2);
+    tmp5Result = __initData(Stack_Stack.Stack, obj2);
   }
   items1[3] = tmp5Result;
   let tmp5Result1 = null;
   if (privileged_intents.length > 0) {
     const obj5 = { direction: "vertical", spacing: 4, children: null };
     const obj6 = { variant: "text-sm/semibold", color: "text-muted", children: null };
-    const intl5 = tmp6(1114).intl;
-    obj6.children = intl5.string(tmp8(3547).Cn9qix);
-    const items4 = [tmp3(tmp6(4556).Text, obj6)];
+    const intl5 = util.intl;
+    obj6.children = intl5.string(_modDef3547.Cn9qix);
+    const items4 = [closure_1_14(Text_Text.Text, obj6)];
     const obj7 = { variant: "text-sm/normal", color: "text-default", children: privileged_intents.join(", ") };
-    items4[1] = tmp3(tmp6(4556).Text, obj7);
+    items4[1] = closure_1_14(Text_Text.Text, obj7);
     obj5.children = items4;
-    tmp5Result1 = tmp5(tmp6(4973).Stack, obj5);
+    tmp5Result1 = __initData(Stack_Stack.Stack, obj5);
   }
   items1[4] = tmp5Result1;
   let tmp3Result = null;
   if (actionable) {
     const obj8 = { text: null, variant: "primary", onPress: null };
-    const intl6 = tmp6(1114).intl;
-    obj8.text = intl6.string(tmp8(3547).GYoWRk);
+    const intl6 = util.intl;
+    obj8.text = intl6.string(_modDef3547.GYoWRk);
     obj8.onPress = onApprove;
-    tmp3Result = tmp3(tmp6(4975).Button, obj8);
+    tmp3Result = closure_1_14(components_Button_Button.Button, obj8);
   }
   items1[5] = tmp3Result;
   obj.children = __initData(Stack_Stack.Stack, { direction: "vertical", spacing: 8, children: items1 });
@@ -131,7 +131,7 @@ function IdeaCards(arg0) {
       let tmpResult = null;
       if ("" !== title.value) {
         const obj1 = { variant: "text-sm/normal", color: "text-muted", children: title.value };
-        tmpResult = tmp(require("Text/Text").Text, obj1);
+        tmpResult = closure_1_14(require("Text/Text").Text, obj1);
       }
       items[1] = tmpResult;
       obj.children = closure_1_15(require("Stack/Stack").Stack, { direction: "vertical", spacing: 4, children: items });
@@ -229,11 +229,12 @@ function ActivityBox(tree) {
         }
         const obj = { variant: "text-sm/normal", color: "text-muted", children: null };
         const _HermesInternal = HermesInternal;
-        obj.children = "\u203A " + labelText + " \u2014 " + tmp2(tmp3[16]).describeTaskStatus(task.task.status);
+        obj.children =
+          "\u203A " + labelText + " \u2014 " + require("VibegrationsTimelineTree").describeTaskStatus(task.task.status);
         return closure_1_14(tmp4, obj, task.taskId);
       }
-      const intl = tmp2(tmp3[8]).intl;
-      labelText = intl.string(require("../intl/VibegrationsUntranslated.messages.js").MdXWEK);
+      const intl = require("util").intl;
+      labelText = intl.string(_modDef3547.MdXWEK);
     });
     obj.children = items1;
     let tmp2 = __initData(hasOwnProperty, obj);
@@ -443,13 +444,13 @@ let closure_25 = noop.memo((isNewest) => {
       let tmp51Result = null;
       if ("" !== trimmed) {
         const obj1 = { variant: "text-md/normal", color: "text-default", children: trimmed };
-        tmp51Result = tmp51(message(4556).Text, obj1);
+        tmp51Result = closure_14(message(4556).Text, obj1);
       }
       items5[1] = tmp51Result;
       tmp51Result = null;
       if (null != attachments) {
         const obj2 = { projectId, attachments };
-        tmp51Result = tmp51(AttachmentPills, obj2);
+        tmp51Result = closure_14(AttachmentPills, obj2);
       }
       items5[2] = tmp51Result;
       obj.children = items5;
@@ -584,8 +585,8 @@ let closure_25 = noop.memo((isNewest) => {
           const obj5 = { variant: "text-md/normal", color: "text-default", children: null };
           obj4 = MarkupUtilsDefault;
           obj5.children = obj4.parse(trimmed, true, closure_16);
-          obj4.children = tmp19(message(4556).Text, obj5);
-          tmp19Result = tmp19(tmp18, obj4);
+          obj4.children = closure_14(message(4556).Text, obj5);
+          tmp19Result = closure_14(closure_5, obj4);
         }
       }
     }
@@ -593,51 +594,51 @@ let closure_25 = noop.memo((isNewest) => {
     tmp19Result = null;
     if (null != attachments) {
       const obj6 = { projectId, attachments };
-      tmp19Result = tmp19(AttachmentPills, obj6);
+      tmp19Result = closure_14(AttachmentPills, obj6);
     }
     items7[4] = tmp19Result;
     let tmp19Result1 = null;
     if (null != tmp11) {
       const obj7 = { style: tmp.surface, children: null };
       const obj8 = { todos: tmp11 };
-      obj7.children = tmp19(TodoList, obj8);
-      tmp19Result1 = tmp19(tmp18, obj7);
+      obj7.children = closure_14(TodoList, obj8);
+      tmp19Result1 = closure_14(closure_5, obj7);
     }
     items7[5] = tmp19Result1;
     let tmp19Result2 = null;
     if (null != proposal) {
       const obj9 = { proposal, actionable: isNewest, onApprove };
-      tmp19Result2 = tmp19(ProposalCard, obj9);
+      tmp19Result2 = closure_14(ProposalCard, obj9);
     }
     items7[6] = tmp19Result2;
     let tmp19Result3 = null;
     if (null != clarification) {
       const obj10 = { clarification, onSubmit: onAnswerClarification };
-      tmp19Result3 = tmp19(VibegrationsClarificationCardDefault, obj10);
+      tmp19Result3 = closure_14(VibegrationsClarificationCardDefault, obj10);
     }
     items7[7] = tmp19Result3;
     let tmp19Result4 = null;
     if (null != secretRequest) {
       const obj11 = { projectId, request: secretRequest };
-      tmp19Result4 = tmp19(VibegrationsSecretRequestCardDefault, obj11);
+      tmp19Result4 = closure_14(VibegrationsSecretRequestCardDefault, obj11);
     }
     items7[8] = tmp19Result4;
     let tmp19Result5 = null;
     if (null != settingsRequest) {
       const obj12 = { projectId, request: settingsRequest };
-      tmp19Result5 = tmp19(VibegrationsSettingsRequestCardDefault, obj12);
+      tmp19Result5 = closure_14(VibegrationsSettingsRequestCardDefault, obj12);
     }
     items7[9] = tmp19Result5;
     let tmp19Result6 = null;
     if (null != ideas) {
       const obj13 = { ideas, onPick: onPickIdea };
-      tmp19Result6 = tmp19(IdeaCards, obj13);
+      tmp19Result6 = closure_14(IdeaCards, obj13);
     }
     items7[10] = tmp19Result6;
     let tmp19Result7 = null;
-    if ("plan_implemented" === message.kind && isNewest) {
+    if (tmp15) {
       const obj14 = { onAsk: onAskForIdeas };
-      tmp19Result7 = tmp19(IdeasOffer, obj14);
+      tmp19Result7 = closure_14(IdeasOffer, obj14);
     }
     items7[11] = tmp19Result7;
     let tmp19Result8 = null;
@@ -645,12 +646,13 @@ let closure_25 = noop.memo((isNewest) => {
       tmp19Result8 = null;
       if ("message" in found) {
         const obj15 = { variant: "text-sm/normal", color: "text-feedback-critical", children: found.message };
-        tmp19Result8 = tmp19(message(4556).Text, obj15);
+        tmp19Result8 = closure_14(message(4556).Text, obj15);
       }
     }
     items7[12] = tmp19Result8;
     obj.children = items7;
-    tmp17Result = closure_15(tmp18, obj);
+    tmp17Result = closure_15(closure_5, obj);
+    tmp15 = "plan_implemented" === message.kind && isNewest;
   }
 });
 const size = fn(2);
@@ -779,13 +781,13 @@ export default function VibegrationsNativeChat(projectId) {
   };
   if (!stateFromStores2) {
     obj.ListFooterComponent = null;
-    const items16 = [tmp18(tmp19, obj), ,];
+    const items16 = [closure_14(tmp19, obj), ,];
     let tmp18Result = null;
     if (null != stringResult) {
       obj1 = { style: tmp.statusRow, children: null };
       obj2 = { variant: "text-sm/normal", color: "text-muted", children: stringResult };
-      obj1.children = tmp18(tmp2(tmp3[11]).Text, obj2);
-      tmp18Result = tmp18(tmp17, obj1);
+      obj1.children = closure_14(tmp2(tmp3[11]).Text, obj2);
+      tmp18Result = closure_14(tmp17, obj1);
     }
     items16[1] = tmp18Result;
     obj3 = { projectId, canSend: tmp10, running: stateFromStores2, onSend: callback, onInterrupt: null };
@@ -794,17 +796,17 @@ export default function VibegrationsNativeChat(projectId) {
       tmp27 = callback1;
     }
     obj3.onInterrupt = tmp27;
-    items16[2] = tmp18(stateFromStores(tmp3[23]), obj3);
+    items16[2] = closure_14(stateFromStores(tmp3[23]), obj3);
     obj.children = items16;
-    return tmp16(tmp17, obj);
+    return closure_15(tmp17, obj);
   } else {
     obj4 = { style: tmp.thinkingRow, children: null };
-    const items17 = [tmp18(onPickIdea, { size: "small" })];
+    const items17 = [closure_14(onPickIdea, { size: "small" })];
     obj5 = { style: tmp.thinkingLabel, children: null };
     const obj6 = { variant: "text-sm/bold", color: "text-subtle", children: null };
     const intl3 = tmp2(tmp3[8]).intl;
     obj6.children = intl3.string(stateFromStores(tmp3[9]).Xmvb23);
-    const items18 = [tmp18(tmp2(tmp3[11]).Text, obj6)];
+    const items18 = [closure_14(tmp2(tmp3[11]).Text, obj6)];
     const intl4 = tmp2(tmp3[8]).intl;
     tmp18Result = stateFromStores(tmp3[9]);
     const obj7 = {
@@ -812,12 +814,12 @@ export default function VibegrationsNativeChat(projectId) {
       color: "text-subtle",
       children: intl4.string(stateFromStores3 ? tmp18Result["0vH/5G"] : tmp18Result.QDGuNS),
     };
-    tmp18Result = tmp18(tmp2(tmp3[11]).Text, obj7);
+    tmp18Result = closure_14(tmp2(tmp3[11]).Text, obj7);
     items18[1] = tmp18Result;
     obj5.children = items18;
-    obj5 = tmp16(tmp17, obj5);
+    obj5 = closure_15(tmp17, obj5);
     items17[1] = obj5;
     obj4.children = items17;
-    tmp16(tmp17, obj4);
+    closure_15(tmp17, obj4);
   }
 }

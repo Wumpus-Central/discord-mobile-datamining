@@ -15,11 +15,11 @@ export const useSelectedVariantIndex = function useSelectedVariantIndex(product)
   let defaultVariantIndex = require("useDefaultVariantIndex").useDefaultVariantIndex(product);
   let tmp2 = state((selectionStates) => {
     let tmp2 = null;
-    if (null != closure_0) {
+    if (null != product) {
       tmp2 = null;
-      if (obj.getIsVariantProduct(tmp)) {
+      if (obj.getIsVariantProduct(product)) {
         selectionStates = selectionStates.selectionStates;
-        value = selectionStates.get(tmp.storeListingId);
+        value = selectionStates.get(product.storeListingId);
         let selectedVariantIndex;
         if (value != null) {
           selectedVariantIndex = value.selectedVariantIndex;

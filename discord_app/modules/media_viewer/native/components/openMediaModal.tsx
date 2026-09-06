@@ -10,7 +10,8 @@ let closure_7 = async function _openMediaModal() {
     closure_130_0(closure_130_2[6])(closure_130_2[7], closure_130_2.paths),
     closure_130_0(closure_130_2[6])(closure_130_2[8], closure_130_2.paths),
   ];
-  closure_129_8 = await Promise.all(items);
+  await Promise.all(items);
+  closure_129_8 = value;
   closure_129_9 = closure_130_3(closure_129_8, 3);
   closure_129_10 = closure_129_9[0].setMediaViewerSources;
   const MediaViewerAnalytics = closure_129_9[1].MediaViewerAnalytics;
@@ -67,6 +68,8 @@ let closure_7 = async function _openMediaModal() {
     closure_1_10({ sources, initialIndex: tmp24 });
     closure_1_11.markSessionStarted({ channelId, numMediaItems: sources.length, source });
     closure_1_12();
+    const obj1 = { sources, initialIndex: tmp24 };
+    const obj2 = { channelId, numMediaItems: sources.length, source };
   });
   await "HermesInternal";
   initialIndex = tmp2;
@@ -87,7 +90,7 @@ let closure_7 = async function _openMediaModal() {
   }
   closure_129_6 = openAs;
   closure_129_7 = Object.assign(
-    tmp26,
+    closure_0,
     Object.assign({
       originViewOrOriginLayout: 0,
       initialIndex: 0,

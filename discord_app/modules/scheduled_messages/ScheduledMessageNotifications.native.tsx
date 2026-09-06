@@ -3,8 +3,11 @@ import Constants from "../../Constants.tsx";
 import util from "../../intl/index.native.tsx";
 import ToastActionCreatorsDefault from "../toast/native/ToastActionCreators.tsx";
 import ClockIcon from "../../design/components/Icon/native/redesign/generated/ClockIcon.tsx";
+import AlertActionCreatorsDefault from "../../actions/AlertActionCreators.tsx";
 import CircleXIcon from "../../design/components/Icon/native/redesign/generated/CircleXIcon.tsx";
+import AnalyticsLocationDefault from "../app_analytics/AnalyticsLocation.tsx";
 import ScheduledMessageUtils from "ScheduledMessageUtils.tsx";
+import openScheduledMessagesLimitUpsellDefault from "native/openScheduledMessagesLimitUpsell.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
 const AbortCodes = Constants.AbortCodes;
@@ -45,21 +48,21 @@ export const handleScheduleMessageError = function handleScheduleMessageError(bo
   if (code === AbortCodes.TOO_MANY_SCHEDULED_MESSAGES) {
     const scheduledMessagesLimit = ScheduledMessageUtils.getScheduledMessagesLimit("ScheduledMessagesCreateRoadblock");
     if (scheduledMessagesLimit.isUpgradable) {
-      let tmp11Result = tmp11(7849);
-      const items = [tmp11(7182).SCHEDULED_MESSAGES_ROADBLOCK];
+      let tmp11Result = openScheduledMessagesLimitUpsellDefault;
+      const items = [AnalyticsLocationDefault.SCHEDULED_MESSAGES_ROADBLOCK];
       tmp11Result(items);
     } else {
-      tmp11Result = tmp11(4904);
+      tmp11Result = AlertActionCreatorsDefault;
       let obj = { title: null, body: null, confirmText: null, cancelText: null, onCancel: null };
-      const intl2 = tmp7(1114).intl;
-      obj.title = intl2.string(tmp7(1114).t.RLdUVh);
-      const intl3 = tmp7(1114).intl;
+      const intl2 = util.intl;
+      obj.title = intl2.string(util.t.RLdUVh);
+      const intl3 = util.intl;
       obj = { max: tmp10 };
-      obj.body = intl3.formatToPlainString(tmp7(1114).t["3AMt7r"], obj);
-      const intl4 = tmp7(1114).intl;
-      obj.confirmText = intl4.string(tmp7(1114).t.BddRzS);
-      const intl5 = tmp7(1114).intl;
-      obj.cancelText = intl5.string(tmp7(1114).t.lv6bDa);
+      obj.body = intl3.formatToPlainString(util.t["3AMt7r"], obj);
+      const intl4 = util.intl;
+      obj.confirmText = intl4.string(util.t.BddRzS);
+      const intl5 = util.intl;
+      obj.cancelText = intl5.string(util.t.lv6bDa);
       obj.onCancel = function onCancel() {
         return require("ModalActionCreators").pushLazy(
           require("asyncRequireImpl")(paths[10], paths.paths),

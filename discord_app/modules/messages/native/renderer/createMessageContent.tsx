@@ -3,11 +3,14 @@ import SnowflakeUtilsDefault from "../../../../utils/SnowflakeUtils.tsx";
 import _mod17 from "../../../../../_runtime/metro/00017__.js";
 import util from "../../../../intl/index.native.tsx";
 import useChannelName from "../../../channel/useChannelName.tsx";
+import SpoilerChannelUtils from "../../../spoiler_channels/SpoilerChannelUtils.tsx";
 import ReferencedMessageStore2 from "../../../replies/ReferencedMessageStore.tsx";
 import MessageCountUtils from "../../../threads/MessageCountUtils.tsx";
 import RowGeneratorConstants from "RowGeneratorConstants.tsx";
 import GuildTagConstants from "../../../guild_tag/GuildTagConstants.tsx";
 import getEmbedThemeColorsDefault from "row_data/embeds/getEmbedThemeColors.tsx";
+import renderer_EmbedUtils from "EmbedUtils.tsx";
+import _modDef7947 from "../../../../../_runtime/metro/07947__.js";
 import transformMessageComponentsDefault from "transformMessageComponents.tsx";
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 import ApplicationStore from "../../../applications/ApplicationStore.tsx";
@@ -40,7 +43,6 @@ function createThreadEmbed(message, roleStyle, isInlineReplyPreview, channel1, o
         let string2Result = dependencyMap;
         const channelName = useChannelName.computeChannelName(channel1, UserStore, RelationshipStore);
         const backgroundColor = getEmbedThemeColorsDefault(forcedTheme).baseColors.backgroundColor;
-        const tmp19 = importDefault;
         const mostRecentMessage = ThreadMessageStore.getMostRecentMessage(
           SnowflakeUtilsDefault.castMessageIdAsChannelId(message.id),
         );
@@ -49,7 +51,7 @@ function createThreadEmbed(message, roleStyle, isInlineReplyPreview, channel1, o
         let string2 = MessageCountUtils.formatMessageCountLabel(count, channel1.id);
         if (null != count) {
           if (count > 0) {
-            let tmp15Result = tmp15(7329);
+            let tmp15Result = SpoilerChannelUtils;
             if (tmp15Result.isChannelSpoilerGated(channel1)) {
               let obj = {
                 title: channelName,
@@ -59,9 +61,9 @@ function createThreadEmbed(message, roleStyle, isInlineReplyPreview, channel1, o
                 archived: false,
                 backgroundColor: null,
               };
-              intl5 = tmp15(1114).intl;
+              intl5 = util.intl;
               string2 = intl5.string;
-              string2Result = string2(tmp15(1114).t["5uaI/7"]);
+              string2Result = string2(util.t["5uaI/7"]);
               obj.messagePreviewString = string2Result;
               obj.backgroundColor = backgroundColor;
               let obj1 = obj;
@@ -81,10 +83,10 @@ function createThreadEmbed(message, roleStyle, isInlineReplyPreview, channel1, o
                   archivedIconUrl: null,
                   backgroundColor: null,
                 };
-                const intl4 = tmp15(1114).intl;
-                obj.messagePreviewString = intl4.string(tmp15(1114).t.ZTo4HS);
-                tmp15Result = tmp15(7946);
-                obj.archivedIconUrl = tmp15Result.getAssetUriForEmbed(tmp19(7947));
+                const intl4 = util.intl;
+                obj.messagePreviewString = intl4.string(util.t.ZTo4HS);
+                tmp15Result = renderer_EmbedUtils;
+                obj.archivedIconUrl = tmp15Result.getAssetUriForEmbed(_modDef7947);
                 obj.backgroundColor = backgroundColor;
                 obj1 = obj;
               } else {
@@ -124,9 +126,9 @@ function createThreadEmbed(message, roleStyle, isInlineReplyPreview, channel1, o
                         archived: false,
                         backgroundColor: null,
                       };
-                      const intl2 = tmp15(1114).intl;
+                      const intl2 = util.intl;
                       const string = intl2.string;
-                      let XAkOo2 = tmp15(1114).t;
+                      let XAkOo2 = util.t;
                       if (mostRecentMessage.blocked) {
                         XAkOo2 = XAkOo2.XAkOo2;
                         let stringResult = string(XAkOo2);
@@ -146,8 +148,8 @@ function createThreadEmbed(message, roleStyle, isInlineReplyPreview, channel1, o
                   archived: false,
                   backgroundColor: null,
                 };
-                const intl3 = tmp15(1114).intl;
-                obj5.messagePreviewString = intl3.string(tmp15(1114).t.ZTo4HS);
+                const intl3 = util.intl;
+                obj5.messagePreviewString = intl3.string(util.t.ZTo4HS);
                 obj5.backgroundColor = backgroundColor;
                 obj1 = obj5;
               }
@@ -162,7 +164,7 @@ function createThreadEmbed(message, roleStyle, isInlineReplyPreview, channel1, o
           archived: false,
           backgroundColor: null,
         };
-        const intl = tmp15(1114).intl;
+        const intl = util.intl;
         obj.messagePreviewString = intl.string(util.t.HYtNyE);
         obj.backgroundColor = backgroundColor;
         return obj;
@@ -295,7 +297,7 @@ function createMessageContent(message) {
     obj.id = message.id;
     return obj;
   } else if (tmp2(tmp3[40])(message)) {
-    if (message.type === tmp15.THREAD_CREATED) {
+    if (message.type === constants.THREAD_CREATED) {
       obj3 = { threadEmbed: createThreadEmbed(message, roleStyle, isInlineReplyPreview, channel1, options, tmp6) };
       tmp13Result = tmp13(tmp3[41]);
       const obj4 = { message, theme: forcedTheme, reactions: items, roleStyle };
@@ -486,12 +488,12 @@ function createMessageContent(message) {
             const tmp13Result10 = tmp13(tmp3[55]);
             const messageAuthor = tmp13(tmp3[52]).getMessageAuthor(message);
             ({ nick, colorString, colorStrings } = messageAuthor);
-            if (message.type === tmp15.INTERACTION_PREMIUM_UPSELL) {
+            if (message.type === constants.INTERACTION_PREMIUM_UPSELL) {
               const intl2 = tmp13(tmp3[29]).intl;
               obj13 = { appName: nick };
               stringResult = intl2.formatToPlainString(tmp13(tmp3[29]).t["u4A+xK"], obj13);
             }
-            if (message.type === tmp15.REPLY) {
+            if (message.type === constants.REPLY) {
               if (renderReplies) {
                 const messageByReference1 = ReferencedMessageStore.getMessageByReference(message.messageReference);
                 const state = messageByReference1.state;
@@ -503,7 +505,7 @@ function createMessageContent(message) {
                     const intl12 = tmp13(tmp3[29]).intl;
                     obj14.content = intl12.string(tmp13(tmp3[29]).t.XAkOo2);
                     let tmp60 = obj14;
-                  } else if (obj35.isIgnoredForMessage(message3)) {
+                  } else if (RelationshipStore.isIgnoredForMessage(message3)) {
                     const obj15 = { state: ReferencedMessageRowState.SYSTEM, content: null };
                     const intl11 = tmp13(tmp3[29]).intl;
                     obj15.content = intl11.string(tmp13(tmp3[29]).t["G7p6v/"]);
@@ -585,14 +587,14 @@ function createMessageContent(message) {
                             }
                           }
                         }
-                        if (tmp13Result16.hasFlag(message2.flags, tmp58.IS_VOICE_MESSAGE)) {
+                        if (tmp13Result16.hasFlag(message2.flags, constants3.IS_VOICE_MESSAGE)) {
                           const intl7 = tmp13(tmp3[29]).intl;
                           stringResult1 = intl7.string(tmp13(tmp3[29]).t["6bhHrc"]);
-                        } else if (message2.type === tmp15.POLL_RESULT) {
+                        } else if (message2.type === constants.POLL_RESULT) {
                           stringResult1 = tmp13(tmp3[35]).getPollResultsReplyPreviewMobile(message2);
                           const tmp13Result17 = tmp13(tmp3[35]);
                         } else {
-                          if (tmp13Result18.hasFlag(message2.flags, tmp58.IS_COMPONENTS_V2)) {
+                          if (tmp13Result18.hasFlag(message2.flags, constants3.IS_COMPONENTS_V2)) {
                             const intl6 = tmp13(tmp3[29]).intl;
                             stringResult1 = intl6.string(tmp13(tmp3[29]).t.Xxm5i3);
                           } else if ("" === message2.content) {
@@ -605,7 +607,7 @@ function createMessageContent(message) {
                         }
                         tmp13Result16 = tmp13(tmp3[34]);
                       }
-                      if (message3.type === tmp15.POLL_RESULT) {
+                      if (message3.type === constants.POLL_RESULT) {
                         tmp72.content = stringResult1;
                       }
                       const obj19 = { state: ReferencedMessageRowState.LOADED, message: tmp72 };
@@ -616,14 +618,13 @@ function createMessageContent(message) {
                       }
                     }
                   }
-                  obj35 = RelationshipStore;
                   const tmp13Result13 = tmp13(tmp3[38]);
-                } else if (tmp63.NOT_LOADED === state) {
+                } else if (ReferencedMessageState.NOT_LOADED === state) {
                   const obj20 = { state: ReferencedMessageRowState.SYSTEM, content: null };
                   const intl4 = tmp13(tmp3[29]).intl;
                   obj20.content = intl4.string(tmp13(tmp3[29]).t["1i+hMi"]);
                   tmp60 = obj20;
-                } else if (tmp63.DELETED === state) {
+                } else if (ReferencedMessageState.DELETED === state) {
                   const obj21 = { state: ReferencedMessageRowState.SYSTEM, content: null };
                   const intl3 = tmp13(tmp3[29]).intl;
                   obj21.content = intl3.string(tmp13(tmp3[29]).t.mE3KJN);
@@ -674,7 +675,7 @@ function createMessageContent(message) {
             if (tmp101) {
               const obj23 = {
                 uploaderFile: uploaderFileForMessageId,
-                isFailedMessage: message.state === tmp44.SEND_FAILED,
+                isFailedMessage: message.state === constants2.SEND_FAILED,
                 shouldInlineAttachmentMedia: tmp10,
               };
               let items3 = tmp2(tmp3[63])(obj23);
@@ -699,12 +700,12 @@ function createMessageContent(message) {
               }
             }
             if (tmp101) {
-              if (message.state !== tmp44.SEND_FAILED) {
+              if (message.state !== constants2.SEND_FAILED) {
                 const intl13 = tmp13(tmp3[29]).intl;
                 let stringResult2 = intl13.string(tmp13(tmp3[29]).t["yXY+5J"]);
               }
               if (tmp101) {
-                if (message.state !== tmp44.SEND_FAILED) {
+                if (message.state !== constants2.SEND_FAILED) {
                   const intl14 = tmp13(tmp3[29]).intl;
                   let stringResult3 = intl14.string(tmp13(tmp3[29]).t["yXY+5J"]);
                 }
@@ -755,7 +756,6 @@ function createMessageContent(message) {
                     const tmp13Result27 = tmp13(tmp3[68]);
                   }
                   const tmp115 = guildTagBadgeUrl;
-                  const tmp116 = tag;
                   const tmp117 = guildId;
                   const tmp13Result26 = tmp13(tmp3[68]);
                 }
@@ -797,7 +797,7 @@ function createMessageContent(message) {
                 const application1 = ApplicationStore.getApplication(str8);
                 let hasFlagResult1 = null != application1;
                 if (hasFlagResult1) {
-                  hasFlagResult1 = tmp13(tmp3[34]).hasFlag(message.flags, tmp58.SENT_BY_SOCIAL_LAYER_INTEGRATION);
+                  hasFlagResult1 = tmp13(tmp3[34]).hasFlag(message.flags, constants3.SENT_BY_SOCIAL_LAYER_INTEGRATION);
                   const tmp13Result29 = tmp13(tmp3[34]);
                 }
                 if (hasFlagResult1) {
@@ -805,7 +805,7 @@ function createMessageContent(message) {
                 }
                 let hasFlagResult2;
                 if (message2 != null) {
-                  hasFlagResult2 = message2.hasFlag(tmp58.IS_GUILD_OFFICIAL);
+                  hasFlagResult2 = message2.hasFlag(constants3.IS_GUILD_OFFICIAL);
                 }
                 const items4 = [];
                 if (hasFlagResult2) {
@@ -859,14 +859,14 @@ function createMessageContent(message) {
                 if (message2 == null) {
                   obj69 = message;
                 }
-                if (obj69.hasFlag(tmp58.SUPPRESS_NOTIFICATIONS)) {
+                if (obj69.hasFlag(constants3.SUPPRESS_NOTIFICATIONS)) {
                   const intl17 = tmp13(tmp3[29]).intl;
                   items4.push(intl17.string(tmp13(tmp3[29]).t.t0MA8g));
                 }
                 if (items4.length > 0) {
                   const joined = items4.join(", ");
                 }
-                const hasFlagResult = tmp13(tmp3[34]).hasFlag(tmp127.flags, tmp58.IS_VOICE_MESSAGE);
+                const hasFlagResult = tmp13(tmp3[34]).hasFlag(tmp127.flags, constants3.IS_VOICE_MESSAGE);
                 const obj27 = {
                   id: null,
                   channelId: null,
@@ -1212,7 +1212,7 @@ function createMessageContent(message) {
                     let num12 = 1;
                     if (tmp43) {
                       num12 = 1;
-                      if (message.state === tmp44.SEND_FAILED) {
+                      if (message.state === constants2.SEND_FAILED) {
                         num12 = 0.2;
                       }
                     }
@@ -1322,7 +1322,7 @@ function createMessageContent(message) {
                     const tmp13Result53 = tmp13(tmp3[87]);
                     obj27.accessibilityActions = tmp13(tmp3[88]).createMessageAccessibilityActions(message, channel);
                     obj27.clanTagGuildId = tmp117;
-                    obj27.clanTag = tmp116;
+                    obj27.clanTag = tag;
                     obj27.clanBadgeUrl = tmp115;
                     obj27.lobbyAdditionalName = additionalName;
                     obj27.lobbyTagIconUrl = tmp122;

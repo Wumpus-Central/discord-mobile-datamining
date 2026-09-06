@@ -2,6 +2,7 @@
 import SnowflakeUtilsDefault from "../../../../utils/SnowflakeUtils.tsx";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
+import KeyboardUIStore from "../../../keyboard/native/KeyboardUIStore.native.tsx";
 import KeyboardTypes from "../../../keyboard/native/KeyboardTypes.tsx";
 import KeyboardManagerUtilsAll from "../../../../utils/native/KeyboardManagerUtils.tsx";
 import actions_AlertActionCreatorsDefault from "../../../../actions/native/AlertActionCreators.tsx";
@@ -37,25 +38,27 @@ export default function ForumComposerModal(parentChannelId) {
   function handleClose(arg0) {
     if (null != stateFromStores) {
       if (arg0) {
-        let tmp52Result = tmp52(10251);
+        let tmp52Result = ForumComposerModalActionCreators;
         let result = tmp52Result.closeCreateForumPostModal();
         DraftActionCreatorsDefault.clearDraft(parentChannelId, DraftType.ThreadSettings);
         DraftActionCreatorsDefault.clearDraft(parentChannelId, DraftType.ChannelMessage);
         UploadAttachmentActionCreatorsDefault.clearAll(parentChannelId, DraftType.ChannelMessage);
       } else {
-        tmp52Result = tmp52(1481);
+        tmp52Result = KeyboardUIStore;
         let obj = { type: KeyboardTypes.KeyboardTypes.SYSTEM };
         tmp52Result.setKeyboardType(obj);
         const draft = DraftStore.getDraft(parentChannelId, DraftType.ChannelMessage);
         let threadSettings = DraftStore.getThreadSettings(parentChannelId);
         if (threadSettings == null) {
-          threadSettings = obj3.getThreadDraftWithParentMessageId(SnowflakeUtilsDefault.castChannelIdAsMessageId(tmp4));
+          threadSettings = DraftStore.getThreadDraftWithParentMessageId(
+            SnowflakeUtilsDefault.castChannelIdAsMessageId(parentChannelId),
+          );
         }
         if (isEdit) {
           let result1 = ForumComposerModalActionCreators.closeCreateForumPostModal();
-          DraftActionCreatorsDefault.clearDraft(tmp4, DraftType.ThreadSettings);
-          DraftActionCreatorsDefault.clearDraft(tmp4, DraftType.ChannelMessage);
-          UploadAttachmentActionCreatorsDefault.clearAll(tmp4, DraftType.ChannelMessage);
+          DraftActionCreatorsDefault.clearDraft(parentChannelId, DraftType.ThreadSettings);
+          DraftActionCreatorsDefault.clearDraft(parentChannelId, DraftType.ChannelMessage);
+          UploadAttachmentActionCreatorsDefault.clearAll(parentChannelId, DraftType.ChannelMessage);
         } else {
           if (draft.length <= 0) {
             if (arr2.length <= 0) {
@@ -104,7 +107,6 @@ export default function ForumComposerModal(parentChannelId) {
           };
           actions_AlertActionCreatorsDefault.show(obj);
         }
-        obj3 = DraftStore;
       }
     }
   }
@@ -122,8 +124,8 @@ export default function ForumComposerModal(parentChannelId) {
     () => ChannelStore.getChannel(threadId),
     items3,
   );
-  const tmp6 = threadId(isEdit[17])(parentChannelId);
   let obj3 = parentChannelId(isEdit[16]);
+  const tmp6 = threadId(isEdit[17])(parentChannelId);
   const items4 = [ForumPostMessagesStore];
   const stateFromStores2 = parentChannelId(isEdit[16]).useStateFromStores(items4, () => {
     let firstMessage = null;
@@ -177,7 +179,11 @@ export default function ForumComposerModal(parentChannelId) {
               {null}
             </stateFromStores>
           );
-          tmp11Result = tmp11(tmp4(tmp3[15]).AnalyticsLocationProvider, obj);
+          tmp11Result = jsx(tmp4(tmp3[15]).AnalyticsLocationProvider, {
+            style: tmp.container,
+            importantForAccessibility: null,
+            children: null,
+          });
         } else {
           tmp11Result = null;
         }

@@ -40,13 +40,13 @@ export const clearVibegrationsPreviewClaims = function clearVibegrationsPreviewC
   while (tmp !== undefined) {
     let tmp4 = _slicedToArray(tmp2, 2);
     [tmp5, tmp6] = tmp4;
-    let obj = tmp6;
     if (tmp6.projectId === projectId) {
       let deleteResult = map.delete(tmp5);
       let _clearTimeout = clearTimeout;
-      let clearTimeoutResult = clearTimeout(obj.timer);
-      let resolveResult = obj.resolve(null);
+      let clearTimeoutResult = clearTimeout(tmp6.timer);
+      let resolveResult = tmp6.resolve(null);
     }
     continue;
   }
+  tmp = items[Symbol.iterator]();
 };

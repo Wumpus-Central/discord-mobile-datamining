@@ -15,6 +15,7 @@ function handleRelationshipAdd(relationship) {
     AccessibilityAnnouncer.announce(intl.formatToPlainString(util.t.zH0kC7, obj));
     const result = RelationshipUtilsAll.showPendingNotification(relationship.user);
   }
+  tmp = relationship.type !== RelationshipTypes.PENDING_INCOMING || relationship.userIgnored;
 }
 function handleFriendRequestAccepted(user) {
   user = user.user;

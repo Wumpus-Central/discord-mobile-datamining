@@ -33,12 +33,12 @@ export const ChannelCallSingleController = function ChannelCallSingleController(
       let obj = { participant: selectedParticipant, channel };
       <tmp18 participant={selectedParticipant} channel={channel} />;
     }
-  } else if (tmp5.USER === type) {
+  } else if (ParticipantTypes.USER === type) {
     obj = { participant: selectedParticipant, channel };
     return jsx(channel(10026), { participant: selectedParticipant, channel });
-  } else if (tmp5.HIDDEN_STREAM === type) {
+  } else if (ParticipantTypes.HIDDEN_STREAM === type) {
     return null;
-  } else if (tmp5.ACTIVITY === type) {
+  } else if (ParticipantTypes.ACTIVITY === type) {
     const _Error = Error;
     const error = new Error("Activities are not supported on old voice UI");
     throw error;

@@ -2,6 +2,7 @@
 import UserSettingsConstants from "../user_settings/UserSettingsConstants.tsx";
 import ChannelConstants from "../channel/ChannelConstants.tsx";
 import LinkUtils from "../links/LinkUtils.tsx";
+import UserSettingsURLUtils from "../user_settings/UserSettingsURLUtils.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
 const StaticChannelRoute = ChannelConstants.StaticChannelRoute;
@@ -27,4 +28,5 @@ export const getLoginHandoffSourceFromRedirectTo = function getLoginHandoffSourc
   if (formatted === tmpResult.settingsPathToRoute(UserSettingsPath.SUBSCRIPTIONS_ROLE_SUBSCRIPTIONS)) {
     ROLE_SUBSCRIPTION_SETTING = obj.ROLE_SUBSCRIPTION_SETTING;
   }
+  tmpResult = UserSettingsURLUtils;
 };

@@ -2,6 +2,7 @@
 import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
+import MessageRecordUtils from "../messages/MessageRecordUtils.tsx";
 import NotificationCenterItemsTypes from "NotificationCenterItemsTypes.tsx";
 import NotificationCenterUtils from "NotificationCenterUtils.tsx";
 import ExperimentStore from "../experiments/ExperimentStore.tsx";
@@ -16,7 +17,7 @@ function _validate(id) {
 function toNotificationCenterItem(item_enum) {
   let tmp3 = item_enum.item_enum === NotificationCenterItemsTypes.ItemEnum.FIRST_MESSAGE;
   if (tmp3) {
-    tmp3 = item_enum.type === tmp(7640).NotificationCenterItems.LIFECYCLE_ITEM;
+    tmp3 = item_enum.type === NotificationCenterItemsTypes.NotificationCenterItems.LIFECYCLE_ITEM;
   }
   if (tmp3) {
     item_enum.deeplink = "https://discord.com/feature/composeMessage";
@@ -26,8 +27,8 @@ function toNotificationCenterItem(item_enum) {
   obj.kind = "notification-center-item";
   let messageRecord;
   if (null != item_enum.message) {
-    messageRecord = tmp(4783).createMessageRecord(item_enum.message);
-    const tmpResult = tmp(4783);
+    messageRecord = MessageRecordUtils.createMessageRecord(item_enum.message);
+    const tmpResult = MessageRecordUtils;
   }
   obj.message = messageRecord;
   let id;
@@ -42,7 +43,7 @@ function handleAddItem(type) {
     const item2 = type.item;
     let tmp3 = item2.item_enum === NotificationCenterItemsTypes.ItemEnum.FIRST_MESSAGE;
     if (tmp3) {
-      tmp3 = item2.type === tmp(7640).NotificationCenterItems.LIFECYCLE_ITEM;
+      tmp3 = item2.type === NotificationCenterItemsTypes.NotificationCenterItems.LIFECYCLE_ITEM;
     }
     if (tmp3) {
       item2.deeplink = "https://discord.com/feature/composeMessage";
@@ -52,8 +53,8 @@ function handleAddItem(type) {
     obj.kind = "notification-center-item";
     let messageRecord;
     if (null != item2.message) {
-      messageRecord = tmp(4783).createMessageRecord(item2.message);
-      const tmpResult = tmp(4783);
+      messageRecord = MessageRecordUtils.createMessageRecord(item2.message);
+      const tmpResult = MessageRecordUtils;
     }
     obj.message = messageRecord;
     let id;
@@ -110,7 +111,7 @@ function handleRelationshipAddOrUpdate(relationship) {
       }
     }
   }
-  let tmp11 = type !== tmp2.FRIEND;
+  let tmp11 = type !== RelationshipTypes.FRIEND;
   if (!tmp11) {
     tmp11 = null == relationship.user;
   }
@@ -153,47 +154,52 @@ function handleRelationshipAddOrUpdate(relationship) {
         if (other_user != null) {
           id = other_user.id;
         }
-        tmp4 = id === tmp3;
+        tmp4 = id === c1;
       }
       if (!tmp4) {
-        let tmp7 = type.type === tmp(7640).NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS_ACCEPTED;
+        let tmp7 =
+          type.type === NotificationCenterItemsTypes.NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS_ACCEPTED;
         if (tmp7) {
           const other_user2 = type.other_user;
           let id1;
           if (other_user2 != null) {
             id1 = other_user2.id;
           }
-          tmp7 = id1 === tmp3;
+          tmp7 = id1 === c1;
         }
         tmp4 = tmp7;
       }
       if (!tmp4) {
-        let tmp10 = type.type === tmp(7640).NotificationCenterLocalItems.INCOMING_GAME_FRIEND_REQUESTS;
+        let tmp10 =
+          type.type === NotificationCenterItemsTypes.NotificationCenterLocalItems.INCOMING_GAME_FRIEND_REQUESTS;
         if (tmp10) {
           const other_user3 = type.other_user;
           let id2;
           if (other_user3 != null) {
             id2 = other_user3.id;
           }
-          tmp10 = id2 === tmp3;
+          tmp10 = id2 === c1;
         }
         tmp4 = tmp10;
       }
       if (!tmp4) {
-        let tmp13 = type.type === tmp(7640).NotificationCenterLocalItems.INCOMING_GAME_FRIEND_REQUESTS_ACCEPTED;
+        let tmp13 =
+          type.type ===
+          NotificationCenterItemsTypes.NotificationCenterLocalItems.INCOMING_GAME_FRIEND_REQUESTS_ACCEPTED;
         if (tmp13) {
           const other_user4 = type.other_user;
           let id3;
           if (other_user4 != null) {
             id3 = other_user4.id;
           }
-          tmp13 = id3 === tmp3;
+          tmp13 = id3 === c1;
         }
         tmp4 = tmp13;
       }
       return !tmp4;
     });
   }
+  tmp14 = type === RelationshipTypes.BLOCKED || userIgnored;
 }
 const isGuildEventEnded = fn(7526).isGuildEventEnded;
 const RelationshipTypes = fn(1074).RelationshipTypes;
@@ -355,7 +361,7 @@ obj = {
     const guilds = relationships.guilds;
     const item2 = guilds.forEach((guild_scheduled_events) => {
       const prop = guild_scheduled_events.guild_scheduled_events;
-      let item = prop.forEach((item) => {
+      const item = prop.forEach((item) => {
         if (closure_4(item)) {
           notifCenterItems = notifCenterItems.notifCenterItems;
           notifCenterItems.notifCenterItems = notifCenterItems.map((type) => {
@@ -647,10 +653,10 @@ obj = {
         if (other_user != null) {
           id = other_user.id;
         }
-        tmp5 = id === tmp3;
+        tmp5 = id === closure_1_0;
       }
       if (tmp5) {
-        tmp5 = type.applicationId === tmp4;
+        tmp5 = type.applicationId === importDefault;
       }
       let tmp8 = !tmp5;
       if (!tmp5) {
@@ -663,10 +669,10 @@ obj = {
           if (other_user2 != null) {
             id1 = other_user2.id;
           }
-          tmp9 = id1 === tmp3;
+          tmp9 = id1 === closure_1_0;
         }
         if (tmp9) {
-          tmp9 = type.applicationId === tmp4;
+          tmp9 = type.applicationId === importDefault;
         }
         tmp8 = !tmp9;
       }

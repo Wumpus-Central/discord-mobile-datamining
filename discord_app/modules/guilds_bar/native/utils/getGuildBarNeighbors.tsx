@@ -25,19 +25,19 @@ export default function getGuildBarNeighbors(arg0) {
           return null;
         } else {
           let tmp2 = null;
-          if (root.type === tmp5(5440).GuildsNodeType.FOLDER) {
+          if (root.type === GuildsTree.GuildsNodeType.FOLDER) {
             tmp2 = root;
           }
           let obj = { containingFolder: tmp2, above: null, below: null };
           let tmp3 = null;
           if (null != root.children[index - 1]) {
-            obj = { node: tmp8, isFolder: tmp8.type === tmp5(5440).GuildsNodeType.FOLDER };
+            obj = { node: tmp8, isFolder: tmp8.type === GuildsTree.GuildsNodeType.FOLDER };
             tmp3 = obj;
           }
           obj.above = tmp3;
           let tmp4 = null;
           if (null != root.children[index + 1]) {
-            const obj1 = { node: tmp9, isFolder: tmp9.type === tmp5(5440).GuildsNodeType.FOLDER };
+            const obj1 = { node: tmp9, isFolder: tmp9.type === GuildsTree.GuildsNodeType.FOLDER };
             tmp4 = obj1;
           }
           obj.below = tmp4;

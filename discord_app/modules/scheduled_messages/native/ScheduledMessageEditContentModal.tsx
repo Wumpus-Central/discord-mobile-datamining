@@ -51,7 +51,7 @@ export default function ScheduledMessageEditContentModal(scheduledMessage) {
   value = tmp7[0];
   const items1 = [stateFromStores, value, scheduledMessage.createArgs.flags, scheduledMessage.scheduledMessageId];
   _slicedToArray = noop.useCallback(
-    value(function* (arg0, value) {
+    value(function* () {
       if (dependencyMap === 2) {
         dependencyMap = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -128,7 +128,6 @@ export default function ScheduledMessageEditContentModal(scheduledMessage) {
     headerRightContainerStyle: null,
     headerRight: null,
   };
-  const tmp10 = closure_9;
   const tmp4 = channelId(stateFromStores[9])();
   let num = 0;
   if (!obj4.isIOS()) {
@@ -159,5 +158,5 @@ export default function ScheduledMessageEditContentModal(scheduledMessage) {
     }),
   });
   obj.children = items2;
-  return tmp10(View, obj);
+  return closure_9(View, obj);
 }

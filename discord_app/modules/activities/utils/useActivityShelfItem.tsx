@@ -1,5 +1,6 @@
 // discord_app/modules/activities/utils/useActivityShelfItem.tsx
 import PlatformUtils from "../../../utils/PlatformUtils.tsx";
+import Server from "../../../flow/Server.tsx";
 import embeddedActivityLocationUtils from "embeddedActivityLocationUtils.tsx";
 import useGetOrFetchApplications from "../../applications/useGetOrFetchApplications.tsx";
 import ApplicationFlagUtils from "../../applications/utils/ApplicationFlagUtils.tsx";
@@ -8,6 +9,7 @@ import canLaunchFrame from "../../frames/utils/canLaunchFrame.tsx";
 import useCurrentEmbeddedApplicationDefault from "useCurrentEmbeddedApplication.tsx";
 import useCurrentEmbeddedActivityDefault from "useCurrentEmbeddedActivity.tsx";
 import useEmbeddedActivityBackgroundDefault from "useEmbeddedActivityBackground.tsx";
+import getPreviewVideoAssetUrlDefault from "getPreviewVideoAssetUrl.tsx";
 import useEmbeddedAppsForChannelDefault from "../useEmbeddedAppsForChannel.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import EmbeddedActivitiesStore from "../EmbeddedActivitiesStore.tsx";
@@ -97,7 +99,7 @@ function useOnActivityItemSelected(arg0) {
       }
     };
   } else if (obj.START === tmp) {
-    return asyncGeneratorStep(async (arg0, value) => {
+    return asyncGeneratorStep(async () => {
       if (c5 === 2) {
         c5 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -247,7 +249,7 @@ function useOnActivityItemSelected(arg0) {
       }
     });
   } else if (tmp2.JOIN === tmp) {
-    return asyncGeneratorStep(async (arg0, value) => {
+    return asyncGeneratorStep(async () => {
       if (c0 === 2) {
         c0 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -386,10 +388,10 @@ export default function useActivityShelfItem(backgroundResolution) {
   obj = { applicationId: application.id, size: num, names: assetNames, format: "webp" };
   let tmp9 = null;
   if (null != activity.activity_preview_video_asset_id) {
-    tmp9 = tmp(12058)(application.id, activity.activity_preview_video_asset_id);
+    tmp9 = getPreviewVideoAssetUrlDefault(application.id, activity.activity_preview_video_asset_id);
   }
   let channel;
-  let tmpResult = tmp(12059);
+  let tmpResult = useEmbeddedAppsForChannelDefault;
   if ("channel" === context.type) {
     channel = context.channel;
   }
@@ -410,10 +412,10 @@ export default function useActivityShelfItem(backgroundResolution) {
   };
   const tmpResultResult = tmpResult(channel);
   const tmp13 = useActivityAction(obj);
-  let tmp4Result = tmp4(8856);
+  let tmp4Result = ApplicationFlagUtils;
   if (tmp4Result.hasApplicationFlag(application, ApplicationFlags.EMBEDDED_RELEASED)) {
-    tmpResult = tmp(9410);
-    tmp4Result = tmp4(1115);
+    tmpResult = getPlatformDefault;
+    tmp4Result = PlatformUtils;
     const str =
       activityItem.activity.client_platform_config[tmpResult(undefined, tmp4Result.getOS(tmp4Result))].release_phase;
     let replaced;
@@ -423,7 +425,7 @@ export default function useActivityShelfItem(backgroundResolution) {
     }
     const tmp16 = replaced;
   } else {
-    const tmp4Result1 = tmp4(8856);
+    ApplicationFlagUtils;
   }
   const obj2 = {
     imageBackground: tmp8,
@@ -437,7 +439,7 @@ export default function useActivityShelfItem(backgroundResolution) {
   if (tmp7) {
     let NONE = tmp5.label_type;
   } else {
-    NONE = tmp4(1894).EmbeddedActivityLabelTypes.NONE;
+    NONE = Server.EmbeddedActivityLabelTypes.NONE;
   }
   obj2.labelType = NONE;
   obj2.staffReleasePhase = tmp16;
@@ -446,10 +448,10 @@ export default function useActivityShelfItem(backgroundResolution) {
 export { ActivityAction };
 export const getStaffReleasePhase = function getStaffReleasePhase(application, arg1) {
   if (!obj.hasApplicationFlag(application, ApplicationFlags.EMBEDDED_RELEASED)) {
-    let tmpResult = tmp(8856);
+    let tmpResult = ApplicationFlagUtils;
   }
   obj = ApplicationFlagUtils;
-  tmpResult = tmp(1115);
+  tmpResult = PlatformUtils;
   const str = arg1.client_platform_config[getPlatformDefault(undefined, tmpResult.getOS(tmpResult))].release_phase;
   let replaced;
   if (STAFF_RELEASE_PHASES.includes(str)) {

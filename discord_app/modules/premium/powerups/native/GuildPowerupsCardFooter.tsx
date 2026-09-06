@@ -7,6 +7,7 @@ import CircleCheckIcon from "../../../../design/components/Icon/native/redesign/
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import CircleErrorIcon from "../../../../design/components/Icon/native/redesign/generated/CircleErrorIcon.tsx";
 import ManaTypeConsolidationExperiment from "../../../design/ManaTypeConsolidationExperiment.tsx";
+import BoostGemIcon from "../../../../design/components/Icon/native/redesign/generated/BoostGemIcon.tsx";
 import getGuildPowerupFormattedDateStringDefault from "../utils/getGuildPowerupFormattedDateString.tsx";
 import entitlementExpirationDateToStringDefault from "../utils/entitlementExpirationDateToString.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";

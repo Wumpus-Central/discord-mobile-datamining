@@ -116,8 +116,9 @@ export default function HubProgressActionSheet(guild) {
       const channels = GuildChannelStore.getChannels(guild.id);
       if (tmp4) {
         const obj = instant_invite_InstantInviteUtils;
-        const result = obj.handleOpenInviteActionsheet(tmp, defaultChannel.id, channels, constants3.HUB_PROGRESS);
+        const result = obj.handleOpenInviteActionsheet(guild, defaultChannel.id, channels, constants3.HUB_PROGRESS);
       }
+      tmp4 = null != defaultChannel && null != channels;
     },
     source: null,
     title: null,
@@ -137,7 +138,6 @@ export default function HubProgressActionSheet(guild) {
     },
   };
   const tmp12 = analyticsSource(hubProgressBarCompletedSteps[17]);
-  const tmp9 = closure_16;
   obj3.source = analyticsSource(hubProgressBarCompletedSteps[22]);
   const intl4 = tmp2(tmp3[14]).intl;
   obj3.title = intl4.string(guild(hubProgressBarCompletedSteps[14]).t["3NlTYU"]);
@@ -179,18 +179,18 @@ export default function HubProgressActionSheet(guild) {
     const intl7 = tmp2(tmp3[14]).intl;
     obj6.text = intl7.string(tmp2(tmp3[14]).t["0/5zhg"]);
     obj6.onPress = handleFinishPress;
-    let tmp11Result = tmp11(tmp2(tmp3[25]).Button, obj6);
+    let tmp11Result = closure_15(tmp2(tmp3[25]).Button, obj6);
   } else {
     const obj7 = { accessibilityRole: "button", onPress: handleFinishPress, children: null };
     const obj8 = { variant: "text-sm/medium", color: "text-default", children: null };
     const intl6 = tmp2(tmp3[14]).intl;
     obj8.children = intl6.string(tmp2(tmp3[14]).t["9E36wf"]);
-    obj7.children = tmp11(tmp2(tmp3[16]).Text, obj8);
-    tmp11Result = tmp11(tmp2(tmp3[26]).PressableOpacity, obj7);
+    obj7.children = closure_15(tmp2(tmp3[16]).Text, obj8);
+    tmp11Result = closure_15(tmp2(tmp3[26]).PressableOpacity, obj7);
   }
   obj5.children = tmp11Result;
   items1[4] = closure_15(ref, obj5);
   obj.children = items1;
-  const children = tmp9(tmp10, obj);
+  const children = closure_16(tmp10, obj);
   return closure_15(guild(hubProgressBarCompletedSteps[27]).BottomSheet, { startExpanded: true, children });
 }

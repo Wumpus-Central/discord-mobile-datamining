@@ -4,7 +4,7 @@ import UserSettings from "../../UserSettings.tsx";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 
 require = fn;
-let closure_4 = async function _updateClipsAllowVoiceRecording(arg0, value) {
+let closure_4 = async function _updateClipsAllowVoiceRecording(arg0) {
   if (c3 === 2) {
     c3 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");

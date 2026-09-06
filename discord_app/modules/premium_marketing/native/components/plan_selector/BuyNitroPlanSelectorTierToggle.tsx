@@ -1,6 +1,6 @@
 // discord_app/modules/premium_marketing/native/components/plan_selector/BuyNitroPlanSelectorTierToggle.tsx
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import ReanimatedRexportDefault from "../../../../reanimated/ReanimatedRexport.tsx";
+import ReanimatedRexport from "../../../../reanimated/ReanimatedRexport.tsx";
 import HapticUtils from "../../../../haptics/HapticUtils.native.tsx";
 import haptics_HapticFeedbackTypesDefault from "../../../../haptics/HapticFeedbackTypes.tsx";
 import timing from "../../../../../design/animation/reanimated/timing/timing.tsx";
@@ -9,6 +9,8 @@ import timingPresets from "../../../../../design/animation/reanimated/timing/tim
 import LinearGradientDefault from "../../../../../../_runtime/04987_LinearGradient.js";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
+
+const ReanimatedRexportDefault = ReanimatedRexport;
 
 require = fn;
 get_ActivityIndicator = fn(17);
@@ -75,7 +77,7 @@ export default function BuyNitroPlanSelectorTierToggle(selectedTier) {
   selectedTier = selectedTier.selectedTier;
   ({ setSelectedTier: importDefault, disabled: dependencyMap } = selectedTier);
   noop = undefined;
-  closure_5 = undefined;
+  let styles;
   let ref;
   let sharedValue2;
   let sharedValue3;
@@ -108,9 +110,8 @@ export default function BuyNitroPlanSelectorTierToggle(selectedTier) {
     const accessibilityPreferencesSharedValue =
       reanimated_AccessibilityPreferencesSharedValue.accessibilityPreferencesSharedValue;
     if (!accessibilityPreferencesSharedValue.get().reduceMotion) {
-      tmp(4296);
-      const tmpResult = tmp(4561);
-      const obj = { duration: 5000, easing: tmp(4296).Easing.linear };
+      const tmpResult = timing;
+      const obj = { duration: 5000, easing: ReanimatedRexport.Easing.linear };
       const result = disabled.set(tmpResult.withRepeat(tmpResult.withTiming(-120, obj), -1, false));
       return () => selectedTier(disabled[8]).cancelAnimation(closure_1_2);
     }
@@ -136,7 +137,7 @@ export default function BuyNitroPlanSelectorTierToggle(selectedTier) {
   const animatedStyle1 = selectedTier(4296).useAnimatedStyle(fn2);
   const tmp11 = _slicedToArray(noop.useState({}), 2);
   noop = tmp11[1];
-  closure_5 = tmp12;
+  styles = tmp12;
   noop.useRef(null);
   const tmp3Result1 = selectedTier(4296);
   ref = noop.useRef(new Map());
@@ -165,14 +166,14 @@ export default function BuyNitroPlanSelectorTierToggle(selectedTier) {
   }, []);
   const items2 = [tmp11[0][selectedTier], sharedValue2, sharedValue3];
   const layoutEffect1 = noop.useLayoutEffect(() => {
-    if (null != closure_5) {
+    if (null != styles) {
       if (ref2.current) {
-        const result = sharedValue2.set(timing.withTiming(tmp.x, { duration: 220 }));
-        const result1 = sharedValue3.set(timing.withTiming(tmp.width, { duration: 220 }));
+        const result = sharedValue2.set(timing.withTiming(styles.x, { duration: 220 }));
+        const result1 = sharedValue3.set(timing.withTiming(styles.width, { duration: 220 }));
       } else {
         tmp12.current = true;
-        const result2 = sharedValue2.set(tmp.x);
-        const result3 = sharedValue3.set(tmp.width);
+        const result2 = sharedValue2.set(styles.x);
+        const result3 = sharedValue3.set(styles.width);
       }
     }
   }, items2);

@@ -79,7 +79,7 @@ class MobileQuestPreviewControlBar {
         return { label: "" + questName + " (" + config.id + ")", value: config.id };
       });
       if (!tmp2) {
-        const obj = { label: tmp, value: tmp };
+        const obj = { label: questId, value: questId };
         mapped.unshift(obj);
       }
       return mapped;
@@ -93,7 +93,7 @@ class MobileQuestPreviewControlBar {
     items6[0] = questId;
     items6[1] = refreshQuest;
     callback1 = closure_5.useCallback(
-      closure_3(async (arg0, value) => {
+      closure_3(async () => {
         if (c4 === 2) {
           c4 = 3;
           throw new TypeError("Generator functions may not be called on executing generators");
@@ -163,7 +163,7 @@ class MobileQuestPreviewControlBar {
     items7[0] = questId;
     items7[1] = refreshQuest;
     callback2 = closure_5.useCallback(
-      closure_3(async (arg0, value) => {
+      closure_3(async () => {
         if (c4 === 2) {
           c4 = 3;
           throw new TypeError("Generator functions may not be called on executing generators");
@@ -233,7 +233,7 @@ class MobileQuestPreviewControlBar {
     items8[0] = questId;
     items8[1] = refreshQuest;
     callback3 = closure_5.useCallback(
-      closure_3(async (arg0, value) => {
+      closure_3(async () => {
         if (c4 === 2) {
           c4 = 3;
           throw new TypeError("Generator functions may not be called on executing generators");

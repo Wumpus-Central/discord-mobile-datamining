@@ -8,10 +8,10 @@ import _modDef8592 from "../../../../../_runtime/metro/08592__.js";
 import _modDef8614 from "../../../../../_runtime/metro/08614__.js";
 import _modDef8615 from "../../../../../_runtime/metro/08615__.js";
 import _modDef8616 from "../../../../../_runtime/metro/08616__.js";
+import _modDef8617 from "../../../../../_runtime/metro/08617__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import StageInstanceStore from "../../StageInstanceStore.tsx";
 
-const _modDef8617 = tmp7(8617);
 require = fn;
 function handleDismiss() {
   ActionSheetActionCreatorsDefault.hideActionSheet(closure_5);
@@ -97,7 +97,6 @@ export default function StageAudienceNotificationSheet(channelId) {
   const items2 = [closure_7(channelId(8593).FormRow, obj4), , ,];
   const obj7 = { leading: null, label: null };
   const obj5 = { source: _modDef8614 };
-  const tmp12 = BulletIcon;
   obj7.leading = closure_7(BulletIcon, { source: _modDef8615 });
   const obj9 = { style: tmp.headerBullet, variant: "text-md/medium", color: "text-default", children: null };
   const intl3 = tmp2(1114).intl;
@@ -116,12 +115,12 @@ export default function StageAudienceNotificationSheet(channelId) {
   if (privacy_level === constants.PUBLIC) {
     const obj13 = { leading: null, label: null };
     const obj14 = { source: _modDef8617 };
-    obj13.leading = tmp6(tmp12, obj14);
+    obj13.leading = closure_7(BulletIcon, obj14);
     const obj15 = { style: tmp.headerBullet, variant: "text-md/medium", color: "text-default", children: null };
     const intl6 = tmp2(1114).intl;
     obj15.children = intl6.string(tmp2(1114).t.nDsbJg);
-    obj13.label = tmp6(tmp2(4556).Text, obj15);
-    tmp6Result = tmp6(tmp2(8593).FormRow, obj13);
+    obj13.label = closure_7(tmp2(4556).Text, obj15);
+    tmp6Result = closure_7(tmp2(8593).FormRow, obj13);
   }
   const obj16 = { children: null };
   items2[3] = tmp6Result;

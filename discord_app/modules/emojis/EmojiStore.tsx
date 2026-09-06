@@ -53,7 +53,7 @@ function loadSavedEmojis() {
   }
   return applyArgumentsResult;
 }
-let closure_37 = async function _loadSavedEmojis(arg0, value) {
+let closure_37 = async function _loadSavedEmojis() {
   if (c3 === 2) {
     c3 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -276,6 +276,7 @@ function handleUserSettingsProtoStoreChange() {
       }
       tmp9Result = _modDef12;
     }
+    obj3 = _modDef12;
   })(emojis, emojis1);
 }
 function trackUsage(emojiUsed) {
@@ -442,11 +443,10 @@ prototype["_computeEmojiUsability"] = function _computeEmojiUsability() {
     const set = new Set();
     const emojis = self.emojis;
     for (const item10017 of emojis) {
-      let tmp7 = item10017;
       if (self.isUsable(item10017)) {
-        let arr = items.push(tmp7);
+        let arr = items.push(item10017);
       } else {
-        let addResult = set.add(tmp7.id);
+        let addResult = set.add(item10017.id);
       }
       continue;
     }
@@ -584,9 +584,10 @@ class EmojiDisambiguations {
       if (!emoticonsByName.has(name.name)) {
         obj = RegexUtilsDefault;
         items.push(obj.escape(name.name));
-        const emoticonsByName2 = obj.emoticonsByName;
+        const emoticonsByName2 = tmp.emoticonsByName;
         const result = emoticonsByName2.set(name.name, name);
       }
+      tmp = obj;
     };
     arr2 = closure_1(disambiguateEmoji[18]);
     item = arr2.forEach((name) => {
@@ -663,13 +664,13 @@ class EmojiDisambiguations {
   }
 }
 const prototype2 = EmojiDisambiguations.prototype;
-EmojiDisambiguations["get"] = function get(arg0) {
-  let tmp = arg0;
-  if (undefined === arg0) {
+EmojiDisambiguations["get"] = function get(guildId) {
+  let tmp = guildId;
+  if (undefined === guildId) {
     tmp = null;
   }
   if (!tmp3) {
-    tmp2._lastInstance = new tmp2(tmp);
+    EmojiDisambiguations._lastInstance = new EmojiDisambiguations(tmp);
   }
   return EmojiDisambiguations._lastInstance;
 };
@@ -683,17 +684,17 @@ EmojiDisambiguations["resetFrequentlyUsed"] = function resetFrequentlyUsed() {
 };
 EmojiDisambiguations["resetFrequentlyUsedReactionEmojis"] = function resetFrequentlyUsedReactionEmojis() {
   if (null != EmojiDisambiguations._lastInstance) {
-    tmp._lastInstance.frequentlyUsedReactionEmojis = null;
-    tmp._lastInstance.frequentlyUsedReactionNamesAndIds = null;
+    EmojiDisambiguations._lastInstance.frequentlyUsedReactionEmojis = null;
+    EmojiDisambiguations._lastInstance.frequentlyUsedReactionNamesAndIds = null;
   }
 };
 EmojiDisambiguations["clear"] = function clear(arg0) {
   let tmp2 = null != EmojiDisambiguations._lastInstance;
   if (tmp2) {
-    tmp2 = tmp._lastInstance.guildId === arg0;
+    tmp2 = EmojiDisambiguations._lastInstance.guildId === arg0;
   }
   if (tmp2) {
-    tmp._lastInstance = null;
+    EmojiDisambiguations._lastInstance = null;
   }
 };
 prototype2["getDisambiguatedEmoji"] = function getDisambiguatedEmoji() {
@@ -977,6 +978,7 @@ let merged = Object.assign({
     if (!obj.some(__initData10, (usableEmojis) => usableEmojis.usableEmojis.length > 0)) {
       items.splice(__initData2.indexOf(closure_2_20.CUSTOM), 1);
     }
+    obj = _modDef12;
   },
   numFrequentlyItems: 42,
 });
@@ -1009,6 +1011,7 @@ const merged1 = Object.assign({
     if (!obj.some(__initData10, (usableEmojis) => usableEmojis.usableEmojis.length > 0)) {
       items.splice(__initData2.indexOf(closure_2_20.CUSTOM), 1);
     }
+    obj = _modDef12;
   },
   numFrequentlyItems: 42,
 });
@@ -1422,6 +1425,7 @@ const emojiStore = new EmojiStore(DispatcherDefault, {
       continue;
     }
     rebuildEmojis();
+    tmp = arg0.emojis[Symbol.iterator]();
   },
   GUILD_MEMBER_UPDATE: function handleGuildMemberUpdate(user) {
     const currentUser = UserStore.getCurrentUser();

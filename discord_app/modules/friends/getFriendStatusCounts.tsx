@@ -13,12 +13,11 @@ export default function getFriendStatusCounts() {
   const friendIDs = RelationshipStore.getFriendIDs();
   while (tmp2 !== undefined) {
     let status = PresenceStore.getStatus(tmp3);
-    let tmp6 = StatusTypes;
     if (StatusTypes.ONLINE === status) {
       num_friends_online = num_friends_online + 1;
-    } else if (tmp6.IDLE === status) {
+    } else if (StatusTypes.IDLE === status) {
       num_friends_idle = num_friends_idle + 1;
-    } else if (tmp6.DND === status) {
+    } else if (StatusTypes.DND === status) {
       num_friends_dnd = num_friends_dnd + 1;
     }
     continue;

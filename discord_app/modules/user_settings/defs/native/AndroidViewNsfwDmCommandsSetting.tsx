@@ -1,8 +1,12 @@
 // discord_app/modules/user_settings/defs/native/AndroidViewNsfwDmCommandsSetting.tsx
 import util from "../../../../intl/index.native.tsx";
+import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
+import UserSettings from "../../UserSettings.tsx";
 import AgeGateUtils from "../../../age_gate/AgeGateUtils.tsx";
+import AgeVerificationUtils from "../../../age_assurance/AgeVerificationUtils.tsx";
 import SettingsConstants from "../../core/native/SettingsConstants.tsx";
 import AgeVerificationActionCreatorsDefault from "../../../age_assurance/AgeVerificationActionCreators.native.tsx";
+import AgeVerificationAnalyticsUtils from "../../../age_assurance/AgeVerificationAnalyticsUtils.tsx";
 import AgeRestrictedContentSettingsUtils from "../../content_and_social/AgeRestrictedContentSettingsUtils.tsx";
 import useNSFWAllowed from "../../content_and_social/useNSFWAllowed.tsx";
 import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
@@ -25,11 +29,13 @@ const toggle = SettingBuilders.createToggle({
     let obj = AgeGateUtils;
     if (obj.shouldAgeVerifyForSettingsToggles()) {
       if (arg0) {
-        obj = { entryPoint: tmp(8413).AgeVerificationModalEntryPoint.AGE_RESTRICTED_DM_COMMANDS_SETTINGS };
+        obj = {
+          entryPoint: AgeVerificationAnalyticsUtils.AgeVerificationModalEntryPoint.AGE_RESTRICTED_DM_COMMANDS_SETTINGS,
+        };
         const result = AgeVerificationActionCreatorsDefault.showAgeVerificationGetStartedModal(obj);
       }
     }
-    const ViewNsfwCommands = tmp(1935).ViewNsfwCommands;
+    const ViewNsfwCommands = UserSettings.ViewNsfwCommands;
     ViewNsfwCommands.updateSetting(arg0);
   },
   usePredicate() {
@@ -38,7 +44,7 @@ const toggle = SettingBuilders.createToggle({
     if (flag == null) {
       flag = true;
     }
-    let tmpResult = tmp(4773);
+    let tmpResult = AgeVerificationUtils;
     if (shouldAgeVerifyForSettingsToggles) {
       shouldAgeVerifyForSettingsToggles = !tmpResult.useIsVerifiedTeen();
     }
@@ -46,7 +52,7 @@ const toggle = SettingBuilders.createToggle({
       shouldAgeVerifyForSettingsToggles = flag;
     }
     if (shouldAgeVerifyForSettingsToggles) {
-      tmpResult = tmp(1115);
+      tmpResult = PlatformUtils;
       shouldAgeVerifyForSettingsToggles = tmpResult.isAndroid();
     }
     return shouldAgeVerifyForSettingsToggles;

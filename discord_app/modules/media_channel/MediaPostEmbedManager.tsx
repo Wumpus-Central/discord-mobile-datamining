@@ -1,5 +1,7 @@
 // discord_app/modules/media_channel/MediaPostEmbedManager.tsx
+import FlagUtils from "../../../discord_common/js/shared/utils/FlagUtils.tsx";
 import MediaPostEmbedUtils from "MediaPostEmbedUtils.tsx";
+import MediaChannelActionCreators from "MediaChannelActionCreators.tsx";
 import setupLoadFromMessageManagerHandlersDefault from "../messages/setupLoadFromMessageManagerHandlers.tsx";
 import GatedChannelStore from "../channel/GatedChannelStore.tsx";
 import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
@@ -36,14 +38,14 @@ function resolveMediaPostEmbeds(embeds) {
             if (null != channelId) {
               if (embedFetchState.getEmbedFetchState(mediaPostEmbedChannelPath.threadId) === constants.NOT_FETCHED) {
                 if (!set.has(mediaPostEmbedChannelPath.threadId)) {
-                  obj4.add(mediaPostEmbedChannelPath.threadId);
+                  set.add(mediaPostEmbedChannelPath.threadId);
                   let guildId;
                   id = id.getId();
                   if (mediaPostEmbedChannelPath != null) {
                     guildId = mediaPostEmbedChannelPath.guildId;
                   }
                   const isMemberResult = member.isMember(guildId, id);
-                  let tmp17Result = tmp17(tmp18[7]);
+                  let tmp17Result = FlagUtils;
                   let num = first_message.flags;
                   if (num == null) {
                     num = 0;
@@ -64,12 +66,11 @@ function resolveMediaPostEmbeds(embeds) {
                     tmp14 = tmp15;
                   }
                   if (!tmp14) {
-                    tmp17Result = tmp17(tmp18[8]);
+                    tmp17Result = MediaChannelActionCreators;
                     const mediaPostEmbed = tmp17Result.fetchMediaPostEmbed(mediaPostEmbedChannelPath.threadId);
                   }
                   hasFlagResult = tmp17Result.hasFlag(num, constants2.IS_CROSSPOST);
                 }
-                obj4 = set;
               }
             }
           }
@@ -136,14 +137,14 @@ prototype["handleLoadThreadsSuccess"] = function handleLoadThreadsSuccess(firstM
                       embedFetchState.getEmbedFetchState(mediaPostEmbedChannelPath.threadId) === constants.NOT_FETCHED
                     ) {
                       if (!set.has(mediaPostEmbedChannelPath.threadId)) {
-                        obj4.add(mediaPostEmbedChannelPath.threadId);
+                        set.add(mediaPostEmbedChannelPath.threadId);
                         let guildId;
                         id = id.getId();
                         if (mediaPostEmbedChannelPath != null) {
                           guildId = mediaPostEmbedChannelPath.guildId;
                         }
                         const isMemberResult = member.isMember(guildId, id);
-                        let tmp17Result = tmp17(tmp18[7]);
+                        let tmp17Result = FlagUtils;
                         let num = first_message.flags;
                         if (num == null) {
                           num = 0;
@@ -164,12 +165,11 @@ prototype["handleLoadThreadsSuccess"] = function handleLoadThreadsSuccess(firstM
                           tmp14 = tmp15;
                         }
                         if (!tmp14) {
-                          tmp17Result = tmp17(tmp18[8]);
+                          tmp17Result = MediaChannelActionCreators;
                           const mediaPostEmbed = tmp17Result.fetchMediaPostEmbed(mediaPostEmbedChannelPath.threadId);
                         }
                         hasFlagResult = tmp17Result.hasFlag(num, constants2.IS_CROSSPOST);
                       }
-                      obj4 = set;
                     }
                   }
                 }
@@ -215,14 +215,14 @@ function handleLoadForumPosts(threads) {
                     embedFetchState.getEmbedFetchState(mediaPostEmbedChannelPath.threadId) === constants.NOT_FETCHED
                   ) {
                     if (!set.has(mediaPostEmbedChannelPath.threadId)) {
-                      obj4.add(mediaPostEmbedChannelPath.threadId);
+                      set.add(mediaPostEmbedChannelPath.threadId);
                       let guildId;
                       id = id.getId();
                       if (mediaPostEmbedChannelPath != null) {
                         guildId = mediaPostEmbedChannelPath.guildId;
                       }
                       const isMemberResult = member.isMember(guildId, id);
-                      let tmp17Result = tmp17(tmp18[7]);
+                      let tmp17Result = FlagUtils;
                       let num = first_message.flags;
                       if (num == null) {
                         num = 0;
@@ -243,12 +243,11 @@ function handleLoadForumPosts(threads) {
                         tmp14 = tmp15;
                       }
                       if (!tmp14) {
-                        tmp17Result = tmp17(tmp18[8]);
+                        tmp17Result = MediaChannelActionCreators;
                         const mediaPostEmbed = tmp17Result.fetchMediaPostEmbed(mediaPostEmbedChannelPath.threadId);
                       }
                       hasFlagResult = tmp17Result.hasFlag(num, constants2.IS_CROSSPOST);
                     }
-                    obj4 = set;
                   }
                 }
               }

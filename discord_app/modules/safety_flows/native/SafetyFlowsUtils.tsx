@@ -24,7 +24,8 @@ function fetchAndUpdateTask() {
 let closure_7 = async function _fetchAndUpdateTask() {
   closure_1 = tmp2;
   closure_129_0 = closure_0;
-  closure_129_1 = await require("SafetyFlowsActionCreators").getCurrentTask();
+  await require("SafetyFlowsActionCreators").getCurrentTask();
+  closure_129_1 = value;
   if (null != closure_129_1) {
     closure_129_0(closure_129_1);
   }
@@ -44,7 +45,7 @@ function navigateToScreenForTask(arr, task_type) {
     let tmp5 = null;
     if (null != tmp16) {
       let tmp = tmp16;
-      if (task_type === tmp14(17867).TaskType.EMAIL_VERIFICATION) {
+      if (task_type === types.TaskType.EMAIL_VERIFICATION) {
         const currentUser = UserStore.getCurrentUser();
         let email;
         if (currentUser != null) {
@@ -52,16 +53,16 @@ function navigateToScreenForTask(arr, task_type) {
         }
         tmp = tmp16;
         if (null != email) {
-          const items = [tmp14(17867).SafetyFlowScreens.VERIFY_EMAIL];
+          const items = [types.SafetyFlowScreens.VERIFY_EMAIL];
           tmp = items;
         }
       }
       tmp5 = tmp;
     }
     if (null != tmp5) {
-      arr.push(tmp5[0]);
+      arr = arr.push(tmp5[0]);
     } else {
-      arr.push(tmp14(17867).SafetyFlowScreens.UPDATE_APP);
+      arr = arr.push(types.SafetyFlowScreens.UPDATE_APP);
     }
   }
 }
@@ -73,7 +74,7 @@ export const getScreensForTaskType = function getScreensForTaskType(task_type) {
   let tmp4 = null;
   if (null != tmp3) {
     let tmp5 = tmp3;
-    if (task_type === tmp(17867).TaskType.EMAIL_VERIFICATION) {
+    if (task_type === types.TaskType.EMAIL_VERIFICATION) {
       const currentUser = UserStore.getCurrentUser();
       let email;
       if (currentUser != null) {
@@ -81,7 +82,7 @@ export const getScreensForTaskType = function getScreensForTaskType(task_type) {
       }
       tmp5 = tmp3;
       if (null != email) {
-        const items = [tmp(17867).SafetyFlowScreens.VERIFY_EMAIL];
+        const items = [types.SafetyFlowScreens.VERIFY_EMAIL];
         tmp5 = items;
       }
     }
@@ -101,7 +102,7 @@ export const useOnTaskComplete = function useOnTaskComplete() {
   _require = asyncGeneratorStep(async (data) => {
     c3 = 0;
     c4 = 0;
-    return (async (arg0, value) => {
+    return (async (arg0) => {
       if (c4 === 2) {
         c4 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");

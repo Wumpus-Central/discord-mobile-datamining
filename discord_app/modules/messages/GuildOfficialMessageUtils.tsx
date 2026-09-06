@@ -2,6 +2,7 @@
 import _modDef672 from "../../../_runtime/metro/00672__.js";
 import utils_ColorUtils from "../../../discord_common/js/shared/utils/ColorUtils.tsx";
 import ColorUtils from "../../utils/ColorUtils.tsx";
+import shared from "../../design/shared.tsx";
 import GuildOfficialMessagesExperimentDefault from "GuildOfficialMessagesExperiment.tsx";
 import ThreadHooks from "../threads/ThreadHooks.tsx";
 import isSystemMessageDefault from "isSystemMessage.tsx";
@@ -9,12 +10,12 @@ import GuildStore from "../../stores/GuildStore.tsx";
 import PermissionStore from "../../stores/PermissionStore.tsx";
 
 require = fn;
-function useCanManageGuildOfficialMessages(guildId, arg1, location) {
-  _require = arg1;
-  closure_129_0 = guildId;
+function useCanManageGuildOfficialMessages(guild_id, channel, location) {
+  _require = channel;
+  closure_129_0 = guild_id;
   let obj = require("initialize");
   const items = [GuildStore];
-  const items1 = [guildId];
+  const items1 = [guild_id];
   const stateFromStores = obj.useStateFromStores(
     items,
     () => {
@@ -26,7 +27,7 @@ function useCanManageGuildOfficialMessages(guildId, arg1, location) {
     },
     items1,
   );
-  obj = { guildId, location };
+  obj = { guildId: guild_id, location };
   let enabled = null != stateFromStores;
   if (enabled) {
     const features = stateFromStores.features;
@@ -37,7 +38,7 @@ function useCanManageGuildOfficialMessages(guildId, arg1, location) {
   }
   obj2 = GuildOfficialMessagesExperimentDefault;
   const items2 = [PermissionStore];
-  const items3 = [arg1];
+  const items3 = [channel];
   if (enabled) {
     enabled = tmp2Result.useStateFromStores(
       items2,
@@ -56,8 +57,6 @@ const result = size.fileFinishedImporting("modules/messages/GuildOfficialMessage
 export const getAccessibleGuildOfficialTextColor = function getAccessibleGuildOfficialTextColor(
   officialMessageColor,
   semanticColor,
-  saturation,
-  arg3,
 ) {
   let num = saturation;
   if (saturation === undefined) {
@@ -77,7 +76,7 @@ export const getAccessibleGuildOfficialTextColor = function getAccessibleGuildOf
     tmp5 = mixResult;
   }
   obj4 = _modDef672;
-  obj = { foreground: tmp6, background: tmp5, ratio: tmp2(4411).WCAGContrastRatios.Text, saturationFactor: num };
+  obj = { foreground: tmp6, background: tmp5, ratio: shared.WCAGContrastRatios.Text, saturationFactor: num };
   return ColorUtils.getAccessibleForegroundColor(obj);
 };
 export function showGuildOfficialMessageGradient(officialMessageStyle) {

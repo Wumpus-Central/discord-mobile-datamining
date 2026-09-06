@@ -25,7 +25,6 @@ function syncWithQuestStore() {
   while (tmp !== undefined) {
     let tmp4 = _slicedToArray(tmp2, 2);
     [tmp5, tmp7] = tmp4;
-    let tmp6 = tmp5;
     let hasItem = obj.has(tmp5);
     if (!hasItem) {
       let obj2 = QuestDataUtils;
@@ -51,7 +50,7 @@ function syncWithQuestStore() {
       hasItem = tmp14;
     }
     if (!hasItem) {
-      let addResult = obj.add(tmp6);
+      let addResult = obj.add(tmp5);
       flag = true;
     }
     continue;
@@ -59,7 +58,6 @@ function syncWithQuestStore() {
   if (0 !== QuestStore.lastFetchedCurrentQuests) {
     if (quests.size > 0) {
       for (const item10063 of obj) {
-        let tmp24 = item10063;
         value = quests.get(item10063);
         let isQuestExpiredResult = null == value;
         if (!isQuestExpiredResult) {
@@ -67,7 +65,7 @@ function syncWithQuestStore() {
           isQuestExpiredResult = obj3.isQuestExpired(tmp26);
         }
         if (isQuestExpiredResult) {
-          let deleteResult = obj.delete(tmp24);
+          let deleteResult = obj.delete(item10063);
           flag = true;
         }
         continue;
@@ -79,13 +77,12 @@ function syncWithQuestStore() {
     if (obj4.size > 0) {
       const questHomeHero = AdDeliveryStore.getQuestHomeHero();
       for (const item10097 of obj4) {
-        let tmp36 = item10097;
         let tmp37 = null != questHomeHero;
         if (tmp37) {
-          tmp37 = tmp36 === questHomeHero.id;
+          tmp37 = item10097 === questHomeHero.id;
         }
         if (!tmp37) {
-          let deleteResult1 = obj4.delete(tmp36);
+          let deleteResult1 = obj4.delete(item10097);
           flag = true;
         }
         continue;
@@ -150,9 +147,8 @@ const adContentSeenStore = new AdContentSeenStore(DispatcherDefault, {
     const obj = getOrCreateSet(adCreativeType.adCreativeType);
     let flag = false;
     for (const item10013 of tmp) {
-      let tmp2 = item10013;
       if (!obj.has(item10013)) {
-        let addResult = obj.add(tmp2);
+        let addResult = obj.add(item10013);
         flag = true;
       }
       continue;
@@ -167,9 +163,8 @@ const adContentSeenStore = new AdContentSeenStore(DispatcherDefault, {
       let flag = false;
       const contentIds = adCreativeType.contentIds;
       for (const item10014 of contentIds) {
-        let tmp3 = item10014;
         if (value.has(item10014)) {
-          let deleteResult = value.delete(tmp3);
+          let deleteResult = value.delete(item10014);
           flag = true;
         }
         continue;

@@ -2,7 +2,7 @@
 import asyncGeneratorStep from "../../../../../../_runtime/00005_asyncGeneratorStep.js";
 import timers from "../../mobile/js/timers.tsx";
 
-let closure_2 = async function _initLibdiscore(arg0, value) {
+let closure_2 = async function _initLibdiscore() {
   if (c0 === 2) {
     c0 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");

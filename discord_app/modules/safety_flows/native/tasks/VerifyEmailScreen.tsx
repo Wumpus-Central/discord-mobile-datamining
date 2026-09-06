@@ -23,7 +23,7 @@ export default function _default() {
   noop = tmp6[1];
   const items = [onTaskComplete];
   const onAction = noop.useCallback(
-    asyncGeneratorStep(async (arg0, value) => {
+    asyncGeneratorStep(async () => {
       if (c4 === 2) {
         c4 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -106,6 +106,7 @@ export default function _default() {
     if (!tmp) {
       callback();
     }
+    tmp = 6 !== first.length || first1;
   }, items2);
   let obj = { title: null, action: null, onAction: null, submitting: null, children: null };
   let intl = onTaskComplete(value[8]).intl;

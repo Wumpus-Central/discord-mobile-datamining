@@ -30,7 +30,7 @@ export default function UserProfileYourFriendsCard(arg0) {
   let stateFromStoresArray;
   let stateFromStoresArray1;
   ({ navigateToFriends, style } = arg0);
-  let tmp = closure_13();
+  const tmp = closure_13();
   _require = tmp;
   const tmp2 = stateFromStoresArray(stateFromStoresArray1.useState([]), 2);
   const first = tmp2[0];
@@ -56,7 +56,6 @@ export default function UserProfileYourFriendsCard(arg0) {
     const chainResult = _modDef12.chain(stateFromStoresArray);
     const mapped = found.take(5).map(UserStore.getUser);
     const takeResult = found.take(5);
-    const tmp3 = UserStore;
     let valueResult = mapped.filter(GlobalUtils.isNotNullish).value();
     if (valueResult.length >= 5) {
       dependencyMap(valueResult);
@@ -68,7 +67,7 @@ export default function UserProfileYourFriendsCard(arg0) {
       const mapped2 = mapped1
         .uniq()
         .take(5 - valueResult.length)
-        .map(tmp3.getUser);
+        .map(UserStore.getUser);
       const takeResult1 = mapped1.uniq().take(5 - valueResult.length);
       valueResult = mapped2.filter(GlobalUtils.isNotNullish).value();
       const items = [];
@@ -76,6 +75,7 @@ export default function UserProfileYourFriendsCard(arg0) {
       dependencyMap(items);
       const iter2 = mapped2.filter(GlobalUtils.isNotNullish);
     }
+    const iter = mapped.filter(GlobalUtils.isNotNullish);
   }, items2);
   const items3 = [first, ,];
   ({ avatars: arr4[1], facepile: arr4[2] } = tmp);

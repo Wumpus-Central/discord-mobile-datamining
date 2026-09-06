@@ -1,4 +1,5 @@
 // discord_app/modules/wishlists/CollectiblesWishlistUtils.tsx
+import util from "../../intl/index.native.tsx";
 import CollectiblesItemType from "../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
 import CollectiblesUtils from "../collectibles/CollectiblesUtils.tsx";
 import size from "../../../_runtime/metro/00002__.js";
@@ -15,19 +16,19 @@ export const getProductNameAndTypeFromSku = function getProductNameAndTypeFromSk
     }
   }
   if (CollectiblesItemType.CollectiblesItemType.AVATAR_DECORATION === type) {
-    const intl2 = tmp2(1114).intl;
+    const intl2 = util.intl;
     let obj = { product: name };
-    let formatToPlainStringResult = intl2.formatToPlainString(tmp2(1114).t.lvBzLi, obj);
-  } else if (tmp2(1889).CollectiblesItemType.PROFILE_EFFECT === type) {
-    const intl = tmp2(1114).intl;
+    let formatToPlainStringResult = intl2.formatToPlainString(util.t.lvBzLi, obj);
+  } else if (CollectiblesItemType.CollectiblesItemType.PROFILE_EFFECT === type) {
+    const intl = util.intl;
     obj = { product: name };
-    formatToPlainStringResult = intl.formatToPlainString(tmp2(1114).t.eR7moP, obj);
+    formatToPlainStringResult = intl.formatToPlainString(util.t.eR7moP, obj);
   } else {
     formatToPlainStringResult = name;
-    if (tmp2(1889).CollectiblesItemType.NAMEPLATE === type) {
-      const intl3 = tmp2(1114).intl;
+    if (CollectiblesItemType.CollectiblesItemType.NAMEPLATE === type) {
+      const intl3 = util.intl;
       obj = { product: name };
-      formatToPlainStringResult = intl3.formatToPlainString(tmp2(1114).t.YFOwHj, obj);
+      formatToPlainStringResult = intl3.formatToPlainString(util.t.YFOwHj, obj);
     }
   }
   return formatToPlainStringResult;

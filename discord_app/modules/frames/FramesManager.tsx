@@ -39,9 +39,8 @@ class FramesManager extends tmp3 {
               ({ code: obj2.rpc_close_code, message: obj2.rpc_message } = reason);
               obj.application_id = frameByIframeId.applicationId;
               obj.track(constants.ACTIVITY_CLOSED_RPC_ERROR, obj);
-              const result = obj3.showRPCDisconnectErrorUI(reason);
+              const result = applyArgumentsResult.showRPCDisconnectErrorUI(reason);
             }
-            obj3 = applyArgumentsResult;
           }
         }
       }

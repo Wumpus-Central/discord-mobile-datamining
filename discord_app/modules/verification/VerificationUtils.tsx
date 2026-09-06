@@ -56,11 +56,11 @@ export default {
   isFullScreenVerification(action) {
     let result =
       action === UserRequiredActions.REQUIRE_CAPTCHA ||
-      action === tmp.REQUIRE_VERIFIED_EMAIL ||
-      action === tmp.REQUIRE_VERIFIED_PHONE ||
-      action === tmp.REQUIRE_REVERIFIED_PHONE ||
-      action === tmp.REQUIRE_REVERIFIED_EMAIL_OR_REVERIFIED_PHONE ||
-      action === tmp.REQUIRE_VERIFIED_EMAIL_OR_REVERIFIED_PHONE;
+      action === UserRequiredActions.REQUIRE_VERIFIED_EMAIL ||
+      action === UserRequiredActions.REQUIRE_VERIFIED_PHONE ||
+      action === UserRequiredActions.REQUIRE_REVERIFIED_PHONE ||
+      action === UserRequiredActions.REQUIRE_REVERIFIED_EMAIL_OR_REVERIFIED_PHONE ||
+      action === UserRequiredActions.REQUIRE_VERIFIED_EMAIL_OR_REVERIFIED_PHONE;
     if (!result) {
       const self = this;
       result = this.isEmailReverification(action);
@@ -76,13 +76,13 @@ export default {
     if (VerificationTypes.EMAIL === item) {
       const intl5 = util.intl;
       return intl5.string(util.t["1MPz27"]);
-    } else if (tmp.PHONE === item) {
+    } else if (VerificationTypes.PHONE === item) {
       const intl4 = util.intl;
       return intl4.string(util.t.mjJeco);
-    } else if (tmp.REVERIFY_EMAIL === item) {
+    } else if (VerificationTypes.REVERIFY_EMAIL === item) {
       const intl3 = util.intl;
       return intl3.string(util.t.nmdPFX);
-    } else if (tmp.REVERIFY_PHONE === item) {
+    } else if (VerificationTypes.REVERIFY_PHONE === item) {
       const intl2 = util.intl;
       return intl2.string(util.t.of2125);
     } else {

@@ -20,18 +20,17 @@ export const openAcceptFriendRequestConfirmModal = function openAcceptFriendRequ
     importer() {
       return asyncRequireImpl(10875, dependencyMap.paths).then((result) => {
         closure_0 = result.default;
-        return (arg0) => {
-          closure_0 = arg0;
+        return (View) => {
           const obj = {};
-          const merged = Object.assign(arg0);
+          const merged = Object.assign(View);
           obj.onCancel = function onCancel() {
-            closure_0.onClose();
+            View.onClose();
             if (closure_2_1 != null) {
               tmp2();
             }
           };
           obj.onConfirm = onConfirm;
-          return <closure_0 />;
+          return <View />;
         };
       });
     },

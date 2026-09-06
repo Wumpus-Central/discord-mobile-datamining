@@ -136,7 +136,7 @@ export default function AppLauncherRoleListActionSheet(channel) {
   };
   const items2 = [closure_10(require("AppLauncherList").AppLauncherListSearchBar, obj)];
   if (0 === memo.length) {
-    let tmp8Result = tmp8(tmp4(tmp5[17]).AppLauncherListEmptyState, {});
+    let tmp8Result = closure_10(require("AppLauncherList").AppLauncherListEmptyState, {});
   } else {
     const obj1 = {
       ref,
@@ -157,7 +157,7 @@ export default function AppLauncherRoleListActionSheet(channel) {
         });
       },
     };
-    tmp8Result = tmp8(tmp4(tmp5[17]).AppLauncherList, obj1);
+    tmp8Result = closure_10(require("AppLauncherList").AppLauncherList, obj1);
   }
   items2[1] = tmp8Result;
   obj.children = items2;

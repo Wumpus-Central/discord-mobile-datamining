@@ -64,7 +64,6 @@ export default function useCanShowAppLauncherOnboarding(channelId) {
   if (!tmp16) {
     items4.push(tmp2(1943).DismissibleContent.APP_LAUNCHER_GLOBAL_SEARCH_ONBOARDING);
   }
-  const tmp14 = AppLauncherOnboardingPersistedStore;
   const tmp2Result1 = channelId(504);
   const tmp2Result2 = channelId(7388);
   const items5 = [AppLauncherOnboardingStore];
@@ -74,7 +73,7 @@ export default function useCanShowAppLauncherOnboarding(channelId) {
   }));
   ({ recentMessageMetadata, recentApplicationCommandMetadata } = stateFromStoresObject);
   const tmp2Result3 = channelId(504);
-  const items6 = [tmp14];
+  const items6 = [AppLauncherOnboardingPersistedStore];
   const stateFromStores4 = channelId(504).useStateFromStores(items6, () =>
     AppLauncherOnboardingPersistedStore.getTriggeredOnboardingContentMetadata(),
   );

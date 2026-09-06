@@ -1,6 +1,8 @@
 // discord_app/modules/game_profile/native/components/GameProfileCommunity.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import transitionToGuild from "../../../routing/transitionToGuild.native.tsx";
 import GameProfileAnalyticUtils from "../../GameProfileAnalyticUtils.tsx";
+import DisplayedInviteActionCreators from "../../../../actions/native/DisplayedInviteActionCreators.tsx";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -131,7 +133,7 @@ export default function GameProfileCommunityServer(game) {
   }, items1);
   const items2 = [memo];
   const effect1 = obj.useEffect(() => {
-    closure_0 = async function _resolve(arg0, value) {
+    closure_0 = async function _resolve() {
       if (c4 === 2) {
         c4 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -162,18 +164,20 @@ export default function GameProfileCommunityServer(game) {
               let invite;
               let banned;
               if (null != memo) {
-                let obj1 = game(onInviteResolved[9]);
+                let obj1 = game(dependencyMap[9]);
                 const findCodedLinkResult = obj1.findCodedLink(tmp35.url);
                 if (null != findCodedLinkResult) {
-                  if (findCodedLinkResult.type === tmp20(tmp21[10]).CodedLinkType.INVITE) {
+                  if (findCodedLinkResult.type === game(dependencyMap[10]).CodedLinkType.INVITE) {
                     c2 = 1;
                     c3 = 2;
                     c4 = 1;
-                    obj1 = { value: trackAction(tmp21[11])(findCodedLinkResult.code, "game_profile"), done: false };
+                    obj1 = {
+                      value: trackAction(dependencyMap[11])(findCodedLinkResult.code, "game_profile"),
+                      done: false,
+                    };
                     return obj1;
                   }
                 }
-                tmp20 = game;
               }
             }
           } else {
@@ -233,14 +237,14 @@ export default function GameProfileCommunityServer(game) {
   stateFromStores = obj1.useStateFromStores(items3, () => {
     let id;
     if (first != null) {
-      const guild = tmp.guild;
+      const guild = first.guild;
       if (guild != null) {
         id = guild.id;
       }
     }
     let isMemberResult = null != id;
     if (isMemberResult) {
-      isMemberResult = GuildMembershipStore.isMember(tmp.guild.id);
+      isMemberResult = GuildMembershipStore.isMember(first.guild.id);
     }
     return isMemberResult;
   });
@@ -313,7 +317,7 @@ export default function GameProfileCommunityServer(game) {
         obj15.children = intl2.formatToPlainString(tmp8(tmp9[18]).t["LC+S+m"], obj16);
         items10[1] = tmp14(tmp8(tmp9[17]).Text, obj15);
         obj13.children = items10;
-        tmp12Result = tmp12(tmp13, obj13);
+        tmp12Result = closure_9(tmp13, obj13);
       }
       const items11 = [tmp12Result];
       tmp12Result = null;
@@ -327,7 +331,7 @@ export default function GameProfileCommunityServer(game) {
         obj19.children = intl3.formatToPlainString(tmp8(tmp9[18]).t.zRl6XR, obj20);
         items12[1] = tmp14(tmp8(tmp9[17]).Text, obj19);
         obj17.children = items12;
-        tmp12Result = tmp12(tmp13, obj17);
+        tmp12Result = closure_9(tmp13, obj17);
       }
       items11[1] = tmp12Result;
       obj12.children = items11;

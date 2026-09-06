@@ -14,7 +14,6 @@ export const areVoicePanelPreJoinContentPropsEqual = function areVoicePanelPreJo
         let num = 0;
         streamingMembers = streamingMembers.streamingMembers;
         for (const item10013 of streamingMembers) {
-          let tmp3 = item10013;
           let tmp5 = arg1.streamingMembers[num];
           let tmp6 = tmp5;
           if (null == tmp5) {
@@ -22,8 +21,8 @@ export const areVoicePanelPreJoinContentPropsEqual = function areVoicePanelPreJo
             let flag3 = false;
             return false;
           } else {
-            if (tmp3[0] === tmp6[0]) {
-              if (tmp3[1] === tmp6[1]) {
+            if (item10013[0] === tmp6[0]) {
+              if (item10013[1] === tmp6[1]) {
                 num = num + 1;
                 continue;
               }

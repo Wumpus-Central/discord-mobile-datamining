@@ -227,9 +227,9 @@ export const getIconById = function getIconById(currentAppIcon) {
   ];
   let found = items.find((id) => id.id === closure_0);
   if (null == found) {
-    obj = { id: tmp(9324).FreemiumAppIconIds.DEFAULT, iconSource: _modDef9325, name: null, isPremium: false };
-    const intl2 = tmp(1114).intl;
-    obj.name = intl2.string(tmp(1114).t.ANxkLy);
+    obj = { id: AppIconTypes.FreemiumAppIconIds.DEFAULT, iconSource: _modDef9325, name: null, isPremium: false };
+    const intl2 = util.intl;
+    obj.name = intl2.string(util.t.ANxkLy);
     found = obj;
   }
   return found;

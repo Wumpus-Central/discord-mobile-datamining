@@ -56,13 +56,7 @@ export const initializeSearch = function initializeSearch(location) {
     location: location.location,
   });
 };
-export const useEmojiCategories = function useEmojiCategories(
-  CHAT,
-  channel,
-  guildId,
-  arg3,
-  bypassPremiumEmojiEntitlement,
-) {
+export const useEmojiCategories = function useEmojiCategories(CHAT, channel) {
   _require = CHAT;
   importDefault = channel;
   let tmp = guildId;
@@ -83,7 +77,7 @@ export const useEmojiCategories = function useEmojiCategories(
     flag2 = false;
   }
   const result = require("TopEmojisUtils").maybeFetchTopEmojisByGuild(tmp);
-  let tmp5 = closure_16(CHAT);
+  const tmp5 = closure_16(CHAT);
   closure_5 = tmp5;
   closure_129_0 = tmp;
   const effect = flag.useEffect(() => {
@@ -189,7 +183,6 @@ export const useEmojiCategories = function useEmojiCategories(
       const iter = flattenedGuildIds[Symbol.iterator]();
       while (iter !== undefined) {
         let guild;
-        let tmp4 = constants2;
         if (GUILD === constants2.GUILD) {
           guild = GuildStore.getGuild(tmp2);
         }
@@ -203,9 +196,9 @@ export const useEmojiCategories = function useEmojiCategories(
               if (0 !== tmp32.emojisUnfiltered.length) {
                 let hiddenEmojiIds = EmojiStore.getHiddenEmojiIds(guild.id);
                 let tmp16 = null;
-                if (GUILD === tmp4.GUILD) {
+                if (GUILD === constants2.GUILD) {
                   let obj = {
-                    type: tmp4.GUILD,
+                    type: constants2.GUILD,
                     guild: null,
                     isNitroLocked: null,
                     emojis: null,
@@ -239,6 +232,7 @@ export const useEmojiCategories = function useEmojiCategories(
         }
         continue;
       }
+      const nextResult = iter.next();
     })(flattenedGuildIds, allEmojis.GUILD);
     if (soundmojiEmojiPickerSectionExperiment) {
       if (flag) {
@@ -268,7 +262,7 @@ export const useEmojiCategories = function useEmojiCategories(
             }
           }
           return arr;
-        } else if (id === tmp.RECENT) {
+        } else if (id === constants.RECENT) {
           const items = [,];
           ({ REACTION: arr4[0], DEFAULT_REACT_EMOJI: arr4[1] } = constants8);
           let obj4 = EmojiUtilsDefault;
@@ -299,7 +293,7 @@ export const useEmojiCategories = function useEmojiCategories(
             }
           }
           return arr;
-        } else if (id === tmp.FAVORITES) {
+        } else if (id === constants.FAVORITES) {
           obj1 = EmojiUtilsDefault;
           obj4 = {
             categoryEmojis: stateFromStoresArray2,
@@ -328,7 +322,7 @@ export const useEmojiCategories = function useEmojiCategories(
             }
           }
           return arr;
-        } else if (id === tmp.CUSTOM) {
+        } else if (id === constants.CUSTOM) {
           arr = channel;
           let found = channel;
           if (!closure_5) {
@@ -364,7 +358,10 @@ export const trackPremiumSettingsPaneOpened = function trackPremiumSettingsPaneO
   if (getGuildId != null) {
     guildId = getGuildId.getGuildId();
   }
-  const obj = { location_page: null != guildId ? tmp3.GUILD_CHANNEL : tmp3.DM_CHANNEL, location_section: null };
+  const obj = {
+    location_page: null != guildId ? constants.GUILD_CHANNEL : constants.DM_CHANNEL,
+    location_section: null,
+  };
   if (null != getGuildId) {
     let CUSTOM_STATUS_MODAL = constants5.EMOJI_PICKER_POPOUT;
   } else {
@@ -372,6 +369,7 @@ export const trackPremiumSettingsPaneOpened = function trackPremiumSettingsPaneO
   }
   obj.location_section = CUSTOM_STATUS_MODAL;
   obj.track(constants4.PREMIUM_PROMOTION_OPENED, obj);
+  const tmp2 = null != guildId;
 };
 export const trackEmojiSearchStart = function trackEmojiSearchStart(location, arg1) {
   let obj = AppAnalyticsUtilsDefault;
@@ -632,40 +630,40 @@ export const getStringForEmojiCategory = function getStringForEmojiCategory(PREM
     const intl13 = util.intl;
     const obj = { guildName };
     return intl13.formatToPlainString(util.t.W6Wi1X, obj);
-  } else if (tmp.RECENT === PREMIUM_UPSELL) {
+  } else if (constants.RECENT === PREMIUM_UPSELL) {
     const intl12 = util.intl;
     return intl12.string(util.t["5TvaSm"]);
-  } else if (tmp.FAVORITES === PREMIUM_UPSELL) {
+  } else if (constants.FAVORITES === PREMIUM_UPSELL) {
     const intl11 = util.intl;
     return intl11.string(util.t.y3LQCG);
-  } else if (tmp.ACTIVITY === PREMIUM_UPSELL) {
+  } else if (constants.ACTIVITY === PREMIUM_UPSELL) {
     const intl10 = util.intl;
     return intl10.string(util.t.O783tR);
-  } else if (tmp.FLAGS === PREMIUM_UPSELL) {
+  } else if (constants.FLAGS === PREMIUM_UPSELL) {
     const intl9 = util.intl;
     return intl9.string(util.t.vvaizu);
-  } else if (tmp.FOOD === PREMIUM_UPSELL) {
+  } else if (constants.FOOD === PREMIUM_UPSELL) {
     const intl8 = util.intl;
     return intl8.string(util.t.ldm9aY);
-  } else if (tmp.NATURE === PREMIUM_UPSELL) {
+  } else if (constants.NATURE === PREMIUM_UPSELL) {
     const intl7 = util.intl;
     return intl7.string(util.t.egIBDH);
-  } else if (tmp.OBJECTS === PREMIUM_UPSELL) {
+  } else if (constants.OBJECTS === PREMIUM_UPSELL) {
     const intl6 = util.intl;
     return intl6.string(util.t.gWm7Mk);
-  } else if (tmp.PEOPLE === PREMIUM_UPSELL) {
+  } else if (constants.PEOPLE === PREMIUM_UPSELL) {
     const intl5 = util.intl;
     return intl5.string(util.t.GX594D);
-  } else if (tmp.SYMBOLS === PREMIUM_UPSELL) {
+  } else if (constants.SYMBOLS === PREMIUM_UPSELL) {
     const intl4 = util.intl;
     return intl4.string(util.t.QXMYAb);
-  } else if (tmp.TRAVEL === PREMIUM_UPSELL) {
+  } else if (constants.TRAVEL === PREMIUM_UPSELL) {
     const intl3 = util.intl;
     return intl3.string(util.t.w33hIP);
-  } else if (tmp.PREMIUM_UPSELL === PREMIUM_UPSELL) {
+  } else if (constants.PREMIUM_UPSELL === PREMIUM_UPSELL) {
     const intl2 = util.intl;
     return intl2.string(util.t.pAF6xE);
-  } else if (tmp.SOUNDMOJI === PREMIUM_UPSELL) {
+  } else if (constants.SOUNDMOJI === PREMIUM_UPSELL) {
     const intl = util.intl;
     return intl.string(util.t.f0Ezmv);
   } else {
@@ -786,17 +784,17 @@ export const getEmojiSubCategory = function getEmojiSubCategory(arr, arr2, arg2)
     if (mapped.includes(arg2)) {
       let TOP_GUILD_EMOJI = constants3.TOP_GUILD_EMOJI;
     } else {
-      TOP_GUILD_EMOJI = mapped1.includes(arg2) ? tmp3.NEWLY_ADDED_EMOJI : tmp3.NONE;
+      TOP_GUILD_EMOJI = mapped1.includes(arg2) ? constants3.NEWLY_ADDED_EMOJI : constants3.NONE;
     }
     return TOP_GUILD_EMOJI;
   }
 };
-export const getSearchPlaceholder = function getSearchPlaceholder(arg0, arg1) {
-  if (arg0 === constants8.REACTION) {
+export const getSearchPlaceholder = function getSearchPlaceholder(pickerIntention, currentUser) {
+  if (pickerIntention === constants8.REACTION) {
     const intl2 = util.intl;
     const string = intl2.string;
     let t = util.t;
-    if (arg1) {
+    if (currentUser) {
       t = t["h7ES+n"];
       let stringResult = string(t);
     } else {

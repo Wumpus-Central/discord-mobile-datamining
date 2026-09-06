@@ -107,7 +107,6 @@ export default function VoiceUserConnected(channel) {
     ringing: null,
   };
   const obj5 = channel(sessionId[9]);
-  const tmp11 = jsx;
   if (!mute) {
     mute = suppress;
   }
@@ -131,5 +130,24 @@ export default function VoiceUserConnected(channel) {
   obj.isGuest = isGuest;
   obj.voicePlatform = stateFromStores2;
   obj.ringing = stateFromStores4;
-  return tmp11(user(sessionId[10]), obj);
+  return jsx(user(sessionId[10]), {
+    guildId: channel.guild_id,
+    channelId: channel.id,
+    member,
+    user,
+    collapsed,
+    serverMute: null,
+    serverDeaf: null,
+    mute: null,
+    deaf: null,
+    localMute: null,
+    video: null,
+    stream: null,
+    platform: null,
+    disabled: null,
+    isInEmbeddedActivity: null,
+    isGuest: null,
+    voicePlatform: null,
+    ringing: null,
+  });
 }

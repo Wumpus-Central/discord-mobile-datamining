@@ -126,7 +126,7 @@ let closure_15 = noop.memo((participant) => {
       obj.type = tmp(9597).VideoEmptyTypes.STREAM_FAILED;
       obj.style = StyleSheet.absoluteFill;
       return closure_10(tmp4Result, obj);
-    } else if (tmp6.ENDED === state) {
+    } else if (ApplicationStreamStates.ENDED === state) {
       obj = {
         stream: stateFromStores,
         removeCloseButton: removeEmptyStateButton,
@@ -139,14 +139,14 @@ let closure_15 = noop.memo((participant) => {
       obj.style = StyleSheet.absoluteFill;
       return closure_10(tmp4Result, obj);
     } else {
-      if (tmp6.RECONNECTING === state) {
+      if (ApplicationStreamStates.RECONNECTING === state) {
         const obj1 = { title: null };
         const intl = tmp(1114).intl;
         obj1.title = intl.string(tmp(1114).t["pdFFK+"]);
         let tmp9 = closure_10(StreamTextOverlay, obj1);
       } else {
         tmp9 = null;
-        if (tmp6.PAUSED === state) {
+        if (ApplicationStreamStates.PAUSED === state) {
           const obj2 = { title: null, subtext: null };
           const intl2 = tmp(1114).intl;
           obj2.title = intl2.string(tmp(1114).t["5q17w5"]);
@@ -188,7 +188,7 @@ let closure_15 = noop.memo((participant) => {
         const obj6 = { children: null };
         obj5.videoSpinnerContext = REMOTE_STREAM;
         obj5.userId = user.id;
-        obj5.paused = stateFromStores.state === tmp6.PAUSED;
+        obj5.paused = stateFromStores.state === ApplicationStreamStates.PAUSED;
         const items1 = [closure_10(tmp4(9604), obj5), tmp9];
         obj6.children = items1;
         return closure_11(closure_12, obj6);
@@ -265,7 +265,7 @@ export default function StreamTile(participant) {
   let tmp7Result = null != onFullScreen;
   if (tmp7Result) {
     obj = { onFullScreen, style: fullscreenIconStyle };
-    tmp7Result = tmp7(closure_16, obj);
+    tmp7Result = closure_1_10(closure_16, obj);
   }
   items3[1] = tmp7Result;
   obj.children = items3;

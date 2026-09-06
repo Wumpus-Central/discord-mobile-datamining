@@ -1,4 +1,5 @@
 // discord_app/modules/messages/native/renderer/transformUploaderAttachments.tsx
+import util from "../../../../intl/index.native.tsx";
 import MediaFormatTesters from "../../MediaFormatTesters.tsx";
 import CloudUpload from "../../../../lib/uploader/CloudUpload.tsx";
 import RowGeneratorConstants from "RowGeneratorConstants.tsx";
@@ -62,7 +63,7 @@ export default function createUploaderAttachments(uploaderFile) {
       obj.size = str3;
       obj.showDescription = false;
       let num5 = 0;
-      if (AttachmentType) {
+      if (closure_1_2) {
         num5 = 0;
         if (null != item.width) {
           num5 = item.width;
@@ -70,25 +71,25 @@ export default function createUploaderAttachments(uploaderFile) {
       }
       obj.width = num5;
       let num6 = 0;
-      if (AttachmentType) {
+      if (closure_1_2) {
         num6 = 0;
         if (null != item.height) {
           num6 = item.height;
         }
       }
       obj.height = num6;
-      const intl = tmp(1114).intl;
+      const intl = util.intl;
       const string = intl.string;
-      const t = tmp(1114).t;
+      const t = util.t;
       if (isVideoFileResult) {
         let stringResult = string(t["BEWw/7"]);
       } else {
         stringResult = string(t.IPzNKE);
       }
       obj.hint = stringResult;
-      const intl2 = tmp(1114).intl;
+      const intl2 = util.intl;
       const string2 = intl2.string;
-      const t2 = tmp(1114).t;
+      const t2 = util.t;
       if (isVideoFileResult) {
         let string2Result = string2(t2["/SCpvi"]);
       } else {
@@ -96,11 +97,11 @@ export default function createUploaderAttachments(uploaderFile) {
       }
       obj.role = string2Result;
       if (isImageFileResult) {
-        let VIDEO = tmp13.IMAGE;
+        let VIDEO = AttachmentType.IMAGE;
       } else if (isVideoFileResult) {
-        VIDEO = tmp13.VIDEO;
+        VIDEO = AttachmentType.VIDEO;
       } else {
-        VIDEO = isAudioFileResult ? tmp13.AUDIO : tmp13.OTHER;
+        VIDEO = isAudioFileResult ? AttachmentType.AUDIO : AttachmentType.OTHER;
       }
       obj.attachmentType = VIDEO;
       obj.progress = tmp7;

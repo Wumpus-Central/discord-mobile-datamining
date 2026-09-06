@@ -56,7 +56,7 @@ export const useOrderSigning = function useOrderSigning(order) {
   let obj = { error: tmp[0], signOrder: null, reportError: tmp3 };
   const items2 = [order, onSignFailure, tmp3, tmp2];
   obj.signOrder = closure_5(
-    onError(function* (arg0, value) {
+    onError(function* () {
       if (c6 === 2) {
         c6 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");

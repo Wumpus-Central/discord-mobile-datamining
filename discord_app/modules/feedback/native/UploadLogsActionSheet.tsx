@@ -58,6 +58,7 @@ export default function UploadLogsActionSheet(arg0) {
     obj.rtc_connection_id = tmp5;
     AnalyticsUtilsDefault.track(constants.DEBUG_LOG_UPLOADED, obj);
     ActionSheetActionCreatorsDefault.hideActionSheet();
+    const tmp3Result = ActionSheetActionCreatorsDefault;
   };
   items[1] = closure_6(components_Button_Button.Button, obj2);
   items[2] = closure_6(View, { style: tmp.buttonSpacer });

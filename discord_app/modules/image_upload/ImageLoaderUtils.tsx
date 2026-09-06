@@ -1,7 +1,10 @@
 // discord_app/modules/image_upload/ImageLoaderUtils.tsx
+import _modDef12 from "../../../_runtime/metro/00012__.js";
 import URLUtilsDefault from "../../utils/URLUtils.tsx";
 import AttachmentImageLadderExperiment from "AttachmentImageLadderExperiment.tsx";
+import AttachmentImageLadder from "AttachmentImageLadder.tsx";
 import privDefault from "../../../_runtime/01437_priv.js";
+import _modDef1471 from "../../../_runtime/metro/01471__.js";
 import ImageUtils from "../../utils/ImageUtils.tsx";
 import getDevicePixelRatioDefault from "../../utils/getDevicePixelRatio.native.tsx";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
@@ -40,7 +43,7 @@ function getSrcWithWidthAndHeight(quality) {
     if (!obj.isDiscordCdnUrl(src)) {
       const items = [, ];
       [arr[0], tmp6] = _slicedToArray(src.split("?"), 2);
-      let tmp2Result = tmp2(1471);
+      let tmp2Result = _modDef1471;
       items[1] = tmp2Result.parse(tmp6);
       let tmp5 = _slicedToArray(src.split("?"), 2);
       [tmp8, tmp9] = _slicedToArray(items, 2);
@@ -85,10 +88,9 @@ function getSrcWithWidthAndHeight(quality) {
         })("ImageLoaderUtils.getSrcWithWidthAndHeight");
         size = { width, height };
         if (null != tmp18) {
-          tmp15(1432);
           obj = { targetWidth: width, targetHeight: height, sourceWidth, sourceHeight, maxUpscale: null };
-          const tmp15Result = tmp15(1432);
-          obj.maxUpscale = tmp15Result.getSnapDownMaxUpscale(tmp18, tmp2(1878)());
+          const tmp15Result = AttachmentImageLadder;
+          obj.maxUpscale = tmp15Result.getSnapDownMaxUpscale(tmp18, getDevicePixelRatioDefault());
           size = tmp15Result.snapAttachmentDimensions(obj);
         }
         if (!tmp19) {
@@ -97,10 +99,10 @@ function getSrcWithWidthAndHeight(quality) {
         }
         tmp19 = size.width === sourceWidth && size.height === sourceHeight;
       }
-      tmp2Result = tmp2(12);
+      tmp2Result = _modDef12;
       let text = tmp8;
       if (!tmp2Result.isEmpty(tmp9)) {
-        tmp2(1471);
+        _modDef1471;
         text = `${tmp8}?${obj9.stringify(tmp9)}`;
       }
       return text;
@@ -131,7 +133,7 @@ export const loadImage = function loadImage(url, bind) {
         const obj2 = image(obj[6]);
         image(obj[6]).awaitOnline().then(() => {
           if (tmp2) {
-            const callbacks = tmp.callbacks;
+            const callbacks = obj.callbacks;
             const item = callbacks.forEach((fn) => {
               if (null != closure_1_2) {
                 fn(false, tmp);
@@ -141,6 +143,7 @@ export const loadImage = function loadImage(url, bind) {
               }
             });
           }
+          tmp2 = null != obj && null != obj.callbacks;
         });
         const awaitOnlineResult = image(obj[6]).awaitOnline();
       }
@@ -160,7 +163,7 @@ export const loadImage = function loadImage(url, bind) {
       obj.backoff = tmp6;
     }
     backoff = obj.backoff;
-    image.onerror = asyncGeneratorStep(async (arg0, value) => {
+    image.onerror = asyncGeneratorStep(async () => {
       if (c3 === 2) {
         c3 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -210,7 +213,7 @@ export const loadImage = function loadImage(url, bind) {
                   tmp.backoff = tmp7;
                 }
                 backoff = tmp.backoff;
-                image.onerror = closure_2_4(async (arg0, value) => {
+                image.onerror = closure_2_4(async () => {
                   if (c3 === 2) {
                     c3 = 3;
                     throw new TypeError("Generator functions may not be called on executing generators");
@@ -335,11 +338,11 @@ export const loadImage = function loadImage(url, bind) {
     }
     if (tmp2) {
       if (null != obj.callbacks) {
-        const callbacks = tmp4.callbacks;
+        const callbacks = obj.callbacks;
         callbacks.delete(image);
       }
       if (null != obj.backoff) {
-        const backoff = tmp4.backoff;
+        const backoff = obj.backoff;
         backoff.cancel();
       }
     }
@@ -362,7 +365,7 @@ export const getBestMediaProxySize = function getBestMediaProxySize(size, arg1) 
   }
   let found1 = closure_9.find((item) => closure_0 <= item);
   if (found1 == null) {
-    found1 = arr2[arr2.length - 1];
+    found1 = closure_9[closure_9.length - 1];
   }
   return found1;
 };

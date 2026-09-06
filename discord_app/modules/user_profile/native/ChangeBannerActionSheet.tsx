@@ -9,6 +9,7 @@ import useAnalyticsLocations from "../../app_analytics/useAnalyticsLocations.tsx
 import ActionSheet from "../../../design/components/Sheet/native/ActionSheet.native.tsx";
 import UserProfileSettingsActionCreators from "../UserProfileSettingsActionCreators.tsx";
 import Form from "../../../design/void/Form/native/index.tsx";
+import NitroWheelIcon from "../../../design/components/Icon/native/redesign/generated/NitroWheelIcon.tsx";
 import showCustomColorPickerActionSheetDefault from "../../color_picker/native/showCustomColorPickerActionSheet.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -152,7 +153,7 @@ export default function ChangeBannerActionSheet(isTryItOut) {
   if (flag === undefined) {
     flag = false;
   }
-  importDefault = async function _handleBannerUploadSelect(dependencyMap, value) {
+  importDefault = async function _handleBannerUploadSelect(dependencyMap) {
     if (c3 === 2) {
       c3 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -229,7 +230,7 @@ export default function ChangeBannerActionSheet(isTryItOut) {
   obj.title = intl.string(util.t.Vgdusv);
   let tmp4Result = flag;
   if (flag) {
-    tmp4Result = tmp4(tmp5(8662).NitroWheelIcon, {});
+    tmp4Result = closure_9(NitroWheelIcon.NitroWheelIcon, {});
   }
   obj.trailing = tmp4Result;
   ({ titleWrapper: obj3.titleWrapperStyle, titleContainer: obj3.titleContainerStyle } = tmp);
@@ -237,13 +238,13 @@ export default function ChangeBannerActionSheet(isTryItOut) {
   tmp4Result = null;
   if (!flag) {
     let obj1 = { user };
-    tmp4Result = tmp4(ChangeBannerColorRow, obj1);
+    tmp4Result = closure_9(ChangeBannerColorRow, obj1);
   }
   const items1 = [tmp4Result, ,];
   let obj2 = { style: tmp.label, children: null };
-  const intl2 = tmp5(1114).intl;
+  const intl2 = util.intl;
   const string = intl2.string;
-  const t = tmp5(1114).t;
+  const t = util.t;
   if (showRemoveBanner) {
     let stringResult = string(t.N0bC3P);
   } else {
@@ -253,15 +254,15 @@ export default function ChangeBannerActionSheet(isTryItOut) {
   let tmp4Result1 = !flag;
   if (!flag) {
     let obj3 = { style: tmp.nitroWheel, size: "sm" };
-    tmp4Result1 = tmp4(tmp5(8662).NitroWheelIcon, obj3);
+    tmp4Result1 = closure_9(NitroWheelIcon.NitroWheelIcon, obj3);
   }
   const obj4 = { label: closure_10(View, obj2), subLabel: null, onPress: null };
   items2[1] = tmp4Result1;
   obj2.children = items2;
   const obj5 = { style: tmp.sublabel, numberOfLines: 2, text: null };
-  const intl3 = tmp5(1114).intl;
+  const intl3 = util.intl;
   const string2 = intl3.string;
-  const t2 = tmp5(1114).t;
+  const t2 = util.t;
   if (flag) {
     let string2Result = string2(t2.IhzZlo);
   } else {
@@ -273,8 +274,8 @@ export default function ChangeBannerActionSheet(isTryItOut) {
   if (!flag) {
     const obj6 = { style: tmp.upsellButton, children: null };
     const obj7 = { analyticsObject: constants.EDIT_PROFILE_BANNER };
-    obj6.children = tmp4(tmp2(14594), obj7);
-    tmp4Result2 = tmp4(tmp10, obj6);
+    obj6.children = closure_9(tmp2(14594), obj7);
+    tmp4Result2 = closure_9(View, obj6);
   }
   items3[1] = tmp4Result2;
   obj4.subLabel = closure_10(closure_11, { children: items3 });
@@ -299,17 +300,17 @@ export default function ChangeBannerActionSheet(isTryItOut) {
     ({ label: arr5[0], remove: arr5[1] } = tmp);
     obj8.style = items4;
     if (removeText == null) {
-      const intl4 = tmp5(1114).intl;
-      removeText = intl4.string(tmp5(1114).t.tT9n7D);
+      const intl4 = util.intl;
+      removeText = intl4.string(util.t.tT9n7D);
     }
     const obj9 = { label: null, onPress: null };
     obj8.text = removeText;
-    obj9.label = tmp4(tmp5(8593).FormLabel, obj8);
+    obj9.label = closure_9(Form.FormLabel, obj8);
     obj9.onPress = function handleBannerDelete() {
       _require(null);
       ActionSheetActionCreatorsDefault.hideActionSheet();
     };
-    showRemoveBanner = tmp4(tmp5(5605).TableRow, obj9);
+    showRemoveBanner = closure_9(TableRow.TableRow, obj9);
   }
   const obj10 = { children: null };
   items1[2] = showRemoveBanner;

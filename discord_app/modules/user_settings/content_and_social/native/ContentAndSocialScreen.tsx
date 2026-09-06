@@ -5,6 +5,8 @@ import HelpdeskUtilsDefault from "../../../../utils/HelpdeskUtils.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
 import ContactSyncUtils from "../../../contact_sync/native/ContactSyncUtils.tsx";
+import SettingLayoutDefault from "../../../settings/native/renderer/SettingLayout.tsx";
+import SafetyGuildSettingGuildSelect from "../../defs/native/SafetyGuildSettingGuildSelect.tsx";
 import useAuthorizedSlayerApplicationsDefault from "../../authorized_apps/useAuthorizedSlayerApplications.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -132,13 +134,16 @@ export const DiscordPermissionsPage = function DiscordPermissionsPage() {
     if (!allServersOptionSelected) {
       const items11 = [];
       let arraySpreadResult = HermesBuiltin.arraySpread(items6, 0);
-      arraySpreadResult = HermesBuiltin.arraySpread(tmp2(15868).GUILD_SPECIFIC_SETTINGS, arraySpreadResult);
+      arraySpreadResult = HermesBuiltin.arraySpread(
+        SafetyGuildSettingGuildSelect.GUILD_SPECIFIC_SETTINGS,
+        arraySpreadResult,
+      );
       tmp7 = items11;
     }
     obj8.settings = tmp7;
     items8[3] = obj8;
     const obj9 = { label: null, settings: null };
-    const intl9 = tmp2(1114).intl;
+    const intl9 = util.intl;
     obj9.label = intl9.string(util.t.XlGG9c);
     const items12 = [, ,];
     ({
@@ -153,19 +158,19 @@ export const DiscordPermissionsPage = function DiscordPermissionsPage() {
     obj10.settings = items13;
     items8[5] = obj10;
     const obj11 = { label: null, settings: null, subLabel: null };
-    const intl10 = tmp2(1114).intl;
+    const intl10 = util.intl;
     obj11.label = intl10.string(util.t["3wRort"]);
     const items14 = [,];
     ({ ACCOUNT_BLOCKED_USERS_V2: arr15[0], ACCOUNT_IGNORED_USERS: arr15[1] } = MobileUserSettings);
     obj11.settings = items14;
-    const intl11 = tmp2(1114).intl;
+    const intl11 = util.intl;
     const obj12 = {
       helpArticle: HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.STEALTH_REMEDIATION_FEATURE_GUIDE),
     };
     obj11.subLabel = intl11.format(util.t["0aNQo9"], obj12);
     items8[6] = obj11;
     const obj13 = { label: null, settings: null, subLabel: null };
-    const intl12 = tmp2(1114).intl;
+    const intl12 = util.intl;
     obj13.label = intl12.string(util.t.bGSsnc);
     const items15 = [, ,];
     ({
@@ -174,19 +179,19 @@ export const DiscordPermissionsPage = function DiscordPermissionsPage() {
       STAFF_ONLY_FIND_YOUR_FRIENDS_DELETION: arr16[2],
     } = MobileUserSettings);
     obj13.settings = items15;
-    const intl13 = tmp2(1114).intl;
+    const intl13 = util.intl;
     const tmp4Result = HelpdeskUtilsDefault;
     obj13.subLabel = intl13.format(util.t["TWz/S+"], { onClick: ContactSyncUtils.handleOpenLearnMoreLink });
     items8[7] = obj13;
     const obj15 = { label: null, settings: null };
-    const intl14 = tmp2(1114).intl;
+    const intl14 = util.intl;
     obj15.label = intl14.string(util.t["aBZ/oQ"]);
     const items16 = [,];
     ({ DISCOVERY_BY_PHONE: arr17[0], DISCOVERY_BY_EMAIL: arr17[1] } = MobileUserSettings);
     obj15.settings = items16;
     items8[8] = obj15;
     const obj16 = { label: null, settings: null };
-    const intl15 = tmp2(1114).intl;
+    const intl15 = util.intl;
     obj16.label = intl15.string(util.t["+KNdnt"]);
     const items17 = [MobileUserSettings.IOS_CONVERSATION_SUGGESTIONS];
     obj16.settings = items17;
@@ -224,15 +229,15 @@ export const ConnectedGamesPage = function ConnectedGamesPage() {
     let items = [React7(Text_Text.Text, obj1)];
     let obj2 = { variant: "text-sm/normal", color: "text-muted", children: null };
     let intl2 = util.intl;
-    const obj3 = { helpdeskArticle: tmp2(2024).getArticleURL(HelpdeskArticles.SOCIAL_LAYER_CONNECTIONS) };
+    const obj3 = { helpdeskArticle: HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.SOCIAL_LAYER_CONNECTIONS) };
     obj2.children = intl2.format(util.t.V8wClM, obj3);
     items[1] = React7(Text_Text.Text, obj2);
     obj.children = items;
     tmp7 = closure_1_11(timestampProducer, obj);
-    const tmp2Result = tmp2(2024);
+    const tmp2Result = HelpdeskUtilsDefault;
   } else {
     obj = { node: tmp5 };
-    tmp7 = React7(tmp2(14689), obj);
+    tmp7 = React7(SettingLayoutDefault, obj);
   }
   return tmp7;
 };

@@ -15,7 +15,7 @@ export default function useCreateChannelSubmit(arg0) {
   [tmp2, importDefault] = _slicedToArray(noop.useState(false), 2);
   const tmp3 = _slicedToArray(noop.useState({}), 2);
   closure_2 = tmp3[1];
-  closure_0 = asyncGeneratorStep(async (arg0, value) => {
+  closure_0 = asyncGeneratorStep(async (arg0) => {
     if (c8 === 2) {
       c8 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");

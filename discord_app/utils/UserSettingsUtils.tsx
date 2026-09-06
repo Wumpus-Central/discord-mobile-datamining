@@ -74,8 +74,8 @@ export const computeFlags = function computeFlags(setting) {
   }
   return obj;
 };
-export const trackUserSettingsPaneViewed = function trackUserSettingsPaneViewed(arg0) {
-  ({ destinationPane, originPane, source, subsection, locationStack, applicationId } = arg0);
+export const trackUserSettingsPaneViewed = function trackUserSettingsPaneViewed(source) {
+  ({ destinationPane, originPane, source, subsection, locationStack, applicationId } = source);
   const obj = {
     settings_type: "user",
     origin_pane: originPane,

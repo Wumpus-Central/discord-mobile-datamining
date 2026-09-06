@@ -1,6 +1,8 @@
 // discord_app/design/components/Pile/native/AvatarDuoPile.native.tsx
+import _mod12 from "../../../../../_runtime/metro/00012__.js";
 import ClipView from "../../Icon/native/ClipView.tsx";
 import Pile from "Pile.native.tsx";
+import ListUtils from "../../../../utils/ListUtils.tsx";
 import CutoutableAvatarImage from "../../../void/CutoutableAvatarImage/native/CutoutableAvatarImage.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -15,7 +17,7 @@ export const AvatarDuoPile = function AvatarDuoPile(size) {
   if ("aria-label" in merged) {
     let prop = merged["aria-label"];
   } else {
-    let tmp3Result = tmp3(12619);
+    let tmp3Result = ListUtils;
     prop = tmp3Result.getListSummaryLabel(merged.names);
   }
   const obj = {
@@ -27,11 +29,11 @@ export const AvatarDuoPile = function AvatarDuoPile(size) {
     depthY: 0.5,
     children: null,
   };
-  tmp3Result = tmp3(12);
+  tmp3Result = _mod12;
   if (tmp3Result.isArray(size)) {
     let mapped = size.map((item) => CutoutableAvatarImage.AVATAR_SIZE_MAP[item]);
   } else {
-    mapped = tmp3(13028).AVATAR_SIZE_MAP[size];
+    mapped = CutoutableAvatarImage.AVATAR_SIZE_MAP[size];
   }
   obj.size = mapped;
   obj.children = size.children;

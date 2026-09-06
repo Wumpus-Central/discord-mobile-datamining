@@ -1,6 +1,13 @@
 // discord_app/modules/user_profile/utils/getActivityPlatform.tsx
 import Constants from "../../../Constants.tsx";
+import PlatformsDefault from "../../../lib/Platforms.tsx";
+import isCrunchyrollActivityDefault from "../../activities/utils/isCrunchyrollActivity.tsx";
+import isListeningOnSpotifyDefault from "../../activities/utils/isListeningOnSpotify.tsx";
+import isOnXboxDefault from "../../activities/utils/isOnXbox.tsx";
+import isOnPlayStationDefault from "../../activities/utils/isOnPlayStation.tsx";
 import parseProviderRouteHeadlessSessionIdDefault from "parseProviderRouteHeadlessSessionId.tsx";
+import isOnMetaQuestDefault from "../../activities/utils/isOnMetaQuest.tsx";
+import isOnMetaHorizonDefault from "../../activities/utils/isOnMetaHorizon.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
 const PlatformTypes = Constants.PlatformTypes;
@@ -13,20 +20,20 @@ export default function getActivityPlatform(session_id) {
   const tmp3 = parseProviderRouteHeadlessSessionIdDefault(session_id.session_id);
   if (null != tmp3) {
     return tmp3;
-  } else if (tmp(10891)(session_id)) {
-    let tmpResult = tmp(5283);
+  } else if (isListeningOnSpotifyDefault(session_id)) {
+    let tmpResult = PlatformsDefault;
     return tmpResult.get(PlatformTypes.SPOTIFY);
-  } else if (tmp(8344)(session_id)) {
-    tmpResult = tmp(5283);
+  } else if (isCrunchyrollActivityDefault(session_id)) {
+    tmpResult = PlatformsDefault;
     return tmpResult.get(PlatformTypes.CRUNCHYROLL);
-  } else if (tmp(13002)(session_id)) {
-    return tmp(5283).get(PlatformTypes.XBOX);
-  } else if (tmp(13003)(session_id)) {
-    return tmp(5283).get(PlatformTypes.PLAYSTATION);
+  } else if (isOnXboxDefault(session_id)) {
+    return PlatformsDefault.get(PlatformTypes.XBOX);
+  } else if (isOnPlayStationDefault(session_id)) {
+    return PlatformsDefault.get(PlatformTypes.PLAYSTATION);
   } else {
-    if (!tmp(13017)(session_id)) {
-      if (!tmp(13018)(session_id)) {
-        const found = tmp(5283).find((name) => name.name === session_id.name);
+    if (!isOnMetaQuestDefault(session_id)) {
+      if (!isOnMetaHorizonDefault(session_id)) {
+        const found = PlatformsDefault.find((name) => name.name === session_id.name);
         let tmp5 = null;
         if (null != found) {
           tmp5 = null;
@@ -37,6 +44,6 @@ export default function getActivityPlatform(session_id) {
         return tmp5;
       }
     }
-    return tmp(5283).get(PlatformTypes.META_QUEST_OR_HORIZON);
+    return PlatformsDefault.get(PlatformTypes.META_QUEST_OR_HORIZON);
   }
 }

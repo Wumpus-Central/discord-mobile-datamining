@@ -148,6 +148,7 @@ export default noop.forwardRef((animate, ref) => {
       const merged5 = Object.assign(obj);
     }
     obj4.children = jsx(obj(1178).Avatar, obj6);
-    return <View ref={arg1} style={style} accessibilityRole="image" accessible />;
+    return <View ref={ref} style={style} accessibilityRole="image" accessible />;
   }
+  const tmp10Result = id(8258)(obj4.getProfilePreviewValue(obj));
 });

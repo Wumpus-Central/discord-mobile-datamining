@@ -152,9 +152,9 @@ export default function GuildActionSheetEmojiSection(guildId) {
       };
       obj1 = { style: tmp.header, children: null };
       obj2 = { style: tmp.dotSeparator };
-      const items4 = [tmp20(num, obj2), ,];
+      const items4 = [closure_11(num, obj2), ,];
       obj3 = { source: tmp6(tmp5[23]), color: tmp18, size: tmp4(tmp5[22]).Icon.Sizes.SMALL };
-      items4[1] = tmp20(tmp4(tmp5[22]).Icon, obj3);
+      items4[1] = closure_11(tmp4(tmp5[22]).Icon, obj3);
       obj4 = { style: null, children: null };
       const items5 = [tmp.premiumTitle];
       const obj5 = { color: tmp18 };
@@ -162,10 +162,10 @@ export default function GuildActionSheetEmojiSection(guildId) {
       obj4.style = items5;
       const intl2 = tmp4(tmp5[20]).intl;
       obj4.children = intl2.string(tmp4(tmp5[20]).t.p1j56s);
-      items4[2] = tmp20(tmp4(tmp5[22]).LegacyText, obj4);
+      items4[2] = closure_11(tmp4(tmp5[22]).LegacyText, obj4);
       obj1.children = items4;
       obj.children = closure_12(num, obj1);
-      tmp20Result = tmp20(tmp4(tmp5[21]).PressableOpacity, obj);
+      tmp20Result = closure_11(tmp4(tmp5[21]).PressableOpacity, obj);
     }
     obj.trailing = tmp20Result;
     const obj6 = { style: tmp.emojiContainer, children: null };
@@ -191,13 +191,13 @@ export default function GuildActionSheetEmojiSection(guildId) {
         obj.style = items;
         const tmp4 = closure_1(first[27]);
         if (obj4.isThemeDark(closure_7.theme)) {
-          let tmp3Result = tmp3(tmp2[28]);
+          let tmp3Result = closure_1(first[28]);
         } else {
-          tmp3Result = tmp3(tmp2[29]);
+          tmp3Result = closure_1(first[29]);
         }
         obj.placeholder = tmp3Result;
         const obj1 = { uri: null };
-        tmp3Result = tmp3(tmp2[30]);
+        tmp3Result = closure_1(first[30]);
         obj1.uri = tmp3Result.getEmojiURL({
           id: accessibilityLabel.id,
           animated: accessibilityLabel.animated,
@@ -225,13 +225,13 @@ export default function GuildActionSheetEmojiSection(guildId) {
       obj8.style = items7;
       let _HermesInternal = HermesInternal;
       obj8.children = "+" + bound;
-      obj7.children = tmp20(tmp4(tmp5[22]).LegacyText, obj8);
-      tmp20Result = tmp20(tmp4(tmp5[21]).PressableOpacity, obj7, -1);
+      obj7.children = closure_11(tmp4(tmp5[22]).LegacyText, obj8);
+      tmp20Result = closure_11(tmp4(tmp5[21]).PressableOpacity, obj7, -1);
     }
     items6[1] = tmp20Result;
     obj6.children = items6;
     obj.children = closure_12(num, obj6);
-    tmp20Result1 = tmp20(tmp4(tmp5[19]).RowGroup, obj);
+    tmp20Result1 = closure_11(tmp4(tmp5[19]).RowGroup, obj);
   }
   return tmp20Result1;
 }

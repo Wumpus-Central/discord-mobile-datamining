@@ -2,7 +2,10 @@
 import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import native from "../../../design/void/native.tsx";
+import UserUtilsDefault from "../../../utils/UserUtils.tsx";
 import NicknameUtilsDefault from "../../../utils/NicknameUtils.tsx";
+import TableRow from "../../../design/components/TableRow/native/TableRow.native.tsx";
+import Form from "../../../design/void/Form/native/index.tsx";
 import DiscordTagDefault from "../../user_profile/native/DiscordTag.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import UserStore from "../../../stores/UserStore.tsx";
@@ -24,8 +27,8 @@ const memoResult = noop.memo((height) => {
   let obj = NicknameUtilsDefault;
   let nickname = obj.getNickname(guildId, undefined, user);
   if (nickname == null) {
-    nickname = tmp2(4404).getGlobalName(user);
-    const tmp2Result = tmp2(4404);
+    nickname = UserUtilsDefault.getGlobalName(user);
+    const tmp2Result = UserUtilsDefault;
   }
   const hasAvatarForGuildResult = user.hasAvatarForGuild(guildId);
   obj = { style: { height: height.contentHeight }, children: null };
@@ -35,13 +38,13 @@ const memoResult = noop.memo((height) => {
     let tmp8Result = null;
     if (hasAvatarForGuildResult) {
       const obj1 = { size: native.AvatarSizes.SIZE_16, style: tmp.primaryAvatar, user, guildId: "Array" };
-      tmp8Result = tmp8(native.Avatar, obj1);
+      tmp8Result = hasOwnProperty(native.Avatar, obj1);
     }
     const items1 = [tmp8Result];
     const obj2 = { user, usernameStyle: tmp.mainTag, hideBotTag: true };
-    items1[1] = tmp8(tmp2(9803), obj2);
+    items1[1] = hasOwnProperty(DiscordTagDefault, obj2);
     obj.children = items1;
-    let tmp6Result = tmp6(tmp7, obj);
+    let tmp6Result = timestampProducer(View, obj);
   } else {
     tmp6Result = null;
   }
@@ -89,20 +92,20 @@ export default noop.memo(function DetailedGuildIdentityUserRow(arrow) {
     };
     if (leading == null) {
       disabled = { source: stateFromStores.getAvatarSource(guildId), size: null };
-      SMALL = tmp(1178).AvatarSizes.SMALL;
+      SMALL = native.AvatarSizes.SMALL;
       disabled.size = SMALL;
-      leading = tmp2(tmp(1178).Avatar, disabled);
+      leading = closure_5(native.Avatar, disabled);
     }
     obj.leading = leading;
     leading = closure_8;
     obj = { contentHeight, user: stateFromStores, guildId };
-    obj.label = tmp2(closure_8, obj);
+    obj.label = closure_5(closure_8, obj);
     obj.onPress = onPress;
     obj.subLabel = subLabel;
     obj.trailing = trailing;
     obj.accessibilityRole = accessibilityRole;
     obj.accessibilityState = accessibilityState;
-    let tmp2Result = tmp2(tmp(8593).FormRow, obj);
+    let tmp2Result = closure_5(Form.FormRow, obj);
   } else {
     const obj1 = {
       accessibilityLabel,
@@ -120,19 +123,19 @@ export default noop.memo(function DetailedGuildIdentityUserRow(arrow) {
     };
     tmp2Result = leading;
     if (leading == null) {
-      const obj2 = { source: stateFromStores.getAvatarSource(guildId), size: tmp(1178).AvatarSizes.SMALL };
-      tmp2Result = tmp2(tmp(1178).Avatar, obj2);
+      const obj2 = { source: stateFromStores.getAvatarSource(guildId), size: native.AvatarSizes.SMALL };
+      tmp2Result = closure_5(native.Avatar, obj2);
     }
     obj1.icon = tmp2Result;
     const obj3 = { contentHeight, user: stateFromStores, guildId };
-    obj1.label = tmp2(closure_8, obj3);
+    obj1.label = closure_5(closure_8, obj3);
     obj1.onPress = onPress;
     obj1.start = start;
     obj1.subLabel = subLabel;
     obj1.trailing = trailing;
     obj1.accessibilityRole = accessibilityRole;
     obj1.accessibilityState = accessibilityState;
-    tmp2Result = tmp2(tmp(5605).TableRow, obj1);
+    tmp2Result = closure_5(TableRow.TableRow, obj1);
   }
 });
 export const DetailedGuildIdentityUser = memoResult;

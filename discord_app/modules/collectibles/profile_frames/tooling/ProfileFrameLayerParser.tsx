@@ -1,5 +1,6 @@
 // discord_app/modules/collectibles/profile_frames/tooling/ProfileFrameLayerParser.tsx
 import ProfileFrameLayerType from "../../../../../discord_common/js/shared/shared-constants/ProfileFrameLayerType.tsx";
+import ProfileFrameLayerAnchor from "../../../../../discord_common/js/shared/shared-constants/ProfileFrameLayerAnchor.tsx";
 import _toArray from "../../../../../_runtime/00718__toArray.js";
 
 require = fn;
@@ -49,7 +50,8 @@ export const FOLDER_ORDER_MAP = PARSE_ERROR_LABELS;
 export const ParseErrorKind = PARSE_ERROR_LABELS;
 export { PARSE_ERROR_LABELS };
 export const parseLayerFilename = function parseLayerFilename(str) {
-  const parts = str.replace(/\.\w+$/, "").split("_");
+  str = str.replace(/\.\w+$/, "");
+  const parts = str.split("_");
   if (parts.length >= 2) {
     if (parts.length <= 4) {
       const arr2 = _toArray(parts);
@@ -81,7 +83,7 @@ export const parseLayerFilename = function parseLayerFilename(str) {
               const _Number2 = Number;
               obj3.index = Number(tmp19);
               obj3.type = tmp20;
-              obj3.anchor = tmp4(8209).ProfileFrameLayerAnchor.CENTER;
+              obj3.anchor = ProfileFrameLayerAnchor.ProfileFrameLayerAnchor.CENTER;
               obj3.responsive = 1 === substr.length;
               obj2.parsed = obj3;
               return obj2;
@@ -106,7 +108,7 @@ export const parseLayerFilename = function parseLayerFilename(str) {
                   obj7.index = Number(tmp19);
                   obj7.type = tmp20;
                   obj7.anchor = first;
-                  obj7.responsive = 2 === substr.length || tmp20 === tmp4(8208).ProfileFrameLayerType.RAIL;
+                  obj7.responsive = 2 === substr.length || tmp20 === ProfileFrameLayerType.ProfileFrameLayerType.RAIL;
                   obj6.parsed = obj7;
                   return obj6;
                 }

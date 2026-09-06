@@ -26,9 +26,9 @@ function sortKey(type) {
     const _HermesInternal3 = HermesInternal;
     return "\u0001" + type.sortKey;
   } else {
-    if (tmp.HIDDEN_STREAM !== type) {
-      if (tmp.STREAM !== type) {
-        if (tmp.USER === type) {
+    if (constants.HIDDEN_STREAM !== type) {
+      if (constants.STREAM !== type) {
+        if (constants.USER === type) {
           const voiceState = type.voiceState;
           let selfVideo;
           if (voiceState != null) {
@@ -105,12 +105,11 @@ class ChannelRTCParticipants {
         if (selfVideo) {
           items.push(constants2.VIDEO);
           if (!tmp13) {
-            items.push(tmp11.FILTERED);
+            items.push(constants2.FILTERED);
           }
-          tmp11 = constants2;
           tmp13 = type.localVideoDisabled || type.isPoppedOut;
         }
-        if (type.type === tmp.ACTIVITY) {
+        if (type.type === constants.ACTIVITY) {
           items.push(constants2.ACTIVITY);
         }
         if (!tmp17) {
@@ -120,7 +119,7 @@ class ChannelRTCParticipants {
       }
       if (closure_1_13(type)) {
         items.push(constants2.STREAM);
-        let isPoppedOut = type.type === tmp.HIDDEN_STREAM;
+        let isPoppedOut = type.type === constants.HIDDEN_STREAM;
         if (!isPoppedOut) {
           isPoppedOut = null == type.streamId;
         }
@@ -128,10 +127,10 @@ class ChannelRTCParticipants {
           isPoppedOut = type.isPoppedOut;
         }
         if (!isPoppedOut) {
-          items.push(tmp7.FILTERED);
+          items.push(constants2.FILTERED);
         }
-        tmp7 = constants2;
       }
+      tmp2 = type.type === constants.USER && type.speaking;
     }, sortKey);
     merged[4] = secondaryIndexMap;
     merged.channelId = global;
@@ -242,7 +241,6 @@ prototype["updateParticipantSpeaking"] = function updateParticipantSpeaking(f782
       if (type.type === constants.USER) {
         let obj = { userId, checkIsMuted: true };
         const isSpeaking = obj.getIsSpeaking(obj);
-        const isSoundSharingResult = SpeakingStore.isSoundSharing(userId);
         const participantByIndex = self.participantByIndex;
         value = participantByIndex.get(type.id);
         type = undefined;
@@ -254,16 +252,17 @@ prototype["updateParticipantSpeaking"] = function updateParticipantSpeaking(f782
         }
         if (isSpeaking) {
           const _Date = Date;
-          tmp8.lastSpoke[tmp4] = Date.now();
+          self.lastSpoke[userId] = Date.now();
         }
-        const participantByIndex2 = tmp8.participantByIndex;
+        const participantByIndex2 = self.participantByIndex;
         obj = {};
         const merged = Object.assign(type);
         obj.speaking = isSpeaking;
         obj.lastSpoke = self.lastSpoke[userId];
-        obj.soundsharing = isSoundSharingResult;
+        obj.soundsharing = SpeakingStore.isSoundSharing(userId);
         const result = participantByIndex2.set(type.id, obj);
         flag = true;
+        const isSoundSharingResult = SpeakingStore.isSoundSharing(userId);
       } else {
         return flag;
       }
@@ -444,7 +443,7 @@ prototype["_getParticipantsForUser"] = function _getParticipantsForUser(userId) 
     }
     let streamForUser = ApplicationStreamingStore.getStreamForUser(userId, guildId);
     if (streamForUser == null) {
-      streamForUser = obj6.getActiveStreamForUser(userId, guildId);
+      streamForUser = ApplicationStreamingStore.getActiveStreamForUser(userId, guildId);
     }
     if (MediaEngineStore.supports(constants5.VIDEO)) {
       if (null != streamForUser) {
@@ -470,7 +469,8 @@ prototype["_getParticipantsForUser"] = function _getParticipantsForUser(userId) 
           const merged2 = Object.assign(VideoStreamStore.getUserStreamData(userId, guildId, constants4.STREAM));
           const merged3 = Object.assign(tmp20);
           obj2.type =
-            streamForUser.ownerId === AuthenticationStore.getId() && obj6.isSelfStreamHidden(self.channelId)
+            streamForUser.ownerId === AuthenticationStore.getId() &&
+            ApplicationStreamingStore.isSelfStreamHidden(self.channelId)
               ? constants.HIDDEN_STREAM
               : constants.STREAM;
           obj2.id = encodeStreamKeyResult;
@@ -484,7 +484,8 @@ prototype["_getParticipantsForUser"] = function _getParticipantsForUser(userId) 
           obj2.userVideo = flag2;
           obj2.user = user;
           const tmp17 =
-            streamForUser.ownerId === AuthenticationStore.getId() && obj6.isSelfStreamHidden(self.channelId);
+            streamForUser.ownerId === AuthenticationStore.getId() &&
+            ApplicationStreamingStore.isSelfStreamHidden(self.channelId);
           obj2.userNick = NicknameUtilsDefault.getName(guildId, self.channelId, user);
           obj2.stream = streamForUser;
           const poppedOutParticipants2 = self.poppedOutParticipants;

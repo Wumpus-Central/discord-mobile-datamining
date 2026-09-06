@@ -1,6 +1,8 @@
 // discord_app/modules/monitoring/MonitoringAgent.tsx
 import Constants from "../../Constants.tsx";
 import HTTPUtils from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import ReleaseChannelUtils from "../../utils/ReleaseChannelUtils.native.tsx";
+import ReleaseChannels from "../../../discord_common/js/shared/shared-constants/ReleaseChannels.tsx";
 import NativeMetricMonitorModule from "../../../discord_common/js/packages/rtn-codegen/js/NativeMetricMonitorModule.tsx";
 import MonitoringAgentUtils from "MonitoringAgentUtils.tsx";
 import get_ActivityIndicator from "../../../_runtime/metro/00017__.js";
@@ -45,10 +47,10 @@ prototype["_getMetricWithDefaults"] = function _getMetricWithDefaults(name, COUN
       tags.push(item);
     });
   }
-  let tmpResult = tmp(1115);
+  let tmpResult = PlatformUtils;
   let str = "web";
   if (!tmpResult.isWeb()) {
-    tmpResult = tmp(1115);
+    tmpResult = PlatformUtils;
     const platformName = tmpResult.getPlatformName();
     let tmp6 = null;
     if (set.has(platformName)) {
@@ -61,10 +63,10 @@ prototype["_getMetricWithDefaults"] = function _getMetricWithDefaults(name, COUN
     const _HermesInternal = HermesInternal;
     tags1.push("platform:" + str);
   }
-  const CurrentReleaseChannel = tmp(7603).CurrentReleaseChannel;
+  const CurrentReleaseChannel = ReleaseChannelUtils.CurrentReleaseChannel;
   let tmp9 = null;
   if (null != CurrentReleaseChannel) {
-    const ALL = tmp(7604).ReleaseChannelsSets.ALL;
+    const ALL = ReleaseChannels.ReleaseChannelsSets.ALL;
     tmp9 = null;
     if (ALL.has(CurrentReleaseChannel)) {
       tmp9 = CurrentReleaseChannel;
@@ -122,8 +124,8 @@ prototype["_flush"] = function _flush() {
     HTTP.post(request).catch(() => {
       if (self._metrics.length + items.length < 100) {
         items = [];
-        HermesBuiltin.arraySpread(tmp2, HermesBuiltin.arraySpread(tmp._metrics, 0));
-        tmp._metrics = items;
+        HermesBuiltin.arraySpread(tmp2, HermesBuiltin.arraySpread(self._metrics, 0));
+        self._metrics = items;
       }
     });
     const postResult = HTTP.post(request);

@@ -5,7 +5,7 @@ import MessageRequestTypes from "MessageRequestTypes.tsx";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 
 require = fn;
-let closure_5 = async function _acceptMessageRequest(arg0, value) {
+let closure_5 = async function _acceptMessageRequest(arg0) {
   if (c4 === 2) {
     c4 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");

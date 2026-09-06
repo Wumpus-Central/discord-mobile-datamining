@@ -1,5 +1,6 @@
 // discord_app/modules/go_live/utils/getFrontierTuningConfigIfEligible.tsx
 import PremiumUtilsDefault from "../../../utils/PremiumUtils.tsx";
+import FrontierTuningExperimentDefault from "../FrontierTuningExperiment.tsx";
 import GuildStore from "../../../stores/GuildStore.tsx";
 
 const require = fn;
@@ -19,14 +20,13 @@ export default function getFrontierTuningConfigIfEligible(location, currentUser,
         let obj = PremiumUtilsDefault;
         if (!obj.canStreamQuality(PremiumUtilsDefault.StreamQuality.MID, currentUser)) {
           obj = { location, guildId };
-          const config = tmp3(4699).getConfig(obj);
+          const config = FrontierTuningExperimentDefault.getConfig(obj);
           let tmp6 = null;
           if (null != config.maxBitrate) {
             tmp6 = config;
           }
           return tmp6;
         }
-        tmp3 = importDefault;
       }
       return null;
     }

@@ -216,6 +216,7 @@ const wishlistStore = new WishlistStore(DispatcherDefault, {
     if (tmp2) {
       dependencyMap[firstWishlistId].updatedAt = undefined;
     }
+    const _default = UserProfileStore.default;
   },
 });
 const result = size.fileFinishedImporting("modules/wishlists/WishlistStore.tsx");

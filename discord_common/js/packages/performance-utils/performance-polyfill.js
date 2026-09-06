@@ -63,14 +63,15 @@ if (!tmp6.measure) {
       }
       let num = 0;
       if (dependencyMap[arg1]) {
-        num = tmp3[arg1].startTime;
+        num = dependencyMap[arg1].startTime;
       }
       if (dependencyMap[arg2]) {
-        let startTime = tmp3[arg2].startTime;
+        let startTime = dependencyMap[arg2].startTime;
       } else {
         startTime = closure_1.now();
       }
       closure_2.push({ name, entryType: "measure", startTime: num, duration: startTime - num });
+      const obj = { name, entryType: "measure", startTime: num, duration: startTime - num };
     });
 }
 if (!tmp6.getEntriesByType) {
@@ -124,7 +125,6 @@ if (!tmp6.clearMarks) {
         let diff = tmp2 - 1;
         if (+closure_2.length) {
           do {
-            let arr = closure_2;
             let tmp5 = closure_2[diff];
             let tmp6 = tmp5.entryType != "mark";
             if (!tmp6) {
@@ -135,7 +135,7 @@ if (!tmp6.clearMarks) {
               tmp6 = tmp8;
             }
             if (!tmp6) {
-              let spliceResult = arr.splice(diff, 1);
+              let spliceResult = closure_2.splice(diff, 1);
             }
             tmp10 = +diff;
             diff = tmp10 - 1;
@@ -155,7 +155,6 @@ if (!tmp6.clearMeasures) {
         let diff = tmp2 - 1;
         if (+closure_2.length) {
           do {
-            let arr = closure_2;
             let tmp5 = closure_2[diff];
             let tmp6 = tmp5.entryType != "measure";
             if (!tmp6) {
@@ -166,7 +165,7 @@ if (!tmp6.clearMeasures) {
               tmp6 = tmp8;
             }
             if (!tmp6) {
-              let spliceResult = arr.splice(diff, 1);
+              let spliceResult = closure_2.splice(diff, 1);
             }
             tmp10 = +diff;
             diff = tmp10 - 1;

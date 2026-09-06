@@ -58,7 +58,7 @@ function ExplicitMediaFalsePositivePreview(url) {
     };
     const obj1 = { uri: url };
     obj.source = obj1;
-    let tmp3Result = tmp3(_modDef8308, obj);
+    let tmp3Result = React5(_modDef8308, obj);
   } else {
     const obj2 = { style: null, source: null };
     const items1 = [,];
@@ -66,7 +66,7 @@ function ExplicitMediaFalsePositivePreview(url) {
     obj2.style = items1;
     const obj3 = { uri: url };
     obj2.source = obj3;
-    tmp3Result = tmp3(hasOwnProperty, obj2);
+    tmp3Result = React5(hasOwnProperty, obj2);
   }
   obj.children = tmp3Result;
   return React5(React4, obj);
@@ -194,13 +194,13 @@ export const ExplicitMediaFalsePositiveActionSheet = function ExplicitMediaFalse
   let tmp5Result = null != attachmentPreview;
   if (tmp5Result) {
     const obj1 = { attachment: attachmentPreview };
-    tmp5Result = tmp5(ExplicitMediaFalsePositivePreviewAttachment, obj1);
+    tmp5Result = closure_7(ExplicitMediaFalsePositivePreviewAttachment, obj1);
   }
   items3[2] = tmp5Result;
   tmp5Result = null != embedPreview;
   if (tmp5Result) {
     const obj2 = { embed: embedPreview };
-    tmp5Result = tmp5(ExplicitMediaFalsePositivePreviewEmbed, obj2);
+    tmp5Result = closure_7(ExplicitMediaFalsePositivePreviewEmbed, obj2);
   }
   const obj3 = { startExpanded: true, children: null };
   const obj4 = { children: null };
@@ -216,12 +216,12 @@ export const ExplicitMediaFalsePositiveActionSheet = function ExplicitMediaFalse
     text: null,
     onPress: null,
   };
-  const intl3 = tmp6(tmp7[12]).intl;
+  const intl3 = tmp6(onConfirmPress[12]).intl;
   obj6.text = intl3.string(channelId(onConfirmPress[12]).t["cY+Oob"]);
   obj6.onPress = callback1;
   const items5 = [closure_7(channelId(onConfirmPress[17]).Button, obj6)];
   const obj7 = { variant: "secondary", size: "md", text: null, onPress: null };
-  const intl4 = tmp6(tmp7[12]).intl;
+  const intl4 = tmp6(onConfirmPress[12]).intl;
   obj7.text = intl4.string(channelId(onConfirmPress[12]).t["ETE/oC"]);
   obj7.onPress = callback;
   items5[1] = closure_7(channelId(onConfirmPress[17]).Button, obj7);

@@ -4,6 +4,7 @@ import _mod17 from "../../../../_runtime/metro/00017__.js";
 import initializeDefault from "../../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../../Dispatcher.tsx";
 import Constants from "../../../Constants.tsx";
+import SentryUtilsDefault from "../../../utils/SentryUtils.native.tsx";
 import Constants2 from "../../../../discord_common/js/packages/media-engine/Constants.tsx";
 import NativeAudioManagerModuleDefault from "../../../../discord_common/js/packages/rtn-codegen/js/NativeAudioManagerModule.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
@@ -66,16 +67,16 @@ const audioManagerStore = new AudioManagerStore(DispatcherDefault, {
           tmp8 = device.simpleDeviceType !== NativeAudioManagerModule.AudioDeviceType.INVALID;
         }
         if (tmp8) {
-          let tmp4Result = tmp4(12);
+          let tmp4Result = _modDef12;
           if (tmp4Result.isString(device)) {
-            tmp4Result = tmp4(1232);
+            tmp4Result = SentryUtilsDefault;
             let obj = { extra: null };
-            obj = { deviceString: tmp10 };
+            obj = { deviceString: device };
             obj.extra = obj;
             tmp4Result.captureMessage("AudioManagerStore received a string for an android audio device", obj);
           } else {
-            tmp4(9087).setActiveAudioDevice(tmp10);
-            const tmp4Result1 = tmp4(9087);
+            NativeAudioManagerModuleDefault.setActiveAudioDevice(device);
+            const tmp4Result1 = NativeAudioManagerModuleDefault;
           }
         }
       } else if (tmp13.DISCONNECTED === state) {
@@ -92,13 +93,13 @@ const audioManagerStore = new AudioManagerStore(DispatcherDefault, {
     if (c9) {
       let obj = _modDef12;
       if (obj.isString(device)) {
-        let tmpResult = tmp(1232);
+        let tmpResult = SentryUtilsDefault;
         obj = { extra: null };
         obj = { deviceString: device };
         obj.extra = obj;
         tmpResult.captureMessage("AudioManagerStore received a string for an android audio device", obj);
       } else {
-        tmpResult = tmp(9087);
+        tmpResult = NativeAudioManagerModuleDefault;
         tmpResult.setActiveAudioDevice(device);
       }
     }

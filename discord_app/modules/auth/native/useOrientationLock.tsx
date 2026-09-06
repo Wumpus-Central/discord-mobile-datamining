@@ -1,6 +1,8 @@
 // discord_app/modules/auth/native/useOrientationLock.tsx
+import MetaQuestUtils from "../../device/MetaQuestUtils.android.tsx";
 import DeviceUtils from "../../../utils/native/DeviceUtils.tsx";
 import useWideAuthViewDefault from "useWideAuthView.tsx";
+import DeviceOrientation from "../../device/native/DeviceOrientation.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -15,7 +17,7 @@ export default function usePortraitOrientationOnly() {
     const isIpadOSResult = DeviceUtils.isIpadOS();
     let tmp4 = !isIpadOSResult;
     if (!isIpadOSResult) {
-      let tmpResult = tmp(1608);
+      let tmpResult = MetaQuestUtils;
       tmp4 = !tmpResult.isMetaQuest();
     }
     if (tmp4) {
@@ -23,7 +25,7 @@ export default function usePortraitOrientationOnly() {
     }
     closure_0 = tmp4;
     if (tmp4) {
-      tmpResult = tmp(8332);
+      tmpResult = DeviceOrientation;
       tmpResult.lockOrientation("PORTRAIT", false);
     }
     return () => {

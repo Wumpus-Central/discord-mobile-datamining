@@ -1,5 +1,7 @@
 // discord_app/components_native/common/VolumeSlider.tsx
 import nativeDefault from "../../../discord_common/js/packages/tokens/native.tsx";
+import util from "../../intl/index.native.tsx";
+import PlatformUtils2 from "../../utils/PlatformUtils.tsx";
 import useToken from "../../design/tokens/native/useToken.tsx";
 import PerceptualVolumeUtils from "../../utils/PerceptualVolumeUtils.tsx";
 import VoiceNormalIcon from "../../design/components/Icon/native/redesign/generated/VoiceNormalIcon.tsx";
@@ -72,21 +74,21 @@ export default function VolumeSlider(maxTrackTintColor) {
     onValueChange: null,
     onResponderGrant: null,
   };
-  let tmp5Result = tmp5(5015);
+  let tmp5Result = PerceptualVolumeUtils;
   obj1.value = tmp5Result.amplitudeToPerceptual(value);
   obj1.maximumValue = maxVolume;
   obj1.minimumTrackTintColor = minTrackColor;
   obj1.maximumTrackTintColor = PRIMARY_400;
   if (accessibilityLabel == null) {
-    const intl = tmp5(1114).intl;
-    accessibilityLabel = intl.string(tmp5(1114).t.xPHVBs);
+    const intl = util.intl;
+    accessibilityLabel = intl.string(util.t.xPHVBs);
   }
   obj1.accessibilityLabel = accessibilityLabel;
   obj1.onValueChange = function onValueChange(arg0) {
     return closure_1_0(PerceptualVolumeUtils.perceptualToAmplitude(arg0));
   };
   if (onResponderGrant == null) {
-    tmp5Result = tmp5(1115);
+    tmp5Result = PlatformUtils2;
     let fn;
     if (tmp5Result.isAndroid()) {
       fn = () => true;

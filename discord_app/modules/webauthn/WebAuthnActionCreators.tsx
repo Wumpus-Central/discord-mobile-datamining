@@ -14,21 +14,21 @@ let closure_5 = async function _fetchWebAuthnConditionalChallenge() {
     headers: { authorization: "" },
     rejectWithError: true,
   });
-  const body = arg1.body;
+  const body = value.body;
   return { challenge: body.challenge, ticket: body.ticket };
 };
 let closure_6 = async function _fetchWebAuthnPasswordlessChallenge() {
   closure_0 = tmp4;
   const HTTP = HTTPUtils.HTTP;
   await HTTP.post({ url: constants.WEBAUTHN_PASSWORDLESS_CHALLENGE, rejectWithError: true });
-  const body = arg1.body;
+  const body = value.body;
   return { challenge: body.challenge, ticket: body.ticket };
 };
 let closure_7 = async function _deleteWebAuthnCredential(arg0) {
   let id = arg0;
   c2 = 0;
   c1 = 0;
-  return (async (arg0, value) => {
+  return (async (arg0) => {
     const HTTP = HTTPUtils.HTTP;
     await HTTP.del({ url: Endpoints.MFA_WEBAUTHN_CREDENTIAL(id.id), rejectWithError: true }).then(() => {
       c1(c2[3]);
@@ -38,7 +38,7 @@ let closure_7 = async function _deleteWebAuthnCredential(arg0) {
     return value;
   })();
 };
-let closure_8 = async function _editWebAuthnCredential(arg0, name) {
+let closure_8 = async function _editWebAuthnCredential(arg0) {
   closure_0 = arg0;
   c4 = 0;
   c5 = 0;
@@ -122,10 +122,10 @@ let closure_9 = async function _startRegisterWebAuthnCredential() {
   const HTTP = HTTPUtils.HTTP;
   const request = { url: constants.MFA_WEBAUTHN_CREDENTIALS, body: {}, rejectWithError: false };
   await HTTP.post(request);
-  const body = arg1.body;
+  const body = value.body;
   return { ticket: body.ticket, challenge: body.challenge };
 };
-let closure_10 = async function _finishRegisterWebAuthnCredential(name, ticket, credential) {
+let closure_10 = async function _finishRegisterWebAuthnCredential() {
   c5 = 0;
   c6 = 0;
   return (async (arg0, value, arg2) => {

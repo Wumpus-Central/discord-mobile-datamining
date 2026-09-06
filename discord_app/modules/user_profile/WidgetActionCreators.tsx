@@ -16,7 +16,7 @@ export default {
   },
   savePendingWidgets(arg0) {
     closure_0 = arg0;
-    return (async (arg0, value) => {
+    return (async () => {
       if (constants === 2) {
         constants = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -112,7 +112,7 @@ export default {
   },
   uploadWidgetAsset(arg0) {
     closure_0 = arg0;
-    return (async (arg0, value) => {
+    return (async () => {
       if (c3 === 2) {
         c3 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -219,7 +219,7 @@ export default {
         rejectWithError: true,
       };
       await HTTP2.post(request);
-      const body = arg1.body;
+      const body = value.body;
       const upload_url = body.upload_url;
       const upload_filename = body.upload_filename;
       const HTTP = closure_0(1272).HTTP;
@@ -246,7 +246,7 @@ export default {
     })();
   },
   fetchSuggestedGames() {
-    return (async (arg0, value) => {
+    return (async () => {
       if (c7 === 2) {
         c7 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");

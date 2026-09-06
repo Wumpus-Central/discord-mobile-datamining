@@ -38,14 +38,14 @@ prototype["generate"] = function generate(rowType) {
     theme = ThemeStore.theme;
   }
   if (constants.BLOCKED_GROUP !== rowType) {
-    if (tmp2.IGNORED_GROUP !== rowType) {
-      if (tmp2.SUSPENDED_USER_GROUP !== rowType) {
-        if (tmp2.MESSAGE === rowType) {
+    if (constants.IGNORED_GROUP !== rowType) {
+      if (constants.SUSPENDED_USER_GROUP !== rowType) {
+        if (constants.MESSAGE === rowType) {
           return MessageWithContent.generateMessageRowData(rowType, self.options, theme);
         } else {
           if (constants2.DAY !== rowType) {
-            if (tmp12.UNREAD !== rowType) {
-              if (tmp12.SUMMARY !== rowType) {
+            if (constants2.UNREAD !== rowType) {
+              if (constants2.SUMMARY !== rowType) {
                 if (constants3.LOAD_BEFORE !== rowType) {
                   if (constants3.LOAD_AFTER !== rowType) {
                     GlobalUtils.assertNever(rowType);

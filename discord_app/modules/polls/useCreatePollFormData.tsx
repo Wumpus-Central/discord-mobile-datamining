@@ -154,7 +154,7 @@ export default function useCreatePollCommonData(id, arg1, arg2, initialQuestion)
       );
     }
   }, items);
-  closure_0 = id(function* (arg0, value, arg2) {
+  closure_0 = id(function* (arg0, arg1, arg2) {
     if (c6 === 2) {
       c6 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -312,18 +312,18 @@ export default function useCreatePollCommonData(id, arg1, arg2, initialQuestion)
     if (first.filter((item) => c0(7761).isAnswerFilled(item)).length < React6) {
       c0 = false;
       let _HermesInternal = HermesInternal;
-      let combined = "answer-" + arr[0].localCreationAnswerId;
+      let combined = "answer-" + first[0].localCreationAnswerId;
       const intl2 = util.intl;
       obj[combined] = intl2.string(util.t.fYvzEX);
     }
-    const item = arr.forEach((localCreationAnswerId) => {
+    const item = first.forEach((localCreationAnswerId) => {
       obj = closure_0(7761);
       if (obj.isIncompleteAnswer(localCreationAnswerId)) {
         c0 = false;
         const _HermesInternal = HermesInternal;
         const combined = "answer-" + localCreationAnswerId.localCreationAnswerId;
-        const intl = tmp(1114).intl;
-        obj[combined] = intl.string(tmp(1114).t["8Qqkc+"]);
+        const intl = closure_0(1114).intl;
+        obj[combined] = intl.string(closure_0(1114).t["8Qqkc+"]);
       }
     });
     closure_1_12(obj);
@@ -332,7 +332,7 @@ export default function useCreatePollCommonData(id, arg1, arg2, initialQuestion)
   }, items7);
   const items8 = [first1, found, first2, first3, first4, first5, id, arg1];
   const callback11 = obj.useCallback(
-    id(function* (arg0, value) {
+    id(function* () {
       if (channel === 2) {
         channel = 3;
         throw new TypeError("Generator functions may not be called on executing generators");

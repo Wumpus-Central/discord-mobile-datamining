@@ -59,7 +59,7 @@ export const GuildBadgeWiltedFlower = function GuildBadgeWiltedFlower(width) {
     tmp9 = secondaryColorsTransformed[1];
   }
   if (tmp9 == null) {
-    tmp9 = tmp4[1];
+    tmp9 = secondaryBaseColors[1];
   }
   items = [
     React2(inlineStyles.Path, {
@@ -84,7 +84,7 @@ export const GuildBadgeWiltedFlower = function GuildBadgeWiltedFlower(width) {
     first = secondaryColorsTransformed[0];
   }
   if (first == null) {
-    first = tmp4[0];
+    first = secondaryBaseColors[0];
   }
   items[5] = React2(inlineStyles.Path, {
     d: "M5 14h-1v-1h1v1ZM4 13h-1v-1h1v1ZM3 12H2v-1h1v1ZM12 3H9V2h3v1Z",

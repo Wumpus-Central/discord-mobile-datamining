@@ -9,7 +9,7 @@ import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
 import InteractionStore from "InteractionStore.tsx";
 
 require = fn;
-let closure_10 = async function _executeMessageComponentInteraction(arg0, value) {
+let closure_10 = async function _executeMessageComponentInteraction(arg0) {
   if (1 === tmp7) {
     if (arg0 === 1) {
       c5 = 3;
@@ -123,17 +123,17 @@ function mapMessageComponentLocalStateForAPI(type) {
   } else {
     type = type.type;
     if (Server.ComponentType.TEXT_INPUT !== type) {
-      if (tmp(1894).ComponentType.FILE_UPLOAD !== type) {
-        if (tmp(1894).ComponentType.RADIO_GROUP !== type) {
-          if (tmp(1894).ComponentType.CHECKBOX_GROUP !== type) {
-            if (tmp(1894).ComponentType.CHECKBOX !== type) {
-              if (tmp(1894).ComponentType.STRING_SELECT === type) {
+      if (Server.ComponentType.FILE_UPLOAD !== type) {
+        if (Server.ComponentType.RADIO_GROUP !== type) {
+          if (Server.ComponentType.CHECKBOX_GROUP !== type) {
+            if (Server.ComponentType.CHECKBOX !== type) {
+              if (Server.ComponentType.STRING_SELECT === type) {
                 return type;
               } else {
-                if (tmp(1894).ComponentType.USER_SELECT !== type) {
-                  if (tmp(1894).ComponentType.ROLE_SELECT !== type) {
-                    if (tmp(1894).ComponentType.MENTIONABLE_SELECT !== type) {
-                      if (tmp(1894).ComponentType.CHANNEL_SELECT !== type) {
+                if (Server.ComponentType.USER_SELECT !== type) {
+                  if (Server.ComponentType.ROLE_SELECT !== type) {
+                    if (Server.ComponentType.MENTIONABLE_SELECT !== type) {
+                      if (Server.ComponentType.CHANNEL_SELECT !== type) {
                         return null;
                       }
                     }
@@ -189,6 +189,7 @@ function handleInteractionResponse(nonce, ok, applicationId, channelId, guildId)
                   message = firstSkemaError.message;
                 }
                 InteractionActionCreators.setFailed(nonce, undefined, message);
+                const tmp24Result = InteractionActionCreators;
               }
             }
             if (ok.body.code === constants.UNKNOWN_INTEGRATION) {
@@ -277,8 +278,8 @@ export const getInteractionStatusViewState = function getInteractionStatusViewSt
   if (state2 != null) {
     state = state2.state;
   }
-  if (state.state !== constants2.SENT) {
-    if (state.state !== tmp.SEND_FAILED) {
+  if (!tmp2) {
+    if (!tmp10) {
       let interactionType;
       if (state2 != null) {
         interactionType = state2.data.interactionType;
@@ -287,7 +288,7 @@ export const getInteractionStatusViewState = function getInteractionStatusViewSt
       const isCommandTypeResult = state.isCommandType();
       if (!tmp21) {
         if (isCommandTypeResult) {
-          if (state.state === tmp.SENDING) {
+          if (state.state === constants2.SENDING) {
             return SENDING;
           }
         }
@@ -296,12 +297,12 @@ export const getInteractionStatusViewState = function getInteractionStatusViewSt
             SENDING = obj.TIMED_OUT;
           }
           if (isCommandTypeResult) {
-            if (state.state === tmp.SEND_FAILED) {
+            if (state.state === constants2.SEND_FAILED) {
               SENDING = obj.FAILED;
             }
           }
           if (null != state.interaction) {
-            if (state.hasFlag(tmp23.EPHEMERAL)) {
+            if (state.hasFlag(constants3.EPHEMERAL)) {
               SENDING = obj.EPHEMERAL_SUCCESS;
             }
           }
@@ -324,6 +325,7 @@ export const getInteractionStatusViewState = function getInteractionStatusViewSt
       const _Date3 = Date;
       sum = Date.now();
     }
+    tmp10 = state.state === constants2.SEND_FAILED;
   } else {
     const id = state.id;
     if (null != id) {
@@ -340,6 +342,7 @@ export const getInteractionStatusViewState = function getInteractionStatusViewSt
     const _Date = Date;
     sum1 = Date.now();
   }
+  tmp2 = state.state === constants2.SENT;
 };
 export const canRetryInteractionData = function canRetryInteractionData(interactionData) {
   const options = interactionData.options;
@@ -361,14 +364,13 @@ export const canRetryInteractionData = function canRetryInteractionData(interact
         if (1 !== length1) {
           break;
         } else {
-          let tmp7 = require;
           tmp4 = options1;
           if (options1[0].type === Server.ApplicationCommandOptionType.SUB_COMMAND_GROUP) {
             continue;
           } else {
             tmp4 = options1;
             items = options1;
-            if (options1[0].type !== tmp7(1894).ApplicationCommandOptionType.SUB_COMMAND) {
+            if (options1[0].type !== Server.ApplicationCommandOptionType.SUB_COMMAND) {
               break;
             }
           }

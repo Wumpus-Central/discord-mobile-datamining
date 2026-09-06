@@ -1,6 +1,8 @@
 // discord_app/modules/coded_links/ApplicationCodedLink.tsx
 import GlobalUtils from "../../utils/GlobalUtils.tsx";
 import CodedLink from "CodedLink.tsx";
+import storefrontMessageEmbedCodedLink from "../application_storefront/storefrontMessageEmbedCodedLink.tsx";
+import activityBookmarkUtils from "../applications/message_embed/utils/activityBookmarkUtils.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
 const items = [
@@ -29,10 +31,10 @@ export const isApplicationCodedLinkMobileSupported = function isApplicationCoded
 };
 export const getApplicationCodedLinkData = function getApplicationCodedLinkData(type, code, url) {
   if (CodedLink.CodedLinkType.APP_DIRECTORY_PROFILE !== type) {
-    if (tmp(4548).CodedLinkType.APP_OAUTH2_LINK !== type) {
-      if (tmp(4548).CodedLinkType.APP_DIRECTORY_STOREFRONT !== type) {
-        if (tmp(4548).CodedLinkType.APP_DIRECTORY_STOREFRONT_SKU === type) {
-          let tmpResult = tmp(7691);
+    if (CodedLink.CodedLinkType.APP_OAUTH2_LINK !== type) {
+      if (CodedLink.CodedLinkType.APP_DIRECTORY_STOREFRONT !== type) {
+        if (CodedLink.CodedLinkType.APP_DIRECTORY_STOREFRONT_SKU === type) {
+          let tmpResult = storefrontMessageEmbedCodedLink;
           const result = tmpResult.parseStorefrontSkuCodedLink(code);
           let tmp5 = null;
           if (null != result) {
@@ -41,9 +43,9 @@ export const getApplicationCodedLinkData = function getApplicationCodedLinkData(
             tmp5 = obj;
           }
           return tmp5;
-        } else if (tmp(4548).CodedLinkType.ACTIVITY_BOOKMARK === type) {
+        } else if (CodedLink.CodedLinkType.ACTIVITY_BOOKMARK === type) {
           obj = { type, applicationId: code, params: null };
-          tmpResult = tmp(7692);
+          tmpResult = activityBookmarkUtils;
           obj.params = tmpResult.extractActivityBookmarkParams(url);
           return obj;
         }

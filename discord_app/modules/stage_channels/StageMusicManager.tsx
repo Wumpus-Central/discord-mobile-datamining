@@ -25,43 +25,40 @@ function checkVoiceStates() {
       if (MediaEngineStore.isSelfDeaf()) {
         closure_10.stop();
         c9 = false;
+      } else if (StageMusicStore.shouldPlay()) {
+        closure_10.volume = MediaEngineStore.getOutputVolume() / 400;
+        closure_10.loop();
+        c9 = true;
+      } else if (StageInstanceStore.isLive(voiceChannelId)) {
+        closure_10.stop();
+        c9 = false;
+      } else if (StageMusicStore.isMuted()) {
+        closure_10.pause();
+        c9 = false;
       } else {
-        if (StageMusicStore.shouldPlay()) {
-          closure_10.volume = obj.getOutputVolume() / 400;
-          closure_10.loop();
-          c9 = true;
-        } else if (StageInstanceStore.isLive(voiceChannelId)) {
-          closure_10.stop();
-          c9 = false;
-        } else if (obj2.isMuted()) {
-          closure_10.pause();
-          c9 = false;
-        } else {
-          const _Object = Object;
-          const values = Object.values(VoiceStateStore.getVoiceStatesForChannel(voiceChannelId));
-          const tmp8 =
-            null !=
-            values.find((suppress) => {
-              suppress = suppress.suppress;
-              let tmp = !suppress;
-              if (!suppress) {
-                tmp = !suppress.isVoiceMuted();
-              }
-              return tmp;
-            });
-          if (!tmp8) {
-            if (!c9) {
-              closure_10.volume = obj.getOutputVolume() / 400;
-              closure_10.loop();
-              c9 = true;
+        const _Object = Object;
+        const values = Object.values(VoiceStateStore.getVoiceStatesForChannel(voiceChannelId));
+        const tmp8 =
+          null !=
+          values.find((suppress) => {
+            suppress = suppress.suppress;
+            let tmp = !suppress;
+            if (!suppress) {
+              tmp = !suppress.isVoiceMuted();
             }
-          }
-          if (tmp8) {
-            closure_10.pause();
-            c9 = false;
+            return tmp;
+          });
+        if (!tmp8) {
+          if (!c9) {
+            closure_10.volume = MediaEngineStore.getOutputVolume() / 400;
+            closure_10.loop();
+            c9 = true;
           }
         }
-        obj2 = StageMusicStore;
+        if (tmp8) {
+          closure_10.pause();
+          c9 = false;
+        }
       }
     } else {
       closure_10.stop();

@@ -1,6 +1,8 @@
 // discord_app/modules/forwarding/formatMessageForwards.tsx
+import util from "../../intl/index.native.tsx";
 import AvatarUtilsDefault from "../../utils/AvatarUtils.tsx";
 import DateUtils from "../../utils/DateUtils.tsx";
+import useChannelName from "../channel/useChannelName.tsx";
 import isForwardMessageDefault from "isForwardMessage.tsx";
 import BasicGuildStore from "../guild/BasicGuildStore.tsx";
 import ChannelStore from "../../stores/ChannelStore.tsx";
@@ -19,14 +21,7 @@ class MessageForward {
     return obj;
   }
 }
-MessageForward.prototype["getForwardInfo"] = function getForwardInfo(
-  arg0,
-  UserStore,
-  RelationshipStore,
-  arg3,
-  arg4,
-  time,
-) {
+MessageForward.prototype["getForwardInfo"] = function getForwardInfo(arg0) {
   let obj = arg0;
   if (arg0 === undefined) {
     obj = ChannelStore;
@@ -79,21 +74,21 @@ MessageForward.prototype["getForwardInfo"] = function getForwardInfo(
           ({ id: obj22.id, icon: obj22.icon } = guild);
           obj1.originIconUrl = AvatarUtilsDefault.getGuildIconURL(obj2);
           obj1.timestampLabel = result;
-          const intl3 = tmp3(1114).intl;
+          const intl3 = util.intl;
           obj3 = { origin: guild.name, timestamp: result };
-          obj1.accessibilityLabel = intl3.formatToPlainString(tmp3(1114).t["+l04BN"], obj3);
+          obj1.accessibilityLabel = intl3.formatToPlainString(util.t["+l04BN"], obj3);
           obj.footerInfo = obj1;
         }
         return obj;
       } else {
         if (obj1.can(channel1.accessPermissions, channel1)) {
           obj4 = { snapshotIndex, footerInfo: null };
-          const tmp3Result = tmp3(4713);
+          const tmp3Result = useChannelName;
           const channelName = tmp3Result.computeChannelName(channel1, tmp, tmp2, true);
           const obj5 = { originLabel: channelName, timestampLabel: result, accessibilityLabel: null };
-          const intl = tmp3(1114).intl;
+          const intl = util.intl;
           const obj6 = { origin: channelName, timestamp: result };
-          obj5.accessibilityLabel = intl.formatToPlainString(tmp3(1114).t["+l04BN"], obj6);
+          obj5.accessibilityLabel = intl.formatToPlainString(util.t["+l04BN"], obj6);
           obj4.footerInfo = obj5;
           let obj7 = obj4;
         } else {
@@ -125,9 +120,9 @@ MessageForward.prototype["getForwardInfo"] = function getForwardInfo(
       ({ id: obj18.id, icon: obj18.icon } = guild1);
       obj11.originIconUrl = AvatarUtilsDefault.getGuildIconURL({ id: null, size: 16, icon: null, canAnimate: false });
       obj11.timestampLabel = result;
-      const intl2 = tmp3(1114).intl;
+      const intl2 = util.intl;
       const obj13 = { origin: guild1.name, timestamp: result };
-      obj11.accessibilityLabel = intl2.formatToPlainString(tmp3(1114).t["+l04BN"], obj13);
+      obj11.accessibilityLabel = intl2.formatToPlainString(util.t["+l04BN"], obj13);
       obj10.footerInfo = obj11;
       const obj12 = { id: null, size: 16, icon: null, canAnimate: false };
     }

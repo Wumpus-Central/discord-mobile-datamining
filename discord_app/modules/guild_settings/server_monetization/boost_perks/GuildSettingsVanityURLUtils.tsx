@@ -12,19 +12,19 @@ export const getErrorMessageFromErrorCode = function getErrorMessageFromErrorCod
   if (constants.UNKNOWN_CHANNEL === code) {
     const intl7 = util.intl;
     return intl7.string(util.t.ETCmRa);
-  } else if (tmp.INVALID_PERMISSIONS === code) {
+  } else if (constants.INVALID_PERMISSIONS === code) {
     const intl6 = util.intl;
     return intl6.string(util.t.lXtut1);
-  } else if (tmp.INVALID_ACCESS === code) {
+  } else if (constants.INVALID_ACCESS === code) {
     const intl5 = util.intl;
     return intl5.string(util.t.TAXOKw);
-  } else if (tmp.VANITY_URL_REQUIRED_FOR_PUBLISHED_GUILDS === code) {
+  } else if (constants.VANITY_URL_REQUIRED_FOR_PUBLISHED_GUILDS === code) {
     const intl4 = util.intl;
     return intl4.string(util.t.ZpuxVs);
-  } else if (tmp.VANITY_URL_EMPLOYEE_ONLY_GUILD_DISABLED === code) {
+  } else if (constants.VANITY_URL_EMPLOYEE_ONLY_GUILD_DISABLED === code) {
     const intl3 = util.intl;
     return intl3.string(util.t.tSBmIv);
-  } else if (tmp.VANITY_URL_REQUIREMENTS_NOT_MET === code) {
+  } else if (constants.VANITY_URL_REQUIREMENTS_NOT_MET === code) {
     const intl2 = util.intl;
     return intl2.string(util.t["w+yGQT"]);
   } else {

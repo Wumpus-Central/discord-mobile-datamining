@@ -1,6 +1,7 @@
 // discord_app/modules/messages/BackgroundTaskManager.native.tsx
 import PlatformUtils2 from "../../utils/PlatformUtils.tsx";
 import ForegroundServiceManagerDefault from "../foreground_service/mobile/ForegroundServiceManager.android.tsx";
+import ForegroundServiceManagerTypes from "../foreground_service/mobile/ForegroundServiceManagerTypes.tsx";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 
 require = fn;
@@ -15,8 +16,8 @@ function startBackgroundTask(arg0) {
       obj = {
         title,
         content,
-        priority: tmp(7758).ServiceNotificationPriority.MEDIUM,
-        type: tmp(7758).ServiceNotificationType.FILE_UPLOAD,
+        priority: ForegroundServiceManagerTypes.ServiceNotificationPriority.MEDIUM,
+        type: ForegroundServiceManagerTypes.ServiceNotificationType.FILE_UPLOAD,
         usesGateway: false,
       };
       return ForegroundServiceManagerDefault.addServiceHandler(obj);
@@ -46,7 +47,7 @@ function endBackgroundTask(arg0) {
 function backgroundify(arg0, arg1) {
   closure_0 = arg0;
   closure_1 = arg1;
-  return asyncGeneratorStep(async (arg0, value) => {
+  return asyncGeneratorStep(async () => {
     if (c5 === 2) {
       c5 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -101,14 +102,13 @@ function backgroundify(arg0, arg1) {
             value: closure_129_0().finally(() => {
               if (closure_1_0 !== c5) {
                 if (obj.isAndroid()) {
-                  closure_1(tmp3[3]).removeServiceHandler(tmp);
-                  const obj2 = closure_1(tmp3[3]);
+                  closure_1(dependencyMap[3]).removeServiceHandler(closure_1_0);
+                  const obj2 = closure_1(dependencyMap[3]);
                 } else {
                   const DCDBackgroundTaskManager = c4.DCDBackgroundTaskManager;
-                  DCDBackgroundTaskManager.endBackgroundTask(tmp);
+                  DCDBackgroundTaskManager.endBackgroundTask(closure_1_0);
                 }
-                obj = closure_0(closure_2[2]);
-                tmp3 = closure_2;
+                obj = closure_0(dependencyMap[2]);
               }
             }),
             done: true,
@@ -116,7 +116,7 @@ function backgroundify(arg0, arg1) {
           return obj;
         }
       } catch (tmp18) {
-        closure_2 = tmp18;
+        dependencyMap = tmp18;
         if (tmp4 === c3) {
           c5 = tmp2;
           throw tmp18;

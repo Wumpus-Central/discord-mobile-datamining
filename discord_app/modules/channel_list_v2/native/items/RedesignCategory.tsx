@@ -78,7 +78,7 @@ function renderCategoryItem(muted) {
       const tmp18Result = tmp18(tmp19, obj1);
       const items2 = [];
       if (null != trailingAction) {
-        let obj2 = { name, label: trailingAction.label };
+        const obj2 = { name, label: trailingAction.label };
         items2.push(obj2);
       }
       if (null != longPressAction) {
@@ -107,14 +107,12 @@ function renderCategoryItem(muted) {
             const actionName = nativeEvent.nativeEvent.actionName;
             if (c17 === actionName) {
               if (trailingAction != null) {
-                obj2.perform();
+                trailingAction.perform();
               }
-              obj2 = trailingAction;
             } else if (c18 === actionName) {
               if (longPressAction != null) {
-                obj.perform();
+                longPressAction.perform();
               }
-              obj = longPressAction;
             }
           };
         }
@@ -123,10 +121,10 @@ function renderCategoryItem(muted) {
         obj4.onLongPress = onLongPress;
         obj4.style = items;
         obj4.children = tmp18Result;
-        let tmp28Result = tmp28(trailingAction(5123).PressableHighlight, obj4);
+        let tmp28Result = closure_11(trailingAction(5123).PressableHighlight, obj4);
       } else {
         const obj5 = { accessibilityRole: "header", style: items, children: tmp18Result };
-        tmp28Result = tmp28(View, obj5);
+        tmp28Result = closure_11(View, obj5);
       }
       return tmp28Result;
     } else {
@@ -157,9 +155,9 @@ function renderCategoryItem(muted) {
     obj7.androidRippleConfig = androidRippleConfig;
     let colors = longPressAction(576).colors;
     const obj8 = { size: "xxs", color: flag ? colors.ICON_MUTED : colors.TEXT_SUBTLE };
-    colors = tmp9(Icon, obj8);
+    colors = closure_11(Icon, obj8);
     obj7.children = colors;
-    obj7 = tmp9(trailingAction(5123).PressableOpacity, obj7);
+    obj7 = closure_11(trailingAction(5123).PressableOpacity, obj7);
     obj6.children = obj7;
     closure_11(View, obj6);
   }

@@ -49,7 +49,7 @@ export default function PremiumFeaturesCards(onFirstCardLayout) {
   const items2 = [closure_5().container, onFirstCardLayout.style];
   obj.style = items2;
   return (
-    <View style={null} onLayout={arg0.onLayout}>
+    <View style={null} onLayout={onFirstCardLayout.onLayout}>
       {items1.map((premiumType, index) => {
         let tmp3;
         if (0 === index) {

@@ -98,7 +98,7 @@ export const ForumPostAppliedTags = function ForumPostAppliedTags(appliedTags) {
     obj1.hasUnreads = hasUnreads;
     items2[1] = closure_3(appliedTags(hasUnreads[5]).AppliedForumTag, obj1);
     obj.children = items2;
-    tmp2Result = tmp2(closure_5, obj);
+    tmp2Result = closure_4(closure_5, obj);
   }
   items1[1] = tmp2Result;
   obj.children = items1;

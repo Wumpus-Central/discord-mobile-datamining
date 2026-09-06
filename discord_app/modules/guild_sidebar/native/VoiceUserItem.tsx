@@ -69,20 +69,20 @@ export default noop.memo(function VoiceUserItem(guildId) {
   }
   function getSource() {
     if (null != _require) {
-      if (null != tmp.avatar) {
-        let guildMemberAvatarSource = AvatarUtilsDefault.getGuildMemberAvatarSource(tmp, user);
+      if (null != _require.avatar) {
+        let guildMemberAvatarSource = AvatarUtilsDefault.getGuildMemberAvatarSource(_require, user);
       }
       return guildMemberAvatarSource;
     }
     guildMemberAvatarSource = user.getAvatarSource(guildId);
   }
-  const gameRecord = tmp5(tmp3[13])(application_id).gameRecord;
+  const gameRecord = user(tmp3[13])(application_id).gameRecord;
   const items1 = [guildId, channelId, application_id];
   const callback = channelId.useCallback(() => {
     const obj = { guild_id: guildId, channel_id: channelId, application_id };
     obj.track(AnalyticEvents.VOICE_CHANNEL_GAME_ACTIVITY_SHOWN, obj);
   }, items1);
-  let tmp2Result = tmp2(tmp3[15]);
+  let tmp2Result = require("ReanimatedRexport");
   class A {
     constructor() {
       if (ringing) {
@@ -130,13 +130,13 @@ export default noop.memo(function VoiceUserItem(guildId) {
     ringing,
     shouldAnimate: stateFromStores,
     PULSE_ENDING_OPACITY: 0.4,
-    withRepeat: tmp2(tmp3[15]).withRepeat,
-    withSequence: tmp2(tmp3[15]).withSequence,
-    withDelay: tmp2(tmp3[15]).withDelay,
+    withRepeat: require("ReanimatedRexport").withRepeat,
+    withSequence: require("ReanimatedRexport").withSequence,
+    withDelay: require("ReanimatedRexport").withDelay,
     INNER_PULSE_DELAY: 100,
-    withTiming: tmp2(tmp3[16]).withTiming,
+    withTiming: require("timing").withTiming,
     PULSE_DURATION: 250,
-    Easing: tmp2(tmp3[15]).Easing,
+    Easing: require("ReanimatedRexport").Easing,
     PULSE_STARTING_OPACITY: 0.1,
     FADE_DURATION: 500,
   };
@@ -146,7 +146,7 @@ export default noop.memo(function VoiceUserItem(guildId) {
   if (collapsed) {
     obj = { style: tmp.voiceStateCollapsed, children: null };
     const obj1 = { source: getSource, size: XSMALL_20 };
-    obj.children = closure_7(tmp2(tmp3[5]).Avatar, obj1);
+    obj.children = closure_7(require("native").Avatar, obj1);
     let tmp12Result = closure_7(ringing, obj);
   } else {
     const items2 = [tmp.voiceState, ,];
@@ -159,9 +159,9 @@ export default noop.memo(function VoiceUserItem(guildId) {
     items2[2] = tmp11;
     obj2.style = items2;
     let obj3 = { source: getSource, size: XSMALL_20 };
-    const items3 = [closure_7(tmp2(tmp3[5]).Avatar, obj3), , , , , , , ,];
+    const items3 = [closure_7(require("native").Avatar, obj3), , , , , , , ,];
     let obj4 = { variant, color };
-    let tmp5Result = tmp5(tmp3[18]);
+    let tmp5Result = user(tmp3[18]);
     const merged = Object.assign(guildId);
     items3[1] = closure_7(tmp5Result, obj4);
     if (disabled) {
@@ -172,44 +172,44 @@ export default noop.memo(function VoiceUserItem(guildId) {
         if (video) {
           tmp13Result = null;
           if (!disabled) {
-            let obj5 = { size: "custom", color: tmp17, style: tmp.voiceStateIcon };
-            tmp13Result = tmp13(tmp2(tmp3[23]).VideoIcon, obj5);
+            let obj5 = { size: "custom", color, style: tmp.voiceStateIcon };
+            tmp13Result = closure_7(require("VideoIcon").VideoIcon, obj5);
           }
         }
         items3[4] = tmp13Result;
         tmp13Result = null;
         if (isInEmbeddedActivity) {
           let obj6 = {
-            source: tmp5(tmp3[24]),
-            size: tmp2(tmp3[5]).Icon.Sizes.REFRESH_SMALL_16,
+            source: user(tmp3[24]),
+            size: require("native").Icon.Sizes.REFRESH_SMALL_16,
             style: tmp.legacyVoiceStateIcon,
           };
-          tmp13Result = tmp13(tmp2(tmp3[5]).Icon, obj6);
+          tmp13Result = closure_7(require("native").Icon, obj6);
         }
         items3[5] = tmp13Result;
-        tmp5Result = tmp5(tmp3[25]);
+        tmp5Result = user(tmp3[25]);
         if (platform == null) {
           platform = "";
         }
         let tmp5Result1Result = tmp5Result(platform);
         if (tmp5Result1Result == null) {
-          tmp2Result = tmp2(tmp3[25]);
+          tmp2Result = require("getConsoleIcon");
           tmp5Result1Result = tmp2Result.getConsoleIconForVoicePlatform(voicePlatform);
         }
         let tmp13Result1 = null;
         if (null != tmp5Result1Result) {
           const obj7 = {
             source: tmp5Result1Result,
-            size: tmp2(tmp3[5]).Icon.Sizes.REFRESH_SMALL_16,
+            size: require("native").Icon.Sizes.REFRESH_SMALL_16,
             style: tmp.legacyVoiceStateIcon,
           };
-          tmp13Result1 = tmp13(tmp2(tmp3[5]).Icon, obj7);
+          tmp13Result1 = closure_7(require("native").Icon, obj7);
         }
         items3[6] = tmp13Result1;
         let tmp13Result2 = null;
         if (stream) {
           let obj8 = { style: tmp.legacyVoiceStateIcon };
-          tmp13Result2 = tmp13(tmp2(tmp3[5]).LiveTag, obj8);
+          tmp13Result2 = closure_7(require("native").LiveTag, obj8);
         }
         items3[7] = tmp13Result2;
         let tmp13Result3 = null;
@@ -219,37 +219,36 @@ export default noop.memo(function VoiceUserItem(guildId) {
             tmp13Result3 = null;
             if (null != gameRecord) {
               let obj9 = { game: gameRecord, size: 16, fallback: "none", style: tmp.gameIcon, onShown: callback };
-              tmp13Result3 = tmp13(tmp5(tmp3[26]), obj9);
+              tmp13Result3 = closure_7(user(tmp3[26]), obj9);
             }
           }
         }
         items3[8] = tmp13Result3;
         obj2.children = items3;
-        tmp12Result = tmp12(tmp5(tmp3[15]).View, obj2);
+        tmp12Result = closure_8(user(tmp3[15]).View, obj2);
       } else if (serverDeaf) {
         const obj10 = { style: tmp.voiceStateIcon, color: "text-feedback-critical", size: "custom" };
-        let tmp13Result4 = tmp13(tmp2(tmp3[21]).HeadphonesDenyIcon, obj10);
+        let tmp13Result4 = closure_7(require("HeadphonesDenyIcon").HeadphonesDenyIcon, obj10);
       } else {
         tmp13Result4 = null;
         if (deaf) {
-          const obj11 = { style: tmp.voiceStateIcon, size: "custom", color: tmp17 };
-          tmp13Result4 = tmp13(tmp2(tmp3[22]).HeadphonesSlashIcon, obj11);
+          const obj11 = { style: tmp.voiceStateIcon, size: "custom", color };
+          tmp13Result4 = closure_7(require("HeadphonesSlashIcon").HeadphonesSlashIcon, obj11);
         }
       }
     } else if (serverMute) {
       const obj12 = { style: tmp.voiceStateIcon, color: "text-feedback-critical", size: "custom" };
-      let tmp13Result5 = tmp13(tmp2(tmp3[19]).MicrophoneDenyIcon, obj12);
+      let tmp13Result5 = closure_7(require("MicrophoneDenyIcon").MicrophoneDenyIcon, obj12);
     } else if (localMute) {
-      const obj13 = { style: tmp.voiceStateIcon, size: "custom", color: tmp17 };
-      tmp13Result5 = tmp13(tmp2(tmp3[19]).MicrophoneDenyIcon, obj13);
+      const obj13 = { style: tmp.voiceStateIcon, size: "custom", color };
+      tmp13Result5 = closure_7(require("MicrophoneDenyIcon").MicrophoneDenyIcon, obj13);
     } else {
       tmp13Result5 = null;
       if (mute) {
-        const obj14 = { style: tmp.voiceStateIcon, size: "custom", color: tmp17 };
-        tmp13Result5 = tmp13(tmp2(tmp3[20]).MicrophoneSlashIcon, obj14);
+        const obj14 = { style: tmp.voiceStateIcon, size: "custom", color };
+        tmp13Result5 = closure_7(require("MicrophoneSlashIcon").MicrophoneSlashIcon, obj14);
       }
     }
-    tmp12 = closure_8;
   }
   return tmp12Result;
 });

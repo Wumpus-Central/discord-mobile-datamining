@@ -13,7 +13,7 @@ import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 import UserStore from "../../stores/UserStore.tsx";
 
 require = fn;
-let closure_11 = async function _saveProfileChanges(arg0, value) {
+let closure_11 = async function _saveProfileChanges(arg0) {
   if (c9 === 2) {
     c9 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -89,7 +89,7 @@ let closure_11 = async function _saveProfileChanges(arg0, value) {
               rejectWithError: false,
             };
             let obj4 = {};
-            obj4[bannerSurface] = tmp70;
+            obj4[bannerSurface] = closure_2;
             headersForMd5 = InlineUploaderDefault.buildHeadersForMd5(obj4);
             request.headers = headersForMd5;
             HTTP.patch(request);
@@ -99,7 +99,6 @@ let closure_11 = async function _saveProfileChanges(arg0, value) {
             c9 = 3;
             return { value: "HermesInternal", done: null };
           }
-          tmp70 = closure_2;
         }
       } else if (1 === tmp7) {
         c7 = 0;

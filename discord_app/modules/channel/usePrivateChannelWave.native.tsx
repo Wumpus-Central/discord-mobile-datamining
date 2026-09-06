@@ -18,7 +18,7 @@ export default function usePrivateChannelWave(id, arg1) {
   const items = [id.id, first];
   let obj = { waveShouldShow: null, wavePressed: null };
   const callback = noop.useCallback(
-    asyncGeneratorStep(async (arg0, value) => {
+    asyncGeneratorStep(async () => {
       if (c5 === 2) {
         c5 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");

@@ -78,10 +78,10 @@ function CredentialList(navigation) {
       obj.trailing = closure_1_9(navigation(_undefined[12]).ButtonGroup, obj);
       let formatResult = null;
       if (null != label.last_used) {
-        const intl3 = tmp2(tmp3[11]).intl;
-        const obj3 = { lastUsed: tmp2(tmp3[21]).formatDate(label.last_used) };
-        formatResult = intl3.format(tmp2(tmp3[11]).t["7JgxF5"], obj3);
-        const tmp2Result = tmp2(tmp3[21]);
+        const intl3 = navigation(_undefined[11]).intl;
+        const obj3 = { lastUsed: navigation(_undefined[21]).formatDate(label.last_used) };
+        formatResult = intl3.format(navigation(_undefined[11]).t["7JgxF5"], obj3);
+        const tmp2Result = navigation(_undefined[21]);
       }
       obj.subLabel = formatResult;
       return closure_1_8(navigation(_undefined[20]).TableRow, obj, label.id);
@@ -154,14 +154,14 @@ export default function PasskeyInitStep(arg0) {
         headerRight() {
           if (navigation(hasFetchedCredentials[24]).hasWebAuthn) {
             const obj = { text: null, style: null, hitSlop: null, onPress: null, foregroundRipple: true };
-            const intl = tmp(tmp2[11]).intl;
-            obj.text = intl.string(tmp(tmp2[11]).t.OYkgVk);
+            const intl = navigation(hasFetchedCredentials[11]).intl;
+            obj.text = intl.string(navigation(hasFetchedCredentials[11]).t.OYkgVk);
             obj.style = headerAddButton.headerAddButton;
             obj.hitSlop = hitSlop;
             obj.onPress = function onPress() {
               closure_1_0.push(constants.REGISTER);
             };
-            return closure_2_8(tmp(tmp2[25]).HeaderActionButton, obj);
+            return closure_2_8(navigation(hasFetchedCredentials[25]).HeaderActionButton, obj);
           }
         },
       });

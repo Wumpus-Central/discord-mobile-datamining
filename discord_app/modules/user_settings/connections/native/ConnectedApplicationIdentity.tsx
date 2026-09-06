@@ -115,7 +115,7 @@ export default function ConnectedApplicationIdentity(identity) {
     c2 = 0;
     c4 = 0;
     c3 = 0;
-    return (function* (arg0, value) {
+    return (function* (arg0) {
       closure_1 = tmp3;
       v3(connection_visible);
       token(application[16]);

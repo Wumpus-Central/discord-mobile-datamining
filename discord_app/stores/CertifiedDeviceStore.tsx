@@ -24,13 +24,13 @@ prototype["initialize"] = function initialize() {
           type.hardwareMute = false;
         }
       });
-      if (null != closure_1_5[arg1]) {
+      if (null != dependencyMap[arg1]) {
         const item1 = arr.forEach((item) => {
           delete tmp3[tmp2];
           return tmp;
         });
       }
-      closure_1_5[arg1] = arr;
+      dependencyMap[arg1] = dependencyMap[arg1];
       const item2 = arr.forEach((id) => {
         closure_1_6[id.id] = id;
         return id;
@@ -122,7 +122,7 @@ const certifiedDeviceStore = new CertifiedDeviceStore(DispatcherDefault, {
       return id;
     });
     const Storage = Storage2.Storage;
-    const result = Storage.set(CertifiedDeviceStore, tmp);
+    const result = Storage.set(CertifiedDeviceStore, closure_5);
     closure_7 = closure_7 + 1;
   },
 });

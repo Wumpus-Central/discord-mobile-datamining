@@ -56,22 +56,21 @@ function ShopThisLookCard(skuId) {
   memo = stateFromStores.useMemo(() => ShopThisLookUtils.isShoppableCollectibleSku(stateFromStores), items2);
   const items3 = [product, skuId];
   const memo1 = stateFromStores.useMemo(() => {
-    if (null == c2) {
+    if (null == _undefined) {
       return null;
     } else {
-      if (obj.getIsVariantProduct(tmp)) {
+      if (obj.getIsVariantProduct(_undefined)) {
         const _Math = Math;
-        const variants = tmp.variants;
+        const variants = _undefined.variants;
         const bound = Math.max(
           0,
           variants.findIndex((skuId) => skuId.skuId === skuId),
         );
-        return tmp2(7553).getSelectedProduct(tmp, bound);
+        return CollectiblesProductUtils.getSelectedProduct(_undefined, bound);
       } else {
-        return tmp;
+        return _undefined;
       }
       obj = CollectiblesProductUtils;
-      tmp2 = require;
     }
   }, items3);
   ref = stateFromStores.useRef(false);
@@ -131,13 +130,11 @@ function ShopThisLookCard(skuId) {
           callback1 = { selectedProduct: memo1, style: null };
           wishlistButton = wishlistButton.wishlistButton;
           callback1.style = wishlistButton;
-          tmp17Result = tmp17(tmp18(8839), callback1);
+          tmp17Result = closure_9(onPress(8839), callback1);
         }
         items7[1] = tmp17Result;
         obj.children = items7;
         let tmp15Result = closure_10(memo, obj);
-        tmp17 = closure_9;
-        tmp18 = onPress;
       } else {
         const obj2 = {
           sku: stateFromStores,

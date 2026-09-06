@@ -60,4 +60,5 @@ export const subscribeChannelDimensions = function subscribeChannelDimensions(ar
     } while (result <= bound2);
   }
   DispatcherDefault.dispatch({ type: "GUILD_SUBSCRIPTIONS_CHANNEL", guildId, channelId, ranges: items });
+  const tmp2 = -bound;
 };

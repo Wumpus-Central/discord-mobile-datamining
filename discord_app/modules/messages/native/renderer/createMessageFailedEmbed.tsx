@@ -1,6 +1,7 @@
 // discord_app/modules/messages/native/renderer/createMessageFailedEmbed.tsx
 import Constants from "../../../../Constants.tsx";
 import util from "../../../../intl/index.native.tsx";
+import FileUtils from "../../../../utils/FileUtils.tsx";
 import RowGeneratorConstants from "RowGeneratorConstants.tsx";
 import renderer_EmbedUtils from "EmbedUtils.tsx";
 import _modDef8155 from "../../../../../_runtime/metro/08155__.js";
@@ -44,12 +45,11 @@ export default function createMessageFailedEmbed(useAttachmentUploadPreview) {
       let str = "";
       if (0 !== uploaderFile.currentSize) {
         const _HermesInternal = HermesInternal;
-        str = " (" + tmp6(5134).sizeString(uploaderFile.currentSize) + ")";
-        const tmp6Result = tmp6(5134);
+        str = " (" + FileUtils.sizeString(uploaderFile.currentSize) + ")";
+        const tmp6Result = FileUtils;
       }
       obj.attachmentsSize = "" + str;
       obj.bodyTextColor = colors.embedBodyTextColor;
-      tmp6 = require;
     }
   } else {
     obj = {

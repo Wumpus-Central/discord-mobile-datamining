@@ -53,14 +53,16 @@ export default function useGuildsBarBadges(arg0, mentionCount, isMentionLowImpor
         if (null != currentUser) {
           if (null != request) {
             if (request.userId === currentUser.id) {
-              const member = GuildMemberStore.getMember(tmp2, request.userId);
+              const member = GuildMemberStore.getMember(closure_0, request.userId);
               if (null != member) {
+                if (!member.isPending) {
+                  GuildJoinRequestUtils;
+                }
               }
               return request.applicationStatus;
             }
           }
         }
-        tmp2 = closure_0;
       }
     },
     items2,

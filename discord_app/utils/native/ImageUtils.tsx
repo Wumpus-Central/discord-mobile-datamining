@@ -1,10 +1,12 @@
 // discord_app/utils/native/ImageUtils.tsx
+import _modDef12 from "../../../_runtime/metro/00012__.js";
 import AvatarUtils from "../AvatarUtils.tsx";
 import utils_AvatarUtils from "AvatarUtils.tsx";
 import AttachmentImageLadderExperiment from "../../modules/image_upload/AttachmentImageLadderExperiment.tsx";
 import AttachmentImageLadder from "../../modules/image_upload/AttachmentImageLadder.tsx";
 import _modDef1471 from "../../../_runtime/metro/01471__.js";
 import useWindowDimensions from "../../modules/screen/useWindowDimensions.native.tsx";
+import getDevicePixelRatioDefault from "../getDevicePixelRatio.native.tsx";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
 
 require = fn;
@@ -28,10 +30,10 @@ function getSrcWithWidthAndHeight(animated) {
     tmp6.format = format;
   }
   if (targetWidth > closure_6) {
-    targetWidth = tmp8;
+    targetWidth = closure_6;
   }
   if (targetHeight > closure_6) {
-    targetHeight = tmp8;
+    targetHeight = closure_6;
   }
   if (targetWidth !== sourceWidth) {
     const tmp9 = (function getAttachmentLadderConfig(arg0) {
@@ -51,7 +53,7 @@ function getSrcWithWidthAndHeight(animated) {
     if (null != tmp9) {
       obj = { targetWidth, targetHeight, sourceWidth, sourceHeight, maxUpscale: null };
       const obj2 = AttachmentImageLadder;
-      obj.maxUpscale = AttachmentImageLadder.getSnapDownMaxUpscale(tmp9, tmp2(1878)());
+      obj.maxUpscale = AttachmentImageLadder.getSnapDownMaxUpscale(tmp9, getDevicePixelRatioDefault());
       size = obj2.snapAttachmentDimensions(obj);
     }
     if (!tmp12) {
@@ -63,15 +65,15 @@ function getSrcWithWidthAndHeight(animated) {
   if (flag) {
     tmp6.animated = true;
   }
-  let tmp2Result = tmp2(12);
+  let tmp2Result = _modDef12;
   let text = tmp5;
   if (!tmp2Result.isEmpty(tmp6)) {
-    tmp2Result = tmp2(1471);
+    tmp2Result = _modDef1471;
     text = `${tmp5}?${obj6.stringify(tmp6)}`;
   }
   return text;
 }
-function getMobileOptimizedSrc(proxy_url, width, height, png) {
+function getMobileOptimizedSrc(proxy_url, width, height) {
   let tmp = png;
   if (png === undefined) {
     tmp = null;

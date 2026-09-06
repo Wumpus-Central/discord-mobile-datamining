@@ -1,5 +1,6 @@
 // discord_app/modules/guild_member_verification/MemberVerificationUtils.tsx
 import Constants from "../../Constants.tsx";
+import GlobalUtils from "../../utils/GlobalUtils.tsx";
 import MemberVerificationTypes from "MemberVerificationTypes.tsx";
 import MemberVerificationConstants from "MemberVerificationConstants.tsx";
 import size from "../../../_runtime/metro/00002__.js";
@@ -15,13 +16,13 @@ export const isValidFormResponse = function isValidFormResponse(required) {
       return false;
     } else {
       if (MemberVerificationTypes.VerificationFormFieldTypes.TERMS !== field_type) {
-        if (tmp4(4384).VerificationFormFieldTypes.VERIFICATION !== field_type) {
-          if (tmp4(4384).VerificationFormFieldTypes.TEXT_INPUT !== field_type) {
-            if (tmp4(4384).VerificationFormFieldTypes.PARAGRAPH !== field_type) {
-              if (tmp4(4384).VerificationFormFieldTypes.MULTIPLE_CHOICE === field_type) {
+        if (MemberVerificationTypes.VerificationFormFieldTypes.VERIFICATION !== field_type) {
+          if (MemberVerificationTypes.VerificationFormFieldTypes.TEXT_INPUT !== field_type) {
+            if (MemberVerificationTypes.VerificationFormFieldTypes.PARAGRAPH !== field_type) {
+              if (MemberVerificationTypes.VerificationFormFieldTypes.MULTIPLE_CHOICE === field_type) {
                 return typeof response === "number";
               } else {
-                return tmp4(1369).assertNever(field_type);
+                return GlobalUtils.assertNever(field_type);
               }
             }
           }

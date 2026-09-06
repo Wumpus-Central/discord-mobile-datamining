@@ -14,7 +14,7 @@ export default {
       asyncGeneratorStep(async () => {
         closure_1 = tmp5;
         await tmp2(paths[3])(paths[2], paths.paths);
-        closure_128_0 = arg1.default;
+        closure_128_0 = value.default;
         if (null != closure_129_0) {
           closure_128_0.modalConfig = { animation: closure_129_0 };
         }

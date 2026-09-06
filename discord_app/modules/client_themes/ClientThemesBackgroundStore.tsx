@@ -6,6 +6,8 @@ import UserSettings from "../user_settings/UserSettings.tsx";
 import dismissible_content from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
 import PremiumUtilsDefault from "../../utils/PremiumUtils.tsx";
 import DismissibleContentUnsafeUtils from "../dismissible_content/DismissibleContentUnsafeUtils.tsx";
+import UserUtils from "../../utils/UserUtils.tsx";
+import ThemeActionCreators from "../user_settings/ThemeActionCreators.tsx";
 import SelectivelySyncedUserSettingsStore from "../user_settings/SelectivelySyncedUserSettingsStore.tsx";
 import ThemeStore from "../user_settings/ThemeStore.tsx";
 import UnsyncedUserSettingsStore from "../user_settings/UnsyncedUserSettingsStore.tsx";
@@ -59,11 +61,11 @@ function handleUserSettingsProtoStoreUpdate() {
     result = null == backgroundGradientPresetId;
   }
   if (!result) {
-    let tmpResult = tmp(4407);
+    let tmpResult = require("isPerModeThemingActive");
     result = tmpResult.isPerModeThemingActive();
   }
   if (!result) {
-    tmpResult = tmp(4408);
+    tmpResult = ThemeActionCreators;
     tmpResult.setUseSystemTheme(SystemThemeState.OFF);
   }
   if (null != backgroundGradientPresetId) {
@@ -242,10 +244,9 @@ const clientThemesBackgroundStore = new ClientThemesBackgroundStore(DispatcherDe
               c15 = true;
             }
           }
-          tmp6Result = tmp6(4404);
+          tmp6Result = UserUtils;
         }
         obj2 = DismissibleContentUnsafeUtils;
-        tmp6 = require;
       }
     }
   },

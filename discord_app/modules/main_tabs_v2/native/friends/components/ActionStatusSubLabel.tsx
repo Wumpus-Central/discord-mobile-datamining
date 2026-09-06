@@ -258,7 +258,7 @@ export const ActionStatusSubLabel = function ActionStatusSubLabel(lineHeight) {
       lineClamp: 1,
       children: secondaryLabel,
     };
-    tmp = tmp9(tmp10, obj4);
+    tmp = animate(closure_7, obj4);
   }
   items1[1] = tmp;
   obj5 = {

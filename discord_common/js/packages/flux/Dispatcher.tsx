@@ -52,7 +52,7 @@ prototype["getOrderedActionHandlers"] = function getOrderedActionHandlers(type) 
   }
   return result;
 };
-prototype["register"] = function register(name, obj, storeDidChange, band, token) {
+prototype["register"] = function register(name, obj, storeDidChange, band) {
   const self = this;
   if (token === undefined) {
     token = self.createToken();
@@ -252,10 +252,10 @@ prototype2["dispatch"] = function dispatch(arg0) {
     _waitQueue.push(() => {
       try {
         if (null == self.functionCache[closure_0.type]) {
-          tmp.functionCache[tmp2.type] = (type) => closure_1_1._dispatchWithDevtools(type);
-          setDisplayName(tmp.functionCache[tmp2.type], "dispatch_" + tmp2.type);
+          self.functionCache[closure_0.type] = (type) => closure_1_1._dispatchWithDevtools(type);
+          setDisplayName(self.functionCache[closure_0.type], "dispatch_" + closure_0.type);
         }
-        const functionCache = tmp.functionCache;
+        const functionCache = self.functionCache;
         functionCache[closure_0.type](closure_0);
         closure_0();
       } catch (tmp9) {
@@ -278,6 +278,8 @@ prototype2["dispatchForStoreTest"] = function dispatchForStoreTest(type, arg1) {
     }
     continue;
   }
+  const _actionHandlers = this._actionHandlers;
+  const orderedActionHandlers = this._actionHandlers.getOrderedActionHandlers(type);
 };
 prototype2["flushWaitQueue"] = function flushWaitQueue() {
   const self = this;
@@ -362,6 +364,7 @@ prototype2["_dispatchWithLogging"] = function _dispatchWithLogging(type) {
   try {
     const _HermesInternal3 = HermesInternal;
     profiling.measure("DISPATCH[" + type.type + "]", type.type);
+    const tmp8Result = profiling;
   } catch (err) {}
 };
 prototype2["_dispatch"] = function _dispatch(type, fn) {
@@ -376,10 +379,10 @@ prototype2["_dispatch"] = function _dispatch(type, fn) {
       return false;
     }
   }
-  const orderedActionHandlers = self._actionHandlers.getOrderedActionHandlers(type);
   c3 = 0;
+  const length = self._actionHandlers.getOrderedActionHandlers(type).length;
   let num = 0;
-  if (0 < orderedActionHandlers.length) {
+  if (0 < length) {
     do {
       let tmp3 = (function _loop() {
         if (false !== closure_1(orderedActionHandlers[c3].name, () => actionHandler(closure_0))) {
@@ -397,6 +400,8 @@ prototype2["_dispatch"] = function _dispatch(type, fn) {
       const item = closure_4.forEach((fn) => fn(type));
     });
   }
+  const _actionHandlers = self._actionHandlers;
+  const orderedActionHandlers = self._actionHandlers.getOrderedActionHandlers(type);
 };
 prototype2["addInterceptor"] = function addInterceptor(handleAction) {
   const _interceptors = this._interceptors;

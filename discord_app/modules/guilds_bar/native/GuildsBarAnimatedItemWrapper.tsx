@@ -221,17 +221,17 @@ let closure_13 = createStyles.createStyles((arg0, arg1, width, height) => {
   let str = "transparent";
   let str2 = "transparent";
   if (!arg1) {
-    str2 = tmp(576).colors.MOBILE_GUILDBAR_ICON_BACKGROUND_DEFAULT;
+    str2 = nativeDefault.colors.MOBILE_GUILDBAR_ICON_BACKGROUND_DEFAULT;
   }
   size1.backgroundColor = str2;
   obj.itemShape = size1;
   if (arg0) {
     if (!arg1) {
-      str = tmp(576).colors.BACKGROUND_SURFACE_HIGH;
+      str = nativeDefault.colors.BACKGROUND_SURFACE_HIGH;
     }
     let BACKGROUND_BRAND = str;
   } else {
-    BACKGROUND_BRAND = tmp(576).colors.BACKGROUND_BRAND;
+    BACKGROUND_BRAND = nativeDefault.colors.BACKGROUND_BRAND;
   }
   obj.itemShapeSelected = { backgroundColor: BACKGROUND_BRAND };
   return obj;
@@ -350,11 +350,11 @@ export default function GuildsBarAnimatedItemWrapper(id) {
       return obj;
     }
     if (null != overState) {
-      if ("self" !== tmp3) {
+      if ("self" !== overState) {
         let str5 = "drag-target";
       }
       str2 = str5;
-      tmp2 = tmp3;
+      tmp2 = overState;
     }
     str5 = "none";
   }, items);
@@ -392,17 +392,17 @@ export default function GuildsBarAnimatedItemWrapper(id) {
   const items3 = [expanded];
   const effect = obj4.useEffect(() => {
     if (undefined !== ref.current) {
-      if (tmp.current !== expanded) {
+      if (ref.current !== expanded) {
         let AccessibilityAnnouncer = require;
         const intl = util.intl;
         const t = util.t;
         AccessibilityAnnouncer = AccessibilityAnnouncer(4272).AccessibilityAnnouncer;
-        AccessibilityAnnouncer.announce(intl.string(tmp3 ? t.CUnsOR : t.jsudFd));
-        tmp.current = tmp3;
-        const stringResult = intl.string(tmp3 ? t.CUnsOR : t.jsudFd);
+        AccessibilityAnnouncer.announce(intl.string(expanded ? t.CUnsOR : t.jsudFd));
+        ref.current = expanded;
+        const stringResult = intl.string(expanded ? t.CUnsOR : t.jsudFd);
       }
     } else {
-      tmp.current = expanded;
+      ref.current = expanded;
     }
   }, items3);
   let tmp15 = null != accessibilityActions;

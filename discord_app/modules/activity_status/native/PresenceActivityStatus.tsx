@@ -3,7 +3,9 @@ import AppsIcon2 from "../../../design/components/Icon/native/redesign/generated
 import isEmbeddedActivityDefault from "../../activities/utils/isEmbeddedActivity.tsx";
 import GameControllerIcon from "../../../design/components/Icon/native/redesign/generated/GameControllerIcon.tsx";
 import MusicIcon from "../../../design/components/Icon/native/redesign/generated/MusicIcon.tsx";
+import ActivityStatusIconDefault from "ActivityStatusIcon.tsx";
 import TvIcon from "../../../design/components/Icon/native/redesign/generated/TvIcon.tsx";
+import ActivityStatusTextDefault from "ActivityStatusText.tsx";
 import getActivityStatusTextDefault from "../getActivityStatusText.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
@@ -33,13 +35,13 @@ export default function PresenceActivityStatus(hideText) {
     let AppsIcon = AppsIcon2.AppsIcon;
   } else if (activity.type === ActivityTypes.PLAYING) {
     AppsIcon = GameControllerIcon.GameControllerIcon;
-  } else if (activity.type === tmp3.LISTENING) {
+  } else if (activity.type === ActivityTypes.LISTENING) {
     AppsIcon = MusicIcon.MusicIcon;
   } else {
-    if (activity.type !== tmp3.WATCHING) {
-      if (activity.type !== tmp3.STREAMING) {
+    if (activity.type !== ActivityTypes.WATCHING) {
+      if (activity.type !== ActivityTypes.STREAMING) {
         AppsIcon = null;
-        if (activity.type === tmp3.COMPETING) {
+        if (activity.type === ActivityTypes.COMPETING) {
           AppsIcon = GameControllerIcon.GameControllerIcon;
         }
       }
@@ -52,13 +54,13 @@ export default function PresenceActivityStatus(hideText) {
   }
   if (tmp12) {
     let obj = { icon: AppsIcon, style: iconStyle };
-    tmp12 = React4(tmp(10882), obj);
+    tmp12 = React4(ActivityStatusIconDefault, obj);
   }
   const children = [tmp12];
   let tmp15 = !flag;
   if (!flag) {
     obj = { style: textStyle, maxFontSizeMultiplier, children: getActivityStatusTextDefault(activity, true).text };
-    tmp15 = React4(tmp(10885), obj);
+    tmp15 = React4(ActivityStatusTextDefault, obj);
   }
   children[1] = tmp15;
   return timestampProducer(hasOwnProperty, { children });

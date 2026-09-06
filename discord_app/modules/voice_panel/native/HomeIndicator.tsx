@@ -75,6 +75,7 @@ HomeIndicator["_updatePropsStack"] = function _updatePropsStack() {
       const DCDHomeIndicator2 = tmp5.DCDHomeIndicator;
       const result1 = DCDHomeIndicator2.setPrefersDeferringSystemGestures(tmp2);
     }
+    obj3 = autoHideHomeIndicator(1115);
   });
 };
 prototype["componentDidMount"] = function componentDidMount() {

@@ -62,6 +62,7 @@ export default function SelectInviteRolesActionSheet(assignableRoles) {
     if (!isEqualResult) {
       onSave(sorted);
     }
+    isEqualResult = _mod12.isEqual(sorted, items.sort());
   }, items2);
   const callback2 = memo.useCallback((arg0, arg1) => {
     assignableRoles = tmp;
@@ -74,7 +75,7 @@ export default function SelectInviteRolesActionSheet(assignableRoles) {
     if (tmp5Result) {
       obj = { containerStyles: label.roleDot, color: null, colors: null, background: false };
       ({ colorString: obj2.color, colorStrings: obj2.colors } = tmp);
-      tmp5Result = tmp5(tmp6(tmp7[12]).RoleDot, obj);
+      tmp5Result = stateFromStores(tmp6(onSave[12]).RoleDot, obj);
     }
     const items = [tmp5Result];
     let tmp13;
@@ -98,7 +99,7 @@ export default function SelectInviteRolesActionSheet(assignableRoles) {
     const children = [stateFromStores(assignableRoles(onSave[11]).FormRow, obj1)];
     tmp5Result = !tmp14;
     if (arg1 !== diff) {
-      tmp5Result = tmp5(tmp6(tmp7[11]).FormDivider, {});
+      tmp5Result = stateFromStores(tmp6(onSave[11]).FormDivider, {});
     }
     children[1] = tmp5Result;
     return callback(closure_1_9, { children });

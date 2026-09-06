@@ -2,11 +2,13 @@
 import _modDef12 from "../../../../_runtime/metro/00012__.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
+import useSafeAreaInsetsDefault from "../../safe_area/useSafeAreaInsets.native.tsx";
 import asyncRequireImpl from "../../../../_runtime/01896_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
 import useMountEffectDefault from "../../../hooks/useMountEffect.tsx";
 import usePreviousDefault from "../../../hooks/usePrevious.tsx";
+import RatingSelectorDefault from "RatingSelector.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
@@ -46,7 +48,7 @@ export default function FeedbackActionSheetV2(optionsTree) {
   c17 = undefined;
   closure_18 = undefined;
   closure_19 = undefined;
-  let tmp = first2();
+  const tmp = first2();
   let obj = ref;
   ref = ref.useRef(null);
   const tmp5 = usePreviousDefault(optionsTree);
@@ -96,6 +98,7 @@ export default function FeedbackActionSheetV2(optionsTree) {
       );
       const tmpResult = _modDef12;
     }
+    obj = _modDef12;
   }, items);
   const tmp9 = _slicedToArray(ref.useState(false), 2);
   const first1 = tmp9[0];
@@ -107,10 +110,10 @@ export default function FeedbackActionSheetV2(optionsTree) {
   if (1 === first.length) {
     first3 = first[0];
   }
-  let tmp6Result = tmp6(ref.useState(first3), 2);
+  let tmp6Result = _slicedToArray(ref.useState(first3), 2);
   first4 = tmp6Result[0];
   closure_13 = tmp6Result[1];
-  tmp6Result = tmp6(obj.useState(null), 2);
+  tmp6Result = _slicedToArray(obj.useState(null), 2);
   first5 = tmp6Result[0];
   closure_15 = tmp6Result[1];
   [c16, c17] = _slicedToArray(obj.useState(false), 2);
@@ -127,7 +130,7 @@ export default function FeedbackActionSheetV2(optionsTree) {
       value = undefined;
       const obj2 = ModalActionCreatorsDefault;
       if (first4 != null) {
-        value = iter.value;
+        value = first4.value;
       }
       obj = {
         result: null,
@@ -157,14 +160,14 @@ export default function FeedbackActionSheetV2(optionsTree) {
       };
       let problemsHeader;
       if (first4 != null) {
-        problemsHeader = iter.problemsHeader;
+        problemsHeader = first4.problemsHeader;
       }
       obj.titleLabel = problemsHeader;
-      const intl = tmp10(1114).intl;
+      const intl = util.intl;
       obj.descriptionLabel = intl.string(util.t.h95hcn);
       let hideHelpdeskLink;
       if (first4 != null) {
-        const freeformConfig = iter.freeformConfig;
+        const freeformConfig = first4.freeformConfig;
         if (freeformConfig != null) {
           hideHelpdeskLink = freeformConfig.hideHelpdeskLink;
         }
@@ -234,7 +237,7 @@ export default function FeedbackActionSheetV2(optionsTree) {
     }
     const items2 = [tmp35, ,];
     obj = { ratingOptions, selectedRating: first2, onChangeRating: callback };
-    items2[1] = closure_7(tmp3(11630), obj);
+    items2[1] = closure_7(RatingSelectorDefault, obj);
     let tmp37Result = null;
     if (!hideDontShowAgainCheckbox) {
       obj1 = { start: true, end: true, checked: first1, label: null, onPress: null };
@@ -327,7 +330,7 @@ export default function FeedbackActionSheetV2(optionsTree) {
     }
     tmp23 = null != first4 && null == first5;
   }
-  const bottom = tmp3(1611)().bottom;
+  const bottom = useSafeAreaInsetsDefault().bottom;
   let num = 48;
   if (hideDontShowAgainCheckbox) {
     num = 0;

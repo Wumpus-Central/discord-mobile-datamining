@@ -2,19 +2,21 @@
 import DispatcherDefault from "../../Dispatcher.tsx";
 import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
 import discord_common_AnalyticsUtils from "../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
+import _modDef4153 from "../../../_runtime/metro/04153__.js";
 import APIErrorDefault from "../../errors/APIError.tsx";
 import TrackedHTTPUtilsDefault from "../../utils/TrackedHTTPUtils.tsx";
 import SharedCaptchaUtils from "../captcha/SharedCaptchaUtils.tsx";
+import trackAgeGateSubmittedDefault from "experiment/trackAgeGateSubmitted.tsx";
 import AgeGateActionCreatorsAll from "../age_gate/AgeGateActionCreators.tsx";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
 
 require = fn;
-let closure_11 = async function _scorePassword(password) {
+let closure_11 = async function _scorePassword() {
   c5 = 0;
   c6 = 0;
   c4 = 0;
-  return (async (arg0, value) => {
+  return (async (arg0) => {
     if (c6 === 2) {
       c6 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -93,7 +95,7 @@ let closure_12 = async function _registerPhone(arg0) {
   c5 = 0;
   c6 = 0;
   c4 = 0;
-  let iter = (async (arg0, value) => {
+  let iter = (async (arg0) => {
     if (c6 === 2) {
       c6 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -209,11 +211,11 @@ function registerFull(giftCodeSKUId) {
   let obj = DispatcherDefault;
   obj.dispatch({ type: "REGISTER" });
   if (null != birthday) {
-    tmp4(15959)(birthday, constants2.REGISTER);
-    let tmp4Result = tmp4(1242);
+    trackAgeGateSubmittedDefault(birthday, constants2.REGISTER);
+    let tmp4Result = AnalyticsUtilsDefault;
     obj = { source: constants5.REGISTER, action: constants4.AGE_GATE_SUBMITTED };
     tmp4Result.track(constants.AGE_GATE_ACTION, obj);
-    const diffResult = tmp4(4153)().diff(birthday, "years");
+    const diffResult = _modDef4153().diff(birthday, "years");
     if (diffResult >= 13) {
       if (diffResult < 13) {
         let str3 = "23+";
@@ -227,12 +229,11 @@ function registerFull(giftCodeSKUId) {
       } else {
         str = "13-17";
       }
-      tmp4Result = tmp4(1242);
+      tmp4Result = AnalyticsUtilsDefault;
       obj = { age_bucket: str };
-      tmp4Result.track(tmp14.USER_AGE_SUBMITTED, obj);
+      tmp4Result.track(constants.USER_AGE_SUBMITTED, obj);
     }
-    const obj11 = tmp4(4153)();
-    tmp14 = constants;
+    const obj11 = _modDef4153();
   }
   const request = { url: constants3.REGISTER, body: null, trackedActionData: null, rejectWithError: false };
   const user = {

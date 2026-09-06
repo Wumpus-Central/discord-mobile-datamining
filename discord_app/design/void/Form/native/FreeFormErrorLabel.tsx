@@ -15,11 +15,11 @@ export default function Label(style) {
   const effect = noop.useEffect(() => {
     let tmp2 = null != nodeText;
     if (tmp2) {
-      tmp2 = "" !== tmp;
+      tmp2 = "" !== nodeText;
     }
     if (tmp2) {
       const AccessibilityAnnouncer = shared.AccessibilityAnnouncer;
-      AccessibilityAnnouncer.announce(tmp);
+      AccessibilityAnnouncer.announce(nodeText);
     }
   }, items);
   return jsx(nodeText(4556).Text, {

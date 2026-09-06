@@ -30,9 +30,9 @@ let SettingBuilders = {
   useDescription() {
     const allowFriendsFromMutualGuildsOnly = useAllowFriendsFromMutualGuildsOnly.useAllowFriendsFromMutualGuildsOnly();
     if (hasOwnProperty().selectedGuildId === closure_6) {
-      const intl2 = tmp(1114).intl;
+      const intl2 = util.intl;
       const string2 = intl2.string;
-      let XXGmuB = tmp(1114).t;
+      let XXGmuB = util.t;
       if (allowFriendsFromMutualGuildsOnly) {
         XXGmuB = XXGmuB.XXGmuB;
         let string2Result = string2(XXGmuB);
@@ -40,9 +40,9 @@ let SettingBuilders = {
         string2Result = string2(XXGmuB.wbYDfT);
       }
     } else {
-      const intl = tmp(1114).intl;
+      const intl = util.intl;
       const string = intl.string;
-      const t = tmp(1114).t;
+      const t = util.t;
       if (allowFriendsFromMutualGuildsOnly) {
         let stringResult = string(t.F9WY3f);
       } else {

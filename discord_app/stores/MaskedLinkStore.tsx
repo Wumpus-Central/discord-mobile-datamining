@@ -50,8 +50,8 @@ prototype["initialize"] = function initialize() {
     set3 = new Set(arr1);
   }
 };
-prototype["isTrustedDomain"] = function isTrustedDomain(arg0) {
-  const hostname = MaskedLinkStoreMethodsAdditional.getHostname(arg0);
+prototype["isTrustedDomain"] = function isTrustedDomain(url) {
+  const hostname = MaskedLinkStoreMethodsAdditional.getHostname(url);
   let flag = true;
   if (window.GLOBAL_ENV.INVITE_HOST !== hostname) {
     const _window2 = window;
@@ -118,10 +118,11 @@ const maskedLinkStore = new MaskedLinkStore(DispatcherDefault, {
     if (flag) {
       return false;
     } else {
-      set2.add(tmp(8373).getHostname(url));
-      const Storage = tmp(510).Storage;
+      set2.add(MaskedLinkStoreMethodsAdditional.getHostname(url));
+      const Storage = Storage2.Storage;
       obj = { trustedDomains: set2, trustedProtocols: set3 };
       const result = Storage.set(MaskedLinkStore, obj);
+      const tmpResult = MaskedLinkStoreMethodsAdditional;
     }
   },
   MASKED_LINK_ADD_TRUSTED_PROTOCOL: function handleAddTrustedProtocol(url) {
@@ -130,10 +131,11 @@ const maskedLinkStore = new MaskedLinkStore(DispatcherDefault, {
     if (set3.has(obj.getProtocol(url))) {
       return false;
     } else {
-      set3.add(tmp(8373).getProtocol(url));
-      const Storage = tmp(510).Storage;
+      set3.add(MaskedLinkStoreMethodsAdditional.getProtocol(url));
+      const Storage = Storage2.Storage;
       obj = { trustedDomains: set2, trustedProtocols: set3 };
       const result = Storage.set(MaskedLinkStore, obj);
+      const tmpResult = MaskedLinkStoreMethodsAdditional;
     }
   },
 });

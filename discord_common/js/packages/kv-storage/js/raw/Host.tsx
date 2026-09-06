@@ -55,7 +55,7 @@ prototype["list"] = function list() {
       const KV_RAW = closure_1_0(closure_1_1[2]).KV_RAW;
       return KV_RAW.databaseList(arg0);
     });
-    return arg1.map((data) => data.data);
+    return value.map((data) => data.data);
   })();
 };
 prototype["optimize"] = function optimize(aggressive) {

@@ -221,7 +221,7 @@ export default function GuildBoostingMarketingFaq() {
           variant: "text-sm/normal",
           children: getQuestion.getAnswer(),
         };
-        tmp = tmp7(tmp5(4556).Text, obj2);
+        tmp = closure_1_7(tmp5(4556).Text, obj2);
       }
       items3[1] = tmp;
       obj.children = items3;

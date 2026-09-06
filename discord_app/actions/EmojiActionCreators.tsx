@@ -14,7 +14,7 @@ import GatewayConnectionStore from "../modules/gateway/GatewayConnectionStore.ts
 import GuildAvailabilityStore from "../stores/GuildAvailabilityStore.tsx";
 
 require = fn;
-let closure_10 = async function _updateEmoji(arg0, value) {
+let closure_10 = async function _updateEmoji(arg0) {
   if (c6 === 2) {
     c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -266,9 +266,8 @@ export const favoriteEmoji = function favoriteEmoji(customEmojiFromJoinedGuild) 
           flag = !hasItem;
           if (!hasItem) {
             const emojis1 = emojis.emojis;
-            emojis1.push(tmp12);
+            emojis1.push(name);
           }
-          tmp12 = name;
         }
         return flag;
       },

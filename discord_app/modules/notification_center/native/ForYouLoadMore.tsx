@@ -1,5 +1,7 @@
 // discord_app/modules/notification_center/native/ForYouLoadMore.tsx
 import useStateFromStores from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
+import util from "../../../intl/index.native.tsx";
+import components_Button_Button from "../../../design/components/Button/native/Button.native.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import NotificationCenterItemsStore from "../NotificationCenterItemsStore.tsx";
 
@@ -26,13 +28,19 @@ export const ForYouLoadMore = function ForYouLoadMore(onPressLoad) {
   const items = [NotificationCenterItemsStore];
   let obj = { style: closure_6().container, children: null };
   if (obj.useStateFromStores(items, () => loading.loading)) {
-    let tmp4Result = tmp4(React2, {});
+    let tmp4Result = <React2 />;
   } else {
     obj = { variant: "secondary", grow: true, size: "md", text: null, onPress: null };
-    const intl = tmp2(1114).intl;
-    obj.text = intl.string(tmp2(1114).t["Q/LSXp"]);
+    const intl = util.intl;
+    obj.text = intl.string(util.t["Q/LSXp"]);
     obj.onPress = onPressLoad.onPressLoad;
-    tmp4Result = tmp4(tmp2(4975).Button, obj);
+    tmp4Result = jsx(components_Button_Button.Button, {
+      variant: "secondary",
+      grow: true,
+      size: "md",
+      text: null,
+      onPress: null,
+    });
   }
   obj.children = tmp4Result;
   return <React3 style={closure_6().container}>{null}</React3>;

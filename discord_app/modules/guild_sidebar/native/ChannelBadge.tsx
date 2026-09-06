@@ -1,5 +1,7 @@
 // discord_app/modules/guild_sidebar/native/ChannelBadge.tsx
 import useStateFromStores from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
+import NumberUtils from "../../../utils/NumberUtils.tsx";
+import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import NewBadgeDefault from "../../channel_list_v2/native/components/NewBadge.tsx";
 import MentionsBadgeDefault from "MentionsBadge.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -45,15 +47,15 @@ export default function ChannelBadge(arg0) {
             const obj3 = {
               variant: "text-xs/semibold",
               color: "text-muted",
-              children: tmp2(1880).humanizeValue(postsWithUnreadsCount, stateFromStores),
+              children: NumberUtils.humanizeValue(postsWithUnreadsCount, stateFromStores),
             };
-            obj2.children = jsx(tmp2(4556).Text, {
+            obj2.children = jsx(Text_Text.Text, {
               variant: "text-xs/semibold",
               color: "text-muted",
-              children: tmp2(1880).humanizeValue(postsWithUnreadsCount, stateFromStores),
+              children: NumberUtils.humanizeValue(postsWithUnreadsCount, stateFromStores),
             });
             tmp5 = <View style={tmp.channelInfoContainer}>{null}</View>;
-            const tmp2Result = tmp2(1880);
+            const tmp2Result = NumberUtils;
           }
         }
       }

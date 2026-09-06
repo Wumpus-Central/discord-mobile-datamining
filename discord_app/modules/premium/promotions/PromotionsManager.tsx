@@ -1,6 +1,7 @@
 // discord_app/modules/premium/promotions/PromotionsManager.tsx
 import PremiumUtilsDefault from "../../../utils/PremiumUtils.tsx";
 import PromotionsActionCreators from "PromotionsActionCreators.tsx";
+import PremiumBogoPromotionUtilsCommon from "../PremiumBogoPromotionUtilsCommon.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import LocaleStore from "../../user_settings/LocaleStore.tsx";
 import UserStore from "../../../stores/UserStore.tsx";
@@ -51,7 +52,7 @@ class PromotionsManager extends tmp2 {
     applyArgumentsResult.stores = result1.set(closure_7, onPromotionsFetchSettled.bind(applyArgumentsResult));
     applyArgumentsResult.lastSubscriptionStateSignature = null;
     applyArgumentsResult.hasPendingSubscriptionRefetch = false;
-    applyArgumentsResult.maybeFetchBogoPromotion = closure_3(async (arg0, value) => {
+    applyArgumentsResult.maybeFetchBogoPromotion = closure_3(async () => {
       if (c0 === 2) {
         c0 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -78,7 +79,7 @@ class PromotionsManager extends tmp2 {
             } else {
               currentUser = currentUser.getCurrentUser();
               if (!obj6.isPremiumExactly(currentUser, TIER_2.TIER_2)) {
-                let obj1 = require("PremiumBogoPromotionUtilsCommon");
+                let obj1 = PremiumBogoPromotionUtilsCommon;
                 c1 = 1;
                 c0 = 1;
                 obj1 = { value: null, done: false };
@@ -86,7 +87,6 @@ class PromotionsManager extends tmp2 {
                 return obj1;
               }
               obj6 = PremiumUtilsDefault;
-              tmp14 = dependencyMap;
             }
           } else if (arg0 === 1) {
             c0 = 3;
@@ -123,7 +123,7 @@ prototype["onLocaleChanged"] = function onLocaleChanged() {
 };
 prototype["onPostConnectionOpen"] = function onPostConnectionOpen() {
   const self = this;
-  return (async (arg0, value) => {
+  return (async () => {
     if (v3 === 2) {
       v3 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");

@@ -1,10 +1,12 @@
 // discord_app/modules/user_settings/defs/native/ProfilePrivacySetting.tsx
 import util from "../../../../intl/index.native.tsx";
 import preloaded_user_settings from "../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
+import asyncRequireImpl from "../../../../../_runtime/01896_asyncRequireImpl.js";
 import UserSettings from "../../UserSettings.tsx";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import SettingsConstants from "../../core/native/SettingsConstants.tsx";
 import PrivateProfilesExperiment from "../../../user_profile/PrivateProfilesExperiment.tsx";
+import ActivityPrivacyUpsellUtils from "../../../activity_privacy/ActivityPrivacyUpsellUtils.tsx";
 import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
@@ -26,7 +28,7 @@ const radio = SettingBuilders.createRadio({
     ProfileVisibility2.updateSetting(NumberResult);
     let obj = PrivateProfilesExperiment;
     if (obj.getIsInPrivateProfilesExperiment("ProfilePrivacySetting")) {
-      const profileToActivityUpsell = tmp2(14851).computeProfileToActivityUpsell(setting, NumberResult);
+      const profileToActivityUpsell = ActivityPrivacyUpsellUtils.computeProfileToActivityUpsell(setting, NumberResult);
       if (null != profileToActivityUpsell) {
         obj = { direction: null, affectedGuildIds: null, settingName: null, mappedActivityValue: null };
         ({
@@ -36,12 +38,12 @@ const radio = SettingBuilders.createRadio({
           mappedActivityValue: obj4.mappedActivityValue,
         } = profileToActivityUpsell);
         ActionSheetActionCreatorsDefault.openLazy(
-          tmp2(1896)(14852, dependencyMap.paths),
+          asyncRequireImpl(14852, dependencyMap.paths),
           "ProfileToActivityPrivacyUpsellActionSheet",
           obj,
         );
       }
-      const tmp2Result = tmp2(14851);
+      const tmp2Result = ActivityPrivacyUpsellUtils;
     }
   },
   useOptions() {

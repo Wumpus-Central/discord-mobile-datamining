@@ -27,13 +27,13 @@ class CloudUploader extends tmp7 {
   }
 }
 const prototype = CloudUploader.prototype;
-prototype["uploadFiles"] = function uploadFiles(arg0) {
-  closure_1 = arg0;
+prototype["uploadFiles"] = function uploadFiles(guildId) {
+  closure_1 = guildId;
   function _superprop_getUpload() {
     return super.upload;
   }
   const self = this;
-  return self(function* (arg0, value) {
+  return self(function* () {
     if (constants === 2) {
       constants = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -70,7 +70,7 @@ prototype["uploadFiles"] = function uploadFiles(arg0) {
             closure_130_0 = files(7755).backgroundTaskIdentifierInvalid;
             self.once(
               "start",
-              tmp4(function* (arg0, value) {
+              tmp4(function* () {
                 if (c2 === 2) {
                   c2 = 3;
                   throw new TypeError("Generator functions may not be called on executing generators");
@@ -285,7 +285,7 @@ prototype["uploadFiles"] = function uploadFiles(arg0) {
 };
 prototype["startUpload"] = function startUpload() {
   const self = this;
-  return (async (arg0, value) => {
+  return (async () => {
     if (c5 === 2) {
       c5 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -312,9 +312,9 @@ prototype["startUpload"] = function startUpload() {
           } else {
             _self = tmp7;
             if (self._aborted) {
-              obj10._handleAborted();
+              self._handleAborted();
             } else {
-              obj10._handleStart(c5);
+              self._handleStart(c5);
               c3 = 1;
               let obj5 = _self(tmp59[12]);
               if (obj5.isAndroid()) {

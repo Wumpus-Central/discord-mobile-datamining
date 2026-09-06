@@ -2,7 +2,7 @@
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 
 const require = fn;
-let closure_4 = async function _createStripeSetupIntent(arg0, value) {
+let closure_4 = async function _createStripeSetupIntent() {
   if (c4 === 2) {
     c4 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -78,7 +78,7 @@ let closure_4 = async function _createStripeSetupIntent(arg0, value) {
     }
   }
 };
-let closure_5 = async function _createSetupIntentForPaymentElements(arg0, value) {
+let closure_5 = async function _createSetupIntentForPaymentElements() {
   if (c4 === 2) {
     c4 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");

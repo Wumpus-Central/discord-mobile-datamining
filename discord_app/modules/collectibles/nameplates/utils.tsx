@@ -17,11 +17,10 @@ export const getNameplateData = function getNameplateData(nameplate) {
     ({ skuId: obj.skuId, asset: obj.src, label: obj.imgAlt } = nameplate);
     let INVALID_NAMEPLATE_PALETTE = constants.NAMEPLATE_PALETTES[nameplate.palette];
     if (INVALID_NAMEPLATE_PALETTE == null) {
-      INVALID_NAMEPLATE_PALETTE = tmp2(1890).INVALID_NAMEPLATE_PALETTE;
+      INVALID_NAMEPLATE_PALETTE = constants.INVALID_NAMEPLATE_PALETTE;
     }
     obj.palette = INVALID_NAMEPLATE_PALETTE;
     tmp = obj;
-    tmp2 = require;
   }
   return tmp;
 };
@@ -38,11 +37,10 @@ export const getNameplateDataFromProductRecord = function getNameplateDataFromPr
         ({ skuId: obj.skuId, asset: obj.src, label: obj.imgAlt, palette } = first);
         let INVALID_NAMEPLATE_PALETTE = constants.NAMEPLATE_PALETTES[palette];
         if (INVALID_NAMEPLATE_PALETTE == null) {
-          INVALID_NAMEPLATE_PALETTE = tmp2(1890).INVALID_NAMEPLATE_PALETTE;
+          INVALID_NAMEPLATE_PALETTE = constants.INVALID_NAMEPLATE_PALETTE;
         }
         obj.palette = INVALID_NAMEPLATE_PALETTE;
         tmp = obj;
-        tmp2 = require;
       }
       tmp4 = tmp;
     }

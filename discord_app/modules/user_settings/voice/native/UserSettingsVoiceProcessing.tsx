@@ -161,16 +161,16 @@ export default function UserSettingsVoiceProcessing() {
   const items2 = [closure_5(TableSwitchRow.TableSwitchRow, obj1)];
   if (advancedVoiceActivitySupported) {
     const obj2 = { label: null, subLabel: null, value: null, onValueChange: null };
-    const intl5 = tmp(1114).intl;
-    obj2.label = intl5.string(tmp(1114).t.BbESsg);
-    const intl6 = tmp(1114).intl;
-    obj2.subLabel = intl6.string(tmp(1114).t.LoOB1F);
+    const intl5 = util.intl;
+    obj2.label = intl5.string(util.t.BbESsg);
+    const intl6 = util.intl;
+    obj2.subLabel = intl6.string(util.t.LoOB1F);
     obj2.value = vadUseKrisp;
     obj2.onValueChange = function onValueChange(vadUseKrisp) {
       const obj = { vadUseKrisp };
       return obj.setMode(require, obj);
     };
-    advancedVoiceActivitySupported = closure_5(tmp(7201).TableSwitchRow, obj2);
+    advancedVoiceActivitySupported = closure_5(TableSwitchRow.TableSwitchRow, obj2);
   }
   const obj3 = { children: null };
   items2[1] = advancedVoiceActivitySupported;

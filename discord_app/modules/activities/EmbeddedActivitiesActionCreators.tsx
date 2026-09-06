@@ -4,6 +4,8 @@ import HTTPUtils from "../../../discord_common/js/packages/http-utils/HTTPUtils.
 import dismissible_content from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
 import DismissibleContentUtils from "../dismissible_content/DismissibleContentUtils.tsx";
 import embeddedActivityLocationUtils from "utils/embeddedActivityLocationUtils.tsx";
+import ChannelRTCActionCreatorsDefault from "../../actions/ChannelRTCActionCreators.tsx";
+import ChannelRTCParticipants from "../calls/ChannelRTCParticipants.tsx";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 import ApplicationStore from "../applications/ApplicationStore.tsx";
 import ChannelRTCStore from "../calls/ChannelRTCStore.tsx";
@@ -17,10 +19,8 @@ import UserStore from "../../stores/UserStore.tsx";
 import VoiceStateStore from "../../stores/VoiceStateStore.tsx";
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore.tsx";
 
-const ChannelRTCActionCreatorsDefault = tmp2(4761);
-const ChannelRTCParticipants = tmp6(9476);
 require = fn;
-let closure_27 = async function _runPrimaryAppCommandOrJoinEmbeddedActivity(arg0, value) {
+let closure_27 = async function _runPrimaryAppCommandOrJoinEmbeddedActivity(arg0) {
   if (c17 === 2) {
     c17 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -234,9 +234,9 @@ let closure_27 = async function _runPrimaryAppCommandOrJoinEmbeddedActivity(arg0
           currentUser = closure_141_13.getCurrentUser();
           if (null != currentUser) {
             if (closure_140_2) {
-              let JOIN = tmp259.LAUNCH;
+              let JOIN = closure_141_19.LAUNCH;
             } else {
-              JOIN = tmp259.JOIN;
+              JOIN = closure_141_19.JOIN;
             }
             const obj10 = { type: JOIN, userId: null, guildId: null, channelId: null, channelType: null, applicationId: null, locationObject: null, analyticsLocations: null, source: null, referrerId: null, inviterUserId: null };
             let id;
@@ -401,7 +401,7 @@ let closure_27 = async function _runPrimaryAppCommandOrJoinEmbeddedActivity(arg0
     }
   }
 };
-let closure_29 = async function _maybeSendPrimaryAppCommand(arg0, value) {
+let closure_29 = async function _maybeSendPrimaryAppCommand(arg0) {
   if (c6 === 2) {
     c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -583,19 +583,19 @@ let closure_29 = async function _maybeSendPrimaryAppCommand(arg0, value) {
                               obj = { status: error_status, body: null };
                               const obj1 = { message: error_message, code: error_code };
                               obj.body = obj1;
-                              const tmp21 = new tmp3(4462)(obj);
+                              const tmp21 = new nonce(4462)(obj);
                               closure_1_1(tmp21);
                             }
                           }
                         }
                         if (null != error_reason_code) {
-                          if (error_reason_code in tmp3(4789).ReasonCodes) {
-                            const tmp14 = new tmp3(4789)(error_reason_code);
+                          if (error_reason_code in nonce(4789).ReasonCodes) {
+                            const tmp14 = new nonce(4789)(error_reason_code);
                             closure_1_1(tmp14);
                           }
                         }
-                        let tmp3Result = tmp3(4789);
-                        tmp3Result = new tmp3Result(tmp3(4789).ReasonCodes.UNKNOWN);
+                        let tmp3Result = nonce(4789);
+                        tmp3Result = new tmp3Result(nonce(4789).ReasonCodes.UNKNOWN);
                         closure_1_1(tmp3Result);
                       }
                     };
@@ -692,7 +692,7 @@ let closure_29 = async function _maybeSendPrimaryAppCommand(arg0, value) {
     }
   }
 };
-let closure_31 = async function _joinEmbeddedActivity(arg0, value) {
+let closure_31 = async function _joinEmbeddedActivity(arg0) {
   if (c5 === 2) {
     c5 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -989,9 +989,9 @@ let closure_33 = async function _fetchDeveloperApplications() {
     closure_129_1(closure_129_2[25]);
   } else if (arg0 === 1) {
     c5 = 3;
-    throw arg1;
+    throw value;
   } else if (arg0 !== 2) {
-    closure_128_0 = arg1;
+    closure_128_0 = value;
     const applications = closure_128_0.body.applications;
     closure_128_2 = applications.map((item) => closure_1_8.createFromServer(item));
     closure_129_1(closure_129_2[25]).dispatch({ type: "DEVELOPER_ACTIVITY_SHELF_FETCH_SUCCESS", applications: closure_128_2, assets: closure_128_0.body.assets });
@@ -1000,90 +1000,96 @@ let closure_33 = async function _fetchDeveloperApplications() {
     c3 = 0;
     closure_129_1(closure_129_2[25]);
   }
-  return arg1;
+  return value;
 };
-let closure_34 = async function _uploadImageAttachment(arg0, value) {
-  if (c8 === 2) {
-    c8 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp6 === 3) {
-    if (arg0 === 1) {
-      throw value;
-    } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+let closure_34 = async function _uploadImageAttachment(arg0) {
+  closure_0 = arg0;
+  c7 = 0;
+  c8 = 0;
+  c6 = 0;
+  return (async (arg0, value, arg2) => {
+    if (c8 === 2) {
+      c8 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp6 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        let obj = { value, done: true };
+        return obj;
+      } else {
+        return { value: "HermesInternal", done: null };
+      }
     } else {
-      return { value: "HermesInternal", done: null };
-    }
-  } else {
-    try {
-      c8 = 2;
-      if (0 === c7) {
-        if (arg0 === 1) {
+      try {
+        c8 = 2;
+        if (0 === c7) {
+          if (arg0 === 1) {
+            c8 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c8 = 3;
+            obj = { value, done: true };
+            return obj;
+          } else {
+            closure_4 = tmp3;
+            closure_3 = tmp7;
+            closure_131_0 = undefined;
+            c6 = 1;
+            DispatcherDefault.dispatch({ type: "UPLOAD_ACTIVITY_IMAGE_ATTACHMENT_START" });
+            let tmp29;
+            if (null != channel_id) {
+              const obj1 = { channel_id };
+              tmp29 = obj1;
+            }
+            const HTTP = HTTPUtils.HTTP;
+            const request = { url: closure_2_22.APPLICATION_UPLOAD_ATTACHMENT(closure_0), query: tmp29, attachments: null, rejectWithError: true };
+            const obj2 = { name: "file", file };
+            const items = [obj2];
+            request.attachments = items;
+            c7 = 2;
+            c8 = 1;
+            const obj3 = { value: HTTP.post(request), done: false };
+            return obj3;
+          }
+        } else if (1 === tmp7) {
+          c6 = 0;
+          closure_131_1 = closure_5;
+          let obj4 = closure_132_1(closure_132_2[25]);
+          obj4.dispatch({ type: "UPLOAD_ACTIVITY_IMAGE_ATTACHMENT_FAIL" });
+          const tmp27 = new closure_132_1(closure_132_2[28])(closure_131_1);
+          c8 = 3;
+          obj4 = { value: tmp27, done: true };
+          return obj4;
+        } else if (arg0 === 1) {
           c8 = 3;
           throw value;
         } else if (arg0 === 2) {
+          c6 = 0;
           c8 = 3;
-          obj = { value, done: true };
-          return obj;
+          const obj5 = { value, done: true };
+          return obj5;
         } else {
-          closure_4 = tmp3;
-          closure_3 = tmp7;
-          closure_131_0 = undefined;
-          c6 = 1;
-          DispatcherDefault.dispatch({ type: "UPLOAD_ACTIVITY_IMAGE_ATTACHMENT_START" });
-          let tmp29;
-          if (null != importDefault) {
-            const obj1 = { channel_id: importDefault };
-            tmp29 = obj1;
-          }
-          const HTTP = HTTPUtils.HTTP;
-          const request = { url: __initData3.APPLICATION_UPLOAD_ATTACHMENT(closure_0), query: tmp29, attachments: null, rejectWithError: true };
-          const obj2 = { name: "file", file: dependencyMap };
-          const items = [obj2];
-          request.attachments = items;
-          c7 = 2;
-          c8 = 1;
-          const obj3 = { value: HTTP.post(request), done: false };
-          return obj3;
+          closure_131_0 = value;
+          obj = closure_132_1(closure_132_2[25]);
+          const obj6 = { type: "UPLOAD_ACTIVITY_IMAGE_ATTACHMENT_SUCCESS", attachment: closure_131_0.body.attachment };
+          obj.dispatch(obj6);
+          c6 = 0;
+          c8 = 3;
+          const obj7 = { value: closure_131_0.body.attachment, done: true };
+          return obj7;
         }
-      } else if (1 === tmp7) {
-        c6 = 0;
-        closure_131_1 = closure_5;
-        let obj4 = closure_132_1(closure_132_2[25]);
-        obj4.dispatch({ type: "UPLOAD_ACTIVITY_IMAGE_ATTACHMENT_FAIL" });
-        const tmp27 = new closure_132_1(closure_132_2[28])(closure_131_1);
-        c8 = 3;
-        obj4 = { value: tmp27, done: true };
-        return obj4;
-      } else if (arg0 === 1) {
-        c8 = 3;
-        throw value;
-      } else if (arg0 === 2) {
-        c6 = 0;
-        c8 = 3;
-        const obj5 = { value, done: true };
-        return obj5;
-      } else {
-        closure_131_0 = value;
-        obj = closure_132_1(closure_132_2[25]);
-        const obj6 = { type: "UPLOAD_ACTIVITY_IMAGE_ATTACHMENT_SUCCESS", attachment: closure_131_0.body.attachment };
-        obj.dispatch(obj6);
-        c6 = 0;
-        c8 = 3;
-        const obj7 = { value: closure_131_0.body.attachment, done: true };
-        return obj7;
-      }
-    } catch (tmp33) {
-      closure_5 = tmp33;
-      if (tmp4 === c6) {
-        c8 = tmp2;
-        throw tmp33;
-      } else {
-        c7 = tmp;
+      } catch (tmp33) {
+        closure_5 = tmp33;
+        if (tmp4 === c6) {
+          c8 = tmp2;
+          throw tmp33;
+        } else {
+          c7 = tmp;
+        }
       }
     }
-  }
+  })();
 };
 function handleFetchDone(arg0, fn, guildId) {
   guildId = guildId.guildId;
@@ -1096,7 +1102,7 @@ function handleFetchDone(arg0, fn, guildId) {
     fn();
   }
 }
-let closure_36 = async function _fetchShelf(arg0, value) {
+let closure_36 = async function _fetchShelf(arg0) {
   if (c9 === 2) {
     c9 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -1294,7 +1300,8 @@ let closure_36 = async function _fetchShelf(arg0, value) {
 let closure_37 = async function _sendEmbeddedActivityInvite() {
   closure_130_1(closure_130_2[52]);
   const obj2 = { target_type: closure_130_26.EMBEDDED_APPLICATION, target_application_id: closure_129_2 };
-  closure_129_5 = await obj2.createInvite(closure_129_0, obj2, closure_129_3);
+  await obj2.createInvite(closure_129_0, obj2, closure_129_3);
+  closure_129_5 = value;
   if (null != closure_130_10.getChannel(closure_129_1)) {
     closure_130_1(closure_130_2[53]).sendInvite(closure_129_1, closure_129_5.code, closure_129_3, closure_129_4);
     closure_130_1(closure_130_2[53]);
@@ -1305,7 +1312,8 @@ let closure_37 = async function _sendEmbeddedActivityInvite() {
   return "PX_16";
 };
 let closure_38 = async function _sendEmbeddedActivityInviteUser() {
-  closure_129_6 = await closure_130_1(closure_130_2[52]).createInvite(closure_129_0, { target_type: closure_130_26.EMBEDDED_APPLICATION, target_application_id: closure_129_1 }, closure_129_3);
+  await closure_130_1(closure_130_2[52]).createInvite(closure_129_0, { target_type: closure_130_26.EMBEDDED_APPLICATION, target_application_id: closure_129_1 }, closure_129_3);
+  closure_129_6 = value;
   closure_130_1(closure_130_2[52]);
   await closure_130_1(closure_130_2[54]).ensurePrivateChannel(closure_129_2).then((result) => {
     channel = channel.getChannel(result);
@@ -1328,7 +1336,7 @@ let closure_38 = async function _sendEmbeddedActivityInviteUser() {
   ({ channelId: closure_129_0, applicationId: closure_129_1, userId: closure_129_2, location: closure_129_3, inviteAnalyticsMetadata: closure_129_4, prefixedContent: closure_129_5 } = closure_0);
   return "PX_16";
 };
-let closure_39 = async function _validateTestMode(arg0, value) {
+let closure_39 = async function _validateTestMode(arg0) {
   if (c1 === 2) {
     c1 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -1399,7 +1407,7 @@ function createProxyTicket() {
   }
   return applyArgumentsResult;
 }
-let closure_41 = async function _createProxyTicket(arg0, channel_id) {
+let closure_41 = async function _createProxyTicket(arg0) {
   closure_0 = arg0;
   c3 = 0;
   c2 = 0;
@@ -1414,7 +1422,7 @@ let closure_41 = async function _createProxyTicket(arg0, channel_id) {
     return value.body.ticket;
   })();
 };
-let closure_42 = async function _refreshProxyTicket(applicationId, arg1) {
+let closure_42 = async function _refreshProxyTicket() {
   closure_1 = arg1;
   c8 = 0;
   c9 = 0;
@@ -1651,6 +1659,7 @@ export const dismissNewActivityIndicator = function dismissNewActivityIndicator(
   }
   const obj = DismissibleContentUtils;
   const result = obj.markVersionedDismissibleContentAsDismissed(dismissible_content.DismissibleContent.ACTIVITIES_VOICE_LAUNCHER_BADGE, Math.floor(new Date().getTime() / 1000), { dismissAction: INDIRECT_ACTION });
+  const date = new Date();
 };
 export const validateTestMode = function validateTestMode() {
   const self = this;

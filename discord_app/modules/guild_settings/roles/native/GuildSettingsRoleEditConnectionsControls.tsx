@@ -8,7 +8,10 @@ import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/Actio
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import Stack_Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
+import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
 import ConnectionsUtils from "../../../connections/ConnectionsUtils.tsx";
+import TableRadioGroup from "../../../../design/components/TableRow/native/TableRadioGroup.native.tsx";
+import TableRadioRow from "../../../../design/components/TableRow/native/TableRadioRow.native.tsx";
 import CircleErrorIcon from "../../../../design/components/Icon/native/redesign/generated/CircleErrorIcon.tsx";
 import CirclePlusIcon from "../../../../design/components/Icon/native/redesign/generated/CirclePlusIcon.tsx";
 import GuildSettingsRolesActionCreators from "../GuildSettingsRolesActionCreators.tsx";
@@ -31,7 +34,7 @@ function HeaderSection(arg0) {
     obj.children = intl.string(util.t["2aFeef"]);
     items[1] = closure_1_10(Text_Text.Text, obj);
     obj.children = items;
-    tmp2Result = tmp2(View, obj);
+    tmp2Result = closure_1_11(View, obj);
   }
   const items1 = [tmp2Result];
   const obj1 = { style: tmp.headerTitleContainer, children: null };
@@ -43,10 +46,10 @@ function HeaderSection(arg0) {
   if (hasConnections) {
     const obj3 = { hitSlop: 8, onPress: clearConnections, disabled: locked, children: null };
     const obj4 = { variant: "text-sm/medium", color: "text-feedback-critical", children: null };
-    const intl3 = tmp10(1114).intl;
-    obj4.children = intl3.string(tmp10(1114).t.ntW1cc);
-    obj3.children = tmp13(tmp10(4556).Text, obj4);
-    tmp13Result = tmp13(tmp10(5123).PressableOpacity, obj3);
+    const intl3 = util.intl;
+    obj4.children = intl3.string(util.t.ntW1cc);
+    obj3.children = closure_1_10(Text_Text.Text, obj4);
+    tmp13Result = closure_1_10(Pressables.PressableOpacity, obj3);
   }
   const obj5 = { children: null };
   const obj6 = { children: null };
@@ -54,7 +57,7 @@ function HeaderSection(arg0) {
   obj1.children = items2;
   const items3 = [closure_1_11(View, obj1)];
   const obj7 = { variant: "text-sm/medium", children: null };
-  const intl4 = tmp10(1114).intl;
+  const intl4 = util.intl;
   const obj8 = { helpdeskArticleUrl: HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.CONNECTION_DETAILS_ADMIN) };
   obj7.children = intl4.format(util.t.q5f7tK, obj8);
   items3[1] = closure_1_10(Text_Text.Text, obj7);
@@ -86,28 +89,28 @@ function AndOrRadios(setPendingRoleConfigurations) {
       ),
     );
     obj = { title: null, value: null, onChange: null, hasIcons: false, children: null };
-    const intl = tmp(1114).intl;
-    obj.title = intl.string(tmp(1114).t.Xs7PHX);
+    const intl = util.intl;
+    obj.title = intl.string(util.t.Xs7PHX);
     obj.value = setPendingRoleConfigurations.currentOperator;
     obj.onChange = function onChange(arg0) {
       closure_1(roleConnectionConfigurations, arg0);
     };
-    obj = { value: tmp(5407).ConnectionConfigurationRuleOperator.OR, label: null, disabled: null };
-    const intl2 = tmp(1114).intl;
-    obj.label = intl2.string(tmp(1114).t.W3iY58);
+    obj = { value: ConnectionsUtils.ConnectionConfigurationRuleOperator.OR, label: null, disabled: null };
+    const intl2 = util.intl;
+    obj.label = intl2.string(util.t.W3iY58);
     let tmp11 = locked;
     if (!locked) {
       tmp11 = values.length < 2;
     }
     obj.disabled = tmp11;
-    const items2 = [closure_1_10(tmp(5688).TableRadioRow, obj)];
-    const obj1 = { value: tmp(5407).ConnectionConfigurationRuleOperator.AND, label: null, disabled: null };
-    const intl3 = tmp(1114).intl;
-    obj1.label = intl3.string(tmp(1114).t.gHXS9A);
+    const items2 = [closure_1_10(TableRadioRow.TableRadioRow, obj)];
+    const obj1 = { value: ConnectionsUtils.ConnectionConfigurationRuleOperator.AND, label: null, disabled: null };
+    const intl3 = util.intl;
+    obj1.label = intl3.string(util.t.gHXS9A);
     obj1.disabled = locked;
-    items2[1] = closure_1_10(tmp(5688).TableRadioRow, obj1);
+    items2[1] = closure_1_10(TableRadioRow.TableRadioRow, obj1);
     obj.children = items2;
-    return closure_1_11(tmp(5685).TableRadioGroup, obj);
+    return closure_1_11(TableRadioGroup.TableRadioGroup, obj);
   }
 }
 function renderRoleConnectionConfigurations(memo, arg1, locked, arg3, integrations) {
@@ -123,18 +126,17 @@ function renderRoleConnectionConfigurations(memo, arg1, locked, arg3, integratio
       continue;
     }
     if (null == arg0) {
-      const iter = memo[arg1];
-      if (null !== iter) {
+      if (null !== memo[arg1]) {
         if (null == iter.connectionMetadataField) {
           if (null == iter.operator) {
             if (null == iter.value) {
               let found = items.filter((connectionType) => {
                 if (null == iter.applicationId) {
-                  let tmp2 = connectionType.connectionType !== tmp.connectionType;
+                  let tmp2 = connectionType.connectionType !== iter.connectionType;
                 } else {
                   tmp2 =
-                    connectionType.connectionType !== tmp.connectionType ||
-                    connectionType.applicationId !== tmp.applicationId;
+                    connectionType.connectionType !== iter.connectionType ||
+                    connectionType.applicationId !== iter.applicationId;
                 }
                 return tmp2;
               });
@@ -173,7 +175,7 @@ function renderRoleConnectionConfigurations(memo, arg1, locked, arg3, integratio
     }
   });
   const values = map.values();
-  let iter = values[Symbol.iterator]();
+  const iter = values[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
     let arr = nextResult;
@@ -334,8 +336,8 @@ export default function GuildSettingsRolesEditConnectionsControls(guild) {
       let flatResult = stateFromStoresArray.flat();
     } else {
       if (null != stateFromStoresArray) {
-        if (arr.length > 0) {
-          flatResult = arr[0];
+        if (stateFromStoresArray.length > 0) {
+          flatResult = stateFromStoresArray[0];
         }
       }
       flatResult = [];
@@ -396,9 +398,10 @@ export default function GuildSettingsRolesEditConnectionsControls(guild) {
             ),
           );
         }
+        obj = GuildSettingsRolesActionCreators;
       },
     };
-    tmp11Result = tmp11(AndOrRadios, obj2);
+    tmp11Result = closure_10(AndOrRadios, obj2);
   }
   items6[1] = tmp11Result;
   let tmp15 = null;
@@ -427,6 +430,7 @@ export default function GuildSettingsRolesEditConnectionsControls(guild) {
             ),
           );
         }
+        obj = GuildSettingsRolesActionCreators;
       },
       locked,
       0,
@@ -465,6 +469,7 @@ export default function GuildSettingsRolesEditConnectionsControls(guild) {
           ),
         );
       }
+      obj2 = GuildSettingsRolesActionCreators;
     },
     excludedConnections: memo1,
     excludedApplications: memo2,

@@ -2,12 +2,12 @@
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
 import Pressables from "../../../design/void/Pressables/native/Pressables.tsx";
+import FormInputDefault from "../../../design/void/Form/native/FormInput.tsx";
 import ReactionIcon from "../../../design/components/Icon/native/redesign/generated/ReactionIcon.tsx";
 import useMessageMaxLengthDefault from "../../messages/useMessageMaxLength.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
-const FormInputDefault = tmp2(8601);
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
@@ -111,8 +111,6 @@ export default function ShareChatInput(onFocus) {
     editable: null,
   };
   const tmp5 = _slicedToArray(noop.useState(false), 2);
-  const tmp8 = React5;
-  const tmp9 = View;
   const intl = util.intl;
   obj.placeholder = intl.string(util.t.ZroO3G);
   obj.placeholderTextColor = tmp.inputPlaceholder.color;
@@ -144,5 +142,5 @@ export default function ShareChatInput(onFocus) {
   obj.children = timestampProducer(ReactionIcon.ReactionIcon, { size: "md" });
   items3[1] = timestampProducer(Pressables.PressableOpacity, obj);
   obj.children = items3;
-  return tmp8(tmp9, obj);
+  return React5(View, obj);
 }

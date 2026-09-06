@@ -54,9 +54,9 @@ prototype["parse"] = function parse(arg0, arg1) {
 };
 
 export default ChatInputParser;
-export const convertToNativeStyle = (color) => {
-  ({ backgroundColor, borderRadius } = color);
-  const merged = Object.assign(color, Object.assign({ backgroundColor: 0, color: 0, borderRadius: 0 }));
+export const convertToNativeStyle = (autocomplete) => {
+  ({ backgroundColor, borderRadius } = autocomplete);
+  const merged = Object.assign(autocomplete, Object.assign({ backgroundColor: 0, color: 0, borderRadius: 0 }));
   let tmp2 = null;
   if (null != backgroundColor) {
     tmp2 = null;
@@ -65,7 +65,7 @@ export const convertToNativeStyle = (color) => {
       tmp2 = obj;
     }
   }
-  obj = { color: processColor(color.color), backgroundStyle: tmp2 };
+  obj = { color: processColor(autocomplete.color), backgroundStyle: tmp2 };
   const merged1 = Object.assign(merged);
   return obj;
 };

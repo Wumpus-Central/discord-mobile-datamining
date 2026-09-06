@@ -1,10 +1,18 @@
 // discord_app/modules/errors/native/SentryInitUtils.tsx
 import LoggerDefault from "../../debug/Logger.tsx";
+import _mod675 from "../../../../_runtime/metro/00675__.js";
 import router_utils from "../../routing/router_utils.tsx";
+import PlatformUtils from "../../../utils/PlatformUtils.tsx";
 import SentryUtilsDefault from "../../../utils/SentryUtils.native.tsx";
 import TelemetryRingLifecycle from "../../telemetry_ring/native/index.tsx";
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
+import DesignIds from "../../../../discord_common/js/shared/shared-constants/DesignIds.tsx";
 import ClientInfoUtilsAll from "../../../utils/native/ClientInfoUtils.tsx";
+import MetaQuestUtils from "../../device/MetaQuestUtils.android.tsx";
+import DeviceUtils from "../../../utils/native/DeviceUtils.tsx";
+import ReleaseChannelUtils from "../../../utils/ReleaseChannelUtils.native.tsx";
+import MetricEvents from "../../../../discord_common/js/shared/shared-constants/MetricEvents.tsx";
+import AppCrashedReasons2 from "../../../../discord_common/js/shared/shared-constants/AppCrashedReasons.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 
 require = fn;
@@ -12,7 +20,7 @@ let closure_15 = async function _maybeBackfillMissingBreadcrumbsFromTelemetryRin
   let breadcrumbs = arg0;
   c2 = 0;
   c3 = 0;
-  return (async (arg0, value) => {
+  return (async (arg0) => {
     if (c3 === 2) {
       c3 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -192,7 +200,7 @@ function filterError(event_id, originalException) {
       }
       trackCrash(event_id, originalException, false);
     }
-    return (async (arg0, value) => {
+    return (async () => {
       closure_1 = tmp3;
       const ZoomedInTelemetry = tmp3(c3[6]).ZoomedInTelemetry;
       items = [ZoomedInTelemetry.flushNow()];
@@ -531,9 +539,9 @@ function trackCrash(event, hint, arg2) {
       }
     }
     obj.js_error_stacktrace = tmp37;
-    track(tmp20.APP_NATIVE_CRASH, obj);
-    let tmp25 = tmp18;
-    let tmp26 = tmp18;
+    track(timestampProducer.APP_NATIVE_CRASH, obj);
+    let tmp25 = importDefault;
+    let tmp26 = importDefault;
   } else {
     obj = {
       path: obj3.getHistory().location.pathname,
@@ -544,9 +552,9 @@ function trackCrash(event, hint, arg2) {
       error_level: level,
       error_stack: getErrorStackTrace(event),
     };
-    track(tmp20.APP_CRASHED, obj);
-    tmp25 = tmp18;
-    tmp26 = tmp18;
+    track(timestampProducer.APP_CRASHED, obj);
+    tmp25 = importDefault;
+    tmp26 = importDefault;
   }
   const event_id2 = event.event_id;
   let tmp39 = typeof event_id2 === "string";
@@ -557,9 +565,9 @@ function trackCrash(event, hint, arg2) {
     tmp25(1232).markCrashHandled(event_id2);
     const tmp25Result = tmp25(1232);
   }
-  const AppCrashedReasons = tmp11(14082).AppCrashedReasons;
+  const AppCrashedReasons = AppCrashedReasons2.AppCrashedReasons;
   const tmp41 = tmp4 ? AppCrashedReasons.UNHANDLED_NATIVE_ERROR : AppCrashedReasons.UNHANDLED_JS_ERROR;
-  obj1 = { name: tmp11(7607).MetricEvents.APP_CRASHED, tags: null };
+  obj1 = { name: MetricEvents.MetricEvents.APP_CRASHED, tags: null };
   items = ["reason:" + tmp41];
   if (level == null) {
     level = "unknown";
@@ -567,6 +575,7 @@ function trackCrash(event, hint, arg2) {
   items[1] = "level:" + level;
   obj1.tags = items;
   tmp26(7602).increment(obj1, true);
+  const tmp26Result = tmp26(7602);
 }
 const NativeModules = fn(17).NativeModules;
 const Constants = fn(1074);
@@ -607,19 +616,19 @@ export const initSentry = function initSentry() {
       const ReleaseChannel = constants.ReleaseChannel;
       if (-1 === ReleaseChannel.indexOf("debug")) {
         if (-1 === ReleaseChannel.indexOf("developer")) {
-          const isStable = require("ReleaseChannelUtils").isStable;
+          const isStable = ReleaseChannelUtils.isStable;
           obj = { releaseChannel: ReleaseChannel, isProductionChannel: isStable };
           logger.verbose("Initialize", obj);
           if (obj15.isAndroid()) {
             if (isStable) {
-              let tmp14Result = tmp14(tmp[17]);
+              let tmp14Result = DeviceUtils;
               const device = tmp14Result.getDevice();
             }
           }
           c12 = 0.05;
           const SentryDsn = constants.SentryDsn;
           if (isStable) {
-            tmp14Result = tmp14(tmp[18]);
+            tmp14Result = MetaQuestUtils;
             let SentryStaffDsn = SentryDsn;
             if (tmp14Result.isMetaQuest()) {
               c12 = 1;
@@ -634,9 +643,8 @@ export const initSentry = function initSentry() {
             SentryStaffDsn = constants.SentryStaffDsn;
             c12 = 1;
           }
-          obj15 = require("PlatformUtils");
-          const lastCrashReport = require("SentryUtils").getLastCrashReport();
-          const obj4 = require("SentryUtils");
+          obj15 = PlatformUtils;
+          const lastCrashReport = SentryUtilsDefault.getLastCrashReport();
           lastCrashReport
             .then((result) => {
               if (null != result) {
@@ -651,7 +659,7 @@ export const initSentry = function initSentry() {
               closure_1_19(result, { crash_event_source: "startup_reconcile" });
             }
           });
-          const tmp14Result1 = require("../../../../_runtime/metro/00675__.js");
+          const tmp14Result1 = _mod675;
           let str2 = "ios";
           if (tmp14Result2.isAndroid()) {
             str2 = "android";
@@ -674,16 +682,15 @@ export const initSentry = function initSentry() {
           items = [PRIMARY_DOMAIN];
           obj.tracePropagationTargets = items;
           const items1 = [registerSpanErrorInstrumentation, ,];
-          tmp14Result2 = require("PlatformUtils");
-          items1[1] = require("../../../../_runtime/metro/00675__.js").featureFlagsIntegration();
-          const tmp14Result3 = require("../../../../_runtime/metro/00675__.js");
+          tmp14Result2 = PlatformUtils;
+          items1[1] = _mod675.featureFlagsIntegration();
+          const tmp14Result3 = _mod675;
           const obj1 = {
-            shouldCreateSpanForRequest(arg0) {
-              closure_0 = arg0;
-              return !closure_1_9.some((item) => null != closure_0.match(item));
+            shouldCreateSpanForRequest(url) {
+              return !closure_1_9.some((item) => null != url.match(item));
             },
           };
-          items1[2] = require("../../../../_runtime/metro/00675__.js").reactNativeTracingIntegration(obj1);
+          items1[2] = _mod675.reactNativeTracingIntegration(obj1);
           obj.integrations = items1;
           obj.beforeBreadcrumb = function beforeBreadcrumb(data) {
             if (null == data.data) {
@@ -701,17 +708,14 @@ export const initSentry = function initSentry() {
             return data;
           };
           tmp14Result1.init(obj);
-          const tmp14Result4 = require("../../../../_runtime/metro/00675__.js");
-          require("../../../../_runtime/metro/00675__.js").setTag("buildNumber", "6365");
-          const tmp14Result5 = require("../../../../_runtime/metro/00675__.js");
-          require("../../../../_runtime/metro/00675__.js").setTag("appVersion", constants.Version);
-          const tmp14Result6 = require("../../../../_runtime/metro/00675__.js");
+          const tmp14Result4 = _mod675;
+          _mod675.setTag("buildNumber", "6365");
+          const tmp14Result5 = _mod675;
+          _mod675.setTag("appVersion", constants.Version);
+          const tmp14Result6 = _mod675;
           const _HermesInternal = HermesInternal;
-          require("../../../../_runtime/metro/00675__.js").setTag(
-            "design_id",
-            "" + require("DesignIds").DesignIds.DESIGN_TABS_IA,
-          );
-          const tmp14Result7 = require("../../../../_runtime/metro/00675__.js");
+          _mod675.setTag("design_id", "" + DesignIds.DesignIds.DESIGN_TABS_IA);
+          const tmp14Result7 = _mod675;
         }
       }
     });

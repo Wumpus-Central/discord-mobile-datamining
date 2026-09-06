@@ -29,7 +29,7 @@ export default function ExistingUserAgeGate(onSuccess) {
   c7 = undefined;
   c8 = undefined;
   let stateFromStores1;
-  function submitBirthday(arg0) {
+  function submitBirthday(date) {
     const self = this;
     const apply = closure_11.apply;
     if (typeof apply === "unknown") {
@@ -39,7 +39,7 @@ export default function ExistingUserAgeGate(onSuccess) {
     }
     return applyArgumentsResult;
   }
-  const Pawtect = async function _submitBirthday(arg0, value) {
+  const Pawtect = async function _submitBirthday(arg0) {
     if (c6 === 2) {
       c6 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -127,7 +127,7 @@ export default function ExistingUserAgeGate(onSuccess) {
       }
     }
   };
-  closure_12 = async function _submitBirthdayWithAgeConfirmation(arg0, value) {
+  closure_12 = async function _submitBirthdayWithAgeConfirmation() {
     if (c0 === 2) {
       c0 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -166,11 +166,10 @@ export default function ExistingUserAgeGate(onSuccess) {
             } else {
               v1 = 1;
               c0 = 1;
-              const obj2 = { value: submitBirthday(tmp17), done: false };
+              const obj2 = { value: submitBirthday(date), done: false };
               return obj2;
             }
             const obj6 = v1(4153)();
-            tmp17 = date;
           }
         } else if (arg0 === 1) {
           c0 = 3;
@@ -224,7 +223,7 @@ export default function ExistingUserAgeGate(onSuccess) {
   const effect1 = noop.useEffect(() => {
     let nsfwAllowed;
     if (stateFromStores != null) {
-      nsfwAllowed = tmp.nsfwAllowed;
+      nsfwAllowed = stateFromStores.nsfwAllowed;
     }
     if (false === nsfwAllowed) {
       if (closure_5) {
@@ -233,7 +232,7 @@ export default function ExistingUserAgeGate(onSuccess) {
     }
     let nsfwAllowed1;
     if (stateFromStores != null) {
-      nsfwAllowed1 = tmp.nsfwAllowed;
+      nsfwAllowed1 = stateFromStores.nsfwAllowed;
     }
     if (null != nsfwAllowed1) {
       onSuccess();
@@ -313,4 +312,5 @@ export default function ExistingUserAgeGate(onSuccess) {
   obj6 = onClose(tmp3[15]);
   obj6.helpURL = obj6.getArticleURL(constants3.AGE_GATE);
   stringResult = intl2.format(tmp2(tmp3[14]).t.n3QjDE, obj6);
+  const tmp2Result = onSuccess(source[12]);
 };

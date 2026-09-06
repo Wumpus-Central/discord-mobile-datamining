@@ -28,7 +28,7 @@ function PopoutMenuRow(onClose) {
   let tmp3Result = null;
   if (null != icon) {
     let obj = { source: icon };
-    tmp3Result = tmp3(native.Icon, obj);
+    tmp3Result = timestampProducer(native.Icon, obj);
   }
   obj = { leading: tmp3Result, label: null, style: tmp.popoutMenuRow, onPress: callback };
   obj = { style: tmp.popoutMenuRowLabel, text: onClose.text };
@@ -64,7 +64,7 @@ let closure_14 = {
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/video_calls/native/components/PopoutMenu.tsx");
 
-export default noop.forwardRef(function PopoutMenu(onClose, ref) {
+export default noop.forwardRef(function PopoutMenu(onClose, arg1) {
   ({ title, trigger, rows, onOpen } = onClose);
   let width;
   onClose = undefined;
@@ -82,7 +82,7 @@ export default noop.forwardRef(function PopoutMenu(onClose, ref) {
   const tmp9 = height(bottom.useState(false), 2);
   const first1 = tmp9[0];
   closure_9 = tmp9[1];
-  ref = bottom.useRef(null);
+  const ref = bottom.useRef(null);
   const ref1 = bottom.useRef(null);
   const tmp13 = height(bottom.useState({ top: 0, left: 0, width: 0, height: 0 }), 2);
   const first2 = tmp13[0];
@@ -133,14 +133,14 @@ export default noop.forwardRef(function PopoutMenu(onClose, ref) {
     }
     let left = 0;
     if (size.left + first3.width + 8 > width) {
-      left = size.width - tmp.width;
+      left = size.width - first3.width;
     }
     return { top, left };
   }, items1);
   const items2 = [tmp6[1]];
   ({ top, left } = memo);
   const imperativeHandle = bottom.useImperativeHandle(
-    ref,
+    arg1,
     () => ({
       close() {
         _setClose(true);
@@ -172,7 +172,7 @@ export default noop.forwardRef(function PopoutMenu(onClose, ref) {
       num = 1;
     }
     obj = { opacity: null, transform: null };
-    obj = { easing: tmp(1178).STANDARD_EASING, duration: 250 };
+    obj = { easing: native.STANDARD_EASING, duration: 250 };
     const fn = function n(arg0) {
       if (arg0) {
         onOpen(width[12]).runOnJS(handleClose)();
@@ -184,9 +184,8 @@ export default noop.forwardRef(function PopoutMenu(onClose, ref) {
     fn.__initData = __initData;
     obj.opacity = obj.withTiming(num, obj, "respect-motion-settings", fn);
     const obj1 = { runOnJS: ReanimatedRexport.runOnJS, handleClose };
-    const tmp3 = closure_17;
     let num2 = 0;
-    if (tmp3) {
+    if (closure_17) {
       num2 = -8;
     }
     const obj2 = { translateY: null };

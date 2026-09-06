@@ -1,6 +1,7 @@
 // discord_app/modules/devtools/native/components/screens/DevToolsGuildPowerupsScreen.tsx
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import HTTPUtils from "../../../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import UserSettingsProtoActionCreators from "../../../../user_settings/UserSettingsProtoActionCreators.tsx";
 import dismissible_content from "../../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
 import _modDef4153 from "../../../../../../_runtime/metro/04153__.js";
 import TableSwitchRow from "../../../../../design/components/TableRow/native/TableSwitchRow.native.tsx";
@@ -24,7 +25,7 @@ function setWarningBoosts() {
   }
   return applyArgumentsResult;
 }
-let closure_22 = async function _setWarningBoosts(arg0, value) {
+let closure_22 = async function _setWarningBoosts(arg0) {
   if (c6 === 2) {
     c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -88,7 +89,7 @@ let closure_22 = async function _setWarningBoosts(arg0, value) {
     }
   }
 };
-let closure_23 = async function _sendPowerupsSystemMessage(arg0, value) {
+let closure_23 = async function _sendPowerupsSystemMessage(arg0) {
   if (c1 === 2) {
     c1 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -153,10 +154,10 @@ function GuildDCSwitchRow(dc) {
   const items = [dc, guildId];
   const callback = noop.useCallback((arg0) => {
     if (arg0) {
-      let tmpResult = tmp(12494);
+      let tmpResult = GuildDismissibleContentUtils;
       const result = tmpResult.markContentAsDismissed(dc, guildId, false);
     } else {
-      tmpResult = tmp(1940);
+      tmpResult = UserSettingsProtoActionCreators;
       const result1 = tmpResult.removeDismissedRecurringContent(
         dismissible_content.DismissibleContent.GUILD_POWERUP_NOTIFICATION,
       );
@@ -345,7 +346,7 @@ export default function DevToolsGuildPowerupsScreen() {
     obj11.children = closure_18(tmp5(5605).TableRow, obj12);
     items6[6] = closure_18(tmp5(5687).TableRowGroup, obj11);
     obj.children = items6;
-    tmp16Result = tmp16(closure_5, obj);
+    tmp16Result = closure_19(closure_5, obj);
   }
   return tmp16Result;
 }

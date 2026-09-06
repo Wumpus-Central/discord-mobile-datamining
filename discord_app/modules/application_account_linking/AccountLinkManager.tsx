@@ -7,7 +7,7 @@ import AccountLinkStore from "AccountLinkStore.tsx";
 import AutomaticLifecycleManager from "../../lib/AutomaticLifecycleManager.tsx";
 
 let require = fn;
-let closure_9 = async function _claimIncentivizedAccountLinkingReward(arg0, value) {
+let closure_9 = async function _claimIncentivizedAccountLinkingReward(arg0) {
   if (c6 === 2) {
     c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -128,10 +128,9 @@ prototype["evaluatePending"] = function evaluatePending() {
     while (tmp26 !== undefined) {
       let tmp6 = _slicedToArray(tmp3, 2);
       [tmp7, tmp8] = tmp6;
-      let tmp9 = tmp8;
       if (timestamp - tmp8.startedAt > closure_8) {
         let result = AccountLinkStore.deletePendingAuthorization(tmp7);
-        let accountLinkCallbacks2 = tmp9.accountLinkCallbacks;
+        let accountLinkCallbacks2 = tmp8.accountLinkCallbacks;
         if (accountLinkCallbacks2 != null) {
           let onError = accountLinkCallbacks2.onError;
           if (onError != null) {
@@ -139,7 +138,7 @@ prototype["evaluatePending"] = function evaluatePending() {
           }
         }
       } else if (null != AuthorizedAppsStore.getNewestTokenForApplication(tmp7)) {
-        let accountLinkCallbacks = tmp9.accountLinkCallbacks;
+        let accountLinkCallbacks = tmp8.accountLinkCallbacks;
         if (accountLinkCallbacks != null) {
           let onSuccess = accountLinkCallbacks.onSuccess;
           if (onSuccess != null) {

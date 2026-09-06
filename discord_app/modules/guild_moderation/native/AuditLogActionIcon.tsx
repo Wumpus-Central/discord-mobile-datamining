@@ -15,21 +15,21 @@ function AuditIcons(action) {
   const tmp2 = hasOwnProperty(action);
   if (constants.CREATE === tmp2) {
     let tmp4 = _modDef17552;
-  } else if (tmp3.UPDATE === tmp2) {
+  } else if (constants.UPDATE === tmp2) {
     tmp4 = _modDef17553;
   } else {
     tmp4 = null;
-    if (tmp3.DELETE === tmp2) {
+    if (constants.DELETE === tmp2) {
       tmp4 = _modDef17554;
     }
   }
   if (action === constants2.MESSAGE_DELETE) {
     let RobotIcon = ChatIcon.ChatIcon;
   } else {
-    if (action !== tmp12.AUTO_MODERATION_BLOCK_MESSAGE) {
-      if (action !== tmp12.AUTO_MODERATION_FLAG_TO_CHANNEL) {
-        if (action !== tmp12.AUTO_MODERATION_USER_COMMUNICATION_DISABLED) {
-          if (action !== tmp12.AUTO_MODERATION_QUARANTINE_USER) {
+    if (action !== constants2.AUTO_MODERATION_BLOCK_MESSAGE) {
+      if (action !== constants2.AUTO_MODERATION_FLAG_TO_CHANNEL) {
+        if (action !== constants2.AUTO_MODERATION_USER_COMMUNICATION_DISABLED) {
+          if (action !== constants2.AUTO_MODERATION_QUARANTINE_USER) {
             RobotIcon = createStyles[tmp11];
           }
         }

@@ -13,7 +13,7 @@ import BillingInfoStore from "../../../stores/billing/BillingInfoStore.tsx";
 import SubscriptionStore from "../../../stores/billing/SubscriptionStore.tsx";
 
 require = fn;
-let closure_20 = async function _deletePaymentSource(arg0, value) {
+let closure_20 = async function _deletePaymentSource(arg0) {
   if (c6 === 2) {
     c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -182,7 +182,7 @@ let closure_21 = async function _updatePaymentSource(arg0, arg1) {
     }
   })();
 };
-let closure_22 = async function _fetchPaymentSources(arg0, value) {
+let closure_22 = async function _fetchPaymentSources() {
   if (c5 === 2) {
     c5 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -266,7 +266,7 @@ let closure_22 = async function _fetchPaymentSources(arg0, value) {
     }
   }
 };
-let closure_23 = async function _fetchPaymentSource(arg0, value) {
+let closure_23 = async function _fetchPaymentSource(arg0) {
   if (c6 === 2) {
     c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -339,11 +339,11 @@ let closure_23 = async function _fetchPaymentSource(arg0, value) {
     }
   }
 };
-let closure_24 = async function _fetchWalletInformation(paymentSourceId) {
+let closure_24 = async function _fetchWalletInformation() {
   c5 = 0;
   c6 = 0;
   c4 = 0;
-  return (async (arg0, value) => {
+  return (async (arg0) => {
     if (c6 === 2) {
       c6 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -435,12 +435,13 @@ let closure_26 = async function _fetchPayment() {
   closure_2 = tmp2;
   closure_1 = tmp5;
   const HTTP = HTTPUtils.HTTP;
-  closure_129_0 = await HTTP.get({ url: closure_2_10.BILLING_PAYMENT(closure_0), rejectWithError: true });
+  await HTTP.get({ url: closure_2_10.BILLING_PAYMENT(closure_0), rejectWithError: true });
+  closure_129_0 = value;
   { url: closure_2_10.BILLING_PAYMENT(closure_0), rejectWithError: true };
   closure_130_1(closure_130_2[8]).dispatch({ type: "BILLING_PAYMENT_FETCH_SUCCESS", payment: closure_129_0.body });
   return closure_129_0;
 };
-let closure_27 = async function _fetchPayments(arg0, value) {
+let closure_27 = async function _fetchPayments() {
   if (c7 === 2) {
     c7 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -535,7 +536,7 @@ let closure_27 = async function _fetchPayments(arg0, value) {
     }
   }
 };
-let closure_28 = async function _fetchSubscriptions(arg0, value) {
+let closure_28 = async function _fetchSubscriptions() {
   if (c5 === 2) {
     c5 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -645,15 +646,15 @@ let closure_29 = async function _getPerksRelevance() {
     c5 = 3;
   } else if (arg0 === 1) {
     c5 = 3;
-    throw arg1;
+    throw value;
   } else if (arg0 !== 2) {
-    closure_128_0 = arg1;
+    closure_128_0 = value;
     obj3 = { type: "BILLING_PERKS_RELEVANCE_FETCH_SUCCESS", res: closure_128_0.body };
     closure_129_1(closure_129_2[8]).dispatch(obj3);
     c3 = 0;
     closure_129_1(closure_129_2[8]);
   }
-  return arg1;
+  return value;
 };
 let closure_30 = async function _fetchMostRecentSubscription() {
   closure_1 = tmp3;
@@ -666,7 +667,8 @@ let closure_30 = async function _fetchMostRecentSubscription() {
   request.query = obj1;
   await HTTP.get(request);
   closure_129_1(closure_129_2[8]).dispatch({ type: "BILLING_MOST_RECENT_SUBSCRIPTION_FETCH_FAIL" });
-  closure_128_0 = await "HermesInternal";
+  await "HermesInternal";
+  closure_128_0 = value;
   let first = null;
   if (closure_128_0.body.length > 0) {
     first = closure_128_0.body[0];
@@ -680,7 +682,7 @@ let closure_30 = async function _fetchMostRecentSubscription() {
   obj1.dispatch({ type: "BILLING_PREVIOUS_PREMIUM_SUBSCRIPTION_FETCH_SUCCESS", subscription: tmp17 });
   return closure_128_0;
 };
-let closure_31 = async function _createSubscription(arg0, value) {
+let closure_31 = async function _createSubscription(arg0) {
   if (c11 === 2) {
     c11 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -892,7 +894,7 @@ let closure_31 = async function _createSubscription(arg0, value) {
     }
   }
 };
-let closure_32 = async function _payInvoiceManually(arg0, value) {
+let closure_32 = async function _payInvoiceManually(arg0) {
   if (c15 === 2) {
     c15 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -921,18 +923,18 @@ let closure_32 = async function _payInvoiceManually(arg0, value) {
           closure_11 = tmp5;
           closure_139_0 = closure_0;
           closure_139_1 = closure_1;
-          closure_139_2 = closure_2;
+          closure_139_2 = dependencyMap;
           closure_139_3 = closure_3;
           closure_139_4 = closure_4;
           closure_139_6 = undefined;
           closure_139_7 = undefined;
           closure_139_8 = undefined;
           closure_139_5 = null;
-          if (null != closure_2) {
-            if (set.has(tmp108.type)) {
+          if (null != dependencyMap) {
+            if (set.has(dependencyMap.type)) {
               c14 = 1;
               c15 = 1;
-              const obj1 = { value: BillingSharedActionCreators.popupBridgeState(tmp108.type), done: false };
+              const obj1 = { value: BillingSharedActionCreators.popupBridgeState(dependencyMap.type), done: false };
               return obj1;
             }
           }
@@ -1060,12 +1062,14 @@ function handlePaymentConfirmation(body, type) {
     return confirmPaymentResult;
   }
   confirmPaymentResult = new HandleConfirmPaymentRegistry.StripePaymentConfirmationHandler(type, body).confirmPayment();
+  const stripePaymentConfirmationHandler = new HandleConfirmPaymentRegistry.StripePaymentConfirmationHandler(type, body);
 }
 let closure_34 = async function _redirectedPaymentSucceeded() {
   closure_2 = tmp5;
   closure_1 = tmp2;
   closure_129_0 = closure_0;
-  closure_129_1 = await fetchPayment(closure_0);
+  await fetchPayment(closure_0);
+  closure_129_1 = value;
   if (closure_129_1 != null) {
     let body = closure_129_1.body;
   }
@@ -1092,7 +1096,7 @@ let closure_34 = async function _redirectedPaymentSucceeded() {
   }
   return result;
 };
-let closure_35 = async function _cancelSubscription(arg0, location_stack, _location) {
+let closure_35 = async function _cancelSubscription(arg0) {
   closure_0 = arg0;
   c7 = 0;
   c8 = 0;
@@ -1185,7 +1189,7 @@ function updateSubscription() {
   }
   return applyArgumentsResult;
 }
-let closure_37 = async function _updateSubscription(arg0, value) {
+let closure_37 = async function _updateSubscription(arg0) {
   if (c14 === 2) {
     c14 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -1236,7 +1240,7 @@ let closure_37 = async function _updateSubscription(arg0, value) {
           if (null != importDefault.paymentSource) {
             c13 = 2;
             c14 = 1;
-            const obj2 = { value: BillingPaymentGatewayActionCreators.createPaymentSourceToken(tmp118.paymentSource), done: false };
+            const obj2 = { value: BillingPaymentGatewayActionCreators.createPaymentSourceToken(importDefault.paymentSource), done: false };
             return obj2;
           }
         }
@@ -1378,7 +1382,7 @@ let closure_37 = async function _updateSubscription(arg0, value) {
     }
   }
 };
-let closure_38 = async function _voidPendingPayment(arg0, value) {
+let closure_38 = async function _voidPendingPayment(arg0) {
   if (c1 === 2) {
     c1 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -1427,7 +1431,7 @@ let closure_38 = async function _voidPendingPayment(arg0, value) {
     }
   }
 };
-let closure_39 = async function _fetchIpCountryCode(arg0, value) {
+let closure_39 = async function _fetchIpCountryCode() {
   if (c6 === 2) {
     c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -1536,7 +1540,7 @@ let closure_39 = async function _fetchIpCountryCode(arg0, value) {
     }
   }
 };
-let closure_40 = async function _fetchIpLocation(arg0, value) {
+let closure_40 = async function _fetchIpLocation() {
   if (c6 === 2) {
     c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -1747,7 +1751,7 @@ let closure_42 = async function _redeemUserDiscountOffer(arg0) {
   c5 = 0;
   c6 = 0;
   c4 = 0;
-  return (async (arg0, value) => {
+  return (async (arg0) => {
     if (c6 === 2) {
       c6 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -1971,13 +1975,13 @@ export const cancelSubscription = function cancelSubscription() {
   }
   return applyArgumentsResult;
 };
-export const deleteRenewalMutation = function deleteRenewalMutation(currency, arg1) {
+export const deleteRenewalMutation = function deleteRenewalMutation(currency, analyticsLocations) {
   let obj = { items: currency.items };
   obj = { amount: 0, currency: currency.currency };
-  return updateSubscription(currency, obj, obj, PremiumUtils.getItemPlansTotalServerPrice(currency.items, currency.currency, currency.paymentSourceId), arg1);
+  return updateSubscription(currency, obj, obj, PremiumUtils.getItemPlansTotalServerPrice(currency.items, currency.currency, currency.paymentSourceId), analyticsLocations);
 };
 export { updateSubscription };
-export const resubscribeToSubscription = function resubscribeToSubscription(currency, arg1, id, arg3, arg4) {
+export const resubscribeToSubscription = function resubscribeToSubscription(currency, analyticsLocations, id, arg3, arg4) {
   let obj = { status: constants.ACTIVE, paymentSource: id, currency: arg3 };
   obj = { amount: 0, currency: currency.currency };
   id = undefined;
@@ -1985,22 +1989,22 @@ export const resubscribeToSubscription = function resubscribeToSubscription(curr
   if (id != null) {
     id = id.id;
   }
-  return updateSubscription(currency, obj, obj, PremiumUtils.getItemPlansTotalServerPrice(items, currency, id), arg1, arg4);
+  return updateSubscription(currency, obj, obj, PremiumUtils.getItemPlansTotalServerPrice(items, currency, id), analyticsLocations, arg4);
 };
-export const upgradeSubscription = function upgradeSubscription(renewalMutations, basePlanId, arg2, itemPlansTotalServerPrice, arg4, arg5) {
+export const upgradeSubscription = function upgradeSubscription(renewalMutations, basePlanId, arg2, itemPlansTotalServerPrice, analyticsLocations, arg5) {
   let obj = PremiumUtils;
   obj = { status: constants.ACTIVE, items: obj.getItemsWithUpsertedPremiumPlanId(renewalMutations, basePlanId) };
-  return updateSubscription(renewalMutations, obj, arg2, itemPlansTotalServerPrice, arg4, arg5);
+  return updateSubscription(renewalMutations, obj, arg2, itemPlansTotalServerPrice, analyticsLocations, arg5);
 };
-export const changeSubscriptionCurrency = function changeSubscriptionCurrency(currency, currency, itemPlansTotalServerPrice, arg3, arg4) {
+export const changeSubscriptionCurrency = function changeSubscriptionCurrency(currency, currency, itemPlansTotalServerPrice, analyticsLocations, arg4) {
   let obj = { currency };
   obj = { amount: 0, currency: currency.toLowerCase() };
-  return updateSubscription(currency, obj, obj, itemPlansTotalServerPrice, arg3, arg4);
+  return updateSubscription(currency, obj, obj, itemPlansTotalServerPrice, analyticsLocations, arg4);
 };
-export const changePaymentSource = function changePaymentSource(currency, paymentSource, currency, arg3, arg4) {
+export const changePaymentSource = function changePaymentSource(currency, paymentSource, currency, analyticsLocations, arg4) {
   let obj = { paymentSource };
   obj = { amount: 0, currency: currency.currency };
-  return updateSubscription(currency, obj, obj, currency, arg3, arg4);
+  return updateSubscription(currency, obj, obj, currency, analyticsLocations, arg4);
 };
 export const clearUpdatePaymentSourceError = function clearUpdatePaymentSourceError() {
   DispatcherDefault.dispatch({ type: "BILLING_PAYMENT_SOURCE_UPDATE_CLEAR_ERROR" });

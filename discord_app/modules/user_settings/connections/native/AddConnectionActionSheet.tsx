@@ -1,6 +1,8 @@
 // discord_app/modules/user_settings/connections/native/AddConnectionActionSheet.tsx
 import Constants from "../../../../Constants.tsx";
+import AvatarUtils from "../../../../utils/AvatarUtils.tsx";
 import UserApplicationIdentityConstants from "../../../user_application_identity/UserApplicationIdentityConstants.tsx";
+import shared from "../../../../design/shared.tsx";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import TableRow from "../../../../design/components/TableRow/native/TableRow.native.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
@@ -36,7 +38,7 @@ function AddApplicationIdentityTableRow(application) {
   let tmp7Result = null;
   if (null != iconSource) {
     obj = { source: iconSource, style: tmp4.icon, disableColor: true };
-    tmp7Result = tmp7(tmp5(1178).Icon, obj);
+    tmp7Result = closure_5(tmp5(1178).Icon, obj);
   }
   obj.icon = tmp7Result;
   obj.trailing = closure_5(require("TableRow").TableRow.Arrow, {});
@@ -104,8 +106,7 @@ export default function AddConnectionActionSheet() {
         icon: null,
         trailing: null,
       };
-      tmp2(1396);
-      const tmp2Result = tmp2(4411);
+      const tmp2Result = shared;
       obj = {
         source: tmp2Result.makeSource(tmp2Result.isThemeDark(closure_0) ? icon.darkPNG : icon.lightPNG),
         disableColor: true,

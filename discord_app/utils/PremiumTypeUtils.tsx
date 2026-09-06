@@ -13,15 +13,15 @@ function isPremiumAtLeast(premiumType, TIER_2) {
   }
   return tmp;
 }
-function isPremium(premiumType, arg1) {
+function isPremium(premiumType, TIER_2) {
   let tmp = null != premiumType && null != premiumType.premiumType;
   if (tmp) {
     premiumType = premiumType.premiumType;
-    let tmp3 = null == arg1;
+    let tmp3 = null == TIER_2;
     if (!tmp3) {
       let tmp4 = null != premiumType;
       if (tmp4) {
-        tmp4 = PremiumTypeOrder[premiumType] >= PremiumTypeOrder[arg1];
+        tmp4 = PremiumTypeOrder[premiumType] >= PremiumTypeOrder[TIER_2];
       }
       tmp3 = tmp4;
     }

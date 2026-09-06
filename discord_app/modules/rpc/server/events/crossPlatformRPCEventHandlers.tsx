@@ -2,6 +2,7 @@
 import _modDef12 from "../../../../../_runtime/metro/00012__.js";
 import discord_common_shallowEqualDefault from "../../../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx";
 import BigFlagUtilsAll from "../../../../../discord_common/js/shared/utils/BigFlagUtils.tsx";
+import AgeGateUtils from "../../../age_gate/AgeGateUtils.tsx";
 import RPCErrorDefault from "../../RPCError.tsx";
 import createRpcJoiSchemaObjectDefault from "../../helpers/createRpcJoiSchemaObject.tsx";
 import RPCHelpers from "../../RPCHelpers.tsx";
@@ -41,10 +42,9 @@ function messageEvents(args) {
         tmp3 = new tmp3(obj, "Invalid nsfw channel id: " + channel.id);
         throw tmp3;
       }
-      tmp13Result = tmp13(4771);
+      tmp13Result = AgeGateUtils;
     }
     obj4 = RPCHelpers;
-    tmp13 = require;
   }
   obj = { errorCode: constants2.INVALID_CHANNEL };
   let tmp11 = RPCErrorDefault;

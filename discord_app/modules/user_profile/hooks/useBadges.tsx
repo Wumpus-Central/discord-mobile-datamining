@@ -1,4 +1,5 @@
 // discord_app/modules/user_profile/hooks/useBadges.tsx
+import useStateFromStores from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 import util from "../../../intl/index.native.tsx";
 import UserSettings from "../../user_settings/UserSettings.tsx";
 import StreamerModeStore from "../../../stores/StreamerModeStore.tsx";
@@ -15,10 +16,10 @@ export default function useBadges(getBadges, arg1) {
   if (undefined !== arg1) {
     setting = arg1;
   }
-  let tmpResult = tmp(563);
+  let tmpResult = useStateFromStores;
   const items = [UserStore];
   const stateFromStores = tmpResult.useStateFromStores(items, () => currentUser.getCurrentUser());
-  tmpResult = tmp(563);
+  tmpResult = useStateFromStores;
   [][0] = StreamerModeStore;
   if (null == getBadges) {
     return [];

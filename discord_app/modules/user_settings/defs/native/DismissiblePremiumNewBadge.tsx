@@ -55,7 +55,12 @@ export default function DismissiblePremiumNewBadge(dismissibleContent) {
             gradient: true,
             colors: Gradients.PREMIUM_TIER_2_TRI_COLOR,
           };
-          tmp6Result = tmp6(native.NewTag, obj);
+          tmp6Result = jsx(native.NewTag, {
+            variant: tmp3,
+            containerStyle: closure_6.newTag,
+            gradient: true,
+            colors: Gradients.PREMIUM_TIER_2_TRI_COLOR,
+          });
         } else {
           const obj1 = {
             style: closure_6.newTagContainer,
@@ -67,15 +72,21 @@ export default function DismissiblePremiumNewBadge(dismissibleContent) {
           let tmp15 = closure_1_4;
           if (closure_1_4 == null) {
             const items1 = [
-              tmp7(576).unsafe_rawColors.PREMIUM_TIER_2_PURPLE,
-              tmp7(576).unsafe_rawColors.PREMIUM_TIER_2_PINK,
+              nativeDefault.unsafe_rawColors.PREMIUM_TIER_2_PURPLE,
+              nativeDefault.unsafe_rawColors.PREMIUM_TIER_2_PINK,
             ];
             tmp15 = items1;
           }
           obj1.colors = tmp15;
           const obj2 = { containerStyle: closure_6.newTag, variant: tmp3 };
           obj1.children = jsx(native.NewTag, { containerStyle: closure_6.newTag, variant: tmp3 });
-          tmp6Result = tmp6(LinearGradientDefault, obj1);
+          tmp6Result = jsx(LinearGradientDefault, {
+            style: closure_6.newTagContainer,
+            start: ConstantsIOS.HorizontalGradient.START,
+            end: ConstantsIOS.HorizontalGradient.END,
+            colors: null,
+            children: null,
+          });
         }
         return tmp6Result;
       }
@@ -110,7 +121,12 @@ export default function DismissiblePremiumNewBadge(dismissibleContent) {
             gradient: true,
             colors: Gradients.PREMIUM_TIER_2_TRI_COLOR,
           };
-          tmp6Result = tmp6(native.NewTag, obj);
+          tmp6Result = jsx(native.NewTag, {
+            variant: tmp3,
+            containerStyle: closure_6.newTag,
+            gradient: true,
+            colors: Gradients.PREMIUM_TIER_2_TRI_COLOR,
+          });
         } else {
           const obj1 = {
             style: closure_6.newTagContainer,
@@ -122,15 +138,21 @@ export default function DismissiblePremiumNewBadge(dismissibleContent) {
           let tmp15 = closure_1_4;
           if (closure_1_4 == null) {
             const items1 = [
-              tmp7(576).unsafe_rawColors.PREMIUM_TIER_2_PURPLE,
-              tmp7(576).unsafe_rawColors.PREMIUM_TIER_2_PINK,
+              nativeDefault.unsafe_rawColors.PREMIUM_TIER_2_PURPLE,
+              nativeDefault.unsafe_rawColors.PREMIUM_TIER_2_PINK,
             ];
             tmp15 = items1;
           }
           obj1.colors = tmp15;
           const obj2 = { containerStyle: closure_6.newTag, variant: tmp3 };
           obj1.children = jsx(native.NewTag, { containerStyle: closure_6.newTag, variant: tmp3 });
-          tmp6Result = tmp6(LinearGradientDefault, obj1);
+          tmp6Result = jsx(LinearGradientDefault, {
+            style: closure_6.newTagContainer,
+            start: ConstantsIOS.HorizontalGradient.START,
+            end: ConstantsIOS.HorizontalGradient.END,
+            colors: null,
+            children: null,
+          });
         }
         return tmp6Result;
       }

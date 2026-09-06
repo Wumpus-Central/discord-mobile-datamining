@@ -29,13 +29,14 @@ export default function usePIPAvoidanceSpecs(safeArea) {
   fn.__initData = __initData;
   const fn2 = function f(safeAreaState, current) {
     let obj = cheapWorkletShallowEqual;
-    if (!obj.cheapWorkletShallowEqual(safeAreaState, current)) {
+    if (!obj.cheapWorkletShallowEqual(safeAreaState, tmp)) {
       ({ keyboardHeight, safeAreaBottom, screenName } = safeAreaState);
       obj = { screenBottomOffset: getPIPBottomOffsetForPIPModeDefault(screenName), safeAreaBottom, keyboardHeight };
       const rect = { top: 0, bottom: getAdjustedBottomOffsetsDefault(obj).bottomOffset };
       updateSharedValueIfChangedDefault(sharedValue, rect);
       const tmp4 = getPIPBottomOffsetForPIPModeDefault(screenName);
     }
+    tmp = current;
   };
   obj = {
     cheapWorkletShallowEqual: require("cheapWorkletShallowEqual").cheapWorkletShallowEqual,

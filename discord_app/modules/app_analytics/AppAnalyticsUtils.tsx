@@ -143,7 +143,7 @@ function collectChannelAnalyticsMetadata(channel) {
     }
   }
 }
-function trackWithMetadata(IAR_MODAL_OPEN, fileSizeLimitEventProperties, hasItem) {
+function trackWithMetadata(IAR_MODAL_OPEN) {
   let obj = fileSizeLimitEventProperties;
   if (fileSizeLimitEventProperties === undefined) {
     obj = {};
@@ -231,8 +231,9 @@ function getVoiceStateMetadata(guildId, channelId, videoEnabled) {
   const item = found1.forEach((selfVideo) => {
     obj.voice_state_count = obj.voice_state_count + 1;
     if (tmp2) {
-      tmp.video_stream_count = tmp.video_stream_count + 1;
+      obj.video_stream_count = obj.video_stream_count + 1;
     }
+    tmp2 = selfVideo.selfVideo || selfVideo.selfStream;
   });
   return obj;
 }
@@ -288,8 +289,9 @@ export const collectVoiceAnalyticsMetadata = function collectVoiceAnalyticsMetad
       const item = found1.forEach((selfVideo) => {
         obj.voice_state_count = obj.voice_state_count + 1;
         if (tmp2) {
-          tmp.video_stream_count = tmp.video_stream_count + 1;
+          obj.video_stream_count = obj.video_stream_count + 1;
         }
+        tmp2 = selfVideo.selfVideo || selfVideo.selfStream;
       });
       const merged = Object.assign(obj);
       const tmp9Result = obj(12)(VoiceStateStore.getVoiceStates(guildId));

@@ -69,13 +69,12 @@ obj = {
       let combined = "" + str + ":" + arg1;
       value = priv.get(combined);
       if (null == value) {
-        let result = obj.set(combined, true);
+        let result = priv.set(combined, true);
       }
       flag2 = false;
       if (null == value) {
         flag2 = true;
       }
-      obj = priv;
     }
     if (items.length > 0) {
       if (isArray) {
@@ -96,15 +95,15 @@ obj = {
             HermesBuiltin.apply(items1, items);
           } else {
             const _Array = Array;
-            if (Array.isArray(arr2)) {
-              const item = arr2.forEach((item) => {
+            if (Array.isArray(closure_0)) {
+              const item = closure_0.forEach((item) => {
                 guild = guild.getGuild(item);
                 if (null != guild) {
                   items.push(guild.id);
                 }
               });
             } else {
-              guild = GuildStore.getGuild(arr2);
+              guild = GuildStore.getGuild(closure_0);
               if (null != guild) {
                 items.push(guild.id);
               }
@@ -134,15 +133,15 @@ obj = {
           HermesBuiltin.apply(items1, items);
         } else {
           const _Array = Array;
-          if (Array.isArray(arr2)) {
-            const item = arr2.forEach((item) => {
+          if (Array.isArray(closure_0)) {
+            const item = closure_0.forEach((item) => {
               guild = guild.getGuild(item);
               if (null != guild) {
                 items.push(guild.id);
               }
             });
           } else {
-            guild = GuildStore.getGuild(arr2);
+            guild = GuildStore.getGuild(closure_0);
             if (null != guild) {
               items.push(guild.id);
             }

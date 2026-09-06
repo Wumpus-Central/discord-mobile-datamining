@@ -67,9 +67,9 @@ let closure_6 = function ForumChannelStoreState(set, get) {
     ForumChannelAnalyticsManagerDefault.setSortOrder(sortOrder);
   };
   obj.setLayoutType = function setLayoutType(channelId, c7) {
-    obj = { layoutType: c7 };
+    obj = { layoutType };
     obj.setChannelState(channelId, obj);
-    ForumChannelAnalyticsManagerDefault.setLayout(c7);
+    ForumChannelAnalyticsManagerDefault.setLayout(layoutType);
   };
   obj.setTagSetting = function setTagSetting(channelId, tagSetting) {
     obj = { tagSetting };
@@ -138,9 +138,9 @@ let closure_7 = module_560.create((set, get) => {
       ForumChannelAnalyticsManagerDefault.setSortOrder(sortOrder);
     };
     obj.setLayoutType = function setLayoutType(channelId, c7) {
-      obj = { layoutType: c7 };
+      obj = { layoutType };
       obj.setChannelState(channelId, obj);
-      ForumChannelAnalyticsManagerDefault.setLayout(c7);
+      ForumChannelAnalyticsManagerDefault.setLayout(layoutType);
     };
     obj.setTagSetting = function setTagSetting(channelId, tagSetting) {
       obj = { tagSetting };

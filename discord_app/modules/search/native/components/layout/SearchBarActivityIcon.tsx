@@ -63,9 +63,9 @@ export default noop.memo(function SearchBarActivityIcon(searchContext) {
   const effect = noop.useEffect(() => {
     const withTiming = timing.withTiming;
     if (stateFromStores) {
-      const result = set(withTiming(tmp3.END));
+      const result = set(withTiming(createStyles.END));
     } else {
-      const result1 = set(withTiming(tmp3.START));
+      const result1 = set(withTiming(createStyles.START));
     }
   }, items2);
   let obj2 = searchContext(sharedValue[10]);

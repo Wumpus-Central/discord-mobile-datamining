@@ -13,40 +13,40 @@ export const _transformMetadataToCamelCase = function _transformMetadataToCamelC
       let camelCaseResult = closure_2_0(closure_2_1[0]).camelCase(item);
       if (typeof closure_1_0[item] === "object") {
         let _Array = Array;
-        if (!Array.isArray(tmp2[item])) {
+        if (!Array.isArray(closure_1_0[item])) {
           closure_0 = tmp3;
           let reduced = tmp3;
-          if (null != tmp2[item]) {
+          if (null != closure_1_0[item]) {
             let _Object = Object;
             let keys = Object.keys(tmp3);
             reduced = keys.reduce((acc, item) => {
               let camelCaseResult = closure_2_0(closure_2_1[0]).camelCase(item);
               if (typeof closure_1_0[item] === "object") {
                 let _Array = Array;
-                if (!Array.isArray(tmp2[item])) {
+                if (!Array.isArray(closure_1_0[item])) {
                   closure_0 = tmp3;
                   let reduced = tmp3;
-                  if (null != tmp2[item]) {
+                  if (null != closure_1_0[item]) {
                     let _Object = Object;
                     let keys = Object.keys(tmp3);
                     reduced = keys.reduce((acc, item) => {
                       let camelCaseResult = closure_2_0(closure_2_1[0]).camelCase(item);
                       if (typeof closure_1_0[item] === "object") {
                         let _Array = Array;
-                        if (!Array.isArray(tmp2[item])) {
+                        if (!Array.isArray(closure_1_0[item])) {
                           closure_0 = tmp3;
                           let reduced = tmp3;
-                          if (null != tmp2[item]) {
+                          if (null != closure_1_0[item]) {
                             let _Object = Object;
                             let keys = Object.keys(tmp3);
                             reduced = keys.reduce((acc, item) => {
                               let camelCaseResult = closure_2_0(closure_2_1[0]).camelCase(item);
                               if (typeof closure_1_0[item] === "object") {
                                 let _Array = Array;
-                                if (!Array.isArray(tmp2[item])) {
+                                if (!Array.isArray(closure_1_0[item])) {
                                   closure_0 = tmp3;
                                   let reduced = tmp3;
-                                  if (null != tmp2[item]) {
+                                  if (null != closure_1_0[item]) {
                                     let _Object = Object;
                                     let keys = Object.keys(tmp3);
                                     reduced = keys.reduce(() => { ... }, {});
@@ -56,6 +56,7 @@ export const _transformMetadataToCamelCase = function _transformMetadataToCamelC
                                 return acc;
                               }
                               acc[camelCaseResult] = closure_1_0[item];
+                              let obj = closure_2_0(closure_2_1[0]);
                             }, {});
                           }
                           acc[camelCaseResult] = reduced;
@@ -63,6 +64,7 @@ export const _transformMetadataToCamelCase = function _transformMetadataToCamelC
                         return acc;
                       }
                       acc[camelCaseResult] = closure_1_0[item];
+                      let obj = closure_2_0(closure_2_1[0]);
                     }, {});
                   }
                   acc[camelCaseResult] = reduced;
@@ -70,6 +72,7 @@ export const _transformMetadataToCamelCase = function _transformMetadataToCamelC
                 return acc;
               }
               acc[camelCaseResult] = closure_1_0[item];
+              let obj = closure_2_0(closure_2_1[0]);
             }, {});
           }
           acc[camelCaseResult] = reduced;
@@ -77,6 +80,7 @@ export const _transformMetadataToCamelCase = function _transformMetadataToCamelC
         return acc;
       }
       acc[camelCaseResult] = closure_1_0[item];
+      let obj = closure_2_0(closure_2_1[0]);
     }, {});
   }
   return reduced;
@@ -91,74 +95,78 @@ export const _transformMetadataToSnakeCase = function _transformMetadataToSnakeC
       let snakeCaseResult = closure_2_0(closure_2_1[0]).snakeCase(item);
       if (typeof closure_1_0[item] === "object") {
         let _Array = Array;
-        if (!Array.isArray(tmp2[item])) {
+        if (!Array.isArray(closure_1_0[item])) {
           closure_0 = tmp3;
           let reduced = tmp3;
-          if (null != tmp2[item]) {
+          if (null != closure_1_0[item]) {
             let _Object = Object;
             let keys = Object.keys(tmp3);
             reduced = keys.reduce((acc, item) => {
               let snakeCaseResult = closure_2_0(closure_2_1[0]).snakeCase(item);
               if (typeof closure_1_0[item] === "object") {
                 let _Array = Array;
-                if (!Array.isArray(tmp2[item])) {
+                if (!Array.isArray(closure_1_0[item])) {
                   closure_0 = tmp3;
                   let reduced = tmp3;
-                  if (null != tmp2[item]) {
+                  if (null != closure_1_0[item]) {
                     let _Object = Object;
                     let keys = Object.keys(tmp3);
                     reduced = keys.reduce((acc, item) => {
                       let snakeCaseResult = closure_2_0(closure_2_1[0]).snakeCase(item);
                       if (typeof closure_1_0[item] === "object") {
                         let _Array = Array;
-                        if (!Array.isArray(tmp2[item])) {
+                        if (!Array.isArray(closure_1_0[item])) {
                           closure_0 = tmp3;
                           let reduced = tmp3;
-                          if (null != tmp2[item]) {
+                          if (null != closure_1_0[item]) {
                             let _Object = Object;
                             let keys = Object.keys(tmp3);
                             reduced = keys.reduce((acc, item) => {
                               let snakeCaseResult = closure_2_0(closure_2_1[0]).snakeCase(item);
                               if (typeof closure_1_0[item] === "object") {
                                 let _Array = Array;
-                                if (!Array.isArray(tmp2[item])) {
+                                if (!Array.isArray(closure_1_0[item])) {
                                   closure_0 = tmp3;
                                   let reduced = tmp3;
-                                  if (null != tmp2[item]) {
+                                  if (null != closure_1_0[item]) {
                                     let _Object = Object;
                                     let keys = Object.keys(tmp3);
                                     reduced = keys.reduce(() => { ... }, {});
                                   }
                                   acc[snakeCaseResult] = reduced;
                                 }
-                                acc[snakeCaseResult] = tmp2[item];
+                                acc[snakeCaseResult] = closure_1_0[item];
                                 return acc;
                               }
                               acc[snakeCaseResult] = closure_1_0[item];
+                              let obj = closure_2_0(closure_2_1[0]);
                             }, {});
                           }
                           acc[snakeCaseResult] = reduced;
                         }
-                        acc[snakeCaseResult] = tmp2[item];
+                        acc[snakeCaseResult] = closure_1_0[item];
                         return acc;
                       }
                       acc[snakeCaseResult] = closure_1_0[item];
+                      let obj = closure_2_0(closure_2_1[0]);
                     }, {});
                   }
                   acc[snakeCaseResult] = reduced;
                 }
-                acc[snakeCaseResult] = tmp2[item];
+                acc[snakeCaseResult] = closure_1_0[item];
                 return acc;
               }
               acc[snakeCaseResult] = closure_1_0[item];
+              let obj = closure_2_0(closure_2_1[0]);
             }, {});
           }
           acc[snakeCaseResult] = reduced;
         }
-        acc[snakeCaseResult] = tmp2[item];
+        acc[snakeCaseResult] = closure_1_0[item];
         return acc;
       }
       acc[snakeCaseResult] = closure_1_0[item];
+      let obj = closure_2_0(closure_2_1[0]);
     }, {});
   }
   return reduced;

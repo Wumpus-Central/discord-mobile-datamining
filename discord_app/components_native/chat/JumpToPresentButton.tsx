@@ -23,17 +23,17 @@ createStyles.containerIOS = { bottom: "100%", pointerEvents: "box-none" };
 let closure_10 = createStyles.createStyles(createStyles);
 const PlatformUtils = fn(1115);
 let closure_11 = PlatformUtils.isIOS()
-  ? (arg0) => {
+  ? (View) => {
       const obj = { marginBottom: null };
       const token = useToken.useToken(nativeDefault.modules.mobile.JUMP_TO_PRESENT_BOTTOM_SPACING);
-      obj.marginBottom = token + hasOwnProperty(arg0);
+      obj.marginBottom = token + hasOwnProperty(View);
       return obj;
     }
-  : (arg0) => {
+  : (View) => {
       const obj = { bottom: null };
       const token = obj.useToken(nativeDefault.modules.mobile.JUMP_TO_PRESENT_BOTTOM_SPACING);
-      const sum = React4(arg0) + token;
-      obj.bottom = sum + hasOwnProperty(arg0);
+      const sum = React4(View) + token;
+      obj.bottom = sum + hasOwnProperty(View);
       return obj;
     };
 const size = fn(2);
@@ -55,10 +55,9 @@ export default function JumpToPresentButton(channelId) {
       let tmp5 = !value;
       if (!value) {
         const showJumpToPresentButtonChannelId = showingAutoComplete.showJumpToPresentButtonChannelId;
-        tmp5 = showJumpToPresentButtonChannelId.get(tmp3) === channelId;
+        tmp5 = showJumpToPresentButtonChannelId.get(screenIndex) === channelId;
       }
       tmp = tmp5;
-      tmp3 = screenIndex;
     }
     return tmp;
   });
@@ -93,10 +92,14 @@ export default function JumpToPresentButton(channelId) {
   obj.style = items3;
   if (tmp5) {
     obj = { accessibilityLabel: stringResult, icon: screenIndex(12269), onPress: channelId.onJumpToPresent };
-    let tmp12Result = tmp12(screenIndex(12268), obj);
+    let tmp12Result = jsx(screenIndex(12268), {
+      accessibilityLabel: stringResult,
+      icon: screenIndex(12269),
+      onPress: channelId.onJumpToPresent,
+    });
     const tmp16 = screenIndex(12268);
   } else {
-    tmp12Result = tmp12(tmp3(12270).MemoedVoicePanelDismissChatButton, {});
+    tmp12Result = jsx(tmp3(12270).MemoedVoicePanelDismissChatButton, {});
   }
   obj.children = tmp12Result;
   return <View style={null}>{null}</View>;

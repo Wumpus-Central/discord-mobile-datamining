@@ -23,7 +23,7 @@ function fetchBountiesAndDispatch() {
   }
   return applyArgumentsResult;
 }
-let closure_11 = async function _fetchBountiesAndDispatch(arg0, arg1) {
+let closure_11 = async function _fetchBountiesAndDispatch(arg0) {
   closure_3 = tmp3;
   const request_id = tmp5;
   closure_130_0 = closure_0;
@@ -42,20 +42,20 @@ let closure_11 = async function _fetchBountiesAndDispatch(arg0, arg1) {
     const obj1 = closure_131_1(closure_131_2[7]);
   } else if (arg0 === 1) {
     c7 = 3;
-    throw arg1;
+    throw value;
   } else if (arg0 !== 2) {
-    closure_130_2 = arg1;
+    closure_130_2 = value;
     const _Map = Map;
     closure_130_3 = new Map();
     const decisions = closure_130_2.decisions;
     closure_130_4 = decisions.flatMap((creative) => {
       if (null != creative.creative) {
         if (creative.creative.creative_type === closure_0(request_id[8]).AdCreativeType.BOUNTY) {
-          let tmpResult = tmp(tmp2[9]);
+          let tmpResult = closure_0(request_id[9]);
           const bountyFromServerResult = tmpResult.bountyFromServer(creative.creative.creative_content);
-          tmpResult = tmp(tmp2[10]);
+          tmpResult = closure_0(request_id[10]);
           let obj = { fetchedAt, requestId: request_id.request_id, creative: null };
-          obj = { type: tmp(tmp2[8]).AdCreativeType.BOUNTY, bounty: bountyFromServerResult };
+          obj = { type: closure_0(request_id[8]).AdCreativeType.BOUNTY, bounty: bountyFromServerResult };
           obj.creative = obj;
           const result = closure_1_3.set(
             bountyFromServerResult.id,
@@ -78,9 +78,9 @@ let closure_11 = async function _fetchBountiesAndDispatch(arg0, arg1) {
     closure_131_1(closure_131_2[7]);
     new Map();
   }
-  return arg1;
+  return value;
 };
-let closure_12 = async function _fetchQuestHomeBounties(arg0, value) {
+let closure_12 = async function _fetchQuestHomeBounties(arg0) {
   if (c1 === 2) {
     c1 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -111,7 +111,8 @@ let closure_12 = async function _fetchQuestHomeBounties(arg0, value) {
             value: fetchBountiesAndDispatch(
               tmp5,
               asyncGeneratorStep(async () => {
-                closure_128_0 = await tmp2(7461).getSession();
+                await tmp2(7461).getSession();
+                closure_128_0 = value;
                 const orRefreshAdSession = tmp2(7721).getOrRefreshAdSession();
                 const HTTP = tmp2(1272).HTTP;
                 const request = {
@@ -133,7 +134,7 @@ let closure_12 = async function _fetchQuestHomeBounties(arg0, value) {
                 request.query = obj3;
                 request.context = { connection_type: type.getType() };
                 await HTTP.get(request);
-                return arg1.body;
+                return value.body;
               }),
             ),
             done: false,
@@ -156,7 +157,7 @@ let closure_12 = async function _fetchQuestHomeBounties(arg0, value) {
     }
   }
 };
-let closure_13 = async function _fetchBountyPreview(arg0, value) {
+let closure_13 = async function _fetchBountyPreview(arg0) {
   if (c2 === 2) {
     c2 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -207,7 +208,7 @@ let closure_13 = async function _fetchBountyPreview(arg0, value) {
                   url: "" + constants.QUESTS_CREATIVE_PREVIEW + "?" + new URLSearchParams(items).toString(),
                   rejectWithError: false,
                 });
-                return arg1.body;
+                return value.body;
               }),
             ),
             done: false,
@@ -230,7 +231,7 @@ let closure_13 = async function _fetchBountyPreview(arg0, value) {
     }
   }
 };
-let closure_14 = async function _fetchDockCreativePreview(arg0, value) {
+let closure_14 = async function _fetchDockCreativePreview(arg0) {
   if (c8 === 2) {
     c8 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -274,7 +275,7 @@ let closure_14 = async function _fetchDockCreativePreview(arg0, value) {
             obj10.dispatch(obj1);
             c6 = 1;
             const _URLSearchParams = URLSearchParams;
-            const items = ["ad_creative_ids", tmp121];
+            const items = ["ad_creative_ids", closure_0];
             const items1 = [items];
             const _String = String;
             const items2 = ["placement", String(MOBILE_HOME_DOCK_AREA)];
@@ -289,7 +290,6 @@ let closure_14 = async function _fetchDockCreativePreview(arg0, value) {
             const obj3 = { value: HTTP.get(obj2), done: false };
             return obj3;
           }
-          tmp121 = closure_0;
         }
       } else {
         if (1 === tmp8) {
@@ -477,141 +477,146 @@ let closure_14 = async function _fetchDockCreativePreview(arg0, value) {
     }
   }
 };
-let closure_15 = async function _claimBountyReward(arg0, value) {
-  if (c7 === 2) {
-    c7 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp6 === 3) {
-    if (arg0 === 1) {
-      throw value;
-    } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
-    } else {
-      return { value: "HermesInternal", done: null };
-    }
-  } else {
-    try {
-      c7 = 2;
-      if (0 === c6) {
-        if (arg0 === 1) {
-          c7 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c7 = 3;
-          obj = { value, done: true };
-          return obj;
-        } else {
-          closure_3 = tmp3;
-          closure_2 = tmp7;
-          closure_130_0 = closure_0;
-          closure_130_1 = closure_1;
-          closure_130_2 = undefined;
-          let orRefreshAdSession;
-          let adMetadataSealed;
-          let adTrafficMetadataSealed;
-          closure_130_6 = undefined;
-          if (claimingBountyReward.isClaimingBountyReward(closure_0)) {
-            c7 = 3;
-          } else {
-            let obj8 = DispatcherDefault;
-            const obj1 = { type: "BOUNTIES_CLAIM_REWARD_BEGIN", bountyId: tmp70 };
-            obj8.dispatch(obj1);
-            c5 = 1;
-            c6 = 2;
-            c7 = 1;
-            const obj2 = { value: SessionHeartbeatScheduler.getSession(), done: false };
-            return obj2;
-          }
-          tmp70 = closure_0;
-        }
-      } else if (1 === tmp7) {
-        c5 = 0;
-        closure_130_7 = closure_4;
-        const tmp32 = new closure_131_1(closure_131_2[11])(closure_130_7);
-        closure_130_6 = tmp32;
-        let obj6 = closure_131_1(closure_131_2[7]);
-        const obj3 = { type: "BOUNTIES_CLAIM_REWARD_FAILURE", bountyId: closure_130_0, error: closure_130_6 };
-        obj6.dispatch(obj3);
-        throw closure_130_6;
-      } else if (2 === tmp7) {
-        if (arg0 === 1) {
-          c7 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c5 = 0;
-          c7 = 3;
-          const obj4 = { value, done: true };
-          return obj4;
-        } else {
-          closure_130_2 = value;
-          orRefreshAdSession = closure_131_0(closure_131_2[13]).getOrRefreshAdSession();
-          const obj15 = closure_131_0(closure_131_2[13]);
-          adMetadataSealed = closure_131_0(closure_131_2[16]).getAdMetadataSealed(closure_130_1, closure_130_0);
-          const obj16 = closure_131_0(closure_131_2[16]);
-          adTrafficMetadataSealed = closure_131_0(closure_131_2[16]).getAdTrafficMetadataSealed(
-            closure_130_1,
-            undefined,
-            closure_130_0,
-          );
-          const HTTP = closure_131_0(closure_131_2[14]).HTTP;
-          const request = {
-            url: closure_131_8.QUESTS_CREATIVES_CLAIM_REWARD(closure_130_0),
-            body: null,
-            rejectWithError: false,
-          };
-          let tmp15 = null;
-          if (null != adMetadataSealed) {
-            tmp15 = adMetadataSealed;
-          }
-          const obj5 = {
-            decision_metadata_sealed: tmp15,
-            traffic_metadata_sealed: null,
-            client_ad_session_id: null,
-            client_heartbeat_session_id: null,
-          };
-          let tmp18 = null;
-          if (null != adTrafficMetadataSealed) {
-            tmp18 = adTrafficMetadataSealed;
-          }
-          obj5.traffic_metadata_sealed = tmp18;
-          obj5.client_ad_session_id = orRefreshAdSession.uuid;
-          let uuid;
-          if (closure_130_2 != null) {
-            uuid = closure_130_2.uuid;
-          }
-          obj5.client_heartbeat_session_id = uuid;
-          request.body = obj5;
-          c6 = 3;
-          c7 = 1;
-          obj6 = { value: HTTP.post(request), done: false };
-          return obj6;
-        }
-      } else if (arg0 === 1) {
-        c7 = 3;
-        throw value;
-      } else if (arg0 !== 2) {
-        obj = closure_131_1(closure_131_2[7]);
-        const obj7 = { type: "BOUNTIES_CLAIM_REWARD_SUCCESS", bountyId: closure_130_0 };
-        obj.dispatch(obj7);
-        c5 = 0;
-      }
-      c5 = 0;
+let closure_15 = async function _claimBountyReward() {
+  closure_1 = arg1;
+  c6 = 0;
+  c7 = 0;
+  c5 = 0;
+  return (async (arg0, value) => {
+    if (c7 === 2) {
       c7 = 3;
-      obj8 = { value, done: true };
-      return obj8;
-    } catch (tmp45) {
-      closure_4 = tmp45;
-      if (tmp4 === c5) {
-        c7 = tmp2;
-        throw tmp45;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp6 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        let obj = { value, done: true };
+        return obj;
       } else {
-        c6 = tmp;
+        return { value: "HermesInternal", done: null };
+      }
+    } else {
+      try {
+        c7 = 2;
+        if (0 === c6) {
+          if (arg0 === 1) {
+            c7 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c7 = 3;
+            obj = { value, done: true };
+            return obj;
+          } else {
+            closure_3 = tmp3;
+            closure_2 = tmp7;
+            closure_130_0 = bountyId;
+            closure_130_1 = closure_1;
+            closure_130_2 = undefined;
+            let orRefreshAdSession;
+            let adMetadataSealed;
+            let adTrafficMetadataSealed;
+            closure_130_6 = undefined;
+            if (claimingBountyReward.isClaimingBountyReward(bountyId)) {
+              c7 = 3;
+            } else {
+              let obj8 = DispatcherDefault;
+              const obj1 = { type: "BOUNTIES_CLAIM_REWARD_BEGIN", bountyId };
+              obj8.dispatch(obj1);
+              c5 = 1;
+              c6 = 2;
+              c7 = 1;
+              const obj2 = { value: SessionHeartbeatScheduler.getSession(), done: false };
+              return obj2;
+            }
+          }
+        } else if (1 === tmp7) {
+          c5 = 0;
+          closure_130_7 = closure_4;
+          const tmp32 = new closure_131_1(closure_131_2[11])(closure_130_7);
+          closure_130_6 = tmp32;
+          let obj6 = closure_131_1(closure_131_2[7]);
+          const obj3 = { type: "BOUNTIES_CLAIM_REWARD_FAILURE", bountyId: closure_130_0, error: closure_130_6 };
+          obj6.dispatch(obj3);
+          throw closure_130_6;
+        } else if (2 === tmp7) {
+          if (arg0 === 1) {
+            c7 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c5 = 0;
+            c7 = 3;
+            const obj4 = { value, done: true };
+            return obj4;
+          } else {
+            closure_130_2 = value;
+            orRefreshAdSession = closure_131_0(closure_131_2[13]).getOrRefreshAdSession();
+            const obj15 = closure_131_0(closure_131_2[13]);
+            adMetadataSealed = closure_131_0(closure_131_2[16]).getAdMetadataSealed(closure_130_1, closure_130_0);
+            const obj16 = closure_131_0(closure_131_2[16]);
+            adTrafficMetadataSealed = closure_131_0(closure_131_2[16]).getAdTrafficMetadataSealed(
+              closure_130_1,
+              undefined,
+              closure_130_0,
+            );
+            const HTTP = closure_131_0(closure_131_2[14]).HTTP;
+            const request = {
+              url: closure_131_8.QUESTS_CREATIVES_CLAIM_REWARD(closure_130_0),
+              body: null,
+              rejectWithError: false,
+            };
+            let tmp15 = null;
+            if (null != adMetadataSealed) {
+              tmp15 = adMetadataSealed;
+            }
+            const obj5 = {
+              decision_metadata_sealed: tmp15,
+              traffic_metadata_sealed: null,
+              client_ad_session_id: null,
+              client_heartbeat_session_id: null,
+            };
+            let tmp18 = null;
+            if (null != adTrafficMetadataSealed) {
+              tmp18 = adTrafficMetadataSealed;
+            }
+            obj5.traffic_metadata_sealed = tmp18;
+            obj5.client_ad_session_id = orRefreshAdSession.uuid;
+            let uuid;
+            if (closure_130_2 != null) {
+              uuid = closure_130_2.uuid;
+            }
+            obj5.client_heartbeat_session_id = uuid;
+            request.body = obj5;
+            c6 = 3;
+            c7 = 1;
+            obj6 = { value: HTTP.post(request), done: false };
+            return obj6;
+          }
+        } else if (arg0 === 1) {
+          c7 = 3;
+          throw value;
+        } else if (arg0 !== 2) {
+          obj = closure_131_1(closure_131_2[7]);
+          const obj7 = { type: "BOUNTIES_CLAIM_REWARD_SUCCESS", bountyId: closure_130_0 };
+          obj.dispatch(obj7);
+          c5 = 0;
+        }
+        c5 = 0;
+        c7 = 3;
+        obj8 = { value, done: true };
+        return obj8;
+      } catch (tmp45) {
+        closure_4 = tmp45;
+        if (tmp4 === c5) {
+          c7 = tmp2;
+          throw tmp45;
+        } else {
+          c6 = tmp;
+        }
       }
     }
-  }
+  })();
 };
-let closure_16 = async function _dismissAdContent(arg0, value) {
+let closure_16 = async function _dismissAdContent(arg0) {
   if (c7 === 2) {
     c7 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -648,12 +653,16 @@ let closure_16 = async function _dismissAdContent(arg0, value) {
               const obj1 = { type: "AD_CONTENT_DISMISS_BEGIN", adCreativeType, adCreativeId };
               obj5.dispatch(obj1);
               c5 = 1;
-              let tmp55Result = tmp55(7699);
-              const adMetadataSealed = tmp55Result.getAdMetadataSealed(tmp54, adCreativeId);
-              tmp55Result = tmp55(7699);
-              const adTrafficMetadataSealed = tmp55Result.getAdTrafficMetadataSealed(tmp54, undefined, adCreativeId);
-              const questPlacementFromQuestContent = tmp55(7699).getQuestPlacementFromQuestContent(tmp54);
-              const HTTP = tmp55(1272).HTTP;
+              let tmp55Result = QuestDataUtils;
+              const adMetadataSealed = tmp55Result.getAdMetadataSealed(closure_1, adCreativeId);
+              tmp55Result = QuestDataUtils;
+              const adTrafficMetadataSealed = tmp55Result.getAdTrafficMetadataSealed(
+                closure_1,
+                undefined,
+                adCreativeId,
+              );
+              const questPlacementFromQuestContent = QuestDataUtils.getQuestPlacementFromQuestContent(closure_1);
+              const HTTP = HTTPUtils.HTTP;
               const request = {
                 url: Endpoints.QUESTS_CREATIVES_DISMISS(adCreativeId),
                 body: null,

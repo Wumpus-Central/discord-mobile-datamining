@@ -186,7 +186,7 @@ export function getHeaderConditionalBackButton(handleBack) {
   closure_0 = handleBack;
   return (onPress) => {
     onPress = onPress.onPress;
-    closure_1 = async function _handlePress(arg0, value) {
+    closure_1 = async function _handlePress() {
       if (c2 === 2) {
         c2 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");

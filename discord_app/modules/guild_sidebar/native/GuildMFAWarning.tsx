@@ -20,7 +20,7 @@ function handlePress() {
   }
   return applyArgumentsResult;
 }
-let closure_10 = async function _handlePress(arg0, value) {
+let closure_10 = async function _handlePress() {
   if (c3 === 2) {
     c3 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");

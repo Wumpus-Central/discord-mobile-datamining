@@ -1,6 +1,7 @@
 // discord_app/design/void/Form/native/FormDivider.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import native from "../../../../../discord_common/js/packages/design/native.tsx";
+import ColorUtils from "../../../../utils/ColorUtils.tsx";
 import RedesignCompat from "../../../components/RedesignCompat/native/RedesignCompat.native.tsx";
 import useProfileThemeValues from "../../../../modules/user_profile/useProfileThemeValues.native.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -48,9 +49,9 @@ export default function Divider(arg0) {
   const profileThemeValues = useProfileThemeValues.useProfileThemeValues(theme);
   let tmp7 = null;
   if (tmp6) {
-    obj = { backgroundColor: tmp2(4409).hexOpacityToRgba(createStyles[theme], profileThemeValues.dividerOpacity) };
+    obj = { backgroundColor: ColorUtils.hexOpacityToRgba(createStyles[theme], profileThemeValues.dividerOpacity) };
     tmp7 = obj;
-    const tmp2Result = tmp2(4409);
+    const tmp2Result = ColorUtils;
   }
   let tmp10Result = null;
   if (!noop.useContext(RedesignCompat.RedesignCompatContext)) {

@@ -7,7 +7,7 @@ require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/noise_cancellation/NoiseCancellationUtils.tsx");
 
-export const getNoiseCancellationDeferredToSystem = function getNoiseCancellationDeferredToSystem(MediaEngineStore) {
+export const getNoiseCancellationDeferredToSystem = function getNoiseCancellationDeferredToSystem() {
   let obj = MediaEngineStore;
   if (MediaEngineStore === undefined) {
     obj = MediaEngineStore;

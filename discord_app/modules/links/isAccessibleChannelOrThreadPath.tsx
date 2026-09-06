@@ -7,7 +7,7 @@ import GuildRoleStore from "../../stores/GuildRoleStore.tsx";
 import GuildStore from "../../stores/GuildStore.tsx";
 
 const require = fn;
-let closure_13 = async function _isAccessibleChannelOrThreadPath(arg0, value) {
+let closure_13 = async function _isAccessibleChannelOrThreadPath(arg0) {
   if (c5 === 2) {
     c5 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");

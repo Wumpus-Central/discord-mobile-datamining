@@ -67,7 +67,7 @@ prototype["stop"] = function stop() {
 };
 prototype["flushNow"] = function flushNow() {
   const self = this;
-  return (async (arg0, value) => {
+  return (async () => {
     if (c0 === 2) {
       c0 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -131,9 +131,9 @@ prototype["_readAckedEndOffset"] = function _readAckedEndOffset() {
   }
   return num;
 };
-prototype["_writeAckedEndOffset"] = function _writeAckedEndOffset(arg0) {
+prototype["_writeAckedEndOffset"] = function _writeAckedEndOffset(maxReturnedEndOffset) {
   const Storage = Storage2.Storage;
-  const result = Storage.set(this.getAckedEndOffsetStorageKey(), arg0);
+  const result = Storage.set(this.getAckedEndOffsetStorageKey(), maxReturnedEndOffset);
 };
 prototype["_clearAckedEndOffset"] = function _clearAckedEndOffset() {
   const Storage = Storage2.Storage;
@@ -167,7 +167,7 @@ prototype["_kick"] = function _kick(arg0) {
 prototype["_drainOnce"] = function _drainOnce(arg0) {
   closure_0 = arg0;
   const self = this;
-  return (async (arg0, value) => {
+  return (async () => {
     const budget = self.getBudget(tmp2.mode);
     const _readAckedEndOffsetResult = self._readAckedEndOffset();
     if (_readAckedEndOffsetResult >= 0) {
@@ -218,7 +218,7 @@ prototype["_collectPages"] = function _collectPages(budget, arg1) {
   closure_0 = budget;
   closure_1 = arg1;
   const self = this;
-  return (async (arg0, value) => {
+  return (async () => {
     if (c3 === 2) {
       c3 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -294,7 +294,7 @@ prototype["_exportPages"] = function _exportPages(arg0, flush) {
   closure_0 = arg0;
   closure_1 = flush;
   const self = this;
-  return (async (arg0, value) => {
+  return (async () => {
     if (c3 === 2) {
       c3 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");

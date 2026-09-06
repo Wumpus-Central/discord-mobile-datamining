@@ -11,7 +11,7 @@ let c4 = null;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/analytics_sessions/SessionAdGenerator.tsx");
 
-export const getOrRefreshAdSession = function getOrRefreshAdSession(shouldExtendSession) {
+export const getOrRefreshAdSession = function getOrRefreshAdSession() {
   let flag = shouldExtendSession;
   if (shouldExtendSession === undefined) {
     flag = false;

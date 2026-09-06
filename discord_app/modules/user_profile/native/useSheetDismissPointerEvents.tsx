@@ -28,10 +28,9 @@ export default function useSheetDismissPointerEvents() {
     } else {
       value = undefined;
       if (prop1 != null) {
-        value = obj2.get();
+        value = prop1.get();
       }
       pointerEvents = "box-none";
-      obj2 = prop1;
     }
     return { pointerEvents };
   };

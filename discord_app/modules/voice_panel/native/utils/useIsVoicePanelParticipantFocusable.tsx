@@ -1,19 +1,13 @@
 // discord_app/modules/voice_panel/native/utils/useIsVoicePanelParticipantFocusable.tsx
+import GlobalUtils from "../../../../utils/GlobalUtils.tsx";
+import participantHasVideo from "../../../video_calls/participantHasVideo.tsx";
 import EmbeddedActivitiesStore from "../../../activities/EmbeddedActivitiesStore.tsx";
 import ChannelRTCStore from "../../../calls/ChannelRTCStore.tsx";
 import ApplicationStreamingStore from "../../../../stores/ApplicationStreamingStore.tsx";
 import MediaEngineStore from "../../../../stores/MediaEngineStore.tsx";
 
-const require = fn;
-function isVoicePanelParticipantFocusable(
-  channelId,
-  guildId,
-  id2,
-  ChannelRTCStore,
-  MediaEngineStore,
-  EmbeddedActivitiesStore,
-  ApplicationStreamingStore,
-) {
+require = fn;
+function isVoicePanelParticipantFocusable(channelId, guildId, id2) {
   let obj = ChannelRTCStore;
   if (ChannelRTCStore === undefined) {
     obj = ChannelRTCStore;
@@ -47,10 +41,10 @@ function isVoicePanelParticipantFocusable(
       if (React5(participant)) {
         let result = null != obj3.getActiveStreamForUser(participant.user.id, channelId);
       } else if (React6(participant)) {
-        let tmp4Result = tmp4(9622);
+        let tmp4Result = participantHasVideo;
         result = tmp4Result.canRenderParticipantVideo(participant, tmp);
       } else {
-        tmp4Result = tmp4(1369);
+        tmp4Result = GlobalUtils;
         tmp4Result.assertNever(participant);
       }
       return result;

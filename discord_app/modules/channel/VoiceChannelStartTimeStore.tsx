@@ -48,7 +48,7 @@ const voiceChannelStartTimeStore = new VoiceChannelStartTimeStore(DispatcherDefa
   VOICE_CHANNEL_START_TIME_UPDATE: function handleVoiceChannelStartTimeUpdate(id) {
     ({ guildId, voiceStartTime } = id);
     if (null == dependencyMap[guildId]) {
-      tmp[guildId] = {};
+      dependencyMap[guildId] = {};
     }
     let time;
     if (null != voiceStartTime) {

@@ -59,4 +59,5 @@ export const useReferralProgramCoachmark = function useReferralProgramCoachmark(
     return tmp13;
   }
   items = [];
+  const obj2 = require("useIsEligibleSenderForReferralProgram");
 };

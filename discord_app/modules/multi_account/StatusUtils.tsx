@@ -33,19 +33,19 @@ export const getStatusExpiryParts = function getStatusExpiryParts(arg0) {
   const formatTimeResult = data.formatTime(date, { format: "short" });
   if (tmp2) {
     let obj = { kind: "today", dateString: null, timeString: null };
-    const data4 = tmp10(1114).intl.data;
+    const data4 = util.intl.data;
     obj.dateString = data4.formatRelativeTime(0, "day", { numeric: "auto" });
     obj.timeString = formatTimeResult;
     let obj1 = obj;
   } else if (tmp7) {
     obj = { kind: "tomorrow", dateString: null, timeString: null };
-    const data3 = tmp10(1114).intl.data;
+    const data3 = util.intl.data;
     obj.dateString = data3.formatRelativeTime(1, "day", { numeric: "auto" });
     obj.timeString = formatTimeResult;
     obj1 = obj;
   } else {
     obj1 = { kind: "date", dateString: null, timeString: null };
-    const data2 = tmp10(1114).intl.data;
+    const data2 = util.intl.data;
     obj1.dateString = data2.formatDate(date, { dateStyle: "short" });
     obj1.timeString = formatTimeResult;
   }

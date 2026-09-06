@@ -8,7 +8,7 @@ import asyncGeneratorStep from "../../../../../../_runtime/00005_asyncGeneratorS
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-let closure_13 = async function _authorizeLink(arg0, value) {
+let closure_13 = async function _authorizeLink(arg0) {
   if (c4 === 2) {
     c4 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -101,7 +101,7 @@ export const TwoWayLinkPreConnect = function TwoWayLinkPreConnect(platformType) 
   const callback = callback1.useCallback(
     asyncGeneratorStep(async () => {
       v0(true);
-      closure_128_0 = await (function authorizeLink() {
+      await (function authorizeLink() {
         const self = this;
         const apply = closure_1_13.apply;
         if (typeof apply === "unknown") {
@@ -111,6 +111,7 @@ export const TwoWayLinkPreConnect = function TwoWayLinkPreConnect(platformType) 
         }
         return applyArgumentsResult;
       })(platformType);
+      closure_128_0 = value;
       closure_129_3(false);
       const state = platformType(tmp15[13]).getCallbackParamsFromURL(closure_128_0).state;
       tmp3(tmp15[14])(null != state, "Authorize URL state query parameter must be present");
@@ -169,7 +170,7 @@ export const TwoWayLinkPreConnect = function TwoWayLinkPreConnect(platformType) 
     const intl = tmp2(tmp3[17]).intl;
     const obj5 = { redirectUrl: redirectDestination };
     obj4.children = intl.format(tmp2(tmp3[17]).t.XhlYYn, obj5);
-    tmp12Result = tmp12(tmp2(tmp3[16]).Text, obj4);
+    tmp12Result = closure_9(tmp2(tmp3[16]).Text, obj4);
   }
   items4[3] = tmp12Result;
   obj.children = items4;

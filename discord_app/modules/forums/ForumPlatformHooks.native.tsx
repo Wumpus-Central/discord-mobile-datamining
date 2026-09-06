@@ -43,6 +43,7 @@ export default {
           };
         }
       }
+      const obj = guildId(ref[1]);
     });
     const items1 = [channelId, guildId, callback];
     const layoutEffect = callback.useLayoutEffect(() => {

@@ -1,6 +1,7 @@
 // discord_app/modules/collectibles/profile_frames/native/previews/ProfileFrameSamplePreview.tsx
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import useToken from "../../../../../design/tokens/native/useToken.tsx";
+import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
 import ProfileFrameLayerOrder from "../../../../../../discord_common/js/shared/shared-constants/ProfileFrameLayerOrder.tsx";
 import ProfileFrameDefault from "../ProfileFrame.tsx";
 import scaleProfileFrameDefault from "../../scaleProfileFrame.tsx";
@@ -70,8 +71,6 @@ export default function ProfileFrameSamplePreview(previewWidth) {
   const obj2 = {
     style: { position: "absolute", top: 0, left: 0, right: 0, height: overflowTop, backgroundColor: "black" },
   };
-  const tmp10 = filterLayer;
-  const tmp11 = UserProfileThemeTypes;
   const items = [
     timestampProducer(React4, obj2),
     timestampProducer(React4, {
@@ -168,7 +167,7 @@ export default function ProfileFrameSamplePreview(previewWidth) {
   items3[1] = tmp16;
   const obj14 = { source: null, style: null, resizeMode: "cover" };
   const obj15 = { uri: null };
-  let tmp3Result = tmp3(5587);
+  let tmp3Result = FastImageDefault;
   obj15.uri = _modDef8823;
   obj14.source = obj15;
   obj14.style = tmp.sampleProfile;
@@ -176,13 +175,13 @@ export default function ProfileFrameSamplePreview(previewWidth) {
   items2[1] = timestampProducer(React4, obj13);
   const obj16 = {
     frame: profileFrame,
-    filterLayer: tmp10,
-    profileThemeType: tmp11.PREVIEW,
+    filterLayer,
+    profileThemeType: UserProfileThemeTypes.PREVIEW,
     frameOrder: null,
     containerWidth: null,
     containerHeight: null,
   };
-  tmp3Result = tmp3(8221);
+  tmp3Result = ProfileFrameDefault;
   obj16.frameOrder = ProfileFrameLayerOrder.ProfileFrameLayerOrder.FRONT;
   obj16.containerWidth = result;
   obj16.containerHeight = previewHeight - overflowTop - overflowBottom;

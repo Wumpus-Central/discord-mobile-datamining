@@ -82,13 +82,13 @@ const lurkingStore = new LurkingStore(DispatcherDefault, {
         closure_7[guildId] = loadId;
       }
       if (constants.MOBILE_GUILD_DISCOVERY === source) {
-        let obj = { type: tmp12.MOBILE_GUILD_DISCOVERY };
+        let obj = { type: constants.MOBILE_GUILD_DISCOVERY };
         closure_8[guildId] = obj;
-      } else if (tmp12.DIRECTORY_ENTRY === source) {
-        obj = { type: tmp12.DIRECTORY_ENTRY, directoryChannelId: tmp3 };
+      } else if (constants.DIRECTORY_ENTRY === source) {
+        obj = { type: constants.DIRECTORY_ENTRY, directoryChannelId: tmp3 };
         closure_8[guildId] = obj;
-      } else if (tmp12.GAME_COMMUNITY_UPSELL === source) {
-        obj = { type: tmp12.GAME_COMMUNITY_UPSELL };
+      } else if (constants.GAME_COMMUNITY_UPSELL === source) {
+        obj = { type: constants.GAME_COMMUNITY_UPSELL };
         closure_8[guildId] = obj;
       } else {
         delete tmp2[tmp];

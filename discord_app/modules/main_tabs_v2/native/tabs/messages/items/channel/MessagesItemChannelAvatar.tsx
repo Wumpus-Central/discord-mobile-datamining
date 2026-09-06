@@ -78,7 +78,7 @@ export default noop.memo(function MessagesItemChannelAvatar(channel) {
     return tmp;
   });
   const obj2 = channel(504);
-  let tmp3 = channel;
+  const tmp3 = channel;
   const items2 = [UserStore];
   const stateFromStores2 = channel(504).useStateFromStores(items2, () => {
     let recipientId;

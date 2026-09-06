@@ -26,7 +26,7 @@ export default function useCreatorMonetizationEligibilityItems(arg0) {
   const isModerationMFAEnabled = isMFAEnabled.isModerationMFAEnabled;
   let items = [isUserMFAEnabled, isModerationMFAEnabled, onEligibilityBecameStale, actions];
   let onEnableMFAClick = isUserMFAEnabled.useCallback(
-    sortedByIneligible(function* (arg0, value) {
+    sortedByIneligible(function* () {
       if (c2 === 2) {
         c2 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -125,7 +125,7 @@ export default function useCreatorMonetizationEligibilityItems(arg0) {
     if (null == closure_0) {
       return null;
     } else {
-      ({ minimumOwnerAgeInYears, minimumSize, noRecentViolations } = tmp);
+      ({ minimumOwnerAgeInYears, minimumSize, noRecentViolations } = closure_0);
       let obj = {
         key: "no_violations_requirement",
         checkedLabel: null,
@@ -142,11 +142,11 @@ export default function useCreatorMonetizationEligibilityItems(arg0) {
       const intl20 = util.intl;
       obj = { communityGuidelinesUrl: HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.PUBLIC_GUILD_GUILDLINES) };
       obj.description = intl20.format(util.t.HFY0m6, obj);
-      obj.checked = tmp.noRecentViolations;
+      obj.checked = closure_0.noRecentViolations;
       let stringResult;
       if (!noRecentViolations) {
-        const intl = tmp23(1114).intl;
-        stringResult = intl.string(tmp23(1114).t["xU2fl+"]);
+        const intl = util.intl;
+        stringResult = intl.string(util.t["xU2fl+"]);
       }
       obj.actionLabel = stringResult;
       let fn;
@@ -166,14 +166,14 @@ export default function useCreatorMonetizationEligibilityItems(arg0) {
           description: null,
           checked: null,
         };
-        const intl2 = tmp23(1114).intl;
-        obj.checkedLabel = intl2.string(tmp23(1114).t["+F8haD"]);
-        const intl3 = tmp23(1114).intl;
-        obj.uncheckedLabel = intl3.string(tmp23(1114).t["5BwC/O"]);
-        const intl4 = tmp23(1114).intl;
+        const intl2 = util.intl;
+        obj.checkedLabel = intl2.string(util.t["+F8haD"]);
+        const intl3 = util.intl;
+        obj.uncheckedLabel = intl3.string(util.t["5BwC/O"]);
+        const intl4 = util.intl;
         const obj1 = { minimumOwnerAgeInYears };
-        obj.description = intl4.formatToPlainString(tmp23(1114).t.DW1Vae, obj1);
-        obj.checked = tmp.meetsOwnerAgeRequirement;
+        obj.description = intl4.formatToPlainString(util.t.DW1Vae, obj1);
+        obj.checked = closure_0.meetsOwnerAgeRequirement;
         items.push(obj);
       }
       if (tmp5) {
@@ -184,14 +184,14 @@ export default function useCreatorMonetizationEligibilityItems(arg0) {
           description: null,
           checked: null,
         };
-        const intl5 = tmp23(1114).intl;
-        obj2.checkedLabel = intl5.string(tmp23(1114).t.j7wXWo);
-        const intl6 = tmp23(1114).intl;
-        obj2.uncheckedLabel = intl6.string(tmp23(1114).t.W0suNz);
-        const intl7 = tmp23(1114).intl;
+        const intl5 = util.intl;
+        obj2.checkedLabel = intl5.string(util.t.j7wXWo);
+        const intl6 = util.intl;
+        obj2.uncheckedLabel = intl6.string(util.t.W0suNz);
+        const intl7 = util.intl;
         const obj3 = { minimumSize };
-        obj2.description = intl7.formatToPlainString(tmp23(1114).t.up53zR, obj3);
-        obj2.checked = tmp.hasSufficientMembers;
+        obj2.description = intl7.formatToPlainString(util.t.up53zR, obj3);
+        obj2.checked = closure_0.hasSufficientMembers;
         items.push(obj2);
       }
       if (tmp7) {
@@ -202,17 +202,17 @@ export default function useCreatorMonetizationEligibilityItems(arg0) {
           description: null,
           checked: null,
         };
-        const intl8 = tmp23(1114).intl;
-        obj4.checkedLabel = intl8.string(tmp23(1114).t.mjbvWw);
-        const intl9 = tmp23(1114).intl;
-        obj4.uncheckedLabel = intl9.string(tmp23(1114).t["9BV6L6"]);
-        const intl10 = tmp23(1114).intl;
-        const obj5 = { minimumAge: formatDurationFromDaysDefault(tmp.minimumAgeInDays) };
-        obj4.description = intl10.formatToPlainString(tmp23(1114).t.Zwv84O, obj5);
-        obj4.checked = tmp.meetsServerAgeRequirement;
+        const intl8 = util.intl;
+        obj4.checkedLabel = intl8.string(util.t.mjbvWw);
+        const intl9 = util.intl;
+        obj4.uncheckedLabel = intl9.string(util.t["9BV6L6"]);
+        const intl10 = util.intl;
+        const obj5 = { minimumAge: formatDurationFromDaysDefault(closure_0.minimumAgeInDays) };
+        obj4.description = intl10.formatToPlainString(util.t.Zwv84O, obj5);
+        obj4.checked = closure_0.meetsServerAgeRequirement;
         items.push(obj4);
       }
-      if (null != tmp.weeklyCommunicators) {
+      if (null != closure_0.weeklyCommunicators) {
         const obj6 = {
           key: "weekly_communicator_count_requirement",
           checkedLabel: null,
@@ -220,16 +220,16 @@ export default function useCreatorMonetizationEligibilityItems(arg0) {
           description: null,
           checked: null,
         };
-        const intl21 = tmp23(1114).intl;
-        obj6.checkedLabel = intl21.string(tmp23(1114).t.Qw7qv4);
-        const intl22 = tmp23(1114).intl;
-        obj6.uncheckedLabel = intl22.string(tmp23(1114).t.b45kGG);
-        const intl23 = tmp23(1114).intl;
-        obj6.description = intl23.string(tmp23(1114).t.NbtjEC);
-        obj6.checked = tmp.weeklyCommunicators;
+        const intl21 = util.intl;
+        obj6.checkedLabel = intl21.string(util.t.Qw7qv4);
+        const intl22 = util.intl;
+        obj6.uncheckedLabel = intl22.string(util.t.b45kGG);
+        const intl23 = util.intl;
+        obj6.description = intl23.string(util.t.NbtjEC);
+        obj6.checked = closure_0.weeklyCommunicators;
         items.push(obj6);
       }
-      if (null != tmp.hasMemberRetention) {
+      if (null != closure_0.hasMemberRetention) {
         const obj7 = {
           key: "member_retention_requirement",
           checkedLabel: null,
@@ -237,13 +237,13 @@ export default function useCreatorMonetizationEligibilityItems(arg0) {
           description: null,
           checked: null,
         };
-        const intl24 = tmp23(1114).intl;
-        obj7.checkedLabel = intl24.string(tmp23(1114).t.Qvq39M);
-        const intl25 = tmp23(1114).intl;
-        obj7.uncheckedLabel = intl25.string(tmp23(1114).t.azHboI);
-        const intl26 = tmp23(1114).intl;
-        obj7.description = intl26.string(tmp23(1114).t.u4rCYO);
-        obj7.checked = tmp.hasMemberRetention;
+        const intl24 = util.intl;
+        obj7.checkedLabel = intl24.string(util.t.Qvq39M);
+        const intl25 = util.intl;
+        obj7.uncheckedLabel = intl25.string(util.t.azHboI);
+        const intl26 = util.intl;
+        obj7.description = intl26.string(util.t.u4rCYO);
+        obj7.checked = closure_0.hasMemberRetention;
         items.push(obj7);
       }
       const obj8 = {
@@ -253,16 +253,16 @@ export default function useCreatorMonetizationEligibilityItems(arg0) {
         description: null,
         checked: null,
       };
-      const intl11 = tmp23(1114).intl;
+      const intl11 = util.intl;
       obj8.checkedLabel = intl11.string(util.t.bymfTb);
-      const intl12 = tmp23(1114).intl;
+      const intl12 = util.intl;
       obj8.uncheckedLabel = intl12.string(util.t["718pRA"]);
-      const intl13 = tmp23(1114).intl;
+      const intl13 = util.intl;
       obj8.description = intl13.string(util.t["5ZqX+j"]);
-      obj8.checked = tmp.notNSFW;
+      obj8.checked = closure_0.notNSFW;
       items.push(obj8);
-      if (null != tmp.hasEnabled2FA) {
-        const hasEnabled2FA2 = tmp.hasEnabled2FA;
+      if (null != closure_0.hasEnabled2FA) {
+        const hasEnabled2FA2 = closure_0.hasEnabled2FA;
         let tmp11 = !hasEnabled2FA2;
         if (!hasEnabled2FA2) {
           tmp11 = !isUserMFAEnabled;
@@ -274,7 +274,7 @@ export default function useCreatorMonetizationEligibilityItems(arg0) {
           }
           tmp11 = null != onEnableMFAClick;
         }
-        const hasEnabled2FA = tmp.hasEnabled2FA;
+        const hasEnabled2FA = closure_0.hasEnabled2FA;
         let tmp13 = !hasEnabled2FA;
         if (!hasEnabled2FA) {
           tmp13 = !isModerationMFAEnabled;
@@ -298,18 +298,18 @@ export default function useCreatorMonetizationEligibilityItems(arg0) {
           actionLabel: null,
           actionHandler: null,
         };
-        const intl14 = tmp23(1114).intl;
-        obj9.checkedLabel = intl14.string(tmp23(1114).t.NqVyFk);
-        const intl15 = tmp23(1114).intl;
-        obj9.uncheckedLabel = intl15.string(tmp23(1114).t.VcDNIV);
-        const intl16 = tmp23(1114).intl;
+        const intl14 = util.intl;
+        obj9.checkedLabel = intl14.string(util.t.NqVyFk);
+        const intl15 = util.intl;
+        obj9.uncheckedLabel = intl15.string(util.t.VcDNIV);
+        const intl16 = util.intl;
         const obj10 = { enableMFAHook };
-        obj9.description = intl16.format(tmp23(1114).t["7NzkfV"], obj10);
-        obj9.checked = tmp.hasEnabled2FA;
+        obj9.description = intl16.format(util.t["7NzkfV"], obj10);
+        obj9.checked = closure_0.hasEnabled2FA;
         let stringResult1;
         if (tmp11) {
-          const intl17 = tmp23(1114).intl;
-          stringResult1 = intl17.string(tmp23(1114).t.BU4Diu);
+          const intl17 = util.intl;
+          stringResult1 = intl17.string(util.t.BU4Diu);
         }
         obj9.actionLabel = stringResult1;
         let tmp18;

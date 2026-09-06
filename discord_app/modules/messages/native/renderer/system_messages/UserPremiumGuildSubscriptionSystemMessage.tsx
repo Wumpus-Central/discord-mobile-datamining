@@ -1,4 +1,5 @@
 // discord_app/modules/messages/native/renderer/system_messages/UserPremiumGuildSubscriptionSystemMessage.tsx
+import util from "../../../../../intl/index.native.tsx";
 import useAuthorWithProcessedColor from "useAuthorWithProcessedColor.tsx";
 import formatUsernameOnClickDefault from "formatUsernameOnClick.tsx";
 import createCommonMessageDefault from "createCommonMessage.tsx";
@@ -22,13 +23,13 @@ export const createUserPremiumGuildSubscriptionSystemMessage = function createUs
     roleStyle: roleStyle.roleStyle,
   });
   if (tmp3 > 1) {
-    const intl2 = tmp4(1114).intl;
+    const intl2 = util.intl;
     obj = { username: messageAuthorWithProcessedColor.nick, usernameOnClick: tmp6, numSubscriptions: tmp3 };
-    let formatToPartsResult = intl2.formatToParts(tmp4(1114).t.rbj006, obj);
+    let formatToPartsResult = intl2.formatToParts(util.t.rbj006, obj);
   } else {
-    const intl = tmp4(1114).intl;
+    const intl = util.intl;
     obj = { username: messageAuthorWithProcessedColor.nick, usernameOnClick: tmp6 };
-    formatToPartsResult = intl.formatToParts(tmp4(1114).t.ihxM9x, obj);
+    formatToPartsResult = intl.formatToParts(util.t.ihxM9x, obj);
   }
   const merged = Object.assign(createCommonMessageDefault(roleStyle));
   return { content: formatToPartsResult };

@@ -71,6 +71,7 @@ function FramePreviewOverrideSection() {
       str3 = 'Showing "' + frameKey + '" \u00B7 ' + length + " layer" + str4;
     }
   }
+  tmp4 = closure_9((clear) => clear.clear);
 }
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
@@ -151,7 +152,7 @@ let obj9 = { color: nativeDefault.colors.TEXT_FEEDBACK_POSITIVE };
 createStyles.statusError = { color: nativeDefault.colors.TEXT_FEEDBACK_CRITICAL };
 let obj10 = { color: nativeDefault.colors.TEXT_FEEDBACK_CRITICAL };
 createStyles.statusLoading = { color: nativeDefault.colors.TEXT_MUTED };
-const obj11 = { color: nativeDefault.colors.TEXT_MUTED };
+let obj11 = { color: nativeDefault.colors.TEXT_MUTED };
 createStyles.previewContainer = { marginBottom: nativeDefault.space.PX_16 };
 let obj12 = { marginBottom: nativeDefault.space.PX_16 };
 createStyles.previewButton = {
@@ -258,18 +259,17 @@ export default function _default() {
   }
   _require = tmp18Result;
   const tmp13 = _slicedToArray(noop.useState(""), 2);
-  str = tmp13[0];
   const tmp14 = _slicedToArray(noop.useState(null), 2);
   product = tmp14[0];
   _slicedToArray = tmp14[1];
   const tmp16 = _slicedToArray(noop.useState(null), 2);
   noop = tmp16[1];
-  const items3 = [str, tmp18Result];
+  const items3 = [tmp13[0], tmp18Result];
   const effect = noop.useEffect(() => {
     if ("" !== str.trim()) {
       if (closure_0) {
-        product = CollectiblesCategoryStore.getProduct(tmp);
-        const categoryForProduct = CollectiblesCategoryStore.getCategoryForProduct(tmp);
+        product = CollectiblesCategoryStore.getProduct(str);
+        const categoryForProduct = CollectiblesCategoryStore.getCategoryForProduct(str);
         if (null != product) {
           if (null != categoryForProduct) {
             closure_3(product);
@@ -323,7 +323,7 @@ export default function _default() {
   ];
   const obj9 = { style: tmp.inputWrapper, children: null };
   const obj10 = {
-    value: str,
+    value: tmp13[0],
     onChangeText: tmp13[1],
     placeholder: "Enter product SKU ID (e.g., 1366494385482502184)",
     returnKeyType: "done",
@@ -333,8 +333,7 @@ export default function _default() {
   const obj6 = { variant: "heading-md/semibold", style: tmp.sectionTitle, children: "Product Configuration" };
   const obj8 = { variant: "text-md/semibold", style: tmp.inputLabel, children: "Primary Product SKU ID" };
   const tmp10 = str(product[13])({ logPerf: false, stalePurchasesOK: true, noOp: tmp7 });
-  const tmp21 = closure_5;
-  obj10.style = { fontSize: 14, padding: str(product[8]).space.PX_12 };
+  obj10.style = { fontSize: 14, padding: tmp13[0](product[8]).space.PX_12 };
   obj9.children = closure_10(require("native").TextInput, obj10);
   items7[1] = closure_10(closure_6, obj9);
   tmp18Result = !tmp18Result;
@@ -346,7 +345,7 @@ export default function _default() {
     const items8 = [,];
     ({ statusText: arr9[0], statusLoading: arr9[1] } = tmp);
     obj12.style = items8;
-    tmp18Result = tmp18(tmp2(tmp3[10]).Text, obj12);
+    tmp18Result = closure_10(tmp2(tmp3[10]).Text, obj12);
   }
   items7[2] = tmp18Result;
   if (tmp18Result) {
@@ -360,7 +359,7 @@ export default function _default() {
     const items9 = [,];
     ({ statusText: arr10[0], statusError: arr10[1] } = tmp);
     obj13.style = items9;
-    tmp18Result = tmp18(tmp2(tmp3[10]).Text, obj13);
+    tmp18Result = closure_10(tmp2(tmp3[10]).Text, obj13);
   }
   items7[3] = tmp18Result;
   let tmp20Result = null != product;
@@ -371,7 +370,7 @@ export default function _default() {
     obj14.style = items10;
     const items11 = ["Found: ", product.name];
     obj14.children = items11;
-    tmp20Result = tmp20(tmp2(tmp3[10]).Text, obj14);
+    tmp20Result = closure_11(tmp2(tmp3[10]).Text, obj14);
   }
   items7[4] = tmp20Result;
   obj7.children = items7;
@@ -393,8 +392,8 @@ export default function _default() {
       const obj18 = { children: null };
       const obj19 = { style: tmp.previewContainer, children: null };
       const obj20 = { product };
-      obj19.children = tmp18(UnpurchasedCollectiblesShopCardV2, obj20);
-      const items13 = [tmp18(tmp19, obj19)];
+      obj19.children = closure_10(UnpurchasedCollectiblesShopCardV2, obj20);
+      const items13 = [closure_10(closure_6, obj19)];
       const obj21 = {
         pillStyle: tmp.previewButton,
         text: "Show Collectibles Modal",
@@ -405,17 +404,17 @@ export default function _default() {
           }
         },
       };
-      items13[1] = tmp18(tmp2(tmp3[11]).BaseTextButton, obj21);
+      items13[1] = closure_10(tmp2(tmp3[11]).BaseTextButton, obj21);
       obj18.children = items13;
-      tmp20Result = tmp20(tmp19, obj18);
+      tmp20Result = closure_11(closure_6, obj18);
     }
     items12[1] = tmp20Result;
     obj15.children = items12;
-    items5[2] = tmp20(tmp19, obj15);
-    items5[3] = tmp18(FramePreviewOverrideSection, {});
+    items5[2] = closure_11(closure_6, obj15);
+    items5[3] = closure_10(FramePreviewOverrideSection, {});
     obj.children = items5;
-    obj.children = tmp20(tmp21, obj);
-    return tmp18(tmp19, obj);
+    obj.children = closure_11(closure_5, obj);
+    return closure_10(closure_6, obj);
   }
   const obj22 = {
     style: tmp.placeholder,
@@ -425,5 +424,12 @@ export default function _default() {
       children: ["Enter a valid product SKU ID above", "\n", "to see the product preview"],
     }),
   };
-  tmp20Result = tmp18(tmp19, obj22);
+  tmp20Result = closure_10(closure_6, obj22);
+  const obj11 = { fontSize: 14, padding: tmp13[0](product[8]).space.PX_12 };
+  const obj17 = { variant: "heading-md/semibold", style: tmp.sectionTitle, children: "Product Preview" };
+  const obj23 = {
+    variant: "text-sm/normal",
+    style: tmp.placeholderText,
+    children: ["Enter a valid product SKU ID above", "\n", "to see the product preview"],
+  };
 }

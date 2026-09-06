@@ -10,6 +10,7 @@ import Authorize from "../Authorize.tsx";
 import scopes2 from "../scopes.tsx";
 import SamsungManagerDefault from "../../samsung/native/SamsungManager.android.tsx";
 import ApplicationIntegrationType from "../../../../discord_common/js/shared/shared-constants/ApplicationIntegrationType.tsx";
+import permissions2 from "../permissions.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -367,7 +368,7 @@ export default function useOAuth2AuthorizeForm(clientId) {
   closure_53 = tmp63;
   const items12 = [clientId, disclosures, tmpResult7[1], tmpResult8[1]];
   const effect2 = obj.useEffect(() => {
-    closure_0 = async function _doGetDisclosures(arg0, value) {
+    closure_0 = async function _doGetDisclosures() {
       if (c5 === 2) {
         c5 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -485,210 +486,203 @@ export default function useOAuth2AuthorizeForm(clientId) {
   }
   const tmpResult6 = text1(obj.useState(null), 2);
   let result = require("Utils").isContentClassificationRestricted(prop1, nsfwAllowed);
-  _require = codeChallengeMethod((clientId) => {
-    c5 = 0;
-    c6 = 0;
-    c4 = 0;
-    const iter = (function*(arg0, value) {
-      if (nonce === 2) {
-        nonce = 3;
-        throw new TypeError("Generator functions may not be called on executing generators");
-      } else if (tmp7 === 3) {
-        if (arg0 === 1) {
-          throw value;
-        } else if (arg0 === 2) {
-          let obj = { value, done: true };
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
+  _require = codeChallengeMethod(function*(clientId) {
+    if (nonce === 2) {
+      nonce = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp7 === 3) {
+      if (clientId === 1) {
+        throw value;
+      } else if (clientId === 2) {
+        let obj = { value, done: true };
+        return obj;
       } else {
-        try {
-          nonce = 2;
-          if (0 === state) {
-            if (arg0 === 1) {
+        return { value: "HermesInternal", done: null };
+      }
+    } else {
+      try {
+        nonce = 2;
+        if (0 === state) {
+          if (clientId === 1) {
+            nonce = 3;
+            throw value;
+          } else if (clientId === 2) {
+            nonce = 3;
+            obj = { value, done: true };
+            return obj;
+          } else {
+            redirectUri = tmp4;
+            responseType = tmp8;
+            closure_129_0 = undefined;
+            closure_129_1 = undefined;
+            closure_129_2 = undefined;
+            ({ isAuthorized: closure_129_0, overrideSuccessCallback: closure_129_1, canceled: closure_129_2 } = clientId);
+            closure_129_3 = undefined;
+            let body;
+            state = 1;
+            nonce = 1;
+            return { value: "PX_16", done: true };
+          }
+        } else {
+          if (1 === tmp8) {
+            if (clientId === 1) {
               nonce = 3;
               throw value;
-            } else if (arg0 === 2) {
+            } else if (clientId === 2) {
               nonce = 3;
-              obj = { value, done: true };
-              return obj;
-            } else {
-              redirectUri = tmp4;
-              responseType = tmp8;
-              closure_129_0 = undefined;
-              closure_129_1 = undefined;
-              closure_129_2 = undefined;
-              ({ isAuthorized: closure_129_0, overrideSuccessCallback: closure_129_1, canceled: closure_129_2 } = clientId);
-              closure_129_3 = undefined;
-              let body;
-              state = 1;
+              const obj1 = { value, done: true };
+              return obj1;
+            } else if (null != callbackWithoutPost) {
+              closure_1_24(true);
+              callbackWithoutPost(closure_129_0);
+              if (dismissOAuthModal != null) {
+                dismissOAuthModal();
+              }
+              nonce = 3;
+              const obj2 = { value: undefined, done: true };
+              return obj2;
+            } else if (null != integrationType) {
+              codeChallengeMethod = 2;
+              closure_1_24(true);
+              let obj7 = clientId(codeChallenge[27]);
+              let obj3 = { authorize: closure_129_0, clientId, scopes, responseType, redirectUri, codeChallenge, codeChallengeMethod, state, nonce, permissions: null, guildId: null, channelId: null, integrationType: null, connectedAccountProvider: null };
+              let obj9 = redirectUri(codeChallenge[21]);
+              obj3.permissions = obj9.remove(memo4, first5);
+              let tmp108;
+              if (integrationType === clientId(codeChallenge[28]).ApplicationIntegrationType.GUILD_INSTALL) {
+                if (null != first3) {
+                  tmp108 = first3;
+                }
+              }
+              obj3.guildId = tmp108;
+              let tmp116;
+              if (integrationType === clientId(codeChallenge[28]).ApplicationIntegrationType.GUILD_INSTALL) {
+                if (null != first4) {
+                  tmp116 = first4;
+                }
+              }
+              obj3.channelId = tmp116;
+              obj3.integrationType = integrationType;
+              obj3.connectedAccountProvider = connectedAccountProvider;
+              state = 4;
               nonce = 1;
-              return { value: "PX_16", done: true };
+              let obj4 = { value: obj7.authorize(obj3), done: false };
+              return obj4;
+            } else {
+              const _Error2 = Error;
+              const error = new Error("No integration type was selected.");
+              closure_1_23(error);
+              nonce = 3;
             }
-          } else {
-            if (1 === tmp8) {
-              if (arg0 === 1) {
-                nonce = 3;
-                throw value;
-              } else if (arg0 === 2) {
-                nonce = 3;
-                const obj1 = { value, done: true };
-                return obj1;
-              } else if (null != callbackWithoutPost) {
-                closure_1_24(true);
-                callbackWithoutPost(closure_129_0);
+          } else if (2 !== tmp8) {
+            if (3 === tmp8) {
+              codeChallengeMethod = 1;
+              body = codeChallenge.body;
+              let message;
+              if (body != null) {
+                message = body.message;
+              }
+              if (null != message) {
+                if ("" !== body.message) {
+                  const _Error = Error;
+                  const error1 = new Error(body.message);
+                  closure_1_23(error1);
+                  closure_1_21(disclosures.AUTHORIZE_SCOPES);
+                }
+              }
+              closure_1_23(body);
+              closure_1_21(disclosures.AUTHORIZE_SCOPES);
+            } else {
+              if (4 === tmp8) {
+                if (clientId === 1) {
+                  nonce = 3;
+                  throw value;
+                } else if (clientId === 2) {
+                  codeChallengeMethod = 0;
+                  closure_1_24(false);
+                  nonce = 3;
+                  const obj5 = { value, done: true };
+                  return obj5;
+                } else {
+                  closure_129_3 = value;
+                  if (closure_129_0) {
+                    obj3 = responseType(codeChallenge[29]);
+                    const response = obj3.fetch();
+                    obj4 = clientId(codeChallenge[25]);
+                    state = 5;
+                    nonce = 1;
+                    const obj6 = { value: obj4.ackDisclosures(clientId, first11), done: false };
+                    return obj6;
+                  }
+                }
+              } else {
+                if (5 === tmp8) {
+                  if (clientId === 1) {
+                    nonce = 3;
+                    throw value;
+                  } else if (clientId === 2) {
+                    codeChallengeMethod = 0;
+                    closure_1_24(false);
+                    nonce = 3;
+                    obj7 = { value, done: true };
+                    return obj7;
+                  }
+                } else if (clientId === 1) {
+                  nonce = 3;
+                  throw value;
+                } else if (clientId === 2) {
+                  codeChallengeMethod = 0;
+                  closure_1_24(false);
+                  nonce = 3;
+                  obj = { value, done: true };
+                  return obj;
+                } else if (callback != null) {
+                  const obj8 = {};
+                  const merged = Object.assign(closure_129_3);
+                  obj8.canceled = closure_129_2;
+                  let application;
+                  if (application != null) {
+                    application = application.application;
+                  }
+                  obj8.application = application;
+                  obj8.guild = guild;
+                  obj8.wasDeepLink = wasDeepLink;
+                  tmp10(obj8);
+                }
+                codeChallengeMethod = 1;
+              }
+              if (null != closure_129_1) {
+                closure_129_1(closure_129_3.location);
+              } else {
                 if (dismissOAuthModal != null) {
                   dismissOAuthModal();
                 }
-                nonce = 3;
-                const obj2 = { value: undefined, done: true };
-                return obj2;
-              } else if (null != integrationType) {
-                codeChallengeMethod = 2;
-                closure_1_24(true);
-                let obj7 = clientId(codeChallenge[27]);
-                let obj3 = { authorize: closure_129_0, clientId, scopes, responseType, redirectUri, codeChallenge, codeChallengeMethod, state, nonce, permissions: null, guildId: null, channelId: null, integrationType: null, connectedAccountProvider: null };
-                let obj9 = redirectUri(codeChallenge[21]);
-                obj3.permissions = obj9.remove(memo4, first5);
-                let tmp108;
-                if (integrationType === clientId(codeChallenge[28]).ApplicationIntegrationType.GUILD_INSTALL) {
-                  if (null != first3) {
-                    tmp108 = first3;
-                  }
-                }
-                obj3.guildId = tmp108;
-                let tmp116;
-                if (integrationType === clientId(codeChallenge[28]).ApplicationIntegrationType.GUILD_INSTALL) {
-                  if (null != first4) {
-                    tmp116 = first4;
-                  }
-                }
-                obj3.channelId = tmp116;
-                obj3.integrationType = integrationType;
-                obj3.connectedAccountProvider = connectedAccountProvider;
-                state = 4;
+                const promise = new Promise((arg0) => setTimeout(arg0, 100));
+                state = 6;
                 nonce = 1;
-                let obj4 = { value: obj7.authorize(obj3), done: false };
-                return obj4;
-              } else {
-                const _Error2 = Error;
-                const error = new Error("No integration type was selected.");
-                closure_1_23(error);
-                nonce = 3;
+                obj9 = { value: promise, done: false };
+                return obj9;
               }
-            } else if (2 !== tmp8) {
-              if (3 === tmp8) {
-                codeChallengeMethod = 1;
-                body = codeChallenge.body;
-                let message;
-                if (body != null) {
-                  message = body.message;
-                }
-                if (null != message) {
-                  if ("" !== body.message) {
-                    const _Error = Error;
-                    const error1 = new Error(body.message);
-                    closure_1_23(error1);
-                    closure_1_21(disclosures.AUTHORIZE_SCOPES);
-                  }
-                }
-                closure_1_23(body);
-                closure_1_21(disclosures.AUTHORIZE_SCOPES);
-              } else {
-                if (4 === tmp8) {
-                  if (arg0 === 1) {
-                    nonce = 3;
-                    throw value;
-                  } else if (arg0 === 2) {
-                    codeChallengeMethod = 0;
-                    closure_1_24(false);
-                    nonce = 3;
-                    const obj5 = { value, done: true };
-                    return obj5;
-                  } else {
-                    closure_129_3 = value;
-                    if (closure_129_0) {
-                      obj3 = responseType(codeChallenge[29]);
-                      const response = obj3.fetch();
-                      obj4 = clientId(codeChallenge[25]);
-                      state = 5;
-                      nonce = 1;
-                      const obj6 = { value: obj4.ackDisclosures(clientId, first11), done: false };
-                      return obj6;
-                    }
-                  }
-                } else {
-                  if (5 === tmp8) {
-                    if (arg0 === 1) {
-                      nonce = 3;
-                      throw value;
-                    } else if (arg0 === 2) {
-                      codeChallengeMethod = 0;
-                      closure_1_24(false);
-                      nonce = 3;
-                      obj7 = { value, done: true };
-                      return obj7;
-                    }
-                  } else if (arg0 === 1) {
-                    nonce = 3;
-                    throw value;
-                  } else if (arg0 === 2) {
-                    codeChallengeMethod = 0;
-                    closure_1_24(false);
-                    nonce = 3;
-                    obj = { value, done: true };
-                    return obj;
-                  } else if (callback != null) {
-                    const obj8 = {};
-                    const merged = Object.assign(closure_129_3);
-                    obj8.canceled = closure_129_2;
-                    application = undefined;
-                    if (application != null) {
-                      application = application.application;
-                    }
-                    obj8.application = application;
-                    obj8.guild = guild;
-                    obj8.wasDeepLink = wasDeepLink;
-                    tmp10(obj8);
-                  }
-                  codeChallengeMethod = 1;
-                }
-                if (null != closure_129_1) {
-                  closure_129_1(closure_129_3.location);
-                } else {
-                  if (dismissOAuthModal != null) {
-                    dismissOAuthModal();
-                  }
-                  const promise = new Promise((arg0) => setTimeout(arg0, 100));
-                  state = 6;
-                  nonce = 1;
-                  obj9 = { value: promise, done: false };
-                  return obj9;
-                }
-              }
-              codeChallengeMethod = 0;
-              closure_1_24(false);
             }
             codeChallengeMethod = 0;
             closure_1_24(false);
-            throw codeChallenge;
           }
-        } catch (tmp132) {
-          codeChallenge = tmp132;
-          if (tmp5 === codeChallengeMethod) {
-            nonce = tmp3;
-            throw tmp132;
-          } else if (tmp2 === tmp134) {
-            state = tmp;
-          } else {
-            state = tmp3;
-          }
+          codeChallengeMethod = 0;
+          closure_1_24(false);
+          throw codeChallenge;
+        }
+      } catch (tmp132) {
+        codeChallenge = tmp132;
+        if (tmp5 === codeChallengeMethod) {
+          nonce = tmp3;
+          throw tmp132;
+        } else if (tmp2 === tmp134) {
+          state = tmp;
+        } else {
+          state = tmp3;
         }
       }
-    })();
-    iter.next();
-    return iter;
+    }
   });
   const items13 = [first6, callbackWithoutPost, clientId, requestedScopes, responseType, redirectUri, codeChallenge, codeChallengeMethod, tmp51, nonce, memo4, first5, first3, first4, first11, dismissOAuthModal, callback, flag5, , , ];
   let application;
@@ -795,7 +789,7 @@ export default function useOAuth2AuthorizeForm(clientId) {
   }, items15);
   closure_57 = obj.useRef(false);
   const items16 = [clientId, requestedScopes, responseType, redirectUri, codeChallenge, codeChallengeMethod, tmp51, first6, connectedAccountProvider, _prompt, callback, first12, nsfwAllowed];
-  callback2 = obj.useCallback(codeChallengeMethod(function*(arg0, value) {
+  callback2 = obj.useCallback(codeChallengeMethod(function*() {
     if (c6 === 2) {
       c6 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -936,8 +930,8 @@ export default function useOAuth2AuthorizeForm(clientId) {
   const items18 = [clientId, first6, memo4, requestedScopes, first1];
   const effect3 = obj.useEffect(() => {
     if (first1 !== ref2.current) {
-      ref2.current = tmp;
-      const obj = { step: tmp, application_id, integration_type: first6, scopes: requestedScopes, permissions: memo4.toString() };
+      ref2.current = first1;
+      const obj = { step: first1, application_id, integration_type: first6, scopes: requestedScopes, permissions: memo4.toString() };
       obj.trackWithMetadata(__initData.OAUTH2_AUTHORIZE_STEP_VIEWED, obj);
     }
   }, items18);
@@ -959,8 +953,8 @@ export default function useOAuth2AuthorizeForm(clientId) {
       }
       if (memo5.length > 1) {
         closure_21(constants.SELECT_INSTALL_TYPE);
-      } else if (1 === arr.length) {
-        closure_36(arr[0]);
+      } else if (1 === memo5.length) {
+        closure_36(memo5[0]);
         closure_21(constants.AUTHORIZE_SCOPES);
       } else if (null != integrationType) {
         closure_36(tmp9);
@@ -1016,9 +1010,8 @@ export default function useOAuth2AuthorizeForm(clientId) {
             } else {
               callback2();
             }
-            tmp33Result = tmp33(9248);
+            tmp33Result = permissions2;
           }
-          tmp33 = require;
         }
       }
     }

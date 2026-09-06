@@ -1,12 +1,13 @@
 // discord_app/modules/mobile_native_updater/MobileNativeUpdateUtils.tsx
 import LoggerDefault from "../debug/Logger.tsx";
 import ConstantsIOS from "../../ConstantsIOS.tsx";
+import PlatformUtils from "../../utils/PlatformUtils.tsx";
 import HTTPUtils from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import Linking from "../../lib/native/Linking.tsx";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 
 require = fn;
-let closure_5 = async function _checkForNewerBuild(arg0, value) {
+let closure_5 = async function _checkForNewerBuild() {
   if (c3 === 2) {
     c3 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -107,6 +108,7 @@ function openBuildInstallerUrl(install) {
       } else {
         openURLExternally(str.toString());
       }
+      obj = PlatformUtils;
     }
   } catch (err) {}
 }

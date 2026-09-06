@@ -4,7 +4,10 @@ import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
 import useMountEffectDefault from "../../../hooks/useMountEffect.tsx";
 import AuthenticationActionCreatorsDefault from "../../../actions/AuthenticationActionCreators.tsx";
 import TTIAnalyticsUtils from "../../tti_analytics/native/TTIAnalyticsUtils.tsx";
+import NativeShareManagerModuleDefault from "../../../../discord_common/js/packages/rtn-codegen/js/NativeShareManagerModule.tsx";
+import ShareScreenDefault from "ShareScreen.tsx";
 import AccessibilityManagerDefault from "../../a11y/native/AccessibilityManager.tsx";
+import ToastContainerDefault from "../../toast/native/ToastContainer.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import AuthenticationStore from "../../../stores/AuthenticationStore.tsx";
@@ -86,9 +89,9 @@ export default function AppShare(targetUserId) {
     let obj = AnalyticsUtilsDefault;
     let tmp2 = null != targetUserId.text;
     if (tmp2) {
-      tmp2 = tmp.text.length > 0;
+      tmp2 = targetUserId.text.length > 0;
     }
-    obj = { has_content: tmp2, has_attachment: tmp.attachments.length > 0 };
+    obj = { has_content: tmp2, has_attachment: targetUserId.attachments.length > 0 };
     obj.track(AnalyticEvents.EXTERNAL_SHARE_OPENED, obj);
   }, items4);
   useMountEffectDefault(() => {
@@ -107,22 +110,22 @@ export default function AppShare(targetUserId) {
   });
   obj = { appEntryKey: share, children: null };
   if (first) {
-    obj = { appEntryKey: tmp18, sharedContent: targetUserId, onClose: null };
-    const tmp14Result = tmp14(13900);
+    obj = { appEntryKey: share, sharedContent: targetUserId, onClose: null };
+    const tmp14Result = ShareScreenDefault;
     if (tmp9Result.isMetaQuest()) {
-      exitApp = tmp14(8362).close;
+      exitApp = NativeShareManagerModuleDefault.close;
     } else {
       exitApp = exitApp.exitApp;
     }
     obj.onClose = exitApp;
-    tmp19(tmp14Result, obj);
+    closure_10(tmp14Result, obj);
     tmp9Result = tmp9(1608);
   } else {
-    const items5 = [tmp19(tmp9(7039).SceneLoadingIndicator, {}), , ,];
-    obj1 = { appEntryKey: tmp18 };
-    items5[1] = tmp19(tmp9(16908).ActionSheetContainer, obj1);
-    items5[2] = tmp19(tmp14(16954), {});
-    items5[3] = tmp19(tmp9(4910).AlertModalContainer, {});
+    const items5 = [closure_10(tmp9(7039).SceneLoadingIndicator, {}), , ,];
+    obj1 = { appEntryKey: share };
+    items5[1] = closure_10(tmp9(16908).ActionSheetContainer, obj1);
+    items5[2] = closure_10(ToastContainerDefault, {});
+    items5[3] = closure_10(tmp9(4910).AlertModalContainer, {});
     obj.children = items5;
     return closure_11(tmp17, obj);
   }

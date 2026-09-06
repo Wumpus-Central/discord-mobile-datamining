@@ -13,7 +13,7 @@ let closure_7 = [];
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/DismissibleBadgeUtils.tsx");
 
-export function createDismissibleBadgePreNavigationAction(TINY_BRONCO_SETTINGS, useShouldShowTinyBroncoAccountStatus) {
+export function createDismissibleBadgePreNavigationAction(TINY_BRONCO_SETTINGS) {
   closure_0 = TINY_BRONCO_SETTINGS;
   let tmp = useShouldShowTinyBroncoAccountStatus;
   if (useShouldShowTinyBroncoAccountStatus === undefined) {

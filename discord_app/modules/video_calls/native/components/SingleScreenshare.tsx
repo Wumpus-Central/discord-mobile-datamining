@@ -31,11 +31,20 @@ export default function SingleScreenshare(channel) {
     containerStyle: null,
   };
   const tmp = closure_5();
-  const tmp3 = jsx;
   let stageStreamContainer;
   if (channel.isGuildStageVoice()) {
     stageStreamContainer = tmp.stageStreamContainer;
   }
   obj.containerStyle = stageStreamContainer;
-  return tmp3(channel(10024), obj);
+  return jsx(channel(10024), {
+    participant: channel.participant,
+    onSingleTap() {
+      closure_1_3();
+    },
+    onDoubleTap() {
+      React2();
+      const participant = ChannelRTCActionCreatorsDefault.selectParticipant(channel.id, null);
+    },
+    containerStyle: null,
+  });
 }

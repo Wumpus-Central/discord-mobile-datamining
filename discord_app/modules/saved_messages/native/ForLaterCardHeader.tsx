@@ -25,10 +25,10 @@ function HeaderIcon(channel) {
     }
     if (isGroupDMResult) {
       obj = { channel, size: tmp2(1178).AvatarSizes.XSMALL };
-      tmp6Result = tmp6(GroupDMAvatarDefault, obj);
+      tmp6Result = closure_5(GroupDMAvatarDefault, obj);
     } else {
-      const obj1 = { style: tmp.dmIcon, children: tmp6(tmp2(5071).ChatIcon, { size: "xxs" }) };
-      tmp6Result = tmp6(View, obj1);
+      const obj1 = { style: tmp.dmIcon, children: closure_5(tmp2(5071).ChatIcon, { size: "xxs" }) };
+      tmp6Result = closure_5(View, obj1);
     }
   }
   return tmp6Result;
@@ -101,7 +101,7 @@ export const ForLaterCardHeader = function ForLaterCardHeader(channel) {
   const items = [hasOwnProperty(HeaderIcon, { channel }), , ,];
   let tmp4Result = null;
   if (!channel.isPrivate()) {
-    tmp4Result = tmp4(ChevronSmallRightIcon.ChevronSmallRightIcon, { size: "xxs" });
+    tmp4Result = hasOwnProperty(ChevronSmallRightIcon.ChevronSmallRightIcon, { size: "xxs" });
   }
   items[1] = tmp4Result;
   items[2] = hasOwnProperty(ChannelName, { channel });

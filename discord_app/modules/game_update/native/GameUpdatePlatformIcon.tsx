@@ -1,5 +1,11 @@
 // discord_app/modules/game_update/native/GameUpdatePlatformIcon.tsx
+import MobilePhoneIcon from "../../../design/components/Icon/native/redesign/generated/MobilePhoneIcon.tsx";
 import PlatformType from "../../../../discord_common/js/shared/shared-constants/PlatformType.tsx";
+import AppleNeutralIcon from "../../../design/components/Icon/native/redesign/generated/AppleNeutralIcon.tsx";
+import XboxNeutralIcon from "../../../design/components/Icon/native/redesign/generated/XboxNeutralIcon.tsx";
+import ScreenIcon from "../../../design/components/Icon/native/redesign/generated/ScreenIcon.tsx";
+import PlaystationNeutralIcon from "../../../design/components/Icon/native/redesign/generated/PlaystationNeutralIcon.tsx";
+import NintendoSwitchNeutralIcon from "../../../design/components/Icon/native/redesign/generated/NintendoSwitchNeutralIcon.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -15,22 +21,22 @@ export const GameUpdatePlatformIcon = function GameUpdatePlatformIcon(color) {
   color = color.color;
   if (PlatformType.PlatformType.DESKTOP === platform) {
     let obj = { size, color };
-    return jsx(tmp(8879).ScreenIcon, { size, color });
-  } else if (tmp(8342).PlatformType.XBOX === platform) {
+    return jsx(ScreenIcon.ScreenIcon, { size, color });
+  } else if (PlatformType.PlatformType.XBOX === platform) {
     obj = { size, color };
-    return jsx(tmp(8708).XboxNeutralIcon, { size, color });
-  } else if (tmp(8342).PlatformType.PLAYSTATION === platform) {
+    return jsx(XboxNeutralIcon.XboxNeutralIcon, { size, color });
+  } else if (PlatformType.PlatformType.PLAYSTATION === platform) {
     const obj1 = { size, color };
-    return jsx(tmp(8881).PlaystationNeutralIcon, { size, color });
-  } else if (tmp(8342).PlatformType.NINTENDO === platform) {
+    return jsx(PlaystationNeutralIcon.PlaystationNeutralIcon, { size, color });
+  } else if (PlatformType.PlatformType.NINTENDO === platform) {
     const obj2 = { size, color };
-    return jsx(tmp(8883).NintendoSwitchNeutralIcon, { size, color });
-  } else if (tmp(8342).PlatformType.ANDROID === platform) {
+    return jsx(NintendoSwitchNeutralIcon.NintendoSwitchNeutralIcon, { size, color });
+  } else if (PlatformType.PlatformType.ANDROID === platform) {
     const obj3 = { size, color };
-    return jsx(tmp(6960).MobilePhoneIcon, { size, color });
-  } else if (tmp(8342).PlatformType.IOS === platform) {
+    return jsx(MobilePhoneIcon.MobilePhoneIcon, { size, color });
+  } else if (PlatformType.PlatformType.IOS === platform) {
     obj = { size, color };
-    return jsx(tmp(8442).AppleNeutralIcon, { size, color });
+    return jsx(AppleNeutralIcon.AppleNeutralIcon, { size, color });
   } else {
     return null;
   }

@@ -14,7 +14,7 @@ function getOrders() {
   }
   return applyArgumentsResult;
 }
-let closure_8 = async function _getOrders(arg0, value) {
+let closure_8 = async function _getOrders(arg0) {
   if (c6 === 2) {
     c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -41,44 +41,44 @@ let closure_8 = async function _getOrders(arg0, value) {
         } else {
           closure_2 = tmp3;
           closure_1 = tmp5;
-          closure_129_0 = closure_0;
+          closure_129_0 = _require;
           c4 = 1;
           let status;
-          if (closure_0 != null) {
-            status = tmp39.status;
+          if (_require != null) {
+            status = _require.status;
           }
           const obj1 = {};
           if (null != status) {
-            const items = [tmp39.status];
+            const items = [_require.status];
             obj1.statuses = items;
           }
           let skuId;
-          if (closure_0 != null) {
-            skuId = tmp39.skuId;
+          if (_require != null) {
+            skuId = _require.skuId;
           }
           if (null != skuId) {
-            obj1.sku_id = tmp39.skuId;
+            obj1.sku_id = _require.skuId;
           }
           let createdAfter;
-          if (closure_0 != null) {
-            createdAfter = tmp39.createdAfter;
+          if (_require != null) {
+            createdAfter = _require.createdAfter;
           }
           if (null != createdAfter) {
-            obj1.created_after = tmp39.createdAfter;
+            obj1.created_after = _require.createdAfter;
           }
           let isGift;
-          if (closure_0 != null) {
-            isGift = tmp39.isGift;
+          if (_require != null) {
+            isGift = _require.isGift;
           }
           if (null != isGift) {
-            obj1.is_gift = tmp39.isGift;
+            obj1.is_gift = _require.isGift;
           }
           let paymentGateway;
-          if (closure_0 != null) {
-            paymentGateway = tmp39.paymentGateway;
+          if (_require != null) {
+            paymentGateway = _require.paymentGateway;
           }
           if (null != paymentGateway) {
-            obj1.payment_gateway = tmp39.paymentGateway;
+            obj1.payment_gateway = _require.paymentGateway;
           }
           const HTTP = HTTPUtils.HTTP;
           const request = { url: constants.ORDER_LIST, query: obj1, rejectWithError: true };
@@ -137,7 +137,7 @@ function createOrder() {
   }
   return applyArgumentsResult;
 }
-let closure_10 = async function _createOrder(arg0, value) {
+let closure_10 = async function _createOrder(arg0) {
   if (c6 === 2) {
     c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -337,7 +337,7 @@ let closure_10 = async function _createOrder(arg0, value) {
     }
   }
 };
-let closure_12 = async function _getOrCreateOrder(arg0, value) {
+let closure_12 = async function _getOrCreateOrder(arg0) {
   if (c4 === 2) {
     c4 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -469,7 +469,7 @@ let closure_12 = async function _getOrCreateOrder(arg0, value) {
     }
   }
 };
-let closure_13 = async function _patchOrderLineItem(arg0, value) {
+let closure_13 = async function _patchOrderLineItem(arg0) {
   if (c6 === 2) {
     c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -606,7 +606,7 @@ let closure_13 = async function _patchOrderLineItem(arg0, value) {
     }
   }
 };
-let closure_14 = async function _patchOrder(arg0, value) {
+let closure_14 = async function _patchOrder(arg0) {
   if (c6 === 2) {
     c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -754,7 +754,7 @@ let closure_14 = async function _patchOrder(arg0, value) {
     }
   }
 };
-let closure_15 = async function _updateOrder(arg0, value) {
+let closure_15 = async function _updateOrder(arg0) {
   if (c6 === 2) {
     c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -925,7 +925,8 @@ function discardOrder() {
 let closure_17 = async function _discardOrder() {
   closure_1 = tmp4;
   const HTTP = HTTPUtils.HTTP;
-  closure_129_0 = await HTTP.post({ url: Endpoints.ORDER_DISCARD(closure_0), rejectWithError: false });
+  await HTTP.post({ url: Endpoints.ORDER_DISCARD(closure_0), rejectWithError: false });
+  closure_129_0 = value;
   if (null == closure_129_0.body) {
     const _Error = Error;
     const error = new Error("Invalid discard order response");
@@ -933,7 +934,7 @@ let closure_17 = async function _discardOrder() {
   }
   return closure_129_0.body;
 };
-let closure_18 = async function _cancelSigningAndDiscardOrder(arg0, value) {
+let closure_18 = async function _cancelSigningAndDiscardOrder(arg0) {
   closure_2 = tmp3;
   closure_129_0 = closure_0;
   await cancelOrderSigning(closure_0);
@@ -967,7 +968,7 @@ let closure_18 = async function _cancelSigningAndDiscardOrder(arg0, value) {
   }
   return value;
 };
-let closure_19 = async function _markOrderAsSigningInProgress(arg0, value) {
+let closure_19 = async function _markOrderAsSigningInProgress(arg0) {
   if (c1 === 2) {
     c1 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -999,7 +1000,7 @@ let closure_19 = async function _markOrderAsSigningInProgress(arg0, value) {
           let obj2 = { value, done: false };
           return obj2;
         } else {
-          const tmp6 = asyncGeneratorStep(async (arg0, value) => {
+          const tmp6 = asyncGeneratorStep(async () => {
             if (c5 === 2) {
               c5 = 3;
               throw new TypeError("Generator functions may not be called on executing generators");
@@ -1190,205 +1191,208 @@ function cancelOrderSigning() {
   }
   return applyArgumentsResult;
 }
-let closure_22 = async function _cancelOrderSigning(arg0, value) {
-  if (c1 === 2) {
-    c1 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp3 === 3) {
-    if (arg0 === 1) {
-      throw value;
-    } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+let closure_22 = async function _cancelOrderSigning() {
+  c2 = 0;
+  c1 = 0;
+  return (async (arg0) => {
+    if (c1 === 2) {
+      c1 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp3 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        let obj = { value, done: true };
+        return obj;
+      } else {
+        return { value: "HermesInternal", done: null };
+      }
     } else {
-      return { value: "HermesInternal", done: null };
-    }
-  } else {
-    try {
-      c1 = 2;
-      if (0 === c2) {
-        if (arg0 === 1) {
+      try {
+        c1 = 2;
+        if (0 === c2) {
+          if (arg0 === 1) {
+            c1 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c1 = 3;
+            obj = { value, done: true };
+            return obj;
+          } else {
+            value = map.get(orderId);
+            if (null != value) {
+              let obj1 = { orderId };
+              logger.info("cancel signing already in progress for order, awaiting existing promise", obj1);
+              c2 = 1;
+              c1 = 1;
+              let obj2 = { value, done: false };
+              return obj2;
+            } else {
+              const tmp6 = asyncGeneratorStep(async () => {
+                if (c5 === 2) {
+                  c5 = 3;
+                  throw new TypeError("Generator functions may not be called on executing generators");
+                } else if (tmp7 === 3) {
+                  if (arg0 === 1) {
+                    throw value;
+                  } else if (arg0 === 2) {
+                    let obj = { value, done: true };
+                    return obj;
+                  } else {
+                    return { value: "HermesInternal", done: null };
+                  }
+                } else {
+                  try {
+                    c5 = 2;
+                    if (0 === c4) {
+                      if (arg0 === 1) {
+                        c5 = 3;
+                        throw value;
+                      } else if (arg0 === 2) {
+                        c5 = 3;
+                        obj = { value, done: true };
+                        return obj;
+                      } else {
+                        orderId = tmp8;
+                        closure_128_0 = undefined;
+                        const obj1 = { type: "ORDER_CANCEL_SIGNING_START", orderId };
+                        tmp4(tmp66[6]).dispatch(obj1);
+                        c3 = 2;
+                        const HTTP = orderId(tmp66[4]).HTTP;
+                        const obj2 = { url: c5.ORDER_CANCEL_SIGNING(orderId), rejectWithError: true };
+                        c4 = 4;
+                        c5 = 1;
+                        let obj3 = { value: HTTP.post(obj2), done: false };
+                        return obj3;
+                      }
+                    } else if (1 === tmp8) {
+                      c3 = 0;
+                      set.delete(closure_129_0);
+                      throw tmp66;
+                    } else if (2 === tmp8) {
+                      c3 = 1;
+                      closure_128_1 = tmp66;
+                      let obj8 = orderId(tmp66[5]);
+                      const _Error2 = Error;
+                      const error = new Error("failed to cancel order signing");
+                      const obj4 = { tags: { source: "OrderActionCreators_cancelOrderSigning" }, extra: null };
+                      const obj5 = { orderId: closure_129_0, response: closure_128_1 };
+                      obj4.extra = obj5;
+                      const result = obj8.captureBillingException(error, obj4);
+                      const obj6 = { response: closure_128_1, orderId: closure_129_0 };
+                      logger.error("failed to cancel order signing", obj6);
+                      let obj12 = tmp4(tmp66[6]);
+                      const obj7 = { type: "ORDER_CANCEL_SIGNING_FAIL", orderId: closure_129_0 };
+                      c4 = 3;
+                      c5 = 1;
+                      obj8 = { value: obj12.dispatch(obj7), done: false };
+                      return obj8;
+                    } else if (3 === tmp8) {
+                      if (arg0 === 1) {
+                        c5 = 3;
+                        throw value;
+                      } else if (arg0 === 2) {
+                        c3 = 0;
+                        set.delete(closure_129_0);
+                        c5 = 3;
+                        const obj9 = { value, done: true };
+                        return obj9;
+                      } else {
+                        throw closure_128_1;
+                      }
+                    } else if (4 === tmp8) {
+                      if (arg0 === 1) {
+                        c5 = 3;
+                        throw value;
+                      } else if (arg0 === 2) {
+                        c3 = 0;
+                        set.delete(closure_129_0);
+                        c5 = 3;
+                        const obj10 = { value, done: true };
+                        return obj10;
+                      } else {
+                        closure_128_0 = value;
+                        if (null == closure_128_0.body) {
+                          const _Error = Error;
+                          const error1 = new Error("Invalid cancel signing response");
+                          throw error1;
+                        } else {
+                          const obj11 = { orderId: closure_129_0 };
+                          logger.info("cancel order signing, transitioned back to DRAFT", obj11);
+                          obj3 = tmp4(tmp66[6]);
+                          obj12 = { type: "ORDER_CANCEL_SIGNING_SUCCESS", orderId: closure_129_0 };
+                          c4 = 5;
+                          c5 = 1;
+                          const obj13 = { value: obj3.dispatch(obj12), done: false };
+                          return obj13;
+                        }
+                      }
+                    } else if (arg0 === 1) {
+                      c5 = 3;
+                      throw value;
+                    } else if (arg0 === 2) {
+                      c3 = 0;
+                      set.delete(closure_129_0);
+                      c5 = 3;
+                      const obj14 = { value, done: true };
+                      return obj14;
+                    } else {
+                      c3 = 0;
+                      set.delete(closure_129_0);
+                      c5 = 3;
+                      obj = { value: closure_128_0.body, done: true };
+                      return obj;
+                    }
+                  } catch (tmp66) {
+                    if (tmp5 === c3) {
+                      c5 = tmp3;
+                      throw tmp66;
+                    } else if (tmp2 === tmp68) {
+                      c4 = tmp2;
+                    } else {
+                      c4 = tmp;
+                    }
+                  }
+                }
+              })();
+              let result = map.set(orderId, tmp6);
+              c2 = 2;
+              c1 = 1;
+              let obj3 = { value: tmp6, done: false };
+              return obj3;
+            }
+          }
+        } else if (1 === tmp4) {
+          if (arg0 === 1) {
+            c1 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c1 = 3;
+            let obj4 = { value, done: true };
+            return obj4;
+          } else {
+            c1 = 3;
+            let obj5 = { value, done: true };
+            return obj5;
+          }
+        } else if (arg0 === 1) {
           c1 = 3;
           throw value;
         } else if (arg0 === 2) {
+          c1 = 3;
+          let obj6 = { value, done: true };
+          return obj6;
+        } else {
           c1 = 3;
           obj = { value, done: true };
           return obj;
-        } else {
-          value = map.get(closure_0);
-          if (null != value) {
-            let obj1 = { orderId: tmp15 };
-            logger.info("cancel signing already in progress for order, awaiting existing promise", obj1);
-            c2 = 1;
-            c1 = 1;
-            let obj2 = { value, done: false };
-            return obj2;
-          } else {
-            const tmp6 = asyncGeneratorStep(async (arg0, value) => {
-              if (c5 === 2) {
-                c5 = 3;
-                throw new TypeError("Generator functions may not be called on executing generators");
-              } else if (tmp7 === 3) {
-                if (arg0 === 1) {
-                  throw value;
-                } else if (arg0 === 2) {
-                  let obj = { value, done: true };
-                  return obj;
-                } else {
-                  return { value: "HermesInternal", done: null };
-                }
-              } else {
-                try {
-                  c5 = 2;
-                  if (0 === c4) {
-                    if (arg0 === 1) {
-                      c5 = 3;
-                      throw value;
-                    } else if (arg0 === 2) {
-                      c5 = 3;
-                      obj = { value, done: true };
-                      return obj;
-                    } else {
-                      const orderId = tmp8;
-                      closure_128_0 = undefined;
-                      const obj1 = { type: "ORDER_CANCEL_SIGNING_START", orderId };
-                      tmp4(tmp66[6]).dispatch(obj1);
-                      c3 = 2;
-                      const HTTP = orderId(tmp66[4]).HTTP;
-                      const obj2 = { url: c5.ORDER_CANCEL_SIGNING(orderId), rejectWithError: true };
-                      c4 = 4;
-                      c5 = 1;
-                      let obj3 = { value: HTTP.post(obj2), done: false };
-                      return obj3;
-                    }
-                  } else if (1 === tmp8) {
-                    c3 = 0;
-                    set.delete(closure_129_0);
-                    throw tmp66;
-                  } else if (2 === tmp8) {
-                    c3 = 1;
-                    closure_128_1 = tmp66;
-                    let obj8 = orderId(tmp66[5]);
-                    const _Error2 = Error;
-                    const error = new Error("failed to cancel order signing");
-                    const obj4 = { tags: { source: "OrderActionCreators_cancelOrderSigning" }, extra: null };
-                    const obj5 = { orderId: closure_129_0, response: closure_128_1 };
-                    obj4.extra = obj5;
-                    const result = obj8.captureBillingException(error, obj4);
-                    const obj6 = { response: closure_128_1, orderId: closure_129_0 };
-                    logger.error("failed to cancel order signing", obj6);
-                    let obj12 = tmp4(tmp66[6]);
-                    const obj7 = { type: "ORDER_CANCEL_SIGNING_FAIL", orderId: closure_129_0 };
-                    c4 = 3;
-                    c5 = 1;
-                    obj8 = { value: obj12.dispatch(obj7), done: false };
-                    return obj8;
-                  } else if (3 === tmp8) {
-                    if (arg0 === 1) {
-                      c5 = 3;
-                      throw value;
-                    } else if (arg0 === 2) {
-                      c3 = 0;
-                      set.delete(closure_129_0);
-                      c5 = 3;
-                      const obj9 = { value, done: true };
-                      return obj9;
-                    } else {
-                      throw closure_128_1;
-                    }
-                  } else if (4 === tmp8) {
-                    if (arg0 === 1) {
-                      c5 = 3;
-                      throw value;
-                    } else if (arg0 === 2) {
-                      c3 = 0;
-                      set.delete(closure_129_0);
-                      c5 = 3;
-                      const obj10 = { value, done: true };
-                      return obj10;
-                    } else {
-                      closure_128_0 = value;
-                      if (null == closure_128_0.body) {
-                        const _Error = Error;
-                        const error1 = new Error("Invalid cancel signing response");
-                        throw error1;
-                      } else {
-                        const obj11 = { orderId: closure_129_0 };
-                        logger.info("cancel order signing, transitioned back to DRAFT", obj11);
-                        obj3 = tmp4(tmp66[6]);
-                        obj12 = { type: "ORDER_CANCEL_SIGNING_SUCCESS", orderId: closure_129_0 };
-                        c4 = 5;
-                        c5 = 1;
-                        const obj13 = { value: obj3.dispatch(obj12), done: false };
-                        return obj13;
-                      }
-                    }
-                  } else if (arg0 === 1) {
-                    c5 = 3;
-                    throw value;
-                  } else if (arg0 === 2) {
-                    c3 = 0;
-                    set.delete(closure_129_0);
-                    c5 = 3;
-                    const obj14 = { value, done: true };
-                    return obj14;
-                  } else {
-                    c3 = 0;
-                    set.delete(closure_129_0);
-                    c5 = 3;
-                    obj = { value: closure_128_0.body, done: true };
-                    return obj;
-                  }
-                } catch (tmp66) {
-                  if (tmp5 === c3) {
-                    c5 = tmp3;
-                    throw tmp66;
-                  } else if (tmp2 === tmp68) {
-                    c4 = tmp2;
-                  } else {
-                    c4 = tmp;
-                  }
-                }
-              }
-            })();
-            let result = obj10.set(tmp15, tmp6);
-            c2 = 2;
-            c1 = 1;
-            let obj3 = { value: tmp6, done: false };
-            return obj3;
-          }
-          obj10 = map;
         }
-      } else if (1 === tmp4) {
-        if (arg0 === 1) {
-          c1 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c1 = 3;
-          let obj4 = { value, done: true };
-          return obj4;
-        } else {
-          c1 = 3;
-          let obj5 = { value, done: true };
-          return obj5;
-        }
-      } else if (arg0 === 1) {
-        c1 = 3;
-        throw value;
-      } else if (arg0 === 2) {
-        c1 = 3;
-        let obj6 = { value, done: true };
-        return obj6;
-      } else {
-        c1 = 3;
-        obj = { value, done: true };
-        return obj;
+      } catch (tmp10) {
+        c1 = tmp;
+        throw tmp10;
       }
-    } catch (tmp10) {
-      c1 = tmp;
-      throw tmp10;
     }
-  }
+  })();
 };
 const OrderStatus = fn(4542).OrderStatus;
 const Endpoints = fn(1074).Endpoints;

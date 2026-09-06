@@ -2,6 +2,7 @@
 import initialize from "../../../discord_common/js/packages/flux/index.tsx";
 import nativeDefault from "../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../intl/index.native.tsx";
+import native from "../../design/void/native.tsx";
 import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
 import asyncRequireImpl from "../../../_runtime/01896_asyncRequireImpl.js";
 import dismissible_content from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
@@ -14,24 +15,34 @@ import UserUtilsDefault from "../../utils/UserUtils.tsx";
 import useThemeDefault from "../../hooks/useTheme.tsx";
 import ActionSheetActionCreatorsDefault from "../../modules/action_sheet/native/ActionSheetActionCreators.tsx";
 import MarkupUtilsDefault from "../../modules/markup/MarkupUtils.tsx";
+import Text_Text from "../../design/components/Text/native/Text.tsx";
 import useChannelNameDefault from "../../modules/channel/useChannelName.tsx";
 import useAlertStore from "../../design/components/AlertModal/native/useAlertStore.native.tsx";
 import components_Button_Button from "../../design/components/Button/native/Button.native.tsx";
 import ChatIcon from "../../design/components/Icon/native/redesign/generated/ChatIcon.tsx";
 import ThreadIcon from "../../design/components/Icon/native/redesign/generated/ThreadIcon.tsx";
+import TextLockIcon from "../../design/components/Icon/native/redesign/generated/TextLockIcon.tsx";
+import TextIcon from "../../design/components/Icon/native/redesign/generated/TextIcon.tsx";
+import AppsLockIcon from "../../design/components/Icon/native/redesign/generated/AppsLockIcon.tsx";
+import AppsIcon2 from "../../design/components/Icon/native/redesign/generated/AppsIcon.tsx";
+import Pressables from "../../design/void/Pressables/native/Pressables.tsx";
 import NotificationSettingsUtils from "../../utils/NotificationSettingsUtils.tsx";
+import NotificationSettingsModalActionCreatorsDefault from "../../actions/NotificationSettingsModalActionCreators.tsx";
 import AuthorizedAppsActionCreatorsDefault from "../../modules/oauth2/AuthorizedAppsActionCreators.tsx";
 import ClipboardUtils from "../../utils/ClipboardUtils.native.tsx";
+import enhanced_role_colors_EnhancedRoleColorUtils from "../../modules/premium/enhanced_role_colors/native/EnhancedRoleColorUtils.tsx";
 import showUserProfileActionSheetDefault from "../../modules/user_profile/native/showUserProfileActionSheet.tsx";
 import maybeFetchUserProfileDefault from "../../modules/user_profile/maybeFetchUserProfile.tsx";
 import RowButton from "../../design/components/TableRow/native/RowButton.native.tsx";
 import ChannelSettingsActionCreatorsDefault from "../../actions/ChannelSettingsActionCreators.tsx";
 import ReportModals from "../../modules/in_app_reports/ReportModals.tsx";
 import instant_invite_InstantInviteUtils from "../../modules/instant_invite/native/InstantInviteUtils.tsx";
+import PencilIcon from "../../design/components/Icon/native/redesign/generated/PencilIcon.tsx";
 import openGroupDMAddMembers from "../../modules/group_dm/native/openGroupDMAddMembers.tsx";
 import showChatGDMUpsellActionSheetDefault from "../../modules/group_dm/native/showChatGDMUpsellActionSheet.tsx";
 import channel_permissions_ChannelPermissionsUtils from "../../modules/channel_permissions/native/ChannelPermissionsUtils.tsx";
 import _modDef12470 from "../../../_runtime/metro/12470__.js";
+import ChannelAccessInfoDefault from "../../modules/channel_permissions/native/components/ChannelAccessInfo.tsx";
 import _modDef12596 from "../../../_runtime/metro/12596__.js";
 import UserSettingsAuthedAppDeleteWarningModalDefault from "../../modules/user_settings/authorized_apps/native/UserSettingsAuthedAppDeleteWarningModal.tsx";
 import PortalAccessibilityWorkaroundViewDefault from "../../modules/a11y/native/PortalAccessibilityWorkaroundView.tsx";
@@ -55,7 +66,6 @@ import UserStore from "../../stores/UserStore.tsx";
 
 const openGroupDMAddMembersDefault = openGroupDMAddMembers;
 
-const ChannelAccessInfoDefault = tmp(12471);
 require = fn;
 function ChatBeginningRowIcon(arg0) {
   ({ isPrivate, isNSFW } = arg0);
@@ -70,24 +80,24 @@ function ChatBeginningRowIcon(arg0) {
     tmp5 = obj;
   } else if (channelType === constants4.GUILD_APP) {
     if (isPrivate) {
-      let AppsIcon = tmp6(5105).AppsLockIcon;
-      let tmp9 = tmp6;
+      let AppsIcon = AppsLockIcon.AppsLockIcon;
+      let tmp9 = require;
     } else {
-      AppsIcon = tmp6(5106).AppsIcon;
-      tmp9 = tmp6;
+      AppsIcon = AppsIcon2.AppsIcon;
+      tmp9 = require;
     }
     obj = { IconComponent: AppsIcon, label: tmp9(1114).t.ZkcrC2 };
   } else {
     const obj1 = { IconComponent: null, label: null };
     if (isPrivate) {
-      obj1.IconComponent = tmp17(5078).TextLockIcon;
-      obj1.label = tmp17(1114).t.GK18KJ;
-      tmp4 = tmp17;
+      obj1.IconComponent = TextLockIcon.TextLockIcon;
+      obj1.label = util.t.GK18KJ;
+      tmp4 = require;
       tmp5 = obj1;
     } else {
-      obj1.IconComponent = tmp17(5080).TextIcon;
-      obj1.label = tmp17(1114).t.GK18KJ;
-      tmp4 = tmp17;
+      obj1.IconComponent = TextIcon.TextIcon;
+      obj1.label = util.t.GK18KJ;
+      tmp4 = require;
       tmp5 = obj1;
     }
   }
@@ -126,9 +136,9 @@ function ChatBeginningRowHeader(arg0) {
     items1[1] = obj2;
     obj1.style = items1;
     obj1.children = title;
-    items[1] = closure_44(tmp2(4556).Text, obj1);
+    items[1] = closure_44(subtitleLink(4556).Text, obj1);
     obj.children = items;
-    tmp5Result = tmp5(tmp6, obj);
+    tmp5Result = closure_46(closure_45, obj);
   }
   const children = [tmp5Result];
   let tmp11Result = null != subtitle;
@@ -152,7 +162,7 @@ function ChatBeginningRowHeader(arg0) {
     obj3.onPress = fn;
     obj3.style = tmp.subtitle;
     obj3.children = subtitle;
-    tmp11Result = closure_44(tmp2(4556).Text, obj3);
+    tmp11Result = closure_44(subtitleLink(4556).Text, obj3);
   }
   children[1] = tmp11Result;
   return closure_46(closure_45, { children });
@@ -179,17 +189,17 @@ function LinkManageButtons(arg0) {
     const items = [,];
     ({ ctaButton: arr[0], subtitle: arr[1] } = tmp);
     obj.style = items;
-    const obj1 = { source: _modDef12470, size: tmp2(1178).IconSizes.REFRESH_SMALL_16, color: token };
-    const items1 = [closure_44(tmp2(1178).Icon, obj1)];
+    const obj1 = { source: _modDef12470, size: native.IconSizes.REFRESH_SMALL_16, color: token };
+    const items1 = [closure_44(native.Icon, obj1)];
     const obj2 = { style: null, variant: "text-sm/medium", color: "text-link", children: null };
     const items2 = [,];
     ({ ctaLabel: arr3[0], ctaAddRoles: arr3[1] } = tmp);
     obj2.style = items2;
-    const intl = tmp2(1114).intl;
-    obj2.children = intl.string(tmp2(1114).t.dMJ3Y6);
-    items1[1] = closure_44(tmp2(4556).Text, obj2);
+    const intl = util.intl;
+    obj2.children = intl.string(util.t.dMJ3Y6);
+    items1[1] = closure_44(Text_Text.Text, obj2);
     obj.children = items1;
-    isPrivate = tmp6(tmp2(5123).PressableOpacity, obj);
+    isPrivate = closure_46(Pressables.PressableOpacity, obj);
   }
   const items3 = [isPrivate];
   if (canEdit) {
@@ -206,15 +216,15 @@ function LinkManageButtons(arg0) {
     ({ ctaButton: arr5[0], subtitle: arr5[1] } = tmp);
     obj3.style = items4;
     const obj4 = { size: "xs", color: token };
-    const items5 = [closure_44(tmp2(10250).PencilIcon, obj4)];
+    const items5 = [closure_44(PencilIcon.PencilIcon, obj4)];
     const obj5 = { style: null, variant: "text-sm/medium", color: "text-link", children: null };
     const items6 = [tmp.ctaLabel];
     obj5.style = items6;
-    const intl2 = tmp2(1114).intl;
-    obj5.children = intl2.string(tmp2(1114).t.GE1Tlo);
-    items5[1] = closure_44(tmp2(4556).Text, obj5);
+    const intl2 = util.intl;
+    obj5.children = intl2.string(util.t.GE1Tlo);
+    items5[1] = closure_44(Text_Text.Text, obj5);
     obj3.children = items5;
-    canEdit = tmp6(tmp2(5123).PressableOpacity, obj3);
+    canEdit = closure_46(Pressables.PressableOpacity, obj3);
   }
   items3[1] = canEdit;
   obj.children = items3;
@@ -262,9 +272,9 @@ function ThreadOwner(arg0) {
   if (colorStrings == null) {
     colorStrings = null;
   }
-  let tmp2Result = tmp2(7961);
+  let tmp2Result = enhanced_role_colors_EnhancedRoleColorUtils;
   const processColorStringsArray = tmp2Result.useProcessColorStringsArray(colorStrings);
-  tmp2Result = tmp2(7961);
+  tmp2Result = enhanced_role_colors_EnhancedRoleColorUtils;
   if (stateFromStores != null) {
     const id = stateFromStores.id;
   }
@@ -279,7 +289,7 @@ function ThreadOwner(arg0) {
       tmp18 = processColorStringsArray;
     }
     obj = { gradientColors: tmp18, style: tmp16, variant: "text-md/semibold", color: "text-default", children: str };
-    return closure_44(tmp2(4556).Text, obj);
+    return closure_44(Text_Text.Text, obj);
   } else {
     let tmp13 = "dot" === stateFromStores2;
     if (tmp13) {
@@ -287,12 +297,12 @@ function ThreadOwner(arg0) {
     }
     if (tmp13) {
       obj1 = { color: colorString, colors: colorStrings, containerStyles: tmp.threadCreatorRoleDot };
-      tmp13 = closure_44(tmp2(1178).RoleDot, obj1);
+      tmp13 = closure_44(native.RoleDot, obj1);
     }
     obj2 = { children: null };
     const items3 = [tmp13];
     obj3 = { variant: "text-md/semibold", color: "text-default", children: str };
-    items3[1] = closure_44(tmp2(4556).Text, obj3);
+    items3[1] = closure_44(Text_Text.Text, obj3);
     obj2.children = items3;
     return closure_46(closure_45, obj2);
   }
@@ -330,7 +340,7 @@ function ChatBeginningRowThread(channel) {
             closure_1_44(channel(dependencyMap[53]).AppliedForumTagPill, { tag }, tag.id),
           ),
         };
-        tmp12Result = tmp12(closure_7, obj);
+        tmp12Result = closure_44(closure_7, obj);
       }
     }
     items[1] = tmp12Result;
@@ -345,7 +355,7 @@ function ChatBeginningRowThread(channel) {
         },
       };
       obj1.children = intl.format(tmp4(1114).t.imPXd5, obj2);
-      tmp12Result = tmp12(tmp4(4556).Text, obj1);
+      tmp12Result = closure_44(tmp4(4556).Text, obj1);
     }
     items[2] = tmp12Result;
     let tmp12Result1 = null;
@@ -355,7 +365,7 @@ function ChatBeginningRowThread(channel) {
         const obj3 = { style: tmp.threadDetails, variant: "text-md/medium", color: "text-default", children: null };
         const intl2 = tmp4(1114).intl;
         obj3.children = intl2.string(tmp4(1114).t.mE3KJN);
-        tmp12Result1 = tmp12(tmp4(4556).Text, obj3);
+        tmp12Result1 = closure_44(tmp4(4556).Text, obj3);
       }
     }
     const obj4 = { children: null };
@@ -492,6 +502,7 @@ function ManageAppButton(application) {
             }
             obj = { location: _location, applicationId: id.id };
             require("EmbeddedActivitiesNativeManager").leaveActivity(obj);
+            const obj2 = require("EmbeddedActivitiesNativeManager");
           },
         };
         obj.openAlert("confirm-delete-authed-app", closure_2_44(UserSettingsAuthedAppDeleteWarningModalDefault, obj));
@@ -542,7 +553,7 @@ function MuteAppButton(channel) {
     obj.icon = closure_44(tmp2(tmp3[42]).Icon, obj);
     obj.onPress = function onPress() {
       if (stateFromStores) {
-        let tmpResult = tmp(7119);
+        let tmpResult = NotificationSettingsModalActionCreatorsDefault;
         const result = tmpResult.updateChannelOverrideSettings(
           null,
           channel.id,
@@ -564,12 +575,12 @@ function MuteAppButton(channel) {
         };
         ToastActionCreatorsDefault.open(obj);
       } else {
-        tmpResult = tmp(4527);
+        tmpResult = ActionSheetActionCreatorsDefault;
         obj = { channel };
         tmpResult.openLazy(asyncRequireImpl(12599, dependencyMap.paths), "MessageNotificationChannelActionSheet", obj);
       }
     };
-    tmp6Result = tmp6(tmp2(tmp3[73]).Button, obj);
+    tmp6Result = closure_44(tmp2(tmp3[73]).Button, obj);
   }
   return tmp6Result;
 }
@@ -595,7 +606,7 @@ function ChatBeginningRowDM(channel) {
   const user = channel.user;
   authorizedAppsFetchState = undefined;
   let userTag;
-  const tmp = closure_47();
+  let tmp = closure_47();
   dependencyMap = tmp;
   const analyticsLocations = user(7162)().analyticsLocations;
   let id;
@@ -718,8 +729,8 @@ function ChatBeginningRowDM(channel) {
       let intl4 = tmp7(1114).intl;
       obj5.accessibilityHint = intl4.string(tmp7(1114).t.y5MwJy);
       let obj6 = { variant: "heading-lg/medium", color: "text-default", children: userTag };
-      obj5.children = tmp15(tmp7(4556).Text, obj6);
-      tmp15Result = tmp15(tmp7(5123).PressableOpacity, obj5);
+      obj5.children = closure_44(tmp7(4556).Text, obj6);
+      tmp15Result = closure_44(tmp7(5123).PressableOpacity, obj5);
     }
     items5[2] = tmp15Result;
     let obj7 = {
@@ -732,7 +743,7 @@ function ChatBeginningRowDM(channel) {
     tmp15Result = null;
     if (user.isProvisional) {
       let obj8 = { style: tmp.provisionalAccountExplainer, userId: user.id, iconSize: 14 };
-      tmp15Result = tmp15(tmp7(12627).ChatProvisionalAccountExplainerCard, obj8);
+      tmp15Result = closure_44(tmp7(12627).ChatProvisionalAccountExplainerCard, obj8);
     }
     items5[4] = tmp15Result;
     let tmp18Result;
@@ -776,14 +787,14 @@ function ChatBeginningRowDM(channel) {
             return closure_1_44(user(dependencyMap[98]), obj, guild.id);
           }),
         };
-        const items6 = [tmp15(tmp7(12618).GuildIconPile, obj10)];
+        const items6 = [closure_44(tmp7(12618).GuildIconPile, obj10)];
         let obj11 = { style: tmp.mutualGuildsLabel, variant: "text-sm/medium", color: "text-default", children: null };
         let intl5 = tmp7(1114).intl;
         const obj12 = { count: stateFromStores.length };
         obj11.children = intl5.format(tmp7(1114).t.eE3oep, obj12);
-        items6[1] = tmp15(tmp7(4556).Text, obj11);
+        items6[1] = closure_44(tmp7(4556).Text, obj11);
         obj9.children = items6;
-        tmp18Result = tmp18(tmp7(5123).PressableOpacity, obj9);
+        tmp18Result = closure_46(tmp7(5123).PressableOpacity, obj9);
       }
     }
     items5[5] = tmp18Result;
@@ -791,9 +802,9 @@ function ChatBeginningRowDM(channel) {
     if (user.isNonUserBot()) {
       const obj14 = { children: null };
       obj13.children = null;
-      items5[6] = tmp15(tmp23, obj13);
+      items5[6] = closure_44(closure_7, obj13);
       obj14.children = items5;
-      return tmp18(tmp19, obj14);
+      return closure_46(closure_45, obj14);
     } else if (user.bot) {
       tmp18Result = null;
       if (null != authorizedAppToken) {
@@ -801,20 +812,20 @@ function ChatBeginningRowDM(channel) {
         if (null != tmp4Result) {
           const obj15 = { children: null };
           const obj16 = { channel, user };
-          const items7 = [tmp15(MuteAppButton, obj16)];
+          const items7 = [closure_44(MuteAppButton, obj16)];
           const obj17 = { user, application: tmp4Result, channel, oauth2Token: authorizedAppToken };
-          items7[1] = tmp15(ManageAppButton, obj17);
+          items7[1] = closure_44(ManageAppButton, obj17);
           obj15.children = items7;
-          tmp18Result = tmp18(tmp19, obj15);
+          tmp18Result = closure_46(closure_45, obj15);
         }
       }
       const obj18 = { children: null };
       const items8 = [tmp18Result, tmp17];
       obj18.children = items8;
-      let tmp18Result1 = tmp18(tmp19, obj18);
+      let tmp18Result1 = closure_46(closure_45, obj18);
     } else {
       const obj19 = { reportButton: tmp17 };
-      tmp18Result1 = tmp15(function RelationshipButtons(reportButton) {
+      tmp18Result1 = closure_44(function RelationshipButtons(reportButton) {
         reportButton = reportButton.reportButton;
         function handleBlock() {
           user(paths[85]);
@@ -832,43 +843,43 @@ function ChatBeginningRowDM(channel) {
         if (stateFromStores === constants8.PENDING_INCOMING) {
           obj = { style: paths.pendingIncoming, children: null };
           const obj1 = { variant: "text-sm/normal", color: "text-default", children: null };
-          const intl5 = tmp(1114).intl;
+          const intl5 = util.intl;
           const obj2 = { username: null };
           let obj9 = UserUtilsDefault;
           obj2.username = obj9.getName(user);
-          obj1.children = intl5.format(tmp(1114).t.uIomXw, obj2);
-          const items1 = [tmp4(tmp(4556).Text, obj1)];
+          obj1.children = intl5.format(util.t.uIomXw, obj2);
+          const items1 = [closure_2_44(Text_Text.Text, obj1)];
           const obj3 = { style: paths.pendingIncomingButtons, children: null };
           const obj4 = { text: null, size: "sm", variant: "active", onPress: null };
-          const intl6 = tmp(1114).intl;
-          obj4.text = intl6.string(tmp(1114).t["+WbSn5"]);
+          const intl6 = util.intl;
+          obj4.text = intl6.string(util.t["+WbSn5"]);
           obj4.onPress = function handleAcceptFriend() {
             user(paths[100]);
             const obj = { userId: user.id, location: constants.DM_CHANNEL };
             const result = obj.maybeConfirmFriendRequestAccept(obj);
           };
-          const items2 = [tmp4(tmp(4975).Button, obj4), , ,];
+          const items2 = [closure_2_44(components_Button_Button.Button, obj4), , ,];
           const obj5 = { text: null, size: "sm", variant: "secondary", onPress: null };
-          const intl7 = tmp(1114).intl;
-          obj5.text = intl7.string(tmp(1114).t.rQSndv);
+          const intl7 = util.intl;
+          obj5.text = intl7.string(util.t.rQSndv);
           obj5.onPress = function handleIgnoreFriendRequest() {
             user(paths[99]);
             const obj = { location: constants.DM_CHANNEL };
             obj.cancelFriendRequest(user.id, obj);
           };
-          items2[1] = tmp4(tmp(4975).Button, obj5);
+          items2[1] = closure_2_44(components_Button_Button.Button, obj5);
           const obj6 = { text: null, size: "sm", variant: "secondary", onPress: null };
-          const intl8 = tmp(1114).intl;
-          obj6.text = intl8.string(tmp(1114).t.l4Emac);
+          const intl8 = util.intl;
+          obj6.text = intl8.string(util.t.l4Emac);
           obj6.onPress = handleBlock;
-          items2[2] = tmp4(tmp(4975).Button, obj6);
+          items2[2] = closure_2_44(components_Button_Button.Button, obj6);
           items2[3] = reportButton;
           obj3.children = items2;
           items1[1] = closure_2_46(React5, obj3);
           obj.children = items1;
           return closure_2_46(React5, obj);
         } else {
-          if (tmp6.NONE === stateFromStores) {
+          if (constants8.NONE === stateFromStores) {
             let bot;
             if (user != null) {
               bot = user.bot;
@@ -883,12 +894,12 @@ function ChatBeginningRowDM(channel) {
                 obj.addRelationship(obj);
               }
               const obj7 = { text: null, size: "sm", variant: "active", onPress: null };
-              const intl4 = tmp(1114).intl;
-              obj7.text = intl4.string(tmp(1114).t["PMsq/b"]);
+              const intl4 = util.intl;
+              obj7.text = intl4.string(util.t["PMsq/b"]);
               obj7.onPress = handleAddFriend;
-              tmp4Result = tmp4(tmp(4975).Button, obj7);
+              tmp4Result = closure_2_44(components_Button_Button.Button, obj7);
             }
-          } else if (tmp6.FRIEND === stateFromStores) {
+          } else if (constants8.FRIEND === stateFromStores) {
             function handleRemoveFriend() {
               channel(paths[101]);
               let obj = {
@@ -902,33 +913,33 @@ function ChatBeginningRowDM(channel) {
               obj.confirmRemoveFriend(obj);
             }
             const obj8 = { text: null, size: "sm", variant: "secondary", onPress: null };
-            const intl3 = tmp(1114).intl;
-            obj8.text = intl3.string(tmp(1114).t.cvSt1J);
+            const intl3 = util.intl;
+            obj8.text = intl3.string(util.t.cvSt1J);
             obj8.onPress = handleRemoveFriend;
-            tmp4Result = tmp4(tmp(4975).Button, obj8);
-          } else if (tmp6.BLOCKED === stateFromStores) {
+            tmp4Result = closure_2_44(components_Button_Button.Button, obj8);
+          } else if (constants8.BLOCKED === stateFromStores) {
             function handleUnblock() {
               user(paths[99]);
               const obj = { location: constants.DM_CHANNEL };
               obj.unblockUser(user.id, obj);
             }
             obj9 = { text: null, size: "sm", variant: "secondary", onPress: null };
-            const intl2 = tmp(1114).intl;
-            obj9.text = intl2.string(tmp(1114).t.XyHpKH);
+            const intl2 = util.intl;
+            obj9.text = intl2.string(util.t.XyHpKH);
             obj9.onPress = handleUnblock;
-            tmp4Result = tmp4(tmp(4975).Button, obj9);
+            tmp4Result = closure_2_44(components_Button_Button.Button, obj9);
           } else {
             tmp4Result = null;
-            if (tmp6.PENDING_OUTGOING === stateFromStores) {
+            if (constants8.PENDING_OUTGOING === stateFromStores) {
               const obj10 = { text: null, size: "sm", variant: "active", disabled: true, onPress: "padding" };
-              const intl9 = tmp(1114).intl;
-              obj10.text = intl9.string(tmp(1114).t.xMH6vD);
-              tmp4Result = tmp4(tmp(4975).Button, obj10);
+              const intl9 = util.intl;
+              obj10.text = intl9.string(util.t.xMH6vD);
+              tmp4Result = closure_2_44(components_Button_Button.Button, obj10);
             }
           }
           const items3 = [tmp4Result, ,];
           let tmp11 = null;
-          if (stateFromStores !== tmp6.BLOCKED) {
+          if (stateFromStores !== constants8.BLOCKED) {
             tmp11 = tmp5;
           }
           const obj11 = { children: null };
@@ -939,8 +950,8 @@ function ChatBeginningRowDM(channel) {
         }
       }, obj19);
     }
-    tmp23 = closure_7;
   }
+  isSystemDMResult = channel.isSystemDM();
 }
 function ChatBeginningRowButton(style) {
   let obj = { style: style.style, children: null };
@@ -974,7 +985,7 @@ function ChatBeginningRowGroupDM(channel) {
   }, items1);
   const items2 = [channel, first, tmp4[1]];
   callback1 = noop.useCallback(
-    callback1(function* (arg0, value) {
+    callback1(function* () {
       if (c3 === 2) {
         c3 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -1039,15 +1050,15 @@ function ChatBeginningRowGroupDM(channel) {
     let obj = openGroupDMAddMembers;
     const groupDMAddMembersAction = obj.getGroupDMAddMembersAction(channel.id, constants2.CHANNEL_TEXT_AREA);
     if ("open" === groupDMAddMembersAction) {
-      let tmpResult = tmp(4380);
-      if (tmpResult.UNSAFE_isDismissibleContentDismissed(tmp(1943).DismissibleContent.GDM_INVITE_REMINDER)) {
+      let tmpResult = DismissibleContentUnsafeUtils;
+      if (tmpResult.UNSAFE_isDismissibleContentDismissed(dismissible_content.DismissibleContent.GDM_INVITE_REMINDER)) {
         onClick();
       } else {
         obj = { onClick };
         showChatGDMUpsellActionSheetDefault(obj);
       }
     } else {
-      tmpResult = tmp(11590);
+      tmpResult = openGroupDMAddMembers;
       const result = tmpResult.showGroupDMAddMembersRoadblock(groupDMAddMembersAction, constants2.CHANNEL_TEXT_AREA);
     }
   }, items3);
@@ -1131,7 +1142,7 @@ function ChatBeginningRowGroupDM(channel) {
       const intl4 = tmp7(1114).intl;
       const obj7 = { number };
       obj6.subtitle = intl4.formatToPlainString(tmp7(1114).t["8o8Zk5"], obj7);
-      let tmp21Result = tmp21(ChatBeginningRowButton, obj6);
+      let tmp21Result = closure_44(ChatBeginningRowButton, obj6);
     } else {
       tmp21Result = null;
       if (stateFromStores) {
@@ -1144,7 +1155,7 @@ function ChatBeginningRowGroupDM(channel) {
         };
         const intl2 = tmp7(1114).intl;
         obj8.title = intl2.string(tmp7(1114).t["LR+Ptf"]);
-        tmp21Result = tmp21(ChatBeginningRowButton, obj8);
+        tmp21Result = closure_44(ChatBeginningRowButton, obj8);
       }
     }
     const items6 = [tmp21Result, ,];
@@ -1164,19 +1175,19 @@ function ChatBeginningRowGroupDM(channel) {
     obj9.subtitle = intl6.string(tmp7(1114).t.qa9CQu);
     tmp21Result = null;
     if (first) {
-      tmp21Result = tmp21(closure_6, {});
+      tmp21Result = closure_44(closure_6, {});
     }
     obj9.trailing = tmp21Result;
-    items6[1] = tmp21(ChatBeginningRowButton, obj9);
+    items6[1] = closure_44(ChatBeginningRowButton, obj9);
     let tmp21Result1 = null;
     if (channel.hasFlag(ChannelFlags.IS_JOIN_REQUEST_INTERVIEW_CHANNEL)) {
       const obj10 = { channelId: channel.id };
-      tmp21Result1 = tmp21(tmp2(12631), obj10);
+      tmp21Result1 = closure_44(tmp2(12631), obj10);
     }
     const obj11 = { children: null };
     items6[2] = tmp21Result1;
     obj11.children = items6;
-    tmp19Result = tmp19(closure_45, obj11);
+    tmp19Result = closure_46(closure_45, obj11);
   }
   items5[3] = tmp19Result;
   obj1.children = items5;
@@ -1322,7 +1333,7 @@ function ChatBeginningRowGuildDefaultChannel(guild) {
     }
   }, items2);
   if (canManageGuild) {
-    closure_4 = async function _addServerIcon(arg0, value) {
+    closure_4 = async function _addServerIcon() {
       if (c3 === 2) {
         c3 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -1460,7 +1471,6 @@ function ChatBeginningRowGuildDefaultChannel(guild) {
     const tmp29 = null != tmp22 || null != tmp17;
   }
   tmp11 = obj3.extractTimestamp(guild.id) < Date.now() - closure_37;
-  const tmp15 = noop;
   const combined =
     "" +
     channel(id[68]).getArticleURL(constants5.GUILD_GETTING_STARTED) +
@@ -1473,11 +1483,11 @@ function ChatBeginningRowGuildDefaultChannel(guild) {
     obj4 = { guideURL: combined };
     const items4 = [" ", intl4.format(tmp2(tmp3[30]).t.UOtD32, obj4)];
     obj3.children = items4;
-    tmp31Result = tmp31(tmp32, obj3);
+    tmp31Result = closure_46(closure_45, obj3);
   }
   items3[1] = tmp31Result;
   obj5 = { title: null, subtitle: null, isPrivate: null, subtitleLink: null };
-  tmp31Result = tmp31(tmp32, { children: items3 });
+  tmp31Result = closure_46(closure_45, { children: items3 });
   const intl5 = tmp2(tmp3[30]).intl;
   obj6 = { guildName: guild.name };
   obj5.title = intl5.formatToPlainString(guild(id[30]).t["j59F/c"], obj6);
@@ -1491,15 +1501,15 @@ function ChatBeginningRowGuildDefaultChannel(guild) {
   const children = [closure_44(ChatBeginningRowHeader, obj5)];
   if (isEligibleForGuildProgress) {
     let obj7 = { guild };
-    let tmp31Result1 = tmp35(tmp7(tmp3[69]), obj7);
+    let tmp31Result1 = closure_44(tmp7(tmp3[69]), obj7);
   } else {
     const obj8 = { children: null };
     const items6 = [tmp22, tmp17];
     obj8.children = items6;
-    tmp31Result1 = tmp31(tmp32, obj8);
+    tmp31Result1 = closure_46(closure_45, obj8);
   }
   children[1] = tmp31Result1;
-  return closure_46(tmp15.Fragment, { children });
+  return closure_46(noop.Fragment, { children });
 }
 const GroupDMChatBeginning = "GroupDMChatBeginning";
 size = fn(2);
@@ -1546,7 +1556,7 @@ export default function ChatBeginningRow(channelId) {
     let tmp19Result = null != null;
     if (tmp19Result) {
       const obj1 = { style: tmp.contentWrapper, onLayout: callback, children: null };
-      tmp19Result = tmp19(closure_7, obj1, channelId);
+      tmp19Result = closure_44(closure_7, obj1, channelId);
     }
     obj.children = tmp19Result;
     return closure_44(PortalAccessibilityWorkaroundViewDefault, obj);
@@ -1563,4 +1573,5 @@ export default function ChatBeginningRow(channelId) {
     const obj5 = { guild: stateFromStores1, channel: stateFromStores };
     tmp8 = closure_44(ChatBeginningRowGuild, obj5);
   }
+  const tmp4 = _slicedToArray(noop.useState(undefined), 2);
 }

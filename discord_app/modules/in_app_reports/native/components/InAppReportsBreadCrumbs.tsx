@@ -101,11 +101,11 @@ export default function Breadcrumbs(element) {
           let obj = { style: closure_0.breadCrumbItemContainer, children: null };
           let tmp4 = null;
           if (arg1 !== found.length - 1) {
-            obj = { style: tmp3.breadCrumbBar };
-            tmp4 = React4(tmp2, obj);
+            obj = { style: closure_0.breadCrumbBar };
+            tmp4 = React4(View, obj);
           }
           const items = [tmp4, ,];
-          obj = { style: tmp3.breadCrumbDot };
+          obj = { style: closure_0.breadCrumbDot };
           items[1] = React4(View, obj);
           items[2] = React4(Text_Text.Text, {
             lineClamp: 2,

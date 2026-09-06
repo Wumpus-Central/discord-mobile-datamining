@@ -25,7 +25,7 @@ export const useCanReapplyToRejectedMemberVerificationApplication =
       }
       return joinRequestGuild;
     });
-    _require = asyncGeneratorStep(async (arg0, value) => {
+    _require = asyncGeneratorStep(async (arg0) => {
       if (c5 === 2) {
         c5 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -57,10 +57,9 @@ export const useCanReapplyToRejectedMemberVerificationApplication =
                 c2 = 2;
                 c5 = 1;
                 obj1 = { value: null, done: false };
-                obj1.value = obj1.fetchVerificationForm(tmp29, inviteKeyForGuildId);
+                obj1.value = obj1.fetchVerificationForm(closure_0, inviteKeyForGuildId);
                 return obj1;
               }
-              tmp29 = closure_0;
             }
           } else if (1 === tmp7) {
             c4 = 0;

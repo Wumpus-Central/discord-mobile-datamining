@@ -1,14 +1,22 @@
 // discord_app/modules/guild_boosting/native/marketing_redesign/GuildBoostingMarketingTierCards.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
+import native from "../../../../design/void/native.tsx";
 import ReanimatedRexport from "../../../reanimated/ReanimatedRexport.tsx";
+import ColorUtils from "../../../../utils/ColorUtils.tsx";
 import shared from "../../../../design/shared.tsx";
+import GuildBoostingUtils from "../../../../utils/GuildBoostingUtils.tsx";
 import useThemeDefault from "../../../../hooks/useTheme.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import timing from "../../../../design/animation/reanimated/timing/timing.tsx";
+import LinearGradientDefault from "../../../../../_runtime/04987_LinearGradient.js";
 import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
 import DeprecatedLayoutAnimation from "../../../animations/native/DeprecatedLayoutAnimation.tsx";
 import ServerBoostStreamQualityMarketingExperiment from "../../../premium/powerups/experiments/ServerBoostStreamQualityMarketingExperiment.tsx";
+import ChevronLargeUpIcon from "../../../../design/components/Icon/native/redesign/generated/ChevronLargeUpIcon.tsx";
+import ChevronLargeDownIcon2 from "../../../../design/components/Icon/native/redesign/generated/ChevronLargeDownIcon.tsx";
+import _modDef13593 from "../../../../../_runtime/metro/13593__.js";
+import _modDef13594 from "../../../../../_runtime/metro/13594__.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -31,7 +39,7 @@ function TierFeatures(features) {
     }
     obj = { opacity: null };
     obj = { duration: 150, easing: null };
-    const Easing = tmp(4296).Easing;
+    const Easing = ReanimatedRexport.Easing;
     obj.easing = Easing.inOut(ReanimatedRexport.Easing.quad);
     obj.opacity = obj.withDelay(num, timing.withTiming(num2, obj));
     return obj;
@@ -66,17 +74,17 @@ function TierFeatures(features) {
     isIncluded = isIncluded.isIncluded;
     let cardFeatureExcluded = !isIncluded;
     if (!isIncluded) {
-      cardFeatureExcluded = tmp3.cardFeatureExcluded;
+      cardFeatureExcluded = cardFeature.cardFeatureExcluded;
     }
     items[1] = cardFeatureExcluded;
     let obj = { style: items, children: null };
     items[2] = index === features.length - 1 && cardFeature.cardFeatureLast;
-    obj = { size: "custom", style: tmp3.cardFeatureIcon, color: "white" };
+    obj = { size: "custom", style: cardFeature.cardFeatureIcon, color: "white" };
     items1 = [React7(isIncluded.IconComponent, obj)];
     const isIncluded2 = isIncluded.isIncluded;
     let cardFeatureExcludedCopy = !isIncluded2;
     if (!isIncluded2) {
-      cardFeatureExcludedCopy = tmp3.cardFeatureExcludedCopy;
+      cardFeatureExcludedCopy = cardFeature.cardFeatureExcludedCopy;
     }
     obj = { style: null, color: "text-overlay-light", variant: "text-md/semibold", children: isIncluded.getCopy() };
     const items2 = [cardFeatureExcludedCopy];
@@ -303,7 +311,7 @@ items[10] = {
 obj.features = items;
 let items1 = [obj, ,];
 let obj11 = { tier: BoostedGuildTiers.TIER_2, features: null };
-const obj10 = {
+let obj10 = {
   isIncluded: false,
   IconComponent: fn(4503).LinkIcon,
   getCopy() {
@@ -909,9 +917,9 @@ let closure_16 = noop.forwardRef((onCardPress, ref) => {
   const tmp4 = useThemeDefault();
   const unsafe_rawColors = nativeDefault.unsafe_rawColors;
   const tmp9 = obj.isThemeDark(useThemeDefault()) ? unsafe_rawColors.WHITE : unsafe_rawColors.GUILD_BOOSTING_PINK;
-  const intl = tmp7(1114).intl;
+  const intl = util.intl;
   const string = intl.string;
-  let t = tmp7(1114).t;
+  let t = util.t;
   if (isExpanded) {
     let stringResult = string(t.DFwxsR);
   } else {
@@ -927,7 +935,7 @@ let closure_16 = noop.forwardRef((onCardPress, ref) => {
     useAngle: true,
     children: null,
   };
-  let tmp2Result = tmp2(4987);
+  let tmp2Result = LinearGradientDefault;
   items1 = [nativeDefault.unsafe_rawColors.GUILD_BOOSTING_BLUE, nativeDefault.unsafe_rawColors.GUILD_BOOSTING_PURPLE];
   obj.colors = items1;
   obj.locations = [0, 1];
@@ -948,7 +956,7 @@ let closure_16 = noop.forwardRef((onCardPress, ref) => {
     variant: "heading-xxl/extrabold",
     children: null,
   };
-  let tmp7Result = tmp7(4454);
+  let tmp7Result = GuildBoostingUtils;
   obj4.children = tmp7Result.getTierName(tier, { useLevels: false });
   const items2 = [React7(Text_Text.Text, obj4)];
   const obj5 = {
@@ -957,7 +965,7 @@ let closure_16 = noop.forwardRef((onCardPress, ref) => {
     variant: "text-md/medium",
     children: null,
   };
-  const intl2 = tmp7(1114).intl;
+  const intl2 = util.intl;
   obj5.children = intl2.format(util.t.gDsyB9, { numSubscriptions: timestampProducer[tier] });
   items2[1] = React7(Text_Text.Text, obj5);
   obj3.children = items2;
@@ -974,9 +982,9 @@ let closure_16 = noop.forwardRef((onCardPress, ref) => {
     React7(Text_Text.Text, { color: "text-overlay-light", variant: "text-md/semibold", children: stringResult }),
   ];
   if (isExpanded) {
-    let ChevronLargeDownIcon = tmp7(13589).ChevronLargeUpIcon;
+    let ChevronLargeDownIcon = ChevronLargeUpIcon.ChevronLargeUpIcon;
   } else {
-    ChevronLargeDownIcon = tmp7(13591).ChevronLargeDownIcon;
+    ChevronLargeDownIcon = ChevronLargeDownIcon2.ChevronLargeDownIcon;
   }
   const isThemeDarkResult = obj.isThemeDark(useThemeDefault());
   const obj6 = { numSubscriptions: timestampProducer[tier] };
@@ -1002,11 +1010,11 @@ let closure_16 = noop.forwardRef((onCardPress, ref) => {
     if (tmp11Result) {
       const obj11 = { children: null };
       const obj12 = { colors: null, start: null, end: null, locations: null, style: null };
-      tmp2Result = tmp2(4987);
-      tmp7Result = tmp7(4409);
-      const items7 = [tmp7Result.hexWithOpacity(tmp9, 0), tmp7(4409).hexWithOpacity(tmp9, 1)];
-      const tmp7Result1 = tmp7(4409);
-      items7[2] = tmp7(4409).hexWithOpacity(tmp9, 0);
+      tmp2Result = LinearGradientDefault;
+      tmp7Result = ColorUtils;
+      const items7 = [tmp7Result.hexWithOpacity(tmp9, 0), ColorUtils.hexWithOpacity(tmp9, 1)];
+      const tmp7Result1 = ColorUtils;
+      items7[2] = ColorUtils.hexWithOpacity(tmp9, 0);
       obj12.colors = items7;
       obj12.start = { x: 0, y: 0 };
       obj12.end = { x: 1, y: 0 };
@@ -1014,15 +1022,15 @@ let closure_16 = noop.forwardRef((onCardPress, ref) => {
       const items8 = [,];
       ({ gradientHighlight: arr10[0], gradientHighlightTop: arr10[1] } = tmp);
       obj12.style = items8;
-      const items9 = [tmp13(tmp2Result, obj12), , , , ,];
+      const items9 = [React7(tmp2Result, obj12), , , , ,];
       const obj13 = { colors: null, start: null, end: null, locations: null, style: null };
-      const tmp7Result2 = tmp7(4409);
-      const tmp2Result1 = tmp2(4987);
-      const items10 = [tmp7(4409).hexWithOpacity(tmp9, 0), ,];
-      const tmp7Result3 = tmp7(4409);
-      items10[1] = tmp7(4409).hexWithOpacity(tmp9, 1);
-      const tmp7Result4 = tmp7(4409);
-      items10[2] = tmp7(4409).hexWithOpacity(tmp9, 0);
+      const tmp7Result2 = ColorUtils;
+      const tmp2Result1 = LinearGradientDefault;
+      const items10 = [ColorUtils.hexWithOpacity(tmp9, 0), ,];
+      const tmp7Result3 = ColorUtils;
+      items10[1] = ColorUtils.hexWithOpacity(tmp9, 1);
+      const tmp7Result4 = ColorUtils;
+      items10[2] = ColorUtils.hexWithOpacity(tmp9, 0);
       obj13.colors = items10;
       obj13.start = { x: 0, y: 0 };
       obj13.end = { x: 1, y: 0 };
@@ -1030,34 +1038,34 @@ let closure_16 = noop.forwardRef((onCardPress, ref) => {
       const items11 = [,];
       ({ gradientHighlight: arr13[0], gradientHighlightBottom: arr13[1] } = tmp);
       obj13.style = items11;
-      items9[1] = tmp13(tmp2Result1, obj13);
-      const obj14 = { source: tmp2(13593), style: null };
+      items9[1] = React7(tmp2Result1, obj13);
+      const obj14 = { source: _modDef13593, style: null };
       const items12 = [, ,];
       ({ sparkleStar: arr14[0], sparkleStarPointed: arr14[1], sparkleStarPointed1: arr14[2] } = tmp);
       obj14.style = items12;
-      items9[2] = tmp13(tmp7(1178).Icon, obj14);
-      const obj15 = { source: tmp2(13593), style: null };
+      items9[2] = React7(native.Icon, obj14);
+      const obj15 = { source: _modDef13593, style: null };
       const items13 = [, ,];
       ({ sparkleStar: arr15[0], sparkleStarPointed: arr15[1], sparkleStarPointed2: arr15[2] } = tmp);
       obj15.style = items13;
-      items9[3] = tmp13(tmp7(1178).Icon, obj15);
-      const obj16 = { source: tmp2(13593), style: null };
+      items9[3] = React7(native.Icon, obj15);
+      const obj16 = { source: _modDef13593, style: null };
       const items14 = [, ,];
       ({ sparkleStar: arr16[0], sparkleStarPointed: arr16[1], sparkleStarPointed3: arr16[2] } = tmp);
       obj16.style = items14;
-      items9[4] = tmp13(tmp7(1178).Icon, obj16);
-      const obj17 = { source: tmp2(13594), style: null };
+      items9[4] = React7(native.Icon, obj16);
+      const obj17 = { source: _modDef13594, style: null };
       const items15 = [, ,];
       ({ sparkleStar: arr17[0], sparkleStarElongated: arr17[1], sparkleStarElongated1: arr17[2] } = tmp);
       obj17.style = items15;
-      items9[5] = tmp13(tmp7(1178).Icon, obj17);
+      items9[5] = React7(native.Icon, obj17);
       obj11.children = items9;
-      tmp11Result = tmp11(closure_1_11, obj11);
-      const tmp7Result5 = tmp7(4409);
+      tmp11Result = closure_1_10(closure_1_11, obj11);
+      const tmp7Result5 = ColorUtils;
     }
     items6[2] = tmp11Result;
     obj.children = items6;
-    return tmp11(tmp12, obj);
+    return closure_1_10(View, obj);
   } else {
     const obj18 = {
       angle: 3,
@@ -1068,14 +1076,17 @@ let closure_16 = noop.forwardRef((onCardPress, ref) => {
       useAngle: true,
       children: null,
     };
-    const items16 = [tmp2(576).unsafe_rawColors.GUILD_BOOSTING_BLUE, tmp2(576).unsafe_rawColors.GUILD_BOOSTING_PURPLE];
+    const items16 = [
+      nativeDefault.unsafe_rawColors.GUILD_BOOSTING_BLUE,
+      nativeDefault.unsafe_rawColors.GUILD_BOOSTING_PURPLE,
+    ];
     obj18.colors = items16;
     obj18.locations = [0, 1];
     obj18.style = tmp.cardTierBadge;
     let obj19 = { color: "text-overlay-light", style: tmp.cardTierBadgeCopy, variant: "text-xs/bold", children: null };
-    const intl3 = tmp7(1114).intl;
+    const intl3 = util.intl;
     const string2 = intl3.string;
-    t = tmp7(1114).t;
+    t = util.t;
     if (tmp15) {
       t = t["9NBo7c"];
       let string2Result = string2(t);
@@ -1083,11 +1094,12 @@ let closure_16 = noop.forwardRef((onCardPress, ref) => {
       string2Result = string2(t["9JbE3J"]);
     }
     obj19.children = string2Result;
-    obj19 = tmp13(tmp7(4556).Text, obj19);
+    obj19 = React7(Text_Text.Text, obj19);
     obj18.children = obj19;
-    tmp13(tmp2(4987), obj18);
-    const tmp2Result2 = tmp2(4987);
+    React7(LinearGradientDefault, obj18);
+    const tmp2Result2 = LinearGradientDefault;
   }
+  const obj10 = { color: nativeDefault.colors.WHITE, style: tmp.cardFooterIcon };
 });
 const size = fn(2);
 let result = size.fileFinishedImporting(

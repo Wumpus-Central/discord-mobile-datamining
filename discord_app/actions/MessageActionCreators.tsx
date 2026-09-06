@@ -12,6 +12,9 @@ import _mod4745 from "module_4745" /* 4745 */;
 import UploadUtils from "../utils/UploadUtils.tsx";
 import MessageCacheStatsDefault from "../modules/local_message_caching/MessageCacheStats.tsx";
 import ExplicitMediaRedactionUtils from "../modules/explicit_media_redaction/ExplicitMediaRedactionUtils.tsx";
+import appMessageEmbedTracking from "../modules/applications/message_embed/web/appMessageEmbedTracking.tsx";
+import InviteTypeUtils from "../modules/instant_invite/InviteTypeUtils.tsx";
+import StreamerApplicationSelectors from "../modules/go_live/utils/StreamerApplicationSelectors.tsx";
 import createMessage from "../modules/messages/createMessage.tsx";
 import createNonce from "../modules/messages/createNonce.tsx";
 import getInviteURLDefault from "../modules/instant_invite/getInviteURL.tsx";
@@ -53,7 +56,7 @@ function trackInvite(channelId) {
   const result = obj.parseExtraDataFromInviteKey(inviteKey);
   let result1 = null != invite;
   if (result1) {
-    let tmp3Result = tmp3(7735);
+    let tmp3Result = InviteTypeUtils;
     result1 = tmp3Result.isEmbeddedApplicationInvite(invite);
   }
   let id1;
@@ -64,7 +67,7 @@ function trackInvite(channelId) {
     }
   }
   if (tmp8) {
-    tmp3Result = tmp3(7694);
+    tmp3Result = appMessageEmbedTracking;
     const result2 = tmp3Result.trackAppEmbedLinkSent(id1, LinkType.ACTIVITY_INVITE, id);
   }
   let channel = ChannelStore.getChannel(channelId.channelId);
@@ -105,14 +108,14 @@ function trackInvite(channelId) {
             STREAM = GDM_INVITE;
             if (lastActiveStream.channelId === channel.id) {
               obj.destination_user_id = lastActiveStream.ownerId;
-              const streamerApplication = tmp3(7738).getStreamerApplication(lastActiveStream, PresenceStore);
+              const streamerApplication = StreamerApplicationSelectors.getStreamerApplication(lastActiveStream, PresenceStore);
               let id3 = null;
               if (null != streamerApplication) {
                 id3 = streamerApplication.id;
               }
               obj.application_id = id3;
               STREAM = constants3.STREAM;
-              const tmp3Result1 = tmp3(7738);
+              const tmp3Result1 = StreamerApplicationSelectors;
             }
           }
         }
@@ -138,13 +141,13 @@ function trackInvite(channelId) {
     obj.message_id = messageId;
     obj.send_type = constants4.DIRECT_MESSAGE;
     obj.invite_guild_scheduled_event_id = result.guildScheduledEventId;
-    let inviteInstanceId = tmp3(4545).getInviteInstanceId(result.baseCode, messageId);
+    let inviteInstanceId = InviteCodeUtils.getInviteInstanceId(result.baseCode, messageId);
     if (inviteInstanceId == null) {
       inviteInstanceId = null;
     }
     obj.invite_instance_id = inviteInstanceId;
     const merged1 = Object.assign(overrideProperties);
-    const tmp3Result2 = tmp3(4545);
+    const tmp3Result2 = InviteCodeUtils;
     AppAnalyticsUtilsDefault.trackWithMetadata(constants.INVITE_SENT, obj);
   } else {
     let tmp12 = null != invite;
@@ -167,16 +170,17 @@ function trackInvite(channelId) {
       obj2.message_id = messageId;
       obj2.send_type = constants4.DIRECT_MESSAGE;
       obj2.invite_guild_scheduled_event_id = result.guildScheduledEventId;
-      let inviteInstanceId1 = tmp3(4545).getInviteInstanceId(result.baseCode, messageId);
+      let inviteInstanceId1 = InviteCodeUtils.getInviteInstanceId(result.baseCode, messageId);
       if (inviteInstanceId1 == null) {
         inviteInstanceId1 = null;
       }
       obj2.invite_instance_id = inviteInstanceId1;
       const merged3 = Object.assign(overrideProperties);
-      const tmp3Result3 = tmp3(4545);
+      const tmp3Result3 = InviteCodeUtils;
       AppAnalyticsUtilsDefault.trackWithMetadata(constants.INVITE_SENT, obj2);
     }
   }
+  tmp8 = null != id1 && result1;
 }
 const ReferencedMessageState = fn(7595).ReferencedMessageState;
 const SlowmodeType = fn(7687).SlowmodeType;
@@ -390,7 +394,7 @@ let obj14 = {
     obj.state = constants9.SENT;
     obj14.receiveMessage(channelId, obj, true);
   },
-  sendClydeError(id, code) {
+  sendClydeError(id) {
     let num = code;
     if (code === undefined) {
       num = 0;
@@ -530,7 +534,7 @@ let obj14 = {
   },
   fetchMessage(arg0) {
     ({ channelId: require, messageId: importDefault } = arg0);
-    return (async (arg0, value) => {
+    return (async () => {
       if (dependencyMap === 2) {
         dependencyMap = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -670,14 +674,14 @@ let obj14 = {
                 if (tmp7) {
                   let tmp8 = tmp2;
                   if (!tmp2) {
-                    tmp8 = null == tmp && null == tmp3;
-                    const tmp9 = null == tmp && null == tmp3;
+                    tmp8 = null == before && null == after;
+                    const tmp9 = null == before && null == after;
                   }
                   tmp7 = tmp8;
                 }
                 flag = tmp7;
               }
-              let flag2 = null != tmp5;
+              let flag2 = null != messageId;
               if (!flag2) {
                 let tmp10 = tmp4;
                 if (tmp4) {
@@ -690,11 +694,11 @@ let obj14 = {
               if (null != messageId) {
                 const _Math = Math;
                 const rounded = Math.floor(limit / 2);
-                const items = [tmp5];
+                const items = [messageId];
                 HermesBuiltin.arraySpread(body.map((id) => id.id), 1);
                 const found = items.filter((item, index, arr) => arr.indexOf(item) === index);
                 const sorted = found.sort(SnowflakeUtilsDefault.compare);
-                const index = sorted.indexOf(tmp5);
+                const index = sorted.indexOf(messageId);
                 if (index < rounded + limit % 2 - 1) {
                   flag = false;
                 }
@@ -731,7 +735,7 @@ let obj14 = {
               if (fetchKey == null) {
                 tmp23 = timestamp;
               }
-              const result = MessageCacheStatsDefault.recordChannelFetchedNetwork(channelId, tmp23, tmp, tmp3, limit, body);
+              const result = MessageCacheStatsDefault.recordChannelFetchedNetwork(channelId, tmp23, before, after, limit, body);
             });
             return true;
           }, () => {
@@ -755,7 +759,7 @@ let obj14 = {
     closure_3 = after;
     closure_4 = limit;
     asyncGeneratorStep = merged1;
-    return (async (arg0, value) => {
+    return (async () => {
       if (dependencyMap === 2) {
         dependencyMap = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -771,7 +775,6 @@ let obj14 = {
       } else {
         try {
           dependencyMap = 2;
-          const num2 = 0;
           if (0 === c2) {
             if (arg0 === 1) {
               dependencyMap = 3;
@@ -856,7 +859,7 @@ let obj14 = {
   fetchNewLocalMessages(channelId, arg1) {
     closure_0 = channelId;
     closure_1 = arg1;
-    return (async (arg0, value) => {
+    return (async () => {
       if (dependencyMap === 2) {
         dependencyMap = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -1072,7 +1075,7 @@ let obj14 = {
       flag = true;
     }
     closure_3 = arg3;
-    return (async (arg0, value) => {
+    return (async () => {
       if (c4 === 2) {
         c4 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -1245,7 +1248,7 @@ let obj14 = {
     obj = { location, inviteAnalyticsMetadata };
     return obj14._sendMessage(arg0, obj, obj);
   },
-  sendStickers(id, items1, result, arg3) {
+  sendStickers(id, items1) {
     let str = result;
     if (result === undefined) {
       str = "";
@@ -1272,7 +1275,7 @@ let obj14 = {
     obj.stickerIds = items1;
     return obj14._sendMessage(id, tmp, obj);
   },
-  sendGreetMessage(id, stickerId, sendMessageOptionsForReply) {
+  sendGreetMessage(id, stickerId) {
     _require = id;
     closure_1 = stickerId;
     let obj = sendMessageOptionsForReply;
@@ -1319,7 +1322,7 @@ let obj14 = {
     obj.location = constants10.POLL_CREATION;
     return obj14._sendMessage(id, { content: "", tts: false, validNonShortcutEmojis: [], invalidEmojis: [] }, obj);
   },
-  validateMessage(invalidEmojis, currentUser, arg2) {
+  validateMessage(invalidEmojis, currentUser, channelId) {
     if (invalidEmojis.some((animated) => animated.animated)) {
       let obj = PremiumUtilsDefault;
       if (!obj.canUseAnimatedEmojis(currentUser)) {
@@ -1337,7 +1340,7 @@ let obj14 = {
   _sendMessage(arg0, nonce, arg2) {
     closure_0 = arg0;
     closure_2 = arg2;
-    return (async (arg0, value) => {
+    return (async () => {
       if (c8 === 2) {
         c8 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -1749,17 +1752,18 @@ let obj14 = {
                       if (body != null) {
                         id = body.id;
                       }
-                      const body2 = tmp.body;
+                      const body2 = closure_0.body;
                       let guild_id;
                       if (body2 != null) {
                         guild_id = body2.guild_id;
                       }
-                      const body3 = tmp.body;
+                      const body3 = closure_0.body;
                       let channel_id;
                       if (body3 != null) {
                         channel_id = body3.channel_id;
                       }
                       id(dependencyMap[37]).track(constants.MESSAGE_ALSO_SEND_TO_CHANNEL_SENT, { referenced_message_id: id, guild_id, channel_id, destination_channel_id: attachments.alsoForwardToChannelId });
+                      const obj = id(dependencyMap[37]);
                     }).catch((error) => {
                       const body = closure_0.body;
                       id = undefined;
@@ -1768,6 +1772,7 @@ let obj14 = {
                         id = body.id;
                       }
                       logger.log(combined, { referencedMessageId: id, channelId, destinationChannelId: attachments.alsoForwardToChannelId, error: error.toString() });
+                      const obj = { referencedMessageId: id, channelId, destinationChannelId: attachments.alsoForwardToChannelId, error: error.toString() };
                     });
                     const nextPromise = obj17.sendForward(content(length[52]).createMessageRecord(ok.body), publish.alsoForwardToChannelId).then(() => {
                       const body = closure_0.body;
@@ -1775,17 +1780,18 @@ let obj14 = {
                       if (body != null) {
                         id = body.id;
                       }
-                      const body2 = tmp.body;
+                      const body2 = closure_0.body;
                       let guild_id;
                       if (body2 != null) {
                         guild_id = body2.guild_id;
                       }
-                      const body3 = tmp.body;
+                      const body3 = closure_0.body;
                       let channel_id;
                       if (body3 != null) {
                         channel_id = body3.channel_id;
                       }
                       id(dependencyMap[37]).track(constants.MESSAGE_ALSO_SEND_TO_CHANNEL_SENT, { referenced_message_id: id, guild_id, channel_id, destination_channel_id: attachments.alsoForwardToChannelId });
+                      const obj = id(dependencyMap[37]);
                     });
                   }
                   request = request.getRequest(emojiUsed(length[57]).cast(channelId));
@@ -1801,15 +1807,15 @@ let obj14 = {
                     if (message_id != null) {
                       message_id = message_id.message_id;
                     }
-                    pendingReplyActionSource = pendingReplyActionSource.getPendingReplyActionSource(tmp174);
+                    pendingReplyActionSource = pendingReplyActionSource.getPendingReplyActionSource(channelId);
                     if ("message_swipe" === pendingReplyActionSource) {
                       let message = null;
                       if (null != message_id) {
-                        message = closure_3_21.getMessage(tmp174, message_id);
+                        message = closure_3_21.getMessage(channelId, message_id);
                       }
-                      channel = closure_3_17.getChannel(tmp174);
+                      channel = closure_3_17.getChannel(channelId);
                       const currentUser = authStore.getCurrentUser();
-                      let obj2 = { message_id: id, channel_id: tmp174, guild_id: null, swipe_action: "reply", is_own_message: null };
+                      let obj2 = { message_id: id, channel_id: channelId, guild_id: null, swipe_action: "reply", is_own_message: null };
                       let guild_id;
                       if (channel != null) {
                         guild_id = channel.guild_id;
@@ -1827,8 +1833,8 @@ let obj14 = {
                       emojiUsed(length[37]).track(constants2.MESSAGE_SWIPE_ACTION_SENT, obj2);
                       const obj25 = emojiUsed(length[37]);
                     } else if ("message_shortcut" === pendingReplyActionSource) {
-                      const channel1 = closure_3_17.getChannel(tmp174);
-                      let obj3 = { message_id: id, channel_id: tmp174, guild_id: null, original_message_id: null, action: "reply" };
+                      const channel1 = closure_3_17.getChannel(channelId);
+                      let obj3 = { message_id: id, channel_id: channelId, guild_id: null, original_message_id: null, action: "reply" };
                       let guild_id1;
                       if (channel1 != null) {
                         guild_id1 = channel1.guild_id;
@@ -1879,66 +1885,66 @@ let obj14 = {
                     ({ type, code } = url);
                     let obj = channelId(length[29]);
                     if (obj.isApplicationCodedLink(type)) {
-                      let tmpResult = tmp(tmp2[29]);
+                      let tmpResult = channelId(length[29]);
                       const applicationCodedLinkData = tmpResult.getApplicationCodedLinkData(type, code, url.url);
                       if (null != applicationCodedLinkData) {
                         ({ applicationId, type: type2 } = applicationCodedLinkData);
-                        if (tmp(tmp2[30]).CodedLinkType.APP_DIRECTORY_PROFILE === type2) {
-                          tmpResult = tmp(tmp2[31]);
+                        if (channelId(length[30]).CodedLinkType.APP_DIRECTORY_PROFILE === type2) {
+                          tmpResult = channelId(length[31]);
                           const result = tmpResult.trackAppDirectoryProfileEmbed(applicationId);
-                          const result1 = tmp(tmp2[32]).trackAppEmbedLinkSent(code, constants2.APP_DISCOVERY, closure_5);
-                          const tmpResult1 = tmp(tmp2[32]);
-                        } else if (tmp(tmp2[30]).CodedLinkType.APP_DIRECTORY_STOREFRONT === type2) {
-                          const result2 = tmp(tmp2[31]).trackAppDirectoryProfileEmbed(applicationId, "storefront");
-                          const tmpResult2 = tmp(tmp2[31]);
-                        } else if (tmp(tmp2[30]).CodedLinkType.APP_DIRECTORY_STOREFRONT_SKU === type2) {
-                          const result3 = tmp(tmp2[31]).trackAppDirectoryProfileEmbed(applicationId, "storefront_sku");
-                          const tmpResult3 = tmp(tmp2[31]);
-                        } else if (tmp(tmp2[30]).CodedLinkType.ACTIVITY_BOOKMARK === type2) {
+                          const result1 = channelId(length[32]).trackAppEmbedLinkSent(code, constants2.APP_DISCOVERY, closure_5);
+                          const tmpResult1 = channelId(length[32]);
+                        } else if (channelId(length[30]).CodedLinkType.APP_DIRECTORY_STOREFRONT === type2) {
+                          const result2 = channelId(length[31]).trackAppDirectoryProfileEmbed(applicationId, "storefront");
+                          const tmpResult2 = channelId(length[31]);
+                        } else if (channelId(length[30]).CodedLinkType.APP_DIRECTORY_STOREFRONT_SKU === type2) {
+                          const result3 = channelId(length[31]).trackAppDirectoryProfileEmbed(applicationId, "storefront_sku");
+                          const tmpResult3 = channelId(length[31]);
+                        } else if (channelId(length[30]).CodedLinkType.ACTIVITY_BOOKMARK === type2) {
                           const params = applicationCodedLinkData.params;
-                          const tmpResult4 = tmp(tmp2[32]);
+                          const tmpResult4 = channelId(length[32]);
                           const ACTIVITY = constants2.ACTIVITY;
                           let referrerId = params.referrerId;
                           if (referrerId == null) {
                             referrerId = closure_5;
                           }
                           const result4 = tmpResult4.trackAppEmbedLinkSent(applicationId, ACTIVITY, referrerId, params.customId);
-                        } else if (tmp(tmp2[30]).CodedLinkType.APP_OAUTH2_LINK === type2) {
-                          const result5 = tmp(tmp2[32]).trackAppEmbedLinkSent(applicationId, constants2.OAUTH, closure_5);
-                          const tmpResult5 = tmp(tmp2[32]);
+                        } else if (channelId(length[30]).CodedLinkType.APP_OAUTH2_LINK === type2) {
+                          const result5 = channelId(length[32]).trackAppEmbedLinkSent(applicationId, constants2.OAUTH, closure_5);
+                          const tmpResult5 = channelId(length[32]);
                           obj = { application_id: applicationId };
-                          id(tmp2[33]).trackWithMetadata(closure_2_27.APP_OAUTH2_LINK_EMBED_URL_SENT, obj);
-                          const obj19 = id(tmp2[33]);
+                          id(length[33]).trackWithMetadata(closure_2_27.APP_OAUTH2_LINK_EMBED_URL_SENT, obj);
+                          const obj19 = id(length[33]);
                         }
                       }
-                    } else if (tmp(tmp2[30]).CodedLinkType.INVITE === type) {
+                    } else if (channelId(length[30]).CodedLinkType.INVITE === type) {
                       obj = { inviteKey: code, channelId, messageId: id, location: attachments, inviteAnalyticsMetadata: channel3, overrideProperties };
                       closure_2_53(obj);
-                    } else if (tmp(tmp2[30]).CodedLinkType.TEMPLATE === type) {
+                    } else if (channelId(length[30]).CodedLinkType.TEMPLATE === type) {
                       guildTemplate = guildTemplate.getGuildTemplate(code);
                       if (null != guildTemplate) {
                         if (guildTemplate.state !== constants3.RESOLVING) {
                           let obj1 = { guild_template_code: code, guild_template_name: null, guild_template_description: null, guild_template_guild_id: null };
                           ({ name: obj10.guild_template_name, description: obj10.guild_template_description, sourceGuildId: obj10.guild_template_guild_id } = guildTemplate);
-                          id(tmp2[33]).trackWithMetadata(closure_2_27.GUILD_TEMPLATE_LINK_SENT, obj1);
-                          const obj9 = id(tmp2[33]);
+                          id(length[33]).trackWithMetadata(closure_2_27.GUILD_TEMPLATE_LINK_SENT, obj1);
+                          const obj9 = id(length[33]);
                         }
                       }
-                    } else if (tmp(tmp2[30]).CodedLinkType.BUILD_OVERRIDE !== type) {
-                      if (tmp(tmp2[30]).CodedLinkType.EXPERIMENT !== type) {
-                        if (tmp(tmp2[30]).CodedLinkType.MANUAL_BUILD_OVERRIDE !== type) {
-                          if (tmp(tmp2[30]).CodedLinkType.EVENT !== type) {
-                            if (tmp(tmp2[30]).CodedLinkType.CHANNEL_LINK !== type) {
-                              if (tmp(tmp2[30]).CodedLinkType.EMBEDDED_ACTIVITY_INVITE === type) {
-                                const result6 = tmp(tmp2[32]).trackAppEmbedLinkSent(code, constants2.ACTIVITY_INVITE, closure_5);
-                                const tmpResult6 = tmp(tmp2[32]);
-                              } else if (tmp(tmp2[30]).CodedLinkType.GUILD_PRODUCT !== type) {
-                                if (tmp(tmp2[30]).CodedLinkType.SERVER_SHOP !== type) {
-                                  if (tmp(tmp2[30]).CodedLinkType.SOCIAL_LAYER_STOREFRONT !== type) {
-                                    if (tmp(tmp2[30]).CodedLinkType.SOCIAL_LAYER_STOREFRONT_APP !== type) {
-                                      if (tmp(tmp2[30]).CodedLinkType.QUESTS_EMBED === type) {
-                                        const adMetadataSealed = tmp(tmp2[34]).getAdMetadataSealed(tmp(tmp2[35]).QuestContent.QUESTS_EMBED);
-                                        const tmpResult7 = tmp(tmp2[34]);
+                    } else if (channelId(length[30]).CodedLinkType.BUILD_OVERRIDE !== type) {
+                      if (channelId(length[30]).CodedLinkType.EXPERIMENT !== type) {
+                        if (channelId(length[30]).CodedLinkType.MANUAL_BUILD_OVERRIDE !== type) {
+                          if (channelId(length[30]).CodedLinkType.EVENT !== type) {
+                            if (channelId(length[30]).CodedLinkType.CHANNEL_LINK !== type) {
+                              if (channelId(length[30]).CodedLinkType.EMBEDDED_ACTIVITY_INVITE === type) {
+                                const result6 = channelId(length[32]).trackAppEmbedLinkSent(code, constants2.ACTIVITY_INVITE, closure_5);
+                                const tmpResult6 = channelId(length[32]);
+                              } else if (channelId(length[30]).CodedLinkType.GUILD_PRODUCT !== type) {
+                                if (channelId(length[30]).CodedLinkType.SERVER_SHOP !== type) {
+                                  if (channelId(length[30]).CodedLinkType.SOCIAL_LAYER_STOREFRONT !== type) {
+                                    if (channelId(length[30]).CodedLinkType.SOCIAL_LAYER_STOREFRONT_APP !== type) {
+                                      if (channelId(length[30]).CodedLinkType.QUESTS_EMBED === type) {
+                                        const adMetadataSealed = channelId(length[34]).getAdMetadataSealed(channelId(length[35]).QuestContent.QUESTS_EMBED);
+                                        const tmpResult7 = channelId(length[34]);
                                         const obj2 = { questId: code, event: closure_2_27.QUEST_LINK_SHARED, properties: null, trackGuildAndChannelMetadata: true, sourceQuestContent: null };
                                         let tmp8 = null;
                                         if (null != adMetadataSealed) {
@@ -1946,16 +1952,16 @@ let obj14 = {
                                         }
                                         const obj3 = { metadata_sealed: tmp8 };
                                         obj2.properties = obj3;
-                                        obj2.sourceQuestContent = tmp(tmp2[35]).QuestContent.QUESTS_EMBED;
-                                        tmp(tmp2[36]).trackQuestEvent(obj2);
-                                        const tmpResult8 = tmp(tmp2[36]);
-                                      } else if (tmp(tmp2[30]).CodedLinkType.GAME_PROFILE === type) {
-                                        obj1 = id(tmp2[37]);
+                                        obj2.sourceQuestContent = channelId(length[35]).QuestContent.QUESTS_EMBED;
+                                        channelId(length[36]).trackQuestEvent(obj2);
+                                        const tmpResult8 = channelId(length[36]);
+                                      } else if (channelId(length[30]).CodedLinkType.GAME_PROFILE === type) {
+                                        obj1 = id(length[37]);
                                         const obj4 = { game_id: code };
                                         obj1.track(closure_2_27.GAME_PROFILE_LINK_EMBED_SENT, obj4);
-                                      } else if (tmp(tmp2[30]).CodedLinkType.COLLECTIBLES_SHOP !== type) {
-                                        if (tmp(tmp2[30]).CodedLinkType.GAME_SERVER_SHARE !== type) {
-                                          if (tmp(tmp2[30]).CodedLinkType.USER_PROFILE !== type) {
+                                      } else if (channelId(length[30]).CodedLinkType.COLLECTIBLES_SHOP !== type) {
+                                        if (channelId(length[30]).CodedLinkType.GAME_SERVER_SHARE !== type) {
+                                          if (channelId(length[30]).CodedLinkType.USER_PROFILE !== type) {
                                             const _Error = Error;
                                             const _HermesInternal = HermesInternal;
                                             throw Error("Unknown coded link type: " + type);
@@ -2017,10 +2023,10 @@ let obj14 = {
                   if (guildTemplate == null) {
                     items = [];
                   }
-                  content = tmp158;
+                  content = channelId;
                   id = ok.body.id;
                   if (attachments.length === items.length) {
-                    channel3 = closure_3_17.getChannel(tmp158);
+                    channel3 = closure_3_17.getChannel(channelId);
                     if (null != channel3) {
                       overrideProperties = messageByReference.getMessageByReference(tmp159);
                       const item2 = items.forEach((clip, index) => {
@@ -2100,11 +2106,11 @@ let obj14 = {
                               obj13.errorResponseBody = obj14;
                               obj2.dispatch(obj13);
                               flag = false;
-                            } else if (ok.body.code === tmp6.POGGERMODE_TEMPORARILY_DISABLED) {
+                            } else if (ok.body.code === constants.POGGERMODE_TEMPORARILY_DISABLED) {
                               obj1 = emojiUsed(length[46]);
                               obj1.dispatch({ type: "POGGERMODE_TEMPORARILY_DISABLED" });
                               flag = false;
-                            } else if (ok.body.code === tmp6.EXPLICIT_CONTENT) {
+                            } else if (ok.body.code === constants.EXPLICIT_CONTENT) {
                               const EXPLICIT_CONTENT = constants7.EXPLICIT_CONTENT;
                               flag = false;
                             } else {
@@ -2222,7 +2228,7 @@ let obj14 = {
     closure_0 = id;
     closure_1 = id2;
     ({ content: importAll, components: dependencyMap } = parsed);
-    return (async (arg0, value) => {
+    return (async () => {
       if (dependencyMap === 2) {
         dependencyMap = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -2310,11 +2316,11 @@ let obj14 = {
               hasErr = hasErr.hasErr;
               let hasItem = !hasErr;
               if (!hasErr) {
-                const AUTOMOD_ERROR_CODES = closure_0(7939).AUTOMOD_ERROR_CODES;
+                const AUTOMOD_ERROR_CODES = channelId(7939).AUTOMOD_ERROR_CODES;
                 hasItem = AUTOMOD_ERROR_CODES.has(hasErr.body.code);
               }
               if (hasItem) {
-                let obj = { type: closure_0(7834).MessageDataType.EDIT, message };
+                let obj = { type: channelId(7834).MessageDataType.EDIT, message };
                 let obj1 = messageId(573);
                 obj = { type: "MESSAGE_EDIT_FAILED_AUTOMOD", messageData: null, errorResponseBody: null };
                 obj.messageData = obj;
@@ -2322,11 +2328,11 @@ let obj14 = {
                 obj.errorResponseBody = obj;
                 obj1.dispatch(obj);
               }
-              const AccessibilityAnnouncer = closure_0(4411).AccessibilityAnnouncer;
+              const AccessibilityAnnouncer = channelId(4411).AccessibilityAnnouncer;
               const announce = AccessibilityAnnouncer.announce;
-              const intl = closure_0(1114).intl;
+              const intl = channelId(1114).intl;
               const string = intl.string;
-              const t = closure_0(1114).t;
+              const t = channelId(1114).t;
               if (hasErr.hasErr) {
                 announce(string(t.Atp7FP));
               } else if (hasItem) {
@@ -2338,8 +2344,8 @@ let obj14 = {
               if (!hasErr.hasErr) {
                 tmp14 = hasErr;
               }
-              obj14.endEditMessage(closure_0, tmp14);
-              obj1 = { channelId: tmp13, messageId };
+              obj14.endEditMessage(channelId, tmp14);
+              obj1 = { channelId, messageId };
               obj14.focusMessage(obj1);
             });
             dependencyMap = 3;
@@ -2355,7 +2361,7 @@ let obj14 = {
   suppressEmbeds(channel, id) {
     closure_0 = channel;
     closure_1 = id;
-    return (async (arg0, value) => {
+    return (async () => {
       if (dependencyMap === 2) {
         dependencyMap = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -2421,7 +2427,7 @@ let obj14 = {
     closure_0 = id;
     closure_1 = id2;
     closure_2 = arg2;
-    return (async (arg0, value) => {
+    return (async () => {
       if (dependencyMap === 2) {
         dependencyMap = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -2487,7 +2493,7 @@ let obj14 = {
     closure_0 = channel;
     closure_1 = id;
     closure_2 = found;
-    return (async (arg0, value) => {
+    return (async () => {
       if (c2 === 2) {
         c2 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -2550,7 +2556,7 @@ let obj14 = {
     if (arg2 === undefined) {
       flag = false;
     }
-    return (async (arg0, value) => {
+    return (async () => {
       if (dependencyMap === 2) {
         dependencyMap = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -2639,7 +2645,7 @@ let obj14 = {
   },
   crosspostMessage(channel, id) {
     closure_1 = id;
-    return (async (arg0, value) => {
+    return (async () => {
       if (c5 === 2) {
         c5 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");

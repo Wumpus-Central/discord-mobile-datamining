@@ -24,17 +24,17 @@ export const useShouldHideGuildPurchaseEntryPoints = function useShouldHideGuild
   closure_129_1 = tmp3;
   const items2 = [has, tmp3];
   const effect = noop.useEffect(() => {
-    let hasItem = null != closure_0;
+    let hasItem = null != id2;
     if (hasItem) {
-      const features = tmp.features;
+      const features = id2.features;
       hasItem = features.has(constants.CREATOR_MONETIZABLE_RESTRICTED);
     }
     if (hasItem) {
-      hasItem = GuildRoleSubscriptionsStore.getMonetizationRestrictionsFetchState(tmp.id) === FetchState.NOT_FETCHED;
+      hasItem = GuildRoleSubscriptionsStore.getMonetizationRestrictionsFetchState(id2.id) === FetchState.NOT_FETCHED;
     }
     if (hasItem) {
       const obj = { signal };
-      const monetizationRestrictions = obj.fetchMonetizationRestrictions(tmp.id, obj);
+      const monetizationRestrictions = obj.fetchMonetizationRestrictions(id2.id, obj);
     }
   }, items2);
   let id;
@@ -109,17 +109,17 @@ export const useShouldRestrictUpdatingCreatorMonetizationSettings =
     closure_129_1 = tmp4;
     const items2 = [stateFromStores, tmp4];
     const effect = noop.useEffect(() => {
-      let hasItem = null != closure_0;
+      let hasItem = null != id2;
       if (hasItem) {
-        const features = tmp.features;
+        const features = id2.features;
         hasItem = features.has(constants.CREATOR_MONETIZABLE_RESTRICTED);
       }
       if (hasItem) {
-        hasItem = GuildRoleSubscriptionsStore.getMonetizationRestrictionsFetchState(tmp.id) === FetchState.NOT_FETCHED;
+        hasItem = GuildRoleSubscriptionsStore.getMonetizationRestrictionsFetchState(id2.id) === FetchState.NOT_FETCHED;
       }
       if (hasItem) {
         const obj = { signal };
-        const monetizationRestrictions = obj.fetchMonetizationRestrictions(tmp.id, obj);
+        const monetizationRestrictions = obj.fetchMonetizationRestrictions(id2.id, obj);
       }
     }, items2);
     let id;
@@ -190,17 +190,17 @@ export const useIsMonetizationReapplicationDisabled = function useIsMonetization
   closure_129_1 = tmp4;
   const items2 = [stateFromStores, tmp4];
   const effect = noop.useEffect(() => {
-    let hasItem = null != closure_0;
+    let hasItem = null != id2;
     if (hasItem) {
-      const features = tmp.features;
+      const features = id2.features;
       hasItem = features.has(constants.CREATOR_MONETIZABLE_RESTRICTED);
     }
     if (hasItem) {
-      hasItem = GuildRoleSubscriptionsStore.getMonetizationRestrictionsFetchState(tmp.id) === FetchState.NOT_FETCHED;
+      hasItem = GuildRoleSubscriptionsStore.getMonetizationRestrictionsFetchState(id2.id) === FetchState.NOT_FETCHED;
     }
     if (hasItem) {
       const obj = { signal };
-      const monetizationRestrictions = obj.fetchMonetizationRestrictions(tmp.id, obj);
+      const monetizationRestrictions = obj.fetchMonetizationRestrictions(id2.id, obj);
     }
   }, items2);
   let id;

@@ -21,7 +21,7 @@ let closure_12 = async function _fetchStickerPack() {
     url: Endpoints.STICKER_PACK(closure_0),
     rejectWithError: require("HTTPUtils").rejectWithMigratedError(),
   });
-  const body = arg1.body;
+  const body = value.body;
   closure_131_1(closure_131_2[10]).dispatch({
     type: "STICKER_PACK_FETCH_SUCCESS",
     packId: closure_130_0,
@@ -30,7 +30,7 @@ let closure_12 = async function _fetchStickerPack() {
   });
   return body;
 };
-let closure_13 = async function _fetchStickerPacks(arg0, value) {
+let closure_13 = async function _fetchStickerPacks() {
   if (c4 === 2) {
     c4 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -121,7 +121,7 @@ let closure_13 = async function _fetchStickerPacks(arg0, value) {
     }
   }
 };
-let closure_14 = async function _fetchSticker(arg0, value) {
+let closure_14 = async function _fetchSticker(arg0) {
   if (c4 === 2) {
     c4 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -193,7 +193,7 @@ let closure_14 = async function _fetchSticker(arg0, value) {
     }
   }
 };
-let closure_15 = async function _fetchGuildStickersWithCreator(arg0, signal) {
+let closure_15 = async function _fetchGuildStickersWithCreator(arg0) {
   closure_0 = arg0;
   c4 = 0;
   c5 = 0;
@@ -273,7 +273,7 @@ let closure_15 = async function _fetchGuildStickersWithCreator(arg0, signal) {
     }
   })();
 };
-let closure_16 = async function _deleteGuildSticker(arg0, value) {
+let closure_16 = async function _deleteGuildSticker(arg0) {
   if (c1 === 2) {
     c1 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -300,7 +300,7 @@ let closure_16 = async function _deleteGuildSticker(arg0, value) {
         } else {
           const HTTP = require("HTTPUtils").HTTP;
           const obj1 = {
-            url: Endpoints.GUILD_STICKER(_require.guild_id, _require.id),
+            url: Endpoints.GUILD_STICKER(user.guild_id, user.id),
             rejectWithError: require("HTTPUtils").rejectWithMigratedError(),
           };
           c2 = 1;
@@ -328,7 +328,7 @@ let closure_16 = async function _deleteGuildSticker(arg0, value) {
 let closure_17 = async function _createGuildSticker() {
   closure_2 = tmp2;
   closure_1 = tmp5;
-  const guildId = _require.guildId;
+  const guildId = user.guildId;
   closure_129_0 = guildId;
   const HTTP = require("HTTPUtils").HTTP;
   const request = {
@@ -339,29 +339,30 @@ let closure_17 = async function _createGuildSticker() {
     headers: null,
     rejectWithError: null,
   };
-  if ("web" === _require.platform) {
-    const body = tmp32.body;
+  if ("web" === user.platform) {
+    const body = user.body;
   }
   request.body = body;
-  if ("mobile" === _require.platform) {
-    const items = [{ name: "name", value: tmp32.name }, ,];
-    items[1] = { name: "tags", value: tmp32.tags };
-    items[2] = { name: "description", value: tmp32.description };
+  if ("mobile" === user.platform) {
+    const items = [{ name: "name", value: user.name }, ,];
+    items[1] = { name: "tags", value: user.tags };
+    items[2] = { name: "description", value: user.description };
     const tmp11 = items;
   }
   request.fields = tmp11;
-  if ("mobile" === _require.platform) {
+  if ("mobile" === user.platform) {
     const obj4 = { name: "file", file: null };
-    ({ uri: obj7.uri, name: obj7.name, mimeType: obj7.type } = tmp32);
+    ({ uri: obj7.uri, name: obj7.name, mimeType: obj7.type } = user);
     obj4.file = { uri: null, name: null, type: null };
     const items1 = [obj4];
     const tmp12 = items1;
   }
   request.attachments = tmp12;
   const obj7 = InlineUploaderDefault;
-  request.headers = obj7.buildHeadersForMd5(_require.originalMd5);
+  request.headers = obj7.buildHeadersForMd5(user.originalMd5);
   request.rejectWithError = require("HTTPUtils").rejectWithMigratedError();
-  closure_129_1 = await HTTP.post(request);
+  await HTTP.post(request);
+  closure_129_1 = value;
   const obj8 = { type: "GUILD_STICKERS_CREATE_SUCCESS", guildId: closure_129_0, sticker: null };
   const obj9 = {};
   const merged = Object.assign(closure_129_1.body);
@@ -374,7 +375,7 @@ let closure_17 = async function _createGuildSticker() {
   closure_130_1(closure_130_2[10]).dispatch(obj8);
   return closure_129_1.body;
 };
-let closure_18 = async function _updateGuildSticker(arg0, arg1, body) {
+let closure_18 = async function _updateGuildSticker(arg0, arg1) {
   closure_0 = arg0;
   closure_1 = arg1;
   c4 = 0;
@@ -475,7 +476,7 @@ export const clearStickerPreview = function clearStickerPreview(channelId, draft
   obj.dispatch(obj);
 };
 export const favoriteSticker = function favoriteSticker(sticker) {
-  _require = sticker;
+  const _require = sticker;
   const FrecencyUserSettingsActionCreators =
     require("UserSettingsProtoActionCreators").FrecencyUserSettingsActionCreators;
   FrecencyUserSettingsActionCreators.updateAsync(
@@ -508,9 +509,8 @@ export const favoriteSticker = function favoriteSticker(sticker) {
         flag = !hasItem;
         if (!hasItem) {
           const stickerIds1 = stickerIds.stickerIds;
-          stickerIds1.push(tmp7);
+          stickerIds1.push(closure_0);
         }
-        tmp7 = closure_0;
       }
       return flag;
     },
@@ -518,7 +518,7 @@ export const favoriteSticker = function favoriteSticker(sticker) {
   );
 };
 export const unfavoriteSticker = function unfavoriteSticker(sticker) {
-  _require = sticker;
+  const _require = sticker;
   const FrecencyUserSettingsActionCreators =
     require("UserSettingsProtoActionCreators").FrecencyUserSettingsActionCreators;
   FrecencyUserSettingsActionCreators.updateAsync(

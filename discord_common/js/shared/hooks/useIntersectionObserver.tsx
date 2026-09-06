@@ -31,10 +31,10 @@ export const useIntersectionObserver = function useIntersectionObserver(arg0, ar
   closure_6(() => {
     if (num) {
       if (null == ref3.current) {
-        tmp.current = InteractionObserverUtils.getIntersectionObserver(ref2.current);
+        ref3.current = InteractionObserverUtils.getIntersectionObserver(ref2.current);
       }
       const current = ref.current;
-      const current2 = tmp.current;
+      const current2 = ref3.current;
       if (tmp7) {
         InteractionObserverUtils.watch(current2, current, closure_0);
       }
@@ -72,8 +72,8 @@ export const useIsVisible = function useIsVisible(arg0, arg1) {
     let obj = map;
     value = map.get(num);
     if (null == value) {
-      obj = { threshold: tmp };
-      const result = obj.set(tmp, obj);
+      obj = { threshold: num };
+      const result = obj.set(num, obj);
       value = obj;
     }
     return value;
@@ -95,21 +95,20 @@ export const useIsVisible = function useIsVisible(arg0, arg1) {
   const tmp3 = num(7697)((isIntersecting) => {
     closure_0(isIntersecting.isIntersecting);
   });
-  const tmp5 = closure_5;
   if (tmp4 == null) {
     tmp8 = closure_7;
   }
   const tmpResultResult = num(7697)(tmp8);
   closure_129_3 = tmpResultResult;
-  closure_129_4 = tmp5(null);
+  closure_129_4 = closure_5(null);
   const items1 = [flag, current, tmpResultResult];
   closure_6(() => {
     if (num) {
       if (null == ref3.current) {
-        tmp.current = InteractionObserverUtils.getIntersectionObserver(ref2.current);
+        ref3.current = InteractionObserverUtils.getIntersectionObserver(ref2.current);
       }
       const current = ref.current;
-      const current2 = tmp.current;
+      const current2 = ref3.current;
       if (tmp7) {
         InteractionObserverUtils.watch(current2, current, closure_0);
       }

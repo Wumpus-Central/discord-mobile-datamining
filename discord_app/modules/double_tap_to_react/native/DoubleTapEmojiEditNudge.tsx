@@ -21,15 +21,15 @@ function DoubleTapEmojiEditNudgeInner(location) {
   const items2 = [_location];
   const memo = noop.useMemo(() => {
     if (null != emoji.id) {
-      const obj = { id: tmp.id, size, animated: null };
+      const obj = { id: emoji.id, size, animated: null };
       let animated = !stateFromStores;
       if (!stateFromStores) {
-        animated = tmp.animated;
+        animated = emoji.animated;
       }
       obj.animated = animated;
       let url = obj.getEmojiURL(obj);
     } else {
-      url = tmp.url;
+      url = emoji.url;
     }
     return url;
   }, items1);
@@ -40,7 +40,7 @@ function DoubleTapEmojiEditNudgeInner(location) {
     closure_0 = stateFromStores((_location) => {
       c3 = 0;
       c4 = 0;
-      return (function* (arg0, value) {
+      return (function* (arg0) {
         if (c4 === 2) {
           c4 = 3;
           throw new TypeError("Generator functions may not be called on executing generators");
@@ -139,8 +139,6 @@ function DoubleTapEmojiEditNudgeInner(location) {
   };
   let str = "";
   const tmp3 = DimensionsStore((arg0) => arg0.byAppEntry[closure_2].fontScale);
-  const tmp8 = closure_12;
-  const tmp9 = View;
   if (null == emoji.id) {
     str = emoji.surrogates;
   }
@@ -153,7 +151,7 @@ function DoubleTapEmojiEditNudgeInner(location) {
   obj2.children = closure_11(_location(4556).Text, obj3);
   items3[2] = closure_11(_location(5123).PressableOpacity, obj2);
   obj.children = items3;
-  return tmp8(tmp9, obj);
+  return closure_12(View, obj);
 }
 const View = fn(17).View;
 const AnalyticEvents = fn(1074).AnalyticEvents;

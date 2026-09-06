@@ -1,8 +1,10 @@
 // discord_app/modules/user_settings/defs/native/ActivityPrivacyDefaultSharingSetting.tsx
 import util from "../../../../intl/index.native.tsx";
 import preloaded_user_settings from "../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
+import asyncRequireImpl from "../../../../../_runtime/01896_asyncRequireImpl.js";
 import UserSettings from "../../UserSettings.tsx";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
+import ActivityPrivacyUpsellUtils from "../../../activity_privacy/ActivityPrivacyUpsellUtils.tsx";
 import ActivityPrivacyMatchingExperiment from "../../../activity_privacy/ActivityPrivacyMatchingExperiment.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -60,16 +62,16 @@ let SettingBuilders = {
     DefaultGuildsActivityRestrictedV22.updateSetting(NumberResult);
     let obj = ActivityPrivacyMatchingExperiment;
     if (obj.getIsInActivityPrivacyUpsellExperiment("ActivityPrivacyDefaultSharingSetting")) {
-      let tmp2Result = tmp2(14851);
+      let tmp2Result = ActivityPrivacyUpsellUtils;
       const affectedGuilds = tmp2Result.computeAffectedGuilds(setting, NumberResult);
       if (null != affectedGuilds) {
-        tmp2Result = tmp2(14851);
+        tmp2Result = ActivityPrivacyUpsellUtils;
         const activityRestrictionSettingName = tmp2Result.getActivityRestrictionSettingName(NumberResult);
         obj = { direction: null, affectedGuildIds: null, settingName: null };
         ({ direction: obj5.direction, affectedGuildIds: obj5.affectedGuildIds } = affectedGuilds);
         obj.settingName = activityRestrictionSettingName;
         ActionSheetActionCreatorsDefault.openLazy(
-          tmp2(1896)(15908, dependencyMap.paths),
+          asyncRequireImpl(15908, dependencyMap.paths),
           "ActivityPrivacyUpsellActionSheet",
           obj,
         );

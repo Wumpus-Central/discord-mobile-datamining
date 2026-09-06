@@ -39,7 +39,7 @@ function _handlePresenceUpdate(user) {
         const tmp7 = getApplicationIdForActivityDefault(timestamps);
         if (null == tmp7) {
           let flag2 = false;
-          if (null != obj5[tmp6.id]) {
+          if (null != obj5[user.id]) {
             const gameId2 = tmp34.gameId;
             if (null != obj3[gameId2]) {
               obj = {};
@@ -60,7 +60,7 @@ function _handlePresenceUpdate(user) {
           let flag = flag2;
         } else {
           if (tmp8) {
-            if (null != obj5[tmp6.id]) {
+            if (null != obj5[user.id]) {
               const gameId = tmp10.gameId;
               if (null != obj3[gameId]) {
                 obj = {};
@@ -87,7 +87,7 @@ function _handlePresenceUpdate(user) {
             const _Date = Date;
             start = Date.now();
           }
-          const obj2 = { userId: tmp6.id, activity: timestamps, startedPlaying: start };
+          const obj2 = { userId: user.id, activity: timestamps, startedPlaying: start };
           obj3 = {};
           const merged4 = Object.assign(obj3);
           const obj4 = {};
@@ -99,7 +99,7 @@ function _handlePresenceUpdate(user) {
           const obj6 = { gameId: tmp7, startedPlaying: obj2.startedPlaying };
           obj5[obj2.userId] = obj6;
           flag = true;
-          tmp8 = null != obj5[tmp6.id] && obj5[tmp6.id].gameId !== tmp7;
+          tmp8 = null != obj5[user.id] && obj5[user.id].gameId !== tmp7;
         }
         if (flag) {
           c1 = true;

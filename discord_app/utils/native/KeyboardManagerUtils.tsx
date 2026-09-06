@@ -1,5 +1,6 @@
 // discord_app/utils/native/KeyboardManagerUtils.tsx
 import _mod17 from "../../../_runtime/metro/00017__.js";
+import PlatformUtils from "../PlatformUtils.tsx";
 import NativeKeyboardModuleDefault from "../../../discord_common/js/packages/rtn-codegen/js/NativeKeyboardModule.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
@@ -16,6 +17,7 @@ export const dismissGlobalKeyboard = function dismissGlobalKeyboard() {
     const KeyboardManager = NativeModules.KeyboardManager;
     const result1 = KeyboardManager.dismissGlobalKeyboard();
   }
+  obj = PlatformUtils;
 };
 export const clearCurrentFocusAndDismissKeyboard = function clearCurrentFocusAndDismissKeyboard() {
   if (obj.isAndroid()) {
@@ -24,6 +26,7 @@ export const clearCurrentFocusAndDismissKeyboard = function clearCurrentFocusAnd
       const result = obj2.clearCurrentFocusAndDismissKeyboard();
     }
   }
+  obj = PlatformUtils;
 };
 export const onKeyboardChanged = function onKeyboardChanged(open) {
   if (obj.isAndroid()) {
@@ -39,4 +42,5 @@ export const onKeyboardChanged = function onKeyboardChanged(open) {
       onKeyboardChanged(globalThis.open);
     }
   }
+  obj = PlatformUtils;
 };

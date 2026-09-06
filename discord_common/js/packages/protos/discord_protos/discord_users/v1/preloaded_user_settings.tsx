@@ -987,7 +987,7 @@ let items = [
   },
   { no: 2, name: "viewed_tutorial", kind: "scalar", T: 8 },
 ];
-let tmp9 = new "CUSTOM"(
+const tmp9 = new "CUSTOM"(
   "discord_protos.discord_users.v1.InboxSettings",
   items,
   tmp6,
@@ -1293,7 +1293,7 @@ const items2 = [
   { no: 4, name: "last_dismissed_object_id", kind: "scalar", T: 4 },
   { no: 5, name: "num_times_dismissed", kind: "scalar", T: 13 },
 ];
-let tmp11 = new "CUSTOM"(
+const tmp11 = new "CUSTOM"(
   "discord_protos.discord_users.v1.GuildDismissibleContentState",
   items2,
   tmp6,
@@ -1971,7 +1971,7 @@ const items4 = [
     },
   },
 ];
-let tmp14 = new "binaryReadMap12"(
+const tmp14 = new "binaryReadMap12"(
   "discord_protos.discord_users.v1.ChannelSettings",
   items4,
   tmp6,
@@ -2220,7 +2220,7 @@ const items6 = [
   { no: 3, name: "last_dismissed_object_id", kind: "scalar", T: 4 },
   { no: 4, name: "num_times_dismissed", kind: "scalar", T: 13 },
 ];
-let tmp16 = new "binaryReadMap12"(
+const tmp16 = new "binaryReadMap12"(
   "discord_protos.discord_users.v1.RecurringDismissibleContentState",
   items6,
   tmp6,
@@ -2574,7 +2574,7 @@ const items7 = [
   },
   { no: 8, name: "last_gift_intent_dismissed_at_ms", kind: "scalar", T: 6 },
 ];
-let tmp17 = new "binaryReadMap12"(
+const tmp17 = new "binaryReadMap12"(
   "discord_protos.discord_users.v1.UserContentSettings",
   items7,
   tmp6,
@@ -3447,7 +3447,7 @@ const items12 = [
     },
   },
 ];
-let tmp22 = new "binaryReadMap12"(
+const tmp22 = new "binaryReadMap12"(
   "discord_protos.discord_users.v1.GoreContentSettings",
   items12,
   tmp6,
@@ -3609,7 +3609,7 @@ const items13 = [
     },
   },
 ];
-let tmp23 = new "binaryReadMap12"(
+const tmp23 = new "binaryReadMap12"(
   "discord_protos.discord_users.v1.SelfHarmContentSettings",
   items13,
   tmp6,
@@ -6907,7 +6907,7 @@ const items20 = [
     },
   },
 ];
-let tmp33 = new "binaryReadMap12"(
+const tmp33 = new "binaryReadMap12"(
   "discord_protos.discord_users.v1.ChannelListSettings",
   items20,
   tmp6,
@@ -8939,7 +8939,7 @@ const items31 = [
   { no: 1, name: "sound_id", kind: "scalar", T: 6 },
   { no: 2, name: "guild_id", kind: "scalar", T: 6 },
 ];
-let tmp45 = new "binaryReadMap12"(
+const tmp45 = new "binaryReadMap12"(
   "discord_protos.discord_users.v1.CustomCallSound",
   items31,
   tmp6,
@@ -9158,7 +9158,7 @@ const items32 = [
     },
   },
 ];
-let tmp46 = new "binaryReadMap12"(
+const tmp46 = new "binaryReadMap12"(
   "discord_protos.discord_users.v1.BroadcastSettings",
   items32,
   tmp6,
@@ -9517,7 +9517,7 @@ const items35 = [
     },
   },
 ];
-let tmp49 = new "binaryReadMap12"(
+const tmp49 = new "binaryReadMap12"(
   "discord_protos.discord_users.v1.SpendingLimitSettings",
   items35,
   tmp6,

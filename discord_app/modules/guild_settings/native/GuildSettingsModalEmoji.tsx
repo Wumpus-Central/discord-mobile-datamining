@@ -304,17 +304,17 @@ export default function GuildSettingsModalEmoji(contentContainerStyle) {
   if (null == stateFromStores) {
     return null;
   } else {
-    const maxEmojiSlots = tmp(tmp2[12]).getMaxEmojiSlots(stateFromStores);
-    const intl = tmp(tmp2[10]).intl;
+    const maxEmojiSlots = require("GuildBoostingUtils").getMaxEmojiSlots(stateFromStores);
+    const intl = require("util").intl;
     obj = { count: maxEmojiSlots };
     obj = { children: null };
     obj1 = {
       guild: stateFromStores,
-      headerDescription: intl.formatToPlainString(tmp(tmp2[10]).t.TA1BR0, obj),
+      headerDescription: intl.formatToPlainString(require("util").t.TA1BR0, obj),
       computeEmojiItems,
       contentContainerStyle: contentContainerStyle.contentContainerStyle,
     };
-    const items2 = [closure_9(ManageEmojisModal, obj1), closure_9(tmp(tmp2[21]).NavScrim, {})];
+    const items2 = [closure_9(ManageEmojisModal, obj1), closure_9(require("NavScrim").NavScrim, {})];
     obj.children = items2;
     return closure_10(closure_11, obj);
   }

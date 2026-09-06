@@ -122,7 +122,7 @@ export default function createApexExperimentCommon(definition, registerExperimen
         }
         if (!tmp2) {
           const result = _location.trackExperimentExposure(
-            tmp,
+            closure_3,
             logger,
             _location.location,
             closure_2_5,
@@ -212,11 +212,11 @@ export default function createApexExperimentCommon(definition, registerExperimen
         tmp14 = null != tmp12;
       }
       if (tmp14) {
-        const result = obj2.trackExperimentExposure(
+        const result = evaluationAndAssignment.trackExperimentExposure(
           tmp7,
-          tmp5,
+          logger,
           location.location,
-          tmp2,
+          closure_1_5,
           revision,
           trackedVariantId,
           tmp3,
@@ -226,6 +226,10 @@ export default function createApexExperimentCommon(definition, registerExperimen
         return tmp12;
       }
       tmp12 = closure_1_7;
+      const tmp6 = _slicedToArray(
+        evaluationAndAssignment.getEvaluationAndAssignment(closure_1_5, tmp3, logger, tmpResult),
+        2,
+      );
     },
   };
 }

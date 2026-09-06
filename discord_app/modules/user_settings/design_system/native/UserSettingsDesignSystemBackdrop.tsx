@@ -115,17 +115,17 @@ export default function UserSettingsDesignSystemBackdrop() {
     }
     const obj2 = { onDismiss: handleClose, children: null };
     const obj3 = { style: animatedStyle, blur: tmp6, onDismiss: handleClose };
-    const items2 = [tmp13(tmp8(4963).Backdrop, obj3)];
+    const items2 = [closure_6(tmp8(4963).Backdrop, obj3)];
     const obj4 = { style: tmp.backdropContent, pointerEvents: "box-none", children: null };
     const obj5 = { children: null };
     const obj6 = { variant: "text-md/normal", children: null };
     const items3 = ["blur style: ", tmp6];
     obj6.children = items3;
-    obj5.children = tmp11(tmp8(4556).Text, obj6);
-    obj4.children = tmp13(tmp8(5607).Card, obj5);
-    items2[1] = tmp13(closure_5, obj4);
+    obj5.children = closure_7(tmp8(4556).Text, obj6);
+    obj4.children = closure_6(tmp8(5607).Card, obj5);
+    items2[1] = closure_6(closure_5, obj4);
     obj2.children = items2;
-    showBackdrop = tmp11(tmp8(4958).Dialog, obj2);
+    showBackdrop = closure_7(tmp8(4958).Dialog, obj2);
   }
   items1[1] = showBackdrop;
   obj.children = items1;

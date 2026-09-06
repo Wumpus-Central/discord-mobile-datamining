@@ -31,10 +31,10 @@ export const createGroupDMInvite = function createGroupDMInvite(invite, arg1, th
   const t = util.t;
   if (arg1) {
     let str = string(t.qmtuXE);
-    let tmp8 = tmp7;
+    let tmp8 = require;
   } else {
     str = string(t["3p3/BK"]);
-    tmp8 = tmp7;
+    tmp8 = require;
   }
   const intl2 = tmp8(1114).intl;
   const string2 = intl2.string;

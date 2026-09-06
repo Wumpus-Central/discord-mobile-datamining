@@ -1,10 +1,12 @@
 // discord_app/modules/premium/gifting/native/views/GiftingBadgeProgressBanner.tsx
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import util from "../../../../../intl/index.native.tsx";
 import discord_common_AnalyticsUtils from "../../../../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
 import _modDef2492 from "../../GiftingBadge.messages.js";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import useAnalyticsLocationsDefault from "../../../../app_analytics/useAnalyticsLocations.tsx";
 import useTrackImpressionDefault from "../../../../app_analytics/useTrackImpression.tsx";
+import GiftingBadgeIconDefault from "GiftingBadgeIcon.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -59,12 +61,12 @@ export default function GiftingBadgeProgressBanner(arg0) {
   let tmp10Result = null != nextTierIcon;
   if (tmp10Result) {
     const obj1 = { icon: nextTierIcon, size: 24 };
-    tmp10Result = tmp10(tmp2(10749), obj1);
+    tmp10Result = React4(GiftingBadgeIconDefault, obj1);
   }
   obj.children = tmp10Result;
   const items2 = [React4(View, obj)];
   const obj2 = { variant: "text-md/semibold", children: null };
-  const intl = tmp6(1114).intl;
+  const intl = util.intl;
   obj2.children = intl.formatToPlainString(_modDef2492["0+xfd9"], {
     giftsRemaining: giftsToNextTier,
     nextTier: nextTierName,

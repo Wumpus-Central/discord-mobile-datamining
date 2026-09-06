@@ -14,7 +14,7 @@ function Subblocks(style) {
   const subblocks = style.featuredBlock.subblocks;
   return subblocks.map((subblock, tilePosition) => {
     let obj = { newValue: { tilePosition }, children: null };
-    obj = { style, children: <View newValue={{ tilePosition: arg1 }}>{null}</View> };
+    obj = { style, children: <View newValue={{ tilePosition }}>{null}</View> };
     obj = { subblock };
     obj.children = jsx(FeaturedCategorySubblockDefault, { subblock });
     return jsx(CollectiblesAnalyticsContext.CollectiblesAnalyticsProvider, { subblock }, tilePosition);
@@ -57,7 +57,7 @@ export default function FeaturedBlock(featuredBlock) {
     ),
   };
   obj = { featuredBlock: featuredBlock.featuredBlock, style: tmp.featuredSubblock };
-  obj.children = <Subblocks featuredBlock={arg0.featuredBlock} style={tmp.featuredSubblock} />;
+  obj.children = <Subblocks featuredBlock={featuredBlock.featuredBlock} style={tmp.featuredSubblock} />;
   return jsx(useAnalyticsLocations.AnalyticsLocationProvider, {
     featuredBlock: featuredBlock.featuredBlock,
     style: tmp.featuredSubblock,

@@ -22,5 +22,5 @@ export default noop.forwardRef((arg0, ref) => {
   const items = [closure_4().text, style, legacyTextMigrationHighlight];
   obj.style = items;
   obj.children = children;
-  return <Text ref={arg1} />;
+  return <Text ref={ref} />;
 });

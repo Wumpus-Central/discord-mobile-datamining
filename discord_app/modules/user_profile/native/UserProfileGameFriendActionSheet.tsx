@@ -80,8 +80,8 @@ export default function UserProfileGameFriendActionSheet(user) {
   let first = _slicedToArray(
     noop.useState(() => {
       if (!RelationshipStore.isFriend(user.id)) {
-        if (!obj.isBlockedOrIgnored(tmp.id)) {
-          const relationshipType = obj.getRelationshipType(tmp.id);
+        if (!RelationshipStore.isBlockedOrIgnored(user.id)) {
+          const relationshipType = RelationshipStore.getRelationshipType(user.id);
           return (
             relationshipType !== RelationshipTypes.PENDING_OUTGOING &&
             relationshipType !== RelationshipTypes.PENDING_INCOMING
@@ -99,7 +99,7 @@ export default function UserProfileGameFriendActionSheet(user) {
   const items1 = [user.id];
   const items2 = [memo];
   const callback = noop.useCallback(
-    asyncGeneratorStep(async (arg0, value) => {
+    asyncGeneratorStep(async () => {
       if (v32 === 2) {
         v32 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -209,11 +209,11 @@ export default function UserProfileGameFriendActionSheet(user) {
     obj3.disabled = tmp7;
     let tmp12Result = null;
     if (tmp8[0]) {
-      tmp12Result = tmp12(closure_6, {});
+      tmp12Result = closure_10(closure_6, {});
     }
     obj3.trailing = tmp12Result;
-    obj2.children = tmp12(tmp(tmp2[10]).ActionSheetRow, obj3);
-    first = tmp12(tmp(tmp2[10]).ActionSheetRow.Group, obj2);
+    obj2.children = closure_10(tmp(tmp2[10]).ActionSheetRow, obj3);
+    first = closure_10(tmp(tmp2[10]).ActionSheetRow.Group, obj2);
   }
   items3[1] = first;
   obj.children = items3;

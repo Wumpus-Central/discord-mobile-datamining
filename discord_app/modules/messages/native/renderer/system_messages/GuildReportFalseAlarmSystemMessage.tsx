@@ -1,5 +1,6 @@
 // discord_app/modules/messages/native/renderer/system_messages/GuildReportFalseAlarmSystemMessage.tsx
 import util from "../../../../../intl/index.native.tsx";
+import AvatarUtils from "../../../../../utils/AvatarUtils.tsx";
 import utils_AvatarUtils from "../../../../../utils/native/AvatarUtils.tsx";
 import resolveMessageContentColorsDefault from "../resolveMessageContentColors.tsx";
 import useAuthorWithProcessedColor from "useAuthorWithProcessedColor.tsx";
@@ -40,8 +41,7 @@ export const createGuildReportFalseAlarmSystemMessage = function createGuildRepo
     automodUsernameColor = null;
   }
   obj.usernameColor = automodUsernameColor;
-  tmp4(1399);
-  const tmp4Result = tmp4(1396);
+  const tmp4Result = AvatarUtils;
   const tmp7 = getTagPropertiesDefault({ message, channel, isSystemDM: true, colors: tmp2 });
   obj.avatarURL = tmp4Result.ensureAvatarSource(tmp4Result.makeSource(utils_AvatarUtils.getAutomodAvatarURL())).uri;
   const merged1 = Object.assign(tmp7);

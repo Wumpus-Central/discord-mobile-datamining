@@ -1,12 +1,12 @@
 // discord_app/modules/age_gate/native/AgeGateUtils.tsx
 import PlatformUtils from "../../../utils/PlatformUtils.tsx";
+import asyncRequireImpl from "../../../../_runtime/01896_asyncRequireImpl.js";
 import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
+import AgeRestrictedContentSettingsUtils from "../../user_settings/content_and_social/AgeRestrictedContentSettingsUtils.tsx";
 import GuildStore from "../../../stores/GuildStore.tsx";
 import PermissionStore from "../../../stores/PermissionStore.tsx";
 import UserStore from "../../../stores/UserStore.tsx";
 
-const asyncRequireImpl = tmp(1896);
-const AgeRestrictedContentSettingsUtils = tmp(9296);
 require = fn;
 const Constants = fn(1074);
 const GuildNSFWContentLevel = Constants.GuildNSFWContentLevel;
@@ -65,15 +65,14 @@ export const handleNSFWGuildInvite = function handleNSFWGuildInvite(invite) {
         }
       }
       obj = { guildId: id };
-      obj2.pushLazy(asyncRequireImpl(10295, tmp2.paths), obj);
+      obj2.pushLazy(asyncRequireImpl(10295, dependencyMap.paths), obj);
       flag2 = true;
-      const tmp12 = asyncRequireImpl(10295, tmp2.paths);
+      const tmp12 = asyncRequireImpl(10295, dependencyMap.paths);
     }
     return flag2;
   } else {
     return false;
   }
-  tmp2 = dependencyMap;
 };
 export const shouldNSFWGateGuild = function shouldNSFWGateGuild(guildId) {
   if (obj.isIOS()) {

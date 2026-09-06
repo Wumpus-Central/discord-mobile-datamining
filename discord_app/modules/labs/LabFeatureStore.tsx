@@ -13,7 +13,6 @@ prototype["getUserAgnosticState"] = function getUserAgnosticState() {
 prototype["initialize"] = function initialize(toggleStates) {
   for (const key10008 in LabFeaturesDefault) {
     let flag;
-    let tmp2 = closure_2;
     if (arg0 != null) {
       toggleStates = arg0.toggleStates;
       if (toggleStates != null) {
@@ -23,7 +22,7 @@ prototype["initialize"] = function initialize(toggleStates) {
     if (flag == null) {
       flag = false;
     }
-    tmp2[key10008] = flag;
+    closure_2[key10008] = flag;
     continue;
   }
 };

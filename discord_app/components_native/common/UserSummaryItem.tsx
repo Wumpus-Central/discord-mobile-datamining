@@ -89,7 +89,7 @@ export default function UserSummaryItem(users) {
           let fn = obj2.makeSource(null);
           if (null != tmp12) {
             importDefault = obj[tmp12.id];
-            fn = function u(flag) {
+            fn = function u() {
               if (flag === undefined) {
                 flag = false;
               }
@@ -100,16 +100,16 @@ export default function UserSummaryItem(users) {
               );
               let avatar;
               if (closure_1 != null) {
-                avatar = tmp3.avatar;
+                avatar = closure_1.avatar;
               }
               let tmp5 = avatarURL;
               if (null != avatar) {
-                let guildMemberAvatarURL = closure_1(tmp[8]).getGuildMemberAvatarURL(tmp3, flag);
+                let guildMemberAvatarURL = closure_1(avatarSize[8]).getGuildMemberAvatarURL(closure_1, flag);
                 if (guildMemberAvatarURL == null) {
                   guildMemberAvatarURL = avatarURL;
                 }
                 tmp5 = guildMemberAvatarURL;
-                obj = closure_1(tmp[8]);
+                obj = closure_1(avatarSize[8]);
               }
               return closure_1(avatarSize[8]).makeSource(tmp5);
             };

@@ -1,4 +1,5 @@
 // discord_app/modules/game_profile/AnnouncementMessageUtils.tsx
+import util from "../../intl/index.native.tsx";
 import URLUtilsDefault from "../../utils/URLUtils.tsx";
 import MessageRecord from "../../records/MessageRecord.tsx";
 import useFormattedExpirationLabel from "../polls/chat/useFormattedExpirationLabel.tsx";
@@ -96,7 +97,7 @@ export const toAnnouncementMessages = function toAnnouncementMessages(messages) 
         }
         let tmp32;
         if (joined !== tmp2Result.content) {
-          if (!tmp5(tmp2Result)) {
+          if (!closure_3(tmp2Result)) {
             const first2 = tmp2Result.embeds[0];
             let tmp34;
             if (null != first2) {
@@ -235,13 +236,14 @@ export const toAnnouncementMessages = function toAnnouncementMessages(messages) 
         }
       }
     }
+    const tmp2 = found5(found6[4]);
   });
 };
 export const getPollExpiryLabel = function getPollExpiryLabel(poll) {
   let result = useFormattedExpirationLabel.formatExpirationLabel(poll.expiry);
   if (result == null) {
-    const intl = tmp(1114).intl;
-    result = intl.string(tmp(1114).t["e+J3JZ"]);
+    const intl = util.intl;
+    result = intl.string(util.t["e+J3JZ"]);
   }
   return result;
 };

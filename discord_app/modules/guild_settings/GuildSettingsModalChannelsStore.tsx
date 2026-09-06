@@ -87,6 +87,7 @@ function buildSortedChannels() {
     });
     closure_14 = arr4.map((channel) => channel.channel.id);
   }
+  const arr3 = getFlattedChannelListDefault(_null._categories, _null);
 }
 let closure_3 = ["lock_permissions", "id"];
 const ChannelRecord = fn(1961);
@@ -218,6 +219,18 @@ const guildSettingsModalChannelsStoreClass = new GuildSettingsModalChannelsStore
       const set = new Set(sortingType);
       c17 = set;
       if (null != _null) {
+        closure_14 = getFlattedChannelListDefault(_null._categories, _null, (channel) => {
+          channel = channel.channel;
+          let tmp = channel.type === constants.GUILD_CATEGORY;
+          if (!tmp) {
+            let hasItem = null != set;
+            if (hasItem) {
+              hasItem = set.has(channel.type);
+            }
+            tmp = hasItem;
+          }
+          return tmp;
+        }).map((channel) => channel.channel.id);
         arr = getFlattedChannelListDefault(_null._categories, _null, (channel) => {
           channel = channel.channel;
           let tmp = channel.type === constants.GUILD_CATEGORY;
@@ -230,13 +243,24 @@ const guildSettingsModalChannelsStoreClass = new GuildSettingsModalChannelsStore
           }
           return tmp;
         });
-        closure_14 = arr.map((channel) => channel.channel.id);
       }
     }
   },
   GUILD_SETTINGS_MODAL_CHANNELS_STOP_REORDER: function handleStopReorder() {
     c17 = null;
     if (null != _null) {
+      closure_14 = getFlattedChannelListDefault(_null._categories, _null, (channel) => {
+        channel = channel.channel;
+        let tmp = channel.type === constants.GUILD_CATEGORY;
+        if (!tmp) {
+          let hasItem = null != set;
+          if (hasItem) {
+            hasItem = set.has(channel.type);
+          }
+          tmp = hasItem;
+        }
+        return tmp;
+      }).map((channel) => channel.channel.id);
       arr = getFlattedChannelListDefault(_null._categories, _null, (channel) => {
         channel = channel.channel;
         let tmp = channel.type === constants.GUILD_CATEGORY;
@@ -249,7 +273,6 @@ const guildSettingsModalChannelsStoreClass = new GuildSettingsModalChannelsStore
         }
         return tmp;
       });
-      closure_14 = arr.map((channel) => channel.channel.id);
     }
   },
   GUILD_SETTINGS_MODAL_LOCAL_SORT_CHANGE: function handleLocalSortChange(updates) {

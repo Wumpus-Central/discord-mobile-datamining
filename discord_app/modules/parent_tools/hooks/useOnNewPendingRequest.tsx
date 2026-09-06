@@ -6,8 +6,8 @@ const require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/parent_tools/hooks/useOnNewPendingRequest.tsx");
 
-export default function useOnNewPendingRequest(set) {
-  _require = set;
+export default function useOnNewPendingRequest(current) {
+  _require = current;
   const pendingRequestCount = require("useUserLinks").usePendingRequestCount();
   let obj = require("useUserLinks");
   const items = [ref2];
@@ -19,8 +19,8 @@ export default function useOnNewPendingRequest(set) {
       const obj = pendingRequestCount(stateFromStores[5]);
     }
   });
-  noop = noop.useRef(set);
-  const items1 = [set];
+  noop = noop.useRef(current);
+  const items1 = [current];
   const effect = noop.useEffect(() => {
     closure_3.current = current;
   }, items1);
@@ -29,12 +29,12 @@ export default function useOnNewPendingRequest(set) {
   const effect1 = noop.useEffect(() => {
     if (stateFromStores) {
       if (null != ref2.current) {
-        tmp.current = pendingRequestCount;
-        if (pendingRequestCount > tmp.current) {
+        ref2.current = pendingRequestCount;
+        if (pendingRequestCount > ref2.current) {
           ref.current();
         }
       } else {
-        tmp.current = pendingRequestCount;
+        ref2.current = pendingRequestCount;
       }
     }
   }, items2);

@@ -15,15 +15,15 @@ export const getIconForChannel = function getIconForChannel(stateFromStores) {
   const type = stateFromStores.type;
   if (ChannelTypes.GUILD_ANNOUNCEMENT === type) {
     return AnnouncementsIcon.AnnouncementsIcon;
-  } else if (tmp.GUILD_VOICE === type) {
+  } else if (ChannelTypes.GUILD_VOICE === type) {
     return VoiceNormalIcon.VoiceNormalIcon;
-  } else if (tmp.GUILD_STAGE_VOICE === type) {
+  } else if (ChannelTypes.GUILD_STAGE_VOICE === type) {
     return StageIcon.StageIcon;
-  } else if (tmp.GUILD_TEXT === type) {
+  } else if (ChannelTypes.GUILD_TEXT === type) {
     return TextIcon.TextIcon;
-  } else if (tmp.GUILD_FORUM === type) {
+  } else if (ChannelTypes.GUILD_FORUM === type) {
     return ForumIcon.ForumIcon;
-  } else if (tmp.GUILD_MEDIA === type) {
+  } else if (ChannelTypes.GUILD_MEDIA === type) {
     return ImageIcon.ImageIcon;
   } else {
     return TextIcon.TextIcon;

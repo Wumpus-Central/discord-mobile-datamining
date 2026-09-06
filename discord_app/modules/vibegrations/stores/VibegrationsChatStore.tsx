@@ -241,7 +241,7 @@ function recordThinkingTransition(projectId) {
     let result = obj.set(projectId, tmp);
     const index = closure_22.indexOf(projectId);
     if (-1 !== index) {
-      arr5.splice(index, 1);
+      closure_22.splice(index, 1);
     }
     closure_22.unshift(projectId);
     if (tmp) {
@@ -282,9 +282,9 @@ function recordThinkingTransition(projectId) {
       }
       if (tmp7) {
         const _Date = Date;
-        const result1 = obj3.set(projectId, Date.now());
+        const result1 = map1.set(projectId, Date.now());
       } else {
-        obj3.delete(projectId);
+        map1.delete(projectId);
       }
       value = map.get(projectId);
       if (null != value) {
@@ -338,7 +338,7 @@ function recordThinkingTransition(projectId) {
           let guild_id = null;
           if (null != guildId) {
             guild_id = null;
-            if (obj5.getSelectedProjectId(guildId) === projectId) {
+            if (VibegrationsProjectStore.getSelectedProjectId(guildId) === projectId) {
               guild_id = guildId;
             }
           }
@@ -347,8 +347,8 @@ function recordThinkingTransition(projectId) {
             isWindowFocusedResult = SelectedChannelStore.getChannelId() === StaticChannelRoute.VIBEGRATIONS;
           }
           if (isWindowFocusedResult) {
-            isWindowFocusedResult = tmp68(16588).isWindowFocused();
-            const tmp68Result = tmp68(16588);
+            isWindowFocusedResult = VibegrationsPlatformUtilsDefault.isWindowFocused();
+            const tmp68Result = VibegrationsPlatformUtilsDefault;
           }
           if (guild_id == null) {
             guild_id = project.guild_id;
@@ -435,9 +435,7 @@ function recordThinkingTransition(projectId) {
             }
           }
         }
-        tmp68 = importDefault;
       }
-      obj5 = VibegrationsProjectStore;
     }
   }
 }
@@ -447,11 +445,10 @@ function purgeProject(arg0) {
   const deleteResult2 = map1.delete(arg0);
   const deleteResult3 = map2.delete(arg0);
   const deleteResult4 = map3.delete(arg0);
-  const arr = closure_22;
   const deleteResult5 = map4.delete(arg0);
   const index = closure_22.indexOf(arg0);
   if (-1 !== index) {
-    arr.splice(index, 1);
+    closure_22.splice(index, 1);
   }
   if (!deleteResult) {
     deleteResult = deleteResult2;
@@ -473,7 +470,7 @@ function purgeProject(arg0) {
   }
   return deleteResult;
 }
-function openTimeline(steps) {
+function openTimeline() {
   let items = steps;
   if (steps === undefined) {
     items = [];
@@ -680,25 +677,23 @@ const vibegrationsChatStore = new VibegrationsChatStore(DispatcherDefault, {
   },
   VIBEGRATIONS_CHAT_HISTORY_SET: function handleChatHistorySet(arg0) {
     ({ projectId, entries, cursor } = arg0);
-    set = undefined;
     if (cursor == null) {
       cursor = null;
     }
     const result = map5.set(projectId, cursor);
     map4.delete(projectId);
     set1.delete(projectId);
-    set = new Set();
+    new Set();
     const found = entries.filter((id) => {
       let tmp = null == id.id;
       if (!tmp) {
         const hasItem = set.has(id.id);
         let flag = !hasItem;
         if (!hasItem) {
-          obj.add(id.id);
+          set.add(id.id);
           flag = true;
         }
         tmp = flag;
-        obj = set;
       }
       return tmp;
     });
@@ -773,12 +768,11 @@ const vibegrationsChatStore = new VibegrationsChatStore(DispatcherDefault, {
         const items1 = [];
         items1[HermesBuiltin.arraySpread(items, 0)] = tmp2;
         if (!hasOpenTurn(items1)) {
-          items1.push(tmp("assistant", ""));
+          items1.push(newMessage("assistant", ""));
         }
         const result1 = obj.set(projectId, items1);
         recordThinkingTransition(projectId);
       }
-      tmp = newMessage;
     }
   },
   VIBEGRATIONS_CHAT_MESSAGE_DISPOSITION: function handleChatMessageDisposition(arg0) {
@@ -844,6 +838,7 @@ const vibegrationsChatStore = new VibegrationsChatStore(DispatcherDefault, {
             );
             const result = obj.set(projectId, items1);
             recordThinkingTransition(projectId);
+            const arraySpreadResult2 = HermesBuiltin.arraySpread(arr3.slice(num4 + 1), arraySpreadResult1 + 1);
           }
         }
         if (arr3 !== value) {
@@ -906,7 +901,7 @@ const vibegrationsChatStore = new VibegrationsChatStore(DispatcherDefault, {
       someResult = value.some((disposition) => null != disposition.disposition);
     }
     if (someResult) {
-      const result = obj.set(
+      const result = map.set(
         projectId,
         value.map((disposition) => {
           if (null == disposition.disposition) {
@@ -954,9 +949,8 @@ const vibegrationsChatStore = new VibegrationsChatStore(DispatcherDefault, {
       tmp3.interrupted = true;
       const items = [];
       items[HermesBuiltin.arraySpread(value, 0)] = tmp3;
-      const result = obj.set(projectId, items);
+      const result = map.set(projectId, items);
     }
-    obj = map;
   },
   VIBEGRATIONS_CHAT_PROVISIONAL_TODO: function handleChatProvisionalTodo(text) {
     ({ projectId, turnId } = text);
@@ -1015,9 +1009,9 @@ const vibegrationsChatStore = new VibegrationsChatStore(DispatcherDefault, {
     if (compacting === set1.has(projectId)) {
       return false;
     } else if (compacting) {
-      obj.add(projectId);
+      set1.add(projectId);
     } else {
-      obj.delete(projectId);
+      set1.delete(projectId);
     }
   },
   VIBEGRATIONS_CHAT_USAGE_SET: function handleChatUsageSet(projectId) {
@@ -1127,11 +1121,10 @@ const vibegrationsChatStore = new VibegrationsChatStore(DispatcherDefault, {
     const deleteResult2 = map1.delete(projectId);
     const deleteResult3 = map2.delete(projectId);
     const deleteResult4 = map3.delete(projectId);
-    const arr = closure_22;
     const deleteResult5 = map4.delete(projectId);
     const index = closure_22.indexOf(projectId);
     if (-1 !== index) {
-      arr.splice(index, 1);
+      closure_22.splice(index, 1);
     }
     if (!deleteResult) {
       deleteResult = deleteResult2;

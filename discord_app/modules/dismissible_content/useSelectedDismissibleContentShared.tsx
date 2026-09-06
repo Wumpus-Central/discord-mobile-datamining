@@ -7,7 +7,7 @@ const ContentDismissActionType = fn(1954).ContentDismissActionType;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/dismissible_content/useSelectedDismissibleContentShared.tsx");
 
-export const useSelectedDismissibleContentShared = function useSelectedDismissibleContentShared(arg0, arg1, flag, id) {
+export const useSelectedDismissibleContentShared = function useSelectedDismissibleContentShared(arg0, arg1) {
   _require = arg0;
   dependencyMap = arg1;
   if (flag === undefined) {

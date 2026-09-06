@@ -11,8 +11,7 @@ function convertOldFormError(captcha_key) {
     let tmp5 = _slicedToArray(tmp3, 2);
     [tmp6, tmp8] = tmp5;
     if ("_misc" !== tmp6) {
-      obj = {};
-      obj._errors = convertStringArrayToSkemaErrorItems(tmp8);
+      obj = { _errors: convertStringArrayToSkemaErrorItems(tmp8) };
       obj[tmp7] = obj;
     } else {
       obj._errors = convertStringArrayToSkemaErrorItems(tmp8);

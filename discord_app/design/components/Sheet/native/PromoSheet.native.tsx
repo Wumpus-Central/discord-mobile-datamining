@@ -49,12 +49,12 @@ export const PromoSheet = function PromoSheet(arg0) {
     obj = {};
     const merged1 = Object.assign(graphic);
     obj.style = tmp2.graphic;
-    let tmp4Result = tmp4(tmp5(10232).Graphic, obj);
+    let tmp4Result = closure_7(gradientColor(10232).Graphic, obj);
   } else {
     tmp4Result = null;
     if (null != illustration) {
       obj = { style: tmp2.illustration, children: illustration };
-      tmp4Result = tmp4(View, obj);
+      tmp4Result = closure_7(View, obj);
     }
   }
   const items1 = [tmp4Result, ,];
@@ -74,7 +74,7 @@ export const PromoSheet = function PromoSheet(arg0) {
       style: tmp2.description,
       children: description,
     };
-    tmp4Result = tmp4(tmp5(4556).Text, obj2);
+    tmp4Result = closure_7(gradientColor(4556).Text, obj2);
   }
   const obj3 = { spacing: 24, children: null };
   items2[1] = tmp4Result;

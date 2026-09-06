@@ -29,10 +29,10 @@ function getEmoji(guildId) {
     }
   }
 }
-function buildGuildProfileTraitsFromServer(guildId, arg1) {
+function buildGuildProfileTraitsFromServer(guildId, traits) {
   const array = new Array(GuildProfileLimits.MAX_TRAITS);
   const fillResult = array.fill(closure_5);
-  const iter = arg1[Symbol.iterator]();
+  const iter = traits[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
     let tmp3 = nextResult;

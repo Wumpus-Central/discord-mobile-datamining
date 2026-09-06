@@ -36,13 +36,13 @@ function DemoActionSheet() {
   let tmp14Result = first;
   if (first) {
     obj = { onPress: NOOP, label: tmp12 };
-    tmp14Result = tmp14(tmp15(9718).ActionSheetHeaderPressableText, obj);
+    tmp14Result = React5(tmp15(9718).ActionSheetHeaderPressableText, obj);
   }
   obj.leading = tmp14Result;
   tmp14Result = tmp2;
   if (tmp2) {
     obj = { onPress: NOOP };
-    tmp14Result = tmp14(tmp15(7199).ActionSheetCloseButton, obj);
+    tmp14Result = React5(tmp15(7199).ActionSheetCloseButton, obj);
   }
   const obj1 = { header: React5(BottomSheetTitleHeader.BottomSheetTitleHeader, obj), children: null };
   obj.trailing = tmp14Result;

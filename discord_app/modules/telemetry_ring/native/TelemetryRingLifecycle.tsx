@@ -34,10 +34,10 @@ prototype["_updateZoomedInExport"] = function _updateZoomedInExport() {
   }
   const result = ProcessUtilsDefault.setShouldCollectHermesInstrumentedStats(shouldRunResult);
   if (state === AppStates.ACTIVE) {
-    let tmp6Result = tmp6(1899);
+    let tmp6Result = ZoomedInTelemetryDefault;
     tmp6Result.start();
   } else {
-    tmp6Result = tmp6(1899);
+    tmp6Result = ZoomedInTelemetryDefault;
     tmp6Result.stop();
   }
 };
@@ -67,9 +67,9 @@ prototype["_terminate"] = function _terminate() {
     const result = self._experimentUnsubscribe();
     self._experimentUnsubscribe = null;
   }
-  let tmpResult = tmp(1899);
+  let tmpResult = ZoomedInTelemetryDefault;
   tmpResult.stop();
-  tmpResult = tmp(1359);
+  tmpResult = ProcessUtilsDefault;
   const result1 = tmpResult.setShouldCollectHermesInstrumentedStats(false);
   self._initialized = false;
 };

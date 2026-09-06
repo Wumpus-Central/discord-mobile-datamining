@@ -1,12 +1,12 @@
 // discord_app/components_native/QRCode.tsx
 import nativeDefault from "../../discord_common/js/packages/tokens/native.tsx";
+import VisualEffectViewDefault from "../modules/visual_effect_view/native/VisualEffectView.tsx";
 import VisualEffectViewThemedDefault from "../modules/visual_effect_view/native/VisualEffectViewThemed.tsx";
 import QRCodeDefault from "../../_runtime/09865_QRCode.js";
 import _mod9879 from "../../_runtime/metro/09879__.js";
 import _objectWithoutProperties from "../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../_runtime/metro/00019__.js";
 
-const VisualEffectViewDefault = tmp7(4965);
 require = fn;
 let closure_3 = ["style", "text", "blur", "accessibilityLabel"];
 get_ActivityIndicator = fn(17);
@@ -55,16 +55,15 @@ QRCode.prototype["render"] = function render() {
   obj = { style: { position: "relative", width: tmp2.size, height: tmp2.size }, children: null };
   obj = { value: text, level: "M" };
   const tmp = closure_10(this.context);
-  const tmp6 = React7;
   const merged = Object.assign(tmp2);
   const items1 = [React6(QRCodeDefault, obj)];
   if (blur) {
     obj1 = { style: React5.absoluteFill, blurTheme: "dark" };
-    tmp3Result = tmp3(VisualEffectViewDefault, obj1);
+    tmp3Result = React6(VisualEffectViewDefault, obj1);
   }
   items1[1] = tmp3Result;
   obj.children = items1;
-  obj.children = tmp6(hasOwnProperty, obj);
+  obj.children = React7(hasOwnProperty, obj);
   return React6(hasOwnProperty, obj);
 };
 QRCode.contextType = fn(4271).ThemeContext;

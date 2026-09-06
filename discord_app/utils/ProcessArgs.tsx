@@ -28,7 +28,7 @@ prototype["get"] = function get() {
     if (mainArgvSync == null) {
       mainArgvSync = [];
     }
-    tmp.cached = mainArgvSync;
+    prototype.cached = mainArgvSync;
   }
   return prototype.cached;
 };

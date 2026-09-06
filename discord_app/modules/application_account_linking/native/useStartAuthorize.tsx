@@ -42,7 +42,7 @@ export default function useStartAuthorize(getOfficialApplicationId) {
   }
   const authorizedAppsToken = require("useAuthorizedAppsToken").useAuthorizedAppsToken(parentId);
   ({ token, fetched } = authorizedAppsToken);
-  _require = asyncGeneratorStep(async (arg0, value) => {
+  _require = asyncGeneratorStep(async (arg0) => {
     if (c6 === 2) {
       c6 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -185,4 +185,5 @@ export default function useStartAuthorize(getOfficialApplicationId) {
     }
     obj.validFlows = items2;
   }
+  const tmp2Result = require("useAuthorizedAppsToken");
 }

@@ -44,7 +44,7 @@ export default function AppChannelApplicationSelector(guildId) {
   let tmp5Result = null;
   if (null != selectedApplication) {
     const obj1 = { application: selectedApplication };
-    tmp5Result = tmp5(channelId(tmp2[6]), obj1);
+    tmp5Result = jsx(channelId(tmp2[6]), { application: selectedApplication });
   }
   obj.icon = tmp5Result;
   let fn;

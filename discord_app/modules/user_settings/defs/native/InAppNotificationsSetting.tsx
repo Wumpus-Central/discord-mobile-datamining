@@ -34,8 +34,8 @@ const toggle = SettingBuilders.createToggle({
   useDescription: function useInAppNotificationsDescription() {
     let stringResult;
     if (obj.useFocusModeEnabled()) {
-      const intl = tmp(1114).intl;
-      stringResult = intl.string(tmp(1114).t.cIRG0s);
+      const intl = util.intl;
+      stringResult = intl.string(util.t.cIRG0s);
     }
     return stringResult;
   },

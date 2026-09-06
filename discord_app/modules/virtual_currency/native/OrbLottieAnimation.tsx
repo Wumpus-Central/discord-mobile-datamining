@@ -1,13 +1,15 @@
 // discord_app/modules/virtual_currency/native/OrbLottieAnimation.tsx
 import shared from "../../../design/shared.tsx";
 import useTheme from "../../../hooks/useTheme.tsx";
+import SpendEarnOrbsLightThemeLottie from "../../../design/components/LottieIcon/native/generated/SpendEarnOrbsLightThemeLottie.tsx";
+import SpendEarnOrbsLottie2 from "../../../design/components/LottieIcon/native/generated/SpendEarnOrbsLottie.tsx";
 import "module_19";
 
 require = fn;
 const noop = fn(19);
 ({ useRef: c3, useEffect: closure_4, forwardRef } = noop);
 const jsx = fn(21).jsx;
-const forwardRefResult = forwardRef((animationType, ref) => {
+const forwardRefResult = forwardRef((animationType, arg1) => {
   animationType = animationType.animationType;
   const theme = useTheme.useTheme();
   const tmp5 = React3(null);
@@ -20,7 +22,7 @@ const forwardRefResult = forwardRef((animationType, ref) => {
       }
     }
   }, items);
-  const imperativeHandle = noop.useImperativeHandle(ref, () => ({
+  const imperativeHandle = noop.useImperativeHandle(arg1, () => ({
     play() {
       const current = ref.current;
       let playResult;
@@ -31,9 +33,9 @@ const forwardRefResult = forwardRef((animationType, ref) => {
     },
   }));
   if (isThemeLightResult) {
-    let SpendEarnOrbsLottie = tmp(11094).SpendEarnOrbsLightThemeLottie;
+    let SpendEarnOrbsLottie = SpendEarnOrbsLightThemeLottie.SpendEarnOrbsLightThemeLottie;
   } else {
-    SpendEarnOrbsLottie = tmp(11096).SpendEarnOrbsLottie;
+    SpendEarnOrbsLottie = SpendEarnOrbsLottie2.SpendEarnOrbsLottie;
   }
   const size = {
     ref: tmp5,

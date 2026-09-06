@@ -75,9 +75,6 @@ prototype["renderIcon"] = function renderIcon() {
     let obj = { style: tmp.iconUploaderWrapper, children: null };
     obj = {};
     const tmp11 = _objectWithoutProperties(iconProps, closure_3);
-    const tmp12 = React6;
-    const tmp13 = hasOwnProperty;
-    const tmp14 = React5;
     const merged = Object.assign(tmp11);
     const items = [React5(IconUploaderDefault, obj)];
     let tmp14Result = null;
@@ -87,11 +84,11 @@ prototype["renderIcon"] = function renderIcon() {
       obj1.style = items1;
       const merged1 = Object.assign(errorProps);
       obj1.children = error;
-      tmp14Result = tmp14(native.LegacyText, obj1);
+      tmp14Result = React5(native.LegacyText, obj1);
     }
     items[1] = tmp14Result;
     obj.children = items;
-    return tmp12(tmp13, obj);
+    return React6(hasOwnProperty, obj);
   } else {
     if (null == source) {
       obj = shared;

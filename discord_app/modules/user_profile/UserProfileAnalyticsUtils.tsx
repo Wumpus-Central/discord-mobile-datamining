@@ -192,9 +192,9 @@ function getTrackUserProfileProperties(dependencyMap) {
     }
     obj.profile_frame_sku_id = skuId2;
     id = user.id;
-    const status = obj5.getStatus(id);
+    const status = PresenceStore.getStatus(id);
     if (status === StatusTypes.ONLINE) {
-      if (obj5.isMobileOnline(id)) {
+      if (PresenceStore.isMobileOnline(id)) {
         const _HermesInternal2 = HermesInternal;
         let combined = "" + status + "-mobile";
       }
@@ -216,11 +216,10 @@ function getTrackUserProfileProperties(dependencyMap) {
       return obj;
     }
     combined = status;
-    if (status === tmp14.ONLINE) {
+    if (status === StatusTypes.ONLINE) {
       const _HermesInternal = HermesInternal;
       combined = "" + status + "-desktop";
     }
-    tmp14 = StatusTypes;
   }
 }
 function trackUserProfileAction(dependencyMap) {
@@ -267,9 +266,8 @@ function trackUserProfileAction(dependencyMap) {
   if (null != applicationId) {
     tmp8 = null;
     if (AuthorizedAppsStore.getFetchStateForApplication(applicationId) === FetchState.FETCHED) {
-      tmp8 = null != obj7.getNewestTokenForApplication(applicationId);
+      tmp8 = null != AuthorizedAppsStore.getNewestTokenForApplication(applicationId);
     }
-    obj7 = AuthorizedAppsStore;
   }
   obj1.application_linked = tmp8;
   const merged4 = Object.assign(obj1);
@@ -381,9 +379,9 @@ export const maybeTrackUserProfileUiViewed = function maybeTrackUserProfileUiVie
     }
     if (!tmp5) {
       trackResult = {};
-      let tmpResult = tmp(4740);
+      let tmpResult = AppAnalyticsUtils;
       const merged = Object.assign(tmpResult.collectGuildAnalyticsMetadata(guildId));
-      tmpResult = tmp(4740);
+      tmpResult = AppAnalyticsUtils;
       const merged1 = Object.assign(tmpResult.collectChannelAnalyticsMetadataFromId(channelId));
       const merged2 = Object.assign(getTrackUserProfileProperties(userId));
       userId = userId.userId;
@@ -731,9 +729,8 @@ export const trackUserProfileEditAction = function trackUserProfileEditAction(de
   if (null != applicationId) {
     tmp6 = null;
     if (AuthorizedAppsStore.getFetchStateForApplication(applicationId) === FetchState.FETCHED) {
-      tmp6 = null != obj7.getNewestTokenForApplication(applicationId);
+      tmp6 = null != AuthorizedAppsStore.getNewestTokenForApplication(applicationId);
     }
-    obj7 = AuthorizedAppsStore;
   }
   obj.application_linked = tmp6;
   const merged4 = Object.assign(obj);

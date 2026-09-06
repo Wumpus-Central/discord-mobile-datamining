@@ -1,6 +1,7 @@
 // discord_app/modules/app_launcher/native/screens/command_view/CommandOptionView.tsx
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import ReanimatedRexportDefault from "../../../../reanimated/ReanimatedRexport.tsx";
+import _modDef10415 from "../../../../../../_runtime/metro/10415__.js";
 import AppLauncherCommandOptionDefault from "../../options/AppLauncherCommandOption.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../../a11y/AccessibilityStore.tsx";
@@ -111,7 +112,7 @@ export default function CommandOptionView(option) {
         color: "text-subtle",
         children: option.displayName,
       };
-      tmp17Result = tmp17(tmp2(4556).Text, obj4);
+      tmp17Result = closure_5(tmp2(4556).Text, obj4);
     }
     const items2 = [tmp17Result, , ,];
     const obj5 = {
@@ -151,16 +152,16 @@ export default function CommandOptionView(option) {
         style: tmp.optionErrorContainer,
         children: null,
       };
-      const obj8 = { style: tmp.optionErrorIcon, source: tmp18(10415), size: tmp2(1178).IconSizes.REFRESH_SMALL_16 };
-      const items3 = [tmp17(tmp2(1178).Icon, obj8)];
+      const obj8 = { style: tmp.optionErrorIcon, source: _modDef10415, size: tmp2(1178).IconSizes.REFRESH_SMALL_16 };
+      const items3 = [closure_5(tmp2(1178).Icon, obj8)];
       const obj9 = {
         variant: "text-xs/medium",
         color: "text-feedback-critical",
         children: optionValidationResults[option.name].error,
       };
-      items3[1] = tmp17(tmp2(4556).Text, obj9);
+      items3[1] = closure_5(tmp2(4556).Text, obj9);
       obj7.children = items3;
-      hasItem = tmp19(tmp18(4296).View, obj7);
+      hasItem = closure_6(ReanimatedRexportDefault.View, obj7);
     }
     items2[3] = hasItem;
     obj3.children = items2;

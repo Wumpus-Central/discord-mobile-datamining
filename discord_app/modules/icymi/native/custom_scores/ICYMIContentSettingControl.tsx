@@ -34,7 +34,7 @@ function ContentSettingsControl(initialValue) {
   obj.icon = closure_8(native.Icon, obj);
   const items1 = [obj, ,];
   obj = { label: null, id: "0", icon: null, page: null };
-  const intl2 = tmp4(1114).intl;
+  const intl2 = util.intl;
   obj.label = intl2.string(util.t.SnrG00);
   const obj1 = { source: _modDef16461, style: null };
   const items2 = [tmp.icon];
@@ -47,7 +47,7 @@ function ContentSettingsControl(initialValue) {
   obj.icon = closure_8(native.Icon, obj1);
   items1[1] = obj;
   const obj2 = { label: null, id: "1", icon: null, page: null };
-  const intl3 = tmp4(1114).intl;
+  const intl3 = util.intl;
   obj2.label = intl3.string(util.t.Rxe3jF);
   const obj3 = { source: _modDef16462, style: null };
   const items3 = [tmp.icon];
@@ -65,9 +65,9 @@ function ContentSettingsControl(initialValue) {
     onSetActiveIndex(arg0) {
       let MORE = ICYMIUtils.ICYMICustomScore.DEFAULT;
       if (0 === arg0) {
-        MORE = tmp(8350).ICYMICustomScore.LESS;
+        MORE = ICYMIUtils.ICYMICustomScore.LESS;
       } else if (2 === arg0) {
-        MORE = tmp(8350).ICYMICustomScore.MORE;
+        MORE = ICYMIUtils.ICYMICustomScore.MORE;
       }
       _undefined(MORE);
       closure_1_0(MORE);
@@ -78,7 +78,7 @@ function ContentSettingsControl(initialValue) {
   let num = 0;
   if (ICYMIUtils.ICYMICustomScore.LESS !== tmp3) {
     num = 1;
-    if (tmp4(8350).ICYMICustomScore.MORE === tmp3) {
+    if (ICYMIUtils.ICYMICustomScore.MORE === tmp3) {
       num = 2;
     }
   }
@@ -162,8 +162,8 @@ export const GuildScoreSettings = function GuildScoreSettings(guild) {
   if (!tmp5) {
     const obj2 = { style: tmp8.customScoreWrapper, children: null };
     let obj3 = { initialValue: numberToCustomScoreResult, onValueUpdated: callback1 };
-    obj2.children = tmp11(ContentSettingsControl, obj3);
-    tmp11Result = tmp11(tmp10, obj2);
+    obj2.children = closure_8(ContentSettingsControl, obj3);
+    tmp11Result = closure_8(View, obj2);
   }
   items3[2] = tmp11Result;
   let muted = tmp5;
@@ -246,8 +246,8 @@ export const ChannelScoreSettings = function ChannelScoreSettings(channel) {
   if (!tmp8) {
     obj1 = { style: tmp11.customScoreWrapper, children: null };
     obj2 = { disabled: tmp7, initialValue: stateFromStores, onValueUpdated: callback };
-    obj1.children = tmp14(ContentSettingsControl, obj2);
-    tmp14Result = tmp14(tmp13, obj1);
+    obj1.children = closure_8(ContentSettingsControl, obj2);
+    tmp14Result = closure_8(View, obj1);
   }
   items4[2] = tmp14Result;
   let muted = tmp8;

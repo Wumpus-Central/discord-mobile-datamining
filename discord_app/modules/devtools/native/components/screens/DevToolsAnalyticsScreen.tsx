@@ -58,7 +58,7 @@ function LoggedEvent(arg0) {
     obj = { collapsable: false, children: null };
     items[1] = tmp2;
     obj.children = items;
-    return tmp4(tmp5, obj);
+    return closure_9(View, obj);
   } else {
     obj = { style: map.detailsContainer, children: null };
     let obj1 = { style: map.commonPropertiesContainer, children: null };
@@ -66,14 +66,14 @@ function LoggedEvent(arg0) {
     const obj3 = { variant: "text-sm/semibold", color: "mobile-text-heading-primary", children: null };
     let obj4 = map(4153)(timestamp);
     obj3.children = obj4.calendar();
-    obj2.children = tmp6(CopyIcon(4556).Text, obj3);
-    let items1 = [tmp6(CommonProperty, obj2), ,];
+    obj2.children = closure_8(CopyIcon(4556).Text, obj3);
+    let items1 = [closure_8(CommonProperty, obj2), ,];
     tmp6Result = null != user;
     if (tmp6Result) {
       obj4 = { name: "User ", children: null };
       const obj5 = { user };
-      obj4.children = tmp6(tmp10(9803), obj5);
-      tmp6Result = tmp6(tmp9, obj4);
+      obj4.children = closure_8(tmp10(9803), obj5);
+      tmp6Result = closure_8(CommonProperty, obj4);
     }
     items1[1] = tmp6Result;
     if (null != fingerprint) {
@@ -90,21 +90,21 @@ function LoggedEvent(arg0) {
       const items2 = [map.monospace, { marginRight: 4 }];
       obj7.style = items2;
       obj7.children = fingerprint;
-      const items3 = [tmp6(CopyIcon(4556).Text, obj7)];
+      const items3 = [closure_8(CopyIcon(4556).Text, obj7)];
       CopyIcon = CopyIcon(4507).CopyIcon;
-      tmp6Result = tmp6(CopyIcon, { size: "sm" });
+      tmp6Result = closure_8(CopyIcon, { size: "sm" });
       items3[1] = tmp6Result;
       obj6.children = items3;
-      let tmp6Result1 = tmp4(CopyIcon(5123).PressableOpacity, obj6);
+      let tmp6Result1 = closure_9(CopyIcon(5123).PressableOpacity, obj6);
     } else {
       const obj8 = { variant: "text-sm/medium", color: "text-muted", style: map.monospace, children: "null" };
-      tmp6Result1 = tmp6(CopyIcon(4556).Text, obj8);
+      tmp6Result1 = closure_8(CopyIcon(4556).Text, obj8);
     }
     const obj9 = { name: "Fingerprint", children: tmp6Result1 };
-    items1[2] = tmp6(CommonProperty, obj9);
+    items1[2] = closure_8(CommonProperty, obj9);
     obj1.children = items1;
     obj1 = [,];
-    obj1[0] = tmp4(tmp5, obj1);
+    obj1[0] = closure_9(View, obj1);
     const obj10 = { style: map.customPropertiesContainer, children: null };
     const _Object = Object;
     const entries = Object.entries(properties);
@@ -120,26 +120,27 @@ function LoggedEvent(arg0) {
         obj = {
           variant: "text-sm/semibold",
           color: "mobile-text-heading-primary",
-          style: tmp5.monospace,
+          style: map.monospace,
           children: null,
         };
         const _JSON = JSON;
         obj.children = JSON.stringify(tmp2);
         let obj1 = obj;
       } else {
-        obj1 = { variant: "text-sm/semibold", color: "text-muted", style: tmp5.monospace, children: "null" };
+        obj1 = { variant: "text-sm/semibold", color: "text-muted", style: map.monospace, children: "null" };
       }
       items1[1] = React6(Text_Text.Text, obj1);
       obj.children = items1;
       return React7(View, obj, tmp);
     });
-    items1 = tmp6(tmp5, obj10);
+    items1 = closure_8(View, obj10);
     obj1[1] = items1;
     obj.children = obj1;
-    tmp4(tmp5, obj);
+    closure_9(View, obj);
     tmp10 = map;
-    const tmp4Result = tmp4(tmp5, obj1);
+    const tmp4Result = closure_9(View, obj1);
   }
+  const tmp = _slicedToArray(noop.useState(false), 2);
 }
 const View = fn(17).View;
 const Fonts = fn(1074).Fonts;
@@ -220,8 +221,6 @@ export default function DevToolsAnalyticsScreen() {
   obj = { style: tmp.analyticsContainer, children: null };
   obj = { title: "Actions", hasIcons: true, children: null };
   const str2 = str.toLowerCase();
-  const tmp12 = View;
-  const tmp13 = closure_9;
   const items2 = [
     closure_8(trimmed(7201).TableSwitchRow, {
       icon: closure_8(trimmed(12151).ArrowsUpDownIcon, {}),
@@ -257,14 +256,14 @@ export default function DevToolsAnalyticsScreen() {
     children: closure_8(trimmed(7050).SearchField, { placeholder: "Search by event name", onChange: tmp8 }),
   });
   if (0 === loggedEvents.length) {
-    let tmp11Result = tmp11(tmp2(5605).TableRow, { label: "No events logged." });
+    let tmp11Result = closure_8(tmp2(5605).TableRow, { label: "No events logged." });
   } else {
     tmp11Result = null;
     if (0 === found.length) {
       const obj4 = { label: null };
       const _HermesInternal = HermesInternal;
       obj4.label = 'No events match "' + str + '"';
-      tmp11Result = tmp11(tmp2(5605).TableRow, obj4);
+      tmp11Result = closure_8(tmp2(5605).TableRow, obj4);
     }
   }
   const obj5 = {
@@ -281,7 +280,7 @@ export default function DevToolsAnalyticsScreen() {
     children: tmp11Result,
   });
   obj6.children = items3;
-  obj5.ListHeaderComponent = tmp13(trimmed(4973).Stack, obj6);
+  obj5.ListHeaderComponent = closure_9(trimmed(4973).Stack, obj6);
   obj5.contentContainerStyle = tmp.contentContainer;
   obj5.extraData = stateFromStores;
   obj5.data = reversed;
@@ -297,5 +296,5 @@ export default function DevToolsAnalyticsScreen() {
     });
   };
   obj.children = closure_8(trimmed(8874).FlashList, obj5);
-  return closure_8(tmp12, obj);
+  return closure_8(View, obj);
 }

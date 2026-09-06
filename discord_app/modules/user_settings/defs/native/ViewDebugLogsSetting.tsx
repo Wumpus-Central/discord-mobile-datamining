@@ -10,6 +10,7 @@ import BottomSheetTitleHeader from "../../../../design/components/Sheet/native/B
 import ActionSheet from "../../../../design/components/Sheet/native/ActionSheet.native.tsx";
 import ActionSheetRow from "../../../../design/components/Sheet/native/ActionSheetRow.native.tsx";
 import ModalStackNavigatorDefault from "../../../main_tabs_v2/native/utils/ModalStackNavigator.tsx";
+import ChannelNotificationIcon from "../../../../design/components/Icon/native/redesign/generated/ChannelNotificationIcon.tsx";
 import ChannelListMagnifyingGlassIcon from "../../../../design/components/Icon/native/redesign/generated/ChannelListMagnifyingGlassIcon.tsx";
 import WrenchIcon from "../../../../design/components/Icon/native/redesign/generated/WrenchIcon.tsx";
 import UserSettingsDebugLogsDefault from "../../dev_tools/native/UserSettingsDebugLogs.tsx";
@@ -60,17 +61,17 @@ function ViewDebugLogsActionSheet() {
   let tmpResult = null;
   if (obj5.isAndroid()) {
     const obj2 = {
-      icon: tmp(tmp2(10961).ChannelNotificationIcon, {}),
+      icon: hasOwnProperty(ChannelNotificationIcon.ChannelNotificationIcon, {}),
       title: null,
       screenKey: "pushNotificationLogs",
       render: null,
     };
-    const intl4 = tmp2(1114).intl;
-    obj2.title = intl4.string(tmp2(1114).t.Ljj0ps);
+    const intl4 = util.intl;
+    obj2.title = intl4.string(util.t.Ljj0ps);
     obj2.render = function render() {
       return closure_1_5(UserSettingsPushNotificationLogsDefault, {});
     };
-    tmpResult = tmp(ViewDebugLogsActionSheetRow, obj2);
+    tmpResult = hasOwnProperty(ViewDebugLogsActionSheetRow, obj2);
   }
   items[2] = tmpResult;
   obj.children = timestampProducer(ActionSheetRow.ActionSheetRow.Group, { hasIcons: true, children: items });

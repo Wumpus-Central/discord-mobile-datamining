@@ -1,6 +1,7 @@
 // discord_app/modules/collectibles/hooks/useTrackShopCardClick.tsx
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
 import CollectiblesProductUtils from "../utils/CollectiblesProductUtils.tsx";
+import CollectiblesUtils from "../CollectiblesUtils.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -40,14 +41,14 @@ export const useTrackShopCardClick = function useTrackShopCardClick(product) {
         tmp4 = closure_5;
       }
       let skuId;
-      if (tmp3.variants[tmp4] != null) {
+      if (product.variants[tmp4] != null) {
         skuId = tmp6.skuId;
       }
       if (skuId == null) {
-        skuId = tmp3.skuId;
+        skuId = product.skuId;
       }
     } else {
-      skuId = tmp3.skuId;
+      skuId = product.skuId;
     }
     obj = {
       sku_id: skuId,
@@ -59,11 +60,11 @@ export const useTrackShopCardClick = function useTrackShopCardClick(product) {
       position_in_section: null,
       discount_source: null,
     };
-    let tmpResult = tmp(7553);
+    let tmpResult = CollectiblesProductUtils;
     obj.product_sku_ids = tmpResult.getProductSkuIds(product);
     obj.location_stack = analyticsLocations;
     obj.position_in_section = tilePosition;
-    tmpResult = tmp(7554);
+    tmpResult = CollectiblesUtils;
     obj.discount_source = tmpResult.getAnalyticsShopDiscountSource(shopDiscountSource);
     AnalyticsUtilsDefault.track(AnalyticEvents.SHOP_CARD_CLICKED, obj);
   }, items);

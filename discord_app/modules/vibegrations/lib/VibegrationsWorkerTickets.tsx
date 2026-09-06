@@ -13,10 +13,10 @@ function mintTicket() {
   }
   return applyArgumentsResult;
 }
-let closure_5 = async function _mintTicket(url) {
+let closure_5 = async function _mintTicket() {
   c4 = 0;
   c5 = 0;
-  return (async (arg0, value) => {
+  return (async (arg0) => {
     closure_3 = tmp5;
     closure_2 = tmp2;
     const HTTP = HTTPUtils.HTTP;
@@ -36,8 +36,8 @@ const Endpoints = fn(1074).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/vibegrations/lib/VibegrationsWorkerTickets.tsx");
 
-export const mintWorkerTicket = function mintWorkerTicket(arg0) {
-  return mintTicket(Endpoints.VIBEGRATIONS_PROJECT_WS_TICKET(arg0));
+export const mintWorkerTicket = function mintWorkerTicket(projectId) {
+  return mintTicket(Endpoints.VIBEGRATIONS_PROJECT_WS_TICKET(projectId));
 };
 export const mintRemixTicket = function mintRemixTicket(arg0) {
   return mintTicket(Endpoints.VIBEGRATIONS_PROJECT_REMIX_TICKET(arg0));

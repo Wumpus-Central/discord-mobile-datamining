@@ -155,7 +155,7 @@ function Username(usernameColor) {
   }
   if (shouldShowRoleDot) {
     obj = { color: roleColor, colors: roleColors, size: "small" };
-    shouldShowRoleDot = React7(tmp3(1178).RoleDot, obj);
+    shouldShowRoleDot = React7(native.RoleDot, obj);
   }
   const items1 = [shouldShowRoleDot];
   let tmp10;

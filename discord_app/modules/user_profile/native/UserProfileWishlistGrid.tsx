@@ -139,7 +139,7 @@ let dependencyMap = createStyles.createStyles(() => {
     paddingHorizontal: null,
     gap: null,
   };
-  const space2 = tmp(576).space;
+  const space2 = nativeDefault.space;
   obj2.paddingBottom = flag ? space2.PX_12 : space2.PX_48;
   obj2.paddingHorizontal = nativeDefault.space.PX_32;
   obj2.gap = nativeDefault.space.PX_8;
@@ -337,7 +337,7 @@ export default function UserProfileWishlistGrid(wishlistId) {
     c6 = 0;
     c7 = 0;
     c5 = 0;
-    return (function* (arg0, value) {
+    return (function* (arg0) {
       if (c7 === 2) {
         c7 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -382,12 +382,12 @@ export default function UserProfileWishlistGrid(wishlistId) {
               const rootNavigationRef = wishlistId(context[39]).getRootNavigationRef();
               if (null != rootNavigationRef) {
                 if (rootNavigationRef.isReady()) {
-                  if (tmp161.skuProductLine !== constants2.PREMIUM) {
-                    if (tmp161.skuProductLine !== tmp53.SOCIAL_LAYER_GAME_ITEM) {
+                  if (wishlistId.skuProductLine !== constants2.PREMIUM) {
+                    if (wishlistId.skuProductLine !== tmp53.SOCIAL_LAYER_GAME_ITEM) {
                       if (!closure_1_8) {
                         if (null != lockedRecipientUser) {
-                          if (!tmp161.isOwned) {
-                            if (!set.has(tmp161.skuId)) {
+                          if (!wishlistId.isOwned) {
+                            if (!set.has(wishlistId.skuId)) {
                               let obj23 = c1(context[23]);
                               obj23.hideAllActionSheets();
                               if (obj25.isCollectibleGiftingSupported()) {
@@ -407,7 +407,7 @@ export default function UserProfileWishlistGrid(wishlistId) {
                                 const result = wishlistId(context[24]).openCollectiblesShopMobile(obj2);
                                 const obj28 = wishlistId(context[24]);
                                 const obj3 = {
-                                  skuId: tmp161.skuId,
+                                  skuId: wishlistId.skuId,
                                   analyticsLocations: null,
                                   lockedRecipientUser: null,
                                   giftingOrigin: null,
@@ -423,7 +423,7 @@ export default function UserProfileWishlistGrid(wishlistId) {
                               } else {
                                 const _HermesInternal2 = HermesInternal;
                                 country = 1;
-                                const combined = "" + constants.COLLECTIBLES_SHOP + "#itemSkuId=" + tmp161.skuId;
+                                const combined = "" + constants.COLLECTIBLES_SHOP + "#itemSkuId=" + wishlistId.skuId;
                                 v5 = 3;
                                 c7 = 1;
                                 let obj5 = {
@@ -440,20 +440,20 @@ export default function UserProfileWishlistGrid(wishlistId) {
                         }
                       }
                       if (isShopStandalonePdpMobileEnabled) {
-                        let tmp110Result = tmp110(tmp111[55]);
-                        const obj6 = { skuId: tmp161.skuId, analyticsLocations: null };
+                        let tmp110Result = wishlistId(context[55]);
+                        const obj6 = { skuId: wishlistId.skuId, analyticsLocations: null };
                         const items3 = [c1(context[25]).USER_PROFILE_WISHLIST];
                         obj6.analyticsLocations = items3;
                         const result1 = tmp110Result.openProductDetailsActionSheetForSku(obj6, "stack");
                       } else {
-                        tmp110Result = tmp110(tmp111[24]);
+                        tmp110Result = wishlistId(context[24]);
                         if (tmp110Result.isCollectiblesShopOpen()) {
-                          product = createOrReuseGiftOrder.getProduct(tmp161.skuId);
+                          product = createOrReuseGiftOrder.getProduct(wishlistId.skuId);
                           if (null == product) {
                             v5 = 1;
                             c7 = 1;
                             const obj7 = {
-                              value: wishlistId(context[24]).maybeFetchCollectiblesProduct(tmp161.skuId),
+                              value: wishlistId(context[24]).maybeFetchCollectiblesProduct(wishlistId.skuId),
                               done: false,
                             };
                             return obj7;
@@ -480,17 +480,17 @@ export default function UserProfileWishlistGrid(wishlistId) {
                           const items5 = [c1(context[25]).USER_PROFILE_WISHLIST];
                           obj9.analyticsLocations = items5;
                           obj9.analyticsSource = c1(context[25]).USER_PROFILE_WISHLIST;
-                          obj9.initialProductSkuId = tmp161.skuId;
+                          obj9.initialProductSkuId = wishlistId.skuId;
                           obj9.screen = constants3.SHOP_ALL;
                           const result3 = wishlistId(context[24]).openCollectiblesShopMobile(obj9);
                           const obj34 = wishlistId(context[24]);
                         }
                       }
                     } else {
-                      const sku = tmp161.sku;
+                      const sku = wishlistId.sku;
                       closure_1 = sku;
                       if (sku == null) {
-                        closure_1 = stateFromStoresArray.get(tmp161.skuId);
+                        closure_1 = stateFromStoresArray.get(wishlistId.skuId);
                       }
                       let obj16 = wishlistId(context[46]);
                       let isAndroidResult = obj16.isAndroid();
@@ -508,7 +508,11 @@ export default function UserProfileWishlistGrid(wishlistId) {
                         }
                         const obj10 = { withGoogleSkuIds: true, countryCode: country };
                         const socialLayerStorefrontSkuForApplication =
-                          obj17.fetchSocialLayerStorefrontSkuForApplication(tmp62.applicationId, tmp161.skuId, obj10);
+                          obj17.fetchSocialLayerStorefrontSkuForApplication(
+                            tmp62.applicationId,
+                            wishlistId.skuId,
+                            obj10,
+                          );
                       }
                       let obj19 = wishlistId(context[48]);
                       if (!closure_1_8) {
@@ -517,7 +521,7 @@ export default function UserProfileWishlistGrid(wishlistId) {
                             c1(context[23]).hideAllActionSheets();
                             const obj54 = c1(context[23]);
                             let obj11 = {
-                              skuId: tmp161.skuId,
+                              skuId: wishlistId.skuId,
                               analyticsLocations: null,
                               lockedRecipientUser: null,
                               giftingOrigin: null,
@@ -538,7 +542,7 @@ export default function UserProfileWishlistGrid(wishlistId) {
                       let obj20 = c1(context[23]);
                       obj20.hideAllActionSheets();
                       let obj21 = wishlistId(context[49]);
-                      const obj12 = { skuId: tmp161.skuId, analyticsLocations: null };
+                      const obj12 = { skuId: wishlistId.skuId, analyticsLocations: null };
                       const items7 = [c1(context[25]).USER_PROFILE_WISHLIST];
                       obj12.analyticsLocations = items7;
                       const result5 = obj21.openSocialLayerStorefrontProductDetailsModal(obj12);
@@ -742,7 +746,7 @@ export default function UserProfileWishlistGrid(wishlistId) {
       obj1 = { variant: "text-xs/medium", color: "text-subtle", children: stringResult };
       items17[1] = closure_22(tmp6(tmp3[26]).Text, obj1);
       obj.children = items17;
-      tmp40Result = tmp40(storeFront, obj);
+      tmp40Result = closure_23(storeFront, obj);
     }
     const items18 = [tmp40Result, ,];
     let obj2 = { style: tmp.headerRow, children: null };
@@ -756,23 +760,23 @@ export default function UserProfileWishlistGrid(wishlistId) {
       obj6 = {
         size: "sm",
         variant: "secondary",
-        icon: tmp37(tmp6(tmp3[29]).PlusMediumIcon, { size: "xs" }),
+        icon: closure_22(tmp6(tmp3[29]).PlusMediumIcon, { size: "xs" }),
         text: null,
         onPress: null,
       };
       let intl3 = tmp6(tmp3[27]).intl;
       obj6.text = intl3.string(tmp6(tmp3[27]).t.SDUwM0);
       obj6.onPress = callback1;
-      const items20 = [tmp37(tmp6(tmp3[28]).Button, obj6)];
+      const items20 = [closure_22(tmp6(tmp3[28]).Button, obj6)];
       obj7 = { size: "sm", variant: "secondary", icon: null, onPress: null, accessibilityLabel: null };
       let obj8 = { size: "sm", color: tmp2(tmp3[18]).colors.CONTROL_SECONDARY_TEXT_DEFAULT };
-      obj7.icon = tmp37(tmp6(tmp3[60]).PencilIcon, obj8);
+      obj7.icon = closure_22(tmp6(tmp3[60]).PencilIcon, obj8);
       obj7.onPress = callback;
       let intl4 = tmp6(tmp3[27]).intl;
       obj7.accessibilityLabel = intl4.string(tmp6(tmp3[27]).t.bt75uw);
-      items20[1] = tmp37(tmp6(tmp3[59]).IconButton, obj7);
+      items20[1] = closure_22(tmp6(tmp3[59]).IconButton, obj7);
       obj5.children = items20;
-      tmp40Result = tmp40(tmp36, obj5);
+      tmp40Result = closure_23(tmp36, obj5);
     }
     let obj9 = { children: null };
     items19[1] = tmp40Result;

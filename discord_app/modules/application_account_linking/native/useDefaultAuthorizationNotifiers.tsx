@@ -15,7 +15,6 @@ const result = size.fileFinishedImporting(
 export const useDefaultAuthorizationNotifiers = function useDefaultAuthorizationNotifiers(
   startAuthorization,
   hasAlreadyLinked,
-  value,
 ) {
   _require = startAuthorization;
   closure_1 = hasAlreadyLinked;

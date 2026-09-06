@@ -5,6 +5,8 @@ import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import LegacyBaseButton from "../../../../../_runtime/06655_LegacyBaseButton.js";
 import NoiseCancellationUtils from "../../../noise_cancellation/NoiseCancellationUtils.tsx";
 import KrispLogo2 from "KrispLogo.tsx";
+import _modDef9998 from "../../../../../_runtime/metro/09998__.js";
+import _modDef9999 from "../../../../../_runtime/metro/09999__.js";
 import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
 import SettingLayoutDefault from "../../../settings/native/renderer/SettingLayout.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -16,21 +18,21 @@ function KrispLogo() {
   const tmp = closure_13();
   let obj = shared;
   if (obj.isThemeLight(tmp4)) {
-    let tmp2Result = tmp2(9998);
+    let tmp2Result = _modDef9998;
   } else {
-    tmp2Result = tmp2(9999);
+    tmp2Result = _modDef9999;
   }
   obj = { style: tmp.krisp, children: null };
   obj = { style: tmp.logo, source: tmp2Result, accessibilityLabel: null };
-  const intl = tmp5(1114).intl;
+  const intl = util.intl;
   obj.accessibilityLabel = intl.string(util.t.vFiCSx);
   const items = [React7(hasOwnProperty, obj)];
   const obj1 = { accessibilityRole: "link", accessibilityLabel: null, onPress: null, children: null };
-  const intl2 = tmp5(1114).intl;
+  const intl2 = util.intl;
   obj1.accessibilityLabel = intl2.string(util.t.hvVgAZ);
   obj1.onPress = KrispLogo2.handleKrispLinkPressed;
   const obj2 = { variant: "text-sm/medium", color: "text-link", children: null };
-  const intl3 = tmp5(1114).intl;
+  const intl3 = util.intl;
   obj2.children = intl3.string(util.t.hvVgAZ);
   obj1.children = React7(Text_Text.Text, obj2);
   items[1] = React7(LegacyBaseButton.LegacyPressable, obj1);
@@ -42,15 +44,15 @@ function SystemProcessingSubLabel() {
   let tmp3 = null;
   if (obj.useNoiseCancellationDeferredToSystem()) {
     obj = { variant: "text-sm/medium", children: null };
-    const intl = tmp(1114).intl;
+    const intl = util.intl;
     obj = {
       onSettingsClick() {
         mediaEngine = mediaEngine.getMediaEngine();
         const result = mediaEngine.showSystemCaptureConfigurationUI("microphone_modes");
       },
     };
-    obj.children = intl.format(tmp(1114).t.EUNgko, obj);
-    tmp3 = React7(tmp(4556).Text, obj);
+    obj.children = intl.format(util.t.EUNgko, obj);
+    tmp3 = React7(Text_Text.Text, obj);
   }
   return tmp3;
 }

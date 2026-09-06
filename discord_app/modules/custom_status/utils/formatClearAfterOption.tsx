@@ -9,8 +9,8 @@ import size from "../../../../_runtime/metro/00002__.js";
 const ClearAfterValues = Constants.ClearAfterValues;
 let result = size.fileFinishedImporting("modules/custom_status/utils/formatClearAfterOption.tsx");
 
-export default function formatClearAfterOption(arg0) {
-  if (ClearAfterValues.TODAY === arg0) {
+export default function formatClearAfterOption(type) {
+  if (ClearAfterValues.TODAY === type) {
     const intl8 = util.intl;
     const formatToPlainStringResult = intl8.formatToPlainString(util.t.Rea2gR, { hours: 24 });
     const _Date10 = Date;
@@ -25,13 +25,13 @@ export default function formatClearAfterOption(arg0) {
       let formatTimeResult = data8.formatTime(sum, { format: "short" });
     } else {
       let obj = { time: null };
-      const data7 = tmp66(1114).intl.data;
+      const data7 = util.intl.data;
       obj.time = data7.formatTime(sum, { format: "short" });
-      formatTimeResult = intl9.formatToPlainString(tmp66(1114).t.DN91Jz, obj);
+      formatTimeResult = intl9.formatToPlainString(util.t.DN91Jz, obj);
     }
     const _HermesInternal4 = HermesInternal;
     return "" + formatToPlainStringResult + " (" + formatTimeResult + ")";
-  } else if (tmp.HOURS_4 === arg0) {
+  } else if (ClearAfterValues.HOURS_4 === type) {
     const intl6 = util.intl;
     const formatToPlainStringResult1 = intl6.formatToPlainString(util.t.Rea2gR, { hours: 4 });
     const _Date7 = Date;
@@ -47,13 +47,13 @@ export default function formatClearAfterOption(arg0) {
       let formatTimeResult1 = data6.formatTime(sum1, { format: "short" });
     } else {
       obj = { time: null };
-      const data5 = tmp46(1114).intl.data;
+      const data5 = util.intl.data;
       obj.time = data5.formatTime(sum1, { format: "short" });
-      formatTimeResult1 = intl7.formatToPlainString(tmp46(1114).t.DN91Jz, obj);
+      formatTimeResult1 = intl7.formatToPlainString(util.t.DN91Jz, obj);
     }
     const _HermesInternal3 = HermesInternal;
     return "" + formatToPlainStringResult1 + " (" + formatTimeResult1 + ")";
-  } else if (tmp.HOURS_1 === arg0) {
+  } else if (ClearAfterValues.HOURS_1 === type) {
     const intl4 = util.intl;
     const formatToPlainStringResult2 = intl4.formatToPlainString(util.t.Rea2gR, { hours: 1 });
     const _Date4 = Date;
@@ -68,13 +68,13 @@ export default function formatClearAfterOption(arg0) {
       let formatTimeResult2 = data4.formatTime(sum2, { format: "short" });
     } else {
       let obj1 = { time: null };
-      const data3 = tmp27(1114).intl.data;
+      const data3 = util.intl.data;
       obj1.time = data3.formatTime(sum2, { format: "short" });
-      formatTimeResult2 = intl5.formatToPlainString(tmp27(1114).t.DN91Jz, obj1);
+      formatTimeResult2 = intl5.formatToPlainString(util.t.DN91Jz, obj1);
     }
     const _HermesInternal2 = HermesInternal;
     return "" + formatToPlainStringResult2 + " (" + formatTimeResult2 + ")";
-  } else if (tmp.MINUTES_30 === arg0) {
+  } else if (ClearAfterValues.MINUTES_30 === type) {
     const intl2 = util.intl;
     const formatToPlainStringResult3 = intl2.formatToPlainString(util.t.TS3eJb, { minutes: 30 });
     const _Date = Date;
@@ -91,17 +91,17 @@ export default function formatClearAfterOption(arg0) {
       let formatTimeResult3 = data2.formatTime(sum3, { format: "short" });
     } else {
       const obj2 = { time: null };
-      const data = tmp7(1114).intl.data;
+      const data = util.intl.data;
       obj2.time = data.formatTime(sum3, { format: "short" });
-      formatTimeResult3 = intl3.formatToPlainString(tmp7(1114).t.DN91Jz, obj2);
+      formatTimeResult3 = intl3.formatToPlainString(util.t.DN91Jz, obj2);
     }
     const _HermesInternal = HermesInternal;
     return "" + formatToPlainStringResult3 + " (" + formatTimeResult3 + ")";
-  } else if (tmp.DONT_CLEAR === arg0) {
+  } else if (ClearAfterValues.DONT_CLEAR === type) {
     const intl = util.intl;
     return intl.string(util.t.bRn8cq);
   } else {
     obj = GlobalUtils;
-    obj.assertNever(arg0);
+    obj.assertNever(type);
   }
 }

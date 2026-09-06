@@ -1,4 +1,5 @@
 // discord_app/modules/game_profile/hooks/useGameProfileOpenCritic.tsx
+import util from "../../../intl/index.native.tsx";
 import OpenCriticTier from "../../../../discord_common/js/shared/shared-constants/OpenCriticTier.tsx";
 import _modDef8727 from "../../../../discord_assets/assets/game-profile/opencritic-mighty.png.js";
 import _modDef8728 from "../../../../discord_assets/assets/game-profile/opencritic-strong.png.js";
@@ -10,27 +11,27 @@ const result = size.fileFinishedImporting("modules/game_profile/hooks/useGamePro
 
 export const getOpenCriticTierText = function getOpenCriticTierText(tier) {
   if (OpenCriticTier.OpenCriticTier.MIGHTY === tier) {
-    const intl4 = tmp(1114).intl;
-    return intl4.string(tmp(1114).t.aZej2g);
-  } else if (tmp(8726).OpenCriticTier.STRONG === tier) {
-    const intl3 = tmp(1114).intl;
-    return intl3.string(tmp(1114).t.MLxnSg);
-  } else if (tmp(8726).OpenCriticTier.FAIR === tier) {
-    const intl2 = tmp(1114).intl;
-    return intl2.string(tmp(1114).t["3f19KA"]);
-  } else if (tmp(8726).OpenCriticTier.WEAK === tier) {
-    const intl = tmp(1114).intl;
-    return intl.string(tmp(1114).t.jtVgSh);
+    const intl4 = util.intl;
+    return intl4.string(util.t.aZej2g);
+  } else if (OpenCriticTier.OpenCriticTier.STRONG === tier) {
+    const intl3 = util.intl;
+    return intl3.string(util.t.MLxnSg);
+  } else if (OpenCriticTier.OpenCriticTier.FAIR === tier) {
+    const intl2 = util.intl;
+    return intl2.string(util.t["3f19KA"]);
+  } else if (OpenCriticTier.OpenCriticTier.WEAK === tier) {
+    const intl = util.intl;
+    return intl.string(util.t.jtVgSh);
   }
 };
 export const getOpenCriticTierImage = function getOpenCriticTierImage(tier) {
   if (OpenCriticTier.OpenCriticTier.MIGHTY === tier) {
     return _modDef8727;
-  } else if (tmp(8726).OpenCriticTier.STRONG === tier) {
+  } else if (OpenCriticTier.OpenCriticTier.STRONG === tier) {
     return _modDef8728;
-  } else if (tmp(8726).OpenCriticTier.FAIR === tier) {
+  } else if (OpenCriticTier.OpenCriticTier.FAIR === tier) {
     return _modDef8729;
-  } else if (tmp(8726).OpenCriticTier.WEAK === tier) {
+  } else if (OpenCriticTier.OpenCriticTier.WEAK === tier) {
     return _modDef8730;
   }
 };
@@ -38,11 +39,11 @@ export const getOpenCriticCircleRatingColor = function getOpenCriticCircleRating
   let foregroundColor = "#fc430a";
   if (OpenCriticTier.OpenCriticTier.MIGHTY !== tier) {
     foregroundColor = "#9e00b4";
-    if (tmp(8726).OpenCriticTier.STRONG !== tier) {
+    if (OpenCriticTier.OpenCriticTier.STRONG !== tier) {
       foregroundColor = "#4aa1ce";
-      if (tmp(8726).OpenCriticTier.FAIR !== tier) {
+      if (OpenCriticTier.OpenCriticTier.FAIR !== tier) {
         foregroundColor = "";
-        if (tmp(8726).OpenCriticTier.WEAK === tier) {
+        if (OpenCriticTier.OpenCriticTier.WEAK === tier) {
           foregroundColor = "#80b06a";
         }
       }

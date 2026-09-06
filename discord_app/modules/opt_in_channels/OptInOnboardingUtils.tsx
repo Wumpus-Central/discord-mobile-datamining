@@ -2,6 +2,7 @@
 import preloaded_user_settings from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
 import FlagUtils from "../../../discord_common/js/shared/utils/FlagUtils.tsx";
 import GuildOnboardingActionCreatorsDefault from "../guild_onboarding/GuildOnboardingActionCreators.tsx";
+import OptInChannelsActionCreators from "OptInChannelsActionCreators.tsx";
 import isOptInEnabled from "isOptInEnabled.tsx";
 import UserSettingsProtoStore from "../user_settings/UserSettingsProtoStore.tsx";
 import GuildChannelStore from "../../stores/GuildChannelStore.tsx";
@@ -77,7 +78,7 @@ export const toggleShowAllChannels = function toggleShowAllChannels(id) {
   if (num == null) {
     num = 0;
   }
-  let tmpResult = tmp(1384);
+  let tmpResult = FlagUtils;
   let tmp7 = !result;
   const hasFlagResult = tmpResult.hasFlag(num, GuildMemberFlags.COMPLETED_ONBOARDING);
   if (!result) {
@@ -89,11 +90,12 @@ export const toggleShowAllChannels = function toggleShowAllChannels(id) {
   if (tmp7) {
     optIntoAllChannelsForExistingMember(id);
   } else {
-    tmpResult = tmp(7535);
+    tmpResult = isOptInEnabled;
     const result1 = tmpResult.isOptInEnabledForGuild(id);
-    tmp(7113).setGuildOptIn(id, !result1);
-    const tmpResult1 = tmp(7113);
+    OptInChannelsActionCreators.setGuildOptIn(id, !result1);
+    const tmpResult1 = OptInChannelsActionCreators;
   }
+  tmp6 = UserGuildSettingsStore.getOptedInChannels(id).size > 0;
 };
 export { optIntoAllChannelsForExistingMember };
 export const hasClearedGuildOnboardingNotice = function hasClearedGuildOnboardingNotice(arg0) {

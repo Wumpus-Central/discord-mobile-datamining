@@ -3,6 +3,7 @@ import useA11yRolesNative from "../../../../../discord_common/js/packages/design
 import RedesignCompat from "../../../components/RedesignCompat/native/RedesignCompat.native.tsx";
 import TableRadioRow from "../../../components/TableRow/native/TableRadioRow.native.tsx";
 import FormRowDefault from "FormRow.tsx";
+import Form_FormRadioDefault from "FormRadio.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -27,7 +28,12 @@ export default function FormRadioRow(arg0) {
   if (context) {
     obj = { icon: leading, value, legacyCompat_selected: selected, legacyCompat_onPress: onPress };
     const merged1 = Object.assign(merged);
-    let tmp8Result = tmp8(TableRadioRow.TableRadioRow, obj);
+    let tmp8Result = jsx(TableRadioRow.TableRadioRow, {
+      icon: leading,
+      value,
+      legacyCompat_selected: selected,
+      legacyCompat_onPress: onPress,
+    });
   } else {
     obj = {};
     const merged2 = Object.assign(merged);
@@ -38,16 +44,16 @@ export default function FormRadioRow(arg0) {
     tmp8Result = null;
     if ("right" === align) {
       const obj1 = { selected };
-      tmp8Result = tmp8(tmp9(7143), obj1);
+      tmp8Result = jsx(Form_FormRadioDefault, { selected });
     }
     obj.trailing = tmp8Result;
     let tmp8Result1 = leading;
     if ("left" === align) {
       const obj2 = { selected };
-      tmp8Result1 = tmp8(tmp9(7143), obj2);
+      tmp8Result1 = jsx(Form_FormRadioDefault, { selected });
     }
     obj.leading = tmp8Result1;
-    tmp8Result = tmp8(FormRowDefault, obj);
+    tmp8Result = jsx(FormRowDefault, {});
   }
   return tmp8Result;
 }

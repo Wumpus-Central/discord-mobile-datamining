@@ -64,15 +64,15 @@ const dimensionStore = new DimensionStore(DispatcherDefault, {
     ({ guildId, scrollTop, scrollTo } = arg0);
     if (null == dependencyMap2[guildId]) {
       const obj = { guildId, scrollTop: null, scrollTo: null };
-      tmp[guildId] = obj;
+      dependencyMap2[guildId] = obj;
     }
     if (undefined !== scrollTop) {
-      tmp[guildId].scrollTop = scrollTop;
+      dependencyMap2[guildId].scrollTop = scrollTop;
     }
     let flag = false;
     if (undefined !== scrollTo) {
-      flag = tmp[guildId].scrollTo !== scrollTo;
-      tmp[guildId].scrollTo = scrollTo;
+      flag = dependencyMap2[guildId].scrollTo !== scrollTo;
+      dependencyMap2[guildId].scrollTo = scrollTo;
     }
     return null != scrollTo || flag;
   },

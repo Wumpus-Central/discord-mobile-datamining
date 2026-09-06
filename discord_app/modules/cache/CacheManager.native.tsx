@@ -4,11 +4,11 @@ import DurationsDefault from "../../utils/Durations.tsx";
 import ConstantsIOS from "../../ConstantsIOS.tsx";
 import PlatformUtils from "../../utils/PlatformUtils.tsx";
 import KvCacheVersionDefault from "../app_database/modules/KvCacheVersion.tsx";
+import CacheActionCreators from "CacheActionCreators.tsx";
 import GatewayConnectionStore from "../gateway/GatewayConnectionStore.tsx";
 import CacheStore from "CacheStore.tsx";
 import AutomaticLifecycleManager from "../../lib/AutomaticLifecycleManager.tsx";
 
-const CacheActionCreators = tmp(15570);
 require = fn;
 let closure_5 = new LoggerDefault("CacheStore");
 let closure_6 = 15 * DurationsDefault.Millis.MINUTE;

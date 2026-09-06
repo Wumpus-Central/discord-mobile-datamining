@@ -1,7 +1,9 @@
 // discord_app/modules/messages/native/renderer/row_data/ForumPostActions.tsx
 import Constants from "../../../../../Constants.tsx";
 import ReactionUtils from "../../../../reactions/ReactionUtils.tsx";
+import _modDef4512 from "../../../../../../_runtime/metro/04512__.js";
 import renderer_EmbedUtils from "../EmbedUtils.tsx";
+import _modDef7949 from "../../../../../../_runtime/metro/07949__.js";
 import size from "../../../../../../_runtime/metro/00002__.js";
 
 const HelpdeskArticles = Constants.HelpdeskArticles;
@@ -76,13 +78,13 @@ export const createForumPostActions = function createForumPostActions(arg0) {
   ({ hasReactions, showMediaPostSharePrompt } = arg0);
   const getAssetUriForEmbed = renderer_EmbedUtils.getAssetUriForEmbed;
   if (isFollowing) {
-    let assetUriForEmbed = getAssetUriForEmbed(tmp4(4512));
-    let tmp6 = tmp4;
-    let tmp8 = tmp;
+    let assetUriForEmbed = getAssetUriForEmbed(_modDef4512);
+    let tmp6 = importDefault;
+    let tmp8 = require;
   } else {
-    assetUriForEmbed = getAssetUriForEmbed(tmp4(7949));
-    tmp6 = tmp4;
-    tmp8 = tmp;
+    assetUriForEmbed = getAssetUriForEmbed(_modDef7949);
+    tmp6 = importDefault;
+    tmp8 = require;
   }
   if (null != assetUriForEmbed) {
     let tmp8Result = tmp8(7946);

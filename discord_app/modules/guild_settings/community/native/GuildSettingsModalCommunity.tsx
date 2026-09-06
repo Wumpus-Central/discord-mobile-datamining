@@ -55,12 +55,12 @@ export default function GuildSettingsModalCommunity(guildId) {
   const stateFromStoresObject1 = obj3.useStateFromStoresObject(items1, () => {
     let canResult = null != guild;
     if (canResult) {
-      canResult = PermissionStore.can(constants3.MANAGE_GUILD, tmp);
+      canResult = PermissionStore.can(constants3.MANAGE_GUILD, guild);
     }
     const obj = { canManage: canResult, isAdmin: null };
-    let canResult1 = null != tmp;
+    let canResult1 = null != guild;
     if (canResult1) {
-      canResult1 = PermissionStore.can(constants3.ADMINISTRATOR, tmp);
+      canResult1 = PermissionStore.can(constants3.ADMINISTRATOR, guild);
     }
     obj.isAdmin = canResult1;
     return obj;
@@ -72,12 +72,12 @@ export default function GuildSettingsModalCommunity(guildId) {
     let obj = ChannelStore;
     let rulesChannelId;
     if (guild != null) {
-      rulesChannelId = tmp.rulesChannelId;
+      rulesChannelId = guild.rulesChannelId;
     }
     obj = { rulesChannel: ChannelStore.getChannel(rulesChannelId), publicUpdatesChannel: null };
     let prop;
     if (guild != null) {
-      prop = tmp.publicUpdatesChannelId;
+      prop = guild.publicUpdatesChannelId;
     }
     obj.publicUpdatesChannel = obj.getChannel(prop);
     return obj;
@@ -103,16 +103,16 @@ export default function GuildSettingsModalCommunity(guildId) {
   const callback = submitting.useCallback(() => {
     if (null != guild) {
       const _Set = Set;
-      const set = new Set(tmp.features);
+      const set = new Set(guild.features);
       set.delete(constants.COMMUNITY);
       set.delete(constants.DISCOVERABLE);
       const obj = {
         features: set,
         rulesChannelId: null,
         publicUpdatesChannelId: null,
-        preferredLocale: tmp.preferredLocale,
+        preferredLocale: guild.preferredLocale,
       };
-      GuildSettingsActionCreatorsDefault.saveGuild(tmp.id, obj);
+      GuildSettingsActionCreatorsDefault.saveGuild(guild.id, obj);
     }
   }, items4);
   let intl = preferredLocale(navigation[16]).intl;
@@ -293,10 +293,10 @@ export default function GuildSettingsModalCommunity(guildId) {
         str3 = "";
       }
       const obj10 = { text: str3 };
-      obj9.trailing = tmp21(tmp(tmp2[26]).TableRow.TrailingText, obj10);
+      obj9.trailing = closure_16(tmp(tmp2[26]).TableRow.TrailingText, obj10);
       obj9.onPress = tmp19;
-      obj8.children = tmp21(tmp(tmp2[26]).TableRow, obj9);
-      tmp21Result = tmp21(tmp(tmp2[25]).TableRowGroup, obj8);
+      obj8.children = closure_16(tmp(tmp2[26]).TableRow, obj9);
+      tmp21Result = closure_16(tmp(tmp2[25]).TableRowGroup, obj8);
       const arr11 = calculateLocaleOptions();
     }
     items9[2] = tmp21Result;
@@ -307,13 +307,13 @@ export default function GuildSettingsModalCommunity(guildId) {
       const intl8 = tmp(tmp2[16]).intl;
       obj12.label = intl8.string(tmp(tmp2[16]).t.c1BmbC);
       obj12.disabled = !tmp12;
-      obj11.children = tmp21(tmp(tmp2[26]).TableRow, obj12);
-      tmp21Result = tmp21(tmp(tmp2[25]).TableRowGroup, obj11);
+      obj11.children = closure_16(tmp(tmp2[26]).TableRow, obj12);
+      tmp21Result = closure_16(tmp(tmp2[25]).TableRowGroup, obj11);
     }
     items9[3] = tmp21Result;
     obj.children = items9;
     obj.children = closure_17(tmp(tmp2[24]).Stack, obj);
-    tmp21Result1 = tmp21(tmp(tmp2[23]).Form, obj);
+    tmp21Result1 = closure_16(tmp(tmp2[23]).Form, obj);
   }
   return tmp21Result1;
 }

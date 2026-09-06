@@ -7,12 +7,16 @@ import AppAnalyticsUtils from "../../../app_analytics/AppAnalyticsUtils.tsx";
 import ChannelRTCActionCreatorsDefault from "../../../../actions/ChannelRTCActionCreators.tsx";
 import ModalActionCreatorsDefault from "../../../../actions/ModalActionCreators.tsx";
 import PrivateChannelCallUtils from "../../../../utils/native/PrivateChannelCallUtils.tsx";
+import LinearGradientDefault from "../../../../../_runtime/04987_LinearGradient.js";
 import StageChannelActionCreatorExtras from "../../StageChannelActionCreatorExtras.native.tsx";
+import _modDef8619 from "../../../../../_runtime/metro/08619__.js";
+import _modDef8622 from "../../../../../_runtime/metro/08622__.js";
 import StatusBarDefault from "../../../status_bar/native/components/StatusBar.android.tsx";
 import instant_invite_InstantInviteUtils from "../../../instant_invite/native/InstantInviteUtils.tsx";
 import StageMusicActionCreators from "../../StageMusicActionCreators.tsx";
 import ChannelCallNavigatorIconDefault from "../../../video_calls/native/components/ChannelCallNavigatorIcon.tsx";
 import _modDef10028 from "../../../../../_runtime/metro/10028__.js";
+import _modDef10029 from "../../../../../_runtime/metro/10029__.js";
 import _modDef10030 from "../../../../../_runtime/metro/10030__.js";
 import useMyCurrentStageChannelRoleDefault from "../../useMyCurrentStageChannelRole.tsx";
 import ChannelCallHeaderButtons from "../../../video_calls/native/components/ChannelCallHeaderButtons.tsx";
@@ -358,12 +362,12 @@ export default noop.memo((onOpenRTCDebugOverlay) => {
   ];
   if (speaker) {
     obj = { channelId: channel.id };
-    speaker = tmp7(MusicMuteButton, obj);
+    speaker = closure_1_12(MusicMuteButton, obj);
   }
   items[2] = speaker;
   if (fullscreenStream) {
     obj = { channel };
-    fullscreenStream = tmp7(ChannelCallHeaderButtons.GridButton, obj);
+    fullscreenStream = closure_1_12(ChannelCallHeaderButtons.GridButton, obj);
   }
   items[3] = fullscreenStream;
   items[4] = closure_1_12(ChannelCallHeaderButtons.CameraButton, {});

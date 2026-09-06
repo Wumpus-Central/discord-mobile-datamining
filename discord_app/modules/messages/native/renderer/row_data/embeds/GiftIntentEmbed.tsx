@@ -2,8 +2,11 @@
 import nativeDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../../../intl/index.native.tsx";
 import UserUtilsDefault from "../../../../../../utils/UserUtils.tsx";
+import _modDef4496 from "../../../../../../../_runtime/metro/04496__.js";
 import renderer_EmbedUtils from "../../EmbedUtils.tsx";
 import PremiumGiftingUtils from "../../../../../premium/PremiumGiftingUtils.tsx";
+import _modDef8083 from "../../../../../../../_runtime/metro/08083__.js";
+import _modDef8084 from "../../../../../../../_runtime/metro/08084__.js";
 import PremiumGiftingIntentStore from "../../../../../premium/gifting/PremiumGiftingIntentStore.tsx";
 import UserStore from "../../../../../../stores/UserStore.tsx";
 
@@ -52,7 +55,7 @@ export const createGiftIntentEmbed = function createGiftIntentEmbed(message, the
       if (null == tmp) {
         return null;
       } else {
-        const currentUser = obj8.getCurrentUser();
+        const currentUser = UserStore.getCurrentUser();
         const _HermesInternal2 = HermesInternal;
         let combined1;
         const combined = "" + user.getAvatarURL(undefined, 40);
@@ -88,16 +91,15 @@ export const createGiftIntentEmbed = function createGiftIntentEmbed(message, the
           borderColor: obj4.borderColor,
         } = closure_6(theme));
         const tmp6 = closure_6(theme);
-        obj1.subHeaderIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(tmp8(4496));
+        obj1.subHeaderIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef4496);
         const intl3 = util.intl;
         obj1.primaryCtaLabel = intl3.string(util.t.ilhtIa);
-        obj1.primaryCtaIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(tmp8(8083));
-        obj1.secondaryCtaIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(tmp8(8084));
+        obj1.primaryCtaIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef8083);
+        obj1.secondaryCtaIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef8084);
         const intl4 = util.intl;
         obj1.secondaryCtaAccessibilityLabel = intl4.string(util.t.I5gL2H);
         return obj1;
       }
     }
-    obj8 = UserStore;
   }
 };

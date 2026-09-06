@@ -44,10 +44,10 @@ export default function MemberVerificationFormRenderer(arg0) {
           },
           combined,
         );
-      } else if (tmp2(tmp3[4]).VerificationFormFieldTypes.VERIFICATION === field_type) {
+      } else if (tmp2(verification[4]).VerificationFormFieldTypes.VERIFICATION === field_type) {
         obj = { verification, field: field_type };
         tmp4 = jsx(require("UserVerification"), { verification, field: field_type }, combined);
-      } else if (tmp2(tmp3[4]).VerificationFormFieldTypes.TEXT_INPUT === field_type) {
+      } else if (tmp2(verification[4]).VerificationFormFieldTypes.TEXT_INPUT === field_type) {
         const obj1 = {
           field: field_type,
           onChange(arg0) {
@@ -64,7 +64,7 @@ export default function MemberVerificationFormRenderer(arg0) {
           },
           combined,
         );
-      } else if (tmp2(tmp3[4]).VerificationFormFieldTypes.PARAGRAPH === field_type) {
+      } else if (tmp2(verification[4]).VerificationFormFieldTypes.PARAGRAPH === field_type) {
         obj = {
           field: field_type,
           onChange(arg0) {
@@ -83,7 +83,7 @@ export default function MemberVerificationFormRenderer(arg0) {
         );
       } else {
         tmp4 = null;
-        if (tmp2(tmp3[4]).VerificationFormFieldTypes.MULTIPLE_CHOICE === field_type) {
+        if (tmp2(verification[4]).VerificationFormFieldTypes.MULTIPLE_CHOICE === field_type) {
           const obj2 = {
             field: field_type,
             hasIcons: false,

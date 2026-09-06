@@ -1,5 +1,6 @@
 // discord_app/modules/guild_settings/safety/native/TransferOwnership.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import native from "../../../../design/void/native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import GuildIcon from "../../../guild/native/GuildIcon.tsx";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
@@ -68,7 +69,7 @@ export default function TransferOwnership(guild) {
   _slicedToArray = undefined;
   let nickname;
   c7 = undefined;
-  noop = async function _handleTransfer(arg0, value) {
+  noop = async function _handleTransfer() {
     if (dependencyMap === 2) {
       dependencyMap = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -95,7 +96,7 @@ export default function TransferOwnership(guild) {
           } else {
             closure_0 = tmp2;
             if (!mfaEnabled.mfaEnabled) {
-              if (null != tmp27.email) {
+              if (null != mfaEnabled.email) {
                 let obj1 = v1(9063);
                 v1 = 1;
                 dependencyMap = 1;
@@ -191,7 +192,6 @@ export default function TransferOwnership(guild) {
   obj3 = { source: toUser(11848), style: tmp5.arrow };
   const items1 = [closure_13(c7, obj3), , ,];
   let obj4 = { style: tmp5.avatarsWrapper, children: null };
-  const tmp12 = closure_8;
   const tmp7 = _slicedToArray(noop.useState(false), 2);
   const items2 = [
     closure_13(guild(1178).Avatar, { user: stateFromStores, guildId: guild.id, size: guild(1178).AvatarSizes.XXLARGE }),
@@ -212,9 +212,9 @@ export default function TransferOwnership(guild) {
       let formatResult = intl.format(tmp(1114).t["2XLnG0"], obj9);
     }
     const obj10 = { variant: "text-md/medium", color: "text-default", children: formatResult };
-    items1[3] = tmp11(tmp15, obj10, "transfer-ownership-details");
+    items1[3] = closure_13(tmp15, obj10, "transfer-ownership-details");
     obj2.children = items1;
-    const items3 = [tmp13(tmp14, obj2), ,];
+    const items3 = [closure_15(tmp14, obj2), ,];
     const obj11 = { title: null, hasIcons: false, children: null };
     const string = tmp(1114).intl.string;
     class GuildWithSmallIcon {
@@ -256,8 +256,8 @@ export default function TransferOwnership(guild) {
     obj12.onPress = function handleConfirmToggle(arg0) {
       _undefined(arg0);
     };
-    obj11.children = tmp11(tmp(5604).TableCheckboxRow, obj12);
-    items3[1] = tmp11(tmp(5687).TableRowGroup, obj11);
+    obj11.children = closure_13(tmp(5604).TableCheckboxRow, obj12);
+    items3[1] = closure_13(tmp(5687).TableRowGroup, obj11);
     const obj14 = {
       onPress: function handleTransfer() {
         const self = this;
@@ -275,10 +275,10 @@ export default function TransferOwnership(guild) {
     const intl4 = tmp(1114).intl;
     obj14.text = intl4.string(tmp(1114).t.jqqLb6);
     obj14.disabled = !tmp8;
-    items3[2] = tmp11(tmp(4975).Button, obj14);
+    items3[2] = closure_13(tmp(4975).Button, obj14);
     obj.children = items3;
-    obj.children = tmp13(tmp14, obj);
-    return tmp11(tmp12, obj);
+    obj.children = closure_15(tmp14, obj);
+    return closure_13(closure_8, obj);
   }
   const intl2 = tmp(1114).intl;
   const obj15 = { GuildHook: GuildWithSmallIcon, user: null, AKAHook: null };
@@ -291,8 +291,8 @@ export default function TransferOwnership(guild) {
     const items = [__initData(Text_Text.Text, obj), ,];
     let tmp6 = null;
     if (c7) {
-      obj = { style: tmp.miniAvatar, user: toUser, guildId: guild.id, size: tmp4(1178).AvatarSizes.XXSMALL };
-      tmp6 = map1(tmp4(1178).Avatar, obj);
+      obj = { style: tmp.miniAvatar, user: toUser, guildId: guild.id, size: native.AvatarSizes.XXSMALL };
+      tmp6 = map1(native.Avatar, obj);
     }
     items[1] = tmp6;
     let str = nickname;
@@ -305,4 +305,5 @@ export default function TransferOwnership(guild) {
     return __initData(closure_2_14, obj);
   };
   formatResult = intl2.format(tmp(1114).t.E90vgp, obj15);
+  const tmp3Result1 = toUser(4404);
 }

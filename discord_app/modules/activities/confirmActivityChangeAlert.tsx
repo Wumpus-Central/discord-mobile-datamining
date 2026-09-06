@@ -1,5 +1,6 @@
 // discord_app/modules/activities/confirmActivityChangeAlert.tsx
 import util from "../../intl/index.native.tsx";
+import StringUtils from "../../utils/StringUtils.tsx";
 import useChannelName from "../channel/useChannelName.tsx";
 import AlertActionCreatorsDefault from "../../actions/AlertActionCreators.tsx";
 import RelationshipStore from "../../stores/RelationshipStore.tsx";
@@ -30,16 +31,17 @@ export default function confirmActivityChangeModal(name, channel, onConfirm, onC
     name = name.name;
   }
   if (name == null) {
-    const intl5 = tmp6(1114).intl;
-    name = intl5.string(tmp6(1114).t.G99XFs);
+    const intl5 = util.intl;
+    name = intl5.string(util.t.G99XFs);
   }
   obj = { currentApplicationName: name, currentApplicationChannelName: null };
   const obj2 = AlertActionCreatorsDefault;
   if (tmp6Result.isNullOrEmpty(str)) {
-    const intl6 = tmp6(1114).intl;
-    str = intl6.string(tmp6(1114).t.OGUjmt);
+    const intl6 = util.intl;
+    str = intl6.string(util.t.OGUjmt);
   }
   obj.currentApplicationChannelName = str;
   obj.body = intl4.format(util.t["5/Xort"], obj);
   obj2.show(obj);
+  tmp6Result = StringUtils;
 }

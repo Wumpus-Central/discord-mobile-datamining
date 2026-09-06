@@ -2,6 +2,8 @@
 import FlagUtils from "../../../discord_common/js/shared/utils/FlagUtils.tsx";
 import MessageRecordUtils from "MessageRecordUtils.tsx";
 import createMessageDefault from "createMessage.tsx";
+import ChannelRecipientPrivateUserDataFlags from "../../../discord_common/js/shared/shared-constants/ChannelRecipientPrivateUserDataFlags.tsx";
+import PrivateChannelRecipientActionCreatorsDefault from "../private_channel_recipient/PrivateChannelRecipientActionCreators.tsx";
 import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
 
 require = fn;
@@ -38,14 +40,18 @@ export const tryCreateInjectedMessage = function tryCreateInjectedMessage(id, id
           if (id.author.id !== AuthenticationStore.getId()) {
             tmp4 = null;
             if (null == id.activity) {
-              let tmpResult = tmp(1384);
+              let tmpResult = FlagUtils;
               let num = id2.recipientFlags;
               if (num == null) {
                 num = 0;
               }
               tmp4 = null;
               if (
-                !tmpResult.hasFlag(num, tmp(11954).ChannelRecipientPrivateUserDataFlags.DISMISSED_IN_GAME_MESSAGE_NUX)
+                !tmpResult.hasFlag(
+                  num,
+                  ChannelRecipientPrivateUserDataFlags.ChannelRecipientPrivateUserDataFlags
+                    .DISMISSED_IN_GAME_MESSAGE_NUX,
+                )
               ) {
                 tmp4 = null;
                 if (!obj.has(id2.id)) {
@@ -54,35 +60,37 @@ export const tryCreateInjectedMessage = function tryCreateInjectedMessage(id, id
                     type: constants3.IN_GAME_MESSAGE_NUX,
                     content: "",
                     author: id.author,
-                    flags: tmp3.EPHEMERAL,
+                    flags: constants.EPHEMERAL,
                     state: constants2.SENT,
                   };
-                  tmpResult = tmp(4783);
+                  tmpResult = MessageRecordUtils;
                   const messageRecord1 = tmpResult.createMessageRecord(createMessageDefault(obj));
                   ({ applicationId: tmp10.applicationId, timestamp: tmp10.timestamp } = id);
                   const result = obj.set(id2.id, id.id);
-                  const tmp6 = importDefault;
                   const tmp9 = createMessageDefault(obj);
                   let num2 = id2.recipientFlags;
                   if (num2 == null) {
                     num2 = 0;
                   }
-                  const tmpResult1 = tmp(1384);
-                  const setFlagResult = tmp(1384).setFlag(
+                  const tmpResult1 = FlagUtils;
+                  const setFlagResult = FlagUtils.setFlag(
                     num2,
-                    tmp(11954).ChannelRecipientPrivateUserDataFlags.DISMISSED_IN_GAME_MESSAGE_NUX,
+                    ChannelRecipientPrivateUserDataFlags.ChannelRecipientPrivateUserDataFlags
+                      .DISMISSED_IN_GAME_MESSAGE_NUX,
                     true,
                   );
-                  const result1 = tmp6(11955).updatePrivateChannelRecipientFlags(id2.id, setFlagResult);
+                  const result1 = PrivateChannelRecipientActionCreatorsDefault.updatePrivateChannelRecipientFlags(
+                    id2.id,
+                    setFlagResult,
+                  );
                   tmp4 = messageRecord1;
-                  const tmp6Result = tmp6(11955);
+                  const tmp6Result = PrivateChannelRecipientActionCreatorsDefault;
                 }
               }
             }
           }
         }
       }
-      tmp3 = constants;
     }
   }
   let tmp22 = null;

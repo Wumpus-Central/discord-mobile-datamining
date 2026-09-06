@@ -50,7 +50,7 @@ export default function AppStoreOverlayAboutSection(children) {
   const stringResult = intl.string(tmp3 ? t["6MwJo/"] : t.lBeKY2);
   let obj = { style: tmp.aboutSection, children: null };
   obj = { variant: "text-sm/semibold", color: "mobile-text-heading-primary", children: null };
-  const intl2 = tmp8(1114).intl;
+  const intl2 = util.intl;
   obj.children = intl2.string(util.t.CI0vSJ);
   const items1 = [
     timestampProducer(Text_Text.Text, obj),
@@ -76,8 +76,8 @@ export default function AppStoreOverlayAboutSection(children) {
     obj.accessibilityState = obj1;
     obj.onPress = callback1;
     const obj2 = { variant: "text-sm/medium", color: "text-link", children: stringResult };
-    obj.children = tmp13(tmp8(4556).Text, obj2);
-    tmp13Result = tmp13(React4, obj);
+    obj.children = timestampProducer(Text_Text.Text, obj2);
+    tmp13Result = timestampProducer(React4, obj);
   }
   items1[2] = tmp13Result;
   obj.children = items1;

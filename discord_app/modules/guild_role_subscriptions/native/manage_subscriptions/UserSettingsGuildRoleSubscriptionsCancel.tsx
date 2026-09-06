@@ -108,7 +108,7 @@ function CancelSubscriptionButtonFooter(guild) {
   items[7] = analyticsLocations;
   obj = { style: tmp.footer, children: null };
   const callback = isPurchasedViaAppleGeneric.useCallback(
-    analyticsLocations(function* (arg0, value) {
+    analyticsLocations(function* () {
       if (c5 === 2) {
         c5 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -301,17 +301,17 @@ function Content(subscription) {
       const items = [closure_1_10(FastAssetImageDefault, obj1)];
       const obj2 = { style: tmp.body, children: null };
       const obj3 = { guild, listingId: listing.id, subscription };
-      const items1 = [closure_1_10(WhatYouLose, obj3), closure_1_10(tmp5(1178).Spacer, { size: 24 }), , ,];
+      const items1 = [closure_1_10(WhatYouLose, obj3), closure_1_10(native.Spacer, { size: 24 }), , ,];
       const obj4 = {
         variant: "text-sm/bold",
         color: "text-default",
         style: { textTransform: "uppercase" },
         children: null,
       };
-      const intl = tmp5(1114).intl;
-      obj4.children = intl.string(tmp5(1114).t.xyvN8p);
-      items1[2] = closure_1_10(tmp5(4556).Text, obj4);
-      items1[3] = closure_1_10(tmp5(1178).Spacer, { size: 16 });
+      const intl = util.intl;
+      obj4.children = intl.string(util.t.xyvN8p);
+      items1[2] = closure_1_10(Text_Text.Text, obj4);
+      items1[3] = closure_1_10(native.Spacer, { size: 16 });
       const obj5 = { listingId: listing.id, guildId: guild.id };
       items1[4] = closure_1_10(GuildRoleSubscriptionCardAll.Content, obj5);
       obj2.children = items1;

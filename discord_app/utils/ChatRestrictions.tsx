@@ -16,9 +16,9 @@ const items = [
           if (null == extractEveryoneRoleResult) {
             return false;
           } else {
-            let tmp9Result = tmp9(10258);
+            let tmp9Result = MentionGuardUtilsDefault;
             if (tmp9Result.shouldShowEveryoneGuard(extractEveryoneRoleResult, getGuildId)) {
-              tmp9Result = tmp9(10258);
+              tmp9Result = MentionGuardUtilsDefault;
               const everyoneMemberCountResult = tmp9Result.everyoneMemberCount(extractEveryoneRoleResult, getGuildId);
               const _Math = Math;
               const _Math2 = Math;
@@ -26,18 +26,18 @@ const items = [
               const powResult = Math.pow(10, Math.floor(Math.log10(everyoneMemberCountResult)));
               let v47E5Rz = util.t["47E5Rz"];
               if (getGuildId.isForumPost()) {
-                v47E5Rz = tmp6(1114).t.sYW2cy;
+                v47E5Rz = util.t.sYW2cy;
               } else if (getGuildId.isThread()) {
-                v47E5Rz = tmp6(1114).t["2YaiQ1"];
+                v47E5Rz = util.t["2YaiQ1"];
               }
               let obj = { body: null, footer: null };
-              const intl = tmp6(1114).intl;
+              const intl = util.intl;
               obj = { role: extractEveryoneRoleResult, count: null };
               const _Math4 = Math;
               const result = Math.trunc(everyoneMemberCountResult / powResult) * powResult;
               obj.count = result.toLocaleString();
               obj.body = intl.formatToPlainString(v47E5Rz, obj);
-              const intl2 = tmp6(1114).intl;
+              const intl2 = util.intl;
               obj.footer = intl2.string(util.t.mVyrtu);
               return obj;
             } else {

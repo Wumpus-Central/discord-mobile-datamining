@@ -5,7 +5,7 @@ const require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: c3, TouchableWithoutFeedback: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const forwardRefResult = noop.forwardRef((enabled, ref) => {
+const forwardRefResult = noop.forwardRef((enabled, arg1) => {
   let flag = enabled.enabled;
   if (flag === undefined) {
     flag = true;
@@ -43,7 +43,7 @@ const forwardRefResult = noop.forwardRef((enabled, ref) => {
     }),
     items,
   );
-  const imperativeHandle = onSelectKeyboard.useImperativeHandle(ref, memo.imperativeHandle);
+  const imperativeHandle = onSelectKeyboard.useImperativeHandle(arg1, memo.imperativeHandle);
   let tmp6 = null;
   if (flag) {
     tmp6 = null;

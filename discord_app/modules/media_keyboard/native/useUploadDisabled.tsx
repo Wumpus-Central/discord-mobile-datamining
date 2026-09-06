@@ -16,11 +16,11 @@ export default function useUploadDisabled(arg0) {
   return require("initialize").useStateFromStores(items, () => {
     let tmp = UploadAttachmentStore.getUploads(id.id, DraftType.ChannelMessage).length >= hasOwnProperty;
     if (!tmp) {
-      let tmp4 = obj.id === FakePlaceholderPrivateChannel.FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID;
+      let tmp4 = id.id === FakePlaceholderPrivateChannel.FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID;
       if (!tmp4) {
-        let isPrivateResult = obj.isPrivate();
+        let isPrivateResult = id.isPrivate();
         if (!isPrivateResult) {
-          isPrivateResult = PermissionStore.can(constants.ATTACH_FILES, obj);
+          isPrivateResult = PermissionStore.can(constants.ATTACH_FILES, id);
         }
         tmp4 = !isPrivateResult;
       }

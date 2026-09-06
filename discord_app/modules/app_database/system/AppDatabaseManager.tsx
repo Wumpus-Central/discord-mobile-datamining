@@ -129,11 +129,10 @@ AppDatabaseManager["computeEntries"] = function computeEntries(MobileAppDatabase
   for (const item10025 of mapped) {
     let actions = item10025.actions;
     for (const item10032 of actions) {
-      let tmp7 = item10032;
       if (!map.has(item10032)) {
-        let result2 = map.set(tmp7, []);
+        let result2 = map.set(item10032, []);
       }
-      value = map.get(tmp7);
+      value = map.get(item10032);
       arr = value.push(tmp4);
       continue;
     }

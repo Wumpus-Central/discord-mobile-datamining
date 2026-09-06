@@ -1,4 +1,5 @@
 // discord_app/modules/chat/native/computeScrollData.tsx
+import Client from "../../../flow/Client.tsx";
 import NativeChatUtils from "NativeChatUtils.tsx";
 import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
 
@@ -65,12 +66,12 @@ export default function computeScrollData(shouldInitialScroll) {
       const useReducedMotion = AccessibilityStore.useReducedMotion;
       let tmp10 = !useReducedMotion;
       if (!useReducedMotion) {
-        tmp10 = jumpType !== tmp7(4491).JumpType.INSTANT;
+        tmp10 = jumpType !== Client.JumpType.INSTANT;
       }
       obj.animate = tmp10;
       obj.highlight = scrollToMessageId === jumpTargetId;
       if (scrollPosition == null) {
-        scrollPosition = tmp7(11271).ChatScrollPosition.TOP;
+        scrollPosition = NativeChatUtils.ChatScrollPosition.TOP;
       }
       obj.position = scrollPosition;
       tmp4 = obj;

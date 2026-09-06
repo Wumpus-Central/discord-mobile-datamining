@@ -14,6 +14,7 @@ function initialize() {
       if (tmp2) {
         loadThread(channelId);
       }
+      tmp2 = null != channelId && null == channel.getChannel(channelId);
     });
   }
 }
@@ -41,6 +42,7 @@ function loadThread(channelId) {
         if (tmp2) {
           loadThread(channelId);
         }
+        tmp2 = null != channelId && null == channel.getChannel(channelId);
       });
     }
     if (GatewayConnectionStore.isConnected()) {
@@ -170,9 +172,8 @@ export default {
               continue;
             }
             for (const item10029 of items1) {
-              let tmp6 = item10029;
               if (!set.has(item10029)) {
-                closure_11[tmp6] = { type: "NOT_FOUND" };
+                closure_11[item10029] = { type: "NOT_FOUND" };
               }
               continue;
             }

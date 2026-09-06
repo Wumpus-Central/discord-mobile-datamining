@@ -1,5 +1,6 @@
 // discord_app/utils/native/DeviceUtils.tsx
 import _mod17 from "../../../_runtime/metro/00017__.js";
+import Storage3 from "../../../discord_common/js/packages/storage/Storage.tsx";
 import NativeDeviceModuleDefault from "../../../discord_common/js/packages/rtn-codegen/js/NativeDeviceModule.tsx";
 import PlatformUtils from "../PlatformUtils.tsx";
 import size from "../../../_runtime/metro/00002__.js";
@@ -77,14 +78,14 @@ export const getDeviceMediaPerformanceClass = function getDeviceMediaPerformance
   if (obj.isAndroid()) {
     let tmp5 = null == mediaPerformanceClass2;
     if (tmp5) {
-      const Storage = tmp(510).Storage;
+      const Storage = Storage3.Storage;
       value = Storage.get(mediaPerformanceClass);
       mediaPerformanceClass2 = value;
       tmp5 = null == value;
     }
     if (tmp5) {
       mediaPerformanceClass2 = NativeDeviceModuleDefault.getMediaPerformanceClass();
-      const Storage2 = tmp(510).Storage;
+      const Storage2 = Storage3.Storage;
       const result = Storage2.set(mediaPerformanceClass, mediaPerformanceClass2);
     }
     tmp3 = mediaPerformanceClass2;

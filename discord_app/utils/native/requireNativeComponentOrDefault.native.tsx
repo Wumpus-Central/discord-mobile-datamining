@@ -22,9 +22,9 @@ export default function requireNativeComponentOrDefault(warnWhenMissing) {
       if (componentFoundInstance == null) {
         componentFoundInstance = React(componentName);
       }
-      const result = obj.set(componentName, componentFoundInstance);
+      const result = map.set(componentName, componentFoundInstance);
     }
-    value = obj.get(componentName);
+    value = map.get(componentName);
   } else {
     value = componentMissingFallbackInstance;
     if (flag) {

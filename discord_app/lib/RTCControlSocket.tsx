@@ -219,13 +219,13 @@ prototype["createWebSocket"] = function createWebSocket() {
   webSocket.binaryType = "arraybuffer";
   webSocket.onopen = () => {
     if (self.connectionState === constants.CONNECTING) {
-      obj.emit(obj.Connect);
-    } else if (obj.connectionState === tmp.RECONNECTING) {
-      obj.doResumeOrClose();
+      self.emit(self.Connect);
+    } else if (self.connectionState === constants.RECONNECTING) {
+      self.doResumeOrClose();
     }
     self.connectionState = constants.CONNECTED;
-    const diff = TimeUtils.now() - obj.connectionStartTime;
-    const logger = obj.logger;
+    const diff = TimeUtils.now() - self.connectionStartTime;
+    const logger = self.logger;
     logger.info("[CONNECTED] " + self.url + " in " + diff + " ms");
     self.emit(self.Ping, Math.round(diff / 2));
   };
@@ -234,7 +234,7 @@ prototype["createWebSocket"] = function createWebSocket() {
     ({ op, seq, d } = result);
     self.emit(self.ReceiveMessage, op, d);
     if (seq) {
-      obj.lastRecvSeqNum = seq;
+      self.lastRecvSeqNum = seq;
     }
     if (DeveloperOptionsStore.isLoggingGatewayEvents) {
       const _Uint8Array = Uint8Array;
@@ -242,58 +242,58 @@ prototype["createWebSocket"] = function createWebSocket() {
         const items = [];
         HermesBuiltin.arraySpread(d, 0);
         const mapped = items.map((item) => item.toString(16).padStart(2, "0"));
-        const logger2 = obj.logger;
+        const logger2 = self.logger;
         const _HermesInternal2 = HermesInternal;
         logger2.info("~> " + op + ": 0x" + mapped.join(""));
       } else {
-        const logger = obj.logger;
+        const logger = self.logger;
         const _JSON = JSON;
         const _HermesInternal = HermesInternal;
         logger.info("~> " + op + ": " + JSON.stringify(d));
       }
     }
     if (self.HELLO === op) {
-      obj.clearHelloTimeout();
-      obj.handleHello(d);
-    } else if (tmp10.READY === op) {
-      obj.handleReady(d);
-    } else if (tmp10.SFU_UPDATE === op) {
-      obj.emit(tmp2.SfuUpdate, d);
-    } else if (tmp10.RESUMED === op) {
-      obj.handleResumed(d);
-    } else if (tmp10.SELECT_PROTOCOL_ACK === op) {
+      self.clearHelloTimeout();
+      self.handleHello(d);
+    } else if (self.READY === op) {
+      self.handleReady(d);
+    } else if (self.SFU_UPDATE === op) {
+      self.emit(self.SfuUpdate, d);
+    } else if (self.RESUMED === op) {
+      self.handleResumed(d);
+    } else if (self.SELECT_PROTOCOL_ACK === op) {
       if (d.bandwidth_estimation_experiment) {
-        obj.emit(tmp2.BandwidthEstimationExperiment, d.bandwidth_estimation_experiment);
+        self.emit(self.BandwidthEstimationExperiment, d.bandwidth_estimation_experiment);
       }
-      obj.emit(tmp2.Codecs, d.audio_codec, d.video_codec);
+      self.emit(self.Codecs, d.audio_codec, d.video_codec);
       if (d.media_session_id) {
-        obj.emit(tmp2.MediaSessionId, d.media_session_id);
+        self.emit(self.MediaSessionId, d.media_session_id);
       }
       if (d.sdp) {
-        obj.emit(tmp2.SDP, d.sdp);
+        self.emit(self.SDP, d.sdp);
       } else if (d.mode) {
-        obj.emit(tmp2.Encryption, d.mode, d.secret_key);
+        self.emit(self.Encryption, d.mode, d.secret_key);
       }
       if (d.keyframe_interval) {
-        obj.emit(tmp2.KeyframeInterval, d.keyframe_interval);
+        self.emit(self.KeyframeInterval, d.keyframe_interval);
       }
       let num8 = d.dave_protocol_version;
       if (!num8) {
         num8 = 0;
       }
-      obj.emit(tmp2.SecureFramesInit, num8);
-      obj.resumable = true;
-    } else if (tmp10.SPEAKING === op) {
+      self.emit(self.SecureFramesInit, num8);
+      self.resumable = true;
+    } else if (self.SPEAKING === op) {
       const speaking = d.speaking;
       if (typeof speaking !== "boolean") {
-        obj.emit(tmp2.Speaking, d.user_id, d.ssrc, tmp61);
+        self.emit(self.Speaking, d.user_id, d.ssrc, tmp61);
       }
-    } else if (tmp10.HEARTBEAT === op) {
-      obj.sendHeartbeat();
-    } else if (tmp10.HEARTBEAT_ACK === op) {
-      obj.handleHeartbeatAck(d);
-    } else if (tmp10.VIDEO === op) {
-      const Video = tmp2.Video;
+    } else if (self.HEARTBEAT === op) {
+      self.sendHeartbeat();
+    } else if (self.HEARTBEAT_ACK === op) {
+      self.handleHeartbeatAck(d);
+    } else if (self.VIDEO === op) {
+      const Video = self.Video;
       ({ user_id, audio_ssrc, video_ssrc, streams } = d);
       let mapped1;
       if (streams != null) {
@@ -335,69 +335,69 @@ prototype["createWebSocket"] = function createWebSocket() {
       if (mapped1 == null) {
         mapped1 = [];
       }
-      obj.emit(Video, user_id, audio_ssrc, video_ssrc, mapped1);
-    } else if (tmp10.CLIENT_CONNECT === op) {
-      obj.emit(tmp2.ClientConnect, d.user_ids);
-    } else if (tmp10.CLIENT_DISCONNECT === op) {
-      obj.emit(tmp2.ClientDisconnect, d.user_id);
-    } else if (tmp10.SESSION_UPDATE === op) {
+      self.emit(Video, user_id, audio_ssrc, video_ssrc, mapped1);
+    } else if (self.CLIENT_CONNECT === op) {
+      self.emit(self.ClientConnect, d.user_ids);
+    } else if (self.CLIENT_DISCONNECT === op) {
+      self.emit(self.ClientDisconnect, d.user_id);
+    } else if (self.SESSION_UPDATE === op) {
       if (!tmp45) {
-        obj.emit(tmp2.Codecs, d.audio_codec, d.video_codec);
+        self.emit(self.Codecs, d.audio_codec, d.video_codec);
       }
       if (null != d.media_session_id) {
-        obj.emit(tmp2.MediaSessionId, d.media_session_id);
+        self.emit(self.MediaSessionId, d.media_session_id);
       }
       if (d.keyframe_interval) {
-        obj.emit(tmp2.KeyframeInterval, d.keyframe_interval);
+        self.emit(self.KeyframeInterval, d.keyframe_interval);
       }
       tmp45 = null == d.audio_codec && null == d.video_codec;
-    } else if (tmp10.MEDIA_SINK_WANTS === op) {
-      obj.emit(tmp2.MediaSinkWants, d);
-    } else if (tmp10.VOICE_BACKEND_VERSION === op) {
+    } else if (self.MEDIA_SINK_WANTS === op) {
+      self.emit(self.MediaSinkWants, d);
+    } else if (self.VOICE_BACKEND_VERSION === op) {
       if (tmp41) {
-        obj.emit(tmp2.VoiceBackendVersion, d.voice, d.rtc_worker);
+        self.emit(self.VoiceBackendVersion, d.voice, d.rtc_worker);
       }
       tmp41 = null != d.voice && null != d.rtc_worker;
-    } else if (tmp10.FLAGS === op) {
+    } else if (self.FLAGS === op) {
       if (tmp38) {
-        obj.emit(tmp2.Flags, d.user_id, d.flags);
+        self.emit(self.Flags, d.user_id, d.flags);
       }
       tmp38 = null != d.flags && null != d.user_id;
-    } else if (tmp10.PLATFORM === op) {
+    } else if (self.PLATFORM === op) {
       if (tmp35) {
-        obj.emit(tmp2.Platform, d.user_id, d.platform);
+        self.emit(self.Platform, d.user_id, d.platform);
       }
       tmp35 = null != d.platform && null != d.user_id;
-    } else if (tmp10.DAVE_PROTOCOL_PREPARE_TRANSITION === op) {
+    } else if (self.DAVE_PROTOCOL_PREPARE_TRANSITION === op) {
       if (tmp32) {
-        obj.emit(tmp2.SecureFramesPrepareTransition, d.transition_id, d.protocol_version);
+        self.emit(self.SecureFramesPrepareTransition, d.transition_id, d.protocol_version);
       }
       tmp32 = null != d.transition_id && null != d.protocol_version;
-    } else if (tmp10.DAVE_PROTOCOL_EXECUTE_TRANSITION === op) {
+    } else if (self.DAVE_PROTOCOL_EXECUTE_TRANSITION === op) {
       if (null != d.transition_id) {
-        obj.emit(tmp2.SecureFramesExecuteTransition, d.transition_id);
+        self.emit(self.SecureFramesExecuteTransition, d.transition_id);
       }
-    } else if (tmp10.DAVE_PROTOCOL_PREPARE_EPOCH === op) {
+    } else if (self.DAVE_PROTOCOL_PREPARE_EPOCH === op) {
       if (tmp28) {
-        obj.emit(tmp2.SecureFramesPrepareEpoch, d.epoch, d.protocol_version);
+        self.emit(self.SecureFramesPrepareEpoch, d.epoch, d.protocol_version);
       }
       tmp28 = null != d.epoch && null != d.protocol_version;
-    } else if (tmp10.MLS_EXTERNAL_SENDER_PACKAGE === op) {
-      obj.emit(tmp2.MLSExternalSenderPackage, d);
-    } else if (tmp10.MLS_PROPOSALS === op) {
-      obj.emit(tmp2.MLSProposals, d);
-    } else if (tmp10.MLS_PREPARE_COMMIT_TRANSITION === op) {
+    } else if (self.MLS_EXTERNAL_SENDER_PACKAGE === op) {
+      self.emit(self.MLSExternalSenderPackage, d);
+    } else if (self.MLS_PROPOSALS === op) {
+      self.emit(self.MLSProposals, d);
+    } else if (self.MLS_PREPARE_COMMIT_TRANSITION === op) {
       const _DataView2 = DataView;
       const dataView = new DataView(d.buffer, d.byteOffset, 2);
       const uint16 = dataView.getUint16(0, false);
-      obj.emit(tmp2.MLSPrepareCommitTransition, uint16, d.slice(2));
-    } else if (tmp10.MLS_WELCOME === op) {
+      self.emit(self.MLSPrepareCommitTransition, uint16, d.slice(2));
+    } else if (self.MLS_WELCOME === op) {
       const _DataView = DataView;
       const dataView1 = new DataView(d.buffer, d.byteOffset, 2);
       const uint161 = dataView1.getUint16(0, false);
-      obj.emit(tmp2.MLSWelcome, uint161, d.slice(2));
+      self.emit(self.MLSWelcome, uint161, d.slice(2));
     } else {
-      const logger3 = obj.logger;
+      const logger3 = self.logger;
       const _HermesInternal3 = HermesInternal;
       logger3.info("Unhandled op " + op);
     }
@@ -448,7 +448,6 @@ prototype["sendBinary"] = function sendBinary(MLS_COMMIT_WELCOME, uint8Array) {
 prototype["doResumeOrClose"] = function doResumeOrClose() {
   const self = this;
   obj = TimeUtils;
-  const nowResult = obj.now();
   if (null !== this.serverId) {
     if (null !== self.channelId) {
       if (null !== self.token) {
@@ -462,6 +461,7 @@ prototype["doResumeOrClose"] = function doResumeOrClose() {
     }
   }
   self.disconnect(false, obj.UNRESUMABLE, "Cannot resume connection.");
+  nowResult = obj.now();
 };
 prototype["doResume"] = function doResume() {
   const self = this;
@@ -518,9 +518,8 @@ prototype["handleHello"] = function handleHello(d) {
         num2 = NaN;
       }
       self.heartbeatInterval = Math.min(closure_15, num2);
-      tmp4 = tmp;
+      tmp4 = require;
     }
-    tmp = require;
   }
   const diff = tmp4(4589).now() - self.connectionStartTime;
   ({ logger, heartbeatInterval } = self);
@@ -531,6 +530,7 @@ prototype["handleHello"] = function handleHello(d) {
     "[HELLO] heartbeat interval: " + heartbeatInterval + ", version: " + self.serverVersion + ", took " + diff + " ms",
   );
   self.startHeartbeater();
+  const tmp4Result = tmp4(4589);
 };
 prototype["handleReady"] = function handleReady(experiments) {
   const self = this;
@@ -603,9 +603,9 @@ prototype["handleClose"] = function handleClose(arg0, arg1, arg2) {
   }
   self.cleanupWebSocket();
   if (arg1 !== obj.AUTHENTICATION_FAILED) {
-    if (arg1 !== tmp2.SERVER_CRASH) {
-      if (arg1 !== tmp2.SERVER_NOT_FOUND) {
-        if (arg1 !== tmp2.INVALID_SESSION) {
+    if (arg1 !== obj.SERVER_CRASH) {
+      if (arg1 !== obj.SERVER_NOT_FOUND) {
+        if (arg1 !== obj.INVALID_SESSION) {
           if (self.backoff.fails > 3) {
             const logger = self.logger;
             let str = "[WS CLOSED] Backoff exceed. Resetting.";
@@ -744,10 +744,10 @@ prototype["startHeartbeater"] = function startHeartbeater() {
   self.heartbeatAck = true;
   self.heartbeater = setInterval(() => {
     if (self.heartbeatAck) {
-      obj.heartbeatAck = false;
-      obj.sendHeartbeat();
-    } else if (null === obj.expeditedHeartbeatTimeout) {
-      const result = obj.handleHeartbeatTimeout();
+      self.heartbeatAck = false;
+      self.sendHeartbeat();
+    } else if (null === self.expeditedHeartbeatTimeout) {
+      const result = self.handleHeartbeatTimeout();
     }
   }, self.heartbeatInterval);
 };
@@ -1006,7 +1006,7 @@ prototype["updateSession"] = function updateSession(codecs) {
   }));
   this.send(obj.SESSION_UPDATE, obj);
 };
-prototype["speaking"] = function speaking(_lastSentSpeakingStatus, packetDelay, _lastSentSSRC) {
+prototype["speaking"] = function speaking(_lastSentSpeakingStatus) {
   let num = packetDelay;
   if (packetDelay === undefined) {
     num = 0;

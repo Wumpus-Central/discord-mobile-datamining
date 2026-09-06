@@ -1,5 +1,9 @@
 // discord_app/modules/safe_area/useSafeAreaInsetsKeyboardAware.native.tsx
 import PlatformUtils from "../../utils/PlatformUtils.tsx";
+import KeyboardTypes from "../keyboard/native/KeyboardTypes.tsx";
+import useSystemKeyboardHeight from "../keyboard/native/useSystemKeyboardHeight.native.tsx";
+import useKeyboardType from "../keyboard/native/useKeyboardType.tsx";
+import useCustomKeyboardHeight from "../keyboard/native/useCustomKeyboardHeight.tsx";
 import useKeyboardDuration from "../keyboard/native/useKeyboardDuration.tsx";
 import DeprecatedLayoutAnimation from "../animations/native/DeprecatedLayoutAnimation.tsx";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
@@ -43,27 +47,27 @@ export default function useSafeAreaInsetsKeyboardAware() {
         return 0;
       }
     }
-    let tmpResult = tmp(1115);
+    let tmpResult = PlatformUtils;
     if (tmpResult.isAndroid()) {
       if (!flag2) {
         return 0;
       }
     }
-    tmpResult = tmp(1877);
+    tmpResult = useSystemKeyboardHeight;
     obj = { appEntryKey };
     let systemKeyboardHeight = tmpResult.getSystemKeyboardHeight(obj);
     if (0 === systemKeyboardHeight) {
-      const keyboardType = tmp(4427).getKeyboardType(tmp5);
+      const keyboardType = useKeyboardType.getKeyboardType(appEntryKey);
       let num3 = 0;
-      if (keyboardType !== tmp(1609).KeyboardTypes.SYSTEM) {
+      if (keyboardType !== KeyboardTypes.KeyboardTypes.SYSTEM) {
         num3 = 0;
         if (flag3) {
-          num3 = tmp(5579).getCustomKeyboardHeight(tmp5);
-          const tmpResult2 = tmp(5579);
+          num3 = useCustomKeyboardHeight.getCustomKeyboardHeight(appEntryKey);
+          const tmpResult2 = useCustomKeyboardHeight;
         }
       }
       systemKeyboardHeight = num3;
-      const tmpResult1 = tmp(4427);
+      const tmpResult1 = useKeyboardType;
     }
     return systemKeyboardHeight;
   }, items);

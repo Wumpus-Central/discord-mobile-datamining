@@ -1,7 +1,9 @@
 // discord_app/modules/messages/native/MessageAccessibilityActions.tsx
 import util from "../../../intl/index.native.tsx";
 import UserSettings from "../../user_settings/UserSettings.tsx";
+import DoubleTapToReactUtils from "../../double_tap_to_react/native/DoubleTapToReactUtils.tsx";
 import canAddNewReactionsDefault from "../../reactions/canAddNewReactions.tsx";
+import canReplyToMessage from "../../replies/canReplyToMessage.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
 const MessageAccessibilityAction = {
@@ -42,16 +44,16 @@ export const getMessageAccessibilityActionFromLabel = function getMessageAccessi
   let formatToPlainStringResult = null;
   if (true !== disableDoubleTap) {
     if (null != setting) {
-      const result = tmp(7968).disambiguatedEmojiFromSettingsValue(setting);
+      const result = DoubleTapToReactUtils.disambiguatedEmojiFromSettingsValue(setting);
       if (null != result) {
-        const intl9 = tmp(1114).intl;
+        const intl9 = util.intl;
         obj = { emojiName: result.name };
-        formatToPlainStringResult = intl9.formatToPlainString(tmp(1114).t.eQIttH, obj);
+        formatToPlainStringResult = intl9.formatToPlainString(util.t.eQIttH, obj);
       }
-      const tmpResult = tmp(7968);
+      const tmpResult = DoubleTapToReactUtils;
     }
-    const intl8 = tmp(1114).intl;
-    formatToPlainStringResult = intl8.formatToPlainString(tmp(1114).t.eQIttH, { emojiName: "heart" });
+    const intl8 = util.intl;
+    formatToPlainStringResult = intl8.formatToPlainString(util.t.eQIttH, { emojiName: "heart" });
   }
   if (null != formatToPlainStringResult) {
     obj[formatToPlainStringResult] = obj.ADD_QUICK_REACTION;
@@ -69,11 +71,11 @@ export const createMessageAccessibilityActions = function createMessageAccessibi
     const items = [obj];
     if (canAddNewReactionsDefault(channel)) {
       obj = { label: null, name: null };
-      const intl = tmp10(1114).intl;
-      obj.label = intl.string(tmp10(1114).t.lfIHs4);
+      const intl = util.intl;
+      obj.label = intl.string(util.t.lfIHs4);
       obj.name = tmp12.ADD_REACTION;
       items.push(obj);
-      const DoubleTapReactionEmoji = tmp10(1935).DoubleTapReactionEmoji;
+      const DoubleTapReactionEmoji = UserSettings.DoubleTapReactionEmoji;
       const setting = DoubleTapReactionEmoji.getSetting();
       let disableDoubleTap;
       if (setting != null) {
@@ -82,32 +84,32 @@ export const createMessageAccessibilityActions = function createMessageAccessibi
       let formatToPlainStringResult = null;
       if (true !== disableDoubleTap) {
         if (null != setting) {
-          let tmp10Result = tmp10(7968);
+          let tmp10Result = DoubleTapToReactUtils;
           const result = tmp10Result.disambiguatedEmojiFromSettingsValue(setting);
           if (null != result) {
-            const intl3 = tmp10(1114).intl;
+            const intl3 = util.intl;
             obj = { emojiName: result.name };
-            formatToPlainStringResult = intl3.formatToPlainString(tmp10(1114).t.eQIttH, obj);
+            formatToPlainStringResult = intl3.formatToPlainString(util.t.eQIttH, obj);
           }
         }
-        const intl2 = tmp10(1114).intl;
-        formatToPlainStringResult = intl2.formatToPlainString(tmp10(1114).t.eQIttH, { emojiName: "heart" });
+        const intl2 = util.intl;
+        formatToPlainStringResult = intl2.formatToPlainString(util.t.eQIttH, { emojiName: "heart" });
       }
       if (null != formatToPlainStringResult) {
         const obj1 = { label: formatToPlainStringResult, name: tmp12.ADD_QUICK_REACTION };
         items.push(obj1);
       }
     }
-    tmp10Result = tmp10(7976);
+    tmp10Result = canReplyToMessage;
     if (tmp10Result.canReplyToMessage(channel, message)) {
       const obj2 = { label: null, name: null };
-      const intl4 = tmp10(1114).intl;
-      obj2.label = intl4.string(tmp10(1114).t["5IEsGx"]);
+      const intl4 = util.intl;
+      obj2.label = intl4.string(util.t["5IEsGx"]);
       obj2.name = tmp12.REPLY;
       items.push(obj2);
     }
     const obj3 = { label: null, name: null };
-    const intl5 = tmp10(1114).intl;
+    const intl5 = util.intl;
     obj3.label = intl5.string(util.t.ChPNkN);
     obj3.name = obj.MESSAGE_ACTIONS_MENU;
     items.push(obj3);

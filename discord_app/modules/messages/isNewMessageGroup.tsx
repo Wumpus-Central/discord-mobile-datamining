@@ -1,4 +1,5 @@
 // discord_app/modules/messages/isNewMessageGroup.tsx
+import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
 import DurationsDefault from "../../utils/Durations.tsx";
 import DateUtils from "../../utils/DateUtils.tsx";
 import isSystemMessageDefault from "isSystemMessage.tsx";
@@ -32,9 +33,9 @@ function isNewMessageGroup(isForumPost, content, hasFlag) {
         if (!tmp34) {
           let tmp7 = content.author.id !== type.author.id;
           if (!tmp7) {
-            let tmp9 = content.hasFlag(tmp.EPHEMERAL) !== type.hasFlag(tmp.EPHEMERAL);
+            let tmp9 = content.hasFlag(constants3.EPHEMERAL) !== type.hasFlag(constants3.EPHEMERAL);
             if (!tmp9) {
-              let tmp11 = content.hasFlag(tmp.IS_SCHEDULED) !== type.hasFlag(tmp.IS_SCHEDULED);
+              let tmp11 = content.hasFlag(constants3.IS_SCHEDULED) !== type.hasFlag(constants3.IS_SCHEDULED);
               if (!tmp11) {
                 let tmp13 = null != type.webhookId && content.author.username !== type.author.username;
                 if (!tmp13) {
@@ -44,32 +45,32 @@ function isNewMessageGroup(isForumPost, content, hasFlag) {
                   }
                   let tmp16 = !isForumPostResult;
                   if (isForumPostResult) {
-                    tmp16 = content.id !== tmp40(11).castChannelIdAsMessageId(isForumPost.id);
-                    const tmp40Result = tmp40(11);
+                    tmp16 = content.id !== SnowflakeUtilsDefault.castChannelIdAsMessageId(isForumPost.id);
+                    const tmp40Result = SnowflakeUtilsDefault;
                   }
                   let tmp17 = !tmp16;
                   if (tmp16) {
                     const isSameDayResult = DateUtils.isSameDay(content.timestamp, type.timestamp);
                     let tmp20 = !isSameDayResult;
                     if (isSameDayResult) {
-                      const isWithinIntervalResult = tmp18(4242).isWithinInterval(
+                      const isWithinIntervalResult = DateUtils.isWithinInterval(
                         content.timestamp,
                         type.timestamp,
                         closure_6,
                       );
                       let tmp23 = !isWithinIntervalResult;
                       if (isWithinIntervalResult) {
-                        const hasFlagResult3 = type.hasFlag(tmp.SUPPRESS_NOTIFICATIONS);
+                        const hasFlagResult3 = type.hasFlag(constants3.SUPPRESS_NOTIFICATIONS);
                         let hasFlagResult4 = !hasFlagResult3;
                         if (hasFlagResult3) {
-                          hasFlagResult4 = content.hasFlag(tmp.SUPPRESS_NOTIFICATIONS);
+                          hasFlagResult4 = content.hasFlag(constants3.SUPPRESS_NOTIFICATIONS);
                         }
                         let tmp26 = !hasFlagResult4;
                         if (hasFlagResult4) {
-                          const hasFlagResult5 = content.hasFlag(tmp.SUPPRESS_NOTIFICATIONS);
+                          const hasFlagResult5 = content.hasFlag(constants3.SUPPRESS_NOTIFICATIONS);
                           let hasFlagResult6 = !hasFlagResult5;
                           if (hasFlagResult5) {
-                            hasFlagResult6 = type.hasFlag(tmp.SUPPRESS_NOTIFICATIONS);
+                            hasFlagResult6 = type.hasFlag(constants3.SUPPRESS_NOTIFICATIONS);
                           }
                           if (!hasFlagResult6) {
                             hasFlagResult6 = !(
@@ -109,24 +110,22 @@ function isNewMessageGroup(isForumPost, content, hasFlag) {
                         tmp23 = tmp26;
                       }
                       tmp20 = tmp23;
-                      const tmp18Result = tmp18(4242);
+                      const tmp18Result = DateUtils;
                     }
                     tmp17 = tmp20;
-                    tmp18 = require;
                   }
                   tmp13 = tmp17;
                 }
                 tmp11 = tmp13;
               }
               tmp9 = tmp11;
-              const hasFlagResult2 = content.hasFlag(tmp.IS_SCHEDULED);
+              const hasFlagResult2 = content.hasFlag(constants3.IS_SCHEDULED);
             }
             tmp7 = tmp9;
-            const hasFlagResult1 = content.hasFlag(tmp.EPHEMERAL);
+            const hasFlagResult1 = content.hasFlag(constants3.EPHEMERAL);
           }
           tmp34 = tmp7;
         }
-        tmp40 = importDefault;
       }
     }
   }
@@ -142,7 +141,7 @@ export const isNewGroupItem = function isNewGroupItem(isForumPost, type, hasFlag
   if (!tmp) {
     let tmp3 = type.type === constants2.MESSAGE && type.content.id === type.content.channel_id;
     if (!tmp3) {
-      let tmp4 = type.type !== tmp2.MESSAGE && type.type !== tmp2.THREAD_STARTER_MESSAGE;
+      let tmp4 = type.type !== constants2.MESSAGE && type.type !== constants2.THREAD_STARTER_MESSAGE;
       if (!tmp4) {
         tmp4 = isNewMessageGroup(isForumPost, type.content, hasFlag);
       }

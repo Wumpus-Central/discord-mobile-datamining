@@ -80,7 +80,7 @@ function FriendAnniversary() {
     obj.subLabel = "" + arg2 + "Mobile: " + str5 + " \u00B7 Server: " + str4;
     let tmp8Result;
     if (tmp6) {
-      tmp8Result = tmp8(closure_0(stateFromStores2[18]).TableRowArrow, {});
+      tmp8Result = closure_1_17(closure_0(stateFromStores2[18]).TableRowArrow, {});
     }
     obj.trailing = tmp8Result;
     obj.disabled = first1;
@@ -92,10 +92,10 @@ function FriendAnniversary() {
             const HTTP = closure_0(stateFromStores2[15]).HTTP;
             if (null != closure_0) {
               const _HermesInternal2 = HermesInternal;
-              let url = "" + closure_2_21 + "/" + tmp + "/" + tmp2;
+              let url = "" + closure_2_21 + "/" + closure_2_22 + "/" + closure_0;
             } else {
               const _HermesInternal = HermesInternal;
-              url = "" + closure_2_21 + "/" + tmp;
+              url = "" + closure_2_21 + "/" + closure_2_22;
             }
             return HTTP.del({ url, rejectWithError: true });
           },
@@ -194,7 +194,7 @@ function FriendAnniversary() {
   const tmp12 = _slicedToArray(recipientUserId.useState(false), 2);
   closure_8 = tmp12[1];
   onPress = recipientUserId.useCallback(
-    stateFromStores3(function* (arg0, value) {
+    stateFromStores3(function* () {
       if (c6 === 2) {
         c6 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -292,7 +292,7 @@ function FriendAnniversary() {
   const effect = recipientUserId.useEffect(() => {
     callback();
   }, items4);
-  _require = stateFromStores3(function* (arg0, value) {
+  _require = stateFromStores3(function* (arg0, arg1) {
     if (c7 === 2) {
       c7 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -406,7 +406,7 @@ function FriendAnniversary() {
       return items;
     }),
   );
-  const set = new Set(highestAffinity.map((userId) => userId.userId));
+  new Set(highestAffinity.map((userId) => userId.userId));
   const items6 = [...highAffinity];
   const tmp10 = _slicedToArray(recipientUserId.useState(false), 2);
   let arr = Array.from(
@@ -417,7 +417,7 @@ function FriendAnniversary() {
       }),
     ).values(),
   );
-  const set1 = new Set(arr.map((userId) => userId.userId));
+  new Set(arr.map((userId) => userId.userId));
   const items7 = [...Object.keys(stateFromStores1), ...Array.from(map.keys())];
   map1 = new Map(
     items6.map((userId) => {
@@ -515,15 +515,15 @@ function FriendAnniversary() {
   if (tmp19Result) {
     obj2 = { children: null };
     obj3 = { size: stateFromStores1(tmp2[23]).space.PX_16 };
-    const items10 = [tmp21(tmp(tmp2[22]).Spacer, obj3)];
+    const items10 = [closure_17(tmp(tmp2[22]).Spacer, obj3)];
     let obj4 = {
       title: "Other Dismissals (not generated)",
       hasIcons: false,
       children: found1.map((item) => renderDismissalRow(item, false, "", "other")),
     };
-    items10[1] = tmp21(tmp(tmp2[19]).TableRowGroup, obj4);
+    items10[1] = closure_17(tmp(tmp2[19]).TableRowGroup, obj4);
     obj2.children = items10;
-    tmp19Result = tmp19(tmp20, obj2);
+    tmp19Result = closure_18(closure_19, obj2);
   }
   items9[1] = tmp19Result;
   const set2 = new Set(items7);
@@ -720,8 +720,8 @@ function PremiumToggles() {
           label: tmp3,
           subLabel: tmp,
           value: tmp2,
-          onValueChange(arg0) {
-            return require("DevSettingsActions").toggle(closure_1_0, arg0);
+          onValueChange(flag) {
+            return require("DevSettingsActions").toggle(closure_1_0, flag);
           },
         },
         tmp,
@@ -747,11 +747,11 @@ function ForceMockIAP() {
   obj = {
     title: "iOS IAP Mock",
     hasIcons: false,
-    children: tmp3(TableSwitchRow.TableSwitchRow, obj),
+    children: closure_1_17(TableSwitchRow.TableSwitchRow, obj),
     value: tmp4,
     disabled: result,
-    onValueChange(arg0) {
-      require("DevSettingsActions").toggle("force_mock_iap", arg0);
+    onValueChange(flag) {
+      require("DevSettingsActions").toggle("force_mock_iap", flag);
       DevSettingsStore.persist();
       const obj = require("DevSettingsActions");
       const result = BundleUpdaterDefault.checkForUpdateAndReload();

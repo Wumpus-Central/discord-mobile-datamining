@@ -22,13 +22,14 @@ export const useVideoQuestCaptions = (quest) => {
   const effect = noop.useEffect(() => {
     if (null != url) {
       const HTTP = HTTPUtils.HTTP;
-      const obj = { url: tmp, rejectWithError: true };
+      let obj = { url: tmp, rejectWithError: true };
       value = HTTP.get(obj);
       value
         .then((text) => {
           try {
             closure_1_2(url(15146).parseVtt(text.text).cues);
             dependencyMap(constants.SUCCESS);
+            const obj = url(15146);
           } catch (err) {
             dependencyMap(constants.ERROR);
           }
@@ -40,6 +41,7 @@ export const useVideoQuestCaptions = (quest) => {
         try {
           closure_1_2(url(15146).parseVtt(text.text).cues);
           dependencyMap(constants.SUCCESS);
+          const obj = url(15146);
         } catch (err) {
           dependencyMap(constants.ERROR);
         }

@@ -53,13 +53,13 @@ let closure_12 = createStyles.createStyles((textShadowColor, arg1) => {
   obj = { neon: null, popContainer: null, popBackLayer: null, popFrontLayer: null, toon: null, layoutImpact: null };
   const merged = Object.assign(obj);
   obj.neon = obj;
-  let tmp4Result = tmp4(1116);
+  let tmp4Result = utils_PlatformUtils;
   let num = 0;
   if (tmp4Result.isIOS()) {
     num = -sum3 / 2;
   }
   const rect1 = { position: "relative", top: num, left: null, marginRight: null };
-  tmp4Result = tmp4(1116);
+  tmp4Result = utils_PlatformUtils;
   let num2 = 0;
   if (tmp4Result.isIOS()) {
     num2 = -sum3 / 2;
@@ -86,7 +86,7 @@ let closure_12 = createStyles.createStyles((textShadowColor, arg1) => {
   obj.popBackLayer = size;
   tmp4Result2 = utils_PlatformUtils;
   obj.popFrontLayer = { color: nativeDefault.colors.WHITE };
-  const rect2 = { color: tmp10(576).colors.WHITE, top: null, left: null, marginRight: null };
+  const rect2 = { color: nativeDefault.colors.WHITE, top: null, left: null, marginRight: null };
   const obj4 = { color: nativeDefault.colors.WHITE };
   let num6 = 0;
   if (tmp4Result3.isIOS()) {
@@ -254,7 +254,6 @@ export default noop.memo((userName) => {
           }
           if (effectId === tmp7(1390).DisplayNameEffect.GUMMY) {
             const tmp4Result = tmp4(10904);
-            const tmp66 = closure_9;
             let str3 = tmp7(4265).getNodeText(userName);
             if (str3 == null) {
               str3 = "";
@@ -273,7 +272,7 @@ export default noop.memo((userName) => {
             obj2.textStrokeColor = undefined;
             obj1.textProps = obj2;
             obj1.colors = displayNameStylesAccessibleColors;
-            return tmp66(tmp4Result, obj1);
+            return closure_9(tmp4Result, obj1);
           } else {
             if (tmp7(1390).DisplayNameEffect.GRADIENT !== effectId) {
               if (tmp7(1390).DisplayNameEffect.PRISM !== effectId) {
@@ -297,12 +296,12 @@ export default noop.memo((userName) => {
                   if (colorVariants != null) {
                     dark2 = colorVariants.dark2;
                   }
-                  let tmp37Result = tmp37(dark2);
+                  let tmp37Result = closure_5(dark2);
                   let main;
                   if (colorVariants != null) {
                     main = colorVariants.main;
                   }
-                  tmp37Result = tmp37(main);
+                  tmp37Result = closure_5(main);
                   bound = memo;
                   items10 = items1;
                   if (null != colorVariants) {

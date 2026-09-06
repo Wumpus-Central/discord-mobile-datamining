@@ -4,7 +4,7 @@ import DispatcherDefault from "../../Dispatcher.tsx";
 import DurationsDefault from "../../utils/Durations.tsx";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
 
-function updateImpressionCaches(flag) {
+function updateImpressionCaches() {
   if (flag === undefined) {
     flag = false;
   }
@@ -110,10 +110,9 @@ const contentInventoryPersistedStore = new ContentInventoryPersistedStore(Dispat
     }
     let flag = false;
     for (const item10017 of tmp) {
-      let tmp5 = item10017;
       if (!set1.has(item10017)) {
         let itemImpressions = closure_2.itemImpressions;
-        let items = [tmp5, tmp4];
+        let items = [item10017, tmp4];
         let arr = itemImpressions.push(items);
         flag = true;
       }

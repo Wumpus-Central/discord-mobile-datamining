@@ -22,9 +22,10 @@ export const DismissibleActionSheet = function DismissibleActionSheet(arg0) {
   const effect = noop.useEffect(
     () => () => {
       if (tmp2) {
-        closure_0(4527).hideActionSheet(tmp.actionSheetKey);
+        closure_0(4527).hideActionSheet(closure_1_0.actionSheetKey);
         const obj = closure_0(4527);
       }
+      tmp2 = null != closure_1_0.hideSheetOnUnmount && closure_1_0.hideSheetOnUnmount;
     },
     items,
   );

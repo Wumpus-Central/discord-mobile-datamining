@@ -2,6 +2,7 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
 import native from "../../../../design/void/native.tsx";
+import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import useFontScale from "../../../screen/native/useFontScale.tsx";
 import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
 import Badge from "Badge.tsx";
@@ -139,18 +140,18 @@ export default function IconActionButton(variant) {
   const items1 = [React4(closure_7, { IconComponent, color, source }), , ,];
   if (tmp10Result) {
     obj = { variant: "text-sm/bold", color: buttonTextColor, style: tmp.actionText, children: buttonText };
-    tmp10Result = tmp10(tmp2(4556).Text, obj);
+    tmp10Result = React4(Text_Text.Text, obj);
   }
   items1[1] = tmp10Result;
   tmp10Result = null;
   if (num > 0) {
     obj = { style: tmp.countStyle, value: num };
-    tmp10Result = tmp10(tmp2(1178).Badge, obj);
+    tmp10Result = React4(native.Badge, obj);
   }
   items1[2] = tmp10Result;
   if (badge) {
     const obj1 = { badgePosition };
-    badge = tmp10(ButtonBadge, obj1);
+    badge = React4(ButtonBadge, obj1);
   }
   items1[3] = badge;
   obj.children = items1;

@@ -4,8 +4,10 @@ import util from "../../../intl/index.native.tsx";
 import asyncRequireImpl from "../../../../_runtime/01896_asyncRequireImpl.js";
 import HelpdeskUtilsDefault from "../../../utils/HelpdeskUtils.tsx";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
+import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import _modDef5597 from "../../../../_runtime/metro/05597__.js";
 import TableCheckboxRow from "../../../design/components/TableRow/native/TableCheckboxRow.native.tsx";
+import TableRowIcon from "../../../design/components/TableRow/native/TableRowIcon.native.tsx";
 import GuildAntiRaidUtils from "../../guild_antiraid/GuildAntiRaidUtils.tsx";
 import GuildAntiRaidTypes from "../../guild_antiraid/GuildAntiRaidTypes.tsx";
 import InstantInvite from "../../guild_instant_invites/native/InstantInvite.tsx";
@@ -169,12 +171,11 @@ function GuildSettingsModalInstantInvites(invites) {
           "GuildIncidentActionsActionSheet",
           obj,
         );
-        tmp3(false);
+        closure_7(false);
       } catch (tmp17) {
         tmp2(false);
         throw tmp17;
       }
-      tmp3 = closure_7;
     }
   }, items4);
   const items5 = [hasItem, callback1, invitesDisabledLoading];

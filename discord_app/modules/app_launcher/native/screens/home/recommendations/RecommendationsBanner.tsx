@@ -3,11 +3,11 @@ import AvatarUtilsDefault from "../../../../../../utils/AvatarUtils.tsx";
 import FastImageDefault from "../../../../../../components_native/common/FastImage.tsx";
 import useAvatarColorDefault from "../../../../../avatar/useAvatarColor.tsx";
 import useDisplayProfileDefault from "../../../../../user_profile/hooks/useDisplayProfile.tsx";
+import UserProfileBannerDefault from "../../../../../user_profile/native/UserProfileBanner.tsx";
 import useEmbeddedActivityBackgroundDefault from "../../../../../activities/utils/useEmbeddedActivityBackground.tsx";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 import UserRecord from "../../../../../../records/UserRecord.tsx";
 
-const UserProfileBannerDefault = tmp(8246);
 const require = fn;
 const View = fn(17).View;
 const Constants = fn(1074);

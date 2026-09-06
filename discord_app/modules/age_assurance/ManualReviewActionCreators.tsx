@@ -7,9 +7,9 @@ require = fn;
 let closure_8 = async function _requestManualReview() {
   const HTTP = HTTPUtils.HTTP;
   await HTTP.post({ url: constants.AGE_VERIFICATION_MANUAL_REVIEW, rejectWithError: true });
-  return arg1.body;
+  return value.body;
 };
-let closure_12 = async function _handleManualReviewCta(arg0, value) {
+let closure_12 = async function _handleManualReviewCta() {
   if (c5 === 2) {
     c5 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");

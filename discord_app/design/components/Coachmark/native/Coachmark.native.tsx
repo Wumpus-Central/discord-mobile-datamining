@@ -85,8 +85,8 @@ class Coachmark {
         const items = [closure_3.bottomMargin];
         obj.style = items;
         obj = {};
-        const merged = Object.assign(tmp);
-        let str = tmp.aspectRatio;
+        const merged = Object.assign(graphic);
+        let str = graphic.aspectRatio;
         if (str == null) {
           str = "1/1";
         }

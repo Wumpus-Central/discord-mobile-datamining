@@ -13,7 +13,7 @@ import UserGuildSettingsStore from "../UserGuildSettingsStore.tsx";
 import UserStore from "../UserStore.tsx";
 
 require = fn;
-function makeSortedChannel(channel, id) {
+function makeSortedChannel(channel) {
   let tmp = id;
   if (id === undefined) {
     id = ReadStateStore.lastMessageId(channel.id);
@@ -169,13 +169,12 @@ const privateChannelSortStore = new PrivateChannelSortStore(DispatcherDefault, {
       const channel = ChannelStore.getChannel(channelId);
       let result = null != channel;
       if (result) {
-        result = obj.set(channelId, makeSortedChannel(channel, channelId.message.id));
+        result = secondaryIndexMap.set(channelId, makeSortedChannel(channel, channelId.message.id));
       }
       return result;
     } else {
       return false;
     }
-    obj = secondaryIndexMap;
   },
   GUILD_CREATE: function handleGuildCreate(guild) {
     return secondaryIndexMap.delete(guild.guild.id);

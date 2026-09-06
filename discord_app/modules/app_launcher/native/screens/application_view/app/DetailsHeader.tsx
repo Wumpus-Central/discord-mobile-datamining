@@ -339,6 +339,7 @@ export default noop.memo(function DetailsHeader(viewContainerStyle) {
             _undefined(true);
             closure_2(true);
           }
+          tmp = null == num3 && null != lines[0];
         },
         children: memo,
       };

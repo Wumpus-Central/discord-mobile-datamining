@@ -78,7 +78,7 @@ export default function GiftingSKUSelectScreen(rewardsToDisplay) {
         someResult = null != defaultHighlightedReward;
       }
       if (someResult) {
-        someResult = obj.some((item) => item === defaultHighlightedReward);
+        someResult = claimableRewards.some((item) => item === defaultHighlightedReward);
       }
       let tmp7;
       if (someResult) {

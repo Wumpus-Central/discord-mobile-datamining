@@ -4,7 +4,11 @@ import useToken from "../../../../design/tokens/native/useToken.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import inlineStyles from "../../../../../_runtime/08453_inlineStyles.js";
 import useReferralProgramBannerDetails from "../hooks/useReferralProgramBannerDetails.tsx";
+import _modDef13456 from "../../../../../_runtime/metro/13456__.js";
+import _modDef13457 from "../../../../../discord_assets/assets/premium/referral_program/referralTrial.png.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
+
+const inlineStylesDefault = inlineStyles;
 
 require = fn;
 const View = fn(17).View;
@@ -32,14 +36,14 @@ export default function ProgressWheel(arg0) {
   let tmp9 = nReferralsSent === useReferralProgramBannerDetails.MAX_REFERRALS_SENT;
   if (tmp9) {
     obj = { source: null, style: null };
-    let tmp4Result = tmp4(5587);
-    obj.source = tmp4(13456);
+    let tmp4Result = FastImageDefault;
+    obj.source = _modDef13456;
     obj.style = tmp.glowImage;
     tmp9 = React4(tmp4Result, obj);
   }
   const items = [tmp9, ,];
   const size = { width: v160, height: v160, children: null };
-  tmp4Result = tmp4(8453);
+  tmp4Result = inlineStylesDefault;
   const items1 = [React4(inlineStyles.Circle, { cx: 80, cy: 80, r: 77, stroke: token, strokeWidth: 6, fill: token1 })];
   obj1 = {
     cx: 80,
@@ -58,7 +62,7 @@ export default function ProgressWheel(arg0) {
   size.children = items1;
   items[1] = hasOwnProperty(tmp4Result, size);
   if (altImage == null) {
-    altImage = tmp4(13457);
+    altImage = _modDef13457;
   }
   items[2] = React4(FastImageDefault, { source: { uri: altImage }, style: tmp.progressCircleImage });
   obj.children = items;

@@ -2,6 +2,7 @@
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import PlatformUtils from "../../../utils/PlatformUtils.tsx";
 import KeyboardUIStore from "../../keyboard/native/KeyboardUIStore.native.tsx";
+import MetaQuestUtils from "../../device/MetaQuestUtils.android.tsx";
 import KeyboardTypes from "../../keyboard/native/KeyboardTypes.tsx";
 import native from "../../../../discord_common/js/packages/design/native.tsx";
 import ReanimatedRexport from "../../reanimated/ReanimatedRexport.tsx";
@@ -209,6 +210,7 @@ export default noop.memo(function AppLauncherKeyboard(context) {
         const result = setAccessibilityFocus.setAccessibilityFocus(obj1);
       }
     }
+    obj3 = MetaQuestUtils;
   }, items5);
   obj1 = {
     ref: ref2,

@@ -2,11 +2,11 @@
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import useToken from "../../../design/tokens/native/useToken.tsx";
 import ReanimatedRexport from "../../reanimated/ReanimatedRexport.tsx";
+import NativeViewDefault from "../../core/native/NativeView.tsx";
 import ReanimatedNativeViewDefault from "../../core/native/ReanimatedNativeView.tsx";
 import useHomeDrawerGesture from "../../home_drawer/native/useHomeDrawerGesture.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
-const NativeViewDefault = tmp2(5589);
 require = fn;
 function GuildsBarHomeDrawerSeparator(guildItemSize) {
   guildItemSize = guildItemSize.guildItemSize;
@@ -58,10 +58,10 @@ export default noop.memo(function GuildsBarSeparator() {
   const tmp4 = closure_4(token);
   if (obj2.useIsHomeDrawerEnabled()) {
     obj = { guildItemSize: token };
-    let tmp5Result = tmp5(GuildsBarHomeDrawerSeparator, obj);
+    let tmp5Result = <GuildsBarHomeDrawerSeparator guildItemSize={token} />;
   } else {
     obj = { style: tmp4.separator };
-    tmp5Result = tmp5(NativeViewDefault, obj);
+    tmp5Result = jsx(NativeViewDefault, { style: tmp4.separator });
   }
   return tmp5Result;
 });

@@ -37,7 +37,7 @@ export const TwoWayLinkDiscordConsent = function TwoWayLinkDiscordConsent(callba
     c5 = 0;
     c6 = 0;
     c4 = 0;
-    return (function* (arg0, value) {
+    return (function* (arg0) {
       if (c6 === 2) {
         c6 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -165,8 +165,8 @@ export const TwoWayLinkDiscordConsent = function TwoWayLinkDiscordConsent(callba
     obj6.text = intl.string(tmp2(tmp3[14]).t.ZN4hkc);
     obj6.onPress = callback1;
     obj6.loading = tmp5[0];
-    obj5.children = tmp9(tmp2(tmp3[13]).Button, obj6);
-    tmp9Result = tmp9(tmp10, obj5);
+    obj5.children = closure_9(tmp2(tmp3[13]).Button, obj6);
+    tmp9Result = closure_9(tmp10, obj5);
   }
   obj4.children = tmp9Result;
   items4[1] = closure_9(require("common/SafeAreaView").SafeAreaPaddingView, obj4);

@@ -1,5 +1,7 @@
 // discord_app/design/tokens/native/SemanticColorContext.native.tsx
 import _modDef672 from "../../../../_runtime/metro/00672__.js";
+import utils_ColorUtils from "../../../../discord_common/js/shared/utils/ColorUtils.tsx";
+import native from "../../utils/native.tsx";
 import getGradientThemeFromFlags from "../../components/ThemeContextProvider/native/getGradientThemeFromFlags.tsx";
 import client_themes_ClientThemesUtils from "../../../modules/client_themes/native/ClientThemesUtils.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
@@ -17,9 +19,9 @@ export const getSemanticColorContextFromThemeContext = function getSemanticColor
     ({ primaryColor: primaryColor2, secondaryColor } = themeContext);
     let tmp9 = null;
     if (null != primaryColor2) {
-      let tmpResult = tmp(1091);
+      let tmpResult = utils_ColorUtils;
       const int2hexResult = tmpResult.int2hex(primaryColor2);
-      tmpResult = tmp(1091);
+      tmpResult = utils_ColorUtils;
       if (secondaryColor == null) {
         secondaryColor = primaryColor2;
       }
@@ -43,7 +45,7 @@ export const getSemanticColorContextFromThemeContext = function getSemanticColor
       };
       obj.colors = obj;
       tmp9 = obj;
-      tmpResult1 = tmp(4264);
+      tmpResult1 = native;
     }
     gradientThemeMetadata = tmp9;
   }

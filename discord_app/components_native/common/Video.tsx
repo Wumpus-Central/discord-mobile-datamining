@@ -247,7 +247,7 @@ prototype["render"] = function render() {
   if (this.state.postponeRender) {
     if (false !== tmp2) {
       obj.children = null;
-      let tmp3Result = tmp3(tmp4, obj);
+      let tmp3Result = <tmp4 {...obj} />;
       if (tmp) {
         if (accessibilityLabel == null) {
           const intl = util.intl;
@@ -259,7 +259,15 @@ prototype["render"] = function render() {
           onPress: self.handleOpenFullScreen,
           children: tmp3Result,
         };
-        tmp3Result = tmp3(React4, obj);
+        tmp3Result = (
+          <React4
+            accessibilityRole="button"
+            accessibilityLabel={accessibilityLabel}
+            onPress={self.handleOpenFullScreen}
+          >
+            {tmp3Result}
+          </React4>
+        );
       }
       return tmp3Result;
     }

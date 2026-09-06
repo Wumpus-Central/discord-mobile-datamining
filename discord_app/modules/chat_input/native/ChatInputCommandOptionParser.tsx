@@ -12,20 +12,20 @@ import GuildRoleStore from "../../../stores/GuildRoleStore.tsx";
 import PermissionStore from "../../../stores/PermissionStore.tsx";
 
 require = fn;
-function findTokenLocations(arr, arg1, fn) {
+function findTokenLocations(arr, pillText, fn) {
   const items = [];
-  let index = arr.indexOf(arg1);
+  let index = arr.indexOf(pillText);
   if (-1 !== index) {
     do {
       if (fn(index)) {
         arr = items.push(index);
       }
-      index = arr.indexOf(arg1, index + arg1.length);
+      index = arr.indexOf(pillText, index + pillText.length);
     } while (-1 !== index);
   }
   return items;
 }
-function findGameMentionTokens(text, name, items) {
+function findGameMentionTokens(text, name) {
   closure_0 = name;
   if (items === undefined) {
     items = [];
@@ -88,11 +88,16 @@ function findAllTimestampPillMatches(size, text) {
     function _loop3(pillText) {
       closure_0 = pillText;
       for (const item10010 of tmp) {
-        let obj = { location: item10010, pillText: arg0, mention: null };
-        obj.mention = mention;
+        let obj = { location: item10010, pillText: arg0, mention };
         let arr = items1.push(obj);
         continue;
       }
+      const tmp = findTokenLocations(closure_0, pillText, (arg0) =>
+        items1.every(
+          (location) =>
+            length + length.length <= location.location || tmp >= location.location + location.pillText.length,
+        ),
+      );
     }
     const tmp5 = sorted[Symbol.iterator]();
     while (tmp5 !== undefined) {
@@ -192,9 +197,7 @@ export const getMatchedOptionsWithValue = (length2, activeCommand) => {
                   let arr = items.push(obj);
                 }
                 obj = { location: match.index + 1, length: match[0].length - 1, data: null };
-                let obj1 = { type: null, option: null };
-                obj1.type = ChatInputParser.ChatInputParseResultDataType.COMMAND_OPTION;
-                obj1.option = options[num];
+                let obj1 = { type: ChatInputParser.ChatInputParseResultDataType.COMMAND_OPTION, option: options[num] };
                 obj.data = obj1;
                 let addResult = set.add(num);
                 tmp8 = obj;
@@ -265,9 +268,7 @@ export const getMatchedOptions = (arg0, activeCommand) => {
               }
               if (!hasItem) {
                 let obj = { location: match.index + 1, length: match[0].length - 1, data: null };
-                obj = { type: null, option: null };
-                obj.type = ChatInputParser.ChatInputParseResultDataType.COMMAND_OPTION;
-                obj.option = options[num];
+                obj = { type: ChatInputParser.ChatInputParseResultDataType.COMMAND_OPTION, option: options[num] };
                 obj.data = obj;
                 let arr = items.push(obj);
                 let addResult = set.add(num);
@@ -283,13 +284,13 @@ export const getMatchedOptions = (arg0, activeCommand) => {
   }
   return [];
 };
-export const getTextBeforeFirstOption = (arr) => {
+export const getTextBeforeFirstOption = (text) => {
   re15.lastIndex = 0;
-  const match = re15.exec(arr);
+  const match = re15.exec(text);
   const obj = { match, text: null };
-  let substr = arr;
+  let substr = text;
   if (null != match) {
-    substr = arr.slice(0, re15.lastIndex - match[0].length);
+    substr = text.slice(0, re15.lastIndex - match[0].length);
   }
   obj.text = substr;
   return obj;
@@ -314,8 +315,7 @@ export const getEmojiHighlightNodes = function getEmojiHighlightNodes(channel, a
       }
       if (null != byId) {
         let obj2 = EmojiUtilsDefault;
-        let obj = { emoji: byId, channel, intention: null };
-        obj.intention = EmojiIntention.CHAT;
+        let obj = { emoji: byId, channel, intention: EmojiIntention.CHAT };
         if (null === obj2.getEmojiUnavailableReason(obj)) {
           obj = { location: match.index, length: match[0].length };
           let arr = items.push(obj);
@@ -341,7 +341,7 @@ export const getUsernameHighlightNodes = function getUsernameHighlightNodes(chan
         obj = { location: match.index, length: match[0].length };
         let arr = items.push(obj);
       }
-      match = obj2.exec(arg1);
+      match = re17.exec(arg1);
     } while (null != match);
   }
   closure_0 = (arg0) => arg0.split("#")[0];
@@ -354,7 +354,7 @@ export const getUsernameHighlightNodes = function getUsernameHighlightNodes(chan
         obj = { location: match1.index, length: match1[0].length };
         arr = items.push(obj);
       }
-      match1 = obj4.exec(arg1);
+      match1 = re18.exec(arg1);
     } while (null != match1);
   }
   return items;
@@ -428,19 +428,7 @@ export const getGameHighlightNodes = function getGameHighlightNodes(mentionGames
       let tmp17 = buildGameMentionResult(tmp5);
       ({ length, icon, iconSize, iconCornerRadius, iconSpacing } = tmp17);
       for (const item10039 of locations) {
-        let obj = {
-          location: item10039,
-          length: null,
-          icon: null,
-          iconSize: null,
-          iconCornerRadius: null,
-          iconSpacing: null,
-        };
-        obj.length = length;
-        obj.icon = icon;
-        obj.iconSize = iconSize;
-        obj.iconCornerRadius = iconCornerRadius;
-        obj.iconSpacing = iconSpacing;
+        let obj = { location: item10039, length, icon, iconSize, iconCornerRadius, iconSpacing };
         arr = items1.push(obj);
         continue;
       }
@@ -504,15 +492,15 @@ export const getTimestampMentionInputNodes = function getTimestampMentionInputNo
     require("TimestampAutocompleteMobileExperiment").TimestampAutocompleteMobileExperiment;
   const items = [];
   if (TimestampAutocompleteMobileExperiment.getConfig({ location: "timestamp mention input highlight" }).enabled) {
-    _require = closure_11;
-    let index = arr.indexOf(closure_11);
+    _require = length2;
+    let index = arr.indexOf(length2);
     if (-1 !== index) {
       do {
         let obj = require("autocompleter/AutocompleteUtils");
         if (obj.isWhitespaceSeparatingBoundary(arr, index)) {
           arr = items.push(index);
         }
-        index = arr.indexOf(arr2, index + arr2.length);
+        index = arr.indexOf(length2, index + length2.length);
       } while (-1 !== index);
     }
     return items.map((location) => ({ location, length: length.length }));
@@ -524,15 +512,15 @@ export const getGameMentionInputNodes = function getGameMentionInputNodes(arr) {
   const IncludeGameMentionsInAutocomplete = require("UserSettings").IncludeGameMentionsInAutocomplete;
   const items = [];
   if (IncludeGameMentionsInAutocomplete.getSetting()) {
-    _require = closure_10;
-    let index = arr.indexOf(closure_10);
+    _require = length;
+    let index = arr.indexOf(length);
     if (-1 !== index) {
       do {
         let obj = require("autocompleter/AutocompleteUtils");
         if (obj.isWhitespaceSeparatingBoundary(arr, index)) {
           arr = items.push(index);
         }
-        index = arr.indexOf(arr2, index + arr2.length);
+        index = arr.indexOf(length, index + length.length);
       } while (-1 !== index);
     }
     return items.map((location) => ({ location, length: length.length }));
@@ -540,10 +528,10 @@ export const getGameMentionInputNodes = function getGameMentionInputNodes(arr) {
     return items;
   }
 };
-export const getRoleHighlightNodes = (getGuildId, arg1) => {
+export const getRoleHighlightNodes = (channel, arg1) => {
   const items = [];
-  if (PermissionStore.can(Permissions.MENTION_EVERYONE, getGuildId)) {
-    const guildId = getGuildId.getGuildId();
+  if (PermissionStore.can(Permissions.MENTION_EVERYONE, channel)) {
+    const guildId = channel.getGuildId();
     closure_2 = {};
     if (null != guildId) {
       let sortedRoles = GuildRoleStore.getSortedRoles(guildId);

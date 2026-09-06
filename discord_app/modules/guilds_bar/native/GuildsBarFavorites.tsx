@@ -88,7 +88,6 @@ export default noop.memo(function GuildsBarFavorites() {
     children: null,
   };
   const obj4 = shouldShowPopover(10238);
-  const tmp13 = closure_9;
   let intl = shouldShowPopover(1114).intl;
   obj.label = intl.string(shouldShowPopover(1114).t.wMWyci);
   obj.externalChildren = badge2;
@@ -101,8 +100,8 @@ export default noop.memo(function GuildsBarFavorites() {
   children[1] = closure_8(View, obj1);
   if (shouldShowPopover) {
     obj2 = { targetRef: ref, markAsDismissed: markPopoverAsDismissed };
-    shouldShowPopover = tmp15(tmp5(16313), obj2);
+    shouldShowPopover = closure_8(tmp5(16313), obj2);
   }
   children[2] = shouldShowPopover;
-  return tmp13(View, { children });
+  return closure_9(View, { children });
 });

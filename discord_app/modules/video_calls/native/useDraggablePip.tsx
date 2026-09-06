@@ -3,6 +3,7 @@ import native from "../../../design/void/native.tsx";
 import ReanimatedRexport from "../../reanimated/ReanimatedRexport.tsx";
 import timing from "../../../design/animation/reanimated/timing/timing.tsx";
 import spring from "../../../design/animation/reanimated/spring/spring.tsx";
+import cheapWorkletShallowEqual from "../../reanimated/native/cheapWorkletShallowEqual.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 
 require = fn;
@@ -89,7 +90,7 @@ export const useDraggablePip = function useDraggablePip(size) {
   let sharedValue2;
   let sharedValue3;
   let sharedValue4;
-  const tmp = containerHeight((pipFocus) => pipFocus.pipFocus);
+  let tmp = containerHeight((pipFocus) => pipFocus.pipFocus);
   __initData = tmp;
   let obj = width(height[3]);
   class X {
@@ -176,7 +177,7 @@ export const useDraggablePip = function useDraggablePip(size) {
   derivedValue6 = width(height[3]).useDerivedValue(I);
   const obj8 = width(height[3]);
   sharedValue = width(height[3]).useSharedValue(0);
-  const obj9 = width(height[3]);
+  let obj9 = width(height[3]);
   sharedValue1 = width(height[3]).useSharedValue(sharedValue.get());
   const obj11 = width(height[3]);
   sharedValue2 = width(height[3]).useSharedValue(0);
@@ -197,7 +198,7 @@ export const useDraggablePip = function useDraggablePip(size) {
   J.__workletHash = 2741340788440;
   J.__initData = derivedValue6;
   const fn = function q(arg0, arg1) {
-    if (!obj.cheapWorkletArrayShallowEqual(arg0, arg1)) {
+    if (!obj.cheapWorkletArrayShallowEqual(arg0, tmp)) {
       const tmp3 = _slicedToArray(arg0, 2);
       const first = tmp3[0];
       let items = arg1;
@@ -205,7 +206,7 @@ export const useDraggablePip = function useDraggablePip(size) {
         items = [0, 0];
       }
       if (null != arg1) {
-        if (first !== tmp2(items, 1)[0]) {
+        if (first !== _slicedToArray(items, 1)[0]) {
           if (typeof clamp === "function") {
             const _Math = Math;
             const _Math2 = Math;
@@ -217,8 +218,9 @@ export const useDraggablePip = function useDraggablePip(size) {
           }
         }
       }
-      tmp2 = _slicedToArray;
     }
+    obj = cheapWorkletShallowEqual;
+    tmp = arg1;
   };
   obj = {
     cheapWorkletArrayShallowEqual: width(height[6]).cheapWorkletArrayShallowEqual,
@@ -340,10 +342,10 @@ export const useDraggablePip = function useDraggablePip(size) {
         const _Math3 = Math;
         const _Math4 = Math;
         const bound1 = Math.min(Math.max(sum1, 0), diff1);
-        const value1 = obj5.get();
-        const diff2 = value1 - obj6.get() - bound1;
-        value2 = obj2.get();
-        const diff3 = value2 - obj3.get() - bound;
+        const value1 = derivedValue6.get();
+        const diff2 = value1 - derivedValue4.get() - bound1;
+        value2 = derivedValue5.get();
+        const diff3 = value2 - derivedValue3.get() - bound;
         const _Math5 = Math;
         const _Math6 = Math;
         const bound2 = Math.min(bound1, diff2, bound, diff3);
@@ -404,19 +406,14 @@ export const useDraggablePip = function useDraggablePip(size) {
         obj = {};
         const merged1 = Object.assign(closure_6);
         obj.velocity = velocityX.velocityY;
-        const result2 = obj4.set(spring.withSpring(num2, obj));
+        const result2 = sharedValue3.set(spring.withSpring(num2, obj));
         const result3 = sharedValue2.set(num2);
       } else {
         throw new TypeError("Trying to call a non-function");
       }
-      obj4 = sharedValue3;
-      obj5 = derivedValue6;
-      obj6 = derivedValue4;
     } else {
       throw new TypeError("Trying to call a non-function");
     }
-    obj2 = derivedValue5;
-    obj3 = derivedValue3;
   }
   obj3 = {
     xPosition: sharedValue1,

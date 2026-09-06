@@ -13,7 +13,7 @@ let size = fn(2);
 let result = size.fileFinishedImporting("modules/fastest_list/FastestListChildren.android.tsx");
 
 export default noop.memo(
-  noop.forwardRef((listFooterAlwaysMounted, ref) => {
+  noop.forwardRef((listFooterAlwaysMounted, arg1) => {
     ({ estimatedListSize: importDefault, horizontal } = listFooterAlwaysMounted);
     if (horizontal === undefined) {
       horizontal = false;
@@ -45,7 +45,7 @@ export default noop.memo(
       items[1] = rect;
       return items;
     }, items);
-    let tmp3 = listFooterAlwaysMounted(
+    const tmp3 = listFooterAlwaysMounted(
       listHeaderAlwaysMounted.useState(() =>
         getFastestListVisibleItemsDefault({ estimatedListSize, sectionsVersioned }),
       ),
@@ -54,7 +54,7 @@ export default noop.memo(
     const itemSize = tmp3[0];
     closure_16 = tmp3[1];
     const imperativeHandle = listHeaderAlwaysMounted.useImperativeHandle(
-      ref,
+      arg1,
       () => ({
         setVisibleItems(nativeEvent) {
           closure_0 = nativeEvent;

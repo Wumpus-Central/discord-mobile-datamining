@@ -3,6 +3,7 @@ import timing from "../../../../design/animation/reanimated/timing/timing.tsx";
 import timingPresets from "../../../../design/animation/reanimated/timing/timingPresets.tsx";
 import QuestContent from "../../../../../discord_common/js/shared/shared-constants/QuestContent.tsx";
 import AnalyticsTypes from "../../lib/analytics/AnalyticsTypes.tsx";
+import apexExperiment from "../../experiments/index.tsx";
 import QuestCustomAppStoreOverlayUtils from "../../utils/QuestCustomAppStoreOverlayUtils.native.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -14,7 +15,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/native/BountiesModal/useBountyVideoEndAppStoreOverlay.tsx");
 
 export const BountyVideoEndAppStoreProvider = function BountyVideoEndAppStoreProvider(value) {
-  return <redux.Provider value={arg0.value}>{arg0.children}</redux.Provider>;
+  return <redux.Provider value={value.value}>{value.children}</redux.Provider>;
 };
 export const useBountyVideoEndAppStoreContext = function useBountyVideoEndAppStoreContext() {
   return noop.useContext(closure_5);
@@ -25,10 +26,12 @@ export const canUseBountyVideoEndAppStoreOverlay = function canUseBountyVideoEnd
 ) {
   if ("auto" !== scrollAffordanceVariant) {
     if (obj2.canOpenCustomAppStoreOverlayFromCta(bounty.cta)) {
-      const CustomAppStoreSqueezeBackExperiment = tmp6(11489).CustomAppStoreSqueezeBackExperiment;
+      const CustomAppStoreSqueezeBackExperiment = apexExperiment.CustomAppStoreSqueezeBackExperiment;
       const obj = { location: QuestsExperimentLocations.VIDEO_MODAL_MOBILE };
       const config = CustomAppStoreSqueezeBackExperiment.getConfig(obj);
-      return config.enabled && tmp4 === tmp6(11489).BountiesCtrExperiment1Variant.LOOP_SQUEEZED_BACK_APP_STORE_OVERLAY;
+      return (
+        config.enabled && tmp4 === apexExperiment.BountiesCtrExperiment1Variant.LOOP_SQUEEZED_BACK_APP_STORE_OVERLAY
+      );
     }
     obj2 = QuestCustomAppStoreOverlayUtils;
   }

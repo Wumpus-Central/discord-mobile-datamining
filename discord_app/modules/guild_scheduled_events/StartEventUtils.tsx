@@ -14,7 +14,7 @@ function createStageChannelForEvent() {
   }
   return applyArgumentsResult;
 }
-let closure_11 = async function _createStageChannelForEvent(arg0, value) {
+let closure_11 = async function _createStageChannelForEvent(arg0) {
   if (c6 === 2) {
     c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -179,7 +179,7 @@ let closure_13 = async function _preStartEventActions(arg0, arg1) {
     }
   })();
 };
-let closure_14 = async function _setEventAsActive(arg0, value) {
+let closure_14 = async function _setEventAsActive(arg0) {
   if (1 === tmp5) {
     if (arg0 === 1) {
       c5 = 3;

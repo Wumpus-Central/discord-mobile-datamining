@@ -164,7 +164,12 @@ export default noop.memo((bottomSheetRef) => {
       },
     };
   }, items2);
-  let tmp15 = bottomSheetIndex(setCategoryIndex[17])({ channel, containerWidth: tmp11, searchResults, stickerFormats });
+  const tmp15 = bottomSheetIndex(setCategoryIndex[17])({
+    channel,
+    containerWidth: tmp11,
+    searchResults,
+    stickerFormats,
+  });
   const sectionHeights = tmp15.sectionHeights;
   const sectionSize = tmp15.sectionSize;
   const sectionFooterSize = tmp15.sectionFooterSize;
@@ -178,11 +183,11 @@ export default noop.memo((bottomSheetRef) => {
     if (tmp2) {
       if (flag) {
         if (bottomSheetIndex.get() < 1) {
-          let obj = { index: tmp, delay: delay2, expand: true };
+          let obj = { index: packToScrollToIndex, delay: delay2, expand: true };
           memo.scroll(obj);
         }
       }
-      obj = { index: tmp, delay };
+      obj = { index: packToScrollToIndex, delay };
       memo.scroll(obj);
     }
     return () => {
@@ -232,13 +237,12 @@ export default noop.memo((bottomSheetRef) => {
           channel,
         };
         return closure_2_11(StickerPickerListRowDefault, obj);
-      } else if (tmp15(10416).StickerPickerSectionType.NSFW === type) {
+      } else if (useStickerPickerListData.StickerPickerSectionType.NSFW === type) {
         obj = { height: rowHeight };
         return closure_2_11(closure_14, obj);
       } else {
         return null;
       }
-      tmp15 = require;
     }
   }, items6);
   const memo1 = onLongPressStickerDetail.useMemo(() => {

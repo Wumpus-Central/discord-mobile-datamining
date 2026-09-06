@@ -88,7 +88,7 @@ class BaseActivityPanelController {
           }
           updateActivityPanelMode(ActivityPanelModes.PANEL);
         }
-        ref2.current = tmp;
+        ref2.current = connectedActivityAppId;
       }
       if (null == connectedActivityAppId) {
         if (null != ref2.current) {
@@ -272,7 +272,7 @@ let closure_17 = FunctionUtils.cachedFunction((arg0, arg1, arg2, arg3) => {
     const _Math4 = Math;
     size1.height = Math.min(height, width);
     size = size1;
-  } else if (tmp2.PORTRAIT === arg2) {
+  } else if (constants.PORTRAIT === arg2) {
     if (arg3) {
       if (tmp) {
         const size2 = { width: height * closure_1_12, height, isLandscape: false, isWindowLandscape: tmp };
@@ -286,7 +286,7 @@ let closure_17 = FunctionUtils.cachedFunction((arg0, arg1, arg2, arg3) => {
     const _Math2 = Math;
     size3.height = Math.max(height, width) - arg1;
   } else {
-    const UNLOCKED = tmp2.UNLOCKED;
+    const UNLOCKED = constants.UNLOCKED;
     const size4 = { width, height: null, isLandscape: null, isWindowLandscape: null };
     let diff = height;
     if (!tmp) {
@@ -388,7 +388,7 @@ export default function ActivityPanelController(children) {
       currentApp={currentApp}
       updateActivityPanelMode={EmbeddedActivitiesActionCreatorsAll.updateActivityPanelMode}
     >
-      {arg0.children}
+      {children.children}
     </BaseActivityPanelController>
   );
 }

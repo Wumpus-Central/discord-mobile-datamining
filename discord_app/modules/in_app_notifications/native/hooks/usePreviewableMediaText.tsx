@@ -14,8 +14,8 @@ export const usePreviewableMediaText = function usePreviewableMediaText(previewa
   return noop.useMemo(() => {
     if (0 === previewableMedia.length) {
       return { text: null, secondaryText: null };
-    } else if (1 === arr.length) {
-      const first = arr[0];
+    } else if (1 === previewableMedia.length) {
+      const first = previewableMedia[0];
       const type = first.type;
       if (usePreviewableMedia.PreviewableMediaTypes.IMAGE === type) {
         if (null != author) {
@@ -129,7 +129,7 @@ export const usePreviewableMediaText = function usePreviewableMediaText(previewa
     } else {
       if (null != author) {
         const intl2 = util.intl;
-        const obj23 = { count: length, username: tmp101.nick };
+        const obj23 = { count: length, username: author.nick };
         let formatResult = intl2.format(util.t["319zWs"], obj23);
       } else {
         const intl = util.intl;
@@ -138,7 +138,7 @@ export const usePreviewableMediaText = function usePreviewableMediaText(previewa
       }
       if (null != author) {
         const intl4 = util.intl;
-        const obj24 = { count: length, username: tmp101.nick };
+        const obj24 = { count: length, username: author.nick };
         let formatResult1 = intl4.format(util.t["1OSGGk"], obj24);
       } else {
         const intl3 = util.intl;

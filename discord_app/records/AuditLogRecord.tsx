@@ -7,68 +7,68 @@ import Record from "../lib/Record.tsx";
 function getTargetType(action) {
   if (action === constants2.ALL) {
     let CHANNEL = constants.ALL;
-  } else if (action <= tmp.GUILD_UPDATE) {
+  } else if (action <= constants2.GUILD_UPDATE) {
     CHANNEL = constants.GUILD;
   } else {
-    if (action > tmp.CHANNEL_DELETE) {
-      if (action !== tmp.MESSAGE_BULK_DELETE) {
-        if (action <= tmp.CHANNEL_OVERWRITE_DELETE) {
+    if (action > constants2.CHANNEL_DELETE) {
+      if (action !== constants2.MESSAGE_BULK_DELETE) {
+        if (action <= constants2.CHANNEL_OVERWRITE_DELETE) {
           CHANNEL = constants.CHANNEL_OVERWRITE;
         } else {
-          if (action > tmp.BOT_ADD) {
-            if (action !== tmp.MESSAGE_DELETE) {
-              if (action !== tmp.MESSAGE_PIN) {
-                if (action !== tmp.MESSAGE_UNPIN) {
-                  if (action <= tmp.ROLE_DELETE) {
+          if (action > constants2.BOT_ADD) {
+            if (action !== constants2.MESSAGE_DELETE) {
+              if (action !== constants2.MESSAGE_PIN) {
+                if (action !== constants2.MESSAGE_UNPIN) {
+                  if (action <= constants2.ROLE_DELETE) {
                     CHANNEL = constants.ROLE;
-                  } else if (action <= tmp.INVITE_DELETE) {
+                  } else if (action <= constants2.INVITE_DELETE) {
                     CHANNEL = constants.INVITE;
-                  } else if (action <= tmp.WEBHOOK_DELETE) {
+                  } else if (action <= constants2.WEBHOOK_DELETE) {
                     CHANNEL = constants.WEBHOOK;
-                  } else if (action <= tmp.EMOJI_DELETE) {
+                  } else if (action <= constants2.EMOJI_DELETE) {
                     CHANNEL = constants.EMOJI;
-                  } else if (action <= tmp.INTEGRATION_DELETE) {
+                  } else if (action <= constants2.INTEGRATION_DELETE) {
                     CHANNEL = constants.INTEGRATION;
-                  } else if (action <= tmp.STAGE_INSTANCE_DELETE) {
+                  } else if (action <= constants2.STAGE_INSTANCE_DELETE) {
                     CHANNEL = constants.STAGE_INSTANCE;
-                  } else if (action <= tmp.STICKER_DELETE) {
+                  } else if (action <= constants2.STICKER_DELETE) {
                     CHANNEL = constants.STICKER;
-                  } else if (action <= tmp.GUILD_SCHEDULED_EVENT_DELETE) {
+                  } else if (action <= constants2.GUILD_SCHEDULED_EVENT_DELETE) {
                     CHANNEL = constants.GUILD_SCHEDULED_EVENT;
-                  } else if (action <= tmp.THREAD_DELETE) {
+                  } else if (action <= constants2.THREAD_DELETE) {
                     CHANNEL = constants.THREAD;
-                  } else if (action === tmp.APPLICATION_COMMAND_PERMISSION_UPDATE) {
+                  } else if (action === constants2.APPLICATION_COMMAND_PERMISSION_UPDATE) {
                     CHANNEL = constants.APPLICATION_COMMAND;
-                  } else if (action <= tmp.SOUNDBOARD_SOUND_DELETE) {
+                  } else if (action <= constants2.SOUNDBOARD_SOUND_DELETE) {
                     CHANNEL = constants.GUILD_SOUNDBOARD;
-                  } else if (action < tmp.AUTO_MODERATION_BLOCK_MESSAGE) {
+                  } else if (action < constants2.AUTO_MODERATION_BLOCK_MESSAGE) {
                     CHANNEL = constants.AUTO_MODERATION_RULE;
                   } else {
-                    if (action !== tmp.AUTO_MODERATION_BLOCK_MESSAGE) {
-                      if (action !== tmp.AUTO_MODERATION_FLAG_TO_CHANNEL) {
-                        if (action !== tmp.AUTO_MODERATION_USER_COMMUNICATION_DISABLED) {
-                          if (action !== tmp.AUTO_MODERATION_QUARANTINE_USER) {
-                            if (action <= tmp.CREATOR_MONETIZATION_TERMS_ACCEPTED) {
+                    if (action !== constants2.AUTO_MODERATION_BLOCK_MESSAGE) {
+                      if (action !== constants2.AUTO_MODERATION_FLAG_TO_CHANNEL) {
+                        if (action !== constants2.AUTO_MODERATION_USER_COMMUNICATION_DISABLED) {
+                          if (action !== constants2.AUTO_MODERATION_QUARANTINE_USER) {
+                            if (action <= constants2.CREATOR_MONETIZATION_TERMS_ACCEPTED) {
                               CHANNEL = constants.GUILD;
-                            } else if (action <= tmp.ONBOARDING_PROMPT_DELETE) {
+                            } else if (action <= constants2.ONBOARDING_PROMPT_DELETE) {
                               CHANNEL = constants.ONBOARDING_PROMPT;
-                            } else if (action <= tmp.ONBOARDING_UPDATE) {
+                            } else if (action <= constants2.ONBOARDING_UPDATE) {
                               CHANNEL = constants.GUILD_ONBOARDING;
-                            } else if (action <= tmp.GUILD_HOME_REMOVE_ITEM) {
+                            } else if (action <= constants2.GUILD_HOME_REMOVE_ITEM) {
                               CHANNEL = constants.GUILD_HOME;
-                            } else if (action <= tmp.HARMFUL_LINKS_BLOCKED_MESSAGE) {
+                            } else if (action <= constants2.HARMFUL_LINKS_BLOCKED_MESSAGE) {
                               CHANNEL = constants.GUILD;
-                            } else if (action <= tmp.HOME_SETTINGS_UPDATE) {
+                            } else if (action <= constants2.HOME_SETTINGS_UPDATE) {
                               CHANNEL = constants.HOME_SETTINGS;
-                            } else if (action <= tmp.VOICE_CHANNEL_STATUS_DELETE) {
+                            } else if (action <= constants2.VOICE_CHANNEL_STATUS_DELETE) {
                               CHANNEL = constants.VOICE_CHANNEL_STATUS;
-                            } else if (action <= tmp.GUILD_SCHEDULED_EVENT_EXCEPTION_DELETE) {
+                            } else if (action <= constants2.GUILD_SCHEDULED_EVENT_EXCEPTION_DELETE) {
                               CHANNEL = constants.GUILD_SCHEDULED_EVENT_EXCEPTION;
-                            } else if (action <= tmp.GUILD_MEMBER_VERIFICATION_UPDATE) {
+                            } else if (action <= constants2.GUILD_MEMBER_VERIFICATION_UPDATE) {
                               CHANNEL = constants.GUILD_MEMBER_VERIFICATION;
-                            } else if (action <= tmp.GUILD_PROFILE_UPDATE) {
+                            } else if (action <= constants2.GUILD_PROFILE_UPDATE) {
                               CHANNEL = constants.GUILD_PROFILE;
-                            } else if (action <= tmp.GUILD_MIGRATE_BYPASS_SLOWMODE_PERMISSION) {
+                            } else if (action <= constants2.GUILD_MIGRATE_BYPASS_SLOWMODE_PERMISSION) {
                               CHANNEL = constants.GUILD;
                             } else {
                               const _HermesInternal = HermesInternal;
@@ -94,200 +94,204 @@ function getTargetType(action) {
   return CHANNEL;
 }
 function getActionType(action) {
-  const tmp = constants2;
   if (constants2.CHANNEL_CREATE !== action) {
-    if (tmp.CHANNEL_OVERWRITE_CREATE !== action) {
-      if (tmp.MEMBER_BAN_REMOVE !== action) {
-        if (tmp.ROLE_CREATE !== action) {
-          if (tmp.INVITE_CREATE !== action) {
-            if (tmp.WEBHOOK_CREATE !== action) {
-              if (tmp.EMOJI_CREATE !== action) {
-                if (tmp.STICKER_CREATE !== action) {
-                  if (tmp.MESSAGE_PIN !== action) {
-                    if (tmp.BOT_ADD !== action) {
-                      if (tmp.INTEGRATION_CREATE !== action) {
-                        if (tmp.STAGE_INSTANCE_CREATE !== action) {
-                          if (tmp.GUILD_SCHEDULED_EVENT_CREATE !== action) {
-                            if (tmp.THREAD_CREATE !== action) {
-                              if (tmp.AUTO_MODERATION_RULE_CREATE !== action) {
-                                if (tmp.CREATOR_MONETIZATION_REQUEST_CREATED !== action) {
-                                  if (tmp.ONBOARDING_PROMPT_CREATE !== action) {
-                                    if (tmp.ONBOARDING_CREATE !== action) {
-                                      if (tmp.GUILD_HOME_FEATURE_ITEM !== action) {
-                                        if (tmp.SOUNDBOARD_SOUND_CREATE !== action) {
-                                          if (tmp.HOME_SETTINGS_CREATE !== action) {
-                                            if (tmp.VOICE_CHANNEL_STATUS_CREATE !== action) {
-                                              if (tmp.CHANNEL_DELETE !== action) {
-                                                if (tmp.CHANNEL_OVERWRITE_DELETE !== action) {
-                                                  if (tmp.MEMBER_KICK !== action) {
-                                                    if (tmp.MEMBER_PRUNE !== action) {
-                                                      if (tmp.MEMBER_BAN_ADD !== action) {
-                                                        if (tmp.ROLE_DELETE !== action) {
-                                                          if (tmp.INVITE_DELETE !== action) {
-                                                            if (tmp.WEBHOOK_DELETE !== action) {
-                                                              if (tmp.EMOJI_DELETE !== action) {
-                                                                if (tmp.STICKER_DELETE !== action) {
-                                                                  if (tmp.MESSAGE_DELETE !== action) {
-                                                                    if (tmp.MESSAGE_BULK_DELETE !== action) {
-                                                                      if (tmp.MESSAGE_UNPIN !== action) {
-                                                                        if (tmp.INTEGRATION_DELETE !== action) {
-                                                                          if (tmp.MEMBER_DISCONNECT !== action) {
-                                                                            if (tmp.STAGE_INSTANCE_DELETE !== action) {
+    if (constants2.CHANNEL_OVERWRITE_CREATE !== action) {
+      if (constants2.MEMBER_BAN_REMOVE !== action) {
+        if (constants2.ROLE_CREATE !== action) {
+          if (constants2.INVITE_CREATE !== action) {
+            if (constants2.WEBHOOK_CREATE !== action) {
+              if (constants2.EMOJI_CREATE !== action) {
+                if (constants2.STICKER_CREATE !== action) {
+                  if (constants2.MESSAGE_PIN !== action) {
+                    if (constants2.BOT_ADD !== action) {
+                      if (constants2.INTEGRATION_CREATE !== action) {
+                        if (constants2.STAGE_INSTANCE_CREATE !== action) {
+                          if (constants2.GUILD_SCHEDULED_EVENT_CREATE !== action) {
+                            if (constants2.THREAD_CREATE !== action) {
+                              if (constants2.AUTO_MODERATION_RULE_CREATE !== action) {
+                                if (constants2.CREATOR_MONETIZATION_REQUEST_CREATED !== action) {
+                                  if (constants2.ONBOARDING_PROMPT_CREATE !== action) {
+                                    if (constants2.ONBOARDING_CREATE !== action) {
+                                      if (constants2.GUILD_HOME_FEATURE_ITEM !== action) {
+                                        if (constants2.SOUNDBOARD_SOUND_CREATE !== action) {
+                                          if (constants2.HOME_SETTINGS_CREATE !== action) {
+                                            if (constants2.VOICE_CHANNEL_STATUS_CREATE !== action) {
+                                              if (constants2.CHANNEL_DELETE !== action) {
+                                                if (constants2.CHANNEL_OVERWRITE_DELETE !== action) {
+                                                  if (constants2.MEMBER_KICK !== action) {
+                                                    if (constants2.MEMBER_PRUNE !== action) {
+                                                      if (constants2.MEMBER_BAN_ADD !== action) {
+                                                        if (constants2.ROLE_DELETE !== action) {
+                                                          if (constants2.INVITE_DELETE !== action) {
+                                                            if (constants2.WEBHOOK_DELETE !== action) {
+                                                              if (constants2.EMOJI_DELETE !== action) {
+                                                                if (constants2.STICKER_DELETE !== action) {
+                                                                  if (constants2.MESSAGE_DELETE !== action) {
+                                                                    if (constants2.MESSAGE_BULK_DELETE !== action) {
+                                                                      if (constants2.MESSAGE_UNPIN !== action) {
+                                                                        if (constants2.INTEGRATION_DELETE !== action) {
+                                                                          if (constants2.MEMBER_DISCONNECT !== action) {
+                                                                            if (
+                                                                              constants2.STAGE_INSTANCE_DELETE !==
+                                                                              action
+                                                                            ) {
                                                                               if (
-                                                                                tmp.GUILD_SCHEDULED_EVENT_DELETE !==
+                                                                                constants2.GUILD_SCHEDULED_EVENT_DELETE !==
                                                                                 action
                                                                               ) {
                                                                                 if (
-                                                                                  tmp.GUILD_SCHEDULED_EVENT_EXCEPTION_DELETE !==
+                                                                                  constants2.GUILD_SCHEDULED_EVENT_EXCEPTION_DELETE !==
                                                                                   action
                                                                                 ) {
-                                                                                  if (tmp.THREAD_DELETE !== action) {
+                                                                                  if (
+                                                                                    constants2.THREAD_DELETE !== action
+                                                                                  ) {
                                                                                     if (
-                                                                                      tmp.AUTO_MODERATION_BLOCK_MESSAGE !==
+                                                                                      constants2.AUTO_MODERATION_BLOCK_MESSAGE !==
                                                                                       action
                                                                                     ) {
                                                                                       if (
-                                                                                        tmp.AUTO_MODERATION_RULE_DELETE !==
+                                                                                        constants2.AUTO_MODERATION_RULE_DELETE !==
                                                                                         action
                                                                                       ) {
                                                                                         if (
-                                                                                          tmp.ONBOARDING_PROMPT_DELETE !==
+                                                                                          constants2.ONBOARDING_PROMPT_DELETE !==
                                                                                           action
                                                                                         ) {
                                                                                           if (
-                                                                                            tmp.GUILD_HOME_REMOVE_ITEM !==
+                                                                                            constants2.GUILD_HOME_REMOVE_ITEM !==
                                                                                             action
                                                                                           ) {
                                                                                             if (
-                                                                                              tmp.SOUNDBOARD_SOUND_DELETE !==
+                                                                                              constants2.SOUNDBOARD_SOUND_DELETE !==
                                                                                               action
                                                                                             ) {
                                                                                               if (
-                                                                                                tmp.VOICE_CHANNEL_STATUS_DELETE !==
+                                                                                                constants2.VOICE_CHANNEL_STATUS_DELETE !==
                                                                                                 action
                                                                                               ) {
                                                                                                 if (
-                                                                                                  tmp.GUILD_UPDATE !==
+                                                                                                  constants2.GUILD_UPDATE !==
                                                                                                   action
                                                                                                 ) {
                                                                                                   if (
-                                                                                                    tmp.CHANNEL_UPDATE !==
+                                                                                                    constants2.CHANNEL_UPDATE !==
                                                                                                     action
                                                                                                   ) {
                                                                                                     if (
-                                                                                                      tmp.CHANNEL_OVERWRITE_UPDATE !==
+                                                                                                      constants2.CHANNEL_OVERWRITE_UPDATE !==
                                                                                                       action
                                                                                                     ) {
                                                                                                       if (
-                                                                                                        tmp.MEMBER_UPDATE !==
+                                                                                                        constants2.MEMBER_UPDATE !==
                                                                                                         action
                                                                                                       ) {
                                                                                                         if (
-                                                                                                          tmp.MEMBER_ROLE_UPDATE !==
+                                                                                                          constants2.MEMBER_ROLE_UPDATE !==
                                                                                                           action
                                                                                                         ) {
                                                                                                           if (
-                                                                                                            tmp.ROLE_UPDATE !==
+                                                                                                            constants2.ROLE_UPDATE !==
                                                                                                             action
                                                                                                           ) {
                                                                                                             if (
-                                                                                                              tmp.INVITE_UPDATE !==
+                                                                                                              constants2.INVITE_UPDATE !==
                                                                                                               action
                                                                                                             ) {
                                                                                                               if (
-                                                                                                                tmp.WEBHOOK_UPDATE !==
+                                                                                                                constants2.WEBHOOK_UPDATE !==
                                                                                                                 action
                                                                                                               ) {
                                                                                                                 if (
-                                                                                                                  tmp.EMOJI_UPDATE !==
+                                                                                                                  constants2.EMOJI_UPDATE !==
                                                                                                                   action
                                                                                                                 ) {
                                                                                                                   if (
-                                                                                                                    tmp.STICKER_UPDATE !==
+                                                                                                                    constants2.STICKER_UPDATE !==
                                                                                                                     action
                                                                                                                   ) {
                                                                                                                     if (
-                                                                                                                      tmp.INTEGRATION_UPDATE !==
+                                                                                                                      constants2.INTEGRATION_UPDATE !==
                                                                                                                       action
                                                                                                                     ) {
                                                                                                                       if (
-                                                                                                                        tmp.MEMBER_MOVE !==
+                                                                                                                        constants2.MEMBER_MOVE !==
                                                                                                                         action
                                                                                                                       ) {
                                                                                                                         if (
-                                                                                                                          tmp.STAGE_INSTANCE_UPDATE !==
+                                                                                                                          constants2.STAGE_INSTANCE_UPDATE !==
                                                                                                                           action
                                                                                                                         ) {
                                                                                                                           if (
-                                                                                                                            tmp.GUILD_SCHEDULED_EVENT_UPDATE !==
+                                                                                                                            constants2.GUILD_SCHEDULED_EVENT_UPDATE !==
                                                                                                                             action
                                                                                                                           ) {
                                                                                                                             if (
-                                                                                                                              tmp.GUILD_SCHEDULED_EVENT_EXCEPTION_CREATE !==
+                                                                                                                              constants2.GUILD_SCHEDULED_EVENT_EXCEPTION_CREATE !==
                                                                                                                               action
                                                                                                                             ) {
                                                                                                                               if (
-                                                                                                                                tmp.GUILD_SCHEDULED_EVENT_EXCEPTION_UPDATE !==
+                                                                                                                                constants2.GUILD_SCHEDULED_EVENT_EXCEPTION_UPDATE !==
                                                                                                                                 action
                                                                                                                               ) {
                                                                                                                                 if (
-                                                                                                                                  tmp.THREAD_UPDATE !==
+                                                                                                                                  constants2.THREAD_UPDATE !==
                                                                                                                                   action
                                                                                                                                 ) {
                                                                                                                                   if (
-                                                                                                                                    tmp.APPLICATION_COMMAND_PERMISSION_UPDATE !==
+                                                                                                                                    constants2.APPLICATION_COMMAND_PERMISSION_UPDATE !==
                                                                                                                                     action
                                                                                                                                   ) {
                                                                                                                                     if (
-                                                                                                                                      tmp.CREATOR_MONETIZATION_TERMS_ACCEPTED !==
+                                                                                                                                      constants2.CREATOR_MONETIZATION_TERMS_ACCEPTED !==
                                                                                                                                       action
                                                                                                                                     ) {
                                                                                                                                       if (
-                                                                                                                                        tmp.AUTO_MODERATION_RULE_UPDATE !==
+                                                                                                                                        constants2.AUTO_MODERATION_RULE_UPDATE !==
                                                                                                                                         action
                                                                                                                                       ) {
                                                                                                                                         if (
-                                                                                                                                          tmp.AUTO_MODERATION_FLAG_TO_CHANNEL !==
+                                                                                                                                          constants2.AUTO_MODERATION_FLAG_TO_CHANNEL !==
                                                                                                                                           action
                                                                                                                                         ) {
                                                                                                                                           if (
-                                                                                                                                            tmp.AUTO_MODERATION_USER_COMMUNICATION_DISABLED !==
+                                                                                                                                            constants2.AUTO_MODERATION_USER_COMMUNICATION_DISABLED !==
                                                                                                                                             action
                                                                                                                                           ) {
                                                                                                                                             if (
-                                                                                                                                              tmp.AUTO_MODERATION_QUARANTINE_USER !==
+                                                                                                                                              constants2.AUTO_MODERATION_QUARANTINE_USER !==
                                                                                                                                               action
                                                                                                                                             ) {
                                                                                                                                               if (
-                                                                                                                                                tmp.ONBOARDING_PROMPT_UPDATE !==
+                                                                                                                                                constants2.ONBOARDING_PROMPT_UPDATE !==
                                                                                                                                                 action
                                                                                                                                               ) {
                                                                                                                                                 if (
-                                                                                                                                                  tmp.ONBOARDING_UPDATE !==
+                                                                                                                                                  constants2.ONBOARDING_UPDATE !==
                                                                                                                                                   action
                                                                                                                                                 ) {
                                                                                                                                                   if (
-                                                                                                                                                    tmp.SOUNDBOARD_SOUND_UPDATE !==
+                                                                                                                                                    constants2.SOUNDBOARD_SOUND_UPDATE !==
                                                                                                                                                     action
                                                                                                                                                   ) {
                                                                                                                                                     if (
-                                                                                                                                                      tmp.HOME_SETTINGS_UPDATE !==
+                                                                                                                                                      constants2.HOME_SETTINGS_UPDATE !==
                                                                                                                                                       action
                                                                                                                                                     ) {
                                                                                                                                                       if (
-                                                                                                                                                        tmp.GUILD_MEMBER_VERIFICATION_UPDATE !==
+                                                                                                                                                        constants2.GUILD_MEMBER_VERIFICATION_UPDATE !==
                                                                                                                                                         action
                                                                                                                                                       ) {
                                                                                                                                                         if (
-                                                                                                                                                          tmp.GUILD_PROFILE_UPDATE !==
+                                                                                                                                                          constants2.GUILD_PROFILE_UPDATE !==
                                                                                                                                                           action
                                                                                                                                                         ) {
                                                                                                                                                           if (
-                                                                                                                                                            tmp.GUILD_MIGRATE_PIN_PERMISSION !==
+                                                                                                                                                            constants2.GUILD_MIGRATE_PIN_PERMISSION !==
                                                                                                                                                             action
                                                                                                                                                           ) {
                                                                                                                                                             if (
-                                                                                                                                                              tmp.GUILD_MIGRATE_BYPASS_SLOWMODE_PERMISSION !==
+                                                                                                                                                              constants2.GUILD_MIGRATE_BYPASS_SLOWMODE_PERMISSION !==
                                                                                                                                                               action
                                                                                                                                                             ) {
                                                                                                                                                               return constants3.ALL;

@@ -109,12 +109,12 @@ export const getBrandSafetyContext = function getBrandSafetyContext(questContent
             }
             if (obj.guilds.length > closure_10) {
               const guilds = obj.guilds;
-              obj.guilds = guilds.slice(0, tmp18);
+              obj.guilds = guilds.slice(0, closure_10);
               obj.truncated = true;
             }
             if (obj.channels.length > closure_10) {
               const channels = obj.channels;
-              obj.channels = channels.slice(0, tmp18);
+              obj.channels = channels.slice(0, closure_10);
               obj.truncated = true;
             }
             obj1 = { brand_safety_context: null };

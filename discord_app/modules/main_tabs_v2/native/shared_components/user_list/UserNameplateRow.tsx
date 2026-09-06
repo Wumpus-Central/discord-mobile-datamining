@@ -1,8 +1,10 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/user_list/UserNameplateRow.tsx
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import useToken from "../../../../../design/tokens/native/useToken.tsx";
+import TableRowDivider from "../../../../../design/components/TableRow/native/TableRowDivider.native.tsx";
 import TableRow from "../../../../../design/components/TableRow/native/TableRow.native.tsx";
 import TableRowGroupContext from "../../../../../design/components/TableRow/native/TableRowGroupContext.native.tsx";
+import Card from "../../../../../design/components/Card/native/Card.native.tsx";
 import NameplateDefault from "../../../../collectibles/nameplates/native/Nameplate.tsx";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
@@ -132,15 +134,15 @@ export const UserNameplateRow = function UserNameplateRow(onPressOut) {
     }),
   ];
   obj.children = items2;
-  let tmp12Result = tmp12(tmp3(5607).Card, obj);
+  let tmp12Result = timestampProducer(Card.Card, obj);
   if (!context) {
     if (!tmp6) {
       obj = { children: null };
       const items3 = [tmp12Result];
       const obj1 = { adjustSpacingForIcon: null != icon };
-      items3[1] = tmp15(tmp3(5602).TableRowDivider, obj1);
+      items3[1] = hasOwnProperty(TableRowDivider.TableRowDivider, obj1);
       obj.children = items3;
-      tmp12Result = tmp12(React5, obj);
+      tmp12Result = timestampProducer(React5, obj);
     }
   }
   return tmp12Result;

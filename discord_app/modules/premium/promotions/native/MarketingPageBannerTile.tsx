@@ -3,6 +3,7 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import LinkingDefault from "../../../../lib/native/Linking.tsx";
 import useAnalyticsLocationsDefault from "../../../app_analytics/useAnalyticsLocations.tsx";
 import useTrackImpressionDefault from "../../../app_analytics/useTrackImpression.tsx";
+import NitroUpsellButtonDefault from "../../components/native/NitroUpsellButton.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const require = fn;
@@ -98,7 +99,7 @@ export default function MarketingPageBannerTile(bannerFields) {
     const obj5 = { uri: bannerFields.assetUrl };
     obj4.source = obj5;
     obj4.style = tmp.image;
-    tmp12Result = tmp12(closure_3, obj4);
+    tmp12Result = closure_5(closure_3, obj4);
   }
   const items2 = [
     tmp12Result,
@@ -122,7 +123,7 @@ export default function MarketingPageBannerTile(bannerFields) {
       },
       children: helpArticleLinkProps.linkText,
     };
-    tmp12Result = tmp12(tmp4(4556).Text, obj8);
+    tmp12Result = closure_5(tmp4(4556).Text, obj8);
   }
   items3[2] = tmp12Result;
   obj7.children = items3;
@@ -131,8 +132,8 @@ export default function MarketingPageBannerTile(bannerFields) {
   if (tmp12Result1) {
     const obj9 = { style: tmp.ctaButton, children: null };
     const obj10 = { text: bannerFields.button.copy, onPress: buttonActionHandler };
-    obj9.children = tmp12(tmp2(9970), obj10);
-    tmp12Result1 = tmp12(tmp13, obj9);
+    obj9.children = closure_5(NitroUpsellButtonDefault, obj10);
+    tmp12Result1 = closure_5(closure_4, obj9);
   }
   items2[3] = tmp12Result1;
   obj3.children = items2;

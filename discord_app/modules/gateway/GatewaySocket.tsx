@@ -7,6 +7,7 @@ import initializeDefault from "../../../discord_common/js/packages/flux/index.ts
 import BackoffDefault from "../../../discord_common/js/packages/backoff/Backoff.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
 import DurationsDefault from "../../utils/Durations.tsx";
+import SentryUtilsDefault from "../../utils/SentryUtils.native.tsx";
 import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
 import ClientModDetectionUtils from "../../../discord_common/js/shared/utils/ClientModDetectionUtils.tsx";
 import CrossPlatformNativeUtilsDefault from "../../utils/CrossPlatformNativeUtils.native.tsx";
@@ -76,6 +77,8 @@ class GatewaySocket extends tmp5 {
           webSocket.send(packResult);
         }
       } catch (err) {}
+      const obj = { op, d };
+      packResult = closure_10.pack({ op, d });
     };
     tmp10 = new closure_1(closure_3[11])(tmp7);
     tmp7.dispatcher = tmp10;
@@ -217,7 +220,7 @@ prototype["_connect"] = function _connect() {
           str5,
       );
       if (null !== self.webSocket) {
-        obj3.error("_connect called with already existing websocket");
+        logger.error("_connect called with already existing websocket");
         self._cleanup((close) => close.close(4000));
       }
       const _Date = Date;
@@ -258,11 +261,14 @@ prototype["_connect"] = function _connect() {
         ({ op, s, t, d } = closure_10.unpack(byteLength));
         if (op !== GatewaySocketOpCodes2.Opcode.DISPATCH) {
           const _HermesInternal = HermesInternal;
-          AppStartPerformanceDefault.mark("\u{1F310}", "GatewaySocket.onMessage " + op + " " + tmp3(13634).Opcode[op]);
+          AppStartPerformanceDefault.mark(
+            "\u{1F310}",
+            "GatewaySocket.onMessage " + op + " " + GatewaySocketOpCodes2.Opcode[op],
+          );
         }
         if (DeveloperOptionsStore.isLoggingGatewayEvents) {
           const items = [op];
-          if (op === tmp3(13634).Opcode.DISPATCH) {
+          if (op === GatewaySocketOpCodes2.Opcode.DISPATCH) {
             items.push(t);
           }
           items.push(d);
@@ -287,15 +293,15 @@ prototype["_connect"] = function _connect() {
         if (GatewaySocketOpCodes2.Opcode.HELLO === op) {
           identify._clearHelloTimeout();
           identify._handleHello(d);
-        } else if (tmp3(13634).Opcode.RECONNECT === op) {
+        } else if (GatewaySocketOpCodes2.Opcode.RECONNECT === op) {
           identify._handleReconnect();
-        } else if (tmp3(13634).Opcode.INVALID_SESSION === op) {
+        } else if (GatewaySocketOpCodes2.Opcode.INVALID_SESSION === op) {
           const result2 = identify._handleInvalidSession(d);
-        } else if (tmp3(13634).Opcode.HEARTBEAT === op) {
+        } else if (GatewaySocketOpCodes2.Opcode.HEARTBEAT === op) {
           const result3 = identify._handleHeartbeatReceive();
-        } else if (tmp3(13634).Opcode.HEARTBEAT_ACK === op) {
+        } else if (GatewaySocketOpCodes2.Opcode.HEARTBEAT_ACK === op) {
           identify._handleHeartbeatAck(d);
-        } else if (tmp3(13634).Opcode.DISPATCH === op) {
+        } else if (GatewaySocketOpCodes2.Opcode.DISPATCH === op) {
           let tmp29 = null;
           if (tmp18) {
             obj = {
@@ -307,25 +313,25 @@ prototype["_connect"] = function _connect() {
             };
             if (null == byteLength) {
               obj.uncompressed_byte_size = 0;
-              obj.compression_algorithm = tmp28.compressionHandler.getAlgorithm();
+              obj.compression_algorithm = identify.compressionHandler.getAlgorithm();
               obj.packing_algorithm = obj.getName();
               obj.unpack_duration_ms = diff;
               tmp29 = obj;
-              const compressionHandler = tmp28.compressionHandler;
+              const compressionHandler = identify.compressionHandler;
             }
           }
           identify._handleDispatch(d, t, tmp29);
-          tmp28 = identify;
         } else {
           const _HermesInternal2 = HermesInternal;
           logger.info("Unhandled op " + op);
         }
         identify._sendHeartbeatIfDue();
+        const unpackResult = closure_10.unpack(byteLength);
       };
       closure_129_3 = 0;
-      compressionHandler2.dataReady((arg0) => {
+      compressionHandler2.dataReady((dependencyMap) => {
         try {
-          importAll(arg0, closure_3);
+          importAll(dependencyMap, closure_3);
           closure_3 = 0;
         } catch (tmp5) {
           closure_3 = 0;
@@ -355,7 +361,7 @@ prototype["_connect"] = function _connect() {
         }
         if (_ws.state.gateway !== str) {
           const _HermesInternal3 = HermesInternal;
-          obj3.verbose("[FAST CONNECT] gatewayURL mismatch: " + _ws.state.gateway + " !== " + str);
+          logger.verbose("[FAST CONNECT] gatewayURL mismatch: " + _ws.state.gateway + " !== " + str);
           ws.close(1000);
           messages2 = null;
           flag3 = false;
@@ -363,7 +369,7 @@ prototype["_connect"] = function _connect() {
           tmp32 = null;
         } else if (tmp33) {
           let _HermesInternal2 = HermesInternal;
-          obj3.log(
+          logger.log(
             "[FAST CONNECT] refusing to adopt socket: identified user " +
               userId +
               " does not match switch target " +
@@ -401,7 +407,7 @@ prototype["_connect"] = function _connect() {
             length = messages1.length;
           }
           obj.messages = length;
-          obj3.log("[FAST CONNECT] successfully took over websocket, state:", obj);
+          logger.log("[FAST CONNECT] successfully took over websocket, state:", obj);
           flag4 = _ws.state.open;
           identify = _ws.state.identify;
           messages2 = _ws.state.messages;
@@ -423,7 +429,7 @@ prototype["_connect"] = function _connect() {
         const _Date2 = Date;
         let diff = Date.now() - self.connectionStartTime;
         const _HermesInternal5 = HermesInternal;
-        obj3.info("[CONNECTED] " + str11.toString() + " in " + diff + " ms");
+        logger.info("[CONNECTED] " + str11.toString() + " in " + diff + " ms");
         self.isFastConnect = flag3;
         if (flag3) {
           let result = self._doFastConnectIdentify();
@@ -454,15 +460,16 @@ prototype["_connect"] = function _connect() {
         const item = messages2.forEach(fn);
       }
       tmp32.onopen = () => {
-        identify(closure_3[15]).mark("\u{1F310}", "GatewaySocket.onOpen " + identify);
+        identify(dependencyMap[15]).mark("\u{1F310}", "GatewaySocket.onOpen " + identify);
         const diff = Date.now() - importDefault.connectionStartTime;
         logger.info("[CONNECTED] " + require.toString() + " in " + diff + " ms");
         importDefault.isFastConnect = identify;
         if (identify) {
-          const result = obj2._doFastConnectIdentify();
+          const result = importDefault._doFastConnectIdentify();
         } else {
-          obj2._doResumeOrIdentify();
+          importDefault._doResumeOrIdentify();
         }
+        const obj = identify(dependencyMap[15]);
       };
       tmp32.onmessage = fn;
       tmp32.onclose = function onClose(wasClean) {
@@ -645,13 +652,13 @@ prototype["_handleClose"] = function _handleClose(wasClean, c13, reason) {
     flag = false;
   }
   self._cleanup();
-  self.emit("close", { code: c13, reason });
-  if (c13 === c13) {
+  self.emit("close", { code, reason });
+  if (code === code) {
     self.connectionState = ConnectionStateDefault.CLOSED;
     closure_9.warn("[WS CLOSED] because of authentication failure, marking as closed.");
-    return self._reset(flag, c13, reason);
+    return self._reset(flag, code, reason);
   } else {
-    const result = self._tryDetectInvalidIOSToken(c13, reason, flag);
+    const result = self._tryDetectInvalidIOSToken(code, reason, flag);
     self.connectionState = ConnectionStateDefault.WILL_RECONNECT;
     if (!self.receivedHelloThisAttempt) {
       self.failedConnectAttempts = self.failedConnectAttempts + 1;
@@ -659,7 +666,7 @@ prototype["_handleClose"] = function _handleClose(wasClean, c13, reason) {
     const result1 = self._maybeFallBackFromAltGateway();
     if (self.nextReconnectIsImmediate) {
       const _HermesInternal2 = HermesInternal;
-      closure_9.info("[WS CLOSED] (" + flag.toString() + ", " + c13 + ", " + reason + ") retrying immediately.");
+      closure_9.info("[WS CLOSED] (" + flag.toString() + ", " + code + ", " + reason + ") retrying immediately.");
       self._connect();
     } else {
       const gatewayBackoff = self.gatewayBackoff;
@@ -668,15 +675,15 @@ prototype["_handleClose"] = function _handleClose(wasClean, c13, reason) {
       const _HermesInternal = HermesInternal;
       const str = " seconds.";
       closure_9.info(
-        "[WS CLOSED] (" + str + ", " + c13 + ", " + reason + ") retrying in " + result2.toFixed(2) + " seconds.",
+        "[WS CLOSED] (" + str + ", " + code + ", " + reason + ") retrying in " + result2.toFixed(2) + " seconds.",
       );
       if (self.gatewayBackoff.fails > 4) {
-        self._reset(flag, c13, reason);
+        self._reset(flag, code, reason);
       }
       const failResult = gatewayBackoff.fail(() => self._connect());
     }
   }
-  const obj = { code: c13, reason };
+  const obj = { code, reason };
 };
 prototype["_tryDetectInvalidIOSToken"] = function _tryDetectInvalidIOSToken(c13, reason, flag) {
   const self = this;
@@ -695,7 +702,7 @@ prototype["_tryDetectInvalidIOSToken"] = function _tryDetectInvalidIOSToken(c13,
   if (isIOSResult) {
     self.iosGoingAwayEventCount = self.iosGoingAwayEventCount + 1;
     if (3 === self.iosGoingAwayEventCount) {
-      const HTTP = require("HTTPUtils").HTTP;
+      const HTTP = tmp(1272).HTTP;
       obj = { url: constants2.ME, headers: null, rejectWithError: false };
       obj = { authorization: self.token };
       obj.headers = obj;
@@ -718,6 +725,7 @@ prototype["_tryDetectInvalidIOSToken"] = function _tryDetectInvalidIOSToken(c13,
       );
     }
   }
+  tmp = _require;
 };
 prototype["_reset"] = function _reset(wasClean, code, reason) {
   this.sessionId = null;
@@ -821,6 +829,7 @@ prototype["_cleanup"] = function _cleanup(fn) {
   gatewayBackoff.cancel();
   self.compressionHandler.close();
   self.compressionHandler = GatewayCompressionHandler.getCompressionHandler(closure_10);
+  const compressionHandler = self.compressionHandler;
 };
 prototype["_doResume"] = function _doResume() {
   const self = this;
@@ -837,7 +846,7 @@ prototype["_doResume"] = function _doResume() {
 };
 prototype["_doIdentify"] = function _doIdentify() {
   const self = this;
-  return (async (arg0, value) => {
+  return (async () => {
     if (dependencyMap === 2) {
       dependencyMap = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -914,7 +923,7 @@ prototype["_doIdentify"] = function _doIdentify() {
               const obj1 = { value: Promise.all(items), done: false };
               return obj1;
             } else {
-              self._handleClose(true, closure_1_13, "No connection info provided");
+              self._handleClose(true, code, "No connection info provided");
             }
           }
         } else {
@@ -1088,10 +1097,10 @@ prototype["isConnected"] = function isConnected() {
   const self = this;
   let tmp3 = this.connectionState === ConnectionStateDefault.IDENTIFYING;
   if (!tmp3) {
-    tmp3 = self.connectionState === tmp(13645).RESUMING;
+    tmp3 = self.connectionState === ConnectionStateDefault.RESUMING;
   }
   if (!tmp3) {
-    tmp3 = self.connectionState === tmp(13645).SESSION_ESTABLISHED;
+    tmp3 = self.connectionState === ConnectionStateDefault.SESSION_ESTABLISHED;
   }
   return tmp3;
 };
@@ -1126,13 +1135,13 @@ prototype["resetSocketAndClearCacheOnError"] = function resetSocketAndClearCache
   obj.tags = items;
   obj2.increment(obj, true);
   if (false !== args.sentry) {
-    let tmp4Result = tmp4(1232);
+    let tmp4Result = SentryUtilsDefault;
     obj = { tags: null };
     obj1 = { socketCrashedAction: action };
     obj.tags = obj1;
     tmp4Result.captureException(error, obj);
   }
-  tmp4Result = tmp4(1242);
+  tmp4Result = AnalyticsUtilsDefault;
   obj2 = { error_message: error.message, error_stack: error.stack, has_client_mods: usesClientModsResult, action };
   tmp4Result.track(constants.GATEWAY_SOCKET_RESET, obj2);
   self._cleanup((close) => close.close());
@@ -1162,6 +1171,7 @@ prototype["resetSocketAndClearCacheOnError"] = function resetSocketAndClearCache
     const dispatchExceptionBackoff = self.dispatchExceptionBackoff;
     return dispatchExceptionBackoff.succeed();
   }, 2 * MINUTE);
+  const tmp4Result2 = DispatcherDefault;
 };
 prototype["resetSocketOnDispatchError"] = function resetSocketOnDispatchError(error) {
   let tmp = null != error.error.message;
@@ -1181,14 +1191,14 @@ prototype["close"] = function close() {
     flag = false;
   }
   if (self.isClosed()) {
-    obj.verbose("close() called, but socket is already closed.");
+    closure_9.verbose("close() called, but socket is already closed.");
     if (!flag) {
       self.sessionId = null;
       self.token = null;
     }
   } else {
     const _HermesInternal = HermesInternal;
-    obj.info("Closing connection, current state is " + self.connectionState);
+    closure_9.info("Closing connection, current state is " + self.connectionState);
     self._cleanup((close) => close.close(num));
     self.connectionState = ConnectionStateDefault.CLOSED;
     if (!flag) {
@@ -1266,7 +1276,7 @@ prototype["expeditedHeartbeat"] = function expeditedHeartbeat(arg0) {
     return tmp6;
   }
 };
-prototype["resetBackoff"] = function resetBackoff(reason) {
+prototype["resetBackoff"] = function resetBackoff() {
   let str = reason;
   if (reason === undefined) {
     str = "";

@@ -17,7 +17,7 @@ function urlUserId(arg0) {
   }
   return tmp3;
 }
-let closure_8 = async function _fetchBadgeDirectory(arg0, value) {
+let closure_8 = async function _fetchBadgeDirectory(arg0) {
   if (c8 === 2) {
     c8 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -176,7 +176,7 @@ let closure_8 = async function _fetchBadgeDirectory(arg0, value) {
     }
   }
 };
-let closure_9 = async function _fetchBadge(arg0, value) {
+let closure_9 = async function _fetchBadge(arg0) {
   if (c8 === 2) {
     c8 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -217,13 +217,12 @@ let closure_9 = async function _fetchBadge(arg0, value) {
           if (null != id) {
             c6 = 1;
             const HTTP = HTTPUtils.HTTP;
-            const obj1 = { url: hasOwnProperty.USER_BADGE(urlUserId(tmp26), tmp39), rejectWithError: true };
+            const obj1 = { url: hasOwnProperty.USER_BADGE(urlUserId(tmp26), closure_0), rejectWithError: true };
             c7 = 2;
             c8 = 1;
             const obj2 = { value: HTTP.get(obj1), done: false };
             return obj2;
           }
-          tmp39 = closure_0;
         }
       } else {
         if (1 === tmp7) {

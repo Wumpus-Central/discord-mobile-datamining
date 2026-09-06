@@ -1,6 +1,8 @@
 // discord_app/modules/messages/native/renderer/system_messages/ApplicationCommandSourceSystemMessage.tsx
 import Constants from "../../../../../Constants.tsx";
+import util from "../../../../../intl/index.native.tsx";
 import ChannelAutocompleteConstants from "../../../../channel_autocomplete/ChannelAutocompleteConstants.tsx";
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor.tsx";
 import formatUsernameOnClickDefault from "formatUsernameOnClick.tsx";
 import createCommonMessageDefault from "createCommonMessage.tsx";
 import ApplicationCommands from "../../../ApplicationCommands.tsx";
@@ -24,8 +26,8 @@ export const createApplicationCommandSourceSystemMessage = function createApplic
   }
   if (null != applicationCommand) {
     if (null != name) {
-      const messageAuthorWithProcessedColor = tmp(7960).getMessageAuthorWithProcessedColor(message);
-      const intl = tmp(1114).intl;
+      const messageAuthorWithProcessedColor = useAuthorWithProcessedColor.getMessageAuthorWithProcessedColor(message);
+      const intl = util.intl;
       obj = {
         username: messageAuthorWithProcessedColor.nick,
         usernameOnClick: null,
@@ -43,7 +45,7 @@ export const createApplicationCommandSourceSystemMessage = function createApplic
       const obj1 = { content: null };
       obj.commandName = name2;
       obj.applicationName = name;
-      obj1.content = intl.formatToParts(tmp(1114).t["1Zm+zw"], obj);
+      obj1.content = intl.formatToParts(util.t["1Zm+zw"], obj);
       const merged = Object.assign(createCommonMessageDefault(message));
       return obj1;
     }

@@ -60,7 +60,6 @@ export default function GuildRaidLockdownFeedbackActionSheet(guildId) {
   obj5.header = closure_6(guildId(7149).BottomSheetTitleHeader, obj6);
   const obj7 = { style: closure_8().container, children: null };
   const tmp = closure_8();
-  const tmp8 = closure_7;
   const tmp9 = raid_lockdown_feedback_type(5578);
   const items1 = [
     closure_6(guildId(5687).TableRowGroup, {
@@ -100,7 +99,7 @@ export default function GuildRaidLockdownFeedbackActionSheet(guildId) {
     obj9.onChange = function onChange(arg0) {
       closure_4(arg0);
     };
-    hasItem = tmp7(tmp5(7085).TextArea, obj9);
+    hasItem = closure_6(tmp5(7085).TextArea, obj9);
   }
   items1[1] = hasItem;
   const obj10 = {
@@ -115,6 +114,6 @@ export default function GuildRaidLockdownFeedbackActionSheet(guildId) {
   obj10.text = intl9.string(guildId(1114).t.nAt0rE);
   items1[2] = closure_6(guildId(4975).Button, obj10);
   obj7.children = items1;
-  obj5.children = tmp8(tmp9, obj7);
+  obj5.children = closure_7(tmp9, obj7);
   return closure_6(guildId(7198).ActionSheet, obj5);
 }

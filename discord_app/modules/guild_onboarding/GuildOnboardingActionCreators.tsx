@@ -1,4 +1,5 @@
 // discord_app/modules/guild_onboarding/GuildOnboardingActionCreators.tsx
+import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
 import SentryUtilsDefault from "../../utils/SentryUtils.native.tsx";
 import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
@@ -13,7 +14,6 @@ import UserStore from "../../stores/UserStore.tsx";
 import GuildOnboardingPromptsStore from "GuildOnboardingPromptsStore.tsx";
 import apply from "../../../_runtime/metro/00012__.js";
 
-const SnowflakeUtilsDefault = tmp12(11);
 require = fn;
 function _updateOnboardingResponses(guildId, arg1) {
   _require = guildId;
@@ -289,6 +289,7 @@ obj.completeOnboarding = function completeOnboarding(guildId, prompts) {
     }
     const tmp2Result7 = tmp2(5552);
   }
+  const tmp12Result = SnowflakeUtilsDefault;
 };
 obj.onboardExistingMember = function onboardExistingMember(id, set) {
   set = new Set(set);
@@ -316,7 +317,7 @@ obj.setUserOnboardingStep = function setUserOnboardingStep(guildId, step) {
 };
 obj.resetOnboarding = function resetOnboarding(arg0) {
   closure_0 = arg0;
-  return (async (arg0, value) => {
+  return (async () => {
     if (c1 === 2) {
       c1 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");

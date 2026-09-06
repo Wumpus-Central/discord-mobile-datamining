@@ -4,6 +4,7 @@ import router_utilsAll from "../../../routing/router_utils.tsx";
 import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
 import MemberVerificationTypes from "../../MemberVerificationTypes.tsx";
 import NavigationRouteUtils from "../../../main_tabs_v2/helpers/NavigationRouteUtils.native.tsx";
+import MemberVerificationAlertActionCreators from "../MemberVerificationAlertActionCreators.tsx";
 import MemberVerificationModalDefault from "MemberVerificationModal.tsx";
 import ActivityIndicator_ActivityIndicator from "../../../../design/components/ActivityIndicator/native/ActivityIndicator.native.tsx";
 import KeyboardAwareViewDefault from "../../../keyboard/native/KeyboardAwareView.tsx";
@@ -60,11 +61,11 @@ function ExistingJoinRequestHandler(guildId) {
     }
     if (MemberVerificationTypes.GuildJoinRequestApplicationStatuses.SUBMITTED === applicationStatus) {
       onClose();
-      let tmp2Result = tmp2(5527);
+      let tmp2Result = MemberVerificationAlertActionCreators;
       const result = tmp2Result.openMemberVerificationPendingAlert(guildId);
-    } else if (tmp2(4384).GuildJoinRequestApplicationStatuses.REJECTED === applicationStatus) {
+    } else if (MemberVerificationTypes.GuildJoinRequestApplicationStatuses.REJECTED === applicationStatus) {
       onClose();
-      tmp2Result = tmp2(5527);
+      tmp2Result = MemberVerificationAlertActionCreators;
       const obj = { guildId, canWithdraw: true };
       const result1 = tmp2Result.openMemberVerificationRejectedAlert(obj);
     }

@@ -9,9 +9,6 @@ const result = size.fileFinishedImporting("modules/billing/native/subscription/B
 export const getBillingInformationStringNative = function getBillingInformationStringNative(
   subscription,
   subscriptionPeriodStart,
-  first1,
-  flag,
-  fractionalPremiumInfo,
 ) {
   let tmp = first1;
   if (first1 === undefined) {
@@ -36,7 +33,7 @@ export const getBillingInformationStringNative = function getBillingInformationS
   if (tmp5) {
     const intl = tmp2(1114).intl;
     obj = { renewalDate: subscriptionPeriodStart.subscriptionPeriodStart, onSubscriptionManagementClick: null };
-    _require = asyncGeneratorStep(async (arg0, value) => {
+    _require = asyncGeneratorStep(async () => {
       if (v3 === 2) {
         v3 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");

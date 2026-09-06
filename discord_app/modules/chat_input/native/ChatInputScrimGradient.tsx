@@ -1,5 +1,6 @@
 // discord_app/modules/chat_input/native/ChatInputScrimGradient.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import utils_ColorUtils from "../../../../discord_common/js/shared/utils/ColorUtils.tsx";
 import useToken from "../../../design/tokens/native/useToken.tsx";
 import client_themes_ClientThemesUtils from "../../client_themes/native/ClientThemesUtils.tsx";
 import LinearGradientDefault from "../../../../_runtime/04987_LinearGradient.js";
@@ -31,12 +32,12 @@ export const ChatInputScrimGradient = function ChatInputScrimGradient(scrimBase)
   if (scrimBase == null) {
     scrimBase = token;
   }
-  let tmpResult = tmp(1091);
+  let tmpResult = utils_ColorUtils;
   let hex2rgbResult = tmpResult.hex2rgb(scrimBase, 1);
   if (hex2rgbResult == null) {
     hex2rgbResult = scrimBase;
   }
-  tmpResult = tmp(1091);
+  tmpResult = utils_ColorUtils;
   let str = tmpResult.hex2rgb(scrimBase, 0);
   if (str == null) {
     str = "transparent";

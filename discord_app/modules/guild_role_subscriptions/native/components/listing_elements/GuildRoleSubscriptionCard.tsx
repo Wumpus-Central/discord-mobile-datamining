@@ -67,56 +67,56 @@ export const Content = function Content(arg0) {
   if (first.size > 0) {
     obj2 = { children: null };
     obj3 = { children: null };
-    const intl2 = tmp5(1114).intl;
+    const intl2 = guildId(1114).intl;
     const obj4 = { numEmojis: first.size };
-    obj3.children = intl2.format(tmp5(1114).t.oDeFmv, obj4);
-    const items2 = [tmp7(tmp8, obj3), tmp7(tmp5(1178).Spacer, { size: 14 })];
+    obj3.children = intl2.format(guildId(1114).t.oDeFmv, obj4);
+    const items2 = [closure_6(SectionTitle, obj3), closure_6(guildId(1178).Spacer, { size: 14 })];
     const obj5 = { emojiIds: null, guildId: null };
     const items3 = [];
     HermesBuiltin.arraySpread(first, 0);
     obj5.emojiIds = items3;
     obj5.guildId = guildId;
-    items2[2] = tmp7(GuildRoleSubscriptionEmojiGalleryDefault, obj5);
+    items2[2] = closure_6(GuildRoleSubscriptionEmojiGalleryDefault, obj5);
     obj2.children = items2;
-    tmp4Result = tmp4(tmp6, obj2);
+    tmp4Result = closure_8(closure_7, obj2);
   }
   items1[1] = tmp4Result;
   tmp4Result = null;
   if (first1.length > 0) {
     const obj6 = { children: null };
     const obj7 = { children: null };
-    const intl3 = tmp5(1114).intl;
+    const intl3 = guildId(1114).intl;
     const obj8 = { numChannels: length };
-    obj7.children = intl3.format(tmp5(1114).t.l40GUu, obj8);
-    const items4 = [tmp7(tmp8, obj7), tmp7(tmp5(1178).Spacer, { size: 14 })];
+    obj7.children = intl3.format(guildId(1114).t.l40GUu, obj8);
+    const items4 = [closure_6(SectionTitle, obj7), closure_6(guildId(1178).Spacer, { size: 14 })];
     const obj9 = {
       gap: 14,
       children: first1.map((benefit) =>
         timestampProducer(GuildRoleSubscriptionBenefitRow.ChannelBenefitRow, { benefit, guildId }, benefit.ref_id),
       ),
     };
-    items4[2] = tmp7(tmp5(10346).GappedList, obj9);
+    items4[2] = closure_6(guildId(10346).GappedList, obj9);
     obj6.children = items4;
-    tmp4Result = tmp4(tmp6, obj6);
+    tmp4Result = closure_8(closure_7, obj6);
   }
   items1[2] = tmp4Result;
   let tmp4Result1 = null;
   if (first2.length > 0) {
     const obj10 = { children: null };
     const obj11 = { children: null };
-    const intl4 = tmp5(1114).intl;
+    const intl4 = guildId(1114).intl;
     const obj12 = { numIntangibles: length2 };
-    obj11.children = intl4.format(tmp5(1114).t["4V/Mfi"], obj12);
-    const items5 = [tmp7(tmp8, obj11), tmp7(tmp5(1178).Spacer, { size: 14 })];
+    obj11.children = intl4.format(guildId(1114).t["4V/Mfi"], obj12);
+    const items5 = [closure_6(SectionTitle, obj11), closure_6(guildId(1178).Spacer, { size: 14 })];
     const obj13 = {
       gap: 14,
       children: first2.map((benefit, index) =>
         timestampProducer(GuildRoleSubscriptionBenefitRow.IntangibleBenefitRow, { benefit, guildId }, index),
       ),
     };
-    items5[2] = tmp7(tmp5(10346).GappedList, obj13);
+    items5[2] = closure_6(guildId(10346).GappedList, obj13);
     obj10.children = items5;
-    tmp4Result1 = tmp4(tmp6, obj10);
+    tmp4Result1 = closure_8(closure_7, obj10);
   }
   items1[3] = tmp4Result1;
   obj.children = items1;

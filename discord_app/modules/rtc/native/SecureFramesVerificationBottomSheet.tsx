@@ -104,14 +104,12 @@ export default function SecureFramesVerificationBottomSheet(onShareClick) {
   const obj8 = { style: tmp.subtitle, variant: "text-md/medium", color: "text-default", children: subtitle };
   const tmp10 = readableSecureFramesFingerprint;
   const tmp2 = onShareClick;
-  const tmp8 = closure_9;
-  const tmp9 = View;
   const intl3 = onShareClick(1114).intl;
   obj9.title = intl3.string(onShareClick(1114).t.cgBTyO);
   let tmp7Result = null != readableSecureFramesFingerprint;
   if (tmp7Result) {
     const obj10 = { chunks: readableSecureFramesFingerprint };
-    tmp7Result = tmp7(tmp10(9168), obj10);
+    tmp7Result = closure_8(tmp10(9168), obj10);
   }
   obj9.trailing = tmp7Result;
   obj9.chunks = readableSecureFramesFingerprint;
@@ -124,6 +122,6 @@ export default function SecureFramesVerificationBottomSheet(onShareClick) {
     children: footer,
   });
   obj4.children = items2;
-  obj.children = tmp8(tmp9, obj4);
+  obj.children = closure_9(View, obj4);
   return closure_8(onShareClick(7150).BottomSheet, obj);
 }

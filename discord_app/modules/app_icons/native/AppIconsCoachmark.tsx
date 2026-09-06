@@ -59,7 +59,7 @@ export default function AppIconsCoachmarkActionSheet(markAsDismissed) {
   obj = { style: tmp.info, children: null };
   const obj1 = { source: _modDef16926, style: tmp.image };
   const items2 = [closure_8(closure_4, obj1), ,];
-  const obj2 = { style: tmp.titleContainer, children: null };
+  let obj2 = { style: tmp.titleContainer, children: null };
   const isPremiumResult = obj1.isPremium(stateFromStores);
   const items3 = [
     closure_8(markAsDismissed(1178).Icon, {

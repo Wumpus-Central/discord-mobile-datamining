@@ -7,7 +7,7 @@ const ConversationConstants = fn(7598);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conversations/useConversationBackoffRef.tsx");
 
-export const useConversationBackoffRef = function useConversationBackoffRef(items) {
+export const useConversationBackoffRef = function useConversationBackoffRef() {
   if (items === undefined) {
     items = [];
   }

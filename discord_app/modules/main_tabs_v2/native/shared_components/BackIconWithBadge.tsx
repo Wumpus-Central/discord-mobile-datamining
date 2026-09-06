@@ -3,6 +3,7 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import native from "../../../../design/void/native.tsx";
 import XLargeIcon from "../../../../design/components/Icon/native/redesign/generated/XLargeIcon.tsx";
 import ArrowLargeLeftIcon from "../../../../design/components/Icon/native/redesign/generated/ArrowLargeLeftIcon.tsx";
+import XSmallIcon from "../../../../design/components/Icon/native/redesign/generated/XSmallIcon.tsx";
 import ClipView from "../../../../design/components/Icon/native/ClipView.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import GuildReadStateStore from "../../../../stores/GuildReadStateStore.tsx";
@@ -59,7 +60,6 @@ function IconWithBadge(includeNotificationsCount) {
   }
   obj = { style: size, children: null };
   obj = { style: tmp.backIcon, children: null };
-  const tmp11 = closure_7;
   tmp2Result = require("utils/PlatformUtils");
   if (null != memo1) {
     const items3 = [memo1];
@@ -80,12 +80,12 @@ function IconWithBadge(includeNotificationsCount) {
   if (sum > 0) {
     const obj3 = { style: tmp.badgeWrapper, children: null };
     const obj4 = { value: sum, maxValue: 99 };
-    obj3.children = tmp9(tmp2(1178).Badge, obj4);
-    tmp9Result = tmp9(tmp10, obj3);
+    obj3.children = closure_6(tmp2(1178).Badge, obj4);
+    tmp9Result = closure_6(View, obj3);
   }
   items5[1] = tmp9Result;
   obj.children = items5;
-  obj.children = tmp11(View, obj);
+  obj.children = closure_7(View, obj);
   return closure_6(View, obj);
 }
 const View = fn(17).View;
@@ -121,10 +121,10 @@ export const SettingsLeftIconWithBadge = function SettingsLeftIconWithBadge(navi
   const items = [navigation];
   const obj = { includeNotificationsCount: flag, Icon: null };
   if (noop.useMemo(() => navigation.getState().index > 0, items)) {
-    obj.Icon = tmp3(5628).ArrowLargeLeftIcon;
+    obj.Icon = ArrowLargeLeftIcon.ArrowLargeLeftIcon;
     let tmp5 = obj;
   } else {
-    obj.Icon = tmp3(5680).XSmallIcon;
+    obj.Icon = XSmallIcon.XSmallIcon;
     tmp5 = obj;
   }
   return timestampProducer(IconWithBadge, tmp5);

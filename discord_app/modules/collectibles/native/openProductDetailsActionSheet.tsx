@@ -30,10 +30,9 @@ export const openProductDetailsActionSheet = function openProductDetailsActionSh
     skuId = product.skuId;
   }
   CollectiblesActionCreators.productDetailsOpened(skuId);
-  const tmp2 = dependencyMap;
   const tmpResult = CollectiblesActionCreators;
   obj = { product, initialVariantIndex: num, analyticsLocations, shopAnalyticsContext };
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(8177, tmp2.paths), c3, obj, stack);
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(8177, dependencyMap.paths), c3, obj, stack);
 };
 export const openProductDetailsActionSheetForSku = function openProductDetailsActionSheetForSku(skuId, stack) {
   skuId = skuId.skuId;

@@ -6,7 +6,7 @@ import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
 
 require = fn;
-let closure_6 = async function _requestGoogleWalletVerification(arg0, value) {
+let closure_6 = async function _requestGoogleWalletVerification() {
   if (c0 === 2) {
     c0 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -36,7 +36,7 @@ let closure_6 = async function _requestGoogleWalletVerification(arg0, value) {
           const post = HTTP.post;
           const request = { url: null, body: null, rejectWithError: true, failImmediatelyWhenRateLimited: true };
           if (result) {
-            request.url = tmp14.GOOGLE_WALLET_REQUEST_SUSPENDED_USER;
+            request.url = Endpoints.GOOGLE_WALLET_REQUEST_SUSPENDED_USER;
             const obj1 = { token: suspendedUserToken.getSuspendedUserToken() };
             request.body = obj1;
             c1 = 2;
@@ -44,7 +44,7 @@ let closure_6 = async function _requestGoogleWalletVerification(arg0, value) {
             const obj2 = { value: post(request), done: false };
             return obj2;
           } else {
-            request.url = tmp14.GOOGLE_WALLET_REQUEST;
+            request.url = Endpoints.GOOGLE_WALLET_REQUEST;
             request.body = {};
             c1 = 1;
             c0 = 1;
@@ -81,81 +81,85 @@ let closure_6 = async function _requestGoogleWalletVerification(arg0, value) {
     }
   }
 };
-let closure_7 = async function _verifyGoogleWalletCredential(arg0, value) {
-  if (c1 === 2) {
-    c1 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp3 === 3) {
-    if (arg0 === 1) {
-      throw value;
-    } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
-    } else {
-      return { value: "HermesInternal", done: null };
-    }
-  } else {
-    try {
-      c1 = 2;
-      if (0 === c2) {
-        if (arg0 === 1) {
-          c1 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c1 = 3;
-          obj = { value, done: true };
-          return obj;
-        } else {
-          const result = SafetyHubUtils.isCurrentUserSuspended();
-          const HTTP = HTTPUtils.HTTP;
-          const post = HTTP.post;
-          const request = { url: null, body: null, rejectWithError: true, failImmediatelyWhenRateLimited: true };
-          if (result) {
-            request.url = tmp15.GOOGLE_WALLET_VERIFY_SUSPENDED_USER;
-            const obj1 = { token: suspendedUserToken.getSuspendedUserToken(), credential_json: tmp11 };
-            request.body = obj1;
-            c2 = 2;
-            c1 = 1;
-            const obj2 = { value: post(request), done: false };
-            return obj2;
-          } else {
-            request.url = tmp15.GOOGLE_WALLET_VERIFY;
-            const obj3 = { credential_json: tmp11 };
-            request.body = obj3;
-            c2 = 1;
-            c1 = 1;
-            const obj4 = { value: post(request), done: false };
-            return obj4;
-          }
-        }
+let closure_7 = async function _verifyGoogleWalletCredential() {
+  c2 = 0;
+  c1 = 0;
+  return (async (arg0) => {
+    if (c1 === 2) {
+      c1 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp3 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        let obj = { value, done: true };
+        return obj;
       } else {
-        if (1 === tmp4) {
+        return { value: "HermesInternal", done: null };
+      }
+    } else {
+      try {
+        c1 = 2;
+        if (0 === c2) {
           if (arg0 === 1) {
             c1 = 3;
             throw value;
           } else if (arg0 === 2) {
             c1 = 3;
-            const obj5 = { value, done: true };
-            return obj5;
+            obj = { value, done: true };
+            return obj;
+          } else {
+            const result = SafetyHubUtils.isCurrentUserSuspended();
+            const HTTP = HTTPUtils.HTTP;
+            const post = HTTP.post;
+            const request = { url: null, body: null, rejectWithError: true, failImmediatelyWhenRateLimited: true };
+            if (result) {
+              request.url = Endpoints.GOOGLE_WALLET_VERIFY_SUSPENDED_USER;
+              const obj1 = { token: suspendedUserToken.getSuspendedUserToken(), credential_json };
+              request.body = obj1;
+              c2 = 2;
+              c1 = 1;
+              const obj2 = { value: post(request), done: false };
+              return obj2;
+            } else {
+              request.url = Endpoints.GOOGLE_WALLET_VERIFY;
+              const obj3 = { credential_json };
+              request.body = obj3;
+              c2 = 1;
+              c1 = 1;
+              const obj4 = { value: post(request), done: false };
+              return obj4;
+            }
           }
-        } else if (arg0 === 1) {
+        } else {
+          if (1 === tmp4) {
+            if (arg0 === 1) {
+              c1 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c1 = 3;
+              const obj5 = { value, done: true };
+              return obj5;
+            }
+          } else if (arg0 === 1) {
+            c1 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c1 = 3;
+            obj = { value, done: true };
+            return obj;
+          }
           c1 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c1 = 3;
-          obj = { value, done: true };
-          return obj;
+          return { value: "HermesInternal", done: null };
         }
-        c1 = 3;
-        return { value: "HermesInternal", done: null };
+      } catch (tmp6) {
+        c1 = tmp;
+        throw tmp6;
       }
-    } catch (tmp6) {
-      c1 = tmp;
-      throw tmp6;
     }
-  }
+  })();
 };
-let closure_8 = async function _checkGoogleWalletAvailable(arg0, value) {
+let closure_8 = async function _checkGoogleWalletAvailable() {
   if (c0 === 2) {
     c0 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -185,11 +189,9 @@ let closure_8 = async function _checkGoogleWalletAvailable(arg0, value) {
           if (tmp7) {
             c1 = 2;
             c0 = 1;
-            const obj1 = { value: tmp8(tmp9[5]).isAvailable(), done: false };
+            const obj1 = { value: NativeDigitalCredentialModuleDefault.isAvailable(), done: false };
             return obj1;
           }
-          tmp8 = importDefault;
-          tmp9 = dependencyMap;
         }
       } else if (1 === tmp6) {
         c2 = 0;
@@ -221,62 +223,14 @@ let closure_8 = async function _checkGoogleWalletAvailable(arg0, value) {
     }
   }
 };
-let closure_9 = async function _getGoogleWalletCredential(arg0, value) {
-  if (c1 === 2) {
-    c1 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp3 === 3) {
-    if (arg0 === 1) {
-      throw value;
-    } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
-    } else {
-      return { value: "HermesInternal", done: null };
-    }
-  } else {
-    try {
-      c1 = 2;
-      if (0 === c2) {
-        if (arg0 === 1) {
-          c1 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c1 = 3;
-          obj = { value, done: true };
-          return obj;
-        } else {
-          if (null == NativeDigitalCredentialModuleDefault) {
-            const _Error = Error;
-            const error = new Error("Digital credential module is not available");
-            throw error;
-          } else {
-            c2 = 1;
-            c1 = 1;
-            const obj1 = { value: tmp6(tmp7[5]).getCredential(tmp5), done: false };
-            return obj1;
-          }
-          tmp5 = closure_0;
-          tmp6 = importDefault;
-          tmp7 = dependencyMap;
-        }
-      } else if (arg0 === 1) {
-        c1 = 3;
-        throw value;
-      } else if (arg0 === 2) {
-        c1 = 3;
-        const obj2 = { value, done: true };
-        return obj2;
-      } else {
-        c1 = 3;
-        obj = { value, done: true };
-        return obj;
-      }
-    } catch (tmp14) {
-      c1 = tmp;
-      throw tmp14;
-    }
+let closure_9 = async function _getGoogleWalletCredential() {
+  if (null == NativeDigitalCredentialModuleDefault) {
+    const _Error = Error;
+    const error = new Error("Digital credential module is not available");
+    throw error;
   }
+  await NativeDigitalCredentialModuleDefault.getCredential(closure_0);
+  return value;
 };
 const Endpoints = fn(1074).Endpoints;
 const size = fn(2);

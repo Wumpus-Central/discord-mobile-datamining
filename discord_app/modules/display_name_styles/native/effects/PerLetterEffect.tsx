@@ -29,9 +29,9 @@ export default function PerLetterEffect(name) {
         const tmp = regex.test(children) || 0 === children.trim().length;
         let tmp2;
         if (null != colors) {
-          if (arr.length > 0) {
+          if (colors.length > 0) {
             if (!tmp) {
-              tmp2 = arr[closure_1 % arr.length];
+              tmp2 = colors[closure_1 % colors.length];
             }
           }
         }
@@ -45,8 +45,8 @@ export default function PerLetterEffect(name) {
         }
         obj = { style: tmp7, children };
         return (
-          <hasOwnProperty key={arg1} style={tmp7}>
-            {arg0}
+          <hasOwnProperty key={index} style={tmp7}>
+            {children}
           </hasOwnProperty>
         );
       });

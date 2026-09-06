@@ -8,7 +8,7 @@ import ReanimatedRexport from "../../reanimated/ReanimatedRexport.tsx";
 import ColorUtils from "../../../utils/ColorUtils.tsx";
 import spring from "../../../design/animation/reanimated/spring/spring.tsx";
 import _modDef5031 from "../../../../_runtime/metro/05031__.js";
-import GuildIconDefault from "../../guild/native/GuildIcon.tsx";
+import GuildIcon from "../../guild/native/GuildIcon.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import NativeViewDefault from "../../core/native/NativeView.tsx";
 import ListUtils from "../../../utils/ListUtils.tsx";
@@ -19,7 +19,8 @@ import GuildStore from "../../../stores/GuildStore.tsx";
 import SelectedGuildStore from "../../../stores/SelectedGuildStore.tsx";
 import SortedGuildStore from "../../../stores/SortedGuildStore.tsx";
 
-const GuildIcon = tmp(5584);
+const GuildIconDefault = GuildIcon;
+
 require = fn;
 function MiniGuildIcon(arg0) {
   ({ guildId: require, position, selected } = arg0);
@@ -38,14 +39,13 @@ function MiniGuildIcon(arg0) {
   }
   const items1 = [tmp4.guildPreviewIcon, ,];
   let prop;
-  const tmp6 = closure_14;
   if (!selected) {
     prop = tmp4.guildPreviewIconUnselected;
   }
   obj = { style: items1, guild: stateFromStores, size: GuildIcon.GuildIconSizes.XXSMALL, selected };
   items1[1] = prop;
   items1[2] = guildPreview3;
-  return tmp6(GuildIconDefault, obj, "" + selected);
+  return closure_14(GuildIconDefault, obj, "" + selected);
 }
 function TransitionWrapper(children) {
   let flag = children.fromTop;
@@ -86,7 +86,7 @@ function TransitionWrapper(children) {
     obj.opacity = obj1.withSpring(value, FOLDER_SPRING_PHYSICS, undefined, fn);
     let num = 1;
     if (1 === sharedValue.get()) {
-      obj = { translateY: obj5.withSpring(0, tmp4) };
+      obj = { translateY: obj5.withSpring(0, FOLDER_SPRING_PHYSICS) };
       const items = [obj];
       if (num !== sharedValue.get()) {
         let num2 = 1.3;
@@ -95,11 +95,12 @@ function TransitionWrapper(children) {
         }
         num = num2;
       }
-      obj1 = { scale: spring.withSpring(num, tmp4) };
+      obj1 = { scale: spring.withSpring(num, FOLDER_SPRING_PHYSICS) };
       items[1] = obj1;
       obj.transform = items;
       return obj;
     }
+    obj5 = spring;
   };
   obj = {
     withSpring: tmp(tmp2[14]).withSpring,
@@ -274,10 +275,10 @@ const memoResult = noop.memo(function FolderBGInner(color) {
   const items = [color, token2];
   const memo = noop.useMemo(() => {
     if (null != color) {
-      if (tmp !== DEFAULT_FOLDER_COLOR) {
+      if (color !== DEFAULT_FOLDER_COLOR) {
         const obj = { backgroundColor: null };
         const obj2 = ColorUtils;
-        obj.backgroundColor = obj2.hexWithOpacity(utils_ColorUtils.int2hex(tmp), token2);
+        obj.backgroundColor = obj2.hexWithOpacity(utils_ColorUtils.int2hex(color), token2);
         return obj;
       }
     }
@@ -349,7 +350,7 @@ export default noop.memo(function GuildsBarGuildFolder(id) {
             let flag = mentionCount.unread;
             if (!flag) {
               let unread;
-              if (tmp4[id.id] != null) {
+              if (dependencyMap[id.id] != null) {
                 unread = tmp2.unread;
               }
               flag = unread;
@@ -443,20 +444,20 @@ export default noop.memo(function GuildsBarGuildFolder(id) {
     () => ({
       onPress() {
         if (null != foldersChanged) {
-          value = obj.get();
+          value = foldersChanged.get();
           const _HermesInternal = HermesInternal;
           if (value.has("" + closure_1_0)) {
             const _Set = Set;
-            const set = new Set(obj.get());
+            const set = new Set(foldersChanged.get());
             const _HermesInternal2 = HermesInternal;
-            set.add("" + tmp);
-            const result = obj.set(set);
+            set.add("" + closure_1_0);
+            const result = foldersChanged.set(set);
           }
-          tmp = closure_1_0;
         }
         const result1 = id(name[26]).triggerHapticFeedback(id(name[26]).HapticFeedbackTypes.IMPACT_LIGHT);
         const obj4 = id(name[26]);
         const result2 = expanded(name[27]).toggleGuildFolderExpand(closure_1_0);
+        const obj5 = expanded(name[27]);
       },
     }),
     items6,
@@ -478,8 +479,7 @@ export default noop.memo(function GuildsBarGuildFolder(id) {
             iter.return();
             break;
           }
-          obj = { type: "preview", guilds: items1, selectedGuildId: null };
-          obj.selectedGuildId = selectedPreviewId;
+          obj = { type: "preview", guilds: items1, selectedGuildId: selectedPreviewId };
           let items2 = [obj];
           return items2;
         }
@@ -499,7 +499,7 @@ export default noop.memo(function GuildsBarGuildFolder(id) {
     obj.children = items1;
     return __initData(noop.Fragment, obj, "wrapper");
   }, items8);
-  let tmp13 = folderPreviewStyle(id, flag);
+  const tmp13 = folderPreviewStyle(id, flag);
   const isDragTarget = tmp13.isDragTarget;
   const dragDropInProgress = tmp13.dragDropInProgress;
   const items9 = [id];
@@ -523,7 +523,7 @@ export default noop.memo(function GuildsBarGuildFolder(id) {
     return obj;
   }, items9);
   ({ accessibilityActions, onAccessibilityAction } = memo3);
-  const obj5 = id(name[12]);
+  let obj5 = id(name[12]);
   const sharedValue = id(name[18]).useSharedValue("" + id);
   class E {
     constructor(arg0) {
@@ -626,9 +626,9 @@ export default noop.memo(function GuildsBarGuildFolder(id) {
     () => {
       if (null != name) {
         let obj = { count: 1, names: null, label: null };
-        const items = [tmp];
+        const items = [name];
         obj.names = items;
-        obj.label = tmp;
+        obj.label = name;
         return obj;
       } else {
         const items1 = [];
@@ -645,8 +645,7 @@ export default noop.memo(function GuildsBarGuildFolder(id) {
             obj4.return();
             break;
           }
-          obj = { names: items1, count: null, label: null };
-          obj.count = childNodes.length;
+          obj = { names: items1, count: childNodes.length, label: null };
           let obj2 = ListUtils;
           obj.label = obj2.getListSummaryLabel(items1, childNodes.length);
           return obj;
@@ -670,14 +669,14 @@ export default noop.memo(function GuildsBarGuildFolder(id) {
     tmp17Result = badge;
     if (!flag) {
       obj1 = { color, folderId: id, totalItems: childNodes.length };
-      tmp17Result = tmp17(closure_19, obj1);
+      tmp17Result = closure_14(closure_19, obj1);
     }
   }
   obj.externalChildren = tmp17Result;
   tmp17Result = undefined;
   if (!flag2) {
     obj2 = { folderId: id, expanded };
-    tmp17Result = tmp17(tmp3(tmp2[30]), obj2);
+    tmp17Result = closure_14(tmp3(tmp2[30]), obj2);
   }
   obj.expandedChildren = tmp17Result;
   obj3 = { renderItem: renderGuildFolderContent, getItemKey, items: memo2, wrapChildren: callback };

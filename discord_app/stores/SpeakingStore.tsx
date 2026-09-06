@@ -109,7 +109,7 @@ prototype["getSpeakers"] = function getSpeakers() {
     return (flags & VOICE) === VOICE;
   });
 };
-prototype["isSpeaking"] = function isSpeaking(id, DEFAULT) {
+prototype["isSpeaking"] = function isSpeaking(id) {
   if (DEFAULT === undefined) {
     DEFAULT = constants2.DEFAULT;
   }
@@ -127,7 +127,7 @@ prototype["isSpeaking"] = function isSpeaking(id, DEFAULT) {
   }
   return (flags & VOICE) === VOICE;
 };
-prototype["isPrioritySpeaker"] = function isPrioritySpeaker(id, DEFAULT) {
+prototype["isPrioritySpeaker"] = function isPrioritySpeaker(id) {
   if (DEFAULT === undefined) {
     DEFAULT = constants2.DEFAULT;
   }
@@ -164,13 +164,13 @@ prototype["isSoundSharing"] = function isSoundSharing(arg0) {
   }
   return (flags & SOUNDSHARE) === SOUNDSHARE;
 };
-prototype["isAnyoneElseSpeaking"] = function isAnyoneElseSpeaking(DEFAULT) {
+prototype["isAnyoneElseSpeaking"] = function isAnyoneElseSpeaking() {
   if (DEFAULT === undefined) {
     DEFAULT = constants2.DEFAULT;
   }
   return anyoneHasFlagInContext(DEFAULT, constants.VOICE, true);
 };
-prototype["isCurrentUserSpeaking"] = function isCurrentUserSpeaking(DEFAULT) {
+prototype["isCurrentUserSpeaking"] = function isCurrentUserSpeaking() {
   if (DEFAULT === undefined) {
     DEFAULT = constants2.DEFAULT;
   }
@@ -184,13 +184,13 @@ prototype["isCurrentUserSpeaking"] = function isCurrentUserSpeaking(DEFAULT) {
 prototype["isCurrentUserPTTActive"] = function isCurrentUserPTTActive() {
   return isActive;
 };
-prototype["isAnyonePrioritySpeaking"] = function isAnyonePrioritySpeaking(DEFAULT) {
+prototype["isAnyonePrioritySpeaking"] = function isAnyonePrioritySpeaking() {
   if (DEFAULT === undefined) {
     DEFAULT = constants2.DEFAULT;
   }
   return anyoneHasFlagInContext(DEFAULT, constants.VOICE | constants.PRIORITY);
 };
-prototype["isCurrentUserPrioritySpeaker"] = function isCurrentUserPrioritySpeaker(DEFAULT) {
+prototype["isCurrentUserPrioritySpeaker"] = function isCurrentUserPrioritySpeaker() {
   if (DEFAULT === undefined) {
     DEFAULT = constants2.DEFAULT;
   }
@@ -201,7 +201,7 @@ prototype["isCurrentUserPrioritySpeaker"] = function isCurrentUserPrioritySpeake
   }
   return isPrioritySpeakerResult;
 };
-prototype["isCurrentUserPrioritySpeaking"] = function isCurrentUserPrioritySpeaking(DEFAULT) {
+prototype["isCurrentUserPrioritySpeaking"] = function isCurrentUserPrioritySpeaking() {
   if (DEFAULT === undefined) {
     DEFAULT = constants2.DEFAULT;
   }
@@ -258,7 +258,7 @@ const speakingStore = new SpeakingStore(DispatcherDefault, {
         }
       }
       MediaEngineStore.setCanHavePriority(userId, false);
-      num = speakingFlags & ~tmp.PRIORITY;
+      num = speakingFlags & ~constants.PRIORITY;
     }
     if ((num & constants.HIDDEN) === constants.HIDDEN) {
       num = 0;
@@ -301,7 +301,7 @@ const speakingStore = new SpeakingStore(DispatcherDefault, {
         if (since == null) {
           since = null;
         }
-        if ((((num2 & tmp.VOICE) === tmp.VOICE) !== (num & tmp.VOICE)) === tmp.VOICE) {
+        if ((((num2 & constants.VOICE) === constants.VOICE) !== (num & constants.VOICE)) === constants.VOICE) {
           let timestamp = null;
           if (tmp18) {
             const _Date = Date;
@@ -349,14 +349,13 @@ const speakingStore = new SpeakingStore(DispatcherDefault, {
             const deleteResult = value.delete(userId);
             flag3 = deleteResult;
             if (0 === value.size) {
-              obj3.delete(DEFAULT2);
+              map.delete(DEFAULT2);
               flag3 = deleteResult;
             }
           }
           if (!flag3) {
             flag3 = flag;
           }
-          obj3 = map;
         }
         flag3 = map.delete(constants.DEFAULT) || flag;
         const tmp27 = map.delete(constants.DEFAULT) || flag;
@@ -384,7 +383,7 @@ const speakingStore = new SpeakingStore(DispatcherDefault, {
             const deleteResult2 = value.delete(userId);
             flag2 = deleteResult2;
             if (0 === value.size) {
-              obj.delete(DEFAULT);
+              map.delete(DEFAULT);
               flag2 = deleteResult2;
             }
           }
@@ -392,7 +391,6 @@ const speakingStore = new SpeakingStore(DispatcherDefault, {
             flag2 = flag;
           }
           tmp13 = flag2;
-          obj = map;
         }
       }
     }, false);

@@ -7,7 +7,7 @@ import WebhooksActionCreatorsDefault from "../actions/WebhooksActionCreators.tsx
 function handleWebhookCreateUpdate(arg0) {
   ({ guildId, webhook } = arg0);
   if (null == dependencyMap[guildId]) {
-    tmp[guildId] = {};
+    dependencyMap[guildId] = {};
   }
   dependencyMap[guildId][webhook.id] = webhook;
 }
@@ -25,14 +25,14 @@ prototype["isFetching"] = function isFetching(arg0, arg1) {
 };
 prototype["getWebhooksForGuild"] = function getWebhooksForGuild(id) {
   if (null == dependencyMap[id]) {
-    tmp[id] = {};
+    dependencyMap[id] = {};
   }
   return _modDef12.values(dependencyMap[id]);
 };
 prototype["getWebhooksForChannel"] = function getWebhooksForChannel(id, arg1) {
   closure_0 = arg1;
   if (null == dependencyMap[id]) {
-    tmp2[id] = {};
+    dependencyMap[id] = {};
   }
   const values = _modDef12(dependencyMap[id]).values();
   const tmpResult = _modDef12(dependencyMap[id]);
@@ -55,7 +55,7 @@ const webhooksStore = new WebhooksStore(DispatcherDefault, {
       let items = [];
       if (null != channelId) {
         if (null == dependencyMap[guildId]) {
-          tmp16[guildId] = {};
+          dependencyMap[guildId] = {};
         }
         const values = _modDef12(dependencyMap[guildId]).values();
         const tmp15Result = _modDef12(dependencyMap[guildId]);

@@ -71,12 +71,11 @@ const localInteractionComponentStateStore = new LocalInteractionComponentStateSt
         closure_3.delete(value);
       }
       closure_2.delete(id);
-      obj.delete(id);
+      closure_0.delete(id);
       closure_1 = closure_1 + 1;
     } else {
       return false;
     }
-    obj = closure_0;
   },
   MESSAGE_UPDATE: function handleMessageUpdate(message) {
     message = message.message;
@@ -88,10 +87,9 @@ const localInteractionComponentStateStore = new LocalInteractionComponentStateSt
           closure_3.delete(value);
         }
         closure_2.delete(id);
-        obj.delete(id);
+        closure_0.delete(id);
         closure_1 = closure_1 + 1;
       }
-      obj = closure_0;
     }
     return false;
   },
@@ -105,10 +103,9 @@ const localInteractionComponentStateStore = new LocalInteractionComponentStateSt
         return false;
       } else {
         closure_2.delete(value.messageId);
-        obj.delete(nonce);
+        closure_3.delete(nonce);
         closure_1 = closure_1 + 1;
       }
-      obj = closure_3;
     }
   },
   INTERACTION_FAILURE: function handleInteractionFailure(nonce) {

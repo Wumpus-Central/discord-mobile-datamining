@@ -29,7 +29,7 @@ function ActivityTileInner(participant) {
     }
     return applyArgumentsResult;
   }
-  ActivityLayoutMode = async function _handleCanJoin(arg0, value) {
+  ActivityLayoutMode = async function _handleCanJoin() {
     if (dependencyMap === 2) {
       dependencyMap = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -60,7 +60,7 @@ function ActivityTileInner(participant) {
             }
             if (tmp12) {
               const obj1 = {
-                applicationId: tmp23.applicationId,
+                applicationId: stateFromStores.applicationId,
                 activityChannelId: id.id,
                 locationObject: _location.location,
                 analyticsLocations,
@@ -72,7 +72,6 @@ function ActivityTileInner(participant) {
             } else {
               dependencyMap = 3;
             }
-            tmp23 = stateFromStores;
           }
         } else if (arg0 === 1) {
           dependencyMap = 3;
@@ -231,11 +230,7 @@ function ActivityTileInner(participant) {
         obj.guildId = guildId;
         let tmp5;
         if (!arg1) {
-          obj = {
-            radius: tmp2(1178).AVATAR_SIZE_MAP[tmp4] / 2 + 3,
-            direction: tmp2(1178).CutoutDirection.RIGHT,
-            inset: -6,
-          };
+          obj = { radius: native.AVATAR_SIZE_MAP[tmp4] / 2 + 3, direction: native.CutoutDirection.RIGHT, inset: -6 };
           tmp5 = obj;
         }
         obj.cutout = tmp5;
@@ -258,14 +253,14 @@ function ActivityTileInner(participant) {
       const obj12 = { onPress: handleTileOrButtonPress, pillStyle: tmp.buttonPill, text: null, variant: "secondary" };
       const intl5 = tmp5(tmp3[22]).intl;
       obj12.text = intl5.string(tmp5(tmp3[22]).t["4i2vj+"]);
-      obj11.children = tmp25(tmp5(tmp3[31]).BaseTextButton, obj12);
-      tmp25Result = tmp25(tmp26, obj11);
+      obj11.children = closure_10(tmp5(tmp3[31]).BaseTextButton, obj12);
+      tmp25Result = closure_10(tmp26, obj11);
     }
     items5[3] = tmp25Result;
     obj7.children = items5;
     items3[1] = closure_11(analyticsLocations, obj7);
     obj4.children = items3;
-    tmp23Result = tmp23(tmp5(tmp3[27]).PressableOpacity, obj4);
+    tmp23Result = closure_11(tmp5(tmp3[27]).PressableOpacity, obj4);
   }
   return tmp23Result;
 }

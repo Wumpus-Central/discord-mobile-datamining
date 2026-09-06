@@ -1,6 +1,7 @@
 // discord_app/design/components/RowGroup/native/RowGroup.native.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import Stack_Stack from "../../Stack/native/Stack.native.tsx";
+import TableRowGroup from "../../TableRow/native/TableRowGroup.native.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -28,13 +29,12 @@ export const RowGroup = function RowGroup(children) {
     let tmp7 = null != title;
     if (tmp7) {
       obj = { title };
-      tmp7 = React3(tmp5(5687).TableRowGroupTitle, obj);
+      tmp7 = React3(TableRowGroup.TableRowGroupTitle, obj);
     }
     obj = { direction: "horizontal", spacing: 4, children: null };
     const items = [tmp7, trailing];
     obj.children = items;
-    tmp2Result = tmp2(Stack_Stack.Stack, obj);
-    tmp5 = require;
+    tmp2Result = React4(Stack_Stack.Stack, obj);
   }
   const items1 = [tmp2Result, React3(View, { style: tmp.content, children: children.children })];
   obj.children = items1;

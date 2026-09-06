@@ -67,7 +67,7 @@ export default function GuildRoleSubscriptionTierArchiveOrDeleteActionSheet(grou
     children: null,
   };
   const obj3 = { variant: "text-sm/semibold", color: "interactive-text-active", children: null };
-  const intl = tmp6(1114).intl;
+  const intl = util.intl;
   obj3.children = intl.string(util.t["ETE/oC"]);
   obj2.children = hasOwnProperty(Text_Text.Text, obj3);
   items[6] = hasOwnProperty(React3, obj2);

@@ -68,13 +68,13 @@ export const useEnsureSyncedChannelVoiceStates = function useEnsureSyncedChannel
         };
         let guild_id;
         if (closure_1_5 != null) {
-          guild_id = tmp2.guild_id;
+          guild_id = closure_1_5.guild_id;
         }
         member = null;
         if (null != guild_id) {
           let guild_id1;
-          if (tmp2 != null) {
-            guild_id1 = tmp2.guild_id;
+          if (closure_1_5 != null) {
+            guild_id1 = closure_1_5.guild_id;
           }
           member = member.getMember(guild_id1, id.id);
         }
@@ -87,15 +87,15 @@ export const useEnsureSyncedChannelVoiceStates = function useEnsureSyncedChannel
   const items5 = [stateFromStores, voiceStates, memo];
   return noop.useMemo(
     () =>
-      (function syncChannelVoiceStates(stateFromStores, arg1, memo) {
+      (function syncChannelVoiceStates(stateFromStores, dependencyMap, memo) {
         if (null == stateFromStores) {
           if (0 === memo.length) {
-            return arg1;
+            return dependencyMap;
           }
         }
         const items = [];
         const set = new Set();
-        const iter = arg1[Symbol.iterator]();
+        const iter = dependencyMap[Symbol.iterator]();
         const nextResult = iter.next();
         while (iter !== undefined) {
           let arr = items.push(nextResult);
@@ -155,10 +155,10 @@ export const useEnsureSyncedChannelParticipants = function useEnsureSyncedChanne
     let tmp2 = items;
     if (null != stateFromStores) {
       tmp2 = tmp;
-      if (0 !== arr.length) {
+      if (0 !== stateFromStores.length) {
         items = [];
         HermesBuiltin.arraySpread(tmp, 0);
-        const item = arr.forEach((item) => {
+        const item = stateFromStores.forEach((item) => {
           items.splice(
             items(stateFromStores[11]).sortedIndexBy(items, item, (arg0) => items(closure_1_1[14]).sortKey(arg0)),
             0,
@@ -198,10 +198,10 @@ export const useIsRTCDisconnectedUIVisible = function useIsRTCDisconnectedUIVisi
       isUserConnectedResult = RTCConnectionStore.getChannelId() === closure_0;
     }
     if (isUserConnectedResult) {
-      isUserConnectedResult = null != VoiceStateStore.isInChannel(closure_0, tmp);
+      isUserConnectedResult = null != VoiceStateStore.isInChannel(closure_0, closure_1);
     }
     if (isUserConnectedResult) {
-      isUserConnectedResult = RTCConnectionStore.isUserConnected(tmp);
+      isUserConnectedResult = RTCConnectionStore.isUserConnected(closure_1);
     }
     return isUserConnectedResult;
   });
@@ -216,10 +216,10 @@ export const useIsRTCDisconnectedUIVisible = function useIsRTCDisconnectedUIVisi
       tmp2 = RTCConnectionStore.getChannelId() === closure_0;
     }
     if (tmp2) {
-      tmp2 = null != VoiceStateStore.isInChannel(closure_0, tmp);
+      tmp2 = null != VoiceStateStore.isInChannel(closure_0, closure_1);
     }
     if (tmp2) {
-      tmp2 = !RTCConnectionStore.isUserConnected(tmp);
+      tmp2 = !RTCConnectionStore.isUserConnected(closure_1);
     }
     return tmp2;
   });

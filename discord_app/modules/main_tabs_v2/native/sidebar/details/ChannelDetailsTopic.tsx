@@ -111,7 +111,7 @@ function GuildChannelDetailsTopic(channel) {
       first
         ? () => {
             closure_1_5(!first1);
-            const result = sharedValue2.set(first1 ? tmp2.VISIBLE : tmp2.HIDDEN);
+            const result = sharedValue2.set(first1 ? constants.VISIBLE : constants.HIDDEN);
           }
         : undefined,
     items2,

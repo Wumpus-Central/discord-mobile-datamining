@@ -25,7 +25,7 @@ function MoreTipsModalScreen(learnMore) {
   let tmp2Result = null;
   if (null != learnMore) {
     const obj1 = { style: tmp.learnMore, children: learnMore };
-    tmp2Result = tmp2(tmp5, obj1);
+    tmp2Result = React6(React4, obj1);
   }
   items[1] = tmp2Result;
   obj.children = items;

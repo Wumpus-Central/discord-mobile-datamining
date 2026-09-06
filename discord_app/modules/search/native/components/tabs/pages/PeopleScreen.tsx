@@ -167,16 +167,11 @@ export default noop.memo(function PeopleScreen(searchContext) {
     });
     if (!stateFromStores1) {
       if (0 === items.length) {
-        let num3 = 0;
-        if (0 < fullscreenPlaceholderCount) {
-          do {
-            let obj = { type: null, key: null };
-            obj.type = callback.MESSAGE_PLACEHOLDER;
-            let _HermesInternal = HermesInternal;
-            obj.key = "message-placeholder-" + num3;
-            let arr = items.push(obj);
-            num3 = num3 + 1;
-          } while (num3 < fullscreenPlaceholderCount);
+        for (let num3 = 0; num3 < fullscreenPlaceholderCount; num3 = num3 + 1) {
+          let obj = { type: callback.MESSAGE_PLACEHOLDER, key: null };
+          let _HermesInternal = HermesInternal;
+          obj.key = "message-placeholder-" + num3;
+          let arr = items.push(obj);
         }
       }
     }

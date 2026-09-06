@@ -22,7 +22,7 @@ function TestLocaleSelector() {
     onChange: null,
     children: null,
   };
-  _require = asyncGeneratorStep(async (arg0, value) => {
+  _require = asyncGeneratorStep(async (arg0) => {
     if (c4 === 2) {
       c4 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -116,8 +116,6 @@ function LocaleInfo() {
   items2[2] = closure_10(TableRow.TableRow, obj1);
   const obj2 = { label: "@discord/intl locale", trailing: null };
   const tmp3 = _slicedToArray(noop.useState(_modDef4153.locale), 2);
-  const tmp6 = closure_11;
-  const tmp7 = closure_10;
   obj2.trailing = closure_10(TableRow.TableRow.TrailingText, { text: util.intl.currentLocale });
   items2[3] = closure_10(TableRow.TableRow, obj2);
   const obj4 = {
@@ -131,9 +129,9 @@ function LocaleInfo() {
   }
   const obj5 = { hasIcons: false, children: null };
   obj4.subLabel = str;
-  items2[4] = tmp7(TableRow.TableRow, obj4);
+  items2[4] = closure_10(TableRow.TableRow, obj4);
   obj5.children = items2;
-  return tmp6(TableRowGroup.TableRowGroup, obj5);
+  return closure_11(TableRowGroup.TableRowGroup, obj5);
 }
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);

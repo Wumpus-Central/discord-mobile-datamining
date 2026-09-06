@@ -48,7 +48,7 @@ export default function ForumPostList(arg0) {
     }
     items[1] = tmp13;
     obj.children = items;
-    tmp6Result = tmp6(tmp8, obj);
+    tmp6Result = React5(View, obj);
   }
   const obj2 = { children: null };
   const items1 = [

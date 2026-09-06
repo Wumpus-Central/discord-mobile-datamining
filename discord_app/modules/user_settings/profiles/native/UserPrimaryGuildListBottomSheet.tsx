@@ -79,7 +79,7 @@ let closure_9 = noop.memo((item) => {
   let tmp7Result = null;
   if (null != item) {
     obj = { style: tmp.guildIcon, guild: item, size: tmp8(tmp9[11]).GuildIconSizes.SMALL_32 };
-    tmp7Result = tmp7(selected(tmp9[11]), obj);
+    tmp7Result = closure_6(selected(tmp9[11]), obj);
     const tmp12 = selected(tmp9[11]);
   }
   obj.icon = tmp7Result;
@@ -103,7 +103,7 @@ let closure_9 = noop.memo((item) => {
     obj2.guildTag = tag;
     obj2.guildBadge = guildTagBadgeUrl;
     obj2.badgeSize = GuildTagBadgeSize.SIZE_16;
-    tmp7Result = tmp7(tmp8(tmp9[12]).BaseGuildTagChiplet, obj2);
+    tmp7Result = closure_6(tmp8(tmp9[12]).BaseGuildTagChiplet, obj2);
   }
   const items = [tmp7Result, closure_6(item(onSelectGuild[13]).FormRadio, { selected })];
   obj1.children = items;

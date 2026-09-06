@@ -65,7 +65,7 @@ export default function UserSettingsStartupTimings() {
     num = 0;
   }
   const onPress = obj.useCallback(
-    first1(function* (arg0, value) {
+    first1(function* () {
       if (c3 === 2) {
         c3 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -188,7 +188,7 @@ export default function UserSettingsStartupTimings() {
     items2[5] = React7(Code, obj11);
     let prop;
     if (lastTrackedAppUiViewed2Properties != null) {
-      prop = tmp13.time_display_messages_with_cache_end;
+      prop = lastTrackedAppUiViewed2Properties.time_display_messages_with_cache_end;
     }
     let str3 = "";
     if (null != prop) {
@@ -203,7 +203,7 @@ export default function UserSettingsStartupTimings() {
     items2[6] = React7(Code, obj12);
     let prop1;
     if (lastTrackedAppUiViewed2Properties != null) {
-      prop1 = tmp13.time_display_latest_messages_end;
+      prop1 = lastTrackedAppUiViewed2Properties.time_display_latest_messages_end;
     }
     let str5 = "";
     if (null != prop1) {

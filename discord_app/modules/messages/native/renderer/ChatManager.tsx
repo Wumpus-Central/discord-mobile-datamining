@@ -131,10 +131,6 @@ prototype["determineChangeTypeForEmbeddedActivity"] = function determineChangeTy
 };
 prototype["determineChangeType"] = function determineChangeType(forceRender) {
   ({ message, updateMessageIds } = forceRender);
-  let flag = arg1;
-  if (arg1 === undefined) {
-    flag = false;
-  }
   const self = this;
   if (null == this._messages) {
     return constants.NOOP;
@@ -162,7 +158,7 @@ prototype["determineChangeType"] = function determineChangeType(forceRender) {
             hasItem = updateMessageIds.has(message.id);
           }
           if (!hasItem) {
-            INSERT = _modDef1332(tmp, message) ? tmp5.NOOP : tmp5.UPDATE;
+            INSERT = _modDef1332(tmp, message) ? constants.NOOP : constants.UPDATE;
           }
         }
         INSERT = constants.UPDATE;
@@ -194,10 +190,9 @@ prototype["createChangeset"] = function createChangeset() {
             let tmp12 = self._rows[num];
             let tmp13 = self.rows[num3];
             let changeType = tmp13.changeType;
-            let tmp14 = constants;
             if (constants.NOOP !== changeType) {
-              if (tmp14.UPDATE !== changeType) {
-                let INSERT = tmp14.INSERT;
+              if (constants.UPDATE !== changeType) {
+                let INSERT = constants.INSERT;
                 tmp13.index = num3 + num2;
                 let arr = items.push(tmp13);
                 let sum = num3 + 1;
@@ -206,18 +201,17 @@ prototype["createChangeset"] = function createChangeset() {
               }
             }
             if (tmp13.type === tmp12.type) {
-              let tmp24 = constants2;
               if (tmp13.type !== constants2.SEPARATOR) {
-                if (tmp13.type !== tmp24.LOADING) {
-                  if (tmp13.changeType !== tmp14.NOOP) {
+                if (tmp13.type !== constants2.LOADING) {
+                  if (tmp13.changeType !== constants.NOOP) {
                     tmp13.index = num3 + num2;
                     arr = items.push(tmp13);
                     sum1 = num + 1;
                     sum = num3 + 1;
                     sum3 = num2;
                   } else {
-                    if (tmp13.type !== tmp24.SEPARATOR) {
-                      if (tmp13.type !== tmp24.LOADING) {
+                    if (tmp13.type !== constants2.SEPARATOR) {
+                      if (tmp13.type !== constants2.LOADING) {
                         let message = tmp13.message;
                         let isFirst;
                         if (message != null) {
@@ -230,7 +224,7 @@ prototype["createChangeset"] = function createChangeset() {
                         }
                       }
                     }
-                    tmp13.changeType = tmp14.UPDATE;
+                    tmp13.changeType = constants.UPDATE;
                     tmp13.index = num3 + num2;
                     let arr1 = items.push(tmp13);
                     sum1 = num + 1;
@@ -240,13 +234,13 @@ prototype["createChangeset"] = function createChangeset() {
                 }
               }
             }
-            let obj = { changeType: tmp14.REMOVE, index: null };
+            let obj = { changeType: constants.REMOVE, index: null };
             let sum2 = num3 + num2;
             obj.index = sum2;
             let arr2 = items.push(obj);
             if (0 < sum2) {
               let tmp22 = items[sum2 - 1];
-              let maybeRemove = tmp22.changeType !== tmp14.NOOP;
+              let maybeRemove = tmp22.changeType !== constants.NOOP;
               if (!maybeRemove) {
                 maybeRemove = tmp22.type !== constants2.MESSAGE;
               }
@@ -254,7 +248,7 @@ prototype["createChangeset"] = function createChangeset() {
                 maybeRemove = self.maybeRemove;
               }
               if (!maybeRemove) {
-                tmp22.changeType = tmp14.UPDATE;
+                tmp22.changeType = constants.UPDATE;
               }
             }
             sum1 = num + 1;
@@ -270,9 +264,7 @@ prototype["createChangeset"] = function createChangeset() {
             sum3 = num2;
           }
         } else {
-          obj = { changeType: null, index: null };
-          obj.changeType = constants.REMOVE;
-          obj.index = num3 + num2;
+          obj = { changeType: constants.REMOVE, index: num3 + num2 };
           let arr4 = items.push(obj);
           sum3 = num2 + 1;
           sum1 = num + 1;

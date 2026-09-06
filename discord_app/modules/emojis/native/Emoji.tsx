@@ -1,7 +1,11 @@
 // discord_app/modules/emojis/native/Emoji.tsx
 import PlatformUtils from "../../../utils/PlatformUtils.tsx";
+import native from "../../../design/void/native.tsx";
 import EmojiUtilsDefault from "../../../utils/EmojiUtils.tsx";
+import shared from "../../../design/shared.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
+import _modDef7131 from "../../../../_runtime/metro/07131__.js";
+import _modDef7132 from "../../../../_runtime/metro/07132__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import ThemeStore from "../../user_settings/ThemeStore.tsx";
 
@@ -28,24 +32,25 @@ export default function Emoji(arg0) {
     if (null != uRL) {
       if ("" !== uRL) {
         obj = { resizeMode: "contain", style: fastImageStyle, placeholder: null, source: null, onError: null };
-        const tmp10 = FastImageDefault;
         if (tmpResult.isThemeDark(ThemeStore.theme)) {
-          let tmp9Result = tmp9(7131);
+          let tmp9Result = _modDef7131;
         } else {
-          tmp9Result = tmp9(7132);
+          tmp9Result = _modDef7132;
         }
         obj.placeholder = tmp9Result;
         obj1 = { uri: uRL };
         obj.source = obj1;
         obj.onError = onError;
-        let tmp6Result = tmp6(tmp10, obj);
-        tmpResult = tmp(4411);
+        let tmp6Result = (
+          <tmp10 resizeMode="contain" style={fastImageStyle} placeholder={null} source={null} onError={null} />
+        );
+        tmpResult = shared;
       }
       obj.children = tmp6Result;
-      return tmp6(tmp7, obj);
+      return <tmp7 {...obj} />;
     }
   }
-  tmp6Result = tmp6(tmp(1178).LegacyText, {
+  tmp6Result = jsx(native.LegacyText, {
     style: textEmojiStyle,
     allowFontScaling: false,
     adjustsFontSizeToFit,

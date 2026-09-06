@@ -128,7 +128,7 @@ let closure_16 = memo((arg0) => {
     };
     let name;
     if (require != null) {
-      if (tmp3[index] != null) {
+      if (require[index] != null) {
         name = tmp5.name;
       }
     }
@@ -138,7 +138,7 @@ let closure_16 = memo((arg0) => {
     obj.label = name;
     let skuId;
     if (require != null) {
-      if (tmp3[index] != null) {
+      if (require[index] != null) {
         skuId = tmp7.skuId;
       }
     }

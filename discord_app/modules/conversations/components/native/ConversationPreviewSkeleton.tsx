@@ -70,9 +70,9 @@ export default function ConversationPreviewSkeleton() {
     const items = [row.row];
     let obj = { style: items, children: null };
     items[1] = arg1 > 0 && row.rowSpacing;
-    obj = { style: tmp3.avatar };
+    obj = { style: row.avatar };
     const items1 = [timestampProducer(View, obj)];
-    obj = { style: tmp3.lines, children: null };
+    obj = { style: row.lines, children: null };
     const items2 = [timestampProducer(View, { style: row.lineName }), timestampProducer(View, { style: row.lineText })];
     obj.children = items2;
     items1[1] = React5(View, obj);

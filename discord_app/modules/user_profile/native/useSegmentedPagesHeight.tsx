@@ -59,7 +59,7 @@ export const usePagerFillHeight = function usePagerFillHeight() {
     }, items),
   };
 };
-export const usePagesHeightStyle = function usePagesHeightStyle(segmentedControlState, pageHeights, fillHeight) {
+export const usePagesHeightStyle = function usePagesHeightStyle(segmentedControlState, pageHeights) {
   _require = pageHeights;
   let num = fillHeight;
   if (fillHeight === undefined) {

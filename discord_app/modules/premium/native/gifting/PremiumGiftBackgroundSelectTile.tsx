@@ -57,8 +57,8 @@ let closure_9 = createStyles.createStyles((arg0) => {
   size.marginStart = num;
   const size1 = {
     position: "absolute",
-    borderColor: tmp(576).colors.TEXT_BRAND,
-    borderRadius: tmp(576).radii.sm,
+    borderColor: nativeDefault.colors.TEXT_BRAND,
+    borderRadius: nativeDefault.radii.sm,
     borderWidth: 2,
     flex: 1,
     width: 78,

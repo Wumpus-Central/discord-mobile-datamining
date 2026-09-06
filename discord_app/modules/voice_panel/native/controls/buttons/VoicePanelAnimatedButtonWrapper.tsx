@@ -1,6 +1,8 @@
 // discord_app/modules/voice_panel/native/controls/buttons/VoicePanelAnimatedButtonWrapper.tsx
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import PlatformUtils from "../../../../../utils/PlatformUtils.tsx";
+import timing from "../../../../../design/animation/reanimated/timing/timing.tsx";
+import spring from "../../../../../design/animation/reanimated/spring/spring.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import ReanimatedRexport from "../../../../reanimated/ReanimatedRexport.tsx";
 
@@ -101,9 +103,9 @@ export default function AnimatedButtonWrapper(onPressOut) {
       };
       obj = {
         offsetFromCenter: sharedValue,
-        withSpring: tmp(4974).withSpring,
+        withSpring: spring.withSpring,
         MODE_CHANGE_PHYSICS,
-        withTiming: tmp(4561).withTiming,
+        withTiming: timing.withTiming,
       };
       fn.__closure = obj;
       fn.__workletHash = 16238937246135;
@@ -137,10 +139,10 @@ export default function AnimatedButtonWrapper(onPressOut) {
         return obj;
       };
       obj = {
-        withSpring: tmp(4974).withSpring,
+        withSpring: spring.withSpring,
         offsetFromCenter: sharedValue,
         MODE_CHANGE_PHYSICS,
-        withTiming: tmp(4561).withTiming,
+        withTiming: timing.withTiming,
       };
       fn.__closure = obj;
       fn.__workletHash = 17504057367727;

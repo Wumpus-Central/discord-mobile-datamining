@@ -28,14 +28,14 @@ export default function useShowUnlinkChannelAlert(arg0, applicationName, arg2) {
         v2(tmp23[3]);
       } else if (arg0 === 1) {
         c4 = 3;
-        throw arg1;
+        throw value;
       } else if (arg0 !== 2) {
         if (closure_128_2 != null) {
           closure_128_2();
         }
         c3 = 0;
       }
-      return arg1;
+      return value;
     }),
     items,
   );

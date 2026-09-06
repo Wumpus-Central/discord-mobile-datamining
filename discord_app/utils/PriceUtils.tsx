@@ -3,6 +3,8 @@ import util from "../intl/index.native.tsx";
 import PlatformUtils from "PlatformUtils.tsx";
 import PremiumUtils from "PremiumUtils.tsx";
 import utils_PriceUtils from "../../discord_common/js/shared/utils/PriceUtils.tsx";
+import IAPStore from "../stores/native/IAPStore.android.tsx";
+import GenericIAPStore from "../modules/billing/native/GenericIAPStore.tsx";
 import LocaleStore from "../modules/user_settings/LocaleStore.tsx";
 import BillingInfoStore from "../stores/billing/BillingInfoStore.tsx";
 
@@ -43,41 +45,42 @@ function formatSingleCurrencyPrice(result, BGN, localeOverride) {
   }
   return utils_PriceUtils.formatPrice(result, BGN, localeOverride, obj);
 }
-function formatPrice(amount, currency, localeOverride) {
+function formatPrice(result, str, localeOverride) {
   const timestamp = Date.now();
   let flag = false;
   if (timestamp < date.getTime()) {
     const platformName = PlatformUtils.getPlatformName();
     if ("android" === platformName) {
-      let ipCountryCode = tmp2(7237).default.getUserCountry();
-      const _default2 = tmp2(7237).default;
+      let ipCountryCode = IAPStore.default.getUserCountry();
+      const _default2 = IAPStore.default;
     } else if ("ios" === platformName) {
-      const storeFront = tmp2(7239).default.getStoreFront();
+      const storeFront = GenericIAPStore.default.getStoreFront();
       let country;
       if (storeFront != null) {
         country = storeFront.country;
       }
       ipCountryCode = country;
-      const _default = tmp2(7239).default;
+      const _default = GenericIAPStore.default;
     } else {
       ipCountryCode = BillingInfoStore.ipCountryCode;
     }
     let tmp9 = "BG" === ipCountryCode;
     if (tmp9) {
       let formatted;
-      if (currency != null) {
-        formatted = currency.toLowerCase();
+      if (str != null) {
+        formatted = str.toLowerCase();
       }
       tmp9 = formatted === CurrencyCodes.EUR;
     }
     flag = tmp9;
   }
   if (flag) {
-    const tmp13Result = tmp13(amount, CurrencyCodes.EUR, localeOverride);
+    const tmp13Result = formatSingleCurrencyPrice(result, CurrencyCodes.EUR, localeOverride);
     const _HermesInternal = HermesInternal;
-    let combined = "" + tmp13Result + " (" + tmp13(1.95583 * amount, CurrencyCodes.BGN, localeOverride) + ")";
+    let combined =
+      "" + tmp13Result + " (" + formatSingleCurrencyPrice(1.95583 * result, CurrencyCodes.BGN, localeOverride) + ")";
   } else {
-    combined = tmp13(amount, currency, localeOverride);
+    combined = formatSingleCurrencyPrice(result, str, localeOverride);
   }
   return combined;
 }
@@ -87,14 +90,14 @@ function formatRate(priceString, interval, intervalCount) {
     let obj = { price: priceString };
     return intl3.formatToPlainString(util.t["rS8FA+"], obj);
   } else {
-    if (interval === tmp.MONTH) {
+    if (interval === SubscriptionIntervalTypes.MONTH) {
       if (1 === intervalCount) {
         const intl2 = util.intl;
         obj = { price: priceString };
         return intl2.formatToPlainString(util.t.AbOLNu, obj);
       }
     }
-    if (interval === tmp.MONTH) {
+    if (interval === SubscriptionIntervalTypes.MONTH) {
       if (intervalCount > 1) {
         const intl = util.intl;
         obj = { price: priceString, intervalCount };
@@ -125,8 +128,8 @@ export const formatDualPriceForBG = function formatDualPriceForBG(result, locale
 };
 export { formatPrice };
 export { formatRate };
-export const formatPercent = function formatPercent(arg0, arg1) {
-  return Intl.NumberFormat(arg0, { style: "percent", minimumFractionDigits: 0 }).format(arg1);
+export const formatPercent = function formatPercent(stateFromStores, arg1) {
+  return Intl.NumberFormat(stateFromStores, { style: "percent", minimumFractionDigits: 0 }).format(arg1);
 };
 export const formatSubscriptionPlanRate = function formatSubscriptionPlanRate(interval_count) {
   const price = PremiumUtils.getPrice(interval_count.id);
@@ -143,8 +146,8 @@ export const maybeShortenPrice = function maybeShortenPrice(str) {
   }
   return replaced;
 };
-export const shortenAndFormatPrice = function shortenAndFormatPrice(amount, currency, localeOverride) {
-  const arr = formatPrice(amount, currency, localeOverride);
+export const shortenAndFormatPrice = function shortenAndFormatPrice(amount, currency, arg2) {
+  const arr = formatPrice(amount, currency, arg2);
   let replaced = arr;
   if (arr.length > 5) {
     replaced = arr.replace(/\.00(?=[\s)]|$)/g, "");

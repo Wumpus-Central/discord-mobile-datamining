@@ -1,6 +1,8 @@
 // discord_app/modules/experiments/native/ExperimentEmbedPlatformUtils.tsx
 import asyncRequireImpl from "../../../../_runtime/01896_asyncRequireImpl.js";
+import ExperimentManager from "../ExperimentManager.tsx";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
+import ExperimentEmbedUtils from "../ExperimentEmbedUtils.tsx";
 import useLegacyExperiments from "../client_override_hooks/useLegacyExperiments.tsx";
 import useApexExperiments from "../client_override_hooks/useApexExperiments.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
@@ -33,18 +35,18 @@ export const handleCodedLinkExperimentEmbedTap = function handleCodedLinkExperim
         if (tmp6 == null) {
           tmp6 = null;
         }
-        let tmpResult = tmp(7890);
+        let tmpResult = ExperimentEmbedUtils;
         const experimentBuckets = tmpResult.getExperimentBuckets(tmp5);
         const iter = experimentBuckets.find((value) => value.value === closure_0);
         if (null != iter) {
           if (null != tmp6) {
             if (tmp6.variantId === iter.value) {
-              tmpResult = tmp(4481);
+              tmpResult = ExperimentManager;
               tmpResult.overrideBucket(tmp5.system, experimentFromEmbedURL, null);
             }
           }
-          tmp(4481).overrideBucket(tmp5.system, experimentFromEmbedURL, iter.value);
-          const tmpResult1 = tmp(4481);
+          ExperimentManager.overrideBucket(tmp5.system, experimentFromEmbedURL, iter.value);
+          const tmpResult1 = ExperimentManager;
         }
       }
     }

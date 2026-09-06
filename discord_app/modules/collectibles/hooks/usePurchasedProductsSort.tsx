@@ -38,14 +38,14 @@ export const usePurchasedProductsSort = function usePurchasedProductsSort(memo) 
           let NOT_PURCHASED = constants.PARTIAL_OWNED_BUNDLE;
           let tmp4 = constants;
         }
-        if (type2.type === tmp(tmp2[2]).CollectiblesItemType.BUNDLE) {
+        if (type2.type === closure_0(stateFromStores[2]).CollectiblesItemType.BUNDLE) {
           const items2 = type2.items;
           if (items2.some((skuId) => obj.includes(skuId.skuId))) {
             let PARTIAL_OWNED_BUNDLE = tmp4.PARTIAL_OWNED_BUNDLE;
           }
           return NOT_PURCHASED - PARTIAL_OWNED_BUNDLE;
         }
-        let tmpResult = tmp(tmp2[3]);
+        let tmpResult = closure_0(stateFromStores[3]);
         if (tmpResult.getIsVariantProduct(type2)) {
           const variants2 = type2.variants;
           variants2.every((skuId) => obj.includes(skuId.skuId)) ? tmp4.PURCHASED : tmp4.NOT_PURCHASED;
@@ -53,20 +53,20 @@ export const usePurchasedProductsSort = function usePurchasedProductsSort(memo) 
           PARTIAL_OWNED_BUNDLE = obj.includes(type2.skuId) ? tmp4.PURCHASED : tmp4.NOT_PURCHASED;
         }
       }
-      tmpResult = tmp(tmp2[3]);
+      tmpResult = closure_0(stateFromStores[3]);
       if (tmpResult.getIsVariantProduct(type)) {
         const variants = type.variants;
         if (variants.every((skuId) => obj.includes(skuId.skuId))) {
-          let NOT_PURCHASED2 = tmp5.PURCHASED;
+          let NOT_PURCHASED2 = constants.PURCHASED;
         } else {
-          NOT_PURCHASED2 = tmp5.NOT_PURCHASED;
+          NOT_PURCHASED2 = constants.NOT_PURCHASED;
         }
       } else if (obj.includes(type.skuId)) {
-        NOT_PURCHASED = tmp3.PURCHASED;
-        tmp4 = tmp3;
+        NOT_PURCHASED = constants.PURCHASED;
+        tmp4 = constants;
       } else {
-        NOT_PURCHASED = tmp3.NOT_PURCHASED;
-        tmp4 = tmp3;
+        NOT_PURCHASED = constants.NOT_PURCHASED;
+        tmp4 = constants;
       }
     });
   }, items2);

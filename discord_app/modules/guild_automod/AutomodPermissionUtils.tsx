@@ -27,7 +27,7 @@ export const getAutomodQuarantinedProfileFlags = function getAutomodQuarantinedP
           num = 0;
         }
         if (obj.hasFlag(num, item)) {
-          arr.push(item);
+          arr = arr.push(item);
         }
         return arr;
       }, []),
@@ -53,7 +53,7 @@ export const getAutomodQuarantinedGuildMemberFlags = function getAutomodQuaranti
             num = 0;
           }
           if (obj.hasFlag(num, item)) {
-            arr.push(item);
+            arr = arr.push(item);
           }
           return arr;
         }, []),
@@ -64,13 +64,13 @@ export const getAutomodQuarantinedGuildMemberFlags = function getAutomodQuaranti
 };
 export const getAutomodReason = function getAutomodReason(automodQuarantinedGuildMemberFlags) {
   if (automodQuarantinedGuildMemberFlags.has(GuildMemberFlags.AUTOMOD_QUARANTINED_USERNAME_OR_GUILD_NICKNAME)) {
-    let prop = tmp.AUTOMOD_QUARANTINED_USERNAME_OR_GUILD_NICKNAME;
-  } else if (automodQuarantinedGuildMemberFlags.has(tmp.AUTOMOD_QUARANTINED_BIO)) {
-    prop = tmp.AUTOMOD_QUARANTINED_BIO;
+    let prop = GuildMemberFlags.AUTOMOD_QUARANTINED_USERNAME_OR_GUILD_NICKNAME;
+  } else if (automodQuarantinedGuildMemberFlags.has(GuildMemberFlags.AUTOMOD_QUARANTINED_BIO)) {
+    prop = GuildMemberFlags.AUTOMOD_QUARANTINED_BIO;
   } else {
     prop = null;
-    if (automodQuarantinedGuildMemberFlags.has(tmp.AUTOMOD_QUARANTINED_SERVER_TAG)) {
-      prop = tmp.AUTOMOD_QUARANTINED_SERVER_TAG;
+    if (automodQuarantinedGuildMemberFlags.has(GuildMemberFlags.AUTOMOD_QUARANTINED_SERVER_TAG)) {
+      prop = GuildMemberFlags.AUTOMOD_QUARANTINED_SERVER_TAG;
     }
   }
   return prop;

@@ -1,9 +1,11 @@
 // discord_app/modules/messages/native/renderer/transformReactions.tsx
+import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
 import SentryUtilsDefault from "../../../../utils/SentryUtils.native.tsx";
 import AvatarUtilsDefault from "../../../../utils/AvatarUtils.tsx";
 import ReactionUtils from "../../../reactions/ReactionUtils.tsx";
 import EmojiUtilsDefault from "../../../../utils/EmojiUtils.tsx";
 import getAccessibilityLabelOrCheapFallbackUnsafe from "../../../a11y/native/getAccessibilityLabelOrCheapFallbackUnsafe.tsx";
+import EmojiColorUtils from "../../../emojis/utils/EmojiColorUtils.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/messages/native/renderer/transformReactions.tsx");
@@ -63,9 +65,9 @@ export default function transformReactions(arg0) {
         const _Array = Array;
         if (Array.isArray(obj1.burst_colors)) {
           if (obj1.burst_colors.length > 0) {
-            obj3 = { colors: obj1.burst_colors, shouldProcessMobileColors: tmp8(1115).isIOS() };
-            obj1.themedBurstColors = tmp8(7957).buildPlatformedThemedEmojiColorPalette(obj3);
-            const tmp8Result = tmp8(1115);
+            obj3 = { colors: obj1.burst_colors, shouldProcessMobileColors: PlatformUtils.isIOS() };
+            obj1.themedBurstColors = EmojiColorUtils.buildPlatformedThemedEmojiColorPalette(obj3);
+            const tmp8Result = PlatformUtils;
           }
         }
         return obj1;

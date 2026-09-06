@@ -67,10 +67,10 @@ export default function SuccessResultModal(guild) {
           name = obj.name;
         }
         obj = { installedApplicationName: name, guildName: null };
-        tmp = tmp6 == tmp;
+        tmp = guild == tmp;
         let name1;
         if (!tmp) {
-          name1 = tmp6.name;
+          name1 = guild.name;
         }
         obj.guildName = name1;
         let formatResult = intl3.format(util.t.IlF6IY, obj);
@@ -97,14 +97,14 @@ export default function SuccessResultModal(guild) {
   const callback = noop.useCallback(() => {
     let id;
     if (guild != null) {
-      id = tmp.id;
+      id = guild.id;
     }
     if (null != id) {
       let arr = ModalActionCreatorsDefault;
       arr = arr.pop();
       let id1;
-      if (tmp != null) {
-        id1 = tmp.id;
+      if (guild != null) {
+        id1 = guild.id;
       }
       transitionToGuild.transitionToGuild(id1);
       let id2;
@@ -113,8 +113,8 @@ export default function SuccessResultModal(guild) {
       }
       const obj = { application_id: id2, guild_id: null };
       let id3;
-      if (tmp != null) {
-        id3 = tmp.id;
+      if (guild != null) {
+        id3 = guild.id;
       }
       obj.guild_id = id3;
       AnalyticsUtilsDefault.track(closure_2_10.OAUTH2_AUTHORIZE_SUCCESS_GO_TO_GUILD_CLICKED, obj);
@@ -196,7 +196,7 @@ export default function SuccessResultModal(guild) {
   let tmp15Result = null;
   if (null != memo) {
     const obj4 = { style: tmp.text, variant: "text-sm/normal", children: memo };
-    tmp15Result = tmp15(tmp2(tmp3[21]).Text, obj4);
+    tmp15Result = closure_13(tmp2(tmp3[21]).Text, obj4);
   }
   items8[2] = tmp15Result;
   obj1.children = items8;
@@ -220,7 +220,7 @@ export default function SuccessResultModal(guild) {
     const obj7 = { guildName: name };
     obj6.text = intl2.formatToPlainString(tmp2(tmp3[11]).t.UdYYP3, obj7);
     obj6.onPress = callback;
-    tmp15Result = tmp15(tmp2(tmp3[22]).Button, obj6);
+    tmp15Result = closure_13(tmp2(tmp3[22]).Button, obj6);
   }
   const items11 = [tmp15Result, ,];
   let tmp15Result1 = null;
@@ -231,7 +231,7 @@ export default function SuccessResultModal(guild) {
       let intl3 = tmp2(tmp3[11]).intl;
       obj8.text = intl3.string(tmp2(tmp3[11]).t["0cCDKP"]);
       obj8.onPress = callback1;
-      tmp15Result1 = tmp15(tmp2(tmp3[22]).Button, obj8);
+      tmp15Result1 = closure_13(tmp2(tmp3[22]).Button, obj8);
     }
   }
   items11[1] = tmp15Result1;

@@ -160,7 +160,7 @@ export default function OneTimeLoginModal(token) {
     obj.content = intl2.formatToPlainString(util.t.YOeM7B, { username: str });
     const obj1 = { children: null };
     const obj2 = { onPress: callback1, text: null };
-    const intl3 = tmp(1114).intl;
+    const intl3 = util.intl;
     obj2.text = intl3.string(util.t["3PatSz"]);
     obj1.children = map1(AlertModal.AlertActionButton, obj2, "confirm");
     obj.actions = map1(AlertModal.AlertActions, obj1);
@@ -201,7 +201,7 @@ export default function OneTimeLoginModal(token) {
         tmp3(tmp44[13]);
       } else if (arg0 === 1) {
         c5 = 3;
-        throw arg1;
+        throw value;
       } else if (arg0 !== 2) {
         tmp3(tmp44[13]).track(constants.LOGIN_SUCCESSFUL, { source: "native_modal", login_method: "one_time_login" });
         const _setTimeout = setTimeout;
@@ -211,7 +211,7 @@ export default function OneTimeLoginModal(token) {
         c3 = 0;
         tmp3(tmp44[13]);
       }
-      return arg1;
+      return value;
     }),
     items4,
   );

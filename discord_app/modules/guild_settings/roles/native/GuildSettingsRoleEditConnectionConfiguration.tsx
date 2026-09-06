@@ -2,6 +2,8 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
 import native from "../../../../design/void/native.tsx";
+import AvatarUtils from "../../../../utils/AvatarUtils.tsx";
+import shared from "../../../../design/shared.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
 import PlatformsDefault from "../../../../lib/Platforms.tsx";
@@ -32,7 +34,7 @@ function Header(arg0) {
     application1 = integration.application;
   }
   if (null != application1) {
-    obj = { size: tmp3(1178).AvatarSizes.XSMALL, user: null, guildId: "Array" };
+    obj = { size: native.AvatarSizes.XSMALL, user: null, guildId: "Array" };
     let bot;
     if (integration != null) {
       application = integration.application;
@@ -41,7 +43,7 @@ function Header(arg0) {
       }
     }
     obj.user = bot;
-    let tmp8Result = closure_1_12(tmp3(1178).Avatar, obj);
+    let tmp8Result = closure_1_12(native.Avatar, obj);
     let name = integration.application.name;
   } else if (null != applicationId) {
     if (undefined === getOrFetchApplicationBatched) {
@@ -53,8 +55,8 @@ function Header(arg0) {
       }
       let tmp11;
       if (null != bot1) {
-        obj = { size: tmp3(1178).AvatarSizes.XSMALL, user: getOrFetchApplicationBatched.bot, guildId: "Array" };
-        tmp11 = closure_1_12(tmp3(1178).Avatar, obj);
+        obj = { size: native.AvatarSizes.XSMALL, user: getOrFetchApplicationBatched.bot, guildId: "Array" };
+        tmp11 = closure_1_12(native.Avatar, obj);
       }
       name = undefined;
       if (getOrFetchApplicationBatched != null) {
@@ -63,17 +65,16 @@ function Header(arg0) {
       tmp8Result = tmp11;
     }
   } else if (null != platform) {
-    tmp3(1396);
-    const tmp3Result = tmp3(4411);
+    const tmp3Result = shared;
     const icon = platform.icon;
     const obj1 = {
       source: tmp3Result.makeSource(tmp3Result.isThemeDark(tmp2) ? icon.darkPNG : icon.lightPNG),
       disableColor: true,
     };
-    tmp8Result = closure_1_12(tmp3(1178).Icon, obj1);
+    tmp8Result = closure_1_12(native.Icon, obj1);
   }
   const obj2 = { icon: tmp8Result, label: null, trailing: null };
-  const intl = tmp3(1114).intl;
+  const intl = util.intl;
   let name1;
   if (platform != null) {
     name1 = platform.name;
@@ -83,7 +84,7 @@ function Header(arg0) {
   }
   obj2.label = intl.format(util.t.Nj0a3j, { platformName: name1 });
   const obj3 = { "aria-label": null, onPress: null, disabled: null, children: null };
-  const intl2 = tmp3(1114).intl;
+  const intl2 = util.intl;
   obj3["aria-label"] = intl2.string(util.t.N86XcP);
   obj3.onPress = onRemove;
   obj3.disabled = locked;
@@ -192,7 +193,7 @@ function NumericalConfigRule(existingPendingConfiguration) {
       value = iter.value;
     }
   }
-  let tmpResult = tmp(17637);
+  let tmpResult = metadataField(17637);
   str = tmpResult.displayedValueFor(value, realizedOperatorForResult);
   str = str.toString();
   let mapped = noop;
@@ -219,9 +220,9 @@ function NumericalConfigRule(existingPendingConfiguration) {
   }
   closure_11 = tmp14;
   if (undefined !== fieldTextHook) {
-    tmpResult = tmp(1115);
+    tmpResult = metadataField(1115);
     closure_13 = tmpResult.isIOS() ? map.numericalInputContainerIOSInline : map.numericalInputContainerAndroidInline;
-    const intl = tmp(1114).intl;
+    const intl = metadataField(1114).intl;
     obj = {
       metadataHook() {
         let obj = { style: null, children: null };
@@ -276,10 +277,10 @@ function NumericalConfigRule(existingPendingConfiguration) {
       obj3.editable = !tmp14;
       obj3.value = value;
       obj3.onChangeText = onInputValueChange;
-      obj2.children = onInputValueChange(tmp(1178).TextInput, obj3, metadataField);
+      obj2.children = onInputValueChange(metadataField(1178).TextInput, obj3, metadataField);
       let items1 = [onInputValueChange(map, obj2, "_numericalInputContainer")];
       const obj4 = { variant: "text-md/semibold", style: map.appNumericalInputText, children: fieldText };
-      items1[1] = onInputValueChange(tmp(4556).Text, obj4);
+      items1[1] = onInputValueChange(metadataField(4556).Text, obj4);
       obj1.children = items1;
       tmp21Result = closure_13(tmp22, obj1);
     }
@@ -321,7 +322,7 @@ function NumericalConfigRule(existingPendingConfiguration) {
         _slicedToArray(tmp3, num);
       },
     };
-    return onInputValueChange(tmp(7201).TableSwitchRow, obj5, metadataField);
+    return onInputValueChange(metadataField(7201).TableSwitchRow, obj5, metadataField);
   }
 }
 function BlueskyMetadataRules(arg0) {
@@ -735,13 +736,13 @@ function ApplicationMetadataRules(arg0) {
       mapped = prop.map((type) => {
         type = type.type;
         if (constants2.INTEGER_LESS_THAN_EQUAL !== type) {
-          if (tmp.DATETIME_LESS_THAN_EQUAL !== type) {
-            if (tmp.INTEGER_GREATER_THAN_EQUAL !== type) {
-              if (tmp.DATETIME_GREATER_THAN_EQUAL !== type) {
-                if (tmp.INTEGER_EQUAL !== type) {
-                  if (tmp.BOOLEAN_EQUAL !== type) {
-                    if (tmp.INTEGER_NOT_EQUAL !== type) {
-                      if (tmp.BOOLEAN_NOT_EQUAL !== type) {
+          if (constants2.DATETIME_LESS_THAN_EQUAL !== type) {
+            if (constants2.INTEGER_GREATER_THAN_EQUAL !== type) {
+              if (constants2.DATETIME_GREATER_THAN_EQUAL !== type) {
+                if (constants2.INTEGER_EQUAL !== type) {
+                  if (constants2.BOOLEAN_EQUAL !== type) {
+                    if (constants2.INTEGER_NOT_EQUAL !== type) {
+                      if (constants2.BOOLEAN_NOT_EQUAL !== type) {
                         return null;
                       }
                     }
@@ -754,12 +755,12 @@ function ApplicationMetadataRules(arg0) {
             LESS_THAN = constants.GREATER_THAN;
           }
           const type2 = type.type;
-          if (tmp.INTEGER_LESS_THAN_EQUAL !== type2) {
-            if (tmp.INTEGER_GREATER_THAN_EQUAL !== type2) {
-              if (tmp.INTEGER_EQUAL !== type2) {
-                if (tmp.INTEGER_NOT_EQUAL !== type2) {
-                  if (tmp.DATETIME_LESS_THAN_EQUAL !== type2) {
-                    if (tmp.DATETIME_GREATER_THAN_EQUAL !== type2) {
+          if (constants2.INTEGER_LESS_THAN_EQUAL !== type2) {
+            if (constants2.INTEGER_GREATER_THAN_EQUAL !== type2) {
+              if (constants2.INTEGER_EQUAL !== type2) {
+                if (constants2.INTEGER_NOT_EQUAL !== type2) {
+                  if (constants2.DATETIME_LESS_THAN_EQUAL !== type2) {
+                    if (constants2.DATETIME_GREATER_THAN_EQUAL !== type2) {
                       let obj = {
                         fieldText: null,
                         metadataField: null,
@@ -953,32 +954,32 @@ export default function GuildSettingsRoleEditConnectionConfiguration(configurati
           const merged = Object.assign(obj1);
           let tmp21 = closure_1_12(SteamMetadataRules, obj2);
           let tmp22 = closure_1_12;
-        } else if (tmp15.TWITTER === type) {
+        } else if (PlatformTypes.TWITTER === type) {
           const obj3 = {};
           const merged1 = Object.assign(obj1);
           tmp21 = closure_1_12(TwitterMetadataRules, obj3);
           tmp22 = closure_1_12;
-        } else if (tmp15.REDDIT === type) {
+        } else if (PlatformTypes.REDDIT === type) {
           const obj4 = {};
           const merged2 = Object.assign(obj1);
           tmp21 = closure_1_12(RedditMetadataRules, obj4);
           tmp22 = closure_1_12;
-        } else if (tmp15.BLUESKY === type) {
+        } else if (PlatformTypes.BLUESKY === type) {
           const obj5 = {};
           const merged3 = Object.assign(obj1);
           tmp21 = closure_1_12(BlueskyMetadataRules, obj5);
           tmp22 = closure_1_12;
-        } else if (tmp15.PAYPAL === type) {
+        } else if (PlatformTypes.PAYPAL === type) {
           const obj6 = {};
           const merged4 = Object.assign(obj1);
           tmp21 = closure_1_12(PaypalMetadataRules, obj6);
           tmp22 = closure_1_12;
-        } else if (tmp15.EBAY === type) {
+        } else if (PlatformTypes.EBAY === type) {
           const obj7 = {};
           const merged5 = Object.assign(obj1);
           tmp21 = closure_1_12(EbayMetadataRules, obj7);
           tmp22 = closure_1_12;
-        } else if (tmp15.TIKTOK === type) {
+        } else if (PlatformTypes.TIKTOK === type) {
           const obj8 = {};
           const merged6 = Object.assign(obj1);
           tmp21 = closure_1_12(TikTokMetadataRules, obj8);

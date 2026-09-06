@@ -12,7 +12,7 @@ obj.match = function match(arg0, allowHeading, str) {
   let tmp = null;
   if (allowHeading.allowHeading) {
     if (null != str) {
-      if ("" !== str) {
+      if ("" !== "") {
         tmp = null;
       }
     }

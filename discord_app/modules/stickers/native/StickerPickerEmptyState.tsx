@@ -13,11 +13,10 @@ function EmptyStateSticker(sticker) {
   sticker = sticker.sticker;
   const animated = StickersHooks.useShouldAnimateSticker(sticker.isFocused);
   let id;
-  const tmp2 = closure_1_11;
   if (sticker != null) {
     id = sticker.id;
   }
-  return tmp2(StickerDefault, { sticker, size: 60, animated }, id);
+  return closure_1_11(StickerDefault, { sticker, size: 60, animated }, id);
 }
 const View = fn(17).View;
 const EMPTY_STATE_STICKERS = fn(1938).EMPTY_STATE_STICKERS;

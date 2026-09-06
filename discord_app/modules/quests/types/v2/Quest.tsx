@@ -1,9 +1,9 @@
 // discord_app/modules/quests/types/v2/Quest.tsx
 import Task from "Task.tsx";
 import Reward from "Reward.tsx";
+import CTA from "CTA.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
-const CTA = tmp(7717);
 const result = size.fileFinishedImporting("modules/quests/types/v2/Quest.tsx");
 
 export const questFromServerV2 = function questFromServerV2(id) {

@@ -54,7 +54,7 @@ function HomeDrawerPanelContent() {
   obj = { style: null, children: null };
   let items = [tmp.container, animatedStyle];
   obj.style = items;
-  obj1 = { style: null, children: tmp11(tmp7(tmp2[7]), { enableHome: true }) };
+  obj1 = { style: null, children: jsx(tmp7(tmp2[7]), { enableHome: true }) };
   let items1 = [
     drawerOpen ? tmp.guildsListContainerGestured : tmp.guildLisetContainerDefault,
     homeDrawerState.guildsBarDrawerStyle,
@@ -62,7 +62,7 @@ function HomeDrawerPanelContent() {
   obj1.style = items1;
   obj.children = jsx(require("ReanimatedRexport").View, {
     style: null,
-    children: tmp11(tmp7(tmp2[7]), { enableHome: true }),
+    children: jsx(tmp7(tmp2[7]), { enableHome: true }),
   });
   return jsx(require("ReanimatedRexport").View, { style: null, children: null });
 }
@@ -86,12 +86,12 @@ export const HomePanelContent = noop.memo(() => {
   const tmp = closure_7(DM_WIDTH);
   let obj = useHomeDrawerGesture;
   if (obj.useIsHomeDrawerEnabled()) {
-    let tmp3Result = tmp3(HomeDrawerPanelContent, {});
+    let tmp3Result = <HomeDrawerPanelContent />;
   } else {
     obj = { style: tmp.container, children: null };
-    obj = { style: tmp.guildLisetContainerDefault, children: tmp3(GuildsBarDefault, {}) };
-    obj.children = tmp3(View, obj);
-    tmp3Result = tmp3(View, obj);
+    obj = { style: tmp.guildLisetContainerDefault, children: jsx(GuildsBarDefault, {}) };
+    obj.children = <View style={tmp.guildLisetContainerDefault}>{jsx(GuildsBarDefault, {})}</View>;
+    tmp3Result = <View style={tmp.guildLisetContainerDefault}>{jsx(GuildsBarDefault, {})}</View>;
   }
   return tmp3Result;
 });

@@ -39,7 +39,7 @@ export default function useMediaKeyboardConfig(arg0) {
   return canStartThread.useMemo(() => {
     const target = context.target;
     if (target !== MediaKeyboardTarget.CHAT) {
-      if (target !== tmp2.COMMAND) {
+      if (target !== MediaKeyboardTarget.COMMAND) {
         const _Error = Error;
         const _HermesInternal = HermesInternal;
         const error = new Error("MediaKeyboard does not support context target " + target);
@@ -48,8 +48,8 @@ export default function useMediaKeyboardConfig(arg0) {
     }
     let fileTypes;
     if (target === MediaKeyboardTarget.COMMAND) {
-      if (tmp.option.type === Server.ApplicationCommandOptionType.ATTACHMENT) {
-        fileTypes = tmp.option.fileTypes;
+      if (context.option.type === Server.ApplicationCommandOptionType.ATTACHMENT) {
+        fileTypes = context.option.fileTypes;
       }
     }
     let num = 1;
@@ -69,7 +69,7 @@ export default function useMediaKeyboardConfig(arg0) {
     };
     let tmp6;
     if (target !== MediaKeyboardTarget.CHAT) {
-      const items = [tmp.option.name];
+      const items = [context.option.name];
       tmp6 = items;
     }
     obj.includedUploadIds = tmp6;

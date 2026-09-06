@@ -5,7 +5,9 @@ import PlatformUtils from "../../../utils/PlatformUtils.tsx";
 import useToken from "../../../design/tokens/native/useToken.tsx";
 import useChatLayoutDefault from "../../chat/native/useChatLayout.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
+import LinearGradientDefault from "../../../../_runtime/04987_LinearGradient.js";
 import common_SafeAreaView from "../../../components_native/common/SafeAreaView.tsx";
+import _modDef15064 from "../../../../_runtime/metro/15064__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -82,7 +84,7 @@ export default function QuestHomeEmptyState(subtitle) {
   let tmp9Result = null != action;
   if (tmp9Result) {
     const obj5 = { style: tmp5.actionWrapper, children: action };
-    tmp9Result = tmp9(tmp10, obj5);
+    tmp9Result = timestampProducer(React3, obj5);
   }
   items[2] = tmp9Result;
   obj2.children = items;
@@ -90,15 +92,15 @@ export default function QuestHomeEmptyState(subtitle) {
   let tmp11Result = null;
   if (!useChatLayoutDefault().isChatLockedOpen) {
     const obj6 = { children: null };
-    const obj7 = { style: tmp5.emptyImage, source: tmp7(15064), resizeMode: "cover" };
-    const items2 = [tmp9(React4, obj7)];
+    const obj7 = { style: tmp5.emptyImage, source: _modDef15064, resizeMode: "cover" };
+    const items2 = [timestampProducer(React4, obj7)];
     const obj8 = { style: tmp5.gradient, end: null, start: null, colors: null };
     ({ END: obj12.end, START: obj12.start } = VerticalGradient);
     const items3 = ["rgba(0, 0, 0, 0)", token];
     obj8.colors = items3;
-    items2[1] = tmp9(tmp7(4987), obj8);
+    items2[1] = timestampProducer(LinearGradientDefault, obj8);
     obj6.children = items2;
-    tmp11Result = tmp11(React6, obj6);
+    tmp11Result = React5(React6, obj6);
   }
   items1[1] = tmp11Result;
   obj1.children = items1;

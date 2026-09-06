@@ -1,6 +1,9 @@
 // discord_app/modules/main_tabs_v2/native/channel/ChannelActions.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import ComponentDispatchUtils from "../../../../utils/ComponentDispatchUtils.tsx";
 import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
+import RootNavigationRef from "../../RootNavigationRef.native.tsx";
+import ChatInputUtils from "../../../../utils/native/ChatInputUtils.tsx";
 import PrivateChannelCallUtils from "../../../../utils/native/PrivateChannelCallUtils.tsx";
 import VoiceNormalIcon from "../../../../design/components/Icon/native/redesign/generated/VoiceNormalIcon.tsx";
 import VibegrationsUtils from "../../../vibegrations/lib/VibegrationsUtils.tsx";
@@ -8,6 +11,8 @@ import PhoneCallIcon from "../../../../design/components/Icon/native/redesign/ge
 import PhoneHangUpIcon from "../../../../design/components/Icon/native/redesign/generated/PhoneHangUpIcon.tsx";
 import ForumActionCreatorsDefault from "../../../forums/ForumActionCreators.tsx";
 import showThreadBrowserModalDefault from "../../../threads/native/showThreadBrowserModal.tsx";
+import SwipeToMemberListUtils from "../sidebar/member_list/SwipeToMemberListUtils.tsx";
+import useSearchContext from "../../../search/native/hooks/useSearchContext.tsx";
 import GuildDirectorySearchModalActionCreatorsDefault from "../../../directory_channels/native/components/GuildDirectorySearchModalActionCreators.tsx";
 import search_tracking_TrackingDefault from "../../../search/native/tracking/Tracking.tsx";
 import IconActionButtonDefault from "../shared_components/IconActionButton.tsx";
@@ -183,8 +188,8 @@ function ChannelActionButtons(channel) {
       obj3.accessibilityLabel = intl5.string(tmp5(tmp3[27]).t["5h0QOP"]);
       items1.push(obj3);
     } else {
-      if (tmp24.GUILD_FORUM !== type) {
-        if (tmp24.GUILD_MEDIA !== type) {
+      if (constants.GUILD_FORUM !== type) {
+        if (constants.GUILD_MEDIA !== type) {
           if (null != conversationsHeaderButton) {
             items1.push(conversationsHeaderButton);
           }
@@ -196,14 +201,14 @@ function ChannelActionButtons(channel) {
               closure_8(channel.id, true, "initial");
               let obj1 = PlatformUtils;
               if (obj1.isIOS()) {
-                let tmp2Result = tmp2(4425);
+                let tmp2Result = ChatInputUtils;
                 const chatInputRef = tmp2Result.getChatInputRef(obj.id, screenIndex);
                 if (chatInputRef != null) {
                   chatInputRef.blur();
                 }
               }
               const guildId = obj.getGuildId();
-              tmp2Result = tmp2(12299);
+              tmp2Result = useSearchContext;
               const channelDetailsSearchContext = tmp2Result.getChannelDetailsSearchContext(
                 obj.id,
                 guildId,
@@ -213,20 +218,22 @@ function ChannelActionButtons(channel) {
               obj = { searchContext: channelDetailsSearchContext, searchLocation: constants.CHANNEL_HEADER };
               search_tracking_TrackingDefault.trackSearchOpened(obj);
               if (tmp2Result1.isSwipeToMemberListEnabled()) {
-                const ComponentDispatch = tmp2(1109).ComponentDispatch;
+                const ComponentDispatch = ComponentDispatchUtils.ComponentDispatch;
                 obj = { source: "channel-header-search", channelId: null, screenIndex: null };
                 obj.channelId = obj.id;
                 obj.screenIndex = screenIndex;
                 ComponentDispatch.dispatch(constants3.SHOW_CHANNEL_DETAILS, obj);
               } else {
-                const rootNavigationRef = tmp2(4418).getRootNavigationRef();
+                const rootNavigationRef = RootNavigationRef.getRootNavigationRef();
                 if (null != rootNavigationRef) {
                   if (rootNavigationRef.isReady()) {
                     obj1 = { channelId: obj.id, search: true, source: "channel-header-search" };
                     rootNavigationRef.navigate("sidebar", obj1);
                   }
                 }
+                const tmp2Result2 = RootNavigationRef;
               }
+              tmp2Result1 = SwipeToMemberListUtils;
             },
             accessibilityLabel: null,
           };
@@ -458,16 +465,22 @@ export default function ChannelActions(channelId) {
   obj = { style: containerStyle, children: null };
   if (obj1.useHasForumSearchQuery(channelId)) {
     obj = { channelId };
-    let tmp4Result = tmp4(channelId(13257).ForumChannelCloseSearchButton, obj);
+    let tmp4Result = jsx(channelId(13257).ForumChannelCloseSearchButton, { channelId });
   } else {
     if (!isDM) {
       if (!isMultiUserDM) {
         obj1 = { channelId, screenIndex, showCreateThread };
-        tmp4Result = tmp4(WrappedChannelNavButtons, obj1);
+        tmp4Result = (
+          <WrappedChannelNavButtons
+            channelId={channelId}
+            screenIndex={screenIndex}
+            showCreateThread={showCreateThread}
+          />
+        );
       }
     }
     const obj2 = { channelId, screenIndex };
-    tmp4Result = tmp4(PrivateChannelButtonsDefault, obj2);
+    tmp4Result = jsx(PrivateChannelButtonsDefault, { channelId, screenIndex });
   }
   obj.children = tmp4Result;
   return <View style={containerStyle}>{null}</View>;

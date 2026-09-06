@@ -2,9 +2,9 @@
 import wrappers from "../../../discord_common/js/packages/protos/google/protobuf/wrappers.tsx";
 import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
 import UserSettings from "../user_settings/UserSettings.tsx";
-import AlertActionCreatorsDefault from "../../actions/AlertActionCreators.tsx";
 import SelfPresenceStore from "../../stores/SelfPresenceStore.tsx";
 
+const AlertActionCreatorsDefault = tmp5(4904);
 require = fn;
 const constants = fn(4212).NotificationSettingsUpdateType;
 const Constants = fn(1074);

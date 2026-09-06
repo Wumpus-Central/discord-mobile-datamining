@@ -44,4 +44,5 @@ export const DeprecatedLayoutAnimationKeyboard = function DeprecatedLayoutAnimat
   if (!useReducedMotion) {
     LayoutAnimation.configureNext(obj);
   }
+  const obj1 = { duration: keyboardDuration, type: LayoutAnimation.Types.keyboard };
 };

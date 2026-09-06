@@ -91,7 +91,7 @@ export default function RolePill(role) {
     }
     obj2.guildId = guildId;
     obj2.roleColor = color;
-    let tmp10Result = tmp10(combined(7204), obj2);
+    let tmp10Result = closure_6(combined(7204), obj2);
     const tmp15 = combined(7204);
   } else {
     const items = [tmp9.bubble];
@@ -104,13 +104,13 @@ export default function RolePill(role) {
     const obj5 = { style: null };
     items[1] = obj4;
     obj5.style = items;
-    tmp10Result = tmp10(tmp12, obj5);
+    tmp10Result = closure_6(View, obj5);
   }
   const items1 = [tmp10Result, ,];
   tmp10Result = null;
   if (null != roleIcon) {
     const obj6 = { style: tmp9.roleIcon, children: roleIcon };
-    tmp10Result = tmp10(tmp12, obj6);
+    tmp10Result = closure_6(View, obj6);
   }
   items1[1] = tmp10Result;
   items1[2] = closure_6(role(4556).Text, {

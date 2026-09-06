@@ -13,7 +13,7 @@ export const showCaptchaTestModal = function showCaptchaTestModal() {
     asyncGeneratorStep(async () => {
       closure_0 = tmp2;
       await require("asyncRequireImpl")(paths[4], paths.paths);
-      closure_128_0 = arg1.default;
+      closure_128_0 = value.default;
       return () => closure_2_4(closure_1_0, {});
     }),
   );

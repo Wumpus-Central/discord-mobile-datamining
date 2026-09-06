@@ -57,31 +57,31 @@ export const getVideoOrientation = function getVideoOrientation(assets) {
 export const getVideoQuestProgressRemainingAccessibilityLabel =
   function getVideoQuestProgressRemainingAccessibilityLabel(questTaskDetails, arg1) {
     if (arg1) {
-      const intl5 = tmp(1114).intl;
-      return intl5.string(tmp(1114).t["ij5E/5"]);
+      const intl5 = util.intl;
+      return intl5.string(util.t["ij5E/5"]);
     } else {
-      const remainingTaskTime = tmp(7724).getRemainingTaskTime(questTaskDetails);
+      const remainingTaskTime = QuestTaskUtils.getRemainingTaskTime(questTaskDetails);
       ({ minutes, seconds } = remainingTaskTime);
       if (minutes > 0) {
         if (seconds > 0) {
-          const intl3 = tmp(1114).intl;
+          const intl3 = util.intl;
           const time = { minutes, seconds };
-          let formatToPlainStringResult = intl3.formatToPlainString(tmp(1114).t["lW/66D"], time);
+          let formatToPlainStringResult = intl3.formatToPlainString(util.t["lW/66D"], time);
         }
-        const intl4 = tmp(1114).intl;
+        const intl4 = util.intl;
         let obj = { remainingTime: formatToPlainStringResult };
-        return intl4.formatToPlainString(tmp(1114).t.nzYZrt, obj);
+        return intl4.formatToPlainString(util.t.nzYZrt, obj);
       }
       if (minutes > 0) {
-        const intl2 = tmp(1114).intl;
+        const intl2 = util.intl;
         obj = { count: minutes };
-        formatToPlainStringResult = intl2.formatToPlainString(tmp(1114).t["SxnF/O"], obj);
+        formatToPlainStringResult = intl2.formatToPlainString(util.t["SxnF/O"], obj);
       } else {
-        const intl = tmp(1114).intl;
+        const intl = util.intl;
         const obj1 = { count: seconds };
-        formatToPlainStringResult = intl.formatToPlainString(tmp(1114).t["0BZpdi"], obj1);
+        formatToPlainStringResult = intl.formatToPlainString(util.t["0BZpdi"], obj1);
       }
-      const tmpResult = tmp(7724);
+      const tmpResult = QuestTaskUtils;
     }
   };
 export const formatVideoProgressRatio = function formatVideoProgressRatio(maxVideoProgressSeconds, current) {
@@ -153,10 +153,9 @@ export const handleVideoQuestModalClose = function handleVideoQuestModalClose(ar
         isQuestExpiredResult = null != completedAt1;
       }
       if (!isQuestExpiredResult) {
-        tmp6(11276).updateVideoProgress(quest.id, videoProgress.maxTimestampSec);
-        const tmp6Result = tmp6(11276);
+        QuestActionCreators.updateVideoProgress(quest.id, videoProgress.maxTimestampSec);
+        const tmp6Result = QuestActionCreators;
       }
-      tmp6 = require;
     }
     ({ maxTimestampSec, duration } = videoProgress);
     let num2 = 0;

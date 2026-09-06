@@ -75,13 +75,12 @@ const aVErrorStore = new AVErrorStore(DispatcherDefault, {
         while (tmp24 !== undefined) {
           let tmp30 = _slicedToArray(tmp27, 2);
           [tmp31, tmp32] = tmp30;
-          let tmp33 = tmp32;
           let items = map1.get(tmp32.type);
           if (items == null) {
             items = [];
           }
           let arr = items.push(tmp31);
-          let result = map1.set(tmp33.type, items);
+          let result = map1.set(tmp32.type, items);
           continue;
         }
       }

@@ -103,24 +103,22 @@ export const getClipEventsTimeline = function getClipEventsTimeline(clip) {
         const _Map2 = Map;
         new Map();
         for (const item10061 of sorted) {
-          let tmp16 = item10061;
           if (item10061.signal.type !== constants.SPEAKING) {
             continue;
           } else {
-            if (tmp16.timestamp >= sum1) {
+            if (item10061.timestamp >= sum1) {
               obj5.return();
               break;
             } else {
               let result = map.set(
-                tmp16.signal.userId,
-                (tmp16.signal.speakingFlags & SpeakingFlags.VOICE) === SpeakingFlags.VOICE,
+                item10061.signal.userId,
+                (item10061.signal.speakingFlags & SpeakingFlags.VOICE) === SpeakingFlags.VOICE,
               );
             }
             break;
           }
-          let tmp24 = __exception;
           tmp10[Symbol.iterator]().return();
-          throw tmp24;
+          throw __exception;
         }
         const tmp10 = map;
       }

@@ -22,8 +22,8 @@ import Platforms from "../../lib/Platforms.tsx";
 
 require = fn;
 function upsertAccount(accountId, accessToken) {
-  if (accountId in closure_40) {
-    tmp[accountId].accessToken = accessToken;
+  if (accountId in dependencyMap) {
+    dependencyMap[accountId].accessToken = accessToken;
     const _HermesInternal2 = HermesInternal;
     logger.info("Updated account access token: " + accountId);
   } else if (typeof SpotifySocket === "function") {
@@ -81,7 +81,7 @@ function upsertAccount(accountId, accessToken) {
     const tmp14 = new BackoffDefault(undefined, MINUTE);
     obj.backoff = tmp14;
     obj.connect();
-    tmp[accountId] = obj;
+    dependencyMap[accountId] = obj;
     const _HermesInternal = HermesInternal;
     logger.info("Added account: " + accountId);
   } else {
@@ -283,21 +283,20 @@ function handleUserConnectionsUpdate() {
     }
     let flag = false;
     for (const item10030 of found) {
-      let tmp10 = item10030;
       let tmp12 = null != _null;
       if (tmp12) {
-        tmp12 = _null.account.id === tmp10.id;
+        tmp12 = _null.account.id === item10030.id;
       }
       if (tmp12) {
-        _null.account = tmp10;
+        _null.account = item10030;
         flag = true;
       }
-      if (!keys.includes(tmp10.id)) {
-        if (null == tmp10.accessToken) {
+      if (!keys.includes(item10030.id)) {
+        if (null == item10030.accessToken) {
           let obj2 = SpotifyActionCreators;
-          let accessToken = obj2.getAccessToken(tmp10.id);
+          let accessToken = obj2.getAccessToken(item10030.id);
         } else {
-          let tmp21 = upsertAccount(tmp10.id, tmp10.accessToken);
+          let tmp21 = upsertAccount(item10030.id, item10030.accessToken);
         }
       }
       continue;
@@ -357,7 +356,7 @@ function updatePlayerState(accountId, arg1, device) {
       }
       let obj = { id, name: null, duration: null, type: null, album: null, artists: null, isLocal: null };
       ({ name: obj2.name, duration_ms: obj2.duration } = item);
-      obj.type = tmp.TRACK;
+      obj.type = constants2.TRACK;
       const album2 = item.album;
       let str3;
       if (album2 != null) {
@@ -388,7 +387,7 @@ function updatePlayerState(accountId, arg1, device) {
         type = album5.type;
       }
       if (type == null) {
-        type = tmp.ALBUM;
+        type = constants2.ALBUM;
       }
       obj.type = type;
       obj.album = obj;
@@ -429,7 +428,7 @@ function updatePlayerState(accountId, arg1, device) {
           context2 = context2.context;
           let resolved = Promise.resolve(context2);
         }
-        if (context.type === tmp12.ALBUM) {
+        if (context.type === constants2.ALBUM) {
           resolved = Promise.resolve(context);
         } else {
           const SpotifyAPI = require("SpotifyActionCreators").SpotifyAPI;
@@ -448,7 +447,6 @@ function updatePlayerState(accountId, arg1, device) {
           const nextPromise = value.then((body) => body.body);
         }
       }
-      tmp12 = constants2;
     }
     const resolved1 = Promise.resolve(undefined);
     return resolved1.then((result) => {
@@ -476,7 +474,7 @@ function updatePlayerState(accountId, arg1, device) {
       };
       let num = 0;
       if (null != obj1) {
-        num = tmp3.volume_percent;
+        num = obj1.volume_percent;
       }
       obj.volumePercent = num;
       obj.isPlaying = isPlaying;
@@ -491,7 +489,7 @@ function updatePlayerState(accountId, arg1, device) {
     if (item.type === constants2.EPISODE) {
       obj3 = { id: null, name: null, duration: null, type: null, album: null, artists: null, isLocal: false };
       ({ id: obj6.id, name: obj6.name, duration_ms: obj6.duration } = item);
-      obj3.type = tmp22.EPISODE;
+      obj3.type = constants2.EPISODE;
       const show3 = item.show;
       let str;
       if (show3 != null) {
@@ -522,7 +520,7 @@ function updatePlayerState(accountId, arg1, device) {
         type1 = album.type;
       }
       if (type1 == null) {
-        type1 = tmp22.SHOW;
+        type1 = constants2.SHOW;
       }
       obj.type = type1;
       obj3.album = obj;
@@ -809,6 +807,7 @@ prototype["connect"] = function connect() {
         socket3.onclose = bindResult;
       });
   }
+  tmp = this.connected || self._requestedConnect;
 };
 prototype["disconnect"] = function disconnect() {
   this._requestedDisconnect = true;
@@ -852,14 +851,13 @@ prototype["handleMessage"] = function handleMessage(data) {
       if (typeof uri === "string") {
         if (uri.startsWith(c22)) {
           const _decodeURIComponent = decodeURIComponent;
-          self.connectionId = decodeURIComponent(uri.split(tmp15)[1]);
+          self.connectionId = decodeURIComponent(uri.split(c22)[1]);
           const result = SpotifyActionCreators.subscribePlayerStateNotifications(
             self.accountId,
             self.accessToken,
             self.connectionId,
           );
         }
-        tmp15 = c22;
       }
       const _Array = Array;
       if (Array.isArray(payloads)) {
@@ -1128,8 +1126,8 @@ prototype2["getTrack"] = function getTrack() {
   }
   return track;
 };
-prototype2["getPlayerState"] = function getPlayerState(arg0) {
-  return dependencyMap3[arg0];
+prototype2["getPlayerState"] = function getPlayerState(accountId) {
+  return dependencyMap3[accountId];
 };
 prototype2["shouldShowActivity"] = function shouldShowActivity() {
   let showActivity = null != _null;
@@ -1319,10 +1317,10 @@ const spotifyStore = new SpotifyStore(DispatcherDefault, {
         tmp22 = !isPlaying;
       }
       if (!tmp22) {
-        tmp59[accountId] = tmp21;
+        dependencyMap3[accountId] = tmp21;
       }
       let obj2 = account(12);
-      const values = obj2.values(tmp59);
+      const values = obj2.values(dependencyMap3);
       closure_3 = values.find((item) => null != item);
       id = AuthenticationStore.getId();
       if (id === AuthenticationStore.getId()) {
@@ -1357,9 +1355,8 @@ const spotifyStore = new SpotifyStore(DispatcherDefault, {
         if (null == _null2) {
           if (timeout4.isStarted()) {
             logger.info("Listen along stop cancelled as playback of track resumed");
-            obj4.stop();
+            timeout4.stop();
           }
-          obj4 = timeout4;
         } else {
           const _HermesInternal = HermesInternal;
           logger.info(

@@ -56,14 +56,14 @@ export default function createChannelStream(forceRender) {
       if (require.isForumPost()) {
         let tmp2 = tmp12;
         if (tmp12) {
-          tmp2 = message.id !== SnowflakeUtilsDefault.castChannelIdAsMessageId(tmp10.id);
+          tmp2 = message.id !== SnowflakeUtilsDefault.castChannelIdAsMessageId(require.id);
         }
         let tmp = tmp2;
       } else {
         tmp = tmp12;
       }
       if (!tmp) {
-        if (isNewMessageGroupDefault(tmp10, first[first.length - 1], message)) {
+        if (isNewMessageGroupDefault(require, first[first.length - 1], message)) {
           items = [message];
           arr = arr.unshift(items);
         } else {
@@ -101,7 +101,7 @@ export default function createChannelStream(forceRender) {
     continue;
   }
   items1 = [];
-  let item = messages.forEach((id) => {
+  const item = messages.forEach((id) => {
     const result = tryInjectMessage.tryCreateInjectedMessage(id, closure_1_0);
     let tmp2 = null != result;
     if (tmp2) {
@@ -165,24 +165,20 @@ export default function createChannelStream(forceRender) {
         const nextResult = iter.next();
         while (iter !== undefined) {
           message = nextResult;
-          let tmp4 = constants;
-          let tmp5 = determineChangeType(nextResult) !== constants.NOOP && changeType.changeType === tmp4.NOOP;
+          let tmp5 = determineChangeType(nextResult) !== constants.NOOP && changeType.changeType === constants.NOOP;
           if (tmp5) {
-            changeType.changeType = tmp4.UPDATE;
+            changeType.changeType = constants.UPDATE;
           }
           let content = changeType.content;
           message = {
-            rowType: null,
-            changeType: null,
-            roleStyle: null,
+            rowType: constants2.MESSAGE,
+            changeType: constants.NOOP,
+            roleStyle,
             message: null,
             isSystemDM: null,
             isFirst: null,
             canAddNewReactions: null,
           };
-          message.rowType = constants2.MESSAGE;
-          message.changeType = tmp4.NOOP;
-          message.roleStyle = roleStyle;
           message.message = message;
           let isSystemDMResult = require.isSystemDM();
           if (isSystemDMResult) {
@@ -279,7 +275,6 @@ export default function createChannelStream(forceRender) {
           pushFeedback = pushFeedback.getPushFeedback(obj5.channel_id, obj5.id);
           let obj7 = require("canReplyToMessage");
           let canReplyToMessageResult = obj7.canReplyToMessage(obj6, obj5);
-          let tmp52 = messages;
           let tmp55 = messages(id[11])(obj5, closure_4);
           if (tmp55) {
             let obj8 = require("ThreadHooks");
@@ -291,20 +286,24 @@ export default function createChannelStream(forceRender) {
           } else {
             result3 = determineChangeType(obj5, true);
           }
-          let tmp67 = closure_6;
-          let tmp68 = null != closure_6;
+          let tmp68 = null != summary;
           if (tmp68) {
-            tmp68 = tmp67.endId === obj5.id;
+            tmp68 = summary.endId === obj5.id;
           }
           if (tmp68) {
-            tmp68 = tmp67.count > 1;
+            tmp68 = summary.count > 1;
           }
           if (tmp68) {
-            obj6 = { rowType: null, changeType: null, roleStyle: null, summary: null, isBeforeContent: false };
-            obj6.rowType = forceRender.SUMMARY;
+            obj6 = {
+              rowType: forceRender.SUMMARY,
+              changeType: null,
+              roleStyle: null,
+              summary: null,
+              isBeforeContent: false,
+            };
             obj6.changeType = determineChangeType(obj5);
             obj6.roleStyle = roleStyle;
-            obj6.summary = tmp67;
+            obj6.summary = summary;
             let arr2 = items.push(obj6);
           }
           arr1 = items;
@@ -326,7 +325,6 @@ export default function createChannelStream(forceRender) {
             showContentInventoryEntryFallbackEmbed: null,
           };
           obj7.message = obj5;
-          let tmp80 = roleStyle;
           let isSystemDMResult = obj6.isSystemDM();
           if (isSystemDMResult) {
             isSystemDMResult = obj5.isSystemDM();
@@ -352,24 +350,23 @@ export default function createChannelStream(forceRender) {
           obj7.canAddNewReactions = canAddNewReactions;
           let isForumPostResult = obj6.isForumPost();
           if (isForumPostResult) {
-            let tmp52Result = tmp52(id[5]);
+            let tmp52Result = messages(id[5]);
             isForumPostResult = obj5.id === tmp52Result.castChannelIdAsMessageId(obj6.id);
           }
           obj7.alwaysShowAddReaction = isForumPostResult;
-          let tmp99 = renderContentOnly;
           obj7.renderContentOnly = renderContentOnly;
           let pushType;
           if (pushFeedback != null) {
             pushType = pushFeedback.pushType;
           }
           obj7.pushFeedbackType = pushType;
-          let tmp103 = !tmp99;
-          if (!tmp99) {
+          let tmp103 = !renderContentOnly;
+          if (!renderContentOnly) {
             tmp103 = canReplyToMessageResult;
           }
           obj7.canReply = tmp103;
-          let tmp105 = !tmp99;
-          if (!tmp99) {
+          let tmp105 = !renderContentOnly;
+          if (!renderContentOnly) {
             tmp105 = tmp55;
           }
           obj7.canEdit = tmp105;
@@ -382,19 +379,24 @@ export default function createChannelStream(forceRender) {
           }
           obj7.showContentInventoryEntryFallbackEmbed = hasItem;
           let arr3 = items.push(obj7);
-          let tmp111 = null != tmp67;
+          let tmp111 = null != summary;
           if (tmp111) {
-            tmp111 = tmp67.startId === obj5.id;
+            tmp111 = summary.startId === obj5.id;
           }
           if (tmp111) {
-            tmp111 = tmp67.count > 1;
+            tmp111 = summary.count > 1;
           }
           if (tmp111) {
-            obj8 = { rowType: null, changeType: null, roleStyle: null, summary: null, isBeforeContent: true };
-            obj8.rowType = forceRender.SUMMARY;
+            obj8 = {
+              rowType: forceRender.SUMMARY,
+              changeType: null,
+              roleStyle: null,
+              summary: null,
+              isBeforeContent: true,
+            };
             obj8.changeType = determineChangeType(obj5);
-            obj8.roleStyle = tmp80;
-            obj8.summary = tmp67;
+            obj8.roleStyle = roleStyle;
+            obj8.summary = summary;
             let arr4 = arr1.push(obj8);
           }
           continue;

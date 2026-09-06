@@ -86,11 +86,11 @@ function NotificationSettingsPresets(preset) {
     const obj5 = { variant: "text-sm/semibold", children: null };
     const intl4 = tmp2(tmp3[3]).intl;
     obj5.children = intl4.string(tmp2(tmp3[3]).t["32yow9"]);
-    const items2 = [tmp4(tmp2(tmp3[11]).Text, obj5)];
+    const items2 = [closure_4(tmp2(tmp3[11]).Text, obj5)];
     const obj6 = { variant: "text-xs/medium", children: null };
     const intl5 = tmp2(tmp3[3]).intl;
     obj6.children = intl5.string(tmp2(tmp3[3]).t.l3doVX);
-    items2[1] = tmp4(tmp2(tmp3[11]).Text, obj6);
+    items2[1] = closure_4(tmp2(tmp3[11]).Text, obj6);
     obj4.children = items2;
     const items3 = [closure_5(View, obj4)];
     const obj7 = { variant: "secondary", text: null, onPress: null };
@@ -99,12 +99,12 @@ function NotificationSettingsPresets(preset) {
     obj7.onPress = function onPress() {
       preset.updatePreset(notificationSettingsPresetUtils.Presets.MENTIONS);
     };
-    items3[1] = tmp4(tmp2(tmp3[12]).Button, obj7);
+    items3[1] = closure_4(tmp2(tmp3[12]).Button, obj7);
     obj3.children = items3;
     let tmp4Result = closure_5(View, obj3);
   } else {
     const obj8 = { variant: "experimental_Large", state: segmentedControlState };
-    tmp4Result = tmp4(tmp2(tmp3[13]).SegmentedControl, obj8);
+    tmp4Result = closure_4(tmp2(tmp3[13]).SegmentedControl, obj8);
   }
   return tmp4Result;
 }

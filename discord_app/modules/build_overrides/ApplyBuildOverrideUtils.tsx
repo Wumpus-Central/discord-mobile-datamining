@@ -2,11 +2,11 @@
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
 
-let closure_6 = async function _applyStaffBuildOverride(overrides) {
+let closure_6 = async function _applyStaffBuildOverride() {
   c6 = 0;
   c7 = 0;
   c5 = 0;
-  return (async (arg0, value) => {
+  return (async (arg0) => {
     if (c7 === 2) {
       c7 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -104,11 +104,11 @@ let closure_6 = async function _applyStaffBuildOverride(overrides) {
     }
   })();
 };
-let closure_7 = async function _applyPublicBuildOverride(payload) {
+let closure_7 = async function _applyPublicBuildOverride() {
   c5 = 0;
   c6 = 0;
   c4 = 0;
-  return (async (arg0, value) => {
+  return (async (arg0) => {
     if (c6 === 2) {
       c6 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -201,16 +201,13 @@ let closure_7 = async function _applyPublicBuildOverride(payload) {
 let closure_8 = async function _clearBuildOverride() {
   closure_1 = tmp2;
   const HTTP = React(1272).HTTP;
-  closure_128_0 = await HTTP.del({
-    url: closure_2_0(1362).getAPIEndpoint(closure_2_5),
-    oldFormErrors: true,
-    rejectWithError: false,
-  });
+  await HTTP.del({ url: closure_2_0(1362).getAPIEndpoint(closure_2_5), oldFormErrors: true, rejectWithError: false });
+  closure_128_0 = value;
   await closure_129_2(closure_128_0);
   return closure_128_0;
 };
 let c5 = "/__development/build_overrides";
-let closure_0 = asyncGeneratorStep(async (arg0, value) => {
+let closure_0 = asyncGeneratorStep(async (arg0) => {
   if (dependencyMap === 2) {
     dependencyMap = 3;
     throw new TypeError("Generator functions may not be called on executing generators");

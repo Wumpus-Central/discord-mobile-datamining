@@ -234,7 +234,7 @@ export default function DisplayNameStylesGummyColorPickerSheet(selectedColors) {
         accessibilityRole: "button",
         accessibilityState: { selected: tmp },
         accessibilityLabel: accessibilityLabel.a11yLabel,
-        children: tmp2(onSelectColors(closure_2[21]), { colors }),
+        children: closure_9(onSelectColors(closure_2[21]), { colors }),
       };
       items[1] = swatchSelected;
       obj.children = closure_9(first1, obj);

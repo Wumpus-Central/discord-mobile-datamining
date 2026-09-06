@@ -91,10 +91,23 @@ export default noop.memo(function QuestDockRewardTile(assetUrl) {
         tmp14 = stateFromStores;
       }
       obj.paused = tmp14;
-      let tmp11Result = tmp11(assetUrl(tmp4[10]).VideoComponent, obj);
+      let tmp11Result = jsx(tmp3(tmp4[10]).VideoComponent, {
+        style: tmp6.video,
+        source: null,
+        disableFocus: true,
+        preventsDisplaySleepDuringVideoPlayback: false,
+        importantForAccessibility: "no-hide-descendants",
+        poster: null,
+        resizeMode: "cover",
+        paused: null,
+        muted: true,
+      });
     }
     obj.children = tmp11Result;
-    return tmp11(tmp12, obj);
+    return <tmp12 {...obj} />;
   }
-  tmp11Result = tmp11(isAnimatedAsset(tmp4[11]), { source: { uri: memo }, style: tmp6.image });
+  tmp11Result = jsx(isAnimatedAsset(tmp4[11]), { source: { uri: memo }, style: tmp6.image });
+  const obj2 = { source: { uri: memo }, style: tmp6.image };
+  tmp3 = assetUrl;
+  const tmp7 = width(noop.useState("active" === currentState.currentState), 2);
 });

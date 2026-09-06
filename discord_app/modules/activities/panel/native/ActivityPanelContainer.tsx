@@ -1,5 +1,6 @@
 // discord_app/modules/activities/panel/native/ActivityPanelContainer.tsx
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
+import ChannelTypes from "../../../../../discord_common/js/shared/shared-constants/ChannelTypes.tsx";
 import embeddedActivityLocationUtils from "../../utils/embeddedActivityLocationUtils.tsx";
 import ActivityPanelControllerDefault from "ActivityPanelController.tsx";
 import ActivityPanelUIDefault from "ActivityPanelUI.tsx";
@@ -33,7 +34,7 @@ export default noop.memo(function ActivityPanelContainer() {
           if (channel != null) {
             type = channel.type;
           }
-          let tmp4 = type === tmp8(tmp9[7]).ChannelTypes.GUILD_TEXT;
+          let tmp4 = type === ChannelTypes.ChannelTypes.GUILD_TEXT;
           if (!tmp4) {
             let isPrivateResult;
             if (channel != null) {
@@ -47,8 +48,6 @@ export default noop.memo(function ActivityPanelContainer() {
           }
           return tmp4;
         }
-        tmp8 = require;
-        tmp9 = dependencyMap;
       }
     }, [])
   ) {

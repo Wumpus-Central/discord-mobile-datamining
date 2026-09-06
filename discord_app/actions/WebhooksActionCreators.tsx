@@ -116,11 +116,11 @@ export default {
       obj.dispatch(obj);
     });
   },
-  update(guildId, arg1, body) {
+  update(guildId, webhookId, body) {
     _require = guildId;
     const HTTP = require("HTTPUtils").HTTP;
     const request = {
-      url: closure_4.WEBHOOK(arg1),
+      url: closure_4.WEBHOOK(webhookId),
       body,
       oldFormErrors: true,
       rejectWithError: require("HTTPUtils").rejectWithMigratedError(),

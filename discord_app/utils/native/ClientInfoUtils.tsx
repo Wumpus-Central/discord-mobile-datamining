@@ -14,9 +14,8 @@ export const getConstants = function getConstants() {
       const error = new Error("Turbo module RTNClientInfoManager is undefined for Android");
       throw error;
     } else {
-      return tmp3(1344).getConstants();
+      return NativeClientInfoModuleDefault.getConstants();
     }
-    tmp3 = importDefault;
   } else {
     const InfoDictionaryManager = NativeModules.InfoDictionaryManager;
     return InfoDictionaryManager.getConstants();

@@ -69,13 +69,13 @@ export const useSearchSuggestionsGesture = function useSearchSuggestionsGesture(
             tmp7 =
               rect.left < first.absoluteX &&
               first.absoluteX < rect.right &&
-              rect.top < first.absoluteY + tmp4 &&
-              first.absoluteY + tmp4 < rect.bottom;
+              rect.top < first.absoluteY + closure_1_4 &&
+              first.absoluteY + closure_1_4 < rect.bottom;
             const tmp8 =
               rect.left < first.absoluteX &&
               first.absoluteX < rect.right &&
-              rect.top < first.absoluteY + tmp4 &&
-              first.absoluteY + tmp4 < rect.bottom;
+              rect.top < first.absoluteY + closure_1_4 &&
+              first.absoluteY + closure_1_4 < rect.bottom;
           }
           tmp2 = tmp7;
         } else {

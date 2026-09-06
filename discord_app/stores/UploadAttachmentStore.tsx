@@ -186,6 +186,7 @@ const uploadAttachmentStore = new UploadAttachmentStore(DispatcherDefault, {
     }
     const result = value1.set(draftType, items);
     const result1 = obj.set(channelId, value1);
+    const arr2 = require("../../_runtime/metro/00012__.js");
   },
   UPLOAD_ATTACHMENT_UPDATE_FILE: function handleUpdateFile(arg0) {
     ({

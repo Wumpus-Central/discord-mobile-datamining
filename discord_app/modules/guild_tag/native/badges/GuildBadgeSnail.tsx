@@ -79,7 +79,7 @@ export const GuildBadgeSnail = function GuildBadgeSnail(width) {
     tmp9 = secondaryColorsTransformed[1];
   }
   if (tmp9 == null) {
-    tmp9 = tmp4[1];
+    tmp9 = secondaryBaseColors[1];
   }
   items[5] = React2(inlineStyles.Path, {
     d: "M5 15h-1v-1h1v1ZM4 14h-1v-1h1v1ZM3 13H2v-1h1v1ZM3 5h2v1h1v2H2v4H1V6h1V2h1v3Z",
@@ -90,7 +90,7 @@ export const GuildBadgeSnail = function GuildBadgeSnail(width) {
     first = secondaryColorsTransformed[0];
   }
   if (first == null) {
-    first = tmp4[0];
+    first = secondaryBaseColors[0];
   }
   items[6] = React2(inlineStyles.Path, {
     d: "M5 13h1v1h-1v-1ZM7 15h-2v-1h2v1ZM15 14v1h-2v-1h2ZM3 9h1v1h1v4h-1v-1h-1v-1H2V8h1v1ZM5 4h-1v-1h1v1ZM6 3h-1V2h1v1ZM7 2h-1V1h1v1Z",

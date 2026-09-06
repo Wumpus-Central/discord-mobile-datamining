@@ -80,7 +80,7 @@ function StageChannelAgeVerificationNoticeWrapper(onConfirmPress) {
     tmp = StageChannelAgeVerificationNoticeContent;
     const obj2 = { onConfirmPress };
     obj1.children = hasOwnProperty(StageChannelAgeVerificationNoticeContent, obj2);
-    tmp8Result = tmp8(Text, obj1);
+    tmp8Result = hasOwnProperty(Text, obj1);
     items[1] = tmp8Result;
     obj.children = items;
     timestampProducer(View, obj);
@@ -150,7 +150,7 @@ export default function StageChannelAgeVerificationNoticeForEvent(divider) {
       let hasItem1 = arr.includes(obj4.BOTTOM);
       if (hasItem1) {
         const obj2 = { style: tmp.divider };
-        hasItem1 = tmp14(tmp15, obj2);
+        hasItem1 = hasOwnProperty(View, obj2);
       }
       const obj3 = { children: null };
       items[2] = hasItem1;

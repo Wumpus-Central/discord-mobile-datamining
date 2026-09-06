@@ -1,8 +1,15 @@
 // discord_app/components_native/channel_settings/ChannelSettingsIntegrationsOverview.tsx
 import initialize from "../../../discord_common/js/packages/flux/index.tsx";
 import nativeDefault from "../../../discord_common/js/packages/tokens/native.tsx";
+import util from "../../intl/index.native.tsx";
 import AvatarUtilsDefault from "../../utils/AvatarUtils.tsx";
 import useNavigation from "../../design/components/Navigator/native/useNavigation.native.tsx";
+import Stack_Stack from "../../design/components/Stack/native/Stack.native.tsx";
+import TableRow from "../../design/components/TableRow/native/TableRow.native.tsx";
+import TableRowGroup from "../../design/components/TableRow/native/TableRowGroup.native.tsx";
+import Form from "../../design/void/Form/native/index.tsx";
+import WebhookIcon from "../../design/components/Icon/native/redesign/generated/WebhookIcon.tsx";
+import ChannelsFollowedIcon from "../../design/components/Icon/native/redesign/generated/ChannelsFollowedIcon.tsx";
 import noop from "../../../_runtime/metro/00019__.js";
 import ChannelStore from "../../stores/ChannelStore.tsx";
 
@@ -70,32 +77,32 @@ export default function ConnectedChannelSettingsIntegrationsOverview(arg0) {
     obj.spacing = nativeDefault.space.PX_24;
     if (canManageWebhooks) {
       const obj2 = { label: null, subLabel: null, icon: null, arrow: true, onPress: null };
-      const intl = tmp(1114).intl;
-      obj2.label = intl.string(tmp(1114).t.jp25Id);
-      const intl2 = tmp(1114).intl;
-      obj2.subLabel = intl2.string(tmp(1114).t.mKIOkI);
-      obj2.icon = tmp6(tmp(16726).WebhookIcon, {});
+      const intl = util.intl;
+      obj2.label = intl.string(util.t.jp25Id);
+      const intl2 = util.intl;
+      obj2.subLabel = intl2.string(util.t.mKIOkI);
+      obj2.icon = closure_6(WebhookIcon.WebhookIcon, {});
       obj2.onPress = function onPress() {
         return closure_1.push(ChannelSettingsSections.WEBHOOKS);
       };
-      const items1 = [tmp6(tmp(5605).TableRow, obj2)];
+      const items1 = [closure_6(TableRow.TableRow, obj2)];
       let hasItem = set.has(stateFromStores.type);
       if (hasItem) {
         const obj3 = { label: null, subLabel: null, icon: null, arrow: true, onPress: null };
-        const intl3 = tmp(1114).intl;
-        obj3.label = intl3.string(tmp(1114).t.OrV60r);
-        const intl4 = tmp(1114).intl;
-        obj3.subLabel = intl4.string(tmp(1114).t.rQREJl);
-        obj3.icon = tmp6(tmp(16839).ChannelsFollowedIcon, {});
+        const intl3 = util.intl;
+        obj3.label = intl3.string(util.t.OrV60r);
+        const intl4 = util.intl;
+        obj3.subLabel = intl4.string(util.t.rQREJl);
+        obj3.icon = closure_6(ChannelsFollowedIcon.ChannelsFollowedIcon, {});
         obj3.onPress = function onPress() {
           return closure_1.push(ChannelSettingsSections.CHANNELS_FOLLOWED);
         };
-        hasItem = tmp6(tmp(5605).TableRow, obj3);
+        hasItem = closure_6(TableRow.TableRow, obj3);
       }
       const obj4 = { hasIcons: true, children: null };
       items1[1] = hasItem;
       obj4.children = items1;
-      canManageWebhooks = tmp7(tmp(5687).TableRowGroup, obj4);
+      canManageWebhooks = closure_7(TableRowGroup.TableRowGroup, obj4);
     }
     const items2 = [canManageWebhooks];
     if (canUnlinkLobby) {
@@ -103,12 +110,12 @@ export default function ConnectedChannelSettingsIntegrationsOverview(arg0) {
     }
     if (canUnlinkLobby) {
       const obj5 = { channel: stateFromStores };
-      canUnlinkLobby = tmp6(LinkedLobbyFormSection, obj5);
+      canUnlinkLobby = closure_6(LinkedLobbyFormSection, obj5);
     }
     items2[1] = canUnlinkLobby;
     obj.children = items2;
-    obj.children = closure_7(tmp(4973).Stack, obj);
-    tmp6Result = tmp6(tmp(8593).Form, obj);
+    obj.children = closure_7(Stack_Stack.Stack, obj);
+    tmp6Result = closure_6(Form.Form, obj);
   }
   return tmp6Result;
 }

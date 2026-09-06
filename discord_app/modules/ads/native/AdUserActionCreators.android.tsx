@@ -5,7 +5,7 @@ import NativeAdsModuleDefault from "../../../../discord_common/js/packages/rtn-c
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import AdUserStore from "AdUserStore.tsx";
 
-let closure_6 = async function _fetchAdUser(arg0, value) {
+let closure_6 = async function _fetchAdUser(arg0) {
   if (c6 === 2) {
     c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -38,14 +38,14 @@ let closure_6 = async function _fetchAdUser(arg0, value) {
           closure_129_3 = undefined;
           closure_129_4 = undefined;
           if (null != adUser.adUser) {
-            if (null != tmp81.adUser.advertisingId) {
+            if (null != adUser.adUser.advertisingId) {
               let obj8 = AnalyticsUtilsDefault;
               const obj1 = {
                 has_advertising_id: true,
-                android_advertising_id: tmp81.adUser.advertisingId,
+                android_advertising_id: adUser.adUser.advertisingId,
                 location: tmp80,
                 success: true,
-                last_fetched_timestamp: tmp81.lastFetchedAt,
+                last_fetched_timestamp: adUser.lastFetchedAt,
               };
               obj8.track(constants.AD_IDENTIFIER_FETCHED, obj1);
               c6 = 3;

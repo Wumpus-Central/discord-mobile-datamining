@@ -1,8 +1,10 @@
 // discord_app/modules/media_viewer/native/components/overlay/MediaModalOverlayHeader.tsx
+import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import ReanimatedRexportDefault from "../../../../reanimated/ReanimatedRexport.tsx";
 import timing from "../../../../../design/animation/reanimated/timing/timing.tsx";
 import MediaViewerOverlayButtonDefault from "MediaViewerOverlayButton.tsx";
 import useShouldHideMediaOptionsDefault from "../../../../media_channel/useShouldHideMediaOptions.tsx";
+import MediaViewerOverlayButtonFavoriteGIFDefault from "MediaViewerOverlayButtonFavoriteGIF.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -90,11 +92,11 @@ export const MediaModalOverlayHeader = function MediaModalOverlayHeader(arg0) {
     if (tmp10Result) {
       const obj8 = {
         source: contextIcon,
-        color: tmp6(576).unsafe_rawColors.PRIMARY_345,
+        color: nativeDefault.unsafe_rawColors.PRIMARY_345,
         size: tmp2(1178).Icon.Sizes.CUSTOM,
         style: tmp.contextIcon,
       };
-      tmp10Result = tmp10(tmp2(1178).Icon, obj8);
+      tmp10Result = closure_6(tmp2(1178).Icon, obj8);
     }
     const items2 = [tmp10Result];
     const obj9 = { style: tmp.navbarNameShrinkWrapper, children: null };
@@ -106,11 +108,11 @@ export const MediaModalOverlayHeader = function MediaModalOverlayHeader(arg0) {
       color: "text-overlay-light",
       children: contextName,
     };
-    obj9.children = tmp10(tmp2(4556).Text, obj10);
-    items2[1] = tmp10(tmp13, obj9);
+    obj9.children = closure_6(tmp2(4556).Text, obj10);
+    items2[1] = closure_6(closure_4, obj9);
     obj7.children = items2;
-    obj6.children = tmp12(tmp13, obj7);
-    tmp10Result = tmp10(tmp13, obj6);
+    obj6.children = closure_7(closure_4, obj7);
+    tmp10Result = closure_6(closure_4, obj6);
   }
   items1[1] = tmp10Result;
   obj4.children = items1;
@@ -119,7 +121,7 @@ export const MediaModalOverlayHeader = function MediaModalOverlayHeader(arg0) {
   if (!tmp7) {
     const obj11 = { style: tmp.navbarRight, children: null };
     const obj12 = { source };
-    const items4 = [tmp10(tmp6(12966), obj12)];
+    const items4 = [closure_6(MediaViewerOverlayButtonFavoriteGIFDefault, obj12)];
     let tmp10Result1 = null;
     if (!disableMediaOverlayButton) {
       const obj13 = {
@@ -131,9 +133,15 @@ export const MediaModalOverlayHeader = function MediaModalOverlayHeader(arg0) {
           obj.accessibilityLabel = intl.string(isModalOpen(1114).t.PdRCRg);
           const tmp4 = MediaViewerOverlayButtonDefault;
           if (obj2.isAndroid()) {
-            let tmp2Result = tmp2(tmp5(12967).MoreVerticalIcon, { size: "md", color: "interactive-text-active" });
+            let tmp2Result = closure_1_6(isModalOpen(12967).MoreVerticalIcon, {
+              size: "md",
+              color: "interactive-text-active",
+            });
           } else {
-            tmp2Result = tmp2(tmp5(8672).MoreHorizontalIcon, { size: "md", color: "interactive-text-active" });
+            tmp2Result = closure_1_6(isModalOpen(8672).MoreHorizontalIcon, {
+              size: "md",
+              color: "interactive-text-active",
+            });
           }
           obj.icon = tmp2Result;
           obj.ref = ref.ref;
@@ -141,11 +149,11 @@ export const MediaModalOverlayHeader = function MediaModalOverlayHeader(arg0) {
           return closure_1_6(tmp4, obj);
         },
       };
-      tmp10Result1 = tmp10(tmp2(8666).ContextMenu, obj13);
+      tmp10Result1 = closure_6(tmp2(8666).ContextMenu, obj13);
     }
     items4[1] = tmp10Result1;
     obj11.children = items4;
-    tmp12Result = tmp12(tmp13, obj11);
+    tmp12Result = closure_7(closure_4, obj11);
   }
   items3[1] = tmp12Result;
   obj3.children = items3;

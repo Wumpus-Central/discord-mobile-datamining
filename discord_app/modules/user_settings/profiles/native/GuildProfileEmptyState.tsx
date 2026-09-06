@@ -46,7 +46,7 @@ export default function GuildProfileEmptyState() {
   const obj4 = { text: null, onPress: null };
   const intl3 = util.intl;
   obj4.text = intl3.string(util.t["6dIB4R"]);
-  obj4.onPress = asyncGeneratorStep(async (arg0, value) => {
+  obj4.onPress = asyncGeneratorStep(async () => {
     if (c0 === 2) {
       c0 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -99,7 +99,7 @@ export default function GuildProfileEmptyState() {
   const obj5 = { text: null, variant: "secondary", onPress: null };
   const intl4 = util.intl;
   obj5.text = intl4.string(util.t.yRjK4p);
-  obj5.onPress = asyncGeneratorStep(async (arg0, value) => {
+  obj5.onPress = asyncGeneratorStep(async () => {
     if (c0 === 2) {
       c0 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");

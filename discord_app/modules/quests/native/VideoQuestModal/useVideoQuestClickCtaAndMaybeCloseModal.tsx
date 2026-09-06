@@ -1,5 +1,6 @@
 // discord_app/modules/quests/native/VideoQuestModal/useVideoQuestClickCtaAndMaybeCloseModal.tsx
 import URLUtilsDefault from "../../../../utils/URLUtils.tsx";
+import AnalyticsTypes from "../../lib/analytics/AnalyticsTypes.tsx";
 import QuestCopyUtils from "../../utils/QuestCopyUtils.tsx";
 import QuestPlatformUtils from "../../utils/QuestPlatformUtils.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -22,13 +23,13 @@ export const useVideoQuestClickCtaAndMaybeCloseModal = function useVideoQuestCli
       onClose();
     }
     obj2 = QuestCopyUtils;
-    const tmp3 = quest;
     obj = {
       content,
-      ctaContent: tmp2(7728).QuestContentCTA.OPEN_GAME_LINK,
+      ctaContent: AnalyticsTypes.QuestContentCTA.OPEN_GAME_LINK,
       impressionId: getQuestImpressionId(),
       sourceQuestContent,
     };
-    QuestPlatformUtils.openGameLinkDirectly(tmp3, obj);
+    QuestPlatformUtils.openGameLinkDirectly(quest, obj);
+    const tmp2Result = QuestPlatformUtils;
   }, items);
 };

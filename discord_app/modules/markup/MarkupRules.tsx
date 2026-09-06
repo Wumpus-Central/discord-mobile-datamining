@@ -2,6 +2,7 @@
 import util from "../../intl/index.native.tsx";
 import EnhancedRoleColorUtils from "../premium/enhanced_role_colors/EnhancedRoleColorUtils.tsx";
 import UnicodeEmojisDefault from "../emojis/UnicodeEmojis.tsx";
+import UserUtilsDefault from "../../utils/UserUtils.tsx";
 import NicknameUtilsDefault from "../../utils/NicknameUtils.tsx";
 import MarkupLinkRule from "MarkupLinkRule.tsx";
 import useHasEnhancedRoleColors from "../premium/powerups/hooks/useHasEnhancedRoleColors.tsx";
@@ -142,11 +143,10 @@ function hydrateUserMention(everyoneOrHere, channelId) {
     if (null != channel) {
       let nickname = NicknameUtilsDefault.getNickname(channel.getGuildId(), channelId.channelId, str);
       if (nickname == null) {
-        nickname = tmp4(4404).getName(str);
-        const tmp4Result = tmp4(4404);
+        nickname = UserUtilsDefault.getName(str);
+        const tmp4Result = UserUtilsDefault;
       }
       str = nickname;
-      tmp4 = importDefault;
     }
     tmp2 = str;
     id = str.id;
@@ -1050,14 +1050,13 @@ let items1 = [
         if (null != match) {
           return match;
         } else {
-          const match1 = tmp.inlineCode.match(arg0, arg1, arg2);
+          const match1 = importDefaultResult3Result.inlineCode.match(arg0, arg1, arg2);
           let tmp4;
           if (null != match1) {
             tmp4 = match1;
           }
           return tmp4;
         }
-        tmp = importDefaultResult3Result;
       },
     },
   },
@@ -1069,14 +1068,13 @@ const obj21 = {
       if (null != match) {
         return match;
       } else {
-        const match1 = tmp.inlineCode.match(arg0, arg1, arg2);
+        const match1 = importDefaultResult3Result.inlineCode.match(arg0, arg1, arg2);
         let tmp4;
         if (null != match1) {
           tmp4 = match1;
         }
         return tmp4;
       }
-      tmp = importDefaultResult3Result;
     },
   },
 };

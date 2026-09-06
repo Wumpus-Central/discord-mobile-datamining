@@ -1,11 +1,14 @@
 // discord_app/modules/user_settings/authorized_apps/native/UserSettingsAuthedApps.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
+import CircleInformationIcon from "../../../../design/components/Icon/native/redesign/generated/CircleInformationIcon.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import TableRowGroup from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
 import UserSettingsModalActionCreatorsDefault from "../../../../actions/UserSettingsModalActionCreators.tsx";
 import UserSettingsUtils from "../../../../utils/UserSettingsUtils.tsx";
+import GlobeEarthIcon from "../../../../design/components/Icon/native/redesign/generated/GlobeEarthIcon.tsx";
 import applications from "../../../../../discord_common/js/packages/protos/discord_protos/discord_kkv_store_value_models/v1/applications.tsx";
+import EmbedIcon from "../../../../design/components/Icon/native/redesign/generated/EmbedIcon.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import AuthorizedAppsStore from "../../../oauth2/AuthorizedAppsStore.tsx";
 
@@ -131,6 +134,7 @@ export default function UserSettingsAuthedApps() {
     return tmp10;
   }
   tmp10 = closure_11(closure_5, { style: tmp.spinner, animating: true, size: "large" });
+  let obj3 = { style: tmp.spinner, animating: true, size: "large" };
 }
 export const DisclosureIcon = function DisclosureIcon(disclosure) {
   disclosure = disclosure.disclosure;
@@ -139,14 +143,13 @@ export const DisclosureIcon = function DisclosureIcon(disclosure) {
   return noop.useMemo(() => {
     if (applications.ApplicationDisclosureType.IP_LOCATION === disclosure) {
       let obj = { style, size: "xs" };
-      return closure_2_11(tmp2(8886).GlobeEarthIcon, obj);
-    } else if (tmp2(9241).ApplicationDisclosureType.DISPLAYS_ADVERTISEMENTS === tmp) {
+      return closure_2_11(GlobeEarthIcon.GlobeEarthIcon, obj);
+    } else if (applications.ApplicationDisclosureType.DISPLAYS_ADVERTISEMENTS === disclosure) {
       obj = { style, size: "xs" };
-      return closure_2_11(tmp2(9431).EmbedIcon, obj);
+      return closure_2_11(EmbedIcon.EmbedIcon, obj);
     } else {
       obj = { style, size: "xs" };
-      return closure_2_11(tmp2(4515).CircleInformationIcon, obj);
+      return closure_2_11(CircleInformationIcon.CircleInformationIcon, obj);
     }
-    tmp = disclosure;
   }, items);
 };

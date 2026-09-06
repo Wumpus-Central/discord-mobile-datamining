@@ -1,6 +1,8 @@
 // discord_app/modules/quests/utils/QuestOrbMultiplierUtils.tsx
 import PerksStateUtils from "../../premium/perks_state/PerksStateUtils.tsx";
+import user from "../../../../discord_common/js/packages/protos/discord_protos/users/v1/user.tsx";
 import PremiumUtilsDefault from "../../../utils/PremiumUtils.tsx";
+import XboxGamePassPerksExperiment from "../../partner_perks/xbox/game_pass_perks/XboxGamePassPerksExperiment.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
 let QuestOrbMultiplierSource = { UPSELL: "UPSELL", NITRO: "NITRO", CREPE: "CREPE", INELIGIBLE: "INELIGIBLE" };
@@ -26,10 +28,10 @@ export const getQuestOrbMultiplierSource = function getQuestOrbMultiplierSource(
       if (perks != null) {
         perks = perks.perks;
       }
-      const perkSource = PerksStateUtils.getPerkSource(perks, tmp4(1379).Perk.MORE_QUEST_ORBS);
+      const perkSource = PerksStateUtils.getPerkSource(perks, user.Perk.MORE_QUEST_ORBS);
       let hasItem;
       if (perkSource != null) {
-        hasItem = perkSource.includes(tmp4(1379).PerkSource.SOURCE_NITRO);
+        hasItem = perkSource.includes(user.PerkSource.SOURCE_NITRO);
       }
       if (hasItem) {
         let NITRO = obj.NITRO;
@@ -38,14 +40,14 @@ export const getQuestOrbMultiplierSource = function getQuestOrbMultiplierSource(
         if (tmp4Result.getIsXboxGamePassPerksEnabled("getQuestOrbMultiplierSource")) {
           let hasItem1;
           if (perkSource != null) {
-            hasItem1 = perkSource.includes(tmp4(1379).PerkSource.SOURCE_THIRDPARTY_CROISSANT);
+            hasItem1 = perkSource.includes(user.PerkSource.SOURCE_THIRDPARTY_CROISSANT);
           }
           NITRO = null;
           if (hasItem1) {
             NITRO = obj.CREPE;
           }
         }
-        tmp4Result = tmp4(7556);
+        tmp4Result = XboxGamePassPerksExperiment;
       }
       return NITRO;
     }

@@ -40,8 +40,9 @@ prototype["one"] = function one(play, fn, arg2) {
   }
   cleanupPromise = fn().finally(() => {
     if (obj.get(closure_1) === cleanupPromise) {
-      self[tmp2].delete(closure_1);
+      self.#r.delete(closure_1);
     }
+    obj = self.#r;
   });
   const result = self[self].set(play, cleanupPromise);
   return cleanupPromise;
@@ -80,7 +81,8 @@ prototype["many"] = function many(items, fn) {
         (() => {
           closure_0 = map(function* (arg0) {
             const items = [closure_0];
-            items[1] = yield items.get(closure_0);
+            yield items.get(closure_0);
+            items[1] = value;
             return items;
           });
           return function (arg0) {
@@ -109,7 +111,8 @@ prototype["many"] = function many(items, fn) {
         (() => {
           closure_0 = map(function* (arg0) {
             const items = [closure_0];
-            items[1] = yield items.get(closure_0);
+            yield items.get(closure_0);
+            items[1] = value;
             return items;
           });
           return function (arg0) {
@@ -133,19 +136,20 @@ prototype["many"] = function many(items, fn) {
         const cleanupPromise = promise
           .then((has) => {
             if (has.has(closure_0)) {
-              return has.get(tmp);
+              return has.get(closure_0);
             } else {
               const _Error = Error;
               const _String = String;
               const _HermesInternal = HermesInternal;
-              const error = new Error("Promise deduper result missing key: " + String(tmp));
+              const error = new Error("Promise deduper result missing key: " + String(closure_0));
               throw error;
             }
           })
           .finally(() => {
             if (obj.get(closure_0) === cleanupPromise) {
-              self[tmp2].delete(closure_0);
+              self.#r.delete(closure_0);
             }
+            obj = self.#r;
           });
         const result = _self[promise].set(arg0, cleanupPromise);
         const result1 = cleanupPromise.set(arg0, cleanupPromise);

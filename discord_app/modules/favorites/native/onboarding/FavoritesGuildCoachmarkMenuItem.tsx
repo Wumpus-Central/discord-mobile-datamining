@@ -48,16 +48,16 @@ function FavoritesGuildCoachmarkMenuItemContent(arg0) {
     const tmp4 = _modDef3225;
     if (stateFromStores) {
       let TWuDTt = tmp4.TWuDTt;
-      let tmp6 = tmp3;
+      let tmp6 = importDefault;
     } else {
       TWuDTt = tmp4["25YCHl"];
-      tmp6 = tmp3;
+      tmp6 = importDefault;
     }
     obj.title = intl.string(TWuDTt);
-    const intl2 = tmp(1114).intl;
+    const intl2 = util.intl;
     obj.description = intl2.string(tmp6(3225).Ztl9ht);
     obj.onDismiss = onDismiss;
-    const intl3 = tmp(1114).intl;
+    const intl3 = util.intl;
     obj.buttonLabel = intl3.string(tmp6(3225)["+h9aza"]);
     obj.onButtonPress = callback1;
     return obj;

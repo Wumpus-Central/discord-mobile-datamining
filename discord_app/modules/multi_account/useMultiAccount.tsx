@@ -35,6 +35,7 @@ export const useMultiAccountUsers = function useMultiAccountUsers() {
       return obj;
     }
     obj = { isLoading: obj.getIsValidatingUsers(), multiAccountUsers: users };
+    const obj1 = { isLoading: obj.getIsValidatingUsers(), multiAccountUsers: users };
   });
   const effect = noop.useEffect(() => {
     DispatcherDefault.wait(() => {

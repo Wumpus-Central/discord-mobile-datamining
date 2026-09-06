@@ -17,7 +17,7 @@ export default function useRestorePurchases() {
   if (flag === undefined) {
     flag = true;
   }
-  _slicedToArray = async function _restore(noop, value) {
+  _slicedToArray = async function _restore(noop) {
     if (logger === 2) {
       logger = 3;
       throw new TypeError("Generator functions may not be called on executing generators");

@@ -23,9 +23,9 @@ export default function useNotificationPermissionPrompt() {
     if (stateFromStores) {
       if (!stateFromStores1) {
         if (tmp5) {
-          const permission = tmp3(12418).requestPermission();
-          tmp3(12418).shouldRequestNotification = false;
-          const tmp3Result = tmp3(12418);
+          const permission = NotificationUtilsDefault.requestPermission();
+          NotificationUtilsDefault.shouldRequestNotification = false;
+          const tmp3Result = NotificationUtilsDefault;
         }
         tmp5 = NotificationUtilsDefault.shouldRequestNotification && !PushNotificationPermissionStore.promptSeen;
       }

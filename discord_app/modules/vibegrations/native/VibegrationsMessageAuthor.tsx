@@ -28,7 +28,7 @@ export default function VibegrationsMessageAuthor(userId) {
     () => {
       let user = null;
       if (null != userId) {
-        user = UserStore.getUser(tmp);
+        user = UserStore.getUser(userId);
       }
       return vibegrationsMessageAuthors.resolveMessageAuthor(userId, user, UserStore.getCurrentUser());
     },

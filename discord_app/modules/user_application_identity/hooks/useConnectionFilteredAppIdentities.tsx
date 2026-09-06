@@ -8,7 +8,7 @@ const result = size.fileFinishedImporting(
   "modules/user_application_identity/hooks/useConnectionFilteredAppIdentities.tsx",
 );
 
-export default function useConnectionFilteredAppIdentities(arg0) {
+export default function useConnectionFilteredAppIdentities(id, arg1) {
   let obj = arg1;
   if (arg1 === undefined) {
     obj = {};
@@ -16,7 +16,7 @@ export default function useConnectionFilteredAppIdentities(arg0) {
   let data;
   const includeHidden = obj.includeHidden;
   _require = tmp;
-  const userApplicationIdentities = require("UserApplicationIdentityActionCreators").useUserApplicationIdentities(arg0);
+  const userApplicationIdentities = require("UserApplicationIdentityActionCreators").useUserApplicationIdentities(id);
   data = userApplicationIdentities.data;
   obj = { isLoading: userApplicationIdentities.isLoading, filteredAppIdentities: null };
   let items = [data, undefined !== includeHidden && includeHidden];

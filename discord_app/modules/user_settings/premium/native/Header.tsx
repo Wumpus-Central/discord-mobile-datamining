@@ -3,6 +3,8 @@ import util from "../../../../intl/index.native.tsx";
 import useThemeDefault from "../../../../hooks/useTheme.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
+import _modDef13397 from "../../../../../_runtime/metro/13397__.js";
+import _modDef13473 from "../../../../../_runtime/metro/13473__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -24,22 +26,20 @@ export default function Header(style) {
   obj.style = items;
   obj = { accessible: true, accessibilityLabel: null, accessibilityRole: "header", source: null };
   const tmp4 = useThemeDefault();
-  const tmp5 = hasOwnProperty;
-  const tmp6 = View;
   const intl = util.intl;
   obj.accessibilityLabel = intl.string(util.t.lpNrPu);
   const tmp8 = FastImageDefault;
   if (obj3.isThemeDark(tmp4)) {
-    let tmp2Result = tmp2(13397);
+    let tmp2Result = _modDef13397;
   } else {
-    tmp2Result = tmp2(13473);
+    tmp2Result = _modDef13473;
   }
   obj.source = tmp2Result;
   const items1 = [React4(tmp8, obj)];
   obj = { style: tmp.headerText, variant: "text-md/medium", color: "mobile-text-heading-primary", children: null };
-  const intl2 = tmp9(1114).intl;
+  const intl2 = util.intl;
   obj.children = intl2.string(util.t.SD5MJW);
   items1[1] = React4(Text_Text.Text, obj);
   obj.children = items1;
-  return tmp5(tmp6, obj);
+  return hasOwnProperty(View, obj);
 }

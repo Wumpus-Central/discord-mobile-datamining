@@ -3,9 +3,9 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import utils_ColorUtils from "../../../../../discord_common/js/shared/utils/ColorUtils.tsx";
 import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
 import useToken from "../../../../design/tokens/native/useToken.tsx";
+import LinearGradientDefault from "../../../../../_runtime/04987_LinearGradient.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-const LinearGradientDefault = tmp4(4987);
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: c3, View: closure_4 } = get_ActivityIndicator);

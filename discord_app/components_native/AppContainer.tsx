@@ -1,5 +1,6 @@
 // discord_app/components_native/AppContainer.tsx
 import nativeDefault from "../../discord_common/js/packages/tokens/native.tsx";
+import router_utils from "../modules/routing/router_utils.tsx";
 import ComponentDispatchUtils from "../utils/ComponentDispatchUtils.tsx";
 import SentryUtilsDefault from "../utils/SentryUtils.native.tsx";
 import SentryInitUtils from "../modules/errors/native/SentryInitUtils.tsx";
@@ -8,6 +9,7 @@ import GlobalUtils from "../utils/GlobalUtils.tsx";
 import AppEntryKeyContext from "../modules/window/native/AppEntryKeyContext.tsx";
 import Link from "../../_runtime/01484_Link.js";
 import ManaContext from "../../discord_common/js/packages/design/components/ManaContext/ManaContext.native.tsx";
+import NavigationRouteUtils from "../modules/main_tabs_v2/helpers/NavigationRouteUtils.native.tsx";
 import RootNavigationRef from "../modules/main_tabs_v2/RootNavigationRef.native.tsx";
 import getInitialNavigationStateDefault from "../modules/main_tabs_v2/native/getInitialNavigationState.tsx";
 import Portal from "../../_runtime/04432_Portal.js";
@@ -71,29 +73,27 @@ function AppNavigationContainer(children) {
     if (null != rootNavigationRef) {
       if (rootNavigationRef.isReady()) {
         const currentRoute = rootNavigationRef.getCurrentRoute();
-        tmp(4417);
-        const tmpResult = tmp(4417);
+        const tmpResult = NavigationRouteUtils;
         const tmp4 = null != tmpResult.coerceGuildsRoute(currentRoute);
-        const tmp5 = ref;
         if (tmp6) {
           AnalyticsUtilsDefault.track(constants.NAV_DRAWER_OPENED);
         }
-        tmp5.current = currentRoute;
+        ref.current = currentRoute;
         tmp6 = null != tmpResult.coerceChannelRoute(ref.current) && null != tmpResult.coerceGuildsRoute(currentRoute);
         const tmp14 = _slicedToArray(getChannelDetailsFromRouteDefault(currentRoute, true), 2)[1];
         if (null != tmp14) {
           if (isStaticChannelRoute(tmp14)) {
             if (tmp14 !== SelectedChannelStore.getChannelId()) {
-              const coerceChannelRouteResult = tmp(4417).coerceChannelRoute(currentRoute);
+              const coerceChannelRouteResult = NavigationRouteUtils.coerceChannelRoute(currentRoute);
               if (!tmp18) {
-                tmp(1100).transitionTo(closure_2_12.CHANNEL(tmp13, tmp14), {
+                router_utils.transitionTo(closure_2_12.CHANNEL(tmp13, tmp14), {
                   openChannel: true,
                   navigationReplace: false,
                 });
-                const tmpResult2 = tmp(1100);
+                const tmpResult2 = router_utils;
               }
               tmp18 = null != coerceChannelRouteResult && coerceChannelRouteResult.params.showCreateThread;
-              const tmpResult1 = tmp(4417);
+              const tmpResult1 = NavigationRouteUtils;
             }
           }
         }
@@ -129,6 +129,7 @@ function AppNavigationContainer(children) {
             rootNavigationRef.reset(closure_1_2(dependencyMap[26])(found));
           }
         }
+        const obj = ref2(dependencyMap[17]);
       }, 0);
       return () => {
         clearTimeout(closure_0);
@@ -224,6 +225,7 @@ try {
         const SplashScreenManager2 = NativeModules.SplashScreenManager;
         SplashScreenManager2.hideSplashScreen();
       }
+      const obj = appEntryKey(1115);
     }, []);
     let obj = appEntryKey(14560);
     const riveAppStatePlaybackExperiment = appEntryKey(15939).useRiveAppStatePlaybackExperiment("AppContainer");

@@ -2,6 +2,7 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
 import _modDef2396 from "../../../parent_tools/FamilyCenter.messages.js";
+import WarningIcon from "../../../../design/components/Icon/native/redesign/generated/WarningIcon.tsx";
 import useIsParentalConsentBannerActive from "../../../parent_tools/useIsParentalConsentBannerActive.tsx";
 import useParentalConsentWarning from "../../../parent_tools/useParentalConsentWarning.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -39,9 +40,9 @@ let SettingBuilders = {
             accessible: true,
             accessibilityLabel: null,
           };
-          const intl = tmp(1114).intl;
+          const intl = util.intl;
           obj.accessibilityLabel = intl.string(_modDef2396.wucWfE);
-          tmp6 = jsx(tmp(8588).WarningIcon, {
+          tmp6 = jsx(WarningIcon.WarningIcon, {
             size: "sm",
             color: nativeDefault.colors.ICON_FEEDBACK_WARNING,
             accessible: true,

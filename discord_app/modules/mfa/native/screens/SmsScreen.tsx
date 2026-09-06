@@ -30,87 +30,91 @@ export default function SmsScreen(mfaChallenge) {
     }
     return applyArgumentsResult;
   }
-  closure_9 = async function _handleChange(arg0, value) {
-    if (c7 === 2) {
-      c7 = 3;
-      throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp6 === 3) {
-      if (arg0 === 1) {
-        throw value;
-      } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
-      } else {
-        return { value: "HermesInternal", done: null };
-      }
-    } else {
-      try {
-        c7 = 2;
-        let SMS_CODE_LENGTH = c6;
-        if (0 === c6) {
-          if (arg0 === 1) {
-            c7 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c7 = 3;
-            obj = { value, done: true };
-            return obj;
-          } else {
-            closure_3 = tmp3;
-            noop(mfaChallenge);
-            SMS_CODE_LENGTH = mfaChallenge(SMS_CODE_LENGTH[10]).SMS_CODE_LENGTH;
-            if (mfaChallenge.length === SMS_CODE_LENGTH) {
-              dependencyMap(null);
-              asyncGeneratorStep(true);
-              c5 = 1;
-              const obj1 = { mfaType: "sms", data: tmp36 };
-              c6 = 2;
-              c7 = 1;
-              const obj2 = { value: finish(obj1), done: false };
-              return obj2;
-            }
-            tmp36 = mfaChallenge;
-          }
-        } else {
-          if (1 === SMS_CODE_LENGTH) {
-            c5 = 0;
-            closure_130_0 = closure_4;
-            const body = closure_130_0.body;
-            let message;
-            if (body != null) {
-              message = body.message;
-            }
-            if (message == null) {
-              message = closure_130_0.message;
-            }
-            closure_131_2(message);
-          } else if (arg0 === 1) {
-            c7 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c5 = 0;
-            c7 = 3;
-            obj = { value, done: true };
-            return obj;
-          } else {
-            closure_131_7(true);
-            c5 = 0;
-          }
-          SMS_CODE_LENGTH = closure_131_3(false);
-        }
+  closure_9 = async function _handleChange() {
+    c6 = 0;
+    c7 = 0;
+    c5 = 0;
+    return (async (arg0) => {
+      if (c7 === 2) {
         c7 = 3;
-      } catch (tmp28) {
-        closure_4 = tmp28;
-        if (tmp4 === c5) {
-          c7 = tmp2;
-          throw tmp28;
+        throw new TypeError("Generator functions may not be called on executing generators");
+      } else if (tmp6 === 3) {
+        if (arg0 === 1) {
+          throw value;
+        } else if (arg0 === 2) {
+          let obj = { value, done: true };
+          return obj;
         } else {
-          c6 = tmp;
+          return { value: "HermesInternal", done: null };
+        }
+      } else {
+        try {
+          c7 = 2;
+          SMS_CODE_LENGTH = c6;
+          if (0 === c6) {
+            if (arg0 === 1) {
+              c7 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c7 = 3;
+              obj = { value, done: true };
+              return obj;
+            } else {
+              closure_3 = tmp3;
+              closure_2_5(data);
+              SMS_CODE_LENGTH = data(SMS_CODE_LENGTH[10]).SMS_CODE_LENGTH;
+              if (data.length === SMS_CODE_LENGTH) {
+                closure_2_2(null);
+                closure_2_3(true);
+                c5 = 1;
+                const obj1 = { mfaType: "sms", data };
+                c6 = 2;
+                c7 = 1;
+                const obj2 = { value: finish(obj1), done: false };
+                return obj2;
+              }
+            }
+          } else {
+            if (1 === SMS_CODE_LENGTH) {
+              c5 = 0;
+              closure_130_0 = closure_4;
+              const body = closure_130_0.body;
+              message = undefined;
+              if (body != null) {
+                message = body.message;
+              }
+              if (message == null) {
+                message = closure_130_0.message;
+              }
+              closure_131_2(message);
+            } else if (arg0 === 1) {
+              c7 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c5 = 0;
+              c7 = 3;
+              obj = { value, done: true };
+              return obj;
+            } else {
+              closure_131_7(true);
+              c5 = 0;
+            }
+            SMS_CODE_LENGTH = closure_131_3(false);
+          }
+          c7 = 3;
+        } catch (tmp28) {
+          closure_4 = tmp28;
+          if (tmp4 === c5) {
+            c7 = tmp2;
+            throw tmp28;
+          } else {
+            c6 = tmp;
+          }
         }
       }
-    }
+    })();
   };
-  closure_10 = async function _handleResend(arg0, value) {
+  closure_10 = async function _handleResend() {
     if (c6 === 2) {
       c6 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");

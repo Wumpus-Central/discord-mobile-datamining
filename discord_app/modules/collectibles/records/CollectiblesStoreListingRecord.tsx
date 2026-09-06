@@ -46,7 +46,7 @@ prototype["fromServer"] = function fromServer(styles) {
     tmp5 = obj;
   }
   obj.styles = tmp5;
-  if (typeof tmp3 === "function") {
+  if (typeof prototype === "function") {
     const tmp9 = new prototype(obj, merged1, merged);
     ({ storeListingId: tmp9.storeListingId, skuId: tmp9.skuId, name: tmp9.name, summary } = obj);
     let trimmed;
@@ -59,7 +59,6 @@ prototype["fromServer"] = function fromServer(styles) {
   } else {
     throw new TypeError("Trying to call a non-function");
   }
-  tmp3 = prototype;
 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/records/CollectiblesStoreListingRecord.tsx");

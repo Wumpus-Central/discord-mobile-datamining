@@ -102,12 +102,11 @@ export const buildReorderedOwnedItemsLastWishlistItems = function buildReordered
   items = [];
   const items1 = [];
   for (const item10009 of arg0) {
-    let tmp2 = item10009;
     let arr3 = items;
     if (arg1(item10009)) {
       arr3 = items1;
     }
-    let arr = arr3.push(tmp2);
+    let arr = arr3.push(item10009);
     continue;
   }
   if (0 !== items1.length) {

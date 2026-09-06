@@ -12,6 +12,8 @@ import WebView from "../../../../_runtime/08298_WebView.js";
 import EmbeddedActivitiesNativeManagerDefault from "EmbeddedActivitiesNativeManager.tsx";
 import getPostMessageJavaScriptDefault from "getPostMessageJavaScript.tsx";
 import WebViewPostMessageTransportDefault from "../../rpc/native/server/transports/WebViewPostMessageTransport.tsx";
+import useStableSafeAreaInsets from "../../safe_area/useStableSafeAreaInsets.native.tsx";
+import createWebviewHtmlFileDefault from "createWebviewHtmlFile.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -151,7 +153,7 @@ class BaseActivityWebView {
     items1[2] = onLoadError;
     items1[3] = referrerPolicy;
     effect = obj2.useEffect(() => {
-      closure_0 = async function _loadHtml(arg0, value) {
+      closure_0 = async function _loadHtml() {
         if (c7 === 2) {
           c7 = 3;
           throw new TypeError("Generator functions may not be called on executing generators");
@@ -179,7 +181,7 @@ class BaseActivityWebView {
                 closure_5 = tmp3;
                 closure_4 = tmp2;
                 closure_132_0 = undefined;
-                rect = require("useStableSafeAreaInsets").getStableSafeAreaInsets();
+                rect = useStableSafeAreaInsets.getStableSafeAreaInsets();
                 const current = ref.current;
                 let left;
                 if (current != null) {
@@ -241,14 +243,13 @@ class BaseActivityWebView {
                   messageForDisallowedNavigationError: null,
                 };
                 let tmp36;
-                const obj7 = require("useStableSafeAreaInsets");
                 if (!url) {
                   tmp36 = isPipOrGridMode;
                 }
                 obj1.messageForDisallowedNavigationError = tmp36;
                 c6 = 1;
                 c7 = 1;
-                const obj2 = { value: require("createWebviewHtmlFile")(obj1), done: false };
+                const obj2 = { value: createWebviewHtmlFileDefault(obj1), done: false };
                 return obj2;
               }
             } else if (arg0 === 1) {
@@ -387,14 +388,13 @@ class BaseActivityWebView {
             const match = str.match(arg0);
             if (null !== match) {
               if (match.length >= 2) {
-                const parts = match[1].split(" ");
+                const parts = str.split(" ");
                 const found = parts.filter((item) => !closure_1_0.includes(item));
-                str = match[1];
               }
               return [];
             }
           }
-          closure_2 = async function _fetchAndParseCSP(arg0, value) {
+          closure_2 = async function _fetchAndParseCSP() {
             if (c4 === 2) {
               c4 = 3;
               throw new TypeError("Generator functions may not be called on executing generators");
@@ -567,7 +567,7 @@ class BaseActivityWebView {
       effect4 = obj2.useEffect(() => {
         if (closure_31) {
           if (null != memo) {
-            closure_0 = async function _tryInjectJavaScript(arg0, value) {
+            closure_0 = async function _tryInjectJavaScript() {
               if (c9 === 2) {
                 c9 = 3;
                 throw new TypeError("Generator functions may not be called on executing generators");
@@ -663,12 +663,11 @@ class BaseActivityWebView {
                         c8 = 2;
                         c9 = 1;
                         const obj3 = {
-                          value: obj8.injectJavaScript(getPostMessageJavaScriptDefault(obj1)),
+                          value: memo.injectJavaScript(getPostMessageJavaScriptDefault(obj1)),
                           done: false,
                         };
                         return obj3;
                       }
-                      obj8 = memo;
                     }
                   } else {
                     if (1 === tmp8) {

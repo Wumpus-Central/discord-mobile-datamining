@@ -73,47 +73,47 @@ export default noop.memo(function KickConfirm(arg0) {
     tmp14Result = null;
     if (null != stateFromStores) {
       obj = { style: tmp.container, ref, contentContainerStyle: null, children: null };
-      obj = { paddingHorizontal: tmp4(tmp5[7]).space.PX_24, paddingBottom: insets.bottom };
+      obj = { paddingHorizontal: require("native").space.PX_24, paddingBottom: insets.bottom };
       obj.contentContainerStyle = obj;
       obj1 = { style: tmp.iconLabelBlock, children: null };
-      obj2 = { style: tmp.iconStyles, source: tmp4(tmp5[12]), resizeMode: "contain" };
+      obj2 = { style: tmp.iconStyles, source: require("../../../../_runtime/metro/11850__.js"), resizeMode: "contain" };
       const items4 = [closure_10(ref, obj2), ,];
       const obj3 = { style: tmp.redText, variant: "text-md/semibold", children: null };
-      const intl = tmp7(tmp5[14]).intl;
+      const intl = require("util").intl;
       const obj4 = { user: null };
-      let tmp4Result = tmp4(tmp5[15]);
+      let tmp4Result = require("UserUtils");
       obj4.user = tmp4Result.getName(stateFromStores1);
-      obj3.children = intl.formatToPlainString(tmp7(tmp5[14]).t["1Ie87p"], obj4);
-      items4[1] = closure_10(tmp7(tmp5[13]).Text, obj3);
+      obj3.children = intl.formatToPlainString(require("util").t["1Ie87p"], obj4);
+      items4[1] = closure_10(require("Text/Text").Text, obj3);
       const obj5 = { variant: "text-lg/bold", color: "text-feedback-warning", children: stateFromStores.name };
-      items4[2] = closure_10(tmp7(tmp5[13]).Text, obj5);
+      items4[2] = closure_10(require("Text/Text").Text, obj5);
       obj1.children = items4;
       const items5 = [closure_11(c6, obj1), , , ,];
       const obj6 = { style: tmp.blurb, variant: "heading-md/normal", color: "text-feedback-warning", children: null };
-      const intl2 = tmp7(tmp5[14]).intl;
+      const intl2 = require("util").intl;
       const obj7 = { user: null };
-      tmp4Result = tmp4(tmp5[15]);
+      tmp4Result = require("UserUtils");
       obj7.user = tmp4Result.getName(stateFromStores1);
-      obj6.children = intl2.format(tmp7(tmp5[14]).t["/yH0UT"], obj7);
-      items5[1] = closure_10(tmp7(tmp5[13]).Text, obj6);
+      obj6.children = intl2.format(require("util").t["/yH0UT"], obj7);
+      items5[1] = closure_10(require("Text/Text").Text, obj6);
       const obj8 = { ref: ref1, containerStyle: null, label: null, maxLength: 512, onChange: null };
-      const obj9 = { marginBottom: tmp4(tmp5[7]).space.PX_16 };
+      const obj9 = { marginBottom: require("native").space.PX_16 };
       obj8.containerStyle = obj9;
-      const intl3 = tmp7(tmp5[14]).intl;
-      obj8.label = intl3.string(tmp7(tmp5[14]).t["+2QEPt"]);
+      const intl3 = require("util").intl;
+      obj8.label = intl3.string(require("util").t["+2QEPt"]);
       obj8.onChange = function onChange(current) {
         closure_5.current = current;
       };
-      items5[2] = closure_10(tmp7(tmp5[16]).TextArea, obj8);
+      items5[2] = closure_10(require("TextArea").TextArea, obj8);
       const obj10 = { style: null, children: null };
-      const obj11 = { marginBottom: tmp4(tmp5[7]).space.PX_16 };
+      const obj11 = { marginBottom: require("native").space.PX_16 };
       obj10.style = obj11;
       const obj12 = { variant: "destructive", text: null, onPress: null, disabled: null };
-      const intl4 = tmp7(tmp5[14]).intl;
-      obj12.text = intl4.string(tmp7(tmp5[14]).t["3glT6Z"]);
+      const intl4 = require("util").intl;
+      obj12.text = intl4.string(require("util").t["3glT6Z"]);
       obj12.onPress = tmp12;
       obj12.disabled = tmp11.kicking;
-      obj10.children = closure_10(tmp7(tmp5[17]).Button, obj12);
+      obj10.children = closure_10(require("components/Button/Button").Button, obj12);
       items5[3] = closure_10(c6, obj10);
       tmp14Result = null;
       if (tmp11.kickError) {
@@ -123,17 +123,17 @@ export default noop.memo(function KickConfirm(arg0) {
           color: "input-text-error-default",
           children: null,
         };
-        const intl5 = tmp7(tmp5[14]).intl;
-        const obj14 = { user: tmp4(tmp5[15]).getName(stateFromStores1) };
-        obj13.children = intl5.format(tmp7(tmp5[14]).t.UktD5J, obj14);
-        tmp14Result = tmp14(tmp7(tmp5[13]).Text, obj13);
-        const tmp4Result1 = tmp4(tmp5[15]);
+        const intl5 = require("util").intl;
+        const obj14 = { user: require("UserUtils").getName(stateFromStores1) };
+        obj13.children = intl5.format(require("util").t.UktD5J, obj14);
+        tmp14Result = closure_10(require("Text/Text").Text, obj13);
+        const tmp4Result1 = require("UserUtils");
       }
       const obj15 = { children: null };
       items5[4] = tmp14Result;
       obj15.children = items5;
       obj.children = closure_11(closure_12, obj15);
-      tmp14Result = tmp14(closure_7, obj);
+      tmp14Result = closure_10(closure_7, obj);
     }
   }
   return tmp14Result;

@@ -33,7 +33,7 @@ export const TwinButtons = function TwinButtons(children) {
       tmp = null;
       if (type.type === components_Button_Button.Button) {
         const obj = { style: button.button, children: type };
-        tmp = <View style={button.button}>{arg0}</View>;
+        tmp = <View style={button.button}>{type}</View>;
       }
     }
     return tmp;

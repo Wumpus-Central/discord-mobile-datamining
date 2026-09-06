@@ -1,4 +1,5 @@
 // discord_app/modules/icymi/native/ICYMIMessageRowPreview.tsx
+import util from "../../../intl/index.native.tsx";
 import UserSettings from "../../user_settings/UserSettings.tsx";
 import createStyles from "../../../design/components/Styles/native/createStyles.tsx";
 import ChannelListLayoutTypes from "../../main_tabs_v2/ChannelListLayoutTypes.tsx";
@@ -54,8 +55,8 @@ function ICYMIMessageRowPreview(pointerEvents) {
       arg0.contextType = RowGeneratorTypes.MessageContextType.SEARCH;
       if (null != closure_1_0) {
         const obj = { numberOfLines: tmp3, expandable: false, seeMoreLabel: null, seeMoreLabelColor: null };
-        const intl = tmp(1114).intl;
-        obj.seeMoreLabel = intl.string(tmp(1114).t.qCozu3);
+        const intl = util.intl;
+        obj.seeMoreLabel = intl.string(util.t.qCozu3);
         obj.seeMoreLabelColor = seeMoreLabelColor.seeMoreLabelColor;
         arg0.truncation = obj;
       }

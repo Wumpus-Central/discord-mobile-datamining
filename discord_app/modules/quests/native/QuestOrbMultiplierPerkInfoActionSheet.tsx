@@ -1,5 +1,6 @@
 // discord_app/modules/quests/native/QuestOrbMultiplierPerkInfoActionSheet.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import util from "../../../intl/index.native.tsx";
 import useSafeAreaInsetsDefault from "../../safe_area/useSafeAreaInsets.native.tsx";
 import HelpdeskUtilsDefault from "../../../utils/HelpdeskUtils.tsx";
 import _modDef3353 from "../../partner_perks/xbox/game_pass_perks/XboxGamePassPerks.messages.js";
@@ -40,29 +41,29 @@ function Footer(eligibleToReceivePremiumRewards) {
   const Button = components_Button_Button.Button;
   if (eligibleToReceivePremiumRewards.eligibleToReceivePremiumRewards) {
     obj = { size: "lg", text: null, variant: "primary", onPress: null };
-    const intl3 = tmp10(1114).intl;
-    obj.text = intl3.string(tmp10(1114).t.hvVgAZ);
+    const intl3 = util.intl;
+    obj.text = intl3.string(util.t.hvVgAZ);
     obj.onPress = callback1;
-    const items = [tmp9(Button, obj)];
+    const items = [React6(Button, obj)];
     obj = { size: "lg", variant: "secondary", text: null, onPress: null };
-    const intl4 = tmp10(1114).intl;
-    obj.text = intl4.string(tmp10(1114).t.cpT0Cq);
+    const intl4 = util.intl;
+    obj.text = intl4.string(util.t.cpT0Cq);
     obj.onPress = callback2;
-    items[1] = tmp9(tmp10(4975).Button, obj);
+    items[1] = React6(components_Button_Button.Button, obj);
     obj.children = items;
     let tmp11 = obj;
   } else {
     const obj1 = { size: "lg", variant: "primary", text: null, onPress: null, loading: null };
-    const intl = tmp10(1114).intl;
-    obj1.text = intl.string(tmp10(1114).t.pj0XBN);
+    const intl = util.intl;
+    obj1.text = intl.string(util.t.pj0XBN);
     obj1.onPress = onPress;
     obj1.loading = loading;
-    const items1 = [tmp9(Button, obj1)];
+    const items1 = [React6(Button, obj1)];
     let obj2 = { size: "lg", variant: "secondary", text: null, onPress: null };
-    const intl2 = tmp10(1114).intl;
-    obj2.text = intl2.string(tmp10(1114).t.PcTCB7);
+    const intl2 = util.intl;
+    obj2.text = intl2.string(util.t.PcTCB7);
     obj2.onPress = callback;
-    items1[1] = tmp9(tmp10(4975).Button, obj2);
+    items1[1] = React6(components_Button_Button.Button, obj2);
     obj.children = items1;
     tmp11 = obj;
   }
@@ -151,23 +152,23 @@ export default function QuestOrbMultiplierPerkInfoActionSheet(multiplier) {
   const items1 = [result, orbMultiplierEligibility, multiplier];
   const memo = noop.useMemo(() => {
     if (orbMultiplierEligibility === QuestOrbMultiplierUtils.QuestOrbMultiplierEligibilityType.CREPE) {
-      const intl2 = tmp(1114).intl;
+      const intl2 = util.intl;
       let stringResult = intl2.string(_modDef3353.c5usUr);
     } else {
-      const intl = tmp(1114).intl;
-      stringResult = intl.string(tmp(1114).t.Csf5Ol);
+      const intl = util.intl;
+      stringResult = intl.string(util.t.Csf5Ol);
     }
     return stringResult;
   }, items);
   const memo1 = noop.useMemo(() => {
     if (orbMultiplierEligibility === QuestOrbMultiplierUtils.QuestOrbMultiplierEligibilityType.CREPE) {
-      const intl2 = tmp(1114).intl;
+      const intl2 = util.intl;
       let obj = { bonusOrbMultiplier: multiplier };
       let formatResult = intl2.format(_modDef3353.UkrcSH, obj);
     } else {
-      const intl = tmp(1114).intl;
+      const intl = util.intl;
       const format = intl.format;
-      const t = tmp(1114).t;
+      const t = util.t;
       if (c2) {
         obj = { bonusOrbMultiplier: multiplier };
         formatResult = format(t.NpUfej, obj);

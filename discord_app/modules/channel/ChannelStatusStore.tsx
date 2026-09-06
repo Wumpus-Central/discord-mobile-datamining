@@ -43,7 +43,7 @@ const channelStatusStore = new ChannelStatusStore(DispatcherDefault, {
   CONNECTION_OPEN: handleConnectionReset,
   VOICE_CHANNEL_STATUS_UPDATE: function handleVoiceChannelStatusUpdate(guildId) {
     if (null == dependencyMap[guildId.guildId]) {
-      tmp[guildId.guildId] = {};
+      dependencyMap[guildId.guildId] = {};
     }
     dependencyMap[guildId.guildId][guildId.id] = guildId.status;
   },

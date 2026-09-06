@@ -93,7 +93,7 @@ export default function ActivityShelfItemSummary(submitting) {
   const items1 = [tmp.ellipsis, _slicedToArray(obj.useLoadingStyles(flag, "md"), 2)[1]];
   obj2.style = items1;
   if (tmp7Result) {
-    tmp7Result = tmp7(ButtonEllipsis.Ellipsis, { variant: "active", size: "md" });
+    tmp7Result = hasOwnProperty(ButtonEllipsis.Ellipsis, { variant: "active", size: "md" });
   }
   obj2.children = tmp7Result;
   items[1] = hasOwnProperty(ReanimatedRexportDefault.View, obj2);

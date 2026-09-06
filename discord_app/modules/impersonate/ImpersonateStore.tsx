@@ -2,6 +2,7 @@
 import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
+import FlagUtilsAll from "../../../discord_common/js/shared/utils/FlagUtils.tsx";
 import FunctionUtils from "../../utils/FunctionUtils.tsx";
 import ImpersonateTypes from "ImpersonateTypes.tsx";
 import GuildRoleStore from "../../stores/GuildRoleStore.tsx";
@@ -143,8 +144,8 @@ prototype["getBackNavigationSection"] = function getBackNavigationSection(arg0) 
   } else {
     const type = tmp6.type;
     if (ImpersonateTypes.ImpersonateType.ROLES !== type) {
-      if (tmp7(2020).ImpersonateType.SERVER_SHOP !== type) {
-        if (tmp7(2020).ImpersonateType.NEW_MEMBER === type) {
+      if (ImpersonateTypes.ImpersonateType.SERVER_SHOP !== type) {
+        if (ImpersonateTypes.ImpersonateType.NEW_MEMBER === type) {
           return GuildSettingsSections.ONBOARDING;
         } else {
           return GuildSettingsSections.ROLES;
@@ -201,10 +202,11 @@ const impersonateStore = new ImpersonateStore(DispatcherDefault, {
                 num = 0;
               }
               if (obj.hasFlag(num, constants.OPT_IN_ENABLED)) {
-                obj2.add(item);
+                optInChannels.add(item);
               } else {
-                obj2.delete(item);
+                optInChannels.delete(item);
               }
+              obj = FlagUtilsAll;
             });
             tmp6.optInChannels = optInChannels;
             return true;

@@ -105,8 +105,8 @@ export const createDefaultRule = function createDefaultRule(guildId, triggerType
   }
   if (obj5.isSnowflake(str)) {
     const _Error = Error;
-    const intl = tmp(1114).intl;
-    const error = new Error(intl.string(tmp(1114).t["A/nX8D"]));
+    const intl = util.intl;
+    const error = new Error(intl.string(util.t["A/nX8D"]));
     throw error;
   } else {
     const tmp7 = getRuleCountByTriggerType(guildId, triggerType);
@@ -242,13 +242,13 @@ export const actionTypeToName = function actionTypeToName(arg0) {
   if (constants2.BLOCK_MESSAGE === arg0) {
     const intl5 = util.intl;
     return intl5.string(util.t.d1ab8n);
-  } else if (tmp.FLAG_TO_CHANNEL === arg0) {
+  } else if (constants2.FLAG_TO_CHANNEL === arg0) {
     const intl4 = util.intl;
     return intl4.string(util.t["Y+VmvU"]);
-  } else if (tmp.USER_COMMUNICATION_DISABLED === arg0) {
+  } else if (constants2.USER_COMMUNICATION_DISABLED === arg0) {
     const intl3 = util.intl;
     return intl3.string(util.t["6WPxY2"]);
-  } else if (tmp.QUARANTINE_USER === arg0) {
+  } else if (constants2.QUARANTINE_USER === arg0) {
     const intl2 = util.intl;
     return intl2.string(util.t.NPO8ee);
   } else {
@@ -260,16 +260,16 @@ export const triggerTypeToName = function triggerTypeToName(newValue) {
   if (constants.KEYWORD === newValue) {
     const intl6 = util.intl;
     return intl6.string(util.t.ffR2cM);
-  } else if (tmp.ML_SPAM === newValue) {
+  } else if (constants.ML_SPAM === newValue) {
     const intl5 = util.intl;
     return intl5.string(util.t["puF/Os"]);
-  } else if (tmp.DEFAULT_KEYWORD_LIST === newValue) {
+  } else if (constants.DEFAULT_KEYWORD_LIST === newValue) {
     const intl4 = util.intl;
     return intl4.string(util.t.LnGhZv);
-  } else if (tmp.MENTION_SPAM === newValue) {
+  } else if (constants.MENTION_SPAM === newValue) {
     const intl3 = util.intl;
     return intl3.string(util.t.pX7i6n);
-  } else if (tmp.USER_PROFILE === newValue) {
+  } else if (constants.USER_PROFILE === newValue) {
     const intl2 = util.intl;
     return intl2.string(util.t.q1L2v8);
   } else {

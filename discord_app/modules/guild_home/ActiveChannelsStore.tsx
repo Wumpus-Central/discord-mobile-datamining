@@ -101,6 +101,16 @@ const activeChannelsStore = new ActiveChannelsStore(DispatcherDefault, {
               .value(),
           );
           dependencyMap[guildId] = set;
+          const iter = found.sortBy((arg0) => {
+            let num;
+            if (dependencyMap[arg0] != null) {
+              num = arr.length;
+            }
+            if (num == null) {
+              num = 0;
+            }
+            return -num;
+          });
         }
       }
     }
@@ -161,13 +171,13 @@ const activeChannelsStore = new ActiveChannelsStore(DispatcherDefault, {
     guildId = guildId.guildId;
     const channels = guildId.channels;
     closure_9[guildId] = { loading: false, error: null, fetchedAt: Date.now() };
-    const obj = { loading: false, error: null, fetchedAt: Date.now() };
+    let obj = { loading: false, error: null, fetchedAt: Date.now() };
     closure_6[guildId] = new Set();
     let item = channels.forEach((item) => {
       ({ channel_id: guildId, messages } = item);
       item = messages.forEach((item) => {
         ({ message_id, user_id } = item);
-        closure_6[guildId].add(closure_1_0);
+        dependencyMap[guildId].add(closure_1_0);
         let tmp4 = null == tmp3;
         if (!tmp4) {
           const _Date = Date;
@@ -175,12 +185,12 @@ const activeChannelsStore = new ActiveChannelsStore(DispatcherDefault, {
           tmp4 = sum > Date.now();
         }
         if (tmp4) {
-          truncateOldMessageData(tmp);
+          truncateOldMessageData(closure_1_0);
         }
         if (null == dependencyMap[closure_1_0]) {
-          dependencyMap[tmp] = [];
+          dependencyMap[closure_1_0] = [];
         }
-        let arr = dependencyMap[tmp];
+        let arr = dependencyMap[closure_1_0];
         arr = arr.push({ id: message_id, userId: user_id });
       });
     });

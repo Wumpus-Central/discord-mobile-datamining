@@ -5,6 +5,8 @@ import shared from "../../../design/shared.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import FractionalNitroCoinIllustration from "FractionalNitroCoinIllustration.tsx";
+import _modDef10724 from "../../../../_runtime/metro/10724__.js";
+import _modDef10725 from "../../../../_runtime/metro/10725__.js";
 import _modDef13158 from "../../../../_runtime/metro/13158__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
@@ -100,18 +102,18 @@ export default function FractionalNitroCollectedActionSheet(skuId) {
       const tmp10 = FastImageDefault;
       let obj = dependencyMap;
       if (obj2.isThemeDark(closure_3)) {
-        let tmp8Result = tmp8(10724);
+        let tmp8Result = _modDef10724;
       } else {
-        tmp8Result = tmp8(10725);
+        tmp8Result = _modDef10725;
       }
       obj = { source: tmp8Result };
-      tmp(tmp10, obj);
+      React7(tmp10, obj);
       obj2 = shared;
     } else {
       obj = { variant: "heading-lg/bold", color: "text-default", children: null };
       const intl = util.intl;
       obj.children = intl.string(util.t.g5W1g8);
-      return tmp(Text_Text.Text, obj);
+      return React7(Text_Text.Text, obj);
     }
   }, items);
   const memo1 = noop.useMemo(() => {
@@ -126,17 +128,17 @@ export default function FractionalNitroCollectedActionSheet(skuId) {
     const formatToPlainStringResult = intl.formatToPlainString(util.t.Cz1G97, { days: num });
     let obj = { variant: "text-md/normal", color: "text-default", style: description.description, children: null };
     if (consumed) {
-      const intl3 = tmp2(1114).intl;
+      const intl3 = util.intl;
       obj = { duration: formatToPlainStringResult, expirationDate: expiresAt };
-      obj.children = intl3.format(tmp2(1114).t["93PGOI"], obj);
+      obj.children = intl3.format(util.t["93PGOI"], obj);
       let tmp8 = obj;
     } else {
-      const intl2 = tmp2(1114).intl;
+      const intl2 = util.intl;
       if (isFractionalPremiumActive) {
-        let stringResult = intl2.string(tmp2(1114).t.fBmhE9);
+        let stringResult = intl2.string(util.t.fBmhE9);
       } else {
         obj = { duration: formatToPlainStringResult };
-        stringResult = intl2.format(tmp2(1114).t["8fyBPf"], obj);
+        stringResult = intl2.format(util.t["8fyBPf"], obj);
       }
       obj.children = stringResult;
       tmp8 = obj;
@@ -150,12 +152,12 @@ export default function FractionalNitroCollectedActionSheet(skuId) {
   }, []);
   if (consumed) {
     obj = { premiumType: TIER_2.TIER_2 };
-    let tmp12Result = tmp12(tmp2(7431), obj);
-    let tmp15 = tmp12;
+    let tmp12Result = closure_9(tmp2(7431), obj);
+    let tmp15 = closure_9;
   } else {
     obj = { skuId };
-    tmp12Result = tmp12(NitroAcquiredHeader, obj);
-    tmp15 = tmp12;
+    tmp12Result = closure_9(NitroAcquiredHeader, obj);
+    tmp15 = closure_9;
   }
   const obj1 = { children: null };
   const items2 = [tmp12Result];
@@ -196,9 +198,9 @@ export default function FractionalNitroCollectedActionSheet(skuId) {
     };
     items5[1] = tmp15(tmp5(4975).Button, obj8);
     obj6.children = items5;
-    items4[2] = tmp10(tmp17, obj6);
+    items4[2] = closure_10(tmp17, obj6);
     obj5.children = items4;
-    tmp10Result = tmp10(tmp17, obj5);
+    tmp10Result = closure_10(tmp17, obj5);
   }
   const obj9 = { handleDisabled: true, children: null };
   obj4.children = tmp10Result;

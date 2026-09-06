@@ -81,7 +81,7 @@ export default function QuestEnrollmentBlockedBottomSheetConnected(questContentP
     obj = {
       overrideVisibility: true,
       questOrQuests: stateFromStores,
-      questContent: tmp(tmp2[8]).QuestContent.QUEST_ENROLLMENT_BLOCKED_BOTTOM_SHEET,
+      questContent: require("QuestTypes").QuestContent.QUEST_ENROLLMENT_BLOCKED_BOTTOM_SHEET,
       questContentPosition: questContentPosition.questContentPosition,
       sourceQuestContent,
       children() {
@@ -94,10 +94,10 @@ export default function QuestEnrollmentBlockedBottomSheetConnected(questContentP
         );
       },
     };
-    tmp4 = jsx(tmp(tmp2[7]).QuestContentImpressionTrackerNative, {
+    tmp4 = jsx(require("QuestContentImpressionTracker").QuestContentImpressionTrackerNative, {
       overrideVisibility: true,
       questOrQuests: stateFromStores,
-      questContent: tmp(tmp2[8]).QuestContent.QUEST_ENROLLMENT_BLOCKED_BOTTOM_SHEET,
+      questContent: require("QuestTypes").QuestContent.QUEST_ENROLLMENT_BLOCKED_BOTTOM_SHEET,
       questContentPosition: questContentPosition.questContentPosition,
       sourceQuestContent,
       children() {

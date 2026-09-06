@@ -1,8 +1,10 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/guild_channels/ChannelUnreadBadge.tsx
 import useFontScale from "../../../../screen/native/useFontScale.tsx";
-import BadgeDefault from "../Badge.tsx";
+import Badge from "../Badge.tsx";
 import ChannelListLayout from "layouts/ChannelListLayout.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
+
+const BadgeDefault = Badge;
 
 require = fn;
 const View = fn(17).View;
@@ -40,13 +42,12 @@ export default noop.memo(function ChannelUnreadBadge(panelVariant) {
     const unreadBadge = layoutStyles.unreadBadge;
     obj = { style: null, children: null };
     items[2] = isThread ? unreadBadge.positionThread : unreadBadge.position;
-    items[3] = tmp2(10121).makeSizeStyle(layoutStyles.unreadBadge.size);
+    items[3] = ChannelListLayout.makeSizeStyle(layoutStyles.unreadBadge.size);
     obj.style = items;
     obj = { classic: flag, size: null, badgeStyle: null };
-    const tmp2Result = tmp2(10121);
-    const tmp9 = View;
+    const tmp2Result = ChannelListLayout;
     const _Math = Math;
-    obj.size = tmp2(7869).CHANNEL_BADGE_SIZE * Math.max(tmp6, 1);
+    obj.size = Badge.CHANNEL_BADGE_SIZE * Math.max(tmp6, 1);
     if (resolvedUnreadSetting !== UnreadSetting.ALL_MESSAGES) {
       let num2 = MUTED_OPACITY_CONTENT;
     } else {
@@ -56,7 +57,7 @@ export default noop.memo(function ChannelUnreadBadge(panelVariant) {
     const items1 = [obj1];
     obj.badgeStyle = items1;
     obj.children = jsx(BadgeDefault, { classic: flag, size: null, badgeStyle: null });
-    tmp8Result = tmp8(tmp9, obj);
+    tmp8Result = <View classic={flag} size={null} badgeStyle={null} />;
   }
   return tmp8Result;
 });

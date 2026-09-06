@@ -81,8 +81,14 @@ export default noop.memo(
       };
       const intl = tmp2(tmp3[12]).intl;
       obj.accessibilityLabel = intl.string(tmp2(tmp3[12]).t["13/7kX"]);
-      obj.children = tmp9(tmp2(tmp3[13]).ChevronLargeLeftIcon, { size: "sm", color: "interactive-text-default" });
-      tmp9Result = tmp9(tmp2(tmp3[11]).PressableOpacity, obj);
+      obj.children = jsx(tmp2(tmp3[13]).ChevronLargeLeftIcon, { size: "sm", color: "interactive-text-default" });
+      tmp9Result = jsx(tmp2(tmp3[11]).PressableOpacity, {
+        accessibilityRole: "button",
+        onPress: callback2,
+        style: tmp.back,
+        accessibilityLabel: null,
+        children: null,
+      });
     }
     obj.backButton = tmp9Result;
     return jsx(onBackPress(channelDetailsSearchContext[10]), {

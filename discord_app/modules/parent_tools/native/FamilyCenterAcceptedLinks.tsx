@@ -1,5 +1,6 @@
 // discord_app/modules/parent_tools/native/FamilyCenterAcceptedLinks.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import util from "../../../intl/index.native.tsx";
 import asyncRequireImpl from "../../../../_runtime/01896_asyncRequireImpl.js";
 import _modDef2396 from "../FamilyCenter.messages.js";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
@@ -7,6 +8,7 @@ import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx
 import useUserLinks from "../hooks/useUserLinks.tsx";
 import useIsInAdultAgeGroupDefault from "../hooks/useIsInAdultAgeGroup.tsx";
 import useAgeSpecificText from "../hooks/useAgeSpecificText.tsx";
+import FamilyCenterEmptyDefault from "FamilyCenterEmpty.tsx";
 import FamilyCenterLinkRowDefault from "FamilyCenterLinkRow.tsx";
 import _modDef14923 from "../../../../_runtime/metro/14923__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -33,7 +35,7 @@ function FamilyCenterAcceptedLinkRow(otherUser) {
     const obj1 = { size: str(1178).Icon.Sizes.SMALL, disableColor: true, source: _modDef14923 };
     obj.children = closure_6(str(1178).Icon, obj1);
     obj.actions = closure_6(str(5123).PressableOpacity, obj);
-    tmp4Result = tmp4(FamilyCenterLinkRowDefault, obj);
+    tmp4Result = closure_6(FamilyCenterLinkRowDefault, obj);
   }
   return tmp4Result;
 }
@@ -77,13 +79,13 @@ export default function FamilyCenterAcceptedLinks() {
   const activeLinkUsers = obj.useActiveLinkUsers();
   obj = { count: activeLinkUsers.length, max: useIsInAdultAgeGroupDefault() ? React4 : hasOwnProperty };
   const tmp4 = useIsInAdultAgeGroupDefault();
-  const intl = tmp5(1114).intl;
+  const intl = util.intl;
   const tmp5Result = useAgeSpecificText;
-  const intl2 = tmp5(1114).intl;
+  const intl2 = util.intl;
   obj = { style: tmp.container, children: null };
   const ageSpecificText = tmp5Result.useAgeSpecificText(
     intl.formatToPlainString(_modDef2396["+tnO34"], obj),
-    intl2.formatToPlainString(tmp2(2396)["pu6/U0"], obj),
+    intl2.formatToPlainString(_modDef2396["pu6/U0"], obj),
   );
   const items = [
     timestampProducer(Text_Text.Text, {
@@ -97,11 +99,11 @@ export default function FamilyCenterAcceptedLinks() {
   if (0 === activeLinkUsers.length) {
     const obj3 = { style: tmp.empty, children: null };
     const obj4 = { text: null };
-    const intl3 = tmp5(1114).intl;
-    obj4.text = intl3.string(tmp2(2396).C4ScLD);
-    obj3.children = tmp10(tmp2(14916), obj4);
-    let mapped = tmp10(tmp9, obj3);
-    const tmp2Result = tmp2(14916);
+    const intl3 = util.intl;
+    obj4.text = intl3.string(_modDef2396.C4ScLD);
+    obj3.children = timestampProducer(FamilyCenterEmptyDefault, obj4);
+    let mapped = timestampProducer(View, obj3);
+    const tmp2Result = FamilyCenterEmptyDefault;
   } else {
     mapped = activeLinkUsers.map((otherUser) =>
       closure_1_6(FamilyCenterAcceptedLinkRow, { otherUser }, "accepted-" + otherUser.id),

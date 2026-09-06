@@ -77,7 +77,7 @@ const guildRoleMemberCountStore = new GuildRoleMemberCountStore(DispatcherDefaul
   GUILD_ROLE_CREATE: function handleGuildRoleCreate(guildId) {
     guildId = guildId.guildId;
     if (null == dependencyMap[guildId]) {
-      tmp[guildId] = {};
+      dependencyMap[guildId] = {};
     }
     dependencyMap[guildId][guildId.role.id] = 0;
   },

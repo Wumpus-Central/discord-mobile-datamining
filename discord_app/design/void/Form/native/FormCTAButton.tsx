@@ -2,6 +2,7 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import native from "../../native.tsx";
 import RedesignCompat from "../../../components/RedesignCompat/native/RedesignCompat.native.tsx";
+import RowButton from "../../../components/TableRow/native/RowButton.native.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import TextStyles from "../../../../modules/rebrand/native/TextStyles.tsx";
 

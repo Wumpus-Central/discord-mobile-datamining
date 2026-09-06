@@ -35,16 +35,17 @@ prototype["requestAuthorization"] = function requestAuthorization(arg0, hasPermi
       throw error;
     }
     tmp5(1242).track(constants2.PERMISSIONS_REQUESTED, { type });
-    closure_128_0 = yield tmp45();
+    yield tmp45();
+    closure_128_0 = value;
     let tmp10 = closure_128_0 === constants.AUTHORIZED;
     if (!tmp10) {
       tmp10 = closure_128_0 === constants.LIMITED;
     }
     closure_128_1 = tmp10;
     if (closure_128_1) {
-      let DENIED = tmp14.ACCEPTED;
+      let DENIED = constants.ACCEPTED;
     } else {
-      DENIED = tmp14.DENIED;
+      DENIED = constants.DENIED;
     }
     closure_128_2 = DENIED;
     tmp5(5145).setPermission(closure_129_0, closure_128_2);
@@ -89,18 +90,19 @@ prototype["showAlert"] = function showAlert(arg0) {
   obj[constants.CONTACTS] = "" + intl9.string(util.t.kTtf7o) + ". " + intl10.string(util.t["5Jvu1R"]);
   if (null != obj[arg0]) {
     obj = { title: null, body: null, onConfirm: null, cancelText: null, confirmText: null };
-    const intl11 = tmp(1114).intl;
-    obj.title = intl11.string(tmp(1114).t.u1Gxpu);
+    const intl11 = util.intl;
+    obj.title = intl11.string(util.t.u1Gxpu);
     obj.body = tmp9;
     obj.onConfirm = function onConfirm() {
       return self.openSettings(closure_0);
     };
-    const intl12 = tmp(1114).intl;
-    obj.cancelText = intl12.string(tmp(1114).t["ETE/oC"]);
-    const intl13 = tmp(1114).intl;
-    obj.confirmText = intl13.string(tmp(1114).t["XgZk+u"]);
+    const intl12 = util.intl;
+    obj.cancelText = intl12.string(util.t["ETE/oC"]);
+    const intl13 = util.intl;
+    obj.confirmText = intl13.string(util.t["XgZk+u"]);
     self.openAlertModal(obj);
   }
+  const stringResult4 = intl9.string(util.t.kTtf7o);
 };
 NativePermissionBaseUtils["defaultNativePermissionsRequestOptions"] = function defaultNativePermissionsRequestOptions(
   arg0,

@@ -1,5 +1,8 @@
 // discord_app/modules/errors/av_errors/definitions/AVErrorStreamViewHighPacketLoss.tsx
 import StreamKeyUtils from "../../../go_live/utils/StreamKeyUtils.tsx";
+import AVError from "../AVError.tsx";
+import AVErrorContext from "../AVErrorContext.tsx";
+import AVErrorUtils from "../AVErrorUtils.tsx";
 import ApplicationStreamingStore from "../../../../stores/ApplicationStreamingStore.tsx";
 import AuthenticationStore from "../../../../stores/AuthenticationStore.tsx";
 import StreamRTCConnectionStore from "../../../../stores/StreamRTCConnectionStore.tsx";
@@ -25,18 +28,18 @@ export const AVErrorStreamViewHighPacketLossDefinition = {
         } else if (ownerId.ownerId === id.getId()) {
           return arr;
         } else {
-          let tmpResult = tmp(tmp2[3]);
+          let tmpResult = AVErrorUtils;
           const accumulatedStatsWithMinDatapoints = tmpResult.getAccumulatedStatsWithMinDatapoints(
             mediaEngineConnectionId,
             ownerId.ownerId,
           );
           if (null != accumulatedStatsWithMinDatapoints) {
             if (10 < 100 * accumulatedStatsWithMinDatapoints.short.packetLossRate) {
-              obj = { type: tmp(tmp2[5]).AVError.STREAM_VIEW_HIGH_PACKET_LOSS };
-              tmpResult = tmp(tmp2[6]);
-              const merged = Object.assign(tmpResult.getStreamErrorContext(tmp(tmp2[4]).encodeStreamKey(ownerId)));
-              arr.push(obj);
-              const tmpResult1 = tmp(tmp2[4]);
+              obj = { type: AVError.AVError.STREAM_VIEW_HIGH_PACKET_LOSS };
+              tmpResult = AVErrorContext;
+              const merged = Object.assign(tmpResult.getStreamErrorContext(StreamKeyUtils.encodeStreamKey(ownerId)));
+              arr = arr.push(obj);
+              const tmpResult1 = StreamKeyUtils;
             }
           }
           return arr;

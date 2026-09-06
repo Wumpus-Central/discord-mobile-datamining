@@ -5,7 +5,7 @@ import GuildChannelStore from "../../stores/GuildChannelStore.tsx";
 import PermissionStore from "../../stores/PermissionStore.tsx";
 
 require = fn;
-function getEventChannelsByType(id, channelTypeFromEntity, items) {
+function getEventChannelsByType(id, channelTypeFromEntity) {
   let tmp = items;
   if (items === undefined) {
     items = [GuildChannelStore];

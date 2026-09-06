@@ -74,16 +74,16 @@ export default function CaptchaModal(arg0) {
   obj = { style: tmp2.contentContainer, spacing: 12, children: null };
   const items1 = [closure_9(native.DisguiseSpotIllustration, { scale: 0.5 }), ,];
   if (headerText == null) {
-    const intl = tmp3(1114).intl;
-    headerText = intl.string(tmp3(1114).t.FpoiHe);
+    const intl = util.intl;
+    headerText = intl.string(util.t.FpoiHe);
   }
   const items2 = [
     closure_9(Text_Text.Text, { variant: "heading-xl/bold", accessibilityRole: "header", children: headerText }),
   ];
   obj = { variant: "text-md/medium", color: "text-subtle", style: tmp2.description, children: null };
   if (bodyText == null) {
-    const intl2 = tmp3(1114).intl;
-    bodyText = intl2.string(tmp3(1114).t["/CidxO"]);
+    const intl2 = util.intl;
+    bodyText = intl2.string(util.t["/CidxO"]);
   }
   const obj1 = { startHeight: 900, startExpanded: true, children: null };
   let obj2 = { children: null };
@@ -143,7 +143,7 @@ export default function CaptchaModal(arg0) {
     },
     text: null,
   };
-  const intl3 = tmp3(1114).intl;
+  const intl3 = util.intl;
   obj3.text = intl3.string(util.t["cY+Oob"]);
   items1[2] = closure_9(components_Button_Button.Button, obj3);
   obj.children = items1;

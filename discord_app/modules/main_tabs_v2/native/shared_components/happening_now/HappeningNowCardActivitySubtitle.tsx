@@ -2,11 +2,12 @@
 import util from "../../../../../intl/index.native.tsx";
 import useChannelNameDefault from "../../../../channel/useChannelName.tsx";
 import isStreamingDefault from "../../../../activities/utils/isStreaming.tsx";
+import getChannelA11yLabelDefault from "../../../../channel/getChannelA11yLabel.tsx";
+import isListeningOnSpotifyDefault from "../../../../activities/utils/isListeningOnSpotify.tsx";
 import HappeningNowCard from "HappeningNowCard.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import ChannelStore from "../../../../../stores/ChannelStore.tsx";
 
-const getChannelA11yLabelDefault = tmp4(9770);
 require = fn;
 const View = fn(17).View;
 const ActivityTypes = fn(1074).ActivityTypes;
@@ -68,7 +69,7 @@ export const HappeningNowActivityCardSubtitle = function HappeningNowActivityCar
     tmp3 = null;
     if (null != name) {
       if (!isStreamingDefault(activity)) {
-        if (tmp4(10891)(activity)) {
+        if (isListeningOnSpotifyDefault(activity)) {
           if (null != activity.details) {
             if (null != activity.state) {
               const _HermesInternal = HermesInternal;
@@ -82,7 +83,6 @@ export const HappeningNowActivityCardSubtitle = function HappeningNowActivityCar
         const name2 = activity.name;
       }
       const details = activity.details;
-      tmp4 = importDefault;
     }
   }
 };

@@ -61,8 +61,7 @@ function useIOSCompletionStates(guild) {
     return num > 0;
   });
   const obj5 = require("GuildProgressHooks");
-  const tmp8 = GuildProgressStore;
-  const items6 = [tmp8];
+  const items6 = [GuildProgressStore];
   const stateFromStores4 = require("initialize").useStateFromStores(items6, () =>
     GuildProgressStore.getProgress(guild.id),
   );
@@ -131,8 +130,8 @@ export const openActionSheet = function openActionSheet(guild) {
   const obj = { guild };
   obj.openLazy(asyncRequireImpl(12476, dependencyMap.paths), "guild-progress-" + guild.id, obj);
 };
-export const hideActionSheet = function hideActionSheet(arg0) {
-  ActionSheetActionCreatorsDefault.hideActionSheet("guild-progress-" + arg0);
+export const hideActionSheet = function hideActionSheet(id) {
+  ActionSheetActionCreatorsDefault.hideActionSheet("guild-progress-" + id);
 };
 export const createGuildProgress = function createGuildProgress(id) {
   if (null != GuildStore.getGuild(id)) {

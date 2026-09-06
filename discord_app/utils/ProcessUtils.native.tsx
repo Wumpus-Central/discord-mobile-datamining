@@ -67,7 +67,7 @@ class ProcessUtilsIOS extends ProcessUtils {
     }
     timerId = setInterval(() => {
       if (prop != null) {
-        const getCurrentCpuUsagePercent = tmp.getCurrentCpuUsagePercent;
+        const getCurrentCpuUsagePercent = prop.getCurrentCpuUsagePercent;
         if (getCurrentCpuUsagePercent != null) {
           const currentCpuUsagePercent = getCurrentCpuUsagePercent((arg0) => {
             let tmp2;
@@ -79,7 +79,7 @@ class ProcessUtilsIOS extends ProcessUtils {
         }
       }
       if (prop != null) {
-        const getCumulativeCpuUsage = tmp.getCumulativeCpuUsage;
+        const getCumulativeCpuUsage = prop.getCumulativeCpuUsage;
         if (getCumulativeCpuUsage != null) {
           const cumulativeCpuUsage = getCumulativeCpuUsage((usage) => {
             if (usage >= 0) {
@@ -92,7 +92,7 @@ class ProcessUtilsIOS extends ProcessUtils {
         }
       }
       if (prop != null) {
-        const getCurrentMemoryUsageKb = tmp.getCurrentMemoryUsageKb;
+        const getCurrentMemoryUsageKb = prop.getCurrentMemoryUsageKb;
         if (getCurrentMemoryUsageKb != null) {
           const currentMemoryUsageKb = getCurrentMemoryUsageKb((arg0) => {
             let tmp2;
@@ -234,7 +234,7 @@ if (prop != null) {
 }
 let timerId = setInterval(() => {
   if (prop != null) {
-    const getCurrentCpuUsagePercent = tmp.getCurrentCpuUsagePercent;
+    const getCurrentCpuUsagePercent = prop.getCurrentCpuUsagePercent;
     if (getCurrentCpuUsagePercent != null) {
       const currentCpuUsagePercent = getCurrentCpuUsagePercent((arg0) => {
         let tmp2;
@@ -246,7 +246,7 @@ let timerId = setInterval(() => {
     }
   }
   if (prop != null) {
-    const getCumulativeCpuUsage = tmp.getCumulativeCpuUsage;
+    const getCumulativeCpuUsage = prop.getCumulativeCpuUsage;
     if (getCumulativeCpuUsage != null) {
       const cumulativeCpuUsage = getCumulativeCpuUsage((usage) => {
         if (usage >= 0) {
@@ -259,7 +259,7 @@ let timerId = setInterval(() => {
     }
   }
   if (prop != null) {
-    const getCurrentMemoryUsageKb = tmp.getCurrentMemoryUsageKb;
+    const getCurrentMemoryUsageKb = prop.getCurrentMemoryUsageKb;
     if (getCurrentMemoryUsageKb != null) {
       const currentMemoryUsageKb = getCurrentMemoryUsageKb((arg0) => {
         let tmp2;

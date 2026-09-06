@@ -108,7 +108,6 @@ let closure_8 = noop.memo((screenKey) => {
     },
   };
   const obj2 = {};
-  const tmp4 = closure_6;
   const designSystemScreens = require("SettingRendererUtils").getDesignSystemScreens();
   items1[2] = designSystemScreens.map((item) => {
     [, tmp] = item;
@@ -133,7 +132,7 @@ let closure_8 = noop.memo((screenKey) => {
   obj.children = items1;
   items[1] = closure_5(Navigator.Navigator, obj);
   obj.children = items;
-  return closure_5(tmp4, obj);
+  return closure_5(closure_6, obj);
 });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/devtools/native/components/DevToolsNavigator.tsx");

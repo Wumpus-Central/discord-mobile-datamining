@@ -1,11 +1,15 @@
 // discord_app/modules/user_profile/native/UserProfileMutualsActionSheet.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import native from "../../../design/void/native.tsx";
+import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import NicknameUtilsDefault from "../../../utils/NicknameUtils.tsx";
 import GuildIcon from "../../guild/native/GuildIcon.tsx";
 import TableRow from "../../../design/components/TableRow/native/TableRow.native.tsx";
 import ActivityStatusDefault from "../../activity_status/native/ActivityStatus.tsx";
 import UserProfileStackedActionSheetDefault from "UserProfileStackedActionSheet.tsx";
 import useUserProfileMutualsDefault from "../hooks/useUserProfileMutuals.tsx";
+import getMutualGuildsLabelDefault from "../utils/getMutualGuildsLabel.tsx";
+import getMutualFriendsLabelDefault from "../utils/getMutualFriendsLabel.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import PresenceStore from "../../../stores/PresenceStore.tsx";
@@ -136,7 +140,7 @@ export default function UserProfileMutualsActionSheet(user) {
   }
   obj.defaultIndex = num;
   let length;
-  let tmp3Result = tmp3(12609);
+  let tmp3Result = getMutualFriendsLabelDefault;
   if (mutualFriends != null) {
     length = mutualFriends.length;
   }
@@ -174,7 +178,7 @@ export default function UserProfileMutualsActionSheet(user) {
   obj.page = tmp10;
   const items = [obj];
   let length1;
-  tmp3Result = tmp3(12603);
+  tmp3Result = getMutualGuildsLabelDefault;
   if (mutualGuilds != null) {
     length1 = mutualGuilds.length;
   }

@@ -24,13 +24,12 @@ function getLatestActiveOutboundPromotionStartDate() {
   let startDate = null;
   const values = Object.values(dependencyMap[require("constants").PromotionTypes.THIRD_PARTY_OUTBOUND]);
   for (const item10019 of values) {
-    let tmp3 = item10019;
     let tmp5 = null == startDate;
     if (!tmp5) {
-      tmp5 = tmp3.startDate > startDate;
+      tmp5 = item10019.startDate > startDate;
     }
     if (tmp5) {
-      startDate = tmp3.startDate;
+      startDate = item10019.startDate;
     }
     continue;
   }
@@ -306,7 +305,7 @@ const promotionsStore = new PromotionsStore(DispatcherDefault, {
   ACTIVE_PROMOTIONS_FETCH_SUCCESS: function handleActivePromotionsFetchSuccess(promotions) {
     promotions = promotions.promotions;
     closure_15 = createEmptyPromotionsByType();
-    map = new Map();
+    new Map();
     closure_18 = null;
     let item = promotions.forEach((id) => {
       const fromServer = closure_4.createFromServer(id);

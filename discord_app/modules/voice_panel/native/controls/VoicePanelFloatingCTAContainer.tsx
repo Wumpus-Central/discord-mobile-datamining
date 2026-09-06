@@ -79,14 +79,13 @@ class VoicePanelFloatingCTAContainer {
       };
       obj = { translateX: spring.withSpring(wrapperSpecs.get().x, UI_SHOW_HIDE_PHYSICS) };
       const items = [obj];
-      const tmp2 = UI_SHOW_HIDE_PHYSICS;
       if (wrapperSpecs.get().hidden) {
-        const sum = obj5.get().height + CALL_TILE_GUTTER;
+        const sum = wrapperSpecs.get().height + CALL_TILE_GUTTER;
         let y = sum + accessoryHeights.get();
       } else {
-        y = obj5.get().y;
+        y = wrapperSpecs.get().y;
       }
-      items[1] = { translateY: spring.withSpring(y, tmp2) };
+      items[1] = { translateY: spring.withSpring(y, UI_SHOW_HIDE_PHYSICS) };
       obj.transform = items;
       return obj;
     };
@@ -165,12 +164,12 @@ export default VoicePanelFloatingCTAContainer;
 export const getFloatingCTATotalViewHeight = function getFloatingCTATotalViewHeight() {
   return MobileVisualRefreshExperiment.resolveRefreshToken(nativeDefault.modules.mobile.TABLE_ROW_HEIGHT) + 16;
 };
-export const renderVoicePanelFloatingCTA = function renderVoicePanelFloatingCTA(arg0, arg1, state, cleanUp) {
+export const renderVoicePanelFloatingCTA = function renderVoicePanelFloatingCTA(key, arg1, state, cleanUp) {
   let obj = { theme: ThemeTypes.DARK, children: null };
   obj = {};
   const merged = Object.assign(arg1);
   obj.state = state;
   obj.cleanUp = cleanUp;
   obj.children = <VoicePanelFloatingCTAContainer />;
-  return jsx(native.ThemeContextProvider, {}, arg0);
+  return jsx(native.ThemeContextProvider, {}, key);
 };

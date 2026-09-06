@@ -34,8 +34,8 @@ const guildPromptsStore = new GuildPromptsStore(DispatcherDefault, {
     if (null == dependencyMap[guildId]) {
       const _Set = Set;
       const set = new Set();
-      tmp[guildId] = set;
-      tmp[guildId].add(_prompt);
+      dependencyMap[guildId] = set;
+      dependencyMap[guildId].add(_prompt);
       let flag = true;
     } else {
       const hasItem = obj.has(_prompt);

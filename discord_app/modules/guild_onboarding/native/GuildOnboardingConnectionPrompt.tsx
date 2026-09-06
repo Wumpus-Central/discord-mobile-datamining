@@ -97,7 +97,7 @@ export default function GuildOnboardingConnectionPrompt(guildId) {
   const isLastStep = guildId.isLastStep;
   let stateFromStores3;
   let stateFromStores4;
-  let tmp = closure_16();
+  const tmp = closure_16();
   let obj = guildId(isLastStep[14]);
   const navigation = obj.useNavigation();
   const bottom = onComplete(isLastStep[15])().bottom;
@@ -166,8 +166,8 @@ export default function GuildOnboardingConnectionPrompt(guildId) {
       if (0 !== stateFromStores.length) {
         if (!ref.current) {
           let obj = GuildOnboardingUtils;
-          const providerConnectionState = obj.getProviderConnectionState(tmp);
-          const applicationConnectionState = GuildOnboardingUtils.getApplicationConnectionState(tmp);
+          const providerConnectionState = obj.getProviderConnectionState(stateFromStores);
+          const applicationConnectionState = GuildOnboardingUtils.getApplicationConnectionState(stateFromStores);
           obj = {};
           const obj3 = AnalyticsUtilsDefault;
           const merged = Object.assign(AppAnalyticsUtils.collectGuildAnalyticsMetadata(guildId));
@@ -236,8 +236,8 @@ export default function GuildOnboardingConnectionPrompt(guildId) {
     obj1 = { variant: "text-md/normal", color: "text-muted", children: null };
     const intl4 = tmp2(tmp3[23]).intl;
     obj1.children = intl4.string(tmp2(tmp3[23]).t.ZTNur7);
-    obj.children = tmp13(tmp2(tmp3[22]).Text, obj1);
-    obj.children = tmp13(ref, obj);
+    obj.children = closure_14(tmp2(tmp3[22]).Text, obj1);
+    obj.children = closure_14(ref, obj);
     let tmp19 = obj;
   } else {
     obj2 = { style: tmp.flex, children: null };
@@ -256,11 +256,11 @@ export default function GuildOnboardingConnectionPrompt(guildId) {
     };
     const intl = tmp2(tmp3[23]).intl;
     obj6.children = intl.string(tmp2(tmp3[23]).t.eDVMrA);
-    const items12 = [tmp13(tmp2(tmp3[22]).Text, obj6)];
+    const items12 = [closure_14(tmp2(tmp3[22]).Text, obj6)];
     const obj7 = { style: tmp.description, variant: "text-md/normal", color: "text-muted", children: null };
     const intl2 = tmp2(tmp3[23]).intl;
     obj7.children = intl2.string(tmp2(tmp3[23]).t.BozOXu);
-    items12[1] = tmp13(tmp2(tmp3[22]).Text, obj7);
+    items12[1] = closure_14(tmp2(tmp3[22]).Text, obj7);
     obj5.children = items12;
     const items13 = [closure_15(ref, obj5)];
     const obj8 = {
@@ -270,7 +270,7 @@ export default function GuildOnboardingConnectionPrompt(guildId) {
         return closure_2_14(ConnectionCardDefault, obj, index);
       }),
     };
-    items13[1] = tmp13(ref, obj8);
+    items13[1] = closure_14(ref, obj8);
     obj3.children = items13;
     const items14 = [closure_15(stateFromStores, obj3)];
     const obj9 = { style: null, children: null };
@@ -298,8 +298,8 @@ export default function GuildOnboardingConnectionPrompt(guildId) {
     }
     obj11.text = combined;
     obj11.onPress = callback;
-    obj9.children = tmp13(tmp2(tmp3[26]).Button, obj11);
-    items14[1] = tmp13(ref, obj9);
+    obj9.children = closure_14(tmp2(tmp3[26]).Button, obj11);
+    items14[1] = closure_14(ref, obj9);
     obj2.children = items14;
     obj.children = closure_15(ref, obj2);
     tmp19 = obj;

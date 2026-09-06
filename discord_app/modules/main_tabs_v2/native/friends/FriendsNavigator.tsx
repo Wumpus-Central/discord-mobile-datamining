@@ -90,7 +90,7 @@ function FriendsNavigator() {
   };
   const items = [closure_5(closure_7.Screen, obj), , , , , , , , , ,];
   const obj1 = { name: "new-message", options: null, getComponent: null };
-  const obj2 = { title: null };
+  let obj2 = { title: null };
   let intl = require("util").intl;
   obj2.title = intl.string(require("util").t.jD1qzM);
   obj1.options = obj2;

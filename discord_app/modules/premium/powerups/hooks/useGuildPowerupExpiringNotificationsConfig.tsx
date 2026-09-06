@@ -1,5 +1,7 @@
 // discord_app/modules/premium/powerups/hooks/useGuildPowerupExpiringNotificationsConfig.tsx
 import util from "../../../../intl/index.native.tsx";
+import _modDef2428 from "../GuildPowerups.messages.js";
+import _modDef2850 from "../../../game_server/GameServer.messages.js";
 import Powerups from "../../../../../discord_common/js/shared/shared-constants/Powerups.tsx";
 import useGetExpiringGuildPowerupsDefault from "useGetExpiringGuildPowerups.tsx";
 import useGameServerGetExpiringEntitlementsDefault from "../../../game_server/hooks/useGameServerGetExpiringEntitlements.tsx";
@@ -16,7 +18,7 @@ export default function useGuildPowerupExpiringNotificationsConfig(arg0) {
     let stringResult;
     if (arr2.length > 0) {
       const intl = util.intl;
-      stringResult = intl.string(tmp(2850)["B3OfL/"]);
+      stringResult = intl.string(_modDef2850["B3OfL/"]);
     }
     const items = [];
     let arraySpreadResult = HermesBuiltin.arraySpread(
@@ -33,11 +35,11 @@ export default function useGuildPowerupExpiringNotificationsConfig(arg0) {
     const items3 = [];
     if (arr.some((skuId) => skuId.skuId === Powerups.VANITY_URL_POWERUP_SKU_ID)) {
       const intl2 = util.intl;
-      arr = items3.push(intl2.string(tmp(2428).Sfr0Jw));
+      arr = items3.push(intl2.string(_modDef2428.Sfr0Jw));
     }
     if (arr2.length > 0) {
       const intl3 = util.intl;
-      arr = items3.push(intl3.string(tmp(2850).wiungr));
+      arr = items3.push(intl3.string(_modDef2850.wiungr));
     }
     let obj = { shouldShow: tmp3, expiringPowerups: arr, expiringPowerupNames: items, warnings: items3 };
     return obj;

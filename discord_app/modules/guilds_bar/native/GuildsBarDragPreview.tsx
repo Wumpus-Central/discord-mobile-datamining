@@ -179,8 +179,8 @@ function PreviewItem(dragRegion) {
 function getItemPreviewKey(id) {
   return "" + id.id;
 }
-function renderAnimatedItemPreview(arg0, node, transitionState, cleanUp) {
-  return <AnimatedItemPreview key={arg0} node={arg1} transitionState={arg2} cleanUp={arg3} />;
+function renderAnimatedItemPreview(key, node, transitionState, cleanUp) {
+  return <AnimatedItemPreview key={key} node={node} transitionState={transitionState} cleanUp={cleanUp} />;
 }
 function AnimatedItemPreview(cleanUp) {
   ({ node, transitionState } = cleanUp);
@@ -204,31 +204,30 @@ function AnimatedItemPreview(cleanUp) {
   const tmp5 = closure_9(
     GUILD_ITEM_INSET_LEFT + obj.useToken(cleanUp(sharedValue[12]).modules.mobile.GUILD_BAR_ITEM_SIZE) / 2,
   );
-  const tmp8 = GuildsNodeType;
   let fn = function _() {
     value = sharedValue.get();
     let num = 1;
-    if (closure_3) {
+    if (isFolder) {
       let num3 = 0.3;
       if (num === value) {
         num3 = num;
       }
       let num2 = num3;
-      let obj = tmp2;
+      let obj = sharedValue;
     } else {
       num2 = 0.33;
       if (num === value) {
         num2 = num;
       }
-      obj = tmp2;
+      obj = sharedValue;
     }
-    if (!closure_3) {
+    if (!isFolder) {
       if (num !== obj.get()) {
         obj = { translateX: 10, translateY: -10 };
       }
       let num4 = num;
       ({ translateX, translateY } = obj);
-      if (tmp) {
+      if (isFolder) {
         num4 = 0;
       }
       obj = { zIndex: num4, transform: null, opacity: null };
@@ -246,7 +245,7 @@ function AnimatedItemPreview(cleanUp) {
           tmp = closure_1_0 === transitionState(sharedValue[10]).TransitionStates.YEETED;
         }
         if (tmp) {
-          tmp = closure_1_3;
+          tmp = isFolder;
         }
         if (tmp) {
           transitionState(sharedValue[7]).runOnJS(cleanUp)();
@@ -256,7 +255,7 @@ function AnimatedItemPreview(cleanUp) {
       obj4 = {
         transitionState,
         TransitionStates: native.TransitionStates,
-        isFolder: tmp,
+        isFolder,
         runOnJS: ReanimatedRexport.runOnJS,
         cleanUp,
       };
@@ -266,11 +265,10 @@ function AnimatedItemPreview(cleanUp) {
       obj3.scale = obj9.withSpring(num2, closure_10, "animate-always", fn);
       items[2] = obj3;
       obj.transform = items;
-      const tmp6 = closure_10;
-      if (tmp) {
+      if (isFolder) {
         num = obj.get();
       }
-      obj.opacity = spring.withSpring(num, tmp6, "animate-always");
+      obj.opacity = spring.withSpring(num, closure_10, "animate-always");
       return obj;
     }
     obj = { translateX: 0, translateY: 0 };
@@ -278,11 +276,11 @@ function AnimatedItemPreview(cleanUp) {
   obj = {
     isFolder: tmp9,
     visible: sharedValue,
-    withSpring: tmp2(tmp3[8]).withSpring,
+    withSpring: transitionState(tmp3[8]).withSpring,
     DRAG_SPRING_PHYSICS,
     transitionState,
-    TransitionStates: tmp2(tmp3[10]).TransitionStates,
-    runOnJS: tmp2(tmp3[7]).runOnJS,
+    TransitionStates: transitionState(tmp3[10]).TransitionStates,
+    runOnJS: transitionState(tmp3[7]).runOnJS,
     cleanUp,
   };
   fn.__closure = obj;
@@ -305,7 +303,7 @@ function AnimatedItemPreview(cleanUp) {
   obj = { style: items, children: null };
   items[1] = prop;
   items[2] = animatedStyle;
-  if (node.type === tmp8.FOLDER) {
+  if (node.type === GuildsNodeType.FOLDER) {
     obj1 = {
       id: null,
       expanded: null,
@@ -317,16 +315,24 @@ function AnimatedItemPreview(cleanUp) {
     };
     ({ id: obj8.id, expanded: obj8.expanded, color: obj8.color, name: obj8.name, children: obj8.childNodes } = node);
     obj1.hideExpandedChildren = !isHomeDrawerEnabled;
-    let tmp12Result = tmp12(tmp4(tmp3[13]), obj1);
+    let tmp12Result = jsx(tmp4(tmp3[13]), {
+      id: null,
+      expanded: null,
+      color: null,
+      name: null,
+      childNodes: null,
+      isDragPreview: true,
+      hideExpandedChildren: null,
+    });
   } else {
     obj2 = { guildId: node.id, isDragPreview: true, hideExpandedChildren: null };
     let tmp16 = !isHomeDrawerEnabled;
     tmp4Result = tmp4(tmp3[14]);
     if (isHomeDrawerEnabled) {
-      tmp16 = transitionState === tmp2(tmp3[10]).TransitionStates.YEETED;
+      tmp16 = transitionState === transitionState(tmp3[10]).TransitionStates.YEETED;
     }
     obj2.hideExpandedChildren = tmp16;
-    tmp12Result = tmp12(tmp4Result, obj2);
+    tmp12Result = <tmp4Result guildId={node.id} isDragPreview hideExpandedChildren={null} />;
   }
   obj.children = tmp12Result;
   return <tmp4Result style={items}>{null}</tmp4Result>;

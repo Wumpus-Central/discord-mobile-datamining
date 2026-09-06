@@ -11,11 +11,11 @@ import UserStore from "../../stores/UserStore.tsx";
 require = fn;
 function getGuildMemberSecondaryIndexes(isCurrentGuildMemberByTimestamp) {
   if (isCurrentGuildMemberByTimestamp.isCurrentGuildMemberByTimestamp) {
-    let NEW_GUILD_MEMBER = tmp.CURRENT_GUILD_MEMBER;
-    let tmp2 = tmp;
+    let NEW_GUILD_MEMBER = obj.CURRENT_GUILD_MEMBER;
+    let tmp2 = obj;
   } else {
-    NEW_GUILD_MEMBER = tmp.NEW_GUILD_MEMBER;
-    tmp2 = tmp;
+    NEW_GUILD_MEMBER = obj.NEW_GUILD_MEMBER;
+    tmp2 = obj;
   }
   const items = [NEW_GUILD_MEMBER];
   if (isCurrentGuildMemberByTimestamp.isIncludedInSearchResults) {
@@ -61,7 +61,7 @@ prototype["reset"] = function reset() {
 prototype["resetNewMemberTimestamp"] = function resetNewMemberTimestamp() {
   this.newMemberTimestamp = Date.now();
 };
-prototype["enhanceNewMember"] = function enhanceNewMember(trueMember, searchState, isIncludedInSearchResults) {
+prototype["enhanceNewMember"] = function enhanceNewMember(trueMember, searchState) {
   let obj = isIncludedInSearchResults;
   if (isIncludedInSearchResults === undefined) {
     obj = {};
@@ -152,7 +152,7 @@ prototype["_computeMemberSupplementals"] = function _computeMemberSupplementals(
     const _Date = Date;
     const date = new Date(unusualDMActivityUntil);
     const time = date.getTime();
-    tmp9 = time >= closure_4 - tmp(7497).UNUSUAL_DM_COMPARISON_DELTA;
+    tmp9 = time >= closure_4 - MemberSafetyElasticSearchQueryTypes.UNUSUAL_DM_COMPARISON_DELTA;
   }
   obj.hasUnusualDmActivity = tmp9;
   obj.hasUnusualAccountActivity = isSpam.isSpammer(userId);

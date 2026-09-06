@@ -1,5 +1,6 @@
 // discord_app/modules/stickers/native/StickerPackInformationPopout.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import util from "../../../intl/index.native.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import StickersUtils from "../StickersUtils.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -105,8 +106,8 @@ export const doesStickerPackHavePopoutInformation = function doesStickerPackHave
   let obj = StickersUtils;
   if (obj.isStickerPackAnimated(stickerPack)) {
     obj = { key: "animated", description: null };
-    const intl = tmp(1114).intl;
-    obj.description = intl.string(tmp(1114).t.W11rMa);
+    const intl = util.intl;
+    obj.description = intl.string(util.t.W11rMa);
     items.push(obj);
   }
   return items.length > 0;

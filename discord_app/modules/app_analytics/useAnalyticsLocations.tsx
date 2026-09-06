@@ -23,7 +23,7 @@ export default function useAnalyticsLocations() {
     if (0 !== first.length) {
       const flattenResult = _modDef12.flatten(tmp2);
       items = [];
-      HermesBuiltin.arraySpread(flattenResult, HermesBuiltin.arraySpread(tmp, 0));
+      HermesBuiltin.arraySpread(flattenResult, HermesBuiltin.arraySpread(context, 0));
       tmp3 = items;
     }
     return tmp3;
@@ -35,7 +35,7 @@ export default function useAnalyticsLocations() {
     if (0 !== substr.length) {
       const flattenResult = _modDef12.flatten(substr);
       items = [];
-      HermesBuiltin.arraySpread(flattenResult, HermesBuiltin.arraySpread(tmp, 0));
+      HermesBuiltin.arraySpread(flattenResult, HermesBuiltin.arraySpread(context, 0));
       tmp2 = items;
     }
     return tmp2;
@@ -55,7 +55,7 @@ export default function useAnalyticsLocations() {
 }
 export const LocationContext = context;
 export const AnalyticsLocationProvider = function AnalyticsLocationProvider(value) {
-  return <context.Provider value={arg0.value}>{arg0.children}</context.Provider>;
+  return <context.Provider value={value.value}>{value.children}</context.Provider>;
 };
 export const useLocationStackFromLocationContext = function useLocationStackFromLocationContext() {
   context = noop.useContext(context);

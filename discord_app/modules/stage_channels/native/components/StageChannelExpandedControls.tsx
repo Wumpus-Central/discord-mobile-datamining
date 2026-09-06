@@ -67,16 +67,16 @@ export default noop.memo((channel) => {
       tmp12 = reachedLimit;
     }
     obj.disabled = tmp12;
-    items5.push(tmp9(tmp5(10014).ScreenshareButton, obj));
+    items5.push(jsx(tmp5(10014).ScreenshareButton, { channel, disabled: null }));
   }
   obj = { channelId: channel.id, isConnectedToVoiceChannel };
   items5.push(jsx(channel(10014).AudioRouteButton, { channelId: channel.id, isConnectedToVoiceChannel }));
   items5.push(jsx(channel(10014).DeafenButton, { channel }));
-  obj1 = { style: tmp.container, children: items5.map((children, index) => <View key={arg1}>{arg0}</View>) };
+  obj1 = { style: tmp.container, children: items5.map((children, index) => <View key={index}>{children}</View>) };
   return (
     <View style={tmp.container}>
       {items5.map((children, index) => (
-        <View key={arg1}>{arg0}</View>
+        <View key={index}>{children}</View>
       ))}
     </View>
   );

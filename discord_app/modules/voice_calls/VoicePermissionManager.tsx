@@ -71,11 +71,9 @@ prototype["handleVoiceStateUpdates"] = function handleVoiceStateUpdates(voiceSta
                   }
                 });
                 if (MediaEngineStore.getMode() === constants.PUSH_TO_TALK) {
-                  const permission3 = tmp13(5139).requestPermission(tmp14.INPUT_MONITORING);
-                  const tmp13Result = tmp13(5139);
+                  const permission3 = NativePermissionUtilsDefault.requestPermission(constants2.INPUT_MONITORING);
+                  const tmp13Result = NativePermissionUtilsDefault;
                 }
-                tmp13 = importDefault;
-                tmp14 = constants2;
               }
             }
           }

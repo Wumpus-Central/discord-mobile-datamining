@@ -109,20 +109,17 @@ const secureFramesVerifiedStore = new SecureFramesVerifiedStore(DispatcherDefaul
     ({ streamKey, context } = state);
     if (state.state !== RTCConnectionStates.DISCONNECTED) {
       return false;
-    } else {
-      if (BaseConnectionEvent.MediaEngineContextTypes.STREAM === context) {
-        let tmp6 = null != streamKey;
-        if (tmp6) {
-          map1.delete(streamKey);
-          tmp6 = computeCallVerification();
-        }
-        return tmp6;
-      } else if (tmp10(4615).MediaEngineContextTypes.DEFAULT === context) {
-        map.clear();
-        map1.clear();
-        c10 = false;
+    } else if (BaseConnectionEvent.MediaEngineContextTypes.STREAM === context) {
+      let tmp6 = null != streamKey;
+      if (tmp6) {
+        map1.delete(streamKey);
+        tmp6 = computeCallVerification();
       }
-      tmp10 = require;
+      return tmp6;
+    } else if (BaseConnectionEvent.MediaEngineContextTypes.DEFAULT === context) {
+      map.clear();
+      map1.clear();
+      c10 = false;
     }
   },
   RTC_CONNECTION_ROSTER_MAP_UPDATE: function handleBulkUserUpdate(userIds) {

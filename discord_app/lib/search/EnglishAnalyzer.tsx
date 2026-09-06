@@ -42,9 +42,9 @@ function shouldHighlight(item, set, arg2) {
     }
   }
 }
-function highlightAST(content, arg1, arg2) {
-  closure_0 = arg1;
-  closure_1 = arg2;
+function highlightAST(content, set, flag) {
+  closure_0 = set;
+  closure_1 = flag;
   if (Array.isArray(content)) {
     const item = content.forEach((item) => {
       highlightAST(item, closure_0, closure_1);
@@ -92,7 +92,7 @@ function highlightAST(content, arg1, arg2) {
       }
     }
     if (null != content.content) {
-      highlightAST(content.content, arg1, arg2);
+      highlightAST(content.content, set, flag);
     }
   }
   return content;
@@ -163,12 +163,12 @@ export const createASTHighlighter = function createASTHighlighter(str) {
   const rejectResult = mapped.reject(isBlank);
   const rejectResult1 = mapped1.reject(isStopWord);
   set = new Set(mapped1.reject(isStopWord).map(flag(set[1]).snowballStem).value());
-  return (arg0) => {
+  return (content) => {
     let tmp3 = closure_1;
     if (closure_1) {
       tmp3 = flag;
     }
-    highlightAST(arg0, set, tmp3);
-    return arg0;
+    highlightAST(content, set, tmp3);
+    return content;
   };
 };

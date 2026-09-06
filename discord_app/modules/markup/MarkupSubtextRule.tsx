@@ -15,7 +15,7 @@ export default {
     let tmp = null;
     if (false !== allowSubtext.allowSubtext) {
       if (null != str) {
-        if ("" !== str) {
+        if ("" !== "") {
           let tmp4 = null;
         }
         tmp = tmp4;

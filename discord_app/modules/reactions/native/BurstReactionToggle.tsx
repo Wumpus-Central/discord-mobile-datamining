@@ -1,10 +1,12 @@
 // discord_app/modules/reactions/native/BurstReactionToggle.tsx
 import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import util from "../../../intl/index.native.tsx";
 import useToken from "../../../design/tokens/native/useToken.tsx";
 import ReanimatedRexport from "../../reanimated/ReanimatedRexport.tsx";
 import timing from "../../../design/animation/reanimated/timing/timing.tsx";
 import spring from "../../../design/animation/reanimated/spring/spring.tsx";
+import SuperReactionIcon from "../../../design/components/Icon/native/redesign/generated/SuperReactionIcon.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
 
@@ -68,10 +70,10 @@ export default function BurstReactionToggle(arg0) {
     num = 360;
   }
   closure_129_2 = num;
-  let tmp9Result = tmp9(4296);
+  let tmp9Result = ReanimatedRexport;
   const sharedValue = tmp9Result.useSharedValue(str);
   closure_129_3 = sharedValue;
-  tmp9Result = tmp9(4296);
+  tmp9Result = ReanimatedRexport;
   const sharedValue1 = tmp9Result.useSharedValue(num);
   closure_129_4 = sharedValue1;
   const fn = function s() {
@@ -116,9 +118,9 @@ export default function BurstReactionToggle(arg0) {
     accessibilityState: null,
     children: null,
   };
-  const intl = tmp9(1114).intl;
+  const intl = util.intl;
   const string = intl.string;
-  const t = tmp9(1114).t;
+  const t = util.t;
   if (isActive) {
     let stringResult = string(t["5cRA/b"]);
   } else {
@@ -126,17 +128,17 @@ export default function BurstReactionToggle(arg0) {
   }
   obj.accessibilityLabel = stringResult;
   obj.accessibilityState = { checked: isActive };
-  obj = { style: null, ref, children: tmp15(tmp9(9373).SuperReactionIcon, { color: INTERACTIVE_TEXT_DEFAULT }) };
+  obj = { style: null, ref, children: jsx(SuperReactionIcon.SuperReactionIcon, { color: INTERACTIVE_TEXT_DEFAULT }) };
   const items2 = [tmp.container, animatedStyle];
   obj.style = items2;
   obj.children = jsx(tmp7(4296).View, {
     style: null,
     ref,
-    children: tmp15(tmp9(9373).SuperReactionIcon, { color: INTERACTIVE_TEXT_DEFAULT }),
+    children: jsx(SuperReactionIcon.SuperReactionIcon, { color: INTERACTIVE_TEXT_DEFAULT }),
   });
   return (
     <Pressable style={null} ref={ref}>
-      {tmp15(tmp9(9373).SuperReactionIcon, { color: INTERACTIVE_TEXT_DEFAULT })}
+      {jsx(SuperReactionIcon.SuperReactionIcon, { color: INTERACTIVE_TEXT_DEFAULT })}
     </Pressable>
   );
 }

@@ -20,7 +20,7 @@ function loadSavedGuildStickers() {
   }
   return applyArgumentsResult;
 }
-let closure_11 = async function _loadSavedGuildStickers(arg0, value) {
+let closure_11 = async function _loadSavedGuildStickers() {
   if (c3 === 2) {
     c3 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");

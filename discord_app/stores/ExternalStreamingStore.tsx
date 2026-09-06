@@ -25,7 +25,7 @@ let closure_16 = async function _getTwitchGame() {
     return tmp26;
   }
   await makeTwitchRequest("/games", { id: tmp23 }, tmp24);
-  const data = arg1.body.data;
+  const data = value.body.data;
   const first = data[0];
   if (first != null) {
     const name = first.name;
@@ -79,7 +79,7 @@ prototype["stop"] = function stop() {
   }
   DispatcherDefault.dispatch({ type: "STREAMING_UPDATE", stream: null });
 };
-prototype["_checkTwitch"] = function _checkTwitch(type, result) {
+prototype["_checkTwitch"] = function _checkTwitch(type) {
   closure_0 = type;
   let tmp = result;
   if (result === undefined) {
@@ -87,7 +87,7 @@ prototype["_checkTwitch"] = function _checkTwitch(type, result) {
   }
   closure_1 = tmp;
   let self = this;
-  return (async (arg0, value) => {
+  return (async () => {
     if (c8 === 2) {
       c8 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -227,8 +227,8 @@ prototype["_checkTwitch"] = function _checkTwitch(type, result) {
         } else {
           closure_131_5 = value;
           closure_131_6 = _undefined(name[9]).get(constants.TWITCH);
-          const tmp83 = (function parseUsernameFromThumbnail(arg0) {
-            const match = regex.exec(arg0);
+          const tmp83 = (function parseUsernameFromThumbnail(thumbnail_url) {
+            const match = regex.exec(thumbnail_url);
             let tmp2;
             if (match != null) {
               tmp2 = match[1];
@@ -283,7 +283,7 @@ prototype["_checkTwitch"] = function _checkTwitch(type, result) {
     }
   })();
 };
-prototype["_checkYouTube"] = function _checkYouTube(type, result) {
+prototype["_checkYouTube"] = function _checkYouTube(type) {
   closure_0 = type;
   let tmp = result;
   if (result === undefined) {
@@ -291,7 +291,7 @@ prototype["_checkYouTube"] = function _checkYouTube(type, result) {
   }
   c1 = tmp;
   const self = this;
-  return (async (arg0, value) => {
+  return (async () => {
     if (constants === 2) {
       constants = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -447,7 +447,7 @@ prototype["_check"] = function _check() {
       const _Date = Date;
       const timestamp = Date.now();
       if (closure_11 <= timestamp) {
-        items.push(tmp5.YOUTUBE);
+        items.push(PlatformTypes.YOUTUBE);
         closure_11 = timestamp + closure_8;
       }
       const found = accounts.filter((type) => items.includes(type.type));
@@ -496,7 +496,6 @@ prototype["_check"] = function _check() {
           return _checkTwitchResult;
         }),
       );
-      tmp5 = PlatformTypes;
     }
   }
 };

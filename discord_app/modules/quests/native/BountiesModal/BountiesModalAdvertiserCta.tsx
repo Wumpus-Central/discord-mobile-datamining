@@ -176,8 +176,8 @@ entering.__workletHash = 2981824910249;
 entering.__initData = {
   code: "function BountiesModalAdvertiserCtaTsx1(visible){const{withTiming,timingStandard}=this.__closure;return{opacity:withTiming(visible,timingStandard,'respect-motion-settings')};}",
 };
-const fn2 = function s(value, fn2) {
-  const obj = { opacity: timing.withTiming(value, timingPresets.timingFast, "respect-motion-settings", fn2) };
+const fn2 = function s(value, fn) {
+  const obj = { opacity: timing.withTiming(value, timingPresets.timingFast, "respect-motion-settings", fn) };
   return obj;
 };
 obj = { withTiming: fn(4561).withTiming, timingFast: fn(4564).timingFast };

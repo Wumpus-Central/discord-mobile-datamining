@@ -97,7 +97,7 @@ export default function UserProfileEditTheme(pendingThemeColors) {
   let f97613;
   let primaryColor;
   suggestedColors = undefined;
-  const tmp = closure_6();
+  let tmp = closure_6();
   let tmp4 = f97613(primaryColor[11])(user.id, guildId);
   f97613 = tmp4;
   const tmp5 = f97613(primaryColor[12])({
@@ -138,6 +138,7 @@ export default function UserProfileEditTheme(pendingThemeColors) {
                 tmp4 = items;
               }
               secondaryColor(tmp4);
+              tmp = f97613(primaryColor[14]);
             },
           };
           obj.openLazy(asyncRequireImpl(14624, dependencyMap.paths), "Profile Theme", obj);

@@ -2,6 +2,7 @@
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import ComponentDispatchUtils from "../../../utils/ComponentDispatchUtils.tsx";
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
+import HapticUtils from "../../haptics/HapticUtils.native.tsx";
 import LaunchPadPullTabCache from "LaunchPadPullTabCache.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -73,8 +74,8 @@ export default function LaunchPadWrapper(launchPadType) {
       if (!isModalOpen) {
         const result = LaunchPadPullTabCache.setLaunchPadPullTabExclusionRect();
         if (closure_3) {
-          const result1 = tmp2(4528).triggerHapticFeedback(tmp2(4528).HapticFeedbackTypes.IMPACT_LIGHT);
-          const tmp2Result = tmp2(4528);
+          const result1 = HapticUtils.triggerHapticFeedback(HapticUtils.HapticFeedbackTypes.IMPACT_LIGHT);
+          const tmp2Result = HapticUtils;
         }
       }
     }
@@ -131,7 +132,7 @@ export default function LaunchPadWrapper(launchPadType) {
         launchPadPullTabState: launchPadType.launchPadPullTabState,
         updaters,
       };
-      tmp20Result = tmp20(tmp5(tmp3[19]), obj);
+      tmp20Result = closure_12(updaters(tmp3[19]), obj);
     }
   }
   items6[1] = tmp20Result;
@@ -147,7 +148,7 @@ export default function LaunchPadWrapper(launchPadType) {
   if (tmp7) {
     str2 = "yes";
   }
-  const obj3 = {
+  let obj3 = {
     importantForAccessibility: str2,
     accessibilityRole: "button",
     accessibilityLabel: null,

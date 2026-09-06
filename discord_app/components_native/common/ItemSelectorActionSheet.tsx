@@ -20,7 +20,7 @@ export default function ItemSelectorActionSheet(arg0) {
   let tmp6Result = null;
   if (null != onClose) {
     obj = { onPress: onClose };
-    tmp6Result = tmp6(tmp(7199).ActionSheetCloseButton, obj);
+    tmp6Result = closure_3(tmp(7199).ActionSheetCloseButton, obj);
   }
   const obj1 = { scrollable: true, header: closure_3(items(7149).BottomSheetTitleHeader, obj), children: null };
   obj.trailing = tmp6Result;
@@ -40,7 +40,6 @@ export default function ItemSelectorActionSheet(arg0) {
     paddingHorizontal: token,
     paddingBottom: useSafeAreaInsetsDefault().bottom + nativeDefault.space.PX_16,
   };
-  const tmp8 = closure_4;
   items[1] = closure_3(items(5685).TableRadioGroup, {
     value: num,
     accessibilityLabel: title,
@@ -53,6 +52,6 @@ export default function ItemSelectorActionSheet(arg0) {
     children: items.map((label, value) => closure_1_3(items(5688).TableRadioRow, { label: label.label, value }, value)),
   });
   obj2.children = items;
-  obj1.children = tmp8(items(6627).BottomSheetScrollView, obj2);
+  obj1.children = closure_4(items(6627).BottomSheetScrollView, obj2);
   return closure_3(items(7150).BottomSheet, obj1);
 }

@@ -1,11 +1,11 @@
 // discord_app/design/components/Input/native/InputFieldContainer.native.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import useToken from "../../../tokens/native/useToken.tsx";
+import Text_Text from "../../Text/native/Text.tsx";
 import spring from "../../../animation/reanimated/spring/spring.tsx";
 import InputTypes from "InputTypes.native.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-const Text_Text = tmp(4556);
 require = fn;
 function useInputStyles(size) {
   let str = size.size;
@@ -32,17 +32,17 @@ function useInputStyles(size) {
     INPUT_FIELD_RADIUS_LG = nativeDefault.modules.mobile.INPUT_FIELD_RADIUS_LG;
   }
   let token = useToken.useToken(INPUT_FIELD_RADIUS_LG);
-  let tmpResult = tmp(4262);
+  let tmpResult = useToken;
   if (flag) {
     token = tmpResult.useToken(nativeDefault.modules.mobile.INPUT_FIELD_ROUND_RADIUS);
   }
-  tmpResult = tmp(4262);
+  tmpResult = useToken;
   if ("sm" === str) {
-    let INPUT_FIELD_TEXT_STYLE_LG = tmp7(576).modules.mobile.INPUT_FIELD_TEXT_STYLE_SM;
+    let INPUT_FIELD_TEXT_STYLE_LG = nativeDefault.modules.mobile.INPUT_FIELD_TEXT_STYLE_SM;
   } else if ("md" === str) {
-    INPUT_FIELD_TEXT_STYLE_LG = tmp7(576).modules.mobile.INPUT_FIELD_TEXT_STYLE_MD;
+    INPUT_FIELD_TEXT_STYLE_LG = nativeDefault.modules.mobile.INPUT_FIELD_TEXT_STYLE_MD;
   } else if ("lg" === str) {
-    INPUT_FIELD_TEXT_STYLE_LG = tmp7(576).modules.mobile.INPUT_FIELD_TEXT_STYLE_LG;
+    INPUT_FIELD_TEXT_STYLE_LG = nativeDefault.modules.mobile.INPUT_FIELD_TEXT_STYLE_LG;
   }
   const token1 = tmpResult.useToken(INPUT_FIELD_TEXT_STYLE_LG);
   return closure_9(
@@ -140,7 +140,7 @@ let closure_9 = createStyles.createStyles(() => {
   const obj9 = {};
   const merged = Object.assign(Text_Text.TextStyleSheet[str2]);
   obj9.lineHeight = undefined;
-  const colors = tmp3(576).colors;
+  const colors = nativeDefault.colors;
   obj9.color = flag ? colors.TEXT_MUTED : colors.TEXT_DEFAULT;
   obj9.flexGrow = 1;
   obj6.text = obj9;

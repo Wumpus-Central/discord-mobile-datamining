@@ -117,7 +117,7 @@ export const CustomStatusActivityCard = function CustomStatusActivityCard(user) 
     if (status !== StatusTypes.OFFLINE) {
       tmp3 = status;
     }
-    obj = { status: tmp3, isMobileOnline: obj.isMobileOnline(tmp.id), isVROnline: obj.isVROnline(tmp.id) };
+    obj = { status: tmp3, isMobileOnline: obj.isMobileOnline(user.id), isVROnline: obj.isVROnline(user.id) };
     return obj;
   });
   ({ status, isMobileOnline, isVROnline } = stateFromStoresObject);
@@ -127,7 +127,7 @@ export const CustomStatusActivityCard = function CustomStatusActivityCard(user) 
   const displayNameStylesFont = obj2.useDisplayNameStylesFont({ displayNameStyles: activity(4794)(obj) });
   items1 = [activity.emoji];
   const effect = noop.useEffect(() => {
-    closure_0 = async function _loadEmoji(arg0, value) {
+    closure_0 = async function _loadEmoji() {
       if (v3 === 2) {
         v3 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -246,11 +246,11 @@ export const CustomStatusActivityCard = function CustomStatusActivityCard(user) 
       let tmp15Result = null != source;
       if (tmp15Result) {
         let obj4 = { source, style: tmp.largeEmoji };
-        tmp15Result = tmp15(closure_7, obj4);
+        tmp15Result = closure_12(closure_7, obj4);
       }
     } else {
       const obj5 = { emoji: activity.emoji, size: v32, style: tmp.largeEmoji, animate: false };
-      tmp15Result = tmp15(tmp9(10895), obj5);
+      tmp15Result = closure_12(activity(10895), obj5);
     }
     const items4 = [
       tmp15Result,
@@ -275,7 +275,7 @@ export const CustomStatusActivityCard = function CustomStatusActivityCard(user) 
       }),
     ];
     obj2.children = items4;
-    const items5 = [closure_13(tmp17, obj2)];
+    const items5 = [closure_13(closure_6, obj2)];
     const obj6 = { style: tmp.customStatusContextContainer, children: null };
     const obj7 = {
       user,
@@ -288,9 +288,9 @@ export const CustomStatusActivityCard = function CustomStatusActivityCard(user) 
       style: tmp.statusAvatar,
       autoStatusCutout: STATUS_CUTOUT_SMALL,
     };
-    const items6 = [tmp15(tmp6(1178).Avatar, obj7), ,];
+    const items6 = [closure_12(tmp6(1178).Avatar, obj7), ,];
     const obj8 = { noMargin: true, displayNameFont: displayNameStylesFont, children: userTitle };
-    items6[1] = tmp15(tmp6(15295).HappeningNowCardHeader, obj8);
+    items6[1] = closure_12(tmp6(15295).HappeningNowCardHeader, obj8);
     const state = activity.state;
     let num2;
     if (state != null) {
@@ -309,14 +309,14 @@ export const CustomStatusActivityCard = function CustomStatusActivityCard(user) 
         maxFontSizeMultiplier: 2,
         children: gameMentionsAsPlainText,
       };
-      tmp15Result1 = tmp15(tmp6(4556).Text, obj9);
+      tmp15Result1 = closure_12(tmp6(4556).Text, obj9);
     }
     const obj10 = { children: null };
     items6[2] = tmp15Result1;
     obj6.children = items6;
-    items5[1] = closure_13(tmp17, obj6);
+    items5[1] = closure_13(closure_6, obj6);
     obj10.children = items5;
-    let tmp18Result = tmp18(closure_14, obj10);
+    let tmp18Result = closure_13(closure_14, obj10);
     tmp6Result1 = tmp6(1115);
   } else {
     const obj11 = { children: null };
@@ -330,10 +330,10 @@ export const CustomStatusActivityCard = function CustomStatusActivityCard(user) 
       isVROnline,
       autoStatusCutout: true,
     };
-    const items7 = [tmp15(tmp6(1178).Avatar, obj12)];
+    const items7 = [closure_12(tmp6(1178).Avatar, obj12)];
     const obj13 = { style: tmp.customStatusContextContainer, children: null };
     const obj14 = { noMargin: true, displayNameFont: displayNameStylesFont, children: userTitle };
-    const items8 = [tmp15(tmp6(15295).HappeningNowCardHeader, obj14)];
+    const items8 = [closure_12(tmp6(15295).HappeningNowCardHeader, obj14)];
     const obj15 = {
       ellipsizeMode: "tail",
       variant: "text-xs/medium",
@@ -342,9 +342,9 @@ export const CustomStatusActivityCard = function CustomStatusActivityCard(user) 
       maxFontSizeMultiplier: 2,
       children: gameMentionsAsPlainText,
     };
-    items8[1] = tmp15(tmp6(4556).Text, obj15);
+    items8[1] = closure_12(tmp6(4556).Text, obj15);
     obj13.children = items8;
-    items7[1] = closure_13(tmp17, obj13);
+    items7[1] = closure_13(closure_6, obj13);
     obj11.children = items7;
     tmp18Result = closure_13(closure_14, obj11);
   }

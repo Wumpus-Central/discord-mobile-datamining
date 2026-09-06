@@ -37,9 +37,9 @@ export const useActivityShelfData = function useActivityShelfData(guildId) {
   memo1 = stateFromStores1.useMemo(() => {
     if (null != stateFromStores1) {
       if (memo.length > 0) {
-        if (tmp2[0].id === tmp) {
-          if (null != tmp2[0].embeddedActivityConfig) {
-            const obj = { activity: tmp2[0].embeddedActivityConfig, application: tmp2[0] };
+        if (memo[0].id === tmp) {
+          if (null != memo[0].embeddedActivityConfig) {
+            const obj = { activity: memo[0].embeddedActivityConfig, application: memo[0] };
             const items = [obj];
           }
           return [];

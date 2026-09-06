@@ -16,7 +16,7 @@ export default function ActionButton(style) {
   }
   let obj = { style: style.styles, children: null };
   obj = {
-    icon: jsx(style.IconComponent, { color: obj.useButtonTextColorStyles(str).color, size: "sm" }),
+    icon: <style.IconComponent color={obj.useButtonTextColorStyles(str).color} size="sm" />,
     onPress: null,
     accessibilityLabel: null,
     variant: str,
@@ -24,7 +24,7 @@ export default function ActionButton(style) {
   };
   ({ onPress: obj3.onPress, accessibilityLabel: obj3.accessibilityLabel } = style);
   obj.children = jsx(IconButton.IconButton, {
-    icon: jsx(style.IconComponent, { color: obj.useButtonTextColorStyles(str).color, size: "sm" }),
+    icon: <style.IconComponent color={obj.useButtonTextColorStyles(str).color} size="sm" />,
     onPress: null,
     accessibilityLabel: null,
     variant: str,
@@ -32,7 +32,7 @@ export default function ActionButton(style) {
   });
   return (
     <View
-      icon={jsx(arg0.IconComponent, { color: obj.useButtonTextColorStyles(str).color, size: "sm" })}
+      icon={<style.IconComponent color={obj.useButtonTextColorStyles(str).color} size="sm" />}
       onPress={null}
       accessibilityLabel={null}
       variant={str}

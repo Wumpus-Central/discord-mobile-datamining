@@ -1,4 +1,5 @@
 // discord_app/modules/guild_member_verification/native/components/form_fields/UserVerification.tsx
+import util from "../../../../../intl/index.native.tsx";
 import MemberVerificationTypes from "../../../MemberVerificationTypes.tsx";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import IdentityVerificationFieldDefault from "IdentityVerificationField.tsx";
@@ -23,8 +24,8 @@ export default function UserVerification(arg0) {
     let tmp5 = platform === MemberVerificationTypes.UserVerificationFieldPlatforms.PHONE;
     if (tmp5) {
       let obj = {
-        passesVerification: verification[tmp12(undefined, 4384).UserVerificationFieldPlatforms.PHONE],
-        platform: tmp12(4384).UserVerificationFieldPlatforms.PHONE,
+        passesVerification: verification[MemberVerificationTypes.UserVerificationFieldPlatforms.PHONE],
+        platform: MemberVerificationTypes.UserVerificationFieldPlatforms.PHONE,
       };
       tmp5 = React3(IdentityVerificationFieldDefault, obj);
     }
@@ -36,11 +37,11 @@ export default function UserVerification(arg0) {
     items[1] = React3(IdentityVerificationFieldDefault, obj);
     obj = { style: tmp.emailPhoneNote, variant: "heading-deprecated-12/medium", color: "text-default", children: null };
     if (platform === MemberVerificationTypes.UserVerificationFieldPlatforms.PHONE) {
-      const intl2 = tmp12(1114).intl;
-      let stringResult = intl2.string(tmp12(1114).t["jMh+TY"]);
+      const intl2 = util.intl;
+      let stringResult = intl2.string(util.t["jMh+TY"]);
     } else {
-      const intl = tmp12(1114).intl;
-      stringResult = intl.string(tmp12(1114).t.Vgv9ip);
+      const intl = util.intl;
+      stringResult = intl.string(util.t.Vgv9ip);
     }
     const obj1 = { children: null };
     obj.children = stringResult;

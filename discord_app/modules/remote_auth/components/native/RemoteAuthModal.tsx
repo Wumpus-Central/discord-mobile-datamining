@@ -13,12 +13,12 @@ import ActivityIndicator_ActivityIndicator from "../../../../design/components/A
 import DeprecatedLayoutAnimation from "../../../animations/native/DeprecatedLayoutAnimation.tsx";
 import _modDef13862 from "../../../../../_runtime/metro/13862__.js";
 import _modDef13864 from "../../../../../_runtime/metro/13864__.js";
+import _modDef13865 from "../../../../../_runtime/metro/13865__.js";
 import _modDef13866 from "../../../../../_runtime/metro/13866__.js";
 import _modDef13867 from "../../../../../_runtime/metro/13867__.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-const _modDef13865 = tmp7(13865);
 require = fn;
 function RemoteAuthBody(remoteAuthFingerprint) {
   remoteAuthFingerprint = remoteAuthFingerprint.remoteAuthFingerprint;
@@ -49,7 +49,7 @@ function RemoteAuthBody(remoteAuthFingerprint) {
   }, items);
   if (constants.LOADING === tmp3) {
     return closure_9(RemoteAuthLoading, {});
-  } else if (tmp.LOADED === tmp3) {
+  } else if (constants.LOADED === tmp3) {
     if (null == tmp5) {
       let tmp13 = closure_9(RemoteAuthNotFound, {});
     } else {
@@ -63,10 +63,10 @@ function RemoteAuthBody(remoteAuthFingerprint) {
       tmp13 = closure_9(RemoteAuthLogin, obj);
     }
     return tmp13;
-  } else if (tmp.SUCCEEDED === tmp3) {
+  } else if (constants.SUCCEEDED === tmp3) {
     return closure_9(RemoteAuthLoginSucceeded, {});
   } else {
-    const NOT_FOUND = tmp.NOT_FOUND;
+    const NOT_FOUND = constants.NOT_FOUND;
     return closure_9(RemoteAuthNotFound, {});
   }
   const tmp4 = _slicedToArray(noop.useState(null), 2);

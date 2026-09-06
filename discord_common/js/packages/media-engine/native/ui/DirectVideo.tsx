@@ -113,14 +113,12 @@ export default function DirectVideo(streamId, onContainerResized) {
       logger.info("create video element for " + closure_8.current.streamId + ", readyState=" + element.readyState);
       if (element.readyState > 3) {
         const _HermesInternal = HermesInternal;
-        obj3.error("video element for " + tmp10.current.streamId + " was ready before attached");
+        logger.error("video element for " + closure_8.current.streamId + " was ready before attached");
       }
       current.appendChild(element);
       resizeObserver.disconnect();
       resizeObserver.observe(element);
       ref.current = element;
-      obj3 = logger;
-      tmp10 = closure_8;
     }
   }, items);
   const effect = onResize.useEffect(() => {

@@ -25,7 +25,7 @@ export const useKeyboardContextForType = function useKeyboardContextForType(SYST
   closure_1 = AppEntryKeyContext.useAppEntryKey();
   return KeyboardUIStoreDefault((arg0) => arg0.byAppEntry[closure_1].keyboardContexts[closure_0]);
 };
-export const getKeyboardType = function getKeyboardType(appEntryKey) {
+export const getKeyboardType = function getKeyboardType() {
   let DEFAULT_APP_ENTRY_KEY = appEntryKey;
   if (appEntryKey === undefined) {
     DEFAULT_APP_ENTRY_KEY = AppEntryKeyContext.DEFAULT_APP_ENTRY_KEY;

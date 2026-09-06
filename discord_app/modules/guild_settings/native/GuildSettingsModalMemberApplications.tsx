@@ -34,7 +34,7 @@ const memoResult = noop.memo((user) => {
   let tmp5Result = null != globalName;
   if (tmp5Result) {
     obj = { variant: "text-xs/medium", children: user.username };
-    tmp5Result = tmp5(Text_Text.Text, obj);
+    tmp5Result = React5(Text_Text.Text, obj);
   }
   children[1] = tmp5Result;
   return React6(hasOwnProperty, { children });
@@ -116,14 +116,14 @@ export default noop.memo(function GuildSettingsModalMemberApplications(arg0) {
     }
   }
   if (applicationStatus(guildJoinRequests[14]).GuildJoinRequestApplicationStatuses.SUBMITTED === applicationStatus) {
-    const intl2 = tmp4(tmp3[17]).intl;
-    let stringResult = intl2.string(tmp4(tmp3[17]).t["/wqiSv"]);
-  } else if (tmp4(tmp3[14]).GuildJoinRequestApplicationStatuses.APPROVED === applicationStatus) {
-    const intl = tmp4(tmp3[17]).intl;
-    stringResult = intl.string(tmp4(tmp3[17]).t.bv82GS);
-  } else if (tmp4(tmp3[14]).GuildJoinRequestApplicationStatuses.REJECTED === applicationStatus) {
-    const intl3 = tmp4(tmp3[17]).intl;
-    stringResult = intl3.string(tmp4(tmp3[17]).t["7YSJ6f"]);
+    const intl2 = applicationStatus(tmp3[17]).intl;
+    let stringResult = intl2.string(applicationStatus(tmp3[17]).t["/wqiSv"]);
+  } else if (applicationStatus(tmp3[14]).GuildJoinRequestApplicationStatuses.APPROVED === applicationStatus) {
+    const intl = applicationStatus(tmp3[17]).intl;
+    stringResult = intl.string(applicationStatus(tmp3[17]).t.bv82GS);
+  } else if (applicationStatus(tmp3[14]).GuildJoinRequestApplicationStatuses.REJECTED === applicationStatus) {
+    const intl3 = applicationStatus(tmp3[17]).intl;
+    stringResult = intl3.string(applicationStatus(tmp3[17]).t["7YSJ6f"]);
   }
   obj2 = { style: tmp.containerInner, children: null };
   if (0 !== guildJoinRequests.length) {
@@ -148,10 +148,10 @@ export default noop.memo(function GuildSettingsModalMemberApplications(arg0) {
       }
       return tmp;
     };
-    let tmp13Result = tmp13(tmp4(tmp3[18]).FlashList, obj3);
+    let tmp13Result = closure_7(applicationStatus(tmp3[18]).FlashList, obj3);
   } else {
-    const obj5 = { Illustration: tmp4(tmp3[19]).NoResults, body: stringResult };
-    tmp13Result = tmp13(tmp4(tmp3[11]).EmptyState, obj5);
+    const obj5 = { Illustration: applicationStatus(tmp3[19]).NoResults, body: stringResult };
+    tmp13Result = closure_7(applicationStatus(tmp3[11]).EmptyState, obj5);
   }
   const obj6 = { children: null };
   obj2.children = tmp13Result;

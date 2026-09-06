@@ -66,8 +66,8 @@ export default function AgeGateVerify(source) {
       },
       grow: true,
     };
-    obj2.children = tmp7(components_Button_Button.Button, obj3);
-    tmp7Result = tmp7(View, obj2);
+    obj2.children = React4(components_Button_Button.Button, obj3);
+    tmp7Result = React4(View, obj2);
   }
   items[3] = tmp7Result;
   obj.children = items;

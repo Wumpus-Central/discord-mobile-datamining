@@ -90,7 +90,7 @@ export default function BioText(lineClamp) {
     obj.color = str3;
     obj.lineClamp = lineClamp;
     obj.style = tmp.text;
-    const intl = tmp12(tmp6[12]).intl;
+    const intl = bio(tmp6[12]).intl;
     const items1 = [intl.string(bio(tmp6[12]).t.OJmNR9), "\n"];
     obj.children = items1;
     const items2 = [closure_7(bio(tmp6[8]).Text, obj, "changelog-bio")];
@@ -102,7 +102,7 @@ export default function BioText(lineClamp) {
     obj.color = str2;
     obj.lineClamp = lineClamp;
     obj.style = tmp.span;
-    const intl2 = tmp12(tmp6[12]).intl;
+    const intl2 = bio(tmp6[12]).intl;
     const obj2 = {
       blogHook(text, arg1) {
         return React6(LinkButton, { lineClamp, text }, arg1);
@@ -111,7 +111,7 @@ export default function BioText(lineClamp) {
     obj.children = intl2.format(bio(tmp6[12]).t.RCYeBL, obj2);
     items2[1] = closure_8(bio(tmp6[8]).Text, obj, "changelog-cta");
     obj1.children = items2;
-    let tmp8Result = tmp10(closure_9, obj1);
+    let tmp8Result = closure_7(closure_9, obj1);
   } else if (!tmp3) {
     obj = { variant: textVariant, color: null, lineClamp: null, style: null, children: null };
     let str = "text-default";

@@ -8,7 +8,7 @@ import StorefrontCollectionStore from "StorefrontCollectionStore.tsx";
 import StorefrontCollectionRecord from "records/StorefrontCollectionRecord.tsx";
 
 require = fn;
-let closure_10 = async function _maybeFetchCollectionsWithProducts(arg0, value) {
+let closure_10 = async function _maybeFetchCollectionsWithProducts(arg0) {
   if (c6 === 2) {
     c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -39,17 +39,17 @@ let closure_10 = async function _maybeFetchCollectionsWithProducts(arg0, value) 
           closure_129_1 = undefined;
           closure_129_2 = undefined;
           closure_129_3 = undefined;
-          ({ collectionIds: closure_129_0, includeUnpublishedProducts } = closure_0);
+          ({ collectionIds: closure_129_0, includeUnpublishedProducts } = _require);
           if (includeUnpublishedProducts === undefined) {
             includeUnpublishedProducts = false;
           }
           closure_129_1 = includeUnpublishedProducts;
-          let flag = tmp55.includeUnpublishedCollections;
+          let flag = _require.includeUnpublishedCollections;
           if (flag === undefined) {
             flag = false;
           }
           closure_129_2 = flag;
-          let flag2 = tmp55.ignoreCache;
+          let flag2 = _require.ignoreCache;
           if (flag2 === undefined) {
             flag2 = false;
           }
@@ -207,7 +207,7 @@ function getCollectionPageKey(includeUnpublishedProducts) {
     includeUnpublishedProducts.limit
   );
 }
-let closure_13 = async function _maybeFetchCollectionsForApplicationPage(arg0, value) {
+let closure_13 = async function _maybeFetchCollectionsForApplicationPage(arg0) {
   if (c6 === 2) {
     c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -246,26 +246,26 @@ let closure_13 = async function _maybeFetchCollectionsForApplicationPage(arg0, v
           if (!tmp24) {
             tmp24 = useShopOrdering;
           }
-          const includeUnpublishedProducts = tmp61.includeUnpublishedProducts;
+          const includeUnpublishedProducts = _require.includeUnpublishedProducts;
           let tmp25 = undefined !== includeUnpublishedProducts;
           if (tmp25) {
             tmp25 = includeUnpublishedProducts;
           }
-          const includeUnpublishedCollections = tmp61.includeUnpublishedCollections;
+          const includeUnpublishedCollections = _require.includeUnpublishedCollections;
           let tmp26 = undefined !== includeUnpublishedCollections;
           if (tmp26) {
             tmp26 = includeUnpublishedCollections;
           }
-          const ignoreCache = tmp61.ignoreCache;
+          const ignoreCache = _require.ignoreCache;
           let tmp27 = undefined !== ignoreCache;
           if (tmp27) {
             tmp27 = ignoreCache;
           }
           const _Boolean = Boolean;
           if (Boolean(applicationId)) {
-            const tmp29 = getCollectionPageKey(tmp61);
+            const tmp29 = getCollectionPageKey(_require);
             closure_129_1 = tmp29;
-            closure_129_2 = getCollectionListKey(tmp61);
+            closure_129_2 = getCollectionListKey(_require);
             let obj3 = collectionPageFetchState;
             collectionPageFetchState = collectionPageFetchState.getCollectionPageFetchState(tmp29);
             if ("loading" !== collectionPageFetchState) {
@@ -382,7 +382,7 @@ let closure_15 = async function _maybeFetchCollectionsAfter(arg0) {
   c5 = 0;
   c6 = 0;
   c4 = 0;
-  return (async (arg0, value) => {
+  return (async (arg0) => {
     if (c6 === 2) {
       c6 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -416,12 +416,12 @@ let closure_15 = async function _maybeFetchCollectionsAfter(arg0) {
             if (tmp31) {
               tmp31 = includeUnpublishedProducts;
             }
-            const includeUnpublishedCollections = tmp55.includeUnpublishedCollections;
+            const includeUnpublishedCollections = limit.includeUnpublishedCollections;
             let tmp32 = undefined !== includeUnpublishedCollections;
             if (tmp32) {
               tmp32 = includeUnpublishedCollections;
             }
-            const ignoreCache = tmp55.ignoreCache;
+            const ignoreCache = limit.ignoreCache;
             let tmp33 = undefined !== ignoreCache;
             if (tmp33) {
               tmp33 = ignoreCache;
@@ -430,7 +430,7 @@ let closure_15 = async function _maybeFetchCollectionsAfter(arg0) {
             if (Boolean(applicationId)) {
               const _Boolean2 = Boolean;
               if (Boolean(anchorCollectionId)) {
-                const tmp35 = getCollectionsAfterKey(tmp55);
+                const tmp35 = getCollectionsAfterKey(limit);
                 closure_129_0 = tmp35;
                 let obj5 = collectionsAfterFetchState;
                 collectionsAfterFetchState = collectionsAfterFetchState.getCollectionsAfterFetchState(tmp35);
@@ -524,7 +524,7 @@ let closure_15 = async function _maybeFetchCollectionsAfter(arg0) {
     }
   })();
 };
-let closure_16 = async function _maybeFetchCollectionsForApplication(arg0, value) {
+let closure_16 = async function _maybeFetchCollectionsForApplication(arg0) {
   if (c6 === 2) {
     c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -557,22 +557,22 @@ let closure_16 = async function _maybeFetchCollectionsForApplication(arg0, value
           closure_129_3 = undefined;
           closure_129_4 = undefined;
           closure_129_5 = undefined;
-          ({ applicationId: closure_129_0, includeUnpublishedProducts } = closure_0);
+          ({ applicationId: closure_129_0, includeUnpublishedProducts } = _require);
           if (includeUnpublishedProducts === undefined) {
             includeUnpublishedProducts = false;
           }
           closure_129_1 = includeUnpublishedProducts;
-          let flag = tmp98.includeUnpublishedCollections;
+          let flag = _require.includeUnpublishedCollections;
           if (flag === undefined) {
             flag = false;
           }
           closure_129_2 = flag;
-          let flag2 = tmp98.ignoreCache;
+          let flag2 = _require.ignoreCache;
           if (flag2 === undefined) {
             flag2 = false;
           }
           closure_129_3 = flag2;
-          ({ skuTypes: closure_129_4, includePricing } = closure_0);
+          ({ skuTypes: closure_129_4, includePricing } = _require);
           if (includePricing === undefined) {
             includePricing = false;
           }

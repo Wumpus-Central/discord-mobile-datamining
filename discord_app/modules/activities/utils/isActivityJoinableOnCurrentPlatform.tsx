@@ -1,5 +1,6 @@
 // discord_app/modules/activities/utils/isActivityJoinableOnCurrentPlatform.tsx
 import utils_PlatformUtils from "../../../../discord_common/js/shared/utils/PlatformUtils.tsx";
+import MetaQuestUtils from "../../device/MetaQuestUtils.android.tsx";
 import hasFlagDefault from "hasFlag.tsx";
 import Constants from "../../../Constants.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
@@ -20,18 +21,18 @@ export default function isActivityJoinableOnCurrentPlatform(type) {
       let DESKTOP = constants2.IOS;
       let tmp9 = constants2;
     } else {
-      let tmp6Result = tmp6(1608);
+      let tmp6Result = MetaQuestUtils;
       if (tmp6Result.isMetaQuest()) {
         DESKTOP = constants2.META_QUEST;
         tmp9 = constants2;
       } else {
-        tmp6Result = tmp6(1116);
+        tmp6Result = utils_PlatformUtils;
         if (tmp6Result.isAndroid()) {
-          DESKTOP = tmp8.ANDROID;
-          tmp9 = tmp8;
+          DESKTOP = constants2.ANDROID;
+          tmp9 = constants2;
         } else {
-          DESKTOP = tmp8.DESKTOP;
-          tmp9 = tmp8;
+          DESKTOP = constants2.DESKTOP;
+          tmp9 = constants2;
         }
       }
     }
@@ -64,12 +65,12 @@ export const getCurrentActivityGamePlatform = function getCurrentActivityGamePla
   if (obj.isIOS()) {
     let META_QUEST = constants2.IOS;
   } else {
-    let tmpResult = tmp(1608);
+    let tmpResult = MetaQuestUtils;
     if (tmpResult.isMetaQuest()) {
       META_QUEST = constants2.META_QUEST;
     } else {
-      tmpResult = tmp(1116);
-      META_QUEST = tmpResult.isAndroid() ? tmp3.ANDROID : tmp3.DESKTOP;
+      tmpResult = utils_PlatformUtils;
+      META_QUEST = tmpResult.isAndroid() ? constants2.ANDROID : constants2.DESKTOP;
     }
   }
   return META_QUEST;

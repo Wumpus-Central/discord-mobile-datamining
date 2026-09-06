@@ -81,7 +81,7 @@ export default function SummaryFeedbackActionSheet(guildId) {
   const tmp3 = first(noop.useState(undefined), 2);
   first = tmp3[0];
   noop = tmp3[1];
-  let tmp4 = first(noop.useState(false), 2);
+  const tmp4 = first(noop.useState(false), 2);
   const first1 = tmp4[0];
   closure_6 = tmp4[1];
   const tmp6 = first(noop.useState(false), 2);
@@ -98,14 +98,13 @@ export default function SummaryFeedbackActionSheet(guildId) {
     }
     if (!tmp) {
       if (feedbackSettings != null) {
-        const onFeedbackCompleted = tmp4.onFeedbackCompleted;
+        const onFeedbackCompleted = feedbackSettings.onFeedbackCompleted;
         if (onFeedbackCompleted != null) {
           onFeedbackCompleted(rating);
         }
       }
       PushFeedbackActions.handleSurveyCleanup();
       closure_6(true);
-      tmp4 = feedbackSettings;
     }
   }, items);
   const items1 = [first, callback];
@@ -118,8 +117,9 @@ export default function SummaryFeedbackActionSheet(guildId) {
   const items2 = [callback];
   const callback1 = noop.useCallback((arg0) => {
     closure_4(arg0);
+    let obj = arg0;
     if (arg0 == null) {
-      const obj = {};
+      obj = {};
     }
     if (tmp2) {
       callback(arg0);
@@ -128,6 +128,7 @@ export default function SummaryFeedbackActionSheet(guildId) {
       closure_7(true);
     }
     PushFeedbackActions.handleSurveyCleanup();
+    tmp2 = obj.rating === FeedbackRating.GOOD || null != obj.reason;
   }, items2);
   const callback2 = noop.useCallback(() => {
     const current = ref.current;
@@ -193,7 +194,7 @@ export default function SummaryFeedbackActionSheet(guildId) {
       tmp29 = callback2;
     }
     obj1.onLayout = tmp29;
-    const obj2 = { style: tmp.header, children: null };
+    let obj2 = { style: tmp.header, children: null };
     const obj3 = { guild };
     const items5 = [closure_11(GuildPill, obj3), ,];
     const obj4 = {
@@ -215,7 +216,7 @@ export default function SummaryFeedbackActionSheet(guildId) {
     let tmp27Result = null != null;
     if (tmp27Result) {
       const obj7 = { style: tmp.feedback, children: null };
-      tmp27Result = tmp27(tmp21(tmp12[20]).View, obj7);
+      tmp27Result = closure_11(tmp21(tmp12[20]).View, obj7);
     }
     items6[1] = tmp27Result;
     if (first == null) {
@@ -232,12 +233,12 @@ export default function SummaryFeedbackActionSheet(guildId) {
       }
       obj9.value = muted;
       obj9.onValueChange = function onValueChange(arg0) {
-        const obj = { notify_highlights: arg0 ? tmp3.DISABLED : tmp3.ENABLED };
+        const obj = { notify_highlights: arg0 ? constants.DISABLED : constants.ENABLED };
         const NotificationLabel = NotificationSettingsUtils.NotificationLabel;
         const result = obj.updateGuildNotificationSettings(guildId, obj, NotificationLabel.highlights(!arg0));
       };
-      obj8.children = tmp27(tmp11(tmp12[22]).FormSwitchRow, obj9);
-      tmp27Result = tmp27(tmp11(tmp12[21]).Card, obj8);
+      obj8.children = closure_11(tmp11(tmp12[22]).FormSwitchRow, obj9);
+      tmp27Result = closure_11(tmp11(tmp12[21]).Card, obj8);
     }
     const obj10 = { children: null };
     items6[2] = tmp27Result;
@@ -267,7 +268,7 @@ export default function SummaryFeedbackActionSheet(guildId) {
       obj14.style = items7;
       const intl3 = tmp11(tmp12[14]).intl;
       obj14.children = intl3.string(tmp11(tmp12[14]).t.kZbFIO);
-      let tmp18Result = tmp18(tmp11(tmp12[11]).Text, obj14);
+      let tmp18Result = closure_11(tmp11(tmp12[11]).Text, obj14);
     } else {
       const obj15 = {
         ratingsBodyLabel: null,
@@ -290,7 +291,7 @@ export default function SummaryFeedbackActionSheet(guildId) {
       obj15.reasons = reasons1;
       obj15.trackOpen = null != feedbackSettings ? feedbackSettings.onFeedbackShown : () => {};
       obj15.onFeedbackChanged = callback1;
-      tmp18Result = tmp18(tmp11(tmp12[15]).FeedbackForm, obj15);
+      tmp18Result = closure_11(tmp11(tmp12[15]).FeedbackForm, obj15);
     }
     tmp17 = obj13.rating === FeedbackRating.GOOD || null != obj13.reason;
   }

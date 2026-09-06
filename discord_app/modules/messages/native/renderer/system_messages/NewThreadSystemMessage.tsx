@@ -1,4 +1,6 @@
 // discord_app/modules/messages/native/renderer/system_messages/NewThreadSystemMessage.tsx
+import util from "../../../../../intl/index.native.tsx";
+import useChannelName from "../../../../channel/useChannelName.tsx";
 import useAuthorWithProcessedColor from "useAuthorWithProcessedColor.tsx";
 import formatUsernameOnClickDefault from "formatUsernameOnClick.tsx";
 import createCommonMessageDefault from "createCommonMessage.tsx";
@@ -22,7 +24,7 @@ export const createNewThreadSystemMessage = function createNewThreadSystemMessag
     channel_id = messageReference.channel_id;
   }
   const channel = ChannelStore.getChannel(channel_id);
-  const intl = tmp(1114).intl;
+  const intl = util.intl;
   obj = {
     actorName: messageAuthorWithProcessedColor.nick,
     actorHook: formatUsernameOnClickDefault({
@@ -34,8 +36,8 @@ export const createNewThreadSystemMessage = function createNewThreadSystemMessag
     threadOnClick: null,
   };
   if (null != channel) {
-    let content = tmp(4713).computeChannelName(channel, UserStore, RelationshipStore);
-    const tmpResult = tmp(4713);
+    let content = useChannelName.computeChannelName(channel, UserStore, RelationshipStore);
+    const tmpResult = useChannelName;
   } else {
     content = message.content;
   }
@@ -46,7 +48,7 @@ export const createNewThreadSystemMessage = function createNewThreadSystemMessag
     channel_id1 = messageReference2.channel_id;
   }
   obj = {
-    content: intl.formatToParts(tmp(1114).t.veX9jq, obj),
+    content: intl.formatToParts(util.t.veX9jq, obj),
     threadOnClick: { action: "bindOpenThreadChannel", threadId: channel_id1, medium: true },
   };
   const merged = Object.assign(createCommonMessageDefault(roleStyle));

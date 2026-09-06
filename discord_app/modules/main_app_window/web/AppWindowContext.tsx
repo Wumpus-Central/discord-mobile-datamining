@@ -7,7 +7,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 require = fn;
 const jsx = fn(21).jsx;
 let componentDispatcher = new fn(1109).ComponentDispatcher();
-const obj = {
+let obj = {
   appContext: fn(1074).AppContext.APP,
   renderWindow: window,
   windowDispatch: componentDispatcher,

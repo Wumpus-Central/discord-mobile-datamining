@@ -38,10 +38,10 @@ FetchState = {
     if (!map1.has(guildId)) {
       const _Map = Map;
       map = new Map();
-      const result = obj.set(guildId, map);
+      const result = map1.set(guildId, map);
     }
-    value = obj.get(guildId);
-    const result1 = value.set(guildId.priceTierType, obj.FETCHING);
+    value = map1.get(guildId);
+    const result1 = value.set(guildId.priceTierType, map1.FETCHING);
   },
   CREATOR_MONETIZATION_PRICE_TIERS_FETCH_SUCCESS: function handleFetchPriceTiersSuccess(priceTiers) {
     ({ guildId, priceTierType } = priceTiers);
@@ -65,10 +65,10 @@ FetchState = {
     if (!map1.has(guildId)) {
       const _Map = Map;
       map = new Map();
-      const result = obj.set(guildId, map);
+      const result = map1.set(guildId, map);
     }
-    value = obj.get(guildId);
-    const result1 = value.set(guildId.priceTierType, obj.FETCHED);
+    value = map1.get(guildId);
+    const result1 = value.set(guildId.priceTierType, map1.FETCHED);
   },
 };
 const creatorMonetizationStore = new CreatorMonetizationStore(DispatcherDefault, FetchState);

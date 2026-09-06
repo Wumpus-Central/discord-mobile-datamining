@@ -123,7 +123,7 @@ Color["parseHexString"] = function parseHexString(str) {
           num4 = parseInt(match[3], 16) / 255;
         }
         if (typeof Color === "function") {
-          const obj = Object.create(tmp11.prototype);
+          const obj = Object.create(Color.prototype);
           obj.red = parsed;
           obj.green = parsed1;
           obj.blue = parsed2;
@@ -142,8 +142,7 @@ Color["parseColorFnString"] = function parseColorFnString(str) {
     match = [];
   }
   const tmp = _slicedToArray(match, 3);
-  str = tmp[1];
-  if (null != str) {
+  if (null != tmp[1]) {
     if (null != str2) {
       const parts = str2.split(/\s*[,/\s]\s*/);
       const mapped = parts.map((item) => item.replace(",", "").trim());
@@ -198,7 +197,7 @@ Color["parseColorFnString"] = function parseColorFnString(str) {
           num2 = mapped1[3];
         }
         if (typeof Color === "function") {
-          obj = Object.create(tmp3.prototype);
+          obj = Object.create(Color.prototype);
           obj.red = tmp4;
           obj.green = tmp5;
           obj.blue = tmp6;

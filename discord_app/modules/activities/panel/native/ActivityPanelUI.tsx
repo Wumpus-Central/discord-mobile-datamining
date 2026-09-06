@@ -32,10 +32,10 @@ class BaseActivityPanelUI {
     items[1] = tmp;
     memo = closure_3.useMemo(() => {
       if (mode !== ActivityPanelModes.DISCONNECTED) {
-        if (tmp === tmp2.PIP) {
+        if (mode === ActivityPanelModes.PIP) {
           return tmp4;
         }
-        tmp4 = tmp === tmp2.PIP ? closure_13 : closure_14;
+        tmp4 = mode === ActivityPanelModes.PIP ? closure_13 : closure_14;
       }
       tmp4 = closure_12;
     }, items);

@@ -1,5 +1,6 @@
 // discord_app/modules/search/native/components/list/rows/GroupDMRow.tsx
 import native from "../../../../../../design/void/native.tsx";
+import Text_Text from "../../../../../../design/components/Text/native/Text.tsx";
 import useChannelNameDefault from "../../../../../channel/useChannelName.tsx";
 import GroupDMAvatarDefault from "../../../../../group_dm/native/GroupDMAvatar.tsx";
 import useRecipientsLabel from "../../../../../main_tabs_v2/useRecipientsLabel.tsx";
@@ -26,7 +27,12 @@ export default function GroupDMRow(channel) {
   let tmp3Result;
   if (null != recipientsLabel) {
     obj = { variant: "text-xs/medium", color: "text-muted", lineClamp: 1, children: recipientsLabel };
-    tmp3Result = tmp3(tmp5(4556).Text, obj);
+    tmp3Result = jsx(Text_Text.Text, {
+      variant: "text-xs/medium",
+      color: "text-muted",
+      lineClamp: 1,
+      children: recipientsLabel,
+    });
   }
   let str2 = str;
   if (str == null) {

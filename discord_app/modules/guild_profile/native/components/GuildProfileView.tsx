@@ -8,6 +8,7 @@ import themes from "../../../../design/utils/shared/themes.tsx";
 import native from "../../../../../discord_common/js/packages/design/native.tsx";
 import useThemeDefault from "../../../../hooks/useTheme.tsx";
 import LinearGradientDefault from "../../../../../_runtime/04987_LinearGradient.js";
+import utils_getDevicePixelRatioDefault from "../../../../utils/getDevicePixelRatio.web.tsx";
 import guild_profile_GuildProfileUtils from "../GuildProfileUtils.tsx";
 import GuildProfileHeaderDefault from "GuildProfileHeader.tsx";
 import GuildProfileGamesDefault from "GuildProfileGames.tsx";
@@ -32,9 +33,9 @@ function GuildProfileBackground(guildProfile) {
     if (null != guildProfile.customBanner) {
       obj = { id: null, splash: null, size: null };
       ({ id: obj3.id, customBanner: obj3.splash } = guildProfile);
-      obj.size = tmp3(9191)() * useWindowDimensionsDefault().width;
+      obj.size = utils_getDevicePixelRatioDefault() * useWindowDimensionsDefault().width;
       obj = { style: tmp4.imageBanner, source: null };
-      obj.source = tmp3(1396).getGuildDiscoverySplashSource(obj);
+      obj.source = AvatarUtilsDefault.getGuildDiscoverySplashSource(obj);
       return closure_8(closure_5, obj);
     }
   }
@@ -48,7 +49,6 @@ function GuildProfileGradient(guildProfile) {
   const profilePrimaryColor = guild_profile_GuildProfileUtils.useProfilePrimaryColor(guildProfile.guildProfile, token);
   obj = { style: tmp.colorBanner, start: frozen.START, end: frozen.END, colors: null };
   const items = [profilePrimaryColor];
-  const tmp5 = React6;
   const tmp6 = LinearGradientDefault;
   const obj5 = native;
   if (isThemeDarkResult) {
@@ -58,7 +58,7 @@ function GuildProfileGradient(guildProfile) {
   }
   items[1] = brightenColorResult;
   obj.colors = items;
-  return tmp5(tmp6, obj);
+  return React6(tmp6, obj);
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, Image: hasOwnProperty } = get_ActivityIndicator);
@@ -104,7 +104,7 @@ const result = size.fileFinishedImporting("modules/guild_profile/native/componen
 
 export default function GuildProfileView(guildProfile) {
   guildProfile = guildProfile.guildProfile;
-  let tmp = createStyles();
+  const tmp = createStyles();
   const items = [guildProfile];
   let obj = { style: tmp.container, children: null };
   const memo = noop.useMemo(() => {
@@ -112,7 +112,7 @@ export default function GuildProfileView(guildProfile) {
       return null;
     } else {
       const obj = { id: null, icon: null, size: 96, canAnimate: true };
-      ({ id: obj2.id, icon: obj2.icon } = tmp);
+      ({ id: obj2.id, icon: obj2.icon } = guildProfile);
       const guildIconSource = obj.getGuildIconSource(obj);
       let uri = null;
       if (typeof guildIconSource !== "number") {
@@ -120,7 +120,6 @@ export default function GuildProfileView(guildProfile) {
       }
       return uri;
     }
-    tmp = guildProfile;
   }, items);
   const items1 = [
     closure_8(GuildProfileBackground, { guildProfile }),
@@ -133,7 +132,7 @@ export default function GuildProfileView(guildProfile) {
   }
   if (tmp5Result) {
     obj = { variant: "text-md/medium", color: "text-subtle", children: guildProfile.description };
-    tmp5Result = tmp5(guildProfile(4556).Text, obj);
+    tmp5Result = closure_8(guildProfile(4556).Text, obj);
   }
   const items2 = [
     tmp5Result,

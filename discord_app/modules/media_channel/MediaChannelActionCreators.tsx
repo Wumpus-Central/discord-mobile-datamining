@@ -4,11 +4,11 @@ import HTTPUtils from "../../../discord_common/js/packages/http-utils/HTTPUtils.
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 
 require = fn;
-let closure_5 = async function _fetchMediaPostEmbed(threadId) {
+let closure_5 = async function _fetchMediaPostEmbed() {
   c5 = 0;
   c6 = 0;
   c4 = 0;
-  return (async (arg0, value) => {
+  return (async (arg0) => {
     closure_2 = tmp3;
     closure_129_0 = threadId;
     DispatcherDefault.dispatch({ type: "MEDIA_POST_EMBED_FETCH", threadId });
@@ -35,11 +35,11 @@ let closure_5 = async function _fetchMediaPostEmbed(threadId) {
     return value;
   })();
 };
-let closure_6 = async function _unfurlEmbedUrl(urls) {
+let closure_6 = async function _unfurlEmbedUrl() {
   c5 = 0;
   c6 = 0;
   c4 = 0;
-  return (async (arg0, value) => {
+  return (async (arg0) => {
     if (c6 === 2) {
       c6 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");

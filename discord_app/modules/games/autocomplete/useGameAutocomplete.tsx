@@ -65,7 +65,7 @@ export const useDebouncedGameAutocomplete = function useDebouncedGameAutocomplet
   const effect = noop.useEffect(() => {
     if (current !== ref.current) {
       if (null != tmp) {
-        if (null != tmp2.current) {
+        if (null != ref.current) {
           const _Date2 = Date;
           function emit() {
             ref2.current = Date.now();
@@ -83,7 +83,7 @@ export const useDebouncedGameAutocomplete = function useDebouncedGameAutocomplet
       }
       const _Date = Date;
       ref2.current = Date.now();
-      tmp2.current = tmp;
+      ref.current = tmp;
       _undefined(tmp);
     }
   }, items);

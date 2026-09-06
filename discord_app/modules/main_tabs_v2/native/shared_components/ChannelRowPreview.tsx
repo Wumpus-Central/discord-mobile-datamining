@@ -2,6 +2,7 @@
 import UserSettings from "../../../user_settings/UserSettings.tsx";
 import useToken from "../../../../design/tokens/native/useToken.tsx";
 import LinkIcon from "../../../../design/components/Icon/native/redesign/generated/LinkIcon.tsx";
+import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import createStyles from "../../../../design/components/Styles/native/createStyles.tsx";
 import useFontScale from "../../../screen/native/useFontScale.tsx";
 import ImageIcon from "../../../../design/components/Icon/native/redesign/generated/ImageIcon.tsx";
@@ -21,7 +22,6 @@ import ChannelListLayout from "guild_channels/layouts/ChannelListLayout.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import RelationshipStore from "../../../../stores/RelationshipStore.tsx";
 
-const Text_Text = tmp(4556);
 require = fn;
 function PreviewIcon(icon) {
   icon = icon.icon;
@@ -287,4 +287,5 @@ export const NativeMessageChannelRowPreview = noop.memo((message) => {
   obj = {};
   const merged1 = Object.assign(message);
   tmp7 = closure_6(ChannelRowPreview, obj);
+  obj2 = require("useFormattedMessagePreview");
 });

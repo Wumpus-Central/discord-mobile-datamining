@@ -31,7 +31,7 @@ export default function HappeningNowCardUnifiedVC(arg0) {
       if (null == channelId) {
         return {};
       } else {
-        const allApplicationStreamsForChannel = ApplicationStreamingStore.getAllApplicationStreamsForChannel(tmp);
+        const allApplicationStreamsForChannel = ApplicationStreamingStore.getAllApplicationStreamsForChannel(channelId);
         if (allApplicationStreamsForChannel.length > 0) {
           const found = allApplicationStreamsForChannel.find((ownerId) => friend.isFriend(ownerId.ownerId));
           if (null != found) {
@@ -39,7 +39,7 @@ export default function HappeningNowCardUnifiedVC(arg0) {
             return obj;
           }
         }
-        const embeddedActivitiesForChannel = EmbeddedActivitiesStore.getEmbeddedActivitiesForChannel(tmp);
+        const embeddedActivitiesForChannel = EmbeddedActivitiesStore.getEmbeddedActivitiesForChannel(channelId);
         const tmp7 = findActivityWithMostParticipantsDefault(embeddedActivitiesForChannel);
         if (null != tmp7) {
           obj = { activity: tmp7 };
@@ -93,7 +93,7 @@ export const useCallActivityData = function useCallActivityData(channel_id) {
       if (null == channelId) {
         return {};
       } else {
-        const allApplicationStreamsForChannel = ApplicationStreamingStore.getAllApplicationStreamsForChannel(tmp);
+        const allApplicationStreamsForChannel = ApplicationStreamingStore.getAllApplicationStreamsForChannel(channelId);
         if (allApplicationStreamsForChannel.length > 0) {
           const found = allApplicationStreamsForChannel.find((ownerId) => friend.isFriend(ownerId.ownerId));
           if (null != found) {
@@ -101,7 +101,7 @@ export const useCallActivityData = function useCallActivityData(channel_id) {
             return obj;
           }
         }
-        const embeddedActivitiesForChannel = EmbeddedActivitiesStore.getEmbeddedActivitiesForChannel(tmp);
+        const embeddedActivitiesForChannel = EmbeddedActivitiesStore.getEmbeddedActivitiesForChannel(channelId);
         const tmp7 = findActivityWithMostParticipantsDefault(embeddedActivitiesForChannel);
         if (null != tmp7) {
           obj = { activity: tmp7 };

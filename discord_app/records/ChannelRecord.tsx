@@ -785,8 +785,8 @@ Object.defineProperty(prototype, "accessPermissions", {
   },
   set: undefined,
 });
-prototype["hasFlag"] = function hasFlag(arg0) {
-  return FlagUtils.hasFlag(this.flags, arg0);
+prototype["hasFlag"] = function hasFlag(IS_ANIMATED) {
+  return FlagUtils.hasFlag(this.flags, IS_ANIMATED);
 };
 Object.defineProperty(prototype, "isHDStreamSplashed", {
   get: function isHDStreamSplashed() {
@@ -1943,8 +1943,8 @@ export const TEXT_CHANNEL_TYPES = set11;
 export const isTextChannel = function isTextChannel(type) {
   return set11.has(type);
 };
-export const isVoiceChannel = function isVoiceChannel(arg0) {
-  return set12.has(arg0);
+export const isVoiceChannel = function isVoiceChannel(type) {
+  return set12.has(type);
 };
 export const isGuildReadableType = function isGuildReadableType(type) {
   return set13.has(type);

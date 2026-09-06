@@ -55,11 +55,18 @@ export default noop.memo(function InstantInviteShareApps(onItemPressed) {
           },
           maxFontSizeMultiplier: 2,
         };
-        let tmpResult = tmp(onItemPressed(_undefined[9]).ImageButton, obj);
+        let tmpResult = jsx(onItemPressed(_undefined[9]).ImageButton, {
+          image: fullIcon,
+          label: getLabel(),
+          onPress() {
+            return onItemPressed(closure_1_0);
+          },
+          maxFontSizeMultiplier: 2,
+        });
       } else {
         if (null == IconComponent) {
           if (icon == null) {
-            icon = closure_1(tmp4[11]);
+            icon = closure_1(_undefined[11]);
           }
           IconComponent = icon;
         }
@@ -72,11 +79,18 @@ export default noop.memo(function InstantInviteShareApps(onItemPressed) {
           },
           maxFontSizeMultiplier: 2,
         };
-        tmpResult = tmp(onItemPressed(_undefined[10]).IconButton, obj1);
-        tmp4 = _undefined;
+        tmpResult = jsx(onItemPressed(_undefined[10]).IconButton, {
+          variant: "secondary",
+          icon: IconComponent,
+          label: getLabel(),
+          onPress() {
+            return onItemPressed(closure_1_0);
+          },
+          maxFontSizeMultiplier: 2,
+        });
       }
       obj.children = tmpResult;
-      return <closure_1_5 key={arg0.type} maxWidth={76 * closure_1} />;
+      return <closure_1_5 key={type.type} maxWidth={76 * closure_1} />;
     }),
   };
   let items = [tmp.contentContainer, onItemPressed.contentContainerStyle];
@@ -97,11 +111,18 @@ export default noop.memo(function InstantInviteShareApps(onItemPressed) {
             },
             maxFontSizeMultiplier: 2,
           };
-          let tmpResult = tmp(onItemPressed(_undefined[9]).ImageButton, obj);
+          let tmpResult = jsx(onItemPressed(_undefined[9]).ImageButton, {
+            image: fullIcon,
+            label: getLabel(),
+            onPress() {
+              return onItemPressed(closure_1_0);
+            },
+            maxFontSizeMultiplier: 2,
+          });
         } else {
           if (null == IconComponent) {
             if (icon == null) {
-              icon = closure_1(tmp4[11]);
+              icon = closure_1(_undefined[11]);
             }
             IconComponent = icon;
           }
@@ -114,11 +135,18 @@ export default noop.memo(function InstantInviteShareApps(onItemPressed) {
             },
             maxFontSizeMultiplier: 2,
           };
-          tmpResult = tmp(onItemPressed(_undefined[10]).IconButton, obj1);
-          tmp4 = _undefined;
+          tmpResult = jsx(onItemPressed(_undefined[10]).IconButton, {
+            variant: "secondary",
+            icon: IconComponent,
+            label: getLabel(),
+            onPress() {
+              return onItemPressed(closure_1_0);
+            },
+            maxFontSizeMultiplier: 2,
+          });
         }
         obj.children = tmpResult;
-        return <closure_1_5 key={arg0.type} maxWidth={76 * closure_1} />;
+        return <closure_1_5 key={type.type} maxWidth={76 * closure_1} />;
       })}
     </closure_6>
   );

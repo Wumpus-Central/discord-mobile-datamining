@@ -17,7 +17,7 @@ function _fetchSocialLayerStorefront() {
   }
   return applyArgumentsResult;
 }
-let closure_13 = async function _fetchSocialLayerStorefront2(arg0, value) {
+let closure_13 = async function _fetchSocialLayerStorefront2(arg0) {
   if (c9 === 2) {
     c9 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -267,7 +267,7 @@ function _fetchSocialLayerStorefrontSkuWithUrl() {
   }
   return applyArgumentsResult;
 }
-let closure_15 = async function _fetchSocialLayerStorefrontSkuWithUrl2(arg0, value) {
+let closure_15 = async function _fetchSocialLayerStorefrontSkuWithUrl2(arg0) {
   if (c8 === 2) {
     c8 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -420,281 +420,296 @@ let closure_15 = async function _fetchSocialLayerStorefrontSkuWithUrl2(arg0, val
     }
   }
 };
-function getOrCreateBackoff(get, arg1) {
-  value = get.get(arg1);
+function getOrCreateBackoff(get, applicationId) {
+  value = get.get(applicationId);
   if (null == value) {
     const tmp8 = new BackoffDefault(closure_17, closure_18);
-    const result = get.set(arg1, tmp8);
+    const result = get.set(applicationId, tmp8);
     value = tmp8;
   }
   return value;
 }
-let closure_22 = async function _fetchSocialLayerStorefrontEntries(arg0, value) {
-  if (c6 === 2) {
-    c6 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp7 === 3) {
-    if (arg0 === 1) {
-      throw value;
-    } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
-    } else {
-      return { value: "HermesInternal", done: null };
-    }
-  } else {
-    try {
-      c6 = 2;
-      if (0 === c5) {
-        if (arg0 === 1) {
-          c6 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c6 = 3;
-          obj = { value, done: true };
-          return obj;
-        } else {
-          closure_2 = tmp3;
-          closure_1 = tmp5;
-          closure_129_0 = closure_0;
-          closure_129_1 = undefined;
-          let body;
-          storefrontEntries = storefrontEntries.getStorefrontEntries(closure_0);
-          let state;
-          if (storefrontEntries != null) {
-            state = storefrontEntries.state;
-          }
-          if ("loading" !== state) {
-            const tmp53 = getOrCreateBackoff(map, tmp48);
-            closure_129_1 = tmp53;
-            let state1;
-            if (storefrontEntries != null) {
-              state1 = storefrontEntries.state;
-            }
-            if ("error" !== state1) {
-              let state2;
-              if (storefrontEntries != null) {
-                state2 = storefrontEntries.state;
-              }
-              if ("fetched" === state2) {
-                const _Date2 = Date;
-              }
-              c4 = 1;
-              let obj3 = DispatcherDefault;
-              let obj1 = { type: "SOCIAL_LAYER_STOREFRONT_ENTRIES_LOAD", applicationId: tmp48 };
-              obj3.dispatch(obj1);
-              const HTTP = require("HTTPUtils").HTTP;
-              const obj2 = { url: Endpoints.SOCIAL_LAYER_STOREFRONTS_ALL(tmp48), rejectWithError: true, retries: 3 };
-              c5 = 2;
-              c6 = 1;
-              obj3 = { value: HTTP.get(obj2), done: false };
-              return obj3;
-            } else {
-              const _Date = Date;
-            }
-          }
-        }
-      } else {
-        if (1 === tmp8) {
-          c4 = 0;
-          closure_129_1.fail();
-          obj1 = closure_130_1(closure_130_2[5]);
-          const obj4 = { type: "SOCIAL_LAYER_STOREFRONT_ENTRIES_LOAD_FAILURE", applicationId: closure_129_0 };
-          obj1.dispatch(obj4);
-        } else if (arg0 === 1) {
-          c6 = 3;
-          throw value;
-        } else if (arg0 !== 2) {
-          body = value.body;
-          closure_129_1.succeed();
-          const obj5 = {
-            type: "SOCIAL_LAYER_STOREFRONT_ENTRIES_LOAD_SUCCESS",
-            applicationId: closure_129_0,
-            entries: body.map(closure_130_0(closure_130_2[6]).transformSlayerApplicationStorefrontSummaryServer),
-          };
-          closure_130_1(closure_130_2[5]).dispatch(obj5);
-          c4 = 0;
-          const obj10 = closure_130_1(closure_130_2[5]);
-        }
-        c4 = 0;
-        c6 = 3;
-        obj = { value, done: true };
-        return obj;
-      }
+let closure_22 = async function _fetchSocialLayerStorefrontEntries() {
+  c5 = 0;
+  c6 = 0;
+  c4 = 0;
+  return (async (arg0) => {
+    if (c6 === 2) {
       c6 = 3;
-    } catch (tmp28) {
-      closure_3 = tmp28;
-      if (tmp4 === c4) {
-        c6 = tmp2;
-        throw tmp28;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp7 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        let obj = { value, done: true };
+        return obj;
       } else {
-        c5 = tmp;
+        return { value: "HermesInternal", done: null };
       }
-    }
-  }
-};
-let closure_23 = async function _fetchSocialLayerStorefrontById(arg0, value) {
-  if (c8 === 2) {
-    c8 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp7 === 3) {
-    if (arg0 === 1) {
-      throw value;
-    } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
     } else {
-      return { value: "HermesInternal", done: null };
-    }
-  } else {
-    try {
-      c8 = 2;
-      if (0 === c7) {
-        if (arg0 === 1) {
-          c8 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c8 = 3;
-          obj = { value, done: true };
-          return obj;
-        } else {
-          closure_4 = tmp3;
-          closure_3 = tmp5;
-          closure_131_0 = closure_0;
-          closure_131_1 = closure_1;
-          closure_131_2 = undefined;
-          closure_131_3 = undefined;
-          let body;
-          closure_131_5 = undefined;
-          storefrontById = storefrontById.getStorefrontById(closure_1);
-          let state;
-          if (storefrontById != null) {
-            state = storefrontById.state;
-          }
-          if ("loading" !== state) {
-            const tmp91 = getOrCreateBackoff(map1, tmp86);
-            closure_131_2 = tmp91;
-            let state1;
-            if (storefrontById != null) {
-              state1 = storefrontById.state;
+      try {
+        c6 = 2;
+        if (0 === c5) {
+          if (arg0 === 1) {
+            c6 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c6 = 3;
+            obj = { value, done: true };
+            return obj;
+          } else {
+            closure_2 = tmp3;
+            closure_1 = tmp5;
+            closure_129_0 = applicationId;
+            closure_129_1 = undefined;
+            let body;
+            storefrontEntries = storefrontEntries.getStorefrontEntries(applicationId);
+            let state;
+            if (storefrontEntries != null) {
+              state = storefrontEntries.state;
             }
-            if ("error" === state1) {
-              if (null != storefrontById.fetchedAt) {
+            if ("loading" !== state) {
+              closure_129_1 = getOrCreateBackoff(map, applicationId);
+              let state1;
+              if (storefrontEntries != null) {
+                state1 = storefrontEntries.state;
+              }
+              if ("error" !== state1) {
+                let state2;
+                if (storefrontEntries != null) {
+                  state2 = storefrontEntries.state;
+                }
+                if ("fetched" === state2) {
+                  const _Date2 = Date;
+                }
+                c4 = 1;
+                let obj3 = DispatcherDefault;
+                let obj1 = { type: "SOCIAL_LAYER_STOREFRONT_ENTRIES_LOAD", applicationId };
+                obj3.dispatch(obj1);
+                const HTTP = require("HTTPUtils").HTTP;
+                const obj2 = {
+                  url: Endpoints.SOCIAL_LAYER_STOREFRONTS_ALL(applicationId),
+                  rejectWithError: true,
+                  retries: 3,
+                };
+                c5 = 2;
+                c6 = 1;
+                obj3 = { value: HTTP.get(obj2), done: false };
+                return obj3;
+              } else {
                 const _Date = Date;
               }
+              const tmp53 = getOrCreateBackoff(map, applicationId);
             }
-            let state2;
-            if (storefrontById != null) {
-              state2 = storefrontById.state;
-            }
-            if ("fetched" === state2) {
-              if (null != storefrontById.fetchedAt) {
-                const _Date2 = Date;
-              }
-            }
-            c6 = 1;
-            const obj1 = { type: "SOCIAL_LAYER_STOREFRONT_BY_ID_LOAD", storefrontId: tmp86 };
-            DispatcherDefault.dispatch(obj1);
-            const obj2 = {};
-            if (obj17.isTestModeForApplication(tmp85)) {
-              obj2.test_mode = true;
-            }
-            promotionIdOverride = promotionIdOverride.getPromotionIdOverride();
-            if (null != promotionIdOverride) {
-              obj2.promotion_id_override = promotionIdOverride;
-            }
-            const HTTP = require("HTTPUtils").HTTP;
-            const request = {
-              url: Endpoints.SOCIAL_LAYER_STOREFRONT_BY_ID(tmp85, tmp86),
-              query: obj2,
-              rejectWithError: true,
-              retries: 3,
+          }
+        } else {
+          if (1 === tmp8) {
+            c4 = 0;
+            closure_129_1.fail();
+            obj1 = closure_130_1(closure_130_2[5]);
+            const obj4 = { type: "SOCIAL_LAYER_STOREFRONT_ENTRIES_LOAD_FAILURE", applicationId: closure_129_0 };
+            obj1.dispatch(obj4);
+          } else if (arg0 === 1) {
+            c6 = 3;
+            throw value;
+          } else if (arg0 !== 2) {
+            body = value.body;
+            closure_129_1.succeed();
+            const obj5 = {
+              type: "SOCIAL_LAYER_STOREFRONT_ENTRIES_LOAD_SUCCESS",
+              applicationId: closure_129_0,
+              entries: body.map(closure_130_0(closure_130_2[6]).transformSlayerApplicationStorefrontSummaryServer),
             };
-            c7 = 2;
-            c8 = 1;
-            let obj3 = { value: HTTP.get(request), done: false };
-            return obj3;
+            closure_130_1(closure_130_2[5]).dispatch(obj5);
+            c4 = 0;
+            const obj10 = closure_130_1(closure_130_2[5]);
           }
+          c4 = 0;
+          c6 = 3;
+          obj = { value, done: true };
+          return obj;
         }
-      } else {
-        if (1 === tmp8) {
-          c6 = 0;
-          closure_131_2.fail();
-          const obj4 = { type: "SOCIAL_LAYER_STOREFRONT_BY_ID_LOAD_FAILURE", storefrontId: closure_131_1 };
-          closure_132_1(closure_132_2[5]).dispatch(obj4);
-          if (closure_132_5.getPreviewStorefrontId(closure_131_0) === closure_131_1) {
-            closure_132_24(closure_131_0, null);
-          }
-          const obj12 = closure_132_1(closure_132_2[5]);
-        } else if (arg0 === 1) {
-          c8 = 3;
-          throw value;
-        } else if (arg0 !== 2) {
-          closure_131_3 = value;
-          body = closure_131_3.body;
-          closure_131_5 = closure_132_0(closure_132_2[6]).transformSlayerApplicationStorefrontServer(body);
-          if (null != closure_131_5.storefrontPricing) {
-            obj = closure_132_1(closure_132_2[5]);
-            let obj5 = { type: "SKUS_PRICING_FETCH_SUCCESS", priceId: null, data: null };
-            const obj6 = { type: "application", applicationId: closure_131_5.applicationId };
-            obj5.priceId = obj6;
-            obj5.data = closure_131_5.storefrontPricing;
-            obj.dispatch(obj5);
-          }
-          obj3 = closure_132_1(closure_132_2[5]);
-          let obj7 = {
-            type: "SOCIAL_LAYER_STOREFRONT_BY_ID_LOAD_SUCCESS",
-            storefrontId: closure_131_1,
-            storefront: closure_131_5,
-          };
-          obj3.dispatch(obj7);
-          obj5 = closure_132_1(closure_132_2[5]);
-          let obj8 = {
-            type: "SOCIAL_LAYER_STOREFRONT_METADATA_LOAD_SUCCESS",
-            applicationId: closure_131_5.applicationId,
-            storefrontMetadata: null,
-          };
-          obj7 = closure_132_0(closure_132_2[6]);
-          obj8.storefrontMetadata = obj7.transformStorefrontMetadataServer(body);
-          obj5.dispatch(obj8);
-          obj8 = closure_132_1(closure_132_2[5]);
-          const store_listings = closure_131_3.body.store_listings;
-          let storeListings = store_listings;
-          if (store_listings == null) {
-            storeListings = [];
-          }
-          const obj9 = { type: "STORE_LISTINGS_FETCH_SUCCESS", storeListings };
-          obj8.dispatch(obj9);
-          closure_131_2.succeed();
-          c6 = 0;
-          const obj22 = closure_132_0(closure_132_2[6]);
+        c6 = 3;
+      } catch (tmp28) {
+        closure_3 = tmp28;
+        if (tmp4 === c4) {
+          c6 = tmp2;
+          throw tmp28;
+        } else {
+          c5 = tmp;
         }
-        c6 = 0;
-        c8 = 3;
-        const obj10 = { value, done: true };
-        return obj10;
-      }
-      c8 = 3;
-    } catch (tmp64) {
-      closure_5 = tmp64;
-      if (tmp4 === c6) {
-        c8 = tmp2;
-        throw tmp64;
-      } else {
-        c7 = tmp;
       }
     }
-  }
+  })();
+};
+let closure_23 = async function _fetchSocialLayerStorefrontById(arg0) {
+  closure_0 = arg0;
+  c7 = 0;
+  c8 = 0;
+  c6 = 0;
+  return (async (arg0, value) => {
+    if (c8 === 2) {
+      c8 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp7 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        let obj = { value, done: true };
+        return obj;
+      } else {
+        return { value: "HermesInternal", done: null };
+      }
+    } else {
+      try {
+        c8 = 2;
+        if (0 === c7) {
+          if (arg0 === 1) {
+            c8 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c8 = 3;
+            obj = { value, done: true };
+            return obj;
+          } else {
+            closure_4 = tmp3;
+            closure_3 = tmp5;
+            closure_131_0 = closure_0;
+            closure_131_1 = storefrontId;
+            closure_131_2 = undefined;
+            closure_131_3 = undefined;
+            let body;
+            closure_131_5 = undefined;
+            storefrontById = storefrontById.getStorefrontById(storefrontId);
+            let state;
+            if (storefrontById != null) {
+              state = storefrontById.state;
+            }
+            if ("loading" !== state) {
+              closure_131_2 = getOrCreateBackoff(map1, storefrontId);
+              let state1;
+              if (storefrontById != null) {
+                state1 = storefrontById.state;
+              }
+              if ("error" === state1) {
+                if (null != storefrontById.fetchedAt) {
+                  const _Date = Date;
+                }
+              }
+              let state2;
+              if (storefrontById != null) {
+                state2 = storefrontById.state;
+              }
+              if ("fetched" === state2) {
+                if (null != storefrontById.fetchedAt) {
+                  const _Date2 = Date;
+                }
+              }
+              c6 = 1;
+              const tmp91 = getOrCreateBackoff(map1, storefrontId);
+              const obj1 = { type: "SOCIAL_LAYER_STOREFRONT_BY_ID_LOAD", storefrontId };
+              DispatcherDefault.dispatch(obj1);
+              const obj2 = {};
+              if (obj17.isTestModeForApplication(closure_0)) {
+                obj2.test_mode = true;
+              }
+              promotionIdOverride = promotionIdOverride.getPromotionIdOverride();
+              if (null != promotionIdOverride) {
+                obj2.promotion_id_override = promotionIdOverride;
+              }
+              const HTTP = require("HTTPUtils").HTTP;
+              const request = {
+                url: Endpoints.SOCIAL_LAYER_STOREFRONT_BY_ID(closure_0, storefrontId),
+                query: obj2,
+                rejectWithError: true,
+                retries: 3,
+              };
+              c7 = 2;
+              c8 = 1;
+              let obj3 = { value: HTTP.get(request), done: false };
+              return obj3;
+            }
+          }
+        } else {
+          if (1 === tmp8) {
+            c6 = 0;
+            closure_131_2.fail();
+            const obj4 = { type: "SOCIAL_LAYER_STOREFRONT_BY_ID_LOAD_FAILURE", storefrontId: closure_131_1 };
+            closure_132_1(closure_132_2[5]).dispatch(obj4);
+            if (closure_132_5.getPreviewStorefrontId(closure_131_0) === closure_131_1) {
+              closure_132_24(closure_131_0, null);
+            }
+            const obj12 = closure_132_1(closure_132_2[5]);
+          } else if (arg0 === 1) {
+            c8 = 3;
+            throw value;
+          } else if (arg0 !== 2) {
+            closure_131_3 = value;
+            body = closure_131_3.body;
+            closure_131_5 = closure_132_0(closure_132_2[6]).transformSlayerApplicationStorefrontServer(body);
+            if (null != closure_131_5.storefrontPricing) {
+              obj = closure_132_1(closure_132_2[5]);
+              let obj5 = { type: "SKUS_PRICING_FETCH_SUCCESS", priceId: null, data: null };
+              const obj6 = { type: "application", applicationId: closure_131_5.applicationId };
+              obj5.priceId = obj6;
+              obj5.data = closure_131_5.storefrontPricing;
+              obj.dispatch(obj5);
+            }
+            obj3 = closure_132_1(closure_132_2[5]);
+            let obj7 = {
+              type: "SOCIAL_LAYER_STOREFRONT_BY_ID_LOAD_SUCCESS",
+              storefrontId: closure_131_1,
+              storefront: closure_131_5,
+            };
+            obj3.dispatch(obj7);
+            obj5 = closure_132_1(closure_132_2[5]);
+            let obj8 = {
+              type: "SOCIAL_LAYER_STOREFRONT_METADATA_LOAD_SUCCESS",
+              applicationId: closure_131_5.applicationId,
+              storefrontMetadata: null,
+            };
+            obj7 = closure_132_0(closure_132_2[6]);
+            obj8.storefrontMetadata = obj7.transformStorefrontMetadataServer(body);
+            obj5.dispatch(obj8);
+            obj8 = closure_132_1(closure_132_2[5]);
+            const store_listings = closure_131_3.body.store_listings;
+            storeListings = store_listings;
+            if (store_listings == null) {
+              storeListings = [];
+            }
+            const obj9 = { type: "STORE_LISTINGS_FETCH_SUCCESS", storeListings };
+            obj8.dispatch(obj9);
+            closure_131_2.succeed();
+            c6 = 0;
+            const obj22 = closure_132_0(closure_132_2[6]);
+          }
+          c6 = 0;
+          c8 = 3;
+          const obj10 = { value, done: true };
+          return obj10;
+        }
+        c8 = 3;
+      } catch (tmp64) {
+        closure_5 = tmp64;
+        if (tmp4 === c6) {
+          c8 = tmp2;
+          throw tmp64;
+        } else {
+          c7 = tmp;
+        }
+      }
+    }
+  })();
 };
 function setSocialLayerStorefrontPreview(applicationId, storefrontId) {
   const obj = { type: "SOCIAL_LAYER_STOREFRONT_SET_PREVIEW", applicationId, storefrontId };
   obj.dispatch(obj);
 }
-let closure_25 = async function _fetchSocialLayerStorefrontAnnouncement(guildId) {
+let closure_25 = async function _fetchSocialLayerStorefrontAnnouncement() {
   c5 = 0;
   c6 = 0;
   c4 = 0;
-  return (async (arg0, value) => {
+  return (async (arg0) => {
     closure_2 = tmp3;
     closure_129_0 = guildId;
     DispatcherDefault.dispatch({ type: "SOCIAL_LAYER_STOREFRONT_ANNOUNCEMENT_FETCH_START", guildId });
@@ -746,7 +761,7 @@ let closure_25 = async function _fetchSocialLayerStorefrontAnnouncement(guildId)
     return value;
   })();
 };
-let closure_26 = async function _fetchSocialLayerStorefrontConfig(arg0, value) {
+let closure_26 = async function _fetchSocialLayerStorefrontConfig() {
   if (c5 === 2) {
     c5 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -908,9 +923,9 @@ let closure_27 = async function _fetchSocialLayerStorefrontLaunchAnnouncement() 
     c13 = 3;
   } else if (arg0 === 1) {
     c13 = 3;
-    throw arg1;
+    throw value;
   } else if (arg0 !== 2) {
-    const body = arg1.body;
+    const body = value.body;
     c0 = body;
     if (body == null) {
       c0 = null;
@@ -985,7 +1000,7 @@ let closure_27 = async function _fetchSocialLayerStorefrontLaunchAnnouncement() 
     c11 = 0;
     closure_137_1(closure_137_2[5]);
   }
-  return arg1;
+  return value;
 };
 const Endpoints = fn(1074).Endpoints;
 let closure_7 = 30 * DurationsDefault.Millis.SECOND;

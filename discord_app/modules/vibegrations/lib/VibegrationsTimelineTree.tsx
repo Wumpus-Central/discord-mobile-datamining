@@ -89,11 +89,10 @@ function buildTimelineTree(steps, arg1) {
         };
         obj2.task = obj3;
         obj2.steps = [];
-        const result2 = obj6.set(taskId, obj2);
+        const result2 = map.set(taskId, obj2);
         value1 = obj2;
       }
       task = value1.task;
-      obj6 = map;
     } else if (task == null) {
       const obj4 = {
         id: "task",
@@ -112,7 +111,7 @@ function buildTimelineTree(steps, arg1) {
   }
   let items = [];
   const map = new Map();
-  map1 = new Map();
+  new Map();
   let sum1 = 0;
   const segmentOf = scanTurnColumn(steps).segmentOf;
   const size = (function cancelledLaneIds(steps) {
@@ -149,19 +148,19 @@ function buildTimelineTree(steps, arg1) {
   function _loop() {
     let hasItem = 0 !== size.size;
     if (hasItem) {
-      hasItem = "error" !== tmp.kind;
+      hasItem = "error" !== _undefined.kind;
     }
     if (hasItem) {
-      hasItem = "terminal_error" !== tmp.kind;
+      hasItem = "terminal_error" !== _undefined.kind;
     }
     if (hasItem) {
-      hasItem = null != tmp.task_id;
+      hasItem = null != _undefined.task_id;
     }
     if (hasItem) {
-      hasItem = "" !== tmp.task_id;
+      hasItem = "" !== _undefined.task_id;
     }
     if (hasItem) {
-      hasItem = obj.has(tmp.task_id);
+      hasItem = size.has(_undefined.task_id);
     }
     if (hasItem) {
       return 0;
@@ -170,9 +169,9 @@ function buildTimelineTree(steps, arg1) {
       if (num == null) {
         num = 0;
       }
-      if ("node" === tmp.kind) {
-        if (null != tmp.node) {
-          ({ node, task_id } = tmp);
+      if ("node" === _undefined.kind) {
+        if (null != _undefined.node) {
+          ({ node, task_id } = _undefined);
           ({ id, node_kind } = node);
           if (node_kind == null) {
             node_kind = "step";
@@ -235,21 +234,20 @@ function buildTimelineTree(steps, arg1) {
           return 0;
         }
       }
-      if ("error" === tmp.kind) {
+      if ("error" === _undefined.kind) {
         const _HermesInternal = HermesInternal;
-        const tmp10 = ensure(undefined, "" + tmp.kind + "-" + c8, "step", num);
+        const tmp10 = ensure(undefined, "" + _undefined.kind + "-" + c8, "step", num);
         sum1 = sum1 + 1;
         tmp10.touched = sum1;
         tmp10.labelKey = "error";
         tmp10.status = "failed";
         if (tmp13) {
-          const items2 = [tmp.message];
+          const items2 = [_undefined.message];
           tmp10.detail = items2;
         }
-        tmp13 = null != tmp.message && "" !== tmp.message;
+        tmp13 = null != _undefined.message && "" !== _undefined.message;
       }
     }
-    obj = size;
   }
   const entries = steps.entries();
   while (tmp3 !== undefined) {
@@ -292,19 +290,18 @@ function scanTurnColumn(arr) {
   while (tmp4 !== undefined) {
     let tmp7 = _slicedToArray(tmp5, 2);
     [tmp8, tmp9] = tmp7;
-    let tmp10 = tmp9;
     let segment = tmp9.segment;
     let tmp11 = segment;
     if (segment == null) {
       segment = num;
     }
     arr = segmentOf.push(segment);
-    if ("thinking" !== tmp10.kind) {
-      if (!isTurnWorkFrame(tmp10)) {
-        if ("todos" !== tmp10.kind) {
-          if ("assistant_delta" === tmp10.kind) {
-            if (null == tmp10.task_id) {
-              let str = tmp10.message;
+    if ("thinking" !== tmp9.kind) {
+      if (!isTurnWorkFrame(tmp9)) {
+        if ("todos" !== tmp9.kind) {
+          if ("assistant_delta" === tmp9.kind) {
+            if (null == tmp9.task_id) {
+              let str = tmp9.message;
               if (str == null) {
                 str = "";
               }
@@ -328,13 +325,13 @@ function scanTurnColumn(arr) {
                   tmp.content = tmp28;
                 }
               }
-              if (true === tmp10.message_finished) {
+              if (true === tmp9.message_finished) {
                 tmp = null;
               }
             }
           }
         } else {
-          let items2 = tmp10.items;
+          let items2 = tmp9.items;
           if (items2 == null) {
             items2 = [];
           }
@@ -494,8 +491,7 @@ export { segmentDurations };
 export const turnSegments = function turnSegments(arr) {
   let hasItem;
   let tmp19;
-  arr = arg1;
-  if (arg1 === undefined) {
+  if (arr === undefined) {
     arr = {};
   }
   let flag = arr.turnActive;

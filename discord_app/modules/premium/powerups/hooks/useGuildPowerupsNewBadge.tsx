@@ -12,18 +12,18 @@ let closure_8 = fn(1943).DismissibleContent.GUILD_POWERUP_NEW_PERK_AVAILABLE_BAD
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/premium/powerups/hooks/useGuildPowerupsNewBadge.tsx");
 
-export default function useGuildPowerupsNewBadge(arg0) {
+export default function useGuildPowerupsNewBadge(guildId) {
   let flag = arg1;
   if (arg1 === undefined) {
     flag = false;
   }
   _require = undefined;
   importDefault = undefined;
-  closure_129_0 = arg0;
+  closure_129_0 = guildId;
   let obj = require("initialize");
   const items = [GuildPowerupsStore];
   const stateFromStores = obj.useStateFromStores(items, () => GuildPowerupsStore.getStateForGuild(closure_0));
-  const tmp4Result = useGuildPowerupNewPerkMarketingVersionDefault(arg0, stateFromStores);
+  const tmp4Result = useGuildPowerupNewPerkMarketingVersionDefault(guildId, stateFromStores);
   let num = 0;
   if (tmp4Result >= constants.GUILD_THEME) {
     num = tmp4Result;

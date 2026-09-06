@@ -1,9 +1,9 @@
 // discord_app/modules/premium/promotions/MarketingComponentHooks.tsx
 import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
+import themes from "../../../design/utils/shared/themes.tsx";
 import useThemeDefault from "../../../hooks/useTheme.tsx";
 import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
 
-const themes = tmp3(4269);
 require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/promotions/MarketingComponentHooks.tsx");

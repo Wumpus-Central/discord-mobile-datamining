@@ -19,7 +19,7 @@ function HeaderRow(guild) {
   noop = undefined;
   c6 = undefined;
   c7 = undefined;
-  closure_8 = async function _handleImagePicker(arg0, value) {
+  closure_8 = async function _handleImagePicker() {
     if (c8 === 2) {
       c8 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -197,7 +197,7 @@ function HeaderRow(guild) {
   if (canCreateExpressions) {
     let obj5 = {
       size: "sm",
-      loading: tmp3,
+      loading: isUploading,
       onPress: function handleImagePicker() {
         const self = this;
         const apply = closure_8.apply;
@@ -214,13 +214,13 @@ function HeaderRow(guild) {
     const intl5 = tmp7(1114).intl;
     obj5.text = intl5.string(tmp7(1114).t["DU0dy/"]);
     obj5.disabled = uploadDisabled;
-    canCreateExpressions = tmp13(tmp7(4975).Button, obj5);
+    canCreateExpressions = closure_14(tmp7(4975).Button, obj5);
   }
   const items1 = [canCreateExpressions, ,];
   let tmp13Result = null != tmp5;
   if (tmp13Result) {
     const obj6 = { style: tmp.errorText, variant: "text-sm/medium", color: "text-feedback-critical", children: tmp5 };
-    tmp13Result = tmp13(tmp7(4556).Text, obj6);
+    tmp13Result = closure_14(tmp7(4556).Text, obj6);
   }
   let obj7 = { children: null };
   items1[1] = tmp13Result;
@@ -232,7 +232,6 @@ function HeaderRow(guild) {
   const obj9 = { variant: "text-xs/bold", color: "text-muted", style: tmp.uploadInstructionsHeading, children: null };
   const intl6 = tmp7(1114).intl;
   const stringResult2 = intl4.string(guild(1114).t["8Vr5Qd"]);
-  const tmp14 = closure_15;
   obj9.children = intl6.string(guild(1114).t.jrXfyw).toUpperCase();
   items2[1] = closure_14(guild(4556).Text, obj9);
   items2[2] = closure_14(c7, {
@@ -259,7 +258,7 @@ function HeaderRow(guild) {
   items1[2] = closure_13(c6, obj8);
   obj4.children = items1;
   obj7.children = closure_13(c6, obj4);
-  return closure_14(tmp14, obj7);
+  return closure_14(closure_15, obj7);
 }
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, FlatList: closure_7 } = get_ActivityIndicator);

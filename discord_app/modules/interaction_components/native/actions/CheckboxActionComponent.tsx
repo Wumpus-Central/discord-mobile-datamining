@@ -27,7 +27,7 @@ export default noop.memo((type) => {
   const memo = noop.useMemo(() => {
     type = undefined;
     if (state != null) {
-      type = iter.type;
+      type = state.type;
     }
     return type === type && state.value;
   }, items);

@@ -31,7 +31,8 @@ function measure(arg0) {
 let closure_10 = async function _readManifest() {
   closure_0 = tmp2;
   const _HermesInternal = HermesInternal;
-  closure_128_0 = await FileManagerUtils.readFile("documents", "" + closure_2_6 + "/" + closure_2_5, "utf8");
+  await FileManagerUtils.readFile("documents", "" + closure_2_6 + "/" + closure_2_5, "utf8");
+  closure_128_0 = value;
   let parsed = null;
   if (null != closure_128_0) {
     const _JSON = JSON;
@@ -44,7 +45,7 @@ let closure_11 = async function _buildOverride(arg0) {
   c7 = 0;
   c8 = 0;
   c6 = 0;
-  return (async (arg0, value) => {
+  return (async (arg0) => {
     if (c8 === 2) {
       c8 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -231,7 +232,7 @@ let module_560 = fn(560);
 module_560 = module_560.create((arg0) => {
   closure_0 = arg0;
   let obj = { override: null, status: "idle", error: null, loadFromDevice: null, clear: null };
-  closure_1 = asyncGeneratorStep(async (arg0, value) => {
+  closure_1 = asyncGeneratorStep(async () => {
     if (c5 === 2) {
       c5 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");

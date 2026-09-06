@@ -107,6 +107,7 @@ function BountyVideoEndAppStorePanelInner(metadata) {
         }
       }
       metadata(revealProgress[9]).runOnJS(callback)();
+      const obj3 = metadata(revealProgress[9]);
     };
     const onUpdateResult = Gesture.Pan().activeOffsetY(8).failOffsetX([-24, 24]).onBegin(fn).onUpdate(fn2);
     fn3.__closure = {

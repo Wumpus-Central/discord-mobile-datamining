@@ -260,7 +260,7 @@ export default noop.memo(function SearchFilterSuggestions(searchContext) {
     }
     return items1;
   }, items3);
-  const callback1 = noop.useCallback((arg0, arr, state, cleanUp) => {
+  const callback1 = noop.useCallback((key, arr, state, cleanUp) => {
     let obj = { state, cleanUp, children: null };
     obj = {
       ref,
@@ -274,15 +274,15 @@ export default noop.memo(function SearchFilterSuggestions(searchContext) {
     };
     obj.children = (
       <View ref={ref} style={memo} collapsable={false} onLayout={onLayout}>
-        {arg1.map((text) => {
+        {arr.map((text) => {
           const merged = Object.assign(text);
           return closure_1_7(ref, {}, text.text);
         })}
       </View>
     );
     return (
-      <AnimatedEnterExitContainer key={arg0} ref={ref} style={memo} collapsable={false} onLayout={onLayout}>
-        {arg1.map((text) => {
+      <AnimatedEnterExitContainer key={key} ref={ref} style={memo} collapsable={false} onLayout={onLayout}>
+        {arr.map((text) => {
           const merged = Object.assign(text);
           return closure_1_7(ref, {}, text.text);
         })}

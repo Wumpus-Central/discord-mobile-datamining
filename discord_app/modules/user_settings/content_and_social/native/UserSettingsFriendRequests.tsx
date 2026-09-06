@@ -31,9 +31,9 @@ export default function UserSettingsFriendRequests() {
   obj.onValueChange = function onValueChange(arg0) {
     const FriendSourceFlagsSetting = setting(dependencyMap[4]).FriendSourceFlagsSetting;
     if (arg0) {
-      let tmp3 = tmp;
+      let tmp3 = closure_1_5;
     } else {
-      tmp3 = tmp & ~constants.NO_RELATION;
+      tmp3 = closure_1_5 & ~constants.NO_RELATION;
     }
     return FriendSourceFlagsSetting.updateSetting(tmp3);
   };

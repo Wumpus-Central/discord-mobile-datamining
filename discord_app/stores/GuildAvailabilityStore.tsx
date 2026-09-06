@@ -5,7 +5,7 @@ import DispatcherDefault from "../Dispatcher.tsx";
 import GuildStore from "GuildStore.tsx";
 
 function handleConnectionOpen(unavailableGuilds) {
-  set = new Set(unavailableGuilds.unavailableGuilds);
+  new Set(unavailableGuilds.unavailableGuilds);
   if (unavailableGuilds.unavailableGuilds.length > 0) {
     const _HermesInternal = HermesInternal;
     logger.warn(
@@ -26,7 +26,7 @@ function handleGuild(guild) {
   }
 }
 const logger = new LoggerDefault("GuildAvailabilityStore");
-let set = new Set();
+const set = new Set();
 const Store = initializeDefault.Store;
 class GuildAvailabilityStore extends Store {}
 const prototype = GuildAvailabilityStore.prototype;
@@ -74,6 +74,7 @@ const guildAvailabilityStore = new GuildAvailabilityStore(DispatcherDefault, {
       const _HermesInternal = HermesInternal;
       logger.warn("Guild has gone unavailable: " + guildId.guildId + " (" + str + ")");
       set.add(guildId.guildId);
+      tmp4 = null != guild && null != guild.name;
     }
   },
   GUILD_DELETE: function handleGuildDelete(guild) {

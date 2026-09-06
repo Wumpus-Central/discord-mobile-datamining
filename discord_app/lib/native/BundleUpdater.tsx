@@ -2,6 +2,7 @@
 import LoggerDefault from "../../modules/debug/Logger.tsx";
 import PlatformUtils from "../../utils/PlatformUtils.tsx";
 import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
+import asyncRequireImpl from "../../../_runtime/01896_asyncRequireImpl.js";
 import _mod4745 from "module_4745" /* 4745 */;
 import MonitoringAgentDefault from "../../modules/monitoring/MonitoringAgent.tsx";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
@@ -48,7 +49,7 @@ prototype["getManifestInfo"] = function getManifestInfo() {
   return BundleUpdaterManager.getManifestInfo();
 };
 prototype["setupOTAAssetFallback"] = function setupOTAAssetFallback() {
-  return (async (arg0, value) => {
+  return (async () => {
     if (c3 === 2) {
       c3 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -79,12 +80,11 @@ prototype["setupOTAAssetFallback"] = function setupOTAAssetFallback() {
             if (obj1.isIOS()) {
               c2 = 1;
               c3 = 1;
-              obj1 = { value: tmp14(tmp15[6])(tmp15[5], tmp15.paths), done: false };
+              obj1 = { value: asyncRequireImpl(dependencyMap[5], dependencyMap.paths), done: false };
               return obj1;
             } else {
               c3 = 3;
             }
-            tmp14 = require;
           }
         } else if (arg0 === 1) {
           c3 = 3;

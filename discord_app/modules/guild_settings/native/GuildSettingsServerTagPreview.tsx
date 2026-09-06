@@ -77,7 +77,7 @@ export default function GuildSettingsServerTagPreview(guildId) {
   [tmp11, c2] = _slicedToArray(noop.useState(false), 2);
   const items1 = [guildId, onAdopted];
   const callback = noop.useCallback(
-    asyncGeneratorStep(async (arg0, value) => {
+    asyncGeneratorStep(async () => {
       if (c3 === 2) {
         c3 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -191,10 +191,10 @@ export default function GuildSettingsServerTagPreview(guildId) {
         height: null,
       };
       ({ SIZE_12: obj16.width, SIZE_12: obj16.height } = GuildTagBadgeSize);
-      tmp15Result = tmp15(tmp2(13915).GuildBadge, size);
+      tmp15Result = closure_10(tmp2(13915).GuildBadge, size);
     }
     obj9.guildBadge = tmp15Result;
-    tmp15Result = tmp15(tmp2(9184).BaseGuildTagChiplet, obj9);
+    tmp15Result = closure_10(tmp2(9184).BaseGuildTagChiplet, obj9);
   }
   items8[1] = tmp15Result;
   obj8.children = items8;
@@ -213,9 +213,9 @@ export default function GuildSettingsServerTagPreview(guildId) {
   obj11.style = items10;
   const obj6 = { source, style: tmp.avatar, importantForAccessibility: "no" };
   const tmp10 = _slicedToArray(noop.useState(false), 2);
-  const tmp14 = closure_12;
-  const tmp18 = closure_6;
-  const items11 = [closure_10(tmp18, { source: onAdopted(13959), style: tmp.avatar, importantForAccessibility: "no" })];
+  const items11 = [
+    closure_10(closure_6, { source: onAdopted(13959), style: tmp.avatar, importantForAccessibility: "no" }),
+  ];
   const obj13 = { style: tmp.messageBody, children: null };
   const items12 = [
     closure_10(guildId(4556).Text, { variant: "text-md/semibold", color: "text-default", children: "Phibi" }),
@@ -251,11 +251,11 @@ export default function GuildSettingsServerTagPreview(guildId) {
   obj.children = items6;
   items2[1] = closure_11(guildId(4973).Stack, obj);
   obj16.children = items2;
-  const tmp13Result = closure_11(tmp14, obj16);
+  const tmp13Result = closure_11(closure_12, obj16);
   let tmp15Result1 = tmp13Result;
   if ("plain" !== variant) {
     const obj17 = { variant: "secondary", radius: 16, style: tmp.card, children: tmp13Result };
-    tmp15Result1 = tmp15(tmp2(5607).Card, obj17);
+    tmp15Result1 = closure_10(tmp2(5607).Card, obj17);
   }
   return tmp15Result1;
 }

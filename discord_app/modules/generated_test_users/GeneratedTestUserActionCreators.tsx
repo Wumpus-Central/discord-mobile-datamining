@@ -37,7 +37,7 @@ let closure_8 = async function _getGeneratedPoolById() {
       closure_1_1(8404).showFailedToast(constants.GENERIC_ERROR);
       return null;
     });
-  return arg1;
+  return value;
 };
 const Endpoints = fn(1074).Endpoints;
 const SafetyToastType = fn(8399).SafetyToastType;

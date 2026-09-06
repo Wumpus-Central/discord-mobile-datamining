@@ -8,11 +8,11 @@ import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js
 import ApexExperimentStore from "ApexExperimentStore.tsx";
 
 require = fn;
-let closure_8 = async function _fetchApexExperimentsMetadata(surface) {
+let closure_8 = async function _fetchApexExperimentsMetadata() {
   c5 = 0;
   c6 = 0;
   c4 = 0;
-  return (async (arg0, value) => {
+  return (async (arg0) => {
     closure_2 = tmp3;
     const HTTP = HTTPUtils.HTTP;
     const request = { url: constants.APEX_EXPERIMENTS_METADATA, query: { surface }, rejectWithError: true };
@@ -48,94 +48,102 @@ let closure_8 = async function _fetchApexExperimentsMetadata(surface) {
     return value;
   })();
 };
-let closure_9 = async function _fetchUserExperimentAssignments(arg0, value) {
-  if (c6 === 2) {
-    c6 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp6 === 3) {
-    if (arg0 === 1) {
-      throw value;
-    } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
-    } else {
-      return { value: "HermesInternal", done: null };
-    }
-  } else {
-    try {
-      c6 = 2;
-      if (0 === c5) {
-        if (arg0 === 1) {
-          c6 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c6 = 3;
-          obj = { value, done: true };
-          return obj;
-        } else {
-          closure_2 = tmp3;
-          closure_1 = tmp7;
-          closure_129_0 = closure_0;
-          closure_129_1 = undefined;
-          if (!fetching.isFetching(closure_0)) {
-            if (!obj15.hasLoaded(tmp47)) {
-              let obj7 = DispatcherDefault;
-              const obj1 = { type: "APEX_EXPERIMENTS_FETCH_START", unitId: tmp47 };
-              obj7.dispatch(obj1);
-              c4 = 1;
-              const HTTP = HTTPUtils.HTTP;
-              const request = { url: constants.APEX_EXPERIMENTS, query: null, rejectWithError: false };
-              let obj2 = { surface: experiment.Experiment_Surface.APP };
-              request.query = obj2;
-              c5 = 2;
-              c6 = 1;
-              const obj3 = { value: HTTP.get(request), done: false };
-              return obj3;
-            }
-          }
-          obj15 = fetching;
-        }
-      } else {
-        if (1 === tmp7) {
-          c4 = 0;
-          let obj5 = closure_130_1(closure_130_2[5]);
-          const obj4 = { type: "APEX_EXPERIMENTS_FETCH_FAILURE", unitId: closure_129_0 };
-          obj5.dispatch(obj4);
-        } else if (arg0 === 1) {
-          c6 = 3;
-          throw value;
-        } else if (arg0 !== 2) {
-          closure_129_1 = value;
-          if (null != closure_129_1) {
-            if (null != closure_129_1.body) {
-              obj = closure_130_1(closure_130_2[5]);
-              obj5 = { type: "APEX_EXPERIMENTS_FETCH_SUCCESS", unitId: closure_129_0, experiments: closure_129_1.body };
-              obj.dispatch(obj5);
-            }
-            c4 = 0;
-          }
-          obj2 = closure_130_1(closure_130_2[5]);
-          const obj6 = { type: "APEX_EXPERIMENTS_FETCH_FAILURE", unitId: closure_129_0 };
-          obj2.dispatch(obj6);
-        }
-        c4 = 0;
-        c6 = 3;
-        obj7 = { value, done: true };
-        return obj7;
-      }
+let closure_9 = async function _fetchUserExperimentAssignments() {
+  c5 = 0;
+  c6 = 0;
+  c4 = 0;
+  return (async (arg0) => {
+    if (c6 === 2) {
       c6 = 3;
-    } catch (tmp37) {
-      closure_3 = tmp37;
-      if (tmp4 === c4) {
-        c6 = tmp2;
-        throw tmp37;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp6 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        let obj = { value, done: true };
+        return obj;
       } else {
-        c5 = tmp;
+        return { value: "HermesInternal", done: null };
+      }
+    } else {
+      try {
+        c6 = 2;
+        if (0 === c5) {
+          if (arg0 === 1) {
+            c6 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c6 = 3;
+            obj = { value, done: true };
+            return obj;
+          } else {
+            closure_2 = tmp3;
+            closure_1 = tmp7;
+            closure_129_0 = unitId;
+            closure_129_1 = undefined;
+            if (!fetching.isFetching(unitId)) {
+              if (!fetching.hasLoaded(unitId)) {
+                let obj7 = DispatcherDefault;
+                const obj1 = { type: "APEX_EXPERIMENTS_FETCH_START", unitId };
+                obj7.dispatch(obj1);
+                c4 = 1;
+                const HTTP = HTTPUtils.HTTP;
+                const request = { url: constants.APEX_EXPERIMENTS, query: null, rejectWithError: false };
+                let obj2 = { surface: experiment.Experiment_Surface.APP };
+                request.query = obj2;
+                c5 = 2;
+                c6 = 1;
+                const obj3 = { value: HTTP.get(request), done: false };
+                return obj3;
+              }
+            }
+          }
+        } else {
+          if (1 === tmp7) {
+            c4 = 0;
+            let obj5 = closure_130_1(closure_130_2[5]);
+            const obj4 = { type: "APEX_EXPERIMENTS_FETCH_FAILURE", unitId: closure_129_0 };
+            obj5.dispatch(obj4);
+          } else if (arg0 === 1) {
+            c6 = 3;
+            throw value;
+          } else if (arg0 !== 2) {
+            closure_129_1 = value;
+            if (null != closure_129_1) {
+              if (null != closure_129_1.body) {
+                obj = closure_130_1(closure_130_2[5]);
+                obj5 = {
+                  type: "APEX_EXPERIMENTS_FETCH_SUCCESS",
+                  unitId: closure_129_0,
+                  experiments: closure_129_1.body,
+                };
+                obj.dispatch(obj5);
+              }
+              c4 = 0;
+            }
+            obj2 = closure_130_1(closure_130_2[5]);
+            const obj6 = { type: "APEX_EXPERIMENTS_FETCH_FAILURE", unitId: closure_129_0 };
+            obj2.dispatch(obj6);
+          }
+          c4 = 0;
+          c6 = 3;
+          obj7 = { value, done: true };
+          return obj7;
+        }
+        c6 = 3;
+      } catch (tmp37) {
+        closure_3 = tmp37;
+        if (tmp4 === c4) {
+          c6 = tmp2;
+          throw tmp37;
+        } else {
+          c5 = tmp;
+        }
       }
     }
-  }
+  })();
 };
-let closure_10 = async function _fetchInstallationExperiments(arg0, value) {
+let closure_10 = async function _fetchInstallationExperiments(arg0) {
   if (c6 === 2) {
     c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -221,6 +229,7 @@ let closure_10 = async function _fetchInstallationExperiments(arg0, value) {
                 experiments,
               };
               closure_1(installation[5]).dispatch(obj);
+              const obj3 = closure_1(installation[5]);
             });
           } else {
             obj = closure_130_1(closure_130_2[5]);

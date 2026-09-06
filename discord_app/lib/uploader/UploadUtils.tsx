@@ -2,6 +2,7 @@
 import HTTPUtils from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import js_shim_shim from "../../../discord_common/js/packages/libdiscore/js_shim/js/shim.native.tsx";
 import Upload from "Upload.tsx";
+import AttachmentFile from "../../utils/AttachmentFile.native.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("lib/uploader/UploadUtils.tsx");
@@ -115,11 +116,11 @@ export const canUploadNatively = function canUploadNatively(platform) {
     fileIsInAppDirResult = null != platform.uri;
   }
   if (fileIsInAppDirResult) {
-    let tmpResult = tmp(5137);
+    let tmpResult = AttachmentFile;
     fileIsInAppDirResult = tmpResult.fileIsInAppDir(platform.uri);
   }
   if (fileIsInAppDirResult) {
-    tmpResult = tmp(1351);
+    tmpResult = js_shim_shim;
     fileIsInAppDirResult = tmpResult.isLibdiscoreInitialized();
   }
   return fileIsInAppDirResult;

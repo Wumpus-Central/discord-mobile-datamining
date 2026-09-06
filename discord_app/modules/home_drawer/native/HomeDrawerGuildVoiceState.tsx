@@ -4,6 +4,8 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import util from "../../../intl/index.native.tsx";
 import native from "../../../design/void/native.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
+import LinearGradientDefault from "../../../../_runtime/04987_LinearGradient.js";
+import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import useFetchStreamPreviewDefault from "../../go_live/useFetchStreamPreview.tsx";
 import AvatarPile from "../../../design/components/Pile/native/AvatarPile.native.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -119,14 +121,14 @@ export const GuildVoiceState = function GuildVoiceState(arg0) {
     obj.style = items;
     if (null == previewUrl) {
       obj = { voiceUsers, guildId };
-      let tmp7Result = tmp7(VoiceUsers, obj);
+      let tmp7Result = closure_1_11(VoiceUsers, obj);
     } else {
       const obj1 = { style: tmp.streamPreviewShadow, children: null };
       const obj2 = { style: tmp.streamPreview, children: null };
       const obj3 = { style: tmp.streamPreview, source: null };
       const obj4 = { uri: previewUrl };
       obj3.source = obj4;
-      const items1 = [tmp7(tmp3(5587), obj3), , , ,];
+      const items1 = [closure_1_11(FastImageDefault, obj3), , , ,];
       const obj5 = {
         colors: ["rgba(0, 0, 0, 1)", "rgba(0, 0, 0, 0)"],
         start: { x: 0, y: 0 },
@@ -134,7 +136,7 @@ export const GuildVoiceState = function GuildVoiceState(arg0) {
         style: tmp.streamPreviewDarkGradient,
         pointerEvents: "none",
       };
-      items1[1] = tmp7(tmp3(4987), obj5);
+      items1[1] = closure_1_11(LinearGradientDefault, obj5);
       const obj6 = {
         colors: ["rgba(255, 255, 255, 1)", "rgba(255, 255, 255, 0)"],
         start: { x: 0, y: 0 },
@@ -142,17 +144,18 @@ export const GuildVoiceState = function GuildVoiceState(arg0) {
         style: tmp.streamPreviewGradient,
         pointerEvents: "none",
       };
-      items1[2] = tmp7(tmp3(4987), obj6);
+      items1[2] = closure_1_11(LinearGradientDefault, obj6);
       const obj7 = { style: tmp.streamPreviewBorder, pointerEvents: "none" };
-      items1[3] = tmp7(tmp8, obj7);
-      items1[4] = tmp7(LiveTag, {});
+      items1[3] = closure_1_11(View, obj7);
+      items1[4] = closure_1_11(LiveTag, {});
       obj2.children = items1;
-      obj1.children = closure_1_12(tmp8, obj2);
-      tmp7Result = tmp7(tmp8, obj1);
+      obj1.children = closure_1_12(View, obj2);
+      tmp7Result = closure_1_11(View, obj1);
     }
     obj.children = tmp7Result;
-    tmp7Result = tmp7(tmp8, obj);
+    tmp7Result = closure_1_11(View, obj);
   }
+  tmp2 = voiceUsers.length > 0;
 };
 export const useVoiceUsers = function useVoiceUsers(guild) {
   _require = guild;

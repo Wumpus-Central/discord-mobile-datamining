@@ -54,9 +54,9 @@ export default function useGuildPowerupsWarningConfig(arg0, arg1) {
       const intl = util.intl;
       obj.title = intl.string(_modDef2428.n5hQhc);
       const intl2 = util.intl;
-      obj = { boostCount: tmp, perksString: closure_1.join(", ") };
+      obj = { boostCount: diff, perksString: closure_1.join(", ") };
       obj.description = intl2.formatToPlainString(_modDef2428.iAaAiG, obj);
-      obj.requiredBoostCount = tmp;
+      obj.requiredBoostCount = diff;
     }
     return obj;
   }, items3);

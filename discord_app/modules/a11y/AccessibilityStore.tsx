@@ -510,18 +510,18 @@ let items = [
   () => {
     const Storage = Storage7.Storage;
     const fontScale = Storage.get("a11yFontScale") || 100;
-    const Storage2 = tmp(510).Storage;
+    const Storage2 = Storage7.Storage;
     let zoom = Storage2.get("a11yZoom");
     if (!zoom) {
       zoom = Accessibility.ZOOM_DEFAULT;
     }
-    const Storage3 = tmp(510).Storage;
+    const Storage3 = Storage7.Storage;
     const colorblindMode = Storage3.get("a11yColorblindMode") || false;
-    const Storage4 = tmp(510).Storage;
+    const Storage4 = Storage7.Storage;
     Storage4.remove("a11yFontScale");
-    const Storage5 = tmp(510).Storage;
+    const Storage5 = Storage7.Storage;
     Storage5.remove("a11yZoom");
-    const Storage6 = tmp(510).Storage;
+    const Storage6 = Storage7.Storage;
     Storage6.remove("a11yColorblindMode");
     return { fontScale, zoom, colorblindMode, keyboardModeEnabled: false };
   },
@@ -625,10 +625,10 @@ const accessibilityStore = new AccessibilityStore(DispatcherDefault, {
     let FONT_SIZE_DEFAULT = fontSize.fontSize;
     const FONT_SIZES = Accessibility.FONT_SIZES;
     if (FONT_SIZES.indexOf(FONT_SIZE_DEFAULT) < 0) {
-      FONT_SIZE_DEFAULT = tmp.FONT_SIZE_DEFAULT;
+      FONT_SIZE_DEFAULT = Accessibility.FONT_SIZE_DEFAULT;
     }
     if (FONT_SIZE_DEFAULT <= Accessibility.FONT_SIZE_MAX) {
-      if (FONT_SIZE_DEFAULT >= tmp.FONT_SIZE_MIN) {
+      if (FONT_SIZE_DEFAULT >= Accessibility.FONT_SIZE_MIN) {
         if (obj.fontSize !== FONT_SIZE_DEFAULT) {
           obj = {};
           const merged = Object.assign(obj);
@@ -660,10 +660,10 @@ const accessibilityStore = new AccessibilityStore(DispatcherDefault, {
     obj = {};
     const merged = Object.assign(obj);
     if (obj.fontSize !== Accessibility.FONT_SIZE_DEFAULT) {
-      obj.fontSize = tmp.FONT_SIZE_DEFAULT;
+      obj.fontSize = Accessibility.FONT_SIZE_DEFAULT;
     }
     if (obj.zoom !== Accessibility.ZOOM_DEFAULT) {
-      obj.zoom = tmp.ZOOM_DEFAULT;
+      obj.zoom = Accessibility.ZOOM_DEFAULT;
       CrossPlatformNativeUtilsDefault.setZoomFactor(obj.zoom);
     }
   },

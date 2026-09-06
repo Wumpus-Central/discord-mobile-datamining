@@ -1,5 +1,6 @@
 // discord_app/modules/quests/native/BountiesModal/BountiesScrollIndicatorOverlay.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import ReanimatedRexport from "../../../reanimated/ReanimatedRexport.tsx";
 import timing from "../../../../design/animation/reanimated/timing/timing.tsx";
 import timingPresets from "../../../../design/animation/reanimated/timing/timingPresets.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
@@ -135,13 +136,13 @@ export default function BountiesScrollIndicatorOverlay(enabled) {
     }
     if (!isEndCardVisible) {
       if (enabled) {
-        let timingStandard = tmp(4564).timingSlow;
+        let timingStandard = timingPresets.timingSlow;
       }
       obj = { opacity: null };
       obj.opacity = obj.withTiming(num, timingStandard);
       return obj;
     }
-    timingStandard = tmp(4564).timingStandard;
+    timingStandard = timingPresets.timingStandard;
   };
   obj = { withTiming: enabled(visible[8]).withTiming, visible, isEndCardVisible, enabled, timingStandard: enabled(visible[4]).timingStandard, timingSlow: enabled(visible[4]).timingSlow };
   fn.__closure = obj;

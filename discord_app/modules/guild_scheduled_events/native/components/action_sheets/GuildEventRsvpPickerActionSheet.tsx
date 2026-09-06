@@ -27,7 +27,7 @@ export default function GuildEventRsvpPickerActionSheet(event) {
   ({ recurrenceId: importDefault, guildId: dependencyMap, onRsvp: _slicedToArray } = event);
   let defaultValue;
   closure_5 = undefined;
-  let tmp = closure_9();
+  const tmp = closure_9();
   const tmp4 = _slicedToArray(defaultValue.useState(event(9706).ResponseOptions.SERIES), 2);
   defaultValue = tmp4[0];
   let obj = event(9706);
@@ -53,7 +53,7 @@ export default function GuildEventRsvpPickerActionSheet(event) {
     closure_1_7(event(dependencyMap[13]).TableRadioRow, { value: value.value, label: value.name }, value.value),
   );
   const items = [closure_7(event(5685).TableRadioGroup, obj1)];
-  const obj2 = { style: tmp.buttonWrapper, children: null };
+  let obj2 = { style: tmp.buttonWrapper, children: null };
   const obj3 = {
     onPress() {
       let tmp3 = null;

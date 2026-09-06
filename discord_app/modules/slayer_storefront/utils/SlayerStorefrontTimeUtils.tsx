@@ -1,4 +1,5 @@
 // discord_app/modules/slayer_storefront/utils/SlayerStorefrontTimeUtils.tsx
+import DurationsDefault from "../../../utils/Durations.tsx";
 import util from "../../../intl/index.native.tsx";
 import _modDef3417 from "../intl/SlayerStorefront.messages.js";
 import _modDef4153 from "../../../../_runtime/metro/04153__.js";
@@ -16,14 +17,14 @@ function getLimitedOfferTimeLeft(arg0) {
     if (diffResult > 0) {
       const time = { days: null, hours: null, minutes: null, seconds: null };
       const _Math = Math;
-      time.days = Math.floor(diffResult / tmp5(1090).Seconds.DAY);
+      time.days = Math.floor(diffResult / DurationsDefault.Seconds.DAY);
       const _Math2 = Math;
-      const result = diffResult % tmp5(1090).Seconds.DAY;
-      time.hours = Math.floor(result / tmp5(1090).Seconds.HOUR);
+      const result = diffResult % DurationsDefault.Seconds.DAY;
+      time.hours = Math.floor(result / DurationsDefault.Seconds.HOUR);
       const _Math3 = Math;
-      const result1 = diffResult % tmp5(1090).Seconds.HOUR;
-      time.minutes = Math.floor(result1 / tmp5(1090).Seconds.MINUTE);
-      time.seconds = diffResult % tmp5(1090).Seconds.MINUTE;
+      const result1 = diffResult % DurationsDefault.Seconds.HOUR;
+      time.minutes = Math.floor(result1 / DurationsDefault.Seconds.MINUTE);
+      time.seconds = diffResult % DurationsDefault.Seconds.MINUTE;
       tmp4 = time;
     }
     return tmp4;

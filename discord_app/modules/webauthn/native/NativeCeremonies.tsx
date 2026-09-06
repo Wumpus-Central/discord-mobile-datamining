@@ -4,7 +4,7 @@ import util from "../../../intl/index.native.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 
 require = fn;
-let closure_5 = async function _promptForRegisterCredential(arg0, value) {
+let closure_5 = async function _promptForRegisterCredential() {
   if (c5 === 2) {
     c5 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -129,7 +129,7 @@ obj.getPasskeyAuthenticator = function getPasskeyAuthenticator() {
   let authenticatePasskey = NativeModules.DCDSecurityKeyManager.authenticate;
   let isAndroidResult = authenticatePasskey(1115).isAndroid();
   if (isAndroidResult) {
-    const DCDSecurityKeyManager = tmp.DCDSecurityKeyManager;
+    const DCDSecurityKeyManager = NativeModules.DCDSecurityKeyManager;
     authenticatePasskey = undefined;
     if (DCDSecurityKeyManager != null) {
       authenticatePasskey = DCDSecurityKeyManager.authenticatePasskey;
@@ -137,14 +137,14 @@ obj.getPasskeyAuthenticator = function getPasskeyAuthenticator() {
     isAndroidResult = null != authenticatePasskey;
   }
   if (isAndroidResult) {
-    authenticatePasskey = tmp.DCDSecurityKeyManager.authenticatePasskey;
+    authenticatePasskey = NativeModules.DCDSecurityKeyManager.authenticatePasskey;
   }
   return asyncGeneratorStep(async () => {
     closure_0 = [...arguments];
     c5 = 0;
     c6 = 0;
     c4 = 0;
-    const iter = (async (arg0, value) => {
+    const iter = (async (arg0) => {
       if (c6 === 2) {
         c6 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -496,7 +496,7 @@ obj.registerPasskey = function registerPasskey(setError) {
   }
   return cleanupPromise;
 };
-obj.registerSecurityKey = function registerSecurityKey(setError, fn) {
+obj.registerSecurityKey = function registerSecurityKey(setError) {
   let register = fn;
   if (fn === undefined) {
     register = NativeModules.DCDSecurityKeyManager.register;

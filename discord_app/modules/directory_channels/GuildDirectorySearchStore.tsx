@@ -88,12 +88,12 @@ const guildDirectorySearchStore = new GuildDirectorySearchStore(DispatcherDefaul
         const results = tmp5.results;
         let obj = {};
         const found = results.filter((guildId) => guildId.guildId !== require);
-        const merged = Object.assign(tmp4[channelId]);
+        const merged = Object.assign(dependencyMap2[channelId]);
         obj = {};
         const merged1 = Object.assign(tmp5);
         obj.results = found;
         obj[dependencyMap[channelId].mostRecentQuery] = obj;
-        tmp4[channelId] = obj;
+        dependencyMap2[channelId] = obj;
       }
     }
   },

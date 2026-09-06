@@ -2,6 +2,8 @@
 import LoggerDefault from "../../../debug/Logger.tsx";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import RootNavigationRef from "../../RootNavigationRef.native.tsx";
+import ChatInputUtils from "../../../../utils/native/ChatInputUtils.tsx";
+import transitionToChannel from "../../../routing/transitionToChannel.tsx";
 import ChannelActionCreatorsDefault from "../../../../actions/ChannelActionCreators.tsx";
 import PanelsNavigationUtils from "PanelsNavigationUtils.tsx";
 import useChannelScreensFromNavigation from "useChannelScreensFromNavigation.tsx";
@@ -44,10 +46,10 @@ export default noop.memo(function MainTabsNavigatorPanel() {
   const items = [isChatLockedOpen];
   const layoutEffect = noop.useLayoutEffect(() => {
     if (ref.current !== isChatLockedOpen) {
-      tmp.current = tmp2;
+      tmp.current = isChatLockedOpen;
       let obj = require;
       let result = dependencyMap;
-      if (tmp2) {
+      if (isChatLockedOpen) {
         obj = obj(16004);
         result = obj.convertPortraitToLandscapeScreens();
       } else {
@@ -162,10 +164,9 @@ export default noop.memo(function MainTabsNavigatorPanel() {
           }
           if ("modal" !== name) {
             tmp2.current = true;
-            tmp14(4571).transitionToChannel(tmp5.current.channelId);
-            const tmp14Result = tmp14(4571);
+            transitionToChannel.transitionToChannel(tmp5.current.channelId);
+            const tmp14Result = transitionToChannel;
           }
-          tmp14 = require;
         }
       }
     } else {
@@ -256,10 +257,9 @@ export default noop.memo(function MainTabsNavigatorPanel() {
           movePanel(true, false, 0, true);
         }
       } else if (movePanel(false, false, 0, false)) {
-        tmp4(4425).dismissKeyboard();
-        const tmp4Result = tmp4(4425);
+        ChatInputUtils.dismissKeyboard();
+        const tmp4Result = ChatInputUtils;
       }
-      tmp4 = require;
     }
   }, items7);
   let channelId;

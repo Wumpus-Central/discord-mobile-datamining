@@ -63,14 +63,14 @@ export default function EmojiRow(arg0) {
             obj.hideActionSheet();
             if (null != closure_0) {
               const result = HapticUtils.triggerHapticFeedback(HapticUtils.HapticFeedbackTypes.IMPACT_LIGHT);
-              ({ channel_id, id } = tmp);
+              ({ channel_id, id } = closure_2_0);
               const obj3 = ReactionActionCreators;
-              obj3.addReaction(channel_id, id, ReactionUtils.toReactionEmoji(tmp2));
+              obj3.addReaction(channel_id, id, ReactionUtils.toReactionEmoji(closure_0));
               obj = { channelId: null, messageId: null };
-              ({ channel_id: obj6.channelId, id: obj6.messageId } = tmp);
+              ({ channel_id: obj6.channelId, id: obj6.messageId } = closure_2_0);
               MessageActionCreatorsDefault.focusMessage(obj);
               const tmp3Result = MessageActionCreatorsDefault;
-              const result1 = DoubleTapReminderToast.maybeShowDoubleTapReminderToast(tmp2);
+              const result1 = DoubleTapReminderToast.maybeShowDoubleTapReminderToast(closure_0);
             }
           },
           emojiSize,

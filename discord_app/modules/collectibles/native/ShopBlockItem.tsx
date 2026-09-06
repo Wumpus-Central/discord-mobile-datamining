@@ -30,10 +30,10 @@ export default function _default(block) {
   const memo = noop.useMemo(() => {
     if (block.type === ShopBlockType.ShopBlockType.HERO) {
       const _HermesInternal3 = HermesInternal;
-      let combined = "hero-" + tmp.categoryStoreListingId;
-    } else if (tmp.type === ShopBlockType.ShopBlockType.REWARD_HERO) {
+      let combined = "hero-" + block.categoryStoreListingId;
+    } else if (block.type === ShopBlockType.ShopBlockType.REWARD_HERO) {
       const _HermesInternal2 = HermesInternal;
-      combined = "reward-hero-" + tmp.categoryStoreListingId;
+      combined = "reward-hero-" + block.categoryStoreListingId;
     } else {
       const _HermesInternal = HermesInternal;
       combined = "" + stateFromStores.size + "-" + stateFromStores1.size;

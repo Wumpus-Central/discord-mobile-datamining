@@ -1,6 +1,8 @@
 // discord_app/modules/home_drawer/native/subtitles/MentionSubtitle.tsx
 import util from "../../../../intl/index.native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
+import utils_ChannelUtils from "../../../../utils/native/ChannelUtils.tsx";
+import TextIcon from "../../../../design/components/Icon/native/redesign/generated/TextIcon.tsx";
 import useSubtitleStyles from "useSubtitleStyles.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -18,11 +20,11 @@ export default function MentionSubtitle(channel) {
   const subtitleStyles = obj.useSubtitleStyles();
   let channelIconComponentWithGuild;
   if (null != channel) {
-    channelIconComponentWithGuild = tmp(5028).getChannelIconComponentWithGuild(channel, guild);
-    const tmpResult = tmp(5028);
+    channelIconComponentWithGuild = utils_ChannelUtils.getChannelIconComponentWithGuild(channel, guild);
+    const tmpResult = utils_ChannelUtils;
   }
   if (channelIconComponentWithGuild == null) {
-    channelIconComponentWithGuild = tmp(5080).TextIcon;
+    channelIconComponentWithGuild = TextIcon.TextIcon;
   }
   obj = { style: subtitleStyles.subtitleRow, children: null };
   obj = { size: "xxs", color: "icon-muted", style: subtitleStyles.channelIcon };
@@ -34,7 +36,7 @@ export default function MentionSubtitle(channel) {
     style: subtitleStyles.subtitleText,
     children: null,
   };
-  const intl = tmp(1114).intl;
+  const intl = util.intl;
   obj1.children = intl.format(util.t.L9YdGH, {
     channelName,
     count: count - 1,

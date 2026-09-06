@@ -75,7 +75,7 @@ export default function TwoFASetupSuccess() {
   const tmp2 = _slicedToArray(noop.useState(false), 2);
   [tmp5, importDefault] = _slicedToArray(noop.useState(""), 2);
   const callback = noop.useCallback(() => {
-    setRegistering = async function _onRegisterSuccess(arg0, value) {
+    setRegistering = async function _onRegisterSuccess(arg0) {
       if (c6 === 2) {
         c6 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -216,7 +216,7 @@ export default function TwoFASetupSuccess() {
   let tmp7Result = "" !== tmp5;
   if (tmp7Result) {
     const obj6 = { style: tmp.errorText, children: tmp5 };
-    tmp7Result = tmp7(native.LegacyText, obj6);
+    tmp7Result = closure_8(native.LegacyText, obj6);
   }
   const obj7 = { children: null };
   items1[1] = tmp7Result;

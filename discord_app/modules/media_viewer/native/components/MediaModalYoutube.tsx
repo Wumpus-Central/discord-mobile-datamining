@@ -99,23 +99,23 @@ export default noop.memo((visible) => {
         tmp7 = first === MediaModalWebView.PlayerState.READY;
       }
       if (tmp7) {
-        const current = tmp.current;
+        const current = ref.current;
         current.injectJavaScript("window.player.playVideo();  true;");
       }
-      let tmp15 = tmp6;
+      let tmp15 = visible;
       if (visible) {
         tmp15 = !closure_5;
       }
       if (tmp15) {
-        const current2 = tmp.current;
+        const current2 = ref.current;
         current2.injectJavaScript("window.player.playVideo();  true;");
       }
-      let tmp18 = !tmp6;
+      let tmp18 = !visible;
       if (!visible) {
         tmp18 = closure_5;
       }
       if (tmp18) {
-        const current3 = tmp.current;
+        const current3 = ref.current;
         current3.injectJavaScript("window.player.pauseVideo(); true;");
       }
     }

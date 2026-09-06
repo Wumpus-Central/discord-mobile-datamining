@@ -156,14 +156,14 @@ export default noop.memo((style) => {
   const effect1 = obj.useEffect(() => {
     let current;
     if (ref != null) {
-      current = tmp.current;
+      current = ref.current;
     }
     let tmp3 = null != current;
     if (tmp3) {
       tmp3 = first !== MediaModalWebView.PlayerState.UNREADY;
     }
     if (tmp3) {
-      current = tmp.current;
+      current = ref.current;
       const _JSON = JSON;
       const _HermesInternal = HermesInternal;
       current.injectJavaScript("window.player.muted = " + JSON.stringify(mediaPlayerMutedStore) + "; true;");
@@ -175,23 +175,23 @@ export default noop.memo((style) => {
         tmp11 = first === MediaModalWebView.PlayerState.READY;
       }
       if (tmp11) {
-        const current2 = tmp.current;
+        const current2 = ref.current;
         current2.injectJavaScript("window.player.play();  true;");
       }
-      let tmp19 = tmp10;
+      let tmp19 = visible;
       if (visible) {
         tmp19 = !closure_5;
       }
       if (tmp19) {
-        const current3 = tmp.current;
+        const current3 = ref.current;
         current3.injectJavaScript("window.player.play();  true;");
       }
-      let tmp22 = !tmp10;
+      let tmp22 = !visible;
       if (!visible) {
         tmp22 = closure_5;
       }
       if (tmp22) {
-        const current4 = tmp.current;
+        const current4 = ref.current;
         current4.injectJavaScript("window.player.pause(); true;");
       }
     }

@@ -1,5 +1,6 @@
 // discord_app/modules/favorites/native/buildFavoritesSectionButtons.tsx
 import util from "../../../intl/index.native.tsx";
+import native from "../../../design/void/native.tsx";
 import asyncRequireImpl from "../../../../_runtime/01896_asyncRequireImpl.js";
 import _modDef3225 from "../intl/FavoritesGuild.messages.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
@@ -10,7 +11,7 @@ import StarOutlineIcon from "../../../design/components/Icon/native/redesign/gen
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 
 require = fn;
-let closure_5 = async function _addChannelToFavorites(arg0, value) {
+let closure_5 = async function _addChannelToFavorites(arg0) {
   if (c3 === 2) {
     c3 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -63,7 +64,7 @@ let closure_5 = async function _addChannelToFavorites(arg0, value) {
     }
   }
 };
-let closure_6 = async function _removeChannelFromFavorites(arg0, value) {
+let closure_6 = async function _removeChannelFromFavorites(arg0) {
   if (c3 === 2) {
     c3 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -160,8 +161,8 @@ export default function buildFavoritesSectionButtons(isExperimentEnabled) {
         obj.IconComponent = StarOutlineIcon.StarOutlineIcon;
         let tmp15;
         if (tmp5) {
-          const obj1 = { size: tmp12(1178).BetaSizes.SMALL };
-          tmp15 = jsx(tmp12(1178).BetaTag, { size: tmp12(1178).BetaSizes.SMALL });
+          const obj1 = { size: native.BetaSizes.SMALL };
+          tmp15 = jsx(native.BetaTag, { size: native.BetaSizes.SMALL });
         }
         obj.trailing = tmp15;
         obj.onPress = function onPress() {

@@ -18,6 +18,7 @@ function createGamesFromMessage(referenced_message) {
           set.delete(game_flags.id);
         }
       }
+      tmp = "game_flags" in game_flags && typeof game_flags.game_flags === "number";
     });
   }
   if (null != referenced_message.referenced_message) {
@@ -42,6 +43,7 @@ function handleLoadMessages(messages) {
             set.delete(game_flags.id);
           }
         }
+        tmp = "game_flags" in game_flags && typeof game_flags.game_flags === "number";
       });
     }
     if (null != mention_games.referenced_message) {
@@ -59,6 +61,7 @@ function handleLoadMessages(messages) {
               set.delete(game_flags.id);
             }
           }
+          tmp = "game_flags" in game_flags && typeof game_flags.game_flags === "number";
         });
       }
       if (null != referenced_message.referenced_message) {
@@ -98,6 +101,7 @@ function handleLoadSearchResults(data) {
                 set.delete(game_flags.id);
               }
             }
+            tmp = "game_flags" in game_flags && typeof game_flags.game_flags === "number";
           });
         }
         if (null != mention_games.referenced_message) {
@@ -115,6 +119,7 @@ function handleLoadSearchResults(data) {
                   set.delete(game_flags.id);
                 }
               }
+              tmp = "game_flags" in game_flags && typeof game_flags.game_flags === "number";
             });
           }
           if (null != referenced_message.referenced_message) {
@@ -152,6 +157,7 @@ function handleIncomingMessage(message) {
           set.delete(game_flags.id);
         }
       }
+      tmp = "game_flags" in game_flags && typeof game_flags.game_flags === "number";
     });
   }
   if (null != message.referenced_message) {
@@ -169,6 +175,7 @@ function handleIncomingMessage(message) {
             set.delete(game_flags.id);
           }
         }
+        tmp = "game_flags" in game_flags && typeof game_flags.game_flags === "number";
       });
     }
     if (null != referenced_message.referenced_message) {
@@ -308,6 +315,7 @@ const gameStore = new GameStore(DispatcherDefault, {
               set.delete(game_flags.id);
             }
           }
+          tmp = "game_flags" in game_flags && typeof game_flags.game_flags === "number";
         });
       }
       if (null != mention_games.referenced_message) {
@@ -325,6 +333,7 @@ const gameStore = new GameStore(DispatcherDefault, {
                 set.delete(game_flags.id);
               }
             }
+            tmp = "game_flags" in game_flags && typeof game_flags.game_flags === "number";
           });
         }
         if (null != referenced_message.referenced_message) {
@@ -364,6 +373,7 @@ const gameStore = new GameStore(DispatcherDefault, {
                   set.delete(game_flags.id);
                 }
               }
+              tmp = "game_flags" in game_flags && typeof game_flags.game_flags === "number";
             });
           }
           if (null != mention_games.referenced_message) {
@@ -381,6 +391,7 @@ const gameStore = new GameStore(DispatcherDefault, {
                     set.delete(game_flags.id);
                   }
                 }
+                tmp = "game_flags" in game_flags && typeof game_flags.game_flags === "number";
               });
             }
             if (null != referenced_message.referenced_message) {
@@ -420,6 +431,7 @@ const gameStore = new GameStore(DispatcherDefault, {
               set.delete(game_flags.id);
             }
           }
+          tmp = "game_flags" in game_flags && typeof game_flags.game_flags === "number";
         });
       }
       if (null != message.referenced_message) {
@@ -437,6 +449,7 @@ const gameStore = new GameStore(DispatcherDefault, {
                 set.delete(game_flags.id);
               }
             }
+            tmp = "game_flags" in game_flags && typeof game_flags.game_flags === "number";
           });
         }
         if (null != referenced_message.referenced_message) {
@@ -475,6 +488,7 @@ const gameStore = new GameStore(DispatcherDefault, {
               set.delete(game_flags.id);
             }
           }
+          tmp = "game_flags" in game_flags && typeof game_flags.game_flags === "number";
         });
       }
       if (null != mention_games.referenced_message) {
@@ -492,6 +506,7 @@ const gameStore = new GameStore(DispatcherDefault, {
                 set.delete(game_flags.id);
               }
             }
+            tmp = "game_flags" in game_flags && typeof game_flags.game_flags === "number";
           });
         }
         if (null != referenced_message.referenced_message) {
@@ -532,6 +547,7 @@ const gameStore = new GameStore(DispatcherDefault, {
                 set.delete(game_flags.id);
               }
             }
+            tmp = "game_flags" in game_flags && typeof game_flags.game_flags === "number";
           });
         }
         if (null != first_message.referenced_message) {
@@ -549,6 +565,7 @@ const gameStore = new GameStore(DispatcherDefault, {
                   set.delete(game_flags.id);
                 }
               }
+              tmp = "game_flags" in game_flags && typeof game_flags.game_flags === "number";
             });
           }
           if (null != referenced_message.referenced_message) {
@@ -581,6 +598,7 @@ const gameStore = new GameStore(DispatcherDefault, {
                 set.delete(game_flags.id);
               }
             }
+            tmp = "game_flags" in game_flags && typeof game_flags.game_flags === "number";
           });
         }
         if (null != most_recent_message.referenced_message) {
@@ -598,6 +616,7 @@ const gameStore = new GameStore(DispatcherDefault, {
                   set.delete(game_flags.id);
                 }
               }
+              tmp = "game_flags" in game_flags && typeof game_flags.game_flags === "number";
             });
           }
           if (null != referenced_message2.referenced_message) {
@@ -640,6 +659,7 @@ const gameStore = new GameStore(DispatcherDefault, {
                 set.delete(game_flags.id);
               }
             }
+            tmp = "game_flags" in game_flags && typeof game_flags.game_flags === "number";
           });
         }
         if (null != message_preview.referenced_message) {
@@ -657,6 +677,7 @@ const gameStore = new GameStore(DispatcherDefault, {
                   set.delete(game_flags.id);
                 }
               }
+              tmp = "game_flags" in game_flags && typeof game_flags.game_flags === "number";
             });
           }
           if (null != referenced_message.referenced_message) {
@@ -697,6 +718,7 @@ const gameStore = new GameStore(DispatcherDefault, {
                 set.delete(game_flags.id);
               }
             }
+            tmp = "game_flags" in game_flags && typeof game_flags.game_flags === "number";
           });
         }
         if (null != message.referenced_message) {
@@ -714,6 +736,7 @@ const gameStore = new GameStore(DispatcherDefault, {
                   set.delete(game_flags.id);
                 }
               }
+              tmp = "game_flags" in game_flags && typeof game_flags.game_flags === "number";
             });
           }
           if (null != referenced_message.referenced_message) {

@@ -33,7 +33,7 @@ function ChatBlockedAlert(arg0) {
   obj.confirmText = buttonCta;
   obj.onConfirm = onConfirm;
   obj = { style: tmp2.body, children: null };
-  obj = { source: _modDef11870, size: tmp8(1178).Icon.Sizes.CUSTOM, style: tmp2.mainIcon };
+  obj = { source: _modDef11870, size: native.Icon.Sizes.CUSTOM, style: tmp2.mainIcon };
   const items = [
     value2(native.Icon, obj),
     value2(Text_Text.Text, {
@@ -169,8 +169,8 @@ export default function AutomodUserProfileQuarantineAlert(guildId) {
     obj.track(constants.OPEN_MODAL, obj);
   });
   if (stateFromStores2 !== GuildMemberFlags.AUTOMOD_QUARANTINED_BIO) {
-    if (stateFromStores2 !== tmp7.AUTOMOD_QUARANTINED_USERNAME_OR_GUILD_NICKNAME) {
-      if (stateFromStores2 === tmp7.AUTOMOD_QUARANTINED_SERVER_TAG) {
+    if (stateFromStores2 !== GuildMemberFlags.AUTOMOD_QUARANTINED_USERNAME_OR_GUILD_NICKNAME) {
+      if (stateFromStores2 === GuildMemberFlags.AUTOMOD_QUARANTINED_SERVER_TAG) {
         obj = { guildName: str };
         const merged = Object.assign(guildId);
         let tmp13 = closure_16(ServerTagAlert, obj);
@@ -185,4 +185,5 @@ export default function AutomodUserProfileQuarantineAlert(guildId) {
   obj1 = { automodReason: stateFromStores2, guildName: str };
   const merged2 = Object.assign(guildId);
   tmp13 = closure_16(PerServerProfileAlert, obj1);
+  const tmpResult = guildId(563);
 }

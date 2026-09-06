@@ -32,12 +32,11 @@ export const useUsersPlayedSocialLayerStorefrontGamesInOutboxApplicationIds =
             entries = [];
           }
           for (const item10019 of entries) {
-            let tmp8 = item10019;
             if (null != item10019) {
               let obj = ContentInventoryTypes;
-              if (obj.isGamingLikeEntry(tmp8)) {
+              if (obj.isGamingLikeEntry(item10019)) {
                 let applicationIdFromDetectableId = SocialLayerStorefrontStore.getApplicationIdFromDetectableId(
-                  tmp8.extra.application_id,
+                  item10019.extra.application_id,
                 );
                 if (null != applicationIdFromDetectableId) {
                   let arr = items.push(tmp15);
@@ -66,11 +65,11 @@ export const useAreUsersInSocialLayerStorefrontMutualGuildsApplicationIds =
           let mutualGuilds = UserProfileStore.getMutualGuilds(tmp3);
           if (null != mutualGuilds) {
             for (const item10020 of mutualGuilds) {
-              let obj = SocialLayerStorefrontStore;
-              let tmp9 = item10020;
               let storefrontGuildIds = SocialLayerStorefrontStore.getStorefrontGuildIds();
               if (storefrontGuildIds.has(item10020.guild.id)) {
-                let applicationIdFromGuildId = obj.getApplicationIdFromGuildId(tmp9.guild.id);
+                let applicationIdFromGuildId = SocialLayerStorefrontStore.getApplicationIdFromGuildId(
+                  item10020.guild.id,
+                );
                 if (null != applicationIdFromGuildId) {
                   let arr = items.push(tmp12);
                 }

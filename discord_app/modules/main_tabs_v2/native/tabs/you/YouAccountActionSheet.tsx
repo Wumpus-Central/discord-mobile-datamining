@@ -14,13 +14,17 @@ import Card from "../../../../../design/components/Card/native/Card.native.tsx";
 import useDesignToggleDefault from "../../../../devtools/design_toggles/useDesignToggle.tsx";
 import TableRadioGroup from "../../../../../design/components/TableRow/native/TableRadioGroup.native.tsx";
 import TableRadioRow from "../../../../../design/components/TableRow/native/TableRadioRow.native.tsx";
+import _modDef7089 from "../../../../../../_runtime/metro/07089__.js";
 import BottomSheetTitleHeader from "../../../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
 import AnalyticsLocationDefault from "../../../../app_analytics/AnalyticsLocation.tsx";
 import ActionSheet from "../../../../../design/components/Sheet/native/ActionSheet.native.tsx";
+import ReactionIcon from "../../../../../design/components/Icon/native/redesign/generated/ReactionIcon.tsx";
 import UserSettingsActionCreatorsDefault from "../../../../../actions/UserSettingsActionCreators.tsx";
 import getChannelA11yLabel from "../../../../channel/getChannelA11yLabel.tsx";
 import FocusModeUtils from "../../../../notifications/FocusModeUtils.tsx";
 import setUserStatusDefault from "../../../../multi_account/setUserStatus.tsx";
+import useGameMentionsAsPlainText from "../../../../game_mentions/hooks/useGameMentionsAsPlainText.tsx";
+import ActivityEmojiDefault from "../../../../activity_status/native/ActivityEmoji.tsx";
 import userSettingToActivity from "../../../../custom_status/utils/userSettingToActivity.tsx";
 import CustomStatusUtils from "../../../../custom_status/native/CustomStatusUtils.tsx";
 import removeCustomStatusDefault from "../../../../custom_status/utils/removeCustomStatus.tsx";
@@ -30,8 +34,10 @@ import MultiAccountActionCreatorsAll from "../../../../multi_account/MultiAccoun
 import ClientThemesBackgroundActionCreators from "../../../../client_themes/ClientThemesBackgroundActionCreators.tsx";
 import ThemeLightIcon from "../../../../../design/components/Icon/native/redesign/generated/ThemeLightIcon.tsx";
 import ThemeMidnightIcon from "../../../../../design/components/Icon/native/redesign/generated/ThemeMidnightIcon.tsx";
+import DevToolsContentDefault from "../../../../devtools/native/components/DevToolsContent.tsx";
 import ThemeGrayIcon from "../../../../../design/components/Icon/native/redesign/generated/ThemeGrayIcon.tsx";
 import openManageAccountsModalDefault from "../../../../multi_account/native/openManageAccountsModal.tsx";
+import YouSwitchClientsRadioGroupDefault from "YouSwitchClientsRadioGroup.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import MultiAccountStore from "../../../../multi_account/MultiAccountStore.tsx";
 import ThemeStore from "../../../../user_settings/ThemeStore.tsx";
@@ -89,19 +95,19 @@ function YouStatusRadioGroup() {
     let formatToPlainStringResult;
     if (value.value === setting) {
       if (null != closure_1) {
-        if ("0" !== tmp6) {
-          const intl = tmp2(1114).intl;
+        if ("0" !== closure_1) {
+          const intl = util.intl;
           obj = { endTime: null };
           const _Date = Date;
           const _Number = Number;
-          const date = new Date(Number(tmp6));
-          obj.endTime = date.toLocaleString(tmp2(1114).intl.currentLocale, {
+          const date = new Date(Number(closure_1));
+          obj.endTime = date.toLocaleString(util.intl.currentLocale, {
             month: "numeric",
             day: "numeric",
             hour: "numeric",
             minute: "2-digit",
           });
-          formatToPlainStringResult = intl.formatToPlainString(tmp2(1114).t.BWD8fs, obj);
+          formatToPlainStringResult = intl.formatToPlainString(util.t.BWD8fs, obj);
         }
       }
     }
@@ -281,9 +287,9 @@ function FocusModeSetting() {
       let stringResult = intl4.string(util.t.i0nsoY);
       const obj1 = { hasIcons: true, children: null };
       tmp5Result.subLabel = stringResult;
-      tmp5Result = tmp5(TableSwitchRow.TableSwitchRow, tmp5Result);
+      tmp5Result = closure_1_19(TableSwitchRow.TableSwitchRow, tmp5Result);
       obj1.children = tmp5Result;
-      tmp5Result = tmp5(TableRowGroup.TableRowGroup, obj1);
+      tmp5Result = closure_1_19(TableRowGroup.TableRowGroup, obj1);
     }
     const intl5 = util.intl;
     let obj2 = { endTime: null };
@@ -301,6 +307,7 @@ function FocusModeSetting() {
     obj2.endTime = toLocaleStringResult;
     stringResult = intl5.formatToPlainString(util.t.BWD8fs, obj2);
   }
+  tmp = closure_21();
 }
 function CustomStatus() {
   const tmp = closure_21();
@@ -323,15 +330,15 @@ function CustomStatus() {
     }
     tmp8 = null != emoji;
   }
-  let tmp2Result = tmp2(10880);
+  let tmp2Result = useGameMentionsAsPlainText;
   let state1;
   if (customStatusActivity != null) {
     state1 = customStatusActivity.state;
   }
   let gameMentionsAsPlainText = tmp2Result.useGameMentionsAsPlainText(state1);
-  tmp2Result = tmp2(4262);
-  const token1 = tmp2Result.useToken(tmp5(576).modules.mobile.TABLE_ROW_LABEL_TEXT_STYLE);
-  const token2 = useToken.useToken(tmp5(576).modules.mobile.TABLE_ROW_LABEL_COLOR);
+  tmp2Result = useToken;
+  const token1 = tmp2Result.useToken(nativeDefault.modules.mobile.TABLE_ROW_LABEL_TEXT_STYLE);
+  const token2 = useToken.useToken(nativeDefault.modules.mobile.TABLE_ROW_LABEL_COLOR);
   obj = { shadow: "none", border: "none", style: tmp.customStatusRow, children: null };
   obj = {
     style: tmp.customStatusEditButton,
@@ -341,9 +348,9 @@ function CustomStatus() {
     onPress: null,
     children: null,
   };
-  const intl = tmp2(1114).intl;
+  const intl = util.intl;
   const string = intl.string;
-  const t = tmp2(1114).t;
+  const t = util.t;
   if (tmp8) {
     let stringResult = string(t["2p9FMw"]);
   } else {
@@ -352,7 +359,7 @@ function CustomStatus() {
   obj.accessibilityLabel = stringResult;
   let formatToPlainStringResult;
   if (tmp8) {
-    const intl2 = tmp2(1114).intl;
+    const intl2 = util.intl;
     emoji = customStatusActivity.emoji;
     let str2;
     if (emoji != null) {
@@ -362,7 +369,7 @@ function CustomStatus() {
       str2 = "";
     }
     obj1 = { emoji: str2, status: gameMentionsAsPlainText };
-    formatToPlainStringResult = intl2.formatToPlainString(tmp2(1114).t.GE7QzY, obj1);
+    formatToPlainStringResult = intl2.formatToPlainString(util.t.GE7QzY, obj1);
   }
   obj.accessibilityHint = formatToPlainStringResult;
   obj.onPress = function onPress() {
@@ -379,16 +386,16 @@ function CustomStatus() {
   }
   if (null != emoji1) {
     const obj2 = { emoji: customStatusActivity.emoji, size: token };
-    let tmp14Result = tmp14(tmp5(10895), obj2);
+    let tmp14Result = closure_1_19(ActivityEmojiDefault, obj2);
   } else {
     const obj3 = { size: "md", style: tmp.leadingIcon };
-    tmp14Result = tmp14(tmp2(8757).ReactionIcon, obj3);
+    tmp14Result = closure_1_19(ReactionIcon.ReactionIcon, obj3);
   }
   let items = [tmp14Result];
   const obj4 = { variant: token1, color: token2, lineClamp: 2, style: tmp.customStatusText, children: null };
   if (!tmp8) {
-    const intl3 = tmp2(1114).intl;
-    gameMentionsAsPlainText = intl3.string(tmp2(1114).t["/UonHN"]);
+    const intl3 = util.intl;
+    gameMentionsAsPlainText = intl3.string(util.t["/UonHN"]);
   }
   obj4.children = gameMentionsAsPlainText;
   items[1] = closure_1_19(Text_Text.Text, obj4);
@@ -406,12 +413,12 @@ function CustomStatus() {
       style: null,
       children: null,
     };
-    const intl4 = tmp2(1114).intl;
-    obj5.accessibilityLabel = intl4.string(tmp2(1114).t.wfYTHe);
+    const intl4 = util.intl;
+    obj5.accessibilityLabel = intl4.string(util.t.wfYTHe);
     obj5.style = tmp.customStatusRemoveButton;
-    const obj6 = { style: tmp.trailingIcon, source: tmp5(7089) };
-    obj5.children = tmp14(timestampProducer, obj6);
-    tmp14Result = tmp14(tmp2(5123).PressableOpacity, obj5);
+    const obj6 = { style: tmp.trailingIcon, source: _modDef7089 };
+    obj5.children = closure_1_19(timestampProducer, obj6);
+    tmp14Result = closure_1_19(Pressables.PressableOpacity, obj5);
   }
   const tmp2Result1 = useToken;
   items1[1] = tmp14Result;
@@ -492,7 +499,7 @@ export default noop.memo((statusOnly) => {
   obj.header = closure_1_19(BottomSheetTitleHeader.BottomSheetTitleHeader, { title: stringResult });
   let tmp7Result = tmp5;
   if (tmp5) {
-    tmp7Result = tmp7(ThemeRadioGroup, {});
+    tmp7Result = closure_1_19(ThemeRadioGroup, {});
   }
   const items2 = [
     tmp7Result,
@@ -507,7 +514,7 @@ export default noop.memo((statusOnly) => {
     tmp7Result = stateFromStores;
   }
   if (tmp7Result) {
-    tmp7Result = tmp7(YouAccountRadioGroup, {});
+    tmp7Result = closure_1_19(YouAccountRadioGroup, {});
   }
   items2[4] = tmp7Result;
   let tmp7Result1 = !flag;
@@ -515,7 +522,7 @@ export default noop.memo((statusOnly) => {
     tmp7Result1 = stateFromStores1;
   }
   if (tmp7Result1) {
-    tmp7Result1 = tmp7(tmp4(16380), {});
+    tmp7Result1 = closure_1_19(YouSwitchClientsRadioGroupDefault, {});
   }
   items2[5] = tmp7Result1;
   let tmp7Result2 = !flag;
@@ -523,7 +530,7 @@ export default noop.memo((statusOnly) => {
     tmp7Result2 = stateFromStores1;
   }
   if (tmp7Result2) {
-    tmp7Result2 = tmp7(tmp4(15743), { title: "Developer Tools", embedded: true });
+    tmp7Result2 = closure_1_19(DevToolsContentDefault, { title: "Developer Tools", embedded: true });
   }
   items2[6] = tmp7Result2;
   obj.children = closure_1_20(Stack_Stack.Stack, { spacing: 24, children: items2 });

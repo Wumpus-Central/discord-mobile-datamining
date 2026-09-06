@@ -63,6 +63,7 @@ export const setIsChannelDetailsSearchActive = function setIsChannelDetailsSearc
     const obj = { states: map };
     return obj.setState(obj);
   });
+  const obj5 = map(1249);
 };
 export const getIsChannelDetailsSearchActive = function getIsChannelDetailsSearchActive(arg0) {
   const states = obj.getState().states;

@@ -52,6 +52,7 @@ prototype["initialize"] = function initialize(numberOfDCsShownToday) {
   const set = new Set();
   obj.seenForGuildId = new Map();
   obj.lastDismissed = null;
+  const map = new Map();
 };
 prototype["getState"] = function getState() {
   return obj;
@@ -74,9 +75,9 @@ Object.defineProperty(prototype, "lastDismissed", {
   },
   set: undefined,
 });
-prototype["getRenderedAtTimestamp"] = function getRenderedAtTimestamp(arg0) {
+prototype["getRenderedAtTimestamp"] = function getRenderedAtTimestamp(dismissibleContent) {
   const renderedAtTimestamps = obj.renderedAtTimestamps;
-  return renderedAtTimestamps.get(arg0);
+  return renderedAtTimestamps.get(dismissibleContent);
 };
 prototype["hasUserHitDCCap"] = function hasUserHitDCCap(PASSWORDLESS_UPSELL, guildId) {
   if (null != PASSWORDLESS_UPSELL) {
@@ -202,7 +203,7 @@ obj = {
           } else {
             const seenForGuildId = obj.seenForGuildId;
             value = seenForGuildId.get(guildId);
-            const tmp10 = null != value && value.has(dismissibleContent);
+            null != value && value.has(dismissibleContent);
           }
         } else {
           const dismissibleContentSeenDuringSession = obj.dismissibleContentSeenDuringSession;
@@ -210,6 +211,7 @@ obj = {
         const tmp2Result = DismissibleContentTypes;
       }
     }
+    const date = new Date();
   },
   DCF_HANDLE_DC_DISMISSED: function handleDCDismissed(dismissibleContent) {
     dismissibleContent = dismissibleContent.dismissibleContent;

@@ -50,12 +50,11 @@ function parseThemedStyles(obj, enabledExperiments) {
       obj[key10022] = obj2.resolve(obj);
       continue;
     } else {
-      let tmp6 = importDefault;
       let internal = nativeDefault.internal;
       if (internal.isSemanticColor(obj2)) {
         let obj3 = SemanticColorContext;
         let semanticColorContextFromThemeContext = obj3.getSemanticColorContextFromThemeContext(arg1);
-        let internal4 = tmp6(576).internal;
+        let internal4 = nativeDefault.internal;
         obj[key10022] = internal4.resolveSemanticColor(theme, obj2, semanticColorContextFromThemeContext);
         continue;
       } else {
@@ -78,12 +77,12 @@ function parseThemedStyles(obj, enabledExperiments) {
               }
               let result = obj2;
               if (tmp) {
-                let internal2 = tmp6(576).internal;
+                let internal2 = nativeDefault.internal;
                 result = internal2.adjustColorSaturation(obj2, saturation, str);
               }
               let adjustColorContrastResult = result;
               if (1 !== contrast) {
-                let internal3 = tmp6(576).internal;
+                let internal3 = nativeDefault.internal;
                 adjustColorContrastResult = internal3.adjustColorContrast(result, contrast, str, theme);
               }
               tmp8 = adjustColorContrastResult;
@@ -175,7 +174,7 @@ export const createStyles = function createStyles(createStyles) {
                     HermesBuiltin.arraySpread(items, 0);
                     let applyResult = HermesBuiltin.apply(items, undefined);
                   } else {
-                    applyResult = tmp2;
+                    applyResult = closure_0;
                   }
                   const tmpResult = parseThemedStyles(applyResult[closure_0], themeContext);
                   Object.defineProperty(obj, closure_0, { value: tmpResult, enumerable: true });
@@ -255,10 +254,9 @@ export const createStyleProperties = function createStyleProperties(createStyles
         applyResult = HermesBuiltin.apply(items2, undefined);
       }
       const tmp4Result = parseThemedStyles(applyResult, themeContext);
-      const result = obj2.set(tmp2, tmp4Result);
+      const result = map.set(tmp2, tmp4Result);
       return tmp4Result;
     }
-    obj2 = map;
   };
 };
 export const processColorOrThrow = function processColorOrThrow(arg0) {
@@ -287,7 +285,7 @@ export const createNativeStyleProperties = function createNativeStyleProperties(
     }
     if (null == customBackgroundGradient) {
       obj = {};
-      const merged = Object.assign(tmp2(4271).FALLBACK_THEME_CONTEXT_VALUE);
+      const merged = Object.assign(native.FALLBACK_THEME_CONTEXT_VALUE);
       obj.flags = 0;
       obj.saturation = AccessibilityStore.saturation;
       obj.theme = theme;
@@ -335,22 +333,21 @@ export const createNativeStyleProperties = function createNativeStyleProperties(
       }
     } else {
       if ("light" === customBackgroundGradient.theme) {
-        let MOBILE_DARK_GRADIENT_THEME_ENABLED = tmp2(4271).ThemeContextFlags.MOBILE_LIGHT_GRADIENT_THEME_ENABLED;
+        let MOBILE_DARK_GRADIENT_THEME_ENABLED = native.ThemeContextFlags.MOBILE_LIGHT_GRADIENT_THEME_ENABLED;
       } else {
-        MOBILE_DARK_GRADIENT_THEME_ENABLED = tmp2(4271).ThemeContextFlags.MOBILE_DARK_GRADIENT_THEME_ENABLED;
+        MOBILE_DARK_GRADIENT_THEME_ENABLED = native.ThemeContextFlags.MOBILE_DARK_GRADIENT_THEME_ENABLED;
       }
-      tmp2(4271).setThemeFlag(0, MOBILE_DARK_GRADIENT_THEME_ENABLED);
-      const tmp2Result = tmp2(4271);
+      native.setThemeFlag(0, MOBILE_DARK_GRADIENT_THEME_ENABLED);
+      const tmp2Result = native;
     }
   };
 };
-export const createAnimatedThemedStyles = function createAnimatedThemedStyles(createStyles, items) {
+export const createAnimatedThemedStyles = function createAnimatedThemedStyles(createStyles) {
   let arr = items;
   if (items === undefined) {
     arr = closure_10;
   }
   let stops;
-  let map;
   items = [];
   let obj = {};
   for (const key10007 in arg0) {
@@ -367,7 +364,7 @@ export const createAnimatedThemedStyles = function createAnimatedThemedStyles(cr
     continue;
   }
   stops = arr.map((item, index) => index);
-  map = new Map();
+  new Map();
   return (themeIndex) => {
     obj = arr(obj[4]);
     const themeContext = obj.useThemeContext();

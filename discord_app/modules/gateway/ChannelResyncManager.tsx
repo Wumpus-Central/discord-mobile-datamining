@@ -20,16 +20,16 @@ function handleGuildCreate(guild) {
   if (true !== guild.unavailable) {
     if (null != dependencyMap4[guild.id]) {
       const _clearTimeout = clearTimeout;
-      clearTimeout(tmp[guild.id]);
+      clearTimeout(dependencyMap4[guild.id]);
     }
     closure_1 = c24;
     const _setTimeout = setTimeout;
     dependencyMap4[guild.id] = setTimeout(() => {
       delete tmp2[tmp];
       if (closure_1 === c24) {
-        set.delete(tmp3.id);
-        scheduleGuildResyncs(tmp3.id);
-        scheduleIntegrityCheck(tmp3.id);
+        set.delete(guild.id);
+        scheduleGuildResyncs(guild.id);
+        scheduleIntegrityCheck(guild.id);
       }
     }, 0);
   }
@@ -175,10 +175,6 @@ function handleChannelSync(guild_id) {
 }
 function handleLogout(isSwitchingAccount) {
   closure_24 = closure_24 + 1;
-  let str = "logout";
-  if (true === isSwitchingAccount.isSwitchingAccount) {
-    str = "account_switch";
-  }
   const items = [
     ...Object.keys(closure_19),
     ...Object.keys(closure_20),
@@ -280,7 +276,7 @@ function scheduleGuildResyncs() {
   }
   return applyArgumentsResult;
 }
-let closure_30 = async function _scheduleGuildResyncs(arg0, value) {
+let closure_30 = async function _scheduleGuildResyncs(arg0) {
   if (c4 === 2) {
     c4 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -347,42 +343,42 @@ let closure_30 = async function _scheduleGuildResyncs(arg0, value) {
               id = id.id;
               let obj = { guildId: id, requestId: id.requestId, source: "resync", requestedUserId: id.getId() };
               closure_2_17[id] = obj;
-              if (null != closure_2_19[id]) {
+              if (null != dependencyMap[id]) {
                 let _clearTimeout = clearTimeout;
-                clearTimeout(tmp5[id]);
+                clearTimeout(dependencyMap[id]);
               }
               const _Math = Math;
               const _Math2 = Math;
               let _setTimeout = setTimeout;
-              closure_2_19[id] = setTimeout(
+              dependencyMap[id] = setTimeout(
                 () => {
                   delete tmp3[tmp2];
                   let obj = closure_2_0(13668);
                   if (obj.isChannelMetadataObfuscationEnabled("triggerGuildChannelResync")) {
                     let str;
-                    if (closure_2_17[tmp6] != null) {
+                    if (closure_2_17[id] != null) {
                       str = tmp9.requestId;
                     }
                     if (str == null) {
                       str = "unknown";
                     }
-                    if (null == guild.getGuild(tmp6)) {
-                      obj = { guild_id: tmp6, request_id: str, failure_reason: "guild_not_found" };
+                    if (null == guild.getGuild(id)) {
+                      obj = { guild_id: id, request_id: str, failure_reason: "guild_not_found" };
                       closure_2_1(1242).track(constants.GUILD_CHANNEL_RESYNC_FAILED, obj);
-                      if (null != dependencyMap2[tmp6]) {
+                      if (null != dependencyMap2[id]) {
                         let _clearTimeout2 = clearTimeout;
-                        clearTimeout(tmp31[tmp6]);
+                        clearTimeout(tmp31[id]);
                         delete tmp4[tmp2];
                       }
-                      if (null != tmp5[tmp6]) {
+                      if (null != dependencyMap[id]) {
                         const _clearTimeout3 = clearTimeout;
-                        clearTimeout(tmp5[tmp6]);
+                        clearTimeout(dependencyMap[id]);
                         delete tmp3[tmp2];
                       }
                       const obj5 = closure_2_1(1242);
                     } else {
                       const items = [];
-                      mutableGuildChannelsForGuild = mutableGuildChannelsForGuild.getMutableGuildChannelsForGuild(tmp6);
+                      mutableGuildChannelsForGuild = mutableGuildChannelsForGuild.getMutableGuildChannelsForGuild(id);
                       let num2 = 0;
                       let num = 0;
                       const keys = Object.keys();
@@ -398,37 +394,37 @@ let closure_30 = async function _scheduleGuildResyncs(arg0, value) {
                         }
                       }
                       obj = {
-                        guild_id: tmp6,
+                        guild_id: id,
                         request_id: str,
                         num_obfuscated_channels: items.length,
                         num_total_channels: num,
                       };
                       closure_2_1(1242).track(constants.GUILD_CHANNEL_RESYNC_EXECUTED, obj);
                       socket = socket.getSocket();
-                      const result = socket.triggerGuildChannelResync(tmp6, items);
-                      const guild_id = tmp6;
-                      if (null != dependencyMap2[tmp6]) {
+                      const result = socket.triggerGuildChannelResync(id, items);
+                      const guild_id = id;
+                      if (null != dependencyMap2[id]) {
                         let _clearTimeout = clearTimeout;
-                        clearTimeout(tmp21[tmp6]);
+                        clearTimeout(dependencyMap2[id]);
                       }
                       const _setTimeout = setTimeout;
-                      dependencyMap2[tmp6] = setTimeout(() => {
+                      dependencyMap2[id] = setTimeout(() => {
                         logger.warn("Resync timeout for guild " + guild_id + " with request " + str);
                         closure_2_1(dependencyMap[11]);
                         const obj = { guild_id, request_id: str, failure_reason: "timeout" };
                         obj.track(constants.GUILD_CHANNEL_RESYNC_FAILED, obj);
                         if (null != dependencyMap2[guild_id]) {
                           const _clearTimeout = clearTimeout;
-                          clearTimeout(tmp7[tmp4]);
+                          clearTimeout(tmp7[guild_id]);
                           delete tmp3[tmp2];
                         }
                         if (null != closure_2_19[guild_id]) {
                           const _clearTimeout2 = clearTimeout;
-                          clearTimeout(tmp9[tmp4]);
+                          clearTimeout(tmp9[guild_id]);
                           delete tmp[tmp2];
                         }
                       }, closure_2_15);
-                      closure_2_32(tmp6);
+                      closure_2_32(id);
                       const obj2 = closure_2_1(1242);
                     }
                   }
@@ -436,6 +432,7 @@ let closure_30 = async function _scheduleGuildResyncs(arg0, value) {
                 Math.ceil(Math.random() * closure_2_12),
               );
             }
+            tmp2 = null != closure_1_0 && id.id !== tmp;
           });
           if (closure_129_2.ineligible.length > 0) {
             const ineligible = closure_129_2.ineligible;
@@ -463,7 +460,7 @@ let closure_30 = async function _scheduleGuildResyncs(arg0, value) {
 let closure_31 = async function _getResyncGuilds() {
   closure_0 = tmp4;
   await GuildsRequiringChannelSyncDefault.getAll();
-  return arg1.reduce(
+  return value.reduce(
     (ineligible, id) => {
       if (null == guild.getGuild(id.id)) {
         if (!unavailable.isUnavailable(id.id)) {
@@ -489,13 +486,13 @@ function scheduleIntegrityCheck(guild_id) {
     }
     if (null != dependencyMap2[guild_id]) {
       let _clearTimeout2 = clearTimeout;
-      clearTimeout(tmp6[guild_id]);
+      clearTimeout(dependencyMap2[guild_id]);
       delete tmp[tmp2];
     }
     if (null != dependencyMap[guild_id]) {
       let requestId = tmp15.requestId;
     } else {
-      const v4Result = require("v1").v4();
+      const v4Result = tmp4(1256).v4();
       obj = {
         guildId: guild_id,
         requestId: v4Result,
@@ -504,7 +501,7 @@ function scheduleIntegrityCheck(guild_id) {
       };
       tmp14[guild_id] = obj;
       requestId = v4Result;
-      const tmp4Result = require("v1");
+      const tmp4Result = tmp4(1256);
     }
     if (!tmp8) {
       obj = { guild_id, request_id: requestId };
@@ -534,9 +531,9 @@ function scheduleIntegrityCheck(guild_id) {
                 clearTimeout(tmp19[tmp5]);
                 delete tmp3[tmp];
               }
-              if (null != tmp4[tmp5]) {
+              if (null != dependencyMap[tmp5]) {
                 const _clearTimeout3 = clearTimeout;
-                clearTimeout(tmp4[tmp5]);
+                clearTimeout(dependencyMap[tmp5]);
                 delete tmp2[tmp];
               }
             } else {
@@ -547,7 +544,7 @@ function scheduleIntegrityCheck(guild_id) {
               guild_id = tmp5;
               if (null != dependencyMap[tmp5]) {
                 let _clearTimeout = clearTimeout;
-                clearTimeout(tmp29[tmp5]);
+                clearTimeout(dependencyMap[tmp5]);
               }
               const _setTimeout = setTimeout;
               dependencyMap[tmp5] = setTimeout(() => {
@@ -557,12 +554,12 @@ function scheduleIntegrityCheck(guild_id) {
                 obj.track(constants.GUILD_CHANNEL_INTEGRITY_CHECK_FAILED, obj);
                 if (null != dependencyMap[guild_id]) {
                   const _clearTimeout = clearTimeout;
-                  clearTimeout(tmp7[tmp4]);
+                  clearTimeout(tmp7[guild_id]);
                   delete tmp3[tmp2];
                 }
                 if (null != dependencyMap2[guild_id]) {
                   const _clearTimeout2 = clearTimeout;
-                  clearTimeout(tmp9[tmp4]);
+                  clearTimeout(tmp9[guild_id]);
                   delete tmp[tmp2];
                 }
               }, closure_16);
@@ -574,6 +571,7 @@ function scheduleIntegrityCheck(guild_id) {
     );
     tmp8 = null != dependencyMap2[guild_id];
   }
+  tmp4 = _require;
 }
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const ChannelFlags = fn(1964).ChannelFlags;

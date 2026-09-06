@@ -1,8 +1,11 @@
 // discord_app/components_native/reactions/BurstReactionFirstSendActionSheet.tsx
+import DispatcherDefault from "../../Dispatcher.tsx";
 import nativeDefault from "../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../intl/index.native.tsx";
 import native from "../../design/void/native.tsx";
+import asyncRequireImpl from "../../../_runtime/01896_asyncRequireImpl.js";
 import dismissible_content from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
+import DismissibleContentUnsafeUtils from "../../modules/dismissible_content/DismissibleContentUnsafeUtils.tsx";
 import ActionSheetActionCreatorsDefault from "../../modules/action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../design/components/Button/native/Button.native.tsx";
@@ -101,16 +104,17 @@ export const openBurstReactionFirstSendActionSheet = function openBurstReactionF
   let obj = ActionSheetActionCreatorsDefault;
   obj.hideActionSheet();
   if (obj2.UNSAFE_isDismissibleContentDismissed(dismissible_content.DismissibleContent.SUPER_REACTIONS_FIRST_SENT)) {
-    let tmpResult = tmp(573);
+    let tmpResult = DispatcherDefault;
     obj = { type: "BURST_REACTION_EFFECT_SEND", channelId, messageId, emoji };
     tmpResult.dispatch(obj);
   } else {
-    const result = tmp4(4380).UNSAFE_markDismissibleContentAsDismissed(
-      tmp4(1943).DismissibleContent.SUPER_REACTIONS_FIRST_SENT,
+    const result = DismissibleContentUnsafeUtils.UNSAFE_markDismissibleContentAsDismissed(
+      dismissible_content.DismissibleContent.SUPER_REACTIONS_FIRST_SENT,
     );
-    tmpResult = tmp(4527);
+    tmpResult = ActionSheetActionCreatorsDefault;
     obj = { channelId, messageId, emoji };
-    tmpResult.openLazy(tmp4(1896)(7823, dependencyMap.paths), "BurstReactionFirstSendActionSheet", obj);
-    const tmp4Result = tmp4(4380);
+    tmpResult.openLazy(asyncRequireImpl(7823, dependencyMap.paths), "BurstReactionFirstSendActionSheet", obj);
+    const tmp4Result = DismissibleContentUnsafeUtils;
   }
+  obj2 = DismissibleContentUnsafeUtils;
 };

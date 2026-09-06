@@ -30,7 +30,7 @@ let prototype = function GlobalDiscoveryServersFeaturedSearchManager() {
     });
   };
   closure_129_1 = applyArgumentsResult;
-  closure_129_0 = asyncGeneratorStep(async (arg0, value) => {
+  closure_129_0 = asyncGeneratorStep(async (arg0) => {
     if (constants === 2) {
       constants = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -61,8 +61,8 @@ let prototype = function GlobalDiscoveryServersFeaturedSearchManager() {
             closure_130_2 = undefined;
             if (isFetchEnabled.isFetchEnabled) {
               let forceRefresh;
-              if (tmp63 != null) {
-                forceRefresh = tmp63.forceRefresh;
+              if (applyArgumentsResult != null) {
+                forceRefresh = applyArgumentsResult.forceRefresh;
               }
               isFetchEnabled = forceRefresh;
               if (forceRefresh == null) {
@@ -150,7 +150,7 @@ let prototype = function GlobalDiscoveryServersFeaturedSearchManager() {
     return applyArgumentsResult;
   };
   closure_130_1 = applyArgumentsResult;
-  closure_130_0 = asyncGeneratorStep(async (arg0, value) => {
+  closure_130_0 = asyncGeneratorStep(async (arg0) => {
     if (c6 === 2) {
       c6 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");

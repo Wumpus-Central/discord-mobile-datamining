@@ -1,5 +1,7 @@
 // discord_app/modules/messages/useDMMessageToReport.tsx
+import useLongestChannelMessageBeforeReply from "useLongestChannelMessageBeforeReply.tsx";
 import useIsRelationshipTypeSpamReportable from "useIsRelationshipTypeSpamReportable.tsx";
+import useMessageRequestPreview from "../message_request/hooks/useMessageRequestPreview.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/messages/useDMMessageToReport.tsx");
@@ -10,9 +12,9 @@ export const useDMMessageToReport = function useDMMessageToReport(channel, id, a
   if (!arg2) {
     isRelationshipTypeSpamReportable = obj.useIsRelationshipTypeSpamReportable(id);
   }
-  let tmp2Result = tmp2(12450);
+  let tmp2Result = useLongestChannelMessageBeforeReply;
   const longestChannelMessageBeforeReply = tmp2Result.useLongestChannelMessageBeforeReply(channel.id, id);
-  tmp2Result = tmp2(12594);
+  tmp2Result = useMessageRequestPreview;
   const messageRequestPreview = tmp2Result.useMessageRequestPreview(channel, {
     enabled: isRelationshipTypeSpamReportable,
   });

@@ -7,10 +7,11 @@ function handleAddUser(id) {
   if (null == closure_1.users) {
     const _Map = Map;
     const map = new Map();
-    tmp.users = map;
+    closure_1.users = map;
   }
-  const users = tmp.users;
+  const users = closure_1.users;
   const result = users.set(id.id, new UserRecord(id));
+  const tmp7 = new UserRecord(id);
 }
 let closure_1 = { pools: null, users: null };
 const PersistedStore = initializeDefault.PersistedStore;
@@ -36,13 +37,13 @@ prototype["getState"] = function getState() {
   let fromEntriesResult = null;
   if (null != closure_1.pools) {
     const _Object = Object;
-    fromEntriesResult = Object.fromEntries(tmp.pools);
+    fromEntriesResult = Object.fromEntries(closure_1.pools);
   }
   const obj = { pools: fromEntriesResult, users: null };
   let fromEntriesResult1 = null;
   if (null != closure_1.users) {
     const _Object2 = Object;
-    fromEntriesResult1 = Object.fromEntries(tmp.users);
+    fromEntriesResult1 = Object.fromEntries(closure_1.users);
   }
   obj.users = fromEntriesResult1;
   return obj;
@@ -109,9 +110,9 @@ const generatedTestUsersStore = new GeneratedTestUsersStore(DispatcherDefault, {
     if (null == closure_1.pools) {
       const _Map = Map;
       const map = new Map();
-      tmp.pools = map;
+      closure_1.pools = map;
     }
-    const pools = tmp.pools;
+    const pools = closure_1.pools;
     const result = pools.set(pool.id, pool);
     const item = users.forEach(handleAddUser);
   },
@@ -134,12 +135,11 @@ const generatedTestUsersStore = new GeneratedTestUsersStore(DispatcherDefault, {
           }
         });
       }
-      const pools2 = tmp.pools;
+      const pools2 = users.pools;
       if (pools2 != null) {
         pools2.delete(poolId);
       }
     }
-    tmp = users;
   },
 });
 const size = fn(2);

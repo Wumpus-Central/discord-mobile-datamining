@@ -48,8 +48,8 @@ export const QuestDockExternalCoordinationContextProvider = noop.memo(
     const obj3 = sharedValue(sharedValue1[7]);
     const sharedValue2 = obj3.useSharedValue(
       sharedValue(sharedValue1[8]).isSoftDismissed(setRestingQuestDockMode.questDockSoftDismissedAt)
-        ? tmp3.SOFT_DISMISSED
-        : tmp3.COLLAPSED,
+        ? QuestDockMode.SOFT_DISMISSED
+        : QuestDockMode.COLLAPSED,
     );
     const items = [sharedValue2, sharedValue1];
     setRestingQuestDockMode = sharedValue2.useCallback((mode) => {
@@ -86,7 +86,7 @@ export const QuestDockExternalCoordinationContextProvider = noop.memo(
           items1,
         )}
       >
-        {arg0.children}
+        {children.children}
       </context.Provider>
     );
   },
@@ -105,7 +105,7 @@ export const useExternalScrollEventHandler = function useExternalScrollEventHand
   const scheduleReopenQuestDock = restingQuestDockMode.useCallback(() => {
     if (-1 !== ref.current) {
       const _window = window;
-      window.clearTimeout(tmp.current);
+      window.clearTimeout(ref.current);
     }
     ref.current = window.setTimeout(() => {
       if (restingQuestDockMode.get() !== constants.EXPANDED) {

@@ -79,7 +79,7 @@ export default function GuildMemberDashChannelRow(arg0) {
     const obj2 = { style: null, textStyle: null, value: null };
     ({ badge: obj5.style, badgeText: obj5.textStyle } = tmp);
     obj2.value = num;
-    tmp8Result = tmp8(tmp2(1178).Badge, obj2);
+    tmp8Result = jsx(tmp2(1178).Badge, { style: null, textStyle: null, value: null });
   }
   obj.channelInfo = tmp8Result;
   return <tmp9 name={null} mode={null} />;

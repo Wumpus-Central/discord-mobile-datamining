@@ -3,6 +3,7 @@ import KeyboardTypes from "../../keyboard/native/KeyboardTypes.tsx";
 import ReanimatedRexportDefault from "../../reanimated/ReanimatedRexport.tsx";
 import useKeyboardTypeDefault from "../../keyboard/native/useKeyboardType.tsx";
 import timing from "../../../design/animation/reanimated/timing/timing.tsx";
+import timingPresets from "../../../design/animation/reanimated/timing/timingPresets.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -29,7 +30,7 @@ export const MediaKeyboardButtonIcon = function MediaKeyboardButtonIcon(arg0) {
         str = "45deg";
       }
       let obj = { transform: null };
-      obj = { rotate: timing.withTiming(str, tmp2(4564).timingStandard) };
+      obj = { rotate: timing.withTiming(str, timingPresets.timingStandard) };
       const items = [obj];
       obj.transform = items;
       return obj;

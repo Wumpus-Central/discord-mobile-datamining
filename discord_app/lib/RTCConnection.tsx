@@ -3,14 +3,17 @@ import LoggerDefault from "../modules/debug/Logger.tsx";
 import debounceDefault from "../../_runtime/00551_debounce.js";
 import BackoffDefault from "../../discord_common/js/packages/backoff/Backoff.tsx";
 import DispatcherDefault from "../Dispatcher.tsx";
+import util from "../intl/index.native.tsx";
 import PlatformUtils from "../utils/PlatformUtils.tsx";
 import SentryUtilsDefault from "../utils/SentryUtils.native.tsx";
 import MurmurHashV3Default from "../../_runtime/01241_MurmurHashV3.js";
 import AnalyticsUtilsDefault from "../utils/AnalyticsUtils.tsx";
 import v1 from "../../_runtime/01256_v1.js";
 import URLUtilsDefault from "../utils/URLUtils.tsx";
+import FlagUtils from "../../discord_common/js/shared/utils/FlagUtils.tsx";
 import NetworkUtilsDefault from "../utils/NetworkUtils.tsx";
 import RTCControlSocket from "RTCControlSocket.tsx";
+import DiscordNativeDefault from "DiscordNative.tsx";
 import PremiumUtilsDefault from "../utils/PremiumUtils.tsx";
 import CrossPlatformNativeUtilsDefault from "../utils/CrossPlatformNativeUtils.native.tsx";
 import TimeUtils from "../../discord_common/js/packages/time-utils/TimeUtils.tsx";
@@ -22,8 +25,13 @@ import getMediaPerformanceClassDefault from "../modules/device/getMediaPerforman
 import SystemResourcesDefault from "SystemResources.tsx";
 import AVError from "../modules/errors/av_errors/AVError.tsx";
 import ThermalUtilsDefault from "../modules/device/ThermalUtils.native.tsx";
+import SurfaceDirectRendererExperiment from "../modules/video_calls/native/SurfaceDirectRendererExperiment.tsx";
 import WindowVisibilityVideoManager3 from "WindowVisibilityVideoManager.tsx";
 import RTCDebugActionCreatorsAll from "../actions/RTCDebugActionCreators.tsx";
+import RTCMediaSinkWantsManagerDefault from "RTCMediaSinkWantsManager.tsx";
+import GoLiveQualityManagerDefault from "../modules/go_live/GoLiveQualityManager.tsx";
+import BrowserTransceiverPaddingRemovalExperiment2 from "../modules/media_engine/BrowserTransceiverPaddingRemovalExperiment.tsx";
+import VideoStabilizationExperimentDefault from "../modules/calls/VideoStabilizationExperiment.tsx";
 import ServerLadderExperiment2 from "../modules/media_engine/ServerLadderExperiment.tsx";
 import AV1BitrateTuningExperiment from "../modules/media_engine/AV1BitrateTuningExperiment.tsx";
 import NativeMuteManagerDefault from "../modules/calls/NativeMuteManager.native.tsx";
@@ -52,7 +60,6 @@ const RTCControlSocketDefault = RTCControlSocket;
 const VoiceQualityDefault = VoiceQuality;
 
 const RTCBandwidthMonitorDefault = tmp19(7474);
-const VideoStabilizationExperimentDefault = tmp3(13809);
 require = fn;
 function getEventHistoryString() {
   const items = [];
@@ -391,16 +398,16 @@ class RTCConnection extends tmp5 {
         (localVideoSinkWants) => {
           let tmp2 = obj.state === constants3.RTC_CONNECTED;
           if (tmp2) {
-            tmp2 = null != tmp._socket;
+            tmp2 = null != obj._socket;
           }
           if (tmp2) {
-            const logger = tmp.logger;
+            const logger = obj.logger;
             const _JSON = JSON;
             const _HermesInternal = HermesInternal;
             logger.info("Media sink wants: " + JSON.stringify(localVideoSinkWants));
-            const _socket = tmp._socket;
+            const _socket = obj._socket;
             _socket.mediaSinkWants(localVideoSinkWants);
-            const _connection = tmp._connection;
+            const _connection = obj._connection;
             if (_connection != null) {
               const result = _connection.setLocalVideoSinkWants(localVideoSinkWants);
             }
@@ -439,16 +446,16 @@ class RTCConnection extends tmp5 {
         (localVideoSinkWants) => {
           let tmp2 = obj.state === constants3.RTC_CONNECTED;
           if (tmp2) {
-            tmp2 = null != tmp._socket;
+            tmp2 = null != obj._socket;
           }
           if (tmp2) {
-            const logger = tmp.logger;
+            const logger = obj.logger;
             const _JSON = JSON;
             const _HermesInternal = HermesInternal;
             logger.info("Go Live Media sink wants: " + JSON.stringify(localVideoSinkWants));
-            const _socket = tmp._socket;
+            const _socket = obj._socket;
             _socket.mediaSinkWants(localVideoSinkWants);
-            const _connection = tmp._connection;
+            const _connection = obj._connection;
             if (_connection != null) {
               const result = _connection.setLocalVideoSinkWants(localVideoSinkWants);
             }
@@ -575,6 +582,7 @@ Object.defineProperty(prototype, "endpoint", {
       self.hostname = hostname;
       tmp5 = str;
     }
+    const obj = { c: constants10.SET_ENDPOINT, e: null != arg0 };
   },
 });
 prototype["connect"] = function connect(endpoint, token) {
@@ -673,9 +681,9 @@ prototype["connect"] = function connect(endpoint, token) {
       const _handleMLSWelcome = self._handleMLSWelcome;
       obj5.on(RTCControlSocket.SocketEvent.MLSWelcome, _handleMLSWelcome.bind(self));
       const _recordMessageEvent = self._recordMessageEvent;
-      obj5.on(RTCControlSocket.SocketEvent.ReceiveMessage, _recordMessageEvent.bind(self, tmp3.MESSAGE_RECEIVE));
+      obj5.on(RTCControlSocket.SocketEvent.ReceiveMessage, _recordMessageEvent.bind(self, constants10.MESSAGE_RECEIVE));
       const _recordMessageEvent2 = self._recordMessageEvent;
-      obj5.on(RTCControlSocket.SocketEvent.SendMessage, _recordMessageEvent2.bind(self, tmp3.MESSAGE_SEND));
+      obj5.on(RTCControlSocket.SocketEvent.SendMessage, _recordMessageEvent2.bind(self, constants10.MESSAGE_SEND));
       self._connectStartTime = TimeUtils.now();
       self._connectCount = self._connectCount + 1;
       self._connecting = true;
@@ -688,6 +696,7 @@ prototype["connect"] = function connect(endpoint, token) {
     } else {
       self.setState(constants3.AWAITING_ENDPOINT);
     }
+    tmp7 = endpoint === self.endpoint && self.token === token;
   }
 };
 prototype["_recordMessageEvent"] = function _recordMessageEvent(c, o) {
@@ -726,12 +735,12 @@ prototype["destroy"] = function destroy() {
   }
   obj = { c: constants10.CONNECTION_DESTROY };
   self.recordEvent(obj);
-  const WindowVisibilityVideoManager = tmp5(9609).WindowVisibilityVideoManager;
+  const WindowVisibilityVideoManager = WindowVisibilityVideoManager3.WindowVisibilityVideoManager;
   WindowVisibilityVideoManager.off(
     WindowVisibilityVideoManager3.WindowVisibilityEvent.IncomingVideoEnabledChanged,
     self.incomingVideoEnabledChanged,
   );
-  const WindowVisibilityVideoManager2 = tmp5(9609).WindowVisibilityVideoManager;
+  const WindowVisibilityVideoManager2 = WindowVisibilityVideoManager3.WindowVisibilityVideoManager;
   WindowVisibilityVideoManager2.off(
     WindowVisibilityVideoManager3.WindowVisibilityEvent.WindowVisibilityChanged,
     self.windowVisibilityChanged,
@@ -779,22 +788,22 @@ prototype["destroy"] = function destroy() {
   }
   self.removeAllListeners();
   self._destroyed = true;
+  obj3 = PlatformUtils;
 };
 prototype["shouldSendSpeaking"] = function shouldSendSpeaking(_lastSentSpeakingStatus, _lastSentSSRC) {
   if (obj.isWeb()) {
     return true;
   } else {
     const self = this;
-    tmp(1384);
-    const tmpResult = tmp(1384);
+    const tmpResult = FlagUtils;
     let tmp7 =
       this._lastSentSSRC !== _lastSentSSRC ||
       tmpResult.hasFlag(_lastSentSpeakingStatus, constants9.PRIORITY) !==
         tmpResult.hasFlag(this._lastSentSpeakingStatus, constants9.PRIORITY);
     if (tmp7) {
-      let tmp8 = undefined !== self._lastSentSSRC || _lastSentSpeakingStatus !== tmp5.NONE;
+      let tmp8 = undefined !== self._lastSentSSRC || _lastSentSpeakingStatus !== constants9.NONE;
       if (tmp8) {
-        let flag = self._lastSentSSRC === _lastSentSSRC || _lastSentSpeakingStatus !== tmp5.NONE;
+        let flag = self._lastSentSSRC === _lastSentSSRC || _lastSentSpeakingStatus !== constants9.NONE;
         if (flag) {
           self._lastSentSpeakingStatus = _lastSentSpeakingStatus;
           self._lastSentSSRC = _lastSentSSRC;
@@ -1173,13 +1182,14 @@ prototype["_chooseExperiments"] = function _chooseExperiments() {
   }
   let enabled = PlatformUtils.isWeb();
   if (enabled) {
-    const BrowserTransceiverPaddingRemovalExperiment = tmp8(13808).BrowserTransceiverPaddingRemovalExperiment;
+    const BrowserTransceiverPaddingRemovalExperiment =
+      BrowserTransceiverPaddingRemovalExperiment2.BrowserTransceiverPaddingRemovalExperiment;
     enabled = BrowserTransceiverPaddingRemovalExperiment.getConfig({ location: "RTCConnection" }).enabled;
   }
   if (enabled) {
     items.push("browser_transceiver_padding_removal");
   }
-  let tmp8Result = tmp8(1115);
+  let tmp8Result = PlatformUtils;
   if (tmp8Result.isIOS()) {
     const mode = VideoStabilizationExperimentDefault.getConfig({ location: "_chooseExperiments" }).mode;
     if ("standard" === mode) {
@@ -1189,14 +1199,14 @@ prototype["_chooseExperiments"] = function _chooseExperiments() {
     }
     const tmp3Result = VideoStabilizationExperimentDefault;
   }
-  tmp8Result = tmp8(1115);
+  tmp8Result = PlatformUtils;
   let isAndroidResult = tmp8Result.isAndroid();
   if (isAndroidResult) {
-    isAndroidResult = tmp8(9605).isSurfaceDirectRendererExperimentEnabled();
-    const tmp8Result1 = tmp8(9605);
+    isAndroidResult = SurfaceDirectRendererExperiment.isSurfaceDirectRendererExperimentEnabled();
+    const tmp8Result1 = SurfaceDirectRendererExperiment;
   }
   if (isAndroidResult) {
-    items.push(tmp8(9605).ANDROID_SURFACE_DIRECT_RENDERER_EXPERIMENT);
+    items.push(SurfaceDirectRendererExperiment.ANDROID_SURFACE_DIRECT_RENDERER_EXPERIMENT);
   }
   this._selectedExperiments = items;
 };
@@ -1457,7 +1467,7 @@ prototype["_handleDisconnect"] = function _handleDisconnect(arg0, arg1, code, re
       self._trackMLSFailures({ recovered: false, downgraded: false });
       let preferredRegion = null;
       if (RTCRegionStore.shouldIncludePreferredRegion()) {
-        preferredRegion = obj9.getPreferredRegion();
+        preferredRegion = RTCRegionStore.getPreferredRegion();
       }
       const settings = mediaEngine3.getSettings();
       const channel = ChannelStore.getChannel(self.channelId);
@@ -1630,8 +1640,8 @@ prototype["_handleDisconnect"] = function _handleDisconnect(arg0, arg1, code, re
         if (_systemResources != null) {
           const batteryLevelStats = _systemResources.getBatteryLevelStats();
         }
-        value = await batteryLevelStats;
-        if (arg1 == null) {
+        await batteryLevelStats;
+        if (value == null) {
           value = { batteryUsageRounded: null };
         }
         return value;
@@ -1665,7 +1675,6 @@ prototype["_handleDisconnect"] = function _handleDisconnect(arg0, arg1, code, re
         const error = new Error("codec survey is not available");
         throw error;
       });
-      obj9 = RTCRegionStore;
       items1[1] = require("KrispUtils").getKrispModel();
       if (mediaEngine3.getKrispEnableStats()) {
         mediaEngine3 = mediaEngine3.getMediaEngine();
@@ -1885,6 +1894,7 @@ prototype["_connectMediaEngineWithEndpoint"] = function _connectMediaEngineWithE
       const AV1StreamBitrateReductionExperiment = AV1BitrateTuningExperiment.AV1StreamBitrateReductionExperiment;
       bitrate = AV1StreamBitrateReductionExperiment.getConfig({ location: "RTCConnection" }).bitrate;
     }
+    tmp2 = framerate <= 30;
   });
   if (obj.supports(constants5.IMAGE_QUALITY_MEASUREMENT)) {
     const result1 = connectResult.setVideoQualityMeasurement(
@@ -1898,7 +1908,7 @@ prototype["_connectMediaEngineWithEndpoint"] = function _connectMediaEngineWithE
     require("BaseConnectionEvent").BaseConnectionEvent.Speaking,
     (arg0, _lastSentSpeakingStatus, _lastSentSSRC) => {
       if (self.userId === arg0) {
-        obj.sendSpeaking(_lastSentSpeakingStatus, _lastSentSSRC);
+        self.sendSpeaking(_lastSentSpeakingStatus, _lastSentSSRC);
       }
       self.emit(RTCConnectionEvent.RTCConnectionEvent.Speaking, arg0, _lastSentSpeakingStatus);
     },
@@ -1955,12 +1965,26 @@ prototype["_connectMediaEngineWithEndpoint"] = function _connectMediaEngineWithE
   );
   connectResult.on(require("BaseConnectionEvent").BaseConnectionEvent.FirstFrame, (arg0, arg1, arg2) => {
     if (null != self._localMediaSinkWantsManager) {
-      const _localMediaSinkWantsManager = obj._localMediaSinkWantsManager;
+      const _localMediaSinkWantsManager = self._localMediaSinkWantsManager;
       const result = _localMediaSinkWantsManager.setFirstFrameReceived(arg1);
-      obj.emit(RTCConnectionEvent.RTCConnectionEvent.Video, obj.guildId, obj.channelId, arg0, arg2, obj.streamServerId);
+      self.emit(
+        RTCConnectionEvent.RTCConnectionEvent.Video,
+        self.guildId,
+        self.channelId,
+        arg0,
+        arg2,
+        self.streamServerId,
+      );
     }
     if (null != self._goLiveQualityManager) {
-      obj.emit(RTCConnectionEvent.RTCConnectionEvent.Video, obj.guildId, obj.channelId, arg0, arg2, obj.streamServerId);
+      self.emit(
+        RTCConnectionEvent.RTCConnectionEvent.Video,
+        self.guildId,
+        self.channelId,
+        arg0,
+        arg2,
+        self.streamServerId,
+      );
     }
   });
   connectResult.on(require("BaseConnectionEvent").BaseConnectionEvent.Silence, (arg0) => {
@@ -1975,9 +1999,9 @@ prototype["_connectMediaEngineWithEndpoint"] = function _connectMediaEngineWithE
     const logger = self.logger;
     logger.info("RTC connected to media server: " + config.address + ":" + config.port);
     if (socket === self._socket) {
-      if (c3 === succeedResult._connection) {
+      if (_undefined === succeedResult._connection) {
         let Encryption = dependencyMap;
-        const tmp9 = new VoiceQualityDefault(obj3);
+        const tmp9 = new VoiceQualityDefault(_undefined);
         succeedResult._voiceQuality = tmp9;
         const _voiceQuality = succeedResult._voiceQuality;
         _voiceQuality.start();
@@ -1993,7 +2017,7 @@ prototype["_connectMediaEngineWithEndpoint"] = function _connectMediaEngineWithE
           succeedResult._handleVoiceQualityPeriodicsStats,
           300000,
         );
-        const tmp17 = new SystemResponsivenessDefault(obj3);
+        const tmp17 = new SystemResponsivenessDefault(_undefined);
         succeedResult._systemResponsiveness = tmp17;
         const _systemResponsiveness = succeedResult._systemResponsiveness;
         _systemResponsiveness.start();
@@ -2002,19 +2026,19 @@ prototype["_connectMediaEngineWithEndpoint"] = function _connectMediaEngineWithE
         const _systemResources = succeedResult._systemResources;
         _systemResources.setLastBattery();
         succeedResult._noiseCancellationError = 0;
-        const tmp28 = new VoiceDurationDefault(succeedResult.userId, obj3);
+        const tmp28 = new VoiceDurationDefault(succeedResult.userId, _undefined);
         succeedResult._voiceDuration = tmp28;
         const _voiceDuration = succeedResult._voiceDuration;
-        const selfMute = obj3.getSelfMute();
-        _voiceDuration.start(selfMute, obj3.getSelfDeaf());
+        const selfMute = _undefined.getSelfMute();
+        _voiceDuration.start(selfMute, _undefined.getSelfDeaf());
         succeedResult.protocol = protocol;
         if ("udp" !== protocol) {
           if ("webrtc" === protocol) {
             const logger4 = succeedResult.logger;
             logger4.info("Sending local SDP to RTC server.");
             const _handleSDP = succeedResult._handleSDP;
-            obj2.once(tmp12(1907).SocketEvent.SDP, _handleSDP.bind(succeedResult));
-            protocol = obj2.selectProtocol(protocol, succeedResult.getRTCConnectionId(), sdp);
+            socket.once(RTCControlSocket.SocketEvent.SDP, _handleSDP.bind(succeedResult));
+            protocol = socket.selectProtocol(protocol, succeedResult.getRTCConnectionId(), sdp);
             const _backoff = succeedResult._backoff;
             succeedResult = _backoff.succeed();
           } else {
@@ -2027,16 +2051,16 @@ prototype["_connectMediaEngineWithEndpoint"] = function _connectMediaEngineWithE
         if (null == succeedResult._sfuEndpoint) {
           const logger7 = succeedResult.logger;
           logger7.info("Clearing SFU endpoint before SELECT_PROTOCOL.");
-          obj3.setUdpEndpoint(null);
+          _undefined.setUdpEndpoint(null);
         } else {
           const _sfuEndpoint = succeedResult._sfuEndpoint;
           let everyResult =
-            null != tmp &&
-            tmp.address === _sfuEndpoint.address &&
-            tmp.port === _sfuEndpoint.port &&
-            tmp.modes.length === _sfuEndpoint.modes.length;
+            null != config &&
+            config.address === _sfuEndpoint.address &&
+            config.port === _sfuEndpoint.port &&
+            config.modes.length === _sfuEndpoint.modes.length;
           if (everyResult) {
-            const modes = tmp.modes;
+            const modes = config.modes;
             everyResult = modes.every((item, index) => item === _sfuEndpoint.modes[index]);
           }
           if (!everyResult) {
@@ -2049,17 +2073,17 @@ prototype["_connectMediaEngineWithEndpoint"] = function _connectMediaEngineWithE
                 succeedResult._sfuEndpoint.port,
             );
             let obj = { address: succeedResult._sfuEndpoint.address, port: succeedResult._sfuEndpoint.port };
-            obj3.setUdpEndpoint(obj);
+            _undefined.setUdpEndpoint(obj);
           }
         }
-        Encryption = tmp12(1907).SocketEvent.Encryption;
-        obj2.once(Encryption, (_encryptionMode, secretKey) => {
+        Encryption = RTCControlSocket.SocketEvent.Encryption;
+        socket.once(Encryption, (_encryptionMode, secretKey) => {
           if (encryption === _connection._connection) {
             encryption.setEncryption(_encryptionMode, secretKey);
             tmp._encryptionMode = _encryptionMode;
           }
         });
-        const protocol1 = obj2.selectProtocol(
+        const protocol1 = socket.selectProtocol(
           protocol,
           succeedResult.getRTCConnectionId(),
           sdp,
@@ -2087,15 +2111,15 @@ prototype["_connectMediaEngineWithEndpoint"] = function _connectMediaEngineWithE
       type = channel.type;
     }
     if (type === constants2.GUILD_STAGE_VOICE) {
-      if (!tmp._videoDecoderFallbackSuppressed) {
-        const logger2 = tmp.logger;
+      if (!self._videoDecoderFallbackSuppressed) {
+        const logger2 = self.logger;
         logger2.info("Suppressing video decoder fallback: stage channel");
-        tmp._videoDecoderFallbackSuppressed = true;
+        self._videoDecoderFallbackSuppressed = true;
       }
     } else {
       const found = codecs.filter((type) => "video" === type.type);
       const mapped = found.map((name) => name.name);
-      const logger = tmp.logger;
+      const logger = self.logger;
       const _HermesInternal = HermesInternal;
       logger.info(
         "The originally selected video decoder is not working, fallback to the other available decoders: " +
@@ -2116,11 +2140,11 @@ prototype["_connectMediaEngineWithEndpoint"] = function _connectMediaEngineWithE
     const _mediaSessionId = self._mediaSessionId;
     obj.mediaSessionId = _mediaSessionId;
     if ("encode" === codecStandard.mode) {
-      obj = { type: tmp(9110).AVError.VIDEO_ENCODE_ERROR };
+      obj = { type: AVError.AVError.VIDEO_ENCODE_ERROR };
       const merged = Object.assign(obj);
       obj.videoEncoder = codecStandard.implName;
     } else {
-      obj = { type: tmp(9110).AVError.VIDEO_DECODE_ERROR };
+      obj = { type: AVError.AVError.VIDEO_DECODE_ERROR };
       const merged1 = Object.assign(obj);
       obj.videoDecoder = codecStandard.implName;
     }
@@ -2131,7 +2155,7 @@ prototype["_connectMediaEngineWithEndpoint"] = function _connectMediaEngineWithE
     if (socket === self._socket) {
       let preferredRegion = null;
       if (RTCRegionStore.shouldIncludePreferredRegion()) {
-        preferredRegion = obj4.getPreferredRegion();
+        preferredRegion = RTCRegionStore.getPreferredRegion();
       }
       const logger = obj.logger;
       const _HermesInternal = HermesInternal;
@@ -2143,55 +2167,54 @@ prototype["_connectMediaEngineWithEndpoint"] = function _connectMediaEngineWithE
       obj.cloudflare_best_region = preferredRegion;
       ({ _connectCount: obj3.connect_count, joinVoiceId: obj3.join_voice_id } = obj);
       AnalyticsUtilsDefault.track(constants.VOICE_CONNECTION_FAILURE, obj);
-      obj4 = RTCRegionStore;
     }
   });
   connectResult.on(require("BaseConnectionEvent").BaseConnectionEvent.ConnectionStateChange, (arg0) => {
     const logger = self.logger;
     logger.info("RTC media connection state change: " + self.state + " => " + arg0);
     if (socket === self._socket) {
-      const state = obj.state;
+      const state = self.state;
       if (constants7.DISCONNECTED === arg0) {
-        obj.setState(constants3.RTC_DISCONNECTED);
-      } else if (tmp24.CONNECTING === arg0) {
-        obj.setState(constants3.RTC_CONNECTING);
-      } else if (tmp24.CONNECTED === arg0) {
-        obj.setState(constants3.RTC_CONNECTED);
-      } else if (tmp24.NO_ROUTE === arg0) {
-        obj.setState(constants3.NO_ROUTE);
-      } else if (tmp24.ICE_CHECKING === arg0) {
-        obj.setState(constants3.ICE_CHECKING);
-      } else if (tmp24.DTLS_CONNECTING === arg0) {
-        obj.setState(constants3.DTLS_CONNECTING);
+        self.setState(constants3.RTC_DISCONNECTED);
+      } else if (constants7.CONNECTING === arg0) {
+        self.setState(constants3.RTC_CONNECTING);
+      } else if (constants7.CONNECTED === arg0) {
+        self.setState(constants3.RTC_CONNECTED);
+      } else if (constants7.NO_ROUTE === arg0) {
+        self.setState(constants3.NO_ROUTE);
+      } else if (constants7.ICE_CHECKING === arg0) {
+        self.setState(constants3.ICE_CHECKING);
+      } else if (constants7.DTLS_CONNECTING === arg0) {
+        self.setState(constants3.DTLS_CONNECTING);
       }
       if (state === constants3.RTC_CONNECTING) {
-        if (obj.state === tmp12.RTC_DISCONNECTED) {
-          obj.reconnect();
+        if (self.state === constants3.RTC_DISCONNECTED) {
+          self.reconnect();
         }
-        if (obj.state === tmp12.RTC_CONNECTED) {
-          const _localMediaSinkWantsManager = obj._localMediaSinkWantsManager;
+        if (self.state === constants3.RTC_CONNECTED) {
+          const _localMediaSinkWantsManager = self._localMediaSinkWantsManager;
           if (_localMediaSinkWantsManager != null) {
             _localMediaSinkWantsManager.setConnection(c3);
           }
-          const _goLiveQualityManager = obj._goLiveQualityManager;
+          const _goLiveQualityManager = self._goLiveQualityManager;
           if (_goLiveQualityManager != null) {
             _goLiveQualityManager.update();
           }
-          obj._connectCompletedTime = TimeUtils.now();
-          obj._hasEverConnected = true;
-          obj._connecting = false;
-          obj._encountered_socket_failure = false;
-          const result = obj._trackVoiceConnectionSuccess(c3);
-        } else if (state === tmp12.RTC_CONNECTED) {
-          const stateHistory = obj.stateHistory;
-          stateHistory.reset(obj.state);
+          self._connectCompletedTime = TimeUtils.now();
+          self._hasEverConnected = true;
+          self._connecting = false;
+          self._encountered_socket_failure = false;
+          const result = self._trackVoiceConnectionSuccess(c3);
+        } else if (state === constants3.RTC_CONNECTED) {
+          const stateHistory = self.stateHistory;
+          stateHistory.reset(self.state);
         }
       }
-      if (obj.state === constants3.NO_ROUTE) {
-        if (0 === obj._backoff.fails) {
-          obj._handleNoRoute();
+      if (self.state === constants3.NO_ROUTE) {
+        if (0 === self._backoff.fails) {
+          self._handleNoRoute();
         }
-        obj._scheduleReconnect();
+        self._scheduleReconnect();
       }
     }
   });
@@ -2233,6 +2256,7 @@ prototype["_connectMediaEngineWithEndpoint"] = function _connectMediaEngineWithE
   self._connection = connectResult;
   self._hasCodecs = false;
   self._mediaEngineConnectionId = connectResult.mediaEngineConnectionId;
+  const tmp19Result = RTCBandwidthMonitorDefault;
 };
 prototype["_handleSfuUpdate"] = function _handleSfuUpdate(arg0, primary) {
   const self = this;
@@ -2326,6 +2350,7 @@ prototype["_handleSpeaking"] = function _handleSpeaking(arg0, userId, audioSSRC,
       _localMediaSinkWantsManager.setAudioSSRC(userId, audioSSRC);
     }
   }
+  tmp = null != _connection && self.userId !== userId;
 };
 prototype["handleFlags"] = function handleFlags(arg0, arg1) {
   this.emit(RTCConnectionEvent.RTCConnectionEvent.Flags, arg0, arg1);
@@ -2353,7 +2378,7 @@ prototype["getOrCreateVideoQuality"] = function getOrCreateVideoQuality() {
       const defaultConfig = VideoHealthManager.VideoHealthManager.defaultConfig;
       ({ windowLength, allowedPoorFpsRatio, fpsThreshold, backoffTimeSec } = defaultConfig);
       if (defaultConfig.featureEnabled) {
-        const videoHealthManager = new tmp10(13821).VideoHealthManager(
+        const videoHealthManager = new VideoHealthManager.VideoHealthManager(
           windowLength,
           allowedPoorFpsRatio,
           fpsThreshold,
@@ -2364,7 +2389,7 @@ prototype["getOrCreateVideoQuality"] = function getOrCreateVideoQuality() {
           self._localMediaSinkWantsManager.videoHealthManager = self._videoHealthManager;
         }
         const _videoQuality = self._videoQuality;
-        _videoQuality.on(tmp10(13820).VideoQualityEvent.FpsUpdate, (arg0, arg1, arg2) => {
+        _videoQuality.on(VideoQuality.VideoQualityEvent.FpsUpdate, (arg0, arg1, arg2) => {
           const _localMediaSinkWantsManager = self._localMediaSinkWantsManager;
           let result;
           if (_localMediaSinkWantsManager != null) {
@@ -2497,7 +2522,7 @@ prototype["_handleVideo"] = function _handleVideo(arg0, userId, audioSSRC, ssrc,
           }));
           if (0 === mapped.length) {
             let obj = { type: constants8.VIDEO, rid: "100", ssrc, rtxSsrc: ssrc + 1, quality: 100, active: ssrc > 0 };
-            mapped.push(obj);
+            arr = mapped.push(obj);
           }
           const _localMediaSinkWantsManager2 = self._localMediaSinkWantsManager;
           _localMediaSinkWantsManager2.setVideoSSRCs(userId, mapped);
@@ -2756,19 +2781,17 @@ prototype["_trackVoiceConnectionSuccess"] = function _trackVoiceConnectionSucces
         obj.address_family = tmp8;
         obj.cloudflare_best_region = preferredRegion;
         const obj3 = AnalyticsUtilsDefault;
-        const tmp11 = constants;
-        const tmp9 = importDefault;
         obj.connect_time = TimeUtils.now() - (1 === self._connectCount ? self._createdTime : self._connectStartTime);
         obj.connect_count = self._connectCount;
-        const mediaEngine = obj2.getMediaEngine();
+        const mediaEngine = MediaEngineStore.getMediaEngine();
         obj.audio_subsystem = mediaEngine.getAudioSubsystem();
-        const mediaEngine1 = obj2.getMediaEngine();
+        const mediaEngine1 = MediaEngineStore.getMediaEngine();
         obj.audio_layer = mediaEngine1.getAudioLayer();
         obj.automatic_audio_subsystem = settings.automaticAudioSubsystem;
         obj.media_session_id = self.getMediaSessionId();
         obj.participant_type = self.getVoiceParticipantType();
         obj.join_voice_id = self.joinVoiceId;
-        const mediaEngine2 = obj2.getMediaEngine();
+        const mediaEngine2 = MediaEngineStore.getMediaEngine();
         let tmp17 = mediaEngine2.getVideoInputDeviceId() !== __initData9;
         if (tmp17) {
           tmp17 = _connection.context === constants6.DEFAULT;
@@ -2852,8 +2875,8 @@ prototype["_trackVoiceConnectionSuccess"] = function _trackVoiceConnectionSucces
           }
         }
         obj.rtc_connecting_native_crypto_modes = diff4;
-        tmp9(1242).track(tmp11.VOICE_CONNECTION_TTC_COLLECTED, obj);
-        const tmp9Result = tmp9(1242);
+        AnalyticsUtilsDefault.track(constants.VOICE_CONNECTION_TTC_COLLECTED, obj);
+        const tmp9Result = AnalyticsUtilsDefault;
       }
     }
   }
@@ -3285,6 +3308,7 @@ prototype["_handleSecureFramesExecuteTransition"] = function _handleSecureFrames
     let obj = { executeReceivedTime: tmp7, executeFinishedTime: TimeUtils.now(), executeError: flag };
     const result1 = self._storeSecureFrameTransitionData(transition_id, obj);
     const result2 = self._trackSecureFrameTransition(transition_id);
+    const tmp4Result = TimeUtils;
   } catch (tmp10) {
     obj = require("SentryUtils");
     obj.captureException(tmp10);
@@ -3356,19 +3380,18 @@ prototype["_handleMLSPrepareCommitTransition"] = function _handleMLSPrepareCommi
         const result = obj._storeSecureFrameTransitionData(closure_1, obj);
         if (arg0) {
           obj._handleMLSSuccess();
-          const result1 = obj._handleSecureFramesRosterChange(arg2, tmp10);
-          const result2 = obj._maybeSendSecureFramesTransitionReady(tmp10);
+          const result1 = obj._handleSecureFramesRosterChange(arg2, closure_1);
+          const result2 = obj._maybeSendSecureFramesTransitionReady(closure_1);
         } else {
           const logger = obj.logger;
           const _HermesInternal = HermesInternal;
-          logger.warn("Failed to process MLS commit for transition ID " + tmp10);
-          obj._mlsSessionResetStartTime = tmp12(4589).now();
-          if (obj._flagMLSInvalidCommitWelcome(tmp10)) {
+          logger.warn("Failed to process MLS commit for transition ID " + closure_1);
+          obj._mlsSessionResetStartTime = TimeUtils.now();
+          if (obj._flagMLSInvalidCommitWelcome(closure_1)) {
             const result3 = obj._handleSecureFramesInit(protocolVersion);
           }
-          const tmp12Result = tmp12(4589);
+          const tmp12Result = TimeUtils;
         }
-        tmp12 = require;
       }
     });
   }
@@ -3395,16 +3418,15 @@ prototype["_handleMLSWelcome"] = function _handleMLSWelcome(arg0, arg1) {
         const result = obj._storeSecureFrameTransitionData(closure_1, obj);
         if (arg0) {
           obj._handleMLSSuccess();
-          const result1 = obj._handleSecureFramesRosterChange(arg2, tmp8);
-          const result2 = obj._maybeSendSecureFramesTransitionReady(tmp8);
+          const result1 = obj._handleSecureFramesRosterChange(arg2, closure_1);
+          const result2 = obj._maybeSendSecureFramesTransitionReady(closure_1);
         } else {
-          obj._mlsSessionResetStartTime = tmp10(4589).now();
-          if (obj._flagMLSInvalidCommitWelcome(tmp8)) {
+          obj._mlsSessionResetStartTime = TimeUtils.now();
+          if (obj._flagMLSInvalidCommitWelcome(closure_1)) {
             obj._sendMLSKeyPackage();
           }
-          const tmp10Result = tmp10(4589);
+          const tmp10Result = TimeUtils;
         }
-        tmp10 = require;
       }
     });
   }
@@ -3481,10 +3503,10 @@ prototype["_handleMLSFailure"] = function _handleMLSFailure(source, reason) {
   _mlsFailures.push(obj);
   if (source.includes("GetPersistedKeyPair")) {
     const obj1 = { title: null, body: null };
-    const intl = tmp(1114).intl;
-    obj1.title = intl.string(tmp(1114).t.fJUioH);
-    const intl2 = tmp(1114).intl;
-    obj1.body = intl2.string(tmp(1114).t.CQLWvo);
+    const intl = util.intl;
+    obj1.title = intl.string(util.t.fJUioH);
+    const intl2 = util.intl;
+    obj1.body = intl2.string(util.t.CQLWvo);
     AlertActionCreatorsDefault.show(obj1);
   } else {
     const result = self._alertMLSFailureDebouced(source, reason);

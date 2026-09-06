@@ -1,4 +1,6 @@
 // discord_app/modules/favorites/hooks/useFavoritesGuildChannelFilter.tsx
+import GlobalUtils from "../../../utils/GlobalUtils.tsx";
+import FavoritesUtils from "../FavoritesUtils.tsx";
 import sortByMatchScore from "../../autocompleter/index.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import ChannelStore from "../../../stores/ChannelStore.tsx";
@@ -31,18 +33,18 @@ export default function useFavoritesGuildChannelFilter() {
         tmp15 = tmp17;
       }
       return tmp15;
-    } else if (tmp(9835).AutocompleterResultTypes.GROUP_DM === type) {
+    } else if (sortByMatchScore.AutocompleterResultTypes.GROUP_DM === type) {
       return null == stateFromStores[type.record.id];
     } else {
-      if (tmp(9835).AutocompleterResultTypes.TEXT_CHANNEL !== type) {
-        if (tmp(9835).AutocompleterResultTypes.VOICE_CHANNEL !== type) {
-          let tmpResult = tmp(1369);
+      if (sortByMatchScore.AutocompleterResultTypes.TEXT_CHANNEL !== type) {
+        if (sortByMatchScore.AutocompleterResultTypes.VOICE_CHANNEL !== type) {
+          let tmpResult = GlobalUtils;
           return tmpResult.assertNever(type);
         }
       }
       let canResult = PermissionStore.can(Permissions.VIEW_CHANNEL, type.record);
       if (canResult) {
-        tmpResult = tmp(1982);
+        tmpResult = FavoritesUtils;
         canResult = tmpResult.isFavoritableChannel(type.record);
       }
       if (canResult) {

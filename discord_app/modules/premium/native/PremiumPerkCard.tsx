@@ -2,6 +2,8 @@
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
 import HelpdeskUtilsDefault from "../../../utils/HelpdeskUtils.tsx";
+import Text_Text from "../../../design/components/Text/native/Text.tsx";
+import components_Button_Button from "../../../design/components/Button/native/Button.native.tsx";
 import useFontScale from "../../screen/native/useFontScale.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import AnalyticsLocationDefault from "../../app_analytics/AnalyticsLocation.tsx";
@@ -133,7 +135,7 @@ export default function PremiumPerkCard(variant) {
       const obj2 = { style: tmp4.imageOverlayText, variant: "text-md/bold", children: null };
       imageStyle = imageOverlayText.toUpperCase();
       obj2.children = imageStyle;
-      imageSrc = React7(tmp6(4556).Text, obj2);
+      imageSrc = React7(Text_Text.Text, obj2);
       obj1.children = imageSrc;
       items1[1] = React7(React4, obj1);
       obj.children = items1;
@@ -153,7 +155,7 @@ export default function PremiumPerkCard(variant) {
     }
     if (null != description) {
       const obj4 = { variant: "text-sm/normal", children: description };
-      let tmp21 = React7(tmp6(4556).Text, obj4);
+      let tmp21 = React7(Text_Text.Text, obj4);
     } else {
       tmp21 = null;
       if (null != bodyComponent) {
@@ -161,7 +163,7 @@ export default function PremiumPerkCard(variant) {
       }
     }
     const items3 = [tmp4.container, ,];
-    let tmp25 = WIDE === obj.NARROW;
+    let tmp25 = WIDE === tmp5.NARROW;
     if (tmp25) {
       const obj5 = { height: tmp9 };
       tmp25 = obj5;
@@ -180,20 +182,21 @@ export default function PremiumPerkCard(variant) {
     const items5 = [tmp4.title, titleStyle];
     obj8.style = items5;
     obj8.children = title;
-    items4[2] = React7(tmp6(4556).Text, obj8);
+    items4[2] = React7(Text_Text.Text, obj8);
     const obj9 = { style: tmp4.description, children: tmp21 };
     items4[3] = React7(hasOwnProperty, obj9);
     let tmp29Result = null != buttonOnPress;
     if (tmp29Result) {
       const obj10 = { style: tmp4.button, children: null };
       const obj11 = { size: "sm", variant: "secondary", text: cta, onPress: buttonOnPress };
-      obj10.children = tmp29(tmp6(4975).Button, obj11);
-      tmp29Result = tmp29(tmp24, obj10);
+      obj10.children = React7(components_Button_Button.Button, obj11);
+      tmp29Result = React7(React4, obj10);
     }
     items4[4] = tmp29Result;
     obj6.children = items4;
     return closure_1_10(React4, obj6);
   }
+  tmp5 = obj;
 }
 export const PerkCardTypes = {
   CUSTOM_PROFILE: "customProfile",

@@ -1,8 +1,14 @@
 // discord_app/modules/parent_tools/native/FamilyCenterActivityRow.tsx
+import SnowflakeUtilsDefault from "../../../utils/SnowflakeUtils.tsx";
 import _modDef38 from "../../../../_runtime/metro/00038__.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import _modDef2396 from "../FamilyCenter.messages.js";
+import UserUtilsDefault from "../../../utils/UserUtils.tsx";
+import GuildIconDefault from "../../guild/native/GuildIcon.tsx";
+import GuildBadgeDefault from "../../guild/native/GuildBadge.tsx";
 import FamilyCenterUtils from "../FamilyCenterUtils.tsx";
 import FamilyCenterActivityPurchaseRowDefault from "FamilyCenterActivityPurchaseRow.tsx";
+import FamilyCenterActivityGiftRowUtils from "../FamilyCenterActivityGiftRowUtils.tsx";
 import FamilyCenterActivityGiftRowDefault from "FamilyCenterActivityGiftRow.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import UserStore from "../../../stores/UserStore.tsx";
@@ -44,7 +50,7 @@ const memoResult = noop.memo((action) => {
   if (null == stateFromStores) {
     return null;
   } else {
-    let tmp3Result = tmp3(11);
+    let tmp3Result = SnowflakeUtilsDefault;
     const extractTimestampResult = tmp3Result.extractTimestamp(action.event_id);
     obj = { style: tmp.container, children: null };
     obj = { style: tmp.avatarContainer, children: null };
@@ -66,7 +72,7 @@ const memoResult = noop.memo((action) => {
       lineClamp: 1,
       children: null,
     };
-    tmp3Result = tmp3(4404);
+    tmp3Result = UserUtilsDefault;
     obj3.children = tmp3Result.getName(stateFromStores);
     const items2 = [closure_8(tmp6(4556).Text, obj3)];
     const obj4 = { variant: "text-xs/medium", color: "channels-default", children: null };
@@ -145,7 +151,7 @@ const memoResult1 = noop.memo((action) => {
     obj = { style: null, textStyle: null, guild: null, size: null, animate: true };
     ({ avatar: obj3.style, avatarText: obj3.textStyle } = tmp);
     obj.guild = stateFromStores;
-    let tmp6Result = tmp6(5584);
+    let tmp6Result = GuildIconDefault;
     obj.size = tmp2(5584).GuildIconSizes.NORMAL;
     const items1 = [closure_8(tmp6Result, obj)];
     const obj1 = { style: tmp.text, children: null };
@@ -154,9 +160,9 @@ const memoResult1 = noop.memo((action) => {
     let tmp11Result = null;
     if (hasItem) {
       const obj4 = { style: tmp.badge, guild: stateFromStores, size: null, disableColor: true };
-      tmp6Result = tmp6(5590);
-      obj4.size = tmp6(5590).Sizes.SMALL;
-      tmp11Result = tmp11(tmp6Result, obj4);
+      tmp6Result = GuildBadgeDefault;
+      obj4.size = GuildBadgeDefault.Sizes.SMALL;
+      tmp11Result = closure_8(tmp6Result, obj4);
     }
     const items2 = [tmp11Result];
     const obj5 = {
@@ -176,8 +182,8 @@ const memoResult1 = noop.memo((action) => {
       const obj6 = { variant: "text-xs/medium", color: "channels-default", children: null };
       const intl = tmp2(1114).intl;
       const obj7 = { members: stateFromStores.approximateMemberCount };
-      obj6.children = intl.format(tmp6(2396)["5JmNgg"], obj7);
-      tmp11Result = tmp11(tmp2(4556).Text, obj6);
+      obj6.children = intl.format(_modDef2396["5JmNgg"], obj7);
+      tmp11Result = closure_8(tmp2(4556).Text, obj6);
     }
     items3[1] = tmp11Result;
     obj1.children = items3;
@@ -194,14 +200,14 @@ export default function FamilyCenterActivityRow(action) {
   action = action.action;
   let obj = FamilyCenterUtils;
   if (!obj.isUserAction(action)) {
-    let tmpResult = tmp(7593);
+    let tmpResult = FamilyCenterUtils;
     if (!tmpResult.isGuildAction(action)) {
-      tmpResult = tmp(7593);
+      tmpResult = FamilyCenterUtils;
       if (!tmpResult.isPurchase(action)) {
         if (!tmpResult1.isGift(action)) {
           return null;
         }
-        tmpResult1 = tmp(7593);
+        tmpResult1 = FamilyCenterUtils;
       }
     }
   }
@@ -225,7 +231,7 @@ export default function FamilyCenterActivityRow(action) {
       if (null == giftInfo) {
         return null;
       } else {
-        const giftRowDisplayInfo = tmp(14904).getGiftRowDisplayInfo(giftInfo);
+        const giftRowDisplayInfo = FamilyCenterActivityGiftRowUtils.getGiftRowDisplayInfo(giftInfo);
         ({ skuId, subscriptionPlanId, price, gifterUserId, claimed, offeredAt, claimedAt } = giftRowDisplayInfo);
         obj = { skuId, subscriptionPlanId, price, gifterUserId, claimed, offeredAt, claimedAt };
         return React6(FamilyCenterActivityGiftRowDefault, obj);
@@ -233,15 +239,15 @@ export default function FamilyCenterActivityRow(action) {
     } else {
       if (tmpResult5.isUserAction(action)) {
         const obj1 = { action };
-        let tmp4Result = tmp4(memoResult, obj1);
+        let tmp4Result = React6(memoResult, obj1);
       } else {
         const obj2 = { action };
-        tmp4Result = tmp4(memoResult1, obj2);
+        tmp4Result = React6(memoResult1, obj2);
       }
       const obj3 = { children: tmp4Result };
       return React6(View, obj3);
     }
-    tmpResult3 = tmp(7593);
+    tmpResult3 = FamilyCenterUtils;
   }
   tmpResult2 = FamilyCenterUtils;
 }

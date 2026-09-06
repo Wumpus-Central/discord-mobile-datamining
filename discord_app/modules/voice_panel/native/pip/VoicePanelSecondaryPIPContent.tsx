@@ -155,13 +155,18 @@ export default function VoicePanelSecondaryPIPContent() {
   if (hasLaunchedFrame) {
     tmp = tmp(obj[19]);
     obj = { layoutMode: constants.PIP };
-    let tmp13Result = tmp13(tmp, obj);
+    let tmp13Result = <tmp layoutMode={constants.PIP} />;
   } else {
     obj2 = { channel: stateFromStores, layoutMode: ActivityLayoutMode.PIP };
-    tmp13Result = tmp13(tmp(obj[20]), obj2);
+    tmp13Result = jsx(tmp(obj[20]), { channel: stateFromStores, layoutMode: ActivityLayoutMode.PIP });
   }
   obj1.children = tmp13Result;
-  obj1 = tmp13(tmpResult, obj1);
+  obj1 = <tmpResult style={null}>{null}</tmpResult>;
   obj.children = obj1;
-  tmp13Result = tmp13(tmpResult, obj);
+  tmp13Result = (
+    <tmpResult style={memo} pointerEvents="none">
+      {null}
+    </tmpResult>
+  );
+  const tmp2Result = tmp2(obj[15]);
 }

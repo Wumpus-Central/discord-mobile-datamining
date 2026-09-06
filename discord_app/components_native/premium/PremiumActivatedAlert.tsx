@@ -1,7 +1,35 @@
 // discord_app/components_native/premium/PremiumActivatedAlert.tsx
 import util from "../../intl/index.native.tsx";
+import native from "../../design/void/native.tsx";
 import PremiumUtils from "../../utils/PremiumUtils.tsx";
+import shared from "../../design/shared.tsx";
 import useThemeDefault from "../../hooks/useTheme.tsx";
+import common_AlertDefault from "../common/Alert.tsx";
+import _modDef8068 from "../../../_runtime/metro/08068__.js";
+import _modDef9385 from "../../../_runtime/metro/09385__.js";
+import _modDef10710 from "../../../_runtime/metro/10710__.js";
+import _modDef10711 from "../../../_runtime/metro/10711__.js";
+import _modDef10712 from "../../../_runtime/metro/10712__.js";
+import _modDef10713 from "../../../_runtime/metro/10713__.js";
+import _modDef10714 from "../../../_runtime/metro/10714__.js";
+import _modDef10715 from "../../../_runtime/metro/10715__.js";
+import _modDef10716 from "../../../_runtime/metro/10716__.js";
+import _modDef10717 from "../../../_runtime/metro/10717__.js";
+import _modDef10718 from "../../../_runtime/metro/10718__.js";
+import _modDef10719 from "../../../_runtime/metro/10719__.js";
+import _modDef10720 from "../../../_runtime/metro/10720__.js";
+import _modDef10721 from "../../../_runtime/metro/10721__.js";
+import _modDef10722 from "../../../_runtime/metro/10722__.js";
+import _modDef10723 from "../../../_runtime/metro/10723__.js";
+import _modDef10724 from "../../../_runtime/metro/10724__.js";
+import _modDef10725 from "../../../_runtime/metro/10725__.js";
+import _modDef10726 from "../../../_runtime/metro/10726__.js";
+import _modDef10727 from "../../../_runtime/metro/10727__.js";
+import _modDef10728 from "../../../_runtime/metro/10728__.js";
+import _modDef10729 from "../../../_runtime/metro/10729__.js";
+import _modDef10730 from "../../../_runtime/metro/10730__.js";
+import _modDef10731 from "../../../_runtime/metro/10731__.js";
+import ShineAnimationDefault from "ShineAnimation.tsx";
 import noop from "../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -33,16 +61,16 @@ let closure_10 = createStyles.createStyles((arg0) => {
   if (PremiumUtils.Branding.TIER_0 === arg0) {
     let obj = { headerImage: { marginLeft: -27, width: 88, top: 18 } };
     return obj;
-  } else if (tmp(4218).Branding.TIER_1 === arg0) {
+  } else if (PremiumUtils.Branding.TIER_1 === arg0) {
     obj = { headerImage: { marginLeft: -27, width: 87, top: 18 } };
     return obj;
-  } else if (tmp(4218).Branding.BUNDLE === arg0) {
+  } else if (PremiumUtils.Branding.BUNDLE === arg0) {
     const obj1 = { headerImage: { marginLeft: -29.5, width: 91, top: 18 } };
     return obj1;
-  } else if (tmp(4218).Branding.TIER_2 === arg0) {
+  } else if (PremiumUtils.Branding.TIER_2 === arg0) {
     const obj2 = { headerImage: { marginLeft: -58, width: 122, height: 90, top: 18 } };
     return obj2;
-  } else if (tmp(4218).Branding.PREMIUM_GUILD === arg0) {
+  } else if (PremiumUtils.Branding.PREMIUM_GUILD === arg0) {
     obj = { headerImage: { marginLeft: -54, width: 140, top: 18 } };
     return obj;
   }
@@ -53,10 +81,10 @@ let closure_11 = createStyles.createStyles((arg0) => {
     let obj = { animation: { borderRadius: 6 } };
     return obj;
   } else {
-    if (tmp(4218).Branding.TIER_0 !== arg0) {
-      if (tmp(4218).Branding.TIER_1 !== arg0) {
-        if (tmp(4218).Branding.TIER_2 !== arg0) {
-          if (tmp(4218).Branding.PREMIUM_GUILD === arg0) {
+    if (PremiumUtils.Branding.TIER_0 !== arg0) {
+      if (PremiumUtils.Branding.TIER_1 !== arg0) {
+        if (PremiumUtils.Branding.TIER_2 !== arg0) {
+          if (PremiumUtils.Branding.PREMIUM_GUILD === arg0) {
             obj = { animation: { borderRadius: 9 } };
             return obj;
           }
@@ -93,13 +121,13 @@ export default function PremiumActivatedAlert(onClose) {
   if (PremiumUtils.Branding.TIER_0 === premiumBranding) {
     obj = { logo: { width: 82, height: 44 } };
     let tmp9 = obj;
-  } else if (tmp7(4218).Branding.TIER_1 === premiumBranding) {
+  } else if (PremiumUtils.Branding.TIER_1 === premiumBranding) {
     obj = { logo: { width: 82, height: 32 } };
     tmp9 = obj;
   } else {
-    if (tmp7(4218).Branding.BUNDLE !== premiumBranding) {
-      if (tmp7(4218).Branding.TIER_2 !== premiumBranding) {
-        if (tmp7(4218).Branding.PREMIUM_GUILD === premiumBranding) {
+    if (PremiumUtils.Branding.BUNDLE !== premiumBranding) {
+      if (PremiumUtils.Branding.TIER_2 !== premiumBranding) {
+        if (PremiumUtils.Branding.PREMIUM_GUILD === premiumBranding) {
           const obj1 = { logo: { width: 82, height: 18 } };
           tmp9 = obj1;
         }
@@ -110,54 +138,54 @@ export default function PremiumActivatedAlert(onClose) {
   }
   const tmp10 = closure_10(premiumBranding);
   const obj3 = { onClose: onClose.onClose, confirmText: null, style: null, children: null };
-  let tmp4Result = tmp4(4994);
-  const intl = tmp7(1114).intl;
+  let tmp4Result = common_AlertDefault;
+  const intl = util.intl;
   obj3.confirmText = intl.string(util.t.TkTvBz);
   obj3.style = tmp.alert;
   const obj4 = { style: tmp.header, source: null, children: null };
   if (PremiumUtils.Branding.TIER_0 === premiumBranding) {
-    tmp4Result = tmp4(10710);
-  } else if (tmp7(4218).Branding.TIER_1 === premiumBranding) {
-    tmp4Result = tmp4(10711);
-  } else if (tmp7(4218).Branding.TIER_2 === premiumBranding) {
-    tmp4Result = tmp4(10712);
-  } else if (tmp7(4218).Branding.BUNDLE === premiumBranding) {
-    tmp4Result = tmp4(10713);
-  } else if (tmp7(4218).Branding.PREMIUM_GUILD === premiumBranding) {
-    tmp4Result = tmp4(10714);
+    tmp4Result = _modDef10710;
+  } else if (PremiumUtils.Branding.TIER_1 === premiumBranding) {
+    tmp4Result = _modDef10711;
+  } else if (PremiumUtils.Branding.TIER_2 === premiumBranding) {
+    tmp4Result = _modDef10712;
+  } else if (PremiumUtils.Branding.BUNDLE === premiumBranding) {
+    tmp4Result = _modDef10713;
+  } else if (PremiumUtils.Branding.PREMIUM_GUILD === premiumBranding) {
+    tmp4Result = _modDef10714;
   }
   obj4.source = tmp4Result;
   if (PremiumUtils.Branding.TIER_0 === premiumBranding) {
-    let tmp4Result1 = tmp4(10719);
-  } else if (tmp7(4218).Branding.TIER_1 === premiumBranding) {
-    tmp4Result1 = tmp4(10720);
+    let tmp4Result1 = _modDef10719;
+  } else if (PremiumUtils.Branding.TIER_1 === premiumBranding) {
+    tmp4Result1 = _modDef10720;
   } else {
-    if (tmp7(4218).Branding.BUNDLE !== premiumBranding) {
-      if (tmp7(4218).Branding.TIER_2 !== premiumBranding) {
-        if (tmp7(4218).Branding.PREMIUM_GUILD === premiumBranding) {
-          tmp4Result1 = tmp4(10721);
+    if (PremiumUtils.Branding.BUNDLE !== premiumBranding) {
+      if (PremiumUtils.Branding.TIER_2 !== premiumBranding) {
+        if (PremiumUtils.Branding.PREMIUM_GUILD === premiumBranding) {
+          tmp4Result1 = _modDef10721;
         }
       }
     }
-    tmp4Result1 = tmp4(8068);
+    tmp4Result1 = _modDef8068;
   }
   const items = [React5(React3, { source: tmp4Result1, style: tmp9.logo }), ,];
   let tmp16Result = null;
   if (premiumBranding === PremiumUtils.Branding.BUNDLE) {
-    const obj6 = { source: tmp4(10731), style: tmp.logoPlusPremiumGuild };
-    tmp16Result = tmp16(tmp17, obj6);
+    const obj6 = { source: _modDef10731, style: tmp.logoPlusPremiumGuild };
+    tmp16Result = React5(React3, obj6);
   }
   items[1] = tmp16Result;
   if (PremiumUtils.Branding.TIER_0 === premiumBranding) {
-    let tmp4Result2 = tmp4(9385);
-  } else if (tmp7(4218).Branding.TIER_1 === premiumBranding) {
-    tmp4Result2 = tmp4(10715);
-  } else if (tmp7(4218).Branding.TIER_2 === premiumBranding) {
-    tmp4Result2 = tmp4(10716);
-  } else if (tmp7(4218).Branding.BUNDLE === premiumBranding) {
-    tmp4Result2 = tmp4(10717);
-  } else if (tmp7(4218).Branding.PREMIUM_GUILD === premiumBranding) {
-    tmp4Result2 = tmp4(10718);
+    let tmp4Result2 = _modDef9385;
+  } else if (PremiumUtils.Branding.TIER_1 === premiumBranding) {
+    tmp4Result2 = _modDef10715;
+  } else if (PremiumUtils.Branding.TIER_2 === premiumBranding) {
+    tmp4Result2 = _modDef10716;
+  } else if (PremiumUtils.Branding.BUNDLE === premiumBranding) {
+    tmp4Result2 = _modDef10717;
+  } else if (PremiumUtils.Branding.PREMIUM_GUILD === premiumBranding) {
+    tmp4Result2 = _modDef10718;
   }
   const obj7 = { source: tmp4Result2, style: null };
   const items1 = [tmp10.headerImage, tmp.headerImage];
@@ -168,68 +196,68 @@ export default function PremiumActivatedAlert(onClose) {
   const obj8 = { style: tmp.body, children: null };
   const obj5 = { source: tmp4Result1, style: tmp9.logo };
   const tmp11 = closure_11(premiumBranding);
-  const tmp21 = hasOwnProperty;
   if (PremiumUtils.Branding.TIER_0 === premiumBranding) {
-    let tmp7Result = tmp7(4411);
+    let tmp7Result = shared;
     if (tmp7Result.isThemeDark(tmp6)) {
-      let tmp4Result4 = tmp4(10722);
+      let tmp4Result4 = _modDef10722;
     } else {
-      tmp4Result4 = tmp4(10723);
+      tmp4Result4 = _modDef10723;
     }
   } else {
-    if (tmp7(4218).Branding.TIER_1 === premiumBranding) {
-      tmp7Result = tmp7(4411);
+    if (PremiumUtils.Branding.TIER_1 === premiumBranding) {
+      tmp7Result = shared;
       if (tmp7Result.isThemeDark(tmp6)) {
-        let tmp4Result5 = tmp4(10724);
+        let tmp4Result5 = _modDef10724;
       } else {
-        tmp4Result5 = tmp4(10725);
+        tmp4Result5 = _modDef10725;
       }
       let tmp4Result8 = tmp4Result5;
-    } else if (tmp7(4218).Branding.TIER_2 === premiumBranding) {
+    } else if (PremiumUtils.Branding.TIER_2 === premiumBranding) {
       if (tmp7Result1.isThemeDark(tmp6)) {
-        let tmp4Result6 = tmp4(10726);
+        let tmp4Result6 = _modDef10726;
       } else {
-        tmp4Result6 = tmp4(10727);
+        tmp4Result6 = _modDef10727;
       }
       tmp4Result8 = tmp4Result6;
-      tmp7Result1 = tmp7(4411);
-    } else if (tmp7(4218).Branding.BUNDLE === premiumBranding) {
+      tmp7Result1 = shared;
+    } else if (PremiumUtils.Branding.BUNDLE === premiumBranding) {
       if (tmp7Result2.isThemeDark(tmp6)) {
-        let tmp4Result7 = tmp4(10728);
+        let tmp4Result7 = _modDef10728;
       } else {
-        tmp4Result7 = tmp4(10729);
+        tmp4Result7 = _modDef10729;
       }
       tmp4Result8 = tmp4Result7;
-      tmp7Result2 = tmp7(4411);
-    } else if (tmp7(4218).Branding.PREMIUM_GUILD === premiumBranding) {
-      tmp4Result8 = tmp4(10730);
+      tmp7Result2 = shared;
+    } else if (PremiumUtils.Branding.PREMIUM_GUILD === premiumBranding) {
+      tmp4Result8 = _modDef10730;
     }
     const obj9 = { source: tmp4Result8, style: tmp11.animation };
-    const items3 = [tmp16(tmp4Result3, obj9)];
+    const items3 = [React5(tmp4Result3, obj9)];
     const obj10 = { style: tmp.description, children: null };
-    if (tmp7(4218).Branding.TIER_0 !== premiumBranding) {
-      if (tmp7(4218).Branding.TIER_1 !== premiumBranding) {
-        if (tmp7(4218).Branding.TIER_2 === premiumBranding) {
-          const intl3 = tmp7(1114).intl;
-          let stringResult = intl3.string(tmp7(1114).t.aTUr3Z);
-        } else if (tmp7(4218).Branding.BUNDLE === premiumBranding) {
-          const intl2 = tmp7(1114).intl;
+    if (PremiumUtils.Branding.TIER_0 !== premiumBranding) {
+      if (PremiumUtils.Branding.TIER_1 !== premiumBranding) {
+        if (PremiumUtils.Branding.TIER_2 === premiumBranding) {
+          const intl3 = util.intl;
+          let stringResult = intl3.string(util.t.aTUr3Z);
+        } else if (PremiumUtils.Branding.BUNDLE === premiumBranding) {
+          const intl2 = util.intl;
           const obj11 = { planName: null };
           ({ planId: obj20.planId, additionalPlans: obj20.additionalPlans } = renewalMutations);
-          obj11.planName = tmp7(4218).getExternalPlanDisplayName({ planId: null, additionalPlans: null });
-          stringResult = intl2.format(tmp7(1114).t.YJUUH3, obj11);
+          obj11.planName = PremiumUtils.getExternalPlanDisplayName({ planId: null, additionalPlans: null });
+          stringResult = intl2.format(util.t.YJUUH3, obj11);
           const obj12 = { planId: null, additionalPlans: null };
-          const tmp7Result3 = tmp7(4218);
+          const tmp7Result3 = PremiumUtils;
         }
       }
       obj10.children = stringResult;
-      items3[1] = tmp16(tmp7(1178).LegacyText, obj10);
+      items3[1] = React5(native.LegacyText, obj10);
       obj8.children = items3;
-      items2[1] = tmp12(tmp21, obj8);
+      items2[1] = React6(hasOwnProperty, obj8);
       obj3.children = items2;
-      return tmp12(tmp4Result, obj3);
+      return React6(tmp4Result, obj3);
     }
-    const intl4 = tmp7(1114).intl;
-    stringResult = intl4.string(tmp7(1114).t.knvOVz);
+    const intl4 = util.intl;
+    stringResult = intl4.string(util.t.knvOVz);
   }
+  tmp4Result3 = ShineAnimationDefault;
 }

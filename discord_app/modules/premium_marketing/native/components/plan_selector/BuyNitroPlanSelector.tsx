@@ -79,7 +79,7 @@ export default function BuyNitroPlanSelector(planSelection) {
         productId.productId,
       ),
     );
-    tmp8Result = tmp8(tmp2(5685).TableRadioGroup, obj2);
+    tmp8Result = closure_7(tmp2(5685).TableRadioGroup, obj2);
   }
   children[1] = tmp8Result;
   tmp8Result = null != stateFromStores;
@@ -101,8 +101,8 @@ export default function BuyNitroPlanSelector(planSelection) {
     obj6.convertToMajorUnits = tmp2Result.isAndroid();
     obj5.kunaPriceWithCurrency = tmp2Result.formatPrice(result, CurrencyCodes.HRK, obj6);
     obj4.message = intl2.formatToPlainString(tmp2(1114).t["9hnZoK"], obj5);
-    obj3.children = tmp8(selection(13300), obj4);
-    tmp8Result = tmp8(tmp7, obj3);
+    obj3.children = closure_7(selection(13300), obj4);
+    tmp8Result = closure_7(tmp7, obj3);
     const tmp9Result = selection(13300);
   }
   children[2] = tmp8Result;

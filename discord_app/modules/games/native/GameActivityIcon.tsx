@@ -1,7 +1,10 @@
 // discord_app/modules/games/native/GameActivityIcon.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import AvatarUtils from "../../../utils/AvatarUtils.tsx";
 import native from "../../../../discord_common/js/packages/design/native.tsx";
+import shared from "../../../design/shared.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
+import UnknownGameIcon from "../../../design/components/Icon/native/redesign/generated/UnknownGameIcon.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -37,15 +40,15 @@ export default noop.memo(function GameActivityIcon(style) {
       obj = { size: "custom", style: null, color: null };
       const items1 = [tmp.icon, size];
       obj.style = items1;
-      let tmp2Result = tmp2(4411);
+      let tmp2Result = shared;
       const colors = nativeDefault.colors;
       obj.color = tmp2Result.isThemeDark(obj.useThemeContext().theme) ? colors.WHITE : colors.BLACK;
-      jsx(tmp2(8565).UnknownGameIcon, { size: "custom", style: null, color: null });
+      jsx(UnknownGameIcon.UnknownGameIcon, { size: "custom", style: null, color: null });
       const isThemeDarkResult = tmp2Result.isThemeDark(obj.useThemeContext().theme);
     }
   } else {
     obj = { source: null, style: null };
-    tmp2Result = tmp2(1396);
+    tmp2Result = AvatarUtils;
     obj.source = tmp2Result.makeSource(iconURL);
     const items2 = [tmp.icon, size];
     obj.style = items2;

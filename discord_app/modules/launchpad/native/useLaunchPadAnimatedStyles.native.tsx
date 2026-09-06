@@ -49,10 +49,10 @@ export default function useLaunchpadAnimatedStyles(launchPadSharedState) {
       if (tmp) {
         let tmp3 = 1 !== launchPadSharedState.get();
         if (tmp3) {
-          tmp3 = 0 !== obj.get();
+          tmp3 = 0 !== launchPadSharedState.get();
         }
         if (!tmp3) {
-          const result = launchPadShown.set(1 === obj.get());
+          const result = launchPadShown.set(1 === launchPadSharedState.get());
         }
       }
     };

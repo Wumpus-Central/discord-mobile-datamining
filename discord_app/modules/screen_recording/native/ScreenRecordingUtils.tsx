@@ -6,7 +6,7 @@ import StudyConfig from "StudyConfig.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 
 require = fn;
-let closure_7 = async function _getLatestVideo(arg0, value) {
+let closure_7 = async function _getLatestVideo() {
   if (c5 === 2) {
     c5 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -92,7 +92,7 @@ let closure_7 = async function _getLatestVideo(arg0, value) {
     }
   }
 };
-let closure_8 = async function _checkAndRequestPermissions(arg0, value) {
+let closure_8 = async function _checkAndRequestPermissions() {
   if (c5 === 2) {
     c5 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -171,7 +171,7 @@ let closure_8 = async function _checkAndRequestPermissions(arg0, value) {
     }
   }
 };
-let closure_9 = async function _startRecordingProcess(arg0, value) {
+let closure_9 = async function _startRecordingProcess(arg0) {
   if (c6 === 2) {
     c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -270,7 +270,7 @@ let closure_9 = async function _startRecordingProcess(arg0, value) {
     }
   }
 };
-let closure_10 = async function _stopRecordingProcess(arg0, value) {
+let closure_10 = async function _stopRecordingProcess() {
   if (c5 === 2) {
     c5 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -346,7 +346,7 @@ let closure_10 = async function _stopRecordingProcess(arg0, value) {
     }
   }
 };
-let closure_11 = async function _submitBugReportWithScreenRecording(arg0, value) {
+let closure_11 = async function _submitBugReportWithScreenRecording(arg0) {
   if (c10 === 2) {
     c10 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -685,7 +685,7 @@ let closure_11 = async function _submitBugReportWithScreenRecording(arg0, value)
     }
   }
 };
-let closure_12 = async function _handleStopAndSend(arg0, value) {
+let closure_12 = async function _handleStopAndSend(arg0) {
   if (c1 === 2) {
     c1 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -716,7 +716,7 @@ let closure_12 = async function _handleStopAndSend(arg0, value) {
             if (saved.saved) {
               const _setTimeout = setTimeout;
               const timerId = setTimeout(
-                closure_1_3(function* (arg0, value) {
+                closure_1_3(function* () {
                   if (c2 === 2) {
                     c2 = 3;
                     throw new TypeError("Generator functions may not be called on executing generators");
@@ -830,7 +830,7 @@ let closure_12 = async function _handleStopAndSend(arg0, value) {
     }
   }
 };
-let closure_13 = async function _handleRecordingPhase(arg0, value) {
+let closure_13 = async function _handleRecordingPhase(arg0) {
   closure_1 = tmp2;
   closure_129_0 = closure_0;
   await (function checkAndRequestPermissions() {

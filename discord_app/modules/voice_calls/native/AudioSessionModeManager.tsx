@@ -30,10 +30,10 @@ function handleAVAudioSessionMode() {
         const AVAudioSessionMode = VoiceEngine.AVAudioSessionMode;
         if (obj.shouldImmediatelyRequestVoicePermissions(AuthenticationStore.getId(), channel.id)) {
           VIDEO = AVAudioSessionMode.VOICE;
-          obj2 = tmp9;
+          obj2 = VoiceEngine;
         } else {
           VIDEO = AVAudioSessionMode.LISTEN;
-          obj2 = tmp9;
+          obj2 = VoiceEngine;
         }
         obj = VoicePermissionManager;
       }

@@ -123,6 +123,7 @@ export default function SocialLayerStorefrontGiftPurchaseSection(disabled) {
     const result =
       SocialLayerStorefrontNativeActionCreators.openSocialLayerStorefrontProductGiftPurchaseSuccessModal(obj);
     result.then(SocialLayerStorefrontNativeActionCreators.closeSocialLayerStorefrontGiftModal);
+    const tmpResult = SocialLayerStorefrontNativeActionCreators;
   };
   obj.onPurchaseError = onPurchaseError;
   obj.onPurchasePending = function onPurchasePending() {};

@@ -1,4 +1,6 @@
 // discord_app/modules/collectibles/native/AvatarDecorationProductPreview.tsx
+import util from "../../../intl/index.native.tsx";
+import native from "../../../design/void/native.tsx";
 import useShopProductItems from "../hooks/useShopProductItems.tsx";
 import useCurrentUser from "../hooks/useCurrentUser.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -28,20 +30,20 @@ export default function AvatarDecorationProductPreview(product) {
       accessible: true,
       children: null,
     };
-    const intl = tmp2(1114).intl;
+    const intl = util.intl;
     obj = { a11y_text: firstAvatarDecoration.label };
-    obj.accessibilityLabel = intl.formatToPlainString(tmp2(1114).t.Do2lxE, obj);
+    obj.accessibilityLabel = intl.formatToPlainString(util.t.Do2lxE, obj);
     obj1 = {
       user: currentUser,
       guildId: "r",
-      size: tmp2(1178).AvatarSizes.GIFT_START,
+      size: native.AvatarSizes.GIFT_START,
       avatarDecoration: firstAvatarDecoration,
       animate: null,
     };
-    obj.children = jsx(tmp2(1178).Avatar, {
+    obj.children = jsx(native.Avatar, {
       user: currentUser,
       guildId: "r",
-      size: tmp2(1178).AvatarSizes.GIFT_START,
+      size: native.AvatarSizes.GIFT_START,
       avatarDecoration: firstAvatarDecoration,
       animate: null,
     });

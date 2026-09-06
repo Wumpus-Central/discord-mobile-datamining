@@ -1,9 +1,11 @@
 // discord_app/modules/user_profile/hooks/native/useUserProfileColors.tsx
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import utils_ColorUtils from "../../../../../discord_common/js/shared/utils/ColorUtils.tsx";
 import useToken from "../../../../design/tokens/native/useToken.tsx";
 import useThemeDefault from "../../../../hooks/useTheme.tsx";
 import useProfileThemeValues from "../../useProfileThemeValues.native.tsx";
+import UserProfileGradientUtils from "../../UserProfileGradientUtils.tsx";
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 
 require = fn;
@@ -36,7 +38,7 @@ export const useUserProfileColors = function useUserProfileColors(theme) {
     if (null != secondaryColor) {
       if (null != profileThemeValues) {
         ({ overlay, sectionBox, overlaySyncedWithUserTheme } = profileThemeValues);
-        let tmp3Result = tmp3(8229);
+        let tmp3Result = UserProfileGradientUtils;
         let tmp7 = overlay;
         if (stateFromStores) {
           tmp7 = overlaySyncedWithUserTheme;
@@ -45,15 +47,17 @@ export const useUserProfileColors = function useUserProfileColors(theme) {
         obj = {};
         const merged = Object.assign(obj);
         obj.containerBackground = tmp6;
-        tmp3Result = tmp3(1091);
+        tmp3Result = utils_ColorUtils;
         obj.gradientSecondaryBackground = tmp3Result.int2hex(
-          tmp3(8229).calculateOverlayedColor(secondaryColor, overlay),
+          UserProfileGradientUtils.calculateOverlayedColor(secondaryColor, overlay),
         );
-        const tmp3Result1 = tmp3(8229);
-        obj.avatarBackground = tmp3(1091).int2hex(result);
-        const tmp3Result2 = tmp3(1091);
-        const tmp3Result3 = tmp3(1091);
-        obj.statusBackground = tmp3Result3.int2hex(tmp3(8229).calculateOverlayedColor(result, sectionBox));
+        const tmp3Result1 = UserProfileGradientUtils;
+        obj.avatarBackground = utils_ColorUtils.int2hex(result);
+        const tmp3Result2 = utils_ColorUtils;
+        const tmp3Result3 = utils_ColorUtils;
+        obj.statusBackground = tmp3Result3.int2hex(
+          UserProfileGradientUtils.calculateOverlayedColor(result, sectionBox),
+        );
         return obj;
       }
     }

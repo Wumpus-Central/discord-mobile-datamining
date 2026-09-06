@@ -42,7 +42,7 @@ export const BaseIconImage = function BaseIconImage(size) {
   return (
     <Image
       fadeDuration={0}
-      source={arg0.source}
+      source={size.source}
       resizeMode={resizeMode}
       style={null}
       accessible={accessible}

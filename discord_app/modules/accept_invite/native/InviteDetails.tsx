@@ -1,6 +1,7 @@
 // discord_app/modules/accept_invite/native/InviteDetails.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
+import native from "../../../design/void/native.tsx";
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
 import AvatarUtilsDefault from "../../../utils/AvatarUtils.tsx";
 import UserUtilsDefault from "../../../utils/UserUtils.tsx";
@@ -64,18 +65,19 @@ function InviteDestinationIcon(invite) {
         obj = { avatarStyle: tmp.avatar, user: null, guildId: "Array", size: false };
         const tmp14 = new UserRecord(invite.inviter);
         obj.user = tmp14;
-        obj.size = tmp4(1178).AvatarSizes.XLARGE;
-        tmp2Result = tmp2(tmp4(1178).Avatar, obj);
+        obj.size = native.AvatarSizes.XLARGE;
+        tmp2Result = closure_1_12(native.Avatar, obj);
       }
     }
     obj.children = tmp2Result;
-    return tmp2(View, obj);
+    return closure_1_12(View, obj);
   }
   tmp2Result = null;
   if (null != invite.guild) {
     obj = { style: tmp.avatar, guild: invite.guild, size: GuildInviteIconDefault.Sizes.LARGE, textScale: 2 };
-    tmp2Result = tmp2(GuildInviteIconDefault, obj);
+    tmp2Result = closure_1_12(GuildInviteIconDefault, obj);
   }
+  obj2 = InviteTypeUtils;
 }
 function InviteHeader(invite) {
   invite = invite.invite;
@@ -98,9 +100,9 @@ function InviteHeader(invite) {
     }
   }
   if (tmp2Result.isFriendInvite(invite)) {
-    const intl = tmp2(1114).intl;
+    const intl = util.intl;
     obj = { username: UserUtilsDefault.getFormattedName(invite.inviter) };
-    name = intl.formatToPlainString(tmp2(1114).t["4aF92R"], obj);
+    name = intl.formatToPlainString(util.t["4aF92R"], obj);
   }
   let tmp9 = null;
   if (null != name) {
@@ -113,7 +115,7 @@ function InviteHeader(invite) {
       color: "mobile-text-heading-primary",
       children: name,
     };
-    items[1] = closure_1_12(tmp2(4556).Heading, obj2);
+    items[1] = closure_1_12(Text_Text.Heading, obj2);
     obj.children = items;
     tmp9 = map1(View, obj);
   }
@@ -126,18 +128,19 @@ function InviteJoinContext(invite) {
   const items = [invite, isGuildMember];
   const memo = noop.useMemo(() => {
     if (obj.isStreamInvite(invite)) {
-      if (null != tmp2.target_user) {
-        let userAvatarSource = AvatarUtilsDefault.getUserAvatarSource(tmp2.target_user);
+      if (null != invite.target_user) {
+        let userAvatarSource = AvatarUtilsDefault.getUserAvatarSource(invite.target_user);
       }
       return userAvatarSource;
     }
     userAvatarSource = null;
     if (shouldShowInviter(invite, isGuildMember)) {
       userAvatarSource = null;
-      if (null != tmp2.inviter) {
-        userAvatarSource = AvatarUtilsDefault.getUserAvatarSource(tmp2.inviter);
+      if (null != invite.inviter) {
+        userAvatarSource = AvatarUtilsDefault.getUserAvatarSource(invite.inviter);
       }
     }
+    obj = InviteTypeUtils;
   }, items);
   const intl = invite(1114).intl;
   let obj = invite(7735);
@@ -209,7 +212,7 @@ function InviteJoinContext(invite) {
       obj4 = { style: tmp.inviterIconWrapper, children: null };
       const obj5 = { source: memo, style: tmp.inviterIcon };
       obj4.children = closure_12(isGuildMember(5587), obj5);
-      tmp22 = closure_12(tmp21, obj4);
+      tmp22 = closure_12(View, obj4);
     }
     tmp3Result1 = tmp3(7735);
   }
@@ -254,32 +257,32 @@ function InviteMemberCounts(invite) {
         if (null != tmp2.onlineCount) {
           obj = { children: null };
           const obj1 = { style: tmp.dotOnline };
-          const items = [closure_1_12(tmp18, obj1)];
+          const items = [closure_1_12(View, obj1)];
           const obj2 = { variant: "text-xs/medium", color: "text-default", children: null };
           const intl = util.intl;
           const obj3 = { membersOnline: tmp2.onlineCount };
           obj2.children = intl.format(util.t["LC+S+m"], obj3);
           items[1] = closure_1_12(Text_Text.Text, obj2);
           obj.children = items;
-          tmp17Result = tmp17(closure_1_14, obj);
+          tmp17Result = map1(closure_1_14, obj);
         }
         const items1 = [tmp17Result];
         tmp17Result = null;
         if (null != tmp2.memberCount) {
           const obj4 = { children: null };
           const obj5 = { style: tmp.dotOffline };
-          const items2 = [closure_1_12(tmp18, obj5)];
+          const items2 = [closure_1_12(View, obj5)];
           const obj6 = { variant: "text-xs/medium", color: "text-default", children: null };
           const intl2 = util.intl;
           const obj7 = { count: tmp2.memberCount };
           obj6.children = intl2.format(util.t.zRl6XR, obj7);
           items2[1] = closure_1_12(Text_Text.Text, obj6);
           obj4.children = items2;
-          tmp17Result = tmp17(closure_1_14, obj4);
+          tmp17Result = map1(closure_1_14, obj4);
         }
         items1[1] = tmp17Result;
         obj.children = items1;
-        tmp17Result1 = tmp17(tmp18, obj);
+        tmp17Result1 = map1(View, obj);
       }
     }
   }
@@ -392,13 +395,13 @@ export default function InviteDetails(invite) {
   if (tmp8Result) {
     const obj4 = { style: tmp.embedDetailsCard, children: null };
     const obj5 = { event: guild_scheduled_event };
-    const items3 = [tmp10(tmp4(9772).GuildEventCardHeader, obj5), ,];
+    const items3 = [closure_12(tmp4(9772).GuildEventCardHeader, obj5), ,];
     const obj6 = { event: guild_scheduled_event };
-    items3[1] = tmp10(tmp4(9772).GuildEventCardMetaInfo, obj6);
+    items3[1] = closure_12(tmp4(9772).GuildEventCardMetaInfo, obj6);
     const obj7 = { event: guild_scheduled_event };
-    items3[2] = tmp10(tmp4(9772).GuildEventCardGuildInfo, obj7);
+    items3[2] = closure_12(tmp4(9772).GuildEventCardGuildInfo, obj7);
     obj4.children = items3;
-    tmp8Result = tmp8(View, obj4);
+    tmp8Result = closure_13(View, obj4);
   }
   items2[5] = tmp8Result;
   if (isGuildMember) {
@@ -412,7 +415,7 @@ export default function InviteDetails(invite) {
   let tmp10Result;
   if (null != userAvatarSource) {
     const obj8 = { source: userAvatarSource, variant: "entity" };
-    tmp10Result = tmp10(tmp4(4975).Button.Icon, obj8);
+    tmp10Result = closure_12(tmp4(4975).Button.Icon, obj8);
   }
   if (null != stateFromStores) {
     const intl = tmp4(1114).intl;

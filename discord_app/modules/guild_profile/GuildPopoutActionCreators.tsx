@@ -4,11 +4,11 @@ import HTTPUtils from "../../../discord_common/js/packages/http-utils/HTTPUtils.
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 
 require = fn;
-let closure_5 = async function _fetchGuildForPopout(guildId) {
+let closure_5 = async function _fetchGuildForPopout() {
   c5 = 0;
   c6 = 0;
   c4 = 0;
-  return (async (arg0, value) => {
+  return (async (arg0) => {
     closure_2 = tmp3;
     closure_129_0 = guildId;
     DispatcherDefault.dispatch({ type: "GUILD_POPOUT_FETCH_START", guildId });

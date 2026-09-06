@@ -6,6 +6,7 @@ import ToastActionCreatorsDefault from "../../toast/native/ToastActionCreators.t
 import native from "../../../../discord_common/js/packages/design/native.tsx";
 import client_themes_ClientThemesUtils from "../../client_themes/native/ClientThemesUtils.tsx";
 import useColorThemeBackgroundDefault from "../../client_themes/native/useColorThemeBackground.tsx";
+import components_Button_Button from "../../../design/components/Button/native/Button.native.tsx";
 import ThemedGradientDefault from "../../client_themes/native/ThemedGradient.tsx";
 import useSafeAreaInsetsKeyboardAwareDefault from "../../safe_area/useSafeAreaInsetsKeyboardAware.native.tsx";
 import HeaderShared from "../../main_tabs_v2/native/shared_components/HeaderShared.tsx";
@@ -85,12 +86,12 @@ function GravityShareFooter(arg0) {
     onSend(first);
   }, items);
   if (count <= 1) {
-    const intl2 = tmp7(1114).intl;
-    let stringResult = intl2.string(tmp7(1114).t.TXNS7S);
+    const intl2 = util.intl;
+    let stringResult = intl2.string(util.t.TXNS7S);
   } else {
-    const intl = tmp7(1114).intl;
+    const intl = util.intl;
     obj = { count };
-    stringResult = intl.formatToPlainString(tmp7(1114).t.jWtYUm, obj);
+    stringResult = intl.formatToPlainString(util.t.jWtYUm, obj);
   }
   const items1 = [tmp.footer, insets.bottom];
   let tmp14Result = null;
@@ -115,7 +116,7 @@ function GravityShareFooter(arg0) {
     }
     obj2.onPress = tmp17;
     obj2.loading = isSending;
-    items2[1] = map1(tmp7(4975).Button, obj2);
+    items2[1] = map1(components_Button_Button.Button, obj2);
     obj.children = items2;
     tmp14Result = closure_1_14(View, obj);
   }
@@ -131,7 +132,7 @@ class ICYMIShareModal {
     closure_7 = undefined;
     closure_9 = undefined;
     height = undefined;
-    closure_8 = async function _handleSendForwards(arg0, value) {
+    closure_8 = async function _handleSendForwards(arg0) {
       if (c4 === 2) {
         c4 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -182,7 +183,7 @@ class ICYMIShareModal {
             const found = mapped.filter(title(tmp2[30]).isNotNullish);
             const item = found.forEach(
               (() => {
-                closure_0 = c4(function* (arg0, value) {
+                closure_0 = c4(function* (arg0) {
                   if (c1 === 2) {
                     c1 = 3;
                     throw new TypeError("Generator functions may not be called on executing generators");
@@ -208,12 +209,12 @@ class ICYMIShareModal {
                           return obj;
                         } else {
                           if (null != guildId) {
-                            if (str4.trim().length > 0) {
+                            if (guildId.trim().length > 0) {
                               const _HermesInternal = HermesInternal;
-                              let combined = "" + str4 + "\n\n" + closure_2_1;
+                              let combined = "" + guildId + "\n\n" + closure_2_1;
                             }
-                            let obj1 = tmp3(tmp2[31]);
-                            const parsed = obj1.parse(tmp32, combined);
+                            let obj1 = tmp3(dependencyMap[31]);
+                            const parsed = obj1.parse(guildId, combined);
                             if (null == closure_2_3) {
                               let tmp14 = null != closure_2_2;
                               if (tmp14) {
@@ -221,23 +222,23 @@ class ICYMIShareModal {
                               }
                               uploads = undefined;
                               if (tmp14) {
-                                let tmp8Result = tmp8(tmp9[32]);
-                                obj1 = { channelId: tmp32.id, file: null, draftType: null };
+                                let tmp8Result = tmp3(dependencyMap[32]);
+                                obj1 = { channelId: guildId.id, file: null, draftType: null };
                                 const obj2 = {
                                   uri: originalUri,
                                   originalUri,
-                                  id: closure_3_0(tmp9[33]).v4(),
-                                  platform: closure_3_0(tmp9[34]).UploadPlatform.REACT_NATIVE,
+                                  id: closure_3_0(dependencyMap[33]).v4(),
+                                  platform: closure_3_0(dependencyMap[34]).UploadPlatform.REACT_NATIVE,
                                 };
                                 obj1.file = obj2;
                                 obj1.draftType = closure_3_8.ChannelMessage;
                                 tmp8Result.addFile(obj1);
-                                uploads = uploads.getUploads(tmp32.id, closure_3_8.ChannelMessage);
-                                tmp8Result = tmp8(tmp9[32]);
-                                tmp8Result.clearAll(tmp32.id, closure_3_8.ChannelMessage);
-                                const obj6 = closure_3_0(tmp9[33]);
+                                uploads = uploads.getUploads(guildId.id, closure_3_8.ChannelMessage);
+                                tmp8Result = tmp3(dependencyMap[32]);
+                                tmp8Result.clearAll(guildId.id, closure_3_8.ChannelMessage);
+                                const obj6 = closure_3_0(dependencyMap[33]);
                               }
-                              const tmp8Result1 = tmp8(tmp9[35]);
+                              const tmp8Result1 = tmp3(dependencyMap[35]);
                               const obj3 = {
                                 location: constants.ICYMI,
                                 attachmentsToUpload: uploads,
@@ -256,12 +257,12 @@ class ICYMIShareModal {
                               c2 = 1;
                               c1 = 1;
                               const obj4 = {
-                                value: tmp8Result1.sendMessage(tmp32.id, parsed, false, obj3),
+                                value: tmp8Result1.sendMessage(guildId.id, parsed, false, obj3),
                                 done: false,
                               };
                               return obj4;
                             } else {
-                              tmp11(tmp32);
+                              tmp11(guildId);
                             }
                           }
                           combined = closure_2_1;
@@ -478,7 +479,7 @@ export const GameShareModal = function GameShareModal(content) {
   let obj = { title: null, linkText: "", forwardToChannel: null };
   let intl = require("util").intl;
   obj.title = intl.string(require("util").t["59CWHK"]);
-  _require = asyncGeneratorStep(async (arg0, value) => {
+  _require = asyncGeneratorStep(async (arg0) => {
     if (c6 === 2) {
       c6 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");

@@ -27,9 +27,6 @@ function UnmuteOptions(channel) {
   const intl = channel(1114).intl;
   const obj2 = { name: null };
   const tmp = closure_13();
-  const tmp3 = closure_11;
-  const tmp4 = View;
-  const tmp5 = closure_10;
   obj2.name = channel(4713).computeChannelName(channel, UserStore, RelationshipStore, true);
   obj1.children = intl.format(channel(1114).t["eC+9rj"], obj2);
   obj.label = closure_10(channel(4556).Text, obj1);
@@ -40,9 +37,9 @@ function UnmuteOptions(channel) {
   const tmp6 = navigation(10146);
   const MuteSettingType = channel(10146).MuteSettingType;
   obj3.type = channel.isPrivate() ? MuteSettingType.DM : MuteSettingType.CHANNEL;
-  items1[1] = tmp5(tmp6, obj3);
+  items1[1] = closure_10(tmp6, obj3);
   obj.children = items1;
-  return tmp3(tmp4, obj);
+  return closure_11(View, obj);
 }
 function MuteOptions(channel) {
   channel = channel.channel;
@@ -71,7 +68,7 @@ function MuteOptions(channel) {
             obj.mute_config = mute_config;
             const result = applicationId(navigation[10]).setNotificationSettings(obj, obj);
             const obj4 = applicationId(navigation[10]);
-          } else if (null != tmp) {
+          } else if (null != closure_1_1) {
             let obj1 = applicationId(navigation[11]);
             const guildId = obj.getGuildId();
             const id = obj.id;
@@ -82,7 +79,13 @@ function MuteOptions(channel) {
             }
             obj.mute_config = tmp14;
             const NotificationLabel2 = channel(navigation[12]).NotificationLabel;
-            const result1 = obj1.updateAppDMOverrideSettings(guildId, id, tmp, obj, NotificationLabel2.muted(muted));
+            const result1 = obj1.updateAppDMOverrideSettings(
+              guildId,
+              id,
+              closure_1_1,
+              obj,
+              NotificationLabel2.muted(muted),
+            );
           } else {
             const obj6 = applicationId(navigation[11]);
             const guildId1 = obj.getGuildId();
@@ -236,12 +239,12 @@ export default noop.memo(() => {
     obj.style = items5;
     if (muted) {
       obj1 = { channel: stateFromStores, applicationId, muteConfig, navigation };
-      let tmp11Result = tmp11(UnmuteOptions, obj1);
-      let tmp14 = tmp11;
+      let tmp11Result = closure_10(UnmuteOptions, obj1);
+      let tmp14 = closure_10;
     } else {
       obj2 = { channel: stateFromStores, applicationId, navigation };
-      tmp11Result = tmp11(MuteOptions, obj2);
-      tmp14 = tmp11;
+      tmp11Result = closure_10(MuteOptions, obj2);
+      tmp14 = closure_10;
     }
     const items6 = [tmp11Result];
     const isPrivateResult = stateFromStores.isPrivate();

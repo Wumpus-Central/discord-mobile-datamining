@@ -26,10 +26,10 @@ function formatDays(days) {
   if (setsEqual(set, set2)) {
     const intl3 = util.intl;
     return intl3.string(_modDef2396.bPjqd1);
-  } else if (tmp2(set, set)) {
+  } else if (setsEqual(set, set)) {
     const intl2 = util.intl;
     return intl2.string(_modDef2396["4dr9L9"]);
-  } else if (tmp2(set, set1)) {
+  } else if (setsEqual(set, set1)) {
     const intl = util.intl;
     return intl.string(_modDef2396["6lTTJ+"]);
   } else {
@@ -126,7 +126,6 @@ export const formatRestrictedScheduleInAppSubtitle = function formatRestrictedSc
       const endTime = startTime.endTime;
       const _Intl2 = Intl;
       const tmp5 = formatDays(startTime.days);
-      const tmp7 = require;
       const dateTimeFormat1 = new Intl.DateTimeFormat(util.intl.currentLocale, { hour: "numeric", minute: "2-digit" });
       const _Date2 = Date;
       const date1 = new Date(2025, 0, 1, endTime.hours, endTime.minutes);
@@ -138,7 +137,7 @@ export const formatRestrictedScheduleInAppSubtitle = function formatRestrictedSc
       } else {
         OxveI8 = _modDef2396["ERTn+E"];
       }
-      const intl = tmp7(1114).intl;
+      const intl = util.intl;
       const obj = { days: tmp5, startTime: formatResult, endTime: dateTimeFormat1.format(date1) };
       return intl.formatToPlainString(OxveI8, obj);
     }
@@ -193,7 +192,7 @@ export const toTimeProto = function toTimeProto(hours) {
 export const computeOverlappingInfo = function computeOverlappingInfo(first3, memo1, memo) {
   const conflictingEntries = [];
   const item = conflictingEntries.forEach((item, index) => {
-    if (item.has(item)) {
+    if (set.has(item)) {
       const found = memo1.find((days) => {
         days = days.days;
         return days.includes(closure_0);
@@ -203,6 +202,7 @@ export const computeOverlappingInfo = function computeOverlappingInfo(first3, me
         conflictingEntries.push(obj);
       }
     }
+    set = item;
   });
   return { conflictingEntries };
 };

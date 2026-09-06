@@ -99,16 +99,15 @@ prototype["initialize"] = function initialize(arg0) {
           }
           if (null != protoToSave) {
             if (null != tmp.offlineEditDataVersion) {
-              const b64ToProtoResult1 = tmp3(1223).b64ToProto(ProtoClass.ProtoClass, protoToSave);
+              const b64ToProtoResult1 = user_settings_UserSettingsUtils.b64ToProto(ProtoClass.ProtoClass, protoToSave);
               if (null != b64ToProtoResult1) {
                 ProtoClass.editInfo.protoToSave = b64ToProtoResult1;
                 ProtoClass.editInfo.offlineEditDataVersion = tmp.offlineEditDataVersion;
               }
-              const tmp3Result = tmp3(1223);
+              const tmp3Result = user_settings_UserSettingsUtils;
             }
           }
         }
-        tmp3 = require;
       }
     });
   }
@@ -322,16 +321,18 @@ obj = {
             }
             if (null != protoToSave) {
               if (null != tmp.offlineEditDataVersion) {
-                const b64ToProtoResult1 = tmp3(1223).b64ToProto(ProtoClass.ProtoClass, protoToSave);
+                const b64ToProtoResult1 = user_settings_UserSettingsUtils.b64ToProto(
+                  ProtoClass.ProtoClass,
+                  protoToSave,
+                );
                 if (null != b64ToProtoResult1) {
                   ProtoClass.editInfo.protoToSave = b64ToProtoResult1;
                   ProtoClass.editInfo.offlineEditDataVersion = tmp.offlineEditDataVersion;
                 }
-                const tmp3Result = tmp3(1223);
+                const tmp3Result = user_settings_UserSettingsUtils;
               }
             }
           }
-          tmp3 = require;
         }
       });
     }
@@ -396,6 +397,10 @@ obj = {
         editInfo.editInfo.offlineEditDataVersion = num;
       }
     });
+    const runMigrationsResult = obj.runMigrations(
+      obj.proto,
+      UserSettingsMigrationsByTypeDefault[UserSettingsTypes.PRELOADED_USER_SETTINGS],
+    );
   },
   CONNECTION_CLOSED: handleConnectionClosedOrResumed,
   CONNECTION_RESUMED: handleConnectionClosedOrResumed,

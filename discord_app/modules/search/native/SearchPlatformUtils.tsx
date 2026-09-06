@@ -1,7 +1,11 @@
 // discord_app/modules/search/native/SearchPlatformUtils.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import PlatformUtils from "../../../utils/PlatformUtils.tsx";
 import URLUtilsDefault from "../../../utils/URLUtils.tsx";
+import FlagUtils from "../../../../discord_common/js/shared/utils/FlagUtils.tsx";
+import KeyboardManagerUtils from "../../../utils/native/KeyboardManagerUtils.tsx";
 import LinkIcon from "../../../design/components/Icon/native/redesign/generated/LinkIcon.tsx";
+import useKeyboardIsOpen from "../../keyboard/native/useKeyboardIsOpen.tsx";
 import MediaSourceUtil from "../../media_viewer/native/MediaSourceUtil.tsx";
 import ClydeIcon from "../../../design/components/Icon/native/redesign/generated/ClydeIcon.tsx";
 import SearchUtils from "../SearchUtils.tsx";
@@ -16,15 +20,16 @@ require = fn;
 function performKeyboardAwareNavigation(fn) {
   closure_0 = fn;
   if (obj.getKeyboardIsOpen()) {
-    let tmpResult = tmp(1115);
+    let tmpResult = PlatformUtils;
     if (tmpResult.isIOS()) {
-      tmpResult = tmp(1874);
+      tmpResult = KeyboardManagerUtils;
       const result = tmpResult.dismissGlobalKeyboard();
       const _setTimeout = setTimeout;
       const timerId = setTimeout(() => closure_0(), 100);
     }
   }
   fn();
+  obj = useKeyboardIsOpen;
 }
 function delayUntilNavigationComplete(arg0) {
   closure_0 = arg0;
@@ -50,10 +55,9 @@ function getUrlIcon(target) {
         }
         return LinkIcon.LinkIcon;
       }
-      tmp10Result = tmp10(1365);
+      tmp10Result = URLUtilsDefault;
     }
     obj = URLUtilsDefault;
-    tmp10 = importDefault;
   }
 }
 function getGridItemBorderStyles(numItems) {
@@ -153,7 +157,7 @@ function fetchInitialMessages(searchContext) {
     }
   } else {
     let obj = require("SearchUtils");
-    const searchTabFetchId = obj.getSearchTabFetchId(searchContext, tmp3[0], queryString);
+    const searchTabFetchId = obj.getSearchTabFetchId(searchContext, searchTabs[0], queryString);
     let obj1 = SearchMessageStore;
     if (!SearchMessageStore.getIsFetching(searchTabFetchId)) {
       const result = queryString(12347).clearAllSearchMesssages();
@@ -163,7 +167,7 @@ function fetchInitialMessages(searchContext) {
       const obj4 = queryString(12358);
       obj = {
         searchContext,
-        searchTabs: tmp3,
+        searchTabs,
         searchQueryString: queryString,
         getId(MEDIA) {
           return SearchUtils.getSearchTabFetchId(closure_0, MEDIA, queryString);
@@ -182,12 +186,14 @@ function fetchInitialMessages(searchContext) {
       obj1 = { cursor };
       obj.pagination = obj1;
       const obj6 = queryString(12347);
-      obj.trackExactTotalHits = require("UserSettings").SearchResultExactCountEnabled.getSetting();
+      obj.trackExactTotalHits = tmp6(1935).SearchResultExactCountEnabled.getSetting();
       obj.searchMode = constants5.NEWEST;
       const tabMessages = obj6.fetchTabMessages(obj);
-      const SearchResultExactCountEnabled = require("UserSettings").SearchResultExactCountEnabled;
+      const SearchResultExactCountEnabled = tmp6(1935).SearchResultExactCountEnabled;
     }
+    tmp6 = _require;
   }
+  isInitialSearchQueryResult = SearchQueryStore.isInitialSearchQuery(searchContext);
 }
 function syncAutocomplete(searchContext) {
   const queryString = SearchQueryStore.getQueryString(searchContext, true);
@@ -242,8 +248,8 @@ obj.fetchNextMessages = function fetchNextMessages(searchContext, tab, onFetchSu
   const bound = Math.min(dependencyMap[tab], closure_6);
   const searchTabFetchId1 = require("SearchUtils").getSearchTabFetchId(searchContext, tab, queryString);
   if (!SearchMessageStore.getIsInitialFetchComplete(searchTabFetchId1)) {
-    const isFetching = obj3.getIsFetching(searchTabFetchId);
-    let flag = !obj3.getIsInitialFetchComplete(searchTabFetchId);
+    const isFetching = SearchMessageStore.getIsFetching(searchTabFetchId);
+    let flag = !SearchMessageStore.getIsInitialFetchComplete(searchTabFetchId);
     if (!flag) {
       flag = isFetching;
     }
@@ -270,7 +276,7 @@ obj.fetchNextMessages = function fetchNextMessages(searchContext, tab, onFetchSu
       };
       obj.onFetchStart = onFetchMessagesStart;
       obj.onFetchSuccess = onFetchSuccess;
-      let cursor = obj3.getCursor(searchTabFetchId);
+      let cursor = SearchMessageStore.getCursor(searchTabFetchId);
       if (cursor == null) {
         cursor = null;
       }
@@ -284,9 +290,9 @@ obj.fetchNextMessages = function fetchNextMessages(searchContext, tab, onFetchSu
     }
     return tabMessages;
   } else {
-    const cursor1 = obj3.getCursor(searchTabFetchId1);
-    const totalCount = obj3.getTotalCount(searchTabFetchId1);
-    let messages = obj3.getMessages(searchTabFetchId1);
+    const cursor1 = SearchMessageStore.getCursor(searchTabFetchId1);
+    const totalCount = SearchMessageStore.getTotalCount(searchTabFetchId1);
+    let messages = SearchMessageStore.getMessages(searchTabFetchId1);
     if (SearchResultExactCountEnabled.getSetting()) {
       let tmp12 = null != cursor1 && null != totalCount && null != messages;
       if (tmp12) {
@@ -298,6 +304,7 @@ obj.fetchNextMessages = function fetchNextMessages(searchContext, tab, onFetchSu
     }
     SearchResultExactCountEnabled = tmp2(1935).SearchResultExactCountEnabled;
   }
+  const obj2 = require("SearchUtils");
 };
 obj.syncAutocomplete = syncAutocomplete;
 obj.syncAutocompleteDebounced = apply.debounce(syncAutocomplete, SEARCH_TEXT_INPUT_DEBOUNCE_TIME);
@@ -384,9 +391,9 @@ export const getMedia = function getMedia(searchContext, items1) {
       const item = attachments.forEach((attachment, index) => {
         let obj = MediaSourceUtil;
         if (!obj.isThumbnailAttachment(attachment)) {
-          let tmpResult = tmp(8263);
+          let tmpResult = MediaSourceUtil;
           if (tmpResult.isValidImageAttachment(attachment)) {
-            tmpResult = tmp(8263);
+            tmpResult = MediaSourceUtil;
             const result = tmpResult.extractMediaFromAttachment(attachment, closure_0, index, guildIdFromSearchContext);
             if (null != result) {
               obj = {
@@ -398,15 +405,14 @@ export const getMedia = function getMedia(searchContext, items1) {
                 mediaIndex: null,
                 sources: null,
               };
-              ({ id: obj5.messageId, channel_id: obj5.channelId, author: obj5.author } = tmp4);
+              ({ id: obj5.messageId, channel_id: obj5.channelId, author: obj5.author } = closure_0);
               obj.mediaIndex = mediaIndex;
               obj.sources = result;
               items.push(obj);
               mediaIndex = mediaIndex + 1;
             }
-            tmp4 = closure_0;
           } else {
-            const tmpResult1 = tmp(8263);
+            MediaSourceUtil;
           }
         }
       });
@@ -416,7 +422,7 @@ export const getMedia = function getMedia(searchContext, items1) {
       const item1 = embeds.forEach((embed, index) => {
         let obj = MediaSourceUtil;
         if (obj.isValidImageEmbed(embed)) {
-          let tmpResult = tmp(8263);
+          let tmpResult = MediaSourceUtil;
           const result = tmpResult.extractMediaFromEmbed(
             embed,
             closure_0,
@@ -434,15 +440,14 @@ export const getMedia = function getMedia(searchContext, items1) {
               mediaIndex: null,
               sources: null,
             };
-            ({ id: obj4.messageId, channel_id: obj4.channelId, author: obj4.author } = tmp4);
+            ({ id: obj4.messageId, channel_id: obj4.channelId, author: obj4.author } = closure_0);
             obj.mediaIndex = mediaIndex;
             obj.sources = result;
             items.push(obj);
             mediaIndex = mediaIndex + 1;
           }
-          tmp4 = closure_0;
         } else {
-          tmpResult = tmp(8263);
+          tmpResult = MediaSourceUtil;
         }
       });
     }
@@ -451,7 +456,7 @@ export const getMedia = function getMedia(searchContext, items1) {
     const iter = result[Symbol.iterator]();
     while (iter !== undefined) {
       obj = {
-        type: null,
+        type: constants.COMPONENT,
         messageId: null,
         channelId: null,
         author: null,
@@ -459,7 +464,6 @@ export const getMedia = function getMedia(searchContext, items1) {
         sources: null,
         unfurledMediaItem: null,
       };
-      obj.type = constants.COMPONENT;
       ({ id: obj2.messageId, channel_id: obj2.channelId, author: obj2.author } = getContentMessage);
       obj.mediaIndex = mediaIndex;
       ({ sources: obj2.sources, unfurledMediaItem: obj2.unfurledMediaItem } = nextResult);
@@ -475,6 +479,7 @@ export const getMedia = function getMedia(searchContext, items1) {
       mediaIndex.push(obj);
       mediaIndex = mediaIndex + 1;
     }
+    obj3 = guildIdFromSearchContext(1384);
   });
   return items;
 };
@@ -486,19 +491,19 @@ export const getFiles = function getFiles(getContentMessage) {
     const item = attachments.forEach((attachment, fileIndex) => {
       let obj = MediaSourceUtil;
       if (!obj.isValidImageAttachment(attachment)) {
-        let tmpResult = tmp(8263);
+        let tmpResult = MediaSourceUtil;
         if (!tmpResult.isValidVideoAttachment(attachment)) {
-          tmpResult = tmp(1384);
+          tmpResult = FlagUtils;
           const push = items.push;
           obj = { type: null, messageId: null, channelId: null, author: null, fileIndex: null, attachment: null };
           if (tmpResult.hasFlag(contentMessage.flags, constants4.IS_VOICE_MESSAGE)) {
-            obj.type = tmp6.AUDIO;
+            obj.type = constants.AUDIO;
             ({ id: obj4.messageId, channel_id: obj4.channelId, author: obj4.author } = getContentMessage);
             obj.fileIndex = fileIndex;
             obj.attachment = attachment;
             push(obj);
           } else {
-            obj.type = tmp6.ATTACHMENT;
+            obj.type = constants.ATTACHMENT;
             ({ id: obj4.messageId, channel_id: obj4.channelId, author: obj4.author } = getContentMessage);
             obj.fileIndex = fileIndex;
             obj.attachment = attachment;
@@ -531,7 +536,7 @@ export const getLinks = function getLinks(searchContext, getContentMessage) {
     const item = embeds.forEach((embed, index) => {
       let obj = MediaSourceUtil;
       if (obj.isValidImageEmbed(embed)) {
-        let tmpResult = tmp(8263);
+        let tmpResult = MediaSourceUtil;
         const result = tmpResult.extractMediaFromEmbed(
           embed,
           closure_0,
@@ -549,16 +554,15 @@ export const getLinks = function getLinks(searchContext, getContentMessage) {
             sources: null,
             embed: null,
           };
-          ({ id: obj4.messageId, channel_id: obj4.channelId, author: obj4.author } = tmp4);
+          ({ id: obj4.messageId, channel_id: obj4.channelId, author: obj4.author } = closure_0);
           obj.linkIndex = linkIndex;
           obj.sources = result;
           obj.embed = embed;
           items.push(obj);
           linkIndex = linkIndex + 1;
         }
-        tmp4 = closure_0;
       } else {
-        tmpResult = tmp(8263);
+        tmpResult = MediaSourceUtil;
       }
     });
   }

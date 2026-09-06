@@ -1,8 +1,11 @@
 // discord_app/modules/action_sheet/native/useCustomKeyboardBottomSheetConfig.tsx
+import KeyboardTypes from "../../keyboard/native/KeyboardTypes.tsx";
+import useSystemKeyboardHeight from "../../keyboard/native/useSystemKeyboardHeight.native.tsx";
+import useKeyboardType from "../../keyboard/native/useKeyboardType.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
 
-const require = fn;
+require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/action_sheet/native/useCustomKeyboardBottomSheetConfig.tsx");
 
@@ -29,11 +32,11 @@ export default function useCustomKeyboardBottomSheetConfig(forceMaxHeight) {
     if (!obj2.isAndroid()) {
       tmp3 = obj;
       if (!AccessibilityStore.useReducedMotion) {
-        let tmpResult = tmp(1877);
+        let tmpResult = useSystemKeyboardHeight;
         if (0 === tmpResult.getSystemKeyboardHeight()) {
-          tmpResult = tmp(4427);
+          tmpResult = useKeyboardType;
           const keyboardTypePrevious = tmpResult.getKeyboardTypePrevious();
-          if (keyboardTypePrevious === tmp(1609).KeyboardTypes.SYSTEM) {
+          if (keyboardTypePrevious === KeyboardTypes.KeyboardTypes.SYSTEM) {
             obj = { animateOnMount: true };
           }
         }
@@ -70,11 +73,11 @@ export default function useCustomKeyboardBottomSheetConfig(forceMaxHeight) {
     if (!obj2.isAndroid()) {
       tmp3 = obj;
       if (!AccessibilityStore.useReducedMotion) {
-        let tmpResult = tmp(1877);
+        let tmpResult = useSystemKeyboardHeight;
         if (0 === tmpResult.getSystemKeyboardHeight()) {
-          tmpResult = tmp(4427);
+          tmpResult = useKeyboardType;
           const keyboardTypePrevious = tmpResult.getKeyboardTypePrevious();
-          if (keyboardTypePrevious === tmp(1609).KeyboardTypes.SYSTEM) {
+          if (keyboardTypePrevious === KeyboardTypes.KeyboardTypes.SYSTEM) {
             obj = { animateOnMount: true };
           }
         }

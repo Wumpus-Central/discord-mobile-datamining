@@ -91,7 +91,7 @@ export default noop.memo(function GuildDisableCommunication(arg0) {
   c3 = undefined;
   _slicedToArray = undefined;
   noop = undefined;
-  closure_6 = async function _handleSubmitButtonPressed(arg0, value) {
+  closure_6 = async function _handleSubmitButtonPressed() {
     if (c3 === 2) {
       c3 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");

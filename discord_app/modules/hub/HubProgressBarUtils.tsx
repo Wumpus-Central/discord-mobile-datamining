@@ -1,5 +1,7 @@
 // discord_app/modules/hub/HubProgressBarUtils.tsx
+import util from "../../intl/index.native.tsx";
 import preloaded_user_settings from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
+import GlobalUtils from "../../utils/GlobalUtils.tsx";
 import noop from "../../../_runtime/metro/00019__.js";
 import UserSettingsProtoStore from "../user_settings/UserSettingsProtoStore.tsx";
 import ConnectedAccountsStore from "../../stores/ConnectedAccountsStore.tsx";
@@ -12,18 +14,19 @@ const result = size.fileFinishedImporting("modules/hub/HubProgressBarUtils.tsx")
 
 export const getHubProgressTitleForStep = function getHubProgressTitleForStep(nextHubProgressStep) {
   if (preloaded_user_settings.HubProgressStep.JOIN_GUILD === nextHubProgressStep) {
-    const intl3 = tmp(1114).intl;
-    return intl3.string(tmp(1114).t.iNR25n);
-  } else if (tmp(1187).HubProgressStep.INVITE_USER === nextHubProgressStep) {
-    const intl2 = tmp(1114).intl;
-    return intl2.string(tmp(1114).t["3NlTYU"]);
-  } else if (tmp(1187).HubProgressStep.CONTACT_SYNC === nextHubProgressStep) {
-    const intl = tmp(1114).intl;
-    return intl.string(tmp(1114).t.HFvFte);
-  } else if (tmp(1187).HubProgressStep.NO_PROGRESS === nextHubProgressStep) {
+    const intl3 = util.intl;
+    return intl3.string(util.t.iNR25n);
+  } else if (preloaded_user_settings.HubProgressStep.INVITE_USER === nextHubProgressStep) {
+    const intl2 = util.intl;
+    return intl2.string(util.t["3NlTYU"]);
+  } else if (preloaded_user_settings.HubProgressStep.CONTACT_SYNC === nextHubProgressStep) {
+    const intl = util.intl;
+    return intl.string(util.t.HFvFte);
+  } else if (preloaded_user_settings.HubProgressStep.NO_PROGRESS === nextHubProgressStep) {
     return null;
   } else {
-    tmp(1369).assertNever(nextHubProgressStep);
+    GlobalUtils.assertNever(nextHubProgressStep);
+    const tmpResult = GlobalUtils;
   }
 };
 export const useHubProgressBarCompletedSteps = function useHubProgressBarCompletedSteps(guild) {
@@ -57,10 +60,9 @@ export const useHubProgressBarCompletedSteps = function useHubProgressBarComplet
       (function convertHubProgressFlagSetToSet(stateFromStores1) {
         const set = new Set();
         for (const item10013 of closure_1_5) {
-          let tmp = item10013;
           let obj2 = memo(stateFromStores1[9]);
           if (obj2.hasFlag(arg0, item10013)) {
-            let addResult = set.add(tmp);
+            let addResult = set.add(item10013);
           }
           continue;
         }
@@ -88,12 +90,11 @@ export const useHubProgressBarCompletedSteps = function useHubProgressBarComplet
 };
 export const getNextHubProgressStep = function getNextHubProgressStep(hubProgressBarCompletedSteps) {
   for (const item10007 of HUB_PROGRESS_STEP_ORDER) {
-    let tmp = item10007;
     if (arg0.has(item10007)) {
       continue;
     } else {
       obj.return();
-      return tmp;
+      return item10007;
     }
   }
   return null;

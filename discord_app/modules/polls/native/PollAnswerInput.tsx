@@ -27,11 +27,11 @@ function ImageInput(openImageInputActionSheet) {
   const memo = setUploadSize.useMemo(() => {
     let emoji;
     if (image != null) {
-      emoji = tmp.emoji;
+      emoji = image.emoji;
     }
     if (null != emoji) {
       const intl3 = util.intl;
-      let obj = { imageName: tmp.emoji.name, answerNumber: answerIndex + 1 };
+      let obj = { imageName: image.emoji.name, answerNumber: answerIndex + 1 };
       return intl3.formatToPlainString(util.t.vcC7Qn, obj);
     } else if (null != upload) {
       let str = upload.item.filename;
@@ -83,10 +83,10 @@ function ImageInput(openImageInputActionSheet) {
   obj.style = items2;
   if (tmp6) {
     obj = { children: tmp3.renderImage };
-    let tmp9Result = tmp9(closure_6, obj);
+    let tmp9Result = closure_12(closure_6, obj);
   } else {
     obj = { source: openImageInputActionSheet.iconSrc };
-    tmp9Result = tmp9(image(tmp2[13]).Icon, obj);
+    tmp9Result = closure_12(image(tmp2[13]).Icon, obj);
   }
   obj.children = tmp9Result;
   return closure_12(image(upload[12]).PressableOpacity, obj);
@@ -266,15 +266,15 @@ export default function PollAnswerInput(answer) {
       source: tmp7(tmp8[21]),
       color: tmp.defaultRemoveButtonContainer.color,
     };
-    obj4.children = tmp6(tmp9(tmp8[13]).Icon, obj6);
-    canRemoveAnswer = tmp6(closure_5, obj4);
+    obj4.children = closure_12(tmp9(tmp8[13]).Icon, obj6);
+    canRemoveAnswer = closure_12(closure_5, obj4);
   }
   items3[1] = canRemoveAnswer;
   obj.children = items3;
   const children = [closure_13(onRemoveAnswerImage, obj)];
   if (tmp6Result) {
     const obj7 = { message: error };
-    tmp6Result = tmp6(tmp7(tmp8[22]), obj7);
+    tmp6Result = closure_12(tmp7(tmp8[22]), obj7);
   }
   children[1] = tmp6Result;
   return closure_13(closure_14, { children });

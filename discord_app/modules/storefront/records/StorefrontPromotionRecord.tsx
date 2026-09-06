@@ -187,7 +187,7 @@ prototype["createFromServer"] = function createFromServer(display_name) {
       tmp,
       _Date2,
       _Date,
-      tmp8,
+      prototype,
       new.target,
       id,
       application_id,

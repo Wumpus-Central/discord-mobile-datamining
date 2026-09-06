@@ -3,6 +3,7 @@ import ToastUtils from "../../toast/native/ToastUtils.tsx";
 import NavigationRouteUtils from "../../main_tabs_v2/helpers/NavigationRouteUtils.native.tsx";
 import GroupDMNitroUpsellModel from "GroupDMNitroUpsellModel.tsx";
 import getGroupDMRecipientLimitDefault from "../getGroupDMRecipientLimit.tsx";
+import GroupDMNitroCapExperimentDefault from "../GroupDMNitroCapExperiment.tsx";
 import openGroupDMNitroCapLimitSheetDefault from "openGroupDMNitroCapLimitSheet.tsx";
 import ChannelStore from "../../../stores/ChannelStore.tsx";
 import UserStore from "../../../stores/UserStore.tsx";
@@ -28,7 +29,6 @@ function getGroupDMAddMembersAction(id, CHANNEL_TEXT_AREA) {
         showUpsell: null,
       };
       const obj3 = GroupDMNitroUpsellModel;
-      const tmp4 = importDefault;
       let premiumType;
       if (currentUser != null) {
         premiumType = currentUser.premiumType;
@@ -43,7 +43,7 @@ function getGroupDMAddMembersAction(id, CHANNEL_TEXT_AREA) {
       obj.audience = GroupDMNitroUpsellModel.getGroupDMNitroAudience(premiumType, flag);
       const tmp2Result = GroupDMNitroUpsellModel;
       obj = { location: CHANNEL_TEXT_AREA };
-      obj.showUpsell = tmp4(11594).getConfig(obj).enabled;
+      obj.showUpsell = GroupDMNitroCapExperimentDefault.getConfig(obj).enabled;
       return obj3.getGroupDMAddMembersEntryAction(obj);
     }
   }

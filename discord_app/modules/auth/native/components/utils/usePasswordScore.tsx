@@ -8,14 +8,13 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/auth/native/components/utils/usePasswordScore.tsx");
 
 export const PasswordScore = { WEAK: 2, [2]: "WEAK", MEDIUM: 3, [3]: "MEDIUM", STRONG: 4, [4]: "STRONG" };
-export const usePasswordScore = function usePasswordScore(arg0) {
-  closure_0 = arg0;
+export const usePasswordScore = function usePasswordScore(password) {
   [tmp2, dependencyMap] = _slicedToArray(noop.useState(null), 2);
   let tmp = _slicedToArray(noop.useState(null), 2);
   [tmp4, asyncGeneratorStep] = _slicedToArray(noop.useState(null), 2);
   _slicedToArray = noop.useRef(null);
   const effect = noop.useEffect(() => {
-    closure_0 = asyncGeneratorStep(async (arg0, value) => {
+    password = asyncGeneratorStep(async (arg0) => {
       if (c6 === 2) {
         c6 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -43,13 +42,13 @@ export const usePasswordScore = function usePasswordScore(arg0) {
               closure_1 = tmp7;
               closure_129_0 = undefined;
               if (null != closure_0) {
-                if (arr.length > 0) {
+                if (closure_0.length > 0) {
                   c4 = 1;
                   let obj1 = closure_0(dependencyMap[4]);
                   c5 = 2;
                   c6 = 1;
                   obj1 = { value: null, done: false };
-                  obj1.value = obj1.scorePassword(arr);
+                  obj1.value = obj1.scorePassword(closure_0);
                   return obj1;
                 }
               }
@@ -85,7 +84,7 @@ export const usePasswordScore = function usePasswordScore(arg0) {
         }
       }
     });
-    ref.current = closure_0(dependencyMap[3]).throttle(function () {
+    ref.current = password(dependencyMap[3]).throttle(function () {
       const self = this;
       const apply = closure_0.apply;
       if (typeof apply === "unknown") {
@@ -107,14 +106,14 @@ export const usePasswordScore = function usePasswordScore(arg0) {
       }
     };
   }, []);
-  const items = [arg0];
+  const items = [password];
   const effect1 = noop.useEffect(() => {
     let tmp = null != ref.current;
     if (tmp) {
-      tmp = closure_0.length > 0;
+      tmp = password.length > 0;
     }
     if (tmp) {
-      ref.current(closure_0);
+      ref.current(password);
     }
   }, items);
   return { passwordScore, passwordValid };

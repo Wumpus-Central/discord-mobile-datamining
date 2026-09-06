@@ -1,12 +1,17 @@
 // discord_app/components_native/DatePickerActionSheet.tsx
 import nativeDefault from "../../discord_common/js/packages/tokens/native.tsx";
+import util from "../intl/index.native.tsx";
 import PlatformUtils from "../utils/PlatformUtils.tsx";
 import native from "../design/void/native.tsx";
 import _modDef4153 from "../../_runtime/metro/04153__.js";
 import ActionSheetActionCreatorsDefault from "../modules/action_sheet/native/ActionSheetActionCreators.tsx";
+import Text_Text from "../design/components/Text/native/Text.tsx";
 import timing from "../design/animation/reanimated/timing/timing.tsx";
 import setAccessibilityFocus from "../modules/a11y/native/setAccessibilityFocus.android.tsx";
+import BaseTextButton from "../design/components/Button/native/BaseTextButton.native.tsx";
 import BottomSheetTitleHeader2 from "../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
+import ActionSheetCloseButton from "../design/components/Sheet/native/ActionSheetCloseButton.native.tsx";
+import ActionSheetHeaderPressableText from "../design/components/Sheet/native/ActionSheetHeaderPressableText.native.tsx";
 import _slicedToArray from "../../_runtime/metro/00032__.js";
 import noop from "../../_runtime/metro/00019__.js";
 
@@ -18,19 +23,19 @@ function ActionSheetHeader(handleSubmit) {
   if (isAndroidResult) {
     obj = { title, trailing: null };
     obj = { onPress: handleCancel };
-    obj.trailing = tmp4(tmp(7199).ActionSheetCloseButton, obj);
-    let tmp4Result = tmp4(BottomSheetTitleHeader, obj);
+    obj.trailing = timestampProducer(ActionSheetCloseButton.ActionSheetCloseButton, obj);
+    let tmp4Result = timestampProducer(BottomSheetTitleHeader, obj);
   } else {
     const obj1 = { title, leading: null, trailing: null };
     const obj2 = { onPress: handleCancel, label: null };
-    const intl = tmp(1114).intl;
-    obj2.label = intl.string(tmp(1114).t["ETE/oC"]);
-    obj1.leading = tmp4(tmp(9718).ActionSheetHeaderPressableText, obj2);
+    const intl = util.intl;
+    obj2.label = intl.string(util.t["ETE/oC"]);
+    obj1.leading = timestampProducer(ActionSheetHeaderPressableText.ActionSheetHeaderPressableText, obj2);
     const obj3 = { onPress: handleSubmit.handleSubmit, label: null };
-    const intl2 = tmp(1114).intl;
-    obj3.label = intl2.string(tmp(1114).t["R3BPH+"]);
-    obj1.trailing = tmp4(tmp(9718).ActionSheetHeaderPressableText, obj3);
-    tmp4Result = tmp4(BottomSheetTitleHeader, obj1);
+    const intl2 = util.intl;
+    obj3.label = intl2.string(util.t["R3BPH+"]);
+    obj1.trailing = timestampProducer(ActionSheetHeaderPressableText.ActionSheetHeaderPressableText, obj3);
+    tmp4Result = timestampProducer(BottomSheetTitleHeader, obj1);
   }
   return tmp4Result;
 }
@@ -119,14 +124,14 @@ function ActionSheetFooter(arg0) {
       onPress: null,
     };
     const obj1 = { variant: "text-md/semibold", children: null };
-    const intl = tmp2(1114).intl;
-    obj1.children = intl.string(tmp2(1114).t["ETE/oC"]);
-    obj.textElement = timestampProducer(tmp2(4556).Text, obj1);
-    const intl2 = tmp2(1114).intl;
-    obj.accessibilityLabel = intl2.string(tmp2(1114).t["ETE/oC"]);
+    const intl = util.intl;
+    obj1.children = intl.string(util.t["ETE/oC"]);
+    obj.textElement = timestampProducer(Text_Text.Text, obj1);
+    const intl2 = util.intl;
+    obj.accessibilityLabel = intl2.string(util.t["ETE/oC"]);
     obj.style = tmp.actionButton;
     obj.onPress = handleCancel;
-    const items = [timestampProducer(tmp2(4976).BaseTextButton, obj)];
+    const items = [timestampProducer(BaseTextButton.BaseTextButton, obj)];
     const obj2 = {
       shrink: true,
       disabled: !canSubmit,
@@ -138,14 +143,14 @@ function ActionSheetFooter(arg0) {
       onPress: null,
     };
     const obj3 = { variant: "text-md/semibold", children: null };
-    const intl3 = tmp2(1114).intl;
-    obj3.children = intl3.string(tmp2(1114).t["cY+Oob"]);
-    obj2.textElement = timestampProducer(tmp2(4556).Text, obj3);
-    const intl4 = tmp2(1114).intl;
-    obj2.accessibilityLabel = intl4.string(tmp2(1114).t["cY+Oob"]);
+    const intl3 = util.intl;
+    obj3.children = intl3.string(util.t["cY+Oob"]);
+    obj2.textElement = timestampProducer(Text_Text.Text, obj3);
+    const intl4 = util.intl;
+    obj2.accessibilityLabel = intl4.string(util.t["cY+Oob"]);
     obj2.style = tmp.actionButton;
     obj2.onPress = handleSubmit;
-    items[1] = timestampProducer(tmp2(4976).BaseTextButton, obj2);
+    items[1] = timestampProducer(BaseTextButton.BaseTextButton, obj2);
     obj.children = items;
     tmp4 = React5(View, obj);
   }
@@ -219,7 +224,7 @@ export default function DatePickerActionSheet(mode) {
   const tmp8 = onCancel(startDate.useState(!mode.requireDateChanged), 2);
   first1 = tmp8[0];
   closure_8 = tmp8[1];
-  let tmp3 = closure_8();
+  const tmp3 = closure_8();
   [c9, c10] = onCancel(startDate.useState(true), 2);
   const tmp10 = onCancel(startDate.useState(true), 2);
   [tmp12, c11] = onCancel(startDate.useState(false), 2);
@@ -276,7 +281,7 @@ export default function DatePickerActionSheet(mode) {
     tmp32 = !tmp33;
   }
   obj = { show: tmp32, errorText: null };
-  const intl2 = tmp29(1114).intl;
+  const intl2 = maximumDate(1114).intl;
   let obj4 = tmp13(4153)(minimumDate);
   let str2 = "lll";
   let str3 = "lll";
@@ -290,19 +295,18 @@ export default function DatePickerActionSheet(mode) {
         tmp2 = null == maximumDate;
       }
       if (!tmp2) {
-        let tmp4 = null == obj2;
+        let tmp4 = null == minimumDate;
         if (!tmp4) {
           const time = getTime.getTime();
-          tmp4 = time >= obj2.getTime();
+          tmp4 = time >= minimumDate.getTime();
         }
         if (tmp4) {
           let tmp6 = null == maximumDate;
           if (!tmp6) {
             const time1 = getTime.getTime();
-            tmp6 = time1 <= obj.getTime();
+            tmp6 = time1 <= maximumDate.getTime();
           }
           tmp4 = tmp6;
-          obj = maximumDate;
         }
         _undefined(tmp4);
       }
@@ -322,7 +326,7 @@ export default function DatePickerActionSheet(mode) {
     }
   }
   const obj2 = { show: tmp12, errorText: null };
-  const intl3 = tmp29(1114).intl;
+  const intl3 = maximumDate(1114).intl;
   const obj1 = { minDate: obj4.format(str3) };
   if ("date" === str) {
     str2 = "L";

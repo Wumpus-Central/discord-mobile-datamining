@@ -1,12 +1,12 @@
 // discord_app/intl/index.native.tsx
 import _mod17 from "../../_runtime/metro/00017__.js";
+import NativeDeviceLocaleModule from "../../discord_common/js/packages/rtn-codegen/js/NativeDeviceLocaleModule.tsx";
 import intl_util from "util.tsx";
 import native from "../design/void/native.tsx";
 import migration from "native/migration.tsx";
 import _modDef14188 from "messages/international.messages.js";
 import noop from "../../_runtime/metro/00019__.js";
 
-const NativeDeviceLocaleModule = tmp(1117);
 require = fn;
 const Fonts = fn(1074).Fonts;
 const jsx = fn(21).jsx;
@@ -44,28 +44,28 @@ const util = fn(1118);
 const normalizedLocale = util.getNormalizedLocale(str, "en-US");
 const module_1155 = fn(1155);
 obj = {
-  $i(children, arg1) {
+  $i(children, key) {
     obj = { style: obj.italic, children };
-    return jsx(native.LegacyText, { style: obj.italic, children }, arg1);
+    return jsx(native.LegacyText, { style: obj.italic, children }, key);
   },
-  $b(children, arg1) {
+  $b(children, key) {
     obj = { style: obj.strong, children };
-    return jsx(native.LegacyText, { style: obj.strong, children }, arg1);
+    return jsx(native.LegacyText, { style: obj.strong, children }, key);
   },
-  $del(children, arg1) {
+  $del(children, key) {
     obj = { style: obj.del, children };
-    return jsx(native.LegacyText, { style: obj.del, children }, arg1);
+    return jsx(native.LegacyText, { style: obj.del, children }, key);
   },
-  $p(children, arg1) {
-    return jsx(native.LegacyText, { children }, arg1);
+  $p(children, key) {
+    return jsx(native.LegacyText, { children }, key);
   },
-  $code(children, arg1) {
+  $code(children, key) {
     obj = { style: obj.code, children };
-    return jsx(native.LegacyText, { style: obj.code, children }, arg1);
+    return jsx(native.LegacyText, { style: obj.code, children }, key);
   },
-  $link(children, arg1, arg2) {
+  $link(children, key, arg2) {
     [tmp] = arg2;
-    return jsx(migration.IntlLink, { target: tmp, children }, arg1);
+    return jsx(migration.IntlLink, { target: tmp, children }, key);
   },
 };
 const reactFormatter = module_1155.makeReactFormatter(obj);

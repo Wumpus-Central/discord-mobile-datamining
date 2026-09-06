@@ -143,7 +143,7 @@ function SearchHistoryDMRow(searchContext) {
   _require = asyncGeneratorStep(async (searchContext) => {
     c3 = 0;
     c4 = 0;
-    return (async (arg0, value) => {
+    return (async (arg0) => {
       if (c4 === 2) {
         c4 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -379,22 +379,22 @@ export default noop.memo((searchHistoryItem) => {
     const merged1 = Object.assign(merged);
     obj.searchHistoryItem = searchHistoryItem;
     return closure_1_10(SearchHistoryGroupDMRow, obj);
-  } else if (tmp2.DM === type) {
+  } else if (SearchHistoryItemTypes.DM === type) {
     obj = {};
     const merged2 = Object.assign(merged);
     obj.searchHistoryItem = searchHistoryItem;
     return closure_1_10(SearchHistoryDMRow, obj);
-  } else if (tmp2.TEXT === type) {
+  } else if (SearchHistoryItemTypes.TEXT === type) {
     const obj1 = {};
     const merged3 = Object.assign(merged);
     obj1.searchHistoryItem = searchHistoryItem;
     return closure_1_10(SearchHistoryTextRow, obj1);
-  } else if (tmp2.GUILD_TEXT_CHANNEL === type) {
+  } else if (SearchHistoryItemTypes.GUILD_TEXT_CHANNEL === type) {
     const obj2 = {};
     const merged4 = Object.assign(merged);
     obj2.searchHistoryItem = searchHistoryItem;
     return closure_1_10(SearchHistoryGuildTextChannelRow, obj2);
-  } else if (tmp2.GUILD_VOICE_CHANNEL === type) {
+  } else if (SearchHistoryItemTypes.GUILD_VOICE_CHANNEL === type) {
     obj = {};
     const merged5 = Object.assign(merged);
     obj.searchHistoryItem = searchHistoryItem;

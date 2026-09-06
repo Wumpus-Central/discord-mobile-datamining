@@ -29,7 +29,7 @@ export default {
       ({ impressionName, impressionProperties, backdropKind, disableHapticOnOpen, appEntryKey } = obj);
       obj = {};
       const merged = Object.assign(_objectWithoutProperties(obj, closure_3));
-      const content = jsx(result, {});
+      const content = <result />;
       const stackingBehavior = impressionName;
       DispatcherDefault.wait(() => {
         if (!disableHapticOnOpen) {
@@ -49,6 +49,7 @@ export default {
           appEntryKey,
         };
         key(impressionName[4]).dispatch(obj);
+        const obj3 = key(impressionName[4]);
       });
     });
   },
@@ -103,5 +104,6 @@ export const showActionSheet = function showActionSheet(arg0) {
       appEntryKey,
     };
     key(impressionName[4]).dispatch(obj);
+    const obj3 = key(impressionName[4]);
   });
 };

@@ -1,5 +1,8 @@
 // discord_app/modules/errors/av_errors/definitions/AVErrorScreenshareOSError.tsx
+import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
+import StreamKeyUtils from "../../../go_live/utils/StreamKeyUtils.tsx";
 import AVError from "../AVError.tsx";
+import AVErrorContext from "../AVErrorContext.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
 let closure_2 = BigInt(-3821);
@@ -17,12 +20,12 @@ export const AVErrorScreenshareOSErrorDefinition = {
           let combined = "" + str + " - your Mac may be low on disk space";
         }
         obj.errorMessage = combined;
-        tmp(17834);
-        const tmpResult = tmp(4612);
+        const tmpResult = StreamKeyUtils;
         const merged = Object.assign(tmpResult.getStreamErrorContext(tmpResult.encodeStreamKey(errorCode)));
         return obj;
       }
       combined = str.toString();
+      obj2 = PlatformUtils;
     });
   },
   makeErrorContextKey(streamKey) {

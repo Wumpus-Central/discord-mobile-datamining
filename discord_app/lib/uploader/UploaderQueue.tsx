@@ -26,7 +26,7 @@ prototype["enqueue"] = function enqueue(_default) {
 };
 prototype["drainQueue"] = function drainQueue() {
   const self = this;
-  return self(function* (arg0, value) {
+  return self(function* () {
     if (c5 === 2) {
       c5 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -74,6 +74,7 @@ prototype["drainQueue"] = function drainQueue() {
                 }
                 _aborted.addListener("complete", () => closure_0());
                 _aborted.addListener("error", () => closure_0());
+                tmp = _aborted._aborted || _aborted._errored;
               });
               c4 = 2;
               c5 = 1;

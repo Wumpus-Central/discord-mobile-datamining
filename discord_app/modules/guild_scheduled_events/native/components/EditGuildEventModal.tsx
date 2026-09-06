@@ -33,7 +33,7 @@ export default noop.memo((guild) => {
   let guildEvent;
   let first1;
   noop = undefined;
-  closure_7 = async function _handleSave(arg0, value) {
+  closure_7 = async function _handleSave() {
     if (c2 === 2) {
       c2 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -110,10 +110,14 @@ export default noop.memo((guild) => {
       if (first1) {
         let id;
         if (initialGuildEvent != null) {
-          id = tmp3.id;
+          id = initialGuildEvent.id;
         }
         if (null != id) {
-          let saveEventResult = GuildScheduledEventsActionCreatorsDefault.saveEvent(tmp3.id, first, PREVIEW.id);
+          let saveEventResult = GuildScheduledEventsActionCreatorsDefault.saveEvent(
+            initialGuildEvent.id,
+            first,
+            PREVIEW.id,
+          );
         }
         return saveEventResult;
       }
@@ -212,10 +216,14 @@ export default noop.memo((guild) => {
       if (first1) {
         let id;
         if (initialGuildEvent != null) {
-          id = tmp3.id;
+          id = initialGuildEvent.id;
         }
         if (null != id) {
-          let saveEventResult = GuildScheduledEventsActionCreatorsDefault.saveEvent(tmp3.id, first, PREVIEW.id);
+          let saveEventResult = GuildScheduledEventsActionCreatorsDefault.saveEvent(
+            initialGuildEvent.id,
+            first,
+            PREVIEW.id,
+          );
         }
         return saveEventResult;
       }

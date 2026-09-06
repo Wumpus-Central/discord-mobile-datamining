@@ -6,6 +6,8 @@ import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import ModalActionCreatorsDefault from "../../../../actions/ModalActionCreators.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
 import common_SafeAreaView from "../../../../components_native/common/SafeAreaView.tsx";
+import _modDef11454 from "../../../../../_runtime/metro/11454__.js";
+import _modDef11455 from "../../../../../_runtime/metro/11455__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -39,13 +41,13 @@ export default function GiftCodeRedeemError(children) {
   obj = { bottom: true, style: tmp.container, children: null };
   obj = { contentContainerStyle: tmp.body, alwaysBounceVertical: false, children: null };
   if (theme.dark) {
-    let tmp9Result = tmp9(11454);
+    let tmp9Result = _modDef11454;
   } else {
-    tmp9Result = tmp9(11455);
+    tmp9Result = _modDef11455;
   }
   const items = [timestampProducer(React3, { source: tmp9Result }), ,];
   const obj1 = { variant: "heading-xl/bold", style: tmp.header, children: null };
-  const intl = tmp2(1114).intl;
+  const intl = util.intl;
   obj1.children = intl.formatToMarkdownString(util.t.JUvC0s, {});
   items[1] = timestampProducer(Text_Text.Text, obj1);
   items[2] = timestampProducer(Text_Text.Text, {
@@ -57,7 +59,7 @@ export default function GiftCodeRedeemError(children) {
   const items1 = [React5(hasOwnProperty, obj)];
   const obj3 = { style: tmp.footer, children: null };
   const obj4 = { text: null, size: "md", onPress: null };
-  const intl2 = tmp2(1114).intl;
+  const intl2 = util.intl;
   obj4.text = intl2.string(util.t.cpT0Cq);
   obj4.onPress = function onPress() {
     return ModalActionCreatorsDefault.pop();

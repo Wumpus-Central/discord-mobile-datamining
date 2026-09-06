@@ -1,4 +1,5 @@
 // discord_app/modules/video_calls/native/components/ChannelCallMicButton.tsx
+import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import useMuteStatesDefault from "../../useMuteStates.tsx";
 import CallBarActionAll from "CallBarAction.tsx";
 import VoicePanelRiveMicButton from "../../../voice_panel/native/controls/buttons/VoicePanelRiveMicButton.tsx";
@@ -50,7 +51,7 @@ export const ChannelCallMicButton = function ChannelCallMicButton(disableTint) {
   obj.lottieComponent = memo;
   let RED_400;
   if (mute) {
-    RED_400 = tmp(576).unsafe_rawColors.RED_400;
+    RED_400 = nativeDefault.unsafe_rawColors.RED_400;
   }
   obj.tintColor = RED_400;
   return jsx(CallBarActionAll.ToggledActionButton, {

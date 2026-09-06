@@ -82,12 +82,12 @@ export const goToStandaloneNitroManagementFromMobileApp = function goToStandalon
   const obj = require("BillingStandaloneUtils");
   const tmp = _require;
   if (obj2.isMetaQuest()) {
-    let result = obj3.BILLING_MANAGE_SUBSCRIPTION_WITH_FLOW_TYPE(
+    let result = Routes.BILLING_MANAGE_SUBSCRIPTION_WITH_FLOW_TYPE(
       CustomCheckoutFlow.META_QUEST_WEB_REDIRECT_CHECKOUT,
       loadId,
     );
   } else {
-    result = obj3.BILLING_MANAGE_SUBSCRIPTION_WITH_DEEP_LINK(
+    result = Routes.BILLING_MANAGE_SUBSCRIPTION_WITH_DEEP_LINK(
       tmp(1093).LinkingTypes.MOBILE_WEB_REDIRECT_CHECKOUT,
       loadId,
     );
@@ -108,13 +108,13 @@ export const goToStandaloneNitroManagementFromMobileApp = function goToStandalon
   );
 };
 export const goToStandaloneGuildBoostCheckoutFromMobileApp = function goToStandaloneGuildBoostCheckoutFromMobileApp(
-  arg0,
-  arg1,
+  args,
+  guild_id,
   newAnalyticsLoadId,
   arg3,
   arg4,
 ) {
-  _require = arg0;
+  _require = args;
   closure_1 = newAnalyticsLoadId;
   dependencyMap = arg3;
   CustomCheckoutFlow = arg4;
@@ -129,7 +129,7 @@ export const goToStandaloneGuildBoostCheckoutFromMobileApp = function goToStanda
   }
   tmpResult = tmp(7407);
   return tmpResult.goToBillingStandalonePageWithHandoff(
-    Routes.BILLING_STANDALONE_GUILD_BOOST_CHECKOUT_PAGE(arg1, prop, newAnalyticsLoadId, prop1),
+    Routes.BILLING_STANDALONE_GUILD_BOOST_CHECKOUT_PAGE(guild_id, prop, newAnalyticsLoadId, prop1),
     (body, searchParams) => {
       searchParams = searchParams.searchParams;
       searchParams.append("handoff_token", body.body.handoff_token);

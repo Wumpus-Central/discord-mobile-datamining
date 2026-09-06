@@ -3,7 +3,7 @@ import LoggerDefault from "../modules/debug/Logger.tsx";
 import NativeFileModuleDefault from "../../discord_common/js/packages/rtn-codegen/js/NativeFileModule.tsx";
 import asyncGeneratorStep from "../../_runtime/00005_asyncGeneratorStep.js";
 
-let closure_4 = async function _readFile(arg0, value) {
+let closure_4 = async function _readFile(arg0) {
   if (c8 === 2) {
     c8 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -30,18 +30,18 @@ let closure_4 = async function _readFile(arg0, value) {
         } else {
           closure_4 = tmp3;
           closure_3 = tmp5;
-          closure_131_0 = closure_1;
+          closure_131_0 = dependencyMap;
           closure_131_1 = closure_2;
           closure_131_2 = undefined;
           const tmp36 = (function getBaseDirectory(arg0) {
-            if (null == closure_1_0(closure_1_1[2])) {
+            if (null == closure_1_0(dependencyMap[2])) {
               return null;
             } else {
               if ("cache" === arg0) {
-                let tmpResult = tmp(tmp2[2]);
+                let tmpResult = closure_1_0(dependencyMap[2]);
                 let DocumentsDirPath = tmpResult.getConstants().CacheDirPath;
               } else {
-                tmpResult = tmp(tmp2[2]);
+                tmpResult = closure_1_0(dependencyMap[2]);
                 DocumentsDirPath = tmpResult.getConstants().DocumentsDirPath;
               }
               return DocumentsDirPath;
@@ -54,10 +54,9 @@ let closure_4 = async function _readFile(arg0, value) {
           } else {
             c7 = 1;
             c8 = 1;
-            const obj1 = { value: NativeFileModuleDefault.fileExists(tmp36 + "/" + tmp34), done: false };
+            const obj1 = { value: NativeFileModuleDefault.fileExists(tmp36 + "/" + dependencyMap), done: false };
             return obj1;
           }
-          tmp34 = closure_1;
         }
       } else if (1 === tmp8) {
         if (arg0 === 1) {
@@ -113,12 +112,12 @@ let closure_3 = new LoggerDefault("FileManagerUtils");
 const size = fn(2);
 const result = size.fileFinishedImporting("utils/FileManagerUtils.android.tsx");
 
-export const writeFile = function writeFile(cache, arg1, arg2, utf8) {
+export const writeFile = function writeFile(cache, filePathForGif, arg2, utf8) {
   const obj = NativeFileModuleDefault;
   let nextPromise;
   if (obj != null) {
-    nextPromise = obj.writeFile(cache, arg1, arg2, utf8).then((result) => "file:" + result);
-    const writeFileResult = obj.writeFile(cache, arg1, arg2, utf8);
+    nextPromise = obj.writeFile(cache, filePathForGif, arg2, utf8).then((result) => "file:" + result);
+    const writeFileResult = obj.writeFile(cache, filePathForGif, arg2, utf8);
   }
   if (nextPromise == null) {
     nextPromise = Promise.reject("RTNFileManager doesn't exist?");
@@ -147,11 +146,11 @@ export const removeFile = function removeFile(cache, filePathForGif) {
   }
   return removeFileResult;
 };
-export const clearFolder = function clearFolder(cache, arg1) {
+export const clearFolder = function clearFolder(cache, POLL_ATTACHMENT_FOLDER) {
   const obj = NativeFileModuleDefault;
   let clearFolderResult;
   if (obj != null) {
-    clearFolderResult = obj.clearFolder(cache, arg1);
+    clearFolderResult = obj.clearFolder(cache, POLL_ATTACHMENT_FOLDER);
   }
   if (clearFolderResult == null) {
     clearFolderResult = Promise.reject(false);

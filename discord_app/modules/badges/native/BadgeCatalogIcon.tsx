@@ -35,8 +35,8 @@ export default function BadgeCatalogIcon(style) {
         if (null == obj.getCachedSvgXml(tmp)) {
           const _AbortController = AbortController;
           abortController = new AbortController();
-          const svgXml = tmp3(tmp4[4]).loadSvgXml(tmp, abortController.signal);
-          const tmp3Result = tmp3(tmp4[4]);
+          const svgXml = complex_icon_animated_url(_undefined[4]).loadSvgXml(tmp, abortController.signal);
+          const tmp3Result = complex_icon_animated_url(_undefined[4]);
           svgXml
             .then((xml) => {
               if (!abortController.signal.aborted) {
@@ -48,8 +48,6 @@ export default function BadgeCatalogIcon(style) {
           return () => abortController.abort();
         }
         obj = complex_icon_animated_url(_undefined[4]);
-        tmp3 = complex_icon_animated_url;
-        tmp4 = _undefined;
       }
     }
   }, items);
@@ -75,7 +73,7 @@ export default function BadgeCatalogIcon(style) {
       size = { xml, width: null, height: null };
       size.width = size;
       size.height = size;
-      tmp15Result = tmp15(complex_icon_animated_url(8453).SvgXml, size);
+      tmp15Result = jsx(complex_icon_animated_url(8453).SvgXml, { xml, width: null, height: null });
     }
     obj.children = tmp15Result;
     return (
@@ -95,9 +93,9 @@ export default function BadgeCatalogIcon(style) {
       const size1 = { width: size, height: size };
       obj2.style = size1;
       obj2.onError = tmp7;
-      obj.children = tmp8(isMatch(5587), obj2);
+      obj.children = jsx(isMatch(5587), { source: null, style: null, onError: null });
     }
     return <View {...obj} />;
   }
-  let tmp3 = _slicedToArray(noop.useState(null), 2);
+  const tmp3 = _slicedToArray(noop.useState(null), 2);
 }

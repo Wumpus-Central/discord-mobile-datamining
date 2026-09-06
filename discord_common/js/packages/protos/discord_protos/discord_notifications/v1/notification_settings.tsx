@@ -1189,7 +1189,7 @@ const items6 = [
   },
   { no: 4, name: "collapsed", kind: "scalar", T: 8 },
 ];
-let tmp12 = new "internalBinaryRead"(
+const tmp12 = new "internalBinaryRead"(
   "discord_protos.discord_notifications.v1.ChannelNotificationSettings",
   items6,
   tmp4,

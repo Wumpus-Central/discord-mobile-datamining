@@ -55,10 +55,11 @@ export default {
     }
     obj.settings = obj;
     obj.dispatch({ type: "SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE", changes: { text: obj } });
+    const obj1 = { type: "SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE", changes: { text: obj } };
   },
   setShouldSyncAppearanceSettings(is_sync_enabled) {
     closure_0 = is_sync_enabled;
-    return (async (arg0, value) => {
+    return (async () => {
       if (c3 === 2) {
         c3 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -95,13 +96,13 @@ export default {
                     if (constants.DARK === theme) {
                       let DARK = closure_1_0(1187).Theme.DARK;
                       let tmp4 = closure_1_0;
-                    } else if (tmp.LIGHT === theme) {
+                    } else if (constants.LIGHT === theme) {
                       DARK = closure_1_0(1187).Theme.LIGHT;
                       tmp4 = closure_1_0;
-                    } else if (tmp.DARKER === theme) {
+                    } else if (constants.DARKER === theme) {
                       DARK = closure_1_0(1187).Theme.DARKER;
                       tmp4 = closure_1_0;
-                    } else if (tmp.MIDNIGHT === theme) {
+                    } else if (constants.MIDNIGHT === theme) {
                       DARK = closure_1_0(1187).Theme.MIDNIGHT;
                       tmp4 = closure_1_0;
                     } else {
@@ -233,11 +234,11 @@ export default {
         async (arg0) => {
           if (ThemeTypes.DARK === closure_0) {
             let DARK = preloaded_user_settings.Theme.DARK;
-          } else if (tmp2.LIGHT === tmp) {
+          } else if (ThemeTypes.LIGHT === closure_0) {
             DARK = preloaded_user_settings.Theme.LIGHT;
-          } else if (tmp2.DARKER === tmp) {
+          } else if (ThemeTypes.DARKER === closure_0) {
             DARK = preloaded_user_settings.Theme.DARKER;
-          } else if (tmp2.MIDNIGHT === tmp) {
+          } else if (ThemeTypes.MIDNIGHT === closure_0) {
             DARK = preloaded_user_settings.Theme.MIDNIGHT;
           } else {
             DARK = preloaded_user_settings.Theme.DARK;
@@ -247,6 +248,7 @@ export default {
         require("UserSettingsProtoActionCreators").UserSettingsDelay.INFREQUENT_USER_ACTION,
       );
     }
+    const obj1 = { settings: { theme } };
   },
 };
 export const saveGuildFolders = function saveGuildFolders(compatibleGuildFolders) {
@@ -257,18 +259,18 @@ export const saveGuildFolders = function saveGuildFolders(compatibleGuildFolders
     "guildFolders",
     async (arg0) => {
       arg0.folders = compatibleGuildFolders.map((guildIds) => {
-        const GuildFolder = compatibleGuildFolders(closure_1_2[7]).GuildFolder;
+        const GuildFolder = compatibleGuildFolders(dependencyMap[7]).GuildFolder;
         let obj = { guildIds: guildIds.guildIds };
         obj = GuildFolder.create(obj);
         if (null != guildIds.folderId) {
-          const Int64Value = tmp(tmp2[8]).Int64Value;
+          const Int64Value = compatibleGuildFolders(dependencyMap[8]).Int64Value;
           obj = { value: null };
           const _String = String;
           obj.value = String(guildIds.folderId);
           obj.id = Int64Value.create(obj);
         }
         if (null != guildIds.folderColor) {
-          const UInt64Value = tmp(tmp2[8]).UInt64Value;
+          const UInt64Value = compatibleGuildFolders(dependencyMap[8]).UInt64Value;
           const obj1 = { value: null };
           const _String2 = String;
           obj1.value = String(guildIds.folderColor);
@@ -279,7 +281,7 @@ export const saveGuildFolders = function saveGuildFolders(compatibleGuildFolders
           tmp6 = "" !== guildIds.folderName;
         }
         if (tmp6) {
-          const StringValue = tmp(tmp2[8]).StringValue;
+          const StringValue = compatibleGuildFolders(dependencyMap[8]).StringValue;
           const obj2 = { value: null };
           const _String3 = String;
           obj2.value = String(guildIds.folderName);
@@ -291,7 +293,7 @@ export const saveGuildFolders = function saveGuildFolders(compatibleGuildFolders
     require("UserSettingsProtoActionCreators").UserSettingsDelay.FREQUENT_USER_ACTION,
   );
 };
-export const saveClientTheme = function saveClientTheme(backgroundGradientPresetId, INFREQUENT_USER_ACTION) {
+export const saveClientTheme = function saveClientTheme(backgroundGradientPresetId) {
   backgroundGradientPresetId = backgroundGradientPresetId.backgroundGradientPresetId;
   const customUserThemeSettings = backgroundGradientPresetId.customUserThemeSettings;
   const theme = backgroundGradientPresetId.theme;
@@ -308,7 +310,7 @@ export const saveClientTheme = function saveClientTheme(backgroundGradientPreset
   obj = { type: "SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE", changes: null, theme: tmp6 };
   obj.changes = { appearance: { settings: obj } };
   obj.dispatch(obj);
-  let tmp9 = tmp5 ? tmp8.ON : tmp8.OFF;
+  let tmp9 = tmp5 ? constants.ON : constants.OFF;
   if (null != useSystemTheme) {
     tmp9 = useSystemTheme;
   }
@@ -328,13 +330,13 @@ export const saveClientTheme = function saveClientTheme(backgroundGradientPreset
         if (ThemeTypes.DARK === theme) {
           let DARK = preloaded_user_settings.Theme.DARK;
           let tmp3 = require;
-        } else if (tmp2.LIGHT === tmp) {
+        } else if (ThemeTypes.LIGHT === theme) {
           DARK = preloaded_user_settings.Theme.LIGHT;
           tmp3 = require;
-        } else if (tmp2.DARKER === tmp) {
+        } else if (ThemeTypes.DARKER === theme) {
           DARK = preloaded_user_settings.Theme.DARKER;
           tmp3 = require;
-        } else if (tmp2.MIDNIGHT === tmp) {
+        } else if (ThemeTypes.MIDNIGHT === theme) {
           DARK = preloaded_user_settings.Theme.MIDNIGHT;
           tmp3 = require;
         } else {
@@ -356,7 +358,7 @@ export const saveClientTheme = function saveClientTheme(backgroundGradientPreset
             gradientColorStops: obj3.gradientColorStops,
             gradientAngle: obj3.gradientAngle,
             baseMix: obj3.baseMix,
-          } = tmp14);
+          } = customUserThemeSettings);
           tmp16 = { colors: null, gradientColorStops: null, gradientAngle: null, baseMix: null };
           const obj1 = { colors: null, gradientColorStops: null, gradientAngle: null, baseMix: null };
         }

@@ -4,10 +4,10 @@ import size from "../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/activities/utils/getPlatform.tsx");
 
-export default function getPlatform(arg0) {
-  if ("android" === arg0) {
+export default function getPlatform(oS) {
+  if ("android" === oS) {
     return Server.EmbeddedActivitySupportedPlatforms.ANDROID;
-  } else if ("ios" === arg0) {
+  } else if ("ios" === oS) {
     return Server.EmbeddedActivitySupportedPlatforms.IOS;
   } else {
     return Server.EmbeddedActivitySupportedPlatforms.WEB;

@@ -8,9 +8,9 @@ const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/zoom_layout/ZoomLayout.android.tsx");
 
-export default noop.forwardRef((arg0, ref) => {
-  ref = noop.useRef(null);
-  const imperativeHandle = noop.useImperativeHandle(ref, () => ({
+export default noop.forwardRef((arg0, arg1) => {
+  const ref = noop.useRef(null);
+  const imperativeHandle = noop.useImperativeHandle(arg1, () => ({
     zoomTo(scale) {
       let num = scale.scale;
       ({ x, y } = scale);

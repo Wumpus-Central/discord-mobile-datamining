@@ -141,10 +141,10 @@ export const loadSvgXml = function loadSvgXml(abortController, signal) {
               const result = 10 * DurationsDefault.Millis.SECOND;
               tmp3 = new tmp3(result, DurationsDefault.Millis.HOUR, true);
             }
-            const result1 = map1.set(tmp13, tmp3);
+            const result1 = map1.set(closure_0, tmp3);
             const _Date = Date;
             const timestamp = Date.now();
-            const result2 = map2.set(tmp13, timestamp + tmp3.fail());
+            const result2 = map2.set(closure_0, timestamp + tmp3.fail());
             throw error;
           }
         });

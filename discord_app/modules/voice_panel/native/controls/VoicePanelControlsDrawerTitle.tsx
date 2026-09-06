@@ -1,12 +1,12 @@
 // discord_app/modules/voice_panel/native/controls/VoicePanelControlsDrawerTitle.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import ReanimatedRexport from "../../../reanimated/ReanimatedRexport.tsx";
+import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import NativeViewDefault from "../../../core/native/NativeView.tsx";
+import ReanimatedNativeViewDefault from "../../../core/native/ReanimatedNativeView.tsx";
 import VoicePanelHeaderGlassBlurDefault from "../shared/VoicePanelHeaderGlassBlur.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-const Text_Text = tmp2(4556);
-const ReanimatedNativeViewDefault = tmp7(7073);
 require = fn;
 const StyleSheet = fn(17).StyleSheet;
 const jsxProd = fn(21);
@@ -68,7 +68,6 @@ export default noop.memo(function VoicePanelControlsDrawerTitle(children) {
   obj = { style: null, children: null };
   const items = [tmp.titleWrapper, style];
   obj.style = items;
-  const tmp6 = hasOwnProperty;
   const tmp8 = NativeViewDefault;
   if (shown == null) {
     shown = sharedValue;
@@ -86,5 +85,5 @@ export default noop.memo(function VoicePanelControlsDrawerTitle(children) {
   });
   items1[1] = React4(ReanimatedNativeViewDefault, obj1);
   obj.children = items1;
-  return tmp6(tmp8, obj);
+  return hasOwnProperty(tmp8, obj);
 });

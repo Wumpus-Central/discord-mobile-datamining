@@ -1,5 +1,9 @@
 // discord_app/modules/auth/native/components/RegisterUsernameInput.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import util from "../../../../intl/index.native.tsx";
+import Text_Text from "../../../../design/components/Text/native/Text.tsx";
+import Stack_Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
+import CircleErrorIcon from "../../../../design/components/Icon/native/redesign/generated/CircleErrorIcon.tsx";
 import UniqueUsernamesTypes from "../../../unique_usernames/UniqueUsernamesTypes.tsx";
 import useFocusRefOnNavigationDefault from "../../../../design/components/Navigator/native/useFocusRefOnNavigation.tsx";
 import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
@@ -17,22 +21,22 @@ function UsernameStatusMessage(arg0) {
   if (type === UniqueUsernamesTypes.NameValidationState.ERROR) {
     let obj = { direction: "horizontal", spacing: 4, align: "flex-start", children: null };
     obj = { size: "xs", color: nativeDefault.colors.TEXT_FEEDBACK_CRITICAL };
-    const items = [React7(tmp3(6610).CircleErrorIcon, obj)];
+    const items = [React7(CircleErrorIcon.CircleErrorIcon, obj)];
     const obj1 = { variant: "text-xs/medium", color: "text-feedback-critical", style: tmp.status };
     const merged = Object.assign(createStyles);
     const merged1 = Object.assign(createStyles);
     obj1.animated = true;
     obj1.children = usernameStatus.message;
-    items[1] = React7(tmp3(4556).Text, obj1);
+    items[1] = React7(Text_Text.Text, obj1);
     obj.children = items;
-    let tmp6 = closure_1_10(tmp3(4973).Stack, obj);
+    let tmp6 = closure_1_10(Stack_Stack.Stack, obj);
   } else {
     if (isUsernameFocused) {
       let type1;
       if (usernameStatus != null) {
         type1 = usernameStatus.type;
       }
-      if (type1 === tmp3(14706).NameValidationState.AVAILABLE) {
+      if (type1 === UniqueUsernamesTypes.NameValidationState.AVAILABLE) {
         const obj2 = {};
         const merged2 = Object.assign(createStyles);
         const merged3 = Object.assign(createStyles);
@@ -40,8 +44,8 @@ function UsernameStatusMessage(arg0) {
         obj2.variant = "text-xs/medium";
         obj2.animated = true;
         const obj3 = { variant: "text-xs/medium", color: "text-feedback-positive", children: usernameStatus.message };
-        obj2.children = React7(tmp3(4556).Text, obj3);
-        tmp6 = React7(tmp3(4556).Text, obj2);
+        obj2.children = React7(Text_Text.Text, obj3);
+        tmp6 = React7(Text_Text.Text, obj2);
       }
     }
     tmp6 = null;
@@ -53,9 +57,9 @@ function UsernameStatusMessage(arg0) {
       obj.variant = "text-xs/medium";
       obj.color = "text-muted";
       obj.animated = true;
-      const intl = tmp3(1114).intl;
-      obj.children = intl.string(tmp3(1114).t.y7LSyU);
-      tmp6 = React7(tmp3(4556).Text, obj);
+      const intl = util.intl;
+      obj.children = intl.string(util.t.y7LSyU);
+      tmp6 = React7(Text_Text.Text, obj);
     }
   }
   return tmp6;
@@ -100,8 +104,8 @@ export const RegisterUsernameInput = function RegisterUsernameInput(setUsername)
   const items1 = [tmp5[1]];
   const callback = obj.useCallback((str) => {
     if (null != user.username) {
-      const username = tmp.username;
-      React5(_objectWithoutProperties(tmp, closure_3));
+      const username = user.username;
+      React5(_objectWithoutProperties(user, closure_3));
     }
     setUsername(str.toLowerCase());
   }, items);
@@ -137,8 +141,6 @@ export const RegisterUsernameInput = function RegisterUsernameInput(setUsername)
   const intl2 = setUsername(1114).intl;
   obj.accessibilityHint = intl2.string(setUsername(1114).t["47dcUZ"]);
   obj.onChange = callback;
-  const tmp11 = closure_10;
-  const tmp12 = closure_11;
   const tmp14 = setUsername;
   obj.secureTextEntry = setUsername(1115).isAndroid();
   const obj4 = setUsername(1115);
@@ -167,5 +169,5 @@ export const RegisterUsernameInput = function RegisterUsernameInput(setUsername)
     closure_9(UsernameStatusMessage, { usernameStatus, isUsernameFocused: tmp5[0] }),
   ];
   obj1.children = items3;
-  return tmp11(tmp12, obj1);
+  return closure_10(closure_11, obj1);
 };

@@ -163,7 +163,7 @@ const referralTrialStore = new ReferralTrialStore(DispatcherDefault, {
     c8 = false;
     const referrals_remaining = has_eligible_friends.referrals_remaining;
     ({ refresh_at, recipient_status, reminder_state_id } = has_eligible_friends);
-    set = new Set(has_eligible_friends.sent_user_ids);
+    new Set(has_eligible_friends.sent_user_ids);
     c19 = refresh_at;
     c20 = reminder_state_id;
     c12 = 0;

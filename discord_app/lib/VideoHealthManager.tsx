@@ -101,11 +101,11 @@ prototype["updateFps"] = function updateFps(arg0, arg1, arg2) {
               dispatchAutoDisableVideoDefault(arg0, VideoToggleState.DISABLED);
               const result = self.startReenableBackoffTimer(arg0);
             } else if (self.currentVideoAutoToggleState[arg0] === VideoToggleState.AUTO_PROBING) {
-              self.currentVideoAutoToggleState[arg0] = tmp7.AUTO_ENABLED;
+              self.currentVideoAutoToggleState[arg0] = VideoToggleState.AUTO_ENABLED;
               const logger2 = self.logger;
               const _HermesInternal2 = HermesInternal;
               logger2.info("acceptable conditions reached, will reset and send a AUTO_ENABLED for user " + arg0);
-              dispatchAutoDisableVideoDefault(arg0, tmp7.AUTO_ENABLED);
+              dispatchAutoDisableVideoDefault(arg0, VideoToggleState.AUTO_ENABLED);
             }
             if (self.probingUserId === arg0) {
               self.probingUserId = undefined;

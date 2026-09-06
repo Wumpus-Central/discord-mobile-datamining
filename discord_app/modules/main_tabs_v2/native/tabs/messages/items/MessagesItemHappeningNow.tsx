@@ -50,7 +50,7 @@ export default noop.memo(function MessagesItemHappeningNow(listRef) {
       }
       collapsable={false}
     >
-      {jsx(HappeningNowDefault, { cards: set, listRef: arg0.listRef })}
+      {jsx(HappeningNowDefault, { cards: set, listRef: listRef.listRef })}
     </View>
   );
   return jsx(CutoutBackgroundContext.CutoutBackgroundProvider, {

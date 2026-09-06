@@ -20,10 +20,10 @@ class SquareIconButton {
     memo = closure_2.useMemo(() => {
       if (obj.MEDIUM_32 === size) {
         return closure_1.medium;
-      } else if (tmp2.LARGE_40 === tmp) {
+      } else if (obj.LARGE_40 === tmp) {
         return closure_1.large;
       } else {
-        const SMALL_24 = tmp2.SMALL_24;
+        const SMALL_24 = obj.SMALL_24;
         return closure_1.small;
       }
     }, items);

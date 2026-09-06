@@ -8,11 +8,14 @@ import ApplicationCommandUtils from "../ApplicationCommandUtils.tsx";
 import ApplicationCommandTypes from "../ApplicationCommandTypes.tsx";
 import ApplicationCommandActionCreators from "../ApplicationCommandActionCreators.tsx";
 import UploadAttachmentActionCreatorsDefault from "../../../actions/UploadAttachmentActionCreators.tsx";
+import ApplicationCommandOptionUtils from "../ApplicationCommandOptionUtils.tsx";
 import ApplicationCommandQueryApiAll from "../ApplicationCommandQueryApi.tsx";
 import autocompleter_AutocompleteUtils from "../../autocompleter/native/AutocompleteUtils.tsx";
 import ChatInputCommandOptionParser from "../../chat_input/native/ChatInputCommandOptionParser.tsx";
 import ChatInputParser from "../../chat_input/native/ChatInputParser.tsx";
 import ApplicationCommandOptionValueParser from "../../chat_input/native/ApplicationCommandOptionValueParser.tsx";
+import DraftCommandUtils from "../DraftCommandUtils.tsx";
+import useCommandContext from "../../app_launcher/hooks/useCommandContext.tsx";
 import application_commands_ApplicationCommandValidationUtils from "ApplicationCommandValidationUtils.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import DraftStore from "../../../stores/DraftStore.tsx";
@@ -57,18 +60,18 @@ class ApplicationCommandManager {
           if (null != activeOption) {
             if (insertOrJumpCommandOption.type === constants2.GAME_MENTION) {
               return false;
-            } else if (insertOrJumpCommandOption.type === tmp4.TIMESTAMP_MENTION) {
+            } else if (insertOrJumpCommandOption.type === constants2.TIMESTAMP_MENTION) {
               return false;
             } else {
               type = insertOrJumpCommandOption.type;
-              if (tmp4.USER === type) {
+              if (constants2.USER === type) {
                 obj = { type: "userMention", userId: insertOrJumpCommandOption.user.id };
                 let tmp5 = obj;
                 insertOrJumpCommandOption = obj.insertOrJumpCommandOption;
                 obj = { displayText: addTimestampMentionResult, preferred: true, value: tmp5 };
                 const result = insertOrJumpCommandOption(activeOption, undefined, false, obj);
-              } else if (tmp4.ROLE !== type) {
-                if (tmp4.CHANNEL === type) {
+              } else if (constants2.ROLE !== type) {
+                if (constants2.CHANNEL === type) {
                   const obj1 = { type: "channelMention", channelId: insertOrJumpCommandOption.channel.id };
                   tmp5 = obj1;
                 }
@@ -179,7 +182,7 @@ class ApplicationCommandManager {
         let tmp8 = null;
         if (null != application) {
           obj = {
-            type: tmp2(7523).ApplicationCommandSectionType.APPLICATION,
+            type: ApplicationCommandTypes.ApplicationCommandSectionType.APPLICATION,
             id: null,
             icon: null,
             name: null,
@@ -200,10 +203,8 @@ class ApplicationCommandManager {
         if (interactionOptions == null) {
           interactionOptions = [];
         }
-        const initialValuesFromInteractionOptions = tmp2(9412).getInitialValuesFromInteractionOptions(
-          command,
-          interactionOptions,
-        );
+        const initialValuesFromInteractionOptions =
+          ApplicationCommandOptionUtils.getInitialValuesFromInteractionOptions(command, interactionOptions);
         const _Object = Object;
         const keys = Object.keys(initialValuesFromInteractionOptions);
         const mapped = keys.map((item) => {
@@ -241,7 +242,7 @@ class ApplicationCommandManager {
           channelId: channel.id,
           command,
           section: tmp8,
-          location: tmp2(7523).ApplicationCommandTriggerLocations.PASTE,
+          location: ApplicationCommandTypes.ApplicationCommandTriggerLocations.PASTE,
           commandText: null,
         };
         let _HermesInternal = HermesInternal;
@@ -253,10 +254,10 @@ class ApplicationCommandManager {
         }
         obj1.commandText = combined + str2;
         obj.setCommand(obj1);
-        const tmp2Result = tmp2(9412);
+        const tmp2Result = ApplicationCommandOptionUtils;
       } else {
         ({ id, name } = parsed);
-        obj.setPartialCommand(id, name, tmp2(7523).ApplicationCommandTriggerLocations.PASTE);
+        obj.setPartialCommand(id, name, ApplicationCommandTypes.ApplicationCommandTriggerLocations.PASTE);
       }
     };
     obj.updateApplicationCommandManagerState = function updateApplicationCommandManagerState(newState) {
@@ -356,8 +357,8 @@ class ApplicationCommandManager {
         }
       });
       if (obj.chatInputNodes.length > 0) {
-        const current = tmp.ref.current;
-        const result = current.updateNativeTextBlocksThrottled(tmp.chatInputNodes, tmp.props.editId);
+        const current = obj.ref.current;
+        const result = current.updateNativeTextBlocksThrottled(obj.chatInputNodes, obj.props.editId);
       }
     };
     obj.addCommandOptionParserRules = function addCommandOptionParserRules() {
@@ -365,8 +366,8 @@ class ApplicationCommandManager {
       obj = {
         ruleId: "commandOptionParserRuleId",
         type: ChatInputParser.ChatInputNodeType.COMMAND_OPTION,
-        matchFunction(arg0, arg1) {
-          return preferredCommand(11991).getMatchedOptions(arg0, arg1);
+        matchFunction(arg0, activeCommand) {
+          return preferredCommand(11991).getMatchedOptions(arg0, activeCommand);
         },
         style() {
           const styles = preferredCommand.styles;
@@ -380,8 +381,8 @@ class ApplicationCommandManager {
       obj = {
         ruleId: "commandOptionValueParserRuleId",
         type: ChatInputParser.ChatInputNodeType.COMMAND_OPTION_WITH_VALUE,
-        matchFunction(arg0, arg1) {
-          return preferredCommand(11991).getMatchedOptionsWithValue(arg0, arg1);
+        matchFunction(length2, activeCommand) {
+          return preferredCommand(11991).getMatchedOptionsWithValue(length2, activeCommand);
         },
         style() {
           const styles = preferredCommand.styles;
@@ -671,7 +672,7 @@ class ApplicationCommandManager {
             let flag = false;
             if (null != preferredCommand) {
               const _HermesInternal = HermesInternal;
-              if (text.startsWith("" + tmp2 + preferredCommand.displayName)) {
+              if (text.startsWith("" + closure_2_11 + preferredCommand.displayName)) {
                 flag = true;
                 if (preferredCommand.preferredCommandType === constants.FULL_COMMAND) {
                   obj = { command: preferredCommand, section: preferredCommandSection };
@@ -685,7 +686,7 @@ class ApplicationCommandManager {
             if (null == tmp.contextCommands) {
               return null;
             } else {
-              let tmp3Result = tmp3(12028);
+              let tmp3Result = useCommandContext;
               obj = { channel, type: "channel" };
               const commandContext = tmp3Result.getCommandContext(obj);
               let preferredCommandType;
@@ -700,7 +701,7 @@ class ApplicationCommandManager {
                   let obj1 = { channel, type: "channel" };
                   let cachedApplicationSection = obj4.getCachedApplicationSection(
                     obj1,
-                    tmp3(1894).ApplicationCommandType.CHAT,
+                    Server.ApplicationCommandType.CHAT,
                     found.applicationId,
                   );
                   let tmp20 = null;
@@ -708,7 +709,7 @@ class ApplicationCommandManager {
                     let obj2 = { command: null, section: null };
                     const obj3 = {};
                     let merged = Object.assign(found);
-                    obj3.preferredCommandType = tmp9.FULL_COMMAND;
+                    obj3.preferredCommandType = constants.FULL_COMMAND;
                     obj2.command = obj3;
                     obj2.section = cachedApplicationSection;
                     tmp20 = obj2;
@@ -716,7 +717,7 @@ class ApplicationCommandManager {
                   return tmp20;
                 }
               } else {
-                tmp3Result = tmp3(11994);
+                tmp3Result = DraftCommandUtils;
                 const draftCommand = tmp3Result.resolveDraftCommand(
                   channel,
                   text,
@@ -726,7 +727,7 @@ class ApplicationCommandManager {
                   obj4 = { command: null, section: null };
                   const obj5 = {};
                   const merged1 = Object.assign(draftCommand.command);
-                  obj5.preferredCommandType = tmp9.FULL_COMMAND;
+                  obj5.preferredCommandType = constants.FULL_COMMAND;
                   obj4.command = obj5;
                   obj4.section = draftCommand.section;
                   return obj4;
@@ -851,7 +852,6 @@ class ApplicationCommandManager {
         while (tmp23 !== undefined) {
           let tmp5 = _slicedToArray(tmp2, 2);
           [tmp6, tmp7] = tmp5;
-          let arr = tmp7;
           let data = tmp7.data;
           let type;
           if (data != null) {
@@ -871,11 +871,11 @@ class ApplicationCommandManager {
               let items = [tmp14];
               obj[tmp6] = items;
             } else {
-              let option = arr.data.option;
+              let option = tmp7.data.option;
               let optionValueParser = tmp25.optionValueParser;
               let items1 = [
                 optionValueParser.parse(
-                  text.substring(arr.location + option.displayName.length + 1, arr.location + arr.length),
+                  text.substring(tmp7.location + option.displayName.length + 1, tmp7.location + tmp7.length),
                   option,
                 ),
               ];
@@ -893,7 +893,6 @@ class ApplicationCommandManager {
           if (regex.test(text[displayName.length + 1])) {
             const _Set = Set;
             const optionValueNodes = obj.optionValueNodes;
-            const set = new Set(optionValueNodes.keys());
             c1 = true;
             const options = activeCommand.options;
             let found;
@@ -928,13 +927,7 @@ class ApplicationCommandManager {
       }
       return false;
     };
-    obj.insertOrJumpCommandOption = function insertOrJumpCommandOption(
-      found,
-      length,
-      arg2,
-      displayText,
-      activeCommand,
-    ) {
+    obj.insertOrJumpCommandOption = function insertOrJumpCommandOption(found, length, arg2) {
       let flag = arg2;
       if (arg2 === undefined) {
         flag = false;
@@ -948,7 +941,7 @@ class ApplicationCommandManager {
         if (optionValueNodes2 != null) {
           value = optionValueNodes2.get(found.name);
         }
-        displayText = undefined;
+        let displayText;
         if (displayText != null) {
           displayText = displayText.displayText;
         }
@@ -1396,7 +1389,7 @@ prototype["mergePropsAndUpdate"] = function mergePropsAndUpdate(editId) {
         if (type.type === ChatInputParser.ChatInputNodeType.COMMAND_OPTION) {
           if (null != type.data) {
             const option = type.data.option;
-            if (type.type === tmp(11992).ChatInputNodeType.COMMAND_OPTION_WITH_VALUE) {
+            if (type.type === ChatInputParser.ChatInputNodeType.COMMAND_OPTION_WITH_VALUE) {
               let name;
               if (currentOption != null) {
                 name = currentOption.name;
@@ -1419,7 +1412,7 @@ prototype["mergePropsAndUpdate"] = function mergePropsAndUpdate(editId) {
             if (option.name !== name1) {
               if (undefined !== tmp15) {
                 if (!tmp15.success) {
-                  const styles = tmp14.styles;
+                  const styles = self.styles;
                   obj.style = styles.commandErrorOption();
                 }
                 let success;
@@ -1427,7 +1420,7 @@ prototype["mergePropsAndUpdate"] = function mergePropsAndUpdate(editId) {
                   success = tmp15.success;
                 }
                 if (success) {
-                  success = option.type === tmp(1894).ApplicationCommandOptionType.ATTACHMENT;
+                  success = option.type === Server.ApplicationCommandOptionType.ATTACHMENT;
                 }
                 if (success) {
                   obj = { action: "tapAttachment", channelId: editId.channel.id, optionName: option.name };
@@ -1437,7 +1430,7 @@ prototype["mergePropsAndUpdate"] = function mergePropsAndUpdate(editId) {
                 return obj;
               }
             }
-            const styles2 = tmp14.styles;
+            const styles2 = self.styles;
             obj.style = styles2.commandOption();
           }
         }
@@ -1507,7 +1500,7 @@ prototype["mergePropsAndUpdate"] = function mergePropsAndUpdate(editId) {
       if (activeCommand != null) {
         preferredCommandType3 = activeCommand.preferredCommandType;
       }
-      canAutoInsertFirstOption = preferredCommandType3 === tmp117.FULL_COMMAND;
+      canAutoInsertFirstOption = preferredCommandType3 === constants3.FULL_COMMAND;
     }
     if (canAutoInsertFirstOption) {
       let tmp113Result = tmp113(12);
@@ -1547,7 +1540,7 @@ prototype["mergePropsAndUpdate"] = function mergePropsAndUpdate(editId) {
         if (activeCommand != null) {
           preferredCommandType4 = activeCommand.preferredCommandType;
         }
-        if (preferredCommandType4 === tmp117.FULL_COMMAND) {
+        if (preferredCommandType4 === constants3.FULL_COMMAND) {
           if (tmp99) {
             if (activeCommand != null) {
               const options2 = activeCommand.options;
@@ -1569,14 +1562,14 @@ prototype["mergePropsAndUpdate"] = function mergePropsAndUpdate(editId) {
                     tmp4 = arr.length > 0;
                   }
                   obj.hasValue = tmp4;
-                  const optionsToNodes = tmp.optionsToNodes;
+                  const optionsToNodes = self.optionsToNodes;
                   value = optionsToNodes.get(name);
                   let _location;
                   if (value != null) {
                     _location = value.location;
                   }
                   obj.location = _location;
-                  const optionsToNodes2 = tmp.optionsToNodes;
+                  const optionsToNodes2 = self.optionsToNodes;
                   value = optionsToNodes2.get(name);
                   let length;
                   if (value != null) {
@@ -1663,7 +1656,7 @@ prototype["mergePropsAndUpdate"] = function mergePropsAndUpdate(editId) {
             preferredCommandType5 = activeCommand4.preferredCommandType;
           }
           activeCommand = null;
-          if (preferredCommandType5 === tmp117.FULL_COMMAND) {
+          if (preferredCommandType5 === constants3.FULL_COMMAND) {
             activeCommand = self.activeCommand;
           }
           obj3.command = activeCommand;
@@ -1820,19 +1813,19 @@ prototype["mergePropsAndUpdate"] = function mergePropsAndUpdate(editId) {
         if (data != null) {
           type = data.type;
         }
-        if (type === tmp(11992).ChatInputParseResultDataType.COMMAND_OPTION) {
+        if (type === ChatInputParser.ChatInputParseResultDataType.COMMAND_OPTION) {
           const optionsToNodes = self.optionsToNodes;
           const result = optionsToNodes.set(type.data.option.name, type);
         }
       }
-      let tmp5 = type.type === tmp(11992).ChatInputNodeType.COMMAND_OPTION_WITH_VALUE;
+      let tmp5 = type.type === ChatInputParser.ChatInputNodeType.COMMAND_OPTION_WITH_VALUE;
       if (tmp5) {
         const data2 = type.data;
         let type1;
         if (data2 != null) {
           type1 = data2.type;
         }
-        tmp5 = type1 === tmp(11992).ChatInputParseResultDataType.COMMAND_OPTION;
+        tmp5 = type1 === ChatInputParser.ChatInputParseResultDataType.COMMAND_OPTION;
       }
       if (tmp5) {
         const optionValueNodes = self.optionValueNodes;
@@ -1913,6 +1906,7 @@ prototype["mergePropsAndUpdate"] = function mergePropsAndUpdate(editId) {
       self.preferredCommandSection,
     );
   }
+  tmp6 = selectionStart !== editId.selectionStart || selectionEnd !== editId.selectionEnd;
 };
 prototype["updateValidationResults"] = function updateValidationResults() {
   const self = this;

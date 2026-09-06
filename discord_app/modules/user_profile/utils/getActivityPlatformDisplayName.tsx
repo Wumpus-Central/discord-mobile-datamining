@@ -11,10 +11,10 @@ export default function getActivityPlatformDisplayName(type, arg1) {
   if (PlatformTypes.XBOX === type) {
     const intl3 = util.intl;
     return intl3.string(util.t.Nfvo72);
-  } else if (tmp.PLAYSTATION === type) {
+  } else if (PlatformTypes.PLAYSTATION === type) {
     const intl2 = util.intl;
     return intl2.string(util.t.fFl4jo);
-  } else if (tmp.META_QUEST_OR_HORIZON === type) {
+  } else if (PlatformTypes.META_QUEST_OR_HORIZON === type) {
     const intl = util.intl;
     const string = intl.string;
     const t = util.t;

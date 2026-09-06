@@ -46,7 +46,7 @@ const result = size.fileFinishedImporting("modules/collectibles/native/DebugLogV
 export default function DebugLogView() {
   const arr = closure_7((logs) => logs.logs);
   dependencyMap = closure_7((clearLogs) => clearLogs.clearLogs);
-  const tmp = closure_11();
+  let tmp = closure_11();
   noop = tmp;
   let obj = arr(504);
   const items = [DevSettingsStore];
@@ -56,6 +56,7 @@ export default function DebugLogView() {
     if (tmp) {
       React6("Debug log initialized");
     }
+    tmp = 0 === arr.length && stateFromStores;
   }, items1);
   if (stateFromStores) {
     if (0 !== arr.length) {

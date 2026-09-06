@@ -3,23 +3,23 @@ import util from "../../intl/index.native.tsx";
 import HelpdeskUtils from "../../utils/HelpdeskUtils.tsx";
 
 require = fn;
-function getFriendlyDurationString(arg0) {
-  if (obj.DURATION_60_SEC === arg0) {
+function getFriendlyDurationString(DisableCommunicationDuration) {
+  if (obj.DURATION_60_SEC === DisableCommunicationDuration) {
     const intl6 = util.intl;
     return intl6.formatToPlainString(util.t["4zv/jq"], { secs: 60 });
-  } else if (tmp.DURATION_5_MIN === arg0) {
+  } else if (obj.DURATION_5_MIN === DisableCommunicationDuration) {
     const intl5 = util.intl;
     return intl5.formatToPlainString(util.t.opVZ9q, { mins: 5 });
-  } else if (tmp.DURATION_10_MIN === arg0) {
+  } else if (obj.DURATION_10_MIN === DisableCommunicationDuration) {
     const intl4 = util.intl;
     return intl4.formatToPlainString(util.t.opVZ9q, { mins: 10 });
-  } else if (tmp.DURATION_1_HOUR === arg0) {
+  } else if (obj.DURATION_1_HOUR === DisableCommunicationDuration) {
     const intl3 = util.intl;
     return intl3.formatToPlainString(util.t.xCjYxK, { hours: 1 });
-  } else if (tmp.DURATION_1_DAY === arg0) {
+  } else if (obj.DURATION_1_DAY === DisableCommunicationDuration) {
     const intl2 = util.intl;
     return intl2.formatToPlainString(util.t["k2UNz+"], { days: 1 });
-  } else if (tmp.DURATION_1_WEEK === arg0) {
+  } else if (obj.DURATION_1_WEEK === DisableCommunicationDuration) {
     const intl = util.intl;
     return intl.formatToPlainString(util.t.EmoBD2, { weeks: 1 });
   }

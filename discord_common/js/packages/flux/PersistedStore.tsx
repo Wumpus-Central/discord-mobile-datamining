@@ -119,12 +119,12 @@ PersistedStore["clearAll"] = function clearAll(arg0) {
         { timeout: 500 },
       );
     });
-    tmp._clearAllPromise = promise;
+    PersistedStore._clearAllPromise = promise;
   }
   return PersistedStore._clearAllPromise;
 };
 PersistedStore["shouldClear"] = function shouldClear(c7, persistKey) {
-  const omit = c7.omit;
+  const omit = _null.omit;
   let hasItem;
   if (omit != null) {
     hasItem = omit.includes(persistKey);
@@ -132,14 +132,14 @@ PersistedStore["shouldClear"] = function shouldClear(c7, persistKey) {
   if (hasItem) {
     return false;
   } else {
-    const type = c7.type;
+    const type = _null.type;
     if ("all" === type) {
       return true;
     } else if ("user-data-only" === type) {
       const userAgnosticPersistKeys = PersistedStore.userAgnosticPersistKeys;
       return !userAgnosticPersistKeys.has(persistKey);
     } else {
-      const type2 = c7.type;
+      const type2 = _null.type;
       return false;
     }
   }
@@ -150,12 +150,12 @@ PersistedStore["clearPersistQueue"] = function clearPersistQueue(arg0) {
   const item = _writeResolvers.forEach((item, index) => {
     [tmp, tmp2] = item;
     if (PersistedStore.shouldClear(closure_0, index)) {
-      tmp3._writePromises.delete(index);
-      const _writeResolvers = tmp3._writeResolvers;
+      PersistedStore._writePromises.delete(index);
+      const _writeResolvers = PersistedStore._writeResolvers;
       _writeResolvers.delete(index);
       cancelIdleCallback(tmp2);
       tmp(false);
-      const _writePromises = tmp3._writePromises;
+      const _writePromises = PersistedStore._writePromises;
     }
   });
   PersistedStore._writePromises.clear();
@@ -184,9 +184,8 @@ PersistedStore["initializeAll"] = function initializeAll(arg0) {
     if (getClass instanceof PersistedStore) {
       const persistKey = getClass.getClass().persistKey;
       if (closure_0.hasOwnProperty(persistKey)) {
-        getClass.initializeFromState(tmp[persistKey]);
+        getClass.initializeFromState(closure_0[persistKey]);
       }
-      tmp = closure_0;
     }
   });
 };
@@ -294,7 +293,7 @@ prototype["asyncPersist"] = function asyncPersist() {
   const throttleDelay = getClassResult.throttleDelay;
   if (!PersistedStore.disableWrites) {
     if (!getClassResult.disableWrite) {
-      value = tmp2._writePromises.get(persistKey);
+      value = PersistedStore._writePromises.get(persistKey);
       if (null == value) {
         const promise = new Promise((arg0) => {
           closure_0 = arg0;
@@ -308,9 +307,9 @@ prototype["asyncPersist"] = function asyncPersist() {
           ];
           const result = _writeResolvers.set(persistKey, items);
         });
-        let result = tmp2._writePromises.set(persistKey, promise);
+        let result = PersistedStore._writePromises.set(persistKey, promise);
         value = promise;
-        const _writePromises2 = tmp2._writePromises;
+        const _writePromises2 = PersistedStore._writePromises;
       }
       return value;
     }

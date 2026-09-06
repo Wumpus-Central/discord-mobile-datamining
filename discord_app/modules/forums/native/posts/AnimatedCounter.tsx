@@ -42,8 +42,8 @@ function AnimatedCount(state) {
         if (null == height) {
           return 0;
         } else if (constants.ABOVE === item) {
-          const num = -1 * tmp;
-        } else if (tmp3.BELOW !== item) {
+          const num = -1 * height;
+        } else if (constants.BELOW !== item) {
         }
       }),
     items,
@@ -257,10 +257,10 @@ export default noop.memo((textColor) => {
       textVariant: str2,
       textStyle,
     };
-    let tmp3Result = tmp3(AnimatedCounterTransitionGroup, obj);
+    let tmp3Result = React5(AnimatedCounterTransitionGroup, obj);
   } else {
     obj = { count, formatter: defaultFormatter, textColor: str, textVariant: str2, textStyle };
-    tmp3Result = tmp3(BasicCounter, obj);
+    tmp3Result = React5(BasicCounter, obj);
   }
   return tmp3Result;
 });

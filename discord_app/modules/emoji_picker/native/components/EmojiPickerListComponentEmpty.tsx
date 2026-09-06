@@ -2,6 +2,7 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
 import native from "../../../../design/void/native.tsx";
+import BottomSheetModal from "../../../../../_runtime/06627_BottomSheetModal.js";
 import SearchEmpty from "../../../../design/components/Illustration/native/redesign/generated/SearchEmpty.tsx";
 import useModalDismissGuardRefreshControl from "../../../keyboard/native/useModalDismissGuardRefreshControl.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -29,7 +30,7 @@ export default noop.memo(function EmojiPickerListComponentEmpty(insetBottom) {
   const tmp = closure_5();
   const modalDismissGuardRefreshControl = useModalDismissGuardRefreshControl.useModalDismissGuardRefreshControl();
   if (inActionSheet) {
-    let BottomSheetScrollView = tmp3(6627).BottomSheetScrollView;
+    let BottomSheetScrollView = BottomSheetModal.BottomSheetScrollView;
   } else {
     BottomSheetScrollView = ScrollView;
   }
@@ -40,7 +41,7 @@ export default noop.memo(function EmojiPickerListComponentEmpty(insetBottom) {
   }
   obj.refreshControl = tmp8;
   obj = { source: searchEmptySource, body: null, bodyStyle: null, containerStyle: null, imageStyle: null };
-  const intl = tmp3(1114).intl;
+  const intl = util.intl;
   obj.body = intl.string(util.t.IxxiKF);
   ({
     emptyStateBody: obj4.bodyStyle,

@@ -2,6 +2,7 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
 import native from "../../../../design/void/native.tsx";
+import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import useChannelNameDefault from "../../../channel/useChannelName.tsx";
 import isRoleRequiredDefault from "../../../channel/isRoleRequired.tsx";
 import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
@@ -30,13 +31,13 @@ function PrivateChannelSubtitle(channel) {
   let tmp6Result = state === CallStateHooks.CallStates.CONNECTED;
   if (tmp6Result) {
     obj = { style: tmp.subtitle, variant: "text-xs/medium", color: "text-overlay-light", children: " - " };
-    tmp6Result = tmp6(tmp7(4556).Text, obj);
+    tmp6Result = closure_1_10(Text_Text.Text, obj);
   }
   items[1] = tmp6Result;
-  tmp6Result = state === tmp7(13795).CallStates.CONNECTED;
+  tmp6Result = state === CallStateHooks.CallStates.CONNECTED;
   if (tmp6Result) {
     const obj1 = { channelId: channel.id, style: tmp.subtitle };
-    tmp6Result = tmp6(OngoingCallTimerDefault, obj1);
+    tmp6Result = closure_1_10(OngoingCallTimerDefault, obj1);
   }
   items[2] = tmp6Result;
   obj.children = items;

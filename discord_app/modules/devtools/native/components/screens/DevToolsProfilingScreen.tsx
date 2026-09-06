@@ -1,6 +1,8 @@
 // discord_app/modules/devtools/native/components/screens/DevToolsProfilingScreen.tsx
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import Stack_Stack from "../../../../../design/components/Stack/native/Stack.native.tsx";
+import TableRow from "../../../../../design/components/TableRow/native/TableRow.native.tsx";
 import TableRowGroup from "../../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
 import ComponentProfiler from "../../../../profiling/ComponentProfiler.tsx";
 import DevToolsProfilingUseStateFromStores from "DevToolsProfilingUseStateFromStores.tsx";
@@ -40,8 +42,8 @@ export default function DevToolsProfilingScreen() {
     obj = { children: null };
     const obj1 = { title: "Component Profiler", hasIcons: false, children: null };
     const obj2 = { variant: "danger", arrow: true, label: "Reset Stats", onPress: callback };
-    obj1.children = tmp8(tmp4(5605).TableRow, obj2);
-    let items = [tmp8(tmp4(5687).TableRowGroup, obj1)];
+    obj1.children = closure_5(TableRow.TableRow, obj2);
+    let items = [closure_5(TableRowGroup.TableRowGroup, obj1)];
     const _Object = Object;
     const keys = Object.keys(componentRenderStats);
     items[1] = keys.map((item) => {
@@ -79,17 +81,21 @@ export default function DevToolsProfilingScreen() {
       return hasOwnProperty(TableRowGroup.TableRowGroup, obj, item);
     });
     obj.children = items;
-    let tmp8Result = tmp10(closure_6, obj);
+    let tmp8Result = closure_7(closure_6, obj);
   } else {
     const obj3 = { title: "Component Profiler", hasIcons: false, children: null };
     const obj4 = { label: "No components rendered yet.", subLabel: null };
     const obj5 = { variant: "text-xs/medium", color: "text-subtle", children: null };
     const obj6 = { variant: "text-xs/semibold", style: tmp3.monospace, children: "<ComponentProfiler />" };
-    const items1 = ["Make sure you wrap your component in ", tmp8(tmp4(4556).Text, obj6), " to enable measurements."];
+    const items1 = [
+      "Make sure you wrap your component in ",
+      closure_5(Text_Text.Text, obj6),
+      " to enable measurements.",
+    ];
     obj5.children = items1;
-    obj4.subLabel = tmp10(tmp4(4556).Text, obj5);
-    obj3.children = tmp8(tmp4(5605).TableRow, obj4);
-    tmp8Result = tmp8(tmp4(5687).TableRowGroup, obj3);
+    obj4.subLabel = closure_7(Text_Text.Text, obj5);
+    obj3.children = closure_5(TableRow.TableRow, obj4);
+    tmp8Result = closure_5(TableRowGroup.TableRowGroup, obj3);
   }
   const obj7 = { spacing: 16, children: null };
   const items2 = [tmp8Result, closure_5(DevToolsProfilingUseStateFromStores.DevToolsProfilingUseStateFromStores, {})];

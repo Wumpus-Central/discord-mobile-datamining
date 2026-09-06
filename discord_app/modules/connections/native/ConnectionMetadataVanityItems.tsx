@@ -32,11 +32,11 @@ function VanityMetric(label) {
   }
   const sum = result + str;
   if (typeof label === "string") {
-    const intl = tmp2(1114).intl;
+    const intl = util.intl;
     obj = { name: label, value: sum };
-    let formatResult = intl.format(tmp2(1114).t.HLoinF, obj);
+    let formatResult = intl.format(util.t.HLoinF, obj);
   } else {
-    const intl2 = tmp2(1114).intl;
+    const intl2 = util.intl;
     obj = { value: sum };
     formatResult = intl2.format(label, obj);
   }
@@ -135,19 +135,19 @@ export const generateRedditMetadataItems = function generateRedditMetadataItems(
   const NumberResult = Number(num);
   if (NumberResult > -1) {
     let obj = { style: tmp, count: NumberResult, label: util.t.SbCNox };
-    items.push(timestampProducer(VanityMetric, obj, tmp2.REDDIT_TOTAL_KARMA));
+    items.push(timestampProducer(VanityMetric, obj, constants.REDDIT_TOTAL_KARMA));
   }
   if ("1" === metadata[constants.REDDIT_GOLD]) {
     obj = { style: tmp, label: null };
     const intl = util.intl;
     obj.label = intl.string(util.t["06rDHU"]);
-    items.push(timestampProducer(VanityTag, obj, tmp2.REDDIT_GOLD));
+    items.push(timestampProducer(VanityTag, obj, constants.REDDIT_GOLD));
   }
   if ("1" === metadata[constants.REDDIT_MOD]) {
     obj = { style: tmp, label: null };
     const intl2 = util.intl;
     obj.label = intl2.string(util.t.oWM95M);
-    items.push(timestampProducer(VanityTag, obj, tmp2.REDDIT_MOD));
+    items.push(timestampProducer(VanityTag, obj, constants.REDDIT_MOD));
   }
   return items;
 };
@@ -157,7 +157,7 @@ export const generateTwitterMetadataItems = function generateTwitterMetadataItem
     num = -1;
   }
   const NumberResult = Number(num);
-  let num2 = metadata[tmp2.TWITTER_FOLLOWERS_COUNT];
+  let num2 = metadata[constants.TWITTER_FOLLOWERS_COUNT];
   if (num2 == null) {
     num2 = -1;
   }
@@ -165,11 +165,11 @@ export const generateTwitterMetadataItems = function generateTwitterMetadataItem
   const NumberResult1 = Number(num2);
   if (NumberResult > -1) {
     let obj = { style: tmp, count: NumberResult, label: util.t.llwqqe };
-    items.push(timestampProducer(VanityMetric, obj, tmp2.TWITTER_STATUSES_COUNT));
+    items.push(timestampProducer(VanityMetric, obj, constants.TWITTER_STATUSES_COUNT));
   }
   if (NumberResult1 > -1) {
     obj = { style: tmp, count: NumberResult1, label: util.t.LMNOUQ };
-    items.push(timestampProducer(VanityMetric, obj, tmp2.TWITTER_FOLLOWERS_COUNT));
+    items.push(timestampProducer(VanityMetric, obj, constants.TWITTER_FOLLOWERS_COUNT));
   }
   return items;
 };
@@ -179,7 +179,7 @@ export const generateBlueskyMetadataItems = function generateBlueskyMetadataItem
     num = -1;
   }
   const NumberResult = Number(num);
-  let num2 = arg0[tmp2.BLUESKY_FOLLOWERS_COUNT];
+  let num2 = arg0[constants.BLUESKY_FOLLOWERS_COUNT];
   if (num2 == null) {
     num2 = -1;
   }
@@ -187,11 +187,11 @@ export const generateBlueskyMetadataItems = function generateBlueskyMetadataItem
   const NumberResult1 = Number(num2);
   if (NumberResult > -1) {
     let obj = { style: tmp, count: NumberResult, label: util.t.thA2ir };
-    items.push(timestampProducer(VanityMetric, obj, tmp2.BLUESKY_STATUSES_COUNT));
+    items.push(timestampProducer(VanityMetric, obj, constants.BLUESKY_STATUSES_COUNT));
   }
   if (NumberResult1 > -1) {
     obj = { style: tmp, count: NumberResult1, label: util.t.RQath2 };
-    items.push(timestampProducer(VanityMetric, obj, tmp2.BLUESKY_FOLLOWERS_COUNT));
+    items.push(timestampProducer(VanityMetric, obj, constants.BLUESKY_FOLLOWERS_COUNT));
   }
   return items;
 };
@@ -201,12 +201,12 @@ export const generateSteamMetadataItems = function generateSteamMetadataItems(me
     num = -1;
   }
   const NumberResult = Number(num);
-  let num2 = metadata[tmp2.STEAM_ITEM_COUNT_DOTA2];
+  let num2 = metadata[constants.STEAM_ITEM_COUNT_DOTA2];
   if (num2 == null) {
     num2 = -1;
   }
   const NumberResult1 = Number(num2);
-  let num3 = metadata[tmp2.STEAM_ITEM_COUNT_TF2];
+  let num3 = metadata[constants.STEAM_ITEM_COUNT_TF2];
   if (num3 == null) {
     num3 = -1;
   }
@@ -214,7 +214,7 @@ export const generateSteamMetadataItems = function generateSteamMetadataItems(me
   const NumberResult2 = Number(num3);
   if (NumberResult > -1) {
     let obj = { style: tmp, count: NumberResult, label: util.t["ppXMu/"] };
-    items.push(timestampProducer(VanityMetric, obj, tmp2.STEAM_GAME_COUNT));
+    items.push(timestampProducer(VanityMetric, obj, constants.STEAM_GAME_COUNT));
   }
   if (NumberResult1 > -1) {
     obj = { style: tmp, label: null, imageSrc: null, imageAlt: null };
@@ -224,7 +224,7 @@ export const generateSteamMetadataItems = function generateSteamMetadataItems(me
     obj.imageSrc = _modDef11576;
     const intl2 = util.intl;
     obj.imageAlt = intl2.string(util.t.HKUEZo);
-    items.push(timestampProducer(VanityItem, obj, tmp2.STEAM_ITEM_COUNT_DOTA2));
+    items.push(timestampProducer(VanityItem, obj, constants.STEAM_ITEM_COUNT_DOTA2));
   }
   if (NumberResult2 > -1) {
     const obj1 = { style: tmp, label: null, imageSrc: null, imageAlt: null };
@@ -234,11 +234,11 @@ export const generateSteamMetadataItems = function generateSteamMetadataItems(me
     obj1.imageSrc = _modDef11577;
     const intl4 = util.intl;
     obj1.imageAlt = intl4.string(util.t.C8p1Sh);
-    items.push(timestampProducer(VanityItem, obj1, tmp2.STEAM_ITEM_COUNT_TF2));
+    items.push(timestampProducer(VanityItem, obj1, constants.STEAM_ITEM_COUNT_TF2));
   }
   return items;
 };
-export const generatePaypalMetadataItems = function generatePaypalMetadataItems(metadata, metadataItem) {
+export const generatePaypalMetadataItems = function generatePaypalMetadataItems(metadata) {
   const items = [];
   if ("1" === metadata[constants.PAYPAL_VERIFIED]) {
     const obj = { style: metadataItem };
@@ -255,13 +255,13 @@ export const generateEbayMetadataItems = function generateEbayMetadataItems(meta
   const NumberResult = Number(num);
   if (NumberResult > 0) {
     let obj = { style: tmp, count: NumberResult, label: util.t.YmL22d, percent: true };
-    items.push(timestampProducer(VanityMetric, obj, tmp2.EBAY_POSITIVE_FEEDBACK_PERCENTAGE));
+    items.push(timestampProducer(VanityMetric, obj, constants.EBAY_POSITIVE_FEEDBACK_PERCENTAGE));
   }
   if ("1" === metadata[constants.EBAY_TOP_RATED_SELLER]) {
     obj = { style: tmp, label: null };
     const intl = util.intl;
     obj.label = intl.string(util.t.TEEYwa);
-    items.push(timestampProducer(VanityTag, obj, tmp2.EBAY_TOP_RATED_SELLER));
+    items.push(timestampProducer(VanityTag, obj, constants.EBAY_TOP_RATED_SELLER));
   }
   return items;
 };
@@ -271,12 +271,12 @@ export const generateTikTokMetadataItems = function generateTikTokMetadataItems(
     num = -1;
   }
   const NumberResult = Number(num);
-  let num2 = metadata[tmp2.TIKTOK_FOLLOWING_COUNT];
+  let num2 = metadata[constants.TIKTOK_FOLLOWING_COUNT];
   if (num2 == null) {
     num2 = -1;
   }
   const NumberResult1 = Number(num2);
-  let num3 = metadata[tmp2.TIKTOK_LIKES_COUNT];
+  let num3 = metadata[constants.TIKTOK_LIKES_COUNT];
   if (num3 == null) {
     num3 = -1;
   }
@@ -284,21 +284,21 @@ export const generateTikTokMetadataItems = function generateTikTokMetadataItems(
   const NumberResult2 = Number(num3);
   if (NumberResult > -1) {
     let obj = { style: tmp, count: NumberResult, label: util.t["Mpm/Bc"] };
-    items.push(timestampProducer(VanityMetric, obj, tmp2.TIKTOK_FOLLOWER_COUNT));
+    items.push(timestampProducer(VanityMetric, obj, constants.TIKTOK_FOLLOWER_COUNT));
   }
   if (NumberResult1 > -1) {
     obj = { style: tmp, count: NumberResult1, label: util.t.ftf12v };
-    items.push(timestampProducer(VanityMetric, obj, tmp2.TIKTOK_FOLLOWING_COUNT));
+    items.push(timestampProducer(VanityMetric, obj, constants.TIKTOK_FOLLOWING_COUNT));
   }
   if (NumberResult2 > -1) {
     obj = { style: tmp, count: NumberResult2, label: util.t.Qwhe5j };
-    items.push(timestampProducer(VanityMetric, obj, tmp2.TIKTOK_LIKES_COUNT));
+    items.push(timestampProducer(VanityMetric, obj, constants.TIKTOK_LIKES_COUNT));
   }
   if ("1" === metadata[constants.TIKTOK_VERIFIED]) {
     const obj1 = { style: tmp, label: null };
     const intl = util.intl;
     obj1.label = intl.string(util.t.QHHwRR);
-    items.push(timestampProducer(VanityTag, obj1, tmp2.TIKTOK_VERIFIED));
+    items.push(timestampProducer(VanityTag, obj1, constants.TIKTOK_VERIFIED));
   }
   return items;
 };
@@ -329,9 +329,9 @@ export const generateRoleConnectionMetadataItems = function generateRoleConnecti
           try {
             const type = tmp8.type;
             if (constants2.BOOLEAN_EQUAL !== type) {
-              if (tmp10.BOOLEAN_NOT_EQUAL !== type) {
-                if (tmp10.DATETIME_GREATER_THAN_EQUAL !== type) {
-                  if (tmp10.DATETIME_LESS_THAN_EQUAL !== type) {
+              if (constants2.BOOLEAN_NOT_EQUAL !== type) {
+                if (constants2.DATETIME_GREATER_THAN_EQUAL !== type) {
+                  if (constants2.DATETIME_LESS_THAN_EQUAL !== type) {
                     let obj = { style: tmp, count: null, label: null };
                     const _Number = Number;
                     obj.count = Number(tmp36);
@@ -343,12 +343,12 @@ export const generateRoleConnectionMetadataItems = function generateRoleConnecti
                 items.push(timestampProducer(VanityDate, obj, tmp8.key));
               }
             }
-            let tmp22 = tmp8.type === tmp10.BOOLEAN_EQUAL;
+            let tmp22 = tmp8.type === constants2.BOOLEAN_EQUAL;
             if (tmp22) {
               tmp22 = "1" === tmp36;
             }
             if (!tmp22) {
-              let tmp25 = tmp8.type === tmp10.BOOLEAN_NOT_EQUAL;
+              let tmp25 = tmp8.type === constants2.BOOLEAN_NOT_EQUAL;
               if (tmp25) {
                 tmp25 = "1" !== tmp36;
               }

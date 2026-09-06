@@ -22,7 +22,7 @@ prototype["fetch"] = function fetch(arg0, arg1, arg2) {
   closure_1 = arg1;
   closure_2 = arg2;
   const self = this;
-  return self(function* (arg0, value) {
+  return self(function* () {
     if (c6 === 2) {
       c6 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -158,7 +158,7 @@ prototype2["getEndpoint"] = function getEndpoint() {
         return timestampProducer.SEARCH_GUILD(self.searchId);
       }
     }
-  } else if (tmp.GUILD_CHANNEL === searchType) {
+  } else if (constants.GUILD_CHANNEL === searchType) {
     if (null != self.searchId) {
       if ("" !== self.searchId) {
         const channel = ChannelStore.getChannel(self.searchId);
@@ -171,7 +171,7 @@ prototype2["getEndpoint"] = function getEndpoint() {
         }
       }
     }
-  } else if (tmp.CHANNEL === searchType) {
+  } else if (constants.CHANNEL === searchType) {
     if (null != self.searchId) {
       if ("" !== self.searchId) {
         return timestampProducer.SEARCH_CHANNEL(self.searchId);
@@ -213,10 +213,10 @@ prototype3["getEndpoint"] = function getEndpoint() {
   if (constants.DMS === searchType) {
     return timestampProducer.SEARCH_TABS_DMS;
   } else {
-    if (tmp.GUILD_CHANNEL !== searchType) {
-      if (tmp.GUILD !== searchType) {
-        if (tmp.THREAD !== searchType) {
-          if (tmp.CHANNEL === searchType) {
+    if (constants.GUILD_CHANNEL !== searchType) {
+      if (constants.GUILD !== searchType) {
+        if (constants.THREAD !== searchType) {
+          if (constants.CHANNEL === searchType) {
             if (null != self.searchId) {
               if ("" !== self.searchId) {
                 return timestampProducer.SEARCH_TABS_CHANNEL(self.searchId);

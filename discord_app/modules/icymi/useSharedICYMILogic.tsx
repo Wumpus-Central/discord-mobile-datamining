@@ -282,6 +282,7 @@ export const useSharedICYMILogic = function useSharedICYMILogic(notificationItem
         if (!obj.isItemNSFW(item)) {
           data.push(item);
         }
+        obj = notificationItem(unreadItems[10]);
       });
       if (allUnreadItemsHydrated) {
         const obj1 = { id: "end", timestamp: 0, unread: false, data: { kind: "end" } };
@@ -293,6 +294,7 @@ export const useSharedICYMILogic = function useSharedICYMILogic(notificationItem
           if (!obj.isItemNSFW(item)) {
             data.push(item);
           }
+          obj = notificationItem(unreadItems[10]);
         });
       }
       if (stateFromStores3) {

@@ -71,8 +71,9 @@ function dispatchCompat(arr) {
     let dispatchResult2 = obj5.dispatch(obj1);
     continue;
   }
+  nextResult = iter.next();
 }
-let closure_9 = async function _fetchAllSubscriptionListingsDataForApplication(applicationId, groupListingId) {
+let closure_9 = async function _fetchAllSubscriptionListingsDataForApplication() {
   c7 = 0;
   c8 = 0;
   c6 = 0;
@@ -88,7 +89,8 @@ let closure_9 = async function _fetchAllSubscriptionListingsDataForApplication(a
       type: "APPLICATION_SUBSCRIPTIONS_FETCH_LISTINGS_FAILURE",
       applicationId: closure_131_0,
     });
-    closure_131_1 = await "HermesInternal";
+    await "HermesInternal";
+    closure_131_1 = value;
     closure_132_0(closure_132_2[2]).dispatch({
       type: "APPLICATION_SUBSCRIPTIONS_FETCH_LISTINGS_SUCCESS",
       applicationId: closure_131_0,
@@ -103,11 +105,11 @@ let closure_9 = async function _fetchAllSubscriptionListingsDataForApplication(a
     return closure_131_1;
   })();
 };
-let closure_10 = async function _fetchEntitlementsForGuild(guildId) {
+let closure_10 = async function _fetchEntitlementsForGuild() {
   c5 = 0;
   c6 = 0;
   c4 = 0;
-  return (async (arg0, value) => {
+  return (async (arg0) => {
     closure_2 = tmp3;
     closure_129_0 = guildId;
     DispatcherDefault.dispatch({ type: "APPLICATION_SUBSCRIPTIONS_FETCH_ENTITLEMENTS", guildId });
@@ -144,7 +146,7 @@ function fetchSubscriptionListingForPlan() {
   }
   return applyArgumentsResult;
 }
-let closure_12 = async function _fetchSubscriptionListingForPlan(arg0, value) {
+let closure_12 = async function _fetchSubscriptionListingForPlan(arg0) {
   if (c8 === 2) {
     c8 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");

@@ -1,10 +1,10 @@
 // discord_app/modules/search/SearchActionCreators.tsx
 import _modDef12 from "../../../_runtime/metro/00012__.js";
+import DispatcherDefault from "../../Dispatcher.tsx";
 import UserSettingsProtoActionCreators from "../user_settings/UserSettingsProtoActionCreators.tsx";
 import SearchTabsFetchManagerDefault from "managers/SearchTabsFetchManager.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
-const DispatcherDefault = tmp10(573);
 let result = size.fileFinishedImporting("modules/search/SearchActionCreators.tsx");
 
 export default {
@@ -58,7 +58,7 @@ export default {
     obj.trackExactTotalHits = trackExactTotalHits;
     obj1 = obj7.create(obj);
     if (onFetchStart != null) {
-      let obj2 = { searchContext, searchQueryString, searchQuery: obj };
+      const obj2 = { searchContext, searchQueryString, searchQuery: obj };
       onFetchStart(obj2);
     }
     mapped = searchTabs.map((item) => importDefault(item));
@@ -89,6 +89,7 @@ export default {
             if (null == cursor) {
               let tmp6 = cursor;
             } else {
+              _modDef12;
               tmp6 = null;
             }
             obj.cursor = tmp6;
@@ -213,6 +214,7 @@ export default {
         obj.dispatch(obj);
       },
     );
+    const tmp9Result = tmp9(573);
   },
   clearSearchRecentMessages() {
     DispatcherDefault.dispatch({ type: "SEARCH_RECENT_MESSAGES_CLEAR" });

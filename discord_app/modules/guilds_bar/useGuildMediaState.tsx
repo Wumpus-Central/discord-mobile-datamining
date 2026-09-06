@@ -15,9 +15,9 @@ import UserGuildSettingsStore from "../../stores/UserGuildSettingsStore.tsx";
 import VoiceStateStore from "../../stores/VoiceStateStore.tsx";
 
 require = fn;
-function canConnectToChannel(type, arg1) {
-  let obj = arg2;
-  if (arg2 === undefined) {
+function canConnectToChannel(type, afkChannelId) {
+  let obj = PermissionStore;
+  if (PermissionStore === undefined) {
     obj = PermissionStore;
   }
   let canBasicChannelResult = null != type;
@@ -25,7 +25,7 @@ function canConnectToChannel(type, arg1) {
     canBasicChannelResult = type.type !== ChannelTypes.ChannelTypes.GUILD_STAGE_VOICE;
   }
   if (canBasicChannelResult) {
-    canBasicChannelResult = arg1 !== type.id;
+    canBasicChannelResult = afkChannelId !== type.id;
   }
   if (canBasicChannelResult) {
     canBasicChannelResult = obj.canBasicChannel(BasicPermissions.VIEW_CHANNEL, type);
@@ -66,7 +66,7 @@ export default function useGuildMediaState(guild_id) {
         blockedOrIgnoredIDs = blockedOrIgnoredIDs.getBlockedOrIgnoredIDs();
         const items = [];
         HermesBuiltin.arraySpread(location.userIds, 0);
-        return !tmp(tmp2[18]).hasBlockedOrIgnoredUserIds(items, blockedOrIgnoredIDs);
+        return !guild_id(isDontBadgeMutedVcsEnabled[18]).hasBlockedOrIgnoredUserIds(items, blockedOrIgnoredIDs);
       }
       const obj = guild_id(isDontBadgeMutedVcsEnabled[17]);
     });
@@ -117,7 +117,6 @@ export default function useGuildMediaState(guild_id) {
             } else {
               let basicChannel = selectedVoiceChannelHasVideo.getBasicChannel(channelId);
               let tmp12 = afkChannelId;
-              let obj2 = PermissionStore;
               if (PermissionStore !== undefined) {
                 let canBasicChannelResult = null != basicChannel;
                 if (canBasicChannelResult) {
@@ -128,7 +127,7 @@ export default function useGuildMediaState(guild_id) {
                   canBasicChannelResult = tmp12 !== basicChannel.id;
                 }
                 if (canBasicChannelResult) {
-                  canBasicChannelResult = obj2.canBasicChannel(constants.VIEW_CHANNEL, basicChannel);
+                  canBasicChannelResult = PermissionStore.canBasicChannel(constants.VIEW_CHANNEL, basicChannel);
                 }
                 if (!canBasicChannelResult) {
                   continue;
@@ -165,10 +164,8 @@ export default function useGuildMediaState(guild_id) {
               }
               let tmp10 = channelId;
               if (null != channelId) {
-                let tmp11 = canConnectToChannel;
-                let tmp15 = afkChannelId;
                 let basicChannel = ChannelStore.getBasicChannel(tmp10);
-                if (tmp11(basicChannel, tmp15, PermissionStore)) {
+                if (canConnectToChannel(basicChannel, afkChannelId, PermissionStore)) {
                   obj.return();
                   let flag = true;
                   return true;
@@ -239,7 +236,7 @@ export default function useGuildMediaState(guild_id) {
           };
         }
       }
-      const keys = SnowflakeUtilsDefault.keys(StageInstanceStore.getStageInstancesByGuild(tmp4));
+      const keys = SnowflakeUtilsDefault.keys(StageInstanceStore.getStageInstancesByGuild(closure_0));
       let tmp9 = tmp5;
       if (tmp5) {
         const channel1 = obj.getChannel(voiceChannelId);
@@ -254,7 +251,7 @@ export default function useGuildMediaState(guild_id) {
       }
       let tmp10 = tmp5;
       if (tmp10) {
-        tmp10 = null != ApplicationStreamingStore.getActiveStreamForUser(id, tmp4);
+        tmp10 = null != ApplicationStreamingStore.getActiveStreamForUser(id, closure_0);
       }
       const someResult = keys.some((item) => {
         basicChannel = basicChannel.getBasicChannel(item);
@@ -269,9 +266,9 @@ export default function useGuildMediaState(guild_id) {
       );
       let tmp14 = (() => {
         if (closure_1_5) {
-          return arr.length > 0;
+          return stateFromStoresArray.length > 0;
         } else {
-          const obj = arr[Symbol.iterator]();
+          const obj = stateFromStoresArray[Symbol.iterator]();
           while (obj !== undefined) {
             let obj2 = closure_0(isDontBadgeMutedVcsEnabled[17]);
             let channel = selectedVoiceChannelHasVideo.getChannel(

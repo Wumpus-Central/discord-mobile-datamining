@@ -4,14 +4,14 @@ import initialize from "../../../discord_common/js/packages/flux/index.tsx";
 import preloaded_user_settings from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
 import PremiumTypeUtilsDefault from "../../utils/PremiumTypeUtils.tsx";
 import FavoritesUtils from "FavoritesUtils.tsx";
+import FavoritesLimits from "../../../discord_common/js/shared/shared-constants/FavoritesLimits.tsx";
 import FavoritesGuildExperiment from "FavoritesGuildExperiment.tsx";
 import SelectedGuildStore from "../../stores/SelectedGuildStore.tsx";
 import UserStore from "../../stores/UserStore.tsx";
 import FavoriteStore from "FavoriteStore.tsx";
 
-const FavoritesLimits = tmp(10225);
 require = fn;
-function useFavoritesAccess(FavoritesGuildActionSheet) {
+function useFavoritesAccess() {
   let str = FavoritesGuildActionSheet;
   if (FavoritesGuildActionSheet === undefined) {
     str = "useFavoritesAccess";
@@ -112,7 +112,7 @@ export const useFavoritedChannelIds = function useFavoritedChannelIds() {
   );
   return SnowflakeUtilsDefault.keys(stateFromStoresObject);
 };
-export const getFavoritesCategories = function getFavoritesCategories(favoriteChannels) {
+export const getFavoritesCategories = function getFavoritesCategories() {
   if (favoriteChannels === undefined) {
     favoriteChannels = FavoriteStore.getFavoriteChannels();
   }

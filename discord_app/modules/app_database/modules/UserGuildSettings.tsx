@@ -29,7 +29,8 @@ prototype["getAll"] = function getAll(arg0) {
     const _performance2 = performance;
     closure_128_0 = performance.now();
     tmp2(tmp5[3]);
-    closure_128_1 = await tmp2(tmp5[3]).userGuildSettings(tmp2).getMany();
+    await tmp2(tmp5[3]).userGuildSettings(tmp2).getMany();
+    closure_128_1 = value;
     const _performance = performance;
     closure_128_2 = performance.now();
     const _HermesInternal = HermesInternal;

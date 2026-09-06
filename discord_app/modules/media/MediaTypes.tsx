@@ -2,6 +2,7 @@
 import Constants from "../../Constants.tsx";
 import URLUtilsDefault from "../../utils/URLUtils.tsx";
 import FlagUtils from "../../../discord_common/js/shared/utils/FlagUtils.tsx";
+import Server from "../../flow/Server.tsx";
 import MediaFormatTesters from "../messages/MediaFormatTesters.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
@@ -32,7 +33,7 @@ function messageAttachmentToUnfurledMediaItem(flags) {
     originalContentType: flags.original_content_type,
     placeholder: flags.placeholder,
     placeholderVersion: flags.placeholder_version,
-    loadingState: tmp(1894).UnfurledMediaLoadingState.LOADED_SUCCESS,
+    loadingState: Server.UnfurledMediaLoadingState.LOADED_SUCCESS,
     contentScanMetadata: null,
     flags: null,
   };
@@ -109,12 +110,12 @@ export const messageAttachmentToMediaItem = function messageAttachmentToMediaIte
   const merged = Object.assign(messageAttachmentToUnfurledMediaItem(found2));
   let str = "IMAGE";
   if (!obj2.isImageFile(found2.filename)) {
+    tmp2Result = MediaFormatTesters;
     let str2 = "INVALID";
     if (tmp2Result.isVideoFile(found2.filename)) {
       str2 = "VIDEO";
     }
     str = str2;
-    tmp2Result = MediaFormatTesters;
   }
   obj.type = str;
   obj.alt = found2.description;

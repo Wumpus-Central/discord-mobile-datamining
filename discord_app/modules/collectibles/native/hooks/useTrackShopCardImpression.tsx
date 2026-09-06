@@ -1,5 +1,7 @@
 // discord_app/modules/collectibles/native/hooks/useTrackShopCardImpression.tsx
 import discord_common_AnalyticsUtils from "../../../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
+import CollectiblesProductUtils from "../../utils/CollectiblesProductUtils.tsx";
+import CollectiblesUtils from "../../CollectiblesUtils.tsx";
 import useTrackImpression from "../../../app_analytics/useTrackImpression.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -63,23 +65,23 @@ export const useTrackShopCardImpression = function useTrackShopCardImpression(pr
     };
     let cardId;
     if (collectiblesAnalyticsContext != null) {
-      cardId = tmp3.cardId;
+      cardId = collectiblesAnalyticsContext.cardId;
     }
     obj.card_id = cardId;
     let sessionId;
     if (collectiblesAnalyticsContext != null) {
-      sessionId = tmp3.sessionId;
+      sessionId = collectiblesAnalyticsContext.sessionId;
     }
     obj.shop_session_id = sessionId;
     let tilePosition;
     if (collectiblesAnalyticsContext != null) {
-      tilePosition = tmp3.tilePosition;
+      tilePosition = collectiblesAnalyticsContext.tilePosition;
     }
     obj.position_in_section = tilePosition;
-    let tmpResult = tmp(7553);
+    let tmpResult = CollectiblesProductUtils;
     obj.product_sku_ids = tmpResult.getProductSkuIds(closure_0);
     obj.location_stack = analyticsLocations;
-    tmpResult = tmp(7554);
+    tmpResult = CollectiblesUtils;
     obj.discount_source = tmpResult.getAnalyticsShopDiscountSource(shopDiscountSource);
     obj.properties = obj;
     obj.trackImpression(obj, false, true);

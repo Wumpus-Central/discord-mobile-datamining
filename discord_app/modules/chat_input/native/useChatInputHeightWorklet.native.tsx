@@ -107,6 +107,7 @@ export default function useChatInputHeightWorklet(textFieldHeight) {
       event.workletEventHandler.registerForEvents(arg0);
       const workletEventHandler = event.workletEventHandler;
     }
+    obj = PlatformUtils;
   }, items);
   const items1 = [sharedValue, event];
   obj2.unregisterViewTag = event.useCallback((arg0) => {
@@ -115,6 +116,7 @@ export default function useChatInputHeightWorklet(textFieldHeight) {
       const result = sharedValue.set(0);
       const workletEventHandler = event.workletEventHandler;
     }
+    obj = PlatformUtils;
   }, items1);
   return obj2;
 }

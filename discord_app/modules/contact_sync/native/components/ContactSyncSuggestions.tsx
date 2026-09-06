@@ -39,7 +39,7 @@ function SuggestionRow(suggestion) {
   let obj1 = AvatarUtilsDefault;
   const userAvatarSource = obj1.getUserAvatarSource(suggestion.suggested_user);
   obj = { start, end, icon: null, checked: null, label: null, subLabel: null, onPress: null };
-  obj = { source: userAvatarSource, size: tmp3(1178).AvatarSizes.REFRESH_MEDIUM_32 };
+  obj = { source: userAvatarSource, size: native.AvatarSizes.REFRESH_MEDIUM_32 };
   obj.icon = React6(native.Avatar, obj);
   obj.checked = selected;
   obj.label = tmp6;
@@ -47,10 +47,10 @@ function SuggestionRow(suggestion) {
   let tmp8Result = null != suggestion.mutual_friends_count;
   if (tmp8Result) {
     obj1 = { variant: "text-xs/medium", color: "text-muted", children: null };
-    const intl = tmp3(1114).intl;
+    const intl = util.intl;
     const obj2 = { count: suggestion.mutual_friends_count };
-    obj1.children = intl.format(tmp3(1114).t.z7y34b, obj2);
-    tmp8Result = tmp8(tmp3(4556).Text, obj1);
+    obj1.children = intl.format(util.t.z7y34b, obj2);
+    tmp8Result = React6(Text_Text.Text, obj1);
   }
   items[1] = tmp8Result;
   obj.subLabel = closure_1_10(React7, { children: items });

@@ -34,15 +34,15 @@ export default function MaskedLinkModal(isProtocol) {
   obj.title = intl.string(util.t["3w1QGl"]);
   const intl2 = util.intl;
   if (isProtocol) {
-    let formatResult = intl2.format(tmp2(1114).t.aCYv1z, {});
+    let formatResult = intl2.format(util.t.aCYv1z, {});
   } else {
-    formatResult = intl2.string(tmp2(1114).t.soRxRe);
+    formatResult = intl2.string(util.t.soRxRe);
   }
   obj.content = formatResult;
   obj = { variant: "primary", onPress: handleConfirm, text: null };
-  const intl3 = tmp2(1114).intl;
+  const intl3 = util.intl;
   const string = intl3.string;
-  const t = tmp2(1114).t;
+  const t = util.t;
   if (isProtocol) {
     let stringResult = string(t.COq6kk);
   } else {
@@ -52,7 +52,7 @@ export default function MaskedLinkModal(isProtocol) {
   obj.text = stringResult;
   const items = [React4(AlertModal.AlertActionButton, obj, "confirm")];
   const obj2 = { onPress: handleCancel, variant: "secondary", text: null };
-  const intl4 = tmp2(1114).intl;
+  const intl4 = util.intl;
   obj2.text = intl4.string(util.t["/g10LC"]);
   items[1] = React4(AlertModal.AlertActionButton, obj2, "cancel");
   obj1.children = items;
@@ -101,9 +101,9 @@ export default function MaskedLinkModal(isProtocol) {
     },
     label: null,
   };
-  const intl5 = tmp2(1114).intl;
+  const intl5 = util.intl;
   const format = intl5.format;
-  const t2 = tmp2(1114).t;
+  const t2 = util.t;
   if (isProtocol) {
     const obj10 = { protocol: protocol.replace(":", "") };
     let formatResult1 = format(t2["haA+Xw"], obj10);

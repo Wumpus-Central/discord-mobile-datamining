@@ -3,6 +3,7 @@ import util from "../../../../intl/index.native.tsx";
 import KeyboardManagerUtilsAll from "../../../../utils/native/KeyboardManagerUtils.tsx";
 import asyncRequireImpl from "../../../../../_runtime/01896_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
+import StageIcon from "../../../../design/components/Icon/native/redesign/generated/StageIcon.tsx";
 import VoiceNormalIcon from "../../../../design/components/Icon/native/redesign/generated/VoiceNormalIcon.tsx";
 import TableRadioGroup from "../../../../design/components/TableRow/native/TableRadioGroup.native.tsx";
 import TableRadioRow from "../../../../design/components/TableRow/native/TableRadioRow.native.tsx";
@@ -88,8 +89,8 @@ export const GuildEventRecurrence = function GuildEventRecurrence(startDate) {
       const intl = util.intl;
       obj.title = intl.string(util.t["59TVxL"]);
       obj.items = recurrenceOptions;
-      obj.onItemSelect = function onItemSelect(arg0) {
-        onRecurrenceChange(arg0);
+      obj.onItemSelect = function onItemSelect(c7) {
+        onRecurrenceChange(c7);
         recurrenceRule(closure_3[12]).hideActionSheet();
       };
       obj.selectedItem = selectedItem;
@@ -140,13 +141,13 @@ export const GuildEventEntityTypeSelection = function GuildEventEntityTypeSelect
   const features = guild.features;
   if (features.has(GuildFeatures.COMMUNITY)) {
     const obj1 = { name: null, value: null, description: null, icon: null, IconComponent: null, disabled: null };
-    const intl5 = tmp(1114).intl;
-    obj1.name = intl5.string(tmp(1114).t.EErMzA);
+    const intl5 = util.intl;
+    obj1.name = intl5.string(util.t.EErMzA);
     obj1.value = constants.STAGE_INSTANCE;
-    const intl6 = tmp(1114).intl;
-    obj1.description = intl6.string(tmp(1114).t.LgALpp);
+    const intl6 = util.intl;
+    obj1.description = intl6.string(util.t.LgALpp);
     obj1.icon = _modDef8622;
-    obj1.IconComponent = tmp(5097).StageIcon;
+    obj1.IconComponent = StageIcon.StageIcon;
     obj1.disabled = 0 === channelsUserCanStartStageIn.length || disabled;
     items.unshift(obj1);
   }
@@ -214,7 +215,7 @@ export const GuildEventDatetime = function GuildEventDatetime(dateLabel) {
     value: date.format("MMM Do YYYY"),
     () => {
       if (!View) {
-        let obj = date(c3[11]);
+        let obj = date(paths[11]);
         const result = obj.dismissGlobalKeyboard();
         let openLazyResult = time;
         obj = {
@@ -233,28 +234,26 @@ export const GuildEventDatetime = function GuildEventDatetime(dateLabel) {
           requireDateChanged: true,
           mode: null
         };
-        const obj2 = timeLabel(c3[12]);
-        const obj4 = importAll;
+        const obj2 = timeLabel(paths[12]);
         const tmp5 = "date" === time ? require : importDefault;
         obj.startDate = importAll.toDate();
         if (null != dependencyMap) {
-          let toDateResult = obj5.toDate();
+          let toDateResult = dependencyMap.toDate();
         } else {
-          toDateResult = obj4.toDate();
+          toDateResult = importAll.toDate();
         }
         obj.minimumDate = toDateResult;
         obj.maximumDate = noop.toDate();
         obj.mode = openLazyResult;
-        openLazyResult = obj2.openLazy(time(c3[14])(c3[27], c3.paths), "DatePicker", obj);
-        obj5 = dependencyMap;
-        const tmp8 = time(c3[14])(c3[27], c3.paths);
+        openLazyResult = obj2.openLazy(time(paths[14])(paths[27], paths.paths), "DatePicker", obj);
+        const tmp8 = time(paths[14])(paths[27], paths.paths);
       }
     },
     disabled
   });
   obj1.children = items;
   const items1 = [closure_12(disabled, obj1), ];
-  let obj4 = { style: tmp5.timeInput, children: null };
+  const obj4 = { style: tmp5.timeInput, children: null };
   const items2 = [closure_11(time(4556).Text, { style: tmp5.formHeader, variant: "text-sm/semibold", color: "text-subtle", children: timeLabel }), ];
   let obj2 = { style: tmp5.formHeader, variant: "text-sm/semibold", color: "text-subtle", children: dateLabel };
   const obj3 = {
@@ -262,7 +261,7 @@ export const GuildEventDatetime = function GuildEventDatetime(dateLabel) {
     value: date.format("MMM Do YYYY"),
     () => {
       if (!View) {
-        let obj = date(c3[11]);
+        let obj = date(paths[11]);
         const result = obj.dismissGlobalKeyboard();
         let openLazyResult = time;
         obj = {
@@ -281,33 +280,31 @@ export const GuildEventDatetime = function GuildEventDatetime(dateLabel) {
           requireDateChanged: true,
           mode: null
         };
-        const obj2 = timeLabel(c3[12]);
-        const obj4 = importAll;
+        const obj2 = timeLabel(paths[12]);
         const tmp5 = "date" === time ? require : importDefault;
         obj.startDate = importAll.toDate();
         if (null != dependencyMap) {
-          let toDateResult = obj5.toDate();
+          let toDateResult = dependencyMap.toDate();
         } else {
-          toDateResult = obj4.toDate();
+          toDateResult = importAll.toDate();
         }
         obj.minimumDate = toDateResult;
         obj.maximumDate = noop.toDate();
         obj.mode = openLazyResult;
-        openLazyResult = obj2.openLazy(time(c3[14])(c3[27], c3.paths), "DatePicker", obj);
-        obj5 = dependencyMap;
-        const tmp8 = time(c3[14])(c3[27], c3.paths);
+        openLazyResult = obj2.openLazy(time(paths[14])(paths[27], paths.paths), "DatePicker", obj);
+        const tmp8 = time(paths[14])(paths[27], paths.paths);
       }
     },
     disabled
   };
-  let obj5 = { style: tmp5.formHeader, variant: "text-sm/semibold", color: "text-subtle", children: timeLabel };
+  const obj5 = { style: tmp5.formHeader, variant: "text-sm/semibold", color: "text-subtle", children: timeLabel };
   time = "time";
   items2[1] = closure_11(time(8902).InputButton, {
     text: timeLabel,
     value: date.format("LT"),
     () => {
       if (!View) {
-        let obj = date(c3[11]);
+        let obj = date(paths[11]);
         const result = obj.dismissGlobalKeyboard();
         let openLazyResult = time;
         obj = {
@@ -326,21 +323,19 @@ export const GuildEventDatetime = function GuildEventDatetime(dateLabel) {
           requireDateChanged: true,
           mode: null
         };
-        const obj2 = timeLabel(c3[12]);
-        const obj4 = importAll;
+        const obj2 = timeLabel(paths[12]);
         const tmp5 = "date" === time ? require : importDefault;
         obj.startDate = importAll.toDate();
         if (null != dependencyMap) {
-          let toDateResult = obj5.toDate();
+          let toDateResult = dependencyMap.toDate();
         } else {
-          toDateResult = obj4.toDate();
+          toDateResult = importAll.toDate();
         }
         obj.minimumDate = toDateResult;
         obj.maximumDate = noop.toDate();
         obj.mode = openLazyResult;
-        openLazyResult = obj2.openLazy(time(c3[14])(c3[27], c3.paths), "DatePicker", obj);
-        obj5 = dependencyMap;
-        const tmp8 = time(c3[14])(c3[27], c3.paths);
+        openLazyResult = obj2.openLazy(time(paths[14])(paths[27], paths.paths), "DatePicker", obj);
+        const tmp8 = time(paths[14])(paths[27], paths.paths);
       }
     },
     disabled

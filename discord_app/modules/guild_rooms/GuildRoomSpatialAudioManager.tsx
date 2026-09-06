@@ -1,4 +1,5 @@
 // discord_app/modules/guild_rooms/GuildRoomSpatialAudioManager.tsx
+import GuildRoomsExperiment from "GuildRoomsExperiment.tsx";
 import AudioActionCreatorsDefault from "../../actions/AudioActionCreators.tsx";
 import GuildRoomSpatialAudio from "GuildRoomSpatialAudio.tsx";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
@@ -11,7 +12,6 @@ import RTCConnectionStore from "../../stores/RTCConnectionStore.tsx";
 import GuildRoomStore from "GuildRoomStore.tsx";
 import AutomaticLifecycleManager from "../../lib/AutomaticLifecycleManager.tsx";
 
-const GuildRoomsExperiment = tmp(4760);
 require = fn;
 class GuildRoomSpatialAudioManager extends tmp2 {
   constructor() {
@@ -107,6 +107,7 @@ prototype["apply"] = function apply() {
               );
               continue;
             }
+            tmp2 = entries[Symbol.iterator]();
           });
           const obj3 = require("GuildRoomSpatialAudio");
         }

@@ -164,7 +164,8 @@ export default function UserSettingsChangeUsername() {
           const tmp34 = first1;
         }
         user.discriminator = tmp34;
-        closure_129_0 = yield closure_2_2(6984).saveAccountChanges(user, { close: false });
+        yield closure_2_2(6984).saveAccountChanges(user, { close: false });
+        closure_129_0 = value;
         if (!closure_129_0.ok) {
           const v6OrEarlierAPIError = new closure_0(1272).V6OrEarlierAPIError(closure_129_0);
           closure_129_1 = v6OrEarlierAPIError;
@@ -265,7 +266,7 @@ export default function UserSettingsChangeUsername() {
       alwaysBounceVertical: false,
       children: null,
     };
-    let tmp32Result = tmp32(tmp2(tmp3[22]).TextInput, obj1);
+    let tmp32Result = closure_11(tmp2(tmp3[22]).TextInput, obj1);
     const items4 = [closure_11(tmp5(tmp3[23]), {})];
     obj3 = { style: tmp.container, children: null };
     obj4 = { children: null };
@@ -309,8 +310,8 @@ export default function UserSettingsChangeUsername() {
     if (!hasUniqueUsernameResult2) {
       obj7 = { style: tmp.divider, children: null };
       const obj8 = { style: tmp.dividerInner };
-      obj7.children = tmp32(tmp36, obj8);
-      tmp32Result = tmp32(tmp36, obj7);
+      obj7.children = closure_11(tmp36, obj8);
+      tmp32Result = closure_11(tmp36, obj7);
     }
     items6[1] = tmp32Result;
     const hasUniqueUsernameResult3 = stateFromStores.hasUniqueUsername();

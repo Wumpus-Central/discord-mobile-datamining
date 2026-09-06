@@ -3,7 +3,7 @@ import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 import UserRequiredActionStore from "../../stores/UserRequiredActionStore.tsx";
 
 const require = fn;
-let closure_6 = async function _openSafetyFlow(arg0, value) {
+let closure_6 = async function _openSafetyFlow() {
   if (c7 === 2) {
     c7 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -29,7 +29,7 @@ let closure_6 = async function _openSafetyFlow(arg0, value) {
           return obj;
         } else {
           closure_3 = tmp3;
-          closure_2 = tmp7;
+          dependencyMap = tmp7;
           let requiredAction;
           let obj1 = closure_0;
           if (closure_0 === undefined) {
@@ -129,16 +129,16 @@ let closure_6 = async function _openSafetyFlow(arg0, value) {
               }
             }
             closure_130_2 = (function getInitialScreenForTask(task_type) {
-              if (task_type.task_type === closure_1_0(closure_1_2[3]).TaskType.AGE_VERIFICATION) {
-                let UPDATE_APP = tmp(tmp2[3]).SafetyFlowScreens.AGE_VERIFICATION;
-              } else if (task_type.task_type === tmp(tmp2[3]).TaskType.PARENTAL_CONSENT_CONNECTION) {
-                UPDATE_APP = tmp(tmp2[3]).SafetyFlowScreens.PARENTAL_CONSENT_CONNECTION;
-              } else if (task_type.task_type === tmp(tmp2[3]).TaskType.APP_STORE_PARENTAL_REVOCATION) {
-                UPDATE_APP = tmp(tmp2[3]).SafetyFlowScreens.APP_STORE_PARENTAL_REVOCATION;
-              } else if (null != tmp(tmp2[3]).TASK_TYPE_TO_SCREENS[task_type.task_type]) {
-                UPDATE_APP = tmp(tmp2[3]).SafetyFlowScreens.OVERVIEW;
+              if (task_type.task_type === closure_1_0(dependencyMap[3]).TaskType.AGE_VERIFICATION) {
+                let UPDATE_APP = closure_1_0(dependencyMap[3]).SafetyFlowScreens.AGE_VERIFICATION;
+              } else if (task_type.task_type === closure_1_0(dependencyMap[3]).TaskType.PARENTAL_CONSENT_CONNECTION) {
+                UPDATE_APP = closure_1_0(dependencyMap[3]).SafetyFlowScreens.PARENTAL_CONSENT_CONNECTION;
+              } else if (task_type.task_type === closure_1_0(dependencyMap[3]).TaskType.APP_STORE_PARENTAL_REVOCATION) {
+                UPDATE_APP = closure_1_0(dependencyMap[3]).SafetyFlowScreens.APP_STORE_PARENTAL_REVOCATION;
+              } else if (null != closure_1_0(dependencyMap[3]).TASK_TYPE_TO_SCREENS[task_type.task_type]) {
+                UPDATE_APP = closure_1_0(dependencyMap[3]).SafetyFlowScreens.OVERVIEW;
               } else {
-                UPDATE_APP = tmp(tmp2[3]).SafetyFlowScreens.UPDATE_APP;
+                UPDATE_APP = closure_1_0(dependencyMap[3]).SafetyFlowScreens.UPDATE_APP;
               }
               return UPDATE_APP;
             })(closure_130_1);

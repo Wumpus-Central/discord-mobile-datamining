@@ -138,7 +138,6 @@ SubscriptionRecord["createFromServer"] = function createFromServer(id) {
   }
   obj.canceledAt = date1;
   const date = new Date(id.created_at);
-  const tmp = SubscriptionRecord;
   obj.currentPeriodStart = new Date(id.current_period_start);
   const date2 = new Date(id.current_period_start);
   obj.currentPeriodEnd = new Date(id.current_period_end);
@@ -204,7 +203,7 @@ SubscriptionRecord["createFromServer"] = function createFromServer(id) {
     fromServer = GooglePlayPriceChangeRecord.createFromServer(id.price_change);
   }
   obj.priceChange = fromServer;
-  return new tmp(obj);
+  return new SubscriptionRecord(obj);
 };
 prototype["getCurrentSubscriptionPlanIdForGroup"] = function getCurrentSubscriptionPlanIdForGroup(items) {
   items = this.items;

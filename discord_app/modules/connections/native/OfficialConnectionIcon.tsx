@@ -1,5 +1,6 @@
 // discord_app/modules/connections/native/OfficialConnectionIcon.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import utils_ColorUtils from "../../../../discord_common/js/shared/utils/ColorUtils.tsx";
 import native from "../../../design/void/native.tsx";
 import RoleIconUtils from "../../guild_boosting/native/RoleIconUtils.tsx";
 import _modDef11567 from "../../../../_runtime/metro/11567__.js";
@@ -57,10 +58,9 @@ export default function OfficialConnectionIcon(arg0) {
     roleColor = React4;
   }
   let PRIMARY_630 = nativeDefault.unsafe_rawColors.WHITE;
-  tmp2(1091);
-  const tmp2Result = tmp2(1091);
+  const tmp2Result = utils_ColorUtils;
   if (tmp2Result.getDarkness(hex2intResult) < 0.3) {
-    PRIMARY_630 = tmp7(576).unsafe_rawColors.PRIMARY_630;
+    PRIMARY_630 = nativeDefault.unsafe_rawColors.PRIMARY_630;
   }
   obj1 = { style: null, children: null };
   const items1 = [style, size];

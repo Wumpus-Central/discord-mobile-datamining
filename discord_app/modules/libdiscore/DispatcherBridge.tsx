@@ -124,11 +124,10 @@ class DispatcherBridge {
                 ({ metrics, storeResults } = iter.value);
                 const items = [];
                 for (const item10056 of storeResults) {
-                  let tmp19 = item10056;
                   if (null != item10056.error) {
-                    let handleStoreErrorResult = obj.handleStoreError(tmp19, arg0.type);
+                    let handleStoreErrorResult = obj.handleStoreError(item10056, arg0.type);
                   } else {
-                    let arr = items.push(tmp19);
+                    let arr = items.push(item10056);
                   }
                   continue;
                 }
@@ -331,7 +330,7 @@ prototype["handleStoreError"] = function handleStoreError(storeToken, type) {
     throw error1;
   } else {
     const _HermesInternal2 = HermesInternal;
-    obj2.warn("Store: " + name + " had unexpected error in Rust implementation, disabling moving forward");
+    logger.warn("Store: " + name + " had unexpected error in Rust implementation, disabling moving forward");
     if (value != null) {
       const result1 = value.disableDualReadValidation();
     }
@@ -340,7 +339,6 @@ prototype["handleStoreError"] = function handleStoreError(storeToken, type) {
     extra: { actionType: type, storeName: name, storeMode: mode },
     tags: { source: "libdiscore", errorKind: "store_dispatch" },
   };
-  obj2 = logger;
 };
 prototype["withStoreToken"] = function withStoreToken(storeToken, type, fn) {
   const tokenToStore = this.tokenToStore;

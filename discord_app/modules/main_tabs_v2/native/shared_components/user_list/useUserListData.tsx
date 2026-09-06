@@ -68,11 +68,11 @@ function isMatch(arg0, arg1, arg2) {
           return true;
         } else {
           const joined = closure_0.join(" ");
-          let startsWithResult = joined.startsWith(tmp);
+          let startsWithResult = joined.startsWith(closure_0);
           if (!startsWithResult) {
             let hasItem = closure_2;
             if (closure_2) {
-              hasItem = joined.includes(tmp);
+              hasItem = joined.includes(closure_0);
             }
             startsWithResult = hasItem;
           }
@@ -208,7 +208,7 @@ function parseUserSearchResults(affinitySuggestionsLimit) {
   obj.items = valueResult;
   const items10 = [obj, , , , , , ,];
   const obj1 = { title: null, items: null };
-  const intl2 = tmp6(1114).intl;
+  const intl2 = util.intl;
   obj1.title = intl2.formatToPlainString(util.t.zsVtft, { pendingRequestNumber: items1.length });
   if (!withFriendRequests) {
     items1 = [];
@@ -228,7 +228,7 @@ function parseUserSearchResults(affinitySuggestionsLimit) {
   }
   items10[4] = { title: null, items: items4 };
   obj3 = { title: null, items: null };
-  const intl3 = tmp6(1114).intl;
+  const intl3 = util.intl;
   obj3.title = intl3.formatToPlainString(util.t["DYMZ/p"], { count: items5.length });
   if (!withFriendSuggestions) {
     items5 = [];
@@ -236,7 +236,7 @@ function parseUserSearchResults(affinitySuggestionsLimit) {
   obj3.items = items5;
   items10[5] = obj3;
   const obj5 = { title: null, items: null };
-  const intl4 = tmp6(1114).intl;
+  const intl4 = util.intl;
   obj5.title = intl4.string(util.t.TdEu5X);
   if (!withFriends) {
     items6 = [];
@@ -244,7 +244,7 @@ function parseUserSearchResults(affinitySuggestionsLimit) {
   obj5.items = items6;
   items10[6] = obj5;
   const obj6 = { title: null, items: null };
-  const intl5 = tmp6(1114).intl;
+  const intl5 = util.intl;
   obj6.title = intl5.string(util.t.y29JXs);
   if (!withGuildMembers) {
     found = [];
@@ -291,16 +291,16 @@ class UserSearch {
           items.push(closure_1_16.FriendRequests);
           const push = items.push;
           if (spam.isSpam(tmp3.id)) {
-            push(tmp16.FriendRequestsSpam);
+            push(closure_1_16.FriendRequestsSpam);
           } else {
-            push(tmp16.FriendRequestsIncoming);
+            push(closure_1_16.FriendRequestsIncoming);
           }
-        } else if (tmp4.PENDING_OUTGOING === type) {
+        } else if (constants.PENDING_OUTGOING === type) {
           items.push(closure_1_16.FriendRequests);
           items.push(closure_1_16.FriendRequestsOutgoing);
-        } else if (tmp4.SUGGESTION === type) {
+        } else if (constants.SUGGESTION === type) {
           items.push(closure_1_16.FriendSuggestions);
-        } else if (tmp4.FRIEND === type) {
+        } else if (constants.FRIEND === type) {
           if (tmp2 > 0) {
             items.push(closure_1_16.AffinitySuggestions);
           }
@@ -647,6 +647,7 @@ prototype["initializeUsersFromCache"] = function initializeUsersFromCache() {
       let updateUserCachedResult = self.updateUserCached(tmp2);
       continue;
     }
+    tmp = result[Symbol.iterator]();
   });
 };
 prototype["updateUser"] = function updateUser(id) {

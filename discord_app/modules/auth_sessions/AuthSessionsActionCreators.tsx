@@ -8,7 +8,8 @@ let closure_5 = async function _fetchAuthSessions() {
   closure_1 = tmp2;
   closure_0 = tmp5;
   const HTTP = HTTPUtils.HTTP;
-  closure_128_0 = await HTTP.get({ url: constants.AUTH_SESSIONS, rejectWithError: false });
+  await HTTP.get({ url: constants.AUTH_SESSIONS, rejectWithError: false });
+  closure_128_0 = value;
   const body = closure_128_0.body;
   if (body != null) {
     const user_sessions = body.user_sessions;
@@ -22,7 +23,7 @@ let closure_5 = async function _fetchAuthSessions() {
   }
   return closure_128_0;
 };
-let closure_6 = async function _logOutSessions(arg0, value) {
+let closure_6 = async function _logOutSessions(arg0) {
   if (c4 === 2) {
     c4 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -50,18 +51,18 @@ let closure_6 = async function _logOutSessions(arg0, value) {
         } else {
           closure_2 = tmp3;
           closure_1 = tmp2;
-          closure_129_0 = closure_0;
+          closure_129_0 = length;
           let HTTP;
           closure_129_1 = undefined;
           const _Array = Array;
-          if (Array.isArray(closure_0)) {
-            let items = arr2;
-            if (num2 === arr2.length) {
+          if (Array.isArray(length)) {
+            let items = length;
+            if (num2 === length.length) {
               c4 = 3;
               return { value: "HermesInternal", done: null };
             }
           } else {
-            items = [arr2];
+            items = [length];
             closure_129_0 = items;
           }
           HTTP = HTTPUtils.HTTP;

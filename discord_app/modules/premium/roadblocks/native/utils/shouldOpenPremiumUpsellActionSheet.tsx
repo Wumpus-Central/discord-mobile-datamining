@@ -1,6 +1,8 @@
 // discord_app/modules/premium/roadblocks/native/utils/shouldOpenPremiumUpsellActionSheet.tsx
 import ConstantsIOS from "../../../../../ConstantsIOS.tsx";
 import openPremiumUpsellActionSheetDefault from "openPremiumUpsellActionSheet.tsx";
+import EntitlementFeatureNames from "../../../../../../discord_common/js/shared/shared-constants/EntitlementFeatureNames.tsx";
+import MobileStickerPickerUpsellRestyleExperiment from "../../../experiments/MobileStickerPickerUpsellRestyleExperiment.tsx";
 import size from "../../../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting(
@@ -10,26 +12,28 @@ const result = size.fileFinishedImporting(
 export default function maybeOpenPremiumUpsellActionSheet(initialUpsellKey) {
   initialUpsellKey = initialUpsellKey.initialUpsellKey;
   if (ConstantsIOS.UpsellTypes.UPLOAD === initialUpsellKey) {
-    openPremiumUpsellActionSheetDefault(tmp(7853).EntitlementFeatureNames.INCREASED_FILE_UPLOAD_SIZE);
+    openPremiumUpsellActionSheetDefault(EntitlementFeatureNames.EntitlementFeatureNames.INCREASED_FILE_UPLOAD_SIZE);
     return true;
-  } else if (tmp(1093).UpsellTypes.GLOBAL_EMOJI === initialUpsellKey) {
-    openPremiumUpsellActionSheetDefault(tmp(7853).EntitlementFeatureNames.EMOJIS_EVERYWHERE);
+  } else if (ConstantsIOS.UpsellTypes.GLOBAL_EMOJI === initialUpsellKey) {
+    openPremiumUpsellActionSheetDefault(EntitlementFeatureNames.EntitlementFeatureNames.EMOJIS_EVERYWHERE);
     return true;
-  } else if (tmp(1093).UpsellTypes.ANIMATED_EMOJI === initialUpsellKey) {
-    openPremiumUpsellActionSheetDefault(tmp(7853).EntitlementFeatureNames.ANIMATED_EMOJIS);
+  } else if (ConstantsIOS.UpsellTypes.ANIMATED_EMOJI === initialUpsellKey) {
+    openPremiumUpsellActionSheetDefault(EntitlementFeatureNames.EntitlementFeatureNames.ANIMATED_EMOJIS);
     return true;
-  } else if (tmp(1093).UpsellTypes.GLOBAL_STICKER === initialUpsellKey) {
-    let flag4 = tmp(9321).getMobileStickerPickerUpsellRestyleEnabled("native.shouldOpenPremiumUpsellActionSheet");
+  } else if (ConstantsIOS.UpsellTypes.GLOBAL_STICKER === initialUpsellKey) {
+    let flag4 = MobileStickerPickerUpsellRestyleExperiment.getMobileStickerPickerUpsellRestyleEnabled(
+      "native.shouldOpenPremiumUpsellActionSheet",
+    );
     if (flag4) {
-      openPremiumUpsellActionSheetDefault(tmp(7853).EntitlementFeatureNames.STICKERS_EVERYWHERE);
+      openPremiumUpsellActionSheetDefault(EntitlementFeatureNames.EntitlementFeatureNames.STICKERS_EVERYWHERE);
       flag4 = true;
     }
     return flag4;
-  } else if (tmp(1093).UpsellTypes.SOUNDBOARD === initialUpsellKey) {
-    openPremiumUpsellActionSheetDefault(tmp(7853).EntitlementFeatureNames.SOUNDBOARD_EVERYWHERE);
+  } else if (ConstantsIOS.UpsellTypes.SOUNDBOARD === initialUpsellKey) {
+    openPremiumUpsellActionSheetDefault(EntitlementFeatureNames.EntitlementFeatureNames.SOUNDBOARD_EVERYWHERE);
     return true;
-  } else if (tmp(1093).UpsellTypes.STREAM_HIGH_QUALITY === initialUpsellKey) {
-    openPremiumUpsellActionSheetDefault(tmp(7853).EntitlementFeatureNames.STREAM_HIGH_QUALITY);
+  } else if (ConstantsIOS.UpsellTypes.STREAM_HIGH_QUALITY === initialUpsellKey) {
+    openPremiumUpsellActionSheetDefault(EntitlementFeatureNames.EntitlementFeatureNames.STREAM_HIGH_QUALITY);
     return true;
   } else {
     return false;

@@ -71,11 +71,11 @@ export default function ShareScreen(sharedContent) {
       noop.useMemo(() => {
         const items = [];
         if (null != sharedContent.targetUserId) {
-          let obj = { type: "user", id: tmp.targetUserId };
+          let obj = { type: "user", id: sharedContent.targetUserId };
           items.push(obj);
         }
         if (null != sharedContent.targetChannelId) {
-          obj = { type: "channel", id: tmp.targetChannelId };
+          obj = { type: "channel", id: sharedContent.targetChannelId };
           items.push(obj);
         }
         return items;
@@ -116,7 +116,7 @@ export default function ShareScreen(sharedContent) {
   const items1 = [onClose, initialSelectedDestinations, sharedContent.attachments, first1];
   const items2 = [embed, isLoading, sharedContent.attachments];
   const callback1 = obj.useCallback(
-    asyncGeneratorStep(async (arg0, value) => {
+    asyncGeneratorStep(async () => {
       if (React === 2) {
         React = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -207,7 +207,7 @@ export default function ShareScreen(sharedContent) {
                   value: tmp3(tmp80[19])(
                     closure_128_0.map(
                       (() => {
-                        closure_0 = dependencyMap(function* (arg0, value) {
+                        closure_0 = dependencyMap(function* (arg0) {
                           if (c4 === 2) {
                             c4 = 3;
                             throw new TypeError("Generator functions may not be called on executing generators");
@@ -424,9 +424,8 @@ export default function ShareScreen(sharedContent) {
   }
   obj1.headerLeft = headerCloseButton;
   ({ headerLeftContainer: obj4.headerLeftContainerStyle, headerRightContainer: obj4.headerRightContainerStyle } = tmp);
-  const tmp21 = closure_18;
   const tmp22 = c6;
-  let tmp6 = length(noop.useState(false), 2);
+  const tmp6 = length(noop.useState(false), 2);
   let PX_8;
   if (tmp11Result1.isIOS()) {
     PX_8 = tmp16(tmp9[12]).space.PX_8;
@@ -478,6 +477,6 @@ export default function ShareScreen(sharedContent) {
   obj3.appEntryKey = sharedContent.appEntryKey;
   items3[2] = closure_16(tmp16Result, obj3);
   obj.children = items3;
-  obj4.children = tmp21(tmp22, obj);
+  obj4.children = closure_18(tmp22, obj);
   return closure_16(tmp11(tmp9[29]).SafeAreaProviderCompat, obj4);
 }

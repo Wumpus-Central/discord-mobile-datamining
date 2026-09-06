@@ -121,22 +121,22 @@ function sendRequest(method, signal, arg2, fn, fn2, cause) {
     promise.then(
       (ok) => {
         if (null != signal.retries) {
-          tmp.retries = +tmp.retries - 1;
-          if (+tmp.retries > 0) {
+          signal.retries = +signal.retries - 1;
+          if (+signal.retries > 0) {
             if (set.has(ok.status)) {
               if (typeof retry === "function") {
-                if (null != tmp.backoff) {
-                  let backoff = tmp.backoff;
+                if (null != signal.backoff) {
+                  let backoff = signal.backoff;
                 } else {
                   backoff = new signal(559)();
                 }
-                tmp.backoff = backoff;
+                signal.backoff = backoff;
                 let num5 = 0;
-                if (null != tmp.retried) {
-                  num5 = tmp.retried;
+                if (null != signal.retried) {
+                  num5 = signal.retried;
                 }
-                tmp.retried = num5 + 1;
-                const backoff2 = tmp.backoff;
+                signal.retried = num5 + 1;
+                const backoff2 = signal.backoff;
                 backoff2.fail(() =>
                   global(url.url).then(() =>
                     headers(closure_1_0, url, closure_1_2, closure_1_3, closure_1_4, closure_1_5),
@@ -173,7 +173,7 @@ function sendRequest(method, signal, arg2, fn, fn2, cause) {
           let parsed = parseInt(prop, 10);
           const _Number = Number;
           response.retryAfter = parsed;
-          prepareRequestResult(tmp, response);
+          prepareRequestResult(signal, response);
           method = false;
           function interceptRetry(arg0, interceptResponse) {
             headers = {};
@@ -196,8 +196,8 @@ function sendRequest(method, signal, arg2, fn, fn2, cause) {
             }
           }
           let interceptResponseResult;
-          if (tmp != null) {
-            const interceptResponse = tmp.interceptResponse;
+          if (signal != null) {
+            const interceptResponse = signal.interceptResponse;
             if (interceptResponse != null) {
               interceptResponseResult = interceptResponse(ok, interceptRetry, interceptCancel);
             }
@@ -205,7 +205,7 @@ function sendRequest(method, signal, arg2, fn, fn2, cause) {
           if (true !== interceptResponseResult) {
             let interceptResponse2Result;
             if (global != null) {
-              const interceptResponse2 = tmp44.interceptResponse;
+              const interceptResponse2 = global.interceptResponse;
               if (interceptResponse2 != null) {
                 interceptResponse2Result = interceptResponse2(ok, interceptRetry, interceptCancel, closure_9);
               }
@@ -214,7 +214,7 @@ function sendRequest(method, signal, arg2, fn, fn2, cause) {
               if (ok.ok) {
                 dependencyMap(response);
               } else {
-                if (tmp.oldFormErrors) {
+                if (signal.oldFormErrors) {
                   const body2 = response.body;
                   let code;
                   if (body2 != null) {
@@ -229,10 +229,10 @@ function sendRequest(method, signal, arg2, fn, fn2, cause) {
                   }
                   tmp17 = method;
                 }
-                if (tmp.rejectWithError) {
+                if (signal.rejectWithError) {
                   const response1 = {
                     method,
-                    url: tmp.url,
+                    url: signal.url,
                     status: null,
                     body: null,
                     text: null,
@@ -279,22 +279,22 @@ function sendRequest(method, signal, arg2, fn, fn2, cause) {
       },
       (code) => {
         if (null != signal.retries) {
-          tmp.retries = +tmp.retries - 1;
-          if (+tmp.retries > 0) {
+          signal.retries = +signal.retries - 1;
+          if (+signal.retries > 0) {
             if ("ABORTED" !== code.code) {
               if (typeof retry === "function") {
-                if (null != tmp.backoff) {
-                  let backoff = tmp.backoff;
+                if (null != signal.backoff) {
+                  let backoff = signal.backoff;
                 } else {
                   backoff = new BackoffDefault();
                 }
-                tmp.backoff = backoff;
+                signal.backoff = backoff;
                 let num2 = 0;
-                if (null != tmp.retried) {
-                  num2 = tmp.retried;
+                if (null != signal.retried) {
+                  num2 = signal.retried;
                 }
-                tmp.retried = num2 + 1;
-                const backoff2 = tmp.backoff;
+                signal.retried = num2 + 1;
+                const backoff2 = signal.backoff;
                 backoff2.fail(() =>
                   global(url.url).then(() =>
                     headers(closure_1_0, url, closure_1_2, closure_1_3, closure_1_4, closure_1_5),
@@ -458,14 +458,14 @@ function cleanupRequestEntry(url, arg1) {
       const queue1 = value.queue;
       let arr = queue1.shift();
       if (null == arr) {
-        obj2.verbose("rateLimitExpirationHandler: removing key for", url);
+        logger.verbose("rateLimitExpirationHandler: removing key for", url);
         obj.delete(url);
       } else {
-        obj2.verbose("rateLimitExpirationHandler: moving to next record for ", url);
+        logger.verbose("rateLimitExpirationHandler: moving to next record for ", url);
         arr();
       }
     } else {
-      obj2.verbose("rateLimitExpirationHandler: rate limit for", url, "expired, but record was already removed");
+      logger.verbose("rateLimitExpirationHandler: rate limit for", url, "expired, but record was already removed");
     }
   }
 }

@@ -17,7 +17,7 @@ function loadForumPostData() {
   }
   return applyArgumentsResult;
 }
-let closure_13 = async function _loadForumPostData(arg0, value) {
+let closure_13 = async function _loadForumPostData() {
   if (c4 === 2) {
     c4 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -89,7 +89,7 @@ function loadForumPostDataForChannelId() {
   }
   return applyArgumentsResult;
 }
-let closure_15 = async function _loadForumPostDataForChannelId(arg0, value) {
+let closure_15 = async function _loadForumPostDataForChannelId(arg0) {
   if (c6 === 2) {
     c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -125,11 +125,11 @@ let closure_15 = async function _loadForumPostDataForChannelId(arg0, value) {
           c4 = 2;
           if (0 === nextBatch.length) {
             c4 = 0;
-            size.finishRequesting(tmp54, nextBatch);
+            size.finishRequesting(closure_0, nextBatch);
             c6 = 3;
             return { value: "HermesInternal", done: null };
           } else {
-            channel = channel.getChannel(tmp54);
+            channel = channel.getChannel(closure_0);
             let guild_id;
             if (channel != null) {
               guild_id = channel.guild_id;
@@ -137,12 +137,12 @@ let closure_15 = async function _loadForumPostDataForChannelId(arg0, value) {
             closure_129_2 = guild_id;
             if (null == guild_id) {
               c4 = 0;
-              size.finishRequesting(tmp54, nextBatch);
+              size.finishRequesting(closure_0, nextBatch);
               c6 = 3;
               return { value: "HermesInternal", done: null };
             } else {
               const HTTP = require("HTTPUtils").HTTP;
-              const request = { url: Endpoints.FORUM_POSTS(tmp54), body: null, rejectWithError: true };
+              const request = { url: Endpoints.FORUM_POSTS(closure_0), body: null, rejectWithError: true };
               const obj1 = { thread_ids: nextBatch };
               request.body = obj1;
               c5 = 3;
@@ -414,4 +414,5 @@ export const preloadForumThreads = function preloadForumThreads(channel) {
     const _setTimeout = setTimeout;
     timeout = setTimeout(loadForumPostData, 0);
   }
+  const arr = computeThreadIdsSnapshot(channel.id);
 };

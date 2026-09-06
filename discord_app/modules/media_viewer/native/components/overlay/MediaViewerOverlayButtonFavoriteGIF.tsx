@@ -3,6 +3,7 @@ import util from "../../../../../intl/index.native.tsx";
 import frecency_user_settings from "../../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/frecency_user_settings.tsx";
 import ToastActionCreatorsDefault from "../../../../toast/native/ToastActionCreators.tsx";
 import GIFPickerActionCreators from "../../../../../actions/GIFPickerActionCreators.tsx";
+import GIFPickerUtils from "../../../../../utils/GIFPickerUtils.tsx";
 import GifIcon from "../../../../../design/components/Icon/native/redesign/generated/GifIcon.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
@@ -36,7 +37,7 @@ export default noop.memo(function GIFFavButton(source) {
   items[7] = uri;
   const callback = noop.useCallback(() => {
     if (isFavoriteGIF) {
-      let tmpResult = tmp(10366);
+      let tmpResult = GIFPickerActionCreators;
       tmpResult.removeFavoriteGIF(uri);
       let obj = { key: "REMOVED_FROM_FAVORITES", content: null, IconComponent: null };
       const intl2 = util.intl;
@@ -44,7 +45,7 @@ export default noop.memo(function GIFFavButton(source) {
       obj.IconComponent = GifIcon.GifIcon;
       ToastActionCreatorsDefault.open(obj);
     } else {
-      tmpResult = tmp(10368);
+      tmpResult = GIFPickerUtils;
       obj = { providerName: null, thumbnail: null };
       ({ embedProviderName: obj2.providerName, thumbnail: obj2.thumbnail } = source);
       const gIFThumbnailForFavorite = tmpResult.getGIFThumbnailForFavorite(obj);
@@ -89,10 +90,11 @@ export default noop.memo(function GIFFavButton(source) {
     obj = { color: null, size: "md" };
     YELLOW_300 = tmp5(YELLOW_300[12]).unsafe_rawColors.YELLOW_300;
     obj.color = YELLOW_300;
-    let tmp4Result = tmp4(StarIcon, obj);
+    let tmp4Result = <StarIcon color={null} size="md" />;
   } else {
-    tmp4Result = tmp4(StarIcon(YELLOW_300[13]).StarOutlineIcon, { color: "interactive-text-default", size: "md" });
+    tmp4Result = jsx(StarIcon(YELLOW_300[13]).StarOutlineIcon, { color: "interactive-text-default", size: "md" });
   }
   obj.icon = tmp4Result;
-  tmp4Result = tmp4(uri(YELLOW_300[10]), obj);
+  tmp4Result = jsx(uri(YELLOW_300[10]), { accessibilityLabel: stringResult, onPress: callback, icon: null });
+  const tmp6 = uri(YELLOW_300[10]);
 });

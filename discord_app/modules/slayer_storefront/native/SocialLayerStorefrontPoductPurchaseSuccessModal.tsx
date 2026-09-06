@@ -107,11 +107,11 @@ function PurchaseSuccessModalBase(sku) {
   const memo = obj3.useMemo(() => {
     if (isScreenLandscape) {
       if (null != first) {
-        if (tmp2.landscape === tmp) {
+        if (first.landscape === tmp) {
           const _Math = Math;
           const _Math2 = Math;
           const _Math3 = Math;
-          return Math.max(120, Math.min(250, Math.floor(tmp2.height - 32)));
+          return Math.max(120, Math.min(250, Math.floor(first.height - 32)));
         }
       }
       return null;
@@ -197,7 +197,7 @@ function PurchaseSuccessModalBase(sku) {
     children: body,
   });
   obj2.children = items9;
-  let tmp22Result = tmp22(tmp2(tmp3[11]).View, obj2);
+  let tmp22Result = closure_16(tmp2(tmp3[11]).View, obj2);
   const items11 = [tmp.footer];
   let footerLandscape = isScreenLandscape;
   if (isScreenLandscape) {
@@ -216,7 +216,7 @@ function PurchaseSuccessModalBase(sku) {
     items12[1] = textLandscape3;
     obj4.style = items12;
     obj4.children = finePrint;
-    tmp23Result = tmp23(tmp4(tmp3[19]).Text, obj4);
+    tmp23Result = closure_15(tmp4(tmp3[19]).Text, obj4);
   }
   const items13 = [tmp23Result];
   const items14 = [tmp.cta];
@@ -240,7 +240,7 @@ function PurchaseSuccessModalBase(sku) {
   obj5.children = closure_15(sku(callback1[20]).Button, obj6);
   items13[1] = closure_15(closure_8, obj5);
   obj3.children = items13;
-  tmp22Result = tmp22(tmp25, obj3);
+  tmp22Result = closure_16(closure_8, obj3);
   const obj7 = { style: null, children: null };
   const items15 = [tmp.root, memo2];
   obj7.style = items15;
@@ -250,7 +250,7 @@ function PurchaseSuccessModalBase(sku) {
     const obj9 = { uri: memo1 };
     obj8.source = obj9;
     obj8.style = tmp.backdropImage;
-    tmp23Result = tmp23(first, obj8);
+    tmp23Result = closure_15(first, obj8);
   }
   const items16 = [tmp23Result, , ,];
   obj10 = {
@@ -301,7 +301,7 @@ function PurchaseSuccessModalBase(sku) {
   let tmp23Result1 = null != memo;
   if (tmp23Result1) {
     const obj15 = { sku, size: memo };
-    tmp23Result1 = tmp23(tmp2(tmp3[26]), obj15);
+    tmp23Result1 = closure_15(tmp2(tmp3[26]), obj15);
   }
   obj14.children = tmp23Result1;
   const items20 = [closure_15(require("ReanimatedRexport").View, obj14)];
@@ -310,7 +310,7 @@ function PurchaseSuccessModalBase(sku) {
     const obj16 = { style: tmp.contentColumnLandscape, children: null };
     const items21 = [tmp22Result, tmp22Result];
     obj16.children = items21;
-    tmp22Result1 = tmp22(tmp25, obj16);
+    tmp22Result1 = closure_16(closure_8, obj16);
   }
   items20[1] = tmp22Result1;
   obj13.children = items20;
@@ -558,7 +558,7 @@ export const SocialLayerStorefrontProductSelfPurchaseSuccessModal =
     if (hasAlreadyLinked) {
       let stringResult = string(tmp2(tmp3[21]).t["5glWta"]);
     } else {
-      stringResult = string(tmp7(tmp3[34]).bRPsNX);
+      stringResult = string(analyticsLocations(tmp3[34]).bRPsNX);
     }
     let tmp21 = !hasAlreadyLinked;
     if (!hasAlreadyLinked) {
@@ -659,8 +659,8 @@ export const SocialLayerStorefrontProductSelfPurchaseSuccessModal =
     obj1.ctaLabel = stringResult1;
     let tmp27Result;
     if (tmp21) {
-      const obj2 = { size: "xs", color: tmp7(tmp3[10]).colors.WHITE, style: tmp.linkAccountIcon };
-      tmp27Result = tmp27(tmp2(tmp3[35]).ExperimentalGameControllerLinkIcon, obj2);
+      const obj2 = { size: "xs", color: analyticsLocations(tmp3[10]).colors.WHITE, style: tmp.linkAccountIcon };
+      tmp27Result = closure_15(tmp2(tmp3[35]).ExperimentalGameControllerLinkIcon, obj2);
     }
     obj1.ctaIcon = tmp27Result;
     obj1.ctaLoading = !fetched;

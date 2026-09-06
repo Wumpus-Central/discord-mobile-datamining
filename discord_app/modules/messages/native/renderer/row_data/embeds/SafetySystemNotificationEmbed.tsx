@@ -1,7 +1,9 @@
 // discord_app/modules/messages/native/renderer/row_data/embeds/SafetySystemNotificationEmbed.tsx
 import _mod17 from "../../../../../../../_runtime/metro/00017__.js";
 import Constants from "../../../../../../Constants.tsx";
+import util from "../../../../../../intl/index.native.tsx";
 import _modDef4153 from "../../../../../../../_runtime/metro/04153__.js";
+import renderer_EmbedUtils from "../../EmbedUtils.tsx";
 import SafetyHubUtils from "../../../../../safety_hub/SafetyHubUtils.tsx";
 import size from "../../../../../../../_runtime/metro/00002__.js";
 
@@ -34,7 +36,7 @@ export const createSafetySystemNotificationEmbed = function createSafetySystemNo
             if (null != parseMessageForPropsResult.ctas) {
               let mapCtaToNativeDataResult;
               if (null != parseMessageForPropsResult.ctas[0]) {
-                let tmp6Result = tmp6(8418);
+                let tmp6Result = SafetyHubUtils;
                 mapCtaToNativeDataResult = tmp6Result.mapCtaToNativeData(
                   parseMessageForPropsResult.ctas[0],
                   parseMessageForPropsResult.learn_more_link,
@@ -43,7 +45,7 @@ export const createSafetySystemNotificationEmbed = function createSafetySystemNo
               }
               let mapCtaToNativeDataResult1;
               if (null != parseMessageForPropsResult.ctas[1]) {
-                tmp6Result = tmp6(8418);
+                tmp6Result = SafetyHubUtils;
                 mapCtaToNativeDataResult1 = tmp6Result.mapCtaToNativeData(
                   parseMessageForPropsResult.ctas[1],
                   parseMessageForPropsResult.learn_more_link,
@@ -59,7 +61,7 @@ export const createSafetySystemNotificationEmbed = function createSafetySystemNo
             }
             obj = {
               titleText: str,
-              titleIcon: tmp6(7946).getAssetUriForEmbed(
+              titleIcon: renderer_EmbedUtils.getAssetUriForEmbed(
                 Image.resolveAssetSource(importDefault("danger" === parseMessageForPropsResult.icon ? 8589 : 5036)),
               ),
               subtitleText: null,
@@ -72,16 +74,16 @@ export const createSafetySystemNotificationEmbed = function createSafetySystemNo
               secondaryCtaKey: null,
               footerTheme: null,
             };
-            const intl = tmp6(1114).intl;
+            const intl = util.intl;
             let num = parseMessageForPropsResult.timestamp;
             if (num == null) {
               num = 0;
             }
             obj = { daysAgo: null };
-            const tmp6Result1 = tmp6(7946);
+            const tmp6Result1 = renderer_EmbedUtils;
             const obj7 = _modDef4153();
             obj.daysAgo = obj7.diff(_modDef4153.unix(num), "days");
-            obj.subtitleText = intl.formatToPlainString(tmp6(1114).t.eevFb6, obj);
+            obj.subtitleText = intl.formatToPlainString(util.t.eevFb6, obj);
             let str4 = parseMessageForPropsResult.body;
             if (str4 == null) {
               str4 = "";

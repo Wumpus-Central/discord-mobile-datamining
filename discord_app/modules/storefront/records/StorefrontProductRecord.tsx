@@ -94,7 +94,7 @@ prototype["fromServer"] = function fromServer(sku_ids) {
   }
   obj.hideBadge = hide_badge;
   if (typeof prototype === "function") {
-    obj = Object.create(tmp.prototype);
+    obj = Object.create(prototype.prototype);
     ({
       id: tmp17.id,
       skuIds: tmp17.skuIds,

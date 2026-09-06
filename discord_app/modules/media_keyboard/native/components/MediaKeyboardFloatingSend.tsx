@@ -38,7 +38,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/media_keyboard/native/components/MediaKeyboardFloatingSend.tsx");
 
 export default noop.memo(
-  noop.forwardRef(function MediaKeyboardFloatingSendInner(onSend, ref) {
+  noop.forwardRef(function MediaKeyboardFloatingSendInner(onSend, arg1) {
     ({ animatedIndex, channelId, draftType } = onSend);
     importDefault = undefined;
     bottom = undefined;
@@ -124,7 +124,7 @@ export default noop.memo(
       obj.colors = items;
       return obj;
     }, items2);
-    const imperativeHandle = obj.useImperativeHandle(ref, () => ({ setInsetFab }));
+    const imperativeHandle = obj.useImperativeHandle(arg1, () => ({ setInsetFab }));
     obj = { style: null, animatedProps, children: null };
     const items3 = [animatedStyle, tmp.sendContainer];
     obj.style = items3;

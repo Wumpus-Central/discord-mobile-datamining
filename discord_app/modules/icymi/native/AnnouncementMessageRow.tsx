@@ -49,12 +49,12 @@ let closure_14 = noop.memo((message) => {
   const effect = noop.useEffect(() => {
     let id;
     if (guild != null) {
-      id = tmp.id;
+      id = guild.id;
     }
     if (null != id) {
       let id1;
-      if (tmp != null) {
-        id1 = tmp.id;
+      if (guild != null) {
+        id1 = guild.id;
       }
       const membersById = GuildActionCreatorsDefault.requestMembersById(id1, message.author.id);
     }
@@ -111,13 +111,13 @@ let closure_14 = noop.memo((message) => {
     };
     ICYMIActionCreatorsDefault.feedItemActioned(obj);
     if (null != message) {
-      obj = { id: tmp3.id, timestamp: null };
+      obj = { id: message.id, timestamp: null };
       const _Date = Date;
       obj.timestamp = Date.now();
       const items = [obj];
       ICYMIActionCreatorsDefault.ackGravityItems(items);
       const tmpResult = ICYMIActionCreatorsDefault;
-      ICYMIShared.navigateToPost(channel.id, guild.id, tmp3.id);
+      ICYMIShared.navigateToPost(channel.id, guild.id, message.id);
     }
   }, items4);
   let tmpResult = tmp(tmp2[17]);

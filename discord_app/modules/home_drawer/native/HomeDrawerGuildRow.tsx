@@ -1,6 +1,8 @@
 // discord_app/modules/home_drawer/native/HomeDrawerGuildRow.tsx
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import useChannelName from "../../channel/useChannelName.tsx";
+import BellSlashIcon2 from "../../../design/components/Icon/native/redesign/generated/BellSlashIcon.tsx";
+import BellZIcon from "../../../design/components/Icon/native/redesign/generated/BellZIcon.tsx";
 import StreamingSubtitleDefault from "subtitles/StreamingSubtitle.tsx";
 import VoiceSubtitleDefault from "subtitles/VoiceSubtitle.tsx";
 import MentionSubtitleDefault from "subtitles/MentionSubtitle.tsx";
@@ -43,15 +45,15 @@ function GuildRowWrapper(guild) {
     if (null == stateFromStores1) {
       let obj = { isMuted: false, isTemporary: false };
     } else {
-      let tmp2 = null == tmp.end_time;
+      let tmp2 = null == stateFromStores1.end_time;
       if (!tmp2) {
         const _Date = Date;
-        const date = new Date(tmp.end_time);
+        const date = new Date(stateFromStores1.end_time);
         const _Date2 = Date;
         const date1 = new Date();
         tmp2 = date > date1;
       }
-      obj = { isMuted: tmp2, isTemporary: null != tmp.end_time };
+      obj = { isMuted: tmp2, isTemporary: null != stateFromStores1.end_time };
     }
     return obj;
   }, items2);
@@ -60,17 +62,17 @@ function GuildRowWrapper(guild) {
   const memo1 = noop.useMemo(() => {
     if (memo.isMuted) {
       let tmp3Result = dependencyMap;
-      if (tmp.isTemporary) {
-        tmp3Result = tmp3(13287);
+      if (memo.isTemporary) {
+        tmp3Result = BellZIcon;
         let BellSlashIcon = tmp3Result.BellZIcon;
       } else {
-        BellSlashIcon = tmp3(9059).BellSlashIcon;
+        BellSlashIcon = BellSlashIcon2.BellSlashIcon;
       }
     } else {
       let obj = { style: closure_3.guildName, children: null };
       obj = { variant: "text-md/medium", style: closure_3.guildNameText, lineClamp: 1, color: null, children: null };
       let str = "text-default";
-      if (tmp.isMuted) {
+      if (memo.isMuted) {
         str = "text-muted";
       }
       obj.color = str;
@@ -301,27 +303,27 @@ function GuildRowWrapper(guild) {
     if (obj.STREAMING === memo2) {
       obj = { guildId: guild.id, streamingUser };
       return collapsedCategories(StreamingSubtitleDefault, obj);
-    } else if (tmp2.VOICE === tmp) {
+    } else if (tmp2.VOICE === memo2) {
       obj = { guildId: guild.id, voiceUsers: voiceUsers1 };
       return collapsedCategories(VoiceSubtitleDefault, obj);
-    } else if (tmp2.MENTION === tmp) {
+    } else if (tmp2.MENTION === memo2) {
       let tmp20 = null;
       if (null != mentionChannelName) {
         const obj1 = { guild, channel: mentionChannel, channelName: tmp19, count: mentionChannelCount };
         tmp20 = collapsedCategories(MentionSubtitleDefault, obj1);
       }
       return tmp20;
-    } else if (tmp2.TYPING === tmp) {
+    } else if (tmp2.TYPING === memo2) {
       const obj2 = { guild, channel: stateFromStores2, channelName: typingChannelName, text };
       return collapsedCategories(TypingSubtitleDefault, obj2);
-    } else if (tmp2.UNREAD === tmp) {
+    } else if (tmp2.UNREAD === memo2) {
       let tmp5 = null;
       if (null != unreadChannelName) {
         obj = { guild, channel: unreadChannel, channelName: tmp4, count: unreadChannelCount };
         tmp5 = collapsedCategories(UnreadSubtitleDefault, obj);
       }
       return tmp5;
-    } else if (tmp2.NONE === tmp) {
+    } else if (tmp2.NONE === memo2) {
       return null;
     }
   }, items12);

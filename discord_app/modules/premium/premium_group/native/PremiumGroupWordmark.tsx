@@ -1,10 +1,11 @@
 // discord_app/modules/premium/premium_group/native/PremiumGroupWordmark.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import useToken from "../../../../design/tokens/native/useToken.tsx";
-import inlineStylesDefault from "../../../../../_runtime/08453_inlineStyles.js";
+import inlineStyles from "../../../../../_runtime/08453_inlineStyles.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-const inlineStyles = tmp2(8453);
+const inlineStylesDefault = inlineStyles;
+
 require = fn;
 const jsx = fn(21).jsx;
 let size = fn(2);

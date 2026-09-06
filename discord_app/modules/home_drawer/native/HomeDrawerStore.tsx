@@ -2,6 +2,7 @@
 import Constants from "../../../Constants.tsx";
 import _mod4184 from "../../../../_runtime/metro/04184__.js";
 import timing from "../../../design/animation/reanimated/timing/timing.tsx";
+import HomeDrawerAnimations from "HomeDrawerAnimations.tsx";
 import identity from "../../../../_runtime/metro/01244__.js";
 import size from "../../../../_runtime/metro/00002__.js";
 
@@ -30,17 +31,17 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
   obj.lastInteractionAt = { current: 0 };
   const obj5 = require("ReanimatedRexport");
   obj.isPanelTouchActive = require("ReanimatedRexport").makeMutable(false);
-  obj.setPanelX = function setPanelX(arg0) {
+  obj.setPanelX = function setPanelX(open) {
     const tmp = closure_1();
     ({ panelX, snapX, isOpenTarget, gestureState } = tmp);
-    if ((isOpenTarget.get() !== "open") === arg0) {
+    if ((isOpenTarget.get() !== "open") === open) {
       const result = isOpenTarget.set(tmp2);
       let num = 0;
       if (tmp2) {
         num = tmp.maxX;
       }
-      const result1 = panelX.set(timing.withTiming(num, tmp9(16024).HOME_DRAWER_SETTLE_TIMING));
-      const result2 = snapX.set(timing.withTiming(0, tmp9(16024).HOME_DRAWER_SETTLE_TIMING));
+      const result1 = panelX.set(timing.withTiming(num, HomeDrawerAnimations.HOME_DRAWER_SETTLE_TIMING));
+      const result2 = snapX.set(timing.withTiming(0, HomeDrawerAnimations.HOME_DRAWER_SETTLE_TIMING));
       const obj = {};
       const merged = Object.assign(gestureState.get());
       obj.active = false;

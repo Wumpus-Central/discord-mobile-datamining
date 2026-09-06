@@ -88,10 +88,10 @@ export default function BountiesAutoScrollIndicator(showProgressRing) {
         return closure_0;
       },
     };
-    let tmp5Result = tmp5(CircularProgress.AnimatedCircularProgress, obj3);
+    let tmp5Result = hasOwnProperty(CircularProgress.AnimatedCircularProgress, obj3);
   } else {
     const obj4 = { children: tmp6 };
-    tmp5Result = tmp5(BouncingArrow, obj4);
+    tmp5Result = hasOwnProperty(BouncingArrow, obj4);
   }
   obj2.children = tmp5Result;
   items[1] = hasOwnProperty(View, obj2);

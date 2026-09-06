@@ -1,9 +1,11 @@
 // discord_app/modules/app_launcher/native/screens/application_view/Header.tsx
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import AnalyticsUtilsDefault from "../../../../../utils/AnalyticsUtils.tsx";
+import ToastUtils from "../../../../toast/native/ToastUtils.tsx";
 import ReanimatedRexport from "../../../../reanimated/ReanimatedRexport.tsx";
 import ClipboardUtils from "../../../../../utils/ClipboardUtils.native.tsx";
 import useAvatarColorDefault from "../../../../avatar/useAvatarColor.tsx";
+import AppLauncherUtils from "../../../utils/AppLauncherUtils.tsx";
 import AppLauncherBackButtonDefault from "../../base_components/AppLauncherBackButton.tsx";
 import getApplicationInstallURL from "../../../../applications/getApplicationInstallURL.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
@@ -258,7 +260,7 @@ export default function Header(application) {
           obj.track(constants.APP_LAUNCHER_APPLICATION_LINK_COPIED, obj);
           const obj4 = getApplicationInstallURL;
           if (c2) {
-            obj = { applicationId: tmp2.id, referrerId: null };
+            obj = { applicationId: application.id, referrerId: null };
             id = undefined;
             if (id != null) {
               id = id.id;
@@ -266,13 +268,13 @@ export default function Header(application) {
             obj.referrerId = id;
             let activityLaunchURL = obj4.getActivityLaunchURL(obj);
           } else {
-            const obj1 = { id: tmp2.id };
-            let tmp4Result = tmp4(9289);
-            const merged = Object.assign(tmp4Result.getInstallAppProps(tmp2));
+            const obj1 = { id: application.id };
+            let tmp4Result = AppLauncherUtils;
+            const merged = Object.assign(tmp4Result.getInstallAppProps(application));
             activityLaunchURL = obj4.getApplicationInstallURL(obj1);
           }
           ClipboardUtils.copy(activityLaunchURL);
-          tmp4Result = tmp4(4258);
+          tmp4Result = ToastUtils;
           tmp4Result.presentLinkCopied();
         },
         accessibilityLabel: null,
@@ -284,7 +286,7 @@ export default function Header(application) {
       const obj13 = { application, onAddAppMenuClick };
       items7[1] = tmp13(tmp5(12133), obj13);
       obj11.children = items7;
-      tmp22Result = tmp22(tmp23, obj11);
+      tmp22Result = closure_9(tmp23, obj11);
     }
     tmpResult7 = tmp(9289);
   }

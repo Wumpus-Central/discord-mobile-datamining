@@ -19,7 +19,7 @@ function handleConnectionOpen() {
   if (typeof SETTINGS_MIGRATION_KEY === "function") {
     const _HermesInternal = HermesInternal;
     if (!Storage.get("AudioContextSettingsMigrated:" + tmp3)) {
-      const PreloadedUserSettingsActionCreators = tmp(1940).PreloadedUserSettingsActionCreators;
+      const PreloadedUserSettingsActionCreators = UserSettingsProtoActionCreators.PreloadedUserSettingsActionCreators;
       PreloadedUserSettingsActionCreators.updateAsync(
         "audioContextSettings",
         async (arg0) => {
@@ -89,7 +89,7 @@ function handleConnectionOpen() {
           const result1 = Storage.set(SETTINGS_MIGRATION_KEY(id.getId()), true);
           return flag;
         },
-        tmp(1940).UserSettingsDelay.AUTOMATED,
+        UserSettingsProtoActionCreators.UserSettingsDelay.AUTOMATED,
       );
     }
   } else {
@@ -135,9 +135,9 @@ function handleSetLocalMute(arg0) {
               tmp9[arg1].modifiedAt = String(Date.now());
               if (typeof DEFAULT_VOLUME_FOR_CONTEXT === "function") {
                 if (arg0 === constants.STREAM) {
-                  let USER2 = tmp5(9093).AudioSettingsDefaultVolumes.STREAM;
+                  let USER2 = AudioSettingsDefaultVolumes.AudioSettingsDefaultVolumes.STREAM;
                 } else {
-                  USER2 = tmp5(9093).AudioSettingsDefaultVolumes.USER;
+                  USER2 = AudioSettingsDefaultVolumes.AudioSettingsDefaultVolumes.USER;
                 }
                 if (!tmp21) {
                   delete tmp2[tmp];
@@ -163,9 +163,9 @@ function handleSetLocalMute(arg0) {
               }
             } else if (typeof DEFAULT_VOLUME_FOR_CONTEXT === "function") {
               if (arg0 === constants.STREAM) {
-                let USER = tmp5(9093).AudioSettingsDefaultVolumes.STREAM;
+                let USER = AudioSettingsDefaultVolumes.AudioSettingsDefaultVolumes.STREAM;
               } else {
-                USER = tmp5(9093).AudioSettingsDefaultVolumes.USER;
+                USER = AudioSettingsDefaultVolumes.AudioSettingsDefaultVolumes.USER;
               }
               obj = { muted: false, volume: USER };
               tmp11(obj);
@@ -213,9 +213,9 @@ function handleSetLocalSoundboardMute(userId) {
               tmp9[arg1].modifiedAt = String(Date.now());
               if (typeof DEFAULT_VOLUME_FOR_CONTEXT === "function") {
                 if (arg0 === constants.STREAM) {
-                  let USER2 = tmp5(9093).AudioSettingsDefaultVolumes.STREAM;
+                  let USER2 = AudioSettingsDefaultVolumes.AudioSettingsDefaultVolumes.STREAM;
                 } else {
-                  USER2 = tmp5(9093).AudioSettingsDefaultVolumes.USER;
+                  USER2 = AudioSettingsDefaultVolumes.AudioSettingsDefaultVolumes.USER;
                 }
                 if (!tmp21) {
                   delete tmp2[tmp];
@@ -241,9 +241,9 @@ function handleSetLocalSoundboardMute(userId) {
               }
             } else if (typeof DEFAULT_VOLUME_FOR_CONTEXT === "function") {
               if (arg0 === constants.STREAM) {
-                let USER = tmp5(9093).AudioSettingsDefaultVolumes.STREAM;
+                let USER = AudioSettingsDefaultVolumes.AudioSettingsDefaultVolumes.STREAM;
               } else {
-                USER = tmp5(9093).AudioSettingsDefaultVolumes.USER;
+                USER = AudioSettingsDefaultVolumes.AudioSettingsDefaultVolumes.USER;
               }
               obj = { muted: false, volume: USER };
               tmp11(obj);
@@ -279,8 +279,8 @@ function handleResetMediaEngineSettings(arg0) {
   }
 }
 const MediaEngineContextTypes = fn(4585).MediaEngineContextTypes;
-function SETTINGS_MIGRATION_KEY(arg0) {
-  return "AudioContextSettingsMigrated:" + arg0;
+function SETTINGS_MIGRATION_KEY(id) {
+  return "AudioContextSettingsMigrated:" + id;
 }
 function DEFAULT_VOLUME_FOR_CONTEXT(arg0) {
   if (arg0 === MediaEngineContextTypes.STREAM) {
@@ -311,9 +311,9 @@ let closure_12 = apply.debounce(() => {
             tmp9[arg1].modifiedAt = String(Date.now());
             if (typeof DEFAULT_VOLUME_FOR_CONTEXT === "function") {
               if (arg0 === constants.STREAM) {
-                let USER2 = tmp5(9093).AudioSettingsDefaultVolumes.STREAM;
+                let USER2 = AudioSettingsDefaultVolumes.AudioSettingsDefaultVolumes.STREAM;
               } else {
-                USER2 = tmp5(9093).AudioSettingsDefaultVolumes.USER;
+                USER2 = AudioSettingsDefaultVolumes.AudioSettingsDefaultVolumes.USER;
               }
               if (!tmp21) {
                 delete tmp2[tmp];
@@ -339,9 +339,9 @@ let closure_12 = apply.debounce(() => {
             }
           } else if (typeof DEFAULT_VOLUME_FOR_CONTEXT === "function") {
             if (arg0 === constants.STREAM) {
-              let USER = tmp5(9093).AudioSettingsDefaultVolumes.STREAM;
+              let USER = AudioSettingsDefaultVolumes.AudioSettingsDefaultVolumes.STREAM;
             } else {
-              USER = tmp5(9093).AudioSettingsDefaultVolumes.USER;
+              USER = AudioSettingsDefaultVolumes.AudioSettingsDefaultVolumes.USER;
             }
             obj = { muted: false, volume: USER };
             tmp11(obj);

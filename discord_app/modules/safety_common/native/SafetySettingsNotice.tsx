@@ -45,7 +45,7 @@ export default function SafetySettingsNotice(noticeType) {
   const items2 = [closure_5(labelHook(noticeType[7]).CircleInformationIcon, { color: "text-link" })];
   obj = { style: { flexShrink: 1 }, variant: "heading-sm/medium", children: null };
   if (null != count) {
-    const intl2 = tmp6(tmp7[9]).intl;
+    const intl2 = labelHook(tmp7[9]).intl;
     obj = {
       hook(children) {
         return hasOwnProperty(Text_Text.Text, {
@@ -60,7 +60,7 @@ export default function SafetySettingsNotice(noticeType) {
     };
     let formatResult = intl2.format(label, obj);
   } else {
-    const intl = tmp6(tmp7[9]).intl;
+    const intl = labelHook(tmp7[9]).intl;
     const obj1 = {
       hook(children) {
         return hasOwnProperty(Text_Text.Text, {

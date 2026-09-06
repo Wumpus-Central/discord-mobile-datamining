@@ -98,20 +98,20 @@ export default function SummarizedIconRow(max) {
   if (overflowComponent === undefined) {
     overflowComponent = OverflowSquircle;
   }
-  const tmp = closure_4();
+  let tmp = closure_4();
   closure_8 = Math.max(items.length - num, 0);
   let obj = {
     style: null,
     children: items.map((item, index) => {
       if (index < num) {
-        if (index === num - 1) {
+        if (index === tmp - 1) {
           if (closure_8 > 0) {
             let obj = { style: null, overflow: null };
             obj = { marginLeft };
             items = [obj, OverflowSquircle];
             obj.style = items;
             obj.overflow = tmp2 + 1;
-            let tmp7 = <overflowComponent key={arg1} marginLeft={marginLeft} />;
+            let tmp7 = <overflowComponent key={index} marginLeft={marginLeft} />;
           }
           return tmp7;
         }
@@ -128,13 +128,14 @@ export default function SummarizedIconRow(max) {
           const obj2 = { style: null, children: null };
           items1[2] = obj;
           obj2.style = items1;
-          items1 = closure_1_2(item, index === tmp6);
+          items1 = View(item, index === tmp6);
           obj2.children = items1;
-          <View key={arg1} style={null}>
+          <View key={index} style={null}>
             {null}
           </View>;
         }
       }
+      tmp = num;
     }),
   };
   let items1 = [tmp.container, style];
@@ -143,14 +144,14 @@ export default function SummarizedIconRow(max) {
     <View style={null}>
       {items.map((item, index) => {
         if (index < num) {
-          if (index === num - 1) {
+          if (index === tmp - 1) {
             if (closure_8 > 0) {
               let obj = { style: null, overflow: null };
               obj = { marginLeft };
               items = [obj, OverflowSquircle];
               obj.style = items;
               obj.overflow = tmp2 + 1;
-              let tmp7 = <overflowComponent key={arg1} marginLeft={marginLeft} />;
+              let tmp7 = <overflowComponent key={index} marginLeft={marginLeft} />;
             }
             return tmp7;
           }
@@ -167,13 +168,14 @@ export default function SummarizedIconRow(max) {
             const obj2 = { style: null, children: null };
             items1[2] = obj;
             obj2.style = items1;
-            items1 = closure_1_2(item, index === tmp6);
+            items1 = View(item, index === tmp6);
             obj2.children = items1;
-            <View key={arg1} style={null}>
+            <View key={index} style={null}>
               {null}
             </View>;
           }
         }
+        tmp = num;
       })}
     </View>
   );

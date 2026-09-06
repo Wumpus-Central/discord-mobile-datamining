@@ -78,9 +78,9 @@ export default function UserSettingsVoiceOutputOptions() {
     const obj5 = { value: stateFromStores2, onValueChange: callback, accessibilityLabel: null };
     const intl5 = tmp2(1114).intl;
     obj5.accessibilityLabel = intl5.string(tmp2(1114).t.pEAl4b);
-    obj4.children = tmp9(VolumeSliderDefault, obj5);
-    obj3.subLabel = tmp9(View, obj4);
-    tmp9Result = tmp9(tmp2(5605).TableRow, obj3);
+    obj4.children = closure_9(VolumeSliderDefault, obj5);
+    obj3.subLabel = closure_9(View, obj4);
+    tmp9Result = closure_9(tmp2(5605).TableRow, obj3);
     const tmp11Result = VolumeSliderDefault;
   }
   items4[1] = tmp9Result;

@@ -1,8 +1,11 @@
 // discord_app/modules/oauth2/native/Header.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import util from "../../../intl/index.native.tsx";
 import native from "../../../design/void/native.tsx";
+import FlagUtils from "../../../../discord_common/js/shared/utils/FlagUtils.tsx";
 import AvatarUtilsDefault from "../../../utils/AvatarUtils.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
+import BotTagDefault from "../../applications/native/BotTag.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -58,7 +61,7 @@ export default function Header(accountScopes) {
   let userAvatarSource;
   const applicationIconSource = obj.getApplicationIconSource(obj);
   if (null != user) {
-    let tmp2Result = tmp2(1396);
+    let tmp2Result = AvatarUtilsDefault;
     userAvatarSource = tmp2Result.getUserAvatarSource(user);
   }
   obj = { style: tmp.header, children: null };
@@ -91,23 +94,23 @@ export default function Header(accountScopes) {
   if (null != bot) {
     const obj10 = { style: tmp.botTag, verified: null };
     let hasFlagResult = null != bot.public_flags;
-    tmp2Result = tmp2(9438);
+    tmp2Result = BotTagDefault;
     if (hasFlagResult) {
-      hasFlagResult = tmp9(1384).hasFlag(bot.public_flags, UserFlags.VERIFIED_BOT);
-      const tmp9Result = tmp9(1384);
+      hasFlagResult = FlagUtils.hasFlag(bot.public_flags, UserFlags.VERIFIED_BOT);
+      const tmp9Result = FlagUtils;
     }
     obj10.verified = hasFlagResult;
-    tmp8Result = tmp8(tmp2Result, obj10);
+    tmp8Result = hasOwnProperty(tmp2Result, obj10);
   }
   items3[1] = tmp8Result;
   obj8.children = items3;
   items2[1] = timestampProducer(View, obj8);
   if (accountScopes.accountScopes.length > 0) {
-    const intl2 = tmp9(1114).intl;
-    let stringResult = intl2.string(tmp9(1114).t.jFbDnJ);
+    const intl2 = util.intl;
+    let stringResult = intl2.string(util.t.jFbDnJ);
   } else {
-    const intl = tmp9(1114).intl;
-    stringResult = intl.string(tmp9(1114).t["X+Fdpo"]);
+    const intl = util.intl;
+    stringResult = intl.string(util.t["X+Fdpo"]);
   }
   items2[2] = hasOwnProperty(Text_Text.Text, {
     variant: "heading-md/normal",

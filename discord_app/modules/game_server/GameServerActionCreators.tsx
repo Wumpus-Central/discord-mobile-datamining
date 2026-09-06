@@ -103,7 +103,7 @@ export const fetchGameServerGlobalCatalog = function fetchGameServerGlobalCatalo
     DispatcherDefault.dispatch({ type: "GAME_SERVER_FETCH_GLOBAL_CATALOG_SUCCESS", catalog: reduced });
   });
 };
-export const fetchGameServerInstances = function fetchGameServerInstances(guildId, arg1, signal) {
+export const fetchGameServerInstances = function fetchGameServerInstances(guildId, arg1) {
   _require = guildId;
   let flag = arg1;
   if (arg1 === undefined) {

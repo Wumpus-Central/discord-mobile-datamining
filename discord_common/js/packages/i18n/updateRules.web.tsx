@@ -14,7 +14,7 @@ export default function updateRules(paragraph) {
   let obj = {};
   let merged = Object.assign(paragraph.paragraph);
   obj.react = function react(content, fn, key) {
-    return <p key={arg2.key}>{arg1(arg0.content, arg2)}</p>;
+    return <p key={key.key}>{fn(content.content, key)}</p>;
   };
   paragraph.paragraph = obj;
   obj = {};
@@ -30,15 +30,15 @@ export default function updateRules(paragraph) {
       obj.onClick = context.context[context.target];
     }
     if (null == obj.onClick) {
-      const sanitizeUrlResult = _mod4257.sanitizeUrl(context.target);
-      obj.href = sanitizeUrlResult;
+      obj.href = _mod4257.sanitizeUrl(context.target);
       obj.target = "_blank";
+      const sanitizeUrlResult = _mod4257.sanitizeUrl(context.target);
     }
     obj = { title: context.title };
     const merged = Object.assign(obj);
     obj.rel = "noreferrer";
     obj.children = fn(context.content, key);
-    return <a key={arg2.key} title={arg0.title} />;
+    return <a key={key.key} title={context.title} />;
   };
   paragraph.link = obj;
   return paragraph;

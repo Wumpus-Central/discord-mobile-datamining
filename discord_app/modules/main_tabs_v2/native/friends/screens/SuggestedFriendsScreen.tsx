@@ -89,14 +89,14 @@ export default function SuggestedFriendsScreen() {
     obj.sections = items3;
     obj.getItemProps = callback1;
     obj.getSectionProps = callback2;
-    let tmp12Result = tmp12(tmp11(tmp3[13]).UsersFastList, obj);
+    let tmp12Result = closure_7(tmp11(tmp3[13]).UsersFastList, obj);
   } else {
     const obj1 = { style: tmp.emptyContainer, children: null };
     const obj2 = { title: null, disableBackgroundOverlay: true };
     const intl = tmp11(tmp3[15]).intl;
     obj2.title = intl.string(tmp11(tmp3[15]).t.pxFW8V);
-    obj1.children = tmp12(added(tmp3[14]), obj2);
-    tmp12Result = tmp12(tmp13, obj1);
+    obj1.children = closure_7(added(tmp3[14]), obj2);
+    tmp12Result = closure_7(tmp13, obj1);
     const tmp2Result = added(tmp3[14]);
   }
   obj.children = tmp12Result;

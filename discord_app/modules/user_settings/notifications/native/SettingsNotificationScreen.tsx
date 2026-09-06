@@ -1,6 +1,9 @@
 // discord_app/modules/user_settings/notifications/native/SettingsNotificationScreen.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
+import Text_Text from "../../../../design/components/Text/native/Text.tsx";
+import Card from "../../../../design/components/Card/native/Card.native.tsx";
+import CircleErrorIcon from "../../../../design/components/Icon/native/redesign/generated/CircleErrorIcon.tsx";
 import ManaTypeConsolidationExperiment from "../../../design/ManaTypeConsolidationExperiment.tsx";
 import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
 import NotificationPermissionUtil from "../../../nuf/native/NotificationPermissionUtil.tsx";
@@ -27,9 +30,9 @@ function SystemNotificationsSubLabel() {
       str = "experimental/body-xs/normal";
     }
     obj = { variant: str, color: "text-muted", children: null };
-    const intl = tmp2(1114).intl;
-    obj.children = intl.string(tmp2(1114).t["/TZX1J"]);
-    result = React5(tmp2(4556).Text, obj);
+    const intl = util.intl;
+    obj.children = intl.string(util.t["/TZX1J"]);
+    result = React5(Text_Text.Text, obj);
   }
   const children = [result];
   if (showReactivationPrompt) {
@@ -40,16 +43,16 @@ function SystemNotificationsSubLabel() {
     obj1 = { border: "none", shadow: "none", children: null };
     obj2 = { style: tmp.cardContent, children: null };
     obj3 = { color: nativeDefault.unsafe_rawColors.YELLOW_300 };
-    const items1 = [React5(tmp2(6610).CircleErrorIcon, obj3)];
+    const items1 = [React5(CircleErrorIcon.CircleErrorIcon, obj3)];
     const obj4 = { style: tmp.text, children: null };
     const obj5 = { color: "text-default", variant: "text-sm/medium", children: null };
-    const intl2 = tmp2(1114).intl;
-    obj5.children = intl2.string(tmp2(1114).t.TAuasM);
-    obj4.children = React5(tmp2(4556).Text, obj5);
+    const intl2 = util.intl;
+    obj5.children = intl2.string(util.t.TAuasM);
+    obj4.children = React5(Text_Text.Text, obj5);
     items1[1] = React5(View, obj4);
     obj2.children = items1;
-    obj1.children = tmp8(View, obj2);
-    obj.children = React5(tmp2(5607).Card, obj1);
+    obj1.children = React6(View, obj2);
+    obj.children = React5(Card.Card, obj1);
     showReactivationPrompt = React5(View, obj);
   }
   children[1] = showReactivationPrompt;

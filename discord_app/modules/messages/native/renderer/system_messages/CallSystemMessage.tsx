@@ -1,5 +1,7 @@
 // discord_app/modules/messages/native/renderer/system_messages/CallSystemMessage.tsx
+import util from "../../../../../intl/index.native.tsx";
 import utils_AvatarUtils from "../../../../../utils/native/AvatarUtils.tsx";
+import DateUtils from "../../../../../utils/DateUtils.tsx";
 import createCommonMessageDefault from "createCommonMessage.tsx";
 import getHumanizedCallDurationDefault from "../../../getHumanizedCallDuration.tsx";
 import useIsCallActive from "../../../../calls/mobile/useIsCallActive.tsx";
@@ -31,15 +33,15 @@ export const createCallSystemMessage = function createCallSystemMessage(message)
     const participants1 = call.participants;
     tmp9 = -1 === participants1.indexOf(id);
   }
-  const intl = tmp7(1114).intl;
+  const intl = util.intl;
   const string = intl.string;
-  const t = tmp7(1114).t;
+  const t = util.t;
   if (checkIsCallActiveResult) {
     let str2 = "";
     if (checkIsCallActiveResult) {
       if (null == userVoiceChannelId) {
-        const intl3 = tmp7(1114).intl;
-        str2 = intl3.string(tmp7(1114).t.DqA3mi);
+        const intl3 = util.intl;
+        str2 = intl3.string(util.t.DqA3mi);
       } else {
         str2 = "";
       }
@@ -59,18 +61,18 @@ export const createCallSystemMessage = function createCallSystemMessage(message)
       stringResult1 = string(t.v05Xd6);
     }
     if (null != tmp6) {
-      const intl2 = tmp7(1114).intl;
+      const intl2 = util.intl;
       obj = { duration: tmp6, timestamp: null };
-      let tmp7Result = tmp7(4242);
+      let tmp7Result = DateUtils;
       obj.timestamp = tmp7Result.calendarFormat(message.timestamp);
-      formatToPlainStringResult = intl2.formatToPlainString(tmp7(1114).t.SBDnp1, obj);
+      formatToPlainStringResult = intl2.formatToPlainString(util.t.SBDnp1, obj);
     } else {
-      tmp7Result = tmp7(4242);
+      tmp7Result = DateUtils;
       formatToPlainStringResult = tmp7Result.calendarFormat(message.timestamp);
     }
     const author = message.author;
-    mapped = [tmp7(1399).ensureAvatarSource(author.getAvatarSource(undefined)).uri];
-    const tmp7Result1 = tmp7(1399);
+    mapped = [utils_AvatarUtils.ensureAvatarSource(author.getAvatarSource(undefined)).uri];
+    const tmp7Result1 = utils_AvatarUtils;
   }
   obj = {
     title: stringResult1,

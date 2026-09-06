@@ -159,7 +159,7 @@ export default function GuildEventRecurrence(recurrenceId) {
       const obj4 = { variant: "text-sm/semibold", color: "text-feedback-critical", children: null };
       const intl2 = tmp2(1114).intl;
       obj4.children = intl2.string(tmp2(1114).t.fyBVRm);
-      tmp21Result = tmp21(tmp2(4556).Text, obj4);
+      tmp21Result = closure_8(tmp2(4556).Text, obj4);
     }
     const items6 = [tmp21Result];
     const obj5 = {

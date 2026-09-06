@@ -70,14 +70,14 @@ export const useUserListActionsProps = function useUserListActionsProps(actions)
         let num3 = 0;
         if (null != actions) {
           num3 = 0;
-          if (arr.length > 0) {
-            num3 = arr.length * closure_2 + num + num2;
+          if (actions.length > 0) {
+            num3 = actions.length * closure_2 + num + num2;
           }
         }
         obj = { headerSize: num3, renderHeader: null };
         let fn;
         if (null != actions) {
-          if (arr.length > 0) {
+          if (actions.length > 0) {
             fn = () => <UserFlashListActions actions={actions} style={style} />;
           }
         }

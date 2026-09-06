@@ -29,20 +29,19 @@ const result = size.fileFinishedImporting("modules/display_name_styles/hooks/use
 
 export { DISPLAY_NAME_STYLES_EFFECT_NAMES };
 export const useDisplayNameStylesEffectConfig = function useDisplayNameStylesEffectConfig(effectId) {
-  closure_0 = effectId;
   const tmp = useDisplayNameStylesEffectDefaultColorsDefault()[effectId];
   importDefault = tmp;
   const items = [effectId, tmp];
   return noop.useMemo(() => {
     const intl = util.intl;
-    let OpWJ3f = previewStyles[closure_0];
+    let OpWJ3f = previewStyles[effectId];
     if (OpWJ3f == null) {
       OpWJ3f = _modDef2786.OpWJ3f;
     }
     previewStyles = { name: intl.string(OpWJ3f), defaultColors: colors, previewStyles: null, minContrastRatio: null };
-    previewStyles = { fontId: DisplayNameFont.DisplayNameFont.DEFAULT, effectId: tmp3, colors };
+    previewStyles = { fontId: DisplayNameFont.DisplayNameFont.DEFAULT, effectId, colors };
     previewStyles.previewStyles = previewStyles;
-    let num = closure_5[tmp3];
+    let num = closure_5[effectId];
     if (num == null) {
       num = 3;
     }

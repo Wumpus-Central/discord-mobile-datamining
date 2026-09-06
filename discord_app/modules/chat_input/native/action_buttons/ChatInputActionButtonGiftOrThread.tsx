@@ -2,11 +2,13 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import useToken from "../../../../design/tokens/native/useToken.tsx";
 import native from "../../../../../discord_common/js/packages/design/native.tsx";
+import ChatInputActionButtonDefault from "ChatInputActionButton.tsx";
 import ChatInputActionButtonTransitionItemDefault from "ChatInputActionButtonTransitionItem.tsx";
+import ChatInputActionButtonGiftDefault from "ChatInputActionButtonGift.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-function renderChatInputActionButtonGiftAndThread(arg0, styleButton, state, cleanup) {
+function renderChatInputActionButtonGiftAndThread(key, styleButton, state, cleanup) {
   ({ accessible, onPress } = styleButton);
   styleButton = styleButton.styleButton;
   ({ canStartThreads, channel, shouldShowThread, styleButtonWrapper } = styleButton);
@@ -21,14 +23,27 @@ function renderChatInputActionButtonGiftAndThread(arg0, styleButton, state, clea
       return onPress(arg0, ChatInputActionType.THREAD);
     };
     obj.style = styleButton;
-    let tmpResult = tmp(tmp2(12239), obj);
-    const tmp2Result = tmp2(12239);
+    let tmpResult = jsx(ChatInputActionButtonDefault, {
+      accessible,
+      accessibilityLabel: null,
+      disabled: null,
+      IconComponent: null,
+      onPress: null,
+      style: null,
+    });
+    const tmp2Result = ChatInputActionButtonDefault;
   } else {
     obj = { accessible, channel, onPress, style: styleButtonWrapper, styleButton };
-    tmpResult = tmp(tmp2(12248), obj);
+    tmpResult = jsx(ChatInputActionButtonGiftDefault, {
+      accessible,
+      channel,
+      onPress,
+      style: styleButtonWrapper,
+      styleButton,
+    });
   }
   obj.children = tmpResult;
-  return jsx(ChatInputActionButtonTransitionItemDefault, { cleanup, state, children: null }, arg0);
+  return jsx(ChatInputActionButtonTransitionItemDefault, { cleanup, state, children: null }, key);
 }
 function getChatInputActionButtonGiftAndThreadKey(shouldShowThread) {
   let str = "gift";

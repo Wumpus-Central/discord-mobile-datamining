@@ -1,6 +1,7 @@
 // discord_app/modules/media_uploads/getAttachmentUploadAbortAlert.tsx
 import Constants from "../../Constants.tsx";
 import util from "../../intl/index.native.tsx";
+import UploadUtils from "../../utils/UploadUtils.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
 const AbortCodes = Constants.AbortCodes;
@@ -11,19 +12,19 @@ export const getAttachmentUploadAbortAlertContent = function getAttachmentUpload
   const stringResult = intl.string(util.t.B3vFdU);
   if (AbortCodes.TOTAL_ATTACHMENT_SIZE_TOO_LARGE === code) {
     let obj = { title: stringResult, body: null };
-    const intl4 = tmp(1114).intl;
-    obj = { maxSizeMb: tmp(5129).MAX_TOTAL_ATTACHMENT_SIZE_MB };
-    obj.body = intl4.formatToPlainString(tmp(1114).t.DYFPg2, obj);
+    const intl4 = util.intl;
+    obj = { maxSizeMb: UploadUtils.MAX_TOTAL_ATTACHMENT_SIZE_MB };
+    obj.body = intl4.formatToPlainString(util.t.DYFPg2, obj);
     return obj;
-  } else if (tmp4.CLOUD_UPLOAD_NOT_FOUND === code) {
+  } else if (AbortCodes.CLOUD_UPLOAD_NOT_FOUND === code) {
     const obj1 = { title: stringResult, body: null };
-    const intl3 = tmp(1114).intl;
-    obj1.body = intl3.string(tmp(1114).t.bQldfH);
+    const intl3 = util.intl;
+    obj1.body = intl3.string(util.t.bQldfH);
     return obj1;
-  } else if (tmp4.INVALID_PERMISSIONS === code) {
+  } else if (AbortCodes.INVALID_PERMISSIONS === code) {
     obj = { title: stringResult, body: null };
-    const intl2 = tmp(1114).intl;
-    obj.body = intl2.string(tmp(1114).t.zl4Weq);
+    const intl2 = util.intl;
+    obj.body = intl2.string(util.t.zl4Weq);
     return obj;
   } else {
     return null;

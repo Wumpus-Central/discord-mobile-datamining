@@ -19,16 +19,16 @@ export default noop.memo(function InlinePortalKeyboard(messagesRef) {
   let tmp3 = id(1877)();
   const keyboardContextForType = messagesRef(4427).useKeyboardContextForType(messagesRef(1609).KeyboardTypes.SYSTEM);
   id(4992)(() => () => {
-    const PortalKeyboardUIStore = messagesRef(closure_2[8]).PortalKeyboardUIStore;
+    const PortalKeyboardUIStore = messagesRef(dependencyMap[8]).PortalKeyboardUIStore;
     field = PortalKeyboardUIStore.getField("keyboard");
     let tmp4 = null != field;
     if (tmp4) {
       tmp4 = field.handlerId === id;
     }
     if (tmp4) {
-      let tmpResult = tmp(tmp2[9]);
+      let tmpResult = messagesRef(dependencyMap[9]);
       tmpResult.dismissKeyboard();
-      tmpResult = tmp(tmp2[8]);
+      tmpResult = messagesRef(dependencyMap[8]);
       tmpResult.closePortalKeyboard();
     }
   });
@@ -41,8 +41,8 @@ export default noop.memo(function InlinePortalKeyboard(messagesRef) {
   const layoutEffect = noop.useLayoutEffect(() => {
     const current = ref.current;
     if (null != field) {
-      if (null == tmp2.handlerId) {
-        if (null != tmp2) {
+      if (null == field.handlerId) {
+        if (null != field) {
           if (field1 === messagesRef(4431).PortalKeyboardState.REQUEST_OPEN) {
             const current4 = messagesRef.current;
             let chatRef;
@@ -53,7 +53,7 @@ export default noop.memo(function InlinePortalKeyboard(messagesRef) {
               const tmp38 = field(chatRef.current);
               if (null != tmp38) {
                 const result = messagesRef(4428).handlePortalKeyboardOpen(id);
-                tmp.current = true;
+                ref.current = true;
                 const obj2 = messagesRef(4428);
                 const DCDChatManager3 = keyboardContextForType.DCDChatManager;
                 const result1 = DCDChatManager3.customKeyboardWillShow(
@@ -84,7 +84,7 @@ export default noop.memo(function InlinePortalKeyboard(messagesRef) {
           if (null != chatRef1) {
             const tmp21 = field(chatRef1.current);
             if (null != tmp21) {
-              tmp.current = false;
+              ref.current = false;
               const DCDChatManager = keyboardContextForType.DCDChatManager;
               const result2 = DCDChatManager.customKeyboardWillHide(tmp21, 0.25, 7);
             }
@@ -110,7 +110,7 @@ export default noop.memo(function InlinePortalKeyboard(messagesRef) {
         if (null != chatRef2) {
           const tmp30 = field(chatRef2.current);
           if (null != tmp30) {
-            tmp.current = false;
+            ref.current = false;
             const DCDChatManager2 = keyboardContextForType.DCDChatManager;
             const result3 = DCDChatManager2.customKeyboardWillHide(tmp30, 0.25, 7);
           }

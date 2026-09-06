@@ -17,7 +17,7 @@ export default (arg0) => {
       let toISOStringResult = null;
       if (-1 !== closure_0.muteTime) {
         let obj = _modDef4153();
-        let HOURS_1 = tmp.muteTime;
+        let HOURS_1 = closure_0.muteTime;
         if (HOURS_1 == null) {
           HOURS_1 = MuteUntilSeconds.HOURS_1;
         }
@@ -28,8 +28,8 @@ export default (arg0) => {
       obj = { selected_time_window: MuteUntilSeconds.HOURS_1, end_time: toISOStringResult };
       obj.mute_config = obj;
       const result = NotificationSettingsModalActionCreatorsDefault.updateChannelOverrideSettings(
-        tmp.guildId,
-        tmp.channelId,
+        closure_0.guildId,
+        closure_0.channelId,
         obj,
         NotificationSettingsUtils.NotificationLabels.Muted,
       );

@@ -3,9 +3,9 @@ import native from "../../../utils/native.tsx";
 import useA11yRolesNative from "../../../../../discord_common/js/packages/design/hooks/useA11yRolesNative.tsx";
 import ReanimatedRexport from "../../../../modules/reanimated/ReanimatedRexport.tsx";
 import TableRow from "TableRow.native.tsx";
+import FormCheckbox from "../../Forms/native/FormCheckbox.native.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-const FormCheckbox = tmp2(5617);
 require = fn;
 const jsx = fn(21).jsx;
 const size = fn(2);

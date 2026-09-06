@@ -31,7 +31,7 @@ function parseACOMErrorCode(message) {
 function isRetryableACOMCode(arg0) {
   return arg0 === constants.GENERAL_INTERNAL_RETRYABLE || arg0 === constants.RATE_LIMIT_EXCEEDED;
 }
-let closure_10 = async function _retryACOMRequest(arg0, value) {
+let closure_10 = async function _retryACOMRequest(arg0) {
   if (c7 === 2) {
     c7 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");

@@ -56,27 +56,27 @@ function closeCollectiblesShop() {
   DispatcherDefault.dispatch({ type: "COLLECTIBLES_SHOP_CLOSE" });
   LayerActionCreators.popLayer();
 }
-let closure_19 = async function _fetchCollectiblesCategories(arg0, arg1) {
+let closure_19 = async function _fetchCollectiblesCategories(arg0) {
   closure_5 = tmp3;
   closure_4 = tmp5;
-  closure_132_0 = closure_0;
+  closure_132_0 = _require;
   closure_132_1 = closure_1;
-  closure_132_2 = closure_2;
-  let options = closure_0;
-  if (closure_0 == null) {
+  closure_132_2 = dependencyMap;
+  let options = _require;
+  if (_require == null) {
     options = {};
   }
   DispatcherDefault.dispatch({ type: "COLLECTIBLES_CATEGORIES_FETCH", options });
-  const fetchCollectiblesOptionsQuery = utils_CollectiblesUtils.buildFetchCollectiblesOptionsQuery(tmp96);
+  const fetchCollectiblesOptionsQuery = utils_CollectiblesUtils.buildFetchCollectiblesOptionsQuery(_require);
   value = DevSettingsStore.get("shop_show_debug_overlay");
   closure_132_3 = value;
-  if (closure_0 != null) {
-    const logPerf = tmp96.logPerf;
+  if (_require != null) {
+    const logPerf = _require.logPerf;
   }
   if (logPerf) {
     let sessionId;
-    if (tmp98 != null) {
-      sessionId = tmp98.sessionId;
+    if (dependencyMap != null) {
+      sessionId = dependencyMap.sessionId;
     }
     let obj2 = {
       sessionId,
@@ -86,18 +86,18 @@ let closure_19 = async function _fetchCollectiblesCategories(arg0, arg1) {
       cacheDisabled: null,
     };
     let tab;
-    if (tmp98 != null) {
-      tab = tmp98.tab;
+    if (dependencyMap != null) {
+      tab = dependencyMap.tab;
     }
     obj2.tab = tab;
     let includeUnpublished;
-    if (tmp96 != null) {
-      includeUnpublished = tmp96.includeUnpublished;
+    if (_require != null) {
+      includeUnpublished = _require.includeUnpublished;
     }
     obj2.unpublishedCategoriesShown = includeUnpublished;
     let noCache;
-    if (tmp96 != null) {
-      noCache = tmp96.noCache;
+    if (_require != null) {
+      noCache = _require.noCache;
     }
     obj2.cacheDisabled = noCache;
     CollectiblesPerfLogging.trackShopPerf(obj2);
@@ -131,9 +131,9 @@ let closure_19 = async function _fetchCollectiblesCategories(arg0, arg1) {
     c9 = 3;
   } else if (arg0 === 1) {
     c9 = 3;
-    throw arg1;
+    throw value;
   } else if (arg0 !== 2) {
-    closure_132_4 = arg1;
+    closure_132_4 = value;
     let logPerf1;
     if (closure_132_0 != null) {
       logPerf1 = closure_132_0.logPerf;
@@ -181,7 +181,7 @@ let closure_19 = async function _fetchCollectiblesCategories(arg0, arg1) {
     obj2.dispatch(obj6);
     c7 = 0;
   }
-  return arg1;
+  return value;
 };
 function fetchCollectiblesPurchases() {
   const self = this;
@@ -193,7 +193,7 @@ function fetchCollectiblesPurchases() {
   }
   return applyArgumentsResult;
 }
-let closure_20 = async function _fetchCollectiblesPurchases(arg0, value) {
+let closure_20 = async function _fetchCollectiblesPurchases() {
   if (c5 === 2) {
     c5 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -304,7 +304,7 @@ function fetchCollectiblesProduct() {
   }
   return applyArgumentsResult;
 }
-let closure_22 = async function _fetchCollectiblesProduct(skuId, arg1) {
+let closure_22 = async function _fetchCollectiblesProduct() {
   closure_1 = arg1;
   c6 = 0;
   c7 = 0;
@@ -316,32 +316,32 @@ let closure_22 = async function _fetchCollectiblesProduct(skuId, arg1) {
     DispatcherDefault.dispatch({ type: "COLLECTIBLES_PRODUCT_FETCH", skuId, startedAt: Date.now() });
     const obj2 = { locale: locale.locale };
     if (closure_1 != null) {
-      const countryCode = tmp55.countryCode;
+      const countryCode = closure_1.countryCode;
     }
     if (null !== countryCode) {
       let countryCode1;
-      if (tmp55 != null) {
-        countryCode1 = tmp55.countryCode;
+      if (closure_1 != null) {
+        countryCode1 = closure_1.countryCode;
       }
       obj2.country_code = countryCode1;
     }
     if (closure_1 != null) {
-      const paymentGateway = tmp55.paymentGateway;
+      const paymentGateway = closure_1.paymentGateway;
     }
     if (null !== paymentGateway) {
       let paymentGateway1;
-      if (tmp55 != null) {
-        paymentGateway1 = tmp55.paymentGateway;
+      if (closure_1 != null) {
+        paymentGateway1 = closure_1.paymentGateway;
       }
       obj2.payment_gateway = paymentGateway1;
     }
     if (closure_1 != null) {
-      const includeBundles = tmp55.includeBundles;
+      const includeBundles = closure_1.includeBundles;
     }
     if (null !== includeBundles) {
       let includeBundles1;
-      if (tmp55 != null) {
-        includeBundles1 = tmp55.includeBundles;
+      if (closure_1 != null) {
+        includeBundles1 = closure_1.includeBundles;
       }
       obj2.include_bundles = includeBundles1;
     }
@@ -386,7 +386,7 @@ let closure_22 = async function _fetchCollectiblesProduct(skuId, arg1) {
     return value;
   })();
 };
-let closure_23 = async function _maybeFetchCollectiblesProduct(arg0, value) {
+let closure_23 = async function _maybeFetchCollectiblesProduct(arg0) {
   if (c2 === 2) {
     c2 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -414,15 +414,14 @@ let closure_23 = async function _maybeFetchCollectiblesProduct(arg0, value) {
           let obj1 = fetchingProduct;
           let isFetchingProductResult = fetchingProduct.isFetchingProduct(closure_0);
           if (!isFetchingProductResult) {
-            isFetchingProductResult = obj1.isProductFetchBackedOff(tmp5);
+            isFetchingProductResult = obj1.isProductFetchBackedOff(closure_0);
           }
           if (!isFetchingProductResult) {
             c3 = 1;
             c2 = 1;
-            obj1 = { value: fetchCollectiblesProduct(tmp5, tmp6), done: false };
+            obj1 = { value: fetchCollectiblesProduct(closure_0, closure_1), done: false };
             return obj1;
           }
-          tmp6 = closure_1;
         }
       } else if (arg0 === 1) {
         c2 = 3;
@@ -450,7 +449,7 @@ function claimPremiumCollectiblesProduct() {
   }
   return applyArgumentsResult;
 }
-let closure_24 = async function _claimPremiumCollectiblesProduct(arg0, value) {
+let closure_24 = async function _claimPremiumCollectiblesProduct(arg0) {
   if (c6 === 2) {
     c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -534,7 +533,7 @@ let closure_24 = async function _claimPremiumCollectiblesProduct(arg0, value) {
     }
   }
 };
-let closure_25 = async function _validateCollectiblesRecipient(recipient_id, sku_id) {
+let closure_25 = async function _validateCollectiblesRecipient() {
   c6 = 0;
   c7 = 0;
   c5 = 0;
@@ -609,7 +608,7 @@ let closure_25 = async function _validateCollectiblesRecipient(recipient_id, sku
     }
   })();
 };
-let closure_26 = async function _validateCollectiblesRecipientsBatch(recipient_id, sku_ids) {
+let closure_26 = async function _validateCollectiblesRecipientsBatch() {
   c6 = 0;
   c7 = 0;
   c5 = 0;
@@ -694,7 +693,7 @@ let closure_27 = async function _fetchCollectiblesMarketings(arg0) {
   c5 = 0;
   c6 = 0;
   c4 = 0;
-  let iter = (async (arg0, value) => {
+  let iter = (async (arg0) => {
     if (c6 === 2) {
       c6 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -798,7 +797,7 @@ let closure_27 = async function _fetchCollectiblesMarketings(arg0) {
   iter.next();
   return iter;
 };
-let closure_28 = async function _fetchCollectiblesShopHome(tab, arg1, arg2) {
+let closure_28 = async function _fetchCollectiblesShopHome() {
   closure_1 = arg1;
   closure_2 = arg2;
   c8 = 0;
@@ -816,14 +815,14 @@ let closure_28 = async function _fetchCollectiblesShopHome(tab, arg1, arg2) {
     }
     obj1.options = options;
     DispatcherDefault.dispatch(obj1);
-    const fetchCollectiblesOptionsQuery = utils_CollectiblesUtils.buildFetchCollectiblesOptionsQuery(tmp80, tab);
+    const fetchCollectiblesOptionsQuery = utils_CollectiblesUtils.buildFetchCollectiblesOptionsQuery(closure_1, tab);
     if (closure_1 != null) {
-      const logPerf = tmp80.logPerf;
+      const logPerf = closure_1.logPerf;
     }
     if (logPerf) {
       let sessionId;
-      if (tmp81 != null) {
-        sessionId = tmp81.sessionId;
+      if (closure_2 != null) {
+        sessionId = closure_2.sessionId;
       }
       let obj2 = {
         sessionId,
@@ -833,18 +832,18 @@ let closure_28 = async function _fetchCollectiblesShopHome(tab, arg1, arg2) {
         cacheDisabled: null,
       };
       tab = undefined;
-      if (tmp81 != null) {
-        tab = tmp81.tab;
+      if (closure_2 != null) {
+        tab = closure_2.tab;
       }
       obj2.tab = tab;
       let includeUnpublished;
-      if (tmp80 != null) {
-        includeUnpublished = tmp80.includeUnpublished;
+      if (closure_1 != null) {
+        includeUnpublished = closure_1.includeUnpublished;
       }
       obj2.unpublishedCategoriesShown = includeUnpublished;
       let noCache;
-      if (tmp80 != null) {
-        noCache = tmp80.noCache;
+      if (closure_1 != null) {
+        noCache = closure_1.noCache;
       }
       obj2.cacheDisabled = noCache;
       CollectiblesPerfLogging.trackShopPerf(obj2);
@@ -914,7 +913,7 @@ let closure_28 = async function _fetchCollectiblesShopHome(tab, arg1, arg2) {
     return value;
   })();
 };
-let closure_29 = async function _claimCollectiblesCategoryReward(category_id, skuId) {
+let closure_29 = async function _claimCollectiblesCategoryReward() {
   c6 = 0;
   c7 = 0;
   c5 = 0;
@@ -1003,7 +1002,7 @@ let closure_29 = async function _claimCollectiblesCategoryReward(category_id, sk
     }
   })();
 };
-let closure_30 = async function _maybeFetchCollectiblesShopTabLayout(arg0, value) {
+let closure_30 = async function _maybeFetchCollectiblesShopTabLayout(arg0) {
   if (c6 === 2) {
     c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");

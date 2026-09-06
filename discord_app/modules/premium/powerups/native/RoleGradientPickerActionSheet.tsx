@@ -241,9 +241,9 @@ export default function RoleGradientPickerActionSheet(arg0) {
         };
         items[1] = selected;
         obj = { style: tmp7.option, colors: null, start: null, end: null };
-        let tmp5Result = tmp5(tmp6[18]);
+        let tmp5Result = onSelect(tmp6[18]);
         const items1 = [tmp5Result.int2hex(primary_color)];
-        tmp5Result = tmp5(tmp6[18]);
+        tmp5Result = onSelect(tmp6[18]);
         items1[1] = tmp5Result.int2hex(tmp[1]);
         obj.colors = items1;
         obj.start = { x: 0, y: 0 };

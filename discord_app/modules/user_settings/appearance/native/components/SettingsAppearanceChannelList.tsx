@@ -4,6 +4,7 @@ import ReanimatedRexportDefault from "../../../../reanimated/ReanimatedRexport.t
 import SettingsAppearanceChannelRowItemDefault from "SettingsAppearanceChannelRowItem.tsx";
 import SettingsAppearanceMessagesHeaderItemDefault from "SettingsAppearanceMessagesHeaderItem.tsx";
 import SettingsAppearanceActivityCardsItemDefault from "SettingsAppearanceActivityCardsItem.tsx";
+import SettingsAppearanceGradientBackgroundDefault from "SettingsAppearanceGradientBackground.tsx";
 import SettingsAppearanceChannelListPreviewNitroUpsellDefault from "SettingsAppearanceChannelListPreviewNitroUpsell.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
@@ -75,10 +76,10 @@ export default function ChannelListPreview(useGradientBackground) {
   let tmp7 = null;
   if (useGradientBackground) {
     obj = { style: tmp.channelPreviewGradient, children: null };
-    obj = { themes, themeIndex, isDimmed: false, backgroundToken: tmp4(576).colors.BACKGROUND_BASE_LOW };
-    obj.children = closure_5(tmp4(15298), obj);
+    obj = { themes, themeIndex, isDimmed: false, backgroundToken: nativeDefault.colors.BACKGROUND_BASE_LOW };
+    obj.children = closure_5(SettingsAppearanceGradientBackgroundDefault, obj);
     tmp7 = closure_5(closure_4, obj);
-    const tmp4Result = tmp4(15298);
+    const tmp4Result = SettingsAppearanceGradientBackgroundDefault;
   }
   const items2 = [tmp7, ,];
   const obj1 = {

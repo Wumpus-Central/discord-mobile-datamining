@@ -78,7 +78,7 @@ function UserVoiceSettings(user) {
       trackUserProfileAction({ action: "MUTE_SOUNDBOARD" });
       const result = AudioActionCreatorsDefault.toggleLocalSoundboardMute(user.id);
     };
-    items3.push(tmp10(tmp2(tmp3[15]).UserProfileFormRow, obj1, "mute-soundboard"));
+    items3.push(closure_9(tmp2(tmp3[15]).UserProfileFormRow, obj1, "mute-soundboard"));
     if (supportsDisableLocalVideo) {
       const intl3 = tmp2(tmp3[16]).intl;
       const string3 = intl3.string;
@@ -97,11 +97,11 @@ function UserVoiceSettings(user) {
       obj2.icon = VideoIcon;
       if (isLocalVideoAutoDisabled) {
         obj3 = { style: tmp.disableVideoSublabel, children: null };
-        const items4 = [tmp10(tmp2(tmp3[23]).CircleErrorIcon, { size: "xxs", color: "text-feedback-warning" })];
+        const items4 = [closure_9(tmp2(tmp3[23]).CircleErrorIcon, { size: "xxs", color: "text-feedback-warning" })];
         obj4 = { variant: "text-xs/medium", color: "text-feedback-warning", children: null };
         const intl4 = tmp2(tmp3[16]).intl;
         obj4.children = intl4.string(tmp2(tmp3[16]).t.m2Hyj0);
-        items4[1] = tmp10(tmp2(tmp3[24]).Text, obj4);
+        items4[1] = closure_9(tmp2(tmp3[24]).Text, obj4);
         obj3.children = items4;
         isLocalVideoAutoDisabled = closure_10(isLocalVideoDisabled, obj3);
       }
@@ -119,7 +119,7 @@ function UserVoiceSettings(user) {
           );
         }
       };
-      items3.push(tmp10(tmp2(tmp3[15]).UserProfileFormRow, obj2, "disable-video"));
+      items3.push(closure_9(tmp2(tmp3[15]).UserProfileFormRow, obj2, "disable-video"));
     }
     if (isSecureFramesUIEnabled) {
       const obj5 = { label: null, icon: null, hint: null, onPress: null };
@@ -140,7 +140,7 @@ function UserVoiceSettings(user) {
           },
         );
       };
-      items3.push(tmp10(tmp2(tmp3[15]).UserProfileFormRow, obj5, "view-secure-frames-verification-code"));
+      items3.push(closure_9(tmp2(tmp3[15]).UserProfileFormRow, obj5, "view-secure-frames-verification-code"));
     }
     let tmp10Result = null;
     if (0 !== items3.length) {
@@ -151,9 +151,9 @@ function UserVoiceSettings(user) {
       obj6.title = intl6.string(tmp2(tmp3[16]).t.NiTd0e);
       obj6.titleStyle = tmp.cardTitle;
       const obj7 = { children: items3 };
-      obj6.children = tmp10(tmp2(tmp3[15]).UserProfileCardRows, obj7);
-      tmp10Result = tmp10(channel(tmp3[15]), obj6);
-      const tmp6Result = channel(tmp3[15]);
+      obj6.children = closure_9(tmp2(tmp3[15]).UserProfileCardRows, obj7);
+      tmp10Result = closure_9(tmp6(tmp3[15]), obj6);
+      const tmp6Result = tmp6(tmp3[15]);
     }
     return tmp10Result;
   } else {
@@ -176,8 +176,10 @@ function UserVoiceSettings(user) {
       trackUserProfileAction({ action: "MUTE" });
       AudioActionCreatorsDefault.toggleLocalMute(user.id);
     };
-    items3.push(tmp10(tmp2(tmp3[15]).UserProfileFormRow, obj8, "mute"));
+    items3.push(closure_9(tmp2(tmp3[15]).UserProfileFormRow, obj8, "mute"));
   }
+  tmp6 = channel;
+  tmp7 = channel(trackUserProfileAction[11])(user.id, channel.id);
 }
 function CurrentUserVoiceSettings(channel) {
   channel = channel.channel;
@@ -229,9 +231,9 @@ function CurrentUserVoiceSettings(channel) {
       AudioActionCreatorsDefault.toggleSelfMute();
     };
     obj1.children = closure_9(tmp2(7207).UserProfileFormRow, obj, "mute");
-    tmp9Result = tmp9(tmp2(7207).UserProfileCardRows, obj1);
+    tmp9Result = closure_9(tmp2(7207).UserProfileCardRows, obj1);
     obj.children = tmp9Result;
-    tmp9Result = tmp9(trackUserProfileAction(7207), obj);
+    tmp9Result = closure_9(trackUserProfileAction(7207), obj);
     const tmp6Result = trackUserProfileAction(7207);
   }
   return tmp8;

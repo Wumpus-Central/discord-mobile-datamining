@@ -105,7 +105,7 @@ function TryItOutButton(botUserId) {
   const items = [botUserId, applicationId, analyticsLocations];
   let str = "primary";
   const callback = noop.useCallback(
-    asyncGeneratorStep(async (arg0, value) => {
+    asyncGeneratorStep(async () => {
       tmp3(1242).track(constants.APP_DETAIL_PAGE_ENTRY_POINT_COMMAND_BUTTON_CLICKED, {
         application_id: applicationId,
         button_action: botUserId(9409).EntryPointCommandButtonActions.OPEN_APP_DM,
@@ -299,15 +299,14 @@ export default function ActivityDetailContent(application) {
         const obj3 = {
           placeholder: "e.g. http://192.168.1.1:3000",
           value: activityUrlOverride,
-          onChange: tmp23(9549).setActivityUrlOverride,
+          onChange: DeveloperActivityShelfActionCreatorsAll.setActivityUrlOverride,
         };
-        obj2.children = tmp22(tmp2(6606).TextInput, obj3);
-        tmp22Result = tmp22(tmp21, obj2);
+        obj2.children = closure_11(tmp2(6606).TextInput, obj3);
+        tmp22Result = closure_11(View, obj2);
       }
       items1[2] = tmp22Result;
       obj.children = items1;
-      tmp20Result = closure_12(tmp21, obj);
-      tmp23 = importAll;
+      tmp20Result = closure_12(View, obj);
     }
     const getOrFetchApplication = tmp2(7168).useGetOrFetchApplication(application.id);
     let bot;
@@ -351,8 +350,8 @@ export default function ActivityDetailContent(application) {
         if (null != id1) {
           const obj8 = { style: tmp.tryItOutButtonContainerStyle, children: null };
           const obj9 = { botUserId: bot.id, applicationId: application.id, analyticsLocations, context };
-          obj8.children = tmp39(TryItOutButton, obj9);
-          tmp39Result = tmp39(View, obj8);
+          obj8.children = closure_11(TryItOutButton, obj9);
+          tmp39Result = closure_11(View, obj8);
         }
       }
       const obj10 = { children: null };
@@ -363,7 +362,7 @@ export default function ActivityDetailContent(application) {
       tmp39Result = null != reason;
       if (tmp39Result) {
         const obj12 = { variant: "text-sm/normal", style: tmp.primaryEntryPointButtonDisabledCTA, children: reason };
-        tmp39Result = tmp39(tmp2(4556).Text, obj12);
+        tmp39Result = closure_11(tmp2(4556).Text, obj12);
       }
       items3[1] = tmp39Result;
       obj11.children = items3;
@@ -424,7 +423,6 @@ export default function ActivityDetailContent(application) {
     const obj25 = { style: tmp.tagIcon, size: "xs" };
     obj24.icon = closure_11(tmp2(5089).GroupIcon, obj25);
     const tmp29 = tmp5(12143)(obj5);
-    const tmp52 = Tag;
     let num5 = num;
     if (num == null) {
       num5 = 0;
@@ -435,7 +433,7 @@ export default function ActivityDetailContent(application) {
       num = 0;
     }
     obj24.accessibilityLabel = tmp5(12146)(num);
-    const items8 = [closure_11(tmp52, obj24, "participants")];
+    const items8 = [closure_11(Tag, obj24, "participants")];
     const tags = application.tags;
     let mapped;
     if (tags != null) {

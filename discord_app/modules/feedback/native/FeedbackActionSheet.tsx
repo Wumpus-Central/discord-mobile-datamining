@@ -1,4 +1,5 @@
 // discord_app/modules/feedback/native/FeedbackActionSheet.tsx
+import _modDef12 from "../../../../_runtime/metro/00012__.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import asyncRequireImpl from "../../../../_runtime/01896_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
@@ -48,6 +49,7 @@ export default function FeedbackActionSheet(feedbackReasons) {
     if (!obj.isEqual(closure_7, reasons)) {
       _undefined(FeedbackUtils.shuffleProblems(reasons, otherKey));
     }
+    obj = _modDef12;
   }, items);
   const tmp8 = _slicedToArray(noop.useState(null), 2);
   selectedRating = tmp8[0];
@@ -127,7 +129,7 @@ export default function FeedbackActionSheet(feedbackReasons) {
   let tmp21Result = null;
   if (showHeaderCloseButton) {
     obj1 = { onPress };
-    tmp21Result = tmp21(tmp15(tmp4[18]).ActionSheetCloseButton, obj1);
+    tmp21Result = tmp21(reasons(tmp4[18]).ActionSheetCloseButton, obj1);
   }
   obj.trailing = tmp21Result;
   obj.header = closure_7(reasons(otherKey[17]).BottomSheetTitleHeader, obj);
@@ -142,7 +144,7 @@ export default function FeedbackActionSheet(feedbackReasons) {
       color: "text-default",
       children: ratingsBodyLabel,
     };
-    tmp21Result = tmp21(tmp15(tmp4[20]).Text, obj3);
+    tmp21Result = tmp21(reasons(tmp4[20]).Text, obj3);
   }
   const items3 = [
     tmp21Result,
@@ -176,19 +178,19 @@ export default function FeedbackActionSheet(feedbackReasons) {
         return tmp;
       }),
     };
-    obj4.children = tmp21(tmp15(tmp4[22]).TableRowGroup, obj5);
+    obj4.children = tmp21(reasons(tmp4[22]).TableRowGroup, obj5);
     tmp21Result1 = tmp21(View, obj4);
   }
   items3[2] = tmp21Result1;
   let tmp21Result2 = null;
   if (!hideDontShowAgainCheckbox) {
     const obj6 = { start: true, end: true, checked: first1, label: null, onPress: null };
-    const intl = tmp15(tmp4[25]).intl;
-    obj6.label = intl.string(tmp15(tmp4[25]).t["5E9SB9"]);
+    const intl = reasons(tmp4[25]).intl;
+    obj6.label = intl.string(reasons(tmp4[25]).t["5E9SB9"]);
     obj6.onPress = function onPress() {
       return closure_16(!first1);
     };
-    tmp21Result2 = tmp21(tmp15(tmp4[24]).TableCheckboxRow, obj6);
+    tmp21Result2 = tmp21(reasons(tmp4[24]).TableCheckboxRow, obj6);
   }
   items3[3] = tmp21Result2;
   obj2.children = items3;

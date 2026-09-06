@@ -10,6 +10,8 @@ import AudioActionCreatorsDefault from "../../../../actions/AudioActionCreators.
 import beginConsoleTransfer from "../../../game_console/native/beginConsoleTransfer.tsx";
 import instant_invite_InstantInviteUtils from "../../../instant_invite/native/InstantInviteUtils.tsx";
 import UserSettingsVoiceDefault from "../../../user_settings/voice/native/UserSettingsVoice.tsx";
+import VoiceChatHeaderIconDefault from "../../../voice_chat/native/components/VoiceChatHeaderIcon.tsx";
+import _modDef10001 from "../../../../../_runtime/metro/10001__.js";
 import ChannelCallMicButton from "ChannelCallMicButton.tsx";
 import coercePlatformTypeToConsoleType from "../../../game_console/coercePlatformTypeToConsoleType.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -178,12 +180,12 @@ export const ChannelCallConnectingHeader = function ChannelCallConnectingHeader(
   const items = [closure_12(View, { style: { width: 4 } }), , ,];
   let tmp9Result = null;
   if (null != fn) {
-    obj = { source: tmp2(10001), onPress: fn, accessibilityLabel: null };
+    obj = { source: _modDef10001, onPress: fn, accessibilityLabel: null };
     const intl = tmp5(1114).intl;
     obj = { channelName: tmp4 };
     obj.accessibilityLabel = intl.formatToPlainString(tmp5(1114).t["dHHb/2"], obj);
-    tmp9Result = tmp9(tmp2(10000), obj);
-    const tmp2Result = tmp2(10000);
+    tmp9Result = closure_12(VoiceChatHeaderIconDefault, obj);
+    const tmp2Result = VoiceChatHeaderIconDefault;
   }
   const obj1 = { children: null };
   items[1] = tmp9Result;

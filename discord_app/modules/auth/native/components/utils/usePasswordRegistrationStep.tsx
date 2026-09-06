@@ -28,10 +28,10 @@ export const usePasswordRegistrationStep = function usePasswordRegistrationStep(
   const memo = obj.useMemo(() => {
     let tmp = null == first;
     if (!tmp) {
-      tmp = "" === arr;
+      tmp = "" === first;
     }
     if (!tmp) {
-      let tmp2 = arr.length < 8;
+      let tmp2 = first.length < 8;
       if (!tmp2) {
         tmp2 = null != closure_1;
       }
@@ -49,7 +49,7 @@ export const usePasswordRegistrationStep = function usePasswordRegistrationStep(
     passwordScore: passwordScore.passwordScore,
     preventSubmitPassword: memo,
     validatePassword: obj.useCallback(
-      asyncGeneratorStep(async (arg0, value) => {
+      asyncGeneratorStep(async () => {
         if (c4 === 2) {
           c4 = 3;
           throw new TypeError("Generator functions may not be called on executing generators");
@@ -75,8 +75,8 @@ export const usePasswordRegistrationStep = function usePasswordRegistrationStep(
                 return obj;
               } else {
                 if (null != first) {
-                  if ("" !== arr) {
-                    if (arr.length < 8) {
+                  if ("" !== first) {
+                    if (first.length < 8) {
                       const intl2 = tmp3(tmp25[6]).intl;
                       c4 = 3;
                       const obj1 = { value: intl2.string(tmp3(tmp25[6]).t.DfaKHr), done: true };
@@ -90,7 +90,7 @@ export const usePasswordRegistrationStep = function usePasswordRegistrationStep(
                       obj2 = tmp3(tmp25[7]);
                       c1 = 2;
                       c4 = 1;
-                      const obj3 = { value: obj2.scorePassword(arr), done: false };
+                      const obj3 = { value: obj2.scorePassword(first), done: false };
                       return obj3;
                     }
                   }

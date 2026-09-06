@@ -25,7 +25,7 @@ export const ModalDisclaimer = function ModalDisclaimer(children) {
   });
   return (
     <View variant="text-xs/medium" color="text-muted" style={tmp.disclaimer}>
-      {arg0.children}
+      {children.children}
     </View>
   );
 };

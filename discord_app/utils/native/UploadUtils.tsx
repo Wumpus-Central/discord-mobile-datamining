@@ -3,10 +3,12 @@ import LoggerDefault from "../../modules/debug/Logger.tsx";
 import _mod17 from "../../../_runtime/metro/00017__.js";
 import PlatformUtils from "../PlatformUtils.tsx";
 import NativeFileModuleDefault from "../../../discord_common/js/packages/rtn-codegen/js/NativeFileModule.tsx";
+import PremiumUtilsDefault from "../PremiumUtils.tsx";
 import Upload from "../../lib/uploader/Upload.tsx";
 import UploadUtils from "../UploadUtils.tsx";
 import FileUtils from "../FileUtils.tsx";
 import NativePermissionUtilsDefault from "../../modules/native_permissions/NativePermissionUtils.tsx";
+import ImageConversionDecision from "../../modules/media_uploads/native/ImageConversionDecision.tsx";
 import VideoUploadUtils from "../../modules/media_uploads/native/VideoUploadUtils.tsx";
 import utils_TimeUtils from "TimeUtils.tsx";
 import _objectWithoutProperties from "../../../_runtime/metro/00109__objectWithoutProperties.js";
@@ -26,7 +28,7 @@ function openImagePickerUnhandled() {
   }
   return applyArgumentsResult;
 }
-let closure_25 = async function _openImagePickerUnhandled(arg0, value) {
+let closure_25 = async function _openImagePickerUnhandled(arg0) {
   if (c12 === 2) {
     c12 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -318,7 +320,7 @@ function openImagePicker() {
   }
   return applyArgumentsResult;
 }
-let closure_26 = async function _openImagePicker(arg0, value) {
+let closure_26 = async function _openImagePicker(arg0) {
   if (c6 === 2) {
     c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -431,7 +433,7 @@ function mediaManager() {
   }
   return applyArgumentsResult;
 }
-let closure_28 = async function _mediaManager(arg0, value) {
+let closure_28 = async function _mediaManager(arg0) {
   if (c8 === 2) {
     c8 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -530,9 +532,9 @@ function getVideoQuality() {
     if (DATA_SAVER === videoUploadQuality) {
       let VERY_HIGH = constants.LOW;
     } else {
-      if (tmp5.STANDARD === videoUploadQuality) {
+      if (constants2.STANDARD === videoUploadQuality) {
         VERY_HIGH = constants.HIGH;
-      } else if (tmp5.BEST !== videoUploadQuality) {
+      } else if (constants2.BEST !== videoUploadQuality) {
         VERY_HIGH = constants.MEDIUM;
       }
       VERY_HIGH = constants.VERY_HIGH;
@@ -540,15 +542,16 @@ function getVideoQuality() {
   } else {
     if (DATA_SAVER === videoUploadQuality) {
       let LOW = constants.LOW;
-    } else if (tmp5.STANDARD === videoUploadQuality) {
+    } else if (constants2.STANDARD === videoUploadQuality) {
       LOW = constants.MEDIUM;
-    } else if (tmp5.BEST === videoUploadQuality) {
+    } else if (constants2.BEST === videoUploadQuality) {
       LOW = constants.HIGH;
     } else {
       LOW = constants.LOW;
     }
     return LOW;
   }
+  obj = PremiumUtilsDefault;
 }
 function getAppDir() {
   if (obj.isAndroid()) {
@@ -557,19 +560,18 @@ function getAppDir() {
       const error = new Error("RTNFileManager doesn't exist?");
       throw error;
     } else {
-      const tmp3Result = tmp3(1152);
-      return tmp3(1152).getConstants().CacheDirPath.replace(/cache$/, "");
+      const tmp3Result = NativeFileModuleDefault;
+      return NativeFileModuleDefault.getConstants().CacheDirPath.replace(/cache$/, "");
     }
-    tmp3 = importDefault;
   } else {
     return "/private" + timestampProducer.DCDFileManager.DocumentsDirPath.replace(/Documents$/, "");
   }
   obj = PlatformUtils;
 }
-function getFileInfo(arg0, arg1) {
-  ({ item, spoiler, description } = arg0);
+function getFileInfo(item, arg1) {
+  ({ item, spoiler, description } = item);
   let str = arg1;
-  ({ mimeType, allowOptimization } = arg0);
+  ({ mimeType, allowOptimization } = item);
   if (arg1 === undefined) {
     str = "";
   }
@@ -613,7 +615,7 @@ function getFileInfo(arg0, arg1) {
     return tmp3;
   }
 }
-let closure_30 = async function _getPhotoKitDataUTI(arg0, value) {
+let closure_30 = async function _getPhotoKitDataUTI(arg0) {
   if (c7 === 2) {
     c7 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -641,12 +643,12 @@ let closure_30 = async function _getPhotoKitDataUTI(arg0, value) {
           closure_3 = tmp3;
           closure_2 = tmp7;
           if (obj8.isIOS()) {
-            if (obj7.startsWith("ph://")) {
+            if (_require.startsWith("ph://")) {
               c5 = 1;
               MediaManager = MediaManager.MediaManager;
               c6 = 2;
               c7 = 1;
-              const obj1 = { value: MediaManager.getImageContentType(obj7), done: false };
+              const obj1 = { value: MediaManager.getImageContentType(_require), done: false };
               return obj1;
             }
           }
@@ -689,7 +691,7 @@ let closure_30 = async function _getPhotoKitDataUTI(arg0, value) {
     }
   }
 };
-let closure_31 = async function _shouldConvertToPNG(arg0, value) {
+let closure_31 = async function _shouldConvertToPNG(arg0) {
   if (c7 === 2) {
     c7 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -717,16 +719,16 @@ let closure_31 = async function _shouldConvertToPNG(arg0, value) {
           closure_3 = tmp3;
           closure_2 = tmp7;
           if (obj7.isIOS()) {
-            if (tmp26Result.isPhotoKitAsset(str3, str4)) {
+            if (tmp26Result.isPhotoKitAsset(_require, importDefault)) {
               let match;
-              if (str4 != null) {
-                match = str4.match(/\.png$/i);
+              if (importDefault != null) {
+                match = importDefault.match(/\.png$/i);
               }
               if (null == match) {
                 c7 = 3;
                 return { value: false, done: true };
               }
-            } else if (null == str3.match(/^(assets-library|file):\/\/.+(&ext=|\.)png$/i)) {
+            } else if (null == _require.match(/^(assets-library|file):\/\/.+(&ext=|\.)png$/i)) {
               c7 = 3;
               return { value: false, done: true };
             }
@@ -734,7 +736,7 @@ let closure_31 = async function _shouldConvertToPNG(arg0, value) {
             MediaManager = MediaManager.MediaManager;
             c6 = 2;
             c7 = 1;
-            const obj1 = { value: MediaManager.imageHasTransparency(str3), done: false };
+            const obj1 = { value: MediaManager.imageHasTransparency(_require), done: false };
             return obj1;
           } else {
             c7 = 3;
@@ -804,7 +806,7 @@ function convertVideo(videoMetadata) {
   if (obj6.isAndroid()) {
     if (tmpResult.getSystemVersionMajor() > 34) {
       let _Math = Math;
-      let frameRate = Math.min(videoMetadata.frameRate, tmp(5161).DEFAULT_VIDEO_ENCODING_CONFIG.frameRate);
+      let frameRate = Math.min(videoMetadata.frameRate, VideoUploadUtils.DEFAULT_VIDEO_ENCODING_CONFIG.frameRate);
     }
     obj.frameRate = frameRate;
     obj.skipVideoTranscode = result1;
@@ -813,7 +815,7 @@ function convertVideo(videoMetadata) {
     let promise = new Promise((arg0, arg1) => {
       closure_0 = arg0;
       closure_1 = arg1;
-      closure_2 = async function _findCompatibleConfig(arg0, value) {
+      closure_2 = async function _findCompatibleConfig() {
         if (c13 === 2) {
           c13 = 3;
           throw new TypeError("Generator functions may not be called on executing generators");
@@ -844,7 +846,8 @@ function convertVideo(videoMetadata) {
                   closure_137_0 = undefined;
                   async function _loop() {
                     closure_2 = tmp2;
-                    closure_129_0 = await closure_3_42(config);
+                    await closure_3_42(config);
+                    closure_129_0 = value;
                     if (closure_129_0.isSupported) {
                       return { v: true };
                     }
@@ -1180,7 +1183,7 @@ function convertVideo(videoMetadata) {
           let obj1 = PlatformUtils;
           let isAndroidResult = obj1.isAndroid();
           if (isAndroidResult) {
-            isAndroidResult = null != str3.match(/^content:\/\/.+$/i);
+            isAndroidResult = null != uri.match(/^content:\/\/.+$/i);
           }
           if (isAndroidResult) {
             let finalConfig = { encodingConfig: null, compressionQuality: null, isLowQuality: null, videoQuality: null, skipVideoTranscode: null };
@@ -1189,10 +1192,10 @@ function convertVideo(videoMetadata) {
             finalConfig.isLowQuality = isLowQuality;
             finalConfig.videoQuality = videoQualitySetting;
             finalConfig.skipVideoTranscode = result1;
-            let nextPromise = mediaManager("resolveToMediaFilePath", str3, finalConfig).then(resolveWithConfig, closure_1);
-            const promise4 = mediaManager("resolveToMediaFilePath", str3, finalConfig);
+            let nextPromise = mediaManager("resolveToMediaFilePath", uri, finalConfig).then(resolveWithConfig, closure_1);
+            const promise4 = mediaManager("resolveToMediaFilePath", uri, finalConfig);
           } else {
-            let tmp12Result = tmp12(1115);
+            let tmp12Result = PlatformUtils;
             let isIOSResult = tmp12Result.isIOS();
             if (!isIOSResult) {
               if (isIOSResult) {
@@ -1200,21 +1203,21 @@ function convertVideo(videoMetadata) {
                 finalConfig.encodingConfig = finalConfig;
                 finalConfig.videoQuality = videoQualitySetting;
                 finalConfig.skipVideoTranscode = result1;
-                nextPromise = mediaManager("compressVideo", str3, finalConfig).then(resolveWithConfig, closure_1);
-                const promise3 = mediaManager("compressVideo", str3, finalConfig);
+                nextPromise = mediaManager("compressVideo", uri, finalConfig).then(resolveWithConfig, closure_1);
+                const promise3 = mediaManager("compressVideo", uri, finalConfig);
               } else {
-                tmp12Result = tmp12(1115);
+                tmp12Result = PlatformUtils;
                 const isIOSResult1 = tmp12Result.isIOS();
                 if (!isIOSResult1) {
                   if (isIOSResult1) {
                     obj1 = { encodingConfig: finalConfig, videoQuality: videoQualitySetting, skipVideoTranscode: result1 };
-                    nextPromise = mediaManager("compressVideo", str3, obj1).then(resolveWithConfig, closure_1);
-                    const promise2 = mediaManager("compressVideo", str3, obj1);
+                    nextPromise = mediaManager("compressVideo", uri, obj1).then(resolveWithConfig, closure_1);
+                    const promise2 = mediaManager("compressVideo", uri, obj1);
                   } else {
-                    const formatted = str3.toLowerCase();
-                    isIOSResult = tmp12(1115).isIOS();
+                    const formatted = uri.toLowerCase();
+                    isIOSResult = PlatformUtils.isIOS();
                     if (isIOSResult) {
-                      isIOSResult = str3.startsWith("file");
+                      isIOSResult = uri.startsWith("file");
                     }
                     if (isIOSResult) {
                       let endsWithResult = formatted.endsWith("mov");
@@ -1228,60 +1231,60 @@ function convertVideo(videoMetadata) {
                     }
                     if (isIOSResult) {
                       const obj2 = { encodingConfig: finalConfig, videoQuality: videoQualitySetting, isMov: null, skipVideoTranscode: null };
-                      const formatted1 = str3.toLowerCase();
+                      const formatted1 = uri.toLowerCase();
                       let endsWithResult1 = formatted1.endsWith("mov");
                       if (!endsWithResult1) {
-                        const formatted2 = str3.toLowerCase();
+                        const formatted2 = uri.toLowerCase();
                         endsWithResult1 = formatted2.endsWith("qt");
                       }
                       obj2.isMov = endsWithResult1;
                       obj2.skipVideoTranscode = result1;
-                      nextPromise = mediaManager("compressVideo", str3, obj2).then(resolveWithConfig, closure_1);
-                      const tmp36Result = mediaManager("compressVideo", str3, obj2);
+                      nextPromise = mediaManager("compressVideo", uri, obj2).then(resolveWithConfig, closure_1);
+                      const tmp36Result = mediaManager("compressVideo", uri, obj2);
                     } else {
-                      const obj3 = { uri: str3, filename: str4 };
+                      const obj3 = { uri, filename: importDefault };
                       logger.error("Unsupported video URI format", obj3);
                       const _Error2 = Error;
                       const _HermesInternal = HermesInternal;
-                      const error = new Error("Unsupported video URI format: " + str3);
+                      const error = new Error("Unsupported video URI format: " + uri);
                       closure_1(error);
                     }
-                    const tmp12Result1 = tmp12(1115);
+                    const tmp12Result1 = PlatformUtils;
                   }
                 } else {
-                  if (tmp12Result2.isPhotoKitAsset(str3, str4)) {
+                  if (tmp12Result2.isPhotoKitAsset(uri, importDefault)) {
                     let match;
-                    if (str4 != null) {
-                      match = str4.match(/\.mp4$/i);
+                    if (importDefault != null) {
+                      match = importDefault.match(/\.mp4$/i);
                     }
                     let isVideo2 = null != match;
                   } else {
-                    isVideo2 = null != str3.match(/^assets-library:\/\/.+&ext=mp4$/i);
+                    isVideo2 = null != uri.match(/^assets-library:\/\/.+&ext=mp4$/i);
                     if (isVideo2) {
-                      const obj4 = { uri: str3, overrideType: "a" };
-                      isVideo2 = tmp12(5129).getFile(obj4).isVideo;
-                      const tmp12Result3 = tmp12(5129);
+                      const obj4 = { uri, overrideType: "a" };
+                      isVideo2 = UploadUtils.getFile(obj4).isVideo;
+                      const tmp12Result3 = UploadUtils;
                     }
                   }
-                  tmp12Result2 = tmp12(5159);
+                  tmp12Result2 = ImageConversionDecision;
                 }
               }
             } else {
-              if (tmp12Result4.isPhotoKitAsset(str3, str4)) {
+              if (tmp12Result4.isPhotoKitAsset(uri, importDefault)) {
                 let match1;
-                if (str4 != null) {
-                  match1 = str4.match(/\.(mov|qt)$/i);
+                if (importDefault != null) {
+                  match1 = importDefault.match(/\.(mov|qt)$/i);
                 }
                 isVideo = null != match1;
               } else {
-                isVideo = null != str3.match(/^assets-library:\/\/.+&ext=(mov|qt)$/i);
+                isVideo = null != uri.match(/^assets-library:\/\/.+&ext=(mov|qt)$/i);
                 if (isVideo) {
-                  const obj5 = { uri: str3, overrideType: "a" };
-                  isVideo = tmp12(5129).getFile(obj5).isVideo;
-                  const tmp12Result5 = tmp12(5129);
+                  const obj5 = { uri, overrideType: "a" };
+                  isVideo = UploadUtils.getFile(obj5).isVideo;
+                  const tmp12Result5 = UploadUtils;
                 }
               }
-              tmp12Result4 = tmp12(5159);
+              tmp12Result4 = ImageConversionDecision;
             }
           }
         } else {
@@ -1298,6 +1301,7 @@ function convertVideo(videoMetadata) {
     return promise;
   }
   frameRate = videoMetadata.frameRate;
+  obj6 = PlatformUtils;
 }
 function buildResolvedUpload(arg0) {
   const self = this;
@@ -1313,7 +1317,7 @@ let closure_36 = async function _buildResolvedUpload(arg0) {
   isImage = arg0;
   c2 = 0;
   c3 = 0;
-  return (async (arg0, value) => {
+  return (async (arg0) => {
     if (c3 === 2) {
       c3 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -1397,7 +1401,7 @@ let closure_36 = async function _buildResolvedUpload(arg0) {
     }
   })();
 };
-let closure_37 = async function _processVideoUpload(arg0, value) {
+let closure_37 = async function _processVideoUpload(arg0) {
   if (c4 === 2) {
     c4 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -1533,7 +1537,7 @@ let closure_37 = async function _processVideoUpload(arg0, value) {
     }
   }
 };
-let closure_38 = async function _processImageOrFileUpload(arg0, value) {
+let closure_38 = async function _processImageOrFileUpload(arg0) {
   if (c6 === 2) {
     c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -1728,7 +1732,7 @@ let closure_38 = async function _processImageOrFileUpload(arg0, value) {
                               }
                               if (isAndroidResult) {
                                 obj = { compressionQuality, isLowQuality, skipVideoTranscode: true, useOriginalIfSmaller, allowOptimization: flag };
-                                return closure_1_27("resolveToMediaFilePath", str, obj);
+                                return closure_1_27("resolveToMediaFilePath", "resolveToMediaFilePath", obj);
                               } else {
                                 return Promise.resolve(str);
                               }
@@ -1785,7 +1789,7 @@ let closure_38 = async function _processImageOrFileUpload(arg0, value) {
     }
   }
 };
-let closure_39 = async function _tryConvertImage(arg0, value) {
+let closure_39 = async function _tryConvertImage(arg0) {
   await (function getPhotoKitDataUTI() {
     const self = this;
     const apply = closure_1_30.apply;
@@ -1989,6 +1993,7 @@ let closure_39 = async function _tryConvertImage(arg0, value) {
           }
           tmpResult = closure_1_0(5159);
         }
+        const obj = closure_1_0(1115);
       })(closure_131_0, closure_131_1)) {
         c7 = 9;
         c8 = 1;
@@ -2004,7 +2009,7 @@ let closure_39 = async function _tryConvertImage(arg0, value) {
   ({ uri: closure_131_0, filename: closure_131_1, isLowQuality: closure_131_2, compressionQuality: closure_131_3, mobileLosslessImageEnabled: closure_131_4, useEnhancedConversion: closure_131_5, useJpegliEncoder: closure_131_6, allowOptimization: closure_131_7, targetWidth: closure_131_8, targetHeight: closure_131_9 } = closure_0);
   return "PX_16";
 };
-let closure_40 = async function _fetchVideoMetadata(arg0, value) {
+let closure_40 = async function _fetchVideoMetadata(arg0) {
   if (c8 === 2) {
     c8 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -2038,10 +2043,9 @@ let closure_40 = async function _fetchVideoMetadata(arg0, value) {
             c6 = 1;
             c7 = 2;
             c8 = 1;
-            const obj1 = { value: mediaManager("getVideoMetadata", tmp20), done: false };
+            const obj1 = { value: mediaManager("getVideoMetadata", closure_0), done: false };
             return obj1;
           }
-          tmp20 = closure_0;
         }
       } else if (1 === warnResult) {
         c6 = 0;
@@ -2105,9 +2109,7 @@ function getImageDimensionsIfMissing(uri, arg1, arg2, c1) {
   }
   return applyArgumentsResult;
 }
-let closure_41 = async function _getImageDimensionsIfMissing(arg0, width, height, arg3) {
-  closure_0 = arg0;
-  closure_3 = arg3;
+let closure_41 = async function _getImageDimensionsIfMissing() {
   c8 = 0;
   c9 = 0;
   c7 = 0;
@@ -2165,8 +2167,8 @@ let closure_41 = async function _getImageDimensionsIfMissing(arg0, width, height
             c8 = 2;
             c9 = 1;
             obj4 = {
-              value: (function getImageDimensionByUri(arg0) {
-                        closure_0 = arg0;
+              value: (function getImageDimensionByUri(uri) {
+                        closure_0 = uri;
                         return new Promise((arg0, arg1) => {
                           closure_0 = arg0;
                           return size.getSize(closure_0, (width, height) => {
@@ -2254,7 +2256,7 @@ function checkVideoEncodingSupport(arg0) {
   }
   return applyArgumentsResult;
 }
-let closure_43 = async function _checkVideoEncodingSupport(arg0, value) {
+let closure_43 = async function _checkVideoEncodingSupport(arg0) {
   if (c6 === 2) {
     c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -2322,7 +2324,7 @@ let closure_43 = async function _checkVideoEncodingSupport(arg0, value) {
     }
   }
 };
-function calculateImageQualityMetrics(arg0, arg1, arg2, arg3, arg4) {
+function calculateImageQualityMetrics(originalUri, path, filename, attachmentQualityMetricsEnabled, attachmentOriginDetectionEnabled) {
   const self = this;
   const apply = closure_45.apply;
   if (typeof apply === "unknown") {
@@ -2332,7 +2334,7 @@ function calculateImageQualityMetrics(arg0, arg1, arg2, arg3, arg4) {
   }
   return applyArgumentsResult;
 }
-let closure_45 = async function _calculateImageQualityMetrics(arg0, value) {
+let closure_45 = async function _calculateImageQualityMetrics(arg0) {
   if (c9 === 2) {
     c9 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -2492,9 +2494,9 @@ export { getVideoQuality };
 export const resolveModeToVideoQualityForUserWithFeature = function resolveModeToVideoQualityForUserWithFeature(arg0) {
   if (constants2.DATA_SAVER === arg0) {
     return constants.LOW;
-  } else if (tmp.STANDARD === arg0) {
+  } else if (constants2.STANDARD === arg0) {
     return constants.HIGH;
-  } else if (tmp.BEST === arg0) {
+  } else if (constants2.BEST === arg0) {
     return constants.VERY_HIGH;
   } else {
     return constants.MEDIUM;
@@ -2503,9 +2505,9 @@ export const resolveModeToVideoQualityForUserWithFeature = function resolveModeT
 export const resolveModeToVideoQualityForFreeUser = function resolveModeToVideoQualityForFreeUser(arg0) {
   if (constants2.DATA_SAVER === arg0) {
     return constants.LOW;
-  } else if (tmp.STANDARD === arg0) {
+  } else if (constants2.STANDARD === arg0) {
     return constants.MEDIUM;
-  } else if (tmp.BEST === arg0) {
+  } else if (constants2.BEST === arg0) {
     return constants.HIGH;
   } else {
     return constants.LOW;
@@ -2521,6 +2523,7 @@ export const cancelGetFileInfo = function cancelGetFileInfo(item) {
       }
     }
     fn();
+    obj = PlatformUtils;
   });
 };
 export const getFileSize = function getFileSize(uri) {
@@ -2533,14 +2536,14 @@ export const getFileSize = function getFileSize(uri) {
     if (null == NativeFileModuleDefault) {
       let rejectResult = Promise.reject("RTNFileManager doesn't exist?");
     } else {
-      rejectResult = tmp5(1152).getSize(replaced);
-      const tmp5Result = tmp5(1152);
+      rejectResult = NativeFileModuleDefault.getSize(replaced);
+      const tmp5Result = NativeFileModuleDefault;
     }
-    tmp5 = importDefault;
   } else {
     const DCDFileManager = timestampProducer.DCDFileManager;
     return DCDFileManager.getSize(replaced);
   }
+  tmpResult = PlatformUtils;
 };
 export { getAppDir };
 export { getFileInfo };

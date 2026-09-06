@@ -1,6 +1,8 @@
 // discord_app/modules/messages/native/renderer/row_data/VoiceChannelBadge.tsx
 import _mod17 from "../../../../../../_runtime/metro/00017__.js";
 import Constants from "../../../../../Constants.tsx";
+import AgeGateUtils from "../../../../age_gate/AgeGateUtils.tsx";
+import utils_ChannelUtils from "../../../../../utils/native/ChannelUtils.tsx";
 import VoiceChannelBadgeExperiment from "../../../../channel/VoiceChannelBadgeExperiment.tsx";
 import ChannelStore from "../../../../../stores/ChannelStore.tsx";
 import PermissionStore from "../../../../../stores/PermissionStore.tsx";
@@ -23,18 +25,18 @@ export const createVoiceChannelBadge = function createVoiceChannelBadge(id, guil
         }
         const channel = ChannelStore.getChannel(channelId);
         if (null != channel) {
-          let tmpResult = tmp(5028);
+          let tmpResult = utils_ChannelUtils;
           const assetSource = Image.resolveAssetSource(tmpResult.getChannelIcon(channel));
           let uri;
           if (assetSource != null) {
             uri = assetSource.uri;
           }
           if (null != uri) {
-            tmpResult = tmp(4771);
+            tmpResult = AgeGateUtils;
             let result = tmpResult.shouldAgeVerifyForAgeGate();
             if (result) {
-              result = tmp(4771).shouldShowAgeGateForChannelId(channel.id);
-              const tmpResult1 = tmp(4771);
+              result = AgeGateUtils.shouldShowAgeGateForChannelId(channel.id);
+              const tmpResult1 = AgeGateUtils;
             }
             let isPrivateResult = channel.isPrivate();
             if (!isPrivateResult) {

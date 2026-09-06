@@ -13,6 +13,8 @@ import AnalyticsLocationDefault from "../../../../app_analytics/AnalyticsLocatio
 import TTIFirstContentfulPaint from "../../../../tti_analytics/native/TTIFirstContentfulPaint.tsx";
 import TabsPerformanceTracker from "../TabsPerformanceTracker.tsx";
 import useForLaterCoachmarkDefault from "../../../../saved_messages/native/useForLaterCoachmark.tsx";
+import ForLaterOpenActionButtonDefault from "../../../../saved_messages/native/ForLaterOpenActionButton.tsx";
+import NotificationCenterActionButtonDefault from "../../../../notification_center/native/NotificationCenterActionButton.tsx";
 import NotificationCenterPermissionNudgeDefault from "../../../../notification_center/native/NotificationCenterPermissionNudge.tsx";
 import NotificationCenterForYou from "../../../../notification_center/native/NotificationCenterForYou.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
@@ -86,12 +88,12 @@ class ThemedNotifications {
     items[2] = top;
     memo = closure_3.useMemo(() => {
       if (closure_1) {
-        const items = [tmp.containerOuterTablet];
+        const items = [closure_2.containerOuterTablet];
         const obj = { paddingTop: top };
         items[1] = obj;
         let containerOuter = items;
       } else {
-        containerOuter = tmp.containerOuter;
+        containerOuter = closure_2.containerOuter;
       }
       return containerOuter;
     }, items);
@@ -196,8 +198,8 @@ let closure_12 = noop.memo(function HeaderInner(nestedInLaunchPad) {
     const intl = tmp5(1114).intl;
     obj1.accessibilityLabel = intl.string(tmp5(1114).t["13/7kX"]);
     obj1.onPress = goBack;
-    obj1.children = tmp12(tmp5(16403).LeftBackIconWithBadge, {});
-    const items1 = [tmp12(tmp5(5123).PressableOpacity, obj1), ,];
+    obj1.children = closure_7(tmp5(16403).LeftBackIconWithBadge, {});
+    const items1 = [closure_7(tmp5(5123).PressableOpacity, obj1), ,];
     const obj2 = {
       color: "mobile-text-heading-primary",
       variant: "heading-lg/bold",
@@ -208,29 +210,29 @@ let closure_12 = noop.memo(function HeaderInner(nestedInLaunchPad) {
     };
     const intl2 = tmp5(1114).intl;
     obj2.children = intl2.string(tmp5(1114).t.HcoRu0);
-    items1[1] = tmp12(tmp5(4556).Text, obj2);
+    items1[1] = closure_7(tmp5(4556).Text, obj2);
     const obj3 = { style: tmp.actionButtons, children: null };
     tmp10Result = null;
     if (isForLaterExperimentOn) {
       const obj4 = { children: null };
       const obj5 = { ref, type: null, onOpen: null };
-      let tmp2Result = tmp2(16404);
+      let tmp2Result = ForLaterOpenActionButtonDefault;
       obj5.type = tmp5(7860).SavedMessageSortTypes.BOOKMARK;
       obj5.onOpen = callback;
-      const items2 = [tmp12(tmp2Result, obj5)];
+      const items2 = [closure_7(tmp2Result, obj5)];
       const obj6 = { type: null, onOpen: null };
-      tmp2Result = tmp2(16404);
+      tmp2Result = ForLaterOpenActionButtonDefault;
       obj6.type = tmp5(7860).SavedMessageSortTypes.REMINDER;
       obj6.onOpen = callback;
-      items2[1] = tmp12(tmp2Result, obj6);
+      items2[1] = closure_7(tmp2Result, obj6);
       obj4.children = items2;
-      tmp10Result = tmp10(closure_8, obj4);
+      tmp10Result = closure_9(closure_8, obj4);
     }
-    const items3 = [tmp10Result, tmp12(tmp2(16406), {})];
+    const items3 = [tmp10Result, closure_7(NotificationCenterActionButtonDefault, {})];
     obj3.children = items3;
-    items1[2] = tmp10(tmp11, obj3);
+    items1[2] = closure_9(View, obj3);
     obj.children = items1;
-    tmp10Result = tmp10(tmp11, obj);
+    tmp10Result = closure_9(View, obj);
   }
   const obj7 = { children: null };
   obj.children = tmp10Result;

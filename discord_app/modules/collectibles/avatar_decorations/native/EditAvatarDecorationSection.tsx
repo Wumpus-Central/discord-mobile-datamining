@@ -43,10 +43,10 @@ const memoResult = noop.memo((size) => {
   obj.children = substr.map((avatarDecoration, index) => {
     if (avatarDecoration === useAvatarDecorationSections.NONE_ITEM) {
       let obj = { size, onPress, isSelected: null == closure_1_0, asDefault: null != dependencyMap };
-      return React5(tmp(13171).EditCollectiblesListItemNone, obj, "none");
-    } else if (avatarDecoration === tmp(13168).SHOP_ITEM) {
+      return React5(CollectiblesEditUserProfileListItems.EditCollectiblesListItemNone, obj, "none");
+    } else if (avatarDecoration === useAvatarDecorationSections.SHOP_ITEM) {
       obj = { size, analyticsSource: AnalyticsLocationDefault.EDIT_AVATAR_DECORATION_SHEET };
-      return React5(tmp(13171).EditCollectiblesListItemShop, obj, "shop");
+      return React5(CollectiblesEditUserProfileListItems.EditCollectiblesListItemShop, obj, "shop");
     } else if (isAvatarDecorationRecord(avatarDecoration)) {
       const obj1 = {
         avatarDecoration,

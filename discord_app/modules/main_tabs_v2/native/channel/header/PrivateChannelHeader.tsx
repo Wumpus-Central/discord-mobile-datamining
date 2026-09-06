@@ -27,9 +27,9 @@ function GroupDmMemberCount(channel) {
       let num = 0;
       if (status !== constants.INVISIBLE) {
         num = 0;
-        if (status !== tmp2.OFFLINE) {
+        if (status !== constants.OFFLINE) {
           num = 0;
-          if (status !== tmp2.UNKNOWN) {
+          if (status !== constants.UNKNOWN) {
             num = 1;
           }
         }
@@ -69,11 +69,11 @@ export default noop.memo(function PrivateChannelHeader(channelId) {
   const stateFromStores1 = obj2.useStateFromStores(items1, () => {
     let type;
     if (stateFromStores != null) {
-      type = obj.type;
+      type = stateFromStores.type;
     }
     let user;
     if (type === constants.DM) {
-      user = UserStore.getUser(obj.getRecipientId());
+      user = UserStore.getUser(stateFromStores.getRecipientId());
     }
     return user;
   });
@@ -82,16 +82,16 @@ export default noop.memo(function PrivateChannelHeader(channelId) {
   const stateFromStoresObject = obj4.useStateFromStoresObject(items2, () => {
     let isMobileOnlineResult = null != stateFromStores1;
     if (isMobileOnlineResult) {
-      isMobileOnlineResult = PresenceStore.isMobileOnline(tmp.id);
+      isMobileOnlineResult = PresenceStore.isMobileOnline(stateFromStores1.id);
     }
     const obj = { isMobileOnline: isMobileOnlineResult, isVROnline: null, status: null };
-    let isVROnlineResult = null != tmp;
+    let isVROnlineResult = null != stateFromStores1;
     if (isVROnlineResult) {
-      isVROnlineResult = PresenceStore.isVROnline(tmp.id);
+      isVROnlineResult = PresenceStore.isVROnline(stateFromStores1.id);
     }
     obj.isVROnline = isVROnlineResult;
     if (null != stateFromStores1) {
-      let UNKNOWN = PresenceStore.getStatus(tmp.id);
+      let UNKNOWN = PresenceStore.getStatus(stateFromStores1.id);
     } else {
       UNKNOWN = constants2.UNKNOWN;
     }
@@ -105,7 +105,7 @@ export default noop.memo(function PrivateChannelHeader(channelId) {
   }, items3);
   if (null != stateFromStores) {
     let tmp2Result = tmp2(tmp3[13]);
-    let channelName = tmp2Result.computeChannelName(stateFromStores, tmp4, RelationshipStore);
+    let channelName = tmp2Result.computeChannelName(stateFromStores, UserStore, RelationshipStore);
   } else {
     const intl = tmp2(tmp3[14]).intl;
     channelName = intl.string(tmp2(tmp3[14]).t.ai6Lbr);
@@ -205,10 +205,9 @@ export default noop.memo(function PrivateChannelHeader(channelId) {
     const obj6 = { children: null };
     const tmp2Result6 = tmp2(tmp3[18]);
     obj6.children = tmp2Result6.renderTitleWrapper(tmp28Result, callback, combined, num);
-    return closure_11(tmp29, obj6);
+    return closure_11(closure_12, obj6);
   } else {
     return tmp28Result;
   }
   const tmp2Result5 = channelId(stateFromStores[18]);
-  tmp4 = UserStore;
 });

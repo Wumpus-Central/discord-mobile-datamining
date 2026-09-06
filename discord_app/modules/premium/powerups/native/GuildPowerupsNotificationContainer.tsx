@@ -1,10 +1,13 @@
 // discord_app/modules/premium/powerups/native/GuildPowerupsNotificationContainer.tsx
 import _mod17 from "../../../../../_runtime/metro/00017__.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import util from "../../../../intl/index.native.tsx";
+import _modDef2428 from "../GuildPowerups.messages.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import ManaTypeConsolidationExperiment from "../../../design/ManaTypeConsolidationExperiment.tsx";
 import useGuildPowerupTier3OverrideConfigDefault from "../hooks/useGuildPowerupTier3OverrideConfig.tsx";
 import useGuildPowerupExpiringNotificationsConfigDefault from "../hooks/useGuildPowerupExpiringNotificationsConfig.tsx";
+import GuildPowerupsWarningDefault from "GuildPowerupsWarning.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createStyles from "../../../../design/components/Styles/native/createStyles.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
@@ -53,20 +56,20 @@ export default function GuildPowerupsNotificationContainer(guildId) {
       str2 = "experimental/heading-lg/semibold";
     }
     obj.variant = str2;
-    const intl = tmp6(1114).intl;
-    obj.children = intl.string(tmp2(2428)["3FRirU"]);
-    const items = [React4(tmp6(4556).Text, obj), ,];
+    const intl = util.intl;
+    obj.children = intl.string(_modDef2428["3FRirU"]);
+    const items = [React4(Text_Text.Text, obj), ,];
     let shouldShow = tmp4.shouldShow;
     if (shouldShow) {
       const obj1 = { text: tmp4.text };
-      shouldShow = tmp11(Tier3OverrideNotice, obj1);
+      shouldShow = React4(Tier3OverrideNotice, obj1);
     }
     items[1] = shouldShow;
     let shouldShow2 = tmp5.shouldShow;
     if (shouldShow2) {
       const obj2 = { guildId, powerupNames: null, warnings: null };
       ({ expiringPowerupNames: obj5.powerupNames, warnings: obj5.warnings } = tmp5);
-      shouldShow2 = tmp11(tmp2(12560), obj2);
+      shouldShow2 = React4(GuildPowerupsWarningDefault, obj2);
     }
     items[2] = shouldShow2;
     obj.children = items;

@@ -23,10 +23,9 @@ export const useGuildEligibleForGuildProducts = function useGuildEligibleForGuil
           let hasItem = features.has(GuildFeatures.COMMUNITY);
           if (!hasItem) {
             const features2 = guild.features;
-            hasItem = features2.has(tmp5.GUILD_PRODUCTS);
+            hasItem = features2.has(GuildFeatures.GUILD_PRODUCTS);
           }
           tmp4 = hasItem;
-          tmp5 = GuildFeatures;
         }
         return tmp4;
       }
@@ -45,10 +44,9 @@ export const isGuildEligibleForGuildProducts = function isGuildEligibleForGuildP
       let hasItem = features.has(GuildFeatures.COMMUNITY);
       if (!hasItem) {
         const features2 = guild.features;
-        hasItem = features2.has(tmp4.GUILD_PRODUCTS);
+        hasItem = features2.has(GuildFeatures.GUILD_PRODUCTS);
       }
       tmp3 = hasItem;
-      tmp4 = GuildFeatures;
     }
     return tmp3;
   }

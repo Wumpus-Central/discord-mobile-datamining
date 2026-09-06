@@ -91,13 +91,12 @@ function Wrapper(folder) {
         const _Object = Object;
         const values = Object.values(voiceStates.getVoiceStates(item));
         for (const item10027 of values) {
-          let tmp12 = item10027;
           let tmp13 = null != item10027.channelId;
           if (tmp13) {
-            tmp13 = tmp12.channelId !== afkChannelId;
+            tmp13 = item10027.channelId !== afkChannelId;
           }
           if (tmp13) {
-            let addResult = set.add(tmp12.channelId);
+            let addResult = set.add(item10027.channelId);
           }
           continue;
         }
@@ -207,6 +206,7 @@ function Wrapper(folder) {
     str = "text-muted";
     tmp14 = formatResult3;
   }
+  const obj7 = folder(memo[10]);
 }
 const View = fn(17).View;
 const NOOP = fn(1074).NOOP;

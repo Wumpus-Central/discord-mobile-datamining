@@ -55,7 +55,7 @@ export default function PremiumGiftModal(analyticsLocations) {
     closure_129_3 = undefined;
     closure_129_4 = undefined;
     const tmp10 = closure_9();
-    let obj1 = analyticsLocation(tmp2[7]);
+    let obj1 = analyticsLocation(onDismiss[7]);
     const items2 = [UserStore];
     const stateFromStores = obj1.useStateFromStores(items2, () => {
       let user = null;
@@ -64,7 +64,7 @@ export default function PremiumGiftModal(analyticsLocations) {
       }
       return user;
     });
-    let obj2 = analyticsLocation(tmp2[8]);
+    let obj2 = analyticsLocation(onDismiss[8]);
     const fetchWishlistAndProfileInfoForUser = obj2.useFetchWishlistAndProfileInfoForUser(recipientUserId);
     ({
       wishlist: closure_129_1,
@@ -72,15 +72,15 @@ export default function PremiumGiftModal(analyticsLocations) {
       wishlistId: closure_129_3,
       error: closure_129_4,
     } = fetchWishlistAndProfileInfoForUser);
-    let obj3 = analyticsLocation(tmp2[8]);
+    let obj3 = analyticsLocation(onDismiss[8]);
     obj = { isGift: true, giftRecipient: stateFromStores, isSocialLayerStorefrontEnabled: false };
     const shouldShowWishlistInDMGifting = obj3.useShouldShowWishlistInDMGifting(obj);
     closure_129_5 = shouldShowWishlistInDMGifting;
     if (shouldShowWishlistInDMGifting) {
       obj = { title: null, headerLeft: null, headerStyle: null, render: null };
-      const intl = tmp11(tmp2[9]).intl;
-      obj.title = intl.string(tmp11(tmp2[9]).t["JCFN/y"]);
-      let tmp11Result = tmp11(tmp2[10]);
+      const intl = analyticsLocation(onDismiss[9]).intl;
+      obj.title = intl.string(analyticsLocation(onDismiss[9]).t["JCFN/y"]);
+      let tmp11Result = analyticsLocation(onDismiss[10]);
       obj.headerLeft = tmp11Result.getHeaderCloseButton(callback);
       obj.headerStyle = tmp10.header;
       obj.render = function render() {
@@ -120,11 +120,11 @@ export default function PremiumGiftModal(analyticsLocations) {
     obj2 = {};
     obj2[obj.PLAN_SELECT] = obj1;
     if (initialRoute === obj.REWARD_SELECT) {
-      tmp11Result = tmp11(tmp2[10]);
+      tmp11Result = analyticsLocation(onDismiss[10]);
       let headerCloseButton = tmp11Result.getHeaderCloseButton(callback);
     } else {
-      headerCloseButton = tmp11(tmp2[10]).getHeaderBackButton();
-      const tmp11Result1 = tmp11(tmp2[10]);
+      headerCloseButton = analyticsLocation(onDismiss[10]).getHeaderBackButton();
+      const tmp11Result1 = analyticsLocation(onDismiss[10]);
     }
     obj3 = {
       title: "",
@@ -142,11 +142,11 @@ export default function PremiumGiftModal(analyticsLocations) {
     };
     obj2[obj.REWARD_SELECT] = obj3;
     if (initialRoute === obj.CUSTOMIZATION) {
-      let headerCloseButton1 = tmp11(tmp2[10]).getHeaderCloseButton(callback);
-      const tmp11Result2 = tmp11(tmp2[10]);
+      let headerCloseButton1 = analyticsLocation(onDismiss[10]).getHeaderCloseButton(callback);
+      const tmp11Result2 = analyticsLocation(onDismiss[10]);
     } else {
-      headerCloseButton1 = tmp11(tmp2[10]).getHeaderBackButton();
-      const tmp11Result3 = tmp11(tmp2[10]);
+      headerCloseButton1 = analyticsLocation(onDismiss[10]).getHeaderBackButton();
+      const tmp11Result3 = analyticsLocation(onDismiss[10]);
     }
     const obj4 = {
       title: "",
@@ -159,7 +159,7 @@ export default function PremiumGiftModal(analyticsLocations) {
     obj2[obj.CUSTOMIZATION] = obj4;
     const obj5 = {
       title: "",
-      headerLeft: analyticsLocation(tmp2[10]).getHeaderCloseButton(callback),
+      headerLeft: analyticsLocation(onDismiss[10]).getHeaderCloseButton(callback),
       headerStyle: tmp10.header,
       render() {
         return jsx(analyticsLocations(onDismiss[14]), {});
@@ -167,10 +167,10 @@ export default function PremiumGiftModal(analyticsLocations) {
     };
     obj2[obj.SUCCESS] = obj5;
     const obj6 = { title: null, headerLeft: null, headerTransparent: true, headerStyle: null, render: null };
-    const intl2 = tmp11(tmp2[9]).intl;
-    obj6.title = intl2.string(tmp(tmp2[15]).roVAey);
-    const tmp11Result4 = analyticsLocation(tmp2[10]);
-    obj6.headerLeft = analyticsLocation(tmp2[10]).getHeaderCloseButton(callback);
+    const intl2 = analyticsLocation(onDismiss[9]).intl;
+    obj6.title = intl2.string(tmp(onDismiss[15]).roVAey);
+    const tmp11Result4 = analyticsLocation(onDismiss[10]);
+    obj6.headerLeft = analyticsLocation(onDismiss[10]).getHeaderCloseButton(callback);
     obj6.headerStyle = { backgroundColor: "transparent", shadowColor: "transparent" };
     obj6.render = function render(currentProgress) {
       return jsx(analyticsLocations(onDismiss[16]), {
@@ -187,7 +187,7 @@ export default function PremiumGiftModal(analyticsLocations) {
     obj2[obj.GIFTING_BADGE] = obj6;
     const tmp21 = _slicedToArray(obj.useState(obj[initialRoute]), 2);
     closure_4 = tmp22;
-    const tmp11Result5 = analyticsLocation(tmp2[10]);
+    const tmp11Result5 = analyticsLocation(onDismiss[10]);
     if (tmp11Result6.isPremiumGiftingSupported()) {
       const obj7 = { value: analyticsLocations(onDismiss[19])(analyticsLocations).analyticsLocations, children: null };
       const obj8 = {
@@ -201,7 +201,7 @@ export default function PremiumGiftModal(analyticsLocations) {
         children: null,
       };
       const obj9 = { currentStep: tmp21[0], children: null };
-      let tmpResult = tmp(tmp2[26]);
+      let tmpResult = tmp(onDismiss[26]);
       const obj10 = {
         initialRouteName: initialRoute,
         screens: obj2,
@@ -211,16 +211,36 @@ export default function PremiumGiftModal(analyticsLocations) {
           }
         },
       };
-      obj9.children = tmp23(tmp11(tmp2[27]).Navigator, obj10);
-      obj8.children = tmp23(tmpResult, obj9);
-      obj7.children = tmp23(tmp11(tmp2[25]).NativeGiftContextProvider, obj8);
-      let tmp23Result = tmp23(tmp11(tmp2[19]).AnalyticsLocationProvider, obj7);
+      obj9.children = jsx(analyticsLocation(onDismiss[27]).Navigator, {
+        initialRouteName: initialRoute,
+        screens: obj2,
+        onStateChange(arg0) {
+          if (null != arg0) {
+            closure_4(obj[arg0.routes[arg0.index].name]);
+          }
+        },
+      });
+      obj8.children = <tmpResult currentStep={tmp21[0]}>{null}</tmpResult>;
+      obj7.children = jsx(analyticsLocation(onDismiss[25]).NativeGiftContextProvider, {
+        basePurchaseAnalytics: tmp4,
+        recipientUserId,
+        onClose: callback,
+        setCurrentAnalyticsStep: tmp22,
+        premiumType,
+        planInterval,
+        initialOrder: order,
+        children: null,
+      });
+      let tmp23Result = jsx(analyticsLocation(onDismiss[19]).AnalyticsLocationProvider, {
+        value: analyticsLocations(onDismiss[19])(analyticsLocations).analyticsLocations,
+        children: null,
+      });
     } else {
       const obj11 = { title: null };
-      tmpResult = tmp(tmp2[24]);
-      const intl3 = tmp11(tmp2[9]).intl;
-      obj11.title = intl3.string(tmp11(tmp2[9]).t["JCFN/y"]);
-      tmp23Result = tmp23(tmpResult, obj11);
+      tmpResult = tmp(onDismiss[24]);
+      const intl3 = analyticsLocation(onDismiss[9]).intl;
+      obj11.title = intl3.string(analyticsLocation(onDismiss[9]).t["JCFN/y"]);
+      tmp23Result = <tmpResult title={null} />;
     }
     return tmp23Result;
   } else if (null != premiumType) {

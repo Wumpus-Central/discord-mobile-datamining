@@ -15,12 +15,7 @@ function fetchSubscriptionPlansForSKU() {
   }
   return applyArgumentsResult;
 }
-let closure_9 = async function _fetchSubscriptionPlansForSKU(skuId, arg1, arg2, arg3, arg4, arg5) {
-  closure_1 = arg1;
-  closure_2 = arg2;
-  closure_3 = arg3;
-  closure_4 = arg4;
-  closure_5 = arg5;
+let closure_9 = async function _fetchSubscriptionPlansForSKU() {
   c10 = 0;
   c11 = 0;
   c9 = 0;
@@ -66,20 +61,20 @@ let closure_9 = async function _fetchSubscriptionPlansForSKU(skuId, arg1, arg2, 
             };
             closure_134_1 = obj2;
             const obj3 = {};
-            if (null != closure_1) {
-              obj3.country_code = tmp56;
+            if (null != country_code) {
+              obj3.country_code = country_code;
             }
-            if (null != closure_2) {
-              obj3.payment_source_id = tmp57;
+            if (null != payment_source_id) {
+              obj3.payment_source_id = payment_source_id;
             }
-            if (null != closure_3) {
-              obj3.include_unpublished = tmp58;
+            if (null != include_unpublished) {
+              obj3.include_unpublished = include_unpublished;
             }
-            if (null != closure_4) {
-              obj3.revenue_surface = tmp59;
+            if (null != revenue_surface) {
+              obj3.revenue_surface = revenue_surface;
             }
-            if (null != closure_5) {
-              obj3.payment_gateway = tmp60;
+            if (null != payment_gateway) {
+              obj3.payment_gateway = payment_gateway;
             }
             obj2.query = obj3;
             if (!ipCountryCodeLoaded.ipCountryCodeLoaded) {
@@ -89,7 +84,6 @@ let closure_9 = async function _fetchSubscriptionPlansForSKU(skuId, arg1, arg2, 
               const obj4 = { value: obj8.fetchIpCountryCode(), done: false };
               return obj4;
             }
-            tmp56 = closure_1;
           }
         } else if (1 === tmp7) {
           c9 = 0;

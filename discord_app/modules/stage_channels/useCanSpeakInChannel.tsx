@@ -9,11 +9,11 @@ require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/stage_channels/useCanSpeakInChannel.tsx");
 
-export default function useCanCurrentUserSpeakInChannel(arg0) {
+export default function useCanCurrentUserSpeakInChannel(id) {
   const items = [AuthenticationStore];
   const stateFromStores = initialize.useStateFromStores(items, () => id.getId());
   return (
-    useAudienceRequestToSpeakStateDefault(stateFromStores, arg0) ===
+    useAudienceRequestToSpeakStateDefault(stateFromStores, id) ===
     useAudienceRequestToSpeakState.RequestToSpeakStates.ON_STAGE
   );
 }

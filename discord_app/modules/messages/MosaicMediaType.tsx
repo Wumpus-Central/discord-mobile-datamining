@@ -1,5 +1,6 @@
 // discord_app/modules/messages/MosaicMediaType.tsx
 import Constants from "../../Constants.tsx";
+import FlagUtils from "../../../discord_common/js/shared/utils/FlagUtils.tsx";
 import MediaFormatTesters from "MediaFormatTesters.tsx";
 import PlaintextFilePreviewHelpers from "PlaintextFilePreviewHelpers.tsx";
 import size from "../../../_runtime/metro/00002__.js";
@@ -30,12 +31,12 @@ export const getMosaicMediaTypeForAttachment = function getMosaicMediaTypeForAtt
           if (height > 0) {
             let str3 = "IMAGE";
             if (!obj2.isImageFile(filename)) {
-              let tmp5Result = tmp5(4710);
+              let tmp5Result = MediaFormatTesters;
               let str5 = "INVALID";
               if (tmp5Result.isVideoFile(filename)) {
                 str5 = "INVALID";
                 if (null != proxy_url.proxy_url) {
-                  tmp5Result = tmp5(1384);
+                  tmp5Result = FlagUtils;
                   let num2 = proxy_url.flags;
                   if (num2 == null) {
                     num2 = 0;
@@ -84,10 +85,9 @@ export const getMosaicMediaTypeForUnfurledMediaItem = function getMosaicMediaTyp
             if (tmpResult.isVideoContentType(contentType)) {
               return "VIDEO";
             }
-            tmpResult = tmp(4710);
+            tmpResult = MediaFormatTesters;
           }
           obj = MediaFormatTesters;
-          tmp = require;
         }
       }
     }

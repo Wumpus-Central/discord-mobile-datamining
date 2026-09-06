@@ -3,12 +3,12 @@ import native from "../../../../../../discord_common/js/packages/design/native.t
 import useColorThemeBackgroundDefault from "../../../../client_themes/native/useColorThemeBackground.tsx";
 import QuestsEligibility from "../../../../quests/lib/QuestsEligibility.tsx";
 import QuestDockExternalCoordinationContext from "../../../../quests/native/QuestDock/QuestDockExternalCoordinationContext.tsx";
+import QuestDockDefault from "../../../../quests/native/QuestDock/QuestDock.tsx";
 import TabsPerformanceTracker from "../TabsPerformanceTracker.tsx";
 import MainChannelsDefault from "../../../../../components_native/MainChannels.tsx";
 import YouBarDefault from "../../you_bar/YouBar.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
-const QuestDockDefault = tmp3(15183);
 require = fn;
 const YouBarNavigatorScreens = fn(11084).YouBarNavigatorScreens;
 const jsxProd = fn(21);
@@ -25,7 +25,7 @@ export default noop.memo(
     obj = { gradient: tmp4, children: null };
     const items = [React4(MainChannelsDefault, {}), React4(YouBarDefault, {})];
     if (isEligibleForQuests) {
-      isEligibleForQuests = tmp6(QuestDockDefault, {});
+      isEligibleForQuests = React4(QuestDockDefault, {});
     }
     items[2] = isEligibleForQuests;
     obj.children = hasOwnProperty(QuestDockExternalCoordinationContext.QuestDockExternalCoordinationContextProvider, {

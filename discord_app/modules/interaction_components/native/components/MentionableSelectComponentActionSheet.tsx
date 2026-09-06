@@ -1,9 +1,14 @@
 // discord_app/modules/interaction_components/native/components/MentionableSelectComponentActionSheet.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import native from "../../../../design/void/native.tsx";
+import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import InteractionComponentTypes from "../../InteractionComponentTypes.tsx";
+import guild_boosting_RoleIconUtils from "../../../guild_boosting/RoleIconUtils.tsx";
 import RoleIconDefault from "../../../roles/native/RoleIcon.tsx";
 import SearchableSelectActionComponentUtils from "../../SearchableSelectActionComponentUtils.tsx";
+import ShieldUserIcon from "../../../../design/components/Icon/native/redesign/generated/ShieldUserIcon.tsx";
 import DiscordTagDefault from "../../../user_profile/native/DiscordTag.tsx";
+import UserIcon from "../../../../design/components/Icon/native/redesign/generated/UserIcon.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import GuildRoleStore from "../../../../stores/GuildRoleStore.tsx";
 import GuildStore from "../../../../stores/GuildStore.tsx";
@@ -83,19 +88,19 @@ export default function MentionableSelectComponentActionSheet(selectionActionCom
           isVROnline: PresenceStore.isVROnline(user.id),
           status,
           guildId,
-          size: tmp(1178).AvatarSizes.XSMALL,
+          size: native.AvatarSizes.XSMALL,
         };
-        return closure_2_10(tmp(1178).Avatar, obj);
+        return closure_2_10(native.Avatar, obj);
       }
-    } else if (type.type === tmp(4792).SelectOptionType.ROLE) {
+    } else if (type.type === InteractionComponentTypes.SelectOptionType.ROLE) {
       if (null != guild) {
-        const role = GuildRoleStore.getRole(tmp3.id, type.value);
+        const role = GuildRoleStore.getRole(guild.id, type.value);
       }
       if (null != guild) {
         if (null != role) {
-          let tmpResult = tmp(7187);
-          if (tmpResult.canGuildUseRoleIcons(tmp3, role)) {
-            tmpResult = tmp(7187);
+          let tmpResult = guild_boosting_RoleIconUtils;
+          if (tmpResult.canGuildUseRoleIcons(guild, role)) {
+            tmpResult = guild_boosting_RoleIconUtils;
             let roleIconData = tmpResult.getRoleIconData(role);
             if (roleIconData == null) {
               roleIconData = {};
@@ -117,7 +122,7 @@ export default function MentionableSelectComponentActionSheet(selectionActionCom
             colorString = React7;
           }
           const obj2 = { color: colorString };
-          return closure_2_10(tmp(9752).ShieldUserIcon, obj2);
+          return closure_2_10(ShieldUserIcon.ShieldUserIcon, obj2);
         }
       }
       return null;
@@ -156,7 +161,7 @@ export default function MentionableSelectComponentActionSheet(selectionActionCom
             color: "interactive-text-default",
             children: tmp7,
           };
-          const items = [closure_2_10(tmp(4556).Text, obj), closure_2_10(tmp(11825).UserIcon, { size: "xs" })];
+          const items = [closure_2_10(Text_Text.Text, obj), closure_2_10(UserIcon.UserIcon, { size: "xs" })];
           obj.children = items;
           return closure_2_11(View, obj);
         }
@@ -177,9 +182,9 @@ export default function MentionableSelectComponentActionSheet(selectionActionCom
         if (user != null) {
           bot = user.bot;
         }
-        const intl2 = tmp(tmp2[22]).intl;
+        const intl2 = selectionActionComponent(guildId[22]).intl;
         const formatToPlainString = intl2.formatToPlainString;
-        const t = tmp(tmp2[22]).t;
+        const t = selectionActionComponent(guildId[22]).t;
         if (bot) {
           let obj = { username: type.label, discriminator: null };
           let discriminator;
@@ -198,10 +203,10 @@ export default function MentionableSelectComponentActionSheet(selectionActionCom
           formatToPlainStringResult = formatToPlainString(t.AydQ7a, obj);
         }
         return formatToPlainStringResult;
-      } else if (type.type === tmp(tmp2[13]).SelectOptionType.ROLE) {
-        const intl = tmp(tmp2[22]).intl;
+      } else if (type.type === selectionActionComponent(guildId[13]).SelectOptionType.ROLE) {
+        const intl = selectionActionComponent(guildId[22]).intl;
         obj = { roleName: type.label };
-        return intl.formatToPlainString(tmp(tmp2[22]).t.F6ejkk, obj);
+        return intl.formatToPlainString(selectionActionComponent(guildId[22]).t.F6ejkk, obj);
       }
     },
     channelId,

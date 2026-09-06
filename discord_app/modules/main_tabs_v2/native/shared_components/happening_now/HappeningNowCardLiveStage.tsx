@@ -102,11 +102,11 @@ function getUsersSubtitle(arg0) {
       const intl9 = util.intl;
       let obj = { name: NicknameUtilsDefault.getName(guildId, null, first) };
       let str3 = intl9.formatToPlainString(util.t.lJXKtO, obj);
-    } else if (tmp16.WATCHING === action) {
+    } else if (constants2.WATCHING === action) {
       const intl8 = util.intl;
       obj = { name: NicknameUtilsDefault.getName(guildId, null, first) };
       str3 = intl8.formatToPlainString(util.t.iWY9wg, obj);
-    } else if (tmp16.ON_STAGE === action) {
+    } else if (constants2.ON_STAGE === action) {
       const intl7 = util.intl;
       const obj1 = { name: null };
       let obj9 = NicknameUtilsDefault;
@@ -114,7 +114,7 @@ function getUsersSubtitle(arg0) {
       str3 = intl7.formatToPlainString(util.t["5uJ3+u"], obj1);
     } else {
       str3 = "";
-      if (tmp16.SHARING === action) {
+      if (constants2.SHARING === action) {
         const intl12 = util.intl;
         const obj2 = { name: NicknameUtilsDefault.getName(guildId, null, first) };
         str3 = intl12.formatToPlainString(util.t["5oa7dX"], obj2);
@@ -131,17 +131,17 @@ function getUsersSubtitle(arg0) {
       const intl6 = util.intl;
       obj3 = { name1: name, name2: name1 };
       let str2 = intl6.formatToPlainString(util.t.GFMcxs, obj3);
-    } else if (tmp11.WATCHING === action) {
+    } else if (constants2.WATCHING === action) {
       const intl5 = util.intl;
       obj4 = { name1: name, name2: name1 };
       str2 = intl5.formatToPlainString(util.t.afUnti, obj4);
-    } else if (tmp11.ON_STAGE === action) {
+    } else if (constants2.ON_STAGE === action) {
       const intl4 = util.intl;
       const obj5 = { name1: name, name2: name1 };
       str2 = intl4.formatToPlainString(util.t.SrTuJ6, obj5);
     } else {
       str2 = "";
-      if (tmp11.SHARING === action) {
+      if (constants2.SHARING === action) {
         const intl11 = util.intl;
         const obj6 = { name1: name, name2: name1 };
         str2 = intl11.formatToPlainString(util.t.uRjRHT, obj6);
@@ -157,17 +157,17 @@ function getUsersSubtitle(arg0) {
         const intl3 = util.intl;
         const obj7 = { name: name2, count: diff };
         str = intl3.formatToPlainString(util.t.CsvyMc, obj7);
-      } else if (tmp34.WATCHING === action) {
+      } else if (constants2.WATCHING === action) {
         const intl2 = util.intl;
         const obj8 = { name: name2, count: diff };
         str = intl2.formatToPlainString(util.t.Iwxee0, obj8);
-      } else if (tmp34.ON_STAGE === action) {
+      } else if (constants2.ON_STAGE === action) {
         const intl = util.intl;
         obj = { name: name2, count: diff };
         str = intl.formatToPlainString(util.t.zRm3ZX, obj);
       } else {
         str = "";
-        if (tmp34.SHARING === action) {
+        if (constants2.SHARING === action) {
           const intl10 = util.intl;
           obj9 = { name: name2, count: diff };
           str = intl10.formatToPlainString(util.t["m+NEcC"], obj9);
@@ -282,7 +282,7 @@ export default noop.memo((arg0) => {
       str = "full";
     }
     obj.width = str;
-    obj.IconComponent = tmp3(tmp4[14]).StageIcon;
+    obj.IconComponent = index(tmp4[14]).StageIcon;
     obj.panelVariant = panelVariant;
     obj1 = { style: tmp.stagePreviewContainer, children: null };
     const obj2 = {
@@ -295,9 +295,9 @@ export default noop.memo((arg0) => {
         user: speakers[0],
         avatarDecoration: speakers[0].avatarDecoration,
         guildId: guild_id,
-        size: tmp3(tmp4[15]).AvatarSizes.REFRESH_MEDIUM_32,
+        size: index(tmp4[15]).AvatarSizes.REFRESH_MEDIUM_32,
       };
-      tmp7Result = tmp7(tmp3(tmp4[15]).Avatar, obj3);
+      tmp7Result = closure_7(index(tmp4[15]).Avatar, obj3);
     }
     obj2.children = tmp7Result;
     const items1 = [closure_7(View, obj2)];
@@ -317,9 +317,9 @@ export default noop.memo((arg0) => {
         num2 = 1;
       }
       obj5.userCount = sum - num2;
-      obj5.avatarSize = tmp3(tmp4[15]).AvatarSizes.SIZE_16;
-      obj4.children = tmp7(tmp3(tmp4[16]).HappeningNowAvatarStack, obj5);
-      tmp7Result = tmp7(tmp6, obj4);
+      obj5.avatarSize = index(tmp4[15]).AvatarSizes.SIZE_16;
+      obj4.children = closure_7(index(tmp4[16]).HappeningNowAvatarStack, obj5);
+      tmp7Result = closure_7(View, obj4);
     }
     items1[1] = tmp7Result;
     obj1.children = items1;
@@ -332,7 +332,7 @@ export default noop.memo((arg0) => {
     obj6.guildId = tmp12;
     items2[1] = closure_7(HappeningNowLiveStageContent, obj6);
     obj.children = items2;
-    tmp16Result = tmp16(channel_id(tmp4[13]), obj);
+    tmp16Result = closure_8(channel_id(tmp4[13]), obj);
     const tmp18 = channel_id(tmp4[13]);
   }
   return tmp16Result;

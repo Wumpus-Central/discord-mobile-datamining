@@ -65,9 +65,9 @@ export default function MembersFilterActionSheet(onFilterRoleId) {
       tmpResult = null != item.colorString;
     }
     if (tmpResult) {
-      obj = { containerStyles: tmp6.roleDot, color: null, colors: null };
+      obj = { containerStyles: labelContainer.roleDot, color: null, colors: null };
       ({ colorString: obj3.color, colorStrings: obj3.colors } = item);
-      tmpResult = tmp(tmp2(tmp3[12]).RoleDot, obj);
+      tmpResult = closure_1_8(require("native").RoleDot, obj);
     }
     const items = [tmpResult];
     const items1 = [labelContainer.label];

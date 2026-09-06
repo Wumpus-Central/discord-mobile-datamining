@@ -16,7 +16,7 @@ apply = {
   parent: null,
   IconComponent: fn(14882).QrCodeIcon,
   onPress: apply.debounce(
-    asyncGeneratorStep(async (arg0, value) => {
+    asyncGeneratorStep(async () => {
       if (c3 === 2) {
         c3 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");

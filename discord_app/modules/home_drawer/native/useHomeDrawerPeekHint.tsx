@@ -90,11 +90,11 @@ export const useHomeDrawerPeekHint = function useHomeDrawerPeekHint(enablePeekHi
     const callback = obj6.useCallback(() => {
       if (null != ref2.current) {
         const _clearTimeout = clearTimeout;
-        clearTimeout(tmp.current);
-        tmp.current = null;
+        clearTimeout(ref2.current);
+        ref2.current = null;
       }
       closure_14.current = true;
-      const obj = { duration: 1500, easing };
+      let obj = { duration: 1500, easing };
       let result = sharedValue2.set(obj.withTiming(40, obj));
       closure_13.current = setTimeout(() => {
         ref3.current = null;
@@ -107,6 +107,7 @@ export const useHomeDrawerPeekHint = function useHomeDrawerPeekHint(enablePeekHi
           current(constants.AUTO_DISMISS);
         }
         closure_1_10(false);
+        const obj = closure_0(panelX[15]);
       }, 2500);
     }, items1);
     const tmp25 = tmp8Result[0] === tmp3(tmp4[7]).DismissibleContent.HOME_DRAWER_SWIPE_PEEK_NUX;
@@ -126,13 +127,13 @@ export const useHomeDrawerPeekHint = function useHomeDrawerPeekHint(enablePeekHi
     const callback1 = obj6.useCallback(() => {
       if (null != ref2.current) {
         const _clearTimeout = clearTimeout;
-        clearTimeout(tmp.current);
-        tmp.current = null;
+        clearTimeout(ref2.current);
+        ref2.current = null;
       }
       if (null != ref3.current) {
         const _clearTimeout2 = clearTimeout;
-        clearTimeout(tmp4.current);
-        tmp4.current = null;
+        clearTimeout(ref3.current);
+        ref3.current = null;
       }
       if (ref4.current) {
         tmp7.current = false;
@@ -163,8 +164,8 @@ export const useHomeDrawerPeekHint = function useHomeDrawerPeekHint(enablePeekHi
             return () => {
               if (null != ref.current) {
                 const _clearTimeout = clearTimeout;
-                clearTimeout(tmp.current);
-                tmp.current = null;
+                clearTimeout(ref.current);
+                ref.current = null;
               }
             };
           }

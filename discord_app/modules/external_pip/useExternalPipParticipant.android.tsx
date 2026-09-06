@@ -43,7 +43,7 @@ export default function useExternalPipParticipant() {
       if (tmp6 != null) {
         id1 = tmp6.id;
       }
-      tmp7.current = id1;
+      ref.current = id1;
       let type;
       if (tmp6 != null) {
         type = tmp6.type;
@@ -79,7 +79,7 @@ export default function useExternalPipParticipant() {
         type2 = tmp6.type;
       }
       let tmp17;
-      if (type2 !== tmp13.ACTIVITY) {
+      if (type2 !== constants.ACTIVITY) {
         let id3;
         if (tmp6 != null) {
           const user2 = tmp6.user;
@@ -95,7 +95,6 @@ export default function useExternalPipParticipant() {
         type3 = tmp6.type;
       }
       obj.focusedParticipantType = type3;
-      tmp13 = constants;
     }
     return obj;
   });

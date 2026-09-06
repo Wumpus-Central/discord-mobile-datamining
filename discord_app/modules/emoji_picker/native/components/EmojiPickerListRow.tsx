@@ -2,10 +2,13 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import _modDef672 from "../../../../../_runtime/metro/00672__.js";
 import PlatformUtils2 from "../../../../utils/PlatformUtils.tsx";
+import native from "../../../../design/void/native.tsx";
 import AvatarUtilsDefault from "../../../../utils/AvatarUtils.tsx";
+import shared from "../../../../design/shared.tsx";
 import LockIcon from "../../../../design/components/Icon/native/redesign/generated/LockIcon.tsx";
 import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
+import _modDef7132 from "../../../../../_runtime/metro/07132__.js";
 import EmojiPickerListRowViewDefault from "EmojiPickerListRowView.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import ThemeStore from "../../../user_settings/ThemeStore.tsx";
@@ -259,8 +262,6 @@ let closure_13 = noop.memo((arg0) => {
           isSectionNitroLocked: null,
         };
         let hasItem = null != tmp4.id;
-        let tmp6 = React5;
-        let tmp7 = EmojiItem;
         if (hasItem) {
           hasItem = emojisDisabled.has(tmp4.id);
         }
@@ -268,7 +269,7 @@ let closure_13 = noop.memo((arg0) => {
         obj.onPressEmoji = onPressEmoji;
         obj.onLongPressEmoji = onLongPressEmoji;
         obj.isSectionNitroLocked = isSectionNitroLocked;
-        arr = items.push(tmp6(tmp7, obj, sum));
+        arr = items.push(React5(EmojiItem, obj, sum));
       }
       sum = sum + 1;
     } while (sum < result + rowSize);

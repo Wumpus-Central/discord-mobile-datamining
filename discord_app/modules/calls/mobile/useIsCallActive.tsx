@@ -43,9 +43,9 @@ export const useIsCallActiveNullable = function useIsCallActiveNullable(id, arg1
     () => {
       let tmp2 = null != closure_0;
       if (tmp2) {
-        let isCallActiveResult = CallStore.isCallActive(tmp, closure_1);
+        let isCallActiveResult = CallStore.isCallActive(closure_0, closure_1);
         if (isCallActiveResult) {
-          const participants = ChannelRTCStore.getParticipants(tmp);
+          const participants = ChannelRTCStore.getParticipants(closure_0);
           isCallActiveResult = participants.some((type) => type.type === constants.USER && !type.ringing);
         }
         tmp2 = isCallActiveResult;

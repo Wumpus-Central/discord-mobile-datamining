@@ -1,5 +1,8 @@
 // discord_app/modules/main_tabs_v2/native/tabs/messages/useMessagesFlatData.tsx
 import useMessagesData from "useMessagesData.tsx";
+import MessagesItemHappeningNow from "items/MessagesItemHappeningNow.tsx";
+import MessagesItemEmptyState from "items/MessagesItemEmptyState.tsx";
+import MessagesItemSeparator from "items/MessagesItemSeparator.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -16,12 +19,12 @@ export default function useMessagesFlatData(channels, listItemHeight) {
   const items = [channels, channelFavorites, renderHeader, sections, listItemHeight];
   return channelFavorites.useMemo(() => {
     if (renderHeader === useMessagesData.MessagesDataHeader.HappeningNow) {
-      let listHeaderHeight = tmp2(16057).getMessagesItemHappeningNowHeight();
-      const tmp2Result = tmp2(16057);
+      let listHeaderHeight = MessagesItemHappeningNow.getMessagesItemHappeningNowHeight();
+      const tmp2Result = MessagesItemHappeningNow;
     } else {
       listHeaderHeight = 0;
-      if (renderHeader === tmp2(16045).MessagesDataHeader.EmptyState) {
-        listHeaderHeight = tmp2(16095).MESSAGES_ITEM_EMPTY_STATE_HEIGHT;
+      if (renderHeader === useMessagesData.MessagesDataHeader.EmptyState) {
+        listHeaderHeight = MessagesItemEmptyState.MESSAGES_ITEM_EMPTY_STATE_HEIGHT;
       }
     }
     const listData = [];
@@ -31,9 +34,7 @@ export default function useMessagesFlatData(channels, listItemHeight) {
     let tmp6 = listHeaderHeight;
     if (0 < tmp4) {
       do {
-        let obj = { kind: "favorite", channelId: null, row: null };
-        obj.channelId = channelFavorites[num2].channelId;
-        obj.row = num2;
+        let obj = { kind: "favorite", channelId: channelFavorites[num2].channelId, row: num2 };
         let arr = listData.push(obj);
         sum = sum + listItemHeight;
         num2 = num2 + 1;
@@ -46,9 +47,7 @@ export default function useMessagesFlatData(channels, listItemHeight) {
     let tmp12 = tmp6;
     if (0 < tmp10) {
       do {
-        obj = { kind: "channel", channelId: null, row: null };
-        obj.channelId = channels[num3].channelId;
-        obj.row = num3;
+        obj = { kind: "channel", channelId: channels[num3].channelId, row: num3 };
         arr = listData.push(obj);
         sum1 = sum1 + listItemHeight;
         num3 = num3 + 1;
@@ -58,7 +57,7 @@ export default function useMessagesFlatData(channels, listItemHeight) {
     let sum2 = tmp12;
     if (sections[useMessagesData.MessagesDataSections.Separator] > 0) {
       listData.push({ kind: "separator" });
-      sum2 = tmp12 + tmp17(16096).MESSAGES_ITEM_SEPERATOR_HEIGHT;
+      sum2 = tmp12 + MessagesItemSeparator.MESSAGES_ITEM_SEPERATOR_HEIGHT;
     }
     const tmp21 = sections[useMessagesData.MessagesDataSections.SuggestedFriends];
     let friendsHeaderOffset;

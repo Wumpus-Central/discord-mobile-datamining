@@ -48,41 +48,41 @@ Object.defineProperty(NativeDispatchError.prototype, "displayMessage", {
           available: formatSizeResult,
         };
         return intl13.formatToPlainString(require("util").t["2DR5dl"], obj);
-      } else if (tmp32.POST_INSTALL_FAILED === code) {
+      } else if (DispatchErrorCodes.POST_INSTALL_FAILED === code) {
         const intl12 = require("util").intl;
         obj = { name: self.context.name };
         return intl12.formatToPlainString(require("util").t.hP0B3A, obj);
-      } else if (tmp32.FILE_NAME_TOO_LONG === code) {
+      } else if (DispatchErrorCodes.FILE_NAME_TOO_LONG === code) {
         const intl11 = require("util").intl;
         return intl11.string(require("util").t["FWht5+"]);
-      } else if (tmp32.POST_INSTALL_CANCELLED === code) {
+      } else if (DispatchErrorCodes.POST_INSTALL_CANCELLED === code) {
         const intl10 = require("util").intl;
         return intl10.string(require("util").t["9CNxFJ"]);
-      } else if (tmp32.IO_PERMISSION_DENIED === code) {
+      } else if (DispatchErrorCodes.IO_PERMISSION_DENIED === code) {
         const intl9 = require("util").intl;
         return intl9.string(require("util").t["PJx5+Z"]);
-      } else if (tmp32.NO_MANIFESTS === code) {
+      } else if (DispatchErrorCodes.NO_MANIFESTS === code) {
         const intl8 = require("util").intl;
         return intl8.string(require("util").t.gLM395);
-      } else if (tmp32.NOT_ENTITLED === code) {
+      } else if (DispatchErrorCodes.NOT_ENTITLED === code) {
         const intl7 = require("util").intl;
         return intl7.string(require("util").t.TLCR43);
       } else {
-        if (tmp32.NOT_DIRECTORY !== code) {
-          if (tmp32.DISK_PERMISSION_DENIED !== code) {
-            if (tmp32.INVALID_DRIVE === code) {
+        if (DispatchErrorCodes.NOT_DIRECTORY !== code) {
+          if (DispatchErrorCodes.DISK_PERMISSION_DENIED !== code) {
+            if (DispatchErrorCodes.INVALID_DRIVE === code) {
               const intl5 = require("util").intl;
               const obj1 = { path };
               return intl5.formatToPlainString(require("util").t["08L2TG"], obj1);
-            } else if (tmp32.APPLICATION_LOCK_FAILED === code) {
+            } else if (DispatchErrorCodes.APPLICATION_LOCK_FAILED === code) {
               const intl4 = require("util").intl;
               return intl4.string(require("util").t.RDYCUV);
-            } else if (tmp32.DISK_FULL === code) {
+            } else if (DispatchErrorCodes.DISK_FULL === code) {
               const intl3 = require("util").intl;
               return intl3.string(require("util").t.mojtDJ);
             } else {
-              if (tmp32.API_ERROR !== code) {
-                if (tmp32.MAX_REQUEST_RETRIES_EXCEEDED !== code) {
+              if (DispatchErrorCodes.API_ERROR !== code) {
+                if (DispatchErrorCodes.MAX_REQUEST_RETRIES_EXCEEDED !== code) {
                   const intl = require("util").intl;
                   obj = { code: null };
                   const _HermesInternal = HermesInternal;

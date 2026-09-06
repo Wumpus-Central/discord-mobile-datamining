@@ -15,7 +15,7 @@ export default function openUserProfileAvatarMediaViewer(user) {
   if (!useReducedMotion) {
     animate = user.animate;
   }
-  const avatarURL = user.getAvatarURL(guildId, tmp, animate);
+  const avatarURL = user.getAvatarURL(guildId, AVATAR_MAX_SIZE, animate);
   if (typeof avatarURL === "string") {
     const obj = {
       initialSources: null,
@@ -27,7 +27,13 @@ export default function openUserProfileAvatarMediaViewer(user) {
       disableMediaOverlayButton: true,
       disableMediaOverlayFooter: true,
     };
-    const size = { uri: avatarURL, mediaIndex: 0, height: tmp, width: tmp, accessoryType: "embed" };
+    const size = {
+      uri: avatarURL,
+      mediaIndex: 0,
+      height: AVATAR_MAX_SIZE,
+      width: AVATAR_MAX_SIZE,
+      accessoryType: "embed",
+    };
     const items = [size];
     obj.initialSources = items;
     obj.originViewOrOriginLayout = originViewOrOriginLayout;

@@ -1,5 +1,6 @@
 // discord_app/modules/launchpad/native/LaunchPad.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import PlatformUtils from "../../../utils/PlatformUtils.tsx";
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
 import ReanimatedRexport from "../../reanimated/ReanimatedRexport.tsx";
 import ChatInputUtils from "../../../utils/native/ChatInputUtils.tsx";
@@ -257,18 +258,18 @@ let closure_35 = noop.memo((tab) => {
       spellCheck: false,
       autoFocus: false,
     };
-    let tmp18 = closure_27(tmp2(tmp3[27]).SearchField, obj1);
+    let tmp18 = closure_27(tmp2(sharedState[27]).SearchField, obj1);
     let tmp17 = closure_27;
-  } else if (tab === tmp14.MEMBERS) {
+  } else if (tab === constants3.MEMBERS) {
     obj2 = { text: null };
-    const intl2 = tmp2(tmp3[28]).intl;
-    obj2.text = intl2.string(tmp2(tmp3[28]).t["9Oq93m"]);
+    const intl2 = tmp2(sharedState[28]).intl;
+    obj2.text = intl2.string(tmp2(sharedState[28]).t["9Oq93m"]);
     tmp18 = closure_27(TabHeader, obj2);
     tmp17 = closure_27;
-  } else if (tab === tmp14.NOTIFICATIONS) {
+  } else if (tab === constants3.NOTIFICATIONS) {
     obj3 = { text: null };
-    const intl = tmp2(tmp3[28]).intl;
-    obj3.text = intl.string(tmp2(tmp3[28]).t.HcoRu0);
+    const intl = tmp2(sharedState[28]).intl;
+    obj3.text = intl.string(tmp2(sharedState[28]).t.HcoRu0);
     tmp18 = closure_27(TabHeader, obj3);
     tmp17 = closure_27;
   } else {
@@ -285,7 +286,7 @@ let closure_35 = noop.memo((tab) => {
     onPress: null,
     selected: null,
   };
-  const intl3 = tmp2(tmp3[28]).intl;
+  const intl3 = tmp2(sharedState[28]).intl;
   obj5.accessibilityLabel = intl3.string(tab(sharedState[28]).t.JqV7IC);
   obj5.onPress = function onPress() {
     importDefault(constants.SEARCH);
@@ -304,7 +305,7 @@ let closure_35 = noop.memo((tab) => {
     onPress: null,
     selected: null,
   };
-  const intl4 = tmp2(tmp3[28]).intl;
+  const intl4 = tmp2(sharedState[28]).intl;
   obj6.accessibilityLabel = intl4.string(tab(sharedState[28]).t.HcoRu0);
   obj6.onPress = function onPress() {
     importDefault(constants.NOTIFICATIONS);
@@ -322,7 +323,7 @@ let closure_35 = noop.memo((tab) => {
         return closure_1_27(tab(sharedState[31]).StaffBadgeIcon, { size: "sm", color });
       },
       accessibilityLabel: "Dev Tools",
-      selected: tab === tmp14.DEV_TOOLS,
+      selected: tab === constants3.DEV_TOOLS,
       onPress() {
         if (obj.isAndroid()) {
           DevToolsNavigator.navigateToDevTools();
@@ -335,6 +336,7 @@ let closure_35 = noop.memo((tab) => {
         if (current != null) {
           current.blur();
         }
+        obj = PlatformUtils;
       },
     };
     tmp17Result = tmp17(TabButton, obj7);
@@ -345,7 +347,7 @@ let closure_35 = noop.memo((tab) => {
   obj.children = items5;
   return closure_28(sharedValue, obj);
 });
-let closure_37 = [];
+const results = [];
 let items = [
   fn(9835).AutocompleterResultTypes.GUILD,
   fn(9835).AutocompleterResultTypes.TEXT_CHANNEL,
@@ -377,17 +379,18 @@ export default noop.memo(function LaunchPad(arg0) {
   closure_129_2 = undefined;
   let tmp2 = bottom(noop.useState(false), 2);
   [str, closure_129_1] = bottom(noop.useState(""), 2);
-  let tmp6 = bottom(noop.useState(""), 2);
-  [tmp9, closure_129_2] = bottom(noop.useState(closure_37), 2);
+  const tmp6 = bottom(noop.useState(""), 2);
+  [tmp9, closure_129_2] = bottom(noop.useState(results), 2);
   const first = bottom(
     noop.useState(
       () =>
         new AutocompleterDefault(
-          (arg0, str) => {
+          (DEFAULT_POPUP_HEIGHT, str) => {
+            str = str.trim();
             if ("" === str.trim()) {
-              top(closure_2_37);
+              top(results);
             } else {
-              top(arg0);
+              top(DEFAULT_POPUP_HEIGHT);
             }
           },
           items,
@@ -418,9 +421,9 @@ export default noop.memo(function LaunchPad(arg0) {
   let items2 = [visible, first];
   const effect2 = noop.useEffect(() => {
     if (closure_0) {
-      obj.resume();
+      bottom.resume();
     } else {
-      obj.pause();
+      bottom.pause();
     }
   }, items2);
   let items3 = [first];
@@ -428,7 +431,7 @@ export default noop.memo(function LaunchPad(arg0) {
     height(arg0);
     bottom.search(arg0);
   }, items3);
-  let tmp15 = str.trim().length > 0;
+  const tmp15 = str.trim().length > 0;
   closure_130_0 = tmp15;
   closure_130_1 = visible;
   let obj = require("NavigationRouteUtils");
@@ -478,11 +481,10 @@ export default noop.memo(function LaunchPad(arg0) {
         while (iter !== undefined) {
           let tmp9 = nextResult;
           if (nextResult !== top) {
-            let obj = GuildReadStateStore;
             let hasUnreadResult = GuildReadStateStore.getMentionCount(tmp9) > 0;
             let tmp31 = hasUnreadResult;
             if (!hasUnreadResult) {
-              hasUnreadResult = obj.hasUnread(tmp9);
+              hasUnreadResult = GuildReadStateStore.hasUnread(tmp9);
             }
             if (hasUnreadResult) {
               let guild = GuildStore.getGuild(tmp9);
@@ -567,11 +569,10 @@ export default noop.memo(function LaunchPad(arg0) {
                               items3.push(type.id);
                             }
                           }
-                        } else if (obj2.hasUnread(type.id)) {
+                        } else if (mentionCount.hasUnread(type.id)) {
                           items2.push(type.id);
                         }
                       }
-                      obj2 = mentionCount;
                     }
                   }
                 }
@@ -604,7 +605,7 @@ export default noop.memo(function LaunchPad(arg0) {
   const effect6 = noop.useEffect(() => {
     ref3.current = current3;
   });
-  let tmp8 = bottom(noop.useState(closure_37), 2);
+  let tmp8 = bottom(noop.useState(results), 2);
   const items10 = [NavigationHistoryStore];
   const stateFromStores1 = require("initialize").useStateFromStores(items10, () => current3.getState().history);
   closure_130_12 = stateFromStores1;
@@ -668,15 +669,15 @@ export default noop.memo(function LaunchPad(arg0) {
   const memo1 = noop.useMemo(() => {
     if (!closure_0) {
       if (height) {
-        const tmp5 = (function getChannelHistory(arg0, bottom) {
+        const tmp5 = (function getChannelHistory(length, bottom) {
           if (null != bottom) {
             const _HermesInternal = HermesInternal;
             const combined = "" + ref2 + bottom;
           }
           items = [];
-          let diff = arg0.length - 1;
+          let diff = length.length - 1;
           if (0 <= diff) {
-            while (null != arg0[diff]) {
+            while (null != length[diff]) {
               if (!obj.startsWith(ref3)) {
                 if (obj !== combined) {
                   let tmp8 = current2(obj);
@@ -819,7 +820,7 @@ export default noop.memo(function LaunchPad(arg0) {
     closure_27(closure_35, { tab: first3, setTab: tmp40[1], updateQuery: callback1, searchRef: ref, sharedState }),
     ,
   ];
-  let tmp53Result = 0 === str.trim().length && first3 === tmp39.SEARCH;
+  let tmp53Result = 0 === str.trim().length && first3 === constants3.SEARCH;
   if (tmp53Result) {
     obj1 = {
       selectedGuildId: first1,
@@ -829,19 +830,19 @@ export default noop.memo(function LaunchPad(arg0) {
       guildHistory: memo,
       visible,
     };
-    tmp53Result = tmp53(tmp43(tmp17[44]), obj1);
+    tmp53Result = closure_27(tmp43(tmp17[44]), obj1);
   }
   items16[1] = tmp53Result;
   obj2 = { style: tmp.launchPadContent, children: null };
   if (first3 === constants3.SEARCH) {
     if (tmp50) {
-      obj3 = { results: tmp9, query: str };
-      tmp53Result = tmp53(tmp16(tmp17[45]).SearchResults, obj3);
+      obj3 = { results, query: str };
+      tmp53Result = closure_27(tmp16(tmp17[45]).SearchResults, obj3);
     }
     obj2.children = tmp53Result;
-    items16[2] = tmp53(tmp52, obj2);
+    items16[2] = closure_27(View, obj2);
     obj.children = items16;
-    return closure_28(tmp52, obj);
+    return closure_28(View, obj);
   }
   if (first3 === constants3.SEARCH) {
     obj4 = {
@@ -856,7 +857,7 @@ export default noop.memo(function LaunchPad(arg0) {
       unreads = deferredValue.unreads;
     }
     if (unreads == null) {
-      unreads = tmp7;
+      unreads = results;
     }
     obj4.unreads = unreads;
     let channelHistory;
@@ -864,17 +865,18 @@ export default noop.memo(function LaunchPad(arg0) {
       channelHistory = deferredValue.channelHistory;
     }
     if (channelHistory == null) {
-      channelHistory = tmp7;
+      channelHistory = results;
     }
     obj4.history = channelHistory;
     obj4.expandedHistory = tmp3;
     obj4.toggleExpandedHistory = callback;
-    tmp53Result = tmp53(tmp16(tmp17[45]).InitialResults, obj4);
-  } else if (first3 === tmp39.DEV_TOOLS) {
-    tmp53Result = tmp53(tmp43(tmp17[46]), {});
-  } else if (first3 === tmp39.MEMBERS) {
-    tmp53Result = tmp53(tmp43(tmp17[47]), {});
+    tmp53Result = closure_27(tmp16(tmp17[45]).InitialResults, obj4);
+  } else if (first3 === constants3.DEV_TOOLS) {
+    tmp53Result = closure_27(tmp43(tmp17[46]), {});
+  } else if (first3 === constants3.MEMBERS) {
+    tmp53Result = closure_27(tmp43(tmp17[47]), {});
   } else {
-    tmp53Result = tmp53(tmp43(tmp17[48]), {});
+    tmp53Result = closure_27(tmp43(tmp17[48]), {});
   }
+  tmp50 = str.trim().length > 0;
 });

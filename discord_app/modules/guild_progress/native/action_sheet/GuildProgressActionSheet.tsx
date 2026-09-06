@@ -70,7 +70,7 @@ let result = size.fileFinishedImporting("modules/guild_progress/native/action_sh
 export default function GuildProgressActionSheet(guild) {
   guild = guild.guild;
   let numFinished;
-  const errors = async function _addServerIcon(arg0, value) {
+  const errors = async function _addServerIcon() {
     if (c3 === 2) {
       c3 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -179,8 +179,6 @@ export default function GuildProgressActionSheet(guild) {
   obj.analyticsSetupType = constants.GUILD_PROGRESS;
   obj.analyticsAction = constants2.INVITE;
   const tmp11 = require("ProgressItem");
-  const tmp12 = constants;
-  const tmp13 = constants2;
   obj1 = {
     onPress: function addServerIcon() {
       const self = this;
@@ -210,14 +208,14 @@ export default function GuildProgressActionSheet(guild) {
   const tmp15 = require("ProgressItem");
   let obj3 = {
     onPress: function goToChannel() {
-      if (null != closure_1) {
+      if (null != user) {
         let obj = transitionToChannel;
-        obj.transitionToChannel(tmp.id);
+        obj.transitionToChannel(user.id);
       }
       ActionSheetActionCreatorsDefault.hideActionSheet();
       let tmp6;
-      if (null != closure_1) {
-        obj = { channelId: tmp.id };
+      if (null != user) {
+        obj = { channelId: user.id };
         tmp6 = obj;
       }
       const ComponentDispatch = ComponentDispatchUtils.ComponentDispatch;
@@ -259,9 +257,9 @@ export default function GuildProgressActionSheet(guild) {
     const intl4 = tmp2(tmp3[18]).intl;
     obj5.title = intl4.string(tmp2(tmp3[18]).t["6Qbqxw"]);
     obj5.isCompleted = guildBoosted;
-    obj5.analyticsSetupType = tmp12.GUILD_PROGRESS;
-    obj5.analyticsAction = tmp13.BOOST;
-    tmp9Result = tmp9(tmp10(tmp3[15]), obj5);
+    obj5.analyticsSetupType = constants.GUILD_PROGRESS;
+    obj5.analyticsAction = constants2.BOOST;
+    tmp9Result = closure_14(tmp10(tmp3[15]), obj5);
     const tmp10Result = tmp10(tmp3[15]);
   }
   let obj7 = { style: tmp.container, children: null };
@@ -310,14 +308,14 @@ export default function GuildProgressActionSheet(guild) {
     const obj11 = { variant: "primary", grow: true, onPress: handleDismissGuildProgress, text: null };
     const intl8 = tmp2(tmp3[18]).intl;
     obj11.text = intl8.string(tmp2(tmp3[18]).t["0/5zhg"]);
-    tmp9Result = tmp9(tmp2(tmp3[30]).Button, obj11);
+    tmp9Result = closure_14(tmp2(tmp3[30]).Button, obj11);
   } else {
     const obj12 = { accessibilityRole: "button", onPress: handleDismissGuildProgress, children: null };
     const obj13 = { variant: "text-sm/medium", color: "text-default", children: null };
     const intl7 = tmp2(tmp3[18]).intl;
     obj13.children = intl7.string(tmp2(tmp3[18]).t["9E36wf"]);
-    obj12.children = tmp9(tmp2(tmp3[29]).Text, obj13);
-    tmp9Result = tmp9(tmp2(tmp3[31]).PressableOpacity, obj12);
+    obj12.children = closure_14(tmp2(tmp3[29]).Text, obj13);
+    tmp9Result = closure_14(tmp2(tmp3[31]).PressableOpacity, obj12);
   }
   obj10.children = tmp9Result;
   items5[5] = closure_14(id, obj10);

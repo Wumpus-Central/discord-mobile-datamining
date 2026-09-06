@@ -96,8 +96,8 @@ export default function GroupDMNitroCapBanner(showLeadingIcon) {
   if (flag) {
     const obj3 = { style: tmp.iconContainer, children: null };
     const obj4 = { size: "md", color: nativeDefault.colors.WHITE };
-    obj3.children = tmp7(NitroWheelIcon.NitroWheelIcon, obj4);
-    flag = tmp7(tmp8, obj3);
+    obj3.children = hasOwnProperty(NitroWheelIcon.NitroWheelIcon, obj4);
+    flag = hasOwnProperty(React4, obj3);
   }
   items4[1] = flag;
   items4[2] = hasOwnProperty(React4, { style: tmp.text, children });

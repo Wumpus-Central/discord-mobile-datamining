@@ -3,7 +3,7 @@ import HTTPUtils from "../../../../discord_common/js/packages/http-utils/HTTPUti
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 
 require = fn;
-let closure_4 = async function _testCaptcha(decider, options) {
+let closure_4 = async function _testCaptcha() {
   c3 = 0;
   c2 = 0;
   return (async (arg0, value) => {

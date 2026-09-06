@@ -5,6 +5,7 @@ import DispatcherDefault from "../Dispatcher.tsx";
 import _modDef1332 from "../../_runtime/metro/01332__.js";
 import FlagUtils from "../../discord_common/js/shared/utils/FlagUtils.tsx";
 import UserSettings from "../modules/user_settings/UserSettings.tsx";
+import LibraryApplicationUtils from "../utils/LibraryApplicationUtils.tsx";
 import isListeningOnSpotifyDefault from "../modules/activities/utils/isListeningOnSpotify.tsx";
 import SpotifyStore from "../modules/spotify/SpotifyStore.tsx";
 import UserSettingsProtoStore from "../modules/user_settings/UserSettingsProtoStore.tsx";
@@ -61,7 +62,7 @@ function shouldShowActivity(flags) {
       } else {
         shouldShowActivityResult = null != flags.application_id;
         if (shouldShowActivityResult) {
-          let tmpResult = tmp(7399);
+          let tmpResult = LibraryApplicationUtils;
           shouldShowActivityResult = tmpResult.shouldShareApplicationActivity(
             flags.application_id,
             LibraryApplicationStore,
@@ -69,29 +70,32 @@ function shouldShowActivity(flags) {
         }
       }
       return shouldShowActivityResult;
-    } else if (tmp3.PLAYING === type) {
+    } else if (constants2.PLAYING === type) {
       if (null != flags.application_id) {
-        tmpResult = tmp(7399);
+        tmpResult = LibraryApplicationUtils;
         let result = tmpResult.shouldShareApplicationActivity(flags.application_id, LibraryApplicationStore);
       } else {
         const searchGamesByNameResult = DetectableGameStore.searchGamesByName(flags.name);
         if (1 === searchGamesByNameResult.length) {
-          result = tmp(7399).shouldShareApplicationActivity(searchGamesByNameResult[0], LibraryApplicationStore);
-          const tmpResult1 = tmp(7399);
+          result = LibraryApplicationUtils.shouldShareApplicationActivity(
+            searchGamesByNameResult[0],
+            LibraryApplicationStore,
+          );
+          const tmpResult1 = LibraryApplicationUtils;
         } else {
-          const ShowCurrentGame = tmp(1935).ShowCurrentGame;
+          const ShowCurrentGame = UserSettings.ShowCurrentGame;
           result = ShowCurrentGame.getSetting();
         }
       }
       return result;
     } else {
-      if (tmp3.STREAMING !== type) {
-        const WATCHING = tmp3.WATCHING;
+      if (constants2.STREAMING !== type) {
+        const WATCHING = constants2.WATCHING;
       }
       let result1 = null == flags.application_id;
       if (!result1) {
-        result1 = tmp(7399).shouldShareApplicationActivity(flags.application_id, LibraryApplicationStore);
-        const tmpResult2 = tmp(7399);
+        result1 = LibraryApplicationUtils.shouldShareApplicationActivity(flags.application_id, LibraryApplicationStore);
+        const tmpResult2 = LibraryApplicationUtils;
       }
       return result1;
     }
@@ -124,10 +128,10 @@ function handleUpdate() {
     tmp7 = num > 0;
   }
   if (tmp7) {
-    IDLE = tmp6.IDLE;
+    IDLE = StatusTypes.IDLE;
   }
   if (!c23) {
-    if (IDLE !== tmp6.INVISIBLE) {
+    if (IDLE !== StatusTypes.INVISIBLE) {
       activities = LocalActivityStore.getActivities();
       found = activities.filter(shouldShowActivity);
     }
@@ -150,13 +154,17 @@ function handleUpdate() {
       );
       const tmp12Result = _modDef12;
       const tmp12ResultResult = _modDef12(items.sort(sortActivity));
-      valueResult = _modDef12(items.sort(sortActivity))
-        .uniqBy((type) => "" + type.type + ":" + type.application_id + ":" + type.name)
-        .value();
-      closure_27 = filterPlayingActivities(valueResult);
       const iter = _modDef12(items.sort(sortActivity)).uniqBy(
         (type) => "" + type.type + ":" + type.application_id + ":" + type.name,
       );
+      closure_27 = filterPlayingActivities(
+        _modDef12(items.sort(sortActivity))
+          .uniqBy((type) => "" + type.type + ":" + type.application_id + ":" + type.name)
+          .value(),
+      );
+      valueResult = _modDef12(items.sort(sortActivity))
+        .uniqBy((type) => "" + type.type + ":" + type.application_id + ":" + type.name)
+        .value();
     }
   }
   found = [];

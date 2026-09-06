@@ -9,7 +9,7 @@ const notification_center_getTimestampStringDefault = notification_center_getTim
 
 const result = size.fileFinishedImporting("modules/notification_center/NotificationCenterUtils.tsx");
 
-export const getRelativeTimestamp = function getRelativeTimestamp(extractTimestampResult, flag) {
+export const getRelativeTimestamp = function getRelativeTimestamp(extractTimestampResult) {
   if (flag === undefined) {
     flag = true;
   }

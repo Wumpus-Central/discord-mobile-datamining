@@ -97,10 +97,10 @@ export default function OAuth2AuthorizeModal(arg0) {
   };
   if (null != tmp4.backStep) {
     const obj3 = { color: tmp2(576).colors.INTERACTIVE_TEXT_DEFAULT };
-    let tmp11Result = tmp11(tmp5(9579).ArrowSmallLeftIcon, obj3);
+    let tmp11Result = closure_5(tmp5(9579).ArrowSmallLeftIcon, obj3);
   } else {
     const obj4 = { color: tmp2(576).colors.INTERACTIVE_TEXT_DEFAULT };
-    tmp11Result = tmp11(tmp5(5680).XSmallIcon, obj4);
+    tmp11Result = closure_5(tmp5(5680).XSmallIcon, obj4);
   }
   obj2.children = tmp11Result;
   const items2 = [closure_5(require("Pressables").PressableOpacity, obj2), ,];

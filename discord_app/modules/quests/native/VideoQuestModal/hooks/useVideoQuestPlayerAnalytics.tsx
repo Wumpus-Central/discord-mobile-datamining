@@ -1,10 +1,12 @@
 // discord_app/modules/quests/native/VideoQuestModal/hooks/useVideoQuestPlayerAnalytics.tsx
 import QuestTypes from "../../../QuestTypes.tsx";
 import MonitoringAgentDefault from "../../../../monitoring/MonitoringAgent.tsx";
+import MetricEvents from "../../../../../../discord_common/js/shared/shared-constants/MetricEvents.tsx";
 import DiscordVideoPlayerTypes from "../../../../../../discord_common/js/packages/video-player/DiscordVideoPlayerTypes.tsx";
 import AnalyticsActions from "../../../lib/analytics/AnalyticsActions.tsx";
 import VideoQuestUtils from "../../../utils/VideoQuestUtils.tsx";
 import AdsVideoTypes from "../../AdsVideoTypes.tsx";
+import AdsVideoUtils from "../../AdsVideoUtils.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import NetworkStore from "../../../../../stores/NetworkStore.tsx";
 
@@ -45,13 +47,12 @@ export default function useVideoQuestPlayerAnalytics(duration) {
         obj = { video_timestamp_seconds: tmp.current, video_state, video_session_id, impression_id: null };
         let id;
         if (questImpression != null) {
-          id = obj2.getId();
+          id = questImpression.getId();
         }
         obj.impression_id = id;
         obj.properties = obj;
         obj.sourceQuestContent = sourceQuestContent;
         duration(playerState[5]).trackQuestEvent(obj);
-        obj2 = questImpression;
         const obj3 = duration(playerState[5]);
       }
     });
@@ -85,13 +86,12 @@ export default function useVideoQuestPlayerAnalytics(duration) {
       obj.video_session_id = videoSessionId;
       let id;
       if (questImpression != null) {
-        id = obj5.getId();
+        id = questImpression.getId();
       }
       obj.impression_id = id;
       obj.properties = obj;
       obj.sourceQuestContent = sourceQuestContent;
       obj.trackQuestEvent(obj);
-      obj5 = questImpression;
     }
   }, items1);
   const callback1 = questId.useCallback(() => closure_7.current, []);
@@ -109,13 +109,13 @@ export default function useVideoQuestPlayerAnalytics(duration) {
   const items2 = [playerState, handlePlayerStateChange];
   const effect2 = questId.useEffect(() => {
     if (AdsVideoTypes.PlayerState.PLAYING === playerState) {
-      handlePlayerStateChange(tmp2(7706).VideoPlayerState.PLAYING, null);
-    } else if (tmp2(15015).PlayerState.PAUSED === tmp) {
-      handlePlayerStateChange(tmp2(7706).VideoPlayerState.PAUSED, null);
-    } else if (tmp2(15015).PlayerState.ENDED === tmp) {
-      handlePlayerStateChange(tmp2(7706).VideoPlayerState.ENDED, null);
-    } else if (tmp2(15015).PlayerState.ERRORED === tmp) {
-      handlePlayerStateChange(tmp2(7706).VideoPlayerState.PAUSED, null);
+      handlePlayerStateChange(DiscordVideoPlayerTypes.VideoPlayerState.PLAYING, null);
+    } else if (AdsVideoTypes.PlayerState.PAUSED === playerState) {
+      handlePlayerStateChange(DiscordVideoPlayerTypes.VideoPlayerState.PAUSED, null);
+    } else if (AdsVideoTypes.PlayerState.ENDED === playerState) {
+      handlePlayerStateChange(DiscordVideoPlayerTypes.VideoPlayerState.ENDED, null);
+    } else if (AdsVideoTypes.PlayerState.ERRORED === playerState) {
+      handlePlayerStateChange(DiscordVideoPlayerTypes.VideoPlayerState.PAUSED, null);
     }
   }, items2);
   questId.useRef(null);
@@ -182,7 +182,7 @@ export default function useVideoQuestPlayerAnalytics(duration) {
     obj.sourceQuestContent = sourceQuestContent;
     obj.trackQuestEvent(obj);
   }, items5);
-  closure_15 = questId.useRef(null);
+  questId.useRef(null);
   questId.useRef(-1);
   const items6 = [questId, videoAssetId, videoSessionId, questImpression, sourceQuestContent];
   const items7 = [questId, videoSessionId, videoAssetId, questImpression, sourceQuestContent];
@@ -190,7 +190,7 @@ export default function useVideoQuestPlayerAnalytics(duration) {
     const effectiveConnectionSpeed = NetworkStore.getEffectiveConnectionSpeed();
     if (arg0) {
       const _Date2 = Date;
-      tmp2.current = Date.now();
+      ref.current = Date.now();
       ref3.current = ref3.current + 1;
       let obj = {
         questId,
@@ -207,18 +207,17 @@ export default function useVideoQuestPlayerAnalytics(duration) {
       };
       let id;
       if (questImpression != null) {
-        id = obj8.getId();
+        id = questImpression.getId();
       }
       obj.impression_id = id;
       obj.properties = obj;
       obj.sourceQuestContent = sourceQuestContent;
       AnalyticsActions.trackQuestEvent(obj);
-      obj8 = questImpression;
     } else {
       let diff = null;
-      if (null != tmp2.current) {
+      if (null != ref.current) {
         const _Date = Date;
-        diff = Date.now() - tmp2.current;
+        diff = Date.now() - ref.current;
       }
       obj = AnalyticsActions;
       const obj1 = {
@@ -237,13 +236,12 @@ export default function useVideoQuestPlayerAnalytics(duration) {
       };
       let id1;
       if (questImpression != null) {
-        id1 = obj4.getId();
+        id1 = questImpression.getId();
       }
       obj2.impression_id = id1;
       obj1.properties = obj2;
       obj1.sourceQuestContent = sourceQuestContent;
       obj.trackQuestEvent(obj1);
-      obj4 = questImpression;
     }
   }, items6);
   const items8 = [questId, videoSessionId, questImpression, sourceQuestContent];
@@ -262,13 +260,12 @@ export default function useVideoQuestPlayerAnalytics(duration) {
       obj.video_asset_id = videoAssetId;
       let id;
       if (questImpression != null) {
-        id = obj4.getId();
+        id = questImpression.getId();
       }
       obj.impression_id = id;
       obj.properties = obj;
       obj.sourceQuestContent = sourceQuestContent;
       obj.trackQuestEvent(obj);
-      obj4 = questImpression;
     }
   }, items7);
   const items9 = [questId, videoSessionId, questImpression, sourceQuestContent];
@@ -355,21 +352,20 @@ export default function useVideoQuestPlayerAnalytics(duration) {
     obj.video_error_message = localizedDescription;
     let id;
     if (questImpression != null) {
-      id = obj5.getId();
+      id = questImpression.getId();
     }
     obj.impression_id = id;
     obj.properties = obj;
     obj.sourceQuestContent = sourceQuestContent;
     obj.trackQuestEvent(obj);
-    obj5 = questImpression;
-    const tmp3 = questId;
     if (tmpResult.isSourceError(error)) {
-      const obj1 = { name: tmp(7607).MetricEvents.QUEST_VIDEO_ERROR, tags: null };
+      const obj1 = { name: MetricEvents.MetricEvents.QUEST_VIDEO_ERROR, tags: null };
       const _HermesInternal = HermesInternal;
-      const items = ["quest_id:" + tmp3, "error_type:SOURCE_ERROR"];
+      const items = ["quest_id:" + questId, "error_type:SOURCE_ERROR"];
       obj1.tags = items;
       MonitoringAgentDefault.increment(obj1);
     }
+    tmpResult = AdsVideoUtils;
   }, items10);
   obj.handleLoadAnalytics = callback2;
   obj.handleLoadStartAnalytics = callback4;
@@ -398,13 +394,12 @@ export default function useVideoQuestPlayerAnalytics(duration) {
       obj = { from_time_sec, to_time_sec, video_session_id: videoSessionId, impression_id: null };
       let id;
       if (questImpression != null) {
-        id = obj4.getId();
+        id = questImpression.getId();
       }
       obj.impression_id = id;
       obj.properties = obj;
       obj.sourceQuestContent = sourceQuestContent;
       obj.trackQuestEvent(obj);
-      obj4 = questImpression;
     }
   }, items12);
   return obj;

@@ -33,14 +33,13 @@ export default noop.memo(
     }, items);
     const callback1 = ref.useCallback(() => {
       if (null != threadSettingsDraft.name) {
-        if (null != tmp.parentChannelId) {
-          const tmp4 = sanitizeThreadNameDefault(tmp.name, true);
-          if (tmp4 !== tmp.name) {
+        if (null != threadSettingsDraft.parentChannelId) {
+          const tmp4 = sanitizeThreadNameDefault(threadSettingsDraft.name, true);
+          if (tmp4 !== threadSettingsDraft.name) {
             const obj = { name: tmp4 };
-            tmp2(7777).changeThreadSettings(tmp.parentChannelId, obj);
-            const tmp2Result = tmp2(7777);
+            DraftActionCreatorsDefault.changeThreadSettings(threadSettingsDraft.parentChannelId, obj);
+            const tmp2Result = DraftActionCreatorsDefault;
           }
-          tmp2 = importDefault;
         }
       }
     }, items1);
@@ -60,13 +59,13 @@ export default noop.memo(
     const effect = ref.useEffect(() => {
       let tmp2 = ref.current !== threadSettingsDraft.name;
       if (tmp2) {
-        tmp2 = null != tmp.name;
+        tmp2 = null != threadSettingsDraft.name;
       }
       if (tmp2) {
         if (ref != null) {
           const current = ref.current;
           if (current != null) {
-            current.setText(tmp.name);
+            current.setText(threadSettingsDraft.name);
           }
         }
       }

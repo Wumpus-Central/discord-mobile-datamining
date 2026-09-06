@@ -3,6 +3,7 @@ import asyncRequireImpl from "../../../../_runtime/01896_asyncRequireImpl.js";
 import ReactionUtils from "../ReactionUtils.tsx";
 import PremiumUtils from "../../../utils/PremiumUtils.tsx";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
+import HapticUtils from "../../haptics/HapticUtils.native.tsx";
 import haptics_HapticFeedbackTypesDefault from "../../haptics/HapticFeedbackTypes.tsx";
 import AppAnalyticsUtilsDefault from "../../app_analytics/AppAnalyticsUtils.tsx";
 import AlertActionCreatorsDefault from "../../../actions/AlertActionCreators.tsx";
@@ -44,7 +45,7 @@ export const handleOutOfSuperReactions = function handleOutOfSuperReactions(onDi
     return openLazyResult;
   }
 };
-export const handleAddNewReactions = function handleAddNewReactions(channel, id, MESSAGE, burst) {
+export const handleAddNewReactions = function handleAddNewReactions(channel, id) {
   _require = channel;
   importDefault = id;
   if (MESSAGE === undefined) {
@@ -57,7 +58,7 @@ export const handleAddNewReactions = function handleAddNewReactions(channel, id,
   const currentUser = UserStore.getCurrentUser();
   if (null != currentUser) {
     let ReactionTypes = MESSAGE;
-    const isPremiumResult = require("PremiumUtils").isPremium(currentUser);
+    const obj7 = require("PremiumUtils");
     let tmp4 = tmp12;
     if (true === burst) {
       tmp4 = !isPremiumResult;
@@ -89,11 +90,11 @@ export const handleAddNewReactions = function handleAddNewReactions(channel, id,
         if (null != byName) {
           const toReactionEmojiResult = ReactionUtils.toReactionEmoji(byName);
           if (!obj.burst) {
-            let tmp3Result = tmp3(4528);
+            let tmp3Result = HapticUtils;
             const result = tmp3Result.triggerHapticFeedback(haptics_HapticFeedbackTypesDefault.IMPACT_LIGHT);
           }
-          tmp3Result = tmp3(7764);
-          tmp3Result.addReaction(id, tmp, toReactionEmojiResult, tmp2, obj);
+          tmp3Result = ReactionActionCreators;
+          tmp3Result.addReaction(id, closure_1, toReactionEmojiResult, MESSAGE, obj);
         }
       },
       channel,
@@ -110,7 +111,7 @@ export const handleAddNewReactions = function handleAddNewReactions(channel, id,
     }
     ReactionTypes = tmp13(ReactionTypes[17]).ReactionTypes;
     const BURST = ReactionTypes.BURST;
-    const obj7 = require("PremiumUtils");
+    isPremiumResult = require("PremiumUtils").isPremium(currentUser);
   }
 };
 export const handleViewReactions = function handleViewReactions(isPoll) {
@@ -160,8 +161,10 @@ export const handleViewReactions = function handleViewReactions(isPoll) {
     const obj6 = ActionSheetActionCreatorsDefault;
     const merged2 = Object.assign(merged);
     obj6.openLazy(asyncRequireImpl(11255, dependencyMap.paths), "MessageReactions", obj1);
+    const tmp19 = asyncRequireImpl(11255, dependencyMap.paths);
   }
   FORUM_CHANNEL_POST = constants2.FORUM_CHANNEL_POST;
+  tmp4 = isPrivateResult ? React6.DM_CHANNEL : React6.GUILD_CHANNEL;
 };
 export const handleViewPreviewReactions = function handleViewPreviewReactions(id2, id, emoji) {
   const obj = { messageId: id2, channelId: id, emoji };

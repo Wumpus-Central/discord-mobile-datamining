@@ -1,5 +1,6 @@
 // discord_app/modules/auth/native/components/Welcome.tsx
 import _modDef38 from "../../../../../_runtime/metro/00038__.js";
+import Storage2 from "../../../../../discord_common/js/packages/storage/Storage.tsx";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
 import native from "../../../../design/void/native.tsx";
@@ -22,7 +23,6 @@ import UserRecord from "../../../../records/UserRecord.tsx";
 import InviteStore from "../../../../stores/InviteStore.tsx";
 import DisplayedInviteStore from "../../../../stores/native/DisplayedInviteStore.tsx";
 
-const Storage2 = tmp(510);
 require = fn;
 function InviteCard(invite) {
   invite = invite.invite;
@@ -132,7 +132,7 @@ function Centerpiece(inlineButtons) {
     num = 1;
   }
   obj1.lineClamp = num;
-  const intl = tmp4(1114).intl;
+  const intl = util.intl;
   obj1.children = intl.string(util.t["3S2xmm"]);
   const items2 = [closure_1_20(Text_Text.Heading, obj1), , ,];
   const items3 = [tmp3.subHeader];
@@ -149,19 +149,19 @@ function Centerpiece(inlineButtons) {
     children: null,
   };
   items3[1] = subHeaderWithInvite;
-  const intl2 = tmp4(1114).intl;
+  const intl2 = util.intl;
   obj2.children = intl2.string(util.t.Gtcthl);
   items2[1] = closure_1_20(Text_Text.Text, obj2);
   let tmp9Result = null;
   if (null != invite) {
     const obj3 = { invite };
-    tmp9Result = tmp9(InviteCard, obj3);
+    tmp9Result = closure_1_20(InviteCard, obj3);
   }
   items2[2] = tmp9Result;
   tmp9Result = null;
   if (tmp7) {
     const obj4 = { guildTemplate };
-    tmp9Result = tmp9(GuildTemplateCard, obj4);
+    tmp9Result = closure_1_20(GuildTemplateCard, obj4);
   }
   items2[3] = tmp9Result;
   items1[1] = __initData(React4, { children: items2 });
@@ -260,8 +260,8 @@ export default function Welcome() {
     let tmp6 = null;
     if (null != stateFromStores) {
       tmp6 = null;
-      if (null != tmp5.type) {
-        tmp6 = InviteTypes[tmp5.type];
+      if (null != stateFromStores.type) {
+        tmp6 = InviteTypes[stateFromStores.type];
       }
     }
     obj = { last_logout_ts: null, invite_type: null, guild_id: null, channel_id: null, invite_code: null };
@@ -270,7 +270,7 @@ export default function Welcome() {
     obj.invite_type = tmp6;
     let id;
     if (stateFromStores != null) {
-      const guild = tmp5.guild;
+      const guild = stateFromStores.guild;
       if (guild != null) {
         id = guild.id;
       }
@@ -278,7 +278,7 @@ export default function Welcome() {
     obj.guild_id = id;
     let id1;
     if (stateFromStores != null) {
-      const channel = tmp5.channel;
+      const channel = stateFromStores.channel;
       if (channel != null) {
         id1 = channel.id;
       }
@@ -286,7 +286,7 @@ export default function Welcome() {
     obj.channel_id = id1;
     let code;
     if (stateFromStores != null) {
-      code = tmp5.code;
+      code = stateFromStores.code;
     }
     obj.invite_code = code;
     AnalyticsUtilsDefault.track(constants.APP_LANDING_VIEWED, obj);

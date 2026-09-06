@@ -48,9 +48,9 @@ export { Gradients };
 export const getPremiumGradientColor = function getPremiumGradientColor(premiumType) {
   if (PremiumTypes.TIER_0 === premiumType) {
     return obj.PREMIUM_TIER_0;
-  } else if (tmp.TIER_1 === premiumType) {
+  } else if (PremiumTypes.TIER_1 === premiumType) {
     return obj.PREMIUM_TIER_1;
-  } else if (tmp.TIER_2 === premiumType) {
+  } else if (PremiumTypes.TIER_2 === premiumType) {
     return obj.PREMIUM_TIER_2;
   }
 };

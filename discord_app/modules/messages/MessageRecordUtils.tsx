@@ -3,7 +3,7 @@ import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
 import _modDef4153 from "../../../_runtime/metro/04153__.js";
 import findCodedLinksDefault from "../coded_links/findCodedLinks.tsx";
 import useMessageAuthor from "useMessageAuthor.tsx";
-import isMessageMentionedDefault from "isMessageMentioned.tsx";
+import isMessageMentioned from "isMessageMentioned.tsx";
 import GiftCodeUtils from "../../utils/GiftCodeUtils.tsx";
 import transformMessagPollDefault from "../polls/transformMessagPoll.tsx";
 import EmbedUtils from "../../utils/EmbedUtils.tsx";
@@ -14,6 +14,8 @@ import UserRecord from "../../records/UserRecord.tsx";
 import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
 import RelationshipStore from "../../stores/RelationshipStore.tsx";
 import UserStore from "../../stores/UserStore.tsx";
+
+const isMessageMentionedDefault = isMessageMentioned;
 
 require = fn;
 function createMinimalMessageRecord(timestamp) {
@@ -58,7 +60,7 @@ function createMinimalMessageRecord(timestamp) {
   tmp = new tmp(obj);
   return tmp;
 }
-function createMessageRecord(message, message) {
+function createMessageRecord(message) {
   let obj = message;
   if (message === undefined) {
     obj = {};
@@ -141,14 +143,14 @@ function createMessageRecord(message, message) {
   obj.webhookId = message.webhook_id;
   let isBlockedForMessageResult = RelationshipStore.isBlockedForMessage(message);
   if (!isBlockedForMessageResult) {
-    isBlockedForMessageResult = null != tmp15 && obj8.isBlocked(tmp15);
-    const tmp28 = null != tmp15 && obj8.isBlocked(tmp15);
+    isBlockedForMessageResult = null != tmp15 && RelationshipStore.isBlocked(tmp15);
+    const tmp28 = null != tmp15 && RelationshipStore.isBlocked(tmp15);
   }
   obj.blocked = isBlockedForMessageResult;
-  let isIgnoredForMessageResult = obj8.isIgnoredForMessage(message);
+  let isIgnoredForMessageResult = RelationshipStore.isIgnoredForMessage(message);
   if (!isIgnoredForMessageResult) {
-    isIgnoredForMessageResult = null != tmp15 && obj8.isIgnored(tmp15);
-    const tmp30 = null != tmp15 && obj8.isIgnored(tmp15);
+    isIgnoredForMessageResult = null != tmp15 && RelationshipStore.isIgnored(tmp15);
+    const tmp30 = null != tmp15 && RelationshipStore.isIgnored(tmp15);
   }
   obj.ignored = isIgnoredForMessageResult;
   obj.mentionEveryone = message.mention_everyone;
@@ -156,7 +158,7 @@ function createMessageRecord(message, message) {
   obj.mentionRoles = mention_roles;
   obj.mentionChannels = mention_channels;
   obj.messageReference = message.message_reference;
-  let tmp9Result = tmp9(4798);
+  let tmp9Result = isMessageMentioned;
   obj1 = {
     userId: AuthenticationStore.getId(),
     channelId: message.channel_id,
@@ -172,7 +174,7 @@ function createMessageRecord(message, message) {
   obj1.mentionUsers = mapped;
   obj1.mentionRoles = mention_roles;
   obj.mentioned = tmp9Result.isMentioned(obj1);
-  tmp9Result = tmp9(4799);
+  tmp9Result = GiftCodeUtils;
   const isGiftCodeEmbedResult = tmp9Result.isGiftCodeEmbed(message);
   const findGiftCodes = GiftCodeUtils.findGiftCodes;
   if (isGiftCodeEmbedResult) {
@@ -310,6 +312,7 @@ function createMessageRecord(message, message) {
     }
     return obj;
   });
+  const tmp9Result1 = GiftCodeUtils;
 }
 let MessageRecord = fn(4210);
 ({ MessageSnapshotRecord: closure_4, MinimalMessageRecord: hasOwnProperty } = MessageRecord);

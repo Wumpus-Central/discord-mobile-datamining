@@ -22,14 +22,14 @@ let prototype = function UserOfferManager() {
     }
     let isPremiumResult = null == currentUser || !currentUser.verified;
     if (!isPremiumResult) {
-      let tmp2Result = tmp2(tmp3[5]);
+      let tmp2Result = applyArgumentsResult(dependencyMap[5]);
       isPremiumResult = tmp2Result.isPremium(currentUser);
     }
     if (!isPremiumResult) {
       isPremiumResult = fetchingOffer.isFetchingOffer();
     }
     if (!isPremiumResult) {
-      tmp2Result = tmp2(tmp3[6]);
+      tmp2Result = applyArgumentsResult(dependencyMap[6]);
       const userOffer = tmp2Result.fetchUserOffer("MobilePremiumOfferManager", true, tmp4);
     }
   };

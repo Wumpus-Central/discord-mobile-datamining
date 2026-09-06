@@ -122,7 +122,7 @@ export default noop.memo(function DevToolsContent(arg0) {
     items1,
     () => Object.keys(allExperimentOverrideDescriptors.getAllExperimentOverrideDescriptors()).length,
   );
-  const obj3 = require("initialize");
+  let obj3 = require("initialize");
   const items2 = [ApexExperimentStore];
   closure_129_1 =
     stateFromStores +
@@ -166,7 +166,7 @@ export default noop.memo(function DevToolsContent(arg0) {
       let tmp4Result;
       if (_undefined) {
         obj = { screenKey: tmp, start: 0 === index, end: index === arr5.length - 1 };
-        tmp4Result = tmp4(DevToolsContentSortButtons, obj);
+        tmp4Result = closure_1_10(DevToolsContentSortButtons, obj);
       }
       obj.trailing = tmp4Result;
       obj.onLongPress = function onLongPress() {
@@ -183,9 +183,10 @@ export default noop.memo(function DevToolsContent(arg0) {
         obj.content = str2;
         obj.open(obj);
         const result = screenKey(dependencyMap[14]).triggerHapticFeedback(
-          screenKey(tmp[14]).HapticFeedbackTypes.IMPACT_MEDIUM,
+          screenKey(dependencyMap[14]).HapticFeedbackTypes.IMPACT_MEDIUM,
         );
         closure_1_3((arg0) => !arg0);
+        const obj3 = screenKey(dependencyMap[14]);
       };
       obj.onPress = function onPress() {
         if (!c2) {

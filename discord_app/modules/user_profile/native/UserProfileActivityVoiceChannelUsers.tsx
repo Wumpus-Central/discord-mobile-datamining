@@ -83,8 +83,8 @@ export default function UserProfileActivityVoiceChannelUsers(arg0) {
           onPress={function onPress() {
             return importDefault(item.id);
           }}
-          start={arg0.start}
-          end={arg0.end}
+          start={start.start}
+          end={start.end}
         />
       );
     },
@@ -104,8 +104,8 @@ export default function UserProfileActivityVoiceChannelUsers(arg0) {
           onPress={function onPress() {
             return importDefault(item.id);
           }}
-          start={arg0.start}
-          end={arg0.end}
+          start={start.start}
+          end={start.end}
         />
       );
     },
@@ -125,8 +125,8 @@ export default function UserProfileActivityVoiceChannelUsers(arg0) {
           onPress={function onPress() {
             return importDefault(item.id);
           }}
-          start={arg0.start}
-          end={arg0.end}
+          start={start.start}
+          end={start.end}
         />
       );
     },

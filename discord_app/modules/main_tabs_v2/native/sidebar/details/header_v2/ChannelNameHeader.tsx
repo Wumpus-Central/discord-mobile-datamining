@@ -29,16 +29,16 @@ function DirectMessageIcon(channel) {
     () => {
       let isMobileOnlineResult = null != stateFromStores;
       if (isMobileOnlineResult) {
-        isMobileOnlineResult = PresenceStore.isMobileOnline(tmp.id);
+        isMobileOnlineResult = PresenceStore.isMobileOnline(stateFromStores.id);
       }
       const obj = { isMobileOnline: isMobileOnlineResult, isVROnline: null, status: null };
-      let isVROnlineResult = null != tmp;
+      let isVROnlineResult = null != stateFromStores;
       if (isVROnlineResult) {
-        isVROnlineResult = PresenceStore.isVROnline(tmp.id);
+        isVROnlineResult = PresenceStore.isVROnline(stateFromStores.id);
       }
       obj.isVROnline = isVROnlineResult;
       if (null != stateFromStores) {
-        let UNKNOWN = PresenceStore.getStatus(tmp.id);
+        let UNKNOWN = PresenceStore.getStatus(stateFromStores.id);
       } else {
         UNKNOWN = constants2.UNKNOWN;
       }
@@ -239,7 +239,7 @@ function ChannelNameHeaderContent(channel) {
       lineClamp: 1,
       ellipsizeMode: "tail",
     };
-    let tmp13Result = tmp13(require("UsernameWithEffects"), obj);
+    let tmp13Result = closure_12(require("UsernameWithEffects"), obj);
     const tmp2Result = require("UsernameWithEffects");
   } else {
     obj1 = {
@@ -249,7 +249,7 @@ function ChannelNameHeaderContent(channel) {
       ellipsizeMode: "tail",
       children: tmp4,
     };
-    tmp13Result = tmp13(channel(tmp3[17]).Text, obj1);
+    tmp13Result = closure_12(channel(tmp3[17]).Text, obj1);
   }
   obj2 = { children: null };
   const items9 = [tmp13Result, memo];
@@ -313,10 +313,10 @@ export default noop.memo(function ChannelNameHeader(arg0) {
   ({ channel, containerStyle } = arg0);
   if (channel.isDM()) {
     let obj = { channel, containerStyle };
-    let tmpResult = tmp(DMChannelNameHeader, obj);
+    let tmpResult = closure_1_12(DMChannelNameHeader, obj);
   } else {
     obj = { channel, containerStyle };
-    tmpResult = tmp(DefaultChannelNameHeader, obj);
+    tmpResult = closure_1_12(DefaultChannelNameHeader, obj);
   }
   return tmpResult;
 });

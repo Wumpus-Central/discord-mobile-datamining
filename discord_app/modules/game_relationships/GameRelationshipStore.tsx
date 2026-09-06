@@ -12,9 +12,9 @@ function recountRelationshipTypes() {
     ({ type, id } = item);
     if (type === RelationshipTypes.FRIEND) {
       closure_2 = closure_2 + 1;
-    } else if (type === tmp.PENDING_OUTGOING) {
+    } else if (type === RelationshipTypes.PENDING_OUTGOING) {
       closure_1 = closure_1 + 1;
-    } else if (type === tmp.PENDING_INCOMING) {
+    } else if (type === RelationshipTypes.PENDING_INCOMING) {
       if (!RelationshipStore.isSpam(id)) {
         if (!RelationshipStore.isIgnored(id)) {
           closure_0 = closure_0 + 1;
@@ -153,9 +153,9 @@ const gameRelationshipStore = new GameRelationshipStore(DispatcherDefault, {
       ({ type, id } = item);
       if (type === RelationshipTypes.FRIEND) {
         closure_2 = closure_2 + 1;
-      } else if (type === tmp.PENDING_OUTGOING) {
+      } else if (type === RelationshipTypes.PENDING_OUTGOING) {
         closure_1 = closure_1 + 1;
-      } else if (type === tmp.PENDING_INCOMING) {
+      } else if (type === RelationshipTypes.PENDING_INCOMING) {
         if (!RelationshipStore.isSpam(id)) {
           if (!RelationshipStore.isIgnored(id)) {
             closure_0 = closure_0 + 1;
@@ -174,14 +174,14 @@ const gameRelationshipStore = new GameRelationshipStore(DispatcherDefault, {
       c0 = 0;
       c1 = 0;
       c2 = 0;
-      const values = obj.values();
+      const values = secondaryIndexMap.values();
       const item = values.forEach((item) => {
         ({ type, id } = item);
         if (type === RelationshipTypes.FRIEND) {
           closure_2 = closure_2 + 1;
-        } else if (type === tmp.PENDING_OUTGOING) {
+        } else if (type === RelationshipTypes.PENDING_OUTGOING) {
           closure_1 = closure_1 + 1;
-        } else if (type === tmp.PENDING_INCOMING) {
+        } else if (type === RelationshipTypes.PENDING_INCOMING) {
           if (!RelationshipStore.isSpam(id)) {
             if (!RelationshipStore.isIgnored(id)) {
               closure_0 = closure_0 + 1;
@@ -195,7 +195,6 @@ const gameRelationshipStore = new GameRelationshipStore(DispatcherDefault, {
     } else {
       throw new TypeError("Trying to call a non-function");
     }
-    obj = secondaryIndexMap;
   },
   GAME_RELATIONSHIP_REMOVE: function handleGameRelationshipRemove(arg0) {
     if (typeof closure_2 === "function") {
@@ -204,14 +203,14 @@ const gameRelationshipStore = new GameRelationshipStore(DispatcherDefault, {
       closure_0 = 0;
       closure_1 = 0;
       closure_2 = 0;
-      const values = obj.values();
+      const values = secondaryIndexMap.values();
       const item = values.forEach((item) => {
         ({ type, id } = item);
         if (type === RelationshipTypes.FRIEND) {
           closure_2 = closure_2 + 1;
-        } else if (type === tmp.PENDING_OUTGOING) {
+        } else if (type === RelationshipTypes.PENDING_OUTGOING) {
           closure_1 = closure_1 + 1;
-        } else if (type === tmp.PENDING_INCOMING) {
+        } else if (type === RelationshipTypes.PENDING_INCOMING) {
           if (!RelationshipStore.isSpam(id)) {
             if (!RelationshipStore.isIgnored(id)) {
               closure_0 = closure_0 + 1;
@@ -225,7 +224,6 @@ const gameRelationshipStore = new GameRelationshipStore(DispatcherDefault, {
     } else {
       throw new TypeError("Trying to call a non-function");
     }
-    obj = secondaryIndexMap;
   },
   APPLICATIONS_FETCH_SUCCESS: function handleApplicationsFetchSuccess(unknownApplicationIds) {
     unknownApplicationIds = unknownApplicationIds.unknownApplicationIds;
@@ -236,13 +234,12 @@ const gameRelationshipStore = new GameRelationshipStore(DispatcherDefault, {
         let tmp4 = nextResult;
         let values = secondaryIndexMap.values(GameRelationshipIndexes_BY_APPLICATION_ID(nextResult));
         for (const item10018 of values) {
-          let tmp10 = item10018;
           let tmp12 = item10018.type !== RelationshipTypes.PENDING_INCOMING;
           if (tmp12) {
-            tmp12 = tmp10.type !== tmp11.PENDING_OUTGOING;
+            tmp12 = item10018.type !== tmp11.PENDING_OUTGOING;
           }
           if (!tmp12) {
-            let tmp17 = remove(tmp10.id, tmp4);
+            let tmp17 = remove(item10018.id, tmp4);
           }
           continue;
         }

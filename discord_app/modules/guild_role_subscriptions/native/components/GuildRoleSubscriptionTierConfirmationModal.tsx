@@ -1,6 +1,9 @@
 // discord_app/modules/guild_role_subscriptions/native/components/GuildRoleSubscriptionTierConfirmationModal.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
+import Text_Text from "../../../../design/components/Text/native/Text.tsx";
+import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
+import FormHeaderDefault from "../../../guild_member_verification/native/components/form_fields/FormHeader.tsx";
 import FormStylesDefault from "FormStyles.tsx";
 import GuildRoleSubscriptionTierEditStepDefault from "GuildRoleSubscriptionTierEditStep.tsx";
 import EditStateContextProvider from "../../edit_state/EditStateContextProvider.tsx";
@@ -45,7 +48,7 @@ export default function GuildRoleSubscriptionTierConfirmationModal(onDone) {
   const first = _slicedToArray(RoleTierEditStore.useGroupCoverState(), 1)[0];
   const items = [tmp10, onDone];
   const callback = noop.useCallback(
-    asyncGeneratorStep(async (arg0, value) => {
+    asyncGeneratorStep(async () => {
       if (c4 === 2) {
         c4 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -132,23 +135,23 @@ export default function GuildRoleSubscriptionTierConfirmationModal(onDone) {
     if (tmp13Result) {
       obj = { children: null };
       let obj1 = { style: tmp5.header, children: null };
-      let tmp3Result = tmp3(9816);
-      const intl3 = tmp6(1114).intl;
-      obj1.children = intl3.string(tmp6(1114).t["3S8gA7"]);
+      let tmp3Result = FormHeaderDefault;
+      const intl3 = util.intl;
+      obj1.children = intl3.string(util.t["3S8gA7"]);
       const items1 = [React6(tmp3Result, obj1)];
       const obj2 = { style: tmp2.coverPhotoContainer, children: null };
       const obj3 = { style: tmp2.coverPhoto, resizeMode: "cover", source: first };
-      obj2.children = React6(tmp3(5587), obj3);
+      obj2.children = React6(FastImageDefault, obj3);
       items1[1] = React6(View, obj2);
       obj.children = items1;
-      tmp13Result = tmp13(tmp16, obj);
+      tmp13Result = closure_1_10(React7, obj);
     }
     const obj4 = { children: null };
     const items2 = [tmp13Result, ,];
     const obj5 = { style: tmp5.header, children: null };
-    tmp3Result = tmp3(9816);
-    const intl4 = tmp6(1114).intl;
-    obj5.children = intl4.string(tmp6(1114).t["74JctW"]);
+    tmp3Result = FormHeaderDefault;
+    const intl4 = util.intl;
+    obj5.children = intl4.string(util.t["74JctW"]);
     items2[1] = React6(tmp3Result, obj5);
     const obj6 = {
       style: tmp2.description,
@@ -156,9 +159,9 @@ export default function GuildRoleSubscriptionTierConfirmationModal(onDone) {
       color: "interactive-text-active",
       children: _slicedToArray(RoleTierEditStore.useGroupDescriptionState(), 1)[0],
     };
-    items2[2] = React6(tmp6(4556).Text, obj6);
+    items2[2] = React6(Text_Text.Text, obj6);
     obj4.children = items2;
-    flag = tmp13(tmp16, obj4);
+    flag = closure_1_10(React7, obj4);
   }
   const items3 = [
     flag,

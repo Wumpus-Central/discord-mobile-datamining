@@ -17,7 +17,7 @@ export const setPendingChanges = function setPendingChanges(guildId) {
   if (null != currentUser) {
     let userProfile = UserProfileStore.getUserProfile(currentUser.id);
     if (null != guildId) {
-      userProfile = obj5.getGuildMemberProfile(currentUser.id, guildId);
+      userProfile = UserProfileStore.getGuildMemberProfile(currentUser.id, guildId);
     }
     let member = null;
     if (null != guildId) {
@@ -324,6 +324,5 @@ export const setPendingChanges = function setPendingChanges(guildId) {
     obj = { type: "USER_PROFILE_SETTINGS_SET_PENDING_CHANGES", guildId };
     const merged1 = Object.assign(obj);
     DispatcherDefault.dispatch(obj);
-    obj5 = UserProfileStore;
   }
 };

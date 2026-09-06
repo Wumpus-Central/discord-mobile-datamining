@@ -20,7 +20,7 @@ function VoiceBadges(arg0) {
   let tmp6 = null;
   if (null != muteDeafenIconState) {
     obj = { style: tmp.iconWrapper, children: null };
-    let tmp3Result = tmp3(5589);
+    let tmp3Result = NativeViewDefault;
     obj = { state: muteDeafenIconState, size: native.IconSizes.SMALL, style: tmp.icon };
     obj.children = hasOwnProperty(VoiceStateIcons.MuteDeafenIcon, obj);
     tmp6 = hasOwnProperty(tmp3Result, obj);
@@ -29,7 +29,7 @@ function VoiceBadges(arg0) {
   let tmp10 = null;
   if (null != videoIconState) {
     const obj1 = { style: tmp.iconWrapper, children: null };
-    tmp3Result = tmp3(5589);
+    tmp3Result = NativeViewDefault;
     const obj2 = { state: videoIconState, size: native.IconSizes.SMALL, style: tmp.icon };
     obj1.children = hasOwnProperty(VoiceStateIcons.VideoIcon, obj2);
     tmp10 = hasOwnProperty(tmp3Result, obj1);
@@ -153,10 +153,9 @@ export const MemberRowItem = function MemberRowItem(user) {
         obj = { name: null };
         obj.name = obj.name;
         obj.children = intl2.format(tmp12, obj);
-        tmp5(Text_Text.Text, obj);
+        hasOwnProperty(Text_Text.Text, obj);
       }
       const details = obj.details;
-      tmp5 = hasOwnProperty;
     }
   }, items2);
   if (tmp18) {
@@ -238,4 +237,6 @@ export const MemberRowItem = function MemberRowItem(user) {
   items4[1] = tmp20Result1;
   obj7.children = items4;
   const tmp14 = channelId(flag[19]);
+  tmp19 = null != muteDeafenIconState || null != videoIconState;
+  tmp23Result = closure_6(tmp2Result, obj7);
 };

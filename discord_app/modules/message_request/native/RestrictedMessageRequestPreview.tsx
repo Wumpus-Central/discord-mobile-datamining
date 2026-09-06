@@ -134,7 +134,7 @@ export default function RestrictedMessageRequestPreview(channelId) {
       obj3.children = closure_10(tmp2(12439), obj5);
       items9[1] = closure_10(first1, obj3);
       obj.children = items9;
-      tmp13Result = tmp13(tmp14, obj);
+      tmp13Result = closure_11(tmp14, obj);
     }
   }
   return tmp13Result;

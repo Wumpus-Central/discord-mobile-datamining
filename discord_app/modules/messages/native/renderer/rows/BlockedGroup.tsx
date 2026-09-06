@@ -1,6 +1,7 @@
 // discord_app/modules/messages/native/renderer/rows/BlockedGroup.tsx
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import Constants from "../../../../../../discord_common/js/shared/Constants.tsx";
+import ColorUtils from "../../../../../utils/ColorUtils.tsx";
 import shared from "../../../../../design/shared.tsx";
 import RowGeneratorConstants from "../RowGeneratorConstants.tsx";
 import RowGeneratorStyleSheet from "../RowGeneratorStyleSheet.tsx";
@@ -15,15 +16,15 @@ let closure_5 = apply.memoize((arg0) => {
   if (obj.isThemeDark(arg0)) {
     str = nativeDefault.unsafe_rawColors.PRIMARY_700;
   }
-  let tmpResult = tmp(4411);
+  let tmpResult = shared;
   let str2 = "#FAFAFA";
   if (tmpResult.isThemeDark(arg0)) {
     str2 = nativeDefault.unsafe_rawColors.PRIMARY_630;
   }
-  tmpResult = tmp(4411);
+  tmpResult = shared;
   if (tmpResult.isThemeDark(arg0)) {
-    let GREY1 = tmp(4409).hexWithOpacity(nativeDefault.unsafe_rawColors.PRIMARY_300, 0.6);
-    const tmpResult1 = tmp(4409);
+    let GREY1 = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.PRIMARY_300, 0.6);
+    const tmpResult1 = ColorUtils;
   } else {
     GREY1 = UNSAFE_Colors.GREY1;
   }

@@ -143,12 +143,12 @@ export const FormRadio = function FormRadio(selected) {
     if (selected2) {
       num2 = 1;
     }
-    obj = { opacity: obj.withSpring(num2, tmp(4978).SUBTLE_SPRING, "animate-always"), transform: null };
+    obj = { opacity: obj.withSpring(num2, springPresets.SUBTLE_SPRING, "animate-always"), transform: null };
     let num3 = 1;
     if (!selected2) {
       num3 = num;
     }
-    obj = { scale: spring.withSpring(num3, tmp(4978).SUBTLE_SPRING) };
+    obj = { scale: spring.withSpring(num3, springPresets.SUBTLE_SPRING) };
     const items = [obj];
     obj.transform = items;
     return obj;

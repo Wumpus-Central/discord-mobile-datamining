@@ -1,6 +1,7 @@
 // discord_app/modules/explicit_media_redaction/ExplicitMediaManager.tsx
 import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
 import flattenDefault from "../../../_runtime/04669_flatten.js";
+import MessageRecordUtils from "../messages/MessageRecordUtils.tsx";
 import ObscuredMediaUtils from "ObscuredMediaUtils.tsx";
 import HarmTypeConfiguration from "HarmTypeConfiguration.tsx";
 import ExplicitMediaRedactionModels from "ExplicitMediaRedactionModels.tsx";
@@ -49,7 +50,7 @@ function maybeCancelTimeout(message, UPDATE) {
             const obj = { type: ExplicitMediaRedactionModels.ObscuredMediaTypes.Embed, media };
             return obj.isMediaFlaggedForHarmType(HarmTypeConfiguration.ContentHarmType.EXPLICIT, obj);
           });
-          let tmp5Result = tmp5(7600);
+          let tmp5Result = ExplicitMediaRedactionUtils;
           let obj = {
             messageId: null,
             channelId: null,
@@ -65,7 +66,7 @@ function maybeCancelTimeout(message, UPDATE) {
           obj.numOfExplicitEmbeds = found1.length;
           const result = tmp5Result.trackExplicitMediaScanComplete(obj);
         }
-        tmp5Result = tmp5(7600);
+        tmp5Result = ExplicitMediaRedactionUtils;
         tmp5Result.trackScanTiming(setAt, UPDATE);
         const _clearTimeout = clearTimeout;
         clearTimeout(timeout);
@@ -109,32 +110,31 @@ function handleUnscannedMessages(found2, isMessageUpdate) {
     found1 = found2.filter(withoutScheduledTimeout);
   }
   const item = found1.forEach((channel_id) => {
-    closure_0 = channel_id;
     const combined = "" + channel_id.channel_id + ":" + channel_id.id;
     if (null == closure_14[combined]) {
       closure_1(7602);
-      let obj = { name: closure_0(7607).MetricEvents.EXPLICIT_MEDIA_SCAN_CLIENT_TIMEOUT_CREATE };
+      let obj = { name: channel_id(7607).MetricEvents.EXPLICIT_MEDIA_SCAN_CLIENT_TIMEOUT_CREATE };
       obj.increment(obj);
       obj = { setAt: null, timeout: null };
       const _Date = Date;
       obj.setAt = Date.now();
       const _setTimeout = setTimeout;
       obj.timeout = setTimeout(() => {
-        if (maybeCancelTimeout(closure_0, found1(7600).TimeoutCancelSource.TIMEOUT)) {
-          message = message.getMessage(tmp.channel_id, tmp.id);
+        if (maybeCancelTimeout(channel_id, found1(7600).TimeoutCancelSource.TIMEOUT)) {
+          message = message.getMessage(channel_id.channel_id, channel_id.id);
           if (null != message) {
-            let tmp2Result = tmp2(7292);
+            let tmp2Result = found1(7292);
             const unscannedMediaIds = tmp2Result.getUnscannedMediaIds(message);
             ({ attachmentIds, embedIds } = unscannedMediaIds);
-            tmp2Result = tmp2(7600);
+            tmp2Result = found1(7600);
             let obj = { channelId: null, messageId: null, attachmentIds: null, embedIds: null };
-            ({ channel_id: obj3.channelId, id: obj3.messageId } = tmp);
+            ({ channel_id: obj3.channelId, id: obj3.messageId } = channel_id);
             obj.attachmentIds = attachmentIds;
             obj.embedIds = embedIds;
             const result = tmp2Result.trackScanningTimedOut(obj);
           }
           obj = { type: "MESSAGE_EXPLICIT_CONTENT_SCAN_TIMEOUT", messageId: null, channelId: null };
-          ({ id: obj5.messageId, channel_id: obj5.channelId } = tmp);
+          ({ id: obj5.messageId, channel_id: obj5.channelId } = channel_id);
           closure_1(573).dispatch(obj);
           const obj4 = closure_1(573);
         }
@@ -176,6 +176,7 @@ function handleUnscannedMessages(found2, isMessageUpdate) {
       );
     }
   }
+  tmp2 = undefined !== jitter && jitter;
 }
 function processMessagesFromAction(firstMessages, isMessageUpdate) {
   const found = firstMessages.filter((item) => {
@@ -390,7 +391,7 @@ function handleMessageUpdate(message) {
       if (obj6.getChannelIdAndAuthorIdFromMessage(message).authorId !== AuthenticationStore.getId()) {
         if (null == message.embeds) {
           if (null == message.attachments) {
-            let tmp20Result = tmp20(7600);
+            let tmp20Result = ExplicitMediaRedactionUtils;
             if (!tmp20Result.hasMessageSnapshotsWithAttachmentsOrEmbeds(message)) {
               return false;
             }
@@ -408,7 +409,7 @@ function handleMessageUpdate(message) {
             length1 = attachments.length;
           }
           if (0 === length1) {
-            tmp20Result = tmp20(7600);
+            tmp20Result = ExplicitMediaRedactionUtils;
             if (!tmp20Result.hasMessageSnapshotsWithAttachmentsOrEmbeds(message)) {
               return false;
             }
@@ -429,12 +430,14 @@ function handleMessageUpdate(message) {
           }
           let hasUnscannedMediaResult = null == message;
           if (!hasUnscannedMediaResult) {
-            const tmp20Result2 = tmp20(7292);
-            hasUnscannedMediaResult = tmp20Result2.hasUnscannedMedia(tmp20(4783).updateMessageRecord(message, message));
-            const tmp20Result3 = tmp20(4783);
+            const tmp20Result2 = ObscuredMediaUtils;
+            hasUnscannedMediaResult = tmp20Result2.hasUnscannedMedia(
+              MessageRecordUtils.updateMessageRecord(message, message),
+            );
+            const tmp20Result3 = MessageRecordUtils;
           }
           if (!hasUnscannedMediaResult) {
-            maybeCancelTimeout(message, tmp20(7600).TimeoutCancelSource.UPDATE);
+            maybeCancelTimeout(message, ExplicitMediaRedactionUtils.TimeoutCancelSource.UPDATE);
           }
         }
         const channelId = SelectedChannelStore.getChannelId();

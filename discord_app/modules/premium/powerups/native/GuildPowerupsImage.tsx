@@ -1,5 +1,6 @@
 // discord_app/modules/premium/powerups/native/GuildPowerupsImage.tsx
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
+import utils_PlatformUtils from "../../../../../discord_common/js/shared/utils/PlatformUtils.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import APNGDecorationNativeComponentDefault from "../../../../../discord_common/js/packages/rtn-codegen/js/APNGDecorationNativeComponent.tsx";
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
@@ -39,4 +40,5 @@ export default function GuildPowerupsImage(style) {
   const items2 = [tmp.image, style];
   obj.style = items2;
   tmp6 = jsx(FastImageDefault, { style: null, source: { uri: imageUrl } });
+  obj2 = utils_PlatformUtils;
 }

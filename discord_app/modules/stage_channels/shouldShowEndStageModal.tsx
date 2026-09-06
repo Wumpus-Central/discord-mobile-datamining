@@ -28,7 +28,7 @@ export default function shouldShowEndStageModal(isGuildStageVoice) {
               return isModeratorResult;
             });
           if (!tmp7) {
-            const mutableParticipants1 = obj2.getMutableParticipants(
+            const mutableParticipants1 = StageChannelParticipantStore.getMutableParticipants(
               isGuildStageVoice.id,
               require("StageChannelParticipants").StageChannelParticipantNamedIndex.SPEAKER,
             );
@@ -43,7 +43,6 @@ export default function shouldShowEndStageModal(isGuildStageVoice) {
               });
           }
           isSpeakerResult = tmp7;
-          obj2 = StageChannelParticipantStore;
         }
         isModeratorResult = isSpeakerResult;
       }

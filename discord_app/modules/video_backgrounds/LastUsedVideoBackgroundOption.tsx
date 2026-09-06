@@ -20,11 +20,12 @@ export const getLastUsedVideoBackgroundOption = function getLastUsedVideoBackgro
     if (typeof videoBackgroundOptionFromProto !== "number") {
       let tmp7 = videoBackgroundOptionFromProto;
     } else {
+      VideoBackgroundUtils;
       tmp7 = null;
-      const tmp2Result = VideoBackgroundUtils;
     }
     let tmp6 = tmp7;
   } else {
+    PremiumUtilsDefault;
     tmp6 = null;
   }
   return tmp6;
@@ -44,17 +45,20 @@ export const useLastUsedVideoBackgroundOption = function useLastUsedVideoBackgro
   return noop.useMemo(() => {
     let tmp2 = null;
     if (null != stateFromStores1) {
-      const videoBackgroundOptionFromProto = VideoBackgroundUtils.getVideoBackgroundOptionFromProto(prop, tmp.id);
-      const tmp4 = require;
+      const videoBackgroundOptionFromProto = VideoBackgroundUtils.getVideoBackgroundOptionFromProto(
+        prop,
+        stateFromStores1.id,
+      );
       if (!obj2.isCustomBackgroundOption(videoBackgroundOptionFromProto)) {
         if (typeof videoBackgroundOptionFromProto !== "number") {
           let tmp9 = videoBackgroundOptionFromProto;
         } else {
+          VideoBackgroundUtils;
           tmp9 = null;
-          const tmp4Result = tmp4(9097);
         }
         let tmp8 = tmp9;
       } else {
+        PremiumUtilsDefault;
         tmp8 = null;
       }
       tmp2 = tmp8;

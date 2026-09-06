@@ -33,10 +33,10 @@ export default function ApplicationSectionHeader(section) {
     if (null != guildId) {
       let botId;
       if (section != null) {
-        botId = tmp2.botId;
+        botId = section.botId;
       }
       if (null != botId) {
-        return GuildMemberStore.getMember(tmp, tmp2.botId);
+        return GuildMemberStore.getMember(tmp, section.botId);
       }
     }
   });

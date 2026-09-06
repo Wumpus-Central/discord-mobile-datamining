@@ -1,7 +1,12 @@
 // discord_app/modules/forums/native/posts/ForumPostUsername.tsx
+import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
+import native from "../../../../design/void/native.tsx";
 import ForumLayout from "../../../../../discord_common/js/shared/shared-constants/ForumLayout.tsx";
+import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import ForumHooks from "../../ForumHooks.tsx";
+import enhanced_role_colors_EnhancedRoleColorUtils from "../../../premium/enhanced_role_colors/native/EnhancedRoleColorUtils.tsx";
 import useChatWidthDefault from "../../../chat/native/useChatWidth.tsx";
+import ForumPostGridBody from "grid/ForumPostGridBody.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 
@@ -14,17 +19,17 @@ function ForumPostUsername(arg0) {
   if (useForumChannelStore(thread.parent_id).layoutType === ForumLayout.ForumLayout.GRID) {
     num = 72;
   }
-  const diff = useChatWidthDefault() - tmp2(12006).GRID_HORIZONTAL_PADDING - num;
-  let tmp2Result = tmp2(504);
+  const diff = useChatWidthDefault() - ForumPostGridBody.GRID_HORIZONTAL_PADDING - num;
+  let tmp2Result = initialize;
   const items = [AccessibilityStore];
   const stateFromStores = tmp2Result.useStateFromStores(items, () => roleStyle.roleStyle);
   if ("username" === stateFromStores) {
     if (null != authorColor) {
       let obj = { color: authorColor };
     }
-    tmp2Result = tmp2(7961);
+    tmp2Result = enhanced_role_colors_EnhancedRoleColorUtils;
     const processColorStringsArray = tmp2Result.useProcessColorStringsArray(authorColors);
-    const tmp2Result1 = tmp2(7961);
+    const tmp2Result1 = enhanced_role_colors_EnhancedRoleColorUtils;
     const useIsRoleStyleAndRoleColorsEligibleForERC = tmp2Result1.useIsRoleStyleAndRoleColorsEligibleForERC;
     const guild_id = thread.guild_id;
     let tmp19Result = null;
@@ -40,8 +45,8 @@ function ForumPostUsername(arg0) {
         const items2 = [tmp.roleDotContainer, roleDotStyle];
         obj2.style = items2;
         const obj3 = { size: "small", color: authorColor, colors: authorColors };
-        obj2.children = timestampProducer(tmp2(1178).RoleDot, obj3);
-        tmp23 = timestampProducer(tmp20, obj2);
+        obj2.children = timestampProducer(native.RoleDot, obj3);
+        tmp23 = timestampProducer(View, obj2);
       }
       const items3 = [tmp23];
       let tmp25;
@@ -60,12 +65,13 @@ function ForumPostUsername(arg0) {
       obj4.style = items4;
       const items5 = [authorName, suffix];
       obj4.children = items5;
-      items3[1] = React5(tmp2(4556).Text, obj4);
+      items3[1] = React5(Text_Text.Text, obj4);
       obj.children = items3;
-      tmp19Result = tmp19(tmp20, obj);
+      tmp19Result = React5(View, obj);
     }
     return tmp19Result;
   }
+  const tmp4 = useChatWidthDefault();
 }
 const View = fn(17).View;
 const useForumChannelStore = fn(12001).useForumChannelStore;

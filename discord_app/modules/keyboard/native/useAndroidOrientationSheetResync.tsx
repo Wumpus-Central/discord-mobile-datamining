@@ -40,7 +40,7 @@ export default function useAndroidOrientationSheetResync(animatedIndex) {
             const _Number3 = Number;
             if (Number.isFinite(c6)) {
               const _Math = Math;
-              const bound = Math.max(0, NumberResult - tmp7);
+              const bound = Math.max(0, NumberResult - c6);
               let result = bound.set(num);
               let current = bottomSheetRef.current;
               if (current != null) {
@@ -56,7 +56,6 @@ export default function useAndroidOrientationSheetResync(animatedIndex) {
               });
               return () => cancelAnimationFrame(closure_1);
             }
-            tmp7 = c6;
           }
         } else {
           tmp3.current = true;

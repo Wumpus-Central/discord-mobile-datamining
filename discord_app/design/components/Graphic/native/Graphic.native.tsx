@@ -24,7 +24,7 @@ function RiveGraphic(riveProps) {
   obj = {};
   const merged = Object.assign(riveProps);
   obj.style = tmp.image;
-  obj.children = jsx(riveProps.rive, {});
+  obj.children = <riveProps.rive />;
   return <View />;
 }
 const View = fn(17).View;

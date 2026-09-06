@@ -44,8 +44,12 @@ function EditProfileFrameInner(user) {
   const items1 = [user];
   const effect = noop.useEffect(() => {
     if (!tmp) {
-      maybeFetchUserProfileDefault(obj.id, obj.getAvatarURL(null, 80), { withMutualGuilds: true, dispatchWait: true });
+      maybeFetchUserProfileDefault(user.id, user.getAvatarURL(null, 80), {
+        withMutualGuilds: true,
+        dispatchWait: true,
+      });
     }
+    tmp = null == user || user.isNonUserBot();
   }, items1);
   const items2 = [setSelectedProfileFrame, guildId];
   let skuId;
@@ -65,8 +69,6 @@ function EditProfileFrameInner(user) {
   const items3 = [closure_9(ProfileFrameSectionPreview, { previewSkuId: skuId, user, guildId }), ,];
   obj = { user, previewSkuId: null, nitroJoinCTA: null, nitroUpgradeCTA: null };
   let skuId1;
-  const tmp13 = closure_10;
-  const tmp14 = closure_11;
   const tmp6 = setSelectedProfileFrame(guildId[22])();
   if (profilePreviewValue != null) {
     skuId1 = profilePreviewValue.skuId;
@@ -88,7 +90,7 @@ function EditProfileFrameInner(user) {
   obj1.isFetching = stateFromStores;
   items3[2] = closure_9(user(guildId[27]).EditCollectiblesPickerList, obj1);
   obj2.children = items3;
-  return tmp13(tmp14, obj2);
+  return closure_10(closure_11, obj2);
 }
 function ProfileFrameSectionPreview(arg0) {
   let purchase;
@@ -175,8 +177,8 @@ export default function EditProfileFrameActionSheet(arg0) {
     let tmp = null != closure_1;
     if (tmp) {
       let result;
-      if (obj2 != null) {
-        result = obj2.hasPremiumCustomization();
+      if (closure_1 != null) {
+        result = closure_1.hasPremiumCustomization();
       }
       tmp = result;
     }

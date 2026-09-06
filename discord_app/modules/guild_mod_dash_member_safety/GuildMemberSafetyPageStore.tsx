@@ -311,7 +311,7 @@ prototype["updateMember"] = function updateMember(id, isIncludedInSearchResults)
   }
   return false;
 };
-prototype["updateClientMembers"] = function updateClientMembers(items, requiresUsernameMatch, arg2) {
+prototype["updateClientMembers"] = function updateClientMembers(items) {
   let flag = requiresUsernameMatch;
   if (requiresUsernameMatch === undefined) {
     flag = false;
@@ -406,7 +406,7 @@ prototype["updateMembersByMemberIds"] = function updateMembersByMemberIds(items)
         items.reduce((arr, item) => {
           const trueMember = GuildMemberStore.getTrueMember(self.guildId, item);
           if (null != trueMember) {
-            arr.push(trueMember);
+            arr = arr.push(trueMember);
           }
           return arr;
         }, []),
@@ -472,7 +472,7 @@ prototype["updateSearchedMembersByMemberIds"] = function updateSearchedMembersBy
           memberIds.reduce((arr, item) => {
             const trueMember = GuildMemberStore.getTrueMember(self.guildId, item);
             if (null != trueMember) {
-              arr.push(trueMember);
+              arr = arr.push(trueMember);
             }
             return arr;
           }, []),
@@ -523,8 +523,11 @@ prototype["refreshNewMembersAndSearchResults"] = function refreshNewMembersAndSe
         let flag2 = false;
         for (const item10031 of cloneDeepResult) {
           let _members2 = self._members;
-          obj = { isCurrentGuildMemberByTimestamp: true, refreshTimestamp: NumberResult, user: null };
-          obj.user = UserStore.getUser(item10031.userId);
+          obj = {
+            isCurrentGuildMemberByTimestamp: true,
+            refreshTimestamp: NumberResult,
+            user: UserStore.getUser(item10031.userId),
+          };
           let updateMemberResult = _members2.updateMember(item10031, obj);
           if (!updateMemberResult) {
             updateMemberResult = flag2;
@@ -591,17 +594,16 @@ prototype["updateSearchState"] = function updateSearchState(selectedSort) {
         );
         let flag2 = BooleanResult !== self._search.hasDefaultQuery;
         for (const item10048 of cloneDeepResult) {
-          let tmp11 = item10048;
           if (item10048.isCurrentGuildMemberByTimestamp) {
             let _search3 = self._search;
-            let result1 = _search3.isMemberIncludedInSearchResults(tmp11);
-            if (result1 !== tmp11.isIncludedInSearchResults) {
+            let result1 = _search3.isMemberIncludedInSearchResults(item10048);
+            if (result1 !== item10048.isIncludedInSearchResults) {
               flag2 = true;
               flag = true;
               let _members2 = self._members;
               obj = { isIncludedInSearchResults: null };
               obj.isIncludedInSearchResults = tmp14;
-              let updateMemberResult = _members2.updateMember(tmp11, obj);
+              let updateMemberResult = _members2.updateMember(item10048, obj);
             }
           }
           continue;

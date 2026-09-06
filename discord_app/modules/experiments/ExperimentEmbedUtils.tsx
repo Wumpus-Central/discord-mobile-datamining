@@ -53,14 +53,13 @@ export const getExperimentServerAssignmentLabel = function getExperimentServerAs
       const system2 = system.system;
       if (ExperimentManager.ExperimentSystem.LEGACY === system2) {
         return ExperimentUtilsDefault.getExperimentBucketName(experimentServerAssignment.bucket);
-      } else if (tmp4(4481).ExperimentSystem.APEX === system2) {
+      } else if (ExperimentManager.ExperimentSystem.APEX === system2) {
         const _HermesInternal = HermesInternal;
         return "Variant " + experimentServerAssignment.variantId;
       } else {
         system = system.system;
         return null;
       }
-      tmp4 = require;
     }
   }
   return null;

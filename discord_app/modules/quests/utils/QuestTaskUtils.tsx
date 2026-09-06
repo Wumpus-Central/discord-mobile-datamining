@@ -249,11 +249,11 @@ function _getTaskDetailsForType(arg0) {
     }
   }
 }
-function _parseFirstPartyTaskType(arg0) {
+function _parseFirstPartyTaskType(eventName) {
   const ALL = FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypesSets.ALL;
   let tmp = null;
-  if (ALL.has(arg0)) {
-    tmp = arg0;
+  if (ALL.has(eventName)) {
+    tmp = eventName;
   }
   return tmp;
 }
@@ -506,7 +506,7 @@ export const getQuestTaskDetails = function getQuestTaskDetails(value, DESKTOP) 
       targetSeconds: 1,
       targetMinutes: 1,
       percentComplete: 0,
-      taskType: tmp(5452).FirstPartyQuestTaskTypes.STREAM_ON_DESKTOP,
+      taskType: FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.STREAM_ON_DESKTOP,
     };
     let tmp13Result = obj;
   } else if (typeof fn === "function") {
@@ -617,15 +617,16 @@ export const getQuestTaskDetails = function getQuestTaskDetails(value, DESKTOP) 
           return _getTaskDetailsForType({ quest, includeTaskTypes });
         })(obj);
       } else {
-        const FirstPartyQuestTaskTypesSets = tmp(5452).FirstPartyQuestTaskTypesSets;
+        const FirstPartyQuestTaskTypesSets = FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypesSets;
         const tmp23 = isQuestProgressingOnConsole(value);
       }
     } else if (typeof fn4 === "function") {
       if (closure_136_0.some((item) => null != config.config.taskConfigV2.tasks[item])) {
         const obj1 = { quest: value, taskType: null };
         const config = value.config;
-        let tmp14 = config.taskConfigV2.tasks[tmp(undefined, 5452).FirstPartyQuestTaskTypes.WATCH_VIDEO];
-        const tmp15 = config.taskConfigV2.tasks[tmp(undefined, 5452).FirstPartyQuestTaskTypes.WATCH_VIDEO_ON_MOBILE];
+        let tmp14 = config.taskConfigV2.tasks[FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.WATCH_VIDEO];
+        const tmp15 =
+          config.taskConfigV2.tasks[FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.WATCH_VIDEO_ON_MOBILE];
         if (null == tmp14) {
           let tmp18 = tmp15;
           if (tmp15 == null) {
@@ -647,18 +648,19 @@ export const getQuestTaskDetails = function getQuestTaskDetails(value, DESKTOP) 
       } else {
         let tmp8 = null != value;
         if (tmp8) {
-          tmp8 = null != value.config.taskConfigV2.tasks[tmp(undefined, 5452).FirstPartyQuestTaskTypes.PLAY_ON_DESKTOP];
+          tmp8 =
+            null != value.config.taskConfigV2.tasks[FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.PLAY_ON_DESKTOP];
         }
         if (tmp8) {
-          const obj2 = { quest: value, taskType: tmp(5452).FirstPartyQuestTaskTypes.PLAY_ON_DESKTOP };
+          const obj2 = { quest: value, taskType: FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.PLAY_ON_DESKTOP };
           tmp13Result = _getTaskDetailsForType(obj2);
         } else if (
-          null != value.config.taskConfigV2.tasks[tmp(undefined, 5452).FirstPartyQuestTaskTypes.PLAY_ACTIVITY]
+          null != value.config.taskConfigV2.tasks[FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.PLAY_ACTIVITY]
         ) {
-          let obj3 = { quest: value, taskType: tmp(5452).FirstPartyQuestTaskTypes.PLAY_ACTIVITY };
+          let obj3 = { quest: value, taskType: FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.PLAY_ACTIVITY };
           tmp13Result = _getTaskDetailsForType(obj3);
         } else {
-          const obj4 = { quest: value, taskType: tmp(5452).FirstPartyQuestTaskTypes.STREAM_ON_DESKTOP };
+          const obj4 = { quest: value, taskType: FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.STREAM_ON_DESKTOP };
           tmp13Result = _getTaskDetailsForType(obj4);
         }
       }
@@ -679,7 +681,7 @@ export const getQuestTaskDetails = function getQuestTaskDetails(value, DESKTOP) 
         targetSeconds: 1,
         targetMinutes: 1,
         percentComplete: 0,
-        taskType: tmp(5452).FirstPartyQuestTaskTypes.STREAM_ON_DESKTOP,
+        taskType: FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.STREAM_ON_DESKTOP,
       };
       tmp26 = obj6;
     }

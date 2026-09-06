@@ -66,21 +66,21 @@ export default function SimpleGuild(guildId) {
   ({ containerSizeStyle, containerStyles } = tmp12);
   const memo = badge2.useMemo(() => {
     if ("" === str) {
-      return tmp;
+      return str;
     } else {
       if (null == badge2) {
         if (true === unread2) {
           const intl2 = util.intl;
-          let obj = { guildName: tmp };
+          let obj = { guildName: str };
           let formatToPlainStringResult = intl2.formatToPlainString(util.t.lzqe42, obj);
         } else {
           const intl = util.intl;
-          obj = { guildName: tmp, mentions: tmp17 };
+          obj = { guildName: str, mentions: badge2 };
           formatToPlainStringResult = intl.formatToPlainString(util.t["/uzRss"], obj);
         }
       }
       const intl3 = util.intl;
-      obj = { guildName: tmp, mentions: badge2 };
+      obj = { guildName: str, mentions: badge2 };
       formatToPlainStringResult = intl3.formatToPlainString(util.t["/uzRss"], obj);
     }
   }, items3);
@@ -161,9 +161,9 @@ export default function SimpleGuild(guildId) {
         obj = { style: tmp3.dmsWrapper, children: null };
         let colors = tmp4(tmp5[16]).colors;
         const obj1 = { color: flag2 ? colors.WHITE : colors.MOBILE_GUILDBAR_ICON_DEFAULT };
-        colors = tmp20(tmp7(tmp5[15]).ChatIcon, obj1);
+        colors = jsx(tmp7(tmp5[15]).ChatIcon, { color: flag2 ? colors.WHITE : colors.MOBILE_GUILDBAR_ICON_DEFAULT });
         obj.children = colors;
-        let tmp20Result = tmp20(View, obj);
+        let tmp20Result = <View style={tmp3.dmsWrapper}>{null}</View>;
       } else {
         if (tmp15) {
           let num4 = 13;
@@ -205,7 +205,23 @@ export default function SimpleGuild(guildId) {
           }
           obj2.clipOuterAmount = num7;
           obj2.borderStrokeColor = iconStroke.color;
-          tmp20Result = tmp20(tmp4Result, obj2);
+          tmp20Result = (
+            <tmp4Result
+              cutoutBottomRightSize={num4}
+              cutoutBottomRightInsetX={6}
+              cutoutBottomRightInsetY={7}
+              cutoutTopRightSize={null}
+              cutoutTopRightInsetX={8}
+              cutoutTopRightInsetY={8}
+              imageSize={null}
+              imageSource={null}
+              imageBorderRadius={null}
+              imageBackgroundColor={null}
+              clipOuterAmount={null}
+              borderStroke={1}
+              borderStrokeColor={null}
+            />
+          );
         } else {
           const obj3 = {
             guild: stateFromStores,
@@ -221,12 +237,22 @@ export default function SimpleGuild(guildId) {
             tmp24 = containerSizeStyle;
           }
           obj3.style = tmp24;
-          tmp20Result = tmp20(tmp4Result, obj3);
+          tmp20Result = (
+            <tmp4Result
+              guild={stateFromStores}
+              size={iconSize}
+              selected={flag2}
+              animate={flag2}
+              TABS_altDefaultBackground={flag}
+              style={null}
+            />
+          );
         }
         obj.children = tmp20Result;
-        return tmp20(tmp11, obj);
+        return <tmp11 {...obj} />;
       }
     }
   }
   tmp19 = null != tmp17Result;
+  const tmp7Result1 = guildId(unread2[14]);
 }

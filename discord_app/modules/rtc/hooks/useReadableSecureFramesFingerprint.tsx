@@ -14,15 +14,15 @@ export const useReadableSecureFramesFingerprint = function useReadableSecureFram
   const items = [chunkSize, fingerprintBase64, desiredLength];
   const memo = noop.useMemo(() => {
     if (null != fingerprintBase64) {
-      if ("" !== tmp) {
-        const toByteArrayResult = byteLengthDefault.toByteArray(tmp);
+      if ("" !== fingerprintBase64) {
+        const toByteArrayResult = byteLengthDefault.toByteArray(fingerprintBase64);
         const str5 = _mod9135.generateDisplayableCode(toByteArrayResult, desiredLength, chunkSize);
         if (null == str5) {
           return null;
         } else {
           const _RegExp = RegExp;
           const _HermesInternal = HermesInternal;
-          const regExp = new RegExp(".{1," + tmp14 + "}", "g");
+          const regExp = new RegExp(".{1," + chunkSize + "}", "g");
           const match = str5.match(regExp);
           let arr = null;
           if (null != match) {
@@ -31,7 +31,6 @@ export const useReadableSecureFramesFingerprint = function useReadableSecureFram
           }
           return arr;
         }
-        tmp14 = chunkSize;
       }
     }
     return null;

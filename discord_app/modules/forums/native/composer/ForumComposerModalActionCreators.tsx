@@ -13,10 +13,11 @@ export const openCreateForumPostModal = function openCreateForumPostModal(guildI
   if (!tmp4) {
     obj = { guildId: null, channelId: null };
     ({ guildId: obj4.guildId, parentChannelId: obj4.channelId } = guildId);
-    const result1 = tmp(7767).trackForumCreateNewPostStarted(obj);
-    const tmpResult = tmp(7767);
+    const result1 = tracking_Tracking.trackForumCreateNewPostStarted(obj);
+    const tmpResult = tracking_Tracking;
   }
   ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(10252, dependencyMap.paths), guildId, c3);
+  tmp4 = null != guildId.isEdit && guildId.isEdit;
 };
 export const closeCreateForumPostModal = function closeCreateForumPostModal() {
   let flag = arg0;

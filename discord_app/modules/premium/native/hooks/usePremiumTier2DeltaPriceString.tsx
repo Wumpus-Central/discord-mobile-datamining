@@ -1,5 +1,6 @@
 // discord_app/modules/premium/native/hooks/usePremiumTier2DeltaPriceString.tsx
 import BillingUtils from "../../../../utils/BillingUtils.tsx";
+import ProductIds from "../ProductIds.android.tsx";
 import PremiumBundledPlansUtils from "../PremiumBundledPlansUtils.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import IAPStore from "../../../../stores/native/IAPStore.android.tsx";
@@ -12,9 +13,9 @@ function getViewerProductId(subscription) {
     try {
       const productIdFromSubscription = PremiumBundledPlansUtils.getProductIdFromSubscription(subscription, false);
       try {
-        const productIdFromSubscription1 = tmp3(7409).getProductIdFromSubscription(subscription, true);
-        const tmp8 = tmp3(7240).AppStorePremiumProductIdsToPremiumBundledItems[productIdFromSubscription];
-        const tmp10 = tmp3(7240).AppStorePremiumProductIdsToPremiumBundledItems[productIdFromSubscription1];
+        const productIdFromSubscription1 = PremiumBundledPlansUtils.getProductIdFromSubscription(subscription, true);
+        const tmp8 = ProductIds.AppStorePremiumProductIdsToPremiumBundledItems[productIdFromSubscription];
+        const tmp10 = ProductIds.AppStorePremiumProductIdsToPremiumBundledItems[productIdFromSubscription1];
         if (null != tmp8) {
           if (null != tmp10) {
             if (tmp8.numPremiumGuild === tmp10.numPremiumGuild) {
@@ -24,7 +25,7 @@ function getViewerProductId(subscription) {
           }
         }
         tmp11 = productIdFromSubscription;
-        const tmp3Result = tmp3(7409);
+        const tmp3Result = PremiumBundledPlansUtils;
       } catch (err) {
         return tmp2;
       }
@@ -35,7 +36,7 @@ function getViewerProductId(subscription) {
 }
 const useNativeCheckoutStore = fn(7424).useNativeCheckoutStore;
 const PremiumTypes = fn(1373).PremiumTypes;
-const priceString = { priceString: null, failure: null };
+let closure_6 = { priceString: null, failure: null };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/premium/native/hooks/usePremiumTier2DeltaPriceString.tsx");
 
@@ -125,7 +126,7 @@ export const usePremiumTier2DeltaPriceString = function usePremiumTier2DeltaPric
           }
         }
       }
-      obj2 = priceString;
+      obj2 = closure_6;
     }
     if (null == checkoutContext) {
     } else {
@@ -178,7 +179,7 @@ export const usePremiumTier2DeltaPriceString = function usePremiumTier2DeltaPric
       const tmp4Result2 = tmp4(7409);
     }
   } else {
-    const failure = tmp13.failure;
+    const failure = closure_6.failure;
     closure_129_0 = undefined;
     closure_129_1 = undefined;
     closure_129_2 = undefined;
@@ -217,13 +218,13 @@ export const usePremiumTier2DeltaPriceString = function usePremiumTier2DeltaPric
     closure_129_3 = productId;
     const items1 = [kind, platform, currencyCode, productId];
     const effect = noop.useEffect(() => {
-      if (null != closure_0) {
+      if (null != delta_failure_kind) {
         const _Error = Error;
         const _HermesInternal = HermesInternal;
-        const error = new Error("delta_price_integrity_" + tmp);
+        const error = new Error("delta_price_integrity_" + delta_failure_kind);
         let obj = {
           source: "usePremiumTier2DeltaPriceString",
-          delta_failure_kind: tmp,
+          delta_failure_kind,
           delta_platform: null,
           delta_currency_code: null,
           delta_product_id: null,
@@ -247,6 +248,7 @@ export const usePremiumTier2DeltaPriceString = function usePremiumTier2DeltaPric
         const result = BillingUtils.captureBillingException(error, obj);
       }
     }, items1);
-    return priceString.priceString;
+    return closure_6.priceString;
   }
+  tmp7 = obj1.isIOS() && tmp.orderRequired;
 };

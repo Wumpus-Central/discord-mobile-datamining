@@ -209,7 +209,7 @@ const typingStore = new TypingStore(DispatcherDefault, {
             }
             if (num <= 5) {
               const HTTP = HTTPUtils.HTTP;
-              obj = { url: Endpoints.TYPING(tmp8), oldFormErrors: true, rejectWithError: true };
+              obj = { url: Endpoints.TYPING(channelId), oldFormErrors: true, rejectWithError: true };
               HTTP.post(obj).then((status) => {
                 if (200 === status.status) {
                   let num = status.body.message_send_cooldown_ms;
@@ -244,7 +244,6 @@ const typingStore = new TypingStore(DispatcherDefault, {
               });
               const postResult = HTTP.post(obj);
             }
-            tmp8 = channelId;
           }
         }, num3),
         prevSend: timestamp,

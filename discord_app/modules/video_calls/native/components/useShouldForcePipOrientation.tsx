@@ -32,7 +32,6 @@ export const useShouldForcePipOrientation = function useShouldForcePipOrientatio
     return tmp2;
   });
   let obj = channel(504);
-  let obj2 = AuthenticationStore;
   const items1 = [EmbeddedActivitiesStore, ChannelRTCStore];
   const stateFromStoresObject = channel(504).useStateFromStoresObject(items1, () => {
     let obj = EmbeddedActivitiesStore;
@@ -68,7 +67,7 @@ export const useShouldForcePipOrientation = function useShouldForcePipOrientatio
   let tmp5 = null;
   if (null != tmp) {
     tmp5 = null;
-    if (tmp.user.id !== obj2.getId()) {
+    if (tmp.user.id !== AuthenticationStore.getId()) {
       tmp5 = tmp;
     }
   }
@@ -91,4 +90,5 @@ export const useShouldForcePipOrientation = function useShouldForcePipOrientatio
       LANDSCAPE = tmp2(8332).OrientationType.PORTRAIT;
     }
   }
+  const obj3 = channel(504);
 };

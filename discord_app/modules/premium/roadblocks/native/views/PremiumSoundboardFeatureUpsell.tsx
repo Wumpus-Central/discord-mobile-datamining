@@ -40,7 +40,7 @@ export default function PremiumSoundboardFeatureUpsell(shouldShow) {
   });
   return (
     <View
-      shouldShow={arg0.shouldShow}
+      shouldShow={shouldShow.shouldShow}
       featureName={EntitlementFeatureNames.EntitlementFeatureNames.SOUNDBOARD_EVERYWHERE}
     />
   );

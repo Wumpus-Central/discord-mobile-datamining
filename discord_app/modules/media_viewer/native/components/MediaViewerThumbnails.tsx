@@ -3,6 +3,7 @@ import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
 import useToken from "../../../../design/tokens/native/useToken.tsx";
 import ReanimatedRexportDefault from "../../../reanimated/ReanimatedRexport.tsx";
 import REAWorkaroundViewDefault from "../../../reanimated/native/REAWorkaroundView.tsx";
+import VisualEffectViewDefault from "../../../visual_effect_view/native/VisualEffectView.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import useMediaItemSpoilerState from "../useMediaItemSpoilerState.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
@@ -20,15 +21,14 @@ function ObscuredView(source) {
       obj = { style: null, children: null };
       const items = [absoluteFill.absoluteFill, tmp5];
       obj.style = items;
-      const tmp11 = absoluteFill;
-      const tmp7Result = tmp7(4965);
+      const tmp7Result = VisualEffectViewDefault;
       let str = "light";
       if (tmpResult.isAndroid()) {
         str = "dark";
       }
-      obj = { blurTheme: str, style: tmp11.absoluteFill, android_fallbackColor: tmp8 };
+      obj = { blurTheme: str, style: absoluteFill.absoluteFill, android_fallbackColor: tmp8 };
       obj.children = React6(tmp7Result, obj);
-      tmp10Result = tmp10(tmp7(4296).View, obj);
+      tmp10Result = React6(ReanimatedRexportDefault.View, obj);
       tmpResult = PlatformUtils;
     } else {
       tmp10Result = null;
@@ -108,17 +108,13 @@ export default function MediaViewerThumbnails(syncer) {
   ({ ref, headerBufferSize, footerBufferSize, onScroll, screenWidth, itemSize } = thumbnailsProps);
   const memo = headerBufferStyle.useMemo(() => {
     const items = [];
-    let num = 0;
-    if (0 < thumbnailScrollPositions.length) {
-      do {
-        let push = items.push;
-        if (variableWidthThumbnailsEnabled) {
-          let arr = push(thumbnailScrollPositions[num].scrollStart);
-        } else {
-          arr = push(num * React5);
-        }
-        num = num + 1;
-      } while (num < thumbnailScrollPositions.length);
+    for (let num = 0; num < thumbnailScrollPositions.length; num = num + 1) {
+      let push = items.push;
+      if (variableWidthThumbnailsEnabled) {
+        let arr = push(thumbnailScrollPositions[num].scrollStart);
+      } else {
+        arr = push(num * React5);
+      }
     }
     return items;
   }, items);
@@ -142,7 +138,7 @@ export default function MediaViewerThumbnails(syncer) {
     const items = [sources.length];
     return items;
   }, items2);
-  let tmp = closure_11();
+  const tmp = closure_11();
   const fn = function n() {
     return { scrollEnabled: scrollEnabled.get() };
   };

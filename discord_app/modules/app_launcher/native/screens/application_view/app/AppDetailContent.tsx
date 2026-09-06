@@ -2,14 +2,18 @@
 import nativeDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../../../intl/index.native.tsx";
 import PlatformUtils from "../../../../../../utils/PlatformUtils.tsx";
+import Text_Text from "../../../../../../design/components/Text/native/Text.tsx";
 import AppAnalyticsUtils from "../../../../../app_analytics/AppAnalyticsUtils.tsx";
 import TableRow from "../../../../../../design/components/TableRow/native/TableRow.native.tsx";
 import ApplicationCommandUtils from "../../../../../application_commands/ApplicationCommandUtils.tsx";
 import ApplicationCommandTypes from "../../../../../application_commands/ApplicationCommandTypes.tsx";
+import AppLauncherUtils from "../../../../utils/AppLauncherUtils.tsx";
 import AppLauncherContext from "../../../AppLauncherContext.tsx";
 import AppLauncherNativeUtils from "../../../AppLauncherNativeUtils.tsx";
 import usePlaceholderSize from "../../../hooks/usePlaceholderSize.tsx";
 import CommandRowButtonDefault from "../../../base_components/CommandRowButton.tsx";
+import BillIcon from "../../../../../../design/components/Icon/native/redesign/generated/BillIcon.tsx";
+import ShopIcon from "../../../../../../design/components/Icon/native/redesign/generated/ShopIcon.tsx";
 import asyncGeneratorStep from "../../../../../../../_runtime/00005_asyncGeneratorStep.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
@@ -79,7 +83,7 @@ class CommandRow {
     fn = undefined;
     if (installOnDemand) {
       tmp5 = location;
-      closure_0 = location(async (arg0, value) => {
+      closure_0 = location(async (arg0) => {
         if (c3 === 2) {
           c3 = 3;
           throw new TypeError("Generator functions may not be called on executing generators");
@@ -447,15 +451,15 @@ export default function AppDetailContent(context) {
     let obj = PlatformUtils;
     let isAndroidResult = obj.isAndroid();
     if (isAndroidResult) {
-      let tmpResult = tmp(9289);
+      let tmpResult = AppLauncherUtils;
       isAndroidResult = tmpResult.isApplicationMonetizedWithIAP(application);
     }
-    tmpResult = tmp(9289);
+    tmpResult = AppLauncherUtils;
     const result = tmpResult.isApplicationAdSupported(application);
     let tmp6 = null;
     if (result) {
       obj = { style: closure_7.monetizationDisclosureStyle, children: null };
-      const items = [map1(tmp(12136).BillIcon, { size: "sm", color: "icon-muted" })];
+      const items = [map1(BillIcon.BillIcon, { size: "sm", color: "icon-muted" })];
       obj = {
         style: closure_7.monetizationDisclosureTextStyle,
         variant: "text-xs/normal",
@@ -463,16 +467,16 @@ export default function AppDetailContent(context) {
         lineClamp: 1,
         children: null,
       };
-      const intl = tmp(1114).intl;
-      obj.children = intl.string(tmp(1114).t["5khEk8"]);
-      items[1] = map1(tmp(4556).Text, obj);
+      const intl = util.intl;
+      obj.children = intl.string(util.t["5khEk8"]);
+      items[1] = map1(Text_Text.Text, obj);
       obj.children = items;
       tmp6 = closure_2_14(View, obj);
     }
     let tmp11 = null;
     if (isAndroidResult) {
       const obj1 = { style: closure_7.monetizationDisclosureStyle, children: null };
-      const items1 = [map1(tmp(12138).ShopIcon, { size: "sm", color: "icon-muted" })];
+      const items1 = [map1(ShopIcon.ShopIcon, { size: "sm", color: "icon-muted" })];
       const obj2 = {
         style: closure_7.monetizationDisclosureTextStyle,
         variant: "text-xs/normal",
@@ -480,9 +484,9 @@ export default function AppDetailContent(context) {
         lineClamp: 1,
         children: null,
       };
-      const intl2 = tmp(1114).intl;
-      obj2.children = intl2.string(tmp(1114).t["8z5B2U"]);
-      items1[1] = map1(tmp(4556).Text, obj2);
+      const intl2 = util.intl;
+      obj2.children = intl2.string(util.t["8z5B2U"]);
+      items1[1] = map1(Text_Text.Text, obj2);
       obj1.children = items1;
       tmp11 = closure_2_14(View, obj1);
     }
@@ -632,16 +636,16 @@ export default function AppDetailContent(context) {
           current.closeCustomKeyboard();
         }
         obj = {
-          location: tmp3(tmp[23]).ApplicationCommandTriggerLocations.APP_LAUNCHER_APPLICATION_VIEW_MORE_MENU,
+          location: context(sectionName[23]).ApplicationCommandTriggerLocations.APP_LAUNCHER_APPLICATION_VIEW_MORE_MENU,
           application_id: application.id,
           section_name: sectionName,
           source: entrypoint,
         };
         if (null == installAppProps.customInstallUrl) {
-          let tmp3Result = tmp3(tmp[36]);
+          let tmp3Result = context(sectionName[36]);
           tmp3Result.trackWithMetadata(sectionDescriptors.APP_LAUNCHER_OAUTH2_AUTHORIZE_OPENED, obj);
         }
-        tmp3Result = tmp3(tmp[37]);
+        tmp3Result = context(sectionName[37]);
         obj = {};
         const merged = Object.assign(installAppProps);
         obj.source = "app_launcher_app_details";

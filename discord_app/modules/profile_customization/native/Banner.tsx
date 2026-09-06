@@ -30,7 +30,7 @@ export default function ProfileBanner(bannerHeight) {
   let tmp3Result = null;
   if (null != bannerSource) {
     obj = { style: tmp.image, source: bannerSource };
-    tmp3Result = tmp3(FastImageDefault, obj);
+    tmp3Result = jsx(FastImageDefault, { style: tmp.image, source: bannerSource });
   }
   obj.children = tmp3Result;
   return <View style={null}>{null}</View>;

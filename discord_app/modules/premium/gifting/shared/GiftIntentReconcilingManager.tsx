@@ -96,6 +96,8 @@ prototype["attemptReconcileFetch"] = function attemptReconcileFetch() {
     const andReconcileGiftIntentDismissals =
       PremiumGiftingIntentActionCreators.fetchAndReconcileGiftIntentDismissals(serverDismissalTimestampMs);
   }
+  tmp2 =
+    PremiumGiftingIntentStore.getLastKnownGiftIntentDismissedAtMs() >= serverDismissalTimestampMs || self.isReconciling;
 };
 prototype["onReconcileSuccess"] = function onReconcileSuccess(dismissals) {
   this.onReconcileSettled(true);
@@ -134,10 +136,9 @@ prototype["removeRemotelyDismissedGiftIntentCards"] = function removeRemotelyDis
         if (null != dMFromUserId) {
           let messages = EphemeralMessageStore.getMessages(tmp25);
           for (const item10031 of messages) {
-            let tmp9 = item10031;
             let tmp11 = item10031.type === MessageTypes.GIFTING_PROMPT;
             if (tmp11) {
-              let giftingPrompt = tmp9.giftingPrompt;
+              let giftingPrompt = item10031.giftingPrompt;
               let recipientUserId;
               if (giftingPrompt != null) {
                 recipientUserId = giftingPrompt.recipientUserId;
@@ -146,8 +147,7 @@ prototype["removeRemotelyDismissedGiftIntentCards"] = function removeRemotelyDis
             }
             if (tmp11) {
               let obj = DispatcherDefault;
-              obj = { type: "MESSAGE_DELETE", id: null, channelId: null };
-              obj.id = tmp9.id;
+              obj = { type: "MESSAGE_DELETE", id: item10031.id, channelId: null };
               obj.channelId = tmp25;
               let dispatchResult = obj.dispatch(obj);
             }

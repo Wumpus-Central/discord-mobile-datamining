@@ -63,21 +63,21 @@ prototype["_drainIfNecessary"] = function _drainIfNecessary() {
           } else {
             let defaultRetryAfter = retryAfter.retryAfter;
             if (defaultRetryAfter == null) {
-              defaultRetryAfter = tmp2.defaultRetryAfter;
+              defaultRetryAfter = self.defaultRetryAfter;
             }
-            const logger2 = tmp2.logger;
+            const logger2 = self.logger;
             const _HermesInternal = HermesInternal;
             logger2.info(
               "Rate limited. Delaying draining of queue for " +
                 defaultRetryAfter +
                 " ms. LogId:" +
-                tmp3 +
+                logId +
                 " QueueLength: " +
-                tmp2.queue.length,
+                self.queue.length,
             );
-            tmp2.pendingRetryItem = pendingRetryItem;
+            self.pendingRetryItem = pendingRetryItem;
             const _setTimeout = setTimeout;
-            tmp2.timeout = setTimeout(() => {
+            self.timeout = setTimeout(() => {
               self.pendingRetryItem = null;
               const queue = self.queue;
               queue.unshift(pendingRetryItem);

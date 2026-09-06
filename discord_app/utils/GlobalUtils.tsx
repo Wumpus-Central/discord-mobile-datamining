@@ -10,8 +10,8 @@ export function isDiscordFrontendDevelopment() {
 export function isDiscordBackendDevelopment() {
   return closure_0;
 }
-export const assertNever = function assertNever(arg0) {
-  const error = new Error("Unhandled value: " + arg0);
+export const assertNever = function assertNever(type) {
+  const error = new Error("Unhandled value: " + type);
   throw error;
 };
 export const isNotNullish = function isNotNullish(channel) {

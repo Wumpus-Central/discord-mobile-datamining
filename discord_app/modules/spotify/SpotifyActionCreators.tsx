@@ -441,9 +441,9 @@ export const subscribePlayerStateNotifications = function subscribePlayerStateNo
     return rejectResult;
   });
 };
-export const getProfile = function getProfile(accountId, arg1) {
+export const getProfile = function getProfile(accountId, accessToken) {
   obj = { url: closure_5.PROFILE };
-  value = obj.get(accountId, arg1, obj);
+  value = obj.get(accountId, accessToken, obj);
   return value.then((body) => {
     obj = { type: "SPOTIFY_PROFILE_UPDATE", accountId, isPremium: "premium" === body.body.product };
     obj.dispatch(obj);
@@ -461,9 +461,9 @@ export const getDevices = function getDevices(accountId, accessToken) {
     return body;
   });
 };
-export const play = function play(arg0, arg1, sync_id, TRACK) {
-  closure_0 = arg0;
-  closure_1 = arg1;
+export const play = function play(accountId, accessToken, sync_id, TRACK, arg4) {
+  closure_0 = accountId;
+  closure_1 = accessToken;
   const id = sync_id;
   let body = arg4;
   if (arg4 === undefined) {
@@ -498,8 +498,8 @@ export const play = function play(arg0, arg1, sync_id, TRACK) {
   }
   body.position_ms = num;
   request.body = body;
-  let putResult = body.put(arg0, arg1, request);
-  return body.put(arg0, arg1, request).then((result) => {
+  let putResult = body.put(accountId, accessToken, request);
+  return body.put(accountId, accessToken, request).then((result) => {
     let putResult = result;
     if (null != c5) {
       const request = { url: hasOwnProperty.PLAYER_REPEAT, query: null };
@@ -524,9 +524,9 @@ export const play = function play(arg0, arg1, sync_id, TRACK) {
     return result;
   });
 };
-export const pause = function pause(arg0, arg1) {
+export const pause = function pause(accountId, accessToken) {
   obj = { url: hasOwnProperty.PLAYER_PAUSE };
-  return obj.put(arg0, arg1, obj).then((result) => {
+  return obj.put(accountId, accessToken, obj).then((result) => {
     DispatcherDefault.dispatch({ type: "SPOTIFY_PLAYER_PAUSE" });
     return result;
   });

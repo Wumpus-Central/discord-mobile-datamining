@@ -1,4 +1,5 @@
 // discord_app/modules/instant_invite/native/DCDSendUtils.tsx
+import PlatformUtils from "../../../utils/PlatformUtils.tsx";
 import NativeIntentsModuleDefault from "../../../../discord_common/js/packages/rtn-codegen/js/NativeIntentsModule.tsx";
 import get_ActivityIndicator from "../../../../_runtime/metro/00017__.js";
 import size from "../../../../_runtime/metro/00002__.js";
@@ -21,6 +22,7 @@ export const sendSMS = function sendSMS(body, recipients) {
     const DCDSend = React4.DCDSend;
     DCDSend.sendSMS(body, recipients);
   }
+  obj = PlatformUtils;
 };
 export const sendMail = function sendMail(subject, subject) {
   if (obj.isAndroid()) {
@@ -41,6 +43,7 @@ export const sendMail = function sendMail(subject, subject) {
     const DCDSend = React4.DCDSend;
     DCDSend.sendMail(subject, subject);
   }
+  obj = PlatformUtils;
 };
 export const canSendSMS = function canSendSMS() {
   if (obj.isAndroid()) {
@@ -82,4 +85,5 @@ export const canOpenUrlScheme = function canOpenUrlScheme(roblox) {
     });
     return promise;
   }
+  obj = require("PlatformUtils");
 };

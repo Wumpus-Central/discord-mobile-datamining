@@ -27,7 +27,6 @@ function EditNameplateInner(user) {
     }
     return member;
   });
-  const tmp5 = setSelectedNameplate;
   const tmp6 = setSelectedNameplate(guildId[22])();
   obj = { pendingValue: selectedNameplate, userValue: null, guildValue: null, guildId: null };
   let nameplate;
@@ -67,8 +66,6 @@ function EditNameplateInner(user) {
   obj = { user, previewSkuId: null, nitroJoinCTA: null, nitroUpgradeCTA: null };
   let skuId1;
   const obj4 = user(guildId[23]);
-  const tmp12 = closure_11;
-  const tmp13 = closure_12;
   if (profilePreviewValue != null) {
     skuId1 = profilePreviewValue.skuId;
   }
@@ -77,7 +74,7 @@ function EditNameplateInner(user) {
   obj.nitroJoinCTA = intl.string(user(guildId[18]).t["V+IE93"]);
   const intl2 = tmp(tmp2[18]).intl;
   obj.nitroUpgradeCTA = intl2.string(user(guildId[18]).t.a6SrkR);
-  items3[1] = closure_10(tmp5(guildId[25]), obj);
+  items3[1] = closure_10(setSelectedNameplate(guildId[25]), obj);
   obj1 = { sections: tmp6, selectedSkuId: null, renderRow: null, isFetching: null };
   let skuId2;
   if (selectedNameplate != null) {
@@ -89,7 +86,7 @@ function EditNameplateInner(user) {
   obj1.isFetching = stateFromStores;
   items3[2] = closure_10(user(guildId[26]).EditCollectiblesPickerList, obj1);
   obj2.children = items3;
-  return tmp12(tmp13, obj2);
+  return closure_11(closure_12, obj2);
 }
 function NameplateActionSheetPreview(arg0) {
   let purchase;
@@ -244,7 +241,7 @@ export default function EditNameplateActionSheet(arg0) {
   obj1 = { style: tmp.container, children: null };
   const items1 = [closure_10(View, { style: tmp.bounceOffset }), ,];
   const obj3 = { variant: "redesign/heading-18/bold", style: tmp.title, accessibilityRole: "header", children: null };
-  const intl = tmp2(1114).intl;
+  const intl = guildId(1114).intl;
   obj3.children = intl.string(guildId(1114).t.BwdeM1);
   items1[1] = closure_10(guildId(4556).Text, obj3);
   items1[2] = closure_10(EditNameplateInner, { user, selectedNameplate: tmp6, setSelectedNameplate: tmp4[1], guildId });
@@ -260,7 +257,6 @@ export default function EditNameplateActionSheet(arg0) {
   };
   let skuId;
   const obj2 = { style: tmp.bounceOffset };
-  const tmp12 = closure_11;
   const tmp7 = first;
   const tmp8 = first(7162);
   if (currentNameplate != null) {
@@ -277,6 +273,6 @@ export default function EditNameplateActionSheet(arg0) {
   obj4.analyticsSource = tmp7(7182).EDIT_NAMEPLATE_SHEET;
   items2[1] = closure_10(first(8172), obj4);
   obj.children = items2;
-  obj.children = tmp12(guildId(7150).BottomSheet, obj);
+  obj.children = closure_11(guildId(7150).BottomSheet, obj);
   return closure_10(guildId(7162).AnalyticsLocationProvider, obj);
 }

@@ -1,5 +1,6 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/navigator/PressableNavigatorModalIcon.tsx
 import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
+import util from "../../../../../intl/index.native.tsx";
 import HeaderShared from "../HeaderShared.tsx";
 import PressableNavigatorButtonWrapperDefault from "PressableNavigatorButtonWrapper.tsx";
 import size from "../../../../../../_runtime/metro/00002__.js";
@@ -19,18 +20,30 @@ export default function PressableNavigatorModalIcon(onPress) {
     str = "back";
   }
   let obj = { source: importDefault(tmp6 ? 7867 : 7871), onPress: goBack, accessibilityLabel: null };
-  const intl = tmp5(1114).intl;
+  const intl = util.intl;
   const string = intl.string;
-  const t = tmp5(1114).t;
+  const t = util.t;
   if ("back" === str) {
     let stringResult = string(t["13/7kX"]);
   } else {
     stringResult = string(t.cpT0Cq);
   }
-  obj = { isModal: true, children: tmp(HeaderShared.HeaderIconButton, obj), accessibilityLabel: stringResult };
+  obj = {
+    isModal: true,
+    children: jsx(HeaderShared.HeaderIconButton, {
+      source: importDefault(tmp6 ? 7867 : 7871),
+      onPress: goBack,
+      accessibilityLabel: null,
+    }),
+    accessibilityLabel: stringResult,
+  };
   return jsx(PressableNavigatorButtonWrapperDefault, {
     isModal: true,
-    children: tmp(HeaderShared.HeaderIconButton, obj),
+    children: jsx(HeaderShared.HeaderIconButton, {
+      source: importDefault(tmp6 ? 7867 : 7871),
+      onPress: goBack,
+      accessibilityLabel: null,
+    }),
     accessibilityLabel: stringResult,
   });
 }

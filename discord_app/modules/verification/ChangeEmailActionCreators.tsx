@@ -4,10 +4,10 @@ import TrackedHTTPUtilsDefault from "../../utils/TrackedHTTPUtils.tsx";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 
 require = fn;
-let closure_5 = async function _confirmEmailChange(code) {
+let closure_5 = async function _confirmEmailChange() {
   c2 = 0;
   c1 = 0;
-  return (async (arg0, value) => {
+  return (async (arg0) => {
     const request = {
       url: constants.USER_EMAIL_VERIFY_CODE,
       body: { code },

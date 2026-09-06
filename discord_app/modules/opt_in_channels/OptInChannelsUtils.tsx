@@ -1,5 +1,6 @@
 // discord_app/modules/opt_in_channels/OptInChannelsUtils.tsx
 import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
+import router_utils from "../routing/router_utils.tsx";
 import util from "../../intl/index.native.tsx";
 import _modDef4153 from "../../../_runtime/metro/04153__.js";
 import useChannelName from "../channel/useChannelName.tsx";
@@ -14,7 +15,6 @@ import ReadStateStore from "../../stores/ReadStateStore.tsx";
 import RelationshipStore from "../../stores/RelationshipStore.tsx";
 import UserStore from "../../stores/UserStore.tsx";
 
-const router_utils = tmp2(1100);
 require = fn;
 function setIndex(arg0, index) {
   arg0.index = index;
@@ -101,9 +101,9 @@ export const getFirstRouteFor = function getFirstRouteFor(getSections) {
     const row = guildActionSection.getRow(0);
     if (ChannelListGuildActionRow.GUILD_HOME === row) {
       return constants3.GUILD_HOME;
-    } else if (tmp5.GUILD_ROLE_SUBSCRIPTIONS === row) {
+    } else if (ChannelListGuildActionRow.GUILD_ROLE_SUBSCRIPTIONS === row) {
       return constants3.ROLE_SUBSCRIPTIONS;
-    } else if (tmp5.GUILD_MOD_DASH_MEMBER_SAFETY === row) {
+    } else if (ChannelListGuildActionRow.GUILD_MOD_DASH_MEMBER_SAFETY === row) {
       return constants3.MEMBER_SAFETY;
     }
   }

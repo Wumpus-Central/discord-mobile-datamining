@@ -1,11 +1,11 @@
 // discord_app/modules/premium/powerups/native/GuildPowerupsGameServerCard.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import GuildPowerupsPerkCardDefault from "GuildPowerupsPerkCard.tsx";
 import useGameServerPerkDefault from "../../../game_server/hooks/useGameServerPerk.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 import GameServerStore from "../../../game_server/GameServerStore.tsx";
 
-const GuildPowerupsPerkCardDefault = tmp5(12571);
 const require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;

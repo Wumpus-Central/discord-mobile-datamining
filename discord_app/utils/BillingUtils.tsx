@@ -10,7 +10,7 @@ let closure_5 = async function _createGatewayCheckoutContext(arg0) {
   let paymentGateway = arg0;
   c2 = 0;
   c3 = 0;
-  return (async (arg0, value) => {
+  return (async (arg0) => {
     if (c3 === 2) {
       c3 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");

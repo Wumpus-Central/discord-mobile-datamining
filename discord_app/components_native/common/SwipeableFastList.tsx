@@ -29,13 +29,14 @@ class SwipeableFastList extends Component {
         ref(arg0) {
           applyArgumentsResult._refs[closure_3] = arg0;
           if (tmp) {
-            obj.bounceSwipeable(arg0);
-            const props = obj.props;
+            applyArgumentsResult.bounceSwipeable(arg0);
+            const props = applyArgumentsResult.props;
             const onBounceSwipable = props.onBounceSwipable;
             if (onBounceSwipable != null) {
               onBounceSwipable();
             }
           }
+          tmp = null != arg0 && c4;
         },
         overshootFriction: 8,
         onSwipeableWillOpen() {
@@ -53,13 +54,14 @@ class SwipeableFastList extends Component {
         ref(arg0) {
           applyArgumentsResult._refs[closure_3] = arg0;
           if (tmp) {
-            obj.bounceSwipeable(arg0);
-            const props = obj.props;
+            applyArgumentsResult.bounceSwipeable(arg0);
+            const props = applyArgumentsResult.props;
             const onBounceSwipable = props.onBounceSwipable;
             if (onBounceSwipable != null) {
               onBounceSwipable();
             }
           }
+          tmp = null != arg0 && c4;
         },
         overshootFriction: 8,
         onSwipeableWillOpen() {

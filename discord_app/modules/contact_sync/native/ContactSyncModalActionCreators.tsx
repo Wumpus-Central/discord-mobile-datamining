@@ -6,6 +6,7 @@ import PhoneActionCreatorsDefault from "../../phone/PhoneActionCreators.tsx";
 import instant_invite_InstantInviteUtils from "../../instant_invite/native/InstantInviteUtils.tsx";
 import ContactSyncUtils from "ContactSyncUtils.tsx";
 import ContactSyncAnalyticsUtils from "ContactSyncAnalyticsUtils.tsx";
+import NUFActionCreators from "../../nuf/native/NUFActionCreators.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import ConnectedAccountsStore from "../../../stores/ConnectedAccountsStore.tsx";
 import UserStore from "../../../stores/UserStore.tsx";
@@ -21,7 +22,7 @@ function handleNameInputScreenOrSuggestions() {
   }
   return applyArgumentsResult;
 }
-let closure_26 = async function _handleNameInputScreenOrSuggestions(arg0, value) {
+let closure_26 = async function _handleNameInputScreenOrSuggestions(arg0) {
   if (c8 === 2) {
     c8 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -211,7 +212,7 @@ let closure_26 = async function _handleNameInputScreenOrSuggestions(arg0, value)
     }
   }
 };
-let closure_27 = async function _handlePhoneVerificationComplete(arg0, value) {
+let closure_27 = async function _handlePhoneVerificationComplete(arg0) {
   if (c2 === 2) {
     c2 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -258,24 +259,56 @@ let closure_27 = async function _handlePhoneVerificationComplete(arg0, value) {
     }
   }
 };
-let closure_28 = async function _startContactSync(arg0, value) {
-  if (c1 === 2) {
-    c1 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp3 === 3) {
-    if (arg0 === 1) {
-      throw value;
-    } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+let closure_28 = async function _startContactSync(arg0) {
+  let navigation = arg0;
+  c2 = 0;
+  c1 = 0;
+  return (async (arg0) => {
+    if (c1 === 2) {
+      c1 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp3 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        let obj = { value, done: true };
+        return obj;
+      } else {
+        return { value: "HermesInternal", done: null };
+      }
     } else {
-      return { value: "HermesInternal", done: null };
-    }
-  } else {
-    try {
-      c1 = 2;
-      if (0 === c2) {
-        if (arg0 === 1) {
+      try {
+        c1 = 2;
+        if (0 === c2) {
+          if (arg0 === 1) {
+            c1 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c1 = 3;
+            obj = { value, done: true };
+            return obj;
+          } else {
+            currentUser = currentUser.getCurrentUser();
+            let phone;
+            if (currentUser != null) {
+              phone = currentUser.phone;
+            }
+            if (null == phone) {
+              let obj2 = ContactSyncAnalyticsUtils;
+              obj2.trackFlowStep(ContactSyncAnalyticsUtils.Steps.ADD_PHONE_NUMBER, false, false);
+              closure_2_9(null);
+              navigation.navigate(constants.ADD_PHONE);
+              c1 = 3;
+              const obj1 = { value: undefined, done: true };
+              return obj1;
+            } else {
+              c2 = 1;
+              c1 = 1;
+              obj2 = { value: handleNameInputScreenOrSuggestions(phone, navigation), done: false };
+              return obj2;
+            }
+          }
+        } else if (arg0 === 1) {
           c1 = 3;
           throw value;
         } else if (arg0 === 2) {
@@ -283,44 +316,17 @@ let closure_28 = async function _startContactSync(arg0, value) {
           obj = { value, done: true };
           return obj;
         } else {
-          currentUser = currentUser.getCurrentUser();
-          let phone;
-          if (currentUser != null) {
-            phone = currentUser.phone;
-          }
-          if (null == phone) {
-            let obj2 = ContactSyncAnalyticsUtils;
-            obj2.trackFlowStep(ContactSyncAnalyticsUtils.Steps.ADD_PHONE_NUMBER, false, false);
-            React7(null);
-            obj7.navigate(constants.ADD_PHONE);
-            c1 = 3;
-            const obj1 = { value: undefined, done: true };
-            return obj1;
-          } else {
-            c2 = 1;
-            c1 = 1;
-            obj2 = { value: handleNameInputScreenOrSuggestions(phone, obj7), done: false };
-            return obj2;
-          }
+          c1 = 3;
+          return { value: "HermesInternal", done: null };
         }
-      } else if (arg0 === 1) {
-        c1 = 3;
-        throw value;
-      } else if (arg0 === 2) {
-        c1 = 3;
-        obj = { value, done: true };
-        return obj;
-      } else {
-        c1 = 3;
-        return { value: "HermesInternal", done: null };
+      } catch (tmp14) {
+        c1 = tmp;
+        throw tmp14;
       }
-    } catch (tmp14) {
-      c1 = tmp;
-      throw tmp14;
     }
-  }
+  })();
 };
-let closure_29 = async function _bulkAddFriendSuggestions(arg0, value) {
+let closure_29 = async function _bulkAddFriendSuggestions(arg0) {
   if (c6 === 2) {
     c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -360,14 +366,12 @@ let closure_29 = async function _bulkAddFriendSuggestions(arg0, value) {
             let obj8 = ContactSyncUtils;
             c5 = 2;
             c6 = 1;
-            const obj1 = { value: obj8.bulkAddFriends(tmp73, bulkAddToken), done: false };
+            const obj1 = { value: obj8.bulkAddFriends(closure_0, bulkAddToken), done: false };
             return obj1;
           } else {
-            const obj2 = { skip: false, friendsFound: suggestions.length, friendsAdded: 0, back: false, onComplete: tmp74 };
+            const obj2 = { skip: false, friendsFound: suggestions.length, friendsAdded: 0, back: false, onComplete };
             closeContactSyncModal(obj2);
           }
-          tmp73 = closure_0;
-          tmp74 = onComplete;
         }
       } else {
         if (1 === tmp7) {
@@ -437,7 +441,7 @@ let closure_29 = async function _bulkAddFriendSuggestions(arg0, value) {
     }
   }
 };
-let closure_30 = async function _verifyPhone(arg0, value) {
+let closure_30 = async function _verifyPhone(arg0) {
   if (c7 === 2) {
     c7 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -557,9 +561,9 @@ function closeContactSyncModal(skip) {
       let updateAnimation = back(4763).updateAnimation;
       let ModalAnimation = flag2(1093).ModalAnimation;
       if (back) {
-        updateAnimation(tmp9, ModalAnimation.SLIDE_IN_OUT_REVERSE);
+        updateAnimation(closure_20, ModalAnimation.SLIDE_IN_OUT_REVERSE);
       } else {
-        updateAnimation(tmp9, ModalAnimation.SLIDE_IN_OUT);
+        updateAnimation(closure_20, ModalAnimation.SLIDE_IN_OUT);
       }
       const tmp8 = back(4763);
     }
@@ -571,12 +575,12 @@ function closeContactSyncModal(skip) {
         const updateAnimation = ModalActionCreatorsDefault.updateAnimation;
         const ModalAnimation = ConstantsIOS.ModalAnimation;
         if (back) {
-          updateAnimation(tmp3, ModalAnimation.SLIDE_IN_OUT_REVERSE);
-          let tmp7Result = tmp7(12704);
+          updateAnimation(closure_2_20, ModalAnimation.SLIDE_IN_OUT_REVERSE);
+          let tmp7Result = NUFActionCreators;
           const result = tmp7Result.previousOnboardingStep();
         } else {
-          updateAnimation(tmp3, ModalAnimation.SLIDE_IN_OUT);
-          tmp7Result = tmp7(12704);
+          updateAnimation(closure_2_20, ModalAnimation.SLIDE_IN_OUT);
+          tmp7Result = NUFActionCreators;
           obj = { skip: flag2 };
           tmp7Result.nextOnboardingStep(obj);
         }
@@ -666,11 +670,12 @@ export const openContactSyncModal = function openContactSyncModal(initialRoutes,
   }
   if (FRIENDS_ADD_FRIENDS_MODAL) {
     obj = { location: FRIENDS_ADD_FRIENDS_MODAL };
-    tmp(12682).trackFlowStart(obj);
-    const tmpResult = tmp(12682);
+    ContactSyncAnalyticsUtils.trackFlowStart(obj);
+    const tmpResult = ContactSyncAnalyticsUtils;
   }
   obj = { initialRoutes: initialRoutes.initialRoutes, openSettingsSheet: initialRoutes.openSettings, customLandingPage: initialRoutes.customLandingPage };
   ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(12685, dependencyMap.paths), obj, closure_1_20).then(arg2);
+  const pushLazyResult = ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(12685, dependencyMap.paths), obj, closure_1_20);
 };
 export const openContactSyncModalOnboarding = function openContactSyncModalOnboarding() {
   let flag = arg0;
@@ -686,7 +691,7 @@ export const openContactSyncModalOnboarding = function openContactSyncModalOnboa
       closure_1 = tmp5;
       closure_0 = tmp2;
       await require("asyncRequireImpl")(paths[19], paths.paths);
-      closure_128_0 = arg1.default;
+      closure_128_0 = value.default;
       closure_128_0.modalConfig = { animation: closure_129_0(closure_129_2[22]).ModalAnimation.SLIDE_IN_OUT };
       return closure_128_0;
     }), {}, closure_1_20);
@@ -704,11 +709,11 @@ export const openContactSyncModalDeeplink = function openContactSyncModalDeeplin
   if (null == obj.initialRoutes) {
     closure_1_14(constants.NORMAL);
   }
-  const tmp2 = dependencyMap;
   ContactSyncAnalyticsUtils.trackFlowStart({ location: { page: "Deep Link" } });
   const tmpResult = ContactSyncAnalyticsUtils;
   obj = { initialRoutes: obj.initialRoutes, openSettingsSheet: obj.openSettings, customLandingPage: obj.customLandingPage };
-  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(12685, tmp2.paths), obj, closure_1_20).then(undefined);
+  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(12685, dependencyMap.paths), obj, closure_1_20).then(undefined);
+  const pushLazyResult = ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(12685, dependencyMap.paths), obj, closure_1_20);
 };
 export const refreshContactSyncPermissionStatus = function refreshContactSyncPermissionStatus() {
   const result = ContactSyncUtils.checkContactPermissions();

@@ -175,7 +175,7 @@ export default function GameCommunityMultiGuildUpsellCard(guild) {
   const items5 = [guild.id, stateFromStores1, loading, gameId];
   const items6 = [guild.id];
   const callback = obj.useCallback(
-    loading(function* (arg0, value) {
+    loading(function* () {
       if (c4 === 2) {
         c4 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -268,7 +268,7 @@ export default function GameCommunityMultiGuildUpsellCard(guild) {
   const items7 = [guild.id, loading];
   const items8 = [guild.id, gameId, onDismiss];
   const callback2 = obj.useCallback(
-    loading(function* (arg0, value) {
+    loading(function* () {
       if (c4 === 2) {
         c4 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -387,10 +387,10 @@ export default function GameCommunityMultiGuildUpsellCard(guild) {
   obj1.cutouts = items9;
   if (null != memo1) {
     obj2 = { style: tmp.banner, source: memo1, resizeMode: "cover" };
-    let tmp17Result = tmp17(stateFromStores1, obj2);
+    let tmp17Result = closure_14(stateFromStores1, obj2);
   } else {
     let obj3 = { style: tmp.banner };
-    tmp17Result = tmp17(tmp16, obj3);
+    tmp17Result = closure_14(tmp16, obj3);
   }
   obj1.children = tmp17Result;
   obj.children = closure_14(gameId(onDismiss[20]), obj1);
@@ -426,7 +426,7 @@ export default function GameCommunityMultiGuildUpsellCard(guild) {
   }
   if (tmp17Result) {
     const obj10 = { variant: "text-sm/medium", style: tmp.description, lineClamp: 3, children: description };
-    tmp17Result = tmp17(tmp4(tmp5[23]).Text, obj10);
+    tmp17Result = closure_14(tmp4(tmp5[23]).Text, obj10);
   }
   items12[1] = tmp17Result;
   const items13 = [closure_15(closure_7, { children: items12 })];
@@ -435,28 +435,28 @@ export default function GameCommunityMultiGuildUpsellCard(guild) {
   if (tmp15Result) {
     const obj12 = { style: tmp.memberCount, children: null };
     const obj13 = { style: tmp.dotOnline };
-    const items14 = [tmp17(tmp16, obj13)];
+    const items14 = [closure_14(tmp16, obj13)];
     const obj14 = { variant: "text-xs/medium", color: "text-subtle", children: null };
     let intl = tmp4(tmp5[19]).intl;
     const obj15 = { membersOnline: num };
     obj14.children = intl.format(tmp4(tmp5[19]).t["LC+S+m"], obj15);
-    items14[1] = tmp17(tmp4(tmp5[23]).Text, obj14);
+    items14[1] = closure_14(tmp4(tmp5[23]).Text, obj14);
     obj12.children = items14;
-    tmp15Result = tmp15(tmp16, obj12);
+    tmp15Result = closure_15(tmp16, obj12);
   }
   const items15 = [tmp15Result];
   tmp15Result = num2 > 0;
   if (tmp15Result) {
     const obj16 = { style: tmp.memberCount, children: null };
     const obj17 = { style: tmp.dot };
-    const items16 = [tmp17(tmp16, obj17)];
+    const items16 = [closure_14(tmp16, obj17)];
     const obj18 = { variant: "text-xs/medium", color: "text-subtle", children: null };
     const intl2 = tmp4(tmp5[19]).intl;
     const obj19 = { count: num2 };
     obj18.children = intl2.format(tmp4(tmp5[19]).t.zRl6XR, obj19);
-    items16[1] = tmp17(tmp4(tmp5[23]).Text, obj18);
+    items16[1] = closure_14(tmp4(tmp5[23]).Text, obj18);
     obj16.children = items16;
-    tmp15Result = tmp15(tmp16, obj16);
+    tmp15Result = closure_15(tmp16, obj16);
   }
   items15[1] = tmp15Result;
   obj11.children = items15;
@@ -502,8 +502,8 @@ export default function GameCommunityMultiGuildUpsellCard(guild) {
         return closure_1_14(guild(onDismiss[26]).IconButton, obj);
       },
     };
-    obj24.children = tmp17(tmp4(tmp5[25]).ContextMenu, obj25);
-    tmp17Result1 = tmp17(tmp16, obj24);
+    obj24.children = closure_14(tmp4(tmp5[25]).ContextMenu, obj25);
+    tmp17Result1 = closure_14(tmp16, obj24);
   }
   items10[3] = tmp17Result1;
   obj.children = items10;

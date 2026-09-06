@@ -3,7 +3,7 @@ import util from "../../../../intl/index.native.tsx";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 
 require = fn;
-let closure_9 = async function _handleEnableSystemNotification(arg0, value) {
+let closure_9 = async function _handleEnableSystemNotification() {
   if (c3 === 2) {
     c3 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");

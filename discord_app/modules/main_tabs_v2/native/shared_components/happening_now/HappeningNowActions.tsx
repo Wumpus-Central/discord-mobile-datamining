@@ -156,6 +156,7 @@ export const HappeningNowStudentHubAddServer = function HappeningNowStudentHubAd
       obj.directoryChannelId = defaultChannel.id;
       GuildDirectoryAddModalActionCreatorsDefault.open(obj);
     }
+    tmp4 = null != guild && null != defaultChannel;
   }, items);
   obj.imageSource = _modDef12773;
   obj.onPress = callback;

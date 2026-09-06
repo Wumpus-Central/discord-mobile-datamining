@@ -1,6 +1,8 @@
 // discord_app/modules/application_widget/native/UserProfileApplicationWidgetBottomCollectionLayout.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import resolvedValuesFromUserApplicationIdentityProfile from "../../../../discord_common/js/packages/application-widget-renderer/src/index.tsx";
+import UserProfileApplicationWidgetSkeletons from "../../user_profile/native/UserProfileApplicationWidgetSkeletons.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -27,16 +29,19 @@ function CollectionItem(arg0) {
     let tmp12 = React4;
   } else {
     const obj2 = { style: tmp.itemImage };
-    tmp11 = React4(tmp3(9014).ImageSkeleton, obj2);
+    tmp11 = React4(UserProfileApplicationWidgetSkeletons.ImageSkeleton, obj2);
     tmp12 = React4;
   }
   const items1 = [tmp11];
   const obj3 = { style: tmp.itemContent, children: null };
   if ("value" === singleStringOrSkeleton.status) {
     const obj4 = { variant: "text-xs/medium", lineClamp: 2, children: singleStringOrSkeleton.text };
-    let tmp12Result = tmp12(tmp3(4556).Text, obj4);
+    let tmp12Result = tmp12(Text_Text.Text, obj4);
   } else {
-    tmp12Result = tmp12(tmp3(9014).TextSkeleton, { variant: "text-xs/medium", widthChars: 6 });
+    tmp12Result = tmp12(UserProfileApplicationWidgetSkeletons.TextSkeleton, {
+      variant: "text-xs/medium",
+      widthChars: 6,
+    });
   }
   const items2 = [tmp12Result];
   if ("value" === singleStringOrSkeleton1.status) {
@@ -46,9 +51,12 @@ function CollectionItem(arg0) {
       lineClamp: 2,
       children: singleStringOrSkeleton1.text,
     };
-    tmp12Result = tmp12(tmp3(4556).Text, obj5);
+    tmp12Result = tmp12(Text_Text.Text, obj5);
   } else {
-    tmp12Result = tmp12(tmp3(9014).TextSkeleton, { variant: "text-xxs/medium", widthChars: 10 });
+    tmp12Result = tmp12(UserProfileApplicationWidgetSkeletons.TextSkeleton, {
+      variant: "text-xxs/medium",
+      widthChars: 10,
+    });
   }
   items2[1] = tmp12Result;
   obj3.children = items2;

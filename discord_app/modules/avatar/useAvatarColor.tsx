@@ -8,7 +8,7 @@ const require = fn;
 function hasFetchedColors(game_name) {
   return null != module_560.getState().palette[game_name];
 }
-let closure_9 = async function _maybeFetchColors(arg0, value) {
+let closure_9 = async function _maybeFetchColors(arg0) {
   if (c1 === 2) {
     c1 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -32,14 +32,11 @@ let closure_9 = async function _maybeFetchColors(arg0, value) {
           c1 = 3;
           obj = { value, done: true };
           return obj;
-        } else {
-          if (!hasFetchedColors(closure_0)) {
-            c2 = 1;
-            c1 = 1;
-            const obj1 = { value: fetchColors(tmp5), done: false };
-            return obj1;
-          }
-          tmp5 = closure_0;
+        } else if (!hasFetchedColors(closure_0)) {
+          c2 = 1;
+          c1 = 1;
+          const obj1 = { value: fetchColors(closure_0), done: false };
+          return obj1;
         }
       } else if (arg0 === 1) {
         c1 = 3;
@@ -67,7 +64,7 @@ function fetchColors() {
   }
   return applyArgumentsResult;
 }
-let closure_11 = async function _fetchColors(arg0, value) {
+let closure_11 = async function _fetchColors(arg0) {
   if (c6 === 2) {
     c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -112,10 +109,9 @@ let closure_11 = async function _fetchColors(arg0, value) {
             const obj5 = require("ReactBatchUpdates");
             c5 = 2;
             c6 = 1;
-            let obj1 = { value: require("ImageUtils").getPaletteForAvatar(tmp34), done: false };
+            let obj1 = { value: require("ImageUtils").getPaletteForAvatar(closure_0), done: false };
             return obj1;
           }
-          tmp34 = closure_0;
         }
       } else {
         if (1 === tmp7) {
@@ -178,12 +174,12 @@ module_560 = module_560.create(() => ({ palette: {}, fetching: {} }));
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/avatar/useAvatarColor.tsx");
 
-export default function useAvatarColor(arg0, arg1) {
+export default function useAvatarColor(uri, arg1) {
   let flag = arg2;
   if (arg2 === undefined) {
     flag = true;
   }
-  _require = arg0;
+  _require = uri;
   if (flag === undefined) {
     flag = true;
   }
@@ -206,7 +202,7 @@ export default function useAvatarColor(arg0, arg1) {
     }
     return num;
   });
-  const items1 = [arg0, tmp];
+  const items1 = [uri, tmp];
   const effect = noop.useEffect(() => {
     let tmp2 = null != closure_0;
     if (tmp2) {

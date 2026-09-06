@@ -84,15 +84,7 @@ export const parseEmbedDescriptionMarkup = function parseEmbedDescriptionMarkup(
   const result = priv.set(combined, parseToASTResult);
   return parseToASTResult;
 };
-export const parseMessageMarkup = function parseMessageMarkup(
-  message,
-  message2,
-  forceHideSimpleEmbedContent,
-  isInlineReplyPreview,
-  arg4,
-  result,
-  result2,
-) {
+export const parseMessageMarkup = function parseMessageMarkup(message, message2, forceHideSimpleEmbedContent) {
   let flag = isInlineReplyPreview;
   if (isInlineReplyPreview === undefined) {
     flag = false;
@@ -172,4 +164,5 @@ export const parseMessageMarkup = function parseMessageMarkup(
   obj1.allowLinks = flag3;
   obj1.previewLinkTarget = flag3;
   const result1 = obj1.set(message, obj);
+  const astParserForResult = obj6.astParserFor(ChangeLogStandardTemplate.changelogRules(message.changelogId, true));
 };

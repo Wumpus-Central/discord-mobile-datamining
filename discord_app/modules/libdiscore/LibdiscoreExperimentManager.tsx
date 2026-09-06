@@ -12,7 +12,7 @@ function experimentStoreUpdateHandler() {
   if (obj.isLibdiscoreInitialized()) {
     if (!tmpResult.isExperimentSyncDisabled()) {
       obj = {};
-      const ALL_LIBDISCORE_EXPERIMENTS = tmp(1983).ALL_LIBDISCORE_EXPERIMENTS;
+      const ALL_LIBDISCORE_EXPERIMENTS = libdiscoreExperiments.ALL_LIBDISCORE_EXPERIMENTS;
       for (const item10018 of ALL_LIBDISCORE_EXPERIMENTS) {
         obj[item10018.id] = item10018.getCurrentConfig();
         continue;
@@ -27,7 +27,7 @@ function experimentStoreUpdateHandler() {
         experimentCacher.flushToCache(JSON.stringify(obj));
       }
     }
-    tmpResult = tmp(1983);
+    tmpResult = libdiscoreExperiments;
   }
 }
 class LibdiscoreExperimentManager extends tmp2 {

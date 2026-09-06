@@ -17,11 +17,11 @@ export const getHigherContrastColor = function getHigherContrastColor(background
   if (typeof tmp2 === "string") {
     hex2intResult1 = utils_ColorUtils.hex2int(tmp2);
   }
-  let hex2intResult2 = tmp3;
-  if (typeof tmp3 === "string") {
-    hex2intResult2 = utils_ColorUtils.hex2int(tmp3);
+  if (typeof tmp2 === "string") {
+    utils_ColorUtils.hex2int(tmp2);
   }
   const tmp = _slicedToArray(backgroundColor.colors, 2);
   const contrast = utils_ColorUtils.getContrast(hex2intResult, hex2intResult1);
-  return tmp3;
+  utils_ColorUtils;
+  return tmp2;
 };

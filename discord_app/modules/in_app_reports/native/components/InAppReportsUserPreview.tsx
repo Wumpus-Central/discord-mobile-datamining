@@ -53,7 +53,7 @@ export default function UserPreview(user) {
   let tmp7Result = null != user.globalName;
   if (tmp7Result) {
     const obj4 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: user.globalName };
-    tmp7Result = tmp7(tmp2(4556).Text, obj4);
+    tmp7Result = React3(Text_Text.Text, obj4);
   }
   const items3 = [
     tmp7Result,

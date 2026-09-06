@@ -43,12 +43,12 @@ export default noop.memo(function StickerPackDetailActionSheet(stickerPack) {
   function toggleDisplayingPackDetails() {
     if (null != ref.current) {
       const _clearTimeout = clearTimeout;
-      clearTimeout(tmp.current);
+      clearTimeout(ref.current);
     }
     closure_5(!first);
     if (!first) {
       const _setTimeout = setTimeout;
-      tmp.current = setTimeout(() => closure_1_5(false), 4000);
+      ref.current = setTimeout(() => closure_1_5(false), 4000);
     }
   }
   const tmp = closure_12();

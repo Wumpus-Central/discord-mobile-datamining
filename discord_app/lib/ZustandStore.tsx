@@ -8,7 +8,7 @@ const result = size.fileFinishedImporting("lib/ZustandStore.tsx");
 
 export const createZustandStore = function createZustandStore(arg0) {
   _require = arg0;
-  const obj = require("../../_runtime/metro/01244__.js");
+  let obj = require("../../_runtime/metro/01244__.js");
   dependencyMap = obj.createWithEqualityFn(
     require("../../_runtime/metro/04430__.js").subscribeWithSelector((arg0, arg1, arg2) => {
       closure_0 = arg0;
@@ -64,6 +64,7 @@ export const createZustandStore = function createZustandStore(arg0) {
       if (typeof setState === "function") {
         const initialState = state.getInitialState();
         initialState(state[2]).batchUpdates(() => state.setState(closure_0));
+        const obj = initialState(state[2]);
       } else {
         throw new TypeError("Trying to call a non-function");
       }

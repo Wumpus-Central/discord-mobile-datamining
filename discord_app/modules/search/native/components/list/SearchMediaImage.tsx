@@ -1,10 +1,14 @@
 // discord_app/modules/search/native/components/list/SearchMediaImage.tsx
+import util from "../../../../../intl/index.native.tsx";
+import PlatformUtils from "../../../../../utils/PlatformUtils.tsx";
 import utils_ImageUtils from "../../../../../utils/native/ImageUtils.tsx";
+import ImageWarningIcon from "../../../../../design/components/Icon/native/redesign/generated/ImageWarningIcon.tsx";
 import ObscureMediaModels from "../../../../explicit_media_redaction/ObscureMediaModels.tsx";
 import MediaSourceUtil from "../../../../media_viewer/native/MediaSourceUtil.tsx";
 import ImageWithPlaceholder from "../../../../../components_native/common/ImageWithPlaceholder.tsx";
 import CirclePlayIcon from "../../../../../design/components/Icon/native/redesign/generated/CirclePlayIcon.tsx";
 import AttachmentPreview from "../../../../media/native/AttachmentPreview.tsx";
+import generated_SpoilerIcon from "../../../../../design/components/Icon/native/redesign/generated/SpoilerIcon.tsx";
 import MessageAttachmentUtils from "../../../../messages/MessageAttachmentUtils.tsx";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
@@ -32,18 +36,18 @@ function SearchMediaObscurityIcon(obscureReason) {
   }, items);
   const memo1 = noop.useMemo(() => {
     if (ObscureMediaModels.ObscureReason.SPOILER === obscureReason) {
-      return closure_2_11(tmp2(11241).SpoilerIcon, { size: "lg" });
+      return closure_2_11(generated_SpoilerIcon.SpoilerIcon, { size: "lg" });
     } else {
-      if (tmp2(7296).ObscureReason.EXPLICIT_CONTENT !== tmp) {
-        if (tmp2(7296).ObscureReason.GORE_CONTENT !== tmp) {
-          if (tmp2(7296).ObscureReason.SELF_HARM_CONTENT !== tmp) {
-            if (tmp2(7296).ObscureReason.POTENTIAL_EXPLICIT_CONTENT === tmp) {
+      if (ObscureMediaModels.ObscureReason.EXPLICIT_CONTENT !== obscureReason) {
+        if (ObscureMediaModels.ObscureReason.GORE_CONTENT !== obscureReason) {
+          if (ObscureMediaModels.ObscureReason.SELF_HARM_CONTENT !== obscureReason) {
+            if (ObscureMediaModels.ObscureReason.POTENTIAL_EXPLICIT_CONTENT === obscureReason) {
               return null;
             }
           }
         }
       }
-      return closure_2_11(tmp2(5081).ImageWarningIcon, { size: "lg" });
+      return closure_2_11(ImageWarningIcon.ImageWarningIcon, { size: "lg" });
     }
   }, items1);
   obj = { blurTheme: str, style: null };
@@ -113,7 +117,7 @@ let closure_16 = noop.memo((containerWidth) => {
           let size = { obscureReason, height: containerHeight, width: containerWidth };
           tmp12 = closure_1_11(SearchMediaObscurityIcon, size);
         }
-        let tmp8Result = tmp8(1115);
+        let tmp8Result = PlatformUtils;
         if (tmp8Result.isAndroid()) {
           if (null != obscureReason) {
             obj = { style: containerStyle, children: null };
@@ -126,11 +130,11 @@ let closure_16 = noop.memo((containerWidth) => {
             return map1(React5, obj);
           }
         }
-        tmp8Result = tmp8(1115);
+        tmp8Result = PlatformUtils;
         let stringResult = obscuredAlt;
         if (tmp8Result.isAndroid()) {
-          const intl = tmp8(1114).intl;
-          stringResult = intl.string(tmp8(1114).t.jes7FG);
+          const intl = util.intl;
+          stringResult = intl.string(util.t.jes7FG);
         }
         const obj3 = { style: containerStyle, children: null };
         const obj4 = { style: memo, uri: srcWithWidthAndHeight, placeholder, placeholderVersion, alt: stringResult };
@@ -309,14 +313,17 @@ export const SearchComponentMediaImage = function SearchComponentMediaImage(unfu
   obj = {};
   const memo = isChannelSpoilerGated.useMemo(() => {
     const obj = MessageAttachmentUtils;
-    const tmp = unfurledMediaItem;
-    const tmp2 = enabledHarmTypesBitmaskForChannelAndAuthorId;
     const flattenSourceResult = MediaSourceUtil.flattenSource(sources);
     let spoiler;
     if (flattenSourceResult != null) {
       spoiler = flattenSourceResult.spoiler;
     }
-    return obj.getObscureReasonForUnfurledMediaItem(tmp, tmp2, spoiler || isChannelSpoilerGated, isBot);
+    return obj.getObscureReasonForUnfurledMediaItem(
+      unfurledMediaItem,
+      enabledHarmTypesBitmaskForChannelAndAuthorId,
+      spoiler || isChannelSpoilerGated,
+      isBot,
+    );
   }, items);
   const merged1 = Object.assign(merged);
   obj.obscureReason = memo;

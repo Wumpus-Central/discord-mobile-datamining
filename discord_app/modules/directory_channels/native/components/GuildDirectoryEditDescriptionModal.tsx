@@ -7,7 +7,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 const require = fn;
 function GuildDirectoryEditDescription(entry) {
   entry = entry.entry;
-  importDefault = async function _onSubmit(arg0, value) {
+  importDefault = async function _onSubmit(arg0) {
     if (c4 === 2) {
       c4 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");

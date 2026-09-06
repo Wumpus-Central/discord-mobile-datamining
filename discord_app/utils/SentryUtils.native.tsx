@@ -36,14 +36,14 @@ export default {
   captureException(arg0, extra) {
     _require = arg0;
     importAll = require("ErrorCommonUtils").getUpdatedOptions(extra);
-    const obj = require("ErrorCommonUtils");
+    let obj = require("ErrorCommonUtils");
     _modAll675.withScope((setTags) => {
       if (null != closure_2) {
-        if (null != tmp.tags) {
-          setTags.setTags(tmp.tags);
+        if (null != closure_2.tags) {
+          setTags.setTags(closure_2.tags);
         }
-        if (null != tmp.extra) {
-          setTags.setExtras(tmp.extra);
+        if (null != closure_2.extra) {
+          setTags.setExtras(closure_2.extra);
         }
       }
       closure_1 = _modAll675.captureException(closure_0);
@@ -67,7 +67,7 @@ export default {
     let obj = require("ErrorCommonUtils");
     updatedOptions(675).withScope((setExtras) => {
       if (tmp2) {
-        setExtras.setExtras(tmp.extra);
+        setExtras.setExtras(updatedOptions.extra);
       }
       setExtras.setTags(closure_3);
       setExtras.setLevel("fatal");
@@ -89,6 +89,7 @@ export default {
         return exception;
       });
       closure_1 = _modAll675.captureException(closure_0);
+      tmp2 = null != updatedOptions && null != updatedOptions.extra;
     });
     return closure_1;
   },
@@ -96,22 +97,25 @@ export default {
     _require = arg0;
     closure_1 = arg2;
     importAll = require("ErrorCommonUtils").getUpdatedOptions(extra);
-    const obj = require("ErrorCommonUtils");
+    let obj = require("ErrorCommonUtils");
     _modAll675.withScope((setExtras) => {
       if (tmp2) {
-        setExtras.setExtras(tmp.extra);
+        setExtras.setExtras(closure_2.extra);
       }
       if (tmp4) {
-        setExtras.setTags(tmp.tags);
+        setExtras.setTags(closure_2.tags);
       }
       if (tmp6) {
-        setExtras.setFingerprint(tmp.fingerprint);
+        setExtras.setFingerprint(closure_2.fingerprint);
         setExtras.addEventProcessor((arg0) => {
           arg0.exception = undefined;
           return arg0;
         });
       }
       _modAll675.captureMessage(closure_0, closure_1);
+      tmp2 = null != closure_2 && null != closure_2.extra;
+      tmp4 = null != closure_2 && null != closure_2.tags;
+      tmp6 = null != closure_2 && null != closure_2.fingerprint;
     });
   },
   addFeatureFlag(arg0, arg1) {

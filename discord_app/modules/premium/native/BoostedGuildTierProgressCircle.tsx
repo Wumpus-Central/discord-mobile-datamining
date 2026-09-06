@@ -2,7 +2,11 @@
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import GuildBoostingUtils from "../../../utils/GuildBoostingUtils.tsx";
 import useGuildPowerupsBoostCountDefault from "../powerups/hooks/useGuildPowerupsBoostCount.tsx";
+import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import Tier048Px from "../../../design/components/Illustration/native/redesign/generated/Tier048Px.tsx";
+import _modDef13512 from "../../../../_runtime/metro/13512__.js";
+import _modDef13513 from "../../../../_runtime/metro/13513__.js";
+import _modDef13514 from "../../../../_runtime/metro/13514__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -71,12 +75,12 @@ export default function BoostedGuildTierProgressCircle(arg0) {
     if (null != guild) {
       if (guild.premiumTier !== constants.NONE) {
         const premiumTier = guild.premiumTier;
-        if (tmp13.TIER_1 === premiumTier) {
-          let tier048PxSource = tmp2(13512);
-        } else if (tmp13.TIER_2 === premiumTier) {
-          tier048PxSource = tmp2(13513);
-        } else if (tmp13.TIER_3 === premiumTier) {
-          tier048PxSource = tmp2(13514);
+        if (constants.TIER_1 === premiumTier) {
+          let tier048PxSource = _modDef13512;
+        } else if (constants.TIER_2 === premiumTier) {
+          tier048PxSource = _modDef13513;
+        } else if (constants.TIER_3 === premiumTier) {
+          tier048PxSource = _modDef13514;
         }
       }
       const obj2 = {
@@ -85,21 +89,21 @@ export default function BoostedGuildTierProgressCircle(arg0) {
         accessibilityElementsHidden: true,
         importantForAccessibility: "no",
       };
-      const items = [tmp8(tmp12, obj2)];
+      const items = [React5(tmp12, obj2)];
       const obj3 = {
         style: tmp.guildTierName,
         variant: "text-xs/semibold",
         color: "interactive-text-active",
         children: null,
       };
-      let tmp19Result = tmp19(4454);
+      let tmp19Result = GuildBoostingUtils;
       obj3.children = tmp19Result.getTierName(guild.premiumTier);
-      items[1] = tmp8(tmp19(4556).Text, obj3);
+      items[1] = React5(Text_Text.Text, obj3);
       obj1.children = items;
       obj.children = tmp10(tmp11, obj1);
-      return tmp8(tmp9, obj);
+      return React5(tmp9, obj);
     }
-    tmp19Result = tmp19(13508);
+    tmp19Result = Tier048Px;
     tier048PxSource = tmp19Result.getTier048PxSource(theme);
   }
 }

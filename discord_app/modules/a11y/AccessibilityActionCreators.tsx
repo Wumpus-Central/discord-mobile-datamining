@@ -1,6 +1,7 @@
 // discord_app/modules/a11y/AccessibilityActionCreators.tsx
 import DispatcherDefault from "../../Dispatcher.tsx";
 import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
+import UserSettingsActionCreatorsDefault from "../../actions/UserSettingsActionCreators.tsx";
 import AccessibilityStore from "AccessibilityStore.tsx";
 
 const AnalyticEvents = fn(1074).AnalyticEvents;
@@ -70,7 +71,7 @@ export const setPrefersReducedMotion = function setPrefersReducedMotion(reduce) 
   const useReducedMotion2 = AccessibilityStore.useReducedMotion;
   if (!useReducedMotion) {
     if (useReducedMotion2) {
-      let tmpResult = tmp(9358);
+      let tmpResult = UserSettingsActionCreatorsDefault;
       obj = { gifAutoPlay: null, animateEmoji: null, animateStickers: null };
       const obj1 = { value: false, reasonKey: constants.REDUCED_MOTION };
       obj.gifAutoPlay = obj1;
@@ -88,7 +89,7 @@ export const setPrefersReducedMotion = function setPrefersReducedMotion(reduce) 
     useReducedMotion = !useReducedMotion2;
   }
   if (useReducedMotion) {
-    tmpResult = tmp(9358);
+    tmpResult = UserSettingsActionCreatorsDefault;
     const result1 = tmpResult.clearSettingsOverride("gifAutoPlay", "animateEmoji", "animateStickers");
   }
 };

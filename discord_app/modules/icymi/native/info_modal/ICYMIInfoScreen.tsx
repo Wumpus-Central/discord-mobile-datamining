@@ -102,7 +102,7 @@ export default function ICYMIInfoScreen(extendedOnboarding) {
   const items = [extendedOnboarding, navigation];
   const items1 = [navigation];
   const callback = noop.useCallback(
-    asyncGeneratorStep(async (arg0, value) => {
+    asyncGeneratorStep(async () => {
       if (dependencyMap === 2) {
         dependencyMap = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -192,8 +192,6 @@ export default function ICYMIInfoScreen(extendedOnboarding) {
   obj1.style = items4;
   const obj2 = { source: null, style: null };
   const obj3 = { uri: null };
-  const tmp12 = closure_11;
-  const tmp15 = closure_7;
   const tmp5 = navigation(4495)();
   obj3.uri = navigation(16471);
   obj2.source = obj3;
@@ -326,7 +324,7 @@ export default function ICYMIInfoScreen(extendedOnboarding) {
   obj4.children = items8;
   items5[1] = closure_10(closure_6, obj4);
   obj1.children = items5;
-  items3[1] = closure_10(tmp15, obj1);
+  items3[1] = closure_10(closure_7, obj1);
   const obj26 = { style: null, children: null };
   const items14 = [{ marginBottom: bottom }, tmp.footer];
   obj26.style = items14;
@@ -345,5 +343,5 @@ export default function ICYMIInfoScreen(extendedOnboarding) {
   obj26.children = closure_9(extendedOnboarding(4975).Button, obj27);
   items3[2] = closure_9(closure_6, obj26);
   obj28.children = items3;
-  return closure_10(tmp12, obj28);
+  return closure_10(closure_11, obj28);
 }

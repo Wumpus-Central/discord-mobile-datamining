@@ -17,7 +17,7 @@ export default function useIsGuildThemePerkEnabled(arg0) {
     () => {
       let tmp2 = null != closure_0;
       if (tmp2) {
-        const guild = GuildStore.getGuild(tmp);
+        const guild = GuildStore.getGuild(closure_0);
         let hasItem;
         if (guild != null) {
           const features = guild.features;
@@ -25,7 +25,7 @@ export default function useIsGuildThemePerkEnabled(arg0) {
         }
         let tmp7 = true === hasItem;
         if (!tmp7) {
-          const stateForGuild = GuildPowerupsStore.getStateForGuild(tmp);
+          const stateForGuild = GuildPowerupsStore.getStateForGuild(closure_0);
           let tmp10;
           if (stateForGuild != null) {
             const unlockedPowerups = stateForGuild.unlockedPowerups;

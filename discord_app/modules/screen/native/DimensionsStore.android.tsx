@@ -4,6 +4,7 @@ import ReactBatchUpdates from "../../../../discord_common/js/shared/utils/ReactB
 import useSafeAreaInsets from "../../safe_area/useSafeAreaInsets.native.tsx";
 import AppEntryKey from "../../window/native/AppEntryKey.tsx";
 import readAppEntryWindowMetrics from "readAppEntryWindowMetrics.android.tsx";
+import useSystemKeyboardHeight from "../../keyboard/native/useSystemKeyboardHeight.native.tsx";
 import subscribeToKeyboardUIStore from "../../keyboard/native/subscribeToKeyboardUIStore.tsx";
 import 00560__ from "../../../../_runtime/metro/00560__.js";
 import SafeAreaStore from "../../safe_area/SafeAreaStore.native.tsx";
@@ -30,7 +31,7 @@ function getDimensionsStoreStateForEntry(appEntryKey, arg1) {
   }
   let width = size.width;
   ({ width: width2, height } = size2);
-  let tmp2Result = tmp2(1611);
+  let tmp2Result = useSafeAreaInsets;
   const rect = tmp2Result.getSafeAreaInsets(appEntryKey);
   let tmp8 = height;
   let tmp9 = width2;
@@ -40,7 +41,7 @@ function getDimensionsStoreStateForEntry(appEntryKey, arg1) {
   }
   const bound = Math.min(width + rect.left + rect.right, tmp9);
   const sum = size.height + rect.top + rect.bottom;
-  tmp2Result = tmp2(1877);
+  tmp2Result = useSystemKeyboardHeight;
   obj = { appEntryKey };
   const bound1 = Math.min(sum - tmp2Result.getSystemKeyboardHeight(obj), tmp8);
   width = undefined;
@@ -53,6 +54,7 @@ function getDimensionsStoreStateForEntry(appEntryKey, arg1) {
   }
   const width3 = size.width;
   ({ width: width4, height: height2 } = size2);
+  const tmp5 = size2.width > size2.height;
   const rect2 = useSafeAreaInsets.getSafeAreaInsets(appEntryKey);
   let tmp14 = height2;
   let tmp15 = width4;
@@ -80,6 +82,7 @@ function getDimensionsStoreStateForEntry(appEntryKey, arg1) {
     }
   }
   obj = { fontScale, screenIsLandscape: tmp5, windowDimensions, windowDimensionsIgnoringKeyboard: prop };
+  const tmp2Result1 = useSafeAreaInsets;
 }
 function getDimensionsStoreState(arg0) {
   let tmp = arg0;
@@ -90,11 +93,10 @@ function getDimensionsStoreState(arg0) {
   while (iter !== undefined) {
     let tmp3 = nextResult;
     let tmp5;
-    let tmp4 = getDimensionsStoreStateForEntry;
     if (tmp != null) {
       tmp5 = tmp.byAppEntry[tmp3];
     }
-    let tmp4Result = tmp4(nextResult, tmp5);
+    let tmp4Result = getDimensionsStoreStateForEntry(nextResult, tmp5);
     byAppEntry[tmp3] = tmp4Result;
     let tmp10;
     let tmp8 = tmp4Result;

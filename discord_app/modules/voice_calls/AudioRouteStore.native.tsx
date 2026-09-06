@@ -59,7 +59,7 @@ const audioRouteStoreClass = new AudioRouteStoreClass(DispatcherDefault, {
         UNKNOWN = VoiceCallTypes.RouteTypes.UNKNOWN;
         let addListenerResult;
         if (nativeEventEmitter != tmp3) {
-          addListenerResult = obj.addListener("audio-route-changed", (routeType) => {
+          addListenerResult = nativeEventEmitter.addListener("audio-route-changed", (routeType) => {
             handleAudioRouteChanged(routeType.routeType, routeType.multipleRoutesAvailable);
             audioRouteStoreClass.emitChange();
           });
@@ -77,7 +77,6 @@ const audioRouteStoreClass = new AudioRouteStoreClass(DispatcherDefault, {
           const AudioRouteEmitter = NativeModules.AudioRouteEmitter;
           currentRoute1 = AudioRouteEmitter.getCurrentRoute();
         }
-        obj = nativeEventEmitter;
         tmp11Result = PlatformUtils;
         const nextPromise = currentRoute1.then((routeType) => {
           handleAudioRouteChanged(routeType.routeType, routeType.multipleRoutesAvailable);

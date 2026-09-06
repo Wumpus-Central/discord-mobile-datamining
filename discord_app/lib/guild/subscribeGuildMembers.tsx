@@ -42,21 +42,21 @@ export default function subscribeGuildMembers(arg0) {
         const tmp4 = displayName(self.props);
         let isEqualResult = null != self._subscriptions;
         if (isEqualResult) {
-          let tmpResult = tmp(12);
+          let tmpResult = _modDef12;
           isEqualResult = tmpResult.isEqual(self._subscriptions, tmp4);
         }
         if (!isEqualResult) {
           if (null != self._subscriptions) {
-            tmpResult = tmp(12);
+            tmpResult = _modDef12;
             const item = tmpResult.forEach(self._subscriptions, (userIds, guildId) =>
               displayName(7312).unsubscribeMembers(guildId, userIds),
             );
           }
-          const item1 = tmp(12).forEach(tmp4, (userIds, guildId) =>
+          const item1 = _modDef12.forEach(tmp4, (userIds, guildId) =>
             displayName(7312).subscribeMembers(guildId, userIds),
           );
           self._subscriptions = tmp4;
-          const tmpResult1 = tmp(12);
+          const tmpResult1 = _modDef12;
         }
       }
     };
@@ -104,6 +104,7 @@ export const useSubscribeGuildMembers = function useSubscribeGuildMembers(memo, 
         obj.captureMessage("SubscribeGuildMembers called with more than 50 userIds.", obj);
       }
       closure_0(7312).subscribeMembers(guildId, userIds);
+      const obj4 = closure_0(7312);
     });
     return () => {
       const item = reason(12).forEach(memo, (userIds, guildId) =>

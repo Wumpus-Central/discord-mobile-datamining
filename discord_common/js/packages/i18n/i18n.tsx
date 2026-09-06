@@ -56,7 +56,7 @@ class LazyPropertyProvider extends Provider {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
     closure_0 = applyArgumentsResult;
-    applyArgumentsResult._refresh = function _refresh(defaultMessages, _parsedMessages) {
+    applyArgumentsResult._refresh = function _refresh(defaultMessages) {
       closure_0 = defaultMessages;
       let obj = _parsedMessages;
       if (_parsedMessages === undefined) {
@@ -93,7 +93,7 @@ class ProxyProvider extends Provider {
   constructor(arg0) {
     tmp = new tmp(global, new.target);
     closure_0 = tmp;
-    tmp._createProxy = function _createProxy(_context) {
+    tmp._createProxy = function _createProxy() {
       if (_context === undefined) {
         _context = _context._context;
       }
@@ -213,8 +213,8 @@ prototype["setLocale"] = function setLocale(_requestedLocale) {
     self.emit("locale", self._chosenLocale, self._chosenLocale);
   }
 };
-prototype["setUpdateRules"] = function setUpdateRules(arg0) {
-  parse.setUpdateRules(arg0);
+prototype["setUpdateRules"] = function setUpdateRules(fn) {
+  parse.setUpdateRules(fn);
 };
 prototype["getLanguages"] = function getLanguages() {
   return this._languages;

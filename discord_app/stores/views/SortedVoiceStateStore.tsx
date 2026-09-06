@@ -379,14 +379,14 @@ prototype2["getVoiceStates"] = function getVoiceStates(guildId) {
           (function isFavoritesResultCurrent() {
             if (null == closure_1_14) {
               return false;
-            } else if (tmp.favoriteChannels !== favoriteChannels.getFavoriteChannels()) {
+            } else if (closure_1_14.favoriteChannels !== favoriteChannels.getFavoriteChannels()) {
               return false;
             } else {
-              const unknownChannels = tmp.unknownChannels;
+              const unknownChannels = closure_1_14.unknownChannels;
               if (unknownChannels.some((item) => null != channel.getChannel(item))) {
                 return false;
               } else {
-                const versions = tmp.versions;
+                const versions = closure_1_14.versions;
                 const obj = versions[Symbol.iterator]();
                 while (obj !== undefined) {
                   let tmp7 = closure_1_3(tmp4, 2);
@@ -822,10 +822,9 @@ const sortedVoiceStateStore = new SortedVoiceStateStore(DispatcherDefault, {
       continue;
     }
     for (const item10062 of tmp4) {
-      let tmp9 = item10062;
       if (!set2.has(item10062)) {
         let obj4 = getVoiceStatesForGuild(arg0.guildId);
-        let updateMemberResult = obj4.updateMember(tmp9);
+        let updateMemberResult = obj4.updateMember(item10062);
         if (!updateMemberResult) {
           updateMemberResult = flag;
         }
@@ -841,14 +840,14 @@ let result = size.fileFinishedImporting("stores/views/SortedVoiceStateStore.tsx"
 
 export default sortedVoiceStateStore;
 export const NO_VOICE_STATES = frozen;
-export const makeMemberAndComparator = function makeMemberAndComparator(selfStream, member, arg2) {
+export const makeMemberAndComparator = function makeMemberAndComparator(selfStream, member, user) {
   const obj = { member, comparator: null };
   let nick;
   if (member != null) {
     nick = member.nick;
   }
   if (nick == null) {
-    nick = UserUtilsDefault.getName(arg2);
+    nick = UserUtilsDefault.getName(user);
   }
   let str = "\u0001";
   if (selfStream.selfStream) {

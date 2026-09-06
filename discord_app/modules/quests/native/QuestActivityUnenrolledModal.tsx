@@ -58,7 +58,7 @@ function QuestActivityUnenrolledModalInner(quest) {
   }, items1);
   const items2 = [quest.id];
   const callback = noop.useCallback(
-    getOrFetchApplication(function* (arg0, value) {
+    getOrFetchApplication(function* () {
       if (dependencyMap === 2) {
         dependencyMap = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -142,8 +142,8 @@ function QuestActivityUnenrolledModalInner(quest) {
     obj6 = { uri: memo };
     obj5.source = obj6;
     obj5.style = tmp4.appIcon;
-    obj4.children = tmp18(checked(5587), obj5);
-    tmp18Result = tmp18(tmp17, obj4);
+    obj4.children = closure_11(checked(5587), obj5);
+    tmp18Result = closure_11(closure_7, obj4);
   }
   const items4 = [tmp18Result];
   const obj7 = { style: tmp4.rewardTileContainer, children: null };
@@ -319,7 +319,7 @@ let closure_14 = createStyles.createStyles((arg0) => {
     } else {
       obj.baseShadow = obj6;
       const obj9 = {
-        borderRadius: tmp(576).radii.xl,
+        borderRadius: nativeDefault.radii.xl,
         borderWidth: 2.18,
         borderColor: "rgba(151, 151, 159, 0.24)",
         borderStyle: "solid",
@@ -329,12 +329,12 @@ let closure_14 = createStyles.createStyles((arg0) => {
       const items2 = [{ rotate: "-12.41deg" }];
       obj9.transform = items2;
       obj.appIconContainer = obj9;
-      const size = { width: 87, height: 87, borderRadius: tmp(576).radii.xl - 2.18 };
+      const size = { width: 87, height: 87, borderRadius: nativeDefault.radii.xl - 2.18 };
       obj.appIcon = size;
       const obj10 = {
         borderWidth: 2.18,
         borderColor: "rgba(151, 151, 159, 0.24)",
-        borderRadius: tmp(576).radii.xl,
+        borderRadius: nativeDefault.radii.xl,
         borderStyle: "solid",
         transform: null,
         overflow: "hidden",
@@ -342,11 +342,11 @@ let closure_14 = createStyles.createStyles((arg0) => {
       const items3 = [{ translateX: -10 }, { rotate: "7.81deg" }];
       obj10.transform = items3;
       obj.rewardTileContainer = obj10;
-      const obj11 = { borderRadius: tmp(576).radii.xl - 2.18 };
+      const obj11 = { borderRadius: nativeDefault.radii.xl - 2.18 };
       obj.questRewardTile = obj11;
-      const obj12 = { alignItems: "center", gap: tmp(576).space.PX_8 };
+      const obj12 = { alignItems: "center", gap: nativeDefault.space.PX_8 };
       obj.textContainer = obj12;
-      const obj13 = { flexDirection: "column", gap: tmp(576).space.PX_8, marginBottom: 20 };
+      const obj13 = { flexDirection: "column", gap: nativeDefault.space.PX_8, marginBottom: 20 };
       obj.buttonsContainer = obj13;
       obj.footer = { flexDirection: "column", width: "100%", marginTop: "auto" };
       return obj;

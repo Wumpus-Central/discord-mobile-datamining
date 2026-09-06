@@ -3,11 +3,14 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import AvatarUtilsDefault from "../../../utils/AvatarUtils.tsx";
 import AlertActionCreatorsDefault from "../../../actions/AlertActionCreators.tsx";
 import GuildIcon from "../../guild/native/GuildIcon.tsx";
+import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import GuildsBarAnimatedItemWrapperDefault from "GuildsBarAnimatedItemWrapper.tsx";
 import computeGuildsBarCutoutDefault from "utils/computeGuildsBarCutout.tsx";
 import HomeDrawerGuildRowDefault from "../../home_drawer/native/HomeDrawerGuildRow.tsx";
 import GuildsBarGeoRestrictedBadgeDefault from "GuildsBarGeoRestrictedBadge.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
+
+const GuildIconDefault = GuildIcon;
 
 require = fn;
 const GUILD_ITEM_BADGE_SIZE = fn(16285).GUILD_ITEM_BADGE_SIZE;
@@ -94,7 +97,11 @@ export default noop.memo(function GuildsBarGeoRestrictedGuild(restrictedGuild) {
   obj.expandedChildren = jsx(HomeDrawerGuildRowDefault, { guildId: restrictedGuild.id });
   if (null != animatableSourceWithFallback) {
     const obj2 = { source: animatableSourceWithFallback, style: tmp.guildIcon, fadeDuration: 0 };
-    let tmp8Result = tmp8(tmp9(5587), obj2);
+    let tmp8Result = jsx(FastImageDefault, {
+      source: animatableSourceWithFallback,
+      style: tmp.guildIcon,
+      fadeDuration: 0,
+    });
   } else {
     const obj3 = {
       value: restrictedGuild.name,
@@ -102,8 +109,13 @@ export default noop.memo(function GuildsBarGeoRestrictedGuild(restrictedGuild) {
       animate: false,
       size: tmp2(5584).GuildIconSizes.LARGE,
     };
-    tmp8Result = tmp8(tmp9(5584), obj3);
-    const tmp9Result = tmp9(5584);
+    tmp8Result = jsx(GuildIconDefault, {
+      value: restrictedGuild.name,
+      selected: false,
+      animate: false,
+      size: tmp2(5584).GuildIconSizes.LARGE,
+    });
+    const tmp9Result = GuildIconDefault;
   }
   obj.children = tmp8Result;
   return jsx(GuildsBarAnimatedItemWrapperDefault, { style: tmp.geoRestrictedBadge });

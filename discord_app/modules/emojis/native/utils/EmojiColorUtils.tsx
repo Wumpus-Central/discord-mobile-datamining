@@ -5,7 +5,7 @@ import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep
 function _getEmojiCacheKey(name) {
   return "" + name.name + "-" + name.id;
 }
-let closure_4 = async function _getFromCacheOrFallback2(arg0, value) {
+let closure_4 = async function _getFromCacheOrFallback2(arg0) {
   if (c4 === 2) {
     c4 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -101,7 +101,7 @@ let closure_4 = async function _getFromCacheOrFallback2(arg0, value) {
     }
   }
 };
-let closure_5 = async function _getEmojiDominantColors(arg0, value) {
+let closure_5 = async function _getEmojiDominantColors(arg0) {
   if (c5 === 2) {
     c5 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");

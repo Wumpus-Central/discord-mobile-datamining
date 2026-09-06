@@ -10,9 +10,9 @@ let closure_6 = {
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/multi_account/native/FadeInOut.tsx");
 
-export default noop.forwardRef((duration, ref) => {
+export default noop.forwardRef((duration, arg1) => {
   duration = duration.duration;
-  ref = undefined;
+  let ref;
   noop = undefined;
   ({ children, style } = duration);
   let obj = duration(ref[2]);
@@ -32,7 +32,7 @@ export default noop.forwardRef((duration, ref) => {
       current();
     }
   }, items);
-  const imperativeHandle = noop.useImperativeHandle(ref, () => ({
+  const imperativeHandle = noop.useImperativeHandle(arg1, () => ({
     componentDidAppear() {
       duration(ref[3]);
       const obj = { duration };

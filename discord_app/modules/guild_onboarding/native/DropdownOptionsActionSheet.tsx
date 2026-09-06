@@ -1,7 +1,13 @@
 // discord_app/modules/guild_onboarding/native/DropdownOptionsActionSheet.tsx
 import useStateFromStores from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
+import util from "../../../intl/index.native.tsx";
+import native from "../../../design/void/native.tsx";
 import useSafeAreaInsetsDefault from "../../safe_area/useSafeAreaInsets.native.tsx";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
+import components_Button_Button from "../../../design/components/Button/native/Button.native.tsx";
+import BottomSheetModal from "../../../../_runtime/06627_BottomSheetModal.js";
+import BottomSheetTitleHeader from "../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
+import Sheet_BottomSheet from "../../../design/components/Sheet/native/BottomSheet.native.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import EmojiStore from "../../emojis/EmojiStore.tsx";
 import GuildOnboardingPromptsStore from "../GuildOnboardingPromptsStore.tsx";
@@ -50,8 +56,8 @@ function DropdownOptionRow(option) {
       const obj1 = { id: null, animated: null, size: null };
       ({ id: obj5.id, animated: obj5.animated } = stateFromStores);
       obj1.size = EMOJI_URL_BASE_SIZE;
-      emojiURL = tmp12(tmp3[9]).getEmojiURL(obj1);
-      const tmp12Result = tmp12(tmp3[9]);
+      emojiURL = onSelect(tmp3[9]).getEmojiURL(obj1);
+      const tmp12Result = onSelect(tmp3[9]);
     }
     obj.src = emojiURL;
     const emoji3 = option.emoji;
@@ -64,8 +70,7 @@ function DropdownOptionRow(option) {
     }
     obj.name = str;
     obj.children = closure_8(onSelect(tmp3[8]), obj);
-    let leading = tmp10(View, obj);
-    tmp12 = onSelect;
+    let leading = closure_8(View, obj);
     const tmp13 = onSelect(tmp3[8]);
   } else {
     let emoji2 = option.emoji;
@@ -126,30 +131,30 @@ export default function DropdownOptionsActionSheet(arg0) {
     return null;
   } else {
     obj = { title: null };
-    const intl = tmp3(1114).intl;
-    obj.title = intl.string(tmp3(1114).t.E2ICbC);
+    const intl = util.intl;
+    obj.title = intl.string(util.t.E2ICbC);
     obj = { scrollable: true, header: null, children: null };
-    obj.header = closure_8(tmp3(7149).BottomSheetTitleHeader, obj);
+    obj.header = closure_8(BottomSheetTitleHeader.BottomSheetTitleHeader, obj);
     obj1 = { contentContainerStyle: null, children: null };
     const obj2 = { paddingBottom: useSafeAreaInsetsDefault().bottom };
     obj1.contentContainerStyle = obj2;
     const obj3 = { accessibilityRole: "radiogroup", accessibilityLabel: null, children: null };
-    const intl2 = tmp3(1114).intl;
-    obj3.accessibilityLabel = intl2.string(tmp3(1114).t.E2ICbC);
+    const intl2 = util.intl;
+    obj3.accessibilityLabel = intl2.string(util.t.E2ICbC);
     const options = stateFromStores.options;
     obj3.children = options.map((option) =>
       React6(DropdownOptionRow, { option, responses, onSelect, canBeNew: Boolean(dependencyMap) }, option.id),
     );
-    const items2 = [closure_8(tmp3(1178).CardSection, obj3)];
+    const items2 = [closure_8(native.CardSection, obj3)];
     const obj4 = { style: tmp.closeButtonWrapper, children: null };
     const obj5 = { onPress: tmp5, text: null, grow: true };
-    const intl3 = tmp3(1114).intl;
-    obj5.text = intl3.string(tmp3(1114).t.cpT0Cq);
-    obj4.children = closure_8(tmp3(4975).Button, obj5);
+    const intl3 = util.intl;
+    obj5.text = intl3.string(util.t.cpT0Cq);
+    obj4.children = closure_8(components_Button_Button.Button, obj5);
     items2[1] = closure_8(responses, obj4);
     obj1.children = items2;
-    obj.children = closure_9(tmp3(6627).BottomSheetScrollView, obj1);
-    return closure_8(tmp3(7150).BottomSheet, obj);
+    obj.children = closure_9(BottomSheetModal.BottomSheetScrollView, obj1);
+    return closure_8(Sheet_BottomSheet.BottomSheet, obj);
   }
   tmp = closure_10();
 }

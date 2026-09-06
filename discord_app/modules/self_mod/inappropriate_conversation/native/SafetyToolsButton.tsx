@@ -108,10 +108,10 @@ export const SafetyToolsButton = function SafetyToolsButton(channelId) {
     if (null != recipientId) {
       callback2();
       let obj = SafetyToolsActionCreators;
-      const result = obj.openSafetyToolsActionSheet(channelId, tmp, warningId, warningType);
+      const result = obj.openSafetyToolsActionSheet(channelId, recipientId, warningId, warningType);
       obj = {
         channelId,
-        senderId: tmp,
+        senderId: recipientId,
         warningId,
         warningType,
         cta: SafetyWarningUtils.CtaEventTypes.USER_SAFETY_TOOLS_BUTTON_CLICK,

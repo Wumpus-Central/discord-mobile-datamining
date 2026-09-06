@@ -1,5 +1,14 @@
 // discord_app/modules/game_profile/native/utils/getGameProfileStoreWebsiteData.tsx
+import util from "../../../../intl/index.native.tsx";
+import GameProfileAnalyticUtils from "../../GameProfileAnalyticUtils.tsx";
 import ThirdPartyGameApplicationWebsiteCategory from "../../../../../discord_common/js/shared/shared-constants/ThirdPartyGameApplicationWebsiteCategory.tsx";
+import SteamNeutralIcon from "../../../../design/components/Icon/native/redesign/generated/SteamNeutralIcon.tsx";
+import EpicGamesNeutralIcon from "../../../../design/components/Icon/native/redesign/generated/EpicGamesNeutralIcon.tsx";
+import RobloxNeutralIcon from "../../../../design/components/Icon/native/redesign/generated/RobloxNeutralIcon.tsx";
+import BattlenetNeutralIcon from "../../../../design/components/Icon/native/redesign/generated/BattlenetNeutralIcon.tsx";
+import RiotGamesNeutralIcon from "../../../../design/components/Icon/native/redesign/generated/RiotGamesNeutralIcon.tsx";
+import MinecraftNeutralIcon from "../../../../design/components/Icon/native/redesign/generated/MinecraftNeutralIcon.tsx";
+import XboxNeutralIcon from "../../../../design/components/Icon/native/redesign/generated/XboxNeutralIcon.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -11,79 +20,79 @@ export default function getGameProfileStoreWebsiteData(category) {
   category = category.category;
   if (ThirdPartyGameApplicationWebsiteCategory.ThirdPartyGameApplicationWebsiteCategory.STEAM === category) {
     let obj = {
-      icon: jsx(tmp(8694).SteamNeutralIcon, { size: "md" }),
-      action: tmp(8686).GameProfileTrackActionActions.SteamStoreLink,
+      icon: jsx(SteamNeutralIcon.SteamNeutralIcon, { size: "md" }),
+      action: GameProfileAnalyticUtils.GameProfileTrackActionActions.SteamStoreLink,
       title: null,
       url: null,
     };
-    const intl7 = tmp(1114).intl;
-    obj.title = intl7.string(tmp(1114).t.FsANs4);
+    const intl7 = util.intl;
+    obj.title = intl7.string(util.t.FsANs4);
     obj.url = category.url;
     return obj;
-  } else if (tmp(8689).ThirdPartyGameApplicationWebsiteCategory.EPICGAMES === category) {
+  } else if (ThirdPartyGameApplicationWebsiteCategory.ThirdPartyGameApplicationWebsiteCategory.EPICGAMES === category) {
     obj = {
-      icon: jsx(tmp(8696).EpicGamesNeutralIcon, { size: "md" }),
-      action: tmp(8686).GameProfileTrackActionActions.EpicStoreLink,
+      icon: jsx(EpicGamesNeutralIcon.EpicGamesNeutralIcon, { size: "md" }),
+      action: GameProfileAnalyticUtils.GameProfileTrackActionActions.EpicStoreLink,
       title: null,
       url: null,
     };
-    const intl6 = tmp(1114).intl;
-    obj.title = intl6.string(tmp(1114).t.ZbBMHa);
+    const intl6 = util.intl;
+    obj.title = intl6.string(util.t.ZbBMHa);
     obj.url = category.url;
     return obj;
-  } else if (tmp(8689).ThirdPartyGameApplicationWebsiteCategory.ROBLOX === category) {
+  } else if (ThirdPartyGameApplicationWebsiteCategory.ThirdPartyGameApplicationWebsiteCategory.ROBLOX === category) {
     const obj1 = {
-      icon: jsx(tmp(8698).RobloxNeutralIcon, { size: "md" }),
-      action: tmp(8686).GameProfileTrackActionActions.RobloxStoreLink,
+      icon: jsx(RobloxNeutralIcon.RobloxNeutralIcon, { size: "md" }),
+      action: GameProfileAnalyticUtils.GameProfileTrackActionActions.RobloxStoreLink,
       title: null,
       url: null,
     };
-    const intl5 = tmp(1114).intl;
-    obj1.title = intl5.string(tmp(1114).t["pJ+P+h"]);
+    const intl5 = util.intl;
+    obj1.title = intl5.string(util.t["pJ+P+h"]);
     obj1.url = category.url;
     return obj1;
-  } else if (tmp(8689).ThirdPartyGameApplicationWebsiteCategory.BATTLENET === category) {
+  } else if (ThirdPartyGameApplicationWebsiteCategory.ThirdPartyGameApplicationWebsiteCategory.BATTLENET === category) {
     const obj2 = {
-      icon: jsx(tmp(8700).BattlenetNeutralIcon, { size: "md" }),
-      action: tmp(8686).GameProfileTrackActionActions.BattlenetStoreLink,
+      icon: jsx(BattlenetNeutralIcon.BattlenetNeutralIcon, { size: "md" }),
+      action: GameProfileAnalyticUtils.GameProfileTrackActionActions.BattlenetStoreLink,
       title: null,
       url: null,
     };
-    const intl4 = tmp(1114).intl;
-    obj2.title = intl4.string(tmp(1114).t["A7grp+"]);
+    const intl4 = util.intl;
+    obj2.title = intl4.string(util.t["A7grp+"]);
     obj2.url = category.url;
     return obj2;
-  } else if (tmp(8689).ThirdPartyGameApplicationWebsiteCategory.RIOT === category) {
+  } else if (ThirdPartyGameApplicationWebsiteCategory.ThirdPartyGameApplicationWebsiteCategory.RIOT === category) {
     const obj3 = {
-      icon: jsx(tmp(8702).RiotGamesNeutralIcon, { size: "md" }),
-      action: tmp(8686).GameProfileTrackActionActions.RiotStoreLink,
+      icon: jsx(RiotGamesNeutralIcon.RiotGamesNeutralIcon, { size: "md" }),
+      action: GameProfileAnalyticUtils.GameProfileTrackActionActions.RiotStoreLink,
       title: null,
       url: null,
     };
-    const intl3 = tmp(1114).intl;
-    obj3.title = intl3.string(tmp(1114).t.h6MapL);
+    const intl3 = util.intl;
+    obj3.title = intl3.string(util.t.h6MapL);
     obj3.url = category.url;
     return obj3;
-  } else if (tmp(8689).ThirdPartyGameApplicationWebsiteCategory.MINECRAFT === category) {
+  } else if (ThirdPartyGameApplicationWebsiteCategory.ThirdPartyGameApplicationWebsiteCategory.MINECRAFT === category) {
     const obj4 = {
-      icon: jsx(tmp(8704).MinecraftNeutralIcon, { size: "md" }),
-      action: tmp(8686).GameProfileTrackActionActions.MinecraftStoreLink,
+      icon: jsx(MinecraftNeutralIcon.MinecraftNeutralIcon, { size: "md" }),
+      action: GameProfileAnalyticUtils.GameProfileTrackActionActions.MinecraftStoreLink,
       title: null,
       url: null,
     };
-    const intl2 = tmp(1114).intl;
-    obj4.title = intl2.string(tmp(1114).t["HZbmO+"]);
+    const intl2 = util.intl;
+    obj4.title = intl2.string(util.t["HZbmO+"]);
     obj4.url = category.url;
     return obj4;
   } else if ("XBOX_GAME_PASS" === category) {
     obj = {
-      icon: jsx(tmp(8708).XboxNeutralIcon, { size: "md" }),
-      action: tmp(8686).GameProfileTrackActionActions.XboxGamePassStoreLink,
+      icon: jsx(XboxNeutralIcon.XboxNeutralIcon, { size: "md" }),
+      action: GameProfileAnalyticUtils.GameProfileTrackActionActions.XboxGamePassStoreLink,
       title: null,
       url: null,
     };
-    const intl = tmp(1114).intl;
-    obj.title = intl.string(tmp(1114).t["QpN/Iz"]);
+    const intl = util.intl;
+    obj.title = intl.string(util.t["QpN/Iz"]);
     obj.url = category.url;
     return obj;
   } else {

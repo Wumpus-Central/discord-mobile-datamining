@@ -89,7 +89,7 @@ let items = [, , , , , , ,];
   LEAGUE_OF_LEGENDS: arr[6],
   SKYPE: arr[7],
 } = PlatformTypes);
-let set = new Set(items);
+const set = new Set(items);
 const values = Object.values(PlatformTypes);
 let closure_11 = values.filter((item) => !set.has(item));
 const size = fn(2);
@@ -309,23 +309,24 @@ export const parseConnectionIdentifier = function parseConnectionIdentifier(str)
 export { validateOnboardingConnection };
 export const validateOnboardingConnections = function validateOnboardingConnections(arr) {
   let items = [];
-  set = new Set();
+  new Set();
   function _loop(arg0) {
     closure_0 = arg0;
     let arr = validateOnboardingConnection(connection_type);
     items = [...arr.map((item) => "Connection " + closure_0 + 1 + ": " + item)];
     items.push.apply(items);
-    if (connection_type.connection_type === obj.APPLICATION) {
+    if (connection_type.connection_type === set.APPLICATION) {
       const _HermesInternal2 = HermesInternal;
-      let combined = "app:" + tmp.application_id;
+      let combined = "app:" + connection_type.application_id;
     } else {
       const _HermesInternal = HermesInternal;
-      combined = "provider:" + tmp.provider_id;
+      combined = "provider:" + connection_type.provider_id;
     }
     if (set.has(combined)) {
-      arr = items.push("Duplicate connection configuration");
+      arr = arr2.push("Duplicate connection configuration");
     }
     set.add(combined);
+    arr2 = items;
   }
   const entries = arr.entries();
   while (tmp3 !== undefined) {

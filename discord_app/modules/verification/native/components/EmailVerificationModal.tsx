@@ -57,4 +57,5 @@ export default function EmailVerificationModal(isChangeEmail) {
   if (stateFromStores != null) {
     const verified = stateFromStores.verified;
   }
+  const tmp4 = require("useInitialValue");
 }

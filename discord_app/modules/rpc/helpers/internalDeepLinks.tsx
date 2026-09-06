@@ -15,11 +15,11 @@ export const resolveInternalDeepLink = function resolveInternalDeepLink(url) {
     return null;
   } else {
     ({ hostname: hostname2, protocol, host } = toURLSafeResult);
-    let tmpResult = tmp(1365);
+    let tmpResult = URLUtilsDefault;
     if (tmpResult.isDiscordProtocol(protocol)) {
       ({ hostname, pathname } = toURLSafeResult);
       if (!set1.has(hostname)) {
-        tmpResult = tmp(1365);
+        tmpResult = URLUtilsDefault;
         if (!tmpResult.isDiscordHostname(hostname)) {
           const _HermesInternal = HermesInternal;
           let combined = "/" + hostname + pathname;
@@ -36,7 +36,7 @@ export const resolveInternalDeepLink = function resolveInternalDeepLink(url) {
         if (!tmpResult2.isDiscordLocalhost(host, hostname2)) {
           return null;
         }
-        tmpResult2 = tmp(1365);
+        tmpResult2 = URLUtilsDefault;
       }
       const tmp11 = _slicedToArray(toURLSafeResult.pathname.split("/"), 2)[1];
       let combined2 = null;

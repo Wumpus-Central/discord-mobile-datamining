@@ -1,17 +1,23 @@
 // discord_app/modules/voice_panel/native/controls/VoicePanelVoiceControls.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import util from "../../../../intl/index.native.tsx";
 import MetaQuestUtils from "../../../device/MetaQuestUtils.android.tsx";
 import UserSettings from "../../../user_settings/UserSettings.tsx";
+import TableRowGroup from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
 import LegacyBaseButton from "../../../../../_runtime/06655_LegacyBaseButton.js";
 import getEmbeddedActivityLaunchability from "../../../activities/utils/getEmbeddedActivityLaunchability.tsx";
 import MobileAudioOutputExperimentDefault from "../../../media_engine/MobileAudioOutputExperiment.tsx";
+import UserSettingsVoiceProcessing from "../../../user_settings/voice/native/UserSettingsVoiceProcessing.tsx";
 import VoicePanelStateContextDefault from "../VoicePanelStateContext.tsx";
 import useSelectedActiveStreamDefault from "../../../video_calls/native/useSelectedActiveStream.tsx";
 import useIsConnectedToVoiceChannelDefault from "../hooks/useIsConnectedToVoiceChannel.tsx";
-import MobileGoLiveEntrypointExperimentDefault from "../../../go_live/MobileGoLiveEntrypointExperiment.tsx";
+import MobileGoLiveEntrypointExperiment from "../../../go_live/MobileGoLiveEntrypointExperiment.tsx";
+import VoicePanelVoiceControlsButtons from "VoicePanelVoiceControlsButtons.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import ChannelStore from "../../../../stores/ChannelStore.tsx";
 import ReanimatedRexport from "../../../reanimated/ReanimatedRexport.tsx";
+
+const MobileGoLiveEntrypointExperimentDefault = MobileGoLiveEntrypointExperiment;
 
 require = fn;
 function NOOP() {}
@@ -49,79 +55,83 @@ let closure_10 = noop.memo((arg0) => {
   if (!tmp2) {
     const items = [tmp2, , , , , ,];
     obj = { channel, connected: tmp2 };
-    items[1] = hasOwnProperty(tmp3(17210).GameConsoles, obj);
+    items[1] = hasOwnProperty(VoicePanelVoiceControlsButtons.GameConsoles, obj);
     if (nonContextualStreamOutputPresent) {
-      nonContextualStreamOutputPresent = tmp12(tmp3(17210).StreamVolumeItem, {});
+      nonContextualStreamOutputPresent = hasOwnProperty(VoicePanelVoiceControlsButtons.StreamVolumeItem, {});
     }
     items[2] = nonContextualStreamOutputPresent;
     obj = { title: null, hasIcons: true, children: null };
-    const intl = tmp3(1114).intl;
-    obj.title = intl.string(tmp3(1114).t.NiTd0e);
-    const items1 = [hasOwnProperty(tmp3(17210).DeafenSwitch, {}), , , ,];
+    const intl = util.intl;
+    obj.title = intl.string(util.t.NiTd0e);
+    const items1 = [hasOwnProperty(VoicePanelVoiceControlsButtons.DeafenSwitch, {}), , , ,];
     obj1 = { channel, connected: tmp2 };
-    items1[1] = hasOwnProperty(tmp3(17210).AudioRouteButton, obj1);
+    items1[1] = hasOwnProperty(VoicePanelVoiceControlsButtons.AudioRouteButton, obj1);
     obj2 = { channelId };
-    items1[2] = hasOwnProperty(tmp3(17210).HideNonVideoParticipants, obj2);
-    items1[3] = hasOwnProperty(tmp3(17210).HideSelfVideo, {});
+    items1[2] = hasOwnProperty(VoicePanelVoiceControlsButtons.HideNonVideoParticipants, obj2);
+    items1[3] = hasOwnProperty(VoicePanelVoiceControlsButtons.HideSelfVideo, {});
     let tmp12Result = tmp2;
     if (tmp2) {
       const obj3 = { channel, connected: tmp2 };
-      tmp12Result = tmp12(tmp3(17210).InviteButton, obj3);
+      tmp12Result = hasOwnProperty(VoicePanelVoiceControlsButtons.InviteButton, obj3);
     }
     items1[4] = tmp12Result;
     obj.children = items1;
-    items[3] = tmp7(tmp3(5687).TableRowGroup, obj);
-    items[4] = hasOwnProperty(tmp3(9992).VoiceProcessingOptions, {});
+    items[3] = timestampProducer(TableRowGroup.TableRowGroup, obj);
+    items[4] = hasOwnProperty(UserSettingsVoiceProcessing.VoiceProcessingOptions, {});
     const obj4 = { guildId: channel.guild_id };
-    const items2 = [hasOwnProperty(tmp3(17210).VoiceSettingsButton, obj4)];
+    const items2 = [hasOwnProperty(VoicePanelVoiceControlsButtons.VoiceSettingsButton, obj4)];
     tmp12Result = null != tmp6;
     if (tmp12Result) {
       const obj5 = { stream: tmp6 };
-      tmp12Result = tmp12(tmp3(17210).ReportStreamIssueButton, obj5);
+      tmp12Result = hasOwnProperty(VoicePanelVoiceControlsButtons.ReportStreamIssueButton, obj5);
     }
     const obj6 = { hasIcons: true, children: null };
     items2[1] = tmp12Result;
     obj6.children = items2;
-    items[5] = tmp7(tmp3(5687).TableRowGroup, obj6);
+    items[5] = timestampProducer(TableRowGroup.TableRowGroup, obj6);
     let tmp7Result = null;
     if (tmp2) {
       tmp7Result = null;
       if (setting) {
         tmp7Result = null;
-        if (embeddedActivityLaunchability === tmp3(9582).EmbeddedActivityLaunchability.CAN_LAUNCH) {
+        if (
+          embeddedActivityLaunchability === getEmbeddedActivityLaunchability.EmbeddedActivityLaunchability.CAN_LAUNCH
+        ) {
           const obj7 = { title: null, hasIcons: true, children: null };
-          const intl2 = tmp3(1114).intl;
-          obj7.title = intl2.string(tmp3(1114).t.J6rqB7);
+          const intl2 = util.intl;
+          obj7.title = intl2.string(util.t.J6rqB7);
           const items3 = [
-            tmp12(tmp3(17210).LeaveActivitiesButton, {}),
-            tmp12(tmp3(17210).ShareActivityLogsButton, {}),
-            tmp12(tmp3(17210).ToggleShowActivitiesDebugOverlay, {}),
+            hasOwnProperty(VoicePanelVoiceControlsButtons.LeaveActivitiesButton, {}),
+            hasOwnProperty(VoicePanelVoiceControlsButtons.ShareActivityLogsButton, {}),
+            hasOwnProperty(VoicePanelVoiceControlsButtons.ToggleShowActivitiesDebugOverlay, {}),
           ];
           obj7.children = items3;
-          tmp7Result = tmp7(tmp3(5687).TableRowGroup, obj7);
+          tmp7Result = timestampProducer(TableRowGroup.TableRowGroup, obj7);
         }
       }
     }
     const obj8 = { spacing: 24, children: null };
     items[6] = tmp7Result;
     obj8.children = items;
-    return tmp7(tmp8, obj8);
+    return timestampProducer(tmp8, obj8);
   } else {
     const obj9 = { openTab };
-    const items4 = [hasOwnProperty(tmp3(17210).ActivitiesButton, obj9)];
-    if (tmp3(17101).MobileGoLiveEntrypointTreatment.SCREENSHARE_REPLACES_CHAT === treatment) {
+    const items4 = [hasOwnProperty(VoicePanelVoiceControlsButtons.ActivitiesButton, obj9)];
+    if (MobileGoLiveEntrypointExperiment.MobileGoLiveEntrypointTreatment.SCREENSHARE_REPLACES_CHAT === treatment) {
       const obj10 = { openTab };
-      let tmp9Result = tmp9(tmp3(17210).ChatButton, obj10);
+      let tmp9Result = hasOwnProperty(VoicePanelVoiceControlsButtons.ChatButton, obj10);
       const obj11 = { hasIcons: true, children: null };
       items4[1] = tmp9Result;
       obj11.children = items4;
-      tmp7Result = tmp7(tmp3(5687).TableRowGroup, obj11);
-    } else if (tmp3(17101).MobileGoLiveEntrypointTreatment.SCREENSHARE_REPLACES_SOUNDBOARD !== treatment) {
+      tmp7Result = timestampProducer(TableRowGroup.TableRowGroup, obj11);
+    } else if (
+      MobileGoLiveEntrypointExperiment.MobileGoLiveEntrypointTreatment.SCREENSHARE_REPLACES_SOUNDBOARD !== treatment
+    ) {
       const obj12 = { channel };
-      tmp9Result = tmp9(tmp3(17210).ScreenshareButton, obj12);
+      tmp9Result = hasOwnProperty(VoicePanelVoiceControlsButtons.ScreenshareButton, obj12);
     }
     const obj13 = { channel };
-    tmp9Result = tmp9(tmp3(17210).SoundboardButton, obj13);
+    tmp9Result = hasOwnProperty(VoicePanelVoiceControlsButtons.SoundboardButton, obj13);
   }
 });
 const scrollIndicatorInsets = { top: CONTROLS_DRAWER_HEADER_EXPANDED_SIZE };
@@ -198,13 +208,13 @@ export default noop.memo(function VoicePanelVoiceControls(isVisible) {
   let tmp14Result = !isScreenReaderEnabled;
   if (!isScreenReaderEnabled) {
     obj1 = { style: tmp.blurRegion };
-    tmp14Result = tmp14(tmp2(tmp3[25]), obj1);
+    tmp14Result = closure_5(tmp2(tmp3[25]), obj1);
   }
   const items4 = [tmp14Result, ,];
   tmp14Result = null != stateFromStores;
   if (tmp14Result) {
     obj2 = { channel: stateFromStores, openTab: isVisible.openTab };
-    tmp14Result = tmp14(closure_10, obj2);
+    tmp14Result = closure_5(closure_10, obj2);
   }
   items4[1] = tmp14Result;
   items4[2] = closure_5(isVisible(sharedValue[26]).SafeAreaPaddingView, { bottom: true });
@@ -214,7 +224,7 @@ export default noop.memo(function VoicePanelVoiceControls(isVisible) {
   let tmp14Result1 = !isScreenReaderEnabled;
   if (!isScreenReaderEnabled) {
     const obj3 = { shown: sharedValue, style: tmp.blurRegion };
-    tmp14Result1 = tmp14(tmp2(tmp3[27]), obj3);
+    tmp14Result1 = closure_5(tmp2(tmp3[27]), obj3);
   }
   children[1] = tmp14Result1;
   return closure_6(closure_7, { children });

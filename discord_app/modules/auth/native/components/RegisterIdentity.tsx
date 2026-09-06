@@ -22,7 +22,7 @@ function RegisterIdentityBase(inputMode) {
     }
     return applyArgumentsResult;
   }
-  closure_10 = async function _handleSubmit(arg0, value) {
+  closure_10 = async function _handleSubmit() {
     if (c4 === 2) {
       c4 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -60,21 +60,21 @@ function RegisterIdentityBase(inputMode) {
               const tmp26 = React5();
               if (null != tmp26) {
                 const obj3 = { email: tmp26 };
-                tmp39(obj3);
+                closure_1_9(obj3);
                 const obj4 = { step: null, actionType: null, details: null };
                 ACCOUNT_IDENTITY = ACCOUNT_IDENTITY.ACCOUNT_IDENTITY;
                 obj4.step = ACCOUNT_IDENTITY;
                 obj4.actionType = items.INPUT_ERROR;
                 items = ["email"];
                 obj4.details = items;
-                tmp41(obj4);
+                React7(obj4);
               } else {
-                const result = tmp44(tmp45[16]).handleNextOrSubmitRegistration(
-                  tmp44(tmp45[12]).AuthStates.REGISTER_IDENTITY,
+                const result = tmp3(tmp31[16]).handleNextOrSubmitRegistration(
+                  tmp3(tmp31[12]).AuthStates.REGISTER_IDENTITY,
                   dependencyMap,
-                  tmp41,
+                  React7,
                 );
-                const tmp44Result = tmp44(tmp45[16]);
+                const tmp44Result = tmp3(tmp31[16]);
               }
               c4 = 3;
             } else {
@@ -90,7 +90,6 @@ function RegisterIdentityBase(inputMode) {
               };
               return obj5;
             }
-            tmp39 = closure_1_9;
           }
         } else if (1 === tmp7) {
           c3 = 0;
@@ -188,17 +187,17 @@ function RegisterIdentityBase(inputMode) {
     tmp15Result = null;
     if ("" !== memo) {
       obj3 = { style: tmp2.errors, children: memo };
-      tmp15Result = tmp15(tmp3(6941), obj3);
+      tmp15Result = closure_14(tmp3(6941), obj3);
     }
   }
   items1[3] = tmp15Result;
   obj.children = items1;
   obj.children = closure_15(c7, obj);
-  tmp15Result = tmp15(setInputMode(6972), obj);
+  tmp15Result = closure_14(setInputMode(6972), obj);
   let tmp15Result1 = tmp15Result;
   if (!tmp4) {
     let obj4 = { style: tmp2.page, children: tmp15Result };
-    tmp15Result1 = tmp15(tmp3(5578), obj4);
+    tmp15Result1 = closure_14(tmp3(5578), obj4);
   }
   return tmp15Result1;
 }

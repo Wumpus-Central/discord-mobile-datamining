@@ -69,9 +69,9 @@ prototype["getReactiveCheckPassed"] = function getReactiveCheckPassed() {
 prototype["shouldCallReactiveCheck"] = function shouldCallReactiveCheck() {
   let tmp2 = "passed" !== suppress;
   if (tmp2) {
-    let tmp3 = "suppress" !== tmp;
+    let tmp3 = "suppress" !== suppress;
     if (tmp3) {
-      let tmp4 = "miss" === tmp;
+      let tmp4 = "miss" === suppress;
       if (tmp4) {
         tmp4 = null != c10;
       }

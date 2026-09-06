@@ -117,7 +117,8 @@ prototype2["startupLoad"] = function startupLoad(arg0, arg1, arg2, arg3) {
   asyncGeneratorStep = arg3;
   return (async () => {
     closure_0 = tmp2;
-    closure_128_0 = await tmp5(c2[7]).messages(closure_0).getLatest(tmp5, closure_2, closure_3);
+    await tmp5(c2[7]).messages(closure_0).getLatest(tmp5, closure_2, closure_3);
+    closure_128_0 = value;
     return new prototype(closure_128_0);
   })();
 };
@@ -125,7 +126,7 @@ prototype2["load"] = function load(arg0, arg1, arg2) {
   closure_0 = arg0;
   closure_1 = arg1;
   closure_2 = arg2;
-  return (async (arg0, value) => {
+  return (async () => {
     if (c3 === 2) {
       c3 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -225,10 +226,9 @@ prototype2["handleMessageUpdate"] = function handleMessageUpdate(message, databa
 prototype2["handleMessagePreviewsLoaded"] = function handleMessagePreviewsLoaded(guildId, database) {
   const self = this;
   for (const item10009 of tmp) {
-    let tmp2 = item10009;
     let obj = isReadableChannel;
     if (obj.isReadableChannelId(item10009.channel_id)) {
-      let insertStaleResult = self.insertStale(arg0.guildId, tmp2.channel_id, item10009, arg1);
+      let insertStaleResult = self.insertStale(arg0.guildId, item10009.channel_id, item10009, arg1);
     }
     continue;
   }
@@ -340,7 +340,7 @@ prototype2["updateOne"] = function updateOne(guildId, channel_id, message, datab
   closure_1 = channel_id;
   closure_2 = message;
   asyncGeneratorStep = database;
-  return (async (arg0, value) => {
+  return (async () => {
     if (c3 === 2) {
       c3 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");

@@ -41,13 +41,13 @@ if ("Android" !== family) {
             const timerId = window.setTimeout(() => {
               let parentElement;
               if (element != null) {
-                parentElement = tmp.parentElement;
+                parentElement = element.parentElement;
               }
               if (parentElement == null) {
                 parentElement = null;
               }
               if (null !== parentElement) {
-                body.removeChild(tmp);
+                body.removeChild(element);
               }
             }, 1000);
           } catch (tmp4) {

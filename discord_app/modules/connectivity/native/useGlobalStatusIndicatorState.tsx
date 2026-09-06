@@ -11,7 +11,7 @@ const EMPTY_STRING_SNOWFLAKE_ID = fn(1074).EMPTY_STRING_SNOWFLAKE_ID;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/connectivity/native/useGlobalStatusIndicatorState.tsx");
 
-export const useGlobalStatusIndicatorState = function useGlobalStatusIndicatorState(flag) {
+export const useGlobalStatusIndicatorState = function useGlobalStatusIndicatorState() {
   if (flag === undefined) {
     flag = false;
   }

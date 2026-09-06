@@ -39,7 +39,7 @@ export default noop.memo(function UnreadBadge(arg0) {
     const items1 = [obj];
     obj.badgeStyle = items1;
     obj.children = jsx(BadgeDefault, { opacity: num2 });
-    tmp9Result = tmp9(View, obj);
+    tmp9Result = <View opacity={num2} />;
     const tmp2Result = BadgeDefault;
   }
   return tmp9Result;

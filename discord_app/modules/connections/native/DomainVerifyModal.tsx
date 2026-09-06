@@ -78,7 +78,7 @@ function DomainScreen(onClose) {
   const tmp = closure_10();
   let obj = onClose(first[7]);
   importDefault = obj.useNavigation();
-  let tmp2 = _slicedToArray(noop.useState(""), 2);
+  const tmp2 = _slicedToArray(noop.useState(""), 2);
   first = tmp2[0];
   const tmp4 = _slicedToArray(noop.useState(null), 2);
   _slicedToArray = tmp4[1];
@@ -164,12 +164,12 @@ function DNSProofScreen(proof) {
   let tmp9Result = null != tmp5;
   if (tmp9Result) {
     const obj8 = { variant: "text-md/normal", color: "text-feedback-critical", style: tmp.error, children: tmp5 };
-    tmp9Result = tmp9(tmp2(tmp3[10]).Text, obj8);
+    tmp9Result = closure_8(require("Text/Text").Text, obj8);
   }
   items[2] = tmp9Result;
   const obj9 = { style: tmp.button, children: null };
   const obj10 = { loading: tmp7, text: null, onPress: null };
-  const intl5 = tmp2(tmp3[11]).intl;
+  const intl5 = require("util").intl;
   obj10.text = intl5.string(require("util").t["13ofGu"]);
   obj10.onPress = function onPress() {
     _undefined2(true);
@@ -223,7 +223,7 @@ function DNSProofScreen(proof) {
   items[3] = closure_8(c5, obj9);
   const obj11 = { style: tmp.button, children: null };
   const obj12 = { variant: "secondary", text: null, onPress: null };
-  const intl6 = tmp2(tmp3[11]).intl;
+  const intl6 = require("util").intl;
   obj12.text = intl6.string(require("util").t.CkfdNx);
   obj12.onPress = function onPress() {
     closure_3.push(constants.PROOF_HTTP, { proof, domain });
@@ -272,12 +272,12 @@ function HTTPProofScreen(children) {
   let tmp9Result = null != tmp5;
   if (tmp9Result) {
     obj6 = { variant: "text-md/normal", color: "text-feedback-critical", style: tmp.error, children: tmp5 };
-    tmp9Result = tmp9(tmp2(4556).Text, obj6);
+    tmp9Result = closure_8(Text_Text.Text, obj6);
   }
   items[2] = tmp9Result;
   const obj7 = { style: tmp.button, children: null };
   const obj8 = { loading: tmp7, text: null, onPress: null };
-  const intl4 = tmp2(1114).intl;
+  const intl4 = util.intl;
   obj8.text = intl4.string(util.t["13ofGu"]);
   obj8.onPress = function onPress() {
     _undefined2(true);
@@ -331,7 +331,7 @@ function HTTPProofScreen(children) {
   items[3] = closure_8(View, obj7);
   const obj9 = { style: tmp.button, children: null };
   const obj10 = { variant: "secondary", text: null, onPress: null };
-  const intl5 = tmp2(1114).intl;
+  const intl5 = util.intl;
   obj10.text = intl5.string(util.t.RhJMVQ);
   obj10.onPress = function onPress() {
     closure_2.pop();

@@ -1,7 +1,10 @@
 // discord_app/modules/forums/native/ForumChannelEmptyState.tsx
+import util from "../../../intl/index.native.tsx";
 import useSafeAreaInsetsDefault from "../../safe_area/useSafeAreaInsets.native.tsx";
 import shared from "../../../design/shared.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
+import _modDef12767 from "../../../../_runtime/metro/12767__.js";
+import _modDef12768 from "../../../../_runtime/metro/12768__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -32,9 +35,9 @@ export default noop.memo((topViewHeight) => {
   obj.style = items;
   let obj2 = shared;
   if (obj2.isThemeLight(obj.useThemeContext().theme)) {
-    let tmp4Result = tmp4(12767);
+    let tmp4Result = _modDef12767;
   } else {
-    tmp4Result = tmp4(12768);
+    tmp4Result = _modDef12768;
   }
   obj = { source: tmp4Result, style: tmp.image };
   const items1 = [hasOwnProperty(React4, obj), ,];
@@ -45,19 +48,19 @@ export default noop.memo((topViewHeight) => {
     color: "mobile-text-heading-primary",
     children: null,
   };
-  const intl = tmp2(1114).intl;
+  const intl = util.intl;
   if (tagFilter.size > 0) {
     obj2 = { numTags: tagFilter.size };
-    let formatToPlainStringResult = intl.formatToPlainString(tmp2(1114).t.lvPci0, obj2);
+    let formatToPlainStringResult = intl.formatToPlainString(util.t.lvPci0, obj2);
   } else {
-    formatToPlainStringResult = intl.string(tmp2(1114).t.PwTMG0);
+    formatToPlainStringResult = intl.string(util.t.PwTMG0);
   }
   obj1.children = formatToPlainStringResult;
   items1[1] = hasOwnProperty(Text_Text.Text, obj1);
   const obj3 = { style: tmp.subtext, variant: "text-sm/medium", color: "text-default", children: null };
-  const intl2 = tmp2(1114).intl;
+  const intl2 = util.intl;
   const formatToPlainString = intl2.formatToPlainString;
-  const t = tmp2(1114).t;
+  const t = util.t;
   if (tagFilter.size > 0) {
     const obj4 = { numTags: tagFilter.size };
     let formatToPlainStringResult1 = formatToPlainString(t.AAeye1, obj4);

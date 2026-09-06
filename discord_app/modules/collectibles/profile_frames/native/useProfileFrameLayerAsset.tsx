@@ -28,14 +28,14 @@ export default function useProfileFrameLayerAsset(width) {
   const effect = noop.useEffect(() => {
     let hasItem = null == collectiblesItemAssetUrl;
     if (!hasItem) {
-      hasItem = "" === tmp;
+      hasItem = "" === collectiblesItemAssetUrl;
     }
     if (!hasItem) {
-      hasItem = map.has(tmp);
+      hasItem = map.has(collectiblesItemAssetUrl);
     }
     if (!hasItem) {
       size = size.getSize(
-        tmp,
+        collectiblesItemAssetUrl,
         (arg0, arg1) => {
           if (arg0 > 0) {
             const result = map.set(collectiblesItemAssetUrl, arg1 / arg0);

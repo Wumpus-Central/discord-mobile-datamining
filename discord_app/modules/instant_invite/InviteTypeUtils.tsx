@@ -78,14 +78,14 @@ export const getInviteType = function getInviteType(body) {
       tmp4 = tmp2;
     }
     if (tmp4) {
-      GROUP_DM = tmp8.GROUP_DM;
+      GROUP_DM = constants2.GROUP_DM;
     } else {
-      let tmp5 = body.type === tmp8.FRIEND;
+      let tmp5 = body.type === constants2.FRIEND;
       if (!tmp5) {
         tmp5 = null == body.guild && null != body.inviter;
         const tmp7 = null == body.guild && null != body.inviter;
       }
-      GROUP_DM = tmp5 ? tmp8.FRIEND : tmp8.GUILD;
+      GROUP_DM = tmp5 ? constants2.FRIEND : constants2.GUILD;
     }
   }
   return GROUP_DM;

@@ -23,7 +23,7 @@ const result = size.fileFinishedImporting(
 export default function GuildDirectoryCreateOrAddDescription(directoryChannelId) {
   directoryChannelId = directoryChannelId.directoryChannelId;
   ({ directoryGuildName: importDefault, guild: dependencyMap, createGuild: asyncGeneratorStep } = directoryChannelId);
-  closure_4 = async function _onSubmit(arg0, value) {
+  closure_4 = async function _onSubmit(arg0) {
     if (c5 === 2) {
       c5 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -52,8 +52,8 @@ export default function GuildDirectoryCreateOrAddDescription(directoryChannelId)
             closure_130_0 = directoryChannelId;
             closure_130_1 = closure_1;
             closure_130_2 = undefined;
-            if (null != asyncGeneratorStep) {
-              const template = tmp36.template;
+            if (null != template) {
+              template = template.template;
               if (null == template) {
                 c5 = 3;
                 return { value: "HermesInternal", done: null };
@@ -79,7 +79,6 @@ export default function GuildDirectoryCreateOrAddDescription(directoryChannelId)
               obj3.value = obj3.onAddDirectoryGuildEntry(obj2);
               return obj3;
             }
-            tmp36 = asyncGeneratorStep;
           }
         } else if (1 === tmp5) {
           if (arg0 === 1) {

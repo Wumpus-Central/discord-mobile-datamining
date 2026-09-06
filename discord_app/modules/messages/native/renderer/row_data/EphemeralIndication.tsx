@@ -26,14 +26,14 @@ export const createEphemeralIndication = function createEphemeralIndication(mess
       }
       let obj = { content: null, helpArticleLink: null, helpButtonAccessibilityLabel: null };
       const ephemeralReasonMessage = obj1.getEphemeralReasonMessage(ephemerality_reason1);
-      const intl2 = tmp3(1114).intl;
+      const intl2 = util.intl;
       obj = { handleDelete: null, reason: null };
       obj1 = { action: "bindDismissMessage", message };
       obj.handleDelete = obj1;
       obj.reason = ephemeralReasonMessage;
       obj.content = intl2.formatToParts(util.t.xgCMRQ, obj);
       obj.helpArticleLink = HelpdeskUtilsDefault.getArticleURL(constants.USING_APPS_FAQ);
-      const intl3 = tmp3(1114).intl;
+      const intl3 = util.intl;
       obj.helpButtonAccessibilityLabel = intl3.string(util.t.OIWSJe);
       return obj;
     } else {
@@ -48,8 +48,8 @@ export const createEphemeralIndication = function createEphemeralIndication(mess
       obj2.helpButtonAccessibilityLabel = intl5.string(util.t.htHOrp);
       if (null != GuildAutomodMessageStore.getMessage(message.id)) {
         obj2.helpArticleLink = HelpdeskUtilsDefault.getArticleURL(constants.GUILD_AUTOMOD_BLOCKED_MESSAGE);
-        const intl = tmp9(1114).intl;
-        obj2.helpButtonAccessibilityLabel = intl.string(tmp9(1114).t.OiCBhP);
+        const intl = util.intl;
+        obj2.helpButtonAccessibilityLabel = intl.string(util.t.OiCBhP);
         const tmp11Result = HelpdeskUtilsDefault;
       }
       return obj2;

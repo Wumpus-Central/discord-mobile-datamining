@@ -32,9 +32,9 @@ export default noop.memo(function CommunicationDisabledNoticeForGuild(guildMembe
     subtext: null,
     countdown: null,
   };
-  const intl = tmp(1114).intl;
+  const intl = util.intl;
   obj.message = intl.string(util.t.VSpdzK);
-  const intl2 = tmp(1114).intl;
+  const intl2 = util.intl;
   obj = { link };
   obj.subtext = intl2.format(util.t["4ZwD5G"], obj);
   obj.countdown = date;

@@ -125,7 +125,7 @@ export default {
       }
       if (null != enabledExperiments) {
         if (semanticColorContextFromThemeContext.enabledExperiments.length > 0) {
-          if (null != SemanticColorExperiments[TEXT_FEEDBACK_CRITICAL[tmp2]]) {
+          if (null != SemanticColorExperiments[TEXT_FEEDBACK_CRITICAL[closure_7]]) {
             enabledExperiments = semanticColorContextFromThemeContext.enabledExperiments;
             for (const item10035 of enabledExperiments) {
               let tmp12;

@@ -47,11 +47,11 @@ function ParticipantIcon(participant) {
     const voicePlatform = participant.voicePlatform;
     if (constants2.MOBILE === voicePlatform) {
       tmp3 = _modDef10064;
-    } else if (tmp19.XBOX === voicePlatform) {
+    } else if (constants2.XBOX === voicePlatform) {
       tmp3 = _modDef9442;
-    } else if (tmp19.PLAYSTATION === voicePlatform) {
+    } else if (constants2.PLAYSTATION === voicePlatform) {
       tmp3 = _modDef9464;
-    } else if (tmp19.QUEST === voicePlatform) {
+    } else if (constants2.QUEST === voicePlatform) {
       tmp3 = _modDef10065;
     }
   }
@@ -240,12 +240,15 @@ export default noop.memo((participant) => {
   const stateFromStoresObject = obj.useStateFromStoresObject(items, () => {
     let streamForUser = null;
     if (closure_2_11(participant)) {
-      streamForUser = ApplicationStreamingStore.getStreamForUser(tmp2.user.id, tmp2.stream.guildId);
+      streamForUser = ApplicationStreamingStore.getStreamForUser(participant.user.id, participant.stream.guildId);
     }
     const obj = { stream: streamForUser, activeStream: null };
     let activeStreamForUser = null;
     if (closure_2_11(participant)) {
-      activeStreamForUser = ApplicationStreamingStore.getActiveStreamForUser(tmp2.user.id, tmp2.stream.guildId);
+      activeStreamForUser = ApplicationStreamingStore.getActiveStreamForUser(
+        participant.user.id,
+        participant.stream.guildId,
+      );
     }
     obj.activeStream = activeStreamForUser;
     return obj;
@@ -286,7 +289,7 @@ export default noop.memo((participant) => {
   if (constants.HIDDEN_STREAM === type) {
     obj = { participant, style: contentStyle };
     let tmp10 = closure_13(StreamPreviewTile, obj);
-  } else if (tmp9.STREAM === type) {
+  } else if (constants.STREAM === type) {
     if (null != activeStream) {
       let id;
       if (stateFromStores != null) {
@@ -312,7 +315,7 @@ export default noop.memo((participant) => {
         }
         obj2.containerStyle = stageStreamContainer;
         obj1.children = closure_13(tmp2(tmp3[16]), obj2);
-        tmp17Result = tmp17(bottom, obj1);
+        tmp17Result = closure_13(bottom, obj1);
         const tmp2Result = tmp2(tmp3[16]);
       }
       tmp10 = tmp17Result;
@@ -323,7 +326,7 @@ export default noop.memo((participant) => {
         tmp10 = closure_13(StreamPreviewTile, obj3);
       }
     }
-  } else if (tmp9.USER === type) {
+  } else if (constants.USER === type) {
     const obj4 = {
       participant,
       avatarSize,
@@ -338,7 +341,7 @@ export default noop.memo((participant) => {
     tmp10 = closure_13(tmp2(tmp3[17]), obj4);
   } else {
     tmp10 = null;
-    if (tmp9.ACTIVITY === type) {
+    if (constants.ACTIVITY === type) {
       const obj5 = { participant, style: contentStyle, channel, onSingleTap };
       tmp10 = closure_13(tmp2(tmp3[18]), obj5);
     }

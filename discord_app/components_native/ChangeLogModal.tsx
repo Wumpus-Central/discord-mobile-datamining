@@ -2,11 +2,14 @@
 import nativeDefault from "../../discord_common/js/packages/tokens/native.tsx";
 import AnalyticsUtilsDefault from "../utils/AnalyticsUtils.tsx";
 import ModalActionCreatorsDefault from "../actions/ModalActionCreators.tsx";
+import FastImageDefault from "common/FastImage.tsx";
 import NavigatorHeader from "../design/components/Navigator/native/NavigatorHeader.native.tsx";
 import Navigator from "../design/components/Navigator/native/Navigator.native.tsx";
 import ChangeLogStandardTemplateDefault from "ChangeLogStandardTemplate.tsx";
 import openMediaModal from "../modules/media_viewer/native/components/openMediaModal.tsx";
 import common_VideoDefault from "common/Video.tsx";
+import TouchableHitBoxDefault from "../design/void/TouchableHitBox/native/TouchableHitBox.tsx";
+import _modDef10397 from "../../_runtime/metro/10397__.js";
 import _modDef15543 from "../../_runtime/metro/15543__.js";
 import noop from "../../_runtime/metro/00019__.js";
 
@@ -54,9 +57,9 @@ class ChangeLogScreen {
             obj.title = intl.string(changelog(navigation[13]).t.LRmNAl);
             const intl2 = changelog(navigation[13]).intl;
             if (null != date.date) {
-              if ("" !== tmp4.date) {
-                let toDateResult = loaded(navigation[23])(tmp4.date).toDate();
-                const obj2 = loaded(navigation[23])(tmp4.date);
+              if ("" !== date.date) {
+                let toDateResult = loaded(navigation[23])(date.date).toDate();
+                const obj2 = loaded(navigation[23])(date.date);
               }
               obj = { date: toDateResult };
               obj.subtitle = intl2.formatToPlainString(tmp3, obj);
@@ -315,14 +318,12 @@ prototype["renderVideo"] = function renderVideo() {
         const _HermesInternal = HermesInternal;
         obj3.uri = "https://i.ytimg.com/vi/" + youtube_video_id + "/hqdefault.jpg";
         obj2.source = obj3;
-        tmp6Result = tmp6(tmp7(5587), obj2);
-        const tmp7Result = tmp7(5587);
+        tmp6Result = closure_7(FastImageDefault, obj2);
+        const tmp7Result = FastImageDefault;
       }
       items[1] = tmp6Result;
       obj.children = items;
       tmp4Result = closure_8(View, obj);
-      tmp6 = closure_7;
-      tmp7 = importDefault;
     }
     return tmp4Result;
   } else {
@@ -359,15 +360,15 @@ prototype["renderVideo"] = function renderVideo() {
     const obj7 = {
       accessibilityLabel: "Play Video",
       accessibilityRole: "button",
-      source: tmp15(10397),
+      source: _modDef10397,
       onPress: self.playVideo,
       style: tmp.playButton,
       iconSize: tmp18(1178).IconSizes.CUSTOM,
       iconStyle: tmp.playIcon,
     };
-    obj6.children = tmp12(tmp15(9050), obj7);
-    tmp12Result = tmp12(tmp18(5123).PressableOpacity, obj6);
-    const tmp15Result = tmp15(9050);
+    obj6.children = closure_7(TouchableHitBoxDefault, obj7);
+    tmp12Result = closure_7(tmp18(5123).PressableOpacity, obj6);
+    const tmp15Result = TouchableHitBoxDefault;
   }
   items1[1] = tmp12Result;
   obj5.children = items1;

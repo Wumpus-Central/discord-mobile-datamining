@@ -101,19 +101,19 @@ class ChannelCallManager extends tmp2 {
           if (null == voiceChannelId) {
             const _Set = Set;
             const set = new Set();
-            obj[tmp2] = set;
-            obj._handleRing(obj[tmp2].size > 0, null);
+            obj[closure_1_12] = set;
+            obj._handleRing(obj[closure_1_12].size > 0, null);
           } else if (null != voiceChannelId) {
             applyArgumentsResult = guildRingingUsers.getGuildRingingUsers(voiceChannelId);
             const _Set2 = Set;
             const items = [];
-            HermesBuiltin.arraySpread(obj[tmp2], 0);
+            HermesBuiltin.arraySpread(obj[closure_1_12], 0);
             const set1 = new Set(items.filter((item) => !set.has(item)));
             if (set1.size > 0) {
               const item = set1.forEach((item) => {
                 set[closure_2_12].delete(item);
               });
-              obj._handleRing(obj[tmp2].size > 0, null);
+              obj._handleRing(obj[closure_1_12].size > 0, null);
             }
           }
         }

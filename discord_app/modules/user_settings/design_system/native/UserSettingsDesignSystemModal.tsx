@@ -7,8 +7,11 @@ import NavigatorHeader from "../../../../design/components/Navigator/native/Navi
 import Navigator from "../../../../design/components/Navigator/native/Navigator.native.tsx";
 import ModalScreen from "../../../../design/components/Modal/native/ModalScreen.native.tsx";
 import ModalContent from "../../../../design/components/Modal/native/ModalContent.native.tsx";
+import ModalActionButton from "../../../../design/components/Modal/native/ModalActionButton.native.tsx";
+import ModalFooter from "../../../../design/components/Modal/native/ModalFooter.native.tsx";
 import Modal from "../../../../design/components/Modal/native/Modal.native.tsx";
 import StepModal from "../../../../design/components/Modal/native/StepModal.native.tsx";
+import ModalDisclaimer from "../../../../design/components/Modal/native/ModalDisclaimer.native.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -260,7 +263,7 @@ function DemoScreen(arg0) {
   if (tmp5) {
     let obj = { style: tmp.emojiContainer, children: null };
     obj = { maxFontSizeMultiplier: 1, variant: "heading-xxl/medium", style: tmp.emoji, children: emoji };
-    obj.children = React5(tmp3(4556).Text, obj);
+    obj.children = React5(Text_Text.Text, obj);
     tmp5 = React5(hasOwnProperty, obj);
   }
   obj = { children: null };
@@ -281,24 +284,24 @@ function DemoScreen(arg0) {
     let tmp8Result = null != disclaimer;
     if (tmp8Result) {
       const obj2 = { children: disclaimer };
-      tmp8Result = tmp8(tmp3(14176).ModalDisclaimer, obj2);
+      tmp8Result = React5(ModalDisclaimer.ModalDisclaimer, obj2);
     }
     const items2 = [tmp8Result, ,];
     tmp8Result = null != action;
     if (tmp8Result) {
       const obj3 = { variant: "primary", text: action, onPress: onAction };
-      tmp8Result = tmp8(tmp3(10996).ModalActionButton, obj3);
+      tmp8Result = React5(ModalActionButton.ModalActionButton, obj3);
     }
     items2[1] = tmp8Result;
     let tmp8Result1 = null != secondaryAction;
     if (tmp8Result1) {
       const obj4 = { variant: "secondary", text: secondaryAction, onPress: onSecondaryAction };
-      tmp8Result1 = tmp8(tmp3(10996).ModalActionButton, obj4);
+      tmp8Result1 = React5(ModalActionButton.ModalActionButton, obj4);
     }
     const obj5 = { children: null };
     items2[2] = tmp8Result1;
     obj5.children = items2;
-    footer = tmp2(tmp3(11926).ModalFooter, obj5);
+    footer = React6(ModalFooter.ModalFooter, obj5);
   }
   children[1] = footer;
   return React6(ModalScreen.ModalScreen, { children });

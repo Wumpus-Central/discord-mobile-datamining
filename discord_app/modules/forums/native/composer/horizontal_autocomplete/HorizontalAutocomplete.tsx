@@ -8,6 +8,7 @@ import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import timing from "../../../../../design/animation/reanimated/timing/timing.tsx";
 import useMountEffectDefault from "../../../../../hooks/useMountEffect.tsx";
 import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
+import guild_boosting_RoleIconUtils from "../../../../guild_boosting/RoleIconUtils.tsx";
 import RoleIconDefault from "../../../../roles/native/RoleIcon.tsx";
 import _modDef8124 from "../../../../../../_runtime/metro/08124__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
@@ -124,8 +125,8 @@ export default {
     const stateFromStores = obj.useStateFromStores(items, () => GuildRoleStore.getRole(require, importDefault));
     let roleIconData = null;
     if (null != stateFromStores) {
-      roleIconData = tmp2(7187).getRoleIconData(stateFromStores, 30);
-      const tmp2Result = tmp2(7187);
+      roleIconData = guild_boosting_RoleIconUtils.getRoleIconData(stateFromStores, 30);
+      const tmp2Result = guild_boosting_RoleIconUtils;
     }
     obj = { onPress: onPress.onPress, children: null };
     let tmp9Result = null;
@@ -140,7 +141,7 @@ export default {
       obj1.source = tmp13;
       obj1.unicodeEmoji = roleIconData.unicodeEmoji;
       obj.children = closure_11(RoleIconDefault, obj1);
-      tmp9Result = tmp9(closure_4, obj);
+      tmp9Result = closure_11(closure_4, obj);
     }
     const items1 = [tmp9Result];
     const items2 = [tmp.nickname];

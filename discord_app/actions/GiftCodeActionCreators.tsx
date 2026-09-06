@@ -1,4 +1,5 @@
 // discord_app/actions/GiftCodeActionCreators.tsx
+import SentryUtilsDefault from "../utils/SentryUtils.native.tsx";
 import HTTPUtils from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import errors_V6OrEarlierAPIErrorDefault from "../errors/V6OrEarlierAPIError.tsx";
 import CodedLinkActionCreatorsDefault from "../modules/coded_links/web/CodedLinkActionCreators.tsx";
@@ -17,7 +18,7 @@ function resolveGiftCode() {
   }
   return applyArgumentsResult;
 }
-let closure_11 = async function _resolveGiftCode(arg0, value) {
+let closure_11 = async function _resolveGiftCode(arg0) {
   if (c8 === 2) {
     c8 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -186,7 +187,7 @@ let closure_11 = async function _resolveGiftCode(arg0, value) {
 function reportUnexpectedGiftCodeError(status) {
   if (status instanceof errors_V6OrEarlierAPIErrorDefault) {
     if (404 !== status.status) {
-      let tmpResult = tmp(1232);
+      let tmpResult = SentryUtilsDefault;
       let str = status.status;
       if (str == null) {
         str = "unknown";
@@ -199,13 +200,13 @@ function reportUnexpectedGiftCodeError(status) {
   } else {
     const _Error = Error;
     if (status instanceof Error) {
-      tmpResult = tmp(1232);
+      tmpResult = SentryUtilsDefault;
       tmpResult.captureException(status);
     }
   }
   return null;
 }
-let closure_12 = async function _deliverGiftCodes(recipient_ids, checkout_session_id) {
+let closure_12 = async function _deliverGiftCodes() {
   c3 = 0;
   c2 = 0;
   return (async (arg0, value) => {
@@ -231,7 +232,7 @@ const result = size.fileFinishedImporting("actions/GiftCodeActionCreators.tsx");
 export default {
   resolveGiftCode,
   reportUnexpectedGiftCodeError,
-  fetchUserGiftCodesForSKU(skuId, subscriptionPlanId) {
+  fetchUserGiftCodesForSKU(skuId) {
     closure_0 = skuId;
     let tmp = subscriptionPlanId;
     if (subscriptionPlanId === undefined) {
@@ -259,9 +260,9 @@ export default {
         tmp3(tmp23[6]);
       } else if (arg0 === 1) {
         c5 = 3;
-        throw arg1;
+        throw value;
       } else if (arg0 !== 2) {
-        closure_128_0 = arg1;
+        closure_128_0 = value;
         tmp3(tmp23[6]).dispatch({
           type: "GIFT_CODES_FETCH_SUCCESS",
           giftCodes: closure_128_0.body,
@@ -271,10 +272,10 @@ export default {
         c3 = 0;
         tmp3(tmp23[6]);
       }
-      return arg1;
+      return value;
     })();
   },
-  createGiftCode(skuId, subscriptionPlanId, giftStyle) {
+  createGiftCode(skuId) {
     closure_0 = skuId;
     let tmp = subscriptionPlanId;
     if (subscriptionPlanId === undefined) {
@@ -299,7 +300,8 @@ export default {
       tmp3(gift_style[6]);
       const obj4 = { type: "GIFT_CODE_CREATE_FAILURE", skuId: closure_129_0, subscriptionPlanId: closure_129_1 };
       obj4.dispatch(obj4);
-      closure_128_0 = await "HermesInternal";
+      await "HermesInternal";
+      closure_128_0 = value;
       tmp3(gift_style[6]).dispatch({ type: "GIFT_CODE_CREATE_SUCCESS", giftCode: closure_128_0.body });
       return closure_128_0.body;
     })();
@@ -318,13 +320,13 @@ export default {
         v2(tmp19[6]);
       } else if (arg0 === 1) {
         c4 = 3;
-        throw arg1;
+        throw value;
       } else if (arg0 !== 2) {
         v2(tmp19[6]).dispatch({ type: "GIFT_CODE_REVOKE_SUCCESS", code: closure_128_0 });
         c3 = 0;
         v2(tmp19[6]);
       }
-      return arg1;
+      return value;
     })();
   },
   openNativeGiftCodeModal(arg0) {

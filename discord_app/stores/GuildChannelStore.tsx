@@ -82,13 +82,13 @@ function rebuildGuildChannels(guildId) {
     }
     if (channel.type === ChannelTypes.GUILD_DIRECTORY) {
       if (null == dependencyMap[id]) {
-        dependencyMap[tmp8] = [];
+        dependencyMap[id] = [];
       }
-      let arr = dependencyMap[tmp8];
+      let arr = dependencyMap[id];
       arr = arr.push(channel);
     }
     if (null != obj[type]) {
-      arr = tmp[type].push(channel);
+      arr = obj[type].push(channel);
     }
   });
   const sorted = obj[SELECTABLE].sort(comparator);
@@ -106,13 +106,13 @@ function rebuildGuildChannels(guildId) {
     const call = hasOwnProperty.call;
     let tmp3 = null;
     if (typeof call === "unknown" ? hasOwnProperty(channelName) : call(id, channelName)) {
-      tmp3 = tmp2[channelName];
+      tmp3 = id[channelName];
     }
     if (null == tmp3) {
-      tmp2[channelName] = 1;
+      id[channelName] = 1;
       let sum = channelName;
     } else {
-      tmp2[channelName] = tmp3 + 1;
+      id[channelName] = tmp3 + 1;
       const _HermesInternal = HermesInternal;
       sum = channelName + "~" + tmp3;
     }
@@ -258,7 +258,7 @@ prototype["getFirstChannelOfType"] = function getFirstChannelOfType(arg0, _messa
   }
   return channel;
 };
-prototype["getFirstChannel"] = function getFirstChannel(id, arg1, flag) {
+prototype["getFirstChannel"] = function getFirstChannel(id, arg1) {
   if (flag === undefined) {
     flag = false;
   }
@@ -273,7 +273,7 @@ prototype["getFirstChannel"] = function getFirstChannel(id, arg1, flag) {
   }
   return firstChannelOfType;
 };
-prototype["getDefaultChannel"] = function getDefaultChannel(id, flag, CREATE_INSTANT_INVITE) {
+prototype["getDefaultChannel"] = function getDefaultChannel(id) {
   if (flag === undefined) {
     flag = false;
   }
@@ -283,7 +283,7 @@ prototype["getDefaultChannel"] = function getDefaultChannel(id, flag, CREATE_INS
   }
   return this.getFirstChannel(id, (channel) => PermissionStore.can(VIEW_CHANNEL, channel.channel), flag);
 };
-prototype["getSFWDefaultChannel"] = function getSFWDefaultChannel(id, flag) {
+prototype["getSFWDefaultChannel"] = function getSFWDefaultChannel(id) {
   if (flag === undefined) {
     flag = false;
   }
@@ -456,6 +456,7 @@ const guildChannelStore = new GuildChannelStore(DispatcherDefault, {
     if (tmp2) {
       rebuildGuildChannels(basicChannel.guild_id);
     }
+    tmp2 = null != basicChannel && null != basicChannel.guild_id;
   },
   VOICE_STATE_UPDATES: function handleVoiceStateUpdates(voiceStates) {
     voiceStates = voiceStates.voiceStates;

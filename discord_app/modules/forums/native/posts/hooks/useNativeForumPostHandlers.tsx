@@ -2,6 +2,7 @@
 import _modDef38 from "../../../../../../_runtime/metro/00038__.js";
 import PlatformUtils from "../../../../../utils/PlatformUtils.tsx";
 import ChatInputUtils from "../../../../../utils/native/ChatInputUtils.tsx";
+import HapticUtils from "../../../../haptics/HapticUtils.native.tsx";
 import haptics_HapticFeedbackTypesDefault from "../../../../haptics/HapticFeedbackTypes.tsx";
 import transitionToChannel from "../../../../routing/transitionToChannel.tsx";
 import useChannelName from "../../../../channel/useChannelName.tsx";
@@ -71,7 +72,7 @@ export default function useNativeForumPostHandlers(threadId) {
             const obj5 = callback1(9942);
           }
           if (!isAttachmentPathUrlResult) {
-            let result = src.type === tmp6(7897).ForumPostMediaTypes.EMBED;
+            let result = src.type === threadId(7897).ForumPostMediaTypes.EMBED;
             if (result) {
               result = callback1(9942).isExternalProxiedAttachmentUrl(str);
               const obj6 = callback1(9942);
@@ -79,7 +80,6 @@ export default function useNativeForumPostHandlers(threadId) {
             isAttachmentPathUrlResult = result;
           }
           tmp = isAttachmentPathUrlResult;
-          tmp6 = threadId;
         }
         str = src;
         if (tmp) {
@@ -144,19 +144,21 @@ export default function useNativeForumPostHandlers(threadId) {
   const callback1 = noop.useCallback(() => {
     let obj = PlatformUtils;
     if (obj.isAndroid()) {
-      let tmpResult = tmp(4528);
+      let tmpResult = HapticUtils;
       const result = tmpResult.triggerHapticFeedback(haptics_HapticFeedbackTypesDefault.IMPACT_LIGHT);
     }
     const channel = ChannelStore.getChannel(threadId);
     _modDef38(null != channel, "[Forum Post Handlers] Thread cannot be null.");
     const channel1 = ChannelStore.getChannel(channel.parent_id);
     _modDef38(null != channel1, "[Forum Post Handlers] Parent channel cannot be null.");
-    tmpResult = tmp(7767);
+    tmpResult = tracking_Tracking;
     obj = { guildId: channel1.guild_id, channelId: channel1.id, postId: threadId, location: null };
     obj = { page: constants2.GUILD_CHANNEL, section: constants3.FORUM_CHANNEL_POST };
     obj.location = obj;
     const result1 = tmpResult.trackForumPostClicked(obj);
     transitionToChannel.transitionToThread(channel, { source: constants.FORUM, navigationReplace: false });
+    const obj1 = { source: constants.FORUM, navigationReplace: false };
+    const tmpResult1 = transitionToChannel;
   }, items1);
   const items2 = [callback1, threadId];
   const items3 = [threadId];

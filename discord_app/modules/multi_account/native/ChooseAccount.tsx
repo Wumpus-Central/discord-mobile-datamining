@@ -46,7 +46,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/multi_account/native/ChooseAccount.tsx");
 
 export default function ChooseAccount() {
-  closure_2 = async function _handlePressRemove(arg0, value) {
+  closure_2 = async function _handlePressRemove(arg0) {
     if (c4 === 2) {
       c4 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -95,10 +95,10 @@ export default function ChooseAccount() {
             }
             const obj2 = { username: combined };
             obj1.body = intl(intl2, obj2);
-            intl = tmp30(1114).intl;
+            intl = closure_0(1114).intl;
             obj1.confirmText = intl.string(closure_0(1114).t.N86XcP);
             obj1.confirmColor = closure_0(1178).ButtonColors.RED;
-            intl2 = tmp30(1114).intl;
+            intl2 = closure_0(1114).intl;
             string = intl2.string;
             obj1.cancelText = string(closure_0(1114).t["ETE/oC"]);
             obj1 = tmp2(4905).confirm(obj1);

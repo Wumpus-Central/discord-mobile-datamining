@@ -270,12 +270,11 @@ prototype["computeCardsLayout"] = function computeCardsLayout() {
           if (item10061.type === VoicePanelCardItemType.CTA) {
             const targetDimensions = obj.getTargetDimensions(item10061.id);
           } else if (null != participant) {
-            if (participant.type === tmp4.USER) {
+            if (participant.type === ParticipantTypes.USER) {
               let defaultTargetCoords = obj.defaultTargetCoords;
             } else {
               defaultTargetCoords = obj.getTargetDimensions(item10061.id);
             }
-            tmp4 = ParticipantTypes;
           }
           if (null != targetDimensions) {
             if (null != participant) {
@@ -283,15 +282,15 @@ prototype["computeCardsLayout"] = function computeCardsLayout() {
               const type = participant.type;
               if (ParticipantTypes.ACTIVITY === type) {
                 set.add(obj);
-              } else if (tmp17.STREAM === type) {
+              } else if (ParticipantTypes.STREAM === type) {
                 set1.add(obj);
-              } else if (tmp17.USER === type) {
+              } else if (ParticipantTypes.USER === type) {
                 set2.add(obj);
               }
               let str = "stream";
               if (participant.type !== ParticipantTypes.STREAM) {
                 let str2 = "activity";
-                if (participant.type === tmp17.USER) {
+                if (participant.type === ParticipantTypes.USER) {
                   str2 = "camera";
                 }
                 str = str2;
@@ -445,7 +444,7 @@ prototype["computeCardsLayout"] = function computeCardsLayout() {
                   let size1 = { width: 2, height: 2 };
                 } else {
                   let num5 = 0;
-                  if (tmp15) {
+                  if (closure_0) {
                     num5 = 1;
                   }
                   size1 = { width: 2, height: 3 + num5 };
@@ -455,7 +454,7 @@ prototype["computeCardsLayout"] = function computeCardsLayout() {
                   if (tmp6.fillAspectRatio) {
                     if (tmp14) {
                       let num3 = 0;
-                      if (tmp15) {
+                      if (closure_0) {
                         num3 = 1;
                       }
                       let size2 = { width: 3 + num3, height: 2 };
@@ -497,7 +496,7 @@ prototype["computeCardsLayout"] = function computeCardsLayout() {
                     let _Array = Array;
                     let tmp33 = new.target;
                     let tmp34 = new.target;
-                    let array = new Array(tmp23);
+                    let array = new Array(bound2);
                     let fillResult = array.fill(0);
                     arr = arr.push(fillResult);
                     arr1 = fillResult;
@@ -538,7 +537,7 @@ prototype["computeCardsLayout"] = function computeCardsLayout() {
                             let _Array2 = Array;
                             let tmp52 = new.target;
                             let tmp53 = new.target;
-                            array = new Array(tmp23);
+                            array = new Array(bound2);
                             let fillResult1 = array.fill(0);
                             arr = arr.push(fillResult1);
                             tmp48 = fillResult1;
@@ -636,7 +635,7 @@ prototype["computeCardsLayout"] = function computeCardsLayout() {
                 c15 = tmp67;
                 const _Math2 = Math;
                 const _Math3 = Math;
-                closure_17 = Math.min(Math.max(closure_17, size2.startCol + (size2.width - 1)), tmp23);
+                closure_17 = Math.min(Math.max(closure_17, size2.startCol + (size2.width - 1)), bound2);
                 const size6 = {
                   id,
                   type: tmp21,
@@ -653,7 +652,6 @@ prototype["computeCardsLayout"] = function computeCardsLayout() {
                 let first = items[0];
                 if (first <= items[1]) {
                   do {
-                    let tmp73 = self;
                     let chunkedCoords = self.chunkedCoords;
                     value = chunkedCoords.get(first);
                     if (null == value) {
@@ -661,13 +659,13 @@ prototype["computeCardsLayout"] = function computeCardsLayout() {
                       let tmp75 = new.target;
                       let tmp76 = new.target;
                       set = new Set();
-                      let chunkedCoords2 = tmp73.chunkedCoords;
+                      let chunkedCoords2 = self.chunkedCoords;
                       let result1 = chunkedCoords2.set(first, set);
                       value = set;
                     }
                     let addResult = value.add(size6);
                     first = first + 1;
-                    tmp71 = tmp73;
+                    tmp71 = self;
                   } while (first <= items[1]);
                 }
                 const cardCoords = tmp71.cardCoords;
@@ -701,17 +699,16 @@ prototype["computeCardsLayout"] = function computeCardsLayout() {
             let flag3 = false;
             let num9 = 0;
             for (const item10211 of tmp77) {
-              let tmp61 = item10211;
               num9 = num9 + item10211;
               if (!flag2) {
-                let tmp65 = 1 === tmp61;
+                let tmp65 = 1 === item10211;
                 if (tmp65) {
                   tmp65 = flag3;
                 }
                 if (tmp65) {
                   flag2 = true;
                 }
-                if (0 === tmp61) {
+                if (0 === item10211) {
                   flag3 = true;
                 }
               }
@@ -734,10 +731,10 @@ prototype["computeCardsLayout"] = function computeCardsLayout() {
         let size1 = {
           width: (() => {
             if (0 === self.items.length) {
-              let sum = tmp.defaultTargetCoords.width * bound2 + (bound2 - 1) * gutter;
+              let sum = self.defaultTargetCoords.width * bound2 + (bound2 - 1) * gutter;
             } else {
               closure_17 = closure_17 + 1;
-              sum = tmp.defaultTargetCoords.width * closure_17 + (closure_17 - 1) * gutter;
+              sum = self.defaultTargetCoords.width * closure_17 + (closure_17 - 1) * gutter;
             }
             return sum;
           })(),
@@ -814,6 +811,7 @@ prototype["emitLayoutChanges"] = function emitLayoutChanges() {
       }
     });
   }
+  tmp = this.emitItemChanges && self.mounted;
 };
 prototype["deferredLayoutChange"] = function deferredLayoutChange() {
   const self = this;

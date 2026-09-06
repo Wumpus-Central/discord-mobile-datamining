@@ -1,5 +1,7 @@
 // discord_app/modules/premium/powerups/native/GuildPowerupsChannelRow.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import native from "../../../../design/void/native.tsx";
+import CircleErrorIcon from "../../../../design/components/Icon/native/redesign/generated/CircleErrorIcon.tsx";
 import LayerContext from "../../../../design/components/Layers/native/LayerContext.native.tsx";
 import AnalyticsLocationDefault from "../../../app_analytics/AnalyticsLocation.tsx";
 import openGuildPowerupsModalDefault from "utils/openGuildPowerupsModal.tsx";
@@ -17,10 +19,10 @@ function GuildPowerupsChannelRowIndicator(indicator) {
     const type = indicator.type;
     if (GuildPowerupsNotification.GuildPowerupNotificationIndicatorType.WARNING === type) {
       let obj = { color: nativeDefault.colors.STATUS_WARNING, size: "sm" };
-      return hasOwnProperty(tmp4(6610).CircleErrorIcon, obj);
-    } else if (tmp4(12495).GuildPowerupNotificationIndicatorType.UNREAD === type) {
+      return hasOwnProperty(CircleErrorIcon.CircleErrorIcon, obj);
+    } else if (GuildPowerupsNotification.GuildPowerupNotificationIndicatorType.UNREAD === type) {
       obj = { value: indicator.count, isMentionLowImportance: true };
-      return hasOwnProperty(tmp4(1178).Badge, obj);
+      return hasOwnProperty(native.Badge, obj);
     } else {
       return null;
     }
@@ -116,8 +118,6 @@ export default function GuildPowerupsChannelRow(guildId) {
     icon: null,
     channelInfo: null,
   };
-  const tmp17 = closure_6;
-  const tmp18 = View;
   const tmp6 = dismissNewBadgeIfShown(12510);
   const intl = tmp14(1114).intl;
   obj1.accessibilityLabel = intl.string(dismissNewBadgeIfShown(2428).yv3DJJ);
@@ -130,19 +130,19 @@ export default function GuildPowerupsChannelRow(guildId) {
   const tmp3Result = dismissNewBadgeIfShown(12379);
   obj1.icon = closure_5(tmp14(12379).BaseChannelIcon, { mode: DEFAULT, IconComponent: tmp14(16218).BoostTier2Icon });
   if (tmp6Result.showNewBadgeOnRow) {
-    let tmp16Result = tmp16(tmp14(12291).NewBadge, {});
+    let tmp16Result = closure_5(tmp14(12291).NewBadge, {});
   } else {
     let indicator1;
     if (tmp5 != null) {
       indicator1 = tmp5.indicator;
     }
     const obj4 = { indicator: indicator1 };
-    tmp16Result = tmp16(GuildPowerupsChannelRowIndicator, obj4);
+    tmp16Result = closure_5(GuildPowerupsChannelRowIndicator, obj4);
   }
   const obj5 = { zIndex: 1, children: null };
   obj1.channelInfo = tmp16Result;
   items1[1] = closure_5(tmp3Result, obj1);
   obj.children = items1;
-  obj5.children = tmp17(tmp18, obj);
+  obj5.children = closure_6(View, obj);
   return closure_5(tmp14(7156).LayerScope, obj5);
 }

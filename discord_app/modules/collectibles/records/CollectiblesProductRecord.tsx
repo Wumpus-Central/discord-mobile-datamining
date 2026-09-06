@@ -93,8 +93,8 @@ CollectiblesProductRecord["fromServer"] = function fromServer(arg0) {
   obj.badgeOverride = badge_override;
   obj.hideBadge = hide_badge;
   obj.isFirstParty = is_first_party;
-  if (typeof tmp3 === "function") {
-    tmp4 = new tmp4(obj, fromServerResult, merged, this, tmp7);
+  if (typeof CollectiblesProductRecord === "function") {
+    tmp4 = new tmp4(obj, fromServerResult, merged, this, React6);
     ({
       summary: tmp17.summary,
       type: tmp17.type,
@@ -118,8 +118,6 @@ CollectiblesProductRecord["fromServer"] = function fromServer(arg0) {
   } else {
     throw new TypeError("Trying to call a non-function");
   }
-  tmp3 = CollectiblesProductRecord;
-  tmp7 = React6;
 };
 CollectiblesProductRecord["fromStorefrontProductRecord"] = function fromStorefrontProductRecord(skus, arg1) {
   _require = skus;
@@ -318,7 +316,7 @@ CollectiblesProductRecord["fromStorefrontProductRecord"] = function fromStorefro
               obj.googleSkuIds = googleSkuIds;
               obj.eligibleOffers = tenantMetadata.eligibleOffers;
               obj.isFirstParty = collectibles.isFirstParty;
-              if (typeof tmp5 === "function") {
+              if (typeof prototype === "function") {
                 const tmp16 = new prototype(obj, tmp, premiumType, items, premiumType, item);
                 ({
                   baseVariantName: tmp16.baseVariantName,
@@ -330,7 +328,6 @@ CollectiblesProductRecord["fromStorefrontProductRecord"] = function fromStorefro
               } else {
                 throw new TypeError("Trying to call a non-function");
               }
-              tmp5 = prototype;
             }
           });
           found1 = str3.filter((item) => null != item);
@@ -380,8 +377,8 @@ CollectiblesProductRecord["fromStorefrontProductRecord"] = function fromStorefro
           found2 = mapped.filter((item) => null != item);
         }
         obj.bundledProducts = found2;
-        if (typeof tmp11 === "function") {
-          const tmp26 = new CollectiblesProductRecord(obj, tmp, premiumType, items, tmp15, type, str3);
+        if (typeof CollectiblesProductRecord === "function") {
+          const tmp26 = new CollectiblesProductRecord(obj, tmp, premiumType, items, closure_7, type, str3);
           ({
             summary: tmp26.summary,
             type: tmp26.type,
@@ -405,8 +402,6 @@ CollectiblesProductRecord["fromStorefrontProductRecord"] = function fromStorefro
         } else {
           throw new TypeError("Trying to call a non-function");
         }
-        tmp11 = CollectiblesProductRecord;
-        tmp15 = closure_7;
       }
       type = collectibles.type;
     }

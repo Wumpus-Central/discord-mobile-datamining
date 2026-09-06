@@ -172,7 +172,7 @@ let items = [
     },
   },
 ];
-let tmp8 = new "CANCELED"(
+const tmp8 = new "CANCELED"(
   "discord_protos.discord_experimentation.v1.LifecyclePlan",
   items,
   tmp6,
@@ -677,7 +677,7 @@ const obj5 = {
   },
 };
 items3[4] = obj5;
-let tmp11 = new "internalBinaryRead"(
+const tmp11 = new "internalBinaryRead"(
   "discord_protos.discord_experimentation.v1.RampStep",
   items3,
   tmp6,

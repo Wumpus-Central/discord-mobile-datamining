@@ -1,6 +1,7 @@
 // discord_app/modules/quests/native/AppStoreOverlay/AppStoreOverlayBody.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import _modDef672 from "../../../../../_runtime/metro/00672__.js";
+import util from "../../../../intl/index.native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import AppStoreOverlayStatsCarouselDefault from "AppStoreOverlayStatsCarousel.tsx";
@@ -100,7 +101,7 @@ export const AppStoreOverlayBody = function AppStoreOverlayBody(metadata) {
     obj3.source = obj4;
     obj3.style = tmp.icon;
     obj2.children = React5(FastImageDefault, obj3);
-    tmp12 = React5(tmp10, obj2);
+    tmp12 = React5(View, obj2);
   }
   const items2 = [tmp12, , , ,];
   const obj5 = { style: tmp.textBlock, children: null };
@@ -118,7 +119,7 @@ export const AppStoreOverlayBody = function AppStoreOverlayBody(metadata) {
   }
   if (tmp16Result) {
     const obj7 = { variant: "text-sm/medium", color: "text-subtle", children: metadata.subtitle };
-    tmp16Result = tmp16(tmp17(4556).Text, obj7);
+    tmp16Result = React5(Text_Text.Text, obj7);
   }
   items3[1] = tmp16Result;
   obj5.children = items3;
@@ -129,7 +130,7 @@ export const AppStoreOverlayBody = function AppStoreOverlayBody(metadata) {
   }
   if (tmp16Result) {
     const obj8 = { stats: metadata.stats, onRatingPress: onOpenReviews };
-    tmp16Result = tmp16(AppStoreOverlayStatsCarouselDefault, obj8);
+    tmp16Result = React5(AppStoreOverlayStatsCarouselDefault, obj8);
   }
   items2[2] = tmp16Result;
   let tmp3Result = null != metadata.media;
@@ -139,13 +140,13 @@ export const AppStoreOverlayBody = function AppStoreOverlayBody(metadata) {
   if (tmp3Result) {
     const obj9 = { style: tmp.mediaSection, children: null };
     const obj10 = { variant: "text-sm/semibold", color: "mobile-text-heading-primary", children: null };
-    const intl = tmp17(1114).intl;
-    obj10.children = intl.string(tmp17(1114).t["EV1W/L"]);
-    const items4 = [tmp16(tmp17(4556).Text, obj10)];
+    const intl = util.intl;
+    obj10.children = intl.string(util.t["EV1W/L"]);
+    const items4 = [React5(Text_Text.Text, obj10)];
     const obj11 = { media: metadata.media, onGetGamePress: onMediaGetGamePress };
-    items4[1] = tmp16(AppStoreOverlayMediaCarouselDefault, obj11);
+    items4[1] = React5(AppStoreOverlayMediaCarouselDefault, obj11);
     obj9.children = items4;
-    tmp3Result = tmp3(tmp10, obj9);
+    tmp3Result = React6(View, obj9);
   }
   items2[3] = tmp3Result;
   let tmp16Result1 = null != metadata.description;
@@ -154,7 +155,7 @@ export const AppStoreOverlayBody = function AppStoreOverlayBody(metadata) {
   }
   if (tmp16Result1) {
     const obj12 = { description: metadata.description };
-    tmp16Result1 = tmp16(AppStoreOverlayAboutSectionDefault, obj12);
+    tmp16Result1 = React5(AppStoreOverlayAboutSectionDefault, obj12);
   }
   const obj13 = { children: null };
   items2[4] = tmp16Result1;

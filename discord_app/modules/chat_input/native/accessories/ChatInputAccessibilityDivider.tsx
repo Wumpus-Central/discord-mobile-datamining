@@ -1,4 +1,6 @@
 // discord_app/modules/chat_input/native/accessories/ChatInputAccessibilityDivider.tsx
+import util from "../../../../intl/index.native.tsx";
+import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
 import useIsScreenReaderEnabled from "../../../a11y/native/useIsScreenReaderEnabled.native.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -22,8 +24,8 @@ export const ChatInputAccessibilityDivider = noop.memo(() => {
         accessibilityRole: "header",
         style: null,
       };
-      const intl = tmp(1114).intl;
-      obj.accessibilityLabel = intl.string(tmp(1114).t["uKZtC/"]);
+      const intl = util.intl;
+      obj.accessibilityLabel = intl.string(util.t["uKZtC/"]);
       const items = [absoluteFill.absoluteFill, { height: 1 }];
       obj.style = items;
       tmp3 = (
@@ -36,7 +38,7 @@ export const ChatInputAccessibilityDivider = noop.memo(() => {
         />
       );
     }
-    tmpResult = tmp(1115);
+    tmpResult = PlatformUtils;
   }
   return tmp3;
 });

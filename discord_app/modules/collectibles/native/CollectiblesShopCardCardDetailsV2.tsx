@@ -1,6 +1,7 @@
 // discord_app/modules/collectibles/native/CollectiblesShopCardCardDetailsV2.tsx
 import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import CollectiblesItemType from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
 import PremiumUtilsDefault from "../../../utils/PremiumUtils.tsx";
 import useToken from "../../../design/tokens/native/useToken.tsx";
 import ColorUtils from "../../../utils/ColorUtils.tsx";
@@ -11,6 +12,7 @@ import CollectiblesUtils from "../CollectiblesUtils.tsx";
 import useCurrentUser from "../hooks/useCurrentUser.tsx";
 import useCanPurchaseFrames from "../hooks/useCanPurchaseFrames.tsx";
 import getProductName from "../utils/getProductName.tsx";
+import CollectiblesShopCardVariantsDefault from "CollectiblesShopCardVariants.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import IAPStore from "../../../stores/native/IAPStore.android.tsx";
 
@@ -109,7 +111,7 @@ const memoResult = noop.memo((arg0) => {
   }, items3);
   if (isFetchingGoogleSkus) {
     if (null == formattedPriceForCollectiblesProduct) {
-      return closure_8(tmp(tmp2[12]).CollectiblesShopPricePlaceholder, {});
+      return closure_8(hasShopDiscount(tmp2[12]).CollectiblesShopPricePlaceholder, {});
     }
   }
   if ("partiallyOwnedBundle" === collectibleProductState) {
@@ -121,9 +123,9 @@ const memoResult = noop.memo((arg0) => {
       style: styles.text,
       children: null,
     };
-    const intl6 = tmp(tmp2[14]).intl;
-    obj.children = intl6.string(tmp(tmp2[14]).t.BEjTij);
-    obj.children = closure_8(tmp(tmp2[13]).Text, obj);
+    const intl6 = hasShopDiscount(tmp2[14]).intl;
+    obj.children = intl6.string(hasShopDiscount(tmp2[14]).t.BEjTij);
+    obj.children = closure_8(hasShopDiscount(tmp2[13]).Text, obj);
     return closure_8(View, obj);
   } else if ("purchased" === collectibleProductState) {
     obj1 = { style: styles.priceDescription, children: null };
@@ -134,9 +136,9 @@ const memoResult = noop.memo((arg0) => {
       style: styles.text,
       children: null,
     };
-    const intl5 = tmp(tmp2[14]).intl;
-    obj2.children = intl5.string(tmp(tmp2[14]).t["6cfuDj"]);
-    obj1.children = closure_8(tmp(tmp2[13]).Text, obj2);
+    const intl5 = hasShopDiscount(tmp2[14]).intl;
+    obj2.children = intl5.string(hasShopDiscount(tmp2[14]).t["6cfuDj"]);
+    obj1.children = closure_8(hasShopDiscount(tmp2[13]).Text, obj2);
     return closure_8(View, obj1);
   } else if ("nitroUpsell" === collectibleProductState) {
     obj3 = { style: styles.priceDescription, children: null };
@@ -147,9 +149,9 @@ const memoResult = noop.memo((arg0) => {
       style: styles.text,
       children: null,
     };
-    const intl4 = tmp(tmp2[14]).intl;
-    obj4.children = intl4.string(tmp(tmp2[14]).t.sEAnVH);
-    obj3.children = closure_8(tmp(tmp2[13]).Text, obj4);
+    const intl4 = hasShopDiscount(tmp2[14]).intl;
+    obj4.children = intl4.string(hasShopDiscount(tmp2[14]).t.sEAnVH);
+    obj3.children = closure_8(hasShopDiscount(tmp2[13]).Text, obj4);
     return closure_8(View, obj3);
   } else if ("nitroClaim" === collectibleProductState) {
     const obj5 = { style: styles.priceDescription, children: null };
@@ -160,9 +162,9 @@ const memoResult = noop.memo((arg0) => {
       style: styles.text,
       children: null,
     };
-    const intl3 = tmp(tmp2[14]).intl;
-    obj6.children = intl3.string(tmp(tmp2[14]).t.rt69oo);
-    obj5.children = closure_8(tmp(tmp2[13]).Text, obj6);
+    const intl3 = hasShopDiscount(tmp2[14]).intl;
+    obj6.children = intl3.string(hasShopDiscount(tmp2[14]).t.rt69oo);
+    obj5.children = closure_8(hasShopDiscount(tmp2[13]).Text, obj6);
     return closure_8(View, obj5);
   } else {
     if (isDisabled) {
@@ -174,9 +176,9 @@ const memoResult = noop.memo((arg0) => {
         style: styles.text,
         children: null,
       };
-      const intl2 = tmp(tmp2[14]).intl;
-      obj8.children = intl2.string(tmp(tmp2[14]).t.wu4gyV);
-      obj7.children = closure_8(tmp(tmp2[13]).Text, obj8);
+      const intl2 = hasShopDiscount(tmp2[14]).intl;
+      obj8.children = intl2.string(hasShopDiscount(tmp2[14]).t.wu4gyV);
+      obj7.children = closure_8(hasShopDiscount(tmp2[13]).Text, obj8);
       let tmp11Result = closure_8(View, obj7);
     } else {
       if (null != memo) {
@@ -196,7 +198,7 @@ const memoResult = noop.memo((arg0) => {
           items4[1] = obj10;
           obj9.style = items4;
           const obj11 = { size: "xxs", color: "mobile-text-heading-primary", style: styles.wheelIcon };
-          const items5 = [closure_8(tmp(tmp2[15]).OrbsIcon, obj11), ,];
+          const items5 = [closure_8(hasShopDiscount(tmp2[15]).OrbsIcon, obj11), ,];
           const obj12 = {
             variant: "text-xs/semibold",
             color: "mobile-text-heading-primary",
@@ -205,20 +207,20 @@ const memoResult = noop.memo((arg0) => {
             style: null,
             children: null,
           };
-          const intl = tmp(tmp2[14]).intl;
+          const intl = hasShopDiscount(tmp2[14]).intl;
           const obj13 = { orbAmount: memo.amount };
-          obj12.accessibilityLabel = intl.formatToPlainString(tmp(tmp2[14]).t.W4DfeF, obj13);
+          obj12.accessibilityLabel = intl.formatToPlainString(hasShopDiscount(tmp2[14]).t.W4DfeF, obj13);
           const items6 = [styles.text];
-          let tmpResult = tmp(tmp2[16]);
+          let tmpResult = hasShopDiscount(tmp2[16]);
           items6[1] = tmpResult.isAndroid() && styles.androidTextPadding;
           obj12.style = items6;
           obj12.children = memo.amount;
-          items5[1] = closure_8(tmp(tmp2[13]).Text, obj12);
-          let tmp14Result = memo2 >= tmp(tmp2[10]).DISCOUNT_DISPLAY_MINIMUM_THRESHOLD;
+          items5[1] = closure_8(hasShopDiscount(tmp2[13]).Text, obj12);
+          let tmp14Result = memo2 >= hasShopDiscount(tmp2[10]).DISCOUNT_DISPLAY_MINIMUM_THRESHOLD;
           if (tmp14Result) {
             const items7 = [, ,];
             ({ discountPercentage: arr8[0], text: arr8[1] } = styles);
-            tmpResult = tmp(tmp2[16]);
+            tmpResult = hasShopDiscount(tmp2[16]);
             let androidTextPadding;
             if (tmpResult.isAndroid()) {
               androidTextPadding = styles.androidTextPadding;
@@ -234,7 +236,7 @@ const memoResult = noop.memo((arg0) => {
             obj14.style = items7;
             const _HermesInternal = HermesInternal;
             obj14.children = "-" + memo2 + "%";
-            tmp14Result = tmp14(tmp(tmp2[13]).Text, obj14);
+            tmp14Result = closure_8(hasShopDiscount(tmp2[13]).Text, obj14);
           }
           items5[2] = tmp14Result;
           obj9.children = items5;
@@ -245,7 +247,7 @@ const memoResult = noop.memo((arg0) => {
       if (!hasShopDiscount) {
         const items8 = [hasShopDiscount, ,];
         const items9 = [styles.text];
-        const tmpResult1 = tmp(tmp2[16]);
+        const tmpResult1 = hasShopDiscount(tmp2[16]);
         const obj16 = {
           variant: "text-xs/semibold",
           color: "mobile-text-heading-primary",
@@ -253,11 +255,11 @@ const memoResult = noop.memo((arg0) => {
           style: null,
           children: null,
         };
-        items9[1] = tmp(tmp2[16]).isAndroid() && styles.androidTextPadding;
+        items9[1] = hasShopDiscount(tmp2[16]).isAndroid() && styles.androidTextPadding;
         obj16.style = items9;
         obj16.children = formattedPriceForCollectiblesProduct;
-        items8[1] = closure_8(tmp(tmp2[13]).Text, obj16);
-        let tmp24Result = memo1 >= tmp(tmp2[10]).DISCOUNT_DISPLAY_MINIMUM_THRESHOLD;
+        items8[1] = closure_8(hasShopDiscount(tmp2[13]).Text, obj16);
+        let tmp24Result = memo1 >= hasShopDiscount(tmp2[10]).DISCOUNT_DISPLAY_MINIMUM_THRESHOLD;
         if (tmp24Result) {
           const items10 = [, ,];
           ({ discountPercentage: arr11[0], text: arr11[1] } = styles);
@@ -276,19 +278,19 @@ const memoResult = noop.memo((arg0) => {
           obj17.style = items10;
           const _HermesInternal2 = HermesInternal;
           obj17.children = "-" + memo1 + "%";
-          tmp24Result = tmp24(tmp(tmp2[13]).Text, obj17);
-          tmpResult2 = tmp(tmp2[16]);
+          tmp24Result = closure_8(hasShopDiscount(tmp2[13]).Text, obj17);
+          tmpResult2 = hasShopDiscount(tmp2[16]);
         }
         items8[2] = tmp24Result;
         obj15.children = items8;
         obj9 = obj15;
-        const tmp25 = tmp(tmp2[16]).isAndroid() && styles.androidTextPadding;
-      } else if (discountSource === tmp(tmp2[10]).ShopDiscountSource.THIRDPARTY) {
+        const tmp25 = hasShopDiscount(tmp2[16]).isAndroid() && styles.androidTextPadding;
+      } else if (discountSource === hasShopDiscount(tmp2[10]).ShopDiscountSource.THIRDPARTY) {
         const obj18 = { size: "xs", color: "mobile-text-heading-primary", style: styles.wheelIcon };
-        let tmp21 = closure_8(tmp(tmp2[17]).TagIcon, obj18);
+        let tmp21 = closure_8(hasShopDiscount(tmp2[17]).TagIcon, obj18);
       } else {
         const obj19 = { size: "xs", color: "mobile-text-heading-primary", style: styles.wheelIcon };
-        tmp21 = closure_8(tmp(tmp2[18]).NitroWheelIcon, obj19);
+        tmp21 = closure_8(hasShopDiscount(tmp2[18]).NitroWheelIcon, obj19);
       }
     }
     return tmp11Result;
@@ -307,15 +309,15 @@ export default noop.memo(function CardDetailsV2(arg0) {
   let obj1 = useCanPurchaseFrames;
   let isProfileFramesEarlyAccessPhase = obj1.useIsProfileFramesEarlyAccessPhase("CollectiblesShopCardCardDetailsV2");
   if (isProfileFramesEarlyAccessPhase) {
-    let tmp2Result = tmp2(7553);
+    let tmp2Result = CollectiblesProductUtils;
     const productType = tmp2Result.getProductType(product);
-    isProfileFramesEarlyAccessPhase = productType === tmp2(1889).CollectiblesItemType.PROFILE_FRAME;
+    isProfileFramesEarlyAccessPhase = productType === CollectiblesItemType.CollectiblesItemType.PROFILE_FRAME;
   }
   let obj3 = PremiumUtilsDefault;
-  tmp2Result = tmp2(7554);
+  tmp2Result = CollectiblesUtils;
   const shopDiscountSource = tmp2Result.getShopDiscountSource(currentUser);
   const tmp8 = obj3.canUseShopDiscounts(currentUser) || isProfileFramesEarlyAccessPhase;
-  const token = useToken.useToken(tmp7(576).colors.BACKGROUND_BASE_LOW);
+  const token = useToken.useToken(nativeDefault.colors.BACKGROUND_BASE_LOW);
   const tmp2Result1 = useToken;
   const tmp2Result2 = ColorUtils;
   const tmp2Result3 = ColorUtils;
@@ -362,11 +364,11 @@ export default noop.memo(function CardDetailsV2(arg0) {
       preferVCPrice,
       isDisabled,
     };
-    const items4 = [tmp17(memoResult, obj2)];
+    const items4 = [React6(memoResult, obj2)];
     obj3 = { product };
-    items4[1] = tmp17(tmp7(8865), obj3);
+    items4[1] = React6(CollectiblesShopCardVariantsDefault, obj3);
     obj1.children = items4;
-    tmp15Result = tmp15(View, obj1);
+    tmp15Result = React7(View, obj1);
   }
   items3[1] = tmp15Result;
   obj.children = items3;

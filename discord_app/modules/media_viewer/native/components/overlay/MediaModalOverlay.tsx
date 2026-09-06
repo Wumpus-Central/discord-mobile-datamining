@@ -1,6 +1,7 @@
 // discord_app/modules/media_viewer/native/components/overlay/MediaModalOverlay.tsx
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../../intl/index.native.tsx";
+import PlatformUtils from "../../../../../utils/PlatformUtils.tsx";
 import ReanimatedRexportDefault from "../../../../reanimated/ReanimatedRexport.tsx";
 import VisualEffectViewDefault from "../../../../visual_effect_view/native/VisualEffectView.tsx";
 import common_SafeAreaView from "../../../../../components_native/common/SafeAreaView.tsx";
@@ -8,12 +9,15 @@ import useMediaViewerSources from "../../useMediaViewerSources.tsx";
 import MediaSourceUtil from "../../MediaSourceUtil.tsx";
 import useVideoControls from "../../useVideoControls.tsx";
 import MediaPlayerMuteManager from "../../MediaPlayerMuteManager.tsx";
+import MediaViewerDimensionsContext from "../../MediaViewerDimensionsContext.tsx";
 import TouchableHitBoxDefault from "../../../../../design/void/TouchableHitBox/native/TouchableHitBox.tsx";
 import useMediaModalFooterAction from "../../useMediaModalFooterAction.tsx";
 import useOverlayLayoutDriver from "../../useOverlayLayoutDriver.tsx";
 import MediaViewerThumbnailsDefault from "../MediaViewerThumbnails.tsx";
 import MediaModalOverlayHeader from "MediaModalOverlayHeader.tsx";
 import MediaModalOverlayAltTextDefault from "MediaModalOverlayAltText.tsx";
+import MediaModalOverlayFooterAction from "MediaModalOverlayFooterAction.tsx";
+import MediaModalOverlayFooter from "MediaModalOverlayFooter.tsx";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
@@ -142,7 +146,7 @@ let closure_13 = noop.memo((arg0) => {
   const mediaModalFooterActionStore = obj3.useMediaModalFooterActionStore((footerAction) => footerAction.footerAction);
   if (null != slider) {
     const rect = { bottom: true, left: true, right: true, style: { paddingTop: 8 }, children: null };
-    let tmp2Result = tmp2(1115);
+    let tmp2Result = PlatformUtils;
     let isIOSResult = tmp2Result.isIOS();
     if (isIOSResult) {
       obj = { blurTheme: "dark", style: StyleSheet.absoluteFill };
@@ -156,11 +160,11 @@ let closure_13 = noop.memo((arg0) => {
     }
     items[2] = tmp17;
     rect.children = items;
-    let tmp22Result2 = React6(tmp2(7123).SafeAreaPaddingView, rect);
+    let tmp22Result2 = React6(common_SafeAreaView.SafeAreaPaddingView, rect);
   } else {
     tmp22Result2 = null;
   }
-  tmp2Result = tmp2(8293);
+  tmp2Result = MediaViewerDimensionsContext;
   obj1 = {
     animationDriver: overlayLayoutDriver,
     disableDownload,
@@ -179,35 +183,35 @@ let closure_13 = noop.memo((arg0) => {
   let tmp22Result = !tmp7;
   if (!tmp7) {
     obj3 = { description: source.description };
-    tmp22Result = tmp22(MediaModalOverlayAltTextDefault, obj3);
+    tmp22Result = React5(MediaModalOverlayAltTextDefault, obj3);
   }
   const items3 = [tmp22Result, ,];
   if (null != slider) {
     const obj4 = { style: tmp.overlayIcons, children: null };
     tmp22Result = null != slider;
     if (tmp22Result) {
-      const obj5 = { isMuted: mediaPlayerMutedStore, onToggleMute: tmp2(8270).toggleMuted };
-      tmp22Result = tmp22(OverlayMuteButton, obj5);
+      const obj5 = { isMuted: mediaPlayerMutedStore, onToggleMute: useVideoControls.toggleMuted };
+      tmp22Result = React5(OverlayMuteButton, obj5);
     }
     const items4 = [tmp22Result];
     let tmp22Result1 = null;
     if (obscure) {
       const obj6 = { spoilerActive, onToggleObscure: toggleObscure };
-      tmp22Result1 = tmp22(OverlayObscureToggleButton, obj6);
+      tmp22Result1 = React5(OverlayObscureToggleButton, obj6);
     }
     items4[1] = tmp22Result1;
     obj4.children = items4;
-    let tmp20Result = tmp20(View, obj4);
+    let tmp20Result = React6(View, obj4);
   } else {
     tmp20Result = null;
   }
   items3[1] = tmp20Result;
   if (null != mediaModalFooterActionStore) {
     const obj7 = { footerAction: mediaModalFooterActionStore, sliderElement: slider, syncer };
-    tmp22Result2 = tmp22(tmp2(12970).MediaModalOverlayFooterAction, obj7);
+    tmp22Result2 = React5(MediaModalOverlayFooterAction.MediaModalOverlayFooterAction, obj7);
   } else if (disableMediaOverlayFooter) {
     const obj8 = { bottom: true, style: tmp.invisibleFooter };
-    tmp22Result2 = tmp22(tmp2(7123).SafeAreaPaddingView, obj8);
+    tmp22Result2 = React5(common_SafeAreaView.SafeAreaPaddingView, obj8);
   } else if (tmp2Result.useMediaViewerDimensions().height >= 600) {
     const obj9 = {
       sliderElement: slider,
@@ -223,7 +227,7 @@ let closure_13 = noop.memo((arg0) => {
     obj9.onClose = onClose;
     obj9.onFullViewToggled = tmp8;
     obj9.overlayEnabled = overlayEnabled;
-    tmp22Result2 = tmp22(tmp2(12971).MediaModalOverlayFooter, obj9);
+    tmp22Result2 = React5(MediaModalOverlayFooter.MediaModalOverlayFooter, obj9);
   }
   const obj10 = { children: null };
   items3[2] = tmp22Result2;

@@ -39,11 +39,11 @@ export default function ForumPostGridFooter(parentChannel) {
   if (tmp5Result) {
     obj = { children: null };
     const obj1 = { style: tmp.dot };
-    const items1 = [tmp7(tmp6, obj1)];
+    const items1 = [hasOwnProperty(View, obj1)];
     const obj2 = { thread, typingUserIds, hasUnreads };
-    items1[1] = tmp7(ForumPostTypingUsersDefault, obj2);
+    items1[1] = hasOwnProperty(ForumPostTypingUsersDefault, obj2);
     obj.children = items1;
-    tmp5Result = tmp5(timestampProducer, obj);
+    tmp5Result = React5(timestampProducer, obj);
   }
   items[1] = tmp5Result;
   let tmp7Result = null != firstMessage;
@@ -54,7 +54,7 @@ export default function ForumPostGridFooter(parentChannel) {
       parentChannel: parentChannel.parentChannel,
       locationAnalyticsObject: AnalyticsObjects.FORUM_GRID_ITEM_FOOTER,
     };
-    tmp7Result = tmp7(ForumPostReactions.MostCommonForumPostReaction, obj3);
+    tmp7Result = hasOwnProperty(ForumPostReactions.MostCommonForumPostReaction, obj3);
   }
   items[2] = tmp7Result;
   obj.children = items;

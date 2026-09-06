@@ -46,7 +46,7 @@ export const getEmojiPopoutData = function getEmojiPopoutData(sourceType) {
     if (isPremium2) {
       if (!hasJoinedEmojiSourceGuild2) {
         if (isDiscoverable2) {
-          let DEFAULT = tmp57.CROSS_SERVER;
+          let DEFAULT = constants.CROSS_SERVER;
         }
         ({ isPremium: isPremium3, hasJoinedEmojiSourceGuild: hasJoinedEmojiSourceGuild3 } = sourceType);
         let isDiscoverable3 = !hasJoinedEmojiSourceGuild3;
@@ -79,7 +79,9 @@ export const getEmojiPopoutData = function getEmojiPopoutData(sourceType) {
     if (!isPremium2) {
       if (hasJoinedEmojiSourceGuild2) {
         if (!isUnusableRoleSubscriptionEmoji2) {
-          DEFAULT = emojiComesFromCurrentGuild2 ? tmp57.UPSELL_CURRENT_SERVER_JOINED : tmp57.UPSELL_CROSS_SERVER_JOINED;
+          DEFAULT = emojiComesFromCurrentGuild2
+            ? constants.UPSELL_CURRENT_SERVER_JOINED
+            : constants.UPSELL_CROSS_SERVER_JOINED;
         }
       }
     }
@@ -149,12 +151,12 @@ export const getEmojiPopoutData = function getEmojiPopoutData(sourceType) {
   } else {
     const intl = util.intl;
     if (isDiscoverable) {
-      formatToPlainStringResult = intl.string(tmp2(1114).t.FJ6Z01);
-      tmp6 = tmp2;
+      formatToPlainStringResult = intl.string(util.t.FJ6Z01);
+      tmp6 = require;
     } else {
       obj = { openPremiumSettings: onOpenPremiumSettings };
-      formatToPlainStringResult = intl.format(tmp2(1114).t.U6vLcA, obj);
-      tmp6 = tmp2;
+      formatToPlainStringResult = intl.format(util.t.U6vLcA, obj);
+      tmp6 = require;
     }
   }
 };

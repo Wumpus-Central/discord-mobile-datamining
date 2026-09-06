@@ -1,7 +1,9 @@
 // discord_app/modules/launchpad/native/shared/renderChannelContent.tsx
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
+import isRoleRequiredDefault from "../../../channel/isRoleRequired.tsx";
 import LockIcon from "../../../../design/components/Icon/native/redesign/generated/LockIcon.tsx";
 import WarningIcon from "../../../../design/components/Icon/native/redesign/generated/WarningIcon.tsx";
+import GuildRoleSubscriptionGatedChannelIconDefault from "../../../guild_role_subscriptions/native/premium_channel/GuildRoleSubscriptionGatedChannelIcon.tsx";
 import getLayoutStylesDefault from "getLayoutStyles.tsx";
 import ChannelTitleDefault from "ChannelTitle.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -25,7 +27,7 @@ function ChannelContent(arg0) {
   let tmp9Result = null != channel;
   if (tmp9Result) {
     if (!locked) {
-      locked = tmp2(5062)(channel);
+      locked = isRoleRequiredDefault(channel);
     }
     tmp9Result = locked;
   }
@@ -68,7 +70,7 @@ function ChannelContent(arg0) {
       style: { marginRight: 4 },
       children: channelCategoryName,
     };
-    tmp9Result = tmp9(Text_Text.Text, obj4);
+    tmp9Result = React5(Text_Text.Text, obj4);
   }
   items1[1] = tmp9Result;
   let tmp11Result = tmp9Result;
@@ -90,21 +92,21 @@ function ChannelContent(arg0) {
     obj5.style = items2;
     if (tmp9Result) {
       const obj7 = { size: "xxs", color: "icon-muted", style: tmp.channelTraitIcon };
-      tmp9Result = tmp9(LockIcon.LockIcon, obj7);
+      tmp9Result = React5(LockIcon.LockIcon, obj7);
     }
     const items3 = [tmp9Result, ,];
     if (isNSFWResult) {
       const obj8 = { size: "xxs", color: "icon-muted", style: tmp.channelTraitIcon };
-      isNSFWResult = tmp9(WarningIcon.WarningIcon, obj8);
+      isNSFWResult = React5(WarningIcon.WarningIcon, obj8);
     }
     items3[1] = isNSFWResult;
     if (isSubscriptionGated) {
       const obj9 = { locked: needSubscriptionToAccess, isInMainTabsExperiment: true };
-      isSubscriptionGated = tmp9(tmp2(16118), obj9);
+      isSubscriptionGated = React5(GuildRoleSubscriptionGatedChannelIconDefault, obj9);
     }
     items3[2] = isSubscriptionGated;
     obj5.children = items3;
-    tmp11Result = tmp11(tmp10, obj5);
+    tmp11Result = React6(View, obj5);
   }
   items1[2] = tmp11Result;
   obj2.children = items1;
@@ -125,7 +127,7 @@ function ChannelContent(arg0) {
     items5[1] = obj12;
     obj10.style = items5;
     obj10.children = subtitle;
-    tmp9Result1 = tmp9(tmp10, obj10);
+    tmp9Result1 = React5(View, obj10);
   }
   items4[1] = tmp9Result1;
   obj1.children = items4;
@@ -147,7 +149,7 @@ function ChannelContent(arg0) {
     const obj15 = { marginLeft: "auto", opacity: num6 };
     obj14.style = obj15;
     obj14.children = lastMessageTimestampString;
-    tmp9Result2 = tmp9(Text_Text.Text, obj14);
+    tmp9Result2 = React5(Text_Text.Text, obj14);
   }
   const items7 = [tmp9Result2, ,];
   const items8 = [{ alignItems: "center", paddingLeft: 4 }];
@@ -158,7 +160,7 @@ function ChannelContent(arg0) {
   items7[1] = React5(View, { style: items8, children: mentionBadge });
   if (tmp9Result3) {
     const obj16 = { style: { flex: 1 } };
-    tmp9Result3 = tmp9(tmp10, obj16);
+    tmp9Result3 = React5(View, obj16);
   }
   items7[2] = tmp9Result3;
   obj13.children = items7;

@@ -12,6 +12,7 @@ export const hideLiveChannelNotice = function hideLiveChannelNotice(arg0) {
     const obj = { type: "LIVE_CHANNEL_NOTICE_HIDE", eventId, stageId };
     obj.dispatch(obj);
   }
+  tmp = null == eventId && null == stageId;
 };
 export const hideUpcomingEventNotice = function hideUpcomingEventNotice(eventId) {
   const obj = { type: "UPCOMING_GUILD_EVENT_NOTICE_HIDE", eventId };

@@ -3,6 +3,8 @@ import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import Stack_Stack from "../../../design/components/Stack/native/Stack.native.tsx";
 import ModalScreen from "../../../design/components/Modal/native/ModalScreen.native.tsx";
 import ModalContent from "../../../design/components/Modal/native/ModalContent.native.tsx";
+import ModalActionButton from "../../../design/components/Modal/native/ModalActionButton.native.tsx";
+import ModalFooter from "../../../design/components/Modal/native/ModalFooter.native.tsx";
 import LogOutDisclaimerDefault from "LogOutDisclaimer.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
@@ -44,7 +46,7 @@ export default function SafetyFlowTaskScreen(action) {
   let tmp7Result = null != subtitle;
   if (tmp7Result) {
     obj = { variant: "text-md/medium", color: subtitleColor, style: tmp2.header, children: subtitle };
-    tmp7Result = tmp7(tmp4(4556).Text, obj);
+    tmp7Result = React3(Text_Text.Text, obj);
   }
   obj = { children: null };
   items[2] = tmp7Result;
@@ -56,18 +58,18 @@ export default function SafetyFlowTaskScreen(action) {
   children = [React4(ModalContent.ModalContent, obj)];
   if (undefined === footer) {
     if (withLogout) {
-      withLogout = tmp7(LogOutDisclaimerDefault, {});
+      withLogout = React3(LogOutDisclaimerDefault, {});
     }
     const items3 = [withLogout];
     tmp7Result = null != action;
     if (tmp7Result) {
       const obj1 = { variant: "primary", text: action, onPress: onAction, loading: submitting };
-      tmp7Result = tmp7(tmp4(10996).ModalActionButton, obj1);
+      tmp7Result = React3(ModalActionButton.ModalActionButton, obj1);
     }
     const obj2 = { children: null };
     items3[1] = tmp7Result;
     obj2.children = items3;
-    footer = tmp3(tmp4(11926).ModalFooter, obj2);
+    footer = React4(ModalFooter.ModalFooter, obj2);
   }
   children[1] = footer;
   return React4(ModalScreen.ModalScreen, { children });

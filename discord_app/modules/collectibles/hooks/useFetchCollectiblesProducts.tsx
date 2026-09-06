@@ -11,9 +11,12 @@ const SKUProductLines = fn(1074).SKUProductLines;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/hooks/useFetchCollectiblesProducts.tsx");
 
-export const useFetchCollectiblesProducts = function useFetchCollectiblesProducts(gameProfileShopCollection, arg1) {
+export const useFetchCollectiblesProducts = function useFetchCollectiblesProducts(
+  gameProfileShopCollection,
+  includeBundles,
+) {
   _require = gameProfileShopCollection;
-  dependencyMap = arg1;
+  dependencyMap = includeBundles;
   const items = [stateFromStoresArray2];
   const stateFromStoresArray = require("useStateFromStores").useStateFromStoresArray(items, () =>
     gameProfileShopCollection.map((item) => stateFromStoresArray2.get(item)),
@@ -38,7 +41,7 @@ export const useFetchCollectiblesProducts = function useFetchCollectiblesProduct
     stateFromStoresArray,
     stateFromStoresArray2,
     stateFromStoresArray1,
-    arg1,
+    includeBundles,
     stateFromStoresArray3,
   ];
   stateFromStoresArray1(() => {
@@ -49,9 +52,7 @@ export const useFetchCollectiblesProducts = function useFetchCollectiblesProduct
       let tmp10 = stateFromStoresArray[tmp6];
       let tmp12 = stateFromStoresArray1[tmp6];
       let tmp14 = stateFromStoresArray2[tmp6];
-      let tmp16 = true === closure_1;
-      let tmp7 = tmp6;
-      let tmp15 = closure_1;
+      let tmp16 = true === includeBundles;
       if (tmp16) {
         let type;
         if (tmp12 != null) {
@@ -81,14 +82,15 @@ export const useFetchCollectiblesProducts = function useFetchCollectiblesProduct
         tmp24 = "fetching" === state;
       }
       if (!tmp24) {
-        tmp24 = stateFromStoresArray3[tmp7];
+        tmp24 = stateFromStoresArray3[tmp6];
       }
       if (!tmp24) {
-        let obj = { includeBundles: tmp15 };
+        let obj = { includeBundles };
         let collectiblesProduct = obj.fetchCollectiblesProduct(tmp8, obj);
       }
       continue;
     }
+    tmp2 = entries[Symbol.iterator]();
   }, items4);
   return stateFromStoresArray1.some((item, index) => {
     let state;

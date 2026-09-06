@@ -15,7 +15,7 @@ function MediaPostGridThumbnailAndroid(arg0) {
     obj.blurRadius = num;
     obj = { shouldSpoiler, blurTheme };
     obj.children = hasOwnProperty(ForumPostMedia.ForumPostMediaSpoiler, obj);
-    let tmp2Result = tmp2(React3, obj);
+    let tmp2Result = hasOwnProperty(React3, obj);
   } else {
     obj = {
       style: androidStyle,
@@ -83,11 +83,11 @@ export default function MediaPostGridThumbnail(isPortrait) {
   if (obj2.isAndroid()) {
     obj = {};
     const merged1 = Object.assign(obj);
-    let tmp4Result = tmp4(MediaPostGridThumbnailAndroid, obj);
+    let tmp4Result = hasOwnProperty(MediaPostGridThumbnailAndroid, obj);
   } else {
     obj = {};
     const merged2 = Object.assign(obj);
-    tmp4Result = tmp4(MediaPostGridThumbnailIOS, obj);
+    tmp4Result = hasOwnProperty(MediaPostGridThumbnailIOS, obj);
   }
   return tmp4Result;
 }

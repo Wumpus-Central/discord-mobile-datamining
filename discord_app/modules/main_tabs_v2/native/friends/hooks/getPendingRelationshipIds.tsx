@@ -20,7 +20,6 @@ export const getPendingRelationshipIds = function getPendingRelationshipIds(muta
     let tmp3 = nextResult;
     value = mutableRelationships.get(nextResult);
     let tmp5 = value;
-    let tmp6 = RelationshipTypes;
     let tmp7 = value !== RelationshipTypes.PENDING_INCOMING;
     if (!tmp7) {
       tmp7 = filterFromPending(tmp3);
@@ -28,17 +27,17 @@ export const getPendingRelationshipIds = function getPendingRelationshipIds(muta
     if (!tmp7) {
       let arr = pendingIncomingIds.push(tmp3);
     }
-    if (tmp5 === tmp6.PENDING_OUTGOING) {
+    if (tmp5 === RelationshipTypes.PENDING_OUTGOING) {
       arr = pendingOutgoingIds.push(tmp3);
     }
-    let isSpamResult = tmp5 === tmp6.PENDING_INCOMING;
+    let isSpamResult = tmp5 === RelationshipTypes.PENDING_INCOMING;
     if (isSpamResult) {
       isSpamResult = RelationshipStore.isSpam(tmp3);
     }
     if (isSpamResult) {
       let arr1 = spamIds.push(tmp3);
     }
-    let isIgnoredResult = tmp5 === tmp6.PENDING_INCOMING;
+    let isIgnoredResult = tmp5 === RelationshipTypes.PENDING_INCOMING;
     if (isIgnoredResult) {
       isIgnoredResult = RelationshipStore.isIgnored(tmp3);
     }

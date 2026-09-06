@@ -39,7 +39,7 @@ export default {
   selectPrivateChannel(id) {
     router_utils.transitionTo(React6.CHANNEL(React5, id));
   },
-  selectVoiceChannel(id, MediaEngineStore, flag2) {
+  selectVoiceChannel(id) {
     let flag = MediaEngineStore;
     if (MediaEngineStore === undefined) {
       flag = false;

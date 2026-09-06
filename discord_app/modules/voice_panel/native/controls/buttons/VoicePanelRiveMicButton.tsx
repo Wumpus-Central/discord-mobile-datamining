@@ -1,5 +1,7 @@
 // discord_app/modules/voice_panel/native/controls/buttons/VoicePanelRiveMicButton.tsx
 import native from "../../../../../../discord_common/js/packages/design/native.tsx";
+import MicrophoneSlashIcon from "../../../../../design/components/Icon/native/redesign/generated/MicrophoneSlashIcon.tsx";
+import MicrophoneIcon2 from "../../../../../design/components/Icon/native/redesign/generated/MicrophoneIcon.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -18,9 +20,9 @@ export const VoicePanelRiveMicButton = function VoicePanelRiveMicButton(arg0) {
   }
   obj.defaultViewModelInstance = str;
   if (muted) {
-    let MicrophoneIcon = tmp3(9127).MicrophoneSlashIcon;
+    let MicrophoneIcon = MicrophoneSlashIcon.MicrophoneSlashIcon;
   } else {
-    MicrophoneIcon = tmp3(10005).MicrophoneIcon;
+    MicrophoneIcon = MicrophoneIcon2.MicrophoneIcon;
   }
   obj.fallback = <MicrophoneIcon color={color} />;
   obj.children = jsx(native.MicrophoneRive, {

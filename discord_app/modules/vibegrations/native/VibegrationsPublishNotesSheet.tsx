@@ -245,7 +245,7 @@ export default function VibegrationsPublishNotesSheet(guildId) {
   }, items7);
   const items8 = [found, trimmed, combined1, guildId, callback2];
   const callback4 = obj3.useCallback(
-    initialDraft(function* (arg0, value) {
+    initialDraft(function* () {
       if (c4 === 2) {
         c4 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -278,10 +278,10 @@ export default function VibegrationsPublishNotesSheet(guildId) {
                   _undefined2(false);
                   dependencyMap = 1;
                   let obj2 = tmp3(7682);
-                  let combined = tmp30;
+                  let combined = trimmed;
                   if (null != combined1) {
                     const _HermesInternal = HermesInternal;
-                    combined = "" + tmp30 + tmp38;
+                    combined = "" + trimmed + tmp38;
                   }
                   const parsed = obj2.parse(found, combined);
                   const tmp35Result = tmp3(7456);

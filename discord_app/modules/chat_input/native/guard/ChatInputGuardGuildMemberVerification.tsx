@@ -2,6 +2,7 @@
 import util from "../../../../intl/index.native.tsx";
 import AppAnalyticsUtilsDefault from "../../../app_analytics/AppAnalyticsUtils.tsx";
 import MemberVerificationAlertActionCreators from "../../../guild_member_verification/native/MemberVerificationAlertActionCreators.tsx";
+import LottieAnimationViewDefault from "../../../../components_native/common/LottieAnimationView.tsx";
 import MemberVerificationModalActionCreators from "../../../guild_member_verification/MemberVerificationModalActionCreators.tsx";
 import ChatInputGuardDefault from "ChatInputGuard.tsx";
 import _modDef12457 from "../../../../../_runtime/metro/12457__.js";
@@ -9,7 +10,6 @@ import _modDef12458 from "../../../../../_runtime/metro/12458__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 
-const LottieAnimationViewDefault = tmp14(5529);
 require = fn;
 const Image = fn(17).Image;
 const TextAreaCta = fn(11962).TextAreaCta;
@@ -69,10 +69,14 @@ export default noop.memo(function ChatInputGuardGuildMemberVerification(guildId)
   const tmp2Result = guildId(504);
   if (null != tmp8) {
     obj = { style: tmp.noticeIcon, source: tmp8 };
-    let tmp13Result = tmp13(Image, obj);
+    let tmp13Result = <Image style={tmp.noticeIcon} source={tmp8} />;
   } else {
     obj = { style: tmp.lottieAnimation, source: tmp2(12459), autoPlay: !stateFromStores };
-    tmp13Result = tmp13(LottieAnimationViewDefault, obj);
+    tmp13Result = jsx(LottieAnimationViewDefault, {
+      style: tmp.lottieAnimation,
+      source: tmp2(12459),
+      autoPlay: !stateFromStores,
+    });
     const tmp14Result = LottieAnimationViewDefault;
   }
   const obj1 = {

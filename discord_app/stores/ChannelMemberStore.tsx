@@ -31,11 +31,11 @@ function getMemberListId(arg0) {
         ({ allow, deny } = id);
         if (obj.has(allow, constants.VIEW_CHANNEL)) {
           const _HermesInternal2 = HermesInternal;
-          arr.push("allow:" + id);
+          arr = arr.push("allow:" + id);
         } else {
           if (tmpResult.has(deny, constants.VIEW_CHANNEL)) {
             const _HermesInternal = HermesInternal;
-            arr.push("deny:" + id);
+            arr = arr.push("deny:" + id);
           }
           tmpResult = BigFlagUtilsAll;
         }
@@ -43,7 +43,7 @@ function getMemberListId(arg0) {
       }, []);
       const sorted = reduced.sort();
       let str = ",";
-      const arr = _modDef12(channel.permissionOverwrites);
+      let arr = _modDef12(channel.permissionOverwrites);
       str = obj2.v3(sorted.join(",")).toString();
       const str2 = obj2.v3(sorted.join(","));
     }
@@ -111,8 +111,8 @@ prototype["setGroups"] = function setGroups(groups) {
     id = id + (bound + 1);
     id = count.id;
     if (constants.ONLINE !== id) {
-      if (tmp4.OFFLINE !== id) {
-        if (tmp4.UNKNOWN !== id) {
+      if (constants.OFFLINE !== id) {
+        if (constants.UNKNOWN !== id) {
           const guild = GuildStore.getGuild(tmp3);
           let role = null;
           if (null != guild) {
@@ -186,8 +186,8 @@ prototype["insert"] = function insert(arg0, arg1) {
   if (null != group) {
     ({ id, count } = group);
     if (constants.ONLINE !== id) {
-      if (tmp17.OFFLINE !== id) {
-        if (tmp17.UNKNOWN !== id) {
+      if (constants.OFFLINE !== id) {
+        if (constants.UNKNOWN !== id) {
           const guild = GuildStore.getGuild(tmp16);
           let role = null;
           if (null != guild) {
@@ -238,12 +238,12 @@ prototype["insert"] = function insert(arg0, arg1) {
       if (tmp26) {
         let status = SelfPresenceStore.getStatus();
       } else {
-        status = obj4.getStatus(id2, guildId);
+        status = PresenceStore.getStatus(id2, guildId);
       }
       if (tmp26) {
         let activities = SelfPresenceStore.getActivities();
       } else {
-        activities = obj4.getActivities(id2, guildId);
+        activities = PresenceStore.getActivities(id2, guildId);
       }
       const streamForUser = ApplicationStreamingStore.getStreamForUser(id2, guildId);
       const user = UserStore.getUser(id2);
@@ -286,8 +286,8 @@ prototype["update"] = function update(arg0, arg1) {
   if (null != group) {
     ({ id: id2, count } = group);
     if (constants.ONLINE !== id2) {
-      if (tmp21.OFFLINE !== id2) {
-        if (tmp21.UNKNOWN !== id2) {
+      if (constants.OFFLINE !== id2) {
+        if (constants.UNKNOWN !== id2) {
           const guild = GuildStore.getGuild(tmp20);
           let role = null;
           if (null != guild) {
@@ -338,12 +338,12 @@ prototype["update"] = function update(arg0, arg1) {
       if (tmp29) {
         let status = SelfPresenceStore.getStatus();
       } else {
-        status = obj4.getStatus(id3, guildId);
+        status = PresenceStore.getStatus(id3, guildId);
       }
       if (tmp29) {
         let activities = SelfPresenceStore.getActivities();
       } else {
-        activities = obj4.getActivities(id3, guildId);
+        activities = PresenceStore.getActivities(id3, guildId);
       }
       const streamForUser = ApplicationStreamingStore.getStreamForUser(id3, guildId);
       const user = UserStore.getUser(id3);
@@ -392,12 +392,12 @@ prototype["rebuildMember"] = function rebuildMember(id) {
     if (tmp18) {
       let status = SelfPresenceStore.getStatus();
     } else {
-      status = obj2.getStatus(id, guildId);
+      status = PresenceStore.getStatus(id, guildId);
     }
     if (tmp18) {
       let activities = SelfPresenceStore.getActivities();
     } else {
-      activities = obj2.getActivities(id, guildId);
+      activities = PresenceStore.getActivities(id, guildId);
     }
     const streamForUser = ApplicationStreamingStore.getStreamForUser(id, guildId);
     const user = UserStore.getUser(id);
@@ -441,8 +441,8 @@ prototype["rebuildGroup"] = function rebuildGroup(id) {
   if (null != this.groups[findIndexResult]) {
     ({ count, index } = tmp2);
     if (constants.ONLINE !== str) {
-      if (tmp12.OFFLINE !== str) {
-        if (tmp12.UNKNOWN !== str) {
+      if (constants.OFFLINE !== str) {
+        if (constants.UNKNOWN !== str) {
           const guild = GuildStore.getGuild(tmp11);
           let role = null;
           if (null != guild) {

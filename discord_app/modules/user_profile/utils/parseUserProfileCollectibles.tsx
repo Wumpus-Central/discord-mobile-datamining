@@ -31,7 +31,6 @@ export default function parseUserProfileCollectibles(collectibles) {
       }
       obj.expiresAt = date;
       let arr = items.push(obj);
-      let tmp14 = require;
       if (tmp7.type === CollectiblesItemType.CollectiblesItemType.PROFILE_EFFECT) {
         obj = { skuId: null, expiresAt: null };
         obj.skuId = tmp7.sku_id;
@@ -46,10 +45,10 @@ export default function parseUserProfileCollectibles(collectibles) {
         }
         obj.expiresAt = rounded;
         tmp = obj;
-      } else if (tmp7.type === tmp14(1889).CollectiblesItemType.PROFILE_FRAME) {
+      } else if (tmp7.type === CollectiblesItemType.CollectiblesItemType.PROFILE_FRAME) {
         obj = { skuId: null, type: null, expiresAt: null };
         obj.skuId = tmp7.sku_id;
-        obj.type = tmp14(1889).CollectiblesItemType.PROFILE_FRAME;
+        obj.type = CollectiblesItemType.CollectiblesItemType.PROFILE_FRAME;
         let date2;
         if (null != tmp7.expires_at) {
           let _Date2 = Date;

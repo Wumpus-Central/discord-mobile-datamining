@@ -20,10 +20,10 @@ export const filterScopes = function filterScopes(items) {
   });
   let hasItem = found.includes(OAuth2Scopes.OAuth2Scopes.BOT);
   if (hasItem) {
-    hasItem = !found.includes(tmp(8339).OAuth2Scopes.APPLICATIONS_COMMANDS);
+    hasItem = !found.includes(OAuth2Scopes.OAuth2Scopes.APPLICATIONS_COMMANDS);
   }
   if (hasItem) {
-    found.push(tmp(8339).OAuth2Scopes.APPLICATIONS_COMMANDS);
+    found.push(OAuth2Scopes.OAuth2Scopes.APPLICATIONS_COMMANDS);
   }
   return found;
 };

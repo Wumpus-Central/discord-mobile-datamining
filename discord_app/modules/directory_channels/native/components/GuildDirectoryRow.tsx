@@ -59,7 +59,7 @@ let result = size.fileFinishedImporting("modules/directory_channels/native/compo
 
 export default noop.memo(function GuildDirectoryRow(entry) {
   entry = entry.entry;
-  closure_3 = async function _handleJoinGuild(arg0, value) {
+  closure_3 = async function _handleJoinGuild() {
     if (c5 === 2) {
       c5 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -192,28 +192,28 @@ export default noop.memo(function GuildDirectoryRow(entry) {
   if (null != approximatePresenceCount) {
     const obj7 = { children: null };
     const obj8 = { style: tmp.dotOnline };
-    const items3 = [tmp9(tmp11, obj8)];
+    const items3 = [closure_10(View, obj8)];
     const obj9 = { variant: "text-xs/medium", color: "text-default", children: null };
     const intl3 = tmp2(1114).intl;
     const obj10 = { membersOnline: approximatePresenceCount };
     obj9.children = intl3.format(tmp2(1114).t["LC+S+m"], obj10);
-    items3[1] = tmp9(tmp2(4556).Text, obj9);
+    items3[1] = closure_10(tmp2(4556).Text, obj9);
     obj7.children = items3;
-    tmp10Result = tmp10(closure_11, obj7);
+    tmp10Result = closure_12(closure_11, obj7);
   }
   const items4 = [tmp10Result];
   tmp10Result = null;
   if (null != approximateMemberCount) {
     const obj11 = { children: null };
     const obj12 = { style: tmp.dotOffline };
-    const items5 = [tmp9(tmp11, obj12)];
+    const items5 = [closure_10(View, obj12)];
     const obj13 = { variant: "text-xs/medium", color: "text-default", children: null };
     const intl4 = tmp2(1114).intl;
     const obj14 = { count: approximateMemberCount };
     obj13.children = intl4.format(tmp2(1114).t.zRl6XR, obj14);
-    items5[1] = tmp9(tmp2(4556).Text, obj13);
+    items5[1] = closure_10(tmp2(4556).Text, obj13);
     obj11.children = items5;
-    tmp10Result = tmp10(closure_11, obj11);
+    tmp10Result = closure_12(closure_11, obj11);
   }
   items4[1] = tmp10Result;
   obj6.children = items4;
@@ -238,7 +238,7 @@ export default noop.memo(function GuildDirectoryRow(entry) {
       color: "text-default",
       children: description,
     };
-    tmp9Result = tmp9(tmp2(4556).Text, obj16);
+    tmp9Result = closure_10(tmp2(4556).Text, obj16);
   }
   items7[1] = tmp9Result;
   items7[2] = closure_10(View, { style: tmp.flex });

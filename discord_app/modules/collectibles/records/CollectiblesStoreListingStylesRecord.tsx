@@ -25,7 +25,7 @@ prototype["fromServer"] = function fromServer(arg0) {
     return tmp(utils_ColorUtils.int2hex(item));
   });
   if (typeof prototype === "function") {
-    const tmp9 = new prototype(tmp, confetti_colors, tmp2, new.target);
+    const tmp9 = new prototype(tmp, confetti_colors, prototype, new.target);
     tmp9.backgroundColors = mapped;
     tmp9.buttonColors = mapped1;
     tmp9.confettiColors = tmp5;
@@ -33,7 +33,6 @@ prototype["fromServer"] = function fromServer(arg0) {
   } else {
     throw new TypeError("Trying to call a non-function");
   }
-  tmp2 = prototype;
 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/records/CollectiblesStoreListingStylesRecord.tsx");

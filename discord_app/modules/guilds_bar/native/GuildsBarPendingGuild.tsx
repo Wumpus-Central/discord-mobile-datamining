@@ -104,17 +104,17 @@ export default noop.memo(function GuildsBarPendingGuild(guildId) {
           applicationStatus = applicationStatus.applicationStatus;
         }
         if (guildId(stateFromStores[14]).GuildJoinRequestApplicationStatuses.STARTED === applicationStatus) {
-          let tmp2Result = tmp2(tmp3[15]);
+          let tmp2Result = guildId(stateFromStores[15]);
           const result = tmp2Result.openMemberVerificationIncompleteAlert(guildId);
-        } else if (tmp2(tmp3[14]).GuildJoinRequestApplicationStatuses.SUBMITTED === applicationStatus) {
-          tmp2Result = tmp2(tmp3[15]);
+        } else if (guildId(stateFromStores[14]).GuildJoinRequestApplicationStatuses.SUBMITTED === applicationStatus) {
+          tmp2Result = guildId(stateFromStores[15]);
           const result1 = tmp2Result.openMemberVerificationPendingAlert(guildId);
-        } else if (tmp2(tmp3[14]).GuildJoinRequestApplicationStatuses.APPROVED === applicationStatus) {
-          token(tmp3[16])(guildId);
-        } else if (tmp2(tmp3[14]).GuildJoinRequestApplicationStatuses.REJECTED === applicationStatus) {
+        } else if (guildId(stateFromStores[14]).GuildJoinRequestApplicationStatuses.APPROVED === applicationStatus) {
+          token(stateFromStores[16])(guildId);
+        } else if (guildId(stateFromStores[14]).GuildJoinRequestApplicationStatuses.REJECTED === applicationStatus) {
           const obj = { guildId, canWithdraw: true };
-          const result2 = tmp2(tmp3[15]).openMemberVerificationRejectedAlert(obj);
-          const tmp2Result1 = tmp2(tmp3[15]);
+          const result2 = guildId(stateFromStores[15]).openMemberVerificationRejectedAlert(obj);
+          const tmp2Result1 = guildId(stateFromStores[15]);
         }
       },
     }),
@@ -173,12 +173,12 @@ export default noop.memo(function GuildsBarPendingGuild(guildId) {
   obj.expandedChildren = jsx(token(stateFromStores[20]), { guildId, disableSubtitle: true });
   if (null != tmp15) {
     obj = { source: tmp15, style: tmp.guildIcon };
-    let tmp19Result = tmp19(tmp5(tmp3[21]), obj);
+    let tmp19Result = jsx(tmp5(tmp3[21]), { source: tmp15, style: tmp.guildIcon });
   } else {
     obj1 = { value: guildName, selected: stateFromStores, animate: stateFromStores, size: null };
     tmp5Result = tmp5(tmp3[11]);
     obj1.size = tmp2(tmp3[11]).GuildIconSizes.LARGE;
-    tmp19Result = tmp19(tmp5Result, obj1);
+    tmp19Result = <tmp5Result value={guildName} selected={stateFromStores} animate={stateFromStores} size={null} />;
   }
   obj.children = tmp19Result;
   return (

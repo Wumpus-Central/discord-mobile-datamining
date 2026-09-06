@@ -36,10 +36,10 @@ export default function RoleTierEditScenesModal(modalKey) {
   modalKey = modalKey.modalKey;
   const steps = modalKey.steps;
   const onClose = modalKey.onClose;
-  let tmp = closure_11();
+  const tmp = closure_11();
   [noop, closure_5] = onClose(closure_5(), 2);
   closure_6 = closure_6();
-  let tmp3 = onClose(noop.useState(0), 2);
+  const tmp3 = onClose(noop.useState(0), 2);
   closure_7 = tmp3[1];
   let items = [modalKey];
   closure_8 = noop.useCallback(() => {
@@ -93,7 +93,7 @@ export default function RoleTierEditScenesModal(modalKey) {
     const obj1 = {};
     let merged2 = Object.assign(obj);
     DETAILS = constants.GATING;
-    closure_1 = tmp;
+    closure_1 = handleClose;
     obj1.headerRight = () => {
       const obj = {
         source: modalKey(steps[8]),
@@ -149,8 +149,8 @@ export default function RoleTierEditScenesModal(modalKey) {
     obj3[constants.GATING] = obj1;
     const obj4 = {};
     let merged4 = Object.assign(obj);
-    DETAILS = tmp11.GROUP;
-    closure_1 = tmp;
+    DETAILS = constants.GROUP;
+    closure_1 = handleClose;
     obj4.headerRight = () => {
       const obj = {
         source: modalKey(steps[8]),
@@ -205,8 +205,8 @@ export default function RoleTierEditScenesModal(modalKey) {
     obj3[constants.GROUP] = obj4;
     const obj6 = {};
     const merged6 = Object.assign(obj);
-    DETAILS = tmp11.CHANNEL_BENEFITS;
-    closure_1 = tmp;
+    DETAILS = constants.CHANNEL_BENEFITS;
+    closure_1 = handleClose;
     obj6.headerRight = () => {
       const obj = {
         source: modalKey(steps[8]),
@@ -262,8 +262,8 @@ export default function RoleTierEditScenesModal(modalKey) {
     obj3[constants.CHANNEL_BENEFITS] = obj6;
     const obj8 = {};
     const merged8 = Object.assign(obj);
-    DETAILS = tmp11.INTANGIBLE_BENEFITS;
-    closure_1 = tmp;
+    DETAILS = constants.INTANGIBLE_BENEFITS;
+    closure_1 = handleClose;
     obj8.headerRight = () => {
       const obj = {
         source: modalKey(steps[8]),
@@ -319,8 +319,8 @@ export default function RoleTierEditScenesModal(modalKey) {
     obj3[constants.INTANGIBLE_BENEFITS] = obj8;
     const obj10 = {};
     const merged10 = Object.assign(obj);
-    DETAILS = tmp11.CONFIRMATION;
-    closure_1 = tmp;
+    DETAILS = constants.CONFIRMATION;
+    closure_1 = handleClose;
     obj10.headerRight = () => {
       const obj = {
         source: modalKey(steps[8]),
@@ -375,8 +375,8 @@ export default function RoleTierEditScenesModal(modalKey) {
     obj3[constants.CONFIRMATION] = obj10;
     const obj12 = {};
     const merged12 = Object.assign(obj);
-    DETAILS = tmp11.DESIGN;
-    closure_1 = tmp;
+    DETAILS = constants.DESIGN;
+    closure_1 = handleClose;
     obj12.headerRight = () => {
       const obj = {
         source: modalKey(steps[8]),
@@ -431,8 +431,8 @@ export default function RoleTierEditScenesModal(modalKey) {
     obj3[constants.DESIGN] = obj12;
     const obj14 = {};
     const merged14 = Object.assign(obj);
-    DETAILS = tmp11.DETAILS;
-    closure_1 = tmp;
+    DETAILS = constants.DETAILS;
+    closure_1 = handleClose;
     obj14.headerRight = () => {
       const obj = {
         source: modalKey(steps[8]),

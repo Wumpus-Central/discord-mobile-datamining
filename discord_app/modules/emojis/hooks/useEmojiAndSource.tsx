@@ -82,7 +82,7 @@ export const useEmojiAndSource = function useEmojiAndSource(emojiId) {
   });
   const items1 = [emojiId, tmp5];
   const effect1 = obj2.useEffect(() => {
-    closure_0 = async function _fetch(arg0, value) {
+    closure_0 = async function _fetch() {
       if (v3 === 2) {
         v3 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");

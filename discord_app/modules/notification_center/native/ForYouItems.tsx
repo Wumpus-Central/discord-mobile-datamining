@@ -152,7 +152,7 @@ function ForYouMessagePreviewV2(item) {
     if (num2 == null) {
       num2 = 0;
     }
-    if (tmp2Result.hasFlag(num2, tmp4.IS_COMPONENTS_V2)) {
+    if (tmp2Result.hasFlag(num2, constants2.IS_COMPONENTS_V2)) {
       const intl3 = tmp2(1114).intl;
       result = intl3.string(tmp2(1114).t.Xxm5i3);
     } else {
@@ -180,7 +180,6 @@ function ForYouMessagePreviewV2(item) {
   guild_id = item.guild_id;
   message_channel_id = item.message_channel_id;
   hasFlagResult = obj1.hasFlag(num, constants2.IS_VOICE_MESSAGE);
-  tmp4 = constants2;
   let items = [GuildStore];
   const stateFromStores = item(504).useStateFromStores(items, () => GuildStore.getGuild(guild_id));
   const tmp2Result1 = item(504);
@@ -248,9 +247,9 @@ function ForYouMessagePreviewV2(item) {
   if (null == ATTACHMENT) {
     items5[1] = tmp26;
     obj1.children = items5;
-    items3[1] = tmp21(tmp2(4556).Text, obj1);
+    items3[1] = closure_22(tmp2(4556).Text, obj1);
     obj.children = items3;
-    return tmp21(tmp22, obj);
+    return closure_22(closure_7, obj);
   } else {
     const obj3 = { style: messagePreviewIconV2.messagePreviewIconV2Container, children: null };
     if (constants4.ATTACHMENT === ATTACHMENT) {
@@ -260,16 +259,17 @@ function ForYouMessagePreviewV2(item) {
       obj4.size = SMALL;
       messagePreviewIconV2 = messagePreviewIconV2.messagePreviewIconV2;
       obj4.style = messagePreviewIconV2;
-      obj3.children = tmp23(tmp27, obj4);
-      tmp23(tmp22, obj3);
-    } else if (tmp28.STICKER !== ATTACHMENT) {
+      obj3.children = closure_21(tmp27, obj4);
+      closure_21(closure_7, obj3);
+    } else if (constants4.STICKER !== ATTACHMENT) {
       tmp29 = null;
-      if (tmp28.VOICE_MESSAGE === ATTACHMENT) {
+      if (constants4.VOICE_MESSAGE === ATTACHMENT) {
         tmp29 = guild_id(8619);
       }
     }
     tmp29 = guild_id(10420);
   }
+  const tmp2Result4 = item(7888);
 }
 function ApplicationName(applicationId) {
   applicationId = applicationId.applicationId;
@@ -475,7 +475,7 @@ let closure_35 = noop.memo((item) => {
   let callback;
   let str;
   ({ ackedBeforeId, roleStyle } = item);
-  const tmp = closure_29();
+  let tmp = closure_29();
   let obj = item(notificationCenterItemAcked[29]);
   notificationCenterItemAcked = obj.useNotificationCenterItemAcked(item, ackedBeforeId);
   if (!isSoftAcked) {
@@ -504,11 +504,11 @@ let closure_35 = noop.memo((item) => {
     callback();
     obj = {
       action_type: NotificationCenterItemsTypes.NotificationCenterActionTypes.CLICKED,
-      notification_center_id: tmp5.id,
-      item_type: tmp5.type,
+      notification_center_id: item.id,
+      item_type: item.type,
       acked: notificationCenterItemAcked,
       item_index: rowIndex,
-      deeplink: tmp5.deeplink,
+      deeplink: item.deeplink,
     };
     AnalyticsUtilsDefault.track(constants.NOTIFICATION_CENTER_ACTION, obj);
   }, items1);
@@ -517,10 +517,10 @@ let closure_35 = noop.memo((item) => {
     const items = [];
     if (item.type === item(notificationCenterItemAcked[33]).NotificationCenterItems.TRENDING_CONTENT) {
       let obj = { label: null, icon: null, IconComponent: null, onPress: null };
-      let intl = tmp2(tmp3[18]).intl;
-      obj.label = intl.string(tmp2(tmp3[18]).t["gSMz/x"]);
-      obj.icon = rowIndex(tmp3[35]);
-      obj.IconComponent = tmp2(tmp3[36]).LightbulbIcon;
+      let intl = tmp2(notificationCenterItemAcked[18]).intl;
+      obj.label = intl.string(tmp2(notificationCenterItemAcked[18]).t["gSMz/x"]);
+      obj.icon = rowIndex(notificationCenterItemAcked[35]);
+      obj.IconComponent = tmp2(notificationCenterItemAcked[36]).LightbulbIcon;
       obj.onPress = function onPress() {
         try {
           str = closure_0.deeplink;
@@ -531,7 +531,7 @@ let closure_35 = noop.memo((item) => {
           if (null == match) {
             const _Error = Error;
             const _HermesInternal = HermesInternal;
-            const error = new Error("Invalid deeplink: " + tmp2.deeplink);
+            const error = new Error("Invalid deeplink: " + closure_0.deeplink);
             throw error;
           } else {
             const tmp20 = callback(tmp5, 5);
@@ -547,7 +547,6 @@ let closure_35 = noop.memo((item) => {
               obj,
             );
           }
-          tmp2 = closure_0;
         } catch (err) {
           obj = rowIndex(notificationCenterItemAcked[38]);
           const obj1 = { key: "USER_SURVEY_ERROR", content: null };
@@ -560,10 +559,10 @@ let closure_35 = noop.memo((item) => {
       let tmp6 = rowIndex;
     } else {
       obj = { label: null, icon: null, IconComponent: null, onPress: null };
-      const intl2 = tmp2(tmp3[18]).intl;
-      obj.label = intl2.string(tmp2(tmp3[18]).t["08rqg5"]);
-      obj.icon = rowIndex(tmp3[35]);
-      obj.IconComponent = tmp2(tmp3[36]).LightbulbIcon;
+      const intl2 = tmp2(notificationCenterItemAcked[18]).intl;
+      obj.label = intl2.string(tmp2(notificationCenterItemAcked[18]).t["08rqg5"]);
+      obj.icon = rowIndex(notificationCenterItemAcked[35]);
+      obj.IconComponent = tmp2(notificationCenterItemAcked[36]).LightbulbIcon;
       obj.onPress = function onPress() {
         try {
           let obj = rowIndex(notificationCenterItemAcked[41]);
@@ -572,6 +571,10 @@ let closure_35 = noop.memo((item) => {
             item(notificationCenterItemAcked[40])(notificationCenterItemAcked[39], notificationCenterItemAcked.paths),
             "NotificationSurvey",
             obj,
+          );
+          const tmp5 = item(notificationCenterItemAcked[40])(
+            notificationCenterItemAcked[39],
+            notificationCenterItemAcked.paths,
           );
         } catch (err) {
           obj = { key: "USER_SURVEY_ERROR", content: null };
@@ -584,12 +587,12 @@ let closure_35 = noop.memo((item) => {
       items.push(obj);
       tmp6 = rowIndex;
     }
-    if (null == item.local_id) {
+    if (null == tmp.local_id) {
       obj = { label: null, icon: null, IconComponent: null, onPress: null };
-      const intl3 = tmp2(tmp3[18]).intl;
-      obj.label = intl3.string(tmp2(tmp3[18]).t.D8z9ju);
-      obj.icon = tmp6(tmp3[42]);
-      obj.IconComponent = tmp2(tmp3[43]).TrashIcon;
+      const intl3 = tmp2(notificationCenterItemAcked[18]).intl;
+      obj.label = intl3.string(tmp2(notificationCenterItemAcked[18]).t.D8z9ju);
+      obj.icon = tmp6(notificationCenterItemAcked[42]);
+      obj.IconComponent = tmp2(notificationCenterItemAcked[43]).TrashIcon;
       item = navigation(function* () {
         yield tmp3(16414).deleteNotificationCenterItem(tmp3);
         if (1 === tmp7) {
@@ -602,11 +605,11 @@ let closure_35 = noop.memo((item) => {
           rowIndex(4259);
         } else if (arg0 === 1) {
           c4 = 3;
-          throw arg1;
+          throw value;
         } else if (arg0 !== 2) {
           c3 = 0;
         }
-        return arg1;
+        return value;
       });
       obj.onPress = function () {
         const self = this;
@@ -625,6 +628,8 @@ let closure_35 = noop.memo((item) => {
       options: items,
       hasIcons: true,
     });
+    tmp = item;
+    const tmp2Result = item(notificationCenterItemAcked[45]);
   }, items2);
   [tmp10, tmp11] = callback(str.useState(undefined), 2);
   tmp2Result = tmp2(tmp3[46]);
@@ -736,7 +741,7 @@ let closure_35 = noop.memo((item) => {
   obj7.style = items7;
   if (typeof tmp10 !== "string") {
     obj7.children = tmp10;
-    const items8 = [tmp25(tmp2(tmp3[14]).Text, obj7)];
+    const items8 = [closure_21(tmp2(tmp3[14]).Text, obj7)];
     const items9 = [, ,];
     ({ rowTime: arr10[0], rowTimeV2: arr10[1] } = tmp);
     let rowBodyAcked2 = isSoftAcked;
@@ -755,9 +760,9 @@ let closure_35 = noop.memo((item) => {
     obj8.accessibilityLabel = tmp2(tmp3[51]).getRelativeTimestamp(extractTimestampResult, false);
     const tmp2Result1 = tmp2(tmp3[51]);
     obj8.children = tmp2(tmp3[51]).getRelativeTimestamp(extractTimestampResult);
-    items8[1] = tmp25(tmp2(tmp3[14]).Text, obj8);
+    items8[1] = closure_21(tmp2(tmp3[14]).Text, obj8);
     obj6.children = items8;
-    const items10 = [tmp21(tmp26, obj6), , , ,];
+    const items10 = [closure_22(closure_7, obj6), , , ,];
     let tmp25Result = item.type === tmp2(tmp3[33]).NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS;
     if (tmp25Result) {
       const obj9 = {
@@ -775,8 +780,8 @@ let closure_35 = noop.memo((item) => {
         id = closure_19;
       }
       obj9.userId = id;
-      tmp25Result = tmp25(rowIndex(tmp3[52]), obj9);
-      const tmp19Result = rowIndex(tmp3[52]);
+      tmp25Result = closure_21(tmp19(tmp3[52]), obj9);
+      const tmp19Result = tmp19(tmp3[52]);
     }
     items10[1] = tmp25Result;
     const message = item.message;
@@ -787,25 +792,27 @@ let closure_35 = noop.memo((item) => {
     tmp25Result = null;
     if (null != content) {
       const obj10 = { item, acked: isSoftAcked, compactMode, roleStyle };
-      tmp25Result = tmp25(ForYouMessagePreviewV2, obj10);
+      tmp25Result = closure_21(ForYouMessagePreviewV2, obj10);
     }
     items10[2] = tmp25Result;
     let tmp25Result1 = null;
     if (null != item.callout) {
       const obj11 = { item, acked: isSoftAcked, compactMode };
-      tmp25Result1 = tmp25(Callout, obj11);
+      tmp25Result1 = closure_21(Callout, obj11);
     }
     items10[3] = tmp25Result1;
     const obj12 = { children: tmp16 };
-    items10[4] = tmp25(tmp26, obj12);
+    items10[4] = closure_21(closure_7, obj12);
     obj5.children = items10;
-    obj4.children = tmp21(tmp26, obj5);
-    items5[2] = tmp25(tmp26, obj4);
+    obj4.children = closure_22(closure_7, obj5);
+    items5[2] = closure_21(closure_7, obj4);
     obj1.children = items5;
-    return tmp21(tmp2(tmp3[49]).PressableHighlight, obj1);
+    return closure_22(tmp2(tmp3[49]).PressableHighlight, obj1);
   } else {
     isSoftAcked ? parserWithoutLinks(tmp10) : parserWithoutLinks1(tmp10);
   }
+  tmp19 = rowIndex;
+  const tmp9 = callback(str.useState(undefined), 2);
 });
 const obj19 = { marginTop: 4, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE };
 size = fn(2);

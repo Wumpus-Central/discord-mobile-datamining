@@ -101,6 +101,8 @@ export const setVoiceChatDrawerState = function setVoiceChatDrawerState(embedded
     obj = { voiceChatDrawerState };
     return obj.setState(obj);
   });
+  const obj2 = require("ReactBatchUpdates");
+  tmp = CLOSED !== VoiceChatDrawerState.OPEN && CLOSED !== VoiceChatDrawerState.CLOSED;
 };
 export const togglePipFocus = apply.throttle(() => {
   const pipFocus = obj.getState().pipFocus;
@@ -160,14 +162,14 @@ export const useChannelCallOrientationHandlers = function useChannelCallOrientat
     if (!isGuildStageVoiceResult) {
       if (!closure_3) {
         if (null != closure_1) {
-          if (tmp2.type === ParticipantTypes.ACTIVITY) {
-            if (tmp2.applicationId === applicationId) {
+          if (closure_1.type === ParticipantTypes.ACTIVITY) {
+            if (closure_1.applicationId === applicationId) {
               if (isOrientationLockSupportedDefault()) {
                 if (OrientationLockState.UNLOCKED === stateFromStores) {
                   DeviceOrientation.unlockOrientation({ unlockAfterRotatingToPreviousLock: true });
-                } else if (tmp14.PORTRAIT === tmp13) {
+                } else if (OrientationLockState.PORTRAIT === stateFromStores) {
                   DeviceOrientation.lockOrientation("PORTRAIT", true);
-                } else if (tmp14.LANDSCAPE === tmp13) {
+                } else if (OrientationLockState.LANDSCAPE === stateFromStores) {
                   DeviceOrientation.lockOrientation("LANDSCAPE", true);
                 }
               }

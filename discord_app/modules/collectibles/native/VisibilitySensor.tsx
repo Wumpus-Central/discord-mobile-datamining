@@ -15,8 +15,8 @@ export default function _default(onChange) {
   function stopWatching() {
     if (null !== ref.current) {
       const _clearInterval = clearInterval;
-      clearInterval(tmp.current);
-      tmp.current = null;
+      clearInterval(ref.current);
+      ref.current = null;
     }
   }
   ({ children, resetKey } = onChange);

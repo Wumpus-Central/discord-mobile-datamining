@@ -98,39 +98,39 @@ export default noop.memo((gestureEnabled) => {
           const current = ref.current;
           let tmp3 = width <= 0;
           if (!tmp3) {
-            tmp3 = tmp2 <= 0;
+            tmp3 = height <= 0;
           }
           if (!tmp3) {
-            const size = { x: 0, y: 0, width: tmp, height: tmp2, animated: false };
+            const size = { x: 0, y: 0, width, height, animated: false };
             const result = current.scrollResponderZoomTo(size);
             current.scrollTo({ x: 0, y: 0, animated: false });
           }
-          tmp = width;
         }
       });
       tmp5 = width <= 0 || height <= 0;
     }
+    const obj = resizeMode(1115);
   }, []);
   const memo = noop.useMemo(() => {
     if (0 !== first) {
       if (0 !== first1) {
         if (0 !== first2) {
           if (0 !== first3) {
-            const result = tmp / tmp4;
-            const result1 = tmp5 / tmp6;
+            const result = first / first1;
+            const result1 = first2 / first3;
             if (resizeMode !== obj.AUTO) {
-              if (tmp7 !== tmp10.CONTAIN) {
-                if (tmp7 !== tmp10.COVER) {
+              if (resizeMode !== obj.CONTAIN) {
+                if (resizeMode !== obj.COVER) {
                   return 0;
                 }
               }
             } else {
               if (result <= 1) {
                 if (result >= 1) {
-                  const CONTAIN = tmp10.CONTAIN;
+                  const CONTAIN = obj.CONTAIN;
                 }
               }
-              const COVER = tmp10.COVER;
+              const COVER = obj.COVER;
             }
           }
         }
@@ -171,6 +171,7 @@ export default noop.memo((gestureEnabled) => {
         }
       }
     }
+    obj = PlatformUtils;
   }, items4);
   const items5 = [memo, first2, first3];
   const memo1 = noop.useMemo(() => {

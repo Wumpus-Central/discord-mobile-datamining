@@ -101,12 +101,11 @@ export const getOrFetchSubscriptionPlan = function getOrFetchSubscriptionPlan(su
   if (null == value) {
     const _HermesInternal = HermesInternal;
     _modDef38(null != dependencyMap[subscriptionPlanId], "Missing hardcoded subscriptionPlan: " + subscriptionPlanId);
-    const tmp12 = require;
     const tmp9 = null != dependencyMap[subscriptionPlanId];
     const result = PremiumUtils.castPremiumSubscriptionAsSkuId(tmp5.skuId);
     if (!SubscriptionPlanStore.isFetchingForSKU(result)) {
-      const subscriptionPlansForSKU = tmp12(7257).fetchSubscriptionPlansForSKU(result, arg1);
-      const tmp12Result = tmp12(7257);
+      const subscriptionPlansForSKU = SubscriptionPlanActionCreators.fetchSubscriptionPlansForSKU(result, arg1);
+      const tmp12Result = SubscriptionPlanActionCreators;
     }
   }
   return value;
@@ -139,8 +138,8 @@ export const useGetOrFetchSubscriptionPlan = function useGetOrFetchSubscriptionP
       if (null != closure_0) {
         if (!closure_3) {
           const _HermesInternal = HermesInternal;
-          _modDef38(null != dependencyMap[tmp12], "Missing hardcoded subscriptionPlan: " + tmp12);
-          const tmp6 = null != dependencyMap[tmp12];
+          _modDef38(null != dependencyMap[closure_0], "Missing hardcoded subscriptionPlan: " + closure_0);
+          const tmp6 = null != dependencyMap[closure_0];
           const obj = SubscriptionPlanActionCreators;
           const subscriptionPlansForSKU = obj.fetchSubscriptionPlansForSKU(
             PremiumUtils.castPremiumSubscriptionAsSkuId(tmp2.skuId),
@@ -164,9 +163,8 @@ export const getSubscriptionPauseDurations = function getSubscriptionPauseDurati
     const rounded = Math.round(_modDef4153(status.pauseEndsAt).diff(tmp6, "days", true));
     const items = [];
     for (const item10042 of found) {
-      let tmp10 = item10042;
       if (PauseDuration.PauseDuration[item10042] > rounded) {
-        let arr = items.push(tmp10);
+        let arr = items.push(item10042);
       }
       continue;
     }

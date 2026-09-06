@@ -36,7 +36,7 @@ export default function EditGuildEventRecurrenceModal(guildEvent) {
   _slicedToArray = undefined;
   noop = undefined;
   let error;
-  constants = async function _handleSave(arg0, value) {
+  constants = async function _handleSave() {
     if (c2 === 2) {
       c2 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");

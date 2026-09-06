@@ -5,7 +5,7 @@ import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 import ChannelStore from "../../stores/ChannelStore.tsx";
 
 const require = fn;
-let closure_10 = async function _uploadDebugLogFiles(arg0, value) {
+let closure_10 = async function _uploadDebugLogFiles(arg0) {
   if (c7 === 2) {
     c7 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -30,7 +30,7 @@ let closure_10 = async function _uploadDebugLogFiles(arg0, value) {
           obj = { value, done: true };
           return obj;
         } else {
-          closure_3 = tmp3;
+          dependencyMap = tmp3;
           closure_2 = tmp7;
           closure_130_0 = closure_1;
           let enabled;
@@ -47,16 +47,16 @@ let closure_10 = async function _uploadDebugLogFiles(arg0, value) {
         if (closure_130_3 instanceof closure_131_0(closure_131_3[5]).UploadVoiceDebugLogsError) {
           closure_130_2 = (function uploadErrorToAVUnderlyingError(code) {
             code = code.code;
-            if (closure_1_0(closure_1_3[5]).UploadErrorCodes.GENERAL === code) {
-              return tmp(tmp2[6]).AVUnderlyingError.UploadErrorGeneral;
-            } else if (tmp(tmp2[5]).UploadErrorCodes.NO_FILE === code) {
-              return tmp(tmp2[6]).AVUnderlyingError.UploadErrorNoFile;
-            } else if (tmp(tmp2[5]).UploadErrorCodes.PROGRESS === code) {
-              return tmp(tmp2[6]).AVUnderlyingError.UploadErrorProgress;
-            } else if (tmp(tmp2[5]).UploadErrorCodes.UPLOAD === code) {
-              return tmp(tmp2[6]).AVUnderlyingError.UploadErrorUpload;
-            } else if (tmp(tmp2[5]).UploadErrorCodes.READ === code) {
-              return tmp(tmp2[6]).AVUnderlyingError.UploadErrorRead;
+            if (closure_1_0(dependencyMap[5]).UploadErrorCodes.GENERAL === code) {
+              return closure_1_0(dependencyMap[6]).AVUnderlyingError.UploadErrorGeneral;
+            } else if (closure_1_0(dependencyMap[5]).UploadErrorCodes.NO_FILE === code) {
+              return closure_1_0(dependencyMap[6]).AVUnderlyingError.UploadErrorNoFile;
+            } else if (closure_1_0(dependencyMap[5]).UploadErrorCodes.PROGRESS === code) {
+              return closure_1_0(dependencyMap[6]).AVUnderlyingError.UploadErrorProgress;
+            } else if (closure_1_0(dependencyMap[5]).UploadErrorCodes.UPLOAD === code) {
+              return closure_1_0(dependencyMap[6]).AVUnderlyingError.UploadErrorUpload;
+            } else if (closure_1_0(dependencyMap[5]).UploadErrorCodes.READ === code) {
+              return closure_1_0(dependencyMap[6]).AVUnderlyingError.UploadErrorRead;
             }
           })(closure_130_3);
         }
@@ -119,7 +119,7 @@ function uploadAppLogFiles() {
   }
   return applyArgumentsResult;
 }
-let closure_12 = async function _uploadAppLogFiles(arg0, value) {
+let closure_12 = async function _uploadAppLogFiles(arg0) {
   if (c7 === 2) {
     c7 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");

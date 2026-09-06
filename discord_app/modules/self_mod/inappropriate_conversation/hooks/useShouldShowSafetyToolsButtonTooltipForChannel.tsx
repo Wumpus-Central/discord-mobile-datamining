@@ -3,9 +3,10 @@ import DurationsDefault from "../../../../utils/Durations.tsx";
 import ChannelSafetyWarningsStore from "../../ChannelSafetyWarningsStore.tsx";
 import useInappropriateConversationWarningsForChannel from "useInappropriateConversationWarningsForChannel.tsx";
 import useInappropriateConversationSafetyToolsWarningForChannel from "useInappropriateConversationSafetyToolsWarningForChannel.tsx";
+import useShouldShowInitialSafetyToolsButtonTooltip from "useShouldShowInitialSafetyToolsButtonTooltip.tsx";
+import InappropriateConversationUtils from "../InappropriateConversationUtils.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
-const InappropriateConversationUtils = tmp(11397);
 const SafetyWarningTypes = ChannelSafetyWarningsStore.SafetyWarningTypes;
 const HOUR = DurationsDefault.Millis.HOUR;
 let closure_4 = 12 * DurationsDefault.Millis.HOUR;
@@ -71,4 +72,5 @@ export const useSafetyToolsButtonTooltipForChannel = function useSafetyToolsButt
       tmpResult = InappropriateConversationUtils;
     }
   }
+  obj3 = useShouldShowInitialSafetyToolsButtonTooltip;
 };

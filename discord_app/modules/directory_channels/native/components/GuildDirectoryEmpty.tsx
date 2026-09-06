@@ -75,7 +75,7 @@ export default function GuildDirectoryEmpty(guild) {
     };
     const intl3 = tmp4(1114).intl;
     obj5.title = intl3.string(tmp4(1114).t.hyK15i);
-    tmp8Result = tmp8(tmp4(8593).FormCTA, obj5);
+    tmp8Result = closure_7(tmp4(8593).FormCTA, obj5);
   }
   items2[3] = tmp8Result;
   const obj6 = {

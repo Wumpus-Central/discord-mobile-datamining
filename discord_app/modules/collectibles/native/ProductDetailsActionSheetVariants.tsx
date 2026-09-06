@@ -1,5 +1,6 @@
 // discord_app/modules/collectibles/native/ProductDetailsActionSheetVariants.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import util from "../../../intl/index.native.tsx";
 import Pressables from "../../../design/void/Pressables/native/Pressables.tsx";
 import CheckmarkSmallIcon from "../../../design/components/Icon/native/redesign/generated/CheckmarkSmallIcon.tsx";
 import useProductPurchaseState from "../hooks/useProductPurchaseState.tsx";
@@ -13,9 +14,9 @@ function VariantOption(onPress) {
   let obj = useProductPurchaseState;
   let isPurchased = obj.useProductPurchaseState(variant).isPurchased;
   if (isPurchased) {
-    const intl = tmp2(1114).intl;
+    const intl = util.intl;
     obj = { variantLabel: variant.name };
-    let name = intl.formatToPlainString(tmp2(1114).t["SfQB4+"], obj);
+    let name = intl.formatToPlainString(util.t["SfQB4+"], obj);
   } else {
     name = variant.name;
   }
@@ -33,7 +34,7 @@ function VariantOption(onPress) {
   obj1.style = items;
   if (isPurchased) {
     const obj2 = { variant };
-    isPurchased = tmp4(VariantCheckmark, obj2);
+    isPurchased = React4(VariantCheckmark, obj2);
   }
   obj1.children = isPurchased;
   obj.children = React4(View, obj1);
@@ -42,8 +43,7 @@ function VariantOption(onPress) {
 function VariantCheckmark(variant) {
   const colors = nativeDefault.colors;
   const tmp = useIsVariantColorLightDefault(variant.variant);
-  const tmp2 = React4;
-  return tmp2(CheckmarkSmallIcon.CheckmarkSmallIcon, {
+  return React4(CheckmarkSmallIcon.CheckmarkSmallIcon, {
     color: useIsVariantColorLightDefault(variant.variant) ? colors.BLACK : colors.WHITE,
     size: "md",
   });
@@ -92,9 +92,9 @@ let closure_7 = createStyles.createStyles((arg0) => {
     height: "100%",
     justifyContent: "center",
     alignItems: "center",
-    borderRadius: tmp(576).radii.round,
+    borderRadius: nativeDefault.radii.round,
     borderWidth: 1,
-    borderColor: tmp(576).colors.BACKGROUND_BASE_LOW,
+    borderColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
   };
   obj.variantOptionInner = size1;
   return obj;
@@ -116,9 +116,9 @@ export default function ProductDetailsActionSheetVariants(disabled) {
     obj = { style: tmp.container, children: null };
     obj = { style: tmp.headerRow, children: null };
     const obj1 = { variant: "text-md/bold", color: "mobile-text-heading-primary", children: null };
-    const intl = tmp2(tmp3[7]).intl;
-    obj1.children = intl.string(tmp2(tmp3[7]).t.wbgaj6);
-    const items = [closure_4(tmp2(tmp3[11]).Text, obj1)];
+    const intl = selectedVariantIndex(tmp3[7]).intl;
+    obj1.children = intl.string(selectedVariantIndex(tmp3[7]).t.wbgaj6);
+    const items = [closure_4(selectedVariantIndex(tmp3[11]).Text, obj1)];
     let tmp7Result = product.variants.length > selectedVariantIndex;
     if (tmp7Result) {
       const obj2 = {
@@ -128,7 +128,7 @@ export default function ProductDetailsActionSheetVariants(disabled) {
         style: tmp.text,
         children: product.variants[selectedVariantIndex].variantLabel,
       };
-      tmp7Result = tmp7(tmp2(tmp3[11]).Text, obj2);
+      tmp7Result = closure_4(selectedVariantIndex(tmp3[11]).Text, obj2);
     }
     items[1] = tmp7Result;
     obj.children = items;
@@ -152,7 +152,7 @@ export default function ProductDetailsActionSheetVariants(disabled) {
     });
     items1[1] = closure_4(View, obj3);
     obj.children = items1;
-    tmp5Result = tmp5(tmp6, obj);
+    tmp5Result = closure_5(View, obj);
   }
   return tmp5Result;
 }

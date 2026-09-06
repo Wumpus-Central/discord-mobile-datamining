@@ -26,7 +26,7 @@ prototype["fromServer"] = function fromServer(arg0) {
     show_hover_gradient: obj.showHoverGradient,
   } = arg0);
   if (typeof prototype === "function") {
-    obj = Object.create(tmp.prototype);
+    obj = Object.create(prototype.prototype);
     obj.type = CollectiblesMarketingType.CollectiblesMarketingType.BADGE;
     ({
       dismissibleContent: tmp3.dismissibleContent,
@@ -40,7 +40,6 @@ prototype["fromServer"] = function fromServer(arg0) {
   } else {
     throw new TypeError("Trying to call a non-function");
   }
-  tmp = prototype;
 };
 const result = size.fileFinishedImporting("modules/collectibles/records/CollectiblesMarketingBadgeRecord.tsx");
 

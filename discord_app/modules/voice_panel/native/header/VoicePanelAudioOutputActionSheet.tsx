@@ -1,9 +1,12 @@
 // discord_app/modules/voice_panel/native/header/VoicePanelAudioOutputActionSheet.tsx
 import useStateFromStores from "../../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
+import util from "../../../../intl/index.native.tsx";
 import dismissible_content from "../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
 import DismissibleContentUnsafeUtils from "../../../dismissible_content/DismissibleContentUnsafeUtils.tsx";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import NativeViewDefault from "../../../core/native/NativeView.tsx";
+import BottomSheetTitleHeader from "../../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
+import Sheet_BottomSheet from "../../../../design/components/Sheet/native/BottomSheet.native.tsx";
 import useOnConnectToConsole from "../../../video_calls/native/useOnConnectToConsole.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import GameConsoleStore from "../../../game_console/GameConsoleStore.tsx";
@@ -192,11 +195,11 @@ export default noop.memo(function VoicePanelAudioOutputActionSheet(arg0) {
   if (null != stateFromStores) {
     obj = { header: null, children: null };
     obj = { title: null };
-    const intl = tmp(1114).intl;
-    obj.title = intl.string(tmp(1114).t.iwxPM3);
-    obj.header = closure_11(tmp(7149).BottomSheetTitleHeader, obj);
+    const intl = util.intl;
+    obj.title = intl.string(util.t.iwxPM3);
+    obj.header = closure_11(BottomSheetTitleHeader.BottomSheetTitleHeader, obj);
     if (isConnectedToVoiceChannel) {
-      isConnectedToVoiceChannel = tmp5(VoicePanelAudioPhoneOutputSection, {});
+      isConnectedToVoiceChannel = closure_11(VoicePanelAudioPhoneOutputSection, {});
     }
     const obj1 = { children: null };
     const obj2 = { children: null };
@@ -206,7 +209,7 @@ export default noop.memo(function VoicePanelAudioOutputActionSheet(arg0) {
     obj2.children = items1;
     obj1.children = closure_12(NativeViewDefault, obj2);
     obj.children = closure_11(ScrollView, obj1);
-    tmp5Result = tmp5(tmp(7150).BottomSheet, obj);
+    tmp5Result = closure_11(Sheet_BottomSheet.BottomSheet, obj);
   }
   return tmp5Result;
 });

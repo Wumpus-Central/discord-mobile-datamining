@@ -27,10 +27,10 @@ export default function AppLauncherBooleanOption(arg0) {
     noop.useState(() => {
       let tmp2 = null != require;
       if (tmp2) {
-        tmp2 = "text" === tmp.type;
+        tmp2 = "text" === require.type;
       }
       if (tmp2) {
-        tmp2 = "true" === tmp.text;
+        tmp2 = "true" === require.text;
       }
       return tmp2;
     }),

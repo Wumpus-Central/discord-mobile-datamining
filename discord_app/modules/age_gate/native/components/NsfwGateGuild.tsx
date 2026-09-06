@@ -55,17 +55,17 @@ export default function NsfwGateGuild(guildId) {
     };
     let id;
     if (currentUser != null) {
-      id = tmp3.id;
+      id = currentUser.id;
     }
     obj.user_id = id;
     let id1;
     if (currentUser != null) {
-      id1 = tmp3.id;
+      id1 = currentUser.id;
     }
     obj.is_member = GuildMemberStore.isMember(guildId, id1);
     let nsfwAllowed;
     if (currentUser != null) {
-      nsfwAllowed = tmp3.nsfwAllowed;
+      nsfwAllowed = currentUser.nsfwAllowed;
     }
     if (nsfwAllowed) {
       nsfwAllowed = AgeRestrictedContentSettingsUtils.getViewNsfwGuildsOrDefault();

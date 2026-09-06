@@ -79,8 +79,8 @@ export default function SafetyHubAccountStandingSubwayMarker(arg0) {
     obj.marginRight = num2;
     obj1.style = obj;
     const obj2 = { style: tmp.empty };
-    obj1.children = closure_4(tmp9, obj2);
-    selectedIcon = tmp10(tmp9, obj1);
+    obj1.children = closure_4(View, obj2);
+    selectedIcon = closure_4(View, obj1);
   }
   const items = [selectedIcon];
   const intl = util.intl;

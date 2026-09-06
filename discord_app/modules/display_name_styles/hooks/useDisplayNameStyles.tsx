@@ -23,7 +23,6 @@ export default function useDisplayNameStyles() {
     location: "useDisplayNameStyles",
   });
   const obj2 = require("useDisplayNameStylesEnabled");
-  const tmp = require;
   const tmp2 = stateFromStores;
   const items = [UserStore];
   stateFromStores = require("initialize").useStateFromStores(items, () => {
@@ -42,7 +41,7 @@ export default function useDisplayNameStyles() {
   }
   const obj3 = require("initialize");
   const items1 = [GuildMemberStore];
-  const stateFromStores1 = tmp(tmp2[4]).useStateFromStores(items1, () => {
+  const stateFromStores1 = require("initialize").useStateFromStores(items1, () => {
     let member = null;
     if (null != closure_1) {
       member = null;
@@ -84,4 +83,5 @@ export default function useDisplayNameStyles() {
       displayNameStyles = displayNameStyles1;
     }
   }
+  const tmpResult = require("initialize");
 }

@@ -1,6 +1,10 @@
 // discord_app/modules/a11y/native/AccessibilityCallManager.tsx
 import DispatcherDefault from "../../../Dispatcher.tsx";
+import util from "../../../intl/index.native.tsx";
 import PlatformUtils from "../../../utils/PlatformUtils.tsx";
+import UserSettings from "../../user_settings/UserSettings.tsx";
+import shared from "../../../design/shared.tsx";
+import useChannelName from "../../channel/useChannelName.tsx";
 import AuthenticationStore from "../../../stores/AuthenticationStore.tsx";
 import ChannelStore from "../../../stores/ChannelStore.tsx";
 import RelationshipStore from "../../../stores/RelationshipStore.tsx";
@@ -23,18 +27,18 @@ class AccessibilityCallManager extends tmp4 {
           if (!obj2.isIOS()) {
             const channel = ChannelStore.getChannel(channelId);
             if (null != channel) {
-              const channelName = tmp4(4713).computeChannelName(channel, UserStore, RelationshipStore);
+              const channelName = useChannelName.computeChannelName(channel, UserStore, RelationshipStore);
               if (null != channelName) {
                 obj.add(channelId);
-                const AccessibilityAnnouncer = tmp4(4411).AccessibilityAnnouncer;
-                const intl = tmp4(1114).intl;
+                const AccessibilityAnnouncer = shared.AccessibilityAnnouncer;
+                const intl = util.intl;
                 obj = { callLocation: channelName };
-                AccessibilityAnnouncer.announce(intl.formatToPlainString(tmp4(1114).t["Bm0A/p"], obj), "assertive");
+                AccessibilityAnnouncer.announce(intl.formatToPlainString(util.t["Bm0A/p"], obj), "assertive");
               }
-              const tmp4Result = tmp4(4713);
+              const tmp4Result = useChannelName;
             }
           } else {
-            const NativePhoneIntegrationEnabled = tmp4(1935).NativePhoneIntegrationEnabled;
+            const NativePhoneIntegrationEnabled = UserSettings.NativePhoneIntegrationEnabled;
           }
           obj2 = PlatformUtils;
         }
@@ -55,22 +59,21 @@ class AccessibilityCallManager extends tmp4 {
             if (!obj3.isIOS()) {
               const channel = ChannelStore.getChannel(channelId);
               if (null != channel) {
-                const channelName = tmp4(4713).computeChannelName(channel, UserStore, RelationshipStore);
+                const channelName = useChannelName.computeChannelName(channel, UserStore, RelationshipStore);
                 if (null != channelName) {
-                  obj2.add(channelId);
-                  const AccessibilityAnnouncer = tmp4(4411).AccessibilityAnnouncer;
-                  const intl = tmp4(1114).intl;
+                  set.add(channelId);
+                  const AccessibilityAnnouncer = shared.AccessibilityAnnouncer;
+                  const intl = util.intl;
                   obj = { callLocation: channelName };
-                  AccessibilityAnnouncer.announce(intl.formatToPlainString(tmp4(1114).t["Bm0A/p"], obj), "assertive");
+                  AccessibilityAnnouncer.announce(intl.formatToPlainString(util.t["Bm0A/p"], obj), "assertive");
                 }
-                const tmp4Result = tmp4(4713);
+                const tmp4Result = useChannelName;
               }
             } else {
-              const NativePhoneIntegrationEnabled = tmp4(1935).NativePhoneIntegrationEnabled;
+              const NativePhoneIntegrationEnabled = UserSettings.NativePhoneIntegrationEnabled;
             }
             obj3 = PlatformUtils;
           }
-          obj2 = set;
         }
       }
       if (flag) {

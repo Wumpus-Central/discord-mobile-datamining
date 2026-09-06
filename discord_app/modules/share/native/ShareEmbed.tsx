@@ -54,13 +54,13 @@ export default function ShareEmbed(embed) {
   let items = [embed];
   const memo = noop.useMemo(() => {
     if (null != embed) {
-      const thumbnail = tmp.thumbnail;
+      const thumbnail = embed.thumbnail;
       let url;
       if (thumbnail != null) {
         url = thumbnail.url;
       }
       if (url == null) {
-        const image = tmp.image;
+        const image = embed.image;
         let url1;
         if (image != null) {
           url1 = image.url;
@@ -172,19 +172,19 @@ export default function ShareEmbed(embed) {
       let tmp9Result = null != memo;
       if (tmp9Result) {
         obj = { style: tmp.thumbnail, source: memo, resizeMode: "cover" };
-        tmp9Result = tmp9(memo3, obj);
+        tmp9Result = closure_5(memo3, obj);
       }
       obj = { children: null };
       const items6 = [tmp9Result];
       let obj1 = { style: tmp.contentContainer, children: null };
       const items7 = [memo2, memo3, memo4, tmp7];
       obj1.children = items7;
-      items6[1] = closure_6(tmp10, obj1);
+      items6[1] = closure_6(closure_4, obj1);
       obj.children = items6;
-      memo1 = tmp12(closure_7, obj);
+      memo1 = closure_6(closure_7, obj);
     }
     obj.children = memo1;
-    tmp9Result = tmp9(tmp10, obj);
+    tmp9Result = closure_5(closure_4, obj);
   } else {
     tmp9Result = null;
   }

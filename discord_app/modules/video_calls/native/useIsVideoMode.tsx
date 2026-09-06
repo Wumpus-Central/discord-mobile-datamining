@@ -28,25 +28,25 @@ export default function useIsVideoMode() {
     return tmp2;
   });
 }
-export const isVideoMode = function isVideoMode(arg0, arg1, arg2, arg3, arg4) {
-  let obj = arg0;
-  if (arg0 === undefined) {
+export const isVideoMode = function isVideoMode() {
+  let obj = ChannelStore;
+  if (ChannelStore === undefined) {
     obj = ChannelStore;
   }
-  let obj2 = arg1;
-  if (arg1 === undefined) {
+  let obj2 = SelectedChannelStore;
+  if (SelectedChannelStore === undefined) {
     obj2 = SelectedChannelStore;
   }
-  let obj3 = arg2;
-  if (arg2 === undefined) {
+  let obj3 = ApplicationStreamingStore;
+  if (ApplicationStreamingStore === undefined) {
     obj3 = ApplicationStreamingStore;
   }
-  let obj4 = arg3;
-  if (arg3 === undefined) {
+  let obj4 = VoiceStateStore;
+  if (VoiceStateStore === undefined) {
     obj4 = VoiceStateStore;
   }
-  let obj5 = arg4;
-  if (arg4 === undefined) {
+  let obj5 = MediaEngineStore;
+  if (MediaEngineStore === undefined) {
     obj5 = MediaEngineStore;
   }
   const channel = obj.getChannel(obj2.getVoiceChannelId());

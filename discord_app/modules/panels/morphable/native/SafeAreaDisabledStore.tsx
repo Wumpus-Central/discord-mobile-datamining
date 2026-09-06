@@ -24,7 +24,7 @@ export default module_560.create((arg0, arg1) => {
               let obj = {};
               const merged = Object.assign(lockKeys);
               const _Set2 = Set;
-              const items = [tmp];
+              const items = [closure_1_0];
               const _Array = Array;
               HermesBuiltin.arraySpread(Array.from(lockKeys.lockKeys), 1);
               const set = new Set(items);
@@ -35,7 +35,7 @@ export default module_560.create((arg0, arg1) => {
           } else if (hasItem) {
             const _Set = Set;
             const set1 = new Set(lockKeys);
-            set1.delete(tmp);
+            set1.delete(closure_1_0);
             obj = {};
             const merged1 = Object.assign(lockKeys);
             obj.lockKeys = set1;

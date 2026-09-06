@@ -31,18 +31,18 @@ export default function useColorThemeBackground() {
   let memo = noop.useMemo(() => {
     let tmp3 = null;
     if (null != closure_0) {
-      if ("custom" === tmp.type) {
-        const customUserThemeSettings = tmp.customUserThemeSettings;
+      if ("custom" === closure_0.type) {
+        const customUserThemeSettings = closure_0.customUserThemeSettings;
         let obj = {
           type: ClientThemesTypes.ClientThemeType.CUSTOM_BACKGROUND_GRADIENT,
           getName: getGuildThemeName,
-          theme: tmp2,
+          theme: stateFromStores,
           customThemeSettings: null,
         };
         obj = { colors: null, gradientColorStops: null, gradientAngle: null, baseMix: null };
         const items = [];
         HermesBuiltin.arraySpread(
-          GuildThemePresets.getSingleColorGuildThemeGradientColors(customUserThemeSettings.colors[0], tmp2),
+          GuildThemePresets.getSingleColorGuildThemeGradientColors(customUserThemeSettings.colors[0], stateFromStores),
           0,
         );
         obj.colors = items;
@@ -60,11 +60,14 @@ export default function useColorThemeBackground() {
         obj.customThemeSettings = obj;
         tmp3 = obj;
       } else {
-        const guildThemePresetAppearance = GuildThemePresets.getGuildThemePresetAppearance(tmp.preset, tmp2);
+        const guildThemePresetAppearance = GuildThemePresets.getGuildThemePresetAppearance(
+          closure_0.preset,
+          stateFromStores,
+        );
         obj = {
           type: ClientThemesTypes.ClientThemeType.CUSTOM_BACKGROUND_GRADIENT,
           getName: getGuildThemeName,
-          theme: tmp2,
+          theme: stateFromStores,
           customThemeSettings: null,
         };
         const obj1 = { colors: null, gradientAngle: null, gradientColorStops: null, baseMix: null };

@@ -45,7 +45,7 @@ let closure_9 = createStyles.createStyles(() => {
   obj.leftSlot = { alignItems: "center", justifyContent: "center" };
   return obj;
 });
-const forwardRefResult = noop.forwardRef((channel, ref) => {
+const forwardRefResult = noop.forwardRef((channel, arg1) => {
   channel = channel.channel;
   const onPressAction = channel.onPressAction;
   noop = undefined;
@@ -60,7 +60,7 @@ const forwardRefResult = noop.forwardRef((channel, ref) => {
   const tmp7 = _slicedToArray(noop.useState(true), 2);
   noop = tmp7[1];
   const imperativeHandle = noop.useImperativeHandle(
-    ref,
+    arg1,
     () => ({
       onDismissActions() {
         return closure_1_4(false);

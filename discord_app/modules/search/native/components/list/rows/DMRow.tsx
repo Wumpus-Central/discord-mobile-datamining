@@ -87,7 +87,7 @@ export default noop.memo(function DMRow(user) {
   const items3 = [onPress, user.id];
   let name = stateFromStores1;
   const callback = guildId.useCallback(
-    isOwner(function* (arg0, value) {
+    isOwner(function* () {
       if (c4 === 2) {
         c4 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -173,28 +173,28 @@ export default noop.memo(function DMRow(user) {
       items[1] = bot;
       let tmp4Result = isOwner;
       if (isOwner) {
-        obj = { style: tmp3.tag, children: null };
-        const obj1 = { size: tmp5(1178).Icon.Sizes.REFRESH_SMALL_16, source: _modDef9753, disableColor: true };
-        obj.children = tmp4(tmp5(1178).Icon, obj1);
-        tmp4Result = tmp4(tmp2, obj);
+        obj = { style: title.tag, children: null };
+        const obj1 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef9753, disableColor: true };
+        obj.children = map1(native.Icon, obj1);
+        tmp4Result = map1(timestampProducer, obj);
       }
       items[2] = tmp4Result;
       tmp4Result = null != premiumSince;
       if (tmp4Result) {
-        obj2 = { style: tmp3.tag, children: null };
-        const obj3 = { size: tmp5(1178).Icon.Sizes.REFRESH_SMALL_16, source: _modDef13502, disableColor: true };
-        obj2.children = tmp4(tmp5(1178).Icon, obj3);
-        tmp4Result = tmp4(tmp2, obj2);
+        obj2 = { style: title.tag, children: null };
+        const obj3 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef13502, disableColor: true };
+        obj2.children = map1(native.Icon, obj3);
+        tmp4Result = map1(timestampProducer, obj2);
       }
       items[3] = tmp4Result;
       obj.children = items;
-      return closure_2_14(tmp2, obj);
+      return closure_2_14(timestampProducer, obj);
     } else {
-      const obj4 = { style: tmp3.tag, verified: obj2.isVerifiedBot(), type: null };
+      const obj4 = { style: title.tag, verified: obj2.isVerifiedBot(), type: null };
       const tmp8 = BotTagDefault;
       const Types = BotTagDefault.Types;
       obj4.type = obj2.isSystemUser() ? Types.SYSTEM_DM : Types.BOT;
-      tmp4(tmp8, obj4);
+      map1(tmp8, obj4);
       const isSystemUserResult = obj2.isSystemUser();
     }
   }, items4);
@@ -225,7 +225,7 @@ export default noop.memo(function DMRow(user) {
     let obj = UserUtilsDefault;
     const userTag = obj.getUserTag(user);
     if (null != userTag) {
-      if (!tmp2.isProvisional) {
+      if (!user.isProvisional) {
         obj = { variant: "text-sm/medium", color: "text-muted", children: userTag };
         let tmp6 = map1(Text_Text.Text, obj);
       }
@@ -233,7 +233,7 @@ export default noop.memo(function DMRow(user) {
     }
     let tmp8 = null;
     if (null != type) {
-      obj = { user: tmp2, guildId, type: tmp7, animate: !stateFromStores };
+      obj = { user, guildId, type: tmp7, animate: !stateFromStores };
       tmp8 = map1(FriendPresence, obj);
     }
     tmp6 = tmp8;

@@ -261,7 +261,7 @@ export const MaskedBadge = function MaskedBadge(maskStyle) {
         accessibilityLabel={accessibilityLabel}
         accessibilityElementsHidden={accessibilityElementsHidden}
         importantForAccessibility={importantForAccessibility}
-        isMentionLowImportance={arg0.isMentionLowImportance}
+        isMentionLowImportance={maskStyle.isMentionLowImportance}
       />
     );
     let tmp3 = (
@@ -276,7 +276,7 @@ export const MaskedBadge = function MaskedBadge(maskStyle) {
         accessibilityLabel={accessibilityLabel}
         accessibilityElementsHidden={accessibilityElementsHidden}
         importantForAccessibility={importantForAccessibility}
-        isMentionLowImportance={arg0.isMentionLowImportance}
+        isMentionLowImportance={maskStyle.isMentionLowImportance}
       />
     );
   } else {

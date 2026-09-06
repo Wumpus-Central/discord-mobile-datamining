@@ -1,6 +1,7 @@
 // discord_app/modules/messages/native/renderer/MessageWithContent.tsx
 import util from "../../../../intl/index.native.tsx";
 import createMessageContentDefault from "createMessageContent.tsx";
+import RowGeneratorUtilsDefault from "RowGeneratorUtils.tsx";
 import GuildAutomodMessageStore from "../../../guild_automod/GuildAutomodMessageStore.tsx";
 
 require = fn;
@@ -67,7 +68,7 @@ export const generateMessageRowData = function generateMessageRowData(canShowIma
   obj.truncation = truncation;
   obj.alwaysShowAddReaction = tmp3;
   if (overrideBackgroundHighlight == null) {
-    let tmp4Result = tmp4(8108);
+    let tmp4Result = RowGeneratorUtilsDefault;
     obj = {
       message,
       theme,
@@ -77,17 +78,17 @@ export const generateMessageRowData = function generateMessageRowData(canShowIma
     overrideBackgroundHighlight = tmp4Result.createBackgroundHighlight(obj);
   }
   obj.backgroundHighlight = overrideBackgroundHighlight;
-  tmp4Result = tmp4(8108);
+  tmp4Result = RowGeneratorUtilsDefault;
   let canReply = options.enableSwipeActions;
   if (canReply) {
     canReply = canShowImages.canReply;
   }
   obj.swipeActions = tmp4Result.createSwipeActions(canReply, options.enableSwipeActions && canShowImages.canEdit);
-  const intl3 = tmp6(1114).intl;
+  const intl3 = util.intl;
   obj.replyAccessibilityLabel = intl3.string(util.t["5IEsGx"]);
-  const intl4 = tmp6(1114).intl;
+  const intl4 = util.intl;
   obj.forwardAccessibilityLabel = intl4.string(util.t.I3ltXO);
-  const intl5 = tmp6(1114).intl;
+  const intl5 = util.intl;
   obj.threadAccessibilityLabel = intl5.string(util.t.rBIGBL);
   const forcedTheme = options.forcedTheme;
   obj.forcedTheme = forcedTheme;

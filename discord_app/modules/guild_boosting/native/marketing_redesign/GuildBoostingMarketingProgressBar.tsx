@@ -103,13 +103,13 @@ export default function ProgressBar(guild) {
   const fn2 = function w(arg0) {
     let TIER_3 = BoostedGuildTiers.NONE;
     if (arg0 >= 28.33) {
-      TIER_3 = tmp.TIER_1;
+      TIER_3 = BoostedGuildTiers.TIER_1;
     }
     if (arg0 >= 61.67) {
-      TIER_3 = tmp.TIER_2;
+      TIER_3 = BoostedGuildTiers.TIER_2;
     }
     if (arg0 >= 95) {
-      TIER_3 = tmp.TIER_3;
+      TIER_3 = BoostedGuildTiers.TIER_3;
     }
     if (TIER_3 !== first) {
       ReanimatedRexport.runOnJS(closure_4)(TIER_3);

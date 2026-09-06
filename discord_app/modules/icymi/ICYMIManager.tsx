@@ -1,5 +1,6 @@
 // discord_app/modules/icymi/ICYMIManager.tsx
 import DispatcherDefault from "../../Dispatcher.tsx";
+import DurationsDefault from "../../utils/Durations.tsx";
 import ICYMIActionCreatorsDefault from "ICYMIActionCreators.tsx";
 import ICYMIExperiment from "ICYMIExperiment.tsx";
 import LifecycleManager from "../../lib/LifecycleManager.tsx";
@@ -50,13 +51,17 @@ prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
               clearTimeout(timeout);
             }
             timeout = setTimeout(() => { ... }, 15 * closure_1_1(closure_1_2[1]).Millis.MINUTE);
+            let obj = closure_1_1(closure_1_2[0]);
           }, 15 * closure_1_1(closure_1_2[1]).Millis.MINUTE);
+          let obj = closure_1_1(closure_1_2[0]);
         }, 15 * closure_1_1(closure_1_2[1]).Millis.MINUTE);
+        let obj = closure_1_1(closure_1_2[0]);
       }, 15 * closure_1_1(closure_1_2[1]).Millis.MINUTE);
-    }, 15 * tmp2(1090).Millis.MINUTE);
-    let tmp2Result = tmp2(8351);
+      let obj = closure_1_1(closure_1_2[0]);
+    }, 15 * DurationsDefault.Millis.MINUTE);
+    let tmp2Result = ICYMIActionCreatorsDefault;
     const guildChannelScores = tmp2Result.getGuildChannelScores();
-    tmp2Result = tmp2(8351);
+    tmp2Result = ICYMIActionCreatorsDefault;
     const recommendedGuilds = tmp2Result.getRecommendedGuilds();
   }
 };

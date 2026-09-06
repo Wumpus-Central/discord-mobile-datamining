@@ -1,6 +1,10 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/user_list/UsersFastList.tsx
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import native from "../../../../../design/void/native.tsx";
 import ReanimatedRexport from "../../../../reanimated/ReanimatedRexport.tsx";
+import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
+import Pressables from "../../../../../design/void/Pressables/native/Pressables.tsx";
+import ThemedGradientDefault from "../../../../client_themes/native/ThemedGradient.tsx";
 import TableRow from "../../../../../design/components/TableRow/native/TableRow.native.tsx";
 import ClientThemesOverrides from "../../../../client_themes/native/ClientThemesOverrides.tsx";
 import useFastestListTableRowPlaceholderConfig from "../../../../fastest_list/placeholders/useFastestListTableRowPlaceholderConfig.native.tsx";
@@ -186,17 +190,17 @@ let closure_16 = noop.memo(function UserSectionInner(stickyAt) {
   if (null != badge) {
     obj1 = { style: tmp.badgeWrapper, children: null };
     obj2 = { style: tmp.badge, value: badge };
-    obj1.children = React5(tmp3(1178).Badge, obj2);
+    obj1.children = React5(native.Badge, obj2);
     tmp12 = React5(View, obj1);
   }
   items3[1] = tmp12;
   obj.children = items3;
-  let tmp11Result = tmp11(tmp3(4556).Text, obj);
+  let tmp11Result = React6(Text_Text.Text, obj);
   if (null != titleLeading) {
     obj3 = { style: tmp.titleRow, children: null };
     const items4 = [titleLeading, tmp11Result];
     obj3.children = items4;
-    tmp11Result = tmp11(View, obj3);
+    tmp11Result = React6(View, obj3);
   }
   let tmp18 = tmp11Result;
   if (null != onTitlePress) {
@@ -206,7 +210,7 @@ let closure_16 = noop.memo(function UserSectionInner(stickyAt) {
       onPress: onTitlePress,
       children: tmp11Result,
     };
-    tmp18 = React5(tmp3(5123).PressableOpacity, obj4);
+    tmp18 = React5(Pressables.PressableOpacity, obj4);
   }
   const obj5 = { style: memo1, children: null };
   const items5 = [tmp18];
@@ -214,8 +218,8 @@ let closure_16 = noop.memo(function UserSectionInner(stickyAt) {
   if (null != actionTitle) {
     const obj6 = { onPress: action, children: null };
     const obj7 = { variant: "text-sm/semibold", color: "text-brand", children: actionTitle };
-    obj6.children = React5(tmp3(4556).Text, obj7);
-    tmp21 = React5(tmp3(5123).PressableOpacity, obj6);
+    obj6.children = React5(Text_Text.Text, obj7);
+    tmp21 = React5(Pressables.PressableOpacity, obj6);
   }
   items5[1] = tmp21;
   obj5.children = items5;
@@ -227,13 +231,13 @@ let closure_16 = noop.memo(function UserSectionInner(stickyAt) {
     if (!disableThemedGradient) {
       const obj9 = {
         style: animatedStyle1,
-        children: React5(tmp25(5125), { absolute: true, tall: true, wide: true, mix: true }),
+        children: React5(ThemedGradientDefault, { absolute: true, tall: true, wide: true, mix: true }),
       };
-      tmp26 = React5(tmp25(4296).View, obj9);
+      tmp26 = React5(ReanimatedRexportDefault.View, obj9);
     }
     const items6 = [tmp26, tmp11Result1];
     obj8.children = items6;
-    tmp11Result2 = tmp11(ReanimatedRexportDefault.View, obj8);
+    tmp11Result2 = React6(ReanimatedRexportDefault.View, obj8);
   }
   return tmp11Result2;
 });

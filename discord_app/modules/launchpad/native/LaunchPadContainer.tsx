@@ -124,7 +124,7 @@ export default function LaunchPadContainer(children) {
       launchPadPullTabState,
       updaters,
     };
-    const tmp10Result = tmp10(updaters(16964), obj4);
+    const tmp10Result = closure_6(updaters(16964), obj4);
   }
   items1[1] = tmp10Result;
   obj2.children = items1;

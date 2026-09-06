@@ -47,12 +47,12 @@ export default function HubEmailConnectionModal(arg0) {
     const push = items.push;
     let obj = { name: null, params: null };
     if (closure_1_3) {
-      obj.name = tmp.STUDENT_PROMPT;
+      obj.name = HubEmailConnectionSteps.STUDENT_PROMPT;
       obj = { onClose: handleClose };
       obj.params = obj;
       push(obj);
     } else {
-      obj.name = tmp.VERIFY_EMAIL;
+      obj.name = HubEmailConnectionSteps.VERIFY_EMAIL;
       obj = { invite, onClose: handleClose };
       obj.params = obj;
       push(obj);
@@ -60,10 +60,10 @@ export default function HubEmailConnectionModal(arg0) {
     let obj3 = NavigatorHeader;
     if (closure_1_0) {
       let headerBackButton = obj3.getHeaderBackButton(handleClose);
-      let tmp9 = tmp5;
+      let tmp9 = require;
     } else {
       headerBackButton = obj3.getHeaderCloseButton(handleClose);
-      tmp9 = tmp5;
+      tmp9 = require;
     }
     const obj1 = { screens: null, initialRouteStack: null };
     const obj2 = { [closure_2_3.STUDENT_PROMPT]: obj3 };

@@ -24,10 +24,10 @@ function Emoji(surrogate) {
     obj.style = obj.emojiIcon;
     obj1 = { uri: uRL };
     obj.source = obj1;
-    let tmp7Result = tmp7(FastImageDefault, obj);
+    let tmp7Result = timestampProducer(FastImageDefault, obj);
   } else {
     obj2 = { style: obj.emojiSurrogate, variant: "text-md/medium", children: surrogate };
-    tmp7Result = tmp7(Text_Text.Text, obj2);
+    tmp7Result = timestampProducer(Text_Text.Text, obj2);
   }
   obj.children = tmp7Result;
   return timestampProducer(View, obj);

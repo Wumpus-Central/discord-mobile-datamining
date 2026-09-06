@@ -29,11 +29,12 @@ let obj = {
     obj = { type: "GUILD_SETTINGS_INIT", guildId, section, subsection, location };
     obj.dispatch(obj);
   },
-  open(guildId, arg1, arg2, arg3) {
+  open(arg0, arg1, arg2, arg3) {
+    closure_0 = arg0;
     let SAFETY = arg1;
     closure_2 = arg2;
     asyncGeneratorStep = arg3;
-    return (async (arg0, value) => {
+    return (async () => {
       if (c0 === 2) {
         c0 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -65,11 +66,11 @@ let obj = {
             }
             if (hasItem) {
               if (SAFETY === constants2.GUILD_AUTOMOD) {
-                SAFETY = tmp7.SAFETY;
+                SAFETY = constants2.SAFETY;
                 let subsection = constants.SAFETY_AUTOMOD;
               }
               if (SAFETY === constants2.MEMBER_VERIFICATION) {
-                SAFETY = tmp7.SAFETY;
+                SAFETY = constants2.SAFETY;
                 subsection = constants.SAFETY_DM_AND_SPAM_PROTECTION;
               }
             }
@@ -113,11 +114,11 @@ let obj = {
       if (hasItem) {
         let SAFETY = arg0;
         if (arg0 === constants2.GUILD_AUTOMOD) {
-          SAFETY = tmp7.SAFETY;
+          SAFETY = constants2.SAFETY;
           SAFETY_DM_AND_SPAM_PROTECTION = constants.SAFETY_AUTOMOD;
         }
         if (SAFETY === constants2.MEMBER_VERIFICATION) {
-          SAFETY = tmp7.SAFETY;
+          SAFETY = constants2.SAFETY;
           SAFETY_DM_AND_SPAM_PROTECTION = constants.SAFETY_DM_AND_SPAM_PROTECTION;
         }
         tmp5 = SAFETY_DM_AND_SPAM_PROTECTION;
@@ -214,7 +215,7 @@ let obj = {
     const merged = Object.assign(arg1);
     obj.dispatch(obj);
   },
-  saveGuild(id, arg1, body) {
+  saveGuild(id, arg1) {
     _require = id;
     ({ premiumProgressBarEnabled, profile } = arg1);
     ({
@@ -344,13 +345,13 @@ let obj = {
       return result;
     });
   },
-  transferOwnership(id, id2, EMAIL, arg3) {
+  transferOwnership(id, id2) {
     let tmp = EMAIL;
     if (EMAIL === undefined) {
       tmp = null;
     }
-    let tmp2 = arg3;
-    if (arg3 === undefined) {
+    let tmp2 = id3;
+    if (id3 === undefined) {
       tmp2 = null;
     }
     const request = {
@@ -404,7 +405,7 @@ let obj = {
     if (arg1 === undefined) {
       flag = false;
     }
-    return (async (arg0, value) => {
+    return (async () => {
       if (c3 === 2) {
         c3 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -493,7 +494,7 @@ let obj = {
     closure_2 = arg2;
     asyncGeneratorStep = arg3;
     closure_4 = arg4;
-    return (async (arg0, value) => {
+    return (async () => {
       if (c3 === 2) {
         c3 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -522,7 +523,7 @@ let obj = {
               const v0 = 0;
               if (fullServerPreview.isFullServerPreview(guildId)) {
                 if (userId === id.getId()) {
-                  const result = v0(roles[20]).updateImpersonatedRoles(tmp28, roles);
+                  const result = v0(roles[20]).updateImpersonatedRoles(guildId, roles);
                   c3 = 3;
                   const obj6 = v0(roles[20]);
                 }
@@ -628,7 +629,7 @@ let obj = {
   },
   migratePinPermission(arg0) {
     closure_0 = arg0;
-    return (async (arg0, value) => {
+    return (async () => {
       if (v3 === 2) {
         v3 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -687,7 +688,7 @@ let obj = {
   },
   migrateSlowmodePermission(arg0) {
     closure_0 = arg0;
-    return (async (arg0, value) => {
+    return (async () => {
       if (v3 === 2) {
         v3 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -747,7 +748,7 @@ let obj = {
   migratePermissions(arg0, arg1) {
     closure_0 = arg0;
     ({ migratePin: importDefault, migrateSlowmode: dependencyMap } = arg1);
-    return (async (arg0, value) => {
+    return (async () => {
       if (c2 === 2) {
         c2 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");

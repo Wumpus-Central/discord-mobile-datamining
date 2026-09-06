@@ -71,7 +71,7 @@ export default function GuildProfileGamesActionSheet(profile) {
     title: str,
     hasIcons: true,
     children: allGuildProfileGames.map((game) => (
-      <GuildProfileGameRow key={arg0.id} game={arg0} activityLevel={gameActivity[arg0.id]} />
+      <GuildProfileGameRow key={game.id} game={game} activityLevel={gameActivity[game.id]} />
     )),
   });
   obj.children = <View style={closure_7().container}>{null}</View>;

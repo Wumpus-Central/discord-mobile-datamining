@@ -31,15 +31,15 @@ export const useTextChannelPressEvents = function useTextChannelPressEvents(chan
     const channel = ChannelStore.getChannel(user.parent_id);
     if (null != channel) {
       if (channel.isForumLikeChannel()) {
-        if (obj.isForumPost()) {
-          showLongPressForumPostActionSheetDefault(obj, channel);
+        if (user.isForumPost()) {
+          showLongPressForumPostActionSheetDefault(user, channel);
         }
       }
     }
     if (user.isThread()) {
-      showThreadLongPressActionSheetDefault(obj.id);
+      showThreadLongPressActionSheetDefault(user.id);
     } else {
-      const result = openChannelLongPressActionSheet.openChannelLongPressActionSheet(obj.id);
+      const result = openChannelLongPressActionSheet.openChannelLongPressActionSheet(user.id);
     }
   }, items1);
   return obj;

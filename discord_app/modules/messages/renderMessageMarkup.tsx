@@ -144,7 +144,7 @@ export const renderMessageMarkupWithParser = function renderMessageMarkupWithPar
   }
   return render(NativeSearchResultLinkPreviewParser, arg1, obj);
 };
-export const renderMessageMarkupToAST = function renderMessageMarkupToAST(message, result) {
+export const renderMessageMarkupToAST = function renderMessageMarkupToAST(message) {
   let obj = result;
   if (result === undefined) {
     obj = {};

@@ -1,6 +1,7 @@
 // discord_app/modules/telemetry_ring/trackHttpRequest.tsx
 import Constants from "../../Constants.tsx";
 import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
+import HttpRequestSampleExperiment from "HttpRequestSampleExperiment.tsx";
 import trackZoomedInHttpRequestDefault from "trackZoomedInHttpRequest.android.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
@@ -25,4 +26,5 @@ export default function trackHttpRequest(url) {
     AnalyticsUtilsDefault.track(AnalyticEvents.HTTP_REQUEST, obj);
     const tmp3Result = AnalyticsUtilsDefault;
   }
+  obj2 = HttpRequestSampleExperiment;
 }

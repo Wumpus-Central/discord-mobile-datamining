@@ -111,16 +111,16 @@ export const ConnectGuardianCard = function ConnectGuardianCard(linkCode) {
       items4[1] = compactDividerFlush;
       obj3.style = items4;
       const obj4 = { style: tmp.dividerLine };
-      const items5 = [tmp18(tmp19, obj4), ,];
+      const items5 = [closure_7(View, obj4), ,];
       const obj5 = { style: tmp.dividerText, variant: "text-sm/medium", color: "text-muted", children: null };
       const intl = tmp2(tmp3[13]).intl;
       const tmp6Result = tmp6(tmp3[14]);
       obj5.children = intl.string("compact" === shareActions ? tmp6Result.XhROZk : tmp6Result.lggBOi);
-      items5[1] = tmp18(tmp2(tmp3[17]).Text, obj5);
+      items5[1] = closure_7(tmp2(tmp3[17]).Text, obj5);
       const obj6 = { style: tmp.dividerLine };
-      items5[2] = tmp18(tmp19, obj6);
+      items5[2] = closure_7(View, obj6);
       obj3.children = items5;
-      let tmp20Result = tmp20(tmp19, obj3);
+      let tmp20Result = closure_8(View, obj3);
       if ("compact" === shareActions) {
         const obj7 = { style: tmp.compactContainer, children: null };
         const items6 = [tmp22, tmp20Result];
@@ -128,12 +128,12 @@ export const ConnectGuardianCard = function ConnectGuardianCard(linkCode) {
         const intl4 = tmp2(tmp3[13]).intl;
         obj8.text = intl4.string(tmp2(tmp3[13]).t.Ej3B3Y);
         const obj9 = { size: "md", color: tmp6(tmp3[6]).colors.CONTROL_SECONDARY_TEXT_DEFAULT };
-        obj8.icon = tmp18(tmp2(tmp3[20]).ShareIcon, obj9);
+        obj8.icon = closure_7(tmp2(tmp3[20]).ShareIcon, obj9);
         obj8.disabled = "" === linkCode;
         obj8.onPress = callback;
-        items6[2] = tmp18(tmp2(tmp3[19]).Button, obj8);
+        items6[2] = closure_7(tmp2(tmp3[19]).Button, obj8);
         obj7.children = items6;
-        tmp20Result = tmp20(tmp19, obj7);
+        tmp20Result = closure_8(View, obj7);
       } else {
         const obj10 = { spacing: tmp6(tmp3[6]).space.PX_32, style: tmp.container, children: null };
         const items7 = [tmp22, tmp20Result];
@@ -143,17 +143,17 @@ export const ConnectGuardianCard = function ConnectGuardianCard(linkCode) {
         obj12.text = intl2.string(tmp2(tmp3[13]).t.Ej3B3Y);
         obj12.disabled = "" === linkCode;
         obj12.onPress = callback;
-        const items8 = [tmp18(tmp2(tmp3[19]).Button, obj12)];
+        const items8 = [closure_7(tmp2(tmp3[19]).Button, obj12)];
         const obj13 = { variant: "secondary", size: "md", text: null, disabled: null, onPress: null };
         const intl3 = tmp2(tmp3[13]).intl;
         obj13.text = intl3.string(tmp2(tmp3[13]).t.WqhZss);
         obj13.disabled = "" === linkCode;
         obj13.onPress = tmp10;
-        items8[1] = tmp18(tmp2(tmp3[19]).Button, obj13);
+        items8[1] = closure_7(tmp2(tmp3[19]).Button, obj13);
         obj11.children = items8;
-        items7[2] = tmp20(tmp2(tmp3[21]).ButtonGroup, obj11);
+        items7[2] = closure_8(tmp2(tmp3[21]).ButtonGroup, obj11);
         obj10.children = items7;
-        tmp20Result = tmp20(tmp2(tmp3[15]).Stack, obj10);
+        tmp20Result = closure_8(tmp2(tmp3[15]).Stack, obj10);
       }
       return tmp20Result;
     }

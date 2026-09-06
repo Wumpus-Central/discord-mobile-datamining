@@ -62,7 +62,7 @@ export default function LongPressMessageActionSheet(analyticsLocation) {
   let items = [analyticsLocation, channel];
   const effect = channel.useEffect(() => {
     let obj = { channel_id: channel.id, guild_id: channel.guild_id, location: null };
-    obj = { page: channel.isPrivate() ? tmp.DM_CHANNEL : tmp.GUILD_CHANNEL };
+    obj = { page: channel.isPrivate() ? constants.DM_CHANNEL : constants.GUILD_CHANNEL };
     const merged = Object.assign(analyticsLocation);
     obj.location = obj;
     obj.trackWithMetadata(constants.MESSAGE_ACTION_SHEET_OPENED, obj);
@@ -253,7 +253,7 @@ export default function LongPressMessageActionSheet(analyticsLocation) {
     let shouldShowEmojiRowResult = EmojiRowUtils.shouldShowEmojiRow(closure_8, message, closure_10);
     if (shouldShowEmojiRowResult) {
       obj = { message, channel };
-      shouldShowEmojiRowResult = tmp(EmojiRowDefault, obj);
+      shouldShowEmojiRowResult = jsx(EmojiRowDefault, { message, channel });
     }
     obj.header = shouldShowEmojiRowResult;
     let mapped;

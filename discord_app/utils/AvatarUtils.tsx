@@ -6,8 +6,10 @@ import AvatarDecorationConstants from "../modules/collectibles/avatar_decoration
 import utils_AvatarUtils from "native/AvatarUtils.tsx";
 import ImageLoaderUtils from "../modules/image_upload/ImageLoaderUtils.tsx";
 import _modDef1471 from "../../_runtime/metro/01471__.js";
+import ForceSdrEmojisStickersExperiment from "../modules/image_upload/ForceSdrEmojisStickersExperiment.tsx";
 import NumberUtils from "NumberUtils.tsx";
 import AvatarDecorationUtils from "../modules/collectibles/avatar_decorations/AvatarDecorationUtils.tsx";
+import CollectiblesAssetUtils from "../modules/collectibles/utils/CollectiblesAssetUtils.tsx";
 import _modDef1884 from "../../_runtime/metro/01884__.js";
 import Constants from "../Constants.tsx";
 import PlatformUtils from "PlatformUtils.tsx";
@@ -112,7 +114,7 @@ function getAvatarURL(canAnimate) {
     }
   }
 }
-function getDefaultAvatarURL(id, discriminator, isProvisional, size) {
+function getDefaultAvatarURL(id, discriminator) {
   let flag = isProvisional;
   if (isProvisional === undefined) {
     flag = false;
@@ -147,7 +149,7 @@ function getDefaultAvatarURL(id, discriminator, isProvisional, size) {
   }
   return first;
 }
-function getUserAvatarURL(user, flag, size, format, SUPPORTS_WEBP) {
+function getUserAvatarURL(user) {
   if (flag === undefined) {
     flag = false;
   }
@@ -267,7 +269,7 @@ function getGuildMemberAvatarURLSimple(size) {
   }
   return combined + "?" + _modDef1471.stringify(obj);
 }
-function getGuildBannerURL(guild, flag) {
+function getGuildBannerURL(guild) {
   ({ id, banner } = guild);
   if (flag === undefined) {
     flag = false;
@@ -290,7 +292,7 @@ function getGuildBannerURL(guild, flag) {
       tmp = str;
       if (startsWithResult) {
         let str3 = "gif";
-        if (tmp17) {
+        if (canUseWebpResult) {
           str3 = "webp";
         }
         tmp = str3;
@@ -321,7 +323,6 @@ function getGuildBannerURL(guild, flag) {
     if (tmp11) {
       obj.animated = true;
     }
-    tmp17 = canUseWebpResult;
     const _HermesInternal2 = HermesInternal;
     return combined + "?" + _modDef1471.stringify(obj);
   }
@@ -513,12 +514,13 @@ function getEmojiURL(size) {
       }
     }
     const obj = ImageLoaderUtils;
-    const tmp5 = require;
     const _HermesInternal = HermesInternal;
     const combined =
       "size=" + obj.getBestMediaProxySize(size.size * ImageLoaderUtils.getDevicePixelRatio(), closure_12);
     try {
-      const enabled = tmp5(1879).getForceSdrEmojisStickersConfig({ location: "getEmojiURL" }).enabled;
+      const enabled = ForceSdrEmojisStickersExperiment.getForceSdrEmojisStickersConfig({
+        location: "getEmojiURL",
+      }).enabled;
       let str6 = "";
       if (enabled) {
         str6 = "&force_sdr=true";
@@ -557,15 +559,15 @@ function getEmojiURL(size) {
     } catch (err) {}
   } else if (animated) {
     let str2 = "gif";
-    if (tmp2) {
+    if (canUseWebpResult) {
       str2 = "webp";
     }
     str = str2;
-  } else if (tmp2) {
+  } else if (canUseWebpResult) {
     str = "webp";
   }
 }
-function getGuildMemberAvatarURL(avatar, flag) {
+function getGuildMemberAvatarURL(avatar) {
   avatar = avatar.avatar;
   ({ userId, guildId } = avatar);
   if (flag === undefined) {
@@ -664,7 +666,7 @@ function getAvatarDecorationURL(canAnimate) {
   if (null != avatarDecoration) {
     if (!obj4.isAvatarDecorationExpired(avatarDecoration)) {
       try {
-        let tmp13Result = tmp13(1883);
+        let tmp13Result = CollectiblesAssetUtils;
         ({ CollectiblesItemAssetFormat, getCollectiblesItemAssetUrl } = tmp13Result);
         if (flag) {
           let STATIC = CollectiblesItemAssetFormat.ANIMATED;
@@ -694,11 +696,11 @@ function getAvatarDecorationURL(canAnimate) {
               str2 = new URL("" + location.protocol + GLOBAL_ENV.API_ENDPOINT + result);
             }
             const searchParams = str2.searchParams;
-            tmp13Result = tmp13(1430);
+            tmp13Result = ImageLoaderUtils;
             const _HermesInternal3 = HermesInternal;
             const result1 = searchParams.set(
               "size",
-              "" + tmp13Result.getBestMediaProxySize(size * tmp13(1430).getDevicePixelRatio(), closure_12),
+              "" + tmp13Result.getBestMediaProxySize(size * ImageLoaderUtils.getDevicePixelRatio(), closure_12),
             );
             const searchParams2 = str2.searchParams;
             const _HermesInternal4 = HermesInternal;
@@ -1170,7 +1172,7 @@ export default {
     }
     return tmp2;
   },
-  getGuildBannerSource(guild, hasItem) {
+  getGuildBannerSource(guild) {
     let flag = hasItem;
     if (hasItem === undefined) {
       flag = false;

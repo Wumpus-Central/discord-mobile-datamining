@@ -1,14 +1,24 @@
 // discord_app/modules/user_profile/native/UserProfilePrimaryInfo.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import PlatformUtils from "../../../utils/PlatformUtils.tsx";
+import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
+import StringUtils from "../../../utils/StringUtils.tsx";
 import ToastActionCreatorsDefault from "../../toast/native/ToastActionCreators.tsx";
 import UserUtilsDefault from "../../../utils/UserUtils.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import Pressables from "../../../design/void/Pressables/native/Pressables.tsx";
+import QuestTypes from "../../quests/QuestTypes.tsx";
+import openUserSettings from "../../user_settings/core/native/openUserSettings.tsx";
+import AnalyticsTypes from "../../quests/lib/analytics/AnalyticsTypes.tsx";
 import GuildTagUtils from "../../guild_tag/GuildTagUtils.tsx";
 import BadgeId from "../../../../discord_common/js/shared/shared-constants/BadgeId.tsx";
+import useBadges from "../hooks/useBadges.tsx";
 import GuildTagDefault from "../../guild_tag/native/GuildTag.tsx";
 import BotTagDefault from "../../applications/native/BotTag.tsx";
 import UsernameWithEffectsDefault from "../../display_name_styles/native/UsernameWithEffects.tsx";
+import AdAnalyticsInterfaceExperiment from "../../quests/experiments/AdAnalyticsInterfaceExperiment.tsx";
+import captureAdUserAction from "../../ads/analytics/captureAdUserAction.tsx";
+import captureAdUserActionTypes from "../../ads/analytics/captureAdUserActionTypes.tsx";
 import BadgeUtils from "../../badges/BadgeUtils.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
@@ -174,20 +184,20 @@ class UserTagAndPronouns {
       if (null == userTag) {
         return null;
       } else {
-        let obj = { variant: textVariant, color: "mobile-text-heading-primary", lineClamp: 2, children: tmp };
+        let obj = { variant: textVariant, color: "mobile-text-heading-primary", lineClamp: 2, children: userTag };
         const tmp9 = map1(Text_Text.Text, obj);
         if (null != onPressUserTag) {
           obj = {
             onPress: tmp10,
             accessibilityRole: "button",
-            accessibilityLabel: tmp,
+            accessibilityLabel: userTag,
             accessibilityHint: userTagAccessibilityHint,
             children: tmp9,
           };
-          let tmp5Result = tmp5(Pressables.PressableOpacity, obj);
+          let tmp5Result = map1(Pressables.PressableOpacity, obj);
         } else {
           obj = { children: tmp9 };
-          tmp5Result = tmp5(hasOwnProperty, obj);
+          tmp5Result = map1(hasOwnProperty, obj);
         }
         return tmp5Result;
       }
@@ -329,7 +339,7 @@ function ProfileBadge(source) {
             if (catalogBadge != null) {
               info_label = catalogBadge.info_label;
             }
-            let tmp5Result = tmp5(1925);
+            let tmp5Result = StringUtils;
             let tmp10 = info_label;
             if (tmp5Result.isNullOrEmpty(info_label)) {
               tmp10 = label;
@@ -340,55 +350,53 @@ function ProfileBadge(source) {
             obj.content = tmp10;
             obj.icon = source;
             ToastActionCreatorsDefault.open(obj);
-            if (tmp3 === tmp5(8242).QUEST_COMPLETED_BADGE) {
-              tmp5Result = tmp5(11192);
+            if (id === useBadges.QUEST_COMPLETED_BADGE) {
+              tmp5Result = AdAnalyticsInterfaceExperiment;
               if (
                 tmp5Result.shouldMigrateToAdAnalyticsInterface(
-                  tmp5(11192).AdAnalyticsInterfaceExperimentStep.STEP_4_VIEWED_NON_IMPRESSION,
+                  AdAnalyticsInterfaceExperiment.AdAnalyticsInterfaceExperimentStep.STEP_4_VIEWED_NON_IMPRESSION,
                   "quest_completed_badge_toast",
                 )
               ) {
                 obj = {
-                  type: tmp5(11197).AdUserActionType.VIEW_INTERNAL_SURFACE_IMPRESSION,
-                  surfaceId: tmp5(5447).QuestContent.QUEST_BADGE,
+                  type: captureAdUserActionTypes.AdUserActionType.VIEW_INTERNAL_SURFACE_IMPRESSION,
+                  surfaceId: QuestTypes.QuestContent.QUEST_BADGE,
                   isTargeted: false,
                 };
-                tmp5(11193).captureAdUserAction(obj);
-                const tmp5Result1 = tmp5(11193);
+                captureAdUserAction.captureAdUserAction(obj);
+                const tmp5Result1 = captureAdUserAction;
               } else {
                 const obj1 = {};
-                const tmp11Result = tmp11(1242);
-                const merged = Object.assign(tmp5(7728).getContentProperties(tmp5(5447).QuestContent.QUEST_BADGE));
+                const tmp11Result = AnalyticsUtilsDefault;
+                const merged = Object.assign(AnalyticsTypes.getContentProperties(QuestTypes.QuestContent.QUEST_BADGE));
                 let advertisingId = null;
                 if (null != closure_5) {
                   advertisingId = null;
                   if (tmp5Result3.isIOS()) {
-                    advertisingId = tmp19.advertisingId;
+                    advertisingId = closure_5.advertisingId;
                   }
-                  tmp5Result3 = tmp5(1115);
+                  tmp5Result3 = PlatformUtils;
                 }
                 obj1.apple_advertising_id = advertisingId;
                 let advertisingId1 = null;
                 if (null != closure_5) {
                   advertisingId1 = null;
                   if (tmp5Result4.isAndroid()) {
-                    advertisingId1 = tmp19.advertisingId;
+                    advertisingId1 = closure_5.advertisingId;
                   }
-                  tmp5Result4 = tmp5(1115);
+                  tmp5Result4 = PlatformUtils;
                 }
                 obj1.android_advertising_id = advertisingId1;
                 obj1.is_targeted = false;
                 tmp11Result.track(constants.QUEST_CONTENT_VIEWED, obj1);
-                const tmp5Result2 = tmp5(7728);
+                const tmp5Result2 = AnalyticsTypes;
               }
             }
-            tmp11 = importDefault;
           } else {
             const obj2 = { screen: constants2.PREMIUM_GIFTING, params: {} };
-            tmp5(7382).openUserSettings(obj2);
-            const tmp5Result5 = tmp5(7382);
+            openUserSettings.openUserSettings(obj2);
+            const tmp5Result5 = openUserSettings;
           }
-          tmp3 = id;
         } else {
           tmp();
         }
@@ -403,16 +411,16 @@ function ProfileBadge(source) {
       items[1] = tmp;
       obj4.style = items;
       obj4.source = source;
-      let tmp24Result = tmp24(closure_4, obj4);
+      let tmp24Result = closure_13(closure_4, obj4);
     } else {
       tmp24Result = null;
       if (null != catalogBadge) {
         const obj5 = { badge: catalogBadge, size: badgeSize };
-        tmp24Result = tmp24(catalogBadge(tmp4[23]), obj5);
+        tmp24Result = closure_13(catalogBadge(tmp4[23]), obj5);
       }
     }
     obj3.children = tmp24Result;
-    PressableOpacity = tmp24(PressableOpacity, obj3);
+    PressableOpacity = closure_13(PressableOpacity, obj3);
     obj3 = [PressableOpacity, tmp10, tmp16];
     obj2.children = obj3;
   } else {
@@ -428,19 +436,20 @@ function ProfileBadge(source) {
       const items1 = [items.badge, tmp];
       obj7.style = items1;
       obj7.source = source;
-      tmp24Result = tmp24(closure_4, obj7);
+      tmp24Result = closure_13(closure_4, obj7);
     } else {
       tmp24Result = null;
       if (null != catalogBadge) {
         const obj8 = { badge: catalogBadge, size: badgeSize };
-        tmp24Result = tmp24(catalogBadge(tmp4[23]), obj8);
+        tmp24Result = closure_13(catalogBadge(tmp4[23]), obj8);
       }
     }
     obj6.children = tmp24Result;
-    const items2 = [tmp24(closure_5, obj6), tmp10, tmp16];
+    const items2 = [closure_13(closure_5, obj6), tmp10, tmp16];
     obj2.children = items2;
     return tmp22(tmp23, obj2);
   }
+  const tmp3Result = source(id[19]);
 }
 class ProfileBadgeRows {
   constructor(arg0) {

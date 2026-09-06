@@ -43,9 +43,9 @@ export const questHomeHeroFromServer = function questHomeHeroFromServer(creative
       radial_gradient: obj6.radialGradient,
       gradient_preset: obj6.gradientPreset,
     } = quest_home_entrypoint);
-    let tmpResult = tmp(11285);
+    let tmpResult = AssetUtils;
     obj.image = tmpResult.resolveOptionalAdCreativeCdnUrl(quest_home_entrypoint.image);
-    tmpResult = tmp(11285);
+    tmpResult = AssetUtils;
     obj.tooltipImage = tmpResult.resolveOptionalAdCreativeCdnUrl(quest_home_entrypoint.tooltip_image);
     ({ tooltip_title: obj6.tooltipTitle, tooltip_subtitle: obj6.tooltipSubtitle } = quest_home_entrypoint);
     tmp3 = obj;

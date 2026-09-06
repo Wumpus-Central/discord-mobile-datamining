@@ -3,13 +3,7 @@ import HTTPUtils from "../../../discord_common/js/packages/http-utils/HTTPUtils.
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 
 require = fn;
-let closure_4 = async function _startStageInstance(
-  channel_id,
-  topic,
-  privacy_level,
-  send_start_notification,
-  guild_scheduled_event_id,
-) {
+let closure_4 = async function _startStageInstance() {
   c6 = 0;
   c5 = 0;
   return (async (arg0, value, arg2, arg3, arg4) => {
@@ -23,7 +17,7 @@ let closure_4 = async function _startStageInstance(
     return value.body;
   })();
 };
-let closure_5 = async function _updateStageInstance(arg0, topic, privacy_level) {
+let closure_5 = async function _updateStageInstance(arg0) {
   closure_0 = arg0;
   c4 = 0;
   c3 = 0;

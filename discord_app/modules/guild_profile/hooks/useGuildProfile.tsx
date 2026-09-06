@@ -19,7 +19,7 @@ export const useGuildProfile = function useGuildProfile(guildId) {
   );
   const items2 = [guildId];
   obj.fetchGuildProfile = noop.useCallback(
-    asyncGeneratorStep(async (arg0, value) => {
+    asyncGeneratorStep(async () => {
       if (c4 === 2) {
         c4 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");

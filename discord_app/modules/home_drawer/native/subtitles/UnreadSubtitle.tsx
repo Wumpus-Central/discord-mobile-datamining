@@ -28,35 +28,35 @@ export default function UnreadSubtitle(channel) {
   obj = {
     channelName,
     count: count - 1,
-    labelHook(children, arg1) {
+    labelHook(children, key) {
       return jsx(
         subtitleStyles(channelIconComponentWithGuild[7]).Text,
         { variant: "text-xs/medium", color: "text-muted", lineClamp: 1, children },
-        arg1,
+        key,
       );
     },
-    iconHook(arg0, arg1) {
+    iconHook(arg0, key) {
       return (
         <channelIconComponentWithGuild
-          key={arg1}
+          key={key}
           size="xxs"
           color="icon-muted"
           style={subtitleStyles.unreadChannelIcon}
         />
       );
     },
-    channelHook(children, arg1) {
+    channelHook(children, key) {
       return jsx(
         Text_Text.Text,
         { variant: "text-xs/medium", color: "text-muted", lineClamp: 1, style: subtitleStyles.subtitleText, children },
-        arg1,
+        key,
       );
     },
-    overflowHook(children, arg1) {
+    overflowHook(children, key) {
       return jsx(
         subtitleStyles(channelIconComponentWithGuild[7]).Text,
         { variant: "text-xs/medium", color: "text-muted", children },
-        arg1,
+        key,
       );
     },
   };
@@ -65,24 +65,24 @@ export default function UnreadSubtitle(channel) {
     <View
       channelName={channelName}
       count={count - 1}
-      labelHook={function labelHook(children, arg1) {
+      labelHook={function labelHook(children, key) {
         return jsx(
           subtitleStyles(channelIconComponentWithGuild[7]).Text,
           { variant: "text-xs/medium", color: "text-muted", lineClamp: 1, children },
-          arg1,
+          key,
         );
       }}
-      iconHook={function iconHook(arg0, arg1) {
+      iconHook={function iconHook(arg0, key) {
         return (
           <channelIconComponentWithGuild
-            key={arg1}
+            key={key}
             size="xxs"
             color="icon-muted"
             style={subtitleStyles.unreadChannelIcon}
           />
         );
       }}
-      channelHook={function channelHook(children, arg1) {
+      channelHook={function channelHook(children, key) {
         return jsx(
           Text_Text.Text,
           {
@@ -92,14 +92,14 @@ export default function UnreadSubtitle(channel) {
             style: subtitleStyles.subtitleText,
             children,
           },
-          arg1,
+          key,
         );
       }}
-      overflowHook={function overflowHook(children, arg1) {
+      overflowHook={function overflowHook(children, key) {
         return jsx(
           subtitleStyles(channelIconComponentWithGuild[7]).Text,
           { variant: "text-xs/medium", color: "text-muted", children },
-          arg1,
+          key,
         );
       }}
     />

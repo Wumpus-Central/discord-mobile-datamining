@@ -35,9 +35,9 @@ export const isThrottled = function isThrottled(CHANNEL_OPENED) {
   }
   return tmp;
 };
-export const trackMaker = (arg0) => {
-  ({ addBreadcrumb: global, analyticEventConfigs: require } = arg0);
-  ({ dispatcher, TRACK_ACTION_NAME } = arg0);
+export const trackMaker = (AnalyticsUtils) => {
+  ({ addBreadcrumb: global, analyticEventConfigs: require } = AnalyticsUtils);
+  ({ dispatcher, TRACK_ACTION_NAME } = AnalyticsUtils);
   closure_2 = AnalyticsTrackingActionCreators.queueTrackingEventMaker(dispatcher, TRACK_ACTION_NAME);
   return function track(arg0, arg1) {
     let obj = arg2;
@@ -66,10 +66,10 @@ export const trackMaker = (arg0) => {
         const items = [arg0];
         HermesBuiltin.arraySpread(obj3.throttleKeys(obj), 1);
         const joined = items.join("_");
-        let tmp13 = null != closure_4[joined];
+        let tmp13 = null != dependencyMap[joined];
         if (tmp13) {
           const _Date = Date;
-          tmp13 = tmp12[joined] > Date.now();
+          tmp13 = dependencyMap[joined] > Date.now();
         }
         if (tmp13) {
           return Promise.resolve();
@@ -84,12 +84,11 @@ export const trackMaker = (arg0) => {
             if (_modDef1332(closure_5[joined], obj)) {
               return Promise.resolve();
             } else {
-              tmp15[joined] = obj;
+              closure_5[joined] = obj;
             }
-            tmp15 = closure_5;
           }
           const _Date2 = Date;
-          tmp12[joined] = Date.now() + obj3.throttlePeriod;
+          dependencyMap[joined] = Date.now() + obj3.throttlePeriod;
         }
       } else if ("throttlePercent" in obj3) {
         const _Math = Math;

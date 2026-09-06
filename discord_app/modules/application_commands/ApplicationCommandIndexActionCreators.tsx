@@ -45,7 +45,7 @@ let closure_6 = async function _fetchApplicationCommandIndex(arg0, arg1) {
             }
             closure_7 = function _retry() {
               const self = this;
-              const tmp = c3(function* (arg0, value) {
+              const tmp = c3(function* (arg0) {
                 if (c3 === 2) {
                   c3 = 3;
                   throw new TypeError("Generator functions may not be called on executing generators");
@@ -125,16 +125,16 @@ let closure_6 = async function _fetchApplicationCommandIndex(arg0, arg1) {
               };
               type = closure_0.type;
               if ("channel" === type) {
-                let channelId = tmp3.channelId;
+                let channelId = closure_0.channelId;
               } else if ("guild" === type) {
-                channelId = tmp3.guildId;
+                channelId = closure_0.guildId;
               } else {
                 channelId = null;
                 if ("user" !== type) {
                   if ("application" === type) {
-                    channelId = tmp3.applicationId;
+                    channelId = closure_0.applicationId;
                   } else {
-                    closure_0(url[6]).assertNever(tmp3);
+                    closure_0(url[6]).assertNever(closure_0);
                     const obj3 = closure_0(url[6]);
                   }
                 }

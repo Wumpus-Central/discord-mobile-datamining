@@ -1,7 +1,9 @@
 // discord_app/design/components/Input/native/Input.native.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import native from "../../../utils/native.tsx";
+import Text_Text from "../../Text/native/Text.tsx";
 import getRequiredFieldA11yName from "getRequiredFieldA11yName.native.tsx";
+import ErrorText from "../../ErrorText/native/ErrorText.native.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -39,21 +41,21 @@ export const Input = function Input(arg0) {
   if (null == label) {
     const items = [null, , ,];
     obj = { style: tmp.inputRow, children };
-    items[1] = React3(tmp6, obj);
+    items[1] = React3(View, obj);
     let tmp11Result = null;
     if (null != description) {
       obj1 = { variant: "text-xs/medium", color: "text-muted", style: tmp.description, children: description };
-      tmp11Result = tmp11(tmp2(4556).Text, obj1);
+      tmp11Result = React3(Text_Text.Text, obj1);
     }
     items[2] = tmp11Result;
     tmp11Result = null;
     if (null != errorMessage) {
       const obj2 = { style: tmp.error, children: errorMessage };
-      tmp11Result = tmp11(tmp2(6609).ErrorText, obj2);
+      tmp11Result = React3(ErrorText.ErrorText, obj2);
     }
     items[3] = tmp11Result;
     obj.children = items;
-    return tmp5(tmp6, obj);
+    return React4(View, obj);
   } else if (null != labelTrailing) {
     const obj3 = { style: tmp.labelWrapper, children: null };
     const obj4 = {
@@ -63,9 +65,9 @@ export const Input = function Input(arg0) {
       accessibilityLabel: requiredFieldA11yName,
       children: label,
     };
-    const items1 = [React3(tmp2(4556).Text, obj4), labelTrailing];
+    const items1 = [React3(Text_Text.Text, obj4), labelTrailing];
     obj3.children = items1;
-    let tmp5Result = tmp5(tmp6, obj3);
+    let tmp5Result = React4(View, obj3);
   } else {
     const obj5 = {
       variant: "text-sm/semibold",
@@ -84,10 +86,10 @@ export const Input = function Input(arg0) {
         "aria-hidden": true,
         children: [" ", "*"],
       };
-      tmp5Result = tmp5(tmp2(4556).Text, obj6);
+      tmp5Result = React4(Text_Text.Text, obj6);
     }
     items2[1] = tmp5Result;
     obj5.children = items2;
-    tmp5Result = tmp5(tmp2(4556).Text, obj5);
+    tmp5Result = React4(Text_Text.Text, obj5);
   }
 };

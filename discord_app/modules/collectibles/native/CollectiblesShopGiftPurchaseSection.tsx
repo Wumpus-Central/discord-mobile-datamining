@@ -1,6 +1,7 @@
 // discord_app/modules/collectibles/native/CollectiblesShopGiftPurchaseSection.tsx
 import DispatcherDefault from "../../../Dispatcher.tsx";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import PlatformUtils from "../../../utils/PlatformUtils.tsx";
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
 import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
 import actions_AlertActionCreatorsDefault from "../../../actions/native/AlertActionCreators.tsx";
@@ -9,7 +10,7 @@ import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import BadgeDirectoryStore from "../../badges/BadgeDirectoryStore.tsx";
 
-let require = fn;
+require = fn;
 const View = fn(17).View;
 const useNativeCheckoutStore = fn(7424).useNativeCheckoutStore;
 const Constants = fn(1074);
@@ -96,7 +97,7 @@ export default function CollectiblesShopGiftPurchaseSection(disabled) {
     giftParams: null,
   };
   let id;
-  let tmp = giftOptions;
+  const tmp = giftOptions;
   const tmp6 = _slicedToArray(noop.useState(false), 2);
   if (tmp9 != null) {
     id = tmp9.id;
@@ -110,7 +111,7 @@ export default function CollectiblesShopGiftPurchaseSection(disabled) {
       const tmp4 = giftingOrigin !== constants2.USER_PROFILE_WISHLIST && tmp3 !== constants2.DM_CHANNEL_WISHLIST;
     }
     if (!tmp2) {
-      let obj = { type: "WISHLIST_GIFT_SENT", skuId: product.skuId, recipientId: tmp.recipient_id };
+      let obj = { type: "WISHLIST_GIFT_SENT", skuId: product.skuId, recipientId: giftOptions.recipient_id };
       obj.dispatch(obj);
     }
     closure_5.current = false;
@@ -133,10 +134,10 @@ export default function CollectiblesShopGiftPurchaseSection(disabled) {
       },
     };
     actions_AlertActionCreatorsDefault.openLazy(obj);
-    tmp = giftOptions;
     if (obj5.isIOS()) {
       AnalyticsUtilsDefault.track(constants.PAYMENT_FLOW_SUCCEEDED, closure_6);
     }
+    obj5 = PlatformUtils;
   };
   obj.onPurchaseError = onPurchaseError;
   obj.onPurchasePending = function onPurchasePending() {};
@@ -170,7 +171,7 @@ export default function CollectiblesShopGiftPurchaseSection(disabled) {
   const obj4 = { disabled: disabled.isPurchaseDisabled, loading: tmp7, variant: "active", text: null, onPress: null };
   const intl3 = tmp4(tmp2[27]).intl;
   obj4.text = intl3.string(require("util").t.ouo4FK);
-  obj4.onPress = asyncGeneratorStep(async (arg0, value) => {
+  obj4.onPress = asyncGeneratorStep(async () => {
     if (c2 === 2) {
       c2 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");

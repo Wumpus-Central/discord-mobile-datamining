@@ -2,6 +2,9 @@
 import nativeDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import AvatarUtilsDefault from "../../../../../../utils/AvatarUtils.tsx";
 import maybeFetchUserProfileDefault from "../../../../../user_profile/maybeFetchUserProfile.tsx";
+import EntityBorderAppIconDefault from "../../../base_components/EntityBorderAppIcon.tsx";
+import ActivityShelfBadgeDefault from "../../../../../activities/native/ActivityShelfBadge.tsx";
+import RecommendationsBannerDefault from "RecommendationsBanner.tsx";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 const require = fn;
@@ -132,7 +135,7 @@ export default function RecommendationsBannerCard(application) {
       applicationIcon: null,
       overrideImageUrl: null,
     };
-    const tmp10Result = tmp10(12092);
+    const tmp10Result = RecommendationsBannerDefault;
     obj4.applicationEmbedded = tmp4(9289).isEmbeddedApp(application);
     ({ id: obj8.applicationId, icon } = application);
     obj4.applicationIcon = icon;
@@ -141,18 +144,18 @@ export default function RecommendationsBannerCard(application) {
     if (showsPromoted) {
       const obj5 = { style: tmp.notifsContainer, children: null };
       const obj6 = { labelType: shelfBadgeTypeIfActive, replacementStyles: tmp.badge };
-      const items3 = [tmp14(tmp10(12086), obj6)];
+      const items3 = [closure_6(ActivityShelfBadgeDefault, obj6)];
       if (showsPromoted) {
         const obj7 = { style: tmp.promotedLabelWrapper, children: null };
         const obj8 = { variant: "text-xxs/medium", color: "mobile-text-heading-primary", children: null };
         const intl = tmp4(1114).intl;
         obj8.children = intl.string(tmp4(1114).t["/eVltv"]);
-        obj7.children = tmp14(tmp4(4556).Text, obj8);
-        showsPromoted = tmp14(tmp13, obj7);
+        obj7.children = closure_6(tmp4(4556).Text, obj8);
+        showsPromoted = closure_6(View, obj7);
       }
       items3[1] = showsPromoted;
       obj5.children = items3;
-      tmp12Result = tmp12(tmp13, obj5);
+      tmp12Result = closure_7(View, obj5);
     } else {
       tmp12Result = null;
     }
@@ -163,7 +166,7 @@ export default function RecommendationsBannerCard(application) {
     let tmp14Result = null != applicationIconSource;
     if (tmp14Result) {
       const obj10 = { iconSource: applicationIconSource, iconSize: 36, wrapperStyle: tmp.appIconContainer };
-      tmp14Result = tmp14(tmp10(12056), obj10);
+      tmp14Result = closure_6(EntityBorderAppIconDefault, obj10);
     }
     const items5 = [tmp14Result, ,];
     const obj11 = { style: tmp.appDetails, children: null };
@@ -182,7 +185,7 @@ export default function RecommendationsBannerCard(application) {
     obj9.children = items5;
     items4[1] = closure_7(View, obj9);
     obj2.children = items4;
-    tmp12Result = tmp12(tmp4(5123).PressableOpacity, obj2);
+    tmp12Result = closure_7(tmp4(5123).PressableOpacity, obj2);
     const tmp4Result = tmp4(9289);
   }
   return tmp12Result;

@@ -24,10 +24,9 @@ export default function useActiveSubscriptionListingForGroup(arg0) {
       const _Object = Object;
       const values = Object.values(tmp);
       for (const item10012 of values) {
-        let tmp6 = item10012;
         if (item10012.type === SubscriptionTypes.GUILD) {
           let obj2 = subscriptionUtils;
-          obj[obj2.getRoleSubscriptionPlanId(tmp6)] = tmp6;
+          obj[obj2.getRoleSubscriptionPlanId(item10012)] = item10012;
         }
         continue;
       }

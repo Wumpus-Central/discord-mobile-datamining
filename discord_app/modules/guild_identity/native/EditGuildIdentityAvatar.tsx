@@ -1,5 +1,7 @@
 // discord_app/modules/guild_identity/native/EditGuildIdentityAvatar.tsx
 import asyncRequireImpl from "../../../../_runtime/01896_asyncRequireImpl.js";
+import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
+import PremiumUpsellUtilsDefault from "../../../utils/native/PremiumUpsellUtils.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import GuildMemberStore from "../../../stores/GuildMemberStore.tsx";
 import UserStore from "../../../stores/UserStore.tsx";
@@ -36,8 +38,8 @@ export default function EditGuildIdentityAvatar(userId) {
     let member = null;
     if (null != stateFromStores) {
       let id;
-      if (tmp != null) {
-        id = tmp.id;
+      if (stateFromStores != null) {
+        id = stateFromStores.id;
       }
       member = GuildMemberStore.getMember(guildId, id);
     }
@@ -125,7 +127,7 @@ export default function EditGuildIdentityAvatar(userId) {
     let tmp20Result = !disabled;
     if (!disabled) {
       obj1 = { style: tmp.editAvatarIcon };
-      tmp20Result = tmp20(tmp6(tmp3[25]), obj1);
+      tmp20Result = closure_10(tmp6(tmp3[25]), obj1);
     }
     items3[1] = tmp20Result;
     obj.children = items3;

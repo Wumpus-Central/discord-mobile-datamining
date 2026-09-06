@@ -8,22 +8,22 @@ import AuthenticationStore from "../../../stores/AuthenticationStore.tsx";
 import ApexExperimentStore from "ApexExperimentStore.tsx";
 
 require = fn;
-function getUnitId(arg0, guildId) {
-  if ("guild" === arg0) {
+function getUnitId(type, guildId) {
+  if ("guild" === type) {
     return guildId.guildId;
-  } else if ("user" === arg0) {
+  } else if ("user" === type) {
     return AuthenticationStore.getId();
-  } else if ("installation" === arg0) {
+  } else if ("installation" === type) {
     let str2 = FingerprintUtils.maybeExtractId(AuthenticationStore.getInstallationForTracking());
     if (str2 == null) {
       str2 = "";
     }
     return str2;
   } else {
-    GlobalUtils.assertNever(arg0);
+    GlobalUtils.assertNever(type);
   }
 }
-function useUnitId(arg0, guildId) {
+function useUnitId(type, guildId) {
   let items = [AuthenticationStore];
   _slicedToArray(
     initialize.useStateFromStoresArray(items, () => {
@@ -32,20 +32,20 @@ function useUnitId(arg0, guildId) {
     }),
     2,
   );
-  if ("guild" === arg0) {
+  if ("guild" === type) {
     return guildId.guildId;
-  } else if ("user" === arg0) {
+  } else if ("user" === type) {
     return tmp4;
-  } else if ("installation" === arg0) {
-    let tmpResult = tmp(1255);
+  } else if ("installation" === type) {
+    let tmpResult = FingerprintUtils;
     let str3 = tmpResult.maybeExtractId(tmp5);
     if (str3 == null) {
       str3 = "";
     }
     return str3;
   } else {
-    tmpResult = tmp(1369);
-    tmpResult.assertNever(arg0);
+    tmpResult = GlobalUtils;
+    tmpResult.assertNever(type);
   }
 }
 const size = fn(2);

@@ -1,6 +1,9 @@
 // discord_app/components_native/TouchableStreamPreview.tsx
 import nativeDefault from "../../discord_common/js/packages/tokens/native.tsx";
+import StreamKeyUtils from "../modules/go_live/utils/StreamKeyUtils.tsx";
 import StreamActionCreators from "../actions/StreamActionCreators.tsx";
+import ChannelRTCActionCreatorsDefault from "../actions/ChannelRTCActionCreators.tsx";
+import transitionToStreamDefault from "../modules/go_live/utils/transitionToStream.native.tsx";
 import SelectedChannelActionCreatorsDefault from "../actions/SelectedChannelActionCreators.tsx";
 import noop from "../../_runtime/metro/00019__.js";
 import GameConsoleStore from "../modules/game_console/GameConsoleStore.tsx";
@@ -11,7 +14,6 @@ import GuildStore from "../stores/GuildStore.tsx";
 import PermissionStore from "../stores/PermissionStore.tsx";
 import VoiceStateStore from "../stores/VoiceStateStore.tsx";
 
-const StreamKeyUtils = tmp5(4612);
 require = fn;
 function StreamPreviewContainer(disableTransition) {
   disableTransition = disableTransition.disableTransition;
@@ -79,16 +81,17 @@ function StreamPreviewContainer(disableTransition) {
     const voiceChannel = SelectedChannelActionCreatorsDefault.selectVoiceChannel(stream.channelId);
     StreamActionCreators.watchStream(stream);
     if (disableTransition) {
-      let tmpResult = tmp(4761);
+      let tmpResult = ChannelRTCActionCreatorsDefault;
       const result = tmpResult.rebuildRTCActiveChannels();
     } else {
-      tmp(4762)(tmp3);
+      transitionToStreamDefault(stream);
     }
-    tmpResult = tmp(4761);
-    const participant = tmpResult.selectParticipant(tmp3.channelId, StreamKeyUtils.encodeStreamKey(tmp3));
+    tmpResult = ChannelRTCActionCreatorsDefault;
+    const participant = tmpResult.selectParticipant(stream.channelId, StreamKeyUtils.encodeStreamKey(stream));
     if (onPress != null) {
       onPress();
     }
+    const tmp5Result = StreamKeyUtils;
   }, items5);
   onPress(stream[22])(() => {
     if (channel.isGuildStageVoice()) {

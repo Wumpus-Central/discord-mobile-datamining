@@ -12,11 +12,11 @@ export const getGuildPowerupsBoostInfoText = function getGuildPowerupsBoostInfoT
     const intl3 = util.intl;
     let obj = { boostCount: count };
     return intl3.formatToPlainString(_modDef2428.BdRXZA, obj);
-  } else if (tmp.SPENT === type) {
+  } else if (BoostInfoType.SPENT === type) {
     const intl2 = util.intl;
     obj = { boostCount: count };
     return intl2.formatToPlainString(_modDef2428.xvgIVG, obj);
-  } else if (tmp.TOTAL === type) {
+  } else if (BoostInfoType.TOTAL === type) {
     const intl = util.intl;
     return intl.string(_modDef2428["/F7Z2y"]);
   }

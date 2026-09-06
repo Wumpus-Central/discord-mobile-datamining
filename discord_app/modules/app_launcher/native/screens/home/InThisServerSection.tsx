@@ -3,6 +3,7 @@ import nativeDefault from "../../../../../../discord_common/js/packages/tokens/n
 import util from "../../../../../intl/index.native.tsx";
 import GlobalUtils from "../../../../../utils/GlobalUtils.tsx";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
+import Pressables from "../../../../../design/void/Pressables/native/Pressables.tsx";
 import AppLauncherTypes from "../../../AppLauncherTypes.tsx";
 import AppLauncherHomeTypes from "AppLauncherHomeTypes.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
@@ -108,7 +109,7 @@ export default function InThisServerSection(arg0) {
     let obj = { style: tmp.container, children: null };
     obj = { style: tmp.headerContainer, children: null };
     obj = { variant: "text-lg/bold", color: "mobile-text-heading-primary", children: null };
-    const intl = tmp11(1114).intl;
+    const intl = util.intl;
     obj.children = intl.string(util.t.oJyzCu);
     const items1 = [closure_5(Text_Text.Text, obj)];
     let tmp5Result = null != dependencyMap;
@@ -126,10 +127,10 @@ export default function InThisServerSection(arg0) {
         children: null,
       };
       const obj2 = { variant: "text-sm/medium", color: "text-brand", children: null };
-      const intl2 = tmp11(1114).intl;
-      obj2.children = intl2.string(tmp11(1114).t["/qG8v7"]);
-      obj1.children = tmp5(tmp11(4556).Text, obj2);
-      tmp5Result = tmp5(tmp11(5123).PressableOpacity, obj1);
+      const intl2 = util.intl;
+      obj2.children = intl2.string(util.t["/qG8v7"]);
+      obj1.children = closure_5(Text_Text.Text, obj2);
+      tmp5Result = closure_5(Pressables.PressableOpacity, obj1);
     }
     items1[1] = tmp5Result;
     obj.children = items1;

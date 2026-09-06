@@ -104,7 +104,7 @@ export const usePendingRequestListController = function usePendingRequestListCon
   let obj = useUserLinks;
   const hasMaxConnections = obj.useHasMaxConnections();
   [tmp4, c2] = _slicedToArray(noop.useState(null), 2);
-  let tmp3 = _slicedToArray(noop.useState(null), 2);
+  const tmp3 = _slicedToArray(noop.useState(null), 2);
   obj = {
     onSuccess() {
       return _undefined(null);
@@ -123,12 +123,12 @@ export const usePendingRequestListController = function usePendingRequestListCon
     tmp6 = isDeclineLoading;
   }
   isDeclineLoading = tmp6;
-  let tmp2Result = tmp2(
-    obj2.useState(() => new Set()),
+  let tmp2Result = _slicedToArray(
+    noop.useState(() => new Set()),
     2,
   );
   [c6, c7] = tmp2Result;
-  callback = obj2.useCallback((arg0) => {
+  callback = noop.useCallback((arg0) => {
     closure_0 = arg0;
     _undefined3((has) => {
       if (has.has(closure_0)) {
@@ -136,29 +136,28 @@ export const usePendingRequestListController = function usePendingRequestListCon
       } else {
         const _Set = Set;
         const set = new Set(has);
-        set.add(tmp);
+        set.add(closure_0);
         return set;
       }
-      tmp = closure_0;
     });
   }, []);
   let items = [tmp6, callback, acceptLinkRequest];
   const items1 = [tmp6, callback, declineLinkRequest];
-  const callback1 = obj2.useCallback((arg0) => {
+  const callback1 = noop.useCallback((arg0) => {
     if (!isDeclineLoading) {
       callback(arg0);
       _undefined(arg0);
       acceptLinkRequest(arg0);
     }
   }, items);
-  const callback2 = obj2.useCallback((arg0) => {
+  const callback2 = noop.useCallback((arg0) => {
     if (!isDeclineLoading) {
       callback(arg0);
       _undefined(arg0);
       declineLinkRequest(arg0);
     }
   }, items1);
-  tmp2Result = tmp2(obj2.useState(pendingRequests), 2);
+  tmp2Result = _slicedToArray(noop.useState(pendingRequests), 2);
   [tmp12, tmp13] = tmp2Result;
   [tmp15, tmp16] = _slicedToArray(noop.useState(pendingRequests), 2);
   const tmp2Result1 = _slicedToArray(noop.useState(pendingRequests), 2);
@@ -212,6 +211,7 @@ export const usePendingRequestListController = function usePendingRequestListCon
       return Array.from(map.values());
     });
   }
+  tmp2Result2 = _slicedToArray(noop.useState(linkedUsersProcessed), 2);
 };
 export const usePendingRequestResolution = function usePendingRequestResolution(parent_id) {
   _require = parent_id;
@@ -229,7 +229,7 @@ export const usePendingRequestResolution = function usePendingRequestResolution(
     noop.useState(() => {
       let str = "connected";
       if (stateFromStores !== UserLinkStatus.ACTIVE) {
-        if (null == tmp) {
+        if (null == stateFromStores) {
           let str2 = null;
         } else {
           str2 = "declined";
@@ -246,13 +246,13 @@ export const usePendingRequestResolution = function usePendingRequestResolution(
     tmp5[1](stateFromStores);
     if (stateFromStores === UserLinkStatus.ACTIVE) {
       tmp4("connected");
-    } else if (stateFromStores === tmp8.PENDING) {
+    } else if (stateFromStores === UserLinkStatus.PENDING) {
       tmp4(null);
     } else {
       let tmp10 = null != stateFromStores;
       if (!tmp10) {
-        tmp10 = null != first && first !== tmp8.ACTIVE;
-        const tmp11 = null != first && first !== tmp8.ACTIVE;
+        tmp10 = null != first && first !== UserLinkStatus.ACTIVE;
+        const tmp11 = null != first && first !== UserLinkStatus.ACTIVE;
       }
       if (tmp10) {
         tmp4("declined");

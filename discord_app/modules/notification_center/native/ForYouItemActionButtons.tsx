@@ -443,7 +443,7 @@ export const useItemActionButtonPropsV2 = function useItemActionButtonPropsV2(
   const items7 = [callback, stateFromStores, ,];
   ({ message_id: arr8[2], message_channel_id: arr8[3] } = other_user);
   const callback6 = noop.useCallback(
-    asyncGeneratorStep(async (arg0, value) => {
+    asyncGeneratorStep(async () => {
       if (navigation === 2) {
         navigation = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -750,9 +750,9 @@ export const useItemActionButtonPropsV2 = function useItemActionButtonPropsV2(
       const actionName = nativeEvent.nativeEvent.actionName;
       if (constants.WAVE === actionName) {
         callback();
-      } else if (tmp.ACCEPT === actionName) {
+      } else if (constants.ACCEPT === actionName) {
         callback1();
-      } else if (tmp.IGNORE === actionName) {
+      } else if (constants.IGNORE === actionName) {
         callback2();
       }
     };

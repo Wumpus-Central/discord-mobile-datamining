@@ -1,6 +1,11 @@
 // discord_app/modules/user_profile/hooks/useProfileTheme.tsx
 import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
+import shims from "../../../../discord_common/js/packages/tokens/shims.native.tsx";
+import utils_ColorUtils from "../../../../discord_common/js/shared/utils/ColorUtils.tsx";
+import shared from "../../../design/shared.tsx";
 import useThemeDefault from "../../../hooks/useTheme.tsx";
+import useAvatarColor from "../../avatar/useAvatarColor.tsx";
+import UserProfileGradientUtils from "../UserProfileGradientUtils.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
 
@@ -29,9 +34,9 @@ export default function useProfileTheme(arg0) {
     }
     pendingAvatarSrc = avatarURL;
   }
-  let tmp4Result = tmp4(575);
+  let tmp4Result = shims;
   const result = tmp4Result.unsafe_getResolvedRawColor("PRIMARY_530", { saturation: 1 });
-  tmp4Result = tmp4(8132);
+  tmp4Result = useAvatarColor;
   _slicedToArray(tmp4Result.useAvatarColors(pendingAvatarSrc, result, false), 2);
   if (null != tmp3) {
     return tmp3;
@@ -55,42 +60,42 @@ export default function useProfileTheme(arg0) {
       first = previewThemeColors[0];
     }
     if (first == null) {
-      first = tmp4(1091).hex2int(tmp10);
-      const tmp4Result1 = tmp4(1091);
+      first = utils_ColorUtils.hex2int(tmp10);
+      const tmp4Result1 = utils_ColorUtils;
     }
     let hex2intResult;
     if (previewThemeColors != null) {
       hex2intResult = previewThemeColors[1];
     }
     if (hex2intResult == null) {
-      hex2intResult = tmp4(1091).hex2int(tmp11);
-      const tmp4Result2 = tmp4(1091);
+      hex2intResult = utils_ColorUtils.hex2int(tmp11);
+      const tmp4Result2 = utils_ColorUtils;
     }
     let tmp16 = tmp2;
     if (!stateFromStores) {
       tmp16 = tmp2;
       if (!forceUserTheme) {
-        let profileTheme = tmp4(8229).getProfileTheme(first);
+        let profileTheme = UserProfileGradientUtils.getProfileTheme(first);
         if (profileTheme == null) {
           profileTheme = tmp2;
         }
         tmp16 = profileTheme;
-        const tmp4Result3 = tmp4(8229);
+        const tmp4Result3 = UserProfileGradientUtils;
       }
     }
     if (tmp16 !== ThemeTypes.DARK) {
-      let isThemeLightResult = tmp16 === tmp18.DARK;
+      let isThemeLightResult = tmp16 === ThemeTypes.DARK;
       if (isThemeLightResult) {
-        isThemeLightResult = tmp4(4411).isThemeLight(tmp2);
-        const tmp4Result4 = tmp4(4411);
+        isThemeLightResult = shared.isThemeLight(tmp2);
+        const tmp4Result4 = shared;
       }
       let DARKER = tmp16;
       if (isThemeLightResult) {
-        DARKER = tmp18.DARKER;
+        DARKER = ThemeTypes.DARKER;
       }
     } else {
+      shared;
       DARKER = tmp2;
-      const tmp4Result5 = tmp4(4411);
     }
     obj = { theme: DARKER, primaryColor: first, secondaryColor: hex2intResult };
     return obj;

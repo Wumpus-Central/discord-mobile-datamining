@@ -77,9 +77,9 @@ export default function GIFPickerItemActionSheet(item) {
       str = "destructive";
     }
     const obj = { variant: str, onPress: callback1, text: null, grow: true };
-    const intl = tmp2(1114).intl;
+    const intl = util.intl;
     const string = intl.string;
-    const t = tmp2(1114).t;
+    const t = util.t;
     if (isFavoriteGIF) {
       let stringResult = string(t["5/NS74"]);
     } else {

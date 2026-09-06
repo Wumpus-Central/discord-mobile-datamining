@@ -30,11 +30,10 @@ function isAnimatedBackgroundOption(type) {
     if (hasItem) {
       let isAnimatedIconHashResult = AvatarUtils.isAnimatedIconHash(type.asset);
       if (!isAnimatedIconHashResult) {
-        isAnimatedIconHashResult = tmp6(1396).isVideoAssetHash(type.asset);
-        const tmp6Result = tmp6(1396);
+        isAnimatedIconHashResult = AvatarUtils.isVideoAssetHash(type.asset);
+        const tmp6Result = AvatarUtils;
       }
       hasItem = isAnimatedIconHashResult;
-      tmp6 = require;
     }
   }
   return hasItem;
@@ -61,18 +60,18 @@ function getEffectDetailAnalyticsName(lastUsedVideoBackgroundOption) {
         let str6 = "Cybercity";
         if (OPTION_1.OPTION_1 !== lastUsedVideoBackgroundOption) {
           str6 = "Discord the Movie";
-          if (tmp4.OPTION_2 !== lastUsedVideoBackgroundOption) {
+          if (OPTION_1.OPTION_2 !== lastUsedVideoBackgroundOption) {
             str6 = "Wumpus Vacation";
-            if (tmp4.OPTION_3 !== lastUsedVideoBackgroundOption) {
+            if (OPTION_1.OPTION_3 !== lastUsedVideoBackgroundOption) {
               str6 = "Vaporwave";
-              if (tmp4.OPTION_4 !== lastUsedVideoBackgroundOption) {
+              if (OPTION_1.OPTION_4 !== lastUsedVideoBackgroundOption) {
                 str6 = "Capernite Day";
-                if (tmp4.OPTION_7 !== lastUsedVideoBackgroundOption) {
+                if (OPTION_1.OPTION_7 !== lastUsedVideoBackgroundOption) {
                   str6 = "Capernite Night";
-                  if (tmp4.OPTION_8 !== lastUsedVideoBackgroundOption) {
+                  if (OPTION_1.OPTION_8 !== lastUsedVideoBackgroundOption) {
                     str6 = "Hacker Den";
-                    if (tmp4.OPTION_9 !== lastUsedVideoBackgroundOption) {
-                      if (tmp4.OPTION_10 === lastUsedVideoBackgroundOption) {
+                    if (OPTION_1.OPTION_9 !== lastUsedVideoBackgroundOption) {
+                      if (OPTION_1.OPTION_10 === lastUsedVideoBackgroundOption) {
                         str6 = "Wumpice";
                       }
                     }

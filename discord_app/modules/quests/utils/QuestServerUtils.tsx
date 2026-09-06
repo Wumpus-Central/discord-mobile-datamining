@@ -18,11 +18,10 @@ function progressFromServer(progress) {
       completed_at: obj2.completedAt,
       heartbeat,
     } = tmp5[1]);
-    let tmp6 = heartbeat;
     let tmp7 = null;
     if (null != heartbeat) {
       obj = { lastBeatAt: null, expiresAt: null };
-      ({ last_beat_at: obj3.lastBeatAt, expires_at: obj3.expiresAt } = tmp6);
+      ({ last_beat_at: obj3.lastBeatAt, expires_at: obj3.expiresAt } = heartbeat);
       tmp7 = obj;
     }
     obj.heartbeat = tmp7;
@@ -89,7 +88,7 @@ function _questsEntitlementFromServer(skuId) {
       obj.reward = obj1;
       obj.questRewards = obj;
       tmp2 = obj;
-    } else if (tmp3(7708).QuestRewardTypes.REWARD_CODE === tag) {
+    } else if (QuestRewardTypes.QuestRewardTypes.REWARD_CODE === tag) {
       const obj2 = { tag: quest_rewards.reward.tag, rewardCode: null };
       const obj3 = { userId: null, questId: null, code: null, platform: null, claimedAt: null, tier: null };
       ({
@@ -111,7 +110,6 @@ function _questsEntitlementFromServer(skuId) {
       obj4.questRewards = obj5;
       tmp2 = obj4;
     }
-    tmp3 = require;
   }
   obj.tenantMetadata = tmp2;
   obj.consumed = skuId.consumed;

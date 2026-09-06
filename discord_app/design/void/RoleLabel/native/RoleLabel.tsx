@@ -1,5 +1,6 @@
 // discord_app/design/void/RoleLabel/native/RoleLabel.tsx
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
+import native from "../../native.tsx";
 import Form from "../../Form/native/index.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../../modules/a11y/AccessibilityStore.tsx";
@@ -37,7 +38,7 @@ export const RoleLabel = function RoleLabel(color) {
   }
   if (tmp10) {
     const obj1 = { color, colors, containerStyles: tmp.roleDot };
-    tmp10 = React4(tmp2(1178).RoleDot, obj1);
+    tmp10 = React4(native.RoleDot, obj1);
   }
   const items1 = [tmp10, React4(Form.FormLabel, { style: {}, text: name })];
   obj.children = items1;

@@ -91,9 +91,9 @@ export default function GuildSettingsRoleEditPermission(guild) {
       },
     };
     obj.children = intl.format(guild(1114).t.ZhSOBy, obj1);
-    tmp18Result = tmp18(guild(4556).Text, obj);
+    tmp18Result = closure_14(guild(4556).Text, obj);
   }
-  tmp18Result = tmp18(tmp19, { children: tmp18Result });
+  tmp18Result = closure_14(tmp19, { children: tmp18Result });
   canResult = PermissionUtilsAll.can(obj);
   const guildPermissionSpec = role(16830).generateGuildPermissionSpec(guild);
   const mapped = guildPermissionSpec.map((permissions) => {
@@ -140,7 +140,7 @@ export default function GuildSettingsRoleEditPermission(guild) {
           tmp2 = role === highestRole;
         }
         if (!tmp2) {
-          tmp2 = tmp;
+          tmp2 = closure_6;
         }
         if (!tmp2) {
           tmp2 = !_undefined.can(flag, flag);
@@ -161,7 +161,6 @@ export default function GuildSettingsRoleEditPermission(guild) {
           children: guild(onPermissionsChanged[22]).renderDescription(description),
         };
         const obj5 = guild(onPermissionsChanged[22]);
-        tmp = closure_6;
         const obj1 = {
           start: 0 === index,
           end: index === section.section.data.length - 1,
@@ -214,14 +213,14 @@ export default function GuildSettingsRoleEditPermission(guild) {
       keyboardDismissMode: "on-drag",
       contentContainerStyle: guild.contentContainerStyle,
     };
-    let tmp18Result1 = tmp18(closure_8, obj4);
+    let tmp18Result1 = closure_14(closure_8, obj4);
   } else {
     let obj5 = { Illustration: tmp27(9760).NoResultsAlt, style: null, bodyStyle: null, body: null };
     ({ emptyState: obj10.style, emptyStateText: obj10.bodyStyle } = tmp);
     const intl2 = tmp27(1114).intl;
     const obj6 = { query };
     obj5.body = intl2.format(tmp27(1114).t.Psh5OO, obj6);
-    tmp18Result1 = tmp18(tmp27(1178).EmptyState, obj5);
+    tmp18Result1 = closure_14(tmp27(1178).EmptyState, obj5);
   }
   children[3] = tmp18Result1;
   return closure_16(closure_15, { children });

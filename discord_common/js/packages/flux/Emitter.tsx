@@ -110,7 +110,7 @@ prototype["emit"] = function emit() {
           num2 = sum;
           while (100 >= sum) {
             tmp2 = self;
-            let emitNonReactOnceResult = self.emitNonReactOnce(set, tmp11);
+            let emitNonReactOnceResult = self.emitNonReactOnce(tmp7, tmp11);
           }
           const serializer2 = LastFewActionsAll;
           logger.error("LastFewActions", serializer2.serialize());
@@ -130,12 +130,15 @@ prototype["emit"] = function emit() {
           throw Error("react change emit loop detected, aborting");
         }
         tmp2.isBatchEmitting = false;
+        const set1 = new Set();
+        tmp7 = set;
       } catch (tmp28) {
         self.isBatchEmitting = false;
         throw tmp28;
       }
     });
   }
+  tmp = this.isBatchEmitting || this.isPaused;
 };
 prototype["getChangeSentinel"] = function getChangeSentinel() {
   return this.changeSentinel;
@@ -144,7 +147,7 @@ prototype["getIsPaused"] = function getIsPaused() {
   return this.isPaused;
 };
 prototype["markChanged"] = function markChanged(_changeCallbacks) {
-  let hasAnyResult = _changeCallbacks._changeCallbacks.hasAny();
+  let hasAnyResult = _changeCallbacks.hasAny();
   if (!hasAnyResult) {
     hasAnyResult = _changeCallbacks._syncWiths.length > 0;
   }
@@ -172,7 +175,7 @@ prototype["emitNonReactOnce"] = function emitNonReactOnce(arg0, arg1) {
     set.add(_changeCallbacks);
     _changeCallbacks._changeCallbacks.invokeAll();
     const changedStores = self.changedStores;
-    changedStores.delete(_changeCallbacks);
+    changedStores.delete(_changeCallbacks._changeCallbacks);
   });
   const item1 = changedStores.forEach((_syncWiths) => {
     _syncWiths = _syncWiths._syncWiths;
@@ -182,10 +185,9 @@ prototype["emitNonReactOnce"] = function emitNonReactOnce(arg0, arg1) {
         set2.add(func);
         if (false !== func()) {
           if (!set.has(store)) {
-            obj2.add(store);
+            set.add(store);
             self.markChanged(store);
           }
-          obj2 = set;
         }
       }
     });
@@ -206,7 +208,7 @@ prototype["emitReactOnce"] = function emitReactOnce() {
   const item = reactChangedStores.forEach((_reactChangeCallbacks) => {
     _reactChangeCallbacks._reactChangeCallbacks.invokeAll();
     const reactChangedStores = self.reactChangedStores;
-    reactChangedStores.delete(_reactChangeCallbacks);
+    reactChangedStores.delete(_reactChangeCallbacks._reactChangeCallbacks);
   });
   const timestamp1 = Date.now();
   if (timestamp1 - timestamp > 100) {
@@ -215,6 +217,7 @@ prototype["emitReactOnce"] = function emitReactOnce() {
     const serializer = LastFewActionsAll;
     logger.verbose(combined, serializer.serialize());
   }
+  const set = new Set();
 };
 let merged = Object.assign({
   changedStores: null,

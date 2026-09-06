@@ -97,7 +97,7 @@ prototype["fromServer"] = function fromServer(arg0) {
     const fromServerResult = CollectiblesProductRecord.fromServer(item);
     const type = fromServerResult.type;
     if (tmp4) {
-      arr.push(fromServerResult);
+      arr = arr.push(fromServerResult);
     }
     return arr;
   }, []);
@@ -120,9 +120,8 @@ prototype["fromServer"] = function fromServer(arg0) {
   obj.mobileBannerUrl = mobile_banner_url;
   obj.mobileBgUrl = mobile_bg_url;
   obj.heroLogoDisplayConfig = CollectiblesUtils.getAssetDisplayConfig(hero_logo_display_config);
-  const tmp2 = prototype;
   obj.heroBannerDisplayConfig = CollectiblesUtils.getAssetDisplayConfig(hero_banner_display_config);
-  return new tmp2(obj);
+  return new prototype(obj);
 };
 prototype["fromStorefrontCollectionRecord"] = function fromStorefrontCollectionRecord(id) {
   const obj = {
@@ -156,7 +155,7 @@ prototype["fromStorefrontCollectionRecord"] = function fromStorefrontCollectionR
     if (null != result) {
       const type = result.type;
       if (tmp4) {
-        arr.push(result);
+        arr = arr.push(result);
       }
       tmp4 =
         type === CollectiblesItemType.CollectiblesItemType.VARIANTS_GROUP ||

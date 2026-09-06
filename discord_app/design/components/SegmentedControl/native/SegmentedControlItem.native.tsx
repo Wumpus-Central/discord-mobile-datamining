@@ -55,15 +55,14 @@ export const SegmentedControlItem = function SegmentedControlItem(index) {
     let active = inactive.inactive;
     value = pressed.get();
     if (value === index) {
-      active = tmp.pressed;
+      active = inactive.pressed;
     } else if (tmp2) {
-      active = tmp.inactive;
-    } else if (tmp5 === tmp4) {
-      active = tmp.active;
+      active = inactive.inactive;
+    } else if (tmp5 === index) {
+      active = inactive.active;
     }
     const obj = { color: null };
     tmp2 = pressed.get() >= 0;
-    tmp4 = index;
     obj.color = spring.withSpring(active, closure_7, "animate-always");
     return obj;
   };

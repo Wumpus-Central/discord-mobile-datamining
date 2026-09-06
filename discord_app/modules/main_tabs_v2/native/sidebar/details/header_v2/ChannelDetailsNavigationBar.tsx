@@ -1,5 +1,6 @@
 // discord_app/modules/main_tabs_v2/native/sidebar/details/header_v2/ChannelDetailsNavigationBar.tsx
 import nativeDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
+import ReanimatedRexport from "../../../../../reanimated/ReanimatedRexport.tsx";
 import timing from "../../../../../../design/animation/reanimated/timing/timing.tsx";
 import timingPresets from "../../../../../../design/animation/reanimated/timing/timingPresets.tsx";
 import _modDef7052 from "../../../../../../../_runtime/metro/07052__.js";
@@ -175,16 +176,16 @@ function NavigationHeader(channel) {
     const channelDetailsButtons = ChannelDetailsUtils.getChannelDetailsButtons(channel, stateFromStores);
     return channelDetailsButtons.map((item) => {
       if (constants.SEARCH === item) {
-        let obj = { channelId: tmp.id };
+        let obj = { channelId: channel.id };
         let tmp3 = closure_2_15(SearchButton, obj, item);
-      } else if (tmp2.MUTE === item) {
-        obj = { channelId: tmp.id };
+      } else if (constants.MUTE === item) {
+        obj = { channelId: channel.id };
         tmp3 = closure_2_15(MuteButton, obj, item);
-      } else if (tmp2.SETTINGS === item) {
-        obj = { channel: tmp };
+      } else if (constants.SETTINGS === item) {
+        obj = { channel };
         tmp3 = closure_2_15(SettingsButton, obj, item);
-      } else if (tmp2.MORE === item) {
-        const obj1 = { channel: tmp };
+      } else if (constants.MORE === item) {
+        const obj1 = { channel };
         tmp3 = closure_2_15(width(cleanUp[28]), obj1, item);
       }
       return tmp3;
@@ -291,10 +292,10 @@ export default noop.memo(noop.forwardRef((channel, ref) => {
   let items1 = [channel, onBackPress, componentWidth, ref, onSuggestionsLayoutMeasure, suggestionsDismissed, setSuggestionsDismissed];
   const memo = onSuggestionsLayoutMeasure.useMemo(() => {
     if (closure_7) {
-      const items = [tmp.SEARCH];
+      const items = [constants.SEARCH];
       let items1 = items;
     } else {
-      items1 = [tmp.BUTTONS];
+      items1 = [constants.BUTTONS];
     }
     return items1;
   }, items);

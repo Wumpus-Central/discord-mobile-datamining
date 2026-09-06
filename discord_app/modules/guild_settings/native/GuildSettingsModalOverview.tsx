@@ -1,6 +1,7 @@
 // discord_app/modules/guild_settings/native/GuildSettingsModalOverview.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
+import native from "../../../design/void/native.tsx";
 import FlagUtils from "../../../../discord_common/js/shared/utils/FlagUtils.tsx";
 import AvatarUtilsDefault from "../../../utils/AvatarUtils.tsx";
 import HelpdeskUtilsDefault from "../../../utils/HelpdeskUtils.tsx";
@@ -17,6 +18,7 @@ import TableRadioRow from "../../../design/components/TableRow/native/TableRadio
 import TextInput from "../../../design/components/TextInput/native/TextInput.native.tsx";
 import NavScrim from "../../../design/components/Navigator/native/NavScrim.android.tsx";
 import TextArea from "../../../design/components/TextInput/native/TextArea.native.tsx";
+import TableSwitchRow from "../../../design/components/TableRow/native/TableSwitchRow.native.tsx";
 import HeaderActionButton from "../../../design/components/Navigator/native/HeaderActionButton.native.tsx";
 import Form from "../../../design/void/Form/native/index.tsx";
 import GuildSettingsActionCreatorsDefault from "../GuildSettingsActionCreators.tsx";
@@ -333,6 +335,7 @@ prototype["updateNavigator"] = function updateNavigator(submitting) {
     setOptionsResult.headerRight = fn2;
     setOptionsResult = navigation.setOptions(setOptionsResult);
   }
+  tmp = null != submitting && submitting === submitting.submitting && hasChanges === submitting.hasChanges;
 };
 prototype["componentWillUnmount"] = function componentWillUnmount() {
   GuildSettingsActionCreatorsDefault.cancelChanges(this.props.guild.id);
@@ -349,12 +352,12 @@ prototype["getError"] = function getError(arg0) {
 };
 prototype["handleSystemChannelFlagsChange"] = function handleSystemChannelFlagsChange(
   SUPPRESS_GUILD_REMINDER_NOTIFICATIONS,
-  arg1,
+  setting,
 ) {
   const setFlagResult = FlagUtils.setFlag(
     this.props.guild.systemChannelFlags,
     SUPPRESS_GUILD_REMINDER_NOTIFICATIONS,
-    arg1,
+    setting,
   );
   GuildSettingsActionCreatorsDefault.updateGuild({ systemChannelFlags: setFlagResult });
 };
@@ -474,7 +477,6 @@ prototype["renderSystemMessageSettings"] = function renderSystemMessageSettings(
   const intl5 = tmp(1114).intl;
   obj1.label = intl5.string(tmp(1114).t["+f0bXQ"]);
   obj1.disabled = !canManage;
-  const tmp15 = closure_1_20;
   const tmpResult2 = tmp(17336);
   obj1.value = !tmp(1384).hasFlag(guild.systemChannelFlags, constants5.SUPPRESS_JOIN_NOTIFICATIONS);
   obj1.onValueChange = self.handleSystemJoinMessages;
@@ -508,9 +510,12 @@ prototype["renderSystemMessageSettings"] = function renderSystemMessageSettings(
     const intl9 = tmp(1114).intl;
     obj5.label = intl9.string(tmp(1114).t["54n19R"]);
     obj5.disabled = !canManage;
-    obj5.value = !tmp(1384).hasFlag(guild.systemChannelFlags, tmp17.SUPPRESS_ROLE_SUBSCRIPTION_PURCHASE_NOTIFICATIONS);
+    obj5.value = !tmp(1384).hasFlag(
+      guild.systemChannelFlags,
+      constants5.SUPPRESS_ROLE_SUBSCRIPTION_PURCHASE_NOTIFICATIONS,
+    );
     obj5.onValueChange = self.handleSystemGuildRoleSubscriptionPurchaseMessages;
-    hasFlagResult = tmp16(tmp(7201).TableSwitchRow, obj5);
+    hasFlagResult = closure_1_19(tmp(7201).TableSwitchRow, obj5);
     const tmpResult8 = tmp(1384);
   }
   items[5] = hasFlagResult;
@@ -521,10 +526,10 @@ prototype["renderSystemMessageSettings"] = function renderSystemMessageSettings(
     obj6.disabled = !canManage;
     obj6.value = !tmp(1384).hasFlag(
       guild.systemChannelFlags,
-      tmp17.SUPPRESS_ROLE_SUBSCRIPTION_PURCHASE_NOTIFICATION_REPLIES,
+      constants5.SUPPRESS_ROLE_SUBSCRIPTION_PURCHASE_NOTIFICATION_REPLIES,
     );
     obj6.onValueChange = self.handleSystemGuildRoleSubscriptionPurchaseMessageReplies;
-    hasFlagResult1 = tmp16(tmp(7201).TableSwitchRow, obj6);
+    hasFlagResult1 = closure_1_19(tmp(7201).TableSwitchRow, obj6);
     const tmpResult9 = tmp(1384);
   }
   items[6] = hasFlagResult1;
@@ -533,14 +538,14 @@ prototype["renderSystemMessageSettings"] = function renderSystemMessageSettings(
     const intl11 = tmp(1114).intl;
     obj7.label = intl11.string(tmp(1114).t.IMtHBW);
     obj7.disabled = !canManage;
-    obj7.value = !tmp(1384).hasFlag(guild.systemChannelFlags, tmp17.SUPPRESS_VOICE_SESSION_NOTIFICATIONS);
+    obj7.value = !tmp(1384).hasFlag(guild.systemChannelFlags, constants5.SUPPRESS_VOICE_SESSION_NOTIFICATIONS);
     obj7.onValueChange = self.handleSystemVoiceSessionMessages;
-    result1 = tmp16(tmp(7201).TableSwitchRow, obj7);
+    result1 = closure_1_19(tmp(7201).TableSwitchRow, obj7);
     const tmpResult10 = tmp(1384);
   }
   items[7] = result1;
   obj.children = items;
-  return tmp15(tmp(5687).TableRowGroup, obj);
+  return closure_1_20(tmp(5687).TableRowGroup, obj);
 };
 prototype["renderDefaultNotificationSettings"] = function renderDefaultNotificationSettings() {
   const self = this;
@@ -561,15 +566,15 @@ prototype["renderDefaultNotificationSettings"] = function renderDefaultNotificat
   let stringResult;
   if (null != guildMemberCount) {
     if (guildMemberCount >= collapsedCategories) {
-      const intl4 = tmp2(1114).intl;
-      stringResult = intl4.string(tmp2(1114).t["L+P4t2"]);
+      const intl4 = util.intl;
+      stringResult = intl4.string(util.t["L+P4t2"]);
     }
   }
   obj.subLabel = stringResult;
   obj.disabled = !canManage;
   const items = [closure_1_19(TableRadioRow.TableRadioRow, obj)];
   obj = { value: constants.ONLY_MENTIONS, label: null, disabled: null };
-  const intl5 = tmp2(1114).intl;
+  const intl5 = util.intl;
   obj.label = intl5.format(util.t.L2hmYy, {});
   obj.disabled = !canManage;
   items[1] = closure_1_19(TableRadioRow.TableRadioRow, obj);
@@ -582,18 +587,18 @@ prototype["renderBoostProgressBar"] = function renderBoostProgressBar() {
   let tmp3 = null;
   if (obj.getMobileBoostProgressBarEnabled("GuildSettingsModalOverview")) {
     obj = { title: null, description: null, hasIcons: false, children: null };
-    const intl = tmp(1114).intl;
-    obj.title = intl.string(tmp(1114).t["0morVD"]);
-    const intl2 = tmp(1114).intl;
-    obj.description = intl2.string(tmp(1114).t.O87mwg);
+    const intl = util.intl;
+    obj.title = intl.string(util.t["0morVD"]);
+    const intl2 = util.intl;
+    obj.description = intl2.string(util.t.O87mwg);
     obj = { label: null, disabled: null, value: null, onValueChange: null };
-    const intl3 = tmp(1114).intl;
-    obj.label = intl3.string(tmp(1114).t.Dl4mJS);
+    const intl3 = util.intl;
+    obj.label = intl3.string(util.t.Dl4mJS);
     obj.disabled = !canManage;
     obj.value = guild.premiumProgressBarEnabled;
     obj.onValueChange = this.handleBoostProgressBarToggle;
-    obj.children = closure_1_19(tmp(7201).TableSwitchRow, obj);
-    tmp3 = closure_1_19(tmp(5687).TableRowGroup, obj);
+    obj.children = closure_1_19(TableSwitchRow.TableSwitchRow, obj);
+    tmp3 = closure_1_19(TableRowGroup.TableRowGroup, obj);
   }
   return tmp3;
 };
@@ -630,7 +635,7 @@ prototype["renderSplash"] = function renderSplash() {
       size: { width: 1920, height: 1080 },
     };
     obj.children = closure_1_19(AssetChooserDefault, obj);
-    tmp = tmp2(TableRowGroup.TableRowGroup, obj);
+    tmp = closure_1_19(TableRowGroup.TableRowGroup, obj);
   }
   return tmp;
 };
@@ -639,22 +644,22 @@ prototype["renderSummaries"] = function renderSummaries() {
   const guild = props.guild;
   let obj = ChannelSummariesExperiment;
   if (obj.canGuildUseConversationSummaries(guild, false)) {
-    const intl = tmp(1114).intl;
+    const intl = util.intl;
     obj = { helpdeskArticle: HelpdeskUtilsDefault.getArticleURL(constants4.CONVERSATION_SUMMARIES) };
     obj = { title: null, description: null, hasIcons: false, children: null };
-    const intl2 = tmp(1114).intl;
-    obj.title = intl2.string(tmp(1114).t.XPDhcc);
-    obj.description = intl.format(tmp(1114).t["c6Cy/h"], obj);
+    const intl2 = util.intl;
+    obj.title = intl2.string(util.t.XPDhcc);
+    obj.description = intl.format(util.t["c6Cy/h"], obj);
     const obj1 = { label: null, trailing: null, value: null, disabled: null, onValueChange: null };
-    const intl3 = tmp(1114).intl;
-    obj1.label = intl3.string(tmp(1114).t.vmEDQs);
-    obj1.trailing = closure_1_19(tmp(1178).BetaTag, {});
+    const intl3 = util.intl;
+    obj1.label = intl3.string(util.t.vmEDQs);
+    obj1.trailing = closure_1_19(native.BetaTag, {});
     const features = guild.features;
     obj1.value = features.has(constants3.SUMMARIES_ENABLED_BY_USER);
     obj1.disabled = !props.canManage;
     obj1.onValueChange = this.handleSummariesToggle;
-    obj.children = closure_1_19(tmp(7201).TableSwitchRow, obj1);
-    return closure_1_19(tmp(5687).TableRowGroup, obj);
+    obj.children = closure_1_19(TableSwitchRow.TableSwitchRow, obj1);
+    return closure_1_19(TableRowGroup.TableRowGroup, obj);
   } else {
     return null;
   }
@@ -682,7 +687,7 @@ prototype["renderDescription"] = function renderDescription() {
   obj.value = str;
   obj.isDisabled = !canManage;
   obj.onChange = this.handleDescriptionChange;
-  const intl3 = tmp2(1114).intl;
+  const intl3 = util.intl;
   obj.placeholder = intl3.string(util.t.Nvfowl);
   return closure_1_19(TextArea.TextArea, obj);
 };

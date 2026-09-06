@@ -22,7 +22,7 @@ export const snapAttachmentDimensions = function snapAttachmentDimensions(arg0) 
   } else {
     let found = items.find((item) => bound <= item);
     if (found == null) {
-      found = arr[arr.length - 1];
+      found = items[items.length - 1];
     }
     let tmp4 = null != sourceWidth && null != sourceHeight;
     if (tmp4) {
@@ -37,19 +37,18 @@ export const snapAttachmentDimensions = function snapAttachmentDimensions(arg0) 
         if (!tmp4) {
           for (const item10027 of arr) {
             if (item10027 <= bound) {
-              let tmp = item10027;
               continue;
             } else {
               obj.return();
               break;
             }
-            let tmp11 = null != tmp;
+            let tmp11 = null != item10027;
             if (tmp11) {
-              tmp11 = bound <= tmp * maxUpscale;
+              tmp11 = bound <= item10027 * maxUpscale;
             }
             tmp5 = found;
             if (tmp11) {
-              tmp5 = tmp;
+              tmp5 = item10027;
             }
           }
         }

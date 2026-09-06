@@ -1,5 +1,6 @@
 // discord_app/modules/launchpad/native/shared/ChannelSubtitle.tsx
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
+import MessagePreviewMarkup from "../../../message_previews/native/MessagePreviewMarkup.tsx";
 import getChannelSubtitleData from "../../../channel/native/getChannelSubtitleData.tsx";
 import getLayoutStylesDefault from "getLayoutStyles.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -36,8 +37,8 @@ function ChannelSubtitle(arg0) {
       str = "text-muted";
     }
     obj.color = str;
-    obj.children = tmp(10116).renderMessagePreviewMarkup(obj);
-    return jsx(tmp(4556).Text, {
+    obj.children = MessagePreviewMarkup.renderMessagePreviewMarkup(obj);
+    return jsx(Text_Text.Text, {
       content: channelSubtitleData.subtitle,
       muted: null,
       channelId: null,

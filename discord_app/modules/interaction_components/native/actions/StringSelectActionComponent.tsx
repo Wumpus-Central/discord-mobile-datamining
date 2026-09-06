@@ -45,7 +45,7 @@ export default function StringSelectActionComponent(type) {
   const memo1 = obj1.useMemo(() => {
     type = undefined;
     if (state != null) {
-      type = tmp.type;
+      type = state.type;
     }
     const mapped =
       type === type

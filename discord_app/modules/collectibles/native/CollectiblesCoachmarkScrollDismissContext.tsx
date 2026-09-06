@@ -36,20 +36,20 @@ export const CollectiblesCoachmarkScrollDismissProvider = function CollectiblesC
       const contentOffset = nativeEvent.nativeEvent.contentOffset;
       if (null != ref2.current) {
         const _Math = Math;
-        if (Math.abs(contentOffset.x - tmp3.current) >= 16) {
+        if (Math.abs(contentOffset.x - ref2.current) >= 16) {
           tmp.current = null;
-          tmp3.current = null;
+          ref2.current = null;
           current();
         }
       } else {
-        tmp3.current = contentOffset.x;
+        ref2.current = contentOffset.x;
       }
     }
   }, []);
   const items = [registerDismiss, callback1];
   return (
     <redux.Provider value={noop.useMemo(() => ({ registerDismiss, handleDismissCoachmarkOnScroll: callback1 }), items)}>
-      {arg0.children}
+      {children.children}
     </redux.Provider>
   );
 };

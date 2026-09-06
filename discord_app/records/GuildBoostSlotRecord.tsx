@@ -29,7 +29,16 @@ GuildBoostSlotRecord["createFromServer"] = function createFromServer(premium_gui
   }
   ({ canceled, cooldown_ends_at } = premium_guild_subscription);
   if (typeof GuildBoostSlotRecord === "function") {
-    const tmp8 = new GuildBoostSlotRecord(tmp, tmp2, new.target, id, subscription_id, tmp3, canceled, cooldown_ends_at);
+    const tmp8 = new GuildBoostSlotRecord(
+      tmp,
+      GuildBoostSlotRecord,
+      new.target,
+      id,
+      subscription_id,
+      tmp3,
+      canceled,
+      cooldown_ends_at,
+    );
     tmp8.id = id;
     tmp8.subscriptionId = subscription_id;
     tmp8.premiumGuildSubscription = tmp3;

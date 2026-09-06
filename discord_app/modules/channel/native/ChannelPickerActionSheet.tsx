@@ -42,7 +42,7 @@ export default function ChannelPickerActionSheet(noChannelOptionLabel) {
     items = closure_5(require("TableRadioRow").TableRadioRow, obj);
   }
   let obj2 = { scrollable: true, header: tmp3, children: null };
-  const obj3 = { contentContainerStyle: { paddingBottom: require("useSafeAreaInsets")().bottom }, children: null };
+  let obj3 = { contentContainerStyle: { paddingBottom: require("useSafeAreaInsets")().bottom }, children: null };
   let str;
   if (selectedChannel != null) {
     str = selectedChannel.id;
@@ -83,7 +83,7 @@ export default function ChannelPickerActionSheet(noChannelOptionLabel) {
       let tmp4Result = null;
       if (null != channelIconWithGuild) {
         obj = { source: channelIconWithGuild };
-        tmp4Result = tmp4(TableRowIcon.TableRowIcon, obj);
+        tmp4Result = hasOwnProperty(TableRowIcon.TableRowIcon, obj);
       }
       obj.icon = tmp4Result;
       return hasOwnProperty(TableRadioRow.TableRadioRow, obj, id.id);

@@ -65,7 +65,7 @@ const result = size.fileFinishedImporting(
 
 export default noop.forwardRef((benefitType) => {
   _require = benefitType;
-  constants = async function _handleSave(arg0, value) {
+  constants = async function _handleSave() {
     if (c4 === 2) {
       c4 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -146,12 +146,12 @@ export default noop.forwardRef((benefitType) => {
       c4 = 3;
     } else if (arg0 === 1) {
       c4 = 3;
-      throw arg1;
+      throw value;
     } else if (arg0 !== 2) {
       closure_128_0.onClose();
       c3 = 0;
     }
-    return arg1;
+    return value;
   };
   const tmp = closure_15();
   const tmp4 = value(13898)();

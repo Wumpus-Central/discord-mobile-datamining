@@ -40,8 +40,7 @@ function CollapsingText(children) {
         num = obj.get();
       }
       obj = { width: spring.withSpring(num, springPresets.SUBTLE_SPRING, "animate-always"), opacity: null };
-      const obj5 = collapseText;
-      if (num2 === obj5.get()) {
+      if (num2 === collapseText.get()) {
         num2 = 0;
       }
       obj.opacity = spring.withSpring(num2, springPresets.SUBTLE_SPRING, "animate-always");

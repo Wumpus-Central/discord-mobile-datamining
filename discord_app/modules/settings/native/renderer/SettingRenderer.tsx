@@ -13,6 +13,7 @@ import TableRadioGroup from "../../../../design/components/TableRow/native/Table
 import TableRadioRow from "../../../../design/components/TableRow/native/TableRadioRow.native.tsx";
 import Tracking from "../../tracking/Tracking.tsx";
 import ClipboardUtils from "../../../../utils/ClipboardUtils.native.tsx";
+import TableSwitchRow from "../../../../design/components/TableRow/native/TableSwitchRow.native.tsx";
 import VolumeSliderDefault from "../../../../components_native/common/VolumeSlider.tsx";
 import ClydeIcon from "../../../../design/components/Icon/native/redesign/generated/ClydeIcon.tsx";
 import SettingRendererUtils from "SettingRendererUtils.tsx";
@@ -176,7 +177,7 @@ function StaticSettingSearchResult(title) {
   let tmp3Result = null;
   if (null != trailing) {
     obj = { text: trailing };
-    tmp3Result = tmp3(title(index[12]).TableRow.TrailingText, obj);
+    tmp3Result = closure_14(title(index[12]).TableRow.TrailingText, obj);
   }
   obj.trailing = tmp3Result;
   obj.start = 0 === index;
@@ -294,7 +295,7 @@ let closure_18 = noop.memo((arg0) => {
   let tmp10Result = null;
   if (null != IconComponent) {
     obj = { IconComponent };
-    tmp10Result = tmp10(tmp(tmp2[12]).TableRow.Icon, obj);
+    tmp10Result = closure_14(screen(tmp2[12]).TableRow.Icon, obj);
   }
   obj.icon = tmp10Result;
   let tmp12 = null;
@@ -304,7 +305,7 @@ let closure_18 = noop.memo((arg0) => {
       tmp10Result = trailing;
       if (typeof trailing === "string") {
         const obj1 = { text: trailing };
-        tmp10Result = tmp10(tmp(tmp2[12]).TableRow.TrailingText, obj1);
+        tmp10Result = closure_14(screen(tmp2[12]).TableRow.TrailingText, obj1);
       }
       tmp13 = tmp10Result;
     }
@@ -392,7 +393,7 @@ let closure_21 = noop.memo((arg0) => {
   let tmp10Result = null;
   if (null != IconComponent) {
     obj = { IconComponent, variant };
-    tmp10Result = tmp10(tmp(5605).TableRow.Icon, obj);
+    tmp10Result = closure_1_14(TableRow.TableRow.Icon, obj);
   }
   obj.icon = tmp10Result;
   obj.onPress = onPress;
@@ -402,7 +403,7 @@ let closure_21 = noop.memo((arg0) => {
     tmp10Result = trailing;
     if (typeof trailing === "string") {
       const obj1 = { text: trailing };
-      tmp10Result = tmp10(tmp(5605).TableRow.TrailingText, obj1);
+      tmp10Result = closure_1_14(TableRow.TableRow.TrailingText, obj1);
     }
     tmp12 = tmp10Result;
   }
@@ -412,7 +413,7 @@ let closure_21 = noop.memo((arg0) => {
   const children = [closure_1_14(TableRow.TableRow, obj)];
   if (highlightSettingItem) {
     const obj2 = { start, end };
-    highlightSettingItem = tmp10(SettingListItemHighlightDefault, obj2);
+    highlightSettingItem = closure_1_14(SettingListItemHighlightDefault, obj2);
   }
   children[1] = highlightSettingItem;
   return value2(__initData, { children });
@@ -446,7 +447,7 @@ let closure_22 = noop.memo((arg0) => {
   let tmp8Result = null;
   if (null != IconComponent) {
     obj = { IconComponent, variant };
-    tmp8Result = tmp8(tmp(5605).TableRow.Icon, obj);
+    tmp8Result = closure_1_14(TableRow.TableRow.Icon, obj);
   }
   obj.icon = tmp8Result;
   obj.value = value;
@@ -455,16 +456,16 @@ let closure_22 = noop.memo((arg0) => {
   obj.onValueChange = onValueChange;
   obj.start = start;
   obj.end = end;
-  tmp8Result = tmp8(tmp(7201).TableSwitchRow, obj);
+  tmp8Result = closure_1_14(TableSwitchRow.TableSwitchRow, obj);
   let tmp8Result1 = tmp8Result;
   if (true === hasIcon) {
     const obj1 = { children: tmp8Result };
-    tmp8Result1 = tmp8(ForceSwitchIcons, obj1);
+    tmp8Result1 = closure_1_14(ForceSwitchIcons, obj1);
   }
   const children = [tmp8Result1];
   if (highlightSettingItem) {
     const obj2 = { start, end };
-    highlightSettingItem = tmp8(SettingListItemHighlightDefault, obj2);
+    highlightSettingItem = closure_1_14(SettingListItemHighlightDefault, obj2);
   }
   children[1] = highlightSettingItem;
   return value2(__initData, { children });
@@ -555,13 +556,13 @@ let closure_25 = noop.memo((arg0) => {
   let tmp11Result = null;
   if (null != IconComponent) {
     obj = { IconComponent, variant };
-    tmp11Result = tmp11(tmp(5605).TableRow.Icon, obj);
+    tmp11Result = closure_14(tmp(5605).TableRow.Icon, obj);
   }
   obj.icon = tmp11Result;
   tmp11Result = null;
   if (null != trailing) {
     const obj1 = { text: trailing };
-    tmp11Result = tmp11(tmp(5605).TableRow.TrailingText, obj1);
+    tmp11Result = closure_14(tmp(5605).TableRow.TrailingText, obj1);
   }
   obj.trailing = tmp11Result;
   obj.start = start;
@@ -569,7 +570,7 @@ let closure_25 = noop.memo((arg0) => {
   const children = [closure_14(trailing(5605).TableRow, obj)];
   if (highlightSettingItem) {
     let obj2 = { start, end };
-    highlightSettingItem = tmp11(SettingListItemHighlightDefault, obj2);
+    highlightSettingItem = closure_14(SettingListItemHighlightDefault, obj2);
   }
   children[1] = highlightSettingItem;
   return closure_16(closure_15, { children });
@@ -715,7 +716,7 @@ let closure_27 = noop.memo((useTrailing) => {
       formatPercentResult = tmp5Result.formatPercent(stateFromStores, value);
     }
     const obj1 = { variant: "text-sm/medium", color: "text-muted", children: formatPercentResult };
-    tmp20Result = tmp20(tmp5(tmp6[32]).Text, obj1);
+    tmp20Result = closure_14(tmp5(tmp6[32]).Text, obj1);
   }
   items8[1] = tmp20Result;
   const items9 = [
@@ -782,46 +783,46 @@ export const renderSettingItem = function renderSettingItem(item) {
     obj.start = start;
     obj.end = end;
     return closure_1_14(closure_20, obj);
-  } else if (tmp.ROUTE === type) {
+  } else if (constants.ROUTE === type) {
     obj = {};
     const merged1 = Object.assign(settingData);
     obj.start = start;
     obj.end = end;
     return closure_1_14(closure_18, obj);
-  } else if (tmp.PRESSABLE === type) {
+  } else if (constants.PRESSABLE === type) {
     const obj1 = {};
     const merged2 = Object.assign(settingData);
     obj1.start = start;
     obj1.end = end;
     obj1.setting = setting;
     return closure_1_14(closure_21, obj1);
-  } else if (tmp.TOGGLE === type) {
+  } else if (constants.TOGGLE === type) {
     const obj2 = {};
     const merged3 = Object.assign(settingData);
     obj2.start = start;
     obj2.end = end;
     obj2.setting = setting;
     return closure_1_14(closure_22, obj2);
-  } else if (tmp.STATIC === type) {
+  } else if (constants.STATIC === type) {
     const obj3 = {};
     const merged4 = Object.assign(settingData);
     obj3.start = start;
     obj3.end = end;
     obj3.setting = setting;
     return closure_1_14(closure_25, obj3);
-  } else if (tmp.VOLUME_SLIDER === type) {
+  } else if (constants.VOLUME_SLIDER === type) {
     const obj4 = {};
     const merged5 = Object.assign(settingData);
     obj4.start = start;
     obj4.end = end;
     obj4.setting = setting;
     return closure_1_14(closure_26, obj4);
-  } else if (tmp.RADIO === type) {
+  } else if (constants.RADIO === type) {
     const obj5 = {};
     const merged6 = Object.assign(settingData);
     obj5.setting = setting;
     return closure_1_14(closure_24, obj5);
-  } else if (tmp.SLIDER === type) {
+  } else if (constants.SLIDER === type) {
     obj = {};
     const merged7 = Object.assign(settingData);
     obj.start = start;
@@ -838,11 +839,11 @@ export const renderSettingSearchResultItem = function renderSettingSearchResultI
     let obj = { settingData };
     const merged = Object.assign(tmp);
     return closure_1_14(RouteSettingSearchResult, obj);
-  } else if (tmp2.PRESSABLE === type) {
+  } else if (constants.PRESSABLE === type) {
     obj = { settingData };
     const merged1 = Object.assign(tmp);
     return closure_1_14(PressableSettingSearchResult, obj);
-  } else if (tmp2.STATIC === type) {
+  } else if (constants.STATIC === type) {
     obj = { settingData };
     const merged2 = Object.assign(tmp);
     return closure_1_14(StaticSettingSearchResult, obj);

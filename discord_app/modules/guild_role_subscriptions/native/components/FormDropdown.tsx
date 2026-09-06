@@ -1,13 +1,13 @@
 // discord_app/modules/guild_role_subscriptions/native/components/FormDropdown.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import native from "../../../../design/void/native.tsx";
+import TouchableHitBoxDefault from "../../../../design/void/TouchableHitBox/native/TouchableHitBox.tsx";
 import _modDef9939 from "../../../../../_runtime/metro/09939__.js";
 import _modDef13897 from "../../../../../_runtime/metro/13897__.js";
 import FormStylesDefault from "FormStyles.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import TextStyles from "../../../rebrand/native/TextStyles.tsx";
 
-const TouchableHitBoxDefault = tmp2(9050);
 require = fn;
 function LockedIcon() {
   return React3(native.Icon, { size: native.Icon.Sizes.MEDIUM, source: _modDef13897 });
@@ -51,7 +51,6 @@ export default function FormDropdown(arg0) {
   obj.style = items;
   let tmp9;
   const tmp5Result = React3(disabled ? LockedIcon : DropdownIcon, {});
-  const tmp7 = React4;
   if (!disabled) {
     tmp9 = onPress;
   }
@@ -67,6 +66,6 @@ export default function FormDropdown(arg0) {
   items1[1] = React3(native.LegacyText, obj);
   items1[2] = tmp5Result;
   obj.children = items1;
-  return tmp7(TouchableHitBoxDefault, obj);
+  return React4(TouchableHitBoxDefault, obj);
 }
 export const useFormDropdownStyles = createStyles;

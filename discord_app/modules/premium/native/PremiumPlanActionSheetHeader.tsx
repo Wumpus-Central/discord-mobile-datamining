@@ -2,6 +2,16 @@
 import ConstantsIOS from "../../../ConstantsIOS.tsx";
 import PremiumUtils from "../../../utils/PremiumUtils.tsx";
 import LinearGradientDefault from "../../../../_runtime/04987_LinearGradient.js";
+import FastImageDefault from "../../../components_native/common/FastImage.tsx";
+import _modDef7433 from "../../../../_runtime/metro/07433__.js";
+import _modDef7434 from "../../../../_runtime/metro/07434__.js";
+import _modDef7435 from "../../../../_runtime/metro/07435__.js";
+import _modDef7436 from "../../../../_runtime/metro/07436__.js";
+import _modDef7437 from "../../../../_runtime/metro/07437__.js";
+import PremiumPill from "../../user_settings/premium/native/PremiumPill.tsx";
+import _modDef9385 from "../../../../_runtime/metro/09385__.js";
+import _modDef9390 from "../../../../_runtime/metro/09390__.js";
+import _modDef10715 from "../../../../_runtime/metro/10715__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 const PremiumUtilsDefault = PremiumUtils;
@@ -67,25 +77,25 @@ export default function PremiumPlanActionSheetHeader(arg0) {
   const tmp14 = LinearGradientDefault;
   obj.accessibilityLabel = PremiumUtils.getPremiumTypeDisplayName(premiumType);
   if (TIER_0.TIER_0 === premiumType) {
-    let tmp13Result = tmp13(7433);
+    let tmp13Result = _modDef7433;
   } else {
     tmp13Result = null;
-    if (tmp15.TIER_1 !== premiumType) {
-      if (tmp15.TIER_2 === premiumType) {
-        tmp13Result = tmp13(7434);
+    if (TIER_0.TIER_1 !== premiumType) {
+      if (TIER_0.TIER_2 === premiumType) {
+        tmp13Result = _modDef7434;
       }
     }
   }
   if (!tmp13Result) {
     const items = [tmp13Result, ,];
     obj = { style: tmp.logoContainer, children: null };
-    tmp13Result = tmp13(5587);
-    if (tmp15.TIER_0 === premiumType) {
-      let tmp13Result1 = tmp13(7435);
-    } else if (tmp15.TIER_1 === premiumType) {
-      tmp13Result1 = tmp13(7436);
-    } else if (tmp15.TIER_2 === premiumType) {
-      tmp13Result1 = tmp13(7437);
+    tmp13Result = FastImageDefault;
+    if (TIER_0.TIER_0 === premiumType) {
+      let tmp13Result1 = _modDef7435;
+    } else if (TIER_0.TIER_1 === premiumType) {
+      tmp13Result1 = _modDef7436;
+    } else if (TIER_0.TIER_2 === premiumType) {
+      tmp13Result1 = _modDef7437;
     }
     const obj1 = { source: tmp13Result1, resizeMode: "contain" };
     const items1 = [React5(tmp13Result, obj1), ,];
@@ -98,7 +108,7 @@ export default function PremiumPlanActionSheetHeader(arg0) {
         useWhiteBackground: true,
         hideTrialCountdown: true,
       };
-      tmp22Result = tmp22(tmp6(7438).PremiumPill, obj2);
+      tmp22Result = React5(PremiumPill.PremiumPill, obj2);
     }
     items1[1] = tmp22Result;
     tmp22Result = null;
@@ -110,47 +120,48 @@ export default function PremiumPlanActionSheetHeader(arg0) {
         shouldShowDiscountUpsell: true,
         useWhiteBackground: true,
       };
-      tmp22Result = tmp22(tmp6(7438).PremiumPill, obj3);
+      tmp22Result = React5(PremiumPill.PremiumPill, obj3);
     }
     items1[2] = tmp22Result;
     obj.children = items1;
-    items[1] = tmp12(View, obj);
-    if (tmp15.TIER_0 === premiumType) {
-      let tmp13Result3 = tmp13(9385);
-    } else if (tmp15.TIER_1 === premiumType) {
-      tmp13Result3 = tmp13(10715);
-    } else if (tmp15.TIER_2 === premiumType) {
-      tmp13Result3 = tmp13(9390);
+    items[1] = React6(View, obj);
+    if (TIER_0.TIER_0 === premiumType) {
+      let tmp13Result3 = _modDef9385;
+    } else if (TIER_0.TIER_1 === premiumType) {
+      tmp13Result3 = _modDef10715;
+    } else if (TIER_0.TIER_2 === premiumType) {
+      tmp13Result3 = _modDef9390;
     }
     const obj4 = { source: tmp13Result3, style: null, resizeMode: "contain" };
     const items2 = [tmp.imgWumpus];
-    if (tmp15.TIER_0 !== premiumType) {
-      if (tmp15.TIER_1 !== premiumType) {
-        if (tmp15.TIER_2 === premiumType) {
+    if (TIER_0.TIER_0 !== premiumType) {
+      if (TIER_0.TIER_1 !== premiumType) {
+        if (TIER_0.TIER_2 === premiumType) {
           let imgWumpusBottom = tmp.imgWumpusRight;
         }
       }
       items2[1] = imgWumpusBottom;
       obj4.style = items2;
-      items[2] = tmp22(tmp13Result2, obj4);
+      items[2] = React5(tmp13Result2, obj4);
       obj.children = items;
-      return tmp12(tmp14, obj);
+      return React6(tmp14, obj);
     }
     imgWumpusBottom = tmp.imgWumpusBottom;
-    tmp13Result2 = tmp13(5587);
+    tmp13Result2 = FastImageDefault;
   } else {
-    if (tmp15.TIER_0 === premiumType) {
-      let tmp13Result5 = tmp13(7433);
+    if (TIER_0.TIER_0 === premiumType) {
+      let tmp13Result5 = _modDef7433;
     } else {
       tmp13Result5 = null;
-      if (tmp15.TIER_1 !== premiumType) {
-        if (tmp15.TIER_2 === premiumType) {
-          tmp13Result5 = tmp13(7434);
+      if (TIER_0.TIER_1 !== premiumType) {
+        if (TIER_0.TIER_2 === premiumType) {
+          tmp13Result5 = _modDef7434;
         }
       }
     }
     const obj5 = { source: tmp13Result5 };
-    React5(tmp13(5587), obj5);
-    const tmp13Result4 = tmp13(5587);
+    React5(FastImageDefault, obj5);
+    const tmp13Result4 = FastImageDefault;
   }
+  const tmp6Result = PremiumUtils;
 }

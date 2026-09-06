@@ -34,7 +34,7 @@ const forwardRefResult = noop.forwardRef((accessibilityViewIsModal, ref) => {
   const merged1 = Object.assign(merged);
   return (
     <View
-      ref={arg1}
+      ref={ref}
       nativeID={nativeID}
       collapsable={null}
       onAccessibilityEscape={null}

@@ -179,10 +179,10 @@ function EditCustomStatusWithPreview(navigation) {
   memo = obj.useMemo(() => {
     let tmp2 = first !== ref.current.statusText;
     if (!tmp2) {
-      tmp2 = first1 !== tmp.current.statusEmoji;
+      tmp2 = first1 !== ref.current.statusEmoji;
     }
     if (!tmp2) {
-      tmp2 = first2 !== tmp.current.clearAfter;
+      tmp2 = first2 !== ref.current.clearAfter;
     }
     return tmp2;
   }, items8);
@@ -444,13 +444,13 @@ export default function EditCustomStatusWithPreviewModal(analyticsLocations) {
     obj.root = obj;
     return obj;
   }, items);
-  let obj = { initialRouteName: "root", screens: memo, headerStatusBarHeight: 12, headerStyle: null };
-  const obj2 = analyticsLocations(1116);
-  const tmp2 = closure_13;
+  let obj = { initialRouteName: "root", screens: memo, headerStatusBarHeight: null, headerStyle: null };
+  analyticsLocations(1116);
+  obj.headerStatusBarHeight = 12;
   obj = undefined;
   if (!tmp3Result.isAndroid()) {
     obj = { height: 56 };
   }
   obj.headerStyle = obj;
-  return tmp2(analyticsLocations(7000).Navigator, obj);
+  return closure_13(analyticsLocations(7000).Navigator, obj);
 }

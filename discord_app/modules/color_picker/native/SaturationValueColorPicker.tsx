@@ -1,11 +1,11 @@
 // discord_app/modules/color_picker/native/SaturationValueColorPicker.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import ReanimatedRexport from "../../reanimated/ReanimatedRexport.tsx";
 import LinearGradientDefault from "../../../../_runtime/04987_LinearGradient.js";
 import ColorPickerUtils from "ColorPickerUtils.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
-const ReanimatedRexport = tmp(4296);
 require = fn;
 function ColorBox(hue) {
   hue = hue.hue;
@@ -106,7 +106,7 @@ export default function SaturationValueColorPicker(hue) {
   noop = undefined;
   closure_8 = undefined;
   ({ style, colorBoxStyle, colorBoxInnerStyle, selectorStyle } = hue);
-  let tmp = closure_8();
+  const tmp = closure_8();
   const tmp2 = colorBoxWidth(noop.useState(0), 2);
   colorBoxWidth = tmp2[0];
   noop = tmp2[1];

@@ -19,7 +19,7 @@ let closure_7 = async function _shouldConvertToWebP2(arg0) {
   c5 = 0;
   c6 = 0;
   c4 = 0;
-  return (async (arg0, value) => {
+  return (async (arg0) => {
     if (c6 === 2) {
       c6 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -56,12 +56,12 @@ let closure_7 = async function _shouldConvertToWebP2(arg0) {
               return obj1;
             } else {
               const items = ["image/png"];
-              if (items.includes(obj18.type)) {
+              if (items.includes(type.type)) {
                 c4 = 1;
-                if (typeof obj18.arrayBuffer === "function") {
+                if (typeof type.arrayBuffer === "function") {
                   c5 = 4;
                   c6 = 1;
-                  const obj2 = { value: obj18.arrayBuffer(), done: false };
+                  const obj2 = { value: type.arrayBuffer(), done: false };
                   return obj2;
                 } else {
                   const promise = new Promise((arg0, arg1) => {
@@ -82,7 +82,7 @@ let closure_7 = async function _shouldConvertToWebP2(arg0) {
                 }
               } else {
                 const _HermesInternal = HermesInternal;
-                closure_2_4.verbose("[WebP] Unsupported format: " + obj18.type);
+                closure_2_4.verbose("[WebP] Unsupported format: " + type.type);
                 c6 = 3;
                 const obj4 = { value: constants.UNSUPPORTED_FORMAT, done: true };
                 return obj4;
@@ -204,7 +204,7 @@ function hashImageData(data) {
   const uint8Array = new Uint8Array(data.data.buffer);
   return MurmurHashV3Default(uint8Array).toString(16);
 }
-let closure_9 = async function _performWebPConversion(arg0, value) {
+let closure_9 = async function _performWebPConversion(arg0) {
   if (c6 === 2) {
     c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -259,7 +259,7 @@ let closure_9 = async function _performWebPConversion(arg0, value) {
             const image = new globalThis.Image();
             closure_129_3 = image;
             const _URL5 = URL;
-            closure_129_4 = URL.createObjectURL(tmp129);
+            closure_129_4 = URL.createObjectURL(closure_0);
             c4 = 1;
             let promise = new Promise((arg0, arg1) => {
               closure_0 = arg0;
@@ -276,7 +276,6 @@ let closure_9 = async function _performWebPConversion(arg0, value) {
             const obj1 = { value: promise, done: false };
             return obj1;
           }
-          tmp129 = closure_0;
         }
       } else if (1 === tmp8) {
         c4 = 0;
@@ -454,7 +453,7 @@ let closure_9 = async function _performWebPConversion(arg0, value) {
     }
   }
 };
-let closure_10 = async function _maybeConvertToWebP(arg0, value) {
+let closure_10 = async function _maybeConvertToWebP(arg0) {
   if (c7 === 2) {
     c7 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -518,13 +517,13 @@ let closure_10 = async function _maybeConvertToWebP(arg0, value) {
             throw error;
           } else {
             const _HermesInternal4 = HermesInternal;
-            React4.verbose("[WebP] Starting conversion for: " + tmp89.name);
+            React4.verbose("[WebP] Starting conversion for: " + originalFile.name);
             const _performance = performance;
             closure_130_2 = performance.now();
             c5 = 1;
             c6 = 2;
             c7 = 1;
-            const obj1 = { value: _shouldConvertToWebP(tmp89), done: false };
+            const obj1 = { value: _shouldConvertToWebP(originalFile), done: false };
             return obj1;
           }
         }

@@ -92,7 +92,7 @@ export const inviteRoleToDisplayData = function inviteRoleToDisplayData(id, id) 
   obj.unicodeEmoji = unicode_emoji;
   return obj;
 };
-export const filterRoleDeletes = function filterRoleDeletes(id, unsafeMutableRoles, roles, deleted_role_ids) {
+export const filterRoleDeletes = function filterRoleDeletes(id, unsafeMutableRoles) {
   let items = roles;
   if (roles === undefined) {
     items = [];

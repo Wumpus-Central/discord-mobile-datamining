@@ -1,5 +1,7 @@
 // discord_app/modules/app_launcher/native/AppLauncherButtonIcon.tsx
 import KeyboardTypes from "../../keyboard/native/KeyboardTypes.tsx";
+import AppsIcon from "../../../design/components/Icon/native/redesign/generated/AppsIcon.tsx";
+import PlusLargeIcon from "../../../design/components/Icon/native/redesign/generated/PlusLargeIcon.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -21,11 +23,11 @@ export const AppLauncherButtonIcon = function AppLauncherButtonIcon(style) {
     obj.transform = items1;
     items[1] = obj;
     obj.style = items;
-    let tmp4Result = tmp4(tmp6(10951).PlusLargeIcon, obj);
+    let tmp4Result = jsx(PlusLargeIcon.PlusLargeIcon, { transform: null });
   } else {
     const obj1 = { style };
     const merged2 = Object.assign(merged);
-    tmp4Result = tmp4(tmp6(5106).AppsIcon, obj1);
+    tmp4Result = jsx(AppsIcon.AppsIcon, { style });
   }
   obj.children = tmp4Result;
   return <View style={{ overflow: "hidden" }}>{null}</View>;

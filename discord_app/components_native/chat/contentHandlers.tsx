@@ -34,7 +34,7 @@ let closure_5 = asyncGeneratorStep(async (arg0) => {
   const nativeEvent = arg0;
   c3 = 0;
   c4 = 0;
-  const iter = (async (arg0, value) => {
+  const iter = (async (arg0) => {
     if (c4 === 2) {
       c4 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -126,7 +126,7 @@ let closure_4 = asyncGeneratorStep(async (arg0) => {
   const nativeEvent = arg0;
   c3 = 0;
   c4 = 0;
-  const iter = (async (arg0, value) => {
+  const iter = (async (arg0) => {
     if (c4 === 2) {
       c4 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -227,26 +227,30 @@ obj.onTapMention = function onTapMention(nativeEvent) {
     if (null != roleId) {
       if (null != guildId) {
         obj = { guildId, roleId, channelId };
-        ActionSheetActionCreatorsDefault.openLazy(tmp(1896)(11587, tmp2.paths), "RoleMembersActionSheet", obj);
+        ActionSheetActionCreatorsDefault.openLazy(
+          parsedUserId(1896)(11587, dependencyMap.paths),
+          "RoleMembersActionSheet",
+          obj,
+        );
       }
     }
     if ("@everyone" === roleName) {
       if (null != guildId) {
         const obj1 = { guildId, roleId: null, channelId: null };
         const obj6 = ActionSheetActionCreatorsDefault;
-        const tmp10 = tmp(1896)(11587, tmp2.paths);
+        const tmp10 = parsedUserId(1896)(11587, dependencyMap.paths);
         obj1.roleId = SnowflakeUtilsDefault.castGuildIdAsEveryoneGuildRoleId(guildId);
         obj1.channelId = channelId;
         obj6.openLazy(tmp10, "RoleMembersActionSheet", obj1);
       }
     }
     if (null == roleName) {
-      const DeveloperMode = tmp(1935).DeveloperMode;
+      const DeveloperMode = parsedUserId(1935).DeveloperMode;
       if (DeveloperMode.getSetting()) {
         if (null != parsedUserId) {
           const obj2 = { secondaryConfirmText: null, onConfirmSecondary: null };
-          const intl = tmp(1114).intl;
-          obj2.secondaryConfirmText = intl.string(tmp(1114).t["/AXYnE"]);
+          const intl = parsedUserId(1114).intl;
+          obj2.secondaryConfirmText = intl.string(parsedUserId(1114).t["/AXYnE"]);
           obj2.onConfirmSecondary = function onConfirmSecondary() {
             ClipboardUtils.copy(parsedUserId);
             const result = ToastUtils.presentCopiedToClipboard();
@@ -254,12 +258,12 @@ obj.onTapMention = function onTapMention(nativeEvent) {
           let obj4 = obj2;
         }
         const obj3 = { title: null, body: null, confirmText: null, isDismissable: true };
-        const intl2 = tmp(1114).intl;
-        obj3.title = intl2.string(tmp(1114).t.r0DLNm);
-        const intl3 = tmp(1114).intl;
-        obj3.body = intl3.string(tmp(1114).t.Fqqbhg);
-        const intl4 = tmp(1114).intl;
-        obj3.confirmText = intl4.string(tmp(1114).t.BddRzS);
+        const intl2 = parsedUserId(1114).intl;
+        obj3.title = intl2.string(parsedUserId(1114).t.r0DLNm);
+        const intl3 = parsedUserId(1114).intl;
+        obj3.body = intl3.string(parsedUserId(1114).t.Fqqbhg);
+        const intl4 = parsedUserId(1114).intl;
+        obj3.confirmText = intl4.string(parsedUserId(1114).t.BddRzS);
         const merged = Object.assign(obj4);
         obj3.show(obj3);
       }
@@ -276,6 +280,7 @@ obj.onTapInlineCode = function onTapInlineCode(nativeEvent) {
     ClipboardUtils.copy(node.content);
     const result = ToastUtils.presentCopiedToClipboard();
   }
+  tmp = null != node.content && typeof node.content === "string";
 };
 obj.onTapEmoji = function onTapEmoji(emojiNode) {
   ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(10329, dependencyMap.paths), "MessageEmojiActionSheet", {

@@ -26,5 +26,5 @@ export const renderChannelPressableWrapper = function renderChannelPressableWrap
   obj = { style: null, children };
   const items = [marginThread, { flex: 1, flexDirection: "row", alignItems: "center" }];
   obj.style = items;
-  return <View style={null}>{arg0}</View>;
+  return <View style={null}>{children}</View>;
 };

@@ -11,5 +11,5 @@ const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Modal/native/ModalFooter.native.tsx");
 
 export const ModalFooter = function ModalFooter(children) {
-  return <View style={closure_2().footer}>{arg0.children}</View>;
+  return <View style={closure_2().footer}>{children.children}</View>;
 };

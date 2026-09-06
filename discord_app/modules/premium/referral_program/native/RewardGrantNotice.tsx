@@ -71,14 +71,11 @@ export default function RewardGrantNotice(arg0) {
   ({ nRewardsGranted, referralRewardType } = arg0);
   if (nRewardsGranted < 1) {
     return null;
-  } else {
-    if (referralRewardType === PremiumReferralIncentivesExperiment.ReferralRewardType.ORBS) {
-      let obj = { nRewardsGranted };
-      let tmp3 = timestampProducer(OrbsGrantNotice, obj);
-    } else if (referralRewardType === tmp(13446).ReferralRewardType.DISCOUNT) {
-      obj = { nRewardsGranted };
-      tmp3 = timestampProducer(DiscountGrantNotice, obj);
-    }
-    tmp = require;
+  } else if (referralRewardType === PremiumReferralIncentivesExperiment.ReferralRewardType.ORBS) {
+    let obj = { nRewardsGranted };
+    let tmp3 = timestampProducer(OrbsGrantNotice, obj);
+  } else if (referralRewardType === PremiumReferralIncentivesExperiment.ReferralRewardType.DISCOUNT) {
+    obj = { nRewardsGranted };
+    tmp3 = timestampProducer(DiscountGrantNotice, obj);
   }
 }

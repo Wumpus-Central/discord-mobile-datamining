@@ -17,7 +17,7 @@ function RedesignBottomSheetTitleHeaderBase(children) {
   let tmp2Result = null;
   if (null != subtitle) {
     obj = { children: subtitle };
-    tmp2Result = tmp2(Subtitle, obj);
+    tmp2Result = timestampProducer(Subtitle, obj);
   }
   items[1] = tmp2Result;
   obj.children = items;
@@ -78,7 +78,7 @@ function RedesignBottomSheetTitleHeaderComplex(subtitle) {
   let tmp9Result = null;
   if (null != subtitle) {
     const obj2 = { children: subtitle };
-    tmp9Result = tmp9(Subtitle, obj2);
+    tmp9Result = timestampProducer(Subtitle, obj2);
   }
   const result = diff / 4;
   items1[1] = tmp9Result;
@@ -170,14 +170,14 @@ export const BottomSheetTitleHeader = function BottomSheetTitleHeader(arg0) {
     if (tmp2[0]) {
       let obj = {};
       merged = Object.assign(merged);
-      let tmp6Result = tmp6(RedesignBottomSheetTitleHeaderStacked, obj);
+      let tmp6Result = timestampProducer(RedesignBottomSheetTitleHeaderStacked, obj);
     } else {
       obj = {};
       const merged1 = Object.assign(merged);
       obj.onTitleTextLayout = function onTitleTextLayout(nativeEvent) {
         closure_0(nativeEvent.nativeEvent.lines.length > 2);
       };
-      tmp6Result = tmp6(RedesignBottomSheetTitleHeaderComplex, obj);
+      tmp6Result = timestampProducer(RedesignBottomSheetTitleHeaderComplex, obj);
     }
   }
   obj = {};

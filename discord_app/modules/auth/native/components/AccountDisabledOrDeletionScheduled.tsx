@@ -14,10 +14,10 @@ let closure_9 = createStyles.createStyles((arg0) => {
   const space = nativeDefault.space;
   if (arg0) {
     let PX_16 = space.PX_8;
-    let tmp4 = tmp;
+    let tmp4 = importDefault;
   } else {
     PX_16 = space.PX_16;
-    tmp4 = tmp;
+    tmp4 = importDefault;
   }
   const container = {
     display: "flex",
@@ -66,13 +66,15 @@ export default function AccountDisabledOrDeletionScheduled(handleLogin) {
   const items1 = [stateFromStores, navigation];
   const effect = stateFromStores.useEffect(() => {
     if (ref.current !== stateFromStores) {
-      if (null != tmp.current) {
+      if (null != ref.current) {
         if (tmp4) {
           navigation.pop();
         }
-        tmp4 = tmp2 !== LoginStates.ACCOUNT_SCHEDULED_FOR_DELETION && tmp2 !== LoginStates.ACCOUNT_DISABLED;
+        tmp4 =
+          stateFromStores !== LoginStates.ACCOUNT_SCHEDULED_FOR_DELETION &&
+          stateFromStores !== LoginStates.ACCOUNT_DISABLED;
       } else {
-        tmp.current = tmp2;
+        ref.current = stateFromStores;
       }
     }
   }, items1);

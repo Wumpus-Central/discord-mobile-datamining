@@ -28,7 +28,7 @@ export default function useCanGuildPowerupBeToggled(arg0, arg1, arg2) {
     } else {
       if (closure_4.type !== constants.LEVEL_ACTIVATED) {
         if (closure_4.type !== tmp15.TIER_OVERRIDE_ACTIVATED) {
-          ({ allPowerups, unlockedPowerups } = tmp);
+          ({ allPowerups, unlockedPowerups } = stateFromStores);
           if (dependencyMap) {
             const _Object = Object;
             const values = Object.values(unlockedPowerups);
@@ -70,6 +70,5 @@ export default function useCanGuildPowerupBeToggled(arg0, arg1, arg2) {
       }
       return { disabled: true, reason: "a" };
     }
-    tmp = stateFromStores;
   }, items1);
 }

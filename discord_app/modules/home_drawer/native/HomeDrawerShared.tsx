@@ -25,7 +25,7 @@ export const HomeDrawerSharedItem = function HomeDrawerSharedItem(right) {
   let tmp4 = null;
   if (null != right) {
     obj = { style: tmp.rightContainer, children: right };
-    tmp4 = React2(tmp3, obj);
+    tmp4 = React2(View, obj);
   }
   items1[1] = tmp4;
   obj.children = items1;

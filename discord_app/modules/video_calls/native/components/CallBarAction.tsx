@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
-import CircleWithCutoutUtilsDefault from "../../../voice_panel/native/shared/CircleWithCutoutUtils.tsx";
+import CircleWithCutoutUtils from "../../../voice_panel/native/shared/CircleWithCutoutUtils.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -248,10 +248,10 @@ export const NotifiedActionButton = function NotifiedActionButton(isMentioned) {
       color: "text-overlay-light",
       children: isMentioned.notifications,
     };
-    obj.children = tmp3(Text_Text.Text, obj1);
-    obj.children = tmp3(tmp4, obj);
-    obj.children = tmp3(ActionButton, obj);
-    return tmp3(tmp4, obj);
+    obj.children = React5(Text_Text.Text, obj1);
+    obj.children = React5(hasOwnProperty, obj);
+    obj.children = React5(ActionButton, obj);
+    return React5(hasOwnProperty, obj);
   }
   notificationAreaMentioned = tmp2.notificationAreaMentioned;
 };

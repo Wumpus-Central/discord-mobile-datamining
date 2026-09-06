@@ -1,4 +1,6 @@
 // discord_app/modules/user_profile/hooks/useDisplayableBoardWidgets.tsx
+import UserProfileGameWidgetTypes from "../UserProfileGameWidgetTypes.tsx";
+import UserProfilePersonalWidget from "../UserProfilePersonalWidget.tsx";
 import UserProfileApplicationWidgetTypes from "../UserProfileApplicationWidgetTypes.tsx";
 import useUserProfileWidgetsDefault from "useUserProfileWidgets.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -7,14 +9,14 @@ require = fn;
 function isNonEmptyBoardWidget(games) {
   let tmp3 = games instanceof UserProfileApplicationWidgetTypes.ApplicationWidget;
   if (!tmp3) {
-    let tmp4 = games instanceof tmp(7630).UserProfilePersonalWidget;
+    let tmp4 = games instanceof UserProfilePersonalWidget.UserProfilePersonalWidget;
     if (!tmp4) {
-      let isGameWidgetResult = tmp(7623).isGameWidget(games);
+      let isGameWidgetResult = UserProfileGameWidgetTypes.isGameWidget(games);
       if (isGameWidgetResult) {
         isGameWidgetResult = games.games.length > 0;
       }
       tmp4 = isGameWidgetResult;
-      const tmpResult = tmp(7623);
+      const tmpResult = UserProfileGameWidgetTypes;
     }
     tmp3 = tmp4;
   }

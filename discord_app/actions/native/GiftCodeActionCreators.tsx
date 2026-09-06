@@ -14,7 +14,7 @@ function redeemGiftCode() {
   }
   return applyArgumentsResult;
 }
-let closure_7 = async function _redeemGiftCode(arg0, value) {
+let closure_7 = async function _redeemGiftCode(arg0) {
   if (c6 === 2) {
     c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");

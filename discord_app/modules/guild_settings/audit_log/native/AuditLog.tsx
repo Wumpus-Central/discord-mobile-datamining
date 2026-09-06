@@ -193,7 +193,7 @@ prototype["renderTitle"] = function renderTitle() {
           return __initData(Text_Text.Text, obj, "user" + obj.id);
         } else if (null != subtarget.integration_type) {
           let obj1 = PlatformsDefault;
-          value = obj1.get(tmp27.integration_type);
+          value = obj1.get(subtarget.integration_type);
           let name;
           if (value != null) {
             name = value.name;
@@ -203,7 +203,7 @@ prototype["renderTitle"] = function renderTitle() {
             name = intl2.string(util.t["n+olu7"]);
           }
           obj1 = { variant: "text-md/medium", color: "text-default", children: name };
-          return closure_2_14(Text_Text.Text, obj1, "integration" + tmp27.integration_type);
+          return closure_2_14(Text_Text.Text, obj1, "integration" + subtarget.integration_type);
         } else {
           const intl = util.intl;
           return intl.string(util.t["30mdIx"]);
@@ -212,28 +212,26 @@ prototype["renderTitle"] = function renderTitle() {
       targetHook(children, arg1) {
         if (log.targetType === constants.USER) {
           if (target instanceof UserRecord) {
-            const items = [UserUtilsDefault.getUserTag(tmp3, { mode: "username" })];
-            let tmp12 = "0" !== tmp3.discriminator;
+            const items = [UserUtilsDefault.getUserTag(target, { mode: "username" })];
+            let tmp12 = "0" !== target.discriminator;
             if (tmp12) {
               let obj = { style: closure_0.discriminator, children: `#${tmp3.discriminator}` };
-              tmp12 = closure_2_14(tmp9(1178).LegacyText, obj);
+              tmp12 = closure_2_14(native.LegacyText, obj);
             }
             obj = { variant: "text-md/medium", color: "text-default", children: null };
             items[1] = tmp12;
             obj.children = items;
             let tmp8Result = __initData(Text_Text.Text, obj, `target${tmp3.id}`);
-            tmp9 = require;
           }
           return tmp8Result;
         }
         if (log.targetType === constants.GUILD) {
           if (typeof target === "object") {
-            if (obj6.isGuildRecord(tmp5)) {
-              const obj1 = { variant: "text-md/medium", color: "text-default", children: tmp5.name };
-              tmp8Result = closure_2_14(tmp15(4556).Text, obj1, `target${tmp5.id}`);
+            if (obj6.isGuildRecord(target)) {
+              const obj1 = { variant: "text-md/medium", color: "text-default", children: target.name };
+              tmp8Result = closure_2_14(Text_Text.Text, obj1, `target${tmp5.id}`);
             }
             obj6 = GuildRecordUtils;
-            tmp15 = require;
           }
         }
         obj = { variant: "text-md/medium", color: "text-default", children };
@@ -266,10 +264,9 @@ prototype["renderTitle"] = function renderTitle() {
       obj.subtarget = subtarget;
       obj = intl.format(changeTitle, obj);
       obj.children = obj;
-      tmp4(require("Text/Text").Text, obj);
+      closure_14(require("Text/Text").Text, obj);
     }
     channel = subtarget.channel;
-    tmp4 = closure_14;
     tmp5 = _require;
   }
 };
@@ -320,18 +317,18 @@ prototype["renderChangeDetails"] = function renderChangeDetails(changeStrings) {
         if (obj.shouldNotRenderChangeDetail(log, key)) {
           return null;
         } else {
-          if (tmp2.action === constants3.CHANNEL_UPDATE) {
+          if (log.action === constants3.CHANNEL_UPDATE) {
             if (key.key === constants4.TYPE) {
               let oldValue = key.oldValue;
               if (oldValue == null) {
-                let obj7 = v0(tmp[24]);
+                let obj7 = v0(log[24]);
                 obj = { type: key.oldValue };
                 oldValue = obj7.channelTypeString(obj);
               }
               obj = { oldValue, newValue: null };
               let newValue2 = key.newValue;
               if (newValue2 == null) {
-                let obj10 = v0(tmp[24]);
+                let obj10 = v0(log[24]);
                 let obj1 = { type: key.newValue };
                 newValue2 = obj10.channelTypeString(obj1);
               }
@@ -342,8 +339,8 @@ prototype["renderChangeDetails"] = function renderChangeDetails(changeStrings) {
             changeItemTextLine = oldValue2;
             let newValue = obj11.newValue;
             let items3 = newValue;
-            if (tmp2.action !== tmp3.MEMBER_ROLE_UPDATE) {
-              if (tmp2.action === tmp3.INVITE_CREATE) {
+            if (log.action !== constants3.MEMBER_ROLE_UPDATE) {
+              if (log.action === constants3.INVITE_CREATE) {
                 let tmp18Result;
                 if (items3[key.key] != null) {
                   tmp18Result = tmp18(key);
@@ -351,7 +348,7 @@ prototype["renderChangeDetails"] = function renderChangeDetails(changeStrings) {
                 if (null == tmp18Result) {
                   return null;
                 } else {
-                  const intl = v0(tmp[19]).intl;
+                  const intl = v0(log[19]).intl;
                   const obj2 = {
                     oldValue: oldValue2,
                     newValue,
@@ -374,7 +371,7 @@ prototype["renderChangeDetails"] = function renderChangeDetails(changeStrings) {
                     num = newValue.length;
                   }
                   obj2.count = num;
-                  let str = tmp2.options.subtarget;
+                  let str = log.options.subtarget;
                   if (str == null) {
                     str = key.subtarget;
                   }
@@ -405,13 +402,13 @@ prototype["renderChangeDetails"] = function renderChangeDetails(changeStrings) {
                       }
                       let obj = { children: null };
                       obj = { variant: "text-sm/bold", children: null };
-                      let tmp3Result = tmp3(tmp4[27]);
+                      let tmp3Result = changeItemTextLine(log[27]);
                       obj.children = "" + str + tmp3Result.int2hex(item).toUpperCase() + " ";
                       const items = [closure_2_14(changeItemTextLine(log[15]).Text, obj)];
                       obj = { style: null };
                       const items1 = [colorHook.colorHook];
                       const obj1 = { backgroundColor: null };
-                      tmp3Result = tmp3(tmp4[27]);
+                      tmp3Result = changeItemTextLine(log[27]);
                       obj1.backgroundColor = tmp3Result.int2hex(item);
                       items1[1] = obj1;
                       obj.style = items1;
@@ -440,7 +437,7 @@ prototype["renderChangeDetails"] = function renderChangeDetails(changeStrings) {
                   obj2.oldEmojiHook = function oldEmojiHook(arg0, arg1) {
                     let emojiURL;
                     if (null != changeItemTextLine) {
-                      let obj = { id: tmp, animated: false, size: 24 };
+                      let obj = { id: changeItemTextLine, animated: false, size: 24 };
                       emojiURL = obj.getEmojiURL(obj);
                     }
                     obj = {
@@ -456,7 +453,7 @@ prototype["renderChangeDetails"] = function renderChangeDetails(changeStrings) {
                   obj2.newEmojiHook = function newEmojiHook(arg0, arg1) {
                     let emojiURL;
                     if (null != items3) {
-                      let obj = { id: tmp, animated: false, size: 24 };
+                      let obj = { id: items3, animated: false, size: 24 };
                       emojiURL = obj.getEmojiURL(obj);
                     }
                     obj = {
@@ -493,13 +490,13 @@ prototype["renderChangeDetails"] = function renderChangeDetails(changeStrings) {
                   if (null == formatResult) {
                     return null;
                   } else {
-                    const actionType = tmp2.actionType;
+                    const actionType = log.actionType;
                     if (constants2.CREATE === actionType) {
-                      let RED_400 = changeStrings(tmp[9]).unsafe_rawColors.GREEN_360;
-                    } else if (tmp41.UPDATE === actionType) {
-                      RED_400 = changeStrings(tmp[9]).unsafe_rawColors.YELLOW_300;
-                    } else if (tmp41.DELETE === actionType) {
-                      RED_400 = changeStrings(tmp[9]).unsafe_rawColors.RED_400;
+                      let RED_400 = changeStrings(log[9]).unsafe_rawColors.GREEN_360;
+                    } else if (constants2.UPDATE === actionType) {
+                      RED_400 = changeStrings(log[9]).unsafe_rawColors.YELLOW_300;
+                    } else if (constants2.DELETE === actionType) {
+                      RED_400 = changeStrings(log[9]).unsafe_rawColors.RED_400;
                     }
                     changeItemTextLine = changeItemTextLine + 1;
                     let obj3 = { style: children.changeRow, children: null };
@@ -514,7 +511,7 @@ prototype["renderChangeDetails"] = function renderChangeDetails(changeStrings) {
                     }
                     let items1 = [str2, changeItemTextLine, " \u2014"];
                     obj4.children = items1;
-                    const items2 = [closure_1_15(tmp39(tmp[15]).Text, obj4)];
+                    const items2 = [closure_1_15(v0(log[15]).Text, obj4)];
                     obj6 = { style: children.changeItemContent, children: null };
                     obj7 = { style: null, children: null };
                     ({ changeItemRow: obj17.style, changeItemTextLine } = children);
@@ -538,7 +535,7 @@ prototype["renderChangeDetails"] = function renderChangeDetails(changeStrings) {
                     if (0 !== children.length) {
                       const obj8 = { variant: "text-sm/normal", style: changeItemTextLine, children };
                       let _HermesInternal = HermesInternal;
-                      items3.push(tmp30(tmp39(tmp[15]).Text, obj8, "text-" + items3.length));
+                      items3.push(closure_1_14(v0(log[15]).Text, obj8, "text-" + items3.length));
                       children = [];
                     }
                     obj7.children = items3;
@@ -555,8 +552,8 @@ prototype["renderChangeDetails"] = function renderChangeDetails(changeStrings) {
                   }
                 }
               }
-              if (tmp2.targetType !== constants.ROLE) {
-                if (tmp2.action !== tmp3.CHANNEL_OVERWRITE_CREATE) {
+              if (log.targetType !== constants.ROLE) {
+                if (log.action !== constants3.CHANNEL_OVERWRITE_CREATE) {
                   result = null;
                 }
               }
@@ -564,9 +561,9 @@ prototype["renderChangeDetails"] = function renderChangeDetails(changeStrings) {
             }
             result = self.renderRoleUpdate(key);
           }
-          if (tmp2.action === constants3.MEMBER_UPDATE) {
+          if (log.action === constants3.MEMBER_UPDATE) {
             if (key.key === constants4.COMMUNICATION_DISABLED_UNTIL) {
-              obj5 = changeStrings(tmp[25])(key.newValue);
+              obj5 = changeStrings(log[25])(key.newValue);
               const obj9 = { oldValue: key.oldValue, newValue: null };
               if (obj5.isValid()) {
                 newValue = obj5.calendar();
@@ -577,12 +574,12 @@ prototype["renderChangeDetails"] = function renderChangeDetails(changeStrings) {
               obj11 = obj9;
             }
           }
-          if (tmp2.action === constants3.GUILD_UPDATE) {
+          if (log.action === constants3.GUILD_UPDATE) {
             if (key.key === constants4.OWNER_ID) {
               obj10 = { oldValue: null, newValue: null };
-              obj3 = changeStrings(tmp[20]);
+              obj3 = changeStrings(log[20]);
               obj10.oldValue = obj3.getUserTag(key.oldValue, { mode: "username" });
-              obj4 = changeStrings(tmp[20]);
+              obj4 = changeStrings(log[20]);
               obj10.newValue = obj4.getUserTag(key.newValue, { mode: "username" });
               obj11 = obj10;
             }
@@ -677,9 +674,9 @@ prototype["render"] = function render() {
   };
   const obj5 = { style: tmp.avatar, source: null, size: null };
   if (log.action !== constants2.AUTO_MODERATION_BLOCK_MESSAGE) {
-    if (log.action !== tmp21.AUTO_MODERATION_FLAG_TO_CHANNEL) {
-      if (log.action !== tmp21.AUTO_MODERATION_USER_COMMUNICATION_DISABLED) {
-        if (log.action !== tmp21.AUTO_MODERATION_QUARANTINE_USER) {
+    if (log.action !== constants2.AUTO_MODERATION_FLAG_TO_CHANNEL) {
+      if (log.action !== constants2.AUTO_MODERATION_USER_COMMUNICATION_DISABLED) {
+        if (log.action !== constants2.AUTO_MODERATION_QUARANTINE_USER) {
           if (null != log.options.integration_type) {
             value = tmp18(5283).get(log.options.integration_type);
             if (null != value) {
@@ -702,8 +699,8 @@ prototype["render"] = function render() {
         }
         obj5.source = source;
         obj5.size = tmp10(1178).AvatarSizes.SMALL;
-        obj4.children = tmp17(tmp20, obj5);
-        items2[1] = tmp17(tmp10(5123).PressableOpacity, obj4);
+        obj4.children = closure_14(tmp20, obj5);
+        items2[1] = closure_14(tmp10(5123).PressableOpacity, obj4);
         obj6 = {
           accessibilityRole: "button",
           accessibilityState: null,
@@ -719,7 +716,7 @@ prototype["render"] = function render() {
         obj6.disabled = !checkChangesToRenderResult;
         const items3 = [self.renderTitle(), tmp8];
         obj6.children = items3;
-        items2[2] = tmp15(tmp10(5123).PressableOpacity, obj6);
+        items2[2] = closure_15(tmp10(5123).PressableOpacity, obj6);
         let tmp17Result = null;
         if (checkChangesToRenderResult) {
           const obj8 = { style: null, size: null, source: null };
@@ -727,26 +724,26 @@ prototype["render"] = function render() {
           obj8.style = items4;
           obj8.size = tmp10(1178).Icon.Sizes.CUSTOM;
           obj8.source = tmp18(14602);
-          tmp17Result = tmp17(tmp10(1178).Icon, obj8);
+          tmp17Result = closure_14(tmp10(1178).Icon, obj8);
         }
         items2[3] = tmp17Result;
         obj2.children = items2;
-        const items5 = [tmp15(tmp16, obj2)];
+        const items5 = [closure_15(View, obj2)];
         let renderChangeSummaryResult = null;
         if (expanded) {
           renderChangeSummaryResult = self.renderChangeSummary();
         }
         items5[1] = renderChangeSummaryResult;
         obj1.children = items5;
-        return tmp15(tmp10(5607).Card, obj1);
+        return closure_15(tmp10(5607).Card, obj1);
       }
     }
   }
   const obj3 = { action: log.action };
-  tmp16 = View;
   const tmp9Result1 = tmp9(1399);
   const tmp9Result2 = tmp9(1396);
   source = tmp9Result1.ensureAvatarSource(tmp9Result2.makeSource(tmp9(1399).getAutomodAvatarURL()));
+  const tmp9Result3 = tmp9(1399);
 };
 AuditLog.contextType = fn(4271).ThemeContext;
 let items3 = [ThemeStore];

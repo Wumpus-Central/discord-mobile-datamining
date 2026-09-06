@@ -29,9 +29,9 @@ export const useIsTestModeForApplication = function useIsTestModeForApplication(
     () => {
       let tmp2 = null != closure_0;
       if (tmp2) {
-        let result = TestModeStore.inTestModeForApplication(tmp);
+        let result = TestModeStore.inTestModeForApplication(closure_0);
         if (!result) {
-          result = DeveloperActivityShelfStore.inDevModeForApplication(tmp);
+          result = DeveloperActivityShelfStore.inDevModeForApplication(closure_0);
         }
         tmp2 = result;
       }

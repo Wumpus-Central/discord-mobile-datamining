@@ -9,8 +9,8 @@ import UserRequiredActionStore from "../../stores/UserRequiredActionStore.tsx";
 
 require = fn;
 function withContent(currentlyShown, content) {
-  let tmp = arg2;
-  if (arg2 === undefined) {
+  let tmp = found;
+  if (found === undefined) {
     tmp = null;
   }
   if (null == content) {
@@ -19,7 +19,7 @@ function withContent(currentlyShown, content) {
     currentlyShown = currentlyShown.currentlyShown;
     currentlyShown.add(content.content);
     const recentlyShown = currentlyShown.recentlyShown;
-    const found = recentlyShown.filter((item) => item !== content.content);
+    found = recentlyShown.filter((item) => item !== content.content);
     found.unshift(content.content);
     found.splice(5);
     currentlyShown.recentlyShown = found;
@@ -118,7 +118,7 @@ function withUpdateWinner(candidates) {
         const date1 = new Date();
       }
       if (!scheduledResult) {
-        obj.schedule(() => {
+        taskRunner.schedule(() => {
           value(dependencyMap[5]).batchUpdates(() => {
             state.setState((candidates) => {
               let obj = {};
@@ -186,8 +186,8 @@ function withUpdateWinner(candidates) {
           });
         }, 250);
       }
-      obj = taskRunner;
     }
+    tmp2 = diff > 300000;
   }
 }
 const taskRunner = new fn(1952).TaskRunner();
@@ -338,20 +338,20 @@ export const removeCandidateContent = function removeCandidateContent(arg0, arg1
         const candidates2 = obj.candidates;
         candidates2.delete(closure_1_0.content);
         if (null != closure_1_0) {
-          if (null != tmp12.content) {
+          if (null != closure_1_0.content) {
             const currentlyShown2 = obj.currentlyShown;
-            currentlyShown2.delete(tmp12.content);
+            currentlyShown2.delete(closure_1_0.content);
           }
-          if (null != tmp12.groupName) {
+          if (null != closure_1_0.groupName) {
             const currentlyShownGroup2 = obj.currentlyShownGroup;
-            currentlyShownGroup2.delete(tmp12.groupName);
+            currentlyShownGroup2.delete(closure_1_0.groupName);
           }
           const shownFatigableCandidate2 = obj.shownFatigableCandidate;
           let content;
           if (shownFatigableCandidate2 != null) {
             content = shownFatigableCandidate2.content;
           }
-          if (content === tmp12.content) {
+          if (content === closure_1_0.content) {
             obj.shownFatigableCandidate = null;
           }
         }
@@ -360,20 +360,20 @@ export const removeCandidateContent = function removeCandidateContent(arg0, arg1
         candidates = obj.candidates;
         candidates.delete(closure_1_0.content);
         if (null != closure_1_0) {
-          if (null != tmp5.content) {
+          if (null != closure_1_0.content) {
             const currentlyShown = obj.currentlyShown;
-            currentlyShown.delete(tmp5.content);
+            currentlyShown.delete(closure_1_0.content);
           }
-          if (null != tmp5.groupName) {
+          if (null != closure_1_0.groupName) {
             const currentlyShownGroup = obj.currentlyShownGroup;
-            currentlyShownGroup.delete(tmp5.groupName);
+            currentlyShownGroup.delete(closure_1_0.groupName);
           }
           const shownFatigableCandidate = obj.shownFatigableCandidate;
           let content1;
           if (shownFatigableCandidate != null) {
             content1 = shownFatigableCandidate.content;
           }
-          if (content1 === tmp5.content) {
+          if (content1 === closure_1_0.content) {
             obj.shownFatigableCandidate = null;
           }
         }

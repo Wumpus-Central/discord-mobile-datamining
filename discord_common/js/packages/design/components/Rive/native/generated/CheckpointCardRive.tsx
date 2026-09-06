@@ -533,13 +533,13 @@ let closure_9 = {
       Icon = dataBinding.Icon;
     }
     const artboardBinding = BaseRive.useArtboardBinding("Icon", instance, file, Icon, playIfNeeded);
-    let tmpResult = tmp(4290);
+    let tmpResult = BaseRive;
     let Illustration;
     if (dataBinding != null) {
       Illustration = dataBinding.Illustration;
     }
     const artboardBinding1 = tmpResult.useArtboardBinding("Illustration", instance, file, Illustration, playIfNeeded);
-    tmpResult = tmp(4290);
+    tmpResult = BaseRive;
     let AnimationState;
     if (dataBinding != null) {
       AnimationState = dataBinding.AnimationState;
@@ -630,13 +630,13 @@ let closure_9 = {
       Icon = dataBinding.Icon;
     }
     const artboardBinding = BaseRive.useArtboardBinding("Icon", instance, file, Icon, playIfNeeded);
-    let tmpResult = tmp(4290);
+    let tmpResult = BaseRive;
     let Illustration;
     if (dataBinding != null) {
       Illustration = dataBinding.Illustration;
     }
     const artboardBinding1 = tmpResult.useArtboardBinding("Illustration", instance, file, Illustration, playIfNeeded);
-    tmpResult = tmp(4290);
+    tmpResult = BaseRive;
     let AnimationState;
     if (dataBinding != null) {
       AnimationState = dataBinding.AnimationState;
@@ -727,13 +727,13 @@ let closure_9 = {
       Icon = dataBinding.Icon;
     }
     const artboardBinding = BaseRive.useArtboardBinding("Icon", instance, file, Icon, playIfNeeded);
-    let tmpResult = tmp(4290);
+    let tmpResult = BaseRive;
     let Illustration;
     if (dataBinding != null) {
       Illustration = dataBinding.Illustration;
     }
     const artboardBinding1 = tmpResult.useArtboardBinding("Illustration", instance, file, Illustration, playIfNeeded);
-    tmpResult = tmp(4290);
+    tmpResult = BaseRive;
     let AnimationState;
     if (dataBinding != null) {
       AnimationState = dataBinding.AnimationState;
@@ -824,13 +824,13 @@ let closure_9 = {
       Icon = dataBinding.Icon;
     }
     const artboardBinding = BaseRive.useArtboardBinding("Icon", instance, file, Icon, playIfNeeded);
-    let tmpResult = tmp(4290);
+    let tmpResult = BaseRive;
     let Illustration;
     if (dataBinding != null) {
       Illustration = dataBinding.Illustration;
     }
     const artboardBinding1 = tmpResult.useArtboardBinding("Illustration", instance, file, Illustration, playIfNeeded);
-    tmpResult = tmp(4290);
+    tmpResult = BaseRive;
     let AnimationState;
     if (dataBinding != null) {
       AnimationState = dataBinding.AnimationState;
@@ -921,13 +921,13 @@ let closure_9 = {
       Icon = dataBinding.Icon;
     }
     const artboardBinding = BaseRive.useArtboardBinding("Icon", instance, file, Icon, playIfNeeded);
-    let tmpResult = tmp(4290);
+    let tmpResult = BaseRive;
     let Illustration;
     if (dataBinding != null) {
       Illustration = dataBinding.Illustration;
     }
     const artboardBinding1 = tmpResult.useArtboardBinding("Illustration", instance, file, Illustration, playIfNeeded);
-    tmpResult = tmp(4290);
+    tmpResult = BaseRive;
     let AnimationState;
     if (dataBinding != null) {
       AnimationState = dataBinding.AnimationState;
@@ -1018,13 +1018,13 @@ let closure_9 = {
       Icon = dataBinding.Icon;
     }
     const artboardBinding = BaseRive.useArtboardBinding("Icon", instance, file, Icon, playIfNeeded);
-    let tmpResult = tmp(4290);
+    let tmpResult = BaseRive;
     let Illustration;
     if (dataBinding != null) {
       Illustration = dataBinding.Illustration;
     }
     const artboardBinding1 = tmpResult.useArtboardBinding("Illustration", instance, file, Illustration, playIfNeeded);
-    tmpResult = tmp(4290);
+    tmpResult = BaseRive;
     let AnimationState;
     if (dataBinding != null) {
       AnimationState = dataBinding.AnimationState;
@@ -1115,13 +1115,13 @@ let closure_9 = {
       Icon = dataBinding.Icon;
     }
     const artboardBinding = BaseRive.useArtboardBinding("Icon", instance, file, Icon, playIfNeeded);
-    let tmpResult = tmp(4290);
+    let tmpResult = BaseRive;
     let Illustration;
     if (dataBinding != null) {
       Illustration = dataBinding.Illustration;
     }
     const artboardBinding1 = tmpResult.useArtboardBinding("Illustration", instance, file, Illustration, playIfNeeded);
-    tmpResult = tmp(4290);
+    tmpResult = BaseRive;
     let AnimationState;
     if (dataBinding != null) {
       AnimationState = dataBinding.AnimationState;
@@ -1212,13 +1212,13 @@ let closure_9 = {
       Icon = dataBinding.Icon;
     }
     const artboardBinding = BaseRive.useArtboardBinding("Icon", instance, file, Icon, playIfNeeded);
-    let tmpResult = tmp(4290);
+    let tmpResult = BaseRive;
     let Illustration;
     if (dataBinding != null) {
       Illustration = dataBinding.Illustration;
     }
     const artboardBinding1 = tmpResult.useArtboardBinding("Illustration", instance, file, Illustration, playIfNeeded);
-    tmpResult = tmp(4290);
+    tmpResult = BaseRive;
     let AnimationState;
     if (dataBinding != null) {
       AnimationState = dataBinding.AnimationState;
@@ -1309,13 +1309,13 @@ let closure_9 = {
       Icon = dataBinding.Icon;
     }
     const artboardBinding = BaseRive.useArtboardBinding("Icon", instance, file, Icon, playIfNeeded);
-    let tmpResult = tmp(4290);
+    let tmpResult = BaseRive;
     let Illustration;
     if (dataBinding != null) {
       Illustration = dataBinding.Illustration;
     }
     const artboardBinding1 = tmpResult.useArtboardBinding("Illustration", instance, file, Illustration, playIfNeeded);
-    tmpResult = tmp(4290);
+    tmpResult = BaseRive;
     let AnimationState;
     if (dataBinding != null) {
       AnimationState = dataBinding.AnimationState;
@@ -1406,13 +1406,13 @@ let closure_9 = {
       Icon = dataBinding.Icon;
     }
     const artboardBinding = BaseRive.useArtboardBinding("Icon", instance, file, Icon, playIfNeeded);
-    let tmpResult = tmp(4290);
+    let tmpResult = BaseRive;
     let Illustration;
     if (dataBinding != null) {
       Illustration = dataBinding.Illustration;
     }
     const artboardBinding1 = tmpResult.useArtboardBinding("Illustration", instance, file, Illustration, playIfNeeded);
-    tmpResult = tmp(4290);
+    tmpResult = BaseRive;
     let AnimationState;
     if (dataBinding != null) {
       AnimationState = dataBinding.AnimationState;
@@ -1503,13 +1503,13 @@ let closure_9 = {
       Icon = dataBinding.Icon;
     }
     const artboardBinding = BaseRive.useArtboardBinding("Icon", instance, file, Icon, playIfNeeded);
-    let tmpResult = tmp(4290);
+    let tmpResult = BaseRive;
     let Illustration;
     if (dataBinding != null) {
       Illustration = dataBinding.Illustration;
     }
     const artboardBinding1 = tmpResult.useArtboardBinding("Illustration", instance, file, Illustration, playIfNeeded);
-    tmpResult = tmp(4290);
+    tmpResult = BaseRive;
     let AnimationState;
     if (dataBinding != null) {
       AnimationState = dataBinding.AnimationState;
@@ -1600,13 +1600,13 @@ let closure_9 = {
       Icon = dataBinding.Icon;
     }
     const artboardBinding = BaseRive.useArtboardBinding("Icon", instance, file, Icon, playIfNeeded);
-    let tmpResult = tmp(4290);
+    let tmpResult = BaseRive;
     let Illustration;
     if (dataBinding != null) {
       Illustration = dataBinding.Illustration;
     }
     const artboardBinding1 = tmpResult.useArtboardBinding("Illustration", instance, file, Illustration, playIfNeeded);
-    tmpResult = tmp(4290);
+    tmpResult = BaseRive;
     let AnimationState;
     if (dataBinding != null) {
       AnimationState = dataBinding.AnimationState;
@@ -1697,13 +1697,13 @@ let closure_9 = {
       Icon = dataBinding.Icon;
     }
     const artboardBinding = BaseRive.useArtboardBinding("Icon", instance, file, Icon, playIfNeeded);
-    let tmpResult = tmp(4290);
+    let tmpResult = BaseRive;
     let Illustration;
     if (dataBinding != null) {
       Illustration = dataBinding.Illustration;
     }
     const artboardBinding1 = tmpResult.useArtboardBinding("Illustration", instance, file, Illustration, playIfNeeded);
-    tmpResult = tmp(4290);
+    tmpResult = BaseRive;
     let AnimationState;
     if (dataBinding != null) {
       AnimationState = dataBinding.AnimationState;
@@ -1794,13 +1794,13 @@ let closure_9 = {
       Icon = dataBinding.Icon;
     }
     const artboardBinding = BaseRive.useArtboardBinding("Icon", instance, file, Icon, playIfNeeded);
-    let tmpResult = tmp(4290);
+    let tmpResult = BaseRive;
     let Illustration;
     if (dataBinding != null) {
       Illustration = dataBinding.Illustration;
     }
     const artboardBinding1 = tmpResult.useArtboardBinding("Illustration", instance, file, Illustration, playIfNeeded);
-    tmpResult = tmp(4290);
+    tmpResult = BaseRive;
     let AnimationState;
     if (dataBinding != null) {
       AnimationState = dataBinding.AnimationState;
@@ -1925,6 +1925,6 @@ export const CheckpointCardRive = noop.forwardRef(function CheckpointCardRiveWit
   let obj = { fallback: fallback.fallback, children: null };
   obj = { ref };
   const merged = Object.assign(fallback);
-  obj.children = <closure_10 ref={arg1} />;
+  obj.children = <closure_10 ref={ref} />;
   return jsx(RiveErrorBoundary.RiveErrorBoundary, { ref });
 });

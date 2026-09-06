@@ -57,7 +57,7 @@ export const usePerModeCustomBackgroundGradient = function usePerModeCustomBackg
     if (null == closure_0) {
       return null;
     } else {
-      const syncedClientTheme = ThemeStore.getSyncedClientTheme(tmp);
+      const syncedClientTheme = ThemeStore.getSyncedClientTheme(closure_0);
       let prop;
       if (syncedClientTheme != null) {
         prop = syncedClientTheme.customUserThemeSettings;
@@ -69,7 +69,7 @@ export const usePerModeCustomBackgroundGradient = function usePerModeCustomBackg
           const obj = {
             type: ClientThemesTypes.ClientThemeType.CUSTOM_BACKGROUND_GRADIENT,
             getName: getCustomThemesName,
-            theme: ThemeStore.themePreferenceForSystemTheme(tmp),
+            theme: ThemeStore.themePreferenceForSystemTheme(closure_0),
             customThemeSettings: prop,
           };
           tmp3 = obj;
@@ -133,7 +133,7 @@ export const useAllMobileThemes = function useAllMobileThemes(mode) {
       if (null == closure_0) {
         return null;
       } else {
-        const syncedClientTheme = ThemeStore.getSyncedClientTheme(tmp);
+        const syncedClientTheme = ThemeStore.getSyncedClientTheme(closure_0);
         let prop;
         if (syncedClientTheme != null) {
           prop = syncedClientTheme.customUserThemeSettings;
@@ -145,7 +145,7 @@ export const useAllMobileThemes = function useAllMobileThemes(mode) {
             const obj = {
               type: ClientThemesTypes.ClientThemeType.CUSTOM_BACKGROUND_GRADIENT,
               getName: getCustomThemesName,
-              theme: ThemeStore.themePreferenceForSystemTheme(tmp),
+              theme: ThemeStore.themePreferenceForSystemTheme(closure_0),
               customThemeSettings: prop,
             };
             tmp3 = obj;

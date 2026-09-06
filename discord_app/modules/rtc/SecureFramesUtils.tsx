@@ -36,7 +36,7 @@ let closure_18 = async function _getCurrentUserSigningKey() {
   staticAuthSessionId = staticAuthSessionId.getStaticAuthSessionId();
   _modDef38(null != staticAuthSessionId, "[getCurrentUserPublicKey] session id should not be null");
   await mLSSigningKey.getMLSSigningKey(staticAuthSessionId, closure_0);
-  return arg1;
+  return value;
 };
 function toBase64DataUri(arg0) {
   const uint8Array = new Uint8Array(arg0);
@@ -52,7 +52,7 @@ function isPublicKeyMatch() {
   }
   return applyArgumentsResult;
 }
-let closure_21 = async function _isPublicKeyMatch(arg0, arg1, key_version) {
+let closure_21 = async function _isPublicKeyMatch(arg0, arg1) {
   closure_0 = arg0;
   closure_1 = arg1;
   c7 = 0;
@@ -137,7 +137,7 @@ function uploadCurrentUserPublicKey() {
   }
   return applyArgumentsResult;
 }
-let closure_23 = async function _uploadCurrentUserPublicKey(arg0, value) {
+let closure_23 = async function _uploadCurrentUserPublicKey(arg0) {
   if (c6 === 2) {
     c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -235,7 +235,7 @@ function isKeyVersionUploaded(arg0) {
   const uploadedKeyVersionsCached = SecureFramesPersistedStore.getUploadedKeyVersionsCached();
   return uploadedKeyVersionsCached.includes(arg0);
 }
-let closure_25 = async function _ensureCurrentUserPublicKey(arg0, value) {
+let closure_25 = async function _ensureCurrentUserPublicKey(arg0) {
   if (c1 === 2) {
     c1 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -259,14 +259,11 @@ let closure_25 = async function _ensureCurrentUserPublicKey(arg0, value) {
           c1 = 3;
           obj = { value, done: true };
           return obj;
-        } else {
-          if (!isKeyVersionUploaded(closure_0)) {
-            c2 = 1;
-            c1 = 1;
-            const obj1 = { value: uploadCurrentUserPublicKey(tmp5), done: false };
-            return obj1;
-          }
-          tmp5 = closure_0;
+        } else if (!isKeyVersionUploaded(closure_0)) {
+          c2 = 1;
+          c1 = 1;
+          const obj1 = { value: uploadCurrentUserPublicKey(closure_0), done: false };
+          return obj1;
         }
       } else if (arg0 === 1) {
         c1 = 3;
@@ -284,7 +281,7 @@ let closure_25 = async function _ensureCurrentUserPublicKey(arg0, value) {
     }
   }
 };
-let closure_26 = async function _isCurrentUserPublicKeyMatch(arg0, value) {
+let closure_26 = async function _isCurrentUserPublicKeyMatch(arg0) {
   if (c4 === 2) {
     c4 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -319,12 +316,12 @@ let closure_26 = async function _isCurrentUserPublicKeyMatch(arg0, value) {
             id2 = id.getId();
             c3 = 2;
             c4 = 1;
-            const obj1 = { value: getCurrentUserSigningKey(tmp28), done: false };
+            const obj1 = { value: getCurrentUserSigningKey(closure_0), done: false };
             return obj1;
           } else {
             c3 = 1;
             c4 = 1;
-            const obj2 = { value: uploadCurrentUserPublicKey(tmp28), done: false };
+            const obj2 = { value: uploadCurrentUserPublicKey(closure_0), done: false };
             return obj2;
           }
         }
@@ -503,37 +500,37 @@ export const getSecureFramesUserVerifiedTimestamp = function getSecureFramesUser
   const diffResult = obj.diff(_modDef4153(timestamp), "s");
   if (diffResult > 12 * DurationsDefault.Seconds.DAYS_30) {
     const _Math6 = Math;
-    const rounded = Math.round(diffResult / (12 * tmp(1090).Seconds.DAYS_30));
+    const rounded = Math.round(diffResult / (12 * DurationsDefault.Seconds.DAYS_30));
     const intl7 = util.intl;
     obj = { count: rounded };
     return intl7.formatToPlainString(util.t.F1wqkD, obj);
-  } else if (diffResult > tmp(1090).Seconds.DAYS_30) {
+  } else if (diffResult > DurationsDefault.Seconds.DAYS_30) {
     const _Math5 = Math;
-    const rounded1 = Math.round(diffResult / tmp(1090).Seconds.DAYS_30);
+    const rounded1 = Math.round(diffResult / DurationsDefault.Seconds.DAYS_30);
     const intl6 = util.intl;
     obj = { count: rounded1 };
     return intl6.formatToPlainString(util.t["iT+b+2"], obj);
-  } else if (diffResult > 7 * tmp(1090).Seconds.DAY) {
+  } else if (diffResult > 7 * DurationsDefault.Seconds.DAY) {
     const _Math4 = Math;
-    const rounded2 = Math.round(diffResult / (7 * tmp(1090).Seconds.DAY));
+    const rounded2 = Math.round(diffResult / (7 * DurationsDefault.Seconds.DAY));
     const intl5 = util.intl;
     const obj1 = { count: rounded2 };
     return intl5.formatToPlainString(util.t.dLurKZ, obj1);
-  } else if (diffResult > tmp(1090).Seconds.DAY) {
+  } else if (diffResult > DurationsDefault.Seconds.DAY) {
     const _Math3 = Math;
-    const rounded3 = Math.round(diffResult / tmp(1090).Seconds.DAY);
+    const rounded3 = Math.round(diffResult / DurationsDefault.Seconds.DAY);
     const intl4 = util.intl;
     const obj2 = { count: rounded3 };
     return intl4.formatToPlainString(util.t.LE8a2H, obj2);
-  } else if (diffResult > tmp(1090).Seconds.HOUR) {
+  } else if (diffResult > DurationsDefault.Seconds.HOUR) {
     const _Math2 = Math;
-    const rounded4 = Math.round(diffResult / tmp(1090).Seconds.HOUR);
+    const rounded4 = Math.round(diffResult / DurationsDefault.Seconds.HOUR);
     const intl3 = util.intl;
     const obj3 = { count: rounded4 };
     return intl3.formatToPlainString(util.t.KULxVS, obj3);
-  } else if (diffResult > tmp(1090).Seconds.MINUTE) {
+  } else if (diffResult > DurationsDefault.Seconds.MINUTE) {
     const _Math = Math;
-    const rounded5 = Math.round(diffResult / tmp(1090).Seconds.MINUTE);
+    const rounded5 = Math.round(diffResult / DurationsDefault.Seconds.MINUTE);
     const intl2 = util.intl;
     const obj4 = { count: rounded5 };
     return intl2.formatToPlainString(util.t.ws6rWq, obj4);
@@ -565,41 +562,41 @@ export const getUserVerifyStateText = function getUserVerifyStateText(memo, name
     let obj = { username: name };
     items[1] = intl14.format(util.t["+rIdOd"], obj);
     return items;
-  } else if (tmp.CURRENT_USER_DISCONNECTED === memo) {
+  } else if (constants.CURRENT_USER_DISCONNECTED === memo) {
     const intl11 = util.intl;
     const items1 = [intl11.string(util.t["5ICxE6"])];
     const intl12 = util.intl;
     items1[1] = intl12.string(util.t["v1eXp/"]);
     return items1;
-  } else if (tmp.UNABLE_TO_VERIFY === memo) {
+  } else if (constants.UNABLE_TO_VERIFY === memo) {
     const intl9 = util.intl;
     const items2 = [intl9.string(util.t["+no/a7"])];
     const intl10 = util.intl;
     obj = { username: name };
     items2[1] = intl10.format(util.t.Mft7iJ, obj);
     return items2;
-  } else if (tmp.FINGERPRINT_MISMATCH === memo) {
+  } else if (constants.FINGERPRINT_MISMATCH === memo) {
     const intl7 = util.intl;
     const items3 = [intl7.string(util.t.HTJ76H)];
     const intl8 = util.intl;
     const obj1 = { username: name };
     items3[1] = intl8.format(util.t.tc6aAc, obj1);
     return items3;
-  } else if (tmp.OTHER_USER_ALREADY_VERIFIED === memo) {
+  } else if (constants.OTHER_USER_ALREADY_VERIFIED === memo) {
     const intl5 = util.intl;
     const items4 = [intl5.string(util.t["9lw+J+"])];
     const intl6 = util.intl;
     const obj2 = { username: name };
     items4[1] = intl6.format(util.t.TvBS1w, obj2);
     return items4;
-  } else if (tmp.MATCH === memo) {
+  } else if (constants.MATCH === memo) {
     const intl3 = util.intl;
     const items5 = [intl3.string(util.t["xyE+Dn"])];
     const intl4 = util.intl;
     const obj3 = { username: name };
     items5[1] = intl4.format(util.t.znsPl5, obj3);
     return items5;
-  } else if (tmp.OTHER_USER_INCONSISTENT_KEYS === memo) {
+  } else if (constants.OTHER_USER_INCONSISTENT_KEYS === memo) {
     const intl = util.intl;
     const items6 = [intl.string(util.t.im1uUi)];
     const intl2 = util.intl;

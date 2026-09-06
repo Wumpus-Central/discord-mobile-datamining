@@ -12,7 +12,7 @@ export const fetchTopEmojis = function fetchTopEmojis(guildId) {
   if (!obj.isPseudoGuildId(guildId)) {
     obj = { type: "TOP_EMOJIS_FETCH", guildId };
     DispatcherDefault.dispatch(obj);
-    const HTTP = require("HTTPUtils").HTTP;
+    const HTTP = tmp(1272).HTTP;
     obj = { url: Endpoints.TOP_EMOJIS_FOR_GUILD(guildId), oldFormErrors: true, rejectWithError: true };
     value = HTTP.get(obj);
     value.then(
@@ -29,6 +29,7 @@ export const fetchTopEmojis = function fetchTopEmojis(guildId) {
       },
     );
   }
+  tmp = _require;
 };
 export const updateNewlyAddedLastSeen = function updateNewlyAddedLastSeen(guildId, id) {
   let obj = DispatcherDefault;
@@ -38,10 +39,12 @@ export const updateNewlyAddedLastSeen = function updateNewlyAddedLastSeen(guildI
     DispatcherDefault.dispatch(obj);
     const tmpResult = DispatcherDefault;
   }
+  tmp4 = null != guildId && null != id;
 };
 export const updateNewlyAddedEmojiSeenAcknowledged = function updateNewlyAddedEmojiSeenAcknowledged(guildId, emojiId) {
   if (tmp) {
     const obj = { type: "NEWLY_ADDED_EMOJI_SEEN_ACKNOWLEDGED", guildId, emojiId };
     obj.dispatch(obj);
   }
+  tmp = null != guildId && null != emojiId;
 };

@@ -14,7 +14,6 @@ export const defineProtoSetting = function defineProtoSetting(
   activityRestrictedGuildIds,
   explicitContentFromProto,
   explicitContentToProto,
-  UserSettingDefinitions,
 ) {
   let getSetting = textAndImages;
   let f74584 = activityRestrictedGuildIds;

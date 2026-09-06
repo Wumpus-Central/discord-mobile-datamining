@@ -30,10 +30,10 @@ function patchThread(id, body) {
     obj.dispatch(obj);
     let isForumPostResult = forumPost.isForumPost();
     if (isForumPostResult) {
-      isForumPostResult = null != tmp4.parent_id;
+      isForumPostResult = null != forumPost.parent_id;
     }
     if (isForumPostResult) {
-      obj = { type: "RESORT_THREADS", channelId: tmp4.parent_id };
+      obj = { type: "RESORT_THREADS", channelId: forumPost.parent_id };
       DispatcherDefault.dispatch(obj);
       const tmpResult = DispatcherDefault;
     }
@@ -77,10 +77,10 @@ export default {
       obj.dispatch(obj);
       let isForumPostResult = forumPost.isForumPost();
       if (isForumPostResult) {
-        isForumPostResult = null != tmp4.parent_id;
+        isForumPostResult = null != forumPost.parent_id;
       }
       if (isForumPostResult) {
-        obj = { type: "RESORT_THREADS", channelId: tmp4.parent_id };
+        obj = { type: "RESORT_THREADS", channelId: forumPost.parent_id };
         DispatcherDefault.dispatch(obj);
         const tmpResult = DispatcherDefault;
       }
@@ -90,7 +90,7 @@ export default {
   lockThread(channel) {
     closure_0 = channel;
     const self = this;
-    return (async (arg0, value) => {
+    return (async () => {
       if (c3 === 2) {
         c3 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -148,7 +148,7 @@ export default {
   unlockThread(channel) {
     closure_0 = channel;
     const self = this;
-    return (async (arg0, value) => {
+    return (async () => {
       if (c3 === 2) {
         c3 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -206,7 +206,7 @@ export default {
   unarchiveThread(channel, arg1) {
     closure_0 = channel;
     closure_1 = arg1;
-    return (async (arg0, value) => {
+    return (async () => {
       if (c5 === 2) {
         c5 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -361,7 +361,7 @@ export default {
   unarchiveThreadIfNecessary(id) {
     closure_0 = id;
     const self = this;
-    return (async (arg0, value) => {
+    return (async () => {
       if (c0 === 2) {
         c0 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -442,10 +442,10 @@ export default {
       obj.dispatch(obj);
       let isForumPostResult = forumPost.isForumPost();
       if (isForumPostResult) {
-        isForumPostResult = null != tmp4.parent_id;
+        isForumPostResult = null != forumPost.parent_id;
       }
       if (isForumPostResult) {
-        obj = { type: "RESORT_THREADS", channelId: tmp4.parent_id };
+        obj = { type: "RESORT_THREADS", channelId: forumPost.parent_id };
         DispatcherDefault.dispatch(obj);
         const tmpResult = DispatcherDefault;
       }
@@ -455,7 +455,7 @@ export default {
   joinThread(channel, arg1) {
     closure_0 = channel;
     closure_1 = arg1;
-    return (async (arg0, value) => {
+    return (async () => {
       if (c5 === 2) {
         c5 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -569,7 +569,7 @@ export default {
     closure_0 = arg0;
     closure_1 = arg1;
     closure_2 = arg2;
-    return (async (arg0, value) => {
+    return (async () => {
       if (c5 === 2) {
         c5 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -719,11 +719,11 @@ export default {
   unpin(thread) {
     this.updateFlags(thread, thread.flags & ~ChannelFlags.PINNED);
   },
-  updateFlags(thread, arg1, arg2) {
+  updateFlags(thread, arg1) {
     closure_0 = thread;
     closure_1 = arg1;
-    let flag = arg2;
-    if (arg2 === undefined) {
+    let flag = thread2;
+    if (thread2 === undefined) {
       flag = false;
     }
     return (async () => {
@@ -743,18 +743,18 @@ export default {
         c3 = 3;
       } else if (arg0 === 1) {
         c3 = 3;
-        throw arg1;
+        throw value;
       } else if (arg0 !== 2) {
         dependencyMap = 0;
       }
-      return arg1;
+      return value;
     })();
   },
-  replacePin(arg0, arg1) {
+  replacePin(arg0, thread) {
     closure_0 = arg0;
-    closure_1 = arg1;
+    closure_1 = thread;
     const self = this;
-    return (async (arg0, value) => {
+    return (async () => {
       if (c3 === 2) {
         c3 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -903,7 +903,7 @@ export default {
     closure_0 = channel;
     closure_1 = muteSettings;
     const self = this;
-    return (async (arg0, value) => {
+    return (async () => {
       if (dependencyMap === 2) {
         dependencyMap = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -1032,9 +1032,9 @@ export default {
       );
     }
   },
-  searchThreads(arg0, arg1, arg2, arg3, arg4) {
+  searchThreads(arg0, channelId, arg2, arg3, arg4) {
     _require = arg0;
-    closure_1 = arg1;
+    closure_1 = channelId;
     dependencyMap = arg2;
     asyncGeneratorStep = arg3;
     let MATCH_SOME = arg4;
@@ -1042,11 +1042,11 @@ export default {
       MATCH_SOME = require("ThreadSearchTagSetting").ThreadSearchTagSetting.MATCH_SOME;
     }
     return (async () => {
-      if (null != closure_3) {
-        if (tmp36.size > 0) {
+      if (null != size) {
+        if (size.size > 0) {
           const _Array = Array;
-          const joined = Array.from(tmp36).join(",");
-          Array.from(tmp36);
+          const joined = Array.from(size).join(",");
+          Array.from(size);
         }
       }
       const HTTP = tmp2(name[10]).HTTP;
@@ -1056,7 +1056,7 @@ export default {
         rejectWithError: tmp2(name[10]).rejectWithMigratedError(),
       };
       await HTTP.get(request);
-      const body = arg1.body;
+      const body = value.body;
       const threads = body.threads;
       const members = body.members;
       const first_messages = body.first_messages;

@@ -16,7 +16,7 @@ export default (arg0) => {
     let PushNotificationAndroid = NativeModules.PushNotificationAndroid;
     let result = PushNotificationAndroid.markNotificationAsDirectReply(closure_0.channelId);
     closure_0(dependencyMap[4]).awaitStorage(() => {
-      closure_0 = async function _sendMessage(arg0, value) {
+      closure_0 = async function _sendMessage(arg0) {
         if (c4 === 2) {
           c4 = 3;
           throw new TypeError("Generator functions may not be called on executing generators");

@@ -79,7 +79,7 @@ function OpenAppButton(profileApplication) {
   asyncGeneratorStep = tmp[1];
   const items = [botUserId, channel, profileApplication.id];
   const callback = noop.useCallback(
-    asyncGeneratorStep(async (arg0, value) => {
+    asyncGeneratorStep(async () => {
       if (c4 === 2) {
         c4 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -127,7 +127,7 @@ function OpenAppButton(profileApplication) {
               if (application1 == null) {
                 c3 = 1;
                 c4 = 1;
-                const obj2 = { value: tmp2(7163).fetchApplication(tmp42.id), done: false };
+                const obj2 = { value: tmp2(7163).fetchApplication(profileApplication.id), done: false };
                 return obj2;
               } else {
                 closure_129_1 = closure_0;
@@ -145,7 +145,6 @@ function OpenAppButton(profileApplication) {
                   c4 = 3;
                 }
               }
-              tmp42 = profileApplication;
             }
           } else if (1 === tmp5) {
             if (arg0 === 1) {

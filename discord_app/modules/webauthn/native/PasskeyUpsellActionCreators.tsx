@@ -1,6 +1,8 @@
 // discord_app/modules/webauthn/native/PasskeyUpsellActionCreators.tsx
 import asyncRequireImpl from "../../../../_runtime/01896_asyncRequireImpl.js";
 import dismissible_content from "../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
+import DismissibleContentUtils from "../../dismissible_content/DismissibleContentUtils.tsx";
+import DismissibleContentUnsafeUtils from "../../dismissible_content/DismissibleContentUnsafeUtils.tsx";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
@@ -12,12 +14,13 @@ export default {
   openPasskeyUpsell() {
     if (!obj.UNSAFE_isDismissibleContentDismissed(dismissible_content.DismissibleContent.PASSWORDLESS_UPSELL)) {
       const self = this;
-      const markDismissibleContentAsShown = tmp(1945).requestMarkDismissibleContentAsShown(
-        tmp(1943).DismissibleContent.PASSWORDLESS_UPSELL,
+      const markDismissibleContentAsShown = DismissibleContentUtils.requestMarkDismissibleContentAsShown(
+        dismissible_content.DismissibleContent.PASSWORDLESS_UPSELL,
       );
       const result = this.openPasskeyUpsellPromoSheet();
-      const tmpResult = tmp(1945);
+      const tmpResult = DismissibleContentUtils;
     }
+    obj = DismissibleContentUnsafeUtils;
   },
   openPasskeyUpsellModal() {
     ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(14664, dependencyMap.paths), undefined, PASSKEY_UPSELL_KEY);

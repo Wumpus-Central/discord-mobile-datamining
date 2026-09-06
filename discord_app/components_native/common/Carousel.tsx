@@ -31,13 +31,12 @@ PageIndicator.prototype["render"] = function render() {
   ({ indicatorSpace, pageIndicatorStyle } = props);
   if (0 < count) {
     do {
-      let tmp4 = React4;
       let obj = { fontSize: tmp3 };
       let items1 = [obj];
       obj = { style: null, children: "\u2022" };
       items1[1] = num === tmp2 ? tmp.activeIndicator : tmp.inactiveIndicator;
       obj.style = items1;
-      let arr = items.push(tmp4(native.LegacyText, obj, num));
+      let arr = items.push(React4(native.LegacyText, obj, num));
       num = num + 1;
     } while (num < count);
   }

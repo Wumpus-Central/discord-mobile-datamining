@@ -1,6 +1,7 @@
 // discord_app/modules/virtual_currency/checkout/native/OrbCheckoutModalComponents.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
+import shared from "../../../../design/shared.tsx";
 import useThemeDefault from "../../../../hooks/useTheme.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import Stack_Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
@@ -135,7 +136,7 @@ export const OrbCheckoutPurchaseButton = function OrbCheckoutPurchaseButton(onPr
   if (orbProductContext != null) {
     const orbPriceAmount = orbProductContext.orbPriceAmount;
   }
-  let tmp3Result = tmp3(4411);
+  let tmp3Result = shared;
   let str = "primary";
   if (tmp3Result.isThemeDark(tmp2)) {
     str = "primary-overlay";
@@ -150,9 +151,9 @@ export const OrbCheckoutPurchaseButton = function OrbCheckoutPurchaseButton(onPr
     onPress: null,
     disabled: null,
   };
-  const intl = tmp3(1114).intl;
+  const intl = util.intl;
   obj.text = intl.string(util.t["zLch/S"]);
-  tmp3Result = tmp3(4411);
+  tmp3Result = shared;
   let str2 = "control-primary-text-default";
   if (tmp3Result.isThemeDark(tmp2)) {
     str2 = "control-overlay-primary-text-default";

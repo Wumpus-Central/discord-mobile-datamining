@@ -87,7 +87,7 @@ export default function PremiumUpsellSectionDivider(arg0) {
   if (position !== createStyles.START) {
     items[2] = tmp8;
     obj.children = items;
-    return React5(tmp2, obj);
+    return React5(React4, obj);
   } else {
     const obj1 = { style: lock.lockContainer, children: null };
     let obj2 = {
@@ -99,15 +99,15 @@ export default function PremiumUpsellSectionDivider(arg0) {
     };
     LockIcon = LockIcon2.LockIcon;
     const obj3 = { color: null, style: null };
-    WHITE = tmp4(576).colors.WHITE;
+    WHITE = nativeDefault.colors.WHITE;
     obj3.color = WHITE;
     lock = lock.lock;
     obj3.style = lock;
-    obj2.children = tmp3(LockIcon, obj3);
-    obj2 = tmp3(tmp4(4987), obj2);
+    obj2.children = timestampProducer(LockIcon, obj3);
+    obj2 = timestampProducer(LinearGradientDefault, obj2);
     obj1.children = obj2;
-    tmp3(tmp2, obj1);
-    const tmp4Result = tmp4(4987);
+    timestampProducer(React4, obj1);
+    const tmp4Result = LinearGradientDefault;
   }
 }
 export const PREMIUM_UPSELL_SECTION_DIVIDER_HEIGHT = 28;

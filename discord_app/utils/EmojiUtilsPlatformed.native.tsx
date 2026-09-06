@@ -17,6 +17,7 @@ function getURL(name) {
     const _HermesInternal = HermesInternal;
     let str = "asset:/emoji-" + convert.toCodePoint(name) + ".png";
   } else {
+    PlatformUtils;
     str = "";
   }
   return str;
@@ -25,7 +26,7 @@ let closure_9 = async function _getEmojiColors(arg0) {
   let id = arg0;
   c3 = 0;
   c4 = 0;
-  return (async (arg0, value) => {
+  return (async (arg0) => {
     if (c4 === 2) {
       c4 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");

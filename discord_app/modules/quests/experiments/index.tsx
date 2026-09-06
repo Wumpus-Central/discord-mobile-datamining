@@ -1,6 +1,7 @@
 // discord_app/modules/quests/experiments/index.tsx
 import QuestOrbMultiplierHooks from "../hooks/QuestOrbMultiplierHooks.tsx";
 import QuestOrbMultiplierUtils from "../utils/QuestOrbMultiplierUtils.tsx";
+import QuestOrbsMultiplier from "../../../../discord_common/js/shared/shared-constants/QuestOrbsMultiplier.tsx";
 import ApexExperiment from "../../experiments/apex/index.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
@@ -168,7 +169,7 @@ export const useQuestOrbsMultiplierMarketing = function useQuestOrbsMultiplierMa
       questOrbMultiplierEligibility !== QuestOrbMultiplierUtils.QuestOrbMultiplierEligibilityType.INELIGIBLE &&
       questOrbMultiplierEligibility !== QuestOrbMultiplierUtils.QuestOrbMultiplierEligibilityType.CREPE &&
       closure_2.useConfig(obj).enabled,
-    multiplier: tmp(11490).QuestOrbsMultiplier.PREMIUM_TIER_2_MULTIPLIER_PERCENTAGE_POINTS / 100,
+    multiplier: QuestOrbsMultiplier.QuestOrbsMultiplier.PREMIUM_TIER_2_MULTIPLIER_PERCENTAGE_POINTS / 100,
   };
   return obj;
 };

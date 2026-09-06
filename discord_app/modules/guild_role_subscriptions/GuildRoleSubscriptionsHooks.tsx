@@ -71,7 +71,7 @@ const result = size.fileFinishedImporting("modules/guild_role_subscriptions/Guil
 
 export { useFetchListingsForGuild };
 export const useCreateSubscriptionGroupListing = function useCreateSubscriptionGroupListing() {
-  closure_2 = async function _createSubscriptionGroupListing(arg0, value) {
+  closure_2 = async function _createSubscriptionGroupListing(arg0) {
     if (c6 === 2) {
       c6 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -168,7 +168,7 @@ export const useUpdateSubscriptionGroupListing = function useUpdateSubscriptionG
   const tmp = _slicedToArray(noop.useState(false), 2);
   const tmp2 = _slicedToArray(noop.useState(null), 2);
   closure_1 = tmp2[1];
-  closure_0 = asyncGeneratorStep(async (arg0, value, arg2) => {
+  closure_0 = asyncGeneratorStep(async (arg0, arg1, arg2) => {
     if (c7 === 2) {
       c7 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -406,7 +406,7 @@ export const useFetchListingsForSubscriptions = (arg0) => {
   return { loading };
 };
 export const useDeleteSubscriptionListing = function useDeleteSubscriptionListing() {
-  closure_2 = async function _deleteSubscriptionListing(arg0, value) {
+  closure_2 = async function _deleteSubscriptionListing(arg0) {
     if (c7 === 2) {
       c7 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -504,7 +504,7 @@ export const useArchiveSubscriptionListing = function useArchiveSubscriptionList
   return { error: tmp2[1].error, submitting: tmp2[1].loading, archiveSubscriptionListing: tmp2[0] };
 };
 export const usePublishSubscriptionListing = function usePublishSubscriptionListing() {
-  closure_2 = async function _publishSubscriptionListing(arg0, value) {
+  closure_2 = async function _publishSubscriptionListing(arg0) {
     if (c6 === 2) {
       c6 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -636,7 +636,7 @@ export const useUpdateSubscriptionsSettings = function useUpdateSubscriptionsSet
   const tmp = _slicedToArray(noop.useState(false), 2);
   const tmp2 = _slicedToArray(noop.useState(null), 2);
   closure_1 = tmp2[1];
-  closure_0 = asyncGeneratorStep(async (arg0, value) => {
+  closure_0 = asyncGeneratorStep(async (arg0, arg1) => {
     if (c6 === 2) {
       c6 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -724,7 +724,7 @@ export const useUpdateSubscriptionsSettings = function useUpdateSubscriptionsSet
   };
 };
 export const useDeleteSubscriptionGroupListing = function useDeleteSubscriptionGroupListing() {
-  closure_2 = async function _deleteSubscriptionGroupListing(arg0, value) {
+  closure_2 = async function _deleteSubscriptionGroupListing(arg0) {
     if (c6 === 2) {
       c6 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -821,7 +821,7 @@ export const useFetchSubscriptionsSettings = function useFetchSubscriptionsSetti
   const tmp = _slicedToArray(noop.useState(false), 2);
   const tmp2 = _slicedToArray(noop.useState(null), 2);
   closure_1 = tmp2[1];
-  closure_0 = asyncGeneratorStep(async (arg0, value) => {
+  closure_0 = asyncGeneratorStep(async (arg0) => {
     if (c5 === 2) {
       c5 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -911,7 +911,7 @@ export const useUpdateSubscriptionsTrial = function useUpdateSubscriptionsTrial(
   const tmp = _slicedToArray(noop.useState(false), 2);
   const tmp2 = _slicedToArray(noop.useState(null), 2);
   closure_1 = tmp2[1];
-  closure_0 = asyncGeneratorStep(async (arg0, value, arg2) => {
+  closure_0 = asyncGeneratorStep(async (arg0, arg1, arg2) => {
     if (c7 === 2) {
       c7 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");

@@ -1,5 +1,6 @@
 // discord_app/modules/impersonate/ImpersonateActionCreators.tsx
 import DispatcherDefault from "../../Dispatcher.tsx";
+import router_utils from "../routing/router_utils.tsx";
 import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
 import ImpersonateTypes from "ImpersonateTypes.tsx";
 import AppAnalyticsUtils from "../app_analytics/AppAnalyticsUtils.tsx";
@@ -12,7 +13,6 @@ import SelectedChannelStore from "../../stores/SelectedChannelStore.tsx";
 import UserGuildSettingsStore from "../../stores/UserGuildSettingsStore.tsx";
 import ImpersonateStore from "ImpersonateStore.tsx";
 
-const router_utils = tmp2(1100);
 require = fn;
 function updateImpersonating(guildId, type) {
   const data = ImpersonateStore.getData(guildId);
@@ -23,7 +23,6 @@ function updateImpersonating(guildId, type) {
     const merged = Object.assign(AppAnalyticsUtils.collectGuildAnalyticsMetadata(guildId));
     obj.is_viewing_as_member = data.type === ImpersonateTypes.ImpersonateType.NEW_MEMBER;
     obj.track(constants2.VIEW_AS_ROLES_SELECTED, obj);
-    const tmp7 = require;
     obj = { type: "IMPERSONATE_UPDATE", guildId, data: null };
     const obj1 = {};
     const merged1 = Object.assign(data);
@@ -35,12 +34,13 @@ function updateImpersonating(guildId, type) {
       if (!PermissionStore.can(constants.VIEW_CHANNEL, tmp21)) {
         const defaultChannel = GuildChannelStore.getDefaultChannel(guildId);
         if (null != defaultChannel) {
-          tmp7(1100).transitionTo(closure_1_12.CHANNEL(guildId, defaultChannel.id));
-          const tmp7Result = tmp7(1100);
+          router_utils.transitionTo(closure_1_12.CHANNEL(guildId, defaultChannel.id));
+          const tmp7Result = router_utils;
         }
       }
     }
   }
+  tmp2 = null != data && data.type === type.type;
 }
 const Constants = fn(1074);
 ({ Permissions: closure_11, Routes: closure_12, AnalyticEvents: map1 } = Constants);

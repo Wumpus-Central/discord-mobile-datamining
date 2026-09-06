@@ -1,5 +1,7 @@
 // discord_app/modules/favorites/hooks/useFavoritesGuildCategoryFullNotice.tsx
 import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
+import util from "../../../intl/index.native.tsx";
+import FavoritesUtils from "../FavoritesUtils.tsx";
 import _modDef3225 from "../intl/FavoritesGuild.messages.js";
 import FavoritesHooks from "../FavoritesHooks.tsx";
 import FavoriteStore from "../FavoriteStore.tsx";
@@ -25,20 +27,20 @@ export default function useFavoritesGuildCategoryFullNotice(getGuildId, str) {
         if (tmpResult.isFavoritesGuildId(getGuildId.getGuildId())) {
           tmp6 = null;
           if (getGuildId.type === ChannelTypes.GUILD_CATEGORY) {
-            const formatted = str.trim().toLowerCase();
+            str = str.trim();
+            const formatted = str.toLowerCase();
             tmp6 = null;
             if (formatted === closure_4.toLowerCase()) {
               obj = { label: null, tooltip: null };
-              const intl = tmp(1114).intl;
+              const intl = util.intl;
               obj.label = intl.string(_modDef3225.WsUrMD);
-              const intl2 = tmp(1114).intl;
+              const intl2 = util.intl;
               obj.tooltip = intl2.string(_modDef3225.dW9Kov);
               tmp6 = obj;
             }
-            str = str.trim();
           }
         }
-        tmpResult = tmp(1982);
+        tmpResult = FavoritesUtils;
       }
     }
   }

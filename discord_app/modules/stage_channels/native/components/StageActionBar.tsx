@@ -44,12 +44,12 @@ export default noop.memo((channel) => {
   const callback = noop.useCallback((isSmallSize) => {
     if (actionBarPrimaryButton === ChannelCallActionBar.ActionBarPrimaryButton.END_STREAM) {
       let obj = { channel, isSmallSize };
-      let tmp4 = hasOwnProperty(tmp2(9945).DisconnectStreamButton, obj);
+      let tmp4 = hasOwnProperty(ChannelCallActionBar.DisconnectStreamButton, obj);
     } else {
       tmp4 = null;
-      if (actionBarPrimaryButton === tmp2(9945).ActionBarPrimaryButton.END_CALL) {
+      if (actionBarPrimaryButton === ChannelCallActionBar.ActionBarPrimaryButton.END_CALL) {
         obj = { channel, isSmallSize };
-        tmp4 = hasOwnProperty(tmp2(9898).DisconnectStageButton, obj);
+        tmp4 = hasOwnProperty(StageActionBarButtons.DisconnectStageButton, obj);
       }
     }
     return tmp4;
@@ -62,7 +62,7 @@ export default noop.memo((channel) => {
       if (closure_3) {
         let tmp24 = isSmallSize;
         if (isSmallSize) {
-          let obj = { channel, isSmallSize: tmp21 };
+          let obj = { channel, isSmallSize };
           tmp24 = hasOwnProperty(ChannelCallActionBar.VideoButton, obj);
         }
         const items = [tmp24, , , ,];
@@ -95,7 +95,7 @@ export default noop.memo((channel) => {
         items1[1] = hasOwnProperty(StageActionBarButtons.RequestToSpeakButton, obj4);
         let tmp13 = canModerateRequestToSpeak;
         if (canModerateRequestToSpeak) {
-          const obj5 = { channel: tmp12, isSmallSize: tmp2 };
+          const obj5 = { channel, isSmallSize: tmp2 };
           tmp13 = hasOwnProperty(StageActionBarButtons.RequestToSpeakListButton, obj5);
         }
         const obj6 = { children: null };

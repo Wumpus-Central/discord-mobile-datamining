@@ -1,4 +1,6 @@
 // discord_app/modules/messages/native/renderer/system_messages/UserPremiumGuildSubscriptionTierAchievedSystemMessage.tsx
+import util from "../../../../../intl/index.native.tsx";
+import GuildBoostingUtils from "../../../../../utils/GuildBoostingUtils.tsx";
 import useAuthorWithProcessedColor from "useAuthorWithProcessedColor.tsx";
 import formatUsernameOnClickDefault from "formatUsernameOnClick.tsx";
 import createCommonMessageDefault from "createCommonMessage.tsx";
@@ -29,7 +31,7 @@ export const createUserPremiumGuildSubscriptionTierAchievedSystemMessage =
         let obj = { message, author: messageAuthorWithProcessedColor, roleStyle: message.roleStyle };
         const tmp16 = formatUsernameOnClickDefault(obj);
         if (tmp13 > 1) {
-          const intl2 = tmp14(1114).intl;
+          const intl2 = util.intl;
           obj = {
             username: messageAuthorWithProcessedColor.nick,
             usernameOnClick: tmp16,
@@ -37,21 +39,21 @@ export const createUserPremiumGuildSubscriptionTierAchievedSystemMessage =
             newTierName: null,
             numSubscriptions: null,
           };
-          let tmp14Result = tmp14(4454);
+          let tmp14Result = GuildBoostingUtils;
           obj.newTierName = tmp14Result.getTierName(TIER_1);
           obj.numSubscriptions = tmp13;
-          let formatToPartsResult = intl2.formatToParts(tmp14(1114).t.GjNvr7, obj);
+          let formatToPartsResult = intl2.formatToParts(util.t.GjNvr7, obj);
         } else {
-          const intl = tmp14(1114).intl;
+          const intl = util.intl;
           const obj1 = {
             username: messageAuthorWithProcessedColor.nick,
             usernameOnClick: tmp16,
             guildName: guild.name,
             newTierName: null,
           };
-          tmp14Result = tmp14(4454);
+          tmp14Result = GuildBoostingUtils;
           obj1.newTierName = tmp14Result.getTierName(TIER_1);
-          formatToPartsResult = intl.formatToParts(tmp14(1114).t.oAYAP7, obj1);
+          formatToPartsResult = intl.formatToParts(util.t.oAYAP7, obj1);
         }
         const obj2 = { content: formatToPartsResult };
         const merged = Object.assign(createCommonMessageDefault(message));

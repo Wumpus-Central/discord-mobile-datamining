@@ -84,7 +84,7 @@ export default function HubProgressHeader(guild) {
     obj1.subtitle = formatToPlainStringResult;
     let tmp10Result;
     if (flag) {
-      tmp10Result = tmp10(tmp11, {});
+      tmp10Result = <View />;
     }
     obj1.trailing = tmp10Result;
     obj.children = jsx(tmp2(tmp3[10]).FormCTA, {

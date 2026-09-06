@@ -43,12 +43,12 @@ function useMediaShareActions(source) {
       if (null != channelId) {
         tmp2 = null;
         if (null != messageId) {
-          let message = MessageStore.getMessage(tmp, tmp3);
+          let message = MessageStore.getMessage(tmp, messageId);
           if (message == null) {
-            message = MessagePreviewStore.getMessage(tmp3);
+            message = MessagePreviewStore.getMessage(messageId);
           }
           if (message == null) {
-            message = ICYMIStore.getMessage(tmp3);
+            message = ICYMIStore.getMessage(messageId);
           }
           tmp2 = message;
         }
@@ -73,16 +73,16 @@ function useMediaShareActions(source) {
     ActionSheetActionCreatorsDefault.hideActionSheet();
     if (null != source.videoURI) {
       const result = MediaSourceUtil.downloadMediaAssetWithContentType(
-        tmp3.videoURI,
+        source.videoURI,
         constants2.VIDEO,
-        tmp3.contentType,
+        source.contentType,
       );
-    } else if (null != tmp3.sourceURI) {
-      const result1 = MediaFormatTesters.urlMatchesFileExtension(tmp3.sourceURI, React7);
+    } else if (null != source.sourceURI) {
+      const result1 = MediaFormatTesters.urlMatchesFileExtension(source.sourceURI, React7);
       const result2 = MediaSourceUtil.downloadMediaAssetWithContentType(
-        tmp3.sourceURI,
-        result1 ? tmp11.GIF : tmp11.IMAGE,
-        tmp3.contentType,
+        source.sourceURI,
+        result1 ? constants2.GIF : constants2.IMAGE,
+        source.contentType,
       );
     }
   }, items2);
@@ -115,10 +115,10 @@ function useMediaShareActions(source) {
     obj.hideActionSheet();
     if (null != stateFromStores) {
       if ("embed" !== source.accessoryType) {
-        const attachmentId = tmp8.attachmentId;
+        const attachmentId = source.attachmentId;
         if (null != attachmentId) {
           obj = {
-            message: tmp3,
+            message: stateFromStores,
             source: "media-viewer",
             initialSelectedDestinations: "Array",
             forwardOptions: "QUESTS_USER_COMPLETION_UPDATE",
@@ -131,13 +131,13 @@ function useMediaShareActions(source) {
         }
       } else {
         const obj1 = {
-          message: tmp3,
+          message: stateFromStores,
           source: "media-viewer",
           initialSelectedDestinations: "Array",
           forwardOptions: "QUESTS_USER_COMPLETION_UPDATE",
         };
         const obj2 = { onlyEmbedIndices: null };
-        const items1 = [tmp8.mediaIndex];
+        const items1 = [source.mediaIndex];
         obj2.onlyEmbedIndices = items1;
         obj1.forwardOptions = obj2;
         obj1.openForwardModal(obj1);
@@ -149,13 +149,14 @@ function useMediaShareActions(source) {
     let obj = ActionSheetActionCreatorsDefault;
     obj.hideActionSheet();
     if (tmp4) {
-      ({ channelId, messageId } = tmp3);
+      ({ channelId, messageId } = source);
       const obj2 = transitionToChannel;
       const isChatLockedOpen = useChatLayout.getChatLayout().isChatLockedOpen;
       obj = { navigationReplace: !isChatLockedOpen };
       obj2.transitionToMessage(channelId, messageId, obj);
       const tmp6 = !isChatLockedOpen;
     }
+    tmp4 = null != ChannelStore.getChannel(source.channelId) && null != source.channelId && null != source.messageId;
   }, items6);
   const items7 = [source];
   const callback5 = channelId.useCallback(() => {
@@ -164,11 +165,12 @@ function useMediaShareActions(source) {
     const attachmentId = source.attachmentId;
     if (tmp5) {
       obj = { messageId: null, channelId: null, attachmentId: null };
-      ({ messageId: obj3.messageId, channelId: obj3.channelId } = tmp4);
+      ({ messageId: obj3.messageId, channelId: obj3.channelId } = source);
       obj.attachmentId = attachmentId;
       ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(11677, dependencyMap.paths), closure_11, obj);
       const tmpResult = ActionSheetActionCreatorsDefault;
     }
+    tmp5 = null != attachmentId && null != source.channelId && null != source.messageId;
   }, items7);
   let obj3 = source(shareable[10]);
   let obj4 = channelId;

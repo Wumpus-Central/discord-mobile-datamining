@@ -361,14 +361,14 @@ obj.handler = function handler(socket) {
             details = "";
           }
           obj.details = details;
-          let str4 = tmp14.state;
+          let str4 = activity.state;
           if (str4 == null) {
             str4 = "";
           }
           obj.state = str4;
-          let tmp17 = null != tmp14.state_url || null != tmp14.details_url;
+          let tmp17 = null != activity.state_url || null != activity.details_url;
           if (!tmp17) {
-            assets = tmp14.assets;
+            assets = activity.assets;
             let large_url;
             if (assets != null) {
               large_url = assets.large_url;
@@ -376,7 +376,7 @@ obj.handler = function handler(socket) {
             tmp17 = null != large_url;
           }
           if (!tmp17) {
-            const assets2 = tmp14.assets;
+            const assets2 = activity.assets;
             let small_url;
             if (assets2 != null) {
               small_url = assets2.small_url;

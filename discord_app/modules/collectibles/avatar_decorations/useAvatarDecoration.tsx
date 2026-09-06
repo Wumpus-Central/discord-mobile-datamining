@@ -16,8 +16,8 @@ export const useAvatarDecoration = function useAvatarDecoration(user, guildId) {
     let member = null;
     if (null != closure_1) {
       member = null;
-      if (null != tmp) {
-        member = first.getMember(closure_1, tmp.id);
+      if (null != user) {
+        member = first.getMember(closure_1, user.id);
       }
     }
     let avatarDecoration;
@@ -26,8 +26,8 @@ export const useAvatarDecoration = function useAvatarDecoration(user, guildId) {
     }
     if (avatarDecoration == null) {
       let avatarDecoration1;
-      if (tmp != null) {
-        avatarDecoration1 = tmp.avatarDecoration;
+      if (user != null) {
+        avatarDecoration1 = user.avatarDecoration;
       }
       avatarDecoration = avatarDecoration1;
     }

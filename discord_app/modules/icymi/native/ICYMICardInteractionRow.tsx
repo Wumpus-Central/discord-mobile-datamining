@@ -71,15 +71,15 @@ function AddEmojiButton(channel) {
   }
   items1[2] = disabled;
   obj.style = items1;
-  const intl = tmp4(tmp5[21]).intl;
+  const intl = tmp4(handleItemInteracted[21]).intl;
   obj.accessibilityLabel = intl.string(channel(handleItemInteracted[21]).t.lfIHs4);
   obj.disabled = disabled;
   const items2 = [closure_16(channel(handleItemInteracted[22]).ReactionIcon, { size: "sm" })];
   if (showText) {
     obj = { variant: "text-sm/semibold", color: "redesign-button-tertiary-text", children: null };
-    const intl2 = tmp4(tmp5[21]).intl;
-    obj.children = intl2.string(tmp4(tmp5[21]).t.m9O1gd);
-    showText = closure_16(tmp4(tmp5[23]).Text, obj);
+    const intl2 = tmp4(handleItemInteracted[21]).intl;
+    obj.children = intl2.string(tmp4(handleItemInteracted[21]).t.m9O1gd);
+    showText = closure_16(tmp4(handleItemInteracted[23]).Text, obj);
   }
   items2[1] = showText;
   obj.children = items2;
@@ -210,7 +210,7 @@ function EmojiReaction(count) {
     ({ defaultEmoji: arr8[0], emojiText: arr8[1] } = tmp);
     obj3.style = items5;
     obj3.children = emoji.name;
-    let tmp15Result = tmp15(tmp2(tmp3[23]).Text, obj3);
+    let tmp15Result = closure_16(tmp2(tmp3[23]).Text, obj3);
   } else {
     if (tmp2Result1.isAndroid()) {
       const obj4 = { style: null, source: null };
@@ -218,10 +218,10 @@ function EmojiReaction(count) {
       ({ defaultEmoji: arr7[0], emojiImage: arr7[1] } = tmp);
       obj4.style = items6;
       obj4.source = memo;
-      tmp15Result = tmp15(closure_6, obj4);
+      tmp15Result = closure_16(closure_6, obj4);
     } else {
       const obj5 = { emoji, size: v20, style: tmp.defaultEmoji, animate: true };
-      tmp15Result = tmp15(channel(tmp3[28]), obj5);
+      tmp15Result = closure_16(channel(tmp3[28]), obj5);
     }
     tmp2Result1 = tmp2(tmp3[14]);
   }
@@ -264,7 +264,7 @@ function ForwardButton(disabled) {
   items[2] = disabled;
   obj.style = items;
   obj.disabled = disabled;
-  const intl = tmp3(1114).intl;
+  const intl = util.intl;
   obj.accessibilityLabel = intl.string(util.t.xIUfJS);
   obj.children = value2(ForwardingIconDefault, { size: "sm" });
   return value2(Pressables.PressableOpacity, obj);
@@ -289,7 +289,7 @@ function ReplyButton(disabled) {
   items[2] = disabled;
   obj.style = items;
   obj.disabled = disabled;
-  const intl = tmp3(1114).intl;
+  const intl = util.intl;
   obj.accessibilityLabel = intl.string(util.t["5NwaNY"]);
   obj.children = value2(ArrowAngleLeftUpIcon.ArrowAngleLeftUpIcon, { size: "sm" });
   return value2(Pressables.PressableOpacity, obj);
@@ -317,7 +317,7 @@ function ThreadAsCommentsButton(parentMessage) {
       tmp2 = null != threadData.thread;
     }
     if (tmp2) {
-      ICYMIShared.navigateToPost(obj.getChannelId(), threadData.thread.guild_id, obj.id);
+      ICYMIShared.navigateToPost(parentMessage.getChannelId(), threadData.thread.guild_id, parentMessage.id);
     }
   }, items1);
   if (stateFromStores) {
@@ -334,12 +334,12 @@ function ThreadAsCommentsButton(parentMessage) {
           obj.onPress = callback;
           obj = { style: tmp.commentCount, children: null };
           const obj1 = { style: tmp.commentsIcon };
-          const items3 = [closure_16(tmp2(tmp3[33]).ChatIcon, obj1)];
+          const items3 = [closure_16(tmp2(handleItemInteracted[33]).ChatIcon, obj1)];
           let obj2 = { variant: "text-md/semibold", color: "text-strong", children: str };
-          items3[1] = closure_16(tmp2(tmp3[23]).Text, obj2);
+          items3[1] = closure_16(tmp2(handleItemInteracted[23]).Text, obj2);
           obj.children = items3;
           obj.children = closure_17(closure_5, obj);
-          return closure_16(tmp2(tmp3[20]).PressableHighlight, obj);
+          return closure_16(tmp2(handleItemInteracted[20]).PressableHighlight, obj);
         }
       }
       const obj3 = { style: null, onPress: null, children: null };
@@ -348,9 +348,9 @@ function ThreadAsCommentsButton(parentMessage) {
       obj3.onPress = callback;
       const obj4 = { style: tmp.commentCount, children: null };
       const obj5 = { style: tmp.commentsIcon };
-      obj4.children = closure_16(tmp2(tmp3[33]).ChatIcon, obj5);
+      obj4.children = closure_16(tmp2(handleItemInteracted[33]).ChatIcon, obj5);
       obj3.children = closure_16(closure_5, obj4);
-      return closure_16(tmp2(tmp3[20]).PressableHighlight, obj3);
+      return closure_16(tmp2(handleItemInteracted[20]).PressableHighlight, obj3);
     }
   }
   return null;
@@ -404,14 +404,14 @@ let closure_20 = createStyles.createStyles(() => {
   obj.defaultEmoji = size;
   let num = 16;
   if (!obj4.isAndroid()) {
-    num = tmp3;
+    num = v20;
   }
   obj.emojiText = { lineHeight: num, fontSize: 16, textAlign: "center", paddingTop: 2 };
   obj.selectedInnerTextContainer = { paddingBottom: 3.5 };
   obj.innerTextContainer = { alignSelf: "flex-end", paddingBottom: 4.5 };
   obj.emojiImage = { resizeMode: "contain", width: v20, height: v20 };
   obj = {
-    borderColor: tmp(576).unsafe_rawColors.BRAND_560,
+    borderColor: nativeDefault.unsafe_rawColors.BRAND_560,
     borderWidth: 1,
     paddingHorizontal: 7,
     backgroundColor: null,
@@ -433,7 +433,7 @@ let closure_20 = createStyles.createStyles(() => {
     gap: 8,
   };
   obj.commentCount = { display: "flex", flexDirection: "row", alignItems: "center", gap: 4, justifySelf: "end" };
-  const size1 = { width: 20, height: 20, tintColor: tmp(576).colors.INTERACTIVE_TEXT_DEFAULT };
+  const size1 = { width: 20, height: 20, tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
   obj.commentsIcon = size1;
   return obj;
 });
@@ -568,7 +568,7 @@ export default function ICYMICardInteractionRow(message) {
       num3 = memo.length - diff;
     }
     obj = { hasOverflow: num3 > 0, showReplyForwardButtons: null, showThreadAsComments: null };
-    let tmp5 = !tmp;
+    let tmp5 = !hideAdditionalButtons;
     if (!hideAdditionalButtons) {
       let tmp6 = stateFromStores;
       if (!stateFromStores) {
@@ -677,21 +677,21 @@ export default function ICYMICardInteractionRow(message) {
         const obj4 = { style: tmp.replyForwardButtonContainer, children: null };
         if (showThreadAsComments) {
           const obj5 = { threadData, parentMessage: message, handleItemInteracted };
-          showThreadAsComments = tmp22(ThreadAsCommentsButton, obj5);
+          showThreadAsComments = closure_16(ThreadAsCommentsButton, obj5);
         }
         const items12 = [showThreadAsComments];
         if (showReplyForwardButtons) {
           const obj6 = { children: null };
           const obj7 = { onPress: callback3, disabled: !stateFromStores };
-          const items13 = [tmp22(ReplyButton, obj7)];
+          const items13 = [closure_16(ReplyButton, obj7)];
           const obj8 = { onPress: callback2, disabled: !canForwardMessage };
-          items13[1] = tmp22(ForwardButton, obj8);
+          items13[1] = closure_16(ForwardButton, obj8);
           obj6.children = items13;
-          showReplyForwardButtons = tmp25(closure_18, obj6);
+          showReplyForwardButtons = closure_17(closure_18, obj6);
         }
         items12[1] = showReplyForwardButtons;
         obj4.children = items12;
-        tmp25Result = tmp25(tmp23, obj4);
+        tmp25Result = closure_17(tmp23, obj4);
       }
       const items14 = [
         tmp25Result,
@@ -718,7 +718,7 @@ export default function ICYMICardInteractionRow(message) {
         tmp22Result = null;
         if (memo1) {
           const obj9 = { channel, onPressEmoji: callback1, handleItemInteracted };
-          tmp22Result = tmp22(AddEmojiButton, obj9);
+          tmp22Result = closure_16(AddEmojiButton, obj9);
         }
       }
       items14[2] = tmp22Result;
@@ -736,25 +736,25 @@ export default function ICYMICardInteractionRow(message) {
           const items16 = [channel(tmp3[42])(token).alpha(0).hex(), token, token];
           obj11.colors = items16;
           obj11.locations = [0, 0.8, 1];
-          const items17 = [tmp22(tmp38, obj11)];
+          const items17 = [closure_16(tmp38, obj11)];
           const obj12 = { style: null, size: "xs", color: "icon-muted" };
           const items18 = [tmp.overflowChevron];
           obj12.style = items18;
-          items17[1] = tmp22(tmp2(tmp3[43]).ChevronSmallRightIcon, obj12);
+          items17[1] = closure_16(tmp2(tmp3[43]).ChevronSmallRightIcon, obj12);
           obj10.children = items17;
-          tmp25Result = tmp25(closure_18, obj10);
+          tmp25Result = closure_17(closure_18, obj10);
           const alphaResult = channel(tmp3[42])(token).alpha(0);
         }
       }
       items15[1] = tmp25Result;
       obj2.children = items15;
-      let tmp25Result1 = tmp25(tmp23, obj2);
+      let tmp25Result1 = closure_17(tmp23, obj2);
     } else {
       tmp25Result1 = null;
     }
     obj1.children = tmp25Result1;
     threadData.children = closure_16(id, obj1);
-    tmp22Result = tmp22(tmp23, threadData);
+    tmp22Result = closure_16(tmp23, threadData);
   } else {
     tmp22Result = null;
   }

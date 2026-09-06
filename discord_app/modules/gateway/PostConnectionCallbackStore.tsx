@@ -5,7 +5,7 @@ import Dispatcher from "../../Dispatcher.tsx";
 
 function processCallbacks() {
   if (null == NewUserStore.getType()) {
-    let item = closure_2.forEach((item) => {
+    const item = closure_2.forEach((item) => {
       setImmediate(() => item());
     });
     closure_2 = [];

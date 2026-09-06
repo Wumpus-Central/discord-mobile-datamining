@@ -29,17 +29,17 @@ function Header(channelId) {
     const items = [headerWrapper.headerWrapper, gradientTop, , , ,];
     let prop;
     if (null != frame) {
-      prop = tmp.headerWithFadingFrame;
+      prop = headerWrapper.headerWithFadingFrame;
     }
     items[2] = prop;
     let splitDivider;
     if (null != frame) {
-      splitDivider = tmp.splitDivider;
+      splitDivider = headerWrapper.splitDivider;
     }
     items[3] = splitDivider;
     let splitDividerTop;
     if (null != frame) {
-      splitDividerTop = tmp.splitDividerTop;
+      splitDividerTop = headerWrapper.splitDividerTop;
     }
     items[4] = splitDividerTop;
     if (null != frame) {
@@ -104,12 +104,12 @@ function Header(channelId) {
         return closure_2_11(PressableNavigatorBackIcon.PressableNavigatorBackIcon, obj);
       },
     };
-    let tmp13Result = tmp11(tmp(tmp2[17]).ContextMenu, obj);
-    let tmp13 = tmp11;
+    let tmp13Result = closure_11(tmp(tmp2[17]).ContextMenu, obj);
+    let tmp13 = closure_11;
   } else {
     obj1 = { onPress };
-    tmp13Result = tmp11(tmp(tmp2[18]).PressableNavigatorBackIcon, obj1);
-    tmp13 = tmp11;
+    tmp13Result = closure_11(tmp(tmp2[18]).PressableNavigatorBackIcon, obj1);
+    tmp13 = closure_11;
   }
   obj2 = { style: memo, children: null };
   const items6 = [tmp13(navigation, { style: tmp4.headerBottomBorder })];
@@ -262,7 +262,7 @@ export default noop.memo(function StandaloneChannelScreen(arg0) {
     items[1] = splitDivider;
     return items;
   }, items1);
-  let tmp2Result = tmp2(13274);
+  let tmp2Result = channelId(13274);
   let tmp14 = !isChatLockedOpen;
   const isForumChannelSearchActive = tmp2Result.useIsForumChannelSearchActive(channelId);
   if (isChatLockedOpen) {
@@ -272,7 +272,7 @@ export default noop.memo(function StandaloneChannelScreen(arg0) {
     tmp14 = !isForumChannelSearchActive;
   }
   closure_6 = tmp14;
-  tmp2Result = tmp2(504);
+  tmp2Result = channelId(504);
   const items2 = [isChatBesideChannelList];
   const items3 = [channelId];
   const stateFromStores = tmp2Result.useStateFromStores(
@@ -293,25 +293,25 @@ export default noop.memo(function StandaloneChannelScreen(arg0) {
       const tmp35 = closure_11(Header, obj);
       if (channelId !== StaticChannelRoute.ROLE_SUBSCRIPTIONS) {
         if (!needSubscriptionToAccess) {
-          if (channelId === tmp36.GUILD_HOME) {
+          if (channelId === StaticChannelRoute.GUILD_HOME) {
             obj = { style: memo, children: null };
             const items4 = [tmp35];
             obj1 = { style: memo1, children: null };
             let tmp33Result = null;
             if (canSeeOnboardingHome) {
               obj2 = { guildId };
-              tmp33Result = tmp33(tmp5(16550), obj2);
+              tmp33Result = closure_11(frame(16550), obj2);
             }
             obj1.children = tmp33Result;
-            items4[1] = tmp33(closure_4, obj1);
+            items4[1] = closure_11(closure_4, obj1);
             obj.children = items4;
             return closure_12(closure_4, obj);
-          } else if (channelId === tmp36.MEMBER_SAFETY) {
+          } else if (channelId === StaticChannelRoute.MEMBER_SAFETY) {
             const obj3 = { guildId };
-            return tmp33(tmp5(16568), obj3);
-          } else if (channelId === tmp36.VIBEGRATIONS) {
+            return closure_11(frame(16568), obj3);
+          } else if (channelId === StaticChannelRoute.VIBEGRATIONS) {
             const obj4 = { guildId };
-            return tmp33(tmp5(16585), obj4);
+            return closure_11(frame(16585), obj4);
           } else {
             if (tmp17) {
               if (null != stateFromStores) {
@@ -319,8 +319,8 @@ export default noop.memo(function StandaloneChannelScreen(arg0) {
                 const items5 = [tmp35];
                 const obj6 = { style: memo1, children: null };
                 const obj7 = { channel: stateFromStores };
-                obj6.children = tmp33(tmp5(16613), obj7);
-                items5[1] = tmp33(closure_4, obj6);
+                obj6.children = closure_11(frame(16613), obj7);
+                items5[1] = closure_11(closure_4, obj6);
                 obj5.children = items5;
                 return closure_12(closure_4, obj5);
               }
@@ -329,21 +329,21 @@ export default noop.memo(function StandaloneChannelScreen(arg0) {
               const obj8 = { style: memo1, children: null };
               const items6 = [tmp35];
               const obj9 = { channelId, screenIndex };
-              items6[1] = tmp33(tmp2(16619).CreateThreadView, obj9);
+              items6[1] = closure_11(channelId(16619).CreateThreadView, obj9);
               obj8.children = items6;
-              return tmp18(closure_4, obj8);
+              return closure_12(closure_4, obj8);
             } else {
               const obj10 = { children: null };
               const items7 = [tmp35];
               const obj11 = { style: memo1, children: null };
               const obj12 = { guildId, channelId, chatInputRef: ref, screenIndex };
-              obj11.children = tmp33(tmp5(11340), obj12);
-              items7[1] = tmp33(closure_4, obj11);
+              obj11.children = closure_11(frame(11340), obj12);
+              items7[1] = closure_11(closure_4, obj11);
               obj10.children = items7;
-              const tmp18Result = tmp18(closure_13, obj10);
+              const tmp18Result = closure_12(closure_13, obj10);
               if (isSwipeToMemberListEnabled) {
                 const obj13 = { style: memo, channelId, screenIndex, isBackEnabled: tmp14, children: tmp18Result };
-                tmp33Result = tmp33(tmp5(16623), obj13);
+                tmp33Result = closure_11(frame(16623), obj13);
               } else {
                 const obj14 = {
                   style: memo,
@@ -355,7 +355,7 @@ export default noop.memo(function StandaloneChannelScreen(arg0) {
                   },
                   children: tmp18Result,
                 };
-                tmp33Result = tmp33(closure_4, obj14);
+                tmp33Result = closure_11(closure_4, obj14);
               }
               return tmp33Result;
             }
@@ -365,14 +365,14 @@ export default noop.memo(function StandaloneChannelScreen(arg0) {
       const obj15 = { style: memo, children: null };
       const items8 = [tmp35];
       const obj16 = { style: memo1, children: null };
-      const items9 = [closure_11(tmp5(5125), { absolute: true })];
+      const items9 = [closure_11(frame(5125), { absolute: true })];
       const obj17 = { guildId, gatedChannelId: null };
       let tmp32;
       if (needSubscriptionToAccess) {
         tmp32 = channelId;
       }
       obj17.gatedChannelId = tmp32;
-      items9[1] = closure_11(tmp5(16533), obj17);
+      items9[1] = closure_11(frame(16533), obj17);
       obj16.children = items9;
       items8[1] = closure_12(closure_4, obj16);
       obj15.children = items8;
@@ -383,9 +383,9 @@ export default noop.memo(function StandaloneChannelScreen(arg0) {
   const items10 = [memo, tmp.containerEmpty];
   obj18.style = items10;
   const obj19 = { title: null, body: null };
-  const intl = tmp2(1114).intl;
+  const intl = channelId(1114).intl;
   obj19.title = intl.string(channelId(1114).t.ai6Lbr);
-  const intl2 = tmp2(1114).intl;
+  const intl2 = channelId(1114).intl;
   obj19.body = intl2.string(channelId(1114).t["LTr+x9"]);
   obj18.children = closure_11(channelId(1178).EmptyState, obj19);
   return closure_11(closure_4, obj18);

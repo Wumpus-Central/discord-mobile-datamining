@@ -150,7 +150,7 @@ export default function UserProfileDismissibleUpsells(navigateToShop) {
           shiny: true,
         };
         obj6.children = React6(Button, obj7);
-        tmp12Result = tmp12(tmp16, obj6);
+        tmp12Result = React6(View, obj6);
         obj6 = [tmp12Result];
         const obj8 = { style: tmp12Result.upsellButton, children: null };
         Button = components_Button_Button.Button;
@@ -159,17 +159,17 @@ export default function UserProfileDismissibleUpsells(navigateToShop) {
         obj9.text = intl4.string(util.t.pWG4ze);
         obj9.onPress = onPress;
         ShopIcon = ShopIcon2.ShopIcon;
-        tmp = tmp12(ShopIcon, { size: "sm" });
+        tmp = React6(ShopIcon, { size: "sm" });
         obj9.icon = tmp;
-        tmp12Result = tmp12(Button, obj9);
+        tmp12Result = React6(Button, obj9);
         obj8.children = tmp12Result;
-        obj7 = tmp12(tmp16, obj8);
+        obj7 = React6(View, obj8);
         obj6[1] = obj7;
         obj5.children = obj6;
-        obj5 = tmp15(tmp16, obj5);
+        obj5 = React7(View, obj5);
         items1[1] = obj5;
         obj1.children = items1;
-        obj1 = tmp15(tmp16, obj1);
+        obj1 = React7(View, obj1);
         obj.children = obj1;
         React6(native.GradientBorder, obj);
       }

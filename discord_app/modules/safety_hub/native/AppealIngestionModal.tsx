@@ -280,18 +280,18 @@ export const AppealIngestionModalScreen = function AppealIngestionModalScreen(ch
   const items4 = [navigation, first];
   onPress = noop.useCallback(() => {
     if (first === constants.SPEED_BUMP) {
-      navigation.push(tmp2.COLLECT_SIGNAL);
-    } else if (tmp === tmp2.COLLECT_SIGNAL) {
-      navigation.push(tmp2.CONFIRM_SUBMISSION);
-    } else if (tmp === tmp2.CONFIRM_SUBMISSION) {
-      navigation.push(tmp2.REQUEST_SENT);
+      navigation.push(constants.COLLECT_SIGNAL);
+    } else if (first === constants.COLLECT_SIGNAL) {
+      navigation.push(constants.CONFIRM_SUBMISSION);
+    } else if (first === constants.CONFIRM_SUBMISSION) {
+      navigation.push(constants.REQUEST_SENT);
     } else {
       AppealIngestionModalActionCreatorsDefault.close();
     }
   }, items4);
   const items5 = [stateFromStores2, safetyHubAppealSignal, stateFromStores1, onPress];
   let string = noop.useCallback(
-    asyncGeneratorStep(async (arg0, value) => {
+    asyncGeneratorStep(async () => {
       if (c5 === 2) {
         c5 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -374,23 +374,23 @@ export const AppealIngestionModalScreen = function AppealIngestionModalScreen(ch
   if (tmp11) {
     items7[1] = tmp12;
     obj.children = items7;
-    items6[1] = tmp18(tmp19, obj);
+    items6[1] = closure_13(tmp19, obj);
     obj.children = items6;
-    return tmp18(tmp19, obj);
+    return closure_13(tmp19, obj);
   } else {
     obj2 = { bottom: true, style: footerText.footerButton, children: null };
     if (first === constants.CONFIRM_SUBMISSION) {
       obj3 = { variant: "text-xs/medium", color: "text-default", style: footerText.footerText, children: null };
       const intl4 = tmp(stringResult[19]).intl;
       obj3.children = intl4.string(tmp(stringResult[19]).t["d6qgY/"]);
-      const items8 = [tmp20(tmp(stringResult[10]).Text, obj3), ,];
+      const items8 = [closure_12(tmp(stringResult[10]).Text, obj3), ,];
       let tmp20Result = `` !== intl;
       if (tmp20Result) {
         obj4 = { variant: "text-xs/medium", color: "text-feedback-critical", style: null, children: null };
         footerText = footerText.footerText;
         obj4.style = footerText;
         obj4.children = intl;
-        tmp20Result = tmp20(tmp(stringResult[10]).Text, obj4);
+        tmp20Result = closure_12(tmp(stringResult[10]).Text, obj4);
       }
       obj5 = { children: null };
       items8[1] = tmp20Result;
@@ -401,23 +401,24 @@ export const AppealIngestionModalScreen = function AppealIngestionModalScreen(ch
       obj6.text = stringResult;
       obj6.loading = stateFromStores;
       obj6.disabled = stateFromStores;
-      items8[2] = tmp20(tmp(stringResult[20]).Button, obj6);
+      items8[2] = closure_12(tmp(stringResult[20]).Button, obj6);
       obj5.children = items8;
-      tmp20Result = tmp18(closure_14, obj5);
+      tmp20Result = closure_13(closure_14, obj5);
     } else {
       const obj7 = { onPress, text: null };
-      if (first !== tmp21.REQUEST_SENT) {
-        if (first !== tmp21.THANKS) {
+      if (first !== constants.REQUEST_SENT) {
+        if (first !== constants.THANKS) {
           const intl2 = tmp(stringResult[19]).intl;
           let stringResult1 = intl2.string(tmp(stringResult[19]).t.XiOHRX);
         }
         obj7.text = stringResult1;
-        tmp20Result = tmp20(tmp27, obj7);
+        tmp20Result = closure_12(tmp27, obj7);
       }
       const intl3 = tmp(stringResult[19]).intl;
       stringResult1 = intl3.string(tmp(stringResult[19]).t.i4jeWR);
     }
     obj2.children = tmp20Result;
-    tmp20(tmp(stringResult[18]).SafeAreaPaddingView, obj2);
+    closure_12(tmp(stringResult[18]).SafeAreaPaddingView, obj2);
   }
+  const tmp13 = first(noop.useState(""), 2);
 };

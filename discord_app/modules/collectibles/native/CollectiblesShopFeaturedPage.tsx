@@ -33,4 +33,5 @@ export default function _default(shopBlock) {
     body: null,
   });
   tmp6 = <View style={{ marginTop: 42 }} Illustration={generated_NoResults.NoResults} body={null} />;
+  const tmp = closure_6();
 }

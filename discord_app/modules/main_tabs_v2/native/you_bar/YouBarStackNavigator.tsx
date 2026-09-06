@@ -69,14 +69,14 @@ export default noop.memo(function YouBarStackNavigator() {
     let tmp3Result = null;
     if (iCYMIEnabled) {
       obj = {
-        name: tmp5.ICYMI,
+        name: YouBarNavigatorScreens.ICYMI,
         getComponent: getICYMIComponent,
         options() {
           const merged = Object.assign(accessibilityNativeStackOptions);
           return {};
         },
       };
-      tmp3Result = tmp3(tmp4.Screen, obj);
+      tmp3Result = React7(Screen.Screen, obj);
     }
     obj = { children: null };
     items[1] = tmp3Result;

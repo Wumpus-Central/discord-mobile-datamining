@@ -9,7 +9,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 import ChannelStore from "../../../../stores/ChannelStore.tsx";
 
 require = fn;
-let closure_13 = async function _sendGiftIntentGif(arg0, value) {
+let closure_13 = async function _sendGiftIntentGif(arg0) {
   if (1 === tmp5) {
     if (arg0 === 1) {
       c4 = 3;

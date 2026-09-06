@@ -39,11 +39,10 @@ function computeRolesForGuild(guildId) {
         const nextResult = iter.next();
         while (iter !== undefined) {
           let tmp15 = nextResult;
-          let tmp16 = require;
           let obj2 = PremiumRoleUtils;
           if (obj2.isSubscriptionRole(nextResult)) {
             let addResult = set.add(tmp15.id);
-            let tmp16Result = tmp16(4190);
+            let tmp16Result = PremiumRoleUtils;
             if (tmp16Result.isSubscriptionRoleAvailableForPurchase(tmp15)) {
               let addResult1 = set1.add(tmp15.id);
               if (set3.has(tmp15.id)) {
@@ -137,9 +136,8 @@ prototype["getGuildIdsWithPurchasableRoles"] = function getGuildIdsWithPurchasab
       set = new Set();
       for (const item10014 of guildsArray) {
         let features = item10014.features;
-        let tmp2 = item10014;
         if (features.has(constants.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE)) {
-          let addResult = set.add(tmp2.id);
+          let addResult = set.add(item10014.id);
         }
         continue;
       }

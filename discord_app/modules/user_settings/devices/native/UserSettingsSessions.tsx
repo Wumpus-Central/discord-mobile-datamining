@@ -39,25 +39,25 @@ function UserSettingsSessions() {
   } else {
     obj = { spacing: 24, style: tmp.list, children: null };
     obj1 = { title: null, hasIcons: true, children: null };
-    const intl5 = tmp2(1114).intl;
-    obj1.title = intl5.string(tmp2(1114).t.LLS19o);
+    const intl5 = otherSessions(1114).intl;
+    obj1.title = intl5.string(otherSessions(1114).t.LLS19o);
     let tmp21Result = null;
     if (null != currentSession) {
       const obj2 = { session: currentSession, current: true };
-      tmp21Result = tmp21(SessionInfo, obj2);
+      tmp21Result = closure_10(SessionInfo, obj2);
     }
     obj1.children = tmp21Result;
-    const items1 = [closure_10(tmp2(5687).TableRowGroup, obj1), ,];
+    const items1 = [closure_10(otherSessions(5687).TableRowGroup, obj1), ,];
     if (otherSessions.length > 0) {
       const obj3 = { title: null, hasIcons: true, children: null };
-      const intl = tmp2(1114).intl;
-      obj3.title = intl.string(tmp2(1114).t.xx1MWc);
+      const intl = otherSessions(1114).intl;
+      obj3.title = intl.string(otherSessions(1114).t.xx1MWc);
       const items2 = [
         otherSessions.map((session) => closure_1_10(SessionInfo, { session }, session.id_hash)),
-        tmp21(UnknownLegacySessionsInfo, {}),
+        closure_10(UnknownLegacySessionsInfo, {}),
       ];
       obj3.children = items2;
-      tmp20Result = tmp20(tmp2(5687).TableRowGroup, obj3);
+      tmp20Result = closure_11(otherSessions(5687).TableRowGroup, obj3);
     } else {
       let mfaEnabled;
       if (stateFromStores != null) {
@@ -69,23 +69,23 @@ function UserSettingsSessions() {
     tmp21Result = null;
     if (otherSessions.length > 0) {
       const obj4 = { start: true, end: true, variant: "danger", label: null, subLabel: null, onPress: null };
-      const intl2 = tmp2(1114).intl;
-      obj4.label = intl2.string(tmp2(1114).t.cLmmeY);
-      const intl3 = tmp2(1114).intl;
-      obj4.subLabel = intl3.string(tmp2(1114).t.OTXyaf);
+      const intl2 = otherSessions(1114).intl;
+      obj4.label = intl2.string(otherSessions(1114).t.cLmmeY);
+      const intl3 = otherSessions(1114).intl;
+      obj4.subLabel = intl3.string(otherSessions(1114).t.OTXyaf);
       obj4.onPress = function onPress() {
         return AuthSessionsActionCreators.logOutSessions(otherSessions.map((id_hash) => id_hash.id_hash));
       };
-      tmp21Result = tmp21(tmp2(5605).TableRow, obj4);
+      tmp21Result = closure_10(otherSessions(5605).TableRow, obj4);
     }
     items1[2] = tmp21Result;
     obj.children = items1;
-    tmp20Result = tmp20(tmp2(4973).Stack, obj);
+    tmp20Result = closure_11(otherSessions(4973).Stack, obj);
   }
   const obj5 = { style: tmp.container, children: null };
   const obj6 = { bottom: true, children: null };
   const obj7 = { variant: "text-sm/medium", style: tmp.description, children: null };
-  const intl4 = tmp2(1114).intl;
+  const intl4 = otherSessions(1114).intl;
   obj7.children = intl4.string(otherSessions(1114).t.zZp618);
   const items3 = [closure_10(otherSessions(4556).Text, obj7), tmp20Result];
   obj6.children = items3;
@@ -180,16 +180,16 @@ function SessionInfo(session) {
           style: tmp.sessionInfoRowSpacing,
           children: "\u00B7",
         };
-        const items2 = [tmp20(tmp9(4556).Text, obj7)];
+        const items2 = [closure_10(tmp9(4556).Text, obj7)];
         const obj8 = { variant: "text-md/semibold", children: found[1] };
-        items2[1] = tmp20(tmp9(4556).Text, obj8);
+        items2[1] = closure_10(tmp9(4556).Text, obj8);
         obj6.children = items2;
-        tmp22Result = tmp22(closure_12, obj6);
+        tmp22Result = closure_11(closure_12, obj6);
       }
       items1[1] = tmp22Result;
       obj4.children = items1;
       obj3.children = closure_11(closure_6, obj4);
-      let tmp20Result = tmp20(tmp21, obj3);
+      let tmp20Result = closure_10(closure_6, obj3);
       const obj9 = { icon: null, label: null, subLabel: null, trailing: null };
       const obj10 = { source: iconSource, IconComponent };
       obj9.icon = closure_10(tmp9(5605).TableRow.Icon, obj10);
@@ -198,8 +198,8 @@ function SessionInfo(session) {
       if (tmp20Result) {
         const obj11 = { style: tmp.sessionInfoRow, children: null };
         const obj12 = { variant: "text-xs/medium", color: "text-subtle", style: tmp.detailsText, children: _location };
-        obj11.children = tmp20(tmp9(4556).Text, obj12);
-        tmp20Result = tmp20(tmp21, obj11);
+        obj11.children = closure_10(tmp9(4556).Text, obj12);
+        tmp20Result = closure_10(closure_6, obj11);
       }
       const items3 = [tmp20Result];
       let tmp20Result1 = null != formatDateResult;
@@ -211,8 +211,8 @@ function SessionInfo(session) {
           style: tmp.detailsText,
           children: formatDateResult,
         };
-        obj13.children = tmp20(tmp9(4556).Text, obj14);
-        tmp20Result1 = tmp20(tmp21, obj13);
+        obj13.children = closure_10(tmp9(4556).Text, obj14);
+        tmp20Result1 = closure_10(closure_6, obj13);
       }
       const obj15 = { accessible: true, children: null };
       items3[1] = tmp20Result1;

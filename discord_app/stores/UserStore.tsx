@@ -4,6 +4,12 @@ import GlobalUtils from "../utils/GlobalUtils.tsx";
 import UserStoreUtils from "../modules/user/UserStoreUtils.tsx";
 import FlagUtilsAll from "../../discord_common/js/shared/utils/FlagUtils.tsx";
 import PrimaryGuildUtils from "../modules/guild_tag/PrimaryGuildUtils.tsx";
+import DisplayNameStylesUtils from "../modules/display_name_styles/DisplayNameStylesUtils.tsx";
+import CustomTypingIndicatorTypes from "../modules/custom_typing_indicator/CustomTypingIndicatorTypes.tsx";
+import PremiumStateUtils from "../modules/premium/premium_state/PremiumStateUtils.tsx";
+import FamilyCenterModels from "../modules/parent_tools/FamilyCenterModels.tsx";
+import AvatarDecorationUtils from "../modules/collectibles/avatar_decorations/AvatarDecorationUtils.tsx";
+import mappers from "../modules/collectibles/utils/mappers.tsx";
 import isActivityParticipantValidGuildMemberDefault from "../modules/activities/isActivityParticipantValidGuildMember.tsx";
 import Server from "../flow/Server.tsx";
 import OverridePremiumTypeStore from "../modules/premium/OverridePremiumTypeStore.tsx";
@@ -37,16 +43,15 @@ function mergeUserPrimaryGuild(id, primary_guild) {
     if (!result) {
       let flag = null == tmp2.primaryGuild || null != primary_guild.primary_guild;
       if (flag) {
-        tmp2.primaryGuild = tmp5(1387).ensureUserPrimaryGuild(primary_guild.primary_guild);
+        tmp2.primaryGuild = PrimaryGuildUtils.ensureUserPrimaryGuild(primary_guild.primary_guild);
         tmp[tmp2.id] = tmp2;
         closure_12 = closure_12 + 1;
         flag = true;
-        const tmp5Result = tmp5(1387);
+        const tmp5Result = PrimaryGuildUtils;
       }
       tmp8 = flag;
     }
     tmp3 = tmp8;
-    tmp5 = require;
   }
   return tmp3;
 }
@@ -91,14 +96,14 @@ function transformUser(mfa_enabled) {
   }
   const avatar_decoration_data = mfa_enabled.avatar_decoration_data;
   if (undefined !== avatar_decoration_data) {
-    let tmp4Result = tmp4(1881);
+    let tmp4Result = AvatarDecorationUtils;
     mfa_enabled.avatarDecorationData = tmp4Result.parseAvatarDecorationData(avatar_decoration_data);
     delete tmp[tmp3];
   }
   const collectibles = mfa_enabled.collectibles;
   if (undefined !== collectibles) {
     delete tmp[tmp3];
-    tmp4Result = tmp4(1882);
+    tmp4Result = mappers;
     mfa_enabled.collectibles = tmp4Result.parseServerUserCollectibles(collectibles);
   }
   const global_name = mfa_enabled.global_name;
@@ -108,30 +113,31 @@ function transformUser(mfa_enabled) {
   }
   const primary_guild = mfa_enabled.primary_guild;
   if (undefined !== primary_guild) {
-    mfa_enabled.primary_guild = tmp4(1387).ensureUserPrimaryGuild(primary_guild);
-    const tmp4Result1 = tmp4(1387);
+    mfa_enabled.primary_guild = PrimaryGuildUtils.ensureUserPrimaryGuild(primary_guild);
+    const tmp4Result1 = PrimaryGuildUtils;
   }
   const display_name_styles = mfa_enabled.display_name_styles;
   if (undefined !== display_name_styles) {
-    mfa_enabled.displayNameStyles = tmp4(1388).parseServerDisplayNameStyles(display_name_styles);
+    mfa_enabled.displayNameStyles = DisplayNameStylesUtils.parseServerDisplayNameStyles(display_name_styles);
     delete tmp[tmp3];
-    const tmp4Result2 = tmp4(1388);
+    const tmp4Result2 = DisplayNameStylesUtils;
   }
   const typing_indicator_style = mfa_enabled.typing_indicator_style;
   if (undefined !== typing_indicator_style) {
-    mfa_enabled.typingIndicatorStyle = tmp4(1392).parseServerTypingIndicatorStyle(typing_indicator_style);
+    mfa_enabled.typingIndicatorStyle =
+      CustomTypingIndicatorTypes.parseServerTypingIndicatorStyle(typing_indicator_style);
     delete tmp[tmp3];
-    const tmp4Result3 = tmp4(1392);
+    const tmp4Result3 = CustomTypingIndicatorTypes;
   }
   const premium_state = mfa_enabled.premium_state;
   if (undefined !== premium_state) {
-    mfa_enabled.premiumState = tmp4(1393).parseServerPremiumState(premium_state);
+    mfa_enabled.premiumState = PremiumStateUtils.parseServerPremiumState(premium_state);
     delete tmp[tmp3];
-    const tmp4Result4 = tmp4(1393);
+    const tmp4Result4 = PremiumStateUtils;
   }
   const restricted_schedule = mfa_enabled.restricted_schedule;
   if (undefined !== restricted_schedule) {
-    const RestrictedScheduleRecord = tmp4(1394).RestrictedScheduleRecord;
+    const RestrictedScheduleRecord = FamilyCenterModels.RestrictedScheduleRecord;
     let fromServerResult = RestrictedScheduleRecord.fromServer(restricted_schedule);
     if (fromServerResult == null) {
       fromServerResult = null;
@@ -179,10 +185,9 @@ function mergeUser(user, arg1) {
         if (isStaffEnvResult) {
           let perksActual = null;
           if (null !== OverridePremiumTypeStore.getPremiumTypeOverride()) {
-            perksActual = obj8.getPerksActual();
+            perksActual = OverridePremiumTypeStore.getPerksActual();
           }
           perks2 = perksActual;
-          obj8 = OverridePremiumTypeStore;
         }
         tmp28.perks = perks2;
         mergeResult = tmp28;
@@ -223,21 +228,19 @@ function mergeUser(user, arg1) {
         if (isStaffEnvRawDataResult1) {
           let perksActual1 = null;
           if (null !== OverridePremiumTypeStore.getPremiumTypeOverride()) {
-            perksActual1 = obj4.getPerksActual();
+            perksActual1 = OverridePremiumTypeStore.getPerksActual();
           }
           perks = perksActual1;
-          obj4 = OverridePremiumTypeStore;
         }
         user.perks = perks;
       }
       if (tmp16 !== true) {
         if (tmp17 !== true) {
           if (obj5.isUserPrimaryGuildEqual(obj.primaryGuild, user.primary_guild) !== true) {
-            user.primary_guild = tmp18(1387).ensureUserPrimaryGuild(user.primary_guild);
-            const tmp18Result = tmp18(1387);
+            user.primary_guild = PrimaryGuildUtils.ensureUserPrimaryGuild(user.primary_guild);
+            const tmp18Result = PrimaryGuildUtils;
           }
           obj5 = PrimaryGuildUtils;
-          tmp18 = require;
         }
         user.primary_guild = obj.primaryGuild;
         tmp17 = null != obj.primaryGuild && null == user.primary_guild;
@@ -398,7 +401,7 @@ function handleConnectionOpen(user) {
         } else {
           result = obj.addGuildAvatarHash(id, avatar);
         }
-        tmp[obj.id] = result;
+        dependencyMap[obj.id] = result;
         if (obj !== result) {
           closure_12 = closure_12 + 1;
         }
@@ -408,15 +411,13 @@ function handleConnectionOpen(user) {
         const result1 = PrimaryGuildUtils.isUserPrimaryGuildEqual(tmp4.primaryGuild, user.primary_guild);
         if (!result1) {
           if (tmp5) {
-            tmp4.primaryGuild = tmp7(tmp8[6]).ensureUserPrimaryGuild(user.primary_guild);
-            tmp[tmp4.id] = tmp4;
+            tmp4.primaryGuild = PrimaryGuildUtils.ensureUserPrimaryGuild(user.primary_guild);
+            dependencyMap[tmp4.id] = tmp4;
             closure_12 = closure_12 + 1;
-            const tmp7Result = tmp7(tmp8[6]);
+            const tmp7Result = PrimaryGuildUtils;
           }
           tmp5 = null == tmp4.primaryGuild || null != user.primary_guild;
         }
-        tmp7 = require;
-        tmp8 = dependencyMap;
       }
     });
   });
@@ -429,8 +430,9 @@ function handleConnectionOpen(user) {
       avatar: "c1f86b313385cb97985f1b118851c28c",
     };
     const tmp12 = new UserRecord(obj);
-    obj[id] = tmp12;
+    tmp6[id] = tmp12;
   }
+  tmp6 = obj;
 }
 function handleConnectionOpenSupplemental(arg0) {
   ({ guilds, lazyPrivateChannels } = arg0);
@@ -445,7 +447,7 @@ function handleConnectionOpenSupplemental(arg0) {
         } else {
           result = obj.addGuildAvatarHash(id, avatar);
         }
-        tmp[obj.id] = result;
+        dependencyMap[obj.id] = result;
         if (obj !== result) {
           closure_12 = closure_12 + 1;
         }
@@ -455,15 +457,13 @@ function handleConnectionOpenSupplemental(arg0) {
         const result1 = PrimaryGuildUtils.isUserPrimaryGuildEqual(tmp4.primaryGuild, user.primary_guild);
         if (!result1) {
           if (tmp5) {
-            tmp4.primaryGuild = tmp7(tmp8[6]).ensureUserPrimaryGuild(user.primary_guild);
-            tmp[tmp4.id] = tmp4;
+            tmp4.primaryGuild = PrimaryGuildUtils.ensureUserPrimaryGuild(user.primary_guild);
+            dependencyMap[tmp4.id] = tmp4;
             closure_12 = closure_12 + 1;
-            const tmp7Result = tmp7(tmp8[6]);
+            const tmp7Result = PrimaryGuildUtils;
           }
           tmp5 = null == tmp4.primaryGuild || null != user.primary_guild;
         }
-        tmp7 = require;
-        tmp8 = dependencyMap;
       }
     });
   });
@@ -489,7 +489,6 @@ function handleInitialize(users) {
     while (iter !== undefined) {
       let tmp5 = nextResult;
       let tmp7 = nextResult.id in obj;
-      let tmp6 = obj;
       if (tmp7) {
         tmp7 = isIncompleteUser(tmp5);
       }
@@ -497,7 +496,7 @@ function handleInitialize(users) {
         let tmp12 = new.target;
         let tmp13 = new.target;
         let tmp15 = new UserRecord(nextResult);
-        tmp6[tmp5.id] = tmp15;
+        obj[tmp5.id] = tmp15;
       }
       continue;
     }
@@ -603,6 +602,7 @@ function handleLoadSearchResults(data) {
           closure_1_17(type.recipient);
         }
       }
+      tmp2 = type.type !== constants.DM && type.type !== tmp.GROUP_DM;
     });
   });
   return false;
@@ -631,6 +631,7 @@ function handleLoadForumPosts(threads) {
     if (tmp5) {
       mergeUser(owner.user, true);
     }
+    tmp5 = null != owner && null != owner.user;
   });
 }
 function handleLoadMessageRequestsSupplementalDataSuccess(supplementalData) {
@@ -655,9 +656,9 @@ function handleFetchUsersForGuildEventSuccess(arg0) {
       if (null != avatar) {
         if (null != obj[user.id]) {
           if (null == avatar) {
-            let result = obj.removeGuildAvatarHash(tmp4);
+            let result = obj.removeGuildAvatarHash(require);
           } else {
-            result = obj.addGuildAvatarHash(tmp4, avatar);
+            result = obj.addGuildAvatarHash(require, avatar);
           }
           tmp5[obj.id] = result;
           if (obj !== result) {
@@ -692,13 +693,12 @@ function handleIncomingMessage(message) {
       let flag = null != obj3;
       if (flag) {
         id = AuthenticationStore.getId();
-        obj[id] = obj3.set("flags", tmp2(1384).setFlag(obj3.flags, constants.HAS_UNREAD_URGENT_MESSAGES, true));
+        obj[id] = obj3.set("flags", FlagUtilsAll.setFlag(obj3.flags, constants.HAS_UNREAD_URGENT_MESSAGES, true));
         flag = true;
-        const tmp2Result = tmp2(1384);
+        const tmp2Result = FlagUtilsAll;
       }
       return flag;
     }
-    tmp2 = importAll;
   }
   return false;
 }
@@ -1077,7 +1077,7 @@ function handleInitiateAgeVerification(arg0) {
     const obj2 = AuthenticationStore[AuthenticationStore.getId(AuthenticationStore)];
     let flag = null != obj2;
     if (flag) {
-      id = obj.getId();
+      id = AuthenticationStore.getId();
       AuthenticationStore[id] = obj2.set(
         "ageVerificationStatus",
         Server.AgeVerificationStatusUkAndAusOnly.CLIENT_ONLY_PENDING,
@@ -1093,7 +1093,7 @@ function handleCloseAgeVerificationModal(status) {
   if (tmp2) {
     let flag = obj2.ageVerificationStatus === Server.AgeVerificationStatusUkAndAusOnly.CLIENT_ONLY_PENDING;
     if (flag) {
-      id = obj.getId();
+      id = AuthenticationStore.getId();
       AuthenticationStore[id] = obj2.set("ageVerificationStatus", status.status);
       flag = true;
     }
@@ -1256,7 +1256,6 @@ prototype["handleLoadCache"] = function handleLoadCache(users) {
     while (iter !== undefined) {
       let tmp16 = nextResult;
       let tmp19 = nextResult.id in obj;
-      let tmp18 = obj;
       if (tmp19) {
         tmp19 = isIncompleteUser(tmp16);
       }
@@ -1264,7 +1263,7 @@ prototype["handleLoadCache"] = function handleLoadCache(users) {
         let tmp25 = new.target;
         let tmp26 = new.target;
         let tmp28 = new UserRecord(nextResult);
-        tmp18[tmp16.id] = tmp28;
+        obj[tmp16.id] = tmp28;
       }
       continue;
     }

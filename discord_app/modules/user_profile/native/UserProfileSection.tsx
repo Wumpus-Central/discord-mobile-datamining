@@ -1,7 +1,10 @@
 // discord_app/modules/user_profile/native/UserProfileSection.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import native from "../../../../discord_common/js/packages/design/native.tsx";
+import ColorUtils from "../../../utils/ColorUtils.tsx";
+import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import useProfileThemeValues from "../useProfileThemeValues.native.tsx";
+import FormDivider from "../../../design/void/Form/native/FormDivider.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -42,11 +45,11 @@ export default function UserProfileSection(title) {
   const merged1 = Object.assign(tmp2.contentContainer);
   if (null != primaryColor) {
     if (null != profileThemeValues) {
-      let borderColor = tmp3(4409).hexOpacityToRgba(
-        tmp3(8599).DIVIDER_COLORS[theme],
+      let borderColor = ColorUtils.hexOpacityToRgba(
+        FormDivider.DIVIDER_COLORS[theme],
         profileThemeValues.dividerOpacity,
       );
-      const tmp3Result = tmp3(4409);
+      const tmp3Result = ColorUtils;
     }
     obj.borderColor = borderColor;
     obj = { style: null };
@@ -58,11 +61,11 @@ export default function UserProfileSection(title) {
       obj1 = { style: tmp2.titleContainer, children: null };
       const obj2 = { style: tmp2.title, children: null };
       const obj3 = { variant: "eyebrow", accessibilityRole: "header", children: title };
-      const items1 = [React3(tmp3(4556).Text, obj3), headerIcon];
+      const items1 = [React3(Text_Text.Text, obj3), headerIcon];
       obj2.children = items1;
-      const items2 = [tmp8(tmp9, obj2), trailingIcon];
+      const items2 = [React4(View, obj2), trailingIcon];
       obj1.children = items2;
-      tmp8Result = tmp8(tmp9, obj1);
+      tmp8Result = React4(View, obj1);
     }
     const items3 = [tmp8Result];
     let tmp16 = null;

@@ -1,6 +1,8 @@
 // discord_app/modules/self_mod/stranger_danger/native/components/StrangerDangerMoreTipsModalActionItems.tsx
 import util from "../../../../../intl/index.native.tsx";
 import UserUtilsDefault from "../../../../../utils/UserUtils.tsx";
+import EyeSlashIcon2 from "../../../../../design/components/Icon/native/redesign/generated/EyeSlashIcon.tsx";
+import EyeIcon from "../../../../../design/components/Icon/native/redesign/generated/EyeIcon.tsx";
 import DenyIcon from "../../../../../design/components/Icon/native/redesign/generated/DenyIcon.tsx";
 import RelationshipActionCreatorsDefault from "../../../../../actions/RelationshipActionCreators.tsx";
 import SafetyWarningUtils from "../../../shared/SafetyWarningUtils.tsx";
@@ -90,9 +92,9 @@ export default function StrangerDangerMoreTipsModalActionItems(channelId) {
     obj.description = stringResult;
     obj.onClick = first ? callback1 : callback;
     if (first) {
-      let EyeSlashIcon = tmp11(6970).EyeIcon;
+      let EyeSlashIcon = EyeIcon.EyeIcon;
     } else {
-      EyeSlashIcon = tmp11(6968).EyeSlashIcon;
+      EyeSlashIcon = EyeSlashIcon2.EyeSlashIcon;
     }
     obj.icon = <EyeSlashIcon />;
     obj.disabled = isBlocked;

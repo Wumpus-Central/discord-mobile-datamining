@@ -23,9 +23,9 @@ prototype["fromServer"] = function fromServer(arg0) {
     sku_product_line = sku_product_line.sku_product_line;
     if (constants.COLLECTIBLES === sku_product_line) {
       return CollectiblesWishlistItemRecord.fromServer(sku_product_line);
-    } else if (tmp.SOCIAL_LAYER_GAME_ITEM === sku_product_line) {
+    } else if (constants.SOCIAL_LAYER_GAME_ITEM === sku_product_line) {
       return SKUWishlistItemRecord.fromServer(sku_product_line);
-    } else if (tmp.PREMIUM === sku_product_line) {
+    } else if (constants.PREMIUM === sku_product_line) {
       return PremiumWishlistItemRecord.fromServer(sku_product_line);
     } else {
       return BaseWishlistItemRecord.fromServer(sku_product_line);
@@ -40,7 +40,7 @@ prototype["fromServer"] = function fromServer(arg0) {
     mapped1 = applications.map((item) => ApplicationRecord.createFromServer(item));
   }
   obj.applications = mapped1;
-  if (typeof tmp4 === "function") {
+  if (typeof prototype === "function") {
     const tmp10 = new prototype(obj, merged1, merged, applications, user_id);
     ({ id: tmp10.id, userId: tmp10.userId, items: tmp10.items, applications } = obj);
     tmp10.applications = applications;
@@ -48,7 +48,6 @@ prototype["fromServer"] = function fromServer(arg0) {
   } else {
     throw new TypeError("Trying to call a non-function");
   }
-  tmp4 = prototype;
 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/wishlists/records/WishlistRecord.tsx");

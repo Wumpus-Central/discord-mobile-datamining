@@ -2,6 +2,7 @@
 import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../Dispatcher.tsx";
 import preloaded_user_settings from "../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
+import GlobalUtils from "../utils/GlobalUtils.tsx";
 import FavoritesUtils from "../modules/favorites/FavoritesUtils.tsx";
 import UserSettingsProtoStore from "../modules/user_settings/UserSettingsProtoStore.tsx";
 import ChannelStore from "ChannelStore.tsx";
@@ -158,6 +159,7 @@ const categoryCollapseStore = new CategoryCollapseStore(DispatcherDefault, {
       }
       continue;
     }
+    const set = new Set(mapped.filter(GlobalUtils.isNotNullish));
   },
   CATEGORY_COLLAPSE: function handleCategoryCollapse(id) {
     id = id.id;
@@ -217,6 +219,7 @@ const categoryCollapseStore = new CategoryCollapseStore(DispatcherDefault, {
           dependencyMap[channel.id] = true;
         }
       });
+      const arr = GuildChannelStore.getChannels(guildId)[ChannelTypes.GUILD_CATEGORY];
     }
     obj = FavoritesUtils;
   },
@@ -228,6 +231,7 @@ const categoryCollapseStore = new CategoryCollapseStore(DispatcherDefault, {
       const item = GuildChannelStore.getChannels(guildId)[ChannelTypes.GUILD_CATEGORY].forEach((item) => {
         delete tmp2[tmp];
       });
+      const arr = GuildChannelStore.getChannels(guildId)[ChannelTypes.GUILD_CATEGORY];
     }
     obj = FavoritesUtils;
   },

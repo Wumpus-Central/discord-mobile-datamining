@@ -1,13 +1,17 @@
 // discord_app/modules/chat_input/native/accessories/ChatInputSendUtils.tsx
 import util from "../../../../intl/index.native.tsx";
+import AnalyticsUtilsDefault from "../../../../utils/AnalyticsUtils.tsx";
 import PremiumUtilsDefault from "../../../../utils/PremiumUtils.tsx";
+import AlertActionCreatorsDefault from "../../../../actions/AlertActionCreators.tsx";
 import KestrelExperiment from "../../../media_uploads/experiments/KestrelExperiment.tsx";
+import AnalyticsLocationDefault from "../../../app_analytics/AnalyticsLocation.tsx";
 import MessageParserDefault from "../../../messages/MessageParser.tsx";
 import DraftActionCreatorsDefault from "../../../../actions/DraftActionCreators.tsx";
 import ForumPostMediaUtils from "../../../forums/ForumPostMediaUtils.tsx";
 import useMessageMaxLength from "../../../messages/useMessageMaxLength.tsx";
 import UploadAttachmentActionCreatorsDefault from "../../../../actions/UploadAttachmentActionCreators.tsx";
 import handleUploadAttachmentErrors from "../../../media_uploads/handleUploadAttachmentErrors.native.tsx";
+import PremiumUpsellUtilsDefault from "../../../../utils/native/PremiumUpsellUtils.tsx";
 import ChatRestrictions from "../../../../utils/ChatRestrictions.tsx";
 import ChatInputCommandOptionParser from "../ChatInputCommandOptionParser.tsx";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
@@ -169,10 +173,11 @@ function chatInputSendMessage(params) {
       }
       throw error;
     });
+    const sendMessageResult = tmp6Result3.sendMessage(id2, parsed, undefined, obj3);
   }
 }
-function chatInputValidateContentLength(arg0) {
-  ({ text, params } = arg0);
+function chatInputValidateContentLength(params) {
+  ({ text, params } = params);
   const current = params.chatInputRef.current;
   let applicationCommandManager;
   if (current != null) {
@@ -200,20 +205,20 @@ function chatInputValidateContentLength(arg0) {
   if (parsed.content.length <= obj2.getMaxMessageLength()) {
     return parsed;
   } else {
-    let tmp7Result = tmp7(4218);
+    let tmp7Result = PremiumUtilsDefault;
     if (tmp7Result.canUseIncreasedMessageLength(UserStore.getCurrentUser())) {
-      tmp7Result = tmp7(4904);
+      tmp7Result = AlertActionCreatorsDefault;
       obj = { title: null, body: null };
-      const intl = tmp10(1114).intl;
-      obj.title = intl.string(tmp10(1114).t.l8rYLt);
-      const intl2 = tmp10(1114).intl;
-      obj = { currentLength: length, maxLength: tmp10(9304).getMaxMessageLength() };
-      obj.body = intl2.formatToPlainString(tmp10(1114).t.FfjF15, obj);
+      const intl = util.intl;
+      obj.title = intl.string(util.t.l8rYLt);
+      const intl2 = util.intl;
+      obj = { currentLength: length, maxLength: useMessageMaxLength.getMaxMessageLength() };
+      obj.body = intl2.formatToPlainString(util.t.FfjF15, obj);
       tmp7Result.show(obj);
-      const tmp10Result = tmp10(9304);
+      const tmp10Result = useMessageMaxLength;
       obj1 = { type: "Message Too Long Alert iOS", message_content_length: length };
-      tmp7(1242).track(constants.OPEN_MODAL, obj1);
-      const tmp7Result1 = tmp7(1242);
+      AnalyticsUtilsDefault.track(constants.OPEN_MODAL, obj1);
+      const tmp7Result1 = AnalyticsUtilsDefault;
     } else {
       obj2 = {
         initialUpsellKey: constants3.LONGER_MESSAGE,
@@ -223,8 +228,8 @@ function chatInputValidateContentLength(arg0) {
       };
       const obj3 = { type: PremiumUpsellTypes.MESSAGE_LENGTH_UPSELL };
       obj2.analyticsProperties = obj3;
-      const result1 = tmp7(9313).handleShowUpsellAlert(obj2);
-      const tmp7Result2 = tmp7(9313);
+      const result1 = PremiumUpsellUtilsDefault.handleShowUpsellAlert(obj2);
+      const tmp7Result2 = PremiumUpsellUtilsDefault;
     }
   }
 }
@@ -235,7 +240,7 @@ function showFileSizeExceededAlert(c8, largestFileSize) {
   if (obj.canUploadLargeFiles(currentUser)) {
     let obj6 = require;
     const kestrelConfig = KestrelExperiment.getKestrelConfig({ location: "native.showFileSizeExceededAlert" });
-    let tmp2Result = tmp2(4904);
+    let tmp2Result = AlertActionCreatorsDefault;
     if (kestrelConfig.enabled) {
       if (!kestrelConfig.isGA) {
         const intl = obj6(1114).intl;
@@ -253,7 +258,7 @@ function showFileSizeExceededAlert(c8, largestFileSize) {
     const intl2 = obj6(1114).intl;
     stringResult = intl2.string(obj6(1114).t["/tGlcj"]);
   } else {
-    tmp2Result = tmp2(9313);
+    tmp2Result = PremiumUpsellUtilsDefault;
     const obj1 = {
       initialUpsellKey: constants3.UPLOAD,
       analyticsLocation: null,
@@ -263,7 +268,7 @@ function showFileSizeExceededAlert(c8, largestFileSize) {
     };
     const obj2 = { section: constants2.FILE_UPLOAD_POPOUT };
     obj1.analyticsLocation = obj2;
-    const items = [tmp2(7182).FILE_UPLOAD_POPOUT];
+    const items = [AnalyticsLocationDefault.FILE_UPLOAD_POPOUT];
     obj1.analyticsLocations = items;
     const obj3 = { type: PremiumUpsellTypes.UPLOAD_ERROR_UPSELL };
     obj1.analyticsProperties = obj3;
@@ -271,7 +276,7 @@ function showFileSizeExceededAlert(c8, largestFileSize) {
     const result = tmp2Result.handleShowUpsellAlert(obj1);
   }
 }
-let closure_18 = async function _chatInputSendApplicationCommand(arg0, value) {
+let closure_18 = async function _chatInputSendApplicationCommand(arg0) {
   const channel = params.channel;
   const chatInputRef = params.chatInputRef;
   const current = chatInputRef.current;
@@ -404,10 +409,10 @@ export const chatInputCreateThread = function chatInputCreateThread(text) {
       obj = { initialUpsellKey: constants3.LONGER_MESSAGE, analyticsProperties: null };
       obj = { type: PremiumUpsellTypes.MESSAGE_LENGTH_UPSELL };
       obj.analyticsProperties = obj;
-      const result = tmp2(9313).handleShowUpsellAlert(obj);
+      const result = PremiumUpsellUtilsDefault.handleShowUpsellAlert(obj);
+      const tmp2Result = PremiumUpsellUtilsDefault;
     }
     obj2 = PremiumUtilsDefault;
-    tmp2 = importDefault;
   }
   const result1 = text.threadCreationCallback(text);
 };

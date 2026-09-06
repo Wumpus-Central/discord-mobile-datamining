@@ -11,7 +11,7 @@ import RTCConnectionStore from "../../../stores/RTCConnectionStore.tsx";
 import AppStateStore from "../../../stores/native/AppStateStore.tsx";
 
 require = fn;
-let closure_11 = async function _handleIncomingURL(arg0, value) {
+let closure_11 = async function _handleIncomingURL(arg0) {
   if (c8 === 2) {
     c8 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");

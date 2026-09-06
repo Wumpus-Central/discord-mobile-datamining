@@ -9,7 +9,7 @@ import PresenceStore from "../../stores/PresenceStore.tsx";
 import RTCConnectionStore from "../../stores/RTCConnectionStore.tsx";
 
 const require = fn;
-function canFulfillStreamRequest(channel_id, flag, ApplicationStreamingStore, ChannelStore, PresenceStore) {
+function canFulfillStreamRequest(channel_id) {
   if (flag === undefined) {
     flag = false;
   }
@@ -47,7 +47,7 @@ function canFulfillStreamRequest(channel_id, flag, ApplicationStreamingStore, Ch
       id = application.id;
     }
     const obj6 = flag(id[9]);
-    DESKTOP = tmp16(tmp17[10]).isAndroid() ? tmp3.ANDROID : tmp3.IOS;
+    DESKTOP = tmp16(tmp17[10]).isAndroid() ? constants.ANDROID : constants.IOS;
     if (null == id) {
       const items1 = [false, obj.NOT_RUNNING_GAME];
       return items1;

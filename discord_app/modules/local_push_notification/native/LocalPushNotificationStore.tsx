@@ -44,6 +44,7 @@ const localPushNotificationStore = new LocalPushNotificationStore(DispatcherDefa
         const obj = closure_1_1(9687);
         const result1 = closure_1_1(9687).cancelLocalNotifications(userInfo);
         set.delete(userInfo);
+        const obj2 = closure_1_1(9687);
       });
     });
   },
@@ -57,9 +58,9 @@ const localPushNotificationStore = new LocalPushNotificationStore(DispatcherDefa
       if (!check.canChat) {
         if (guild.verificationLevel === VerificationLevels.MEDIUM) {
           const verificationLevel = guild.verificationLevel;
-          if (tmp2.MEDIUM === verificationLevel) {
+          if (VerificationLevels.MEDIUM === verificationLevel) {
             let obj = _modDef4153(check.accountDeadline);
-          } else if (tmp2.HIGH === verificationLevel) {
+          } else if (VerificationLevels.HIGH === verificationLevel) {
             obj = _modDef4153(check.memberDeadline);
           }
           if (null != obj) {
@@ -72,10 +73,9 @@ const localPushNotificationStore = new LocalPushNotificationStore(DispatcherDefa
               obj.alertTitle = guild.name;
               const intl = util.intl;
               obj.alertBody = intl.string(util.t["hrDBa+"]);
-              const result = tmp15(9687).scheduleLocalNotification(obj);
-              const tmp15Result = tmp15(9687);
+              const result = PushNotificationDefault.scheduleLocalNotification(obj);
+              const tmp15Result = PushNotificationDefault;
             }
-            tmp15 = importDefault;
           }
         }
       }

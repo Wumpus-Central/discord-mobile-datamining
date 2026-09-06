@@ -30,7 +30,7 @@ let result = size.fileFinishedImporting("modules/user_profile/native/ProfileGIFS
 
 export default function ProfileGIFSelectActionSheet(arg0) {
   ({ profileAssetType: require, selectionContext: importDefault, guildId: dependencyMap } = arg0);
-  closure_3 = async function _onPressGIF(arg0, value) {
+  closure_3 = async function _onPressGIF(arg0) {
     if (c5 === 2) {
       c5 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");

@@ -6,16 +6,16 @@ require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/regional_feature_config/RegionalFeatureConfigUtils.tsx");
 
-export const isFeatureAgeGated = function isFeatureAgeGated(arg0) {
-  return RegionalFeatureConfigStore.isFeatureAgeGated(arg0);
+export const isFeatureAgeGated = function isFeatureAgeGated(AGE_GATED_SPACES) {
+  return RegionalFeatureConfigStore.isFeatureAgeGated(AGE_GATED_SPACES);
 };
 export const useIsFeatureAgeGated = function useIsFeatureAgeGated(AGE_GATED_SPACES) {
   _require = AGE_GATED_SPACES;
   const items = [RegionalFeatureConfigStore];
   return require("initialize").useStateFromStores(items, () => RegionalFeatureConfigStore.isFeatureAgeGated(closure_0));
 };
-export const isSettingTeenByDefault = function isSettingTeenByDefault(arg0) {
-  return RegionalFeatureConfigStore.isSettingTeenByDefault(arg0);
+export const isSettingTeenByDefault = function isSettingTeenByDefault(GUILD_ACTIVITY_STATUS) {
+  return RegionalFeatureConfigStore.isSettingTeenByDefault(GUILD_ACTIVITY_STATUS);
 };
 export const useIsSettingTeenByDefault = function useIsSettingTeenByDefault(GUILD_ACTIVITY_STATUS) {
   _require = GUILD_ACTIVITY_STATUS;

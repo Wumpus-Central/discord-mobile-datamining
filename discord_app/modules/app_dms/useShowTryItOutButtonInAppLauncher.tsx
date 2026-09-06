@@ -1,9 +1,9 @@
 // discord_app/modules/app_dms/useShowTryItOutButtonInAppLauncher.tsx
+import canLaunchFrame from "../frames/utils/canLaunchFrame.tsx";
 import getPrimaryAppCommand from "../application_commands/getPrimaryAppCommand.tsx";
 import useIsAppDMDefault from "useIsAppDM.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
-const canLaunchFrame = tmp(9506);
 const result = size.fileFinishedImporting("modules/app_dms/useShowTryItOutButtonInAppLauncher.tsx");
 
 export default function useShowTryItOutButtonInAppLauncher(arg0) {

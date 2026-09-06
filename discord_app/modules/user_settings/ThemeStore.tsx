@@ -152,11 +152,10 @@ obj = {
       let flag = tmp7 !== closure_13;
       if (flag) {
         closure_13 = tmp7;
-        tmp2(14084)(closure_13);
+        updateBackgroundColorDefault(closure_13);
         flag = true;
       }
       tmp = flag;
-      tmp2 = importDefault;
     }
     return tmp;
   },

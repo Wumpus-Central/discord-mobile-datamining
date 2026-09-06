@@ -23,27 +23,28 @@ function computeThreadNotificationSetting(channel) {
     return ThreadMemberFlags.NO_MESSAGES;
   } else {
     if (obj6.hasFlag(flagsResult, ThreadMemberFlags.ALL_MESSAGES)) {
-      return tmp8.ALL_MESSAGES;
+      return ThreadMemberFlags.ALL_MESSAGES;
     } else {
-      let tmp6Result = tmp6(1384);
-      if (tmp6Result.hasFlag(flagsResult, tmp8.ONLY_MENTIONS)) {
-        return tmp8.ONLY_MENTIONS;
+      let tmp6Result = FlagUtils;
+      if (tmp6Result.hasFlag(flagsResult, ThreadMemberFlags.ONLY_MENTIONS)) {
+        return ThreadMemberFlags.ONLY_MENTIONS;
       } else {
-        tmp6Result = tmp6(1384);
-        if (tmp6Result.hasFlag(flagsResult, tmp8.NO_MESSAGES)) {
-          return tmp8.NO_MESSAGES;
+        tmp6Result = FlagUtils;
+        if (tmp6Result.hasFlag(flagsResult, ThreadMemberFlags.NO_MESSAGES)) {
+          return ThreadMemberFlags.NO_MESSAGES;
         } else {
           channel = obj3.getChannel(channel.parent_id);
           if (null == channel) {
-            return tmp8.NO_MESSAGES;
+            return ThreadMemberFlags.NO_MESSAGES;
           } else if (obj2.isGuildOrCategoryOrChannelMuted(channel.guild_id, channel.id)) {
-            return tmp8.NO_MESSAGES;
+            return ThreadMemberFlags.NO_MESSAGES;
           } else {
             const result = obj2.resolvedMessageNotifications(channel);
             if (result === UserNotificationSettings.NO_MESSAGES) {
-              let NO_MESSAGES = tmp8.NO_MESSAGES;
+              let NO_MESSAGES = ThreadMemberFlags.NO_MESSAGES;
             } else {
-              NO_MESSAGES = result === tmp4.ONLY_MENTIONS ? tmp8.ONLY_MENTIONS : tmp8.ALL_MESSAGES;
+              NO_MESSAGES =
+                result === tmp4.ONLY_MENTIONS ? ThreadMemberFlags.ONLY_MENTIONS : ThreadMemberFlags.ALL_MESSAGES;
             }
             return NO_MESSAGES;
           }

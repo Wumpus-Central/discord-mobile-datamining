@@ -126,7 +126,7 @@ export default function XboxLinkDiscordSuccess() {
   items3[1] = closure_13(first(navigation[12]).Text, obj7);
   if (first) {
     const obj8 = { source: tmp15(tmp3[15]), style: tmp.icon };
-    let tmp13Result = tmp13(closure_5, obj8);
+    let tmp13Result = closure_13(closure_5, obj8);
   } else {
     const obj9 = {
       source: tmp15(tmp3[17]),
@@ -134,7 +134,7 @@ export default function XboxLinkDiscordSuccess() {
       color: tmp.externalLinkIcon.color,
       style: tmp.icon,
     };
-    tmp13Result = tmp13(tmp2(tmp3[16]).Icon, obj9);
+    tmp13Result = closure_13(tmp2(tmp3[16]).Icon, obj9);
   }
   items3[2] = tmp13Result;
   obj4.children = items3;

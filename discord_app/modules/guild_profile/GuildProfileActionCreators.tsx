@@ -13,7 +13,8 @@ let closure_10 = async function _fetchGuildTopGames() {
   closure_2 = tmp2;
   closure_1 = tmp5;
   const HTTP = require("HTTPUtils").HTTP;
-  closure_129_0 = await HTTP.get({ url: closure_2_9.GUILD_TOP_GAMES(closure_0), rejectWithError: require("HTTPUtils").rejectWithMigratedError() });
+  await HTTP.get({ url: closure_2_9.GUILD_TOP_GAMES(closure_0), rejectWithError: require("HTTPUtils").rejectWithMigratedError() });
+  closure_129_0 = value;
   { url: React7.GUILD_TOP_GAMES(closure_0), rejectWithError: require("HTTPUtils").rejectWithMigratedError() };
   return closure_130_0(closure_130_2[7]).buildTopGamesFromServer(closure_129_0.body.top_games);
 };
@@ -23,7 +24,7 @@ const Constants = fn(1074);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_profile/GuildProfileActionCreators.tsx");
 
-export const getGuildProfile = function getGuildProfile(guildId, arg1) {
+export const getGuildProfile = function getGuildProfile(guildId, arg1, arg2) {
   _require = guildId;
   let obj = arg2;
   if (arg2 === undefined) {

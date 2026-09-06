@@ -31,8 +31,8 @@ export default function useScreenNameSharedValue() {
   const effect = noop.useEffect(() => {
     function handleStateChange() {
       if (null != rootNavigationRef) {
-        if (obj.isReady()) {
-          const currentRoute = obj.getCurrentRoute();
+        if (rootNavigationRef.isReady()) {
+          const currentRoute = rootNavigationRef.getCurrentRoute();
           let str;
           if (currentRoute != null) {
             str = currentRoute.name;

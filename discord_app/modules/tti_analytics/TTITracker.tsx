@@ -159,7 +159,8 @@ prototype["measureAsync"] = function measureAsync(arg0) {
       return v1(10).timeAsync(self.emoji, self.name, closure_0);
     }
     self.recordStart_();
-    closure_128_0 = await v1(10).timeAsync(self.emoji, self.name, closure_0);
+    await v1(10).timeAsync(self.emoji, self.name, closure_0);
+    closure_128_0 = value;
     closure_129_1.recordEnd_();
     loggerCallback();
     return closure_128_0;
@@ -178,7 +179,8 @@ prototype["measureAsyncWithoutNesting"] = function measureAsyncWithoutNesting(ar
     closure_128_0 = Date.now();
     const _HermesInternal2 = HermesInternal;
     v1(10).mark(self.emoji, "Start " + self.name);
-    closure_128_1 = await tmp2();
+    await tmp2();
+    closure_128_1 = value;
     const _HermesInternal = HermesInternal;
     const _Date = Date;
     const combined = "Finish " + closure_129_1.name;
@@ -213,7 +215,7 @@ Object.defineProperty(prototype2, "time", {
   },
   set: undefined,
 });
-prototype2["record"] = function record(timestamp) {
+prototype2["record"] = function record() {
   if (timestamp === undefined) {
     const _Date = Date;
     timestamp = Date.now();
@@ -330,7 +332,7 @@ const prototype4 = function TTITrackers() {
     merged1.emoji = "\u2757";
     merged1.name = "Load index.tsx";
     merged[0] = merged1;
-    if (typeof tmp === "function") {
+    if (typeof TTITimer === "function") {
       const merged2 = Object.assign({
         start_: 0,
         startNumImports: 0,
@@ -342,7 +344,7 @@ const prototype4 = function TTITrackers() {
       merged2.emoji = "\u{1F4BE}";
       merged2.name = "Load fast_connect native module";
       merged[1] = merged2;
-      if (typeof tmp === "function") {
+      if (typeof TTITimer === "function") {
         const merged3 = Object.assign({
           start_: 0,
           startNumImports: 0,
@@ -354,7 +356,7 @@ const prototype4 = function TTITrackers() {
         merged3.emoji = "\u{1F310}";
         merged3.name = "Fast Connect IDENTIFY";
         merged[2] = merged3;
-        if (typeof tmp === "function") {
+        if (typeof TTITimer === "function") {
           const merged4 = Object.assign({
             start_: 0,
             startNumImports: 0,
@@ -366,7 +368,7 @@ const prototype4 = function TTITrackers() {
           merged4.emoji = "\u{1F3C3}";
           merged4.name = "Load Imports";
           merged[3] = merged4;
-          if (typeof tmp === "function") {
+          if (typeof TTITimer === "function") {
             const merged5 = Object.assign({
               start_: 0,
               startNumImports: 0,
@@ -378,7 +380,7 @@ const prototype4 = function TTITrackers() {
             merged5.emoji = "\u{1F3C3}";
             merged5.name = "Initial Initialization";
             merged[4] = merged5;
-            if (typeof tmp === "function") {
+            if (typeof TTITimer === "function") {
               const merged6 = Object.assign({
                 start_: 0,
                 startNumImports: 0,
@@ -390,7 +392,7 @@ const prototype4 = function TTITrackers() {
               merged6.emoji = "\u{1F4BE}";
               merged6.name = "Load Storage";
               merged[5] = merged6;
-              if (typeof tmp === "function") {
+              if (typeof TTITimer === "function") {
                 const merged7 = Object.assign({
                   start_: 0,
                   startNumImports: 0,
@@ -402,7 +404,7 @@ const prototype4 = function TTITrackers() {
                 merged7.emoji = "\u{1F4BE}";
                 merged7.name = "Parse Storage";
                 merged[6] = merged7;
-                if (typeof tmp === "function") {
+                if (typeof TTITimer === "function") {
                   const merged8 = Object.assign({
                     start_: 0,
                     startNumImports: 0,
@@ -414,7 +416,7 @@ const prototype4 = function TTITrackers() {
                   merged8.emoji = "\u{1F4BE}";
                   merged8.name = "Load Mini Cache";
                   merged[7] = merged8;
-                  if (typeof tmp === "function") {
+                  if (typeof TTITimer === "function") {
                     const merged9 = Object.assign({
                       start_: 0,
                       startNumImports: 0,
@@ -426,7 +428,7 @@ const prototype4 = function TTITrackers() {
                     merged9.emoji = "\u{1F4BE}";
                     merged9.name = "Fetch Guild Cache";
                     merged[8] = merged9;
-                    if (typeof tmp === "function") {
+                    if (typeof TTITimer === "function") {
                       const merged10 = Object.assign({
                         start_: 0,
                         startNumImports: 0,
@@ -438,7 +440,7 @@ const prototype4 = function TTITrackers() {
                       merged10.emoji = "\u{1F4BE}";
                       merged10.name = "Fetch Initial Guild Channels Cache";
                       merged[9] = merged10;
-                      if (typeof tmp === "function") {
+                      if (typeof TTITimer === "function") {
                         const merged11 = Object.assign({
                           start_: 0,
                           startNumImports: 0,
@@ -457,35 +459,35 @@ const prototype4 = function TTITrackers() {
                           merged12.onlyOnce = false;
                           merged12.alwaysRecord = false;
                           merged[11] = merged12;
-                          if (typeof tmp24 === "function") {
+                          if (typeof TTIEvent === "function") {
                             const merged13 = Object.assign({ time_: 0, numImports: null, importTime: 0 });
                             merged13.emoji = "\u{1F3A8}";
                             merged13.name = "First React Render useEffect";
                             merged13.onlyOnce = false;
                             merged13.alwaysRecord = false;
                             merged[12] = merged13;
-                            if (typeof tmp24 === "function") {
+                            if (typeof TTIEvent === "function") {
                               const merged14 = Object.assign({ time_: 0, numImports: null, importTime: 0 });
                               merged14.emoji = "\u{1F3A8}";
                               merged14.name = "First Contentful Paint";
                               merged14.onlyOnce = false;
                               merged14.alwaysRecord = true;
                               merged[13] = merged14;
-                              if (typeof tmp24 === "function") {
+                              if (typeof TTIEvent === "function") {
                                 const merged15 = Object.assign({ time_: 0, numImports: null, importTime: 0 });
                                 merged15.emoji = "\u{1F3A8}";
                                 merged15.name = "React Render Messages";
                                 merged15.onlyOnce = true;
                                 merged15.alwaysRecord = false;
                                 merged[14] = merged15;
-                                if (typeof tmp24 === "function") {
+                                if (typeof TTIEvent === "function") {
                                   const merged16 = Object.assign({ time_: 0, numImports: null, importTime: 0 });
                                   merged16.emoji = "\u{1F3A8}";
                                   merged16.name = "React Render Cached Messages";
                                   merged16.onlyOnce = true;
                                   merged16.alwaysRecord = false;
                                   merged[15] = merged16;
-                                  if (typeof tmp === "function") {
+                                  if (typeof TTITimer === "function") {
                                     const merged17 = Object.assign({
                                       start_: 0,
                                       startNumImports: 0,
@@ -497,28 +499,28 @@ const prototype4 = function TTITrackers() {
                                     merged17.emoji = "\u{1F3A8}";
                                     merged17.name = "RowGenerator.generate()";
                                     merged[16] = merged17;
-                                    if (typeof tmp24 === "function") {
+                                    if (typeof TTIEvent === "function") {
                                       const merged18 = Object.assign({ time_: 0, numImports: null, importTime: 0 });
                                       merged18.emoji = "\u{1F5A5}\uFE0F";
                                       merged18.name = "Display Cached Messages";
                                       merged18.onlyOnce = false;
                                       merged18.alwaysRecord = true;
                                       merged[17] = merged18;
-                                      if (typeof tmp24 === "function") {
+                                      if (typeof TTIEvent === "function") {
                                         const merged19 = Object.assign({ time_: 0, numImports: null, importTime: 0 });
                                         merged19.emoji = "\u{1F3A8}";
                                         merged19.name = "First Render after Ready Payload";
                                         merged19.onlyOnce = true;
                                         merged19.alwaysRecord = false;
                                         merged[18] = merged19;
-                                        if (typeof tmp24 === "function") {
+                                        if (typeof TTIEvent === "function") {
                                           const merged20 = Object.assign({ time_: 0, numImports: null, importTime: 0 });
                                           merged20.emoji = "\u{1F3A8}";
                                           merged20.name = "React Render Latest Messages";
                                           merged20.onlyOnce = false;
                                           merged20.alwaysRecord = false;
                                           merged[19] = merged20;
-                                          if (typeof tmp24 === "function") {
+                                          if (typeof TTIEvent === "function") {
                                             const merged21 = Object.assign({
                                               time_: 0,
                                               numImports: null,
@@ -529,7 +531,7 @@ const prototype4 = function TTITrackers() {
                                             merged21.onlyOnce = false;
                                             merged21.alwaysRecord = false;
                                             merged[20] = merged21;
-                                            if (typeof tmp === "function") {
+                                            if (typeof TTITimer === "function") {
                                               const merged22 = Object.assign({
                                                 start_: 0,
                                                 startNumImports: 0,
@@ -541,7 +543,7 @@ const prototype4 = function TTITrackers() {
                                               merged22.emoji = "\u{1F310}";
                                               merged22.name = "Initial Guild";
                                               merged[21] = merged22;
-                                              if (typeof tmp === "function") {
+                                              if (typeof TTITimer === "function") {
                                                 const merged23 = Object.assign({
                                                   start_: 0,
                                                   startNumImports: 0,
@@ -553,7 +555,7 @@ const prototype4 = function TTITrackers() {
                                                 merged23.emoji = "\u{1F4BE}";
                                                 merged23.name = "Load Lazy Cache";
                                                 merged[22] = merged23;
-                                                if (typeof tmp === "function") {
+                                                if (typeof TTITimer === "function") {
                                                   const merged24 = Object.assign({
                                                     start_: 0,
                                                     startNumImports: 0,
@@ -565,7 +567,7 @@ const prototype4 = function TTITrackers() {
                                                   merged24.emoji = "\u{1F4BE}";
                                                   merged24.name = "Fetch Lazy Cache";
                                                   merged[23] = merged24;
-                                                  if (typeof tmp === "function") {
+                                                  if (typeof TTITimer === "function") {
                                                     const merged25 = Object.assign({
                                                       start_: 0,
                                                       startNumImports: 0,
@@ -577,7 +579,7 @@ const prototype4 = function TTITrackers() {
                                                     merged25.emoji = "\u{1F4BE}";
                                                     merged25.name = "Parse Lazy Cache";
                                                     merged[24] = merged25;
-                                                    if (typeof tmp === "function") {
+                                                    if (typeof TTITimer === "function") {
                                                       const merged26 = Object.assign({
                                                         start_: 0,
                                                         startNumImports: 0,
@@ -589,7 +591,7 @@ const prototype4 = function TTITrackers() {
                                                       merged26.emoji = "\u{1F4BE}";
                                                       merged26.name = "Fetch Stale Channels";
                                                       merged[25] = merged26;
-                                                      if (typeof tmp === "function") {
+                                                      if (typeof TTITimer === "function") {
                                                         const merged27 = Object.assign({
                                                           start_: 0,
                                                           startNumImports: 0,
@@ -601,7 +603,7 @@ const prototype4 = function TTITrackers() {
                                                         merged27.emoji = "\u{1F4BE}";
                                                         merged27.name = "Deserialize Cache";
                                                         merged[26] = merged27;
-                                                        if (typeof tmp === "function") {
+                                                        if (typeof TTITimer === "function") {
                                                           const merged28 = Object.assign({
                                                             start_: 0,
                                                             startNumImports: 0,
@@ -613,7 +615,7 @@ const prototype4 = function TTITrackers() {
                                                           merged28.emoji = "\u{1F4BE}";
                                                           merged28.name = "Dispatch Lazy Cache";
                                                           merged[27] = merged28;
-                                                          if (typeof tmp === "function") {
+                                                          if (typeof TTITimer === "function") {
                                                             const merged29 = Object.assign({
                                                               start_: 0,
                                                               startNumImports: 0,
@@ -625,7 +627,7 @@ const prototype4 = function TTITrackers() {
                                                             merged29.emoji = "\u{1F310}";
                                                             merged29.name = "Parse READY";
                                                             merged[28] = merged29;
-                                                            if (typeof tmp === "function") {
+                                                            if (typeof TTITimer === "function") {
                                                               const merged30 = Object.assign({
                                                                 start_: 0,
                                                                 startNumImports: 0,
@@ -637,7 +639,7 @@ const prototype4 = function TTITrackers() {
                                                               merged30.emoji = "\u{1F310}";
                                                               merged30.name = "READY";
                                                               merged[29] = merged30;
-                                                              if (typeof tmp === "function") {
+                                                              if (typeof TTITimer === "function") {
                                                                 const merged31 = Object.assign({
                                                                   start_: 0,
                                                                   startNumImports: 0,
@@ -649,7 +651,7 @@ const prototype4 = function TTITrackers() {
                                                                 merged31.emoji = "\u{1F310}";
                                                                 merged31.name = "Hydrate READY";
                                                                 merged[30] = merged31;
-                                                                if (typeof tmp === "function") {
+                                                                if (typeof TTITimer === "function") {
                                                                   const merged32 = Object.assign({
                                                                     start_: 0,
                                                                     startNumImports: 0,
@@ -661,7 +663,7 @@ const prototype4 = function TTITrackers() {
                                                                   merged32.emoji = "\u{1F310}";
                                                                   merged32.name = "Dispatch READY";
                                                                   merged[31] = merged32;
-                                                                  if (typeof tmp === "function") {
+                                                                  if (typeof TTITimer === "function") {
                                                                     const merged33 = Object.assign({
                                                                       start_: 0,
                                                                       startNumImports: 0,
@@ -673,7 +675,7 @@ const prototype4 = function TTITrackers() {
                                                                     merged33.emoji = "\u{1F310}";
                                                                     merged33.name = "Parse READY Supplemental";
                                                                     merged[32] = merged33;
-                                                                    if (typeof tmp === "function") {
+                                                                    if (typeof TTITimer === "function") {
                                                                       const merged34 = Object.assign({
                                                                         start_: 0,
                                                                         startNumImports: 0,
@@ -685,7 +687,7 @@ const prototype4 = function TTITrackers() {
                                                                       merged34.emoji = "\u{1F310}";
                                                                       merged34.name = "READY Supplemental";
                                                                       merged[33] = merged34;
-                                                                      if (typeof tmp === "function") {
+                                                                      if (typeof TTITimer === "function") {
                                                                         const merged35 = Object.assign({
                                                                           start_: 0,
                                                                           startNumImports: 0,
@@ -697,7 +699,7 @@ const prototype4 = function TTITrackers() {
                                                                         merged35.emoji = "\u{1F310}";
                                                                         merged35.name = "Hydrate READY Supplemental";
                                                                         merged[34] = merged35;
-                                                                        if (typeof tmp === "function") {
+                                                                        if (typeof TTITimer === "function") {
                                                                           const merged36 = Object.assign({
                                                                             start_: 0,
                                                                             startNumImports: 0,
@@ -709,7 +711,7 @@ const prototype4 = function TTITrackers() {
                                                                           merged36.emoji = "\u{1F310}";
                                                                           merged36.name = "Dispatch READY Supplemental";
                                                                           merged[35] = merged36;
-                                                                          if (typeof tmp === "function") {
+                                                                          if (typeof TTITimer === "function") {
                                                                             const merged37 = Object.assign({
                                                                               start_: 0,
                                                                               startNumImports: 0,
@@ -721,7 +723,7 @@ const prototype4 = function TTITrackers() {
                                                                             merged37.emoji = "\u{1F310}";
                                                                             merged37.name = "Fetch messages";
                                                                             merged[36] = merged37;
-                                                                            if (typeof tmp === "function") {
+                                                                            if (typeof TTITimer === "function") {
                                                                               const merged38 = Object.assign({
                                                                                 start_: 0,
                                                                                 startNumImports: 0,
@@ -747,26 +749,38 @@ const prototype4 = function TTITrackers() {
                                                                                   loadStorageStart: null,
                                                                                   loadStorageEnd: null,
                                                                                 };
-                                                                                if (typeof tmp79 === "function") {
+                                                                                if (
+                                                                                  typeof TTIImportEvent === "function"
+                                                                                ) {
                                                                                   obj.sentryEnd = Object.assign({
                                                                                     time_: 0,
                                                                                   });
-                                                                                  if (typeof tmp79 === "function") {
+                                                                                  if (
+                                                                                    typeof TTIImportEvent === "function"
+                                                                                  ) {
                                                                                     obj.appStateChangeStart =
                                                                                       Object.assign({ time_: 0 });
-                                                                                    if (typeof tmp79 === "function") {
+                                                                                    if (
+                                                                                      typeof TTIImportEvent ===
+                                                                                      "function"
+                                                                                    ) {
                                                                                       obj.appStateChangeEnd =
                                                                                         Object.assign({ time_: 0 });
-                                                                                      if (typeof tmp79 === "function") {
+                                                                                      if (
+                                                                                        typeof TTIImportEvent ===
+                                                                                        "function"
+                                                                                      ) {
                                                                                         obj.loadMiniCacheStart =
                                                                                           Object.assign({ time_: 0 });
                                                                                         if (
-                                                                                          typeof tmp79 === "function"
+                                                                                          typeof TTIImportEvent ===
+                                                                                          "function"
                                                                                         ) {
                                                                                           obj.loadStorageStart =
                                                                                             Object.assign({ time_: 0 });
                                                                                           if (
-                                                                                            typeof tmp79 === "function"
+                                                                                            typeof TTIImportEvent ===
+                                                                                            "function"
                                                                                           ) {
                                                                                             obj.loadStorageEnd =
                                                                                               Object.assign({
@@ -1203,9 +1217,9 @@ prototype5["serializeWebPerfStartupMetrics"] = function serializeWebPerfStartupM
   obj.time_first_render_after_ready_end = firstRenderAfterReadyPayload.serialize(arg0);
   return obj;
 };
-prototype5["serializeTTITracker"] = function serializeTTITracker(arg0) {
+prototype5["serializeTTITracker"] = function serializeTTITracker(appFirstVisibleTime) {
   const self = this;
-  const startTime = this.getStartTime(arg0);
+  const startTime = this.getStartTime(appFirstVisibleTime);
   const found = _mod12(AppStartPerformanceDefault.logGroups[0].logs).filter((log) => {
     log = log.log;
     return log.startsWith("Require ");

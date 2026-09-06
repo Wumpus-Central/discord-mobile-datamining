@@ -275,7 +275,7 @@ function ApplicationCommandOptionDescription(option) {
   let tmp15Result = null;
   if (tmp10 !== first1) {
     ({ descriptionEllipsis: obj6.style, descriptionEllipsisDots: obj6.dotStyle } = tmp);
-    tmp15Result = tmp15(DescriptionEllipsisDefault, { style: null, dotStyle: null });
+    tmp15Result = React6(DescriptionEllipsisDefault, { style: null, dotStyle: null });
     const obj3 = { style: null, dotStyle: null };
   }
   items2[1] = tmp15Result;
@@ -350,10 +350,10 @@ export default function _default(command) {
     if (null != dependencyMap) {
       let botId;
       if (section != null) {
-        botId = tmp2.botId;
+        botId = section.botId;
       }
       if (null != botId) {
-        return GuildMemberStore.getMember(tmp, tmp2.botId);
+        return GuildMemberStore.getMember(tmp, section.botId);
       }
     }
   });

@@ -54,12 +54,11 @@ export const useQualtricsResponseStore = module_560.create((arg0, arg1) => {
           const _Set = Set;
           set = new Set();
         }
-        const set1 = new Set(set);
         const item = closure_1.forEach((item) => set1.add(item));
         let obj = { displayedQuestions: null };
         obj = {};
         const merged = Object.assign(displayedQuestions.displayedQuestions);
-        obj[closure_0] = set1;
+        obj[closure_0] = new Set(set);
         obj.displayedQuestions = obj;
         return obj;
       });

@@ -30,6 +30,9 @@ const accountLinkStore = new AccountLinkStore(DispatcherDefault, {
       obj.accountLinkCallbacks = applicationId.accountLinkCallbacks;
       const result = map.set(applicationId.applicationId, obj);
     }
+    tmp =
+      null == AuthorizedAppsStore.getNewestTokenForApplication(applicationId.applicationId) &&
+      null != applicationId.accountLinkCallbacks;
   },
   ACCOUNT_LINK_DEVTOOLS_SET_GLOBALLY_DISBLED_FLOWS: function handleSetGloballyDisabledFlows(flows) {
     set = new Set(flows.flows);

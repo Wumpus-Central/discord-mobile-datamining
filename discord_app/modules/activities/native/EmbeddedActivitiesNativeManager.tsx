@@ -30,7 +30,7 @@ function postMessageToWebView() {
   }
   return applyArgumentsResult;
 }
-let closure_14 = async function _postMessageToWebView(arg0, arg1) {
+let closure_14 = async function _postMessageToWebView(arg0) {
   closure_2 = tmp3;
   await closure_2_11.injectJavaScript(getPostMessageJavaScriptDefault(closure_0));
   if (1 === tmp7) {
@@ -41,11 +41,11 @@ let closure_14 = async function _postMessageToWebView(arg0, arg1) {
     closure_130_1(closure_130_2[12]);
   } else if (arg0 === 1) {
     c6 = 3;
-    throw arg1;
+    throw value;
   } else if (arg0 !== 2) {
     c4 = 0;
   }
-  return arg1;
+  return value;
 };
 let closure_7 = fn(1920).DISALLOWED_NAVIGATION_ERROR_CLOSE_ACTIVITY;
 const Constants = fn(1074);
@@ -97,6 +97,7 @@ class EmbeddedActivitiesNativeManager extends tmp6 {
           obj = { location: connectedActivityLocation, applicationId: selfEmbeddedActivityForLocation.applicationId };
           self.leaveActivity(obj);
         }
+        tmp3 = null != selfEmbeddedActivityForLocation && null != connectedActivityLocation;
       });
     }
     self.lifecycleSubscription = addListenerResult;
@@ -204,19 +205,20 @@ class EmbeddedActivitiesNativeManager extends tmp6 {
       obj.media_session_id = mediaSessionId.getMediaSessionId();
       AnalyticsUtilsDefault.track(constants.ACTIVITY_DEVICE_THERMAL_STATE_CHANGED, obj);
       DispatcherDefault.dispatch({ type: "THERMAL_STATE_CHANGE", applicationId });
-      let tmp3Result = tmp3(tmp4[21]);
+      let tmp3Result = self(dependencyMap[21]);
       let tmp14 = null != compositeInstanceId;
       const thermalState = tmp3Result.getThermalState();
       if (tmp14) {
         tmp14 = null != applicationId;
       }
       if (tmp14) {
-        tmp14 = thermalState >= tmp3(tmp4[21]).ThermalStates.SERIOUS;
+        tmp14 = thermalState >= self(dependencyMap[21]).ThermalStates.SERIOUS;
       }
       if (tmp14) {
-        tmp3Result = tmp3(tmp4[22]);
+        tmp3Result = self(dependencyMap[22]);
         const respondToSeriousThermalState = tmp3Result.requestRespondToSeriousThermalState();
       }
+      const tmp9Result = DispatcherDefault;
     });
     return;
   }
@@ -290,6 +292,7 @@ prototype["leaveActivity"] = function leaveActivity(arg0) {
     }
     const result = self.clearEmbeddedActivityState(_location, applicationId, tmp5);
   }
+  releaseWebViewResult = this.releaseWebView();
 };
 prototype["hidePIPEmbed"] = function hidePIPEmbed(arg0) {
   if (arg0 == null) {

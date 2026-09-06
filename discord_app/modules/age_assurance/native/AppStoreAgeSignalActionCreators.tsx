@@ -12,7 +12,8 @@ let closure_5 = async function _requestAgeSignalChallenge() {
     rejectWithError: true,
     failImmediatelyWhenRateLimited: true,
   };
-  closure_128_0 = await HTTP.post(request);
+  await HTTP.post(request);
+  closure_128_0 = value;
   const body = closure_128_0.body;
   if (body != null) {
     const nonce = body.nonce;
@@ -25,7 +26,7 @@ let closure_5 = async function _requestAgeSignalChallenge() {
   }
   return tmp12;
 };
-let closure_6 = async function _submitAgeSignal(arg0, value) {
+let closure_6 = async function _submitAgeSignal(arg0) {
   if (c8 === 2) {
     c8 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");

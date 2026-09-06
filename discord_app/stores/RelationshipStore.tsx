@@ -35,23 +35,22 @@ function upsertRelationship(id, type) {
       const _Set = Set;
       const items = [id];
       set = new Set(items);
-      const result1 = obj3.set(type, set);
+      const result1 = map1.set(type, set);
     }
     if (value === RelationshipTypes.FRIEND) {
       set3.add("friends");
-    } else if (value === tmp13.BLOCKED) {
+    } else if (value === RelationshipTypes.BLOCKED) {
       set3.add("blocked");
       set3.add("ignored");
       set3.add("blockedOrIgnored");
     }
     if (type === RelationshipTypes.FRIEND) {
       set3.add("friends");
-    } else if (type === tmp13.BLOCKED) {
+    } else if (type === RelationshipTypes.BLOCKED) {
       set3.add("blocked");
       set3.add("ignored");
       set3.add("blockedOrIgnored");
     }
-    obj3 = map1;
   }
 }
 function removeRelationship(arg0) {
@@ -283,7 +282,7 @@ prototype["getFriendIDs"] = function getFriendIDs() {
     if (items == null) {
       items = [];
     }
-    tmp.friends = Array.from(items);
+    closure_19.friends = Array.from(items);
   }
   return closure_19.friends;
 };
@@ -293,7 +292,7 @@ prototype["getBlockedIDs"] = function getBlockedIDs() {
     if (items == null) {
       items = [];
     }
-    tmp.blocked = Array.from(items);
+    closure_19.blocked = Array.from(items);
   }
   return closure_19.blocked;
 };
@@ -301,7 +300,7 @@ prototype["getIgnoredIDs"] = function getIgnoredIDs() {
   const self = this;
   if (null == closure_19.ignored) {
     const _Array = Array;
-    tmp.ignored = Array.from(set1.values()).filter((item) => self.isIgnored(item));
+    closure_19.ignored = Array.from(set1.values()).filter((item) => self.isIgnored(item));
     const arr = Array.from(set1.values());
   }
   return closure_19.ignored;
@@ -370,14 +369,13 @@ obj = {
       if (id.user_ignored) {
         id = id.id;
         if (!set2.has(id)) {
-          obj.add(id);
+          set2.add(id);
           set4.add("ignored");
           set4.add("blockedOrIgnored");
         }
         if (id.type === constants.PENDING_INCOMING) {
           set3.add(id.id);
         }
-        obj = set2;
       }
     });
     flushStaleUserIdLists();
@@ -404,6 +402,7 @@ obj = {
     }
     flushStaleUserIdLists();
     recountPending();
+    tmp4 = arg0.relationships[Symbol.iterator]();
   },
   RELATIONSHIP_ADD: function handleRelationshipAdd(relationship) {
     value = map.get(relationship.relationship.id);
@@ -431,14 +430,14 @@ obj = {
       obj2 = obj1;
     }
     if (relationship.relationship.isSpamRequest) {
-      obj5.add(relationship.relationship.id);
+      set.add(relationship.relationship.id);
     } else {
-      obj5.delete(relationship.relationship.id);
+      set.delete(relationship.relationship.id);
     }
     const id = relationship.relationship.id;
     if (relationship.relationship.userIgnored) {
-      if (!obj6.has(id)) {
-        obj6.add(id);
+      if (!set1.has(id)) {
+        set1.add(id);
         set3.add("ignored");
         set3.add("blockedOrIgnored");
       }
@@ -448,7 +447,7 @@ obj = {
         set2.delete(relationship.relationship.id);
       }
     } else {
-      if (obj6.delete(id)) {
+      if (set1.delete(id)) {
         set3.add("ignored");
         set3.add("blockedOrIgnored");
       }
@@ -470,6 +469,7 @@ obj = {
       obj2 = { type: "FRIEND_REQUEST_ACCEPTED", user: relationship.relationship.user };
       DispatcherDefault.dispatch(obj2);
     }
+    tmp35 = relationship.relationship.type === RelationshipTypes.FRIEND && value === RelationshipTypes.PENDING_OUTGOING;
   },
   RELATIONSHIP_REMOVE: function handleRelationshipRemove(relationship) {
     const id = relationship.relationship.id;
@@ -541,13 +541,13 @@ obj = {
       const id = relationship.id;
       delete tmp2[tmp];
     } else {
-      obj[relationship.id] = relationship.since;
+      set[relationship.id] = relationship.since;
     }
     if (null == relationship.nickname) {
       const id2 = relationship.id;
       delete tmp2[tmp];
     } else {
-      obj[relationship.id] = relationship.nickname;
+      set[relationship.id] = relationship.nickname;
     }
     if (null == relationship.note) {
       const id3 = relationship.id;
@@ -556,9 +556,9 @@ obj = {
       obj1[relationship.id] = relationship.note;
     }
     if (relationship.isSpamRequest) {
-      obj.add(relationship.id);
+      set.add(relationship.id);
     } else {
-      obj.delete(relationship.id);
+      set.delete(relationship.id);
     }
     if (null != dependencyMap[relationship.id]) {
       const id4 = relationship.id;
@@ -568,12 +568,12 @@ obj = {
       const id5 = relationship.id;
       delete tmp3[tmp2];
     } else {
-      obj2[relationship.id] = relationship.originApplicationId;
+      set1[relationship.id] = relationship.originApplicationId;
     }
     const id6 = relationship.id;
     if (relationship.userIgnored) {
-      if (!obj2.has(id6)) {
-        obj2.add(id6);
+      if (!set1.has(id6)) {
+        set1.add(id6);
         set3.add("ignored");
         set3.add("blockedOrIgnored");
       }
@@ -581,7 +581,7 @@ obj = {
         set2.add(relationship.id);
       }
     } else {
-      if (obj2.delete(id6)) {
+      if (set1.delete(id6)) {
         set3.add("ignored");
         set3.add("blockedOrIgnored");
       }

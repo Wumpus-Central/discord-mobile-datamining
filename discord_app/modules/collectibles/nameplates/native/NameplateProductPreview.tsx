@@ -1,7 +1,9 @@
 // discord_app/modules/collectibles/nameplates/native/NameplateProductPreview.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import util from "../../../../intl/index.native.tsx";
 import native from "../../../../design/void/native.tsx";
 import utils from "../utils.tsx";
+import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import LinearGradientDefault from "../../../../../_runtime/04987_LinearGradient.js";
 import TableRow from "../../../../design/components/TableRow/native/TableRow.native.tsx";
 import useShopProductItems from "../../hooks/useShopProductItems.tsx";
@@ -121,9 +123,9 @@ export default function NameplateProductPreview(product) {
       accessible: true,
       children: null,
     };
-    const intl = tmp2(1114).intl;
+    const intl = util.intl;
     obj = { a11y_text: nameplateData.imgAlt };
-    obj.accessibilityLabel = intl.formatToPlainString(tmp2(1114).t.YJig7C, obj);
+    obj.accessibilityLabel = intl.formatToPlainString(util.t.YJig7C, obj);
     obj1 = { style: tmp.memberListContainer, children: null };
     obj2 = { user: nameplateSampleUsers.mallow, end: true };
     const items = [timestampProducer(PlaceholderUser, obj2), , , , , ,];
@@ -135,10 +137,10 @@ export default function NameplateProductPreview(product) {
       style: tmp.memberListTitle,
       children: null,
     };
-    const intl2 = tmp2(1114).intl;
-    const items1 = [intl2.string(tmp2(1114).t["yzW/fZ"]), " \u2014 3"];
+    const intl2 = util.intl;
+    const items1 = [intl2.string(util.t["yzW/fZ"]), " \u2014 3"];
     obj3.children = items1;
-    items[1] = React5(tmp2(4556).Text, obj3);
+    items[1] = React5(Text_Text.Text, obj3);
     const obj4 = { user: nameplateSampleUsers.phibi, start: true };
     items[2] = timestampProducer(PlaceholderUser, obj4);
     const obj5 = { previewNameplate: nameplateData, previewAvatarDecoration: firstAvatarDecoration };
@@ -153,10 +155,10 @@ export default function NameplateProductPreview(product) {
       style: tmp.memberListTitle,
       children: null,
     };
-    const intl3 = tmp2(1114).intl;
-    const items2 = [intl3.string(tmp2(1114).t["NG43/6"]), " \u2014 12"];
+    const intl3 = util.intl;
+    const items2 = [intl3.string(util.t["NG43/6"]), " \u2014 12"];
     obj7.children = items2;
-    items[5] = React5(tmp2(4556).Text, obj7);
+    items[5] = React5(Text_Text.Text, obj7);
     const obj8 = { user: nameplateSampleUsers.boom, start: true };
     items[6] = timestampProducer(PlaceholderUser, obj8);
     obj1.children = items;

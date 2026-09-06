@@ -170,8 +170,8 @@ prototype["dispatchKeyed"] = function dispatchKeyed(VOICE_MESSAGE_SEND, channelI
 prototype["subscribeKeyed"] = function subscribeKeyed(VOICE_MESSAGE_SEND, sharedValue1, callback) {
   return this.subscribe("" + VOICE_MESSAGE_SEND + "_" + sharedValue1, callback);
 };
-prototype["unsubscribeKeyed"] = function unsubscribeKeyed(VOICE_MESSAGE_SEND, arg1, arg2) {
-  return this.unsubscribe("" + VOICE_MESSAGE_SEND + "_" + arg1, arg2);
+prototype["unsubscribeKeyed"] = function unsubscribeKeyed(VOICE_MESSAGE_SEND, sharedValue1, callback) {
+  return this.unsubscribe("" + VOICE_MESSAGE_SEND + "_" + sharedValue1, callback);
 };
 
 export { ComponentDispatcher };

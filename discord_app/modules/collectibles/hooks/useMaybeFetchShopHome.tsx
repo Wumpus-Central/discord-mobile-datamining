@@ -19,8 +19,7 @@ export const useMaybeFetchCollectiblesShopHome = function useMaybeFetchCollectib
   _require = HOME;
   dependencyMap = arg1;
   _slicedToArray = memo;
-  let flag = arg3;
-  if (arg3 === undefined) {
+  if (flag === undefined) {
     flag = false;
   }
   let hasLoadedExperiments;
@@ -43,7 +42,7 @@ export const useMaybeFetchCollectiblesShopHome = function useMaybeFetchCollectib
         num = 0;
       }
       items[1] = num;
-      let num2 = obj.getLastErrorTimestamp(tmp);
+      let num2 = CollectiblesShopHomeStore.getLastErrorTimestamp(closure_0);
       if (num2 == null) {
         num2 = 0;
       }

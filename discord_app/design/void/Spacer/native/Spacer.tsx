@@ -12,5 +12,5 @@ let size = fn(2);
 const result = size.fileFinishedImporting("design/void/Spacer/native/Spacer.tsx");
 
 export default function Spacer(pointerEvents) {
-  return <View style={closure_2(arg0.size)} pointerEvents={arg0.pointerEvents} />;
+  return <View style={closure_2(pointerEvents.size)} pointerEvents={pointerEvents.pointerEvents} />;
 }

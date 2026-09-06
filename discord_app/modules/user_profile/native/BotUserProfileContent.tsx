@@ -68,7 +68,6 @@ export default noop.memo(function BotUserProfileContent(user) {
   }, items1);
   let tmp7Result = tmp7(tmp2[14]);
   const subscribeGuildMembers = tmp7Result.useSubscribeGuildMembers(memo, "BotUserProfileContent");
-  const tmp4 = ACTION_SHEET_MAX_WIDTH;
   const tmp6 = channel(trackUserProfileAction[8])({ scrollPosition, bannerHeight: tmp5 });
   const tmp16 = channel(trackUserProfileAction[16])(user.id);
   const tmp15 = channel(trackUserProfileAction[15])(displayProfile);
@@ -176,12 +175,17 @@ export default noop.memo(function BotUserProfileContent(user) {
       const items7 = [closure_9(tmpResult, obj9), ,];
       const obj10 = { user };
       items7[1] = closure_9(tmp(tmp2[31]), obj10);
-      const obj11 = { style: tmp3.primaryButtons, maxWidth: tmp4, primaryButton: null, secondaryButton: null };
+      const obj11 = {
+        style: tmp3.primaryButtons,
+        maxWidth: ACTION_SHEET_MAX_WIDTH,
+        primaryButton: null,
+        secondaryButton: null,
+      };
       let tmp37Result;
       if (null != application) {
         if (tmp7Result1.canInstallApplication(application)) {
           const obj12 = { application, botUserId: user.id, channel, guildId: guild_id };
-          tmp37Result = tmp37(tmp(tmp2[34]), obj12);
+          tmp37Result = closure_9(tmp(tmp2[34]), obj12);
           const tmpResult2 = tmp(tmp2[34]);
         }
         tmp7Result1 = tmp7(tmp2[33]);
@@ -225,13 +229,13 @@ export default noop.memo(function BotUserProfileContent(user) {
         items8[1] = obj16;
         const obj17 = { style: tmp3.cards, children: null };
         const obj18 = { user, currentUser: stateFromStores, guildId: guild_id, style: items8 };
-        const items9 = [tmp37(tmp(tmp2[40]), obj18), , ,];
+        const items9 = [closure_9(tmp(tmp2[40]), obj18), , ,];
         const obj19 = { userId: user.id, displayProfile, channel, style: items8 };
-        items9[1] = tmp37(tmp(tmp2[41]), obj19);
+        items9[1] = closure_9(tmp(tmp2[41]), obj19);
         tmp35Result = null != guild_id;
         if (tmp35Result) {
           const obj20 = { userId: user.id, guildId: guild_id, style: items8 };
-          const items10 = [tmp37(tmp(tmp2[42]), obj20)];
+          const items10 = [closure_9(tmp(tmp2[42]), obj20)];
           const obj21 = {
             user,
             currentUser: stateFromStores,
@@ -248,16 +252,16 @@ export default noop.memo(function BotUserProfileContent(user) {
           obj21.channelId = id1;
           obj21.showUserProfile = showUserProfileActionSheet;
           obj21.style = items8;
-          items10[1] = tmp37(tmp(tmp2[43]), obj21);
+          items10[1] = closure_9(tmp(tmp2[43]), obj21);
           obj22.children = items10;
-          tmp35Result = tmp35(tmp36, obj22);
+          tmp35Result = closure_10(closure_11, obj22);
           const tmpResult4 = tmp(tmp2[43]);
         }
         items9[2] = tmp35Result;
         const obj23 = { userId: user.id, style: items8, onBack: showUserProfileActionSheet };
-        items9[3] = tmp37(tmp(tmp2[44]), obj23);
+        items9[3] = closure_9(tmp(tmp2[44]), obj23);
         obj17.children = items9;
-        tmp35Result = tmp35(tmp22, obj17);
+        tmp35Result = closure_10(tmp22, obj17);
       }
       const obj24 = { children: null };
       items6[2] = tmp35Result;

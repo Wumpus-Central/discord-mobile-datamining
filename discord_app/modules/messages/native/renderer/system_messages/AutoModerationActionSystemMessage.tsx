@@ -1,11 +1,23 @@
 // discord_app/modules/messages/native/renderer/system_messages/AutoModerationActionSystemMessage.tsx
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import Constants from "../../../../../Constants.tsx";
+import util from "../../../../../intl/index.native.tsx";
+import AvatarUtils from "../../../../../utils/AvatarUtils.tsx";
+import utils_AvatarUtils from "../../../../../utils/native/AvatarUtils.tsx";
 import _modDef4153 from "../../../../../../_runtime/metro/04153__.js";
+import CommunicationDisabledUtils from "../../../../guild_communication_disabled/CommunicationDisabledUtils.tsx";
+import DateUtils from "../../../../../utils/DateUtils.tsx";
 import shared from "../../../../../design/shared.tsx";
+import useChannelName from "../../../../channel/useChannelName.tsx";
+import useMessageAuthor from "../../../useMessageAuthor.tsx";
 import _modDef6612 from "../../../../../../_runtime/metro/06612__.js";
+import RoleIconUtils from "../../../../guild_boosting/native/RoleIconUtils.tsx";
 import AutomodMessageUtils from "../../../../guild_automod/AutomodMessageUtils.tsx";
+import RowGeneratorStyleSheet from "../RowGeneratorStyleSheet.tsx";
 import createCommonMessageDefault from "createCommonMessage.tsx";
+import AutomodNotificationEmbedTypeKeys from "../../../../../../discord_common/js/shared/shared-constants/AutomodNotificationEmbedTypeKeys.tsx";
+import AutomodRaidAlertTypes from "../../../../../../discord_common/js/shared/shared-constants/AutomodRaidAlertTypes.tsx";
+import GuildAntiRaidUtils from "../../../../guild_antiraid/GuildAntiRaidUtils.tsx";
 import _modDef8019 from "../../../../../../_runtime/metro/08019__.js";
 import get_ActivityIndicator from "../../../../../../_runtime/metro/00017__.js";
 import ChannelStore from "../../../../../stores/ChannelStore.tsx";
@@ -16,18 +28,6 @@ import UserStore from "../../../../../stores/UserStore.tsx";
 import apply from "../../../../../../_runtime/metro/00012__.js";
 import size from "../../../../../../_runtime/metro/00002__.js";
 
-const util = tmp(1114);
-const AvatarUtils = tmp(1396);
-const utils_AvatarUtils = tmp(1399);
-const CommunicationDisabledUtils = tmp(4188);
-const DateUtils = tmp(4242);
-const useChannelName = tmp(4713);
-const useMessageAuthor = tmp(4793);
-const RoleIconUtils = tmp(7186);
-const RowGeneratorStyleSheet = tmp(7936);
-const AutomodNotificationEmbedTypeKeys = tmp(7991);
-const AutomodRaidAlertTypes = tmp(8014);
-const GuildAntiRaidUtils = tmp(8015);
 ({ processColor: c3, Image: closure_4 } = get_ActivityIndicator);
 const Permissions = Constants.Permissions;
 let closure_11 = apply.memoize((arg0) => {
@@ -283,7 +283,7 @@ export const createAutoModerationActionSystemMessage = function createAutoModera
       let intl9 = internal6.makeSource;
       obj5.headerIconURL = getRaidAlertResolveCTAText(intl9(importDefault(tmp42 ? 8018 : 6612))).uri;
       const tmpResult16 = RowGeneratorStyleSheet;
-      internal6 = tmp45(576).internal;
+      internal6 = nativeDefault.internal;
       obj5.headerIconColor = RowGeneratorStyleSheet.processColorOrThrow(
         internal6.resolveSemanticColor(theme, nativeDefault.colors.TEXT_FEEDBACK_CRITICAL),
       );
@@ -317,7 +317,6 @@ export const createAutoModerationActionSystemMessage = function createAutoModera
       obj8.authorId = author.id;
       const intl11 = util.intl;
       obj8.username = intl11.string(util.t.hG1StD);
-      const tmp57 = importDefault;
       const tmpResult20 = utils_AvatarUtils;
       const tmpResult21 = AvatarUtils;
       obj8.avatarURL = tmpResult20.ensureAvatarSource(
@@ -390,7 +389,7 @@ export const createAutoModerationActionSystemMessage = function createAutoModera
       obj11.username = messageAuthor.nick;
       let tmp66 = defaultUsernameColor;
       if ("username" === roleStyle) {
-        let tmp60Result = tmp60(colorString);
+        let tmp60Result = React3(colorString);
         if (tmp60Result == null) {
           tmp60Result = defaultUsernameColor;
         }
@@ -399,7 +398,7 @@ export const createAutoModerationActionSystemMessage = function createAutoModera
       obj11.usernameColor = tmp66;
       obj11.roleColor = React3(colorString);
       obj11.shouldShowRoleDot = "dot" === roleStyle && null != colorString;
-      tmp60Result = tmp60(colorString);
+      tmp60Result = React3(colorString);
       if (tmp60Result == null) {
         tmp60Result = defaultUsernameColor;
       }
@@ -424,7 +423,7 @@ export const createAutoModerationActionSystemMessage = function createAutoModera
       }
       obj9.reasonDisplayText = formatToPlainStringResult1;
       const tmpResult25 = DateUtils;
-      obj9.actionsIconURL = React4.resolveAssetSource(AvatarUtils.makeSource(tmp57(result1 ? 8020 : 8021))).uri;
+      obj9.actionsIconURL = React4.resolveAssetSource(AvatarUtils.makeSource(importDefault(result1 ? 8020 : 8021))).uri;
       const intl16 = util.intl;
       const string2 = intl16.string;
       const t3 = util.t;

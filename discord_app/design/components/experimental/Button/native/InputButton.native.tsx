@@ -101,4 +101,5 @@ export const InputButton = noop.forwardRef((size, ref) => {
     );
     return jsx(BaseTextButton.BaseTextButton, {});
   }
+  const tmp = undefined !== isRound && isRound;
 });

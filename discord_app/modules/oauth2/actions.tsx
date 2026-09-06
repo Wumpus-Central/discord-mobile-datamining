@@ -35,7 +35,7 @@ function getLocationContextServer() {
   obj.channel_type = type;
   return obj;
 }
-let closure_9 = async function _authorize(arg0, value) {
+let closure_9 = async function _authorize(arg0) {
   if (c4 === 2) {
     c4 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -179,7 +179,7 @@ let closure_9 = async function _authorize(arg0, value) {
     }
   }
 };
-let closure_10 = async function _fetchAuthorization(arg0, value) {
+let closure_10 = async function _fetchAuthorization(arg0) {
   if (c4 === 2) {
     c4 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -290,7 +290,7 @@ let closure_10 = async function _fetchAuthorization(arg0, value) {
     }
   }
 };
-let closure_11 = async function _startSamsungAuthorization(client_id, arg1, response_type, redirect_uri, state) {
+let closure_11 = async function _startSamsungAuthorization() {
   closure_1 = arg1;
   c6 = 0;
   c5 = 0;
@@ -354,10 +354,10 @@ let closure_11 = async function _startSamsungAuthorization(client_id, arg1, resp
     }
   })();
 };
-let closure_12 = async function _fetchChannels(guild_id) {
+let closure_12 = async function _fetchChannels() {
   c2 = 0;
   c1 = 0;
-  return (async (arg0, value) => {
+  return (async (arg0) => {
     const HTTP = HTTPUtils.HTTP;
     const request = {
       url: closure_2_7.OAUTH2_AUTHORIZE_WEBHOOK_CHANNELS,
@@ -369,10 +369,10 @@ let closure_12 = async function _fetchChannels(guild_id) {
     return value.body;
   })();
 };
-let closure_13 = async function _verifyUserCode(user_code) {
+let closure_13 = async function _verifyUserCode() {
   c2 = 0;
   c1 = 0;
-  return (async (arg0, value) => {
+  return (async (arg0) => {
     const HTTP = HTTPUtils.HTTP;
     const request = {
       url: OAUTH2_DEVICE_VERIFY.OAUTH2_DEVICE_VERIFY,
@@ -383,7 +383,7 @@ let closure_13 = async function _verifyUserCode(user_code) {
     return value;
   })();
 };
-let closure_14 = async function _finishUserCode(user_code, result) {
+let closure_14 = async function _finishUserCode() {
   c3 = 0;
   c2 = 0;
   return (async (arg0, value) => {
@@ -397,7 +397,7 @@ let closure_14 = async function _finishUserCode(user_code, result) {
     return value;
   })();
 };
-let closure_15 = async function _finishUserCodeTwoWayLinkError(user_code, error_code, error_source) {
+let closure_15 = async function _finishUserCodeTwoWayLinkError() {
   c4 = 0;
   c3 = 0;
   return (async (arg0, value, arg2) => {

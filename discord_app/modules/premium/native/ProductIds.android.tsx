@@ -350,18 +350,18 @@ export const DiscountIdToProductOfferId = {
   },
 };
 export const BOGO_OFFER_ID = "premium-tier-2-monthly-bogo";
-export const getProductIdForGift = function getProductIdForGift(arg0) {
-  if (SubscriptionPlans.PREMIUM_MONTH_TIER_0 === arg0) {
+export const getProductIdForGift = function getProductIdForGift(planIdForPremiumType) {
+  if (SubscriptionPlans.PREMIUM_MONTH_TIER_0 === planIdForPremiumType) {
     return frozen.PREMIUM_GIFT_MONTH_TIER_0;
-  } else if (tmp.PREMIUM_YEAR_TIER_0 === arg0) {
+  } else if (SubscriptionPlans.PREMIUM_YEAR_TIER_0 === planIdForPremiumType) {
     return frozen.PREMIUM_GIFT_YEAR_TIER_0;
-  } else if (tmp.PREMIUM_MONTH_TIER_1 === arg0) {
+  } else if (SubscriptionPlans.PREMIUM_MONTH_TIER_1 === planIdForPremiumType) {
     return frozen.PREMIUM_GIFT_MONTH_TIER_1;
-  } else if (tmp.PREMIUM_YEAR_TIER_1 === arg0) {
+  } else if (SubscriptionPlans.PREMIUM_YEAR_TIER_1 === planIdForPremiumType) {
     return frozen.PREMIUM_GIFT_YEAR_TIER_1;
-  } else if (tmp.PREMIUM_MONTH_TIER_2 === arg0) {
+  } else if (SubscriptionPlans.PREMIUM_MONTH_TIER_2 === planIdForPremiumType) {
     return frozen.PREMIUM_GIFT_MONTH_TIER_2;
-  } else if (tmp.PREMIUM_YEAR_TIER_2 === arg0) {
+  } else if (SubscriptionPlans.PREMIUM_YEAR_TIER_2 === planIdForPremiumType) {
     return frozen.PREMIUM_GIFT_YEAR_TIER_2;
   } else {
     const _Error = Error;
@@ -372,15 +372,15 @@ export const getProductIdForGift = function getProductIdForGift(arg0) {
 export const getPlanIdForGift = function getPlanIdForGift(arg0) {
   if (frozen.PREMIUM_GIFT_MONTH_TIER_0 === arg0) {
     return SubscriptionPlans.PREMIUM_MONTH_TIER_0;
-  } else if (tmp.PREMIUM_GIFT_YEAR_TIER_0 === arg0) {
+  } else if (frozen.PREMIUM_GIFT_YEAR_TIER_0 === arg0) {
     return SubscriptionPlans.PREMIUM_YEAR_TIER_0;
-  } else if (tmp.PREMIUM_GIFT_MONTH_TIER_1 === arg0) {
+  } else if (frozen.PREMIUM_GIFT_MONTH_TIER_1 === arg0) {
     return SubscriptionPlans.PREMIUM_MONTH_TIER_1;
-  } else if (tmp.PREMIUM_GIFT_YEAR_TIER_1 === arg0) {
+  } else if (frozen.PREMIUM_GIFT_YEAR_TIER_1 === arg0) {
     return SubscriptionPlans.PREMIUM_YEAR_TIER_1;
-  } else if (tmp.PREMIUM_GIFT_MONTH_TIER_2 === arg0) {
+  } else if (frozen.PREMIUM_GIFT_MONTH_TIER_2 === arg0) {
     return SubscriptionPlans.PREMIUM_MONTH_TIER_2;
-  } else if (tmp.PREMIUM_GIFT_YEAR_TIER_2 === arg0) {
+  } else if (frozen.PREMIUM_GIFT_YEAR_TIER_2 === arg0) {
     return SubscriptionPlans.PREMIUM_YEAR_TIER_2;
   } else {
     const _Error = Error;

@@ -1,5 +1,6 @@
 // discord_app/modules/voice_messages/native/VoiceMessagesPlaybackManager.tsx
 import DispatcherDefault from "../../../Dispatcher.tsx";
+import PlatformUtils from "../../../utils/PlatformUtils.tsx";
 import NativeDeviceAccessibilityModuleDefault from "../../../../discord_common/js/packages/rtn-codegen/js/NativeDeviceAccessibilityModule.tsx";
 import NativeAudioPlayerModuleDefault from "../../../../discord_common/js/packages/rtn-codegen/js/NativeAudioPlayerModule.tsx";
 import get_ActivityIndicator from "../../../../_runtime/metro/00017__.js";
@@ -42,6 +43,7 @@ class VoiceMessagesPlaybackManager extends tmp3 {
           DCDAudioPlayerManager.pauseCurrentPlayer(false);
         }
       }
+      obj = applyArgumentsResult(1115);
     };
     applyArgumentsResult.handleAppStateChanged = function handleAppStateChanged(state) {
       state = state.state;
@@ -50,7 +52,7 @@ class VoiceMessagesPlaybackManager extends tmp3 {
         applyArgumentsResult.appState = state;
         if ("active" === state) {
           if ("active" !== appState) {
-            let tmpResult = tmp(1115);
+            let tmpResult = PlatformUtils;
             if (tmpResult.isAndroid()) {
               const result = NativeAudioPlayerModuleDefault.maybePlayCurrentPlayer();
             } else {
@@ -62,7 +64,7 @@ class VoiceMessagesPlaybackManager extends tmp3 {
           }
         }
         if (tmp4) {
-          tmpResult = tmp(1115);
+          tmpResult = PlatformUtils;
           if (tmpResult.isAndroid()) {
             NativeAudioPlayerModuleDefault.pauseCurrentPlayer(true);
           } else {
@@ -74,6 +76,7 @@ class VoiceMessagesPlaybackManager extends tmp3 {
         }
         tmp4 = "active" !== state && "active" === appState;
       }
+      obj = PlatformUtils;
     };
     return applyArgumentsResult;
   }
@@ -113,6 +116,7 @@ export const pauseCurrentAudioPlayer = function pauseCurrentAudioPlayer(arg0) {
       DCDAudioPlayerManager.pauseCurrentPlayer(arg0);
     }
   }
+  obj = PlatformUtils;
 };
 export const playCurrentAudioPlayer = function playCurrentAudioPlayer() {
   if (obj.isAndroid()) {
@@ -123,6 +127,7 @@ export const playCurrentAudioPlayer = function playCurrentAudioPlayer() {
       const result1 = DCDAudioPlayerManager.maybePlayCurrentPlayer();
     }
   }
+  obj = PlatformUtils;
 };
 export const handleVoiceMessageDeleted = function handleVoiceMessageDeleted(id) {
   if (obj.isAndroid()) {
@@ -133,4 +138,5 @@ export const handleVoiceMessageDeleted = function handleVoiceMessageDeleted(id) 
       const result1 = DCDAudioPlayerManager.handleVoiceMessageDeleted(id);
     }
   }
+  obj = PlatformUtils;
 };

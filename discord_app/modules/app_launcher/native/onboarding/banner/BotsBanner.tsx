@@ -1,4 +1,5 @@
 // discord_app/modules/app_launcher/native/onboarding/banner/BotsBanner.tsx
+import util from "../../../../../intl/index.native.tsx";
 import BannerBaseDefault from "BannerBase.tsx";
 import useBannerBots from "../hooks/useBannerBots.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
@@ -17,9 +18,9 @@ export default function BotsBanner(context) {
     tmp4Result = null;
     if (null != secondBotApplication) {
       obj = { image: tmp6, text: null };
-      const intl = tmp(1114).intl;
+      const intl = util.intl;
       obj = { firstApplicationName: firstBotApplication.name, secondApplicationName: secondBotApplication.name };
-      obj.text = intl.formatToPlainString(tmp(1114).t["9SN0xw"], obj);
+      obj.text = intl.formatToPlainString(util.t["9SN0xw"], obj);
       tmp4Result = jsx(BannerBaseDefault, {
         firstApplicationName: firstBotApplication.name,
         secondApplicationName: secondBotApplication.name,

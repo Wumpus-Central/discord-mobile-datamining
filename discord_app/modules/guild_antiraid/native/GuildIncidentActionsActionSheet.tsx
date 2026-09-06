@@ -3,12 +3,12 @@ import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
 import ActionSheetActionCreators from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import GuildAntiRaidUtils from "../GuildAntiRaidUtils.tsx";
 import GuildAntiRaidActionCreators from "../GuildAntiRaidActionCreators.tsx";
+import GuildRaidLockdownFeedbackActionSheetDefault from "GuildRaidLockdownFeedbackActionSheet.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import GuildIncidentsStore from "../GuildIncidentsStore.tsx";
 
 const ActionSheetActionCreatorsDefault = ActionSheetActionCreators;
 
-const GuildRaidLockdownFeedbackActionSheetDefault = tmp7(11832);
 require = fn;
 function DurationSelectionActionSheet(onClose) {
   onClose = onClose.onClose;
@@ -212,9 +212,6 @@ class GuildIncidentActionsActionSheet {
           duration: null,
         };
         const obj3 = AnalyticsUtilsDefault;
-        const tmp3 = guild;
-        const tmp4 = pauseInvites;
-        const tmp5 = pauseDms;
         obj.intervention_type_enabled = GuildAntiRaidUtils.getEnabledInterventions(pauseInvites, pauseDms);
         obj.intervention_type_disabled = GuildAntiRaidUtils.getDisabledInterventions(pauseInvites, pauseDms);
         obj.duration = 60 * time;
@@ -224,14 +221,14 @@ class GuildIncidentActionsActionSheet {
           tmp11 = !c6;
         }
         if (!tmp11) {
-          tmp11 = tmp4;
+          tmp11 = pauseInvites;
         }
         if (!tmp11) {
-          tmp11 = tmp5;
+          tmp11 = pauseDms;
         }
         if (!tmp11) {
           obj = { content: null, key: "GuildRaidLockdownFeedbackActionSheet" };
-          obj1 = { guildId: tmp3.id };
+          obj1 = { guildId: guild.id };
           obj.content = closure_2_14(GuildRaidLockdownFeedbackActionSheetDefault, obj1);
           ActionSheetActionCreators.showActionSheet(obj);
           const tmpResult = ActionSheetActionCreators;

@@ -44,14 +44,14 @@ let closure_4 = async function _updatePermission(arg0, arg1, arg2, arg3) {
             closure_132_2 = closure_3;
             guildId = guildId.getGuildId();
             if (null != guildId) {
-              if (tmp22 === guildId) {
+              if (closure_1 === guildId) {
                 c6 = 1;
                 c7 = 1;
                 let obj1 = {
                   value: DefaultChannelThresholdUtils.checkChattableChannelThresholdMetAfterChannelPermissionDeny(
                     tmp21,
-                    tmp24,
-                    tmp23,
+                    closure_3,
+                    closure_2,
                   ),
                   done: false,
                 };
@@ -59,9 +59,6 @@ let closure_4 = async function _updatePermission(arg0, arg1, arg2, arg3) {
               }
             }
             tmp21 = guildId;
-            tmp22 = closure_1;
-            tmp23 = closure_2;
-            tmp24 = closure_3;
           }
         } else if (arg0 === 1) {
           c7 = 3;

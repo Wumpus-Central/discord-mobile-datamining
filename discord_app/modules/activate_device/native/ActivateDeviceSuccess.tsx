@@ -57,14 +57,14 @@ export const ActivateDeviceSuccess = function ActivateDeviceSuccess(onComplete) 
       style: ActivateDeviceSharedStylesDefault.centerText,
       children: stringResult,
     };
-    tmp18Result = tmp18(tmp19(4556).Text, obj1);
+    tmp18Result = React4(Text_Text.Text, obj1);
   }
   const obj2 = { children: null };
   items1[1] = tmp18Result;
   obj.children = items1;
   items[1] = hasOwnProperty(View, obj);
   const obj3 = { size: "lg", text: null, onPress: null, grow: true };
-  const intl4 = tmp19(1114).intl;
+  const intl4 = util.intl;
   obj3.text = intl4.string(util.t.cpT0Cq);
   obj3.onPress = onComplete.onComplete;
   items[2] = React4(components_Button_Button.Button, obj3);

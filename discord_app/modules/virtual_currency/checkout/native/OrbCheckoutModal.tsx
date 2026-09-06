@@ -18,7 +18,7 @@ function OrbCheckoutModalContent(orbBalance) {
   let tmp6 = null != orbRedemptionError;
   if (tmp6) {
     obj = { error: orbRedemptionError.message };
-    tmp6 = closure_1_11(tmp(13154).OrbCheckoutErrorCard, obj);
+    tmp6 = closure_1_11(OrbCheckoutModalComponents.OrbCheckoutErrorCard, obj);
   }
   const items = [tmp6, ,];
   if (product == null) {
@@ -80,9 +80,9 @@ function OrbCheckoutModalScreen(startTime) {
     };
     let tmp2 = null != closure_4;
     if (tmp2) {
-      const orbPriceAmount = tmp.orbPriceAmount;
+      const orbPriceAmount = closure_4.orbPriceAmount;
       obj = { price: orbPriceAmount, regular_price: null };
-      const orbPriceAmount2 = tmp.orbPriceAmount;
+      const orbPriceAmount2 = closure_4.orbPriceAmount;
       obj.regular_price = orbPriceAmount2;
       tmp2 = obj;
     }
@@ -99,22 +99,22 @@ function OrbCheckoutModalScreen(startTime) {
       obj.has_saved_payment_source = false;
       obj.continue_session_initial_step = null;
       const result = PaymentFlowStartedTriggerPoint.trackPaymentFlowStartedAnalyticsAndCTP(obj);
-    } else if (arg0 === tmp2.PAYMENT_FLOW_COMPLETED) {
+    } else if (arg0 === constants.PAYMENT_FLOW_COMPLETED) {
       obj = {};
       const merged1 = Object.assign(closure_1_5);
       obj.duration_ms = diff;
-      AnalyticsUtilsDefault.track(tmp2.PAYMENT_FLOW_COMPLETED, obj);
-    } else if (arg0 === tmp2.PAYMENT_FLOW_SUCCEEDED) {
+      AnalyticsUtilsDefault.track(constants.PAYMENT_FLOW_COMPLETED, obj);
+    } else if (arg0 === constants.PAYMENT_FLOW_SUCCEEDED) {
       const obj1 = {};
       const merged2 = Object.assign(closure_1_5);
       obj1.duration_ms = diff;
-      AnalyticsUtilsDefault.track(tmp2.PAYMENT_FLOW_SUCCEEDED, obj1);
-    } else if (arg0 === tmp2.PAYMENT_FLOW_CANCELED) {
+      AnalyticsUtilsDefault.track(constants.PAYMENT_FLOW_SUCCEEDED, obj1);
+    } else if (arg0 === constants.PAYMENT_FLOW_CANCELED) {
       let obj4 = AnalyticsUtilsDefault;
       const obj2 = {};
       const merged3 = Object.assign(closure_1_5);
       obj2.duration_ms = diff;
-      obj4.track(tmp2.PAYMENT_FLOW_CANCELED, obj2);
+      obj4.track(constants.PAYMENT_FLOW_CANCELED, obj2);
     } else {
       obj = AnalyticsUtilsDefault;
       const obj3 = {};
@@ -128,7 +128,7 @@ function OrbCheckoutModalScreen(startTime) {
         obj5 = {};
       }
       const merged5 = Object.assign(obj5);
-      obj.track(tmp2.PAYMENT_FLOW_FAILED, obj3);
+      obj.track(constants.PAYMENT_FLOW_FAILED, obj3);
     }
   }, items1);
   dependencyMap = tmp7;

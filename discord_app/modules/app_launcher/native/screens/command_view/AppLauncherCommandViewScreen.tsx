@@ -2,6 +2,7 @@
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../../intl/index.native.tsx";
 import native from "../../../../../design/void/native.tsx";
+import Server from "../../../../../flow/Server.tsx";
 import ReanimatedRexport from "../../../../reanimated/ReanimatedRexport.tsx";
 import HapticUtils from "../../../../haptics/HapticUtils.native.tsx";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
@@ -9,13 +10,16 @@ import timing from "../../../../../design/animation/reanimated/timing/timing.tsx
 import timingPresets from "../../../../../design/animation/reanimated/timing/timingPresets.tsx";
 import AppAnalyticsUtils from "../../../../app_analytics/AppAnalyticsUtils.tsx";
 import BaseTextButton from "../../../../../design/components/Button/native/BaseTextButton.native.tsx";
+import Upload from "../../../../../lib/uploader/Upload.tsx";
 import utils_UploadUtils from "../../../../../utils/native/UploadUtils.tsx";
 import ApplicationCommandUtils from "../../../../application_commands/ApplicationCommandUtils.tsx";
 import ApplicationCommandTypes from "../../../../application_commands/ApplicationCommandTypes.tsx";
+import AppLauncherUtils from "../../../utils/AppLauncherUtils.tsx";
 import AppLauncherTypes from "../../../AppLauncherTypes.tsx";
 import MediaKeyboardUtils from "../../../../media_keyboard/native/MediaKeyboardUtils.tsx";
 import showMediaKeyboardActionSheet from "../../../../media_keyboard/native/showMediaKeyboardActionSheet.tsx";
 import AppLauncherContext from "../../AppLauncherContext.tsx";
+import ApplicationCommandOptionValueParser from "../../../../chat_input/native/ApplicationCommandOptionValueParser.tsx";
 import AppLauncherNativeUtils from "../../AppLauncherNativeUtils.tsx";
 import _modDef12114 from "../../../../../../_runtime/metro/12114__.js";
 import _modDef12115 from "../../../../../../_runtime/metro/12115__.js";
@@ -384,9 +388,8 @@ function AppLauncherCommandViewInner(command) {
             current.scrollToEnd({ animated: true });
           }
         }
-        tmp5 = diff3 > 0 && obj2.get() > diff3;
+        tmp5 = diff3 > 0 && sharedValue1.get() > diff3;
       }
-      obj2 = sharedValue1;
     }
   }, items3);
   const items4 = [context.channel.guild_id, context.channel.id, first2];
@@ -523,18 +526,18 @@ function AppLauncherCommandViewInner(command) {
   callback3 = obj1.useCallback(() => {
     if (null != command) {
       const firstInvalidOption = application_commands_ApplicationCommandValidationUtils.getFirstInvalidOption(
-        tmp,
+        command,
         first2,
       );
       if (null != firstInvalidOption) {
         const _Set = Set;
         const _Object = Object;
-        const set = new Set(Object.keys(tmp16));
+        const set = new Set(Object.keys(first2));
         closure_36(set);
         callback1(firstInvalidOption);
-        let tmp14Result = tmp14(4740);
+        let tmp14Result = AppAnalyticsUtils;
         let obj = { application_id: null, command_id: null, argument_type: null, is_required: null };
-        ({ applicationId: obj2.application_id, rootCommand } = tmp);
+        ({ applicationId: obj2.application_id, rootCommand } = command);
         id = undefined;
         if (rootCommand != null) {
           id = rootCommand.id;
@@ -544,23 +547,27 @@ function AppLauncherCommandViewInner(command) {
         if (num == null) {
           num = 3;
         }
-        obj.argument_type = tmp14(1894).ApplicationCommandOptionType[num];
+        obj.argument_type = Server.ApplicationCommandOptionType[num];
         obj.is_required = firstInvalidOption.required;
         tmp14Result.trackWithMetadata(constants2.APPLICATION_COMMAND_VALIDATION_FAILED, obj);
       } else {
         closure_34(false);
         let result = sharedValue.set(true);
         closure_22.current = true;
-        tmp14Result = tmp14(9289);
+        tmp14Result = AppLauncherUtils;
         obj = {
-          command: tmp,
-          optionValues: tmp14(11993).parseOptionValuesForSend(commandContext.channel, tmp, optionValues.current),
+          command,
+          optionValues: ApplicationCommandOptionValueParser.parseOptionValuesForSend(
+            commandContext.channel,
+            command,
+            optionValues.current,
+          ),
           context: commandContext,
           sectionName,
-          commandOrigin: tmp14(7523).CommandOrigin.APP_LAUNCHER_APPLICATION_VIEW,
+          commandOrigin: ApplicationCommandTypes.CommandOrigin.APP_LAUNCHER_APPLICATION_VIEW,
         };
         const result1 = tmp14Result.executeAppLauncherCommand(obj);
-        const tmp14Result1 = tmp14(11993);
+        const tmp14Result1 = ApplicationCommandOptionValueParser;
         result1
           .then(() => {
             const result = command(sectionName[18]).triggerHapticFeedback(
@@ -597,14 +604,13 @@ function AppLauncherCommandViewInner(command) {
           }, 300);
         });
       }
-      tmp16 = first2;
     }
   }, items6);
   ref(true, true);
   ref(context, true, true);
   const items7 = [installOnDemand, command, context, callback3, sectionName, analyticsLocation, entrypoint];
   const callback4 = obj1.useCallback(
-    analyticsLocation(function* (arg0, value) {
+    analyticsLocation(function* () {
       if (c2 === 2) {
         c2 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -634,9 +640,9 @@ function AppLauncherCommandViewInner(command) {
                 return { value: "HermesInternal", done: null };
               } else {
                 const obj1 = {
-                  applicationId: tmp9.applicationId,
+                  applicationId: command.applicationId,
                   channel: context.channel,
-                  commandIntegrationTypes: tmp9.integration_types,
+                  commandIntegrationTypes: command.integration_types,
                   appLauncherContext: null,
                 };
                 const obj2 = { entrypoint, location: analyticsLocation, sectionName };
@@ -707,6 +713,7 @@ function AppLauncherCommandViewInner(command) {
     if (name.name === name) {
       setFocusedOption(null);
     }
+    const set = new Set(first3);
   }, items9);
   const items10 = [command];
   callback6 = obj1.useCallback((arg0) => {
@@ -727,12 +734,12 @@ function AppLauncherCommandViewInner(command) {
     if (option.type === command(sectionName[34]).ApplicationCommandOptionType.ATTACHMENT) {
       fileTypes = option.fileTypes;
     }
-    let tmpResult = tmp(tmp2[41]);
+    let tmpResult = command(sectionName[41]);
     const fileTypeFiltering = tmpResult.getFileTypeFiltering(fileTypes);
     const allowedExtensions = fileTypeFiltering.allowedExtensions;
     ({ validateFilenames: analyticsLocation, showInvalidFileTypeAlert: onCommandExecuted } = fileTypeFiltering);
     callback6(option);
-    tmpResult = tmp(tmp2[44]);
+    tmpResult = command(sectionName[44]);
     let result = tmpResult.dismissGlobalKeyboard();
     if (fileTypeFiltering.mediaFilesAllowed) {
       obj = {
@@ -825,19 +832,19 @@ function AppLauncherCommandViewInner(command) {
         const result = obj.hideMediaKeyboardActionSheet();
         const result1 = MediaKeyboardUtils.mediaNodeToUploadItem(item.item);
         if (allowedExtensions.length > 0) {
-          let tmpResult = tmp(5138);
+          let tmpResult = utils_UploadUtils;
           const items = [tmpResult.getFileFromUploadItem(result1).filename];
           if (!analyticsLocation(items)) {
             return onCommandExecuted();
           }
         }
-        tmpResult = tmp(10635);
+        tmpResult = MediaKeyboardUtils;
         const result2 = tmpResult.addAttachmentForCommand(
           item.channelId,
           chatInputRef,
           result1,
           obj,
-          tmp(5128).UploadOrigin.IMAGE_PICKER,
+          Upload.UploadOrigin.IMAGE_PICKER,
         );
       };
       obj.onViewAll = function onViewAll() {
@@ -887,11 +894,11 @@ function AppLauncherCommandViewInner(command) {
       obj.onBack = function onBack() {
         const result = FILE_ATTACHMENT(allowedExtensions[42]).hideMediaKeyboardActionSheet();
       };
-      let result1 = tmp(tmp2[42]).showMediaKeyboardActionSheet(obj);
-      const tmpResult1 = tmp(tmp2[42]);
+      let result1 = command(sectionName[42]).showMediaKeyboardActionSheet(obj);
+      const tmpResult1 = command(sectionName[42]);
     } else {
       obj = {};
-      FILE_ATTACHMENT = tmp(tmp2[45]).UploadOrigin.FILE_ATTACHMENT;
+      FILE_ATTACHMENT = command(sectionName[45]).UploadOrigin.FILE_ATTACHMENT;
       obj1 = {
         channel: obj.channel,
         uploadLimit: 1,
@@ -918,8 +925,8 @@ function AppLauncherCommandViewInner(command) {
         },
       };
       let merged = Object.assign(obj1);
-      tmp(tmp2[40]).handleAttachFile(obj);
-      const tmpResult2 = tmp(tmp2[40]);
+      command(sectionName[40]).handleAttachFile(obj);
+      const tmpResult2 = command(sectionName[40]);
     }
   }, items11);
   const tmp52 = context(sectionName[46])(() => {
@@ -982,12 +989,12 @@ function AppLauncherCommandViewInner(command) {
     closure_21.current = name.type;
     let applicationId;
     if (command != null) {
-      applicationId = tmp6.applicationId;
+      applicationId = command.applicationId;
     }
     obj = { application_id: applicationId, command_id: null, option_name: null, option_type: null };
     id = undefined;
     if (command != null) {
-      id = tmp6.id;
+      id = command.id;
     }
     obj.command_id = id;
     ({ name: obj4.option_name, type: obj4.option_type } = name);
@@ -1047,6 +1054,7 @@ function AppLauncherCommandViewInner(command) {
     obj.command_id = id;
     ({ name: obj3.option_name, type: obj3.option_type } = name);
     command(sectionName[25]).trackWithMetadata(prefilledOptions.APPLICATION_COMMAND_OPTIONAL_OPTION_REMOVED, obj);
+    const obj2 = command(sectionName[25]);
   }, items15);
   const callback10 = obj1.useCallback((nativeEvent) => closure_38(nativeEvent.nativeEvent.layout.height), []);
   let tmp70Result = first.length > 0;
@@ -1194,7 +1202,7 @@ function AppLauncherCommandViewInner(command) {
           const items = [optionalOptionsChild.optionalOptionsChild, ,];
           let optionalOptionsFirstChild = 0 === index;
           if (optionalOptionsFirstChild) {
-            optionalOptionsFirstChild = tmp3.optionalOptionsFirstChild;
+            optionalOptionsFirstChild = optionalOptionsChild.optionalOptionsFirstChild;
           }
           items[1] = optionalOptionsFirstChild;
           const obj = {
@@ -1398,7 +1406,7 @@ function AppLauncherCommandView(command) {
     if (command == null) {
       command3 = obj.command;
     }
-    bottomSheetExpandReasonRef = command(tmp[24]).useRequiredAppLauncherContext().bottomSheetExpandReasonRef;
+    bottomSheetExpandReasonRef = tmp16(tmp[24]).useRequiredAppLauncherContext().bottomSheetExpandReasonRef;
     let tmp29 = null != command3;
     if (tmp29) {
       let options = command3.options;
@@ -1463,6 +1471,9 @@ function AppLauncherCommandView(command) {
     hasPermission: false,
     loading: tmp8.fetchState.fetching || tmp7.fetchState.fetching,
   };
+  let obj3 = command(loading[58]);
+  tmp16 = command;
+  const tmp28 = tmp8.fetchState.fetching || tmp7.fetchState.fetching;
 }
 function LoadingState() {
   return closure_1_20(React5, {

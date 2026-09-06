@@ -19,16 +19,15 @@ const initialize = {
     if (null != arg0) {
       let gates = null;
       if (GuildConfigGatesStore.hasLoaded(arg0)) {
-        gates = obj.getGates(arg0);
+        gates = GuildConfigGatesStore.getGates(arg0);
       }
       tmp = gates;
-      obj = GuildConfigGatesStore;
     }
     return tmp;
   },
   load: null,
 };
-let closure_3 = asyncGeneratorStep(async (arg0, value) => {
+let closure_3 = asyncGeneratorStep(async (arg0) => {
   if (c6 === 2) {
     c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");

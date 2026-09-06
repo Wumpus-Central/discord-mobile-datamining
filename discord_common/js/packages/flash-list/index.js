@@ -22,7 +22,7 @@ const forwardRefResult = noop.forwardRef((arg0, ref) => {
 const forwardRefResult1 = noop.forwardRef((arg0, ref) => {
   maintainVisibleContentPosition = { maintainVisibleContentPosition, ref };
   const merged = Object.assign(arg0);
-  return <closure_8 maintainVisibleContentPosition={maintainVisibleContentPosition} ref={arg1} />;
+  return <closure_8 maintainVisibleContentPosition={maintainVisibleContentPosition} ref={ref} />;
 });
 let closure_9 = ReanimatedRexport.createAnimatedComponent(fn(6852).FlashList);
 const forwardRefResult2 = noop.forwardRef((arg0, ref) => {
@@ -38,10 +38,10 @@ const forwardRefResult3 = noop.forwardRef((arg0, ref) => {
   const memo = noop.useMemo(() => {
     let tmp2 = refreshControl;
     if (null == refreshControl) {
-      tmp2 = tmp;
+      tmp2 = refreshControl;
       if (true === preventNativeModalDismiss) {
         obj = PlatformUtils2;
-        tmp2 = tmp;
+        tmp2 = refreshControl;
         if (obj.isIOS()) {
           obj = { refreshing: false, onRefresh: noop, tintColor: "transparent" };
           tmp2 = <RefreshControl refreshing={false} onRefresh={noop} tintColor="transparent" />;
@@ -61,6 +61,38 @@ for (const key10063 in require("../../../../_runtime/metro/06852__.js")) {
   arg5[key10063] = require("../../../../_runtime/metro/06852__.js")[key10063];
   continue;
 }
+const forwardRefResult4 = noop.forwardRef((arg0, ref) => {
+  ({ preventNativeModalDismiss, refreshControl } = arg0);
+  const merged = Object.assign(arg0, Object.assign({ preventNativeModalDismiss: 0, refreshControl: 0 }));
+  const items = [preventNativeModalDismiss, refreshControl];
+  maintainVisibleContentPosition = { ref, maintainVisibleContentPosition, masonry: true, renderScrollComponent: null };
+  const memo = noop.useMemo(() => {
+    let tmp2 = refreshControl;
+    if (null == refreshControl) {
+      tmp2 = refreshControl;
+      if (true === preventNativeModalDismiss) {
+        obj = PlatformUtils2;
+        tmp2 = refreshControl;
+        if (obj.isIOS()) {
+          obj = { refreshing: false, onRefresh: noop, tintColor: "transparent" };
+          tmp2 = <RefreshControl refreshing={false} onRefresh={noop} tintColor="transparent" />;
+        }
+      }
+    }
+    return tmp2;
+  }, items);
+  maintainVisibleContentPosition.renderScrollComponent = preventNativeModalDismiss(6627).BottomSheetScrollView;
+  const merged1 = Object.assign(merged);
+  maintainVisibleContentPosition.refreshControl = memo;
+  return (
+    <closure_9
+      ref={ref}
+      maintainVisibleContentPosition={maintainVisibleContentPosition}
+      masonry
+      renderScrollComponent={null}
+    />
+  );
+});
 
 export { defaultMVCPConfig };
 export const FlashList = forwardRefResult;
@@ -75,10 +107,10 @@ export const BottomSheetMasonryFlashList = noop.forwardRef((arg0, ref) => {
   const memo = noop.useMemo(() => {
     let tmp2 = refreshControl;
     if (null == refreshControl) {
-      tmp2 = tmp;
+      tmp2 = refreshControl;
       if (true === preventNativeModalDismiss) {
         obj = PlatformUtils2;
-        tmp2 = tmp;
+        tmp2 = refreshControl;
         if (obj.isIOS()) {
           obj = { refreshing: false, onRefresh: noop, tintColor: "transparent" };
           tmp2 = <RefreshControl refreshing={false} onRefresh={noop} tintColor="transparent" />;
@@ -92,7 +124,7 @@ export const BottomSheetMasonryFlashList = noop.forwardRef((arg0, ref) => {
   maintainVisibleContentPosition.refreshControl = memo;
   return (
     <closure_9
-      ref={arg1}
+      ref={ref}
       maintainVisibleContentPosition={maintainVisibleContentPosition}
       masonry
       renderScrollComponent={null}

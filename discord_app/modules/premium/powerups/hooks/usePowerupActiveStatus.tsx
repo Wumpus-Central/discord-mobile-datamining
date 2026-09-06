@@ -102,7 +102,7 @@ export default function usePowerupActiveStatus(arg0, arg1) {
           obj = { type: constants.INACTIVE, powerup: skuId, sourceEntitlement: "r", sourcePowerup: "HermesInternal" };
           if (isActiveFromLevel) {
             const obj1 = {
-              type: tmp11.LEVEL_ACTIVATED,
+              type: constants.LEVEL_ACTIVATED,
               powerup: skuId,
               sourceEntitlement: levelEntitlement,
               sourcePowerup: levelPowerup,
@@ -110,7 +110,7 @@ export default function usePowerupActiveStatus(arg0, arg1) {
             obj = obj1;
           } else if (hasItem1) {
             const obj2 = {
-              type: tmp11.TIER_OVERRIDE_ACTIVATED,
+              type: constants.TIER_OVERRIDE_ACTIVATED,
               powerup: skuId,
               sourceEntitlement: "Array",
               sourcePowerup: skuId,
@@ -118,7 +118,7 @@ export default function usePowerupActiveStatus(arg0, arg1) {
             obj = obj2;
           } else if (null != tmp10) {
             const obj3 = {
-              type: tmp11.POWERUP_ACTIVATED,
+              type: constants.POWERUP_ACTIVATED,
               powerup: skuId,
               sourceEntitlement: tmp10,
               sourcePowerup: skuId,
@@ -222,7 +222,7 @@ export const usePowerupsActiveStatuses = function usePowerupsActiveStatuses(guil
           obj = { type: constants.INACTIVE, powerup: skuId, sourceEntitlement: "r", sourcePowerup: "HermesInternal" };
           if (isActiveFromLevel) {
             const obj1 = {
-              type: tmp11.LEVEL_ACTIVATED,
+              type: constants.LEVEL_ACTIVATED,
               powerup: skuId,
               sourceEntitlement: levelEntitlement,
               sourcePowerup: levelPowerup,
@@ -230,7 +230,7 @@ export const usePowerupsActiveStatuses = function usePowerupsActiveStatuses(guil
             obj = obj1;
           } else if (hasItem1) {
             const obj2 = {
-              type: tmp11.TIER_OVERRIDE_ACTIVATED,
+              type: constants.TIER_OVERRIDE_ACTIVATED,
               powerup: skuId,
               sourceEntitlement: "Array",
               sourcePowerup: skuId,
@@ -238,7 +238,7 @@ export const usePowerupsActiveStatuses = function usePowerupsActiveStatuses(guil
             obj = obj2;
           } else if (null != tmp10) {
             const obj3 = {
-              type: tmp11.POWERUP_ACTIVATED,
+              type: constants.POWERUP_ACTIVATED,
               powerup: skuId,
               sourceEntitlement: tmp10,
               sourcePowerup: skuId,

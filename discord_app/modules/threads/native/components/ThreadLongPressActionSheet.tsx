@@ -24,7 +24,7 @@ function ThreadLongPressActionSheetConnected(channel) {
   const onClose = channel.onClose;
   let items5;
   dependencyMap = channel.getGuildId();
-  const tmp = channel;
+  let tmp = channel;
   let obj = channel(504);
   const items = [GuildStore];
   const stateFromStores = obj.useStateFromStores(items, () => GuildStore.getGuild(closure_2));
@@ -286,6 +286,7 @@ function ThreadLongPressActionSheetConnected(channel) {
                 if (!tmp) {
                   onClose();
                 }
+                tmp = 0 !== items5.length || setting;
               }, items7);
               const obj14 = { header: null, children: null };
               const obj15 = { title: tmp15, icon: tmp19 };
@@ -386,6 +387,7 @@ function ThreadLongPressActionSheetConnected(channel) {
     obj.ack(channel.id, obj, true, true);
   };
   buttons10.push(obj21);
+  tmp17 = onClose(10974)(channel, "ThreadLongPressActionSheet");
 }
 const Constants = fn(1074);
 ({

@@ -17,14 +17,13 @@ function getMaxColors() {
   while (iter !== undefined) {
     let tmp3 = nextResult;
     let type = nextResult.type;
-    let tmp5 = require;
     if (ClientThemesTypes.ClientThemeType.STANDARD_BACKGROUND_THEME === type) {
       let _Math3 = Math;
       num = Math.max(1, num);
-    } else if (tmp5(1231).ClientThemeType.BACKGROUND_GRADIENT_PRESET === type) {
+    } else if (ClientThemesTypes.ClientThemeType.BACKGROUND_GRADIENT_PRESET === type) {
       let _Math2 = Math;
       num = Math.max(tmp3.colors.length, num);
-    } else if (tmp5(1231).ClientThemeType.CUSTOM_BACKGROUND_GRADIENT === type) {
+    } else if (ClientThemesTypes.ClientThemeType.CUSTOM_BACKGROUND_GRADIENT === type) {
       let _Math = Math;
       num = Math.max(tmp3.customThemeSettings.colors.length, num);
     }
@@ -50,9 +49,9 @@ function convertBackgroundGradientToAnimatedTheme(theme, prop, prop1) {
   const mapped = colors.map((stop) => {
     let tmp6 = utils_ColorDefault;
     if ("light" !== theme.theme) {
-      tmp6 = new tmp6(0, 0, 0, tmp3);
+      tmp6 = new tmp6(0, 0, 0, closure_1);
     } else {
-      tmp6 = new tmp6(255, 255, 255, tmp4);
+      tmp6 = new tmp6(255, 255, 255, closure_2);
     }
     let obj = ColorUtils;
     ({ r, g, b } = obj.hexToRgb(nativeDefault.unsafe_rawColors[stop.token]));
@@ -89,11 +88,11 @@ function convertStandardThemeToAnimatedTheme(theme, items, BACKGROUND_SURFACE_HI
   let str = "light";
   if (ThemeTypes.LIGHT !== theme) {
     str = "dark";
-    if (tmp.DARK !== theme) {
+    if (ThemeTypes.DARK !== theme) {
       str = "darker";
-      if (tmp.DARKER !== theme) {
+      if (ThemeTypes.DARKER !== theme) {
         str = "midnight";
-        if (tmp.MIDNIGHT !== theme) {
+        if (ThemeTypes.MIDNIGHT !== theme) {
           str = "light";
         }
       }
@@ -139,11 +138,11 @@ function convertCustomBackgroundGradientToAnimatedTheme(theme, prop, prop1) {
   const mapped = colors.map((item, index) => {
     let tmp7 = utils_ColorDefault;
     if ("light" !== theme.theme) {
-      tmp7 = new tmp7(0, 0, 0, tmp2);
-      let tmp12 = tmp5;
+      tmp7 = new tmp7(0, 0, 0, closure_1);
+      let tmp12 = importDefault;
     } else {
-      tmp7 = new tmp7(255, 255, 255, tmp3);
-      tmp12 = tmp5;
+      tmp7 = new tmp7(255, 255, 255, closure_2);
+      tmp12 = importDefault;
     }
     let obj = ColorUtils;
     ({ r, g, b } = obj.hexToRgb(item));
@@ -158,7 +157,7 @@ function convertCustomBackgroundGradientToAnimatedTheme(theme, prop, prop1) {
     obj.hex = tmp16Result.mixColors(tmp7, new tmp12(4410)(r, g, b, num8)).toHexString();
     let num9 = 0;
     if (theme.customThemeSettings.colors.length > 1) {
-      num9 = index * (100 / (tmp.customThemeSettings.colors.length - 1));
+      num9 = index * (100 / (theme.customThemeSettings.colors.length - 1));
     }
     obj.stop = num9;
     return obj;
@@ -183,13 +182,7 @@ const ThemeTypes = fn(1085).ThemeTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/appearance/native/SettingsAppearancePickerUtils.tsx");
 
-export const convertThemesToAnimatedThemes = function convertThemesToAnimatedThemes(
-  themes,
-  prop,
-  prop1,
-  memo,
-  BACKGROUND_SURFACE_HIGH,
-) {
+export const convertThemesToAnimatedThemes = function convertThemesToAnimatedThemes(themes) {
   let num = prop;
   if (prop === undefined) {
     num = 0.7;
@@ -211,12 +204,11 @@ export const convertThemesToAnimatedThemes = function convertThemesToAnimatedThe
   while (iter !== undefined) {
     let tmp5 = nextResult;
     let type = nextResult.type;
-    let tmp6 = require;
     if (ClientThemesTypes.ClientThemeType.STANDARD_BACKGROUND_THEME === type) {
       let arr = items1.push(convertStandardThemeToAnimatedTheme(tmp5, items, BACKGROUND_SURFACE_HIGH));
-    } else if (tmp6(1231).ClientThemeType.BACKGROUND_GRADIENT_PRESET === type) {
+    } else if (ClientThemesTypes.ClientThemeType.BACKGROUND_GRADIENT_PRESET === type) {
       arr = items1.push(convertBackgroundGradientToAnimatedTheme(tmp5, num, num2));
-    } else if (tmp6(1231).ClientThemeType.CUSTOM_BACKGROUND_GRADIENT === type) {
+    } else if (ClientThemesTypes.ClientThemeType.CUSTOM_BACKGROUND_GRADIENT === type) {
       let arr1 = items1.push(convertCustomBackgroundGradientToAnimatedTheme(tmp5, num, num2));
     }
     continue;

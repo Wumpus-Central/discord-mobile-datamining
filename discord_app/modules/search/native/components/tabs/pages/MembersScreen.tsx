@@ -54,8 +54,6 @@ function SearchableMembersScreen(searchContext) {
   obj = { placeholderHeight, numColumns: 1 };
   fullscreenPlaceholderCount = tmp4Result.useFullscreenPlaceholderCount(obj);
   const tmp = closure_21();
-  let tmp5 = SearchMemberTabStore;
-  let tmp7 = SearchQueryStore;
   const items4 = [callback];
   stateFromStores3 = searchContext(563).useStateFromStores(items4, () => {
     const guild = GuildStore.getGuild(guildId);
@@ -69,14 +67,14 @@ function SearchableMembersScreen(searchContext) {
   const items5 = [fullscreenPlaceholderCount];
   const stateFromStores4 = searchContext(563).useStateFromStores(items5, () => {
     if (first === EVERYONE_CHANNEL_ID) {
-      return tmp;
+      return first;
     } else {
-      const channel = ChannelStore.getChannel(tmp);
-      let tmp4 = tmp;
+      const channel = ChannelStore.getChannel(first);
+      let tmp4 = first;
       if (null != channel) {
-        let parent_id = tmp;
+        let parent_id = first;
         if (channel.isAnnouncementThread()) {
-          parent_id = tmp;
+          parent_id = first;
           if (null != channel.parent_id) {
             parent_id = channel.parent_id;
           }
@@ -113,7 +111,7 @@ function SearchableMembersScreen(searchContext) {
     callback(user.user, user.index);
   }, items8);
   const tmp4Result2 = searchContext(563);
-  const items9 = [tmp7];
+  const items9 = [SearchQueryStore];
   const items10 = [searchContext];
   stateFromStores5 = searchContext(563).useStateFromStores(
     items9,
@@ -121,7 +119,7 @@ function SearchableMembersScreen(searchContext) {
     items10,
   );
   const tmp4Result3 = searchContext(563);
-  const items11 = [tmp5];
+  const items11 = [SearchMemberTabStore];
   stateFromStores6 = searchContext(563).useStateFromStores(items11, () =>
     SearchMemberTabStore.getIsFetching(closure_3),
   );
@@ -207,16 +205,11 @@ function SearchableMembersScreen(searchContext) {
       items.push(element);
     });
     if (stateFromStores6) {
-      let num2 = 0;
-      if (0 < fullscreenPlaceholderCount) {
-        do {
-          let obj = { type: null, key: null };
-          obj.type = constants.GUILD_CHANNEL_MEMBER_PLACEHOLDER;
-          let _HermesInternal = HermesInternal;
-          obj.key = "guild-channel-member-placeholder-" + num2;
-          let arr = items.push(obj);
-          num2 = num2 + 1;
-        } while (num2 < fullscreenPlaceholderCount);
+      for (let num2 = 0; num2 < fullscreenPlaceholderCount; num2 = num2 + 1) {
+        let obj = { type: constants.GUILD_CHANNEL_MEMBER_PLACEHOLDER, key: null };
+        let _HermesInternal = HermesInternal;
+        obj.key = "guild-channel-member-placeholder-" + num2;
+        let arr = items.push(obj);
       }
     }
     return items;
@@ -285,11 +278,11 @@ function ThreadMembersScreen(searchContext) {
         items2,
       )
     ) {
-      obj = { channelId, guildId, onUserPress: searchContext(1874).dismissGlobalKeyboard, disableStickySections: true };
+      obj = { channelId, guildId, onUserPress: tmp(1874).dismissGlobalKeyboard, disableStickySections: true };
       let tmp7 = jsx(channelId(16686), {
         channelId,
         guildId,
-        onUserPress: searchContext(1874).dismissGlobalKeyboard,
+        onUserPress: tmp(1874).dismissGlobalKeyboard,
         disableStickySections: true,
       });
       const tmp6 = channelId(16686);
@@ -297,6 +290,8 @@ function ThreadMembersScreen(searchContext) {
     return tmp7;
   }
   tmp7 = <SearchableMembersScreen searchContext={searchContext} guildId={guildId} />;
+  obj2 = searchContext(563);
+  tmp = searchContext;
 }
 const View = fn(17).View;
 const EVERYONE_CHANNEL_ID = fn(7279).EVERYONE_CHANNEL_ID;
@@ -392,7 +387,12 @@ export default noop.memo(function MembersScreen(searchContext) {
         recipientLimit: tmp11,
         wrapperStyle: tmp.promoBanner,
       };
-      tmp21Result = tmp21(tmp2(16688), obj2);
+      tmp21Result = jsx(tmp2(16688), {
+        location: "GroupDMDetailsMembers",
+        memberCount: stateFromStores1,
+        recipientLimit: tmp11,
+        wrapperStyle: tmp.promoBanner,
+      });
     }
     obj1.listHeaderContent = tmp21Result;
     obj.children = jsx(tmp2(12186), {
@@ -404,13 +404,13 @@ export default noop.memo(function MembersScreen(searchContext) {
     });
     obj.children = <View style={tmp.container}>{null}</View>;
     return jsx(tmp7(7162).AnalyticsLocationProvider, { style: tmp.container, children: null });
-  } else if (tmp5.THREAD === type) {
+  } else if (constants3.THREAD === type) {
     const obj3 = { searchContext, channelId: null, guildId: null };
     ({ channelId: obj5.channelId, guildId: obj5.guildId } = searchContext);
     return <ThreadMembersScreen searchContext={searchContext} channelId={null} guildId={null} />;
   } else {
-    if (tmp5.GUILD_CHANNEL !== type) {
-      if (tmp5.GUILD !== type) {
+    if (constants3.GUILD_CHANNEL !== type) {
+      if (constants3.GUILD !== type) {
         const _Error = Error;
         const _HermesInternal = HermesInternal;
         const error = new Error("[MembersScreen] Unsupported search context type: " + searchContext.type);

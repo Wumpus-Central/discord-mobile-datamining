@@ -115,10 +115,10 @@ let closure_18 = createStyles.createStyles((arg0) => {
   obj.rewardContainer = { justifyContent: "center", flexGrow: 1, flexShrink: 0 };
   const rect = {
     position: "absolute",
-    top: tmp(576).space.PX_16,
-    left: tmp(576).space.PX_16,
-    right: tmp(576).space.PX_16,
-    bottom: tmp(576).space.PX_16,
+    top: nativeDefault.space.PX_16,
+    left: nativeDefault.space.PX_16,
+    right: nativeDefault.space.PX_16,
+    bottom: nativeDefault.space.PX_16,
     alignItems: "center",
     justifyContent: "center",
   };
@@ -153,7 +153,7 @@ let closure_18 = createStyles.createStyles((arg0) => {
   obj.icon = { color: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE };
   const obj9 = { color: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE };
   obj.iconDisabled = { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
-  const rect1 = { position: "absolute", top: tmp(576).space.PX_16, left: tmp(576).space.PX_16 };
+  const rect1 = { position: "absolute", top: nativeDefault.space.PX_16, left: nativeDefault.space.PX_16 };
   obj.closeButtonLandscape = rect1;
   const obj11 = {};
   const merged1 = Object.assign(timestampProducer.absoluteFillObject);
@@ -174,7 +174,7 @@ let closure_18 = createStyles.createStyles((arg0) => {
     textShadowRadius: 15,
   };
   obj.viewRewardBtn = { marginRight: "auto" };
-  const size = { borderRadius: tmp(576).radii.lg, height: 96, width: "100%" };
+  const size = { borderRadius: nativeDefault.radii.lg, height: 96, width: "100%" };
   obj.playerThumbnail = size;
   obj.cloudsBackground = { zIndex: -1 };
   obj.questDetailsSubheader = { opacity: 0.6 };
@@ -371,7 +371,7 @@ let closure_23 = noop.memo((quest) => {
   const obj4 = { onClose: handleClose, style: null };
   const items6 = [tmp3.closeButtonLandscape];
   let tmp29 = isFullscreen;
-  let tmp15Result = tmp15(tmp2[18]);
+  let tmp15Result = isFullscreen(tmp2[18]);
   if (isFullscreen) {
     tmp29 = null != tmp23;
   }
@@ -408,13 +408,12 @@ let closure_23 = noop.memo((quest) => {
     const items10 = [tmp3.rewardContentCentered, animatedStyle];
     obj10.style = items10;
     obj10.animatedProps = animatedProps;
-    tmp15Result = tmp15(tmp2[19]);
+    tmp15Result = isFullscreen(tmp2[19]);
     const obj11 = { size: str2, onTextBlockLayout: callback1 };
-    obj10.children = tmp25(tmp15(tmp2[20]), obj11);
-    const items11 = [tmp25(tmp15Result, obj10)];
+    obj10.children = closure_10(isFullscreen(tmp2[20]), obj11);
+    const items11 = [closure_10(tmp15Result, obj10)];
     const items12 = [tmp3.rewardContentCentered, ,];
-    const tmp15Result1 = tmp15(tmp2[19]);
-    const tmp31 = closure_7;
+    const tmp15Result1 = isFullscreen(tmp2[19]);
     const tmpResult4 = tmp(tmp2[10]);
     const obj12 = { style: null, pointerEvents: "none", children: null };
     items12[1] = tmp(tmp2[10]).isAndroid() && tmp3.modalBackground;
@@ -424,31 +423,31 @@ let closure_23 = noop.memo((quest) => {
     let isAndroidResult = tmp(tmp2[10]).isAndroid();
     if (isAndroidResult) {
       const obj13 = { align: "top", style: tmp3.cloudsBackground };
-      isAndroidResult = tmp25(tmp15(tmp2[21]), obj13);
+      isAndroidResult = closure_10(isFullscreen(tmp2[21]), obj13);
     }
     const items13 = [isAndroidResult];
     const obj14 = { assetUrl: null, maxHeight: 90, maxWidth: null };
     const tmpResult5 = tmp(tmp2[10]);
-    const tmp15Result2 = tmp15(tmp2[22]);
+    const tmp15Result2 = isFullscreen(tmp2[22]);
     obj14.assetUrl = tmp(tmp2[11]).getQuestAsset(quest, tmp(tmp2[11]).QuestAssetType.LOGO_TYPE, "dark").url;
     obj14.maxWidth = contentWidth - 120;
-    items13[1] = tmp25(tmp15Result2, obj14);
+    items13[1] = closure_10(tmp15Result2, obj14);
     obj12.children = items13;
-    items11[1] = tmp26(tmp15Result1, obj12);
+    items11[1] = closure_11(tmp15Result1, obj12);
     obj8.children = items11;
-    const items14 = [tmp26(tmp27, obj8), ,];
+    const items14 = [closure_11(tmp27, obj8), ,];
     const obj15 = { align: "top", style: tmp3.cloudsBackground };
-    items14[1] = tmp25(tmp15(tmp2[21]), obj15);
+    items14[1] = closure_10(isFullscreen(tmp2[21]), obj15);
     const obj16 = {
       direction: "vertical",
-      spacing: tmp15(tmp2[7]).space.PX_24,
+      spacing: isFullscreen(tmp2[7]).space.PX_24,
       style: tmp3.questDetailsLandscape,
       children: null,
     };
     const obj17 = {
       direction: "horizontal",
       justify: "space-between",
-      spacing: tmp15(tmp2[7]).space.PX_8,
+      spacing: isFullscreen(tmp2[7]).space.PX_8,
       children: null,
     };
     const obj18 = { style: tmp3.questDetailsPrimary, onPress: handleAdvertiserDetailsPress, children: null };
@@ -458,21 +457,21 @@ let closure_23 = noop.memo((quest) => {
       accessibilityRole: "header",
       children: quest.config.messages.gameTitle,
     };
-    const items15 = [tmp25(tmp(tmp2[25]).Text, obj19)];
+    const items15 = [closure_10(tmp(tmp2[25]).Text, obj19)];
     const obj20 = {
       variant: "heading-sm/semibold",
       color: "text-subtle",
       children: quest.config.messages.gamePublisher,
     };
-    items15[1] = tmp25(tmp(tmp2[25]).Text, obj20);
+    items15[1] = closure_10(tmp(tmp2[25]).Text, obj20);
     obj18.children = items15;
-    const items16 = [tmp26(tmp(tmp2[24]).PressableOpacity, obj18)];
+    const items16 = [closure_11(tmp(tmp2[24]).PressableOpacity, obj18)];
     const obj21 = { style: tmp3.questDetailsSecondary, children: null };
     const obj22 = { quest, location: QuestsExperimentLocations.VIDEO_MODAL_MOBILE, sourceQuestContent };
-    obj21.children = tmp25(tmp15(tmp2[26]), obj22);
-    items16[1] = tmp25(tmp27, obj21);
+    obj21.children = closure_10(isFullscreen(tmp2[26]), obj22);
+    items16[1] = closure_10(tmp27, obj21);
     obj17.children = items16;
-    const items17 = [tmp26(tmp(tmp2[23]).Stack, obj17), ,];
+    const items17 = [closure_11(tmp(tmp2[23]).Stack, obj17), ,];
     tmp25Result = null != memo;
     if (tmp25Result) {
       const obj23 = { onPress: handleAdvertiserDetailsPress, children: null };
@@ -480,40 +479,40 @@ let closure_23 = noop.memo((quest) => {
       const obj25 = { uri: memo.url };
       obj24.source = obj25;
       obj24.style = tmp3.playerThumbnail;
-      obj23.children = tmp25(tmp15(tmp2[27]), obj24);
-      tmp25Result = tmp25(tmp(tmp2[24]).PressableOpacity, obj23);
+      obj23.children = closure_10(isFullscreen(tmp2[27]), obj24);
+      tmp25Result = closure_10(tmp(tmp2[24]).PressableOpacity, obj23);
     }
     items17[1] = tmp25Result;
-    const obj26 = { direction: "horizontal", spacing: tmp15(tmp2[7]).space.PX_16, children: null };
+    const obj26 = { direction: "horizontal", spacing: isFullscreen(tmp2[7]).space.PX_16, children: null };
     const obj27 = { grow: true, variant: "expressive", onPress: handlePrimaryCtaPress, text: null };
     const tmpResult6 = tmp(tmp2[11]);
     obj27.text = tmp(tmp2[29]).getExternalCtaLabel(quest);
-    const items18 = [tmp25(tmp(tmp2[28]).Button, obj27), ,];
+    const items18 = [closure_10(tmp(tmp2[28]).Button, obj27), ,];
     if (isShareable) {
       const obj28 = { accessibilityLabel: null, icon: null, onPress: null, variant: "secondary" };
       const intl = tmp(tmp2[31]).intl;
       obj28.accessibilityLabel = intl.string(tmp(tmp2[31]).t.Ej3B3Y);
-      obj28.icon = tmp15(tmp2[32]);
+      obj28.icon = isFullscreen(tmp2[32]);
       obj28.onPress = handleShareQuest;
-      isShareable = tmp25(tmp(tmp2[30]).IconButton, obj28);
+      isShareable = closure_10(tmp(tmp2[30]).IconButton, obj28);
     }
     items18[1] = isShareable;
     if (tmp25Result) {
       const obj29 = { accessibilityLabel: null, icon: null, onPress: null, variant: "secondary" };
       const intl2 = tmp(tmp2[31]).intl;
       obj29.accessibilityLabel = intl2.string(tmp(tmp2[31]).t.cfY4PE);
-      obj29.icon = tmp15(tmp2[33]);
+      obj29.icon = isFullscreen(tmp2[33]);
       obj29.onPress = onNavigateToPostWatchVideo;
-      tmp25Result = tmp25(tmp(tmp2[30]).IconButton, obj29);
+      tmp25Result = closure_10(tmp(tmp2[30]).IconButton, obj29);
     }
     items18[2] = tmp25Result;
     obj26.children = items18;
-    items17[2] = tmp26(tmp(tmp2[23]).Stack, obj26);
+    items17[2] = closure_11(tmp(tmp2[23]).Stack, obj26);
     obj16.children = items17;
-    items14[2] = tmp26(tmp(tmp2[23]).Stack, obj16);
+    items14[2] = closure_11(tmp(tmp2[23]).Stack, obj16);
     obj7.children = items14;
-    obj6.children = tmp26(tmp27, obj7);
-    tmp25Result1 = tmp25(tmp31, obj6);
+    obj6.children = closure_11(tmp27, obj7);
+    tmp25Result1 = closure_10(closure_7, obj6);
     const tmpResult7 = tmp(tmp2[29]);
   }
   items7[1] = tmp25Result1;
@@ -554,12 +553,12 @@ let closure_24 = noop.memo((arg0) => {
   if (userStatus != null) {
     completedAt = userStatus.completedAt;
   }
-  let tmpResult = tmp(tmp2[35]);
+  let tmpResult = contentWidth(tmp2[35]);
   const videoQuestProgressRemainingAccessibilityLabel = tmpResult.getVideoQuestProgressRemainingAccessibilityLabel(
     questTaskDetails,
     tmp5,
   );
-  height = height(tmp2[37])(first.useContext(tmp(tmp2[36]).QuestDockGestureContext).windowDimensions).height;
+  height = height(tmp2[37])(first.useContext(contentWidth(tmp2[36]).QuestDockGestureContext).windowDimensions).height;
   items = [contentWidth];
   memo = first.useMemo(() => Math.floor(contentWidth / 0.5625), items);
   const callback = first.useCallback(() => {}, []);
@@ -663,7 +662,7 @@ let closure_24 = noop.memo((arg0) => {
   obj9.children = items9;
   const items10 = [closure_11(contentWidth(memo[23]).Stack, obj9)];
   const obj15 = { grow: true, variant: "expressive", onPress: handlePrimaryCtaPress, text: null };
-  tmpResult = tmp(tmp2[29]);
+  tmpResult = contentWidth(tmp2[29]);
   obj15.text = tmpResult.getExternalCtaLabel(quest);
   items10[1] = closure_10(contentWidth(memo[28]).Button, obj15);
   obj8.children = items10;
@@ -685,39 +684,39 @@ let closure_24 = noop.memo((arg0) => {
   if (null != completedAt) {
     const obj17 = { style: tmp18Result.viewRewardBtn, children: null };
     const obj18 = {
-      icon: tmp18(tmp(tmp2[40]).ArrowSmallRightIcon, { size: "sm" }),
+      icon: closure_10(contentWidth(tmp2[40]).ArrowSmallRightIcon, { size: "sm" }),
       iconPosition: "end",
       onPress: onNavigateToPostWatchVideo,
       variant: "secondary",
       size: "sm",
       text: null,
     };
-    let intl = tmp(tmp2[31]).intl;
-    obj18.text = intl.string(tmp(tmp2[31]).t["jyYgZ+"]);
-    obj17.children = tmp18(tmp(tmp2[28]).Button, obj18);
-    tmp18Result = tmp18(tmp17, obj17);
+    let intl = contentWidth(tmp2[31]).intl;
+    obj18.text = intl.string(contentWidth(tmp2[31]).t["jyYgZ+"]);
+    obj17.children = closure_10(contentWidth(tmp2[28]).Button, obj18);
+    tmp18Result = closure_10(tmp17, obj17);
   }
   const items12 = [tmp18Result, , , ,];
   if (hasTranscriptAsset) {
     const obj19 = { accessibilityLabel: null, onPress: null, children: null };
-    const intl2 = tmp(tmp2[31]).intl;
-    obj19.accessibilityLabel = intl2.string(tmp(tmp2[31]).t.KCzjTi);
+    const intl2 = contentWidth(tmp2[31]).intl;
+    obj19.accessibilityLabel = intl2.string(contentWidth(tmp2[31]).t.KCzjTi);
     obj19.onPress = handleOpenTranscript;
     const obj20 = { color: tmp18Result.iconDisabled.color };
-    obj19.children = tmp18(tmp(tmp2[41]).TranscriptOutlineIcon, obj20);
-    hasTranscriptAsset = tmp18(closure_26, obj19);
+    obj19.children = closure_10(contentWidth(tmp2[41]).TranscriptOutlineIcon, obj20);
+    hasTranscriptAsset = closure_10(closure_26, obj19);
   }
   items12[1] = hasTranscriptAsset;
   if (!hasCaptionAsset) {
     items12[2] = hasCaptionAsset;
     if (isShareable) {
       const obj21 = { accessibilityLabel: null, onPress: null, children: null };
-      const intl4 = tmp(tmp2[31]).intl;
-      obj21.accessibilityLabel = intl4.string(tmp(tmp2[31]).t.Ej3B3Y);
+      const intl4 = contentWidth(tmp2[31]).intl;
+      obj21.accessibilityLabel = intl4.string(contentWidth(tmp2[31]).t.Ej3B3Y);
       obj21.onPress = handleShareQuest;
       const obj22 = { color: tmp7(tmp2[7]).colors.TEXT_DEFAULT };
-      obj21.children = tmp18(tmp(tmp2[43]).ShareIcon, obj22);
-      isShareable = tmp18(closure_26, obj21);
+      obj21.children = closure_10(contentWidth(tmp2[43]).ShareIcon, obj22);
+      isShareable = closure_10(closure_26, obj21);
     }
     items12[3] = isShareable;
     const obj23 = {
@@ -736,15 +735,15 @@ let closure_24 = noop.memo((arg0) => {
         return closure_1_10(closure_1_26, obj);
       },
     };
-    items12[4] = tmp18(tmp7(tmp2[26]), obj23);
+    items12[4] = closure_10(tmp7(tmp2[26]), obj23);
     obj16.children = items12;
-    items11[1] = tmp16(tmp(tmp2[23]).Stack, obj16);
+    items11[1] = closure_11(contentWidth(tmp2[23]).Stack, obj16);
     obj.children = items11;
-    return tmp16(tmp(tmp2[15]).SafeAreaPaddingView, obj);
+    return closure_11(contentWidth(tmp2[15]).SafeAreaPaddingView, obj);
   } else {
     const obj24 = { accessibilityLabel: null, onPress: null, children: null };
-    const intl3 = tmp(tmp2[31]).intl;
-    obj24.accessibilityLabel = intl3.string(tmp(tmp2[31]).t.bDSZO1);
+    const intl3 = contentWidth(tmp2[31]).intl;
+    obj24.accessibilityLabel = intl3.string(contentWidth(tmp2[31]).t.bDSZO1);
     obj24.onPress = handleToggleCaptions;
     if (captionsEnabled) {
       let color = tmp18Result.icon.color;
@@ -752,10 +751,42 @@ let closure_24 = noop.memo((arg0) => {
       color = tmp18Result.iconDisabled.color;
     }
     const obj25 = { color };
-    tmp18Result = tmp18(tmp(tmp2[42]).ClosedCaptionsOutlineIcon, obj25);
+    tmp18Result = closure_10(contentWidth(tmp2[42]).ClosedCaptionsOutlineIcon, obj25);
     obj24.children = tmp18Result;
-    tmp18(closure_26, obj24);
+    closure_10(closure_26, obj24);
   }
+  const obj11 = {
+    variant: "heading-lg/semibold",
+    color: "text-overlay-light",
+    style: tmp18Result.textShadow,
+    accessibilityRole: "header",
+    children: quest.config.messages.gameTitle,
+  };
+  const obj14 = {
+    quest,
+    size: "x-sm",
+    progress: questTaskDetails.percentComplete,
+    hasConfetti: true,
+    onPress: handleRewardDetailsPress,
+    accessibilityLabel: videoQuestProgressRemainingAccessibilityLabel,
+  };
+  const obj3 = {
+    captionsEnabled,
+    onLoad: callback,
+    externallyPaused,
+    orientation: "portrait",
+    contentInsets,
+    handleOpenTranscript,
+    handleToggleCaptions,
+    isFullscreen,
+    onEnd,
+    sourceQuestContent,
+    hasCaptionAsset,
+    hasTranscriptAsset,
+  };
+  const obj4 = { start, end, style: tmp18Result.gradientTop, colors: items };
+  const obj5 = { start, end, style: tmp18Result.gradientBottom, colors: items1 };
+  const tmp7Result = height(memo[39]);
 });
 createStyles = fn(4560);
 let obj = { footerButton: null };
@@ -794,7 +825,6 @@ export default noop.memo(function VideoQuestModalContentInProgress(arg0) {
     const obj = { quest };
     obj.openLazy(asyncRequireImpl(15154, dependencyMap.paths), "transcript-" + quest.id, obj);
   }, items2);
-  let tmp = sourceQuestContent;
   const tmp5 = getQuestImpressionId(noop.useState(false), 2);
   getQuestImpressionId = sourceQuestContent(11486).useGetQuestImpressionId();
   const obj2 = sourceQuestContent(11486);
@@ -884,8 +914,8 @@ export default noop.memo(function VideoQuestModalContentInProgress(arg0) {
     quest.config.taskConfigV2.tasks[sourceQuestContent(undefined, 5452).FirstPartyQuestTaskTypes.WATCH_VIDEO_ON_MOBILE];
   let tmp20 = null == tmp19;
   if (!tmp20) {
-    tmp20 = "portrait" === tmp(11512).getVideoOrientation(tmp19);
-    const tmpResult = tmp(11512);
+    tmp20 = "portrait" === sourceQuestContent(11512).getVideoOrientation(tmp19);
+    const tmpResult = sourceQuestContent(11512);
   }
   obj = {
     quest,

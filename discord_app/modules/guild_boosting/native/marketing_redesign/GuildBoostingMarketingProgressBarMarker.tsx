@@ -76,7 +76,7 @@ function ProgressBarMarkerInnerContent(arg0) {
     return tmp13;
   } else if (isDisabled) {
     BoostGemSlashIcon = BoostGemSlashIcon(tmp3[14]).BoostGemSlashIcon;
-    let tmp17Result = tmp17(BoostGemSlashIcon, { size: "xxs", color: "currentColor" });
+    let tmp17Result = closure_7(BoostGemSlashIcon, { size: "xxs", color: "currentColor" });
   } else {
     const obj1 = { source: obj[tier], style: null };
     const items4 = [
@@ -86,8 +86,9 @@ function ProgressBarMarkerInnerContent(arg0) {
     const obj2 = { tintColor: isTierUnlocked ? unsafe_rawColors.WHITE : unsafe_rawColors.PREMIUM_PERK_PINK };
     items4[1] = obj2;
     obj1.style = items4;
-    tmp17Result = tmp17(closure_5, obj1);
+    tmp17Result = closure_7(closure_5, obj1);
   }
+  tmp4 = sharedValue(isTierUnlocked[9])();
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, Image: hasOwnProperty } = get_ActivityIndicator);
@@ -204,7 +205,7 @@ export default function ProgressBarMarker(arg0) {
         const result1 = sharedValue.set(spring.withSpring(1, closure_12));
       }
     }, items);
-    let tmp5Result = tmp5(4296);
+    let tmp5Result = useReducedMotion(4296);
     class P {
       constructor() {
         obj = { backgroundColor: PREMIUM_PERK_PINK, transform: null };
@@ -263,13 +264,13 @@ export default function ProgressBarMarker(arg0) {
     }
     if (tmp20Result) {
       const obj5 = { source: tmp2(11564), style: tmp.progressBarMarkerUnlockedIcon };
-      tmp20Result = tmp20(closure_5, obj5);
+      tmp20Result = closure_7(closure_5, obj5);
     }
     const items5 = [tmp20Result];
     const obj6 = { variant: "text-xs/medium", children: null };
-    tmp5Result = tmp5(4454);
+    tmp5Result = useReducedMotion(4454);
     obj6.children = tmp5Result.getTierName(tier, { useLevels: false });
-    items5[1] = closure_7(tmp5(4556).Text, obj6);
+    items5[1] = closure_7(useReducedMotion(4556).Text, obj6);
     obj4.children = items5;
     items3[2] = closure_8(PREMIUM_PERK_PINK, obj4);
     obj.children = items3;
@@ -285,6 +286,7 @@ export default function ProgressBarMarker(arg0) {
   } else {
     PREMIUM_PERK_PINK = hexWithOpacity(unsafe_rawColors.PRIMARY_200, 0.4);
   }
+  const tmp5Result2 = useReducedMotion(4409);
 }
 export const MARKER_DIMENSIONS = 28;
 export const TierMarkerPositions = obj;

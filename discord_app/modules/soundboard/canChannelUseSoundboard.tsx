@@ -46,14 +46,20 @@ export const useCanChannelUseSoundboard = function useCanChannelUseSoundboard(ar
     items,
     () => {
       let flag = false;
-      if (null != closure_0) {
+      if (null != guildVoiceOrThread) {
         const CALLABLE = constants.CALLABLE;
         flag = true;
-        if (!CALLABLE.has(obj.type)) {
-          const canResult = PermissionStore.can(constants2.USE_SOUNDBOARD, obj);
-          const canResult1 = PermissionStore.can(constants2.SPEAK, obj);
-          flag = obj.isGuildVoiceOrThread() && canResult && PermissionStore.can(constants2.SPEAK, obj);
-          const tmp6 = obj.isGuildVoiceOrThread() && canResult && PermissionStore.can(constants2.SPEAK, obj);
+        if (!CALLABLE.has(guildVoiceOrThread.type)) {
+          const canResult = PermissionStore.can(constants2.USE_SOUNDBOARD, guildVoiceOrThread);
+          const canResult1 = PermissionStore.can(constants2.SPEAK, guildVoiceOrThread);
+          flag =
+            guildVoiceOrThread.isGuildVoiceOrThread() &&
+            canResult &&
+            PermissionStore.can(constants2.SPEAK, guildVoiceOrThread);
+          const tmp6 =
+            guildVoiceOrThread.isGuildVoiceOrThread() &&
+            canResult &&
+            PermissionStore.can(constants2.SPEAK, guildVoiceOrThread);
         }
       }
       return flag;

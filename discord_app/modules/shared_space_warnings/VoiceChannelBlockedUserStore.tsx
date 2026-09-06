@@ -108,9 +108,8 @@ const voiceChannelBlockedUserStore = new VoiceChannelBlockedUserStore(Dispatcher
       let _Object = Object;
       values = Object.values(tmp4);
       for (const item10026 of values) {
-        let tmp8 = item10026;
         if (null != item10026.channelId) {
-          let tmp11 = processUserInChannel(tmp8.channelId, tmp8.userId);
+          let tmp11 = processUserInChannel(item10026.channelId, item10026.userId);
           if (!tmp11) {
             tmp11 = flag;
           }

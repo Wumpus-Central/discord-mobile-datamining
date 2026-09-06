@@ -1,6 +1,7 @@
 // discord_app/modules/premium/native/trials/PremiumTrialOfferActionSheetContent.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
+import PremiumUtils from "../../../../utils/PremiumUtils.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
 import FolderIcon from "../../../../design/components/Icon/native/redesign/generated/FolderIcon.tsx";
@@ -82,8 +83,8 @@ export default noop.memo(function PremiumTrialOfferActionSheetContent(onConfirm)
     if (subscriptionTrial != null) {
       skuId1 = subscriptionTrial.skuId;
     }
-    displayNameFromSku = tmp3(4218).getDisplayNameFromSku(skuId1);
-    const tmp3Result = tmp3(4218);
+    displayNameFromSku = PremiumUtils.getDisplayNameFromSku(skuId1);
+    const tmp3Result = PremiumUtils;
   }
   obj3.children = intl7.formatToPlainString(util.t.q8eMc0, {
     displayName: displayNameFromSku,
@@ -93,17 +94,16 @@ export default noop.memo(function PremiumTrialOfferActionSheetContent(onConfirm)
   items1[2] = React4(PremiumPerksListDefault, { perks: items });
   const obj4 = { style: tmp.buttonContainer, children: null };
   const obj5 = { size: "lg", text: null, onPress: null, grow: true, icon: null };
-  const intl8 = tmp3(1114).intl;
+  const intl8 = util.intl;
   obj5.text = intl8.formatToPlainString(util.t.xASjq5, { duration: intervalDuration });
   obj5.onPress = onConfirm.onConfirm;
   const obj2 = {
     style: tmp.heroIllustrationContainer,
     children: React4(native.NitroWumpusFlightRight3dIllustration, { width: 180, height: 180 }),
   };
-  const tmp5 = hasOwnProperty;
   obj5.icon = React4(NitroWheelIcon.NitroWheelIcon, { size: "md", color: nativeDefault.unsafe_rawColors.WHITE });
   obj4.children = React4(components_Button_Button.Button, obj5);
   items1[3] = React4(View, obj4);
   obj1.children = items1;
-  return tmp5(View, obj1);
+  return hasOwnProperty(View, obj1);
 });

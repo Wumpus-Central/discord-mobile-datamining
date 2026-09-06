@@ -9,9 +9,9 @@ export const isBlockedDomain = function isBlockedDomain(arg0) {
   const BlockedDomainsStore = LIBDISCORE_JSI.BlockedDomainsStore;
   return BlockedDomainsStore.isBlockedDomain(arg0);
 };
-export const startFetchingBlockedDomains = function startFetchingBlockedDomains(arg0) {
+export const startFetchingBlockedDomains = function startFetchingBlockedDomains(combined) {
   const BlockedDomainsStore = LIBDISCORE_JSI.BlockedDomainsStore;
-  const result = BlockedDomainsStore.startFetchingBlockedDomains(arg0);
+  const result = BlockedDomainsStore.startFetchingBlockedDomains(combined);
 };
 export const consumeLogs = function consumeLogs() {
   return LIBDISCORE_JSI.consumeLogs();

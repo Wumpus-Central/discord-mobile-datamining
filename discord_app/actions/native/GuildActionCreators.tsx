@@ -16,14 +16,14 @@ function batchChannelUpdate(guildId, body) {
     const patchResult = HTTP.patch(request);
   }
 }
-function batchRoleUpdate(arg0, body) {
+function batchRoleUpdate(id, body) {
   if (body.length > 0) {
     function onEnd() {
       return DispatcherDefault.dispatch({ type: "GUILD_SETTINGS_SUBMIT_SUCCESS" });
     }
     DispatcherDefault.dispatch({ type: "GUILD_SETTINGS_SUBMIT" });
     const HTTP = HTTPUtils.HTTP;
-    const request = { url: Endpoints.GUILD_ROLES(arg0), body, oldFormErrors: true, rejectWithError: true };
+    const request = { url: Endpoints.GUILD_ROLES(id), body, oldFormErrors: true, rejectWithError: true };
     HTTP.patch(request).then(onEnd, onEnd);
     const patchResult = HTTP.patch(request);
   }

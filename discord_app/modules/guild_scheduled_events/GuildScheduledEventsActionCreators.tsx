@@ -63,7 +63,7 @@ export default {
     closure_1 = arg1;
     return (async () => {
       await tmp5(4802).httpGetWithCountryCodeQuery({ url: closure_1_10.GUILD_EVENT(tmp5, tmp2), rejectWithError: tmp5(1272).rejectWithMigratedError() });
-      const body = arg1.body;
+      const body = value.body;
       tmp2(573).dispatch({ type: "FETCH_GUILD_EVENT", guildScheduledEvent: body });
       return body;
     })();
@@ -72,7 +72,7 @@ export default {
     closure_0 = guild_id;
     return (async () => {
       await tmp5(4802).httpGetWithCountryCodeQuery({ url: closure_1_10.GUILD_EVENTS_FOR_GUILD(tmp5), rejectWithError: tmp5(1272).rejectWithMigratedError() });
-      const body = arg1.body;
+      const body = value.body;
       { url: closure_1_10.GUILD_EVENTS_FOR_GUILD(tmp5), rejectWithError: tmp5(1272).rejectWithMigratedError() };
       tmp2(573).dispatch({ type: "FETCH_GUILD_EVENTS_FOR_GUILD", guildId: closure_129_0, guildScheduledEvents: body });
       return body;
@@ -86,7 +86,7 @@ export default {
       const request = { url: closure_1_10.GUILD_EVENT_USER_COUNTS(tmp5, tmp2), query: { guild_scheduled_event_exception_ids }, rejectWithError: tmp5(guild_scheduled_event_exception_ids[5]).rejectWithMigratedError() };
       const HTTP = tmp5(guild_scheduled_event_exception_ids[5]).HTTP;
       await HTTP.get(request);
-      const body = arg1.body;
+      const body = value.body;
       closure_128_1 = { eventCount: body.guild_scheduled_event_count, recurrenceCounts: body.guild_scheduled_event_exception_counts };
       tmp2(guild_scheduled_event_exception_ids[10]).dispatch({ type: "GUILD_SCHEDULED_EVENT_USER_COUNTS_FETCH_SUCCESS", guildId: closure_129_0, eventId: closure_129_1, counts: closure_128_1 });
       return closure_128_1;
@@ -104,7 +104,7 @@ export default {
   },
   getGuildEventsForCurrentUser(arg0) {
     closure_0 = arg0;
-    return (async (arg0, value) => {
+    return (async () => {
       if (c3 === 2) {
         c3 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -169,7 +169,7 @@ export default {
     closure_1 = arg1;
     closure_2 = arg2;
     asyncGeneratorStep = arg3;
-    return (async (arg0, value) => {
+    return (async () => {
       if (c5 === 2) {
         c5 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -250,7 +250,7 @@ export default {
     closure_0 = arg0;
     closure_1 = arg1;
     closure_2 = arg2;
-    return (async (arg0, value) => {
+    return (async () => {
       if (rsvp === 2) {
         rsvp = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -339,7 +339,7 @@ export default {
     asyncGeneratorStep = arg3;
     closure_4 = arg4;
     const self = this;
-    return (async (arg0, value) => {
+    return (async () => {
       if (c5 === 2) {
         c5 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -448,7 +448,7 @@ export default {
       tmp = closure_9;
     }
     asyncGeneratorStep = tmp;
-    return (async (arg0, value) => {
+    return (async () => {
       if (c3 === 2) {
         c3 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -530,11 +530,11 @@ export default {
     const obj = { url: closure_1_10.GUILD_EVENT_EXCEPTION(guild_id, id, event_exception_id), rejectWithError: HTTPUtils.rejectWithMigratedError() };
     return HTTP.del(obj);
   },
-  deleteRecurrence(guild_id, id, event_exception_id, arg3) {
+  deleteRecurrence(guild_id, id, event_exception_id, eventException) {
     const self = this;
-    if (null != arg3) {
+    if (null != eventException) {
       let obj = { scheduled_start_time: null, scheduled_end_time: null, is_canceled: true };
-      ({ scheduled_start_time: obj4.scheduled_start_time, scheduled_end_time: obj4.scheduled_end_time } = arg3);
+      ({ scheduled_start_time: obj4.scheduled_start_time, scheduled_end_time: obj4.scheduled_end_time } = eventException);
       return self.updateGuildEventException(obj, guild_id, id, event_exception_id);
     } else {
       obj = { original_scheduled_start_time: null, is_canceled: true };

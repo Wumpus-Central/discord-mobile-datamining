@@ -10,9 +10,12 @@ import GuildRoleRecordUtilsAll from "../../../utils/GuildRoleRecordUtils.tsx";
 import ActivityIndicator_ActivityIndicator from "../../../design/components/ActivityIndicator/native/ActivityIndicator.native.tsx";
 import FreeFormInputGroupDefault from "../../../design/void/Form/native/FreeFormInputGroup.tsx";
 import FormDividerDefault from "../../../design/void/Form/native/FormDivider.tsx";
+import _modDef9713 from "../../../../_runtime/metro/09713__.js";
 import RolePillDefault from "../../../components_native/common/RolePill.tsx";
 import InvalidLink from "../../../design/components/Illustration/native/redesign/generated/InvalidLink.tsx";
 import GuildIconUploaderDefault from "../../guild/native/GuildIconUploader.tsx";
+import _modDef11803 from "../../../../_runtime/metro/11803__.js";
+import _modDef11804 from "../../../../_runtime/metro/11804__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import TextStyles from "../../rebrand/native/TextStyles.tsx";
 
@@ -115,15 +118,15 @@ function GuildTemplateResolved(guildTemplate) {
     };
     const intl9 = tmp10(1114).intl;
     obj13.children = intl9.string(tmp10(1114).t.mQ0H1p);
-    const items4 = [tmp9(tmp10(4556).Text, obj13), ,];
+    const items4 = [closure_11(tmp10(4556).Text, obj13), ,];
     const obj14 = { variant: "text-xs/medium", color: "text-default", children: null };
     const intl10 = tmp10(1114).intl;
     obj14.children = intl10.string(tmp10(1114).t.jOPEYC);
-    items4[1] = tmp9(tmp10(4556).Text, obj14);
+    items4[1] = closure_11(tmp10(4556).Text, obj14);
     const obj15 = { roles: found };
-    items4[2] = tmp9(Roles, obj15);
+    items4[2] = closure_11(Roles, obj15);
     obj12.children = items4;
-    tmp7Result = tmp7(closure_13, obj12);
+    tmp7Result = closure_12(closure_13, obj12);
   }
   items1[10] = tmp7Result;
   obj.children = items1;
@@ -161,29 +164,29 @@ function Channels(channels) {
         const items = [closure_0.channelIcon];
         let channelCategoryIcon = null;
         if (children.type === constants2.GUILD_CATEGORY) {
-          channelCategoryIcon = tmp5.channelCategoryIcon;
+          channelCategoryIcon = closure_0.channelCategoryIcon;
         }
         obj = {
           style: items,
           color: nativeDefault.unsafe_rawColors.PRIMARY_400,
-          size: tmp7(1178).Icon.Sizes.CUSTOM,
+          size: native.Icon.Sizes.CUSTOM,
           source: null,
         };
         items[1] = channelCategoryIcon;
         const type = children.type;
         if (isGuildVocalChannelType(type)) {
-          let tmp10Result = tmp10(9713);
+          let tmp10Result = _modDef9713;
         } else if (type === constants2.GUILD_CATEGORY) {
-          tmp10Result = tmp10(11803);
+          tmp10Result = _modDef11803;
         } else {
-          tmp10Result = tmp10(11804);
+          tmp10Result = _modDef11804;
         }
         obj.source = tmp10Result;
         const items1 = [closure_2_11(native.Icon, obj)];
         const items2 = [closure_0.channelName];
         let channelCategoryName = null;
         if (children.type === constants2.GUILD_CATEGORY) {
-          channelCategoryName = tmp5.channelCategoryName;
+          channelCategoryName = closure_0.channelCategoryName;
         }
         obj = { numberOfLines: 1, style: items2, children: children.name };
         items2[1] = channelCategoryName;
@@ -308,13 +311,13 @@ export default function AcceptGuildTemplate(guildTemplate) {
   if (null != guildTemplate) {
     const state = guildTemplate.state;
     if (GuildTemplateStates.RESOLVED !== state) {
-      if (tmp.ACCEPTING !== state) {
-        if (tmp.ACCEPTED !== state) {
-          if (tmp.RESOLVING === state) {
+      if (GuildTemplateStates.ACCEPTING !== state) {
+        if (GuildTemplateStates.ACCEPTED !== state) {
+          if (GuildTemplateStates.RESOLVING === state) {
             let obj = {};
             const merged = Object.assign(guildTemplate);
             return closure_1_11(GuildTemplateResolving, obj);
-          } else if (tmp.EXPIRED === state) {
+          } else if (GuildTemplateStates.EXPIRED === state) {
             return closure_1_11(closure_16, {});
           }
         }

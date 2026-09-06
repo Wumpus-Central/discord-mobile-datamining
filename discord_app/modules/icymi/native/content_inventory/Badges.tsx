@@ -2,13 +2,20 @@
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import DurationsDefault from "../../../../utils/Durations.tsx";
+import util from "../../../../intl/index.native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import utils from "../../../content_inventory/utils.tsx";
+import TrophyIcon from "../../../../design/components/Icon/native/redesign/generated/TrophyIcon.tsx";
+import FireIcon from "../../../../design/components/Icon/native/redesign/generated/FireIcon.tsx";
+import GameControllerIcon from "../../../../design/components/Icon/native/redesign/generated/GameControllerIcon.tsx";
+import RetryIcon from "../../../../design/components/Icon/native/redesign/generated/RetryIcon.tsx";
 import TimerIcon from "../../../../design/components/Icon/native/redesign/generated/TimerIcon.tsx";
+import NewUserIcon from "../../../../design/components/Icon/native/redesign/generated/NewUserIcon.tsx";
+import FlashIcon from "../../../../design/components/Icon/native/redesign/generated/FlashIcon.tsx";
+import TrendingType from "../../../../../discord_common/js/shared/shared-constants/TrendingType.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import LocaleStore from "../../../user_settings/LocaleStore.tsx";
 
-const GameControllerIcon = tmp2(9223);
 require = fn;
 class ActiveTimestamp {
   constructor(arg0) {
@@ -37,11 +44,11 @@ function ContentTimestamp(entry) {
   [][0] = LocaleStore;
   if (isEntryActiveResult) {
     obj = { entry };
-    let tmp7Result = tmp7(ActiveTimestamp, obj);
+    let tmp7Result = timestampProducer(ActiveTimestamp, obj);
   } else {
-    obj = { variant: "text-sm/medium", style: tmp.text, children: tmp2(8135).formatEndedTimestamp(entry, tmp6) };
-    tmp7Result = tmp7(tmp2(4556).Text, obj);
-    const tmp2Result = tmp2(8135);
+    obj = { variant: "text-sm/medium", style: tmp.text, children: utils.formatEndedTimestamp(entry, tmp6) };
+    tmp7Result = timestampProducer(Text_Text.Text, obj);
+    const tmp2Result = utils;
   }
   return tmp7Result;
 }
@@ -101,15 +108,15 @@ export const MarathonBadge = function MarathonBadge(entry) {
   entry = entry.entry;
   let obj = utils;
   if (obj.isEntryMarathon(entry)) {
-    let tmpResult = tmp(8135);
+    let tmpResult = utils;
     const colors = nativeDefault.colors;
     const isEntryActiveResult = tmpResult.isEntryActive(entry);
-    tmpResult = tmp(8135);
+    tmpResult = utils;
     const marathonDescription = tmpResult.getMarathonDescription(entry);
     const text = marathonDescription.text;
     let tmp9 = null;
     if (null != text) {
-      obj = { Icon: tmp(11605).TimerIcon, iconColor: tmp6, text, accessibilityLabel: tmp8 };
+      obj = { Icon: TimerIcon.TimerIcon, iconColor: tmp6, text, accessibilityLabel: tmp8 };
       tmp9 = timestampProducer(BaseBadge, obj);
     }
     return tmp9;
@@ -121,9 +128,9 @@ export const NewGameBadge = function NewGameBadge(entry) {
   let obj = utils;
   let tmp3 = null;
   if (obj.isEntryNew(entry.entry)) {
-    obj = { Icon: tmp(13009).NewUserIcon, text: null, iconColor: null };
-    const intl = tmp(1114).intl;
-    obj.text = intl.string(tmp(1114).t.keY6mW);
+    obj = { Icon: NewUserIcon.NewUserIcon, text: null, iconColor: null };
+    const intl = util.intl;
+    obj.text = intl.string(util.t.keY6mW);
     obj.iconColor = nativeDefault.colors.STATUS_POSITIVE;
     tmp3 = timestampProducer(BaseBadge, obj);
   }
@@ -136,14 +143,14 @@ export const StreakBadge = function StreakBadge(entry) {
   if (null != streakCount) {
     tmp4 = null;
     if (streakCount >= 2) {
-      obj = { Icon: tmp(13011).FlashIcon, text: null, iconColor: null, accessibilityLabel: null };
-      const intl = tmp(1114).intl;
+      obj = { Icon: FlashIcon.FlashIcon, text: null, iconColor: null, accessibilityLabel: null };
+      const intl = util.intl;
       obj = { days: streakCount };
-      obj.text = intl.formatToPlainString(tmp(1114).t["Klie/P"], obj);
+      obj.text = intl.formatToPlainString(util.t["Klie/P"], obj);
       obj.iconColor = nativeDefault.colors.CONTENT_INVENTORY_OVERLAY_TEXT_SECONDARY;
-      const intl2 = tmp(1114).intl;
+      const intl2 = util.intl;
       const obj1 = { days: streakCount };
-      obj.accessibilityLabel = intl2.formatToPlainString(tmp(1114).t.nVLPBf, obj1);
+      obj.accessibilityLabel = intl2.formatToPlainString(util.t.nVLPBf, obj1);
       tmp4 = timestampProducer(BaseBadge, obj);
     }
   }
@@ -155,10 +162,10 @@ export const TrendingBadge = function TrendingBadge(entry) {
   let tmp4 = null;
   if (null != trendingType) {
     tmp4 = null;
-    if (trendingType !== tmp(13013).TrendingType.TRENDING_TYPE_UNSPECIFIED) {
-      obj = { Icon: tmp(9198).FireIcon, text: null, iconColor: null };
-      const intl = tmp(1114).intl;
-      obj.text = intl.string(tmp(1114).t.TsWCdW);
+    if (trendingType !== TrendingType.TrendingType.TRENDING_TYPE_UNSPECIFIED) {
+      obj = { Icon: FireIcon.FireIcon, text: null, iconColor: null };
+      const intl = util.intl;
+      obj.text = intl.string(util.t.TsWCdW);
       obj.iconColor = nativeDefault.colors.CONTENT_INVENTORY_OVERLAY_TEXT_SECONDARY;
       tmp4 = timestampProducer(BaseBadge, obj);
     }
@@ -169,9 +176,9 @@ export const ResurrectedBadge = function ResurrectedBadge(entry) {
   let obj = utils;
   let tmp3 = null;
   if (null != obj.getResurrectedEntryLastPlayTime(entry.entry)) {
-    obj = { Icon: tmp(10180).RetryIcon, text: null, iconColor: null };
-    const intl = tmp(1114).intl;
-    obj.text = intl.string(tmp(1114).t.adnLsB);
+    obj = { Icon: RetryIcon.RetryIcon, text: null, iconColor: null };
+    const intl = util.intl;
+    obj.text = intl.string(util.t.adnLsB);
     obj.iconColor = nativeDefault.colors.CONTENT_INVENTORY_OVERLAY_TEXT_SECONDARY;
     tmp3 = timestampProducer(BaseBadge, obj);
   }
@@ -183,15 +190,15 @@ export const TopGameBadge = function TopGameBadge(entry) {
   if (null == entryDuration) {
     return null;
   } else {
-    obj = { Icon: tmp(8717).TrophyIcon, text: null, iconColor: null };
+    obj = { Icon: TrophyIcon.TrophyIcon, text: null, iconColor: null };
     obj = { children: null };
-    const intl = tmp(1114).intl;
-    const items = [intl.string(tmp(1114).t["/50eHi"]), ": "];
-    const intl2 = tmp(1114).intl;
+    const intl = util.intl;
+    const items = [intl.string(util.t["/50eHi"]), ": "];
+    const intl2 = util.intl;
     const obj1 = { hours: null };
     const _Math = Math;
     obj1.hours = Math.round(entryDuration / DurationsDefault.Seconds.HOUR);
-    items[2] = intl2.format(tmp(1114).t.SDRHgr, obj1);
+    items[2] = intl2.format(util.t.SDRHgr, obj1);
     obj.children = items;
     obj.text = React5(React6, obj);
     obj.iconColor = nativeDefault.colors.CONTENT_INVENTORY_OVERLAY_TEXT_SECONDARY;

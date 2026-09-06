@@ -79,10 +79,10 @@ export default noop.memo(function ChatInputActionButtonGift(arg0) {
   if (stateFromStores1 != null) {
     gradient = stateFromStores1.gradient;
   }
-  let tmp2Result = tmp2(tmp3[12]);
+  let tmp2Result = require("StringUtils");
   const isNullOrEmptyResult = tmp2Result.isNullOrEmpty(boxAnimationUrl);
   let tmp12 = !isNullOrEmptyResult;
-  tmp2Result = tmp2(tmp3[12]);
+  tmp2Result = require("StringUtils");
   const isNullOrEmptyResult1 = tmp2Result.isNullOrEmpty(trinketAnimationUrl);
   let tmp30Result = !isNullOrEmptyResult1;
   if (!isNullOrEmptyResult1) {
@@ -99,7 +99,7 @@ export default noop.memo(function ChatInputActionButtonGift(arg0) {
   if (!isNullOrEmptyResult) {
     let prop = null;
     if (!tmp17) {
-      prop = tmp2(tmp3[14]).DismissibleContent.GIFTING_PROMOTION_ICON;
+      prop = require("dismissible_content").DismissibleContent.GIFTING_PROMOTION_ICON;
     }
   } else {
     prop = null;
@@ -159,13 +159,13 @@ export default noop.memo(function ChatInputActionButtonGift(arg0) {
         require(arg0, ChatInputActionType.NITRO_GIFT, ref);
       },
       onAnimationFinished: callback,
-      IconComponent: tmp2(tmp3[16]).GiftIcon,
+      IconComponent: require("GiftIcon").GiftIcon,
       accessible,
       accessibilityLabel: null,
     };
-    const intl2 = tmp2(tmp3[17]).intl;
-    obj.accessibilityLabel = intl2.string(tmp2(tmp3[17]).t.Z1RnTk);
-    let tmp24Result = closure_10(tmp2(tmp3[15]).PremiumAnimatedGiftButton, obj);
+    const intl2 = require("util").intl;
+    obj.accessibilityLabel = intl2.string(require("util").t.Z1RnTk);
+    let tmp24Result = closure_10(require("PremiumAnimatedGiftButton").PremiumAnimatedGiftButton, obj);
     let tmp30 = closure_10;
   } else {
     let tmp27Result = transparentBackground;
@@ -202,9 +202,9 @@ export default noop.memo(function ChatInputActionButtonGift(arg0) {
     obj2.style = items5;
     obj2.disabled = disabled;
     obj2.accessible = accessible;
-    const intl = tmp2(tmp3[17]).intl;
-    obj2.accessibilityLabel = intl.string(tmp2(tmp3[17]).t.Z1RnTk);
-    obj2.IconComponent = tmp2(tmp3[16]).GiftIcon;
+    const intl = require("util").intl;
+    obj2.accessibilityLabel = intl.string(require("util").t.Z1RnTk);
+    obj2.IconComponent = require("GiftIcon").GiftIcon;
     obj2.onPress = function onPress(arg0) {
       if (null != stateFromStores1) {
         const obj = { dismissAction: ContentDismissActionType.TAKE_ACTION };
@@ -218,13 +218,13 @@ export default noop.memo(function ChatInputActionButtonGift(arg0) {
     };
     items4[1] = tmp30(ref(tmp3[19]), obj2);
     obj3.children = items4;
-    tmp24Result = tmp24(tmp25, obj3);
+    tmp24Result = closure_11(tmp25, obj3);
     const tmp32 = ref(tmp3[19]);
   }
   const items6 = [tmp24Result];
   if (tmp30Result) {
     const obj4 = { trinketsAnimationUrl: trinketAnimationUrl };
-    tmp30Result = tmp30(tmp2(tmp3[21]).GiftIconTrinketsAnimation, obj4);
+    tmp30Result = tmp30(require("GiftIconTrinketsAnimation").GiftIconTrinketsAnimation, obj4);
   }
   items6[1] = tmp30Result;
   obj.children = items6;

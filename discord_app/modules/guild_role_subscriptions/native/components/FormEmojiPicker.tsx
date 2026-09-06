@@ -78,7 +78,6 @@ export default function FormEmojiPicker(emoji) {
   const items = [tmp.container, onChange(13898)().textInput];
   obj1.style = items;
   const items1 = [tmp9, ,];
-  const tmp12 = closure_5;
   const tmp4 = onChange(13898)();
   const items2 = [tmp.content];
   const obj2 = { style: items2, children: null };
@@ -95,5 +94,5 @@ export default function FormEmojiPicker(emoji) {
   const tmp2Result1 = onChange(9050);
   items1[2] = tmp10(guildId(1178).Icon, { size: guildId(1178).Icon.Sizes.MEDIUM, source: onChange(9939) });
   obj1.children = items1;
-  return tmp12(tmp2Result1, obj1);
+  return closure_5(tmp2Result1, obj1);
 }

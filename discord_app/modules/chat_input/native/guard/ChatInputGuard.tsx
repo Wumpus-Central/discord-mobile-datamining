@@ -3,9 +3,15 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import Radius from "../../../../../discord_common/js/packages/tokens/radii/generated/generated-definitions.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
+import ThemedGradientDefault from "../../../client_themes/native/ThemedGradient.tsx";
 import ButtonGroup from "../../../../design/components/ButtonGroup/native/ButtonGroup.native.tsx";
 import useIsUsingClientThemeDefault from "../../../client_themes/native/useIsUsingClientTheme.tsx";
+import IconButton from "../../../../design/components/Button/native/IconButton.native.tsx";
+import native from "../../../../design/components/experimental/native.tsx";
+import CountDownDefault from "../../../../components_native/common/CountDown.tsx";
+import ArrowSmallRightIcon from "../../../../design/components/Icon/native/redesign/generated/ArrowSmallRightIcon.tsx";
 import getChatInputPositionStyleDefault from "../getChatInputPositionStyle.tsx";
+import JumpToPresentButtonDefault from "../../../../components_native/chat/JumpToPresentButton.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -30,7 +36,7 @@ let closure_9 = createStyles.createStyles((arg0) => {
   obj.container = obj;
   let lg;
   if (arg0) {
-    lg = tmp(576).radii.lg;
+    lg = nativeDefault.radii.lg;
   }
   obj = { borderRadius: lg, overflow: null };
   let str;
@@ -104,19 +110,19 @@ export default function ChatInputGuard(type) {
       if (null != actionOnPress) {
         const obj1 = { accessibilityLabel: actionLabel, icon: null, size: "sm", onPress: null };
         if (actionIcon == null) {
-          const obj2 = { color: tmp(576).colors.WHITE };
-          actionIcon = tmp7(tmp9(10935).ArrowSmallRightIcon, obj2);
+          const obj2 = { color: nativeDefault.colors.WHITE };
+          actionIcon = React5(ArrowSmallRightIcon.ArrowSmallRightIcon, obj2);
         }
         obj1.icon = actionIcon;
         obj1.onPress = actionOnPress;
-        let tmp7Result = tmp7(tmp9(8097).IconButton, obj1);
+        let tmp7Result = React5(IconButton.IconButton, obj1);
       }
       obj.trailing = tmp7Result;
       const obj3 = { variant: "text-sm/semibold", children: message };
-      obj.label = tmp7(tmp9(4556).Text, obj3);
+      obj.label = React5(Text_Text.Text, obj3);
       obj.subLabel = subtext;
-      obj.children = tmp7(tmp10, obj);
-      return tmp7(tmp8, obj);
+      obj.children = React5(tmp10, obj);
+      return React5(hasOwnProperty, obj);
     }
     tmp7Result = null;
     if (null != countdown) {
@@ -125,9 +131,8 @@ export default function ChatInputGuard(type) {
       ({ text: arr3[0], spacing: arr3[1] } = tmp3);
       obj4.style = items;
       obj4.deadline = countdown;
-      tmp7Result = tmp7(tmp(10930), obj4);
+      tmp7Result = React5(CountDownDefault, obj4);
     }
-    tmp8 = hasOwnProperty;
   } else {
     ({ subtext: subtext2, buttonSecondaryText, buttonSecondaryOnPress, countdown: countdown2 } = type);
     ({
@@ -159,7 +164,7 @@ export default function ChatInputGuard(type) {
         tmp13Result = null;
         if (subtext2.length > 0) {
           obj = { style: tmp3.subtext, variant: "text-xs/medium", color: "text-muted", children: subtext2 };
-          tmp13Result = tmp13(tmp14(4556).Text, obj);
+          tmp13Result = React5(Text_Text.Text, obj);
         }
       }
     }
@@ -178,9 +183,9 @@ export default function ChatInputGuard(type) {
           variant: "secondary",
           size: "sm",
         };
-        items2[1] = tmp13(tmp14(4975).Button, obj9);
+        items2[1] = React5(components_Button_Button.Button, obj9);
         obj8.children = items2;
-        tmp16Result = tmp16(tmp14(8902).TwinButtons, obj8);
+        tmp16Result = React6(native.TwinButtons, obj8);
       }
     }
     const obj10 = { children: tmp16Result };
@@ -192,7 +197,7 @@ export default function ChatInputGuard(type) {
       ({ text: arr2[0], spacing: arr2[1] } = tmp3);
       obj11.style = items3;
       obj11.deadline = countdown2;
-      tmp13Result = tmp13(tmp(10930), obj11);
+      tmp13Result = React5(CountDownDefault, obj11);
     }
     items1[3] = tmp13Result;
     obj6.children = items1;
@@ -220,13 +225,13 @@ export const ChatInputGuardContainer = function ChatInputGuardContainer(screenIn
   let tmp10Result = null;
   if (!tmp3) {
     const obj1 = { style: tmp6.underlay };
-    tmp10Result = tmp10(tmp9, obj1);
+    tmp10Result = closure_7(closure_5, obj1);
   }
   const items3 = [tmp10Result, ,];
   const obj2 = { style: tmp6.content, children: null };
   tmp10Result = null;
   if (tmp3) {
-    tmp10Result = tmp10(tmp(5125), { absolute: true, wide: true, tall: true, mix: true });
+    tmp10Result = closure_7(ThemedGradientDefault, { absolute: true, wide: true, tall: true, mix: true });
   }
   const items4 = [tmp10Result, children];
   obj2.children = items4;
@@ -236,7 +241,7 @@ export const ChatInputGuardContainer = function ChatInputGuardContainer(screenIn
     tmp10Result1 = null;
     if (null != channelId) {
       const obj3 = { channelId, screenIndex, onJumpToPresent };
-      tmp10Result1 = tmp10(tmp(12267), obj3);
+      tmp10Result1 = closure_7(JumpToPresentButtonDefault, obj3);
     }
   }
   items3[2] = tmp10Result1;

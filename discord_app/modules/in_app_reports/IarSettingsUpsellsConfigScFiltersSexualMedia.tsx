@@ -36,13 +36,13 @@ obj.onApply = function onApply() {
   const obj = {};
   ({ explicitContentGuilds, explicitContentFriendDm, explicitContentNonFriendDm } = explicitContentSettingOrDefault);
   if (explicitContentGuilds === preloaded_user_settings.ExplicitContentRedaction.SHOW) {
-    obj.explicitContentGuilds = tmp(1187).ExplicitContentRedaction.BLUR;
+    obj.explicitContentGuilds = preloaded_user_settings.ExplicitContentRedaction.BLUR;
   }
   if (explicitContentFriendDm === preloaded_user_settings.ExplicitContentRedaction.SHOW) {
-    obj.explicitContentFriendDm = tmp(1187).ExplicitContentRedaction.BLUR;
+    obj.explicitContentFriendDm = preloaded_user_settings.ExplicitContentRedaction.BLUR;
   }
   if (explicitContentNonFriendDm === preloaded_user_settings.ExplicitContentRedaction.SHOW) {
-    obj.explicitContentNonFriendDm = tmp(1187).ExplicitContentRedaction.BLUR;
+    obj.explicitContentNonFriendDm = preloaded_user_settings.ExplicitContentRedaction.BLUR;
   }
   return obj.updateExplicitContentSetting(obj);
 };

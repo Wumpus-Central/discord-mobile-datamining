@@ -58,7 +58,7 @@ export const createJoinRequestNotificationSystemMessage = function createJoinReq
     obj = { username, guildName: name };
     stringResult = intl6.formatToParts(util.t.EloBG4, obj);
   } else {
-    if (tmp13.GUILD_JOIN_REQUEST_REJECT_NOTIFICATION === type) {
+    if (MessageTypes.GUILD_JOIN_REQUEST_REJECT_NOTIFICATION === type) {
       if (null != username) {
         if (null != name) {
           const intl4 = util.intl;
@@ -71,7 +71,7 @@ export const createJoinRequestNotificationSystemMessage = function createJoinReq
       formatToPartsResult = intl3.string(util.t.FVF6qU);
     } else {
       str = "";
-      if (tmp13.GUILD_JOIN_REQUEST_WITHDRAWN_NOTIFICATION === type) {
+      if (MessageTypes.GUILD_JOIN_REQUEST_WITHDRAWN_NOTIFICATION === type) {
         if (null != username) {
           if (null != name) {
             const intl2 = util.intl;

@@ -112,10 +112,10 @@ export default function FriendsScreen() {
       obj = { title: null, fullHeight: true, containerStyle: null, illustration: null, children: null };
       const intl3 = util.intl;
       obj.title = intl3.string(util.t["oi+B4p"]);
-      obj.containerStyle = tmp3.emptyContainer;
+      obj.containerStyle = closure_1.emptyContainer;
       obj.illustration = native.WumpusCouchSpotIllustration;
       obj = { style: null, children: null };
-      const items1 = [tmp3.buttonContainer];
+      const items1 = [closure_1.buttonContainer];
       const obj1 = { paddingBottom: bottom };
       items1[1] = obj1;
       obj.style = items1;
@@ -126,12 +126,12 @@ export default function FriendsScreen() {
         return navigation.navigate("friends", { screen: "add-friends", params: { sourcePage: "Friends Screen" } });
       };
       obj.children = React5(components_Button_Button.Button, obj2);
-      obj.children = React5(tmp2, obj);
+      obj.children = React5(View, obj);
       items[1] = React5(NoResultsDefault, obj);
       obj.children = items;
-      return tmp(tmp2, obj);
+      return tmp(View, obj);
     } else {
-      const obj3 = { style: tmp3.requestsButtonContainer, children: null };
+      const obj3 = { style: closure_1.requestsButtonContainer, children: null };
       let v1IEawz = require;
       let obj6 = dependencyMap;
       let obj4 = { start: true, end: true, icon: null, trailing: null, label: null, subLabel: null, onPress: null };
@@ -140,10 +140,10 @@ export default function FriendsScreen() {
       obj4.trailing = React5(TableRow.TableRow.Arrow, {});
       const intl5 = util.intl;
       obj4.label = intl5.string(util.t.fyA115);
-      if (tmp4 + tmp5 > 0) {
+      if (incoming + outgoing > 0) {
         const intl2 = v1IEawz(1114).intl;
         v1IEawz = v1IEawz(1114).t["1IEawz"];
-        obj6 = { incoming: tmp4, outgoing: tmp5 };
+        obj6 = { incoming, outgoing };
         let formatToPlainStringResult = intl2.formatToPlainString(v1IEawz, obj6);
       } else {
         const intl = v1IEawz(1114).intl;
@@ -158,9 +158,9 @@ export default function FriendsScreen() {
           navigation.navigate("friends", { screen: "spam-requests" });
         }
       };
-      obj4 = tmp16(TableRow.TableRow, obj4);
+      obj4 = React5(TableRow.TableRow, obj4);
       obj3.children = obj4;
-      React5(tmp2, obj3);
+      React5(View, obj3);
     }
   }, items4);
   obj = { value: analyticsLocations, children: null };

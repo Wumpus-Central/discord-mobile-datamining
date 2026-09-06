@@ -6,21 +6,22 @@ import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 require = fn;
 let closure_5 = async function _getCurrentTask() {
   closure_0 = tmp4;
-  closure_128_0 = await TrackedHTTPUtilsDefault.get({
+  await TrackedHTTPUtilsDefault.get({
     url: constants.SAFETY_FLOWS_TASK,
     trackedActionData: { event: discord_common_AnalyticsUtils.NetworkActionNames.USER_VERIFY },
     rejectWithError: true,
   });
+  closure_128_0 = value;
   let body = null;
   if (204 !== closure_128_0.status) {
     body = closure_128_0.body;
   }
   return body;
 };
-let closure_6 = async function _completeTask(body) {
+let closure_6 = async function _completeTask() {
   c2 = 0;
   c1 = 0;
-  return (async (arg0, value) => {
+  return (async (arg0) => {
     const request = {
       url: constants.SAFETY_FLOWS_TASK,
       body,
@@ -31,11 +32,11 @@ let closure_6 = async function _completeTask(body) {
     return value.body;
   })();
 };
-let closure_7 = async function _resendVerificationCode(flow_id) {
+let closure_7 = async function _resendVerificationCode() {
   c5 = 0;
   c6 = 0;
   c4 = 0;
-  return (async (arg0, value) => {
+  return (async (arg0) => {
     if (c6 === 2) {
       c6 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");

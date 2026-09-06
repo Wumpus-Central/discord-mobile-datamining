@@ -61,72 +61,83 @@ function audienceAckRequestToSpeak(channel, suppress) {
   result = obj.rejectWithMigratedError();
   request.rejectWithError = result;
   HTTP.patch(request);
+  tmp7 =
+    audienceRequestToSpeakState !==
+      useAudienceRequestToSpeakState.RequestToSpeakStates.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK || suppress;
 }
-let closure_12 = async function _startStage(arg0, value) {
-  if (c7 === 2) {
-    c7 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp5 === 3) {
-    if (arg0 === 1) {
-      throw value;
-    } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+let closure_12 = async function _startStage(arg0, arg1, arg2, arg3) {
+  let user = arg0;
+  closure_1 = arg1;
+  closure_2 = arg2;
+  closure_3 = arg3;
+  c6 = 0;
+  c7 = 0;
+  return (async (arg0, value, arg2, arg3) => {
+    if (c7 === 2) {
+      c7 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp5 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        let obj = { value, done: true };
+        return obj;
+      } else {
+        return { value: "HermesInternal", done: null };
+      }
     } else {
-      return { value: "HermesInternal", done: null };
-    }
-  } else {
-    try {
-      c7 = 2;
-      if (0 === c6) {
-        if (arg0 === 1) {
+      try {
+        c7 = 2;
+        if (0 === c6) {
+          if (arg0 === 1) {
+            c7 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c7 = 3;
+            obj = { value, done: true };
+            return obj;
+          } else {
+            closure_5 = tmp2;
+            closure_4 = tmp3;
+            closure_132_0 = user;
+            closure_132_1 = undefined;
+            if ("" !== closure_1) {
+              if (voiceChannelId.getVoiceChannelId() !== user.id) {
+                let obj2 = StageChannelModalActionCreators;
+                obj2.connectToStage(user);
+              }
+              const obj4 = StageInstanceActionCreators;
+              c6 = 1;
+              c7 = 1;
+              const obj1 = { value: obj4.startStageInstance(user.id, closure_1, closure_2, closure_3), done: false };
+              return obj1;
+            } else {
+              c7 = 3;
+              return { value: "HermesInternal", done: null };
+            }
+          }
+        } else if (arg0 === 1) {
           c7 = 3;
           throw value;
         } else if (arg0 === 2) {
           c7 = 3;
-          obj = { value, done: true };
-          return obj;
+          obj2 = { value, done: true };
+          return obj2;
         } else {
-          closure_5 = tmp2;
-          closure_4 = tmp3;
-          closure_132_0 = closure_0;
-          closure_132_1 = undefined;
-          if ("" !== closure_1) {
-            if (voiceChannelId.getVoiceChannelId() !== tmp27.id) {
-              let obj2 = StageChannelModalActionCreators;
-              obj2.connectToStage(tmp27);
-            }
-            const obj4 = StageInstanceActionCreators;
-            c6 = 1;
-            c7 = 1;
-            const obj1 = { value: obj4.startStageInstance(tmp27.id, tmp28, tmp29, tmp30), done: false };
-            return obj1;
-          } else {
-            c7 = 3;
-            return { value: "HermesInternal", done: null };
-          }
+          closure_132_1 = value;
+          closure_133_11(closure_132_0, false, true);
+          c7 = 3;
+          obj = { value: closure_132_1, done: true };
+          return obj;
         }
-      } else if (arg0 === 1) {
-        c7 = 3;
-        throw value;
-      } else if (arg0 === 2) {
-        c7 = 3;
-        obj2 = { value, done: true };
-        return obj2;
-      } else {
-        closure_132_1 = value;
-        closure_133_11(closure_132_0, false, true);
-        c7 = 3;
-        obj = { value: closure_132_1, done: true };
-        return obj;
+      } catch (tmp22) {
+        c7 = tmp;
+        throw tmp22;
       }
-    } catch (tmp22) {
-      c7 = tmp;
-      throw tmp22;
     }
-  }
+  })();
 };
-let closure_13 = async function _editStage(arg0, value) {
+let closure_13 = async function _editStage(arg0) {
   if (c3 === 2) {
     c3 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -182,7 +193,7 @@ let closure_14 = async function _endStage(arg0) {
   let id = arg0;
   c2 = 0;
   c1 = 0;
-  return (async (arg0, value) => {
+  return (async (arg0) => {
     if (c1 === 2) {
       c1 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -342,6 +353,7 @@ export const removeUserFromChannel = function removeUserFromChannel(id, getGuild
   if (tmp2) {
     GuildActionCreatorsDefault.setChannel(guildId, id.id, null);
   }
+  tmp2 = null != guildId && null != id;
 };
 export const setEveryoneRolePermissionAllowed = function setEveryoneRolePermissionAllowed(
   getGuildId,
@@ -360,14 +372,15 @@ export const setEveryoneRolePermissionAllowed = function setEveryoneRolePermissi
   const obj2 = BigFlagUtilsAll;
   if (arg2) {
     obj.allow = obj2.add(obj.allow, REQUEST_TO_SPEAK);
-    let tmp5Result = tmp5(1086);
+    let tmp5Result = BigFlagUtilsAll;
     obj.deny = tmp5Result.remove(obj.deny, REQUEST_TO_SPEAK);
   } else {
     obj.allow = obj2.remove(obj.allow, REQUEST_TO_SPEAK);
-    tmp5Result = tmp5(1086);
+    tmp5Result = BigFlagUtilsAll;
     obj.deny = tmp5Result.add(obj.deny, REQUEST_TO_SPEAK);
   }
   const result = ChannelActionCreatorsDefault.updatePermissionOverwrite(getGuildId.id, obj);
+  const tmp2Result = ChannelActionCreatorsDefault;
 };
 export const startStage = function startStage() {
   const self = this;

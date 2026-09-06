@@ -31,13 +31,11 @@ function getFirstChannelOfType(arg0, arg1, arg2, arr) {
           if (tmp4) {
             let tmp6 = type === arg2;
             if (!tmp6) {
-              let tmp7 = React2;
-              let tmp8 = React2(type) && tmp7(arg2);
+              let tmp8 = React2(type) && React2(arg2);
               tmp6 = tmp8;
             }
             if (!tmp6) {
-              let tmp9 = React3;
-              let tmp10 = React3(type) && tmp9(arg2);
+              let tmp10 = React3(type) && React3(arg2);
               tmp6 = tmp10;
             }
             tmp4 = tmp6;
@@ -142,6 +140,7 @@ export const getDropData = function getDropData(localChannel, arg1, localChannel
                   }
                 }
               }
+              tmp49 = channelList[num17 + 1];
             }
           }
         }
@@ -485,22 +484,22 @@ export const getDnDUpdates = function getDnDUpdates(localChannel, localChannel2,
   function generateUpdates(substr) {
     if (null != closure_2) {
       if (null != num11) {
-        let tmp4 = null != tmp;
+        let tmp4 = null != closure_2;
         if (tmp4) {
-          tmp4 = null != tmp2;
+          tmp4 = null != num11;
         }
         if (tmp4) {
-          tmp4 = null != substr[tmp];
+          tmp4 = null != substr[closure_2];
         }
         if (tmp4) {
-          tmp4 = substr[tmp].channel === closure_0;
+          tmp4 = substr[closure_2].channel === closure_0;
         }
         if (tmp4) {
-          tmp4 = null != substr[tmp2];
+          tmp4 = null != substr[num11];
         }
         if (tmp4) {
           let obj = DragAndDropUtilsDefault;
-          let moveItemFromToResult = obj.moveItemFromTo(substr, tmp, tmp2);
+          let moveItemFromToResult = obj.moveItemFromTo(substr, closure_2, num11);
         }
         obj = {
           oldOrdering: substr,

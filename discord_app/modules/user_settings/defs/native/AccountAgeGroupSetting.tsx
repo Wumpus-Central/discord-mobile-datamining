@@ -37,7 +37,7 @@ const obj1 = {
     let tmp8 = shouldShowTinyBroncoAccountStatus;
     if (shouldShowTinyBroncoAccountStatus) {
       obj = {
-        dismissibleContent: tmp2(1943).DismissibleContent.TINY_BRONCO_SETTINGS,
+        dismissibleContent: dismissible_content.DismissibleContent.TINY_BRONCO_SETTINGS,
         containerStyle: tmp.badge,
         noGradient: true,
       };

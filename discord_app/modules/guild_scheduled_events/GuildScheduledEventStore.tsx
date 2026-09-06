@@ -25,7 +25,7 @@ function saveEvent(id) {
   const result = secondaryIndexMap.set(id.id, id);
   closure_9 = closure_9 + 1;
 }
-function addGuildEventUser(guild_scheduled_event_id) {
+function addGuildEventUser(guild_scheduled_event_id, arg1, arg2) {
   let flag = arg1;
   if (arg1 === undefined) {
     flag = true;
@@ -540,10 +540,11 @@ StaticGuildEventIndexes = {
         tmp = SERIES;
       }
       if (null == dependencyMap[eventId]) {
-        dependencyMap[tmp2] = {};
+        dependencyMap[eventId] = {};
       }
       dependencyMap[eventId][tmp] = diff;
     });
+    const obj = eventId(counts[5]);
   },
   INVITE_RESOLVE_SUCCESS: function handleInviteResolveSuccess(invite) {
     const guild_scheduled_event = invite.invite.guild_scheduled_event;

@@ -1,5 +1,7 @@
 // discord_app/modules/collectibles/hooks/useCanGiftProduct.tsx
+import CollectiblesItemType from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
 import PremiumUtilsDefault from "../../../utils/PremiumUtils.tsx";
+import BillingPlatformUtils from "../../device/BillingPlatformUtils.tsx";
 import CollectiblesProductUtils from "../utils/CollectiblesProductUtils.tsx";
 import CollectiblesUtils from "../CollectiblesUtils.tsx";
 import useCurrentUser from "useCurrentUser.tsx";
@@ -23,10 +25,10 @@ export const useCanGiftProduct = function useCanGiftProduct(product) {
     result = result2;
   }
   if (!result) {
-    result = product.type === tmp(1889).CollectiblesItemType.EXTERNAL_SKU;
+    result = product.type === CollectiblesItemType.CollectiblesItemType.EXTERNAL_SKU;
   }
   if (!result) {
-    let tmpResult = tmp(7554);
+    let tmpResult = CollectiblesUtils;
     let currency;
     if (result3 != null) {
       currency = result3.currency;
@@ -34,7 +36,7 @@ export const useCanGiftProduct = function useCanGiftProduct(product) {
     result = tmpResult.shouldHideGiftingForCurrency(currency);
   }
   if (!result) {
-    tmpResult = tmp(4231);
+    tmpResult = BillingPlatformUtils;
     result = !tmpResult.isCollectibleGiftingSupported();
   }
   return !result;

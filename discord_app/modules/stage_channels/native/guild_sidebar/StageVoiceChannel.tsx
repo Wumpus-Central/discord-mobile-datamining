@@ -7,6 +7,9 @@ import StageMediaHooks from "../../StageMediaHooks.tsx";
 import MemberVerificationModalActionCreators from "../../../guild_member_verification/MemberVerificationModalActionCreators.tsx";
 import StageChannelModalActionCreators from "../../StageChannelModalActionCreators.tsx";
 import openChannelLongPressActionSheet from "../../../channel/native/openChannelLongPressActionSheet.tsx";
+import ChannelItemDefault from "../../../guild_sidebar/native/ChannelItem.tsx";
+import VoiceUsersDefault from "../../../guild_sidebar/native/VoiceUsers.tsx";
+import ChannelInfoDefault from "../../../guild_sidebar/native/ChannelInfo.tsx";
 import useStageChannelSpeakerVoiceStatesDefault from "../../useStageChannelSpeakerVoiceStates.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import CollapsedVoiceChannelStore from "../../../../stores/CollapsedVoiceChannelStore.tsx";
@@ -33,7 +36,7 @@ let result = size.fileFinishedImporting("modules/stage_channels/native/guild_sid
 export default noop.memo((channel) => {
   channel = channel.channel;
   const selected = channel.selected;
-  let tmp = closure_16();
+  const tmp = closure_16();
   let obj = channel(504);
   const items = [
     StageInstanceStore,
@@ -83,8 +86,7 @@ export default noop.memo((channel) => {
       obj = useShowMemberVerificationGate;
     }
     const result = KeyboardManagerUtilsAll.dismissGlobalKeyboard();
-    const tmp = channel;
-    StageChannelModalActionCreators.connectAndOpen(tmp);
+    StageChannelModalActionCreators.connectAndOpen(channel);
   }, items2);
   const callback1 = noop.useCallback(() => {
     const result = openChannelLongPressActionSheet.openChannelLongPressActionSheet(channel.id);
@@ -95,7 +97,7 @@ export default noop.memo((channel) => {
   if (stageInstance != null) {
     const topic = stageInstance.topic;
   }
-  let tmp5Result = tmp5(16116);
+  let tmp5Result = ChannelItemDefault;
   const intl = tmp2(1114).intl;
   if (null != channel.userLimit) {
     if (channel.userLimit > 0) {
@@ -126,7 +128,7 @@ export default noop.memo((channel) => {
       enableConnectedUserLimit: null,
       voiceStates: null,
     };
-    tmp5Result = tmp5(16227);
+    tmp5Result = ChannelInfoDefault;
     if (!hasMedia) {
       let tmp20 = channel.userLimit > 0;
       if (tmp20) {
@@ -136,16 +138,29 @@ export default noop.memo((channel) => {
     }
     obj2.enableConnectedUserLimit = hasMedia;
     obj2.voiceStates = voiceStates;
-    obj.channelInfo = tmp12(tmp5Result, obj2);
+    obj.channelInfo = (
+      <tmp5Result
+        channel={channel}
+        isChannelSelected={selected}
+        isChannelCollapsed={collapsed}
+        enableConnectedUserLimit={null}
+        voiceStates={null}
+      />
+    );
     let tmp12Result = arr3.length > 0;
     if (tmp12Result) {
-      const obj3 = { style: tmp.voiceStates, children: null };
+      let obj3 = { style: tmp.voiceStates, children: null };
       const obj4 = { channel, collapsed, voiceStates: arr3, audienceCount: stageParticipantsCount };
-      obj3.children = tmp12(tmp5(16121), obj4);
-      tmp12Result = tmp12(View, obj3);
+      obj3.children = jsx(VoiceUsersDefault, {
+        channel,
+        collapsed,
+        voiceStates: arr3,
+        audienceCount: stageParticipantsCount,
+      });
+      tmp12Result = <View style={tmp.voiceStates}>{null}</View>;
     }
     obj.children = tmp12Result;
-    return tmp12(tmp5Result, obj);
+    return <tmp5Result />;
   }
   formatToPlainStringResult1 = intl.formatToPlainString(channel(1114).t.TPPk2T, { channelName: tmp10 });
   if (sum > 0) {
@@ -153,4 +168,5 @@ export default noop.memo((channel) => {
     const obj5 = { channelName: tmp10, userCount: sum };
     formatToPlainStringResult1 = intl3.formatToPlainString(tmp2(1114).t["7yr3Qc"], obj5);
   }
+  const formatToPlainStringResult = intl.formatToPlainString(channel(1114).t.TPPk2T, { channelName: tmp10 });
 });

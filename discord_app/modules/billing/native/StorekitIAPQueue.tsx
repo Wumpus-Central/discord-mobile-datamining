@@ -83,14 +83,14 @@ prototype["fetchSubscriptions"] = function fetchSubscriptions(arg0) {
         c5 = 3;
       } else if (arg0 === 1) {
         c5 = 3;
-        throw arg1;
+        throw value;
       } else if (arg0 !== 2) {
-        const found = arg1.filter((subscription) => null != subscription.subscription);
+        const found = value.filter((subscription) => null != subscription.subscription);
         closure_128_0 = found.map(productSK2ToIAPProduct);
         closure_129_0(closure_128_0);
         c3 = 0;
       }
-      return arg1;
+      return value;
     }));
   });
 };
@@ -116,19 +116,19 @@ prototype["fetchProducts"] = function fetchProducts(arg0) {
         c5 = 3;
       } else if (arg0 === 1) {
         c5 = 3;
-        throw arg1;
+        throw value;
       } else if (arg0 !== 2) {
-        closure_128_0 = arg1;
+        closure_128_0 = value;
         closure_129_0(closure_128_0);
         c3 = 0;
       }
-      return arg1;
+      return value;
     }));
   });
 };
 prototype["processQueue"] = function processQueue() {
   const self = this;
-  return (async (arg0, value) => {
+  return (async () => {
     if (c5 === 2) {
       c5 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");

@@ -1,5 +1,6 @@
 // discord_app/modules/systrace/native/installSystrace.tsx
 import _mod17 from "../../../../_runtime/metro/00017__.js";
+import PlatformUtils from "../../../utils/PlatformUtils.tsx";
 import NativeSystraceModule from "../../../../discord_common/js/packages/rtn-codegen/js/NativeSystraceModule.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
@@ -71,4 +72,5 @@ export const installSystrace = function installSystrace() {
       }
     };
   }
+  obj = PlatformUtils;
 };

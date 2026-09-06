@@ -1,6 +1,9 @@
 // discord_app/modules/external_pip/ExternalPipViewVideo.android.tsx
 import initialize from "../../../discord_common/js/packages/flux/index.tsx";
 import nativeDefault from "../../../discord_common/js/packages/tokens/native.tsx";
+import native from "../../design/void/native.tsx";
+import CircleInformationIcon from "../../design/components/Icon/native/redesign/generated/CircleInformationIcon.tsx";
+import StreamEnded from "../../design/components/Illustration/native/redesign/generated/StreamEnded.tsx";
 import ExternalPipDefault from "ExternalPip.android.tsx";
 import VideoActionCreators from "../media/VideoActionCreators.tsx";
 import useExternalPipParticipantDefault from "useExternalPipParticipant.android.tsx";
@@ -16,13 +19,13 @@ function ExternalPipViewVideoUnavailable(wasStream) {
   let obj = { style: tmp.unavailable, children: null };
   if (wasStream) {
     obj = { style: tmp.unavaiableImage };
-    let tmp4Result = tmp4(tmp5(9598).StreamEnded, obj);
-    let tmp8 = tmp4;
-    let tmp10 = tmp5;
+    let tmp4Result = closure_1_11(StreamEnded.StreamEnded, obj);
+    let tmp8 = closure_1_11;
+    let tmp10 = require;
   } else {
-    tmp4Result = tmp4(tmp5(4515).CircleInformationIcon, {});
-    tmp8 = tmp4;
-    tmp10 = tmp5;
+    tmp4Result = closure_1_11(CircleInformationIcon.CircleInformationIcon, {});
+    tmp8 = closure_1_11;
+    tmp10 = require;
   }
   const items = [tmp4Result];
   obj = { variant: "text-md/semibold", style: tmp.unavailableText, lineClamp: 1, children: null };
@@ -51,11 +54,11 @@ function ExternalPipViewVideoUser(arg0) {
       user: stateFromStores,
       avatarDecoration: stateFromStores.avatarDecoration,
       guildId: tmp6,
-      size: tmp2(1178).AvatarSizes.XXLARGE,
+      size: native.AvatarSizes.XXLARGE,
       animate: speaking,
       speaking,
     };
-    tmp7Result = tmp7(tmp2(1178).Avatar, obj);
+    tmp7Result = closure_11(native.Avatar, obj);
   }
   obj.children = tmp7Result;
   return closure_11(closure_6, obj);
@@ -127,8 +130,8 @@ function ExternalPipViewVideoStream(streamId) {
     if (tmp4[0]) {
       obj = { style: tmp7.videoUnavailableWrap, children: null };
       obj = { style: tmp7.videoUnavailableSpinner, size: "large", color: token };
-      obj.children = tmp14(closure_5, obj);
-      tmp14Result = tmp14(closure_6, obj);
+      obj.children = closure_11(closure_5, obj);
+      tmp14Result = closure_11(closure_6, obj);
     }
   }
   children[1] = tmp14Result;
@@ -221,17 +224,17 @@ export default noop.memo(function ExternalPipViewVideo(onLayout) {
   let obj = { style: closure_14().container, onLayout: onLayout.onLayout, children: null };
   if (null != selectedParticipantStreamId) {
     obj = { streamId: selectedParticipantStreamId, userId: selectedParticipantUserId };
-    let tmp4Result = tmp4(ExternalPipViewVideoStream, obj);
+    let tmp4Result = closure_1_11(ExternalPipViewVideoStream, obj);
   } else if (null != selectedParticipantUserId) {
     obj = { userId: selectedParticipantUserId, channelId, speaking: selectedParticipantSpeaking };
-    tmp4Result = tmp4(ExternalPipViewVideoUser, obj);
+    tmp4Result = closure_1_11(ExternalPipViewVideoUser, obj);
   } else {
     let tmp7 = focusedParticipantType === ParticipantTypes.STREAM;
     if (!tmp7) {
       tmp7 = focusedParticipantType === ParticipantTypes.HIDDEN_STREAM;
     }
     const obj1 = { wasStream: tmp7 };
-    tmp4Result = tmp4(ExternalPipViewVideoUnavailable, obj1);
+    tmp4Result = closure_1_11(ExternalPipViewVideoUnavailable, obj1);
   }
   obj.children = tmp4Result;
   return closure_1_11(timestampProducer, obj);

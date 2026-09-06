@@ -8,7 +8,9 @@ import QuestTypes from "QuestTypes.tsx";
 import AdCreativeType from "../../../discord_common/js/shared/shared-constants/AdCreativeType.tsx";
 import SessionHeartbeatScheduler from "../analytics_sessions/SessionHeartbeatScheduler.tsx";
 import QuestDataUtils from "utils/QuestDataUtils.tsx";
+import AnalyticsActions from "lib/analytics/AnalyticsActions.tsx";
 import AdAnalyticsInterfaceExperiment from "experiments/AdAnalyticsInterfaceExperiment.tsx";
+import captureAdUserAction from "../ads/analytics/captureAdUserAction.tsx";
 import captureAdUserActionTypes from "../ads/analytics/captureAdUserActionTypes.tsx";
 import VirtualCurrencyUtils from "../virtual_currency/VirtualCurrencyUtils.tsx";
 import QuestDecisionRoundtripTrackerDefault from "QuestDecisionRoundtripTracker.tsx";
@@ -22,7 +24,7 @@ import QuestStore from "QuestStore.tsx";
 import VideoQuestUIStore from "VideoQuestUIStore.tsx";
 
 require = fn;
-let closure_15 = async function _manuallyStartConsoleQuest(arg0, value) {
+let closure_15 = async function _manuallyStartConsoleQuest(arg0) {
   if (c8 === 2) {
     c8 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -159,7 +161,7 @@ let closure_15 = async function _manuallyStartConsoleQuest(arg0, value) {
     }
   }
 };
-let closure_16 = async function _manualStopConsoleQuest(arg0, value) {
+let closure_16 = async function _manualStopConsoleQuest(arg0) {
   if (c1 === 2) {
     c1 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -208,7 +210,7 @@ let closure_16 = async function _manualStopConsoleQuest(arg0, value) {
     }
   }
 };
-let closure_17 = async function _resetRecentQuestCompletions(arg0, value) {
+let closure_17 = async function _resetRecentQuestCompletions() {
   if (c0 === 2) {
     c0 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -257,7 +259,7 @@ let closure_17 = async function _resetRecentQuestCompletions(arg0, value) {
     }
   }
 };
-let closure_18 = async function _fetchCurrentQuests(arg0, value) {
+let closure_18 = async function _fetchCurrentQuests() {
   if (c6 === 2) {
     c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -381,7 +383,7 @@ let closure_18 = async function _fetchCurrentQuests(arg0, value) {
     }
   }
 };
-let closure_19 = async function _sendHeartbeat(arg0, value) {
+let closure_19 = async function _sendHeartbeat(arg0) {
   if (c7 === 2) {
     c7 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -530,44 +532,44 @@ let closure_21 = async function _enrollInQuest(arg0, arg1) {
           } else {
             closure_3 = tmp3;
             closure_2 = tmp7;
-            closure_130_0 = closure_0;
+            closure_130_0 = questId;
             closure_130_1 = undefined;
             if (null != questContentCTA.questContentCTA) {
               questContentCTA = tmp68.questContentCTA;
               if (obj27.shouldMigrateToAdAnalyticsInterface(AdAnalyticsInterfaceExperiment.AdAnalyticsInterfaceExperimentStep.STEP_2_CLICKED_INTERNAL, "enroll_in_quest")) {
-                let tmp73Result = tmp73(11193);
-                const obj1 = { type: captureAdUserActionTypes.AdUserActionType.CLICK_INTERNAL, adCreativeType: AdCreativeType.AdCreativeType.QUEST, adCreativeId: tmp67, questContentCTA, surfaceId: null, sourceQuestContent: null, questContentPosition: null, questContentRowIndex: null };
+                let tmp73Result = captureAdUserAction;
+                const obj1 = { type: captureAdUserActionTypes.AdUserActionType.CLICK_INTERNAL, adCreativeType: AdCreativeType.AdCreativeType.QUEST, adCreativeId: questId, questContentCTA, surfaceId: null, sourceQuestContent: null, questContentPosition: null, questContentRowIndex: null };
                 ({ questContent: obj9.surfaceId, sourceQuestContent: obj9.sourceQuestContent, questContentPosition: obj9.questContentPosition, questContentRowIndex: obj9.questContentRowIndex } = tmp68);
                 tmp73Result.captureAdUserAction(obj1);
               } else {
-                tmp73Result = tmp73(7718);
-                let obj2 = { questId: tmp67, questContent: tmp68.questContent, questContentCTA, questContentPosition: null, questContentRowIndex: null, sourceQuestContent: null };
+                tmp73Result = AnalyticsActions;
+                let obj2 = { questId, questContent: tmp68.questContent, questContentCTA, questContentPosition: null, questContentRowIndex: null, sourceQuestContent: null };
                 ({ questContentPosition: obj7.questContentPosition, questContentRowIndex: obj7.questContentRowIndex, sourceQuestContent: obj7.sourceQuestContent } = tmp68);
                 const result = tmp73Result.trackQuestContentClicked(obj2);
               }
               obj27 = AdAnalyticsInterfaceExperiment;
             }
-            if (closure_0 === ORBS_INTRO_QUEST_ID) {
+            if (questId === ORBS_INTRO_QUEST_ID) {
               let obj9 = VirtualCurrencyUtils;
               const result1 = obj9.dismissOrbsOnboardingExperience();
             }
-            if (enrolling.isEnrolling(closure_0)) {
+            if (enrolling.isEnrolling(questId)) {
               const obj3 = { type: constants.PREVIOUS_IN_FLIGHT_REQUEST };
               c7 = 3;
               const obj4 = { value: obj3, done: true };
               return obj4;
             } else {
               let obj10 = DispatcherDefault;
-              const obj5 = { type: "QUESTS_ENROLL_BEGIN", questId: tmp67 };
+              const obj5 = { type: "QUESTS_ENROLL_BEGIN", questId };
               obj10.dispatch(obj5);
               c5 = 1;
               let obj12 = QuestDataUtils;
               const adMetadataSealed = obj12.getAdMetadataSealed(tmp68.questContent);
-              const adTrafficMetadataSealed = QuestDataUtils.getAdTrafficMetadataSealed(tmp68.questContent, tmp67);
+              const adTrafficMetadataSealed = QuestDataUtils.getAdTrafficMetadataSealed(tmp68.questContent, questId);
               const HTTP = HTTPUtils.HTTP;
-              const request = { url: closure_2_14.QUESTS_ENROLL(tmp67), body: null, rejectWithError: true };
+              const request = { url: closure_2_14.QUESTS_ENROLL(questId), body: null, rejectWithError: true };
               const obj6 = { location: tmp68.questContent };
-              const merged = Object.assign(QuestDataUtils.getAdDecisionData(tmp67, tmp68.questContent));
+              const merged = Object.assign(QuestDataUtils.getAdDecisionData(questId, tmp68.questContent));
               let tmp47 = null;
               if (null != adMetadataSealed) {
                 tmp47 = adMetadataSealed;
@@ -667,289 +669,303 @@ let closure_21 = async function _enrollInQuest(arg0, arg1) {
     }
   })();
 };
-let closure_22 = async function _claimQuestReward(arg0, value) {
-  if (c8 === 2) {
-    c8 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp6 === 3) {
-    if (arg0 === 1) {
-      throw value;
-    } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
-    } else {
-      return { value: "HermesInternal", done: null };
-    }
-  } else {
-    try {
-      c8 = 2;
-      if (0 === c7) {
-        if (arg0 === 1) {
-          c8 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c8 = 3;
-          obj = { value, done: true };
-          return obj;
-        } else {
-          closure_4 = tmp3;
-          closure_3 = tmp7;
-          closure_131_0 = closure_0;
-          closure_131_1 = undefined;
-          closure_131_2 = undefined;
-          if (claimingReward.isClaimingReward(closure_0)) {
-            c8 = 3;
-            return { value: "HermesInternal", done: null };
-          } else {
-            let obj7 = DispatcherDefault;
-            const obj1 = { type: "QUESTS_CLAIM_REWARD_BEGIN", questId: tmp72 };
-            obj7.dispatch(obj1);
-            c6 = 1;
-            const adMetadataSealed = QuestDataUtils.getAdMetadataSealed(tmp74);
-            const adTrafficMetadataSealed = QuestDataUtils.getAdTrafficMetadataSealed(tmp74, tmp72);
-            const HTTP = HTTPUtils.HTTP;
-            const request = { url: value.QUESTS_CLAIM_REWARD(tmp72), body: null, rejectWithError: false };
-            let obj2 = { platform: tmp73, location: tmp74 };
-            const merged = Object.assign(QuestDataUtils.getAdDecisionData(tmp72, tmp74));
-            let tmp56 = null;
-            if (null != adMetadataSealed) {
-              tmp56 = adMetadataSealed;
-            }
-            obj2.metadata_sealed = tmp56;
-            let tmp57 = null;
-            if (null != adTrafficMetadataSealed) {
-              tmp57 = adTrafficMetadataSealed;
-            }
-            obj2.traffic_metadata_sealed = tmp57;
-            request.body = obj2;
-            c7 = 2;
-            c8 = 1;
-            const obj3 = { value: HTTP.post(request), done: false };
-            return obj3;
-          }
-          tmp73 = closure_1;
-        }
-      } else if (1 === tmp7) {
-        c6 = 0;
-        closure_131_3 = closure_5;
-        let obj5 = closure_132_1(closure_132_2[11]);
-        const obj4 = { type: "QUESTS_CLAIM_REWARD_FAILURE", error: null, questId: null };
-        const tmp35 = new closure_132_1(closure_132_2[12])(closure_131_3);
-        obj4.error = tmp35;
-        obj4.questId = closure_131_0;
-        obj5.dispatch(obj4);
-        throw closure_131_3;
-      } else if (arg0 === 1) {
-        c8 = 3;
+let closure_22 = async function _claimQuestReward() {
+  c7 = 0;
+  c8 = 0;
+  c6 = 0;
+  return (async (arg0, value, arg2) => {
+    if (c8 === 2) {
+      c8 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp6 === 3) {
+      if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        c6 = 0;
-        c8 = 3;
-        obj5 = { value, done: true };
-        return obj5;
+        let obj = { value, done: true };
+        return obj;
       } else {
-        closure_131_1 = value;
-        closure_131_2 = closure_132_0(closure_132_2[15]).questsEntitlementsFromServer(closure_131_1.body);
-        if (0 === closure_131_2.errors.length) {
-          obj2 = closure_132_1(closure_132_2[11]);
-          const obj6 = { type: "QUESTS_CLAIM_REWARD_SUCCESS", questId: closure_131_0, entitlements: closure_131_2 };
-          obj2.dispatch(obj6);
-        } else {
-          obj = closure_132_1(closure_132_2[11]);
-          obj7 = { type: "QUESTS_CLAIM_REWARD_FAILURE", error: closure_131_2.errors, questId: closure_131_0 };
-          obj.dispatch(obj7);
-        }
-        c6 = 0;
-        c8 = 3;
-        const obj18 = closure_132_0(closure_132_2[15]);
+        return { value: "HermesInternal", done: null };
       }
-    } catch (tmp58) {
-      closure_5 = tmp58;
-      if (tmp4 === c6) {
-        c8 = tmp2;
-        throw tmp58;
-      } else {
-        c7 = tmp;
-      }
-    }
-  }
-};
-let closure_23 = async function _fetchQuestRewardCode(arg0, value) {
-  if (c6 === 2) {
-    c6 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp6 === 3) {
-    if (arg0 === 1) {
-      throw value;
-    } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
     } else {
-      return { value: "HermesInternal", done: null };
-    }
-  } else {
-    try {
-      c6 = 2;
-      if (0 === c5) {
-        if (arg0 === 1) {
-          c6 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c6 = 3;
-          obj = { value, done: true };
-          return obj;
-        } else {
-          closure_2 = tmp3;
-          closure_1 = tmp7;
-          closure_129_0 = closure_0;
-          closure_129_1 = undefined;
-          if (fetchingRewardCode.isFetchingRewardCode(closure_0)) {
-            c6 = 3;
+      try {
+        c8 = 2;
+        if (0 === c7) {
+          if (arg0 === 1) {
+            c8 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c8 = 3;
+            obj = { value, done: true };
+            return obj;
           } else {
-            let obj6 = DispatcherDefault;
-            const obj1 = { type: "QUESTS_FETCH_REWARD_CODE_BEGIN", questId: tmp46 };
-            obj6.dispatch(obj1);
-            c4 = 1;
-            const HTTP = HTTPUtils.HTTP;
-            let obj2 = { url: value.QUESTS_REWARD_CODE(tmp46), rejectWithError: false };
-            c5 = 2;
-            c6 = 1;
-            const obj3 = { value: HTTP.get(obj2), done: false };
-            return obj3;
-          }
-        }
-      } else if (1 === tmp7) {
-        c4 = 0;
-        closure_129_2 = closure_3;
-        let obj4 = closure_130_1(closure_130_2[11]);
-        obj4 = { type: "QUESTS_FETCH_REWARD_CODE_FAILURE", error: null, questId: null };
-        const tmp28 = new closure_130_1(closure_130_2[12])(closure_129_2);
-        obj4.error = tmp28;
-        obj4.questId = closure_129_0;
-        obj4.dispatch(obj4);
-        throw closure_129_2;
-      } else if (arg0 === 1) {
-        c6 = 3;
-        throw value;
-      } else if (arg0 !== 2) {
-        closure_129_1 = value;
-        obj = closure_130_1(closure_130_2[11]);
-        const obj5 = { type: "QUESTS_FETCH_REWARD_CODE_SUCCESS", questId: closure_129_0, rewardCode: null };
-        obj2 = closure_130_0(closure_130_2[15]);
-        obj5.rewardCode = obj2.questsRewardCodeFromServer(closure_129_1.body);
-        obj.dispatch(obj5);
-        c4 = 0;
-      }
-      c4 = 0;
-      c6 = 3;
-      obj6 = { value, done: true };
-      return obj6;
-    } catch (tmp39) {
-      closure_3 = tmp39;
-      if (tmp4 === c4) {
-        c6 = tmp2;
-        throw tmp39;
-      } else {
-        c5 = tmp;
-      }
-    }
-  }
-};
-let closure_24 = async function _dismissQuestContent(arg0, value) {
-  if (c7 === 2) {
-    c7 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp6 === 3) {
-    if (arg0 === 1) {
-      throw value;
-    } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
-    } else {
-      return { value: "HermesInternal", done: null };
-    }
-  } else {
-    try {
-      c7 = 2;
-      if (0 === c6) {
-        if (arg0 === 1) {
-          c7 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c7 = 3;
-          obj = { value, done: true };
-          return obj;
-        } else {
-          closure_3 = tmp3;
-          closure_2 = tmp7;
-          closure_130_0 = closure_0;
-          closure_130_1 = undefined;
-          const isDismissingContentResult = dismissingContent.isDismissingContent(closure_0);
-          if (!isDismissingContentResult) {
-            if (obj16.isDismissible(closure_1)) {
-              let obj6 = DispatcherDefault;
-              const obj1 = { type: "QUESTS_DISMISS_CONTENT_BEGIN", questId: tmp53, content: tmp54 };
-              obj6.dispatch(obj1);
-              c5 = 1;
-              const adTrafficMetadataSealed = QuestDataUtils.getAdTrafficMetadataSealed(tmp54, tmp53);
+            closure_4 = tmp3;
+            closure_3 = tmp7;
+            closure_131_0 = questId;
+            closure_131_1 = undefined;
+            closure_131_2 = undefined;
+            if (claimingReward.isClaimingReward(questId)) {
+              c8 = 3;
+              return { value: "HermesInternal", done: null };
+            } else {
+              let obj7 = DispatcherDefault;
+              const obj1 = { type: "QUESTS_CLAIM_REWARD_BEGIN", questId };
+              obj7.dispatch(obj1);
+              c6 = 1;
+              const adMetadataSealed = QuestDataUtils.getAdMetadataSealed(_location);
+              const adTrafficMetadataSealed = QuestDataUtils.getAdTrafficMetadataSealed(_location, questId);
               const HTTP = HTTPUtils.HTTP;
-              const request = { url: value.QUESTS_DISMISS_CONTENT(tmp53, tmp54), body: null, rejectWithError: false };
-              let obj2 = {};
-              const merged = Object.assign(QuestDataUtils.getAdDecisionData(tmp53, tmp54));
-              let tmp44 = null;
-              if (null != adTrafficMetadataSealed) {
-                tmp44 = adTrafficMetadataSealed;
+              const request = { url: closure_2_14.QUESTS_CLAIM_REWARD(questId), body: null, rejectWithError: false };
+              let obj2 = { platform, location: _location };
+              const merged = Object.assign(QuestDataUtils.getAdDecisionData(questId, _location));
+              let tmp56 = null;
+              if (null != adMetadataSealed) {
+                tmp56 = adMetadataSealed;
               }
-              obj2.traffic_metadata_sealed = tmp44;
+              obj2.metadata_sealed = tmp56;
+              let tmp57 = null;
+              if (null != adTrafficMetadataSealed) {
+                tmp57 = adTrafficMetadataSealed;
+              }
+              obj2.traffic_metadata_sealed = tmp57;
               request.body = obj2;
-              c6 = 2;
-              c7 = 1;
+              c7 = 2;
+              c8 = 1;
               const obj3 = { value: HTTP.post(request), done: false };
               return obj3;
             }
           }
-          obj16 = QuestDataUtils;
-        }
-      } else {
-        if (1 === tmp7) {
-          c5 = 0;
-          closure_130_2 = closure_4;
-          let obj4 = closure_131_1(closure_131_2[11]);
-          obj4 = { type: "QUESTS_DISMISS_CONTENT_FAILURE", error: null, questId: null };
-          const tmp27 = new closure_131_1(closure_131_2[12])(closure_130_2);
-          obj4.error = tmp27;
-          obj4.questId = closure_130_0;
-          obj4.dispatch(obj4);
+        } else if (1 === tmp7) {
+          c6 = 0;
+          closure_131_3 = closure_5;
+          let obj5 = closure_132_1(closure_132_2[11]);
+          const obj4 = { type: "QUESTS_CLAIM_REWARD_FAILURE", error: null, questId: null };
+          const tmp35 = new closure_132_1(closure_132_2[12])(closure_131_3);
+          obj4.error = tmp35;
+          obj4.questId = closure_131_0;
+          obj5.dispatch(obj4);
+          throw closure_131_3;
         } else if (arg0 === 1) {
-          c7 = 3;
+          c8 = 3;
           throw value;
-        } else if (arg0 !== 2) {
-          closure_130_1 = value;
-          obj = closure_131_1(closure_131_2[11]);
-          const obj5 = { type: "QUESTS_DISMISS_CONTENT_SUCCESS", dismissedQuestUserStatus: null };
-          obj2 = closure_131_0(closure_131_2[15]);
-          obj5.dismissedQuestUserStatus = obj2.questUserStatusFromServer(closure_130_1.body);
-          obj.dispatch(obj5);
-          c5 = 0;
+        } else if (arg0 === 2) {
+          c6 = 0;
+          c8 = 3;
+          obj5 = { value, done: true };
+          return obj5;
+        } else {
+          closure_131_1 = value;
+          closure_131_2 = closure_132_0(closure_132_2[15]).questsEntitlementsFromServer(closure_131_1.body);
+          if (0 === closure_131_2.errors.length) {
+            obj2 = closure_132_1(closure_132_2[11]);
+            const obj6 = { type: "QUESTS_CLAIM_REWARD_SUCCESS", questId: closure_131_0, entitlements: closure_131_2 };
+            obj2.dispatch(obj6);
+          } else {
+            obj = closure_132_1(closure_132_2[11]);
+            obj7 = { type: "QUESTS_CLAIM_REWARD_FAILURE", error: closure_131_2.errors, questId: closure_131_0 };
+            obj.dispatch(obj7);
+          }
+          c6 = 0;
+          c8 = 3;
+          const obj18 = closure_132_0(closure_132_2[15]);
         }
-        c5 = 0;
-        c7 = 3;
-        obj6 = { value, done: true };
-        return obj6;
-      }
-      c7 = 3;
-    } catch (tmp45) {
-      closure_4 = tmp45;
-      if (tmp4 === c5) {
-        c7 = tmp2;
-        throw tmp45;
-      } else {
-        c6 = tmp;
+      } catch (tmp58) {
+        closure_5 = tmp58;
+        if (tmp4 === c6) {
+          c8 = tmp2;
+          throw tmp58;
+        } else {
+          c7 = tmp;
+        }
       }
     }
-  }
+  })();
 };
-let closure_25 = async function _completeQuestPreview(arg0, value) {
+let closure_23 = async function _fetchQuestRewardCode() {
+  c5 = 0;
+  c6 = 0;
+  c4 = 0;
+  return (async (arg0) => {
+    if (c6 === 2) {
+      c6 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp6 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        let obj = { value, done: true };
+        return obj;
+      } else {
+        return { value: "HermesInternal", done: null };
+      }
+    } else {
+      try {
+        c6 = 2;
+        if (0 === c5) {
+          if (arg0 === 1) {
+            c6 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c6 = 3;
+            obj = { value, done: true };
+            return obj;
+          } else {
+            closure_2 = tmp3;
+            closure_1 = tmp7;
+            closure_129_0 = questId;
+            closure_129_1 = undefined;
+            if (fetchingRewardCode.isFetchingRewardCode(questId)) {
+              c6 = 3;
+            } else {
+              let obj6 = DispatcherDefault;
+              const obj1 = { type: "QUESTS_FETCH_REWARD_CODE_BEGIN", questId };
+              obj6.dispatch(obj1);
+              c4 = 1;
+              const HTTP = HTTPUtils.HTTP;
+              let obj2 = { url: closure_2_14.QUESTS_REWARD_CODE(questId), rejectWithError: false };
+              c5 = 2;
+              c6 = 1;
+              const obj3 = { value: HTTP.get(obj2), done: false };
+              return obj3;
+            }
+          }
+        } else if (1 === tmp7) {
+          c4 = 0;
+          closure_129_2 = closure_3;
+          let obj4 = closure_130_1(closure_130_2[11]);
+          obj4 = { type: "QUESTS_FETCH_REWARD_CODE_FAILURE", error: null, questId: null };
+          const tmp28 = new closure_130_1(closure_130_2[12])(closure_129_2);
+          obj4.error = tmp28;
+          obj4.questId = closure_129_0;
+          obj4.dispatch(obj4);
+          throw closure_129_2;
+        } else if (arg0 === 1) {
+          c6 = 3;
+          throw value;
+        } else if (arg0 !== 2) {
+          closure_129_1 = value;
+          obj = closure_130_1(closure_130_2[11]);
+          const obj5 = { type: "QUESTS_FETCH_REWARD_CODE_SUCCESS", questId: closure_129_0, rewardCode: null };
+          obj2 = closure_130_0(closure_130_2[15]);
+          obj5.rewardCode = obj2.questsRewardCodeFromServer(closure_129_1.body);
+          obj.dispatch(obj5);
+          c4 = 0;
+        }
+        c4 = 0;
+        c6 = 3;
+        obj6 = { value, done: true };
+        return obj6;
+      } catch (tmp39) {
+        closure_3 = tmp39;
+        if (tmp4 === c4) {
+          c6 = tmp2;
+          throw tmp39;
+        } else {
+          c5 = tmp;
+        }
+      }
+    }
+  })();
+};
+let closure_24 = async function _dismissQuestContent() {
+  c6 = 0;
+  c7 = 0;
+  c5 = 0;
+  return (async (arg0, value) => {
+    if (c7 === 2) {
+      c7 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp6 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        let obj = { value, done: true };
+        return obj;
+      } else {
+        return { value: "HermesInternal", done: null };
+      }
+    } else {
+      try {
+        c7 = 2;
+        if (0 === c6) {
+          if (arg0 === 1) {
+            c7 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c7 = 3;
+            obj = { value, done: true };
+            return obj;
+          } else {
+            closure_3 = tmp3;
+            closure_2 = tmp7;
+            closure_130_0 = questId;
+            closure_130_1 = undefined;
+            const isDismissingContentResult = dismissingContent.isDismissingContent(questId);
+            if (!isDismissingContentResult) {
+              if (obj16.isDismissible(content)) {
+                let obj6 = DispatcherDefault;
+                const obj1 = { type: "QUESTS_DISMISS_CONTENT_BEGIN", questId, content };
+                obj6.dispatch(obj1);
+                c5 = 1;
+                const adTrafficMetadataSealed = QuestDataUtils.getAdTrafficMetadataSealed(content, questId);
+                const HTTP = HTTPUtils.HTTP;
+                const request = { url: closure_2_14.QUESTS_DISMISS_CONTENT(questId, content), body: null, rejectWithError: false };
+                let obj2 = {};
+                const merged = Object.assign(QuestDataUtils.getAdDecisionData(questId, content));
+                let tmp44 = null;
+                if (null != adTrafficMetadataSealed) {
+                  tmp44 = adTrafficMetadataSealed;
+                }
+                obj2.traffic_metadata_sealed = tmp44;
+                request.body = obj2;
+                c6 = 2;
+                c7 = 1;
+                const obj3 = { value: HTTP.post(request), done: false };
+                return obj3;
+              }
+            }
+            obj16 = QuestDataUtils;
+          }
+        } else {
+          if (1 === tmp7) {
+            c5 = 0;
+            closure_130_2 = closure_4;
+            let obj4 = closure_131_1(closure_131_2[11]);
+            obj4 = { type: "QUESTS_DISMISS_CONTENT_FAILURE", error: null, questId: null };
+            const tmp27 = new closure_131_1(closure_131_2[12])(closure_130_2);
+            obj4.error = tmp27;
+            obj4.questId = closure_130_0;
+            obj4.dispatch(obj4);
+          } else if (arg0 === 1) {
+            c7 = 3;
+            throw value;
+          } else if (arg0 !== 2) {
+            closure_130_1 = value;
+            obj = closure_131_1(closure_131_2[11]);
+            const obj5 = { type: "QUESTS_DISMISS_CONTENT_SUCCESS", dismissedQuestUserStatus: null };
+            obj2 = closure_131_0(closure_131_2[15]);
+            obj5.dismissedQuestUserStatus = obj2.questUserStatusFromServer(closure_130_1.body);
+            obj.dispatch(obj5);
+            c5 = 0;
+          }
+          c5 = 0;
+          c7 = 3;
+          obj6 = { value, done: true };
+          return obj6;
+        }
+        c7 = 3;
+      } catch (tmp45) {
+        closure_4 = tmp45;
+        if (tmp4 === c5) {
+          c7 = tmp2;
+          throw tmp45;
+        } else {
+          c6 = tmp;
+        }
+      }
+    }
+  })();
+};
+let closure_25 = async function _completeQuestPreview(arg0) {
   if (c7 === 2) {
     c7 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -1046,7 +1062,7 @@ let closure_25 = async function _completeQuestPreview(arg0, value) {
     }
   }
 };
-let closure_26 = async function _resetQuestPreviewStatus(arg0, arg1) {
+let closure_26 = async function _resetQuestPreviewStatus(arg0) {
   closure_2 = tmp3;
   closure_129_0 = closure_0;
   const HTTP = HTTPUtils.HTTP;
@@ -1064,9 +1080,9 @@ let closure_26 = async function _resetQuestPreviewStatus(arg0, arg1) {
     const obj4 = closure_130_1(closure_130_2[11]);
   } else if (arg0 === 1) {
     c6 = 3;
-    throw arg1;
+    throw value;
   } else if (arg0 !== 2) {
-    closure_129_1 = arg1;
+    closure_129_1 = value;
     const obj3 = { type: "QUESTS_PREVIEW_UPDATE_SUCCESS", previewQuestUserStatus: null };
     obj2 = closure_130_0(closure_130_2[15]);
     obj3.previewQuestUserStatus = obj2.questUserStatusFromServer(closure_129_1.body);
@@ -1074,9 +1090,9 @@ let closure_26 = async function _resetQuestPreviewStatus(arg0, arg1) {
     c4 = 0;
     closure_130_1(closure_130_2[11]);
   }
-  return arg1;
+  return value;
 };
-let closure_27 = async function _resetQuestDismissibilityStatus(arg0, arg1) {
+let closure_27 = async function _resetQuestDismissibilityStatus(arg0) {
   closure_2 = tmp3;
   closure_129_0 = closure_0;
   DispatcherDefault.dispatch({ type: "QUESTS_DOCK_RESET_SOFT_DISMISSAL" });
@@ -1095,9 +1111,9 @@ let closure_27 = async function _resetQuestDismissibilityStatus(arg0, arg1) {
     const obj4 = closure_130_1(closure_130_2[11]);
   } else if (arg0 === 1) {
     c6 = 3;
-    throw arg1;
+    throw value;
   } else if (arg0 !== 2) {
-    closure_129_1 = arg1;
+    closure_129_1 = value;
     const obj3 = { type: "QUESTS_PREVIEW_UPDATE_SUCCESS", previewQuestUserStatus: null };
     obj2 = closure_130_0(closure_130_2[15]);
     obj3.previewQuestUserStatus = obj2.questUserStatusFromServer(closure_129_1.body);
@@ -1105,9 +1121,9 @@ let closure_27 = async function _resetQuestDismissibilityStatus(arg0, arg1) {
     c4 = 0;
     closure_130_1(closure_130_2[11]);
   }
-  return arg1;
+  return value;
 };
-let closure_28 = async function _fetchClaimedQuests(arg0, value) {
+let closure_28 = async function _fetchClaimedQuests() {
   if (c5 === 2) {
     c5 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -1184,7 +1200,7 @@ let closure_28 = async function _fetchClaimedQuests(arg0, value) {
     }
   }
 };
-let closure_29 = async function _fetchQuestToDeliver(placement, arg1) {
+let closure_29 = async function _fetchQuestToDeliver() {
   closure_1 = arg1;
   c7 = 0;
   c8 = 0;
@@ -1506,169 +1522,173 @@ let closure_29 = async function _fetchQuestToDeliver(placement, arg1) {
     }
   })();
 };
-let closure_30 = async function _fetchEarnedQuestToDeliver(arg0, value) {
-  if (c9 === 2) {
-    c9 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp7 === 3) {
-    if (arg0 === 1) {
-      throw value;
-    } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
-    } else {
-      return { value: "HermesInternal", done: null };
-    }
-  } else {
-    try {
-      c9 = 2;
-      if (0 === c8) {
-        if (arg0 === 1) {
-          c9 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c9 = 3;
-          obj = { value, done: true };
-          return obj;
-        } else {
-          closure_5 = tmp3;
-          closure_4 = tmp5;
-          closure_132_0 = closure_1;
-          closure_132_1 = undefined;
-          closure_132_2 = undefined;
-          closure_132_3 = undefined;
-          closure_132_4 = undefined;
-          closure_132_5 = undefined;
-          closure_132_6 = undefined;
-          let quests;
-          let response_ttl_seconds;
-          closure_132_9 = undefined;
-          if (!fetchingEarnedQuestToDeliverByPlacement.isFetchingEarnedQuestToDeliverByPlacement(closure_1)) {
-            const earnedQuestForPlacement = tmp75.earnedQuestForPlacement;
-            value = earnedQuestForPlacement.get(tmp73);
-            let prop;
-            if (value != null) {
-              prop = value.earnedDecisionByQuestId;
-            }
-            closure_132_1 = prop;
-            const found = arr2.filter((item) => {
-              value = undefined;
-              if (closure_1_1 != null) {
-                value = closure_1_1.get(item);
-              }
-              return !closure_0(7699).earnedDecisionIsValid(value);
-            });
-            closure_132_2 = found;
-            if (0 !== found.length) {
-              const _Date = Date;
-              closure_132_3 = Date.now();
-              const result = EarnedDecisionRoundtripTrackerDefault.recordEarnedRequestAttempt(tmp73, tmp74);
-              const obj1 = { type: "QUESTS_FETCH_EARNED_QUEST_TO_DELIVER_BEGIN", content: tmp73 };
-              DispatcherDefault.dispatch(obj1);
-              c7 = 1;
-              c8 = 2;
-              c9 = 1;
-              const obj2 = { value: SessionHeartbeatScheduler.getSession(), done: false };
-              return obj2;
-            }
-          }
-          arr2 = closure_0;
-          tmp74 = dependencyMap;
-          tmp75 = fetchingEarnedQuestToDeliverByPlacement;
-        }
+let closure_30 = async function _fetchEarnedQuestToDeliver(arg0) {
+  closure_0 = arg0;
+  closure_2 = arg2;
+  c8 = 0;
+  c9 = 0;
+  c7 = 0;
+  return (async (arg0, value, arg2) => {
+    if (c9 === 2) {
+      c9 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp7 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        let obj = { value, done: true };
+        return obj;
       } else {
-        if (1 === tmp8) {
-          c7 = 0;
-          closure_132_10 = closure_6;
-          let obj5 = closure_133_1(closure_133_2[37]);
-          const obj3 = { wasSuccessful: false, fetchedAt: closure_132_3 };
-          const result1 = obj5.recordEarnedRequestApiResponse(closure_132_0, obj3);
-          let obj7 = closure_133_1(closure_133_2[11]);
-          const obj4 = { type: "QUESTS_FETCH_EARNED_QUEST_TO_DELIVER_FAILURE", error: null, content: null };
-          const tmp30 = new closure_133_1(closure_133_2[12])(closure_132_10);
-          obj4.error = tmp30;
-          obj4.content = closure_132_0;
-          obj7.dispatch(obj4);
-        } else if (2 === tmp8) {
+        return { value: "HermesInternal", done: null };
+      }
+    } else {
+      try {
+        c9 = 2;
+        if (0 === c8) {
           if (arg0 === 1) {
             c9 = 3;
             throw value;
           } else if (arg0 === 2) {
-            c7 = 0;
             c9 = 3;
-            obj5 = { value, done: true };
-            return obj5;
+            obj = { value, done: true };
+            return obj;
           } else {
-            closure_132_4 = value;
-            closure_132_5 = closure_132_2.join(",");
-            const HTTP = closure_133_0(closure_133_2[10]).HTTP;
-            let uuid;
-            if (closure_132_4 != null) {
-              uuid = closure_132_4.uuid;
-            }
-            const obj6 = { url: closure_133_14.QUEST_EARNED_DECISION(closure_132_5, closure_132_0, uuid), rejectWithError: false };
-            c8 = 3;
-            c9 = 1;
-            obj7 = { value: HTTP.get(obj6), done: false };
-            return obj7;
-          }
-        } else if (arg0 === 1) {
-          c9 = 3;
-          throw value;
-        } else if (arg0 !== 2) {
-          closure_132_6 = value;
-          quests = closure_132_6.body.quests;
-          response_ttl_seconds = closure_132_6.body.response_ttl_seconds;
-          const _Map = Map;
-          const map = new Map(closure_132_2.map((item) => {
-            let tmp;
-            if (closure_1_7 != null) {
-              tmp = closure_1_7[item];
-            }
-            const items = [item, ];
-            let tmp2 = null;
-            if (null != tmp) {
-              tmp2 = null;
-              if (obj.isQuestWithKnownConfigVersion(tmp)) {
-                tmp2 = tmp;
+            closure_5 = tmp3;
+            closure_4 = tmp5;
+            closure_132_0 = content;
+            closure_132_1 = undefined;
+            closure_132_2 = undefined;
+            closure_132_3 = undefined;
+            closure_132_4 = undefined;
+            closure_132_5 = undefined;
+            closure_132_6 = undefined;
+            let quests;
+            let response_ttl_seconds;
+            closure_132_9 = undefined;
+            if (!fetchingEarnedQuestToDeliverByPlacement.isFetchingEarnedQuestToDeliverByPlacement(content)) {
+              const earnedQuestForPlacement = fetchingEarnedQuestToDeliverByPlacement.earnedQuestForPlacement;
+              value = earnedQuestForPlacement.get(content);
+              let prop;
+              if (value != null) {
+                prop = value.earnedDecisionByQuestId;
               }
-              obj = closure_0(7710);
+              closure_132_1 = prop;
+              const found = closure_0.filter((item) => {
+                value = undefined;
+                if (content != null) {
+                  value = content.get(item);
+                }
+                return !closure_0(7699).earnedDecisionIsValid(value);
+              });
+              closure_132_2 = found;
+              if (0 !== found.length) {
+                const _Date = Date;
+                closure_132_3 = Date.now();
+                const result = EarnedDecisionRoundtripTrackerDefault.recordEarnedRequestAttempt(content, dependencyMap);
+                const obj1 = { type: "QUESTS_FETCH_EARNED_QUEST_TO_DELIVER_BEGIN", content };
+                DispatcherDefault.dispatch(obj1);
+                c7 = 1;
+                c8 = 2;
+                c9 = 1;
+                const obj2 = { value: SessionHeartbeatScheduler.getSession(), done: false };
+                return obj2;
+              }
             }
-            items[1] = tmp2;
-            return items;
-          }));
-          closure_132_9 = map;
-          const obj8 = { type: "QUESTS_FETCH_EARNED_QUEST_TO_DELIVER_SUCCESS", serverQuests: closure_132_9, content: closure_132_0, fetchedAt: closure_132_3, responseTtlSeconds: response_ttl_seconds };
-          closure_133_1(closure_133_2[11]).dispatch(obj8);
-          const obj13 = closure_133_1(closure_133_2[11]);
-          const request_id = closure_132_6.body.request_id;
-          let requestId = request_id;
-          if (request_id == null) {
-            requestId = null;
           }
-          obj = { wasSuccessful: true, requestId, fetchedAt: closure_132_3 };
-          const result2 = closure_133_1(closure_133_2[37]).recordEarnedRequestApiResponse(closure_132_0, obj);
+        } else {
+          if (1 === tmp8) {
+            c7 = 0;
+            closure_132_10 = closure_6;
+            let obj5 = closure_133_1(closure_133_2[37]);
+            const obj3 = { wasSuccessful: false, fetchedAt: closure_132_3 };
+            const result1 = obj5.recordEarnedRequestApiResponse(closure_132_0, obj3);
+            let obj7 = closure_133_1(closure_133_2[11]);
+            const obj4 = { type: "QUESTS_FETCH_EARNED_QUEST_TO_DELIVER_FAILURE", error: null, content: null };
+            const tmp30 = new closure_133_1(closure_133_2[12])(closure_132_10);
+            obj4.error = tmp30;
+            obj4.content = closure_132_0;
+            obj7.dispatch(obj4);
+          } else if (2 === tmp8) {
+            if (arg0 === 1) {
+              c9 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c7 = 0;
+              c9 = 3;
+              obj5 = { value, done: true };
+              return obj5;
+            } else {
+              closure_132_4 = value;
+              closure_132_5 = closure_132_2.join(",");
+              const HTTP = closure_133_0(closure_133_2[10]).HTTP;
+              let uuid;
+              if (closure_132_4 != null) {
+                uuid = closure_132_4.uuid;
+              }
+              const obj6 = { url: closure_133_14.QUEST_EARNED_DECISION(closure_132_5, closure_132_0, uuid), rejectWithError: false };
+              c8 = 3;
+              c9 = 1;
+              obj7 = { value: HTTP.get(obj6), done: false };
+              return obj7;
+            }
+          } else if (arg0 === 1) {
+            c9 = 3;
+            throw value;
+          } else if (arg0 !== 2) {
+            closure_132_6 = value;
+            quests = closure_132_6.body.quests;
+            response_ttl_seconds = closure_132_6.body.response_ttl_seconds;
+            const _Map = Map;
+            const map = new Map(closure_132_2.map((item) => {
+              let tmp;
+              if (closure_1_7 != null) {
+                tmp = closure_1_7[item];
+              }
+              const items = [item, ];
+              let tmp2 = null;
+              if (null != tmp) {
+                tmp2 = null;
+                if (obj.isQuestWithKnownConfigVersion(tmp)) {
+                  tmp2 = tmp;
+                }
+                obj = closure_0(7710);
+              }
+              items[1] = tmp2;
+              return items;
+            }));
+            closure_132_9 = map;
+            const obj8 = { type: "QUESTS_FETCH_EARNED_QUEST_TO_DELIVER_SUCCESS", serverQuests: closure_132_9, content: closure_132_0, fetchedAt: closure_132_3, responseTtlSeconds: response_ttl_seconds };
+            closure_133_1(closure_133_2[11]).dispatch(obj8);
+            const obj13 = closure_133_1(closure_133_2[11]);
+            const request_id = closure_132_6.body.request_id;
+            requestId = request_id;
+            if (request_id == null) {
+              requestId = null;
+            }
+            obj = { wasSuccessful: true, requestId, fetchedAt: closure_132_3 };
+            const result2 = closure_133_1(closure_133_2[37]).recordEarnedRequestApiResponse(closure_132_0, obj);
+            c7 = 0;
+            const obj15 = closure_133_1(closure_133_2[37]);
+          }
           c7 = 0;
-          const obj15 = closure_133_1(closure_133_2[37]);
+          c9 = 3;
+          const obj9 = { value, done: true };
+          return obj9;
         }
-        c7 = 0;
         c9 = 3;
-        const obj9 = { value, done: true };
-        return obj9;
-      }
-      c9 = 3;
-    } catch (tmp36) {
-      closure_6 = tmp36;
-      if (tmp4 === c7) {
-        c9 = tmp2;
-        throw tmp36;
-      } else {
-        c8 = tmp;
+      } catch (tmp36) {
+        closure_6 = tmp36;
+        if (tmp4 === c7) {
+          c9 = tmp2;
+          throw tmp36;
+        } else {
+          c8 = tmp;
+        }
       }
     }
-  }
+  })();
 };
-let closure_31 = async function _updateVideoProgress(quest_id, timestamp) {
+let closure_31 = async function _updateVideoProgress() {
   c4 = 0;
   c3 = 0;
   return (async (arg0, value) => {
@@ -1736,7 +1756,7 @@ let closure_31 = async function _updateVideoProgress(quest_id, timestamp) {
     }
   })();
 };
-let closure_32 = async function _fetchVideoTranscript(arg0, value) {
+let closure_32 = async function _fetchVideoTranscript(arg0) {
   if (c7 === 2) {
     c7 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -1843,92 +1863,98 @@ let closure_33 = async function _fetchQuest() {
   closure_2 = tmp2;
   closure_1 = tmp5;
   const HTTP = HTTPUtils.HTTP;
-  closure_129_0 = await HTTP.get({ url: closure_2_14.QUEST(closure_0), rejectWithError: false });
+  await HTTP.get({ url: closure_2_14.QUEST(closure_0), rejectWithError: false });
+  closure_129_0 = value;
   { url: value.QUEST(closure_0), rejectWithError: false };
   return closure_130_0(closure_130_2[15]).questConfigFromServer(closure_129_0.body);
 };
-let closure_34 = async function _fetchQuestPreview(arg0, value) {
-  if (c6 === 2) {
-    c6 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp6 === 3) {
-    if (arg0 === 1) {
-      throw value;
-    } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+let closure_34 = async function _fetchQuestPreview() {
+  c5 = 0;
+  c6 = 0;
+  c4 = 0;
+  return (async (arg0) => {
+    if (c6 === 2) {
+      c6 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp6 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        let obj = { value, done: true };
+        return obj;
+      } else {
+        return { value: "HermesInternal", done: null };
+      }
     } else {
-      return { value: "HermesInternal", done: null };
-    }
-  } else {
-    try {
-      c6 = 2;
-      if (0 === c5) {
-        if (arg0 === 1) {
+      try {
+        c6 = 2;
+        if (0 === c5) {
+          if (arg0 === 1) {
+            c6 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c6 = 3;
+            obj = { value, done: true };
+            return obj;
+          } else {
+            closure_2 = tmp3;
+            closure_1 = tmp7;
+            closure_129_0 = questId;
+            closure_129_1 = undefined;
+            if (fetchingQuestPreview.isFetchingQuestPreview(questId)) {
+              c6 = 3;
+            } else {
+              let obj6 = DispatcherDefault;
+              const obj1 = { type: "QUESTS_FETCH_PREVIEW_BEGIN", questId };
+              obj6.dispatch(obj1);
+              c4 = 1;
+              const HTTP = HTTPUtils.HTTP;
+              let obj2 = { url: closure_2_14.QUEST_PREVIEW(questId), rejectWithError: false };
+              c5 = 2;
+              c6 = 1;
+              const obj3 = { value: HTTP.get(obj2), done: false };
+              return obj3;
+            }
+          }
+        } else if (1 === tmp7) {
+          c4 = 0;
+          closure_129_2 = closure_3;
+          let obj4 = closure_130_1(closure_130_2[11]);
+          obj4 = { type: "QUESTS_FETCH_PREVIEW_FAILURE", error: null, questId: null };
+          const tmp28 = new closure_130_1(closure_130_2[12])(closure_129_2);
+          obj4.error = tmp28;
+          obj4.questId = closure_129_0;
+          obj4.dispatch(obj4);
+          throw closure_129_2;
+        } else if (arg0 === 1) {
           c6 = 3;
           throw value;
-        } else if (arg0 === 2) {
-          c6 = 3;
-          obj = { value, done: true };
-          return obj;
-        } else {
-          closure_2 = tmp3;
-          closure_1 = tmp7;
-          closure_129_0 = closure_0;
-          closure_129_1 = undefined;
-          if (fetchingQuestPreview.isFetchingQuestPreview(closure_0)) {
-            c6 = 3;
-          } else {
-            let obj6 = DispatcherDefault;
-            const obj1 = { type: "QUESTS_FETCH_PREVIEW_BEGIN", questId: tmp46 };
-            obj6.dispatch(obj1);
-            c4 = 1;
-            const HTTP = HTTPUtils.HTTP;
-            let obj2 = { url: value.QUEST_PREVIEW(tmp46), rejectWithError: false };
-            c5 = 2;
-            c6 = 1;
-            const obj3 = { value: HTTP.get(obj2), done: false };
-            return obj3;
-          }
+        } else if (arg0 !== 2) {
+          closure_129_1 = value;
+          obj = closure_130_1(closure_130_2[11]);
+          const obj5 = { type: "QUESTS_FETCH_PREVIEW_SUCCESS", questId: closure_129_0, quest: null };
+          obj2 = closure_130_0(closure_130_2[15]);
+          obj5.quest = obj2.questWithUserStatusFromServer(closure_129_1.body);
+          obj.dispatch(obj5);
+          c4 = 0;
         }
-      } else if (1 === tmp7) {
         c4 = 0;
-        closure_129_2 = closure_3;
-        let obj4 = closure_130_1(closure_130_2[11]);
-        obj4 = { type: "QUESTS_FETCH_PREVIEW_FAILURE", error: null, questId: null };
-        const tmp28 = new closure_130_1(closure_130_2[12])(closure_129_2);
-        obj4.error = tmp28;
-        obj4.questId = closure_129_0;
-        obj4.dispatch(obj4);
-        throw closure_129_2;
-      } else if (arg0 === 1) {
         c6 = 3;
-        throw value;
-      } else if (arg0 !== 2) {
-        closure_129_1 = value;
-        obj = closure_130_1(closure_130_2[11]);
-        const obj5 = { type: "QUESTS_FETCH_PREVIEW_SUCCESS", questId: closure_129_0, quest: null };
-        obj2 = closure_130_0(closure_130_2[15]);
-        obj5.quest = obj2.questWithUserStatusFromServer(closure_129_1.body);
-        obj.dispatch(obj5);
-        c4 = 0;
-      }
-      c4 = 0;
-      c6 = 3;
-      obj6 = { value, done: true };
-      return obj6;
-    } catch (tmp39) {
-      closure_3 = tmp39;
-      if (tmp4 === c4) {
-        c6 = tmp2;
-        throw tmp39;
-      } else {
-        c5 = tmp;
+        obj6 = { value, done: true };
+        return obj6;
+      } catch (tmp39) {
+        closure_3 = tmp39;
+        if (tmp4 === c4) {
+          c6 = tmp2;
+          throw tmp39;
+        } else {
+          c5 = tmp;
+        }
       }
     }
-  }
+  })();
 };
-let closure_36 = async function _fetchQuestHomeHero(arg0, value) {
+let closure_36 = async function _fetchQuestHomeHero() {
   if (c7 === 2) {
     c7 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -1967,7 +1993,7 @@ let closure_36 = async function _fetchQuestHomeHero(arg0, value) {
           const QUEST_HOME_BANNER_DESKTOP = QuestTypes.AdPlacement.QUEST_HOME_BANNER_DESKTOP;
           closure_130_0 = QUEST_HOME_BANNER_DESKTOP;
           if (!fetchingAdToDeliverByPlacement.isFetchingAdToDeliverByPlacement(QUEST_HOME_BANNER_DESKTOP)) {
-            const lastFetchedQuestHomeHero = obj22.getLastFetchedQuestHomeHero();
+            const lastFetchedQuestHomeHero = fetchingAdToDeliverByPlacement.getLastFetchedQuestHomeHero();
             if (null != lastFetchedQuestHomeHero) {
               const _Date = Date;
             }
@@ -1982,7 +2008,6 @@ let closure_36 = async function _fetchQuestHomeHero(arg0, value) {
             return obj2;
           }
           c7 = 3;
-          obj22 = fetchingAdToDeliverByPlacement;
         }
       } else if (1 === tmp8) {
         c5 = 0;
@@ -2176,7 +2201,7 @@ let closure_36 = async function _fetchQuestHomeHero(arg0, value) {
     }
   }
 };
-let closure_37 = async function _fetchQuestHomeHeroPreview(arg0, value) {
+let closure_37 = async function _fetchQuestHomeHeroPreview(arg0) {
   if (c8 === 2) {
     c8 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");

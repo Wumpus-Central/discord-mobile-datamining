@@ -1,7 +1,11 @@
 // discord_app/modules/instant_invite/native/components/InstantInviteAgeText.tsx
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
+import util from "../../../../intl/index.native.tsx";
+import Text_Text from "../../../../design/components/Text/native/Text.tsx";
+import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
 import ManaTypeConsolidationExperiment from "../../../design/ManaTypeConsolidationExperiment.tsx";
 import instant_invite_InstantInviteUtils from "../InstantInviteUtils.tsx";
+import InstantInviteUtils from "../../../../utils/InstantInviteUtils.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import CreateInviteModalStore from "../../../../stores/CreateInviteModalStore.tsx";
 
@@ -38,9 +42,9 @@ export default function InstantInviteAgeText(style) {
       str2 = "experimental/body-md/normal";
     }
     obj = { variant: str2, children: null };
-    const items2 = [tmp2(9822).maxAgeString(stateFromStores.maxAge, stateFromStores.maxUses), " "];
+    const items2 = [InstantInviteUtils.maxAgeString(stateFromStores.maxAge, stateFromStores.maxUses), " "];
     obj.children = items2;
-    const items3 = [closure_4(tmp2(4556).Text, obj)];
+    const items3 = [closure_4(Text_Text.Text, obj)];
     if (canEditInvite) {
       obj1 = {
         onPress() {
@@ -54,22 +58,22 @@ export default function InstantInviteAgeText(style) {
         hitSlop: null,
         children: null,
       };
-      const intl = tmp2(1114).intl;
-      obj1.accessibilityLabel = intl.string(tmp2(1114).t["VNe8P/"]);
+      const intl = util.intl;
+      obj1.accessibilityLabel = intl.string(util.t["VNe8P/"]);
       obj1.hitSlop = { top: 8, left: 8, bottom: 8, right: 8 };
       if (manaTypeConsolidationExperiment) {
         str = "experimental/body-md/medium";
       }
       const obj2 = { variant: str, color: "text-link", children: null };
-      const intl2 = tmp2(1114).intl;
-      obj2.children = intl2.string(tmp2(1114).t["VNe8P/"]);
-      obj1.children = closure_5(tmp2(4556).Text, obj2);
-      canEditInvite = tmp9(tmp2(5123).PressableOpacity, obj1);
+      const intl2 = util.intl;
+      obj2.children = intl2.string(util.t["VNe8P/"]);
+      obj1.children = closure_5(Text_Text.Text, obj2);
+      canEditInvite = closure_5(Pressables.PressableOpacity, obj1);
     }
     items3[1] = canEditInvite;
     obj.children = items3;
-    tmp7Result = tmp7(View, obj);
-    const tmp2Result = tmp2(9822);
+    tmp7Result = closure_4(View, obj);
+    const tmp2Result = InstantInviteUtils;
   }
   return tmp7Result;
 }

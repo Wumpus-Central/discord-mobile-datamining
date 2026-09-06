@@ -1,5 +1,7 @@
 // discord_app/modules/notification_center/native/NotificationCenterActionSheet.tsx
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
+import AnalyticsLocationDefault from "../../app_analytics/AnalyticsLocation.tsx";
+import openPremiumUpsellActionSheetDefault from "../../premium/roadblocks/native/utils/openPremiumUpsellActionSheet.tsx";
 import EntitlementFeatureNames from "../../../../discord_common/js/shared/shared-constants/EntitlementFeatureNames.tsx";
 import showForLaterModal from "../../saved_messages/native/showForLaterModal.tsx";
 import SavedMessagesTypes from "../../saved_messages/SavedMessagesTypes.tsx";
@@ -39,9 +41,13 @@ export default function NotificationCenterActionSheet() {
     if (hasForLaterAccess) {
       showForLaterModal.showForLaterModal(BOOKMARK);
     } else {
-      const items = [tmp(7182).FOR_LATER_ROADBLOCK];
-      tmp(7850)(EntitlementFeatureNames.EntitlementFeatureNames.SAVED_MESSAGES, undefined, items);
-      const tmpResult = tmp(7850);
+      const items = [AnalyticsLocationDefault.FOR_LATER_ROADBLOCK];
+      openPremiumUpsellActionSheetDefault(
+        EntitlementFeatureNames.EntitlementFeatureNames.SAVED_MESSAGES,
+        undefined,
+        items,
+      );
+      const tmpResult = openPremiumUpsellActionSheetDefault;
     }
   }, items2);
   let obj3 = roleFilter(7845);
@@ -100,37 +106,37 @@ export default function NotificationCenterActionSheet() {
   if (isForLaterExperimentOn) {
     const obj6 = { icon: null, label: null, onPress: null, arrow: true };
     const obj7 = { IconComponent: tmp(11707).BookmarkIcon };
-    obj6.icon = tmp10(tmp(7200).ActionSheetRow.Icon, obj7);
+    obj6.icon = closure_6(tmp(7200).ActionSheetRow.Icon, obj7);
     const intl5 = tmp(1114).intl;
     obj6.label = intl5.string(tmp(1114).t["2pAkDA"]);
     obj6.onPress = function onPress() {
       return closure_4(SavedMessagesTypes.SavedMessageSortTypes.BOOKMARK);
     };
-    tmp10Result = tmp10(tmp(7200).ActionSheetRow, obj6, "bookmarks");
+    tmp10Result = closure_6(tmp(7200).ActionSheetRow, obj6, "bookmarks");
   }
   const items5 = [tmp10Result, , ,];
   tmp10Result = null;
   if (isForLaterExperimentOn) {
     const obj8 = { icon: null, label: null, onPress: null, arrow: true };
     const obj9 = { IconComponent: tmp(4523).ClockIcon };
-    obj8.icon = tmp10(tmp(7200).ActionSheetRow.Icon, obj9);
+    obj8.icon = closure_6(tmp(7200).ActionSheetRow.Icon, obj9);
     const intl6 = tmp(1114).intl;
     obj8.label = intl6.string(tmp(1114).t.aUXxzT);
     obj8.onPress = function onPress() {
       return closure_4(SavedMessagesTypes.SavedMessageSortTypes.REMINDER);
     };
-    tmp10Result = tmp10(tmp(7200).ActionSheetRow, obj8, "reminders");
+    tmp10Result = closure_6(tmp(7200).ActionSheetRow, obj8, "reminders");
   }
   items5[1] = tmp10Result;
   let tmp10Result1 = null;
   if (canUseScheduledMessages) {
     const obj10 = { icon: null, label: null, onPress: null, arrow: true };
     const obj11 = { IconComponent: tmp(12209).CalendarPlusIcon };
-    obj10.icon = tmp10(tmp(7200).ActionSheetRow.Icon, obj11);
+    obj10.icon = closure_6(tmp(7200).ActionSheetRow.Icon, obj11);
     const intl7 = tmp(1114).intl;
     obj10.label = intl7.string(tmp(1114).t.SZVs3K);
     obj10.onPress = callback;
-    tmp10Result1 = tmp10(tmp(7200).ActionSheetRow, obj10, "scheduled-messages");
+    tmp10Result1 = closure_6(tmp(7200).ActionSheetRow, obj10, "scheduled-messages");
   }
   const obj12 = { hasIcons: true, children: null };
   items5[2] = tmp10Result1;

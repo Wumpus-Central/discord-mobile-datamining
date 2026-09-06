@@ -50,7 +50,7 @@ export default function NativeLottieView(accessibilityLabel) {
       tmp2 = 0 !== height;
     }
     if (tmp2) {
-      closure_5.setup(ref.current, asset, url, width, height, tmp, animating, accessibilityLabel);
+      closure_5.setup(ref.current, asset, url, width, height, LOOP, animating, accessibilityLabel);
     }
   }, items);
   obj = { ref, style: { width, height, opacity } };

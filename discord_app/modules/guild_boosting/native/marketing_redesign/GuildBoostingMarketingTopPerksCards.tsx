@@ -115,20 +115,20 @@ export default function GuildBoostingMarketingTopPerksCards() {
       items = [card.card];
       let cardLast = index === items.length - 1;
       if (cardLast) {
-        cardLast = tmp3.cardLast;
+        cardLast = card.cardLast;
       }
       let obj = { style: items, children: null };
       items[1] = cardLast;
       const items1 = [getGraphic.getGraphic(card.cardGraphic), ,];
       obj = {
-        style: tmp3.cardHeading,
+        style: card.cardHeading,
         variant: "heading-lg/extrabold",
         color: "mobile-text-heading-primary",
         children: getGraphic.getHeadingCopy(),
       };
       items1[1] = timestampProducer(Text_Text.Heading, obj);
       obj = {
-        style: tmp3.cardBody,
+        style: card.cardBody,
         variant: "text-sm/normal",
         color: "text-default",
         children: getGraphic.getBodyCopy(),

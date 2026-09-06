@@ -108,8 +108,9 @@ export default function GroupDMNitroCapCoachmark(channelId) {
     obj = { ref, collapsable: false, children: channelId.children };
     return (
       <closure_5 ref={ref} collapsable={false}>
-        {arg0.children}
+        {channelId.children}
       </closure_5>
     );
   }
+  obj4 = _location(11594);
 }

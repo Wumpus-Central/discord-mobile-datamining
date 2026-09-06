@@ -1,6 +1,10 @@
 // discord_app/modules/errors/av_errors/definitions/AVErrorStreamSendLowFPS.tsx
 import DurationsDefault from "../../../../utils/Durations.tsx";
 import StreamKeyUtils from "../../../go_live/utils/StreamKeyUtils.tsx";
+import StreamQualityUtils from "../../../../utils/StreamQualityUtils.tsx";
+import AVError from "../AVError.tsx";
+import AVErrorContext from "../AVErrorContext.tsx";
+import AVErrorUtils from "../AVErrorUtils.tsx";
 import ChannelRTCStore from "../../../calls/ChannelRTCStore.tsx";
 import ApplicationStreamingStore from "../../../../stores/ApplicationStreamingStore.tsx";
 import StreamRTCConnectionStore from "../../../../stores/StreamRTCConnectionStore.tsx";
@@ -30,7 +34,7 @@ export const AVErrorStreamSendLowFPSDefinition = {
               return null;
             } else {
               const lastNonZeroRemoteVideoSinkWantsTime =
-                obj9.getLastNonZeroRemoteVideoSinkWantsTime(encodeStreamKeyResult);
+                StreamRTCConnectionStore.getLastNonZeroRemoteVideoSinkWantsTime(encodeStreamKeyResult);
               if (null != lastNonZeroRemoteVideoSinkWantsTime) {
                 const _performance = performance;
                 if (performance.now() - lastNonZeroRemoteVideoSinkWantsTime < closure_6) {
@@ -38,7 +42,7 @@ export const AVErrorStreamSendLowFPSDefinition = {
                 }
               }
               if (rTCConnection.hasActiveRemoteWants()) {
-                let tmp11Result = tmp11(4612);
+                let tmp11Result = StreamKeyUtils;
                 const participant = ChannelRTCStore.getParticipant(
                   currentUserActiveStream.channelId,
                   tmp11Result.encodeStreamKey(currentUserActiveStream),
@@ -46,7 +50,7 @@ export const AVErrorStreamSendLowFPSDefinition = {
                 if (null == participant) {
                   return null;
                 } else {
-                  tmp11Result = tmp11(17837);
+                  tmp11Result = AVErrorUtils;
                   const accumulatedStatsWithMinDatapoints = tmp11Result.getAccumulatedStatsWithMinDatapoints(
                     mediaEngineConnectionId,
                     currentUserActiveStream.ownerId,
@@ -54,27 +58,27 @@ export const AVErrorStreamSendLowFPSDefinition = {
                   if (null == accumulatedStatsWithMinDatapoints) {
                     return null;
                   } else {
-                    const maxQuality = tmp11(9109).getMaxQuality(participant);
+                    const maxQuality = StreamQualityUtils.getMaxQuality(participant);
                     let tmp9 = null;
                     if (null != maxQuality) {
                       if (
                         accumulatedStatsWithMinDatapoints.short.frameRate <
                         tmp11Result2.getWarningFrameRate(maxQuality.maxFrameRate)
                       ) {
-                        obj = { type: tmp11(9110).AVError.STREAM_SEND_LOW_FPS };
-                        const tmp11Result3 = tmp11(17834);
+                        obj = { type: AVError.AVError.STREAM_SEND_LOW_FPS };
+                        const tmp11Result3 = AVErrorContext;
                         const merged = Object.assign(
-                          tmp11Result3.getStreamErrorContext(tmp11(4612).encodeStreamKey(currentUserActiveStream)),
+                          tmp11Result3.getStreamErrorContext(StreamKeyUtils.encodeStreamKey(currentUserActiveStream)),
                         );
                         const items = [obj];
                         let tmp6 = items;
-                        const tmp11Result4 = tmp11(4612);
+                        const tmp11Result4 = StreamKeyUtils;
                       } else {
+                        AVErrorUtils;
                         tmp6 = null;
-                        const tmp11Result5 = tmp11(17837);
                       }
                       tmp9 = tmp6;
-                      tmp11Result2 = tmp11(17837);
+                      tmp11Result2 = AVErrorUtils;
                     }
                     return tmp9;
                   }
@@ -84,7 +88,6 @@ export const AVErrorStreamSendLowFPSDefinition = {
               }
             }
           }
-          obj9 = StreamRTCConnectionStore;
         }
       }
     }

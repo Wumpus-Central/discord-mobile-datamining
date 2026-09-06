@@ -116,20 +116,20 @@ export default function PremiumMarketingPage(userHasSubscription) {
   const effect = obj2.useEffect(() => {
     let isDismissed = null == promotionMarketingComponent;
     if (!isDismissed) {
-      isDismissed = "premiumTab" !== tmp.properties.properties.oneofKind;
+      isDismissed = "premiumTab" !== promotionMarketingComponent.properties.properties.oneofKind;
     }
     if (!isDismissed) {
       let obj = DismissibleContentUnsafeUtils;
       isDismissed = obj.UNSAFE_isSnowflakeBoundDismissibleContentDismissed(
         dismissible_content.DismissibleContent.PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE,
-        tmp.promotionId,
+        promotionMarketingComponent.promotionId,
       ).isDismissed;
     }
     if (!isDismissed) {
       obj = { dismissAction: ContentDismissActionType.AUTO_DISMISS };
       const result = DismissibleContentUtils.markSnowflakeBoundDismissibleContentAsDismissed(
         dismissible_content.DismissibleContent.PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE,
-        tmp.promotionId,
+        promotionMarketingComponent.promotionId,
         obj,
       );
     }

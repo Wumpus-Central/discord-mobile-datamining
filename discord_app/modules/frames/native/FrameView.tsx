@@ -30,7 +30,7 @@ function FrameViewInner(frame) {
     FramesNativeManagerDefault.leaveFrame(frame.id);
   }, items1);
   const callback1 = noop.useCallback(
-    (arg0, arg1) => frames_getDefaultOrientationLockState.setOrientationLockState(frame.id, arg0, arg1),
+    (application, arg1) => frames_getDefaultOrientationLockState.setOrientationLockState(frame.id, application, arg1),
     items2,
   );
   if (!first) {

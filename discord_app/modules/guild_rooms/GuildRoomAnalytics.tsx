@@ -300,7 +300,7 @@ export const trackGuildRoomSeatSelected = function trackGuildRoomSeatSelected(ar
         let str2 = "user_selected";
       }
       obj.update_reason = str2;
-      const channelId = merged.channelId;
+      const channelId = tmp.channelId;
       const items1 = [];
       const items2 = [];
       const items3 = [];
@@ -331,6 +331,7 @@ export const trackGuildRoomSeatSelected = function trackGuildRoomSeatSelected(ar
       obj.trackWithMetadata(AnalyticEvents.GUILD_ROOM_SEAT_SELECTED, obj);
     }
     str2 = "default";
+    tmp = merged;
   };
   closure_129_0 = channelId;
   closure_129_1 = fn;
@@ -490,23 +491,23 @@ export const trackGuildRoomUserUpdated = function trackGuildRoomUserUpdated(upda
     if ("position" === updateType) {
       const obj1 = {};
       const merged1 = Object.assign(obj);
-      const items = [tmp2.position.x, tmp2.position.y];
+      const items = [update.position.x, update.position.y];
       obj1.position_v2 = items;
       let tmp3 = obj1;
     } else if ("seat" === updateType) {
       const obj2 = {};
       const merged2 = Object.assign(obj);
-      obj2.seat_id = tmp2.seat;
+      obj2.seat_id = update.seat;
       tmp3 = obj2;
     } else if ("status_id" === updateType) {
       const obj3 = {};
       const merged3 = Object.assign(obj);
-      obj3.status_id = tmp2.statusId;
+      obj3.status_id = update.statusId;
       tmp3 = obj3;
     } else if ("status_text" === updateType) {
       const obj4 = {};
       const merged4 = Object.assign(obj);
-      obj4.status_text = tmp2.statusText;
+      obj4.status_text = update.statusText;
       tmp3 = obj4;
     }
     const merged5 = Object.assign(tmp3);

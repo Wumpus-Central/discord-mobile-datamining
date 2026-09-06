@@ -23,7 +23,7 @@ function PortalKeyboardBottomSheetHeader(arg0) {
   if (obj.useIsScreenReaderEnabled()) {
     prop = tmp.headerContainerScreenReaderEnabled;
   }
-  obj = { style: items, children: tmp4(native.ActionSheetDragHandle, { onPress: handleCollapse }) };
+  obj = { style: items, children: React5(native.ActionSheetDragHandle, { onPress: handleCollapse }) };
   items[1] = prop;
   items[2] = style;
   return React5(hasOwnProperty, obj);
@@ -84,7 +84,7 @@ const __initData5 = {
 size = fn(2);
 let result = size.fileFinishedImporting("modules/keyboard/native/PortalKeyboardBottomSheet.tsx");
 
-export default noop.forwardRef(function PortalKeyboardBottomSheet(animatedIndex, ref) {
+export default noop.forwardRef(function PortalKeyboardBottomSheet(animatedIndex, arg1) {
   animatedIndex = animatedIndex.animatedIndex;
   const chatInputRef = animatedIndex.chatInputRef;
   let flag = animatedIndex.isAppsKeyboard;
@@ -117,12 +117,12 @@ export default noop.forwardRef(function PortalKeyboardBottomSheet(animatedIndex,
   let animatedStyle;
   __initData = undefined;
   let tmp = isScreenReaderEnabled();
-  ref = headerStyle.useRef(null);
+  const ref = headerStyle.useRef(null);
   const tmp5 = chatInputRef(flag[11])({ forceMaxHeight, enablePanDownToClose: flag2 });
   const tmp7 = transitionState === animatedIndex(flag[12]).TransitionStates.YEETED;
   closure_9 = tmp7;
   let obj1 = animatedIndex(flag[13]);
-  const bottomSheetImperativeHandle = obj1.useBottomSheetImperativeHandle(ref, ref);
+  const bottomSheetImperativeHandle = obj1.useBottomSheetImperativeHandle(arg1, ref);
   let items = [ref, tmp7];
   const layoutEffect = headerStyle.useLayoutEffect(() => {
     if (closure_9) {
@@ -205,7 +205,7 @@ export default noop.forwardRef(function PortalKeyboardBottomSheet(animatedIndex,
   fn.__initData = __initData;
   class Y {
     constructor(arg0, arg1) {
-      if (null != ref) {
+      if (null != arg1) {
         tmp = animatedIndex;
         if (!animatedIndex) {
           tmp = c7;
@@ -325,7 +325,7 @@ export default noop.forwardRef(function PortalKeyboardBottomSheet(animatedIndex,
   fn2.__initData = __initData4;
   class Z {
     constructor(arg0, arg1) {
-      if (animatedIndex !== ref) {
+      if (animatedIndex !== arg1) {
         tmp = closure_0;
         tmp2 = closure_2;
         obj = closure_0(closure_2[10]);

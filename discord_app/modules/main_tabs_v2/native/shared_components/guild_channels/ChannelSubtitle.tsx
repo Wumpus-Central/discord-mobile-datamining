@@ -1,5 +1,6 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/guild_channels/ChannelSubtitle.tsx
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
+import MessagePreviewMarkup from "../../../../message_previews/native/MessagePreviewMarkup.tsx";
 import ChannelListLayout from "layouts/ChannelListLayout.tsx";
 import getChannelSubtitleData from "../../../../channel/native/getChannelSubtitleData.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
@@ -32,8 +33,8 @@ function ChannelSubtitle(arg0) {
     obj.guildId = guildId;
     obj.layout = layout;
     obj.disableAnimatedEmoji = !("voice" === channelSubtitleData.type && connected);
-    obj.children = tmp(10116).renderMessagePreviewMarkup(obj);
-    return jsx(tmp(4556).Text, {
+    obj.children = MessagePreviewMarkup.renderMessagePreviewMarkup(obj);
+    return jsx(Text_Text.Text, {
       content: channelSubtitleData.subtitle,
       muted: null,
       channelId: null,

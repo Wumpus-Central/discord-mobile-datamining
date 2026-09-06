@@ -105,16 +105,14 @@ export default function WasThisHelpfulSection(channelId) {
       containerStyle: null,
       recolorLegacyIcon: true,
     };
-    const intl = tmp(1114).intl;
+    const intl = util.intl;
     obj.content = intl.string(util.t["gd/Yqs"]);
     obj.icon = _modDef9401;
     obj.IconComponent = ShieldIcon.ShieldIcon;
     obj.iconColor = iconColor;
     obj.containerStyle = toastContainer.toastContainer;
     ToastActionCreatorsDefault.open(obj);
-    const tmp3 = channelId;
-    const tmp4 = warningId;
-    obj = { channelId: tmp3, warningId: tmp4, senderId, warningType: null, cta: null };
+    obj = { channelId, warningId, senderId, warningType: null, cta: null };
     let type;
     if (stateFromStores != null) {
       type = stateFromStores.type;
@@ -122,6 +120,7 @@ export default function WasThisHelpfulSection(channelId) {
     obj.warningType = type;
     obj.cta = cta;
     SafetyWarningUtils.trackCtaEvent(obj);
+    const tmpResult = SafetyWarningUtils;
   }, items3);
   obj = { style: tmp.container, children: null };
   obj = { variant: "text-sm/normal", color: "mobile-text-heading-primary", children: null };

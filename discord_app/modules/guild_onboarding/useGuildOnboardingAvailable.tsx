@@ -11,13 +11,13 @@ export default function useGuildOnboardingAvailable(features) {
   const items = [ImpersonateStore];
   let stateFromStores = require("initialize").useStateFromStores(items, () => {
     let id;
-    if (closure_0 != null) {
-      id = tmp.id;
+    if (user != null) {
+      id = user.id;
     }
     if (null == id) {
       return false;
     } else {
-      return ImpersonateStore.isFullServerPreview(tmp.id) && ImpersonateStore.isOnboardingEnabled(tmp.id);
+      return ImpersonateStore.isFullServerPreview(user.id) && ImpersonateStore.isOnboardingEnabled(user.id);
     }
   });
   if (!stateFromStores) {

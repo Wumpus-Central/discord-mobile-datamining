@@ -97,7 +97,7 @@ export default function VoicePanelPIPPushToTalkOverlay() {
     if (obj.get()) {
       num2 = 1.5;
     }
-    obj = { scale: spring.withSpring(num2, tmp3) };
+    obj = { scale: spring.withSpring(num2, PUSH_TO_TALK_PIP_PHYSICS) };
     const items = [obj];
     rect.transform = items;
     let str = "rgba(0, 0, 0, 0.54)";

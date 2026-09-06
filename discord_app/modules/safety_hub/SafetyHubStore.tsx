@@ -244,8 +244,7 @@ obj = {
           if (!dependencyMap[key10007].is_coppa) {
             continue;
           } else {
-            let obj = { status: null };
-            obj.status = SafetyHubModels.AppealStatusType.REVIEW_PENDING;
+            let obj = { status: SafetyHubModels.AppealStatusType.REVIEW_PENDING };
             dependencyMap[key10007].appeal_status = obj;
             continue;
           }

@@ -176,14 +176,14 @@ export const QuestBottomSheetProgressCardPlayStreamTask = function QuestBottomSh
         const intl4 = util.intl;
         const obj1 = { gameName: gameTitle };
         stringResult = intl4.formatToPlainString(util.t.boMftC, obj1);
-      } else if (tmp41.taskType === FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.PLAY_ON_DESKTOP) {
+      } else if (questTaskDetails.taskType === FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.PLAY_ON_DESKTOP) {
         const intl3 = util.intl;
         const obj2 = { gameName: gameTitle };
         stringResult = intl3.formatToPlainString(util.t["9Peldf"], obj2);
       } else {
         const CONSOLE = FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypesSets.CONSOLE;
         stringResult = null;
-        if (CONSOLE.has(tmp41.taskType)) {
+        if (CONSOLE.has(questTaskDetails.taskType)) {
           const intl2 = util.intl;
           const obj3 = { gameTitle };
           stringResult = intl2.formatToPlainString(util.t["+8JB6Y"], obj3);
@@ -291,16 +291,16 @@ export const QuestBottomSheetProgressCardWatchTask = function QuestBottomSheetPr
     obj3.poster = url;
     const obj4 = { uri: memo.url };
     obj3.source = obj4;
-    const items4 = [tmp14(tmp2(8307).VideoComponent, obj3)];
+    const items4 = [closure_7(tmp2(8307).VideoComponent, obj3)];
     const obj5 = {
       start: { x: 0.5, y: 0.5 },
       end: { x: 1, y: 1 },
       style: StyleSheet.absoluteFill,
       colors: ["rgba(0, 0, 0, 0)", "rgba(0, 0, 0, 1)"],
     };
-    items4[1] = tmp14(LinearGradientDefault, obj5);
+    items4[1] = closure_7(LinearGradientDefault, obj5);
     obj2.children = items4;
-    tmp15Result = tmp15(closure_4, obj2);
+    tmp15Result = closure_8(closure_4, obj2);
   }
   const items5 = [tmp15Result, , ,];
   tmp15Result = !isHeroVideoSupportedResult;
@@ -312,16 +312,16 @@ export const QuestBottomSheetProgressCardWatchTask = function QuestBottomSheetPr
     const obj7 = { style: tmp.videoPreview, source: null, resizeMode: "cover" };
     const obj8 = { uri: memo2.url };
     obj7.source = obj8;
-    const items6 = [tmp14(FastImageDefault, obj7)];
+    const items6 = [closure_7(FastImageDefault, obj7)];
     const obj9 = {
       start: { x: 0.5, y: 0.5 },
       end: { x: 1, y: 1 },
       style: StyleSheet.absoluteFill,
       colors: ["rgba(0, 0, 0, 0)", "rgba(0, 0, 0, 1)"],
     };
-    items6[1] = tmp14(LinearGradientDefault, obj9);
+    items6[1] = closure_7(LinearGradientDefault, obj9);
     obj6.children = items6;
-    tmp15Result = tmp15(closure_4, obj6);
+    tmp15Result = closure_8(closure_4, obj6);
   }
   items5[1] = tmp15Result;
   const obj10 = { style: tmp.playVideoIconWrapper, children: null };

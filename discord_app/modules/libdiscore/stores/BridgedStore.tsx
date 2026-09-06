@@ -8,6 +8,8 @@ export const ensureValidMode = function ensureValidMode(typescript) {
   let str = "typescript";
   if ("typescript" === typescript) {
     str = typescript;
+  } else {
+    FluxApi;
   }
   return str;
 };

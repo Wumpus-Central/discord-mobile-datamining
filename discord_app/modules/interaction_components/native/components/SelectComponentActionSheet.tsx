@@ -3,6 +3,8 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import useA11yRolesNative from "../../../../../discord_common/js/packages/design/hooks/useA11yRolesNative.tsx";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import TableRow from "../../../../design/components/TableRow/native/TableRow.native.tsx";
+import FormCheckbox from "../../../../design/components/Forms/native/FormCheckbox.native.tsx";
+import CheckmarkSmallBoldIcon from "../../../../design/components/Icon/native/redesign/generated/CheckmarkSmallBoldIcon.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import ChannelStore from "../../../../stores/ChannelStore.tsx";
 import SelectedChannelStore from "../../../../stores/SelectedChannelStore.tsx";
@@ -63,7 +65,7 @@ function SelectionHeader(renderIcon) {
     obj = { size: "sm", variant: str, disabled: selectButtonDisabled, onPress: renderIcon.submitSelection, text: null };
     const intl3 = tmp6(1114).intl;
     obj.text = intl3.string(tmp6(1114).t.XqMe3N);
-    tmp5Result = tmp5(tmp6(4975).Button, obj);
+    tmp5Result = closure_8(tmp6(4975).Button, obj);
   }
   obj.trailing = tmp5Result;
   const children = [closure_8(renderIcon(7149).BottomSheetTitleHeader, obj)];
@@ -82,7 +84,7 @@ function SelectionHeader(renderIcon) {
       tmp5Result = undefined;
       if (tmp2) {
         if (0 !== memo.length) {
-          tmp5Result = tmp5(onQueryChange, {});
+          tmp5Result = closure_8(onQueryChange, {});
         }
       }
       obj1.icon = tmp5Result;
@@ -107,7 +109,7 @@ function SelectionHeader(renderIcon) {
         }
         onQueryChange(arg0);
       };
-      tmp5Result1 = tmp5(selectedOptions(9755), obj1);
+      tmp5Result1 = closure_8(selectedOptions(9755), obj1);
       const tmp13 = selectedOptions(9755);
     }
   }
@@ -171,7 +173,7 @@ function SelectionOptionItem(item) {
     const items = [tmp.selectionOptionItemIconWrapper, iconContainerStyle];
     obj.style = items;
     obj.children = renderIcon(item);
-    tmp6Result = tmp6(View, obj);
+    tmp6Result = React6(View, obj);
   }
   obj.icon = tmp6Result;
   obj.label = item.label;
@@ -194,11 +196,11 @@ function SelectionOptionItem(item) {
       selected = false;
     }
     const obj2 = { checked: selected };
-    tmp6Result = tmp6(tmp2(5617).FormCheckbox, obj2);
+    tmp6Result = React6(FormCheckbox.FormCheckbox, obj2);
   } else {
     tmp6Result = null;
     if (true === selected) {
-      tmp6Result = tmp6(tmp2(9439).CheckmarkSmallBoldIcon, { color: "text-brand" });
+      tmp6Result = React6(CheckmarkSmallBoldIcon.CheckmarkSmallBoldIcon, { color: "text-brand" });
     }
   }
   items1[1] = tmp6Result;
@@ -333,7 +335,7 @@ export default function SelectComponentActionSheet(selectionActionComponent) {
     }
     obj.clearable = tmp5;
     obj.selected = tmp;
-    let tmp6 = tmp4;
+    let tmp6 = memo1;
     if (memo1) {
       tmp6 = selectedCount >= selectionActionComponent.maxValues;
     }
@@ -341,8 +343,8 @@ export default function SelectComponentActionSheet(selectionActionComponent) {
       tmp6 = !tmp;
     }
     if (!tmp6) {
-      let tmp9 = !tmp4;
-      if (!tmp4) {
+      let tmp9 = !memo1;
+      if (!memo1) {
         tmp9 = tmp;
       }
       if (tmp9) {

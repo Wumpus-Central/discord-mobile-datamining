@@ -5,6 +5,7 @@ import StickersUtils from "../../stickers/StickersUtils.tsx";
 import MessageActionCreatorsDefault from "../../../actions/MessageActionCreators.tsx";
 import DraftActionCreatorsDefault from "../../../actions/DraftActionCreators.tsx";
 import LongPressMessageActionSheetUtils from "../../messages/native/long_press/LongPressMessageActionSheetUtils.tsx";
+import PendingReplyActionCreators from "../../replies/PendingReplyActionCreators.tsx";
 import ChatInputNativeCommandsDefault from "ChatInputNativeCommands.tsx";
 import ChatInputSendUtils from "accessories/ChatInputSendUtils.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -174,16 +175,17 @@ export default function useChatInputRefs(chatInputProps) {
         obj = chatInputProps(ref[21]);
         const keyboardType = obj.getKeyboardType();
         if (keyboardType !== chatInputProps(ref[22]).KeyboardTypes.SYSTEM) {
-          let tmpResult = tmp(tmp2[23]);
-          obj = { type: tmp(tmp2[22]).KeyboardTypes.SYSTEM };
+          let tmpResult = chatInputProps(ref[23]);
+          obj = { type: chatInputProps(ref[22]).KeyboardTypes.SYSTEM };
           tmpResult.setKeyboardType(obj);
         }
-        tmpResult = tmp(tmp2[24]);
+        tmpResult = chatInputProps(ref[24]);
         if (!tmpResult.isAndroid()) {
-          chatInputTextFieldHeight(tmp2[14]).closeCustomKeyboard(chatInputNativeRef.current);
-          const obj5 = chatInputTextFieldHeight(tmp2[14]);
+          chatInputTextFieldHeight(ref[14]).closeCustomKeyboard(chatInputNativeRef.current);
+          const obj5 = chatInputTextFieldHeight(ref[14]);
         }
         const result = chatInputProps(ref[25]).closePortalKeyboardRequest();
+        const tmpResult1 = chatInputProps(ref[25]);
       },
       dismissKeyboard() {
         const result = chatInputProps(ref[26]).dismissGlobalKeyboard();
@@ -230,7 +232,6 @@ export default function useChatInputRefs(chatInputProps) {
           };
           ({ id: obj3.channel_id, guild_id: obj3.guild_id } = channel);
           const obj2 = AnalyticsUtilsDefault;
-          const tmp6 = importDefault;
           obj.reason = LongPressMessageActionSheetUtils.getContextBarCancelReason("edit", "cancel");
           const currentUser = UserStore.getCurrentUser();
           let id;
@@ -239,8 +240,8 @@ export default function useChatInputRefs(chatInputProps) {
           }
           obj.is_own_message = id === editingMessage.author.id;
           obj2.track(AnalyticEvents.CHAT_CONTEXT_BAR_ACTION_CANCELED, obj);
-          tmp6(7456).endEditMessage(channel.id);
-          const tmp6Result = tmp6(7456);
+          MessageActionCreatorsDefault.endEditMessage(channel.id);
+          const tmp6Result = MessageActionCreatorsDefault;
         }
       },
       handlePressKey(arg0) {
@@ -257,14 +258,14 @@ export default function useChatInputRefs(chatInputProps) {
           }
           if (str2.trim().length > 0) {
             if (null != pendingEdit) {
-              const current5 = tmp4.current;
+              const current5 = chatInputRef.current;
               if (current5 != null) {
                 current5.handleSaveEditing();
               }
             }
           }
           if (!tmp) {
-            const current4 = tmp4.current;
+            const current4 = chatInputRef.current;
             if (current4 != null) {
               current4.handleSend();
             }
@@ -316,23 +317,24 @@ export default function useChatInputRefs(chatInputProps) {
               if (null != mentionTimestamps) {
                 result = content;
                 if (mentionTimestamps.size > 0) {
-                  result = tmp21(tmp22[16]).serializeComposerTimestampMentions(content, mentionTimestamps);
-                  const tmp21Result = tmp21(tmp22[16]);
+                  result = chatInputProps(dependencyMap[16]).serializeComposerTimestampMentions(
+                    content,
+                    mentionTimestamps,
+                  );
+                  const tmp21Result = chatInputProps(dependencyMap[16]);
                 }
               }
-              const obj3 = chatInputTextFieldHeight(tmp22[32]);
+              const obj3 = chatInputTextFieldHeight(dependencyMap[32]);
               const parsed = obj3.parse(channel, result, undefined, mentionGames);
               if (parsed.content !== editingMessage.content) {
-                tmp8(tmp22[29]).editMessage(channel.id, editingMessage.id, parsed);
-                const tmp8Result = tmp8(tmp22[29]);
+                chatInputTextFieldHeight(dependencyMap[29]).editMessage(channel.id, editingMessage.id, parsed);
+                const tmp8Result = chatInputTextFieldHeight(dependencyMap[29]);
               }
               if (applicationCommandManager != null) {
                 const result1 = applicationCommandManager.clearTimestampMentions();
               }
-              tmp8 = chatInputTextFieldHeight;
             }
             const obj6 = chatInputProps(dependencyMap[31]);
-            tmp21 = chatInputProps;
             chatInputTextFieldHeight(dependencyMap[29]).endEditMessage(channel.id);
             const current = chatInputRef.current;
             if (current != null) {
@@ -349,10 +351,9 @@ export default function useChatInputRefs(chatInputProps) {
       },
       handleSend() {
         if (!ref4.current.sending) {
-          tmp.current.sending = true;
+          ref4.current.sending = true;
           threadCreationCallback.cancel();
-          threadCreationCallback = props.current.threadCreationCallback;
-          if (null != threadCreationCallback) {
+          if (null != props.current.threadCreationCallback) {
             const text = chatInputTextFieldHeight(ref[14]).getText(chatInputNativeRef.current, ref3.current, (text) => {
               let params = { text, params: null };
               params = {};
@@ -373,7 +374,8 @@ export default function useChatInputRefs(chatInputProps) {
                 const tmpResult = ChatInputSendUtils;
               }
             });
-            tmp.current.sending = false;
+            ref4.current.sending = false;
+            const obj2 = chatInputTextFieldHeight(ref[14]);
           } else {
             let current = chatInputRef.current;
             let applicationCommandManager = current.getApplicationCommandManager();
@@ -424,11 +426,12 @@ export default function useChatInputRefs(chatInputProps) {
                     const current2 = tmp8.current;
                     current2.focus();
                   }
+                  const obj4 = chatInputProps(4427);
                 },
               );
               obj = chatInputTextFieldHeight(ref[14]);
             }
-            tmp.current.sending = false;
+            ref4.current.sending = false;
           }
         }
       },
@@ -449,7 +452,6 @@ export default function useChatInputRefs(chatInputProps) {
             const parsed = chatInputTextFieldHeight(ref[32]).parse(channel, url);
             obj = {};
             const obj3 = chatInputTextFieldHeight(ref[32]);
-            const tmp15 = ref;
             const merged = Object.assign(
               chatInputTextFieldHeight(ref[29]).getSendMessageOptionsForReply(current.pendingReply),
             );
@@ -461,7 +463,7 @@ export default function useChatInputRefs(chatInputProps) {
             }
             obj.scheduledTimestamp = scheduledTimestamp;
             obj2.sendMessage(id, parsed, true, obj);
-            obj = chatInputProps(tmp15[30]);
+            obj = chatInputProps(ref[30]);
             obj.deletePendingReply(channel.id);
             const obj5 = chatInputTextFieldHeight(ref[29]);
           }
@@ -481,7 +483,7 @@ export default function useChatInputRefs(chatInputProps) {
                 const substr = text.slice(0, tokenStart);
                 sum = substr + text.slice(tmp6);
               }
-              let tmp27Result = tmp27(11997);
+              let tmp27Result = ChatInputSendUtils;
               let params = { text: sum, params: null };
               params = {};
               const merged = Object.assign(closure_14.current);
@@ -517,7 +519,7 @@ export default function useChatInputRefs(chatInputProps) {
                       const result2 = applicationCommandManager.clearTimestampMentions();
                     }
                   }
-                  tmp27Result = tmp27(11669);
+                  tmp27Result = PendingReplyActionCreators;
                   tmp27Result.deletePendingReply(channel.id);
                   DraftActionCreatorsDefault.saveDraft(channel.id, "", DraftType.ChannelMessage);
                   const current4 = dismissKeyboardResult.current;
@@ -595,15 +597,15 @@ export default function useChatInputRefs(chatInputProps) {
         const keyboardType = obj.getKeyboardType();
         let keyboardIsOpen = keyboardType === chatInputProps(ref[22]).KeyboardTypes.SYSTEM;
         if (keyboardIsOpen) {
-          let tmpResult = tmp(tmp2[36]);
+          let tmpResult = chatInputProps(ref[36]);
           keyboardIsOpen = tmpResult.getKeyboardIsOpen({ includeCustomKeyboard: false });
         }
         if (!keyboardIsOpen) {
-          tmpResult = tmp(tmp2[23]);
-          obj = { type: tmp(tmp2[22]).KeyboardTypes.SYSTEM, context: { keyboardWillOpen: true } };
+          tmpResult = chatInputProps(ref[23]);
+          obj = { type: chatInputProps(ref[22]).KeyboardTypes.SYSTEM, context: { keyboardWillOpen: true } };
           tmpResult.setKeyboardType(obj);
-          chatInputTextFieldHeight(tmp2[14]).openSystemKeyboard(chatInputNativeRef.current);
-          const obj5 = chatInputTextFieldHeight(tmp2[14]);
+          chatInputTextFieldHeight(ref[14]).openSystemKeyboard(chatInputNativeRef.current);
+          const obj5 = chatInputTextFieldHeight(ref[14]);
         }
       },
       replaceRange(arg0) {

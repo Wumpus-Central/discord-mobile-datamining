@@ -119,21 +119,21 @@ export default noop.memo(function GuildsBarGuild(guildId) {
   const memo = noop.useMemo(
     () => ({
       onPress() {
-        if (null != guildName.getGuild(closure_1_0)) {
+        if (null != guildName.getGuild(guild_id)) {
           if (!isUnavailable) {
             if (closure_1_2) {
               const guildFolders = isDragTarget.getGuildFolders();
               const findIndexResult = guildFolders.findIndex((guildIds) => {
                 guildIds = guildIds.guildIds;
-                return guildIds.includes(closure_1_0);
+                return guildIds.includes(guild_id);
               });
               if (findIndexResult > -1) {
-                let obj = { guild_id: tmp, index: findIndexResult, active_hook: ref.current };
+                let obj = { guild_id, index: findIndexResult, active_hook: ref.current };
                 token(drawerOpen[24]).track(sharedValue.HOME_DRAWER_GUILD_CLICKED, obj);
                 const obj2 = token(drawerOpen[24]);
               }
             }
-            token(drawerOpen[25])(tmp);
+            token(drawerOpen[25])(guild_id);
           }
         }
         obj = { title: null, body: null };
@@ -148,9 +148,9 @@ export default noop.memo(function GuildsBarGuild(guildId) {
   );
   const memo1 = noop.useMemo(() => {
     if (null != mentionCount) {
-      if (tmp > 0) {
+      if (mentionCount > 0) {
         const intl3 = util.intl;
-        let obj = { guildName, mentions: tmp };
+        let obj = { guildName, mentions: mentionCount };
         let formatToPlainStringResult = intl3.formatToPlainString(util.t["/uzRss"], obj);
       }
       const items = [];
@@ -191,7 +191,7 @@ export default noop.memo(function GuildsBarGuild(guildId) {
       formatToPlainStringResult = intl2.formatToPlainString(util.t.lzqe42, obj);
     } else {
       const intl = util.intl;
-      obj = { guildName, mentions: tmp };
+      obj = { guildName, mentions: mentionCount };
       formatToPlainStringResult = intl.formatToPlainString(util.t["/uzRss"], obj);
     }
   }, items5);
@@ -343,7 +343,7 @@ export default noop.memo(function GuildsBarGuild(guildId) {
   if (enableHome) {
     if (!flag2) {
       obj2 = { guildId, onActiveHookChange: callback };
-      tmp20Result = tmp20(tmp4(tmp3[17]), obj2);
+      tmp20Result = closure_16(tmp4(tmp3[17]), obj2);
     }
   }
   obj.expandedChildren = tmp20Result;
@@ -352,15 +352,15 @@ export default noop.memo(function GuildsBarGuild(guildId) {
     let tmp4Result = tmp4(tmp3[31]);
     obj3.source = tmp4(tmp3[32]);
     obj3.style = tmp.guildIcon;
-    tmp20Result = tmp20(tmp4Result, obj3);
+    tmp20Result = closure_16(tmp4Result, obj3);
   } else if (null != tmp14) {
     obj4 = { source: tmp14, style: tmp.guildIcon };
-    tmp20Result = tmp20(tmp4(tmp3[31]), obj4);
+    tmp20Result = closure_16(tmp4(tmp3[31]), obj4);
   } else {
     obj5 = { value: guildName, selected, animate: selected, size: null };
     tmp4Result = tmp4(tmp3[19]);
     obj5.size = tmp2(tmp3[19]).GuildIconSizes.LARGE;
-    tmp20Result = tmp20(tmp4Result, obj5);
+    tmp20Result = closure_16(tmp4Result, obj5);
   }
   obj.children = tmp20Result;
   return closure_16(token(drawerOpen[14]), obj);

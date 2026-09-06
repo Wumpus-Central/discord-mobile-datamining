@@ -3,16 +3,16 @@ import size from "../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("utils/FunctionUtils.tsx");
 
-export const areArraysShallowlyEqual = function areArraysShallowlyEqual(arg0, arg1) {
-  if (arg0 === arg1) {
+export const areArraysShallowlyEqual = function areArraysShallowlyEqual(found, found2) {
+  if (found === found2) {
     return true;
   } else {
-    if (null != arg0) {
-      if (null != arg1) {
-        if (arg0.length === arg1.length) {
+    if (null != found) {
+      if (null != found2) {
+        if (found.length === found2.length) {
           let num = 0;
-          if (0 < arg0.length) {
-            while (arg0[num] === arg1[num]) {
+          if (0 < found.length) {
+            while (found[num] === found2[num]) {
               num = num + 1;
             }
             return false;
@@ -24,8 +24,8 @@ export const areArraysShallowlyEqual = function areArraysShallowlyEqual(arg0, ar
     return false;
   }
 };
-export function cachedFunction(arg0) {
-  closure_0 = arg0;
+export function cachedFunction(_computeCategories) {
+  closure_0 = _computeCategories;
   let items = null;
   closure_2 = null;
   return () => {

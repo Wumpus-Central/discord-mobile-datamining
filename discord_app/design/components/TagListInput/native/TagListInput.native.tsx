@@ -250,7 +250,7 @@ export default noop.memo(function TagListInput(accessibilityHint) {
   const ref3 = ref.useRef(null);
   const tmp18 = ref;
   const tmp19 = ref(ref1[17])({ onFocus, onBlur });
-  let tmp9 = ref2;
+  const tmp9 = ref2;
   [c12, c13] = ref2(ref.useState(null), 2);
   const tmp21 = ref2(ref.useState(null), 2);
   [tmp23, c14] = ref2(ref.useState(false), 2);
@@ -532,7 +532,7 @@ export default noop.memo(function TagListInput(accessibilityHint) {
     _undefined2(false);
     let tmp4 = 0 === ref.current.start;
     if (tmp4) {
-      tmp4 = 0 === tmp3.current.end;
+      tmp4 = 0 === ref.current.end;
     }
     if ("Backspace" === nativeEvent.nativeEvent.key) {
       if (null != c12) {
@@ -548,11 +548,11 @@ export default noop.memo(function TagListInput(accessibilityHint) {
     if ("Backspace" === nativeEvent.nativeEvent.key) {
       if (tmp4) {
         if (0 !== onChangeText.length) {
-          colors(arr[arr.length - 1].id);
+          colors(onChangeText[onChangeText.length - 1].id);
           _undefined2(true);
           const AccessibilityAnnouncer = AccessibilityAnnouncer2.AccessibilityAnnouncer;
           const intl = util.intl;
-          const obj = { text: arr[arr.length - 1].text };
+          const obj = { text: onChangeText[onChangeText.length - 1].text };
           AccessibilityAnnouncer.announce(intl.formatToPlainString(util.t.QymItZ, obj));
         }
       }
@@ -560,9 +560,9 @@ export default noop.memo(function TagListInput(accessibilityHint) {
     if (null != c12) {
       colors(null);
     } else {
-      let tmp8 = null != tmp3.current && tmp3.current.start === tmp3.current.end;
+      let tmp8 = null != ref.current && ref.current.start === ref.current.end;
       if (tmp8) {
-        tmp8 = tmp3.current.start === ref1.current.length;
+        tmp8 = ref.current.start === ref1.current.length;
       }
       if (tmp8) {
         const _setTimeout = setTimeout;

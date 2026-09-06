@@ -52,11 +52,11 @@ export const getUploadTarget = function getUploadTarget(target) {
   if (obj.GUILD_PRODUCT_ATTACHMENT === target) {
     const tmp13 = new GuildProductAttachmentUploadTargetDefault();
     return tmp13;
-  } else if (tmp.GRAVITY_ATTACHMENT === target) {
+  } else if (obj.GRAVITY_ATTACHMENT === target) {
     const tmp7 = new ICYMIAttachmentUploadTargetDefault();
     return tmp7;
   } else {
-    const MESSAGE_ATTACHMENT = tmp.MESSAGE_ATTACHMENT;
+    const MESSAGE_ATTACHMENT = obj.MESSAGE_ATTACHMENT;
     if (typeof MessageAttachmentUploadTarget === "function") {
       return Object.create(MessageAttachmentUploadTarget.prototype);
     } else {

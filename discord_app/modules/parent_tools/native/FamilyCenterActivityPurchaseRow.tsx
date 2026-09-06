@@ -1,10 +1,12 @@
 // discord_app/modules/parent_tools/native/FamilyCenterActivityPurchaseRow.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import Text_Text from "../../../design/components/Text/native/Text.tsx";
+import PriceUtils from "../../../utils/PriceUtils.tsx";
 import useCollectiblesDataDefault from "../../collectibles/hooks/useCollectiblesData.tsx";
 import FamilyCenterActivityPurchaseRowUtils from "../FamilyCenterActivityPurchaseRowUtils.tsx";
+import FamilyCenterActivityItemPreviewDefault from "FamilyCenterActivityItemPreview.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
-const FamilyCenterActivityItemPreviewDefault = tmp2(14903);
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
@@ -48,14 +50,14 @@ export default function FamilyCenterActivityPurchaseRow(arg0) {
     return null;
   } else {
     let combined = displayName;
-    const tmp5Result = tmp5(7234);
+    const tmp5Result = PriceUtils;
     if (null != typeName) {
       const _HermesInternal = HermesInternal;
       combined = "" + displayName + " \u2022 " + typeName;
     }
     obj = { style: tmp.container, children: null };
     obj = { displayName, product: null, isSubscription: null, subscriptionPlanId: null };
-    const formatPriceResult = tmp5(7234).formatPrice(total, currency);
+    const formatPriceResult = PriceUtils.formatPrice(total, currency);
     if (product == null) {
       product = null;
     }
@@ -71,9 +73,9 @@ export default function FamilyCenterActivityPurchaseRow(arg0) {
       lineClamp: 1,
       children: combined,
     };
-    const items1 = [React4(tmp5(4556).Text, obj2)];
+    const items1 = [React4(Text_Text.Text, obj2)];
     const obj3 = { variant: "text-xs/medium", color: "text-muted", children: formatPriceResult };
-    items1[1] = React4(tmp5(4556).Text, obj3);
+    items1[1] = React4(Text_Text.Text, obj3);
     obj1.children = items1;
     items[1] = hasOwnProperty(View, obj1);
     obj.children = items;

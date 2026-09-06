@@ -14,7 +14,7 @@ export default function useFetchHighlightedCreatorGuildDetails(arg0) {
   [tmp4, asyncGeneratorStep] = _slicedToArray(callback.useState(), 2);
   const highlightedCreatorDetails = _slicedToArray(callback.useState(), 2);
   _slicedToArray = highlightedCreatorDetails[1];
-  closure_0 = asyncGeneratorStep(async (arg0, value) => {
+  closure_0 = asyncGeneratorStep(async (arg0) => {
     if (c6 === 2) {
       c6 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");

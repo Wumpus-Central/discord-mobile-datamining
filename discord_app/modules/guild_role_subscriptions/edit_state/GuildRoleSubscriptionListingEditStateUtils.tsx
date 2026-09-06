@@ -41,7 +41,7 @@ function clearEditState(NEW_LISTING_EDIT_STATE_ID) {
     });
   });
 }
-let closure_20 = async function _updateListingPeripheralsFromEditState(arg0, value) {
+let closure_20 = async function _updateListingPeripheralsFromEditState(arg0) {
   if (c4 === 2) {
     c4 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -243,7 +243,7 @@ let closure_20 = async function _updateListingPeripheralsFromEditState(arg0, val
     }
   }
 };
-let closure_21 = async function _createListingFromEditState(arg0, value) {
+let closure_21 = async function _createListingFromEditState(arg0) {
   if (c7 === 2) {
     c7 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -486,8 +486,8 @@ export const useClearEditStateOnUnmount = function useClearEditStateOnUnmount(ar
     items,
   );
 };
-export const useName = function useName(arg0) {
-  _require = arg0;
+export const useName = function useName(listingId) {
+  _require = listingId;
   let name = (name) => {
     let str;
     if (name != null) {
@@ -505,11 +505,11 @@ export const useName = function useName(arg0) {
   const tmp2 = name(5598)(() => first);
   const items1 = [stateFromStores, tmp2];
   let memo = noop.useMemo(() => closure_3(c2), items1);
-  _require = arg0;
+  _require = listingId;
   name = "name";
   const tmp4 = closure_10((setListing) => setListing.setListing);
   dependencyMap = tmp4;
-  const items2 = [tmp4, arg0, "name", memo];
+  const items2 = [tmp4, listingId, "name", memo];
   const callback = noop.useCallback((arg0) => {
     closure_0 = arg0;
     closure_3(closure_0, (arg0) => {
@@ -598,8 +598,8 @@ export const usePriceTier = function usePriceTier(editStateId) {
   const items3 = [memo, callback];
   return items3;
 };
-export const useDescription = function useDescription(arg0) {
-  _require = arg0;
+export const useDescription = function useDescription(editStateId) {
+  _require = editStateId;
   let description = (description) => {
     let str;
     if (description != null) {
@@ -617,11 +617,11 @@ export const useDescription = function useDescription(arg0) {
   const tmp2 = description(5598)(() => first);
   const items1 = [stateFromStores, tmp2];
   let memo = noop.useMemo(() => closure_3(c2), items1);
-  _require = arg0;
+  _require = editStateId;
   description = "description";
   const tmp4 = closure_10((setListing) => setListing.setListing);
   dependencyMap = tmp4;
-  const items2 = [tmp4, arg0, "description", memo];
+  const items2 = [tmp4, editStateId, "description", memo];
   const callback = noop.useCallback((arg0) => {
     closure_0 = arg0;
     closure_3(closure_0, (arg0) => {
@@ -730,27 +730,27 @@ export const useApplicationId = function useApplicationId(listingId) {
   const items1 = [stateFromStores, tmp2];
   return noop.useMemo(() => closure_3(c2), items1);
 };
-export const useRoleIcon = function useRoleIcon(arg0, arg1) {
-  const tmp = useSubscriptionRoleDefault(arg1, arg0);
+export const useRoleIcon = function useRoleIcon(editStateId, guildId) {
+  const tmp = useSubscriptionRoleDefault(guildId, editStateId);
+  editStateId = tmp;
   const items = [tmp];
   let memo = noop.useMemo(() => {
     let icon;
-    if (closure_0 != null) {
-      icon = tmp.icon;
+    if (editStateId != null) {
+      icon = editStateId.icon;
     }
     const obj = { icon, unicodeEmoji: null };
     let unicodeEmoji;
-    if (closure_0 != null) {
-      unicodeEmoji = tmp.unicodeEmoji;
+    if (editStateId != null) {
+      unicodeEmoji = editStateId.unicodeEmoji;
     }
     obj.unicodeEmoji = unicodeEmoji;
     return obj;
   }, items);
-  closure_0 = arg0;
   const roleIcon = "roleIcon";
   const tmp3 = closure_1_10((setListing) => setListing.setListing);
   closure_3 = tmp3;
-  const items1 = [tmp3, arg0, "roleIcon", memo];
+  const items1 = [tmp3, editStateId, "roleIcon", memo];
   const callback = noop.useCallback((arg0) => {
     closure_0 = arg0;
     closure_3(closure_0, (arg0) => {
@@ -794,7 +794,7 @@ export const useRole = function useRole(listingId, guildId) {
     }
     return roleColor;
   });
-  closure_2 = tmp2;
+  const color = tmp2;
   const tmp3 = closure_10((arg0) => {
     let roleIcon;
     if (arg0.listings[closure_0] != null) {
@@ -812,20 +812,20 @@ export const useRole = function useRole(listingId, guildId) {
     const obj = {};
     const merged = Object.assign(DEFAULT_PREVIEW_ROLE);
     if (undefined !== closure_3) {
-      let str = tmp4.icon;
+      let str = closure_3.icon;
       if (str == null) {
         str = "";
       }
       obj.icon = str;
-      let str2 = tmp4.unicodeEmoji;
+      let str2 = closure_3.unicodeEmoji;
       if (str2 == null) {
         str2 = "";
       }
       obj.unicodeEmoji = str2;
     }
-    if (undefined !== closure_2) {
-      obj.color = tmp5;
-      obj.colorString = utils_ColorUtils.int2hex(tmp5);
+    if (undefined !== color) {
+      obj.color = color;
+      obj.colorString = utils_ColorUtils.int2hex(color);
     }
     return obj;
   }, items);
@@ -888,8 +888,8 @@ export const useChannelAccessFormat = function useChannelAccessFormat(editStateI
       let SOME_CHANNELS_ACCESS = constants.SOME_CHANNELS_ACCESS;
     } else {
       SOME_CHANNELS_ACCESS = RolePermissionUtils.hasViewChannelPermission(tmp)
-        ? tmp4.ALL_CHANNELS_ACCESS
-        : tmp4.SOME_CHANNELS_ACCESS;
+        ? constants.ALL_CHANNELS_ACCESS
+        : constants.SOME_CHANNELS_ACCESS;
     }
     return SOME_CHANNELS_ACCESS;
   }, items);
@@ -1055,14 +1055,13 @@ export const useTierEmojiIds = function useTierEmojiIds(listingId, guildId) {
     if (null != tierEmojiIds) {
       const id = tmp.id;
       if (0 !== memo.length) {
-        const found = arr.filter((roles) => {
+        const found = memo.filter((roles) => {
           roles = roles.roles;
           return roles.includes(id);
         });
         const _Set = Set;
         set = new Set(found.map((id) => id.id));
       }
-      arr = memo;
     }
     return set;
   }, items2);
@@ -1199,8 +1198,8 @@ export const useTrialLimit = function useTrialLimit(editStateId) {
   const items1 = [prop, callback];
   return items1;
 };
-export const useHasChanges = function useHasChanges(arg0) {
-  closure_0 = arg0;
+export const useHasChanges = function useHasChanges(editStateId) {
+  closure_0 = editStateId;
   return closure_1_10((arg0) => undefined !== arg0.listings[closure_0]);
 };
 export const useHasChangesForEditStateIds = function useHasChangesForEditStateIds(arg0) {
@@ -1289,7 +1288,7 @@ export const useSubscriptionPlan = function useSubscriptionPlan(listingId) {
       const obj = { price: num, currency: null, interval: null, interval_count: null, id: null };
       let currency;
       if (listingId != null) {
-        currency = tmp2.currency;
+        currency = listingId.currency;
       }
       if (currency == null) {
         currency = constants2.USD;
@@ -1297,7 +1296,7 @@ export const useSubscriptionPlan = function useSubscriptionPlan(listingId) {
       obj.currency = currency;
       let interval;
       if (listingId != null) {
-        interval = tmp2.interval;
+        interval = listingId.interval;
       }
       if (interval == null) {
         interval = SubscriptionIntervalTypes.MONTH;
@@ -1305,7 +1304,7 @@ export const useSubscriptionPlan = function useSubscriptionPlan(listingId) {
       obj.interval = interval;
       let num2;
       if (listingId != null) {
-        num2 = tmp2.interval_count;
+        num2 = listingId.interval_count;
       }
       if (num2 == null) {
         num2 = 1;
@@ -1313,7 +1312,7 @@ export const useSubscriptionPlan = function useSubscriptionPlan(listingId) {
       obj.interval_count = num2;
       let str;
       if (listingId != null) {
-        str = tmp2.id;
+        str = listingId.id;
       }
       if (str == null) {
         str = "";
@@ -1329,7 +1328,7 @@ export const useCreateOrUpdateListingFromEditState = function useCreateOrUpdateL
   [tmp2, closure_0] = _slicedToArray(noop.useState(false), 2);
   const tmp3 = _slicedToArray(noop.useState(), 2);
   closure_1 = tmp3[1];
-  closure_0 = asyncGeneratorStep(async (arg0, value) => {
+  closure_0 = asyncGeneratorStep(async (arg0) => {
     if (c6 === 2) {
       c6 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -1652,7 +1651,7 @@ export const useEditStateIds = function useEditStateIds(groupListingId, guildId,
       return items1;
     });
     listings = listings.listings;
-    let item = listings.forEach((item) => {
+    const item = listings.forEach((item) => {
       closure_1_4(closure_1, () => {
         let obj = {
           name: item.name,

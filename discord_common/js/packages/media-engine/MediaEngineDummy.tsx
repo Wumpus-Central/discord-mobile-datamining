@@ -81,7 +81,7 @@ prototype["setClipsSource"] = function setClipsSource() {};
 prototype["setClipsQualitySettings"] = function setClipsQualitySettings() {
   return false;
 };
-prototype["setDesktopSource"] = function setDesktopSource(arg0, useVideoHook) {
+prototype["setDesktopSource"] = function setDesktopSource(arg0) {
   if (useVideoHook === undefined) {
     const DEFAULT = constants2.DEFAULT;
   }

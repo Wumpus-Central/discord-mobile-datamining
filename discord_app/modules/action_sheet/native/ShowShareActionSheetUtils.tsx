@@ -1,5 +1,6 @@
 // discord_app/modules/action_sheet/native/ShowShareActionSheetUtils.tsx
 import Constants from "../../../Constants.tsx";
+import PlatformUtils from "../../../utils/PlatformUtils.tsx";
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
 import URLUtilsDefault from "../../../utils/URLUtils.tsx";
 import FileExtensionUtils from "../../media/FileExtensionUtils.tsx";
@@ -26,13 +27,13 @@ export const getMediaShareParams = function getMediaShareParams(source) {
     if (true !== source.disableDownload) {
       if (null != source.shareURI) {
         if (obj11.isDiscordDirectAssetUrl(source.shareURI)) {
-          let tmpResult = tmp(1115);
+          let tmpResult = PlatformUtils;
           if (tmpResult.isAndroid()) {
             obj = { presentDelayMs };
           }
           ({ videoURI, contentType } = source);
           if (null != videoURI) {
-            tmpResult = tmp(5568);
+            tmpResult = FileExtensionUtils;
             const decideFileExtensionResult = tmpResult.decideFileExtension(videoURI, contentType, true);
             obj = { mediaFallbackUrl: videoURI, mediaStagingOptions: null };
             let tmp11;
@@ -44,7 +45,7 @@ export const getMediaShareParams = function getMediaShareParams(source) {
             obj.mediaStagingOptions = tmp11;
             return obj;
           } else {
-            const decideFileExtensionResult1 = tmp(5568).decideFileExtension(source.uri, contentType, true);
+            const decideFileExtensionResult1 = FileExtensionUtils.decideFileExtension(source.uri, contentType, true);
             const obj2 = { mediaFallbackUrl: source.shareURI, mediaStagingOptions: null };
             let tmp6;
             if (null != decideFileExtensionResult1) {

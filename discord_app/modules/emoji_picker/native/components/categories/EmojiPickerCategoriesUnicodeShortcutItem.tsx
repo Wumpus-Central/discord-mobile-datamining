@@ -1,4 +1,5 @@
 // discord_app/modules/emoji_picker/native/components/categories/EmojiPickerCategoriesUnicodeShortcutItem.tsx
+import ReanimatedRexport from "../../../../reanimated/ReanimatedRexport.tsx";
 import cheapWorkletShallowEqual from "../../../../reanimated/native/cheapWorkletShallowEqual.tsx";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
@@ -55,12 +56,11 @@ export default function EmojiPickerCategoriesUnicodeShortcutItem(blockRef) {
           num = EXPRESSION_FOOTER_HEIGHT;
         }
         const diff = end.end - num;
-        tmp2(4296).runOnJS(closure_5)(result > diff);
-        const tmp2Result = tmp2(4296);
+        ReanimatedRexport.runOnJS(closure_5)(result > diff);
+        const tmp2Result = ReanimatedRexport;
       }
       obj = cheapWorkletShallowEqual;
       tmp = current;
-      tmp2 = require;
     }
   };
   let obj = {

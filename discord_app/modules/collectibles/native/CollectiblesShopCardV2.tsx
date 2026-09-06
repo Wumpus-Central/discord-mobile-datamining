@@ -178,7 +178,7 @@ function CollectiblesShopCardInternalV2(product) {
       }
       items7[1] = tmp18;
       obj3.children = items7;
-      let tmp25Result = tmp25(showWishlistNUXActionSheet, obj3);
+      let tmp25Result = closure_10(showWishlistNUXActionSheet, obj3);
     } else {
       tmp25Result = null;
     }
@@ -200,11 +200,11 @@ function CollectiblesShopCardInternalV2(product) {
     obj5.disableBundleStaticBackground = disableBundleStaticBackground;
     obj5.muteBundleStaticBackground = muteBundleStaticBackground;
     obj5.cardWidth = cardWidth;
-    items8[1] = closure_9(tmp9(tmp3[32]), obj5);
+    items8[1] = closure_9(require("CollectiblesShopCardAssetTileV2"), obj5);
     const obj6 = { product, collectibleProductState, preferVCPrice, isDisabled, hidePrice: flag };
-    items8[2] = closure_9(tmp9(tmp3[33]), obj6);
+    items8[2] = closure_9(require("CollectiblesShopCardCardDetailsV2"), obj6);
     obj2.children = items8;
-    return tmp25(tmp2(tmp3[22]).PressableOpacity, obj2);
+    return closure_10(tmp2(tmp3[22]).PressableOpacity, obj2);
   } else if (tmp28) {
     const items9 = [tmp.badgePill];
     obj7 = { style: null, accessibilityLabel: null, children: null };
@@ -248,7 +248,7 @@ function CollectiblesShopCardInternalV2(product) {
       tmp34Result = closure_9(tmp2(tmp3[27]).IconBadgePill, obj11);
     } else if (result1) {
       const obj12 = { unpublishedAt, style: tmp.badge };
-      tmp34Result = closure_9(tmp9(tmp3[29]), obj12);
+      tmp34Result = closure_9(require("LimitedTimeBadge"), obj12);
     } else if ("nitroClaim" === collectibleProductState) {
       tmp34Result = closure_9(tmp2(tmp3[25]).NitroWheelIcon, { color: "mobile-text-heading-primary" });
     } else {
@@ -264,6 +264,7 @@ function CollectiblesShopCardInternalV2(product) {
     }
     tmp2Result8 = tmp2(tmp3[9]);
   }
+  const tmp2Result7 = require("CollectiblesProductUtils");
 }
 function CollectiblesShopCardV2Inner(product) {
   product = product.product;
@@ -286,7 +287,7 @@ function CollectiblesShopCardV2Inner(product) {
   const defaultVariantIndex = obj.useDefaultVariantIndex(product);
   const selectedProduct = require("CollectiblesProductUtils").getSelectedProduct(product, defaultVariantIndex);
   analyticsLocations = defaultVariantIndex(analyticsLocations[16])().analyticsLocations;
-  const obj2 = require("CollectiblesProductUtils");
+  let obj2 = require("CollectiblesProductUtils");
   const collectiblesAnalyticsContext = require("CollectiblesAnalyticsContext").useCollectiblesAnalyticsContext();
   const items = [analyticsLocations, product, defaultVariantIndex, collectiblesAnalyticsContext];
   const callback = collectiblesAnalyticsContext.useCallback(() => {

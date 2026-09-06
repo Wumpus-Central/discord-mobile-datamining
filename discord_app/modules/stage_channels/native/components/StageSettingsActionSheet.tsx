@@ -79,14 +79,14 @@ export default function StageSettingsActionSheet(channelId) {
           }
           obj = { label: stringResult, leading: null, onPress: null };
           obj1 = { source: onOpenRTCDebugOverlay(tmp3[19]), color: tmp.icon.color };
-          obj.leading = tmp11(tmp2(tmp3[18]).Icon, obj1);
+          obj.leading = closure_12(tmp2(tmp3[18]).Icon, obj1);
           obj.onPress = function onPress() {
             if (null != stateFromStores) {
               const result = StageChannelActionCreatorExtras.openStageChannelSettings(tmp);
               ActionSheetActionCreatorsDefault.hideActionSheet(STAGE_SETTINGS_SHEET_KEY);
             }
           };
-          let tmp11Result = tmp11(tmp2(tmp3[16]).FormRow, obj);
+          let tmp11Result = closure_12(tmp2(tmp3[16]).FormRow, obj);
         }
       }
     }
@@ -122,14 +122,14 @@ export default function StageSettingsActionSheet(channelId) {
       const intl5 = tmp2(tmp3[17]).intl;
       obj6.label = intl5.string(tmp2(tmp3[17]).t.X8bCMe);
       const obj7 = { source: tmp18(tmp3[25]), color: tmp.icon.color };
-      obj6.leading = tmp11(tmp2(tmp3[18]).Icon, obj7);
+      obj6.leading = closure_12(tmp2(tmp3[18]).Icon, obj7);
       obj6.onPress = function onPress() {
         if (onOpenRTCDebugOverlay != null) {
           tmp();
         }
         ActionSheetActionCreatorsDefault.hideActionSheet(STAGE_SETTINGS_SHEET_KEY);
       };
-      tmp11Result = tmp11(tmp2(tmp3[16]).FormRow, obj6);
+      tmp11Result = closure_12(tmp2(tmp3[16]).FormRow, obj6);
     }
     const obj8 = { keyboardShouldPersistTaps: "always", children: null };
     items6[3] = tmp11Result;
@@ -153,7 +153,7 @@ export default function StageSettingsActionSheet(channelId) {
     items6[4] = closure_12(tmp2(tmp3[16]).FormRow, obj9);
     obj.children = items6;
     obj8.children = closure_13(View, obj);
-    tmp11Result1 = tmp11(tmp2(tmp3[15]).ActionSheet, obj8);
+    tmp11Result1 = closure_12(tmp2(tmp3[15]).ActionSheet, obj8);
   }
   return tmp11Result1;
 }

@@ -8,6 +8,7 @@ import spring from "../../../../design/animation/reanimated/spring/spring.tsx";
 import StageMusicActionCreators from "../../../stage_channels/StageMusicActionCreators.tsx";
 import useMyCurrentStageChannelRoleDefault from "../../../stage_channels/useMyCurrentStageChannelRole.tsx";
 import calculateVoicePanelHeaderSpecsDefault from "calculateVoicePanelHeaderSpecs.tsx";
+import VoicePanelIconButtonDefault from "../shared/VoicePanelIconButton.tsx";
 import useStableParticipant from "../utils/useStableParticipant.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -46,13 +47,13 @@ function MusicMuteButton(channelId) {
       }
       obj = {
         accessibilityLabel: stringResult,
-        icon: tmp(stateFromStores ? 9910 : 9912),
+        icon: importDefault(stateFromStores ? 9910 : 9912),
         onPress() {
           return StageMusicActionCreators.updateStageMusicMuted(!stateFromStores);
         },
       };
-      closure_23(tmp(17035), obj);
-      const tmpResult = tmp(17035);
+      closure_23(VoicePanelIconButtonDefault, obj);
+      const tmpResult = VoicePanelIconButtonDefault;
     }
   }
   return tmp6;
@@ -389,12 +390,11 @@ export default noop.memo(function VoicePanelHeader(wrapperOffset) {
   token = obj6.useToken(gestureState(channelId[19]).modules.mobile.VOICE_PANEL_GUTTER);
   let obj7 = wrapperOffset(channelId[20]);
   function he() {
-    const obj = mode;
     if (mode.get() === VoicePanelModes.PIP) {
       let num = -tmpResult.height + EDGE_GUTTER;
     } else {
       num = 0;
-      if (obj.get() === tmp3.DISMISSED) {
+      if (mode.get() === tmp3.DISMISSED) {
         num = 0;
       }
     }
@@ -457,6 +457,7 @@ export default noop.memo(function VoicePanelHeader(wrapperOffset) {
       return obj;
     }
     tmp13 = UI_SHOW_HIDE_PHYSICS;
+    tmp10Result = spring;
   }
   obj1 = {
     calculateVoicePanelHeaderSpecs: gestureState(channelId[39]),
@@ -587,13 +588,13 @@ export default noop.memo(function VoicePanelHeader(wrapperOffset) {
     items3,
     () => {
       if (null != closure_16) {
-        if (obj3.isStableUserParticipant(tmp)) {
-          if (tmp10Result.stableParticipantHasVideo(tmp)) {
+        if (obj3.isStableUserParticipant(closure_16)) {
+          if (tmp10Result.stableParticipantHasVideo(closure_16)) {
             const videoDevices = MediaEngineStore.getVideoDevices();
             const _Object = Object;
             const keys = Object.keys(videoDevices);
             if (keys.length >= 2) {
-              const videoDeviceId = obj2.getVideoDeviceId();
+              const videoDeviceId = MediaEngineStore.getVideoDeviceId();
               let facing;
               if (videoDevices[videoDeviceId] != null) {
                 facing = tmp13.facing;
@@ -609,27 +610,26 @@ export default noop.memo(function VoicePanelHeader(wrapperOffset) {
                 if (null != tmp6) {
                   if ("back" === facing) {
                     if ("front" === tmp6) {
-                      const intl3 = tmp10(1114).intl;
-                      let stringResult = intl3.string(tmp10(1114).t["/R1SBx"]);
+                      const intl3 = util.intl;
+                      let stringResult = intl3.string(util.t["/R1SBx"]);
                     }
                   }
                   if ("front" === facing) {
                     if ("back" === tmp6) {
-                      const intl2 = tmp10(1114).intl;
-                      stringResult = intl2.string(tmp10(1114).t["7YZ/Si"]);
+                      const intl2 = util.intl;
+                      stringResult = intl2.string(util.t["7YZ/Si"]);
                     }
                   }
-                  const intl = tmp10(1114).intl;
-                  stringResult = intl.string(tmp10(1114).t["t9eQ/g"]);
+                  const intl = util.intl;
+                  stringResult = intl.string(util.t["t9eQ/g"]);
                 }
                 return stringResult;
               }
-              const intl4 = tmp10(1114).intl;
-              stringResult = intl4.string(tmp10(1114).t["t9eQ/g"]);
+              const intl4 = util.intl;
+              stringResult = intl4.string(util.t["t9eQ/g"]);
             }
-            obj2 = MediaEngineStore;
           }
-          tmp10Result = tmp10(17104);
+          tmp10Result = useStableParticipant;
         }
         obj3 = useStableParticipant;
       }
@@ -681,7 +681,7 @@ export default noop.memo(function VoicePanelHeader(wrapperOffset) {
   let flag = wrapperOffset(channelId[48]).useIsStreamSecureFramesVerified({ streamKey: tmp37, channelId });
   if (ParticipantTypes.STREAM !== tmp12) {
     flag = false;
-    if (tmp34.USER === tmp12) {
+    if (ParticipantTypes.USER === tmp12) {
       flag = isUserSecureFramesVerified;
     }
   }
@@ -698,7 +698,7 @@ export default noop.memo(function VoicePanelHeader(wrapperOffset) {
   let tmp38Result = tmp38Result4;
   if (tmp38Result4) {
     obj6 = { baseColor: tmp2(tmp3[19]).colors.BLACK, minHeight: 0 };
-    tmp38Result = tmp38(tmp2(tmp3[50]), obj6);
+    tmp38Result = closure_23(tmp2(tmp3[50]), obj6);
     const tmp2Result1 = tmp2(tmp3[50]);
   }
   items7[1] = tmp38Result;
@@ -707,7 +707,7 @@ export default noop.memo(function VoicePanelHeader(wrapperOffset) {
   const tmp5Result2 = wrapperOffset(channelId[48]);
   if (tmp12 === ParticipantTypes.USER) {
     const obj8 = { isHeaderHidden: derivedValue1 };
-    tmp38Result = tmp38(tmp2(tmp3[51]), obj8);
+    tmp38Result = closure_23(tmp2(tmp3[51]), obj8);
   }
   const items8 = [tmp38Result];
   obj9 = { style: null, animatedProps, children: null };
@@ -731,7 +731,7 @@ export default noop.memo(function VoicePanelHeader(wrapperOffset) {
     tmp38Result1 = null;
     if (flag) {
       obj13 = { size: "xs", color: tmp2(tmp3[19]).colors.TEXT_SUBTLE, style: tmp.shieldIconMargin };
-      tmp38Result1 = tmp38(tmp5(tmp3[54]).ShieldLockIcon, obj13);
+      tmp38Result1 = closure_23(tmp5(tmp3[54]).ShieldLockIcon, obj13);
     }
   }
   items11[1] = tmp38Result1;
@@ -745,7 +745,7 @@ export default noop.memo(function VoicePanelHeader(wrapperOffset) {
   let tmp38Result2 = channelType === tmp5(tmp3[55]).ChannelTypes.GUILD_STAGE_VOICE;
   if (tmp38Result2) {
     obj15 = { channelId };
-    tmp38Result2 = tmp38(MusicMuteButton, obj15);
+    tmp38Result2 = closure_23(MusicMuteButton, obj15);
   }
   items13[1] = tmp38Result2;
   items13[2] = closure_23(gestureState(channelId[56]), { isConnectedToVoiceChannel: tmp38Result4, channelId });
@@ -755,14 +755,14 @@ export default noop.memo(function VoicePanelHeader(wrapperOffset) {
     obj17 = { channelName: stateFromStores };
     obj16.accessibilityLabel = intl3.formatToPlainString(tmp5(tmp3[30]).t["dHHb/2"], obj17);
     obj16.onPress = inviteMembersCallback;
-    canInviteMembers = tmp38(tmp2(tmp3[29]), obj16);
+    canInviteMembers = closure_23(tmp2(tmp3[29]), obj16);
     const tmp2Result8 = tmp2(tmp3[29]);
   }
   items13[3] = canInviteMembers;
   let tmp38Result3 = null;
   if (null != stateFromStores1) {
     obj18 = { icon: tmp2(tmp3[58]), onPress: callback1, accessibilityLabel: stateFromStores1 };
-    tmp38Result3 = tmp38(tmp2(tmp3[29]), obj18);
+    tmp38Result3 = closure_23(tmp2(tmp3[29]), obj18);
     const tmp2Result9 = tmp2(tmp3[29]);
   }
   items13[4] = tmp38Result3;
@@ -773,7 +773,7 @@ export default noop.memo(function VoicePanelHeader(wrapperOffset) {
   }
   if (tmp38Result4) {
     const obj19 = { channelId };
-    tmp38Result4 = tmp38(tmp2(tmp3[59]), obj19);
+    tmp38Result4 = closure_23(tmp2(tmp3[59]), obj19);
   }
   items13[5] = tmp38Result4;
   obj14.children = items13;

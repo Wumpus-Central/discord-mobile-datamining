@@ -16,14 +16,14 @@ export default function useDeafStates(arg0) {
     () => {
       let obj = closure_0;
       if (VoiceStateStore !== undefined) {
-        if (obj3 !== undefined) {
-          if (obj4 !== undefined) {
+        if (MediaEngineStore !== undefined) {
+          if (AuthenticationStore !== undefined) {
             let voiceState = null;
             if (null != obj) {
               const guildId = obj.getGuildId();
-              voiceState = VoiceStateStore.getVoiceState(guildId, obj4.getId());
+              voiceState = VoiceStateStore.getVoiceState(guildId, AuthenticationStore.getId());
             }
-            obj = { selfDeaf: obj3.isSelfDeaf(), deaf: null };
+            obj = { selfDeaf: MediaEngineStore.isSelfDeaf(), deaf: null };
             let flag;
             if (voiceState != null) {
               flag = voiceState.deaf;
@@ -40,7 +40,7 @@ export default function useDeafStates(arg0) {
     items1,
   );
 }
-export const getDeafStates = function getDeafStates(channel, VoiceStateStore, MediaEngineStore, AuthenticationStore) {
+export const getDeafStates = function getDeafStates(channel) {
   let obj = VoiceStateStore;
   if (VoiceStateStore === undefined) {
     obj = VoiceStateStore;

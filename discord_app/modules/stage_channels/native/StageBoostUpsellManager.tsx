@@ -1,6 +1,9 @@
 // discord_app/modules/stage_channels/native/StageBoostUpsellManager.tsx
+import asyncRequireImpl from "../../../../_runtime/01896_asyncRequireImpl.js";
+import StageChannelPermissions from "../StageChannelPermissions.tsx";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import StageMediaHooks from "../StageMediaHooks.tsx";
+import useChannelVideoLimit from "../../video_calls/useChannelVideoLimit.tsx";
 import ActionSheetStore from "../../action_sheet/native/ActionSheetStore.tsx";
 import ChannelStore from "../../../stores/ChannelStore.tsx";
 import PermissionStore from "../../../stores/PermissionStore.tsx";
@@ -44,15 +47,18 @@ prototype["handleVoiceStateUpdates"] = function handleVoiceStateUpdates() {
           let obj = StageMediaHooks;
           if (obj.getStageHasMedia(channel.id)) {
             if (tmp5Result.getChannelVideoLimit(channel).reachedLimit) {
-              if (PermissionStore.can(tmp5(1965).MODERATE_STAGE_CHANNEL_PERMISSIONS, channel)) {
+              if (PermissionStore.can(StageChannelPermissions.MODERATE_STAGE_CHANNEL_PERMISSIONS, channel)) {
                 obj = { channel };
-                ActionSheetActionCreatorsDefault.openLazy(tmp5(1896)(5430, tmp6.paths), STAGE_BOOSTING_SHEET_KEY, obj);
+                ActionSheetActionCreatorsDefault.openLazy(
+                  asyncRequireImpl(5430, dependencyMap.paths),
+                  STAGE_BOOSTING_SHEET_KEY,
+                  obj,
+                );
                 c8 = true;
               }
             }
-            tmp5Result = tmp5(9088);
+            tmp5Result = useChannelVideoLimit;
           }
-          tmp6 = dependencyMap;
         }
       }
     }

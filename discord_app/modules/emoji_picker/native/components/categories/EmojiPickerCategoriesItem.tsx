@@ -156,18 +156,18 @@ export default noop.memo(function EmojiPickerCategoriesItem(category) {
       size: tmp2(tmp3[12]).GuildIconSizes.XSMALL,
       style: tmp.guildItem,
     };
-    let tmp9Result = tmp9(tmp12(tmp3[12]), obj3);
+    let tmp9Result = closure_8(tmp12(tmp3[12]), obj3);
     const tmp12Result = tmp12(tmp3[12]);
   } else {
     const obj4 = { id: category.id };
-    tmp9Result = tmp9(tmp12(tmp3[13]), obj4);
+    tmp9Result = closure_8(tmp12(tmp3[13]), obj4);
   }
   const items2 = [tmp9Result];
   if (locked) {
     const obj5 = { style: tmp.lockContainer, children: null };
     const obj6 = { style: tmp.lock };
-    obj5.children = tmp9(tmp2(tmp3[14]).LockIcon, obj6);
-    locked = tmp9(backgroundColor2, obj5);
+    obj5.children = closure_8(tmp2(tmp3[14]).LockIcon, obj6);
+    locked = closure_8(backgroundColor2, obj5);
   }
   items2[1] = locked;
   obj2.children = items2;

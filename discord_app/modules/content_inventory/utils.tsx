@@ -101,21 +101,21 @@ function formatEndedTimestamp(entry, arg1, timestamp, arg3) {
   const absolute = Math.abs(diffResult);
   if (absolute < DurationsDefault.Seconds.MINUTE) {
     return formatSet.secondsAgo(diffResult);
-  } else if (absolute < tmp(1090).Seconds.HOUR) {
+  } else if (absolute < DurationsDefault.Seconds.HOUR) {
     const _Math5 = Math;
-    return formatSet.minutesAgo(Math.round(diffResult / tmp(1090).Seconds.MINUTE));
-  } else if (absolute < 12 * tmp(1090).Seconds.HOUR) {
+    return formatSet.minutesAgo(Math.round(diffResult / DurationsDefault.Seconds.MINUTE));
+  } else if (absolute < 12 * DurationsDefault.Seconds.HOUR) {
     const _Math4 = Math;
-    return formatSet.hoursAgo(Math.round(diffResult / tmp(1090).Seconds.HOUR));
-  } else if (absolute < 9 * tmp(1090).Seconds.DAY) {
+    return formatSet.hoursAgo(Math.round(diffResult / DurationsDefault.Seconds.HOUR));
+  } else if (absolute < 9 * DurationsDefault.Seconds.DAY) {
     const _Math3 = Math;
-    return formatSet.daysAgo(Math.round(diffResult / tmp(1090).Seconds.DAY));
-  } else if (absolute < 4 * tmp(1090).Seconds.WEEK) {
+    return formatSet.daysAgo(Math.round(diffResult / DurationsDefault.Seconds.DAY));
+  } else if (absolute < 4 * DurationsDefault.Seconds.WEEK) {
     const _Math2 = Math;
-    return formatSet.weeksAgo(Math.round(diffResult / (7 * tmp(1090).Seconds.DAY)));
+    return formatSet.weeksAgo(Math.round(diffResult / (7 * DurationsDefault.Seconds.DAY)));
   } else {
     const _Math = Math;
-    return formatSet.monthsAgo(Math.round(diffResult / tmp(1090).Seconds.DAYS_30));
+    return formatSet.monthsAgo(Math.round(diffResult / DurationsDefault.Seconds.DAYS_30));
   }
 }
 let closure_6 = {
@@ -247,7 +247,7 @@ export const A11Y_FORMAT_SET = {
   },
 };
 export { formatEndedTimestamp };
-export const formatEntryTimestamp = function formatEntryTimestamp(contentInventoryEntry, locale, time, arg3) {
+export const formatEntryTimestamp = function formatEntryTimestamp(contentInventoryEntry, locale) {
   let timestamp = time;
   if (time === undefined) {
     const _Date = Date;
@@ -406,7 +406,7 @@ export const getFullResurrectedBadgeText = function getFullResurrectedBadgeText(
   if (undefined !== days) {
     num3 = days;
   }
-  const intl = tmp(1114).intl;
+  const intl = util.intl;
   obj = { months: num, weeks: null, days: null };
   let num4 = 0;
   if (num <= 0) {
@@ -546,15 +546,15 @@ export const getMarathonDescription = function getMarathonDescription(entry) {
       let obj = { text: null, tooltipText: null, a11yText: null };
     } else {
       obj = { text: null, tooltipText: null, a11yText: null };
-      const intl = tmp(1114).intl;
+      const intl = util.intl;
       obj = { hours: rounded };
-      obj.text = intl.formatToPlainString(tmp(1114).t.vZaMem, obj);
-      const intl2 = tmp(1114).intl;
+      obj.text = intl.formatToPlainString(util.t.vZaMem, obj);
+      const intl2 = util.intl;
       obj = { hours: rounded };
-      obj.tooltipText = intl2.formatToPlainString(tmp(1114).t.S5F485, obj);
-      const intl3 = tmp(1114).intl;
+      obj.tooltipText = intl2.formatToPlainString(util.t.S5F485, obj);
+      const intl3 = util.intl;
       const obj1 = { hours: rounded };
-      obj.a11yText = intl3.formatToPlainString(tmp(1114).t["RZY+tX"], obj1);
+      obj.a11yText = intl3.formatToPlainString(util.t["RZY+tX"], obj1);
     }
     return obj;
   }

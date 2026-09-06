@@ -70,11 +70,10 @@ export const queryData = function queryData(apps, limit) {
             let items1 = [];
             let items2 = [];
             for (const item10021 of tmp) {
-              let tmp6 = item10021;
               if (tmp3(item10021)) {
-                let arr = items2.push(tmp6);
+                let arr = items2.push(item10021);
               } else {
-                arr = items1.push(tmp6);
+                arr = items1.push(item10021);
               }
               continue;
             }
@@ -86,6 +85,7 @@ export const queryData = function queryData(apps, limit) {
             }
             return items;
           }
+          const nextResult = iter.next();
         })(found, bucketPredicates1, num);
       }
     }

@@ -25,7 +25,6 @@ export const dismissAlerts = function dismissAlerts() {
     2,
   );
   const first = tmp[0];
-  const arr4 = tmp[1];
   first(1249).batchUpdates(() => {
     module_560.setState({ alerts: arr4 });
     const item = first.forEach((onDismiss) => {
@@ -40,6 +39,8 @@ export const dismissAlerts = function dismissAlerts() {
   if (tmp4) {
     arr4(4907)();
   }
+  const obj = first(1249);
+  tmp4 = 0 === tmp[1].length && first.length > 0;
 };
 export const dismissAlert = function dismissAlert(c6) {
   _require = c6;

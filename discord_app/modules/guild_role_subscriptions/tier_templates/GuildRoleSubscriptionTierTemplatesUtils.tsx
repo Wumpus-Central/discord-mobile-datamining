@@ -30,6 +30,7 @@ function getUsedTemplateChannelsForGuild(arg0) {
     });
   }
   const items = [];
+  const tmp2 = new Set();
   while (tmp4 !== undefined) {
     let channel = GuildRoleSubscriptionTierTemplatesStore.getChannel(tmp5);
     let obj = channel;
@@ -40,7 +41,7 @@ function getUsedTemplateChannelsForGuild(arg0) {
   }
   return items;
 }
-let closure_14 = async function _createChannelsFromTemplateTierBenefits(arg0, value) {
+let closure_14 = async function _createChannelsFromTemplateTierBenefits(arg0) {
   if (c4 === 2) {
     c4 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -116,10 +117,10 @@ let closure_14 = async function _createChannelsFromTemplateTierBenefits(arg0, va
               });
             }
           } else if (null != closure_1_1) {
-            const findIndexResult = arr.findIndex((ref_id) => ref_id.ref_id === id);
+            const findIndexResult = closure_1_1.findIndex((ref_id) => ref_id.ref_id === id);
             if (-1 !== findIndexResult) {
-              if (arr != null) {
-                arr.splice(findIndexResult, 1);
+              if (closure_1_1 != null) {
+                closure_1_1.splice(findIndexResult, 1);
               }
             }
           }

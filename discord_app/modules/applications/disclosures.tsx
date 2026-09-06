@@ -1,4 +1,5 @@
 // discord_app/modules/applications/disclosures.tsx
+import util from "../../intl/index.native.tsx";
 import HTTPUtils from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import applications from "../../../discord_common/js/packages/protos/discord_protos/discord_kkv_store_value_models/v1/applications.tsx";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
@@ -8,14 +9,15 @@ let closure_4 = async function _getDisclosures() {
   closure_1 = tmp2;
   const result = Endpoints.APPLICATION_DISCLOSURES(closure_0);
   const HTTP = HTTPUtils.HTTP;
-  closure_129_0 = await HTTP.get({ url: result, retries: 3, rejectWithError: HTTPUtils.rejectWithMigratedError() });
+  await HTTP.get({ url: result, retries: 3, rejectWithError: HTTPUtils.rejectWithMigratedError() });
+  closure_129_0 = value;
   return {
     disclosures: closure_129_0.body.disclosures,
     ackedDisclosures: closure_129_0.body.acked_disclosures,
     allAcked: closure_129_0.body.all_acked,
   };
 };
-let closure_5 = async function _ackDisclosures(arg0, disclosures) {
+let closure_5 = async function _ackDisclosures(arg0) {
   closure_0 = arg0;
   c3 = 0;
   c2 = 0;
@@ -100,11 +102,11 @@ export const ackDisclosures = function ackDisclosures() {
 };
 export const getTextForDisclosure = function getTextForDisclosure(disclosure) {
   if (applications.ApplicationDisclosureType.IP_LOCATION === disclosure) {
-    const intl2 = tmp(1114).intl;
-    return intl2.string(tmp(1114).t["6wPmjo"]);
-  } else if (tmp(9241).ApplicationDisclosureType.DISPLAYS_ADVERTISEMENTS === disclosure) {
-    const intl = tmp(1114).intl;
-    return intl.string(tmp(1114).t["/uOMKZ"]);
+    const intl2 = util.intl;
+    return intl2.string(util.t["6wPmjo"]);
+  } else if (applications.ApplicationDisclosureType.DISPLAYS_ADVERTISEMENTS === disclosure) {
+    const intl = util.intl;
+    return intl.string(util.t["/uOMKZ"]);
   } else {
     return null;
   }

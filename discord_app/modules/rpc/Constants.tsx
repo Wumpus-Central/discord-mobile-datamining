@@ -48,28 +48,28 @@ export const DynamicLinkType = obj;
 export const getDynamicLinkType = function getDynamicLinkType(arg0) {
   if (obj.USER_SETTINGS === arg0) {
     return obj.SETTINGS;
-  } else if (tmp.CHANGELOG === arg0) {
+  } else if (obj.CHANGELOG === arg0) {
     return obj.CHANGELOG;
-  } else if (tmp.LIBRARY === arg0) {
+  } else if (obj.LIBRARY === arg0) {
     return obj.LIBRARY;
   } else {
-    if (tmp.STORE_HOME !== arg0) {
-      if (tmp.STORE_LISTING !== arg0) {
-        if (tmp.CHANNEL === arg0) {
+    if (obj.STORE_HOME !== arg0) {
+      if (obj.STORE_LISTING !== arg0) {
+        if (obj.CHANNEL === arg0) {
           return obj.CHANNEL;
-        } else if (tmp.PICK_GUILD_SETTINGS === arg0) {
+        } else if (obj.PICK_GUILD_SETTINGS === arg0) {
           return obj.GUILD_SETTINGS;
-        } else if (tmp.QUEST_HOME === arg0) {
+        } else if (obj.QUEST_HOME === arg0) {
           return obj.QUEST_HOME;
-        } else if (tmp.QUEST_PREVIEW_TOOL === arg0) {
+        } else if (obj.QUEST_PREVIEW_TOOL === arg0) {
           return obj.QUEST_PREVIEW_TOOL;
-        } else if (tmp.DISCOVERY_GAME_RESULTS === arg0) {
+        } else if (obj.DISCOVERY_GAME_RESULTS === arg0) {
           return obj.DISCOVERY_GAME;
-        } else if (tmp.SHOP === arg0) {
+        } else if (obj.SHOP === arg0) {
           return obj.SHOP;
-        } else if (tmp.ACTIVITIES === arg0) {
+        } else if (obj.ACTIVITIES === arg0) {
           return obj.ACTIVITIES;
-        } else if (tmp.PLAYGROUND === arg0) {
+        } else if (obj.PLAYGROUND === arg0) {
           return obj.PLAYGROUND;
         } else {
           return arg0;

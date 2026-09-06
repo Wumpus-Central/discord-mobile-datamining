@@ -63,14 +63,14 @@ function handleSubscriptionStoreUpdate() {
   } else {
     if (null != closure_19.userDiscountOffers[closure_1_11]) {
       let userDiscountOffers = {};
-      userDiscountOffers[tmp3] = closure_19.userDiscountOffers[tmp3];
+      userDiscountOffers[closure_1_11] = closure_19.userDiscountOffers[closure_1_11];
       closure_19.userDiscountOffers = userDiscountOffers;
       closure_19.userTrialOffers = {};
     } else if (null == closure_19.userDiscountOffers[closure_1_12]) {
       closure_19.userDiscountOffers = {};
     }
     userDiscountOffers = {};
-    userDiscountOffers[tmp5] = closure_19.userDiscountOffers[tmp5];
+    userDiscountOffers[closure_1_12] = closure_19.userDiscountOffers[closure_1_12];
     closure_19.userDiscountOffers = userDiscountOffers;
   }
 }
@@ -421,7 +421,7 @@ prototype["forceReset"] = function forceReset() {
 prototype["lastFetchSuccessful"] = function lastFetchSuccessful() {
   return closure_19.lastFetchSuccessful;
 };
-prototype["canTriggerUserOffer"] = function canTriggerUserOffer(arg0) {
+prototype["canTriggerUserOffer"] = function canTriggerUserOffer(triggerType) {
   return false;
 };
 prototype["getUptimeForTrigger"] = function getUptimeForTrigger() {
@@ -560,6 +560,7 @@ obj = {
       shouldTriggerOffer = false;
     }
     closure_19.shouldTriggerOffer = shouldTriggerOffer;
+    tmp = null == userTrialOffer && null == userDiscountOffer;
   },
   BILLING_USER_OFFER_ACKNOWLEDGED_SUCCESS: function handleUserOfferAcknowledgedSuccess(arg0) {
     ({ userTrialOffer, userDiscount, userDiscountOffer } = arg0);

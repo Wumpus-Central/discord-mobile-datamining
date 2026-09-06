@@ -21,14 +21,14 @@ export default function StreamFullAlert(arg0) {
   if (errorInfo != null) {
     errorCode = errorInfo.errorCode;
   }
-  const intl = tmp(1114).intl;
+  const intl = util.intl;
   obj = {};
   const formatToPlainStringResult = intl.formatToPlainString(util.t.ejOT95, { errorCode });
   const merged = Object.assign(arg0);
-  const intl2 = tmp(1114).intl;
+  const intl2 = util.intl;
   obj.title = intl2.string(util.t.GzjdO5);
   obj = { variant: "text-md/normal", style: closure_6.body, children: null };
-  const intl3 = tmp(1114).intl;
+  const intl3 = util.intl;
   obj.children = intl3.string(util.t.VVZDBL);
   const items = [
     React4(Text_Text.Text, obj),

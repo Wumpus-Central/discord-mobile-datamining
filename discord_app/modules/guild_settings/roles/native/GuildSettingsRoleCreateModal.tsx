@@ -32,7 +32,6 @@ function RoleCreateScene() {
   stateFromStores(color[20])(null != stateFromStores, "useGuildSettingsStoreGuild: Guild cannot be null");
   const intl = navigation(color[17]).intl;
   const tmp7 = _slicedToArray(onSelect.useState(intl.string(navigation(color[17]).t.QBMHvB)), 2);
-  const str = tmp7[0];
   const tmp8 = _slicedToArray(onSelect.useState(closure_17), 2);
   color = tmp8[0];
   asyncGeneratorStep = tmp8[1];
@@ -63,7 +62,7 @@ function RoleCreateScene() {
   onSelect = onSelect.useCallback((arg0) => {
     closure_4(arg0);
   }, []);
-  const items2 = [color, stateFromStores.id, str, navigation];
+  const items2 = [color, stateFromStores.id, tmp7[0], navigation];
   const items3 = [color, onSelect];
   const callback1 = onSelect.useCallback(
     asyncGeneratorStep(async () => {
@@ -81,7 +80,7 @@ function RoleCreateScene() {
         tmp3(4258);
       } else if (arg0 === 1) {
         c4 = 3;
-        throw arg1;
+        throw value;
       } else if (arg0 !== 2) {
         const result1 = GuildSettingsStore.addConditionalChangeListener(() => {
           let obj = props;
@@ -97,7 +96,6 @@ function RoleCreateScene() {
               if (null != guild) {
                 closure_0(4258).roleCreatedToast();
                 const obj5 = closure_0(4258);
-                const tmp13 = closure_0;
                 closure_0(17606).setRoleJustCreated(true);
                 let STEP_MEMBERS = constants4.STEP_PERMISSIONS;
                 const guild2 = obj.getProps().guild;
@@ -105,14 +103,13 @@ function RoleCreateScene() {
                 currentUser = currentUser.getCurrentUser();
                 const tmp23 = closure_2_9(guild2, currentUser);
                 const obj6 = closure_0(17606);
-                const tmp18 = closure_1;
                 obj = { permission: constants3.ADMINISTRATOR, user: currentUser, context: guild2 };
                 let tmp4 = !tmp23;
                 if (!tmp23) {
                   tmp4 = !obj7.can(obj);
                 }
                 if (tmp4) {
-                  STEP_MEMBERS = tmp17.STEP_MEMBERS;
+                  STEP_MEMBERS = constants4.STEP_MEMBERS;
                 }
                 closure_1_0.push(STEP_MEMBERS);
                 obj7 = c2(4204);
@@ -122,8 +119,8 @@ function RoleCreateScene() {
                   to_step: dependencyMap2[STEP_MEMBERS],
                   skip: false,
                 };
-                const tmp18Result = tmp18(1242);
-                const merged = Object.assign(tmp13(4740).collectGuildAnalyticsMetadata(guild.id));
+                const tmp18Result = closure_1(1242);
+                const merged = Object.assign(closure_0(4740).collectGuildAnalyticsMetadata(guild.id));
                 tmp18Result.track(constants.USER_FLOW_TRANSITION, obj);
                 return false;
               }
@@ -133,7 +130,7 @@ function RoleCreateScene() {
         });
         c2 = 0;
       }
-      return arg1;
+      return value;
     }),
     items2,
   );
@@ -162,7 +159,7 @@ function RoleCreateScene() {
   obj1.label = intl4.string(navigation(color[17]).t.dLbkBk);
   const intl5 = navigation(color[17]).intl;
   obj1.description = intl5.string(navigation(color[17]).t.m4j44b);
-  obj1.value = str;
+  obj1.value = tmp7[0];
   obj1.onChange = tmp7[1];
   obj1.maxLength = maxLength;
   const items4 = [closure_21(navigation(color[32]).TextInput, obj1)];
@@ -178,9 +175,6 @@ function RoleCreateScene() {
   let obj6 = { variant: "text-sm/medium", children: null };
   let obj5 = { color, style: tmp.colorBlock };
   const tmp10 = _slicedToArray(onSelect.useState(false), 2);
-  const tmp16 = closure_22;
-  const tmp17 = ModalScene;
-  const tmp19 = closure_7;
   obj6.children = navigation(color[36]).int2hex(color);
   items5[1] = closure_21(navigation(color[16]).Text, obj6);
   obj4.children = items5;
@@ -204,9 +198,9 @@ function RoleCreateScene() {
   obj8.text = intl8.string(navigation(color[17]).t.CumH4u);
   obj8.onPress = callback1;
   obj7.children = closure_21(navigation(color[37]).Button, obj8);
-  items6[1] = closure_21(tmp19, obj7);
+  items6[1] = closure_21(closure_7, obj7);
   obj.children = items6;
-  return tmp16(tmp17, obj);
+  return closure_22(ModalScene, obj);
 }
 function RolePermissionTemplate() {
   let obj = navigation(onSelect[22]);
@@ -452,12 +446,12 @@ function ModalScene(hasSkipButton) {
       const intl = tmp3(tmp2[17]).intl;
       obj6.text = intl.string(tmp3(tmp2[17]).t.CJm5V5);
       obj6.onPress = tmp10;
-      obj5.children = tmp17(tmp3(tmp2[37]).Button, obj6);
-      hasSkipButton = tmp17(tmp14, obj5);
+      obj5.children = closure_21(tmp3(tmp2[37]).Button, obj6);
+      hasSkipButton = closure_21(closure_7, obj5);
     }
     items4[2] = hasSkipButton;
     obj.children = items4;
-    tmp13Result = closure_22(tmp14, obj);
+    tmp13Result = closure_22(closure_7, obj);
   }
   return tmp13Result;
 }

@@ -9,6 +9,7 @@ import AppAnalyticsUtils from "../../app_analytics/AppAnalyticsUtils.tsx";
 import useFontScale from "../../screen/native/useFontScale.tsx";
 import ApplicationCommandTypes from "../ApplicationCommandTypes.tsx";
 import ApplicationCommandQueryTypes from "../ApplicationCommandQueryTypes.tsx";
+import _modDef10418 from "../../../../_runtime/metro/10418__.js";
 import ApplicationSectionHeader from "ApplicationSectionHeader.tsx";
 import ApplicationCommandDiscoveryManager from "../ApplicationCommandDiscoveryManager.tsx";
 import ApplicationCommandsCategoriesDefault from "ApplicationCommandsCategories.tsx";
@@ -109,7 +110,7 @@ export default function ApplicationCommandDiscovery(channel) {
       closure_0 = bound;
       let num2 = 0;
       if (0 !== commandsByActiveSection.length) {
-        num2 = arr.reduce((acc, data) => {
+        num2 = commandsByActiveSection.reduce((acc, data) => {
           if (0 === data.data.length) {
             let sum = ApplicationSectionHeader.APPLICATION_SECTION_HEADER_HEIGHT + 160;
           } else {
@@ -122,7 +123,6 @@ export default function ApplicationCommandDiscovery(channel) {
         }, 0);
       }
       tmp(num2);
-      arr = commandsByActiveSection;
     }
   }, items2);
   const items3 = [sectionDescriptors, filterSection, filteredSectionId];
@@ -183,20 +183,20 @@ export default function ApplicationCommandDiscovery(channel) {
         if (0 < memo.length) {
           let num2 = 0;
           let num3 = 0;
-          if (0 === tmp[0]) {
+          if (0 === memo[0]) {
             const sum = num3 + 1;
             const sum1 = num2 + 1;
             num = sum;
             while (sum1 < memo.length) {
               num2 = sum1;
               num3 = sum;
-              if (0 === tmp5[sum1]) {
+              if (0 === memo[sum1]) {
                 continue;
               } else {
                 num2 = sum1;
                 num3 = sum;
                 num = sum;
-                if (arg0 < tmp5[sum1]) {
+                if (arg0 < memo[sum1]) {
                   break;
                 }
               }
@@ -248,18 +248,19 @@ export default function ApplicationCommandDiscovery(channel) {
           num3 = num3 + 1;
           continue;
         }
-        let tmp28 = constants3;
         if (constants3.ROW === ROW) {
           let num4 = bound;
         } else if (tmp29.HEADER === ROW) {
           num4 = ApplicationSectionHeader.APPLICATION_SECTION_HEADER_HEIGHT;
         } else {
-          let FOOTER = tmp28.FOOTER;
+          let FOOTER = constants3.FOOTER;
           num4 = 0;
         }
-        obj = { length: num4, offset: null, index: null };
-        obj.offset = num * ApplicationSectionHeader.APPLICATION_SECTION_HEADER_HEIGHT + num2 * bound;
-        obj.index = index;
+        obj = {
+          length: num4,
+          offset: num * ApplicationSectionHeader.APPLICATION_SECTION_HEADER_HEIGHT + num2 * bound,
+          index,
+        };
         return obj;
       }
     }
@@ -363,7 +364,7 @@ export default function ApplicationCommandDiscovery(channel) {
     const children = [closure_2_14(ApplicationSectionHeaderDefault, obj, section.section.id)];
     let tmp3Result = 0 === section.data.length;
     if (tmp3Result) {
-      obj = { lightSource: tmp4(10418), darkSource: tmp4(10418), body: null, containerStyle: null, imageStyle: null };
+      obj = { lightSource: _modDef10418, darkSource: _modDef10418, body: null, containerStyle: null, imageStyle: null };
       const intl = util.intl;
       obj = { applicationName: section.section.name };
       obj.body = intl.format(util.t.WoQXT6, obj);

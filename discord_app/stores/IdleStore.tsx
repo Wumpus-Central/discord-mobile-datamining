@@ -39,24 +39,22 @@ function checkIdleAFK() {
             tmp17 = c12;
           }
           if (!tmp17) {
-            const tmp14Result = tmp14(1115);
-            tmp17 = tmp14(1115).isAndroid() && closure_13;
-            const tmp18 = tmp14(1115).isAndroid() && closure_13;
+            const tmp14Result = PlatformUtils;
+            tmp17 = PlatformUtils.isAndroid() && closure_13;
+            const tmp18 = PlatformUtils.isAndroid() && closure_13;
           }
           if (!tmp17) {
             if (afk) {
-              tmp28(573).dispatch({ type: "AFK", afk: false });
-              const tmp28Result = tmp28(573);
+              DispatcherDefault.dispatch({ type: "AFK", afk: false });
+              const tmp28Result = DispatcherDefault;
             }
           }
         }
-        tmp28 = importDefault;
       }
     }
     if (!afk) {
       DispatcherDefault.dispatch({ type: "AFK", afk: true });
     }
-    tmp14 = require;
   }
   if (!idle) {
     obj = { type: "IDLE", idle: true, idleSince };
@@ -89,7 +87,7 @@ if (fn(1115).isPlatformEmbedded) {
         }
       }
       if (null != getSystemIdleTimeMs) {
-        const powerMonitor2 = tmp(4182).powerMonitor;
+        const powerMonitor2 = DiscordNativeDefault.powerMonitor;
         const systemIdleTimeMs = powerMonitor2.getSystemIdleTimeMs();
         if (systemIdleTimeMs instanceof Promise) {
           systemIdleTimeMs.then(function handleIdleTime(result) {
@@ -120,7 +118,7 @@ if (fn(1115).isPlatformEmbedded) {
           }
           checkIdleAFK();
           const _setTimeout = setTimeout;
-          let timerId = setTimeout(checkNativeIdle, 10 * tmp(1090).Millis.SECOND);
+          let timerId = setTimeout(checkNativeIdle, 10 * DurationsDefault.Millis.SECOND);
         }
       }
     }

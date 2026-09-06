@@ -4,7 +4,7 @@ import PushNotificationDefault from "../../../../../lib/pushnotification/PushNot
 import asyncGeneratorStep from "../../../../../../_runtime/00005_asyncGeneratorStep.js";
 
 require = fn;
-let closure_5 = async function _initializeAndroidNotificationSettingsStore(arg0, value) {
+let closure_5 = async function _initializeAndroidNotificationSettingsStore() {
   if (c4 === 2) {
     c4 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");

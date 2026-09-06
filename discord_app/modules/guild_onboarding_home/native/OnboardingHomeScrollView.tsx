@@ -52,7 +52,7 @@ export default function OnboardingHomeScrollView(children) {
       style={ref().guildFeedBackground}
       contentContainerStyle={noop.useMemo(() => ({ paddingBottom: 16 + bottom, marginTop: headerOffset }), items2)}
     >
-      {arg0.children}
+      {children.children}
     </ScrollView>
   );
 }

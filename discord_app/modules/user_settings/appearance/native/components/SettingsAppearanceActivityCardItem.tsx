@@ -1,10 +1,12 @@
 // discord_app/modules/user_settings/appearance/native/components/SettingsAppearanceActivityCardItem.tsx
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import native from "../../../../../design/void/native.tsx";
-import ClipViewDefault from "../../../../../design/components/Icon/native/ClipView.tsx";
+import ClipView from "../../../../../design/components/Icon/native/ClipView.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import LocaleStore from "../../../LocaleStore.tsx";
 import ReanimatedRexport from "../../../../reanimated/ReanimatedRexport.tsx";
+
+const ClipViewDefault = ClipView;
 
 require = fn;
 get_ActivityIndicator = fn(17);
@@ -140,15 +142,15 @@ export default function ActivityCardItem(arg0) {
       if (index !== diff) {
         obj = { cutouts: null, children: null };
         const point = {
-          shape: tmp3(8813).CutoutShape.Circle,
-          x: tmp3(1178).AVATAR_SIZE_MAP[tmp3(undefined, 1178).AvatarSizes.XSMALL_20] - 4 - 2,
+          shape: ClipView.CutoutShape.Circle,
+          x: native.AVATAR_SIZE_MAP[native.AvatarSizes.XSMALL_20] - 4 - 2,
           y: -2,
-          size: tmp3(1178).AVATAR_SIZE_MAP[tmp3(undefined, 1178).AvatarSizes.XSMALL_20] + 4,
+          size: native.AVATAR_SIZE_MAP[native.AvatarSizes.XSMALL_20] + 4,
         };
         const items = [point];
         obj.cutouts = items;
         obj.children = tmp5;
-        let tmp2Result = tmp2(ClipViewDefault, obj);
+        let tmp2Result = hasOwnProperty(ClipViewDefault, obj);
       } else {
         tmp2Result = tmp5;
       }
@@ -186,8 +188,8 @@ export default function ActivityCardItem(arg0) {
     };
     const items6 = ["+", tmp(tmp2[13]).humanizeValue(num3, stateFromStores)];
     obj5.children = items6;
-    obj4.children = tmp6(tmp(tmp2[12]).Text, obj5);
-    tmp8Result = tmp8(tmp7(tmp2[5]).View, obj4);
+    obj4.children = closure_6(tmp(tmp2[12]).Text, obj5);
+    tmp8Result = closure_5(tmp7(tmp2[5]).View, obj4);
     const tmpResult = tmp(tmp2[13]);
   }
   const obj6 = { children: null };

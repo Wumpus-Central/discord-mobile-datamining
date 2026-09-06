@@ -17,10 +17,10 @@ function HubItem(arg0) {
   const ChannelModes = BaseChannelItem.ChannelModes;
   if (active) {
     let DEFAULT = ChannelModes.SELECTED;
-    let tmp5 = tmp2;
+    let tmp5 = require;
   } else {
     DEFAULT = ChannelModes.DEFAULT;
-    tmp5 = tmp2;
+    tmp5 = require;
   }
   let obj = {
     style: closure_9().container,
@@ -39,7 +39,7 @@ function HubItem(arg0) {
   let tmp6Result = null;
   if (null != unreadCount) {
     obj = { value: unreadCount };
-    tmp6Result = tmp6(tmp5(1178).Badge, obj);
+    tmp6Result = React5(tmp5(1178).Badge, obj);
   }
   obj.channelInfo = tmp6Result;
   return React5(BaseChannelItemDefault, obj);

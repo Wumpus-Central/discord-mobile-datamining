@@ -6,6 +6,8 @@ import useThemeDefault from "../../../../../hooks/useTheme.tsx";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
 import _modDef17699 from "../../../../../../_runtime/metro/17699__.js";
+import _modDef17700 from "../../../../../../_runtime/metro/17700__.js";
+import _modDef17701 from "../../../../../../_runtime/metro/17701__.js";
 import _modDef17702 from "../../../../../../_runtime/metro/17702__.js";
 import _modDef17703 from "../../../../../../_runtime/metro/17703__.js";
 import _modDef17704 from "../../../../../../_runtime/metro/17704__.js";
@@ -22,22 +24,22 @@ function EarningPreview() {
   items[1] = obj.isThemeDark(tmp3) && tmp4.earningMetricsShadowContainerDarkMode;
   const items1 = [, ,];
   ({ earningMetrics: arr2[0], horizontalContainer: arr2[1] } = tmp4);
-  let tmp7Result = tmp7(4411);
+  let tmp7Result = shared;
   obj = { style: null, children: null };
   items1[2] = tmp7Result.isThemeDark(tmp3) ? tmp4.earningMetricsDarkMode : tmp4.earningMetricsLightMode;
   obj.style = items1;
   const obj1 = { variant: "text-sm/normal", color: "mobile-text-heading-primary", children: null };
-  const intl = tmp7(1114).intl;
+  const intl = util.intl;
   obj1.children = intl.string(util.t.TXPK7B);
   const items2 = [hasOwnProperty(Text_Text.Text, obj1)];
-  tmp7Result = tmp7(4411);
+  tmp7Result = shared;
   const obj2 = { children: null };
   const obj3 = {
     style: tmp7Result.isThemeDark(tmp3) ? tmp4.greenTextDarkMode : tmp4.greenTextLightMode,
     variant: "heading-lg/extrabold",
     children: null,
   };
-  const intl2 = tmp7(1114).intl;
+  const intl2 = util.intl;
   obj3.children = intl2.string(util.t.LdjJG5);
   items2[1] = hasOwnProperty(Text_Text.Text, obj3);
   obj2.children = items2;
@@ -63,9 +65,9 @@ function ConsistentEarningBenefit() {
   obj.style = items1;
   const tmp3 = useThemeDefault();
   if (obj4.isThemeDark(tmp3)) {
-    let tmpResult = tmp(17700);
+    let tmpResult = _modDef17700;
   } else {
-    tmpResult = tmp(17701);
+    tmpResult = _modDef17701;
   }
   const items2 = [hasOwnProperty(BenefitAvatar, { avatarSource: tmpResult }), ,];
   obj4 = shared;
@@ -106,17 +108,15 @@ function RevenueShareBenefit() {
   obj.children = `${closure_4}%`;
   const items2 = [hasOwnProperty(Text_Text.Text, obj), ,];
   obj = { style: tmp4.revenueShareDescription, variant: "heading-md/medium", color: "text-default", children: null };
-  const intl = tmp8(1114).intl;
+  const intl = util.intl;
   obj.children = intl.string(util.t.AewsXD);
   items2[1] = hasOwnProperty(Text_Text.Text, obj);
   obj1 = { style: tmp4.revenueShareIllo, source: null };
   const tmp3 = useThemeDefault();
-  const tmp5 = timestampProducer;
-  const tmp6 = View;
   obj1.source = _modDef17706;
   items2[2] = hasOwnProperty(FastImageDefault, obj1);
   obj.children = items2;
-  return tmp5(tmp6, obj);
+  return timestampProducer(View, obj);
 }
 function BenefitAvatar(avatarSource) {
   const tmp = closure_7();

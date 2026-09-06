@@ -146,7 +146,7 @@ export default function AdvancedInstantInvite(maxAge) {
   let tmp32Result;
   if (null != label) {
     const obj8 = { text: label };
-    tmp32Result = tmp32(tmp11(tmp12[21]).TableRow.TrailingText, obj8);
+    tmp32Result = closure_7(tmp11(tmp12[21]).TableRow.TrailingText, obj8);
   }
   obj7.trailing = tmp32Result;
   obj7.onPress = callback1;
@@ -158,7 +158,7 @@ export default function AdvancedInstantInvite(maxAge) {
   tmp32Result = undefined;
   if (null != label1) {
     const obj10 = { text: label1 };
-    tmp32Result = tmp32(tmp11(tmp12[21]).TableRow.TrailingText, obj10);
+    tmp32Result = closure_7(tmp11(tmp12[21]).TableRow.TrailingText, obj10);
   }
   obj9.trailing = tmp32Result;
   obj9.onPress = callback2;
@@ -174,8 +174,8 @@ export default function AdvancedInstantInvite(maxAge) {
     obj12.label = intl6.string(tmp11(tmp12[15]).t.rPYJxL);
     obj12.subLabel = formatToPlainStringResult;
     obj12.onPress = callback;
-    obj11.children = tmp32(tmp11(tmp12[21]).TableRow, obj12);
-    tmp32Result1 = tmp32(tmp11(tmp12[20]).TableRowGroup, obj11);
+    obj11.children = closure_7(tmp11(tmp12[21]).TableRow, obj12);
+    tmp32Result1 = closure_7(tmp11(tmp12[20]).TableRowGroup, obj11);
   }
   items5[2] = tmp32Result1;
   let tmp32Result2 = !isManualApprovalGuild;
@@ -191,8 +191,8 @@ export default function AdvancedInstantInvite(maxAge) {
     obj14.label = intl8.string(tmp11(tmp12[15]).t.dy1ico);
     obj14.value = temporary;
     obj14.onValueChange = onChangeTemporary;
-    obj13.children = tmp32(tmp11(tmp12[22]).TableSwitchRow, obj14);
-    tmp32Result2 = tmp32(tmp11(tmp12[20]).TableRowGroup, obj13);
+    obj13.children = closure_7(tmp11(tmp12[22]).TableSwitchRow, obj14);
+    tmp32Result2 = closure_7(tmp11(tmp12[20]).TableRowGroup, obj13);
   }
   items5[3] = tmp32Result2;
   let tmp32Result3 = null;
@@ -204,11 +204,11 @@ export default function AdvancedInstantInvite(maxAge) {
     const intl10 = tmp11(tmp12[15]).intl;
     obj16.label = intl10.string(tmp11(tmp12[15]).t["1i1bUl"]);
     obj16.value = tmp11(tmp12[23]).hasFlag(flags, tmp11(tmp12[24]).GuildInviteFlags.IS_APPLICATION_BYPASS);
-    obj16.onValueChange = function onValueChange(arg0) {
-      return closure_1_7(FlagUtils.setFlag(flags, GuildInviteFlags.GuildInviteFlags.IS_APPLICATION_BYPASS, arg0));
+    obj16.onValueChange = function onValueChange(setting) {
+      return closure_1_7(FlagUtils.setFlag(flags, GuildInviteFlags.GuildInviteFlags.IS_APPLICATION_BYPASS, setting));
     };
-    obj15.children = tmp32(tmp11(tmp12[22]).TableSwitchRow, obj16);
-    tmp32Result3 = tmp32(tmp11(tmp12[20]).TableRowGroup, obj15);
+    obj15.children = closure_7(tmp11(tmp12[22]).TableSwitchRow, obj16);
+    tmp32Result3 = closure_7(tmp11(tmp12[20]).TableRowGroup, obj15);
     const tmp11Result = tmp11(tmp12[23]);
   }
   items5[4] = tmp32Result3;

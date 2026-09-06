@@ -91,7 +91,7 @@ export function getPlatformName() {
 }
 export function getNativePlatform() {
   if ("ios" !== android) {
-    if ("android" !== tmp) {
+    if ("android" !== android) {
       return "web";
     }
   }

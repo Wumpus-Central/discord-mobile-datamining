@@ -1,6 +1,9 @@
 // discord_app/modules/rpc/server/commands/application.tsx
+import AnalyticsUtilsDefault from "../../../../utils/AnalyticsUtils.tsx";
 import HTTPUtils from "../../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import TestModeUtils from "../../../game_store/TestModeUtils.tsx";
+import ApplicationFlagUtils from "../../../applications/utils/ApplicationFlagUtils.tsx";
+import EmbeddedActivitiesManager from "../../../activities/EmbeddedActivitiesManager.tsx";
 import RPCErrorDefault from "../../RPCError.tsx";
 import createRpcJoiSchemaObjectDefault from "../../helpers/createRpcJoiSchemaObject.tsx";
 import RPCHelpers from "../../RPCHelpers.tsx";
@@ -33,9 +36,9 @@ let obj = {
       const guildId = obj3.getGuildId();
     }
     const application = ApplicationStore.getApplication(id);
-    let tmpResult = tmp(8856);
+    let tmpResult = ApplicationFlagUtils;
     if (tmpResult.hasApplicationFlag(application, constants.EMBEDDED_FIRST_PARTY)) {
-      tmpResult = tmp(9518);
+      tmpResult = EmbeddedActivitiesManager;
       const activeAnalyticsSessionIDs = tmpResult.getActiveAnalyticsSessionIDs(id);
       obj = {
         activity_application_id: id,
@@ -57,10 +60,11 @@ let obj = {
       obj = {};
       const merged = Object.assign(obj);
       const merged1 = Object.assign(event_properties);
-      tmp5(1242).track(args.event_name, obj);
+      AnalyticsUtilsDefault.track(args.event_name, obj);
+      const tmp5Result = AnalyticsUtilsDefault;
     } else {
       obj1 = { errorCode: constants2.INVALID_COMMAND };
-      const tmp12 = new tmp5(9554)(obj1, "This application cannot access this API");
+      const tmp12 = new RPCErrorDefault(obj1, "This application cannot access this API");
       throw tmp12;
     }
   },

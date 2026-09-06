@@ -1,11 +1,14 @@
 // discord_app/modules/chat_input/native/EmojiSuggestionBarLarge.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import native from "../../../../discord_common/js/packages/design/native.tsx";
-import ReanimatedRexportDefault from "../../reanimated/ReanimatedRexport.tsx";
+import ReanimatedRexport from "../../reanimated/ReanimatedRexport.tsx";
 import EmojiPickerListRow from "../../emoji_picker/native/components/EmojiPickerListRow.tsx";
+import openEmojiActionSheet2 from "../../emoji_picker/native/components/openEmojiActionSheet.tsx";
 import EmojiSuggestionBarUtils from "EmojiSuggestionBarUtils.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
+
+const ReanimatedRexportDefault = ReanimatedRexport;
 
 require = fn;
 function EmojiSuggestionBarLargeAnimated(arg0) {
@@ -28,9 +31,9 @@ function EmojiSuggestionBarLargeAnimated(arg0) {
   if (truncResult > 11) {
     length = sortEmojisForDisplayResult.length;
   }
-  let tmp9Result = tmp9(12426);
+  let tmp9Result = EmojiSuggestionBarUtils;
   suggestionBarHeight = tmp9Result.useSuggestionBarHeight(transitionState, cleanUp, 52);
-  tmp9Result = tmp9(4296);
+  tmp9Result = ReanimatedRexport;
   const fn = function f() {
     return { height: suggestionBarHeight.get() };
   };
@@ -48,7 +51,7 @@ function EmojiSuggestionBarLargeAnimated(arg0) {
       if (null == _undefined2[index]) {
         let obj = { style: emptySlot.emptySlot };
         const _HermesInternal = HermesInternal;
-        return <View key={"none:" + arg1} style={emptySlot.emptySlot} />;
+        return <View key={"none:" + index} style={emptySlot.emptySlot} />;
       } else {
         const locked = tmp2.locked;
         obj = { index, reducedMotion, children: null };
@@ -63,7 +66,7 @@ function EmojiSuggestionBarLargeAnimated(arg0) {
         if (locked) {
           let openEmojiActionSheet = dependencyMap;
         } else {
-          openEmojiActionSheet = tmp8(10328).openEmojiActionSheet;
+          openEmojiActionSheet = openEmojiActionSheet2.openEmojiActionSheet;
         }
         obj1.onLongPressEmoji = openEmojiActionSheet;
         obj1.animateEmoji = !reducedMotion;
@@ -89,7 +92,7 @@ function EmojiSuggestionBarLargeAnimated(arg0) {
         if (null == _undefined2[index]) {
           let obj = { style: emptySlot.emptySlot };
           const _HermesInternal = HermesInternal;
-          return <View key={"none:" + arg1} style={emptySlot.emptySlot} />;
+          return <View key={"none:" + index} style={emptySlot.emptySlot} />;
         } else {
           const locked = tmp2.locked;
           obj = { index, reducedMotion, children: null };
@@ -104,7 +107,7 @@ function EmojiSuggestionBarLargeAnimated(arg0) {
           if (locked) {
             let openEmojiActionSheet = dependencyMap;
           } else {
-            openEmojiActionSheet = tmp8(10328).openEmojiActionSheet;
+            openEmojiActionSheet = openEmojiActionSheet2.openEmojiActionSheet;
           }
           obj1.onLongPressEmoji = openEmojiActionSheet;
           obj1.animateEmoji = !reducedMotion;
@@ -132,7 +135,7 @@ function EmojiSuggestionBarLargeAnimated(arg0) {
       if (null == _undefined2[index]) {
         let obj = { style: emptySlot.emptySlot };
         const _HermesInternal = HermesInternal;
-        return <View key={"none:" + arg1} style={emptySlot.emptySlot} />;
+        return <View key={"none:" + index} style={emptySlot.emptySlot} />;
       } else {
         const locked = tmp2.locked;
         obj = { index, reducedMotion, children: null };
@@ -147,7 +150,7 @@ function EmojiSuggestionBarLargeAnimated(arg0) {
         if (locked) {
           let openEmojiActionSheet = dependencyMap;
         } else {
-          openEmojiActionSheet = tmp8(10328).openEmojiActionSheet;
+          openEmojiActionSheet = openEmojiActionSheet2.openEmojiActionSheet;
         }
         obj1.onLongPressEmoji = openEmojiActionSheet;
         obj1.animateEmoji = !reducedMotion;
@@ -168,12 +171,12 @@ function EmojiSuggestionBarLargeAnimated(arg0) {
     }),
   });
 }
-function renderEmojiSuggestionBarLargeItem(arg0, arg1, transitionState, cleanUp) {
+function renderEmojiSuggestionBarLargeItem(key, arg1, transitionState, cleanUp) {
   const obj = {};
   const merged = Object.assign(arg1);
   obj.transitionState = transitionState;
   obj.cleanUp = cleanUp;
-  return <EmojiSuggestionBarLargeAnimated key={arg0} />;
+  return <EmojiSuggestionBarLargeAnimated key={key} />;
 }
 const View = fn(17).View;
 const IMAGE_SIZE = fn(10290).IMAGE_SIZE;
@@ -213,12 +216,12 @@ const __initData = {
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/chat_input/native/EmojiSuggestionBarLarge.tsx");
 
-export const EmojiSuggestionBarLarge = noop.forwardRef((merged, ref) => {
+export const EmojiSuggestionBarLarge = noop.forwardRef((merged, arg1) => {
   let obj = EmojiSuggestionBarUtils;
   const emojiSuggestionBarState = obj.useEmojiSuggestionBarState(
     merged,
     EmojiSuggestionBarUtils.MAX_SUGGESTIONS_LARGE,
-    ref,
+    arg1,
   );
   const unlockedEmojis = emojiSuggestionBarState.unlockedEmojis;
   const lockedEmojis = emojiSuggestionBarState.lockedEmojis;

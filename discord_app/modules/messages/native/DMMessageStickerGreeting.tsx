@@ -91,7 +91,6 @@ export default function DMMessageStickerGreeting(channel) {
   const formatToPlainStringResult = intl2.formatToPlainString(Text(tmp[17]).t.m0zYbV, { username: name });
   showConvoStarterInDM = Text(tmp[21]).useShowConvoStarterInDM(channel);
   const TextResult = Text(tmp[21]);
-  const tmp2 = END;
   const items2 = [StickersStore];
   const items3 = [showConvoStarterInDM];
   const stateFromStores2 = Text(tmp[18]).useStateFromStores(
@@ -126,7 +125,7 @@ export default function DMMessageStickerGreeting(channel) {
   }, items5);
   const items6 = [first1, first, channel.id];
   let callback = noop.useCallback(
-    stateFromStores(function* (arg0, value) {
+    stateFromStores(function* () {
       if (c5 === 2) {
         c5 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -272,7 +271,7 @@ export default function DMMessageStickerGreeting(channel) {
   fn.__initData = __initData;
   const animatedStyle = Text(tmp[23]).useAnimatedStyle(fn);
   const TextResult2 = Text(tmp[23]);
-  let BACKGROUND_BASE_LOWER = Text(tmp[10]).useGradientValue(tmp2);
+  let BACKGROUND_BASE_LOWER = Text(tmp[10]).useGradientValue(END);
   const TextResult3 = Text(tmp[10]);
   if (BACKGROUND_BASE_LOWER == null) {
     BACKGROUND_BASE_LOWER = tmp5(tmp[9]).colors.BACKGROUND_BASE_LOWER;
@@ -304,7 +303,7 @@ export default function DMMessageStickerGreeting(channel) {
       if (null != stateFromStores2) {
         tmp5 = tmp5(tmp[29]);
         const obj4 = { sticker: stateFromStores2, size: 24, animated: shouldAnimateSticker };
-        tmp24Result = tmp24(tmp5, obj4);
+        tmp24Result = closure_10(tmp5, obj4);
       }
       callback = [tmp24Result];
       Text = Text(tmp[30]).Text;
@@ -312,29 +311,30 @@ export default function DMMessageStickerGreeting(channel) {
       toastContent = toastContent.toastContent;
       obj5.style = toastContent;
       obj5.children = formatToPlainStringResult;
-      tmp = tmp24(Text, obj5);
+      tmp = closure_10(Text, obj5);
       callback[1] = tmp;
       obj3.children = callback;
-      let tmp23Result = tmp23(Text(tmp[28]).PressableOpacity, obj3);
+      let tmp23Result = closure_11(Text(tmp[28]).PressableOpacity, obj3);
     } else {
       tmp24Result = null;
       if (null != stateFromStores2) {
         const obj6 = { style: toastContent.stickerContainer, children: null };
         const obj7 = { sticker: stateFromStores2, size: 100, animated: shouldAnimateSticker };
-        obj6.children = tmp24(tmp5(tmp[29]), obj7);
-        tmp24Result = tmp24(tmp25, obj6);
+        obj6.children = closure_10(tmp5(tmp[29]), obj7);
+        tmp24Result = closure_10(View, obj6);
       }
       const obj8 = { children: null };
       const items10 = [tmp24Result];
       const obj9 = { text: formatToPlainStringResult, onPress: callback, shrink: true };
-      items10[1] = tmp24(Text(tmp[31]).Button, obj9);
+      items10[1] = closure_10(Text(tmp[31]).Button, obj9);
       obj8.children = items10;
-      tmp23Result = tmp23(closure_12, obj8);
+      tmp23Result = closure_11(closure_12, obj8);
     }
     obj2.children = tmp23Result;
-    obj2 = tmp24(tmp25, obj2);
+    obj2 = closure_10(View, obj2);
     items9[1] = obj2;
     obj.children = items9;
-    tmp23Result = tmp23(tmp5(tmp[23]).View, obj);
+    tmp23Result = closure_11(tmp5(tmp[23]).View, obj);
   }
+  const TextResult6 = Text(tmp[26]);
 }

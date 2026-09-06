@@ -171,7 +171,7 @@ prototype["maybePreload"] = function maybePreload(item10007) {
     if (dispatchHandler != null) {
       preloadResult = dispatchHandler.preload(item10007.data);
     }
-    item10007.status = null == preloadResult ? tmp2.Loaded : tmp2.Loading;
+    item10007.status = null == preloadResult ? Loaded.Loaded : Loaded.Loading;
     item10007.preloadPromise = preloadResult;
     if (null != preloadResult) {
       preloadResult
@@ -257,9 +257,7 @@ prototype["dispatchMultiple"] = function dispatchMultiple(items, arg1) {
       const Emitter2 = tmp2(504).Emitter;
       Emitter2.batched(() => {
         let arr;
-        let obj;
         let sum;
-        let tmp6;
         let num = 0;
         if (0 < items.length) {
           while (true) {
@@ -271,22 +269,19 @@ prototype["dispatchMultiple"] = function dispatchMultiple(items, arg1) {
             }
             let _performance = performance;
             let nowResult = performance.now();
-            tmp6 = self;
             let dispatchOneResult = self.dispatchOne(tmp);
             let _performance2 = performance;
             closure_0 = performance.now() - nowResult;
             type = tmp.type;
             items = closure_12[type];
             let tmp8 = closure_0;
-            let tmp9 = closure_12;
             if (items == null) {
               items = [0, 0];
             }
             let tmp11 = _slicedToArray(items, 2);
             let tmp12 = tmp11[1];
             let items1 = [(tmp11[0] * tmp12 + tmp8) / (tmp12 + 1), tmp12 + 1];
-            tmp9[type] = items1;
-            obj = closure_2;
+            closure_12[type] = items1;
             let flag = false;
             if (null != closure_2) {
               let diff = arr.length - 1;
@@ -295,8 +290,8 @@ prototype["dispatchMultiple"] = function dispatchMultiple(items, arg1) {
                 tmp14 = arr[num + 1];
               }
               let num2;
-              if (obj != null) {
-                num2 = obj.timeRemaining();
+              if (closure_2 != null) {
+                num2 = closure_2.timeRemaining();
               }
               if (num2 == null) {
                 num2 = 0;
@@ -305,7 +300,7 @@ prototype["dispatchMultiple"] = function dispatchMultiple(items, arg1) {
               if (tmp14 != null) {
                 type = tmp14.type;
               }
-              let tmp16 = null != obj && num2 <= 0 && arr[num].type !== type && num !== diff;
+              let tmp16 = null != closure_2 && num2 <= 0 && arr[num].type !== type && num !== diff;
               flag = tmp16;
             }
             sum = num + 1;
@@ -317,13 +312,13 @@ prototype["dispatchMultiple"] = function dispatchMultiple(items, arg1) {
           }
           closure_5 = arr.slice(sum);
           if (tmp18) {
-            const telemetry = tmp6.scheduler.telemetry;
+            const telemetry = self.scheduler.telemetry;
             telemetry.timeTrack(
               WorkSchedulerTelemetry.WorkSchedulerTelemetryTiming.TIME_OVER_DEADLINE,
-              obj.timeSinceExpiration,
+              closure_2.timeSinceExpiration,
             );
           }
-          tmp18 = null != obj && obj.timeRemaining() <= 0;
+          tmp18 = null != closure_2 && closure_2.timeRemaining() <= 0;
         }
         ActionBatcherDefault.flush();
       });
@@ -350,7 +345,7 @@ prototype["dispatchMultiple"] = function dispatchMultiple(items, arg1) {
       }
     } catch (tmp18) {
       const socket = tmp.socket;
-      let obj = { error: tmp18, action: type };
+      const obj = { error: tmp18, action: type };
       const result = socket.resetSocketOnDispatchError(obj);
     }
     tmp21 = _require;
@@ -361,7 +356,7 @@ prototype["dispatchOne"] = function dispatchOne(arg0) {
   ({ data, type, compressionAnalytics, preloadedData, receivedAt } = arg0);
   const nowResult = performance.now();
   if (this.socket.connectionState !== ConnectionStateDefault.RESUMING) {
-    tmp2(13646).flush(type, data);
+    ActionBatcherDefault.flush(type, data);
     if ("READY" === type) {
       const readyPayloadByteSizeAnalytics = GatewaySocketAnalytics.getReadyPayloadByteSizeAnalytics(data);
       const dispatchHandler = self.getDispatchHandler(type);
@@ -391,11 +386,12 @@ prototype["dispatchOne"] = function dispatchOne(arg0) {
         dispatchHandler2.dispatch(data, type, preloadedData, receivedAt);
       }
     }
-    if (self.socket.connectionState === tmp2(13645).RESUMING) {
+    if (self.socket.connectionState === ConnectionStateDefault.RESUMING) {
       const resumeAnalytics3 = self.resumeAnalytics;
       const _performance = performance;
       resumeAnalytics3.dispatchTime = resumeAnalytics3.dispatchTime + (performance.now() - nowResult);
     }
+    const tmp2Result = ActionBatcherDefault;
   } else {
     const diff = nowResult - self.resumeAnalytics.lastUpdateTime;
     if (0 === self.resumeAnalytics.numEvents) {

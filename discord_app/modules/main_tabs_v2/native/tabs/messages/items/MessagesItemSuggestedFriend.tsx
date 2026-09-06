@@ -84,18 +84,18 @@ let closure_12 = noop.memo(function MessagesItemSuggestedFriendView(height) {
   const items3 = [suggestedFriend];
   const memo1 = obj.useMemo(() => {
     if (null != suggestedFriend.mutualFriendsCount) {
-      if (tmp.mutualFriendsCount > 0) {
+      if (suggestedFriend.mutualFriendsCount > 0) {
         const intl = util.intl;
-        let obj = { count: tmp.mutualFriendsCount };
+        let obj = { count: suggestedFriend.mutualFriendsCount };
         let formatToPlainStringResult = intl.formatToPlainString(util.t.z7y34b, obj);
       }
-      if (null != tmp.friendSuggestionName) {
-        if (tmp.friendSuggestionName.length > 0) {
-          let friendSuggestionName = tmp.friendSuggestionName;
+      if (null != suggestedFriend.friendSuggestionName) {
+        if (suggestedFriend.friendSuggestionName.length > 0) {
+          let friendSuggestionName = suggestedFriend.friendSuggestionName;
         }
         const suggestedContactNameForSuggestion = FriendSuggestionUtils.getSuggestedContactNameForSuggestion(
           friendSuggestionName,
-          tmp,
+          suggestedFriend,
         );
         let str2 = "";
         if (null != suggestedContactNameForSuggestion) {
@@ -108,10 +108,10 @@ let closure_12 = noop.memo(function MessagesItemSuggestedFriendView(height) {
         obj.suggestionName = friendSuggestionName;
         return obj;
       }
-      friendSuggestionName = UserUtilsDefault.getName(tmp.user);
+      friendSuggestionName = UserUtilsDefault.getName(suggestedFriend.user);
     }
     obj = UserUtilsDefault;
-    formatToPlainStringResult = obj.getName(tmp.user);
+    formatToPlainStringResult = obj.getName(suggestedFriend.user);
   }, items3);
   let userStatusLabel = memo1.userStatusLabel;
   const items4 = [suggestedFriend, onAddFriendSuggestions, setAddedPressed];
@@ -162,13 +162,13 @@ let closure_12 = noop.memo(function MessagesItemSuggestedFriendView(height) {
   items5[1] = closure_10(View, obj1);
   if (addedPressed) {
     const obj2 = { style: { marginHorizontal: 8 } };
-    let tmp9Result = tmp9(tmp4(tmp5[21]).SendMessageIcon, obj2);
+    let tmp9Result = closure_9(tmp4(tmp5[21]).SendMessageIcon, obj2);
   } else {
     let obj3 = { variant: "secondary", size: "sm", text: null, onPress: null };
     const intl2 = tmp4(tmp5[12]).intl;
     obj3.text = intl2.string(tmp4(tmp5[12]).t.OYkgVk);
     obj3.onPress = callback1;
-    tmp9Result = tmp9(tmp4(tmp5[20]).Button, obj3);
+    tmp9Result = closure_9(tmp4(tmp5[20]).Button, obj3);
   }
   items5[2] = tmp9Result;
   obj.children = items5;

@@ -14,7 +14,7 @@ import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js
 import ConnectedAccountsStore from "../../../stores/ConnectedAccountsStore.tsx";
 
 require = fn;
-let closure_18 = async function _uploadContacts(arg0, value) {
+let closure_18 = async function _uploadContacts(arg0) {
   if (c5 === 2) {
     c5 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -223,14 +223,14 @@ export const getImageForContactId = function getImageForContactId(arg0) {
     closure_1 = arg1;
     const imageForContactId = DCDContactSyncManager.getImageForContactId(closure_0, (arg0, str) => {
       if (null == arg0) {
-        closure_0(str.replace(/(\r\n|\n|\r)/gm, ""));
+        closure_0("".replace(/(\r\n|\n|\r)/gm, ""));
       } else {
         closure_1(error2);
       }
     });
   });
 };
-export const getContacts = function getContacts(phone, storedContacts) {
+export const getContacts = function getContacts(phone) {
   closure_0 = phone;
   if (storedContacts === undefined) {
     const str = "";

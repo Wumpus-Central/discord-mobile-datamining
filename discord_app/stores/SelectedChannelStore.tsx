@@ -119,11 +119,11 @@ function handleConnectionOpen(sessionId) {
       mostRecentSelectedTextChannelIds,
       knownThreadIds: null,
     };
-    const values = tmp9(12)(selectedChannelIds).values();
-    const obj6 = tmp9(12)(selectedChannelIds);
-    const combined = values.concat(tmp9(12).values(mostRecentSelectedTextChannelIds));
+    const values = _modDef12(selectedChannelIds).values();
+    const obj6 = _modDef12(selectedChannelIds);
+    const combined = values.concat(_modDef12.values(mostRecentSelectedTextChannelIds));
     const found = combined.filter(require("GlobalUtils").isNotNullish);
-    const tmp9Result = tmp9(12);
+    const tmp9Result = _modDef12;
     const uniqResult = found.uniq();
     obj.knownThreadIds = found
       .uniq()
@@ -545,6 +545,18 @@ const selectedChannelStore = new SelectedChannelStore(DispatcherDefault, {
         })
         .value();
       const result = Storage.set(SelectedChannelStore, obj);
+      const iter = found.uniq().filter((item) => {
+        basicChannel = basicChannel.getBasicChannel(item);
+        let hasItem = set2.has(item);
+        if (!hasItem) {
+          let hasItem1 = null != basicChannel;
+          if (hasItem1) {
+            hasItem1 = set.has(basicChannel.type);
+          }
+          hasItem = hasItem1;
+        }
+        return hasItem;
+      });
     }
   },
   CHANNEL_CREATE: function handleChannelCreate(channel) {
@@ -709,6 +721,18 @@ const selectedChannelStore = new SelectedChannelStore(DispatcherDefault, {
         })
         .value();
       const result = Storage.set(SelectedChannelStore, obj);
+      const iter = found.uniq().filter((item) => {
+        basicChannel = basicChannel.getBasicChannel(item);
+        let hasItem = set2.has(item);
+        if (!hasItem) {
+          let hasItem1 = null != basicChannel;
+          if (hasItem1) {
+            hasItem1 = set.has(basicChannel.type);
+          }
+          hasItem = hasItem1;
+        }
+        return hasItem;
+      });
     }
   },
   VOICE_CHANNEL_SELECT: function handleVoiceChannelSelect(channelId) {
@@ -769,6 +793,18 @@ const selectedChannelStore = new SelectedChannelStore(DispatcherDefault, {
       })
       .value();
     const result = Storage.set(SelectedChannelStore, obj);
+    const iter = found.uniq().filter((item) => {
+      basicChannel = basicChannel.getBasicChannel(item);
+      let hasItem = set2.has(item);
+      if (!hasItem) {
+        let hasItem1 = null != basicChannel;
+        if (hasItem1) {
+          hasItem1 = set.has(basicChannel.type);
+        }
+        hasItem = hasItem1;
+      }
+      return hasItem;
+    });
   },
   VOICE_STATE_UPDATES: function handleVoiceStateUpdates(voiceStates) {
     voiceStates = voiceStates.voiceStates;

@@ -16,7 +16,7 @@ const result = size.fileFinishedImporting(
 export default noop.memo((channelId) => (
   <View style={closure_4().container}>
     {jsx(ChannelHeaderDefault, {
-      channelId: arg0.channelId,
+      channelId: channelId.channelId,
       screenIndex: "none",
       pressable: false,
       isGuildMemberCountVisible: false,

@@ -4,7 +4,7 @@ import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 import UserStore from "../../stores/UserStore.tsx";
 
 require = fn;
-let closure_6 = async function _adoptGuildIdentity(identity_guild_id, identity_enabled) {
+let closure_6 = async function _adoptGuildIdentity() {
   c6 = 0;
   c7 = 0;
   c5 = 0;

@@ -96,7 +96,7 @@ export default function GuildThemeNuxActionSheet(guildId) {
   const items5 = [guildId, tmp10, markAsDismissed, stateFromStores];
   const items6 = [callback1];
   const callback2 = noop.useCallback(
-    asyncGeneratorStep(async (arg0, value) => {
+    asyncGeneratorStep(async () => {
       if (c5 === 2) {
         c5 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -234,16 +234,16 @@ export default function GuildThemeNuxActionSheet(guildId) {
     };
     const intl7 = tmp2(1114).intl;
     obj7.children = intl7.string(tmp2(1114).t.tTHQAy);
-    obj6.children = tmp20(tmp2(1178).HelpMessage, obj7);
-    tmp20Result = tmp20(tmp22, obj6);
+    obj6.children = closure_10(tmp2(1178).HelpMessage, obj7);
+    tmp20Result = closure_10(tmp22, obj6);
   }
   items7[4] = tmp20Result;
   tmp20Result = null;
   if (null != tmp7) {
     const obj8 = { style: tmp.warning, children: null };
     const obj9 = { messageType: tmp2(1178).HelpMessageTypes.ERROR, borderRadius: tmp21(576).radii.md, children: tmp7 };
-    obj8.children = tmp20(tmp2(1178).HelpMessage, obj9);
-    tmp20Result = tmp20(tmp22, obj8);
+    obj8.children = closure_10(tmp2(1178).HelpMessage, obj9);
+    tmp20Result = closure_10(tmp22, obj8);
   }
   items7[5] = tmp20Result;
   const obj10 = { style: tmp.footer, children: null };

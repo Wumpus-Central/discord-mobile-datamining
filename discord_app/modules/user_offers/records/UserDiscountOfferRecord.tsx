@@ -51,7 +51,7 @@ UserDiscountOfferRecord["createFromServer"] = function createFromServer(discount
       tmp5,
       _Date2,
       _Date,
-      tmp,
+      UserDiscountOfferRecord,
       new.target,
       id,
       discount_id,

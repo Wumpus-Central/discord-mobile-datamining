@@ -128,7 +128,7 @@ export default noop.memo((bounty) => {
   const callback2 = obj1.useCallback(() => {
     if (null != closure_8.current) {
       const _clearTimeout = clearTimeout;
-      clearTimeout(tmp.current);
+      clearTimeout(closure_8.current);
     }
     closure_8.current = setTimeout(() => {
       _undefined2(true);
@@ -166,8 +166,8 @@ export default noop.memo((bounty) => {
     return () => {
       if (null != ref.current) {
         const _clearTimeout = clearTimeout;
-        clearTimeout(tmp.current);
-        tmp.current = null;
+        clearTimeout(ref.current);
+        ref.current = null;
       }
     };
   }, items3);
@@ -196,8 +196,8 @@ export default noop.memo((bounty) => {
     () => () => {
       if (null != ref.current) {
         const _clearTimeout = clearTimeout;
-        clearTimeout(tmp.current);
-        tmp.current = null;
+        clearTimeout(ref.current);
+        ref.current = null;
       }
     },
     [],

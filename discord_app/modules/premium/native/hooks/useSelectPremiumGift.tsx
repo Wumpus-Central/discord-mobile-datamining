@@ -33,7 +33,8 @@ export const useSelectPremiumGift = function useSelectPremiumGift(PremiumGiftPla
         recipientUserId,
         productId: navigation(recipientUserId[6]).getProductIdForGift(planIdForPremiumType),
       };
-      closure_129_0 = yield v3(obj1);
+      yield v3(obj1);
+      closure_129_0 = value;
       v2(closure_129_0);
       navigation.navigate(navigation(recipientUserId[9]).PremiumGiftScreens.CUSTOMIZATION);
       yield "HermesInternal";

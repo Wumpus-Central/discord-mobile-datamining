@@ -13,28 +13,28 @@ function getJoinFromSupportedPlatformsIconKeys(isGameLaunchable) {
       }
       const items = [];
       if (set.has(ActivityGamePlatforms.ANDROID)) {
-        if (set.has(tmp.IOS)) {
+        if (set.has(ActivityGamePlatforms.IOS)) {
           items.push(obj.MOBILE);
         }
         if (tmp8) {
           items.push(obj.PLAYSTATION);
         }
-        if (set.has(tmp.XBOX)) {
+        if (set.has(ActivityGamePlatforms.XBOX)) {
           items.push(obj.XBOX);
         }
-        if (set.has(tmp.DESKTOP)) {
+        if (set.has(ActivityGamePlatforms.DESKTOP)) {
           items.push(obj.DESKTOP);
         }
         tmp15 = items;
-        if (set.has(tmp.META_QUEST)) {
+        if (set.has(ActivityGamePlatforms.META_QUEST)) {
           items.push(obj.VR);
           tmp15 = items;
         }
-        tmp8 = set.has(tmp.PS4) || set.has(tmp.PS5);
+        tmp8 = set.has(ActivityGamePlatforms.PS4) || set.has(ActivityGamePlatforms.PS5);
       }
       if (set.has(ActivityGamePlatforms.ANDROID)) {
         items.push(obj.ANDROID);
-      } else if (set.has(tmp.IOS)) {
+      } else if (set.has(ActivityGamePlatforms.IOS)) {
         items.push(obj.IOS);
       }
     }

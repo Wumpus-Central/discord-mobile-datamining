@@ -1,9 +1,9 @@
 // discord_app/modules/client_themes/native/useCustomThemeDisplaySettings.tsx
 import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
+import ClientThemesUtils from "../ClientThemesUtils.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import CustomThemeMobileStore from "CustomThemeMobileStore.tsx";
 
-const ClientThemesUtils = tmp(1229);
 require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/client_themes/native/useCustomThemeDisplaySettings.tsx");

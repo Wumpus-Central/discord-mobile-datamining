@@ -65,17 +65,17 @@ function scheduleNextFetch() {
     num = 0;
   }
   if (num <= 0) {
-    let obj = { type: "CONTENT_INVENTORY_SET_FEED_STATE", feedId: tmp, state: { loading: false } };
+    let obj = { type: "CONTENT_INVENTORY_SET_FEED_STATE", feedId: GLOBAL_FEED, state: { loading: false } };
     obj.dispatch(obj);
-    value = map.get(tmp);
+    value = map.get(GLOBAL_FEED);
     if (undefined !== value) {
       const _clearTimeout = clearTimeout;
       clearTimeout(value);
-      obj3.delete(tmp);
+      map.delete(GLOBAL_FEED);
     }
     let flag = false;
-    if (!set.has(tmp)) {
-      if (tmp !== ContentInventoryFeedKey.GAME_PROFILE_FEED) {
+    if (!set.has(GLOBAL_FEED)) {
+      if (GLOBAL_FEED !== ContentInventoryFeedKey.GAME_PROFILE_FEED) {
         flag = true;
         {
           flag = false;
@@ -104,7 +104,7 @@ function scheduleNextFetch() {
       }
     }
     if (flag) {
-      const feed = ContentInventoryStore.getFeed(tmp);
+      const feed = ContentInventoryStore.getFeed(GLOBAL_FEED);
       let prop;
       if (feed != null) {
         prop = feed.refresh_stale_inbox_after_ms;
@@ -142,20 +142,19 @@ function scheduleNextFetch() {
         const _Date7 = Date;
         const date2 = new Date(Date.now() + sum);
         obj.nextFetchDate = date2;
-        const obj1 = { type: "CONTENT_INVENTORY_SET_FEED_STATE", feedId: tmp, state: obj };
-        tmp2(573).dispatch(obj1);
+        const obj1 = { type: "CONTENT_INVENTORY_SET_FEED_STATE", feedId: GLOBAL_FEED, state: obj };
+        DispatcherDefault.dispatch(obj1);
         const _setTimeout = setTimeout;
-        const result = obj3.set(
-          tmp,
+        const result = map.set(
+          GLOBAL_FEED,
           setTimeout(
             () => fetchInventory({ feedId, feature: ContentInventoryFeature.ContentInventoryFeature.INBOX }),
             sum,
           ),
         );
-        const tmp2Result = tmp2(573);
+        const tmp2Result = DispatcherDefault;
       }
     }
-    tmp2 = importDefault;
   }
 }
 function fetchInventory() {
@@ -168,7 +167,7 @@ function fetchInventory() {
   }
   return applyArgumentsResult;
 }
-let closure_24 = async function _fetchInventory(arg0, value) {
+let closure_24 = async function _fetchInventory(arg0) {
   if (c7 === 2) {
     c7 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");

@@ -25,7 +25,7 @@ let closure_25 = async function _handleConnectionOpen(arg0) {
   let sessionId = arg0;
   c3 = 0;
   c4 = 0;
-  return (async (arg0, value) => {
+  return (async (arg0) => {
     if (c4 === 2) {
       c4 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -239,9 +239,9 @@ const gatewayConnectionStore = new GatewayConnectionStore(DispatcherDefault, {
     const socket2 = GatewaySocketSingleton.socket;
     let connectResult = socket2.isSessionEstablished();
     if (connectResult) {
-      const socket3 = tmp(13628).socket;
+      const socket3 = GatewaySocketSingleton.socket;
       socket3.close();
-      const socket4 = tmp(13628).socket;
+      const socket4 = GatewaySocketSingleton.socket;
       connectResult = socket4.connect();
     }
     return connectResult;
@@ -314,13 +314,13 @@ const gatewayConnectionStore = new GatewayConnectionStore(DispatcherDefault, {
     }
     if (isIOSResult) {
       if (null == guildId.channelId) {
-        const socket3 = tmp(13628).socket;
+        const socket3 = GatewaySocketSingleton.socket;
         socket3.close(true);
       } else {
-        const socket = tmp(13628).socket;
+        const socket = GatewaySocketSingleton.socket;
         if (socket.isClosed()) {
           PauseGatewaySocketAll.setIsPaused(false);
-          const socket2 = tmp(13628).socket;
+          const socket2 = GatewaySocketSingleton.socket;
           socket2.connect();
         }
       }
@@ -343,14 +343,11 @@ const gatewayConnectionStore = new GatewayConnectionStore(DispatcherDefault, {
             ({ guildId: obj.guildId, channelId: obj.channelId } = userId);
             localVoiceState2.setState(obj);
           }
+        } else if (userId.guildId !== require("GatewaySocketSingleton").localVoiceState.guildId) {
+          return acc;
         } else {
-          if (userId.guildId !== require("GatewaySocketSingleton").localVoiceState.guildId) {
-            return acc;
-          } else {
-            const localVoiceState = tmp(13628).localVoiceState;
-            localVoiceState.setState({ guildId: null, channelId: null });
-          }
-          tmp = _require;
+          const localVoiceState = require("GatewaySocketSingleton").localVoiceState;
+          localVoiceState.setState({ guildId: null, channelId: null });
         }
         return true;
       }
@@ -386,7 +383,7 @@ const gatewayConnectionStore = new GatewayConnectionStore(DispatcherDefault, {
       if (!AuthenticationStore.isAuthenticated()) {
         state = state.state;
       } else {
-        let isClosedResult = state === tmp6.BACKGROUND && state.state === tmp6.ACTIVE;
+        let isClosedResult = state === constants2.BACKGROUND && state.state === constants2.ACTIVE;
         if (isClosedResult) {
           const socket3 = GatewaySocketSingleton.socket;
           isClosedResult = socket3.isClosed();
@@ -409,6 +406,7 @@ const gatewayConnectionStore = new GatewayConnectionStore(DispatcherDefault, {
       }
       return false;
     }
+    obj = PlatformUtils;
   },
   GUILD_MEMBERS_REQUEST: function handleGuildMembersRequest(userIds) {
     _require = userIds;
@@ -523,10 +521,10 @@ const gatewayConnectionStore = new GatewayConnectionStore(DispatcherDefault, {
   STREAM_STOP: function handleStreamStop(streamKey) {
     const socket = GatewaySocketSingleton.socket;
     if (socket.isSessionEstablished()) {
-      const socket2 = tmp(13628).socket;
+      const socket2 = GatewaySocketSingleton.socket;
       socket2.streamDelete(streamKey.streamKey);
     }
-    const localVoiceState = tmp(13628).localVoiceState;
+    const localVoiceState = GatewaySocketSingleton.localVoiceState;
     localVoiceState.update();
     return false;
   },

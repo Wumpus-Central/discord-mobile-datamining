@@ -118,7 +118,7 @@ export const TwoFASetupModalScreen = function TwoFASetupModalScreen(children) {
       stringResult = intl.string(tmp2(1114).t.XiOHRX);
     }
     obj1.text = stringResult;
-    obj1 = tmp8(tmp2(4975).Button, obj1);
+    obj1 = closure_6(tmp2(4975).Button, obj1);
     obj.children = obj1;
     closure_6(tmp2(7123).SafeAreaPaddingView, obj);
   }

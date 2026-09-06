@@ -175,11 +175,11 @@ prototype["requestWorkTimeout"] = function requestWorkTimeout(flush, arg1) {
       self._flushTimeoutHandler = setTimeout(() => {
         _modDef38(null != self._workCallbackFn, "Work callback should be set");
         if (self._isBackgrounded) {
-          const telemetry = obj.telemetry;
+          const telemetry = self.telemetry;
           telemetry.track(WorkSchedulerTelemetry.WorkSchedulerTelemetryEvent.SKIP_IDLE_CALLBACK_DUE_TO_BACKGROUNDED);
-          return obj._processWorkCallback();
+          return self._processWorkCallback();
         } else {
-          obj._queueIdleCallback();
+          self._queueIdleCallback();
         }
       }, self._nextDispatchTimeout);
     }

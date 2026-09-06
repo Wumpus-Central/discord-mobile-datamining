@@ -1,8 +1,13 @@
 // discord_app/utils/ReadyPayloadUtils.tsx
+import _modDef12 from "../../_runtime/metro/00012__.js";
 import _modDef38 from "../../_runtime/metro/00038__.js";
 import ChannelRecord from "../records/ChannelRecord.tsx";
 import DatabaseDaosDefault from "../modules/app_database/DatabaseDaos.tsx";
+import DatabaseManagerDefault from "../modules/app_database/system/DatabaseManager.tsx";
+import ChannelReaderDefault from "../modules/app_database/modules/channels/ChannelReader.tsx";
 import isCacheEnabled from "../modules/cache/isCacheEnabled.native.tsx";
+import GuildVersionsDefault from "../modules/app_database/modules/GuildVersions.tsx";
+import KvCacheVersionDefault from "../modules/app_database/modules/KvCacheVersion.tsx";
 import size from "../../_runtime/metro/00002__.js";
 
 function hydrateGuild(guild) {
@@ -483,14 +488,14 @@ export const hydrateReadySupplementalPayload = function hydrateReadySupplemental
 export const preloadReadyPayloadData = function preloadReadyPayloadData() {
   const databaseResult = DatabaseDaosDefault.database();
   if (obj2.isCacheEnabled()) {
-    let tmpResult = tmp(7653);
+    let tmpResult = GuildVersionsDefault;
     let committedVersions = tmpResult.getCommittedVersions();
   } else {
     committedVersions = Promise.resolve({});
   }
   obj2 = isCacheEnabled;
   if (tmp4Result.isCacheEnabled()) {
-    tmpResult = tmp(2007);
+    tmpResult = ChannelReaderDefault;
     let guildIds = tmpResult.getGuildIds();
   } else {
     const _Set = Set;
@@ -498,8 +503,8 @@ export const preloadReadyPayloadData = function preloadReadyPayloadData() {
     guildIds = Promise.resolve(set);
   }
   if (null != databaseResult) {
-    let okAsyncResult = tmp(7654).okAsync(databaseResult);
-    const tmpResult1 = tmp(7654);
+    let okAsyncResult = KvCacheVersionDefault.okAsync(databaseResult);
+    const tmpResult1 = KvCacheVersionDefault;
   } else {
     okAsyncResult = Promise.resolve(false);
   }
@@ -523,10 +528,10 @@ export const hydrateReadyPayloadPrioritized = function hydrateReadyPayloadPriori
     tmp4 = false === databaseOk.databaseOk;
   }
   if (tmp4) {
-    let tmp2Result = tmp2(2003);
+    let tmp2Result = DatabaseManagerDefault;
     const result = tmp2Result.replaceDisableAllDatabases("ReadyPayloadUtils: database was not ok");
   }
-  tmp2Result = tmp2(12);
+  tmp2Result = _modDef12;
   closure_5 = tmp2Result.keyBy(users, (id) => id.id);
   if (private_channels != null) {
     let item = private_channels.forEach((recipient_ids) => {

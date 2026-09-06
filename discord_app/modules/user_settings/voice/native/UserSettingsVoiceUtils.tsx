@@ -1,6 +1,7 @@
 // discord_app/modules/user_settings/voice/native/UserSettingsVoiceUtils.tsx
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
 import AudioActionCreatorsDefault from "../../../../actions/AudioActionCreators.tsx";
+import NoiseCancellationUtils from "../../../noise_cancellation/NoiseCancellationUtils.tsx";
 import MediaEngineStore from "../../../../stores/MediaEngineStore.tsx";
 
 require = fn;
@@ -26,7 +27,7 @@ export const handleNoiseSuppressionChange = function handleNoiseSuppressionChang
   AudioActionCreatorsDefault.setNoiseSuppression(arg0 === STANDARD, obj);
 };
 export { NoiseSuppressionOpt };
-export const getSelectedNoiseSuppressionOption = function getSelectedNoiseSuppressionOption(MediaEngineStore) {
+export const getSelectedNoiseSuppressionOption = function getSelectedNoiseSuppressionOption() {
   let obj = MediaEngineStore;
   if (MediaEngineStore === undefined) {
     obj = MediaEngineStore;
@@ -45,9 +46,10 @@ export const useSelectedNoiseSuppressionOption = function useSelectedNoiseSuppre
     const noiseSuppression = MediaEngineStore.getNoiseSuppression();
     const noiseCancellation = MediaEngineStore.getNoiseCancellation();
     if (noiseCancellation) {
-      obj.getNoiseCancellationDeferredToSystem(MediaEngineStore) ? tmp3.NONE : tmp3.KRISP;
+      obj.getNoiseCancellationDeferredToSystem(MediaEngineStore) ? NoiseSuppressionOpt.NONE : NoiseSuppressionOpt.KRISP;
     } else {
-      return noiseSuppression ? tmp3.STANDARD : tmp3.NONE;
+      return noiseSuppression ? NoiseSuppressionOpt.STANDARD : NoiseSuppressionOpt.NONE;
     }
+    obj = NoiseCancellationUtils;
   });
 };

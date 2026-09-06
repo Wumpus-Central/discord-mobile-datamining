@@ -21,7 +21,8 @@ prototype["publicKeyFingerprint"] = function publicKeyFingerprint() {
 prototype["decryptEncodedCiphertext"] = function decryptEncodedCiphertext(current, encrypted_token) {
   closure_0 = encrypted_token;
   return (async () => {
-    closure_128_0 = await tmp2(c1[1]).decrypt(tmp2);
+    await tmp2(c1[1]).decrypt(tmp2);
+    closure_128_0 = value;
     const _Uint8Array = Uint8Array;
     const _atob = atob;
     closure_128_1 = Uint8Array.from(atob(closure_128_0), (str) => str.charCodeAt(0));
@@ -30,13 +31,13 @@ prototype["decryptEncodedCiphertext"] = function decryptEncodedCiphertext(curren
     return decoder.decode(closure_128_1);
   })();
 };
-prototype["decryptNonce"] = function decryptNonce(arg0, arg1) {
-  closure_0 = arg1;
+prototype["decryptNonce"] = function decryptNonce(arg0, encrypted_nonce) {
+  closure_0 = encrypted_nonce;
   return (async () => {
     await v3(c1[1])
       .decrypt(closure_0)
       .then((result) => result.replace(/\//g, "_").replace(/\+/g, "-"));
-    return arg1;
+    return value;
   })();
 };
 prototype["release"] = function release() {

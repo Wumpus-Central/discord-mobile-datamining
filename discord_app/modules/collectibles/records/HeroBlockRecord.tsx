@@ -1,4 +1,5 @@
 // discord_app/modules/collectibles/records/HeroBlockRecord.tsx
+import CollectiblesUtils from "../CollectiblesUtils.tsx";
 import ShopBlockType from "../../../../discord_common/js/shared/shared-constants/ShopBlockType.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
@@ -30,9 +31,9 @@ const prototype = function HeroBlockRecord(unpublished_at) {
     mobile_hero_url: tmp.mobileHeroUrl,
     mobile_hero_animated_url: tmp.mobileHeroAnimatedUrl,
   } = unpublished_at);
-  let tmp2Result = tmp2(7554);
+  let tmp2Result = CollectiblesUtils;
   obj.bannerDisplayConfig = tmp2Result.getAssetDisplayConfig(unpublished_at.banner_display_config);
-  tmp2Result = tmp2(7554);
+  tmp2Result = CollectiblesUtils;
   obj.logoDisplayConfig = tmp2Result.getAssetDisplayConfig(unpublished_at.logo_display_config);
   return obj;
 }.prototype;

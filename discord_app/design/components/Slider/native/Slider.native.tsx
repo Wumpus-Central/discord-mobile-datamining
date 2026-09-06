@@ -46,7 +46,7 @@ export const Slider = function Slider(step) {
   }, items);
   if (null != startIcon) {
     obj = { style: tmp2.startIcon, children: startIcon };
-    tmp6 = closure_5(tmp5, obj);
+    tmp6 = closure_5(View, obj);
   }
   const items1 = [tmp6, ,];
   obj = {};
@@ -62,7 +62,7 @@ export const Slider = function Slider(step) {
   let tmp8Result = null;
   if (null != endIcon) {
     const obj1 = { style: tmp2.endIcon, children: endIcon };
-    tmp8Result = closure_5(tmp5, obj1);
+    tmp8Result = closure_5(View, obj1);
   }
   items1[2] = tmp8Result;
   obj.children = items1;

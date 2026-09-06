@@ -24,14 +24,14 @@ Suppressed.prototype["render"] = function render() {
   const t = util.t;
   if (isAFKChannelResult) {
     let stringResult = string(t.KuYcnU);
-    const intl3 = tmp2(1114).intl;
-    let stringResult1 = intl3.string(tmp2(1114).t["RaFZ3+"]);
+    const intl3 = util.intl;
+    let stringResult1 = intl3.string(util.t["RaFZ3+"]);
     let tmp7 = _modDef16919;
     let tmp6 = importDefault;
   } else {
     stringResult = string(t.FJSZVM);
-    const intl2 = tmp2(1114).intl;
-    stringResult1 = intl2.string(tmp2(1114).t.etJjgW);
+    const intl2 = util.intl;
+    stringResult1 = intl2.string(util.t.etJjgW);
     tmp6 = importDefault;
     tmp7 = _modDef16920;
   }

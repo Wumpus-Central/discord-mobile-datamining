@@ -261,8 +261,8 @@ Object.defineProperty(prototype, "hasBogoReward", {
   },
   set: undefined,
 });
-prototype["hasFlag"] = function hasFlag(arg0) {
-  return FlagUtils.hasFlag(this.flags, arg0);
+prototype["hasFlag"] = function hasFlag(IS_ANIMATED) {
+  return FlagUtils.hasFlag(this.flags, IS_ANIMATED);
 };
 prototype["isCountryRestricted"] = function isCountryRestricted(arg0) {
   const self = this;
@@ -271,10 +271,10 @@ prototype["isCountryRestricted"] = function isCountryRestricted(arg0) {
     return !allowedCountries.includes(arg0);
   } else {
     const promotionType = self.promotionType;
-    if (tmp(10697).PromotionTypes.THIRD_PARTY_INBOUND !== promotionType) {
-      if (tmp(10697).PromotionTypes.THIRD_PARTY_DIRECT_FULFILLMENT !== promotionType) {
-        if (tmp(10697).PromotionTypes.THIRD_PARTY_OUTBOUND !== promotionType) {
-          if (tmp(10697).PromotionTypes.THIRD_PARTY_OUTBOUND_RECURRING !== promotionType) {
+    if (require("constants").PromotionTypes.THIRD_PARTY_INBOUND !== promotionType) {
+      if (require("constants").PromotionTypes.THIRD_PARTY_DIRECT_FULFILLMENT !== promotionType) {
+        if (require("constants").PromotionTypes.THIRD_PARTY_OUTBOUND !== promotionType) {
+          if (require("constants").PromotionTypes.THIRD_PARTY_OUTBOUND_RECURRING !== promotionType) {
             return false;
           }
         }

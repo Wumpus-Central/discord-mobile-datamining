@@ -37,7 +37,7 @@ export default noop.memo((channel) => {
   ];
   if (speaker) {
     obj = { channelId: channel.id };
-    speaker = tmp7(tmp8(10027).MusicMuteButton, obj);
+    speaker = React4(StageActionHeader.MusicMuteButton, obj);
   }
   items[2] = speaker;
   obj = { channelId: channel.id };

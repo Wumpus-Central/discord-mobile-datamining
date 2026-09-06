@@ -6,7 +6,7 @@ import GuildStore from "../stores/GuildStore.tsx";
 import Constants from "../Constants.tsx";
 import size from "../../_runtime/metro/00002__.js";
 
-function canSeeChannelSummaries(channel, flag, arg2) {
+function canSeeChannelSummaries(channel) {
   if (flag === undefined) {
     flag = false;
   }
@@ -70,11 +70,10 @@ function canSeeChannelSummaries(channel, flag, arg2) {
               hasItem = !flag2;
               if (flag2) {
                 const features2 = guild1.features;
-                hasItem = features2.has(tmp21.SUMMARIES_ENABLED_BY_USER);
+                hasItem = features2.has(constants2.SUMMARIES_ENABLED_BY_USER);
               }
             }
             tmp20 = hasItem;
-            tmp21 = constants2;
           }
           tmp14 = tmp20;
         }
@@ -124,11 +123,10 @@ export const canGuildUseConversationSummaries = function canGuildUseConversation
         hasItem = !flag;
         if (flag) {
           const features2 = guild.features;
-          hasItem = features2.has(tmp8.SUMMARIES_ENABLED_BY_USER);
+          hasItem = features2.has(constants2.SUMMARIES_ENABLED_BY_USER);
         }
       }
       tmp7 = hasItem;
-      tmp8 = constants2;
     }
     tmp = tmp7;
   }

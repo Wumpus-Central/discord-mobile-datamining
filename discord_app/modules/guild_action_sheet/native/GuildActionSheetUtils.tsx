@@ -17,15 +17,15 @@ export const useGuildActionSheetPermissions = function useGuildActionSheetPermis
         let obj = { canAccessSettings: false, canEditNickname: false, canManageChannels: false };
       } else {
         obj = {
-          canAccessSettings: PermissionStore.canAccessGuildSettings(tmp),
+          canAccessSettings: PermissionStore.canAccessGuildSettings(closure_0),
           canEditNickname:
-            PermissionStore.can(Permissions.CHANGE_NICKNAME, tmp) ||
-            PermissionStore.can(Permissions.MANAGE_NICKNAMES, tmp),
-          canManageChannels: PermissionStore.can(Permissions.MANAGE_CHANNELS, tmp),
+            PermissionStore.can(Permissions.CHANGE_NICKNAME, closure_0) ||
+            PermissionStore.can(Permissions.MANAGE_NICKNAMES, closure_0),
+          canManageChannels: PermissionStore.can(Permissions.MANAGE_CHANNELS, closure_0),
         };
         const tmp3 =
-          PermissionStore.can(Permissions.CHANGE_NICKNAME, tmp) ||
-          PermissionStore.can(Permissions.MANAGE_NICKNAMES, tmp);
+          PermissionStore.can(Permissions.CHANGE_NICKNAME, closure_0) ||
+          PermissionStore.can(Permissions.MANAGE_NICKNAMES, closure_0);
       }
       return obj;
     },

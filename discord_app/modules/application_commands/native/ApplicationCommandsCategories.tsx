@@ -50,10 +50,10 @@ let closure_10 = noop.memo((section) => {
     if (null != noop) {
       let botId;
       if (section != null) {
-        botId = tmp2.botId;
+        botId = section.botId;
       }
       if (null != botId) {
-        return GuildMemberStore.getMember(tmp, tmp2.botId);
+        return GuildMemberStore.getMember(tmp, section.botId);
       }
     }
   });
@@ -168,7 +168,7 @@ export default function ApplicationCommandsCategories(onPressSection) {
       return (
         <closure_10
           active={index === selectedIndex}
-          section={arg0.item}
+          section={section.item}
           index={index}
           handlePressCategory={handlePressCategory}
           guildId={guildId}
@@ -194,7 +194,7 @@ export default function ApplicationCommandsCategories(onPressSection) {
         return (
           <closure_10
             active={index === selectedIndex}
-            section={arg0.item}
+            section={section.item}
             index={index}
             handlePressCategory={handlePressCategory}
             guildId={guildId}
@@ -221,7 +221,7 @@ export default function ApplicationCommandsCategories(onPressSection) {
         return (
           <closure_10
             active={index === selectedIndex}
-            section={arg0.item}
+            section={section.item}
             index={index}
             handlePressCategory={handlePressCategory}
             guildId={guildId}

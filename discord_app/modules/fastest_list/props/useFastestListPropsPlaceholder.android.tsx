@@ -1,4 +1,5 @@
 // discord_app/modules/fastest_list/props/useFastestListPropsPlaceholder.android.tsx
+import ColorUtils from "../../../utils/ColorUtils.tsx";
 import FastestListPropsPlaceholder from "FastestListPropsPlaceholder.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
@@ -47,7 +48,7 @@ function createNativePlaceholderConfig(listFooter) {
     return size;
   } else {
     if (FastestListPropsPlaceholder.FastestListPropsPlaceholderType.NONE !== type) {
-      if (tmp15(7062).FastestListPropsPlaceholderType.SHAPE === type) {
+      if (FastestListPropsPlaceholder.FastestListPropsPlaceholderType.SHAPE === type) {
         let num9 = listFooter.borderRadius;
         if (num9 == null) {
           num9 = 0;
@@ -68,8 +69,8 @@ function createNativePlaceholderConfig(listFooter) {
           num11 = 0;
         }
         size.placeholderShapePaddingVertical = num11;
-        const tmp14 = processColor(tmp15(4409).hexToRgbaString(listFooter.colorHex, listFooter.opacity));
-        size.placeholderShapeColor = tmp14;
+        const tmp15Result = ColorUtils;
+        size.placeholderShapeColor = processColor(ColorUtils.hexToRgbaString(listFooter.colorHex, listFooter.opacity));
         let num12 = listFooter.shapeCount;
         if (num12 == null) {
           num12 = 1;
@@ -85,8 +86,8 @@ function createNativePlaceholderConfig(listFooter) {
           str2 = "center";
         }
         size.horizontalAlignment = str2;
-        const tmp15Result = tmp15(4409);
-      } else if (tmp15(7062).FastestListPropsPlaceholderType.FEED_ITEM === type) {
+        const tmp14 = processColor(ColorUtils.hexToRgbaString(listFooter.colorHex, listFooter.opacity));
+      } else if (FastestListPropsPlaceholder.FastestListPropsPlaceholderType.FEED_ITEM === type) {
         let num = listFooter.borderRadius;
         if (num == null) {
           num = 0;
@@ -117,8 +118,7 @@ function createNativePlaceholderConfig(listFooter) {
           flag = false;
         }
         size.divider = flag;
-        const tmp10 = processColor(listFooter.dividerColorHex);
-        size.dividerColor = tmp10;
+        size.dividerColor = processColor(listFooter.dividerColorHex);
         let num6 = listFooter.dividerPaddingLeft;
         if (num6 == null) {
           num6 = 0;
@@ -129,9 +129,9 @@ function createNativePlaceholderConfig(listFooter) {
           num7 = 0;
         }
         size.dividerPaddingRight = num7;
-        let tmp9Result = tmp9(listFooter.backgroundColorHex);
+        let tmp9Result = processColor(listFooter.backgroundColorHex);
         size.placeholderFeedBackgroundColor = tmp9Result;
-        tmp9Result = tmp9(listFooter.colorHex);
+        tmp9Result = processColor(listFooter.colorHex);
         size.placeholderFeedColor = tmp9Result;
         ({ labelSize: obj.placeholderFeedLabelSize, labelSecondarySize } = listFooter);
         if (labelSecondarySize == null) {
@@ -149,6 +149,7 @@ function createNativePlaceholderConfig(listFooter) {
         }
         size.placeholderFeedPadding = num8;
         ({ shape: obj.placeholderFeedShape, shapeSize: obj.placeholderFeedShapeSize } = listFooter);
+        const tmp10 = processColor(listFooter.dividerColorHex);
       } else {
         const _Error = Error;
         const _HermesInternal = HermesInternal;

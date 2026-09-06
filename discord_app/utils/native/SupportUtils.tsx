@@ -5,7 +5,7 @@ import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 import LocaleStore from "../../modules/user_settings/LocaleStore.tsx";
 
 const require = fn;
-let closure_6 = async function _emailSupport(arg0, value) {
+let closure_6 = async function _emailSupport() {
   if (c3 === 2) {
     c3 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");

@@ -22,7 +22,7 @@ let closure_8 = noop.memo((children) => (
     {jsx(Text_Text.Heading, {
       variant: "heading-sm/medium",
       color: "mobile-text-heading-primary",
-      children: arg0.header,
+      children: children.header,
     })}
   </hasOwnProperty>
 ));
@@ -86,7 +86,7 @@ export const EditCollectiblesPickerList = function EditCollectiblesPickerList(se
   obj = { style: null, children: null };
   if (flag) {
     obj.style = tmp.loadingContainer;
-    obj.children = tmp12(c4, { animating: true, size: "large" });
+    obj.children = <c4 animating size="large" />;
     let tmp17 = obj;
   } else {
     obj.style = tmp.list;
@@ -105,7 +105,16 @@ export const EditCollectiblesPickerList = function EditCollectiblesPickerList(se
     }
     obj.contentContainerStyle = listContent;
     obj.onLayout = callback;
-    obj.children = tmp12(sections(selectedSkuId[8]).BottomSheetFlashList, obj);
+    obj.children = jsx(sections(selectedSkuId[8]).BottomSheetFlashList, {
+      data: memo,
+      renderItem: callback1,
+      getItemType: callback2,
+      keyExtractor: tmp11,
+      extraData: selectedSkuId,
+      contentContainerStyle: null,
+      onLayout: null,
+      keyboardShouldPersistTaps: "always",
+    });
     tmp17 = obj;
   }
   return <num {...tmp17} />;

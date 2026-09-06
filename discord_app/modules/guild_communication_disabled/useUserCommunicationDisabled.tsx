@@ -18,8 +18,8 @@ export default function useUserCommunicationDisabled(arg0, arg1) {
       let member = null;
       if (null != closure_1) {
         member = null;
-        if (null != tmp) {
-          member = GuildMemberStore.getMember(tmp2, tmp);
+        if (null != id) {
+          member = GuildMemberStore.getMember(tmp2, id);
         }
       }
       return member;
@@ -55,8 +55,8 @@ export const useCurrentUserCommunicationDisabled = function useCurrentUserCommun
       let member = null;
       if (null != closure_1) {
         member = null;
-        if (null != tmp) {
-          member = GuildMemberStore.getMember(tmp2, tmp);
+        if (null != id) {
+          member = GuildMemberStore.getMember(tmp2, id);
         }
       }
       return member;

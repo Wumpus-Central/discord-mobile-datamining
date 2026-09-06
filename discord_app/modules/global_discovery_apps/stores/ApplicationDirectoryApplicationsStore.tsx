@@ -26,26 +26,26 @@ prototype["getApplicationRecord"] = function getApplicationRecord(arg0) {
 prototype["getApplications"] = function getApplications() {
   return obj;
 };
-prototype["getApplicationFetchState"] = function getApplicationFetchState(arg0) {
-  if (null != arg0) {
-    return obj[arg0];
+prototype["getApplicationFetchState"] = function getApplicationFetchState(applicationId) {
+  if (null != applicationId) {
+    return obj[applicationId];
   }
 };
 prototype["getApplicationFetchStates"] = function getApplicationFetchStates() {
   return obj;
 };
-prototype["isInvalidApplication"] = function isInvalidApplication(arg0) {
-  let hasItem = null != arg0;
+prototype["isInvalidApplication"] = function isInvalidApplication(applicationId) {
+  let hasItem = null != applicationId;
   if (hasItem) {
-    hasItem = set.has(arg0);
+    hasItem = set.has(applicationId);
   }
   return hasItem;
 };
 prototype["getInvalidApplicationIds"] = function getInvalidApplicationIds() {
   return set;
 };
-prototype["isFetching"] = function isFetching(arg0) {
-  return this.getApplicationFetchState(arg0) === obj.FETCHING;
+prototype["isFetching"] = function isFetching(applicationId) {
+  return this.getApplicationFetchState(applicationId) === obj.FETCHING;
 };
 prototype["getApplicationLastFetchTime"] = function getApplicationLastFetchTime(arg0) {
   if (null != arg0) {

@@ -225,9 +225,7 @@ const memoResult = noop.memo(
       title = back.title;
     }
     obj = { label: title, canGoBack: null, tintColor: null };
-    const tmp10 = closure_4;
     const tmp7 = require("HeaderDebugOverlay")("custom-drawn");
-    const tmp9 = closure_7;
     obj.canGoBack = navigation.isFocused() && navigation.canGoBack();
     obj.tintColor = text;
     const items1 = [fn(obj), , ,];
@@ -248,7 +246,7 @@ const memoResult = noop.memo(
     items1[2] = headerRightResult;
     items1[3] = tmp7;
     obj.children = items1;
-    return tmp9(tmp10, obj);
+    return closure_7(closure_4, obj);
   },
   (back, back2) => {
     let tmpResultResult = discord_common_shallowEqualDefault(back, back2, ["back"]);

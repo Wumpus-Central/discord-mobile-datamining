@@ -1,7 +1,9 @@
 // discord_app/modules/guild_scheduled_events/native/hooks/useEventsButtonProps.tsx
 import asyncRequireImpl from "../../../../../_runtime/01896_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
+import MemberVerificationModalActionCreators from "../../../guild_member_verification/MemberVerificationModalActionCreators.tsx";
 import useGuildScheduledEventsDefault from "../../useGuildScheduledEvents.tsx";
+import GuildScheduledEventModalActionCreators from "../GuildScheduledEventModalActionCreators.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import ReadStateStore from "../../../../stores/ReadStateStore.tsx";
 import UserGuildSettingsStore from "../../../../stores/UserGuildSettingsStore.tsx";
@@ -34,11 +36,11 @@ export default function useEventsButtonProps(id) {
   const items4 = [id.id];
   const handlePress = noop.useCallback(() => {
     if (obj.shouldShowMembershipVerificationGate(user.id)) {
-      let tmpResult = tmp(5569);
-      let result = tmpResult.openMemberVerificationModal(tmp3.id);
+      let tmpResult = MemberVerificationModalActionCreators;
+      let result = tmpResult.openMemberVerificationModal(user.id);
     } else {
-      tmpResult = tmp(9698);
-      result = tmpResult.openGuildEventListActionSheet(tmp3);
+      tmpResult = GuildScheduledEventModalActionCreators;
+      result = tmpResult.openGuildEventListActionSheet(user);
     }
     return result;
   }, items3);

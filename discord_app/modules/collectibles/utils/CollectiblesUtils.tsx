@@ -57,7 +57,7 @@ export const buildFetchCollectiblesOptionsQuery = function buildFetchCollectible
       obj.payment_gateway = noCache.paymentGateway;
     }
     if (noCache.variantsReturnStyle === ShopVariantsReturnStyle.ShopVariantsReturnStyle.VARIANTS_GROUP) {
-      obj.variants_return_style = tmp2(7589).ShopVariantsReturnStyle.VARIANTS_GROUP;
+      obj.variants_return_style = ShopVariantsReturnStyle.ShopVariantsReturnStyle.VARIANTS_GROUP;
     }
     if (null != noCache.shopHomeConfig) {
       obj.shop_home_config = noCache.shopHomeConfig;
@@ -65,7 +65,6 @@ export const buildFetchCollectiblesOptionsQuery = function buildFetchCollectible
     if (null != noCache.skipNumCategories) {
       obj.skip_num_categories = noCache.skipNumCategories;
     }
-    tmp2 = require;
   }
   return obj;
 };

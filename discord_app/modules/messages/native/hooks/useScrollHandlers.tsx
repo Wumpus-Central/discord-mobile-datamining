@@ -2,12 +2,12 @@
 import LoggerDefault from "../../../debug/Logger.tsx";
 import ReactBatchUpdates from "../../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
 import useIsScreenReaderEnabled from "../../../a11y/native/useIsScreenReaderEnabled.native.tsx";
+import QuestTypes from "../../../quests/QuestTypes.tsx";
 import DimensionActionCreatorsDefault from "../../../../actions/DimensionActionCreators.tsx";
 import NativeChatUtilsDefault from "../../../chat/native/NativeChatUtils.tsx";
 import ChatChangesetUpdateTracker from "../../../chat/native/ChatChangesetUpdateTracker.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-const QuestTypes = tmp(5447);
 require = fn;
 const useChatBottomManagerUIStore = fn(9485);
 ({ updateIsAtBottom: closure_4, updateShouldShowJumpToPresentButton: hasOwnProperty } = useChatBottomManagerUIStore);
@@ -58,7 +58,7 @@ export default function useScrollHandlers(arg0) {
     }
     if (null != closure_1_10) {
       useIsScreenReaderEnabled;
-      const loadingMore = tmp29.loadingMore;
+      const loadingMore = closure_1_9.loadingMore;
       let tmp6 = !loadingMore;
       if (!loadingMore) {
         if (!flag2) {
@@ -74,7 +74,7 @@ export default function useScrollHandlers(arg0) {
       }
       if (!ref4.current) {
         if (flag) {
-          if (tmp29.hasMoreBefore) {
+          if (closure_1_9.hasMoreBefore) {
             if (tmp6) {
               closure_1_4.current = true;
               closure_1_5();
@@ -88,7 +88,7 @@ export default function useScrollHandlers(arg0) {
       }
       if (!ref3.current) {
         if (isNearBottom) {
-          if (tmp29.hasMoreAfter) {
+          if (closure_1_9.hasMoreAfter) {
             if (tmp6) {
               closure_1_4.current = true;
               logger();
@@ -157,9 +157,9 @@ export default function useScrollHandlers(arg0) {
       ref6.current = dragging;
       ref5.current = decelerating;
       ReactBatchUpdates.batchUpdates(() => {
-        hasMoreAfter = shouldShowJumpToPresent;
+        let hasMoreAfter = shouldShowJumpToPresent;
         if (!shouldShowJumpToPresent) {
-          hasMoreAfter = hasMoreAfter.hasMoreAfter;
+          hasMoreAfter = closure_2_9.hasMoreAfter;
         }
         hasOwnProperty(closure_2_11, closure_2_12, hasMoreAfter);
         React4(closure_2_12, isAtBottom);
@@ -217,11 +217,11 @@ export default function useScrollHandlers(arg0) {
     },
     updateNativeRows(isLoadingAtTop) {
       if (dependencyMap.isBlocking) {
-        obj.add(isLoadingAtTop);
+        dependencyMap.add(isLoadingAtTop);
       } else if (!isLoadingAtTop.isLoadingAtTop) {
         closure_1_8(isLoadingAtTop);
       } else {
-        obj.add(isLoadingAtTop);
+        dependencyMap.add(isLoadingAtTop);
       }
     },
     handleScrollCallbacks,

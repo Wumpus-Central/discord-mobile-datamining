@@ -32,7 +32,7 @@ Object.defineProperty(prototype, "version", {
   },
   set: undefined
 });
-prototype["indexes"] = function indexes(flag) {
+prototype["indexes"] = function indexes() {
   if (flag === undefined) {
     flag = false;
   }
@@ -64,7 +64,7 @@ prototype["keys"] = function keys() {
   const valueMap = this.valueMap;
   return valueMap.keys();
 };
-prototype["values"] = function values(arg0, flag) {
+prototype["values"] = function values(arg0) {
   if (flag === undefined) {
     flag = false;
   }
@@ -153,15 +153,15 @@ prototype["set"] = function set(arg0, value) {
         const item = self.indexBy(value).forEach((item) => {
           const index = self.getIndex(item);
           if (null != value) {
-            const tmp5 = sortedIndexByDefault(index, tmp, tmp2);
+            const tmp5 = sortedIndexByDefault(index, value, tmp2);
             let tmp6 = tmp5;
-            if (index[tmp5] !== tmp) {
+            if (index[tmp5] !== value) {
               let tmp7 = tmp5;
               tmp6 = tmp5;
               if (tmp5 < index.length - 1) {
                 const sum = tmp7 + 1;
                 tmp6 = sum;
-                while (index[sum] !== tmp) {
+                while (index[sum] !== value) {
                   tmp7 = sum;
                   tmp6 = sum;
                   if (sum >= index.length - 1) {
@@ -179,7 +179,7 @@ prototype["set"] = function set(arg0, value) {
         const item1 = self.indexBy(value).forEach((item) => {
           const index = self.getIndex(item);
           if (null != closure_1) {
-            index.splice(sortedIndexByDefault(index, tmp, tmp2), 0, tmp);
+            index.splice(sortedIndexByDefault(index, closure_1, tmp2), 0, closure_1);
           }
         });
         const indexByResult1 = self.indexBy(value);

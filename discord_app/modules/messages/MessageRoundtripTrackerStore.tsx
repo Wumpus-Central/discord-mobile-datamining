@@ -103,10 +103,10 @@ prototype["recordMessageSendAttempt"] = function recordMessageSendAttempt(channe
     }
   }, 30000);
 };
-prototype["recordMessageSendApiResponse"] = function recordMessageSendApiResponse(arg0) {
+prototype["recordMessageSendApiResponse"] = function recordMessageSendApiResponse(stickerById) {
   const self = this;
   const pendingMessages = this.pendingMessages;
-  value = pendingMessages.get(arg0);
+  value = pendingMessages.get(stickerById);
   if (null != value) {
     const obj = {};
     const merged = Object.assign(value);
@@ -115,10 +115,10 @@ prototype["recordMessageSendApiResponse"] = function recordMessageSendApiRespons
     if (tmp6) {
       trackRoundtrip(obj);
       const pendingMessages3 = self.pendingMessages;
-      pendingMessages3.delete(arg0);
+      pendingMessages3.delete(stickerById);
     } else {
       const pendingMessages2 = self.pendingMessages;
-      const result = pendingMessages2.set(arg0, obj);
+      const result = pendingMessages2.set(stickerById, obj);
     }
     tmp6 = null != obj.apiResponseTimestamp && null != obj.gatewaySeenTimestamp;
   }

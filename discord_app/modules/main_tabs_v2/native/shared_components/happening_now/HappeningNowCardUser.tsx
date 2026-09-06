@@ -55,10 +55,10 @@ export default noop.memo((index) => {
         let obj = {};
       } else {
         obj = {
-          status: PresenceStore.getStatus(tmp.id, guildId),
-          activities: PresenceStore.getActivities(tmp.id, guildId),
-          isMobileOnline: PresenceStore.isMobileOnline(tmp.id),
-          isVROnline: PresenceStore.isVROnline(tmp.id),
+          status: PresenceStore.getStatus(stateFromStores.id, guildId),
+          activities: PresenceStore.getActivities(stateFromStores.id, guildId),
+          isMobileOnline: PresenceStore.isMobileOnline(stateFromStores.id),
+          isVROnline: PresenceStore.isVROnline(stateFromStores.id),
         };
       }
       return obj;

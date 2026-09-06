@@ -3,6 +3,8 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import ReanimatedRexport from "../../../reanimated/ReanimatedRexport.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import LinearGradientDefault from "../../../../../_runtime/04987_LinearGradient.js";
+import SKUUtils from "../../../../utils/SKUUtils.tsx";
+import GameProfileRankPillDefault from "GameProfileRankPill.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -114,7 +116,7 @@ export default function GameProfileHeader(game) {
   let joined;
   if (game != null) {
     const genres = game.genres;
-    const mapped = genres.map(tmp3(8715).getGenreText);
+    const mapped = genres.map(SKUUtils.getGenreText);
     joined = mapped.join(", ");
   }
   let l30Rank;
@@ -125,19 +127,19 @@ export default function GameProfileHeader(game) {
   const memo = obj.useMemo(() => {
     let bannerURL;
     if (game != null) {
-      bannerURL = obj.getBannerURL(1024);
+      bannerURL = game.getBannerURL(1024);
     }
     if (null == bannerURL) {
       let screenshotUrls;
-      if (obj != null) {
-        screenshotUrls = obj.screenshotUrls;
+      if (game != null) {
+        screenshotUrls = game.screenshotUrls;
       }
       let tmp3 = null;
       if (null != screenshotUrls) {
         tmp3 = null;
-        if (obj.screenshotUrls.length > 0) {
+        if (game.screenshotUrls.length > 0) {
           const _Math = Math;
-          tmp3 = obj.screenshotUrls[Math.floor(Math, first * obj.screenshotUrls.length)];
+          tmp3 = game.screenshotUrls[Math.floor(Math, first * game.screenshotUrls.length)];
         }
       }
       bannerURL = tmp3;
@@ -196,7 +198,7 @@ export default function GameProfileHeader(game) {
     const obj8 = { uri: memo1 };
     obj7.source = obj8;
     obj7.style = tmp.image;
-    obj6.children = tmp18(timestampProducer, obj7);
+    obj6.children = React5(timestampProducer, obj7);
     let obj9 = obj6;
   } else {
     obj9 = { style: tmp.iconContainer, children: null };
@@ -206,7 +208,7 @@ export default function GameProfileHeader(game) {
       const obj11 = { uri: memo2 };
       obj10.source = obj11;
       obj10.style = tmp.image;
-      tmp18Result = tmp18(timestampProducer, obj10);
+      tmp18Result = React5(timestampProducer, obj10);
     }
     obj9.children = tmp18Result;
   }
@@ -216,7 +218,7 @@ export default function GameProfileHeader(game) {
   tmp18Result = null != l30Rank;
   if (tmp18Result) {
     const obj13 = { rank: l30Rank };
-    tmp18Result = tmp18(tmp14(8716), obj13);
+    tmp18Result = React5(GameProfileRankPillDefault, obj13);
   }
   const items9 = [
     tmp18Result,
@@ -239,7 +241,7 @@ export default function GameProfileHeader(game) {
         style: tmp.textShadow,
         children: joined,
       };
-      tmp18Result1 = tmp18(tmp3(4556).Text, obj15);
+      tmp18Result1 = React5(Text_Text.Text, obj15);
     }
   }
   items9[2] = tmp18Result1;

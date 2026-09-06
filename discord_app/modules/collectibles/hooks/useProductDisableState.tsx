@@ -1,6 +1,7 @@
 // discord_app/modules/collectibles/hooks/useProductDisableState.tsx
 import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
 import FractionalPremiumSKUs from "../../../../discord_common/js/shared/shared-constants/FractionalPremiumSKUs.tsx";
+import util from "../../../intl/index.native.tsx";
 import SubscriptionStore from "../../../stores/billing/SubscriptionStore.tsx";
 
 require = fn;
@@ -23,8 +24,8 @@ export const useProductDisableState = function useProductDisableState(skuId) {
     obj = { isDisabled: stateFromStores, disabledReason: null };
     let stringResult = null;
     if (stateFromStores) {
-      const intl = tmp(1114).intl;
-      stringResult = intl.string(tmp(1114).t.NbveHD);
+      const intl = util.intl;
+      stringResult = intl.string(util.t.NbveHD);
     }
     obj.disabledReason = stringResult;
   } else {

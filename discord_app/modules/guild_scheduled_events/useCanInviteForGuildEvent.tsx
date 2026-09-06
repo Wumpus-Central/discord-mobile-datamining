@@ -8,7 +8,7 @@ import GuildStore from "../../stores/GuildStore.tsx";
 import PermissionStore from "../../stores/PermissionStore.tsx";
 
 require = fn;
-function canEveryoneRoleViewEvent(guildEvent, items1) {
+function canEveryoneRoleViewEvent(guildEvent) {
   let tmp = items1;
   if (items1 === undefined) {
     const items = [ChannelStore];
@@ -32,7 +32,7 @@ function canEveryoneRoleViewEvent(guildEvent, items1) {
     return canEveryoneRoleResult;
   }
 }
-function isGuildEventInvitable(guildEvent, items) {
+function isGuildEventInvitable(guildEvent) {
   let tmp = items;
   if (items === undefined) {
     items = [GuildChannelStore, ChannelStore, GuildStore, StageInstanceStore];

@@ -39,12 +39,12 @@ export default noop.memo(function LeaveActivityButton(arg0) {
           let obj = EmbeddedActivitiesNativeManagerDefault;
           let _location;
           if (closure_1_0 != null) {
-            _location = tmp.location;
+            _location = closure_1_0.location;
           }
           obj = { location: _location, applicationId: null };
           let applicationId;
           if (closure_1_0 != null) {
-            applicationId = tmp.applicationId;
+            applicationId = closure_1_0.applicationId;
           }
           obj.applicationId = applicationId;
           obj.leaveActivity(obj);

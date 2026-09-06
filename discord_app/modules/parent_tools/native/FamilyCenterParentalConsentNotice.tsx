@@ -35,7 +35,7 @@ export default function FamilyCenterParentalConsentNotice() {
   if (isParentalConsentBannerActive) {
     if (null != daysRemaining) {
       if (daysRemaining >= 0) {
-        function learnMoreHook(children, arg1) {
+        function learnMoreHook(children, key) {
           return jsx(
             Text_Text.Text,
             {
@@ -46,7 +46,7 @@ export default function FamilyCenterParentalConsentNotice() {
               onPress,
               children,
             },
-            arg1,
+            key,
           );
         }
         obj = { style: tmp.container, text: null };

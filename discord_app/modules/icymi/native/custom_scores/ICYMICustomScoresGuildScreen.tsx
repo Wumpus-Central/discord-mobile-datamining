@@ -21,7 +21,7 @@ function ICYMICustomScoreChannelRow(channelId) {
   channelId = channelId.channelId;
   let stateFromStores1;
   ({ start, end, disabled } = channelId);
-  let tmp = closure_14();
+  const tmp = closure_14();
   let obj = channelId(stateFromStores1[11]);
   const items = [ChannelStore];
   const stateFromStores = obj.useStateFromStores(items, () => ChannelStore.getChannel(channelId));
@@ -32,12 +32,15 @@ function ICYMICustomScoreChannelRow(channelId) {
     if (null == stateFromStores) {
       return ICYMIUtils.ICYMICustomScore.DEFAULT;
     } else {
-      const customChannelScore = ICYMIStore.getCustomChannelScore(tmp.guild_id, tmp.id);
+      const customChannelScore = ICYMIStore.getCustomChannelScore(stateFromStores.guild_id, stateFromStores.id);
       if (customChannelScore !== ICYMIUtils.ICYMICustomScore.UNKNOWN) {
         return customChannelScore;
       } else {
         const ICYMICustomScore = ICYMIUtils.ICYMICustomScore;
-        const isChannelMutedResult = UserGuildSettingsStore.isChannelMuted(tmp.guild_id, tmp.id);
+        const isChannelMutedResult = UserGuildSettingsStore.isChannelMuted(
+          stateFromStores.guild_id,
+          stateFromStores.id,
+        );
       }
     }
   });
@@ -49,18 +52,15 @@ function ICYMICustomScoreChannelRow(channelId) {
     if (closure_3) {
       const intl4 = util.intl;
       let stringResult = intl4.string(util.t.lhPHmz);
+    } else if (stateFromStores1 === ICYMIUtils.ICYMICustomScore.MORE) {
+      const intl3 = util.intl;
+      stringResult = intl3.string(util.t.Rxe3jF);
+    } else if (stateFromStores1 === ICYMIUtils.ICYMICustomScore.LESS) {
+      const intl2 = util.intl;
+      stringResult = intl2.string(util.t.rdt65I);
     } else {
-      if (stateFromStores1 === ICYMIUtils.ICYMICustomScore.MORE) {
-        const intl3 = util.intl;
-        stringResult = intl3.string(util.t.Rxe3jF);
-      } else if (tmp === ICYMIUtils.ICYMICustomScore.LESS) {
-        const intl2 = util.intl;
-        stringResult = intl2.string(util.t.rdt65I);
-      } else {
-        const intl = util.intl;
-        stringResult = intl.string(util.t.SnrG00);
-      }
-      tmp = stateFromStores1;
+      const intl = util.intl;
+      stringResult = intl.string(util.t.SnrG00);
     }
     return stringResult;
   }, items2);
@@ -87,9 +87,9 @@ function ICYMICustomScoreChannelRow(channelId) {
     if (tmp8) {
       obj1 = { style: tmp.channelNameContainer, children: null };
       const obj2 = { source: tmp5(tmp3[21]), size: tmp2(tmp3[20]).Icon.Sizes.SMALL, style: tmp.channelMutedIcon };
-      const items3 = [tmp15(tmp2(tmp3[20]).Icon, obj2)];
+      const items3 = [closure_11(tmp2(tmp3[20]).Icon, obj2)];
       const obj3 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", lineClamp: 1, children: tmp6 };
-      items3[1] = tmp15(tmp2(tmp3[22]).Text, obj3);
+      items3[1] = closure_11(tmp2(tmp3[22]).Text, obj3);
       obj1.children = items3;
       tmp13 = closure_12(View, obj1);
     }
@@ -204,11 +204,9 @@ export default function ICYMICustomScoresGuildScreen(navigation) {
       let tmp6 = _slicedToArray(tmp4, 2);
       let first = tmp6[0];
       if (0 !== tmp6[1]) {
-        let tmp27 = require;
         if (first !== ChannelListState.SECTION_INDEX_GUILD_ACTIONS) {
-          let obj3 = guildChannels;
           if (first !== guildChannels.voiceChannelsSectionNumber) {
-            let categoryFromSection = obj3.getCategoryFromSection(first);
+            let categoryFromSection = guildChannels.getCategoryFromSection(first);
             let found;
             if (categoryFromSection != null) {
               let channelRecords = categoryFromSection.getChannelRecords();
@@ -217,20 +215,20 @@ export default function ICYMICustomScoresGuildScreen(navigation) {
             let arr3 = found;
             if (null != found) {
               if (0 !== arr3.length) {
-                let intl3 = tmp27(1114).intl;
-                let stringResult = intl3.string(tmp27(1114).t.GSfOoo);
-                if (first === tmp27(7528).SECTION_INDEX_FAVORITES) {
-                  let intl2 = tmp27(1114).intl;
-                  stringResult = intl2.string(tmp27(1114).t.mlPMCy);
+                let intl3 = util.intl;
+                let stringResult = intl3.string(util.t.GSfOoo);
+                if (first === ChannelListState.SECTION_INDEX_FAVORITES) {
+                  let intl2 = util.intl;
+                  stringResult = intl2.string(util.t.mlPMCy);
                   let obj = { kind: "categoryHeader", index: null, title: null };
                   obj.index = first;
                   obj.title = stringResult;
                   let arr = items.push(obj);
                   let entries1 = arr3.entries();
                   let tmp23 = entries1[Symbol.iterator]();
-                } else if (first !== tmp27(7528).SECTION_INDEX_RECENTS) {
-                  if (first >= tmp27(7528).SECTION_INDEX_FIRST_NAMED_CATEGORY) {
-                    let namedCategoryFromSection = obj3.getNamedCategoryFromSection(first);
+                } else if (first !== ChannelListState.SECTION_INDEX_RECENTS) {
+                  if (first >= ChannelListState.SECTION_INDEX_FIRST_NAMED_CATEGORY) {
+                    let namedCategoryFromSection = guildChannels.getNamedCategoryFromSection(first);
                     let str;
                     if (namedCategoryFromSection != null) {
                       str = namedCategoryFromSection.record.name;
@@ -241,8 +239,8 @@ export default function ICYMICustomScoresGuildScreen(navigation) {
                     stringResult = str;
                   }
                 }
-                let intl = tmp27(1114).intl;
-                stringResult = intl.string(tmp27(1114).t.gKcrqM);
+                let intl = util.intl;
+                stringResult = intl.string(util.t.gKcrqM);
               }
             }
           }

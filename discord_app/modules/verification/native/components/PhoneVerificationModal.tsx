@@ -100,7 +100,7 @@ export default function PhoneVerificationModal(onClose) {
         c2 = 0;
         c1 = 0;
         c4 = 0;
-        return (async (arg0, value) => {
+        return (async (arg0) => {
           if (c1 === 2) {
             c1 = 3;
             throw new TypeError("Generator functions may not be called on executing generators");

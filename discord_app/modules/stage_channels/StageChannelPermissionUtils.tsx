@@ -27,7 +27,7 @@ export const createModeratorOverwrite = function createModeratorOverwrite(id, ME
     deny = tmp.deny;
   }
   if (deny == null) {
-    deny = tmp2(4204).NONE;
+    deny = PermissionUtilsAll.NONE;
   }
   obj.deny = BigFlagUtilsAll.remove(deny, StageChannelPermissions.MODERATE_STAGE_CHANNEL_PERMISSIONS);
   let allow;
@@ -35,7 +35,7 @@ export const createModeratorOverwrite = function createModeratorOverwrite(id, ME
     allow = tmp.allow;
   }
   if (allow == null) {
-    allow = tmp2(4204).NONE;
+    allow = PermissionUtilsAll.NONE;
   }
   obj.allow = BigFlagUtilsAll.combine(StageChannelPermissions.MODERATE_STAGE_CHANNEL_PERMISSIONS, allow);
   return obj;
@@ -47,7 +47,7 @@ export const createOrUpdateModeratorOverwrite = function createOrUpdateModerator
     deny = deny.deny;
   }
   if (deny == null) {
-    deny = tmp(4204).NONE;
+    deny = PermissionUtilsAll.NONE;
   }
   obj.deny = BigFlagUtilsAll.remove(deny, StageChannelPermissions.MODERATE_STAGE_CHANNEL_PERMISSIONS);
   let allow;
@@ -55,7 +55,7 @@ export const createOrUpdateModeratorOverwrite = function createOrUpdateModerator
     allow = deny.allow;
   }
   if (allow == null) {
-    allow = tmp(4204).NONE;
+    allow = PermissionUtilsAll.NONE;
   }
   obj.allow = BigFlagUtilsAll.combine(StageChannelPermissions.MODERATE_STAGE_CHANNEL_PERMISSIONS, allow);
   return obj;
@@ -84,12 +84,12 @@ export const removeModeratorOverwrite = function removeModeratorOverwrite(id, ME
   obj.allow = BigFlagUtilsAll.remove(allow, StageChannelPermissions.MODERATE_STAGE_CHANNEL_PERMISSIONS);
   return obj;
 };
-export const isEmptyOverwrite = function isEmptyOverwrite(arg0) {
-  ({ allow, deny } = arg0);
+export const isEmptyOverwrite = function isEmptyOverwrite(id) {
+  ({ allow, deny } = id);
   let equalsResult = BigFlagUtilsAll.equals(allow, PermissionUtilsAll.NONE);
   if (equalsResult) {
-    equalsResult = tmp(1086).equals(deny, tmp(4204).NONE);
-    const tmpResult = tmp(1086);
+    equalsResult = BigFlagUtilsAll.equals(deny, PermissionUtilsAll.NONE);
+    const tmpResult = BigFlagUtilsAll;
   }
   return equalsResult;
 };
@@ -135,11 +135,11 @@ export const useCanUpdateStageChannelModerators = function useCanUpdateStageChan
       let canResult = PermissionStore.can(constants2.ADMINISTRATOR, GuildStore.getGuild(guildId));
       let tmp5 = !canResult;
       if (!canResult) {
-        tmp5 = !obj2.can(constants2.MANAGE_ROLES, channel, undefined, undefined, true);
+        tmp5 = !PermissionStore.can(constants2.MANAGE_ROLES, channel, undefined, undefined, true);
       }
       canResult = !tmp5;
       if (tmp5) {
-        canResult = obj2.can(StageChannelPermissions.UPDATE_STAGE_CHANNEL_MODERATOR_PERMISSIONS, channel);
+        canResult = PermissionStore.can(StageChannelPermissions.UPDATE_STAGE_CHANNEL_MODERATOR_PERMISSIONS, channel);
       }
       return canResult;
     },

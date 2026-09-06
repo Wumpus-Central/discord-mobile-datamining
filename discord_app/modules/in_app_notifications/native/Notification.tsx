@@ -179,10 +179,9 @@ export const NotificationPressable = function NotificationPressable(notification
       if (closure_14) {
         value = sharedValue1;
         if (typeof sharedValue1 !== "number") {
-          value = obj3.get();
+          value = sharedValue1.get();
         }
         rounded = Math.floor(value);
-        obj3 = sharedValue1;
       }
       obj.percent = rounded;
       obj.trackWithMetadata(IAR_MODAL_OPEN, obj);

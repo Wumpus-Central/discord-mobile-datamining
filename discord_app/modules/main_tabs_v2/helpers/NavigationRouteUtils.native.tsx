@@ -1,11 +1,12 @@
 // discord_app/modules/main_tabs_v2/helpers/NavigationRouteUtils.native.tsx
+import v1 from "../../../../_runtime/01256_v1.js";
 import Link from "../../../../_runtime/01484_Link.js";
 import RootNavigationRef from "../RootNavigationRef.native.tsx";
 import NativeTTIManagerModuleDefault from "../../../../discord_common/js/packages/rtn-codegen/js/NativeTTIManagerModule.tsx";
+import ChatInputUtils from "../../../utils/native/ChatInputUtils.tsx";
 import Types from "../Types.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 
-const ChatInputUtils = tmp(4425);
 require = fn;
 function coerceMainRoute(routes) {
   if (null != routes) {
@@ -212,7 +213,7 @@ export const navigateToChannel = function navigateToChannel(openChannel) {
             } else {
               let combined = channelId;
               if (channelId == null) {
-                let tmpResult = tmp(1256);
+                let tmpResult = v1;
                 const _HermesInternal2 = HermesInternal;
                 combined = "channel-" + tmpResult.v4();
               }
@@ -230,7 +231,7 @@ export const navigateToChannel = function navigateToChannel(openChannel) {
         if (null != tmp5) {
           if (tmp5.params.channelId === channelId) {
             const obj3 = {};
-            const CommonActions = tmp(1484).CommonActions;
+            const CommonActions = Link.CommonActions;
             const obj4 = { channelId, guildId, messageId };
             const merged1 = Object.assign(CommonActions.setParams(obj4));
             obj3.source = tmp5.key;
@@ -239,7 +240,7 @@ export const navigateToChannel = function navigateToChannel(openChannel) {
           return true;
         }
         const obj5 = { channelId, guildId, messageId, screenKey: null };
-        tmpResult = tmp(1256);
+        tmpResult = v1;
         const _HermesInternal = HermesInternal;
         obj5.screenKey = "channel-" + tmpResult.v4();
         rootNavigationRef.navigate("channel", obj5);
@@ -475,9 +476,8 @@ export const popAllModals = function popAllModals() {
       const routes = rootState.routes;
       const items = [];
       for (const item10016 of routes) {
-        let tmp4 = item10016;
         if (!set.has(item10016.name)) {
-          let arr = items.push(tmp4);
+          let arr = items.push(item10016);
         }
         continue;
       }
@@ -790,6 +790,7 @@ export const useOpenModalKey = function useOpenModalKey() {
           }
         }
         closure_1_0(tmp2);
+        const obj = closure_0(4418);
       });
     }
   }, []);
@@ -845,6 +846,7 @@ export const useCurrentNavigationRouteName = function useCurrentNavigationRouteN
           }
         }
         closure_1_0(tmp2);
+        const obj = closure_0(4418);
       });
     }
   }, []);

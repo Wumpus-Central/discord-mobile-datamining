@@ -8,7 +8,7 @@ require = fn;
 function defaultAreStatesEqual(arg0, arg1) {
   return arg0 === arg1;
 }
-function useStateFromStores(items, getCurrentRestrictedHoursState, items1, isVersionEqual) {
+function useStateFromStores(items, getCurrentRestrictedHoursState, items1) {
   _require = items;
   const getStateFromStores = getCurrentRestrictedHoursState;
   dependencyMap = items1;
@@ -55,9 +55,10 @@ function useStateFromStores(items, getCurrentRestrictedHoursState, items1, isVer
     batchedStoreListener = new items(prevDeps[3]).BatchedStoreListener(batchedStoreListener, () => {
       stateFromStores = stateFromStores.getStateFromStores();
       if (!closure_1_3(stateFromStores.state, stateFromStores)) {
-        stateFromStores.state = stateFromStores;
+        tmp.state = stateFromStores;
         closure_1_6({});
       }
+      tmp = stateFromStores;
     });
     batchedStoreListener.attach("useStateFromStores");
     return () => batchedStoreListener.detach();

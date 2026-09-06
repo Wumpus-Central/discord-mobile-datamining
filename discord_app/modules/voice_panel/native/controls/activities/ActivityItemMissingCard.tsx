@@ -17,7 +17,7 @@ function ActivityItemEmptyCard(activity) {
   const analyticsLocations = application(channelId[7])().analyticsLocations;
   const items = [activity.launchId, analyticsLocations, application, channelId];
   const callback = noop.useCallback(
-    analyticsLocations(function* (arg0, value) {
+    analyticsLocations(function* () {
       if (v3 === 2) {
         v3 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");

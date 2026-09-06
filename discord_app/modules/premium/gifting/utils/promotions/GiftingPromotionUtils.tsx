@@ -1,6 +1,9 @@
 // discord_app/modules/premium/gifting/utils/promotions/GiftingPromotionUtils.tsx
+import dismissible_content from "../../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
+import DismissibleContentUnsafeUtils from "../../../../dismissible_content/DismissibleContentUnsafeUtils.tsx";
 import PremiumGiftingGogoPromotionExperiment2 from "../../experiments/PremiumGiftingGogoPromotionExperiment.tsx";
 import GiftPromotionReminderExperiment2 from "../../experiments/GiftPromotionReminderExperiment.tsx";
+import MarketingComponentType from "../../../../../../discord_common/js/shared/shared-constants/MarketingComponentType.tsx";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import PromotionsStore from "../../../promotions/PromotionsStore.tsx";
@@ -30,14 +33,13 @@ export const useFetchClaimableGiftingPromotionRewardSkuIds = function useFetchCl
       if (!ref.current) {
         if (stateFromStoresArray.length > 0) {
           if (null == fetchPurchasesError) {
-            let found = arr.filter((item) => null == purchases.get(item));
+            let found = stateFromStoresArray.filter((item) => null == purchases.get(item));
           } else {
             found = [];
           }
           dependencyMap(found);
           tmp.current = true;
         }
-        arr = stateFromStoresArray;
       }
     }
   }, items1);
@@ -206,25 +208,28 @@ export const combinePromotionStyles = function combinePromotionStyles(background
 export const shouldShowGiftPromotionReminderNotice = function shouldShowGiftPromotionReminderNotice() {
   const GiftPromotionReminderExperiment = GiftPromotionReminderExperiment2.GiftPromotionReminderExperiment;
   if (GiftPromotionReminderExperiment.getConfig({ location: "shouldShowGiftPromotionReminderNotice" }).enabled) {
-    if (null == PromotionsStore.getMarketingComponentByType(tmp(10742).MarketingComponentType.GIFT_REMINDER_NAGBAR)) {
+    if (
+      null ==
+      PromotionsStore.getMarketingComponentByType(MarketingComponentType.MarketingComponentType.GIFT_REMINDER_NAGBAR)
+    ) {
       return false;
     } else {
-      const giftPromotion = obj.getGiftPromotion();
+      const giftPromotion = PromotionsStore.getGiftPromotion();
       let id;
       if (giftPromotion != null) {
         id = giftPromotion.id;
       }
       let tmp5 = null != id;
       if (tmp5) {
-        let tmpResult = tmp(4380);
+        let tmpResult = DismissibleContentUnsafeUtils;
         let isDismissed = tmpResult.UNSAFE_isSnowflakeBoundDismissibleContentDismissed(
-          tmp(1943).DismissibleContent.GIFTING_PROMOTION_DESKTOP_FIRST_TIME_COACHMARK,
+          dismissible_content.DismissibleContent.GIFTING_PROMOTION_DESKTOP_FIRST_TIME_COACHMARK,
           id,
         ).isDismissed;
         if (isDismissed) {
-          tmpResult = tmp(4380);
+          tmpResult = DismissibleContentUnsafeUtils;
           isDismissed = !tmpResult.UNSAFE_isSnowflakeBoundDismissibleContentDismissed(
-            tmp(1943).DismissibleContent.GIFTING_PROMOTION_REMINDER,
+            dismissible_content.DismissibleContent.GIFTING_PROMOTION_REMINDER,
             id,
           ).isDismissed;
         }
@@ -232,7 +237,6 @@ export const shouldShowGiftPromotionReminderNotice = function shouldShowGiftProm
       }
       return tmp5;
     }
-    obj = PromotionsStore;
   } else {
     return false;
   }

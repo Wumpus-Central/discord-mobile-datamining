@@ -1,12 +1,14 @@
 // discord_app/modules/premium/roadblocks/native/views/PremiumFeatureUpsell.tsx
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import ConstantsIOS from "../../../../../ConstantsIOS.tsx";
+import native from "../../../../../design/void/native.tsx";
 import AnalyticsUtilsDefault from "../../../../../utils/AnalyticsUtils.tsx";
 import spring from "../../../../../design/animation/reanimated/spring/spring.tsx";
 import springPresets from "../../../../../design/animation/reanimated/spring/springPresets.tsx";
 import LinearGradientDefault from "../../../../../../_runtime/04987_LinearGradient.js";
 import openPremiumUpsellActionSheetDefault from "../utils/openPremiumUpsellActionSheet.tsx";
 import EntitlementFeatureNames from "../../../../../../discord_common/js/shared/shared-constants/EntitlementFeatureNames.tsx";
+import NitroWheelIcon from "../../../../../design/components/Icon/native/redesign/generated/NitroWheelIcon.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -76,7 +78,7 @@ function PremiumFeatureUpsellPill(featureName) {
     const obj6 = { style: tmp4.text, variant: "text-sm/medium", children: formatResult };
     items1[1] = closure_12(tmp(4556).Text, obj6);
     obj5.children = items1;
-    const items2 = [tmp12(tmp13, obj5)];
+    const items2 = [closure_13(closure_5, obj5)];
     const obj7 = {
       disabled: loading,
       shrink: true,
@@ -108,7 +110,7 @@ function PremiumFeatureUpsellPill(featureName) {
         }
         items[1] = nitroWheelDisabled2;
         obj.style = items;
-        let tmpResult = tmp(tmp2(8662).NitroWheelIcon, obj);
+        let tmpResult = closure_2_12(NitroWheelIcon.NitroWheelIcon, obj);
       } else {
         const items1 = [closure_2.nitroWheelButton];
         let nitroWheelDisabled = loading;
@@ -118,7 +120,7 @@ function PremiumFeatureUpsellPill(featureName) {
         obj = { style: null };
         items1[1] = nitroWheelDisabled;
         obj.style = items1;
-        tmpResult = tmp(tmp2(1178).NitroWheel, obj);
+        tmpResult = closure_2_12(native.NitroWheel, obj);
       }
       return tmpResult;
     };
@@ -133,15 +135,12 @@ function PremiumFeatureUpsellPill(featureName) {
     };
     items2[1] = closure_12(tmp(1178).ShinyButton, obj7);
     obj4.children = items2;
-    return tmp12(tmp13, obj4);
+    return closure_13(closure_5, obj4);
   } else {
-    const obj8 = {
-      source: useTier0UpsellContent(useTier0UpsellContent ? 9968 : 9963),
-      style: tmp4.nitroWheel,
-      disableColor: true,
-    };
+    const obj8 = { source: tmp10(useTier0UpsellContent ? 9968 : 9963), style: tmp4.nitroWheel, disableColor: true };
     closure_12(tmp(1178).Icon, obj8);
   }
+  tmp10 = useTier0UpsellContent;
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
@@ -182,7 +181,7 @@ let closure_14 = createStyles.createStyles((arg0) => {
     : unsafe_rawColors.PREMIUM_TIER_2_PURPLE_FOR_GRADIENTS_2;
   obj.shadowOpacity = 0.6;
   obj.containerShadow = obj;
-  const size = { width: 20, height: 20, marginEnd: tmp(576).space.PX_4 };
+  const size = { width: 20, height: 20, marginEnd: nativeDefault.space.PX_4 };
   obj.nitroWheel = size;
   obj.labelContainer = {
     flexDirection: "row",

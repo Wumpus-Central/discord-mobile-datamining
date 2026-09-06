@@ -332,7 +332,7 @@ prototype["renderTrailingButton"] = function renderTrailingButton() {
       }
       obj.accessibilityLabel = clearButtonAccessibilityLabel;
       obj.children = React7(CircleXIcon.CircleXIcon, { size: "sm" });
-      let tmp3Result = tmp3(timestampProducer, obj);
+      let tmp3Result = React7(timestampProducer, obj);
     } else {
       tmp3Result = null;
       if (clearButtonVisibility === tmp9.WITH_CONTENT) {
@@ -449,6 +449,7 @@ prototype["renderTextView"] = function renderTextView() {
     const unsafe_rawColors = nativeDefault.unsafe_rawColors;
     const isThemeDarkResult = obj6.isThemeDark(self.context.theme);
   }
+  const tmp = closure_11(this.context);
 };
 prototype["render"] = function render() {
   const self = this;
@@ -475,8 +476,6 @@ prototype["render"] = function render() {
   const items3 = [self.renderTextView(), self.renderTrailingButton()];
   obj.children = items3;
   items1[1] = closure_1_10(hasOwnProperty, obj);
-  const tmp2 = React7;
-  const tmp3 = React5;
   items1[2] = PlatformUtils.isAndroid() && self.renderBorder();
   items1[3] = self.renderBottomContainer();
   const tmp8 = PlatformUtils.isAndroid() && self.renderBorder();
@@ -488,7 +487,7 @@ prototype["render"] = function render() {
   items1[4] = renderBorderResult;
   obj.children = items1;
   obj.children = closure_1_10(hasOwnProperty, obj);
-  return tmp2(tmp3, obj);
+  return React7(React5, obj);
 };
 InputView.contextType = fn(4271).ThemeContext;
 InputView.defaultProps = {

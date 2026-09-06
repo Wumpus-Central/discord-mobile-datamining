@@ -61,7 +61,7 @@ export default function ChannelDetailsLinkedLobby(channel) {
     const obj4 = { style: null };
     divider = divider.divider;
     obj4.style = divider;
-    Text = tmp4(tmp3, obj4);
+    Text = React5(View, obj4);
     items2[1] = Text;
     obj.children = items2;
     timestampProducer(View, obj);

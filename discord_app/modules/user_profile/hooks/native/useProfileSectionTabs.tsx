@@ -32,9 +32,9 @@ export const useProfileSectionTabs = function useProfileSectionTabs(boardTabInde
   [tmp2, tmp3] = _slicedToArray(
     wishlistTabIndex.useState(() => {
       if (UserProfileSections.WISHLIST === _slicedToArray) {
-        return tmp2.WISHLIST;
+        return UserProfileSections.WISHLIST;
       } else {
-        return tmp2.WIDGETS === tmp ? tmp2.WIDGETS : tmp2.MAIN;
+        return UserProfileSections.WIDGETS === tmp ? UserProfileSections.WIDGETS : UserProfileSections.MAIN;
       }
     }),
     2,

@@ -16,7 +16,8 @@ let closure_6 = async function _trackVoiceFeedback() {
   const audioSubsystem = mediaEngine.getAudioSubsystem();
   const mediaEngine1 = closure_133_5.getMediaEngine();
   const audioLayer = mediaEngine1.getAudioLayer();
-  closure_132_18 = await closure_133_0(closure_133_1[3]).getKrispModel();
+  await closure_133_0(closure_133_1[3]).getKrispModel();
+  closure_132_18 = value;
   closure_2 = closure_132_7;
   if (closure_132_7 == null) {
     closure_2 = {};

@@ -85,7 +85,7 @@ export default function StartupProfiler(children) {
         obj.mark("\u{1F3A8}", "" + obj[profile] + profile + " " + arg1, arg2);
       }}
     >
-      {arg0.children}
+      {children.children}
     </noop.Profiler>
   );
 }

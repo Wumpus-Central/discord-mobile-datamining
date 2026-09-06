@@ -10,8 +10,8 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/channel/getChannelIcon.tsx");
 
 export const getChannelIconURL = function getChannelIconURL(type) {
-  let num = arg1;
-  if (arg1 === undefined) {
+  let num = size2;
+  if (size2 === undefined) {
     num = 32;
   }
   type = type.type;

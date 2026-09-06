@@ -1,5 +1,7 @@
 // discord_app/modules/messages/native/emoji/EmojiGrid.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import AvatarUtilsDefault from "../../../../utils/AvatarUtils.tsx";
+import EmojiUtilsDefault from "../../../../utils/EmojiUtils.tsx";
 import EmojiDefault from "../../../emojis/native/Emoji.tsx";
 import LayoutUtils from "../../../guild_role_subscriptions/native/components/LayoutUtils.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -9,10 +11,10 @@ function Emoji(guildEmoji) {
   guildEmoji = guildEmoji.guildEmoji;
   const tmp = closure_5();
   if (null == guildEmoji.id) {
-    let tmp3Result = tmp3(4217);
+    let tmp3Result = EmojiUtilsDefault;
     let uRL = tmp3Result.getURL(guildEmoji.name);
   } else {
-    tmp3Result = tmp3(1396);
+    tmp3Result = AvatarUtilsDefault;
     let obj = { id: null, animated: null, size: 48 };
     ({ id: obj2.id, animated: obj2.animated } = guildEmoji);
     uRL = tmp3Result.getEmojiURL(obj);
@@ -81,8 +83,8 @@ export const EmojiGrid = function EmojiGrid(numberToShow) {
         children: arr.map((guildEmoji) => closure_1_4(closure_1_6, { guildEmoji }, guildEmoji.id)),
       });
       return (
-        <View key={arg1} gap={32}>
-          {arg0.map((guildEmoji) => closure_1_4(closure_1_6, { guildEmoji }, guildEmoji.id))}
+        <View key={index} gap={32}>
+          {arr.map((guildEmoji) => closure_1_4(closure_1_6, { guildEmoji }, guildEmoji.id))}
         </View>
       );
     }),
@@ -97,8 +99,8 @@ export const EmojiGrid = function EmojiGrid(numberToShow) {
         children: arr.map((guildEmoji) => closure_1_4(closure_1_6, { guildEmoji }, guildEmoji.id)),
       });
       return (
-        <View key={arg1} gap={32}>
-          {arg0.map((guildEmoji) => closure_1_4(closure_1_6, { guildEmoji }, guildEmoji.id))}
+        <View key={index} gap={32}>
+          {arr.map((guildEmoji) => closure_1_4(closure_1_6, { guildEmoji }, guildEmoji.id))}
         </View>
       );
     }),
@@ -113,8 +115,8 @@ export const EmojiGrid = function EmojiGrid(numberToShow) {
           children: arr.map((guildEmoji) => closure_1_4(closure_1_6, { guildEmoji }, guildEmoji.id)),
         });
         return (
-          <View key={arg1} gap={32}>
-            {arg0.map((guildEmoji) => closure_1_4(closure_1_6, { guildEmoji }, guildEmoji.id))}
+          <View key={index} gap={32}>
+            {arr.map((guildEmoji) => closure_1_4(closure_1_6, { guildEmoji }, guildEmoji.id))}
           </View>
         );
       })}

@@ -2,10 +2,10 @@
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import ReanimatedRexport from "../../../../reanimated/ReanimatedRexport.tsx";
 import useKeyboardIsOpenDefault from "../../../../keyboard/native/useKeyboardIsOpen.tsx";
+import EntitlementFeatureNames from "../../../../../../discord_common/js/shared/shared-constants/EntitlementFeatureNames.tsx";
+import PremiumFeatureUpsellDefault from "PremiumFeatureUpsell.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
-const EntitlementFeatureNames = tmp4(7853);
-const PremiumFeatureUpsellDefault = tmp(9964);
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;

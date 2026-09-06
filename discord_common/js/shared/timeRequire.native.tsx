@@ -9,7 +9,7 @@ export default function timeRequire(arg0, fn) {
   const diff = Date.now() - timestamp;
   if (diff >= 5) {
     if (typeof require.getModules === "function") {
-      const modules = obj2.getModules();
+      const modules = require.getModules();
       const _Object = Object;
       const keys = Object.keys(modules);
       const _HermesInternal = HermesInternal;
@@ -22,7 +22,6 @@ export default function timeRequire(arg0, fn) {
       const _HermesInternal2 = HermesInternal;
       AppStartPerformanceDefault.mark("\u{1F3C3}", "Require " + arg0, diff);
     }
-    obj2 = require;
   }
   return fn();
 }

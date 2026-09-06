@@ -317,9 +317,9 @@ export const isChannelValidForResourceChannel = function isChannelValidForResour
 export const isChannelValidForNewMemberAction = function isChannelValidForNewMemberAction(type) {
   type = type.type;
   if (constants.GUILD_TEXT !== type) {
-    if (tmp.GUILD_ANNOUNCEMENT !== type) {
-      if (tmp.GUILD_FORUM !== type) {
-        if (tmp.GUILD_MEDIA !== type) {
+    if (constants.GUILD_ANNOUNCEMENT !== type) {
+      if (constants.GUILD_FORUM !== type) {
+        if (constants.GUILD_MEDIA !== type) {
           return false;
         }
       }

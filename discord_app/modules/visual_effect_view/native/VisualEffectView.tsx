@@ -1,8 +1,11 @@
 // discord_app/modules/visual_effect_view/native/VisualEffectView.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import useToken from "../../../design/tokens/native/useToken.tsx";
+import VisualEffectViewIOS from "VisualEffectViewIOS.tsx";
 import VisualEffectViewAndroid from "VisualEffectViewAndroid.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
+
+const VisualEffectViewAndroidDefault = VisualEffectViewAndroid;
 
 require = fn;
 const View = fn(17).View;
@@ -53,10 +56,10 @@ export default noop.forwardRef(function VisualEffectView(blurAmount, ref) {
     tmp8 = obj;
   }
   items[2] = tmp8;
-  let tmp3Result = tmp3(4262);
-  const token2 = tmp3Result.useToken(tmp5(576).colors.LEGACY_ANDROID_BLUR_OVERLAY_DEFAULT, blurTheme);
-  tmp3Result = tmp3(4262);
-  let token3 = tmp3Result.useToken(tmp5(576).colors.LEGACY_ANDROID_BLUR_OVERLAY_ULTRA_THIN, blurTheme);
+  let tmp3Result = useToken;
+  const token2 = tmp3Result.useToken(nativeDefault.colors.LEGACY_ANDROID_BLUR_OVERLAY_DEFAULT, blurTheme);
+  tmp3Result = useToken;
+  let token3 = tmp3Result.useToken(nativeDefault.colors.LEGACY_ANDROID_BLUR_OVERLAY_ULTRA_THIN, blurTheme);
   if ("default" === blurStyle) {
     token3 = token2;
   }
@@ -65,7 +68,7 @@ export default noop.forwardRef(function VisualEffectView(blurAmount, ref) {
     let tmp13 = null == android_blurTargetViewNativeId;
     if (!tmp13) {
       if (android_softwareBlurDisabled) {
-        android_softwareBlurDisabled = !tmp3(4970).MODERN_ANDROID_BLURRING_AVAILABLE;
+        android_softwareBlurDisabled = !VisualEffectViewAndroid.MODERN_ANDROID_BLURRING_AVAILABLE;
       }
       tmp13 = true === android_softwareBlurDisabled;
     }
@@ -75,7 +78,7 @@ export default noop.forwardRef(function VisualEffectView(blurAmount, ref) {
     obj = { ref };
     const merged1 = Object.assign(merged);
     obj.style = items;
-    let tmp14Result = tmp14(View, obj);
+    let tmp14Result = <View ref={ref} />;
   } else if (closure_6) {
     obj1 = {
       ref,
@@ -102,8 +105,14 @@ export default noop.forwardRef(function VisualEffectView(blurAmount, ref) {
     obj1.tintColor = tintColorOverride;
     obj1.blurTargetViewNativeId = android_blurTargetViewNativeId;
     const merged2 = Object.assign(merged);
-    tmp14Result = tmp14(tmp5(4970), obj1);
-    const tmp5Result = tmp5(4970);
+    tmp14Result = jsx(VisualEffectViewAndroidDefault, {
+      ref,
+      blurAmount: null,
+      blurTintIOSParityCompensationColor: null,
+      tintColor: null,
+      blurTargetViewNativeId: null,
+    });
+    const tmp5Result = VisualEffectViewAndroidDefault;
   } else {
     const obj2 = { ref, blurEffectName: null, blurAmount: null, tintColor: null };
     if (blurEffectNameOverride != null) {
@@ -119,9 +128,9 @@ export default noop.forwardRef(function VisualEffectView(blurAmount, ref) {
       }
       obj2.tintColor = tmp18;
       const merged3 = Object.assign(merged);
-      tmp14Result = tmp14(tmp15, obj2);
+      tmp14Result = <tmp15 {...obj2} />;
     } else {
-      if (!tmp3(4967).MODERN_IOS_BLURS_EFFECTS_AVAILABLE) {
+      if (!VisualEffectViewIOS.MODERN_IOS_BLURS_EFFECTS_AVAILABLE) {
         let str2 = "UIBlurEffectStyleDark";
         if ("light" === blurTheme) {
           str2 = "UIBlurEffectStyleLight";

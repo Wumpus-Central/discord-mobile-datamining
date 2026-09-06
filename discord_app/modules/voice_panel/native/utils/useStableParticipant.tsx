@@ -24,23 +24,23 @@ const ParticipantTypes = fn(4581).ParticipantTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/utils/useStableParticipant.tsx");
 
-export default function useStableParticipant(arg0, arg1, arg2) {
-  _require = arg0;
+export default function useStableParticipant(id, arg1, arg2) {
+  _require = id;
   closure_1 = arg1;
   dependencyMap = arg2;
   const items = [ChannelRTCStore, UserStore, AuthenticationStore, MediaEngineStore];
-  const items1 = [arg0, arg1, arg2];
+  const items1 = [id, arg1, arg2];
   return require("initialize").useStateFromStores(
     items,
     () => {
-      if (null != closure_0) {
-        const participant = ChannelRTCStore.getParticipant(closure_1, tmp);
+      if (null != id) {
+        const participant = ChannelRTCStore.getParticipant(closure_1, id);
         if (null == participant) {
-          const user = UserStore.getUser(tmp);
+          const user = UserStore.getUser(id);
           if (null != user) {
             let obj = {
               type: ParticipantTypes.USER,
-              id: tmp,
+              id,
               user,
               selfVideo: false,
               canRenderVideo: false,
@@ -51,8 +51,8 @@ export default function useStableParticipant(arg0, arg1, arg2) {
               hasVideo: 0,
               isSelf: 1,
             };
-            const id = AuthenticationStore.getId();
-            obj.userNick = NicknameUtils.getName(closure_2, tmp3, user);
+            id = AuthenticationStore.getId();
+            obj.userNick = NicknameUtils.getName(closure_2, closure_1, user);
             obj.userAvatarDecoration = useAvatarDecoration.getAvatarDecoration(user, closure_2);
             obj.isSelf = user.id === id;
             return obj;
@@ -61,15 +61,15 @@ export default function useStableParticipant(arg0, arg1, arg2) {
           const tmp15 = participantHasVideoDefault(participant);
           const type = participant.type;
           if (ParticipantTypes.ACTIVITY === type) {
-            obj = { type: participant.type, id: tmp, applicationId: participant.applicationId };
+            obj = { type: participant.type, id, applicationId: participant.applicationId };
             return obj;
           } else {
-            if (tmp16.STREAM !== type) {
-              if (tmp16.HIDDEN_STREAM !== type) {
-                if (tmp16.USER === type) {
+            if (ParticipantTypes.STREAM !== type) {
+              if (ParticipantTypes.HIDDEN_STREAM !== type) {
+                if (ParticipantTypes.USER === type) {
                   obj = {
                     type: participant.type,
-                    id: tmp,
+                    id,
                     user: null,
                     selfVideo: null,
                     userNick: null,
@@ -106,7 +106,7 @@ export default function useStableParticipant(arg0, arg1, arg2) {
             }
             const obj1 = {
               type: participant.type,
-              id: tmp,
+              id,
               user: null,
               userNick: null,
               streamId: null,
@@ -124,7 +124,6 @@ export default function useStableParticipant(arg0, arg1, arg2) {
             return obj1;
           }
         }
-        tmp3 = closure_1;
       }
     },
     items1,
@@ -171,7 +170,7 @@ export const isStableParticipantWithUser = function isStableParticipantWithUser(
     if (participant != null) {
       type1 = participant.type;
     }
-    tmp3 = type1 === tmp2.HIDDEN_STREAM;
+    tmp3 = type1 === ParticipantTypes.HIDDEN_STREAM;
   }
   let BooleanResult = Boolean(tmp3);
   if (!BooleanResult) {
@@ -179,7 +178,7 @@ export const isStableParticipantWithUser = function isStableParticipantWithUser(
     if (participant != null) {
       type2 = participant.type;
     }
-    BooleanResult = Boolean(type2 === tmp2.USER);
+    BooleanResult = Boolean(type2 === ParticipantTypes.USER);
   }
   return BooleanResult;
 };
@@ -197,13 +196,13 @@ export const stableParticipantHasVideo = function stableParticipantHasVideo(arg0
     if (streamId != null) {
       type1 = streamId.type;
     }
-    let tmp5 = type1 === tmp2.STREAM;
+    let tmp5 = type1 === ParticipantTypes.STREAM;
     if (!tmp5) {
       let type2;
       if (streamId != null) {
         type2 = streamId.type;
       }
-      tmp5 = type2 === tmp2.HIDDEN_STREAM;
+      tmp5 = type2 === ParticipantTypes.HIDDEN_STREAM;
     }
     if (Boolean(tmp5)) {
       streamId = streamId.streamId;

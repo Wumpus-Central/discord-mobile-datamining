@@ -1,7 +1,9 @@
 // discord_app/modules/premium/premium_marketing/native/PremiumMarketingButtonActions.tsx
+import ProductIds from "../../native/ProductIds.android.tsx";
 import openPremiumPlanSelectionActionSheetDefault from "../../native/openPremiumPlanSelectionActionSheet.tsx";
 import cta_button from "../../../../../discord_common/js/packages/protos/discord_protos/premium_marketing/v1/cta_button.tsx";
 import navigateToSocialLayerStorefrontDefault from "../../../slayer_storefront/navigateToSocialLayerStorefront.tsx";
+import showMarketingMomentRewardScreen from "showMarketingMomentRewardScreen.tsx";
 import PromotionsStore from "../../promotions/PromotionsStore.tsx";
 
 require = fn;
@@ -32,7 +34,7 @@ export const getButtonActionHandler = function getButtonActionHandler(arg0) {
         navigateToSocialLayerStorefrontDefault(obj);
       }
     };
-  } else if (tmp(10672).ButtonAction.OPEN_TIER_1_PAYMENT_MODAL === buttonAction) {
+  } else if (cta_button.ButtonAction.OPEN_TIER_1_PAYMENT_MODAL === buttonAction) {
     return () => {
       let obj = {
         analyticsLocation: null,
@@ -46,9 +48,9 @@ export const getButtonActionHandler = function getButtonActionHandler(arg0) {
       return openPremiumPlanSelectionActionSheetDefault(obj);
     };
   } else {
-    if (tmp(10672).ButtonAction.OPEN_TIER_2_PAYMENT_MODAL !== buttonAction) {
-      if (tmp(10672).ButtonAction.OPEN_TIER_2_PAYMENT_MODAL_CUSTOM_CONFIRMATION_FOOTER !== buttonAction) {
-        if (tmp(10672).ButtonAction.OPEN_PLAN_SELECTION_MODAL === buttonAction) {
+    if (cta_button.ButtonAction.OPEN_TIER_2_PAYMENT_MODAL !== buttonAction) {
+      if (cta_button.ButtonAction.OPEN_TIER_2_PAYMENT_MODAL_CUSTOM_CONFIRMATION_FOOTER !== buttonAction) {
+        if (cta_button.ButtonAction.OPEN_PLAN_SELECTION_MODAL === buttonAction) {
           return () => {
             let obj = { analyticsLocation: null, analyticsLocations, onPaymentSuccess, onPaymentDismiss };
             obj = { page, section: constants.FOOTER, object: constants2.BUTTON_CTA, objectType: React5.BUY };
@@ -56,7 +58,7 @@ export const getButtonActionHandler = function getButtonActionHandler(arg0) {
             return openPremiumPlanSelectionActionSheetDefault(obj);
           };
         } else {
-          const OPEN_MARKETING_PAGE = tmp(10672).ButtonAction.OPEN_MARKETING_PAGE;
+          const OPEN_MARKETING_PAGE = cta_button.ButtonAction.OPEN_MARKETING_PAGE;
           return () => {
             require("openUserSettings");
             const obj = { screen: constants3.PREMIUM };
@@ -85,9 +87,12 @@ export const getButtonActionHandler = function getButtonActionHandler(arg0) {
             isSuccess = length.length > 0;
           }
           if (isSuccess) {
-            const result = tmp3(13401).showMarketingMomentRewardScreen(length[0]);
-            const tmp3Result = tmp3(13401);
+            const result = showMarketingMomentRewardScreen.showMarketingMomentRewardScreen(length[0]);
+            const tmp3Result = showMarketingMomentRewardScreen;
           }
+          tmp5 =
+            productId === ProductIds.ProductIds.PREMIUM_TIER_2_MONTHLY ||
+            productId === ProductIds.ProductIds.PREMIUM_TIER_2_YEARLY;
         },
       };
       obj = { page, section: constants.FOOTER, object: constants2.BUTTON_CTA, objectType: TIER_2.TIER_2 };

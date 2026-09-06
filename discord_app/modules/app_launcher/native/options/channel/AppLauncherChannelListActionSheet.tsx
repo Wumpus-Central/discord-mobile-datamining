@@ -2,6 +2,7 @@
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import useChannelNameDefault from "../../../../channel/useChannelName.tsx";
+import utils_ChannelUtils from "../../../../../utils/native/ChannelUtils.tsx";
 import TextIcon3 from "../../../../../design/components/Icon/native/redesign/generated/TextIcon.tsx";
 import AutocompleteUtilsDefault from "../../../../../utils/AutocompleteUtils.tsx";
 import TableRow from "../../../../../design/components/TableRow/native/TableRow.native.tsx";
@@ -106,7 +107,7 @@ export default function AppLauncherChannelListActionSheet(channel) {
   };
   const items1 = [ref(require("AppLauncherList").AppLauncherListSearchBar, obj)];
   if (0 === first1.length) {
-    let tmp9Result = tmp9(tmp7(tmp8[12]).AppLauncherListEmptyState, {});
+    let tmp9Result = tmp9(require("AppLauncherList").AppLauncherListEmptyState, {});
   } else {
     obj = {
       ref,
@@ -125,7 +126,7 @@ export default function AppLauncherChannelListActionSheet(channel) {
         });
       },
     };
-    tmp9Result = tmp9(tmp7(tmp8[12]).AppLauncherList, obj);
+    tmp9Result = tmp9(require("AppLauncherList").AppLauncherList, obj);
   }
   items1[1] = tmp9Result;
   obj.children = items1;

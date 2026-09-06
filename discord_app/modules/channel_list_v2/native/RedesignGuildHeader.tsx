@@ -2,11 +2,13 @@
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import AvatarUtilsDefault from "../../../utils/AvatarUtils.tsx";
 import FavoritesUtils from "../../favorites/FavoritesUtils.tsx";
+import useToken from "../../../design/tokens/native/useToken.tsx";
 import ReanimatedRexport from "../../reanimated/ReanimatedRexport.tsx";
 import REAWorkaroundViewDefault from "../../reanimated/native/REAWorkaroundView.tsx";
 import shared from "../../../design/shared.tsx";
 import spring from "../../../design/animation/reanimated/spring/spring.tsx";
 import springPresets from "../../../design/animation/reanimated/spring/springPresets.tsx";
+import ButtonConstants from "../../../design/components/Button/native/ButtonConstants.native.tsx";
 import useFontScale from "../../screen/native/useFontScale.tsx";
 import ThemedGradientDefault from "../../client_themes/native/ThemedGradient.tsx";
 import useIsUsingClientThemeDefault from "../../client_themes/native/useIsUsingClientTheme.tsx";
@@ -186,7 +188,7 @@ function ReanimatedGuildBanner(guild) {
     obj4.style = items6;
     items5[1] = closure_13(tmp(tmp2[20]).View, obj4);
     if (tmp17Result) {
-      tmp17Result = tmp17(tmp(tmp2[32]), {});
+      tmp17Result = closure_13(tmp(tmp2[32]), {});
     }
     items5[2] = tmp17Result;
     obj2.children = items5;
@@ -276,15 +278,15 @@ export const useRedesignGuildHeaderHeight = function useRedesignGuildHeaderHeigh
   if (isThemeDarkResult) {
     num = 1;
   }
-  let tmp7Result = tmp7(4262);
+  let tmp7Result = useToken;
   let num2 = 0;
-  const token = tmp7Result.useToken(tmp(576).modules.mobile.CHANNEL_LIST_SUBTITLE_TEXT_STYLE);
+  const token = tmp7Result.useToken(nativeDefault.modules.mobile.CHANNEL_LIST_SUBTITLE_TEXT_STYLE);
   if (!isFavoritesGuildIdResult) {
-    num2 = tmp7(4980).SMALL_BUTTON_HEIGHT + closure_1_11;
+    num2 = ButtonConstants.SMALL_BUTTON_HEIGHT + closure_1_11;
   }
   let num3 = 0;
   if (tmp11) {
-    num3 = 8 + tmp7(4980).MEDIUM_BUTTON_HEIGHT + 8;
+    num3 = 8 + ButtonConstants.MEDIUM_BUTTON_HEIGHT + 8;
   }
   let num5 = 16;
   if (isFavoritesGuildIdResult) {
@@ -292,13 +294,13 @@ export const useRedesignGuildHeaderHeight = function useRedesignGuildHeaderHeigh
   }
   let num6 = 0;
   if (tmp9) {
-    tmp7Result = tmp7(10119);
+    tmp7Result = useScaledTextLineHeight;
     num6 = tmp7Result.scaleTextLineHeight(token, fontScale);
   }
   let bound = scaleTextLineHeightResult;
   if (isFavoritesGuildIdResult) {
     const _Math = Math;
-    bound = Math.max(scaleTextLineHeightResult, tmp7(4980).SMALL_BUTTON_HEIGHT);
+    bound = Math.max(scaleTextLineHeightResult, ButtonConstants.SMALL_BUTTON_HEIGHT);
   }
   return roundToNearestPixelDefault(16 + bound + num6 + num2 + num3 + num5 + num);
 };

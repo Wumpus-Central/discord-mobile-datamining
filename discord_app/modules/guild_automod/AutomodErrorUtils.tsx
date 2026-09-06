@@ -35,11 +35,8 @@ function getAutomodErrorMessageFromErrorResponse(errorResponseBody, id) {
               const intl = util.intl;
               return intl.string(util.t.ipgKDg);
             }
-          } else {
-            let isForumLikeChannelResult;
-            if (channel != null) {
-              isForumLikeChannelResult = channel.isForumLikeChannel();
-            }
+          } else if (channel != null) {
+            channel.isForumLikeChannel();
           }
           return null;
         }
@@ -52,16 +49,16 @@ function getAutomodErrorMessageFromErrorResponse(errorResponseBody, id) {
 function getAutomodErrorMessageFromMessageData(message) {
   const channel = ChannelStore.getChannel(message.message.channelId);
   if (obj2.isMessageDataEdit(message)) {
-    const intl4 = tmp(1114).intl;
-    let stringResult = intl4.string(tmp(1114).t.bU6o0z);
+    const intl4 = util.intl;
+    let stringResult = intl4.string(util.t.bU6o0z);
   } else {
     let isThreadResult;
     if (channel != null) {
       isThreadResult = channel.isThread();
     }
     if (isThreadResult) {
-      const intl3 = tmp(1114).intl;
-      stringResult = intl3.string(tmp(1114).t.DVdG9E);
+      const intl3 = util.intl;
+      stringResult = intl3.string(util.t.DVdG9E);
     } else {
       let isForumPostResult;
       if (channel != null) {
@@ -73,12 +70,12 @@ function getAutomodErrorMessageFromMessageData(message) {
           isForumLikeChannelResult = channel.isForumLikeChannel();
         }
         if (!isForumLikeChannelResult) {
-          const intl = tmp(1114).intl;
-          stringResult = intl.string(tmp(1114).t.zQ69pv);
+          const intl = util.intl;
+          stringResult = intl.string(util.t.zQ69pv);
         }
       }
-      const intl2 = tmp(1114).intl;
-      stringResult = intl2.string(tmp(1114).t.ipgKDg);
+      const intl2 = util.intl;
+      stringResult = intl2.string(util.t.ipgKDg);
     }
   }
   return stringResult;

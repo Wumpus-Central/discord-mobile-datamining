@@ -46,7 +46,6 @@ export const useHorizontalAutocompleteResults = function useHorizontalAutocomple
       if (0 !== text2.trim().length) {
         while (true) {
           let obj = channel(selection[4]);
-          let arr = text2;
           let tmp5 = tmp14;
           let found = tmp15;
           if (!obj.isAutocompleteSeparatingBoundary(text2, tmp)) {
@@ -66,7 +65,7 @@ export const useHorizontalAutocompleteResults = function useHorizontalAutocomple
             if (selectionEnd == null) {
               tmp7 = tmp;
             }
-            let substr = arr.slice(tmp, tmp7);
+            let substr = text2.slice(tmp, tmp7);
             closure_0 = substr[0];
             let str2 = substr.slice(1);
             let formatted = str2.toLowerCase();

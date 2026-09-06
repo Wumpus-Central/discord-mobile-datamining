@@ -96,11 +96,11 @@ export default function UserProfileIncomingFriendRequest(style) {
       if (null != getOrFetchApplication) {
         let obj = { source: null, size: null, style: null };
         obj = { id: null, icon: null };
-        ({ id: obj3.id, icon: obj3.icon } = tmp);
+        ({ id: obj3.id, icon: obj3.icon } = getOrFetchApplication);
         obj.source = AvatarUtilsDefault.getApplicationIconSource(obj);
         obj.size = native.AvatarSizes.XXSMALL;
         obj.style = items4.gameIcon;
-        tmp2 = hasOwnProperty(native.Avatar, obj, tmp.id);
+        tmp2 = hasOwnProperty(native.Avatar, obj, getOrFetchApplication.id);
       }
       return tmp2;
     };
@@ -130,8 +130,9 @@ export default function UserProfileIncomingFriendRequest(style) {
   tmp = tmp14(Button, obj7);
   items4[1] = tmp;
   obj5.children = items4;
-  Text = tmp12(tmp13, obj5);
+  Text = closure_6(tmp13, obj5);
   items3[2] = Text;
   obj.children = items3;
   closure_6(cancelFriendRequest, obj);
+  const tmp3 = items4(trackUserProfileAction[5])();
 }

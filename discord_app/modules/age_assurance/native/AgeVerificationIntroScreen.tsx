@@ -91,7 +91,7 @@ export default function GetStartedScreen(onComplete) {
       let tmpResult = null;
       if (null != description) {
         obj = { variant: "text-xs/medium", color: "text-subtle", children: description };
-        tmpResult = tmp(modalSessionId(4556).Text, obj);
+        tmpResult = closure_1_9(modalSessionId(4556).Text, obj);
       }
       obj.description = tmpResult;
       return closure_1_9(_undefined(8579), obj, index);
@@ -136,8 +136,8 @@ export default function GetStartedScreen(onComplete) {
       },
     };
     obj10.children = intl2.format(tmp4(1114).t.pJAxgQ, obj11);
-    obj9.children = tmp9(tmp4(4556).Text, obj10);
-    tmp9Result = tmp9(tmp10, obj9);
+    obj9.children = closure_9(tmp4(4556).Text, obj10);
+    tmp9Result = closure_9(closure_5, obj9);
   }
   const obj12 = { children: null };
   const items4 = [tmp9Result];
@@ -153,7 +153,7 @@ export default function GetStartedScreen(onComplete) {
   };
   const intl3 = tmp4(1114).intl;
   obj14.text = intl3.string(modalSessionId(1114).t.SJMnkX);
-  obj14.onPress = asyncGeneratorStep(async (arg0, value) => {
+  obj14.onPress = asyncGeneratorStep(async () => {
     if (v3 === 2) {
       v3 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -218,7 +218,6 @@ export default function GetStartedScreen(onComplete) {
       );
     },
   };
-  const tmp8 = closure_11;
   obj14.icon = closure_9(modalSessionId(8580).LinkExternalSmallIcon, { color: nativeDefault.colors.WHITE });
   obj14.loading = loading;
   obj13.children = closure_9(modalSessionId(4975).Button, obj14);
@@ -226,5 +225,5 @@ export default function GetStartedScreen(onComplete) {
   obj8.children = items4;
   items2[1] = closure_10(closure_5, obj8);
   obj12.children = items2;
-  return closure_10(tmp8, obj12);
+  return closure_10(closure_11, obj12);
 }

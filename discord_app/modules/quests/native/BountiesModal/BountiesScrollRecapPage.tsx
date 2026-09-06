@@ -7,6 +7,7 @@ import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.nativ
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
 import common_Video from "../../../../components_native/common/Video.tsx";
+import APNGPlayer from "../../../image/native/APNGPlayer.android.tsx";
 import OrbsIcon from "../../../../design/components/Icon/native/redesign/generated/OrbsIcon.tsx";
 import _modDef15050 from "../../../../../discord_assets/assets/quests/bounties/_3d_orbs.png.js";
 import _modDef15051 from "../../../../../discord_assets/assets/quests/bounties/_3d_orbs.mov.js";
@@ -27,8 +28,8 @@ function BountiesRecapOrbsBackground(arg0) {
       children: null,
     };
     obj = { url: _modDef15050, style: React3.absoluteFillObject, autoplay: !reducedMotion };
-    obj.children = tmp3(tmp(8808).APNGPlayer, obj);
-    let tmp3Result = tmp3(React4, obj);
+    obj.children = timestampProducer(APNGPlayer.APNGPlayer, obj);
+    let tmp3Result = timestampProducer(React4, obj);
   } else {
     const obj1 = {
       source: null,
@@ -43,7 +44,7 @@ function BountiesRecapOrbsBackground(arg0) {
     obj1.source = obj2;
     obj1.style = style;
     obj1.paused = reducedMotion;
-    tmp3Result = tmp3(tmp(8307).VideoComponent, obj1);
+    tmp3Result = timestampProducer(common_Video.VideoComponent, obj1);
   }
   return tmp3Result;
 }

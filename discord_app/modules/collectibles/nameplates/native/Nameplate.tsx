@@ -107,7 +107,6 @@ function NameplateInner(isFocused) {
     const tmp5Result = tmp5(4987);
   }
   const items4 = [tmp15Result];
-  const tmp13 = closure_6;
   const tmpResult1 = flag6(8819);
   if (tmpResult2.isAndroid()) {
     if (tmp12) {
@@ -116,9 +115,11 @@ function NameplateInner(isFocused) {
     }
     items4[1] = tmp17;
     obj.children = items4;
-    return tmp13(tmp5(4296).View, obj);
+    return closure_6(tmp5(4296).View, obj);
   }
   tmp17 = closure_5(tmp5(5587), { source: { uri: str }, style: tmp4.img, accessibilityRole: "image" });
+  const obj2 = { source: { uri: str }, style: tmp4.img, accessibilityRole: "image" };
+  tmpResult2 = flag6(1115);
 }
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);

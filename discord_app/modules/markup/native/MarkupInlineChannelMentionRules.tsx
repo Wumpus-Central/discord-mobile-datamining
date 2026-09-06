@@ -37,7 +37,7 @@ export function createInlineChannelReact(arg0) {
         items[1] = smartOutputResult;
         items[2] = str;
         obj.children = items;
-        let tmp13 = <tmp9.LegacyText key={arg2.key}>{null}</tmp9.LegacyText>;
+        let tmp13 = <tmp9.LegacyText key={key.key}>{null}</tmp9.LegacyText>;
         return tmp13;
       case "text-nsfw":
         str2 = "#";
@@ -50,7 +50,7 @@ export function createInlineChannelReact(arg0) {
         items[1] = smartOutputResult;
         items[2] = str;
         obj.children = items;
-        tmp13 = <tmp9.LegacyText key={arg2.key}>{null}</tmp9.LegacyText>;
+        tmp13 = <tmp9.LegacyText key={key.key}>{null}</tmp9.LegacyText>;
         return tmp13;
       case "text-spoiler":
         str2 = "#";
@@ -63,7 +63,7 @@ export function createInlineChannelReact(arg0) {
         items[1] = smartOutputResult;
         items[2] = str;
         obj.children = items;
-        tmp13 = <tmp9.LegacyText key={arg2.key}>{null}</tmp9.LegacyText>;
+        tmp13 = <tmp9.LegacyText key={key.key}>{null}</tmp9.LegacyText>;
         return tmp13;
       case "announcement":
         str2 = "#";
@@ -76,7 +76,7 @@ export function createInlineChannelReact(arg0) {
         items[1] = smartOutputResult;
         items[2] = str;
         obj.children = items;
-        tmp13 = <tmp9.LegacyText key={arg2.key}>{null}</tmp9.LegacyText>;
+        tmp13 = <tmp9.LegacyText key={key.key}>{null}</tmp9.LegacyText>;
         return tmp13;
       case "announcement-nsfw":
         str2 = "#";
@@ -89,7 +89,7 @@ export function createInlineChannelReact(arg0) {
         items[1] = smartOutputResult;
         items[2] = str;
         obj.children = items;
-        tmp13 = <tmp9.LegacyText key={arg2.key}>{null}</tmp9.LegacyText>;
+        tmp13 = <tmp9.LegacyText key={key.key}>{null}</tmp9.LegacyText>;
         return tmp13;
       case "announcement-spoiler":
         str2 = "#";
@@ -102,7 +102,7 @@ export function createInlineChannelReact(arg0) {
         items[1] = smartOutputResult;
         items[2] = str;
         obj.children = items;
-        tmp13 = <tmp9.LegacyText key={arg2.key}>{null}</tmp9.LegacyText>;
+        tmp13 = <tmp9.LegacyText key={key.key}>{null}</tmp9.LegacyText>;
         return tmp13;
       case "forum":
         str2 = "#";
@@ -115,7 +115,7 @@ export function createInlineChannelReact(arg0) {
         items[1] = smartOutputResult;
         items[2] = str;
         obj.children = items;
-        tmp13 = <tmp9.LegacyText key={arg2.key}>{null}</tmp9.LegacyText>;
+        tmp13 = <tmp9.LegacyText key={key.key}>{null}</tmp9.LegacyText>;
         return tmp13;
       case "forum-nsfw":
         str2 = "#";
@@ -128,7 +128,7 @@ export function createInlineChannelReact(arg0) {
         items[1] = smartOutputResult;
         items[2] = str;
         obj.children = items;
-        tmp13 = <tmp9.LegacyText key={arg2.key}>{null}</tmp9.LegacyText>;
+        tmp13 = <tmp9.LegacyText key={key.key}>{null}</tmp9.LegacyText>;
         return tmp13;
       case "forum-spoiler":
         str2 = "#";
@@ -141,7 +141,7 @@ export function createInlineChannelReact(arg0) {
         items[1] = smartOutputResult;
         items[2] = str;
         obj.children = items;
-        tmp13 = <tmp9.LegacyText key={arg2.key}>{null}</tmp9.LegacyText>;
+        tmp13 = <tmp9.LegacyText key={key.key}>{null}</tmp9.LegacyText>;
         return tmp13;
       case "media":
         str2 = "#";
@@ -154,7 +154,7 @@ export function createInlineChannelReact(arg0) {
         items[1] = smartOutputResult;
         items[2] = str;
         obj.children = items;
-        tmp13 = <tmp9.LegacyText key={arg2.key}>{null}</tmp9.LegacyText>;
+        tmp13 = <tmp9.LegacyText key={key.key}>{null}</tmp9.LegacyText>;
         return tmp13;
       case "media-nsfw":
         str2 = "#";
@@ -167,7 +167,7 @@ export function createInlineChannelReact(arg0) {
         items[1] = smartOutputResult;
         items[2] = str;
         obj.children = items;
-        tmp13 = <tmp9.LegacyText key={arg2.key}>{null}</tmp9.LegacyText>;
+        tmp13 = <tmp9.LegacyText key={key.key}>{null}</tmp9.LegacyText>;
         return tmp13;
       case "app":
         str2 = "#";
@@ -180,7 +180,7 @@ export function createInlineChannelReact(arg0) {
         items[1] = smartOutputResult;
         items[2] = str;
         obj.children = items;
-        tmp13 = <tmp9.LegacyText key={arg2.key}>{null}</tmp9.LegacyText>;
+        tmp13 = <tmp9.LegacyText key={key.key}>{null}</tmp9.LegacyText>;
         return tmp13;
       case "app-nsfw":
         str2 = "#";
@@ -193,7 +193,7 @@ export function createInlineChannelReact(arg0) {
         items[1] = smartOutputResult;
         items[2] = str;
         obj.children = items;
-        tmp13 = <tmp9.LegacyText key={arg2.key}>{null}</tmp9.LegacyText>;
+        tmp13 = <tmp9.LegacyText key={key.key}>{null}</tmp9.LegacyText>;
         return tmp13;
       case "app-spoiler":
         str2 = "#";
@@ -206,7 +206,7 @@ export function createInlineChannelReact(arg0) {
         items[1] = smartOutputResult;
         items[2] = str;
         obj.children = items;
-        tmp13 = <tmp9.LegacyText key={arg2.key}>{null}</tmp9.LegacyText>;
+        tmp13 = <tmp9.LegacyText key={key.key}>{null}</tmp9.LegacyText>;
         return tmp13;
       case "thread":
         str = '"';
@@ -263,7 +263,7 @@ export const inlineChannelReact = (iconType, output, key) => {
       items[1] = smartOutputResult;
       items[2] = str;
       obj.children = items;
-      let tmp13 = <tmp9.LegacyText key={arg2.key}>{null}</tmp9.LegacyText>;
+      let tmp13 = <tmp9.LegacyText key={key.key}>{null}</tmp9.LegacyText>;
       return tmp13;
     case "text-nsfw":
       str2 = "#";
@@ -276,7 +276,7 @@ export const inlineChannelReact = (iconType, output, key) => {
       items[1] = smartOutputResult;
       items[2] = str;
       obj.children = items;
-      tmp13 = <tmp9.LegacyText key={arg2.key}>{null}</tmp9.LegacyText>;
+      tmp13 = <tmp9.LegacyText key={key.key}>{null}</tmp9.LegacyText>;
       return tmp13;
     case "text-spoiler":
       str2 = "#";
@@ -289,7 +289,7 @@ export const inlineChannelReact = (iconType, output, key) => {
       items[1] = smartOutputResult;
       items[2] = str;
       obj.children = items;
-      tmp13 = <tmp9.LegacyText key={arg2.key}>{null}</tmp9.LegacyText>;
+      tmp13 = <tmp9.LegacyText key={key.key}>{null}</tmp9.LegacyText>;
       return tmp13;
     case "announcement":
       str2 = "#";
@@ -302,7 +302,7 @@ export const inlineChannelReact = (iconType, output, key) => {
       items[1] = smartOutputResult;
       items[2] = str;
       obj.children = items;
-      tmp13 = <tmp9.LegacyText key={arg2.key}>{null}</tmp9.LegacyText>;
+      tmp13 = <tmp9.LegacyText key={key.key}>{null}</tmp9.LegacyText>;
       return tmp13;
     case "announcement-nsfw":
       str2 = "#";
@@ -315,7 +315,7 @@ export const inlineChannelReact = (iconType, output, key) => {
       items[1] = smartOutputResult;
       items[2] = str;
       obj.children = items;
-      tmp13 = <tmp9.LegacyText key={arg2.key}>{null}</tmp9.LegacyText>;
+      tmp13 = <tmp9.LegacyText key={key.key}>{null}</tmp9.LegacyText>;
       return tmp13;
     case "announcement-spoiler":
       str2 = "#";
@@ -328,7 +328,7 @@ export const inlineChannelReact = (iconType, output, key) => {
       items[1] = smartOutputResult;
       items[2] = str;
       obj.children = items;
-      tmp13 = <tmp9.LegacyText key={arg2.key}>{null}</tmp9.LegacyText>;
+      tmp13 = <tmp9.LegacyText key={key.key}>{null}</tmp9.LegacyText>;
       return tmp13;
     case "forum":
       str2 = "#";
@@ -341,7 +341,7 @@ export const inlineChannelReact = (iconType, output, key) => {
       items[1] = smartOutputResult;
       items[2] = str;
       obj.children = items;
-      tmp13 = <tmp9.LegacyText key={arg2.key}>{null}</tmp9.LegacyText>;
+      tmp13 = <tmp9.LegacyText key={key.key}>{null}</tmp9.LegacyText>;
       return tmp13;
     case "forum-nsfw":
       str2 = "#";
@@ -354,7 +354,7 @@ export const inlineChannelReact = (iconType, output, key) => {
       items[1] = smartOutputResult;
       items[2] = str;
       obj.children = items;
-      tmp13 = <tmp9.LegacyText key={arg2.key}>{null}</tmp9.LegacyText>;
+      tmp13 = <tmp9.LegacyText key={key.key}>{null}</tmp9.LegacyText>;
       return tmp13;
     case "forum-spoiler":
       str2 = "#";
@@ -367,7 +367,7 @@ export const inlineChannelReact = (iconType, output, key) => {
       items[1] = smartOutputResult;
       items[2] = str;
       obj.children = items;
-      tmp13 = <tmp9.LegacyText key={arg2.key}>{null}</tmp9.LegacyText>;
+      tmp13 = <tmp9.LegacyText key={key.key}>{null}</tmp9.LegacyText>;
       return tmp13;
     case "media":
       str2 = "#";
@@ -380,7 +380,7 @@ export const inlineChannelReact = (iconType, output, key) => {
       items[1] = smartOutputResult;
       items[2] = str;
       obj.children = items;
-      tmp13 = <tmp9.LegacyText key={arg2.key}>{null}</tmp9.LegacyText>;
+      tmp13 = <tmp9.LegacyText key={key.key}>{null}</tmp9.LegacyText>;
       return tmp13;
     case "media-nsfw":
       str2 = "#";
@@ -393,7 +393,7 @@ export const inlineChannelReact = (iconType, output, key) => {
       items[1] = smartOutputResult;
       items[2] = str;
       obj.children = items;
-      tmp13 = <tmp9.LegacyText key={arg2.key}>{null}</tmp9.LegacyText>;
+      tmp13 = <tmp9.LegacyText key={key.key}>{null}</tmp9.LegacyText>;
       return tmp13;
     case "app":
       str2 = "#";
@@ -406,7 +406,7 @@ export const inlineChannelReact = (iconType, output, key) => {
       items[1] = smartOutputResult;
       items[2] = str;
       obj.children = items;
-      tmp13 = <tmp9.LegacyText key={arg2.key}>{null}</tmp9.LegacyText>;
+      tmp13 = <tmp9.LegacyText key={key.key}>{null}</tmp9.LegacyText>;
       return tmp13;
     case "app-nsfw":
       str2 = "#";
@@ -419,7 +419,7 @@ export const inlineChannelReact = (iconType, output, key) => {
       items[1] = smartOutputResult;
       items[2] = str;
       obj.children = items;
-      tmp13 = <tmp9.LegacyText key={arg2.key}>{null}</tmp9.LegacyText>;
+      tmp13 = <tmp9.LegacyText key={key.key}>{null}</tmp9.LegacyText>;
       return tmp13;
     case "app-spoiler":
       str2 = "#";
@@ -432,7 +432,7 @@ export const inlineChannelReact = (iconType, output, key) => {
       items[1] = smartOutputResult;
       items[2] = str;
       obj.children = items;
-      tmp13 = <tmp9.LegacyText key={arg2.key}>{null}</tmp9.LegacyText>;
+      tmp13 = <tmp9.LegacyText key={key.key}>{null}</tmp9.LegacyText>;
       return tmp13;
     case "thread":
       str = '"';

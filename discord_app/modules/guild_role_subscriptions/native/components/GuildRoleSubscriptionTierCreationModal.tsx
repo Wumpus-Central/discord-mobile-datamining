@@ -1,4 +1,5 @@
 // discord_app/modules/guild_role_subscriptions/native/components/GuildRoleSubscriptionTierCreationModal.tsx
+import util from "../../../../intl/index.native.tsx";
 import ToastUtils from "../../../toast/native/ToastUtils.tsx";
 import GuildRoleSubscriptionListingEditStateUtilsAll from "../../edit_state/GuildRoleSubscriptionListingEditStateUtils.tsx";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
@@ -23,7 +24,7 @@ export default function GuildRoleSubscriptionTierCreationModal(guildId) {
   _slicedToArray = undefined;
   noop = undefined;
   error = undefined;
-  closure_8 = async function _handleCreate(arg0, value) {
+  closure_8 = async function _handleCreate() {
     if (c2 === 2) {
       c2 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -95,8 +96,8 @@ export default function GuildRoleSubscriptionTierCreationModal(guildId) {
     if (null != error) {
       let anyErrorMessage = error.getAnyErrorMessage();
       if (anyErrorMessage == null) {
-        const intl = tmp(1114).intl;
-        anyErrorMessage = intl.string(tmp(1114).t.R0RpRX);
+        const intl = util.intl;
+        anyErrorMessage = intl.string(util.t.R0RpRX);
       }
       ToastUtils.presentError(anyErrorMessage);
     }

@@ -48,12 +48,12 @@ export const showDoubleTapErrorToast = function showDoubleTapErrorToast(arg0) {
         return tmp3Result;
       }
       if (null != closure_1_0) {
-        const intl2 = tmp4(1114).intl;
+        const intl2 = util.intl;
         obj = { emojiName: tmp6 };
-        let formatResult = intl2.format(tmp4(1114).t.WZGLFq, obj);
+        let formatResult = intl2.format(util.t.WZGLFq, obj);
       } else {
-        const intl = tmp4(1114).intl;
-        formatResult = intl.string(tmp4(1114).t.CL5mWi);
+        const intl = util.intl;
+        formatResult = intl.string(util.t.CL5mWi);
       }
       tmp3Result = jsx(Text_Text.Text, { variant: "text-sm/normal", children: formatResult });
     },

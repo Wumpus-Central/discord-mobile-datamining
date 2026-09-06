@@ -49,6 +49,7 @@ export default {
         onConfirm();
       }
     });
+    const confirmResult = obj.confirm(obj);
   },
   handleSecureFramesUserVerificationLink(arg0) {
     ({ userId, fingerprint } = arg0);

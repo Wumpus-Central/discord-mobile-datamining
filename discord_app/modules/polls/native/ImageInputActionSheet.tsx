@@ -57,14 +57,14 @@ export default function ImageInputAnswerActionSheet(channelId) {
     obj = { variant: "text-md/bold", color: "mobile-text-heading-primary", children: null };
     const _HermesInternal = HermesInternal;
     obj.children = ":" + name + ":";
-    items[1] = closure_6(tmp7(tmp2[10]).Text, obj);
+    items[1] = closure_6(tmp7(answer[10]).Text, obj);
     obj.children = items;
-    tmp6Result = tmp6(View, obj);
+    tmp6Result = closure_7(View, obj);
   }
   const items1 = [tmp6Result, closure_6(channelId(answer[11]).Spacer, { size: 21 })];
-  const intl = tmp7(tmp2[13]).intl;
+  const intl = tmp7(answer[13]).intl;
   const string = intl.string;
-  const t = tmp7(tmp2[13]).t;
+  const t = tmp7(answer[13]).t;
   if (tmp4) {
     let stringResult = string(t.CZeRhU);
   } else {
@@ -83,26 +83,26 @@ export default function ImageInputAnswerActionSheet(channelId) {
   let tmp13Result = null;
   if (null != upload) {
     const obj2 = { label: null, onPress: null };
-    const intl2 = tmp7(tmp2[13]).intl;
-    obj2.label = intl2.string(tmp7(tmp2[13]).t.w7x2t4);
+    const intl2 = tmp7(answer[13]).intl;
+    obj2.label = intl2.string(tmp7(answer[13]).t.w7x2t4);
     obj2.onPress = function onPress() {
       closure_6();
       const obj = { channelId, answer, index, onSave, imageSize: 40 };
       const result = obj.openEditPollCreationImageAltTextModal(obj);
     };
-    tmp13Result = tmp13(tmp7(tmp2[12]).ActionSheetRow, obj2);
+    tmp13Result = tmp13(tmp7(answer[12]).ActionSheetRow, obj2);
   }
   items2[1] = tmp13Result;
   tmp13Result = null;
   if (tmp4) {
     const obj3 = { label: null, onPress: null };
-    const intl3 = tmp7(tmp2[13]).intl;
-    obj3.label = intl3.string(tmp7(tmp2[13]).t.IhMxgu);
+    const intl3 = tmp7(answer[13]).intl;
+    obj3.label = intl3.string(tmp7(answer[13]).t.IhMxgu);
     obj3.onPress = function onPress() {
       View(index);
       closure_6();
     };
-    tmp13Result = tmp13(tmp7(tmp2[12]).ActionSheetRow, obj3);
+    tmp13Result = tmp13(tmp7(answer[12]).ActionSheetRow, obj3);
   }
   const obj4 = { startExpanded: true, children: null };
   items2[2] = tmp13Result;

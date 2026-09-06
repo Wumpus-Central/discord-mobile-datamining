@@ -25,9 +25,9 @@ export const ModalContent = noop.forwardRef((children, ref) => {
       contentContainerStyle={tmp.contentContainer}
       showsVerticalScrollIndicator={false}
       keyboardShouldPersistTaps="handled"
-      ref={arg1}
+      ref={ref}
     >
-      {arg0.children}
+      {children.children}
     </ScrollView>
   );
 });

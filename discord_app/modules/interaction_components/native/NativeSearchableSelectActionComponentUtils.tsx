@@ -1,7 +1,10 @@
 // discord_app/modules/interaction_components/native/NativeSearchableSelectActionComponentUtils.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import utils_ColorUtils from "../../../../discord_common/js/shared/utils/ColorUtils.tsx";
+import utils_AvatarUtils from "../../../utils/native/AvatarUtils.tsx";
 import InteractionComponentTypes from "../InteractionComponentTypes.tsx";
 import utils_ChannelUtils from "../../../utils/native/ChannelUtils.tsx";
+import guild_boosting_RoleIconUtils from "../../guild_boosting/RoleIconUtils.tsx";
 import _modDef8123 from "../../../../_runtime/metro/08123__.js";
 import _modDef8124 from "../../../../_runtime/metro/08124__.js";
 import ChannelStore from "../../../stores/ChannelStore.tsx";
@@ -31,39 +34,39 @@ export const transformSearchableSelectOptions = function transformSearchableSele
       if (null != user) {
         let obj = {};
         const merged = Object.assign(type);
-        let tmpResult = tmp(1399);
+        let tmpResult = utils_AvatarUtils;
         obj.iconSrc = tmpResult.ensureAvatarSource(user.getAvatarSource(closure_0, false)).uri;
         tmp34 = obj;
       }
       return tmp34;
-    } else if (tmp(4792).SelectOptionType.ROLE === type) {
+    } else if (InteractionComponentTypes.SelectOptionType.ROLE === type) {
       let role = null;
-      if (null != closure_1) {
-        role = GuildRoleStore.getRole(tmp14.id, type.value);
+      if (null != id) {
+        role = GuildRoleStore.getRole(id.id, type.value);
       }
       let tmp18 = type;
       if (null != role) {
         tmp18 = type;
-        if (null != tmp14) {
-          tmpResult = tmp(7187);
+        if (null != id) {
+          tmpResult = guild_boosting_RoleIconUtils;
           let roleIconData = null;
-          if (tmpResult.canGuildUseRoleIcons(tmp14, role)) {
-            roleIconData = tmp(7187).getRoleIconData(role);
-            const tmpResult1 = tmp(7187);
+          if (tmpResult.canGuildUseRoleIcons(id, role)) {
+            roleIconData = guild_boosting_RoleIconUtils.getRoleIconData(role);
+            const tmpResult1 = guild_boosting_RoleIconUtils;
           }
           if (null == roleIconData) {
             obj = {};
             const merged1 = Object.assign(type);
-            obj.iconSrc = tmp(1399).ensureAvatarSource(_modDef8123).uri;
+            obj.iconSrc = utils_AvatarUtils.ensureAvatarSource(_modDef8123).uri;
             if (null != role.colorString) {
-              let hex2intResult = tmp(1091).hex2int(role.colorString);
-              const tmpResult3 = tmp(1091);
+              let hex2intResult = utils_ColorUtils.hex2int(role.colorString);
+              const tmpResult3 = utils_ColorUtils;
             } else {
               hex2intResult = React6;
             }
             obj.iconColor = 4278190080 | hex2intResult;
             tmp18 = obj;
-            const tmpResult2 = tmp(1399);
+            const tmpResult2 = utils_AvatarUtils;
           } else {
             ({ customIconSrc, unicodeEmoji } = roleIconData);
             if (null != unicodeEmoji) {
@@ -89,27 +92,26 @@ export const transformSearchableSelectOptions = function transformSearchableSele
         }
       }
       return tmp18;
-    } else if (tmp(4792).SelectOptionType.CHANNEL === type) {
+    } else if (InteractionComponentTypes.SelectOptionType.CHANNEL === type) {
       const channel = ChannelStore.getChannel(type.value);
       if (null == channel) {
         return type;
       } else {
         const obj4 = {};
         const merged4 = Object.assign(type);
-        let tmpResult4 = tmp(1399);
+        let tmpResult4 = utils_AvatarUtils;
         let hex2int = tmpResult4.ensureAvatarSource;
         if (channel.type === constants.GUILD_CATEGORY) {
           let channelIconWithGuild = _modDef8124;
         } else {
-          channelIconWithGuild = tmp(5028).getChannelIconWithGuild(channel, tmp4);
-          const tmpResult5 = tmp(5028);
+          channelIconWithGuild = utils_ChannelUtils.getChannelIconWithGuild(channel, id);
+          const tmpResult5 = utils_ChannelUtils;
         }
         obj4.iconSrc = hex2int(channelIconWithGuild).uri;
-        tmpResult4 = tmp(1091);
+        tmpResult4 = utils_ColorUtils;
         hex2int = tmpResult4.hex2int;
         obj4.iconColor = 4278190080 | hex2int(nativeDefault.unsafe_rawColors.PRIMARY_330);
       }
-      tmp4 = closure_1;
     } else {
       return null;
     }

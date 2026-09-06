@@ -26,7 +26,7 @@ function allowChannelAccess(id, channelType, ROLE) {
   }
   let addResult = NONE;
   if (tmp3) {
-    let tmpResult = tmp(1086);
+    let tmpResult = BigFlagUtilsAll;
     addResult = tmpResult.add(NONE, constants.VIEW_CHANNEL);
   }
   let tmp7 = channelType === __initData;
@@ -42,10 +42,10 @@ function allowChannelAccess(id, channelType, ROLE) {
   }
   let addResult2 = addResult;
   if (tmp7) {
-    tmpResult = tmp(1086);
+    tmpResult = BigFlagUtilsAll;
     const addResult1 = tmpResult.add(addResult, constants.VIEW_CHANNEL);
-    addResult2 = tmp(1086).add(addResult1, constants.CONNECT);
-    const tmpResult1 = tmp(1086);
+    addResult2 = BigFlagUtilsAll.add(addResult1, constants.CONNECT);
+    const tmpResult1 = BigFlagUtilsAll;
   }
   return { id, type: ROLE, deny: PermissionUtilsAll.NONE, allow: addResult2 };
 }
@@ -96,7 +96,7 @@ export const permissionOverwritesForRoles = function permissionOverwritesForRole
     }
     let addResult = NONE;
     if (tmp6) {
-      let tmp4Result = tmp4(1086);
+      let tmp4Result = BigFlagUtilsAll;
       addResult = tmp4Result.add(NONE, constants.VIEW_CHANNEL);
     }
     let tmp11 = channelType === closure_21;
@@ -105,10 +105,10 @@ export const permissionOverwritesForRoles = function permissionOverwritesForRole
     }
     let addResult2 = addResult;
     if (tmp11) {
-      tmp4Result = tmp4(1086);
+      tmp4Result = BigFlagUtilsAll;
       const addResult1 = tmp4Result.add(addResult, constants.VIEW_CHANNEL);
-      addResult2 = tmp4(1086).add(addResult1, constants.CONNECT);
-      const tmp4Result1 = tmp4(1086);
+      addResult2 = BigFlagUtilsAll.add(addResult1, constants.CONNECT);
+      const tmp4Result1 = BigFlagUtilsAll;
     }
     const obj = {
       id: guildId,
@@ -116,7 +116,7 @@ export const permissionOverwritesForRoles = function permissionOverwritesForRole
       allow: PermissionUtilsAll.NONE,
       deny: addResult2,
     };
-    items.push(obj);
+    arr = items.push(obj);
   }
   const item = arr.forEach((item) => {
     items.push(allowChannelAccess(item, closure_0, Server.PermissionOverwriteType.ROLE));
@@ -227,6 +227,7 @@ export const computeSummarizedVoiceStates = function computeSummarizedVoiceState
               ) {
                 closure_1_3.push(voiceState);
               }
+              const obj = require("useAudienceRequestToSpeakState");
             });
           } else {
             const item1 = forEach((arg0) => items.push(arg0));
@@ -254,6 +255,7 @@ export const computeSummarizedVoiceUsers = function computeSummarizedVoiceUsers(
               ) {
                 closure_1_3.push(voiceState);
               }
+              const obj = require("useAudienceRequestToSpeakState");
             });
           } else {
             const item1 = forEach((arg0) => items.push(arg0));
@@ -295,49 +297,49 @@ export const channelTypeString = function channelTypeString(channel) {
   if (ChannelTypes.DM === type) {
     const intl13 = util.intl;
     return intl13.string(util.t.jN2DfZ);
-  } else if (tmp.GROUP_DM === type) {
+  } else if (ChannelTypes.GROUP_DM === type) {
     const intl12 = util.intl;
     return intl12.string(util.t["e5y+gm"]);
-  } else if (tmp.GUILD_TEXT === type) {
+  } else if (ChannelTypes.GUILD_TEXT === type) {
     const intl11 = util.intl;
     return intl11.string(util.t.Pnajj0);
-  } else if (tmp.GUILD_FORUM === type) {
+  } else if (ChannelTypes.GUILD_FORUM === type) {
     const intl10 = util.intl;
     return intl10.string(util.t.GbryDd);
-  } else if (tmp.GUILD_MEDIA === type) {
+  } else if (ChannelTypes.GUILD_MEDIA === type) {
     const intl9 = util.intl;
     return intl9.string(util.t.seKITE);
-  } else if (tmp.GUILD_VOICE === type) {
+  } else if (ChannelTypes.GUILD_VOICE === type) {
     const intl8 = util.intl;
     return intl8.string(util.t.BVZqJl);
-  } else if (tmp.GUILD_STAGE_VOICE === type) {
+  } else if (ChannelTypes.GUILD_STAGE_VOICE === type) {
     const intl7 = util.intl;
     return intl7.string(util.t.EErMzA);
-  } else if (tmp.GUILD_ANNOUNCEMENT === type) {
+  } else if (ChannelTypes.GUILD_ANNOUNCEMENT === type) {
     const intl6 = util.intl;
     return intl6.string(util.t.l1dkSD);
-  } else if (tmp.GUILD_STORE === type) {
+  } else if (ChannelTypes.GUILD_STORE === type) {
     const intl5 = util.intl;
     return intl5.string(util.t["P1/Erq"]);
-  } else if (tmp.GUILD_CATEGORY === type) {
+  } else if (ChannelTypes.GUILD_CATEGORY === type) {
     const intl4 = util.intl;
     return intl4.string(util.t.vHCZwr);
-  } else if (tmp.PRIVATE_THREAD === type) {
+  } else if (ChannelTypes.PRIVATE_THREAD === type) {
     const intl3 = util.intl;
     return intl3.string(util.t.F1zyvU);
   } else {
-    if (tmp.ANNOUNCEMENT_THREAD !== type) {
-      if (tmp.PUBLIC_THREAD !== type) {
-        if (tmp.MEDIA_THREAD !== type) {
-          if (tmp.GUILD_APP === type) {
+    if (ChannelTypes.ANNOUNCEMENT_THREAD !== type) {
+      if (ChannelTypes.PUBLIC_THREAD !== type) {
+        if (ChannelTypes.MEDIA_THREAD !== type) {
+          if (ChannelTypes.GUILD_APP === type) {
             const intl = util.intl;
             return intl.string(util.t.ZkcrC2);
           } else {
-            if (tmp.GUILD_DIRECTORY !== type) {
-              if (tmp.LOBBY !== type) {
-                if (tmp.DM_SDK !== type) {
-                  if (tmp.GUILD_SPACE !== type) {
-                    const UNKNOWN = tmp.UNKNOWN;
+            if (ChannelTypes.GUILD_DIRECTORY !== type) {
+              if (ChannelTypes.LOBBY !== type) {
+                if (ChannelTypes.DM_SDK !== type) {
+                  if (ChannelTypes.GUILD_SPACE !== type) {
+                    const UNKNOWN = ChannelTypes.UNKNOWN;
                   }
                 }
               }
@@ -417,7 +419,7 @@ export const getMentionIconType = function getMentionIconType(channel) {
         str13 = str14;
       }
       let tmp2 = str13;
-    } else if (channel.type === tmp11.GUILD_STAGE_VOICE) {
+    } else if (channel.type === ChannelTypes.GUILD_STAGE_VOICE) {
       let str12 = "stage-locked";
       if (PermissionStore.can(constants.CONNECT, channel)) {
         str12 = "stage";
@@ -429,7 +431,7 @@ export const getMentionIconType = function getMentionIconType(channel) {
         str11 = "post";
       }
       tmp2 = str11;
-    } else if (channel.type === tmp11.GUILD_FORUM) {
+    } else if (channel.type === ChannelTypes.GUILD_FORUM) {
       if (tmp10) {
         let str10 = "media";
         if (isNSFWResult) {
@@ -444,13 +446,13 @@ export const getMentionIconType = function getMentionIconType(channel) {
           }
         }
       }
-    } else if (channel.type === tmp11.GUILD_MEDIA) {
+    } else if (channel.type === ChannelTypes.GUILD_MEDIA) {
       let str7 = "media";
       if (isNSFWResult) {
         str7 = "media-nsfw";
       }
       tmp2 = str7;
-    } else if (channel.type === tmp11.GUILD_ANNOUNCEMENT) {
+    } else if (channel.type === ChannelTypes.GUILD_ANNOUNCEMENT) {
       let str5 = "announcement-nsfw";
       if (!isNSFWResult) {
         let str6 = "announcement";
@@ -460,7 +462,7 @@ export const getMentionIconType = function getMentionIconType(channel) {
         str5 = str6;
       }
       tmp2 = str5;
-    } else if (channel.type === tmp11.GUILD_APP) {
+    } else if (channel.type === ChannelTypes.GUILD_APP) {
       let str3 = "app-nsfw";
       if (!isNSFWResult) {
         let str4 = "app";
@@ -561,12 +563,12 @@ export const getChannelAnalyticsPage = function getChannelAnalyticsPage(type) {
   } else {
     type = type.type;
     if (ChannelTypes.GUILD_ANNOUNCEMENT !== type) {
-      if (tmp.GUILD_TEXT !== type) {
-        if (tmp.GUILD_FORUM !== type) {
-          if (tmp.GUILD_MEDIA !== type) {
-            if (tmp.GUILD_APP !== type) {
-              if (tmp.GROUP_DM !== type) {
-                if (tmp.DM !== type) {
+      if (ChannelTypes.GUILD_TEXT !== type) {
+        if (ChannelTypes.GUILD_FORUM !== type) {
+          if (ChannelTypes.GUILD_MEDIA !== type) {
+            if (ChannelTypes.GUILD_APP !== type) {
+              if (ChannelTypes.GROUP_DM !== type) {
+                if (ChannelTypes.DM !== type) {
                   return null;
                 }
               }

@@ -14,10 +14,10 @@ function RaisedHandIcon(rtsState) {
   const unsafe_rawColors = nativeDefault.unsafe_rawColors;
   if (activeBackground) {
     let PRIMARY_800 = unsafe_rawColors.WHITE;
-    let tmp5 = tmp4;
+    let tmp5 = importDefault;
   } else {
     PRIMARY_800 = unsafe_rawColors.PRIMARY_800;
-    tmp5 = tmp4;
+    tmp5 = importDefault;
   }
   const items = [tmp.raisedHandContainer];
   if (activeBackground) {
@@ -128,7 +128,7 @@ export default noop.memo((channel) => {
   const items3 = [closure_5(channel(guildId[7]).CutoutableAvatarImage, obj1)];
   if (result) {
     obj2 = { rtsState };
-    result = tmp14(RaisedHandIcon, obj2);
+    result = closure_5(RaisedHandIcon, obj2);
   }
   items3[1] = result;
   obj.children = items3;
@@ -137,11 +137,11 @@ export default noop.memo((channel) => {
   const items5 = [tmp.nameplateContainer];
   obj3.style = items5;
   if (blocked) {
-    blocked = tmp14(tmp6(tmp3[16]).BlockedStatus, {});
+    blocked = closure_5(tmp6(tmp3[16]).BlockedStatus, {});
   }
   const items6 = [blocked, , ,];
   if (ignored) {
-    ignored = tmp14(tmp6(tmp3[16]).IgnoredStatus, {});
+    ignored = closure_5(tmp6(tmp3[16]).IgnoredStatus, {});
   }
   items6[1] = ignored;
   const items7 = [tmp.usernameText, ,];
@@ -166,20 +166,20 @@ export default noop.memo((channel) => {
     items7[2] = tmp17;
     obj5.style = items7;
     obj5.children = name;
-    items6[2] = tmp14(tmp6(tmp3[7]).LegacyText, obj5);
+    items6[2] = closure_5(tmp6(tmp3[7]).LegacyText, obj5);
     if (stateFromStores) {
       const obj6 = {
         source: tmp2(tmp3[18]),
         size: tmp6(tmp3[7]).Icon.Sizes.SMALL,
         color: tmp2(tmp3[5]).unsafe_rawColors.GUILD_BOOSTING_PINK,
       };
-      stateFromStores = tmp14(tmp6(tmp3[7]).Icon, obj6);
+      stateFromStores = closure_5(tmp6(tmp3[7]).Icon, obj6);
     }
     items6[3] = stateFromStores;
     obj3.children = items6;
-    items4[1] = tmp12(tmp13, obj3);
+    items4[1] = closure_6(View, obj3);
     obj.children = items4;
-    return tmp12(tmp6(tmp3[13]).LegacyPressable, obj);
+    return closure_6(tmp6(tmp3[13]).LegacyPressable, obj);
   } else {
     const tmp6Result = tmp6(tmp3[17]);
     tmp2(tmp3[5]).unsafe_rawColors;
@@ -190,6 +190,6 @@ export default noop.memo((channel) => {
   }
 });
 export const useAudienceTileStyles = styles;
-export const getTileWidthStyle = function getTileWidthStyle(arg0) {
-  return (arg0 - 46) / 4;
+export const getTileWidthStyle = function getTileWidthStyle(width) {
+  return (width - 46) / 4;
 };

@@ -45,7 +45,7 @@ export default noop.memo(function ChatInputGuardAutomodUserProfileQuarantine(gui
     const intl = tmp(1114).intl;
     stringResult = intl.string(tmp(1114).t["/PGQf0"]);
   }
-  if (automodReason === tmp6.AUTOMOD_QUARANTINED_SERVER_TAG) {
+  if (automodReason === GuildMemberFlags.AUTOMOD_QUARANTINED_SERVER_TAG) {
     const intl4 = tmp(1114).intl;
     let stringResult1 = intl4.string(tmp(1114).t.ml72ZU);
   } else {
@@ -54,7 +54,6 @@ export default noop.memo(function ChatInputGuardAutomodUserProfileQuarantine(gui
   }
   obj = { type: "simple-action", actionOnPress: callback, actionLabel: stringResult, icon: null, message: null };
   const obj2 = guildId(4205);
-  tmp6 = GuildMemberFlags;
   obj.icon = jsx(guildId(12465).ChatXIcon, {});
   obj.message = stringResult1;
   return jsx(ChatInputGuardDefault, {

@@ -1,5 +1,6 @@
 // discord_app/modules/go_live/GoLiveAutoQualityExperiment.tsx
 import Storage3 from "../../../discord_common/js/packages/storage/Storage.tsx";
+import StreamActionCreators from "../../actions/StreamActionCreators.tsx";
 import ApexExperimentStore from "../experiments/apex/ApexExperimentStore.tsx";
 import ApplicationStreamingSettingsStore from "../../stores/ApplicationStreamingSettingsStore.tsx";
 import ApexExperiment from "../experiments/apex/ApexExperiment.tsx";
@@ -51,10 +52,10 @@ export const maybeMigrateToAutoQuality = function maybeMigrateToAutoQuality() {
           noTrack: true,
         };
         ({ resolution: obj2.resolution, fps: obj2.frameRate, soundshareEnabled: obj2.soundshareEnabled } = state);
-        tmp(4702).updateStreamSettings(obj);
-        const Storage2 = tmp(510).Storage;
+        StreamActionCreators.updateStreamSettings(obj);
+        const Storage2 = Storage3.Storage;
         const result = Storage2.set(GoLiveAutoQualityMigrationVersion, 1);
-        const tmpResult = tmp(4702);
+        const tmpResult = StreamActionCreators;
       }
     }
   }

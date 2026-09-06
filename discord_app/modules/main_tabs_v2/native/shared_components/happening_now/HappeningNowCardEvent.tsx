@@ -98,13 +98,9 @@ let items = [point];
 let closure_16 = noop.memo(() => {
   const tmp = closure_14();
   items = [];
-  let num = 0;
-  if (0 <= HAPPENING_NOW_CONTENT_HEIGHT) {
-    do {
-      let obj = { style: 0 === num ? tmp.shortDottedLineSegment : tmp.dottedLineSegment };
-      let arr = items.push(closure_1_12(React4, obj, num));
-      num = num + 8;
-    } while (num <= HAPPENING_NOW_CONTENT_HEIGHT);
+  for (let num = 0; num <= HAPPENING_NOW_CONTENT_HEIGHT; num = num + 8) {
+    let obj = { style: 0 === num ? tmp.shortDottedLineSegment : tmp.dottedLineSegment };
+    let arr = items.push(closure_1_12(React4, obj, num));
   }
   return items;
 });
@@ -165,7 +161,7 @@ export default noop.memo((event) => {
     obj.highlighted_user_ids = tmp4;
     obj.destination_channel_id = event.channel_id;
     obj.track(AnalyticEvents.ACTIVITY_CARD_CLICKED, obj);
-    obj = { eventId: tmp2.id, event: tmp2 };
+    obj = { eventId: event.id, event };
     const result = guild_scheduled_events_GuildScheduledEventModalActionCreators.openGuildEventDetails(obj);
   }, items4);
   if (null != event.image) {
@@ -174,13 +170,9 @@ export default noop.memo((event) => {
   }
   let startDateTimeString = event(creator_id[13]).getEventTimeData(event.scheduled_start_time).startDateTimeString;
   const items5 = [];
-  let num2 = 0;
-  if (0 < closure_10) {
-    do {
-      obj = { style: tmp.dottedLineSegment };
-      let arr = items5.push(closure_12(closure_4, obj, num2));
-      num2 = num2 + 8;
-    } while (num2 < closure_10);
+  for (let num2 = 0; num2 < closure_10; num2 = num2 + 8) {
+    obj = { style: tmp.dottedLineSegment };
+    let arr = items5.push(closure_12(closure_4, obj, num2));
   }
   obj = { onPress: callback, width: null, panelVariant: null, children: null };
   let str = "stretchy";
@@ -194,7 +186,7 @@ export default noop.memo((event) => {
   obj.panelVariant = panelVariant;
   const obj1 = { cutouts: items, children: null };
   const obj2 = { style: tmp.ticketContainer, children: null };
-  const obj3 = { style: tmp.avatarContainer, children: null };
+  let obj3 = { style: tmp.avatarContainer, children: null };
   let tmp22Result = null != stateFromStores1;
   const tmp19 = index(creator_id[19]);
   if (tmp22Result) {
@@ -204,7 +196,7 @@ export default noop.memo((event) => {
       guildId: event.guild_id,
       size: event(tmp18[9]).AvatarSizes.XSMALL_20,
     };
-    tmp22Result = tmp22(event(tmp18[9]).Avatar, obj4);
+    tmp22Result = closure_12(event(tmp18[9]).Avatar, obj4);
   }
   obj3.children = tmp22Result;
   const items6 = [closure_12(closure_4, obj3)];
@@ -217,7 +209,7 @@ export default noop.memo((event) => {
       variant: "text-xs/semibold",
       children: tmp25(tmp18[22]).humanizeValue(tmp9, stateFromStores),
     };
-    tmp22Result = tmp22(tmp25(tmp18[21]).Text, obj7);
+    tmp22Result = closure_12(tmp25(tmp18[21]).Text, obj7);
     const tmp25Result = tmp25(tmp18[22]);
   }
   items7[1] = tmp22Result;
@@ -227,8 +219,8 @@ export default noop.memo((event) => {
   const items8 = [closure_13(closure_4, obj2)];
   let tmp22Result1 = null == source;
   if (tmp22Result1) {
-    const obj8 = { style: tmp.dottedLineContainer, children: tmp22(closure_16, {}) };
-    tmp22Result1 = tmp22(tmp21, obj8);
+    const obj8 = { style: tmp.dottedLineContainer, children: closure_12(closure_16, {}) };
+    tmp22Result1 = closure_12(closure_4, obj8);
   }
   items8[1] = tmp22Result1;
   obj1.children = items8;
@@ -236,7 +228,7 @@ export default noop.memo((event) => {
   let tmp22Result2 = null != source;
   if (tmp22Result2) {
     const obj9 = { style: tmp.decorationImage, source, resizeMode: "cover" };
-    tmp22Result2 = tmp22(closure_5, obj9);
+    tmp22Result2 = closure_12(closure_5, obj9);
   }
   items9[1] = tmp22Result2;
   const obj10 = { style: null == source ? tmp.infoNoImage : tmp.info, children: null };

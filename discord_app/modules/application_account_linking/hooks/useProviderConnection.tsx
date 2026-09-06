@@ -25,7 +25,7 @@ export const useProviderConnection = function useProviderConnection(provider_id)
   if (tmp3) {
     tmp3 = !stateFromStores.revoked;
   }
-  _require = asyncGeneratorStep(async (arg0, value) => {
+  _require = asyncGeneratorStep(async (arg0) => {
     if (c6 === 2) {
       c6 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -59,8 +59,8 @@ export const useProviderConnection = function useProviderConnection(provider_id)
             } else {
               c5 = 1;
               let obj4 = ConnectedAccountsActionCreatorsDefault;
-              let _location = tmp26;
-              if (tmp26 == null) {
+              let _location = closure_0;
+              if (closure_0 == null) {
                 _location = "Account Linking";
               }
               const obj2 = { location: _location };

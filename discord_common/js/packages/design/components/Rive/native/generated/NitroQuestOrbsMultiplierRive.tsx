@@ -120,7 +120,7 @@ export const NitroQuestOrbsMultiplierRive = noop.forwardRef(
     let obj = { fallback: fallback.fallback, children: null };
     obj = { ref };
     const merged = Object.assign(fallback);
-    obj.children = <closure_10 ref={arg1} />;
+    obj.children = <closure_10 ref={ref} />;
     return jsx(RiveErrorBoundary.RiveErrorBoundary, { ref });
   },
 );

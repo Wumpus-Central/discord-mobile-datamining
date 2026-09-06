@@ -73,7 +73,7 @@ createStyles = {
             guild_id = channel.guild_id;
           }
           const guild = GuildStore.getGuild(guild_id);
-          let tmp3Result = tmp3(7267);
+          let tmp3Result = GuildOfficialMessageUtils;
           if (tmp3Result.isGuildOfficialMessagesEnabled(guild, "RowGeneratorUtils")) {
             let officialMessageColor;
             if (guild != null) {
@@ -85,7 +85,7 @@ createStyles = {
             if (message.mentioned) {
               let ephemeralGutterColor = tmp.mentionedGutterColor;
             } else {
-              tmp3Result = tmp3(4783);
+              tmp3Result = MessageRecordUtils;
               if (tmp3Result.hasEphemeralAppearance(message)) {
                 ephemeralGutterColor = tmp.ephemeralGutterColor;
               }
@@ -116,7 +116,7 @@ createStyles = {
   },
   createSwipeActions(canReply, arg1) {
     if (!canReply) {
-      return tmp.NONE;
+      return SwipeActionsType.NONE;
     }
   },
 };

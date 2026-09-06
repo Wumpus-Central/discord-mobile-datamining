@@ -96,7 +96,7 @@ export const LabeledActionButton = function LabeledActionButton(children) {
   let tmp4Result = iconPosition === obj2.LEFT;
   if (tmp4Result) {
     const obj4 = { source, style: imageStyle };
-    tmp4Result = tmp4(React2, obj4);
+    tmp4Result = React4(React2, obj4);
   }
   const items3 = [tmp4Result, ,];
   tmp4Result = null;
@@ -110,13 +110,13 @@ export const LabeledActionButton = function LabeledActionButton(children) {
     items4[1] = rightTextMargin;
     obj5.style = items4;
     obj5.children = label;
-    tmp4Result = tmp4(native.LegacyText, obj5);
+    tmp4Result = React4(native.LegacyText, obj5);
   }
   items3[1] = tmp4Result;
   let tmp4Result1 = iconPosition === tmp12.RIGHT;
   if (tmp4Result1) {
     const obj6 = { source, style: imageStyle };
-    tmp4Result1 = tmp4(React2, obj6);
+    tmp4Result1 = React4(React2, obj6);
   }
   items3[2] = tmp4Result1;
   obj3.children = items3;

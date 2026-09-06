@@ -13,7 +13,7 @@ const Constants = fn(1074);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_mod_dash_member_safety/MemberSafetyPermissionsUtils.tsx");
 
-export const getContextForPermission = function getContextForPermission(arg0, items) {
+export const getContextForPermission = function getContextForPermission(arg0) {
   let tmp = items;
   if (items === undefined) {
     items = [UserStore, closure_8];
@@ -22,6 +22,7 @@ export const getContextForPermission = function getContextForPermission(arg0, it
   [obj, obj2] = _slicedToArray(tmp, 2);
   const guild = obj.getGuild(arg0);
   const currentUser = obj2.getCurrentUser();
+  const tmp4 = _slicedToArray(tmp, 2);
 };
 export const canAccessMemberSafetyPage = function canAccessMemberSafetyPage(arg0) {
   let tmp = arg1;
@@ -53,7 +54,7 @@ export const hasBulkBanningPermissions = function hasBulkBanningPermissions(arg0
   const currentUser = obj2.getCurrentUser();
   return false;
 };
-export const canPruneGuildMembers = function canPruneGuildMembers(guild, currentUser, PermissionStore) {
+export const canPruneGuildMembers = function canPruneGuildMembers(guild, currentUser) {
   let obj = PermissionStore;
   if (PermissionStore === undefined) {
     obj = PermissionStore;

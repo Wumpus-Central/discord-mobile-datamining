@@ -22,7 +22,7 @@ class NetworkTtlCache {
 }
 const prototype = NetworkTtlCache.prototype;
 prototype["setTtl"] = function setTtl(c6) {
-  this.ttlMs = c6;
+  this.ttlMs = ttlMs;
 };
 prototype["setLoading"] = function setLoading() {
   this.fetchState = constants.LOADING;
@@ -89,11 +89,11 @@ prototype["getStatus"] = function getStatus() {
   const fetchState = this.fetchState;
   if (constants.IDLE === fetchState) {
     return obj.IDLE;
-  } else if (tmp.LOADING === fetchState) {
+  } else if (constants.LOADING === fetchState) {
     return obj.LOADING;
-  } else if (tmp.ERROR === fetchState) {
+  } else if (constants.ERROR === fetchState) {
     return obj.ERROR;
-  } else if (tmp.SUCCESS === fetchState) {
+  } else if (constants.SUCCESS === fetchState) {
     return self.isExpired() ? obj.STALE : obj.VALID;
   }
 };

@@ -32,9 +32,9 @@ let closure_6 = createStyles.createStyles((arg0) => {
   obj1.width = "100%";
   obj.container = obj1;
   if (obj.RED === arg0) {
-    let TEXT_FEEDBACK_WARNING = tmp6(576).colors.TEXT_FEEDBACK_CRITICAL;
+    let TEXT_FEEDBACK_WARNING = nativeDefault.colors.TEXT_FEEDBACK_CRITICAL;
   } else if (tmp.YELLOW === arg0) {
-    TEXT_FEEDBACK_WARNING = tmp6(576).colors.TEXT_FEEDBACK_WARNING;
+    TEXT_FEEDBACK_WARNING = nativeDefault.colors.TEXT_FEEDBACK_WARNING;
   }
   obj.text = { textAlign: "center", color: TEXT_FEEDBACK_WARNING };
   return obj;
@@ -47,6 +47,6 @@ export default function MessageBlock(children) {
   let obj = { style: tmp.container, children: null };
   obj = { style: tmp.text, children: children.children };
   obj.children = jsx(native.LegacyText, { style: tmp.text, children: children.children });
-  return <View style={tmp.text}>{arg0.children}</View>;
+  return <View style={tmp.text}>{children.children}</View>;
 }
 export { MessageBlockColors };

@@ -11,10 +11,10 @@ const result = size.fileFinishedImporting("modules/quests/native/QuestDock/Quest
 export const getCreativeAnalyticsParams = function getCreativeAnalyticsParams(creative) {
   const type = creative.type;
   if (AdCreativeType.AdCreativeType.QUEST === type) {
-    let obj = { adCreativeType: tmp(5451).AdCreativeType.QUEST, adCreativeId: creative.quest.id };
+    let obj = { adCreativeType: AdCreativeType.AdCreativeType.QUEST, adCreativeId: creative.quest.id };
     return obj;
-  } else if (tmp(5451).AdCreativeType.BOUNTY === type) {
-    obj = { adCreativeType: tmp(5451).AdCreativeType.BOUNTY, adCreativeId: creative.bounty.id };
+  } else if (AdCreativeType.AdCreativeType.BOUNTY === type) {
+    obj = { adCreativeType: AdCreativeType.AdCreativeType.BOUNTY, adCreativeId: creative.bounty.id };
     return obj;
   }
 };
@@ -29,9 +29,9 @@ export const getDeliveredAdCreativeId = function getDeliveredAdCreativeId(type) 
   type = type.type;
   if (AdCreativeType.AdCreativeType.QUEST === type) {
     return type.quest.id;
-  } else if (tmp(5451).AdCreativeType.BOUNTY === type) {
+  } else if (AdCreativeType.AdCreativeType.BOUNTY === type) {
     return type.bounty.id;
-  } else if (tmp(5451).AdCreativeType.NO_FILL === type) {
+  } else if (AdCreativeType.AdCreativeType.NO_FILL === type) {
     return null;
   }
 };
@@ -40,7 +40,7 @@ export const QuestDockQuestProvider = function QuestDockQuestProvider(children) 
   const items = [quest];
   return (
     <redux.Provider value={noop.useMemo(() => ({ type: AdCreativeType.AdCreativeType.QUEST, quest }), items)}>
-      {arg0.children}
+      {children.children}
     </redux.Provider>
   );
 };
@@ -49,7 +49,7 @@ export const QuestDockBountyProvider = function QuestDockBountyProvider(bounty) 
   const items = [bounty];
   return (
     <redux.Provider value={noop.useMemo(() => ({ type: AdCreativeType.AdCreativeType.BOUNTY, bounty }), items)}>
-      {arg0.children}
+      {bounty.children}
     </redux.Provider>
   );
 };

@@ -186,12 +186,12 @@ export const PremiumSearchUpsell = noop.memo((analyticsLocations) => {
   obj = { style: tmp.premiumSearchUpsellContent, children: null };
   if (mobileEmojiPickerUpsellRestyleEnabled1) {
     obj = { size: "sm", color: tmp5(tmp3[7]).colors.INTERACTIVE_TEXT_ACTIVE, style: tmp.nitroIcon };
-    let tmp13Result = tmp13(tmp2(tmp3[18]).NitroWheelIcon, obj);
-    let tmp15 = tmp13;
+    let tmp13Result = closure_12(tmp2(tmp3[18]).NitroWheelIcon, obj);
+    let tmp15 = closure_12;
   } else {
     obj1 = { style: tmp.nitroIcon, source: tmp5(tmp3[20]), disableColor: true, size: tmp2(tmp3[19]).Icon.Sizes.MEDIUM };
-    tmp13Result = tmp13(tmp2(tmp3[19]).Icon, obj1);
-    tmp15 = tmp13;
+    tmp13Result = closure_12(tmp2(tmp3[19]).Icon, obj1);
+    tmp15 = closure_12;
   }
   const items2 = [tmp13Result];
   const intl = tmp2(tmp3[22]).intl;

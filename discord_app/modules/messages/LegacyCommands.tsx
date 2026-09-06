@@ -66,7 +66,7 @@ COMMANDS.action = function action(str, channel) {
   channel = channel.channel;
   if (!channel.isEdit) {
     if (MessageStore.hasPresent(channel.id)) {
-      const messages = obj.getMessages(channel.id);
+      const messages = MessageStore.getMessages(channel.id);
       const lastResult = messages.last();
       if (null != lastResult) {
         if (null != lastResult.id) {
@@ -81,7 +81,6 @@ COMMANDS.action = function action(str, channel) {
         }
       }
     }
-    obj = MessageStore;
   }
 };
 COMMANDS.reaction = COMMANDS;

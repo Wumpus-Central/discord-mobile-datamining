@@ -11,11 +11,13 @@ import actions_AlertActionCreatorsDefault from "../../../../actions/native/Alert
 import common_AlertDefault from "../../../../components_native/common/Alert.tsx";
 import GroupIcon from "../../../../design/components/Icon/native/redesign/generated/GroupIcon.tsx";
 import GuildIconDefault from "../../../guild/native/GuildIcon.tsx";
+import ClipboardUtils from "../../../../utils/ClipboardUtils.native.tsx";
 import ScheduleUtils from "../../utils/ScheduleUtils.tsx";
 import GuildScheduledEventModalActionCreators from "../GuildScheduledEventModalActionCreators.tsx";
 import guildEventDetailsParser from "../../guildEventDetailsParser.native.tsx";
 import useCanInviteForGuildEventDefault from "../../useCanInviteForGuildEvent.tsx";
 import ThrottledButtonDefault from "ThrottledButton.tsx";
+import getGuildEventImageDefault from "../../utils/getGuildEventImage.tsx";
 import useGuildScheduledEventUserCountDefault from "../../useGuildScheduledEventUserCount.tsx";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
@@ -28,7 +30,6 @@ import PermissionStore from "../../../../stores/PermissionStore.tsx";
 import UserStore from "../../../../stores/UserStore.tsx";
 import GuildScheduledEventStore from "../../GuildScheduledEventStore.tsx";
 
-const getGuildEventImageDefault = tmp2(9779);
 require = fn;
 function usePrimaryActionButtonType(event, isConnected) {
   _require = event;
@@ -38,7 +39,7 @@ function usePrimaryActionButtonType(event, isConnected) {
   const items1 = [GuildStore];
   const stateFromStores = require("initialize").useStateFromStores(items1, () => GuildStore.getGuild(importDefault));
   const obj = require("initialize");
-  const tmp3 = GuildStore;
+  const tmp = _require;
   const items2 = [ChannelStore];
   const items3 = [channel_id];
   let stateFromStores1 = require("initialize").useStateFromStores(
@@ -54,14 +55,14 @@ function usePrimaryActionButtonType(event, isConnected) {
     .useManageResourcePermissions(stateFromStores1)
     .canManageGuildEvent(event);
   const obj3 = require("useManageResourcePermissions");
-  const items4 = [tmp3];
+  const items4 = [GuildStore];
   if (tmpResult.useStateFromStores(items4, () => null != GuildStore.getGuild(event.guild_id))) {
     if (closure_15(event)) {
       let RSVP = obj12.ENDED;
     } else if (closure_16(event)) {
       if (event.entity_type !== constants.EXTERNAL) {
         if (!isConnected) {
-          const JOIN = tmp14.JOIN;
+          const JOIN = obj12.JOIN;
         }
       }
     } else {
@@ -75,6 +76,7 @@ function usePrimaryActionButtonType(event, isConnected) {
   } else {
     return obj12.JOIN_GUILD;
   }
+  tmpResult = tmp(channel_id[26]);
 }
 class GuildEventCardRSVPAction {
   constructor(arg0) {
@@ -135,7 +137,7 @@ class GuildEventJoinAndRSVPAction {
     closure_1 = undefined;
     closure_2 = undefined;
     closure_3 = undefined;
-    closure_4 = async function _handleJoinGuild(items2, value) {
+    closure_4 = async function _handleJoinGuild(items2) {
       if (c4 === 2) {
         c4 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -473,10 +475,10 @@ export const GuildEventShareAction = function GuildEventShareAction(event) {
   obj.accessibilityLabel = "" + intl.string(event(1114).t.RDE0Sc) + ", " + event.name;
   obj.onPress = function onPress() {
     if (closure_1) {
-      let tmpResult = tmp(9698);
+      let tmpResult = GuildScheduledEventModalActionCreators;
       tmpResult.openShareEvent(event);
     } else {
-      tmpResult = tmp(7190);
+      tmpResult = ClipboardUtils;
       tmpResult.copy(closure_2);
       ToastUtils.presentLinkCopied();
     }
@@ -585,7 +587,7 @@ export const GuildEventCardPrimaryAction = noop.memo(function GuildEventCardPrim
   let obj = event(recurrenceId[26]);
   const items = [ChannelStore];
   const items1 = [channel_id];
-  closure_5 = obj.useStateFromStores(items, () => ChannelStore.getChannel(channel_id), items1);
+  const id = obj.useStateFromStores(items, () => ChannelStore.getChannel(channel_id), items1);
   closure_6 = channel_id(require("useSelectStage")(), 2)[1];
   const tmp4 = usePrimaryActionButtonType(event, event.isConnected);
   let obj1 = event(recurrenceId[26]);
@@ -593,30 +595,30 @@ export const GuildEventCardPrimaryAction = noop.memo(function GuildEventCardPrim
   const stateFromStores = obj1.useStateFromStores(items2, () => PermissionStore.can(constants2.CONNECT, closure_5));
   if (obj12.ENDED === tmp4) {
     obj = { variant: "secondary", text: null, accessibilityLabel: null, grow: true, disabled: true, onPress: null };
-    let tmp3Result = tmp3(tmp2[31]);
-    const intl10 = tmp(tmp2[20]).intl;
-    obj.text = intl10.string(tmp(tmp2[20]).t.Pj7Xrv);
-    const intl11 = tmp(tmp2[20]).intl;
+    let tmp3Result = require("ThrottledButton");
+    const intl10 = tmp(recurrenceId[20]).intl;
+    obj.text = intl10.string(tmp(recurrenceId[20]).t.Pj7Xrv);
+    const intl11 = tmp(recurrenceId[20]).intl;
     const _HermesInternal6 = HermesInternal;
-    obj.accessibilityLabel = "" + intl11.string(tmp(tmp2[20]).t.Pj7Xrv) + ", " + event.name;
+    obj.accessibilityLabel = "" + intl11.string(tmp(recurrenceId[20]).t.Pj7Xrv) + ", " + event.name;
     obj.onPress = onPress;
     return closure_22(tmp3Result, obj);
   } else {
     function handleListenIn() {
-      if (null != closure_5) {
+      if (null != id) {
         if (event.entity_type === constants.STAGE_INSTANCE) {
-          closure_6(c3, tmp.id);
+          closure_6(c3, id.id);
         }
-        PrivateChannelCallUtils.openGuildVoiceModal(tmp);
+        PrivateChannelCallUtils.openGuildVoiceModal(id);
         if (importDefault != null) {
           importDefault();
         }
       }
     }
-    if (tmp6.JOIN === tmp4) {
-      const intl9 = tmp(tmp2[20]).intl;
+    if (obj12.JOIN === tmp4) {
+      const intl9 = tmp(recurrenceId[20]).intl;
       const string = intl9.string;
-      const t = tmp(tmp2[20]).t;
+      const t = tmp(recurrenceId[20]).t;
       if (stateFromStores) {
         let stringResult = string(t.ZYO5OK);
       } else {
@@ -631,38 +633,38 @@ export const GuildEventCardPrimaryAction = noop.memo(function GuildEventCardPrim
         grow: true,
       };
       const _HermesInternal5 = HermesInternal;
-      tmp3Result = tmp3(tmp2[31]);
+      tmp3Result = require("ThrottledButton");
       obj.accessibilityLabel = "" + stringResult + ", " + event.name;
       obj.onPress = handleListenIn;
       obj.disabled = !stateFromStores;
       return closure_22(tmp3Result, obj);
-    } else if (tmp6.CONNECTED === tmp4) {
+    } else if (obj12.CONNECTED === tmp4) {
       obj1 = { variant: "active", text: null, accessibilityLabel: null, onPress: null, grow: true };
-      const intl7 = tmp(tmp2[20]).intl;
-      obj1.text = intl7.string(tmp(tmp2[20]).t.aW2YlJ);
-      const intl8 = tmp(tmp2[20]).intl;
+      const intl7 = tmp(recurrenceId[20]).intl;
+      obj1.text = intl7.string(tmp(recurrenceId[20]).t.aW2YlJ);
+      const intl8 = tmp(recurrenceId[20]).intl;
       const _HermesInternal4 = HermesInternal;
-      obj1.accessibilityLabel = "" + intl8.string(tmp(tmp2[20]).t.aW2YlJ) + ", " + event.name;
+      obj1.accessibilityLabel = "" + intl8.string(tmp(recurrenceId[20]).t.aW2YlJ) + ", " + event.name;
       obj1.onPress = handleListenIn;
-      return closure_22(tmp3(tmp2[31]), obj1);
-    } else if (tmp6.RSVP === tmp4) {
+      return closure_22(require("ThrottledButton"), obj1);
+    } else if (obj12.RSVP === tmp4) {
       const obj2 = { event, recurrenceId };
       return closure_22(GuildEventCardRSVPAction, obj2);
-    } else if (tmp6.START === tmp4) {
+    } else if (obj12.START === tmp4) {
       const obj3 = { variant: "active", text: null, accessibilityLabel: null, onPress: null, grow: true };
-      const intl5 = tmp(tmp2[20]).intl;
-      obj3.text = intl5.string(tmp(tmp2[20]).t.cK1GGY);
-      const intl6 = tmp(tmp2[20]).intl;
+      const intl5 = tmp(recurrenceId[20]).intl;
+      obj3.text = intl5.string(tmp(recurrenceId[20]).t.cK1GGY);
+      const intl6 = tmp(recurrenceId[20]).intl;
       const _HermesInternal3 = HermesInternal;
-      obj3.accessibilityLabel = "" + intl6.string(tmp(tmp2[20]).t.cK1GGY) + ", " + event.name;
+      obj3.accessibilityLabel = "" + intl6.string(tmp(recurrenceId[20]).t.cK1GGY) + ", " + event.name;
       obj3.onPress = function handleStartEvent() {
         if (importDefault != null) {
           tmp();
         }
         const result = GuildScheduledEventModalActionCreators.openStartGuildEventModal(event, recurrenceId);
       };
-      return closure_22(tmp3(tmp2[31]), obj3);
-    } else if (tmp6.STARTED === tmp4) {
+      return closure_22(require("ThrottledButton"), obj3);
+    } else if (obj12.STARTED === tmp4) {
       const obj4 = {
         variant: "secondary",
         text: null,
@@ -671,20 +673,20 @@ export const GuildEventCardPrimaryAction = noop.memo(function GuildEventCardPrim
         disabled: true,
         onPress: null,
       };
-      let intl3 = tmp(tmp2[20]).intl;
-      obj4.text = intl3.string(tmp(tmp2[20]).t.Yz0V6O);
-      let intl4 = tmp(tmp2[20]).intl;
+      let intl3 = tmp(recurrenceId[20]).intl;
+      obj4.text = intl3.string(tmp(recurrenceId[20]).t.Yz0V6O);
+      let intl4 = tmp(recurrenceId[20]).intl;
       const _HermesInternal2 = HermesInternal;
-      obj4.accessibilityLabel = "" + intl4.string(tmp(tmp2[20]).t.Yz0V6O) + ", " + event.name;
+      obj4.accessibilityLabel = "" + intl4.string(tmp(recurrenceId[20]).t.Yz0V6O) + ", " + event.name;
       obj4.onPress = onPress;
-      return closure_22(tmp3(tmp2[31]), obj4);
-    } else if (tmp6.END === tmp4) {
+      return closure_22(require("ThrottledButton"), obj4);
+    } else if (obj12.END === tmp4) {
       const obj5 = { variant: "secondary", text: null, accessibilityLabel: null, onPress: null, grow: true };
-      let intl = tmp(tmp2[20]).intl;
-      obj5.text = intl.string(tmp(tmp2[20]).t.qaYzPA);
-      let intl2 = tmp(tmp2[20]).intl;
+      let intl = tmp(recurrenceId[20]).intl;
+      obj5.text = intl.string(tmp(recurrenceId[20]).t.qaYzPA);
+      let intl2 = tmp(recurrenceId[20]).intl;
       const _HermesInternal = HermesInternal;
-      obj5.accessibilityLabel = "" + intl2.string(tmp(tmp2[20]).t.qaYzPA) + ", " + event.name;
+      obj5.accessibilityLabel = "" + intl2.string(tmp(recurrenceId[20]).t.qaYzPA) + ", " + event.name;
       obj5.onPress = function handleEndEvent() {
         const obj = {
           title: null,
@@ -708,12 +710,13 @@ export const GuildEventCardPrimaryAction = noop.memo(function GuildEventCardPrim
         obj.confirmColor = common_AlertDefault.Colors.RED;
         obj.show(obj);
       };
-      return closure_22(tmp3(tmp2[31]), obj5);
-    } else if (tmp6.JOIN_GUILD === tmp4) {
+      return closure_22(require("ThrottledButton"), obj5);
+    } else if (obj12.JOIN_GUILD === tmp4) {
       const obj6 = { event, recurrenceId };
       return closure_22(GuildEventJoinAndRSVPAction, obj6);
     } else {
-      tmp(tmp2[40]).assertNever(tmp4);
+      tmp(recurrenceId[40]).assertNever(tmp4);
+      const tmpResult = tmp(recurrenceId[40]);
     }
   }
 });
@@ -825,10 +828,9 @@ export const GuildEventCardHeader = function GuildEventCardHeader(event) {
         onPress: function handleOpenRSVPList() {},
         children: tmp18,
       };
-      tmp16Result = tmp16(tmp13(tmp3[51]).PressableOpacity, obj2);
+      tmp16Result = closure_22(tmp13(tmp3[51]).PressableOpacity, obj2);
     }
     tmp15 = tmp16Result;
-    tmp16 = closure_22;
   }
   const tmp5 = require("useEventException");
   const tmp7 = undefined !== is_canceled && is_canceled;
@@ -866,12 +868,12 @@ export const GuildEventCardHeader = function GuildEventCardHeader(event) {
   obj4.style = items3;
   if (flag4) {
     const obj5 = { containerStyle: tmp.newBadge, variant: "text-xs/bold" };
-    let tmp25Result = tmp25(tmp13(tmp3[45]).NewTag, obj5);
-    let tmp27 = tmp25;
+    let tmp25Result = closure_22(tmp13(tmp3[45]).NewTag, obj5);
+    let tmp27 = closure_22;
   } else {
     const obj6 = { size: "sm", color, style: tmp.dateIcon };
-    tmp25Result = tmp25(tmp13(tmp3[53]).CalendarIcon, obj6);
-    tmp27 = tmp25;
+    tmp25Result = closure_22(tmp13(tmp3[53]).CalendarIcon, obj6);
+    tmp27 = closure_22;
   }
   const items4 = [tmp25Result, , ,];
   const obj7 = { style: tmp.dateContainer, children: null };
@@ -1100,7 +1102,7 @@ export const GuildEventCardGuildInfo = function GuildEventCardGuildInfo(event) {
           style: tmp.channelIcon,
           disableColor: true,
         };
-        tmp14Result = tmp14(tmp2(tmp3[45]).Icon, obj5);
+        tmp14Result = closure_22(tmp2(tmp3[45]).Icon, obj5);
       }
       const items8 = [tmp14Result];
       const obj6 = {
@@ -1109,9 +1111,9 @@ export const GuildEventCardGuildInfo = function GuildEventCardGuildInfo(event) {
         color: "text-default",
         children: tmp10,
       };
-      items8[1] = tmp14(tmp2(tmp3[52]).Text, obj6);
+      items8[1] = closure_22(tmp2(tmp3[52]).Text, obj6);
       obj3.children = items8;
-      tmp12Result = tmp12(tmp13, obj3);
+      tmp12Result = closure_23(closure_6, obj3);
     }
     items7[1] = tmp12Result;
     obj1.children = items7;

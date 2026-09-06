@@ -16,7 +16,7 @@ export default function useCreatorMonetizationOnboardingMarketing(arg0) {
   [tmp4, dependencyMap] = callback(noop.useState(), 2);
   const creatorMonetizationOnboardingMarketing = callback(noop.useState(), 2);
   asyncGeneratorStep = creatorMonetizationOnboardingMarketing[1];
-  closure_0 = asyncGeneratorStep(async (arg0, value) => {
+  closure_0 = asyncGeneratorStep(async (arg0) => {
     if (c6 === 2) {
       c6 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");

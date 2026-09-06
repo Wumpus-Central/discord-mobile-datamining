@@ -23,7 +23,7 @@ export default function FastAssetImage(style) {
   const source = noop.useMemo(() => {
     let application_id;
     if (asset != null) {
-      application_id = tmp.application_id;
+      application_id = asset.application_id;
     }
     if (application_id == null) {
       application_id = applicationId;
@@ -34,7 +34,7 @@ export default function FastAssetImage(style) {
       if (null != application_id) {
         uri = "";
         if (null != first) {
-          uri = StoreUtils.getAssetURL(application_id, tmp, tmp3);
+          uri = StoreUtils.getAssetURL(application_id, asset, tmp3);
         }
       }
     }

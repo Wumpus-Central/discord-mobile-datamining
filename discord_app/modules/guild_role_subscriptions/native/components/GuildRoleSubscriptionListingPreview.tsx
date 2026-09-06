@@ -52,8 +52,6 @@ function Header(onPress) {
   ];
   obj = { style: tmp.image, source: null };
   const obj4 = GuildRoleSubscriptionListingEditStateUtilsAll;
-  const tmp3 = React5;
-  const tmp4 = View;
   if (str == null) {
     str = "";
   }
@@ -70,7 +68,7 @@ function Header(onPress) {
     children: _slicedToArray(obj4.useDescription(listingId), 1)[0],
   });
   obj.children = items;
-  return tmp3(tmp4, obj);
+  return React5(View, obj);
 }
 function Content(arg0) {
   ({ children, noBackground, style } = arg0);
@@ -244,21 +242,21 @@ export const GuildRoleSubscriptionListingPreview = function GuildRoleSubscriptio
   let tmp4Result = first.length > 0;
   if (tmp4Result) {
     obj2 = { children: null };
-    const items1 = [tmp6(Separator, {})];
-    obj3 = { guildId, benefits: first, label: tmp8(1114).t.sqjII9, listingId };
-    items1[1] = tmp6(BenefitsSection, obj3);
+    const items1 = [timestampProducer(Separator, {})];
+    obj3 = { guildId, benefits: first, label: util.t.sqjII9, listingId };
+    items1[1] = timestampProducer(BenefitsSection, obj3);
     obj2.children = items1;
-    tmp4Result = tmp4(React6, obj2);
+    tmp4Result = React5(React6, obj2);
   }
   items[2] = tmp4Result;
   tmp4Result = first1.length > 0;
   if (tmp4Result) {
     const obj4 = { children: null };
-    const items2 = [tmp6(Separator, {})];
-    const obj5 = { guildId, benefits: first1, label: tmp8(1114).t.aBE7f9, listingId };
-    items2[1] = tmp6(BenefitsSection, obj5);
+    const items2 = [timestampProducer(Separator, {})];
+    const obj5 = { guildId, benefits: first1, label: util.t.aBE7f9, listingId };
+    items2[1] = timestampProducer(BenefitsSection, obj5);
     obj4.children = items2;
-    tmp4Result = tmp4(React6, obj4);
+    tmp4Result = React5(React6, obj4);
   }
   items[3] = tmp4Result;
   items[4] = timestampProducer(Content, { style: tmp.footer });

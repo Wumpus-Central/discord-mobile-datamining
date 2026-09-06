@@ -46,7 +46,7 @@ export default function TransferOwnershipModal(guild) {
         const id = arg0;
         c2 = 0;
         c1 = 0;
-        return (function* (arg0, value) {
+        return (function* (arg0) {
           yield toUser(9063).transferOwnership(id.id, id2.id, constants.EMAIL, id);
           return value;
         })();
@@ -68,7 +68,7 @@ export default function TransferOwnershipModal(guild) {
         const obj2 = toUser(9063);
         const result = closure_0(4258).showTransferOwnershipSuccess();
       };
-      obj.onResend = closure_1_3(function* (arg0, value) {
+      obj.onResend = closure_1_3(function* () {
         if (c0 === 2) {
           c0 = 3;
           throw new TypeError("Generator functions may not be called on executing generators");

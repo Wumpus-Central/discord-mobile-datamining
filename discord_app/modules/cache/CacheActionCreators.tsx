@@ -3,7 +3,7 @@ import DispatcherDefault from "../../Dispatcher.tsx";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 import CacheStore from "CacheStore.tsx";
 
-let closure_5 = async function _writeCaches(arg0, value) {
+let closure_5 = async function _writeCaches() {
   if (1 === tmp5) {
     if (arg0 === 1) {
       c4 = 3;

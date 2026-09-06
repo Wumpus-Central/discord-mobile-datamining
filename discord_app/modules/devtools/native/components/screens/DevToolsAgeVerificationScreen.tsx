@@ -36,9 +36,9 @@ let closure_9 = async function _showAgeVerificationTestModal() {
     closure_129_1(closure_129_2[8]);
   } else if (arg0 === 1) {
     c5 = 3;
-    throw arg1;
+    throw value;
   } else if (arg0 !== 2) {
-    closure_128_0 = arg1;
+    closure_128_0 = value;
     obj2 = {
       webviewUrl: closure_128_0.verification_webview_url,
       verificationRequestId: closure_128_0.verification_request_id,
@@ -56,7 +56,7 @@ let closure_9 = async function _showAgeVerificationTestModal() {
     c3 = 0;
     closure_129_1(closure_129_2[7]);
   }
-  return arg1;
+  return value;
 };
 const ScrollView = fn(17).ScrollView;
 const jsxProd = fn(21);

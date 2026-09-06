@@ -22,8 +22,8 @@ function ConnectedInAppNotificationSettingsScreen(channel) {
     isMuted: obj.useStateFromStores(items, () => {
       let isChannelMutedResult;
       if (null != channel) {
-        if (isMultiUserDM(obj.type)) {
-          isChannelMutedResult = UserGuildSettingsStore.isChannelMuted(obj.getGuildId(), obj.id);
+        if (isMultiUserDM(channel.type)) {
+          isChannelMutedResult = UserGuildSettingsStore.isChannelMuted(channel.getGuildId(), channel.id);
         }
       }
       return isChannelMutedResult;
@@ -96,9 +96,9 @@ prototype["renderChannelNotificationSettings"] = function renderChannelNotificat
     if (constants.GROUP_DM === type) {
       return self.renderGroupDMNotificationSettings();
     } else {
-      if (tmp.GUILD_TEXT !== type) {
-        if (tmp.GUILD_ANNOUNCEMENT !== type) {
-          if (tmp.GUILD_APP !== type) {
+      if (constants.GUILD_TEXT !== type) {
+        if (constants.GUILD_ANNOUNCEMENT !== type) {
+          if (constants.GUILD_APP !== type) {
             return null;
           }
         }
@@ -145,7 +145,7 @@ export default noop.memo((channelId) => {
         let channelName = null;
         if (null != closure_0) {
           const tmp3Result = channelId(4713);
-          channelName = tmp3Result.computeChannelName(tmp, UserStore, RelationshipStore, true);
+          channelName = tmp3Result.computeChannelName(closure_0, UserStore, RelationshipStore, true);
         }
         obj.subtitle = channelName;
         return closure_2_11(channelId(5624).NavigatorHeader, obj);

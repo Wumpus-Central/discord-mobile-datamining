@@ -26,8 +26,8 @@ export default {
   fromTimestamp(arg0) {
     return utils_SnowflakeUtilsAll.fromTimestamp(arg0);
   },
-  fromTimestampWithSequence(arg0, arg1) {
-    return utils_SnowflakeUtilsAll.fromTimestampWithSequence(arg0, arg1);
+  fromTimestampWithSequence(arg0, next) {
+    return utils_SnowflakeUtilsAll.fromTimestampWithSequence(arg0, next);
   },
   keys(arg0) {
     return Object.keys(arg0);

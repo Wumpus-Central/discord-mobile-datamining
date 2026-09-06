@@ -7,6 +7,7 @@ import usePipVideoOrStream from "../modules/video_calls/native/usePipVideoOrStre
 import VoicePanelUtils from "../modules/voice_panel/VoicePanelUtils.native.tsx";
 import AccessibilityManagerDefault from "../modules/a11y/native/AccessibilityManager.tsx";
 import KeyCommandsView from "../modules/keyboard/native/KeyCommandsView.tsx";
+import NativeKeyCommandsModuleDefault from "../../discord_common/js/packages/rtn-codegen/js/NativeKeyCommandsModule.tsx";
 import PictureInPictureGlobalDefault from "../modules/video_calls/native/components/PictureInPictureGlobal.tsx";
 import BurstReactionAnimationContainerDefault from "../modules/messages/native/burst_reactions/BurstReactionAnimationContainer.tsx";
 import NativeMenuPresenterDefault from "../modules/native_menu/native/NativeMenuPresenter.tsx";
@@ -59,8 +60,7 @@ export const useAppKeyCommands = function useAppKeyCommands() {
   const memo = noop.useMemo(() => {
     let obj = PlatformUtils;
     if (obj.isAndroid()) {
-      let keyModifierCommand = require("NativeKeyCommandsModule").getConstants().keyModifierCommand;
-      const obj2 = require("NativeKeyCommandsModule");
+      let keyModifierCommand = NativeKeyCommandsModuleDefault.getConstants().keyModifierCommand;
     } else {
       keyModifierCommand = KeyCommandsView.KeyCommandsView.keyModifierCommand;
     }
@@ -71,7 +71,7 @@ export const useAppKeyCommands = function useAppKeyCommands() {
       discoverabilityTitle: null,
       onKeyCommand: null,
     };
-    const intl = tmp(tmp2[12]).intl;
+    const intl = util.intl;
     obj.discoverabilityTitle = intl.string(util.t.yYsRlD);
     obj.onKeyCommand = function onKeyCommand() {
       closure_1_1(closure_1_2[13])();

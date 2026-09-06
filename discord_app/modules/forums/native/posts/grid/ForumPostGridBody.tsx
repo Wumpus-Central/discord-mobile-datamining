@@ -225,8 +225,8 @@ export default function ForumPostGridBody(thread) {
   if (tmp13Result) {
     const obj1 = { style: tmp.footerLeftContainer, children: null };
     const obj2 = { appliedTags: first, additionalTagsCount: tmp4[1], hasUnreads: thread.hasUnreads };
-    obj1.children = tmp13(thread(12013).ForumPostAppliedTagPills, obj2);
-    tmp13Result = tmp13(tmp12, obj1);
+    obj1.children = closure_6(thread(12013).ForumPostAppliedTagPills, obj2);
+    tmp13Result = closure_6(View, obj1);
   }
   items6[1] = tmp13Result;
   let tmp11Result = containsGif;
@@ -236,25 +236,25 @@ export default function ForumPostGridBody(thread) {
   if (tmp11Result) {
     const obj3 = { style: tmp.headerLeftContainer, children: null };
     if (containsGif) {
-      const obj4 = { style: tmp.mediaIconContainer, children: tmp13(GIFIcon, {}) };
-      containsGif = tmp13(tmp12, obj4);
+      const obj4 = { style: tmp.mediaIconContainer, children: closure_6(GIFIcon, {}) };
+      containsGif = closure_6(View, obj4);
     }
     const items7 = [containsGif];
     if (containsVideo) {
-      const obj5 = { style: tmp.mediaIconContainer, children: tmp13(PlayIcon, {}) };
-      containsVideo = tmp13(tmp12, obj5);
+      const obj5 = { style: tmp.mediaIconContainer, children: closure_6(PlayIcon, {}) };
+      containsVideo = closure_6(View, obj5);
     }
     items7[1] = containsVideo;
     obj3.children = items7;
-    tmp11Result = tmp11(tmp12, obj3);
+    tmp11Result = closure_7(View, obj3);
   }
   items6[2] = tmp11Result;
   tmp13Result = 0 !== bound;
   if (tmp13Result) {
     const obj6 = { style: tmp.footerRightContainer, children: null };
     const obj7 = { extraMediaCount: bound };
-    obj6.children = tmp13(ExtraMediaIcon, obj7);
-    tmp13Result = tmp13(tmp12, obj6);
+    obj6.children = closure_6(ExtraMediaIcon, obj7);
+    tmp13Result = closure_6(View, obj6);
   }
   items6[3] = tmp13Result;
   obj.children = items6;

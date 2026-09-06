@@ -126,7 +126,7 @@ export default function StickerPickerListRow(stickers) {
     }
     try {
       let obj1 = { style: tmp6.row, rowData: null, onPressSticker: null, onLongPressSticker: null };
-      const obj2 = { rowContentWidth: tmp3, rowContentPaddingVertical: handleOnLongPressSticker, itemSize, items };
+      let obj2 = { rowContentWidth: tmp3, rowContentPaddingVertical: handleOnLongPressSticker, itemSize, items };
       obj1.rowData = obj2;
       obj1.onPressSticker = function onPressSticker(arg0) {
         const nativeEvent = arg0;
@@ -170,7 +170,7 @@ export default function StickerPickerListRow(stickers) {
           stickers = tmp2;
           if (undefined === stickers[c10]) {
             let obj = { style: closure_6.stickerImage };
-            items.push(items(View, obj, tmp));
+            items.push(items(View, obj, c10));
             return 1;
           } else {
             id = undefined;
@@ -180,8 +180,12 @@ export default function StickerPickerListRow(stickers) {
             items = [stickers(dependencyMap[13]).shouldAnimateSticker(size, tmp2.id === id), ,];
             let isSendableStickerResult = null == closure_5;
             if (!isSendableStickerResult) {
-              isSendableStickerResult = tmp25(tmp26[14]).isSendableSticker(tmp2, currentUser.getCurrentUser(), tmp4);
-              const tmp25Result = tmp25(tmp26[14]);
+              isSendableStickerResult = tmp25(dependencyMap[14]).isSendableSticker(
+                tmp2,
+                currentUser.getCurrentUser(),
+                tmp4,
+              );
+              const tmp25Result = tmp25(dependencyMap[14]);
             }
             items[1] = isSendableStickerResult;
             items[2] = null == closure_1;
@@ -197,6 +201,7 @@ export default function StickerPickerListRow(stickers) {
                 if (importDefault != null) {
                   importDefault(closure_0);
                 }
+                const obj = closure_0(4528);
               },
               onLongPress() {
                 return handleOnLongPressSticker(closure_0);
@@ -204,8 +209,9 @@ export default function StickerPickerListRow(stickers) {
               children: null,
             };
             const obj1 = { sticker: tmp2, size, animated: tmp10, opaque: tmp11 };
-            obj.children = items(StickerDefault, obj1, tmp);
+            obj.children = items(StickerDefault, obj1, c10);
             items.push(items(stickers(dependencyMap[19]).PressableOpacity, obj, tmp2.id));
+            const tmp9 = _slicedToArray(items, 3);
           }
         })();
         sum = num2 + 1;

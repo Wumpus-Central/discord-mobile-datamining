@@ -189,7 +189,7 @@ export default noop.memo(function BlockConfirmationActionSheet(userId) {
   const channelId = userId.channelId;
   ({ onBlock: dependencyMap, onIgnore: _slicedToArray, onSuccess: noop } = userId);
   c5 = undefined;
-  let tmp = closure_16();
+  const tmp = closure_16();
   const bottom = channelId(1611)().bottom;
   items = [channelId(7182).IGNORE_CONFIRMATION_ACTION_SHEET];
   const tmp4 = channelId(7162);
@@ -296,7 +296,7 @@ export default noop.memo(function BlockConfirmationActionSheet(userId) {
       obj12.title = intl3.string(tmp7(1114).t["+BJTcB"]);
       const obj13 = { icon: null, label: null, subLabel: null, accessibilityLabel: null, onPress: null, arrow: true };
       const obj14 = { size: tmp7(1178).Icon.Sizes.MEDIUM, source: tmp2(6969) };
-      obj13.icon = tmp13(tmp7(1178).Icon, obj14);
+      obj13.icon = closure_14(tmp7(1178).Icon, obj14);
       const intl4 = tmp7(1114).intl;
       obj13.label = intl4.string(tmp7(1114).t.hC8tcc);
       const intl5 = tmp7(1114).intl;
@@ -316,9 +316,9 @@ export default noop.memo(function BlockConfirmationActionSheet(userId) {
         };
         obj3.openLazy(asyncRequireImpl(11384, dependencyMap.paths), closure_2_10, obj, "replaceTopSheet");
       };
-      obj12.children = tmp13(tmp7(5605).TableRow, obj13);
-      obj11.children = tmp13(tmp7(5687).TableRowGroup, obj12);
-      tmp13Result = tmp13(tmp19, obj11);
+      obj12.children = closure_14(tmp7(5605).TableRow, obj13);
+      obj11.children = closure_14(tmp7(5687).TableRowGroup, obj12);
+      tmp13Result = closure_14(tmp19, obj11);
     }
     const obj15 = { children: null };
     items10[2] = tmp13Result;
@@ -336,12 +336,14 @@ export default noop.memo(function BlockConfirmationActionSheet(userId) {
         }
         const obj = channelId(8404);
         channelId(4527).hideActionSheet();
+        const tmpResult = channelId(4527);
       });
       if (dependencyMap != null) {
         dependencyMap();
       }
       const blockUserResult = obj.blockUser(userId, obj);
       AnalyticsUtilsDefault.track(constants.BLOCK_USER_CONFIRMED);
+      const tmp2Result = AnalyticsUtilsDefault;
     };
     obj17.disabled = tmp6;
     obj17.loading = tmp6;
@@ -364,8 +366,8 @@ export default noop.memo(function BlockConfirmationActionSheet(userId) {
     obj15.children = items10;
     obj.children = closure_15(tmp7(6627).BottomSheetScrollView, obj15);
     obj.children = closure_14(tmp7(7150).BottomSheet, obj);
-    tmp13Result = tmp13(tmp7(7162).AnalyticsLocationProvider, obj);
-    const tmp2Result = tmp2(4712);
+    tmp13Result = closure_14(tmp7(7162).AnalyticsLocationProvider, obj);
+    let tmp2Result = tmp2(4712);
   }
   return tmp13Result;
 });

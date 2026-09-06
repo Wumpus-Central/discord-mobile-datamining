@@ -76,7 +76,7 @@ export default noop.memo(function ChannelsEmpty(guild) {
     obj2.label = intl.string(tmp2(1114).t["Yhi9/N"]);
     obj2.onPress = callback;
     obj1.children = closure_8(tmp2(8595).RowButton, obj2);
-    canCustomizeGuild = closure_8(tmp8, obj1);
+    canCustomizeGuild = closure_8(closure_4, obj1);
   }
   const items5 = [canCustomizeGuild];
   const obj4 = { style: tmp.content, children: null };
@@ -98,8 +98,8 @@ export default noop.memo(function ChannelsEmpty(guild) {
     const intl4 = tmp2(1114).intl;
     obj9.text = intl4.string(tmp2(1114).t["63PyJQ"]);
     obj9.onPress = callback1;
-    obj8.children = tmp11(tmp2(4976).BaseTextButton, obj9);
-    canCreateChannel = tmp11(tmp8, obj8);
+    obj8.children = closure_8(tmp2(4976).BaseTextButton, obj9);
+    canCreateChannel = closure_8(closure_4, obj8);
   }
   items6[3] = canCreateChannel;
   obj4.children = items6;

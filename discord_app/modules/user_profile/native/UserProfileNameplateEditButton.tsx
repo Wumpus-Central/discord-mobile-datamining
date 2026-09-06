@@ -138,14 +138,15 @@ export default function UserProfileNameplateEditButton(user) {
         if (null != nameplateProduct) {
           const obj4 = { style: tmp.previewContainer, children: null };
           const obj5 = { nameplate: nameplateData, fullOpacity: true, isSquarePreview: true };
-          obj4.children = tmp15(guildId(8818), obj5);
-          let tmp15Result = tmp15(closure_5, obj4);
+          obj4.children = jsx(guildId(8818), { nameplate: nameplateData, fullOpacity: true, isSquarePreview: true });
+          let tmp15Result = <closure_5 style={tmp.previewContainer}>{null}</closure_5>;
         }
         obj2.leading = tmp15Result;
-        return tmp15(tmp3(14618).UserProfileEditFormButton, obj2);
+        return jsx(tmp3(14618).UserProfileEditFormButton, obj2);
       }
     }
     const obj6 = { source: guildId(13172), style: tmp.noneIcon };
-    tmp15Result = tmp15(tmp3(1178).Icon, obj6);
+    tmp15Result = jsx(tmp3(1178).Icon, { source: guildId(13172), style: tmp.noneIcon });
   }
+  const tmp3Result = user(14635);
 }

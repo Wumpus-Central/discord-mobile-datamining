@@ -4,7 +4,7 @@ import DiscordNativeDefault from "../lib/DiscordNative.tsx";
 import asyncGeneratorStep from "../../_runtime/00005_asyncGeneratorStep.js";
 
 require = fn;
-let closure_7 = async function _setEnabled(arg0, value) {
+let closure_7 = async function _setEnabled(arg0) {
   if (c3 === 2) {
     c3 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -58,7 +58,7 @@ let closure_7 = async function _setEnabled(arg0, value) {
     }
   }
 };
-let closure_8 = async function _setLearnedWords(arg0, value) {
+let closure_8 = async function _setLearnedWords(arg0) {
   if (c3 === 2) {
     c3 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -112,7 +112,7 @@ let closure_8 = async function _setLearnedWords(arg0, value) {
     }
   }
 };
-let closure_9 = async function _isMisspelled(arg0, value) {
+let closure_9 = async function _isMisspelled(arg0) {
   if (c5 === 2) {
     c5 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -188,7 +188,7 @@ let closure_9 = async function _isMisspelled(arg0, value) {
     }
   }
 };
-let closure_10 = async function _getCorrections(arg0, value) {
+let closure_10 = async function _getCorrections(arg0) {
   if (c6 === 2) {
     c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -270,7 +270,7 @@ let closure_10 = async function _getCorrections(arg0, value) {
     }
   }
 };
-let closure_11 = async function _getCachedMisspelling(arg0, value) {
+let closure_11 = async function _getCachedMisspelling() {
   if (c4 === 2) {
     c4 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -353,7 +353,7 @@ let closure_11 = async function _getCachedMisspelling(arg0, value) {
     }
   }
 };
-let closure_12 = async function _replaceWithCorrection(arg0, value) {
+let closure_12 = async function _replaceWithCorrection(arg0) {
   if (c3 === 2) {
     c3 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");

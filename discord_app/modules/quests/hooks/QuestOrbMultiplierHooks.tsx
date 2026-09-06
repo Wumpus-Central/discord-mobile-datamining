@@ -15,10 +15,10 @@ function getQuestOrbMultiplierEligibilityForUser(isFractionalPremiumWithNoStanda
         isFractionalPremiumWithNoStandardSub,
       );
       if (questOrbMultiplierSource === QuestOrbMultiplierUtils.QuestOrbMultiplierSource.CREPE) {
-        QuestOrbMultiplierEligibilityType2 = tmp3(11293).QuestOrbMultiplierEligibilityType;
+        QuestOrbMultiplierEligibilityType2 = QuestOrbMultiplierUtils.QuestOrbMultiplierEligibilityType;
         let NITRO = QuestOrbMultiplierEligibilityType2.CREPE;
       } else {
-        NITRO = tmp3(11293).QuestOrbMultiplierEligibilityType.NITRO;
+        NITRO = QuestOrbMultiplierUtils.QuestOrbMultiplierEligibilityType.NITRO;
       }
     } else {
       let result;

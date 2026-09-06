@@ -105,12 +105,12 @@ export const getPremiumBundleWithPredicate = function getPremiumBundleWithPredic
 export { getPremiumBundledItemsFromProductId };
 export const getToggledIntervalProduct = function getToggledIntervalProduct(productId) {
   if (productId in ProductIds.AppStorePremiumProductIdsToPremiumBundledItems) {
-    const tmp8 = tmp(7240).AppStorePremiumProductIdsToPremiumBundledItems[productId];
+    const tmp8 = ProductIds.AppStorePremiumProductIdsToPremiumBundledItems[productId];
     closure_0 = tmp8;
     let tmp11 = null;
     if (tmp8.premiumTier !== React4.TIER_1) {
       const _Object = Object;
-      const values = Object.values(tmp(7240).AppStorePremiumProductIdsToPremiumBundledItems);
+      const values = Object.values(ProductIds.AppStorePremiumProductIdsToPremiumBundledItems);
       const found = values.find(
         (numPremiumGuild) =>
           numPremiumGuild.numPremiumGuild === numPremiumGuild.numPremiumGuild &&
@@ -134,15 +134,15 @@ export const getToggledIntervalProduct = function getToggledIntervalProduct(prod
 };
 export const getProductIdsForBothIntervals = function getProductIdsForBothIntervals(monthly) {
   if (monthly in ProductIds.AppStorePremiumProductIdsToPremiumBundledItems) {
-    const tmp8 = tmp(7240).AppStorePremiumProductIdsToPremiumBundledItems[monthly];
+    const tmp8 = ProductIds.AppStorePremiumProductIdsToPremiumBundledItems[monthly];
     let numPremiumGuild;
-    if (monthly in tmp(7240).AppStorePremiumProductIdsToPremiumBundledItems) {
-      const tmp14 = tmp(7240).AppStorePremiumProductIdsToPremiumBundledItems[monthly];
+    if (monthly in ProductIds.AppStorePremiumProductIdsToPremiumBundledItems) {
+      const tmp14 = ProductIds.AppStorePremiumProductIdsToPremiumBundledItems[monthly];
       numPremiumGuild = tmp14;
       let tmp17 = null;
       if (tmp14.premiumTier !== React4.TIER_1) {
         const _Object = Object;
-        const values = Object.values(tmp(7240).AppStorePremiumProductIdsToPremiumBundledItems);
+        const values = Object.values(ProductIds.AppStorePremiumProductIdsToPremiumBundledItems);
         const found = values.find(
           (numPremiumGuild) =>
             numPremiumGuild.numPremiumGuild === numPremiumGuild.numPremiumGuild &&
@@ -164,11 +164,10 @@ export const getProductIdsForBothIntervals = function getProductIdsForBothInterv
           tmp22 = monthly;
         }
         obj = { monthly: tmp22, yearly: null };
-        if (tmp8.interval === tmp21.YEAR) {
+        if (tmp8.interval === constants.YEAR) {
           tmp17 = monthly;
         }
         obj.yearly = tmp17;
-        tmp21 = constants;
       }
       return obj;
     } else {
@@ -200,9 +199,9 @@ export const productsHaveSamePerks = function productsHaveSamePerks(productId, p
           if (productId === productIdFromSubscription) {
             return true;
           } else if (productId in ProductIds.AppStorePremiumProductIdsToPremiumBundledItems) {
-            const tmp12 = tmp20(7240).AppStorePremiumProductIdsToPremiumBundledItems[productId];
-            if (productIdFromSubscription in tmp20(7240).AppStorePremiumProductIdsToPremiumBundledItems) {
-              const tmp18 = tmp20(7240).AppStorePremiumProductIdsToPremiumBundledItems[productIdFromSubscription];
+            const tmp12 = ProductIds.AppStorePremiumProductIdsToPremiumBundledItems[productId];
+            if (productIdFromSubscription in ProductIds.AppStorePremiumProductIdsToPremiumBundledItems) {
+              const tmp18 = ProductIds.AppStorePremiumProductIdsToPremiumBundledItems[productIdFromSubscription];
               return tmp12.numPremiumGuild === tmp18.numPremiumGuild && tmp12.premiumTier === tmp18.premiumTier;
             } else {
               const _Error2 = Error;
@@ -224,7 +223,7 @@ export const productsHaveSamePerks = function productsHaveSamePerks(productId, p
   return productId === productIdFromSubscription;
 };
 export { isValidBundleProductId };
-export const shouldAlwaysExcludeFromPlanSelect = function shouldAlwaysExcludeFromPlanSelect(isDeprecated, flag2) {
+export const shouldAlwaysExcludeFromPlanSelect = function shouldAlwaysExcludeFromPlanSelect(isDeprecated) {
   let flag = flag2;
   if (flag2 === undefined) {
     flag = false;

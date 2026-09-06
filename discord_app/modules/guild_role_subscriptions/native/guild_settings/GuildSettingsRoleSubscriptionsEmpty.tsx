@@ -1,6 +1,7 @@
 // discord_app/modules/guild_role_subscriptions/native/guild_settings/GuildSettingsRoleSubscriptionsEmpty.tsx
 import useNavigation from "../../../../design/components/Navigator/native/useNavigation.native.tsx";
 import PlaceholderDefault from "../components/Placeholder.tsx";
+import GuildSettingsRoleSubscriptionWelcomeViewDefault from "welcome/GuildSettingsRoleSubscriptionWelcomeView.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import GuildStore from "../../../../stores/GuildStore.tsx";
 
@@ -10,14 +11,14 @@ function GuildSettingsRoleSubscriptionsEmptyContent(guild) {
   let obj = useNavigation;
   const str = obj.useNavigation();
   if (tmp3.loading) {
-    let tmp7 = jsx(tmp2(17680), {});
+    let tmp7 = jsx(PlaceholderDefault, {});
   } else {
     const features = guild.features;
     if (!features.has(constants.CREATOR_MONETIZABLE)) {
       const features2 = guild.features;
-      if (!features2.has(tmp5.CREATOR_MONETIZABLE_PROVISIONAL)) {
+      if (!features2.has(constants.CREATOR_MONETIZABLE_PROVISIONAL)) {
         obj = { guild };
-        tmp7 = jsx(tmp2(17681), { guild });
+        tmp7 = jsx(GuildSettingsRoleSubscriptionWelcomeViewDefault, { guild });
       }
     }
     if (null == tmp4) {
@@ -27,7 +28,6 @@ function GuildSettingsRoleSubscriptionsEmptyContent(guild) {
       const replaced1 = str.replace(constants2.ROLE_SUBSCRIPTIONS_TIERS);
       tmp7 = null;
     }
-    tmp5 = constants;
   }
   return tmp7;
 }

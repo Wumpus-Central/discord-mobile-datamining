@@ -5,10 +5,10 @@ import size from "../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/media_uploads/native/ImageConversionDecision.tsx");
 
-export const isPhotoKitAsset = function isPhotoKitAsset(str, arg1) {
+export const isPhotoKitAsset = function isPhotoKitAsset(str, importDefault) {
   let tmp = null != str.match(/^ph:\/\//i);
   if (tmp) {
-    tmp = null != arg1;
+    tmp = null != importDefault;
   }
   return tmp;
 };
@@ -86,16 +86,15 @@ export const shouldConvertToJPG = function shouldConvertToJPG(str, arr, arg2, ar
             if (obj2.isExtensionAnimated(formatted)) {
               return false;
             } else {
-              const supportedExtensions = tmp14(5160).getSupportedExtensions();
+              const supportedExtensions = IosImageTypesManagerDefault.getSupportedExtensions();
               if (null !== supportedExtensions) {
                 if (supportedExtensions.has(formatted)) {
                   return true;
                 }
               }
-              const tmp14Result = tmp14(5160);
+              const tmp14Result = IosImageTypesManagerDefault;
             }
             obj2 = IosImageTypesManagerDefault;
-            tmp14 = importDefault;
           }
           return false;
         }

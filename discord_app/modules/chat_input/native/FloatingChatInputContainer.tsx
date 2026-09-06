@@ -10,7 +10,6 @@ require = fn;
 function useKeyboardOpenPaddingStyle() {
   token = token(4262).useToken(nativeDefault.modules.mobile.CHAT_INPUT_FLOATING_CONTENT_PADDING_VERTICAL);
   let obj = token(4262);
-  const obj2 = noop;
   [tmp5, importDefault] = sharedValue(
     noop.useState(() => {
       const KeyboardController = token(1625).KeyboardController;
@@ -66,7 +65,7 @@ function useKeyboardOpenPaddingStyle() {
   }
   sharedValue = tmpResult.useSharedValue(num);
   const items = [tmp5, token, sharedValue];
-  const effect1 = obj2.useEffect(() => {
+  const effect1 = noop.useEffect(() => {
     let obj = timing;
     let num = 0;
     if (closure_2) {

@@ -83,7 +83,7 @@ export default function PremiumUpsellTooltipActionSheet(arg0) {
     const items = [tmp.img, imageStyle];
     obj.style = items;
     obj.source = imageSource;
-    tmp2Result = tmp2(closure_3, obj);
+    tmp2Result = closure_6(closure_3, obj);
   }
   const items1 = [tmp2Result, , ,];
   const obj1 = { style: tmp.header, children: null };
@@ -155,7 +155,7 @@ export default function PremiumUpsellTooltipActionSheet(arg0) {
       },
       size: "lg",
     };
-    tmp2Result = tmp2(tmp3(4975).Button, obj7);
+    tmp2Result = closure_6(components_Button_Button.Button, obj7);
   }
   items4[1] = tmp2Result;
   obj5.children = items4;

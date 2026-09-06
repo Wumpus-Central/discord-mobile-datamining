@@ -18,7 +18,7 @@ const result = size.fileFinishedImporting("modules/multi_account/MultiAccountAct
 export const validateMultiAccountTokens = function validateMultiAccountTokens() {
   AuthenticationStore.getId();
   const users = MultiAccountStore.getUsers();
-  let id = asyncGeneratorStep(async (arg0, value) => {
+  let id = asyncGeneratorStep(async (arg0) => {
     if (c7 === 2) {
       c7 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");

@@ -4,6 +4,7 @@ import updateSharedValueIfChangedDefault from "../../../reanimated/utils/updateS
 import VoicePanelControlsConstants from "../controls/VoicePanelControlsConstants.tsx";
 import VoicePanelConstants from "../../VoicePanelConstants.tsx";
 import MorphablePanelConstants from "../../../panels/morphable/native/MorphablePanelConstants.tsx";
+import calculateVoicePanelHeaderSpecsDefault from "../header/calculateVoicePanelHeaderSpecs.tsx";
 import getPIPBottomOffsetForPIPModeDefault from "../../../panels/morphable/native/getPIPBottomOffsetForPIPMode.tsx";
 import getAdjustedBottomOffsetsDefault from "../../../panels/morphable/native/getAdjustedBottomOffsets.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
@@ -45,11 +46,11 @@ export default function usePIPAvoidanceSpecs(mode) {
   fn.__initData = token;
   const fn2 = function u(safeAreaState, current) {
     let obj = cheapWorkletShallowEqual;
-    if (!obj.cheapWorkletShallowEqual(safeAreaState, current)) {
+    if (!obj.cheapWorkletShallowEqual(safeAreaState, tmp)) {
       ({ mode, controlsSpecs, keyboardHeight, safeArea } = safeAreaState);
       if (mode !== VoicePanelModes.PIP) {
         let num = 0;
-        if (mode === tmp4.PANEL) {
+        if (mode === VoicePanelModes.PANEL) {
           num = 0;
           if (controlsSpecs.mode === VoicePanelControlsModes.DRAWER) {
             num = 60 + PIP_WINDOW_OFFSET;
@@ -61,7 +62,7 @@ export default function usePIPAvoidanceSpecs(mode) {
       }
       obj = { screenBottomOffset: tmp6, safeAreaBottom: safeArea.bottom, keyboardHeight };
       const bottomOffset = getAdjustedBottomOffsetsDefault(obj).bottomOffset;
-      let tmp10 = keyboardHeight <= 0 && mode === tmp4.PANEL;
+      let tmp10 = keyboardHeight <= 0 && mode === VoicePanelModes.PANEL;
       if (tmp10) {
         tmp10 = controlsSpecs.mode === VoicePanelControlsModes.FLOATING_DEFAULT;
       }
@@ -73,13 +74,14 @@ export default function usePIPAvoidanceSpecs(mode) {
       if (mode === VoicePanelModes.PANEL) {
         num4 = 0;
         if (controlsSpecs.mode === VoicePanelControlsModes.FLOATING_DEFAULT) {
-          num4 = tmp9(12277)(safeArea, token).height;
+          num4 = calculateVoicePanelHeaderSpecsDefault(safeArea, token).height;
         }
       }
       const rect = { top: num4, bottom: sum };
       updateSharedValueIfChangedDefault(sharedValue, rect);
       const tmp9Result = updateSharedValueIfChangedDefault;
     }
+    tmp = current;
   };
   obj = {
     cheapWorkletShallowEqual: mode(safeArea[8]).cheapWorkletShallowEqual,

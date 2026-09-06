@@ -8,6 +8,7 @@ import DCDSendUtils from "DCDSendUtils.tsx";
 import ClipboardUtils from "../../../utils/ClipboardUtils.native.tsx";
 import StreamerApplicationSelectors from "../../go_live/utils/StreamerApplicationSelectors.tsx";
 import getInviteURLDefault from "../getInviteURL.tsx";
+import showShareActionSheet from "../../action_sheet/native/showShareActionSheet.tsx";
 import utils_InstantInviteUtils from "../../../utils/native/InstantInviteUtils.tsx";
 import CreateInviteModalActionCreatorsDefault from "../../../actions/CreateInviteModalActionCreators.tsx";
 import openInstantInviteActionSheetDefault from "components/openInstantInviteActionSheet.tsx";
@@ -38,7 +39,7 @@ function showInstantInviteActionSheet(channel, source) {
     obj.targetType = InviteTargetTypes.STREAM;
     obj.targetUserId = stream.ownerId;
     const streamerApplication = StreamerApplicationSelectors.getStreamerApplication(stream, PresenceStore);
-    let tmpResult = tmp(1242);
+    let tmpResult = AnalyticsUtilsDefault;
     obj = {
       type: "Send Stream Invite",
       location: null,
@@ -88,7 +89,7 @@ function showInstantInviteActionSheet(channel, source) {
     tmp17 = null == code;
   }
   if (tmp17) {
-    tmpResult = tmp(9826);
+    tmpResult = CreateInviteModalActionCreatorsDefault;
     tmpResult.init(channel.getGuildId(), channel.id, obj);
   }
   const obj1 = {
@@ -126,6 +127,7 @@ function showInstantInviteActionSheet(channel, source) {
   }
   obj1.stackingBehavior = stackingBehavior;
   openInstantInviteActionSheetDefault(obj1);
+  const tmpResult1 = openInstantInviteActionSheetDefault;
 }
 function trackOptionClicked(code, channel, COPY, _location) {
   let obj = InviteCodeUtils;
@@ -181,6 +183,7 @@ function trackOptionClicked(code, channel, COPY, _location) {
   }
   obj.application_id = id3;
   obj2.track(constants.INSTANT_INVITE_OPTION_CLICKED, obj);
+  const tmpResult = InviteCodeUtils;
 }
 const ChannelRecordBase = fn(1961).ChannelRecordBase;
 const InviteTargetTypes = fn(7736).InviteTargetTypes;
@@ -237,8 +240,6 @@ export const handleOpenShareSheet = function handleOpenShareSheet(code, channel,
   if (null != code) {
     const result = InviteCodeUtils.parseExtraDataFromInviteKey(code);
     const invite = InviteStore.getInvite(result.baseCode);
-    const tmp21 = require;
-    const tmp26 = importDefault;
     if (channel instanceof ChannelRecordBase) {
       let guild_id = channel.guild_id;
     } else {
@@ -292,8 +293,8 @@ export const handleOpenShareSheet = function handleOpenShareSheet(code, channel,
     if (flag) {
       trackOptionClicked(code, channel, constants2.SHARE, ADD_FRIENDS_WIDGET);
     }
-    tmp26(4527).hideAllActionSheets();
-    const tmp26Result = tmp26(4527);
+    ActionSheetActionCreatorsDefault.hideAllActionSheets();
+    const tmp26Result = ActionSheetActionCreatorsDefault;
     obj = {
       message: intl,
       iOSOnlyShareCallback(arg0, arr) {
@@ -309,8 +310,8 @@ export const handleOpenShareSheet = function handleOpenShareSheet(code, channel,
         }
       },
     };
-    tmp21(8361).showShareActionSheet(obj, ADD_FRIENDS_WIDGET);
-    const tmp21Result = tmp21(8361);
+    showShareActionSheet.showShareActionSheet(obj, ADD_FRIENDS_WIDGET);
+    const tmp21Result = showShareActionSheet;
   }
 };
 export const handleCopy = function handleCopy(code, channel, GROUP_DM, arg3) {
@@ -320,7 +321,6 @@ export const handleCopy = function handleCopy(code, channel, GROUP_DM, arg3) {
   }
   if (null != code) {
     const result = InviteCodeUtils.parseExtraDataFromInviteKey(code);
-    const tmp13 = require;
     const tmp17 = getInviteURLDefault(code);
     ClipboardUtils.copy(tmp17);
     const invite = InviteStore.getInvite(result.baseCode);
@@ -369,18 +369,18 @@ export const handleCopy = function handleCopy(code, channel, GROUP_DM, arg3) {
     if (flag) {
       trackOptionClicked(code, channel, constants2.COPY);
     }
-    tmp13(4258).presentLinkCopied();
-    const tmp13Result = tmp13(4258);
+    ToastUtils.presentLinkCopied();
+    const tmp13Result = ToastUtils;
   }
 };
-export const handlePressSettings = function handlePressSettings(channel, arg1, arg2) {
+export const handlePressSettings = function handlePressSettings(channel, dependencyMap, inviteSettings) {
   closure_0 = channel;
-  importDefault = arg1;
-  let str = arg2;
+  importDefault = dependencyMap;
+  let str = inviteSettings;
   ActionSheetActionCreatorsDefault.hideActionSheet();
   dependencyMap = CreateInviteModalStore.getPendingSettings();
   ({ guild_id, id } = channel);
-  if (arg2 == null) {
+  if (inviteSettings == null) {
     str = "Instant Invite Action Sheet";
   }
   CreateInviteModalActionCreatorsDefault.openSettings(guild_id, id, str, () => {
@@ -408,10 +408,10 @@ export const handleOpenInviteActionsheet = function handleOpenInviteActionsheet(
   _modDef38(null != channel, "Channel cannot be null");
   if (null != guild.vanityURLCode) {
     if ("" !== guild.vanityURLCode) {
-      let tmp4Result = tmp4(1242);
+      let tmp4Result = AnalyticsUtilsDefault;
       obj = { type: "Vanity URL Invite", source: GUILD_HEADER };
       tmp4Result.track(constants.OPEN_POPOUT, obj);
-      tmp4Result = tmp4(9826);
+      tmp4Result = CreateInviteModalActionCreatorsDefault;
       tmp4Result.init(guild.id, channel.id, { skipCreateInvite: true });
       obj = {
         vanityURLCode: guild.vanityURLCode,
@@ -420,7 +420,7 @@ export const handleOpenInviteActionsheet = function handleOpenInviteActionsheet(
         guildScheduledEventId: undefined,
         stackingBehavior: undefined,
       };
-      tmp4(9827)(obj);
+      openInstantInviteActionSheetDefault(obj);
     }
   }
   let obj1 = utils_InstantInviteUtils;
@@ -430,7 +430,7 @@ export const handleOpenInviteActionsheet = function handleOpenInviteActionsheet(
     if (channel1 == null) {
       channel1 = GuildChannelStore.getDefaultChannel(guild.id, true, constants3.CREATE_INSTANT_INVITE);
     }
-    tmp4(38)(null != channel1, "Channel cannot be null");
+    _modDef38(null != channel1, "Channel cannot be null");
     obj1 = { source: GUILD_HEADER };
     showInstantInviteActionSheet(channel1, obj1);
   }

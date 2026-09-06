@@ -1,4 +1,7 @@
 // discord_app/modules/premium/gifting/GiftingBadgesUtils.tsx
+import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
+import dismissible_content from "../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
+import DismissibleContentUnsafeUtils from "../../dismissible_content/DismissibleContentUnsafeUtils.tsx";
 import BadgeDirectoryStore from "../../badges/BadgeDirectoryStore.tsx";
 import GiftingBadgeExperiment2 from "experiments/GiftingBadgeExperiment.tsx";
 import GiftingBadgeDesktopExperiment2 from "experiments/GiftingBadgeDesktopExperiment.tsx";
@@ -70,7 +73,7 @@ export const useIsEligibleToShowGiftingBadgeCoachmark = function useIsEligibleTo
     }
     tmp4 = enabled2;
   }
-  let tmpResult = tmp(504);
+  let tmpResult = initialize;
   const items = [UserStore];
   const stateFromStores = tmpResult.useStateFromStores(items, () => {
     currentUser = currentUser.getCurrentUser();
@@ -83,9 +86,9 @@ export const useIsEligibleToShowGiftingBadgeCoachmark = function useIsEligibleTo
     }
     return flag;
   });
-  tmpResult = tmp(4380);
+  tmpResult = DismissibleContentUnsafeUtils;
   const result = tmpResult.useIsDismissibleContentDismissed_UNSAFE(
-    tmp(1943).DismissibleContent.NEW_GIFTING_BADGES_COACHMARK,
+    dismissible_content.DismissibleContent.NEW_GIFTING_BADGES_COACHMARK,
   );
   if (tmp4) {
     tmp4 = stateFromStores;

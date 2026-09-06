@@ -2,6 +2,7 @@
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import AvatarUtilsDefault from "../../../../../utils/AvatarUtils.tsx";
 import useAvatarColor from "../../../../avatar/useAvatarColor.tsx";
+import useHeroColors from "../../../../content_inventory/memberlist/useHeroColors.tsx";
 import ColorUtils from "../../../../../utils/ColorUtils.tsx";
 import size from "../../../../../../_runtime/metro/00002__.js";
 
@@ -17,19 +18,19 @@ export const getAppGradientColors = function getAppGradientColors(appIconSrc) {
     return tmp;
   } else {
     if (obj5.hasFetchedColors(appIconSrc)) {
-      let tmp6Result = tmp6(8133);
+      let tmp6Result = useHeroColors;
       const heroColors = tmp6Result.getHeroColors(appIconSrc);
       ({ primaryColor, secondaryColor } = heroColors);
       let tmp5 = tmp;
       if (false === tmp4) {
-        tmp6Result = tmp6(4409);
-        items = [tmp6Result.hexToRgba(primaryColor), tmp6(4409).hexToRgba(secondaryColor)];
+        tmp6Result = ColorUtils;
+        items = [tmp6Result.hexToRgba(primaryColor), ColorUtils.hexToRgba(secondaryColor)];
         tmp5 = items;
-        const tmp6Result1 = tmp6(4409);
+        const tmp6Result1 = ColorUtils;
       }
       return tmp5;
     } else {
-      tmp6(8132).maybeFetchColors(appIconSrc);
+      useAvatarColor.maybeFetchColors(appIconSrc);
       return tmp;
     }
     obj5 = useAvatarColor;

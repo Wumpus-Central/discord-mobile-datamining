@@ -5,7 +5,6 @@ const size = fn(2);
 const result = size.fileFinishedImporting("../discord_common/js/packages/transition-group/TransitionChildMapping.tsx");
 
 export const getChildMapping = function getChildMapping(children) {
-  const obj = {};
   if (children) {
     const Children = noop.Children;
     const mapped = Children.map(children, (arg0) => arg0);
@@ -17,9 +16,9 @@ export const getChildMapping = function getChildMapping(children) {
       });
     }
   }
-  return obj;
+  return {};
 };
-export const mergeChildMappings = function mergeChildMappings(children, childMapping) {
+export const mergeChildMappings = function mergeChildMappings() {
   let obj = children;
   if (children === undefined) {
     obj = {};

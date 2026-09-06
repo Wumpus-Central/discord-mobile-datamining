@@ -67,8 +67,8 @@ NotificationLabel = {
   optedIn(optInEnabled) {
     return optInEnabled ? obj.OptedIn : obj.OptedOut;
   },
-  favorited(arg0) {
-    return arg0 ? obj.Favorited : obj.UnFavorited;
+  favorited(setting) {
+    return setting ? obj.Favorited : obj.UnFavorited;
   },
   muted(muted) {
     return muted ? obj.Muted : obj.Unmuted;
@@ -89,9 +89,9 @@ NotificationLabel = {
   notifications(message_notifications) {
     if (message_notifications === UserNotificationSettings.ALL_MESSAGES) {
       let NotificationsDefault = obj.NotificationsAll;
-    } else if (message_notifications === tmp.ONLY_MENTIONS) {
+    } else if (message_notifications === UserNotificationSettings.ONLY_MENTIONS) {
       NotificationsDefault = obj.NotificationsMentions;
-    } else if (message_notifications === tmp.NO_MESSAGES) {
+    } else if (message_notifications === UserNotificationSettings.NO_MESSAGES) {
       NotificationsDefault = obj.NotificationsNothing;
     } else {
       NotificationsDefault = obj.NotificationsDefault;
@@ -118,7 +118,7 @@ export const trackGuildNotificationSettingsUpdate = function trackGuildNotificat
   label,
   location,
 ) {
-  function compute(guild_message_notification_settings, muteSettings) {
+  function compute(guild_message_notification_settings) {
     obj = muteSettings;
     if (muteSettings === undefined) {
       obj = {};
@@ -296,7 +296,7 @@ export const trackChannelNotificationSettingsUpdate = function trackChannelNotif
   }
   const guildId = updateType.guildId;
   const channelId = updateType.channelId;
-  function compute(previous, change) {
+  function compute(previous) {
     obj = change;
     if (change === undefined) {
       obj = {};

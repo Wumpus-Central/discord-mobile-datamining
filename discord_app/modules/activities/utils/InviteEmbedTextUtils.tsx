@@ -52,27 +52,27 @@ const ActivityActionTypes = fn(1074).ActivityActionTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/utils/InviteEmbedTextUtils.tsx");
 
-export const getHeaderText = function getHeaderText(name, arg1, arg2) {
-  if (ActivityActionTypes.LISTEN === arg1) {
+export const getHeaderText = function getHeaderText(name, type5, arg2) {
+  if (ActivityActionTypes.LISTEN === type5) {
     const intl5 = util.intl;
     let obj = { name };
     return intl5.formatToPlainString(util.t["/8czH4"], obj);
-  } else if (tmp.WATCH === arg1) {
+  } else if (ActivityActionTypes.WATCH === type5) {
     const intl4 = util.intl;
     obj = { name };
     return intl4.formatToPlainString(util.t.BBJXVk, obj);
-  } else if (tmp.JOIN === arg1) {
+  } else if (ActivityActionTypes.JOIN === type5) {
     let stringResult;
     if (!arg2) {
       const intl3 = util.intl;
       stringResult = intl3.string(util.t.pkq6Vq);
     }
     return stringResult;
-  } else if (tmp.STREAM_REQUEST === arg1) {
+  } else if (ActivityActionTypes.STREAM_REQUEST === type5) {
     const intl2 = util.intl;
     return intl2.string(_modDef2882.DKHhec);
   } else {
-    const JOIN_REQUEST = tmp.JOIN_REQUEST;
+    const JOIN_REQUEST = ActivityActionTypes.JOIN_REQUEST;
     const intl = util.intl;
     return intl.string(util.t.Ckxb6j);
   }
@@ -96,9 +96,9 @@ export const getDeadGameInviteText = function getDeadGameInviteText(activity, na
     type = activity.type;
   }
   if (ActivityActionTypes.LISTEN !== type) {
-    if (tmp2.WATCH !== type) {
-      if (tmp2.JOIN !== type) {
-        if (tmp2.STREAM_REQUEST === type) {
+    if (ActivityActionTypes.WATCH !== type) {
+      if (ActivityActionTypes.JOIN !== type) {
+        if (ActivityActionTypes.STREAM_REQUEST === type) {
           if (activity.author.id === id1) {
             const intl2 = util.intl;
             let stringResult = intl2.string(_modDef2882["8B3U5O"]);
@@ -109,7 +109,7 @@ export const getDeadGameInviteText = function getDeadGameInviteText(activity, na
           }
           return stringResult;
         } else {
-          const JOIN_REQUEST = tmp2.JOIN_REQUEST;
+          const JOIN_REQUEST = ActivityActionTypes.JOIN_REQUEST;
           return getAskToJoinText(activity, name_override, guild_id, id1, true);
         }
       }

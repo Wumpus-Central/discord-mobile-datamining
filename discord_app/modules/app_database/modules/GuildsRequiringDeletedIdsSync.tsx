@@ -25,7 +25,7 @@ class GuildsRequiringDeletedIdsSync {
 }
 const prototype = GuildsRequiringDeletedIdsSync.prototype;
 prototype["getAll"] = function getAll() {
-  return (async (arg0, value) => {
+  return (async () => {
     if (c2 === 2) {
       c2 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");

@@ -102,6 +102,7 @@ export default function useMaybeGetSortedBoosts(arg0, arg1) {
         includeEnded: true,
       });
     }
+    tmp = stateFromStores === memo1 && stateFromStores1;
   }, items10);
   return memo;
 }

@@ -19,13 +19,12 @@ export const tooltipEnterExitAnimation = function tooltipEnterExitAnimation(posi
   if ("top" === position) {
     num = 8;
   }
-  const fn = function o(value, fn2) {
-    num = 0;
+  const fn = function o(value, fn) {
     let obj = { transform: null, opacity: null };
-    obj = { translateY: obj.withSpring(num, closure_2, "respect-motion-settings", fn2) };
+    obj = { translateY: obj.withSpring(num, closure_2, "respect-motion-settings", fn) };
     const items = [obj];
     obj.transform = items;
-    obj.opacity = spring.withSpring(value, closure_2, "respect-motion-settings", fn2);
+    obj.opacity = spring.withSpring(value, closure_2, "respect-motion-settings", fn);
     return obj;
   };
   fn.__closure = { withSpring: num(4974).withSpring, translateY: num, TOOLTIP_SPRING };

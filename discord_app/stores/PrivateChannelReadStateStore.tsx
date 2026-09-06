@@ -56,8 +56,8 @@ function handleGenericUpdate(channelId) {
     let flag = !result;
     if (!result) {
       const _Set = Set;
-      set = new Set(found);
       flag = true;
+      set = new Set(found);
     }
     tmp4 = flag;
   }
@@ -98,8 +98,8 @@ const privateChannelReadStateStore = new PrivateChannelReadStateStore(Dispatcher
       let flag = !result;
       if (!result) {
         const _Set = Set;
-        set = new Set(found);
         flag = true;
+        set = new Set(found);
       }
       tmp4 = flag;
     }
@@ -141,8 +141,8 @@ const privateChannelReadStateStore = new PrivateChannelReadStateStore(Dispatcher
       let flag = !result;
       if (!result) {
         const _Set = Set;
-        set = new Set(found);
         flag = true;
+        set = new Set(found);
       }
       tmp4 = flag;
     }
@@ -165,8 +165,8 @@ const privateChannelReadStateStore = new PrivateChannelReadStateStore(Dispatcher
       let flag = !result;
       if (!result) {
         const _Set = Set;
-        set = new Set(found);
         flag = true;
+        set = new Set(found);
       }
       tmp4 = flag;
     }

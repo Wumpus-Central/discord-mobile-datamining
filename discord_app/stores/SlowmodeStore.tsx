@@ -10,7 +10,7 @@ function setCooldown(channel, SendMessage, cooldownMs) {
   _require = channel;
   const slowmodeType = SendMessage;
   if (null != dependencyMap[SendMessage][channel.id]) {
-    const timer = tmp3[SendMessage][channel.id].timer;
+    const timer = dependencyMap[SendMessage][channel.id].timer;
     timer.stop();
     const id = channel.id;
     delete tmp2[tmp];
@@ -22,10 +22,10 @@ function setCooldown(channel, SendMessage, cooldownMs) {
       const sum = cooldownMs + Date.now();
       dependencyMap = sum;
       obj = { rateLimitPerUser: channel.rateLimitPerUser, cooldownMs, cooldownEndTimestamp: sum, timer: null };
-      const timeout = new require("Timers").Timeout();
+      const timeout = new tmp6(4447).Timeout();
       obj.timer = timeout;
-      tmp3[SendMessage][channel.id] = obj;
-      const timer2 = tmp3[SendMessage][channel.id].timer;
+      dependencyMap[SendMessage][channel.id] = obj;
+      const timer2 = dependencyMap[SendMessage][channel.id].timer;
       timer2.start(
         1000,
         () => {
@@ -41,6 +41,7 @@ function setCooldown(channel, SendMessage, cooldownMs) {
       );
     }
   }
+  tmp6 = _require;
 }
 function handleUploadCancel(channelId) {
   const channel = ChannelStore.getChannel(channelId.channelId);
@@ -124,14 +125,13 @@ SlowmodeType = {
         if (null != tmp5) {
           if (tmp6.rateLimitPerUser !== rateLimitPerUser) {
             let num;
-            let tmp9 = setCooldown;
             if (tmp6 != null) {
               num = tmp6.cooldownMs;
             }
             if (num == null) {
               num = 0;
             }
-            let tmp9Result = tmp9(tmp3, item, Math.min(num, rateLimitPerUser * DurationsDefault.Millis.SECOND));
+            let tmp9Result = setCooldown(tmp3, item, Math.min(num, rateLimitPerUser * DurationsDefault.Millis.SECOND));
           }
         }
         continue;

@@ -36,7 +36,6 @@ export const filterOutMessageRequestsAndSpam = function filterOutMessageRequests
 };
 export const filterOutMessageRequestsAndSpamById = function filterOutMessageRequestsAndSpamById(
   unreadPrivateChannelIds,
-  items,
 ) {
   let tmp = items;
   if (items === undefined) {
@@ -53,7 +52,7 @@ export const filterOutMessageRequestsAndSpamById = function filterOutMessageRequ
     return tmp2;
   });
 };
-export const isMessageRequestOrSpamRequest = function isMessageRequestOrSpamRequest(channelId, items) {
+export const isMessageRequestOrSpamRequest = function isMessageRequestOrSpamRequest(channelId) {
   let tmp = items;
   if (items === undefined) {
     items = [MessageRequestStore, SpamMessageRequestStore];

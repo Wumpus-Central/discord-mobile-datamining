@@ -10,9 +10,9 @@ const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/TextField/native/TextField.native.tsx");
 
-export const TextField = noop.forwardRef((onClear, ref) => {
+export const TextField = noop.forwardRef((onClear, arg1) => {
   let obj = useTextField;
-  const textField = obj.useTextField(onClear, ref);
+  const textField = obj.useTextField(onClear, arg1);
   ({ inputProps, innerRef, state } = textField);
   const inputClearButtonConfig = useInputClearButton.useInputClearButtonConfig(onClear, state);
   let tmp5;

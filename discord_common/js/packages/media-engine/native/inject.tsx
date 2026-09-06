@@ -15,22 +15,22 @@ export const supported = function supported() {
     return global.supported();
   }
 };
-export const supportsFeature = function supportsFeature(arg0) {
+export const supportsFeature = function supportsFeature(CLIPS_THUMBNAIL) {
   if (null == global) {
     const _Error = Error;
     const error = new Error("Native dependencies have not been injected.");
     throw error;
   } else {
-    return global.supportsFeature(arg0);
+    return global.supportsFeature(CLIPS_THUMBNAIL);
   }
 };
-export const setProcessPriority = function setProcessPriority(arg0) {
+export const setProcessPriority = function setProcessPriority(NORMAL) {
   if (null == global) {
     const _Error = Error;
     const error = new Error("Native dependencies have not been injected.");
     throw error;
   } else {
-    global.setProcessPriority(arg0);
+    global.setProcessPriority(NORMAL);
   }
 };
 export const getVoiceEngine = function getVoiceEngine() {

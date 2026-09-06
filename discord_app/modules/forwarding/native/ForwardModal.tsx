@@ -78,15 +78,14 @@ export default function ForwardModal(message) {
       } else {
         message = MessageStore.getMessage(channel_id, id);
         if (message == null) {
-          message = MessagePreviewStore.getMessage(tmp3);
+          message = MessagePreviewStore.getMessage(id);
         }
         if (message == null) {
-          message = ICYMIStore.getMessage(tmp3);
+          message = ICYMIStore.getMessage(id);
         }
         if (message == null) {
-          message = ConversationsStore.getMessage(tmp2, tmp3);
+          message = ConversationsStore.getMessage(channel_id, id);
         }
-        tmp2 = channel_id;
       }
       return message;
     },
@@ -168,7 +167,7 @@ export default function ForwardModal(message) {
     }
     return destinationIsUnavailable;
   }, items8);
-  _require = customSendHandler(function* (arg0, value) {
+  _require = customSendHandler(function* (arg0) {
     if (c4 === 2) {
       c4 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -408,7 +407,7 @@ export default function ForwardModal(message) {
     if (channel != null) {
       guild_id = channel.guild_id;
     }
-    const channelPermalink = ChannelUtils.getChannelPermalink(guild_id, tmp, id);
+    const channelPermalink = ChannelUtils.getChannelPermalink(guild_id, channel_id, id);
     const result = HapticUtils.triggerHapticFeedback(haptics_HapticFeedbackTypesDefault.IMPACT_LIGHT);
     ToastUtils.presentLinkCopied();
     ClipboardUtils.copy(channelPermalink);

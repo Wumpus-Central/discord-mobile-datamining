@@ -1,15 +1,18 @@
 // discord_app/components_native/CreateChannelModal.tsx
 import nativeDefault from "../../discord_common/js/packages/tokens/native.tsx";
 import util from "../intl/index.native.tsx";
+import native from "../design/void/native.tsx";
 import discord_common_AnalyticsUtils from "../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
 import HelpdeskUtilsDefault from "../utils/HelpdeskUtils.tsx";
 import useA11yRolesNative from "../../discord_common/js/packages/design/hooks/useA11yRolesNative.tsx";
+import Text_Text from "../design/components/Text/native/Text.tsx";
 import ChannelUtils from "../utils/ChannelUtils.tsx";
 import useInitialValueDefault from "../hooks/useInitialValue.tsx";
 import TableRow from "../design/components/TableRow/native/TableRow.native.tsx";
 import NavigatorHeader from "../design/components/Navigator/native/NavigatorHeader.native.tsx";
 import FormRadio from "../design/components/Forms/native/FormRadio.native.tsx";
 import HeaderActionButton from "../design/components/Navigator/native/HeaderActionButton.native.tsx";
+import Form from "../design/void/Form/native/index.tsx";
 import CreateChannelModalActionCreatorsDefault from "../actions/native/CreateChannelModalActionCreators.tsx";
 import sanitizeChannelNameDefault from "../modules/channel/sanitizeChannelName.tsx";
 import _slicedToArray from "../../_runtime/metro/00032__.js";
@@ -32,62 +35,62 @@ function ChannelTypeRow(selected) {
   ({ accessibilityRole, accessibilityState } = radioA11yNative);
   if (ChannelTypes.GUILD_TEXT === channelType) {
     obj = { label: null, description: null };
-    const intl11 = tmp2(1114).intl;
-    obj.label = intl11.string(tmp2(1114).t.pnuRXC);
-    const intl12 = tmp2(1114).intl;
-    obj.description = intl12.string(tmp2(1114).t.oG6WsM);
+    const intl11 = util.intl;
+    obj.label = intl11.string(util.t.pnuRXC);
+    const intl12 = util.intl;
+    obj.description = intl12.string(util.t.oG6WsM);
     let tmp6 = obj;
-  } else if (tmp5.GUILD_VOICE === channelType) {
+  } else if (ChannelTypes.GUILD_VOICE === channelType) {
     obj = { label: null, description: null };
-    const intl9 = tmp2(1114).intl;
-    obj.label = intl9.string(tmp2(1114).t.Sx55Oh);
-    const intl10 = tmp2(1114).intl;
-    obj.description = intl10.string(tmp2(1114).t.pqfkoF);
+    const intl9 = util.intl;
+    obj.label = intl9.string(util.t.Sx55Oh);
+    const intl10 = util.intl;
+    obj.description = intl10.string(util.t.pqfkoF);
     tmp6 = obj;
-  } else if (tmp5.GUILD_FORUM === channelType) {
+  } else if (ChannelTypes.GUILD_FORUM === channelType) {
     obj1 = { label: null, description: null };
-    const intl7 = tmp2(1114).intl;
-    obj1.label = intl7.string(tmp2(1114).t.eAVID5);
-    const intl8 = tmp2(1114).intl;
-    obj1.description = intl8.string(tmp2(1114).t.iZ5pgg);
+    const intl7 = util.intl;
+    obj1.label = intl7.string(util.t.eAVID5);
+    const intl8 = util.intl;
+    obj1.description = intl8.string(util.t.iZ5pgg);
     tmp6 = obj1;
-  } else if (tmp5.GUILD_ANNOUNCEMENT === channelType) {
+  } else if (ChannelTypes.GUILD_ANNOUNCEMENT === channelType) {
     const obj2 = { label: null, description: null };
-    const intl5 = tmp2(1114).intl;
-    obj2.label = intl5.string(tmp2(1114).t.qr9dEP);
-    const intl6 = tmp2(1114).intl;
-    obj2.description = intl6.string(tmp2(1114).t.gBkfzu);
+    const intl5 = util.intl;
+    obj2.label = intl5.string(util.t.qr9dEP);
+    const intl6 = util.intl;
+    obj2.description = intl6.string(util.t.gBkfzu);
     tmp6 = obj2;
-  } else if (tmp5.GUILD_STAGE_VOICE === channelType) {
+  } else if (ChannelTypes.GUILD_STAGE_VOICE === channelType) {
     const obj3 = { label: null, description: null };
-    const intl3 = tmp2(1114).intl;
-    obj3.label = intl3.string(tmp2(1114).t.pNWst0);
-    const intl4 = tmp2(1114).intl;
-    obj3.description = intl4.string(tmp2(1114).t.VPAwgo);
+    const intl3 = util.intl;
+    obj3.label = intl3.string(util.t.pNWst0);
+    const intl4 = util.intl;
+    obj3.description = intl4.string(util.t.VPAwgo);
     tmp6 = obj3;
-  } else if (tmp5.GUILD_APP === channelType) {
+  } else if (ChannelTypes.GUILD_APP === channelType) {
     const obj4 = { label: null, description: null };
-    const intl = tmp2(1114).intl;
-    obj4.label = intl.string(tmp2(1114).t["A+8d6M"]);
-    const intl2 = tmp2(1114).intl;
-    obj4.description = intl2.string(tmp2(1114).t.LVQQ3Z);
+    const intl = util.intl;
+    obj4.label = intl.string(util.t["A+8d6M"]);
+    const intl2 = util.intl;
+    obj4.description = intl2.string(util.t.LVQQ3Z);
     tmp6 = obj4;
-  } else if (tmp5.GUILD_MEDIA === channelType) {
+  } else if (ChannelTypes.GUILD_MEDIA === channelType) {
     const obj5 = { label: null, description: null };
-    const intl13 = tmp2(1114).intl;
-    obj5.label = intl13.string(tmp2(1114).t["6x6fVg"]);
+    const intl13 = util.intl;
+    obj5.label = intl13.string(util.t["6x6fVg"]);
     const obj6 = { children: null };
     const obj7 = { variant: "text-xs/normal", color: "text-muted", children: null };
-    const intl14 = tmp2(1114).intl;
-    obj7.children = intl14.string(tmp2(1114).t.JyCrwS);
-    const items = [closure_1_20(tmp2(4556).Text, obj7)];
+    const intl14 = util.intl;
+    obj7.children = intl14.string(util.t.JyCrwS);
+    const items = [closure_1_20(Text_Text.Text, obj7)];
     const obj8 = { variant: "text-xs/normal", children: null };
-    const intl15 = tmp2(1114).intl;
+    const intl15 = util.intl;
     obj9 = { hcArticleUrl: null };
     let obj14 = HelpdeskUtilsDefault;
     obj9.hcArticleUrl = obj14.getCreatorSupportArticleURL(constants3.MEDIA_CHANNEL);
-    obj8.children = intl15.format(tmp2(1114).t["2Sapx1"], obj9);
-    items[1] = closure_1_20(tmp2(4556).Text, obj8);
+    obj8.children = intl15.format(util.t["2Sapx1"], obj9);
+    items[1] = closure_1_20(Text_Text.Text, obj8);
     obj6.children = items;
     obj5.description = __initData2(__initData, obj6);
     tmp6 = obj5;
@@ -113,9 +116,9 @@ function ChannelTypeRow(selected) {
   if (true === isBeta) {
     const obj12 = { style: tmp.horizontalContainer, children: null };
     const obj13 = { text: label };
-    const items1 = [tmp7(tmp2(8593).FormLabel, obj13)];
-    obj14 = { size: tmp2(1178).BetaSizes.SMALL };
-    items1[1] = tmp7(tmp2(1178).BetaTag, obj14);
+    const items1 = [closure_1_20(Form.FormLabel, obj13)];
+    obj14 = { size: native.BetaSizes.SMALL };
+    items1[1] = closure_1_20(native.BetaTag, obj14);
     obj12.children = items1;
     tmp9 = __initData2(timestampProducer, obj12);
   }
@@ -243,7 +246,7 @@ class CreateChannel {
         headerLeft: NavigatorHeader.getHeaderCloseButton(CreateChannelModalActionCreatorsDefault.close),
         headerRight() {
           if (constants) {
-            let tmpResult = tmp(categoryId(createMode[47]).HeaderSubmittingIndicator, {});
+            let tmpResult = closure_2_20(categoryId(createMode[47]).HeaderSubmittingIndicator, {});
           } else {
             let tmp5 = first4;
             if (!first4) {
@@ -271,7 +274,7 @@ class CreateChannel {
               obj.onPress = function onPress() {
                 if (null != closure_1_5) {
                   let obj = closure_2_1(closure_2_2[51]);
-                  let items = obj.values(tmp.permissionOverwrites);
+                  let items = obj.values(closure_1_5.permissionOverwrites);
                 } else {
                   items = [];
                 }
@@ -289,12 +292,12 @@ class CreateChannel {
                 };
                 let bitrate;
                 if (closure_1_5 != null) {
-                  bitrate = tmp.bitrate;
+                  bitrate = closure_1_5.bitrate;
                 }
                 obj.bitrate = bitrate;
                 let userLimit;
                 if (closure_1_5 != null) {
-                  userLimit = tmp.userLimit;
+                  userLimit = closure_1_5.userLimit;
                 }
                 obj.userLimit = userLimit;
                 obj.createMode = createMode;
@@ -307,20 +310,20 @@ class CreateChannel {
                 if (closure_1_16) {
                   obj = {
                     guildId: tmp6,
-                    channelType: tmp8,
+                    channelType,
                     name: tmp7,
                     categoryId: tmp9,
                     applicationId: tmp10,
                     onChannelCreated: tmp11,
                   };
                   closure_1_13.push(constants2.ADD_MEMBERS, obj);
-                } else if (tmp8 === constants.GUILD_STAGE_VOICE) {
+                } else if (channelType === constants.GUILD_STAGE_VOICE) {
                   closure_1_13.push(constants2.ADD_MODERATORS, obj);
                 } else {
                   closure_1_15(obj);
                 }
               };
-              tmpResult = tmp(tmp4, obj);
+              tmpResult = closure_2_20(tmp4, obj);
             }
             const intl2 = categoryId(createMode[29]).intl;
             stringResult = intl2.string(categoryId(createMode[29]).t.PDTjLN);
@@ -330,24 +333,24 @@ class CreateChannel {
         headerTitle: null,
       };
       if (null != stateFromStores1) {
-        const intl3 = tmp2(1114).intl;
-        let stringResult = intl3.string(tmp2(1114).t.dEaPc4);
+        const intl3 = util.intl;
+        let stringResult = intl3.string(util.t.dEaPc4);
       } else {
-        if (null !== tmp4) {
-          if (ChannelTypes.GUILD_TEXT !== tmp4) {
-            if (tmp12.GUILD_VOICE !== tmp4) {
-              if (tmp12.GUILD_STAGE_VOICE !== tmp4) {
-                if (tmp12.GUILD_ANNOUNCEMENT !== tmp4) {
-                  if (tmp12.GUILD_FORUM !== tmp4) {
-                    if (tmp12.GUILD_MEDIA !== tmp4) {
-                      if (tmp12.GUILD_APP !== tmp4) {
-                        if (tmp12.GUILD_CATEGORY === tmp4) {
-                          let intl = tmp2(1114).intl;
-                          stringResult = intl.string(tmp2(1114).t["ISN+NM"]);
+        if (null !== first1) {
+          if (ChannelTypes.GUILD_TEXT !== first1) {
+            if (ChannelTypes.GUILD_VOICE !== first1) {
+              if (ChannelTypes.GUILD_STAGE_VOICE !== first1) {
+                if (ChannelTypes.GUILD_ANNOUNCEMENT !== first1) {
+                  if (ChannelTypes.GUILD_FORUM !== first1) {
+                    if (ChannelTypes.GUILD_MEDIA !== first1) {
+                      if (ChannelTypes.GUILD_APP !== first1) {
+                        if (ChannelTypes.GUILD_CATEGORY === first1) {
+                          let intl = util.intl;
+                          stringResult = intl.string(util.t["ISN+NM"]);
                         } else {
                           const _Error = Error;
                           const _HermesInternal = HermesInternal;
-                          const error = new Error("Unsupported channelType: " + tmp4);
+                          const error = new Error("Unsupported channelType: " + first1);
                           throw error;
                         }
                       }
@@ -358,8 +361,8 @@ class CreateChannel {
             }
           }
         }
-        let intl2 = tmp2(1114).intl;
-        stringResult = intl2.string(tmp2(1114).t["fUYU+j"]);
+        let intl2 = util.intl;
+        stringResult = intl2.string(util.t["fUYU+j"]);
       }
       obj.headerTitle = stringResult;
       navigation.setOptions(obj);
@@ -637,11 +640,11 @@ function AddMembers(guildId) {
   });
   const items = [canResult, tmp10, navigation, tmp13[2], pendingAdditions, currentUser.id];
   const onPress = noop.useCallback(() => {
-    current = result.current;
+    current = ref.current;
     ({ guildId, channelType } = current);
     ({ name, categoryId, applicationId, onChannelCreated, flags } = current);
     let obj = ChannelUtils;
-    result = obj.permissionOverwritesForRoles(guildId, channelType, [], true);
+    const result = obj.permissionOverwritesForRoles(guildId, channelType, [], true);
     const values = Object.values(first);
     const item = values.forEach((row) => {
       row = row.row;
@@ -677,6 +680,7 @@ function AddMembers(guildId) {
     } else {
       closure_8(obj);
     }
+    ref = result;
   }, items);
   const items1 = [navigation, pendingAdditions, first1, onPress];
   const layoutEffect = noop.useLayoutEffect(() => {

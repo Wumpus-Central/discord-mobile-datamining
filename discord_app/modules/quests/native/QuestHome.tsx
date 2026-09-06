@@ -5,9 +5,11 @@ import util from "../../../intl/index.native.tsx";
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
 import useNavigation from "../../../design/components/Navigator/native/useNavigation.native.tsx";
 import ToastActionCreatorsDefault from "../../toast/native/ToastActionCreators.tsx";
+import CircleInformationIcon from "../../../design/components/Icon/native/redesign/generated/CircleInformationIcon.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
 import components_Button_Button from "../../../design/components/Button/native/Button.native.tsx";
+import Pressables from "../../../design/void/Pressables/native/Pressables.tsx";
 import QuestTypes from "../QuestTypes.tsx";
 import AdCreativeType from "../../../../discord_common/js/shared/shared-constants/AdCreativeType.tsx";
 import _modDef5597 from "../../../../_runtime/metro/05597__.js";
@@ -69,9 +71,9 @@ function HeaderPreviewButton() {
   if (obj.useShouldShowPreviewToolTab()) {
     obj = { style: tmp.previewButton, children: null };
     obj = { grow: true, onPress: callback, variant: "primary", text: null };
-    const intl = tmp3(1114).intl;
-    obj.text = intl.string(tmp3(1114).t.tx5Ax5);
-    obj.children = closure_1_14(tmp3(4975).Button, obj);
+    const intl = util.intl;
+    obj.text = intl.string(util.t.tx5Ax5);
+    obj.children = closure_1_14(components_Button_Button.Button, obj);
     tmp5 = closure_1_14(hasOwnProperty, obj);
   }
   return tmp5;
@@ -91,9 +93,9 @@ function HeaderWithBounties(arg0) {
     ({ sectionHeader: arr2[0], sectionHeaderRow: arr2[1] } = tmp);
     obj.style = items1;
     obj = { variant: "text-lg/semibold", color: "text-strong", children: null };
-    const intl = tmp2(1114).intl;
-    obj.children = intl.string(tmp2(1114).t.qetVDw);
-    const items2 = [tmp6(tmp2(4556).Text, obj)];
+    const intl = util.intl;
+    obj.children = intl.string(util.t.qetVDw);
+    const items2 = [closure_1_14(Text_Text.Text, obj)];
     const obj1 = {
       onPress: openBountiesNuxPromoSheetDefault,
       hitSlop: 14,
@@ -101,13 +103,13 @@ function HeaderWithBounties(arg0) {
       accessibilityRole: "button",
       children: null,
     };
-    const intl2 = tmp2(1114).intl;
-    obj1["aria-label"] = intl2.string(tmp2(1114).t.hvVgAZ);
+    const intl2 = util.intl;
+    obj1["aria-label"] = intl2.string(util.t.hvVgAZ);
     const obj2 = { size: "xs", color: nativeDefault.colors.ICON_SUBTLE };
-    obj1.children = tmp6(tmp2(4515).CircleInformationIcon, obj2);
-    items2[1] = tmp6(tmp2(5123).PressableOpacity, obj1);
+    obj1.children = closure_1_14(CircleInformationIcon.CircleInformationIcon, obj2);
+    items2[1] = closure_1_14(Pressables.PressableOpacity, obj1);
     obj.children = items2;
-    tmp4Result = tmp4(hasOwnProperty, obj);
+    tmp4Result = __initData(hasOwnProperty, obj);
   }
   const obj3 = { children: null };
   items[1] = tmp4Result;
@@ -123,7 +125,7 @@ function HeaderWithBounties(arg0) {
   ({ sectionHeader: arr4[0], sectionHeaderWithTag: arr4[1] } = tmp);
   obj4.style = items3;
   const obj5 = { variant: "text-lg/semibold", color: "text-strong", children: null };
-  const intl3 = tmp2(1114).intl;
+  const intl3 = util.intl;
   obj5.children = intl3.string(util.t.JALI2K);
   obj4.children = closure_1_14(Text_Text.Text, obj5);
   items[3] = closure_1_14(hasOwnProperty, obj4);
@@ -176,9 +178,9 @@ let closure_22 = noop.memo((onLayout) => {
       obtainableOrbRewards: tmp2,
       showOrbShopPlaceholderCarousel: tmp3,
     };
-    let tmp5Result = tmp5(HeaderWithBounties, obj);
+    let tmp5Result = closure_1_14(HeaderWithBounties, obj);
   } else {
-    tmp5Result = tmp5(HeaderPreviewButton, {});
+    tmp5Result = closure_1_14(HeaderPreviewButton, {});
   }
   obj.children = tmp5Result;
   return closure_1_14(hasOwnProperty, obj);
@@ -245,7 +247,7 @@ export default noop.memo(function QuestHome(filters) {
   const effect1 = quests.useEffect(() => {
     let tmp2 = null != scrollToQuestId;
     if (tmp2) {
-      tmp2 = "" !== tmp;
+      tmp2 = "" !== scrollToQuestId;
     }
     if (tmp2) {
       tmp2 = hasFetched;
@@ -255,19 +257,19 @@ export default noop.memo(function QuestHome(filters) {
     }
     if (tmp2) {
       let obj = QuestDataUtils;
-      let tmp8 = null == obj.findQuestOrReplacement(tmp, quests, excludedQuests);
+      let tmp8 = null == obj.findQuestOrReplacement(scrollToQuestId, quests, excludedQuests);
       if (tmp8) {
-        tmp8 = ref.current !== tmp;
+        tmp8 = ref.current !== scrollToQuestId;
       }
       if (tmp8) {
         obj = { key: "QUEST_HOME_MOBILE_DEEP_LINK_QUEST_NOT_FOUND", content: null, icon: null, toastDurationMs: 5000 };
-        const intl = tmp4(1114).intl;
-        obj.content = intl.string(tmp4(1114).t.sIyHuY);
+        const intl = util.intl;
+        obj.content = intl.string(util.t.sIyHuY);
         obj.icon = _modDef5597;
         ToastActionCreatorsDefault.open(obj);
-        obj = { quest_id: tmp };
+        obj = { quest_id: scrollToQuestId };
         AnalyticsUtilsDefault.track(constants.QUEST_HOME_MOBILE_DEEP_LINK_MISSING_QUEST, obj);
-        ref.current = tmp;
+        ref.current = scrollToQuestId;
       }
     }
   }, items4);
@@ -346,13 +348,13 @@ export default noop.memo(function QuestHome(filters) {
   const effect2 = quests.useEffect(() => {
     let tmp2 = null != scrollToQuestId;
     if (tmp2) {
-      tmp2 = -1 !== tmp;
+      tmp2 = -1 !== scrollToQuestId;
     }
     if (tmp2) {
       tmp2 = excludedQuests;
     }
     if (tmp2) {
-      hasFetched(tmp);
+      hasFetched(scrollToQuestId);
       QuestHomeNavigationStore.setState({ scrollToQuestId: null });
     }
   }, items11);

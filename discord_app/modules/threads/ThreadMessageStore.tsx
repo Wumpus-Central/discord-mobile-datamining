@@ -68,9 +68,9 @@ function updateFromThreadMessages(type) {
           num = 0;
         }
         dependencyMap2[dependencyMap[channel.id].parentId] = num + 1;
-        ((arg0) => {
-          arg0.mostRecentRawMessage = mostRecentRawMessage;
-          arg0.mostRecentMessage = null;
+        ((dependencyMap) => {
+          dependencyMap.mostRecentRawMessage = mostRecentRawMessage;
+          dependencyMap.mostRecentMessage = null;
         })(dependencyMap[channel.id]);
       }
     }
@@ -95,19 +95,19 @@ function updateFromThread(type) {
     dependencyMap2[dependencyMap[type.id].parentId] = num + 1;
     ((mostRecentRawMessage) => {
       if (null != channel.messageCount) {
-        mostRecentRawMessage.count = tmp.messageCount;
+        mostRecentRawMessage.count = channel.messageCount;
       }
       let mostRecentMessage = mostRecentRawMessage.mostRecentRawMessage;
       if (mostRecentMessage == null) {
         mostRecentMessage = mostRecentRawMessage.mostRecentMessage;
       }
-      let tmp2 = null != tmp.lastMessageId;
+      let tmp2 = null != channel.lastMessageId;
       if (tmp2) {
         let id;
         if (mostRecentMessage != null) {
           id = mostRecentMessage.id;
         }
-        tmp2 = id !== tmp.lastMessageId;
+        tmp2 = id !== channel.lastMessageId;
       }
       if (tmp2) {
         mostRecentRawMessage.mostRecentRawMessage = null;
@@ -144,19 +144,19 @@ function updateFromServerThread(id) {
           dependencyMap2[dependencyMap[channel.id].parentId] = num + 1;
           ((mostRecentRawMessage) => {
             if (null != channel.messageCount) {
-              mostRecentRawMessage.count = tmp.messageCount;
+              mostRecentRawMessage.count = channel.messageCount;
             }
             let mostRecentMessage = mostRecentRawMessage.mostRecentRawMessage;
             if (mostRecentMessage == null) {
               mostRecentMessage = mostRecentRawMessage.mostRecentMessage;
             }
-            let tmp2 = null != tmp.lastMessageId;
+            let tmp2 = null != channel.lastMessageId;
             if (tmp2) {
               let id;
               if (mostRecentMessage != null) {
                 id = mostRecentMessage.id;
               }
-              tmp2 = id !== tmp.lastMessageId;
+              tmp2 = id !== channel.lastMessageId;
             }
             if (tmp2) {
               mostRecentRawMessage.mostRecentRawMessage = null;
@@ -189,19 +189,19 @@ function handleThreadCreateOrUpdate(channel) {
     dependencyMap2[dependencyMap[channel.id].parentId] = num + 1;
     ((mostRecentRawMessage) => {
       if (null != channel.messageCount) {
-        mostRecentRawMessage.count = tmp.messageCount;
+        mostRecentRawMessage.count = channel.messageCount;
       }
       let mostRecentMessage = mostRecentRawMessage.mostRecentRawMessage;
       if (mostRecentMessage == null) {
         mostRecentMessage = mostRecentRawMessage.mostRecentMessage;
       }
-      let tmp2 = null != tmp.lastMessageId;
+      let tmp2 = null != channel.lastMessageId;
       if (tmp2) {
         let id;
         if (mostRecentMessage != null) {
           id = mostRecentMessage.id;
         }
-        tmp2 = id !== tmp.lastMessageId;
+        tmp2 = id !== channel.lastMessageId;
       }
       if (tmp2) {
         mostRecentRawMessage.mostRecentRawMessage = null;
@@ -248,19 +248,19 @@ function handleSearchMessagesSuccess(data) {
                 closure_1_13[dependencyMap[channel.id].parentId] = num + 1;
                 ((mostRecentRawMessage) => {
                   if (null != channel.messageCount) {
-                    mostRecentRawMessage.count = tmp.messageCount;
+                    mostRecentRawMessage.count = channel.messageCount;
                   }
                   let mostRecentMessage = mostRecentRawMessage.mostRecentRawMessage;
                   if (mostRecentMessage == null) {
                     mostRecentMessage = mostRecentRawMessage.mostRecentMessage;
                   }
-                  let tmp2 = null != tmp.lastMessageId;
+                  let tmp2 = null != channel.lastMessageId;
                   if (tmp2) {
                     let id;
                     if (mostRecentMessage != null) {
                       id = mostRecentMessage.id;
                     }
-                    tmp2 = id !== tmp.lastMessageId;
+                    tmp2 = id !== channel.lastMessageId;
                   }
                   if (tmp2) {
                     mostRecentRawMessage.mostRecentRawMessage = null;
@@ -436,9 +436,9 @@ const threadMessageStore = new ThreadMessageStore(DispatcherDefault, {
               num = 0;
             }
             dependencyMap2[dependencyMap[channel.id].parentId] = num + 1;
-            ((arg0) => {
-              arg0.mostRecentRawMessage = mostRecentRawMessage;
-              arg0.mostRecentMessage = null;
+            ((dependencyMap) => {
+              dependencyMap.mostRecentRawMessage = mostRecentRawMessage;
+              dependencyMap.mostRecentMessage = null;
             })(dependencyMap[channel.id]);
           }
         }
@@ -577,10 +577,9 @@ const threadMessageStore = new ThreadMessageStore(DispatcherDefault, {
           let count = Math.max(tmp.count - 1, 0);
         }
         tmp.count = count;
-        obj2.add(id);
+        set.add(id);
       }
       count = tmp.count;
-      obj2 = set;
       tmp3 = null != mostRecentMessage && mostRecentMessage.id === id;
     }
   },
@@ -638,12 +637,12 @@ const threadMessageStore = new ThreadMessageStore(DispatcherDefault, {
                   count.mostRecentMessage = null;
                   count.count = 0;
                 } else {
-                  let first = tmp.messages[0];
+                  let first = isAfter.messages[0];
                   if (first == null) {
                     first = null;
                   }
                   count.count =
-                    tmp.messages.length >= MAX_THREAD_MESSAGE_COUNT ? MAX_THREAD_MESSAGE_COUNT : count.count;
+                    isAfter.messages.length >= MAX_THREAD_MESSAGE_COUNT ? MAX_THREAD_MESSAGE_COUNT : count.count;
                   let type;
                   if (first != null) {
                     type = first.type;

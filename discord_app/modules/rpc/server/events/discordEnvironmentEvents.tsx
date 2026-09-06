@@ -1,4 +1,5 @@
 // discord_app/modules/rpc/server/events/discordEnvironmentEvents.tsx
+import _modDef12 from "../../../../../_runtime/metro/00012__.js";
 import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 
@@ -52,6 +53,7 @@ let obj = {
               closure_1 = tmp2;
               closure_1_0(tmp2);
             }
+            obj2 = _modDef12;
           });
         });
       }
@@ -112,6 +114,7 @@ export const createDiscordEnvironmentEvents = function createDiscordEnvironmentE
                 closure_1 = tmp2;
                 closure_1_0(tmp2);
               }
+              obj2 = _modDef12;
             });
           });
         }

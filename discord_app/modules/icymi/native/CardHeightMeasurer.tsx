@@ -19,7 +19,7 @@ export const CardHeightMeasurer = noop.memo((children) => {
       pointerEvents="box-none"
       style={{ width: noop.useContext(itemId(16453).ICYMIContext).width, alignSelf: "center" }}
     >
-      {arg0.children}
+      {children.children}
     </View>
   );
 });

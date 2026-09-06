@@ -6,7 +6,7 @@ import ExperimentStore from "../../experiments/ExperimentStore.tsx";
 import CollectiblesPurchaseStore from "../CollectiblesPurchaseStore.tsx";
 
 require = fn;
-function useFetchPurchases(flag) {
+function useFetchPurchases() {
   if (flag === undefined) {
     flag = false;
   }
@@ -146,7 +146,7 @@ export { useFetchPurchases };
 export const useGetOrFetchPurchases = function useGetOrFetchPurchases() {
   return useFetchPurchases(true);
 };
-export const useGetOrFetchPurchase = function useGetOrFetchPurchase(selectedGiftingPromotionReward, flag) {
+export const useGetOrFetchPurchase = function useGetOrFetchPurchase(selectedGiftingPromotionReward) {
   if (flag === undefined) {
     flag = true;
   }
@@ -158,10 +158,10 @@ export const useGetOrFetchPurchase = function useGetOrFetchPurchase(selectedGift
   return value;
 };
 export const useGetOrFetchCollectiblesCategoriesAndPurchases = function useGetOrFetchCollectiblesCategoriesAndPurchases(
-  arg0,
+  paymentGateway,
 ) {
-  let obj = arg0;
-  if (arg0 == null) {
+  let obj = paymentGateway;
+  if (paymentGateway == null) {
     obj = {};
   }
   obj = {};

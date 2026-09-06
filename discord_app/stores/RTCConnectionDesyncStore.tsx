@@ -29,7 +29,7 @@ function retryFailedUsers() {
         if (null != user) {
           c2 = true;
           set.delete(item);
-          let obj = { userId: user.id, channelId: tmp };
+          let obj = { userId: user.id, channelId };
           const tmp23 = new VoiceStateRecord(obj);
           let tmp6 = guildId;
           if (guildId == null) {
@@ -47,7 +47,7 @@ function retryFailedUsers() {
             lastSpoke: 0,
             soundsharing: false,
             ringing: false,
-            userNick: NicknameUtilsDefault.getName(guildId, tmp, user),
+            userNick: NicknameUtilsDefault.getName(guildId, channelId, user),
             userAvatarDecoration: null,
             localVideoDisabled: false,
             isPoppedOut: false,
@@ -150,7 +150,7 @@ const rTCConnectionDesyncStore = new RTCConnectionDesyncStore(DispatcherDefault,
     let reduced = context.context === BaseConnectionEvent.MediaEngineContextTypes.DEFAULT;
     if (reduced) {
       reduced = userIds.reduce((acc, item) => {
-        if (null != VoiceStateStore.getVoiceStateForChannel(closure_1_1, item)) {
+        if (null != VoiceStateStore.getVoiceStateForChannel(channelId, item)) {
           return acc;
         } else {
           const user = UserStore.getUser(item);
@@ -158,7 +158,7 @@ const rTCConnectionDesyncStore = new RTCConnectionDesyncStore(DispatcherDefault,
             set.add(item);
             let flag = acc;
           } else {
-            let obj = { userId: user.id, channelId: tmp };
+            let obj = { userId: user.id, channelId };
             const tmp21 = new VoiceStateRecord(obj);
             let tmp2 = closure_1_0;
             if (closure_1_0 == null) {
@@ -176,7 +176,7 @@ const rTCConnectionDesyncStore = new RTCConnectionDesyncStore(DispatcherDefault,
               lastSpoke: 0,
               soundsharing: false,
               ringing: false,
-              userNick: NicknameUtilsDefault.getName(closure_1_0, tmp, user),
+              userNick: NicknameUtilsDefault.getName(closure_1_0, channelId, user),
               userAvatarDecoration: null,
               localVideoDisabled: false,
               isPoppedOut: false,

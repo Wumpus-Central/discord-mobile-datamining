@@ -200,7 +200,7 @@ prototype5["reset"] = function reset() {
 };
 prototype5["_flush"] = function _flush() {
   const self = this;
-  return (async (arg0, value) => {
+  return (async () => {
     if (c6 === 2) {
       c6 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -242,12 +242,11 @@ prototype5["_flush"] = function _flush() {
               c5 = 1;
               c3 = 2;
               c6 = 1;
-              const obj1 = { value: obj5.invoke(items), done: false };
+              const obj1 = { value: self.invoke(items), done: false };
               return obj1;
             } else {
               const item = items1.forEach((resolve) => resolve.resolve());
             }
-            obj5 = self;
           }
         } else {
           if (1 === tmp6) {

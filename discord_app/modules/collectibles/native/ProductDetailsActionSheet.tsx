@@ -154,6 +154,7 @@ function ManagedProductDetailsActionSheetInner(skuId) {
   } else {
     closure_13(initialVariantIndex(13167), {});
   }
+  ref = noop.useRef(null);
 }
 function ProductDetailsActionSheetWithOrderCTX(arg0) {
   stageCollectibleChangeForEditProfile = arg0;
@@ -245,7 +246,7 @@ obj.previewProfileButtonMidnight = { borderColor: nativeDefault.colors.BORDER_ST
 const rect1 = { position: "absolute", top: 0, left: nativeDefault.space.PX_16, zIndex: 2 };
 obj.badgeWrapper = rect1;
 let closure_17 = createStyles.createStyles(obj);
-let closure_19 = noop.forwardRef((product, ref) => {
+let closure_19 = noop.forwardRef((product, arg1) => {
   product = product.product;
   require = product;
   let num = product.initialVariantIndex;
@@ -257,7 +258,7 @@ let closure_19 = noop.forwardRef((product, ref) => {
     analyticsLocations = [];
   }
   const stageCollectibleChangeForEditProfile = product.stageCollectibleChangeForEditProfile;
-  ref = undefined;
+  let ref;
   _slicedToArray = undefined;
   let selectedProduct;
   c6 = undefined;
@@ -289,7 +290,7 @@ let closure_19 = noop.forwardRef((product, ref) => {
   const trackPdpClick = obj2.useTrackPdpClick(obj);
   const items2 = [trackPdpClick];
   const imperativeHandle = selectedProduct.useImperativeHandle(
-    ref,
+    arg1,
     () => ({
       scrollToEnd() {
         const current = ref.current;
@@ -533,7 +534,7 @@ let closure_19 = noop.forwardRef((product, ref) => {
   let tmp64Result = null != tmp49;
   if (tmp64Result) {
     const obj11 = { style: tmp4.badgeWrapper, children: tmp49 };
-    tmp64Result = tmp64(tmp61, obj11);
+    tmp64Result = closure_13(tmp61, obj11);
   }
   items9[1] = tmp64Result;
   items9[2] = closure_13(analyticsLocations(ref[41]), {
@@ -579,7 +580,7 @@ let closure_19 = noop.forwardRef((product, ref) => {
       },
       stageCollectibleChangeForEditProfile,
     };
-    tmp64Result = tmp64(tmp6(tmp2[46]), obj14);
+    tmp64Result = closure_13(tmp6(tmp2[46]), obj14);
   }
   items10[2] = tmp64Result;
   obj7.children = items10;

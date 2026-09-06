@@ -2,6 +2,7 @@
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
 import PlatformUtils from "../../../utils/PlatformUtils.tsx";
+import ImagePickerUtils from "ImagePickerUtils.tsx";
 import launchCamera from "../../../../_runtime/05152_launchCamera.js";
 import openPickerDefault from "../../../../_runtime/05154_openPicker.js";
 import ThemeStore from "../../user_settings/ThemeStore.tsx";
@@ -12,7 +13,7 @@ let size = fn(2);
 const result = size.fileFinishedImporting("modules/image/native/ImagePicker.tsx");
 
 export default {
-  launchImageLibrary(mediaType, arg1) {
+  launchImageLibrary(mediaType, fn) {
     if ("any" !== mediaType.mediaType) {
       let str = mediaType.mediaType;
     } else {
@@ -27,10 +28,9 @@ export default {
     if (obj2.isIOS()) {
       str2 = "pageSheet";
     }
-    tmp4(5151);
     obj2 = PlatformUtils;
     const tmp3 = !mediaType.disableNewIOSPicker;
-    const tmp4Result = tmp4(5152);
+    const tmp4Result = launchCamera;
     obj = {};
     const merged = Object.assign(mediaType);
     obj.mediaType = str;
@@ -38,7 +38,8 @@ export default {
     obj.selection = selections;
     obj.useNewIOSPicker = tmp3;
     obj.forceGetContent = !tmp4Result.isActionPickSupported();
-    tmp4Result.launchImageLibrary(obj, arg1);
+    tmp4Result.launchImageLibrary(obj, fn);
+    const tmp6 = !tmp4Result.isActionPickSupported();
   },
   launchImageLibraryAsync(arg0) {
     let mediaType = arg0;
@@ -61,10 +62,9 @@ export default {
       const fn = (arg0) => {
         closure_0(arg0);
       };
-      tmp5(5151);
       obj2 = PlatformUtils;
       const tmp4 = !mediaType.disableNewIOSPicker;
-      const tmp5Result = tmp5(5152);
+      const tmp5Result = launchCamera;
       obj = {};
       const merged = Object.assign(tmp);
       obj.mediaType = str;
@@ -73,6 +73,7 @@ export default {
       obj.useNewIOSPicker = tmp4;
       obj.forceGetContent = !tmp5Result.isActionPickSupported();
       tmp5Result.launchImageLibrary(obj, fn);
+      const tmp7 = !tmp5Result.isActionPickSupported();
     });
   },
   launchCamera(arg0, arg1) {

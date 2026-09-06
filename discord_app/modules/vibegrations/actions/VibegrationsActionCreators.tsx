@@ -13,17 +13,16 @@ function reloadVibegrationsAppFrames(application_id) {
   if (null != application_id) {
     const allFrames = FramesStore.getAllFrames();
     for (const item10005 of allFrames) {
-      let tmp2 = item10005;
       let tmp4 = isLaunched(item10005);
       if (tmp4) {
-        tmp4 = tmp2.applicationId === arg0;
+        tmp4 = item10005.applicationId === arg0;
       }
       if (tmp4) {
-        tmp4 = !tmp2.data.proxyTicketRefreshing;
+        tmp4 = !item10005.data.proxyTicketRefreshing;
       }
       if (tmp4) {
         let obj = FramesActionCreatorsDefault;
-        let refreshProxyTicketResult = obj.refreshProxyTicket(tmp2.id);
+        let refreshProxyTicketResult = obj.refreshProxyTicket(item10005.id);
       }
       continue;
     }
@@ -39,117 +38,122 @@ function listProjects() {
   }
   return applyArgumentsResult;
 }
-let closure_12 = async function _listProjects(arg0, value) {
-  if (c6 === 2) {
-    c6 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp6 === 3) {
-    if (arg0 === 1) {
-      throw value;
-    } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
-    } else {
-      return { value: "HermesInternal", done: null };
-    }
-  } else {
-    try {
-      c6 = 2;
-      if (0 === c5) {
-        if (arg0 === 1) {
-          c6 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c6 = 3;
-          obj = { value, done: true };
-          return obj;
-        } else {
-          closure_3 = tmp3;
-          closure_2 = tmp20;
-          closure_130_0 = undefined;
-          let body;
-          closure_130_2 = undefined;
-          c1 = closure_0;
-          if (closure_0 == null) {
-            c1 = null;
-          }
-          closure_130_0 = c1;
-          projectsFetchState = projectsFetchState.getProjectsFetchState();
-          let type;
-          if (projectsFetchState != null) {
-            type = projectsFetchState.type;
-          }
-          if ("loading" !== type) {
-            closure_9 = tmp30;
-            let obj4 = DispatcherDefault;
-            obj4.dispatch({ type: "VIBEGRATIONS_PROJECTS_FETCH_START" });
-            c4 = 1;
-            const HTTP = HTTPUtils.HTTP;
-            const request = { url: constants.VIBEGRATIONS_PROJECTS, query: null, rejectWithError: true };
-            let tmp41;
-            if (null != tmp48) {
-              const obj1 = { guild_id: tmp48 };
-              tmp41 = obj1;
-            }
-            request.query = tmp41;
-            c5 = 2;
-            c6 = 1;
-            const obj2 = { value: HTTP.get(request), done: false };
-            return obj2;
-          } else {
-            tmp20 = null != tmp30;
-            if (tmp20) {
-              tmp20 = tmp30 !== closure_9;
-            }
-            if (tmp20) {
-              closure_10 = tmp30;
-            }
-          }
-        }
-      } else {
-        if (1 === tmp7) {
-          c4 = 0;
-          let obj3 = closure_131_1(closure_131_2[5]);
-          obj3.dispatch({ type: "VIBEGRATIONS_PROJECTS_FETCH_FAIL" });
-        } else if (arg0 === 1) {
-          c6 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c4 = 0;
-          c6 = 3;
-          obj3 = { value, done: true };
-          return obj3;
-        } else {
-          body = value.body;
-          obj = closure_131_1(closure_131_2[5]);
-          obj4 = { type: "VIBEGRATIONS_PROJECTS_FETCH_SUCCESS", projects: body, guildId: closure_130_0 };
-          obj.dispatch(obj4);
-          c4 = 0;
-        }
-        tmp20 = closure_3;
-        closure_130_2 = closure_131_10;
-        closure_131_10 = null;
-        let tmp23 = null != closure_130_2;
-        if (tmp23) {
-          tmp20 = closure_130_0;
-          tmp23 = closure_130_2 !== closure_130_0;
-        }
-        if (tmp23) {
-          tmp20 = closure_131_11;
-          closure_131_11(closure_130_2);
-        }
-      }
+let closure_12 = async function _listProjects() {
+  c5 = 0;
+  c6 = 0;
+  c4 = 0;
+  return (async (arg0) => {
+    if (c6 === 2) {
       c6 = 3;
-    } catch (tmp42) {
-      tmp20 = c4;
-      if (tmp4 === c4) {
-        c6 = tmp2;
-        throw tmp42;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp6 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        let obj = { value, done: true };
+        return obj;
       } else {
-        c5 = tmp;
+        return { value: "HermesInternal", done: null };
+      }
+    } else {
+      try {
+        c6 = 2;
+        if (0 === c5) {
+          if (arg0 === 1) {
+            c6 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c6 = 3;
+            obj = { value, done: true };
+            return obj;
+          } else {
+            closure_3 = tmp3;
+            closure_2 = tmp20;
+            closure_130_0 = undefined;
+            let body;
+            closure_130_2 = undefined;
+            c1 = guild_id;
+            if (guild_id == null) {
+              c1 = null;
+            }
+            closure_130_0 = c1;
+            projectsFetchState = projectsFetchState.getProjectsFetchState();
+            let type;
+            if (projectsFetchState != null) {
+              type = projectsFetchState.type;
+            }
+            if ("loading" !== type) {
+              closure_9 = tmp30;
+              let obj4 = DispatcherDefault;
+              obj4.dispatch({ type: "VIBEGRATIONS_PROJECTS_FETCH_START" });
+              c4 = 1;
+              const HTTP = HTTPUtils.HTTP;
+              const request = { url: constants.VIBEGRATIONS_PROJECTS, query: null, rejectWithError: true };
+              let tmp41;
+              if (null != guild_id) {
+                const obj1 = { guild_id };
+                tmp41 = obj1;
+              }
+              request.query = tmp41;
+              c5 = 2;
+              c6 = 1;
+              const obj2 = { value: HTTP.get(request), done: false };
+              return obj2;
+            } else {
+              tmp20 = null != tmp30;
+              if (tmp20) {
+                tmp20 = tmp30 !== closure_9;
+              }
+              if (tmp20) {
+                closure_10 = tmp30;
+              }
+            }
+          }
+        } else {
+          if (1 === tmp7) {
+            c4 = 0;
+            let obj3 = closure_131_1(closure_131_2[5]);
+            obj3.dispatch({ type: "VIBEGRATIONS_PROJECTS_FETCH_FAIL" });
+          } else if (arg0 === 1) {
+            c6 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c4 = 0;
+            c6 = 3;
+            obj3 = { value, done: true };
+            return obj3;
+          } else {
+            body = value.body;
+            obj = closure_131_1(closure_131_2[5]);
+            obj4 = { type: "VIBEGRATIONS_PROJECTS_FETCH_SUCCESS", projects: body, guildId: closure_130_0 };
+            obj.dispatch(obj4);
+            c4 = 0;
+          }
+          tmp20 = closure_3;
+          closure_130_2 = closure_131_10;
+          closure_131_10 = null;
+          let tmp23 = null != closure_130_2;
+          if (tmp23) {
+            tmp20 = closure_130_0;
+            tmp23 = closure_130_2 !== closure_130_0;
+          }
+          if (tmp23) {
+            tmp20 = closure_131_11;
+            closure_131_11(closure_130_2);
+          }
+        }
+        c6 = 3;
+      } catch (tmp42) {
+        tmp20 = c4;
+        if (tmp4 === c4) {
+          c6 = tmp2;
+          throw tmp42;
+        } else {
+          c5 = tmp;
+        }
       }
     }
-  }
+  })();
 };
 function getProject() {
   const self = this;
@@ -161,7 +165,7 @@ function getProject() {
   }
   return applyArgumentsResult;
 }
-let closure_14 = async function _getProject(arg0, signal) {
+let closure_14 = async function _getProject(arg0) {
   closure_0 = arg0;
   c4 = 0;
   c5 = 0;
@@ -171,7 +175,8 @@ let closure_14 = async function _getProject(arg0, signal) {
     closure_130_0 = closure_0;
     closure_130_1 = signal;
     const HTTP = HTTPUtils.HTTP;
-    closure_130_2 = await HTTP.get({ url: Endpoints.VIBEGRATIONS_PROJECT(closure_0), rejectWithError: false, signal });
+    await HTTP.get({ url: Endpoints.VIBEGRATIONS_PROJECT(closure_0), rejectWithError: false, signal });
+    closure_130_2 = value;
     if (closure_130_1 != null) {
       const aborted = closure_130_1.aborted;
     }
@@ -199,7 +204,7 @@ let closure_15 = async function _createProject() {
   const merged = Object.assign(closure_0);
   request.body = { flags: VibegrationsTypes.VibegrationsProjectFlags.PUBLIC };
   await HTTP.post(request);
-  const body = arg1.body;
+  const body = value.body;
   { flags: VibegrationsTypes.VibegrationsProjectFlags.PUBLIC };
   closure_130_1(closure_130_2[5]).dispatch({ type: "VIBEGRATIONS_PROJECT_CREATE_SUCCESS", project: body });
   return body.id;
@@ -214,7 +219,7 @@ function patchProject() {
   }
   return applyArgumentsResult;
 }
-let closure_17 = async function _patchProject(arg0, body) {
+let closure_17 = async function _patchProject(arg0) {
   closure_0 = arg0;
   c4 = 0;
   c5 = 0;
@@ -223,7 +228,8 @@ let closure_17 = async function _patchProject(arg0, body) {
     closure_2 = tmp5;
     const HTTP = HTTPUtils.HTTP;
     const request = { url: Endpoints.VIBEGRATIONS_PROJECT(closure_0), body, rejectWithError: false };
-    closure_130_0 = await HTTP.patch(request);
+    await HTTP.patch(request);
+    closure_130_0 = value;
     if (closure_130_0.ok) {
       closure_131_1(closure_131_2[5]).dispatch({ type: "VIBEGRATIONS_PROJECT_UPDATE_SUCCESS", project: closure_130_0.body });
       closure_131_1(closure_131_2[5]);
@@ -231,7 +237,7 @@ let closure_17 = async function _patchProject(arg0, body) {
     return closure_130_0;
   })();
 };
-let closure_18 = async function _setProjectIcon(arg0, icon) {
+let closure_18 = async function _setProjectIcon(arg0) {
   closure_0 = arg0;
   c5 = 0;
   c6 = 0;
@@ -326,7 +332,8 @@ let closure_19 = async function _deleteProject() {
   closure_1 = tmp5;
   closure_129_0 = closure_0;
   const HTTP = HTTPUtils.HTTP;
-  closure_129_1 = await HTTP.del({ url: Endpoints.VIBEGRATIONS_PROJECT(closure_0), rejectWithError: false });
+  await HTTP.del({ url: Endpoints.VIBEGRATIONS_PROJECT(closure_0), rejectWithError: false });
+  closure_129_1 = value;
   { url: Endpoints.VIBEGRATIONS_PROJECT(closure_0), rejectWithError: false };
   closure_130_1(closure_130_2[5]).dispatch({ type: "VIBEGRATIONS_PROJECT_DELETE_SUCCESS", projectId: closure_129_0 });
   return closure_129_1;

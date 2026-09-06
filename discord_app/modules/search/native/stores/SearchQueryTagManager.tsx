@@ -157,7 +157,7 @@ prototype["add"] = function add(type) {
   if (!this.exists(type)) {
     if (type.type === SearchQueryTagTypes.PREFIX) {
       if (null != tmp) {
-        if (tmp.type === tmp2.PREFIX) {
+        if (tmp.type === SearchQueryTagTypes.PREFIX) {
           self.replaceTag(tmp, type);
         }
         self.markChanged();

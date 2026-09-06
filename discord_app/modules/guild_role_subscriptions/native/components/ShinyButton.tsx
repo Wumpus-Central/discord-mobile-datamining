@@ -1,5 +1,6 @@
 // discord_app/modules/guild_role_subscriptions/native/components/ShinyButton.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import native from "../../../../design/void/native.tsx";
 import BaseTextButton from "../../../../design/components/Button/native/BaseTextButton.native.tsx";
 import _modDef10302 from "../../../../../_runtime/metro/10302__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -31,14 +32,14 @@ export default function ShinyButton(style) {
   obj.pillStyle = items;
   let tmp3Result;
   if (!loading) {
-    obj = { size: tmp4(1178).Icon.Sizes.REFRESH_SMALL_16, source: _modDef10302, style: null };
+    obj = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef10302, style: null };
     const items1 = [tmp2.sparkleIcon];
     if (disabled) {
       disabled = tmp2.disabled;
     }
     items1[1] = disabled;
     obj.style = items1;
-    tmp3Result = tmp3(tmp4(1178).Icon, obj);
+    tmp3Result = jsx(native.Icon, { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef10302, style: null });
   }
   obj.icon = tmp3Result;
   const merged1 = Object.assign(merged);

@@ -190,7 +190,7 @@ export const useBountiesModalTiming = function useBountiesModalTiming(endMode) {
     showEndCard: callback3,
     rewardRemainingSeconds: num5,
     rewardTotalSeconds: result1,
-    normalizedProgress: tmp9,
+    normalizedProgress: tmp7,
     maxVideoProgressSeconds: tmp11,
     videoDuration: tmp13,
   };

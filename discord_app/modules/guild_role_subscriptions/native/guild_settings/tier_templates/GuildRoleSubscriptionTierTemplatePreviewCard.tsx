@@ -6,12 +6,12 @@ import AnalyticsUtilsDefault from "../../../../../utils/AnalyticsUtils.tsx";
 import asyncRequireImpl from "../../../../../../_runtime/01896_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
+import AppAnalyticsUtils from "../../../../app_analytics/AppAnalyticsUtils.tsx";
 import _modDef7158 from "../../../../../../_runtime/metro/07158__.js";
 import GuildRoleSubscriptionTierTemplateUtils from "GuildRoleSubscriptionTierTemplateUtils.tsx";
 import GuildRoleSubscriptionTierTemplateActionCreators from "../../../tier_templates/GuildRoleSubscriptionTierTemplateActionCreators.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
-const AppAnalyticsUtils = tmp(4740);
 require = fn;
 function ContentHeader(arg0) {
   ({ count, title } = arg0);
@@ -167,7 +167,7 @@ export default function GuildRoleSubscriptionTierTemplatePreviewCard(template) {
   let navigation;
   closure_7 = undefined;
   let callback1;
-  let tmp = closure_11();
+  const tmp = closure_11();
   let obj = template(navigation[15]);
   navigation = obj.useNavigation();
   let obj1 = groupListingId(navigation[16]);
@@ -179,20 +179,20 @@ export default function GuildRoleSubscriptionTierTemplatePreviewCard(template) {
   const first1 = additional_perks[0];
   let obj2 = addNewEditStateFromTemplate;
   const items = [addNewEditStateFromTemplate, groupListingId, navigation, guildId];
-  const callback = addNewEditStateFromTemplate.useCallback((selectedTemplate, arg1) => {
+  const handleCreateFromTemplate = addNewEditStateFromTemplate.useCallback((selectedTemplate, arg1) => {
     let obj = GuildRoleSubscriptionTierTemplateActionCreators;
     const result = obj.stashTemplateChannels(selectedTemplate, guildId);
     if (arg1) {
       ActionSheetActionCreatorsDefault.hideActionSheet();
     }
-    const tmp3 = guildId;
     const tmp5 = addNewEditStateFromTemplate(selectedTemplate);
     obj = { exit_reason: "template_selected" };
     const obj3 = AnalyticsUtilsDefault;
-    const merged = Object.assign(AppAnalyticsUtils.collectGuildAnalyticsMetadata(tmp3));
+    const merged = Object.assign(AppAnalyticsUtils.collectGuildAnalyticsMetadata(guildId));
     obj3.track(constants.ROLE_SUBSCRIPTION_LISTING_TEMPLATE_SELECTOR_EXITED, obj);
     obj = { groupListingId, initialEditStateId: tmp5 };
     const replaced = navigation.replace(constants2.ROLE_SUBSCRIPTIONS_TIER_EDIT, obj);
+    const tmpResult = AppAnalyticsUtils;
   }, items);
   let obj3 = template(navigation[20]);
   const suggestedUnusedPrices = obj3.useSuggestedUnusedPrices(guildId, priceTiers, first.price_tier);
@@ -201,13 +201,13 @@ export default function GuildRoleSubscriptionTierTemplatePreviewCard(template) {
     tmp8 = suggestedUnusedPrices.length > 0;
   }
   closure_7 = tmp8;
-  const items1 = [callback, suggestedUnusedPrices, tmp8];
+  const items1 = [handleCreateFromTemplate, suggestedUnusedPrices, tmp8];
   callback1 = obj2.useCallback((selectedTemplate, arg1) => {
     if (closure_7) {
-      const obj = { selectedTemplate, handleCreateFromTemplate: tmp, newPricesToPick: suggestedUnusedPrices };
+      const obj = { selectedTemplate, handleCreateFromTemplate, newPricesToPick: suggestedUnusedPrices };
       obj.openLazy(asyncRequireImpl(17788, dependencyMap.paths), "TierTemplatePriceReselectionCard", obj);
     } else {
-      tmp(selectedTemplate, arg1);
+      handleCreateFromTemplate(selectedTemplate, arg1);
     }
   }, items1);
   obj = { style: tmp.container, children: null };
@@ -263,7 +263,7 @@ export default function GuildRoleSubscriptionTierTemplatePreviewCard(template) {
   obj2.children = items4;
   const items6 = [closure_10(template(navigation[22]).GappedList, obj2), closure_9(ViewEntireTemplateFooter, {})];
   obj1.children = items6;
-  items2[1] = closure_10(callback, obj1);
+  items2[1] = closure_10(handleCreateFromTemplate, obj1);
   obj.children = items2;
   return closure_10(suggestedUnusedPrices, obj);
 }

@@ -1,6 +1,8 @@
 // discord_app/modules/activities/handlePressJoinActivity.tsx
+import util from "../../intl/index.native.tsx";
 import AlertActionCreatorsDefault from "../../actions/AlertActionCreators.tsx";
 import getEmbeddedActivityJoinability from "utils/getEmbeddedActivityJoinability.tsx";
+import showActivitiesInvalidPermissionsAlert from "../voice_calls/showActivitiesInvalidPermissionsAlert.tsx";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 import ApplicationRecord from "../../records/ApplicationRecord.tsx";
 import ChannelStore from "../../stores/ChannelStore.tsx";
@@ -18,45 +20,52 @@ function handlePressJoinActivity(arg0) {
       handleCanJoin();
     }
   } else if (
-    tmp(9531).EmbeddedActivityJoinability.NO_USE_EMBEDDED_ACTIVITIES_PERMISSION === embeddedActivityJoinability
+    getEmbeddedActivityJoinability.EmbeddedActivityJoinability.NO_USE_EMBEDDED_ACTIVITIES_PERMISSION ===
+    embeddedActivityJoinability
   ) {
-    const result = tmp(9532).showActivitiesInvalidPermissionsAlert();
-    const tmpResult = tmp(9532);
+    const result = showActivitiesInvalidPermissionsAlert.showActivitiesInvalidPermissionsAlert();
+    const tmpResult = showActivitiesInvalidPermissionsAlert;
   } else if (
-    tmp(9531).EmbeddedActivityJoinability.ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS === embeddedActivityJoinability
+    getEmbeddedActivityJoinability.EmbeddedActivityJoinability.ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS ===
+    embeddedActivityJoinability
   ) {
     let obj = { title: null, body: null, hideActionSheet: false };
-    const intl7 = tmp(1114).intl;
-    obj.title = intl7.string(tmp(1114).t.PtobXW);
-    const intl8 = tmp(1114).intl;
-    obj.body = intl8.string(tmp(1114).t.UXoQTp);
+    const intl7 = util.intl;
+    obj.title = intl7.string(util.t.PtobXW);
+    const intl8 = util.intl;
+    obj.body = intl8.string(util.t.UXoQTp);
     AlertActionCreatorsDefault.show(obj);
-  } else if (tmp(9531).EmbeddedActivityJoinability.ACTIVITY_NOT_SUPPORTED_ON_OS === embeddedActivityJoinability) {
+  } else if (
+    getEmbeddedActivityJoinability.EmbeddedActivityJoinability.ACTIVITY_NOT_SUPPORTED_ON_OS ===
+    embeddedActivityJoinability
+  ) {
     obj = { title: null, body: null, hideActionSheet: false };
-    const intl5 = tmp(1114).intl;
-    obj.title = intl5.string(tmp(1114).t.PtobXW);
-    const intl6 = tmp(1114).intl;
-    obj.body = intl6.string(tmp(1114).t.uGDCcw);
+    const intl5 = util.intl;
+    obj.title = intl5.string(util.t.PtobXW);
+    const intl6 = util.intl;
+    obj.body = intl6.string(util.t.uGDCcw);
     AlertActionCreatorsDefault.show(obj);
-  } else if (tmp(9531).EmbeddedActivityJoinability.ACTIVITY_AGE_GATED === embeddedActivityJoinability) {
+  } else if (
+    getEmbeddedActivityJoinability.EmbeddedActivityJoinability.ACTIVITY_AGE_GATED === embeddedActivityJoinability
+  ) {
     let obj2 = AlertActionCreatorsDefault;
     const obj1 = { title: null, body: null, hideActionSheet: false };
-    const intl3 = tmp(1114).intl;
-    obj1.title = intl3.string(tmp(1114).t.PtobXW);
-    const intl4 = tmp(1114).intl;
-    obj1.body = intl4.string(tmp(1114).t["4WuFRE"]);
+    const intl3 = util.intl;
+    obj1.title = intl3.string(util.t.PtobXW);
+    const intl4 = util.intl;
+    obj1.body = intl4.string(util.t["4WuFRE"]);
     obj2.show(obj1);
   } else {
     obj = AlertActionCreatorsDefault;
     obj2 = { title: null, body: null, hideActionSheet: false };
-    const intl = tmp(1114).intl;
-    obj2.title = intl.string(tmp(1114).t.PtobXW);
-    const intl2 = tmp(1114).intl;
-    obj2.body = intl2.string(tmp(1114).t.FUCQco);
+    const intl = util.intl;
+    obj2.title = intl.string(util.t.PtobXW);
+    const intl2 = util.intl;
+    obj2.body = intl2.string(util.t.FUCQco);
     obj.show(obj2);
   }
 }
-let closure_12 = async function _maybeJoinEmbeddedActivity(arg0, value) {
+let closure_12 = async function _maybeJoinEmbeddedActivity(arg0) {
   if (1 === tmp5) {
     if (arg0 === 1) {
       c4 = 3;
@@ -146,7 +155,7 @@ let closure_12 = async function _maybeJoinEmbeddedActivity(arg0, value) {
   } = closure_0);
   closure_129_12 = function _handleCanJoin() {
     const self = this;
-    const tmp = c3(function* (arg0, value) {
+    const tmp = c3(function* () {
       if (c0 === 2) {
         c0 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");

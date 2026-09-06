@@ -71,7 +71,7 @@ MarketingComponentRecord["createFromServer"] = function createFromServer(start_d
       tmp,
       tmp14,
       b64ToProto,
-      tmp13,
+      MarketingComponentRecord,
       new.target,
       id,
       component_type,

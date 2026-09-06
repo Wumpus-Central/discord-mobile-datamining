@@ -39,28 +39,28 @@ export const useShowConvoStarterInDM = function useShowConvoStarterInDM(channel)
     () => {
       if (ref2.current !== id.id) {
         ref.current = false;
-        tmp.current = tmp2.id;
+        tmp.current = id.id;
       }
       if (null != strangerDangerWarning) {
         return false;
       } else if (closure_3) {
-        if (MessageRequestStore.isMessageRequest(tmp2.id)) {
+        if (MessageRequestStore.isMessageRequest(id.id)) {
           return false;
         } else {
           if (null != recipientId) {
-            if (RelationshipStore.getRelationshipType(tmp5) === constants.BLOCKED) {
+            if (RelationshipStore.getRelationshipType(recipientId) === constants.BLOCKED) {
               return false;
             }
           }
           if (null != recipientId) {
-            const user = UserStore.getUser(tmp5);
+            const user = UserStore.getUser(recipientId);
             if (null != user) {
               if (user.hasFlag(constants2.PROVISIONAL_ACCOUNT)) {
                 return false;
               }
             }
           }
-          const messages = MessageStore.getMessages(tmp2.id);
+          const messages = MessageStore.getMessages(id.id);
           const hasMoreBefore = messages.hasMoreBefore;
           let tmp10 = !hasMoreBefore;
           if (!hasMoreBefore) {
@@ -70,7 +70,7 @@ export const useShowConvoStarterInDM = function useShowConvoStarterInDM(channel)
             tmp10 = messages.length < 25;
           }
           let current = messages.ready;
-          const result = MessageStore.hasCurrentUserSentWaveBlockingMessage(tmp2.id);
+          const result = MessageStore.hasCurrentUserSentWaveBlockingMessage(id.id);
           if (!current) {
             current = ref.current;
           }

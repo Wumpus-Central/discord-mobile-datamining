@@ -55,9 +55,9 @@ export const getMediaEmptyStateComponentOrNull = function getMediaEmptyStateComp
     showCameraButton = true;
   }
   if (photoPermissionStatus !== NativePermissionStatus.DENIED) {
-    if (photoPermissionStatus !== tmp3.RESTRICTED) {
+    if (photoPermissionStatus !== NativePermissionStatus.RESTRICTED) {
       if (photosEmpty.photosEmpty) {
-        if (photoPermissionStatus === tmp3.LIMITED) {
+        if (photoPermissionStatus === NativePermissionStatus.LIMITED) {
           let obj = {
             actionIcon: timestampProducer(SettingsIcon.SettingsIcon, { color: "white", size: "sm" }),
             actionLabel: null,

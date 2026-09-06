@@ -5,6 +5,7 @@ import ReanimatedRexportDefault from "../../../../reanimated/ReanimatedRexport.t
 import DeviceUtils from "../../../../../utils/native/DeviceUtils.tsx";
 import useIsWindowLargeDefault from "../../../../screen/native/useIsWindowLarge.tsx";
 import profileModalTransition from "../../../../user_profile/native/profileModalTransition.tsx";
+import SettingsNavigatorDefault from "../../../../user_settings/core/native/SettingsNavigator.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -49,12 +50,12 @@ export default function Settings() {
   obj = {
     style: noop.useMemo(() => {
       if (closure_3) {
-        const items = [tmp.containerOuterTablet];
+        const items = [closure_4.containerOuterTablet];
         let obj = { paddingTop: top, paddingLeft: left, paddingRight: right };
         items[1] = obj;
         let items1 = items;
       } else {
-        items1 = [tmp.containerOuter];
+        items1 = [closure_4.containerOuter];
         obj = { paddingLeft: left, paddingRight: right };
         items1[1] = obj;
       }
@@ -62,10 +63,10 @@ export default function Settings() {
     }, items),
     children: null,
   };
-  obj = { style: tmp5 ? tmp6.containerTablet : tmp6.container, children: tmp7(tmp4(16903), {}) };
+  obj = { style: tmp5 ? tmp6.containerTablet : tmp6.container, children: jsx(SettingsNavigatorDefault, {}) };
   obj.children = jsx(ReanimatedRexportDefault.View, {
     style: tmp5 ? tmp6.containerTablet : tmp6.container,
-    children: tmp7(tmp4(16903), {}),
+    children: jsx(SettingsNavigatorDefault, {}),
   });
-  return <View style={tmp5 ? tmp6.containerTablet : tmp6.container}>{tmp7(tmp4(16903), {})}</View>;
+  return <View style={tmp5 ? tmp6.containerTablet : tmp6.container}>{jsx(SettingsNavigatorDefault, {})}</View>;
 }

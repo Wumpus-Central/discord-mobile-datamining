@@ -16,27 +16,24 @@ export default function getURLForApplication(arg0) {
   }
   if (useActivityUrlOverride) {
     let activityUrlOverride = DeveloperActivityShelfStore.getState().activityUrlOverride;
+  } else if (TestModeStore.inTestModeForEmbeddedApplication(arg0)) {
+    activityUrlOverride = TestModeStore.testModeOriginURL;
   } else {
-    if (TestModeStore.inTestModeForEmbeddedApplication(arg0)) {
-      activityUrlOverride = tmp4.testModeOriginURL;
-    } else {
-      const _window = window;
-      activityUrlOverride = null;
-      if (null != ACTIVITY_APPLICATION_HOST) {
-        if (ACTIVITY_APPLICATION_HOST.startsWith("//")) {
-          const _URL = URL;
-          const _window2 = window;
-          const uRL = new URL(ACTIVITY_APPLICATION_HOST, window.location.href);
-          const _HermesInternal2 = HermesInternal;
-          uRL.hostname = "" + arg0 + "." + uRL.hostname;
-          activityUrlOverride = uRL.origin;
-        } else {
-          const _HermesInternal = HermesInternal;
-          activityUrlOverride = "https://" + arg0 + "." + ACTIVITY_APPLICATION_HOST;
-        }
+    const _window = window;
+    activityUrlOverride = null;
+    if (null != ACTIVITY_APPLICATION_HOST) {
+      if (ACTIVITY_APPLICATION_HOST.startsWith("//")) {
+        const _URL = URL;
+        const _window2 = window;
+        const uRL = new URL(ACTIVITY_APPLICATION_HOST, window.location.href);
+        const _HermesInternal2 = HermesInternal;
+        uRL.hostname = "" + arg0 + "." + uRL.hostname;
+        activityUrlOverride = uRL.origin;
+      } else {
+        const _HermesInternal = HermesInternal;
+        activityUrlOverride = "https://" + arg0 + "." + ACTIVITY_APPLICATION_HOST;
       }
     }
-    tmp4 = TestModeStore;
   }
   return activityUrlOverride;
 }

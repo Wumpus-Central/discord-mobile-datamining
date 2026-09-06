@@ -6,8 +6,8 @@ import size from "../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/unique_usernames/UniqueUsernamesUtils.tsx");
 
-export const formatUsernameLiveCheckValidation = function formatUsernameLiveCheckValidation(arg0) {
-  const match = _mod4745.match(arg0);
+export const formatUsernameLiveCheckValidation = function formatUsernameLiveCheckValidation(config) {
+  const match = _mod4745.match(config);
   let obj = { error: null };
   const P = _mod4745.P;
   obj.error = P.not(_mod4745.P.nullish);

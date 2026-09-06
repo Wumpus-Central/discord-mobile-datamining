@@ -1,8 +1,9 @@
 // discord_app/modules/age_assurance/native/AgeVerificationModal.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import NavigationRouteUtils from "../../main_tabs_v2/helpers/NavigationRouteUtils.native.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
-const require = fn;
+require = fn;
 function AgeVerifyScreen(uri) {
   const onComplete = uri.onComplete;
   const onClose = uri.onClose;
@@ -20,6 +21,7 @@ function AgeVerifyScreen(uri) {
     if (obj.isModalOpen(closure_4)) {
       callback();
     }
+    obj = NavigationRouteUtils;
   }, items1);
   const watchAgeVerificationStatusChange = onComplete(isSuspendedUser[5]).useWatchAgeVerificationStatusChange(
     callback1,

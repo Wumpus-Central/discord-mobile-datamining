@@ -41,17 +41,17 @@ export default noop.memo(function MemberCount(arg0) {
   if (null == count) {
     const intl2 = util.intl;
     if ("online" === type) {
-      let v3DzP7x = tmp5(1114).t["3DzP7x"];
+      let v3DzP7x = util.t["3DzP7x"];
     } else {
-      v3DzP7x = tmp5(1114).t["5SWsJX"];
+      v3DzP7x = util.t["5SWsJX"];
     }
     intl2.string(v3DzP7x);
   } else {
     const intl = util.intl;
     if ("online" === type) {
-      let etqpUG = tmp(1114).t.PIikks;
+      let etqpUG = util.t.PIikks;
     } else {
-      etqpUG = tmp(1114).t.etqpUG;
+      etqpUG = util.t.etqpUG;
     }
     let obj = { count };
     const tmp12 = closure_5();

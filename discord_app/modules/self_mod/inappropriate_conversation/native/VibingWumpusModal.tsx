@@ -113,16 +113,16 @@ class VibingWumpusScreen {
         }
         let tmp14 = stateFromStores;
         if (!stateFromStores) {
-          if (tmp) {
+          if (first) {
             const current = ref.current;
             if (current != null) {
               current.resume();
             }
           }
-          closure_1(!tmp);
+          closure_1(!first);
         }
         if (!tmp14) {
-          tmp14 = tmp;
+          tmp14 = first;
         }
         if (!tmp14) {
           const current2 = ref.current;

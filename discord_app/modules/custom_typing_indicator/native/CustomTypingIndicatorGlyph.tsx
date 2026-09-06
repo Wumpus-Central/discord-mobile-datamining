@@ -39,8 +39,9 @@ export default function CustomTypingIndicatorGlyph(config) {
         index,
       ),
     );
-    tmp3(View, obj);
+    <View gap={PX_4} />;
   } else {
-    return tmp3(tmp2(1178).Ellipsis, {});
+    return jsx(tmp2(1178).Ellipsis, {});
   }
+  obj3 = map(1392);
 }

@@ -1,6 +1,7 @@
 // discord_app/design/components/LottieIcon/native/LottieIcon.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import useToken from "../../../tokens/native/useToken.tsx";
+import AccessibilityPreferencesContext from "../../../../../discord_common/js/packages/design/components/AccessibilityPreferencesContext/AccessibilityPreferencesContext.tsx";
 import _modDef5530 from "../../../../../_runtime/metro/05530__.js";
 import IconSize from "../../Icon/IconSize.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -11,7 +12,7 @@ const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/LottieIcon/native/LottieIcon.tsx");
 
-export const LottieIcon = noop.forwardRef((color, ref) => {
+export const LottieIcon = noop.forwardRef((color, arg1) => {
   ({ animation: require, size } = color);
   if (size === undefined) {
     size = "md";
@@ -27,7 +28,7 @@ export const LottieIcon = noop.forwardRef((color, ref) => {
   ({ markers, layers } = color);
   const autoPlay = color.autoPlay;
   let sum1;
-  ref = undefined;
+  let ref;
   let enabled;
   let token;
   let callback;
@@ -55,7 +56,7 @@ export const LottieIcon = noop.forwardRef((color, ref) => {
   sum1 = num2 + num3;
   let obj = noop;
   ref = noop.useRef(null);
-  enabled = noop.useContext(tmp3(4279).AccessibilityPreferencesContext).reducedMotion.enabled;
+  enabled = noop.useContext(AccessibilityPreferencesContext.AccessibilityPreferencesContext).reducedMotion.enabled;
   let tmp12 = tmp5;
   if ("custom" === size) {
     tmp12 = width;
@@ -98,7 +99,7 @@ export const LottieIcon = noop.forwardRef((color, ref) => {
   }, items1);
   const items2 = [callback];
   const imperativeHandle = obj.useImperativeHandle(
-    ref,
+    arg1,
     () => ({
       play() {
         return callback();
@@ -148,9 +149,9 @@ export const LottieIcon = noop.forwardRef((color, ref) => {
     style: null,
   });
   return (
-    <tmp19
+    <View
       ref={ref}
-      source={arg0.dotLottie}
+      source={color.dotLottie}
       colorFilters={null}
       hardwareAccelerationAndroid
       loop={false}

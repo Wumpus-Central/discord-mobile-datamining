@@ -49,7 +49,7 @@ let closure_8 = createStyles.createStyles((arg0, arg1) => {
   };
   let str = "transparent";
   if (arg1) {
-    str = tmp2(576).colors.BORDER_STRONG;
+    str = nativeDefault.colors.BORDER_STRONG;
   }
   avatarContainer.backgroundColor = str;
   avatarContainer.avatarContainer = avatarContainer;

@@ -19,8 +19,8 @@ export const useIsSecureFramesUIEnabled = function useIsSecureFramesUIEnabled(ch
       let flag = false;
       if (null != channelId) {
         flag = false;
-        if (obj.getChannelId() === tmp) {
-          const channel = obj2.getChannel(tmp);
+        if (obj.getChannelId() === channelId) {
+          const channel = obj2.getChannel(channelId);
           flag = false;
           if (null != channel) {
             flag = false;

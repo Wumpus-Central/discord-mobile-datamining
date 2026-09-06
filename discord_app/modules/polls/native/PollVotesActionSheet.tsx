@@ -11,6 +11,8 @@ import EmojiDefault from "../../emojis/native/Emoji.tsx";
 import PollsUtils from "../PollsUtils.tsx";
 import showUserProfileActionSheetDefault from "../../user_profile/native/showUserProfileActionSheet.tsx";
 import formatPollMessageChatData from "../chat/formatPollMessageChatData.tsx";
+import _modDef11724 from "../../../../_runtime/metro/11724__.js";
+import _modDef11725 from "../../../../_runtime/metro/11725__.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -28,9 +30,9 @@ function PollEmoji(emoji) {
   const items = [EmojiStore];
   const stateFromStores = obj.useStateFromStores(items, () => {
     if (null != emoji.id) {
-      let animated = tmp.animated;
+      let animated = emoji.animated;
       if (!animated) {
-        const customEmojiById = EmojiStore.getCustomEmojiById(tmp.id);
+        const customEmojiById = EmojiStore.getCustomEmojiById(emoji.id);
         let flag;
         if (customEmojiById != null) {
           flag = customEmojiById.animated;
@@ -40,7 +42,7 @@ function PollEmoji(emoji) {
         }
         animated = flag;
       }
-      const obj = { id: tmp.id, animated, size: 16 };
+      const obj = { id: emoji.id, animated, size: 16 };
       return obj.getEmojiURL(obj);
     }
   });
@@ -67,7 +69,7 @@ function PollVotesHeader(message) {
   const items1 = [selectedAnswerId];
   const effect = noop.useEffect(() => {
     const timerId = setTimeout(
-      asyncGeneratorStep(async (arg0, value) => {
+      asyncGeneratorStep(async () => {
         if (v3 === 2) {
           v3 = 3;
           throw new TypeError("Generator functions may not be called on executing generators");
@@ -274,18 +276,18 @@ function VotersList(channelId) {
     let obj = messageId(analyticsLocations[25]);
     let guild_id;
     if (stateFromStores != null) {
-      guild_id = tmp3.guild_id;
+      guild_id = stateFromStores.guild_id;
     }
     let id;
     if (stateFromStores != null) {
-      id = tmp3.id;
+      id = stateFromStores.id;
     }
     let nickname = obj.getNickname(guild_id, id, item);
     if (nickname == null) {
-      let tmpResult = tmp(tmp2[26]);
+      let tmpResult = messageId(analyticsLocations[26]);
       nickname = tmpResult.getGlobalName(item);
     }
-    tmpResult = tmp(tmp2[26]);
+    tmpResult = messageId(analyticsLocations[26]);
     const userTag = tmpResult.getUserTag(item);
     user = user.getUser(item.id);
     obj = {
@@ -298,7 +300,7 @@ function VotersList(channelId) {
     };
     let guild_id1;
     if (stateFromStores != null) {
-      guild_id1 = tmp3.guild_id;
+      guild_id1 = stateFromStores.guild_id;
     }
     obj = { guildId: guild_id1, user: null, size: null };
     if (user == null) {
@@ -310,7 +312,7 @@ function VotersList(channelId) {
     let tmp9Result = nickname;
     if (nickname == null) {
       const obj1 = { user: item };
-      tmp9Result = tmp9(tmp(tmp2[29]), obj1);
+      tmp9Result = closure_1_14(messageId(analyticsLocations[29]), obj1);
     }
     obj.label = tmp9Result;
     let tmp13 = null;
@@ -371,26 +373,23 @@ function NoResults() {
   let obj = { style: tmp.noResultsContainer, children: null };
   obj = { style: tmp.noResultsImage, source: null };
   const tmp4 = useThemeDefault();
-  const tmp5 = __initData;
-  const tmp6 = React5;
-  const tmp8 = timestampProducer;
   if (obj3.isThemeDark(tmp4)) {
-    let tmp2Result = tmp2(11724);
+    let tmp2Result = _modDef11724;
   } else {
-    tmp2Result = tmp2(11725);
+    tmp2Result = _modDef11725;
   }
   obj.source = tmp2Result;
-  const items = [closure_1_14(tmp8, obj), ,];
+  const items = [closure_1_14(timestampProducer, obj), ,];
   obj = { style: tmp.noResultsTitle, variant: "heading-md/bold", color: "mobile-text-heading-primary", children: null };
-  const intl = tmp9(1114).intl;
+  const intl = util.intl;
   obj.children = intl.string(util.t.vhQK3o);
   items[1] = closure_1_14(Text_Text.Text, obj);
   const obj1 = { style: tmp.noResultsSubtitle, variant: "text-sm/semibold", color: "text-default", children: null };
-  const intl2 = tmp9(1114).intl;
+  const intl2 = util.intl;
   obj1.children = intl2.string(util.t.bwytdh);
   items[2] = closure_1_14(Text_Text.Text, obj1);
   obj.children = items;
-  return tmp5(tmp6, obj);
+  return __initData(React5, obj);
 }
 get_ActivityIndicator = fn(17);
 ({ Image: metroRequire, View: closure_7, ScrollView: closure_8 } = get_ActivityIndicator);
@@ -485,7 +484,7 @@ let closure_18 = noop.forwardRef((answer, ref) => {
       lineClamp: 1,
       children: answer.poll_media.text,
     };
-    tmp11 = closure_1_14(tmp3(4556).Text, obj1);
+    tmp11 = closure_1_14(Text_Text.Text, obj1);
   }
   items2[1] = tmp11;
   const obj2 = { variant: "text-sm/semibold", color: str, lineClamp: 1, children: null };
@@ -527,10 +526,10 @@ export default function PollVotesActionSheet(channelId) {
   const memo = obj.useMemo(() => {
     let reactions;
     if (stateFromStores != null) {
-      reactions = tmp.reactions;
+      reactions = stateFromStores.reactions;
     }
     if (null != reactions) {
-      return formatPollMessageChatData.reactionForId(tmp.reactions, first);
+      return formatPollMessageChatData.reactionForId(stateFromStores.reactions, first);
     }
   }, items2);
   if (null != stateFromStores && null != stateFromStores.poll) {
@@ -570,15 +569,16 @@ export default function PollVotesActionSheet(channelId) {
     if (null != memo) {
       if (num > 0) {
         const obj4 = { channelId, messageId, reaction: memo };
-        let tmp13Result = tmp13(VotersList, obj4);
+        let tmp13Result = closure_14(VotersList, obj4);
       }
       items4[1] = tmp13Result;
       obj.children = items4;
-      obj.children = tmp14(tmp6(tmp2[40]).BottomSheet, obj);
-      return tmp13(tmp6(tmp2[21]).AnalyticsLocationProvider, obj);
+      obj.children = closure_15(tmp6(tmp2[40]).BottomSheet, obj);
+      return closure_14(tmp6(tmp2[21]).AnalyticsLocationProvider, obj);
     }
-    tmp13Result = tmp13(NoResults, {});
+    tmp13Result = closure_14(NoResults, {});
   } else {
     return null;
   }
+  tmp3 = messageId(selectedAnswerId[21]);
 }

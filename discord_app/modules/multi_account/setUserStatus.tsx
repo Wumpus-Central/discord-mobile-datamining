@@ -39,20 +39,20 @@ let closure_7 = async function _setUserStatus() {
     let obj = value(4404);
     const humanizeStatusResult = obj.humanizeStatus(DND);
     if ("0" === arg1) {
-      const intl3 = tmp(1114).intl;
+      const intl3 = value(1114).intl;
       obj = { statusLabel: humanizeStatusResult };
-      return intl3.formatToPlainString(tmp(1114).t.dO2aLi, obj);
+      return intl3.formatToPlainString(value(1114).t.dO2aLi, obj);
     } else {
-      const statusExpiryParts = tmp(10092).getStatusExpiryParts(arg1);
+      const statusExpiryParts = value(10092).getStatusExpiryParts(arg1);
       const timeString = statusExpiryParts.timeString;
       if ("today" === statusExpiryParts.kind) {
-        const intl2 = tmp(1114).intl;
+        const intl2 = value(1114).intl;
         obj = { statusLabel: humanizeStatusResult, timeString };
-        let formatToPlainStringResult = intl2.formatToPlainString(tmp(1114).t["r50t/S"], obj);
+        let formatToPlainStringResult = intl2.formatToPlainString(value(1114).t["r50t/S"], obj);
       } else {
-        const intl = tmp(1114).intl;
+        const intl = value(1114).intl;
         const obj1 = { statusLabel: humanizeStatusResult, dateString: tmp6, timeString };
-        formatToPlainStringResult = intl.formatToPlainString(tmp(1114).t["J+GJHv"], obj1);
+        formatToPlainStringResult = intl.formatToPlainString(value(1114).t["J+GJHv"], obj1);
       }
       return formatToPlainStringResult;
     }

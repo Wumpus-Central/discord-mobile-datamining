@@ -47,7 +47,7 @@ export default function SlayerStorefrontDevTools() {
   let obj1 = require("initialize");
   const items1 = [UserStore];
   const stateFromStores1 = obj1.useStateFromStores(items1, () => currentUser.getCurrentUser());
-  _require = stateFromStores1(function* (arg0, value) {
+  _require = stateFromStores1(function* (arg0) {
     if (c6 === 2) {
       c6 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -176,8 +176,6 @@ export default function SlayerStorefrontDevTools() {
   if (str2 == null) {
     str2 = "Not loaded";
   }
-  const tmp16 = closure_6;
-  const tmp18 = closure_7;
   const tmp9 = callback(noop.useState(null), 2);
   items5[1] = closure_10(require("TableRow").TableRow, { label: "Name: " + str2 });
   let str3;
@@ -194,7 +192,7 @@ export default function SlayerStorefrontDevTools() {
     const obj4 = { label: null };
     const _HermesInternal = HermesInternal;
     obj4.label = "Fetch failed: " + tmp10;
-    tmp15Result = tmp15(tmp5(5605).TableRow, obj4);
+    tmp15Result = closure_10(tmp5(5605).TableRow, obj4);
   }
   items5[3] = tmp15Result;
   const items6 = [
@@ -217,7 +215,7 @@ export default function SlayerStorefrontDevTools() {
     }),
   ];
   obj5.children = items7;
-  const items8 = [closure_11(tmp18, obj5)];
+  const items8 = [closure_11(closure_7, obj5)];
   let str5;
   if (stateFromStores1 != null) {
     str5 = stateFromStores1.username;
@@ -246,5 +244,5 @@ export default function SlayerStorefrontDevTools() {
   items6[1] = closure_11(require("TableRowGroup").TableRowGroup, obj9);
   obj8.children = items6;
   obj.children = closure_11(require("Stack/Stack").Stack, obj8);
-  return closure_10(tmp16, obj);
+  return closure_10(closure_6, obj);
 }

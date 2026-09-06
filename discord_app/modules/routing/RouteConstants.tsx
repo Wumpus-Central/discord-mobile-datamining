@@ -426,7 +426,7 @@ obj.BILLING_STANDALONE_CHECKOUT_PAGE = function BILLING_STANDALONE_CHECKOUT_PAGE
   );
 };
 obj.BILLING_STANDALONE_GUILD_BOOST_CHECKOUT_PAGE = function BILLING_STANDALONE_GUILD_BOOST_CHECKOUT_PAGE(
-  arg0,
+  guild_id,
   prop,
   newAnalyticsLoadId,
   prop1,
@@ -446,7 +446,7 @@ obj.BILLING_STANDALONE_GUILD_BOOST_CHECKOUT_PAGE = function BILLING_STANDALONE_G
     const _HermesInternal3 = HermesInternal;
     str = "&flow_type=" + prop1;
   }
-  return "/billing/guild-subscriptions/purchase?guild_id=" + arg0 + str2 + combined + str;
+  return "/billing/guild-subscriptions/purchase?guild_id=" + guild_id + str2 + combined + str;
 };
 obj.GUILD_BOOSTING_MARKETING = function GUILD_BOOSTING_MARKETING(RouteParam3) {
   return "/guilds/" + RouteParam3 + "/premium-guild-subscriptions";
@@ -586,8 +586,8 @@ obj.COLLECTIBLES_SHOP_PRODUCT_DETAIL = function COLLECTIBLES_SHOP_PRODUCT_DETAIL
 obj.COLLECTIBLES_SHOP_LAYOUT = function COLLECTIBLES_SHOP_LAYOUT(arg0) {
   return "/shop/layout/" + arg0;
 };
-obj.CHANNEL_SUMMARIES = function CHANNEL_SUMMARIES(arg0) {
-  return "/channels/" + arg0 + "/summaries";
+obj.CHANNEL_SUMMARIES = function CHANNEL_SUMMARIES(channelId) {
+  return "/channels/" + channelId + "/summaries";
 };
 obj.CHANNEL_SUMMARY = function CHANNEL_SUMMARY(channelId, id) {
   return "/channels/" + channelId + "/summaries/" + id;

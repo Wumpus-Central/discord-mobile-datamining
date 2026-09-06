@@ -37,8 +37,8 @@ export const useBountyPauseAppStoreSheet = function useBountyPauseAppStoreSheet(
   const callback = isActive.useCallback(() => {
     if (null != ref.current) {
       const ComponentDispatch = ComponentDispatchUtils.ComponentDispatch;
-      ComponentDispatch.unsubscribe(ComponentActions.QUEST_APP_STORE_OVERLAY_FINISHED, tmp.current);
-      tmp.current = null;
+      ComponentDispatch.unsubscribe(ComponentActions.QUEST_APP_STORE_OVERLAY_FINISHED, ref.current);
+      ref.current = null;
     }
   }, []);
   const items1 = [bounty.id, callback];
@@ -48,19 +48,19 @@ export const useBountyPauseAppStoreSheet = function useBountyPauseAppStoreSheet(
   obj.onPausedForAppStore = isActive.useCallback((arg0) => {
     if (isActive) {
       if (arg0 === bounty(sourceQuestContent[7]).PlaybackTriggerSource.USER_INTERACTION) {
-        const CustomAppStoreSqueezeBackExperiment = tmp2(tmp3[3]).CustomAppStoreSqueezeBackExperiment;
+        const CustomAppStoreSqueezeBackExperiment = bounty(sourceQuestContent[3]).CustomAppStoreSqueezeBackExperiment;
         let trackingCtx = { location: playerRef.VIDEO_MODAL_MOBILE };
         const config = CustomAppStoreSqueezeBackExperiment.getConfig(trackingCtx);
         if (tmp4) {
           trackingCtx = {
-            content: tmp2(tmp3[8]).QuestContent.VIDEO_MODAL_MOBILE,
-            ctaContent: tmp2(tmp3[9]).QuestContentCTA.OPEN_GAME_LINK,
+            content: bounty(sourceQuestContent[8]).QuestContent.VIDEO_MODAL_MOBILE,
+            ctaContent: bounty(sourceQuestContent[9]).QuestContentCTA.OPEN_GAME_LINK,
             impressionId: getQuestImpressionId(),
             sourceQuestContent,
           };
-          let tmp2Result = tmp2(tmp3[10]);
+          let tmp2Result = bounty(sourceQuestContent[10]);
           const directAppStoreLinkFromCta = tmp2Result.getDirectAppStoreLinkFromCta(trackingCtx.cta);
-          tmp2Result = tmp2(tmp3[10]);
+          tmp2Result = bounty(sourceQuestContent[10]);
           let url = directAppStoreLinkFromCta;
           if (directAppStoreLinkFromCta == null) {
             url = tmp7.cta.url;
@@ -72,7 +72,7 @@ export const useBountyPauseAppStoreSheet = function useBountyPauseAppStoreSheet(
             allowExternalOpen: false,
             trackOverlayEvent: null,
           };
-          trackingCtx.inlineStoreParams = tmp2(tmp3[10]).getInlineStoreParamsFromCta(trackingCtx.cta);
+          trackingCtx.inlineStoreParams = bounty(sourceQuestContent[10]).getInlineStoreParamsFromCta(trackingCtx.cta);
           trackingCtx.trackOverlayEvent = function trackOverlayEvent(
             event,
             inlineStoreAppId,
@@ -93,7 +93,7 @@ export const useBountyPauseAppStoreSheet = function useBountyPauseAppStoreSheet(
             };
             return trackingCtx.trackAdContentAppStoreOverlayEvent(trackingCtx);
           };
-          const tmp2Result1 = tmp2(tmp3[10]);
+          const tmp2Result1 = bounty(sourceQuestContent[10]);
           tmp2Result.openAppStoreOrUrl(trackingCtx).then((result) => {
             if (result) {
               let current = ref.current;
@@ -118,7 +118,9 @@ export const useBountyPauseAppStoreSheet = function useBountyPauseAppStoreSheet(
           });
           const openAppStoreOrUrlResult = tmp2Result.openAppStoreOrUrl(trackingCtx);
         }
-        tmp4 = config.enabled && tmp13 === tmp2(tmp3[3]).BountiesCtrExperiment1Variant.OPEN_APP_SHEET_ON_PAUSE;
+        tmp4 =
+          config.enabled &&
+          tmp13 === bounty(sourceQuestContent[3]).BountiesCtrExperiment1Variant.OPEN_APP_SHEET_ON_PAUSE;
       }
     }
   }, items2);

@@ -1,10 +1,12 @@
 // discord_app/design/void/RoleDot/native/RoleDot.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
+import GlobalUtils from "../../../../utils/GlobalUtils.tsx";
 import useFontScale from "../../../../modules/screen/native/useFontScale.tsx";
+import LinearGradientDefault from "../../../../../_runtime/04987_LinearGradient.js";
 import useHasEnhancedRoleColorsDefault from "../../../../modules/premium/powerups/hooks/useHasEnhancedRoleColors.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-const LinearGradientDefault = tmp5(4987);
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
@@ -90,20 +92,21 @@ export const RoleDot = function RoleDot(background) {
         const obj3 = { colors: null, start: null, end: null, style: null };
         const items5 = [, ,];
         ({ primaryColor: arr7[0], secondaryColor: arr7[1], tertiaryColor: arr7[2] } = colors);
-        obj3.colors = items5.filter(tmp2(1369).isNotNullish);
+        obj3.colors = items5.filter(GlobalUtils.isNotNullish);
         obj3.start = { x: 0, y: 0 };
         obj3.end = { x: 1, y: 0 };
         const items6 = [tmp.dot, size1];
         obj3.style = items6;
-        let tmp12Result = tmp12(LinearGradientDefault, obj3);
+        let tmp12Result = React4(LinearGradientDefault, obj3);
         const tmp5Result = LinearGradientDefault;
       }
       items4[1] = tmp12Result;
       obj1.children = items4;
-      obj.children = hasOwnProperty(tmp13, obj1);
-      return tmp12(tmp13, obj);
+      obj.children = hasOwnProperty(View, obj1);
+      return React4(View, obj);
     }
   }
   const items7 = [tmp.dot, size1, { backgroundColor: color }];
-  tmp12Result = tmp12(tmp13, { style: items7 });
+  tmp12Result = React4(View, { style: items7 });
+  tmp2Result = PlatformUtils;
 };

@@ -2,10 +2,12 @@
 import util from "../../../intl/index.native.tsx";
 import utils_PlatformUtils from "../../../../discord_common/js/shared/utils/PlatformUtils.tsx";
 import GlobalUtils from "../../../utils/GlobalUtils.tsx";
+import _modDef3417 from "../intl/SlayerStorefront.messages.js";
 import SlayerStorefrontUtils from "../SlayerStorefrontUtils.tsx";
 import StorefrontUtils from "../../storefront/StorefrontUtils.tsx";
 import getEmbedThemeColorsDefault from "../../messages/native/renderer/row_data/embeds/getEmbedThemeColors.tsx";
 import SocialLayerStorefrontActionCreators from "../SocialLayerStorefrontActionCreators.tsx";
+import isSocialLayerApplicationDefault from "../../applications/isSocialLayerApplication.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import ApplicationStore from "../../applications/ApplicationStore.tsx";
@@ -31,13 +33,13 @@ export const createSocialLayerStorefrontProductDetailsEmbed = function createSoc
     applicationId = value.applicationId;
   }
   const application = ApplicationStore.getApplication(applicationId);
-  const isFetchingResult = obj.isFetching(skuId);
-  let result = null != applicationId;
   const tmp3 = getEmbedThemeColorsDefault(theme.theme);
+  let result = null != applicationId;
+  obj.didFetchingSkuFail(skuId);
   if (result) {
-    result = obj2.isFetchingApplication(applicationId);
+    result = ApplicationStore.isFetchingApplication(applicationId);
   }
-  const didFetchingSkuFailResult = obj.didFetchingSkuFail(skuId);
+  null != applicationId && ApplicationStore.didFetchingApplicationFail(applicationId);
   let name;
   if (application != null) {
     name = application.name;
@@ -52,7 +54,7 @@ export const createSocialLayerStorefrontProductDetailsEmbed = function createSoc
       return null;
     } else {
       if (null != application) {
-        if (tmp(11532)(application)) {
+        if (isSocialLayerApplicationDefault(application)) {
           if ("guild" !== guildOrApplication.type) {
             const result1 = StorefrontUtils.isSlayerSkuAvailableOnThisPlatform(value);
             const str4 = SlayerStorefrontUtils.getCardImageURL(value);
@@ -69,17 +71,17 @@ export const createSocialLayerStorefrontProductDetailsEmbed = function createSoc
             obj.headerColor = colors.headerColor;
             obj.titleText = value.name;
             obj.titleColor = colors.titleColor;
-            const intl2 = tmp12(1114).intl;
+            const intl2 = util.intl;
             obj.subtitle = intl2.string(util.t.V91tvy);
             obj.subtitleColor = colors.subtitleColor;
             obj.thumbnailUrl = str;
             obj.thumbnailBackgroundColor = colors.thumbnailBackgroundColor;
-            const intl3 = tmp12(1114).intl;
+            const intl3 = util.intl;
             const string = intl3.string;
             if (result1) {
-              let stringResult = string(tmp12(1114).t.boqtTA);
+              let stringResult = string(util.t.boqtTA);
             } else {
-              stringResult = string(tmp(3417).BKf0MM);
+              stringResult = string(_modDef3417.BKf0MM);
             }
             obj.acceptLabelText = stringResult;
             let prop;
@@ -116,7 +118,7 @@ export const useFetchSocialLayerStorefrontProductDetailsEmbedData =
       country = storeFront.country;
     }
     let items = [stateFromStores];
-    let tmp4 = _slicedToArray(
+    const tmp4 = _slicedToArray(
       noop.useMemo(() => {
         let items = [[], []];
         return stateFromStores.reduce((acc, item) => {
@@ -124,12 +126,9 @@ export const useFetchSocialLayerStorefrontProductDetailsEmbedData =
           const iter = item.codedLinks[Symbol.iterator]();
           while (iter !== undefined) {
             ({ type, code } = nextResult);
-            let tmp2 = type;
-            let tmp3 = stateFromStores;
-            let tmp4 = first;
             if (type === stateFromStores(first[13]).CodedLinkType.SOCIAL_LAYER_STOREFRONT) {
               arr = arr.push(code.split("-"));
-            } else if (tmp2 === tmp3(tmp4[13]).CodedLinkType.SOCIAL_LAYER_STOREFRONT_APP) {
+            } else if (type === stateFromStores(first[13]).CodedLinkType.SOCIAL_LAYER_STOREFRONT_APP) {
               arr = arr2.push(code.split("-"));
             }
             continue;
@@ -203,6 +202,7 @@ export const useFetchSocialLayerStorefrontProductDetailsEmbedData =
         }
         continue;
       }
+      tmp2 = first[Symbol.iterator]();
     }, items1);
     let obj = country(first[12]);
     const tmp = country;

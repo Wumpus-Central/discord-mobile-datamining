@@ -1,7 +1,10 @@
 // discord_app/modules/messages/native/renderer/system_messages/InGameMessageNuxSystemMessage.tsx
 import util from "../../../../../intl/index.native.tsx";
+import HelpdeskUtilsDefault from "../../../../../utils/HelpdeskUtils.tsx";
 import resolveMessageContentColorsDefault from "../resolveMessageContentColors.tsx";
 import useAuthorWithProcessedColor from "useAuthorWithProcessedColor.tsx";
+import formatUsernameOnClickDefault from "formatUsernameOnClick.tsx";
+import createCommonMessageDefault from "createCommonMessage.tsx";
 import ApplicationStore from "../../../../applications/ApplicationStore.tsx";
 
 require = fn;
@@ -26,11 +29,11 @@ export const createInGameMessageNuxSystemMessage = function createInGameMessageN
     const messageAuthorWithProcessedColor = obj.getMessageAuthorWithProcessedColor(message);
     obj = { username: messageAuthorWithProcessedColor.nick, usernameOnClick: null, gameName: null, urlOnClick: null };
     obj = { message, author: messageAuthorWithProcessedColor, roleStyle };
-    obj.usernameOnClick = tmp(7962)(obj);
+    obj.usernameOnClick = formatUsernameOnClickDefault(obj);
     obj.gameName = application.name;
     const obj1 = {
       action: "bindOpenUrl",
-      url: tmp(2024).getArticleURL(HelpdeskArticles.SOCIAL_LAYER_CONNECTIONS),
+      url: HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.SOCIAL_LAYER_CONNECTIONS),
       linkColor: tmp3.linkColor,
       medium: true,
     };
@@ -38,7 +41,7 @@ export const createInGameMessageNuxSystemMessage = function createInGameMessageN
     const obj2 = { content: null };
     const intl = util.intl;
     obj2.content = intl.formatToParts(util.t["92erOB"], obj);
-    const merged = Object.assign(tmp(7964)(message));
+    const merged = Object.assign(createCommonMessageDefault(message));
     return obj2;
   }
   tmp3 = resolveMessageContentColorsDefault(theme);

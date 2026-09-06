@@ -1,5 +1,6 @@
 // discord_app/modules/keyboard/native/KeyboardAwareView.tsx
 import useKeyboardDuration from "useKeyboardDuration.tsx";
+import DeprecatedLayoutAnimation from "../../animations/native/DeprecatedLayoutAnimation.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import subscribeToKeyboardUIStore from "subscribeToKeyboardUIStore.tsx";
@@ -47,11 +48,11 @@ export default noop.memo(function KeyboardAwareView(style) {
       subscribeToKeyboardUIStore(() => {
         let systemKeyboardHeight = style(flag[5]).getSystemKeyboardHeight();
         if (0 === systemKeyboardHeight) {
-          let tmp2Result = tmp2(tmp3[6]);
+          let tmp2Result = style(flag[6]);
           const keyboardType = tmp2Result.getKeyboardType();
           num = 0;
-          if (keyboardType !== tmp2(tmp3[7]).KeyboardTypes.SYSTEM) {
-            tmp2Result = tmp2(tmp3[8]);
+          if (keyboardType !== style(flag[7]).KeyboardTypes.SYSTEM) {
+            tmp2Result = style(flag[8]);
             num = tmp2Result.getCustomKeyboardHeight();
           }
           systemKeyboardHeight = num;
@@ -61,6 +62,7 @@ export default noop.memo(function KeyboardAwareView(style) {
           ref.current = bound;
           closure_1_5(bound);
         }
+        const obj = style(flag[5]);
       }),
     items,
   );
@@ -74,10 +76,9 @@ export default noop.memo(function KeyboardAwareView(style) {
         tmp5 = keyboardDuration > 0;
       }
       if (tmp5) {
-        const result = tmp2(5581).DeprecatedLayoutAnimationKeyboard(keyboardDuration);
-        const tmp2Result = tmp2(5581);
+        const result = DeprecatedLayoutAnimation.DeprecatedLayoutAnimationKeyboard(keyboardDuration);
+        const tmp2Result = DeprecatedLayoutAnimation;
       }
-      tmp2 = require;
     } else {
       tmp.current = true;
     }

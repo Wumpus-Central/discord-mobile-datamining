@@ -17,7 +17,9 @@ export default function UserSettingsEditUserProfile(arg0) {
   const items1 = [stateFromStores];
   const effect = noop.useEffect(() => {
     if (null != stateFromStores) {
-      maybeFetchUserProfileDefault(obj.id, obj.getAvatarURL(undefined, 80), { dispatchWait: true });
+      maybeFetchUserProfileDefault(stateFromStores.id, stateFromStores.getAvatarURL(undefined, 80), {
+        dispatchWait: true,
+      });
     }
   }, items1);
   let tmp7 = null;

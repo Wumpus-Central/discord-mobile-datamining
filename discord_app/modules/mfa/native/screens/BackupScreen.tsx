@@ -3,7 +3,9 @@ import util from "../../../../intl/index.native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import useWideAuthViewDefault from "../../../auth/native/useWideAuthView.tsx";
 import MfaOptionScreenDefault from "MfaOptionScreen.tsx";
+import buttonDefault from "../components/button.tsx";
 import MFA from "../../../../../discord_common/js/shared/MFA.tsx";
+import ClipboardCopyInputDefault from "../components/ClipboardCopyInput.tsx";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -72,13 +74,13 @@ export default function BackupScreen(finish) {
       c7 = 3;
     } else if (arg0 === 1) {
       c7 = 3;
-      throw arg1;
+      throw value;
     } else if (arg0 !== 2) {
       v0(true);
       v0 = 0;
     }
     v0 = 0;
-    return arg1;
+    return value;
   });
   const items1 = [finish];
   closure_8 = noop.useCallback(function () {
@@ -99,19 +101,19 @@ export default function BackupScreen(finish) {
   obj.subtitle = intl2.string(util.t.c5J7O0);
   if (first1 > 0) {
     obj = { variant: "text-md/normal", children: null };
-    const intl3 = tmp16(1114).intl;
-    const items2 = [intl3.string(tmp16(1114).t.RRtlLg)];
-    const intl4 = tmp16(1114).intl;
+    const intl3 = util.intl;
+    const items2 = [intl3.string(util.t.RRtlLg)];
+    const intl4 = util.intl;
     obj = { countdown: first1 };
-    items2[1] = intl4.format(tmp16(1114).t.tsWkAE, obj);
+    items2[1] = intl4.format(util.t.tsWkAE, obj);
     obj.children = items2;
     let obj1 = obj;
   } else {
     obj1 = { variant: "text-md/normal", children: null };
-    const intl8 = tmp16(1114).intl;
-    const items3 = [intl8.string(tmp16(1114).t.RRtlLg)];
-    const intl9 = tmp16(1114).intl;
-    items3[1] = intl9.string(tmp16(1114).t.v3a6Pd);
+    const intl8 = util.intl;
+    const items3 = [intl8.string(util.t.RRtlLg)];
+    const intl9 = util.intl;
+    items3[1] = intl9.string(util.t.v3a6Pd);
     obj1.children = items3;
   }
   const items4 = [timestampProducer(Text_Text.Text, obj1)];
@@ -125,10 +127,10 @@ export default function BackupScreen(finish) {
     isDisabled: null,
     autoFocus: null,
   };
-  let tmpResult = tmp(15676);
-  const intl5 = tmp16(1114).intl;
+  let tmpResult = ClipboardCopyInputDefault;
+  const intl5 = util.intl;
   obj2.label = intl5.string(util.t["C/ZAw/"]);
-  const intl6 = tmp16(1114).intl;
+  const intl6 = util.intl;
   obj2.placeholder = intl6.string(util.t.fZSi1D);
   obj2.isValidClipboardCode = isValidClipboardCode;
   obj2.maxLength = MFA.BACKUP_CODE_MAX_LENGTH;
@@ -148,8 +150,8 @@ export default function BackupScreen(finish) {
   obj3.children = items4;
   obj.input = timestampProducer(React6, obj3);
   const obj4 = { variant: "primary", text: null, loading: null, onPress: null, disabled: null };
-  tmpResult = tmp(15673);
-  const intl7 = tmp16(1114).intl;
+  tmpResult = buttonDefault;
+  const intl7 = util.intl;
   obj4.text = intl7.string(util.t.geKm7t);
   let tmp22 = tmp5;
   if (!tmp5) {
@@ -163,7 +165,7 @@ export default function BackupScreen(finish) {
     tmp5 = tmp10;
   }
   if (!tmp5) {
-    tmp5 = first.length < tmp16(15675).BACKUP_CODE_MIN_LENGTH;
+    tmp5 = first.length < MFA.BACKUP_CODE_MIN_LENGTH;
   }
   if (!tmp5) {
     tmp5 = first1 > 0;

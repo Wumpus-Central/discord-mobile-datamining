@@ -10,7 +10,7 @@ const result = size.fileFinishedImporting("utils/LazyAPIPromise.tsx");
 export default function useLazyAPIPromise(arg0, arg1) {
   closure_0 = arg0;
   closure_1 = arg1;
-  noop = async function _execFn(arg0, value) {
+  noop = async function _execFn() {
     if (c5 === 2) {
       c5 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");

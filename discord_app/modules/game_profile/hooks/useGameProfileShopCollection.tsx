@@ -13,12 +13,12 @@ export const useGameProfileShopCollection = function useGameProfileShopCollectio
   const stateFromStoresObject = require("initialize").useStateFromStoresObject(items, () => {
     let result = null != closure_0;
     if (result) {
-      result = GameProfileStore.hasShopCollectionBeenFetched(tmp);
+      result = GameProfileStore.hasShopCollectionBeenFetched(closure_0);
     }
     const obj = { hasFetched: result, skuIds: null };
     let shopCollectionSkuIds;
     if (null != closure_0) {
-      shopCollectionSkuIds = GameProfileStore.getShopCollectionSkuIds(tmp);
+      shopCollectionSkuIds = GameProfileStore.getShopCollectionSkuIds(closure_0);
     }
     obj.skuIds = shopCollectionSkuIds;
     return obj;
@@ -29,10 +29,10 @@ export const useGameProfileShopCollection = function useGameProfileShopCollectio
   useEffect(() => {
     let result = null == closure_0 || hasFetched;
     if (!result) {
-      result = GameProfileStore.isShopCollectionFetching(tmp);
+      result = GameProfileStore.isShopCollectionFetching(closure_0);
     }
     if (!result) {
-      const shopCollection = GameProfileHttpUtils.getShopCollection(tmp);
+      const shopCollection = GameProfileHttpUtils.getShopCollection(closure_0);
     }
   }, items1);
   if (skuIds == null) {

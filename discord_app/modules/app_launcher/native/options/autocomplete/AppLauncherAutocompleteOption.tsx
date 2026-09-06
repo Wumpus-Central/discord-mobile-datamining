@@ -78,10 +78,10 @@ export default function AppLauncherAutocompleteOption(arg0) {
   const tmp = _slicedToArray(
     noop.useState(() => {
       if (null != closure_1_7) {
-        if ("text" === tmp.type) {
-          if ("" !== tmp.text) {
+        if ("text" === closure_1_7.type) {
+          if ("" !== closure_1_7.text) {
             const obj = { displayName: null, name: null, value: null };
-            ({ text: obj.displayName, text: obj.name, text: obj.value } = tmp);
+            ({ text: obj.displayName, text: obj.name, text: obj.value } = closure_1_7);
             return obj;
           }
         }

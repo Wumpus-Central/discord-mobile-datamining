@@ -1,10 +1,10 @@
 // discord_app/modules/quests/native/BountiesModal/BountiesScrollIndicatorAnimation.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import useToken from "../../../../design/tokens/native/useToken.tsx";
+import native from "../../../../../discord_common/js/packages/design/native.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-const native = tmp2(4271);
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
@@ -45,7 +45,7 @@ export default function BountiesScrollIndicatorAnimation(startAnimation) {
     <View
       stateMachine="State Machine 1"
       fit="contain"
-      dataBinding={{ color: token, startAnimation: !arg0.isFadingInContent }}
+      dataBinding={{ color: token, startAnimation: !startAnimation.isFadingInContent }}
     />
   );
 }

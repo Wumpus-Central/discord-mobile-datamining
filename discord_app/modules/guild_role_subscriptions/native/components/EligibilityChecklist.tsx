@@ -1,6 +1,11 @@
 // discord_app/modules/guild_role_subscriptions/native/components/EligibilityChecklist.tsx
+import native from "../../../../design/void/native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
+import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
+import FormSeparatorDefault from "FormSeparator.tsx";
+import _modDef17692 from "../../../../../_runtime/metro/17692__.js";
+import _modDef17693 from "../../../../../_runtime/metro/17693__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -16,9 +21,9 @@ function EligibilityChecklistRow(item) {
   items[1] = eligibleRow;
   obj = { style: tmp.rowStatusIcon, source: null };
   if (item.checked) {
-    let tmp6Result = tmp6(17692);
+    let tmp6Result = _modDef17692;
   } else {
-    tmp6Result = tmp6(17693);
+    tmp6Result = _modDef17693;
   }
   obj.source = tmp6Result;
   const items1 = [React4(FastImageDefault, obj)];
@@ -40,8 +45,8 @@ function EligibilityChecklistRow(item) {
   if (tmp5Result) {
     const obj3 = { style: tmp.actionButtonWrapper, children: null };
     ({ actionLabel: obj7.text, actionHandler: obj7.onPress } = item);
-    obj3.children = tmp5(tmp10(4975).Button, { text: null, onPress: null, grow: true });
-    tmp5Result = tmp5(tmp4, obj3);
+    obj3.children = React4(components_Button_Button.Button, { text: null, onPress: null, grow: true });
+    tmp5Result = React4(View, obj3);
     const obj4 = { text: null, onPress: null, grow: true };
   }
   items2[2] = tmp5Result;
@@ -50,10 +55,10 @@ function EligibilityChecklistRow(item) {
   obj.children = items1;
   const children = [hasOwnProperty(View, obj)];
   if (item.isLast) {
-    tmp5Result = tmp5(tmp10(1178).Spacer, { size: 16 });
+    tmp5Result = React4(native.Spacer, { size: 16 });
   } else {
     const obj5 = { style: tmp.divider };
-    tmp5Result = tmp5(tmp6(15217), obj5);
+    tmp5Result = React4(FormSeparatorDefault, obj5);
   }
   children[1] = tmp5Result;
   return hasOwnProperty(timestampProducer, { children });

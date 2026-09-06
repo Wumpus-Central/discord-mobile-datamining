@@ -21,7 +21,7 @@ export default function useGuildThemeNuxTrigger(guildId, isNuxOpen) {
     "GuildThemeNuxTrigger",
   );
   if (null != enabledGuildThemeForGuildId) {
-    const items = [tmp(1943).DismissibleContent.GUILD_THEME_NUX];
+    const items = [dismissible_content.DismissibleContent.GUILD_THEME_NUX];
     let items1 = items;
   } else {
     items1 = [];

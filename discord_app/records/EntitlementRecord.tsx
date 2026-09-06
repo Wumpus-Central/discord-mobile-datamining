@@ -77,7 +77,6 @@ EntitlementRecord["createFromServer"] = function createFromServer(user) {
   ({ gift_style, guild_id, deleted } = user);
   if (null != user.sku) {
     const fromServer = SKURecord.createFromServer(user.sku);
-    const tmp19 = SKURecord;
   }
   let source_type = user.source_type;
   if (source_type == null) {
@@ -90,8 +89,8 @@ EntitlementRecord["createFromServer"] = function createFromServer(user) {
   if (typeof EntitlementRecord === "function") {
     const tmp26 = new EntitlementRecord(
       tmp4,
-      tmp19,
-      tmp,
+      SKURecord,
+      EntitlementRecord,
       new.target,
       id,
       sku_id,

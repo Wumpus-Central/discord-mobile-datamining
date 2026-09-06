@@ -49,7 +49,7 @@ export default function HorizontalAutocompleteWrapper(channel) {
         return callback(arg0, item);
       };
       return jsx(onPressAutocompleteItem(autocompleteSelectionStart[5]).User, {});
-    } else if (tmp.ROLE === type) {
+    } else if (num.ROLE === type) {
       obj = {};
       const merged1 = Object.assign(item);
       obj.guildId = item.guild_id;
@@ -57,14 +57,14 @@ export default function HorizontalAutocompleteWrapper(channel) {
         return callback(arg0, item);
       };
       return jsx(onPressAutocompleteItem(autocompleteSelectionStart[5]).Role, {});
-    } else if (tmp.CHANNEL === type) {
+    } else if (num.CHANNEL === type) {
       const obj1 = {};
       const merged2 = Object.assign(item);
       obj1.onPress = function onPress(arg0) {
         return callback(arg0, item);
       };
       return jsx(onPressAutocompleteItem(autocompleteSelectionStart[5]).Channel, {});
-    } else if (tmp.EMOJI === type) {
+    } else if (num.EMOJI === type) {
       obj = {};
       const merged3 = Object.assign(item);
       obj.onPress = function onPress(arg0) {

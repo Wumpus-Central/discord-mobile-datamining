@@ -1,7 +1,9 @@
 // discord_app/modules/dismissible_content/DismissibleContentUnsafeUtils.tsx
 import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
 import DurationsDefault from "../../utils/Durations.tsx";
+import Uint8ArrayUtils from "../../utils/Uint8ArrayUtils.tsx";
 import DismissibleContentTypes from "DismissibleContentTypes.tsx";
+import DismissibleContentUtils from "DismissibleContentUtils.tsx";
 import NewUserDismissibleContentRegistry from "NewUserDismissibleContentRegistry.tsx";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 import UserSettingsProtoStore from "../user_settings/UserSettingsProtoStore.tsx";
@@ -117,7 +119,7 @@ class UNSAFE_isDismissibleContentDismissed {
     }
   }
 }
-let closure_7 = async function _UNSAFE_markDismissibleContentAsDismissed(arg0, value) {
+let closure_7 = async function _UNSAFE_markDismissibleContentAsDismissed(arg0) {
   if (c5 === 2) {
     c5 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -216,7 +218,7 @@ let closure_8 = async function _UNSAFE_markSingleUseGuildDismissibleContentAsDis
   closure_131_2 = obj1;
   return "PX_16";
 };
-let closure_9 = async function _UNSAFE_markTimeRecurringGuildDismissibleContentAsDismissed(arg0, value) {
+let closure_9 = async function _UNSAFE_markTimeRecurringGuildDismissibleContentAsDismissed(arg0) {
   if (c6 === 2) {
     c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -286,12 +288,7 @@ let closure_9 = async function _UNSAFE_markTimeRecurringGuildDismissibleContentA
     }
   }
 };
-let closure_10 = async function _UNSAFE_markSnowflakeBoundGuildDismissibleContentAsDismissed(
-  arg0,
-  snowflakeId,
-  arg2,
-  arg3,
-) {
+let closure_10 = async function _UNSAFE_markSnowflakeBoundGuildDismissibleContentAsDismissed(arg0) {
   closure_0 = arg0;
   closure_2 = arg2;
   closure_3 = arg3;

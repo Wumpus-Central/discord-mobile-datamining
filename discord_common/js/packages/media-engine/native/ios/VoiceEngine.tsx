@@ -288,6 +288,7 @@ prototype["callbackSetter"] = function callbackSetter(arg0, arg1) {
         HermesBuiltin.arraySpread(closure_1(connectionId), 0);
         HermesBuiltin.apply(items, undefined);
       }
+      tmp = self.id === connectionId.connectionId && closure_0;
     }),
   );
   return (arg0) => {

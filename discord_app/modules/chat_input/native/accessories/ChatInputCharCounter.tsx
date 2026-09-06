@@ -1,5 +1,7 @@
 // discord_app/modules/chat_input/native/accessories/ChatInputCharCounter.tsx
 import util from "../../../../intl/index.native.tsx";
+import ToastActionCreatorsDefault from "../../../toast/native/ToastActionCreators.tsx";
+import PremiumUpsellUtilsDefault from "../../../../utils/native/PremiumUpsellUtils.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import UserStore from "../../../../stores/UserStore.tsx";
@@ -11,7 +13,7 @@ const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const createStyles = fn(4560);
 let closure_10 = createStyles.createStyles({ container: { alignItems: "center", paddingBottom: 6 } });
-const forwardRefResult = noop.forwardRef((analyticsLocations, ref) => {
+const forwardRefResult = noop.forwardRef((analyticsLocations, arg1) => {
   analyticsLocations = analyticsLocations.analyticsLocations;
   dependencyMap = undefined;
   _slicedToArray = undefined;
@@ -24,7 +26,7 @@ const forwardRefResult = noop.forwardRef((analyticsLocations, ref) => {
   [tmp6, c2] = _slicedToArray(noop.useState(0), 2);
   const tmp7 = stateFromStores(9304)();
   _slicedToArray = tmp7;
-  const imperativeHandle = noop.useImperativeHandle(ref, () => ({
+  const imperativeHandle = noop.useImperativeHandle(arg1, () => ({
     onMessageLengthChanged(length) {
       _undefined(Math.max(0, length - maxLength));
     },

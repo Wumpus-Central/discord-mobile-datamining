@@ -5,6 +5,9 @@ import DispatcherDefault from "../Dispatcher.tsx";
 import _modDef1332 from "../../_runtime/metro/01332__.js";
 import FlagUtils from "../../discord_common/js/shared/utils/FlagUtils.tsx";
 import UserSettings from "../modules/user_settings/UserSettings.tsx";
+import RobloxSubgameUtils from "../modules/roblox_subgame_detection/RobloxSubgameUtils.tsx";
+import userSettingToActivity from "../modules/custom_status/utils/userSettingToActivity.tsx";
+import PresenceActivityFiltering from "../modules/rich_presence/PresenceActivityFiltering.tsx";
 import ActivityFlagUtils from "../modules/activities/utils/ActivityFlagUtils.tsx";
 import _slicedToArray from "../../_runtime/metro/00032__.js";
 import EmbeddedActivitiesStore from "../modules/activities/EmbeddedActivitiesStore.tsx";
@@ -40,7 +43,7 @@ function updateActivities() {
     tmp4 = tmp5;
   }
   if (tmp4) {
-    let tmpResult = tmp(11110);
+    let tmpResult = userSettingToActivity;
     items.push(tmpResult.getActivityFromCustomStatus(setting));
   }
   const items1 = [...FirstPartyRichPresenceStore.getActivities()];
@@ -51,7 +54,6 @@ function updateActivities() {
     const merged = Object.assign(stream);
     items.push(obj);
   }
-  const set = new Set();
   let arr2 = _modDef12;
   const item = arr2.forEach(closure_20, (arg0) => {
     [, tmp] = arg0;
@@ -60,7 +62,7 @@ function updateActivities() {
       items.push(tmp);
     }
   });
-  const tmp24 = null != ApplicationStreamingStore.getCurrentUserActiveStream();
+  const set = new Set();
   const visibleGame = RunningGameStore.getVisibleGame();
   if (tmp24) {
     const streamerActiveStreamMetadata = ApplicationStreamingStore.getStreamerActiveStreamMetadata();
@@ -115,7 +117,7 @@ function updateActivities() {
   if (tmp35) {
     let hasItem = set.has(tmp26.name);
     if (!hasItem) {
-      tmpResult = tmp(11461);
+      tmpResult = PresenceActivityFiltering;
       const items2 = [];
       let arraySpreadResult = HermesBuiltin.arraySpread(items, 0);
       arraySpreadResult = HermesBuiltin.arraySpread(SessionsStore.getRemoteActivities(), arraySpreadResult);
@@ -144,9 +146,9 @@ function updateActivities() {
           }
           const obj1 = { start: start2 };
           obj.timestamps = obj1;
-          const merged1 = Object.assign(tmp(4690).maybeAddAdditionalGameMetadata(tmp26));
+          const merged1 = Object.assign(RobloxSubgameUtils.maybeAddAdditionalGameMetadata(tmp26));
           items.push(obj);
-          const tmpResult1 = tmp(4690);
+          const tmpResult1 = RobloxSubgameUtils;
         }
       }
     }
@@ -157,6 +159,8 @@ function updateActivities() {
     const merged2 = Object.assign(activity);
     arr2 = items.push(obj2);
   }
+  tmp24 = null != ApplicationStreamingStore.getCurrentUserActiveStream();
+  tmp43 = null != tmp26 && tmp26.isLauncher;
 }
 const Constants = fn(1074);
 ({ ActivityFlags: closure_16, ActivityGamePlatforms: closure_17, ActivityTypes: closure_18 } = Constants);
@@ -234,6 +238,7 @@ prototype["getApplicationIdForPID"] = function getApplicationIdForPID(pid) {
     }
     continue;
   }
+  tmp = dependencyMap3[pid];
 };
 LocalActivityStore.displayName = "LocalActivityStore";
 const localActivityStore = new LocalActivityStore(DispatcherDefault, {
@@ -336,45 +341,41 @@ const localActivityStore = new LocalActivityStore(DispatcherDefault, {
         let first = tmp5[0];
         let tmp7 = _slicedToArray(tmp5[1], 3);
         [tmp8, tmp9] = tmp7;
-        let tmp10 = tmp9;
         let tmp11 = tmp7[2];
         let num = tmp9.flags;
         if (num == null) {
           num = 0;
         }
         let tmp12 = num;
-        let tmp13 = require;
         let obj2 = ActivityFlagUtils;
-        let tmp15 = tmp9;
         let obj3 = FlagUtils;
         let num2;
-        if (tmp10 != null) {
-          num2 = tmp10.flags;
+        if (tmp9 != null) {
+          num2 = tmp9.flags;
         }
         if (num2 == null) {
           num2 = 0;
         }
         let hasFlagResult = obj3.hasFlag(num2, constants.INSTANCE);
-        let tmp13Result = tmp13(11462);
+        let tmp13Result = ActivityFlagUtils;
         let activityFlags = obj2.computeActivityFlags(
-          tmp15,
+          tmp9,
           hasFlagResult,
-          tmp10.platform === constants2.EMBEDDED,
-          tmp13Result.isContextlessEmbeddedActivity(tmp10),
+          tmp9.platform === constants2.EMBEDDED,
+          tmp13Result.isContextlessEmbeddedActivity(tmp9),
           tmp11,
         );
         if (activityFlags !== tmp12) {
           items = [tmp8, ,];
           obj = {};
-          let merged = Object.assign(tmp10);
+          let merged = Object.assign(tmp9);
           obj.flags = tmp24;
           items[1] = obj;
           items[2] = tmp11;
           obj[first] = items;
           flag = true;
         } else {
-          let items1 = [tmp8, ,];
-          items1[1] = tmp10;
+          let items1 = [tmp8, tmp9];
           items1[2] = tmp11;
           obj[first] = items1;
         }

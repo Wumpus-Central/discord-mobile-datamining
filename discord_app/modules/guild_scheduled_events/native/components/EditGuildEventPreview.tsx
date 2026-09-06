@@ -60,7 +60,7 @@ function PreviewBody(event) {
         let tmp2Result = null != closure_5;
         if (tmp2Result) {
           obj = { source: tmp5, size: native.Icon.Sizes.EXTRA_SMALL, style: tmp4.channelIcon };
-          tmp2Result = tmp2(native.Icon, obj);
+          tmp2Result = timestampProducer(native.Icon, obj);
         }
         obj.children = tmp2Result;
         const items = [timestampProducer(View, obj)];
@@ -191,11 +191,11 @@ export default function EditGuildEventPreview(guild) {
   const t = guild(guildEvent[13]).t;
   if (isEdit) {
     let stringResult = string(t.e5VEcE);
-    let tmp5 = tmp3;
+    let tmp5 = guildEvent;
     let tmp6 = tmp2;
   } else {
     stringResult = string(t["60lJ0C"]);
-    tmp5 = tmp3;
+    tmp5 = guildEvent;
     tmp6 = tmp2;
   }
   const items = [guildEvent, guild.id];
@@ -221,7 +221,7 @@ export default function EditGuildEventPreview(guild) {
   let tmp8Result = null;
   if (null != error) {
     const obj3 = { style: tmp.error, children: error.getAnyErrorMessage() };
-    tmp8Result = tmp8(tmp6(tmp5[15]).LegacyText, obj3);
+    tmp8Result = closure_6(tmp6(tmp5[15]).LegacyText, obj3);
   }
   const items5 = [
     tmp8Result,

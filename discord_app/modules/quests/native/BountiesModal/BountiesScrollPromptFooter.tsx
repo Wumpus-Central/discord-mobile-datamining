@@ -87,8 +87,8 @@ entering.__workletHash = 11416950434629;
 entering.__initData = {
   code: "function BountiesScrollPromptFooterTsx1(visible){const{withTiming,timingStandard}=this.__closure;return{opacity:withTiming(visible,timingStandard,'respect-motion-settings')};}",
 };
-const fn2 = function n(value, fn2) {
-  const obj = { opacity: timing.withTiming(value, timingPresets.timingStandard, "respect-motion-settings", fn2) };
+const fn2 = function n(value, fn) {
+  const obj = { opacity: timing.withTiming(value, timingPresets.timingStandard, "respect-motion-settings", fn) };
   return obj;
 };
 createStyles = { withTiming: fn(4561).withTiming, timingStandard: fn(4564).timingStandard };

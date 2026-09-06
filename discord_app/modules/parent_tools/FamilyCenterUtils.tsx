@@ -36,15 +36,15 @@ export const getActivityWindowTimestampFormatter = function getActivityWindowTim
   const tmp4 = _modDef2396;
   if (arg0) {
     obj.today = string(tmp4["2AtcIs"]);
-    const intl3 = tmp(1114).intl;
-    obj.yesterday = intl3.string(tmp3(2396).stOECr);
-    obj.days = tmp3(2396).n8n5Ba;
+    const intl3 = util.intl;
+    obj.yesterday = intl3.string(_modDef2396.stOECr);
+    obj.days = _modDef2396.n8n5Ba;
     let tmp5 = obj;
   } else {
     obj.today = string(tmp4.g1ZX6m);
-    const intl2 = tmp(1114).intl;
-    obj.yesterday = intl2.string(tmp3(2396).s3qSVt);
-    obj.days = tmp3(2396).f1UJiC;
+    const intl2 = util.intl;
+    obj.yesterday = intl2.string(_modDef2396.s3qSVt);
+    obj.days = _modDef2396.f1UJiC;
     tmp5 = obj;
   }
   return tmp5;
@@ -165,11 +165,10 @@ export const formatTotalTime = function formatTotalTime(arg0) {
 };
 export const getOrFetchLinkedUsers = function getOrFetchLinkedUsers() {
   if (FamilyCenterStore.getAreLinkedUsersProcessed()) {
-    return obj.getLinkedUsers();
+    return FamilyCenterStore.getLinkedUsers();
   } else {
     const linkedUsers = FamilyCenterActionCreatorsDefault.fetchLinkedUsers();
   }
-  obj = FamilyCenterStore;
 };
 export const hasActiveParentLinks = function hasActiveParentLinks() {
   const values = Object.values(FamilyCenterStore.getLinkedUsers());

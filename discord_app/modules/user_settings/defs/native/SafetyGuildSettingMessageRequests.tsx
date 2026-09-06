@@ -74,18 +74,18 @@ let SettingBuilders = {
     const tmp6 = selectedGuildId2 !== closure_6 || !useParentalControlSettings.useIsParentallyControlled();
     let tmp7 = !tmp6;
     if (tmp6) {
-      if (selectedGuildId2 === tmp5) {
+      if (selectedGuildId2 === closure_6) {
         hasItem = defaultGuildsRestricted;
       }
       tmp7 = hasItem;
     }
-    const MessageRequestRestrictedDefault = tmp(1935).MessageRequestRestrictedDefault;
-    const MessageRequestRestrictedGuildIds = tmp(1935).MessageRequestRestrictedGuildIds;
+    const MessageRequestRestrictedDefault = UserSettings.MessageRequestRestrictedDefault;
+    const MessageRequestRestrictedGuildIds = UserSettings.MessageRequestRestrictedGuildIds;
     const setting1 = MessageRequestRestrictedGuildIds.useSetting();
     let tmp9 = !setting1.includes(selectedGuildId);
     let tmp10 = !tmp7;
     if (!tmp7) {
-      if (selectedGuildId === tmp5) {
+      if (selectedGuildId === closure_6) {
         tmp9 = tmp8;
       }
       tmp10 = tmp9;

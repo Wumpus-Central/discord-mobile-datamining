@@ -149,7 +149,7 @@ prototype["setConnectionState"] = function setConnectionState(DISCONNECTED) {
   this.connectionState = DISCONNECTED;
   this.emit(discord_common_BaseConnectionEvent.BaseConnectionEvent.ConnectionStateChange, this.connectionState);
 };
-prototype["updateVideoQuality"] = function updateVideoQuality(arg0) {
+prototype["updateVideoQuality"] = function updateVideoQuality(React6) {
   const self = this;
   const videoStreamParameters = this.videoStreamParameters;
   let num = videoStreamParameters.findIndex((quality) => 100 === quality.quality);
@@ -224,8 +224,8 @@ prototype["updateVideoQuality"] = function updateVideoQuality(arg0) {
     }),
   ];
   tmp5.remoteSinkWantsPixelCount = Math.max.apply(items);
-  if (null != arg0) {
-    let obj = flatRestDefault(tmp5, arg0);
+  if (null != React6) {
+    let obj = flatRestDefault(tmp5, React6);
   } else {
     obj = {};
     const merged = Object.assign(tmp5);
@@ -371,7 +371,8 @@ prototype["emitStats"] = function emitStats() {
   const self = this;
   return (async () => {
     closure_1 = tmp5;
-    closure_128_0 = await self.getStats();
+    await self.getStats();
+    closure_128_0 = value;
     if (null != closure_128_0) {
       closure_129_0.emit(tmp2(c2[5]).BaseConnectionEvent.Stats, closure_128_0);
     }

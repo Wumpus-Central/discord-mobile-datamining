@@ -25,7 +25,7 @@ function MessageRequestRestrictedGuildPrivacyOption(guild) {
     const MessageRequestRestrictedGuildIds = UserSettings.MessageRequestRestrictedGuildIds;
     MessageRequestRestrictedGuildIds.updateSetting(Array.from(sanitizedMessageRequestRestrictedGuilds));
   }, items);
-  const obj = { label: null, subLabel: null, value: null, onValueChange: null, disabled: null };
+  let obj = { label: null, subLabel: null, value: null, onValueChange: null, disabled: null };
   const intl = id(1114).intl;
   obj.label = intl.string(id(1114).t["7UgSGP"]);
   const intl2 = id(1114).intl;
@@ -53,7 +53,7 @@ export const useMessageRequestPrivacyOption = function useMessageRequestPrivacyO
   let tmp = null;
   if (!useIsStricterMessageRequestsDefault()) {
     const obj = { guild: guild.guild };
-    tmp = <MessageRequestRestrictedGuildPrivacyOption guild={arg0.guild} />;
+    tmp = <MessageRequestRestrictedGuildPrivacyOption guild={guild.guild} />;
   }
   return tmp;
 };

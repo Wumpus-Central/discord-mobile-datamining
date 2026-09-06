@@ -1,9 +1,13 @@
 // discord_app/modules/user_profile/native/UserProfilePrivacyNotice.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import util from "../../../intl/index.native.tsx";
 import preloaded_user_settings from "../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
 import UserSettings from "../../user_settings/UserSettings.tsx";
 import dismissible_content from "../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
+import CircleInformationIcon from "../../../design/components/Icon/native/redesign/generated/CircleInformationIcon.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
+import Pressables from "../../../design/void/Pressables/native/Pressables.tsx";
+import XSmallIcon from "../../../design/components/Icon/native/redesign/generated/XSmallIcon.tsx";
 import useSelectedDismissibleContent from "../../dismissible_content/hooks/useSelectedDismissibleContent.tsx";
 import useUserIsTeen from "../../self_mod/hooks/useUserIsTeen.tsx";
 import PrivateProfilesExperiment from "../PrivateProfilesExperiment.tsx";
@@ -83,34 +87,34 @@ export default function UserProfilePrivacyNotice() {
   if (tmp9 !== dismissible_content.DismissibleContent.PRIVATE_PROFILE_INLINE_NOTICE) {
     return null;
   } else {
-    if (tmp2(1187).ProfileVisibility.FRIENDS_ONLY === setting1) {
-      let dqQ7AN = tmp2(1114).t["0UBDvq"];
-    } else if (tmp2(1187).ProfileVisibility.FRIENDS_AND_SMALL_GUILDS === setting1) {
-      dqQ7AN = tmp2(1114).t["9AvQO/"];
+    if (preloaded_user_settings.ProfileVisibility.FRIENDS_ONLY === setting1) {
+      let dqQ7AN = util.t["0UBDvq"];
+    } else if (preloaded_user_settings.ProfileVisibility.FRIENDS_AND_SMALL_GUILDS === setting1) {
+      dqQ7AN = util.t["9AvQO/"];
     } else {
-      const FRIENDS_AND_ALL_GUILDS = tmp2(1187).ProfileVisibility.FRIENDS_AND_ALL_GUILDS;
-      dqQ7AN = tmp2(1114).t.dqQ7AN;
+      const FRIENDS_AND_ALL_GUILDS = preloaded_user_settings.ProfileVisibility.FRIENDS_AND_ALL_GUILDS;
+      dqQ7AN = util.t.dqQ7AN;
     }
     obj = { style: tmp.container, children: null };
     obj = {
       style: tmp.icon,
-      children: closure_7(tmp2(4515).CircleInformationIcon, { size: "xs", color: "icon-feedback-info" }),
+      children: closure_7(CircleInformationIcon.CircleInformationIcon, { size: "xs", color: "icon-feedback-info" }),
     };
     const items1 = [closure_7(View, obj), ,];
     obj1 = { style: tmp.text, variant: "text-sm/normal", color: "text-default", children: null };
-    const intl = tmp2(1114).intl;
+    const intl = util.intl;
     obj2 = { privacySettingsLink: callback };
     obj1.children = intl.format(dqQ7AN, obj2);
-    items1[1] = closure_7(tmp2(4556).Text, obj1);
+    items1[1] = closure_7(Text_Text.Text, obj1);
     const obj3 = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, style: null, children: null };
-    const intl2 = tmp2(1114).intl;
-    obj3.accessibilityLabel = intl2.string(tmp2(1114).t.WAI6xu);
+    const intl2 = util.intl;
+    obj3.accessibilityLabel = intl2.string(util.t.WAI6xu);
     obj3.onPress = function onPress() {
       return require(ContentDismissActionType.USER_DISMISS);
     };
     obj3.style = tmp.closeButton;
-    obj3.children = closure_7(tmp2(5680).XSmallIcon, { size: "xs", color: "icon-feedback-info" });
-    items1[2] = closure_7(tmp2(5123).PressableOpacity, obj3);
+    obj3.children = closure_7(XSmallIcon.XSmallIcon, { size: "xs", color: "icon-feedback-info" });
+    items1[2] = closure_7(Pressables.PressableOpacity, obj3);
     obj.children = items1;
     return closure_8(View, obj);
   }

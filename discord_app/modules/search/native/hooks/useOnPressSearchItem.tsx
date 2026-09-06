@@ -31,7 +31,7 @@ let closure_18 = async function _handleVoiceOrStageChannelConnectPress(arg0) {
   let guildStageVoice = arg0;
   c2 = 0;
   c3 = 0;
-  return (async (arg0, value) => {
+  return (async (arg0) => {
     if (c3 === 2) {
       c3 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -62,12 +62,12 @@ let closure_18 = async function _handleVoiceOrStageChannelConnectPress(arg0) {
             if (isGuildStageVoiceResult) {
               c2 = 2;
               c3 = 1;
-              const obj1 = { value: tmp21(tmp20[24], tmp20.paths), done: false };
+              const obj1 = { value: tmp21(dependencyMap[24], dependencyMap.paths), done: false };
               return obj1;
             } else {
               c2 = 1;
               c3 = 1;
-              const obj2 = { value: tmp21(tmp20[26], tmp20.paths), done: false };
+              const obj2 = { value: tmp21(dependencyMap[26], dependencyMap.paths), done: false };
               return obj2;
             }
             isGuildStageVoiceResult = guildStageVoice.isGuildStageVoice();
@@ -255,6 +255,7 @@ export const useOnPressMediaItem = function useOnPressMediaItem(searchContext) {
             obj.navigate(SearchNavigatorScreens.SEARCH_CHAT_PREVIEW, obj);
           }
         });
+        const obj9 = searchContext(onEndReached[9]);
       }
     } else {
       if (null != channel) {
@@ -288,6 +289,7 @@ export const useOnPressMediaItem = function useOnPressMediaItem(searchContext) {
               obj.navigate(SearchNavigatorScreens.SEARCH_CHAT_PREVIEW, obj);
             }
           });
+          const tmp9Result = tmp9(tmp10[9]);
         }
         obj3 = searchContext(onEndReached[20]);
         tmp9 = searchContext;
@@ -304,6 +306,7 @@ export const useOnPressMediaItem = function useOnPressMediaItem(searchContext) {
           closure_2 = closure_2 + 1;
           tmp6 = type.messageId === messageId.messageId && type.mediaIndex === tmp5.mediaIndex;
         }
+        tmp2 = type.type !== constants.ATTACHMENT && type.type !== constants.EMBED && type.type !== constants.COMPONENT;
       });
       obj = {
         initialSources: items,
@@ -323,7 +326,6 @@ export const useOnPressGroupDMItem = function useOnPressGroupDMItem(searchContex
   const navigation = searchContext(1483).useNavigation();
   const items = [navigation, searchContext];
   return noop.useCallback((channelId) => {
-    const obj = { type: constants2.GROUP_DM, channelId };
     closure_0 = searchContext;
     const type = searchContext.type;
     if (constants3.DMS === type) {
@@ -347,7 +349,6 @@ export const useOnPressDMItem = function useOnPressDMItem(searchContext) {
   const navigation = searchContext(1483).useNavigation();
   const items = [navigation, searchContext];
   return noop.useCallback((userId, arg1) => {
-    const obj = { type: constants2.DM, userId };
     closure_0 = searchContext;
     const type = searchContext.type;
     if (constants3.DMS === type) {
@@ -403,23 +404,23 @@ export const useOnPressGuildVoiceChannel = function useOnPressGuildVoiceChannel(
     let guild_id = searchContext;
     closure_129_0 = searchContext;
     if (!obj9.maybeOpenAgeGateForVoiceChannel(searchContext.id)) {
-      let tmp22Result = tmp22(tmp23[28]);
+      let tmp22Result = searchContext(tmp23[28]);
       if (!tmp22Result.maybeOpenSpoilerGateForVoiceChannel(guild_id.id)) {
-        tmp22Result = tmp22(tmp23[29]);
+        tmp22Result = searchContext(tmp23[29]);
         const guildId = guild_id.getGuildId();
         closure_129_1 = guildId;
         if (null != guildId) {
           if (tmp22Result1.shouldShowMembershipVerificationGate(guildId)) {
             c2 = 1;
             c3 = 1;
-            return { value: tmp22(tmp23[25])(tmp23[31], tmp23.paths), done: false };
+            return { value: searchContext(tmp23[25])(tmp23[31], tmp23.paths), done: false };
           }
-          tmp22Result1 = tmp22(tmp23[30]);
+          tmp22Result1 = searchContext(tmp23[30]);
         }
         if (tmp22Result.getChannelRoleSubscriptionStatus(guild_id.id).needSubscriptionToAccess) {
           guild_id = guild_id.guild_id;
-          tmp22(tmp23[32]);
-          tmp22(tmp23[32]).transitionTo(closure_1_12.CHANNEL(guild_id, constants.ROLE_SUBSCRIPTIONS));
+          searchContext(tmp23[32]);
+          searchContext(tmp23[32]).transitionTo(closure_1_12.CHANNEL(guild_id, constants.ROLE_SUBSCRIPTIONS));
         } else {
           handleVoiceOrStageChannelConnectPress(guild_id);
         }
@@ -427,10 +428,10 @@ export const useOnPressGuildVoiceChannel = function useOnPressGuildVoiceChannel(
     }
     await "HermesInternal";
     if (arg0 !== 2) {
-      const result = arg1.openMemberVerificationModal(closure_129_1, () => closure_2_17(closure_1_0));
+      const result = value.openMemberVerificationModal(closure_129_1, () => closure_2_17(closure_1_0));
       c3 = 3;
     }
-    return arg1;
+    return value;
   });
   callback = noop.useCallback(function () {
     const self = this;
@@ -463,6 +464,7 @@ export const useOnPressGuildVoiceChannel = function useOnPressGuildVoiceChannel(
         parent.goBack();
       }
       const result1 = searchContext(callback[9]).performKeyboardAwareNavigation(() => callback(closure_0));
+      const obj3 = searchContext(callback[9]);
     }
   }, items);
 };
@@ -471,7 +473,6 @@ export const useOnPressSearchHistoryText = function useOnPressSearchHistoryText(
   const items = [searchContext];
   return noop.useCallback((text, tags) => {
     searchContext = text;
-    let obj = { type: constants.TEXT, text, tags };
     const type = searchContext.type;
     if (constants4.DMS === type) {
       const result = searchContext(12338).delayUntilNavigationComplete(() => {

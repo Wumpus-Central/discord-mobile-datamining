@@ -4,7 +4,7 @@ import PlatformUtils from "../../utils/PlatformUtils.tsx";
 import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
 import UserSettings from "../user_settings/UserSettings.tsx";
 import DiscordNativeDefault from "../../lib/DiscordNative.tsx";
-import StreamKeyUtilsAll from "../go_live/utils/StreamKeyUtils.tsx";
+import StreamKeyUtils from "../go_live/utils/StreamKeyUtils.tsx";
 import BaseConnectionEvent from "../../../discord_common/js/packages/media-engine/index.tsx";
 import isClipsEnabled from "isClipsEnabled.tsx";
 import ClipsExperiment from "ClipsExperiment.tsx";
@@ -16,6 +16,8 @@ import RTCConnectionStore from "../../stores/RTCConnectionStore.tsx";
 import StreamRTCConnectionStore from "../../stores/StreamRTCConnectionStore.tsx";
 import ClipsStore from "ClipsStore.tsx";
 import AutomaticLifecycleManager from "../../lib/AutomaticLifecycleManager.tsx";
+
+const StreamKeyUtilsAll = StreamKeyUtils;
 
 require = fn;
 const getSystemAnalyticsInfo = fn(4605).getSystemAnalyticsInfo;
@@ -88,10 +90,10 @@ prototype["handleRTCConnectionState"] = function handleRTCConnectionState(state)
     if (state.state === constants3.RTC_CONNECTED) {
       const self = this;
       const id = AuthenticationStore.getId();
-      if (tmp(4615).MediaEngineContextTypes.DEFAULT === context) {
+      if (BaseConnectionEvent.MediaEngineContextTypes.DEFAULT === context) {
         const result = self.applyUserVoiceRecording(id);
         const result1 = self.applyUserSoundboardRecording(id);
-      } else if (tmp(4615).MediaEngineContextTypes.STREAM === context) {
+      } else if (BaseConnectionEvent.MediaEngineContextTypes.STREAM === context) {
         if (null != streamKey) {
           if (tmpResult.decodeStreamKey(streamKey).ownerId === id) {
             const rTCConnection = StreamRTCConnectionStore.getRTCConnection(streamKey);
@@ -99,11 +101,12 @@ prototype["handleRTCConnectionState"] = function handleRTCConnectionState(state)
               self.applyStreamRecording(id, rTCConnection);
             }
           }
-          tmpResult = tmp(4612);
+          tmpResult = StreamKeyUtils;
         }
       }
     }
   }
+  obj = ClipsExperiment;
 };
 prototype["handleRTCUsersUpdate"] = function handleRTCUsersUpdate(userIds) {
   const self = this;
@@ -142,7 +145,7 @@ prototype["maybeShowClipsWarning"] = function maybeShowClipsWarning(userId) {
   const channelId = RTCConnectionStore.getChannelId();
   if (null != channelId) {
     if (!ClipsStore.getClipsWarningShown(channelId)) {
-      let setting = userId !== AuthenticationStore.getId() && obj3.isClipsEnabledForUser(userId);
+      let setting = userId !== AuthenticationStore.getId() && ClipsStore.isClipsEnabledForUser(userId);
       if (setting) {
         const ClipsAllowVoiceRecording = UserSettings.ClipsAllowVoiceRecording;
         setting = ClipsAllowVoiceRecording.getSetting();
@@ -154,7 +157,6 @@ prototype["maybeShowClipsWarning"] = function maybeShowClipsWarning(userId) {
         this.showClipsToast();
       }
     }
-    obj3 = ClipsStore;
   }
 };
 prototype["handleClipsAllowVoiceRecordingUpdate"] = function handleClipsAllowVoiceRecordingUpdate() {
@@ -171,9 +173,10 @@ prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
     if (obj.areClipsAvailable()) {
       const clipsFromStorage = self.loadClipsFromStorage();
       self.maybeStartNtpClock();
-      let tmp7 = null != ClipsStore.getHardwareClassification() && null != obj2.getHardwareClassificationForDecoupled();
+      let tmp7 =
+        null != ClipsStore.getHardwareClassification() && null != ClipsStore.getHardwareClassificationForDecoupled();
       if (tmp7) {
-        tmp7 = obj2.getHardwareClassificationVersion() === map1;
+        tmp7 = ClipsStore.getHardwareClassificationVersion() === map1;
       }
       if (!tmp7) {
         const result1 = self.classifyHardwareAndTrack();
@@ -209,7 +212,7 @@ prototype["handleRTCConnectionVideo"] = function handleRTCConnectionVideo(arg0) 
 };
 prototype["classifyHardwareAndTrack"] = function classifyHardwareAndTrack() {
   const self = this;
-  return (async (arg0, value) => {
+  return (async () => {
     if (c5 === 2) {
       c5 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -243,7 +246,8 @@ prototype["classifyHardwareAndTrack"] = function classifyHardwareAndTrack() {
             c5 = 1;
             const obj1 = {
               value: v2(async () => {
-                closure_128_0 = await closure_2_5();
+                await closure_2_5();
+                closure_128_0 = value;
                 if (closure_128_0 != null) {
                   const gpus = closure_128_0.gpus;
                 }
@@ -261,7 +265,7 @@ prototype["classifyHardwareAndTrack"] = function classifyHardwareAndTrack() {
                 }
                 const processUtils = tmp3(closure_2_3[18]).processUtils;
                 await processUtils.getSystemInfo();
-                const gpus2 = arg1.gpus;
+                const gpus2 = value.gpus;
                 closure_128_2 = gpus2.map((model) => model.model);
                 return { gpuModels: closure_128_2, classification: tmp2.classifyHardware(closure_128_2) };
               })(),
@@ -308,9 +312,9 @@ prototype["classifyHardwareAndTrack"] = function classifyHardwareAndTrack() {
 prototype["classifyHardware"] = function classifyHardware(arr) {
   if (obj.isWindows()) {
     if (someResult) {
-      let MEETS_AUTO_ENABLE = tmp11.MEETS_AUTO_ENABLE;
+      let MEETS_AUTO_ENABLE = constants.MEETS_AUTO_ENABLE;
     } else {
-      MEETS_AUTO_ENABLE = tmp10 ? tmp11.MEETS_MINIMUM : tmp11.BELOW_MINIMUM;
+      MEETS_AUTO_ENABLE = tmp10 ? constants.MEETS_MINIMUM : constants.BELOW_MINIMUM;
     }
     return MEETS_AUTO_ENABLE;
   } else {
@@ -326,6 +330,7 @@ prototype["classifyHardware"] = function classifyHardware(arr) {
     }
     tmpResult = PlatformUtils;
   }
+  obj = PlatformUtils;
 };
 prototype["applyUserVoiceRecording"] = function applyUserVoiceRecording(id) {
   if (isClientClipsCapableDefault(MediaEngineStore)) {

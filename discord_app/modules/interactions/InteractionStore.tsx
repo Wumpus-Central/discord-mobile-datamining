@@ -120,6 +120,7 @@ const interactionStore = new InteractionStore(DispatcherDefault, {
         }
         continue;
       }
+      tmp5 = entries[Symbol.iterator]();
     }, result);
   },
   INTERACTION_QUEUE: function handleInteractionQueue(arg0) {
@@ -137,6 +138,7 @@ const interactionStore = new InteractionStore(DispatcherDefault, {
       onSuccess,
       onFailure,
     };
+    const obj = { state: InteractionTypes.InteractionState.QUEUED, data, onCreate, onCancel, onSuccess, onFailure };
   },
   INTERACTION_CREATE: function handleInteractionCreate(nonce) {
     nonce = nonce.nonce;
@@ -145,13 +147,12 @@ const interactionStore = new InteractionStore(DispatcherDefault, {
     } else {
       if (null != dependencyMap[nonce]) {
         if (tmp3.state === InteractionTypes.InteractionState.QUEUED) {
-          tmp3.state = tmp4(4790).InteractionState.CREATED;
+          tmp3.state = InteractionTypes.InteractionState.CREATED;
           const onCreate = tmp3.onCreate;
           if (onCreate != null) {
             onCreate(tmp);
           }
         }
-        tmp4 = require;
       }
       return false;
     }

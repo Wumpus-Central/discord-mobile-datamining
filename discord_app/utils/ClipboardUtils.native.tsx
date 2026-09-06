@@ -2,7 +2,7 @@
 import _modDef7191 from "../../_runtime/metro/07191__.js";
 import asyncGeneratorStep from "../../_runtime/00005_asyncGeneratorStep.js";
 
-let closure_3 = async function _copy(arg0, value) {
+let closure_3 = async function _copy(arg0) {
   if (c2 === 2) {
     c2 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");

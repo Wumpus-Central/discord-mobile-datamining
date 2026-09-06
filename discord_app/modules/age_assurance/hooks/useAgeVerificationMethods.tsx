@@ -3,6 +3,7 @@ import util from "../../../intl/index.native.tsx";
 import MonitoringAgentDefault from "../../monitoring/MonitoringAgent.tsx";
 import MetricEvents from "../../../../discord_common/js/shared/shared-constants/MetricEvents.tsx";
 import AgeVerificationURLActionCreators from "../AgeVerificationURLActionCreators.tsx";
+import GoogleWalletExperiment from "../GoogleWalletExperiment.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -49,11 +50,10 @@ export default function useAgeVerificationMethods(onGoogleWalletSelect) {
         obj.tags = items;
         obj.increment(obj);
         if (result) {
-          result = tmp4(8585).isGoogleWalletEnabled("age_verification_methods");
-          const tmp4Result = tmp4(8585);
+          result = GoogleWalletExperiment.isGoogleWalletEnabled("age_verification_methods");
+          const tmp4Result = GoogleWalletExperiment;
         }
         closure_4(result);
-        tmp4 = require;
       }
     });
     return () => {
@@ -82,7 +82,7 @@ export default function useAgeVerificationMethods(onGoogleWalletSelect) {
             obj.title = intl.string(title);
             const intl2 = onGoogleWalletSelect(1114).intl;
             obj.description = intl2.string(description);
-            closure_1 = first(function* (arg0, value) {
+            closure_1 = first(function* (arg0) {
               if (c1 === 2) {
                 c1 = 3;
                 throw new TypeError("Generator functions may not be called on executing generators");

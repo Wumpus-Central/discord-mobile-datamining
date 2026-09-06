@@ -39,8 +39,8 @@ prototype["initialize"] = function initialize(arg0) {
 prototype["getPendingReply"] = function getPendingReply(id) {
   return dependencyMap[id];
 };
-prototype["getPendingReplyActionSource"] = function getPendingReplyActionSource(arg0) {
-  return closure_7[arg0];
+prototype["getPendingReplyActionSource"] = function getPendingReplyActionSource(channelId) {
+  return closure_7[channelId];
 };
 PendingReplyStore.displayName = "PendingReplyStore";
 PendingReplyStore.persistKey = "PendingReplyStore";

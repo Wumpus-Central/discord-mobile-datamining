@@ -27,13 +27,12 @@ export const useChannelsUserCanStartStageIn = function useChannelsUserCanStartSt
           if (closure_1_4 !== undefined) {
             let canResult = channel2.isGuildStageVoice();
             if (canResult) {
-              canResult = obj.can(id(closure_1_1[2]).MODERATE_STAGE_CHANNEL_PERMISSIONS, channel2);
+              canResult = closure_1_4.can(id(closure_1_1[2]).MODERATE_STAGE_CHANNEL_PERMISSIONS, channel2);
             }
             if (canResult) {
-              arr.push(channel);
+              arr = arr.push(channel);
             }
           }
-          obj = closure_1_4;
         }
         return arr;
       }, []),

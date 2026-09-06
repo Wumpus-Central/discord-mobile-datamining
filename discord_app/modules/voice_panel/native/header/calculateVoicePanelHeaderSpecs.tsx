@@ -1,13 +1,13 @@
 // discord_app/modules/voice_panel/native/header/calculateVoicePanelHeaderSpecs.tsx
 import size from "../../../../../_runtime/metro/00002__.js";
 
-const fn = function t(top, arg1) {
-  const bound = Math.max(arg1, top.top);
+const fn = function t(top, token) {
+  const bound = Math.max(token, top.top);
   return {
     height: 44 + bound,
     paddingTop: bound,
-    paddingLeft: Math.max(arg1, top.left),
-    paddingRight: Math.max(arg1, top.right),
+    paddingLeft: Math.max(token, top.left),
+    paddingRight: Math.max(token, top.right),
   };
 };
 fn.__closure = { BASE_VOICE_PANEL_HEADER_HEIGHT: 44 };

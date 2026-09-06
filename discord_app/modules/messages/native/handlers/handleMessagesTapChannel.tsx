@@ -18,66 +18,73 @@ function maybeStartLurking() {
   }
   return applyArgumentsResult;
 }
-let closure_20 = async function _maybeStartLurking(arg0, value) {
-  if (c4 === 2) {
-    c4 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp5 === 3) {
-    if (arg0 === 1) {
-      throw value;
-    } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+let closure_20 = async function _maybeStartLurking(arg0, arg1) {
+  closure_0 = arg0;
+  closure_1 = arg1;
+  c5 = 0;
+  c4 = 0;
+  c6 = 0;
+  return (async (arg0, value, arg2, arg3) => {
+    if (c4 === 2) {
+      c4 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp5 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        let obj = { value, done: true };
+        return obj;
+      } else {
+        return { value: "HermesInternal", done: null };
+      }
     } else {
-      return { value: "HermesInternal", done: null };
-    }
-  } else {
-    try {
-      c4 = 2;
-      if (0 === c5) {
-        if (arg0 === 1) {
+      try {
+        c4 = 2;
+        if (0 === c5) {
+          if (arg0 === 1) {
+            c4 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c4 = 3;
+            obj = { value, done: true };
+            return obj;
+          } else {
+            c6 = 1;
+            let obj1 = GuildDiscoveryUtilsAll;
+            obj1 = { channelId, messageId };
+            c5 = 2;
+            c4 = 1;
+            const obj2 = { value: obj1.startLurking(closure_1, {}, obj1), done: false };
+            return obj2;
+          }
+        } else if (1 === tmp6) {
+          c6 = 0;
+        } else if (arg0 === 1) {
           c4 = 3;
           throw value;
         } else if (arg0 === 2) {
+          c6 = 0;
           c4 = 3;
           obj = { value, done: true };
           return obj;
         } else {
-          c6 = 1;
-          let obj1 = GuildDiscoveryUtilsAll;
-          obj1 = { channelId: importAll, messageId: dependencyMap };
-          c5 = 2;
-          c4 = 1;
-          const obj2 = { value: obj1.startLurking(closure_1, {}, obj1), done: false };
-          return obj2;
+          c6 = 0;
+          c4 = 3;
+          return { value: true, done: true };
         }
-      } else if (1 === tmp6) {
-        c6 = 0;
-      } else if (arg0 === 1) {
         c4 = 3;
-        throw value;
-      } else if (arg0 === 2) {
-        c6 = 0;
-        c4 = 3;
-        obj = { value, done: true };
-        return obj;
-      } else {
-        c6 = 0;
-        c4 = 3;
-        return { value: true, done: true };
-      }
-      c4 = 3;
-    } catch (tmp10) {
-      if (tmp3 === c6) {
-        c4 = tmp2;
-        throw tmp10;
-      } else {
-        c5 = tmp;
+      } catch (tmp10) {
+        if (tmp3 === c6) {
+          c4 = tmp2;
+          throw tmp10;
+        } else {
+          c5 = tmp;
+        }
       }
     }
-  }
+  })();
 };
-let closure_21 = async function _handleMessagesTapChannel(arg0, value) {
+let closure_21 = async function _handleMessagesTapChannel(arg0) {
   if (c4 === 2) {
     c4 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");

@@ -1,4 +1,6 @@
 // discord_app/modules/tiny_bronco/TinyBroncoAccountStatusVisibility.tsx
+import AgeVerificationUtils from "../age_assurance/AgeVerificationUtils.tsx";
+import RegionalFeatureConfigUtils from "../regional_feature_config/RegionalFeatureConfigUtils.tsx";
 import MessageRequestActionCreators from "../message_request/MessageRequestActionCreators.tsx";
 import TinyBroncoExperiment from "TinyBroncoExperiment.tsx";
 import noop from "../../../_runtime/metro/00019__.js";
@@ -27,15 +29,15 @@ export const shouldShowTinyBroncoAccountStatus = function shouldShowTinyBroncoAc
       hasAgeGatedFeaturesResult = !set.has(userCountryCode.alpha2);
     }
     if (hasAgeGatedFeaturesResult) {
-      let tmpResult = tmp(5423);
+      let tmpResult = RegionalFeatureConfigUtils;
       hasAgeGatedFeaturesResult = tmpResult.hasAgeGatedFeatures();
     }
     if (hasAgeGatedFeaturesResult) {
-      tmpResult = tmp(4773);
+      tmpResult = AgeVerificationUtils;
       let isAssignedByDiscordResult = tmpResult.isAssignedByDiscord();
       if (!isAssignedByDiscordResult) {
-        isAssignedByDiscordResult = !tmp(4773).isAgeVerified();
-        const tmpResult1 = tmp(4773);
+        isAssignedByDiscordResult = !AgeVerificationUtils.isAgeVerified();
+        const tmpResult1 = AgeVerificationUtils;
       }
       hasAgeGatedFeaturesResult = isAssignedByDiscordResult;
     }

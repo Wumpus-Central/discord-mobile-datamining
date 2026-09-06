@@ -28,7 +28,7 @@ export const getChannelSelectionOrigin = function getChannelSelectionOrigin() {
   obj.fromChannelId = channelId;
   return obj;
 };
-export const selectVoiceChannelAdditional = function selectVoiceChannelAdditional(id, guildId, flag, flag2, arg4) {
+export const selectVoiceChannelAdditional = function selectVoiceChannelAdditional(id, guildId) {
   _require = id;
   importDefault = guildId;
   if (flag === undefined) {
@@ -53,7 +53,7 @@ export const selectVoiceChannelAdditional = function selectVoiceChannelAdditiona
   const currentUser = UserStore.getCurrentUser();
   if (null != currentUser) {
     if (null != channel) {
-      const isChannelFullResult = require("ChannelUtils").isChannelFull(channel, VoiceStateStore, flag3);
+      const obj8 = require("ChannelUtils");
       const check = flag4.getCheck(channel.guild_id);
       if (!check.canChat) {
         let tmp14Result = tmp14(tmp15[10]);
@@ -62,20 +62,19 @@ export const selectVoiceChannelAdditional = function selectVoiceChannelAdditiona
           return tmp14Result.unverifiedVoiceGate(check);
         }
       }
-      const tmp4 = require("canJoinVoiceChannel")(channel, PermissionStore);
+      const isChannelFullResult = require("ChannelUtils").isChannelFull(channel, VoiceStateStore, flag3);
+      const tmp2 = importDefault;
       if (isChannelFullResult) {
         if (channel.isGuildStageVoice()) {
           if (tmp14Result1.getStageHasMedia(channel.id)) {
             obj = { channel };
-            require("ActionSheetActionCreators").openLazy(
-              tmp14(tmp15[16])(tmp15[15], tmp15.paths),
-              STAGE_BOOSTING_SHEET_KEY,
-              obj,
-            );
+            tmp2(tmp15[14]).openLazy(tmp14(tmp15[16])(tmp15[15], tmp15.paths), STAGE_BOOSTING_SHEET_KEY, obj);
+            const tmp2Result = tmp2(tmp15[14]);
           }
           tmp14Result1 = tmp14(tmp15[13]);
         }
       }
+      const tmp4 = require("canJoinVoiceChannel")(channel, PermissionStore);
     }
     require("collectCallFeedback")(
       () => {

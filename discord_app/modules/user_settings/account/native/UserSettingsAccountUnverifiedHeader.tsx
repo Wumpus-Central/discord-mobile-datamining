@@ -2,6 +2,8 @@
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
+import Text_Text from "../../../../design/components/Text/native/Text.tsx";
+import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
 import EmailVerificationModalActionCreatorsDefault from "../../../../actions/native/EmailVerificationModalActionCreators.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import UserStore from "../../../../stores/UserStore.tsx";
@@ -68,16 +70,16 @@ export default function UserSettingsAccountUnverifiedHeader() {
       children: null,
     };
     obj = { style: tmp.accountWarningText, variant: "text-xs/bold", color: "text-overlay-light", children: tmp4.title };
-    const items1 = [React4(tmp2(4556).Text, obj)];
+    const items1 = [React4(Text_Text.Text, obj)];
     const obj1 = {
       style: tmp.accountWarningButton,
       variant: "text-xs/medium",
       color: "text-overlay-light",
       children: tmp4.button,
     };
-    items1[1] = React4(tmp2(4556).Text, obj1);
+    items1[1] = React4(Text_Text.Text, obj1);
     obj.children = items1;
-    tmp5 = hasOwnProperty(tmp2(5123).PressableOpacity, obj);
+    tmp5 = hasOwnProperty(Pressables.PressableOpacity, obj);
   }
   return tmp5;
 }

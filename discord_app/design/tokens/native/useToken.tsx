@@ -50,7 +50,7 @@ export const useToken = function useToken(BACKGROUND_BASE_LOW, theme) {
     const internal2 = nativeDefault.internal;
     let semanticColorName = BACKGROUND_BASE_LOW;
     if (internal2.isSemanticColor(BACKGROUND_BASE_LOW)) {
-      const internal3 = tmp6(576).internal;
+      const internal3 = nativeDefault.internal;
       semanticColorName = internal3.getSemanticColorName(BACKGROUND_BASE_LOW);
     }
     const _HermesInternal = HermesInternal;
@@ -60,7 +60,7 @@ export const useToken = function useToken(BACKGROUND_BASE_LOW, theme) {
     if (tmp3 != value) {
       tmp3 = tmp3 != semanticColor;
       if (tmp3) {
-        result = obj4.set(combined, semanticColor);
+        result = map.set(combined, semanticColor);
         let tmp14 = semanticColor;
       }
     } else if (typeof BACKGROUND_BASE_LOW === "string") {
@@ -68,17 +68,21 @@ export const useToken = function useToken(BACKGROUND_BASE_LOW, theme) {
       if ("#" !== BACKGROUND_BASE_LOW[0]) {
         semanticColor = value;
         if (BACKGROUND_BASE_LOW in closure_4) {
-          const internal5 = tmp6(576).internal;
+          const internal5 = nativeDefault.internal;
           obj = SemanticColorContext;
           result = obj.getSemanticColorContextFromThemeContext(themeContext);
-          semanticColor = internal5.resolveSemanticColor(theme, tmp6(576).colors[tmp15[BACKGROUND_BASE_LOW]], result);
+          semanticColor = internal5.resolveSemanticColor(
+            theme,
+            nativeDefault.colors[tmp15[BACKGROUND_BASE_LOW]],
+            result,
+          );
         }
       }
     } else {
-      const internal6 = tmp6(576).internal;
+      const internal6 = nativeDefault.internal;
       semanticColor = value;
       if (internal6.isSemanticColor(BACKGROUND_BASE_LOW)) {
-        const internal4 = tmp6(576).internal;
+        const internal4 = nativeDefault.internal;
         semanticColor = internal4.resolveSemanticColor(
           theme,
           BACKGROUND_BASE_LOW,
@@ -88,6 +92,5 @@ export const useToken = function useToken(BACKGROUND_BASE_LOW, theme) {
       }
     }
     resolveResult = tmp14;
-    obj4 = map;
   }
 };

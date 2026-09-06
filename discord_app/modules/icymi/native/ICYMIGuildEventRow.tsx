@@ -3,6 +3,7 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import util from "../../../intl/index.native.tsx";
 import transitionToGuild from "../../routing/transitionToGuild.native.tsx";
 import ICYMIActionCreatorsDefault from "../ICYMIActionCreators.tsx";
+import ScheduleUtils from "../../guild_scheduled_events/utils/ScheduleUtils.tsx";
 import guild_scheduled_events_GuildScheduledEventModalActionCreators from "../../guild_scheduled_events/GuildScheduledEventModalActionCreators.native.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import GuildScheduledEventStore from "../../guild_scheduled_events/GuildScheduledEventStore.tsx";
@@ -74,7 +75,7 @@ function ICYMIGuildEventRow(event) {
     title = event.description.length > 0;
   }
   let guild_id;
-  let tmp2Result = tmp2(9780);
+  let tmp2Result = guild(9780);
   if (event != null) {
     guild_id = event.guild_id;
   }
@@ -93,7 +94,7 @@ function ICYMIGuildEventRow(event) {
     onHeaderLongPress: null,
     children: null,
   };
-  tmp2Result = tmp2(16493);
+  tmp2Result = guild(16493);
   let intl = tmp8(1114).intl;
   obj.actionLabel = intl.string(event(1114).t["6pFsLQ"]);
   obj.id = event.id;
@@ -119,12 +120,12 @@ function ICYMIGuildEventRow(event) {
     children: noop.useMemo(() => {
       if (closure_2) {
         const obj = { startDateTimeString: null };
-        const intl = tmp(1114).intl;
+        const intl = util.intl;
         obj.startDateTimeString = intl.string(util.t.TxqPQR);
         let eventTimeData = obj;
       } else {
-        eventTimeData = tmp(9665).getEventTimeData(c3);
-        const tmpResult = tmp(9665);
+        eventTimeData = ScheduleUtils.getEventTimeData(c3);
+        const tmpResult = ScheduleUtils;
       }
       return eventTimeData;
     }, items).startDateTimeString,
@@ -144,7 +145,7 @@ function ICYMIGuildEventRow(event) {
     let tmp8Result = tmp8(9771);
     const obj4 = { guildId: guild.id };
     obj3.children = tmp8Result.guildEventDetailsParser(event.description, true, obj4);
-    tmp19Result = tmp19(tmp8(4556).Text, obj3);
+    tmp19Result = closure_11(tmp8(4556).Text, obj3);
   }
   items3[2] = tmp19Result;
   items3[3] = closure_11(closure_5, { style: tmp.separator });
@@ -160,7 +161,7 @@ function ICYMIGuildEventRow(event) {
   const obj10 = { style: tmp.locationContainer, children: null };
   if (null != eventLocationIconComponent) {
     const obj11 = { size: "xs", style: tmp.eventsChannelIcon };
-    tmp19Result = tmp19(eventLocationIconComponent, obj11);
+    tmp19Result = closure_11(eventLocationIconComponent, obj11);
   } else {
     tmp19Result = null != eventLocationIconSource;
     if (tmp19Result) {
@@ -170,7 +171,7 @@ function ICYMIGuildEventRow(event) {
         style: tmp.eventsChannelIcon,
         disableColor: true,
       };
-      tmp19Result = tmp19(tmp8(1178).Icon, obj12);
+      tmp19Result = closure_11(tmp8(1178).Icon, obj12);
     }
   }
   const items6 = [tmp19Result];

@@ -49,7 +49,7 @@ export const isEqualAvatarDecoration = function isEqualAvatarDecoration(avatarDe
       if (typeof avatarDecoration === "object") {
         tmp2 = null;
         if (null != avatarDecoration) {
-          let tmp12Result = tmp12(1882);
+          let tmp12Result = mappers;
           const result = tmp12Result.parseSkuIdFromServerData(avatarDecoration);
           tmp2 = null;
           if (null != result) {
@@ -75,7 +75,7 @@ export const isEqualAvatarDecoration = function isEqualAvatarDecoration(avatarDe
       if (typeof asset2 === "object") {
         tmp6 = null;
         if (null != asset2) {
-          tmp12Result = tmp12(1882);
+          tmp12Result = mappers;
           const result1 = tmp12Result.parseSkuIdFromServerData(asset2);
           tmp6 = null;
           if (null != result1) {

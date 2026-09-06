@@ -19,7 +19,7 @@ let prototype = function SubscriptionManager() {
       const result2 = applyArgumentsResult.maybeFetchMostRecentSubscription();
     },
   };
-  applyArgumentsResult.maybeFetchSubscriptions = asyncGeneratorStep(async (arg0, value) => {
+  applyArgumentsResult.maybeFetchSubscriptions = asyncGeneratorStep(async () => {
     if (currentUser === 2) {
       currentUser = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -112,8 +112,6 @@ let prototype = function SubscriptionManager() {
       premiumType = null;
     }
     const obj2 = applyArgumentsResult(dependencyMap[7]);
-    const tmp = applyArgumentsResult;
-    const tmp2 = dependencyMap;
     let hasHadPremiumResult = null != currentUser;
     isFetchingMostRecentSubscription = isFetchingMostRecentSubscription.getIsFetchingMostRecentSubscription();
     if (hasHadPremiumResult) {
@@ -126,12 +124,13 @@ let prototype = function SubscriptionManager() {
       hasHadPremiumResult = !isFetchingMostRecentSubscription;
     }
     if (hasHadPremiumResult) {
-      const mostRecentSubscription = tmp(tmp2[8]).fetchMostRecentSubscription();
-      const tmpResult = tmp(tmp2[8]);
+      const mostRecentSubscription = applyArgumentsResult(dependencyMap[8]).fetchMostRecentSubscription();
+      const tmpResult = applyArgumentsResult(dependencyMap[8]);
     }
+    isPremiumAtMostResult = applyArgumentsResult(dependencyMap[7]).isPremiumAtMost(premiumType, TIER_1.TIER_1);
   };
   closure_129_0 = applyArgumentsResult;
-  applyArgumentsResult.maybeFetchCountryCode = asyncGeneratorStep(async (arg0, value) => {
+  applyArgumentsResult.maybeFetchCountryCode = asyncGeneratorStep(async () => {
     if (v3 === 2) {
       v3 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -185,7 +184,7 @@ let prototype = function SubscriptionManager() {
       }
     }
   });
-  applyArgumentsResult.fetchCountryCode = asyncGeneratorStep(async (arg0, value) => {
+  applyArgumentsResult.fetchCountryCode = asyncGeneratorStep(async () => {
     if (c2 === 2) {
       c2 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");

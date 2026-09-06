@@ -138,7 +138,7 @@ export default function DisconnectCancelButton(props) {
   }, items);
   if (first === constants.ACTIVITY) {
     PhoneHangUpIcon = tmp8(tmp3[16]).DoorExitIcon;
-  } else if (first === tmp11.STREAM) {
+  } else if (first === constants.STREAM) {
     PhoneHangUpIcon = tmp8(tmp3[17]).ScreenXIcon;
   } else {
     PhoneHangUpIcon = tmp8(tmp3[18]).PhoneHangUpIcon;
@@ -151,11 +151,10 @@ export default function DisconnectCancelButton(props) {
     children: null,
   };
   let obj2 = require("ReanimatedRexport");
-  let tmp12 = jsx;
   if (first === constants.ACTIVITY) {
     const intl3 = tmp8(tmp3[20]).intl;
     let stringResult = intl3.string(tmp8(tmp3[20]).t["R/FK4A"]);
-  } else if (first === tmp11.STREAM) {
+  } else if (first === constants.STREAM) {
     const intl2 = tmp8(tmp3[20]).intl;
     stringResult = intl2.string(tmp8(tmp3[20]).t.q3O3J8);
   } else {
@@ -165,5 +164,11 @@ export default function DisconnectCancelButton(props) {
   element.accessibilityLabel = stringResult;
   const items1 = [PhoneHangUpIcon, tmp.icon];
   element.children = obj.useMemo(() => <PhoneHangUpIcon style={icon.icon} />, items1);
-  return tmp12(channelId(focused[19]), element);
+  return jsx(channelId(focused[19]), {
+    onPress: callback1,
+    props: props.props,
+    style: tmp.disconnectCancelBG,
+    accessibilityLabel: null,
+    children: null,
+  });
 }

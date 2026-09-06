@@ -31,6 +31,7 @@ export const useMessageRequestTimestampText = function useMessageRequestTimestam
   if (null != lastMessageId) {
     extractTimestampResult = SnowflakeUtilsDefault.extractTimestamp(lastMessageId);
   }
+  const obj3 = require("initialize");
 };
 export const useMessageRequestRelativeTimestampText = function useMessageRequestRelativeTimestampText(channel) {
   _require = channel;
@@ -47,8 +48,8 @@ export const useMessageRequestRelativeTimestampText = function useMessageRequest
     }
     let str = "";
     if (null != extractTimestampResult) {
-      str = require("ThreadUtils").getTimestampString(extractTimestampResult);
-      const tmpResult = require("ThreadUtils");
+      str = tmp(7781).getTimestampString(extractTimestampResult);
+      const tmpResult = tmp(7781);
     }
     return str;
   }
@@ -56,4 +57,6 @@ export const useMessageRequestRelativeTimestampText = function useMessageRequest
   if (null != lastMessageId) {
     extractTimestampResult = SnowflakeUtilsDefault.extractTimestamp(lastMessageId);
   }
+  const obj3 = require("initialize");
+  tmp = _require;
 };

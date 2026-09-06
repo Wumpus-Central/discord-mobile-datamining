@@ -1,6 +1,9 @@
 // discord_app/components_native/common/color_picker/ColorBlock.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import utils_ColorUtils from "../../../../discord_common/js/shared/utils/ColorUtils.tsx";
+import native from "../../../design/void/native.tsx";
+import ColorUtils from "../../../utils/ColorUtils.tsx";
+import Pressables from "../../../design/void/Pressables/native/Pressables.tsx";
 import _modDef11564 from "../../../../_runtime/metro/11564__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
@@ -43,8 +46,7 @@ export default noop.memo((color) => {
       style: null,
       children: null,
     };
-    tmp2(4409);
-    const tmp2Result = tmp2(1091);
+    const tmp2Result = utils_ColorUtils;
     obj.accessibilityLabel = tmp2Result.hexToColorName(tmp2Result.int2hex(color), true);
     obj = { selected };
     obj.accessibilityState = obj;
@@ -52,45 +54,44 @@ export default noop.memo((color) => {
       return onSelect(color);
     };
     const items = [tmp.colorBlock, style];
-    const obj1 = { backgroundColor: tmp2(1091).int2hex(color) };
+    const obj1 = { backgroundColor: utils_ColorUtils.int2hex(color) };
     items[2] = obj1;
     obj.style = items;
     if (!selected) {
       obj.children = null;
-      let tmp10Result = tmp6(tmp2(5123).PressableOpacity, obj);
+      let tmp10Result = jsx(Pressables.PressableOpacity, obj);
     } else {
       const obj2 = { source: _modDef11564, color: null };
       if (v < 0.5) {
-        unsafe_rawColors = tmp8(576).unsafe_rawColors;
+        unsafe_rawColors = nativeDefault.unsafe_rawColors;
         let BLACK2 = unsafe_rawColors.WHITE;
       } else {
-        BLACK2 = tmp8(576).unsafe_rawColors.BLACK;
+        BLACK2 = nativeDefault.unsafe_rawColors.BLACK;
       }
       obj2.color = BLACK2;
-      tmp6(tmp2(1178).Icon, obj2);
+      jsx(native.Icon, { source: _modDef11564, color: null });
     }
-    const tmp2Result1 = tmp2(1091);
+    const tmp2Result1 = utils_ColorUtils;
   } else {
     const obj3 = { style: null, children: null };
     const items1 = [tmp.colorBlock, style];
-    const obj4 = { backgroundColor: tmp2(1091).int2hex(color) };
+    const obj4 = { backgroundColor: utils_ColorUtils.int2hex(color) };
     items1[2] = obj4;
     obj3.style = items1;
     if (!selected) {
       obj3.children = null;
-      tmp10Result = tmp10(tmp11, obj3);
+      tmp10Result = <View {...obj3} />;
     } else {
       const obj5 = { source: _modDef11564, color: null };
       if (v < 0.5) {
-        let BLACK = tmp3(576).unsafe_rawColors.WHITE;
+        let BLACK = nativeDefault.unsafe_rawColors.WHITE;
       } else {
-        BLACK = tmp3(576).unsafe_rawColors.BLACK;
+        BLACK = nativeDefault.unsafe_rawColors.BLACK;
       }
       obj5.color = BLACK;
-      tmp10Result = tmp10(tmp2(1178).Icon, obj5);
+      tmp10Result = jsx(native.Icon, { source: _modDef11564, color: null });
     }
-    tmp11 = View;
-    const tmp2Result2 = tmp2(1091);
+    const tmp2Result2 = utils_ColorUtils;
   }
   return tmp10Result;
 });

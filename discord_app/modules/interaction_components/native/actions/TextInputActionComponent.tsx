@@ -1,5 +1,8 @@
 // discord_app/modules/interaction_components/native/actions/TextInputActionComponent.tsx
 import Server from "../../../../flow/Server.tsx";
+import Input from "../../../../design/components/Input/native/Input.native.tsx";
+import TextField from "../../../../design/components/TextField/native/TextField.native.tsx";
+import TextAreaField from "../../../../design/components/TextField/native/TextAreaField.native.tsx";
 import ComponentStateContext from "../../ComponentStateContext.tsx";
 import InteractionModalUtils from "../../InteractionModalUtils.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
@@ -39,7 +42,7 @@ export default noop.memo((type) => {
   const state = noop.useState(() => {
     type = undefined;
     if (_slicedToArray != null) {
-      type = iter.type;
+      type = _slicedToArray.type;
     }
     return type === type ? _slicedToArray.value : value;
   });
@@ -54,16 +57,16 @@ export default noop.memo((type) => {
   if (Server.TextInputComponentStyle.SMALL === style) {
     const obj1 = {};
     const merged = Object.assign(obj);
-    let tmp7 = jsx(tmp(6613).TextField, {});
-  } else if (tmp(1894).TextInputComponentStyle.PARAGRAPH === style) {
+    let tmp7 = jsx(TextField.TextField, {});
+  } else if (Server.TextInputComponentStyle.PARAGRAPH === style) {
     const obj2 = {};
     const merged1 = Object.assign(obj);
-    tmp7 = jsx(tmp(7086).TextAreaField, {});
+    tmp7 = jsx(TextAreaField.TextAreaField, {});
   }
   let tmp16 = tmp7;
   if (null != label) {
     obj3 = { label, required, errorMessage: error, children: tmp7 };
-    tmp16 = jsx(tmp(6607).Input, { label, required, errorMessage: error, children: tmp7 });
+    tmp16 = jsx(Input.Input, { label, required, errorMessage: error, children: tmp7 });
   }
   return tmp16;
 });

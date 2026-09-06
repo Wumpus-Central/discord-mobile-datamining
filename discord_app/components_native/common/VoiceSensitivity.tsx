@@ -61,8 +61,8 @@ export default function VoiceSensitivity(auto) {
   let first2;
   let state;
   c10 = undefined;
-  closure_14 = undefined;
-  const tmp = closure_14();
+  let ref;
+  const tmp = ref();
   const sum = auto.threshold + 100;
   stateFromStores.useRef(null);
   stateFromStores.useRef(null);
@@ -105,7 +105,7 @@ export default function VoiceSensitivity(auto) {
     state(arg0);
   }, []);
   const effect2 = stateFromStores.useEffect(() => {
-    closure_1 = async function _listenOnlyIfWeHavePermission(arg0, value) {
+    closure_1 = async function _listenOnlyIfWeHavePermission() {
       if (c2 === 2) {
         c2 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -184,26 +184,26 @@ export default function VoiceSensitivity(auto) {
       };
     }
   }, items3);
-  const ref = stateFromStores.useRef(false);
-  closure_14 = stateFromStores.useRef(false);
+  stateFromStores.useRef(false);
+  ref = stateFromStores.useRef(false);
   const ref2 = stateFromStores.useRef(null);
   const items4 = [auto, first];
   const effect3 = stateFromStores.useEffect(() => {
     if (ref.current) {
       if (auto) {
-        if (tmp3.current) {
+        if (ref.current) {
           if (first) {
-            if (null != tmp5.current) {
+            if (null != ref.current) {
               let _clearTimeout = clearTimeout;
-              clearTimeout(tmp5.current);
-              tmp5.current = null;
+              clearTimeout(ref.current);
+              ref.current = null;
             }
             let AccessibilityAnnouncer = AccessibilityAnnouncer2.AccessibilityAnnouncer;
             let intl = util.intl;
             AccessibilityAnnouncer.announce(intl.string(util.t.haLKZ0));
           } else {
             const _setTimeout = setTimeout;
-            tmp5.current = setTimeout(() => {
+            ref.current = setTimeout(() => {
               ref.current = null;
               const AccessibilityAnnouncer = auto(first[17]).AccessibilityAnnouncer;
               const intl = auto(first[18]).intl;
@@ -213,13 +213,13 @@ export default function VoiceSensitivity(auto) {
           return () => {
             if (null != ref.current) {
               const _clearTimeout = clearTimeout;
-              clearTimeout(tmp.current);
-              tmp.current = null;
+              clearTimeout(ref.current);
+              ref.current = null;
             }
           };
         }
       } else {
-        tmp3.current = false;
+        ref.current = false;
       }
     } else {
       tmp.current = true;
@@ -264,8 +264,8 @@ export default function VoiceSensitivity(auto) {
         closure_14.current = false;
         if (null != ref2.current) {
           const _clearTimeout = clearTimeout;
-          clearTimeout(tmp.current);
-          tmp.current = null;
+          clearTimeout(ref2.current);
+          ref2.current = null;
         }
       },
       style: tmp.sensitivity,

@@ -1,39 +1,41 @@
 // discord_app/modules/premium_marketing/native/hooks/useBuyNitroPerks.tsx
 import util from "../../../../intl/index.native.tsx";
+import ChatIcon from "../../../../design/components/Icon/native/redesign/generated/ChatIcon.tsx";
+import AppsIcon from "../../../../design/components/Icon/native/redesign/generated/AppsIcon.tsx";
 import useFractionalPremiumInfoDefault from "../../../billing/hooks/useFractionalPremiumInfo.tsx";
+import NitroWheelIcon from "../../../../design/components/Icon/native/redesign/generated/NitroWheelIcon.tsx";
+import TrophyIcon from "../../../../design/components/Icon/native/redesign/generated/TrophyIcon.tsx";
 import ReactionIcon from "../../../../design/components/Icon/native/redesign/generated/ReactionIcon.tsx";
+import TagIcon from "../../../../design/components/Icon/native/redesign/generated/TagIcon.tsx";
+import ScreenStreamIcon from "../../../../design/components/Icon/native/redesign/generated/ScreenStreamIcon.tsx";
 import UploadIcon from "../../../../design/components/Icon/native/redesign/generated/UploadIcon.tsx";
+import SuperReactionIcon from "../../../../design/components/Icon/native/redesign/generated/SuperReactionIcon.tsx";
+import BoostGemIcon from "../../../../design/components/Icon/native/redesign/generated/BoostGemIcon.tsx";
+import UserSquareIcon from "../../../../design/components/Icon/native/redesign/generated/UserSquareIcon.tsx";
+import VideoIcon from "../../../../design/components/Icon/native/redesign/generated/VideoIcon.tsx";
+import StickerIcon from "../../../../design/components/Icon/native/redesign/generated/StickerIcon.tsx";
+import SoundboardIcon from "../../../../design/components/Icon/native/redesign/generated/SoundboardIcon.tsx";
 import _modDef13361 from "../../../../../_runtime/metro/13361__.js";
 import _modDef13362 from "../../../../../_runtime/metro/13362__.js";
 import AppIconUtils from "../../../app_icons/native/AppIconUtils.tsx";
+import _modDef13365 from "../../../../../_runtime/metro/13365__.js";
+import _modDef13366 from "../../../../../_runtime/metro/13366__.js";
 import _modDef13367 from "../../../../../_runtime/metro/13367__.js";
 import _modDef13368 from "../../../../../_runtime/metro/13368__.js";
 import _modDef13369 from "../../../../../_runtime/metro/13369__.js";
 import _modDef13370 from "../../../../../_runtime/metro/13370__.js";
+import DoorEnterIcon from "../../../../design/components/Icon/native/redesign/generated/DoorEnterIcon.tsx";
 import _modDef13373 from "../../../../../_runtime/metro/13373__.js";
 import _modDef13374 from "../../../../../_runtime/metro/13374__.js";
+import ServerGridIcon from "../../../../design/components/Icon/native/redesign/generated/ServerGridIcon.tsx";
 import _modDef13377 from "../../../../../_runtime/metro/13377__.js";
+import PaintPaletteIcon from "../../../../design/components/Icon/native/redesign/generated/PaintPaletteIcon.tsx";
 import _modDef13380 from "../../../../../_runtime/metro/13380__.js";
+import LettersIcon from "../../../../design/components/Icon/native/redesign/generated/LettersIcon.tsx";
+import SparklesIcon from "../../../../design/components/Icon/native/redesign/generated/SparklesIcon.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import n from "../../../../../_runtime/metro/00672__.js";
 
-const ChatIcon = tmp(5071);
-const AppsIcon = tmp(5106);
-const NitroWheelIcon = tmp(8662);
-const TrophyIcon = tmp(8717);
-const TagIcon = tmp(8862);
-const ScreenStreamIcon = tmp(9221);
-const SuperReactionIcon = tmp(9373);
-const BoostGemIcon = tmp(9375);
-const UserSquareIcon = tmp(9377);
-const VideoIcon = tmp(10110);
-const StickerIcon = tmp(10114);
-const SoundboardIcon = tmp(12528);
-const DoorEnterIcon = tmp(13371);
-const ServerGridIcon = tmp(13375);
-const PaintPaletteIcon = tmp(13378);
-const LettersIcon = tmp(13381);
-const SparklesIcon = tmp(13383);
 require = fn;
 const Gradients = fn(7432).Gradients;
 const PremiumConstants = fn(1373);
@@ -52,7 +54,7 @@ let result = size.fileFinishedImporting("modules/premium_marketing/native/hooks/
 
 export default function useBuyNitroPerks(arg0) {
   closure_0 = arg0;
-  let tmp = useFractionalPremiumInfoDefault({ forceFetch: true }).fractionalState === constants.FP_ONLY;
+  const tmp = useFractionalPremiumInfoDefault({ forceFetch: true }).fractionalState === constants.FP_ONLY;
   importDefault = tmp;
   let items = [arg0, tmp];
   return noop.useMemo(() => {
@@ -124,7 +126,7 @@ export default function useBuyNitroPerks(arg0) {
     const intl9 = util.intl;
     obj3.subLabel = intl9.string(util.t["t/Mvdj"]);
     obj3.IconComponent = UserSquareIcon.UserSquareIcon;
-    obj4 = { image: tmp3(13365), description: util.t.kWcDK8 };
+    obj4 = { image: _modDef13365, description: util.t.kWcDK8 };
     obj3.detail = obj4;
     items[arraySpreadResult] = obj3;
     if (closure_1) {
@@ -144,7 +146,7 @@ export default function useBuyNitroPerks(arg0) {
       const intl11 = util.intl;
       obj5.subLabel = intl11.string(util.t["n+DGY/"]);
       obj5.IconComponent = BoostGemIcon.BoostGemIcon;
-      const obj7 = { image: tmp3(13366), description: util.t.jsyNHm };
+      const obj7 = { image: _modDef13366, description: util.t.jsyNHm };
       obj5.detail = obj7;
       items3 = [obj5];
     }
@@ -404,6 +406,7 @@ export default function useBuyNitroPerks(arg0) {
         return obj;
       }
       label = includedInNitroBasic.label;
+      const obj4 = closure_2_8(result1);
     });
     const obj30 = { kind: "section-header", id: "explore-perks-header", title: null };
     const intl40 = util.intl;

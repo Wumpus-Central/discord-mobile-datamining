@@ -138,7 +138,7 @@ export default noop.memo(function MediaKeyboardList(channel) {
   G.__initData = __initData;
   const fn = function $(arg0, arg1) {
     let obj = cheapWorkletShallowEqual;
-    if (!obj.cheapWorkletArrayShallowEqual(arg0, arg1)) {
+    if (!obj.cheapWorkletArrayShallowEqual(arg0, tmp)) {
       first = arg0[0];
       const tmp2Result = ReanimatedRexport;
       if (first == null) {
@@ -153,6 +153,7 @@ export default noop.memo(function MediaKeyboardList(channel) {
       ReanimatedRexport.runOnJS(closure_24)(obj);
       const runOnJSResult = ReanimatedRexport.runOnJS(closure_24);
     }
+    tmp = arg1;
   };
   obj = {
     cheapWorkletArrayShallowEqual: channel(onPressCamera[18]).cheapWorkletArrayShallowEqual,
@@ -233,8 +234,8 @@ export default noop.memo(function MediaKeyboardList(channel) {
       return _modDef12.chunk(items2, itemsPerRow);
     } else {
       let edges;
-      if (tmp != null) {
-        edges = tmp.edges;
+      if (assets != null) {
+        edges = assets.edges;
       }
       if (edges == null) {
         edges = [];
@@ -298,12 +299,12 @@ export default noop.memo(function MediaKeyboardList(channel) {
               const _HermesInternal4 = HermesInternal;
               let combined = "" + acc + "-camera";
             } else {
-              let tmp6Result = tmp6(tmp7[21]);
+              let tmp6Result = channel(onPressCamera[21]);
               if (tmp6Result.isAttachFilesNode(node)) {
                 const _HermesInternal3 = HermesInternal;
                 combined = "" + acc + "-attach";
               } else {
-                tmp6Result = tmp6(tmp7[21]);
+                tmp6Result = channel(onPressCamera[21]);
                 if (tmp6Result.isViewAllPhotosNode(node)) {
                   const _HermesInternal2 = HermesInternal;
                   combined = "" + acc + "-view-all";

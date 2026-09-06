@@ -26,7 +26,7 @@ export default function useSelectStage() {
   }, items1);
   _require = asyncGeneratorStep(async (arg0, arg1) => {
     if (closure_1 === closure_1) {
-      channel = channel.getChannel(tmp30);
+      channel = channel.getChannel(closure_1);
       if (null != channel) {
         closure_0(first[6]).navigateToStage(channel);
         c5 = 0;
@@ -44,11 +44,11 @@ export default function useSelectStage() {
       c6 = 3;
     } else if (arg0 === 1) {
       c6 = 3;
-      throw arg1;
+      throw value;
     } else if (arg0 !== 2) {
       c5 = 0;
     }
-    return arg1;
+    return value;
   });
   const items2 = [first];
   const items3 = [

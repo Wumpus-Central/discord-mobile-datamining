@@ -114,12 +114,12 @@ export default function UserProfileEditBannerButton(arg0) {
   ];
   if (showProfilePreviewButton) {
     obj = { userId: user.id };
-    showProfilePreviewButton = tmp5(ProfilePreviewButton, obj);
+    showProfilePreviewButton = hasOwnProperty(ProfilePreviewButton, obj);
   }
   items[1] = showProfilePreviewButton;
   if (showEditButton) {
     obj = { onPress: onPressEdit, accessibilityLabel: editButtonAccessibilityLabel, disabled: editDisabled };
-    showEditButton = tmp5(EditButton, obj);
+    showEditButton = hasOwnProperty(EditButton, obj);
   }
   items[2] = showEditButton;
   obj.children = items;

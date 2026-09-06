@@ -1,9 +1,9 @@
 // discord_app/modules/color_picker/native/HSVColorPicker.tsx
 import ReanimatedRexport from "../../reanimated/ReanimatedRexport.tsx";
 import SaturationValueColorPickerDefault from "SaturationValueColorPicker.tsx";
+import HuePickerDefault from "HuePicker.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
-const HuePickerDefault = tmp9(14601);
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
@@ -31,8 +31,6 @@ export default function HSVColorPicker(arg0) {
   obj = { style: tmp.hsvColorPicker, children: null };
   const sharedValue2 = ReanimatedRexport.useSharedValue(1);
   let tmp11 = hue;
-  const tmp6 = hasOwnProperty;
-  const tmp7 = View;
   if (hue == null) {
     tmp11 = sharedValue;
   }
@@ -74,5 +72,5 @@ export default function HSVColorPicker(arg0) {
     onPanFinalize,
   });
   obj.children = items;
-  return tmp6(tmp7, obj);
+  return hasOwnProperty(View, obj);
 }

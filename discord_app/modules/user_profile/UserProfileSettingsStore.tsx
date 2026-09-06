@@ -193,6 +193,7 @@ obj = {
     const merged1 = Object.assign(dependencyMap[guildId]);
     const merged2 = Object.assign(merged);
     dependencyMap[tmp3] = {};
+    obj = {};
   },
   USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_AVATAR: function handleSetTryItOutAvatar(avatar) {
     obj = {};
@@ -306,9 +307,9 @@ obj = {
       return false;
     } else {
       obj = {};
-      const merged = Object.assign(dependencyMap[tmp]);
+      const merged = Object.assign(dependencyMap[React3]);
       obj.pendingLegacyUsernameDisabled = undefined;
-      dependencyMap[tmp] = obj;
+      dependencyMap[React3] = obj;
     }
   },
   USER_PROFILE_SETTINGS_RESET_PENDING_PRIMARY_GUILD_CHANGES: function handleResetPendingPrimaryGuildChanges() {
@@ -324,9 +325,9 @@ obj = {
       return false;
     } else {
       obj = {};
-      const merged = Object.assign(dependencyMap[tmp]);
+      const merged = Object.assign(dependencyMap[React3]);
       obj.pendingPrimaryGuildId = undefined;
-      dependencyMap[tmp] = obj;
+      dependencyMap[React3] = obj;
     }
   },
   USER_PROFILE_UPDATE_FAILURE: function handleProfileUpdateFailure(arg0) {

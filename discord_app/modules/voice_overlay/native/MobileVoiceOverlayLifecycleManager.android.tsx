@@ -182,8 +182,8 @@ class MobileVoiceOverlayManager {
         if (null != currentVoiceChannelId) {
           if (currentVoiceChannelId !== obj.trashedVoiceChannelId) {
             const overlayState = obj.overlayState;
-            if (tmp.WAITING_FOR_SERVICE !== overlayState) {
-              if (tmp.NOT_SHOWING === overlayState) {
+            if (constants.WAITING_FOR_SERVICE !== overlayState) {
+              if (constants.NOT_SHOWING === overlayState) {
                 const result = ForegroundServiceManagerDefault.isForegroundServiceRunning((arg0) => {
                   if (arg0) {
                     obj.showOverlay();
@@ -191,8 +191,8 @@ class MobileVoiceOverlayManager {
                     obj.overlayState = constants.NOT_SHOWING;
                   }
                 });
-                obj.overlayState = tmp.WAITING_FOR_SERVICE;
-              } else if (tmp.SHOWING === overlayState) {
+                obj.overlayState = constants.WAITING_FOR_SERVICE;
+              } else if (constants.SHOWING === overlayState) {
                 obj.updateOverlayUI();
               } else {
                 const overlayState2 = obj.overlayState;

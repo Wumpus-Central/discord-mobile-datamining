@@ -11,7 +11,7 @@ import NotificationSettingsUtils from "../../utils/NotificationSettingsUtils.tsx
 import NotificationSettingsModalActionCreatorsDefault from "../../actions/NotificationSettingsModalActionCreators.tsx";
 import TableSwitchRow from "../../design/components/TableRow/native/TableSwitchRow.native.tsx";
 import Form from "../../design/void/Form/native/index.tsx";
-import MutedUntilTextDefault from "../../modules/main_tabs_v2/native/sidebar/details/screens/MutedUntilText.tsx";
+import MutedUntilText from "../../modules/main_tabs_v2/native/sidebar/details/screens/MutedUntilText.tsx";
 import NotificationSettingsChannelDefault from "../../modules/notifications/settings/native/NotificationSettingsChannel.tsx";
 import noop from "../../../_runtime/metro/00019__.js";
 import ChannelStore from "../../stores/ChannelStore.tsx";
@@ -19,6 +19,8 @@ import GuildMemberCountStore from "../../stores/GuildMemberCountStore.tsx";
 import RelationshipStore from "../../stores/RelationshipStore.tsx";
 import UserGuildSettingsStore from "../../stores/UserGuildSettingsStore.tsx";
 import UserStore from "../../stores/UserStore.tsx";
+
+const MutedUntilTextDefault = MutedUntilText;
 
 require = fn;
 function ChannelSettingsNotificationsGuard(onClose) {
@@ -37,10 +39,10 @@ function ChannelSettingsNotificationsGuard(onClose) {
   const stateFromStoresObject = tmpResult.useStateFromStoresObject(items1, () => {
     let parent_id;
     if (stateFromStores != null) {
-      parent_id = tmp.parent_id;
+      parent_id = stateFromStores.parent_id;
     }
     if (null != parent_id) {
-      let NULL = UserGuildSettingsStore.getChannelMessageNotifications(guildId, tmp.parent_id);
+      let NULL = UserGuildSettingsStore.getChannelMessageNotifications(guildId, stateFromStores.parent_id);
     } else {
       NULL = constants2.NULL;
     }
@@ -58,9 +60,9 @@ function ChannelSettingsNotificationsGuard(onClose) {
       newForumThreadsCreated: null,
       defaultSetting: null,
     };
-    let newForumThreadsCreated = null != tmp;
+    let newForumThreadsCreated = null != stateFromStores;
     if (newForumThreadsCreated) {
-      newForumThreadsCreated = UserGuildSettingsStore.getNewForumThreadsCreated(tmp);
+      newForumThreadsCreated = UserGuildSettingsStore.getNewForumThreadsCreated(stateFromStores);
     }
     obj.newForumThreadsCreated = newForumThreadsCreated;
     obj.defaultSetting = tmp8;
@@ -225,14 +227,15 @@ prototype["renderMuteSection"] = function renderMuteSection() {
   } else {
     const obj4 = { muteConfig: props.muteConfig, type: null };
     if (channel.type === constants3.GUILD_CATEGORY) {
-      MuteSettingType = tmp(10146).MuteSettingType;
+      MuteSettingType = MutedUntilText.MuteSettingType;
       let CHANNEL = MuteSettingType.CATEGORY;
     } else {
-      CHANNEL = tmp(10146).MuteSettingType.CHANNEL;
+      CHANNEL = MutedUntilText.MuteSettingType.CHANNEL;
     }
     obj4.type = CHANNEL;
-    tmp5(MutedUntilTextDefault, obj4);
+    value2(MutedUntilTextDefault, obj4);
   }
+  const obj2 = { label: formatResult, onPress: this.handleToggleMuteChannel, arrow: !muted };
 };
 prototype["renderForumSettings"] = function renderForumSettings() {
   const props = this.props;
@@ -291,16 +294,16 @@ prototype["renderNotificationSettings"] = function renderNotificationSettings() 
     if (constants2.ALL_MESSAGES === defaultSetting) {
       const intl11 = tmp5(1114).intl;
       let stringResult1 = intl11.string(tmp5(1114).t["n/bTaY"]);
-    } else if (tmp23.ONLY_MENTIONS === defaultSetting) {
+    } else if (constants2.ONLY_MENTIONS === defaultSetting) {
       const intl10 = tmp5(1114).intl;
       stringResult1 = intl10.format(tmp5(1114).t.L2hmYy, {});
-    } else if (tmp23.NO_MESSAGES === defaultSetting) {
+    } else if (constants2.NO_MESSAGES === defaultSetting) {
       const intl15 = tmp5(1114).intl;
       stringResult1 = intl15.string(tmp5(1114).t.CtVGyQ);
     }
     obj.subLabel = stringResult1;
     obj.value = constants2.NULL;
-    const items = [tmp12(TableRadioRow, obj), ,];
+    const items = [value2(TableRadioRow, obj), ,];
     let tmp25 = muted;
     if (!muted) {
       tmp25 = guildMuted;
@@ -308,25 +311,25 @@ prototype["renderNotificationSettings"] = function renderNotificationSettings() 
     obj = { disabled: tmp25, value: constants2.ONLY_MENTIONS, label: null };
     const intl12 = tmp7(1114).intl;
     obj.label = intl12.string(tmp7(1114).t["BENn/6"]);
-    items[1] = tmp12(tmp7(5688).TableRadioRow, obj);
+    items[1] = value2(tmp7(5688).TableRadioRow, obj);
     if (!muted) {
       muted = guildMuted;
     }
     const obj1 = { disabled: muted, value: constants2.NO_MESSAGES, label: null };
     const intl13 = tmp7(1114).intl;
     obj1.label = intl13.string(tmp7(1114).t.CtVGyQ);
-    items[2] = tmp12(tmp7(5688).TableRadioRow, obj1);
+    items[2] = value2(tmp7(5688).TableRadioRow, obj1);
     obj.children = items;
-    let tmp11Result = tmp11(TableRadioGroup, obj);
+    let tmp11Result = collapsedCategories(TableRadioGroup, obj);
   } else {
     const obj2 = { label: stringResult, subLabel: null, disabled: null, value: null };
     if (constants2.ALL_MESSAGES === defaultSetting) {
       const intl5 = tmp5(1114).intl;
       let stringResult2 = intl5.string(tmp5(1114).t["n/bTaY"]);
-    } else if (tmp13.ONLY_MENTIONS === defaultSetting) {
+    } else if (constants2.ONLY_MENTIONS === defaultSetting) {
       const intl4 = tmp5(1114).intl;
       stringResult2 = intl4.format(tmp5(1114).t.L2hmYy, {});
-    } else if (tmp13.NO_MESSAGES === defaultSetting) {
+    } else if (constants2.NO_MESSAGES === defaultSetting) {
       const intl14 = tmp5(1114).intl;
       stringResult2 = intl14.string(tmp5(1114).t.CtVGyQ);
     }
@@ -337,7 +340,7 @@ prototype["renderNotificationSettings"] = function renderNotificationSettings() 
     }
     obj2.disabled = tmp15;
     obj2.value = constants2.NULL;
-    const items1 = [tmp12(TableRadioRow, obj2), , ,];
+    const items1 = [value2(TableRadioRow, obj2), , ,];
     const obj3 = { label: null, disabled: null, subLabel: null, value: null };
     const intl6 = tmp7(1114).intl;
     obj3.label = intl6.string(tmp7(1114).t["n/bTaY"]);
@@ -356,7 +359,7 @@ prototype["renderNotificationSettings"] = function renderNotificationSettings() 
     }
     obj3.subLabel = stringResult3;
     obj3.value = constants2.ALL_MESSAGES;
-    items1[1] = tmp12(tmp7(5688).TableRadioRow, obj3);
+    items1[1] = value2(tmp7(5688).TableRadioRow, obj3);
     const obj4 = { label: null, disabled: null, value: null };
     const intl8 = tmp7(1114).intl;
     obj4.label = intl8.format(tmp7(1114).t.L2hmYy, {});
@@ -366,7 +369,7 @@ prototype["renderNotificationSettings"] = function renderNotificationSettings() 
     }
     obj4.disabled = tmp19;
     obj4.value = constants2.ONLY_MENTIONS;
-    items1[2] = tmp12(tmp7(5688).TableRadioRow, obj4);
+    items1[2] = value2(tmp7(5688).TableRadioRow, obj4);
     const obj5 = { label: null, disabled: null, value: null };
     const intl9 = tmp7(1114).intl;
     obj5.label = intl9.string(tmp7(1114).t.CtVGyQ);
@@ -376,9 +379,9 @@ prototype["renderNotificationSettings"] = function renderNotificationSettings() 
     }
     obj5.disabled = tmp20;
     obj5.value = constants2.NO_MESSAGES;
-    items1[3] = tmp12(tmp7(5688).TableRadioRow, obj5);
+    items1[3] = value2(tmp7(5688).TableRadioRow, obj5);
     obj.children = items1;
-    tmp11Result = tmp11(TableRadioGroup, obj);
+    tmp11Result = collapsedCategories(TableRadioGroup, obj);
   }
   return tmp11Result;
 };
@@ -429,16 +432,16 @@ prototype["render"] = function render() {
     tmp9Result = null;
     if (channel.isForumLikeChannel()) {
       const obj4 = { title: null, hasIcons: false, children: null };
-      const intl2 = tmp10(1114).intl;
-      obj4.title = intl2.string(tmp10(1114).t.bK11jO);
+      const intl2 = util.intl;
+      obj4.title = intl2.string(util.t.bK11jO);
       obj4.children = self.renderForumSettings();
-      tmp9Result = tmp9(tmp10(5687).TableRowGroup, obj4);
+      tmp9Result = value2(TableRowGroup.TableRowGroup, obj4);
     }
     items[2] = tmp9Result;
     items[3] = tmp5;
     obj3.children = items;
     obj2.children = collapsedCategories(Stack_Stack.Stack, obj3);
-    tmp9Result = tmp9(Form.Form, obj2);
+    tmp9Result = value2(Form.Form, obj2);
   }
   return tmp9Result;
 };
@@ -467,4 +470,5 @@ export default function ChannelSettingsNotificationsSplit(arg0) {
     merged1 = Object.assign(merged1);
     tmp11 = closure_16(NotificationSettingsChannelDefault, obj);
   }
+  const obj2 = require("initialize");
 }

@@ -31,9 +31,9 @@ prototype["ensureLoaded"] = function ensureLoaded() {
         self.loading = true;
         self.loader(param).then((result) => {
           if (param === self.param) {
-            tmp.val = result;
-            tmp.loading = false;
-            tmp.loaded = true;
+            self.val = result;
+            self.loading = false;
+            self.loaded = true;
           }
         });
         const loaderResult = self.loader(param);

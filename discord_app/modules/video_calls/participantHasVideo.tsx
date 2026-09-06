@@ -3,7 +3,7 @@ import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
 import MediaEngineStore from "../../stores/MediaEngineStore.tsx";
 
 const require = fn;
-function canRenderParticipantVideo(participant, MediaEngineStore) {
+function canRenderParticipantVideo(participant) {
   let obj = MediaEngineStore;
   if (MediaEngineStore === undefined) {
     obj = MediaEngineStore;

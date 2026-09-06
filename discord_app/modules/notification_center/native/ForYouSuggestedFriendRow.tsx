@@ -2,6 +2,7 @@
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
 import asyncRequireImpl from "../../../../_runtime/01896_asyncRequireImpl.js";
+import UserUtilsDefault from "../../../utils/UserUtils.tsx";
 import useAnalyticsLocationsDefault from "../../app_analytics/useAnalyticsLocations.tsx";
 import ChannelListLayout from "../../main_tabs_v2/native/shared_components/guild_channels/layouts/ChannelListLayout.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -140,7 +141,6 @@ export default function ForYouSuggestedFriendRow(suggestedFriend) {
         children: friendSuggestionName,
       };
       const items6 = [closure_9(tmp(4556).Text, obj5)];
-      const tmp20 = closure_11;
       const tmpResult3 = tmp(16441);
       let num3 = 0;
       if (tmpResult4.isAndroid()) {
@@ -203,13 +203,13 @@ export default function ForYouSuggestedFriendRow(suggestedFriend) {
       items5[2] = closure_9(tmp(16443).ContactSuggestionActions, obj9);
       obj10.children = items5;
       const obj11 = { layout: messagesTabLayout, fontScale, panelVariant };
-      obj.children = tmpResult3.renderChannelWrapper(closure_10(tmp20, obj10), obj11);
+      obj.children = tmpResult3.renderChannelWrapper(closure_10(closure_11, obj10), obj11);
       const obj12 = { layout: messagesTabLayout, panelVariant };
       return tmpResult2.renderChannelPressableWrapper(closure_9(tmp(5123).PressableHighlight, obj), obj12);
     }
-    let tmp5Result = tmp5(4404);
+    let tmp5Result = UserUtilsDefault;
     formatToPlainStringResult = tmp5Result.getName(suggestedFriend.user);
   }
-  tmp5Result = tmp5(4404);
+  tmp5Result = UserUtilsDefault;
   friendSuggestionName = tmp5Result.getName(suggestedFriend.user);
 }

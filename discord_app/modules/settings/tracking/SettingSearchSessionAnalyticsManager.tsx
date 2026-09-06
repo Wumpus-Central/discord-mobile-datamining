@@ -37,6 +37,7 @@ prototype["terminate"] = function terminate() {
     self.searchSessionStartTime = null;
     self.isQueryEnteredTracked = false;
   }
+  tmp = null != this.searchSessionId && null != self.searchSessionStartTime;
 };
 let result = size.fileFinishedImporting("modules/settings/tracking/SettingSearchSessionAnalyticsManager.tsx");
 

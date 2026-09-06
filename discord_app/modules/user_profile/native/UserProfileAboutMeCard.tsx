@@ -159,17 +159,17 @@ function MemberJoinDates(userId) {
       importantForAccessibility: "no-hide-descendants",
       children,
     };
-    const items6 = [tmp15(tmp4(4556).Text, obj3)];
+    const items6 = [closure_11(tmp4(4556).Text, obj3)];
     obj4 = { themeType, icon: null, accessibilityLabel: null, children: null };
     obj5 = { guild: stateFromStores1, size: tmp4(5584).GuildIconSizes.XXSMALL };
-    obj4.icon = tmp15(GuildIconDefault, obj5);
+    obj4.icon = closure_11(GuildIconDefault, obj5);
     const intl3 = tmp4(1114).intl;
     const obj6 = { guildName: stateFromStores1.name, date: createdAtDate1 };
     obj4.accessibilityLabel = intl3.formatToPlainString(tmp4(1114).t.FdLNDK, obj6);
     obj4.children = createdAtDate1;
-    items6[1] = tmp15(TextWithIcon, obj4);
+    items6[1] = closure_11(TextWithIcon, obj4);
     obj2.children = items6;
-    tmp13Result = tmp13(closure_13, obj2);
+    tmp13Result = closure_12(closure_13, obj2);
     const tmp9Result = GuildIconDefault;
   }
   const obj7 = { children: null };
@@ -194,11 +194,11 @@ function FriendsSinceDate(themeType) {
   if (null != friendsSinceDate) {
     obj = { children: null };
     obj = { themeType, children: null };
-    const intl = tmp3(1114).intl;
-    obj.children = intl.string(tmp3(1114).t.wlTO8v);
+    const intl = util.intl;
+    obj.children = intl.string(util.t.wlTO8v);
     const items = [closure_1_11(Heading, obj)];
     const obj1 = { variant: tmp.textVariant, color: "text-default", children: friendsSinceDate };
-    items[1] = closure_1_11(tmp3(4556).Text, obj1);
+    items[1] = closure_1_11(Text_Text.Text, obj1);
     obj.children = items;
     tmp6 = closure_1_12(View, obj);
   }
@@ -215,26 +215,26 @@ function PolicyLinks(arg0) {
     let tmp5Result = null != termsOfServiceUrl;
     if (tmp5Result) {
       obj = { url: termsOfServiceUrl, label: null, themeType: null };
-      const intl2 = tmp7(1114).intl;
-      obj.label = intl2.string(tmp7(1114).t.s7STcY);
+      const intl2 = util.intl;
+      obj.label = intl2.string(util.t.s7STcY);
       obj.themeType = themeType;
-      tmp5Result = tmp5(PolicyLink, obj);
+      tmp5Result = closure_1_11(PolicyLink, obj);
     }
     const items1 = [tmp5Result];
     tmp5Result = null != privacyPolicyUrl;
     if (tmp5Result) {
       const obj1 = { url: privacyPolicyUrl, label: null, themeType: null };
-      const intl3 = tmp7(1114).intl;
-      obj1.label = intl3.string(tmp7(1114).t.kH3JR5);
+      const intl3 = util.intl;
+      obj1.label = intl3.string(util.t.kH3JR5);
       obj1.themeType = themeType;
-      tmp5Result = tmp5(PolicyLink, obj1);
+      tmp5Result = closure_1_11(PolicyLink, obj1);
     }
     const obj2 = { children: null };
     items1[1] = tmp5Result;
     obj.children = items1;
     items[1] = closure_1_12(View, obj);
     obj2.children = items;
-    let tmp3Result = tmp3(tmp4, obj2);
+    let tmp3Result = closure_1_12(View, obj2);
   } else {
     tmp3Result = null;
   }
@@ -294,13 +294,12 @@ function BotSlashCommands(channel) {
         const intl = tmp3(tmp2[13]).intl;
         obj1.text = intl.string(tmp3(tmp2[13]).t.VEfKyb);
         obj1.onPress = tmp5;
-        tmp10Result = tmp10(tmp3(tmp2[34]).Button, obj1);
+        tmp10Result = closure_11(tmp3(tmp2[34]).Button, obj1);
       }
       const obj2 = { children: null };
       items1[2] = tmp10Result;
       obj2.children = items1;
       tmp8Result = closure_12(View, obj2);
-      tmp10 = closure_11;
     }
   }
   return tmp8Result;
@@ -357,7 +356,6 @@ export default function UserProfileAboutMeCard(arg0) {
   const items = [closure_16().card, { rowGap: tmp2.rowGap }, style];
   obj.style = items;
   const tmp = closure_16();
-  const tmp5 = closure_1_12;
   const items1 = [closure_1_11(Bio, { userId, displayProfile, pendingBio, themeType, lineClamp: bioLineClamp }), , , ,];
   obj = { userId, guildId: null, themeType: null };
   let guildId;
@@ -392,9 +390,9 @@ export default function UserProfileAboutMeCard(arg0) {
       commandIds: application.popularApplicationCommandIds,
       themeType,
     };
-    tmp7Result = tmp7(BotSlashCommands, obj1);
+    tmp7Result = closure_1_11(BotSlashCommands, obj1);
   }
   items1[4] = tmp7Result;
   obj.children = items1;
-  return tmp5(UserProfileCardDefault, obj);
+  return closure_1_12(UserProfileCardDefault, obj);
 }

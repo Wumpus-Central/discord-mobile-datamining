@@ -133,8 +133,8 @@ function AnimatedTabs(state) {
   obj.children = context(state(cleanUp[9]).Tabs, obj1);
   return context(transitionState(cleanUp[4]).View, obj);
 }
-function renderItem(arg0, state, transitionState, cleanUp) {
-  return <AnimatedTabs key={arg0} state={arg1} transitionState={arg2} cleanUp={arg3} />;
+function renderItem(key, state, transitionState, cleanUp) {
+  return <AnimatedTabs key={key} state={state} transitionState={transitionState} cleanUp={cleanUp} />;
 }
 const jsx = fn(21).jsx;
 const __initData = {

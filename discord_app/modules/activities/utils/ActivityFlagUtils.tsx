@@ -9,7 +9,7 @@ import size from "../../../../_runtime/metro/00002__.js";
 ({ ActivityFlags: c3, ActivityPartyPrivacy: closure_4 } = Constants);
 const result = size.fileFinishedImporting("modules/activities/utils/ActivityFlagUtils.tsx");
 
-export const computeActivityFlags = function computeActivityFlags(activity, flag, arg2, canLaunchFrameResult, privacy) {
+export const computeActivityFlags = function computeActivityFlags(activity) {
   if (flag === undefined) {
     flag = false;
   }
@@ -75,10 +75,10 @@ export const computeActivityFlags = function computeActivityFlags(activity, flag
       const setting3 = AllowActivityPartyPrivacyVoiceChannel.getSetting();
       if (setting2) {
         let tmp18 = tmp6 | PARTY_PRIVACY_FRIENDS;
-        let tmp19 = tmp17;
+        let tmp19 = constants;
       } else {
         tmp18 = tmp6 & ~PARTY_PRIVACY_FRIENDS;
-        tmp19 = tmp17;
+        tmp19 = constants;
       }
       const PARTY_PRIVACY_VOICE_CHANNEL = tmp19.PARTY_PRIVACY_VOICE_CHANNEL;
       if (setting3) {

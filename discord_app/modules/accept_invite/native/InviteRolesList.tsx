@@ -22,9 +22,9 @@ export default function InviteRolesList(invite) {
   const memo = noop.useMemo(() => {
     if (null != guild) {
       if (null != roles) {
-        if (0 !== arr.length) {
+        if (0 !== roles.length) {
           const items = [];
-          HermesBuiltin.arraySpread(arr, 0);
+          HermesBuiltin.arraySpread(roles, 0);
           const sorted = items.sort(GuildRoleUtils.sortInviteRoles);
           const mapped = sorted.map((item) => guild(dependencyMap[4]).inviteRoleToDisplayData(id.id, item));
         }

@@ -1,6 +1,8 @@
 // discord_app/modules/auth/native/components/utils/useUsernameRegistrationStep.tsx
 import util from "../../../../../intl/index.native.tsx";
+import Link from "../../../../../../_runtime/01484_Link.js";
 import UniqueUsernamesTypes from "../../../../unique_usernames/UniqueUsernamesTypes.tsx";
+import RegistrationStepsUtils from "../../RegistrationStepsUtils.tsx";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import UniqueUsernamesStore from "../../../../unique_usernames/UniqueUsernamesStore.tsx";
@@ -53,18 +55,18 @@ export const useUsernameRegistrationStep = function useUsernameRegistrationStep(
       context(obj);
     }
     if (arg0) {
-      let tmp3Result = tmp3(15945);
+      let tmp3Result = RegistrationStepsUtils;
       const result = tmp3Result.handleRegistrationSubmit(closure_0, navigation, context);
     } else {
       obj = { step: React5(closure_0), toStep: null, actionType: null };
-      tmp3Result = tmp3(15945);
+      tmp3Result = RegistrationStepsUtils;
       obj.toStep = tmp3Result.getNextRegistrationTransitionStep(closure_0);
       obj.actionType = constants.SUCCESS;
       context(obj);
-      const nextAuthState = tmp3(15945).getNextAuthState(closure_0);
-      const StackActions = tmp3(1484).StackActions;
+      const nextAuthState = RegistrationStepsUtils.getNextAuthState(closure_0);
+      const StackActions = Link.StackActions;
       navigation.dispatch(StackActions.push(nextAuthState));
-      const tmp3Result1 = tmp3(15945);
+      const tmp3Result1 = RegistrationStepsUtils;
     }
   }, items);
   const items2 = [username, ,];
@@ -103,11 +105,11 @@ export const useUsernameRegistrationStep = function useUsernameRegistrationStep(
         if ("" !== tmp) {
           let type;
           if (obj != null) {
-            type = tmp2.type;
+            type = obj.type;
           }
           let message = null;
           if (type === UniqueUsernamesTypes.NameValidationState.ERROR) {
-            message = tmp2.message;
+            message = obj.message;
           }
         }
         return message;

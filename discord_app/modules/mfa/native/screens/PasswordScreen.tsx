@@ -46,12 +46,12 @@ export default function PasswordScreen(finish) {
       c6 = 3;
     } else if (arg0 === 1) {
       c6 = 3;
-      throw arg1;
+      throw value;
     } else if (arg0 !== 2) {
       closure_130_4(true);
       c4 = 0;
     }
-    return arg1;
+    return value;
   };
   let obj = require("MfaScreenUtils");
   const screenStyles = obj.useScreenStyles(require("useWideAuthView")());
@@ -88,8 +88,8 @@ export default function PasswordScreen(finish) {
   obj1.errorMessage = tmp5[0];
   obj1.onChange = tmp6[1];
   obj1.onSubmitEditing = sendPassword;
-  let tmp15 = tmp8;
-  if (!tmp8) {
+  let tmp15 = tmp10;
+  if (!tmp10) {
     tmp15 = tmp10;
   }
   obj1.isDisabled = tmp15;
@@ -112,15 +112,15 @@ export default function PasswordScreen(finish) {
   const tmp12 = require("MfaOptionScreen");
   const intl3 = tmp13(tmp2[8]).intl;
   obj2.text = intl3.string(finish(first[8]).t.geKm7t);
-  let tmp17 = tmp8;
-  if (!tmp8) {
+  let tmp17 = tmp10;
+  if (!tmp10) {
     tmp17 = tmp10;
   }
   if (!tmp17) {
     tmp17 = 0 === first.length;
   }
   obj2.disabled = tmp17;
-  obj2.loading = tmp8;
+  obj2.loading = tmp10;
   obj2.onPress = sendPassword;
   obj.submit = jsx(tmp(first[10]), { text: null, disabled: null, loading: null, onPress: null });
   obj.screenProps = { mfaChallenge: finish.mfaChallenge, finish };

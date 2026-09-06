@@ -21,7 +21,7 @@ let closure_6 = async function _getMetadata(arg0, arg1) {
         return { value: metadata, done: true };
       }
     }
-    activityMetadata = activityMetadata.getActivityMetadata(tmp28);
+    activityMetadata = activityMetadata.getActivityMetadata(closure_1);
     if (null != activityMetadata) {
       return activityMetadata;
     }
@@ -31,9 +31,9 @@ let closure_6 = async function _getMetadata(arg0, arg1) {
       throw error;
     }
     const HTTP = require("HTTPUtils").HTTP;
-    await HTTP.get({ url: Endpoints.USER_ACTIVITY_METADATA(tmp28, tmp27.session_id, tmp27.application_id), oldFormErrors: true, rejectWithError: require("HTTPUtils").rejectWithMigratedError() });
+    await HTTP.get({ url: Endpoints.USER_ACTIVITY_METADATA(closure_1, tmp27.session_id, tmp27.application_id), oldFormErrors: true, rejectWithError: require("HTTPUtils").rejectWithMigratedError() });
     const body = value.body;
-    { url: Endpoints.USER_ACTIVITY_METADATA(tmp28, tmp27.session_id, tmp27.application_id), oldFormErrors: true, rejectWithError: require("HTTPUtils").rejectWithMigratedError() };
+    { url: Endpoints.USER_ACTIVITY_METADATA(closure_1, tmp27.session_id, tmp27.application_id), oldFormErrors: true, rejectWithError: require("HTTPUtils").rejectWithMigratedError() };
     closure_131_1(closure_131_2[3]).dispatch({ type: "ACTIVITY_METADATA_UPDATE", metadata: body, userId: closure_130_0 });
     return body;
   })();

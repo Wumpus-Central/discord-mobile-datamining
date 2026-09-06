@@ -11,24 +11,24 @@ function updateGiftCode(giftCode) {
   const fromServer = GiftCodeRecord.createFromServer(giftCode);
   const code = fromServer.code;
   if (map.has(code)) {
-    value = obj.get(code);
+    value = map.get(code);
     const result = set(code, value.merge(fromServer));
   } else {
     const result1 = set(code, fromServer);
     if (null != fromServer.expiresAt) {
       const timeout = new code(4447).Timeout();
-      closure_7[code] = timeout;
-      value = obj.get(code);
+      dependencyMap[code] = timeout;
+      value = map.get(code);
       if (null != value) {
         if (null != value.expiresAt) {
           const expiresAt = value.expiresAt;
           const valueOfResult = expiresAt.valueOf();
           const diff = valueOfResult - _modDef4153().valueOf();
           if (diff <= 0) {
-            obj.delete(code);
+            map.delete(code);
             delete tmp2[tmp];
             giftCodeStore.emitChange();
-          } else if (null != tmp18[code]) {
+          } else if (null != dependencyMap[code]) {
             const _Math = Math;
             obj2.start(Math.min(closure_5, diff), () => {
               closure_0 = closure_1_0;
@@ -39,10 +39,10 @@ function updateGiftCode(giftCode) {
                   let valueOfResult = expiresAt.valueOf();
                   let diff = valueOfResult - closure_2_1(closure_2_2[3])().valueOf();
                   if (diff <= 0) {
-                    closure_2_8.delete(tmp3);
+                    closure_2_8.delete(closure_1_0);
                     delete tmp[tmp2];
                     closure_2_18.emitChange();
-                  } else if (null != closure_2_7[tmp3]) {
+                  } else if (null != closure_2_7[closure_1_0]) {
                     let _Math = Math;
                     obj2.start(Math.min(closure_2_5, diff), () => {
                       closure_0 = closure_1_0;
@@ -53,10 +53,10 @@ function updateGiftCode(giftCode) {
                           let valueOfResult = expiresAt.valueOf();
                           let diff = valueOfResult - closure_2_1(closure_2_2[3])().valueOf();
                           if (diff <= 0) {
-                            closure_2_8.delete(tmp3);
+                            closure_2_8.delete(closure_1_0);
                             delete tmp[tmp2];
                             closure_2_18.emitChange();
-                          } else if (null != closure_2_7[tmp3]) {
+                          } else if (null != closure_2_7[closure_1_0]) {
                             let _Math = Math;
                             obj2.start(Math.min(closure_2_5, diff), () => {
                               closure_0 = closure_1_0;
@@ -67,10 +67,10 @@ function updateGiftCode(giftCode) {
                                   let valueOfResult = expiresAt.valueOf();
                                   let diff = valueOfResult - closure_2_1(closure_2_2[3])().valueOf();
                                   if (diff <= 0) {
-                                    closure_2_8.delete(tmp3);
+                                    closure_2_8.delete(closure_1_0);
                                     delete tmp[tmp2];
                                     closure_2_18.emitChange();
-                                  } else if (null != closure_2_7[tmp3]) {
+                                  } else if (null != closure_2_7[closure_1_0]) {
                                     let _Math = Math;
                                     obj2.start(Math.min(closure_2_5, diff), () => {
                                       closure_0 = closure_1_0;
@@ -81,10 +81,10 @@ function updateGiftCode(giftCode) {
                                           let valueOfResult = expiresAt.valueOf();
                                           let diff = valueOfResult - closure_2_1(closure_2_2[3])().valueOf();
                                           if (diff <= 0) {
-                                            closure_2_8.delete(tmp3);
+                                            closure_2_8.delete(closure_1_0);
                                             delete tmp[tmp2];
                                             closure_2_18.emitChange();
-                                          } else if (null != closure_2_7[tmp3]) {
+                                          } else if (null != closure_2_7[closure_1_0]) {
                                             let _Math = Math;
                                             obj2.start(Math.min(closure_2_5, diff), () => { ... });
                                           }
@@ -111,7 +111,6 @@ function updateGiftCode(giftCode) {
           const obj4 = _modDef4153();
         }
       }
-      tmp18 = closure_7;
     }
   }
 }
@@ -191,7 +190,7 @@ function handleLoadThreadsSuccess(firstMessages) {
 }
 const Constants = fn(1074);
 ({ AbortCodes: closure_4, MAX_TIMEOUT_MS: hasOwnProperty, NOOP_NULL: metroRequire } = Constants);
-let closure_7 = {};
+const dependencyMap = {};
 const map = new Map();
 let closure_9 = [];
 let closure_10 = [];
@@ -335,16 +334,16 @@ const giftCodeStore = new GiftCodeStore(DispatcherDefault, {
     if (null != value) {
       const code2 = error.code;
       if (constants.UNKNOWN_GIFT_CODE === code2) {
-        const result = obj.set(code, value.set("revoked", true));
+        const result = map.set(code, value.set("revoked", true));
       } else if (tmp.INVALID_GIFT_REDEMPTION_EXHAUSTED === code2) {
-        const result1 = obj.set(code, value.set("uses", value.maxUses));
+        const result1 = map.set(code, value.set("uses", value.maxUses));
       }
     }
   },
   GIFT_CODE_REVOKE_SUCCESS: function handleGiftCodeRevoke(code) {
     code = code.code;
     map.delete(code);
-    if (null != closure_7[code]) {
+    if (null != dependencyMap[code]) {
       obj.stop();
       delete tmp[tmp2];
     }

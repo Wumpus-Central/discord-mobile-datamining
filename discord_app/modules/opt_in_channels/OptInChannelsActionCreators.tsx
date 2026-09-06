@@ -14,7 +14,7 @@ import ChannelStore from "../../stores/ChannelStore.tsx";
 import UserGuildSettingsStore from "../../stores/UserGuildSettingsStore.tsx";
 
 require = fn;
-let closure_10 = async function _persistOptInChannelUpdates2(arg0, value) {
+let closure_10 = async function _persistOptInChannelUpdates2(arg0) {
   if (c5 === 2) {
     c5 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -44,11 +44,11 @@ let closure_10 = async function _persistOptInChannelUpdates2(arg0, value) {
           closure_130_0 = closure_0;
           closure_130_1 = closure_1;
           if (null != closure_0) {
-            if (!fullServerPreview.isFullServerPreview(tmp21)) {
+            if (!fullServerPreview.isFullServerPreview(closure_0)) {
               let obj3 = UserGuildSettingsManagerDefault;
               const obj1 = {};
               const obj2 = { channel_overrides: tmp22 };
-              obj1[tmp21] = obj2;
+              obj1[closure_0] = obj2;
               c4 = 1;
               c5 = 1;
               obj3 = { value: null, done: false };
@@ -143,26 +143,26 @@ export const setOptInChannel = function setOptInChannel(guild_id, id, optInEnabl
             require("preloaded_user_settings").GuildOnboardingProgress.GUILD_NOTICE_CLEARED,
           );
           if (hasFlagResult) {
-            let tmpResult = tmp(1384);
+            let tmpResult = require("FlagUtils");
             hasFlagResult = !tmpResult.hasFlag(
               guildOnboardingProgress.guildOnboardingProgress,
-              tmp(1187).GuildOnboardingProgress.GUILD_NOTICE_SHOWN,
+              require("preloaded_user_settings").GuildOnboardingProgress.GUILD_NOTICE_SHOWN,
             );
           }
           let flag = !hasFlagResult;
           if (!hasFlagResult) {
-            tmpResult = tmp(1384);
+            tmpResult = require("FlagUtils");
             guildOnboardingProgress.guildOnboardingProgress = tmpResult.addFlag(
               guildOnboardingProgress.guildOnboardingProgress,
-              tmp(1187).GuildOnboardingProgress.GUILD_NOTICE_CLEARED,
+              require("preloaded_user_settings").GuildOnboardingProgress.GUILD_NOTICE_CLEARED,
             );
-            guildOnboardingProgress.guildOnboardingProgress = tmp(1384).setFlag(
+            guildOnboardingProgress.guildOnboardingProgress = require("FlagUtils").setFlag(
               guildOnboardingProgress.guildOnboardingProgress,
-              tmp(1187).GuildOnboardingProgress.GUILD_NOTICE_SHOWN,
+              require("preloaded_user_settings").GuildOnboardingProgress.GUILD_NOTICE_SHOWN,
               false,
             );
             flag = true;
-            const tmpResult1 = tmp(1384);
+            const tmpResult1 = require("FlagUtils");
           }
           return flag;
         },
@@ -203,6 +203,7 @@ export const updateOptInChannelsImmediate = function updateOptInChannelsImmediat
       }
       const result = ImpersonateActionCreators.updateImpersonatedChannels(guildId, items1, items2);
       const result1 = ImpersonateActionCreators.updateImpersonatedData(guildId, { optInEnabled: true });
+      const tmp26Result = ImpersonateActionCreators;
     } else {
       let obj = UserGuildSettingsStore;
       const channelIdFlags = UserGuildSettingsStore.getChannelIdFlags(guildId, channelId);
@@ -217,7 +218,7 @@ export const updateOptInChannelsImmediate = function updateOptInChannelsImmediat
       let obj4 = FlagUtils;
       obj.flags = obj4.setFlag(setFlagResult, constants.OPT_IN_ENABLED, optInEnabled);
       if (!obj.isOptInEnabled(guildId)) {
-        let tmp6Result = tmp6(1384);
+        let tmp6Result = FlagUtils;
         const setFlagResult1 = tmp6Result.setFlag(obj.getGuildFlags(guildId), constants2.OPT_IN_CHANNELS_ON, true);
         obj = {};
         obj1 = { channel_overrides: null, flags: null };
@@ -230,9 +231,9 @@ export const updateOptInChannelsImmediate = function updateOptInChannelsImmediat
       }
       const obj3 = { type: "USER_GUILD_SETTINGS_CHANNEL_UPDATE", guildId, channelId, settings: obj };
       DispatcherDefault.dispatch(obj3);
-      tmp6Result = tmp6(7114);
+      tmp6Result = NotificationSettingsUtils;
       obj4 = { guildId, channelId, change: obj, previous: currentChannelSettings, label: null, location: null };
-      const NotificationLabel = tmp6(7114).NotificationLabel;
+      const NotificationLabel = NotificationSettingsUtils.NotificationLabel;
       obj4.label = NotificationLabel.optedIn(optInEnabled);
       obj4.location = location;
       const result3 = tmp6Result.trackChannelNotificationSettingsUpdate(obj4);
@@ -244,30 +245,30 @@ export const updateOptInChannelsImmediate = function updateOptInChannelsImmediat
             require("preloaded_user_settings").GuildOnboardingProgress.GUILD_NOTICE_CLEARED,
           );
           if (hasFlagResult) {
-            let tmpResult = tmp(1384);
+            let tmpResult = require("FlagUtils");
             hasFlagResult = !tmpResult.hasFlag(
               guildOnboardingProgress.guildOnboardingProgress,
-              tmp(1187).GuildOnboardingProgress.GUILD_NOTICE_SHOWN,
+              require("preloaded_user_settings").GuildOnboardingProgress.GUILD_NOTICE_SHOWN,
             );
           }
           let flag = !hasFlagResult;
           if (!hasFlagResult) {
-            tmpResult = tmp(1384);
+            tmpResult = require("FlagUtils");
             guildOnboardingProgress.guildOnboardingProgress = tmpResult.addFlag(
               guildOnboardingProgress.guildOnboardingProgress,
-              tmp(1187).GuildOnboardingProgress.GUILD_NOTICE_CLEARED,
+              require("preloaded_user_settings").GuildOnboardingProgress.GUILD_NOTICE_CLEARED,
             );
-            guildOnboardingProgress.guildOnboardingProgress = tmp(1384).setFlag(
+            guildOnboardingProgress.guildOnboardingProgress = require("FlagUtils").setFlag(
               guildOnboardingProgress.guildOnboardingProgress,
-              tmp(1187).GuildOnboardingProgress.GUILD_NOTICE_SHOWN,
+              require("preloaded_user_settings").GuildOnboardingProgress.GUILD_NOTICE_SHOWN,
               false,
             );
             flag = true;
-            const tmpResult1 = tmp(1384);
+            const tmpResult1 = require("FlagUtils");
           }
           return flag;
         },
-        tmp6(1940).UserSettingsDelay.INFREQUENT_USER_ACTION,
+        UserSettingsProtoActionCreators.UserSettingsDelay.INFREQUENT_USER_ACTION,
       );
       const tmp6Result1 = UserSettingsProtoActionCreators;
       const obj5 = {};
@@ -302,7 +303,7 @@ export const updateOptInChannelsBatched = apply.debounce(
     })(arg0, arg1),
   1000,
 );
-export const bulkOptInChannels = function bulkOptInChannels(id, arr, arg2, location) {
+export const bulkOptInChannels = function bulkOptInChannels(id, arr, arg2) {
   _require = id;
   let flag = arg2;
   if (arg2 === undefined) {
@@ -313,9 +314,11 @@ export const bulkOptInChannels = function bulkOptInChannels(id, arr, arg2, locat
     if (ImpersonateStore.isFullServerPreview(id)) {
       const result = require("ImpersonateActionCreators").updateImpersonatedChannels(id, arr, []);
       if (flag) {
-        const result1 = require("ImpersonateActionCreators").updateImpersonatedData(id, { optInEnabled: true });
-        const tmp22Result = require("ImpersonateActionCreators");
+        const result1 = tmp22(5552).updateImpersonatedData(id, { optInEnabled: true });
+        const tmp22Result = tmp22(5552);
       }
+      const obj12 = require("ImpersonateActionCreators");
+      tmp22 = _require;
     } else {
       channel_overrides = {};
       const item = arr.forEach((item) => {
@@ -415,7 +418,7 @@ export const setGuildOptIn = function setGuildOptIn(id, optInEnabled, location) 
     obj4.track(AnalyticEvents.CHANNEL_LIST_UPDATED, obj1);
   }
 };
-export const setIsFavorite = function setIsFavorite(id, id, arg2, location) {
+export const setIsFavorite = function setIsFavorite(id, id, setting, location) {
   if (null != id) {
     if (!ImpersonateStore.isFullServerPreview(id)) {
       const channelIdFlags = UserGuildSettingsStore.getChannelIdFlags(id, id);
@@ -423,24 +426,24 @@ export const setIsFavorite = function setIsFavorite(id, id, arg2, location) {
       const hasFlagResult = obj.hasFlag(channelIdFlags, constants.OPT_IN_ENABLED);
       let tmp9 = !hasFlagResult;
       if (!hasFlagResult) {
-        tmp9 = arg2;
+        tmp9 = setting;
       }
       let setFlagResult = channelIdFlags;
       if (tmp9) {
-        let tmp5Result = tmp5(1384);
-        setFlagResult = tmp5Result.setFlag(channelIdFlags, tmp7.OPT_IN_ENABLED, true);
+        let tmp5Result = FlagUtils;
+        setFlagResult = tmp5Result.setFlag(channelIdFlags, constants.OPT_IN_ENABLED, true);
       }
       const obj3 = NotificationSettingsModalActionCreatorsDefault;
       obj = { flags: null };
-      tmp5Result = tmp5(1384);
-      obj.flags = tmp5Result.setFlag(setFlagResult, constants.FAVORITED, arg2);
-      const NotificationLabel = tmp5(7114).NotificationLabel;
-      const result = obj3.updateChannelOverrideSettings(id, id, obj, NotificationLabel.favorited(arg2));
+      tmp5Result = FlagUtils;
+      obj.flags = tmp5Result.setFlag(setFlagResult, constants.FAVORITED, setting);
+      const NotificationLabel = NotificationSettingsUtils.NotificationLabel;
+      const result = obj3.updateChannelOverrideSettings(id, id, obj, NotificationLabel.favorited(setting));
       obj = {};
       const obj6 = AnalyticsUtilsDefault;
       const merged = Object.assign(AppAnalyticsUtils.collectGuildAnalyticsMetadata(id));
       let str = "unfavorited";
-      if (arg2) {
+      if (setting) {
         str = "favorited";
       }
       obj.action_type = str;
@@ -450,11 +453,11 @@ export const setIsFavorite = function setIsFavorite(id, id, arg2, location) {
     }
   }
 };
-export const setMessagesFavorite = function setMessagesFavorite(id, arg1) {
+export const setMessagesFavorite = function setMessagesFavorite(id, setting) {
   const channelIdFlags = UserGuildSettingsStore.getChannelIdFlags(null, id);
-  const obj = { flags: FlagUtils.setFlag(channelIdFlags, constants.FAVORITED, arg1) };
+  const obj = { flags: FlagUtils.setFlag(channelIdFlags, constants.FAVORITED, setting) };
   const NotificationLabel = NotificationSettingsUtils.NotificationLabel;
-  const result = obj.updateChannelOverrideSettings(null, id, obj, NotificationLabel.favorited(arg1));
+  const result = obj.updateChannelOverrideSettings(null, id, obj, NotificationLabel.favorited(setting));
 };
 export const enableGuildNotice = function enableGuildNotice(guildId) {
   const result = UserSettingsProtoActionCreators.updateUserGuildSettings(
@@ -466,12 +469,12 @@ export const enableGuildNotice = function enableGuildNotice(guildId) {
       );
       let flag = !hasFlagResult;
       if (!hasFlagResult) {
-        guildOnboardingProgress.guildOnboardingProgress = tmp(1384).addFlag(
+        guildOnboardingProgress.guildOnboardingProgress = require("FlagUtils").addFlag(
           guildOnboardingProgress.guildOnboardingProgress,
-          tmp(1187).GuildOnboardingProgress.GUILD_NOTICE_SHOWN,
+          require("preloaded_user_settings").GuildOnboardingProgress.GUILD_NOTICE_SHOWN,
         );
         flag = true;
-        const tmpResult = tmp(1384);
+        const tmpResult = require("FlagUtils");
       }
       return flag;
     },
@@ -487,26 +490,26 @@ export const dismissGuildNotice = function dismissGuildNotice(guildId) {
         require("preloaded_user_settings").GuildOnboardingProgress.GUILD_NOTICE_CLEARED,
       );
       if (hasFlagResult) {
-        let tmpResult = tmp(1384);
+        let tmpResult = require("FlagUtils");
         hasFlagResult = !tmpResult.hasFlag(
           guildOnboardingProgress.guildOnboardingProgress,
-          tmp(1187).GuildOnboardingProgress.GUILD_NOTICE_SHOWN,
+          require("preloaded_user_settings").GuildOnboardingProgress.GUILD_NOTICE_SHOWN,
         );
       }
       let flag = !hasFlagResult;
       if (!hasFlagResult) {
-        tmpResult = tmp(1384);
+        tmpResult = require("FlagUtils");
         guildOnboardingProgress.guildOnboardingProgress = tmpResult.addFlag(
           guildOnboardingProgress.guildOnboardingProgress,
-          tmp(1187).GuildOnboardingProgress.GUILD_NOTICE_CLEARED,
+          require("preloaded_user_settings").GuildOnboardingProgress.GUILD_NOTICE_CLEARED,
         );
-        guildOnboardingProgress.guildOnboardingProgress = tmp(1384).setFlag(
+        guildOnboardingProgress.guildOnboardingProgress = require("FlagUtils").setFlag(
           guildOnboardingProgress.guildOnboardingProgress,
-          tmp(1187).GuildOnboardingProgress.GUILD_NOTICE_SHOWN,
+          require("preloaded_user_settings").GuildOnboardingProgress.GUILD_NOTICE_SHOWN,
           false,
         );
         flag = true;
-        const tmpResult1 = tmp(1384);
+        const tmpResult1 = require("FlagUtils");
       }
       return flag;
     },
@@ -562,6 +565,7 @@ export const clearGuildNotice = function clearGuildNotice(guildId) {
     },
     require("UserSettingsProtoActionCreators").UserSettingsDelay.INFREQUENT_USER_ACTION,
   );
+  const obj7 = require("UserSettingsProtoActionCreators");
 };
 export const dimissFavoriteSuggestion = function dimissFavoriteSuggestion(guildId, channelId) {
   const obj = { type: "DISMISS_FAVORITE_SUGGESTION", guildId, channelId };

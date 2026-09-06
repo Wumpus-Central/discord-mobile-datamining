@@ -38,13 +38,13 @@ export default function GuildsBarGuildJoinRequestBadge(joinRequestState) {
   const tmp = closure_5();
   if (MemberVerificationTypes.GuildJoinRequestApplicationStatuses.REJECTED === joinRequestState) {
     let tmp4 = _modDef16299;
-  } else if (tmp2(4384).GuildJoinRequestApplicationStatuses.SUBMITTED === joinRequestState) {
+  } else if (MemberVerificationTypes.GuildJoinRequestApplicationStatuses.SUBMITTED === joinRequestState) {
     tmp4 = _modDef16300;
-  } else if (tmp2(4384).GuildJoinRequestApplicationStatuses.STARTED === joinRequestState) {
+  } else if (MemberVerificationTypes.GuildJoinRequestApplicationStatuses.STARTED === joinRequestState) {
     tmp4 = _modDef16301;
   } else {
     tmp4 = null;
-    if (tmp2(4384).GuildJoinRequestApplicationStatuses.APPROVED === joinRequestState) {
+    if (MemberVerificationTypes.GuildJoinRequestApplicationStatuses.APPROVED === joinRequestState) {
       tmp4 = _modDef12289;
     }
   }

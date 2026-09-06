@@ -1,15 +1,23 @@
 // discord_app/modules/icymi/native/ItemDetailsActionSheet.tsx
 import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import native from "../../../design/void/native.tsx";
 import useChannelNameDefault from "../../channel/useChannelName.tsx";
+import GuildIcon from "../../guild/native/GuildIcon.tsx";
+import TableRow from "../../../design/components/TableRow/native/TableRow.native.tsx";
 import useDesignToggleDefault from "../../devtools/design_toggles/useDesignToggle.tsx";
+import TableRowGroup from "../../../design/components/TableRow/native/TableRowGroup.native.tsx";
 import ActionSheet from "../../../design/components/Sheet/native/ActionSheet.native.tsx";
+import ICYMIUtils from "../ICYMIUtils.tsx";
+import ActionSheetIconHeader from "../../../design/components/Sheet/native/ActionSheetIconHeader.native.tsx";
+import ICYMIContentSettingControl from "custom_scores/ICYMIContentSettingControl.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import ChannelStore from "../../../stores/ChannelStore.tsx";
 import GuildStore from "../../../stores/GuildStore.tsx";
 import ICYMIStore from "../ICYMIStore.tsx";
 
-const GuildIconDefault = tmp5(5584);
+const GuildIconDefault = GuildIcon;
+
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
@@ -41,12 +49,12 @@ export default function ItemDetailsActionSheet(arg0) {
   });
   const tmp6 = useChannelNameDefault(stateFromStores, true);
   if (null != stateFromStores1) {
-    obj = { guild: stateFromStores1, size: tmp(5584).GuildIconSizes.LARGE };
+    obj = { guild: stateFromStores1, size: GuildIcon.GuildIconSizes.LARGE };
     let tmp9 = closure_7(GuildIconDefault, obj);
     const tmp5Result = GuildIconDefault;
   } else if (null != stateFromStores) {
-    obj = { size: tmp(1178).AvatarSizes.LARGE, channel: stateFromStores };
-    tmp9 = closure_7(tmp(1178).Avatar, obj);
+    obj = { size: native.AvatarSizes.LARGE, channel: stateFromStores };
+    tmp9 = closure_7(native.Avatar, obj);
   }
   let result = null != stateFromStores;
   const tmp8 = useDesignToggleDefault("show_icymi_debug_scores");
@@ -54,8 +62,8 @@ export default function ItemDetailsActionSheet(arg0) {
     result = null != stateFromStores1;
   }
   if (result) {
-    result = tmp(8350).isChannelCustomScoreEligible(stateFromStores);
-    const tmpResult = tmp(8350);
+    result = ICYMIUtils.isChannelCustomScoreEligible(stateFromStores);
+    const tmpResult = ICYMIUtils;
   }
   obj1 = { icon: tmp9, title: tmp6, subtitle: null };
   let str;
@@ -68,28 +76,28 @@ export default function ItemDetailsActionSheet(arg0) {
   obj2 = {
     showGradient: true,
     startExpanded: true,
-    header: tmp16(tmp(10998).ActionSheetIconHeader, obj1),
+    header: closure_7(ActionSheetIconHeader.ActionSheetIconHeader, obj1),
     children: null,
   };
   obj1.subtitle = str;
   let tmp16Result = result;
   if (result) {
     const obj3 = { channel: stateFromStores, guild: stateFromStores1 };
-    tmp16Result = tmp16(tmp(16459).ChannelScoreSettings, obj3);
+    tmp16Result = closure_7(ICYMIContentSettingControl.ChannelScoreSettings, obj3);
   }
   const items3 = [tmp16Result, ,];
   let tmp15Result = null != stateFromStores2 && null != stateFromStores1;
   if (tmp15Result) {
     if (result) {
       const obj4 = { style: tmp13.divider };
-      result = tmp16(View, obj4);
+      result = closure_7(View, obj4);
     }
     const obj5 = { children: null };
     const items4 = [result];
     const obj6 = { guild: stateFromStores1 };
-    items4[1] = tmp16(tmp(16459).GuildScoreSettings, obj6);
+    items4[1] = closure_7(ICYMIContentSettingControl.GuildScoreSettings, obj6);
     obj5.children = items4;
-    tmp15Result = tmp15(closure_8, obj5);
+    tmp15Result = closure_9(closure_8, obj5);
   }
   items3[1] = tmp15Result;
   tmp16Result = null;
@@ -100,8 +108,8 @@ export default function ItemDetailsActionSheet(arg0) {
       const obj8 = { label: `Total Score: ${tmp7.score}`, subLabel: null };
       const _JSON = JSON;
       obj8.subLabel = JSON.stringify(stateFromStores2.score_components);
-      obj7.children = tmp16(tmp(5605).TableRow, obj8);
-      tmp16Result = tmp16(tmp(5687).TableRowGroup, obj7);
+      obj7.children = closure_7(TableRow.TableRow, obj8);
+      tmp16Result = closure_7(TableRowGroup.TableRowGroup, obj7);
     }
   }
   items3[2] = tmp16Result;

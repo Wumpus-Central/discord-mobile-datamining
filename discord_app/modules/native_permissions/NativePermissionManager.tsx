@@ -4,6 +4,7 @@ import Constants from "../../Constants.tsx";
 import PlatformUtils from "../../utils/PlatformUtils.tsx";
 import NativePermissionConstants from "NativePermissionConstants.tsx";
 import NativePermissionUtils from "NativePermissionUtils.tsx";
+import ProcessArgs2 from "../../utils/ProcessArgs.tsx";
 import LifecycleManager from "../../lib/LifecycleManager.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
@@ -14,11 +15,11 @@ const prototype = NativePermissionManager.prototype;
 prototype["isEnabled"] = function isEnabled() {
   let isDesktopResult = PlatformUtils.isDesktop();
   if (isDesktopResult) {
-    isDesktopResult = tmp(1115).isMac();
-    const tmpResult = tmp(1115);
+    isDesktopResult = PlatformUtils.isMac();
+    const tmpResult = PlatformUtils;
   }
   if (isDesktopResult) {
-    const ProcessArgs = tmp(5141).ProcessArgs;
+    const ProcessArgs = ProcessArgs2.ProcessArgs;
     isDesktopResult = !ProcessArgs.isDiscordTestSet();
   }
   return isDesktopResult;

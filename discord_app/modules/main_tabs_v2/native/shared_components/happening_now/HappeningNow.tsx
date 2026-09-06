@@ -192,7 +192,7 @@ const forwardRefResult = noop.forwardRef((arg0, ref) => {
   let obj = { gesture, children: null };
   obj = { ref };
   const merged = Object.assign(arg0);
-  obj.children = <hasOwnProperty ref={arg1} />;
+  obj.children = <hasOwnProperty ref={ref} />;
   return jsx(LegacyBaseButton.GestureDetector, { ref });
 });
 forwardRefResult.displayName = "HappeningNowScrollView";
@@ -362,9 +362,28 @@ export default noop.memo((listRef) => {
     obj2.onViewableItemsChanged = memo1;
     obj2.keyExtractor = keyExtractor;
     obj2.getItemType = getItemType;
-    obj1.children = tmp29(tmp2(tmp3[23]).FlashList, obj2);
-    obj.children = tmp29(tmp2(tmp3[16]).AnalyticsLocationProvider, obj1);
-    tmp29(context.Provider, obj);
+    obj1.children = jsx(tmp2(tmp3[23]).FlashList, {
+      ref: listRef,
+      horizontal: true,
+      renderScrollComponent,
+      decelerationRate: "fast",
+      onScroll: tmp6Result[0],
+      snapToInterval: tmp20,
+      snapToOffsets: happeningNowScrollSnapping,
+      showsHorizontalScrollIndicator: false,
+      accessibilityLabel: null,
+      contentContainerStyle: null,
+      data: null,
+      renderItem: null,
+      onViewableItemsChanged: null,
+      keyExtractor: null,
+      getItemType: null,
+    });
+    obj.children = jsx(tmp2(tmp3[16]).AnalyticsLocationProvider, {
+      value: tmp9(isFocused(children[17]).ACTIVITIES_HAPPENING_NOW).analyticsLocations,
+      children: null,
+    });
+    <context.Provider value={sharedValue}>{null}</context.Provider>;
   }
   const obj3 = { style: tmp.loading, children: null };
   children = renderCard(children.length > 0 ? children[0] : { kind: "placeholder", index: 0 }, {
@@ -375,5 +394,6 @@ export default noop.memo((listRef) => {
   });
   obj3.children = children;
   <num style={tmp.loading}>{null}</num>;
+  tmp9 = isFocused(children[16]);
 });
 export const ViewableHappeningNowCardKeysContext = context;

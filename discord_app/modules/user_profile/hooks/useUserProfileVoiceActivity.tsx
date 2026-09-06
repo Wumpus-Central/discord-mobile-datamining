@@ -21,7 +21,7 @@ export default function useUserProfileVoiceActivity(guildId) {
   obj.voiceActivity = userId(504).useStateFromStores(items, () => {
     if (null != userId) {
       if (null != id) {
-        const findActivityResult = PresenceStore.findActivity(tmp, (session_id) => {
+        return PresenceStore.findActivity(tmp, (session_id) => {
           voiceStateForSession = voiceStateForSession.getVoiceStateForSession(userId, session_id.session_id);
           let tmp3 = id(dependencyMap[2])(session_id);
           if (tmp3) {
@@ -33,7 +33,6 @@ export default function useUserProfileVoiceActivity(guildId) {
           }
           return tmp3;
         });
-        return findActivityResult;
       }
     }
   });

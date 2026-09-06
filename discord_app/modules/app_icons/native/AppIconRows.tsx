@@ -1,5 +1,6 @@
 // discord_app/modules/app_icons/native/AppIconRows.tsx
 import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
+import util from "../../../intl/index.native.tsx";
 import PremiumTypeUtils from "../../../utils/PremiumTypeUtils.tsx";
 import AppIconTypes from "../AppIconTypes.tsx";
 import AppIconUtils from "AppIconUtils.tsx";
@@ -73,8 +74,8 @@ export default function AppIconRows(onSelect) {
   let tmp10 = null;
   if (tmp7) {
     obj = { hasNitro: isPremiumResult, icons: limitedTimeAppIcons, currentAppIcon, title: null, onSelect: null };
-    const intl = tmp2(1114).intl;
-    obj.title = intl.string(tmp2(1114).t.anqaFd);
+    const intl = util.intl;
+    obj.title = intl.string(util.t.anqaFd);
     obj.onSelect = onSelect;
     tmp10 = React6(BackwardsCompatibleAppIconRows, obj);
   }
@@ -87,8 +88,8 @@ export default function AppIconRows(onSelect) {
   obj1 = { hasNitro: isPremiumResult, icons: officialAppIcons, currentAppIcon, title: null, onSelect: null };
   let stringResult;
   if (tmp7) {
-    const intl2 = tmp2(1114).intl;
-    stringResult = intl2.string(tmp2(1114).t.Ipxkog);
+    const intl2 = util.intl;
+    stringResult = intl2.string(util.t.Ipxkog);
   }
   obj2 = { children: null };
   obj1.title = stringResult;

@@ -9,7 +9,7 @@ prototype["fromBlob"] = function fromBlob(arg0) {
   closure_0 = arg0;
   return (async () => {
     await closure_0.arrayBuffer();
-    return fromArrayBuffer(arg1);
+    return fromArrayBuffer(value);
   })();
 };
 prototype["fromArrayBuffer"] = function fromArrayBuffer(value) {

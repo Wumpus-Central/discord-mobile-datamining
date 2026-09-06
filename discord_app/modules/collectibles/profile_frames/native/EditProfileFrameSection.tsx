@@ -49,10 +49,10 @@ const memoResult = noop.memo((arg0) => {
   obj.children = substr.map((profileFrame, index) => {
     if (profileFrame === useProfileFrameSections.NONE_ITEM) {
       let obj = { size: width, onPress, isSelected: null == closure_1_0, asDefault: null != dependencyMap };
-      return React5(tmp(13171).EditCollectiblesListItemNone, obj, "none");
-    } else if (profileFrame === tmp(14632).SHOP_ITEM) {
+      return React5(CollectiblesEditUserProfileListItems.EditCollectiblesListItemNone, obj, "none");
+    } else if (profileFrame === useProfileFrameSections.SHOP_ITEM) {
       obj = { size: width, analyticsSource: AnalyticsLocationDefault.EDIT_PROFILE_FRAME_SHEET };
-      return React5(tmp(13171).EditCollectiblesListItemShop, obj, "shop");
+      return React5(CollectiblesEditUserProfileListItems.EditCollectiblesListItemShop, obj, "shop");
     } else if (isProfileFrameRecord(profileFrame)) {
       const obj1 = {
         profileFrame,

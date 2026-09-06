@@ -185,7 +185,7 @@ function PricingSubheadingCopy() {
                 discountPercent: tmp2(tmp3[23]).formatPercent(stateFromStores1, closure_17 / 100),
               };
               obj5.children = intl5.format(tmp2(tmp3[22]).t["ZikTt+"], obj6);
-              const items5 = [tmp31(tmp2(tmp3[18]).Text, obj5), tmp31Result];
+              const items5 = [closure_18(tmp2(tmp3[18]).Text, obj5), tmp31Result];
               obj4.children = items5;
               let tmp34 = closure_20(closure_19, obj4);
               const tmp2Result7 = tmp2(tmp3[23]);
@@ -202,7 +202,7 @@ function PricingSubheadingCopy() {
             const intl4 = tmp2(tmp3[22]).intl;
             const obj9 = { discountPercent: tmp2(tmp3[23]).formatPercent(stateFromStores1, closure_17 / 100) };
             obj8.children = intl4.format(tmp2(tmp3[22]).t.XVMAKU, obj9);
-            const items6 = [tmp31(tmp2(tmp3[18]).Text, obj8), tmp31Result];
+            const items6 = [closure_18(tmp2(tmp3[18]).Text, obj8), tmp31Result];
             obj7.children = items6;
             tmp34 = closure_20(closure_19, obj7);
             const tmp2Result8 = tmp2(tmp3[23]);

@@ -39,7 +39,6 @@ export default noop.memo((active) => {
   let obj = useToken;
   const token = obj.useToken(nativeDefault.modules.mobile.CHAT_INPUT_ACTION_BUTTON_SIZE);
   const token1 = useToken.useToken(nativeDefault.modules.mobile.CHAT_INPUT_ICON_SIZE);
-  const tmp3 = importDefault;
   const token2 = useToken.useToken(nativeDefault.modules.mobile.CHAT_INPUT_BUTTON_MIN_TOUCH_TARGET_SIZE);
   const tmp7 = closure_5(token);
   const bound = Math.max(0, (token2 - token) / 2);
@@ -64,19 +63,19 @@ export default noop.memo((active) => {
     tmp12 = bound;
   }
   obj.hitSlop = tmp12;
-  const intl = tmp(1114).intl;
+  const intl = util.intl;
   obj.accessibilityLabel = intl.string(util.t.iZ7Mz9);
   obj.accessibilityState = { expanded: flag };
   obj.onPress = callback;
-  obj = { size: token1, style: tmp7.expressionButtonIconTint, source: tmp3(showKeyboardIcon ? 11247 : 8758) };
+  obj = { size: token1, style: tmp7.expressionButtonIconTint, source: importDefault(showKeyboardIcon ? 11247 : 8758) };
   obj.children = jsx(native.Icon, {
     size: token1,
     style: tmp7.expressionButtonIconTint,
-    source: tmp3(showKeyboardIcon ? 11247 : 8758),
+    source: importDefault(showKeyboardIcon ? 11247 : 8758),
   });
   return jsx(Pressables.PressableOpacity, {
     size: token1,
     style: tmp7.expressionButtonIconTint,
-    source: tmp3(showKeyboardIcon ? 11247 : 8758),
+    source: importDefault(showKeyboardIcon ? 11247 : 8758),
   });
 });

@@ -2,6 +2,7 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import native from "../../../../../discord_common/js/packages/design/native.tsx";
 import ReanimatedRexport from "../../../reanimated/ReanimatedRexport.tsx";
+import timing from "../../../../design/animation/reanimated/timing/timing.tsx";
 import spring from "../../../../design/animation/reanimated/spring/spring.tsx";
 import EmbeddedActivityViewDefault from "../../native/EmbeddedActivityView.tsx";
 import ActivityPanelStateContextDefault from "ActivityPanelStateContext.tsx";
@@ -69,7 +70,7 @@ class BaseActivityPanelFocusedView {
       if (shown.get()) {
         let height = wrapperOffset.get().y;
       } else {
-        height = tmp3.height;
+        height = styles.height;
       }
       function transitionComplete() {
         let flag = arg0;
@@ -97,12 +98,12 @@ class BaseActivityPanelFocusedView {
       if (stateFromStores) {
         num4 = 0;
         if (obj.get()) {
-          num4 = 1 - wrapperOffset.get().y / tmp3.height;
+          num4 = 1 - wrapperOffset.get().y / styles.height;
         }
       }
       let num6 = 1;
       if (stateFromStores) {
-        let tmp9Result = tmp9(4561);
+        let tmp9Result = timing;
         let str2 = "animate-always";
         if (obj.get()) {
           str2 = "animate-always";
@@ -110,7 +111,7 @@ class BaseActivityPanelFocusedView {
             str2 = "animate-never";
           }
         }
-        num6 = tmp9Result.withTiming(num4, tmp13, str2, transitionComplete);
+        num6 = tmp9Result.withTiming(num4, closure_18, str2, transitionComplete);
       }
       const size = {
         opacity: num6,
@@ -126,7 +127,7 @@ class BaseActivityPanelFocusedView {
         const items = [obj];
         size.transform = items;
         let num7 = 0;
-        if (!tmp.isWindowLandscape) {
+        if (!wrapperDimensions.isWindowLandscape) {
           num7 = closure_6.top;
         }
         size.top = num7;
@@ -136,7 +137,7 @@ class BaseActivityPanelFocusedView {
         size.borderTopEndRadius = num;
         return size;
       } else {
-        tmp9Result = tmp9(4974);
+        tmp9Result = spring;
         if (!wrapperOffset.get().gestureActive) {
           let tmp21 = React7;
           tmp9Result.withSpring(height, tmp21, "animate-always", transitionComplete);

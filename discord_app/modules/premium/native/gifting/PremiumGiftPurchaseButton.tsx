@@ -50,7 +50,7 @@ export default function PremiumGiftPurchaseButton(defaultSelection) {
   HelpdeskArticles = undefined;
   closure_9 = undefined;
   closure_10 = undefined;
-  let tmp3 = closure_11(useSafeAreaInsetsKeyboardAwareDefault().insets.bottom);
+  const tmp3 = closure_11(useSafeAreaInsetsKeyboardAwareDefault().insets.bottom);
   let obj = defaultSelection(1483);
   importDefault = obj.useNavigation();
   let obj1 = defaultSelection(10699);
@@ -170,7 +170,7 @@ export default function PremiumGiftPurchaseButton(defaultSelection) {
           if (closure_10) {
             if (closure_8) {
               if (closure_8) {
-                _undefined2(tmp(10663).PaymentFlowStep.REWARD_SKU_SELECT);
+                _undefined2(PremiumAnalyticsUtils.PaymentFlowStep.REWARD_SKU_SELECT);
                 obj = {
                   defaultHighlightedReward: defaultSelection,
                   allRewards: null,
@@ -191,7 +191,7 @@ export default function PremiumGiftPurchaseButton(defaultSelection) {
                   setSelectedGiftingPromotionReward(arg0);
                   navigation.navigate(defaultSelection(10662).PremiumGiftScreens.CUSTOMIZATION);
                 };
-                navigation.navigate(tmp(10662).PremiumGiftScreens.REWARD_SELECT, obj);
+                navigation.navigate(PremiumGiftModal.PremiumGiftScreens.REWARD_SELECT, obj);
               }
             }
           }

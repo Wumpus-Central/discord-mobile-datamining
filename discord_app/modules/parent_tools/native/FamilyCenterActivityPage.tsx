@@ -2,7 +2,11 @@
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import common_SafeAreaView from "../../../components_native/common/SafeAreaView.tsx";
 import useUserLinks from "../hooks/useUserLinks.tsx";
+import FamilyCenterDataConfirmationDefault from "FamilyCenterDataConfirmation.tsx";
 import FamilyCenterParentalConsentNoticeDefault from "FamilyCenterParentalConsentNotice.tsx";
+import FamilyCenterActivityBannerDefault from "FamilyCenterActivityBanner.tsx";
+import FamilyCenterFeatureRowDefault from "FamilyCenterFeatureRow.tsx";
+import FamilyCenterActivityCardDefault from "FamilyCenterActivityCard.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -27,13 +31,16 @@ export default function FamilyCenterActivityPage() {
   const items = [hasOwnProperty(FamilyCenterParentalConsentNoticeDefault, {})];
   if (0 === activeLinkUserIds.length) {
     const obj1 = { children: null };
-    const items1 = [tmp3(tmp7(14875), {}), tmp3(tmp7(14885), {})];
-    const obj2 = { style: tmp.dataConfirmation, children: tmp3(tmp7(11918), {}) };
-    items1[2] = tmp3(tmp6, obj2);
+    const items1 = [
+      hasOwnProperty(FamilyCenterActivityBannerDefault, {}),
+      hasOwnProperty(FamilyCenterFeatureRowDefault, {}),
+    ];
+    const obj2 = { style: tmp.dataConfirmation, children: hasOwnProperty(FamilyCenterDataConfirmationDefault, {}) };
+    items1[2] = hasOwnProperty(React3, obj2);
     obj1.children = items1;
-    let tmp3Result = tmp5(timestampProducer, obj1);
+    let tmp3Result = React5(timestampProducer, obj1);
   } else {
-    tmp3Result = tmp3(tmp7(14889), {});
+    tmp3Result = hasOwnProperty(FamilyCenterActivityCardDefault, {});
   }
   items[1] = tmp3Result;
   obj.children = items;

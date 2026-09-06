@@ -24,7 +24,7 @@ export default function useFetchGuildBoostSlots() {
   const items2 = [stateFromStores1, stateFromStores, first];
   const effect = noop.useEffect(() => {
     if (closure_0) {
-      closure_0 = async function _fetch(arg0, value) {
+      closure_0 = async function _fetch() {
         if (c2 === 2) {
           c2 = 3;
           throw new TypeError("Generator functions may not be called on executing generators");

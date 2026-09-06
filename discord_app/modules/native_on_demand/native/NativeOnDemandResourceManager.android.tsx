@@ -39,9 +39,9 @@ let prototype = function NativeOnDemandResourceManager() {
             tmp.hasFetchedKrisp = true;
             mode = MediaEngineStore.getMode();
             const autoThreshold = MediaEngineStore.getModeOptions().autoThreshold;
-            let tmp9Result = tmp9(tmp10[5]);
+            let tmp9Result = applyArgumentsResult(dependencyMap[5]);
             tmp9Result.setMode(mode, { autoThreshold: false });
-            tmp9Result = tmp9(tmp10[4]);
+            tmp9Result = applyArgumentsResult(dependencyMap[4]);
             if (tmp9Result != null) {
               const onDemandResource = tmp9Result.fetchOnDemandResource("krisp");
               if (onDemandResource != null) {
@@ -57,6 +57,7 @@ let prototype = function NativeOnDemandResourceManager() {
                   }
                   obj = { autoThreshold };
                   AudioActionCreatorsDefault.setMode(mode, obj);
+                  const tmpResult = AudioActionCreatorsDefault;
                 });
               }
             }

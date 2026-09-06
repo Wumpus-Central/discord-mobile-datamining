@@ -1,5 +1,6 @@
 // discord_app/modules/contact_sync/native/components/RedesignContactSyncModal.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import ConstantsIOS from "../../../../ConstantsIOS.tsx";
 import util from "../../../../intl/index.native.tsx";
 import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
 import AnalyticsUtilsDefault from "../../../../utils/AnalyticsUtils.tsx";
@@ -7,6 +8,7 @@ import discord_common_AnalyticsUtils from "../../../../../discord_common/js/pack
 import asyncRequireImpl from "../../../../../_runtime/01896_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
+import NavigatorHeader from "../../../../design/components/Navigator/native/NavigatorHeader.native.tsx";
 import ContactSyncModalActionCreators from "../ContactSyncModalActionCreators.tsx";
 import ContactSyncUtils from "../ContactSyncUtils.tsx";
 import RedesignContactSyncDiscoverabilityFooterDefault from "RedesignContactSyncDiscoverabilityFooter.tsx";
@@ -34,10 +36,10 @@ function OnboardingTrailingLanding() {
 }
 function OnboardingTrailing(isOnboarding) {
   if (isOnboarding.isOnboarding) {
-    let tmp3Result = tmp3(OnboardingTrailingLanding, {});
+    let tmp3Result = value2(OnboardingTrailingLanding, {});
   } else {
     const obj = { discoverabilityEnabled: tmp, onValueChanged: tmp2 };
-    tmp3Result = tmp3(RedesignContactSyncDiscoverabilityFooterDefault, obj);
+    tmp3Result = value2(RedesignContactSyncDiscoverabilityFooterDefault, obj);
   }
   return tmp3Result;
 }
@@ -74,7 +76,7 @@ function ContactSyncLandingScreen(openSettingsSheet) {
   onNext = phone.useCallback(() => {
     setLoading(true);
     let timerId = setTimeout(
-      asyncGeneratorStep(async (arg0, value) => {
+      asyncGeneratorStep(async () => {
         if (c3 === 2) {
           c3 = 3;
           throw new TypeError("Generator functions may not be called on executing generators");
@@ -99,7 +101,7 @@ function ContactSyncLandingScreen(openSettingsSheet) {
                 obj = { value, done: true };
                 return obj;
               } else if (!currentUser) {
-                let obj2 = tmp22(12684);
+                let obj2 = tmp2(12684);
                 let tmp12 = discoverabilityEnabled;
                 if (tmp12) {
                   let email;
@@ -146,9 +148,9 @@ function ContactSyncLandingScreen(openSettingsSheet) {
             c3 = 1;
             const obj4 = { value: tmp2(12676).startContactSync(closure_129_3), done: false };
             return obj4;
-          } catch (tmp22) {
+          } catch (tmp2) {
             c3 = tmp;
-            throw tmp22;
+            throw tmp2;
           }
         }
       }),
@@ -162,11 +164,11 @@ function ContactSyncLandingScreen(openSettingsSheet) {
   const effect = obj2.useEffect(() => {
     let isAndroidResult = PlatformUtils.isAndroid();
     if (isAndroidResult) {
-      isAndroidResult = stateFromStores1 === tmp(1093).AppStates.ACTIVE;
+      isAndroidResult = stateFromStores1 === ConstantsIOS.AppStates.ACTIVE;
     }
     if (isAndroidResult) {
-      const result = tmp(12676).refreshContactSyncPermissionStatus();
-      const tmpResult = tmp(12676);
+      const result = ContactSyncModalActionCreators.refreshContactSyncPermissionStatus();
+      const tmpResult = ContactSyncModalActionCreators;
     }
   }, items3);
   const items4 = [openSettingsSheet];
@@ -182,7 +184,7 @@ function ContactSyncLandingScreen(openSettingsSheet) {
   }, items4);
   const items5 = [onNext, onComplete];
   const callback1 = obj2.useCallback(
-    navigation(function* (arg0, value) {
+    navigation(function* () {
       if (dependencyMap === 2) {
         dependencyMap = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -249,13 +251,13 @@ function ContactSyncLandingScreen(openSettingsSheet) {
   if (!tmp12) {
     if (permissionState === constants.AUTHORIZED) {
       obj = { onNext, error, loading, discoverabilityEnabled, setDiscoverabilityEnabled: tmp11 };
-      let tmp21Result = tmp21(tmp2(tmp3[33]), obj);
+      let tmp21Result = closure_16(setLoading(tmp3[33]), obj);
     }
     obj1 = { children: null };
     obj.children = tmp21Result;
-    items6[1] = tmp21(tmp22, obj);
+    items6[1] = closure_16(tmp22, obj);
     obj1.children = items6;
-    return tmp19(tmp20, obj1);
+    return closure_18(closure_17, obj1);
   }
   obj2 = {
     title: null,
@@ -267,8 +269,6 @@ function ContactSyncLandingScreen(openSettingsSheet) {
     onAllow: null,
     onDontAllow: null,
   };
-  tmp19 = closure_18;
-  tmp20 = closure_17;
   tmp22 = discoverabilityEnabled;
   const tmp4Result = openSettingsSheet(onComplete[21]);
   const intl = tmp4(tmp3[16]).intl;
@@ -288,7 +288,8 @@ function ContactSyncLandingScreen(openSettingsSheet) {
     const obj = { onComplete, skip: true };
     const result = obj.closeContactSyncModal(obj);
   };
-  tmp21Result = tmp21(setLoading(onComplete[31]), obj2);
+  tmp21Result = closure_16(setLoading(onComplete[31]), obj2);
+  const tmp2Result = setLoading(onComplete[31]);
 }
 function ContactSyncNameInputScreen(navigateToLandingPage) {
   _require = undefined;
@@ -302,7 +303,7 @@ function ContactSyncNameInputScreen(navigateToLandingPage) {
   const name = tmp5.name;
   ({ isNameFromContactBook, error } = tmp5);
   loading(12695)(navigation, navigateToLandingPage.navigateToLandingPage);
-  _require = onNext(function* (arg0, value) {
+  _require = onNext(function* (arg0) {
     if (c3 === 2) {
       c3 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -385,7 +386,6 @@ function ContactSyncNameInputScreen(navigateToLandingPage) {
   obj = { onNext, error, loading, initialName: null, prefilledFromContactBook: null };
   let str = name;
   const tmp = closure_19();
-  const tmp10 = View;
   if (name == null) {
     str = "";
   }
@@ -399,7 +399,7 @@ function ContactSyncNameInputScreen(navigateToLandingPage) {
   }
   obj.prefilledFromContactBook = tmp12;
   obj.children = closure_16(loading(12697), obj);
-  return closure_16(tmp10, obj);
+  return closure_16(View, obj);
 }
 function ContactSyncSuggestionScreen(onComplete) {
   onComplete = onComplete.onComplete;
@@ -504,12 +504,12 @@ class ContactSyncModal {
       if (obj.isOnboarding) {
         let headerCloseButton = headerLeft;
       } else {
-        headerCloseButton = tmp2(5624).getHeaderCloseButton(() => {
+        headerCloseButton = NavigatorHeader.getHeaderCloseButton(() => {
           onComplete(first[14]);
           const obj = { onComplete, skip: true };
           return obj.closeContactSyncModal(obj);
         });
-        const tmp2Result = tmp2(5624);
+        const tmp2Result = NavigatorHeader;
       }
       const obj1 = { [closure_2_13.WELCOME]: obj };
       obj.headerLeft = headerCloseButton;

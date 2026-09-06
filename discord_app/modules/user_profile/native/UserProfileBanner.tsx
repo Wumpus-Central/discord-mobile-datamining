@@ -130,4 +130,5 @@ export default function UserProfileBanner(displayProfile) {
     }
   }
   renderBannerResult = renderBanner();
+  tmp2Result1 = displayProfile(bannerSafeArea[8]);
 }

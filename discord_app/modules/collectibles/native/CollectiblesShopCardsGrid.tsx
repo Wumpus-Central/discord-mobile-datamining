@@ -97,9 +97,9 @@ export default function CollectiblesShopCardsGrid(accessibilityLabel) {
           obj.muteBundleStaticBackground = muteBundleStaticBackground;
           return (
             <ShopCardGridItem
-              key={arg0.skuId}
-              product={arg0}
-              index={closure_0 * columns + arg1}
+              key={product.skuId}
+              product={product}
+              index={closure_0 * columns + index}
               cardWidth={cardWidth}
               unpublishedAt={null}
               preferVCPrice={null}

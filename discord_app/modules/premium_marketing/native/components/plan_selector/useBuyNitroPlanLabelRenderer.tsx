@@ -62,15 +62,15 @@ export const useBuyNitroPlanLabelRenderer = function useBuyNitroPlanLabelRendere
       const items = [React6(Text_Text.Text, obj)];
       let tmp21Result = null != stringResult;
       if (tmp21Result) {
-        let obj1 = { style: tmp20.discountBadge, children: null };
+        let obj1 = { style: labelRow.discountBadge, children: null };
         const obj2 = {
           variant: "text-xs/bold",
           color: "text-overlay-light",
-          style: tmp20.discountBadgeText,
+          style: labelRow.discountBadgeText,
           children: stringResult,
         };
-        obj1.children = tmp21(Text_Text.Text, obj2);
-        tmp21Result = tmp21(tmp19, obj1);
+        obj1.children = React6(Text_Text.Text, obj2);
+        tmp21Result = React6(View, obj1);
       }
       items[1] = tmp21Result;
       obj.children = items;
@@ -93,5 +93,6 @@ export const useBuyNitroPlanLabelRenderer = function useBuyNitroPlanLabelRendere
       obj.discount = obj1.formatPercent(LocaleStore.locale, tmp / 100);
       stringResult = intl.format(util.t.IAybsG, obj);
     }
+    const tmp4 = null != trialTier && productId.premiumTier === trialTier;
   }, items);
 };

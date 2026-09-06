@@ -133,9 +133,12 @@ export default noop.memo((preferredPosition) => {
   if (tmp3Result.isIOS()) {
     elevationShadow = tmp2.elevationShadow;
   }
-  obj5 = { style: items1, children: tmp14(tmp15, { children }) };
+  obj5 = { style: items1, children: <closure_5>{children}</closure_5> };
   items1[1] = elevationShadow;
-  obj4.children = jsx(require("ReanimatedRexport").View, { style: items1, children: tmp14(tmp15, { children }) });
+  obj4.children = jsx(require("ReanimatedRexport").View, {
+    style: items1,
+    children: <closure_5>{children}</closure_5>,
+  });
   obj3.children = jsx(insets(ref[16]).GestureDetector, { gesture, children: null });
   obj2.children = (
     <closure_5

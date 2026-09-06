@@ -41,7 +41,7 @@ function FloatingBanner(children) {
   let tmp5Result = tmp5(tmp3[11]);
   sharedValue1 = tmp5Result.useSharedValue(PX_16);
   const bound = Math.max(125, tmp8 + PX_40);
-  bound1 = Math.max(tmp2(tmp3[6]).space.PX_12, tmp8 - PX_8 + PX_24);
+  bound1 = Math.max(onListInsetChange(tmp3[6]).space.PX_12, tmp8 - PX_8 + PX_24);
   let items = [bound1, onListInsetChange, visible];
   const effect = obj1.useEffect(() => {
     if (onListInsetChange != null) {
@@ -86,12 +86,12 @@ function FloatingBanner(children) {
       num2 = 1;
     }
     const result2 = sharedValue.set(spring.withSpring(num2, closure_16));
-    const tmp10 = closure_16;
     let num3 = 0;
     if (!visible) {
       num3 = PX_16;
     }
-    const result3 = sharedValue1.set(spring.withSpring(num3, tmp10));
+    const result3 = sharedValue1.set(spring.withSpring(num3, closure_16));
+    const tmp8Result = spring;
   }, items2);
   tmp5Result = tmp5(tmp3[11]);
   class L {
@@ -152,7 +152,7 @@ function FloatingBanner(children) {
       end: { x: 0.5, y: 1 },
       pointerEvents: "none",
     };
-    tmp19Result = tmp19(tmp2(tmp3[14]), obj1);
+    tmp19Result = closure_9(onListInsetChange(tmp3[14]), obj1);
   }
   const items5 = [tmp19Result, closure_9(sharedValue, { onLayout: callback, children: children.children })];
   obj.children = items5;
@@ -216,7 +216,6 @@ export default function GroupDMNitroUpsellBanner(wrapperStyle) {
     }
   }
   let tmp13 = wrapperStyle;
-  const tmp11 = closure_1_10;
   const tmp7Result = useGroupDMNitroUpsellActionDefault(obj);
   if (floating) {
     const items1 = [tmp.floatingBanner, wrapperStyle];
@@ -224,7 +223,7 @@ export default function GroupDMNitroUpsellBanner(wrapperStyle) {
   }
   obj = { showLeadingIcon: false, wrapperStyle: tmp13, trailing: null, children: null };
   obj1 = { text: null, size: "sm", variant: "experimental_premium-primary", shiny: null, icon: null, onPress: null };
-  const intl = tmp2(1114).intl;
+  const intl = util.intl;
   const tmp5Result = GroupDMNitroCapBannerDefault;
   obj1.text = intl.string(GroupDMNitroUpsellModel.getGroupDMNitroCapCTAMessage(groupDMNitroAudience));
   let tmp15 = tmp9;
@@ -236,16 +235,16 @@ export default function GroupDMNitroUpsellBanner(wrapperStyle) {
   obj1.onPress = tmp7Result;
   obj.trailing = React7(components_Button_Button.Button, obj1);
   obj2 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
-  const intl2 = tmp2(1114).intl;
+  const intl2 = util.intl;
   obj2.children = intl2.string(util.t.KCD0Hp);
   const items2 = [React7(Text_Text.Text, obj2)];
   const obj3 = { variant: "text-xs/medium", color: "mobile-text-heading-primary", children: null };
-  const intl3 = tmp2(1114).intl;
+  const intl3 = util.intl;
   obj4 = { number };
   obj3.children = intl3.formatToPlainString(util.t["8o8Zk5"], obj4);
   items2[1] = React7(Text_Text.Text, obj3);
   obj.children = items2;
-  const tmp11Result = tmp11(tmp5Result, obj);
+  const tmp11Result = closure_1_10(tmp5Result, obj);
   let tmp14Result = tmp11Result;
   if (floating) {
     const obj5 = {
@@ -254,7 +253,7 @@ export default function GroupDMNitroUpsellBanner(wrapperStyle) {
       onListInsetChange: onFloatingListInsetChange,
       children: tmp11Result,
     };
-    tmp14Result = tmp14(FloatingBanner, obj5);
+    tmp14Result = React7(FloatingBanner, obj5);
   }
   return tmp14Result;
 }

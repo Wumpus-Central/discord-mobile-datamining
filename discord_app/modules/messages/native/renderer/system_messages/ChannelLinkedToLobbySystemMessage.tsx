@@ -1,7 +1,10 @@
 // discord_app/modules/messages/native/renderer/system_messages/ChannelLinkedToLobbySystemMessage.tsx
 import util from "../../../../../intl/index.native.tsx";
+import HelpdeskUtilsDefault from "../../../../../utils/HelpdeskUtils.tsx";
 import resolveMessageContentColorsDefault from "../resolveMessageContentColors.tsx";
 import useAuthorWithProcessedColor from "useAuthorWithProcessedColor.tsx";
+import formatUsernameOnClickDefault from "formatUsernameOnClick.tsx";
+import createCommonMessageDefault from "createCommonMessage.tsx";
 import ApplicationStore from "../../../../applications/ApplicationStore.tsx";
 
 require = fn;
@@ -33,13 +36,13 @@ export const createChannelLinkedToLobbySystemMessage = function createChannelLin
       urlOnClick: null,
     };
     obj = { message, author: messageAuthorWithProcessedColor, roleStyle };
-    obj.usernameOnClick = tmp(7962)(obj);
+    obj.usernameOnClick = formatUsernameOnClickDefault(obj);
     obj.applicationName = application.name;
     const obj1 = { linkColor: tmp3.defaultUsernameColor, medium: true };
     obj.applicationNameOnClick = obj1;
     const obj2 = {
       action: "bindOpenUrl",
-      url: tmp(2024).getArticleURL(HelpdeskArticles.LINKED_LOBBIES),
+      url: HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.LINKED_LOBBIES),
       linkColor: tmp3.linkColor,
       medium: true,
     };
@@ -47,7 +50,7 @@ export const createChannelLinkedToLobbySystemMessage = function createChannelLin
     const obj3 = { content: null };
     const intl = util.intl;
     obj3.content = intl.formatToParts(util.t.gZfhOw, obj);
-    const merged = Object.assign(tmp(7964)(message));
+    const merged = Object.assign(createCommonMessageDefault(message));
     return obj3;
   }
 };

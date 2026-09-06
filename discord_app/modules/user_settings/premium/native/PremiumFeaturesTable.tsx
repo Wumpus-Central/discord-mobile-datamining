@@ -6,11 +6,11 @@ import shared from "../../../../design/shared.tsx";
 import useThemeDefault from "../../../../hooks/useTheme.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import LinearGradientDefault from "../../../../../_runtime/04987_LinearGradient.js";
+import _modDef13477 from "../../../../../_runtime/metro/13477__.js";
 import _modDef13478 from "../../../../../_runtime/metro/13478__.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-const _modDef13477 = tmp(13477);
 require = fn;
 function CheckIcon() {
   let obj = shared;
@@ -20,7 +20,7 @@ function CheckIcon() {
   obj = {
     source: _modDef13477,
     color: obj.isThemeDark(useThemeDefault()) ? unsafe_rawColors.WHITE : unsafe_rawColors.PRIMARY_860,
-    size: tmp4(1178).IconSizes.SMALL,
+    size: native.IconSizes.SMALL,
   };
   return closure_1_11(native.Icon, obj);
 }
@@ -183,11 +183,11 @@ function Row(withTopBorderRadius) {
         ({ START: obj9.start, END: obj9.end } = HorizontalGradient);
         obj6.colors = ["rgba(133, 71, 198, 0.10)", "rgba(184, 69, 193, 0.10)", "rgba(171, 93, 138, 0.10)"];
         obj6.children = column2;
-        obj4.children = tmp5(LinearGradientDefault, obj6);
+        obj4.children = closure_1_11(LinearGradientDefault, obj6);
       }
-      items2[2] = tmp5(tmp4, obj4);
+      items2[2] = closure_1_11(View, obj4);
       obj.children = items2;
-      return closure_1_12(tmp4, obj);
+      return closure_1_12(View, obj);
     }
   }
   const items6 = [, , , ,];
@@ -342,7 +342,7 @@ export default function PremiumFeaturesTable(highlightNitroBasic) {
     tmp2Result = tmp2(tmp3[23]);
   }
   obj1 = {
-    column1: tmp12(tmp2Result, obj),
+    column1: closure_11(tmp2Result, obj),
     column2: null,
     withBottomBorder: false,
     withTopBorderRadius: true,
@@ -569,12 +569,11 @@ export default function PremiumFeaturesTable(highlightNitroBasic) {
   }
   if (isPremiumGroup) {
     const obj25 = { style: tmp.premiumGroupCard, premiumGroupRole };
-    isPremiumGroup = tmp12(tmp2(tmp3[26]), obj25);
+    isPremiumGroup = closure_11(tmp2(tmp3[26]), obj25);
   }
   items2[1] = isPremiumGroup;
   const obj15 = { numBoosts };
   const obj16 = { numBoosts };
-  const tmp18 = closure_12;
   tmp9Result = tmp9(tmp3[10]);
   items2[2] = closure_11(View, {
     style: tmp.table,
@@ -589,5 +588,5 @@ export default function PremiumFeaturesTable(highlightNitroBasic) {
     }),
   });
   obj23.children = items2;
-  return tmp18(View, obj23);
+  return closure_12(View, obj23);
 }

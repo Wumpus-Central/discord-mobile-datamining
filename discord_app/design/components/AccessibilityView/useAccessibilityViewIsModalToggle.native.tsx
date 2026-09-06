@@ -26,9 +26,9 @@ export default function useAccessibilityViewIsModalToggle(accessibilityViewIsMod
         const _Error = Error;
         const error = new Error("Must have a unique nativeID when accessibilityViewIsModal is enabled.");
         throw error;
-      } else if (ref.current !== tmp6) {
-        ref.current = tmp6;
-        const items = [tmp6];
+      } else if (ref.current !== nativeID) {
+        ref.current = nativeID;
+        const items = [nativeID];
         const result = AccessibilityFocusLockManagerDefault.enableAccessibilityFocusLock(items);
       }
     } else {

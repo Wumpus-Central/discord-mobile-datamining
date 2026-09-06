@@ -37,7 +37,7 @@ class KvBackgroundManager extends tmp4 {
     applyArgumentsResult.steps = {
       trimOrphanedChannels(arg0) {
         closure_0 = arg0;
-        return closure_4(function* (arg0, value) {
+        return closure_4(function* () {
           if (c0 === 2) {
             c0 = 3;
             throw new TypeError("Generator functions may not be called on executing generators");
@@ -112,7 +112,7 @@ class KvBackgroundManager extends tmp4 {
       },
       deleteDeprecatedKeyspaces(arg0) {
         closure_0 = arg0;
-        return closure_4(function* (arg0, value) {
+        return closure_4(function* () {
           if (c0 === 2) {
             c0 = 3;
             throw new TypeError("Generator functions may not be called on executing generators");
@@ -153,6 +153,7 @@ class KvBackgroundManager extends tmp4 {
                         let deleteResult = upgradeTransactionResult.delete();
                         continue;
                       }
+                      tmp = c0(1986).DEPRECATED_KEYSPACES[Symbol.iterator]();
                     }, "deleteDeprecatedKeyspaces"),
                     done: false,
                   };
@@ -178,7 +179,7 @@ class KvBackgroundManager extends tmp4 {
       },
       trimLowDisk(arg0) {
         closure_0 = arg0;
-        return closure_4(function* (arg0, value) {
+        return closure_4(function* () {
           if (c0 === 2) {
             c0 = 3;
             throw new TypeError("Generator functions may not be called on executing generators");
@@ -229,7 +230,7 @@ class KvBackgroundManager extends tmp4 {
         })();
       },
       deleteExtraDatabases() {
-        return (async (arg0, value) => {
+        return (async () => {
           if (c7 === 2) {
             c7 = 3;
             throw new TypeError("Generator functions may not be called on executing generators");
@@ -305,7 +306,7 @@ class KvBackgroundManager extends tmp4 {
         })();
       },
       optimize() {
-        return (async (arg0, value) => {
+        return (async () => {
           if (v3 === 2) {
             v3 = 3;
             throw new TypeError("Generator functions may not be called on executing generators");
@@ -381,7 +382,7 @@ prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
 };
 prototype["maybeCleanup"] = function maybeCleanup() {
   const self = this;
-  return (async (arg0, value) => {
+  return (async () => {
     if (c5 === 2) {
       c5 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -502,7 +503,7 @@ prototype["maybeCleanup"] = function maybeCleanup() {
 prototype["cleanupAsync"] = function cleanupAsync(arg0) {
   closure_0 = arg0;
   const self = this;
-  return (async (arg0, value) => {
+  return (async () => {
     if (dependencyMap === 2) {
       dependencyMap = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -591,7 +592,7 @@ prototype["cleanDatabaseAsync"] = function cleanDatabaseAsync(databaseResult, ar
   closure_0 = databaseResult;
   closure_1 = arg1;
   const self = this;
-  return (async (arg0, value) => {
+  return (async () => {
     if (c5 === 2) {
       c5 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");

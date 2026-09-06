@@ -24,7 +24,7 @@ BaseInvoiceRecord["createFromServer"] = function createFromServer(currency) {
     description: skuId.description,
   }));
   if (typeof BaseInvoiceRecord === "function") {
-    const tmp6 = new BaseInvoiceRecord(tmp, invoice_items, tmp2, new.target, total, subtotal, tax);
+    const tmp6 = new BaseInvoiceRecord(tmp, invoice_items, BaseInvoiceRecord, new.target, total, subtotal, tax);
     tmp6.total = total;
     tmp6.subtotal = subtotal;
     tmp6.tax = tax;
@@ -37,7 +37,6 @@ BaseInvoiceRecord["createFromServer"] = function createFromServer(currency) {
   } else {
     throw new TypeError("Trying to call a non-function");
   }
-  tmp2 = BaseInvoiceRecord;
 };
 BaseInvoiceRecord["createInvoiceFromOrder"] = function createInvoiceFromOrder(billing_facet) {
   billing_facet = billing_facet.billing_facet;
@@ -141,7 +140,6 @@ InvoiceRecord["createInvoiceFromServer"] = function createInvoiceFromServer(body
   let mapped;
   if (invoice_items != null) {
     mapped = invoice_items.map(PremiumSubscriptionInvoiceItem.createInvoiceItemFromServer);
-    const tmp3 = require;
   }
   obj.invoiceItems = mapped;
   ({
@@ -153,12 +151,11 @@ InvoiceRecord["createInvoiceFromServer"] = function createInvoiceFromServer(body
   } = body);
   obj.subscriptionPeriodStart = new Date(body.subscription_period_start);
   const date = new Date(body.subscription_period_start);
-  const tmp = InvoiceRecord;
   const tmp6 = new.target;
   obj.subscriptionPeriodEnd = new Date(body.subscription_period_end);
   ({ status: obj.status, orbs_reward: obj.orbsReward, checkout_context: obj.checkoutContext } = body);
-  if (typeof tmp === "function") {
-    const tmp12 = new InvoiceRecord(obj, tmp3, Date, Date, tmp6);
+  if (typeof InvoiceRecord === "function") {
+    const tmp12 = new InvoiceRecord(obj, require, Date, Date, tmp6);
     ({ id: tmp12.id, invoiceItems } = obj);
     if (invoiceItems == null) {
       invoiceItems = [];
@@ -183,7 +180,6 @@ InvoiceRecord["createFromOTPPreview"] = function createFromOTPPreview(invoice_it
   let mapped;
   if (invoice_items != null) {
     mapped = invoice_items.map(PremiumSubscriptionInvoiceItem.createInvoiceItemFromServer);
-    const tmp3 = require;
   }
   const obj = {
     id: "",
@@ -206,7 +202,7 @@ InvoiceRecord["createFromOTPPreview"] = function createFromOTPPreview(invoice_it
   obj.orbsReward = orbs_reward;
   obj.checkoutContext = invoice_items.checkout_context;
   if (typeof InvoiceRecord === "function") {
-    const tmp13 = new InvoiceRecord(obj, tmp3, tmp5, tmp7, orbs_reward, tmp);
+    const tmp13 = new InvoiceRecord(obj, require, tmp5, tmp7, orbs_reward, InvoiceRecord);
     ({ id: tmp13.id, invoiceItems } = obj);
     if (invoiceItems == null) {
       invoiceItems = [];

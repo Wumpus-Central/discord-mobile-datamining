@@ -18,7 +18,7 @@ export default function useCreateCreatorMonetizationEnableRequest(arg0) {
   let obj = { error: tmp[0], loading: tmp3, createEnableRequest: null, submittedRequest: tmp4[0] };
   const items = [arg0];
   obj.createEnableRequest = noop.useCallback(
-    asyncGeneratorStep(async (arg0, value) => {
+    asyncGeneratorStep(async () => {
       if (c5 === 2) {
         c5 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");

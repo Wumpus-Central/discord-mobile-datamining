@@ -8,8 +8,8 @@ const GuildMemberFlags = fn(4187).GuildMemberFlags;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_onboarding/doGuildOnboardingHelpers.tsx");
 
-export const waitForOnboardingCompletion = function waitForOnboardingCompletion(arg0) {
-  closure_0 = arg0;
+export const waitForOnboardingCompletion = function waitForOnboardingCompletion(guildId) {
+  closure_0 = guildId;
   return new Promise((arg0) => {
     closure_0 = arg0;
     const result = GuildMemberStore.addConditionalChangeListener(() => {

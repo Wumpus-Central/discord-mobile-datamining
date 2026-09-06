@@ -18,8 +18,8 @@ export default {
     const Samsung = NativeModules.Samsung;
     return Samsung.getAccountUrlAndAuthCode();
   },
-  finishSamsungAuthorization(arg0, arg1, arg2) {
+  finishSamsungAuthorization(arg0, arg1, text1) {
     const Samsung = NativeModules.Samsung;
-    return Samsung.finishSamsungAuthorization(arg0, arg1, arg2);
+    return Samsung.finishSamsungAuthorization(arg0, arg1, text1);
   },
 };

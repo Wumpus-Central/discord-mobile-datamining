@@ -87,11 +87,11 @@ prototype["drain"] = function drain(type, fn) {
   type = type.type;
   if (obj.SEND === type) {
     self.handleSend(type.message, fn);
-  } else if (tmp2.SEND_ANNOUNCEMENT === type) {
+  } else if (obj.SEND_ANNOUNCEMENT === type) {
     const result = self.handleSendAnnouncement(type.message, fn);
-  } else if (tmp2.EDIT === type) {
+  } else if (obj.EDIT === type) {
     self.handleEdit(type.message, fn);
-  } else if (tmp2.COMMAND === type) {
+  } else if (obj.COMMAND === type) {
     self.handleCommand(type.message, fn);
   }
 };
@@ -109,14 +109,14 @@ prototype["cancelRequest"] = function cancelRequest(id2) {
   requests2.delete(id2);
   const result = self.cancelQueueMetricTimers(id2);
   self.remove((type) => {
-    let tmp2 = type.type === obj.SEND || type.type === tmp.SEND_ANNOUNCEMENT || type.type === tmp.COMMAND;
+    let tmp2 = type.type === obj.SEND || type.type === obj.SEND_ANNOUNCEMENT || type.type === obj.COMMAND;
     if (tmp2) {
       tmp2 = type.message.nonce === closure_0;
     }
     return tmp2;
   });
 };
-prototype["cancelPendingSendRequests"] = function cancelPendingSendRequests(arg0) {
+prototype["cancelPendingSendRequests"] = function cancelPendingSendRequests(channelId) {
   const self = this;
   items = [];
   const items1 = [];
@@ -126,7 +126,7 @@ prototype["cancelPendingSendRequests"] = function cancelPendingSendRequests(arg0
       let arr = queue.shift();
       let message = arr.message;
       if (message.type === obj.SEND) {
-        if (message.message.channelId === arg0) {
+        if (message.message.channelId === channelId) {
           arr = items.push(message.message);
           if (self.queue.length <= 0) {
             break;
@@ -174,8 +174,8 @@ prototype["createResponseHandler"] = function createResponseHandler(nonce, fn) {
   return (hasErr) => {
     if (null != closure_1) {
       const requests = self.requests;
-      requests.delete(tmp);
-      const result = self.cancelQueueMetricTimers(tmp);
+      requests.delete(closure_1);
+      const result = self.cancelQueueMetricTimers(closure_1);
     }
     if (hasErr.hasErr) {
       return closure_0(null, hasErr);
@@ -185,10 +185,10 @@ prototype["createResponseHandler"] = function createResponseHandler(nonce, fn) {
         const parsed = parseInt(hasErr.headers["retry-after"]);
         const _isNaN = isNaN;
         if (isNaN(parsed)) {
-          tmp12(null, hasErr);
+          closure_0(null, hasErr);
         } else {
           obj = { retryAfter: parsed * DurationsDefault.Millis.SECOND };
-          tmp12(obj);
+          closure_0(obj);
         }
       } else {
         closure_0(null, hasErr);
@@ -209,7 +209,6 @@ prototype["handleSend"] = function handleSend(nonce, fn) {
     const tmp4 = body;
   }
   const tmp = _objectWithoutProperties(nonce, closure_3);
-  const tmp5 = handleCommand;
   const signalStrength = handleCommand(7459).getSignalStrength();
   body = { mobile_network_type: NetworkStore.getType() };
   const merged = Object.assign(tmp);
@@ -233,12 +232,13 @@ prototype["handleSend"] = function handleSend(nonce, fn) {
       const result = requests.set(nonce.nonce, abortController);
     }
     const result1 = self.startQueueMetricTimers(nonce.nonce);
-    const HTTP = tmp5(1272).HTTP;
+    const HTTP = handleCommand(1272).HTTP;
     const request = { url: closure_1_10.MESSAGES(channelId), body, context: tmp4, oldFormErrors: true };
     const merged2 = Object.assign(closure_12);
     request.signal = abortController.signal;
     request.rejectWithError = true;
     HTTP.post(request, self.createResponseHandler(nonce.nonce, fn));
+    const responseHandler = self.createResponseHandler(nonce.nonce, fn);
   }
   const obj2 = handleCommand(7459);
 };
@@ -253,7 +253,6 @@ prototype["handleSendAnnouncement"] = function handleSendAnnouncement(message, f
     const tmp4 = body;
   }
   const tmp = _objectWithoutProperties(message, closure_4);
-  const tmp5 = handleCommand;
   const signalStrength = handleCommand(7459).getSignalStrength();
   body = { mobile_network_type: NetworkStore.getType() };
   const merged = Object.assign(tmp);
@@ -277,12 +276,13 @@ prototype["handleSendAnnouncement"] = function handleSendAnnouncement(message, f
       const result = requests.set(message.nonce, abortController);
     }
     const result1 = self.startQueueMetricTimers(message.nonce);
-    const HTTP = tmp5(1272).HTTP;
+    const HTTP = handleCommand(1272).HTTP;
     const request = { url: closure_1_10.MESSAGES_ANNOUNCEMENT(channelId), body, context: tmp4, oldFormErrors: true };
     const merged2 = Object.assign(closure_12);
     request.signal = abortController.signal;
     request.rejectWithError = true;
     HTTP.post(request, self.createResponseHandler(message.nonce, fn));
+    const responseHandler = self.createResponseHandler(message.nonce, fn);
   }
   const obj2 = handleCommand(7459);
 };
@@ -333,6 +333,8 @@ handleCommand = function handleCommand(dependencyMap, fn) {
             closure_1_0(maxFileSizeResult);
           }
         }
+        obj = handleCommand(nonce[17]);
+        tmp2 = null != total && total > maxFileSizeResult;
       });
     },
   };
@@ -397,7 +399,7 @@ export const isMessageDataCommand = function isMessageDataCommand(type) {
 export const getFailedMessageId = function getFailedMessageId(messageData) {
   if (tmp2) {
     let id = messageData.message.nonce;
-  } else if (messageData.type === tmp.EDIT) {
+  } else if (messageData.type === obj.EDIT) {
     id = messageData.message.messageId;
   } else {
     id = messageData.message.data.id;

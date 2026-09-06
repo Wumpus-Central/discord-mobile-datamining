@@ -194,7 +194,7 @@ export default noop.memo(function IgnoreConfirmationActionSheet(userId) {
   const tmp = closure_15();
   [tmp3, c4] = _slicedToArray(noop.useState(false), 2);
   const bottom = channelId(1611)().bottom;
-  let tmp2 = _slicedToArray(noop.useState(false), 2);
+  const tmp2 = _slicedToArray(noop.useState(false), 2);
   items = [channelId(7182).IGNORE_CONFIRMATION_ACTION_SHEET];
   let obj = userId(504);
   const items1 = [UserStore];
@@ -341,6 +341,7 @@ export default noop.memo(function IgnoreConfirmationActionSheet(userId) {
         channelId,
       );
       AnalyticsUtilsDefault.track(constants.IGNORE_USER_CONFIRMED);
+      const tmp2Result = AnalyticsUtilsDefault;
     };
     obj18.disabled = tmp3;
     obj18.loading = tmp3;
@@ -371,7 +372,7 @@ export default noop.memo(function IgnoreConfirmationActionSheet(userId) {
     obj4.children = items8;
     obj.children = closure_14(tmp7(6627).BottomSheetScrollView, obj4);
     obj.children = closure_13(tmp7(7150).BottomSheet, obj);
-    tmp12Result = tmp12(tmp7(7162).AnalyticsLocationProvider, obj);
+    tmp12Result = closure_13(tmp7(7162).AnalyticsLocationProvider, obj);
     const tmp4Result = tmp4(4712);
   }
   return tmp12Result;

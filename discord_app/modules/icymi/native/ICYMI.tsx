@@ -500,19 +500,19 @@ let closure_22 = noop.memo((inNestedNavigator) => {
   const obj3 = { style: tmp.headerLeft, children: null };
   if (!tmp2) {
     if (!inNestedNavigator) {
-      const items1 = [null, tmp4(ICYMIHeaderTextWrapper, {})];
+      const items1 = [null, closure_1_14(ICYMIHeaderTextWrapper, {})];
       obj3.children = items1;
-      const items2 = [tmp3(tmp6, obj3)];
+      const items2 = [value2(hasOwnProperty, obj3)];
       const obj4 = { style: tmp.headerActions, children: null };
-      const items3 = [tmp4(InfoButton, {}), tmp4(SettingsButton, {})];
+      const items3 = [closure_1_14(InfoButton, {}), closure_1_14(SettingsButton, {})];
       obj4.children = items3;
-      items2[1] = tmp3(tmp6, obj4);
+      items2[1] = value2(hasOwnProperty, obj4);
       obj2.children = items2;
-      items[1] = tmp3(tmp6, obj2);
+      items[1] = value2(hasOwnProperty, obj2);
       const obj5 = { style: tmp.headerBorder };
-      items[2] = tmp4(tmp6, obj5);
+      items[2] = closure_1_14(hasOwnProperty, obj5);
       obj.children = items;
-      return tmp3(common_SafeAreaView.SafeAreaPaddingView, obj);
+      return value2(common_SafeAreaView.SafeAreaPaddingView, obj);
     }
   }
   const obj6 = { style: tmp.headerClose, accessibilityLabel: null, onPress: null, children: null };
@@ -522,12 +522,12 @@ let closure_22 = noop.memo((inNestedNavigator) => {
   if (inNestedNavigator) {
     LeftBackIconWithBadge = BackIconWithBadge.LeftBackIconWithBadge;
     obj = { includeNotificationsCount: true };
-    let tmp4Result = tmp4(LeftBackIconWithBadge, obj);
+    let tmp4Result = closure_1_14(LeftBackIconWithBadge, obj);
   } else {
-    tmp4Result = tmp4(XSmallIcon.XSmallIcon, { color: "interactive-text-default" });
+    tmp4Result = closure_1_14(XSmallIcon.XSmallIcon, { color: "interactive-text-default" });
   }
   obj6.children = tmp4Result;
-  tmp4Result = tmp4(Pressables.PressableOpacity, obj6);
+  tmp4Result = closure_1_14(Pressables.PressableOpacity, obj6);
 });
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/icymi/native/ICYMI.tsx");
@@ -570,14 +570,13 @@ export const ICYMITab = function ICYMITab(route) {
   const obj3 = {};
   const merged = Object.assign(obj);
   const items2 = [closure_14(ThemedGradientDefault, { absolute: true })];
-  const tmp14 = closure_16;
   const tmpResult = AppFreezerDefault;
   items2[1] = closure_14(require("native").ThemeContextProvider, {
     gradient: tmp3,
     children: closure_14(ICYMI, { inNestedNavigator }, "" + stateFromStores),
   });
   obj3.children = items2;
-  obj2.children = tmp14(tmp11, obj3);
+  obj2.children = closure_16(tmp11, obj3);
   obj1.children = closure_14(require("ICYMIContext").ICYMIContextProvider, obj2);
   return closure_14(tmpResult, obj1);
 };

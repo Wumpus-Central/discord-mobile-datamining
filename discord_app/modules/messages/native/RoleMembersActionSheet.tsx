@@ -1,4 +1,5 @@
 // discord_app/modules/messages/native/RoleMembersActionSheet.tsx
+import SnowflakeUtilsDefault from "../../../utils/SnowflakeUtils.tsx";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import native from "../../../design/void/native.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
@@ -44,6 +45,7 @@ export default function RoleMembersActionSheet(guildId) {
     if (roleId !== obj.castGuildIdAsEveryoneGuildRoleId(guildId)) {
       const membersForRole = GuildRoleMemberActionCreators.requestMembersForRole(guildId, roleId);
     }
+    obj = SnowflakeUtilsDefault;
   }, items);
   let obj = guildId(504);
   const items1 = [GuildRoleStore];
@@ -95,7 +97,7 @@ export default function RoleMembersActionSheet(guildId) {
     obj.channelId = channelId;
     obj.roleId = roleId;
     obj.children = closure_8(tmp9(11588), obj);
-    tmp16Result = tmp16(tmp3(7150).BottomSheet, obj);
+    tmp16Result = closure_8(tmp3(7150).BottomSheet, obj);
     let tmp9Result = tmp9(11588);
   }
   return tmp16Result;

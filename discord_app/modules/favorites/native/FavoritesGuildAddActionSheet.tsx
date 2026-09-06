@@ -1,5 +1,6 @@
 // discord_app/modules/favorites/native/FavoritesGuildAddActionSheet.tsx
 import ActionSheetActionCreators from "../../action_sheet/native/ActionSheetActionCreators.tsx";
+import openFavoritesGuildLimitUpsellDefault from "../utils/openFavoritesGuildLimitUpsell.native.tsx";
 import openFavoritesGuildAddChannelModalDefault from "../utils/openFavoritesGuildAddChannelModal.native.tsx";
 import FavoritesGuildAddCategoryActionSheet from "FavoritesGuildAddCategoryActionSheet.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -22,7 +23,7 @@ function FavoritesGuildAddActionSheet() {
     ActionSheetActionCreatorsDefault.hideActionSheet(FavoritesGuildAddActionSheet);
     if (shouldShowUpsell) {
       if (isAtLimit) {
-        tmp(10227)(favoriteLimit);
+        openFavoritesGuildLimitUpsellDefault(favoriteLimit);
       }
     }
     openFavoritesGuildAddChannelModalDefault({ source: "favorites_header_add_button_context_menu" });

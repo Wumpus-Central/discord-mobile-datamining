@@ -51,16 +51,14 @@ export default function useFavoritesGuildUnreads(arg0) {
           activeJoinedRelevantThreadsForParent =
             activeJoinedRelevantThreadsForParent.getActiveJoinedRelevantThreadsForParent(guildId, item);
           for (const key10024 in activeJoinedRelevantThreadsForParent) {
-            let obj4 = ReadStateStore;
             let mentionCount1 = ReadStateStore.getMentionCount(key10024);
-            let obj5 = set;
             if (!set.has(key10024)) {
-              let addResult1 = obj5.add(key10024);
+              let addResult1 = set.add(key10024);
               arg0.badge = arg0.badge + mentionCount1;
             }
             let unread2 = arg0.unread;
             if (!unread2) {
-              let hasUnreadResult1 = obj4.hasUnread(key10024);
+              let hasUnreadResult1 = ReadStateStore.hasUnread(key10024);
               if (hasUnreadResult1) {
                 hasUnreadResult1 = GuildReadStateStore.shouldCountChannelUnread(tmp8, mentionCount1);
               }

@@ -16,16 +16,15 @@ function getClipSignalTypes(arg0) {
   const nextResult = iter.next();
   while (iter !== undefined) {
     let type = nextResult.signal.type;
-    let tmp3 = constants;
     if (constants.MANUAL === type) {
       let arr = items.push("manual");
-    } else if (tmp3.DISTRIBUTED === type) {
+    } else if (constants.DISTRIBUTED === type) {
       arr = items.push("distributed");
-    } else if (tmp3.LAUGHTER === type) {
+    } else if (constants.LAUGHTER === type) {
       let arr1 = items.push("laughter");
-    } else if (tmp3.SHOUTING === type) {
+    } else if (constants.SHOUTING === type) {
       let arr2 = items.push("shouting");
-    } else if (tmp3.GAME_EVENT === type) {
+    } else if (constants.GAME_EVENT === type) {
       let _HermesInternal = HermesInternal;
       let arr3 = items.push("game_event:" + tmp2.signal.eventType);
     }
@@ -52,81 +51,81 @@ function getPostSaveClipAnalytics(arg0, framesEncodedByEncoder) {
     num2 = 0;
   }
   obj.frames_encoded_nvidia_cuda = num2;
-  let num3 = map.get(tmp3(7741).Encoders.NVIDIA_DIRECT_3D);
+  let num3 = map.get(VideoQualityStats.Encoders.NVIDIA_DIRECT_3D);
   if (num3 == null) {
     num3 = 0;
   }
   obj.frames_encoded_nvidia_direct3d = num3;
-  let num4 = map.get(tmp3(7741).Encoders.OPENH264);
+  let num4 = map.get(VideoQualityStats.Encoders.OPENH264);
   if (num4 == null) {
     num4 = 0;
   }
   obj.frames_encoded_openh264 = num4;
-  let num5 = map.get(tmp3(7741).Encoders.VIDEOTOOLBOX);
+  let num5 = map.get(VideoQualityStats.Encoders.VIDEOTOOLBOX);
   if (num5 == null) {
     num5 = 0;
   }
   obj.frames_encoded_videotoolbox = num5;
-  let num6 = map.get(tmp3(7741).Encoders.AMD_DIRECT_3D);
+  let num6 = map.get(VideoQualityStats.Encoders.AMD_DIRECT_3D);
   if (num6 == null) {
     num6 = 0;
   }
   obj.frames_encoded_amd_direct3d = num6;
-  let num7 = map.get(tmp3(7741).Encoders.AMD_VAAPI);
+  let num7 = map.get(VideoQualityStats.Encoders.AMD_VAAPI);
   if (num7 == null) {
     num7 = 0;
   }
   obj.frames_encoded_amd_vaapi = num7;
-  let num8 = map.get(tmp3(7741).Encoders.INTEL);
+  let num8 = map.get(VideoQualityStats.Encoders.INTEL);
   if (num8 == null) {
     num8 = 0;
   }
   obj.frames_encoded_intel = num8;
-  let num9 = map.get(tmp3(7741).Encoders.INTEL_DIRECT_3D);
+  let num9 = map.get(VideoQualityStats.Encoders.INTEL_DIRECT_3D);
   if (num9 == null) {
     num9 = 0;
   }
   obj.frames_encoded_intel_direct3d = num9;
-  let num10 = map.get(tmp3(7741).Encoders.WMF_DIRECT_3D_INTEL);
+  let num10 = map.get(VideoQualityStats.Encoders.WMF_DIRECT_3D_INTEL);
   if (num10 == null) {
     num10 = 0;
   }
   obj.frames_encoded_wmf_direct3d_intel = num10;
-  let num11 = map.get(tmp3(7741).Encoders.WMF_DIRECT_3D_NVIDIA);
+  let num11 = map.get(VideoQualityStats.Encoders.WMF_DIRECT_3D_NVIDIA);
   if (num11 == null) {
     num11 = 0;
   }
   obj.frames_encoded_wmf_direct3d_nvidia = num11;
-  let num12 = map.get(tmp3(7741).Encoders.WMF_DIRECT_3D_AMD);
+  let num12 = map.get(VideoQualityStats.Encoders.WMF_DIRECT_3D_AMD);
   if (num12 == null) {
     num12 = 0;
   }
   obj.frames_encoded_wmf_direct3d_amd = num12;
-  let num13 = map.get(tmp3(7741).Encoders.WMF_DIRECT_3D);
+  let num13 = map.get(VideoQualityStats.Encoders.WMF_DIRECT_3D);
   if (num13 == null) {
     num13 = 0;
   }
-  let num14 = map.get(tmp3(7741).Encoders.WMF_DIRECT_3D_INTEL);
+  let num14 = map.get(VideoQualityStats.Encoders.WMF_DIRECT_3D_INTEL);
   if (num14 == null) {
     num14 = 0;
   }
   const sum = num13 + num14;
-  let num15 = map.get(tmp3(7741).Encoders.WMF_DIRECT_3D_NVIDIA);
+  let num15 = map.get(VideoQualityStats.Encoders.WMF_DIRECT_3D_NVIDIA);
   if (num15 == null) {
     num15 = 0;
   }
   const sum1 = sum + num15;
-  let num16 = map.get(tmp3(7741).Encoders.WMF_DIRECT_3D_AMD);
+  let num16 = map.get(VideoQualityStats.Encoders.WMF_DIRECT_3D_AMD);
   if (num16 == null) {
     num16 = 0;
   }
   obj.frames_encoded_wmf_direct3d = sum1 + num16;
-  let num17 = map.get(tmp3(7741).Encoders.UNCATEGORIZED);
+  let num17 = map.get(VideoQualityStats.Encoders.UNCATEGORIZED);
   if (num17 == null) {
     num17 = 0;
   }
   obj.frames_encoded_uncategorized = num17;
-  let num18 = map.get(tmp3(7741).Encoders.UNKNOWN);
+  let num18 = map.get(VideoQualityStats.Encoders.UNKNOWN);
   if (num18 == null) {
     num18 = 0;
   }
@@ -169,12 +168,12 @@ export const getClipType = function getClipType(decision) {
   }
   if (constants.MANUAL === type) {
     return "manual";
-  } else if (tmp2.DISTRIBUTED === type) {
+  } else if (constants.DISTRIBUTED === type) {
     return "distributed";
   } else {
-    if (tmp2.LAUGHTER !== type) {
-      if (tmp2.SHOUTING !== type) {
-        if (tmp2.GAME_EVENT !== type) {
+    if (constants.LAUGHTER !== type) {
+      if (constants.SHOUTING !== type) {
+        if (constants.GAME_EVENT !== type) {
           return "unknown";
         }
       }
@@ -194,9 +193,9 @@ export const getClipBaseProperties = function getClipBaseProperties(clip) {
   let str = "manual";
   if (constants.MANUAL !== type) {
     str = "distributed";
-    if (tmp2.DISTRIBUTED !== type) {
-      if (tmp2.LAUGHTER !== type) {
-        if (tmp2.SHOUTING !== type) {
+    if (constants.DISTRIBUTED !== type) {
+      if (constants.LAUGHTER !== type) {
+        if (constants.SHOUTING !== type) {
           str = "unknown";
         }
       }
@@ -239,9 +238,9 @@ export const getPreSaveClipAnalytics = function getPreSaveClipAnalytics(decision
   let str = "manual";
   if (constants.MANUAL !== type) {
     str = "distributed";
-    if (tmp7.DISTRIBUTED !== type) {
-      if (tmp7.LAUGHTER !== type) {
-        if (tmp7.SHOUTING !== type) {
+    if (constants.DISTRIBUTED !== type) {
+      if (constants.LAUGHTER !== type) {
+        if (constants.SHOUTING !== type) {
           str = "unknown";
         }
       }

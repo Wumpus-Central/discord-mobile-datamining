@@ -311,8 +311,6 @@ export default function DevToolsDisplayNameEffectsBenchmarkScreen() {
         const length = String(Math.max(run.params.rowCount - 1, 0)).length;
         const padStartResult = String(arg1).padStart(length, "0");
         const StringResult = String(arg1);
-        const tmp = React6;
-        const tmp2 = BenchmarkRow;
         const splitGraphemesResult = _mod10906.splitGraphemes(run.params.name);
         let sum = padStartResult;
         if (splitGraphemesResult.length > length) {
@@ -321,7 +319,7 @@ export default function DevToolsDisplayNameEffectsBenchmarkScreen() {
         }
         obj.userName = sum;
         obj.style = closure_0.batchRow;
-        return tmp(tmp2, obj, arg1);
+        return React6(BenchmarkRow, obj, arg1);
       });
       obj10.children = tmp19(tmp2(tmp3[19]).MountMeasure, obj11, run.batchKey);
       tmp19Result = tmp19(tmp2(tmp3[23]).DisplayNameStylesContext.Provider, obj10);

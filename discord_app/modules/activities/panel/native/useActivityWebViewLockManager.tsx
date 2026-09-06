@@ -52,11 +52,11 @@ export default function useActivityWebViewLockManager() {
           if (iter2 != null) {
             value = iter2.value;
           }
-          tmp4 = value === tmp;
+          tmp4 = value === closure_0;
           const iter = obj.values();
         }
         obj.canRender = tmp4;
-        const result = map.set(tmp, obj);
+        const result = map.set(closure_0, obj);
         return () => {
           set.delete(closure_1_0);
           set.delete(closure_1_0);
@@ -71,19 +71,19 @@ export default function useActivityWebViewLockManager() {
               let tmp5 = set(tmp3, 2);
               [tmp6, tmp8] = tmp5;
               callback = tmp8.callback;
-              let tmp7 = tmp6;
               let tmp10 = closure_1_3(tmp6);
               let tmp11 = tmp10;
               if (tmp10 !== tmp8.canRender) {
                 let obj = { canRender: null, callback: null };
                 obj.canRender = tmp11;
                 obj.callback = callback;
-                let result = closure_1_2.set(tmp7, obj);
+                let result = closure_1_2.set(tmp6, obj);
                 let callbackResult = callback(tmp11);
               }
               continue;
             }
             c0 = undefined;
+            tmp2 = closure_1_2[Symbol.iterator]();
           });
         }
         return () => {

@@ -110,8 +110,8 @@ export default noop.memo(function MessagesItemChannelBase(channel) {
     const obj = { mentionCount, hasUnreadMessages: null };
     let tmp2 = mentionCount > 0;
     if (!tmp2) {
-      tmp2 = null != obj2.getGuildId() && obj.hasUnread(obj2.id);
-      const tmp4 = null != obj2.getGuildId() && obj.hasUnread(obj2.id);
+      tmp2 = null != channel.getGuildId() && obj.hasUnread(channel.id);
+      const tmp4 = null != channel.getGuildId() && obj.hasUnread(channel.id);
     }
     obj.hasUnreadMessages = tmp2;
     return obj;
@@ -218,7 +218,6 @@ export default noop.memo(function MessagesItemChannelBase(channel) {
     children: null,
   };
   const obj8 = channel(isPressed[14]);
-  const tmp24 = closure_13;
   obj.accessibilityHint = channel(isPressed[20]).getChannelA11yHint({
     channel,
     muted,
@@ -247,7 +246,7 @@ export default noop.memo(function MessagesItemChannelBase(channel) {
   let tmp22Result = stateFromStores;
   if (stateFromStores) {
     obj2 = { style: tmp4.selectedBorder, pointerEvents: "none" };
-    tmp22Result = tmp22(tmp23, obj2);
+    tmp22Result = closure_12(tmp23, obj2);
   }
   items13[1] = tmp22Result;
   obj3 = { unread: hasUnreadMessages, resolvedUnreadSetting, muted, layout: null, panelVariant: true };
@@ -293,7 +292,7 @@ export default noop.memo(function MessagesItemChannelBase(channel) {
   obj6.hasNameplate = tmp15;
   items13[4] = closure_12(height(isPressed[27]), obj6);
   obj.children = items13;
-  obj.children = tmp24(channel(isPressed[19]).PressableHighlight, obj);
+  obj.children = closure_13(channel(isPressed[19]).PressableHighlight, obj);
   return closure_12(stateFromStores, obj);
 });
 export const MESSAGES_ITEM_CHANNEL_PRESSABLE_PADDING = 1;

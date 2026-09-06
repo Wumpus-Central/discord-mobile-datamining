@@ -112,7 +112,7 @@ const changelogStore = new ChangelogStore(DispatcherDefault, {
   CHANGE_LOG_FETCH_SUCCESS: function handleChangelogFetch(arg0) {
     ({ id, changelog } = arg0);
     if (null == dependencyMap[id]) {
-      tmp[id] = {};
+      dependencyMap[id] = {};
     }
     const obj = { id, date: changelog.date, body: changelog.content, revision: 1, locale: changelog.locale };
     let str = "image";
@@ -122,7 +122,7 @@ const changelogStore = new ChangelogStore(DispatcherDefault, {
     obj[str] = changelog.asset;
     dependencyMap[id][changelog.locale] = obj;
     if (null == loadedChangelogs[id]) {
-      tmp2[id] = {};
+      loadedChangelogs[id] = {};
     }
     loadedChangelogs[id][changelog.locale] = constants2.LOADED_SUCCESS;
   },
@@ -134,7 +134,7 @@ const changelogStore = new ChangelogStore(DispatcherDefault, {
       }
     }
     if (null == loadedChangelogs[id]) {
-      tmp[id] = {};
+      loadedChangelogs[id] = {};
     }
     loadedChangelogs[id][locale] = constants2.LOADED_FAILURE;
   },

@@ -1,6 +1,7 @@
 // discord_app/modules/media_viewer/native/components/message_preview/MediaMessagePreview.tsx
 import SnowflakeUtilsDefault from "../../../../../utils/SnowflakeUtils.tsx";
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import util from "../../../../../intl/index.native.tsx";
 import LegacyBaseButton from "../../../../../../_runtime/06655_LegacyBaseButton.js";
 import ReactionActionCreators from "../../../../reactions/ReactionActionCreators.tsx";
 import RowGeneratorDefault from "../../../../messages/native/renderer/RowGenerator.tsx";
@@ -197,9 +198,9 @@ export default function MediaMessagePreview(channelId) {
         outAnimationDuration: null,
         outAnimation: "fade",
       };
-      const intl = tmp(1114).intl;
+      const intl = util.intl;
       const _HermesInternal = HermesInternal;
-      obj.seeMoreLabel = " " + intl.string(tmp(1114).t["7qbp3B"]);
+      obj.seeMoreLabel = " " + intl.string(util.t["7qbp3B"]);
       obj.seeMoreLabelColor = seeMoreLabelColor;
       const _Math = Math;
       obj.outAnimationDuration = Math.min(0.25 * animationDriver.get(), 0.1);
@@ -214,12 +215,14 @@ export default function MediaMessagePreview(channelId) {
     () => {
       if (null != channelId) {
         if (null != messageId) {
-          let message = MessageStore.getMessage(tmp, tmp2);
+          let message = MessageStore.getMessage(tmp, messageId);
           if (message == null) {
-            message = MessagePreviewStore.getMessage(tmp2);
+            message = MessagePreviewStore.getMessage(messageId);
           }
           if (message == null) {
-            const message1 = ForumPostMessagesStore.getMessage(SnowflakeUtilsDefault.castMessageIdAsChannelId(tmp2));
+            const message1 = ForumPostMessagesStore.getMessage(
+              SnowflakeUtilsDefault.castMessageIdAsChannelId(messageId),
+            );
             let firstMessage;
             if (message1 != null) {
               firstMessage = message1.firstMessage;
@@ -227,7 +230,7 @@ export default function MediaMessagePreview(channelId) {
             message = firstMessage;
           }
           if (message == null) {
-            message = SearchMessageStore.getMessage(tmp2);
+            message = SearchMessageStore.getMessage(messageId);
           }
           return message;
         }
@@ -284,7 +287,7 @@ export default function MediaMessagePreview(channelId) {
           tmp6 = obj;
         }
         const result = obj.handleAddOrRemoveReaction(
-          tmp5,
+          messageId,
           channel,
           tmp6,
           isBurst,

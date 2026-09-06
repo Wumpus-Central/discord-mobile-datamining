@@ -27,16 +27,16 @@ function InviteErrorBase(invite) {
   }
   const descriptiveInviteError = InviteErrorUtils.getDescriptiveInviteError(code);
   if (invite.invite.state === constants3.BANNED) {
-    const intl2 = tmp2(1114).intl;
-    let stringResult = intl2.string(tmp2(1114).t["GzD/aa"]);
+    const intl2 = util.intl;
+    let stringResult = intl2.string(util.t["GzD/aa"]);
   } else {
     stringResult = undefined;
     if (descriptiveInviteError != null) {
       stringResult = descriptiveInviteError.description;
     }
     if (stringResult == null) {
-      const intl = tmp2(1114).intl;
-      stringResult = intl.string(tmp2(1114).t.FWkU6P);
+      const intl = util.intl;
+      stringResult = intl.string(util.t.FWkU6P);
     }
   }
   obj = { style: tmp.expiredImage, source: tmp4Result };
@@ -52,8 +52,8 @@ function InviteErrorBase(invite) {
     title = descriptiveInviteError.title;
   }
   if (title == null) {
-    const intl3 = tmp2(1114).intl;
-    title = intl3.string(tmp2(1114).t.u9zxnX);
+    const intl3 = util.intl;
+    title = intl3.string(util.t.u9zxnX);
   }
   const obj1 = { children: null };
   obj.children = title;
@@ -68,7 +68,7 @@ function InviteErrorBase(invite) {
     children: stringResult,
   });
   const obj3 = { variant: "primary", size: "lg", text: null, onPress: null };
-  const intl4 = tmp2(1114).intl;
+  const intl4 = util.intl;
   obj3.text = intl4.string(util.t.wcqOoF);
   obj3.onPress = handlePressClose;
   items[3] = React6(components_Button_Button.Button, obj3);

@@ -91,14 +91,14 @@ export default function BotPermissions(guild) {
   if (mapped1.length > 0) {
     const obj1 = { children: null };
     let obj2 = { variant: "text-sm/medium", color: "text-subtle", children: null };
-    const intl2 = tmp4(tmp[13]).intl;
+    const intl2 = permissions(onPermissionsChange[13]).intl;
     const obj3 = { applicationName: application.name };
-    obj2.children = intl2.format(tmp4(tmp[13]).t.fsOkF4, obj3);
-    const items3 = [tmp7(tmp4(tmp[12]).Text, obj2)];
+    obj2.children = intl2.format(permissions(onPermissionsChange[13]).t.fsOkF4, obj3);
+    const items3 = [tmp7(permissions(onPermissionsChange[12]).Text, obj2)];
     const obj4 = { spacing: 12, children: mapped1 };
-    items3[1] = tmp7(tmp4(tmp[10]).Stack, obj4);
+    items3[1] = tmp7(permissions(onPermissionsChange[10]).Stack, obj4);
     obj1.children = items3;
-    tmp6Result = tmp6(tmp4(tmp[10]).Stack, obj1);
+    tmp6Result = closure_7(permissions(onPermissionsChange[10]).Stack, obj1);
   }
   children[1] = tmp6Result;
   return closure_7(permissions(onPermissionsChange[10]).Stack, { spacing: 16, children });

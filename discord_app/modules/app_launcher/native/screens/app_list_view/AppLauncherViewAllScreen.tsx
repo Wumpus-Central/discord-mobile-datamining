@@ -217,7 +217,7 @@ export default function AppLauncherViewAllScreen(route) {
     const index = item.index;
     let found;
     if (sectionDescriptors != null) {
-      found = arr.find((id) => id.id === item.applicationId);
+      found = sectionDescriptors.find((id) => id.id === item.applicationId);
     }
     let obj = context(sectionOverallPosition[9]);
     let application;
@@ -231,7 +231,7 @@ export default function AppLauncherViewAllScreen(route) {
       let tmp9 = null != appLauncherIconSource;
       if (tmp9) {
         obj = { iconSource: appLauncherIconSource, iconSize: 36 };
-        tmp9 = promotedApplicationIds(analyticsLocation(tmp3[17]), obj);
+        tmp9 = promotedApplicationIds(analyticsLocation(sectionOverallPosition[17]), obj);
       }
       obj = {
         command: item,
@@ -243,13 +243,12 @@ export default function AppLauncherViewAllScreen(route) {
         isLastRow: index === tmp6,
         context: item,
         section: found,
-        location: tmp2(tmp3[10]).ApplicationCommandTriggerLocations.APP_LAUNCHER_FRECENTS_VIEW_ALL,
+        location: context(sectionOverallPosition[10]).ApplicationCommandTriggerLocations.APP_LAUNCHER_FRECENTS_VIEW_ALL,
         sectionName,
         icon: tmp9,
       };
-      return promotedApplicationIds(tmp2(tmp3[18]).CommandRow, obj);
+      return promotedApplicationIds(context(sectionOverallPosition[18]).CommandRow, obj);
     }
-    arr = sectionDescriptors;
   }, items6);
   let obj1 = context(sectionOverallPosition[19]);
   const bottomSheetFlashListBottomViewabilityInset = obj1.useBottomSheetFlashListBottomViewabilityInset();

@@ -5,7 +5,7 @@ import GuildStore from "../../../stores/GuildStore.tsx";
 import UserStore from "../../../stores/UserStore.tsx";
 
 require = fn;
-function shouldShowMembershipVerificationGate(guildId, items) {
+function shouldShowMembershipVerificationGate(guildId) {
   let tmp = items;
   if (items === undefined) {
     items = [GuildStore, UserStore, GuildMemberStore];

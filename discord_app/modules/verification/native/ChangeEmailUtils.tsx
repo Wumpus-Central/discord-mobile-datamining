@@ -4,7 +4,7 @@ import UserSettingsAccountActionCreatorsAll from "../../../actions/UserSettingsA
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 
 require = fn;
-let closure_6 = async function _saveEmail(arg0, value) {
+let closure_6 = async function _saveEmail(arg0) {
   if (c6 === 2) {
     c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");

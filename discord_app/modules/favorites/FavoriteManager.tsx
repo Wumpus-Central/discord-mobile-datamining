@@ -1,4 +1,5 @@
 // discord_app/modules/favorites/FavoriteManager.tsx
+import FavoritesUtils from "FavoritesUtils.tsx";
 import FavoritesActionCreators from "FavoritesActionCreators.tsx";
 import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
 import AutomaticLifecycleManager from "../../lib/AutomaticLifecycleManager.tsx";
@@ -18,12 +19,14 @@ function handleCategoryCollapseAll(guildId) {
     const result = FavoritesActionCreators.setFavoriteCategoriesCollapsed(true);
     const tmpResult = FavoritesActionCreators;
   }
+  obj = FavoritesUtils;
 }
 function handleCategoryExpandAll(guildId) {
   if (obj.isFavoritesGuildId(guildId.guildId)) {
     const result = FavoritesActionCreators.setFavoriteCategoriesCollapsed(false);
     const tmpResult = FavoritesActionCreators;
   }
+  obj = FavoritesUtils;
 }
 function handleLogout() {
   React4(React3);
@@ -35,6 +38,7 @@ function handleThreadMembersUpdate(addedMembers) {
     const result = FavoritesActionCreators.autoAddJoinedThreadToFavorites(addedMembers.id);
     result.catch(NOOP);
   }
+  tmp2 = null != id && null != addedMembers && addedMembers.some((userId) => userId.userId === id);
 }
 function handleThreadCreate(channel) {
   channel = channel.channel;

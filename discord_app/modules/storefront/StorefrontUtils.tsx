@@ -1,5 +1,7 @@
 // discord_app/modules/storefront/StorefrontUtils.tsx
 import _modDef12 from "../../../_runtime/metro/00012__.js";
+import utils_PlatformUtils from "../../../discord_common/js/shared/utils/PlatformUtils.tsx";
+import FlagUtils from "../../../discord_common/js/shared/utils/FlagUtils.tsx";
 import PremiumUtilsDefault from "../../utils/PremiumUtils.tsx";
 import SlayerStorefrontUtils from "../slayer_storefront/SlayerStorefrontUtils.tsx";
 import StorefrontTypes from "StorefrontTypes.tsx";
@@ -52,9 +54,9 @@ function useSKUPrice(sku) {
     }
     if (null != sku) {
       if (null != stateFromStores1) {
-        let tmp12 = tmp11[SELF_PURCHASE];
+        let tmp12 = stateFromStores1[SELF_PURCHASE];
         if (tmp12 == null) {
-          tmp12 = tmp11[tmp4(undefined, 7233).StorefrontPurchaseType.SELF_PURCHASE];
+          tmp12 = stateFromStores1[tmp4(undefined, 7233).StorefrontPurchaseType.SELF_PURCHASE];
         }
         let found;
         if (tmp12 != null) {
@@ -118,8 +120,8 @@ function useSKUPrice(sku) {
           if (sku(userPrice[7]).StorefrontPromotionRewardType.DISCOUNT === type) {
             return true;
           } else {
-            if (tmp2(tmp3[7]).StorefrontPromotionRewardType.FIXED_PRICE !== type) {
-              if (tmp2(tmp3[7]).StorefrontPromotionRewardType.ACTION !== type) {
+            if (sku(userPrice[7]).StorefrontPromotionRewardType.FIXED_PRICE !== type) {
+              if (sku(userPrice[7]).StorefrontPromotionRewardType.ACTION !== type) {
                 const type2 = tmp.type;
                 return false;
               }
@@ -222,9 +224,10 @@ const result = size.fileFinishedImporting("modules/storefront/StorefrontUtils.ts
 export const transformStorefrontPricesServer = function transformStorefrontPricesServer(storefront_pricing) {
   let obj = { skuPriceMap: _modDef12.mapValues(storefront_pricing.sku_price_map, (pricingResultId) => ({ pricingResultId: pricingResultId.pricing_result_id, storefrontPromotionIds: pricingResultId.storefront_promotion_ids, rewardResultIds: pricingResultId.reward_result_ids })), pricingResultIdMap: null, rewardResultIdMap: null };
   obj.pricingResultIdMap = _modDef12.mapValues(storefront_pricing.pricing_result_id_map, (arg0) => _modDef12.mapValues(arg0, (user_price) => {
-    const obj = { userPrice: null, prices: closure_1_1(dependencyMap[6]).mapValues(user_price.prices, (arg0) => closure_1_1(closure_1_2[6]).mapValues(arg0, (arr) => arr.map(() => { ... }))) };
+    const obj = { userPrice: null, prices: null };
     user_price = user_price.user_price;
     obj.userPrice = user_price.map((currency) => ({ currency: currency.currency, amount: currency.amount }));
+    obj.prices = closure_1_1(dependencyMap[6]).mapValues(user_price.prices, (arg0) => closure_1_1(closure_1_2[6]).mapValues(arg0, (arr) => arr.map(() => { ... })));
     return obj;
   }));
   obj.rewardResultIdMap = _modDef12.mapValues(storefront_pricing.reward_result_id_map, (arg0) => _modDef12.mapValues(arg0, (type) => ({ type: type.type, amount: type.amount })));
@@ -252,15 +255,15 @@ export const isSlayerSkuAvailableOnThisPlatform = function isSlayerSkuAvailableO
         num = 0;
       }
       if (obj.isIOS()) {
-        let tmpResult = tmp(1384);
+        let tmpResult = FlagUtils;
         let hasFlagResult = tmpResult.hasFlag(num, constants3.AVAILABLE_ON_IOS);
       } else {
-        tmpResult = tmp(1116);
+        tmpResult = utils_PlatformUtils;
         const isAndroidResult = tmpResult.isAndroid();
         hasFlagResult = !isAndroidResult;
         if (isAndroidResult) {
-          hasFlagResult = tmp(1384).hasFlag(num, constants3.AVAILABLE_ON_ANDROID);
-          const tmpResult1 = tmp(1384);
+          hasFlagResult = FlagUtils.hasFlag(num, constants3.AVAILABLE_ON_ANDROID);
+          const tmpResult1 = FlagUtils;
         }
       }
       return hasFlagResult;
@@ -329,9 +332,9 @@ export const useSKUOrbPrice = function useSKUOrbPrice(sku) {
     }
     if (null != sku) {
       if (null != stateFromStores1) {
-        let tmp12 = tmp11[SELF_PURCHASE];
+        let tmp12 = stateFromStores1[SELF_PURCHASE];
         if (tmp12 == null) {
-          tmp12 = tmp11[tmp4(undefined, 7233).StorefrontPurchaseType.SELF_PURCHASE];
+          tmp12 = stateFromStores1[tmp4(undefined, 7233).StorefrontPurchaseType.SELF_PURCHASE];
         }
         let found;
         if (tmp12 != null) {

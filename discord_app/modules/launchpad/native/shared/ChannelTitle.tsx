@@ -30,7 +30,7 @@ export default noop.memo(function ChannelTitle(unread) {
   const memo = connected.useMemo(() => {
     let color = normal.normal;
     if (muted) {
-      color = tmp.muted;
+      color = normal.muted;
     } else {
       let tmp2 = unread;
       if (unread) {
@@ -40,7 +40,7 @@ export default noop.memo(function ChannelTitle(unread) {
         tmp2 = connected;
       }
       if (tmp2) {
-        color = tmp.unreadOrConnected;
+        color = normal.unreadOrConnected;
       }
     }
     return { color, paddingRight: 4, flexShrink: 1 };

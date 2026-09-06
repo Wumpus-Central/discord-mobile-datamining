@@ -20,8 +20,8 @@ const pressable = SettingBuilders.createPressable({
     const intl = util.intl;
     let stringResult = intl.string(util.t.lKDPGA);
     if (isAgeVerified) {
-      const intl2 = tmp(1114).intl;
-      stringResult = intl2.string(tmp(1114).t.sK0dmH);
+      const intl2 = util.intl;
+      stringResult = intl2.string(util.t.sK0dmH);
     }
     return stringResult;
   },

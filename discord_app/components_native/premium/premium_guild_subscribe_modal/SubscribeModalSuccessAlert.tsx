@@ -86,7 +86,7 @@ export default function SubscribeModalSuccessAlert(arg0) {
   dependencyMap = tmp7[1];
   obj = { style: tmp.wrapper, confirmText: null, onConfirm: null, children: null };
   const tmp9 = useThemeDefault();
-  const intl = tmp2(1114).intl;
+  const intl = util.intl;
   obj.confirmText = intl.string(util.t.YKxJCI);
   obj.onConfirm = function onConfirm() {
     closure_1(4905).close();
@@ -98,8 +98,8 @@ export default function SubscribeModalSuccessAlert(arg0) {
     loop: tmp7[0],
     onSceneComplete(currentScene) {
       if (PremiumPaymentGuildAnimation.Scenes.ENTRY === currentScene) {
-        return closure_1(tmp.Scenes.IDLE);
-      } else if (tmp.Scenes.IDLE === currentScene) {
+        return closure_1(PremiumPaymentGuildAnimation.Scenes.IDLE);
+      } else if (PremiumPaymentGuildAnimation.Scenes.IDLE === currentScene) {
         return dependencyMap(true);
       }
     },
@@ -113,21 +113,20 @@ export default function SubscribeModalSuccessAlert(arg0) {
   const obj2 = { style: tmp.activatedBackground, children: null };
   const obj3 = { style: tmp.activatedImage, source: null };
   const tmp14 = LinearGradientDefault;
-  const tmp15 = closure_6;
   if (tmp2Result.isThemeLight(tmp9)) {
     let tmp8Result = tmp8(13624);
   } else {
     tmp8Result = tmp8(13625);
   }
   obj3.source = tmp8Result;
-  obj2.children = closure_9(tmp15, obj3);
+  obj2.children = closure_9(closure_6, obj3);
   obj1.children = closure_9(closure_5, obj2);
   const items2 = [closure_9(tmp14, obj1)];
   const obj4 = { style: tmp.successInfo, children: null };
   const obj5 = { style: tmp.text, variant: "text-sm/medium", children: null };
-  const intl2 = tmp2(1114).intl;
+  const intl2 = util.intl;
   const string = intl2.string;
-  const t = tmp2(1114).t;
+  const t = util.t;
   if (someResult) {
     let stringResult = string(t.RMmWY3);
   } else {
@@ -137,7 +136,7 @@ export default function SubscribeModalSuccessAlert(arg0) {
   obj5.children = stringResult;
   const items3 = [closure_9(Text_Text.Text, obj5)];
   const obj7 = { style: tmp.text, variant: "text-sm/medium", children: null };
-  const intl3 = tmp2(1114).intl;
+  const intl3 = util.intl;
   obj7.children = intl3.format(util.t.r0IGsP, { guildName: stateFromStores.name, guildSubscriptionQuantity: num });
   items3[1] = closure_9(Text_Text.Text, obj7);
   obj4.children = items3;

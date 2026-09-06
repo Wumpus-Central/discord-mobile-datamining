@@ -2,6 +2,7 @@
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import ReanimatedRexport from "../../../../../modules/reanimated/ReanimatedRexport.tsx";
 import spring from "../../../../animation/reanimated/spring/spring.tsx";
+import BaseTextButton from "../../../Button/native/BaseTextButton.native.tsx";
 import springPresets from "../../../../animation/reanimated/spring/springPresets.tsx";
 import ButtonConstants2 from "../../../Button/native/ButtonConstants.native.tsx";
 import FloatingActionButton from "../../../Button/native/FloatingActionButton.native.tsx";
@@ -88,11 +89,11 @@ export const CollapsibleFloatingActionButton = function CollapsibleFloatingActio
   }
   const items = [styles.button];
   if (positionRight == null) {
-    positionRight = tmp3(8909).DEFAULT_POSITION_OFFSET;
+    positionRight = FloatingActionButton.DEFAULT_POSITION_OFFSET;
   }
   const rect = { position: "absolute", right: positionRight, bottom: null };
   if (positionBottom == null) {
-    positionBottom = tmp3(8909).DEFAULT_POSITION_OFFSET;
+    positionBottom = FloatingActionButton.DEFAULT_POSITION_OFFSET;
   }
   rect.bottom = positionBottom;
   items[1] = rect;
@@ -114,7 +115,7 @@ export const CollapsibleFloatingActionButton = function CollapsibleFloatingActio
     obj1.icon = cloneElementResult;
     obj1.style = items;
     obj1.pillStyle = tmp2.textButtonPill;
-    tmp12 = jsx(tmp3(4976).BaseTextButton, {});
+    tmp12 = jsx(BaseTextButton.BaseTextButton, {});
   }
   return tmp12;
 };

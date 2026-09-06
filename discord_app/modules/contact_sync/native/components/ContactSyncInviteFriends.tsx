@@ -2,13 +2,13 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
 import AnalyticsUtilsDefault from "../../../../utils/AnalyticsUtils.tsx";
+import UserUtilsDefault from "../../../../utils/UserUtils.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import showShareActionSheet from "../../../action_sheet/native/showShareActionSheet.tsx";
 import _modDef12701 from "../../../../../_runtime/metro/12701__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import UserStore from "../../../../stores/UserStore.tsx";
 
-const UserUtilsDefault = tmp(4404);
 require = fn;
 const View = fn(17).View;
 const Constants = fn(1074);
@@ -34,7 +34,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/contact_sync/native/components/ContactSyncInviteFriends.tsx");
 
 export default function ContactSyncInviteFriends() {
-  let tmp = closure_10();
+  const tmp = closure_10();
   let obj = require("initialize");
   const items = [UserStore];
   _require = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
@@ -75,8 +75,8 @@ export default function ContactSyncInviteFriends() {
       url: "https://discord.com/",
       username: str,
     });
-    const tmp3 = constants2;
-    showShareActionSheet.showShareActionSheet({ message: formatToPlainStringResult }, tmp3.CONTACT_SYNC_MODAL);
+    showShareActionSheet.showShareActionSheet({ message: formatToPlainStringResult }, constants2.CONTACT_SYNC_MODAL);
+    const tmp5Result = showShareActionSheet;
   };
   obj4.children = closure_7(require("components/Button/Button").Button, obj5);
   items2[1] = closure_7(View, obj4);

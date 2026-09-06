@@ -18,13 +18,13 @@ export default function rateLimit(arg0, arg1, arg2) {
     }
     let arr2 = closure_4;
     if (closure_4.length > 0) {
-      arr2 = tmp4;
-      if (tmp4[0] <= timestamp) {
+      arr2 = closure_4;
+      if (closure_4[0] <= timestamp) {
         closure_4.shift();
         arr2 = closure_4;
         while (closure_4.length > 0) {
-          arr2 = tmp5;
-          if (tmp5[0] > timestamp) {
+          arr2 = closure_4;
+          if (closure_4[0] > timestamp) {
             break;
           }
         }

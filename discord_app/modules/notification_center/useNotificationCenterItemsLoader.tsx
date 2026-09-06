@@ -125,7 +125,7 @@ export const useNotificationCenterItemsLoader = function useNotificationCenterIt
       const notificationCenterItems = obj.fetchNotificationCenterItems(obj);
     }
   }, items5);
-  _require = flag(function* (arg0, value) {
+  _require = flag(function* (arg0) {
     if (with_mentions === 2) {
       with_mentions = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -162,8 +162,8 @@ export const useNotificationCenterItemsLoader = function useNotificationCenterIt
               current = null == after;
             }
             if (!current) {
-              let tmp13 = !tmp27;
-              if (!tmp27) {
+              let tmp13 = !closure_0;
+              if (!closure_0) {
                 tmp13 = errored;
               }
               current = tmp13;
@@ -171,7 +171,7 @@ export const useNotificationCenterItemsLoader = function useNotificationCenterIt
             if (current) {
               with_mentions = 3;
             } else {
-              tmp28.current = true;
+              ref.current = true;
               _undefined(true);
               let obj1 = closure_0(isDesktop[8]);
               obj1 = { after, with_mentions, roles_filter, everyone_filter, limit: null };
@@ -190,7 +190,6 @@ export const useNotificationCenterItemsLoader = function useNotificationCenterIt
               };
               return obj2;
             }
-            tmp28 = ref;
           }
         } else if (arg0 === 1) {
           with_mentions = 3;

@@ -92,8 +92,8 @@ export default function RestrictedMessagePreviewHeader(channel) {
     obj3.accessibilityHint = intl3.string(tmp12(tmp3[18]).t.y5MwJy);
     obj3.onPress = callback1;
     const obj4 = { variant: "heading-lg/medium", color: "text-default", children: userTag };
-    obj3.children = tmp11(tmp12(tmp3[20]).Text, obj4);
-    tmp11Result = tmp11(tmp12(tmp3[17]).PressableOpacity, obj3);
+    obj3.children = closure_6(tmp12(tmp3[20]).Text, obj4);
+    tmp11Result = closure_6(tmp12(tmp3[17]).PressableOpacity, obj3);
   }
   items3[2] = tmp11Result;
   const obj5 = { variant: "text-md/medium", color: "text-default", children: null };

@@ -103,7 +103,7 @@ export default function SecureFramesUserVerificationModal(userId) {
   let callback = fingerprintUserKey.useCallback(() => {
     if (null != fingerprintUserKey) {
       let obj = SecureFramesUtils;
-      obj.addVerification(userId, tmp, isOtherUserKeyPersistent, channelId, map1.E2EE_USER_VERIFY_MODAL);
+      obj.addVerification(userId, fingerprintUserKey, isOtherUserKeyPersistent, channelId, map1.E2EE_USER_VERIFY_MODAL);
       let arr = ModalActionCreatorsDefault;
       arr = arr.pop();
       obj = { key, iconColor: "text-feedback-positive", IconComponent: CircleCheckIcon.CircleCheckIcon, content: null };
@@ -133,18 +133,16 @@ export default function SecureFramesUserVerificationModal(userId) {
         let obj = { userId, channelId };
         const result = SecureFramesTracking.trackE2EEUserVerificationShareClicked(obj);
         if (enabled) {
-          let userVerificationDeeplink = showShareActionSheet(9150).getUserVerificationDeeplink(tmp8, tmp);
+          let userVerificationDeeplink = showShareActionSheet(9150).getUserVerificationDeeplink(userId, tmp);
           const showShareActionSheetResult = showShareActionSheet(9150);
         } else {
-          userVerificationDeeplink = obj3.join(" ");
+          userVerificationDeeplink = readableSecureFramesFingerprint.join(" ");
         }
-        tmp8 = userId;
         showShareActionSheet = showShareActionSheet(8361).showShareActionSheet;
         obj = { message: userVerificationDeeplink };
         showShareActionSheet(obj, constants.SECURE_FRAMES_VOICE_BOTTOM_SHEET);
         const showShareActionSheetResult1 = showShareActionSheet(8361);
       }
-      obj3 = readableSecureFramesFingerprint;
     }
   }, items4);
   analyticsLocations = channelId(name[25])().analyticsLocations;
@@ -216,13 +214,13 @@ export default function SecureFramesUserVerificationModal(userId) {
     };
     const intl2 = tmp2(tmp3[21]).intl;
     obj3.accessibilityLabel = intl2.string(tmp2(tmp3[21]).t.RDE0Sc);
-    obj3.androidRippleConfig = tmp25;
+    obj3.androidRippleConfig = ANDROID_FOREGROUND_RIPPLE;
     obj3.onPress = callback2;
     obj4 = { variant: "text-md/semibold", color: "text-brand", children: null };
     const intl3 = tmp2(tmp3[21]).intl;
     obj4.children = intl3.string(tmp2(tmp3[21]).t.RDE0Sc);
-    obj3.children = tmp24(tmp2(tmp3[32]).Text, obj4);
-    tmp24Result = tmp24(tmp2(tmp3[30]).PressableOpacity, obj3);
+    obj3.children = closure_16(tmp2(tmp3[32]).Text, obj4);
+    tmp24Result = closure_16(tmp2(tmp3[30]).PressableOpacity, obj3);
   }
   items9[1] = tmp24Result;
   obj1.children = items9;
@@ -257,16 +255,15 @@ export default function SecureFramesUserVerificationModal(userId) {
     }, items6),
     2,
   );
-  tmp25 = ANDROID_FOREGROUND_RIPPLE;
   const intl6 = tmp2(tmp3[21]).intl;
   obj10.title = intl6.string(userId(name[21]).t["/WPGnF"]);
   obj10.chunks = readableSecureFramesFingerprint;
   obj10.columns = columns;
   if (null == readableSecureFramesFingerprint) {
-    tmp24Result = tmp24(readableSecureFramesFingerprint, {});
+    tmp24Result = closure_16(readableSecureFramesFingerprint, {});
   } else {
     const obj11 = { color: tmp19, text: tmp18 };
-    tmp24Result = tmp24(tmp2(tmp3[28]).TextBadge, obj11);
+    tmp24Result = closure_16(tmp2(tmp3[28]).TextBadge, obj11);
   }
   obj10.trailing = tmp24Result;
   items12[1] = closure_16(channelId(name[35]), obj10);

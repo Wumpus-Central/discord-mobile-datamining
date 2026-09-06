@@ -4,6 +4,7 @@ import Powerups from "../../../../discord_common/js/shared/shared-constants/Powe
 import LinearGradientDefault from "../../../../_runtime/04987_LinearGradient.js";
 import GuildPowerupsActionCreators from "../../premium/powerups/GuildPowerupsActionCreators.tsx";
 import useGetGuildPowerupBannerImageDefault from "../../premium/powerups/hooks/useGetGuildPowerupBannerImage.tsx";
+import GuildPowerupsImageDefault from "../../premium/powerups/native/GuildPowerupsImage.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import GuildPowerupsStore from "../../premium/powerups/GuildPowerupsStore.tsx";
 
@@ -105,7 +106,7 @@ export default function GuildSettingsServerTagUpsellCard(guildId) {
   let tmp10Result = null != tmp6;
   if (tmp10Result) {
     const obj5 = { imageUrl: tmp6, style: tmp.powerupImage };
-    tmp10Result = tmp10(tmp5(12523), obj5);
+    tmp10Result = closure_6(GuildPowerupsImageDefault, obj5);
   }
   obj4.children = tmp10Result;
   const items5 = [closure_6(closure_4, obj4), ,];

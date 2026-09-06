@@ -1,6 +1,8 @@
 // discord_app/modules/quests/utils/QuestDataUtils.tsx
 import SentryUtilsDefault from "../../../utils/SentryUtils.native.tsx";
+import FlagUtils from "../../../../discord_common/js/shared/utils/FlagUtils.tsx";
 import QuestTypes from "../QuestTypes.tsx";
+import AdDecisionUtils from "../../ads/utils/AdDecisionUtils.tsx";
 import AdDeliveryStore from "../../ads/AdDeliveryStore.tsx";
 import LocaleStore from "../../user_settings/LocaleStore.tsx";
 import BountyStore from "../BountyStore.tsx";
@@ -26,9 +28,9 @@ function getQuestDeliveryDataForPlacement(arg0, adContentId) {
           trafficMetadataSealed: null,
           provenanceMetadataSealed: null,
         };
-        let tmpResult = tmp(7701);
+        let tmpResult = AdDecisionUtils;
         obj.questId = tmpResult.getDeliveredQuestId(adDecisionByPlacementAndAdCreativeId.creative);
-        tmpResult = tmp(7701);
+        tmpResult = AdDecisionUtils;
         obj.adCreativeId = tmpResult.getDeliveredAdCreativeId(adDecisionByPlacementAndAdCreativeId.creative);
         ({
           adDecisionData: obj.adDecisionData,
@@ -49,10 +51,10 @@ function getQuestDeliveryDataForPlacement(arg0, adContentId) {
   } else {
     const deliveryAdDecisionByPlacement = AdDeliveryStore.deliveryAdDecisionByPlacement;
     value = deliveryAdDecisionByPlacement.get(arg0);
-    if (arg0 === tmp(5447).AdPlacement.QUEST_HOME_BANNER_DESKTOP) {
+    if (arg0 === QuestTypes.AdPlacement.QUEST_HOME_BANNER_DESKTOP) {
       if (null != value) {
         obj = {
-          questId: tmp(7701).getDeliveredQuestId(value.creative),
+          questId: AdDecisionUtils.getDeliveredQuestId(value.creative),
           adCreativeId: null,
           adDecisionData: null,
           adContext: null,
@@ -60,8 +62,8 @@ function getQuestDeliveryDataForPlacement(arg0, adContentId) {
           trafficMetadataSealed: null,
           provenanceMetadataSealed: null,
         };
-        const tmpResult1 = tmp(7701);
-        obj.adCreativeId = tmp(7701).getDeliveredAdCreativeId(value.creative);
+        const tmpResult1 = AdDecisionUtils;
+        obj.adCreativeId = AdDecisionUtils.getDeliveredAdCreativeId(value.creative);
         ({
           adDecisionData: obj7.adDecisionData,
           adContext: obj7.adContext,
@@ -70,14 +72,14 @@ function getQuestDeliveryDataForPlacement(arg0, adContentId) {
           provenanceMetadataSealed: obj7.provenanceMetadataSealed,
         } = value);
         let tmp9 = obj;
-        const tmpResult2 = tmp(7701);
+        const tmpResult2 = AdDecisionUtils;
       }
       return tmp9;
     }
     tmp9 = null;
     if (null != value) {
       obj = {
-        questId: tmp(7701).getDeliveredQuestId(value.creative),
+        questId: AdDecisionUtils.getDeliveredQuestId(value.creative),
         adCreativeId: null,
         adDecisionData: null,
         adContext: null,
@@ -85,8 +87,8 @@ function getQuestDeliveryDataForPlacement(arg0, adContentId) {
         trafficMetadataSealed: null,
         provenanceMetadataSealed: null,
       };
-      const tmpResult3 = tmp(7701);
-      obj.adCreativeId = tmp(7701).getDeliveredAdCreativeId(value.creative);
+      const tmpResult3 = AdDecisionUtils;
+      obj.adCreativeId = AdDecisionUtils.getDeliveredAdCreativeId(value.creative);
       ({
         adDecisionData: obj4.adDecisionData,
         adContext: obj4.adContext,
@@ -95,7 +97,7 @@ function getQuestDeliveryDataForPlacement(arg0, adContentId) {
         provenanceMetadataSealed: obj4.provenanceMetadataSealed,
       } = value);
       tmp9 = obj;
-      const tmpResult4 = tmp(7701);
+      const tmpResult4 = AdDecisionUtils;
     }
   }
 }
@@ -165,21 +167,20 @@ export const findQuestOrReplacement = function findQuestOrReplacement(questId, q
     return value1;
   }
 };
-export const isDismissible = function isDismissible(arg0) {
+export const isDismissible = function isDismissible(content) {
   const keys = Object.keys(React5);
-  return keys.includes(QuestTypes.QuestContent[arg0]);
+  return keys.includes(QuestTypes.QuestContent[content]);
 };
-export const isDismissed = function isDismissed(dismissedQuestContent, arg1) {
+export const isDismissed = function isDismissed(dismissedQuestContent, ACTIVITY_PANEL) {
   const keys = Object.keys(React5);
-  if (keys.includes(QuestTypes.QuestContent[arg1])) {
-    return tmp2(1384).hasFlag(
+  if (keys.includes(QuestTypes.QuestContent[ACTIVITY_PANEL])) {
+    return FlagUtils.hasFlag(
       dismissedQuestContent.dismissedQuestContent,
-      tmp[tmp2(undefined, 5447).QuestContent[arg1]],
+      React5[QuestTypes.QuestContent[ACTIVITY_PANEL]],
     );
   } else {
     return false;
   }
-  tmp = React5;
 };
 export const isQuestConfigExpired = function isQuestConfigExpired(expiresAt) {
   const date = new Date(expiresAt.expiresAt);

@@ -52,7 +52,7 @@ export default noop.memo(function GuildsBarMessages() {
   };
   const tmp6 = useGuildsBarBottomRightBadgeDefault({ mentionCount: 0 });
   const tmp7 = stateFromStores ? colors.WHITE : colors.MOBILE_GUILDBAR_ICON_DEFAULT;
-  const intl = tmp(1114).intl;
+  const intl = util.intl;
   obj.label = intl.string(util.t.YUU0RF);
   obj.externalChildren = badge;
   obj.expandedChildren = jsx(HomeDrawerDirectMessagesRowDefault, {});

@@ -12,7 +12,7 @@ export const getGuildTraits = function getGuildTraits(fromGuildProfileResult) {
   const set = new Set(fromGuildProfileResult.features);
   let APPLY_TO_JOIN = obj.INVITE_ONLY;
   if (set.has(constants.COMMUNITY)) {
-    if (set.has(tmp2.DISCOVERABLE)) {
+    if (set.has(constants.DISCOVERABLE)) {
       APPLY_TO_JOIN = tmp.PUBLIC;
     }
     if (null == fromGuildProfileResult) {
@@ -32,10 +32,10 @@ export const getGuildTraits = function getGuildTraits(fromGuildProfileResult) {
         NONE = constants2.NONE;
       }
       obj = {
-        verified: set.has(tmp2.VERIFIED),
-        partnered: set.has(tmp2.PARTNERED),
-        community: set.has(tmp2.COMMUNITY),
-        staff: set.has(tmp2.INTERNAL_EMPLOYEE_ONLY),
+        verified: set.has(constants.VERIFIED),
+        partnered: set.has(constants.PARTNERED),
+        community: set.has(constants.COMMUNITY),
+        staff: set.has(constants.INTERNAL_EMPLOYEE_ONLY),
         visibility: APPLY_TO_JOIN,
         premium: tmp5,
         premiumSubscriberCount: num3,
@@ -61,6 +61,7 @@ export const getGuildTraits = function getGuildTraits(fromGuildProfileResult) {
   if (tmp3) {
     APPLY_TO_JOIN = tmp.APPLY_TO_JOIN;
   }
+  tmp3 = set.has(constants.MEMBER_VERIFICATION_MANUAL_APPROVAL) && set.has(constants.MEMBER_VERIFICATION_GATE_ENABLED);
 };
 export const isPremiumGuild = function isPremiumGuild(has) {
   let premiumTier = has;

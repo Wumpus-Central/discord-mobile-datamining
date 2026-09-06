@@ -1,7 +1,9 @@
 // discord_app/modules/parent_tools/SpendingLimitDisplay.tsx
 import initialize from "../../../discord_common/js/packages/flux/index.tsx";
+import util from "../../intl/index.native.tsx";
 import _modDef2396 from "FamilyCenter.messages.js";
 import PriceUtils from "../../utils/PriceUtils.tsx";
+import utils_PriceUtils from "../../../discord_common/js/shared/utils/PriceUtils.tsx";
 import SpendingLimitUtils from "SpendingLimitUtils.tsx";
 import UserSettingsProtoStore from "../user_settings/UserSettingsProtoStore.tsx";
 import FamilyCenterStore from "FamilyCenterStore.tsx";
@@ -24,17 +26,17 @@ function getSpendingLimitDisplayState(amount, arg1) {
       let obj = { kind: "spent", monthlyText: formatRateResult };
       return obj;
     } else {
-      let num = tmp5(7235).CurrencyExponents[amount.currency];
+      let num = utils_PriceUtils.CurrencyExponents[amount.currency];
       if (num == null) {
         num = 2;
       }
       const diff = amount.amount - arg1;
       if (diff <= 10 * 10 ** num) {
         obj = { kind: "close-to-limit", monthlyText: formatRateResult, remainingText: null };
-        const intl = tmp5(1114).intl;
-        const obj1 = { amount: tmp5(7234).formatPrice(diff, currency) };
+        const intl = util.intl;
+        const obj1 = { amount: PriceUtils.formatPrice(diff, currency) };
         obj.remainingText = intl.formatToPlainString(_modDef2396["+Q+bU1"], obj1);
-        const tmp5Result = tmp5(7234);
+        const tmp5Result = PriceUtils;
       } else {
         obj = { kind: "on", monthlyText: formatRateResult };
       }

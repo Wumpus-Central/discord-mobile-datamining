@@ -10,21 +10,21 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 function getStatusSize(arg0) {
   if (CutoutableAvatarImage.AvatarSizes.XXSMALL !== arg0) {
-    if (tmp(13028).AvatarSizes.XSMALL !== arg0) {
-      if (tmp(13028).AvatarSizes.XSMALL_20 !== arg0) {
-        if (tmp(13028).AvatarSizes.SMALL !== arg0) {
-          if (tmp(13028).AvatarSizes.REFRESH_MEDIUM_32 === arg0) {
+    if (CutoutableAvatarImage.AvatarSizes.XSMALL !== arg0) {
+      if (CutoutableAvatarImage.AvatarSizes.XSMALL_20 !== arg0) {
+        if (CutoutableAvatarImage.AvatarSizes.SMALL !== arg0) {
+          if (CutoutableAvatarImage.AvatarSizes.REFRESH_MEDIUM_32 === arg0) {
             return React5.REFRESH_MEDIUM_10;
           } else {
-            if (tmp(13028).AvatarSizes.NORMAL !== arg0) {
-              if (tmp(13028).AvatarSizes.TABS_22 !== arg0) {
-                if (tmp(13028).AvatarSizes.LARGE !== arg0) {
-                  if (tmp(13028).AvatarSizes.LARGE_48 !== arg0) {
-                    if (tmp(13028).AvatarSizes.XLARGE !== arg0) {
-                      if (tmp(13028).AvatarSizes.XLARGE_72 !== arg0) {
-                        if (tmp(13028).AvatarSizes.XXLARGE !== arg0) {
-                          if (tmp(13028).AvatarSizes.PROFILE !== arg0) {
-                            if (tmp(13028).AvatarSizes.YOUBAR_60 !== arg0) {
+            if (CutoutableAvatarImage.AvatarSizes.NORMAL !== arg0) {
+              if (CutoutableAvatarImage.AvatarSizes.TABS_22 !== arg0) {
+                if (CutoutableAvatarImage.AvatarSizes.LARGE !== arg0) {
+                  if (CutoutableAvatarImage.AvatarSizes.LARGE_48 !== arg0) {
+                    if (CutoutableAvatarImage.AvatarSizes.XLARGE !== arg0) {
+                      if (CutoutableAvatarImage.AvatarSizes.XLARGE_72 !== arg0) {
+                        if (CutoutableAvatarImage.AvatarSizes.XXLARGE !== arg0) {
+                          if (CutoutableAvatarImage.AvatarSizes.PROFILE !== arg0) {
+                            if (CutoutableAvatarImage.AvatarSizes.YOUBAR_60 !== arg0) {
                               return null;
                             }
                           }
@@ -143,9 +143,9 @@ export default noop.memo((isMobileOnline) => {
       let items = statusSizeOverride;
       if (null != diff1) {
         if (diff1 !== StatusTypes.UNKNOWN) {
-          diff1 = CutoutableAvatarImage.AVATAR_SIZE_MAP[tmp2];
+          diff1 = CutoutableAvatarImage.AVATAR_SIZE_MAP[NORMAL];
           if (items == null) {
-            items = getStatusSize(tmp2);
+            items = getStatusSize(NORMAL);
           }
           if (items == null) {
             items = 0;
@@ -154,12 +154,6 @@ export default noop.memo((isMobileOnline) => {
           if (tmp5) {
             const statusTypingDimensions = Status_StatusUtils.getStatusTypingDimensions(items);
             ({ width: width3, height: height3 } = statusTypingDimensions);
-            if (flag == null) {
-              flag = false;
-            }
-            if (flag2 == null) {
-              flag2 = false;
-            }
             const sum = height3 + 2 * timestampProducer;
             let obj = { nativeCutouts: null };
             const size = { shape: null, x: null, y: null, width: null, height: null, cornerRadius: null };
@@ -317,7 +311,7 @@ export default noop.memo((isMobileOnline) => {
               color: flag2(tmp7[6]).unsafe_rawColors.WHITE,
             };
             obj4.children = decoration(flag2(tmp7[15]), obj5);
-            let tmp53 = decoration(tmp6, obj4);
+            let tmp53 = decoration(cutout, obj4);
             const tmp59 = flag2(tmp7[15]);
           } else if (mute) {
             let obj6 = { style: null, children: null };
@@ -330,12 +324,12 @@ export default noop.memo((isMobileOnline) => {
               color: flag2(tmp7[6]).unsafe_rawColors.WHITE,
             };
             obj6.children = decoration(flag2(tmp7[15]), obj7);
-            tmp53 = decoration(tmp6, obj6);
+            tmp53 = decoration(cutout, obj6);
             const tmp56 = flag2(tmp7[15]);
           }
           items2[4] = tmp53;
           merged.children = items2;
-          return closure_9(tmp6, merged);
+          return closure_9(cutout, merged);
         }
       }
     }
@@ -369,7 +363,7 @@ export default noop.memo((isMobileOnline) => {
       let size1 = { width: sum, height: sum, borderRadius: sum / 2 };
       items7[1] = size1;
       obj11.style = items7;
-      tmp9Result = tmp9(tmp6, obj11);
+      tmp9Result = tmp9(cutout, obj11);
     }
   }
 });

@@ -2,6 +2,8 @@
 import util from "../intl/index.native.tsx";
 import ChannelRecord from "../records/ChannelRecord.tsx";
 import HelpdeskUtilsDefault from "HelpdeskUtils.tsx";
+import SoundmojiRenderingExperiment from "../modules/premium/sounds/soundmoji/SoundmojiRenderingExperiment.tsx";
+import useIsCreatorMonetizationEnabledGuild from "../modules/creator_monetization_eligibility/useIsCreatorMonetizationEnabledGuild.tsx";
 import GuildOfficialMessagesExperimentDefault from "../modules/messages/GuildOfficialMessagesExperiment.tsx";
 import tracking_Tracking from "../modules/forums/tracking/Tracking.tsx";
 import ChannelPermissionsConstants from "../modules/channel_permissions/ChannelPermissionsConstants.tsx";
@@ -19,10 +21,10 @@ function getPermissionOptions(id) {
   const guild = GuildStore.getGuild(id);
   let result1 = null != guild;
   if (result1) {
-    let tmpResult = tmp(7251);
+    let tmpResult = useIsCreatorMonetizationEnabledGuild;
     result1 = tmpResult.isCreatorMonetizationEnabledGuild(guild);
   }
-  tmpResult = tmp(5017);
+  tmpResult = SoundmojiRenderingExperiment;
   const soundmojiRenderingExperiment = tmpResult.getSoundmojiRenderingExperiment({ location: "getPermissionOptions" });
   obj = { guildId: id, location: "getPermissionOptions" };
   obj = {
@@ -35,12 +37,12 @@ function getPermissionOptions(id) {
     inSoundmojiExperiment: null,
     enableHangoutWindow: null,
   };
-  const intl = tmp(1114).intl;
+  const intl = util.intl;
   const obj1 = { keybind: null };
-  const intl2 = tmp(1114).intl;
+  const intl2 = util.intl;
   obj1.keybind = intl2.string(util.t.DkSwJ2);
   obj.PRIORITY_SPEAKER_DESCRIPTION = intl.format(util.t.ZuzwPz, obj1);
-  const intl3 = tmp(1114).intl;
+  const intl3 = util.intl;
   const obj2 = { helpCenterArticle: null };
   const tmpResult1 = HangoutWindowExperiment;
   obj2.helpCenterArticle = HelpdeskUtilsDefault.getArticleURL(constants.SOUNDBOARD);
@@ -143,7 +145,7 @@ export default {
       channelEventsSection = obj33.generateChannelEventsSection(tmp3, intl29.string(tmp4(1114).t.b8lplT));
       items[arraySpreadResult] = channelEventsSection;
     } else {
-      if (tmp16.GUILD_VOICE === type) {
+      if (constants2.GUILD_VOICE === type) {
         const intl16 = tmp4(1114).intl;
         const items3 = [
           permissions_PermissionUtilsAll.generateChannelGeneralSection(tmp3, intl16.string(tmp4(1114).t.ouHggI), {
@@ -169,7 +171,7 @@ export default {
         const obj28 = permissions_PermissionUtilsAll;
         if (result) {
           const intl20 = tmp4(1114).intl;
-          const obj2 = {
+          let obj2 = {
             setUpAutomod() {
               GuildSettingsActionCreatorsDefault.open(set, constants5.GUILD_AUTOMOD);
             },
@@ -178,15 +180,15 @@ export default {
         }
         const obj3 = { sectionDescription: formatResult, inSoundmojiExperiment };
         items3[3] = obj28.generateChannelVoiceChatSection(tmp3, intl19.string(tmp4(1114).t.iqlsnD), obj3);
-        let tmp30Result = tmp30(16834);
+        let tmp30Result = permissions_PermissionUtilsAll;
         const intl21 = tmp4(1114).intl;
         items3[4] = tmp30Result.generateChannelEventsSection(tmp3, intl21.string(tmp4(1114).t.b8lplT));
-        tmp30Result = tmp30(16834);
+        tmp30Result = permissions_PermissionUtilsAll;
         const intl22 = tmp4(1114).intl;
         items3[5] = tmp30Result.generateChannelAppsSection(tmp3, intl22.string(tmp4(1114).t["rrh/W6"]));
         let items5 = items3;
         const stringResult = intl19.string(tmp4(1114).t.iqlsnD);
-      } else if (tmp16.GUILD_STAGE_VOICE === type) {
+      } else if (constants2.GUILD_STAGE_VOICE === type) {
         const intl8 = tmp4(1114).intl;
         const items4 = [
           permissions_PermissionUtilsAll.generateChannelGeneralSection(tmp3, intl8.string(tmp4(1114).t.ouHggI), {
@@ -198,7 +200,6 @@ export default {
           ,
           ,
         ];
-        const tmp27 = importAll;
         const intl9 = tmp4(1114).intl;
         items4[1] = permissions_PermissionUtilsAll.generateChannelMembershipSection(
           tmp3,
@@ -236,21 +237,22 @@ export default {
         items4[5] = obj21.generateChannelVoiceChatSection(tmp3, intl13.string(tmp4(1114).t.iqlsnD), obj5);
         const stringResult1 = intl13.string(tmp4(1114).t.iqlsnD);
         const intl15 = tmp4(1114).intl;
-        items4[6] = tmp27(16834).generateChannelAppsSection(tmp3, intl15.string(tmp4(1114).t["rrh/W6"]), {
-          showActivities: false,
-        });
+        items4[6] = permissions_PermissionUtilsAll.generateChannelAppsSection(
+          tmp3,
+          intl15.string(tmp4(1114).t["rrh/W6"]),
+          { showActivities: false },
+        );
         items5 = items4;
-        const tmp27Result = tmp27(16834);
+        const tmp27Result = permissions_PermissionUtilsAll;
       } else {
-        if (tmp16.GUILD_FORUM !== type) {
-          if (tmp16.GUILD_MEDIA !== type) {
+        if (constants2.GUILD_FORUM !== type) {
+          if (constants2.GUILD_MEDIA !== type) {
             const intl30 = tmp4(1114).intl;
             items5 = [
               permissions_PermissionUtilsAll.generateChannelGeneralSection(tmp3, intl30.string(tmp4(1114).t.ouHggI)),
               ,
               ,
             ];
-            const tmp38 = importAll;
             const intl31 = tmp4(1114).intl;
             items5[1] = permissions_PermissionUtilsAll.generateChannelMembershipSection(
               tmp3,
@@ -258,7 +260,7 @@ export default {
             );
             const intl32 = tmp4(1114).intl;
             const obj6 = {
-              showPrivateThreads: stateFromStores.type !== tmp16.GUILD_ANNOUNCEMENT,
+              showPrivateThreads: stateFromStores.type !== constants2.GUILD_ANNOUNCEMENT,
               showCreateThreads: true,
               inSoundmojiExperiment,
             };
@@ -274,9 +276,11 @@ export default {
             );
             if (enabled) {
               const intl = tmp4(1114).intl;
-              const items6 = [tmp38(16834).generateChannelVoiceSection(tmp3, intl.string(tmp4(1114).t["46Ra1b"]))];
+              const items6 = [
+                permissions_PermissionUtilsAll.generateChannelVoiceSection(tmp3, intl.string(tmp4(1114).t["46Ra1b"])),
+              ];
               let items7 = items6;
-              const tmp38Result = tmp38(16834);
+              const tmp38Result = permissions_PermissionUtilsAll;
             } else {
               items7 = [];
             }
@@ -321,11 +325,11 @@ export default {
           inSoundmojiExperiment,
         };
         items8[2] = permissions_PermissionUtilsAll.generateChannelTextSection(tmp3, stringResult2, obj8);
-        let tmp22Result = tmp22(16834);
+        let tmp22Result = permissions_PermissionUtilsAll;
         const intl6 = tmp4(1114).intl;
         items8[3] = tmp22Result.generateChannelAppsSection(tmp3, intl6.string(tmp4(1114).t["rrh/W6"]));
         if (enabled) {
-          tmp22Result = tmp22(16834);
+          tmp22Result = permissions_PermissionUtilsAll;
           const intl7 = tmp4(1114).intl;
           const items9 = [tmp22Result.generateChannelVoiceSection(tmp3, intl7.string(tmp4(1114).t["46Ra1b"]))];
           let items10 = items9;
@@ -347,6 +351,7 @@ export default {
       }
       return mapped;
     }
+    isStageVideoEnabledResult = tmp4Result.isStageVideoEnabled(guild_id);
   },
   generateGuildPermissionSpec(features) {
     set = new Set();

@@ -32,7 +32,7 @@ const stopWatch1 = new fn(4589).StopWatch();
 obj[DeviceTypes.AUDIO_OUTPUT] = stopWatch1;
 const stopWatch2 = new fn(4589).StopWatch();
 obj[DeviceTypes.VIDEO_INPUT] = stopWatch2;
-const dependencyMap = { [DeviceTypes.AUDIO_INPUT]: {}, [DeviceTypes.AUDIO_OUTPUT]: {}, [DeviceTypes.VIDEO_INPUT]: {} };
+let dependencyMap = { [DeviceTypes.AUDIO_INPUT]: {}, [DeviceTypes.AUDIO_OUTPUT]: {}, [DeviceTypes.VIDEO_INPUT]: {} };
 obj = {};
 obj[DeviceTypes.AUDIO_INPUT] = new FrecencyDefault(obj);
 const tmp6 = new FrecencyDefault(obj);
@@ -43,17 +43,17 @@ const PersistedStore = initializeDefault.PersistedStore;
 class DeviceFrecencyStore extends PersistedStore {}
 const prototype = DeviceFrecencyStore.prototype;
 prototype["initialize"] = function initialize(arg0) {
-  closure_0 = arg0;
+  dependencyMap = arg0;
   this.waitFor(MediaEngineStore, UserStore);
   const items = [, ,];
   ({ AUDIO_INPUT: arr[0], AUDIO_OUTPUT: arr[1], VIDEO_INPUT: arr[2] } = DeviceTypes);
   const item = items.forEach((item) => {
     let tmp2;
-    if (closure_0 != null) {
-      tmp2 = tmp[item];
+    if (dependencyMap != null) {
+      tmp2 = dependencyMap[item];
     }
     if (null != tmp2) {
-      obj[item].overwriteHistory(tmp[item]);
+      obj[item].overwriteHistory(dependencyMap[item]);
     }
     obj[item].reset();
   });
@@ -68,7 +68,7 @@ prototype["reset"] = function reset() {
 };
 prototype["track"] = function track(arg0, arg1, usesSinceLastTrack) {
   if (null == dependencyMap[arg0][arg1]) {
-    tmp[arg0][arg1] = 0;
+    dependencyMap[arg0][arg1] = 0;
   }
   dependencyMap[arg0][arg1] = dependencyMap[arg0][arg1] + usesSinceLastTrack;
   obj = { usesSinceLastTrack };
@@ -112,6 +112,7 @@ prototype["stopSampling"] = function stopSampling(AUDIO_OUTPUT, oldId) {
     this.track(AUDIO_OUTPUT, currentDeviceId, asMillisecondsResult);
   }
   obj.reset();
+  const elapsedResult = obj.elapsed();
 };
 prototype["getState"] = function getState() {
   obj = {
@@ -131,8 +132,8 @@ prototype["getUsageStats"] = function getUsageStats() {
   ({ AUDIO_INPUT: arr[0], AUDIO_OUTPUT: arr[1] } = DeviceTypes);
   const item = items.forEach((item) => {
     if (self.isSampling(item)) {
-      obj.stopSampling(item);
-      obj.startSampling(item);
+      self.stopSampling(item);
+      self.startSampling(item);
     }
     self[item] = Object.entries(closure_9[item]);
   });
@@ -164,24 +165,24 @@ const deviceFrecencyStore = new DeviceFrecencyStore(DispatcherDefault, {
   AUDIO_SET_INPUT_DEVICE(oldId) {
     const AUDIO_INPUT = DeviceTypes.AUDIO_INPUT;
     if (deviceFrecencyStore.isSampling(AUDIO_INPUT)) {
-      obj.stopSampling(AUDIO_INPUT, oldId.oldId);
-      obj.startSampling(AUDIO_INPUT);
+      deviceFrecencyStore.stopSampling(AUDIO_INPUT, oldId.oldId);
+      deviceFrecencyStore.startSampling(AUDIO_INPUT);
     }
     return false;
   },
   AUDIO_SET_OUTPUT_DEVICE(oldId) {
     const AUDIO_OUTPUT = DeviceTypes.AUDIO_OUTPUT;
     if (deviceFrecencyStore.isSampling(AUDIO_OUTPUT)) {
-      obj.stopSampling(AUDIO_OUTPUT, oldId.oldId);
-      obj.startSampling(AUDIO_OUTPUT);
+      deviceFrecencyStore.stopSampling(AUDIO_OUTPUT, oldId.oldId);
+      deviceFrecencyStore.startSampling(AUDIO_OUTPUT);
     }
     return false;
   },
   MEDIA_ENGINE_SET_VIDEO_DEVICE(oldId) {
     const VIDEO_INPUT = DeviceTypes.VIDEO_INPUT;
     if (deviceFrecencyStore.isSampling(VIDEO_INPUT)) {
-      obj.stopSampling(VIDEO_INPUT, oldId.oldId);
-      obj.startSampling(VIDEO_INPUT);
+      deviceFrecencyStore.stopSampling(VIDEO_INPUT, oldId.oldId);
+      deviceFrecencyStore.startSampling(VIDEO_INPUT);
     }
     return false;
   },
@@ -210,9 +211,8 @@ const deviceFrecencyStore = new DeviceFrecencyStore(DispatcherDefault, {
         }
         if (speakingFlags !== constants2.NONE) {
           if (!deviceFrecencyStore.isSampling(AUDIO_OUTPUT)) {
-            obj2.startSampling(AUDIO_OUTPUT);
+            deviceFrecencyStore.startSampling(AUDIO_OUTPUT);
           }
-          obj2 = deviceFrecencyStore;
         }
         return false;
       }

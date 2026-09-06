@@ -31,6 +31,7 @@ function flushProducts() {
     let result = obj.maybeFetchProductsBySkuIds(obj);
     continue;
   }
+  const tmp2 = chunk(items);
 }
 function flushCollections() {
   c7 = null;
@@ -43,6 +44,7 @@ function flushCollections() {
     let result = obj.maybeFetchCollectionsWithProducts(obj);
     continue;
   }
+  const tmp3 = chunk(items);
 }
 const set = new Set();
 const set1 = new Set();

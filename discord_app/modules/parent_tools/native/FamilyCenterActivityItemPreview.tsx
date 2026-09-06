@@ -1,8 +1,12 @@
 // discord_app/modules/parent_tools/native/FamilyCenterActivityItemPreview.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import utils from "../../collectibles/nameplates/utils.tsx";
 import CollectiblesItemType from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
 import useMaybeFetchProfileFrameDefault from "../../collectibles/profile_frames/hooks/useMaybeFetchProfileFrame.tsx";
+import NitroWheelIcon2 from "../../../design/components/Icon/native/redesign/generated/NitroWheelIcon.tsx";
 import NameplateUtils from "../../collectibles/nameplates/native/NameplateUtils.tsx";
+import ProfileFrameSamplePreviewDefault from "../../collectibles/profile_frames/native/previews/ProfileFrameSamplePreview.tsx";
+import BoostGemIcon from "../../../design/components/Icon/native/redesign/generated/BoostGemIcon.tsx";
 import ShopIcon from "../../../design/components/Icon/native/redesign/generated/ShopIcon.tsx";
 import FamilyCenterActivityPurchaseRowUtils from "../FamilyCenterActivityPurchaseRowUtils.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -62,23 +66,23 @@ function ProfileFramePreviewImage(arg0) {
       profileFrame: tmp3,
       previewWidth: FamilyCenterActivityPurchaseRowUtils.PREVIEW_SIZE * closure_5,
       previewHeight: FamilyCenterActivityPurchaseRowUtils.PREVIEW_SIZE,
-      profileBackgroundColor: tmp(576).colors.BACKGROUND_BASE_LOW,
+      profileBackgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
     };
-    obj.children = jsx(tmp(8822), {
+    obj.children = jsx(ProfileFrameSamplePreviewDefault, {
       profileFrame: tmp3,
       previewWidth: FamilyCenterActivityPurchaseRowUtils.PREVIEW_SIZE * closure_5,
       previewHeight: FamilyCenterActivityPurchaseRowUtils.PREVIEW_SIZE,
-      profileBackgroundColor: tmp(576).colors.BACKGROUND_BASE_LOW,
+      profileBackgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
     });
     tmp4 = (
       <React3
         profileFrame={tmp3}
         previewWidth={FamilyCenterActivityPurchaseRowUtils.PREVIEW_SIZE * closure_5}
         previewHeight={FamilyCenterActivityPurchaseRowUtils.PREVIEW_SIZE}
-        profileBackgroundColor={tmp(576).colors.BACKGROUND_BASE_LOW}
+        profileBackgroundColor={nativeDefault.colors.BACKGROUND_BASE_LOW}
       />
     );
-    const tmpResult = tmp(8822);
+    const tmpResult = ProfileFrameSamplePreviewDefault;
   }
   return tmp4;
 }
@@ -92,9 +96,9 @@ function SubscriptionPreview(arg0) {
   } else {
     const obj1 = { style: styles.purchasePlaceholder, children: null };
     if (obj4.isGuildBoostSubscription(subscriptionPlanId)) {
-      let NitroWheelIcon = tmp5(9375).BoostGemIcon;
+      let NitroWheelIcon = BoostGemIcon.BoostGemIcon;
     } else {
-      NitroWheelIcon = tmp5(8662).NitroWheelIcon;
+      NitroWheelIcon = NitroWheelIcon2.NitroWheelIcon;
     }
     obj = { size: "custom", style: { width: 20, height: 20 } };
     obj1.children = <NitroWheelIcon size="custom" style={{ width: 20, height: 20 }} />;
@@ -113,24 +117,24 @@ function CollectiblePreview(arg0) {
     if (CollectiblesItemType.CollectiblesItemType.AVATAR_DECORATION === type) {
       const obj1 = { product, styles };
       return <AvatarDecorationPreviewImage product={product} styles={styles} />;
-    } else if (tmp17(1889).CollectiblesItemType.NAMEPLATE === type) {
-      const nameplateDataFromProductRecord = tmp17(1886).getNameplateDataFromProductRecord(product);
+    } else if (CollectiblesItemType.CollectiblesItemType.NAMEPLATE === type) {
+      const nameplateDataFromProductRecord = utils.getNameplateDataFromProductRecord(product);
       let tmp8 = null;
       if (null != nameplateDataFromProductRecord) {
         const obj2 = { nameplateData: nameplateDataFromProductRecord, styles };
         tmp8 = <NameplatePreviewImage nameplateData={nameplateDataFromProductRecord} styles={styles} />;
       }
       return tmp8;
-    } else if (tmp17(1889).CollectiblesItemType.PROFILE_EFFECT === type) {
+    } else if (CollectiblesItemType.CollectiblesItemType.PROFILE_EFFECT === type) {
       const obj3 = { product, styles };
       return <ProfileEffectPreviewImage product={product} styles={styles} />;
-    } else if (tmp17(1889).CollectiblesItemType.PROFILE_FRAME === type) {
+    } else if (CollectiblesItemType.CollectiblesItemType.PROFILE_FRAME === type) {
       const obj4 = { product, styles };
       return <ProfileFramePreviewImage product={product} styles={styles} />;
     } else {
       obj = { style: styles.purchasePlaceholder, children: null };
       const obj5 = { size: "custom", style: { width: 20, height: 20 } };
-      obj.children = jsx(tmp17(12138).ShopIcon, { size: "custom", style: { width: 20, height: 20 } });
+      obj.children = jsx(ShopIcon.ShopIcon, { size: "custom", style: { width: 20, height: 20 } });
       return <React3 style={styles.purchasePlaceholder}>{null}</React3>;
     }
   }
@@ -194,10 +198,10 @@ export default function FamilyCenterActivityItemPreview(arg0) {
   let obj = { accessible: true, accessibilityLabel: displayName, children: null };
   if (isSubscription) {
     obj = { subscriptionPlanId, styles: tmp };
-    let tmp2Result = tmp2(SubscriptionPreview, obj);
+    let tmp2Result = <SubscriptionPreview subscriptionPlanId={subscriptionPlanId} styles={tmp} />;
   } else {
     obj = { product, styles: tmp };
-    tmp2Result = tmp2(CollectiblePreview, obj);
+    tmp2Result = <CollectiblePreview product={product} styles={tmp} />;
   }
   obj.children = tmp2Result;
   return (

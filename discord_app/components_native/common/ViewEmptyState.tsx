@@ -49,7 +49,7 @@ export default function ViewEmptyState(arg0) {
   let tmp2Result = null;
   if (null != label) {
     const obj1 = { style: tmp.emptyLabel, children: label.toUpperCase() };
-    tmp2Result = tmp2(native.LegacyText, obj1);
+    tmp2Result = React4(native.LegacyText, obj1);
   }
   items1[1] = tmp2Result;
   tmp2Result = null;
@@ -59,7 +59,7 @@ export default function ViewEmptyState(arg0) {
     ({ emptyLabel: arr3[0], emptyText: arr3[1] } = tmp);
     obj2.style = items2;
     obj2.children = text;
-    tmp2Result = tmp2(native.LegacyText, obj2);
+    tmp2Result = React4(native.LegacyText, obj2);
   }
   items1[2] = tmp2Result;
   obj.children = items1;

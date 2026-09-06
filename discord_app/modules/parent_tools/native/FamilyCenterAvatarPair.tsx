@@ -1,6 +1,7 @@
 // discord_app/modules/parent_tools/native/FamilyCenterAvatarPair.tsx
 import useStateFromStores from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import native from "../../../design/void/native.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import UserStore from "../../../stores/UserStore.tsx";
 
@@ -38,25 +39,25 @@ export default function FamilyCenterAvatarPair(otherUser) {
     if (undefined !== otherUser) {
       obj = { style: tmp.avatars, children: null };
       obj = {
-        size: tmp2(1178).AvatarSizes.LARGE_48,
+        size: native.AvatarSizes.LARGE_48,
         user: stateFromStores,
         guildId: "Array",
         avatarDecoration: stateFromStores.avatarDecoration,
       };
-      const items1 = [React4(tmp2(1178).Avatar, obj), ,];
+      const items1 = [React4(native.Avatar, obj), ,];
       const obj1 = { style: null, size: null, source: null };
       const items2 = [tmp.icon, iconStyles];
       obj1.style = items2;
-      obj1.size = tmp2(1178).Icon.Sizes.EXTRA_SMALL;
+      obj1.size = native.Icon.Sizes.EXTRA_SMALL;
       obj1.source = iconSrc;
-      items1[1] = React4(tmp2(1178).Icon, obj1);
+      items1[1] = React4(native.Icon, obj1);
       const obj2 = {
-        size: tmp2(1178).AvatarSizes.LARGE_48,
+        size: native.AvatarSizes.LARGE_48,
         user: otherUser,
         guildId: "Array",
         avatarDecoration: otherUser.avatarDecoration,
       };
-      items1[2] = React4(tmp2(1178).Avatar, obj2);
+      items1[2] = React4(native.Avatar, obj2);
       obj.children = items1;
       tmp5 = hasOwnProperty(View, obj);
     }

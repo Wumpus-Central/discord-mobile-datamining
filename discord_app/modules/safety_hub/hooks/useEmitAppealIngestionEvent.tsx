@@ -16,7 +16,6 @@ export const useEmitAppealIngestionEvent = function useEmitAppealIngestionEvent(
     SafetyHubStore.getAppealClassificationId(),
   );
   let obj = stateFromStores(safetyHubAccountStanding[4]);
-  const tmp3 = SafetyHubStore;
   let tmp5 = stateFromStores;
   if (stateFromStores == null) {
     tmp5 = closure_6;
@@ -25,7 +24,7 @@ export const useEmitAppealIngestionEvent = function useEmitAppealIngestionEvent(
   let tmpResult = tmp(tmp2[6]);
   safetyHubAccountStanding = tmpResult.useSafetyHubAccountStanding();
   tmpResult = tmp(tmp2[4]);
-  const items1 = [tmp3];
+  const items1 = [SafetyHubStore];
   const stateFromStores1 = tmpResult.useStateFromStores(items1, () => SafetyHubStore.getIsDsaEligible());
   const items2 = [safetyHubAccountStanding.state, stateFromStores, safetyHubClassification, stateFromStores1];
   return stateFromStores1.useCallback((action) => {

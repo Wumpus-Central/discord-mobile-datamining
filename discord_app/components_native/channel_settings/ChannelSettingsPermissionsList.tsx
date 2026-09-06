@@ -100,12 +100,11 @@ export default noop.memo(function ChannelSettingsPermissionsList(channelId) {
             tmp4 = null == tmp3;
           }
           if (tmp4) {
-            let str = stateFromStores;
             let tmp8Result = 0 === stateFromStores.length;
             if (!tmp8Result) {
               let tmp8 = fuzzysearchDefault;
               let str2 = user.username;
-              let formatted = str.toLowerCase();
+              let formatted = stateFromStores.toLowerCase();
               tmp8Result = tmp8(formatted, str2.toLowerCase());
             }
             tmp4 = tmp8Result;
@@ -141,7 +140,7 @@ export default noop.memo(function ChannelSettingsPermissionsList(channelId) {
     if (channelId) {
       if (null != navigation) {
         if (null != type) {
-          const found = arr.filter((name) => {
+          const found = navigation.filter((name) => {
             let tmp = 0 !== length.length;
             if (tmp) {
               const formatted = length.toLowerCase();
@@ -160,7 +159,6 @@ export default noop.memo(function ChannelSettingsPermissionsList(channelId) {
           return obj;
         }
       }
-      arr = navigation;
     }
     return closure_15;
   }, items5);
@@ -185,7 +183,7 @@ export default noop.memo(function ChannelSettingsPermissionsList(channelId) {
   const callback1 = obj1.useCallback((arg0, arg1) => {
     if (null == guildId) {
       return null;
-    } else if (tmp2.ROLE === tmp) {
+    } else if (constants.ROLE === tmp) {
       let id = tmp13;
       let obj = { arrow: true, end: tmp19, label: null, onPress: null, start: null };
       obj = { name: null, color: null, colors: null };
@@ -196,7 +194,7 @@ export default noop.memo(function ChannelSettingsPermissionsList(channelId) {
       };
       obj.start = tmp18;
       return closure_1_13(channelId(stateFromStores[18]).TableRow, obj);
-    } else if (tmp2.MEMBER === tmp) {
+    } else if (constants.MEMBER === tmp) {
       id = rows[arg1].id;
       obj = {
         arrow: true,
@@ -221,7 +219,7 @@ export default noop.memo(function ChannelSettingsPermissionsList(channelId) {
   obj.children = closure_13(channelId(stateFromStores[22]).SearchField, obj1);
   const items8 = [closure_13(rows1, obj)];
   if (0 !== (type === constants.ROLE ? rows1.length : rows.length)) {
-    if (type === tmp10.ROLE) {
+    if (type === constants.ROLE) {
       sections = memo1.sections;
     }
     obj2 = {
@@ -234,11 +232,11 @@ export default noop.memo(function ChannelSettingsPermissionsList(channelId) {
       insetEnd: tmp7(tmp3[10]).space.PX_8 + type(stateFromStores[14])().bottom,
       keyboardShouldPersistTaps: "always",
     };
-    let tmp21Result = tmp21(tmp7(tmp3[24]), obj2);
+    let tmp21Result = closure_13(tmp7(tmp3[24]), obj2);
     const tmp7Result = tmp7(tmp3[24]);
   } else {
     obj3 = { Illustration: tmp2(tmp3[26]).NoResults, title: null, body: null };
-    if (type === tmp10.ROLE) {
+    if (type === constants.ROLE) {
       const intl3 = tmp2(tmp3[23]).intl;
       let stringResult = intl3.string(tmp2(tmp3[23]).t.Sojqsr);
     } else {
@@ -246,7 +244,7 @@ export default noop.memo(function ChannelSettingsPermissionsList(channelId) {
       stringResult = intl2.string(tmp2(tmp3[23]).t.pYHobK);
     }
     obj3.title = stringResult;
-    if (type === tmp10.ROLE) {
+    if (type === constants.ROLE) {
       const intl5 = tmp2(tmp3[23]).intl;
       let stringResult1 = intl5.string(tmp2(tmp3[23]).t["7gBhmO"]);
     } else {
@@ -254,7 +252,7 @@ export default noop.memo(function ChannelSettingsPermissionsList(channelId) {
       stringResult1 = intl4.string(tmp2(tmp3[23]).t.tuL9TW);
     }
     obj3.body = stringResult1;
-    tmp21Result = tmp21(tmp2(tmp3[25]).EmptyState, obj3);
+    tmp21Result = closure_13(tmp2(tmp3[25]).EmptyState, obj3);
   }
   items8[1] = tmp21Result;
   obj.children = items8;

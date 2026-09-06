@@ -12,7 +12,7 @@ export default function replaceFlagIconAndFlagColor(layers, p, arg2) {
   let it = layers.layers[findIndexResult].shapes[0].it;
   const item = it.forEach((item, index) => {
     if ("gr" === layers.layers[findIndexResult].shapes[0].it[index].ty) {
-      const it = tmp.layers[tmp2].shapes[0].it[index].it;
+      const it = layers.layers[findIndexResult].shapes[0].it[index].it;
       if (it.findIndex((ty) => "fl" === ty.ty) >= 0) {
         const items = [];
         items[
@@ -21,7 +21,7 @@ export default function replaceFlagIconAndFlagColor(layers, p, arg2) {
             0,
           )
         ] = 1;
-        tmp.layers[tmp2].shapes[0].it[index].it[1].c.k = items;
+        layers.layers[findIndexResult].shapes[0].it[index].it[1].c.k = items;
       }
     }
   });

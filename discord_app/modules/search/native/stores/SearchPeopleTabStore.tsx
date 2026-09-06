@@ -33,7 +33,8 @@ prototype["teardown"] = function teardown() {
 };
 prototype["search"] = function search(str) {
   const self = this;
-  const trimmed = str.toLowerCase().trim();
+  str = str.toLowerCase();
+  const trimmed = str.trim();
   this.searchQueryString = trimmed;
   if ("" === trimmed) {
     self.processResults();
@@ -104,8 +105,8 @@ prototype["processResults"] = function processResults() {
     arr3 = result;
     if ("" !== self.searchQueryString) {
       obj = { title: null, items: null };
-      let intl = tmp(1114).intl;
-      obj.title = intl.string(tmp(1114).t.qGlQrW);
+      let intl = util.intl;
+      obj.title = intl.string(util.t.qGlQrW);
       obj.items = self.groupDMs;
       const findIndexResult = result.findIndex((title) => {
         const intl = util.intl;

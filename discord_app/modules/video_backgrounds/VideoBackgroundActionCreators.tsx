@@ -7,7 +7,7 @@ import MediaEngineStore from "../../stores/MediaEngineStore.tsx";
 import UserStore from "../../stores/UserStore.tsx";
 
 require = fn;
-let closure_7 = async function _fetchVideoFilterAssets(arg0, value) {
+let closure_7 = async function _fetchVideoFilterAssets() {
   if (c5 === 2) {
     c5 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -79,7 +79,7 @@ let closure_7 = async function _fetchVideoFilterAssets(arg0, value) {
     }
   }
 };
-let closure_8 = async function _uploadVideoFilterAsset(asset, type, arg2) {
+let closure_8 = async function _uploadVideoFilterAsset() {
   closure_2 = arg2;
   c7 = 0;
   c8 = 0;
@@ -166,7 +166,7 @@ let closure_9 = async function _deleteVideoFilterAsset(arg0) {
   let id = arg0;
   c3 = 0;
   c4 = 0;
-  return (async (arg0, value) => {
+  return (async (arg0) => {
     if (c4 === 2) {
       c4 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -244,7 +244,7 @@ function saveLastUsedBackgroundOption() {
   }
   return applyArgumentsResult;
 }
-let closure_11 = async function _saveLastUsedBackgroundOption(arg0, value) {
+let closure_11 = async function _saveLastUsedBackgroundOption(arg0) {
   closure_2 = tmp2;
   closure_129_0 = closure_0;
   const PreloadedUserSettingsActionCreators = UserSettingsProtoActionCreators.PreloadedUserSettingsActionCreators;

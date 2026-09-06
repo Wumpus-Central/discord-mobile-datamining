@@ -77,7 +77,7 @@ export const getFinePrintMessageForApplication = function getFinePrintMessageFor
   const format = intl.format;
   if (shouldAppendDisclaimer.shouldAppendDisclaimer) {
     let obj = { applicationName: str, platforms_info: null };
-    const intl2 = tmp(1114).intl;
+    const intl2 = util.intl;
     let id;
     if (name != null) {
       id = name.id;
@@ -90,21 +90,20 @@ export const getFinePrintMessageForApplication = function getFinePrintMessageFor
     }
     let str2 = "";
     if (0 !== arr.length) {
-      const intl3 = tmp(1114).intl;
+      const intl3 = util.intl;
       obj = { platforms: null, count: null };
       const _Intl = Intl;
       const listFormat = new Intl.ListFormat(LocaleStore.locale);
       obj.platforms = listFormat.format(arr.map((item) => closure_1_6[item]));
       obj.count = arr.length;
-      str2 = intl3.formatToPlainString(tmp4(3417)["5h8p5P"], obj);
+      str2 = intl3.formatToPlainString(_modDef3417["5h8p5P"], obj);
     }
     const obj1 = { platforms_info: str2 };
     obj.platforms_info = intl2.format(_modDef3417.Q0dHYO, obj1);
     let formatResult = format(_modDef3417["3ah/a2"], obj);
-    tmp4 = importDefault;
   } else {
     obj = { applicationName: str };
-    formatResult = format(tmp(1114).t.CVITgq, obj);
+    formatResult = format(util.t.CVITgq, obj);
   }
   return formatResult;
 };
@@ -137,18 +136,18 @@ export const getMobileFinePrintMessageForApplication = function getMobileFinePri
     }
     let str2 = "";
     if (0 !== arr2.length) {
-      const intl3 = tmp(1114).intl;
+      const intl3 = util.intl;
       obj = { platforms: null, count: null };
       const _Intl = Intl;
       const listFormat = new Intl.ListFormat(LocaleStore.locale);
       obj.platforms = listFormat.format(arr2.map((item) => closure_1_6[item]));
       obj.count = arr2.length;
-      str2 = intl3.formatToPlainString(tmp3(3417)["5h8p5P"], obj);
+      str2 = intl3.formatToPlainString(_modDef3417["5h8p5P"], obj);
     }
     obj = { platforms_info: str2 };
     items = [format(tmp4.Q0dHYO, obj)];
-    const intl2 = tmp(1114).intl;
-    items[1] = intl2.format(tmp3(3417).Ufm9XX, obj);
+    const intl2 = util.intl;
+    items[1] = intl2.format(_modDef3417.Ufm9XX, obj);
     let items1 = items;
   } else {
     items1 = [format(tmp4.Ufm9XX, obj)];
@@ -187,10 +186,10 @@ export const getGiftLinkAccountDescriptionForApplication = function getGiftLinkA
   const tmp3 = _modDef3417;
   if (hasAlreadyLinked.hasAlreadyLinked) {
     let vyAtfo = tmp3.yqAKVO;
-    let tmp4 = tmp;
+    let tmp4 = importDefault;
   } else {
     vyAtfo = tmp3.vyAtfo;
-    tmp4 = tmp;
+    tmp4 = importDefault;
   }
   const intl = util.intl;
   let obj = { applicationName: applicationName.name, platforms_info: null };

@@ -132,7 +132,7 @@ prototype["fromType"] = function fromType(arg0, arg1, label, collectionId, IconC
         settingsPathToRouteResult = obj2.settingsPathToRoute(UserSettingsPath.ACCOUNT);
       }
       const obj3 = { path: settingsPathToRouteResult, label, type: tmp8.SETTINGS };
-      if (typeof tmp48 === "function") {
+      if (typeof prototype === "function") {
         const tmp58 = new prototype(tmp7, tmp6, tmp5, tmp4, tmp3);
         if (null != obj3.collectionId) {
           const _HermesInternal5 = HermesInternal;
@@ -152,14 +152,13 @@ prototype["fromType"] = function fromType(arg0, arg1, label, collectionId, IconC
       } else {
         throw new TypeError("Trying to call a non-function");
       }
-      tmp48 = prototype;
     } else if (tmp8.PLAYGROUND === arg0) {
       let APP = settingsPathToRouteResult;
       if (settingsPathToRouteResult == null) {
         APP = Routes.APP;
       }
       const PLAYGROUND = tmp8.PLAYGROUND;
-      if (typeof tmp35 === "function") {
+      if (typeof prototype === "function") {
         const tmp43 = new prototype(tmp7, tmp6, tmp5, tmp4, tmp3);
         let combined = PLAYGROUND;
         if (null != collectionId) {
@@ -176,7 +175,6 @@ prototype["fromType"] = function fromType(arg0, arg1, label, collectionId, IconC
       } else {
         throw new TypeError("Trying to call a non-function");
       }
-      tmp35 = prototype;
     } else if (tmp8.SHOP_ORBS_TAB === arg0) {
       const obj4 = { path: Routes.COLLECTIBLES_SHOP, type: tmp8.SHOP_ORBS_TAB };
       if (typeof prototype === "function") {

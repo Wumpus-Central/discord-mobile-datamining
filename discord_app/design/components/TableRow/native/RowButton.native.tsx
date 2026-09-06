@@ -106,7 +106,7 @@ function RowButtonWrapper(experimental_withBlurBackground) {
     const merged1 = Object.assign(merged);
     obj.variant = "transparent";
     obj = { pressed: sharedValue, children };
-    obj.children = tmp6(BackgroundBlurView.BackgroundBlurView, obj);
+    obj.children = jsx(BackgroundBlurView.BackgroundBlurView, { pressed: sharedValue, children });
     let obj1 = obj;
   } else {
     obj1 = { shadow: "low", start: true, end: true, onPress, style: tmp2.card, disabled };

@@ -9,15 +9,15 @@ export const createCardShadowToken = function createCardShadowToken(arg0) {
   return require("createStyles").experimental_createToken((gradient) => {
     if (null == gradient.gradient) {
       if ("none" !== closure_0) {
-        if ("border" === tmp11) {
+        if ("border" === closure_0) {
           return nativeDefault.shadows.SHADOW_BORDER;
-        } else if ("high" === tmp11) {
+        } else if ("high" === closure_0) {
           return nativeDefault.shadows.SHADOW_HIGH;
-        } else if ("ledge" === tmp11) {
+        } else if ("ledge" === closure_0) {
           return nativeDefault.shadows.SHADOW_LEDGE;
-        } else if ("low" === tmp11) {
+        } else if ("low" === closure_0) {
           return nativeDefault.shadows.SHADOW_LOW;
-        } else if ("medium" === tmp11) {
+        } else if ("medium" === closure_0) {
           return nativeDefault.shadows.SHADOW_MEDIUM;
         }
       }

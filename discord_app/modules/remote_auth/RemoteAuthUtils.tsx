@@ -8,8 +8,9 @@ let closure_5 = async function _decodeEncodedUserRecord() {
   closure_3 = tmp2;
   closure_2 = tmp5;
   closure_130_0 = closure_1;
-  closure_130_0 = await RemoteAuthCryptoDefault.decryptEncodedCiphertext(closure_0, closure_130_0);
-  closure_130_1 = arg1.match(/^(\d+):(\d{1,4}):([a-zA-Z0-9_]+):(.*)$/);
+  await RemoteAuthCryptoDefault.decryptEncodedCiphertext(closure_0, closure_130_0);
+  closure_130_0 = value;
+  closure_130_1 = value.match(/^(\d+):(\d{1,4}):([a-zA-Z0-9_]+):(.*)$/);
   if (null == closure_130_1) {
     const _Error = Error;
     const error = new Error("Invalid encoded user record.");

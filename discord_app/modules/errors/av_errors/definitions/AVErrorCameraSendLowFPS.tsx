@@ -1,5 +1,7 @@
 // discord_app/modules/errors/av_errors/definitions/AVErrorCameraSendLowFPS.tsx
 import DurationsDefault from "../../../../utils/Durations.tsx";
+import AVError from "../AVError.tsx";
+import AVErrorContext from "../AVErrorContext.tsx";
 import AVErrorUtils from "../AVErrorUtils.tsx";
 import AuthenticationStore from "../../../../stores/AuthenticationStore.tsx";
 import MediaEngineStore from "../../../../stores/MediaEngineStore.tsx";
@@ -36,10 +38,10 @@ export const AVErrorCameraSendLowFPSDefinition = {
           let tmp7 = null;
           if (null != accumulatedStatsWithMinDatapoints) {
             if (accumulatedStatsWithMinDatapoints.short.frameRate < 10) {
-              obj = { type: tmp4(9110).AVError.CAMERA_SEND_LOW_FPS, userId: AuthenticationStore.getId() };
-              const merged = Object.assign(tmp4(17834).getVoiceChannelErrorContext());
+              obj = { type: AVError.AVError.CAMERA_SEND_LOW_FPS, userId: AuthenticationStore.getId() };
+              const merged = Object.assign(AVErrorContext.getVoiceChannelErrorContext());
               const items = [obj];
-              const tmp4Result = tmp4(17834);
+              const tmp4Result = AVErrorContext;
               const tmp8 = items;
             }
             tmp7 = tmp8;

@@ -10,10 +10,10 @@ const result = size.fileFinishedImporting("modules/messages/computeGlobalSpoiler
 export default function computeGlobalSpoilerDisplay(arg0, arg1) {
   if (constants2.ALWAYS === arg0) {
     return true;
-  } else if (tmp.IF_MODERATOR === arg0) {
+  } else if (constants2.IF_MODERATOR === arg0) {
     return arg1;
   } else {
-    const ON_CLICK = tmp.ON_CLICK;
+    const ON_CLICK = constants2.ON_CLICK;
     return false;
   }
 }
@@ -28,8 +28,8 @@ export const useShouldDisplaySpoilerObscurity = function useShouldDisplaySpoiler
   let flag = true;
   if (constants2.ALWAYS !== setting) {
     flag = stateFromStores;
-    if (tmp3.IF_MODERATOR !== setting) {
-      const ON_CLICK = tmp3.ON_CLICK;
+    if (constants2.IF_MODERATOR !== setting) {
+      const ON_CLICK = constants2.ON_CLICK;
       flag = false;
     }
   }

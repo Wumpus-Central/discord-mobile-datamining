@@ -36,7 +36,7 @@ export default noop.memo((game) => {
     const obj1 = { uri: iconURL };
     obj.source = obj1;
     obj.style = tmp.image;
-    tmp5Result = tmp5(Image, obj);
+    tmp5Result = <Image source={null} alt="" style={null} />;
   }
   obj.guildBadge = tmp5Result;
   ({ container: obj2.containerStyles, text: obj2.textStyle } = tmp);

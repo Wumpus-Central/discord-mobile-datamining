@@ -156,7 +156,7 @@ export const int2hsl = function int2hsl(accent_color, arg1) {
   }
   return combined;
 };
-export const hex2rgb = function hex2rgb(PRIMARY_200, alphaResult) {
+export const hex2rgb = function hex2rgb(PRIMARY_200) {
   if (alphaResult === undefined) {
     alphaResult = null;
   }

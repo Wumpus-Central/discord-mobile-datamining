@@ -37,92 +37,95 @@ function subscribeToClose() {
     state.setState({ isOpen: false, copy: null });
   });
 }
-let closure_10 = async function _openAgeVerificationCustomTab(arg0, value) {
-  if (c7 === 2) {
-    c7 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp6 === 3) {
-    if (arg0 === 1) {
-      throw value;
-    } else if (arg0 === 2) {
-      let obj = { value, done: true };
-      return obj;
+let closure_10 = async function _openAgeVerificationCustomTab(arg0) {
+  closure_0 = arg0;
+  c6 = 0;
+  c7 = 0;
+  c5 = 0;
+  return (async (arg0, value) => {
+    if (c7 === 2) {
+      c7 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp6 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        let obj = { value, done: true };
+        return obj;
+      } else {
+        return { value: "HermesInternal", done: null };
+      }
     } else {
-      return { value: "HermesInternal", done: null };
-    }
-  } else {
-    try {
-      c7 = 2;
-      if (0 === c6) {
-        if (arg0 === 1) {
+      try {
+        c7 = 2;
+        if (0 === c6) {
+          if (arg0 === 1) {
+            c7 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c7 = 3;
+            obj = { value, done: true };
+            return obj;
+          } else {
+            closure_3 = tmp3;
+            closure_2 = tmp7;
+            closure_130_0 = undefined;
+            if (obj9.isAndroid()) {
+              subscribeToClose();
+              c7 = true;
+              const obj1 = { isOpen: true, copy };
+              state.setState(obj1);
+              c5 = 1;
+              let obj4 = NativeBrowserManagerModuleDefault;
+              c6 = 2;
+              c7 = 1;
+              const obj2 = { value: withTimeout(obj4.openTrackedCustomTab(closure_0)), done: false };
+              return obj2;
+            } else {
+              c7 = 3;
+              return { value: false, done: true };
+            }
+            obj9 = PlatformUtils;
+          }
+        } else if (1 === tmp7) {
+          c5 = 0;
+          closure_130_1 = closure_4;
+          const obj3 = { error: closure_130_1 };
+          closure_131_4.warn("Failed to open the verification Custom Tab", obj3);
+          closure_131_12();
+          c7 = 3;
+          return { value: false, done: true };
+        } else if (arg0 === 1) {
           c7 = 3;
           throw value;
         } else if (arg0 === 2) {
+          c5 = 0;
           c7 = 3;
-          obj = { value, done: true };
-          return obj;
+          obj4 = { value, done: true };
+          return obj4;
         } else {
-          closure_3 = tmp3;
-          closure_2 = tmp7;
-          closure_130_0 = undefined;
-          if (obj9.isAndroid()) {
-            subscribeToClose();
-            c7 = true;
-            const obj1 = { isOpen: true, copy: tmp37 };
-            state.setState(obj1);
-            c5 = 1;
-            let obj4 = require("NativeBrowserManagerModule");
-            c6 = 2;
-            c7 = 1;
-            const obj2 = { value: withTimeout(obj4.openTrackedCustomTab(tmp36)), done: false };
-            return obj2;
-          } else {
-            c7 = 3;
-            return { value: false, done: true };
+          closure_130_0 = value;
+          if (!closure_130_0) {
+            closure_131_12();
           }
-          obj9 = PlatformUtils;
-          tmp36 = closure_0;
-          tmp37 = closure_1;
-          tmp39 = dependencyMap;
+          c5 = 0;
+          c7 = 3;
+          obj = { value: closure_130_0, done: true };
+          return obj;
         }
-      } else if (1 === tmp7) {
-        c5 = 0;
-        closure_130_1 = closure_4;
-        const obj3 = { error: closure_130_1 };
-        closure_131_4.warn("Failed to open the verification Custom Tab", obj3);
-        closure_131_12();
-        c7 = 3;
-        return { value: false, done: true };
-      } else if (arg0 === 1) {
-        c7 = 3;
-        throw value;
-      } else if (arg0 === 2) {
-        c5 = 0;
-        c7 = 3;
-        obj4 = { value, done: true };
-        return obj4;
-      } else {
-        closure_130_0 = value;
-        if (!closure_130_0) {
-          closure_131_12();
+      } catch (tmp29) {
+        closure_4 = tmp29;
+        if (tmp4 === c5) {
+          c7 = tmp2;
+          throw tmp29;
+        } else {
+          c6 = tmp;
         }
-        c5 = 0;
-        c7 = 3;
-        obj = { value: closure_130_0, done: true };
-        return obj;
-      }
-    } catch (tmp29) {
-      closure_4 = tmp29;
-      if (tmp4 === c5) {
-        c7 = tmp2;
-        throw tmp29;
-      } else {
-        c6 = tmp;
       }
     }
-  }
+  })();
 };
-let closure_11 = async function _resumeAgeVerificationCustomTab(arg0, value) {
+let closure_11 = async function _resumeAgeVerificationCustomTab() {
   if (c5 === 2) {
     c5 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -152,7 +155,7 @@ let closure_11 = async function _resumeAgeVerificationCustomTab(arg0, value) {
           if (obj7.isAndroid()) {
             if (!getIsAgeVerificationCustomTabOpen()) {
               c3 = 1;
-              let obj2 = require("NativeBrowserManagerModule");
+              let obj2 = NativeBrowserManagerModuleDefault;
               c4 = 2;
               c5 = 1;
               const obj1 = { value: withTimeout(obj2.resumeTrackedCustomTab()), done: false };
@@ -160,7 +163,6 @@ let closure_11 = async function _resumeAgeVerificationCustomTab(arg0, value) {
             }
           }
           obj7 = PlatformUtils;
-          tmp31 = dependencyMap;
         }
       } else {
         if (1 === tmp7) {

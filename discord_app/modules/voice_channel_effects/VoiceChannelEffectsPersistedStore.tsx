@@ -25,7 +25,7 @@ VoiceChannelEffectsPersistedStore.displayName = "VoiceChannelEffectsPersistedSto
 VoiceChannelEffectsPersistedStore.persistKey = "VoiceChannelEffectsPersistedStore";
 const voiceChannelEffectsPersistedStore = new VoiceChannelEffectsPersistedStore(DispatcherDefault, {
   VOICE_CHANNEL_EFFECT_TOGGLE_ANIMATION_TYPE: function handleToggleAnimationType() {
-    closure_0 = closure_0 === constants.BASIC ? tmp.PREMIUM : tmp.BASIC;
+    closure_0 = closure_0 === constants.BASIC ? constants.PREMIUM : constants.BASIC;
   },
 });
 const result = size.fileFinishedImporting("modules/voice_channel_effects/VoiceChannelEffectsPersistedStore.tsx");

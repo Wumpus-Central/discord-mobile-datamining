@@ -20,7 +20,7 @@ function GroupDMInviteManagement(channelId) {
   const tmp3 = _slicedToArray(noop.useState(true), 2);
   closure_3 = tmp3[1];
   first(4992)(() => {
-    closure_0 = async function _fetchInvites(arg0, value) {
+    closure_0 = async function _fetchInvites() {
       if (v3 === 2) {
         v3 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");

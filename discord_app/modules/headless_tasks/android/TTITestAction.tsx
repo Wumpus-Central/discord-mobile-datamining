@@ -59,7 +59,7 @@ function setupTTITest() {
   }
   return applyArgumentsResult;
 }
-let closure_17 = async function _setupTTITest(arg0, value) {
+let closure_17 = async function _setupTTITest(arg0) {
   if (c7 === 2) {
     c7 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -434,7 +434,7 @@ function apiLogin() {
   }
   return applyArgumentsResult;
 }
-let closure_19 = async function _apiLogin(arg0, value) {
+let closure_19 = async function _apiLogin(arg0) {
   if (c7 === 2) {
     c7 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -683,6 +683,7 @@ let obj = {
     const merged = Object.assign(obj);
     const json = JSON.stringify(obj);
     NativeTTIManagerModuleDefault.logToDevice(json);
+    const tmpResult = NativeTTIManagerModuleDefault;
   },
   (multiplier) => {
     obj = NativeJankStatsModuleDefault;
@@ -693,6 +694,7 @@ let obj = {
     const merged = Object.assign(undefined);
     const json = JSON.stringify(obj);
     NativeTTIManagerModuleDefault.logToDevice(json);
+    const tmpResult = NativeTTIManagerModuleDefault;
   },
   () => {
     obj = NativeJankStatsModuleDefault;
@@ -703,6 +705,7 @@ let obj = {
     const merged = Object.assign(undefined);
     const json = JSON.stringify(obj);
     NativeTTIManagerModuleDefault.logToDevice(json);
+    const tmpResult = NativeTTIManagerModuleDefault;
   },
   (action) => {
     obj = DispatcherDefault;
@@ -729,7 +732,7 @@ let obj = {
   },
   backchannel: null
 };
-let closure_3 = asyncGeneratorStep(async (arg0, value) => {
+let closure_3 = asyncGeneratorStep(async (arg0) => {
   if (c12 === 2) {
     c12 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -773,7 +776,7 @@ let closure_3 = asyncGeneratorStep(async (arg0, value) => {
           obj1.AnalyticsUtils = obj4;
           const obj5 = { apiLogin, setupTTITest };
           obj1.TTITestAction = obj5;
-          const constructor = asyncGeneratorStep(async (arg0, value) => {
+          const constructor = asyncGeneratorStep(async () => {
             if (c0 === 2) {
               c0 = 3;
               throw new TypeError("Generator functions may not be called on executing generators");

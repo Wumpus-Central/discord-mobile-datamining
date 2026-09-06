@@ -14,10 +14,10 @@ const SoundboardButtonLocation = {
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/voice_panel/native/hooks/useSoundboardConfig.tsx");
 
-export default function useSoundboardConfig(arg0, analyticsSource) {
-  _require = arg0;
+export default function useSoundboardConfig(channelId, analyticsSource) {
+  _require = channelId;
   importDefault = analyticsSource;
-  let tmp2 = useIsConnectedToVoiceChannelDefault(arg0);
+  let tmp2 = useIsConnectedToVoiceChannelDefault(channelId);
   let obj = require("initialize");
   const items = [MediaEngineStore];
   const stateFromStores = obj.useStateFromStores(items, () => deaf.isDeaf());
@@ -30,8 +30,8 @@ export default function useSoundboardConfig(arg0, analyticsSource) {
     }
     tmp2 = flag;
   }
-  const items1 = [arg0, analyticsSource];
-  const items2 = [arg0];
+  const items1 = [channelId, analyticsSource];
+  const items2 = [channelId];
   const callback = noop.useCallback(() => {
     const channel = ChannelStore.getChannel(closure_0);
     if (null != channel) {

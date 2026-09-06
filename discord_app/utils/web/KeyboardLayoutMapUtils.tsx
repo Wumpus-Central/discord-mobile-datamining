@@ -24,7 +24,7 @@ function syncKeyboardLayoutMap() {
   }
   return applyArgumentsResult;
 }
-let closure_12 = async function _syncKeyboardLayoutMap(arg0, value) {
+let closure_12 = async function _syncKeyboardLayoutMap() {
   if (c5 === 2) {
     c5 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -139,7 +139,7 @@ function getKeyboardMapper() {
   if (null == c17) {
     let tmp = null;
     if (null == promise) {
-      closure_0 = asyncGeneratorStep(async (arg0, value) => {
+      closure_0 = asyncGeneratorStep(async (arg0) => {
         if (c4 === 2) {
           c4 = 3;
           throw new TypeError("Generator functions may not be called on executing generators");
@@ -220,7 +220,7 @@ function getKeyboardMapper() {
   }
   return tmp;
 }
-let closure_20 = async function _resetKeyboardMapper(arg0, value) {
+let closure_20 = async function _resetKeyboardMapper() {
   if (c2 === 2) {
     c2 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -285,7 +285,7 @@ function reverseLookupCodeFromKey(toLocaleLowerCase) {
     if (null == c17) {
       let tmp4 = null;
       if (null == promise) {
-        closure_0 = asyncGeneratorStep(async (arg0, value) => {
+        closure_0 = asyncGeneratorStep(async (arg0) => {
           if (c4 === 2) {
             c4 = 3;
             throw new TypeError("Generator functions may not be called on executing generators");
@@ -385,7 +385,7 @@ function getExactKeyboardEventMatchFromAny(key) {
     if (null == c17) {
       let tmp6 = null;
       if (null == promise) {
-        closure_0 = asyncGeneratorStep(async (arg0, value) => {
+        closure_0 = asyncGeneratorStep(async (arg0) => {
           if (c4 === 2) {
             c4 = 3;
             throw new TypeError("Generator functions may not be called on executing generators");
@@ -492,7 +492,7 @@ if (!PlatformUtils.isLinux()) {
 }
 function initializeKeyboardMapper() {
   if (null == promise) {
-    closure_0 = asyncGeneratorStep(async (arg0, value) => {
+    closure_0 = asyncGeneratorStep(async (arg0) => {
       if (c4 === 2) {
         c4 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -802,16 +802,13 @@ prototype2["_buildKeyCodeMapFromKeyMap"] = function _buildKeyCodeMapFromKeyMap()
   while (tmp2 !== undefined) {
     let tmp5 = _slicedToArray(tmp3, 2);
     [tmp6, tmp7] = tmp5;
-    let tmp8 = tmp7;
     let items = obj[tmp7];
     if (items == null) {
       items = [];
     }
     obj[tmp7] = items;
-    let arr2 = obj[tmp8];
-    obj = { keyCode: tmp8, key: null, code: null };
-    obj.key = tmp6;
-    obj.code = self.findCodeFromKeyboardLayoutMap(tmp6, true);
+    let arr2 = obj[tmp7];
+    obj = { keyCode: tmp7, key: tmp6, code: self.findCodeFromKeyboardLayoutMap(tmp6, true) };
     let arr = arr2.push(obj);
     continue;
   }
@@ -1069,9 +1066,9 @@ prototype3["getWeightedPossibleKeyStringMatches"] = function getWeightedPossible
     if (null != key.key) {
       toLocaleLowerCaseResult = key.toLocaleLowerCase();
     }
-    let toLocaleLowerCaseResult1 = closure_0;
-    if (null != closure_0) {
-      toLocaleLowerCaseResult1 = obj.toLocaleLowerCase();
+    let toLocaleLowerCaseResult1 = keyString;
+    if (null != keyString) {
+      toLocaleLowerCaseResult1 = keyString.toLocaleLowerCase();
     }
     let num = 0;
     if (toLocaleLowerCaseResult === toLocaleLowerCaseResult1) {
@@ -1089,9 +1086,9 @@ prototype3["getWeightedPossibleKeyStringMatches"] = function getWeightedPossible
     if (null != key2.key) {
       toLocaleLowerCaseResult2 = key2.toLocaleLowerCase();
     }
-    let toLocaleLowerCaseResult3 = obj;
-    if (null != closure_0) {
-      toLocaleLowerCaseResult3 = obj.toLocaleLowerCase();
+    let toLocaleLowerCaseResult3 = keyString;
+    if (null != keyString) {
+      toLocaleLowerCaseResult3 = keyString.toLocaleLowerCase();
     }
     let num4 = 0;
     if (toLocaleLowerCaseResult2 === toLocaleLowerCaseResult3) {
@@ -1277,7 +1274,7 @@ export const getLayoutMap = function getLayoutMap() {
     if (null == c17) {
       let tmp3 = null;
       if (null == promise) {
-        closure_0 = asyncGeneratorStep(async (arg0, value) => {
+        closure_0 = asyncGeneratorStep(async (arg0) => {
           if (c4 === 2) {
             c4 = 3;
             throw new TypeError("Generator functions may not be called on executing generators");
@@ -1376,7 +1373,7 @@ export const getKeyboardEventShapeFromAny = function getKeyboardEventShapeFromAn
     if (null == c17) {
       let tmp2 = null;
       if (null == promise) {
-        closure_0 = asyncGeneratorStep(async (arg0, value) => {
+        closure_0 = asyncGeneratorStep(async (arg0) => {
           if (c4 === 2) {
             c4 = 3;
             throw new TypeError("Generator functions may not be called on executing generators");
@@ -1505,7 +1502,7 @@ export const getKeyboardEventShapeFromKey = function getKeyboardEventShapeFromKe
       return result;
     } else {
       try {
-        const tmp16Result = tmp16();
+        const tmp16Result = getKeyboardMapper();
         let defaultKeyboardEventShape;
         if (tmp16Result != null) {
           defaultKeyboardEventShape = tmp16Result.getDefaultKeyboardEventShape(tmp2, undefined, tmp15);
@@ -1524,7 +1521,6 @@ export const getKeyboardEventShapeFromKey = function getKeyboardEventShapeFromKe
         return tmp;
       }
     }
-    tmp16 = getKeyboardMapper;
   }
 };
 export const getKeyboardEventShapeFromKeycode = function getKeyboardEventShapeFromKeycode(keyCode) {

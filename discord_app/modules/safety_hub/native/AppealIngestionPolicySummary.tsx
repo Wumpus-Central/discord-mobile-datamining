@@ -43,7 +43,7 @@ export default function AppealIngestionPolicySummary(classification) {
   obj = { style: tmp.policy, children: null };
   const tmp2Result = ColorUtils;
   obj = { style: tmp.sectionTitle, variant: "text-sm/bold", children: null };
-  const intl = tmp2(1114).intl;
+  const intl = util.intl;
   obj.children = intl.string(util.t.xsdcxh);
   const items = [React3(Text_Text.Text, obj)];
   const obj1 = {

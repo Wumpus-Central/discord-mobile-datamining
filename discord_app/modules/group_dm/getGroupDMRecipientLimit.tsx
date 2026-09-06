@@ -1,5 +1,6 @@
 // discord_app/modules/group_dm/getGroupDMRecipientLimit.tsx
 import PremiumTypeUtils from "../../utils/PremiumTypeUtils.tsx";
+import GroupDMNitroCapExperiment from "GroupDMNitroCapExperiment.tsx";
 import UserStore from "../../stores/UserStore.tsx";
 
 require = fn;
@@ -32,10 +33,9 @@ export default function getGroupDMRecipientLimit() {
         if (tmp2Result.getGroupDMNitroCapConfig("getGroupDMRecipientLimit").enabled) {
           tmp5 = closure_3;
         }
-        tmp2Result = tmp2(11594);
+        tmp2Result = GroupDMNitroCapExperiment;
       }
       obj3 = PremiumTypeUtils;
-      tmp2 = require;
     }
     tmp5 = React4;
   }

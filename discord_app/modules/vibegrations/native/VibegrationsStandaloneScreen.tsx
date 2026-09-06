@@ -12,7 +12,7 @@ import RetryIcon from "../../../design/components/Icon/native/redesign/generated
 import restartVibegrationsAppFramesDefault from "restartVibegrationsAppFrames.tsx";
 import FiltersHorizontalIcon from "../../../design/components/Icon/native/redesign/generated/FiltersHorizontalIcon.tsx";
 import VibegrationsActionCreators from "../actions/VibegrationsActionCreators.tsx";
-import VibegrationsPublishNotesSheetDefault from "VibegrationsPublishNotesSheet.tsx";
+import VibegrationsPublishNotesSheet from "VibegrationsPublishNotesSheet.tsx";
 import VibegrationsModelSettingsSheet from "VibegrationsModelSettingsSheet.tsx";
 import VibegrationsProjectSettingsSheet from "VibegrationsProjectSettingsSheet.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
@@ -25,6 +25,7 @@ import VibegrationsChatStore from "../stores/VibegrationsChatStore.tsx";
 import VibegrationsConnectionStore from "../stores/VibegrationsConnectionStore.tsx";
 import VibegrationsProjectStore from "../stores/VibegrationsProjectStore.tsx";
 
+const VibegrationsPublishNotesSheetDefault = VibegrationsPublishNotesSheet;
 const VibegrationsModelSettingsSheetDefault = VibegrationsModelSettingsSheet;
 const VibegrationsProjectSettingsSheetDefault = VibegrationsProjectSettingsSheet;
 
@@ -97,7 +98,7 @@ function ProjectList(guildId) {
   const items6 = [guildId, navigation, str, loading];
   let tmp16 = memo.length > 0;
   const callback = noop.useCallback(
-    stateFromStoresArray1(function* (arg0, value) {
+    stateFromStoresArray1(function* () {
       if (c5 === 2) {
         c5 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -213,7 +214,7 @@ function ProjectList(guildId) {
     let tmp23Result = null;
     if (null != tmp14) {
       const obj4 = { variant: "text-xs/normal", color: "text-feedback-critical", children: tmp14 };
-      tmp23Result = tmp23(tmp4(tmp2[22]).Text, obj4);
+      tmp23Result = closure_23(tmp4(tmp2[22]).Text, obj4);
     }
     items7[2] = tmp23Result;
     const obj5 = { variant: "primary", text: null, disabled: null, loading: null, onPress: null };
@@ -245,7 +246,7 @@ function ProjectList(guildId) {
           return closure_1_23(guildId(stateFromStoresArray[26]).TableRow, obj, label.id);
         }),
       };
-      tmp23Result = tmp23(tmp4(tmp2[25]).TableRowGroup, obj6);
+      tmp23Result = closure_23(tmp4(tmp2[25]).TableRowGroup, obj6);
     }
     items8[1] = tmp23Result;
     let tmp25Result = null;
@@ -255,13 +256,13 @@ function ProjectList(guildId) {
       const obj9 = { variant: "heading-md/bold", color: "text-default", children: null };
       const intl5 = tmp4(tmp2[20]).intl;
       obj9.children = intl5.string(tmp(tmp2[21]).jrCnUc);
-      const items9 = [tmp23(tmp4(tmp2[22]).Text, obj9)];
+      const items9 = [closure_23(tmp4(tmp2[22]).Text, obj9)];
       const obj10 = { variant: "text-sm/normal", color: "text-muted", children: null };
       const intl6 = tmp4(tmp2[20]).intl;
       obj10.children = intl6.string(tmp(tmp2[21])["1KEhDu"]);
-      items9[1] = tmp23(tmp4(tmp2[22]).Text, obj10);
+      items9[1] = closure_23(tmp4(tmp2[22]).Text, obj10);
       obj8.children = items9;
-      const items10 = [tmp25(tmp24, obj8)];
+      const items10 = [closure_24(tmp24, obj8)];
       const obj11 = {
         hasIcons: false,
         children: memo1.map((label) => {
@@ -280,9 +281,9 @@ function ProjectList(guildId) {
           return closure_1_23(guildId(stateFromStoresArray[26]).TableRow, obj, label.id);
         }),
       };
-      items10[1] = tmp23(tmp4(tmp2[25]).TableRowGroup, obj11);
+      items10[1] = closure_23(tmp4(tmp2[25]).TableRowGroup, obj11);
       obj7.children = items10;
-      tmp25Result = tmp25(tmp24, obj7);
+      tmp25Result = closure_24(tmp24, obj7);
     }
     items8[2] = tmp25Result;
     items8[3] = null;
@@ -296,16 +297,17 @@ function ProjectList(guildId) {
       type = stateFromStores.type;
     }
     if ("loading" === type) {
-      let tmp17Result = tmp17(loading, {});
+      let tmp17Result = closure_23(loading, {});
     } else {
       const obj13 = { variant: "text-md/normal", color: "text-muted", children: null };
       let intl = tmp4(tmp2[20]).intl;
       obj13.children = intl.string(tmp(tmp2[21])["vqy+in"]);
-      tmp17Result = tmp17(tmp4(tmp2[22]).Text, obj13);
+      tmp17Result = closure_23(tmp4(tmp2[22]).Text, obj13);
     }
     obj12.children = tmp17Result;
-    tmp17Result = tmp17(c8, obj12);
+    tmp17Result = closure_23(c8, obj12);
   }
+  const tmp13 = str(noop.useState(null), 2);
 }
 function ChatScene(guildId) {
   guildId = guildId.guildId;
@@ -442,7 +444,7 @@ function ChatScene(guildId) {
       let obj = VibegrationsProjectStore;
       const project = VibegrationsProjectStore.getProject(projectId);
       if (null != project) {
-        const integrationStatus = obj.getIntegrationStatus(tmp);
+        const integrationStatus = obj.getIntegrationStatus(projectId);
         let preview_ready;
         if (integrationStatus != null) {
           preview_ready = integrationStatus.preview_ready;
@@ -451,9 +453,9 @@ function ChatScene(guildId) {
           if (integrationStatus.integration_installed) {
             if (!integrationStatus.bot_permissions_changed) {
               closure_14(true);
-              const promise = map1(tmp);
+              const promise = map1(projectId);
               promise.catch(() => {});
-              const nextPromise = __initData(tmp).then((ok) => {
+              const nextPromise = __initData(projectId).then((ok) => {
                 if (true !== ok.ok) {
                   const _Error = Error;
                   const intl = guildId(navigation[20]).intl;
@@ -462,15 +464,14 @@ function ChatScene(guildId) {
                 } else {
                   const result = guildId(navigation[19]).refreshPublishedProject(closure_1_1, { isPreview: false });
                   result.catch(() => {});
+                  const obj = guildId(navigation[19]);
                 }
               });
-              const promise2 = __initData(tmp);
+              const promise2 = __initData(projectId);
               nextPromise.catch(() => {}).finally(() => closure_1_14(false));
               let obj1 = ActionSheetActionCreators;
               let guild_id = project.guild_id;
               const catchPromise1 = nextPromise.catch(() => {});
-              const tmp11 = require;
-              const tmp13 = __initData3;
               if (guild_id == null) {
                 guild_id = guildId;
               }
@@ -479,8 +480,8 @@ function ChatScene(guildId) {
               ({ application_id: obj4.applicationId, name: obj4.projectName } = project);
               obj.publish = nextPromise;
               obj.initialDraft = promise;
-              obj.content = tmp13(VibegrationsPublishNotesSheetDefault, obj);
-              obj.key = tmp11(16597).VIBEGRATIONS_PUBLISH_NOTES_SHEET_KEY;
+              obj.content = __initData3(VibegrationsPublishNotesSheetDefault, obj);
+              obj.key = VibegrationsPublishNotesSheet.VIBEGRATIONS_PUBLISH_NOTES_SHEET_KEY;
               obj1.showActionSheet(obj);
             }
           }
@@ -618,6 +619,45 @@ function ChatScene(guildId) {
         return closure_2_24(canPublish, obj);
       },
     });
+    let obj = {
+      headerTitle() {
+        return __initData3(NavigatorHeader.NavigatorHeader, { title: stringResult, subtitle });
+      },
+      headerRight() {
+        let obj = { style: headerActions.headerActions, children: null };
+        let tmp3 = null;
+        if (closure_1_11) {
+          obj = { IconComponent: guildId(navigation[43]).PlayIcon, onPress, accessibilityLabel: null };
+          let intl = guildId(navigation[20]).intl;
+          obj.accessibilityLabel = intl.string(projectId(navigation[21]).ecod4C);
+          tmp3 = closure_2_23(guildId(navigation[42]).HeaderActionButton, obj);
+        }
+        items = [tmp3];
+        obj = {
+          items,
+          align: "below",
+          children(arg0) {
+            ({ ref, onPress, accessibilityActions, onAccessibilityAction } = arg0);
+            const obj = {
+              ref,
+              IconComponent: closure_1_0(8672).MoreHorizontalIcon,
+              onPress,
+              accessibilityLabel: null,
+              accessibilityActions: null,
+              onAccessibilityAction: null,
+            };
+            const intl = closure_1_0(1114).intl;
+            obj.accessibilityLabel = intl.string(closure_1_0(1114).t["UKOtz+"]);
+            obj.accessibilityActions = accessibilityActions;
+            obj.onAccessibilityAction = onAccessibilityAction;
+            return closure_1_23(closure_1_0(7377).HeaderActionButton, obj);
+          },
+        };
+        items[1] = closure_2_23(guildId(navigation[44]).ContextMenu, obj);
+        obj.children = items;
+        return closure_2_24(canPublish, obj);
+      },
+    };
   }, items16);
   const items17 = [guildId, projectId];
   const effect3 = obj3.useEffect(() => {
@@ -741,6 +781,7 @@ export default function VibegrationsStandaloneScreen(guildId) {
     if (!tmp) {
       navigation.goBack();
     }
+    tmp = null == stateFromStores || isVibegrationsGuildEnabled;
   }, items7);
   obj = {};
   obj = { headerLeft: null, headerTitle: null, render: null };

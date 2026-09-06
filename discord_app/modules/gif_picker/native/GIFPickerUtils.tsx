@@ -11,10 +11,10 @@ function transformFavoriteGifUrl(url, arg1) {
   if (null != str) {
     if (obj6.isExternalProxiedAttachmentUrl(str)) {
       const formatted = str.pathname.toLowerCase();
+      formatted.endsWith(".webp");
       const formatted1 = str.pathname.toLowerCase();
       let endsWithResult1 = formatted1.endsWith(".avif");
       const formatted2 = str.pathname.toLowerCase();
-      const endsWithResult2 = formatted2.endsWith(".gif");
       if (!endsWithResult1) {
         endsWithResult1 = endsWithResult2;
       }
@@ -26,10 +26,9 @@ function transformFavoriteGifUrl(url, arg1) {
       const result1 = searchParams2.set("animated", "true");
       return str.toString();
     } else {
-      const tmp14Result = tmp14(9942);
+      AttachmentUrlUtilsAll;
     }
     obj6 = AttachmentUrlUtilsAll;
-    tmp14 = importAll;
   }
   if (re6.test(arg1)) {
     const match = re8.exec(arg1);
@@ -70,8 +69,8 @@ export const useFavoriteGIFsMobile = function useFavoriteGIFsMobile() {
         const obj = { type: GIFPickerResultTypes.FAVORITES, name: null, src: null, format: null };
         const intl = util.intl;
         obj.name = intl.string(util.t.k8fFjp);
-        obj.src = tmp[0].src;
-        obj.format = tmp[0].format;
+        obj.src = sortedFavoriteGIFs[0].src;
+        obj.format = sortedFavoriteGIFs[0].format;
         tmp2 = obj;
       }
       return tmp2;

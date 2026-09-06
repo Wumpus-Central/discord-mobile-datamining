@@ -48,7 +48,7 @@ export default noop.memo(function ChatPlaceholder(screenIndex) {
     return tmp2;
   }, []);
   const items1 = [height, sum, tmp2, callback];
-  let tmp = closure_5();
+  const tmp = closure_5();
   const memo1 = noop.useMemo(() => {
     let diff;
     const items = [];

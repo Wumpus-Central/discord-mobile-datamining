@@ -86,7 +86,7 @@ export const Backdrop = function Backdrop(animatedProps) {
       };
       backgroundColor = backgroundColor.backdrop.backgroundColor;
       obj4.android_fallbackColor = backgroundColor;
-      obj3.children = tmp7(tmp15, obj4);
+      obj3.children = React4(tmp15, obj4);
     } else if ("subtle" !== str) {
       num = 0.25;
     }
@@ -96,7 +96,7 @@ export const Backdrop = function Backdrop(animatedProps) {
     const merged1 = Object.assign(obj);
     const items3 = [backgroundColor.fill, flag ? backgroundColor.backdropOpaque : backgroundColor.backdrop];
     obj5.style = items3;
-    items2[1] = tmp7(tmp8, obj5);
+    items2[1] = React4(tmp8, obj5);
     obj.children = items2;
     return hasOwnProperty(ReanimatedRexportDefault.View, obj);
   }

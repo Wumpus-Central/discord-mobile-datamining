@@ -45,11 +45,10 @@ export const getAssignedNotifSettingsAndMappings = function getAssignedNotifSett
     let _parseInt = parseInt;
     let parsed = parseInt(tmp13[0]);
     for (const item10059 of tmp14) {
-      let tmp18 = item10059;
       if (set.has(item10059)) {
         let obj = { notifType: null, notifSetting: null };
         obj.notifType = parsed;
-        obj.notifSetting = tmp18;
+        obj.notifSetting = item10059;
         arr = mappings.push(obj);
         obj3.return();
         break;
@@ -119,7 +118,7 @@ export const useNotifSettingVisibility = function useNotifSettingVisibility(GAMI
   if (isDeclarativeNotificationSettingsRedesignEnabled) {
     isDeclarativeNotificationSettingsRedesignEnabled =
       null == stateFromStores || null == variations || variations.includes(stateFromStores.variation);
-    let tmp5 = null == stateFromStores || null == variations || variations.includes(stateFromStores.variation);
+    const tmp5 = null == stateFromStores || null == variations || variations.includes(stateFromStores.variation);
   }
   return isDeclarativeNotificationSettingsRedesignEnabled;
 };

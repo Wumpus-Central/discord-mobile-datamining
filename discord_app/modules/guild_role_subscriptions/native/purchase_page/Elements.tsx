@@ -108,10 +108,11 @@ export const TruncatedText = function TruncatedText(lineClamp) {
       stringResult = string(t.Fbrd8J);
     }
     const obj1 = { variant: "text-sm/medium", color: "text-default", children: stringResult };
-    t = tmp7(Text_Text.Text, obj1);
+    t = React7(Text_Text.Text, obj1);
     obj.children = t;
     React7(React5, obj);
   }
+  const tmp3 = _slicedToArray(noop.useState(false), 2);
 };
 export const ArrowButton = function ArrowButton(arg0) {
   ({ text, onPress } = arg0);

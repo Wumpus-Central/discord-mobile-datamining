@@ -44,7 +44,6 @@ export default function GuildPowerupsDeactivateAlert(arg0) {
   obj = { header: null, title: null, content: null, actions: null, extraContent: null };
   obj = { style: tmp.headerContainer, children: null };
   const arr = useDeactivateWarningTextDefault(guildId, powerup);
-  const tmp8 = View;
   obj.children = closure_4(require("CircleErrorIcon").CircleErrorIcon, {
     color: nativeDefault.colors.INTERACTIVE_ICON_DEFAULT,
     size: "custom",
@@ -63,7 +62,7 @@ export default function GuildPowerupsDeactivateAlert(arg0) {
       color: "text-feedback-critical",
       children: error,
     };
-    tmp7Result = tmp7(tmp5(4556).Text, obj4);
+    tmp7Result = closure_4(tmp5(4556).Text, obj4);
   }
   const obj5 = { children: null };
   const items = [tmp7Result, ,];
@@ -95,7 +94,7 @@ export default function GuildPowerupsDeactivateAlert(arg0) {
   };
   const obj2 = { perk: powerup.title };
   const obj3 = { perk: powerup.title };
-  obj.extraContent = closure_4(tmp8, {
+  obj.extraContent = closure_4(View, {
     style: tmp.extraContentContainer,
     children: arr.map((critical, index) => {
       const obj = { style: warningText.warningText, variant: null, color: null, children: null };

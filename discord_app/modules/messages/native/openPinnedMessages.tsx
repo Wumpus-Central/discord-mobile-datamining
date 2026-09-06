@@ -13,4 +13,5 @@ export default function openPinnedMessages(channelId, source) {
     obj = { initialRouteName: constants.PINNED_MESSAGES, channelId, source };
     rootNavigationRef.navigate("sidebar", obj);
   }
+  tmp = null != rootNavigationRef && rootNavigationRef.isReady();
 }

@@ -172,7 +172,7 @@ export default function _default(heroBlock) {
           const obj3 = { colors: ["rgba(39, 30, 173, 0.3)", "transparent"], start: null, end: null, style: null };
           ({ START: obj17.start, END: obj17.end } = closure_10);
           obj3.style = tmp8.orbsBackgroundGradient;
-          tmp22Result = tmp22(tmp6(4987), obj3);
+          tmp22Result = closure_11(tmp6(4987), obj3);
         }
         const obj4 = { children: null };
         const items3 = [tmp22Result, ,];
@@ -181,15 +181,15 @@ export default function _default(heroBlock) {
         obj5.style = items4;
         const obj6 = { uri: heroBannerUrl };
         obj5.source = obj6;
-        items3[1] = tmp22(stateFromStores, obj5);
+        items3[1] = closure_11(stateFromStores, obj5);
         const obj7 = { colors: null, start: null, end: null, style: null };
         const items5 = [hexToRgbaStringResult, token1];
         obj7.colors = items5;
         ({ START: obj21.start, END: obj21.end } = closure_10);
         obj7.style = tmp8.fadeOutGradient;
-        items3[2] = tmp22(tmp6(4987), obj7);
+        items3[2] = closure_11(tmp6(4987), obj7);
         obj4.children = items3;
-        tmp24Result = tmp24(closure_12, obj4);
+        tmp24Result = closure_13(closure_12, obj4);
       }
       obj2.children = tmp24Result;
       const items6 = [closure_11(closure_5, obj2), ,];
@@ -204,7 +204,7 @@ export default function _default(heroBlock) {
             style: tmp8.orbsTitle,
             children: tmp18,
           };
-          tmp22Result = tmp22(tmp(4556).Text, obj10);
+          tmp22Result = closure_11(tmp(4556).Text, obj10);
         }
         const items7 = [tmp22Result];
         let tmp22Result1 = null != tmp19;
@@ -213,12 +213,12 @@ export default function _default(heroBlock) {
         }
         if (tmp22Result1) {
           const obj11 = { variant: "text-md/medium", children: tmp19 };
-          tmp22Result1 = tmp22(tmp(4556).Text, obj11);
+          tmp22Result1 = closure_11(tmp(4556).Text, obj11);
         }
         const obj12 = { children: null };
         items7[1] = tmp22Result1;
         obj12.children = items7;
-        const items8 = [tmp24(tmp25, obj12)];
+        const items8 = [closure_13(tmp25, obj12)];
         if (isEligibleForQuests) {
           const obj13 = { variant: "tertiary", shrink: true, grow: false, size: "sm", text: null, onPress: null };
           const intl3 = tmp(1114).intl;
@@ -231,11 +231,11 @@ export default function _default(heroBlock) {
             };
             obj.openQuestHome(obj);
           };
-          isEligibleForQuests = tmp22(tmp(4975).Button, obj13);
+          isEligibleForQuests = closure_11(tmp(4975).Button, obj13);
         }
         items8[1] = isEligibleForQuests;
         obj9.children = items8;
-        tmp24Result = tmp24(tmp25, obj9);
+        tmp24Result = closure_13(tmp25, obj9);
       } else {
         const obj14 = {
           accessibilityRole: "button",
@@ -258,7 +258,7 @@ export default function _default(heroBlock) {
           let obj = AnalyticsUtilsDefault;
           let sessionId;
           if (analyticsContext != null) {
-            sessionId = tmp2.sessionId;
+            sessionId = analyticsContext.sessionId;
           }
           obj = {
             collectibles_shop_session_id: sessionId,
@@ -272,17 +272,17 @@ export default function _default(heroBlock) {
           };
           let pageSection;
           if (analyticsContext != null) {
-            pageSection = tmp2.pageSection;
+            pageSection = analyticsContext.pageSection;
           }
           obj.page_section = pageSection;
           let pageCategory;
           if (analyticsContext != null) {
-            pageCategory = tmp2.pageCategory;
+            pageCategory = analyticsContext.pageCategory;
           }
           obj.page_category = pageCategory;
           let tilePosition;
           if (analyticsContext != null) {
-            tilePosition = tmp2.tilePosition;
+            tilePosition = analyticsContext.tilePosition;
           }
           obj.tile_position = String(tilePosition);
           obj.track(constants2.COLLECTIBLES_SHOP_ELEMENT_CLICKED, obj);
@@ -298,18 +298,18 @@ export default function _default(heroBlock) {
           const obj19 = { style: tmp8.heroLogo, source: null };
           const obj20 = { uri: heroLogoUrl };
           obj19.source = obj20;
-          obj18.children = tmp22(stateFromStores, obj19);
-          tmp22Result2 = tmp22(tmp25, obj18);
+          obj18.children = closure_11(stateFromStores, obj19);
+          tmp22Result2 = closure_11(tmp25, obj18);
         }
         const items9 = [tmp22Result2];
         const obj21 = {
           style: tmp8.heroViewAllIcon,
-          children: tmp22(tmp(7209).ChevronSmallRightIcon, { size: "sm", color: "white" }),
+          children: closure_11(tmp(7209).ChevronSmallRightIcon, { size: "sm", color: "white" }),
         };
-        items9[1] = tmp22(tmp25, obj21);
+        items9[1] = closure_11(tmp25, obj21);
         obj17.children = items9;
-        obj14.children = tmp24(tmp25, obj17);
-        tmp24Result = tmp22(tmp(5123).PressableOpacity, obj14, stateFromStores.storeListingId);
+        obj14.children = closure_13(tmp25, obj17);
+        tmp24Result = closure_11(tmp(5123).PressableOpacity, obj14, stateFromStores.storeListingId);
       }
       obj8.children = tmp24Result;
       items6[1] = closure_11(closure_5, obj8);
@@ -331,14 +331,14 @@ export default function _default(heroBlock) {
         const intl5 = tmp(1114).intl;
         const obj24 = { category: stateFromStores.name };
         obj23.accessibilityLabel = intl5.formatToPlainString(tmp(1114).t.FNtLb3, obj24);
-        let tmp22Result3 = tmp22(tmp6Result, obj23);
+        let tmp22Result3 = closure_11(tmp6Result, obj23);
       } else {
         if (0 === filteredAndSortedProducts.length) {
           const obj25 = { accessibilityLabel: null };
           const intl4 = tmp(1114).intl;
           const obj26 = { category: stateFromStores.name };
           obj25.accessibilityLabel = intl4.formatToPlainString(tmp(1114).t.FNtLb3, obj26);
-          let tmp22Result4 = tmp22(SkeletonLoading, obj25);
+          let tmp22Result4 = closure_11(SkeletonLoading, obj25);
         } else {
           const obj27 = {
             horizontal: true,
@@ -379,10 +379,10 @@ export default function _default(heroBlock) {
             obj.style = obj;
             return closure_1_11(closure_5, obj);
           };
-          tmp22Result4 = tmp22(tmp(8874).FlashList, obj27);
+          tmp22Result4 = closure_11(tmp(8874).FlashList, obj27);
         }
         const obj29 = { children: tmp22Result4 };
-        tmp22Result3 = tmp22(closure_12, obj29);
+        tmp22Result3 = closure_11(closure_12, obj29);
       }
       const obj30 = { children: tmp22Result3 };
       obj22.children = closure_11(tmp(7156).LayerScope, obj30);
@@ -400,4 +400,5 @@ export default function _default(heroBlock) {
       tmpResult7 = tmp(4411);
     }
   }
+  tmp15 = preferVCPrice(7162);
 }

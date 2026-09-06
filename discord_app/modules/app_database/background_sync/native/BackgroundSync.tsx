@@ -22,7 +22,7 @@ let closure_17 = async function _backgroundSync(arg0) {
   c6 = 0;
   c7 = 0;
   c5 = 0;
-  let iter = (async (arg0, value) => {
+  let iter = (async (arg0) => {
     if (c7 === 2) {
       c7 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -57,12 +57,12 @@ let closure_17 = async function _backgroundSync(arg0) {
               flag = false;
             }
             closure_130_0 = flag;
-            let flag2 = tmp193.messagesOnly;
+            let flag2 = force.messagesOnly;
             if (flag2 === undefined) {
               flag2 = false;
             }
             closure_130_1 = flag2;
-            let flag3 = tmp193.checkLastMessageId;
+            let flag3 = force.checkLastMessageId;
             if (flag3 === undefined) {
               flag3 = false;
             }
@@ -265,7 +265,7 @@ function backgroundSyncPrivateChannels() {
   }
   return applyArgumentsResult;
 }
-let closure_20 = async function _backgroundSyncPrivateChannels(arg0, value) {
+let closure_20 = async function _backgroundSyncPrivateChannels(arg0) {
   if (c6 === 2) {
     c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -404,7 +404,7 @@ function backgroundSyncGuildData() {
   }
   return applyArgumentsResult;
 }
-let closure_22 = async function _backgroundSyncGuildData(arg0, value) {
+let closure_22 = async function _backgroundSyncGuildData(arg0) {
   if (c6 === 2) {
     c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -623,7 +623,7 @@ function backgroundSyncGuildChannels() {
   }
   return applyArgumentsResult;
 }
-let closure_24 = async function _backgroundSyncGuildChannels(arg0, value) {
+let closure_24 = async function _backgroundSyncGuildChannels(arg0) {
   if (c22 === 2) {
     c22 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -779,10 +779,13 @@ let closure_24 = async function _backgroundSyncGuildChannels(arg0, value) {
                 continue;
               }
               let HTTP = closure_146_0(closure_146_2[20]).HTTP;
-              let request = { url: null, body: null, timeout: 5000, rejectWithError: false };
-              request.url = closure_146_12.MESSAGE_LOG_GUILD_CHANNELS;
-              let obj3 = { per_channel_limit: null, last_synced_message_id_by_channel_id: null };
-              obj3.per_channel_limit = closure_146_13;
+              let request = {
+                url: closure_146_12.MESSAGE_LOG_GUILD_CHANNELS,
+                body: null,
+                timeout: 5000,
+                rejectWithError: false,
+              };
+              let obj3 = { per_channel_limit: closure_146_13, last_synced_message_id_by_channel_id: null };
               obj3.last_synced_message_id_by_channel_id = closure_145_7;
               request.body = obj3;
               c21 = 3;
@@ -899,14 +902,19 @@ let closure_24 = async function _backgroundSyncGuildChannels(arg0, value) {
               let tmp41 = closure_145_17;
               let tmp44 = closure_145_15[closure_145_19];
               c16 = tmp44;
-              let tmp39 = closure_146_25;
               if (tmp44 == null) {
                 c16 = null;
               }
               c21 = 6;
               c22 = 1;
               obj9 = {
-                value: tmp39(tmp40, tmp41, c16, closure_145_19, body.change_logs_by_channel_id[closure_145_19].changes),
+                value: closure_146_25(
+                  tmp40,
+                  tmp41,
+                  c16,
+                  closure_145_19,
+                  body.change_logs_by_channel_id[closure_145_19].changes,
+                ),
                 done: false,
               };
               return obj9;
@@ -936,7 +944,7 @@ function processChannelChanges() {
   }
   return applyArgumentsResult;
 }
-let closure_26 = async function _processChannelChanges(arg0, value) {
+let closure_26 = async function _processChannelChanges(arg0) {
   if (c12 === 2) {
     c12 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -968,24 +976,23 @@ let closure_26 = async function _processChannelChanges(arg0, value) {
           closure_135_1 = closure_1;
           closure_135_2 = closure_2;
           closure_135_3 = closure_3;
-          let tmp67 = closure_4;
           closure_135_4 = undefined;
           closure_135_5 = undefined;
           closure_135_6 = undefined;
           closure_135_7 = undefined;
           closure_135_8 = undefined;
           closure_135_9 = undefined;
-          if (null != closure_4) {
-            let new_messages = tmp67.new_messages;
+          if (null != asyncGeneratorStep) {
+            let new_messages = asyncGeneratorStep.new_messages;
             if (undefined === new_messages) {
               new_messages = [];
             }
             closure_135_4 = new_messages;
-            let modified_messages = tmp67.modified_messages;
+            let modified_messages = asyncGeneratorStep.modified_messages;
             if (undefined === modified_messages) {
               modified_messages = [];
             }
-            let deleted_message_ids = tmp67.deleted_message_ids;
+            let deleted_message_ids = asyncGeneratorStep.deleted_message_ids;
             if (undefined === deleted_message_ids) {
               deleted_message_ids = [];
             }
@@ -1070,7 +1077,7 @@ function writeMessageChanges(transaction, arg1, arg2, arg3, arg4) {
   closure_2 = arg3;
   closure_3 = arg4;
   return transaction.transaction((arg0) => {
-    closure_0 = arg0;
+    dependencyMap = arg0;
     for (const key10005 in closure_0) {
       let tmpResult = tmp(key10005);
       continue;

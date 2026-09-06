@@ -53,7 +53,7 @@ export default function ProfileEffectSample(hideBackground) {
   let tmp4Result = !flag;
   if (!flag) {
     const obj1 = { style: tmp.profileBorder };
-    tmp4Result = tmp4(tmp3, obj1);
+    tmp4Result = React3(View, obj1);
   }
   items2[1] = tmp4Result;
   items2[2] = React3(ProfileEffectDefault, {

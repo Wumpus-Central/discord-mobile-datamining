@@ -4,7 +4,7 @@ import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js
 import noop from "../../../../_runtime/metro/00019__.js";
 
 const require = fn;
-let closure_8 = async function _transferToXbox(arg0, value) {
+let closure_8 = async function _transferToXbox(arg0) {
   if (c4 === 2) {
     c4 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -93,7 +93,7 @@ let closure_8 = async function _transferToXbox(arg0, value) {
         obj9 = { value, done: true };
         return obj9;
       } else if (value) {
-        tmp46(tmp47[11])(closure_129_0.id, closure_130_6.XBOX);
+        closure_130_1(closure_130_3[11])(closure_129_0.id, closure_130_6.XBOX);
         obj3 = closure_130_2(closure_130_3[6]);
         obj3.waitForSession(closure_130_6.XBOX, closure_129_0.id, closure_129_1);
         obj4 = closure_130_2(closure_130_3[12]);
@@ -114,7 +114,7 @@ let closure_8 = async function _transferToXbox(arg0, value) {
           },
         };
         c4 = 3;
-        const obj11 = { value: tmp46(tmp47[8]).openLazy(obj10), done: true };
+        const obj11 = { value: closure_130_1(closure_130_3[8]).openLazy(obj10), done: true };
         return obj11;
       }
     } catch (tmp39) {

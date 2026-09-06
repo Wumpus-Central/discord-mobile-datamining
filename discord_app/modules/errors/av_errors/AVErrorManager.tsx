@@ -144,6 +144,7 @@ prototype["updateActiveErrors"] = function updateActiveErrors() {
         : call(activeErrors1),
     );
   }
+  nextResult = iter.next();
 };
 prototype["handleReportAVError"] = function handleReportAVError(arg0) {
   ({ error, context } = arg0);

@@ -36,7 +36,7 @@ let closure_9 = {
       startAnimation1,
       playIfNeeded,
     );
-    let tmpResult = tmp(4290);
+    let tmpResult = BaseRive;
     let looping;
     if (dataBinding != null) {
       looping = dataBinding.looping;
@@ -46,7 +46,7 @@ let closure_9 = {
       looping1 = onDataBindingChange.looping;
     }
     const booleanBinding = tmpResult.useBooleanBinding("looping", instance, looping, looping1, playIfNeeded);
-    tmpResult = tmp(4290);
+    tmpResult = BaseRive;
     let color;
     if (dataBinding != null) {
       color = dataBinding.color;
@@ -107,7 +107,7 @@ export const BountiesScrollIndicatorRive = noop.forwardRef(
     let obj = { fallback: fallback.fallback, children: null };
     obj = { ref };
     const merged = Object.assign(fallback);
-    obj.children = <closure_10 ref={arg1} />;
+    obj.children = <closure_10 ref={ref} />;
     return jsx(RiveErrorBoundary.RiveErrorBoundary, { ref });
   },
 );

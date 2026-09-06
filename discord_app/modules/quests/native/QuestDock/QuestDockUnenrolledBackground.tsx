@@ -118,7 +118,6 @@ export default noop.memo(function QuestDockUnenrolledBackground() {
   fn.__workletHash = 3565242281634;
   fn.__initData = __initData;
   const animatedStyle = obj5.useAnimatedStyle(fn);
-  const tmp14 = QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED;
   const tmp16 = token;
   const tmp8 = windowDimensions(setRestingQuestDockMode[13])(activeQuestDockMode);
   [tmp18, noop] = token(noop.useState("active" !== videoLoaded.currentState), 2);
@@ -133,6 +132,7 @@ export default noop.memo(function QuestDockUnenrolledBackground() {
       if (tmp3) {
         closure_1_2(constants.COLLAPSED);
       }
+      const obj = activeQuestDockMode(setRestingQuestDockMode[20]);
     });
     return () => {
       closure_0.remove();
@@ -181,9 +181,9 @@ export default noop.memo(function QuestDockUnenrolledBackground() {
   obj = {
     withSpring: tmp(tmp2[19]).withSpring,
     activeQuestDockMode,
-    QuestDockMode: tmp13,
+    QuestDockMode,
     videoLoaded,
-    QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED: tmp14,
+    QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED,
   };
   G.__closure = obj;
   G.__workletHash = 13084905891385;
@@ -207,7 +207,7 @@ export default noop.memo(function QuestDockUnenrolledBackground() {
     };
     obj4 = { uri: videoAsset.url };
     obj3.source = obj4;
-    obj3.paused = tmp8 !== tmp13.EXPANDED;
+    obj3.paused = tmp8 !== QuestDockMode.EXPANDED;
     const items4 = [closure_11(tmp(tmp2[24]).VideoComponent, obj3)];
     obj5 = { style: animatedStyle1, children: null };
     tmp7Result = tmp7(tmp2[23]);
@@ -217,7 +217,7 @@ export default noop.memo(function QuestDockUnenrolledBackground() {
     obj5.children = closure_11(tmp7(tmp2[25]), obj6);
     items4[1] = closure_11(tmp7Result, obj5);
     obj2.children = items4;
-    let tmp25Result = tmp25(obj2.Fragment, obj2);
+    let tmp25Result = closure_12(obj2.Fragment, obj2);
     let tmp27 = closure_11;
   } else {
     tmp27 = closure_11;

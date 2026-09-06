@@ -10,14 +10,15 @@ require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/applications/useGetOrFetchApplications.tsx");
 
-export default function useGetOrFetchApplications(arg0) {
-  _require = arg0;
-  let flag = arg1;
-  if (arg1 === undefined) {
+export default function useGetOrFetchApplications(items) {
+  _require = items;
+  if (flag === undefined) {
     flag = true;
   }
   dependencyMap = noop.useRef([]);
-  const items = [arg0, flag];
+  items = [,];
+  items[0] = items;
+  items[1] = flag;
   const effect = noop.useEffect(() => {
     let tmp = flag;
     if (flag) {
@@ -43,7 +44,7 @@ export default function useGetOrFetchApplications(arg0) {
     }),
   );
 }
-export const useGetOrFetchApplication = function useGetOrFetchApplication(applicationId, fetchesApplication) {
+export const useGetOrFetchApplication = function useGetOrFetchApplication(applicationId) {
   let flag = fetchesApplication;
   if (fetchesApplication === undefined) {
     flag = true;

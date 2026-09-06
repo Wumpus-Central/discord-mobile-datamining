@@ -1,6 +1,7 @@
 // discord_app/modules/launchpad/native/LaunchPadPullTabCache.tsx
 import Storage2 from "../../../../discord_common/js/packages/storage/Storage.tsx";
 import PlatformUtils from "../../../utils/PlatformUtils.tsx";
+import useWindowDimensions from "../../screen/useWindowDimensions.native.tsx";
 import NativeDeviceSettingsModuleDefault from "../../../../discord_common/js/packages/rtn-codegen/js/NativeDeviceSettingsModule.tsx";
 import LaunchPadConstants from "LaunchPadConstants.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
@@ -16,9 +17,9 @@ function setLaunchPadPullTabExclusionRect(arg0) {
     tmp = value;
   }
   if (obj.isAndroid()) {
-    let tmp7Result = tmp7(1477);
+    let tmp7Result = useWindowDimensions;
     const diff = tmp7Result.getWindowDimensions().width - hasOwnProperty;
-    tmp7Result = tmp7(1477);
+    tmp7Result = useWindowDimensions;
     const width = tmp7Result.getWindowDimensions().width;
     const sum = tmp + React3;
     let left;
@@ -54,6 +55,7 @@ function setLaunchPadPullTabExclusionRect(arg0) {
       const result = NativeDeviceSettingsModuleDefault.setSystemGestureExclusionRects(items);
     }
   }
+  obj = PlatformUtils;
 }
 ({
   LAUNCH_PAD_PULL_TAB_HEIGHT: c3,

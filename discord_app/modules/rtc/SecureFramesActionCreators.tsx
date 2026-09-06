@@ -19,7 +19,7 @@ function savePersistentCodesEnabled() {
   }
   return applyArgumentsResult;
 }
-let closure_10 = async function _savePersistentCodesEnabled(persistentCodesEnabled, arg1) {
+let closure_10 = async function _savePersistentCodesEnabled() {
   closure_1 = arg1;
   c7 = 0;
   c8 = 0;
@@ -61,8 +61,8 @@ let closure_10 = async function _savePersistentCodesEnabled(persistentCodesEnabl
               c8 = 1;
               let obj2 = { value: SecureFramesUtils.ensureCurrentUserPublicKey(closure_2_7), done: false };
               return obj2;
-            } else if (tmp53 != null) {
-              tmp53();
+            } else if (closure_1 != null) {
+              closure_1();
             }
           }
         } else {
@@ -112,7 +112,7 @@ let closure_10 = async function _savePersistentCodesEnabled(persistentCodesEnabl
     }
   })();
 };
-let closure_11 = async function _updatePersistentCodesEnabled(arg0, value) {
+let closure_11 = async function _updatePersistentCodesEnabled(arg0) {
   if (c1 === 2) {
     c1 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -167,18 +167,18 @@ let closure_11 = async function _updatePersistentCodesEnabled(arg0, value) {
             const intl = util.intl;
             const string = intl.string;
             const t = util.t;
-            if (tmp17) {
+            if (closure_0) {
               let stringResult = string(t.DRFN1B);
-              let tmp10 = tmp8;
+              let tmp10 = require;
             } else {
               stringResult = string(t.q29xJz);
-              tmp10 = tmp8;
+              tmp10 = require;
             }
             let obj1 = { title: stringResult, subtitle: null, confirmText: null, onConfirm: null };
             const intl2 = tmp10(1114).intl;
             const string2 = intl2.string;
             let intl3 = tmp10(1114).t;
-            if (tmp17) {
+            if (closure_0) {
               let string2Result = string2(intl3.y015ZY);
             } else {
               string2Result = string2(intl3.E66FQn);
@@ -186,7 +186,7 @@ let closure_11 = async function _updatePersistentCodesEnabled(arg0, value) {
             obj1.subtitle = string2Result;
             intl3 = tmp10(1114).intl;
             obj1.confirmText = intl3.string(tmp10(1114).t.aTuFYT);
-            closure_1 = asyncGeneratorStep(async (arg0, value) => {
+            closure_1 = asyncGeneratorStep(async () => {
               if (c0 === 2) {
                 c0 = 3;
                 throw new TypeError("Generator functions may not be called on executing generators");
@@ -254,7 +254,7 @@ let closure_11 = async function _updatePersistentCodesEnabled(arg0, value) {
           } else {
             c2 = 1;
             c1 = 1;
-            obj2 = { value: savePersistentCodesEnabled(tmp17), done: false };
+            obj2 = { value: savePersistentCodesEnabled(closure_0), done: false };
             return obj2;
           }
         }

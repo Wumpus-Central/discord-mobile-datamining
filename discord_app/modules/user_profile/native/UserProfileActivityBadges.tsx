@@ -1,9 +1,18 @@
 // discord_app/modules/user_profile/native/UserProfileActivityBadges.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import Text_Text from "../../../design/components/Text/native/Text.tsx";
+import GroupIcon from "../../../design/components/Icon/native/redesign/generated/GroupIcon.tsx";
+import AppsIcon from "../../../design/components/Icon/native/redesign/generated/AppsIcon.tsx";
 import isEmbeddedActivityDefault from "../../activities/utils/isEmbeddedActivity.tsx";
 import utils from "../../content_inventory/utils.tsx";
+import HourglassIcon from "../../../design/components/Icon/native/redesign/generated/HourglassIcon.tsx";
+import GameControllerIcon2 from "../../../design/components/Icon/native/redesign/generated/GameControllerIcon.tsx";
+import MusicIcon from "../../../design/components/Icon/native/redesign/generated/MusicIcon.tsx";
+import TvIcon from "../../../design/components/Icon/native/redesign/generated/TvIcon.tsx";
+import TopicsIcon from "../../../design/components/Icon/native/redesign/generated/TopicsIcon.tsx";
 import useTimestampTickedNow from "../../content_inventory/memberlist/useTimestampTickedNow.tsx";
 import shouldShowActivityTimeBarDefault from "../utils/shouldShowActivityTimeBar.tsx";
+import Badges from "../../icymi/native/content_inventory/Badges.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -57,24 +66,24 @@ export const TimestampBadge = function TimestampBadge(activity) {
         flag2 = false;
       }
       if (flag2) {
-        let GameControllerIcon = tmp2(9030).HourglassIcon;
-      } else if (tmp10(7739)(activity)) {
-        GameControllerIcon = tmp2(5106).AppsIcon;
+        let GameControllerIcon = HourglassIcon.HourglassIcon;
+      } else if (isEmbeddedActivityDefault(activity)) {
+        GameControllerIcon = AppsIcon.AppsIcon;
       } else if (activity.type === ActivityTypes.WATCHING) {
-        GameControllerIcon = tmp2(10883).TvIcon;
+        GameControllerIcon = TvIcon.TvIcon;
       } else if (activity.type === tmp6.LISTENING) {
-        GameControllerIcon = tmp2(9911).MusicIcon;
+        GameControllerIcon = MusicIcon.MusicIcon;
       } else {
-        GameControllerIcon = tmp2(9223).GameControllerIcon;
+        GameControllerIcon = GameControllerIcon2.GameControllerIcon;
       }
       obj = { style: tmp.container, children: null };
-      obj = { size: "xxs", color: tmp10(576).colors.TEXT_FEEDBACK_POSITIVE };
+      obj = { size: "xxs", color: nativeDefault.colors.TEXT_FEEDBACK_POSITIVE };
       const items = [hasOwnProperty(GameControllerIcon, obj)];
       const obj1 = { entry: null, style: null };
       const obj2 = { start, end, isCountDown: flag };
       obj1.entry = obj2;
       obj1.style = tmp.bold;
-      items[1] = hasOwnProperty(tmp2(13008).ActiveTimestamp, obj1);
+      items[1] = hasOwnProperty(Badges.ActiveTimestamp, obj1);
       obj.children = items;
       return timestampProducer(View, obj);
     }
@@ -90,9 +99,9 @@ export const PartyBadge = function PartyBadge(activity) {
       if (null != richGameStateBadgeText) {
         let obj = { style: tmp.container, children: null };
         obj = { size: "xxs", color: nativeDefault.colors.TEXT_MUTED };
-        const items = [hasOwnProperty(tmp9(5089).GroupIcon, obj)];
+        const items = [hasOwnProperty(GroupIcon.GroupIcon, obj)];
         obj = { variant: "text-sm/medium", color: "text-muted", children: richGameStateBadgeText };
-        items[1] = hasOwnProperty(tmp9(4556).Text, obj);
+        items[1] = hasOwnProperty(Text_Text.Text, obj);
         obj.children = items;
         tmp8 = timestampProducer(View, obj);
       }
@@ -113,9 +122,9 @@ export const EpisodeBadge = function EpisodeBadge(activity) {
   if (null != episodeBadgeText) {
     obj = { style: tmp.container, children: null };
     obj = { size: "xxs", color: nativeDefault.colors.TEXT_MUTED };
-    const items = [hasOwnProperty(tmp2(11653).TopicsIcon, obj)];
+    const items = [hasOwnProperty(TopicsIcon.TopicsIcon, obj)];
     const obj1 = { variant: "text-sm/medium", color: "text-muted", children: episodeBadgeText };
-    items[1] = hasOwnProperty(tmp2(4556).Text, obj1);
+    items[1] = hasOwnProperty(Text_Text.Text, obj1);
     obj.children = items;
     tmp6 = timestampProducer(View, obj);
   }

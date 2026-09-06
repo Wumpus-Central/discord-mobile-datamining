@@ -29,8 +29,8 @@ function getPrice(price, arg1) {
   countryPrices = null;
   if (null != price.prices[constants2.DEFAULT]) {
     countryPrices = null;
-    if (price.prices[tmp.DEFAULT].countryPrices.prices.length > 0) {
-      countryPrices = price.prices[tmp.DEFAULT].countryPrices;
+    if (price.prices[constants2.DEFAULT].countryPrices.prices.length > 0) {
+      countryPrices = price.prices[constants2.DEFAULT].countryPrices;
     }
   }
 }
@@ -41,7 +41,7 @@ function hasSocialLayerStorefront(guild) {
   } else if ("type" in guild) {
     return false;
   } else {
-    let applicationIdFromGuildId = obj.getApplicationIdFromGuildId(guild.id);
+    let applicationIdFromGuildId = SocialLayerStorefrontStore.getApplicationIdFromGuildId(guild.id);
     if (applicationIdFromGuildId == null) {
       let length;
       if (guild != null) {
@@ -56,7 +56,7 @@ function hasSocialLayerStorefront(guild) {
       }
       applicationIdFromGuildId = first;
     }
-    let result = obj.hasStorefrontForApplicationId(applicationIdFromGuildId);
+    let result = SocialLayerStorefrontStore.hasStorefrontForApplicationId(applicationIdFromGuildId);
     if (!result) {
       const features = guild.features;
       let flag;
@@ -206,8 +206,8 @@ function getCountryPrices(arg0, arg1) {
   countryPrices = null;
   if (null != arg0.prices[constants2.DEFAULT]) {
     countryPrices = null;
-    if (arg0.prices[tmp.DEFAULT].countryPrices.prices.length > 0) {
-      countryPrices = arg0.prices[tmp.DEFAULT].countryPrices;
+    if (arg0.prices[constants2.DEFAULT].countryPrices.prices.length > 0) {
+      countryPrices = arg0.prices[constants2.DEFAULT].countryPrices;
     }
   }
 }
@@ -222,8 +222,8 @@ function getRequiredSubscriptionPlanIds(arr) {
   }
   return planIds;
 }
-function isOnCollectiblesShopGameShopPage(arr, arg1, arg2, arg3) {
-  const parsed = keysSorter.parse(arg1);
+function isOnCollectiblesShopGameShopPage(arr, search, arg2, arg3) {
+  const parsed = keysSorter.parse(search);
   ({ tab, applicationId, skuId } = parsed);
   let tmp2 = arr.indexOf(map1.COLLECTIBLES_SHOP) >= 0;
   if (tmp2) {
@@ -274,10 +274,9 @@ export const getOrderedStorefrontSkuIds = function getOrderedStorefrontSkuIds(ar
     let skuIds = nextResult.skuIds;
     let tmp2 = nextResult;
     for (const item10024 of skuIds) {
-      let tmp5 = item10024;
       if (!set.has(item10024)) {
-        let addResult = set.add(tmp5);
-        let arr = items.push(tmp5);
+        let addResult = set.add(item10024);
+        let arr = items.push(item10024);
       }
       continue;
     }
@@ -288,10 +287,9 @@ export const getOrderedStorefrontSkuIds = function getOrderedStorefrontSkuIds(ar
     for (const item10040 of sections) {
       let skuIds2 = item10040.skuIds;
       for (const item10046 of skuIds2) {
-        let tmp14 = item10046;
         if (!set.has(item10046)) {
-          let addResult1 = set.add(tmp14);
-          arr = items.push(tmp14);
+          let addResult1 = set.add(item10046);
+          arr = items.push(item10046);
         }
         continue;
       }
@@ -452,7 +450,7 @@ export const transformSlayerApplicationStorefrontServer = function transformSlay
   obj.promotions = _modDef12.mapValues(promotions, transformSlayerStorefrontPromotionServer);
   return obj;
 };
-export const getPrimaryCarouselItemInfo = function getPrimaryCarouselItemInfo(tenantMetadata, arg1) {
+export const getPrimaryCarouselItemInfo = function getPrimaryCarouselItemInfo(tenantMetadata, application_id) {
   let obj = arg2;
   if (arg2 === undefined) {
     obj = {};
@@ -462,7 +460,7 @@ export const getPrimaryCarouselItemInfo = function getPrimaryCarouselItemInfo(te
   if (undefined !== size) {
     num = size;
   }
-  if (null != arg1) {
+  if (null != application_id) {
     let carouselItems;
     if (tenantMetadata != null) {
       tenantMetadata = tenantMetadata.tenantMetadata;
@@ -480,10 +478,15 @@ export const getPrimaryCarouselItemInfo = function getPrimaryCarouselItemInfo(te
           obj = { primaryIconAsset: "hash", primaryIconLabel: "call" };
         } else {
           const obj3 = StoreUtils;
+          obj = {
+            primaryIconAsset: URLUtilsDefault.toURLSafe(
+              obj3.getAssetURL(application_id, first.labelIconAssetId, num, "webp"),
+            ),
+            primaryIconLabel: first.label,
+          };
           const toURLSafeResult = URLUtilsDefault.toURLSafe(
-            obj3.getAssetURL(arg1, first.labelIconAssetId, num, "webp"),
+            obj3.getAssetURL(application_id, first.labelIconAssetId, num, "webp"),
           );
-          obj = { primaryIconAsset: toURLSafeResult, primaryIconLabel: first.label };
         }
         return obj;
       }
@@ -636,8 +639,8 @@ export const getHasWishlistOrPopularRecommendations = function getHasWishlistOrP
   }
   return obj;
 };
-export const isOnSocialLayerStorefrontPage = function isOnSocialLayerStorefrontPage(arr, arg1, arg2, arg3) {
-  const parsed = keysSorter.parse(arg1);
+export const isOnSocialLayerStorefrontPage = function isOnSocialLayerStorefrontPage(arr, search, arg2, arg3) {
+  const parsed = keysSorter.parse(search);
   ({ tab, applicationId } = parsed);
   let tmp2 = arr.indexOf(map1.COLLECTIBLES_SHOP) >= 0;
   if (tmp2) {

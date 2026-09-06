@@ -1,11 +1,15 @@
 // discord_app/modules/premium/powerups/native/GuildPowerupsPerkCard.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import util from "../../../../intl/index.native.tsx";
+import native from "../../../../design/void/native.tsx";
 import shared from "../../../../design/shared.tsx";
 import useThemeDefault from "../../../../hooks/useTheme.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import LinearGradientDefault from "../../../../../_runtime/04987_LinearGradient.js";
 import ManaTypeConsolidationExperiment from "../../../design/ManaTypeConsolidationExperiment.tsx";
+import GuildPowerupsImageDefault from "GuildPowerupsImage.tsx";
 import GuildPowerupsCardFooter from "GuildPowerupsCardFooter.tsx";
+import GuildPowerupsCardDefault from "GuildPowerupsCard.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -68,9 +72,9 @@ export default function GuildPowerupsPerkCard(arg0) {
   const items = [tmp2.container, style];
   obj.containerStyle = items;
   obj = { style: tmp2.imageContainer, children: null };
-  let tmp3Result = tmp3(12568);
+  let tmp3Result = GuildPowerupsCardDefault;
   if (riveComponent == null) {
-    tmp3Result = tmp3(12523);
+    tmp3Result = GuildPowerupsImageDefault;
     if (imageUrl == null) {
       imageUrl = "";
     }
@@ -115,20 +119,20 @@ export default function GuildPowerupsPerkCard(arg0) {
   let tmp15Result = "new" === badge;
   if (tmp15Result) {
     const obj7 = { text: null, style: null };
-    const intl = tmp6(1114).intl;
-    obj7.text = intl.string(tmp6(1114).t.y2b7CA);
+    const intl = util.intl;
+    obj7.text = intl.string(util.t.y2b7CA);
     obj7.style = tmp2.badge;
-    tmp15Result = tmp15(tmp6(1178).TextBadge, obj7);
+    tmp15Result = React4(native.TextBadge, obj7);
   }
   items2[2] = tmp15Result;
   tmp15Result = "beta" === badge;
   if (tmp15Result) {
     const obj8 = { text: null, color: null, style: null };
-    const intl2 = tmp6(1114).intl;
-    obj8.text = intl2.string(tmp6(1114).t.oW0eUd);
-    obj8.color = tmp6(1178).BadgeColors.BRAND;
+    const intl2 = util.intl;
+    obj8.text = intl2.string(util.t.oW0eUd);
+    obj8.color = native.BadgeColors.BRAND;
     obj8.style = tmp2.badge;
-    tmp15Result = tmp15(tmp6(1178).TextBadge, obj8);
+    tmp15Result = React4(native.TextBadge, obj8);
   }
   items2[3] = tmp15Result;
   obj.children = items2;

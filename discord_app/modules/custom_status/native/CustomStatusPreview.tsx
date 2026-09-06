@@ -26,10 +26,10 @@ let closure_9 = createStyles.createStyles((arg0) => {
   const colors = nativeDefault.colors;
   if (arg0) {
     let BACKGROUND_SURFACE_HIGH = colors.BORDER_MUTED;
-    let tmp4 = tmp;
+    let tmp4 = importDefault;
   } else {
     BACKGROUND_SURFACE_HIGH = colors.BACKGROUND_SURFACE_HIGH;
-    tmp4 = tmp;
+    tmp4 = importDefault;
   }
   obj = {
     profileContainer: null,
@@ -159,7 +159,7 @@ export default function CustomStatusPreview(user) {
       skuId = tmp3.profileEffect.skuId;
     }
     const obj6 = { skuId, style: tmp7.profileEffect };
-    tmp11Result = tmp11(tmpResult, obj6);
+    tmp11Result = closure_7(tmpResult, obj6);
   }
   items2[2] = tmp11Result;
   obj.children = items2;

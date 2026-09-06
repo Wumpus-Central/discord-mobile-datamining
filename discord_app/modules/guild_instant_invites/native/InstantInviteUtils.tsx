@@ -1,6 +1,8 @@
 // discord_app/modules/guild_instant_invites/native/InstantInviteUtils.tsx
 import ToastUtils from "../../toast/native/ToastUtils.tsx";
+import ClipboardUtils from "../../../utils/ClipboardUtils.native.tsx";
 import getInviteURLDefault from "../../instant_invite/getInviteURL.tsx";
+import instant_invite_InstantInviteUtils from "../../instant_invite/native/InstantInviteUtils.tsx";
 import _modDef10944 from "../../../../_runtime/metro/10944__.js";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import ChannelStore from "../../../stores/ChannelStore.tsx";
@@ -28,15 +30,15 @@ export const useInviteActions = function useInviteActions(invite) {
   obj.iconSource = onInviteRevoked(10937).share;
   obj.action = function action() {
     _modDef10944(() => {
-      let obj = invite(closure_2[7]);
+      let obj = invite(dependencyMap[7]);
       let tmp4;
       if (!closure_1_3) {
-        tmp4 = onInviteRevoked(tmp2[8])(closure_1_0.code);
+        tmp4 = onInviteRevoked(dependencyMap[8])(closure_1_0.code);
       }
       obj = { url: tmp4, message: null };
       let formatToPlainStringResult;
       if (closure_1_3) {
-        const intl = tmp(tmp2[4]).intl;
+        const intl = invite(dependencyMap[4]).intl;
         currentUser = currentUser.getCurrentUser();
         let str;
         if (currentUser != null) {
@@ -45,8 +47,8 @@ export const useInviteActions = function useInviteActions(invite) {
         if (str == null) {
           str = "";
         }
-        obj = { username: str, link: onInviteRevoked(tmp2[8])(closure_1_0.code) };
-        formatToPlainStringResult = intl.formatToPlainString(tmp(tmp2[4]).t["+zWvOQ"], obj);
+        obj = { username: str, link: onInviteRevoked(dependencyMap[8])(closure_1_0.code) };
+        formatToPlainStringResult = intl.formatToPlainString(invite(dependencyMap[4]).t["+zWvOQ"], obj);
       }
       obj.message = formatToPlainStringResult;
       let str2 = "Guild Instant Invite";
@@ -63,10 +65,10 @@ export const useInviteActions = function useInviteActions(invite) {
   obj.iconSource = onInviteRevoked(10937).copy;
   obj.action = function action() {
     if (c3) {
-      let tmpResult = tmp(9820);
+      let tmpResult = instant_invite_InstantInviteUtils;
       tmpResult.handleCopy(invite.code, invite.channel, InstantInviteSources.GROUP_DM, false);
     } else {
-      tmpResult = tmp(7190);
+      tmpResult = ClipboardUtils;
       tmpResult.copy(getInviteURLDefault(invite.code));
       const result = ToastUtils.presentCopiedToClipboard();
     }
@@ -88,14 +90,14 @@ export const useInviteActions = function useInviteActions(invite) {
       v2(tmp24[13]);
     } else if (arg0 === 1) {
       c4 = 3;
-      throw arg1;
+      throw value;
     } else if (arg0 !== 2) {
       if (closure_128_1 != null) {
         tmp9(closure_128_0);
       }
       c3 = 0;
     }
-    return arg1;
+    return value;
   });
   obj1.action = function () {
     const self = this;

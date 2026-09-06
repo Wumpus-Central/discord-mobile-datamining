@@ -57,9 +57,9 @@ export const useUserCodeSubmit = function useUserCodeSubmit(arr, onUserCodeAccep
         c5 = 3;
       } else if (arg0 === 1) {
         c5 = 3;
-        throw arg1;
+        throw value;
       } else if (arg0 !== 2) {
-        closure_128_0 = arg1;
+        closure_128_0 = value;
         closure_129_3(false);
         closure_129_1({
           userCode: closure_129_0,
@@ -69,7 +69,7 @@ export const useUserCodeSubmit = function useUserCodeSubmit(arr, onUserCodeAccep
         });
         c3 = 0;
       }
-      return arg1;
+      return value;
     }),
     items,
   );

@@ -1,6 +1,12 @@
 // discord_app/modules/quests/native/QuestBottomSheet/QuestBottomSheetHooks.tsx
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
+import QuestTypes from "../../QuestTypes.tsx";
+import AdCreativeType from "../../../../../discord_common/js/shared/shared-constants/AdCreativeType.tsx";
+import AnalyticsActions from "../../lib/analytics/AnalyticsActions.tsx";
+import AnalyticsTypes from "../../lib/analytics/AnalyticsTypes.tsx";
 import AdAnalyticsInterfaceExperiment from "../../experiments/AdAnalyticsInterfaceExperiment.tsx";
+import captureAdUserAction2 from "../../../ads/analytics/captureAdUserAction.tsx";
+import captureAdUserActionTypes from "../../../ads/analytics/captureAdUserActionTypes.tsx";
 import openVideoQuestModalDefault from "../VideoQuestModal/openVideoQuestModal.tsx";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -34,7 +40,7 @@ export const useWatchTaskPressHandler = function useWatchTaskPressHandler(questI
     let obj = { questId, questContentPosition: null, sourceQuestContent: null };
     let questContentPosition;
     if (questImpression != null) {
-      questContentPosition = obj2.getQuestContentPosition();
+      questContentPosition = questImpression.getQuestContentPosition();
     }
     obj.questContentPosition = questContentPosition;
     obj.sourceQuestContent = sourceQuestContent;
@@ -45,51 +51,52 @@ export const useWatchTaskPressHandler = function useWatchTaskPressHandler(questI
         "quest_bottom_sheet_watch_task",
       )
     ) {
-      let tmp8Result = tmp8(11193);
+      let tmp8Result = captureAdUserAction2;
       obj = {
-        type: tmp8(11197).AdUserActionType.CLICK_INTERNAL,
-        adCreativeType: tmp8(5451).AdCreativeType.QUEST,
-        adCreativeId: tmp4,
-        questContentCTA: tmp8(7728).QuestContentCTA.WATCH_VIDEO,
-        surfaceId: tmp8(5447).QuestContent.QUEST_BOTTOM_SHEET,
-        sourceQuestContent: tmp6,
+        type: captureAdUserActionTypes.AdUserActionType.CLICK_INTERNAL,
+        adCreativeType: AdCreativeType.AdCreativeType.QUEST,
+        adCreativeId: questId,
+        questContentCTA: AnalyticsTypes.QuestContentCTA.WATCH_VIDEO,
+        surfaceId: QuestTypes.QuestContent.QUEST_BOTTOM_SHEET,
+        sourceQuestContent,
         impressionId: null,
         questContentPosition: null,
       };
       let id;
-      if (obj2 != null) {
-        id = obj2.getId();
+      if (questImpression != null) {
+        id = questImpression.getId();
       }
       obj.impressionId = id;
       let questContentPosition1;
-      if (obj2 != null) {
-        questContentPosition1 = obj2.getQuestContentPosition();
+      if (questImpression != null) {
+        questContentPosition1 = questImpression.getQuestContentPosition();
       }
       obj.questContentPosition = questContentPosition1;
       tmp8Result.captureAdUserAction(obj);
     } else {
-      tmp8Result = tmp8(7718);
+      tmp8Result = AnalyticsActions;
       obj = {
-        questId: tmp4,
-        questContent: tmp8(5447).QuestContent.QUEST_BOTTOM_SHEET,
-        questContentCTA: tmp8(7728).QuestContentCTA.WATCH_VIDEO,
+        questId,
+        questContent: QuestTypes.QuestContent.QUEST_BOTTOM_SHEET,
+        questContentCTA: AnalyticsTypes.QuestContentCTA.WATCH_VIDEO,
         questContentPosition: null,
         impressionId: null,
         sourceQuestContent: null,
       };
       let questContentPosition2;
-      if (obj2 != null) {
-        questContentPosition2 = obj2.getQuestContentPosition();
+      if (questImpression != null) {
+        questContentPosition2 = questImpression.getQuestContentPosition();
       }
       obj.questContentPosition = questContentPosition2;
       let id1;
-      if (obj2 != null) {
-        id1 = obj2.getId();
+      if (questImpression != null) {
+        id1 = questImpression.getId();
       }
       obj.impressionId = id1;
-      obj.sourceQuestContent = tmp6;
+      obj.sourceQuestContent = sourceQuestContent;
       const result = tmp8Result.trackQuestContentClicked(obj);
     }
+    obj3 = AdAnalyticsInterfaceExperiment;
   }, items1);
 };
 export const useMobileActivityPressHandler = function useMobileActivityPressHandler(questId) {
@@ -115,7 +122,7 @@ export const useMobileActivityPressHandler = function useMobileActivityPressHand
   questImpression = questId(launchMobileActivity[6]).useQuestImpression();
   const items1 = [questId, callback, launchMobileActivity, questImpression, sourceQuestContent];
   return questImpression.useCallback(
-    callback(function* (arg0, value) {
+    callback(function* () {
       if (dependencyMap === 2) {
         dependencyMap = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -174,18 +181,16 @@ export const useMobileActivityPressHandler = function useMobileActivityPressHand
               };
               let id;
               if (closure_128_4 != null) {
-                id = obj6.getId();
+                id = closure_128_4.getId();
               }
               obj3.impressionId = id;
               let questContentPosition;
               if (closure_128_4 != null) {
-                questContentPosition = obj7.getQuestContentPosition();
+                questContentPosition = closure_128_4.getQuestContentPosition();
               }
               obj3.questContentPosition = questContentPosition;
               captureAdUserAction(obj3);
               const captureAdUserActionResult = captureAdUserAction(11193);
-              obj6 = closure_128_4;
-              obj7 = closure_128_4;
             } else {
               const obj4 = {
                 questId: closure_128_0,

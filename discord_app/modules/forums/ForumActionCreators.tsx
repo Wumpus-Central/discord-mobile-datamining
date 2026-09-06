@@ -18,7 +18,7 @@ function withErrorHandling() {
   }
   return applyArgumentsResult;
 }
-let closure_7 = async function _withErrorHandling(arg0, value) {
+let closure_7 = async function _withErrorHandling(arg0) {
   if (c8 === 2) {
     c8 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -153,10 +153,11 @@ export default {
     request.body = obj;
     request.rejectWithError = HTTPUtils.rejectWithMigratedError();
     closure_0 = HTTP.put(request);
-    const intl = tmp(1114).intl;
+    const intl = util.intl;
     const tmpResult = HTTPUtils;
-    const intl2 = tmp(1114).intl;
+    const intl2 = util.intl;
     withErrorHandling(() => closure_0, intl.string(util.t.T8sBLJ), intl2.string(util.t.imcb5u));
+    const stringResult = intl.string(util.t.T8sBLJ);
   },
   deleteForumTag(channelId, id) {
     const HTTP = HTTPUtils.HTTP;
@@ -200,7 +201,7 @@ export default {
       timestampMillis,
     );
   },
-  flushSeenItems(arg0, IMMEDIATE_WITH_COOLDOWN) {
+  flushSeenItems(arg0) {
     if (IMMEDIATE_WITH_COOLDOWN === undefined) {
       IMMEDIATE_WITH_COOLDOWN = AnalyticsFeedItemSeenManager.ForceFlushType.IMMEDIATE_WITH_COOLDOWN;
     }
@@ -210,9 +211,9 @@ export default {
       IMMEDIATE_WITH_COOLDOWN,
     );
   },
-  searchForumPosts(guild_id, id, arg2, c1, c2) {
+  searchForumPosts(guild_id, id, current2, c1, c2) {
     closure_1 = id;
-    closure_2 = arg2;
+    closure_2 = current2;
     asyncGeneratorStep = c1;
     closure_4 = c2;
     return (async () => {
@@ -227,9 +228,9 @@ export default {
         c4 = 3;
       } else if (arg0 === 1) {
         c4 = 3;
-        throw arg1;
+        throw value;
       } else if (arg0 !== 2) {
-        closure_128_0 = arg1;
+        closure_128_0 = value;
         guild_id(7767).trackForumSearched({
           guildId: closure_129_0,
           channelId: closure_129_1,
@@ -240,7 +241,7 @@ export default {
         dependencyMap = 0;
         channelId(573);
       }
-      return arg1;
+      return value;
     })();
   },
   updateForumSearchQuery(id, query) {

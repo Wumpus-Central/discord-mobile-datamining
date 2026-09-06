@@ -50,7 +50,7 @@ function OtaVerificationActionSheet(result) {
   let tmp2Result = null;
   if (null !== result.totalFileCount) {
     const obj2 = { style: tmp.verificationLine, children: null };
-    const items4 = [tmp5(tmp3(4556).Text, { variant: "heading-md/bold", children: "File Counts" })];
+    const items4 = [closure_8(tmp3(4556).Text, { variant: "heading-md/bold", children: "File Counts" })];
     const items5 = [result.totalFileCount, " files. ", , , ,];
     const successes = result.successes;
     let length;
@@ -68,15 +68,15 @@ function OtaVerificationActionSheet(result) {
     items5[4] = length1;
     items5[5] = " failures.";
     obj3.children = items5;
-    items4[1] = tmp2(tmp3(4556).Text, obj3);
+    items4[1] = closure_9(tmp3(4556).Text, obj3);
     obj2.children = items4;
-    tmp2Result = tmp2(tmp6, obj2);
+    tmp2Result = closure_9(closure_7, obj2);
   }
   items1[3] = tmp2Result;
   tmp2Result = null;
   if (result.failures.length > 0) {
     const obj4 = { style: tmp.verificationLine, children: null };
-    const items6 = [tmp5(tmp3(4556).Text, { variant: "heading-md/bold", children: "Failures" })];
+    const items6 = [closure_8(tmp3(4556).Text, { variant: "heading-md/bold", children: "Failures" })];
     const failures1 = result.failures;
     items6[1] = failures1.map((children) =>
       React6(
@@ -86,7 +86,7 @@ function OtaVerificationActionSheet(result) {
       ),
     );
     obj4.children = items6;
-    tmp2Result = tmp2(tmp6, obj4);
+    tmp2Result = closure_9(closure_7, obj4);
   }
   items1[4] = tmp2Result;
   obj.children = items1;
@@ -112,7 +112,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/devtools/native/components/screens/DevToolsOTATestScreen.tsx");
 
 export default function DevToolsOTATestScreen() {
-  closure_6 = async function _verifyFiles(arg0, value) {
+  closure_6 = async function _verifyFiles() {
     if (c3 === 2) {
       c3 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -251,10 +251,10 @@ export default function DevToolsOTATestScreen() {
   const items3 = [closure_8(subLabel(5605).TableRow, obj5)];
   let tmp12Result = null != tmp7;
   if (tmp12Result) {
-    const obj6 = { icon: tmp12(tmp15(15562).WrenchIcon, {}), label: null };
+    const obj6 = { icon: closure_8(tmp15(15562).WrenchIcon, {}), label: null };
     const _JSON = JSON;
     obj6.label = JSON.stringify(tmp7, null, 2);
-    tmp12Result = tmp12(tmp15(5605).TableRow, obj6);
+    tmp12Result = closure_8(tmp15(5605).TableRow, obj6);
   }
   items3[1] = tmp12Result;
   items1[2] = closure_9(subLabel(5687).TableRowGroup, {

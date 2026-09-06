@@ -49,18 +49,28 @@ doRectanglesIntersectWorklet.__initData = {
 };
 function doesTargetPositionIntersectOtherOverlaysWorklet(arg0, arg1, arg2) {
   if (VoiceCallOverlayType.VOICE_CONTROLS_TOGGLE_BUTTON === arg1) {
-    if (arg0[tmp.CAMERA_PREVIEW_PICTURE_IN_PICTURE].isVisible) {
+    if (arg0[VoiceCallOverlayType.CAMERA_PREVIEW_PICTURE_IN_PICTURE].isVisible) {
       if (
-        doRectanglesIntersectWorklet(arg2, arg0[tmp.CAMERA_PREVIEW_PICTURE_IN_PICTURE], MIN_MARGIN_BETWEEN_OVERLAYS)
+        doRectanglesIntersectWorklet(
+          arg2,
+          arg0[VoiceCallOverlayType.CAMERA_PREVIEW_PICTURE_IN_PICTURE],
+          MIN_MARGIN_BETWEEN_OVERLAYS,
+        )
       ) {
         return true;
       }
     } else {
       return false;
     }
-  } else if (tmp.CAMERA_PREVIEW_PICTURE_IN_PICTURE === arg1) {
-    if (arg0[tmp.VOICE_CONTROLS_TOGGLE_BUTTON].isVisible) {
-      if (doRectanglesIntersectWorklet(arg2, arg0[tmp.VOICE_CONTROLS_TOGGLE_BUTTON], MIN_MARGIN_BETWEEN_OVERLAYS)) {
+  } else if (VoiceCallOverlayType.CAMERA_PREVIEW_PICTURE_IN_PICTURE === arg1) {
+    if (arg0[VoiceCallOverlayType.VOICE_CONTROLS_TOGGLE_BUTTON].isVisible) {
+      if (
+        doRectanglesIntersectWorklet(
+          arg2,
+          arg0[VoiceCallOverlayType.VOICE_CONTROLS_TOGGLE_BUTTON],
+          MIN_MARGIN_BETWEEN_OVERLAYS,
+        )
+      ) {
         return true;
       }
     } else {

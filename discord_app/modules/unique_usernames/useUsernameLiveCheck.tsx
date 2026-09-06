@@ -8,8 +8,8 @@ require = fn;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/unique_usernames/useUsernameLiveCheck.tsx");
 
-export const useUsernameLiveCheck = function useUsernameLiveCheck(arg0, flag, flag2) {
-  _require = arg0;
+export const useUsernameLiveCheck = function useUsernameLiveCheck(username) {
+  _require = username;
   if (flag === undefined) {
     flag = true;
   }
@@ -22,7 +22,7 @@ export const useUsernameLiveCheck = function useUsernameLiveCheck(arg0, flag, fl
   }
   let stateFromStores;
   const items = [stateFromStores];
-  const items1 = [arg0];
+  const items1 = [username];
   stateFromStores = require("useStateFromStores").useStateFromStores(
     items,
     () => UniqueUsernamesStore.validate(closure_0),
@@ -45,7 +45,7 @@ export const useUsernameLiveCheck = function useUsernameLiveCheck(arg0, flag, fl
       }, 800),
     items3,
   );
-  const items4 = [flag, stateFromStores1, stateFromStores, arg0, memo];
+  const items4 = [flag, stateFromStores1, stateFromStores, username, memo];
   const effect = flag3.useEffect(() => {
     let tmp = flag;
     if (flag) {

@@ -71,7 +71,7 @@ export default noop.memo((category) => {
     };
     let sessionId;
     if (analyticsContext != null) {
-      sessionId = tmp3.sessionId;
+      sessionId = analyticsContext.sessionId;
     }
     obj.page_session_id = sessionId;
     obj.source = AnalyticsLocationDefault.COLLECTIBLES_SHOP;
@@ -79,7 +79,7 @@ export default noop.memo((category) => {
     obj.track(AnalyticEvents.COLLECTIBLES_SHOP_VIEWED, obj);
     let sessionId1;
     if (analyticsContext != null) {
-      sessionId1 = tmp3.sessionId;
+      sessionId1 = analyticsContext.sessionId;
     }
     obj = {
       sessionId: sessionId1,

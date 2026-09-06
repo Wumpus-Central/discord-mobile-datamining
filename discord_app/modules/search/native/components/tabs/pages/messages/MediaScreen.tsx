@@ -1,7 +1,9 @@
 // discord_app/modules/search/native/components/tabs/pages/messages/MediaScreen.tsx
 import AgeVerificationActionCreatorsDefault from "../../../../../../age_assurance/AgeVerificationActionCreators.native.tsx";
+import AgeVerificationAnalyticsUtils from "../../../../../../age_assurance/AgeVerificationAnalyticsUtils.tsx";
 import SearchPlatformUtils from "../../../../SearchPlatformUtils.tsx";
 import ExplicitMediaRedactionNativeUtils from "../../../../../../explicit_media_redaction/native/ExplicitMediaRedactionNativeUtils.tsx";
+import BaseMessagesScreen from "BaseMessagesScreen.tsx";
 import noop from "../../../../../../../../_runtime/metro/00019__.js";
 import ChannelSpoilerAgreeStore from "../../../../../../spoiler_channels/ChannelSpoilerAgreeStore.tsx";
 import ChannelStore from "../../../../../../../stores/ChannelStore.tsx";
@@ -33,7 +35,7 @@ export default noop.memo(function MediaScreen(searchContext) {
   ({ isFocused, width } = searchContext);
   let obj = searchContext(16685);
   const contentContainerStyles = obj.useContentContainerStyles();
-  const tmp2 = tab(16645)(width);
+  let tmp2 = tab(16645)(width);
   dependencyMap = tmp2;
   const searchMessages = searchContext(16693).useSearchMessages(searchContext, tab);
   const obj2 = searchContext(16693);
@@ -85,27 +87,28 @@ export default noop.memo(function MediaScreen(searchContext) {
   const items3 = [searchContext, tab];
   const callback = searchMessages.useCallback(() => {
     const nextMessages = SearchPlatformUtilsDefault.fetchNextMessages(searchContext, tab, () => {
-      let obj = searchContext(closure_2[15]);
+      let obj = searchContext(dependencyMap[15]);
       if (obj.isModalOpen(MEDIA_MODAL_KEY)) {
-        let tmpResult = tmp(tmp2[16]);
+        let tmpResult = searchContext(dependencyMap[16]);
         const messages = onPressMediaItem.getMessages(
           tmpResult.getSearchTabFetchId(closure_1_0, tab, callback1.getSearchResultsQuery(closure_1_0)),
         );
         if (null != messages) {
-          tmpResult = tmp(tmp2[14]);
-          const media = tmpResult.getMedia(tmp4, messages);
+          tmpResult = searchContext(dependencyMap[14]);
+          const media = tmpResult.getMedia(closure_1_0, messages);
           const items = [];
           const item = media.forEach((type) => {
             if (!tmp2) {
               items.push(type.sources);
             }
+            tmp2 =
+              type.type !== constants.ATTACHMENT && type.type !== constants.EMBED && type.type !== constants.COMPONENT;
           });
           obj = { sources: items };
-          const result = tmp(tmp2[17]).setMediaViewerSources(obj);
-          const tmpResult1 = tmp(tmp2[17]);
+          const result = searchContext(dependencyMap[17]).setMediaViewerSources(obj);
+          const tmpResult1 = searchContext(dependencyMap[17]);
         }
         const searchResultsQuery = callback1.getSearchResultsQuery(closure_1_0);
-        tmp4 = closure_1_0;
       }
     });
   }, items3);
@@ -125,15 +128,15 @@ export default noop.memo(function MediaScreen(searchContext) {
     }
     let obj = ExplicitMediaRedactionNativeUtils;
     if (obj.shouldAgeVerifyForSearchMedia(media, found)) {
-      obj = { entryPoint: tmp2(8413).AgeVerificationModalEntryPoint.SEARCH_MEDIA_PREVIEW };
+      obj = { entryPoint: AgeVerificationAnalyticsUtils.AgeVerificationModalEntryPoint.SEARCH_MEDIA_PREVIEW };
       const result = AgeVerificationActionCreatorsDefault.showAgeVerificationGetStartedModal(obj);
     } else {
       obj = { searchContext, channelId: null, messageId: null, index: null };
       ({ channelId: obj3.channelId, messageId: obj3.messageId } = media);
       obj.index = index;
-      const result1 = tmp2(16695).trackMessageItemPress(obj);
+      const result1 = BaseMessagesScreen.trackMessageItemPress(obj);
       onPressMediaItem(media, media.originView);
-      const tmp2Result = tmp2(16695);
+      const tmp2Result = BaseMessagesScreen;
     }
   }, items4);
   const items5 = [callback1, memo, tmp2, placeholderCount];
@@ -159,17 +162,12 @@ export default noop.memo(function MediaScreen(searchContext) {
       let obj = { numColumns, numResults: items.length, placeholderCount: tmp2 };
       const adjustedPlaceholderCount = searchContext(size[23]).getAdjustedPlaceholderCount(obj);
       for (let num = 0; num < adjustedPlaceholderCount; num = num + 1) {
-        let element = { type: null, key: null, props: null };
-        element.type = constants.MEDIA_PLACEHOLDER;
+        let element = { type: constants.MEDIA_PLACEHOLDER, key: null, props: null };
         let _HermesInternal = HermesInternal;
         element.key = "media-placeholder-" + length + num;
-        obj = { size: null, containerStyle: null };
-        obj.size = size;
+        obj = { size, containerStyle: null };
         let obj3 = searchContext(size[14]);
-        let obj1 = { itemIndex: length + num, numItems: null, numColumns: null, spacing: null };
-        obj1.numItems = memo.length;
-        obj1.numColumns = numColumns;
-        obj1.spacing = closure_1_10 - 2;
+        let obj1 = { itemIndex: length + num, numItems: memo.length, numColumns, spacing: closure_1_10 - 2 };
         obj.containerStyle = obj3.getMediaGridItemStyles(obj1);
         element.props = obj;
         let arr = items.push(element);

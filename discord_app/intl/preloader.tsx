@@ -3,7 +3,7 @@ import asyncRequireImpl from "../../_runtime/01896_asyncRequireImpl.js";
 import asyncGeneratorStep from "../../_runtime/00005_asyncGeneratorStep.js";
 
 require = fn;
-let closure_3 = async function _preloadAllIntlMessageFiles(arg0, value) {
+let closure_3 = async function _preloadAllIntlMessageFiles() {
   if (c0 === 2) {
     c0 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");

@@ -12,12 +12,12 @@ let closure_5 = module_560.create((arg0) => {
   _require = arg0;
   function updateScreenReaderEnabled(event) {
     closure_0 = event;
-    closure_0(1249).batchUpdates(() => closure_0((screenReaderEnabled) => {
+    closure_0(1249).batchUpdates(() => screenReaderEnabled((screenReaderEnabled) => {
       let tmp = screenReaderEnabled;
-      if (screenReaderEnabled.screenReaderEnabled !== closure_1_0) {
-        const Storage = closure_0(510).Storage;
-        const result = Storage.set(screenReaderEnabled, tmp2);
-        const obj = { screenReaderEnabled: tmp2 };
+      if (screenReaderEnabled.screenReaderEnabled !== screenReaderEnabled) {
+        const Storage = screenReaderEnabled(510).Storage;
+        const result = Storage.set(screenReaderEnabled, screenReaderEnabled);
+        const obj = { screenReaderEnabled };
         tmp = obj;
       }
       return tmp;
@@ -26,12 +26,12 @@ let closure_5 = module_560.create((arg0) => {
   let result = AccessibilityInfo.isScreenReaderEnabled();
   result.then(updateScreenReaderEnabled).catch(() => {
     c0 = false;
-    closure_0(1249).batchUpdates(() => closure_0((screenReaderEnabled) => {
+    closure_0(1249).batchUpdates(() => screenReaderEnabled((screenReaderEnabled) => {
       let tmp = screenReaderEnabled;
-      if (screenReaderEnabled.screenReaderEnabled !== closure_1_0) {
-        const Storage = closure_0(510).Storage;
-        const result = Storage.set(screenReaderEnabled, tmp2);
-        const obj = { screenReaderEnabled: tmp2 };
+      if (screenReaderEnabled.screenReaderEnabled !== screenReaderEnabled) {
+        const Storage = screenReaderEnabled(510).Storage;
+        const result = Storage.set(screenReaderEnabled, screenReaderEnabled);
+        const obj = { screenReaderEnabled };
         tmp = obj;
       }
       return tmp;

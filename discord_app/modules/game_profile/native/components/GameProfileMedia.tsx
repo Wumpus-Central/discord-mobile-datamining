@@ -1,5 +1,6 @@
 // discord_app/modules/game_profile/native/components/GameProfileMedia.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import utils_PlatformUtils from "../../../../../discord_common/js/shared/utils/PlatformUtils.tsx";
 import openMediaModal from "../../../media_viewer/native/components/openMediaModal.tsx";
 import GameProfileAnalyticUtils from "../../GameProfileAnalyticUtils.tsx";
 import GameProfileMediaSources from "GameProfileMediaSources.tsx";
@@ -75,6 +76,7 @@ function TrailerItem(active) {
     }
     const current = ref1.current;
     current.seek(0);
+    obj = utils_PlatformUtils;
   }, items);
   const items1 = [trackAction, sources, index, onScrollToIndex, setMediaModalOpen];
   obj = {
@@ -166,7 +168,7 @@ export default function GameProfileMedia(game) {
   c7 = undefined;
   c8 = undefined;
   let memo;
-  let tmp = memo();
+  const tmp = memo();
   let obj = game(obscured[12]);
   obscured = obj.useObscuredSurface().obscured;
   let tmp3 = first(noop.useState(0), 2);
@@ -206,18 +208,16 @@ export default function GameProfileMedia(game) {
   const items5 = [memo3];
   const items6 = [memo3];
   const callback1 = noop.useCallback((nativeEvent) => {
-    let arr2;
     if (0 !== memo3.length) {
       const x = nativeEvent.nativeEvent.contentOffset.x;
       const _Math2 = Math;
       let num = 1;
-      let absolute = Math.abs(arr[0] - x);
+      let absolute = Math.abs(memo3[0] - x);
       let num2 = 0;
       let num3 = 0;
-      if (1 < arr.length) {
+      if (1 < memo3.length) {
         do {
           let _Math = Math;
-          arr2 = memo3;
           let absolute1 = Math.abs(memo3[num] - x);
           let tmp3 = absolute;
           let tmp4 = num2;
@@ -229,7 +229,7 @@ export default function GameProfileMedia(game) {
           absolute = tmp3;
           num2 = tmp4;
           num3 = tmp4;
-        } while (num < arr2.length);
+        } while (num < memo3.length);
       }
       _undefined(num3);
     }
@@ -293,7 +293,7 @@ export default function GameProfileMedia(game) {
         const _HermesInternal = HermesInternal;
         let tmpResult = (
           <TrailerItem
-            key={"" + arg0.originalUrl + "-" + arg1}
+            key={"" + type.originalUrl + "-" + index}
             url={null}
             posterUrl={null}
             active={null}
@@ -320,9 +320,9 @@ export default function GameProfileMedia(game) {
         const _HermesInternal2 = HermesInternal;
         tmpResult = (
           <ImageItem
-            key={"" + arg0.originalUrl + "-" + arg1}
-            url={arg0.previewUrl}
-            index={arg1}
+            key={"" + type.originalUrl + "-" + index}
+            url={type.previewUrl}
+            index={index}
             sources={sources}
             trackAction={trackAction}
             width={memo2}

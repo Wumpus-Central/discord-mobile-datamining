@@ -21,9 +21,9 @@ function EmojiConfetti(children) {
   const sharedValue = top(4296).useSharedValue(0);
   let obj = top(4296);
   const sharedValue1 = top(4296).useSharedValue(0);
-  let obj2 = top(4296);
+  const obj2 = top(4296);
   const sharedValue2 = top(4296).useSharedValue(0.2);
-  let obj3 = top(4296);
+  const obj3 = top(4296);
   const sharedValue3 = top(4296).useSharedValue(0);
   let obj4 = top(4296);
   const mountLayoutEffect = top(4992).useMountLayoutEffect(() => {
@@ -33,9 +33,6 @@ function EmojiConfetti(children) {
       const _Math = Math;
       num = 50 + 150 * Math.random();
     }
-    const obj2 = sharedValue1;
-    const obj3 = sharedValue2;
-    const obj4 = sharedValue3;
     const obj5 = ReanimatedRexport;
     const withTimingResult = timing.withTiming(0, { duration: num });
     obj = { duration: 600, easing: null };
@@ -48,17 +45,17 @@ function EmojiConfetti(children) {
     obj = { duration: 600, easing: null };
     const result2 = 40 * Math.random();
     obj.easing = ReanimatedRexport.Easing.ease;
-    const result3 = obj2.set(obj9.withSequence(withTimingResult1, timing.withTiming(result2 + 20, obj)));
+    const result3 = sharedValue1.set(obj9.withSequence(withTimingResult1, timing.withTiming(result2 + 20, obj)));
     const obj13 = ReanimatedRexport;
     const withTimingResult2 = timing.withTiming(0, { duration: num });
     const withTimingResult3 = timing.withTiming(0.3 * Math.random() + 0.5, { duration: 240 });
-    const result4 = obj3.set(
+    const result4 = sharedValue2.set(
       obj13.withSequence(withTimingResult2, withTimingResult3, timing.withTiming(0.5, { duration: 360 })),
     );
     const obj17 = ReanimatedRexport;
     const withTimingResult4 = timing.withTiming(0, { duration: num });
     const withTimingResult5 = timing.withTiming(1, { duration: 360 });
-    const result5 = obj4.set(
+    const result5 = sharedValue3.set(
       obj17.withSequence(withTimingResult4, withTimingResult5, timing.withTiming(0, { duration: 240 })),
     );
   });
@@ -351,16 +348,16 @@ export default function DoubleTapToReactActionSheet(emoji) {
   const items3 = [selectedEmoji, stateFromStores];
   const memo1 = first1.useMemo(() => {
     if (null != first.id) {
-      const obj = { id: tmp.id, animated: null, size: null };
+      const obj = { id: first.id, animated: null, size: null };
       let animated = !stateFromStores;
       if (!stateFromStores) {
-        animated = tmp.animated;
+        animated = first.animated;
       }
       obj.animated = animated;
       obj.size = EMOJI_URL_BASE_SIZE;
       let url = obj.getEmojiURL(obj);
     } else {
-      url = tmp.url;
+      url = first.url;
     }
     return url;
   }, items3);
@@ -380,7 +377,7 @@ export default function DoubleTapToReactActionSheet(emoji) {
   let tmp18Result = tmp18(stateFromStores(selectedEmoji[21]), obj);
   const items4 = [memo, selectedEmoji];
   callback1 = obj.useCallback(
-    asyncGeneratorStep(async (arg0, value) => {
+    asyncGeneratorStep(async () => {
       if (c3 === 2) {
         c3 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -483,7 +480,7 @@ export default function DoubleTapToReactActionSheet(emoji) {
     }
     if (null != ref.current) {
       const _clearTimeout = clearTimeout;
-      clearTimeout(tmp18.current);
+      clearTimeout(ref.current);
     }
     let num6 = 900;
     if (stateFromStores) {
@@ -498,8 +495,8 @@ export default function DoubleTapToReactActionSheet(emoji) {
   const callback3 = obj.useCallback(() => {
     if (null != ref.current) {
       const _clearTimeout = clearTimeout;
-      clearTimeout(tmp.current);
-      tmp.current = null;
+      clearTimeout(ref.current);
+      ref.current = null;
     }
     callback1();
   }, items6);

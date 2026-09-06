@@ -17,11 +17,11 @@ export default function WishlistItemCard(arg0) {
     let obj = { sku, isOwned, source, wishlistOwnerId };
     const merged1 = Object.assign(merged);
     return jsx(CollectiblesWishlistItemCardDefault, { sku, isOwned, source, wishlistOwnerId });
-  } else if (tmp2.PREMIUM === productLine) {
+  } else if (SKUProductLines.PREMIUM === productLine) {
     obj = { sku, source };
     const merged2 = Object.assign(merged);
     return jsx(PremiumWishlistItemCardDefault, { sku, source });
-  } else if (tmp2.SOCIAL_LAYER_GAME_ITEM === productLine) {
+  } else if (SKUProductLines.SOCIAL_LAYER_GAME_ITEM === productLine) {
     obj = { sku, isOwned, source, wishlistOwnerId };
     const merged3 = Object.assign(merged);
     return jsx(SocialLayerStorefrontWishlistItemCardDefault, { sku, isOwned, source, wishlistOwnerId });

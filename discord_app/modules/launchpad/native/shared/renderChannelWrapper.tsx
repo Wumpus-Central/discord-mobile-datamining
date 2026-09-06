@@ -20,6 +20,8 @@ export default function renderChannelWrapper(children, fontScale) {
   obj.style = items;
   obj.children = children;
   return (
-    <View minHeight={getScaledChannelRowHeightDefault(arg1.fontScale) - 2 * closure_4.layout.margin.marginVertical} />
+    <View
+      minHeight={getScaledChannelRowHeightDefault(fontScale.fontScale) - 2 * closure_4.layout.margin.marginVertical}
+    />
   );
 }

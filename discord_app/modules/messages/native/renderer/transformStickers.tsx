@@ -1,6 +1,8 @@
 // discord_app/modules/messages/native/renderer/transformStickers.tsx
 import util from "../../../../intl/index.native.tsx";
 import StickersUtils from "../../../stickers/StickersUtils.tsx";
+import getAccessibilityLabelOrCheapFallbackUnsafe from "../../../a11y/native/getAccessibilityLabelOrCheapFallbackUnsafe.tsx";
+import NativeLottieView from "../../../stickers/native/NativeLottieView.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/messages/native/renderer/transformStickers.tsx");
@@ -19,7 +21,7 @@ export default function transformStickers(message) {
       str = "";
     }
     obj.asset = str;
-    let tmpResult = tmp(4899);
+    let tmpResult = StickersUtils;
     obj = { isPreview: !shouldAnimateStickerResult };
     let str2 = tmpResult.getStickerAssetUrl(id, obj);
     if (str2 == null) {
@@ -28,9 +30,9 @@ export default function transformStickers(message) {
     obj.url = str2;
     obj.width = 160;
     obj.height = 160;
-    const NativeLottieRenderMode = tmp(7999).NativeLottieRenderMode;
+    const NativeLottieRenderMode = NativeLottieView.NativeLottieRenderMode;
     obj.renderMode = shouldAnimateStickerResult ? NativeLottieRenderMode.LOOP : NativeLottieRenderMode.STILL;
-    tmpResult = tmp(7951);
+    tmpResult = getAccessibilityLabelOrCheapFallbackUnsafe;
     const obj1 = {
       expensive() {
         const intl = util.intl;
@@ -38,10 +40,10 @@ export default function transformStickers(message) {
       },
       cheap: null,
     };
-    let intl = tmp(1114).intl;
+    let intl = util.intl;
     obj1.cheap = intl.string(util.t["fT+Yjp"]);
     obj.accessibilityLabel = tmpResult.getAccessibilityLabelOrCheapFallbackUnsafe(obj1);
-    const intl2 = tmp(1114).intl;
+    const intl2 = util.intl;
     obj.accessibilityHint = intl2.string(util.t.GCEruV);
     return obj;
   });

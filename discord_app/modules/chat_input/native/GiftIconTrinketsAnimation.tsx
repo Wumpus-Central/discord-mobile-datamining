@@ -1,12 +1,13 @@
 // discord_app/modules/chat_input/native/GiftIconTrinketsAnimation.tsx
 import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import StringUtils from "../../../utils/StringUtils.tsx";
 import useToken from "../../../design/tokens/native/useToken.tsx";
+import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
 
 const PlatformUtils = APNGPlayer(1115);
-const FastImageDefault = tmp(5587);
 const APNGPlayer2 = APNGPlayer(8808);
 require = fn;
 const View = fn(17).View;
@@ -52,17 +53,22 @@ export const GiftIconTrinketsAnimation = noop.memo((trinketsAnimationUrl) => {
     if (APNGPlayerResult.isAndroid()) {
       APNGPlayer = APNGPlayer2.APNGPlayer;
       obj = { url: trinketsAnimationUrl, autoplay: !stateFromStores, style: trinketsRefresh };
-      let tmp4Result = tmp4(APNGPlayer, obj);
+      let tmp4Result = <APNGPlayer url={trinketsAnimationUrl} autoplay={!stateFromStores} style={trinketsRefresh} />;
     } else {
       obj = { source: null, style: null, resizeMode: "contain", enableAnimation: null };
       obj1 = { uri: trinketsAnimationUrl };
       obj.source = obj1;
       obj.style = trinketsRefresh;
       obj.enableAnimation = !stateFromStores;
-      tmp4Result = tmp4(FastImageDefault, obj);
+      tmp4Result = jsx(FastImageDefault, { source: null, style: null, resizeMode: "contain", enableAnimation: null });
     }
     obj.children = tmp4Result;
-    tmp4Result = tmp4(View, obj);
+    tmp4Result = (
+      <View style={tmp2.containerRefresh} pointerEvents="none">
+        {null}
+      </View>
+    );
     APNGPlayerResult = PlatformUtils;
   }
+  obj4 = StringUtils;
 });

@@ -1,9 +1,14 @@
 // discord_app/modules/voice_calls/native/action_sheet/VoiceActionSheet.tsx
 import NavigationRouteUtils from "../../../main_tabs_v2/helpers/NavigationRouteUtils.native.tsx";
+import VisualEffectViewDefault from "../../../visual_effect_view/native/VisualEffectView.tsx";
 import useAnalyticsLocationsDefault from "../../../app_analytics/useAnalyticsLocations.tsx";
 import AnalyticsLocationDefault from "../../../app_analytics/AnalyticsLocation.tsx";
 import VoiceActionSheetManagerDefault from "../VoiceActionSheetManager.tsx";
 import NUFChannelsManagerDefault from "../../../nuf_channels/native/NUFChannelsManager.tsx";
+import NUFVoiceChannelsTemplateDefault from "../../../nuf_channels/native/components/NUFVoiceChannelsTemplate.tsx";
+import GuildEventVoiceBannerDefault from "../../../guild_scheduled_events/native/components/GuildEventVoiceBanner.tsx";
+import VoiceEmptyStateDefault from "VoiceEmptyState.tsx";
+import VoiceMemberListDefault from "VoiceMemberList.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import SortedVoiceStateStore from "../../../../stores/views/SortedVoiceStateStore.tsx";
 
@@ -45,15 +50,15 @@ export default function VoiceActionSheet(channel) {
   if (obj1.requiresVoiceChannelsOnboard()) {
     obj = { children: null };
     obj = { channel };
-    obj.children = closure_6(tmp2(13777), obj);
+    obj.children = closure_6(NUFVoiceChannelsTemplateDefault, obj);
     let children = closure_6(tmp5(7198).ActionSheet, obj);
     let tmp8 = closure_6;
   } else if (stateFromStores) {
     obj1 = { children: null };
     const obj2 = { channel };
-    const items2 = [closure_6(tmp2(13780), obj2)];
+    const items2 = [closure_6(GuildEventVoiceBannerDefault, obj2)];
     let obj3 = { channel };
-    items2[1] = closure_6(tmp2(13781), obj3);
+    items2[1] = closure_6(VoiceEmptyStateDefault, obj3);
     obj1.children = items2;
     children = closure_7(tmp5(7198).ActionSheet, obj1);
     tmp8 = closure_6;
@@ -62,9 +67,9 @@ export default function VoiceActionSheet(channel) {
     const obj4 = { scrollable: true, startExpanded: true, children: null };
     const obj5 = { style: tmp.container, children: null };
     const obj6 = { blurTheme: "dark", style: tmp.visualEffectView };
-    const items3 = [closure_6(tmp2(4965), obj6)];
+    const items3 = [closure_6(VisualEffectViewDefault, obj6)];
     const obj7 = { channel };
-    items3[1] = closure_6(tmp2(13784), obj7);
+    items3[1] = closure_6(VoiceMemberListDefault, obj7);
     obj5.children = items3;
     obj4.children = closure_7(closure_4, obj5);
     children = closure_6(tmp5(7198).ActionSheet, obj4);

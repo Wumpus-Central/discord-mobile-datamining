@@ -12,7 +12,6 @@ const result = size.fileFinishedImporting("modules/collectibles/hooks/useTrackPr
 export const useTrackProductCardImpression = function useTrackProductCardImpression(
   categoryStoreListingId,
   mobile_home,
-  featured_block,
 ) {
   _require = categoryStoreListingId;
   importDefault = mobile_home;
@@ -30,7 +29,7 @@ export const useTrackProductCardImpression = function useTrackProductCardImpress
   );
   let obj2 = require("initialize");
   const currentUser = require("useCurrentUser").useCurrentUser();
-  const obj3 = require("useCurrentUser");
+  let obj3 = require("useCurrentUser");
   const canUseShopDiscountsResult = require("PremiumUtils").canUseShopDiscounts(currentUser);
   c5 = canUseShopDiscountsResult;
   collectiblesAnalyticsContext.useRef(null);
@@ -68,16 +67,16 @@ export const useTrackProductCardImpression = function useTrackProductCardImpress
     let priceForCollectiblesProduct = null;
     if (null != stateFromStores) {
       let obj = CollectiblesUtils;
-      priceForCollectiblesProduct = obj.getPriceForCollectiblesProduct(tmp, c5, true);
+      priceForCollectiblesProduct = obj.getPriceForCollectiblesProduct(stateFromStores, c5, true);
     }
     let strikeThroughPriceAmountForCollectiblesProduct;
     if (null != stateFromStores) {
       strikeThroughPriceAmountForCollectiblesProduct =
-        CollectiblesUtils.getStrikeThroughPriceAmountForCollectiblesProduct(tmp, c5, true);
+        CollectiblesUtils.getStrikeThroughPriceAmountForCollectiblesProduct(stateFromStores, c5, true);
     }
     let sessionId;
     if (collectiblesAnalyticsContext != null) {
-      sessionId = tmp10.sessionId;
+      sessionId = collectiblesAnalyticsContext.sessionId;
     }
     obj = {
       collectibles_shop_session_id: sessionId,
@@ -106,24 +105,24 @@ export const useTrackProductCardImpression = function useTrackProductCardImpress
     obj.display_price_strikethrough = strikeThroughPriceAmountForCollectiblesProduct;
     let tilePosition;
     if (collectiblesAnalyticsContext != null) {
-      tilePosition = tmp10.tilePosition;
+      tilePosition = collectiblesAnalyticsContext.tilePosition;
     }
     obj.position = tilePosition;
     obj.page_type = page_type;
     let pageCategory;
     if (collectiblesAnalyticsContext != null) {
-      pageCategory = tmp10.pageCategory;
+      pageCategory = collectiblesAnalyticsContext.pageCategory;
     }
     obj.page_category = pageCategory;
     let pageSection;
     if (collectiblesAnalyticsContext != null) {
-      pageSection = tmp10.pageSection;
+      pageSection = collectiblesAnalyticsContext.pageSection;
     }
     obj.page_section = pageSection;
     obj.type = str;
     let categoryPosition;
     if (collectiblesAnalyticsContext != null) {
-      categoryPosition = tmp10.categoryPosition;
+      categoryPosition = collectiblesAnalyticsContext.categoryPosition;
     }
     obj.category_position = categoryPosition;
     AnalyticsUtilsDefault.track(AnalyticEvents.COLLECTIBLES_TILE_IMPRESSION, obj);
@@ -135,23 +134,23 @@ export const useTrackProductCardImpression = function useTrackProductCardImpress
     if (arg0) {
       if (null === current) {
         const _setTimeout = setTimeout;
-        tmp.current = setTimeout(() => {
+        ref.current = setTimeout(() => {
           callback();
           ref.current = null;
         }, 1000);
       }
     } else if (null !== current) {
       const _clearTimeout = clearTimeout;
-      clearTimeout(tmp.current);
-      tmp.current = null;
+      clearTimeout(ref.current);
+      ref.current = null;
     }
   }, items2);
   const effect = obj5.useEffect(
     () => () => {
       if (null !== ref.current) {
         const _clearTimeout = clearTimeout;
-        clearTimeout(tmp.current);
-        tmp.current = null;
+        clearTimeout(ref.current);
+        ref.current = null;
       }
     },
     items3,

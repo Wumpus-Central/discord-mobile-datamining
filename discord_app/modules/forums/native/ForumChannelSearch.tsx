@@ -26,7 +26,7 @@ const memoResult = noop.memo((channelId) => {
   const effect = noop.useEffect(
     () => () => {
       if (null != navigation) {
-        obj.setOptions(channelId(route[8]).getDefaultChannelStackHeaderProps(obj, closure_1_2));
+        navigation.setOptions(channelId(route[8]).getDefaultChannelStackHeaderProps(navigation, closure_1_2));
         const obj2 = channelId(route[8]);
       }
     },
@@ -107,14 +107,13 @@ export const ForumChannelSearchInput = noop.memo((channelId) => {
             const result1 = ForumActionCreatorsDefault.updateForumSearchQuery(tmp8, "");
           }
         };
-        obj.children = tmp8(tmp10, obj);
-        tmp8Result = tmp8(tmp9, obj);
+        obj.children = <tmp10 {...obj} />;
+        tmp8Result = <View {...obj} />;
       } else {
         const intl = tmp2(1114).intl;
         const t = tmp2(1114).t;
         intl.string(tmp6 ? t["5h0QOP"] : t.Iy2gnS);
       }
-      tmp9 = View;
     }
   }
   return tmp8Result;

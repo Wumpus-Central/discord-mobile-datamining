@@ -1,6 +1,7 @@
 // discord_app/modules/search/native/components/tabs/SearchTabsLayout.tsx
 import ComponentDispatchUtils from "../../../../../utils/ComponentDispatchUtils.tsx";
 import LegacyBaseButton from "../../../../../../_runtime/06655_LegacyBaseButton.js";
+import SearchPlatformUtilsDefault from "../../SearchPlatformUtils.tsx";
 import SearchUtils from "../../../SearchUtils.tsx";
 import SearchActionCreatorsDefault from "../../../SearchActionCreators.tsx";
 import SearchTabsFetchManagerDefault from "../../../managers/SearchTabsFetchManager.tsx";
@@ -14,7 +15,6 @@ import SearchMessageStore from "../../../SearchMessageStore.tsx";
 import SearchQueryStore from "../../stores/SearchQueryStore.tsx";
 import SearchTabsLayoutStore from "../../stores/SearchTabsLayoutStore.tsx";
 
-const SearchPlatformUtilsDefault = tmp(12338);
 require = fn;
 function NoSearchResultsScreen(searchContext) {
   searchContext = searchContext.searchContext;
@@ -66,7 +66,7 @@ let closure_21 = noop.memo((searchContext) => {
   let screenIndex;
   let sharedValue;
   let callback5;
-  let tmp = closure_15();
+  const tmp = closure_15();
   let items = [visibleTabCounts, visibleTabs, searchContext, width];
   const items1 = [searchContext];
   const memo = width.useMemo(() => {
@@ -88,7 +88,6 @@ let closure_21 = noop.memo((searchContext) => {
     SearchSessionAnalyticsManagerDefault.setSelectedTab(searchContext, arg0);
     closure_16(searchContext);
     const queryString = SearchQueryStore.getQueryString(searchContext);
-    const tmp3 = searchContext;
     const searchTabFetchId = SearchUtils.getSearchTabFetchId(searchContext, React7, queryString);
     const isFetching = SearchMessageStore.getIsFetching(searchTabFetchId);
     const isInitialFetchComplete = SearchMessageStore.getIsInitialFetchComplete(searchTabFetchId);
@@ -101,7 +100,7 @@ let closure_21 = noop.memo((searchContext) => {
       tmp11 = isFetching;
     }
     if (!tmp11) {
-      const initialMessagesDebounced = SearchPlatformUtilsDefault.fetchInitialMessagesDebounced(tmp3);
+      const initialMessagesDebounced = SearchPlatformUtilsDefault.fetchInitialMessagesDebounced(searchContext);
       const tmpResult = SearchPlatformUtilsDefault;
     }
   }, items1);

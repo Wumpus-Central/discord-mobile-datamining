@@ -7,7 +7,7 @@ import PermissionStore from "../../stores/PermissionStore.tsx";
 import UserStore from "../../stores/UserStore.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
-function canToggleCommunicationDisableOnUser(id, id2, items) {
+function canToggleCommunicationDisableOnUser(id, id2) {
   let tmp = items;
   if (items === undefined) {
     items = [UserStore, GuildStore, PermissionStore];

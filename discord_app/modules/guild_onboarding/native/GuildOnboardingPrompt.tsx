@@ -35,13 +35,13 @@ function PromptHeader(currentPrompt) {
   if (required) {
     const obj1 = { children: null };
     const obj2 = { style: tmp.requiredSeparator };
-    const items1 = [tmp5(tmp4, obj2)];
+    const items1 = [__initData(timestampProducer, obj2)];
     const obj3 = { variant: "text-sm/medium", color: "text-brand", children: null };
-    const intl2 = tmp6(1114).intl;
-    obj3.children = intl2.string(tmp6(1114).t.Ur8Vrt);
-    items1[1] = tmp5(tmp6(4556).Text, obj3);
+    const intl2 = util.intl;
+    obj3.children = intl2.string(util.t.Ur8Vrt);
+    items1[1] = __initData(Text_Text.Text, obj3);
     obj1.children = items1;
-    tmp2Result = tmp2(tmp3, obj1);
+    tmp2Result = value2(closure_1_17, obj1);
   }
   const obj4 = { children: null };
   items[1] = tmp2Result;
@@ -75,9 +75,9 @@ function PromptFooter(onPress) {
     }
     tmp5 = !required;
   }
-  const intl = tmp2(tmp3[21]).intl;
+  const intl = require("util").intl;
   const string = intl.string;
-  const t = tmp2(tmp3[21]).t;
+  const t = require("util").t;
   if (lastPrompt) {
     const _HermesInternal = HermesInternal;
     let combined = "" + string(t["8SuVoE"]) + " \u{1F389}";
@@ -150,16 +150,16 @@ function PromptFooter(onPress) {
   let tmp20Result = null;
   if (tmp10) {
     obj3 = { style: tmp.helpText, variant: "text-xs/medium", color: "text-default", children: null };
-    const intl2 = tmp2(tmp3[21]).intl;
-    obj3.children = intl2.string(tmp2(tmp3[21]).t.dA1dSf);
-    tmp20Result = tmp20(tmp2(tmp3[20]).Text, obj3);
+    const intl2 = require("util").intl;
+    obj3.children = intl2.string(require("util").t.dA1dSf);
+    tmp20Result = closure_15(require("Text/Text").Text, obj3);
   }
   const items6 = [tmp20Result, ,];
   if ("" !== helpText) {
     const obj4 = { style: tmp.helpText, variant: "text-xs/medium", color: "text-default", children: null };
     const items7 = [helpText, " ", helpTextAdditional];
     obj4.children = items7;
-    let tmp18Result = tmp18(tmp2(tmp3[20]).Text, obj4);
+    let tmp18Result = closure_16(require("Text/Text").Text, obj4);
   } else {
     tmp18Result = null;
   }
@@ -455,7 +455,7 @@ export const RulesPrompt = function RulesPrompt(guildId) {
       intl2Result = intl2(string.D0CVAc);
     }
     obj5.children = intl2Result;
-    tmp11Result = tmp11(Text, obj5);
+    tmp11Result = closure_15(Text, obj5);
     obj5 = [tmp11Result];
     const obj6 = { variant: "primary", size: "md", grow: true, disabled: !stringResult, text: null, onPress: null };
     intl2 = tmp(END[21]).intl;
@@ -471,7 +471,7 @@ export const RulesPrompt = function RulesPrompt(guildId) {
         let obj = {};
         const merged = Object.assign(closure_4);
         obj = {};
-        const merged1 = Object.assign(tmp);
+        const merged1 = Object.assign(stateFromStores);
         obj.response = true;
         const items = [obj];
         obj.formFields = items;
@@ -479,13 +479,13 @@ export const RulesPrompt = function RulesPrompt(guildId) {
         closure_1.push(constants.COMPLETED);
       }
     };
-    Text = tmp11(tmp(END[22]).Button, obj6);
+    Text = closure_15(tmp(END[22]).Button, obj6);
     obj5[1] = Text;
     obj3.children = obj5;
-    obj3 = tmp9(tmp11Result, obj3);
+    obj3 = closure_16(tmp11Result, obj3);
     items6[1] = obj3;
     obj.children = items6;
-    let tmp9Result = tmp9(tmp11Result, obj);
+    let tmp9Result = closure_16(tmp11Result, obj);
     obj = [tmp9Result];
     tmp3 = tmp3(END[24]);
     obj7 = { style: null, start: null, end: null, colors: null, pointerEvents: "none" };
@@ -498,11 +498,12 @@ export const RulesPrompt = function RulesPrompt(guildId) {
     END = tmp(END[25]).VerticalGradient.END;
     obj7.end = END;
     obj7.colors = items3;
-    tmp11Result = tmp11(tmp3, obj7);
+    tmp11Result = closure_15(tmp3, obj7);
     obj[1] = tmp11Result;
     obj.children = obj;
-    tmp9Result = tmp9(tmp(END[18]).SafeAreaPaddingView, obj);
+    tmp9Result = closure_16(tmp(END[18]).SafeAreaPaddingView, obj);
   }
+  const alphaResult1 = obj7.alpha(1);
 };
 export const MultipleChoicePrompt = function MultipleChoicePrompt(guildId) {
   guildId = guildId.guildId;
@@ -538,9 +539,8 @@ export const MultipleChoicePrompt = function MultipleChoicePrompt(guildId) {
     const obj = {
       option,
       guildId,
-      onSelect(arg0) {
-        let flag = arg0;
-        if (arg0 == null) {
+      onSelect(flag) {
+        if (flag == null) {
           flag = false;
         }
         return selectOption(currentPrompt.id, option.id, flag);
@@ -607,9 +607,8 @@ export const DropdownPrompt = function DropdownPrompt(guildId) {
     const obj = {
       guildId,
       promptId: currentPrompt.id,
-      onSelect(id, arg1) {
-        let flag = arg1;
-        if (arg1 == null) {
+      onSelect(id, flag) {
+        if (flag == null) {
           flag = false;
         }
         return selectOption(id.id, id.id, flag);
@@ -627,7 +626,7 @@ export const DropdownPrompt = function DropdownPrompt(guildId) {
       color: "text-muted",
       children: "No answers selected.",
     };
-    tmp11Result = tmp11(tmp4(tmp3[20]).Text, obj2);
+    tmp11Result = closure_15(tmp4(tmp3[20]).Text, obj2);
   }
   const obj3 = { children: null };
   const obj4 = { children: null };

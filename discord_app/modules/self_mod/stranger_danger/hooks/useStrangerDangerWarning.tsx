@@ -1,6 +1,7 @@
 // discord_app/modules/self_mod/stranger_danger/hooks/useStrangerDangerWarning.tsx
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
 import useUserIsTeen from "../../hooks/useUserIsTeen.tsx";
+import useInappropriateConversationWarningsForChannel from "../../inappropriate_conversation/hooks/useInappropriateConversationWarningsForChannel.tsx";
 import useChannelSafetyWarning from "../../hooks/useChannelSafetyWarning.tsx";
 import useIsSpamMessageRequest from "../../../message_request/hooks/useIsSpamMessageRequest.tsx";
 import useIsMessageRequest from "../../../message_request/hooks/useIsMessageRequest.tsx";
@@ -19,7 +20,7 @@ export const useStrangerDangerWarning = function useStrangerDangerWarning(id) {
   const channelSafetyWarning = useChannelSafetyWarning.useChannelSafetyWarning(id, SafetyWarningTypes.STRANGER_DANGER);
   const userIsTeen = useUserIsTeen.useUserIsTeen();
   if (stateFromStores != null) {
-    const isStaffResult = stateFromStores.isStaff();
+    stateFromStores.isStaff();
   }
   if (userIsTeen) {
     if (!isSpamMessageRequest) {
@@ -30,4 +31,5 @@ export const useStrangerDangerWarning = function useStrangerDangerWarning(id) {
       }
     }
   }
+  tmpResult = useInappropriateConversationWarningsForChannel;
 };

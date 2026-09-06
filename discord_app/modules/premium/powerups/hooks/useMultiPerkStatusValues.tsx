@@ -1,10 +1,10 @@
 // discord_app/modules/premium/powerups/hooks/useMultiPerkStatusValues.tsx
+import util from "../../../../intl/index.native.tsx";
 import _modDef2428 from "../GuildPowerups.messages.js";
 import GuildPowerupsConstants from "../constants/GuildPowerupsConstants.tsx";
 import usePowerupActiveStatus from "usePowerupActiveStatus.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
-const util = tmp(1114);
 const PowerupActiveStatusType = GuildPowerupsConstants.PowerupActiveStatusType;
 const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useMultiPerkStatusValues.tsx");
 

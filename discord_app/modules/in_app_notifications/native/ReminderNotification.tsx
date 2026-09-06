@@ -73,6 +73,7 @@ function NotificationBody(channel) {
   }
   obj2 = { message, lineClamp: num, showMessageAuthor: true, maxHeight };
   tmp14 = closure_10(MessagePreviewTextDefault, obj2);
+  const tmpResult = channel(10094);
 }
 const View = fn(17).View;
 const InAppNotificationConstants = fn(10095);

@@ -135,15 +135,13 @@ function doDualReadValidation(items, derived, derived2) {
     let _Object2 = Object;
     let call2 = hasOwnProperty2.call;
     let root2 = arg1.root;
-    let tmp14 = item10060;
     if (typeof call2 === "unknown") {
       let hasOwnProperty2Result = hasOwnProperty2(item10060);
     } else {
       hasOwnProperty2Result = call2(root2, item10060);
     }
     if (!hasOwnProperty2Result) {
-      obj = { type: "extra-record", key: null };
-      obj.key = tmp14;
+      obj = { type: "extra-record", key: item10060 };
       let arr2 = arg0.push(obj);
     }
     continue;
@@ -259,9 +257,8 @@ function logErrorsToAnalytics(store_name, items) {
                 let combined = "" + nextResult.fieldName + ":" + nextResult.primaryType + ":" + nextResult.shadowType;
                 let seenMismatches = value.seenMismatches;
                 let tmp4 = combined;
-                let tmp5 = value;
                 if (!seenMismatches.has(combined)) {
-                  let seenMismatches2 = tmp5.seenMismatches;
+                  let seenMismatches2 = value.seenMismatches;
                   let addResult = seenMismatches2.add(tmp4);
                   let mismatchedFields = obj.mismatchedFields;
                   let arr = mismatchedFields.push(tmp2);
@@ -269,7 +266,7 @@ function logErrorsToAnalytics(store_name, items) {
                 continue;
               }
             }
-            function appendDeepMismatches(combined, primaryValue, shadowValue, set) {
+            function appendDeepMismatches(combined, primaryValue, shadowValue) {
               if (set === undefined) {
                 const _Set = Set;
                 set = new Set();
@@ -358,7 +355,6 @@ function logErrorsToAnalytics(store_name, items) {
                     let addResult = visitedEntries.add(tmp2.primaryRecord);
                     let mismatches = tmp2.mismatches;
                     for (const item10034 of mismatches) {
-                      let tmp7 = item10034;
                       let str = item10034.field;
                       str = str.toString();
                       let type2 = item10034.type;
@@ -366,24 +362,28 @@ function logErrorsToAnalytics(store_name, items) {
                         let mismatchedFields = obj.mismatchedFields;
                         obj = { fieldName: null, primaryType: null, shadowType: "missing" };
                         obj.fieldName = str;
-                        obj.primaryType = closure_12(tmp2.primaryRecord[tmp7.field]);
+                        obj.primaryType = closure_12(tmp2.primaryRecord[item10034.field]);
                         let arr = mismatchedFields.push(obj);
                       } else if ("value-mismatch" === type2) {
-                        if (null !== tmp7.primaryValue) {
-                          if (null !== tmp7.shadowValue) {
-                            if (typeof tmp7.primaryValue === "object") {
-                              if (typeof tmp7.shadowValue === "object") {
+                        if (null !== item10034.primaryValue) {
+                          if (null !== item10034.shadowValue) {
+                            if (typeof item10034.primaryValue === "object") {
+                              if (typeof item10034.shadowValue === "object") {
                                 let _Array = Array;
-                                if (Array.isArray(tmp7.primaryValue)) {
+                                if (Array.isArray(item10034.primaryValue)) {
                                   let _Array2 = Array;
-                                  if (Array.isArray(tmp7.shadowValue)) {
-                                    let result = appendArrayMismatches(str, tmp7.primaryValue, tmp7.shadowValue);
+                                  if (Array.isArray(item10034.shadowValue)) {
+                                    let result = appendArrayMismatches(
+                                      str,
+                                      item10034.primaryValue,
+                                      item10034.shadowValue,
+                                    );
                                   }
                                 }
                                 let appendDeepMismatchesResult = appendDeepMismatches(
                                   str,
-                                  tmp7.primaryValue,
-                                  tmp7.shadowValue,
+                                  item10034.primaryValue,
+                                  item10034.shadowValue,
                                 );
                               }
                             }
@@ -391,8 +391,8 @@ function logErrorsToAnalytics(store_name, items) {
                         }
                         obj = { fieldName: null, primaryType: null, shadowType: null };
                         obj.fieldName = str;
-                        obj.primaryType = closure_12(tmp7.primaryValue);
-                        obj.shadowType = closure_12(tmp7.shadowValue);
+                        obj.primaryType = closure_12(item10034.primaryValue);
+                        obj.shadowType = closure_12(item10034.shadowValue);
                         let appendMismatchResult = appendMismatch(obj);
                       }
                       continue;
@@ -481,9 +481,9 @@ export const runDualReadValidation = function runDualReadValidation(store_name, 
                         if (typeof shadowValue === "object") {
                           if (null !== shadowValue) {
                             if (map.has(primaryValue)) {
-                              value = obj.get(primaryValue);
+                              value = map.get(primaryValue);
                             } else {
-                              const result = obj.set(primaryValue, shadowValue);
+                              const result = map.set(primaryValue, shadowValue);
                             }
                           }
                         }
@@ -517,7 +517,7 @@ export const runDualReadValidation = function runDualReadValidation(store_name, 
                         }
                       }
                       if (closure_2_9(primaryValue)) {
-                        if (tmp3(shadowValue)) {
+                        if (closure_2_9(shadowValue)) {
                           const _Set3 = Set;
                           const _Object = Object;
                           const set = new Set(Object.keys(primaryValue));
@@ -531,14 +531,13 @@ export const runDualReadValidation = function runDualReadValidation(store_name, 
                           const _Array3 = Array;
                           const sorted = Array.from(set2).sort();
                           for (const item10068 of sorted) {
-                            let tmp23 = item10068;
                             let hasItem = set.has(item10068);
                             if (hasItem) {
-                              hasItem = set1.has(tmp23);
+                              hasItem = set1.has(item10068);
                             }
                             if (hasItem) {
-                              if (!closure_2_6(arg0[tmp23], arg1[tmp23])) {
-                                let tmp30 = impl(arg0[tmp23], arg1[tmp23]);
+                              if (!closure_2_6(arg0[item10068], arg1[item10068])) {
+                                let tmp30 = impl(arg0[item10068], arg1[item10068]);
                               }
                             }
                             continue;
@@ -546,7 +545,6 @@ export const runDualReadValidation = function runDualReadValidation(store_name, 
                           const arr = Array.from(set2);
                         }
                       }
-                      tmp3 = closure_2_9;
                     } else {
                       const _Date2 = Date;
                     }

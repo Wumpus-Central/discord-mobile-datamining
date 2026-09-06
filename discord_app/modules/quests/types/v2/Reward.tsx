@@ -8,12 +8,11 @@ function _rewardRedemptionInstructionsFromServer(redemption_instructions_by_plat
   const keys = Object.keys(redemption_instructions_by_platform);
   for (const item10012 of keys) {
     let _parseInt = parseInt;
-    let tmp2 = item10012;
     let parsed = parseInt(item10012);
     let tmp4 = parsed;
     let QUEST_REWARD_CODE_PLATFORMS_SET = QuestTypes.QUEST_REWARD_CODE_PLATFORMS_SET;
     if (QUEST_REWARD_CODE_PLATFORMS_SET.has(parsed)) {
-      obj[tmp4] = arg0[tmp2];
+      obj[tmp4] = arg0[item10012];
     }
     continue;
   }
@@ -23,7 +22,7 @@ function _questRewardV2FromServer(type) {
   type = type.type;
   if (QuestRewardTypes.QuestRewardTypes.REWARD_CODE === type) {
     let obj = {
-      type: tmp(7708).QuestRewardTypes.REWARD_CODE,
+      type: QuestRewardTypes.QuestRewardTypes.REWARD_CODE,
       skuId: null,
       asset: null,
       assetVideo: null,
@@ -42,9 +41,9 @@ function _questRewardV2FromServer(type) {
     obj.messages = obj;
     ({ approximate_count: obj9.approximateCount, redemption_link: obj9.redemptionLink } = type);
     return obj;
-  } else if (tmp(7708).QuestRewardTypes.COLLECTIBLE === type) {
+  } else if (QuestRewardTypes.QuestRewardTypes.COLLECTIBLE === type) {
     const obj1 = {
-      type: tmp(7708).QuestRewardTypes.COLLECTIBLE,
+      type: QuestRewardTypes.QuestRewardTypes.COLLECTIBLE,
       skuId: null,
       asset: null,
       assetVideo: null,
@@ -68,9 +67,9 @@ function _questRewardV2FromServer(type) {
       expires_at_premium: obj7.expiresAtPremium,
     } = type);
     return obj1;
-  } else if (tmp(7708).QuestRewardTypes.VIRTUAL_CURRENCY === type) {
+  } else if (QuestRewardTypes.QuestRewardTypes.VIRTUAL_CURRENCY === type) {
     const obj3 = {
-      type: tmp(7708).QuestRewardTypes.VIRTUAL_CURRENCY,
+      type: QuestRewardTypes.QuestRewardTypes.VIRTUAL_CURRENCY,
       skuId: type.sku_id,
       messages: null,
       orbQuantity: null,
@@ -86,9 +85,9 @@ function _questRewardV2FromServer(type) {
     obj3.messages = obj4;
     ({ orb_quantity: obj5.orbQuantity, premium_orb_quantity: obj5.premiumOrbQuantity } = type);
     return obj3;
-  } else if (tmp(7708).QuestRewardTypes.FRACTIONAL_PREMIUM === type) {
+  } else if (QuestRewardTypes.QuestRewardTypes.FRACTIONAL_PREMIUM === type) {
     const obj5 = {
-      type: tmp(7708).QuestRewardTypes.FRACTIONAL_PREMIUM,
+      type: QuestRewardTypes.QuestRewardTypes.FRACTIONAL_PREMIUM,
       skuId: null,
       asset: null,
       assetVideo: null,
@@ -105,8 +104,14 @@ function _questRewardV2FromServer(type) {
     };
     obj5.messages = obj6;
     return obj5;
-  } else if (tmp(7708).QuestRewardTypes.IN_GAME === type) {
-    obj = { type: tmp(7708).QuestRewardTypes.IN_GAME, skuId: null, asset: null, assetVideo: null, messages: null };
+  } else if (QuestRewardTypes.QuestRewardTypes.IN_GAME === type) {
+    obj = {
+      type: QuestRewardTypes.QuestRewardTypes.IN_GAME,
+      skuId: null,
+      asset: null,
+      assetVideo: null,
+      messages: null,
+    };
     ({ sku_id: obj.skuId, asset: obj.asset, asset_video: obj.assetVideo } = type);
     const obj7 = {
       redemptionInstructionsByPlatform: _rewardRedemptionInstructionsFromServer(

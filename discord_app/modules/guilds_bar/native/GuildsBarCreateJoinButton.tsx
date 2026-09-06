@@ -7,7 +7,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 import SelectedGuildStore from "../../../stores/SelectedGuildStore.tsx";
 
 const require = fn;
-let closure_14 = async function _handleCreateJoinGuildPress(arg0, value) {
+let closure_14 = async function _handleCreateJoinGuildPress() {
   if (c3 === 2) {
     c3 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -124,10 +124,11 @@ export default noop.memo(function GuildsBarCreateJoinButton() {
   const memo = noop.useMemo(
     () => ({
       onPress() {
-        if (enabled) {
+        if (closure_1_0) {
           if (!obj.isAtGuildCapAndNonPremium()) {
             transitionGuildsBarToGuildOrOpenSelectedChannelDefault(closure_2_8);
           }
+          obj = enabled(dependencyMap[11]);
         }
         (function handleCreateJoinGuildPress() {
           const self = this;
@@ -176,7 +177,7 @@ export default noop.memo(function GuildsBarCreateJoinButton() {
     children: null,
   });
   return (
-    <tmp8
+    <View
       selected={stateFromStores}
       circle={false}
       unread={false}
@@ -187,6 +188,6 @@ export default noop.memo(function GuildsBarCreateJoinButton() {
       expandedChildren="guilds-bar-drag-preview"
     >
       {null}
-    </tmp8>
+    </View>
   );
 });

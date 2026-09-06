@@ -38,10 +38,9 @@ function isWebPlayerVideoUrl(mediaUrl) {
     let flag = false;
     if (null != mediaUrl) {
       const tmp5 = _slicedToArray(mediaUrl.split(/\?/, 1), 2);
-      flag = obj2.test(tmp5[0]);
+      flag = re6.test(tmp5[0]);
     }
     isIOSWithWebMResult = flag;
-    obj2 = re6;
   }
   return isIOSWithWebMResult;
 }
@@ -110,10 +109,9 @@ export const isVideoUrl = function isVideoUrl(url) {
       let flag2 = false;
       if (null != url) {
         const tmp8 = _slicedToArray(url.split(/\?/, 1), 2);
-        flag2 = obj3.test(tmp8[0]);
+        flag2 = re6.test(tmp8[0]);
       }
       isIOSWithWebMResult = flag2;
-      obj3 = re6;
     }
     flag = isIOSWithWebMResult;
   }

@@ -23,7 +23,7 @@ function processColorStrings(colorStrings) {
       }
       obj = { primaryColor: tmp12Result, secondaryColor: null, tertiaryColor: null };
       const secondaryColor = colorStrings.secondaryColor;
-      if (tmp.theme === tmp2.LIGHT) {
+      if (ThemeStore.theme === ThemeTypes.LIGHT) {
         if (null != secondaryColor) {
           const obj5 = _modDef672(secondaryColor);
           [tmp17, tmp18, tmp19] = _slicedToArray(_modDef672(secondaryColor).hsl(), 3);
@@ -33,7 +33,7 @@ function processColorStrings(colorStrings) {
         }
         obj.secondaryColor = tmp10Result;
         const tertiaryColor = colorStrings.tertiaryColor;
-        if (tmp.theme === tmp2.LIGHT) {
+        if (ThemeStore.theme === ThemeTypes.LIGHT) {
           if (null != tertiaryColor) {
             const obj8 = _modDef672(tertiaryColor);
             [tmp25, tmp26, tmp27] = _slicedToArray(_modDef672(tertiaryColor).hsl(), 3);
@@ -48,8 +48,8 @@ function processColorStrings(colorStrings) {
       }
       tmp10Result = tmp10(secondaryColor);
     }
-    tmp12Result = tmp12(primaryColor);
-    tmp10 = tmp12;
+    tmp12Result = processColor(primaryColor);
+    tmp10 = processColor;
   }
 }
 const processColor = fn(17).processColor;

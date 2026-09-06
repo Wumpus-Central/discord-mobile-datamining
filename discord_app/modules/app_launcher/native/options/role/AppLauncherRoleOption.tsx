@@ -23,8 +23,8 @@ export default function AppLauncherRoleOption(option) {
       let roleId = null;
       if (null != importDefault) {
         roleId = null;
-        if ("roleMention" === tmp.type) {
-          roleId = tmp.roleId;
+        if ("roleMention" === importDefault.type) {
+          roleId = importDefault.roleId;
         }
       }
       return roleId;

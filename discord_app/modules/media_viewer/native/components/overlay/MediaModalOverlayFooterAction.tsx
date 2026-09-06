@@ -1,5 +1,6 @@
 // discord_app/modules/media_viewer/native/components/overlay/MediaModalOverlayFooterAction.tsx
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import PlatformUtils from "../../../../../utils/PlatformUtils.tsx";
 import VisualEffectViewDefault from "../../../../visual_effect_view/native/VisualEffectView.tsx";
 import components_Button_Button from "../../../../../design/components/Button/native/Button.native.tsx";
 import common_SafeAreaView from "../../../../../components_native/common/SafeAreaView.tsx";
@@ -27,7 +28,7 @@ export const MediaModalOverlayFooterAction = function MediaModalOverlayFooterAct
   const tmp = closure_8();
   const rect = { bottom: true, left: true, right: true, style: tmp.container, children: null };
   if (null != sliderElement) {
-    let isIOSResult = tmp4(1115).isIOS();
+    let isIOSResult = PlatformUtils.isIOS();
     if (isIOSResult) {
       let obj = { blurTheme: "dark", style: absoluteFill.absoluteFill };
       isIOSResult = hasOwnProperty(VisualEffectViewDefault, obj);
@@ -41,8 +42,8 @@ export const MediaModalOverlayFooterAction = function MediaModalOverlayFooterAct
     const obj1 = { children: null };
     items[2] = tmp12;
     obj1.children = items;
-    let tmp3Result = tmp3(timestampProducer, obj1);
-    const tmp4Result = tmp4(1115);
+    let tmp3Result = React5(timestampProducer, obj1);
+    const tmp4Result = PlatformUtils;
   } else {
     tmp3Result = null;
   }

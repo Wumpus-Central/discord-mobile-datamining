@@ -38,13 +38,13 @@ export const SelfDismissibleAlertBody = function SelfDismissibleAlertBody(errorC
     ({ body: arr3[0], alertBody: arr3[1] } = tmp);
     obj.style = items2;
     obj.children = body;
-    const items3 = [closure_5(tmp2(tmp3[6]).Text, obj)];
+    const items3 = [closure_5(dismissCallback(tmp3[6]).Text, obj)];
     const obj1 = { maxFontSizeMultiplier: 1, variant: "text-md/normal", style: null, children: null };
     const items4 = [,];
     ({ body: arr5[0], errorCodeText: arr5[1] } = tmp);
     obj1.style = items4;
     obj1.children = errorCodeMessage;
-    items3[1] = closure_5(tmp2(tmp3[6]).Text, obj1);
+    items3[1] = closure_5(dismissCallback(tmp3[6]).Text, obj1);
     obj.children = items3;
     tmp6 = closure_6(View, obj);
   }

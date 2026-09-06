@@ -1,9 +1,9 @@
 // discord_app/modules/auth/native/components/utils/getDeviceCountry.tsx
 import _mod17 from "../../../../../../_runtime/metro/00017__.js";
 import PlatformUtils from "../../../../../utils/PlatformUtils.tsx";
+import NativeDeviceLocaleModule from "../../../../../../discord_common/js/packages/rtn-codegen/js/NativeDeviceLocaleModule.tsx";
 import size from "../../../../../../_runtime/metro/00002__.js";
 
-const NativeDeviceLocaleModule = tmp(1117);
 const NativeModules = _mod17.NativeModules;
 const result = size.fileFinishedImporting("modules/auth/native/components/utils/getDeviceCountry.tsx");
 

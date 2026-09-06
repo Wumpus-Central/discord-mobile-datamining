@@ -180,12 +180,12 @@ obj.call_ringing_halloween = MetaQuestUtils.isMetaQuest() ? obj.MEDIA : obj.RING
   NOTIFICATION_NO_VIBRATION: obj2.activity_user_left,
 } = obj);
 const result = size.fileFinishedImporting("modules/sound_playback/native/SoundUtils.tsx");
-let fn = (name, arg1, _volume, outputChannel) => {
+let fn = (name, call_calling, _volume, DEFAULT) => {
   obj = Object.create(new.target.prototype);
   obj.name = name;
-  obj.usage = obj[arg1];
+  obj.usage = obj[call_calling];
   obj._volume = _volume;
-  obj.outputChannel = outputChannel;
+  obj.outputChannel = DEFAULT;
   return obj;
 };
 const prototype2 = fn.prototype;
@@ -240,6 +240,7 @@ prototype2["playWithListener"] = function playWithListener() {
         const timerId = setTimeout(() => {
           closure_1_0(true);
         }, duration.duration * num2);
+        obj = self(dependencyMap[2]);
       })
       .catch((error) => {
         closure_1(error);

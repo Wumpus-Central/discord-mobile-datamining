@@ -1,4 +1,7 @@
 // discord_app/design/components/Button/native/BaseButton.native.tsx
+import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
+import GlobalUtils from "../../../../utils/GlobalUtils.tsx";
+import native from "../../../../../discord_common/js/packages/design/native.tsx";
 import ButtonHooks from "ButtonHooks.native.tsx";
 import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -80,7 +83,7 @@ export const BaseButton = noop.forwardRef((disabled, ref) => {
     obj.busy = flag2;
     return obj;
   }, items);
-  let tmp4Result = tmp4(4271);
+  let tmp4Result = native;
   let str = "light";
   if ("primary-overlay" !== variant) {
     let str3;
@@ -94,7 +97,7 @@ export const BaseButton = noop.forwardRef((disabled, ref) => {
   let tmp11 = children;
   if (null != str) {
     const obj2 = { theme: str, children };
-    tmp11 = jsx(tmp4(4271).ThemeContextProvider, { theme: str, children });
+    tmp11 = jsx(native.ThemeContextProvider, { theme: str, children });
   }
   const items1 = [disabled.style, , ,];
   if (flag) {
@@ -132,7 +135,7 @@ export const BaseButton = noop.forwardRef((disabled, ref) => {
     let str5 = "";
     if (!accessibilityElementsHidden) {
       const items2 = [accessibilityLabel, accessibilityHint];
-      const found = items2.filter(tmp4(1369).isNotNullish);
+      const found = items2.filter(GlobalUtils.isNotNullish);
       str5 = found.join(", ");
     }
     const obj4 = {};
@@ -140,7 +143,7 @@ export const BaseButton = noop.forwardRef((disabled, ref) => {
     obj4.ref = ref;
     let isAndroidResult = accessible;
     if (accessible == null) {
-      tmp4Result = tmp4(1115);
+      tmp4Result = PlatformUtils;
       isAndroidResult = tmp4Result.isAndroid();
     }
     obj4.accessible = !isAndroidResult;

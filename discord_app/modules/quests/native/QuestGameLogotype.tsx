@@ -31,7 +31,7 @@ export default noop.memo((assetUrl) => {
   const maxWidth = assetUrl.maxWidth;
   const maxHeight = assetUrl.maxHeight;
   const onError = assetUrl.onError;
-  const tmp = closure_9();
+  let tmp = closure_9();
   const tmp2 = maxWidth(maxHeight.useState(null), 2);
   const first = tmp2[0];
   closure_6 = tmp2[1];
@@ -41,7 +41,7 @@ export default noop.memo((assetUrl) => {
     if (null != first) {
       const result = size.width / size.height;
       if (null != height) {
-        size = { height: tmp2, width: tmp2 * result };
+        size = { height, width: height * result };
         let size2 = size;
       } else {
         size2 = { height: num / result, width: num };
@@ -66,6 +66,7 @@ export default noop.memo((assetUrl) => {
         size = { width, height };
         closure_1_6(size);
       }
+      tmp = width > 0 && height > 0;
     });
   }, items1);
   let __closure = assetUrl(height[7]);

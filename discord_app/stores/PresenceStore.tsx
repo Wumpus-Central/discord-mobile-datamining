@@ -14,11 +14,11 @@ function sortActivity(type, type2) {
   let num2 = 4;
   if (constants2.CUSTOM_STATUS !== type) {
     num2 = 3;
-    if (tmp.COMPETING !== type) {
+    if (constants2.COMPETING !== type) {
       num2 = 2;
-      if (tmp.STREAMING !== type) {
+      if (constants2.STREAMING !== type) {
         num2 = 0;
-        if (tmp.PLAYING === type) {
+        if (constants2.PLAYING === type) {
           num2 = 1;
         }
       }
@@ -27,11 +27,11 @@ function sortActivity(type, type2) {
   type2 = type.type;
   if (constants2.CUSTOM_STATUS !== type2) {
     num = 3;
-    if (tmp.COMPETING !== type2) {
+    if (constants2.COMPETING !== type2) {
       num = 2;
-      if (tmp.STREAMING !== type2) {
+      if (constants2.STREAMING !== type2) {
         num = 0;
-        if (tmp.PLAYING === type2) {
+        if (constants2.PLAYING === type2) {
           num = 1;
         }
       }
@@ -44,11 +44,10 @@ function sortActivity(type, type2) {
       num3 = 1;
     }
     let num4 = 0;
-    if (tmp3(4601)(type)) {
+    if (hasRichActivityDefault(type)) {
       num4 = 1;
     }
     diff = num3 - num4;
-    tmp3 = importDefault;
   }
   if (!diff) {
     let num5 = type2.created_at;
@@ -393,6 +392,7 @@ function clearPresences(id) {
     let tmp5 = clearPresence(id, tmp3);
     continue;
   }
+  tmp2 = keys[Symbol.iterator]();
 }
 const Constants = fn(1074);
 ({
@@ -554,9 +554,7 @@ prototype["getAllApplicationActivities"] = function getAllApplicationActivities(
     let tmp4 = filteredActivities[item10015];
     for (const item10023 of tmp4) {
       if (item10023.application_id === arg0) {
-        obj = { userId: null, activity: null };
-        obj.userId = tmp2;
-        obj.activity = tmp7;
+        obj = { userId: tmp2, activity: tmp7 };
         let arr = items.push(obj);
       }
       continue;

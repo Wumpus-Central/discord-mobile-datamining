@@ -167,7 +167,7 @@ export default function DisplayNameStylesFontPickerSheet(displayName) {
             accessibilityElementsHidden: true,
             importantForAccessibility: "no-hide-descendants",
           };
-          hasItem = tmp8(tmp11, obj1);
+          hasItem = closure_1_8(closure_5, obj1);
         }
         items2[1] = hasItem;
         obj.children = items2;
@@ -181,13 +181,13 @@ export default function DisplayNameStylesFontPickerSheet(displayName) {
   }
   if (tmp14Result) {
     const obj7 = { style: tmp.nonLatinDisclaimer, children: null };
-    let items2 = [tmp11(tmp2(4515).CircleInformationIcon, { size: "sm" })];
+    let items2 = [closure_8(onSelectFont(4515).CircleInformationIcon, { size: "sm" })];
     const obj8 = { variant: "text-xs/normal", color: "text-subtle", style: tmp.disclaimerText, children: null };
-    const intl3 = tmp2(1114).intl;
+    const intl3 = onSelectFont(1114).intl;
     obj8.children = intl3.string(_modDef2786["+O1xL2"]);
-    items2[1] = tmp11(tmp2(4556).Text, obj8);
+    items2[1] = closure_8(onSelectFont(4556).Text, obj8);
     obj7.children = items2;
-    tmp14Result = tmp14(tmp12, obj7);
+    tmp14Result = closure_9(tmp12, obj7);
   }
   items1[1] = tmp14Result;
   obj5.children = items1;

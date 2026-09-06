@@ -1,7 +1,17 @@
 // discord_app/components_native/premium/PremiumSubscriptionUpsell.tsx
 import initialize from "../../../discord_common/js/packages/flux/index.tsx";
 import nativeDefault from "../../../discord_common/js/packages/tokens/native.tsx";
+import ConstantsIOS from "../../ConstantsIOS.tsx";
+import util from "../../intl/index.native.tsx";
+import NumberUtils from "../../utils/NumberUtils.tsx";
 import PremiumUtilsDefault from "../../utils/PremiumUtils.tsx";
+import CheckmarkLargeIcon from "../../design/components/Icon/native/redesign/generated/CheckmarkLargeIcon.tsx";
+import Text_Text from "../../design/components/Text/native/Text.tsx";
+import components_Button_Button from "../../design/components/Button/native/Button.native.tsx";
+import LinearGradientDefault from "../../../_runtime/04987_LinearGradient.js";
+import PremiumFeatureListDefault from "PremiumFeatureList.tsx";
+import _modDef13540 from "../../../_runtime/metro/13540__.js";
+import _modDef13541 from "../../../_runtime/metro/13541__.js";
 import noop from "../../../_runtime/metro/00019__.js";
 import LocaleStore from "../../modules/user_settings/LocaleStore.tsx";
 import UserStore from "../../stores/UserStore.tsx";
@@ -87,11 +97,10 @@ export default function PremiumSubscriptionUpsell(arg0) {
     const items1 = [tmp.upsell, style];
     obj.style = items1;
     obj = { style: tmp.upsellCard, start: null, end: null, colors: null, children: null };
-    tmp5(4987);
-    obj.start = tmp2(1093).HorizontalGradient.START;
-    obj.end = tmp2(1093).HorizontalGradient.END;
+    obj.start = ConstantsIOS.HorizontalGradient.START;
+    obj.end = ConstantsIOS.HorizontalGradient.END;
     obj.colors = Gradients.PREMIUM_GUILD;
-    const tmp5Result = tmp5(4218);
+    const tmp5Result = PremiumUtilsDefault;
     if (tmp5Result.isPremium(stateFromStores)) {
       obj1 = { children: null };
       const obj2 = {
@@ -101,16 +110,16 @@ export default function PremiumSubscriptionUpsell(arg0) {
         color: "text-overlay-light",
         children: null,
       };
-      const intl2 = tmp2(1114).intl;
-      obj2.children = intl2.string(tmp2(1114).t.YYfHlx);
-      const items2 = [tmp6(tmp2(4556).Text, obj2)];
+      const intl2 = util.intl;
+      obj2.children = intl2.string(util.t.YYfHlx);
+      const items2 = [closure_1_10(Text_Text.Text, obj2)];
       const obj3 = { style: tmp.subtitle, variant: "text-md/semibold", color: "text-overlay-light", children: null };
-      const intl3 = tmp2(1114).intl;
+      const intl3 = util.intl;
       const obj4 = { numFreeGuildSubscriptions };
-      obj3.children = intl3.format(tmp2(1114).t.Af0zEZ, obj4);
-      items2[1] = tmp6(tmp2(4556).Text, obj3);
+      obj3.children = intl3.format(util.t.Af0zEZ, obj4);
+      items2[1] = closure_1_10(Text_Text.Text, obj3);
       obj1.children = items2;
-      let tmp6Result = tmp8(closure_1_11, obj1);
+      let tmp6Result = closure_1_12(closure_1_11, obj1);
     } else {
       const obj5 = {
         style: tmp.title,
@@ -119,30 +128,30 @@ export default function PremiumSubscriptionUpsell(arg0) {
         color: "text-overlay-light",
         children: null,
       };
-      const intl = tmp2(1114).intl;
-      obj5.children = intl.string(tmp2(1114).t["qUl+K4"]);
-      tmp6Result = tmp6(tmp2(4556).Text, obj5);
+      const intl = util.intl;
+      obj5.children = intl.string(util.t["qUl+K4"]);
+      tmp6Result = closure_1_10(Text_Text.Text, obj5);
     }
     const items3 = [tmp6Result, ,];
     const obj6 = { style: tmp.upsellFeatures, children: null };
-    const obj7 = { style: tmp.upsellFeatureSubLogo, source: tmp5(13540) };
+    const obj7 = { style: tmp.upsellFeatureSubLogo, source: _modDef13540 };
     const items4 = [closure_1_10(React4, obj7), ,];
-    const obj8 = { style: tmp.upsellFeatureLogoTier2, source: tmp5(13541) };
+    const obj8 = { style: tmp.upsellFeatureLogoTier2, source: _modDef13541 };
     items4[1] = closure_1_10(React4, obj8);
     const obj9 = { style: tmp.upsellFeatureList, features: null, labelStyle: null, rowStyle: null };
-    const obj10 = { IconComponent: tmp2(4511).CheckmarkLargeIcon, label: null, color: null };
-    const intl4 = tmp2(1114).intl;
+    const obj10 = { IconComponent: CheckmarkLargeIcon.CheckmarkLargeIcon, label: null, color: null };
+    const intl4 = util.intl;
     const obj11 = { discountPercentage: null };
-    const tmp5Result1 = tmp5(9391);
-    obj11.discountPercentage = tmp2(1880).formatPercent(LocaleStore.locale, React7 / 100);
-    obj10.label = intl4.formatToPlainString(tmp2(1114).t.P3aEj6, obj11);
-    obj10.color = tmp5(576).unsafe_rawColors.WHITE;
+    const tmp5Result1 = PremiumFeatureListDefault;
+    obj11.discountPercentage = NumberUtils.formatPercent(LocaleStore.locale, React7 / 100);
+    obj10.label = intl4.formatToPlainString(util.t.P3aEj6, obj11);
+    obj10.color = nativeDefault.unsafe_rawColors.WHITE;
     const items5 = [obj10];
-    const obj12 = { IconComponent: tmp2(4511).CheckmarkLargeIcon, label: null, color: null };
-    const intl5 = tmp2(1114).intl;
+    const obj12 = { IconComponent: CheckmarkLargeIcon.CheckmarkLargeIcon, label: null, color: null };
+    const intl5 = util.intl;
     const obj13 = { numFreeGuildSubscriptions };
-    obj12.label = intl5.formatToPlainString(tmp2(1114).t.Ntlzbd, obj13);
-    obj12.color = tmp5(576).unsafe_rawColors.WHITE;
+    obj12.label = intl5.formatToPlainString(util.t.Ntlzbd, obj13);
+    obj12.color = nativeDefault.unsafe_rawColors.WHITE;
     items5[1] = obj12;
     obj9.features = items5;
     ({ upsellLabel: obj14.labelStyle, upsellRow: obj14.rowStyle } = tmp);
@@ -151,17 +160,17 @@ export default function PremiumSubscriptionUpsell(arg0) {
     items3[1] = closure_1_12(React3, obj6);
     const obj14 = { style: tmp.upsellButton, children: null };
     const obj15 = { variant: "experimental_premium-secondary", text: null, onPress: null };
-    const intl6 = tmp2(1114).intl;
-    stringResult = intl6.string(tmp2(1114).t.fJOECn);
+    const intl6 = util.intl;
+    stringResult = intl6.string(util.t.fJOECn);
     obj15.text = stringResult;
     obj15.onPress = onLearnMorePremium;
-    tmp = tmp6(tmp2(4975).Button, obj15);
+    tmp = closure_1_10(components_Button_Button.Button, obj15);
     obj14.children = tmp;
     items3[2] = closure_1_10(React3, obj14);
     obj.children = items3;
-    obj = tmp8(tmp5Result, obj);
+    obj = closure_1_12(tmp5Result, obj);
     obj.children = obj;
-    tmp6Result = tmp6(tmp7, obj);
-    const tmp2Result = tmp2(1880);
+    tmp6Result = closure_1_10(React3, obj);
+    const tmp2Result = NumberUtils;
   }
 }

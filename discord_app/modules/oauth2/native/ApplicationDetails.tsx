@@ -2,14 +2,19 @@
 import SnowflakeUtilsDefault from "../../../utils/SnowflakeUtils.tsx";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
+import LinkIcon from "../../../design/components/Icon/native/redesign/generated/LinkIcon.tsx";
 import ClockIcon from "../../../design/components/Icon/native/redesign/generated/ClockIcon.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import LockIcon from "../../../design/components/Icon/native/redesign/generated/LockIcon.tsx";
 import OAuth2Scopes from "../../../../discord_common/js/shared/shared-constants/OAuth2Scopes.tsx";
+import GlobeEarthIcon from "../../../design/components/Icon/native/redesign/generated/GlobeEarthIcon.tsx";
 import scopes from "../scopes.tsx";
 import disclosures from "../../applications/disclosures.tsx";
 import Utils from "../Utils.tsx";
 import ShieldIcon from "../../../design/components/Icon/native/redesign/generated/ShieldIcon.tsx";
+import EmbedIcon from "../../../design/components/Icon/native/redesign/generated/EmbedIcon.tsx";
+import HammerIcon from "../../../design/components/Icon/native/redesign/generated/HammerIcon.tsx";
+import RobotIcon from "../../../design/components/Icon/native/redesign/generated/RobotIcon.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -68,40 +73,38 @@ export default function ApplicationDetails(arg0) {
   obj = { style: tmp2.applicationDetails, children: null };
   let tmp15 = null;
   if (null != joined) {
-    obj = { iconComponent: tmp5(4503).LinkIcon, text: null };
-    const intl = tmp5(1114).intl;
+    obj = { iconComponent: LinkIcon.LinkIcon, text: null };
+    const intl = util.intl;
     obj1 = { origin: joined };
-    obj.text = intl.format(tmp5(1114).t["5k5OKD"], obj1);
+    obj.text = intl.format(util.t["5k5OKD"], obj1);
     tmp15 = React4(ApplicationDetailsEntry, obj);
   }
   const items = [tmp15, , , , , ,];
   const obj2 = { iconComponent: LockIcon.LockIcon, text: null };
   const date = new Date(obj.extractTimestamp(application.id));
-  const tmp13 = hasOwnProperty;
-  const tmp14 = View;
   obj2.text = Utils.getApplicationDetailsText(application);
   items[1] = React4(ApplicationDetailsEntry, obj2);
   let tmp18Result = null;
   if (null != connectedAccount) {
-    const obj3 = { iconComponent: tmp5(9433).HammerIcon, text: null };
-    const intl2 = tmp5(1114).intl;
-    obj3.text = intl2.string(tmp5(1114).t["8qui3M"]);
-    tmp18Result = tmp18(tmp19, obj3);
+    const obj3 = { iconComponent: HammerIcon.HammerIcon, text: null };
+    const intl2 = util.intl;
+    obj3.text = intl2.string(util.t["8qui3M"]);
+    tmp18Result = React4(ApplicationDetailsEntry, obj3);
   }
   items[2] = tmp18Result;
   const obj4 = { iconComponent: ClockIcon.ClockIcon, text: null };
-  const intl3 = tmp5(1114).intl;
+  const intl3 = util.intl;
   obj4.text = intl3.formatToPlainString(util.t["+1bjc8"], { date });
   items[3] = React4(ApplicationDetailsEntry, obj4);
   tmp18Result = null;
   if (scopes.includes(OAuth2Scopes.OAuth2Scopes.BOT)) {
     tmp18Result = null;
     if (null != approximateGuildCount) {
-      const obj5 = { iconComponent: tmp5(9435).RobotIcon, text: null };
-      const intl4 = tmp5(1114).intl;
+      const obj5 = { iconComponent: RobotIcon.RobotIcon, text: null };
+      const intl4 = util.intl;
       const obj6 = { guildCount: approximateGuildCount };
-      obj5.text = intl4.formatToPlainString(tmp5(1114).t.UHGHSP, obj6);
-      tmp18Result = tmp18(tmp19, obj5);
+      obj5.text = intl4.formatToPlainString(util.t.UHGHSP, obj6);
+      tmp18Result = React4(ApplicationDetailsEntry, obj5);
     }
   }
   items[4] = tmp18Result;
@@ -113,12 +116,12 @@ export default function ApplicationDetails(arg0) {
       let obj = disclosures;
       const textForDisclosure = obj.getTextForDisclosure(toFixed);
       if (disclosures.ApplicationDisclosure.IP_LOCATION === toFixed) {
-        obj = { iconComponent: tmp(8886).GlobeEarthIcon };
+        obj = { iconComponent: GlobeEarthIcon.GlobeEarthIcon };
         let tmp4 = obj;
       } else {
         tmp4 = null;
-        if (tmp(9240).ApplicationDisclosure.DISPLAYS_ADVERTISEMENTS === toFixed) {
-          obj = { iconComponent: tmp(9431).EmbedIcon };
+        if (disclosures.ApplicationDisclosure.DISPLAYS_ADVERTISEMENTS === toFixed) {
+          obj = { iconComponent: EmbedIcon.EmbedIcon };
           tmp4 = obj;
         }
       }
@@ -136,5 +139,5 @@ export default function ApplicationDetails(arg0) {
   }
   items[6] = mapped;
   obj.children = items;
-  return tmp13(tmp14, obj);
+  return hasOwnProperty(View, obj);
 }

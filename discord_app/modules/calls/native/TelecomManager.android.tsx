@@ -74,12 +74,12 @@ class TelecomManager extends tmp5 {
     applyArgumentsResult.ringtone = null;
     applyArgumentsResult.handleHostDestroy = function handleHostDestroy() {
       if (applyArgumentsResult.isEnabled()) {
-        if (null != obj.currentCall) {
-          if (obj.currentCall.state === closure_26.Ringing) {
-            obj.info("Activity destroyed with ringing call, cancelling incoming call");
-            obj.cancelIncomingCall(obj.currentCall.channelId);
+        if (null != applyArgumentsResult.currentCall) {
+          if (applyArgumentsResult.currentCall.state === closure_26.Ringing) {
+            applyArgumentsResult.info("Activity destroyed with ringing call, cancelling incoming call");
+            applyArgumentsResult.cancelIncomingCall(applyArgumentsResult.currentCall.channelId);
           } else {
-            obj.info("Activity destroyed with active call, disconnecting from voice channel");
+            applyArgumentsResult.info("Activity destroyed with active call, disconnecting from voice channel");
             SelectedChannelActionCreatorsDefault.disconnect();
           }
         }
@@ -88,11 +88,11 @@ class TelecomManager extends tmp5 {
     applyArgumentsResult.handleEndCallRequested = function handleEndCallRequested(callId) {
       obj.info("Received end call request from Call Bar:", callId.callId);
       if (null != applyArgumentsResult.currentCall) {
-        if (callId.callId === obj2.currentCall.channelId) {
-          if (obj2.currentCall.state === closure_26.Ringing) {
-            obj.info("Rejecting ringing call from Call Bar:", obj2.currentCall.channelId);
-            CallActionCreatorsDefault.stopRinging(obj2.currentCall.channelId);
-            obj2.clearCall(obj2.currentCall.channelId);
+        if (callId.callId === applyArgumentsResult.currentCall.channelId) {
+          if (applyArgumentsResult.currentCall.state === closure_26.Ringing) {
+            obj.info("Rejecting ringing call from Call Bar:", applyArgumentsResult.currentCall.channelId);
+            CallActionCreatorsDefault.stopRinging(applyArgumentsResult.currentCall.channelId);
+            applyArgumentsResult.clearCall(applyArgumentsResult.currentCall.channelId);
           } else {
             SelectedChannelActionCreatorsDefault.disconnect();
           }
@@ -103,8 +103,8 @@ class TelecomManager extends tmp5 {
     applyArgumentsResult.handleSetForegroundRequested = function handleSetForegroundRequested(callId) {
       obj.info("Received set foreground request from Call Bar");
       if (null != applyArgumentsResult.currentCall) {
-        if (callId.callId === tmp2.currentCall.channelId) {
-          const channel = ChannelStore.getChannel(tmp2.currentCall.channelId);
+        if (callId.callId === applyArgumentsResult.currentCall.channelId) {
+          const channel = ChannelStore.getChannel(applyArgumentsResult.currentCall.channelId);
           if (null != channel) {
             obj = PrivateChannelCallUtils;
             const result = obj.navigateToVoiceChannel(channel, "Call Bar");
@@ -116,20 +116,23 @@ class TelecomManager extends tmp5 {
       obj.info("Received mic mute request from Call Bar:", callId.callId, "isMuted:", callId.isMuted);
       if (tmp3) {
         if (!tmp5) {
-          tmp2.pendingMutePreference = callId.isMuted;
+          applyArgumentsResult.pendingMutePreference = callId.isMuted;
         }
         if (MediaEngineStore.isSelfMute() !== callId.isMuted) {
           obj.info("Updating Call Bar -> Discord mute state:", callId.isMuted);
           AudioActionCreatorsDefault.toggleSelfMute();
         }
-        tmp5 = tmp2.currentCall.state !== closure_26.Ringing && tmp2.currentCall.state !== tmp4.Connecting;
+        tmp5 =
+          applyArgumentsResult.currentCall.state !== closure_26.Ringing &&
+          applyArgumentsResult.currentCall.state !== tmp4.Connecting;
       }
+      tmp3 = null != applyArgumentsResult.currentCall && callId.callId === applyArgumentsResult.currentCall.channelId;
     };
     applyArgumentsResult.handleScreenShareRequested = function handleScreenShareRequested(callId) {
       obj.info("Received screen share request from Call Bar:", callId.callId, "isEnabled:", callId.isEnabled);
       if (null != applyArgumentsResult.currentCall) {
-        if (callId.callId === tmp2.currentCall.channelId) {
-          const channel = ChannelStore.getChannel(tmp2.currentCall.channelId);
+        if (callId.callId === applyArgumentsResult.currentCall.channelId) {
+          const channel = ChannelStore.getChannel(applyArgumentsResult.currentCall.channelId);
           if (null != channel) {
             const currentUserActiveStream = ApplicationStreamingStore.getCurrentUserActiveStream();
             let tmp4 = null != currentUserActiveStream;
@@ -139,12 +142,11 @@ class TelecomManager extends tmp5 {
             if (callId.isEnabled) {
               if (!tmp4) {
                 const videoPermission = useHasVideoPermission.getVideoPermission(channel);
-                const tmp5 = require;
                 if (obj3.getOSRequirement()) {
                   if (videoPermission) {
                     obj.info("Starting screen share from Call Bar");
-                    tmp5(9951).startStream();
-                    const tmp5Result = tmp5(9951);
+                    useScreenshareUtils.startStream();
+                    const tmp5Result = useScreenshareUtils;
                   } else {
                     obj.warn(
                       "Cannot start screen share from Call Bar: user lacks streaming permission in this channel",
@@ -172,15 +174,18 @@ class TelecomManager extends tmp5 {
     applyArgumentsResult.handleAnswerCallRequested = function handleAnswerCallRequested(callId) {
       obj.info("Received answer call request from Call Bar:", callId.callId);
       if (tmp2) {
-        if (obj2.currentCall.state === closure_26.Ringing) {
-          obj2.stopRingtone();
-          obj2.currentCall.state = tmp3.Connecting;
-          obj.info("Answering incoming call, joining voice channel:", obj2.currentCall.channelId);
-          const voiceChannel = SelectedChannelActionCreatorsDefault.selectVoiceChannel(obj2.currentCall.channelId);
+        if (applyArgumentsResult.currentCall.state === closure_26.Ringing) {
+          applyArgumentsResult.stopRingtone();
+          applyArgumentsResult.currentCall.state = tmp3.Connecting;
+          obj.info("Answering incoming call, joining voice channel:", applyArgumentsResult.currentCall.channelId);
+          const voiceChannel = SelectedChannelActionCreatorsDefault.selectVoiceChannel(
+            applyArgumentsResult.currentCall.channelId,
+          );
         } else {
-          obj.warn("Answer requested but call is not ringing:", obj2.currentCall.state);
+          obj.warn("Answer requested but call is not ringing:", applyArgumentsResult.currentCall.state);
         }
       }
+      tmp2 = null != applyArgumentsResult.currentCall && callId.callId === applyArgumentsResult.currentCall.channelId;
     };
     applyArgumentsResult.handleCallCreate = function handleCallCreate(channelId) {
       let isEnabledResult = applyArgumentsResult.isEnabled();
@@ -206,7 +211,7 @@ class TelecomManager extends tmp5 {
         isEnabledResult = MetaQuestUtils.isMetaQuest();
       }
       if (isEnabledResult) {
-        currentCall = obj.currentCall;
+        currentCall = applyArgumentsResult.currentCall;
         channelId = undefined;
         if (currentCall != null) {
           channelId = currentCall.channelId;
@@ -214,11 +219,11 @@ class TelecomManager extends tmp5 {
         isEnabledResult = channelId === channelId.channelId;
       }
       if (isEnabledResult) {
-        isEnabledResult = obj.isPendingIncomingCall(obj.currentCall);
+        isEnabledResult = applyArgumentsResult.isPendingIncomingCall(applyArgumentsResult.currentCall);
       }
       if (isEnabledResult) {
-        obj.info("Pending incoming call deleted, cancelling incoming call:", channelId.channelId);
-        obj.cancelIncomingCall(channelId.channelId);
+        applyArgumentsResult.info("Pending incoming call deleted, cancelling incoming call:", channelId.channelId);
+        applyArgumentsResult.cancelIncomingCall(channelId.channelId);
       }
     };
     applyArgumentsResult.handleIncomingCallAnswered = function handleIncomingCallAnswered(callId) {
@@ -420,8 +425,8 @@ prototype["reconcileTelecomState"] = function reconcileTelecomState() {
       self.reconcilePromise = self.doReconcile().finally(() => {
         self.reconcilePromise = null;
         if (self.needsReconcile) {
-          obj.needsReconcile = false;
-          const result = obj.reconcileTelecomState();
+          self.needsReconcile = false;
+          const result = self.reconcileTelecomState();
         }
       });
       const doReconcileResult = self.doReconcile();
@@ -432,7 +437,7 @@ prototype["reconcileTelecomState"] = function reconcileTelecomState() {
 };
 prototype["doReconcile"] = function doReconcile() {
   const self = this;
-  return (async (arg0, value) => {
+  return (async () => {
     if (c4 === 2) {
       c4 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -675,20 +680,18 @@ prototype["handleIncomingCallStoreChange"] = function handleIncomingCallStoreCha
       const calls = CallStore.getCalls();
       for (const item10027 of calls) {
         let ringing = item10027.ringing;
-        let tmp11 = item10027;
         if (ringing.includes(id)) {
-          let addResult = set.add(tmp11.channelId);
+          let addResult = set.add(item10027.channelId);
         }
         continue;
       }
       let registeredIncomingCallIds = self.registeredIncomingCallIds;
       for (const item10042 of registeredIncomingCallIds) {
-        let tmp16 = item10042;
         if (!set.has(item10042)) {
           let registeredIncomingCallIds2 = self.registeredIncomingCallIds;
-          let deleteResult = registeredIncomingCallIds2.delete(tmp16);
+          let deleteResult = registeredIncomingCallIds2.delete(item10042);
           let obj3 = NativeTelecomModuleDefault;
-          let endCallResult = obj3.endCall(tmp16);
+          let endCallResult = obj3.endCall(item10042);
           let catchPromise = endCallResult.catch((error) => {
             logger.warn("Failed to end telecom call:", error);
           });
@@ -699,7 +702,7 @@ prototype["handleIncomingCallStoreChange"] = function handleIncomingCallStoreCha
         _self = iter;
         let registeredIncomingCallIds = _self.registeredIncomingCallIds;
         if (!registeredIncomingCallIds.has(iter)) {
-          const registeredIncomingCallIds2 = _self.registeredIncomingCallIds;
+          const registeredIncomingCallIds2 = tmp.registeredIncomingCallIds;
           registeredIncomingCallIds2.add(iter);
           const registerIncomingCallResult = NativeTelecomModuleDefault.registerIncomingCall(iter);
           NativeTelecomModuleDefault.registerIncomingCall(iter)
@@ -723,6 +726,7 @@ prototype["handleIncomingCallStoreChange"] = function handleIncomingCallStoreCha
             }
           });
         }
+        tmp = _self;
       }
       const iter = set[Symbol.iterator]();
       while (iter !== undefined) {
@@ -731,11 +735,12 @@ prototype["handleIncomingCallStoreChange"] = function handleIncomingCallStoreCha
       }
     }
   }
+  obj = self(1608);
 };
 prototype["startCall"] = function startCall(channelId) {
   closure_0 = channelId;
   const self = this;
-  return (async (arg0, value) => {
+  return (async () => {
     if (c5 === 2) {
       c5 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -857,22 +862,22 @@ prototype["reportCallEnded"] = function reportCallEnded() {
   }
   return resolved;
 };
-prototype["setCallActive"] = function setCallActive(arg0) {
+prototype["setCallActive"] = function setCallActive(channelId6) {
   const self = this;
   currentCall = this.currentCall;
   let channelId;
   if (currentCall != null) {
     channelId = currentCall.channelId;
   }
-  if (channelId === arg0) {
-    obj.info("Setting call active:", arg0);
+  if (channelId === channelId6) {
+    obj.info("Setting call active:", channelId6);
     const isSelfMuteResult = MediaEngineStore.isSelfMute();
     obj = NativeTelecomModuleDefault;
-    obj.setCallActive(arg0, isSelfMuteResult);
+    obj.setCallActive(channelId6, isSelfMuteResult);
     self.lastMuteState = isSelfMuteResult;
     self.lastScreenShareActive = false;
   } else {
-    obj.warn("setCallActive called for unknown channel:", arg0);
+    obj.warn("setCallActive called for unknown channel:", channelId6);
   }
 };
 prototype["setIncomingCallActive"] = function setIncomingCallActive(arg0) {

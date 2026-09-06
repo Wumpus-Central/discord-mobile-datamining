@@ -15,7 +15,7 @@ const Constants = fn(1074);
 const size = fn(2);
 let result = size.fileFinishedImporting("utils/MaskedLinkUtils.tsx");
 
-export const isLinkTrusted = function isLinkTrusted(arg0, arg1) {
+export const isLinkTrusted = function isLinkTrusted(url, url2) {
   const channel = ChannelStore.getChannel(SelectedChannelStore.getChannelId());
   let tmp = null != channel;
   if (tmp) {
@@ -30,11 +30,11 @@ export const isLinkTrusted = function isLinkTrusted(arg0, arg1) {
   }
   let tmp4 = !tmp;
   if (!tmp) {
-    tmp4 = arg0 === arg1;
+    tmp4 = url === url2;
   }
   return tmp4;
 };
-export const handleClick = function handleClick(href, preventDefault, arg2, contextKey) {
+export const handleClick = function handleClick(href, preventDefault, arg2) {
   let items = arg2;
   if (arg2 === undefined) {
     items = [];
@@ -207,7 +207,7 @@ export const handleClick = function handleClick(href, preventDefault, arg2, cont
       tmp3(8375).trackLinkClicked(tmp8);
       if (null == onClick) {
         const obj3 = { skipExtensionCheck: "a", analyticsLocations: items, messageId, channelId };
-        const defaultResult = require("getOnClick").default(tmp8, obj3);
+        require("getOnClick").default(tmp8, obj3);
       }
       if (onCancel == null) {
         onCancel = () => {};
@@ -217,6 +217,7 @@ export const handleClick = function handleClick(href, preventDefault, arg2, cont
           preventDefault.preventDefault();
         }
         tmp3(12948).show(tmp8);
+        const tmp3Result3 = tmp3(12948);
       } else {
         let trustedResult = trusted;
         if (typeof trusted === "function") {
