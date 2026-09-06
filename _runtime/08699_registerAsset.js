@@ -1,7 +1,7 @@
 // === Module 8699: registerAsset ===
 
 // Module 8699 (registerAsset)
-import registerAsset from "registerAsset" /* 1240 */;
+import registerAsset from "registerAsset" /* 1122 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/stage_channels/native/images", width: 88, height: 80, scales: [2, 3], hash: "cdacc9b330d74f767eb28d253e6930f0", name: "stage-sparkles", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "54b1df301be8a48609dd405b7597a135", name: "RobloxNeutralIcon", type: "png" });

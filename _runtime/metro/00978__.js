@@ -1,6 +1,6 @@
 // === Module 978: ? ===
 
 // Module 978
-Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
-arg5.LANGGRAPH_INTEGRATION_NAME = "LangGraph";
-arg5.LANGGRAPH_ORIGIN = "auto.ai.langgraph";
+arg5.SDK_PACKAGE_NAME = "npm:@sentry/react-native";
+arg5.SDK_NAME = "sentry.javascript.react-native";
+arg5.SDK_VERSION = "7.10.0";

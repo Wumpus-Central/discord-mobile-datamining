@@ -1,12 +1,11 @@
 // === Module 10508: _isNativeReflectConstruct ===
 
 // Module 10508 (_isNativeReflectConstruct)
-import AbstractTimeExpressionParser from "AbstractTimeExpressionParser" /* 10464 */;
-import FRTimeExpressionParser from "_classCallCheck" /* 41 */;
+import _isNativeReflectConstruct2 from "_isNativeReflectConstruct" /* 10453 */;
+import JPMergeDateTimeRefiner from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import closure_1 from "_possibleConstructorReturn" /* 93 */;
 import closure_2 from "_getPrototypeOf" /* 95 */;
-import closure_3 from "_get" /* 96 */;
 import _inherits from "_inherits" /* 98 */;
 
 function _isNativeReflectConstruct() {
@@ -28,12 +27,28 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class FRTimeExpressionParser {
+let fn = this;
+if (this) {
+  fn = this.__importDefault;
+}
+if (!fn) {
+  fn = (__esModule) => {
+    if (!__esModule) {
+      const obj = { default: null };
+      obj[0] = __esModule;
+      let tmp = obj;
+    } else {
+      tmp = __esModule;
+    }
+    return tmp;
+  };
+}
+class JPMergeDateTimeRefiner {
   constructor() {
     self = this;
-    tmp = FRTimeExpressionParser(this, FRTimeExpressionParser);
+    tmp = JPMergeDateTimeRefiner(this, JPMergeDateTimeRefiner);
     tmp2 = closure_2;
-    obj = closure_2(FRTimeExpressionParser);
+    obj = closure_2(JPMergeDateTimeRefiner);
     tmp3 = closure_1;
     if (_isNativeReflectConstruct()) {
       tmp7 = globalThis;
@@ -48,37 +63,14 @@ class FRTimeExpressionParser {
     return tmp3(self, constructResult);
   }
 }
-_inherits(FRTimeExpressionParser, AbstractTimeExpressionParser.AbstractTimeExpressionParser);
-let items = [
+_inherits(JPMergeDateTimeRefiner, fn(_isNativeReflectConstruct2).default);
+const items = [
   {
-    key: "primaryPrefix",
-    value: function primaryPrefix() {
-      return "(?:(?:[\u00E0a])\\s*)?";
-    }
-  },
-  {
-    key: "followingPhase",
-    value: function followingPhase() {
-      return "\\s*(?:\\-|\\\u2013|\\~|\\\u301C|[\u00E0a]|\\?)\\s*";
-    }
-  },
-  {
-    key: "extractPrimaryTimeComponents",
-    value: function extractPrimaryTimeComponents(arg0, arg1) {
-      let fnResult = null;
-      if (!str.match(/^\s*\d{4}\s*$/)) {
-        let self = this;
-        self = this;
-        let fn = callback2(callback(self.prototype), "extractPrimaryTimeComponents", this);
-        if (typeof fn === "function") {
-          fn = (items) => fn.apply(self, items);
-        }
-        const items = [arg0, arg1];
-        fnResult = fn(items);
-      }
-      return fnResult;
+    key: "patternBetween",
+    value: function patternBetween() {
+      return /^\s*(の)?\s*$/i;
     }
   }
 ];
 
-export default _createClass(FRTimeExpressionParser, items);
+export default _createClass(JPMergeDateTimeRefiner, items);

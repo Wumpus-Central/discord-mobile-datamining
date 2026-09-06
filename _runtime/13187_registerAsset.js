@@ -1,7 +1,7 @@
 // === Module 13187: registerAsset ===
 
 // Module 13187 (registerAsset)
-import registerAsset from "registerAsset" /* 1240 */;
+import registerAsset from "registerAsset" /* 1122 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/saved_messages", width: 297, height: 238, scales: [1], hash: "ee27927c992063817a4891d6fea39469", name: "wumpus-bookmark", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 24, height: 24, scales: [1, 2, 3], hash: "4ae27cd370cebdaa94f014645ce27672", name: "ic_feedback", type: "png" });

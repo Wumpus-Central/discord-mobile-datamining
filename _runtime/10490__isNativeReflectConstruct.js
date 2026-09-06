@@ -1,11 +1,12 @@
 // === Module 10490: _isNativeReflectConstruct ===
 
 // Module 10490 (_isNativeReflectConstruct)
-import Filter from "Filter" /* 10469 */;
-import UnlikelyFormatFilter from "_classCallCheck" /* 41 */;
+import AbstractTimeExpressionParser from "AbstractTimeExpressionParser" /* 10446 */;
+import FRTimeExpressionParser from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import closure_1 from "_possibleConstructorReturn" /* 93 */;
 import closure_2 from "_getPrototypeOf" /* 95 */;
+import closure_3 from "_get" /* 96 */;
 import _inherits from "_inherits" /* 98 */;
 
 function _isNativeReflectConstruct() {
@@ -27,81 +28,57 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class UnlikelyFormatFilter {
-  constructor(arg0) {
+class FRTimeExpressionParser {
+  constructor() {
     self = this;
-    tmp = UnlikelyFormatFilter(this, UnlikelyFormatFilter);
+    tmp = FRTimeExpressionParser(this, FRTimeExpressionParser);
     tmp2 = closure_2;
-    obj = closure_2(UnlikelyFormatFilter);
+    obj = closure_2(FRTimeExpressionParser);
     tmp3 = closure_1;
     if (_isNativeReflectConstruct()) {
-      tmp5 = globalThis;
+      tmp7 = globalThis;
       _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
     } else {
-      constructResult = obj.apply(self, undefined);
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
     }
-    tmp3Result = tmp3(self, constructResult);
-    tmp3Result.strictMode = global;
-    return tmp3Result;
+    return tmp3(self, constructResult);
   }
 }
-_inherits(UnlikelyFormatFilter, Filter.Filter);
-const items = [
+_inherits(FRTimeExpressionParser, AbstractTimeExpressionParser.AbstractTimeExpressionParser);
+let items = [
   {
-    key: "isValid",
-    value: function isValid(debug, text) {
-      closure_0 = text;
-      if (str2.match(/^\d*(\.\d*)?$/)) {
-        debug.debug(() => {
-          console.log("Removing unlikely result '" + text.text + "'");
-        });
-        let flag = false;
-      } else {
-        const start = text.start;
-        if (start.isValidDate()) {
-          if (text.end) {
-            const end = text.end;
-            if (!end.isValidDate()) {
-              debug.debug(() => {
-                console.log("Removing invalid result: " + text + " (" + text.end + ")");
-              });
-              let flag2 = false;
-            }
-          }
-          const self = this;
-          const strictMode = this.strictMode;
-          let isStrictModeValidResult = !strictMode;
-          if (strictMode) {
-            isStrictModeValidResult = self.isStrictModeValid(debug, text);
-          }
-          flag2 = isStrictModeValidResult;
-        } else {
-          debug.debug(() => {
-            console.log("Removing invalid result: " + text + " (" + text.start + ")");
-          });
-          flag = false;
-        }
-      }
-      return flag;
+    key: "primaryPrefix",
+    value: function primaryPrefix() {
+      return "(?:(?:[\u00E0a])\\s*)?";
     }
   },
   {
-    key: "isStrictModeValid",
-    value: function isStrictModeValid(debug, start) {
-      closure_0 = start;
-      start = start.start;
-      const result = start.isOnlyWeekdayComponent();
-      let flag = !result;
-      if (result) {
-        debug.debug(() => {
-          console.log("(Strict) Removing weekday only component: " + start + " (" + start.end + ")");
-        });
-        flag = false;
+    key: "followingPhase",
+    value: function followingPhase() {
+      return "\\s*(?:\\-|\\\u2013|\\~|\\\u301C|[\u00E0a]|\\?)\\s*";
+    }
+  },
+  {
+    key: "extractPrimaryTimeComponents",
+    value: function extractPrimaryTimeComponents(arg0, arg1) {
+      let fnResult = null;
+      if (!str.match(/^\s*\d{4}\s*$/)) {
+        let self = this;
+        self = this;
+        let fn = callback2(callback(self.prototype), "extractPrimaryTimeComponents", this);
+        if (typeof fn === "function") {
+          fn = (items) => fn.apply(self, items);
+        }
+        const items = [arg0, arg1];
+        fnResult = fn(items);
       }
-      return flag;
+      return fnResult;
     }
   }
 ];
 
-export default _createClass(UnlikelyFormatFilter, items);
+export default _createClass(FRTimeExpressionParser, items);

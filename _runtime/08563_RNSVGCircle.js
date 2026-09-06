@@ -1,0 +1,65 @@
+// === Module 8563: RNSVGCircle ===
+
+// Module 8563 (RNSVGCircle)
+import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 8465 */;
+import __INTERNAL_VIEW_CONFIGDefault2 from "__INTERNAL_VIEW_CONFIG" /* 8476 */;
+import __INTERNAL_VIEW_CONFIGDefault3 from "__INTERNAL_VIEW_CONFIG" /* 8482 */;
+import __INTERNAL_VIEW_CONFIGDefault4 from "__INTERNAL_VIEW_CONFIG" /* 8484 */;
+import __INTERNAL_VIEW_CONFIGDefault5 from "__INTERNAL_VIEW_CONFIG" /* 8486 */;
+import __INTERNAL_VIEW_CONFIGDefault6 from "__INTERNAL_VIEW_CONFIG" /* 8488 */;
+import __INTERNAL_VIEW_CONFIGDefault7 from "__INTERNAL_VIEW_CONFIG" /* 8490 */;
+import __INTERNAL_VIEW_CONFIGDefault8 from "__INTERNAL_VIEW_CONFIG" /* 8494 */;
+import __INTERNAL_VIEW_CONFIGDefault9 from "__INTERNAL_VIEW_CONFIG" /* 8497 */;
+import __INTERNAL_VIEW_CONFIGDefault10 from "__INTERNAL_VIEW_CONFIG" /* 8504 */;
+import __INTERNAL_VIEW_CONFIGDefault11 from "__INTERNAL_VIEW_CONFIG" /* 8506 */;
+import __INTERNAL_VIEW_CONFIGDefault12 from "__INTERNAL_VIEW_CONFIG" /* 8508 */;
+import __INTERNAL_VIEW_CONFIGDefault13 from "__INTERNAL_VIEW_CONFIG" /* 8510 */;
+import __INTERNAL_VIEW_CONFIGDefault14 from "__INTERNAL_VIEW_CONFIG" /* 8521 */;
+import __INTERNAL_VIEW_CONFIGDefault15 from "__INTERNAL_VIEW_CONFIG" /* 8523 */;
+import __INTERNAL_VIEW_CONFIGDefault16 from "__INTERNAL_VIEW_CONFIG" /* 8525 */;
+import __INTERNAL_VIEW_CONFIGDefault17 from "__INTERNAL_VIEW_CONFIG" /* 8527 */;
+import __INTERNAL_VIEW_CONFIGDefault18 from "__INTERNAL_VIEW_CONFIG" /* 8529 */;
+import __INTERNAL_VIEW_CONFIGDefault19 from "__INTERNAL_VIEW_CONFIG" /* 8533 */;
+import __INTERNAL_VIEW_CONFIGDefault20 from "__INTERNAL_VIEW_CONFIG" /* 8536 */;
+import __INTERNAL_VIEW_CONFIGDefault21 from "__INTERNAL_VIEW_CONFIG" /* 8538 */;
+import __INTERNAL_VIEW_CONFIGDefault22 from "__INTERNAL_VIEW_CONFIG" /* 8540 */;
+import __INTERNAL_VIEW_CONFIGDefault23 from "__INTERNAL_VIEW_CONFIG" /* 8545 */;
+import __INTERNAL_VIEW_CONFIGDefault24 from "__INTERNAL_VIEW_CONFIG" /* 8547 */;
+import __INTERNAL_VIEW_CONFIGDefault25 from "__INTERNAL_VIEW_CONFIG" /* 8550 */;
+import __INTERNAL_VIEW_CONFIGDefault26 from "__INTERNAL_VIEW_CONFIG" /* 8553 */;
+import __INTERNAL_VIEW_CONFIGDefault27 from "__INTERNAL_VIEW_CONFIG" /* 8554 */;
+import __INTERNAL_VIEW_CONFIGDefault28 from "__INTERNAL_VIEW_CONFIG" /* 8556 */;
+import __INTERNAL_VIEW_CONFIGDefault29 from "__INTERNAL_VIEW_CONFIG" /* 8558 */;
+import __INTERNAL_VIEW_CONFIGDefault30 from "__INTERNAL_VIEW_CONFIG" /* 8564 */;
+
+
+export const RNSVGCircle = __INTERNAL_VIEW_CONFIGDefault3;
+export const RNSVGClipPath = __INTERNAL_VIEW_CONFIGDefault4;
+export const RNSVGDefs = __INTERNAL_VIEW_CONFIGDefault5;
+export const RNSVGEllipse = __INTERNAL_VIEW_CONFIGDefault6;
+export const RNSVGForeignObject = __INTERNAL_VIEW_CONFIGDefault15;
+export const RNSVGGroup = __INTERNAL_VIEW_CONFIGDefault2;
+export const RNSVGImage = __INTERNAL_VIEW_CONFIGDefault16;
+export const RNSVGLinearGradient = __INTERNAL_VIEW_CONFIGDefault18;
+export const RNSVGLine = __INTERNAL_VIEW_CONFIGDefault17;
+export const RNSVGMarker = __INTERNAL_VIEW_CONFIGDefault19;
+export const RNSVGMask = __INTERNAL_VIEW_CONFIGDefault20;
+export const RNSVGPath = __INTERNAL_VIEW_CONFIGDefault21;
+export const RNSVGPattern = __INTERNAL_VIEW_CONFIGDefault22;
+export const RNSVGRadialGradient = __INTERNAL_VIEW_CONFIGDefault23;
+export const RNSVGRect = __INTERNAL_VIEW_CONFIGDefault24;
+export const RNSVGSvgAndroid = __INTERNAL_VIEW_CONFIGDefault;
+export const RNSVGSvgIOS = __INTERNAL_VIEW_CONFIGDefault30;
+export const RNSVGSymbol = __INTERNAL_VIEW_CONFIGDefault25;
+export const RNSVGText = __INTERNAL_VIEW_CONFIGDefault27;
+export const RNSVGTextPath = __INTERNAL_VIEW_CONFIGDefault28;
+export const RNSVGTSpan = __INTERNAL_VIEW_CONFIGDefault26;
+export const RNSVGUse = __INTERNAL_VIEW_CONFIGDefault29;
+export const RNSVGFilter = __INTERNAL_VIEW_CONFIGDefault14;
+export const RNSVGFeBlend = __INTERNAL_VIEW_CONFIGDefault7;
+export const RNSVGFeColorMatrix = __INTERNAL_VIEW_CONFIGDefault8;
+export const RNSVGFeComposite = __INTERNAL_VIEW_CONFIGDefault9;
+export const RNSVGFeFlood = __INTERNAL_VIEW_CONFIGDefault12;
+export const RNSVGFeGaussianBlur = __INTERNAL_VIEW_CONFIGDefault10;
+export const RNSVGFeMerge = __INTERNAL_VIEW_CONFIGDefault13;
+export const RNSVGFeOffset = __INTERNAL_VIEW_CONFIGDefault11;

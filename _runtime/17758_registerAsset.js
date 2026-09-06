@@ -1,7 +1,7 @@
 // === Module 17758: registerAsset ===
 
 // Module 17758 (registerAsset)
-import registerAsset from "registerAsset" /* 1240 */;
+import registerAsset from "registerAsset" /* 1122 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/guild_role_subscription", width: 67.5, height: 92.5, scales: [2, 3], hash: "1da146fe37f3351b22cf5b5c1c44b1cf", name: "image_role_subscription_badge", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/guild_role_subscriptions/native/images", width: 20, height: 20, scales: [2, 3], hash: "66f5395e0dcbde2df92fe7a6979a5fca", name: "ic_emoji_picker_20px", type: "png" });

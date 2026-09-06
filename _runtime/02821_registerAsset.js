@@ -1,7 +1,7 @@
 // === Module 2821: registerAsset ===
 
 // Module 2821 (registerAsset)
-import registerAsset from "registerAsset" /* 1240 */;
+import registerAsset from "registerAsset" /* 1122 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/self_remediation_feedback", scales: [1], hash: "c191c06432eabca1ed0bf003746fd75e", name: "SelfRemediationFeedback.compiled.messages", type: "jsona" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/.cache/intl/bW9kdWxlcw==", scales: [1], hash: "73f209adf08ece070940a5ceea4eeea1", name: "da.messages.73f209adf08ece070940a5ceea4eeea1.compiled.messages", type: "jsona" });

@@ -1,7 +1,7 @@
 // === Module 3305: registerAsset ===
 
 // Module 3305 (registerAsset)
-import registerAsset from "registerAsset" /* 1240 */;
+import registerAsset from "registerAsset" /* 1122 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/partner_perks/xbox/partner_pass", scales: [1], hash: "5d043a239e74f1fd73cda189aff4d907", name: "XboxPartnerPass.compiled.messages", type: "jsona" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9wcmVtaXVtL2xvZ2l0ZWNoXzNwcA==", scales: [1], hash: "398917c3bbf3942c0e00f58d522c5159", name: "ko.messages.398917c3bbf3942c0e00f58d522c5159.compiled.messages", type: "jsona" });

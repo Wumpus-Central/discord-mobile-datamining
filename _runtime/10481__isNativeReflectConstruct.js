@@ -1,14 +1,13 @@
 // === Module 10481: _isNativeReflectConstruct ===
 
 // Module 10481 (_isNativeReflectConstruct)
-import Filter from "Filter" /* 10469 */;
-import closure_2 from "_classCallCheck" /* 41 */;
+import _isNativeReflectConstruct2 from "_isNativeReflectConstruct" /* 10453 */;
+import DEMergeDateTimeRefiner from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
-import closure_3 from "_possibleConstructorReturn" /* 93 */;
-import closure_4 from "_getPrototypeOf" /* 95 */;
+import closure_1 from "_possibleConstructorReturn" /* 93 */;
+import closure_2 from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
-const ENMergeRelativeAfterDateRefiner = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -28,13 +27,29 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class ENMergeRelativeAfterDateRefiner {
+let fn = this;
+if (this) {
+  fn = this.__importDefault;
+}
+if (!fn) {
+  fn = (__esModule) => {
+    if (!__esModule) {
+      const obj = { default: null };
+      obj[0] = __esModule;
+      let tmp = obj;
+    } else {
+      tmp = __esModule;
+    }
+    return tmp;
+  };
+}
+class DEMergeDateTimeRefiner {
   constructor() {
     self = this;
-    tmp = closure_2(this, ENMergeRelativeAfterDateRefiner);
-    tmp2 = closure_4;
-    obj = closure_4(ENMergeRelativeAfterDateRefiner);
-    tmp3 = closure_3;
+    tmp = DEMergeDateTimeRefiner(this, DEMergeDateTimeRefiner);
+    tmp2 = closure_2;
+    obj = closure_2(DEMergeDateTimeRefiner);
+    tmp3 = closure_1;
     if (_isNativeReflectConstruct()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
@@ -48,40 +63,15 @@ class ENMergeRelativeAfterDateRefiner {
     return tmp3(self, constructResult);
   }
 }
-_inherits(ENMergeRelativeAfterDateRefiner, Filter.MergingRefiner);
+_inherits(DEMergeDateTimeRefiner, fn(_isNativeReflectConstruct2).default);
 const items = [
   {
-    key: "shouldMergeResults",
-    value: function shouldMergeResults(str, arg1, text) {
-      let match = str.match(/^\s*$/i);
-      if (match) {
-        let tmp4 = null != text.text.match(/^[+-]/i);
-        if (!tmp4) {
-          tmp4 = null != text.text.match(/^-/i);
-          const str2 = text.text;
-        }
-        match = tmp4;
-        str = text.text;
-      }
-      return match;
-    }
-  },
-  {
-    key: "mergeResults",
-    value: function mergeResults(arg0, start, text) {
-      const parseDurationResult = ENMergeRelativeAfterDateRefiner(10449).parseDuration(text.text);
-      let reverseDurationResult = parseDurationResult;
-      if (null != str.match(/^-/i)) {
-        reverseDurationResult = tmp(10452).reverseDuration(parseDurationResult);
-      }
-      const ParsingComponents = tmp(10453).ParsingComponents;
-      const ReferenceWithTimezone = tmp(10453).ReferenceWithTimezone;
-      start = start.start;
-      const relativeFromReference = ParsingComponents.createRelativeFromReference(ReferenceWithTimezone.fromDate(start.date()), reverseDurationResult);
-      ({ reference, index } = start);
-      return new ENMergeRelativeAfterDateRefiner(10453).ParsingResult(reference, index, "" + start.text + arg0 + text.text, relativeFromReference);
+    key: "patternBetween",
+    value: function patternBetween() {
+      const regExp = new RegExp("^\\s*(T|um|am|,|-)?\\s*$");
+      return regExp;
     }
   }
 ];
 
-export default _createClass(ENMergeRelativeAfterDateRefiner, items);
+export default _createClass(DEMergeDateTimeRefiner, items);

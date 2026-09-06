@@ -1,7 +1,7 @@
 // === Module 11724: registerAsset ===
 
 // Module 11724 (registerAsset)
-import registerAsset from "registerAsset" /* 1240 */;
+import registerAsset from "registerAsset" /* 1122 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "a568e12daf3f479ad26c9db6582fe1a2", name: "CreditCardIcon", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/polls/native/images", width: 138, height: 130, scales: [2, 3], hash: "2b9e354438218d1560976bef68047eb2", name: "load-issue-dark", type: "png" });

@@ -1,7 +1,7 @@
 // === Module 9336: registerAsset ===
 
 // Module 9336 (registerAsset)
-import registerAsset from "registerAsset" /* 1240 */;
+import registerAsset from "registerAsset" /* 1122 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/user_settings/connections/native/two_way_link/images", width: 18, height: 18.5, scales: [2, 3], hash: "84a5f82b0047a661ec45232254da9031", name: "app_installed_check", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/custom_app_icons/CamoIcon", width: 60, height: 60, scales: [2, 3], hash: "4e81188cb8befe97a7c2fb2d0b3c1c42", name: "CamoIcon", type: "png" });

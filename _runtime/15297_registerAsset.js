@@ -1,7 +1,7 @@
 // === Module 15297: registerAsset ===
 
 // Module 15297 (registerAsset)
-import registerAsset from "registerAsset" /* 1240 */;
+import registerAsset from "registerAsset" /* 1122 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/../discord_common/js/shared/images/flags", width: 70, height: 47, scales: [1], hash: "4db0790f7a81e49025d7fbfb9aeb182c", name: "zh-TW", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 24, height: 24, scales: [2, 3], hash: "714bfdcefc91a8c05361da54def8f212", name: "ic_voice_channel_24px", type: "png" });

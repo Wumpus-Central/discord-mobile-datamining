@@ -1,16 +1,13 @@
 // === Module 10473: _isNativeReflectConstruct ===
 
 // Module 10473 (_isNativeReflectConstruct)
-import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10457 */;
-import now from "now" /* 10474 */;
-import closure_2 from "_classCallCheck" /* 41 */;
+import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10439 */;
+import ISOFormatParser from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
-import closure_3 from "_possibleConstructorReturn" /* 93 */;
-import closure_4 from "_getPrototypeOf" /* 95 */;
+import closure_1 from "_possibleConstructorReturn" /* 93 */;
+import closure_2 from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
-let self = this;
-const ENCasualDateParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -30,145 +27,76 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-let self2 = this;
-if (this) {
-  self2 = self.__createBinding;
-}
-if (self2) {
-  let __setModuleDefault = self;
-  if (self) {
-    __setModuleDefault = self.__setModuleDefault;
+const regExp = new RegExp("([0-9]{4})\\-([0-9]{1,2})\\-([0-9]{1,2})(?:T([0-9]{1,2}):([0-9]{1,2})(?::([0-9]{1,2})(?:\\.(\\d{1,4}))?)?(Z|([+-]\\d{2}):?(\\d{2})?)?)?(?=\\W|$)", "i");
+class ISOFormatParser {
+  constructor() {
+    self = this;
+    tmp = ISOFormatParser(this, ISOFormatParser);
+    tmp2 = closure_2;
+    obj = closure_2(ISOFormatParser);
+    tmp3 = closure_1;
+    if (_isNativeReflectConstruct()) {
+      tmp7 = globalThis;
+      _Reflect = Reflect;
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+    } else {
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
+    }
+    return tmp3(self, constructResult);
   }
-  if (__setModuleDefault) {
-    let fn = self;
-    if (self) {
-      fn = self.__importStar;
-    }
-    if (!fn) {
-      function i(arg0) {
-        let fn = Object.getOwnPropertyNames;
-        if (!fn) {
-          fn = (obj) => {
-            const items = [];
-            for (const key10005 in arg0) {
-              let tmp2 = key10005;
-              let _Object = Object;
-              let call = hasOwnProperty.call;
-              if (typeof call === "unknown") {
-                let hasOwnPropertyResult = hasOwnProperty(key10005);
-              } else {
-                hasOwnPropertyResult = call(arg0, key10005);
-              }
-              if (!hasOwnPropertyResult) {
-                continue;
-              } else {
-                items[items.length] = key10005;
-                continue;
-              }
-              continue;
-            }
-            return items;
-          };
-        }
-        return fn(arg0);
-      }
-      fn = (__esModule) => {
-        if (__esModule) {
-          if (__esModule.__esModule) {
-            return __esModule;
-          }
-        }
-        const obj = {};
-        if (null != __esModule) {
-          const arr = i(__esModule);
-          for (let num = 0; num < arr.length; num = num + 1) {
-            let tmp2 = num;
-            if ("default" !== arr[num]) {
-              let tmp3 = self2;
-              let tmp4 = self2(obj, __esModule, arr[num]);
-            }
-          }
-        }
-        __setModuleDefault(obj, __esModule);
-        return obj;
-      };
-    }
-    const _Object3 = Object;
-    let closure_9 = fn(now);
-    const re10 = /(now|today|tonight|tomorrow|overmorrow|tmr|tmrw|yesterday|last\s*night)(?=\W|$)/i;
-    class ENCasualDateParser {
-      constructor() {
-        self = this;
-        tmp = closure_2(this, ENCasualDateParser);
-        tmp2 = closure_4;
-        obj = closure_4(ENCasualDateParser);
-        tmp3 = closure_3;
-        if (_isNativeReflectConstruct()) {
-          tmp7 = globalThis;
-          _Reflect = Reflect;
-          tmp8 = arguments;
-          constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
-        } else {
-          tmp4 = arguments;
-          tmp5 = arguments;
-          constructResult = obj(...arguments);
-        }
-        return tmp3(self, constructResult);
-      }
-    }
-    _inherits(ENCasualDateParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
-    let obj = { key: "innerPattern", value: null };
-    obj[1] = function innerPattern(arg0) {
-      return closure_10;
-    };
-    let items = [obj, ];
-    obj = { key: "innerExtract", value: null };
-    obj[1] = function innerExtract(refDate) {
-      refDate = refDate.refDate;
-      const str2 = arg1[0].toLowerCase();
-      const parsingComponents = refDate.createParsingComponents();
-      if ("now" === str2) {
-        let nowResult = closure_9.now(refDate.reference);
-      } else if ("today" === str2) {
-        nowResult = closure_9.today(refDate.reference);
-      } else if ("yesterday" === str2) {
-        nowResult = closure_9.yesterday(refDate.reference);
-      } else {
-        if ("tomorrow" !== str2) {
-          if ("tmr" !== str2) {
-            if ("tmrw" !== str2) {
-              if ("tonight" === str2) {
-                nowResult = closure_9.tonight(refDate.reference);
-              } else if ("overmorrow" === str2) {
-                nowResult = closure_9.theDayAfter(refDate.reference, 2);
-              } else {
-                nowResult = parsingComponents;
-                if (str2.match(/last\s*night/)) {
-                  let tmp = refDate;
-                  if (refDate.getHours() > 6) {
-                    const _Date = Date;
-                    const date = new Date(refDate.getTime());
-                    date.setDate(date.getDate() - 1);
-                    tmp = date;
-                  }
-                  ENCasualDateParser(10456).assignSimilarDate(parsingComponents, tmp);
-                  parsingComponents.imply("hour", 0);
-                  nowResult = parsingComponents;
-                }
-              }
-            }
-          }
-        }
-        nowResult = closure_9.tomorrow(refDate.reference);
-      }
-      nowResult.addTag("parser/ENCasualDateParser");
-      return nowResult;
-    };
-    items[1] = obj;
-    exports.default = _createClass(ENCasualDateParser, items);
-  } else {
-    const _Object2 = Object;
-  }
-} else {
-  let _Object = Object;
 }
+_inherits(ISOFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+const items = [
+  {
+    key: "innerPattern",
+    value: function innerPattern() {
+      return regExp;
+    }
+  },
+  {
+    key: "innerExtract",
+    value: function innerExtract(createParsingComponents) {
+      let obj = { year: parseInt(arg1[1]), month: parseInt(arg1[2]), day: parseInt(arg1[3]) };
+      const parsingComponents = createParsingComponents.createParsingComponents(obj);
+      if (null != arg1[4]) {
+        const _parseInt5 = parseInt;
+        obj = parsingComponents.assign("hour", parseInt(arg1[4]));
+        const _parseInt6 = parseInt;
+        obj = parsingComponents.assign("minute", parseInt(arg1[5]));
+        if (null != arg1[6]) {
+          const _parseInt = parseInt;
+          parsingComponents.assign("second", parseInt(arg1[6]));
+        }
+        if (null != arg1[7]) {
+          const _parseInt2 = parseInt;
+          parsingComponents.assign("millisecond", parseInt(arg1[7]));
+        }
+        if (null != arg1[8]) {
+          let num2 = 0;
+          if (!arg1[9]) {
+            let num3 = parsingComponents.assign("timezoneOffset", num2);
+          } else {
+            const _parseInt3 = parseInt;
+            num3 = 0;
+            const parsed = parseInt(arg1[9]);
+            if (null != arg1[10]) {
+              const _parseInt4 = parseInt;
+              num3 = parseInt(arg1[10]);
+            }
+            const result = 60 * parsed;
+            if (result >= 0) {
+              num2 = result + num3;
+            }
+          }
+          num2 = result - num3;
+        }
+      }
+      return parsingComponents.addTag("parser/ISOFormatParser");
+    }
+  }
+];
+
+export default _createClass(ISOFormatParser, items);

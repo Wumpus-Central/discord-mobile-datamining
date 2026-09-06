@@ -1,7 +1,7 @@
 // === Module 2590: registerAsset ===
 
 // Module 2590 (registerAsset)
-import registerAsset from "registerAsset" /* 1240 */;
+import registerAsset from "registerAsset" /* 1122 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9ub3RpZmljYXRpb25zL3Byb2ZpbGVfdXBkYXRlcy9zZW5kZXI=", scales: [1], hash: "65f614ecc32790a7c3de7302bef86261", name: "sv-SE.messages.65f614ecc32790a7c3de7302bef86261.compiled.messages", type: "jsona" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9hY3Rpdml0eV9wcml2YWN5", scales: [1], hash: "70df0fc6b3b6982c802ace6ae42b42ef", name: "vi.messages.70df0fc6b3b6982c802ace6ae42b42ef.compiled.messages", type: "jsona" });

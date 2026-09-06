@@ -1,7 +1,7 @@
 // === Module 17216: registerAsset ===
 
 // Module 17216 (registerAsset)
-import registerAsset from "registerAsset" /* 1240 */;
+import registerAsset from "registerAsset" /* 1122 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/holidays/assets", scales: [1], hash: "7209f284854b7ea1e5642c91fd2e43d4", name: "snowsgiving_loading_dark", type: "webm" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/video_calls/native/images", width: 24, height: 24, scales: [2, 3], hash: "2b649615a70a14244330a855517175bb", name: "report", type: "png" });

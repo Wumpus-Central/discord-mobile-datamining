@@ -1,7 +1,7 @@
 // === Module 17513: registerAsset ===
 
 // Module 17513 (registerAsset)
-import registerAsset from "registerAsset" /* 1240 */;
+import registerAsset from "registerAsset" /* 1122 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/guild_settings/community_settings", width: 88, height: 80, scales: [2, 3], hash: "bfb98edbbbdba844f1779b23cfef0afa", name: "finishing_touches_light", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/verification", width: 180, height: 160, scales: [1], hash: "8bacf7b488464e86cb440cbf88ee8d5d", name: "img_verify_phone_light_theme", type: "png" });

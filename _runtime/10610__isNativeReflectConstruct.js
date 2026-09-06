@@ -1,8 +1,8 @@
 // === Module 10610: _isNativeReflectConstruct ===
 
 // Module 10610 (_isNativeReflectConstruct)
-import _isNativeReflectConstruct2 from "_isNativeReflectConstruct" /* 10468 */;
-import UKMergeDateRangeRefiner from "_classCallCheck" /* 41 */;
+import _isNativeReflectConstruct2 from "_isNativeReflectConstruct" /* 10450 */;
+import ENMergeDateRangeRefiner from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import closure_1 from "_possibleConstructorReturn" /* 93 */;
 import closure_2 from "_getPrototypeOf" /* 95 */;
@@ -43,12 +43,12 @@ if (!fn) {
     return tmp;
   };
 }
-class UKMergeDateRangeRefiner {
+class ENMergeDateRangeRefiner {
   constructor() {
     self = this;
-    tmp = UKMergeDateRangeRefiner(this, UKMergeDateRangeRefiner);
+    tmp = ENMergeDateRangeRefiner(this, ENMergeDateRangeRefiner);
     tmp2 = closure_2;
-    obj = closure_2(UKMergeDateRangeRefiner);
+    obj = closure_2(ENMergeDateRangeRefiner);
     tmp3 = closure_1;
     if (_isNativeReflectConstruct()) {
       tmp7 = globalThis;
@@ -63,14 +63,14 @@ class UKMergeDateRangeRefiner {
     return tmp3(self, constructResult);
   }
 }
-_inherits(UKMergeDateRangeRefiner, fn(_isNativeReflectConstruct2).default);
+_inherits(ENMergeDateRangeRefiner, fn(_isNativeReflectConstruct2).default);
 const items = [
   {
     key: "patternBetween",
     value: function patternBetween() {
-      return /^\s*(і до|і по|до|по|-)\s*$/i;
+      return /^\s*(to|-)\s*$/i;
     }
   }
 ];
 
-export default _createClass(UKMergeDateRangeRefiner, items);
+export default _createClass(ENMergeDateRangeRefiner, items);

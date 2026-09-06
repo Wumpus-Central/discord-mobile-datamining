@@ -1,7 +1,7 @@
 // === Module 2133: registerAsset ===
 
 // Module 2133 (registerAsset)
-import registerAsset from "registerAsset" /* 1240 */;
+import registerAsset from "registerAsset" /* 1122 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9jaGVja291dC9tZXNzYWdlcw==", scales: [1], hash: "ef01217ab0f8a3e98a9eb724ef29e1f3", name: "uk.messages.ef01217ab0f8a3e98a9eb724ef29e1f3.compiled.messages", type: "jsona" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/virtual_currency/web/orb_wallet/messages", scales: [1], hash: "46764013ef84370cf8ab919784e6f8aa", name: "OrbWallet.compiled.messages", type: "jsona" });

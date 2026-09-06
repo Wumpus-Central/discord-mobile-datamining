@@ -1,7 +1,7 @@
 // === Module 12329: registerAsset ===
 
 // Module 12329 (registerAsset)
-import registerAsset from "registerAsset" /* 1240 */;
+import registerAsset from "registerAsset" /* 1122 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "220c71f96225f35f4c52e38db6b8734b", name: "SoundboardIcon", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/create_guild/native/images", width: 48, height: 48, scales: [2, 3], hash: "4baba2bad08c08e75957838b804dc091", name: "img_study", type: "png" });

@@ -1,7 +1,7 @@
 // === Module 3440: registerAsset ===
 
 // Module 3440 (registerAsset)
-import registerAsset from "registerAsset" /* 1240 */;
+import registerAsset from "registerAsset" /* 1122 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9nYW1lX2ludml0ZV9jaGFubmVscw==", scales: [1], hash: "fba88f92ef01085cf2da5a11da557bde", name: "de.messages.fba88f92ef01085cf2da5a11da557bde.compiled.messages", type: "jsona" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9zbGF5ZXJfc3RvcmVmcm9udC9pbnRs", scales: [1], hash: "4b9cbce1a505aa6c82ae572407bdef60", name: "ru.messages.4b9cbce1a505aa6c82ae572407bdef60.compiled.messages", type: "jsona" });

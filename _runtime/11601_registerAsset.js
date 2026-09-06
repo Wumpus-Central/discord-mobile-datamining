@@ -1,7 +1,7 @@
 // === Module 11601: registerAsset ===
 
 // Module 11601 (registerAsset)
-import registerAsset from "registerAsset" /* 1240 */;
+import registerAsset from "registerAsset" /* 1122 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 24, height: 24, scales: [1, 2, 3], hash: "5870bc3ada01ff369d707eaeba6296c2", name: "camera_upload_light", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "2ec8d4d40c93ceea32933ae4e505df6e", name: "ChatPlusIcon", type: "png" });

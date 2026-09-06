@@ -1,0 +1,21 @@
+// === Module 1316: callBoundIntrinsic ===
+
+// Module 1316 (callBoundIntrinsic)
+import getEvalledConstructor from "getEvalledConstructor" /* 1282 */;
+import callBindBasic from "callBindBasic" /* 1293 */;
+
+let items = [getEvalledConstructor("%String.prototype.indexOf%")];
+let closure_2 = callBindBasic(items);
+
+export default function callBoundIntrinsic(arg0) {
+  const tmp3 = getEvalledConstructor(arg0, arg1);
+  let tmp4 = tmp3;
+  if (typeof tmp3 === "function") {
+    tmp4 = tmp3;
+    if (callback(arg0, ".prototype.") > -1) {
+      const items = [tmp3];
+      tmp4 = callBindBasic(items);
+    }
+  }
+  return tmp4;
+};

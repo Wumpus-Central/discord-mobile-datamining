@@ -1,7 +1,7 @@
 // === Module 13102: registerAsset ===
 
 // Module 13102 (registerAsset)
-import registerAsset from "registerAsset" /* 1240 */;
+import registerAsset from "registerAsset" /* 1122 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/gifting", width: 270, height: 134, scales: [2, 3], hash: "05b73f8565eab54ae61e59eb9ff991a8", name: "img_premium_embed_background_dark", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/empties", width: 120, height: 96, scales: [2, 3], hash: "21dd2828907413d4c11bf84cb61743df", name: "search_empty_state_light", type: "png" });

@@ -1,15 +1,16 @@
 // === Module 10612: _isNativeReflectConstruct ===
 
 // Module 10612 (_isNativeReflectConstruct)
-import now from "now" /* 10474 */;
-import _isNativeReflectConstruct2 from "_isNativeReflectConstruct" /* 10606 */;
-import UKCasualDateParser from "_classCallCheck" /* 41 */;
+import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10439 */;
+import now from "now" /* 10456 */;
+import closure_2 from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
-import closure_1 from "_possibleConstructorReturn" /* 93 */;
-import closure_2 from "_getPrototypeOf" /* 95 */;
+import closure_3 from "_possibleConstructorReturn" /* 93 */;
+import closure_4 from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
 let self = this;
+const ITCasualDateParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -44,7 +45,7 @@ if (self2) {
       fn = self.__importStar;
     }
     if (!fn) {
-      function o(arg0) {
+      function c(arg0) {
         let fn = Object.getOwnPropertyNames;
         if (!fn) {
           fn = (obj) => {
@@ -79,7 +80,7 @@ if (self2) {
         }
         const obj = {};
         if (null != __esModule) {
-          const arr = o(__esModule);
+          const arr = c(__esModule);
           for (let num = 0; num < arr.length; num = num + 1) {
             let tmp2 = num;
             if ("default" !== arr[num]) {
@@ -93,14 +94,15 @@ if (self2) {
       };
     }
     const _Object3 = Object;
-    let closure_7 = fn(now);
-    class UKCasualDateParser {
+    let closure_9 = fn(now);
+    const re10 = /(ora|oggi|stasera|questa sera|domani|dmn|ieri\s*sera)(?=\W|$)/i;
+    class ITCasualDateParser {
       constructor() {
         self = this;
-        tmp = UKCasualDateParser(this, UKCasualDateParser);
-        tmp2 = closure_2;
-        obj = closure_2(UKCasualDateParser);
-        tmp3 = closure_1;
+        tmp = closure_2(this, ITCasualDateParser);
+        tmp2 = closure_4;
+        obj = closure_4(ITCasualDateParser);
+        tmp3 = closure_3;
         if (_isNativeReflectConstruct()) {
           tmp7 = globalThis;
           _Reflect = Reflect;
@@ -114,36 +116,51 @@ if (self2) {
         return tmp3(self, constructResult);
       }
     }
-    _inherits(UKCasualDateParser, _isNativeReflectConstruct2.AbstractParserWithLeftRightBoundaryChecking);
-    let obj = { key: "innerPatternString", value: null };
-    obj[1] = function innerPatternString(arg0) {
-      return "(?:\u0437|\u0456\u0437|\u0432\u0456\u0434)?\\s*(\u0441\u044C\u043E\u0433\u043E\u0434\u043D\u0456|\u0432\u0447\u043E\u0440\u0430|\u0437\u0430\u0432\u0442\u0440\u0430|\u043F\u0456\u0441\u043B\u044F\u0437\u0430\u0432\u0442\u0440\u0430|\u043F\u0456\u0441\u043B\u044F\u043F\u0456\u0441\u043B\u044F\u0437\u0430\u0432\u0442\u0440\u0430|\u043F\u043E\u0437\u0430\u043F\u043E\u0437\u0430\u0432\u0447\u043E\u0440\u0430|\u043F\u043E\u0437\u0430\u0432\u0447\u043E\u0440\u0430)";
+    _inherits(ITCasualDateParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+    let obj = { key: "innerPattern", value: null };
+    obj[1] = function innerPattern(arg0) {
+      return closure_10;
     };
     let items = [obj, ];
     obj = { key: "innerExtract", value: null };
-    obj[1] = function innerExtract(reference) {
-      const formatted = arg1[1].toLowerCase();
-      if ("\u0441\u044C\u043E\u0433\u043E\u0434\u043D\u0456" === formatted) {
-        return closure_7.today(reference.reference);
-      } else if ("\u0432\u0447\u043E\u0440\u0430" === formatted) {
-        return closure_7.yesterday(reference.reference);
-      } else if ("\u0437\u0430\u0432\u0442\u0440\u0430" === formatted) {
-        return closure_7.tomorrow(reference.reference);
-      } else if ("\u043F\u0456\u0441\u043B\u044F\u0437\u0430\u0432\u0442\u0440\u0430" === formatted) {
-        return closure_7.theDayAfter(reference.reference, 2);
-      } else if ("\u043F\u0456\u0441\u043B\u044F\u043F\u0456\u0441\u043B\u044F\u0437\u0430\u0432\u0442\u0440\u0430" === formatted) {
-        return closure_7.theDayAfter(reference.reference, 3);
-      } else if ("\u043F\u043E\u0437\u0430\u0432\u0447\u043E\u0440\u0430" === formatted) {
-        return closure_7.theDayBefore(reference.reference, 2);
-      } else if ("\u043F\u043E\u0437\u0430\u043F\u043E\u0437\u0430\u0432\u0447\u043E\u0440\u0430" === formatted) {
-        return closure_7.theDayBefore(reference.reference, 3);
+    obj[1] = function innerExtract(refDate) {
+      refDate = refDate.refDate;
+      const str2 = arg1[0].toLowerCase();
+      const parsingComponents = refDate.createParsingComponents();
+      if ("ora" === str2) {
+        return closure_9.now(refDate.reference);
+      } else if ("oggi" === str2) {
+        return closure_9.today(refDate.reference);
+      } else if ("ieri" === str2) {
+        return closure_9.yesterday(refDate.reference);
       } else {
-        return tmp2;
+        if ("domani" !== str2) {
+          if ("dmn" !== str2) {
+            if ("stasera" !== str2) {
+              if ("questa sera" !== str2) {
+                if (str2.match(/ieri\s*sera/)) {
+                  let tmp = refDate;
+                  if (refDate.getHours() > 6) {
+                    const _Date = Date;
+                    const date = new Date(refDate.getTime());
+                    date.setDate(date.getDate() - 1);
+                    tmp = date;
+                  }
+                  ITCasualDateParser(10438).assignSimilarDate(parsingComponents, tmp);
+                  parsingComponents.imply("hour", 0);
+                }
+                return parsingComponents;
+              }
+            }
+            return closure_9.tonight(refDate.reference);
+          }
+        }
+        return closure_9.tomorrow(refDate.reference);
       }
-      const str = arg1[1];
+      const str = arg1[0];
     };
     items[1] = obj;
-    exports.default = _createClass(UKCasualDateParser, items);
+    exports.default = _createClass(ITCasualDateParser, items);
   } else {
     const _Object2 = Object;
   }

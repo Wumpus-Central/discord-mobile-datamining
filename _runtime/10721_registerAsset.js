@@ -1,7 +1,7 @@
 // === Module 10721: registerAsset ===
 
 // Module 10721 (registerAsset)
-import registerAsset from "registerAsset" /* 1240 */;
+import registerAsset from "registerAsset" /* 1122 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/logos", width: 449.5, height: 245, scales: [2, 3], hash: "c5de68623f46517bfe4474ddbdb02f66", name: "img_logo_nitro_tier_0", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/logos", width: 82, height: 18, scales: [2, 3], hash: "45460b156c456430280e2b323f923e88", name: "img_logo_boost", type: "png" });

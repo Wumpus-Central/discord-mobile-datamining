@@ -1,7 +1,7 @@
 // === Module 15128: registerAsset ===
 
 // Module 15128 (registerAsset)
-import registerAsset from "registerAsset" /* 1240 */;
+import registerAsset from "registerAsset" /* 1122 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/avatars", width: 161, height: 161, scales: [1], hash: "f06539dd2236c72b26d5b18fa1a5f589", name: "amanda_2", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/quests/native/images", width: 375, height: 58, scales: [1, 2, 3], hash: "e5d497e242dfffadb8102108e8df2b1a", name: "clouds_background", type: "png" });

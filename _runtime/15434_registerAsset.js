@@ -1,7 +1,7 @@
 // === Module 15434: registerAsset ===
 
 // Module 15434 (registerAsset)
-import registerAsset from "registerAsset" /* 1240 */;
+import registerAsset from "registerAsset" /* 1122 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "84a1e2a3b13ea7ae45e68f1bb8755810", name: "TreehouseIcon", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/../discord_common/js/shared/images/flags", width: 70, height: 47, scales: [1], hash: "02e75e392ab5d5a8ed5ab4f8fcae9c77", name: "fi", type: "png" });

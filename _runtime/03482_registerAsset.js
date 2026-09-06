@@ -1,7 +1,7 @@
 // === Module 3482: registerAsset ===
 
 // Module 3482 (registerAsset)
-import registerAsset from "registerAsset" /* 1240 */;
+import registerAsset from "registerAsset" /* 1122 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9wcml2YXRlX2NoYW5uZWxzL2NsZWFuX3VwX2luYWN0aXZlX2dkbXM=", scales: [1], hash: "820ce63c1cb08cd6e404b52b3d780178", name: "it.messages.820ce63c1cb08cd6e404b52b3d780178.compiled.messages", type: "jsona" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/spatial_audio", scales: [1], hash: "6bc7a3c8d247122e749a7d0311c681e0", name: "SpatialAudio.compiled.messages", type: "jsona" });
